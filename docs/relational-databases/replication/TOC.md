@@ -293,3 +293,6 @@
 ## [Konfigurieren der Transaktionsreplikation](tutorial-replicating-data-between-continuously-connected-servers.md)  
 ## [Konfigurieren der Mergereplikation](tutorial-replicating-data-with-mobile-clients.md)  
 
+# Problembehandlungen
+## [Fehler bei der Transaktionsreplikation](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md)
+

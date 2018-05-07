@@ -2,23 +2,20 @@
 title: Verbindungsstabilität im Leerlauf
 ms.date: 07/13/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: php
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- drivers
-ms.topic: article
+ms.technology: connectivity
+ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.workload: Inactive
-ms.openlocfilehash: a736fc5dafc3c58401c54ab51d1a11d1753f3479
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: b2ffbf3ef57db31fcfd3a714fe9e2f6e0565237f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="idle-connection-resiliency"></a>Verbindungsstabilität im Leerlauf
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

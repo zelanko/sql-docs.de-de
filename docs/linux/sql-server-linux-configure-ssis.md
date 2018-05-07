@@ -9,17 +9,15 @@ ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
-ms.workload: Inactive
-ms.openlocfilehash: feaca28a2b59dbae0ebbae8ef86f7723daf0e072
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 15554d7379c87712419e72a323ab19780d200a51
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>Konfigurieren von SQL Server Integration Services unter Linux mit Ssis-conf
 

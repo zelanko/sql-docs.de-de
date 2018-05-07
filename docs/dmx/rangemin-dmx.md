@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -22,12 +21,11 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 16d56170a3b4c995a7c93c3f9acf699e3f4e3071
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b333039c47add2810f67ecb449f2bea73cb2947f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rangemin-dmx"></a>RangeMin (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,9 +46,9 @@ RangeMin(<scalar column reference>)
  Ein Skalarwert.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **RangeMin** Funktion kann verwendet werden, [SELECT DISTINCT FROM &#60; Modell &#62; &#40; DMX &#41;](../dmx/select-distinct-from-model-dmx.md) Abfragen. Wird der Verweis auf skalare Spalten mit diesem Abfragetyp verwendet, kann er kontinuierliche oder diskrete Spalten enthalten, die entweder vorhersagbar oder Eingabe sind.  
+ Die **RangeMin** Funktion kann verwendet werden, [SELECT DISTINCT FROM &#60;Modell &#62; &#40;DMX&#41; ](../dmx/select-distinct-from-model-dmx.md) Abfragen. Wird der Verweis auf skalare Spalten mit diesem Abfragetyp verwendet, kann er kontinuierliche oder diskrete Spalten enthalten, die entweder vorhersagbar oder Eingabe sind.  
   
- Bei Verwendung mit [SELECT FROM &#60; Modell &#62; PREDICTION JOIN-Abfrage &#40; DMX &#41; ](../dmx/select-from-model-prediction-join-dmx.md), **RangeMin**, **RangeMid**, und **RangeMax** Funktionen geben die tatsächlichen Begrenzungswerte des angegebenen Buckets zurück. Wenn Sie z. B. eine Vorhersage für eine diskretisierte Spalte ausführen, gibt die Abfrage die vorhergesagte Bucketnummer in der diskretisierten Spalte zurück. Die **RangeMin**, **RangeMid**, und **RangeMax** Funktionen beschreiben den Bucket, der die Vorhersage angibt. Wenn die **RangeMin** Funktion mit einer PREDICTION JOIN-Anweisung verwendet wird, Verweis auf skalare Spalten kann nur diskrete vorhersagbare Spalten enthalten.  
+ Bei Verwendung mit [SELECT FROM &#60;Modell&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md), **RangeMin**, **RangeMid**, und **RangeMax**  Funktionen geben die tatsächlichen Begrenzungswerte des angegebenen Buckets zurück. Wenn Sie z. B. eine Vorhersage für eine diskretisierte Spalte ausführen, gibt die Abfrage die vorhergesagte Bucketnummer in der diskretisierten Spalte zurück. Die **RangeMin**, **RangeMid**, und **RangeMax** Funktionen beschreiben den Bucket, der die Vorhersage angibt. Wenn die **RangeMin** Funktion mit einer PREDICTION JOIN-Anweisung verwendet wird, Verweis auf skalare Spalten kann nur diskrete vorhersagbare Spalten enthalten.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden die Mindest-, Höchst- und Durchschnittswerte für die kontinuierliche Spalte Yearly Income im Decision Tree-Miningmodell zurückgegeben.  
@@ -64,10 +62,10 @@ FROM [TM Decision Tree]
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen &#40; DMX &#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funktionen &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [Allgemeine Vorhersagefunktionen &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
- [RangeMax &#40; DMX &#41;](../dmx/rangemax-dmx.md)   
- [RangeMid &#40; DMX &#41;](../dmx/rangemid-dmx.md)  
+ [Datamining-Erweiterungen &#40;DMX&#41; Verweis-Funktion](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)   
+ [RangeMid &#40;DMX&#41;](../dmx/rangemid-dmx.md)  
   
   

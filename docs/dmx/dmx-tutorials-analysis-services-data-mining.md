@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -21,12 +20,11 @@ caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 7d0f8228564ec7aa4d873e0472a0b7ea4903b00d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 24fc92634d3e6883d3e57a4fa73328220303c487
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dmx-tutorials-analysis-services---data-mining"></a>DMX-Lernprogramme (Analysis Services – Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,19 +41,19 @@ ms.lasthandoff: 01/08/2018
  Sie erfahren, wie ein Miningmodell erstellt wird, das vorhersagt, welche Produkte voraussichtlich gemeinsam gekauft werden. Außerdem wird erläutert, wie geschachtelte Tabellen für das Data Mining verwendet werden.  
   
 ## <a name="reference"></a>Verweis  
- [Datamining-Erweiterungen &#40; DMX &#41; Syntaxelemente](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
+ [Datamining-Erweiterungen &#40;DMX&#41; Syntaxelemente](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
   
- [Datamining-Erweiterungen &#40; DMX &#41; Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)  
+ [Datamining-Erweiterungen &#40;DMX&#41; -Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)  
   
- [Datamining-Erweiterungen &#40; DMX &#41; Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)  
+ [Datamining-Erweiterungen &#40;DMX&#41; -Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)  
   
  [Understanding the DMX Select Statement (Grundlegendes zur SELECT-Anweisung)](../dmx/understanding-the-dmx-select-statement.md)  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Datenzugriff auf mehrdimensionale Modelle &#40; Analysis Services – mehrdimensionale Daten &#41;](../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)  
+ [Datenzugriff auf mehrdimensionale Modelle &#40;Analysis Services – mehrdimensionale Daten&#41;](../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Struktur und die Verwendung von DMX-Vorhersageabfragen](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Lernprogramm zu Data Mining-Grundlagen](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)  
+ [Lernprogramm zu Datamining-Lernprogramm](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)  
   
   

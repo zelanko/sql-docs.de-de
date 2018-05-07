@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -21,12 +20,11 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: c82d4e7bc8f39168a963cc5b11cbafe410eb6f2a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f916008b155c8fd8c70ed239d23fbca2753ff0f0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-syntax-conventions-mdx"></a>MDX-Syntaxkonventionen (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -39,10 +37,10 @@ ms.lasthandoff: 01/08/2018
 |&#124; (Senkrechter Strich)|Trennt Syntaxelemente innerhalb von eckigen oder geschweiften Klammern. Sie können nur eines der Elemente auswählen.|  
 |`[ ]` (eckige Klammern)|Zeigt optionale Syntaxelemente an. Geben Sie die eckigen Klammern nicht mit ein.|  
 |[,] ...n|Zeigt an, dass das vorherige Element beliebig oft wiederholt werden kann. Die einzelnen Elemente werden manchmal durch Kommas voneinander getrennt.|  
-|\<Bezeichnung >:: =|Zeigt den Namen eines Syntaxblockes an. Diese Konvention dient zur Gruppierung und Bezeichnung von Teilen einer langen Syntax oder einer Syntaxeinheit, die an mehreren Stellen innerhalb einer Anweisung verwendet werden kann. Jeder Standort in der die Syntax kann verwendet werden, wird angegeben, mit der Bezeichnung in spitzen Klammern eingeschlossen: \<Bezeichnung >.|  
+|\<label> ::=|Zeigt den Namen eines Syntaxblockes an. Diese Konvention dient zur Gruppierung und Bezeichnung von Teilen einer langen Syntax oder einer Syntaxeinheit, die an mehreren Stellen innerhalb einer Anweisung verwendet werden kann. Jeder Standort in der die Syntax kann verwendet werden, wird angegeben, mit der Bezeichnung in spitzen Klammern eingeschlossen: \<Bezeichnung >.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [MDX-Sprachreferenz &#40; MDX &#41;](../mdx/mdx-language-reference-mdx.md)  
+ [MDX-Sprachreferenz & #40; MDX & #41;](../mdx/mdx-language-reference-mdx.md)  
   
   
 

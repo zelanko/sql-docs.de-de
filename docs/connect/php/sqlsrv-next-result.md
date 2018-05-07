@@ -3,15 +3,13 @@ title: Sqlsrv_next_result | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: php
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - sqlsrv_next_result
 apitype: NA
@@ -25,12 +23,11 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 75f09dd86219f1eca143a1f2fe59004e8b4d3375
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 37c9ca599e4050be4cceffb86cbbd642d0ea5aaa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsrvnextresult"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

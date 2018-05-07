@@ -3,26 +3,23 @@ title: Konvertieren von Datentypen | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: php
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 508542ec-cc28-4a17-80f4-52325d6a48db
 caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 43d8b34fc03761d84803cea49a57bd6954dbe0a8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: f374b1b0c67c151d7ae7d2da7e5dce9a8b09222d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="converting-data-types"></a>Konvertieren von Datentypen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

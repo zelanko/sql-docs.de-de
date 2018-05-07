@@ -44,6 +44,7 @@
 #### [Abonnenten](replication-subscribers-and-always-on-availability-groups-sql-server.md)  
 ### [Reporting Services](reporting-services-with-always-on-availability-groups-sql-server.md)  
 ### [Service Broker](service-broker-with-always-on-availability-groups-sql-server.md)  
+## [Timeouts der Leasedauer, des Clusters und Integritätsprüfung](availability-group-lease-healthcheck-timeout.md)
 ## [Listener, Clients und Failover](listeners-client-connectivity-application-failover.md)  
 ## [Anmeldungen und Aufträge](logins-and-jobs-for-availability-group-databases.md)  
 ## [Mögliche Fehler während einer Sitzung zwischen Replikaten](possible-failures-during-sessions-between-availability-replicas-sql-server.md)  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -22,12 +21,11 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 37424120aee0b38303b086019e2fb74a823cdc1b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c9df8d31e49019abf730f70664a74c50d7bdc678
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="strtovalue-mdx"></a>StrToValue (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +43,7 @@ StrToValue(MDX_Expression [,CONSTRAINED] )
  *MDX_Expression*  
  Ein gültiger Zeichenfolgenausdruck, der direkt oder indirekt zu einer einzelnen Zelle aufgelöst wird.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
  Die **StrToValue** Funktion gibt den numerischen Wert, der durch den MDX-Ausdruck angegeben. Die **StrToValue** Funktion wird in der Regel mit benutzerdefinierten Funktionen verwendet, um einen MDX-Ausdruck aus einer externen Funktion an eine MDX-Anweisung zurückzugeben, die in einer einzelnen Zelle aufgelöst werden kann.  
   
 -   Wenn das CONSTRAINED-Flag verwendet wird, darf der MDX-Ausdruck nur einen Skalarwert enthalten. Das CONSTRAINED-Flag wird verwendet, um das Risiko von Injection-Angriffen über die angegebene Zeichenfolge zu minimieren. Wenn ein MDX-Ausdruck bereitgestellt wird, der nicht direkt zu einem Skalarwert aufgelöst werden kann, wird eine Fehlermeldung angezeigt, die besagt, dass die durch das CONSTRAINED-Flag in der STRTOVALUE-Funktion vorgegebenen Einschränkungen verletzt wurden.  
@@ -70,7 +68,7 @@ FROM [Adventure Works]
 WHERE [Product].[Product Categories].[Bikes]  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Siehe auch  
+ [MDX-Funktionsreferenz & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

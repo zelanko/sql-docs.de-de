@@ -3,15 +3,12 @@ title: SQLServerException-Konstruktor (java.lang.Object, java.lang.String, java.
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - sqljdbc.jar
 apitype: Assembly
@@ -20,12 +17,11 @@ caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7e6e0ef2f83c8dc0641cbaed60e6333590fc9ca1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 7bb24e82a0c6cac43d54339652e9bfcd536482a6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-int-boolean"></a>SQLServerException-Konstruktor (java.lang.Object, java.lang.String, java.lang.String, Int, Boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

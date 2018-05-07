@@ -3,26 +3,22 @@ title: SQLServerPreparedStatement-Klasse | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a8481c06-fbba-432b-8c69-4f4619c20ad4
 caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2494ebfffa6066988bdd979a55cf40d8cd68347e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 6c7b37e26faedf7cb064880d68e17f4688bfbe73
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlserverpreparedstatement-class"></a>SQLServerPreparedStatement-Klasse
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

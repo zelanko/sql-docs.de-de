@@ -3,15 +3,13 @@ title: Sqlsrv_client_info | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: php
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - sqlsrv_client_info
 apitype: NA
@@ -23,12 +21,11 @@ caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 17c204fd5f7d84056591ff79cfe59ecb908b1ce2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 2ea94ad6f635a438fc9df0546039137261f3c77e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsrvclientinfo"></a>sqlsrv_client_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

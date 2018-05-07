@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -22,12 +21,11 @@ caps.latest.revision: 45
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: dd5ed7f5ef6eb60b37c5066f7535d34913572871
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f15c5cec26e55a403bea58883cf5de978b6a2b45
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calculationpassvalue-mdx"></a>CalculationPassValue (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -61,21 +59,21 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
  Ein zugriffsflagwert, der angibt, die *Pass_Value* Parameter enthält einen relativen Offset vom Berechnungsdurchlauf der auslösenden Berechnung. Wenn der Offset in einen Berechnungsdurchlaufindex kleiner als null (0) aufgelöst wird, wird Berechnungsdurchlauf 0 verwendet, und es tritt kein Fehler auf.  
   
  ALL  
- Wenn dieses Flag festgelegt wird, sind alle Werte NULL, die nicht vom Speichermodul geladen werden. Wenn das Flag nicht festgelegt wird, werden die Werte ohne jegliche Berechnungen aggregiert.  
+ Wenn dieses Flag festgelegt wird, sind alle Werte NULL, die nicht von der Speicher-Engine geladen werden. Wenn das Flag nicht festgelegt wird, werden die Werte ohne jegliche Berechnungen aggregiert.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
  Bei einem numerischer Ausdruck gibt die Funktion einen numerischen Wert zurück, indem sie den angegebenen numerischen MDX-Ausdruck im angegebenen Berechnungsdurchlauf auswertet, optional geändert durch ein Zugriffsflag und einen Zugriffsflagmodifizierer.  
   
- Wenn ein Zeichenfolgenausdruck angegeben wird, die Funktion gibt einen Zeichenfolgenwert zurück, durch das Auswerten des angegebene MDX-Zeichenfolgenausdruck im angegebenen Berechnungsdurchlauf auswertet, und optional geändert durch ein Zugriffsflag und einen zugriffsflagmodifizierer*.*  
+ Wenn ein Zeichenfolgenausdruck angegeben wird, die Funktion gibt einen Zeichenfolgenwert zurück, durch das Auswerten des angegebene MDX-Zeichenfolgenausdruck im angegebenen Berechnungsdurchlauf auswertet, und optional geändert durch ein Zugriffsflag und einen zugriffsflagmodifizierer *.*  
   
  Durch die automatische rekursionsauflösung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], diese Funktion hat kaum noch praktischen nutzen.  
   
 > [!NOTE]  
 >  Nur Administratoren können die **CalculationPassValue** Funktion innerhalb eines MDX-Skripts. Wenn ein MDX-Skript mit dieser Funktion im Kontext einer Rolle ausgeführt wird, die nicht über Administratorprivilegien verfügt, tritt ein Fehler auf.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [CalculationCurrentPass &#40; MDX &#41;](../mdx/calculationcurrentpass-mdx.md)   
- [IIf &#40; MDX &#41;](../mdx/iif-mdx.md)   
- [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Siehe auch  
+ [CalculationCurrentPass & #40; MDX & #41;](../mdx/calculationcurrentpass-mdx.md)   
+ [IIf &#40;MDX&#41;](../mdx/iif-mdx.md)   
+ [MDX-Funktionsreferenz & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

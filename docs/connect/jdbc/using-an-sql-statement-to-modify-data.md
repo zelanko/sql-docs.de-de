@@ -3,26 +3,22 @@ title: Verwenden eine SQL-Anweisung zum Ändern von Daten | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4704199b-c0ae-4c77-8a2e-6963715b4ffb
 caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7ac1d0c5ada6d7895384e6133de189818e8cf824
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 0d02d5187e869eb626cfddde9e12bcf55feed51a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-an-sql-statement-to-modify-data"></a>Ändern von Daten mit SQL-Anweisungen
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

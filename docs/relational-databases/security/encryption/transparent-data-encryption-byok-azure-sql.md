@@ -16,15 +16,16 @@ ms.component: security
 ms.workload: On Demand
 ms.tgt_pltfrm: ''
 ms.topic: article
-ms.date: 04/03/2018
+ms.date: 04/19/2018
 ms.author: aliceku
-ms.openlocfilehash: e8e5456b1c6e8ca160e677907a97976c8f2b0374
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 1ca79d0f6c4bc501e7b03cd0c5b710eba2b50adf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption mit Bring Your Own Key-Unterstützung (Vorschau) für Azure SQL-Datenbank und Data Warehouse
+# <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption mit Bring Your Own Key-Unterstützung für Azure SQL-Datenbank und Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 Mithilfe der Unterstützung von Bring Your Own Key (BYOK) für die [Transparent Data Encryption (TDE)](transparent-data-encryption.md) können Sie den Datenbank-Verschlüsselungsschlüssel (Database Encryption Key, DEK) mit einem dem asymmetrischen Schlüssel „TDE Protector“ verschlüsseln.  Der TDE Protector ist in [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault) gespeichert. Dabei handelt es sich um das cloudbasierte Verwaltungssystem von externen Schlüsseln von Azure. Bei Azure Key Vault handelt es sich um den ersten Verwaltungsdienst für Schlüssel, in dem die Unterstützung von BYOK in TDE integriert ist. Der TDE-DEK ist auf der Startseite der Datenbank gespeichert und wird vom TDE Protector verschlüsselt und entschlüsselt. Der TDE Protector ist in Azure Key Vault gespeichert und bleibt auch dort erhalten. Wenn dem Server der Zugriff auf den Schlüsseltresor entzogen wird, können Datenbanken nicht entschlüsselt und im Speicher gelesen werden.  Der TDE Protector ist auf der Ebene des logischen Servers platziert und wird von allen Datenbanken geerbt, die diesem Server zugeordnet sind. 
@@ -65,9 +66,10 @@ Wenn TDE dafür konfiguriert wird, einen TDE Protector von Key Vault zu verwende
 
 ### <a name="guidelines-for-configuring-azure-key-vault"></a>Richtlinien für das Konfigurieren von Azure Key Vault
 
-- Verwenden Sie einen Schlüsseltresor, für den [vorläufiges Löschen](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete) aktiviert ist, um sich vor Datenverlusten zu schützen, falls der Schlüssel bzw. der Schlüsseltresor aus Versehen gelöscht wird:  
+- Erstellen Sie einen Schlüsseltresor, für den [vorläufiges Löschen](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete) aktiviert ist, um sich vor Datenverlusten zu schützen, falls der Schlüssel bzw. der Schlüsseltresor aus Versehen gelöscht wird.  Sie müssen [PowerShell zum Aktivieren der Eigenschaft „vorläufiges Löschen“](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) in den Schlüsseltresoren verwenden (diese Option ist noch nicht im AKV-Portal verfügbar – wird aber von SQL gefordert):  
   - Vorläufig gelöschte Ressourcen bleiben für einen Zeitraum von 90 Tagen weiter gespeichert. In diesem Zeitraum können sie wiederhergestellt oder endgültig gelöscht werden.
   - Den Aktionen **Wiederherstellen** und **Endgültig löschen** sind über Zugriffsrichtlinien für den Schlüsseltresor eigene Berechtigungen zugewiesen. 
+
 - Erteilen Sie dem logischen Server über dessen Azure AD-Identität (Azure Active Directory) Zugriff auf den Schlüsseltresor.  Wenn die Benutzeroberfläche des Portals verwendet wird, wird die Azure AD-Identität automatisch erstellt, und dem Server werden die Zugriffsberechtigungen für den Schlüsseltresor erteilt.  Wenn PowerShell verwendet wird, um TDE mit BYOK zu konfigurieren, muss die Azure AD-Identität erstellt werden. Außerdem sollte der Abschluss des Vorgangs überprüft werden. Wenn Sie PowerShell verwenden, finden Sie detaillierte Anweisungen unter [Konfigurieren von TDE mit BYOK](transparent-data-encryption-byok-azure-sql-configure.md).
 
   >[!NOTE]
@@ -122,7 +124,8 @@ Im folgenden Abschnitt werden die Schritte für die Einrichtung und Konfiguratio
 ### <a name="azure-key-vault-configuration-steps"></a>Konfigurationsschritte für Azure Key Vault
 
 - Installieren Sie [PowerShell](https://docs.microsoft.com/en-us/powershell/azure/install-azurerm-ps?view=azurermps-5.6.0) 
-- Erstellen Sie zwei Azure Key Vaults in zwei verschiedenen Regionen, und verwenden Sie [PowerShell zum Aktivieren der Eigenschaft „vorläufiges Löschen“](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) in den Schlüsseltresoren (diese Option ist noch nicht im AKV-Portal verfügbar – wird aber von SQL gefordert) 
+- Erstellen Sie zwei Azure-Schlüsseltresore in zwei verschiedenen Regionen, und verwenden Sie [PowerShell zum Aktivieren der Eigenschaft „vorläufiges Löschen“](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) in den Schlüsseltresoren (diese Option ist noch nicht im AKV-Portal verfügbar – wird aber von SQL gefordert).
+- Beide Azure-Schlüsseltresore müssen sich in Regionen befinden, die in derselben Azure-Geografie verfügbar sind, damit Schlüssel gesichert und wiederhergestellt werden können.  Wenn zwei Schlüsseltresore in unterschiedlichen Geografien die georedundanten SQL-Anforderungen erfüllen müssen, führen Sie den [BYOK-Prozess](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-hsm-protected-keys) durch, der das Importieren eines Schlüssels von einem lokalen HSM ermöglicht.
 - Erstellen Sie einen neuen Schlüssel im ersten Schlüsseltresor:  
   - Schlüssel RSA/RSA-HSA 2048 
   - Kein Ablaufdatum 
@@ -138,7 +141,7 @@ Schritte für eine neue Bereitstellung:
 - Wählen Sie den TDE-Bereich für logische Server und für jeden logischen SQL Server aus:  
    - Wählen Sie den AKV in der gleichen Region aus 
    - Wählen Sie den als TDE Protector zu verwendenden Schlüssel aus – jeder Server verwendet die lokale Kopie von TDE Protector. 
-   - Dadurch wird im Portal eine [AppID](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview) für den logischen SQL Server erstellt, die zum Zuweisen von logischen SQL Server-Berechtigungen dient. Somit kann auf den Schlüsseltresor zugegriffen werden – löschen Sie diese Identität nicht.  Der Zugriff kann stattdessen durch das Entfernen von Berechtigungen in Azure Key Vault aufgehoben werden. Dieser dient zum Zuweisen von logischen SQL Server-Berechtigungen für den Zugriff auf den Schlüsseltresor – löschen Sie diese Identität nicht.  Der Zugriff kann stattdessen durch das Entfernen von Berechtigungen in Azure Key Vault aufgehoben werden. 
+   - Dadurch wird im Portal eine [AppID](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview) für den logischen SQL Server erstellt, die zum Zuweisen von logischen SQL Server-Berechtigungen dient. Somit kann auf den Schlüsseltresor zugegriffen werden – löschen Sie diese Identität nicht.  Der Zugriff kann stattdessen durch das Entfernen von Berechtigungen in Azure Key Vault aufgehoben werden. Dieser dient zum Zuweisen von logischen SQL Server-Berechtigungen für den Zugriff auf den Schlüsseltresor.
 - Erstellen Sie die primäre Datenbank. 
 - Folgen Sie dem [Leitfaden für aktive Georeplikation](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-geo-replication-overview) zum Abschließen dieses Szenarios. Mit diesem Schritt wird die sekundäre Datenbank erstellt.
 

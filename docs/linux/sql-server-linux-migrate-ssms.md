@@ -8,18 +8,16 @@ ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
 ms.custom: sql-linux
-ms.workload: On Demand
-ms.openlocfilehash: 8e3ac15e2cf774577bbd4567509ca630ef91c15b
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 0087d33c0eabcff4ebc81de80fc69999e3017828
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>Exportieren Sie und importieren Sie eine Datenbank unter Linux mit SSMS oder SqlPackage.exe unter Windows
 

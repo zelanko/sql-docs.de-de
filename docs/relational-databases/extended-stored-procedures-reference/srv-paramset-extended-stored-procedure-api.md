@@ -26,12 +26,11 @@ caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c76f1dc82a04ae14150833df75fd23db83b7fecc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4a11636b22de7e54b070b1a43ae795664e5c35e9
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvparamset-extended-stored-procedure-api"></a>srv_paramset (API für erweiterte gespeicherte Prozeduren)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +73,7 @@ len
  Gibt die tatsächliche Länge der zurückzugebenden Daten an. Wenn der Datentyp des Parameters eine konstante Länge aufweist und keine NULL-Werte zulässt (z.B. *srvbit* oder *srvint1*), wird *len* ignoriert.  
   
 ## <a name="returns"></a>Rückgabewert  
- SUCCEED, wenn der Parameterwert erfolgreich festgelegt wurde; andernfalls FAIL. FAIL wird zurückgegeben, wenn keine aktuelle remote gespeicherte Prozedur vorhanden ist, wenn besteht keine *n*-Prozedurparameter gespeicherten Prozedurparameter, wenn der Parameter kein Rückgabeparameter ist und die *Len* Argument ist kein Rechtliche.  
+ SUCCEED, wenn der Parameterwert erfolgreich festgelegt wurde; andernfalls FAIL. Es wird FAIL zurückgegeben, wenn es keine aktuelle remote gespeicherte Prozedur oder keinen *n*-ten Parameter für die remote gespeicherte Prozedur gibt, oder wenn der Parameter kein Rückgabeparameter oder das *len*-Argument ungültig ist.  
   
  Wenn *len* 0 ist, wird NULL zurückgegeben. *len* auf 0 festzulegen ist die einzige Möglichkeit, NULL an den Client zurückzugeben.  
   
@@ -94,7 +93,7 @@ len
 |IG = Wert wird ignoriert||  
 |valid = ein beliebiger gültiger Zeiger auf Daten||  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Parameter enthalten die zwischen Clients und der Anwendung mit remote gespeicherten Prozeduren übergebenen Daten. Der Client kann bestimmte Parameter als Rückgabeparameter angeben. Diese Rückgabeparameter können Werte enthalten, die die Open Data Services-Anwendung wieder an den Client übergibt. Die Verwendung von Rückgabeparametern entspricht der Übergabe von Parametern nach Verweis.  
   
  Sie können den Rückgabewert für einen Parameter nicht festlegen, der nicht als Rückgabeparameter aufgerufen wurde. Verwenden Sie **srv_paramstatus**, um zu bestimmen, wie der Parameter aufgerufen wurde.  
@@ -106,7 +105,7 @@ len
 > [!IMPORTANT]  
 >  Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren sorgfältig prüfen, und Sie sollten die kompilierten DLL-Dateien testen, bevor Sie sie auf einem Produktionsserver installieren. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie auf dieser [Microsoft-Website](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [srv_paramsetoutput (API für erweiterte gespeicherte Prozeduren)](../../relational-databases/extended-stored-procedures-reference/srv-paramsetoutput-extended-stored-procedure-api.md)  
   
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -21,12 +20,11 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a972760985e93f61ffa813043ad6c4e58f7d1a28
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 00e4712dd44860c673f67d62d7eb1d6ff0bd5d5c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="divide-dmx"></a>(Division) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,10 +54,10 @@ Dividend / Divisor
  Beide Ausdrücke müssen denselben Datentyp haben, oder es muss möglich sein, einen Ausdruck implizit in den Datentyp des anderen Ausdrucks zu konvertieren. Wenn der Divisor ausgewertet den Wert NULL hat, löst der Operator einen Fehler aus. Wenn sowohl der Divisor als auch der Dividend ausgewertet den Wert NULL haben, gibt der Operator den Wert NULL zurück.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Arithmetische Operatoren &#40; DMX &#41;](../dmx/operators-arithmetic.md)   
- [Datamining-Erweiterungen &#40; DMX &#41; Operator (Referenz)](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operatoren &#40; DMX &#41;](../dmx/operators-dmx.md)   
- [Aufgrund einer Division &#40; SSIS-Ausdruck &#41;](../integration-services/expressions/divide-ssis-expression.md)   
- [&#40; aufgrund einer Division &#41; &#40; Transact-SQL &#41;](../t-sql/language-elements/divide-transact-sql.md)  
+ [Arithmetische Operatoren &#40;DMX&#41;](../dmx/operators-arithmetic.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; Operator (Referenz)](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Operatoren &#40;DMX&#41;](../dmx/operators-dmx.md)   
+ [Teilen Sie &#40;SSIS-Ausdruck&#41;](../integration-services/expressions/divide-ssis-expression.md)   
+ [&#40;Teilen Sie&#41; &#40;Transact-SQL&#41;](../t-sql/language-elements/divide-transact-sql.md)  
   
   

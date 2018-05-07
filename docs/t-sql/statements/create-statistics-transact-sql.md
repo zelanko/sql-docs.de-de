@@ -1,16 +1,16 @@
 ---
 title: CREATE STATISTICS (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 01/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STATISTICS
@@ -28,16 +28,17 @@ helpviewer_keywords:
 - creating statistics [SQL Server]
 - NORECOMPUTE clause
 ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
-caps.latest.revision: 
+caps.latest.revision: 105
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 088b79e73be6258afc5c664aaf14ba3cad9d2f5f
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 74c5a8618dd48ec388f2b4affe9aeb6b8e789bd7
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -182,7 +183,7 @@ CREATE STATISTICS statistics_name
  Entfernen Sie die Statistiken mit [DROP STATISTICS](../../t-sql/statements/drop-statistics-transact-sql.md), und führen Sie dann CREATE STATISTICS ohne die NORECOMPUTE-Option aus, um Statistikupdates wieder zu aktivieren.  
   
 > [!WARNING]  
->  Bei Verwendung dieser Option können suboptimale Abfragepläne entstehen. Es wird empfohlen, diese Option nur in Einzelfällen von einem qualifizierten Systemadministrator vornehmen zu lassen.  
+> Bei Verwendung dieser Option können suboptimale Abfragepläne entstehen. Es wird empfohlen, diese Option nur in Einzelfällen von einem qualifizierten Systemadministrator vornehmen zu lassen.  
   
  Weitere Informationen über die Option AUTO_STATISTICS_UPDATE finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). Weitere Informationen zum Deaktivieren und erneuten Aktivieren von Statistikupdates finden Sie unter [Statistiken](../../relational-databases/statistics/statistics.md).  
   
@@ -202,9 +203,9 @@ CREATE STATISTICS statistics_name
 **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 MAXDOP = *max_degree_of_parallelism*  
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
+**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3)  
   
- Überschreibt die Konfigurationsoption **Max. Grad an Parallelität** für die Dauer des Statistikvorgangs. Weitere Informationen finden Sie unter [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Sie können mit MAXDOP die Anzahl der Prozessoren begrenzen, die bei der Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.  
+ Überschreibt die Konfigurationsoption **max degree of parallelism** (Max. Grad an Parallelität) für die Dauer des Statistikvorgangs. Weitere Informationen finden Sie unter [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Sie können mit MAXDOP die Anzahl der Prozessoren begrenzen, die bei der Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.  
   
  *max_degree_of_parallelism* kann folgende Werte haben:  
   

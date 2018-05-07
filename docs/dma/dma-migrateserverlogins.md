@@ -4,14 +4,11 @@ ms.custom: ''
 ms.date: 08/31/2017
 ms.prod: sql
 ms.prod_service: dma
-ms.service: ''
-ms.component: ''
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-dma
+ms.technology: dma
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, login migration
@@ -20,12 +17,11 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 45836159a2708166dc367c73a03f33d75eabe850
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 23da8fe364ffad914013719f54871e85213befc5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="migrating-sql-server-logins-using-data-migration-assistant"></a>Migrieren von SQL Server-Anmeldungen, die mithilfe des Migrations-Assistenten Daten
 

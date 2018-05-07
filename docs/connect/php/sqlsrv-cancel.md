@@ -3,15 +3,13 @@ title: Sqlsrv_cancel | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: php
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - sqlsrv_cancel
 apitype: NA
@@ -23,12 +21,11 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8d9030165be2ff9e284cf961c767b73c4f175b6f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 7c6173e20a99622a42264591c3a83024fda5d2bd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsrvcancel"></a>sqlsrv_cancel
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
