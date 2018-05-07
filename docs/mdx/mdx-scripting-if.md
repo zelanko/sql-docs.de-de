@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -20,12 +19,11 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 67376067c26a3eae41d0c090a141367fcf5cc396
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ffe88aae91e19f0f4e55d104a323870caf4e67b7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-scripting---if"></a>MDX-Skripts - IF
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +45,7 @@ IF expression THEN assignment END IF
  Ein MDX-Ausdruck, der entweder einem Teilcube oder einer berechneten Eigenschaft einen Wert zuweist.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden Sie die IF-Anweisung für die ablaufsteuerung, also im Gegensatz zu den [IIf &#40; MDX &#41; ](../mdx/iif-mdx.md) Funktion und die [CASE-Anweisung &#40; MDX &#41; ](../mdx/case-statement-mdx.md) , nur zum Zurückgeben von Werten oder Objekten verwendet werden kann.  
+ Verwenden Sie die IF-Anweisung für die ablaufsteuerung, also im Gegensatz zu den [IIf &#40;MDX&#41; ](../mdx/iif-mdx.md) Funktion und die [CASE-Anweisung &#40;MDX&#41; ](../mdx/case-statement-mdx.md) , nur zum Zurückgeben von Werten oder Objekten verwendet werden kann.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel ist der Gültigkeitsbereich auf die Country-Ebene der Customer Geography-Hierarchie in der Customer-Dimension beschränkt. Wenn das aktuelle Measure „Betrag der Internetsteuern“ ist, dann wird „Betrag der Internetsteuern“ auf 10 festgelegt:  
@@ -59,6 +57,6 @@ IF expression THEN assignment END IF
  `END SCOPE`;  
   
 ## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX-Funktionsreferenz & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

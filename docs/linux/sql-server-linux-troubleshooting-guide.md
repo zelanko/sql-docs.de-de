@@ -4,22 +4,20 @@ description: Bietet Tipps zur Problembehandlung für die Verwendung von SQL Serv
 author: annashres
 ms.author: anshrest
 manager: craigg
-ms.date: 02/22/2018
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.workload: On Demand
-ms.openlocfilehash: 2be739569e240bfecd7e18fecae52a6f15d24e0f
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: ec2fac2c39097fa4091c9cddfe78ae949cd25953
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Problembehandlung bei SQLServer on Linux
 
@@ -160,6 +158,41 @@ Wenn Sie versehentlich SQL Server mit einem anderen Benutzer gestartet haben, m�
    chown -R mssql:mssql /var/opt/mssql/
    ```
 
+## <a name="rebuild-system-databases"></a>Neuerstellen von Systemdatenbanken
+Als letzte Möglichkeit können Sie zum Neuerstellen der Master und Model-Datenbanken sichern, um Standardversionen.
+
+> [!WARNING]
+> Diese Schritte werden **Löschen aller Daten von SQL Server-System** , die Sie konfiguriert haben! Dies schließt Informationen über die Benutzerdatenbanken (jedoch nicht die Benutzerdatenbanken selbst). Dadurch werden auch andere in den Systemdatenbanken, einschließlich der folgenden gespeicherten Informationen gelöscht: Master Key-Informationen, alle Zertifikate in Master, das Kennwort des Anmeldenamens "SA", Auftrags-bezogenen Informationen vom Msdb, DB e-Mail-Informationen aus Msdb "und" Sp_configure-Optionen geladen. Verwenden Sie nur, wenn Sie die Auswirkungen verstehen!
+
+1. Beenden Sie SqlServer.
+
+   ```bash
+   sudo systemctl stop mssql-server
+   ```
+
+1. Führen Sie **Sqlservr** mit der **Force-Setup** Parameter. 
+
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr --force-setup
+   ```
+   
+   > [!WARNING]
+   > Wir sehen Sie uns die vorherige Warnung! Sie müssen außerdem Ausführen als die **Mssql** Benutzer wie hier gezeigt.
+
+1. Nachdem die Meldung "Wiederherstellung ist abgeschlossen" angezeigt wird, drücken Sie STRG + C. Dies wird SQL Server heruntergefahren
+
+1. Konfigurieren Sie das SA-Kennwort ein.
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set-sa-password
+   ```
+   
+1. Starten Sie SQL Server, und konfigurieren Sie den Server neu. Dies schließt wiederherstellen oder einer beliebigen Benutzerdatenbank erneut anfügen.
+
+   ```bash
+   sudo systemctl start mssql-server
+   ```
+
 ## <a name="common-issues"></a>Häufige Probleme
 
 1. Sie können nicht mit der Remoteinstanz von SQL Server verbinden.
@@ -186,7 +219,7 @@ Wenn Sie versehentlich SQL Server mit einem anderen Benutzer gestartet haben, m�
 
 4. Verwenden von Sonderzeichen in Kennwort.
 
-   Wenn Sie einige Zeichen in der SQL Server-Anmeldekennwort verwenden müssen Sie sie mit Escapezeichen, wenn sie in der abschließenden Linux verwenden. Sie müssen die $ mit Escapezeichen versehen jedes Mal, wenn mit einem umgekehrten Schrägstrich verwenden Sie ihn in einem Terminalserver Befehls-Shell-Skript:
+   Wenn Sie einige Zeichen im Kennwort SQL Server-Anmeldung verwenden, müssen Sie möglicherweise mit Escapezeichen versehen mit einem umgekehrten Schrägstrich bei der Verwendung in einem Linux-Befehl in die Terminal. Beispielsweise müssen Sie mit Escapezeichen versehen das Dollarzeichen ($) jedes Mal, wenn Sie sie verwenden in einem Terminalserver Befehls-Shell-Skript:
 
    Ist nicht geeignet:
 

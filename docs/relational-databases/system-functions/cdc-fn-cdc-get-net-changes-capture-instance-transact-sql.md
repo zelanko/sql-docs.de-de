@@ -23,12 +23,11 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1fc46b0a9c671c82b03e9a4d4166513dc77315da
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 115e317dcbf2e43202d2d43ea39841bf62f64f2c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdcfncdcgetnetchangesltcaptureinstancegt-transact-sql"></a>CDC. fn_cdc_get_net_changes_&lt;Capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,12 +59,12 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="arguments"></a>Argumente  
  *from_lsn*  
- Legen Sie die LSN, die den unteren Endpunkt des LSN-Bereichs in das Ergebnis eingeschlossen darstellt. *From_lsn* ist **("Binary(10)")**.  
+ Legen Sie die LSN, die den unteren Endpunkt des LSN-Bereichs in das Ergebnis eingeschlossen darstellt. *From_lsn* ist **("Binary(10)").**.  
   
  Nur Zeilen aus der [cdc.&#91; Capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) Änderungstabelle mit einem Wert in __ $Start_lsn größer als oder gleich *From_lsn* im Resultset enthalten sind.  
   
  *to_lsn*  
- Legen Sie die LSN, die für den oberen Endpunkt des LSN-Bereichs in das Ergebnis eingeschlossen werden sollen. *To_lsn* ist **("Binary(10)")**.  
+ Legen Sie die LSN, die für den oberen Endpunkt des LSN-Bereichs in das Ergebnis eingeschlossen werden sollen. *To_lsn* ist **("Binary(10)").**.  
   
  Nur Zeilen aus der [cdc.&#91; Capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) Änderungstabelle mit einem Wert in __ $Start_lsn kleiner als oder gleich *From_lsn* gleich *To_lsn* im Resultset enthalten sind.  
   

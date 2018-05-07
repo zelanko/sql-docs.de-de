@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -22,12 +21,11 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 412c741e3f48c23f65eafa2a998a257f07034dd9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 48a53d01219290dd50bd192a6ee2adf5b51ad7b6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +50,7 @@ TopCount(<table expression>, <rank expression>, <count>)
   
  Die TopCount-Funktion wurde ursprünglich eingeführt werden, um assoziative Vorhersagen zu ermöglichen und die gleichen Ergebnisse wie eine Anweisung, im Allgemeinen erzeugt **SELECT TOP** und **ORDER BY** Klauseln. Sie erhalten eine bessere Leistung bei assoziativen Vorhersagen bei Verwendung der **Vorhersagen (DMX)** -Funktion, die eine Anzahl von zurückzugebenden Vorhersagen spezifiziert.  
   
- Es gibt jedoch Situationen, in denen Sie dennoch eventuell TopCount verwenden. DMX unterstützt beispielsweise nicht die **oben** Qualifizierer in einer untergeordneten select-Anweisung. Die ["PredictHistogram" &#40; DMX &#41;](../dmx/predicthistogram-dmx.md) Funktion nicht unterstützt, ist das Hinzufügen von **oben**.  
+ Es gibt jedoch Situationen, in denen Sie dennoch eventuell TopCount verwenden. DMX unterstützt beispielsweise nicht die **oben** Qualifizierer in einer untergeordneten select-Anweisung. Die ["PredictHistogram" &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) Funktion nicht unterstützt, ist das Hinzufügen von **oben**.  
   
 ## <a name="examples"></a>Beispiele  
  In den folgenden Beispielen werden Vorhersageabfragen für das Association-Modell, die Sie erstellen, mit der [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Die Abfragen geben die gleichen Ergebnisse zurück, aber im ersten Beispiel wird die TopCount und im zweiten Beispiel wird die Vorhersagefunktion.  
@@ -125,10 +123,10 @@ SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $
  Die Ergebnisse enthalten die obersten 3 Vorhersagen sortiert nach dem Unterstützungswert. Sie können $SUPPORT durch $PROBABILITY oder $ADJUSTED_PROBABILITY ersetzen, um nach Wahrscheinlichkeit oder angepasster Wahrscheinlichkeit sortierte Vorhersagen zurückzugeben. Weitere Informationen finden Sie unter **Vorhersagen (DMX)**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Funktionen &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [Allgemeine Vorhersagefunktionen &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
- [BottomCount &#40; DMX &#41;](../dmx/bottomcount-dmx.md)   
- [TopPercent &#40; DMX &#41;](../dmx/toppercent-dmx.md)   
- [TopSum &#40; DMX &#41;](../dmx/topsum-dmx.md)  
+ [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)   
+ [TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)   
+ [TopSum &#40;DMX&#41;](../dmx/topsum-dmx.md)  
   
   

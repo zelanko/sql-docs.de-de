@@ -2,22 +2,20 @@
 title: Datenverbindungsbibliotheken für Microsoft SQL-Datenbanken | Microsoft Docs
 description: Bietet Downloadlinks für Module, die Verbindung mit Microsoft SQL Server und Azure SQL-Datenbank aus einer Vielzahl von Programmiersprachen Client zu aktivieren.
 author: MightyPen
-ms.service: ''
 ms.component: connect
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
+ms.prod_service: connectivity
 ms.technology: dbe-data-tier-apps
 ms.custom: ''
-ms.workload: data-management
 ms.topic: article
 ms.date: 04/10/2018
 ms.author: genemi
-ms.openlocfilehash: 467f49e9cab080c67f96369a0eeeda9dd588726d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 212558cc1a9715e971e19fd4e637dcd6c089e1bc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Verbindung von Modulen für Microsoft SQL-Datenbanken
 

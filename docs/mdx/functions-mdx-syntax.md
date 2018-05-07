@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -22,12 +21,11 @@ caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 00259604fe891a21f6f52835b1844762a751f09a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: cf28303c1ffedf36354fd0fb1489666ad68d519c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="functions-mdx-syntax"></a>Funktionen (MDX-Syntax)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,11 +33,11 @@ ms.lasthandoff: 01/08/2018
   MDX (Multidimensional Expressions) verfügt über verschiedene Kategorien systeminterner Funktionen, mit denen bestimmte Vorgänge ausgeführt werden können. In der folgenden Tabelle werden die in MDX verfügbaren Funktionskategorien aufgelistet.  
   
 > [!NOTE]  
->  Weitere Informationen zu einzelnen Funktionen finden Sie unter [MDX-Funktionsreferenz &#40; MDX &#41; ](../mdx/mdx-function-reference-mdx.md).  
+>  Weitere Informationen zu einzelnen Funktionen finden Sie unter [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md).  
   
 |Funktionskategorie|Description|  
 |-----------------------|-----------------|  
-|Arrayfunktionen|Stellen Arrays bereit, die in gespeicherten Prozeduren verwendet werden können.<br /><br /> Weitere Informationen finden Sie unter [Verwendung von gespeicherten Prozeduren &#40; MDX &#41; ](../mdx/using-stored-procedures-mdx.md).|  
+|Arrayfunktionen|Stellen Arrays bereit, die in gespeicherten Prozeduren verwendet werden können.<br /><br /> Weitere Informationen finden Sie unter [Verwendung von gespeicherten Prozeduren &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md).|  
 |Dimensionsfunktionen|Geben einen Verweis auf eine Dimension aus einer Hierarchie, einer Ebene oder einem Element zurück.<br /><br /> Weitere Informationen finden Sie unter [mithilfe von Dimensions-, Hierarchie- und Funktionen der Ebene](../mdx/using-dimension-hierarchy-and-level-functions.md).|  
 |Hierarchiefunktionen|Geben einen Verweis auf eine Hierarchie aus einer Ebene oder einem Element zurück.<br /><br /> Weitere Informationen finden Sie unter [mithilfe von Dimensions-, Hierarchie- und Funktionen der Ebene](../mdx/using-dimension-hierarchy-and-level-functions.md).|  
 |Ebenenfunktionen|Geben einen Verweis auf eine Ebene aus einem Element, einer Dimension, einer Hierarchie oder einem Zeichenfolgenausdruck zurück.<br /><br /> Weitere Informationen finden Sie unter [mithilfe von Dimensions-, Hierarchie- und Funktionen der Ebene](../mdx/using-dimension-hierarchy-and-level-functions.md).|  
@@ -54,6 +52,6 @@ ms.lasthandoff: 01/08/2018
  Funktionen können in jedem MDX-Ausdruck verwendet werden. Funktionen können außerdem geschachtelt werden (d. h., eine Funktion kann innerhalb einer anderen Funktion verwendet werden).  
   
 ## <a name="see-also"></a>Siehe auch  
- [MDX-Syntaxelemente &#40; MDX &#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [MDX-Syntaxelemente &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

@@ -3,29 +3,26 @@ title: Microsoft ODBC Driver for SQLServer | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: a9e480bd8ab948c02be27aa82a8bcd8caa2d7015
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 5142268f69db446dc588af17d7b532ba680c24d9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
 
-![Download-nach-unten-Eingekreister](../../ssdt/media/download.png)[zum Herunterladen von ODBC-Treiber](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ODBC ist die primäre native Datenzugriffs-API für Anwendungen, die für SQL Server in C und C++ geschrieben. Ein ODBC-Treiber für die meisten Datenquellen ist vorhanden. Andere Sprachen, die ODBC verwenden, können enthalten COBOL, Perl, PHP und Python. ODBC wird häufig in Datenintegration verwendet.
 
@@ -33,15 +30,15 @@ Der ODBC-Treiber stellt Tools wie z. B. [ **Sqlcmd** ](../../tools/sqlcmd-utilit
 
 ## <a name="code-example-in-c"></a>Codebeispiel in C++
 
-Wir haben eine kleine ZIP-Datei, die den Quellcode einem C++-Programm enthält, die ODBC verwendet:
+Im folgende C++-Beispiel veranschaulicht, wie die ODBC-APIs zum Verbinden mit und Zugreifen auf eine Datenbank verwenden:
 
 - [C++-Codebeispiel zur Verwendung von ODBC](../../odbc/reference/sample-odbc-program.md)
 
 ## <a name="download"></a>Herunterladen
 
-- ![Download-nach-unten-Eingekreister](../../ssdt/media/download.png)[zum Herunterladen von ODBC-Treiber](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![Download-nach-unten-Eingekreister](../../ssdt/media/download.png)[zum Herunterladen von ODBC-Treiber](download-odbc-driver-for-sql-server.md)
 
-## <a name="documentation"></a>Dokumentation  
+## <a name="documentation"></a>Dokumentation
 
 ### <a name="features"></a>-Funktionen
 

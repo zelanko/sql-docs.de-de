@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -22,12 +21,11 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: aaeb95f70c9afc6872bd56df494a8eba88f98f91
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 57085d5459855afbe39db3e3b6af836ad8c8aaeb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predictsequence-dmx"></a>PredictSequence (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,9 +45,9 @@ PredictSequence(\<table column reference, n-start, n-end>)
  Ein \<Tabellenausdruck >.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn die  *n*  Parameter angegeben wird, gibt die folgenden Werte:  
+ Wenn die *n* Parameter angegeben wird, gibt die folgenden Werte:  
   
--   Wenn  *n*  ist größer als 0 (null), die am wahrscheinlichsten Sequence-Werte in der nächsten  *n*  Schritte.  
+-   Wenn *n* ist größer als 0 (null), die am wahrscheinlichsten Sequence-Werte in der nächsten *n* Schritte.  
   
 -   Wenn beide *n Boot-* und *n-End-* angegeben sind, die Sequenzwerte von *n Boot-* auf *n-End-*.  
   
@@ -64,8 +62,8 @@ From
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen &#40; DMX &#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funktionen &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [Allgemeine Vorhersagefunktionen &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Datamining-Erweiterungen &#40;DMX&#41; Verweis-Funktion](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

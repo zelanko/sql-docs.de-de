@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -25,12 +24,11 @@ caps.latest.revision: 55
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: b40b75f21b77e6dd17cf426be3ea70fe05ac0757
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: dfbac38cd1083ffe21c5e3117a8db2d9dbdb2ac1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>SELECT FROM &lt;Modell&gt;. FÄLLE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +40,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  In Data Mining-Erweiterungen (DMX) können Sie Drillthrough nur beim Erstellen des Modells aktivieren. Mit [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie Drillthrough zu einem vorhandenen Modell hinzufügen. Das Modell muss jedoch erneut verarbeitet werden, bevor Sie die Fälle anzeigen oder abfragen können.  
   
- Weitere Informationen zur drillthroughaktivierung finden Sie unter [CREATE MINING MODEL &#40; DMX &#41;](../dmx/create-mining-model-dmx.md), [SELECT INTO &#40; DMX &#41;](../dmx/select-into-dmx.md), und [ALTER MINING STRUCTURE &#40; DMX &#41;](../dmx/alter-mining-structure-dmx.md).  
+ Weitere Informationen zur drillthroughaktivierung finden Sie unter [CREATE MINING MODEL &#40;DMX&#41;](../dmx/create-mining-model-dmx.md), [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md), und [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -73,9 +71,9 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
 ## <a name="remarks"></a>Hinweise  
  Wenn Sie Drillthrough sowohl für das Miningmodell als auch für die Miningstruktur aktivieren, können Benutzer, die Mitglied einer Rolle mit Drillthroughberechtigungen für das Miningmodell und die Miningstruktur sind, auf Spalten in der Miningstruktur zugreifen, die nicht Teil des Miningmodells sind. Aus diesem Grund zum Schutz sensibler oder persönlicher Informationen sollten, erstellen Sie die Datenquellensicht aus, um persönliche Informationen verborgen sind, und gewähren **AllowDrillthrough** -Berechtigung für eine Miningstruktur nur bei Bedarf.  
   
- Die [Lag &#40; DMX &#41;](../dmx/lag-dmx.md) Funktion kann zum zurückgeben, oder Filtern die zeitverzögerung zwischen jedem Fall und der Anfangszeit mit zeitreihenmodellen verwendet werden.  
+ Die [Lag &#40;DMX&#41; ](../dmx/lag-dmx.md) Funktion kann zum zurückgeben, oder Filtern die zeitverzögerung zwischen jedem Fall und der Anfangszeit mit zeitreihenmodellen verwendet werden.  
   
- Mithilfe der [IsInNode &#40; DMX &#41;](../dmx/isinnode-dmx.md) -Funktion in der **, in denen** -Klausel nur Fälle zurückgegeben, die dem Knoten zugeordnet sind, durch die NODE_UNIQUE_NAME-Spalte des Schemarowsets angegeben ist.  
+ Mithilfe der [IsInNode &#40;DMX&#41; ](../dmx/isinnode-dmx.md) -Funktion in der **, in denen** -Klausel nur Fälle zurückgegeben, die dem Knoten zugeordnet sind, durch die NODE_UNIQUE_NAME-Spalte des Schemarowsets angegeben ist.  
   
 ## <a name="examples"></a>Beispiele  
  Die folgenden Beispiele beruhen auf der Miningstruktur Targeted Mailing, die basierend auf den [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]Datenbank und den zugeordneten Miningmodellen. Weitere Informationen finden Sie unter [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
@@ -101,12 +99,12 @@ AND IsInNode('002')
  Um eine Strukturspalte zurückzugeben, müssen Drillthroughberechtigungen sowohl im Miningmodell als auch in der Miningstruktur aktiviert sein.  
   
 > [!NOTE]  
->  Nicht alle Miningmodelltypen unterstützen Drillthrough. Weitere Informationen zu den Modellen, die Drillthrough unterstützen, finden Sie unter [Drillthroughabfragen &#40; Data Mining &#41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
+>  Nicht alle Miningmodelltypen unterstützen Drillthrough. Weitere Informationen zu den Modellen, die Drillthrough unterstützen, finden Sie unter [Drillthroughabfragen &#40;Data Mining&#41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [SELECT &#40; DMX &#41;](../dmx/select-dmx.md)   
- [Datamining-Erweiterungen &#40; DMX &#41; Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
- [Datamining-Erweiterungen &#40; DMX &#41; Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
+ [WÄHLEN SIE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; -Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; -Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
+ [Datamining-Erweiterungen & #40; DMX & #41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

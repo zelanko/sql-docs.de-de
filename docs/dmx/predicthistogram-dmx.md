@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -22,12 +21,11 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: b967498b2ea2cf742eca67c8557230ed80c78055
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a7b6c9df43d66d69b9dea1e06bea646a6a31d4dc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -61,11 +59,11 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
   
 -   **$ProbabilityVariance**  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)]Datamining-Algorithmen unterstützen keine **$ProbabilityVariance**. Diese Spalte enthält für [!INCLUDE[msCoName](../includes/msconame-md.md)]-Algorithmen immer 0.  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)] Datamining-Algorithmen unterstützen keine **$ProbabilityVariance**. Diese Spalte enthält für [!INCLUDE[msCoName](../includes/msconame-md.md)]-Algorithmen immer 0.  
   
 -   **$ProbabilityStdev**  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)]Datamining-Algorithmen unterstützen keine **$ProbabilityStdev**. Diese Spalte enthält für [!INCLUDE[msCoName](../includes/msconame-md.md)]-Algorithmen immer 0.  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)] Datamining-Algorithmen unterstützen keine **$ProbabilityStdev**. Diese Spalte enthält für [!INCLUDE[msCoName](../includes/msconame-md.md)]-Algorithmen immer 0.  
   
 -   **$AdjustedProbability**  
   
@@ -98,16 +96,16 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Cluster &#40; DMX &#41;](../dmx/cluster-dmx.md)   
- [ClusterProbability &#40; DMX &#41;](../dmx/clusterprobability-dmx.md)   
- [PredictAdjustedProbability &#40; DMX &#41;](../dmx/predictadjustedprobability-dmx.md)   
- [PredictProbability &#40; DMX &#41;](../dmx/predictprobability-dmx.md)   
- [PredictStdev &#40; DMX &#41;](../dmx/predictstdev-dmx.md)   
- [PredictSupport &#40; DMX &#41;](../dmx/predictsupport-dmx.md)   
- [PredictVariance &#40; DMX &#41;](../dmx/predictvariance-dmx.md)   
- [Datamining-Algorithmen &#40; Analysis Services – Datamining &#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Datamining-Erweiterungen &#40; DMX &#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funktionen &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [Allgemeine Vorhersagefunktionen &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Cluster &#40;DMX&#41;](../dmx/cluster-dmx.md)   
+ [ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)   
+ [PredictAdjustedProbability &#40;DMX&#41;](../dmx/predictadjustedprobability-dmx.md)   
+ [PredictProbability &#40;DMX&#41;](../dmx/predictprobability-dmx.md)   
+ [PredictStdev &#40;DMX&#41;](../dmx/predictstdev-dmx.md)   
+ [PredictSupport &#40;DMX&#41;](../dmx/predictsupport-dmx.md)   
+ [PredictVariance &#40;DMX&#41;](../dmx/predictvariance-dmx.md)   
+ [Datamining-Algorithmen & #40; Analysis Services – Datamining & #41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; Verweis-Funktion](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

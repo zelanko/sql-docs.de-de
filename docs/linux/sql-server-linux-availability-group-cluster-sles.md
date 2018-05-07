@@ -4,22 +4,20 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 05/17/2017
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.workload: Inactive
-ms.openlocfilehash: 4fa3cd388fc1f4d22ee781721145d0fc4c465682
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 4ac7fc7c865599ccf5fb8a10782fe786c7e81255
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>SLES Cluster für SQL Server-Verfügbarkeitsgruppe zu konfigurieren.
 
@@ -189,16 +187,31 @@ Wenn Sie die vorhandenen Clusterknoten mit konfiguriert haben die `YaST` cluster
 
 Überprüfen Sie nachdem alle Knoten hinzugefügt wurde, ob Sie keine-Quorum-Richtlinie in der globalen Clusteroptionen anpassen müssen. Dies ist besonders wichtig für Cluster mit zwei Knoten. Weitere Informationen finden Sie in Abschnitt 4.1.2 Option ohne-Quorum-Richtlinie. 
 
-## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>Festlegen Sie Clustereigenschaft auf "false" Start-Fehler-ist--Schwerwiegender
+## <a name="set-cluster-property-cluster-recheck-interval"></a>Legen Sie Cluster Eigenschaft Cluster-erneut prüfen-Intervall
 
-`Start-failure-is-fatal` Gibt an, ob ein Fehler beim Starten einer Ressource auf einem Knoten weiter Start Versuche auf diesem Knoten verhindert. Bei Festlegung auf `false`, der Cluster entscheidet, ob auf demselben Knoten erneut basierend auf der Ressource aktuelle Anzahl und Migration Fehlerschwellenwert starten. Daher nach dem Failover gruppieren Schrittmacher Wiederholungen starten die Verfügbarkeit Ressource auf dem ehemaligen primären sobald die SQL-Instanz verfügbar ist. Schrittmacher übernimmt die Herabstufung des sekundäre Replikats, und automatisch wieder verbunden, der verfügbarkeitsgruppe. Auch wenn `start-failure-is-fatal` festgelegt ist, um `false`, der Cluster ausgewichen, auf die konfigurierten Failcount-Limits, die mit der Migration Schwellenwert konfiguriert. Stellen Sie sicher, dass der Standardwert für Schwellenwert für die Migration wird entsprechend aktualisiert.
+`cluster-recheck-interval` Gibt an, das Abrufintervall für Änderungen in der Ressourcenparameter, Einschränkungen oder andere Clusteroptionen in dem Cluster abfragt. Wenn ein Replikat ausfällt, versucht der Cluster, das Replikat in einem Intervall neu zu starten, die durch gebunden ist die `failure-timeout` Wert und die `cluster-recheck-interval` Wert. Z. B. wenn `failure-timeout` auf 60 Sekunden festgelegt ist und `cluster-recheck-interval` festgelegt ist auf 120 Sekunden wird versucht, der Neustart in einem Intervall, das größer als 60 Sekunden, aber weniger als 120 Sekunden ist. Es wird empfohlen, dass Sie Fehler-Timeout auf 60 s und Cluster erneut prüfen Wiederherstellungsintervall auf einen Wert, der größer als 60 Sekunden festgelegt. Cluster-erneut prüfen-Intervall auf einen niedrigen Wert festlegen, wird nicht empfohlen.
 
-So aktualisieren Sie den Wert der Eigenschaft auf "false" ausführen:
+Aktualisieren Sie den Eigenschaftswert an `2 minutes` ausführen:
+
 ```bash
-sudo crm configure property start-failure-is-fatal=false
-sudo crm configure rsc_defaults migration-threshold=5000
+crm configure property cluster-recheck-interval=2min
 ```
-Wenn die Eigenschaft den Standardwert hat `true`, wenn beim ersten Versuch zum Starten der Ressource nicht erfolgreich war, ein Eingreifen des Benutzers erforderlich, nach der ein automatisches Failover ist auf die Anzahl der Fehler Ressourcen zu bereinigen und Zurücksetzen der Konfiguration verwendet: `sudo crm resource cleanup <resourceName>` Befehl.
+
+> [!IMPORTANT] 
+> Wenn Sie bereits eine verfügbarkeitsgruppenressource, die von einem Cluster Schrittmacher verwaltet haben, beachten Sie, dass alle Verteilungen, die die neuesten verfügbaren Schrittmacher Paket 1.1.18-11.el7 verwenden eine verhaltensänderung für den Start-Fehler-ist--Schwerwiegender-Einstellung, wenn Cluster einführen seiner Wert ist "false". Diese Änderung wirkt sich auf den Failover-Workflow. Wenn ein primäres Replikat ein Ausfall auftritt, muss der Cluster Failover auf eines der sekundären Replikate verfügbar. Stattdessen werden Benutzer feststellen, dass der Cluster immer wieder versucht, um das primäre Replikat mit fehlgeschlagenem zu starten. Wenn dieser primären nie (aufgrund einer dauerhaften Ausfall) online geschaltet wird, ein Cluster nie Failover an ein anderes verfügbares sekundäres Replikat. Aufgrund dieser Änderung eine zuvor empfohlene Konfiguration festzulegende Start Fehler-ist-schwerwiegend ist nicht mehr gültig und die Einstellung muss auf den Standardwert zurückgesetzt werden `true`. Darüber hinaus muss die AG-Ressource auf Einbeziehung aktualisiert werden die `failover-timeout` Eigenschaft. 
+>
+>Aktualisieren Sie den Eigenschaftswert an `true` ausführen:
+>
+>```bash
+>crm configure property start-failure-is-fatal=true
+>```
+>
+>Aktualisieren Ihrer vorhandenen AG Ressourceneigenschaft `failure-timeout` auf `60s` ausführen (ersetzen Sie `ag1` durch den Namen des Ihre verfügbarkeitsgruppenressource): 
+>
+>```bash
+>crm configure edit ag1
+># In the text editor, add `meta failure-timeout=60s` after any `param`s and before any `op`s
+>```
 
 Weitere Informationen zu Schrittmacher Clustereigenschaften, finden Sie unter [Clusterressourcen konfigurieren](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html).
 
@@ -239,22 +252,23 @@ Führen Sie den Befehl auf einem der Knoten im Cluster:
 1. Führen Sie in der Crm-Eingabeaufforderung den folgenden Befehl so konfigurieren Sie die Ressourceneigenschaften.
 
    ```bash
-primitive ag_cluster \
-   ocf:mssql:ag \
-   params ag_name="ag1" \
-   op start timeout=60s \
-   op stop timeout=60s \
-   op promote timeout=60s \
-   op demote timeout=10s \
-   op monitor timeout=60s interval=10s \
-   op monitor timeout=60s interval=11s role="Master" \
-   op monitor timeout=60s interval=12s role="Slave" \
-   op notify timeout=60s
-ms ms-ag_cluster ag_cluster \
-   meta master-max="1" master-node-max="1" clone-max="3" \
-  clone-node-max="1" notify="true" \
-commit
-   ```
+   primitive ag_cluster \
+      ocf:mssql:ag \
+      params ag_name="ag1" \
+      meta failure-timeout=60s \
+      op start timeout=60s \
+      op stop timeout=60s \
+      op promote timeout=60s \
+      op demote timeout=10s \
+      op monitor timeout=60s interval=10s \
+      op monitor timeout=60s interval=11s role="Master" \
+      op monitor timeout=60s interval=12s role="Slave" \
+      op notify timeout=60s
+   ms ms-ag_cluster ag_cluster \
+      meta master-max="1" master-node-max="1" clone-max="3" \
+     clone-node-max="1" notify="true" \
+   commit
+      ```
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 
