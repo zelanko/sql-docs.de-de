@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: tools
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -18,12 +17,11 @@ caps.latest.revision: 63
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bb3352a4399ff6b890c1addb3bcb8a9af4747ba1
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 01ea08a404c00eb6930ba8b6b2b7f7bf6a9c5ebc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="report-designer-f1-help"></a>Berichts-Designer (F1-Hilfe)
   Dieser Abschnitt stellt F1-Hilfe für die Assistenten, Ansichten und Dialogfelder des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichts-Designers in [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]bereit. Sie können die F1-Hilfe auch bei geöffnetem Dialogfeld durch Drücken der F1-Taste oder durch Klicken auf die im Dialogfeld angezeigte Schaltfläche Hilfe öffnen.  

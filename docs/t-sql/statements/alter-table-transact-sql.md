@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 08/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -65,13 +63,12 @@ caps.latest.revision: 281
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 41908f6d675e60fb5e188cd739f8e8833e4f4d07
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b6b4aca07714a7153cc0b6920daca92667e0dff6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -560,7 +557,7 @@ WITH CHECK | WITH NOCHECK
  Gibt an, ob die zugrunde liegenden Tabellen und zugeordneten Indizes für Abfragen und Datenänderungen während des Indexvorgangs verfügbar sind. Der Standardwert ist OFF. REBUILD kann als ONLINE-Vorgang ausgeführt werden.  
   
  ON  
- Lang andauernde Sperren werden nicht für die Dauer des Indexvorgangs aufrechterhalten. Während der Hauptphase des Indexvorgangs wird nur eine beabsichtigte freigegebene Sperre (IS) für die Quelltabelle aufrechterhalten. So können Abfragen oder Updates der zugrunde liegenden Tabelle und Indizes fortgesetzt werden. Zu Beginn des Vorgangs wird das Quellobjekt für sehr kurze Zeit mit einer gemeinsamen Sperre (S) belegt. Am Ende des Vorgangs wird für kurze Zeit eine gemeinsame Sperre (S) für die Quelle eingerichtet, wenn ein nicht gruppierter Index erstellt wird. Eine Schemaänderungssperre (SCH-M) wird dagegen eingerichtet, wenn ein gruppierter Index online erstellt oder gelöscht wird und wenn ein gruppierter oder nicht gruppierter Index neu erstellt wird. ONLINE kann nicht auf ON festgelegt werden, wenn ein Index auf einer lokalen temporären Tabelle erstellt wird. Nur ein Heap-Neuerstellungsvorgang mit einem einzelnen Thread ist zulässig.  
+ Lang andauernde Sperren werden nicht für die Dauer des Indexvorgangs aufrechterhalten. Während der Hauptphase des Indexvorgangs wird nur eine beabsichtigte freigegebene Sperre für die Quelltabelle aufrechterhalten. So können Abfragen oder Updates der zugrunde liegenden Tabelle und Indizes fortgesetzt werden. Zu Beginn des Vorgangs wird das Quellobjekt für sehr kurze Zeit mit einer gemeinsamen Sperre (S) belegt. Am Ende des Vorgangs wird für kurze Zeit eine gemeinsame Sperre (S) für die Quelle eingerichtet, wenn ein nicht gruppierter Index erstellt wird. Eine Schemaänderungssperre (SCH-M) wird dagegen eingerichtet, wenn ein gruppierter Index online erstellt oder gelöscht wird und wenn ein gruppierter oder nicht gruppierter Index neu erstellt wird. ONLINE kann nicht auf ON festgelegt werden, wenn ein Index auf einer lokalen temporären Tabelle erstellt wird. Nur ein Heap-Neuerstellungsvorgang mit einem einzelnen Thread ist zulässig.  
   
  Um die DDL für **SWITCH** oder für eine Onlineneuerstellung eines Indexes auszuführen, müssen alle aktiven blockierenden Transaktionen, die in einer bestimmten Tabelle ausgeführt werden, abgeschlossen sein. Bei der Ausführung verhindert **SWITCH** oder der Neuerstellungsvorgang das Starten neuer Transaktionen. Dies kann sich auf den Workloaddurchsatz auswirken und den Zugriff auf die zugrunde liegende Tabelle vorübergehend deutlich einschränken.  
   

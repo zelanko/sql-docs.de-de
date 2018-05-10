@@ -1,16 +1,14 @@
 ---
 title: ALTER EVENT SESSION (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 08/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER EVENT SESSION
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - extended events [SQL Server], Transact-SQL
 - ALTER EVENT SESSION statement
 ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
-caps.latest.revision: 
+caps.latest.revision: 46
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 593be40520403888b5ad2584515820f1935bb270
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5a68509e60a19b20a96c37abef06def4c546161f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -144,7 +141,7 @@ ON SERVER
 |DROP TARGET \<event_target_specifier>|Löscht das durch \<event_target_specifier> angegebene Ziel. \<event_target_specifier> muss in der Ereignissitzung gültig sein.|  
 |EVENT_RETENTION_MODE = { **ALLOW_SINGLE_EVENT_LOSS** &#124; ALLOW_MULTIPLE_EVENT_LOSS &#124; NO_EVENT_LOSS }|Gibt den Ereignisbeibehaltungsmodus an, der zum Behandeln von Ereignisverlusten verwendet werden soll.<br /><br /> **ALLOW_SINGLE_EVENT_LOSS**<br /> Ein Ereignis der Sitzung darf verloren gehen. Ein einzelnes Ereignis wird nur gelöscht, wenn alle Ereignispuffer gefüllt sind. Wenn bei gefüllten Ereignispuffern nur ein Ereignis verloren geht, sind akzeptable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Leistungsmerkmale möglich, während Datenverluste im verarbeiteten Ereignisdatenstrom minimiert werden.<br /><br /> ALLOW_MULTIPLE_EVENT_LOSS<br /> Volle Ereignispuffer, die mehrere Ereignisse enthalten, dürfen in der Sitzung verloren gehen. Die Anzahl verloren gegangener Ereignisse hängt von der Größe des Speichers, der der Sitzung zugeordnet ist, der Partitionierung des Speichers und der Größe der Ereignisse im Puffer ab. Die Option minimiert die Leistungseinbußen auf dem Server, wenn Ereignispuffer schnell gefüllt werden, jedoch große Mengen von Ereignissen in der Sitzung verloren gehen können.<br /><br /> NO_EVENT_LOSS<br /> Verluste von Ereignissen sind nicht zulässig. Diese Option stellt sicher, dass alle ausgelösten Ereignisse beibehalten werden. Wenn diese Option verwendet wird, müssen alle Tasks, die Ereignisse auslösen, warten, bis in einem Ereignispuffer Platz verfügbar wird. Dies kann spürbare Leistungsprobleme verursachen, während die Ereignissitzung aktiv ist. Möglicherweise werden Benutzerverbindungen blockiert, während auf das Leeren von Ereignissen aus dem Puffer gewartet wird.|  
 |MAX_DISPATCH_LATENCY = { *seconds* SECONDS &#124; **INFINITE** }|Gibt an, wie lange Ereignisse zwischengespeichert werden, bevor sie an Ereignissitzungsziele gesendet werden. Der Latenzzeitwert muss mindestens 1 Sekunde betragen. Mit dem Wert 0 kann jedoch eine INFINITE-Latenzzeit angegeben werden. Standardmäßig ist dieser Wert auf 30 Sekunden festgelegt.<br /><br /> *seconds* SECONDS<br /> Die Wartezeit in Sekunden, bevor die Puffer geleert werden und ihr Inhalt an die Ziele gesendet wird. *seconds* ist eine ganze Zahl.<br /><br /> **INFINITE**<br /> Die Puffer werden nur dann geleert und ihr Inhalt an die Ziele gesendet, wenn die Puffer voll sind oder wenn die Ereignissitzung geschlossen wird.<br /><br /> **HINWEIS!** MAX_DISPATCH_LATENCY = 0 SECONDS entspricht MAX_DISPATCH_LATENCY = INFINITE.|  
-|MAX_EVENT_SIZE =*size* [ KB &#124; **MB** ]|Gibt die maximal zulässige Größe für Ereignisse an. MAX_EVENT_SIZE sollte so festgelegt werden, dass nur einzelne Ereignisse zugelassen werden, deren Wert den von MAX_MEMORY überschreitet. Ist der festgelegte Wert kleiner als der von MAX_MEMORY, wird ein Fehler ausgelöst. *size* ist eine ganze Zahl und kann in Kilobyte (KB) oder Megabyte (MB) angegeben werden. Wenn *size* in Kilobyte angegeben wird, ist die minimal zulässige Größe 64 KB. Wenn MAX_EVENT_SIZE festgelegt wird, werden zusätzlich zu MAX_MEMORY zwei Puffer von *size* erstellt. Dies bedeutet, dass der gesamte für die Ereignispufferung verwendete Arbeitsspeicher dem Wert von MAX_MEMORY + 2 * MAX_EVENT_SIZE entspricht.|  
+|MAX_EVENT_SIZE =*size* [ KB &#124; **MB** ]|Gibt die maximal zulässige Größe für Ereignisse an. MAX_EVENT_SIZE sollte so festgelegt werden, dass nur einzelne Ereignisse zugelassen werden, deren Wert den von MAX_MEMORY überschreitet. Ist der festgelegte Wert kleiner als der von MAX_MEMORY, wird ein Fehler ausgelöst. *size* ist eine ganze Zahl und kann in Kilobyte (KB) oder Megabyte (MB) angegeben werden. Wenn *size* in Kilobyte angegeben wird, ist die geringste zulässige Größe 64 KB. Wenn MAX_EVENT_SIZE festgelegt wird, werden zusätzlich zu MAX_MEMORY zwei Puffer von *size* erstellt. Dies bedeutet, dass der gesamte für die Ereignispufferung verwendete Arbeitsspeicher dem Wert von MAX_MEMORY + 2 * MAX_EVENT_SIZE entspricht.|  
 |MEMORY_PARTITION_MODE = { **NONE** &#124; PER_NODE &#124; PER_CPU }|Gibt den Speicherort an, an dem Ereignispuffer erstellt werden.<br /><br /> **NONE**<br /> Innerhalb der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz werden mehrere Puffer erstellt.<br /><br /> PER NODE: Mehrere Puffer werden für jeden NUMA-Knoten erstellt.<br /><br /> PER CPU: Mehrere Puffer werden für jede CPU erstellt.|  
 |TRACK_CAUSALITY = { ON &#124; **OFF** }|Gibt an, ob Kausalität verfolgt wird. Wenn das Verfolgen der Kausalität aktiviert ist, können ähnliche Ereignisse auf anderen Serververbindungen korreliert werden.|  
 |STARTUP_STATE = { ON &#124; **OFF** }|Gibt an, ob diese Ereignissitzung beim Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatisch gestartet werden soll.<br /><br /> Wenn STARTUP_STATE = ON, beginnt die Ereignissitzung erst, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beendet und anschließend neu gestartet wird.<br /><br /> ON = Die Ereignissitzung wird beim Start gestartet.<br /><br /> **OFF** = Die Ereignissitzung wird nicht beim Start gestartet.|  

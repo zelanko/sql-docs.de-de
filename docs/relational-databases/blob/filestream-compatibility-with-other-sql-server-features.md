@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: blob
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-blob
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], other SQL Server features and
 - FILESTREAM [SQL Server], limitations
@@ -20,12 +19,11 @@ caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d12643c8d4759283ff71efd29f9f84b55730a338
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bb904d5e7c0804f4c0f9c84936bb3099c86e28be
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM-Kompatibilität mit anderen SQL Server-Funktionen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +57,7 @@ ms.lasthandoff: 04/16/2018
  Sie können die Transformation für das Importieren von Spalten verwenden, um Dateien aus dem Dateisystem in eine FILESTREAM-Spalte zu laden. Sie können auch die Transformation für das Exportieren von Spalten verwenden, um Dateien aus einer FILESTREAM-Spalte in einen anderen Speicherplatz im Dateisystem zu extrahieren.  
   
 ##  <a name="distqueries"></a> Verteilte Abfragen und Verbindungsserver  
- Über verteilte Abfragen und Verbindungsserver können Sie mit FILESTREAM-Daten arbeiten, indem Sie diese als Daten vom Typ **varbinary(max)** behandeln. Sie können die FILESTREAM-Funktion **PathName()** nicht in verteilten Abfragen nutzen, bei denen ein vierteiliger Name verwendet wird. Dies gilt auch, wenn der Name auf einen lokalen Server verweist. Sie können **PathName()** jedoch in der inneren Abfrage einer Pass-Through-Abfrage nutzen, bei der **OPENQUERY()**verwendet wird.  
+ Über verteilte Abfragen und Verbindungsserver können Sie mit FILESTREAM-Daten arbeiten, indem Sie diese als Daten vom Typ **varbinary(max)** behandeln. Sie können die FILESTREAM-Funktion **PathName()** nicht in verteilten Abfragen nutzen, bei denen ein vierteiliger Name verwendet wird. Dies gilt auch, wenn der Name auf einen lokalen Server verweist. Sie können **PathName()** jedoch in der inneren Abfrage einer Pass-Through-Abfrage nutzen, bei der **OPENQUERY()** verwendet wird.  
   
 ##  <a name="encryption"></a> Verschlüsselung  
  FILESTREAM-Daten werden nicht verschlüsselt, auch dann nicht, wenn die transparente Datenverschlüsselung aktiviert ist.  
@@ -114,7 +112,7 @@ ms.lasthandoff: 04/16/2018
 ##  <a name="FullText"></a> Volltextindizierung  
  Die[Volltextindizierung](../../relational-databases/search/populate-full-text-indexes.md) funktioniert mit einer FILESTREAM-Spalte genauso wie mit einer **varbinary(max)** -Spalte. Die FILESTREAM-Tabelle muss eine Spalte aufweisen, die die Dateinamenerweiterung für jeden FILESTREAM BLOB enthält. Weitere Informationen finden Sie unter [Abfragen mit Volltextsuche](../../relational-databases/search/query-with-full-text-search.md),[Konfigurieren und Verwalten von Filtern für die Suche](../../relational-databases/search/configure-and-manage-filters-for-search.md) und [sys.fulltext_document_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md).  
   
- Das Volltextmodul indiziert den Inhalt der FILESTREAM-BLOBs. Dateien wie beispielsweise Images zu indizieren, ist möglicherweise nicht nützlich. Wenn ein FILESTREAM BLOB aktualisiert wird, wird er neu indiziert.  
+ Die Volltext-Engine indiziert den Inhalt der FILESTREAM-BLOBs. Dateien wie beispielsweise Images zu indizieren, ist möglicherweise nicht nützlich. Wenn ein FILESTREAM BLOB aktualisiert wird, wird er neu indiziert.  
   
 ##  <a name="FailoverClustering"></a> Failoverclustering  
  Für das Failoverclustering müssen FILESTREAM-Dateigruppen auf einem freigegebenen Datenträger abgelegt werden. FILESTREAM muss auf jedem Knoten im Cluster aktiviert werden, das die FILESTREAM-Instanz hostet. Weitere Informationen finden Sie unter [Einrichten von FILESTREAM auf einem Failovercluster](../../relational-databases/blob/set-up-filestream-on-a-failover-cluster.md).  

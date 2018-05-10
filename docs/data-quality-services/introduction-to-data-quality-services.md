@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/05/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.service: ''
 ms.component: data-quality-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Domains
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
@@ -19,12 +18,11 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 147c4828774b3cdeafb5768d78355182d1c6db97
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 51e0c8b9f0ab16a6adbabd1d83b3d189035a78aa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-data-quality-services"></a>Einführung in Data Quality Services
 
@@ -80,7 +78,7 @@ ms.lasthandoff: 04/26/2018
 ##  <a name="Components"></a> DQS-Komponenten  
  Data Quality Services besteht aus [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] und [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Diese Komponenten ermöglichen es Ihnen, Data Quality-Dienste von anderen SQL Server-Vorgängen getrennt auszuführen. Beide Komponenten werden im SQL Server-Setupprogramm installiert.  
   
- [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] wird in Form von drei SQL Server-Katalogen implementiert, die Sie verwalten können und im SQL Server Management Studio (DQS_MAIN, DQS_PROJECTS, und DQS_STAGING_DATA) überwachen können. DQS_MAIN enthält gespeicherte DQS-Prozeduren, das DQS-Modul und veröffentlichte Wissensdatenbanken. DQS_PROJECTS enthält Daten, die für die Verwaltung einer Wissensdatenbank und für DQS-Projektaktivitäten erforderlich sind. DQS_STAGING_DATA bietet eine Zwischenstagingdatenbank, in den Sie die Quelldaten zum Ausführen von DQS-Vorgängen kopieren können, um die verarbeiteten Daten anschließend zu exportieren.  
+ [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] wird in Form von drei SQL Server-Katalogen implementiert, die Sie verwalten können und im SQL Server Management Studio (DQS_MAIN, DQS_PROJECTS, und DQS_STAGING_DATA) überwachen können. DQS_MAIN enthält gespeicherte DQS-Prozeduren, die DQS-Engine und veröffentlichte Wissensdatenbanken. DQS_PROJECTS enthält Daten, die für die Verwaltung einer Wissensdatenbank und für DQS-Projektaktivitäten erforderlich sind. DQS_STAGING_DATA bietet eine Zwischenstagingdatenbank, in den Sie die Quelldaten zum Ausführen von DQS-Vorgängen kopieren können, um die verarbeiteten Daten anschließend zu exportieren.  
   
  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ist eine eigenständige Anwendung, die Ihnen ermöglicht, die Wissensverwaltung, Data Quality-Projekte und die Verwaltung in einer Benutzeroberfläche auszuführen. Die Anwendung eignet sich für Data Stewards und DQS-Administratoren. Es handelt sich um eine eigenständige ausführbare Datei, die die Wissensermittlung, die Domänenverwaltung, die Abgleichsrichtlinienerstellung, die Datenbereinigung, den Abgleich, die Profilerstellung, die Überwachung und die Serververwaltung ausführt. Der[!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] kann auf dem gleichen Computer wie der [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] oder remote auf einem separaten Computer installiert und ausgeführt werden. Zur Verbesserung der Benutzerfreundlichkeit werden viele Vorgänge im [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] über einen Assistenten ausgeführt.  
   

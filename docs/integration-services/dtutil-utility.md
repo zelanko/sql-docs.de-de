@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - verifying packages
 - checking packages
@@ -32,12 +31,11 @@ caps.latest.revision: 114
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: cca41d32fe50ba017ac442f4b53355a052de3169
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: a3978535dd221b4df0534b1e559d688d14741168
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dtutil-utility"></a>dtutil Utility
   Das Eingabeaufforderungs-Hilfsprogramm **dtutil** dient zum Verwalten von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paketen. Mit dem Hilfsprogramm kann ein Paket kopiert, verschoben oder gelöscht und das Vorhandensein eines Pakets überprüft werden. Diese Aktionen können für jedes [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paket ausgeführt werden, das sich an einem der drei folgenden Speicherorte befindet: in einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank, im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paketspeicher oder im Dateisystem. Falls das Hilfsprogramm auf ein Paket zugreift, das in **msdb**gespeichert ist, werden Sie möglicherweise zur Eingabe eines Benutzernamens und eines Kennworts aufgefordert. Wenn die Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung verwendet, ist sowohl ein Benutzername als auch ein Kennwort erforderlich. Falls der Benutzername fehlt, versucht **dtutil** sich bei [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mit der Windows-Authentifizierung anzumelden. Der Speichertyp des Pakets wird durch die Optionen **/SQL**, **/FILE**und **/DTS** identifiziert.  

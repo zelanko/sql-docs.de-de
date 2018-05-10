@@ -1,16 +1,14 @@
 ---
 title: CREATE EVENT NOTIFICATION (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_EVENT_NOTIFICATION_TSQL
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - events [SQL Server], notifications
 - event notifications [SQL Server], creating
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
-caps.latest.revision: 
+caps.latest.revision: 64
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e171027878b85c0df5ce25756f2a223675d21feb
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 00939442ed98e69daf12b8450fce7a98586ea9b1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +98,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
  Die Konversationen bleiben geöffnet, bis die Ereignisbenachrichtigung gelöscht wird. Bestimmte Fehler können dazu führen, dass Konversationen früher geschlossen werden. Das explizite Beenden einiger oder aller Konversationen kann verhindern, dass der Zieldienst weitere Nachrichten empfängt.  
   
- { **'***broker_instance_specifier***'** | **'current database'** }  
+ {**'***broker_instance_specifier***'** | **'current database'**}  
  Gibt die Service Broker-Instanz an, für die *broker_service* aufgelöst wird. Der Wert für einen bestimmten Service Broker kann durch Abfragen der **service_broker_guid**-Spalte der **sys.databases**-Katalogsicht ermittelt werden. Verwenden Sie **'current database'**, um die Service Broker-Instanz in der aktuellen Datenbank anzugeben. **'current database'** ist ein Zeichenfolgenliteral, das nicht nach Groß-/Kleinschreibung unterscheidet.  
   
 > [!NOTE]  
@@ -137,7 +134,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 > [!NOTE]  
 >  In den nachfolgenden Beispielen A und B entspricht der GUID in der `TO SERVICE 'NotifyService'`-Klausel ('8140a771-3c4b-4479-8ac0-81008ab17984') dem Computer, auf dem das Beispiel eingerichtet wurde. Für diese Instanz handelt es sich dabei um den GUID für die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank.  
 >   
->  Zum Kopieren und Ausführen dieser Beispiele müssen Sie diesen GUID durch einen GUID von Ihrem Computer und Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz ersetzen. Wie im obigen Abschnitt zu den Argumenten erläutert, kann **'***broker_instance_specifier***'** durch Abfragen der service_broker_guid-Spalte der sys.databases-Katalogsicht ermittelt werden.  
+>  Zum Kopieren und Ausführen dieser Beispiele müssen Sie diesen GUID durch einen GUID von Ihrem Computer und Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz ersetzen. Wie im obigen Abschnitt zu den Argumenten erläutert, kann **'***broker_instance_specifier***'** durch Abfragen der Spalte „service_broker_guid“ der Katalogsicht „sys.databases“ ermittelt werden.  
   
 ### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. Erstellen einer Ereignisbenachrichtigung mit dem Server als Bereich  
  Im folgenden Beispiel werden die zum Einrichten eines Zieldiensts mit [!INCLUDE[ssSB](../../includes/sssb-md.md)] erforderlichen Objekte erstellt. Der Zieldienst verweist auf den Nachrichtentyp und den Vertrag des initiierenden Diensts speziell für Ereignisbenachrichtigungen. Dann wird auf dem Zieldienst eine Ereignisbenachrichtigung erstellt, die eine Benachrichtigung sendet, sobald ein `Object_Created`-Ablaufverfolgungsereignis auf der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorliegt.  

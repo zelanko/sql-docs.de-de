@@ -4,25 +4,23 @@ ms.custom: ''
 ms.date: 06/20/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 9cfa774cf95334de48e79c0a6db9ee08ab8b709c
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 87efb901b3bdf01140db90b3aa2ee0d72d2ae67a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Herstellen einer Verbindung mit einer Access-Datenquelle (SQL Server-Import/Export-Assistent)
 In diesem Artikel wird erläutert, wie Sie eine Verbindung mit einer **Microsoft Access**-Datenquelle über die Seiten **Datenquelle auswählen** oder **Ziel auswählen** des SQL Server-Import/Export-Assistenten herstellen.
@@ -43,8 +41,8 @@ Die Liste der Datenanbieter kann mehrere Einträge für Microsoft Access enthalt
 |-------|-------|
 |Microsoft Access (Microsoft.ACE.OLEDB.16.0)|Office 2016|
 |Microsoft Access (Microsoft.ACE.OLEDB.15.0)|Office 2013|
-|Microsoft Access (Microsoft Access-Datenbankmodul)|Office 2010 und Office 2007|
-|Microsoft Access (Microsoft Jet-Datenbankmodul)|Office-Versionen vor Office 2007|
+|Microsoft Access (Microsoft Access-Datenbank-Engine)|Office 2010 und Office 2007|
+|Microsoft Access (Microsoft Jet-Datenbank-Engine)|Office-Versionen vor Office 2007|
 
 > [!IMPORTANT]
 > Sie müssen möglicherweise zusätzliche Dateien herunterladen und installieren, um eine Verbindung mit Access-Datenbanken herzustellen. Weitere Informationen finden Sie im Abschnitt [Herunterladen von Dateien zum Herstellen einer Verbindung mit Access](#officeDownloads) weiter unten auf dieser Seite.

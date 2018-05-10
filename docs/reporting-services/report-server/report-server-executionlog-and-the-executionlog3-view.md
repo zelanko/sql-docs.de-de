@@ -1,30 +1,28 @@
 ---
-title: "Berichtsserversichten „ExecutionLog“ und „0ExecutionLog3“ | Microsoft-Dokumentation"
-ms.custom: 
+title: Berichtsserversichten „ExecutionLog“ und „0ExecutionLog3“ | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 1177b4cf7db3d55e839608f45fb036ae95e7baf5
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 2127c8b47f7b61114b8a2b9aa7bce78df5682f5a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>Berichtsserver-Sichten ExecutionLog und ExecutionLog3
   Das Berichtsserver-Ausführungsprotokoll von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]enthält Informationen zu den Berichten, die auf dem Server bzw. auf mehreren Servern in einer Bereitstellung für horizontales Skalieren im einheitlichen Modus oder in einer SharePoint-Farm ausgeführt werden. Anhand des Ausführungsprotokolls des Berichtsservers können Sie feststellen, wie oft ein Bericht angefordert wird, welche Ausgabeformate am meisten verwendet werden und wie viele Millisekunden Verarbeitungszeit für die einzelnen Verarbeitungsphasen aufgewendet werden. Das Protokoll enthält Informationen über die Zeit, die für die Ausführung der Datasetabfrage eines Berichts aufgewendet wurde, und die Zeit, die für die Verarbeitung der Daten aufgewendet wurde. Wenn Sie Berichtsserveradministrator sind, können Sie die Protokollinformationen überprüfen und Aufgaben mit langer Laufzeit identifizieren sowie den Berichtsautoren zu den Bereichen des Berichts (Dataset oder Verarbeitung) Vorschläge zur Verbesserung machen.  
@@ -129,7 +127,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |TimeDataRetrieval|Anzahl von Millisekunden, die zum Abrufen der Daten benötigt werden.|  
 |TimeProcessing|Anzahl von Millisekunden, die zum Verarbeiten des Berichts benötigt werden.|  
 |TimeRendering|Anzahl von Millisekunden, die zum Rendern des Berichts benötigt werden.|  
-|Quelle|Quelle der Berichtsausführung. Mögliche Werte:<br /><br /> Live<br /><br /> Cache: Gibt eine zwischengespeicherte Ausführung an, Datasetabfragen werden z. B. nicht live ausgeführt.<br /><br /> Momentaufnahme<br /><br /> Verlauf<br /><br /> Ad-hoc: Gibt entweder einen auf einem dynamisch erstellten Berichtsmodell basierenden Drillthroughbericht oder einen Berichts-Generator-Bericht an, von dem eine Vorschau auf einem Client mithilfe des Berichtsservers zum Verarbeiten und Rendern angezeigt wird.<br /><br /> Sitzung: Gibt eine Anschlussanforderung in einer bereits eingerichteten Sitzung an.  Beispiel: Die ursprüngliche Anforderung besteht im Anzeigen von Seite 1, die Anschlussanforderung ist das Exportieren in Excel mit dem aktuellen Sitzungsstatus.<br /><br /> RDCE: Gibt eine Berichtsdefinitionsanpassungs-Erweiterung (Report Definition Customization Extension, RDCE) an. Eine benutzerdefinierte RDCE-Erweiterung kann eine Berichtsdefinition dynamisch anpassen, bevor sie bei der Berichtsausführung an das Verarbeitungsmodul übergeben wird.|  
+|Quelle|Quelle der Berichtsausführung. Mögliche Werte:<br /><br /> Live<br /><br /> Cache: Gibt eine zwischengespeicherte Ausführung an, Datasetabfragen werden z. B. nicht live ausgeführt.<br /><br /> Momentaufnahme<br /><br /> Verlauf<br /><br /> Ad-hoc: Gibt entweder einen auf einem dynamisch erstellten Berichtsmodell basierenden Drillthroughbericht oder einen Berichts-Generator-Bericht an, von dem eine Vorschau auf einem Client mithilfe des Berichtsservers zum Verarbeiten und Rendern angezeigt wird.<br /><br /> Sitzung: Gibt eine Anschlussanforderung in einer bereits eingerichteten Sitzung an.  Beispiel: Die ursprüngliche Anforderung besteht im Anzeigen von Seite 1, die Anschlussanforderung ist das Exportieren in Excel mit dem aktuellen Sitzungsstatus.<br /><br /> RDCE: Gibt eine Berichtsdefinitionsanpassungs-Erweiterung (Report Definition Customization Extension, RDCE) an. Eine benutzerdefinierte RDCE-Erweiterung kann eine Berichtsdefinition dynamisch anpassen, bevor sie bei der Berichtsausführung an die Verarbeitungs-Engine übergeben wird.|  
 |Status|Status (entweder rsSuccess oder ein Fehlercode; beim Auftreten mehrerer Fehler wird nur der erste Fehler aufgezeichnet).|  
 |ByteCount|Größe von gerenderten Berichten in Bytes.|  
 |RowCount|Anzahl der von Abfragen zurückgegebenen Zeilen.|  
@@ -232,13 +230,13 @@ select * from ExecutionLog3 order by TimeStart DESC
   
 -   **ProcessingEngine**  
   
-     1=SQL Server 2005, 2=Das neue bedarfsgesteuerte Verarbeitungsmodul. Wenn eine Mehrzahl der Berichte immer noch den Wert 1 anzeigt, können Sie prüfen, wie sie umgestaltet werden sollen, damit sie das neuere und effizientere bedarfsgesteuerte Verarbeitungsmodul verwenden.  
+     1=SQL Server 2005, 2=Die neue bedarfsgesteuerte Verarbeitungs-Engine. Wenn eine Mehrzahl der Berichte immer noch den Wert 1 anzeigt, können Sie prüfen, wie sie umgestaltet werden sollen, damit sie die neuere und effizientere bedarfsgesteuerte Verarbeitungs-Engine verwenden.  
   
      `<ProcessingEngine>2</ProcessingEngine>`  
   
 -   **ScalabilityTime**  
   
-     Die Anzahl der Millisekunden, die für skalierungsrelevante Operationen im Verarbeitungsmodul benötigt werden. Der Wert 0 gibt an, dass keine zusätzliche Zeit für Skalierungsoperationen aufgebracht wurde. Ein Wert 0 gibt auch an, dass die Anforderung nicht unter unzureichendem Arbeitsspeicher erfolgte.  
+     Die Anzahl der Millisekunden, die für skalierungsrelevante Operationen in der Verarbeitungs-Engine benötigt werden. Der Wert 0 gibt an, dass keine zusätzliche Zeit für Skalierungsoperationen aufgebracht wurde. Ein Wert 0 gibt auch an, dass die Anforderung nicht unter unzureichendem Arbeitsspeicher erfolgte.  
   
     ```  
     <ScalabilityTime>  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: extending-packages-custom-objects
 ms.reviewer: ''
 ms.suite: sql
@@ -23,12 +22,11 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 643a52d1c1110a7bfb632904bdd90b5347a5774d
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: aa57602e9e4e1c3cc63590dc410c2a4fd265e639
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrading-the-version-of-a-data-flow-component"></a>Aktualisieren der Version einer Datenflusskomponente
   Pakete, die mit einer älteren Version der Komponente erstellt wurden, enthalten möglicherweise Metadaten, die nicht mehr gültig sind, beispielsweise benutzerdefinierte Eigenschaften, deren Verwendung in neueren Versionen der Komponenten geändert wurde. Sie können die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A>-Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>-Basisklasse überschreiben, um die zuvor in älteren Paketen gespeicherten Metadaten zu aktualisieren, sodass die aktuellen Eigenschaften der Komponente wiedergegeben werden.  
@@ -52,7 +50,7 @@ ms.lasthandoff: 04/26/2018
 -   Legt die Versionsmetadaten auf die aktuelle Version der Komponente fest  
   
 > [!NOTE]  
->  Das Datenflussmodul übergibt seine eigene Versionsnummer an die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A>-Methode im *pipelineVersion*-Parameter. Dieser Parameter ist in Version 1.0 von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] nicht von Nutzen, kann aber in nachfolgenden Versionen hilfreich sein.  
+>  Die Datenfluss-Engine übergibt seine eigene Versionsnummer an die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A>-Methode im *pipelineVersion*-Parameter. Dieser Parameter ist in Version 1.0 von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] nicht von Nutzen, kann aber in nachfolgenden Versionen hilfreich sein.  
   
  Im Beispielcode werden nur die beiden Enumerationswerte verwendet, die direkt den vorherigen booleschen Werten der benutzerdefinierten Eigenschaft zugeordnet sind. Die anderen verfügbaren Enumerationswerte können vom Benutzer über die benutzerdefinierte Benutzeroberfläche der Komponente im erweiterten Editor oder programmgesteuert ausgewählt werden. Informationen zum Anzeigen von Enumerationswerten für eine benutzerdefinierte Eigenschaft im erweiterten Editor finden Sie in [Entwurfszeitmethoden einer Datenflusskomponente](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md) unter „Erstellen von benutzerdefinierten Eigenschaften“.  
   

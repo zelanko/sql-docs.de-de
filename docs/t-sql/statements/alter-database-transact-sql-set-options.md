@@ -1,17 +1,15 @@
 ---
 title: ALTER DATABASE SET-Optionen (Transact-SQL) | Microsoft-Dokumentation
-description: "Informationen zum Festlegen von Datenbankoptionen wie automatische Optimierung, Verschlüsselung und Abfragespeicher in SQL Server und Azure SQL-Datenbank"
-ms.custom: 
+description: Informationen zum Festlegen von Datenbankoptionen wie automatische Optimierung, Verschlüsselung und Abfragespeicher in SQL Server und Azure SQL-Datenbank
+ms.custom: ''
 ms.date: 12/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -31,16 +29,15 @@ helpviewer_keywords:
 - auto_create_statistics
 - auto_update_statistics
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
-caps.latest.revision: 
+caps.latest.revision: 159
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: de5b72bd7e890c2b7375448119af832f0e79d075
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ea637d3853d3e63cbab6806022000c04d95e3e92
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET-Optionen (Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -990,7 +987,7 @@ FEDERATED_SERVICE_ACCOUNT =  ON | OFF
 > [!IMPORTANT]  
 >  In einer späteren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird ANSI_PADDING immer auf ON festgelegt, und jede Anwendung, für die die Option explizit auf OFF festgelegt ist, löst einen Fehler aus. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Es wird empfohlen, für ANSI_PADDING stets den Wert ON festzulegen. ANSI_PADDING muss beim Erstellen oder Bearbeiten von Indizes für berechnete Spalten oder indizierte Sichten auf ON festgelegt sein.  
   
- **char(*n*)**- und **binary(*n*)**-Spalten, die Nullen zulassen, werden bis zur Spaltenlänge aufgefüllt, wenn ANSI_PADDING auf ON festgelegt ist. Ist ANSI_PADDING hingegen auf OFF festgelegt, werden nachfolgende Leerzeichen und Nullen abgeschnitten. **char(*n*)**- und **binary(*n*)**-Spalten, die keine Nullen zulassen, werden immer bis zur Spaltenlänge aufgefüllt.  
+ **char(*n*)**- und **binary(*n*)**-Spalten, die NULL-Werte zulassen, werden bis zur Spaltenlänge aufgefüllt, wenn ANSI_PADDING auf ON festgelegt ist. Ist ANSI_PADDING hingegen auf OFF festgelegt, werden nachfolgende Leerzeichen und Nullen abgeschnitten. **char(*n*)**- und **binary(*n*)**-Spalten, die keine NULL-Werte zulassen, werden immer bis zur Spaltenlänge aufgefüllt.  
   
  Einstellungen auf Verbindungsebene, die mithilfe der SET-Anweisung festgelegt werden, überschreiben die Standardeinstellung der Datenbank für ANSI_PADDING. ODBC- und OLE DB-Clients geben standardmäßig eine SET-Anweisung aus, durch die ANSI_PADDING für die Sitzung auf ON festgelegt wird, wenn sie eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen. Weitere Informationen finden Sie unter [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
   
@@ -1085,7 +1082,7 @@ FEDERATED_SERVICE_ACCOUNT =  ON | OFF
   
  Gibt die Frequenz indirekter Prüfpunkte auf Basis einzelner Datenbanken an. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] beträgt der Standardwert für neue Datenbanken, der darauf hindeutet, dass Datenbanken indirekte Prüfpunkte verwendet werden, eine Minute. Der Standard für ältere Versionen ist 0 (null) und gibt an, dass die Datenbank automatische Prüfpunkte verwendet, deren Frequenz von der Einstellung für das Wiederherstellungsintervall der Serverinstanz abhängt. Für [!INCLUDE[msCoName](../../includes/msconame-md.md)] ist für die meisten Systeme eine Minute empfohlen.  
   
- TARGET_RECOVERY_TIME **=***Zielwiederherstellungszeit* {SECONDS | MINUTES}  
+ TARGET_RECOVERY_TIME **=***Zielwiederherstellungszeit* { SECONDS | MINUTES }  
  *target_recovery_time*  
  Gibt die maximale Grenze für die Zeit an, die für die Wiederherstellung der angegebenen Datenbank im Fall eines Fehlers aufgewendet wird.  
   

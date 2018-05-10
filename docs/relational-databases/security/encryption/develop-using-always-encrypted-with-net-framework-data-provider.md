@@ -3,34 +3,30 @@ title: Entwickeln von Always Encrypted mit .NET Framework-Datenanbieter | Micros
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: security
+ms.prod_service: security, sql-database
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
 caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f8765370697226043b0a8759cb496381da5a6416
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4ca667951d50ddf996d5ef5a46ee7d699681325c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Entwickeln von Always Encrypted mit .NET Framework-Datenanbieter
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Dieser Artikel enthält Informationen zum Entwickeln von .NET-Anwendungen mithilfe von [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) und dem [.NET Framework-Datenanbieter für SQL Server](https://msdn.microsoft.com/library/kb9s9ks0(v=vs.110).aspx).
 
-Always Encrypted ermöglicht Clientanwendungen das Verschlüsseln von vertraulichen Daten in einer Weise, dass weder die Daten noch die Verschlüsselungsschlüssel zu irgendeinem Zeitpunkt gegenüber SQL Server oder Azure SQL-Datenbank offengelegt werden. Ein Treiber, bei dem „Always Encrypted“ aktiviert ist, z. B. der .NET Framework-Datenanbieter für SQL Server, erreicht dies durch die transparente Ver- und Entschlüsselung von sensiblen Daten in der Clientanwendung. Der Treiber ermittelt automatisch, welche Abfrageparameter vertraulichen Datenbankspalten (mit Always Encrypted geschützt) entsprechen. Die Werte dieser Parameter werden dann vor der Übergabe an SQL Server oder Azure SQL-Datenbank verschlüsselt. Auf ähnliche Weise entschlüsselt der Treiber die Daten transparent, die von verschlüsselten Datenbankspalten in Abfrageergebnissen empfangen werden. Weitere Informationen finden Sie unter [Always Encrypted (Datenbankmodul)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).
+Always Encrypted ermöglicht Clientanwendungen das Verschlüsseln von vertraulichen Daten in einer Weise, dass weder die Daten noch die Verschlüsselungsschlüssel zu irgendeinem Zeitpunkt gegenüber SQL Server oder Azure SQL-Datenbank offengelegt werden. Ein Treiber, bei dem „Always Encrypted“ aktiviert ist, z. B. der .NET Framework-Datenanbieter für SQL Server, erreicht dies durch die transparente Ver- und Entschlüsselung von sensiblen Daten in der Clientanwendung. Der Treiber ermittelt automatisch, welche Abfrageparameter vertraulichen Datenbankspalten (mit Always Encrypted geschützt) entsprechen. Die Werte dieser Parameter werden dann vor der Übergabe an SQL Server oder Azure SQL-Datenbank verschlüsselt. Auf ähnliche Weise entschlüsselt der Treiber die Daten transparent, die von verschlüsselten Datenbankspalten in Abfrageergebnissen empfangen werden. Weitere Informationen finden Sie unter [Immer verschlüsselt (Datenbank-Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).
 
 
 ## <a name="prerequisites"></a>Voraussetzungen
@@ -63,7 +59,7 @@ SqlConnection connection = new SqlConnection(strbldr.ConnectionString);
 
 Always Encrypted kann auch für einzelne Abfragen aktiviert werden. Weitere Informationen finden Sie unten in **Kontrollieren der Auswirkungen von Always Encrypted auf die Leistung** .
 Beachten Sie, dass die Aktivierung von Always Encrypted für eine erfolgreiche Verschlüsselung und Entschlüsselung nicht ausreichend ist. Sie müssen auch Folgendes sicherstellen:
-- Die Anwendung verfügt über die Datenbankberechtigungen *VIEW ANY COLUMN MASTER KEY DEFINITION* und *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* , die für den Zugriff auf die Metadaten in der Datenbank über Always Encrypted-Schlüssel erforderlich sind. Weitere Informationen finden Sie unter [Abschnitt „Berechtigungen“ in Always Encrypted (Datenbankmodul)](https://msdn.microsoft.com/library/mt163865.aspx#Anchor_7).
+- Die Anwendung verfügt über die Datenbankberechtigungen *VIEW ANY COLUMN MASTER KEY DEFINITION* und *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* , die für den Zugriff auf die Metadaten in der Datenbank über Always Encrypted-Schlüssel erforderlich sind. Weitere Informationen finden Sie unter [Abschnitt „Berechtigungen“ in Always Encrypted (Datenbank-Engine)](https://msdn.microsoft.com/library/mt163865.aspx#Anchor_7).
 - Die Anwendung kann auf den Hauptschlüssel der Spalte zugreifen, der die Spaltenverschlüsselungsschlüssel schützt, mit denen die abgefragten Datenbankspalten verschlüsselt werden.
 
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Abrufen und Ändern von Daten in verschlüsselten Spalten
@@ -157,7 +153,7 @@ Im folgenden Beispiel wird das Filtern von Daten auf Basis verschlüsselter Wert
 
 
 > [!NOTE]
-> Abfragen können auf Spalten Übereinstimmungsvergleiche ausführen, wenn sie mittels deterministischer Verschlüsselung verschlüsselt sind. Weitere Informationen finden Sie im Abschnitt *Auswählen der deterministischen oder zufälligen Verschlüsselung* des Themas [Always Encrypted (Datenbankmodul)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).
+> Abfragen können auf Spalten Übereinstimmungsvergleiche ausführen, wenn sie mittels deterministischer Verschlüsselung verschlüsselt sind. Weitere Informationen finden Sie im Abschnitt *Auswählen der deterministischen oder zufälligen Verschlüsselung* des Themas [Always Encrypted (Datenbank-Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).
 
 ```
 string connectionString = "Data Source=server63; Initial Catalog=Clinic; Integrated Security=true; Column Encryption Setting=enabled";
@@ -229,7 +225,7 @@ Dieser Abschnitt beschreibt die allgemeinen Kategorien von Fehlern bei der Abfra
 
 ### <a name="unsupported-data-type-conversion-errors"></a>Konvertierungsfehler durch nicht unterstützte Datentypen
 
-Always Encrypted unterstützt einige Konvertierungen für verschlüsselte Datentypen. Eine ausführliche Liste der unterstützten Typkonvertierungen finden Sie unter [Always Encrypted (Datenbankmodul)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) . Gehen Sie wie folgt vor, um Fehler bei Konvertierung des Datentyps zu vermeiden:
+Always Encrypted unterstützt einige Konvertierungen für verschlüsselte Datentypen. Eine ausführliche Liste der unterstützten Typkonvertierungen finden Sie unter [Always Encrypted (Datenbank-Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) . Gehen Sie wie folgt vor, um Fehler bei Konvertierung des Datentyps zu vermeiden:
 
 - Legen Sie die Typen der auf die verschlüsselten Spalten ausgerichteten Parameter so fest, dass der SQL Server-Datentyp des Parameters genau dem Typ der Zielspalte entspricht, oder dass eine Konvertierung des SQL Server-Datentyps des Parameters in den Zieltyp der Spalte unterstützt wird. Sie können die gewünschte Zuordnung von .NET-Datentypen zu bestimmten SQL Server-Datentypen mithilfe der „SqlParameter.SqlDbType“-Eigenschaft erzwingen.
 - Überprüfen Sie, ob die Genauigkeit und Dezimalstellenanzahl von Parametern, die auf Spalten der SQL Server-Datentypen „decimal“ und „numeric“ ausgerichtet sind, mit der für die Zielspalte konfigurierten Genauigkeit und Dezimalstellenanzahl identisch sind.  
@@ -575,7 +571,8 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter
 
-- [Always Encrypted (Datenbankmodul)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- 
+  [„Immer verschlüsselt“ (Datenbank-Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted-Blog](http://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 - [Tutorial zur SQL-Datenbank: Schützen vertraulicher Daten mit Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 

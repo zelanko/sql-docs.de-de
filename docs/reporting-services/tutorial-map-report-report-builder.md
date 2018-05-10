@@ -1,28 +1,27 @@
 ---
 title: 'Tutorial: Kartenbericht (Berichts-Generator) | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 08/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 5e5cbb6a1ac4cb9edf2baff1eb68c341c8187872
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 85c22b39e27a6e7f00773a6fcee0b5ac900cbb42
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-map-report-report-builder"></a>Lernprogramm: Kartenbericht (Berichts-Generator)
 In diesem [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] -Tutorial erfahren Sie mehr über die Kartenfunktionen, mit denen Sie Daten vor einem geografischen Hintergrund in einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht anzeigen können. 
@@ -274,7 +273,7 @@ Fügen Sie mithilfe des Kartenebenen-Assistenten eine Kartenebene hinzu, die ein
   
 11. Klicken Sie auf **Weiter**.  
   
-12. Klicken Sie auf der Seite **Kartenvisualisierung auswählen** auf **Standardkarte (Linien)**und anschließend auf **Weiter**.  
+12. Klicken Sie auf der Seite **Kartenvisualisierung auswählen** auf **Standardkarte (Linien)** und anschließend auf **Weiter**.  
   
 13. Aktivieren Sie unter **Farbdesign und Datenvisualisierung auswählen**die Option **Einfarbige Karte**. Der Weg wird mit einer einzelnen Farbe angezeigt, die auf dem ausgewählten Design basiert.  
   

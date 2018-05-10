@@ -2,23 +2,22 @@
 title: Leitfaden zur Problembehandlung und Überwachung von Always On-Verfügbarkeitsgruppen (SQL Server) | Microsoft-Dokumentation
 ms.custom: ag-guide
 ms.date: 05/10/2016
-ms.prod: sql-server-2016
+ms.prod: sql
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 caps.latest.revision: 8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b78d697f5e8359580e8ebbf602587584964b017c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e82c43cbca60f1804c2a5b2becfcdbaaf734fd26
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Leitfaden zur Problembehandlung und Überwachung von Always On-Verfügbarkeitsgruppen
  Dieser Leitfaden unterstützt Sie bei den ersten Schritten mit der Überwachung von Always On-Verfügbarkeitsgruppen und der Behandlung einiger gängiger Probleme in Bezug auf Verfügbarkeitsgruppen. Zudem bietet der Leitfaden Originalinhalte sowie eine Angebotsseite mit nützlichen Informationen, die an anderer Stelle veröffentlicht wurden. Im Rahmen dieses Leitfadens können zwar nicht alle Probleme, die auf dem umfassenden Gebiet der Verfügbarkeitsgruppen auftreten können, im Detail erläutert werden, allerdings kann auf die richtige Richtung bezüglich der Ursachenanalyse und Problemlösung gewiesen werden. 
@@ -77,6 +76,7 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="next-steps"></a>Nächste Schritte  
  [SQL Server Always On-Teamblog](http://blogs.msdn.com/b/sqlalwayson/)   
- [CSS SQL Server-Technikblogs](http://blogs.msdn.com/b/psssql/)  
+ 
+  [CSS SQL Server-Technikblogs](http://blogs.msdn.com/b/psssql/)  
   
   

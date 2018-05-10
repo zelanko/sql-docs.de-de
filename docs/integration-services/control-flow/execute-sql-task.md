@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.executesqltask.f1
 - sql13.dts.designer.executesqltask.general.f1
@@ -27,12 +26,11 @@ caps.latest.revision: 115
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: b5b22edaa443597e91045dc1ed5c2b3be9a05caf
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 48c90af75a51d0b849f1ce7b0a714bd403e9018d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="execute-sql-task"></a>SQL ausführen (Task)
   Mit dem Task SQL ausführen werden SQL-Anweisungen oder gespeicherte Prozeduren aus einem Paket ausgeführt. Dieser Task kann eine oder mehrere SQL-Anweisungen enthalten, die sequenziell ausgeführt werden. Der Task SQL ausführen kann für folgende Zwecke verwendet werden:  
@@ -118,7 +116,7 @@ ms.lasthandoff: 04/26/2018
 ## <a name="general-page---execute-sql-task-editor"></a>Seite „Allgemein“ – Editor für den Task „SQL ausführen“
  Mithilfe der Seite **Allgemein** im Dialogfeld **Editor für den Task „SQL ausführen“** können Sie den Task „SQL ausführen“ konfigurieren und die SQL-Anweisung bereitstellen, die vom Task ausgeführt wird.  
 
-Weitere Informationen zur Transact-SQL-Abfragesprache finden Sie unter [Transact-SQL-Referenz &#40;Datenbankmodul&#41;](../../t-sql/transact-sql-reference-database-engine.md).  
+Weitere Informationen zur Transact-SQL-Abfragesprache finden Sie unter [Transact-SQL-Referenz &amp;#40;Datenbank-Engine&amp;#41;](../../t-sql/transact-sql-reference-database-engine.md).  
   
 ### <a name="static-options"></a>Statische Optionen  
  **Name**  

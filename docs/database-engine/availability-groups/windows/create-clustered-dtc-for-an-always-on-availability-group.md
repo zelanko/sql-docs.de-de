@@ -1,30 +1,31 @@
 ---
-title: "Erstellen eines gruppierten DTCs für eine Always On-Verfügbarkeitsgruppe | Microsoft-Dokumentation"
-ms.custom: 
+title: Erstellen eines gruppierten DTCs für eine Always On-Verfügbarkeitsgruppe | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 08/30/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: availability-groups
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a6d456f5197522bdd9f936f468645f1cbd9bc377
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 482bb916d7a9e7a75116ef85f3b9284d942ed94d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>Erstellen eines gruppierten DTCs für eine AlwaysOn-Verfügbarkeitsgruppe
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema werden Sie durch eine vollständige Konfiguration einer gruppierten DTC-Ressource für eine SQL Server AlwaysOn-Verfügbarkeitsgruppe geführt. Für die vollständige Konfiguration kann bis zu einer Stunde erforderlich sein. 
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+In diesem Thema werden Sie durch eine vollständige Konfiguration einer gruppierten DTC-Ressource für eine SQL Server AlwaysOn-Verfügbarkeitsgruppe geführt. Für die vollständige Konfiguration kann bis zu einer Stunde erforderlich sein. 
 
 In der exemplarischen Vorgehensweise werden eine gruppierte DTC-Clusterressource und die SQL Server-Verfügbarkeitsgruppen erstellt, um die Anforderungen zu erfüllen, die unter [Cluster-DTC für Verfügbarkeitsgruppen in SQL Server 2016](../../../database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md) formuliert sind.
 
@@ -53,7 +54,7 @@ In der exemplarischen Vorgehensweise werden PowerShell- und T-SQL-Skripts (Trans
   - DTC-IP-Ressource: `DTCIP1`
 
 ## <a name="1-check-operating-system"></a>1. Überprüfen des Betriebssystems
-Für unterstützte verteilte Transaktionen muss [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] unter Windows Server 2016 oder Windows Server 2012 R2 ausgeführt werden.  Für Windows Server 2012 R2 müssen Sie die Aktualisierung in KB3090973 installieren, die unter [https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973)verfügbar ist.  In diesem Skript wird die Version des Betriebssystems und wird überprüft, ob der Hotfix 3090973 installiert werden muss.  Führen Sie das folgende PowerShell-Skript auf `SQLNODE1` aus.
+Für unterstützte verteilte Transaktionen muss [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] unter Windows Server 2016 oder Windows Server 2012 R2 ausgeführt werden.  Für Windows Server 2012 R2 müssen Sie das Update in KB3090973 installieren, das unter [https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973) verfügbar ist.  In diesem Skript wird die Version des Betriebssystems und wird überprüft, ob der Hotfix 3090973 installiert werden muss.  Führen Sie das folgende PowerShell-Skript auf `SQLNODE1` aus.
 
 ```powershell  
 # A few OS checks

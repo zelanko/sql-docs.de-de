@@ -1,25 +1,23 @@
 ---
-title: "Installieren von SQL Server Reporting Services (2017 und höher) | Microsoft-Dokumentation"
+title: Installieren von SQL Server Reporting Services (2017 und höher) | Microsoft-Dokumentation
 ms.date: 12/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: d3f53de12e07925af838b5188e9b889ae44eb090
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: 3504d97184804512f70c35c36c5c1c0e528c30ab
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>Installieren von SQL Server Reporting Services (2017 und höher)
 
@@ -41,7 +39,7 @@ Prüfen Sie vor der Installation von Reporting Services [Hardware and software r
 Die Installation des Berichtsservers ist unkompliziert. Zum Installieren der Dateien müssen nur wenige Schritte ausgeführt werden.
 
 > [!NOTE]
-> Während der Installation muss kein Server für ein SQL Server-Datenbankmodul verfügbar sein. Allerdings benötigen Sie einen verfügbaren Server zur Konfiguration von Reporting Services nach der Installation.
+> Während der Installation muss kein Server für eine SQL Server-Datenbank-Engine verfügbar sein. Allerdings benötigen Sie einen verfügbaren Server zur Konfiguration von Reporting Services nach der Installation.
 
 1. Suchen Sie nach dem Speicherort von „SQLServerReportingServices.exe“, und starten Sie das Installationsprogramm.
 
@@ -61,7 +59,7 @@ Die Installation des Berichtsservers ist unkompliziert. Zum Installieren der Dat
 
 4. Lesen und akzeptieren Sie die Lizenzbedingungen sowie sonstige weitere Bedingungen, und klicken Sie anschließend auf **Weiter**.
 
-5. Zum Speichern der Berichtsserver-Datenbank muss ein Datenbankmodul verfügbar sein. Klicken Sie auf **Weiter**, um nur den Berichtsserver zu installieren.
+5. Zum Speichern der Berichtsserver-Datenbank muss eine Datenbank-Engine verfügbar sein. Klicken Sie auf **Weiter**, um nur den Berichtsserver zu installieren.
 
     ![Für die Installation wird keine Datenbank benötigt.](media/install-reporting-services/report-server-install-db-engine.png)
 

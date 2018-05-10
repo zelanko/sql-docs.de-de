@@ -1,15 +1,14 @@
 ---
-title: "Anpassen der Parameter für Renderingerweiterungen in der Datei „RSReportServer.config“ | Microsoft-Dokumentation"
-ms.custom: 
+title: Anpassen der Parameter für Renderingerweiterungen in der Datei „RSReportServer.config“ | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - configuration options [Reporting Services]
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - overriding report rendering behavior
 - extensions [Reporting Services], rendering
 ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: e9d615bd2062ac5bf93e86ace8ffc1b1d8ed978c
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 00f7c8ec10f402e8c1246f81c5ab929536ebb024
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>Anpassen der Parameter für Renderingerweiterungen in der Datei RSReportServer.config
   Sie können in der RSReportServer-Konfigurationsdatei Parameter für Renderingerweiterungen angeben, um das standardmäßige Rendern von Berichten zu überschreiben, die auf einem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichtsserver ausgeführt werden. Sie können die Parameter für Renderingerweiterungen ändern, um Folgendes zu bewirken:  

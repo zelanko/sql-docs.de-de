@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: xml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, AUTO mode
 - ELEMENTS option
@@ -22,12 +20,11 @@ caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b665fc99fd92ecb2ff11a06a4d0a4f11186d96a1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5622f01bcfa3884391654e1b4ad3170985ccbb58
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-auto-mode-with-for-xml"></a>Verwenden des AUTO-Modus mit FOR XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -135,7 +132,7 @@ FOR XML AUTO, ELEMENTS
   
  Wenn eine Spalte in der SELECT-Klausel nicht einer der in der FROM-Klausel identifizierten Tabellen zugeordnet werden kann (z. B. bei Aggregatspalten oder berechneten Spalten), wird die Spalte dem XML-Dokument in der tiefsten Schachtelungsebene hinzugefügt, wenn sie in der Liste entdeckt wird. Wird eine solche Spalte als erste Spalte in der SELECT-Klausel aufgeführt, wird sie dem obersten Element hinzugefügt.  
   
- Wenn das Platzhalterzeichen (*) in der SELECT-Klausel angegeben wurde, wird die Schachtelung auf die gleiche Art wie oben beschrieben bestimmt (d. h. auf der Grundlage der Reihenfolge, in der die Zeilen vom Abfragemodul zurückgegeben werden).  
+ Wenn das Platzhalterzeichen (*) in der SELECT-Klausel angegeben wurde, wird die Schachtelung auf die gleiche Art wie oben beschrieben bestimmt (d. h. auf der Grundlage der Reihenfolge, in der die Zeilen von der Abfrage-Engine zurückgegeben werden).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  Die folgenden Themen enthalten weitere Informationen zum AUTO-Modus:  

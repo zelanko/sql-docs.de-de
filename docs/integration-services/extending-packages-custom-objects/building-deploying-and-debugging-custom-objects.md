@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: extending-packages-custom-objects
 ms.reviewer: ''
 ms.suite: sql
@@ -20,12 +19,11 @@ caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e685fb282dfc63e7046335e9d67cd8d2ca72ae97
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 376177f51baf71e44050903f63bcb1ab85e4aac5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Erstellen, Bereitstellen und Debuggen von benutzerdefinierten Objekten
   Nachdem Sie den Code für ein benutzerdefiniertes Objekt für [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] geschrieben haben, müssen Sie die Assembly erstellen, bereitstellen und in [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer integrieren, um sie für die Nutzung in Paketen verfügbar zu machen, sie zu testen und zu debuggen.  

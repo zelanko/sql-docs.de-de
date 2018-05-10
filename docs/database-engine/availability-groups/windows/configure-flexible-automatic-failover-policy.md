@@ -1,35 +1,33 @@
 ---
-title: "Konfigurieren einer flexiblen Richtlinie für automatisches Failover | Microsoft-Dokumentation"
-ms.custom: 
+title: Konfigurieren einer flexiblen Richtlinie für automatisches Failover | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: availability-groups
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], flexible failover policy
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
-caps.latest.revision: 
+caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7e82b63c2bbc3d3788272f065d1cdb795decc8b1
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3ba510bf9de0b74fe46635476b0f7221fa93830b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-flexible-automatic-failover-policy"></a>Konfigurieren einer flexiblen Richtlinie für automatisches Failover
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   In diesem Thema wird beschrieben, wie die flexible Failoverrichtlinie für eine AlwaysOn-Verfügbarkeitsgruppe mithilfe von [!INCLUDE[tsql](../../../includes/tsql-md.md)] oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]konfiguriert wird. Eine flexible Failoverrichtlinie ermöglicht eine präzise Kontrolle über die Bedingungen, die ein automatisches Failover für eine Verfügbarkeitsgruppe verursachen. Durch eine Änderung der Fehlerbedingungen, die ein automatisches Failover und die Häufigkeit von Integritätsprüfungen auslösen, können Sie die Wahrscheinlichkeit für ein automatisches Failover erhöhen oder verringern, um das SLA für hohe Verfügbarkeit zu unterstützen.  
   
@@ -91,7 +89,7 @@ ms.lasthandoff: 02/23/2018
   
          Diese ganzzahligen Werte stehen in folgender Beziehung zu den Fehlerbedingungsebenen:  
   
-        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] value|Ebene|Automatisches Failover wird initiiert, wenn...|  
+        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] Wert|Ebene|Automatisches Failover wird initiiert, wenn...|  
         |------------------------------|-----------|-------------------------------------------|  
         |1|1 (eins)|der Server ausfällt. Der SQL Server-Dienst wird aufgrund eines Failovers oder Neustarts beendet.|  
         |2|2 (zwei)|der Server nicht reagiert. Der Wert der Bedingungsebene wird unterschritten, der SQL Server-Dienst ist mit dem Cluster verbunden, und der Schwellenwert für das Timeout der Integritätsprüfung wird überschritten, oder das aktuelle primäre Replikat weist einen fehlerhaften Status auf.|  
@@ -101,7 +99,7 @@ ms.lasthandoff: 02/23/2018
   
          Weitere Informationen zu den Failover-Bedingungsebenen finden Sie unter [Flexible Failoverrichtlinie für automatisches Failover einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
   
-    -   Um den Schwellenwert für das Timeout der Integritätsprüfung zu konfigurieren, verwenden Sie die Option HEALTH_CHECK_TIMEOUT = *n* , wobei *n* für eine ganze Zahl zwischen 15000 Millisekunden (15 Sekunden) und 4294967295 Millisekunden steht. Der Standardwert ist 30.000 Millisekunden (oder 30 Sekunden).  
+    -   Um den Schwellenwert für das Timeout der Integritätsprüfung zu konfigurieren, verwenden Sie die Option HEALTH_CHECK_TIMEOUT = *n*, wobei *n* für eine ganze Zahl zwischen 15000 Millisekunden (15 Sekunden) und 4294967295 Millisekunden steht. Der Standardwert ist 30.000 Millisekunden (oder 30 Sekunden).  
   
          Mit der folgenden [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung wird z. B. der Schwellenwert für das Timeout der Integritätsprüfung einer vorhandenen Verfügbarkeitsgruppe mit dem Namen `AG1`in 60.000 Millisekunden (eine Minute) geändert.  
   
@@ -137,7 +135,7 @@ ms.lasthandoff: 02/23/2018
         -FailureConditionLevel OnServerDown  
         ```  
   
-    -   Um den Schwellenwert für das Timeout der Integritätsprüfung festzulegen, verwenden Sie den Parameter *HealthCheckTimeout***n*, wobei *n* für eine ganze Zahl zwischen 15.000 Millisekunden (15 Sekunden) und 4.294.967.295 Millisekunden steht. Der Standardwert ist 30000 Millisekunden (oder 30 Sekunden).  
+    -   Um den Schwellenwert für das Timeout der Integritätsprüfung festzulegen, verwenden Sie den Parameter **HealthCheckTimeout***n*, wobei *n* für eine ganze Zahl zwischen 15.000 Millisekunden (15 Sekunden) und 4.294.967.295 Millisekunden steht. Der Standardwert ist 30000 Millisekunden (oder 30 Sekunden).  
   
          Mit dem folgenden Befehl wird z. B. der Schwellenwert für das Timeout der Integritätsprüfung der vorhandenen Verfügbarkeitsgruppe `AG1`in 120.000 Millisekunden (zwei Minuten) geändert.  
   

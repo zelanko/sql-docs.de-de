@@ -1,31 +1,29 @@
 ---
-title: "Konfigurieren der Bereitstellung für horizontales Skalieren für Berichtsserver im einheitlichen Modus | Microsoft-Dokumentation"
-ms.custom: 
+title: Konfigurieren der Bereitstellung für horizontales Skalieren für Berichtsserver im einheitlichen Modus | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], deployments
 - deploying [Reporting Services], scale-out deployment model
 - scale-out deployments [Reporting Services]
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
-caps.latest.revision: 
+caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 10c05be9afbf0f9e272e35f73957ddb3a19c65f2
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 5c832e283da1b853cf135e7f6d9dba8af042effb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Konfigurieren der Bereitstellung für horizontales Skalieren für Berichtsserver im einheitlichen Modus
 
@@ -47,7 +45,7 @@ ms.lasthandoff: 01/09/2018
   
  Wenn Sie Reporting Services auf einem NLB-Cluster bereitstellen, müssen Sie bei der Konfiguration von Berichtsserver-URLs den Namen des virtuellen NLB-Servers verwenden, und die Server müssen für die Verwendung desselben Anzeigestatus konfiguriert sein.  
   
- Reporting Services ist nicht Teil von MSCS-Clustern (Microsoft Clusterdienste). Sie können die Berichtsserver-Datenbank jedoch auf einer Datenbankmodul-Instanz erstellen, die Teil eines Failover-Clusters ist.  
+ Reporting Services ist nicht Teil von MSCS-Clustern (Microsoft Clusterdienste). Sie können die Berichtsserver-Datenbank jedoch auf einer Datenbank-Engine-Instanz erstellen, die Teil eines Failover-Clusters ist.  
   
  **Führen Sie folgende Schritte aus, um eine Bereitstellung für horizontales Skalieren zu planen, zu installieren und zu konfigurieren:**  
   
@@ -113,7 +111,7 @@ Dann tritt ein zeitweiliger Fehler auf, aufgrund dessen nur der Server, der den 
   
     3.  Wählen Sie **Vorhandene Berichtsserver-Datenbank auswählen**aus.  
   
-    4.  Geben Sie den Servernamen für die Instanz des SQL Server-Datenbankmoduls an, auf der die gewünschte Berichtsserver-Datenbank gehostet wird. Dies muss derselbe Server sein, zu dem Sie in den vorherigen Schritten eine Verbindung hergestellt haben.  
+    4.  Geben Sie den Servernamen für die Instanz der SQL Server-Datenbank-Engine an, auf der die gewünschte Berichtsserver-Datenbank gehostet wird. Dies muss derselbe Server sein, zu dem Sie in den vorherigen Schritten eine Verbindung hergestellt haben.  
   
     5.  Wählen Sie **Verbindung testen**und dann **Weiter**aus.  
   

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - components [Integration Services], properties
 ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
@@ -19,12 +18,11 @@ caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 205baa292b23e205309223b1451030e005a4e58c
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 2a159f57e4315cba3f9eb3ee2d27cfffb94fb6f5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>Festlegen der Eigenschaften einer Datenflusskomponente
   Die Eigenschaften von Datenflusskomponenten, z. B. Quellen, Ziele und Transformationen, können Sie mithilfe eine der folgenden Funktionen festlegen:  
@@ -110,7 +108,7 @@ ms.lasthandoff: 04/26/2018
 8.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern**, um das aktualisierte Paket zu speichern.  
 
 ## <a name="common-properties-of-data-flow-components"></a>Allgemeine Eigenschaften von Datenflusskomponenten
-Die Datenflussobjekte im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Objektmodell verfügen über allgemeine Eigenschaften und benutzerdefinierte Eigenschaften auf der Komponentenebene, der Eingabe- und Ausgabeebene und der Ebene der Eingabe- und Ausgabespalten. Viele Eigenschaften verfügen über schreibgeschützte Werte, für die zur Laufzeit eine Zuweisung über das Datenflussmodul erfolgt.  
+Die Datenflussobjekte im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Objektmodell verfügen über allgemeine Eigenschaften und benutzerdefinierte Eigenschaften auf der Komponentenebene, der Eingabe- und Ausgabeebene und der Ebene der Eingabe- und Ausgabespalten. Viele Eigenschaften verfügen über schreibgeschützte Werte, für die zur Laufzeit eine Zuweisung über die Datenfluss-Engine erfolgt.  
   
  In diesem Thema werden die allgemeinen Eigenschaften von Datenflussobjekten aufgelistet und beschrieben.  
   
@@ -128,7 +126,7 @@ Die Datenflussobjekte im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
 ###  <a name="components"></a> Component properties  
  Im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Objektmodell implementiert eine Komponente im Datenfluss die Schnittstelle <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>.  
   
- Die folgende Tabelle beschreibt die Eigenschaften der Komponenten in einem Datenfluss. Einige Eigenschaften verfügen über schreibgeschützte Werte, für die zur Laufzeit eine Zuweisung über das Datenflussmodul erfolgt.  
+ Die folgende Tabelle beschreibt die Eigenschaften der Komponenten in einem Datenfluss. Einige Eigenschaften verfügen über schreibgeschützte Werte, für die zur Laufzeit eine Zuweisung über die Datenfluss-Engine erfolgt.  
   
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
@@ -148,7 +146,7 @@ Die Datenflussobjekte im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
 ###  <a name="inputs"></a> Eingabeeigenschaften  
  Im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Objektmodell verfügen Transformationen und Ziele über Eingaben. Eine Eingabe einer Komponente im Datenfluss implementiert die Schnittstelle <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>.  
   
- Die folgende Tabelle beschreibt die Eigenschaften der Eingaben von Komponenten in einem Datenfluss. Einige Eigenschaften verfügen über schreibgeschützte Werte, für die zur Laufzeit eine Zuweisung über das Datenflussmodul erfolgt.  
+ Die folgende Tabelle beschreibt die Eigenschaften der Eingaben von Komponenten in einem Datenfluss. Einige Eigenschaften verfügen über schreibgeschützte Werte, für die zur Laufzeit eine Zuweisung über die Datenfluss-Engine erfolgt.  
   
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
@@ -168,7 +166,7 @@ Die Datenflussobjekte im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
 ###  <a name="inputcolumns"></a> Eigenschaften der Eingabespalten  
  Im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Objektmodell enthält eine Eingabe eine Auflistung von Eingabespalten. Eine Eingabespalte einer Komponente im Datenfluss implementiert die Schnittstelle <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn100>.  
   
- Die folgende Tabelle beschreibt die Eigenschaften der Eingabespalten von Komponenten in einem Datenfluss. Einige Eigenschaften verfügen über schreibgeschützte Werte, für die zur Laufzeit eine Zuweisung über das Datenflussmodul erfolgt.  
+ Die folgende Tabelle beschreibt die Eigenschaften der Eingabespalten von Komponenten in einem Datenfluss. Einige Eigenschaften verfügen über schreibgeschützte Werte, für die zur Laufzeit eine Zuweisung über die Datenfluss-Engine erfolgt.  
   
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
@@ -192,11 +190,11 @@ Die Datenflussobjekte im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
 ###  <a name="outputs"></a> Ausgabeeigenschaften  
  Im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Objektmodell verfügen Quellen und Transformationen über Ausgaben. Eine Ausgabe einer Komponente im Datenfluss implementiert die Schnittstelle <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>.  
   
- Die folgende Tabelle beschreibt die Eigenschaften der Ausgaben von Komponenten in einem Datenfluss. Einige Eigenschaften verfügen über schreibgeschützte Werte, für die zur Laufzeit eine Zuweisung über das Datenflussmodul erfolgt.  
+ Die folgende Tabelle beschreibt die Eigenschaften der Ausgaben von Komponenten in einem Datenfluss. Einige Eigenschaften verfügen über schreibgeschützte Werte, für die zur Laufzeit eine Zuweisung über die Datenfluss-Engine erfolgt.  
   
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
-|DeleteOutputOnPathDetached|Boolean|Ein Wert, der bestimmt, ob ein Datenflussmodul die Ausgabe löscht, wenn sie von einem Pfad getrennt wird.|  
+|DeleteOutputOnPathDetached|Boolean|Ein Wert, der bestimmt, ob eine Datenfluss-Engine die Ausgabe löscht, wenn sie von einem Pfad getrennt wird.|  
 |Description|Zeichenfolge|Beschreibt die Ausgabe.|  
 |ErrorOrTruncationOperation|Zeichenfolge|Eine optionale Zeichenfolge, die die Fehlertypen oder abgeschnittene Daten angibt, die bei der Verarbeitung einer Zeile auftreten können.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der die Behandlung von Fehlern angibt. Mögliche Werte sind **Fail component**, **Ignore failure**und **Redirect row**.|  
@@ -213,7 +211,7 @@ Die Datenflussobjekte im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
 ###  <a name="outputcolumns"></a> Eigenschaften der Ausgabespalten  
  Im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Objektmodell enthält eine Ausgabe eine Auflistung von Ausgabespalten. Eine Ausgabespalte einer Komponente im Datenfluss implementiert die Schnittstelle <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100>.  
   
- Die folgende Tabelle beschreibt die Eigenschaften der Ausgabespalten von Komponenten in einem Datenfluss. Einige Eigenschaften verfügen über schreibgeschützte Werte, für die zur Laufzeit eine Zuweisung über das Datenflussmodul erfolgt.  
+ Die folgende Tabelle beschreibt die Eigenschaften der Ausgabespalten von Komponenten in einem Datenfluss. Einige Eigenschaften verfügen über schreibgeschützte Werte, für die zur Laufzeit eine Zuweisung über die Datenfluss-Engine erfolgt.  
   
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
@@ -236,7 +234,7 @@ Die Datenflussobjekte im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
 ### <a name="external-metadata-column-properties"></a>Eigenschaften externer Metadatenspalten  
  Im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Objektmodell können Eingaben und Ausgaben eine Auflistung externer Metadatenspalten enthalten. Eine externe Metadatenspalte einer Komponente im Datenfluss implementiert die Schnittstelle <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>.  
   
- Die folgende Tabelle beschreibt die Eigenschaften der externen Metadatenspalten von Komponenten in einem Datenfluss. Einige Eigenschaften verfügen über schreibgeschützte Werte, für die zur Laufzeit eine Zuweisung über das Datenflussmodul erfolgt.  
+ Die folgende Tabelle beschreibt die Eigenschaften der externen Metadatenspalten von Komponenten in einem Datenfluss. Einige Eigenschaften verfügen über schreibgeschützte Werte, für die zur Laufzeit eine Zuweisung über die Datenfluss-Engine erfolgt.  
   
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  

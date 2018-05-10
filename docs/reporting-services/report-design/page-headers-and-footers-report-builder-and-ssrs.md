@@ -1,16 +1,15 @@
 ---
-title: "Seitenkopf- und Seitenfußzeilen (Berichts-Generator und SSRS) | Microsoft-Dokumentation"
-ms.custom: 
+title: Seitenkopf- und Seitenfußzeilen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - "10125"
 - sql13.rtp.rptdesigner.pagefooter.border.f1
@@ -25,16 +24,15 @@ f1_keywords:
 - sql13.rtp.rptdesigner.pagefooter.general.f1
 - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 0c03ea200e96115c78fcb824f8a1327f6a4fd55a
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 1835b4d7a6ede5de5d442f36fe2ea7c85e9e330d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Seitenkopf- und Seitenfußzeilen (Berichts-Generator und SSRS)
   Ein Bericht kann eine Kopf- und Fußzeile enthalten, die am oberen bzw. unteren Rand jeder Seite verläuft. Kopf- und Fußzeilen können statischen Text, Bilder, Linien, Rechtecke, Rahmen, Hintergrundfarbe, Hintergrundbilder und Ausdrücke enthalten. Ausdrücke enthalten Verweise auf Datasetfelder für Berichte mit genau einem Dataset und Aggregatfunktionsaufrufen mit dem Dataset als Bereich.  
@@ -130,7 +128,7 @@ ms.lasthandoff: 01/09/2018
   
  Eine genauere Seitenanzahl basiert auf logischen Seiten, die mit den Abmessungen einer gedruckten Seite korrelieren. In Excel verwendet der Seitenfuß automatisch logische Seitenzahlen. Um die logische Seitenanzahl in den Seitenkopf einzufügen, müssen Sie die Geräteinformationseinstellungen für die Verwendung einfacher Kopfzeilen konfigurieren. Denken Sie daran, dass durch die Verwendung einfacher Kopfzeilen die Möglichkeit verloren geht, komplexes Berichtslayout im Kopfzeilenbereich zu verwenden.  
   
- Weitere Informationen finden Sie unter [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41; (Exportieren nach Microsoft Excel (Berichts-Generator und SSRS))](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)mit den Daten arbeiten.  
+ Weitere Informationen finden Sie unter [Exportieren nach Microsoft Excel &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md) (Exportieren nach Microsoft Excel (Berichts-Generator und SSRS)).  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Einbetten eines Bilds in einen Bericht &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   

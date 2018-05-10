@@ -1,33 +1,32 @@
 ---
 title: Verwenden eines externen Datasets mit Reporting Services | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: extensions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - DataSet objects [Reporting Services]
 - data processing extensions [Reporting Services], custom DataSet objects
 - custom DataSet objects [Reporting Services]
 - external DataSet objects [Reporting Services]
 ms.assetid: 11daa013-ec17-4760-80e3-6d84cd8d5722
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 26d020699157a54d9ee2cb85baef8c063ca92f50
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: afcf3dd2d15f38b3c7f54e6facbd4692cc1db899
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>Verwenden eines externen Datasets mit Reporting Services
   Das **DataSet**-Objekt ist wesentlich für die Unterstützung getrennter, verteilter Datenszenarios mit [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. Das **DataSet**-Objekt ist eine speicherresidente Datendarstellung, die unabhängig von der Datenquelle ein konsistentes relationales Programmiermodell zur Verfügung stellt. Es kann mit mehreren verschiedenen Datenquellen verwendet werden, mit XML-Daten oder zur Verwaltung lokaler Daten in einer Anwendung. Das **DataSet**-Objekt stellt ein komplettes Dataset dar, einschließlich verknüpfter Tabellen, Einschränkungen und Beziehungen zwischen den Tabellen. Da das **DataSet**-Objekt sehr vielseitig beim Speichern und Verfügbarmachen von Daten ist, kann es sein, dass Ihre Daten häufig verarbeitet und in ein **DataSet**-Objekt umgewandelt werden müssen, bevor diese Daten in Berichten erfasst werden können.  

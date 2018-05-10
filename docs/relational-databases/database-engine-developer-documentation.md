@@ -1,10 +1,9 @@
 ---
-title: Entwicklerhandbuch (Datenbankmodul) | Microsoft-Dokumentation
+title: Entwicklerhandbuch (Datenbank-Engine) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: relational-databases-misc
 ms.reviewer: ''
 ms.suite: sql
@@ -19,15 +18,14 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 61270789e5adbfe189e1f9e3c9f6ff7448d2185d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d87072ad1b8db0a8daa019b93d50b3885fb2f5ac
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="database-engine-developer-documentation"></a>Entwicklerhandbuch (Datenbankmodul)
+# <a name="database-engine-developer-documentation"></a>Entwicklerhandbuch (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stellt einen umfangreichen Satz von Tools zum Entwickeln, Verwalten und Steuern von Datenbankanwendungen bereit.  
   
@@ -50,7 +48,8 @@ ms.lasthandoff: 04/16/2018
  [SQL Server Management Objects &#40;SMO&#41; Programmierhandbuch](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
  Enthält Informationen über [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO), eine Auflistung von Objekten, die zum Programmieren aller Aspekte der Verwaltung von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vorgesehen sind.  
   
- [Datenbankmodul – Programmierung der erweiterten gespeicherten Prozedur](../relational-databases/database-engine-extended-stored-procedure-programming.md)  
+ 
+  [Datenbank-Engine – Programmierung der erweiterten gespeicherten Prozedur](../relational-databases/database-engine-extended-stored-procedure-programming.md)  
  Beschreibt, wie erweiterte gespeicherte Prozeduren zur Erstellung eigener externer Routinen in einer Programmiersprache wie z. B. C verwendet werden.  
   
  [Programmieren mit dem Datensammler](http://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101)  

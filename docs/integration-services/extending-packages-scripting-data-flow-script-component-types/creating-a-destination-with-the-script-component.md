@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: extending-packages-scripting-data-flow-script-component-types
 ms.reviewer: ''
 ms.suite: sql
@@ -24,12 +23,11 @@ caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 419551ed258c73b4075909b79ee816455cd72346
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 36effe6bcb6ffc2e6b5045e25640cdc96a76447f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>Erstellen eines Ziels mit der Skriptkomponente
   Zielkomponenten dienen im Datenfluss eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakets dazu, von Upstreamquellen empfangene Daten und Transformationen in einer Datenquelle zu speichern. Gewöhnlich stellt die Zielkomponente über einen vorhandenen Verbindungs-Manager eine Verbindung mit der Datenquelle her.  
@@ -92,7 +90,7 @@ ms.lasthandoff: 04/26/2018
   
  Wenn Sie das Fenster **Projektexplorer** in VSTA öffnen, können Sie sehen, dass die Skriptkomponente auch schreibgeschützte **BufferWrapper**- und **ComponentWrapper**-Projektelemente generiert hat. Die **ScriptMain**-Klasse erbt von der **UserComponent**-Klasse im **ComponentWrapper**-Projektelement.  
   
- Zur Laufzeit ruft das Datenflussmodul die **ProcessInput**-Methode in der **UserComponent**-Klasse auf, die die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A>-Methode der übergeordneten <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>-Klasse überschreibt. Die **ProcessInput**-Methode durchläuft die Zeilen im Eingabepuffer der Reihe nach und ruft für jede Zeile einmal die **ProcessInputRow**-Methode auf.  
+ Zur Laufzeit ruft die Datenfluss-Engine die **ProcessInput**-Methode in der **UserComponent**-Klasse auf, die die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A>-Methode der übergeordneten <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>-Klasse überschreibt. Die **ProcessInput**-Methode durchläuft die Zeilen im Eingabepuffer der Reihe nach und ruft für jede Zeile einmal die **ProcessInputRow**-Methode auf.  
   
 ### <a name="writing-your-custom-code"></a>Schreiben von benutzerdefiniertem Code  
  Sie sollten Skript in den folgenden Methoden schreiben, die in der **ScriptMain**-Klasse verfügbar sind, um das Erstellen einer benutzerdefinierten Zielkomponente abzuschließen.  

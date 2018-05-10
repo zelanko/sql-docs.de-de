@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: extending-packages-scripting
 ms.reviewer: ''
 ms.suite: sql
@@ -22,12 +21,11 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7f492a79a25e9e11df489c09f61789bc6bd2d0a8
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 81d1f7170474ff1858b61a0d5facf190b635cac6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-the-script-component-object-model"></a>Grundlegendes zum Skript-Komponentenobjektmodell
   Wie im Artikel [Coding and Debugging the Script Component (Codieren und Debuggen der Skriptkomponente)](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md) erläutert, enthält das Skriptkomponentenprojekt drei Projektelemente:  
@@ -132,7 +130,7 @@ public override void PreExecute()
 #### <a name="what-the-componentwrapper-project-item-provides"></a>Bereitstellungen durch das ‚ComponentWrapper’-Projektelement  
  Das ComponentWrapper-Projektelement enthält eine Klasse mit dem Namen **UserComponent**, die von <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> abgeleitet wird. Die **ScriptMain**-Klasse, in die Sie Ihren benutzerdefinierten Code schreiben, wird wiederum von **UserComponent** abgeleitet. Die **UserComponent**-Klasse enthält die folgenden Methoden:  
   
--   Eine überschriebene Implementierung der **ProcessInput**-Methode. Diese Methode wird vom Datenflussmodul zur Laufzeit direkt im Anschluss an die **PreExecute**-Methode aufgerufen, unter Umständen sogar mehrfach. **ProcessInput** übergibt die Verarbeitung an die **\<inputbuffer>_ProcessInput**-Methode. Anschließend sucht die**ProcessInput**-Methode nach dem Ende des Eingabepuffers. Wenn das Ende des Puffers erreicht wurde, ruft sie die überschreibbare**FinishOutputs**-Methode und die private **MarkOutputsAsFinished**-Methode auf. Die **MarkOutputsAsFinished**-Methode ruft dann auf dem letzten Ausgabepuffer **SetEndOfRowset** auf.  
+-   Eine überschriebene Implementierung der **ProcessInput**-Methode. Diese Methode wird von der Datenfluss-Engine zur Laufzeit direkt im Anschluss an die **PreExecute**-Methode aufgerufen, unter Umständen sogar mehrfach. **ProcessInput** übergibt die Verarbeitung an die **\<inputbuffer>_ProcessInput**-Methode. Anschließend sucht die**ProcessInput**-Methode nach dem Ende des Eingabepuffers. Wenn das Ende des Puffers erreicht wurde, ruft sie die überschreibbare**FinishOutputs**-Methode und die private **MarkOutputsAsFinished**-Methode auf. Die **MarkOutputsAsFinished**-Methode ruft dann auf dem letzten Ausgabepuffer **SetEndOfRowset** auf.  
   
 -   Eine überschreibbare Implementierung der **\<inputbuffer>_ProcessInput**-Methode. Diese Standardimplementierung durchläuft jede Eingabezeile einmal und ruft **\<inputbuffer>_ProcessInputRow** auf.  
   
@@ -161,12 +159,12 @@ public override void PreExecute()
   
 -   Eine **AddRow**-Methode, um dem Ausgabepuffer eine neue leere Zeile hinzuzufügen.  
   
--   Eine **SetEndOfRowset**-Methode, um dem Datenflussmodul mitzuteilen, dass keine weiteren Datenpuffer erwartet werden. Außerdem gibt es eine **EndOfRowset**-Funktion, um zu bestimmen, ob der aktuelle Puffer der letzte Datenpuffer ist. Normalerweise benötigen Sie diese Funktionen nicht, wenn Sie die in der **UserComponent**-Basisklasse implementierten Eingabeverarbeitungsmethoden verwenden.  
+-   Eine **SetEndOfRowset**-Methode, um der Datenfluss-Engine mitzuteilen, dass keine weiteren Datenpuffer erwartet werden. Außerdem gibt es eine **EndOfRowset**-Funktion, um zu bestimmen, ob der aktuelle Puffer der letzte Datenpuffer ist. Normalerweise benötigen Sie diese Funktionen nicht, wenn Sie die in der **UserComponent**-Basisklasse implementierten Eingabeverarbeitungsmethoden verwenden.  
   
 #### <a name="what-the-componentwrapper-project-item-provides"></a>Bereitstellungen durch das ‚ComponentWrapper’-Projektelement  
  Das ComponentWrapper-Projektelement enthält eine Klasse mit dem Namen **UserComponent**, die von <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> abgeleitet wird. Die **ScriptMain**-Klasse, in die Sie Ihren benutzerdefinierten Code schreiben, wird wiederum von **UserComponent** abgeleitet. Die **UserComponent**-Klasse enthält die folgenden Methoden:  
   
--   Eine überschriebene Implementierung der **PrimeOutput**-Methode. Diese Methode wird vom Datenflussmodul zur Laufzeit nur einmal vor **ProcessInput** aufgerufen. **PrimeOutput** übergibt die Verarbeitung an die **CreateNewOutputRows**-Methode. Wenn die Komponente eine Quelle ist (d.h. die Komponente weist keine Eingaben auf), ruft **PrimeOutput** die überschreibbare **FinishOutputs**-Methode und die private **MarkOutputsAsFinished**-Methode auf. Die **MarkOutputsAsFinished**-Methode ruft **SetEndOfRowset** auf dem letzten Ausgabepuffer auf.  
+-   Eine überschriebene Implementierung der **PrimeOutput**-Methode. Diese Methode wird von der Datenfluss-Engine zur Laufzeit nur einmal vor **ProcessInput** aufgerufen. **PrimeOutput** übergibt die Verarbeitung an die **CreateNewOutputRows**-Methode. Wenn die Komponente eine Quelle ist (d.h. die Komponente weist keine Eingaben auf), ruft **PrimeOutput** die überschreibbare **FinishOutputs**-Methode und die private **MarkOutputsAsFinished**-Methode auf. Die **MarkOutputsAsFinished**-Methode ruft **SetEndOfRowset** auf dem letzten Ausgabepuffer auf.  
   
 -   Eine überschreibbare Implementierung der **CreateNewOutputRows**-Methode. Der Standardimplementierung ist leer. Dies ist die Methode, die Sie normalerweise überschreiben, um den benutzerdefinierten Datenverarbeitungscode zu schreiben.  
   

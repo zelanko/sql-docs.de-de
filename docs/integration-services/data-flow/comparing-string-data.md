@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - comparing string data
 - comparison options [Integration Services]
@@ -23,12 +22,11 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 56adf456b22be6675f02c7ee6919428263156938
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: c60572c425df10ab659239217424d789bfe2abc1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comparing-string-data"></a>Vergleichen von Zeichenfolgendaten
   Zeichenfolgendaten sind ein wichtiger Bestandteil vieler Transformationen, die von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]ausgeführt werden, und Zeichenfolgenvergleiche werden auch bei der Auswertung von Ausdrücken in Variablen und Eigenschaftsausdrücken verwendet. Beispielsweise vergleicht die Transformation zum Sortieren Werte in einem Dataset, um Daten in auf- und absteigender Reihenfolge zu sortieren.  

@@ -3,29 +3,27 @@ title: Analysis Services mit Always On-Verfügbarkeitsgruppen | Microsoft-Dokume
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 4340ed907ffac7f4f0e53540061907a391362ed2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4a5bb795ae4d5c772e34f3ef4483934994799cb0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services mit Always On-Verfügbarkeitsgruppen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   Eine Always On-Verfügbarkeitsgruppe ist eine vordefinierte Sammlung relationaler SQL Server-Datenbanken, die gemeinsam ein Failover ausführen, wenn Bedingungen in einer der Datenbanken ein Failover auslösen. Dabei werden Anforderungen an eine gespiegelte Datenbank in einer anderen Instanz in der gleichen Verfügbarkeitsgruppe umgeleitet. Wenn Sie als Hochverfügbarkeitslösung Verfügbarkeitsgruppen verwenden, können Sie in einer tabellarischen oder mehrdimensionalen Analysis Services-Lösung eine Datenbank in dieser Gruppe als Datenquelle verwenden. Alle folgenden Analysis Services-Vorgänge werden bei Verwendung einer Verfügbarkeitsdatenbank wie erwartet ausgeführt: das Verarbeiten oder Importieren von Daten, das direkte Abfragen von relationalen Daten (im ROLAP-Speichermodus oder DirectQuery-Modus) und das Rückschreiben.  
   
@@ -173,7 +171,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  Starten Sie SQL Server Profiler, und stellen Sie eine Verbindung mit der SQL Server-Instanz her, die das sekundäre Replikat hostet.  
   
-     Bei der Ausführung der Ablaufverfolgung werden mit den Ereignissen **SQL:BatchStarting** und **SQL:BatchCompleting** die von Analysis Services ausgegebenen Abfragen angezeigt, die in der Datenbankmodulinstanz ausgeführt werden. Diese Ereignisse sind standardmäßig ausgewählt, daher müssen Sie lediglich die Ablaufverfolgung starten.  
+     Bei der Ausführung der Ablaufverfolgung werden mit den Ereignissen **SQL:BatchStarting** und **SQL:BatchCompleting** die von Analysis Services ausgegebenen Abfragen angezeigt, die in der Datenbank-Engine-Instanz ausgeführt werden. Diese Ereignisse sind standardmäßig ausgewählt, daher müssen Sie lediglich die Ablaufverfolgung starten.  
   
 2.  Öffnen Sie in [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]das Analysis Services-Projekt oder die Analysis Services-Lösung, das bzw. die eine Datenquellenverbindung enthält, die Sie testen möchten. Stellen Sie sicher, dass die Datenquelle den Verfügbarkeitsgruppenlistener und nicht eine Instanz in der Gruppe angibt.  
   

@@ -3,15 +3,12 @@ title: Wiederherstellen von Dateien und Dateigruppen über vorhandene Dateien (S
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: backup-restore
+ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - restoring files [SQL Server], how-to topics
 - restoring files [SQL Server], steps
@@ -25,12 +22,11 @@ caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5c683a13b3a008e3fda5047daaea0db8778f8dcf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f422aa750c8d4307ea472328a23841deef8c3321
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>Wiederherstellen von Dateien und Dateigruppen über vorhandene Dateien (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -110,7 +106,7 @@ ms.lasthandoff: 04/16/2018
   
 6.  Klicken Sie im Bereich **Seite auswählen** auf die Seite **Optionen** .  
   
-7.  Wählen Sie im Bereich **Wiederherstellungsoptionen** die Option **Vorhandene Datenbank überschreiben (WITH REPLACE)**aus. Der Wiederherstellungsvorgang überschreibt alle vorhandenen Datenbanken und die dazugehörigen Dateien, selbst wenn bereits eine Datenbank oder Datei mit demselben Namen vorhanden ist.  
+7.  Wählen Sie im Bereich **Wiederherstellungsoptionen** die Option **Vorhandene Datenbank überschreiben (WITH REPLACE)** aus. Der Wiederherstellungsvorgang überschreibt alle vorhandenen Datenbanken und die dazugehörigen Dateien, selbst wenn bereits eine Datenbank oder Datei mit demselben Namen vorhanden ist.  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

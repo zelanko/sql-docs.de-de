@@ -2,16 +2,13 @@
 title: Verteilte Verfügbarkeitsgruppen (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/12/2018
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], distributed
 ms.assetid: ''
@@ -19,15 +16,15 @@ caps.latest.revision: ''
 author: allanhirt
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b91fb1cb4699158b69db18a9a86e407f1de97cc6
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 4ce87751cb0f279b74a19159ceb966d8cadaec52
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="distributed-availability-groups"></a>Verteilte Verfügbarkeitsgruppen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Verteilte Verfügbarkeitsgruppen sind eine neue Funktion, die in SQL Server 2016 als Variation der bestehenden Funktion für Always On-Verfügbarkeitsgruppen eingeführt wurde. Dieser Artikel erläutert einige Aspekte von verteilten Verfügbarkeitsgruppen und ergänzt die bestehende [SQL Server documentation (SQL Server-Dokumentation)](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation).
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Verteilte Verfügbarkeitsgruppen sind eine neue Funktion, die in SQL Server 2016 als Variation der bestehenden Funktion für Always On-Verfügbarkeitsgruppen eingeführt. Dieser Artikel erläutert einige Aspekte von verteilten Verfügbarkeitsgruppen und ergänzt die bestehende [SQL Server documentation (SQL Server-Dokumentation)](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation).
 
 > [!NOTE]
 > „DAG“ ist nicht die offizielle Abkürzung für *verteilte Verfügbarkeitsgruppe*, da die Abkürzung bereits für die Database Availability Group-Exchange-Funktion verwendet wird. Diese Exchange-Funktion steht nicht in Zusammenhang mit den Verfügbarkeitsgruppen oder verteilten Verfügbarkeitsgruppen in SQL Server.
@@ -55,6 +52,9 @@ Die einzige Möglichkeit, um dem primären Replikat von AG 2 das Akzeptieren von
 
 > [!NOTE]
 > Verteilte Verfügbarkeitsgruppen in SQL Server 2016 unterstützen die Failover-Funktion nur von einer Verfügbarkeitsgruppe auf eine andere mithilfe der Option „FORCE_FAILOVER_ALLOW_DATA_LOSS“.
+
+> [!NOTE]
+> Wenn Sie die Transaktionsreplikation mit verteilten Verfügbarkeitsgruppen verwenden, kann das Weiterleitungsreplikat nicht als Verleger konfiguriert werden.
 
 ## <a name="sql-server-version-and-edition-requirements-for-distributed-availability-groups"></a>Anforderungen für die SQL Server-Version und -Edition für verteilte Verfügbarkeitsgruppen
 

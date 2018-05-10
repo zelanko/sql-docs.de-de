@@ -1,17 +1,17 @@
 ---
 title: Codezugriffssicherheit in Reporting Services | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: extensions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - code groups [Reporting Services]
 - code access security [Reporting Services]
@@ -20,16 +20,15 @@ helpviewer_keywords:
 - code access security [Reporting Services], about code access security
 - named permission sets [Reporting Services]
 ms.assetid: 97480368-1fc3-4c32-b1b0-63edfb54e472
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0168906c3bc4b43f247f24abb7af5acb92d96be0
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0a6b82f5b7aae4d92b50334f14d51b0b6d17ac79
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="code-access-security-in-reporting-services"></a>Codezugriffssicherheit in Reporting Services
   Die Codezugriffssicherheit dreht sich um diese Kernbegriffe: Beweise, Codegruppen und benannte Berechtigungssätze. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] haben die Komponenten Berichts-Manager, Berichts-Designer und Berichtsserver jeweils eine Richtliniendatei, die die Codezugriffssicherheit für benutzerdefinierte Assemblys sowie für die Daten-, Übermittlungs-, Rendering- und Sicherheitserweiterung konfiguriert. Die folgenden Abschnitte enthalten eine Übersicht über die Codezugriffssicherheit. Ausführliche Informationen zu den Themen dieses Abschnitts finden Sie unter „Sicherheitsrichtlinienmodell“ in der Dokumentation zum [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK.  

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 01/31/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: data-tier-applications
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.deploydacwizard.introduction.f1
 - sql13.swb.deploydacwizard.deploydac.f1
@@ -29,16 +28,15 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b2fd672802745041f161282821f21cef040c3581
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: eaf008f10525d45c79345dbf9db5fd146097590a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploy-a-data-tier-application"></a>Bereitstellen einer Datenebenenanwendung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Mithilfe eines Assistenten oder eines PowerShell-Skripts können Sie eine Datenebenenanwendung (DAC) von einem DAC-Paket für eine vorhandene Instanz des Datenbankmoduls oder der Azure SQL-Datenbank bereitstellen. 
+  Mithilfe eines Assistenten oder eines PowerShell-Skripts können Sie eine Datenebenenanwendung (DAC) von einem DAC-Paket für eine vorhandene Instanz der Datenbank-Engine oder der Azure SQL-Datenbank bereitstellen. 
   
  Beim Bereitstellungsprozess wird eine DAC-Instanz registriert, indem die DAC-Definition in der **msdb**-Systemdatenbank (**master** in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]) gespeichert und eine Datenbank erstellt wird, die anschließend mit allen in der DAC definierten Datenbankobjekten aufgefüllt wird.  
  
@@ -47,7 +45,7 @@ ms.lasthandoff: 04/16/2018
  Dasselbe DAC-Paket kann mehrmals an eine einzelne [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz bereitgestellt werden, die Bereitstellungen müssen jedoch einzeln ausgeführt werden. Der für die einzelnen Bereitstellungen angegebene DAC-Instanzname muss innerhalb der Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]eindeutig sein.  
   
 ## <a name="managed-instances"></a>Verwaltete Instanzen  
- Beim Bereitstellen einer DAC an eine verwaltete Instanz des Datenbankmoduls wird die bereitgestellte DAC in das **SQL Server-Hilfsprogramm** integriert, wenn der Hilfsprogramm-Sammlungssatz das nächste Mal von der Instanz an den Steuerungspunkt für das Hilfsprogramm gesendet wird. Die DAC ist dann unter dem Knoten **Bereitgestellte Datenschichtanwendungen** im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Bereitgestellte Datenschichtanwendungen** details page.  
+ Beim Bereitstellen einer DAC an eine verwaltete Instanz der Datenbank-Engine wird die bereitgestellte DAC in das **SQL Server-Hilfsprogramm** integriert, wenn der Hilfsprogramm-Sammlungssatz das nächste Mal von der Instanz an den Steuerungspunkt für das Hilfsprogramm gesendet wird. Die DAC ist dann unter dem Knoten **Bereitgestellte Datenschichtanwendungen** im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Bereitgestellte Datenschichtanwendungen** details page.  
   
 ###  <a name="database-options-and-settings"></a>Datenbankoptionen und -einstellungen  
  Die während der Bereitstellung erstellte Datenbank verfügt standardmäßig über alle Standardeinstellungen der CREATE DATABASE-Anweisung mit folgenden Ausnahmen:  
@@ -72,7 +70,7 @@ Um eine DAC mit Anmeldungen bei [!INCLUDE[ssSDS](../../includes/sssds-md.md)] be
   
 1.  Erweitern Sie im **Objekt-Explorer**den Knoten für die Instanz, für die Sie die DAC bereitstellen möchten.  
   
-2.  Klicken Sie mit der rechten Maustaste auf den Knoten **Datenbanken** , und wählen Sie **Datenebenenanwendung bereitstellen...**aus.  
+2.  Klicken Sie mit der rechten Maustaste auf den Knoten **Datenbanken** , und wählen Sie **Datenebenenanwendung bereitstellen...** aus.  
   
 3.  Führen Sie die Dialogfenster des Assistenten aus, und klicken Sie auf „Fertig stellen“.
 Im Folgenden erfahren Sie mehr über einige Seiten des Assistenten: 

@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 01/22/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -28,18 +26,17 @@ caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f3d65d9a711a7fdd18c64d2ed064c28a415e5738
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ae7d7d3db5f213467033143ef47915ab75876d72
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Erstellt mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Überwachung ein Serverüberwachungsobjekt. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbankmodul&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Erstellt mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Überwachung ein Serverüberwachungsobjekt. Weitere Informationen finden Sie unter [SQL Server Audit &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
 
 [!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
@@ -173,7 +170,7 @@ CREATE SERVER AUDIT HIPAA_Audit
 ```  
   
 ### <a name="b-creating-a-server-audit-with-a-windows-application-log-target-with-options"></a>B. Erstellen einer Serverüberwachung mit einem Windows-Anwendungsprotokollziel und Optionen  
- Im folgenden Beispiel wird eine Serverüberwachung namens `HIPPA_Audit` mit dem Windows-Ereignisprotokoll als Ziel erstellt. Die Warteschlange wird jede Sekunde geschrieben und fährt bei einem Fehler das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Modul herunter.  
+ Im folgenden Beispiel wird eine Serverüberwachung namens `HIPPA_Audit` mit dem Windows-Ereignisprotokoll als Ziel erstellt. Die Warteschlange wird jede Sekunde geschrieben und fährt bei einem Fehler die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Engine herunter.  
   
 ```sql  
 CREATE SERVER AUDIT HIPAA_Audit  

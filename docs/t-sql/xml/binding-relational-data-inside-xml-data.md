@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|xml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
@@ -26,19 +24,18 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 24fb6baf5c60d7fec9596d9c2893ab7aadd5528b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: db924e662687ab79d207fe3e1e33ccc75aecd059
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>Einbinden relationaler Daten in XML-Daten
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Sie können [XML-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md) für eine **XML**-Datentypvariable oder -spalte angeben. So führt die [&#40;Abfragemethode&#41; &#40;XML-Datentyp&#41;](../../t-sql/xml/query-method-xml-data-type.md) beispielsweise die angegebene XQuery für eine XML-Instanz aus. Beim Erstellen von XML-Code auf diese Art sollten Sie einen Wert aus einer Nicht-XML-Typspalte oder eine Transact-SQL-Variable einbringen. Dieser Prozess wird als Einbinden relationaler Daten in XML bezeichnet.  
   
- Um relationale Nicht-XML-Daten in XML zu binden, bietet das SQL Server-Datenbankmodul folgende Pseudofunktionen:  
+ Um relationale Nicht-XML-Daten in XML zu binden, bietet die SQL Server-Datenbank-Engine folgende Pseudofunktionen:  
   
 -   Mithilfe von [sql:column&#40;&#41; Function &#40;XQuery&#41;](../../xquery/xquery-extension-functions-sql-column.md) können Sie die Werte aus einer relationalen Spalte in Ihrem XQuery- oder XML DML-Ausdruck verwenden.  
   

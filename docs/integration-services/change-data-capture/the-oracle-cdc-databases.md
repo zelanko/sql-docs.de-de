@@ -1,28 +1,26 @@
 ---
 title: Oracle CDC-Datenbanken | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-caps.latest.revision: 
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 54eb41670979c83b200060128da8564b765bcd5d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: bf36c117d636579d0f2048b67cd903eca224cc3d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC-Datenbanken
   Eine Oracle CDC-Instanz wird einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank mit dem gleichen Namen auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zielinstanz zugeordnet. Diese Datenbank wird als Oracle CDC-Datenbank (oder kurz CDC-Datenbank) bezeichnet.  
@@ -104,7 +102,7 @@ ms.lasthandoff: 02/15/2018
 |Element|Description|  
 |----------|-----------------|  
 |version|Hiermit wird die Version der CDC-Instanzkonfiguration verfolgt. Sie wird bei jeder Aktualisierung der Tabelle und bei jeder Hinzufügung einer neuen Aufzeichnungsinstanz oder Entfernung einer vorhandenen Aufzeichnungsinstanz aktualisiert.|  
-|connect_string|Eine Oracle-Verbindungszeichenfolge. Ein grundlegendes Beispiel ist:<br /><br /> `<server>:<port>/<instance>` (z. B. `erp.contoso.com:1521/orcl`).<br /><br /> In der Verbindungszeichenfolge kann auch ein Oracle Net-Verbindungsdeskriptor angegeben werden, z. B. `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`.<br /><br /> Wenn Sie einen Verzeichnisserver oder tnsnames verwenden, kann die Verbindungszeichenfolge der Name der Verbindung sein.<br /><br /> Weitere Informationen zu Oracle-Verbindungszeichenfolgen finden Sie unter [http://go.microsoft.com/fwlink/?LinkId=231153](http://go.microsoft.com/fwlink/?LinkId=231153) . Sie erhalten ausführliche Informationen zu Oracle-Datenbankverbindungszeichenfolgen für den Oracle Instant Client, der vom Oracle CDC Service verwendet wird.|  
+|connect_string|Eine Oracle-Verbindungszeichenfolge. Ein grundlegendes Beispiel ist:<br /><br /> `<server>:<port>/<instance>` (z. B. `erp.contoso.com:1521/orcl`).<br /><br /> In der Verbindungszeichenfolge kann auch ein Oracle Net-Verbindungsdeskriptor angegeben werden, z. B. `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`.<br /><br /> Wenn Sie einen Verzeichnisserver oder tnsnames verwenden, kann die Verbindungszeichenfolge der Name der Verbindung sein.<br /><br /> Weitere Informationen zu Oracle-Verbindungszeichenfolgen finden Sie unter [http://go.microsoft.com/fwlink/?LinkId=231153](http://go.microsoft.com/fwlink/?LinkId=231153). Sie erhalten dort ausführliche Informationen zu Verbindungszeichenfolgen der Oracle-Datenbank für den Oracle Instant Client, der von Oracle CDC Service verwendet wird.|  
 |use_windows_authentication|Ein boolescher Wert, der die folgenden Werte haben kann:<br /><br /> **0**: Ein Oracle-Benutzername und ein dazugehöriges Kennwort werden zur Authentifizierung bereitgestellt (Standardeinstellung).<br /><br /> **1**: Zum Herstellen einer Verbindung mit der Oracle-Datenbank wird die Windows-Authentifizierung verwendet. Sie können diese Option nur verwenden, wenn die Oracle-Datenbank für die Nutzung der Windows-Authentifizierung konfiguriert ist.|  
 |username|Der Name des Oracle-Datenbankbenutzers mit Log Mining-Berechtigung. Diese Angabe ist nur obligatorisch, wenn Folgendes gilt: **use_windows_authentication = 0**.|  
 |Kennwort|Das Kennwort für den Oracle Datenbankbenutzer mit Log Mining-Berechtigung. Diese Angabe ist nur obligatorisch, wenn Folgendes gilt: **use_windows_authentication = 0**.|  

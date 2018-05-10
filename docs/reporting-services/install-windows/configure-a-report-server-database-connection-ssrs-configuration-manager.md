@@ -1,25 +1,23 @@
 ---
 title: Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank (SSRS-Konfigurations-Manager) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 09/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 24384ab29267e9b2b8a19bf2e44afdabf2ef21c2
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 388534f90bf084cc32caefb84c6b2131faff47a0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank (SSRS-Konfigurations-Manager)
 
@@ -39,7 +37,7 @@ Für jede Berichtsserverinstanz ist eine Verbindung mit der Berichtsserver-Daten
   
 -   Konfigurieren einer Berichtsserverbereitstellung für horizontales Skalieren. Beim Konfigurieren einer Bereitstellung für horizontales Skalieren müssen Sie mehrere Verbindungen zu einer Berichtsserver-Datenbank erstellen. Weitere Informationen zum Ausführen dieses Vorgangs mit mehreren Schritten finden Sie unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
-## <a name="how-reporting-services-connects-to-the-database-engine"></a>Herstellen einer Verbindung zwischen Reporting Services und Datenbankmodul  
+## <a name="how-reporting-services-connects-to-the-database-engine"></a>Herstellen einer Verbindung zwischen Reporting Services und Datenbank-Engine  
  Der Zugriff des Berichtsservers auf eine Berichtsserver-Datenbank hängt von Anmeldeinformationen und Verbindungsinformationen sowie von Verschlüsselungsschlüsseln ab, die für die Berichtsserverinstanz gültig sind, die diese Datenbank verwendet. Gültige Verschlüsselungsschlüssel sind erforderlich, um vertrauliche Daten zu speichern und abzurufen. Verschlüsselungsschlüssel werden automatisch erstellt, wenn Sie die Datenbank zum ersten Mal konfigurieren. Nachdem die Schlüssel erstellt wurden, müssen Sie diese aktualisieren, wenn Sie die Identität des Berichtsserverdiensts ändern. Weitere Informationen zum Arbeiten mit Verschlüsselungsschlüsseln finden Sie unter [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
   
  Die Berichtsserver-Datenbank ist eine interne Komponente, auf die nur der Berichtsserver zugreift. Die Verbindungs- und Anmeldeinformationen, die Sie für die Berichtsserver-Datenbank angeben, werden ausschließlich vom Berichtsserver verwendet. Benutzer, die Berichte anfordern, benötigen für die Berichtsserver-Datenbank keine Datenbankberechtigungen und keinen Datenbank-Anmeldenamen.  

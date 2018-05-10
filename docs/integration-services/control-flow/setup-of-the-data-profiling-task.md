@@ -1,30 +1,28 @@
 ---
 title: Einrichten von Datenprofilerstellungs-Tasks | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], configuring
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
-caps.latest.revision: 
+caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c32f01f1da74bf83f2c38b889934a37ea85d5817
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d60d99a6bbe09da6f05d77675606e8478e004a13
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setup-of-the-data-profiling-task"></a>Einrichten von Datenprofilerstellungs-Tasks
   Bevor Sie ein Profil der Quelldaten überprüfen können, müssen Sie zunächst den Datenprofilerstellungs-Task einrichten und ausführen. Sie erstellen diesen Task in einem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket. Zum Konfigurieren des Datenprofilerstellungs-Tasks verwenden Sie den Editor für den Datenprofilerstellungs-Task. Mit diesem Editor können Sie auswählen, wo die Profile ausgegeben und welche Profile berechnet werden sollen. Nachdem Sie den Task eingerichtet haben, führen Sie das Paket aus, um die Datenprofile zu berechnen.  
@@ -61,7 +59,7 @@ ms.lasthandoff: 01/25/2018
 |Zum Berechnen|Welche bei der Identifizierung helfen|Verwenden Sie dieses Profil|  
 |----------------|-------------------------|----------------------|  
 |Alle eindeutigen Längen der Zeichenfolgenwerte in der ausgewählten Spalte sowie der Prozentsatz der Zeilen in der Tabelle, den jede Länge darstellt.|**Ungültige Zeichenfolgenwerte**: Sie erstellen beispielsweise ein Profil einer Spalte, die zwei Zeichen für die Codes der US-amerikanischen Bundesstaaten verwenden soll, stellen jedoch fest, dass diese Werte enthält, die länger sind als zwei Zeichen.|**Spaltenlängenverteilung**: Gültig für eine Spalte mit einem der folgenden Zeichendatentypen:<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**|  
-|Ein Satz von regulären Ausdrücken, die den angegebenen Prozentsatz der Werte in einer Zeichenfolgenspalte abdecken.<br /><br /> Auch zum Finden regulärer Ausdrücke, die künftig zur Überprüfung neuer Werte verwendet werden können|**Ungültige oder falsch formatierte Zeichenfolgenwerte**: Ein Musterprofil einer Spalte für die US-amerikanische Postleitzahl kann beispielsweise die folgenden regulären Ausdrücke erstellen: \d\{5\}-\d\{4\}, \d\{5\} und \d\{9\}. Wenn die Ausgabe andere reguläre Ausdrücke enthält, enthalten die Daten ungültige oder falsch formatierte Werte.|**Spaltenmusterprofil**: Gültig für eine Spalte mit einem der folgenden Zeichendatentypen:<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**|  
+|Ein Satz von regulären Ausdrücken, die den angegebenen Prozentsatz der Werte in einer Zeichenfolgenspalte abdecken.<br /><br /> Auch zum Finden regulärer Ausdrücke, die künftig zur Überprüfung neuer Werte verwendet werden können|**Ungültige oder falsch formatierte Zeichenfolgenwerte**: Ein Musterprofil einer Spalte für die US-amerikanische Postleitzahl kann beispielsweise die folgenden regulären Ausdrücke erstellen: \d{5}-\d{4}, \d{5} und \d{9}. Wenn die Ausgabe andere reguläre Ausdrücke enthält, enthalten die Daten ungültige oder falsch formatierte Werte.|**Spaltenmusterprofil**: Gültig für eine Spalte mit einem der folgenden Zeichendatentypen:<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**|  
 |Der Prozentsatz der NULL-Werte in der ausgewählten Spalte.|**Ein unerwartet hohes Verhältnis von NULL-Werten in einer Spalte**: Sie erstellen beispielsweise ein Profil einer Spalte, die US-amerikanische Postleitzahlen enthalten soll, stellen jedoch fest, dass ein unerwartet hoher Prozentsatz der Postleitzahlen fehlt.|**Spalten-NULL-Verhältnis**: Gültig für eine Spalte mit einem der folgenden Datentypen:<br /><br /> **image**<br /><br /> **text**<br /><br /> **xml**<br /><br /> Benutzerdefinierte Typen<br /><br /> Variant-Typen|  
 |Statistiken wie minimale, maximale, durchschnittliche und standardmäßige Abweichung für numerische Spalten und den Mindest- und Höchstwert für **datetime** -Spalten.|**Ungültige numerische Werte und Daten**: Sie erstellen beispielsweise ein Profil einer Spalte mit Verlaufsdaten, stellen jedoch fest, dass ein maximales Datum in der Zukunft liegt.|**Spaltenstatistikprofil**: Gültig für eine Spalte mit einem dieser Datentypen.<br /><br /> Numerische Datentypen:<br /><br /> Integer-Typen (außer **bit**<br /><br /> **money**<br /><br /> **smallmoney**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **real**<br /><br /> **numeric**<br /><br /> Datums- und Uhrzeitdatentypen:<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **Datum**<br /><br /> **Uhrzeit**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> Hinweis: Für eine Spalte, die über ein Datum- und einen Zeitdatentyp verfügt, berechnet das Profil nur Minimum und Maximum.|  
 |Alle eindeutigen Werte in der ausgewählten Spalte sowie der Prozentsatz der Zeilen in der Tabelle, den jeder Wert darstellt. Oder die Werte, die mehr als einen angegebenen Prozentwert in der Tabelle darstellen.|**Eine falsche Anzahl von unterschiedlichen Werten in einer Spalte**: Sie erstellen beispielsweise ein Profil einer Spalte mit den US-amerikanischen Bundesstaaten, stellen jedoch fest, dass diese mehr als 50 unterschiedliche Werte enthält.|**Spaltenwertverteilung**: Gültig für eine Spalte mit einem der folgenden Datentypen.<br /><br /> Numerische Datentypen:<br /><br /> Integer-Typen (außer **bit**<br /><br /> **money**<br /><br /> **smallmoney**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **real**<br /><br /> **numeric**<br /><br /> Zeichendatentypen:<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**<br /><br /> Datums- und Uhrzeitdatentypen:<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **Datum**<br /><br /> **Uhrzeit**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**|  
@@ -104,7 +102,7 @@ ms.lasthandoff: 01/25/2018
   
 -   Zum Erstellen von benutzerdefinierten Tools, die mit Datenqualitätsinformationen arbeiten.  
   
- Der Zielnamespace wird im Schema als [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/)identifiziert.  
+ Der Zielnamespace wird im Schema als [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/) identifiziert.  
   
 ## <a name="next-step"></a>Nächster Schritt  
  [Datenprofil-Viewer](../../integration-services/control-flow/data-profile-viewer.md).  

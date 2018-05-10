@@ -4,22 +4,20 @@ ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.service: ''
 ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 796eed171b40234af4ab00877a5e73121b49368e
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+ms.openlocfilehash: af700470aaa18c5e8588dd817b3fa0111364875f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>Installieren des ersten Berichtsservers im SharePoint-Modus
 
@@ -123,7 +121,7 @@ ms.lasthandoff: 03/20/2018
   
      Wählen Sie **Weiter**aus.  
 
-5.  Es wird empfohlen, die Option **Mit Microsoft Update nach Updates suchen (empfohlen)**auszuwählen. Diese Eingabe ist optional.
+5.  Es wird empfohlen, die Option **Mit Microsoft Update nach Updates suchen (empfohlen)** auszuwählen. Diese Eingabe ist optional.
   
      Wählen Sie **Weiter**aus.   
   
@@ -147,7 +145,7 @@ ms.lasthandoff: 03/20/2018
   
      ![rs_SetupFeatureSelection_SharePoint_with_circles](../../reporting-services/install-windows/media/rs-setupfeatureselection-sharepoint-with-circles.png)
   
-9. Wenn Sie Datenbankmoduldienste ausgewählt haben, akzeptieren Sie die Standardinstanz von **MSSQLSERVER** auf der Seite **Instanzkonfiguration** , und klicken Sie auf **Weiter**.  
+9. Wenn Sie Datenbank-Engine-Dienste ausgewählt haben, akzeptieren Sie die Standardinstanz von **MSSQLSERVER** auf der Seite **Instanzkonfiguration** , und klicken Sie auf **Weiter**.  
   
      ![Hinweis](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note")Die Architektur des Reporting Services SharePoint-Dienstes basiert nicht auf einer SQL Server-„Instanz“, wie es bei der vorherigen Reporting Services-Architektur der Fall war.  
   
@@ -306,7 +304,7 @@ ms.lasthandoff: 03/20/2018
   
 -   Aktualisieren Sie den Parameter **-Account** für den Dienstproxy. Dabei muss es sich um ein verwaltetes Dienstkonto in der SharePoint-Farm handeln. Weitere Informationen finden Sie im SharePoint-Thema [Planen von Administrator- und Dienstkonten in SharePoint 2013](http://technet.microsoft.com/library/cc263445.aspx).  
   
--   Aktualisieren Sie den **–DatabaseServer** -Parameter für die Dienstanwendung. Dieser Parameter entspricht der Instanz des Datenbankmoduls.  
+-   Aktualisieren Sie den **–DatabaseServer** -Parameter für die Dienstanwendung. Dieser Parameter entspricht der Instanz der Datenbank-Engine.  
   
 -   Aktualisieren Sie den **–url** -Parameter der Site, für die die [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Funktion aktiviert werden soll.  
   

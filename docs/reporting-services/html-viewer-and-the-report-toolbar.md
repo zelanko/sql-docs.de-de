@@ -3,28 +3,26 @@ title: HTML-Viewer und die Berichtssymbolleiste | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - HTML Viewer [Reporting Services]
 - report toolbar [Reporting Services]
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: a00f751dbb765e8835fa40430dfdd00a8079f3c6
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 00353fa42e692ef0a4e25d279a0ea5def83a067c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML-Viewer und die Berichtssymbolleiste
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] stellt einen HTML-Viewer bereit, in dem die Berichte bedarfsgesteuert angezeigt werden können, so wie sie vom Berichtsserver angefordert werden. Der HTML-Viewer stellt ein Framework für das Anzeigen von Berichten in HTML zur Verfügung. Er enthält eine Berichtssymbolleiste, einen Parameterabschnitt, einen Abschnitt mit den Anmeldeinformationen und eine Dokumentstruktur. Die Berichtssymbolleiste im HTML-Viewer enthält Funktionen zum Bearbeiten von Berichten. Dazu zählen auch Exportoptionen, mit deren Hilfe ein Bericht in anderen Formaten als HTML angezeigt werden kann. Der Parameterabschnitt und die Dokumentstruktur werden nur angezeigt, wenn Sie Berichte öffnen, die zum Verwenden von Parametern und eines Dokumentstruktur-Steuerelements konfiguriert sind.  

@@ -1,28 +1,27 @@
 ---
-title: "Tutorial: Hinzufügen einer KPI zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation"
-ms.custom: 
+title: 'Tutorial: Hinzufügen einer KPI zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation'
+ms.custom: ''
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4c0e21bcd1d4695aaf7a55891c7b6d3c9231cdd7
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 9c6c7edf99179ba576fbb2a30668768eeca222e4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines KPIs zu einem Bericht (Berichts-Generator)
 In diesem [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] -Tutorial fügen Sie eine Leistungskennzahl (key performance indicator; KPI) zu einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht hinzu.  
@@ -277,7 +276,7 @@ Indikatoren sind kleine einfache Messgeräte, die Datenwerte auf einen Blick dar
   
 5.  Doppelklicken Sie auf der Registerkarte **Einfügen** unter **Datenvisualisierungen** auf **Indikator**.  
   
-6.  Wählen Sie im Dialogfeld **Indikatortyp auswählen** unter **Formen**den ersten Formtyp **3 Ampeln (ohne Rand)**aus.  
+6.  Wählen Sie im Dialogfeld **Indikatortyp auswählen** unter **Formen**den ersten Formtyp **3 Ampeln (ohne Rand)** aus.  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -285,7 +284,7 @@ Indikatoren sind kleine einfache Messgeräte, die Datenwerte auf einen Blick dar
   
 8.  Klicken Sie mit der rechten Maustaste auf den Indikator, und klicken Sie auf **Indikatoreigenschaften**.  
   
-9. Wählen Sie auf der Registerkarte **Werte und Status** im Feld **Wert** **[Sum(Sales)]**aus. Ändern Sie keine weiteren Optionen.  
+9. Wählen Sie auf der Registerkarte **Werte und Status** im Feld **Wert** **[Sum(Sales)]** aus. Ändern Sie keine weiteren Optionen.  
   
     Standardmäßig findet eine Datensynchronisierung im Datenbereich statt, und der Wert **Tablix1**, der Name des Tabellendatenbereichs im Bericht, wird im Feld **Synchronisierungsbereich** angezeigt.  
   

@@ -1,16 +1,15 @@
 ---
-title: "Speichern verschlüsselter Berichtsserverdaten (SSRS-Konfigurations-Manager) | Microsoft-Dokumentation"
-ms.custom: 
+title: Speichern verschlüsselter Berichtsserverdaten (SSRS-Konfigurations-Manager) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
 - credentials [Reporting Services]
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - encryption [Reporting Services]
 - databases [Reporting Services], encryption
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1b733d6f858f3d631c25b7861cc7f7b5546482ee
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3feb813133578c1364be0642504e6b89b0653da4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>SSRS-Verschlüsselungsschlüssel: Speichern verschlüsselter Berichtsserverdaten
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] speichert verschlüsselte Werte in der Berichtsserver-Datenbank und in Konfigurationsdateien. Die meisten verschlüsselten Werte stellen Anmeldeinformationen für den Zugriff auf externe Datenquellen dar, die Daten für Berichte bereitstellen. In diesem Thema werden die verschlüsselten Werte, die in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]verwendeten Verschlüsselungsfunktionen sowie andere Arten von gespeicherten, vertraulichen Daten beschrieben, die Sie kennen sollten.  

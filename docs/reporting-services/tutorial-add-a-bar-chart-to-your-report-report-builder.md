@@ -1,28 +1,27 @@
 ---
-title: "Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation"
-ms.custom: 
+title: 'Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation'
+ms.custom: ''
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: e8d12b916eaa9ae355730e71a5564fb3d13b5740
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8ef72373f91b9104c8ff83f6d1d9b012b283df3d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)
 In diesem Tutorial verwenden Sie einen Assistenten in [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] , um ein Kreisdiagramm in einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht zu erstellen. Anschließend fügen Sie einen Filter hinzu und erweitern das Diagramm. 
@@ -254,7 +253,7 @@ Sie können dem Diagramm einen Filter hinzufügen, um anzugeben, welche Daten de
   
 5.  Klicken Sie auf **Hinzufügen**. Ein neuer leerer Filter wird angezeigt.  
   
-6.  Geben Sie unter **Ausdruck** **[Sum(SalesYear2015)]**ein. Dadurch wird der zugrunde liegende Ausdruck `=Sum(Fields!SalesYear2015.Value)`erstellt, der durch Klicken auf die Schaltfläche **fx** angezeigt wird.  
+6.  Geben Sie unter **Ausdruck** **[Sum(SalesYear2015)]** ein. Dadurch wird der zugrunde liegende Ausdruck `=Sum(Fields!SalesYear2015.Value)`erstellt, der durch Klicken auf die Schaltfläche **fx** angezeigt wird.  
   
 7.  Überprüfen Sie, ob der Datentyp gleich **Text**ist.  
   

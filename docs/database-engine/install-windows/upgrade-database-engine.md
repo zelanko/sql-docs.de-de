@@ -1,17 +1,14 @@
 ---
-title: Upgrade eines Datenbankmoduls | Microsoft-Dokumentation
+title: Upgrade einer Datenbank-Engine | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/18/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: install-windows
+ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [SQL Server], databases
 - compatibility levels [SQL Server], after upgrade
@@ -21,26 +18,29 @@ caps.latest.revision: 62
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 374112a5e8055645339d08e2f993886af55d9e1c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 01580f3ca8c02c9d612b5f0b816193f943de2a55
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="upgrade-database-engine"></a>Aktualisieren des Datenbankmoduls
+# <a name="upgrade-database-engine"></a>Aktualisieren der Datenbank-Engine
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
   Die Artikel in diesem Abschnitt unterstützen Sie dabei, ein Upgrade der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank-Engine von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] durchzuführen.  
   
-1.  [Wählen einer Upgrademethode für das Datenbankmodul](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md) Vor Beginn eines Upgrades sollten Sie die verschiedenen Upgrademethoden kennen. Dieser Artikel beschreibt die Upgrademethoden und die jeweils zugehörigen Schritte.  
+1.  
+  [Wählen einer Upgrademethode für die Datenbank-Engine](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md) Vor Beginn eines Upgrades sollten Sie die verschiedenen Upgrademethoden kennen. Dieser Artikel beschreibt die Upgrademethoden und die jeweils zugehörigen Schritte.  
   
-2.  [Planen und Testen des Upgradeplans für das Datenbankmodul](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md) Nach dem Überprüfen der Upgrademethoden können Sie die entsprechende Upgrademethode für Ihre Umgebung entwickeln und vor dem Upgrade der vorhandenen Umgebung testen. Dieser Artikel beschreibt das Entwickeln und Testen eines Upgradeplans.  
+2.  
+  [Planen und Testen des Upgradeplans für die Datenbank-Engine](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md) Nach dem Überprüfen der Upgrademethoden können Sie die entsprechende Upgrademethode für Ihre Umgebung entwickeln und vor dem Upgrade der vorhandenen Umgebung testen. Dieser Artikel beschreibt das Entwickeln und Testen eines Upgradeplans.  
   
 3.  [Abschließen des Datenbank-Engine-Upgrades](../../database-engine/install-windows/complete-the-database-engine-upgrade.md) Nach dem Upgrade der Datenbanken auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] müssen Sie weitere Schritte ausführen, z.B. das Durchführen einer neuen Sicherung, die Aktivierung neuer Funktionen und das erneute Auffüllen der Volltextkataloge. Diese Schritte werden in diesem Artikel erläutert.  
   
 4.  [Ändern des Datenbank-Kompatibilitätsmodus und Verwenden des Abfragespeichers](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md) Einer der Schritte nach dem Upgrade der Datenbanken auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ist das Aktivieren neuer Funktionen durch Ändern des Datenbankkompatibilitätsmodus und danach das Verwenden des Abfragespeichers zum Überwachen der Leistung. Dieser Artikel erläutert diesen Prozess und stellt einen empfohlenen Workflow bereit.  
   
-5.  [Take Advantage of New SQL Server Features (Nutzen Sie die Vorteile der neuen Features von SQL Server)](http://www.microsoft.com/sql-server/sql-server-2017) Schließlich, nachdem Sie die vorherigen Schritte abgeschlossen haben, können Sie die speziellen neuen Erweiterungen des Datenbankmoduls nutzen. Dieser Artikel schlägt einige dieser Erweiterungen vor und stellt Links zu weiteren Informationen bereit.  
+5.  
+  [Take Advantage of New SQL Server Features (Nutzen Sie die Vorteile der neuen Features von SQL Server)](http://www.microsoft.com/sql-server/sql-server-2017) Schließlich, nachdem Sie die vorherigen Schritte abgeschlossen haben, können Sie die speziellen neuen Erweiterungen der Datenbank-Engine nutzen. Dieser Artikel schlägt einige dieser Erweiterungen vor und stellt Links zu weiteren Informationen bereit.  
   
   

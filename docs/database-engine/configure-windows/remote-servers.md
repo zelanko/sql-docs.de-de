@@ -3,15 +3,12 @@ title: Remoteserver | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - server management [SQL Server], remote servers
 - remote servers [SQL Server], configuring
@@ -23,16 +20,15 @@ caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 1c662eb0ba6ba239f53b8983864f3d861d21e092
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 868cd0d8d68103afe5f6e50ae1519c11c52ff0f3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="remote-servers"></a>Remoteserver
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Remoteserver werden in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nur aus Gründen der Abwärtskompatibilität unterstützt. Neue Anwendungen sollten stattdessen Verbindungsserver verwenden. Weitere Informationen finden Sie unter [Verbindungsserver &#40;Datenbankmodul&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
+  Remoteserver werden in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nur aus Gründen der Abwärtskompatibilität unterstützt. Neue Anwendungen sollten stattdessen Verbindungsserver verwenden. Weitere Informationen finden Sie unter [Verbindungsserver &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
   
  Durch die Konfiguration eines Remoteservers kann ein Client, der eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hergestellt hat, eine gespeicherte Prozedur in einer anderen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführen, ohne eine separate Verbindung einrichten zu müssen. Der mit dem Client verbundene Server nimmt in diesem Fall die Clientanforderung an und sendet die Anforderung im Auftrag des Clients an den Remoteserver. Der Remoteserver verarbeitet die Anforderung und gibt die Ergebnisse an den ursprünglichen Server zurück. Dieser Server übergibt seinerseits die Ergebnisse an den Client. Wenn Sie eine Remoteserverkonfiguration einrichten, sollten Sie auch Sicherheitsaspekte berücksichtigen.  
   
@@ -104,7 +100,8 @@ GO
  Sie können die erweiterte gespeicherte Prozedur **xp_msver** verwenden, um Serverattribute von lokalen oder Remoteservern zu überprüfen. Diese Attribute enthalten die Versionsnummer von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Typ und Anzahl von Prozessoren des Computers, sowie die Version des Betriebssystems. Sie können vom lokalen Server Datenbanken, Dateien, Anmeldungen und Tools eines Remoteserver anzeigen. Weitere Informationen finden Sie unter [xp_msver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-msver-transact-sql.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Verbindungsserver &#40;Datenbankmodul&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)  
+ 
+  [Verbindungsserver &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  

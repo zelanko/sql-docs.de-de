@@ -1,32 +1,30 @@
 ---
 title: Konfigurieren von Berichtsserver-URLs (SSRS-Konfigurations-Manager) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Server Windows service, virtual directories
 - report servers [Reporting Services], virtual directories
 - virtual directories [Reporting Services]
 - Report Manager [Reporting Services], virtual directories
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 4128ec3ec665dc5dff90b6d82b7aa7838d4e5d99
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 4421895de0ba4bddc3d6905a142bee7907888033
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Konfigurieren von Berichtsserver-URLs (SSRS-Konfigurations-Manager)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]werden URLs für den Zugriff auf den Report Server-Webdienst und das [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]verwendet. Bevor Sie die eine der Anwendungen verwenden können, müssen Sie mindestens je eine URL für den Webdienst und das [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]konfigurieren. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bietet Standardwerte für beide Anwendungs-URLs, die in den meisten Bereitstellungsszenarien gut funktionieren, auch in parallelen Bereitstellungen mit anderen Webdiensten und -anwendungen.  

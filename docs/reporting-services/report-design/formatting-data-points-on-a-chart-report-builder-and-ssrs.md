@@ -1,30 +1,28 @@
 ---
 title: Formatieren von Datenpunkten in einem Diagramm (Berichts-Generator und SSRS) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - "10248"
 - sql13.rtp.rptdesigner.serieslabelproperties.general.f1
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 7dedffd365d48a18f896815660585c5b602a5688
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f99265199740d65002f061c9f7c8ce612bf312d5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Formatieren von Datenpunkten in einem Diagramm (Berichts-Generator und SSRS)
 In einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht stellt ein Datenpunkt die kleinste Entität im Diagramm dar. In Nicht-Formdiagrammen werden Datenpunkte entsprechend dem Diagrammtyp dargestellt. Eine Linienreihe besteht beispielsweise aus einem oder mehreren verbundenen Datenpunkten. In Formdiagrammen werden Datenpunkte durch einzelne Slices oder Segmente dargestellt, aus denen sich das gesamte Diagramm zusammensetzt. In einem Kreisdiagramm ist z. B. jedes Teil ein Datenpunkt. Weitere Informationen finden Sie unter [Diagrammtypen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md).  

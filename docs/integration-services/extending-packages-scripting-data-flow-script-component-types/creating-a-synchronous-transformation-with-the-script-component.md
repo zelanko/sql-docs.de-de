@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: extending-packages-scripting-data-flow-script-component-types
 ms.reviewer: ''
 ms.suite: sql
@@ -24,12 +23,11 @@ caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 62c98f8b7e246d77a470bc633f5d94692b7a4888
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 37b3c7dad05280b86d29e34be338d1929561fc05
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>Erstellen einer synchronen Transformation mit der Skriptkomponente
   Transformationskomponenten dienen im Datenfluss eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakets dazu, Daten auf dem Weg von der Quelle zum Ziel zu ändern und zu analysieren. Eine Transformation mit synchronen Ausgaben verarbeitet jede eingegebene Zeile, während sie die Komponente durchläuft. Eine Transformation mit asynchronen Ausgaben wartet, bis alle Eingabezeilen empfangen wurden, bevor die Verarbeitung abgeschlossen wird. In diesem Thema wird eine synchrone Transformation erläutert. Informationen zur asynchronen Transformation finden Sie unter [Creating an Asynchronous Transformation with the Script Component (Erstellen einer asynchronen Transformationen mit der Skriptkomponente)](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md). Weitere Informationen zu den Unterschieden zwischen synchronen und asynchronen Komponenten finden Sie unter [Understanding Synchronous and Asynchronous Transformations (Grundlegendes zu synchronen und asynchronen Transformationen)](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
@@ -72,7 +70,7 @@ ms.lasthandoff: 04/26/2018
   
 -   Verändern Sie die Spalten für synchrone Transformationen nicht. Normalerweise werden bei einer synchronen Transformation dem Datenfluss keine Spalten hinzugefügt. Die Daten werden gleich im Puffer verändert, und der Puffer wird an die nächste Komponente im Datenfluss übergeben. Bei einer solchen Vorgehensweise müssen Sie den Transformationsausgaben keine Ausgabespalten explizit hinzufügen und diese dann konfigurieren. Die Ausgaben werden ohne explizit definierte Spalten im Editor angezeigt.  
   
--   Fügen Sie simulierten Fehlerausgaben neue Spalten für Fehler auf Zeilenebene hinzu. Üblicherweise besitzen mehrere Ausgaben in derselben **ExclusionGroup** die gleichen Ausgabespalten. Falls Sie eine simulierte Fehlerausgabe erstellen, sollten Sie jedoch mehrere Spalten hinzufügen, um Fehlerinformationen zu speichern. Informationen dazu, wie das Datenflussmodul Fehlerzeilen verarbeitet, finden Sie unter [Using Error Outputs in a Data Flow Component (Verwenden von Fehlerausgaben in einer Datenflusskomponente)](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md). Beachten Sie, dass Sie in der Skriptkomponente eigenen Code schreiben müssen, um geeignete Fehlerinformationen für die zusätzlichen Spalten zu erhalten. Weitere Informationen finden Sie unter [Simulating an Error Output for the Script Component (Simulieren einer Fehlerausgabe für die Skriptkomponente)](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md).  
+-   Fügen Sie simulierten Fehlerausgaben neue Spalten für Fehler auf Zeilenebene hinzu. Üblicherweise besitzen mehrere Ausgaben in derselben **ExclusionGroup** die gleichen Ausgabespalten. Falls Sie eine simulierte Fehlerausgabe erstellen, sollten Sie jedoch mehrere Spalten hinzufügen, um Fehlerinformationen zu speichern. Informationen dazu, wie die Datenfluss-Engine Fehlerzeilen verarbeitet, finden Sie unter [Using Error Outputs in a Data Flow Component (Verwenden von Fehlerausgaben in einer Datenflusskomponente)](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md). Beachten Sie, dass Sie in der Skriptkomponente eigenen Code schreiben müssen, um geeignete Fehlerinformationen für die zusätzlichen Spalten zu erhalten. Weitere Informationen finden Sie unter [Simulating an Error Output for the Script Component (Simulieren einer Fehlerausgabe für die Skriptkomponente)](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md).  
   
  Weitere Informationen über die Seite **Eingaben und Ausgaben** im **Transformations-Editor für Skripterstellung** finden Sie unter [Script Transformation Editor (Inputs and Outputs Page) (Transformations-Editor für Skripterstellung (Seite „Eingaben und Ausgaben“))](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md).  
   
@@ -95,7 +93,7 @@ ms.lasthandoff: 04/26/2018
   
  Wenn Sie das Fenster **Projektexplorer** in VSTA öffnen, können Sie sehen, dass die Skriptkomponente auch schreibgeschützte **BufferWrapper**- und **ComponentWrapper**-Projektelemente generiert hat. Die **ScriptMain**-Klasse erbt von der **UserComponent**-Klasse im **ComponentWrapper**-Projektelement.  
   
- Zur Laufzeit ruft das Datenflussmodul die **ProcessInput**-Methode in der **UserComponent**-Klasse auf, die die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A>-Methode der übergeordneten <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>-Klasse überschreibt. Die **ProcessInput**-Methode durchläuft die Zeilen im Eingabepuffer der Reihe nach und ruft für jede Zeile einmal die **ProcessInputRow**-Methode auf.  
+ Zur Laufzeit ruft die Datenfluss-Engine die **ProcessInput**-Methode in der **UserComponent**-Klasse auf, die die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A>-Methode der übergeordneten <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>-Klasse überschreibt. Die **ProcessInput**-Methode durchläuft die Zeilen im Eingabepuffer der Reihe nach und ruft für jede Zeile einmal die **ProcessInputRow**-Methode auf.  
   
 ### <a name="writing-your-custom-code"></a>Schreiben von benutzerdefiniertem Code  
  Eine Transformationskomponente mit synchronen Ausgaben ist die Datenflusskomponente, die am einfachsten geschrieben werden kann. Zum Beispiel besteht das später in diesem Thema dargestellte Beispiel mit einer einzigen Ausgabe aus dem folgenden benutzerdefinierten Code:  
@@ -109,7 +107,7 @@ Row.City = (Row.City).ToUpper();
   
 ```  
   
- Sie können mit der überschriebenen **ProcessInputRow**-Methode die Daten in jeder Zeile des Eingabepuffers transformieren, um die Erstellung einer benutzerdefinierten synchronen Transformationskomponente abzuschließen. Das Datenflussmodul leitet diesen Puffer an die nächste Komponente im Datenfluss weiter, sobald er voll ist.  
+ Sie können mit der überschriebenen **ProcessInputRow**-Methode die Daten in jeder Zeile des Eingabepuffers transformieren, um die Erstellung einer benutzerdefinierten synchronen Transformationskomponente abzuschließen. Die Datenfluss-Engine leitet diesen Puffer an die nächste Komponente im Datenfluss weiter, sobald er voll ist.  
   
  Je nach Anforderung können Sie auch Skript in den Methoden **PreExecute** und **PostExecute** schreiben, die in der **ScriptMain**-Klasse verfügbar sind, um vorbereitende oder abschließende Verarbeitungsvorgänge auszuführen.  
   
