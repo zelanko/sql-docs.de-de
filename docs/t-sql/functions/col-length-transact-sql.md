@@ -28,16 +28,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d0342940a8fb5155439d7ea58640666aa1c5bf85
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9e7ff86386eac4bdc30680cc763a2b11e522076c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="collength-transact-sql"></a>COL_LENGTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Gibt die festgelegte Länge (in Byte) einer Spalte zurück.
+Diese Funktion gibt die definierte Länge einer Spalte in Bytes zurück.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,24 +49,24 @@ COL_LENGTH ( 'table' , 'column' )
   
 ## <a name="arguments"></a>Argumente  
 **'** *table* **'**  
-Der Name der Tabelle, für die Spaltenlängeninformationen bestimmt werden sollen. *table*: Ein Ausdruck vom Typ **nvarchar**.
+Der Name der Tabelle, für die die Spaltenlängeninformationen bestimmt werden sollen. *table*: Ein Ausdruck vom Typ **nvarchar**.
   
 **'** *column* **'**  
-Der Name der Spalte, für die Spaltenlängeninformationen bestimmt werden sollen. *column*: Ein Ausdruck vom Typ **nvarchar**.
+Der Name der Spalte, für die die Länge bestimmt werden soll. *column*: Ein Ausdruck vom Typ **nvarchar**.
   
 ## <a name="return-type"></a>Rückgabetyp
 **smallint**
   
 ## <a name="exceptions"></a>Ausnahmen  
-Gibt NULL bei einem Fehler zurück oder wenn ein Aufrufer nicht über Berechtigungen zum Anzeigen des Objekts verfügt.
+Gibt NULL bei einem Fehler zurück oder wenn ein Aufrufer nicht über die korrekten Berechtigungen zum Anzeigen des Objekts verfügt.
   
-In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann ein Benutzer nur die Metadaten sicherungsfähiger Elemente anzeigen, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Dies bedeutet, dass Metadaten ausgebende integrierte Funktionen, z. B. COL_LENGTH, möglicherweise NULL zurückgeben, wenn dem Benutzer für das Objekt keine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
+In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann ein Benutzer nur die Metadaten sicherungsfähiger Elemente anzeigen, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Dies bedeutet, dass Metadaten ausgebende integrierte Funktionen, z.B. COL_LENGTH, möglicherweise NULL zurückgeben, wenn dem Benutzer für das Objekt nicht die korrekte Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Konfigurieren der Sichtbarkeit von Metadaten](../../relational-databases/security/metadata-visibility-configuration.md).
   
 ## <a name="remarks"></a>Remarks  
-Für Spalten vom Typ **varchar**, die mit dem Bezeichner **max** deklariert wurden (**varchar(max)**), gibt COL_LENGTH den Wert –1 zurück.
+Für **varchar**-Spalten, die mit dem Bezeichner **max** deklariert wurden (**varchar(max)**), gibt COL_LENGTH den Wert –1 zurück.
   
 ## <a name="examples"></a>Beispiele  
-Das folgende Beispiel zeigt die Rückgabewerte für eine Spalte vom Typ `varchar(40)` und eine Spalte vom Typ `nvarchar(40)`.
+Dieses Beispiel zeigt die Rückgabewerte für eine Spalte vom Typ `varchar(40)` und eine Spalte vom Typ `nvarchar(40)`:
   
 ```sql
 USE AdventureWorks2012;  

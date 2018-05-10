@@ -1,17 +1,16 @@
 ---
-title: Berechtigungen (Datenbankmodul) | Microsoft-Dokumentation
+title: Berechtigungen (Datenbank-Engine) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.databaseuser.permissions.database.f1--May use common.permissions
 - sql13.swb.databaseuser.permissions.object.f1--May use common.permissions
@@ -25,18 +24,17 @@ caps.latest.revision: 76
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5d0fcc6fcb0e0a40e23f65f4efbf7f6ff8a39255
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 25fdf523968b9158395136b804ea16f73308a8fb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="permissions-database-engine"></a>Berechtigungen (Datenbankmodul)
+# <a name="permissions-database-engine"></a>Berechtigungen (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Jedes sicherungsfähige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Element hat zugeordnete Berechtigungen, die einem Prinzipal erteilt werden können. [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Berechtigungen im Datenbankmodul werden sowohl auf dem Serverlevel, das den Anmeldeinformationen und Serverrollen zugewiesen ist, als auch auf dem Datenbanklevel verwaltet, das den Datenbankbenutzer und Datenbankrollen zugewiesen ist. Das Model für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] wendet dieses System auch auf die Datenbankberechtigungen an. Die Berechtigungen auf Serverebene sind jedoch nicht verfügbar. Dieses Thema bietet eine vollständige Liste der Berechtigungen. Eine typische Implementierung der Berechtigungen finden Sie unter [Erste Schritte mit Berechtigungen für das Datenbankmodul](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
+  Jedes sicherungsfähige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Element hat zugeordnete Berechtigungen, die einem Prinzipal erteilt werden können. [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Berechtigungen im Datenbankmodul werden sowohl auf dem Serverlevel, das den Anmeldeinformationen und Serverrollen zugewiesen ist, als auch auf dem Datenbanklevel verwaltet, das den Datenbankbenutzer und Datenbankrollen zugewiesen ist. Das Model für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] wendet dieses System auch auf die Datenbankberechtigungen an. Die Berechtigungen auf Serverebene sind jedoch nicht verfügbar. Dieses Thema bietet eine vollständige Liste der Berechtigungen. Eine typische Implementierung der Berechtigungen finden Sie unter [Erste Schritte mit Berechtigungen für die Datenbank-Engine](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
 Die Gesamtanzahl der Berechtigungen für [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] beträgt 237. Die meisten Berechtigungen – jedoch nicht alle – gelten für alle Plattformen. Zum Beispiel können in SQL-Datenbank keine Berechtigungen auf Serverebene erteilt werden, und einige Berechtigungen sind nur für [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]sinnvoll. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] macht 230 Berechtigungen verfügbar. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] macht 219 Berechtigungen verfügbar. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] macht 214 Berechtigungen verfügbar. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] macht 195 Berechtigungen verfügbar. Im Thema [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) wird angegeben, welche Themen in den aktuellsten Versionen neu sind.
 
@@ -45,7 +43,7 @@ Sobald Sie sich mit den Berechtigungen vertraut gemacht haben, verwenden Sie die
 GRANT SELECT ON OBJECT::HumanResources.Employee TO Larry;
 REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ```   
-Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit Berechtigungen für das Datenbankmodul](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
+Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit Berechtigungen für die Datenbank-Engine](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
   
 ##  <a name="_conventions"></a> Benennungskonventionen für Berechtigungen  
  Im Folgenden werden die allgemeinen Konventionen beschrieben, die beim Benennen von Berechtigungen befolgt werden:  
@@ -389,7 +387,7 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
   
 -   **Berechtigungsbereich**  
   
-     Dies sind die sicherungsfähige Entität und alle sicherungsfähigen Klassen, in denen das sicherungsfähige Element enthalten ist. Eine Tabelle (eine sicherungsfähige Entität) ist z. B. in der sicherungsfähigen Klasse des Schemas und in der sicherungsfähigen Klasse der Datenbank enthalten. Berechtigungen auf Tabellen-, Schema-, Datenbank- und Serverebene können sich auf den Zugriff auswirken. Weitere Informationen finden Sie unter [Berechtigungshierarchie &#40;Datenbankmodul&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md).  
+     Dies sind die sicherungsfähige Entität und alle sicherungsfähigen Klassen, in denen das sicherungsfähige Element enthalten ist. Eine Tabelle (eine sicherungsfähige Entität) ist z. B. in der sicherungsfähigen Klasse des Schemas und in der sicherungsfähigen Klasse der Datenbank enthalten. Berechtigungen auf Tabellen-, Schema-, Datenbank- und Serverebene können sich auf den Zugriff auswirken. Weitere Informationen finden Sie unter [Berechtigungshierarchie &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md).  
   
 -   **Erforderliche Berechtigung**  
   
@@ -466,7 +464,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Berechtigungshierarchie &#40;Datenbankmodul&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ 
+  [Berechtigungshierarchie &amp;#40;Datenbank-Engine &amp;#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
   
   

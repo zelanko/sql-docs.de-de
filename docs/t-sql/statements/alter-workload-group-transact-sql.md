@@ -1,7 +1,7 @@
 ---
 title: ALTER WORKLOAD GROUP (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/04/2018
+ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.service: ''
@@ -25,11 +25,11 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bdc49a57b8b864284fa4411ddb0b970bed1c704
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 78e3660935d5969e2a67afed85f295998e496153
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -108,13 +108,13 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > Resource Governor verhindert nicht, dass eine Anforderung bei Erreichung des maximalen Zeitlimits fortgesetzt wird. Es wird jedoch ein Ereignis generiert. Weitere Informationen finden Sie unter [CPU Threshold Exceeded (Ereignisklasse)](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md). 
 
 > [!IMPORTANT]
-> Ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 bricht Resource Governor mit [Ablaufverfolgungsflag 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) eine Anforderung ab, wenn die maximale Zeit überschritten wird.
+> Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 bricht Resource Governor mit [Ablaufverfolgungsflag 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) eine Anforderung ab, wenn die maximale Zeit überschritten wird.
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  Gibt die maximale Zeit in Sekunden an, die eine Abfrage auf das Freiwerden einer Arbeitspeicherzuweisung (Arbeitsspeicherpuffer) wartet.  
   
 > [!NOTE]  
->  Eine Abfrage schlägt nicht grundsätzlich fehl, wenn das Timeout der Arbeitsspeicherzuweisung erreicht wird. Eine Abfrage schlägt nur fehl, wenn zu viele Abfragen gleichzeitig ausgeführt werden. Andernfalls könnte die Abfrage nur die minimale Arbeitsspeicherzuweisung nutzen, was zu reduzierter Abfrageleistung führen kann.  
+> Eine Abfrage schlägt nicht grundsätzlich fehl, wenn das Timeout der Arbeitsspeicherzuweisung erreicht wird. Eine Abfrage schlägt nur fehl, wenn zu viele Abfragen gleichzeitig ausgeführt werden. Andernfalls könnte die Abfrage nur die minimale Arbeitsspeicherzuweisung nutzen, was zu reduzierter Abfrageleistung führen kann.  
   
  *value* muss eine positive ganze Zahl sein. Die Standardeinstellung für *value* ist 0 (null); hierbei wird eine interne Berechnung basierend auf den Abfragekosten verwendet, um die maximale Zeit zu ermitteln.  
   
@@ -122,10 +122,10 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Gibt den maximalen Grad der Parallelität (DOP) für parallele Anforderungen an. *value* muss 0 (null) oder eine positive Ganzzahl zwischen 1 und 255 sein. Wenn *value* 0 ist, wählt der Server den maximalen Grad an Parallelismus aus. Dies ist die Standardeinstellung und die empfohlene Einstellung.  
   
 > [!NOTE]  
->  Der Istwert, den der [!INCLUDE[ssDE](../../includes/ssde-md.md)] für MAX_DOP festlegt, ist möglicherweise kleiner als der angegebene Wert. Der endgültige Wert wird von Formel min(255, *number of CPUs)* bestimmt.  
+> Der Istwert, den der [!INCLUDE[ssDE](../../includes/ssde-md.md)] für MAX_DOP festlegt, ist möglicherweise kleiner als der angegebene Wert. Der endgültige Wert wird von Formel min(255, *number of CPUs)* bestimmt.  
   
 > [!CAUTION]  
->  Das Ändern von MAX_DOP kann die Leistung des Servers beeinträchtigen. Wenn Sie MAX_DOP ändern müssen, wird empfohlen, diesen auf einen Wert festzulegen, der kleiner oder gleich der maximalen Anzahl der Hardware- Zeitplanungsmodule ist, die in einem einzelnen NUMA-Knoten vorhanden sind. Es wird empfohlen, MAX_DOP nicht auf einen höheren Wert als 8 festzulegen.  
+> Das Ändern von MAX_DOP kann die Leistung des Servers beeinträchtigen. Wenn Sie MAX_DOP ändern müssen, wird empfohlen, diesen auf einen Wert festzulegen, der kleiner oder gleich der maximalen Anzahl der Hardware- Zeitplanungsmodule ist, die in einem einzelnen NUMA-Knoten vorhanden sind. Es wird empfohlen, MAX_DOP nicht auf einen höheren Wert als 8 festzulegen.  
   
  MAX_DOP wird wie folgt behandelt:  
   
@@ -148,7 +148,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Die "default"-Option muss in Anführungszeichen ("") oder Klammern ([]) eingeschlossen werden, wenn sie mit ALTER WORKLOAD GROUP verwendet wird, um einen Konflikt mit dem vom System reservierten Wort DEFAULT zu vermeiden. Weitere Informationen finden Sie unter [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md).  
   
 > [!NOTE]  
->  Bei der "default"-Option wird die Groß-/Kleinschreibung beachtet.  
+> Bei der "default"-Option wird die Groß-/Kleinschreibung beachtet.  
   
 ## <a name="remarks"></a>Remarks  
  ALTER WORKLOAD GROUP ist für die Standardgruppe zulässig.  
@@ -160,7 +160,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 -   Wenn Sie MAX_DOP von 1 in 0 oder in einen Wert größer als 1 ändern, muss DBCC FREEPROCCACHE nicht ausgeführt werden. Serielle Pläne können jedoch nicht parallel ausgeführt werden. Das Löschen des entsprechenden Cache ermöglicht daher neuen Plänen, mit Parallelität kompiliert zu werden.  
   
 > [!CAUTION]  
->  Das Löschen zwischengespeicherter Pläne aus einem Ressourcenpool, der mehreren Arbeitsauslastungsgruppen zugeordnet ist, wirkt sich auf alle Arbeitsauslastungsgruppen mit dem benutzerdefinierten Ressourcenpool aus, der durch *pool_name* ausgewiesen wird.  
+> Das Löschen zwischengespeicherter Pläne aus einem Ressourcenpool, der mehreren Arbeitsauslastungsgruppen zugeordnet ist, wirkt sich auf alle Arbeitsauslastungsgruppen mit dem benutzerdefinierten Ressourcenpool aus, der durch *pool_name* ausgewiesen wird.  
   
  Sie sollten bei der Ausführung von DDL-Anweisungen mit dem Status der Ressourcenkontrolle vertraut sein. Weitere Informationen finden Sie unter [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
   
@@ -176,7 +176,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 ## <a name="examples"></a>Beispiele  
  Das folgende Beispiel veranschaulicht, wie die Wichtigkeit von Anforderungen in der Standardgruppe von `MEDIUM` in `LOW` geändert werden kann.  
   
-```  
+```sql  
 ALTER WORKLOAD GROUP "default"  
 WITH (IMPORTANCE = LOW);  
 GO  
@@ -186,7 +186,7 @@ GO
   
  Das folgende Beispiel veranschaulicht, wie eine Arbeitsauslastungsgruppe aus dem Pool, in dem sie sich befindet, in den Standardpool verschoben wird.  
   
-```  
+```sql  
 ALTER WORKLOAD GROUP adHoc  
 USING [default];  
 GO  

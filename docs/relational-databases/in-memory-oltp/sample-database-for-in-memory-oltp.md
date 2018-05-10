@@ -1,28 +1,27 @@
 ---
-title: "Beispieldatenbank für In-Memory OLTP | Microsoft-Dokumentation"
-ms.custom: 
+title: Beispieldatenbank für In-Memory OLTP | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 12/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 70b78fdbf26043595f8db1148cdec91ae8efc54b
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 883ea65354e6c45ef1aaebeb375625156063fdd3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Beispieldatenbank für In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,12 +52,12 @@ ms.lasthandoff: 02/12/2018
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   Für Leistungstests benötigen Sie einen Server, dessen Kapazität ungefähr der eines Servers in Ihrer Produktionsumgebung entspricht. Für dieses spezielle Beispiel sollten SQL Server mindestens 16 GB Arbeitsspeicher zur Verfügung stehen. Allgemeine Richtlinien zur Hardware für In-Memory OLTP finden Sie in folgendem Blogeintrag:[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx).  
+-   Für Leistungstests benötigen Sie einen Server, dessen Kapazität ungefähr der eines Servers in Ihrer Produktionsumgebung entspricht. Für dieses spezielle Beispiel sollten SQL Server mindestens 16 GB Arbeitsspeicher zur Verfügung stehen. Allgemeine Richtlinien zur Hardware für In-Memory-OLTP finden Sie in folgendem Blogbeitrag: [http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx).  
   
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Installing the In-Memory OLTP sample based on AdventureWorks  
  Führen Sie die folgenden Schritte aus, um das Beispiel zu installieren:  
   
-1.  Laden Sie „AdventureWorks2016CTP3.bak“ und „SQLServer2016CTP3Samples.zip“ von [https://www.microsoft.com/download/details.aspx?id=49502](https://www.microsoft.com/download/details.aspx?id=49502) in einen lokalen Ordner herunter, z.B. „c:\temp“.  
+1.  Laden Sie „AdventureWorks2016CTP3.bak“ und „SQLServer2016CTP3Samples.zip“ von [https://www.microsoft.com/download/details.aspx?id=49502](https://www.microsoft.com/download/details.aspx?id=49502) in einen lokalen Ordner herunter, z.B. C:\temp.  
   
 2.  Stellen Sie die Datenbanksicherung mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]wieder her:  
   
@@ -419,7 +418,7 @@ ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i in
   
  Auf einem Testserver mit insgesamt 8 physischen (16 logischen) Kernen betrugt die Dauer 41 Minuten und 25 Sekunden. Auf einem zweiten Testserver mit 24 physischen (48 logischen) Kernen dauerte der Vorgang 52 Minuten und 16 Sekunden.  
   
- Der Hauptunterschied zwischen der Leistung speicheroptimierter und datenträgerbasierter Tabellen in diesem Test besteht darin, dass die CPU bei Verwendung datenträgerbasierter Tabellen von SQL Server nicht voll ausgenutzt werden kann. Die Ursache sind Latchkonflikte: Wenn gleichzeitige Transaktionen versuchen, Daten in dieselbe Datenseite zu schreiben, wird mithilfe von Latches sichergestellt, dass jeweils nur eine Transaktion Schreibzugriff auf eine Seite hat. Das In-Memory OLTP-Modul verwendet keine Latches, und Datenzeilen sind nicht seitenweise angeordnet. Da sich Einfügungen gleichzeitiger Transaktionen nicht gegenseitig blockieren, kann die CPU-Leistung von SQL Server voll ausgeschöpft werden.  
+ Der Hauptunterschied zwischen der Leistung speicheroptimierter und datenträgerbasierter Tabellen in diesem Test besteht darin, dass die CPU bei Verwendung datenträgerbasierter Tabellen von SQL Server nicht voll ausgenutzt werden kann. Die Ursache sind Latchkonflikte: Wenn gleichzeitige Transaktionen versuchen, Daten in dieselbe Datenseite zu schreiben, wird mithilfe von Latches sichergestellt, dass jeweils nur eine Transaktion Schreibzugriff auf eine Seite hat. Die In-Memory-OLTP-Engine verwendet keine Latches, und Datenzeilen sind nicht seitenweise angeordnet. Da sich Einfügungen gleichzeitiger Transaktionen nicht gegenseitig blockieren, kann die CPU-Leistung von SQL Server voll ausgeschöpft werden.  
   
  Sie können die CPU-Auslastung bei der Ausführung der Arbeitsauslastung beispielsweise mit dem Task-Manager beobachten. Sie werden feststellen, dass die CPU-Auslastung bei Verwendung datenträgerbasierter Tabellen weit von 100 % entfernt ist. In einer Testkonfiguration mit 16 logischen Prozessoren würde sich die Auslastung um 24 % bewegen.  
   

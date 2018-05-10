@@ -1,10 +1,9 @@
 ---
-title: 'Lektion 1: Herstellen einer Verbindung mit dem Datenbankmodul | Microsoft-Dokumentation'
+title: 'Lektion 1: Herstellen einer Verbindung mit der Datenbank-Engine | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 02/05/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
@@ -17,17 +16,16 @@ caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: ee4e7f2092b2d023a07d3e6519639ed63b679c67
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1795e19eb13aaac59009ea610b0d261d3dc4d649
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="lesson-1-connecting-to-the-database-engine"></a>Lektion 1: Herstellen einer Verbindung mit dem Datenbankmodul
+# <a name="lesson-1-connecting-to-the-database-engine"></a>Lektion 1: Herstellen einer Verbindung mit der Datenbank-Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
- > Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [Lektion 1: Herstellen einer Verbindung mit dem Datenbankmodul](https://msdn.microsoft.com/en-US/library/ms345332(SQL.120).aspx).
+ > Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [Lektion 1: Herstellen einer Verbindung mit der Datenbank-Engine](https://msdn.microsoft.com/en-US/library/ms345332(SQL.120).aspx).
 
 Welche Tools beim Installieren von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]installiert werden, hängt von der Edition und den von Ihnen ausgewählten Installationsoptionen ab. In dieser Lektion werden die Haupttools vorgestellt, und Sie erfahren, wie Sie Verbindungen herstellen und eine einfache Funktion (Autorisieren zusätzlicher Benutzer) ausführen.  
 
@@ -61,27 +59,27 @@ Die Beispieldatenbanken und Beispiele werden nicht standardmäßig mit [!INCLUDE
 > [!NOTE]  
 > Dieses Thema beschreibt das Herstellen einer Verbindung mit einem lokalen SQL Server. Informationen zum Herstellen einer Verbindung mit der Azure SQL-Datenbank finden Sie unter [Herstellen einer Verbindung mit einer SQL-Datenbank mit SQL Server Management Studio und Ausführen einer T-SQL-Beispielabfrage](https://azure.microsoft.com/documentation/articles/sql-database-connect-query-ssms/).  
 
-##### <a name="to-determine-the-name-of-the-instance-of-the-database-engine"></a>So bestimmen Sie den Namen der Instanz des Datenbankmoduls  
+##### <a name="to-determine-the-name-of-the-instance-of-the-database-engine"></a>So bestimmen Sie den Namen der Instanz der Datenbank-Engine  
 
 1.  Melden Sie sich bei Windows als Mitglied der Administratorgruppe an, und öffnen Sie [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
 2.  Klicken Sie im Dialogfeld **Verbindung mit Server herstellen** auf **Abbrechen**.  
 3.  Wenn Registrierte Server nicht angezeigt wird, klicken Sie im Menü **Ansicht** auf **Registrierte Server**.
-4.  Wählen Sie in der Symbolleiste „Registrierte Server“ die Option **Datenbankmodul** aus, erweitern Sie **Datenbankmodul**, klicken Sie mit der rechten Maustaste auf **Lokale Servergruppen**, zeigen Sie auf **Tasks**, und klicken Sie anschließend auf **Lokale Server registrieren**. Es werden alle auf dem Computer installierten Instanzen von [!INCLUDE[ssDE](../includes/ssde-md.md)] angezeigt. Die Standardinstanz hat keinen Namen und wird mit dem Computernamen angezeigt. Eine benannte Instanz wird als der Computername, gefolgt von einem umgekehrten Schrägstrich (\\) und dem Namen der Instanz, angezeigt. Für [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] hat die Instanz den Namen *<Computername>*\sqlexpress, es sei denn, der Name wurde während des Setups geändert.  
+4.  Wählen Sie in der Symbolleiste „Registrierte Server“ die Option **Datenbank-Engine** aus, erweitern Sie **Datenbank-Engine**, klicken Sie mit der rechten Maustaste auf **Lokale Servergruppen**, zeigen Sie auf **Tasks**, und klicken Sie anschließend auf **Lokale Server registrieren**. Es werden alle auf dem Computer installierten Instanzen von [!INCLUDE[ssDE](../includes/ssde-md.md)] angezeigt. Die Standardinstanz hat keinen Namen und wird mit dem Computernamen angezeigt. Eine benannte Instanz wird als der Computername, gefolgt von einem umgekehrten Schrägstrich (\\) und dem Namen der Instanz, angezeigt. Für [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] hat die Instanz den Namen *<Computername>* \sqlexpress, es sei denn, der Name wurde während des Setups geändert.  
 
-##### <a name="to-verify-that-the-database-engine-is-running"></a>So überprüfen Sie, ob das Datenbankmodul ausgeführt wird
+##### <a name="to-verify-that-the-database-engine-is-running"></a>So überprüfen Sie, ob die Datenbank-Engine ausgeführt wird
 
 1.  Wenn in Registrierte Server neben dem Namen Ihrer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ein grüner Punkt mit einem weißen Pfeil angezeigt wird, bedeutet dies, dass [!INCLUDE[ssDE](../includes/ssde-md.md)] ausgeführt wird und keine weiteren Aktionen erforderlich sind.  
 
 2.  Wenn neben dem Name Ihrer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ein roter Punkt mit einem weißen Quadrat angezeigt wird, wurde [!INCLUDE[ssDE](../includes/ssde-md.md)] beendet. Klicken Sie mit der rechten Maustaste auf den [!INCLUDE[ssDE](../includes/ssde-md.md)]-Namen, und klicken Sie auf **Dienstkontrolle**und anschließend auf **Starten**. Nachdem ein Bestätigungsdialogfeld angezeigt wurde, sollte das [!INCLUDE[ssDE](../includes/ssde-md.md)] gestartet werden und ein grüner Kreis mit einem weißen Pfeil angezeigt werden.  
 
-##### <a name="to-connect-to-the-database-engine"></a>So stellen Sie eine Verbindung mit dem Datenbankmodul her  
+##### <a name="to-connect-to-the-database-engine"></a>So stellen Sie eine Verbindung mit der Datenbank-Engine her  
 
 Mindestens ein Administratorkonto wurde ausgewählt, als [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] installiert wurde. Führen Sie den folgenden Schritt aus, während Sie bei Windows als Administrator angemeldet sind.
 
 1.  Klicken Sie in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]im Menü **Datei** auf **Objekt-Explorer verbinden**. 
 - Das Dialogfeld **Verbindung mit Server herstellen** wird geöffnet. Im Feld **Servertyp** wird der zuletzt verwendete Typ der Komponente angezeigt.  
 
-2.  Wählen Sie **Datenbankmodul**aus.
+2.  Wählen Sie **Datenbank-Engine** aus.
 
 ![Objekt-Explorer](../relational-databases/media/object-explorer.png)
 
@@ -92,7 +90,7 @@ Mindestens ein Administratorkonto wurde ausgewählt, als [!INCLUDE[ssNoVersion_m
 4.  Klicken Sie auf **Verbinden**.
 
 > [!NOTE]
-> In diesem Tutorial wird davon ausgegangen, dass Sie neu bei [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sind und keine besonderen Probleme beim Herstellen einer Verbindung haben. Dies sollte für die meisten Benutzer ausreichen, und so wird das Tutorial einfach gehalten. Detaillierte Schritte zur Fehlerbehebung finden Sie unter [Beheben von Verbindungsfehlern mit dem SQL Server-Datenbankmodul](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md). 
+> In diesem Tutorial wird davon ausgegangen, dass Sie neu bei [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sind und keine besonderen Probleme beim Herstellen einer Verbindung haben. Dies sollte für die meisten Benutzer ausreichen, und so wird das Tutorial einfach gehalten. Detaillierte Schritte zur Fehlerbehebung finden Sie unter [Beheben von Verbindungsfehlern mit der SQL Server-Datenbank-Engine](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md). 
 
 ## <a name="additional"></a>Autorisieren zusätzlicher Verbindungen  
 Nachdem Sie eine Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] als Administrator hergestellt haben, besteht eine Ihrer ersten Aufgaben darin, Verbindungen für andere Benutzer zu autorisieren. Dazu erstellen Sie eine Anmeldung und erteilen dieser Anmeldung die Berechtigung, als Benutzer auf eine Datenbank zuzugreifen. Eine Anmeldung kann entweder eine Anmeldung mit Windows-Authentifizierung sein, die Windows-Anmeldeinformationen verwendet, oder eine Anmeldung mit SQL Server-Authentifizierung, die die Authentifizierungsinformationen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] speichert und von Ihren Windows-Anmeldeinformationen unabhängig ist. Verwenden Sie nach Möglichkeit immer Windows-Authentifizierung.

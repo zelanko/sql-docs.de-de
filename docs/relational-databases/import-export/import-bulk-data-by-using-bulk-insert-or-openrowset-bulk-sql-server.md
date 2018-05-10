@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 07/26/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: import-export
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - BULK INSERT statement, importing data from a remote data file
 - bulk importing [SQL Server], methods
@@ -28,13 +26,12 @@ caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 997b8309b5e1324a4c233545d2baebbc04147185
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: dfecdcd62535d3b0f3d4b6abc4f510d21df2d483
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>Importieren von Massendaten mithilfe von BULK INSERT oder OPENROWSET(BULK...) (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -106,9 +103,9 @@ ms.lasthandoff: 04/16/2018
 -   [Verwenden einer Formatdatei zum Zuordnen von Tabellenspalten zu Datendateifeldern &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ## <a name="security-considerations"></a>Überlegungen zur Sicherheit  
- Wenn ein Benutzer einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamen verwendet, wird das Sicherheitsprofil des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozesskontos verwendet. Ein Anmeldename, für den die SQL Server-Authentifizierung verwendet wird, kann nicht außerhalb des Datenbankmoduls authentifiziert werden. Wenn ein BULK INSERT-Befehl durch einen Anmeldenamen initiiert wird, der die SQL Server-Authentifizierung verwendet, wird die Datenverbindung folglich mithilfe des Sicherheitskontexts des SQL Server-Prozesskontos (dem vom SQL Server-Datenbankmoduldienst verwendeten Konto) hergestellt. 
+ Wenn ein Benutzer einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamen verwendet, wird das Sicherheitsprofil des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozesskontos verwendet. Ein Anmeldename, für den die SQL Server-Authentifizierung verwendet wird, kann nicht außerhalb der Datenbank-Engine authentifiziert werden. Wenn ein BULK INSERT-Befehl durch einen Anmeldenamen initiiert wird, der die SQL Server-Authentifizierung verwendet, wird die Datenverbindung folglich mithilfe des Sicherheitskontexts des SQL Server-Prozesskontos (dem vom SQL Server-Datenbank-Engine-Dienst verwendeten Konto) hergestellt. 
  
- Um die Quelldaten lesen zu können, müssen Sie dem vom SQL Server-Datenbankmodul verwendeten Konto Zugriff auf die Quelldaten gewähren. Wenn sich hingegen ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Benutzer mithilfe der Windows-Authentifizierung anmeldet, können von diesem Benutzer nur die Dateien gelesen werden, auf die über das Benutzerkonto zugegriffen werden kann. Das Sicherheitsprofil des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozesses wird dabei nicht berücksichtigt.  
+ Um die Quelldaten lesen zu können, müssen Sie dem von der SQL Server-Datenbank-Engine verwendeten Konto Zugriff auf die Quelldaten gewähren. Wenn sich hingegen ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Benutzer mithilfe der Windows-Authentifizierung anmeldet, können von diesem Benutzer nur die Dateien gelesen werden, auf die über das Benutzerkonto zugegriffen werden kann. Das Sicherheitsprofil des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozesses wird dabei nicht berücksichtigt.  
   
  Angenommen, ein Benutzer hat sich mithilfe der Windows-Authentifizierung an einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angemeldet. Damit der Benutzer zum Importieren von Daten aus einer Datendatei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle BULK INSERT oder OPENROWSET verwenden kann, muss das Konto über Lesezugriff für die Datendatei verfügen. Durch den Zugriff auf die Datendatei kann der Benutzer Daten aus der Datei in eine Tabelle importieren, selbst wenn für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozess keine Berechtigung zum Zugreifen auf die Datei verfügbar ist. Der Benutzer muss dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozess keine Dateizugriffsberechtigung erteilen.  
   

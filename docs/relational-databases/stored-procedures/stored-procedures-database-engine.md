@@ -1,17 +1,16 @@
 ---
-title: Gespeicherte Prozeduren (Datenbankmodul) | Microsoft Dokumentation
+title: Gespeicherte Prozeduren (Datenbank-Engine) | Microsoft Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: stored-procedures
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stored-Procs
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - storing programs as stored procedures
 - stored procedures [SQL Server], about stored procedures
@@ -20,15 +19,14 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3923972ec113d0f7f1b5906eeab6d1c85f04d0f8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: be6ef66f23a8bea4172466373bf6fb261ddb0cb9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="stored-procedures-database-engine"></a>Gespeicherte Prozeduren (Datenbankmodul)
+# <a name="stored-procedures-database-engine"></a>Gespeicherte Prozeduren (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Eine gespeicherte Prozedur in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entspricht einer oder mehreren [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen oder einem Verweis auf eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR-Methode (Common Language Runtime). Prozeduren sind mit Konstrukten anderer Programmiersprachen vergleichbar, da sie folgende Fähigkeiten aufweisen:  
   

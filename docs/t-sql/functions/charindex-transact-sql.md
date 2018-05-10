@@ -29,16 +29,16 @@ ms.author: edmaca
 manager: craigg
 ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b0da42fc1b6a06c0a17f758bf692f065c1e3866c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9ac0d0a9cd8af41eddf90a0aeea85bcf7013ee27
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Sucht in einem Ausdruck nach einem anderen Ausdruck und gibt dessen Startposition zurück, falls gefunden.
+Mit dieser Funktion können Sie in einem Zeichenausdruck nach einem anderen Zeichenausdruck suchen. Bei erfolgreicher Suche wird die Startposition des gesuchten Ausdrucks zurückgegeben.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,25 +50,25 @@ CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )
   
 ## <a name="arguments"></a>Argumente  
 *expressionToFind*  
-Ein [Zeichenausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der die zu suchende Sequenz enthält. *expressionToFind* ist auf 8000 Zeichen beschränkt.
+Ein Zeichenausdruck ([Expressions (Ausdrücke)](../../t-sql/language-elements/expressions-transact-sql.md)), der die zu suchende Sequenz enthält. Die maximale Zeichenlänge von *expressionToFind* beträgt 8000 Zeichen.
   
 *expressionToSearch*  
 Der zu suchende Zeichenausdruck.
   
 *start_location*  
-Ein **integer** oder **bigint**-Ausdruck, bei dem die Suche beginnt. Wenn *start_location* nicht angegeben ist, eine negative Zahl oder 0 (null) ist, wird die Suche am Anfang von *expressionToSearch* begonnen.
+Ein **integer**- oder **bigint**-Ausdruck, bei dem die Suche beginnt. Wenn *start_location* nicht angegeben ist, einen negativen Wert oder den Wert 0 (null) besitzt, wird mit der Suche am Anfang von *expressionToSearch* begonnen.
   
 ## <a name="return-types"></a>Rückgabetypen
-**bigint**, wenn *expressionToSearch* vom Datentyp **varchar(max)**, **nvarchar(max)** oder **varbinary(max)** ist; andernfalls **int**.
+**bigint**, wenn *expressionToSearch* vom Datentyp **nvarchar(max)**, **varbinary(max)** oder **varchar(max)** ist; andernfalls **int**.
   
 ## <a name="remarks"></a>Remarks  
-Wenn entweder *expressionToFind* oder *expressionToSearch* als Unicode-Datentypen deklariert werden kann (**nvarchar** oder **nchar**), das jeweils andere Element hingegen nicht, wird dieses in einen Unicode-Datentyp konvertiert. CHARINDEX kann nicht mit den Datentypen **text**, **ntext** und **image** verwendet werden.
+Wenn entweder der Ausdruck *expressionToFind* oder der Ausdruck *expressionToSearch* einen Unicode-Datentyp aufweist (**nchar** oder **nvarchar**), und der andere Ausdruck nicht, konvertiert die CHARINDEX-Funktion diesen anderen Ausdruck in einen Unicode-Datentyp. CHARINDEX kann nicht mit den Datentypen **image**, **ntext** oder **text** verwendet werden.
   
-Wenn entweder *expressionToFind* oder *expressionToSearch* NULL zurückgeben, gibt auch CHARINDEX NULL zurück.
+Wenn entweder der Ausdruck *expressionToFind* oder der Ausdruck *expressionToSearch* einen NULL-Wert aufweist, gibt auch CHARINDEX NULL zurück.
   
-Wenn *expressionToFind* innerhalb von *expressionToSearch* nicht gefunden werden kann, gibt CHARINDEX 0 (null) zurück.
+Wenn *expressionToFind* innerhalb von *expressionToSearch* von CHARINDEX nicht gefunden werden kann, gibt CHARINDEX 0 (null) zurück.
   
-CHARINDEX führt Vergleiche basierend auf der Sortierung der Eingabe aus. Zum Ausführen eines Vergleichs in einer angegebenen Sortierung können Sie mithilfe von COLLATE eine ausdrückliche Sortierung auf die Eingabe anwenden.
+CHARINDEX führt Vergleiche basierend auf der Sortierung der Eingabe aus. Verwenden Sie zum Ausführen eines Vergleichs in einer angegebenen Sortierung COLLATE, um eine ausdrückliche Sortierung auf die Eingabe anzuwenden.
   
 Die zurückgegebene Startposition ist 1-basiert, nicht 0-basiert.
   
@@ -80,7 +80,7 @@ Bei Verwendung von SC-Sortierungen werden Ersatzzeichenpaare sowohl von *start_l
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-returning-the-starting-position-of-an-expression"></a>A. Zurückgeben der Startposition eines Ausdrucks  
-Im folgenden Beispiel wird die Position zurückgegeben, an der die Zeichenfolge `bicycle` in der `DocumentSummary`-Spalte der `Document`-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank beginnt.
+In diesem Beispiel wird in der Variablen des gesuchten Zeichenfolgenwerts `@document` nach `bicycle` gesucht.
   
 ```sql
 DECLARE @document varchar(64);  
@@ -98,7 +98,7 @@ GO
 ```  
   
 ### <a name="b-searching-from-a-specific-position"></a>B. Suchen ab einer bestimmten Position  
-Im folgenden Beispiel wird der optionale *start_location*-Parameter verwendet, um die Suche nach `vital` beim fünften Zeichen in der `DocumentSummary`-Spalte der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zu beginnen.
+In diesem Beispiel wird der optionale *start_location*-Parameter verwendet, um die Suche nach `vital` beim fünften Zeichen der Variable des gesuchten Zeichenfolgenwerts `@document` zu beginnen.
   
 ```sql
 DECLARE @document varchar(64);  
@@ -119,7 +119,7 @@ GO
 ```  
   
 ### <a name="c-searching-for-a-nonexistent-expression"></a>C. Suchen nach einem nicht vorhandenen Ausdruck  
-Im folgenden Beispiel wird das Resultset dargestellt, wenn *expressionToFind* nicht in *expressionToSearch* gefunden wird.
+In diesem Beispiel wird das Resultset dargestellt, wenn *expressionToFind* von CHARINDEX nicht in *expressionToSearch* gefunden werden kann.
   
 ```sql
 DECLARE @document varchar(64);  
@@ -140,7 +140,7 @@ GO
 ```
   
 ### <a name="d-performing-a-case-sensitive-search"></a>D. Ausführen einer Suche unter Beachtung der Groß-/Kleinschreibung  
-Im folgenden Beispiel wird eine Suche nach der Zeichenfolge `'TEST'` in `'This is a Test``'` ausgeführt, wobei die Groß-/Kleinschreibung berücksichtigt wird.
+In diesem Beispiel wird eine Suche nach der Zeichenfolge `'TEST'` in der gesuchten Zeichenfolge `'This is a Test``'` dargestellt, wobei die Groß-/Kleinschreibung berücksichtigt wird.
   
 ```sql
 USE tempdb;  
@@ -158,7 +158,7 @@ SELECT CHARINDEX ( 'TEST',
 0
 ```  
   
-Im folgenden Beispiel wird eine Suche nach der Zeichenfolge `'Test'` in `'This is a Test'` ausgeführt, wobei die Groß-/Kleinschreibung berücksichtigt wird.
+In diesem Beispiel wird eine Suche nach der Zeichenfolge `'Test'` in `'This is a Test'` dargestellt, wobei die Groß-/Kleinschreibung berücksichtigt wird.
   
 ```sql
   
@@ -173,11 +173,11 @@ SELECT CHARINDEX ( 'Test',
   
 ```
 -----------
-13
+11
 ```  
   
 ### <a name="e-performing-a-case-insensitive-search"></a>E. Ausführen einer Suche ohne Beachtung der Groß-/Kleinschreibung  
-Im folgenden Beispiel wird eine Suche nach der Zeichenfolge `'TEST'` in `'This is a Test'` ausgeführt, wobei Groß-/Kleinschreibung nicht berücksichtigt wird.
+In diesem Beispiel wird eine Suche nach der Zeichenfolge `'TEST'` in `'This is a Test'` dargestellt, wobei die Groß-/Kleinschreibung nicht berücksichtigt wird.
   
 ```sql
   
@@ -199,7 +199,7 @@ GO
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="f-searching-from-the-start-of-a-string-expression"></a>F. Suche ab dem Beginn eines Zeichenfolgenausdrucks  
-Das folgende Beispiel gibt den ersten Speicherort der `is`-Zeichenfolge in `This is a string` ab Position 1 (also ab dem ersten Zeichen) in der Zeichenfolge zurück.
+Dieses Beispiel gibt den ersten Speicherort der Zeichenfolge `is` in der Zeichenfolge `This is a string` ab Position 1 (also ab dem ersten Zeichen) von `This is a string` zurück.
   
 ```sql
 SELECT CHARINDEX('is', 'This is a string');  
@@ -213,7 +213,7 @@ SELECT CHARINDEX('is', 'This is a string');
 ```  
   
 ### <a name="g-searching-from-a-position-other-than-the-first-position"></a>G. Suchen ab einer anderen Position als der ersten  
-Das folgende Beispiel gibt den ersten Speicherort der `is`-Zeichenfolge in `This is a string` ab Position 4 in der Zeichenfolge zurück.
+Dieses Beispiel gibt den ersten Speicherort der Zeichenfolge `is` in der Zeichenfolge `This is a string` ab Position 4 (also ab dem vierten Zeichen) zurück.
   
 ```sql
 SELECT CHARINDEX('is', 'This is a string', 4);  
@@ -227,7 +227,7 @@ SELECT CHARINDEX('is', 'This is a string', 4);
  ```  
   
 ### <a name="h-results-when-the-string-is-not-found"></a>H. Ergebnisse, wenn die Zeichenfolge nicht gefunden wird  
-Das folgende Beispiel zeigt den Rückgabewert, wenn *string_pattern* nicht in der gesuchten Zeichenfolge gefunden wird.
+Dieses Beispiel zeigt den Rückgabewert, wenn die Zeichenfolge *string_pattern* von CHARINDEX nicht in der gesuchten Zeichenfolge gefunden wird.
   
 ```sql
 SELECT TOP(1) CHARINDEX('at', 'This is a string') FROM dbo.DimCustomer;  

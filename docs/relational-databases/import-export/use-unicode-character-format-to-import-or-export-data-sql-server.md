@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 09/30/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: import-export
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data formats [SQL Server], Unicode character
 - Unicode [SQL Server], bulk importing and exporting
@@ -20,13 +18,12 @@ caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 168797b37247a0309d09b80960e2ae5089e7d51b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ecc827d1b784ad81907443c42f80d69b6f7f05f6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Verwenden des Unicode-Zeichenformats zum Importieren und Exportieren von Daten (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -148,7 +145,7 @@ Notepad D:\BCP\myWidechar.fmt
 In dem folgenden Beispiel werden die Datenbank und die Formatdateien verwendet, die oben erstellt wurden.
 
 ### **Verwenden von bcp und dem Unicode-Zeichenformat zum Exportieren von Daten**<a name="bcp_widechar_export"></a>
-Der Schalter**-w** und der **OUT** -Befehl.  Hinweis: Die in diesem Beispiel erstellte Datendatei wird auch in allen nachfolgenden Beispielen verwendet.  Geben Sie folgende Befehle an der Eingabeaufforderung ein:
+Der Schalter **-w** und der **OUT** -Befehl.  Hinweis: Die in diesem Beispiel erstellte Datendatei wird auch in allen nachfolgenden Beispielen verwendet.  Geben Sie folgende Befehle an der Eingabeaufforderung ein:
 ```
 bcp TestDatabase.dbo.myWidechar OUT D:\BCP\myWidechar.bcp -T -w
 
@@ -157,7 +154,7 @@ NOTEPAD D:\BCP\myWidechar.bcp
 ```
 
 ### **Verwenden von bcp und dem Unicode-Zeichenformat zum Importieren von Daten ohne eine Formatdatei**<a name="bcp_widechar_import"></a>
-Der Schalter**-w** und der **IN** -Befehl.  Geben Sie folgende Befehle an der Eingabeaufforderung ein:
+Der Schalter **-w** und der **IN** -Befehl.  Geben Sie folgende Befehle an der Eingabeaufforderung ein:
 ```
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.myWidechar;"
@@ -169,7 +166,7 @@ REM Review results is SSMS
 ```
 
 ### **Verwenden von bcp und dem Unicode-Zeichenformat zum Importieren von Daten mit einer Nicht-XML-Formatdatei**<a name="bcp_widechar_import_fmt"></a>
-Die Schalter**-w** und **-f** switches und **IN** commund.  Da in diesem Beispiel bcp, eine Formatdatei und Unicode-Zeichen verwendet werden und das erste Datenfeld in der Datendatei ein Nichtzeichen enthält, muss eine Problemumgehung angewendet werden.  Weitere Informationen finden Sie weiter oben in diesem Artikel unter [Besondere Überlegungen zur Verwendung des Unicode-Zeichenformats, bcp und einer Formatdatei](#special_considerations).  Die Datendatei `myWidechar.bcp` wird durch Hinzufügen eines zusätzlichen Datensatzes als „Dummy“-Datensatz geändert, der dann mit dem Schalter `-F 2` ausgelassen wird.
+Die Schalter **-w** und **-f** switches und **IN** commund.  Da in diesem Beispiel bcp, eine Formatdatei und Unicode-Zeichen verwendet werden und das erste Datenfeld in der Datendatei ein Nichtzeichen enthält, muss eine Problemumgehung angewendet werden.  Weitere Informationen finden Sie weiter oben in diesem Artikel unter [Besondere Überlegungen zur Verwendung des Unicode-Zeichenformats, bcp und einer Formatdatei](#special_considerations).  Die Datendatei `myWidechar.bcp` wird durch Hinzufügen eines zusätzlichen Datensatzes als „Dummy“-Datensatz geändert, der dann mit dem Schalter `-F 2` ausgelassen wird.
 
 Geben Sie an der Befehlszeile die folgenden Befehle ein, und führen Sie die folgenden Änderungsschritte aus:
 ```

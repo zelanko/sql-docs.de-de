@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 04/11/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -29,12 +27,11 @@ caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 3504ac573703ecdae08a12a202902049a2ef24c7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 09401216daea0966e0bc5f7c5d8236fe2ac7af4a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -105,7 +102,7 @@ CREATE SEQUENCE [schema_name . ] sequence_name
  Wenn beispielsweise die Cachegröße 50 ausgewählt wird, werden in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht 50 einzelne Werte zwischengespeichert. Es werden lediglich der aktuelle Wert und die Anzahl der im Cache verbleibenden Werte zwischengespeichert. Daher ist der zum Speichern des Caches erforderliche Arbeitsspeicher immer doppelt so groß wie zwei Instanzen des Sequenzobjekt-Datentyps.  
   
 > [!NOTE]  
->  Wenn die Cacheoption aktiviert wird, ohne eine Cachegröße anzugeben, wählt das Datenbankmodul eine Größe aus. Benutzer sollten sich jedoch nicht darauf verlassen, dass die Auswahl konsistent ist. [!INCLUDE[msCoName](../../includes/msconame-md.md)] könnte die Methode zur Berechnung der Cachegröße ohne vorherige Ankündigung ändern.  
+>  Wenn die Cacheoption aktiviert wird, ohne eine Cachegröße anzugeben, wählt die Datenbank-Engine eine Größe aus. Benutzer sollten sich jedoch nicht darauf verlassen, dass die Auswahl konsistent ist. [!INCLUDE[msCoName](../../includes/msconame-md.md)] könnte die Methode zur Berechnung der Cachegröße ohne vorherige Ankündigung ändern.  
   
  Bei Erstellung mit der **CACHE**-Option kann ein unerwartetes Herunterfahren (z.B. durch einen Stromausfall) möglicherweise zum Verlust der im Cache verbleibenden Sequenznummern führen.  
   

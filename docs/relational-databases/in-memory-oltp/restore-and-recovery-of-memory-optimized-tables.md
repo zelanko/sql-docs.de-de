@@ -4,25 +4,23 @@ ms.custom: ''
 ms.date: 12/31/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: in-memory-oltp
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 caps.latest.revision: 10
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 37f27bc6a66583e03c53037d82a0ada262491f8a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c603c48a030978f6900b738002cf2748458472f9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>Wiederherstellen von speicheroptimierten Tabellen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +30,7 @@ Der grundlegende Mechanismus zum Wiederherstellen einer Datenbank mit speicherop
 Wenn ein Server nicht über genügend Arbeitsspeicher verfügt, schlägt die Datenbankwiederherstellung fehl, und die Datenbank wird als fehlerverdächtig markiert. Weitere Informationen zur Behebung dieses Problems finden Sie unter [Beheben von OOM-Problemen (nicht genügend Arbeitsspeicher)](resolve-out-of-memory-issues.md). 
   
 ## <a name="factors-that-affect-load-time"></a>Aspekte, die sich auf die Ladezeit auswirken
-Während der Wiederherstellung liest das In-Memory OLTP-Modul Daten- und Änderungsdateien zum Laden in den physischen Speicher. Die Ladezeit wird bestimmt durch:  
+Während der Wiederherstellung liest die In-Memory-OLTP-Engine Daten- und Änderungsdateien zum Laden in den physischen Speicher. Die Ladezeit wird bestimmt durch:  
   
 -   Die zu ladende Datenmenge.  
   
@@ -45,7 +43,7 @@ Während der Wiederherstellung liest das In-Memory OLTP-Modul Daten- und Änderu
 ## <a name="phases-of-recovery"></a>Wiederherstellungsphasen
 Beim Neustart von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durchläuft jede Datenbank einen Wiederherstellungsprozess, der aus drei Phasen besteht:  
   
-1.  **Analysephase**. Während dieser Phase werden die aktiven Transaktionsprotokolle durchsucht, um Transaktionen mit ausgeführtem Commit und Transaktionen ohne Commit zu erkennen. Das In-Memory OLTP-Modul identifiziert den zu ladenden Prüfpunkt und lädt die Protokolleinträge der Systemtabelle vorab. Außerdem werden einige Protokolldatensätze für die Dateizuordnung verarbeitet.  
+1.  **Analysephase**. Während dieser Phase werden die aktiven Transaktionsprotokolle durchsucht, um Transaktionen mit ausgeführtem Commit und Transaktionen ohne Commit zu erkennen. Die In-Memory-OLTP-Engine identifiziert den zu ladenden Prüfpunkt und lädt die Protokolleinträge der Systemtabelle vorab. Außerdem werden einige Protokolldatensätze für die Dateizuordnung verarbeitet.  
   
 2.  **Rollforwardphase**. Diese Phase wird für datenträgerbasierte und speicheroptimierte Tabellen gleichzeitig ausgeführt.  
   
@@ -58,7 +56,7 @@ Beim Neustart von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durc
 3.  **Rollbackphase**. In dieser Phase wird für die Transaktionen ohne Commit ein Rollback ausgeführt.  
   
 ## <a name="process-for-improving-load-time"></a>Verbesserung der Ladezeit
-Das Laden von speicheroptimierten Tabellen in den Arbeitsspeicher kann die Leistung des Wiederherstellungszeitziels (Recovery Time Objective, RTO) beeinträchtigen. Um die Ladezeit von speicheroptimierten Daten aus Daten- und Änderungsdateien zu verbessern, lädt das In-Memory OLTP-Modul die Daten-/Änderungsdateien wie folgt parallel:  
+Das Laden von speicheroptimierten Tabellen in den Arbeitsspeicher kann die Leistung des Wiederherstellungszeitziels (Recovery Time Objective, RTO) beeinträchtigen. Um die Ladezeit von speicheroptimierten Daten aus Daten- und Änderungsdateien zu verbessern, lädt die In-Memory-OLTP-Engine die Daten-/Änderungsdateien wie folgt parallel:  
   
 -   **Erstellen eines Änderungszuordnungsfilters.** In Änderungsdateien werden Verweise auf die gelöschten Zeilen gespeichert. Ein Thread pro Container liest die Änderungsdateien und erstellt einen Änderungszuordnungsfilter. (Eine speicheroptimierte Datendateigruppe kann mehrere Container enthalten.)  
   

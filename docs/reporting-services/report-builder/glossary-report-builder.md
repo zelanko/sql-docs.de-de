@@ -1,27 +1,25 @@
 ---
 title: Glossar (Berichts-Generator) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-builder
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d4189ef6535396998bf9e250a3714efc102201b4
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8951dbb1d2ecfe434f60ab0937861e5b83eba5ec
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="glossary-report-builder"></a>Glossar (Berichts-Generator)
   
@@ -81,7 +79,7 @@ ms.lasthandoff: 01/09/2018
 |Auflistung|1. Ein Objekt, das eine Gruppe von anderen Objekten enthält. 2. In den Master Data Services eine hierarchische Gruppierung von Elementen aus expliziten Hierarchien und anderen Auflistungen.|  
 |Farbregeln (color rules)|Der Algorithmus, durch den jedem Kartenelement auf einer Kartenebene automatisch Farben zugewiesen werden.|  
 |Farbskala|Ein Kartenlegendentyp, in dem die Bedeutung der in einer Karte verwendeten Farben erläutert wird.|  
-|Common Language Runtime (common language runtime)|Das Modul, das die zentrale Komponente der Ausführung von verwaltetem Code bildet. Die Runtime stellt verwalteten Code mit Diensten wie sprachübergreifende Integration, Codezugriffssicherheit, Verwaltung der Objektlebensdauer sowie Debug- und Profilerstellungsunterstützung bereit.|  
+|Common Language Runtime (common language runtime)|Die Engine, die die zentrale Komponente der Ausführung von verwaltetem Code bildet. Die Runtime stellt verwalteten Code mit Diensten wie sprachübergreifende Integration, Codezugriffssicherheit, Verwaltung der Objektlebensdauer sowie Debug- und Profilerstellungsunterstützung bereit.|  
 |Komplexer Ausdruck (complex expression)|Ein Ausdruck, der nicht durch einen einzigen integrierten Feldverweis dargestellt werden kann und auf der Entwurfsoberfläche als <\<Expr>> angezeigt wird.|  
 |Verkettung|Das Kombinieren von mindestens zwei Zeichenfolgen oder -ausdrücken zu einer Zeichenfolge bzw. einem Zeichenausdruck oder das Kombinieren von mindestens zwei Binärzeichenfolgen oder -ausdrücken zu einer Binärzeichenfolge oder einem Binärzeichenausdruck.|  
 |Parallelität (concurrency)|Ein Vorgang, der es ermöglicht, dass mehrere Benutzer gleichzeitig auf freigegebene Daten zugreifen und diese ändern. SQL Server verwendet Sperren, damit mehrere Benutzer gleichzeitig auf freigegebene Daten zugreifen und diese ändern können, ohne dass Konflikte auftreten.|  
@@ -107,7 +105,7 @@ ms.lasthandoff: 01/09/2018
 |Data Warehouse|Eine Datenbank, die speziell für Abfragen und Analysen strukturiert ist.|  
 |Datenbank|Eine Auflistung von Informationen, Tabellen und anderen Objekten, die so strukturiert und dargestellt werden, dass sie einen bestimmten Zweck erfüllen, z. B. um Daten zu suchen, zu sortieren oder neu zusammenzustellen.|  
 |Datenbankkatalog|Der Teil der Datenbank, der die Definition aller Objekte in der Datenbank sowie die Definition der Datenbank enthält.|  
-|Datenbankmodul|Das Programmmodul oder die Module, die Zugriff auf ein Datenbank-Managementsystem (DBMS) bereitstellen.|  
+|Datenbank-Engine|Das Programmmodul oder die Module, die Zugriff auf ein Datenbank-Managementsystem (DBMS) bereitstellen.|  
 |Datenbankdatei|Eine der physischen Dateien, aus denen eine Datenbank besteht.|  
 |Datenbanksprache|Die Sprache, mit deren Hilfe der Zugriff auf Daten in relationalen Datenbanksystemen erfolgt und Daten in diesen Systemen abgefragt, aktualisiert und verwaltet werden.|  
 |Datenbankobjekt (database object)|Eine Datenbankkomponente in einer Datenbank. Kann sich auch auf die Datenbank selbst beziehen.|  

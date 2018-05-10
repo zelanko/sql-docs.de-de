@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -36,12 +34,11 @@ caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 8b66393909ce1ae8a621cca010c7093bc18e40fd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c495cabda9c94fb5b0e32b7df0474501d2307353
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +96,7 @@ AS condition_expression
 |Aliasdatentyp|Ersetzt alte Regel|Keine Änderung|  
 |Spalte|Ersetzt alte Regel|Ersetzt alte Regel|  
   
- Wenn einer Spalte ein Standardwert und eine Regel zugeordnet sind, muss der Standardwert innerhalb der durch die Regel definierten Domäne liegen. Ein Standardwert, der gegen eine Regel verstößt, wird nie eingefügt. Bei jedem Versuch, einen solchen Standardwert einzufügen, generiert das SQL Server-Datenbankmodul eine Fehlermeldung.  
+ Wenn einer Spalte ein Standardwert und eine Regel zugeordnet sind, muss der Standardwert innerhalb der durch die Regel definierten Domäne liegen. Ein Standardwert, der gegen eine Regel verstößt, wird nie eingefügt. Bei jedem Versuch, einen solchen Standardwert einzufügen, generiert die SQL Server-Datenbank-Engine eine Fehlermeldung.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Zum Ausführen der CREATE RULE-Anweisung muss ein Benutzer mindestens über die CREATE RULE-Berechtigung in der aktuellen Datenbank und über die ALTER-Berechtigung auf dem Schema, in dem die Regel erstellt wird, verfügen.  

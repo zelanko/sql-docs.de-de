@@ -1,10 +1,9 @@
 ---
-title: Erste Schritte mit Berechtigungen für das Datenbankmodul | Microsoft-Dokumentation
+title: Erste Schritte mit Berechtigungen für die Datenbank-Engine | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
@@ -19,15 +18,14 @@ caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f6d87f2072d7380d9d1592fc106e256c55361b2d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 045067a2e564d9e7c04aa4542d3ef24491b1356a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="getting-started-with-database-engine-permissions"></a>Erste Schritte mit Berechtigungen für das Datenbankmodul
+# <a name="getting-started-with-database-engine-permissions"></a>Erste Schritte mit Berechtigungen für die Datenbank-Engine
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Berechtigungen im [!INCLUDE[ssDE](../../../includes/ssde-md.md)] werden auf Serverebene über Anmeldungen und Serverrollen und auf Datenbankebene über Datenbankbenutzer und Datenbankrollen verwaltet. Das Modell für [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] stellt innerhalb jeder Datenbank dasselbe System zur Verfügung, doch die Berechtigungen auf Serverebene sind nicht verfügbar. In diesem Thema werden verschiedene grundlegende Sicherheitskonzepte untersucht. Anschließend wird eine typische Implementierung der Berechtigungen beschrieben.  
@@ -108,7 +106,7 @@ AUTHORIZATION  PERMISSION  ON  SECURABLE::NAME  TO  PRINCIPAL;
   
 -   `AUTHORIZATION` muss `GRANT`, `REVOKE` , `DENY`oder sein.  
   
--   `PERMISSION` legt fest, welche Aktion zulässig oder unzulässig ist. [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] In können 230 Berechtigungen angegeben werden. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] bietet weniger Berechtigungen, da einige Aktionen in Azure nicht relevant sind. Die Berechtigungen sind im Thema [Berechtigungen &#40;Datenbankmodul&#41;](../../../relational-databases/security/permissions-database-engine.md) und im nachstehenden Diagramm aufgeführt.  
+-   `PERMISSION` legt fest, welche Aktion zulässig oder unzulässig ist. [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] In können 230 Berechtigungen angegeben werden. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] bietet weniger Berechtigungen, da einige Aktionen in Azure nicht relevant sind. Die Berechtigungen sind im Thema [Berechtigungen &amp;#40;Datenbank-Engine&amp;#41;](../../../relational-databases/security/permissions-database-engine.md) und im nachstehenden Diagramm aufgeführt.  
   
 -   `ON SECURABLE::NAME` ist der Typ des sicherungsfähigen Objektes (Server, Serverobjekt, Datenbank oder Datenbankobjekt) und sein Name. Einige Berechtigungen erfordern `ON SECURABLE::NAME` nicht, da diese Angabe unmissverständlich oder im Kontext nicht zulässig ist. Die Berechtigung `CREATE TABLE` erfordert z.B. nicht die `ON SECURABLE::NAME` -Klausel. (Beispiel: `GRANT CREATE TABLE TO Mary;` erlaubt Mary das Erstellen von Tabellen.)  
   
@@ -165,11 +163,12 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
  Die erste oben aufgeführte Berechtigung (`GRANT SELECT ON OBJECT::Region TO Ted;`) ist die präziseste, d.h., diese Anweisung ist die geringstmögliche Berechtigung, die die Berechtigung `SELECT`erteilt. Zu ihr gehören keine Berechtigungen für untergeordnete Objekte. Es ist ein gutes Prinzip, stets die geringstmögliche Berechtigung zu erteilen. Führen Sie die Erteilung jedoch auf höheren Ebenen aus (eigentlich ein Widerspruch), um das Erteilungssystem zu vereinfachen. Wenn also Ted Berechtigungen für das gesamte Schema braucht, erteilen Sie die Berechtigung `SELECT` einmal auf Schemaebene, anstatt `SELECT` mehrfach auf Tabellen- oder Sichtebene zu erteilen. Der Entwurf der Datenbank hat viel Einfluss den möglichen Erfolg dieser Strategie. Diese Strategie funktioniert am besten, wenn Ihre Datenbank so konzipiert ist, dass Objekte, die identische Berechtigungen benötigen, in einem einzigen Schema enthalten sind.  
   
 ## <a name="list-of-permissions"></a>Liste der Berechtigungen  
- [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] hat 230 Berechtigungen. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] hat 219 Berechtigungen. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] hat 214 Berechtigungen. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] hat 195 Berechtigungen. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]Obwohl , [!INCLUDE[ssDW](../../../includes/ssdw-md.md)], und [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] einige Berechtigungen bereitstellen, die nicht für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]gelten, haben sie insgesamt weniger Berechtigungen, da sie nur einen Teil des Datenbankmoduls verfügbar machen. 
+ [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] hat 230 Berechtigungen. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] hat 219 Berechtigungen. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] hat 214 Berechtigungen. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] hat 195 Berechtigungen. 
+  [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]Obwohl , [!INCLUDE[ssDW](../../../includes/ssdw-md.md)], und [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] einige Berechtigungen bereitstellen, die nicht für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]gelten, haben sie insgesamt weniger Berechtigungen, da sie nur einen Teil der Datenbank-Engine verfügbar machen. 
  
  [!INCLUDE[database-engine-permissions](../../../includes/paragraph-content/database-engine-permissions.md)]
  
- Eine Grafik mit den Beziehungen zwischen den [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Prinzipalen und Servern und Datenbankobjekten finden Sie unter [Berechtigungshierarchie &#40;Datenbankmodul&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md).  
+ Eine Grafik mit den Beziehungen zwischen den [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Prinzipalen- und Serverdatenbank-Objekten finden Sie unter [Berechtigungshierarchie &amp;#40;Datenbank-Engine&amp;#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md).  
   
 ## <a name="permissions-vs-fixed-server-and-fixed-database-roles"></a>Berechtigungen im Vergleich mit festen Server- und Datenbankrollen  
  Die Berechtigungen der festen Serverrollen und festen Datenbankrollen sind ähnlich, jedoch nicht genau identisch mit präzisen Berechtigungen. Mitglieder der festen Serverrolle `sysadmin` haben z.B. alle Berechtigungen für die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Gleiches gilt für Anmeldungen mit der Berechtigung `CONTROL SERVER` . Durch Erteilen der Berechtigung `CONTROL SERVER` wird eine Anmeldung jedoch nicht Mitglied der festen Serverrolle „sysadmin“. Und durch Hinzufügen einer Anmeldung zur festen Serverrolle `sysadmin` wird der Anmeldung nicht explizit die Berechtigung `CONTROL SERVER` erteilt. Mitunter überprüft eine gespeicherte Prozedur Berechtigungen, indem die feste Rolle und nicht die präzise Berechtigung überprüft wird. Das Trennen einer Datenbank erfordert z.B. die Mitgliedschaft in der festen Datenbankrolle `db_owner` . Die entsprechende Berechtigung `CONTROL DATABASE` reicht nicht aus. Diese beiden Systeme arbeiten parallel, interagieren allerdings nur selten. Microsoft empfiehlt, nach Möglichkeit das neuere, präzise Berechtigungssystem anstelle der festen Rollen zu verwenden.
@@ -235,18 +234,21 @@ JOIN sys.database_principals AS dRole
 ## <a name="next-steps"></a>Next Steps  
  Weitere Themen, die Ihnen den Einstieg erleichtern, finden Sie unter:  
   
--   [Tutorial: Erste Schritte mit dem Datenbankmodul](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [Erstellen einer Datenbank &#40;Tutorial&#41;](../../../t-sql/lesson-1-1-creating-a-database.md)  
+-   
+  [Tutorial: Erste Schritte mit der Datenbank-Engine](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md)[Erstellen einer Datenbank &amp;#40;Tutorial&amp;#41;](../../../t-sql/lesson-1-1-creating-a-database.md)  
   
 -   [Tutorial: SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   
 -   [Lernprogramm: Schreiben von Transact-SQL-Anweisungen](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Sicherheitscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
+ 
+  [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
  [Sicherheitsfunktionen &#40;Transact-SQL&#41;](../../../t-sql/functions/security-functions-transact-sql.md)   
  [Sicherheitsbezogene dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)   
  [Sicherheitskatalogsichten &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [Ermitteln effektiver Datenbankmodulberechtigungen](../../../relational-databases/security/authentication-access/determining-effective-database-engine-permissions.md)
+ 
+  [Ermitteln effektiver Datenbank-Engine-Berechtigungen](../../../relational-databases/security/authentication-access/determining-effective-database-engine-permissions.md)
   
   

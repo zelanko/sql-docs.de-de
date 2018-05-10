@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Key Management
 - Extensible Key Management
@@ -21,13 +20,12 @@ caps.latest.revision: 46
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c42cd4b6f5f1ee8355e124c46e2cc194e1de080a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e00a78719febd9a452da5cd85220f2fb091ffa9b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="extensible-key-management-ekm"></a>Erweiterbare Schlüsselverwaltung (Extensible Key Management, EKM)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -96,7 +94,7 @@ GO
  EKM-Module können mehrere Arten der Authentifizierung unterstützen. Jeder Anbieter macht nur eine Art der Authentifizierung für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]verfügbar. Wenn das Modul zum Beispiel die Standardauthentifizierung oder andere Authentifizierungstypen unterstützt, wird nur eine der beiden Arten bereitgestellt.  
   
 #### <a name="ekm-device-specific-basic-authentication-using-usernamepassword"></a>EKM-gerätespezifische Standardauthentifizierung mit einer Benutzername-/Kennwortkombination  
- Bei den EKM-Modulen, die die Standardauthentifizierung mit einem *Benutzername/Kennwort*-Paar unterstützen, stellt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eine transparente Authentifizierung über Anmeldeinformationen bereit. Weitere Informationen über Anmeldenamen finden Sie unter [Anmeldeinformationen &#40;Datenbankmodul&#41;](../../../relational-databases/security/authentication-access/credentials-database-engine.md).  
+ Bei den EKM-Modulen, die die Standardauthentifizierung mit einem *Benutzername/Kennwort*-Paar unterstützen, stellt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eine transparente Authentifizierung über Anmeldeinformationen bereit. Weitere Informationen über Anmeldenamen finden Sie unter [Anmeldeinformationen &amp;#40;Datenbank-Engine&amp;#41;](../../../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
  Sie können für einen EKM-Anbieter einen Identitätsnachweis (Anmeldeinformationen) erstellen und diesen einem Anmeldenamen (sowohl für Windows- als auch für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Konten) zuordnen, sodass der Zugriff auf ein EKM-Modul über eine einzelne Anmeldung möglich ist. Das *Identify* -Feld im Identitätsnachweis enthält den Benutzernamen und das *secret* -Feld ein Kennwort für die Verbindung mit einem EKM-Modul.  
   
@@ -134,7 +132,7 @@ OPEN SYMMETRIC KEY Key1
 DECRYPTION BY EKM_AKey1  
 ```  
   
- Weitere Informationen zu Datenbank- und Serverschlüsseln in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] finden Sie unter [Verschlüsselungsschlüssel für SQL Server und Datenbank &#40;Datenbankmodul&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md).  
+ Weitere Informationen zu Datenbank- und Serverschlüsseln in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] finden Sie unter [Verschlüsselungsschlüssel für SQL Server und Datenbank &amp;#40;Datenbank-Engine&amp;#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md).  
   
 > [!NOTE]  
 >  EKM-Schlüssel können nicht mit anderen EKM-Schlüsseln verschlüsselt werden.  

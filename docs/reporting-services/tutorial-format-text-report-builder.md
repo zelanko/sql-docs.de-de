@@ -1,28 +1,27 @@
 ---
 title: 'Tutorial: Formatieren von Text (Berichts-Generator) | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: e5791f58be1674011744036de4c6ddd5c5c90754
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: c4135b411028d38a8c3ac91ed381e8c1708a8a66
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-format-text-report-builder"></a>Lernprogramm: Formatieren von Text (Berichts-Generator)
 
@@ -66,7 +65,7 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen fü
 4.  Überprüfen Sie, ob der Verbindungstyp Microsoft SQL Server ist, und geben Sie anschließend im Feld **Verbindungszeichenfolge** Folgendes ein: `Data Source = <servername>`  
   
     > [!NOTE]  
-    > Der Ausdruck `<servername>`, z.B. „Report001“, bezeichnet einen Computer, auf dem eine Instanz des SQL Server-Datenbankmoduls installiert ist. Für dieses Tutorial sind keine bestimmten Daten erforderlich. Es wird lediglich eine Verbindung mit einer Datenbank vom SQL Server benötigt. Wenn unter **Datenquellenverbindungen**bereits eine Datenquellenverbindung aufgeführt ist, können Sie sie auswählen und zum nächsten Schritt übergehen, nämlich „So erstellen Sie ein Dataset“. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung (Berichts-Generator)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > Der Ausdruck `<servername>`, z.B. „Report001“, bezeichnet einen Computer, auf dem eine Instanz der SQL Server-Datenbank-Engine installiert ist. Für dieses Tutorial sind keine bestimmten Daten erforderlich. Es wird lediglich eine Verbindung mit einer Datenbank vom SQL Server benötigt. Wenn unter **Datenquellenverbindungen**bereits eine Datenquellenverbindung aufgeführt ist, können Sie sie auswählen und zum nächsten Schritt übergehen, nämlich „So erstellen Sie ein Dataset“. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung (Berichts-Generator)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -227,7 +226,7 @@ In diesem Abschnitt fügen Sie dem Text in der Tabelle aus dem vorherigen Abschn
   
 3.  Auf der **Aktion** auf **Gehe zu URL**.  
   
-5.  Klicken Sie im Feld **URL auswählen** auf **[URL]**und anschließend auf **OK**.  
+5.  Klicken Sie im Feld **URL auswählen** auf **[URL]** und anschließend auf **OK**.  
   
 6.  Das Aussehen des Texts unterscheidet sich nicht. Es muss jedoch dem des Linktexts entsprechen.  
   

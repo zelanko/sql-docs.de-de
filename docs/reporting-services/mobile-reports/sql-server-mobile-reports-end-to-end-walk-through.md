@@ -1,27 +1,25 @@
 ---
 title: 'Mobile Berichte mit SQL Server: End-to-End-Vorgehensweise | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
-caps.latest.revision: 
+caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 3233c1433d1e09038d66af3db7e84a732e81926a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 5b6bdc2fb6be0a80639d5f396fa9bc24abfb8833
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Mobile Berichte mit SQL Server: End-to-End-Vorgehensweise
 Exemplarische Vorgehensweise zum Erstellen mobiler Berichte für sämtliche Bildschirmgrößen mit [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] im [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Webportal und ihrer Anzeige in mobilen Power BI-Apps.
@@ -31,7 +29,7 @@ Erstellen Sie mobile Berichte auf einer Entwurfsoberfläche mit anpassbaren Rast
 Dieser Artikel begleitet Sie durch die folgenden Aufgaben:   
   
 - Erstellen einer freigegebenen Datenquelle und eines Datasets im [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Webportal mithilfe der AdventureWorks-Datenbank als Beispieldatenquelle  
-- Erstellen eines mobilen Reporting Services-Berichts im [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
+- Erstellen eines mobilen Reporting Services-Berichts in [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
 - Veröffentlichen des mobilen Berichts im [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Webportal  
 - Anzeigen des mobilen Berichts in der mobilen Power BI-App  
   

@@ -4,26 +4,24 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: in-memory-oltp
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cd928cf473b85d4062465da8534df91c271e44eb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 32ca697836a234c0f29b1488e2d7ca95c48c2a50
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Anleitung zur Abfrageverarbeitung für speicheroptimierte Tabellen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -118,16 +116,16 @@ Abfrageverarbeitungspipeline in SQL Server.
   
 3.  Der Abfrageoptimierer erstellt einen optimierten Abfrageplan, der physische Operatoren enthält (beispielsweise einen Join geschachtelter Schleifen). Nach der Optimierung kann der Plan im Plancache gespeichert werden. Dieser Schritt wird umgangen, wenn der Plancache bereits einen Plan für diese Abfrage enthält.  
   
-4.  Das Abfrageausführungsmodul verarbeitet eine Interpretation des Abfrageplans.  
+4.  Die Abfrageausführungs-Engine verarbeitet eine Interpretation des Abfrageplans.  
   
-5.  Für jeden Index Seek-, Index Scan- und Table Scan-Operator fordert das Ausführungsmodul Zeilen aus den entsprechenden Index- und Tabellenstrukturen von Zugriffsmethoden an.  
+5.  Für jeden Index Seek-, Index Scan- und Table Scan-Operator fordert die Ausführungs-Engine Zeilen aus den entsprechenden Index- und Tabellenstrukturen von Zugriffsmethoden an.  
   
 6.  Über Zugriffsmethoden werden die Zeilen aus den Index- und Datenseiten im Pufferpool abgerufen und Seiten nach Bedarf vom Datenträger in den Pufferpool geladen.  
   
- Für die erste Beispielabfrage fordert das Ausführungsmodul von Zugriffsmethoden Zeilen im gruppierten Index für Customer und im nicht gruppierten Index für Order an. Zugriffsmethoden durchläuft die B-Struktur-Indexstrukturen, um die angeforderten Zeilen abzurufen. In diesem Fall werden alle Zeilen abgerufen, da der Plan vollständige Indexscans fordert.  
+ Für die erste Beispielabfrage fordert die Ausführungs-Engine von Zugriffsmethoden Zeilen im gruppierten Index für Customer und im nicht gruppierten Index für Order an. Zugriffsmethoden durchläuft die B-Struktur-Indexstrukturen, um die angeforderten Zeilen abzurufen. In diesem Fall werden alle Zeilen abgerufen, da der Plan vollständige Indexscans fordert.  
   
 ## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>Interpretierter [!INCLUDE[tsql](../../includes/tsql-md.md)] -Zugriff auf speicheroptimierte Tabellen  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] werden auch als interpretiertes [!INCLUDE[tsql](../../includes/tsql-md.md)]. "Interpretiert" bezieht sich auf die Tatsache, dass der Abfrageplan vom Abfrageausführungsmodul für jeden Operator im Abfrageplan interpretiert wird. Das Ausführungsmodul liest den Operator und die Parameter und führt den Vorgang aus.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] werden auch als interpretiertes [!INCLUDE[tsql](../../includes/tsql-md.md)]. "Interpretiert" bezieht sich auf die Tatsache, dass der Abfrageplan von der Abfrageausführungs-Engine für jeden Operator im Abfrageplan interpretiert wird. Die Ausführungs-Engine liest den Operator und die Parameter und führt den Vorgang aus.  
   
  Interpretiertes [!INCLUDE[tsql](../../includes/tsql-md.md)] kann verwendet werden, um auf speicheroptimierte und datenträgerbasierte Tabellen zuzugreifen. Die folgende Abbildung veranschaulicht die Abfrageverarbeitung für den interpretierten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Zugriff auf speicheroptimierte Tabellen:  
   
@@ -140,9 +138,9 @@ Abfrageverarbeitungspipeline für interpretierten Transact-SQL-Zugriff auf speic
   
 -   Der Abfrageoptimierer erstellt den Ausführungsplan.  
   
--   Das Abfrageausführungsmodul interpretiert den Ausführungsplan.  
+-   Die Abfrageausführungs-Engine interpretiert den Ausführungsplan.  
   
- Der Hauptunterschied zur herkömmlichen Abfrageverarbeitungspipeline (Abbildung 2) ist, dass Zeilen für speicheroptimierte Tabellen nicht über Zugriffsmethoden aus dem Pufferpool abgerufen werden. Stattdessen werden Zeilen mit dem In-Memory OLTP-Modul aus den speicherresidenten Datenstrukturen abgerufen. Aufgrund der Unterschiede in den Datenstrukturen wählt der Abfrageoptimierer in manchen Fällen verschiedene Pläne aus, wie im folgenden Beispiel veranschaulicht wird.  
+ Der Hauptunterschied zur herkömmlichen Abfrageverarbeitungspipeline (Abbildung 2) ist, dass Zeilen für speicheroptimierte Tabellen nicht über Zugriffsmethoden aus dem Pufferpool abgerufen werden. Stattdessen werden Zeilen mit der In-Memory-OLTP-Engine aus den speicherresidenten Datenstrukturen abgerufen. Aufgrund der Unterschiede in den Datenstrukturen wählt der Abfrageoptimierer in manchen Fällen verschiedene Pläne aus, wie im folgenden Beispiel veranschaulicht wird.  
   
  Das folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript enthält speicheroptimierte Versionen der Order- und Customer-Tabellen, wobei Hashindizes verwendet werden:  
   
@@ -183,7 +181,7 @@ Abfrageplan für den Join speicheroptimierter Tabellen.
 -   Dieser Plan enthält ein **Hash Match** anstelle eines **Merge Join**. Die Indizes der Order- und Customer-Tabelle sind Hashindizes und werden daher nicht sortiert. Ein **Merge Join** würde Sortieroperatoren erfordern, die die Leistung verringern würden.  
   
 ## <a name="natively-compiled-stored-procedures"></a>Systemintern kompilierte gespeicherte Prozeduren  
- Systemintern kompilierte gespeicherte Prozeduren sind gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozeduren, die in Computercode kompiliert werden, statt durch das Abfrageausführungsmodul interpretiert zu werden. Das folgende Skript erstellt eine systemintern kompilierte gespeicherte Prozedur, die die Beispielabfrage ausführt (aus dem Abschnitt Beispielabfrage).  
+ Systemintern kompilierte gespeicherte Prozeduren sind gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozeduren, die in Computercode kompiliert werden, statt durch die Abfrageausführungs-Engine interpretiert zu werden. Das folgende Skript erstellt eine systemintern kompilierte gespeicherte Prozedur, die die Beispielabfrage ausführt (aus dem Abschnitt Beispielabfrage).  
   
 ```sql  
 CREATE PROCEDURE usp_SampleJoin  

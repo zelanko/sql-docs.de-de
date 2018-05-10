@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - EKM, with key vault setup
 - SQL Server Connector, setup
@@ -21,12 +20,11 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 563bf6957d123ac718222a53faf33ea10b2398bb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1d49310aa2c1d178dfb47f05a72ccac73cd0882f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setup-steps-for-extensible-key-management-using-the-azure-key-vault"></a>Installationsschritte für die Erweiterbare Schlüsselverwaltung mit Azure Key Vault.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +64,7 @@ SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente
  ![EKM-Schlüssel-Id](../../../relational-databases/security/encryption/media/ekm-key-id.png "Ekm-Schlüssel-Id")  
   
 ## <a name="part-ii-create-a-key-vault-and-key"></a>Teil II: Erstellen eines Schlüsseltresors und eines Schlüssels  
- Der hier erstellte Schlüsseltresor und Schlüssel werden vom SQL Server-Datenbankmodul zum Schutz des Verschlüsselungsschlüssels verwendet.  
+ Der hier erstellte Schlüsseltresor und Schlüssel werden von der SQL Server-Datenbank-Engine zum Schutz des Verschlüsselungsschlüssels verwendet.  
   
 > [!IMPORTANT]  
 >  Das Abonnement, in dem der Schlüsseltresor erstellt wird, muss sich im gleichen standardmäßigen Azure Active Directory befinden, in dem der Azure Active Directory-Dienstprinzipal erstellt wurde. Wenn Sie ein anderes Active Directory als das standardmäßige Active Directory zum Erstellen eines Dienstprinzipals für den SQL Server-Connector verwenden möchten, müssen Sie das standardmäßige Active Directory in Ihrem Azure-Konto ändern, bevor Sie Ihren Schlüsseltresor erstellen. Weitere Informationen zum Ändern des standardmäßigen Active Directory in ein von Ihnen bevorzugtes Active Directory finden Sie in den [Häufig gestellten Fragen (FAQs)](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB)zum SQL Server-Connector.  

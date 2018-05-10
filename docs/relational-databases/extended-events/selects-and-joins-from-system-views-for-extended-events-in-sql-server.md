@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: xevents
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 89d371d30fea0d3f09931925cd4835c3881f805a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 356cfffea1189b3d7efb042fcec7e26eedc9b747
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SELECT- und JOIN-Anweisungen von Systemsichten für erweiterte Ereignisse in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -131,7 +129,7 @@ Als nächstes sehen wir, dass im Abschnitt **Events** (Ereignisse), das Ereignis
 
 <a name="resource_type_PAGE_cat_view"></a>
 
-Wir sind immer noch im Abschnitt **Events** > **Configure** (Ereignisse > Konfigurieren) und sehen als nächstes, dass [**resource_type** auf **PAGE**](#resource_type_dmv_actual_row) festgelegt wurde. Dies bedeutet, dass Ereignisdaten nicht vom Ereignismodul zum Ziel gesendet wird, wenn der Wert **resource_type** nicht **PAGE**ist.
+Wir sind immer noch im Abschnitt **Events** > **Configure** (Ereignisse > Konfigurieren) und sehen als nächstes, dass [**resource_type** auf **PAGE**](#resource_type_dmv_actual_row) festgelegt wurde. Dies bedeutet, dass Ereignisdaten nicht von der Ereignis-Engine zum Ziel gesendet wird, wenn der Wert **resource_type** nicht **PAGE** ist.
 
 Es werden zusätzliche Prädikatfilter für die Datenbank und für einen Leistungsindikator angezeigt.
 
@@ -158,7 +156,7 @@ Dadurch ist die Perspektive der SSMS-Benutzeroberfläche mit der Definition der 
 
 Unabhängig davon, wie eine Definition für die Ereignissitzung erstellt wurde, kann die Sitzung der SSMS-Benutzeroberfläche in perfekter Übereinstimmung mit dem Transact-SQL-Skript zurückentwickelt werden. Sie können die vorhergehenden Screenshots von „New Session“ (Neue Sitzung) überprüfen und anschließend deren sichtbare Spezifikationen mit den Klauseln des folgenden generierten **CREATE EVENT SESSION** -Skript von T-SQL vergleichen.
 
-Sie können mit der rechten Maustaste im **Objekt-Explorer** auf den Sitzungsknoten klicken und anschließend **Script Session as** > **CREATE to** > **Clipboard**(Skript für Sitzung als &gt; CREATE to &gt; Zwischenablage) auswählen, um eine Ereignissitzung zurückzuentwickeln.
+Sie können mit der rechten Maustaste im **Objekt-Explorer** auf den Sitzungsknoten klicken und anschließend **Script Session as** > **CREATE to** > **Clipboard**(Skript für Sitzung als &amp;gt; CREATE to &amp;gt; Zwischenablage) auswählen, um eine Ereignissitzung zurückzuentwickeln.
 
 Das folgende T-SQL-Skript wurde durch Zurückentwickeln mit SSMS erstellt. Anschließend wurde das Skript manuell durch strategische Bearbeitung der Leerzeichen verschönert.
 
@@ -578,7 +576,7 @@ type           package0       xml                           Well formed XML frag
 Die folgende SELECT-Anweisung gibt alle Datenfelder zurück, die speziell für Ihren Ereignistyp gelten.
 
 - Beachten Sie das Klauselelement WHERE: *column_type = 'data'*.
-- Darüber hinaus müssen Sie den Wert der Klausel WHERE für *o.name =*bearbeiten.
+- Darüber hinaus müssen Sie den Wert der Klausel WHERE für *o.name =* bearbeiten.
 
 
 ```sql
@@ -731,7 +729,7 @@ you could put:
 Die folgende SELECT-Anweisung gibt jeden Parameter für Ihr Ziel zurück. Jeder Parameter ist markiert, um anzuzeigen, ob er verbindlich ist, oder nicht. Die Werte, die Sie Parametern zuweisen, beeinflussen das Verhalten des Ziels.
 
 - Beachten Sie das Klauselelement WHERE: *object_type = 'customizable'*.
-- Darüber hinaus müssen Sie den Wert der Klausel WHERE für *o.name =*bearbeiten.
+- Darüber hinaus müssen Sie den Wert der Klausel WHERE für *o.name =* bearbeiten.
 
 
 ```sql
@@ -796,7 +794,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 Diese DMV SELECT-Anweisung gibt Datenzeilen des Ziels Ihrer aktiven Ereignissitzung zurück. Die Daten werden in XML umgewandelt. Dadurch kann die zurückgegebene Zelle zum einfachen Anzeigen in SSMS geklickt werden.
 
 - Wenn die Ereignissitzung beendet wird, gibt SELECT null Zeilen zurück.
-- Sie müssen den Wert der WHERE-Klausel für *s.name =*bearbeiten.
+- Sie müssen den Wert der WHERE-Klausel für *s.name =* bearbeiten.
 
 
 ```sql

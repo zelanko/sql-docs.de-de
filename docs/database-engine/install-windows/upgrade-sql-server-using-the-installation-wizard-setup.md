@@ -3,15 +3,12 @@ title: Upgrade von SQL Server mithilfe des Installations-Assistenten (Setup) | M
 ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: install-windows
+ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading Database Engine
 - Database Engine [SQL Server], upgrading
@@ -20,11 +17,11 @@ caps.latest.revision: 65
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d440b57b66caecaff4381d00da36173dd0e6eb92
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7e546b724259b9027c1e05f0aad4291900dfde07
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Upgrade von SQL Server mithilfe des Installations-Assistenten (Setup)
 
@@ -39,7 +36,8 @@ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installations-Ass
   
 > [!CAUTION]  
 > Für viele Produktions- und einige Entwicklungsumgebungen eignet sich ein Upgrade durch Neuinstallation oder ein paralleles Update besser als ein direktes Upgrade.  Weitere Informationen zu Upgrade-Methoden finden Sie unter:
-> * [Wählen einer Upgrademethode für das Datenbankmodul](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)
+> * 
+  [Wählen einer Upgrademethode für die Datenbank-Engine](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)
 > * [Aktualisieren von Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)
 > * [Upgrade von Integration Services](../../integration-services/install-windows/upgrade-integration-services.md)
 > * [Aktualisieren von Master Data Services](../../database-engine/install-windows/upgrade-master-data-services.md)
@@ -53,7 +51,7 @@ Sie müssen Setup als Administrator ausführen. Wenn Sie [!INCLUDE[ssNoVersion](
 > [!WARNING]  
 >  Sie können die zu aktualisierenden Funktionen nicht ändern und während des Aktualisierungsvorgangs keine Funktionen hinzufügen. Wenn Sie einer aktualisierten Instanz von [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Funktionen hinzufügen möchten, nachdem der Upgradevorgang abgeschlossen wurde, finden Sie entsprechende Informationen unter [Add Features to an Instance of SQL Server (Setup) (Hinzufügen von Funktionen zu einer Instanz von SQL Server (Setup))](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
   
- Wenn Sie ein Upgrade von [!INCLUDE[ssDE](../../includes/ssde-md.md)]durchführen, lesen Sie zunächst [Planen und Testen des Upgradeplans für das Datenbankmodul](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md) und führen Sie dann die folgenden Aufgaben je nach Umgebung durch:  
+ Wenn Sie ein Upgrade von [!INCLUDE[ssDE](../../includes/ssde-md.md)]durchführen, lesen Sie zunächst [Planen und Testen des Upgradeplans für die Datenbank-Engine](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md) und führen Sie dann die folgenden Aufgaben je nach Umgebung durch:  
   
 -   Sichern Sie alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankdateien der zu aktualisierenden Instanz, damit diese bei Bedarf wiederhergestellt werden können.  
   
@@ -133,7 +131,7 @@ Sie müssen Setup als Administrator ausführen. Wenn Sie [!INCLUDE[ssNoVersion](
   
 18. Während der Installation wird auf der Seite Installationsstatus der Status angezeigt, sodass Sie während der Installation den Installationsstatus überwachen können.  
   
-19. Nach der Installation bietet die Seite Abgeschlossen einen Link zur zusammenfassenden Protokolldatei für die Installation und andere wichtige Hinweise. Klicken Sie auf **Schließen** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um die Installation von abzuschließen.  
+19. Nach der Installation bietet die Seite Abgeschlossen einen Link zur zusammenfassenden Protokolldatei für die Installation und andere wichtige Hinweise. Klicken Sie auf Schließen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um die Installation von **abzuschließen**.  
   
 20. Starten Sie den Computer neu, falls Sie dazu aufgefordert werden. Wenn Sie den Setupvorgang abgeschlossen haben, sollten Sie unbedingt die vom Installations-Assistenten angezeigte Meldung lesen. Weitere Informationen zu Setupprotokolldateien finden Sie unter [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   

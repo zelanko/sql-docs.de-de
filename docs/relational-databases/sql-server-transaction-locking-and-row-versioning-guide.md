@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 02/17/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: relational-databases-misc
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - guide, transaction locking and row versioning
 - transaction locking and row versioning guide
@@ -22,13 +21,12 @@ caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d0c8e2320325a00e0729562c07aa328ef8ddafe0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c0993d9437044b1eba713e2ac7cd10b2ab5372b3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Handbuch zu Transaktionssperren und Zeilenversionsverwaltung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -407,8 +405,8 @@ GO
 |Sperrmodus|Description|  
 |---------------|-----------------|  
 |Beabsichtigte freigegebene Sperre (Intent Shared, IS)|Schützt angeforderte oder eingerichtete freigegebene Sperren bestimmter (aber nicht aller) Ressourcen untergeordneter Ebenen in der Hierarchie.|  
-|Beabsichtigte exklusive Sperre (Intent Exclusive, IX)|Schützt angeforderte oder eingerichtete exklusive Sperren bestimmter (aber nicht aller) Ressourcen untergeordneter Ebenen in der Hierarchie. IX ist eine Obermenge der beabsichtigten freigegebenen Sperre und schützt auch vor Anforderung freigegebener Sperren auf Ressourcen untergeordneter Ebenen in der Hierarchie.|  
-|Freigegebene Sperre mit beabsichtigter exklusiver Sperre (Shared With Intent Exclusive, SIX)|Schützt angeforderte oder eingerichtete freigegebene Sperren aller Ressourcen untergeordneter Ebenen in der Hierarchie sowie beabsichtigte exklusive Sperren bestimmter (aber nicht aller) Ressourcen untergeordneter Ebenen in der Hierarchie. Gleichzeitige beabsichtigte freigegebene Sperren auf der Ressource der obersten Ebene sind zugelassen. So werden beispielsweise bei einer Sperre des Typs SIX für eine Tabelle auch beabsichtigte exklusive Sperren für die zu ändernden Seiten sowie exklusive Sperren für die zu ändernden Zeilen eingerichtet. Es kann jeweils nur eine Sperre des Typs SIX pro Ressource eingerichtet werden, durch die Updates an der Ressource durch andere Transaktionen verhindert werden. Dennoch können andere Transaktionen Ressourcen, die sich weiter unten in der Hierarchie befinden, lesen, indem sie beabsichtigte freigegebene Sperren auf Tabellenebene einrichten.|  
+|Beabsichtigte exklusive Sperre (Intent Exclusive, IX)|Schützt angeforderte oder eingerichtete exklusive Sperren bestimmter (aber nicht aller) Ressourcen untergeordneter Ebenen in der Hierarchie. IX ist eine Obermenge von IS und schützt auch vor Anforderung freigegebener Sperren auf Ressourcen untergeordneter Ebenen in der Hierarchie.|  
+|Freigegebene Sperre mit beabsichtigter exklusiver Sperre (Shared With Intent Exclusive, SIX)|Schützt angeforderte oder eingerichtete freigegebene Sperren aller Ressourcen untergeordneter Ebenen in der Hierarchie sowie beabsichtigte exklusive Sperren bestimmter (aber nicht aller) Ressourcen untergeordneter Ebenen in der Hierarchie. Gleichzeitige Sperren des Typs IS auf der Ressource der obersten Ebene sind zugelassen. So werden beispielsweise bei einer Sperre des Typs SIX für eine Tabelle auch beabsichtigte exklusive Sperren für die zu ändernden Seiten sowie exklusive Sperren für die zu ändernden Zeilen eingerichtet. Es kann jeweils nur eine Sperre des Typs SIX pro Ressource eingerichtet werden, durch die Updates an der Ressource durch andere Transaktionen verhindert werden. Dennoch können andere Transaktionen Ressourcen, die sich weiter unten in der Hierarchie befinden, lesen, indem sie beabsichtigte freigegebene Sperren auf Tabellenebene einrichten.|  
 |Beabsichtigte Updatesperre (Intent Update, IU)|Schützt angeforderte oder eingerichtete Updatesperren aller Ressourcen untergeordneter Hierarchieebenen. IU-Sperren werden nur mit Seitenressourcen verwendet. IU-Sperren werden zu IX-Sperren konvertiert, wenn ein Updatevorgang ausgeführt wird.|  
 |Freigegebene beabsichtigte Updatesperre (Shared Intent Update, SIU)|Eine Kombination der Sperren vom Typ S und IU, die sich aus der separaten Einrichtung dieser Sperren und dem gleichzeitigen Beibehalten beider Sperren ergibt. Nehmen Sie beispielsweise an, eine Transaktion führt eine Abfrage mit dem PAGLOCK-Hinweis und anschließend einen Updatevorgang aus. Die Abfrage mit dem PAGLOCK-Hinweis richtet also die S-Sperre ein, wohingegen der Updatevorgang die IU-Sperre einrichtet.|  
 |Exklusive beabsichtigte Updatesperre (Update intent exclusive, UIX)|Eine Kombination der Sperren vom Typ U und IX, die sich aus dem separaten Einrichten dieser Sperren und dem gleichzeitigen Beibehalten beider Sperren ergibt.|  
@@ -1003,7 +1001,7 @@ GO
 ##### <a name="example-a"></a>Beispiel A  
  Sitzung 1  
   
- Im Rahmen einer Transaktion wird eine `SELECT`-Anweisung ausgeführt. Aufgrund des `HOLDLOCK`-Sperrhinweises aktiviert und hält diese Anweisung eine beabsichtigte freigegebene Sperre für die Tabelle (in dieser Veranschaulichung werden Zeilen- und Seitensperren ignoriert). Die beabsichtigte freigegebene Sperre wird nur für die Partition aktiviert, die der Transaktion zugewiesen ist. In diesem Beispiel wird vorausgesetzt, dass die beabsichtigte freigegebene Sperre für die Partitions-ID 7 aktiviert wird.  
+ Im Rahmen einer Transaktion wird eine `SELECT`-Anweisung ausgeführt. Aufgrund des `HOLDLOCK`-Sperrhinweises aktiviert und hält diese Anweisung eine beabsichtigte freigegebene Sperre für die Tabelle (in dieser Veranschaulichung werden Zeilen- und Seitensperren ignoriert). Die beabsichtigte freigegebene Sperre wird nur für die Partition aktiviert, die der Transaktion zugewiesen ist. In diesem Beispiel wird vorausgesetzt, dass die IS-Sperre für die Partitions-ID 7 aktiviert wird.  
   
 ```sql  
 -- Start a transaction.  
@@ -1016,7 +1014,7 @@ BEGIN TRANSACTION
   
  Sitzung 2:  
   
- Eine Transaktion wird gestartet, und die im Rahmen dieser Transaktion ausgeführte `SELECT`-Anweisung aktiviert und hält eine freigegebene Sperre (S) für die Tabelle. Die S-Sperre wird für alle Partitionen aktiviert, was mehrere Tabellensperren ergibt, und zwar eine für jede Partition. Auf einem System mit 16 CPUs werden z. B. 16 S-Sperren für die Sperrpartitions-IDs 0 bis 15 aktiviert. Da die S-Sperre mit der beabsichtigten freigegebenen Sperre kompatibel ist, die von der Transaktion in Sitzung 1 für die Partitions-ID 7 gehalten wird, kommt es zu keiner Blockierung zwischen den Transaktionen.  
+ Eine Transaktion wird gestartet, und die im Rahmen dieser Transaktion ausgeführte `SELECT`-Anweisung aktiviert und hält eine freigegebene Sperre (S) für die Tabelle. Die S-Sperre wird für alle Partitionen aktiviert, was mehrere Tabellensperren ergibt, und zwar eine für jede Partition. Auf einem System mit 16 CPUs werden z. B. 16 S-Sperren für die Sperrpartitions-IDs 0 bis 15 aktiviert. Da die S-Sperre mit der IS-Sperre kompatibel ist, die von der Transaktion in Sitzung 1 für die Partitions-ID 7 gehalten wird, kommt es zu keiner Blockierung zwischen den Transaktionen.  
   
 ```sql  
 BEGIN TRANSACTION  

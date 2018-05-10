@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 02/25/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
@@ -19,12 +17,11 @@ caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 555f26b131b56984279f3a6e79ef5c70373b680d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a88a95ea4ad99373c5f8a1994599a2dbea961669
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-2-create-a-sql-server-credential-using-a-shared-access-signature"></a>Lektion 2: Erstellen von SQL Server-Anmeldeinformationen mit einer Shared Access Signature (SAS)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +37,7 @@ Führen Sie die folgenden Schritte aus, um SQL Server-Anmeldeinformationen zu er
   
 1.  Stellen Sie eine Verbindung mit SQL Server Management Studio her.  
   
-2.  Öffnen Sie ein neues Abfragefenster und stellen Sie eine Verbindung mit der SQL Server 2016-Instanz des Datenbankmoduls in Ihrer lokalen Umgebung.  
+2.  Öffnen Sie ein neues Abfragefenster und stellen Sie eine Verbindung mit der SQL Server 2016-Instanz der Datenbank-Engine in Ihrer lokalen Umgebung.  
   
 3.  Fügen Sie in das neue Abfragefenster die CREATE CREDENTIAL-Anweisung mit der SAS aus Lektion 1 ein, und führen Sie dieses Skript aus.  
   
@@ -62,7 +59,7 @@ Führen Sie die folgenden Schritte aus, um SQL Server-Anmeldeinformationen zu er
     SELECT * from sys.credentials  
     ```  
   
-5.  Öffnen Sie ein neues Abfragefenster und stellen Sie eine Verbindung mit der SQL Server 2016-Instanz des Datenbankmoduls auf Ihrem virtuellen Azure-Computer her.  
+5.  Öffnen Sie ein neues Abfragefenster und stellen Sie eine Verbindung mit der SQL Server 2016-Instanz der Datenbank-Engine auf Ihrem virtuellen Azure-Computer her.  
   
 6.  Fügen Sie in das neue Abfragefenster die CREATE CREDENTIAL-Anweisung mit der SAS aus Lektion 1 ein, und führen Sie dieses Skript aus.  
   
@@ -73,7 +70,8 @@ Führen Sie die folgenden Schritte aus, um SQL Server-Anmeldeinformationen zu er
 [Lektion 3: Datenbanksicherung über URLs](../relational-databases/lesson-3-database-backup-to-url.md)  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
-[Anmeldeinformationen &#40;Datenbankmodul&#41;](../relational-databases/security/authentication-access/credentials-database-engine.md)  
+
+  [Anmeldeinformationen &amp;#40;Datenbank-Engine&amp;#41;](../relational-databases/security/authentication-access/credentials-database-engine.md)  
 [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../t-sql/statements/create-credential-transact-sql.md)  
 [sys.credentials &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   

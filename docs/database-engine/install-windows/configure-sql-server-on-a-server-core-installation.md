@@ -3,15 +3,12 @@ title: Konfigurieren von SQL Server in einer Server Core-Installation | Microsof
 ms.custom: ''
 ms.date: 09/05/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: install-windows
+ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IsHadrEnabled server property
 - Server Core Installation [SQL Server]
@@ -20,11 +17,11 @@ caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d09246e56569160c46d245dc2d1150422ba109be
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3a78a1d69cf27d0909d8300676b5e03e3169f4b8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Konfigurieren von SQL Server in einer Server Core-Installation
 
@@ -35,7 +32,7 @@ Dieser Artikel enthält Details zum Konfigurieren von [!INCLUDE[ssNoVersion](../
 ##  <a name="BKMK_ConfigureWindows"></a> Konfigurieren und Verwalten von Server Core unter Windows Server  
 Der Abschnitt enthält Verweise auf die Artikel zur Konfiguration und Verwaltung einer Server Core-Installation.  
   
-Nicht alle Funktionen von [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] werden im Server Core-Modus unterstützt.  Einige dieser Funktionen können auf einem Clientcomputer oder anderen Server, der nicht Server Core ausführt, installiert und mit den auf Server Core installierten Datenbankmoduldiensten verbunden werden.  
+Nicht alle Funktionen von [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] werden im Server Core-Modus unterstützt.  Einige dieser Funktionen können auf einem Clientcomputer oder anderen Server, der nicht Server Core ausführt, installiert und mit den auf Server Core installierten Datenbank-Engine-Diensten verbunden werden.  
   
 Weitere Informationen zur Remotekonfiguration und -verwaltung einer Server Core-Installation finden Sie in den folgenden Artikeln:  
   
@@ -130,7 +127,7 @@ Diese Schritte müssen auf einem PC mit der Clientversion von Windows oder Windo
 > -   Der Name des Computers, den Sie verwalten, wird in Klammern neben Computerverwaltung in der Konsolenstruktur angezeigt.  
   
 ### <a name="using-powershell-cmdlets-to-enable-alwayson-availability-groups"></a>Verwenden von PowerShell-Cmdlets zur Aktivierung von AlwaysOn-Verfügbarkeitsgruppen  
-Das PowerShell-Cmdlet, Enable-SqlAlwaysOn, wird verwendet, um AlwaysOn-Verfügbarkeitsgruppen auf einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu aktivieren. Wenn AlwaysOn-Verfügbarkeitsgruppen aktiviert werden, während der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst ausgeführt wird, muss der Datenbankmoduldienst neu gestartet werden, damit die Änderungen abgeschlossen werden. Sofern Sie nicht den -Force-Parameter angeben, wird vom Cmdlet eine Bestätigung zum erneuten Starten des Diensts angefordert. Bei einem Abbruch wird kein Vorgang ausgeführt.  
+Das PowerShell-Cmdlet, Enable-SqlAlwaysOn, wird verwendet, um AlwaysOn-Verfügbarkeitsgruppen auf einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu aktivieren. Wenn AlwaysOn-Verfügbarkeitsgruppen aktiviert werden, während der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst ausgeführt wird, muss der Datenbank-Engine-Dienst neu gestartet werden, damit die Änderungen abgeschlossen werden. Sofern Sie nicht den -Force-Parameter angeben, wird vom Cmdlet eine Bestätigung zum erneuten Starten des Diensts angefordert. Bei einem Abbruch wird kein Vorgang ausgeführt.  
   
 Zum Ausführen dieses Cmdlets benötigen Sie Administratorberechtigungen.  
   
@@ -210,7 +207,7 @@ $Tcp
  Weitere Informationen zu [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]finden Sie unter [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md).  
   
 ##  <a name="BKMK_Auditing"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Überwachung  
- Sie können [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] remote verwenden, um eine Überwachung zu definieren. Nachdem die Überwachung erstellt und aktiviert wurde, empfängt das Ziel die Einträge. Weitere Informationen zum Erstellen und Verwalten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Überwachungen finden Sie unter [SQL Server Audit &#40;Datenbankmodul&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+ Sie können [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] remote verwenden, um eine Überwachung zu definieren. Nachdem die Überwachung erstellt und aktiviert wurde, empfängt das Ziel die Einträge. Weitere Informationen zum Erstellen und Verwalten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Überwachungen finden Sie unter [SQL Server Audit &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 ##  <a name="BKMK_CMD"></a> Befehlszeilen-Hilfsprogramme  
  Sie können die folgenden Eingabeaufforderungs-Hilfsprogramme verwenden, mit denen Sie für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Vorgänge auf einem Server Core-Computer ein Skript erstellen können. Die folgende Tabelle enthält eine Liste der Eingabeaufforderung-Hilfsprogramme, die im Lieferumfang von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für Server Core enthalten sind.  

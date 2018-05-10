@@ -1,31 +1,29 @@
 ---
-title: "E-Mail-Übermittlung in Reporting Services | Microsoft-Dokumentation"
-ms.custom: 
+title: E-Mail-Übermittlung in Reporting Services | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: subscriptions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], e-mail
 - e-mail [Reporting Services]
 - mail [Reporting Services]
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
-caps.latest.revision: "45"
+caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: cbf8b0a5e84efd67ffa41c4518b6432c2d3283e5
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 44fd22755bc91784966e1b5b27107aad1d3f2ae4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>E-Mail-Übermittlung in Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält eine E-Mail-Übermittlungserweiterung, mit der Sie einen Bericht per E-Mail an einzelne Benutzer oder Gruppen senden können. Um einen Bericht per E-Mail zu verteilen, 1) konfigurieren Sie den Berichtsserver für die E-Mail-Zustellung und 2) definieren entweder ein Standardabonnement oder ein datengesteuertes Abonnement. Ein einzelnes Abonnement kann nicht mehrere Berichte in einer einzigen E-Mail-Nachricht übermitteln. Sie können jedoch mehrere Abonnements erstellen.  

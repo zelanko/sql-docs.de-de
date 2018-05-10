@@ -1,16 +1,14 @@
 ---
 title: ALTER VIEW (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 05/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_VIEW_TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - modifying views
 - ALTER VIEW statement
 ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 79d889411d7e974a6ddabd6a753b45f332f1f62a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b5a255a92c2bc201218fd9310b70af1e37fb7bdd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -79,7 +76,7 @@ AS select_statement
  Verschlüsselt die [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md)-Einträge, die den Text der ALTER VIEW-Anweisung enthalten. Mithilfe von WITH ENCRYPTION kann verhindert werden, dass die Sicht als Teil der SQL Server-Replikation veröffentlicht wird.  
   
  SCHEMABINDING  
- Bindet die Sicht an das Schema der zugrunde liegenden Basistabellen. Wird SCHEMABINDING angegeben, ist es nicht möglich, Änderungen der Basistabellen auszuführen, die sich auf die Sichtdefinition auswirken würden. Die Sichtdefinition muss zuerst geändert oder gelöscht werden, um Abhängigkeiten von der zu ändernden Tabelle zu entfernen. Wenn Sie SCHEMABINDING verwenden, muss *select_statement* die zweiteiligen Namen (*schema***.***object*) der Tabellen, Sicht oder benutzerdefinierten Funktionen einschließen, auf die verwiesen wird. Alle Objekte, auf die verwiesen wird, müssen in derselben Datenbank vorhanden sein.  
+ Bindet die Sicht an das Schema der zugrunde liegenden Basistabellen. Wird SCHEMABINDING angegeben, ist es nicht möglich, Änderungen der Basistabellen auszuführen, die sich auf die Sichtdefinition auswirken würden. Die Sichtdefinition muss zuerst geändert oder gelöscht werden, um Abhängigkeiten von der zu ändernden Tabelle zu entfernen. Wenn Sie SCHEMABINDING verwenden, muss *select_statement* die zweiteiligen Namen (*schema ***.*** object*) der Tabellen, Sichten oder benutzerdefinierten Funktionen einschließen, auf die verwiesen wird. Alle Objekte, auf die verwiesen wird, müssen in derselben Datenbank vorhanden sein.  
   
  Sichten oder Tabellen, die Bestandteil einer mit der SCHEMABINDING-Klausel erstellten Sicht sind, können erst dann gelöscht werden, wenn die entsprechende Sicht gelöscht oder geändert wird, sodass die Schemabindung nicht mehr vorhanden ist. Andernfalls löst [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen Fehler aus. Darüber hinaus schlägt die Ausführung von ALTER TABLE-Anweisungen für Tabellen fehl, die Bestandteil von Sichten mit Schemabindung sind, falls diese Anweisungen die Sichtdefinition betreffen.  
   

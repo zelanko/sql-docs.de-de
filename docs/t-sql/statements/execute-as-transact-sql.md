@@ -1,16 +1,14 @@
 ---
 title: EXECUTE AS (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - EXECUTE AS
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - execution context [SQL Server]
 - switching execution context
 ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: b89c78d286feaace6ec6bb2c85e854cb0ddbb5e0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6a038b8928eeda0df043ff42b621b95c48102b55
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -81,7 +78,7 @@ ms.lasthandoff: 11/21/2017
   
  *name* muss ein einzelnes Konto und kann keine Gruppe, Rolle, kein Zertifikat, Schlüssel oder integriertes Konto sein, wie z.B. NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService oder NT AUTHORITY\LocalSystem.  
   
- Weitere Informationen finden Sie unter [Angeben eines Benutzer- oder Anmeldenamens](#_user) im Verlauf dieses Artikels.  
+ Weitere Informationen finden Sie unter [Angeben eines Benutzer- oder Anmeldenamens](#_user) weiter unten in diesem Thema.  
   
  NO REVERT  
  Gibt an, dass der Kontextwechsel nicht auf den vorherigen Kontext zurückgesetzt werden kann. Die **NO REVERT**-Option kann nur auf der Ad-hoc-Ebene verwendet werden.  
@@ -94,7 +91,7 @@ ms.lasthandoff: 11/21/2017
  **@** *varbinary_variable* entspricht **varbinary(8000)**.  
   
 > [!NOTE]  
->  Der **OUTPUT**-Cookieparameter ist zurzeit als **varbinary(8000)** dokumentiert, was der korrekten maximalen Länge entspricht. Die aktuelle Implementierung gibt jedoch **varbinary(100)**zurück. Anwendungen müssen **varbinary(8000)** reservieren, damit die Anwendung weiterhin ordnungsgemäß ausgeführt wird, falls die Rückgabegröße des Cookies in einem zukünftigen Release erhöht wird.  
+>  Der **OUTPUT**-Cookieparameter ist zurzeit als **varbinary(8000)** dokumentiert, was der korrekten maximalen Länge entspricht. Die aktuelle Implementierung gibt jedoch **varbinary(100)** zurück. Anwendungen müssen **varbinary(8000)** reservieren, damit die Anwendung weiterhin ordnungsgemäß ausgeführt wird, falls die Rückgabegröße des Cookies in einem zukünftigen Release erhöht wird.  
   
  CALLER  
  Bei Verwendung innerhalb eines Moduls gibt dieser Wert an, dass die Anweisungen innerhalb des Moduls im Kontext des Modulaufrufers ausgeführt werden.  

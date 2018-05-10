@@ -1,16 +1,14 @@
 ---
 title: CREATE AVAILABILITY GROUP (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 10/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - AVAILABILITY GROUP
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
-caps.latest.revision: 
+caps.latest.revision: 196
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e0a4792974ec9aa78678aec74dc390e992471e64
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 9a1a0f9120b777bde70a698a25602403690aab83
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -196,7 +193,7 @@ CREATE AVAILABILITY GROUP group_name
  Eingeführt in SQL Server 2017. Wird verwendet, um festzustellen, ob sich die Verfügbarkeitsgruppe auf einem Windows Server-Failovercluster (WSFC) befindet.  Die Option ist auf „WSFC“ festgelegt, wenn sich die Verfügbarkeitsgruppe auf einer Failoverclusterinstanz befindet, die zu einem Windows-Failovercluster gehört. Sie ist auf EXTERNAL festgelegt, wenn der Cluster von einem Cluster-Manager verwaltet wird, bei dem es sich nicht um einen Windows Server-Failovercluster handelt, z.B. Linux Pacemaker. Sie ist auf NONE festgelegt, wenn die Verfügbarkeitsgruppe für die Clusterkoordination keinen WSFC verwendet. Dies ist z.B. der Fall, wenn eine Verfügbarkeitsgruppe Linux-Server ohne Cluster-Manager enthält. 
 
  DATABASE *database_name*  
- Gibt eine Liste mit mindestens einer Benutzerdatenbank auf der lokalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz an (der Serverinstanz, auf der Sie die Verfügbarkeitsgruppe erstellen). Sie können mehrere Datenbanken für eine Verfügbarkeitsgruppe angeben, aber jede Datenbank kann nur zu einer Verfügbarkeitsgruppe gehören. Informationen zu den Datenbanktypen, für die eine Verfügbarkeitsgruppe Unterstützung bietet, finden Sie unter [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md). In der Spalte **replica_id** in der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)-Katalogsicht können Sie überprüfen, welche lokalen Datenbanken bereits zu einer Verfügbarkeitsgruppe gehören.  
+ Gibt eine Liste mit mindestens einer Benutzerdatenbank auf der lokalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz an (der Serverinstanz, auf der Sie die Verfügbarkeitsgruppe erstellen). Sie können mehrere Datenbanken für eine Verfügbarkeitsgruppe angeben, aber jede Datenbank kann nur zu einer Verfügbarkeitsgruppe gehören. Informationen über die Datenbanktypen, für die eine Verfügbarkeitsgruppe Unterstützung bietet finden Sie unter [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md). In der Spalte **replica_id** in der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)-Katalogsicht können Sie überprüfen, welche lokalen Datenbanken bereits zu einer Verfügbarkeitsgruppe gehören.  
   
  Die DATABASE-Klausel ist optional. Wenn sie weggelassen wird, ist die neue Verfügbarkeitsgruppe leer.  
   
@@ -233,12 +230,12 @@ CREATE AVAILABILITY GROUP group_name
   
  Informationen zu den Voraussetzungen für WSFC-Knoten und Serverinstanzen finden Sie unter [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
- ENDPOINT_URL **='**TCP**://***system-address***:***port***'**  
+ ENDPOINT_URL **='** TCP **://***system-address***:***port***'**  
  Gibt den URL-Pfad des [Datenbankspiegelungsendpunkts](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz an, die das Verfügbarkeitsreplikat hostet, das Sie in der aktuellen REPLICA ON-Klausel definieren.  
   
  Die ENDPOINT_URL-Klausel ist erforderlich. Weitere Informationen finden Sie unter [Angeben der Endpunkt-URL beim Hinzufügen oder Ändern eines Verfügbarkeitsreplikats &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)zu unterstützen.  
   
- **'**TCP**://***system-address***:***port***'**  
+ **'** TCP **://***system-address***:***port***'**  
  Gibt eine URL zum Bestimmen einer Endpunkt-URL oder einer URL für das schreibgeschützte Routing an. Die URL-Parameter lauten wie folgt:  
   
  *system-address*  
@@ -321,8 +318,8 @@ CREATE AVAILABILITY GROUP group_name
   
  Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Lesbare sekundäre Replikate &#40;Always On-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)wichtig sind.  
   
- READ_ONLY_ROUTING_URL **='**TCP**://***system-address***:***port***'**  
- Gibt die URL an, die zum Weiterleiten von Verbindungsanforderungen für beabsichtigte Lesevorgänge zu diesem Verfügbarkeitsreplikat verwendet werden soll. Dies ist die URL, die das SQL Server-Datenbankmodul überwacht. In der Regel überwacht die Standardinstanz des SQL Server-Datenbankmoduls auf TCP-Port 1433.  
+ READ_ONLY_ROUTING_URL **='** TCP **://***system-address***:***port***'**  
+ Gibt die URL an, die zum Weiterleiten von Verbindungsanforderungen für beabsichtigte Lesevorgänge zu diesem Verfügbarkeitsreplikat verwendet werden soll. Dies ist die URL, die die SQL Server-Datenbank-Engine überwacht. In der Regel überwacht die Standardinstanz der SQL Server-Datenbank-Engine auf TCP-Port 1433.  
   
  Für eine benannte Instanz können Sie die Portnummer durch das Abfragen der Spalten **port** und **type_desc** der dynamischen [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)-Verwaltungssicht abrufen. Die Serverinstanz verwendet den Transact-SQL-Listener (**type_desc='TSQL'**).  
   
@@ -377,12 +374,12 @@ CREATE AVAILABILITY GROUP group_name
   
  \<ag_name> gibt den Namen der Verfügbarkeitsgruppe an, die eine Hälfte der verteilten Verfügbarkeitsgruppe ausmacht.  
   
- LISTENER **='**TCP**://***system-address***:***port***'**  
+ LISTENER **='** TCP **://***system-address***:***port***'**  
  Gibt den URL-Pfad für den Listener an, der der Verfügbarkeitsgruppe zugeordnet ist.  
   
  Die LISTENER-Klausel ist erforderlich.  
   
- **'**TCP**://***system-address***:***port***'**  
+ **'** TCP **://***system-address***:***port***'**  
  Gibt eine URL für den Listener an, der der Verfügbarkeitsgruppe zugeordnet ist. Die URL-Parameter lauten wie folgt:  
   
  *system-address*  
@@ -503,7 +500,7 @@ CREATE AVAILABILITY GROUP group_name
 |AVAILABILITY_MODE|SYNCHRONOUS_COMMIT|SYNCHRONOUS_COMMIT|ASYNCHRONOUS_COMMIT|Zwei der Replikate verwenden den Modus mit synchronem Commit. Nach der Synchronisierung unterstützen sie Failover ohne Datenverlust. Das dritte Replikat verwendet den Verfügbarkeitsmodus mit asynchronem Commit.|  
 |FAILOVER_MODE|AUTOMATIC|AUTOMATIC|MANUAL|Die Replikate mit synchronem Commit unterstützen automatisches Failover und geplantes manuelles Failover. Das Verfügbarkeitsmodusreplikat mit synchronem Commit unterstützt nur erzwungenes manuelles Failover.|  
 |BACKUP_PRIORITY|30|30|90|Dem Replikat mit asynchronem Commit wird eine höhere Priorität (90) als dem Replikat mit synchronem Commit zugewiesen. Sicherungen erfolgen tendenziell auf der Serverinstanz, die das Replikat mit asynchronem Commit hostet.|  
-|SECONDARY_ROLE|( ALLOW_CONNECTIONS = NO,<br /><br /> READ_ONLY_ROUTING_URL = 'TCP://COMPUTER01:1433' )|( ALLOW_CONNECTIONS = NO,<br /><br /> READ_ONLY_ROUTING_URL = 'TCP://COMPUTER02:1433' )|( ALLOW_CONNECTIONS = READ_ONLY, <br />READ_ONLY_ROUTING_URL = 'TCP://COMPUTER03:1433' )|Nur das Replikat mit asynchronem Commit fungiert als lesbares sekundäres Replikat.<br /><br /> Gibt den Computernamen und die standardmäßige Datenbank-Modulportnummer (1433) an.<br /><br /> Dieses Argument ist optional.|  
+|SECONDARY_ROLE|( ALLOW_CONNECTIONS = NO,<br /><br /> READ_ONLY_ROUTING_URL = 'TCP://COMPUTER01:1433' )|( ALLOW_CONNECTIONS = NO,<br /><br /> READ_ONLY_ROUTING_URL = 'TCP://COMPUTER02:1433' )|( ALLOW_CONNECTIONS = READ_ONLY, <br />READ_ONLY_ROUTING_URL = 'TCP://COMPUTER03:1433' )|Nur das Replikat mit asynchronem Commit fungiert als lesbares sekundäres Replikat.<br /><br /> Gibt den Computernamen und die standardmäßige Datenbank-Engine-Portnummer (1433) an.<br /><br /> Dieses Argument ist optional.|  
 |PRIMARY_ROLE|( ALLOW_CONNECTIONS = READ_WRITE, <br />READ_ONLY_ROUTING_LIST = (COMPUTER03) )|( ALLOW_CONNECTIONS = READ_WRITE, <br />READ_ONLY_ROUTING_LIST = (COMPUTER03) )|( ALLOW_CONNECTIONS = READ_WRITE, <br />READ_ONLY_ROUTING_LIST = NONE )|In der primären Rolle lehnen alle Replikate Verbindungsversuche für beabsichtigte Lesevorgänge ab.<br /><br /> Verbindungsanforderungen für beabsichtigte Lesevorgänge werden an COMPUTER03 weitergeleitet, wenn das lokale Replikat unter der sekundären Rolle ausgeführt wird. Wenn dieses Replikat unter der primären Rolle ausgeführt wird, wird das schreibgeschützte Routing deaktiviert.<br /><br /> Dieses Argument ist optional.|  
 |SESSION_TIMEOUT|10|10|10|In diesem Beispiel wird der Timeoutwert für die Standardsitzung (10) angegeben. Dieses Argument ist optional.|  
   

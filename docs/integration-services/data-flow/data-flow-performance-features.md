@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - Integration Services packages, performance
@@ -30,12 +29,11 @@ caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e4ebcd9be6ee8df9b67428aab2ca9a3ad42d4659
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: facd7d61e5be292ce3205092ee366997c73ee9af
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-flow-performance-features"></a>Funktionen für die Datenflussleistung
   Dieses Thema bietet Vorschläge, wie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete entworfen werden müssen, damit allgemeine Leistungsprobleme vermieden werden. Dieses Thema enthält zudem Informationen zu Funktionen und Tools, die Sie verwenden können, um Leistungsprobleme von Paketen zu beheben.  
@@ -54,7 +52,7 @@ ms.lasthandoff: 04/26/2018
   
 -   Definieren Sie die Standardgröße des Puffers, den der Task verwendet, mithilfe der DefaultBufferSize-Eigenschaft und die maximale Anzahl von Zeilen im Puffer mithilfe der DefaultBufferMaxRows-Eigenschaft. Legen Sie die AutoAdjustBufferSize-Eigenschaft fest, um anzugeben, ob die Standardgröße des Puffers automatisch aus dem Wert der DefaultBufferMaxRows-Eigenschaft berechnet wird. Die Standardpuffergröße beträgt 10 Megabytes, die maximale Puffergröße 2^31-1 Bytes. Der Standardwert für die maximale Anzahl von Zeilen beträgt 10.000.  
   
--   Legen Sie über die EngineThreads-Eigenschaft die Anzahl von Threads fest, die der Task während der Ausführung verwenden kann. Die Eigenschaft liefert dem Datenflussmodul einen Vorschlag für die Anzahl der zu verwendenden Threads. Der Standardwert ist 10 mit einem Mindestwert von 3. Unabhängig von dem für diese Eigenschaft festgelegten Wert verwendet das Modul jedoch nie mehr Threads als notwendig. Das Modul verwendet bei Bedarf auch mehr Threads, als in der Eigenschaft angegeben, um Parallelitätsprobleme zu vermeiden.  
+-   Legen Sie über die EngineThreads-Eigenschaft die Anzahl von Threads fest, die der Task während der Ausführung verwenden kann. Die Eigenschaft liefert der Datenfluss-Engine einen Vorschlag für die Anzahl der zu verwendenden Threads. Der Standardwert ist 10 mit einem Mindestwert von 3. Unabhängig von dem für diese Eigenschaft festgelegten Wert verwendet die Engine jedoch nie mehr Threads als notwendig. Die Engine verwendet bei Bedarf auch mehr Threads, als in der Eigenschaft angegeben, um Parallelitätsprobleme zu vermeiden.  
   
 -   Geben Sie an, ob der Datenflusstask im optimierten Modus ausgeführt werden soll (RunInOptimizedMode-Eigenschaft). Der optimierte Modus verbessert die Leistung, indem nicht verwendete Spalten, Ausgaben und Komponenten aus dem Datenfluss entfernt werden.  
   
@@ -62,17 +60,17 @@ ms.lasthandoff: 04/26/2018
     >  Die gleichnamige Eigenschaft RunInOptimizedMode kann in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] auf Projektebene festgelegt werden, um anzugeben, dass der Datenflusstask beim Debuggen im optimierten Modus ausgeführt werden soll. Diese Eigenschaft überschreibt die RunInOptimizedMode-Eigenschaft von Datenflusstasks zur Entwurfszeit.  
   
 ### <a name="adjust-the-sizing-of-buffers"></a>Anpassen der Puffergrößenanpassung  
- Zum Anpassen der Puffergrößen schätzt das Datenflussmodul zuerst die Größe einer einzelnen Datenzeile. Dann multipliziert es die Größe der Zeile mit dem Wert von DefaultBufferMaxRows, um einen vorläufigen Arbeitswert für die Puffergröße zu erhalten.  
+ Zum Anpassen der Puffergrößen schätzt die Datenfluss-Engine zuerst die Größe einer einzelnen Datenzeile. Dann multipliziert es die Größe der Zeile mit dem Wert von DefaultBufferMaxRows, um einen vorläufigen Arbeitswert für die Puffergröße zu erhalten.  
   
--   Wenn AutoAdjustBufferSize auf TRUE festgelegt ist, verwendet das Datenflussmodul den berechneten Wert als Puffergröße und der Wert von DefaultBufferSize wird ignoriert.  
+-   Wenn AutoAdjustBufferSize auf TRUE festgelegt ist, verwendet die Datenfluss-Engine den berechneten Wert als Puffergröße und der Wert von DefaultBufferSize wird ignoriert.  
   
--   Wenn AutoAdjustBufferSize auf FALSE festgelegt ist, bestimmt das Datenflussmodul die Puffergröße anhand der folgenden Regeln.  
+-   Wenn AutoAdjustBufferSize auf FALSE festgelegt ist, bestimmt die Datenfluss-Engine die Puffergröße anhand der folgenden Regeln.  
   
-    -   Wenn das Ergebnis größer ist als der Wert von DefaultBufferSize, verringert das Modul die Anzahl der Zeilen.  
+    -   Wenn das Ergebnis größer ist als der Wert von DefaultBufferSize, verringert die Engine die Anzahl der Zeilen.  
   
-    -   Wenn das Ergebnis kleiner ist als die intern berechnete minimale Puffergröße, vergrößert das Modul die Anzahl der Zeilen.  
+    -   Wenn das Ergebnis kleiner ist als die intern berechnete minimale Puffergröße, vergrößert die Engine die Anzahl der Zeilen.  
   
-    -   Wenn das Ergebnis zwischen der minimalen Puffergröße und dem Wert von DefaultBufferSize liegt, nähert das Modul die Größe des Puffers so gut wie möglich an das Produkt aus geschätzter Zeilengröße und Wert von DefaultBufferMaxRows an.  
+    -   Wenn das Ergebnis zwischen der minimalen Puffergröße und dem Wert von DefaultBufferSize liegt, nähert die Engine die Größe des Puffers so gut wie möglich an das Produkt aus geschätzter Zeilengröße und Wert von DefaultBufferMaxRows an.  
   
  Verwenden Sie beim Testen der Leistung Ihrer Datenflusstasks zu Anfang die Standardwerte für DefaultBufferSize und DefaultBufferMaxRows. Aktivieren Sie die Protokollierung für den Datenflusstask, und wählen Sie das BufferSizeTuning-Ereignis aus, um festzustellen, wie viele Zeilen jeder Puffer enthält.  
   
@@ -91,7 +89,7 @@ ms.lasthandoff: 04/26/2018
  Stellen Sie sich ein Beispielpaket mit drei Datenflusstasks vor, um zu verstehen, wie diese Eigenschaft funktioniert. Wenn Sie **MaxConcurrentExecutables** auf 3 festlegen, können alle drei Datenflusstasks gleichzeitig ausgeführt werden. Stellen Sie sich jedoch vor, dass jeder Datenflusstask über 10 Quelle-zu-Ziel-Ausführungsstrukturen verfügt. Wenn Sie **MaxConcurrentExecutables** auf 3 festlegen, wird nicht sichergestellt, dass die Ausführungsstrukturen innerhalb jedes Datenflusstasks parallel ausgeführt werden.  
   
 #### <a name="the-enginethreads-property"></a>Die EngineThreads-Eigenschaft  
- Die **EngineThreads** -Eigenschaft ist eine Eigenschaft, die jeder Datenflusstask besitzt. Diese Eigenschaft definiert, wie viele Threads das Datenflussmodul erstellen und parallel ausführen kann. Die **EngineThreads** -Eigenschaft ist gleichermaßen für die Quellthreads, die das Datenflussmodul für Quellen erstellt, und für die Arbeitsthreads, die das Modul für Transformationen und Ziele erstellt, anwendbar. Durch das Festlegen von **EngineThreads** auf 10 kann das Modul bis zu zehn Quellthreads und bis zu zehn Arbeitsthreads erstellen.  
+ Die **EngineThreads** -Eigenschaft ist eine Eigenschaft, die jeder Datenflusstask besitzt. Diese Eigenschaft definiert, wie viele Threads die Datenfluss-Engine erstellen und parallel ausführen kann. Die **EngineThreads** -Eigenschaft ist gleichermaßen für die Quellthreads, die das Datenflussmodul für Quellen erstellt, und für die Arbeitsthreads, die das Modul für Transformationen und Ziele erstellt, anwendbar. Durch das Festlegen von **EngineThreads** auf 10 kann das Modul bis zu zehn Quellthreads und bis zu zehn Arbeitsthreads erstellen.  
   
  Stellen Sie sich das Beispielpaket mit drei Datenflusstasks vor, um zu verstehen, wie diese Eigenschaft funktioniert. Jeder Datenflusstask enthält zehn Quelle-zu-Ziel-Ausführungsstrukturen. Wenn Sie die EngineThreads-Eigenschaft in jedem Datenflusstask auf 10 festlegen, können alle 30 Ausführungsstrukturen gleichzeitig ausgeführt werden.  
   
@@ -203,7 +201,7 @@ ms.lasthandoff: 04/26/2018
   
 -   Video [Leistungsentwurfsmuster zu Microsoft SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409)auf channel9.msdn.com  
   
--   Präsentation zur [Nutzung der Verbesserungen am SQL Server 2008 SSIS-Datenflussmodul bei Microsoft IT](http://go.microsoft.com/fwlink/?LinkId=217660)auf sqlcat.com  
+-   Präsentation zur [Nutzung der Verbesserungen am SQL Server 2008 SSIS-Datenfluss-Engine bei Microsoft IT](http://go.microsoft.com/fwlink/?LinkId=217660)auf sqlcat.com  
   
 -   Video [Ausgeglichener Datenverteiler](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)auf technet.microsoft.com  
   

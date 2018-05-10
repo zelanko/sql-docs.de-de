@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 08/27/2016
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], performance counters
 - performance counters [Integration Services]
@@ -23,15 +22,15 @@ caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 051ace059f36a831bd1c0b52f1b710a7956a0591
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 9b04d580014de1b5c248d299c2da1fce385326ec
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="performance-counters"></a>Performance Counters
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installiert eine Reihe von Leistungsindikatoren, mit denen Sie die Leistung des Datenflussmoduls überwachen können. Sie können beispielsweise den Indikator "Gespoolte Puffer" überwachen, um zu bestimmen, ob Datenpuffer vorübergehend auf den Datenträger geschrieben werden, während ein Paket ausgeführt wird. Diese Auslagerung reduziert die Leistung und weist darauf hin, dass der Computer nicht genügend Arbeitsspeicher hat.  
+  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installiert eine Reihe von Leistungsindikatoren, mit denen Sie die Leistung der Datenfluss-Engine überwachen können. Sie können beispielsweise den Indikator "Gespoolte Puffer" überwachen, um zu bestimmen, ob Datenpuffer vorübergehend auf den Datenträger geschrieben werden, während ein Paket ausgeführt wird. Diese Auslagerung reduziert die Leistung und weist darauf hin, dass der Computer nicht genügend Arbeitsspeicher hat.  
   
 > **HINWEIS:** Wenn Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] auf einem Computer installieren, auf dem [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]ausgeführt wird, und anschließend ein Upgrade des betreffenden Computers auf [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]ausführen, werden beim Upgradeprozess die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Leistungsindikatoren vom Computer entfernt. Zum Wiederherstellen der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Leistungsindikatoren auf dem Computer führen Sie Setup von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Reparaturmodus aus.  
   
@@ -39,15 +38,15 @@ ms.lasthandoff: 04/26/2018
   
 |Leistungsindikator|Description|  
 |-------------------------|-----------------|  
-|Gelesene BLOB-Bytes|Die Anzahl der Bytes der BLOB-Daten (Binary Large Object), die das Datenflussmodul in allen Datenquellen gelesen hat.|  
-|Geschriebene BLOB-Bytes|Die Anzahl der Bytes der BLOB-Daten (Binary Large Object), die das Datenflussmodul in alle Ziele geschrieben hat.|  
-|Verwendete BLOB-Dateien|Die Anzahl von BLOB-Dateien, die das Datenflussmodul zurzeit zum Spoolen verwendet.|  
-|Pufferspeicher|Die zurzeit verwendete Arbeitsspeichermenge. Hier kann sowohl der physische als auch der virtuelle Speicher enthalten sein. Wenn diese Zahl den physischen Speicher übersteigt, vergrößert sich der Wert für **Gespoolte Puffer** , um anzuzeigen, dass Speicherauslagerungsvorgänge zunehmen. Umfangreiche Speicherauslagerungsvorgänge beeinträchtigen die Leistung des Datenflussmoduls.|  
-|Verwendete Puffer|Die Anzahl von Pufferobjekten aller Typen, die alle Datenflusskomponenten und das Datenflussmodul zurzeit verwenden.|  
-|Gespoolte Puffer|Der Anzahl von zurzeit auf den Datenträger geschriebenen Puffern. Wenn dem Datenflussmodul nur wenig physischer Speicher zur Verfügung steht, werden die Puffer, die zurzeit nicht verwendet werden, auf den Datenträger geschrieben und anschließend, falls erforderlich, neu geladen.|  
+|Gelesene BLOB-Bytes|Die Anzahl der Bytes der BLOB-Daten (Binary Large Object), die die Datenfluss-Engine in allen Datenquellen gelesen hat.|  
+|Geschriebene BLOB-Bytes|Die Anzahl der Bytes der BLOB-Daten (Binary Large Object), die die Datenfluss-Engine in alle Ziele geschrieben hat.|  
+|Verwendete BLOB-Dateien|Die Anzahl von BLOB-Dateien, die die Datenfluss-Engine zurzeit zum Spoolen verwendet.|  
+|Pufferspeicher|Die zurzeit verwendete Arbeitsspeichermenge. Hier kann sowohl der physische als auch der virtuelle Speicher enthalten sein. Wenn diese Zahl den physischen Speicher übersteigt, vergrößert sich der Wert für **Gespoolte Puffer** , um anzuzeigen, dass Speicherauslagerungsvorgänge zunehmen. Umfangreiche Speicherauslagerungsvorgänge beeinträchtigen die Leistung der Datenfluss-Engine.|  
+|Verwendete Puffer|Die Anzahl von Pufferobjekten aller Typen, die alle Datenflusskomponenten und die Datenfluss-Engine zurzeit verwenden.|  
+|Gespoolte Puffer|Der Anzahl von zurzeit auf den Datenträger geschriebenen Puffern. Wenn der Datenfluss-Engine nur wenig physischer Speicher zur Verfügung steht, werden die Puffer, die zurzeit nicht verwendet werden, auf den Datenträger geschrieben und anschließend, falls erforderlich, neu geladen.|  
 |Flatpufferspeicher|Die Gesamtanzahl der Bytes des Speichers, der von allen Flatpuffern verwendet wird. Als Flatpuffer werden Speicherblöcke bezeichnet, die von einer Komponente zum Speichern von Daten verwendet werden. Ein Flatpuffer ist ein großer Byteblock, auf den byteweise zugegriffen wird (also ein Byte nach dem anderen).|  
-|Verwendete Flatpuffer|Die Anzahl der vom Datenflussmodul verwendeten Flatpuffer. Alle Flatpuffer sind private Puffer.|  
-|Privater Pufferspeicher|Der Gesamtspeicher, der von allen privaten Puffern verwendet wird. Ein Puffer ist nicht privat, wenn das Datenflussmodul ihn zur Unterstützung des Datenflusses erstellt. Ein Puffer wird als privat bezeichnet, wenn er von einer Transformation für temporäre Arbeitsvorgänge verwendet wird. Private Puffer werden beispielsweise von der Aggregationstransformation verwendet.|  
+|Verwendete Flatpuffer|Die Anzahl der von der Datenfluss-Engine verwendeten Flatpuffer. Alle Flatpuffer sind private Puffer.|  
+|Privater Pufferspeicher|Der Gesamtspeicher, der von allen privaten Puffern verwendet wird. Ein Puffer ist nicht privat, wenn die Datenfluss-Engine ihn zur Unterstützung des Datenflusses erstellt. Ein Puffer wird als privat bezeichnet, wenn er von einer Transformation für temporäre Arbeitsvorgänge verwendet wird. Private Puffer werden beispielsweise von der Aggregationstransformation verwendet.|  
 |Private verwendete Puffer|Die Anzahl der von Transformationen verwendeten Puffer.|  
 |Gelesene Zeilen|Die Anzahl der Zeilen, die von einer Quelle erstellt werden. In dieser Anzahl sind die von der Transformation für Suche aus Verweistabellen gelesenen Zeilen nicht enthalten.|  
 |Geschriebene Zeilen|Die Anzahl der Zeilen, die für ein Ziel verfügbar gemacht werden. In dieser Anzahl sind die in den Zieldatenspeicher geschriebenen Zeilen nicht enthalten.|  
@@ -83,7 +82,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
 -   Supportartikel [Der SSIS-Leistungsindikator ist im Systemmonitor nicht mehr verfügbar, wenn Sie ein Upgrade auf Windows Server 2008 ausführen](http://go.microsoft.com/fwlink/?LinkId=235319)auf support.microsoft.com.  
 
 ## <a name="add-a-log-for-data-flow-performance-counters"></a>Hinzufügen eines Protokolls für Datenfluss-Leistungsindikatoren
-  In diesem Verfahren wird beschrieben, wie ein Protokoll für die vom Datenflussmodul bereitgestellten Leistungsindikatoren hinzugefügt wird.  
+  In diesem Verfahren wird beschrieben, wie ein Protokoll für die von der Datenfluss-Engine bereitgestellten Leistungsindikatoren hinzugefügt wird.  
   
 > [!NOTE]  
 >  Wenn Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] auf einem Computer installieren, auf dem [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]ausgeführt wird, und anschließend ein Upgrade des betreffenden Computers auf [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]ausführen, werden beim Upgradeprozess die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Leistungsindikatoren vom Computer entfernt. Zum Wiederherstellen der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Leistungsindikatoren auf dem Computer führen Sie Setup von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Reparaturmodus aus.  

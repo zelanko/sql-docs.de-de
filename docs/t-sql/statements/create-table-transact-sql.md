@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -53,12 +51,11 @@ caps.latest.revision: 256
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 9f0a96fb3d9ffabc97ae32afbaa2462a34ec14e3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3768086c0c4e959586eb1ab8620dbdfda4cabe9a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -1261,7 +1258,9 @@ SELECT * FROM tempdb.sys.database_files
   
 ## <a name="permissions"></a>Berechtigungen  
  Es sind die CREATE TABLE-Berechtigung in der Datenbank und die ALTER-Berechtigung für das Schema erforderlich, in der die Tabelle erstellt wird.  
-  
+ 
+ Wenn in der CREATE TABLE-Anweisung eine Spalte als Spalte eines benutzerdefinierten Typs definiert wird, ist die REFERENCES-Berechtigung für den benutzerdefinierten Typ erforderlich. 
+ 
  Wenn in der CREATE TABLE-Anweisung eine Spalte als Spalte eines CLR-benutzerdefinierten Typs definiert wird, ist entweder der Besitz des Typs oder die REFERENCES-Berechtigung für den Typ erforderlich.  
   
  Wenn einer Spalte in der CREATE TABLE-Anweisung eine XML-Schemaauflistung zugeordnet ist, ist entweder der Besitz der XML-Schemaauflistung oder die REFERENCES-Berechtigung für die Auflistung erforderlich.  
@@ -1608,7 +1607,7 @@ WITH
 ```  
   
 ### <a name="r-creating-a-table-with-encrypted-columns"></a>R. Erstellen einer Tabelle mit verschlüsselten Spalten  
- Im folgenden Beispiel wird eine Tabelle mit zwei verschlüsselten Spalten erstellt. Weitere Informationen finden Sie unter [Always Encrypted &#40;Datenbankmodul&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
+ Im folgenden Beispiel wird eine Tabelle mit zwei verschlüsselten Spalten erstellt. Weitere Informationen finden Sie unter [Immer verschlüsselt &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
   
 ```  
 CREATE TABLE Customers (  

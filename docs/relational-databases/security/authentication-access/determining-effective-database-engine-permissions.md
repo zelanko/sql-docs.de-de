@@ -1,17 +1,16 @@
 ---
-title: Ermitteln effektiver Datenbankmodulberechtigungen | Microsoft-Dokumentation
+title: Ermitteln effektiver Datenbank-Engine-Berechtigungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions, effective
 - effective permissions
@@ -20,18 +19,17 @@ caps.latest.revision: 5
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7d4142a9779b689d26d775d33926496e78fec7d1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0a2e2c205558f81b2141739bdc9b53bbb85d55f7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="determining-effective-database-engine-permissions"></a>Ermitteln effektiver Datenbankmodulberechtigungen
+# <a name="determining-effective-database-engine-permissions"></a>Ermitteln effektiver Datenbank-Engine-Berechtigungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-In diesem Artikel wird beschrieben, wie Sie feststellen können, wer über Berechtigungen für verschiedene Objekte in der SQL Server-Datenbank-Engine verfügt. SQL Server implementiert zwei Berechtigungssysteme für das Datenbankmodul. Ein älteres System fester Datenbankrollen hat vorkonfigurierte Berechtigungen. Ab SQL Server 2005 ist ein flexibleres und präziseres System verfügbar. (Die Informationen in diesem Artikel gelten für SQL Server ab Version 2005. Einige Arten von Berechtigungen sind in einigen Versionen von SQL Server nicht verfügbar.)
+In diesem Artikel wird beschrieben, wie Sie feststellen können, wer über Berechtigungen für verschiedene Objekte in der SQL Server-Datenbank-Engine verfügt. SQL Server implementiert zwei Berechtigungssysteme für die Datenbank-Engine. Ein älteres System fester Datenbankrollen hat vorkonfigurierte Berechtigungen. Ab SQL Server 2005 ist ein flexibleres und präziseres System verfügbar. (Die Informationen in diesem Artikel gelten für SQL Server ab Version 2005. Einige Arten von Berechtigungen sind in einigen Versionen von SQL Server nicht verfügbar.)
 
 >  [!IMPORTANT] 
 >  * Die effektiven Berechtigungen sind das Aggregat von beiden Berechtigungssystemen. 
@@ -162,6 +160,8 @@ Die Details der Syntax finden Sie unter [HAS_PERMS_BY_NAME](../../../t-sql/funct
 
 ## <a name="see-also"></a>Siehe auch:
 
-[Erste Schritte mit Berechtigungen für das Datenbankmodul](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)    
-[Tutorial: Erste Schritte mit dem Datenbankmodul](Tutorial:%20Getting%20Started%20with%20the%20Database%20Engine.md) 
+
+  [Erste Schritte mit Berechtigungen für die Datenbank-Engine](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)    
+
+  [Tutorial: Erste Schritte mit der Datenbank-Engine](Tutorial:%20Getting%20Started%20with%20the%20Database%20Engine.md) 
 

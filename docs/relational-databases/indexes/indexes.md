@@ -3,29 +3,25 @@ title: Indizes | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/21/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: indexes
+ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - index types [SQL Server]
 ms.assetid: 00863b10-e77c-44c5-8ac2-bb4ac454eec6
 caps.latest.revision: 45
-author: barbkess
-ms.author: barbkess
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ca8b8d6f3e02783fa481df07228cf914f450a94d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6532283a3315ad60587ce6fd126f91859f42f29f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="indexes"></a>Indizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +42,7 @@ In der nachfolgenden Tabelle sind die Typen von Indizes aufgelistet, die in [!IN
 |Gefiltert|Ein optimierter nicht gruppierter Index, der sich besonders für Abfragen eignet, bei denen aus einer fest definierten Teilmenge von Daten ausgewählt wird. Dieser verwendet ein Filterprädikat, um einen Teil der Zeilen in der Tabelle zu indizieren. Mit einem sorgfältig entworfenen gefilterten Index können im Gegensatz zu Tabellenindizes die Abfrageleistung verbessert und der Aufwand für die Indexverwaltung und -speicherung reduziert werden.|[Erstellen gefilterter Indizes](../../relational-databases/indexes/create-filtered-indexes.md)<br /><br /> [Filtered Index Design Guidelines (Richtlinien zum Entwerfen von gefilterten Indizes)](../../relational-databases/sql-server-index-design-guide.md#Filtered)|  
 |Räumlich|Mit einem räumlichen Index können bestimmte Vorgänge an räumlichen Objekten (*räumliche Daten*) in einer Spalte vom Datentyp **geometry** effizienter ausgeführt werden. Der räumliche Index verringert die Anzahl von Objekten, auf die relativ aufwendige räumliche Vorgänge angewendet werden müssen.|[Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md)|  
 |XML|Eine aufgeteilte und dauerhafte Darstellung der XML-BLOBS (Binary Large Objects) in der **XML**-Datentypspalte.|[XML-Indizes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)|  
-|Volltext|Ein besonderer Typ eines tokenbasierten funktionellen Indexes, der durch das Microsoft-Volltextmodul für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erstellt und verwaltet wird. Er stellt effiziente Unterstützung für komplexe Wortsuchvorgänge in Zeichenfolgendaten bereit.|[Auffüllen von Volltextindizes](../../relational-databases/search/populate-full-text-indexes.md)|  
+|Volltext|Ein besonderer Typ eines tokenbasierten funktionellen Indexes, der durch die Microsoft-Volltext-Engine für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt und verwaltet wird. Er stellt effiziente Unterstützung für komplexe Wortsuchvorgänge in Zeichenfolgendaten bereit.|[Auffüllen von Volltextindizes](../../relational-databases/search/populate-full-text-indexes.md)|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  [SQL Server Index Design Guide (Handbuch zum Erstellen von SQL Server-Indizes)](../../relational-databases/sql-server-index-design-guide.md) [SORT_IN_TEMPDB Option For Indexes (Die SORT_IN_TEMPDB-Option für Indizes)](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)  

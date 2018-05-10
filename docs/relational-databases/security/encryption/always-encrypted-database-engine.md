@@ -1,17 +1,16 @@
 ---
-title: Always Encrypted (Datenbankmodul) | Microsoft-Dokumentation
+title: Always Encrypted (Datenbank-Engine) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - encryption [SQL Server], Always Encrypted
 - Always Encrypted
@@ -23,15 +22,14 @@ caps.latest.revision: 58
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9852b7f0bba5e1cb589403a1f0b43d74d1aa7aac
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c888fca8204c90b5d2ecf24838da19c2acf5624e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="always-encrypted-database-engine"></a>„Immer verschlüsselt“ (Datenbankmodul)
+# <a name="always-encrypted-database-engine"></a>Immer verschlüsselt (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   ![Immer verschlüsselt](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
@@ -57,9 +55,9 @@ ms.lasthandoff: 04/16/2018
 
 Sie können Always Encrypted für individuelle Datenbankspalten konfigurieren, die Ihre sensiblen Daten enthalten. Beim Einrichten der Verschlüsselung für eine Spalte geben Sie die Informationen über den Verschlüsselungsalgorithmus an sowie kryptografische Schlüssel für den Schutz der Daten in der Spalte. Always Encrypted verwendet zwei Schlüsseltypen: Spaltenverschlüsselungsschlüssel und Spaltenhauptschlüssel. Ein Spaltenverschlüsselungsschlüssel wird verwendet, um Daten in einer verschlüsselten Spalte zu verschlüsseln. Ein Spaltenhauptschlüssel ist ein Schlüssel zum Schutz von Schlüsseln, der einen oder mehrere Spaltenverschlüsselungsschlüssel verschlüsselt. 
 
-Das Datenbankmodul speichert die Verschlüsselungskonfiguration für jede Spalte in den Datenbankmetadaten. Beachten Sie, dass das Datenbankmodul jedoch nie Schlüssel jedes Typs als Klartext speichert. Es speichert nur verschlüsselte Werte von Spaltenverschlüsselungsschlüsseln sowie die Information über den Speicherort der Spaltenhauptschlüssel, die in externen vertrauenswürdigen Schlüsselspeichern gespeichert werden, z.B. in Azure Key Vault, im Windows-Zertifikatspeicher, auf einem Clientcomputer oder einem Hardwaresicherheitsmodul.
+Die Datenbank-Engine speichert die Verschlüsselungskonfiguration für jede Spalte in den Datenbankmetadaten. Beachten Sie, dass die Datenbank-Engine jedoch nie Schlüssel jedes Typs als Klartext speichert. Es speichert nur verschlüsselte Werte von Spaltenverschlüsselungsschlüsseln sowie die Information über den Speicherort der Spaltenhauptschlüssel, die in externen vertrauenswürdigen Schlüsselspeichern gespeichert werden, z.B. in Azure Key Vault, im Windows-Zertifikatspeicher, auf einem Clientcomputer oder einem Hardwaresicherheitsmodul.
 
-Eine Anwendung muss einen Always Encrypted-fähigen Clienttreiber verwenden, um auf Daten zuzugreifen, die in einer verschlüsselten Spalte als Klartext gespeichert sind. Wenn eine Anwendung eine parametrisierte Abfrage ausgibt, arbeitet der Treiber transparent mit dem Datenbankmodul zusammen, um zu ermitteln, welche Parameter verschlüsselte Spalten anvisieren und deshalb verschlüsselt werden müssen. Für jeden Parameter, der verschlüsselt werden muss, ruft der Treiber die Informationen über den Verschlüsselungsalgorithmus und den verschlüsselten Wert des Spaltenverschlüsselungsschlüssels für die Spalte, die Parameterziele sowie den Speicherort des entsprechenden Spaltenhauptschlüssels ab.
+Eine Anwendung muss einen Always Encrypted-fähigen Clienttreiber verwenden, um auf Daten zuzugreifen, die in einer verschlüsselten Spalte als Klartext gespeichert sind. Wenn eine Anwendung eine parametrisierte Abfrage ausgibt, arbeitet der Treiber transparent mit der Datenbank-Engine zusammen, um zu ermitteln, welche Parameter verschlüsselte Spalten anvisieren und deshalb verschlüsselt werden müssen. Für jeden Parameter, der verschlüsselt werden muss, ruft der Treiber die Informationen über den Verschlüsselungsalgorithmus und den verschlüsselten Wert des Spaltenverschlüsselungsschlüssels für die Spalte, die Parameterziele sowie den Speicherort des entsprechenden Spaltenhauptschlüssels ab.
 
 Als nächstes kontaktiert der Treiber den Schlüsselspeicher, der den Spaltenhauptschlüssel enthält, um den verschlüsselten Wert des Spaltenverschlüsselungsschlüssels zu entschlüsseln und anschließend verwendet er den Klartext-Verschlüsselungsschlüssel zum Entschlüsseln der Parameter. Der sich ergebende Klartext-Spaltenverschlüsselungsschlüssel wird zwischengespeichert, um die Anzahl der Roundtrips zum Schlüsselspeicher für die nachfolgende Verwendung des gleichen Spaltenverschlüsselungsschlüssels zu verringern. Der Treiber ersetzt die Klartextwerte der Parameter, die verschlüsselte Spalten mit den verschlüsselten Werten anvisieren und übermittelt die Abfrage an den Server zur Verarbeitung.
 
@@ -71,7 +69,7 @@ Weitere Informationen zur Entwicklung von Anwendungen mit Always Encrypted mit b
 
   
 ## <a name="selecting--deterministic-or-randomized-encryption"></a>Auswählen der deterministischen oder zufälligen Verschlüsselung  
- Das Datenbankmodul wird nie auf Grundlage von Klartextdaten ausgeführt, die in verschlüsselten Spalten gespeichert sind, doch es unterstützt einige Abfragen für verschlüsselte Daten je nach Verschlüsselungstyp für die Spalte. Always Encrypted unterstützt zwei Arten von Verschlüsselung: die zufällige und die deterministische Verschlüsselung.  
+ Die Datenbank-Engine wird nie auf Grundlage von Klartextdaten ausgeführt, die in verschlüsselten Spalten gespeichert sind, doch es unterstützt einige Abfragen für verschlüsselte Daten je nach Verschlüsselungstyp für die Spalte. Always Encrypted unterstützt zwei Arten von Verschlüsselung: die zufällige und die deterministische Verschlüsselung.  
   
 - Die deterministische Verschlüsselung generiert immer denselben verschlüsselten Wert für jeden angegebenen Klartextwert. Die deterministische Verschlüsselung ermöglicht die Punktsuche, Gleichheitsverknüpfung, Gruppierung und Indizierung in verschlüsselten Spalten. Sie erlaubt jedoch auch, dass nicht autorisierte Benutzer Informationen zu verschlüsselten Werten erraten, indem sie die Muster in der verschlüsselten Spalte untersucht, insbesondere wenn es eine kleine Anzahl von möglichen verschlüsselten Werten wie TRUE/FALSE oder die Region Norden/Süden/Osten/Westen gibt. Die deterministische Verschlüsselung muss eine Spaltensortierung mit einer binary2-Sortierreihenfolge für Zeichenspalten verwenden.
 
@@ -83,7 +81,7 @@ Informationen zu kryptografischen Algorithmen von Always Encrypted finden Sie un
 
 ## <a name="configuring-always-encrypted"></a>Konfigurieren von Always Encrypted
 
- Die Erstinstallation von Always Encrypted in einer Datenbank umfasst die Generierung von Always Encrypted-Schlüsseln, das Erstellen von Schlüsselmetadaten, die Konfigurierung von Verschlüsselungseigenschaften von ausgewählten Datenbankspalten, und/oder das Verschlüsseln von Daten, die möglicherweise bereits in Spalten vorhanden sind, die verschlüsselt werden müssen. Bitte beachten Sie, dass einige dieser Aufgaben nicht in Transact-SQL unterstützt werden und die Verwendung von clientseitigen Tools erfordern. Da Always Encrypted-Schlüssel und geschützte sensible Daten nie dem Server in Klartext offengelegt werden, kann das Datenbankmodul nicht an der Schlüsselbereitstellung oder der Ausführung von Datenverschlüsselung oder Entschlüsselungsvorgängen beteiligt werden. Sie können SQL Server Management Studio oder PowerShell verwenden, um solche Aufgaben auszuführen. 
+ Die Erstinstallation von Always Encrypted in einer Datenbank umfasst die Generierung von Always Encrypted-Schlüsseln, das Erstellen von Schlüsselmetadaten, die Konfigurierung von Verschlüsselungseigenschaften von ausgewählten Datenbankspalten, und/oder das Verschlüsseln von Daten, die möglicherweise bereits in Spalten vorhanden sind, die verschlüsselt werden müssen. Bitte beachten Sie, dass einige dieser Aufgaben nicht in Transact-SQL unterstützt werden und die Verwendung von clientseitigen Tools erfordern. Da Always Encrypted-Schlüssel und geschützte sensible Daten nie dem Server in Klartext offengelegt werden, kann die Datenbank-Engine nicht an der Schlüsselbereitstellung oder der Ausführung von Datenverschlüsselung oder Entschlüsselungsvorgängen beteiligt werden. Sie können SQL Server Management Studio oder PowerShell verwenden, um solche Aufgaben auszuführen. 
 
 |Task|SSMS|PowerShell|T-SQL|
 |:---|:---|:---|:---

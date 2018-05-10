@@ -1,7 +1,7 @@
 ---
 title: Replikation, Änderungsnachverfolgung und Change Data Capture (Verfügbarkeitsgruppen) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/02/2017
+ms.date: 04/25/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 39f67dedc8724fdff327229fc39d0985e4843cb7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1036f577a72aa66fd2e91a9ac956fb8d30cbbd35
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Replikation, Änderungsnachverfolgung und Change Data Capture (Always On-Verfügbarkeitsgruppen)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ ms.lasthandoff: 04/16/2018
   
      Im folgenden Beispiel wird der Aufzeichnungsauftrag erstellt.  
   
-    ```  
+    ```sql  
     EXEC sys.sp_cdc_add_job @job_type = 'capture';  
     ```  
   
@@ -111,7 +111,7 @@ ms.lasthandoff: 04/16/2018
   
      Außerdem muss immer ein lokaler Cleanupauftrag erstellt werden, um sicherzustellen, dass der entsprechende Cleanup auch für die neue primäre Datenbank ausgeführt wird. Im folgenden Beispiel wird der Cleanupauftrag erstellt.  
   
-    ```  
+    ```sql  
     EXEC sys.sp_cdc_add_job @job_type = 'cleanup';  
     ```  
   
@@ -137,7 +137,7 @@ ms.lasthandoff: 04/16/2018
   
      Verwenden Sie die folgenden Abfrage, um zu bestimmen, ob ein Verfügbarkeitsgruppenlistener-Name für die Verfügbarkeitsgruppe definiert wurde, die die CDC-Datenbank hostet. Die Abfrage gibt den Verfügbarkeitsgruppenlistener-Namen zurück, wenn er erstellt wurde.  
   
-    ```  
+    ```sql  
     SELECT dns_name   
     FROM sys.availability_group_listeners AS l  
     INNER JOIN sys.availability_databases_cluster AS d  
@@ -153,7 +153,7 @@ ms.lasthandoff: 04/16/2018
   
      Die folgende Abfrage kann verwendet werden, um zu bestimmen, ob eine schreibgeschützte Absicht benötigt wird, um eine Verbindung mit einem lesbaren sekundären Replikat herzustellen.  
   
-    ```  
+    ```sql  
     SELECT g.name AS AG, replica_server_name, secondary_role_allow_connections_desc  
     FROM sys.availability_replicas AS r  
     JOIN sys.availability_groups AS g  
@@ -165,7 +165,7 @@ ms.lasthandoff: 04/16/2018
   
      Wenn **sp_addlinkedserver** zum Erstellen eines Verbindungsservers verwendet wird, um auf das sekundäre Element zuzugreifen, wird der *@datasrc* -Parameter für den Verfügbarkeitsgruppenlistener-Namen oder den expliziten Servernamen verwendet, und der *@provstr* -Parameter wird verwendet, um die schreibgeschützte Absicht anzugeben.  
   
-    ```  
+    ```sql  
     EXEC sp_addlinkedserver   
     @server = N'linked_svr',   
     @srvproduct=N'SqlServer',  
@@ -207,8 +207,6 @@ Wenn Change Data Capture in einer Datenbank deaktiviert werden muss, die Teil ei
   
     -   Pullabonnement: Die Verleger-, Verteiler- und Abonnentendatenbank müssen mindestens unter [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]ausgeführt werden. Das liegt daran, dass der Merge-Agent des Abonnenten verstehen muss, wie eine Verfügbarkeitsgruppe ein Failover auf die sekundäre Datenbank ausführen kann.  
   
--   Das Speichern der Verteilungsdatenbank in einer Verfügbarkeitsgruppe wird nicht unterstützt.  
-  
 -   Die Verlegerinstanzen erfüllen alle zur Teilnahme an einer Always On-Verfügbarkeitsgruppe erforderlichen Voraussetzungen. Weitere Informationen finden Sie unter [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)unterstützt.  
   
 ### <a name="restrictions"></a>Restrictions  
@@ -224,7 +222,7 @@ Wenn Change Data Capture in einer Datenbank deaktiviert werden muss, die Teil ei
   
  *Das Failover zur Replikatdatenbank erfolgt manuell. Automatisches Failover wird nicht bereitgestellt.  
   
- **Die Verteilerdatenbank wird für die Verwendung mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] oder der Datenbankspiegelung nicht unterstützt.  
+ **Die Verteilerdatenbank wird für die Verwendung mit der Datenbankspiegelung nicht unterstützt.  
   
 ### <a name="considerations"></a>Weitere Überlegungen  
   

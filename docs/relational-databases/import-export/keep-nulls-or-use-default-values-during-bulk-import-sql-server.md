@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 09/20/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: import-export
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bulk importing [SQL Server], null values
 - bulk importing [SQL Server], default values
@@ -27,13 +25,12 @@ caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 73c367d0d9f1f985c4e65cfdd821ef4534c5b2c6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3d753ac39e0cb5f0eb19ab5c0ed146a80f743ab2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Beibehalten von NULL-Werten oder Verwenden von Standardwerten während des Massenimports (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -147,7 +144,7 @@ Die nachstehenden Beispiele verwenden die oben erstellte Datenbank, Datendatei u
 
 ### **Verwenden von [bcp](../../tools/bcp-utility.md) und Beibehalten von NULL-Werten ohne Formatdatei**<a name="bcp_null"></a>
 
-Schalter**-k** .  Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
+Schalter **-k** .  Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 
 ```cmd
 REM Truncate table (for testing)
@@ -161,7 +158,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 ```
   
 ### **Verwenden von [bcp](../../tools/bcp-utility.md) und Beibehalten von NULL-Werten mit einer [Nicht-XML-Formatdatei](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_null_fmt"></a>
-Schalter**-k** und **-f** . Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
+Schalter **-k** und **-f** . Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 
 ```cmd
 REM Truncate table (for testing)
@@ -189,7 +186,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 ```
   
 ### **Verwenden von [bcp](../../tools/bcp-utility.md) und Verwenden von Standardwerten mit einer [Nicht-XML-Formatdatei](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_default_fmt"></a>
-Schalter**-f** .  Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
+Schalter **-f** .  Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 
 ```cmd
 REM Truncate table (for testing)

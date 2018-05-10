@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: event-classes
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Broker:Conversation event class
 ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
@@ -19,13 +18,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d2cb10be89108ddb8f7a11b34db0a70b7f7f9da8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 36dbc61ba7241092d717a0d446f7bc437e44b59c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation-Ereignisklasse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -79,7 +77,8 @@ ms.lasthandoff: 04/16/2018
 |8|Received END CONVERSATION WITH ERROR|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert ein **Received END CONVERSATION WITH ERROR** -Ereignis, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen benutzerdefinierten Fehler von der anderen Seite der Konversation empfängt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert dieses Ereignis nicht, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen vom Broker definierten Fehler empfängt.|  
 |9|Received Broker Error Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert ein **Received Broker Error Message** -Ereignis, wenn [!INCLUDE[ssSB](../../includes/sssb-md.md)] eine vom Broker definierte Fehlermeldung von der anderen Seite der Konversation empfängt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert dieses Ereignis nicht, wenn [!INCLUDE[ssSB](../../includes/sssb-md.md)] eine Fehlermeldung empfängt, die von einer Anwendung generiert wurde.<br /><br /> Wenn z. B. die aktuelle Datenbank eine Standardroute zu einer Weiterleitungsdatenbank enthält, leitet [!INCLUDE[ssSB](../../includes/sssb-md.md)] eine Nachricht mit einem unbekannten Dienstnamen zur Weiterleitungsdatenbank weiter. Wenn diese Datenbank die Nachricht nicht weiterleiten kann, erstellt der Broker in dieser Datenbank eine Fehlermeldung und gibt diese Fehlermeldung an die aktuelle Datenbank zurück. Wenn die aktuelle Datenbank die vom Broker generierte Fehlermeldung von der Weiterleitungsdatenbank empfängt, generiert die aktuelle Datenbank ein **Received Broker Error Message** -Ereignis.|  
 |10|Received END CONVERSATION Ack|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert ein **Received END CONVERSATION Ack** -Ereignis, wenn die andere Seite einer Konversation eine von dieser Seite der Konversation gesendete End Dialog-Nachricht oder eine Fehlermeldung empfängt.|  
-|11|BEGIN DIALOG|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert ein **BEGIN DIALOG** -Ereignis, wenn das Datenbankmodul einen BEGIN DIALOG-Befehl ausführt.|  
+|11|BEGIN DIALOG|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert ein **BEGIN DIALOG** -Ereignis, wenn die Datenbank-Engine einen BEGIN DIALOG-Befehl ausführt.|  
 |12|Dialog Created|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert ein **Dialogfeld Created** -Ereignis, wenn [!INCLUDE[ssSB](../../includes/sssb-md.md)] einen Endpunkt für einen Dialog erstellt. [!INCLUDE[ssSB](../../includes/sssb-md.md)] erstellt jedes Mal einen Endpunkt, wenn ein neuer Dialog eingerichtet wird, unabhängig davon, ob die aktuelle Datenbank der Initiator oder das Ziel des Dialogs ist.|  
 |13|END CONVERSATION WITH CLEANUP|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert ein END CONVERSATION WITH CLEANUP-Ereignis, wenn [!INCLUDE[ssDE](../../includes/ssde-md.md)] eine END CONVERSATION-Anweisung ausführt, die eine WITH CLEANUP-Klausel enthält.|  
   

@@ -4,14 +4,11 @@ ms.custom: ''
 ms.date: 01/04/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
-ms.component: logs
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-transaction-log
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], about
 - databases [SQL Server], transaction logs
@@ -21,12 +18,11 @@ caps.latest.revision: 65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: f1986e7d788080609dd13d91947176f62cbf451a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 877c48ecbe9befaf0bb04f34a866dd8fee6671bc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-transaction-log-sql-server"></a>Das Transaktionsprotokoll [SQL Server]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +56,7 @@ Wenn ein Server ausfällt, bleiben die Datenbanken möglicherweise in einem Stat
 ### <a name="rolling-a-restored-database-file-filegroup-or-page-forward-to-the-point-of-failure"></a>Ausführen eines Rollforwards für eine wiederhergestellte Datenbank, Datei, Dateigruppe oder Seite bis zu dem Punkt, an dem der Fehler aufgetreten ist
 Nach einem Hardwareverlust oder Datenträgerfehler, der sich auf die Datendateien auswirkt, können Sie die Datenbank so wiederherstellen, wie sie zum Zeitpunkt des Ausfalls vorlag. Sie stellen zuerst die letzte vollständige und die letzte differenzielle Datenbanksicherung und anschließend die nachfolgende Folge von Transaktionsprotokollsicherungen bis zu dem Punkt wieder her, an dem der Fehler aufgetreten ist. 
 
-Beim Wiederherstellen der einzelnen Protokollsicherungen übernimmt das Datenbankmodul erneut sämtliche im Protokoll aufgezeichneten Änderungen, um für alle Transaktionen einen Rollforward auszuführen. Sobald die letzte Protokollsicherung wiederhergestellt ist, verwendet das Datenbankmodul die Protokollinformationen, um für sämtliche Transaktionen einen Rollback auszuführen, die zu diesem Zeitpunkt noch nicht abgeschlossen waren. 
+Beim Wiederherstellen der einzelnen Protokollsicherungen übernimmt die Datenbank-Engine erneut sämtliche im Protokoll aufgezeichneten Änderungen, um für alle Transaktionen einen Rollforward auszuführen. Sobald die letzte Protokollsicherung wiederhergestellt ist, verwendet die Datenbank-Engine die Protokollinformationen, um für sämtliche Transaktionen einen Rollback auszuführen, die zu diesem Zeitpunkt noch nicht abgeschlossen waren. 
 
 ### <a name="supporting-transactional-replication"></a>Unterstützen der Transaktionsreplikation
 Der Protokolllese-Agent überwacht das Transaktionsprotokoll jeder für die Transaktionsreplikation konfigurierten Datenbank und kopiert die für die Replikation markierten Transaktionen aus dem Transaktionsprotokoll in die Verteilungsdatenbank. Weitere Informationen finden Sie unter [Funktionsweise der Transaktionsreplikation](http://msdn.microsoft.com/library/ms151706.aspx).

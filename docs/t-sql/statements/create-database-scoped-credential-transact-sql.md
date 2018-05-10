@@ -1,15 +1,14 @@
 ---
-title: "Erstellen von ausgelegte Anmeldeinformationen für die Datenbank (Transact-SQL) | Microsoft Docs"
-ms.custom: 
-ms.date: 02/27/2017
-ms.prod: sql-non-specified
+title: CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL) | Microsoft-Dokumentation
+ms.custom: ''
+ms.date: 02/28/2018
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATABASE SCOPED CREDENTIAL
@@ -23,21 +22,21 @@ helpviewer_keywords:
 - DATABASE SCOPED CREDENTIAL statement
 - credentials [SQL Server], DATABASE SCOPED CREDENTIAL statement
 ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 6b0cb350ffccb7ad61335de314765f2b85dc0821
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
-ms.translationtype: MT
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9606bc7e70ca12fcdd9edf145955d469ad87ae54
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="create-database-scoped-credential-transact-sql"></a>Erstellen von ausgelegte Anmeldeinformationen für die Datenbank (Transact-SQL)
+# <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  Erstellt einen Datenbank-Anmeldeinformationen. Datenbank-Anmeldeinformationen wird nicht für einen Server Anmelde- oder Benutzer zugeordnet. Die Anmeldeinformationen werden von der Datenbank verwendet, um den Zugriff auf den externen Speicherort jedes Mal, wenn die Datenbank einen Vorgang ausführt, der Zugriff benötigt.  
+  Erstellt Datenbank-Anmeldeinformationen. Datenbank-Anmeldeinformationen werden nicht einer Serveranmeldung oder einem Datenbankbenutzer zugeordnet. Stattdessen werden sie von der Datenbank verwendet, damit immer dann der Zugriff auf den externen Speicherort gestattet wird, wenn die Datenbank einen Vorgang ausführt und hierfür eine Zugriffsberechtigung benötigt.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,46 +52,46 @@ WITH IDENTITY = 'identity_name'
   
 ## <a name="arguments"></a>Argumente  
  *credential_name*  
- Gibt den Namen der datenbankweite Anmeldeinformationen erstellt wird. *Credential_name* darf nicht mit dem Nummernzeichen (#) beginnen. Systemanmeldeinformationen beginnen mit zwei Nummernzeichen (##).  
+ Gibt den Namen für die datenbankweit gültigen Anmeldeinformationen an, die erstellt werden sollen. *credential_name* darf nicht mit dem Nummernzeichen (#) beginnen. Systemanmeldeinformationen beginnen mit zwei Nummernzeichen (##).  
   
- Identität **= "***Identity_name***"**  
- Gibt den Namen des Kontos an, das beim Herstellen einer Verbindung außerhalb des Servers verwendet wird. Um eine Datei aus dem Azure-Blob-Speicher zu importieren, muss der Name der Identität `SHARED ACCESS SIGNATURE`.  Weitere Informationen zu SAS finden Sie unter [mithilfe von freigegebenen Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).  
+ IDENTITY **='***identity_name***'**  
+ Gibt den Namen des Kontos an, das beim Herstellen einer Verbindung außerhalb des Servers verwendet wird. Der Identitätsname muss `SHARED ACCESS SIGNATURE` entsprechen, um eine Datei aus Azure Blob Storage mithilfe eines Freigabeschlüssels zu importieren. Jeder gültige Wert kann für die Identität verwendet werden, um Daten in SQL Data Warehouse zu laden. Weitere Informationen zu SAS finden Sie unter [Verwenden von Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).  
   
- Geheime Schlüssel **= "***geheimen***"**  
- Gibt den geheimen Bereich an, der für die ausgehende Authentifizierung erforderlich ist. `SECRET`ist erforderlich, um eine Datei aus dem Azure-Blob-Speicher zu importieren.   
+ SECRET **='***secret***'**  
+ Gibt den geheimen Bereich an, der für die ausgehende Authentifizierung erforderlich ist. `SECRET` ist erforderlich, um eine Datei aus Azure Blob Storage zu importieren. Der geheime Schlüssel muss der Azure Storage-Schlüssel sein, um von Azure Blob Storage in SQL Data Warehouse zu laden.  
 >  [!WARNING]
->  Die SAS-Schlüssel-Wert beginnt mit einem "?" (Fragezeichen). Wenn Sie den SAS-Schlüssel verwenden, müssen Sie das führende entfernen "?". Andernfalls können Ihren Aufwand blockiert werden.  
+>  Der SAS-Schlüssel beginnt mit einem Fragezeichen (?). Wenn Sie den SAS-Schlüssel verwenden, müssen Sie das vorangestellte Fragezeichen entfernen. Andernfalls funktioniert der Vorgang nicht.  
   
-## <a name="remarks"></a>Hinweise  
- Datenbankweit gültigen Anmeldeinformationen wird ein Datensatz, der die Authentifizierungsinformationen, die erforderlich sind enthalten, für die Verbindung zu einer Ressource außerhalb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die meisten Anmeldeinformationen schließen einen Windows-Benutzer und ein Kennwort ein.  
+## <a name="remarks"></a>Remarks  
+ Datenbezogene Anmeldeinformationen sind in einem Datensatz gespeichert, in dem die Authentifizierungsinformationen enthalten sind, die zum Herstellen einer Verbindung mit einer Ressource außerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erforderlich sind. Die meisten Anmeldeinformationen schließen einen Windows-Benutzer und ein Kennwort ein.  
   
- Vor dem Erstellen einer Datenbank Anmeldeinformationen als Bereiche besitzen, muss die Datenbank einen Hauptschlüssel zum Schützen der Anmeldeinformationen haben. Weitere Informationen finden Sie unter [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md).  
+ Vor dem Erstellen von datenbankweit gültigen Anmeldeinformationen muss die Datenbank über einen Hauptschlüssel zum Schützen der Anmeldeinformationen verfügen. Weitere Informationen finden Sie unter [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md).  
   
  Falls für IDENTITY ein Windows-Benutzer angegeben ist, kann der geheime Bereich das Kennwort enthalten. Der geheime Bereich wird mithilfe des Diensthauptschlüssels verschlüsselt. Falls der Diensthauptschlüssel neu generiert wird, wird der geheime Bereich mithilfe des neuen Diensthauptschlüssels neu verschlüsselt.  
    
- Informationen zu datenbankbezogenen Anmeldeinformationen werden in der [database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md) -Katalogsicht angezeigt.  
+ Informationen zu datenbankweit gültigen Anmeldeinformationen werden in der [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)-Katalogsicht angezeigt.  
   
  
- Hereare einige Anwendungen Datenbank beschränkt, Anmeldeinformationen:  
+ Im Folgenden werden einige Anwendungen datenbankweit gültiger Anmeldeinformationen aufgezeigt:  
   
-- [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]verwendet eine datenbankbezogenen Anmeldeinformationen den Zugriff auf nicht öffentliche Azure-Blob-Speicher oder Kerberos-gesicherte Hadoop-Cluster mit PolyBase. Weitere Informationen finden Sie unter [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).  
+- [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] verwendet datenbankweit gültige Anmeldeinformationen, um auf den nicht öffentlichen Blobspeicher von Azure Blob Storage oder auf durch Kerberos gesicherte Hadoop-Cluster mit PolyBase zuzugreifen. Weitere Informationen finden Sie unter [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).  
 
-- [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]verwendet eine datenbankweite Anmeldeinformationen an, die auf nicht öffentliche Azure-Blob-Speicher mit PolyBase. Weitere Informationen finden Sie unter [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).
+- [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] verwendet datenbankweit gültige Anmeldeinformationen, um mit PolyBase auf den nicht öffentlichen Blobspeicher von Azure Blob Storage zuzugreifen. Weitere Informationen finden Sie unter [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md).
   
-- [!INCLUDE[ssSDS](../../includes/sssds-md.md)]datenbankweit gültige Anmeldeinformationen für die Funktion globale Abfrage-Datenbank verwendet. Dies ist die Möglichkeit, die Abfrage mehrere datenbankshards.  
+- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] verwendet datenbankweit gültige Anmeldeinformationen für das Feature für globale Abfragen. Dadurch können Abfragen für mehrere Datenbank-Shards gestellt werden.  
   
-- [!INCLUDE[ssSDS](../../includes/sssds-md.md)]verwendet datenbankweit gültige Anmeldeinformationen zum Schreiben von Dateien für erweiterte Ereignisse in Azure Blob-Speicher.  
+- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] verwendet datenbankweit gültige Anmeldeinformationen, um Dateien für erweiterte Ereignisse in den Blobspeicher von Azure Blob Storage zu schreiben.  
   
-- [!INCLUDE[ssSDS](../../includes/sssds-md.md)]datenbankweit gültige Anmeldeinformationen für elastische Pools-Datenbank verwendet. Weitere Informationen finden Sie unter [komplexe dramatisch für elastische Datenbanken](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)  
+- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] verwendet datenbankweit gültige Anmeldeinformationen für Pools für elastische Datenbanken. Weitere Informationen finden Sie unter [Tame explosive growth with elastic databases (Verwenden von elastischen Datenbanken zum Abfangen von Lastspitzen)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/).  
 
-- [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) und [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) datenbankweit gültige Anmeldeinformationen Zugriff auf Daten aus dem Azure-Blob-Speicher verwenden. Weitere Informationen finden Sie unter [Beispiele von Bulk Zugriff auf Daten in Azure Blob-Speicher](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md). 
+- [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) und [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) verwenden datenbankweit gültige Anmeldeinformationen, um auf Daten aus dem Blobspeicher von Azure Blob Storage zuzugreifen. Weitere Informationen finden Sie unter [Beispiele für Massenzugriff auf Daten in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md). 
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert **Steuerelement** Berechtigung für die Datenbank.  
+ Erfordert die **CONTROL**-Berechtigung für die Datenbank.  
   
 ## <a name="examples"></a>Beispiele  
-### <a name="a-creating-a-database-scoped-credential-for-your-application"></a>A. Erstellen einer Datenbank werden Anmeldeinformationen für Ihre Anwendung begrenzt.
- Das folgende Beispiel erstellt die datenbankweite Anmeldeinformationen namens `AppCred`. Die datenbankbezogenen Anmeldeinformationen enthält, die Windows-Benutzer `Mary5` und ein Kennwort anzugeben.  
+### <a name="a-creating-a-database-scoped-credential-for-your-application"></a>A. Erstellen von datenbankweit gültigen Anmeldeinformationen für eine Anwendung
+ Im folgenden Beispiel werden datenbankweit gültige Anmeldeinformationen mit der Bezeichnung `AppCred` erstellt. Die datenbankweit gültigen Anmeldeinformationen enthalten den Windows-Benutzer `Mary5` und ein Kennwort.  
   
 ```sql  
 -- Create a db master key if one does not already exist, using your own password.  
@@ -104,19 +103,19 @@ CREATE DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'Mary5',
 GO  
 ```  
 
-### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>B. Erstellen einer Datenbank werden Anmeldeinformationen für eine shared Access Signature beschränkt.   
-Das folgende Beispiel erstellt die datenbankweit gültigen Anmeldeinformationen, die verwendet werden kann, erstellen eine [externen Datenquelle](../../t-sql/statements/create-external-data-source-transact-sql.md), die möglich Massenvorgänge, z. B. [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) und [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). Signaturen für freigegebenen Zugriff kann nicht mit PolyBase in SQL Server, APS oder SQL Data Warehouse verwendet werden.
+### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>B. Erstellen von datenbankweit gültigen Anmeldeinformationen für eine SAS   
+Im folgenden Beispiel werden datenbankweit gültige Anmeldeinformationen erstellt, durch die sich eine [externe Datenquelle](../../t-sql/statements/create-external-data-source-transact-sql.md) erstellen lässt. Mit dieser können Massenvorgänge wie [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) und [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) ausgeführt werden. Shared Access Signatures können nicht mit PolyBase in SQL Server, APS oder SQL Data Warehouse verwendet werden.
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL MyCredentials  
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
 SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 ```
   
-### <a name="c-creating-a-database-scoped-credential-for-polybase-connectivity-to-azure-data-lake-store"></a>C. Erstellen einer Datenbank werden Anmeldeinformationen für die PolyBase-Verbindung mit Azure Data Lake-Speicher beschränkt.  
-Das folgende Beispiel erstellt die datenbankweit gültigen Anmeldeinformationen, die verwendet werden kann, erstellen eine [externen Datenquelle](../../t-sql/statements/create-external-data-source-transact-sql.md), die von PolyBase in Azure SQL Data Warehouse verwendet werden können.
+### <a name="c-creating-a-database-scoped-credential-for-polybase-connectivity-to-azure-data-lake-store"></a>C. Erstellen von datenbankweit gültigen Anmeldeinformationen für PolyBase-Konnektivität mit Azure Data Lake Store  
+Im folgenden Beispiel werden datenbankweit gültige Anmeldeinformationen erstellt, durch die sich eine [externe Datenquelle](../../t-sql/statements/create-external-data-source-transact-sql.md) erstellen lässt. Diese kann von PolyBase in Azure SQL Data Warehouse verwendet werden.
 
-Azure Data Lake-Speicher verwendet eine Azure Active Directory-Anwendung für Service to Service-Authentifizierung.
-Bitte [erstellen Sie eine AAD-Anwendung](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory) und Dokumentieren Sie die "client_id", die OAuth_2.0_Token_EndPoint und den Schlüssel ein, bevor Sie versuchen, eine datenbankweite Anmeldeinformationen zu erstellen.
+Azure Data Lake Store verwendet eine Azure Active Directory-Anwendung für Dienst-zu-Dienst-Authentifizierungen.
+Bevor Sie versuchen, datenbankweit gültige Anmeldeinformationen zu erstellen, ist es erforderlich, dass Sie [eine AAD-Anwendung](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory) erstellen und sich die Werte für „client_id“, „OAuth_2.0_Token_EndPoint“ und „key“ notieren.
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL ADL_User
@@ -129,10 +128,10 @@ WITH
   
   
 ## <a name="more-information"></a>Weitere Informationen  
- [Anmeldeinformationen &#40; Datenbankmodul &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
- [ALTER DATABASE ausgelegte CREDENTIAL &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
- [DROP DATABASE ausgelegte CREDENTIAL &#40; Transact-SQL &#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
- [database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)   
+ [Anmeldeinformationen &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+ [ALTER DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
+ [DROP DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
+ [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   

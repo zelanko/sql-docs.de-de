@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.scriptcomponentdetails.f1
 - sql13.dts.designer.scriptcomponent.f1
@@ -29,12 +28,11 @@ caps.latest.revision: 70
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2c446fd57d8dc795931bf9ff5dba6816ec9c9a57
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 28b0e0036e6c85e6898c4d2f24007eb8915b3703
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="script-component"></a>Skriptkomponente
   Die Skriptkomponente hostet Skripts und ermöglicht einem Paket benutzerdefinierten Skriptcode einzuschließen und benutzerdefinierten Skriptcode auszuführen. Die Skriptkomponente kann in Paketen für folgende Zwecke verwendet werden:  
@@ -79,7 +77,7 @@ ms.lasthandoff: 04/26/2018
  Informationen zum Programmieren der Skriptkomponente finden Sie unter [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md). Detailliertere Informationen zum Konfigurieren der Skriptkomponente als Quelle, Transformation oder Ziel finden Sie unter [Developing Specific Types of Script Components](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md). Zusätzliche Beispiele, welche die Verwendung der Skriptkomponente veranschaulichen (wie z. B. ODBC-Ziele), finden Sie unter [Additional Script Component Examples](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md).  
   
 > [!NOTE]  
->  Anders als in früheren Versionen, in denen Sie angeben konnten, ob die Skripts vorkompiliert sind, werden in [!INCLUDE[ssISversion10](../../../includes/ssisversion10-md.md)] und nachfolgenden Versionen alle Skripts vorkompiliert. Wenn ein Skript vorkompiliert ist, wird das Sprachmodul zur Laufzeit nicht geladen, und das Paket wird schneller ausgeführt. Kompilierte binäre Dateien belegen jedoch erheblich mehr Speicherplatz.  
+>  Anders als in früheren Versionen, in denen Sie angeben konnten, ob die Skripts vorkompiliert sind, werden in [!INCLUDE[ssISversion10](../../../includes/ssisversion10-md.md)] und nachfolgenden Versionen alle Skripts vorkompiliert. Wenn ein Skript vorkompiliert ist, wird die Sprach-Engine zur Laufzeit nicht geladen, und das Paket wird schneller ausgeführt. Kompilierte binäre Dateien belegen jedoch erheblich mehr Speicherplatz.  
   
 ## <a name="configuring-the-script-component"></a>Konfigurieren der Skriptkomponente  
  Es gibt folgende Möglichkeiten, um die Skriptkomponente zu konfigurieren:  

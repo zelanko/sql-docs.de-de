@@ -2,16 +2,15 @@
 title: Erstellen eines Anmeldenamens | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.login.status.f1
 - sql13.swb.login.effectivepermissions.f1
@@ -29,12 +28,12 @@ caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 1cfca2d37697e8c9942ac042857784e68dca7088
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 40163a185516fc5d101baedf6632b46112dda52e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-login"></a>Erstellen eines Anmeldenamens
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +70,7 @@ ms.lasthandoff: 04/10/2018
   
     2.  Klicken Sie unter **Suchpfad**auf **Speicherorte** , um das Dialogfeld **Speicherorte** zu öffnen, und wählen Sie eine der verfügbaren Serverspeicherorte aus. Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
-    3.  Geben Sie unter **Geben Sie die zu verwendenden Objektnamen ein (Beispiele)**den Benutzer- oder Gruppennamen ein, den Sie suchen möchten. Weitere Informationen finden Sie unter [Benutzer, Computer oder Gruppen auswählen (Dialogfeld)](http://technet.microsoft.com/library/cc771712.aspx).  
+    3.  Geben Sie unter **Geben Sie die zu verwendenden Objektnamen ein (Beispiele)** den Benutzer- oder Gruppennamen ein, den Sie suchen möchten. Weitere Informationen finden Sie unter [Benutzer, Computer oder Gruppen auswählen (Dialogfeld)](http://technet.microsoft.com/library/cc771712.aspx).  
   
     4.  Klicken Sie auf **Erweitert** für erweiterte Suchoptionen. Weitere Informationen finden Sie unter [Auswählen von Benutzern, Computern oder Gruppen (Dialogfeld) – Erweitert (Seite)](http://technet.microsoft.com/library/cc733110.aspx).  
   
@@ -95,7 +94,7 @@ ms.lasthandoff: 04/10/2018
   
 7.  Um einem eigenständigen asymmetrischen Schlüssel die Anmeldung zuzuordnen, wählen Sie **Zugeordnet zu asymmetrischem Schlüssel** aus, und wählen Sie anschließend den Namen eines vorhandenen Schlüssels aus der Liste aus.  
   
-8.  Um Sicherheitsanmeldeinformationen die Anmeldung zuzuordnen, aktivieren Sie das Kontrollkästchen **Zugeordnet zu Anmeldeinformationen** , und wählen Sie anschließend entweder einen vorhandenen Anmeldenamen aus der Liste aus, oder klicken Sie auf **Hinzufügen** , um einen neuen Anmeldenamen zu erstellen. Um eine Zuordnung zu Sicherheitsanmeldeinformationen aus der Anmeldung zu entfernen, wählen Sie die Anmeldeinformationen aus der Liste **Zugeordnete Anmeldeinformationen** aus, und klicken Sie auf **Entfernen**. Weitere Informationen über Anmeldenamen im Allgemeinen finden Sie unter [Anmeldeinformationen &#40;Datenbankmodul&#41;](../../../relational-databases/security/authentication-access/credentials-database-engine.md).  
+8.  Um Sicherheitsanmeldeinformationen die Anmeldung zuzuordnen, aktivieren Sie das Kontrollkästchen **Zugeordnet zu Anmeldeinformationen** , und wählen Sie anschließend entweder einen vorhandenen Anmeldenamen aus der Liste aus, oder klicken Sie auf **Hinzufügen** , um einen neuen Anmeldenamen zu erstellen. Um eine Zuordnung zu Sicherheitsanmeldeinformationen aus der Anmeldung zu entfernen, wählen Sie die Anmeldeinformationen aus der Liste **Zugeordnete Anmeldeinformationen** aus, und klicken Sie auf **Entfernen**. Weitere Informationen über Anmeldenamen im Allgemeinen finden Sie unter [Anmeldeinformationen &amp;#40;Datenbank-Engine&amp;#41;](../../../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
 9. Wählen Sie eine Standarddatenbank für die Anmeldung aus der Liste **Standarddatenbank** aus. **Master** ist der Standardwert für diese Option.  
   
@@ -160,7 +159,7 @@ ms.lasthandoff: 04/10/2018
  **Mitgliedschaft in Datenbankrolle für:**  *Datenbankname*  
  Wählen Sie die Rollen für den Benutzer in der angegebenen Datenbank aus. Alle Benutzer sind Mitglieder der **public** -Rolle in allen Datenbanken und können nicht entfernt werden. Weitere Informationen zu Datenbankrollen finden Sie unter [Rollen auf Datenbankebene](../../../relational-databases/security/authentication-access/database-level-roles.md).  
   
-### <a name="securables"></a>Securables  
+### <a name="securables"></a>Sicherungsfähige Elemente  
  Auf der Seite **Sicherungsfähige Elemente** werden alle möglichen sicherungsfähigen Elemente und die Berechtigungen für diese sicherungsfähigen Elemente aufgelistet, die für die Anmeldung gewährt werden können. Die folgenden Optionen sind auf dieser Seite verfügbar:  
   
  **Oberes Raster**  
@@ -170,9 +169,9 @@ ms.lasthandoff: 04/10/2018
   
 1.  Klicken Sie auf **Suchen**.  
   
-2.  In der **Objekte hinzufügen** (Dialogfeld), wählen Sie eine der folgenden Optionen: **bestimmte Objekte...** , **Alle Objekte des Typs...** , oder **Server *** Server_name*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Wählen Sie im Dialogfeld **Objekte hinzufügen** eine der folgenden Optionen aus: **Bestimmte Objekte...**, **Alle Objekte des Typs...** oder **The server***server_name*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    > **Hinweis:** auswählen **Server *** Server_name* füllt automatisch das obere Raster mit allen sicherungsfähigen Objekten Servers.  
+    > **Hinweis:** Wenn Sie die Option **The server***server_name* auswählen, wird das obere Raster automatisch mit allen sicherungsfähigen Objekten des Servers gefüllt.  
   
 3.  Bei Auswahl der Option **Bestimmte Objekte**:  
   
@@ -180,7 +179,7 @@ ms.lasthandoff: 04/10/2018
   
     2.  Wählen Sie im Dialogfeld **Objekttypen auswählen** einen der folgenden Objekttypen aus: **Endpunkte**, **Anmeldungen**, **Server**, **Verfügbarkeitsgruppen**und **Serverrollen**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    3.  Klicken Sie unter **Geben Sie die Namen der auszuwählenden Objekte ein (Beispiele)**auf **Durchsuchen**.  
+    3.  Klicken Sie unter **Geben Sie die Namen der auszuwählenden Objekte ein (Beispiele)** auf **Durchsuchen**.  
   
     4.  Wählen Sie im Dialogfeld **Nach Objekten suchen** eines der verfügbaren Objekte vom Typ aus, den Sie im Dialogfeld **Objekttypen auswählen** ausgewählt haben, und klicken Sie anschließend auf **OK**.  
   
@@ -217,7 +216,8 @@ ms.lasthandoff: 04/10/2018
   
  Die folgenden Optionen sind auf dieser Seite verfügbar:  
   
- **Serverzugriff**  
+ 
+  **Berechtigung zum Herstellen einer Verbindung mit Datenbank-Engine**  
  Wenn Sie diese Einstellung verwenden, müssen Sie die ausgewählte Anmeldung als einen Prinzipal betrachten, dem für das sicherungsfähige Element Berechtigungen erteilt oder verweigert werden können.  
   
  Wählen Sie **Erteilen** aus, um der Anmeldung die CONNECT SQL-Berechtigung zu erteilen. Wählen Sie **Verweigern** aus, um der Anmeldung die CONNECT SQL-Berechtigung zu verweigern.  
@@ -235,7 +235,7 @@ ms.lasthandoff: 04/10/2018
 ##  <a name="TsqlProcedure"></a> Erstellen einer Anmeldung mit Windows-Authentifizierung über T-SQL  
   
  
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -251,7 +251,7 @@ ms.lasthandoff: 04/10/2018
   
 ## <a name="create-a-login-using-sql-server-authentication-with-ssms"></a>Erstellen einer Anmeldung mit SQL Server-Authentifizierung mit SSMS  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -278,7 +278,8 @@ ms.lasthandoff: 04/10/2018
   
 -   Informationen zum Erteilen einer Berechtigung für einen Anmeldenamen finden Sie unter [Erteilen einer Berechtigung für einen Prinzipal](../../../relational-databases/security/authentication-access/grant-a-permission-to-a-principal.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Sicherheitscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ 
+  [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

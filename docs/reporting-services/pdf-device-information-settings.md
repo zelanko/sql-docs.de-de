@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: reporting-services
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -15,23 +14,22 @@ helpviewer_keywords:
 - device information settings [Reporting Services], PDF rendering
 - PDF [Reporting Services]
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
-caps.latest.revision: ''
+caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0bd2635a54003fd663dadcf6d3bc5991c1841988
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: 0f0ec8d6bfe88182f84078aa8155afed9f149828
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pdf-device-information-settings"></a>PDF-Geräteinformationseinstellungen
   In der folgenden Tabelle werden die Einstellungen der Geräteinformationen zum Rendern von Berichten in das PDF-Format aufgeführt.  
   
 |Einstellung|value|  
 |-------------|-----------|  
-| **AccessiblePDF** | Gibt an, ob eine barrierefreie PDF-Datei bzw. eine PDF-Datei mit Tags gerendert werden soll. Eine solche Datei ist zwar größer, kann aber von Sprachausgabesoftware und anderen Unterstützungstechnologien besser verarbeitet werden. Der Standardwert ist **false** (in Power BI-Berichtsserver der Version von März 2018 und in neueren Versionen verfügbar) |
+| **AccessiblePDF** | Gibt an, ob eine barrierefreie PDF-Datei bzw. eine PDF-Datei mit Tags gerendert werden soll. Eine solche Datei ist zwar größer, kann aber von Sprachausgabesoftware und anderen Unterstützungstechnologien besser verarbeitet werden. Der Standardwert ist **false**. (in Power BI-Berichtsserver der Version von März 2018 und in neueren Versionen verfügbar) |
 |**Spalten**|Die für den Bericht gewünschte Anzahl der Spalten. Dieser Wert überschreibt die ursprünglichen Einstellungen des Berichts.|  
 |**ColumnSpacing**|Der für den Bericht gewünschte Spaltenabstand. Dieser Wert überschreibt die ursprünglichen Einstellungen des Berichts.|  
 |**DpiX**|Die Auflösung des Ausgabegeräts in x-Richtung.|  

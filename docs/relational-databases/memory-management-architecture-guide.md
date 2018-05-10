@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 11/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: relational-databases-misc
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - guide, memory management architecture
 - memory management architecture guide
@@ -20,13 +19,12 @@ caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a623c59bbc78503c7cf6bcbf190ed342763727c4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8d01610b3ac4d87b747398bd71bdd63f1842a3ee
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="memory-management-architecture-guide"></a>Handbuch zur Architektur der Speicherverwaltung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +53,7 @@ Eines der vorrangigen Ziele beim Entwurf jeder Datenbanksoftware ist die Minimie
  
 ### <a name="providing-the-maximum-amount-of-memory-to-includessnoversionincludesssnoversion-mdmd"></a>Bereitstellen der maximalen Menge von Arbeitsspeicher für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
-Mithilfe von AWE und der Berechtigung „Locked Pages in Memory“ können Sie für das [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbankmodul die folgenden Mengen von Arbeitsspeicher bereitstellen. 
+Mithilfe von AWE und der Berechtigung „Locked Pages in Memory“ können Sie für die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbank-Engine die folgenden Mengen von Arbeitsspeicher bereitstellen. 
 
 > [!NOTE]
 > Die folgende Tabelle enthält eine Spalte für 32-Bit-Versionen, die nicht mehr verfügbar sind.
@@ -114,7 +112,7 @@ Dieses Verhalten wird normalerweise während folgender Vorgänge beobachtet:
 
 In früheren Versionen von SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) reservierte die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Arbeitsspeicherverwaltung einen Teil des virtuellen Prozessadressbereichs (Process Virtual Address Space, VAS) für die Verwendung durch die **Mehrseitenbelegung (MPA)**, **CLR-Belegung**, Speicherbelegungen für **Threadstapel** im SQL Server-Prozess und **Direkte Belegungen von Windows (DWA)**. Dieser Teil des virtuellen Adressbereichs wird auch als „Zu belassender Arbeitsspeicher“ oder „Nicht-Pufferpool“-Bereich bezeichnet.
 
-Der virtuelle Adressbereich, der für diese Belegungen reserviert ist, wird durch die Konfigurationsoption ***memory_to_reserve*** festgelegt. Der von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendete Standardwert ist 256 MB. Um diesen Standardwert außer Kraft zu setzen, verwenden Sie den Startparameter [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g*. Informationen zum Startparameter *-g* finden Sie auf der Dokumentationsseite zu [Startoptionen für den Datenbankmoduldienst](../database-engine/configure-windows/database-engine-service-startup-options.md).
+Der virtuelle Adressbereich, der für diese Belegungen reserviert ist, wird durch die Konfigurationsoption ***memory_to_reserve*** festgelegt. Der von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendete Standardwert ist 256 MB. Um diesen Standardwert außer Kraft zu setzen, verwenden Sie den Startparameter [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g*. Informationen zum Startparameter *-g* finden Sie auf der Dokumentationsseite zu [Startoptionen für den Datenbank-Engine-Dienst](../database-engine/configure-windows/database-engine-service-startup-options.md).
 
 Da seit [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Speicherbelegungen oberhalb von 8 KB ebenfalls von der Seitenbelegung beliebiger Größe vorgenommen werden, schließt der Wert von *memory_to_reserve* die Mehrseitenbelegungen nicht ein. Von dieser Änderung abgesehen bleibt bei dieser Konfigurationsoption alles unverändert.
 
@@ -178,7 +176,7 @@ Sobald weitere Anwendungen auf einem Computer gestartet werden, auf dem eine Ins
 
 ## <a name="effects-of-min-and-max-server-memory"></a>Auswirkungen der Konfigurationsoptionen Min. Serverarbeitsspeicher und Max. Serverarbeitsspeicher
 
-Durch die Konfigurationsoptionen „Min. Serverarbeitsspeicher“ und „Max. Serverarbeitsspeicher“ werden die obere und untere Grenze für den Umfang des Speichers festgelegt, der vom Pufferpool und anderen Caches des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbankmoduls verwendet wird. Der Pufferpool reserviert nicht sofort die Menge an Speicher, die durch „Min. Serverarbeitsspeicher“ angegeben wurde. Der Pufferpool reserviert zuerst nur so viel Speicher, wie für die Initialisierung erforderlich ist. Mit ansteigender Arbeitsauslastung von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] wird weiterer Speicher reserviert, um die Arbeitsauslastung zu unterstützen. Der Pufferpool gibt erst dann einen Teil des reservierten Speichers wieder frei, wenn der unter „Min. Serverarbeitsspeicher“ angegebene Wert erreicht wurde. Sobald „Min. Serverarbeitsspeicher“ erreicht ist, verwendet der Pufferpool den Standardalgorithmus, um Speicher nach Bedarf zu reservieren und freizugeben. Der einzige Unterschied besteht darin, dass der Pufferpool bei der Speicherbelegung nie unter die Ebene absinkt, die durch „Min. Serverarbeitsspeicher“ angegeben ist, und nie mehr Speicher reserviert, als durch die unter „Max. Serverarbeitsspeicher“ angegebene Ebene angegeben ist.
+Durch die Konfigurationsoptionen „Min. Serverarbeitsspeicher“ und „Max. Serverarbeitsspeicher“ werden die obere und untere Grenze für den Umfang des Speichers festgelegt, der vom Pufferpool und anderen Caches der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbank-Engine verwendet wird. Der Pufferpool reserviert nicht sofort die Menge an Speicher, die durch „Min. Serverarbeitsspeicher“ angegeben wurde. Der Pufferpool reserviert zuerst nur so viel Speicher, wie für die Initialisierung erforderlich ist. Mit ansteigender Arbeitsauslastung von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] wird weiterer Speicher reserviert, um die Arbeitsauslastung zu unterstützen. Der Pufferpool gibt erst dann einen Teil des reservierten Speichers wieder frei, wenn der unter „Min. Serverarbeitsspeicher“ angegebene Wert erreicht wurde. Sobald „Min. Serverarbeitsspeicher“ erreicht ist, verwendet der Pufferpool den Standardalgorithmus, um Speicher nach Bedarf zu reservieren und freizugeben. Der einzige Unterschied besteht darin, dass der Pufferpool bei der Speicherbelegung nie unter die Ebene absinkt, die durch „Min. Serverarbeitsspeicher“ angegeben ist, und nie mehr Speicher reserviert, als durch die unter „Max. Serverarbeitsspeicher“ angegebene Ebene angegeben ist.
 
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reserviert als Prozess mehr Speicher als durch die Option „Max. Serverarbeitsspeicher“ angegeben wird. Sowohl interne als auch externe Komponenten können Speicher außerhalb des Pufferpools belegen; dies führt zur Beanspruchung zusätzlicher Speicherkapazitäten, der dem Pufferpool zugeordnete Speicher stellt jedoch normalerweise trotzdem den größten Teil des von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] belegten Speichers dar.
@@ -196,13 +194,13 @@ In der folgenden Liste werden die Richtwerte für den Arbeitsspeicher beschriebe
 * Sperre (durch den Sperren-Manager verwaltet): 64 Byte + 32 Byte pro Besitzer   
 * Benutzerverbindung: Etwa (3 \* Netzwerkpaketgröße + 94 KB)    
 
-Die **Netzwerkpaketgröße** entspricht der Größe der TDS-Pakete (Tabular Data Stream), die für die Kommunikation zwischen Anwendungen und dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbankmodul verwendet werden. Die Standardpaketgröße beträgt 4 KB und wird durch die Konfigurationsoption Netzwerkpaketgröße gesteuert.
+Die **Netzwerkpaketgröße** entspricht der Größe der TDS-Pakete (Tabular Data Stream), die für die Kommunikation zwischen Anwendungen und der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbank-Engine verwendet werden. Die Standardpaketgröße beträgt 4 KB und wird durch die Konfigurationsoption Netzwerkpaketgröße gesteuert.
 
 Wenn mehrere aktive Resultsets (Multiple Active Result Sets, MARS) aktiviert sind, benötigt die Benutzerverbindung ca. (3 + 3 \* numerische_logische_Verbindungen) \* Netzwerkpaketgröße + 94 KB.
 
 ## <a name="buffer-management"></a>Pufferverwaltung
 
-Der Hauptzweck einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank ist das Speichern und Abrufen von Daten. Daher stellt eine hohe Ein-/Ausgabe auf dem Datenträger ein Hauptmerkmal des Datenbankmoduls dar. Datenträger-E/A-Vorgänge beanspruchen viele Ressourcen und benötigen relativ viel Zeit für die Ausführung. Daher ist [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] so konzipiert, dass E/A-Vorgänge möglichst effizient gestaltet werden. Die Pufferverwaltung ist eine zentrale Komponente zum Erreichen dieser Effizienz. Die Pufferverwaltungskomponente weist zwei Mechanismen auf: den **Puffer-Manager**, mit dem auf Datenbankseiten zugegriffen wird und mit dem sie aktualisiert werden, und den **Puffercache** (auch als **Pufferpool** bezeichnet), mit dem Datenbankdatei-E/A-Vorgänge reduziert werden. 
+Der Hauptzweck einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank ist das Speichern und Abrufen von Daten. Daher stellt eine hohe Ein-/Ausgabe auf dem Datenträger ein Hauptmerkmal der Datenbank-Engine dar. Datenträger-E/A-Vorgänge beanspruchen viele Ressourcen und benötigen relativ viel Zeit für die Ausführung. Daher ist [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] so konzipiert, dass E/A-Vorgänge möglichst effizient gestaltet werden. Die Pufferverwaltung ist eine zentrale Komponente zum Erreichen dieser Effizienz. Die Pufferverwaltungskomponente weist zwei Mechanismen auf: den **Puffer-Manager**, mit dem auf Datenbankseiten zugegriffen wird und mit dem sie aktualisiert werden, und den **Puffercache** (auch als **Pufferpool** bezeichnet), mit dem Datenbankdatei-E/A-Vorgänge reduziert werden. 
 
 ### <a name="how-buffer-management-works"></a>Funktionsweise der Pufferverwaltung
 
@@ -273,7 +271,7 @@ Die Art des verwendeten Seitenschutzes stellt ein Attribut der Datenbank dar, in
 Der Schutz vor zerrissenen Seiten, der in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 eingeführt wurde, stellt in erster Linie eine Methode zum Erkennen von Seitenbeschädigungen dar, die auf Stromausfälle zurückzuführen sind. Beispielsweise kann der Fall eintreten, dass durch einen unerwarteten Stromausfall nur ein Teil einer Seite auf den Datenträger geschrieben wird. Wenn Schutz vor zerrissenen Seiten festgelegt ist, wird beim Schreiben der Seite auf den Datenträger für jeden Sektor von 512 Byte auf einer Datenbankseite von 8 KB ein bestimmtes 2-Bit-Signaturmuster gespeichert und im Kopf der Datenbankseite gespeichert. Wenn die Seite vom Datenträger gelesen wird, werden die im Seitenkopf gespeicherten zerrissenen Bits mit den tatsächlichen Seitensektorinformationen verglichen. Das Signaturmuster wechselt bei jedem Schreibvorgang zwischen den Binärzuständen 01 und 10. Damit kann jederzeit ermittelt werden, ob nur ein Teil der Sektoren auf den Datenträger geschrieben wird: Wenn ein Bit beim späteren Lesen der Seite den falschen Zustand aufweist, wurde die Seite nicht richtig auf den Datenträger geschrieben, d.h., es wird eine zerrissene Seite ermittelt. Für die Erkennung von zerrissenen Seiten sind nur minimale Ressourcen erforderlich. Es werden jedoch keine Fehler erkannt, die durch Hardwarefehler des Datenträgers verursacht werden. Weitere Informationen zum Festlegen der Erkennung von zerrissenen Seiten finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify).
 
 #### <a name="checksum-protection"></a>Prüfsummenschutz  
-Der Prüfsummenschutz, der in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] eingeführt wird, ermöglicht eine verbesserte Datenintegritätsprüfung. Eine Prüfsumme wird für die Daten berechnet, die in den einzelnen Seiten geschrieben werden, und im Seitenkopf gespeichert. Wenn eine Seite, deren Prüfsumme gespeichert wird, vom Datenträger gelesen wird, wird vom Datenbankmodul die Prüfsumme für die Daten in der Seite neu berechnet. Wenn die neue Prüfsumme von der gespeicherten Prüfsumme abweicht, wird der Fehler 824 ausgegeben. Mithilfe des Prüfsummenschutzes können mehr Fehler ermittelt werden als mithilfe des Schutzes vor zerrissenen Seiten, da sich jedes in der Seite enthaltene Byte auf dieses Verfahren auswirkt. Der Prüfsummenschutz ist jedoch relativ ressourcenintensiv. Wenn die Prüfsumme aktiviert ist, werden durch Stromausfälle oder fehlerhafte Hard- oder Firmware verursachte Fehler erkannt, sobald die Seite vom Puffer-Manager vom Datenträger gelesen wird. Weitere Informationen zum Festlegen der Prüfsumme finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify).
+Der Prüfsummenschutz, der in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] eingeführt wird, ermöglicht eine verbesserte Datenintegritätsprüfung. Eine Prüfsumme wird für die Daten berechnet, die in den einzelnen Seiten geschrieben werden, und im Seitenkopf gespeichert. Wenn eine Seite, deren Prüfsumme gespeichert wird, vom Datenträger gelesen wird, wird von der Datenbank-Engine die Prüfsumme für die Daten in der Seite neu berechnet. Wenn die neue Prüfsumme von der gespeicherten Prüfsumme abweicht, wird der Fehler 824 ausgegeben. Mithilfe des Prüfsummenschutzes können mehr Fehler ermittelt werden als mithilfe des Schutzes vor zerrissenen Seiten, da sich jedes in der Seite enthaltene Byte auf dieses Verfahren auswirkt. Der Prüfsummenschutz ist jedoch relativ ressourcenintensiv. Wenn die Prüfsumme aktiviert ist, werden durch Stromausfälle oder fehlerhafte Hard- oder Firmware verursachte Fehler erkannt, sobald die Seite vom Puffer-Manager vom Datenträger gelesen wird. Weitere Informationen zum Festlegen der Prüfsumme finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify).
 
 > [!IMPORTANT]
 > Wenn eine Benutzer- oder Systemdatenbank auf [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] oder eine höhere Version aktualisiert wird, bleibt der [PAGE_VERIFY](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify)-Wert (NONE oder TORN_PAGE_DETECTION) erhalten. Sie sollten CHECKSUM verwenden.

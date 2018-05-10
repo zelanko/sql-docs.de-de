@@ -1,16 +1,14 @@
 ---
 title: CREATE PARTITION SCHEME (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE PARTITION SCHEME
@@ -31,16 +29,15 @@ helpviewer_keywords:
 - partitioned tables [SQL Server], filegroups
 - mapping partitions [SQL Server]
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 98abb06746c88d7876505033f5b209c30812fc5d
-ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
+ms.openlocfilehash: 09f3e8ec87fbb4bc8f29e2a071ccbf01ad133dd4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,16 +66,16 @@ AS PARTITION partition_function_name
  Der Name der Partitionsfunktion, die das Partitionsschema verwendet. Von der Partitionsfunktion erstellte Partitionen werden den im Partitionsschema angegebenen Dateigruppen zugeordnet. *partition_function_name* muss in der Datenbank bereits vorhanden sein. Eine einzelne Partition kann nicht sowohl FILESTREAM- als auch nicht-FILESTREAM-Dateigruppen enthalten.  
   
  ALL  
- Legt fest, dass alle Partitionen der in *file_group_name* angegebenen Dateigruppe oder der primären Dateigruppe zugeordnet werden, falls **[**PRIMARY**]** angegeben ist. Wenn ALL angegeben ist, kann nur ein einzelner *file_group_name*-Wert angegeben werden.  
+ Legt fest, dass alle Partitionen der in *file_group_name* angegebenen Dateigruppe oder der primären Dateigruppe zugeordnet werden, falls **[** PRIMARY **]** angegeben ist. Wenn ALL angegeben ist, kann nur ein einzelner *file_group_name*-Wert angegeben werden.  
   
  *file_group_name* | **[** PRIMARY **]** [ **,***...n*]  
  Gibt die Namen der Dateigruppen an, in denen die durch *partition_function_name* angegebenen Partitionen gespeichert werden. *file_group_name* muss bereits in der Datenbank vorhanden sein.  
   
- Wenn **[**PRIMARY**]** angegeben ist, wird die Partition in der primären Dateigruppe gespeichert. Wenn ALL angegeben ist, kann nur ein einzelner *file_group_name*-Wert angegeben werden. Partitionen werden, beginnend mit der Partition 1, Dateigruppen in der Reihenfolge zugewiesen, in der die Dateigruppen in [**,***...n*] aufgelistet sind. Derselbe *file_group_name*-Wert kann mehrmals in [**,***...n*] angegeben werden. Falls *n* zum Speichern der in *partition_function_name* angegebenen Anzahl von Partitionen nicht ausreichend ist, wird für CREATE PARTITION SCHEME ein Fehler gemeldet.  
+ Wenn **[** PRIMARY **]** angegeben ist, wird die Partition in der primären Dateigruppe gespeichert. Wenn ALL angegeben ist, kann nur ein einzelner *file_group_name*-Wert angegeben werden. Partitionen werden, beginnend mit der Partition 1, Dateigruppen in der Reihenfolge zugewiesen, in der die Dateigruppen in [**,***...n*] aufgelistet sind. Der gleiche *file_group_name*-Wert kann mehrmals in [**,***...n*] angegeben werden. Falls *n* zum Speichern der in *partition_function_name* angegebenen Anzahl von Partitionen nicht ausreichend ist, wird für CREATE PARTITION SCHEME ein Fehler gemeldet.  
   
  Falls *partition_function_name* weniger Partitionen als Dateigruppen generiert, wird die erste nicht zugewiesene Dateigruppe als NEXT USED markiert, und eine Informationsmeldung mit der NEXT USED-Dateigruppe wird angezeigt. Falls ALL angegeben ist, behält der einzige *file_group_name*-Wert seine NEXT USED-Eigenschaft für diesen *partition_function_name*-Wert bei. Die NEXT USED-Dateigruppe erhält eine zusätzliche Partition, falls eine solche in einer ALTER PARTITION FUNCTION-Anweisung erstellt wird. Verwenden Sie ALTER PARTITION SCHEME, um zusätzliche nicht zugewiesene Dateigruppen zum Speichern neuer Partitionen zu erstellen.  
   
- Wenn Sie die primäre Dateigruppe in *file_group_name* [ 1**,***...n*] angeben, muss PRIMARY durch Trennzeichen begrenzt sein, wie z.B. in **[**PRIMARY**]**, da es sich um ein Schlüsselwort handelt.  
+ Wenn Sie die primäre Dateigruppe in *file_group_name* [ 1 **,***...n*] angeben, muss PRIMARY durch Trennzeichen begrenzt sein, wie z.B. in **[** PRIMARY**]**, da es sich um ein Schlüsselwort handelt.  
   
  Nur PRIMARY wird für [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] unterstützt. Weitere Informationen finden Sie unten im Beispiel E. 
   
@@ -111,7 +108,7 @@ TO (test1fg, test2fg, test3fg, test4fg);
 |-|-|-|-|-|  
 |**Dateigruppe**|`test1fg`|`test2fg`|`test3fg`|`test4fg`|  
 |**Partition**|1|2|3|4|  
-|**Werte**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` UND **col1** <= `1000`|**col1** > `1000`|  
+|**Werte**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <= `1000`|**col1** > `1000`|  
   
 ### <a name="b-creating-a-partition-scheme-that-maps-multiple-partitions-to-the-same-filegroup"></a>B. Erstellen eines Partitionsschemas, mit dem mehrere Partitionen derselben Dateigruppe zugeordnet werden  
  Verwenden Sie das ALL-Schlüsselwort, wenn alle Partitionen derselben Dateigruppe zugeordnet werden. Falls aber mehrere, jedoch nicht alle Partitionen derselben Dateigruppe zugeordnet werden, muss der Dateigruppenname wiederholt werden, wie im folgenden Beispiel gezeigt.  

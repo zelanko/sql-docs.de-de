@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 12/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
-ms.component: indexes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 caps.latest.revision: 23
-author: barbkess
-ms.author: barbkess
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e892a10d6cb5c5ca3a98263afbaf795d3cad72a3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c1cb86de5b9fa7ef0f6efed087e9f308567c8927
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="columnstore-indexes---query-performance"></a>Columnstore-Indizes: Abfrageleistung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -93,7 +89,7 @@ ms.lasthandoff: 04/16/2018
  Weitere Informationen zu Zeilengruppen finden Sie unter „Beschreibung von Columnstore-Indizes“.    
     
 ### <a name="batch-mode-execution"></a>Batchmodusausführung    
- Bei der Batchmodusausführung handelt es sich um die gemeinsame Verarbeitung eines Zeilensatzes, in der Regel bis zu 900 Zeilen, aus Gründen der Ausführungseffizienz. Die Abfrage `SELECT SUM (Sales) FROM SalesData` aggregiert beispielsweise den Gesamtumsatz aus der Tabelle „SalesData“. Bei der Batchmodusausführung berechnet das Abfrageausführungsmodul das Aggregat in Gruppen von 900 Werten. Dadurch werden Metadaten, Zugriffskosten und andere Aufwandsarten auf alle Zeilen in einem Batch verteilt, anstatt die Kosten für jede Zeile zu zahlen, wodurch der Codepfad erheblich reduziert wird. Bei der Batchmodusverarbeitung kommen, sofern möglich, komprimierte Daten zum Einsatz. Zugleich werden einige der Exchange-Operatoren beseitigt, die bei der Zeilenmodusverarbeitung verwendet werden. Dies beschleunigt die Ausführung von Analyseabfragen in beträchtlichem Maße.    
+ Bei der Batchmodusausführung handelt es sich um die gemeinsame Verarbeitung eines Zeilensatzes, in der Regel bis zu 900 Zeilen, aus Gründen der Ausführungseffizienz. Die Abfrage `SELECT SUM (Sales) FROM SalesData` aggregiert beispielsweise den Gesamtumsatz aus der Tabelle „SalesData“. Bei der Batchmodusausführung berechnet die Abfrageausführungs-Engine das Aggregat in Gruppen von 900 Werten. Dadurch werden Metadaten, Zugriffskosten und andere Aufwandsarten auf alle Zeilen in einem Batch verteilt, anstatt die Kosten für jede Zeile zu zahlen, wodurch der Codepfad erheblich reduziert wird. Bei der Batchmodusverarbeitung kommen, sofern möglich, komprimierte Daten zum Einsatz. Zugleich werden einige der Exchange-Operatoren beseitigt, die bei der Zeilenmodusverarbeitung verwendet werden. Dies beschleunigt die Ausführung von Analyseabfragen in beträchtlichem Maße.    
     
  Nicht alle Abfrageausführungsoperatoren können im Batchmodus ausgeführt werden. DML-Vorgänge, wie z. B. Einfügen, Löschen oder Aktualisieren, werden z. B. Zeile für Zeile ausgeführt. Batchmodusoperatoren richten sich an Operatoren, um die Abfrageleistung wie Scan, Join, Aggregate, Sort und so weiter zu beschleunigen. Da der Columnstore-Index in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] eingeführt wurde, gibt es eine nachhaltige Initiative, um die Operatoren zu erweitern, die im Batchmodus ausgeführt werden können. Die folgende Tabelle führt die Operatoren auf, die im Batchmodus gemäß der Produktversion ausgeführt werden.    
     

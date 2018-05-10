@@ -2,16 +2,16 @@
 title: Was&#39;s ist neu in SQL Server-Machine Learning-Services | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/02/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0f0487d26e602504fc776b1262414488e24c8336
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 45cfb2f67cbd575913739b118e21626448b80866
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Neuigkeiten in SQL Server-Machine Learning-Services 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,7 +25,9 @@ Diese Version hinzugefügt, Unterstützung der Python- und branchenführende Mac
 Diese Version auch eingeführt **SQL Server Machine Learning-Server (eigenständig)**, völlig unabhängig von der SQL-Server für R und Python-arbeitsauslastungen, die auf einem dedizierten System ausgeführt werden soll. Mit dem eigenständigen Server können Sie verteilen und Skalieren von R oder Python-Lösungen ohne Verwendung von SQL Server.
 
 | Release | Feature-update |
-|---------|---------------|
+|---------|----------------|
+| CU 6 | Fehlerkorrekturen und paketerneuerung, jedoch keine Funktion neue Ankündigungen. Fehlerbehebungen enthalten Unterstützung für DateTime-Datentypen in SPEES Abfrage Python und verbesserte Fehlermeldungen im Microsoftml, wenn vorab trainierten Modelle fehlen. |
+| CU 5 | Fehlerkorrekturen und paketerneuerung, jedoch keine Funktion neue Ankündigungen. Verbesserungen zum Transformieren von Funktionen und Variablen in Revoscalepy, die lange pfadbezogene Fehlerkorrektur in RxInstallPackages, und Beheben von Verbindungsproblemen in einen Loopback für RxExec und Rx_exec-Funktionen und Änderungen an Warnmeldungen gehören. |
 | CU 4 | Fehlerkorrekturen und paketerneuerung, jedoch keine Funktion neue Ankündigungen. |
 | CU 3 | Python modellieren Serialisierung in Revoscalepy, mit der [Rx_serialize_model Funktion](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model).<br/><br/>[Bewerten von systemeigenen](sql-native-scoring.md) plus Verbesserungen [Echtzeit Bewertung](real-time-scoring.md). In der Datenbank zu bewerten, Durchsatz ist eine Million Zeilen, die pro Sekunde, mit der R-Modelle. In diesem Update bieten Echtzeit Bewertung und systemeigene Bewertung eine bessere Leistung in einzeiligen und batchbewertung. Systemeigene Bewertung verwendet kann eine T-SQL-Funktion zur schnellen Bewertung, die auf eine beliebige Edition von SQL Server, sogar auf Linux ausgeführt werden. Die Funktion erfordert keine Installation von R oder zusätzliche Konfiguration. Dies bedeutet, dass Sie an anderer Stelle ein Modell trainieren, speichern Sie sie in SQL Server und führen Sie bewerten, ohne jemals aufrufen r Weitere Informationen zum Bewerten von Methoden, finden Sie unter [zum Ausführen von Realtime Bewertung oder systemeigenen bewerten](r/how-to-do-realtime-scoring.md). |
 | CU 2 | Fehlerkorrekturen und paketerneuerung, jedoch keine Funktion neue Ankündigungen. |
@@ -45,7 +47,7 @@ Darüber hinaus **SQL Server 2016 R Server (eigenständig)** als eine Möglichke
 
 | Release |Feature-update |
 |---------|----------------|
-| CU | [**Bewerten von Realtime** ](real-time-scoring.md) basiert auf systemeigene C++-Bibliotheken zum Lesen eines Modells in einem optimierten Binärformat gespeichert und anschließend Vorhersagen generieren, ohne die R-Laufzeitversion aufrufen zu müssen. Auf diese Weise bewerteten Vorgänge schneller. Mit Echtzeit bewerten zu können, können Sie eine gespeicherte Prozedur auszuführen oder Echtzeit Bewertung von R-Code ausführen. Echtzeit-Bewertung ist auch für SQL Server 2016 verfügbar, wenn die Instanz, auf die neueste Version von aktualisiert wird [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]. |
+| CU Ergänzungen | [**Bewerten von Realtime** ](real-time-scoring.md) basiert auf systemeigene C++-Bibliotheken zum Lesen eines Modells in einem optimierten Binärformat gespeichert und anschließend Vorhersagen generieren, ohne die R-Laufzeitversion aufrufen zu müssen. Auf diese Weise bewerteten Vorgänge schneller. Mit Echtzeit bewerten zu können, können Sie eine gespeicherte Prozedur auszuführen oder Echtzeit Bewertung von R-Code ausführen. Echtzeit-Bewertung ist auch für SQL Server 2016 verfügbar, wenn die Instanz, auf die neueste Version von aktualisiert wird [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]. |
 | Erste Veröffentlichung | [**R-Integration für die Analyse in der Datenbank**](r/sql-server-r-services.md). <br/><br/> R-Pakete für die aufrufende R-Funktionen in T-SQL (und umgekehrt). RevoScaleR-Funktionen R Analytics Größenordnungen bereitstellen, indem Sie Segmentierung der Daten in Bestandteile, koordinieren und Verwalten von verteilte Verarbeitung und aggregieren Ergebnisse. In SQL Server 2016 R Services (Datenbankintern) ist das Modul "revoscaler" in eine Datenbankmodulinstanz, die Daten und Analysen, die zusammen in demselben Verarbeitungskontext sind integriert. <br/><br/>T-SQL und R-Integration über [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). Sie können eine beliebige R-Code, der mit dieser gespeicherten Prozedur aufrufen. Diese sichere Infrastruktur ermöglicht die Bereitstellung der Unternehmensklasse Rn Modelle und Skripts, die von einer Anwendung mithilfe einer einfachen gespeicherten Prozedur aufgerufen werden können. Zusätzliche Leistungssteigerungen werden durch streaming von Daten aus SQL R-Prozesse und MPI Ring Parallelisierung erreicht. <br/><br/>Können Sie die T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) Funktion ausführen [native Bewertung](sql-native-scoring.md) auf ein vortrainiertes Modell, die zuvor in das erforderliche Binärformat gespeichert wurde.|
 
 ## <a name="linux-support-roadmap"></a>Roadmap für die Linux-Unterstützung
@@ -53,6 +55,12 @@ Darüber hinaus **SQL Server 2016 R Server (eigenständig)** als eine Möglichke
 Machine Learning mithilfe von R oder Python in der Datenbank ist derzeit nicht in SQL Server on Linux unterstützt. Suchen Sie nach Ankündigungen in einer späteren Version.
 
 Allerdings unter Linux können Sie ausführen [native Bewertung](sql-native-scoring.md) mit der VORHERSAGE von T-SQL-Funktion. Systemeigene Bewertung können Sie aus einem vortrainierte Modell sehr schnell zu bewerten, ohne aufrufen oder sogar eine R-Laufzeit erfordern. Dies bedeutet, dass Sie SQL Server on Linux verwenden können, zum Generieren von Vorhersagen, die sehr schnell, um Clientanwendungen zu fungieren.
+
+<a name="azure-sql-database-roadmap"></a>
+
+## <a name="azure-sql-database-roadmap"></a>Roadmap für die Azure SQL-Datenbank
+
+Besteht eingeschränkte Unterstützung für R in Azure SQL-Datenbank: verfügbar nur in West Mitte-NORD, in der Dienste, die auf der Premium-Ebene erstellt. Erweiterte Coverage, einschließlich der Python-Unterstützung ist in einer zukünftigen Version befolgen. Es ist jedoch keine voraussichtliche Veröffentlichungsdatum wird zu diesem Zeitpunkt.  
 
 ## <a name="next-steps"></a>Nächste Schritte
 

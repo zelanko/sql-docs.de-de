@@ -1,16 +1,14 @@
 ---
-title: "Transaktionen: Always On-Verfügbarkeitsgruppen und Datenbankspiegelung | Microsoft-Dokumentation"
-ms.custom: 
+title: 'Transaktionen: Always On-Verfügbarkeitsgruppen und Datenbankspiegelung | Microsoft-Dokumentation'
+ms.custom: ''
 ms.date: 11/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: availability-groups
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - cross-database transactions [SQL Server]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - troubleshooting [SQL Server], cross-database transactions
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 25e9efc5d7ffb6d4d0c09cc88e19671ed7f7b043
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 77e578babc3efa230a0da00c42187e50e650dd32
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>Transaktionen: Always On-Verfügbarkeitsgruppen und Datenbankspiegelung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +61,7 @@ Mit der neuen Funktion von SQL Server 2016 können Sie verteilte Transaktionen s
   
  Die folgenden Anforderungen müssen erfüllt sein:  
   
--   Verfügbarkeitsgruppen müssen auf Windows Server 2016 oder Windows Server 2012 R2 ausgeführt werden. Für Windows Server 2012 R2 müssen Sie die Aktualisierung in KB3090973 installieren, die unter [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973)verfügbar ist.  
+-   Verfügbarkeitsgruppen müssen auf Windows Server 2016 oder Windows Server 2012 R2 ausgeführt werden. Für Windows Server 2012 R2 müssen Sie das Update in KB3090973 installieren, das unter [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973) verfügbar ist.  
   
 -   Verfügbarkeitsgruppen müssen mit dem Befehl **CREATE AVAILABILITY GROUP** und der Klausel **WITH DTC\_SUPPORT = PER_DB** erstellt werden. Zurzeit können Sie eine vorhandene Verfügbarkeitsgruppe nicht ändern.  
 

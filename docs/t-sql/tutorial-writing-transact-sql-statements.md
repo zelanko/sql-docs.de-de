@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 08/03/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: t-sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -21,13 +19,12 @@ caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 65cb72c3cac7c51c702b97c2bcdbb8a793a818de
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: cad3535f4664ddf58be506d3af1ef9560a316dad
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>Lernprogramm: Schreiben von Transact-SQL-Anweisungen
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +33,7 @@ Willkommen beim Lernprogramm zum Schreiben von [!INCLUDE[tsql](../includes/tsql-
 >**HINWEIS:** Wenn Sie ein Anfänger auf diesem Gebiet sind, ist es möglicherweise einfacher für Sie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] zu verwenden, anstatt [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen zu schreiben.  
   
 ## <a name="finding-more-information"></a>Weitere Informationsquellen  
-Weitere Informationen zu bestimmten Anweisungen erhalten Sie, indem Sie in der SQL Server-Onlinedokumentation nach dem Namen der jeweiligen Anweisung suchen oder die 1.800 alphabetisch geordneten Sprachelemente unter [Transact-SQL-Referenz &#40;Datenbankmodul&#41;](../t-sql/transact-sql-reference-database-engine.md) über das Inhaltsverzeichnis durchsuchen. Eine weitere gute Strategie zum Suchen von Informationen besteht darin, Stichwörtern zu verwenden, die mit dem betreffenden Fachgebiet zu tun haben. Wenn Sie z.B. wissen möchten, wie Teile eines Datums zurückgegeben werden (z.B. der Monat), suchen Sie im Index nach **Datumsangaben [SQL Server]**, und wählen Sie die **Datumsbestandteile** aus. Dadurch gelangen Sie zum Thema [DATEPART &#40;Transact-SQL&#41;](../t-sql/functions/datepart-transact-sql.md). Wenn Sie beispielsweise Informationen zur Verwendung von Zeichenfolgen benötigen, suchen Sie nach **Zeichenfolgenfunktionen**. Dadurch gelangen Sie zum Thema [Zeichenfolgenfunktionen &#40;Transact-SQL&#41;](../t-sql/functions/string-functions-transact-sql.md).  
+Weitere Informationen zu bestimmten Anweisungen erhalten Sie, indem Sie in der SQL Server-Onlinedokumentation nach dem Namen der jeweiligen Anweisung suchen oder die 1.800 alphabetisch geordneten Sprachelemente unter [Transact-SQL-Referenz &amp;#40;Datenbank-Engine&amp;#41;](../t-sql/transact-sql-reference-database-engine.md) über das Inhaltsverzeichnis durchsuchen. Eine weitere gute Strategie zum Suchen von Informationen besteht darin, Stichwörtern zu verwenden, die mit dem betreffenden Fachgebiet zu tun haben. Wenn Sie z.B. wissen möchten, wie Teile eines Datums zurückgegeben werden (z.B. der Monat), suchen Sie im Index nach **Datumsangaben [SQL Server]**, und wählen Sie die **Datumsbestandteile** aus. Dadurch gelangen Sie zum Thema [DATEPART &#40;Transact-SQL&#41;](../t-sql/functions/datepart-transact-sql.md). Wenn Sie beispielsweise Informationen zur Verwendung von Zeichenfolgen benötigen, suchen Sie nach **Zeichenfolgenfunktionen**. Dadurch gelangen Sie zum Thema [Zeichenfolgenfunktionen &#40;Transact-SQL&#41;](../t-sql/functions/string-functions-transact-sql.md).  
   
 ## <a name="what-you-will-learn"></a>Lernziele  
 In diesem Lernprogramm wird Ihnen gezeigt, wie eine Datenbank erstellt wird, eine Tabelle in der Datenbank erstellt wird, Daten in die Tabelle eingefügt werden, die Daten aktualisiert, gelesen und gelöscht werden und die Tabelle anschließend gelöscht wird. Sie erstellen Sichten und gespeicherte Prozeduren und konfigurieren einen Benutzer für die Datenbank und die Daten.  

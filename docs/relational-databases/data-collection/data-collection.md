@@ -3,30 +3,25 @@ title: Datensammlung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/18/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: data-collection
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 keywords:
 - Datensammlung
 helpviewer_keywords:
 - data collection [SQL Server]
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 caps.latest.revision: 46
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 6ef12bf3c2032a47d69e3f809443bd1bde4671ca
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 39bc4afa05f9f72fcf2ec08cdfd85e65fa8bce04
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-collection"></a>Datensammlung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +94,7 @@ ms.lasthandoff: 04/16/2018
   
  ![Funktionale Abhängigkeiten des Datensammlers](../../relational-databases/data-collection/media/dc-functional-dependencies.gif "Funktionale Abhängigkeiten des Datensammlers")  
   
- Wie in der Abbildung dargestellt, befindet sich der Datenanbieter außerhalb des Datensammlers und hat definitionsgemäß eine implizite Beziehung zu dem Ziel. Der Datenanbieter ist für ein bestimmtes Ziel spezifisch (z. B. für einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst, wie etwa das relationale Modul) und liefert Daten, wie beispielsweise Systemsichten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Leistungsindikatoren und WMI-Anbieter, die vom Datensammler verwendet werden können.  
+ Wie in der Abbildung dargestellt, befindet sich der Datenanbieter außerhalb des Datensammlers und hat definitionsgemäß eine implizite Beziehung zu dem Ziel. Der Datenanbieter ist für ein bestimmtes Ziel spezifisch (z. B. für einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst, wie etwa die relationale Engine) und liefert Daten, wie beispielsweise Systemsichten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Leistungsindikatoren und WMI-Anbieter, die vom Datensammler verwendet werden können.  
   
  Der Sammlertyp ist für einen Zieltyp spezifisch und basiert auf der logischen Zuordnung eines Datenanbieters zu einem Zieltyp. Der Sammlertyp definiert, wie Daten von einem bestimmten Datenanbieter (mithilfe schematisierter Parameter) gesammelt werden, und gibt das Datenspeicherschema an. Das Datenanbieterschema und das Speicherschema sind für das Speichern der gesammelten Daten erforderlich. Der Sammlertyp liefert auch den Speicherort des Verwaltungs-Data Warehouse, das sich auf dem Computer, auf dem die Datensammlung ausgeführt wird, oder auf einem anderen Computer befinden kann.  
   

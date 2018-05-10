@@ -4,12 +4,11 @@ ms.custom: ''
 ms.date: 10/23/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: xevents
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server]
 - xe
@@ -18,13 +17,12 @@ caps.latest.revision: 48
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f428e09433cd339c7a2c759254cba2d0a0cddaae
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e5dfdc3c08bd548530e4ba2deb50871808efc00f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="extended-events"></a>Erweiterte Ereignisse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +47,8 @@ Weitere Informationen zu erweiterten Ereignissen finden Sie hier:
 |-----------|-----------------|  
 |[Pakete für erweiterte Ereignisse von SQL Server](../../relational-databases/extended-events/sql-server-extended-events-packages.md)|Beschreibt die Pakete für erweiterte Ereignisse, in denen Objekte enthalten sind, mit denen Daten beim Ausführen einer Sitzung für erweiterte Ereignisse abgerufen und verarbeitet werden.|  
 |[Ziele für erweiterte Ereignisse von SQL Server](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)|Beschreibt die Ereignisconsumer, die während einer Ereignissitzung Daten empfangen können.|  
-|[Modul für erweiterte Ereignisse von SQL Server](../../relational-databases/extended-events/sql-server-extended-events-engine.md)|Beschreibt das Modul, das eine Sitzung für erweiterte Ereignisse implementiert und verwaltet.|  
+|
+  [Engine für erweiterte Ereignisse von SQL Server](../../relational-databases/extended-events/sql-server-extended-events-engine.md)|Beschreibt die Engine, die eine Sitzung für erweiterte Ereignisse implementiert und verwaltet.|  
 |[Sitzungen für erweiterte Ereignisse von SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)|Beschreibt die Sitzung für erweiterte Ereignisse.|  
   
 ## <a name="extended-events-architecture"></a>Architektur von erweiterten Ereignissen  
@@ -67,7 +66,7 @@ Weitere Informationen zu erweiterten Ereignissen finden Sie hier:
   
  Das Design von erweiterten Ereignissen zeichnet sich durch die folgenden zentralen Aspekte aus:  
   
--   Das Modul für erweiterte Ereignisse ist ereignisagnostisch. Daher kann das Modul jedes beliebige Ereignis an jedes beliebige Ziel binden, da es nicht durch den Ereignisinhalt eingeschränkt wird. Weitere Informationen zum Modul für erweiterte Ereignisse finden Sie unter [SQL Server Extended Events Engine](../../relational-databases/extended-events/sql-server-extended-events-engine.md).  
+-   Die Engine für erweiterte Ereignisse ist ereignisagnostisch. Daher kann die Engine jedes beliebige Ereignis an jedes beliebige Ziel binden, da es nicht durch den Ereignisinhalt eingeschränkt wird. Weitere Informationen zum Modul für erweiterte Ereignisse finden Sie unter [SQL Server Extended Events Engine](../../relational-databases/extended-events/sql-server-extended-events-engine.md).  
   
 -   Ereignisse werden von Ereignisconsumern getrennt, die in erweiterten Ereignissen als *Ziele* bezeichnet werden. Das bedeutet, dass jedes Ziel jedes Ereignis empfangen kann. Zusätzlich kann jedes ausgelöste Ereignis automatisch vom Ziel verarbeitet werden, das dann wiederum die Protokollierung ausführen oder zusätzlichen Ereigniskontext bereitstellen kann. Weitere Informationen finden Sie unter [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
   

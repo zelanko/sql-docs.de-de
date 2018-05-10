@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 03/20/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
-ms.component: indexes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
-author: barbkess
-ms.author: barbkess
+ms.topic: conceptual
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b4ff6fc5b163f51e4ae61227d238ead4d78c6212
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 65999c781c4e13dc42b40c6e47ecd82a18a5fead
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Columnstore-Indizes - Neuigkeiten
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -131,7 +127,7 @@ In-Memory-OLTP-basierte DMVs enthalten Updates für den Columnstore:
 -   Die Tabelle kann einen gruppierten Columnstore-Index als primären Tabellenspeicher verwenden. Für die Tabelle sind keine anderen Indizes zulässig, aber der gruppierte Columnstore-Index ist aktualisierbar, sodass Sie reguläre Ladevorgänge ausführen und Änderungen an einzelnen Zeilen vornehmen können.  
 -   Der nicht gruppierte Columnstore-Index weist weiterhin die gleiche Funktionalität wie in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] auf, ermöglicht nun jedoch die Ausführung zusätzlicher Operatoren im Batchmodus. Er ist weiterhin nur durch erneutes Erstellen und mithilfe eines Partitionswechsels aktualisierbar. Der nicht gruppierte Columnstore-Index wird nur in datenträgerbasierten Tabellen und nicht in In-Memory-Tabellen unterstützt.  
 -   Sowohl der gruppierte als auch der nicht gruppierte Columnstore-Index verfügt über eine Archivierungskomprimierungsoption, die die Daten weiter komprimiert. Die Archivierungsoption eignet sich zur Verringerung der Datengröße sowohl im Arbeitsspeicher als auch auf dem Datenträger, verlangsamt jedoch die Leistung der Abfrage. Dies funktioniert gut für Daten, auf die nur selten zugegriffen wird.  
--   Der gruppierte und der nicht gruppierte Columnstore-Index funktionieren auf sehr ähnliche Weise. Sie verwenden das gleiche Format für spaltenweise Speicherung, dasselbe Abfrageverarbeitungsmodul und den gleichen Satz von dynamischen Verwaltungssichten. Der Unterschied besteht in den primären bzw. sekundären Indextypen, und darin, dass der nicht gruppierte Columnstore-Index schreibgeschützt ist.  
+-   Der gruppierte und der nicht gruppierte Columnstore-Index funktionieren auf sehr ähnliche Weise. Sie verwenden das gleiche Format für spaltenweise Speicherung, dieselbe Abfrageverarbeitungs-Engine und den gleichen Satz von dynamischen Verwaltungssichten. Der Unterschied besteht in den primären bzw. sekundären Indextypen, und darin, dass der nicht gruppierte Columnstore-Index schreibgeschützt ist.  
 -   Diese Operatoren werden für Multithread-Abfragen im Batchmodus ausgeführt: SCAN, FILTER, PROJECT, JOIN, GROUP BY und UNION ALL.  
   
 ## [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  

@@ -4,25 +4,23 @@ ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: in-memory-oltp
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 caps.latest.revision: 24
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1359372b09ba721bb7805b906f829686de20fb44
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6043007d25a6e8cfe692926f4dd7f08b1ad19c10
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Binden einer Datenbank mit speicheroptimierten Tabellen an einen Ressourcenpool
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -172,7 +170,7 @@ GO
 ##  <a name="bkmk_PercentAvailable"></a> Prozentsatz des für speicheroptimierte Tabellen und Indizes verfügbaren Arbeitsspeichers  
  Wenn Sie eine Datenbank mit speicheroptimierten Tabellen und eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Arbeitsauslastung demselben Ressourcenpool zuordnen, legt die Ressourcenkontrolle einen internen Schwellenwert für [!INCLUDE[hek_2](../../includes/hek-2-md.md)] fest, damit bei der Poolverwendung keine Konflikte auftreten. Im Allgemeinen liegt der Nutzungsschwellenwert für [!INCLUDE[hek_2](../../includes/hek-2-md.md)] bei ca. 80 % des Pools. In der folgenden Tabelle sind tatsächliche Schwellenwerte für verschiedene Arbeitsspeichergrößen angegeben.  
   
- Wenn Sie einen dedizierten Ressourcenpool für die [!INCLUDE[hek_2](../../includes/hek-2-md.md)] -Datenbank erstellen, müssen Sie schätzen, wie viel physischer Arbeitsspeicher nach Berücksichtigung von Zeilenversionen und Datenzunahme für die Tabellen im Arbeitsspeicher benötigt wird. Nach dem Schätzen des benötigten Arbeitsspeichers erstellen Sie einen Ressourcenpool mit einem Prozentwert des Commit-Zielarbeitsspeichers für die SQL-Instanz, wie durch die Spalte „committed_target_kb“ im DMV `sys.dm_os_sys_info` dargestellt (siehe [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)). Sie können beispielsweise einen Ressourcenpool "P1" mit 40 % des gesamten Arbeitsspeichers erstellen, der für die Instanz verfügbar ist. Von diesen 40 % erhält das [!INCLUDE[hek_2](../../includes/hek-2-md.md)] -Modul einen kleineren Prozentsatz zum Speichern von [!INCLUDE[hek_2](../../includes/hek-2-md.md)] -Daten.  So wird sichergestellt, dass [!INCLUDE[hek_2](../../includes/hek-2-md.md)] nicht den gesamten Arbeitsspeicher aus diesem Pool beansprucht.  Der Wert des kleineren Prozentsatzes ist abhängig vom zugesicherten Zielspeicher. In der folgenden Tabelle wird der für eine [!INCLUDE[hek_2](../../includes/hek-2-md.md)] -Datenbank in einem Ressourcenpool (benannt oder Standard) verfügbare Arbeitsspeicher aufgeführt, bevor ein OOM-Fehler ausgelöst wird.  
+ Wenn Sie einen dedizierten Ressourcenpool für die [!INCLUDE[hek_2](../../includes/hek-2-md.md)] -Datenbank erstellen, müssen Sie schätzen, wie viel physischer Arbeitsspeicher nach Berücksichtigung von Zeilenversionen und Datenzunahme für die Tabellen im Arbeitsspeicher benötigt wird. Nach dem Schätzen des benötigten Arbeitsspeichers erstellen Sie einen Ressourcenpool mit einem Prozentwert des Commit-Zielarbeitsspeichers für die SQL-Instanz, wie durch die Spalte „committed_target_kb“ im DMV `sys.dm_os_sys_info` dargestellt (siehe [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)). Sie können beispielsweise einen Ressourcenpool "P1" mit 40 % des gesamten Arbeitsspeichers erstellen, der für die Instanz verfügbar ist. Von diesen 40 % erhält die [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Engine einen kleineren Prozentsatz zum Speichern von [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Daten.  So wird sichergestellt, dass [!INCLUDE[hek_2](../../includes/hek-2-md.md)] nicht den gesamten Arbeitsspeicher aus diesem Pool beansprucht.  Der Wert des kleineren Prozentsatzes ist abhängig vom zugesicherten Zielspeicher. In der folgenden Tabelle wird der für eine [!INCLUDE[hek_2](../../includes/hek-2-md.md)] -Datenbank in einem Ressourcenpool (benannt oder Standard) verfügbare Arbeitsspeicher aufgeführt, bevor ein OOM-Fehler ausgelöst wird.  
   
 |Zugesicherter Zielspeicher|Für speicherinterne Tabellen verfügbarer Prozentsatz|  
 |-----------------------------|---------------------------------------------|  

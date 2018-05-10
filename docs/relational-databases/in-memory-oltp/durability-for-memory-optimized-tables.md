@@ -4,25 +4,23 @@ ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: in-memory-oltp
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 caps.latest.revision: 28
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 202928642adf3d923a2c001da7708fdc416a097d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 331c01861f5ffb6bf5337105926d804420c79598
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Dauerhaftigkeit für speicheroptimierte Tabellen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,10 +71,10 @@ ms.lasthandoff: 04/16/2018
  Der Vorgang führt eines oder mehrere Daten-/Änderungsdateipaare zusammen und erstellt ein neues Daten-/Änderungsdateipaar.  
   
  Während der Wiederherstellung nach einem Systemabsturz  
- Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet wird oder die Datenbank wieder online geschaltet wird, werden die speicheroptimierten Daten unter Verwendung der Daten-/Änderungsdateipaare aufgefüllt. Die Änderungsdatei dient beim Lesen der Zeilen aus der entsprechenden Datendatei als Filter für die gelöschten Zeilen. Da alle Daten-/Änderungsdateipaare unabhängig sind, werden diese Dateien parallel geladen, um die Zeit zum Laden der Daten in den Arbeitsspeicher zu verkürzen. Sobald die Daten in den Arbeitsspeicher geladen wurden, wendet das In-Memory OLTP-Modul die aktiven, von den Prüfpunktdateien noch nicht verarbeiteten Transaktionsprotokolldatensätze an, um die speicheroptimierten Daten zu vervollständigen.  
+ Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet wird oder die Datenbank wieder online geschaltet wird, werden die speicheroptimierten Daten unter Verwendung der Daten-/Änderungsdateipaare aufgefüllt. Die Änderungsdatei dient beim Lesen der Zeilen aus der entsprechenden Datendatei als Filter für die gelöschten Zeilen. Da alle Daten-/Änderungsdateipaare unabhängig sind, werden diese Dateien parallel geladen, um die Zeit zum Laden der Daten in den Arbeitsspeicher zu verkürzen. Sobald die Daten in den Arbeitsspeicher geladen wurden, wendet die In-Memory-OLTP-Engine die aktiven, von den Prüfpunktdateien noch nicht verarbeiteten Transaktionsprotokolldatensätze an, um die speicheroptimierten Daten zu vervollständigen.  
   
  Während des Wiederherstellungsvorgangs  
- Die In-Memory OLTP-Prüfpunktdateien werden aus der Datenbanksicherung erstellt. Anschließend wird mindestens eine Transaktionsprotokollsicherung angewendet. Wie bei der Wiederherstellung nach einem Systemabsturz lädt das In-Memory OLTP-Modul Daten parallel in den Arbeitsspeicher, um die Auswirkungen auf die Wiederherstellungszeit zu minimieren.  
+ Die In-Memory OLTP-Prüfpunktdateien werden aus der Datenbanksicherung erstellt. Anschließend wird mindestens eine Transaktionsprotokollsicherung angewendet. Wie bei der Wiederherstellung nach einem Systemabsturz lädt die In-Memory-OLTP-Engine Daten parallel in den Arbeitsspeicher, um die Auswirkungen auf die Wiederherstellungszeit zu minimieren.  
   
 ## <a name="merging-data-and-delta-files"></a>Zusammenführen von Daten- und Änderungsdateien  
  Die Daten für speicheroptimierte Tabellen werden in mindestens einem Daten-/Änderungsdateipaar gespeichert (auch als Prüfpunktdateipaar oder CFP (Checkpoint File Pair) bezeichnet). Eingefügte Zeilen werden in Datendateien gespeichert, und in Änderungsdateien werden Verweise auf gelöschte Zeilen gespeichert. Während der Ausführung einer OLTP-Arbeitsauslastung werden beim Aktualisieren, Einfügen und Löschen von Zeilen durch DML-Vorgänge neue CFPs erstellt, um die neuen Zeilen persistent zu speichern, und der Verweis auf die gelöschten Zeilen wird an die Änderungsdateien angefügt.  

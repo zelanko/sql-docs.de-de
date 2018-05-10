@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: report-data
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10420"
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
@@ -18,12 +17,11 @@ caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 64a0926d87c12bc84c73e9f10f766a5e79c78975
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 2f7eecd7b6b98f03e75abea03370dff14524333f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Erstellen von Berichten zu eingebetteten und freigegebenen Datasets (Berichts-Generator und SSRS)
   Ein Dataset gibt die Daten aus einer Datenverbindung an, die Sie verwenden möchten. Ein Dataset basiert auf einer Datenverbindung, die im Bericht als eine eingebettete Datenquelle oder ein Verweis auf eine freigegebene Datenquelle auf einem Berichtsserver gespeichert wurde. Das Dataset enthält eine Abfrage, die einen Satz von Feldern angibt. Wie Sie diese Felder in die Entwurfsoberfläche ziehen, erstellen Sie Ausdrücke, die die tatsächlichen Daten ergeben, wenn der Bericht ausgeführt wird.  
@@ -223,7 +221,7 @@ ms.lasthandoff: 01/09/2018
  Wenn während der Berichtsverarbeitung die Abfrage für ein Dataset ausgeführt wird, enthält das Resultset möglicherweise keine Zeilen. Im gerenderten Bericht wird ein mit einem leeren Dataset verknüpfter Datenbereich als leerer Datenbereich angezeigt. Sie können Text angeben, der im gerenderten Bericht anstelle des leeren Datenbereichs angezeigt werden soll. Wenn die Abfragen für sämtliche Datasets zur Laufzeit keine Daten zurückgeben, können Sie auch eine Meldung für Unterberichte festlegen. Weitere Informationen finden Sie unter [Festlegen einer Meldung über fehlende Daten für einen Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md).  
   
 ##  <a name="Options"></a> Festlegen von Datasetoptionen  
- Bei Datenquellen, die internationale Daten unterstützen, müssen Sie möglicherweise die Eigenschaften für ein Dataset anpassen, die sich auf die Sortierreihenfolge, internationale Zeicheneigenschaften und Berücksichtigung der Groß- und Kleinschreibung auswirken. Zu diesen Eigenschaften zählen Groß-/Kleinschreibung, Kanatyp, Breite, Akzent und Sortierung. Weitere Informationen finden Sie in "Internationale Überlegungen zu Datenbanken und Datenbankmodulanwendungen" und "Arbeiten mit Sortierungen" in der [SQL Server-Onlinedokumentation](http://go.microsoft.com/fwlink/?linkid=98335). Weitere Informationen zum Festlegen dieser Eigenschaften finden Sie unter [Dataset Properties Dialog Box, Options (Report Builder) (Dataseteigenschaften (Dialogfeld), Optionen (Berichts-Generator))](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md).  
+ Bei Datenquellen, die internationale Daten unterstützen, müssen Sie möglicherweise die Eigenschaften für ein Dataset anpassen, die sich auf die Sortierreihenfolge, internationale Zeicheneigenschaften und Berücksichtigung der Groß- und Kleinschreibung auswirken. Zu diesen Eigenschaften zählen Groß-/Kleinschreibung, Kanatyp, Breite, Akzent und Sortierung. Weitere Informationen finden Sie in „Internationale Überlegungen zu Datenbanken und Datenbank-Engine-Anwendungen“ und „Arbeiten mit Sortierungen“ in der [SQL Server-Onlinedokumentation](http://go.microsoft.com/fwlink/?linkid=98335). Weitere Informationen zum Festlegen dieser Eigenschaften finden Sie unter [Dataset Properties Dialog Box, Options (Report Builder) (Dataseteigenschaften (Dialogfeld), Optionen (Berichts-Generator))](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md).  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datasetfeld-Sammlung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   

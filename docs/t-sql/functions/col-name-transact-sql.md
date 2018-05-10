@@ -29,16 +29,16 @@ ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4438a86353a8fdbc6174a718d401656bf05df4fe
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 47991654f3d73645737872b0dda53ecc1c5c4052
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="colname-transact-sql"></a>COL_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Gibt den Namen einer Spalte mit einer angegebenen Tabellenidentifikationsnummer und Spaltenidentifikationsnummer zurück.
+Diese Funktion gibt den Namen der Tabellenspalte basierend auf den Werten der Tabellen-ID und der Spalten-ID der entsprechenden Tabellenspalte zurück.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,26 +50,26 @@ COL_NAME ( table_id , column_id )
   
 ## <a name="arguments"></a>Argumente  
 *table_id*  
-Die ID der Tabelle mit der Spalte. *table_id* weist den Typ **int** auf.
+Die ID der Tabelle, die diese Spalte enthält. Das Argument *table_id* weist den Datentyp **int** auf.
   
 *column_id*  
-Die ID der Spalte. Der Parameter *column_id* weist den Typ **int** auf.
+Die ID der Spalte. Das Argument *column_id* weist den Datentyp **int** auf.
   
 ## <a name="return-types"></a>Rückgabetypen
 **sysname**
   
 ## <a name="exceptions"></a>Ausnahmen  
-Gibt NULL bei einem Fehler zurück oder wenn ein Aufrufer nicht über Berechtigungen zum Anzeigen des Objekts verfügt.
+Gibt NULL zurück bei einem Fehler oder wenn ein Aufrufer nicht über die korrekte Berechtigung zum Anzeigen des Objekts verfügt.
   
-Ein Benutzer kann nur die Metadaten sicherungsfähiger Elemente anzeigen, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Dies bedeutet, dass Metadaten ausgebende integrierte Funktionen, z. B. COL_NAME, möglicherweise NULL zurückgeben, wenn dem Benutzer für das Objekt keine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
+In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann ein Benutzer nur die Metadaten sicherungsfähiger Elemente anzeigen, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Dies bedeutet, dass Metadaten ausgebende integrierte Funktionen, z.B. `COL_NAME`, möglicherweise NULL zurückgeben, wenn dem Benutzer für das Objekt nicht die korrekten Berechtigungen erteilt wurden. Weitere Informationen finden Sie unter [Konfigurieren der Sichtbarkeit von Metadaten](../../relational-databases/security/metadata-visibility-configuration.md).
   
 ## <a name="remarks"></a>Remarks  
 Der *table_id*- und der *column_id*-Parameter erzeugen zusammen eine Spaltennamenzeichenfolge.
   
-Weitere Informationen zum Abrufen von Tabellen- und Spaltenidentifikationsnummern finden Sie unter [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md).
+Weitere Informationen zum Abrufen von Tabellen- und Spalten-IDs finden Sie unter [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md).
   
 ## <a name="examples"></a>Beispiele  
-Das folgende Beispiel gibt den Namen der ersten Spalte in der Beispieltabelle `Employee` zurück.
+Dieses Beispiel gibt den Namen der ersten Spalte in der Beispieltabelle `Employee` zurück.
   
 ```sql
 -- Uses AdventureWorks  

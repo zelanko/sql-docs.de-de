@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
@@ -19,12 +17,11 @@ caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 632c6dbc496da650418ef4bc7239605b0e9e8149
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 14d3ac3a941f9d0bd23931673255083b1e113979
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-8-restore-as-new-database-from-log-backup"></a>Lektion 8: Wiederherstellen als neue Datenbank aus der Protokollsicherung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +35,7 @@ Befolgen Sie folgende Schritte, um eine Datenbank auf eine neue Datenbank einer 
   
 1.  Stellen Sie eine Verbindung mit SQL Server Management Studio her.  
   
-2.  Öffnen Sie ein neues Abfragefenster, und stellen Sie eine Verbinden mit der SQL Server 2016-Instanz des Datenbankmoduls auf einem virtuellen Azure-Computer her.  
+2.  Öffnen Sie ein neues Abfragefenster, und stellen Sie eine Verbinden mit der SQL Server 2016-Instanz der Datenbank-Engine auf einem virtuellen Azure-Computer her.  
   
     > [!NOTE]  
     > Wenn es sich hierbei um einen anderen virtuellen Azure-Computer handelt, als denjenigen, den Sie für die vorherigen Lektionen verwendet haben, stellen Sie sicher, dass Sie die Schritte in [Lektion 2: Erstellen von SQL Server-Anmeldeinformationen mit einer Shared Access Signature (SAS)](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)befolgt haben. Wenn Sie eine Wiederherstellung in einen anderen Container durchführen möchten, befolgen Sie die Schritte in [Lektion 1: Erstellen einer Richtlinie und eine Shared Access Signature (SAS) in einem Azure-Container](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md) und [Lektion 2: Erstellen von SQL Server-Anmeldeinformationen mit einer Shared Access Signature (SAS)](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md) für den neuen Container.  
