@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], outlining code
 - Query Editor [SQL Server Management Studio], hiding code
@@ -20,13 +18,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5409ec9723b7c36ffbc2fa6eeb31e6ff35d06779
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 78f2cb1fbc1b4a8ffebed063ddece4eb704436bd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="code-outlining"></a>Codegliederung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,7 +58,7 @@ ms.lasthandoff: 04/16/2018
   
  ![XML-Code, bei dem alle drei Tags verborgen sind](../../relational-databases/scripting/media/editoutlinexmloutercol.gif "XML-Code, bei dem alle drei Tags verborgen sind")  
   
-### <a name="database-engine-query-editor-regions"></a>Gliederungsbereiche des Datenbankmodul-Abfrage-Editors  
+### <a name="database-engine-query-editor-regions"></a>Gliederungsbereiche des Datenbank-Engine-Abfrage-Editors  
  Der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor generiert Gliederungsbereiche für jedes Element in der folgenden Hierarchie:  
   
 1.  Batches. Der erste Batch ist der Code vom Anfang der Datei bis zum ersten GO-Befehl oder bis zum Ende der Datei, wenn keine GO-Befehle vorhanden sind. Nach dem ersten GO-Befehl gibt es einen Batch von jedem GO-Befehl bis zum nächsten GO-Befehl oder bis zum Ende der Datei.  

@@ -1,44 +1,42 @@
 ---
-title: Neues im Datenbankmodul – SQL Server 2017 | Microsoft-Dokumentation
+title: Neues in der Datenbank-Engine – SQL Server 2017 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/24/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
+ms.prod_service: high-availability
 ms.component: database-engine
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 42f45b23-6509-45e8-8ee7-76a78f99a920
 caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.workload: Active
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 00a99af38eb93eda65928a033dc025329e944b21
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4ce056c683273668e156c9e1692c72dc4b638f8a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="whats-new-in-database-engine---sql-server-2017"></a>Neues im Datenbankmodul – SQL Server 2017
+# <a name="whats-new-in-database-engine---sql-server-2017"></a>Neues in der Datenbank-Engine – SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 In diesem Thema werden die Verbesserungen an [!INCLUDE[ssdenoversion-md](../includes/ssdenoversion-md.md)] für [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)] beschrieben. Klicken Sie auf die Links, um weitere Informationen zu jedem Element zu erhalten:
 
 > [!NOTE]  
-> SQL Server 2017 beinhaltet auch die in den SQL Server 2016 Service Packs hinzugefügten Features. Informationen zu diesen Elementen finden Sie unter [Neuigkeiten im Datenbankmodul](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md).
+> SQL Server 2017 beinhaltet auch die in den SQL Server 2016 Service Packs hinzugefügten Features. Informationen zu diesen Elementen finden Sie unter [Neues im Datenbankmodul – SQL Server 2016](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md).
 
 **Erweiterungen**  
 
 - CLR verwendet die Codezugriffssicherheit (Code Access Security, CAS) im .NET Framework, die nicht länger als Sicherheitsbegrenzung unterstützt wird. Eine CLR-Assembly, die mit `PERMISSION_SET = SAFE` erstellt wurde, kann womöglich auf externe Systemressourcen zugreifen, nicht verwalteten Code aufrufen und sysadmin-Privilegien erwerben. Ab [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)] wird eine `sp_configure`-Option mit der Bezeichnung `clr strict security` eingeführt, um die Sicherheit von CLR-Assemblys zu erhöhen. `clr strict security` ist standardmäßig aktiviert und behandelt `SAFE`- und `EXTERNAL_ACCESS`-Assemblys so, als wären Sie als `UNSAFE` gekennzeichnet. Die Option `clr strict security` kann für die Abwärtskompatibilität deaktiviert werden, es wird jedoch nicht empfohlen. Microsoft empfiehlt, dass alle Assemblys durch ein Zertifikat oder einen asymmetrischen Schlüssel mit einem entsprechenden Anmeldenamen signiert werden, dem `UNSAFE ASSEMBLY`-Berechtigung für die Masterdatenbank gewährt wurde. CLR-Assemblys können als Problemumgehung für das `clr strict security`-Feature einer Positivliste hinzugefügt werden. [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) und [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) wurden hinzugefügt, um die Positivliste von vertrauenswürdigen Assemblys zu unterstützen. Weitere Informationen finden Sie unter [CLR Strict Security](configure-windows/clr-strict-security.md).  
 - Eine neue DMF, [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md), wird eingeführt, um zusammenfassende Ebenenattribute und Informationen zu den Transaktionsprotokolldateien verfügbar zu machen. Dies ist hilfreich für die Überwachung der Integrität des Transaktionsprotokolls.  
 - Fortsetzbare Neuerstellungen von online geschalteten Indizes Mit fortsetzbaren Online-Indexneuerstellung können Sie den Vorgang einer Online-Indexneuerstellung dort fortsetzen, wo es nach einem Fehler aufgehört hat (z.B. einem Failover in einem Replikat oder nicht genügend Speicherplatz). Sie können es aus pausieren und den Vorgang der Online-Indexneuerstellung später fortsetzen. Es kann z.B. notwendig sein, dass Sie vorübergehend Systemressourcen verfügbar machen, um einen Task mit hoher Priorität auszuführen oder Indexneuerstellung in einem anderen Wartungsfenster abzuschließen, wenn das verfügbare Wartungsfenster zu klein für eine große Tabelle ist. Zudem erfordern fortsetzbare Online-Indexneuerstellungen keinen erheblichen Speicherplatz, wodurch Sie eine Protokollkürzung durchführen können, während der Vorgang der fortsetzbaren Erstellung ausgeführt wird. Finden Sie unter [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) und [Richtlinien für Onlineindexvorgänge](../relational-databases/indexes/guidelines-for-online-index-operations.md).
-- **IDENTITY_CACHE-Option für ALTER DATABASE SCOPED CONFIGURATION** Die Option IDENTITY_CACHE wurde neue in `ALTER DATABASE SCOPED CONFIGURATION` T-SQL-Anweisungen hinzugefügt. Wenn diese Option auf `OFF` festgelegt ist, kann das Datenbankmodul Lücken in den Werten von Identitätsspalten vermeiden, wenn ein Server unerwartet neu startet oder ein Failover auf einen sekundären Server ausführt. Finden Sie unter [ALTER ausgelegte DATENBANKKONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).   
+- **IDENTITY_CACHE-Option für ALTER DATABASE SCOPED CONFIGURATION** Die Option IDENTITY_CACHE wurde neue in `ALTER DATABASE SCOPED CONFIGURATION` T-SQL-Anweisungen hinzugefügt. Wenn diese Option auf `OFF` festgelegt ist, kann die Datenbank-Engine Lücken in den Werten von Identitätsspalten vermeiden, wenn ein Server unerwartet neu startet oder ein Failover auf einen sekundären Server ausführt. Finden Sie unter [ALTER ausgelegte DATENBANKKONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).   
 -  [!INCLUDE[ssnoversion](../includes/ssnoversion.md)] bietet jetzt Graphdatenbank-Funktionen, mit denen aussagekräftigere beziehungsorientierte Daten modelliert werden können. Dazu zählt [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md)-Syntax zum Erstellen von Knoten- und Rahmentabellen und das Schlüsselwort [MATCH](../t-sql/queries/match-sql-graph.md) für Abfragen. Weitere Informationen finden Sie unter [Graph Processing with SQL Server 2017 (Graph-Verarbeitung mit SQL Server-2017)](../relational-databases/graphs/sql-graph-overview.md).   
 - Eine neue Generation von Verbesserungen bei der Abfrageverarbeitung wendet Optimierungsstrategien auf die Laufzeitbedingungen Ihrer Anwendungsarbeitsauslastung an. In dieser ersten Version der Featurefamilie für die **adaptive Abfrageverarbeitung** gibt es drei neue Verbesserungen: **Adaptive Joins im Batchmodus**, **Feedback zur Speicherzuweisung im Batchmodus** und **überlappende Ausführung** für Tabellenwertfunktionen mit mehreren Anweisungen.  Weitere Informationen finden Sie unter [Adaptive Abfrageverarbeitung in SQL-Datenbanken](../relational-databases/performance/adaptive-query-processing.md).
 - Die automatische Datenbankoptimierung bietet einen Einblick in die potentiellen Abfrageleistungsprobleme, empfiehlt Lösungen und kann identifizierte Probleme automatisch beheben. Die automatische Optimierung in [!INCLUDE[ssnoversion](../includes/ssnoversion.md)] benachrichtigt Sie, wenn ein mögliches Leistungsproblem erkannt wird. Sie können mit Ihr Korrekturmaßnahme ergreifen. Zudem kann [!INCLUDE[ssde-md](../includes/ssde-md.md)] die Leistungsprobleme automatisch beheben. Weitere Informationen finden Sie unter [Automatic tuning (Automatische Optimierung)](../relational-databases/automatic-tuning/automatic-tuning.md).

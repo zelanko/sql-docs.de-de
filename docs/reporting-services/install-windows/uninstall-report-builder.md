@@ -1,27 +1,25 @@
 ---
 title: Deinstallieren des Berichts-Generators | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2ca635948940ec0a8921444d2b7928d53e16c70f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 4f9f1383b05ab332fd9c713c8acf6f5c18cab7e4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="uninstall-report-builder"></a>Deinstallieren des Berichts-Generators
 
@@ -47,7 +45,7 @@ Enthalten vom Berichts-Generator verwendete Ordner benutzerdefinierte Dateien, w
   
 1.  Klicken Sie im Menü **Start** auf **Ausführen**.  
   
-2.  Geben Sie im Textfeld **Öffnen** den Befehl **cmd.**ein.  
+2.  Geben Sie im Textfeld **Öffnen** den Befehl **cmd.** ein.  
   
 3.  Navigieren Sie im Eingabeaufforderungsfenster zum Ordner mit der Datei "ReportBuilder3_x86.msi".  
   

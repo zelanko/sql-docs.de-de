@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 08/05/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: udf
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-udf
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], components
 - user-defined functions [SQL Server], about user-defined functions
@@ -20,13 +19,12 @@ caps.latest.revision: 23
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4f2d140eddab4117dbd6ee8d61c7d6d386adfc46
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: cc7cf4ed368b63c7b070873dda3d23fcce909f35
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="user-defined-functions"></a>Benutzerdefinierte Funktionen
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -135,7 +133,8 @@ Die folgenden Anweisungstypen sind in einer Funktion zulässig:
 |||  
 |-|-|  
 |**Taskbeschreibung**|**Thema**|  
-|Beschreibt, wie eine benutzerdefinierte Transact-SQL-Funktion erstellt wird.|[Erstellen benutzerdefinierter Funktionen &#40;Datenbankmodul&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)|  
+|Beschreibt, wie eine benutzerdefinierte Transact-SQL-Funktion erstellt wird.|
+  [Erstellen benutzerdefinierter Funktionen &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)|  
 |Beschreibt, wie eine CLR-Funktion erstellt wird.|[Erstellen von CLR-Funktionen](../../relational-databases/user-defined-functions/create-clr-functions.md)|  
 |Beschreibt, wie eine benutzerdefinierte Aggregatfunktion erstellt wird.|[Erstellen benutzerdefinierter Aggregate](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)|  
 |Beschreibt, wie eine benutzerdefinierte Transact-SQL-Funktion geändert wird.|[Ändern benutzerdefinierter Funktionen](../../relational-databases/user-defined-functions/modify-user-defined-functions.md)|  

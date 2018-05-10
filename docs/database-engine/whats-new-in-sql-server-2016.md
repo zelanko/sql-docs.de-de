@@ -1,17 +1,16 @@
 ---
-title: Neues im Datenbankmodul – SQL Server 2016 | Microsoft-Dokumentation
+title: Neues in der Datenbank-Engine – SQL Server 2016 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
+ms.prod_service: high-availability
 ms.component: database-engine
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - what's new [SQL Server Database Engine]
 - Database Engine [SQL Server], what's new
@@ -20,14 +19,13 @@ caps.latest.revision: 431
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 329ddc437d53421f93fb4c18c0b4f138ebdbd5e2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7248163e857df49e8c23ab49bd89f435c897dd78
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="whats-new-in-database-engine---sql-server-2016"></a>Neues im Datenbankmodul – SQL Server 2016
+# <a name="whats-new-in-database-engine---sql-server-2016"></a>Neues in der Datenbank-Engine – SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 In diesem Thema werden die eingeführten Verbesserungen der [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Version des [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]vorgestellt.  Die neuen Funktionen und Verbesserungen verbessern die Leistungsfähigkeit und Produktivität von Architekten, Entwicklern und Administratoren, die Datenspeichersysteme entwerfen, entwickeln und pflegen.
@@ -308,7 +306,7 @@ In [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] verwendet SQL Server Managed B
 
 -   Standardmäßig fügt das Setup genau so viele tempdb-Dateien hinzu wie die CPU-Anzahl oder 8, je nachdem, welcher Wert niedriger ist.
 
--   Während des Setups können Sie die Anzahl der tempdb-Datenbankdateien, die Anfangsgröße, die automatische Vergrößerung und die Verzeichnisplatzierung über das neue UI-Eingabesteuerelement im Abschnitt „Datenbankmodulkonfiguration - TempDB“ des SQL Server-Installationsassistenten konfigurieren.
+-   Während des Setups können Sie die Anzahl der tempdb-Datenbankdateien, die Anfangsgröße, die automatische Vergrößerung und die Verzeichnisplatzierung über das neue UI-Eingabesteuerelement im Abschnitt „Datenbank-Engine-Konfiguration - TempDB“ des SQL Server-Installationsassistenten konfigurieren.
 
 -   Die anfängliche Standardgröße liegt bei 8 MB und der Standardwert für die automatische Vergrößerung beträgt 64 MB.
 
@@ -387,7 +385,7 @@ Sicherheit auf Zeilenebene führt eine prädikatbasierte Zugriffssteuerung ein. 
 
 
 ####  <a name="TCE"></a> Always Encrypted
-Mit Always Encrypted kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Vorgänge für verschlüsselte Daten durchführen. Das Beste daran ist, der Verschlüsselungsschlüssel befindet sich bei der Anwendung innerhalb der vertrauenswürdigen Umgebung des Kunden und nicht auf dem Server. Always Encrypted sichert die Kundendaten, sodass DBAs keinen Zugriff auf Nur-Text-Daten haben. Die Verschlüsselung und Entschlüsselung von Daten erfolgt transparent auf Treiberebene, wodurch Änderungen minimiert werden, die an vorhandenen Anwendungen vorgenommen werden müssen. Weitere Informationen finden Sie unter [Always Encrypted &#40;Datenbankmodul&#41;](../relational-databases/security/encryption/always-encrypted-database-engine.md).
+Mit Always Encrypted kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Vorgänge für verschlüsselte Daten durchführen. Das Beste daran ist, der Verschlüsselungsschlüssel befindet sich bei der Anwendung innerhalb der vertrauenswürdigen Umgebung des Kunden und nicht auf dem Server. Always Encrypted sichert die Kundendaten, sodass DBAs keinen Zugriff auf Nur-Text-Daten haben. Die Verschlüsselung und Entschlüsselung von Daten erfolgt transparent auf Treiberebene, wodurch Änderungen minimiert werden, die an vorhandenen Anwendungen vorgenommen werden müssen. Weitere Informationen finden Sie unter [Immer verschlüsselt &amp;#40;Datenbank-Engine&amp;#41;](../relational-databases/security/encryption/always-encrypted-database-engine.md).
 
 
 ####  <a name="Masking"></a> Dynamische Datenmaskierung

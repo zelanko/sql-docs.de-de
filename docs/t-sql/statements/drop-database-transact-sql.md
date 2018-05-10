@@ -1,20 +1,20 @@
 ---
-title: DROP DATABASE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: DROP DATABASE (Transact-SQL) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 09/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP DATABASE
 - DROP_DATABASE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - snapshots [SQL Server database snapshots], deleting
 - removing databases
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - DROP DATABASE statement
 - database removal [SQL Server], DROP DATABASE statement
 ms.assetid: 477396a9-92dc-43c9-9b97-42c8728ede8e
-caps.latest.revision: "83"
+caps.latest.revision: 83
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 6e963031c1d9f27293a2f0786e7f0ce19183f038
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 47aa7d947dfeafcad80c74514e1861d44205389c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -56,13 +56,13 @@ DROP DATABASE database_name [;]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *IF VORHANDEN IST*  
+ *IF EXISTS*  
  **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Bedingt löscht die Datenbank nur dann, wenn sie bereits vorhanden ist.  
+ Löscht die Datenbank nur, wenn diese bereits vorhanden ist.  
   
  *database_name*  
- Gibt den Namen der zu entfernenden Datenbank an. Um eine Liste der Datenbanken anzuzeigen, verwenden Sie die [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) -Katalogsicht angezeigt.  
+ Gibt den Namen der zu entfernenden Datenbank an. Zum Anzeigen einer Liste von Datenbanken verwenden Sie die [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)-Katalogsicht.  
   
  *database_snapshot_name*  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -70,39 +70,42 @@ DROP DATABASE database_name [;]
  Gibt den Namen der zu entfernenden Datenbankmomentaufnahme an.  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
- Eine Datenbank kann unabhängig von ihrem Status (offline, schreibgeschützt, fehlerverdächtig usw.) gelöscht werden. Um den aktuellen Status einer Datenbank anzuzeigen, verwenden Sie die **sys.databases** -Katalogsicht angezeigt.  
+ Eine Datenbank kann unabhängig von ihrem Status (offline, schreibgeschützt, fehlerverdächtig usw.) gelöscht werden. Zur Anzeige des aktuellen Status einer Datenbank verwenden Sie die **sys.databases**-Katalogsicht.  
   
- Eine gelöschte Datenbank kann neu erstellt werden, nur von einer Sicherung wiederherstellen. Datenbankmomentaufnahmen können nicht gesichert und somit nicht wiederhergestellt werden.  
+ Eine gelöschte Datenbank kann nur neu erstellt werden, indem eine Sicherungskopie wiederhergestellt wird. Datenbankmomentaufnahmen können nicht gesichert und somit nicht wiederhergestellt werden.  
   
- Wenn eine Datenbank gelöscht wird, die [master-Datenbank](../../relational-databases/databases/master-database.md) sollte gesichert werden.  
+ Vor dem Löschen einer Datenbank sollte die [Masterdatenbank](../../relational-databases/databases/master-database.md) gesichert werden.  
   
- Beim Löschen einer Datenbank wird die Datenbank von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz entfernt, und die von der Datenbank verwendeten physischen Datenträgerdateien werden gelöscht. Wenn die Datenbank oder eine ihrer Dateien beim Löschen offline ist, werden die Datenträgerdateien nicht gelöscht. Diese Dateien können manuell mit dem Windows-Explorers gelöscht werden. Um eine Datenbank aus dem aktuellen Server zu entfernen, ohne die Dateien aus dem Dateisystem zu löschen, verwenden Sie [Sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).  
+ Beim Löschen einer Datenbank wird die Datenbank von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz entfernt, und die von der Datenbank verwendeten physischen Datenträgerdateien werden gelöscht. Wenn die Datenbank oder eine ihrer Dateien beim Löschen offline ist, werden die Datenträgerdateien nicht gelöscht. Diese Dateien können manuell mit dem Windows-Explorers gelöscht werden. Verwenden Sie [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md), um eine Datenbank vom aktuellen Server zu entfernen, ohne dass die Dateien aus dem Dateisystem gelöscht werden.  
   
 > [!WARNING]  
->  Löschen eine Datenbank mit FILE_SNAPSHOT Sicherungen ist erfolgreich, aber die Datenbankdateien, die Momentaufnahmen zugeordnet sind werden nicht entfernt werden, um zu vermeiden, dass die Sicherungen auf diese Datenbankdateien verweisen. Die Datei wird abgeschnitten, jedoch nicht physisch gelöscht, um die Sicherungen FILE_SNAPSHOT intakt zu halten. Weitere Informationen finden Sie unter [SQL Server Backup and Restore with Windows Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über [aktuelle Version](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
+>  Sie können zwar eine Datenbankdatei entfernen, der FILE_SNAPSHOT-Sicherungen zugeordnet sind, jedoch werden keine Datenbankdateien gelöscht, denen Momentaufnahmen zugeordnet sind, um zu vermeiden, dass die Sicherungen, die auf die Datenbankdatei verweisen, ungültig gemacht werden. Die Datei wird zwar abgeschnitten, aber nicht physisch gelöscht, damit die FILE_SNAPSHOT-Sicherungen vollständig erhalten bleiben. Weitere Informationen finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Wenn Sie eine Datenbankmomentaufnahme löschen, wird diese aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz gelöscht. Außerdem werden die Sparsedateien des physischen NTFS-Dateisystems gelöscht, die von der Momentaufnahme verwendet werden. Informationen zum Verwenden von Dateien mit geringer Dichte von datenbankmomentaufnahmen finden Sie unter [Datenbankmomentaufnahmen &#40; SQLServer &#41; ](../../relational-databases/databases/database-snapshots-sql-server.md). Durch das Löschen einer Datenbankmomentaufnahme wird der Plancache für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gelöscht. Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. Für jeden gelöschten Cachespeicher im Plancache enthält das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll folgende Informationsmeldung: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat für den %s-Cachespeicher (Bestandteil des Plancache) %d Leerungen des Cachespeichers gefunden, die von Datenbankwartungs- oder Neukonfigurierungsvorgängen ausgelöst wurden". Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.  
+ Wenn Sie eine Datenbankmomentaufnahme löschen, wird diese aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz gelöscht. Außerdem werden die Sparsedateien des physischen NTFS-Dateisystems gelöscht, die von der Momentaufnahme verwendet werden. Informationen zum Verwenden von Sparsedateien für Datenbankmomentaufnahmen finden Sie unter [Datenbankmomentaufnahmen &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md). Durch das Löschen einer Datenbankmomentaufnahme wird der Plancache für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gelöscht. Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. Für jeden gelöschten Cachespeicher im Plancache enthält das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll folgende Informationsmeldung: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat für den %s-Cachespeicher (Bestandteil des Plancache) %d Leerungen des Cachespeichers gefunden, die von Datenbankwartungs- oder Neukonfigurierungsvorgängen ausgelöst wurden". Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.  
   
 ## <a name="interoperability"></a>Interoperabilität  
   
-### <a name="sql-server"></a>SQL Server  
+### <a name="sql-server"></a>SQL Server  
  Zum Löschen einer für die Transaktionsreplikation oder die Mergereplikation veröffentlichten Datenbank bzw. einer von der Mergereplikation abonnierten Datenbank müssen Sie zunächst die Replikation von der Datenbank entfernen. Wenn eine Datenbank beschädigt ist oder die Replikation nicht zuerst entfernt werden kann, oder wenn beides zutrifft, können Sie die Datenbank dennoch mithilfe von ALTER DATABASE löschen. Sie legen hierzu den Status der Datenbank auf offline fest und löschen diese dann.  
   
  Wenn die Datenbank für den Protokollversand verwendet wird, müssen Sie den Protokollversand vor dem Löschen der Datenbank entfernen. Weitere Informationen finden Sie unter [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
- [Systemdatenbanken](../../relational-databases/databases/system-databases.md) kann nicht gelöscht werden.  
+ [Systemdatenbanken](../../relational-databases/databases/system-databases.md) können nicht gelöscht werden.  
   
  Die DROP DATABASE-Anweisung muss im Autocommitmodus ausgeführt werden und ist in einer expliziten oder impliziten Transaktion nicht zulässig. Der Autocommitmodus ist der Standardmodus für die Transaktionsverwaltung.  
   
- Sie können eine aktuell verwendete Datenbank nicht löschen. Dies bezieht sich auf eine von einem beliebigen Benutzer für Schreib- oder Lesevorgänge geöffnete Datei. Zum Entfernen von Benutzern aus der Datenbank legen Sie die Datenbank mithilfe von ALTER DATABASE auf SINGLE_USER fest.  
+ Sie können eine aktuell verwendete Datenbank nicht löschen. Dies bezieht sich auf eine von einem beliebigen Benutzer für Schreib- oder Lesevorgänge geöffnete Datei. Zum Entfernen von Benutzern aus der Datenbank können Sie z.B. die Datenbank mithilfe von ALTER DATABASE auf SINGLE_USER festlegen. 
+ 
+ >[!Warning] 
+ > Bei diesem Ansatz können allerdings Fehler auftreten, da die erste von vielen Verbindungen, die von einem beliebigen Thread hergestellt werden, immer einen SINGLE_USER-Thread erhält, wodurch die Verbindung fehlschlägt. In SQL-Server ist keine Komponente zum Entfernen von Datenbanken unter Last integriert.
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Alle Datenbankmomentaufnahmen in einer Datenbank müssen vor dem Löschen der Datenbank gelöscht werden.  
   
- Löschen eine Datenbank aktivieren, für Stretch-Datenbank entfernt die Remotedaten nicht. Wenn Sie die Remotedaten löschen möchten, müssen Sie manuell entfernen.  
+ Wenn eine Datenbank gelöscht wird, die für Stretch Database aktiviert ist, werden keine Remotedaten gelöscht. Wenn Sie die Remotedaten löschen möchten, müssen Sie dies manuell tun.  
   
 ### [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
  Sie müssen mit der master-Datenbank verbunden sein, um eine Datenbank zu löschen.
@@ -117,13 +120,13 @@ DROP DATABASE database_name [;]
 ## <a name="permissions"></a>Berechtigungen  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Erfordert die **Steuerelement** Berechtigung für die Datenbank oder **ALTER ANY DATABASE** Berechtigung oder die Mitgliedschaft in der **Db_owner** festen Datenbankrolle "".  
+ Erfordert die **CONTROL**-Berechtigung für die Datenbank, die **ALTER ANY DATABASE**-Berechtigung oder die Mitgliedschaft in der festen Datenbankrolle **db_owner**.  
   
 ### [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
- Nur der prinzipalanmeldung auf Serverebene (vom im Rahmen des Bereitstellungsprozesses erstellt) oder Mitglieder der **Dbmanager** Datenbankrolle kann eine Datenbank löschen.  
+ Datenbanken können nur durch den Prinzipalanmeldenamen auf Serverebene (vom Bereitstellungsprozess erstellt) oder Mitglieder der Datenbankrolle **dbmanager** gelöscht werden.  
   
 ### [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Erfordert die **Steuerelement** Berechtigung für die Datenbank oder **ALTER ANY DATABASE** Berechtigung oder die Mitgliedschaft in der **Db_owner** festen Datenbankrolle "".  
+ Erfordert die **CONTROL**-Berechtigung für die Datenbank, die **ALTER ANY DATABASE**-Berechtigung oder die Mitgliedschaft in der festen Datenbankrolle **db_owner**.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -148,13 +151,13 @@ DROP DATABASE Sales, NewSales;
   
 **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Im folgenden Beispiel wird eine Datenbankmomentaufnahme namens `sales_snapshot0600`, ohne Auswirkungen auf die Quelldatenbank.  
+ Im folgenden Beispiel wird eine Datenbankmomentaufnahme mit dem Namen `sales_snapshot0600` entfernt, ohne dass sich dies auf die Quelldatenbank auswirkt.  
   
 ```  
 DROP DATABASE sales_snapshot0600;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   

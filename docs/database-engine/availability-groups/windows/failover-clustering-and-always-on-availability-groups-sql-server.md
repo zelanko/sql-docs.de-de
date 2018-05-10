@@ -3,15 +3,12 @@ title: Failoverclustering und Always On-Verfügbarkeitsgruppen (SQL Server) | Mi
 ms.custom: ''
 ms.date: 07/02/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [SQL Server]
 - Availability Groups [SQL Server], WSFC clusters
@@ -24,15 +21,16 @@ caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 9b7cccf79efb654ddb9c49a6ed43751f00654908
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4df759c9abc55c6f8c987fdf294bdb417b97524c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
    [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], die in [!INCLUDE[sssql11](../../../includes/sssql11_md.md)] eingeführte Lösung für hohe Verfügbarkeit und Notfallwiederherstellung, erfordert WSFC (Windows Server-Failoverclustering). [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ist zwar nicht von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclustering abhängig, Sie können aber dennoch eine FCI (Failoverclusterinstanz) verwenden, um ein Verfügbarkeitsreplikat für eine Verfügbarkeitsgruppe zu hosten. Es ist wichtig, dass Sie die Rolle jeder Clusteringtechnologie kennen, und wissen, welche Überlegungen Sie für den Entwurf Ihrer [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Umgebung anstellen müssen.  
   
@@ -126,7 +124,8 @@ ms.lasthandoff: 04/26/2018
   
      [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog (SQL Server Always On-Teamblogs: Der offizielle SQL Server Always On-Teamblog)](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-     [CSS SQL Server-Technikblogs](http://blogs.msdn.com/b/psssql/)  
+     
+  [CSS SQL Server-Technikblogs](http://blogs.msdn.com/b/psssql/)  
   
 -   **Whitepaper:**  
   

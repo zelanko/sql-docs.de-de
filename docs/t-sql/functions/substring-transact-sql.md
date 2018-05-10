@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 10/21/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -30,13 +28,12 @@ caps.latest.revision: 65
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 75aab8f9b1035e94b65d96319f8589b11e032ecb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5733adbcf8823b816a1e287cca45e6ea1ab2a145
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +50,7 @@ SUBSTRING ( expression ,start , length )
   
 ## <a name="arguments"></a>Argumente  
  *expression*  
- ist ein **character**-, **binary**-, **text**-, **ntext**- oder **image**-[Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md).  
+ Ist ein **character**-, **binary**-, **text**-, **ntext**- oder **image**-[Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md).  
   
  *start*  
  ist eine ganze Zahl oder ein **bigint**-Ausdruck, der angibt, wo die zurückgegebenen Zeichen beginnen. (Die Nummerierung basiert auf 1, das bedeutet, dass das erste Zeichen im Ausdruck 1 ist.) Wenn *start* kleiner als 1 ist, beginnt der zurückgegebene Ausdruck beim ersten Zeichen, das in *expression* angegeben wird. In diesem Fall handelt es sich bei der Anzahl von zurückgegebenen Zeichen um den größten Wert der Summe von *start* + *length*- 1 oder 0. Wenn *start* größer ist als die Anzahl der Zeichen in dem Werteausdruck, wird eine Zeichenfolge der Länge 0 zurückgegeben.  

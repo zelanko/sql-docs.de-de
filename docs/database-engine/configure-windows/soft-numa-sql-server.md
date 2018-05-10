@@ -3,15 +3,12 @@ title: Soft-NUMA (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/13/2018
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - NUMA
 - soft-NUMA
@@ -24,17 +21,16 @@ caps.latest.revision: 53
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a6f1b3615631660b04b01c1107c64e66adf6c237
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c589424b75af8610337de2880a1d0cbe69bc1212
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="soft-numa-sql-server"></a>Soft-NUMA (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Moderne Prozessoren verfügen über mehrere Kerne pro Socket. Jeder Socket wird in der Regel als ein einzelner NUMA-Knoten dargestellt. Das SQL Server-Datenbankmodul partitioniert pro NUMA-Knoten verschiedene interne Strukturen und Dienstthreads für Partitionen.  Bei Prozessoren mit zehn oder mehr Kernen pro Socket, erhöht die Verwendung von Software-NUMA zum Teilen von NUMA-Hardwareknoten in der Regel die Skalierbarkeit und die Leistung, da Prozessoren mit zehn oder mehr Kernen pro Socket verwendet werden. Vor [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 war beim softwarebasierten NUMA (Soft-NUMA) eine Bearbeitung der Registrierung erforderlich, um eine Affinitätsmaske für die Knotenkonfiguration hinzuzufügen. Außerdem wurde der softwarebasierte NUMA auf Hostebene statt über eine Instanz konfiguriert. Ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 und [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] wird Soft-NUMA automatisch auf die Datenbankinstanzebene konfiguriert, wenn der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Dienst gestartet wird.  
+Moderne Prozessoren verfügen über mehrere Kerne pro Socket. Jeder Socket wird in der Regel als ein einzelner NUMA-Knoten dargestellt. Die SQL Server-Datenbank-Engine partitioniert pro NUMA-Knoten verschiedene interne Strukturen und Dienstthreads für Partitionen.  Bei Prozessoren mit zehn oder mehr Kernen pro Socket, erhöht die Verwendung von Software-NUMA zum Teilen von NUMA-Hardwareknoten in der Regel die Skalierbarkeit und die Leistung, da Prozessoren mit zehn oder mehr Kernen pro Socket verwendet werden. Vor [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 war beim softwarebasierten NUMA (Soft-NUMA) eine Bearbeitung der Registrierung erforderlich, um eine Affinitätsmaske für die Knotenkonfiguration hinzuzufügen. Außerdem wurde der softwarebasierte NUMA auf Hostebene statt über eine Instanz konfiguriert. Ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 und [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] wird Soft-NUMA automatisch auf die Datenbankinstanzebene konfiguriert, wenn der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Dienst gestartet wird.  
   
 > [!NOTE]  
 > Hot-Add-Prozessoren werden von Soft-NUMA nicht unterstützt.  
@@ -42,7 +38,7 @@ Moderne Prozessoren verfügen über mehrere Kerne pro Socket. Jeder Socket wird 
 ## <a name="automatic-soft-numa"></a>Automatischer Soft-NUMA  
  Immer wenn [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] beim Start mehr als acht physische CPU-Kerne pro NUMA-Knoten oder Socket erkennt, werden standardmäßig automatisch Soft-NUMA-Knoten erstellt. Prozessorkerne mit Hyperthreading werden beim Zählen der physischen Kerne auf einem Knoten nicht unterschieden.  Wenn mehr als acht physische Prozessoren pro Socket erkannt werden, erstellt [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Soft-NUMA-Knoten, die im Idealfall acht Kerne enthalten, jedoch auch fünf bis neun logische Kerne pro Knoten enthalten können. Die Größe des Hardwareknotens kann durch eine CPU-Affinitätsmaske eingeschränkt werden. Die Anzahl von NUMA-Knoten übersteigt die maximale Anzahl von unterstützten NUMA-Knoten nie.  
   
- Sie können Soft-NUMA mithilfe der [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)-Anweisung mit dem Argument `SET SOFTNUMA` deaktivieren oder erneut aktivieren. Nach der Änderung des Werts dieser Einstellung ist ein Neustart des Datenbankmoduls erforderlich, damit diese wirksam wird.  
+ Sie können Soft-NUMA mithilfe der [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)-Anweisung mit dem Argument `SET SOFTNUMA` deaktivieren oder erneut aktivieren. Nach der Änderung des Werts dieser Einstellung ist ein Neustart der Datenbank-Engine erforderlich, damit diese wirksam wird.  
   
  Die folgende Abbildung stellt die Art von Informationen zu Soft-NUMA dar, die im SQL Server-Fehlerprotokoll angezeigt werden, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NUMA-Hardwareknoten mit mehr als acht physischen Prozessoren pro Knoten oder Socket erkennt.  
 

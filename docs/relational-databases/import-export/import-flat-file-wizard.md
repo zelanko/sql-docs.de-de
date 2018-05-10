@@ -1,28 +1,27 @@
 ---
 title: Importieren von Flatfiles in SQL | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 09/25/2017
-ms.prod: sql-non-specified
+ms.custom: ''
+ms.date: 09/26/2017
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: import-export
 ms.reviewer: douglasl
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.importflatfile.f1
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: db507927ac37d8f960f5090c774c6a52fa0d0243
-ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 00ff0d0eb75ea6ad78135ac85d93494d77b8c581
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Assistent zum Importieren von Flatfiles in SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,25 +32,25 @@ Mit dem Assistenten zum Importieren von Flatfiles können Daten mühelos aus ein
 ## <a name="why-would-i-use-this-wizard"></a>Warum sollte ich diesen Assistenten verwenden?
 Dieser Assistent wurde erstellt, um die aktuelle Importoberfläche mithilfe eines intelligenten Frameworks zu verbessern: Program Synthesis using Examples ([PROSE](https://microsoft.github.io/prose/)). Für einen Benutzer ohne spezielle Domänenkenntnisse kann das Importieren von Daten oft eine komplexe, fehleranfällige und mühsame Aufgabe darstellen. Dieser Assistent optimiert und vereinfacht den Importvorgang, sodass es genügt, eine Eingabedatei und einen eindeutigen Tabellennamen auszuwählen. Das PROSE-Framework kümmert sich um den Rest.
 
-PROSE analysiert Datenmuster in Ihrer Eingabedatei, um daraus Spaltennamen, Typen, Trennzeichen und vieles mehr abzuleiten. Dieses Framework erlernt die Struktur der Datei und übernimmt die gesamte Schwerarbeit, um unsere Benutzer zu entlasten.
+PROSE analysiert Datenmuster in Ihrer Eingabedatei, um daraus Spaltennamen, Typen, Trennzeichen und vieles mehr abzuleiten. Dieses Framework erlernt die Struktur der Datei und übernimmt den schwersten Teil der Arbeit, um die Benutzer zu entlasten.
 
 Um noch mehr über die Verbesserung der Benutzerfreundlichkeit des Assistenten zum Importieren von Flatfiles zu erfahren, schauen Sie sich dieses Video an:
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player]
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 Dieses Feature ist nur in SQL Server Management Studio (SSMS) v17.3 oder höher verfügbar. Stellen Sie sicher, dass Sie die neueste Version verwenden. Die neueste Version ist [hier](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) zu finden.
  
 ## <a id="started"></a>Erste Schritte
 Um den Assistenten zum Importieren von Flatfiles aufzurufen, gehen Sie folgendermaßen vor:
 
 1. Öffnen Sie **SQL Server Management Studio**.
-2. Stellen Sie eine Verbindung mit einer Instanz des SQL Server-Datenbankmoduls oder mit localhost her.
+2. Stellen Sie eine Verbindung mit einer Instanz der SQL Server-Datenbank-Engine oder mit localhost her.
 3. Erweitern Sie **Datenbanken**, klicken Sie mit der rechten Maustaste auf eine Datenbank („test“ im folgenden Beispiel), zeigen Sie auf **Aufgaben**, und klicken Sie oberhalb von „Daten importieren“ auf **Flatfile importieren**.
 
 ![Assistent: Menü](media/import-flat-file-wizard/importffmenu.png)
 
-Weitere Informationen über die verschiedenen Funktionen des Assistenten finden Sie im folgenden Tutorial.
+Weitere Informationen über die verschiedenen Funktionen des Assistenten finden Sie im folgenden Tutorial:
 
 ## <a name="tutorial"></a>Lernprogramm
 Für den Zweck dieses Tutorials können Sie gerne Ihre eigene Flatfile verwenden. Andernfalls verwendet dieses Tutorial die folgende CSV-Datei aus Excel, die Sie kopieren können. Wenn Sie diese CSV-Datei verwenden, benennen Sie sie **example.csv**, und stellen Sie sicher, dass Sie sie als CSV-Datei an einem leicht zugänglichen Speicherort wie z.B. dem Desktop speichern.
@@ -97,7 +96,7 @@ Diese Seite gibt an, ob der Import erfolgreich war. Wenn ein grünes Häkchen an
 ## <a name="learn-more"></a>Weitere Informationen
 
 Weitere Informationen zum Assistenten.
-
+ 
 - **Weitere Informationen zum Importieren anderer Quellen.** Wenn Sie außer Flatfiles noch andere Dateien importieren möchten, finden Sie weitere Informationen unter [SQL Server-Import/Export-Assistent](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 - **Weitere Informationen zum Herstellen einer Verbindung mit Flatfilequellen.** Weitere Informationen zum Herstellen einer Verbindung mit Flatfilequellen finden Sie unter [Herstellen einer Verbindung mit einer Flatfile-Datenquelle](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard).
 - **Weitere Informationen zu PROSE.** Eine Übersicht über das intelligente Framework, das von diesem Assistenten verwendet wird, finden Sie unter [PROSE SDK](https://microsoft.github.io/prose/).

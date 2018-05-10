@@ -1,29 +1,27 @@
 ---
-title: Planen und Testen des Upgradeplans für das Datenbankmodul | Microsoft-Dokumentation
+title: Planen und Testen des Upgradeplans für die Datenbank-Engine | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/20/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: install-windows
+ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - server-general
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
 caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: aec687bf48c98052b1c4c2f7289437d8b50b1ce8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ccdef1d662006900a6d1338acbb24db907bc9192
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="plan-and-test-the-database-engine-upgrade-plan"></a>Planen und Testen des Upgradeplans für das Datenbankmodul
+# <a name="plan-and-test-the-database-engine-upgrade-plan"></a>Planen und Testen des Upgradeplans für die Datenbank-Engine
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
@@ -45,7 +43,8 @@ ms.lasthandoff: 04/16/2018
   
     -   **Client-Anbieter:** Obwohl ein Upgrade kein gleichzeitiges Update aller Ihrer Clients erfordert, steht es Ihnen frei, dies zu tun. Wenn Sie ein Upgrade von [!INCLUDE[sql14](../../includes/sssql14-md.md)] oder höher durchführen, setzen die folgenden [!INCLUDE[sql15](../../includes/sssql15-md.md)]-Funktionen eine Anbieteraktualisierung generell voraus oder benötigen diese, um Ihnen zusätzliche Funktionen zur Verfügung stellen zu können.  
   
-       -   [Always Encrypted &#40;Datenbankmodul&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
+       -   
+  [Always Encrypted &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
   
        -   [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
@@ -91,7 +90,8 @@ ms.lasthandoff: 04/16/2018
 ## <a name="develop-and-test-the-upgrade-plan"></a>Entwickeln und Testen des Upgradeplans  
  Die beste Herangehensweise ist, das Upgrade wie jedes andere IT-Projekt zu behandeln. Sie sollten ein Upgrade-Team ernennen, das die für das Upgrade maßgeblichen Qualifikationen für die Datenbankverwaltung, das Netzwerk sowie das Extrahieren, Transformieren und Laden (ETL) besitzt. Das Team muss:  
   
--   **Informationen zum Auswählen einer Upgrademethode** finden Sie unter [Wählen einer Upgrademethode für das Datenbankmodul](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
+-   
+  **Informationen zum Auswählen einer Upgrademethode** finden Sie unter [Wählen einer Upgrademethode für die Datenbank-Engine](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
   
 -   **Entwickeln eines Wiederherstellungsplans:**. Mit diesem Plan können Sie Ihre ursprüngliche Umgebung wiederherstellen, wenn Sie sie zurücksetzen müssen.  
   
@@ -100,6 +100,7 @@ ms.lasthandoff: 04/16/2018
 -   **Den Upgradeplan testen:** Verwenden Sie Microsoft SQL Server Distributed Replay Utility, um die Leistung mit der tatsächlichen Arbeitsauslastung zu testen. Dieses Hilfsprogramm kann Ablaufverfolgungsdaten mithilfe mehrerer Computer wiedergeben, indem es eine für die Unternehmung maßgebliche Arbeitsauslastung simuliert. Durch Ausführen einer Wiedergabe auf einem Testserver vor und nach einem SQL Server-Upgrade können Sie Leistungsunterschiede messen und nach Inkompatibilitäten der Anwendung suchen, die möglicherweise durch das Upgrade verursacht werden. Weitere Informationen finden Sie unter [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md) und [Befehlszeilenoptionen für das Verwaltungstool &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md).  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- [Aktualisieren des Datenbankmoduls](../../database-engine/install-windows/upgrade-database-engine.md)  
+ 
+  [Aktualisieren der Datenbank-Engine](../../database-engine/install-windows/upgrade-database-engine.md)  
   
   

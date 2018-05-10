@@ -1,25 +1,23 @@
 ---
 title: Anpassen des Berichts-Viewer-Webparts | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 234f87e2bcb222e318a5c935a7d8addca1d8c2fc
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d2a9368b1617c89dcc85cfddd7fe2ac998a18579
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Anpassen des Berichts-Viewer-Webparts
 
@@ -73,7 +71,7 @@ ms.lasthandoff: 01/09/2018
 |Eigenschaft|Description|  
 |--------------|-----------------|  
 |Bericht|Ein vollqualifizierter Pfad für einen Bericht, der sich auf der aktuellen SharePoint-Website oder auf einer Website innerhalb der gleichen Webanwendung oder Farm befindet. Optimale Ergebnisse beim Festlegen zusätzlicher Eigenschaften erzielen Sie, indem Sie nach dem Angeben der Berichts-URLs auf Anwenden klicken.|  
-|Linkziel|Standard-HTML, die den Zielrahmen für die Anzeige von verknüpftem Inhalt im aktuellen Dokument angibt. Für Berichte, die Links zu externen Websites enthalten, können Sie angeben, ob ein Zieldokument den vorhandenen Bericht im aktuellen Fenster ersetzt oder in einem neuen Browserfenster geöffnet wird. Gültige Werte sind **_Top**, **_Blank**und **_Self**. Mit**_Top** wird das aktuelle Fenster verwendet, mit **_Blank** wird das Dokument in einem neuen Browserfenster geladen, und mit **_Self** wird das Dokument im aktuellen Frame geöffnet. Obwohl **_Parent** ein gültiger Wert für das Target-Attribut in HTML ist, sollten Sie ihn nicht für ein in eine Seite eingebettetes Berichts-Viewer-Webpart verwenden.|  
+|Linkziel|Standard-HTML, die den Zielrahmen für die Anzeige von verknüpftem Inhalt im aktuellen Dokument angibt. Für Berichte, die Links zu externen Websites enthalten, können Sie angeben, ob ein Zieldokument den vorhandenen Bericht im aktuellen Fenster ersetzt oder in einem neuen Browserfenster geöffnet wird. Gültige Werte sind **_Top**, **_Blank**und **_Self**. Mit **_Top** wird das aktuelle Fenster verwendet, mit **_Blank** wird das Dokument in einem neuen Browserfenster geladen, und mit **_Self** wird das Dokument im aktuellen Frame geöffnet. Obwohl **_Parent** ein gültiger Wert für das Target-Attribut in HTML ist, sollten Sie ihn nicht für ein in eine Seite eingebettetes Berichts-Viewer-Webpart verwenden.|  
 |Automatisches Generieren von Titeln von Webparts|Ein generierter Titel, der den Namen des Berichts-Viewer-Webparts und den Namen des Berichts enthält, abgetrennt durch einen Gedankenstrich. Wenn der Bericht über keinen Titel verfügt, wird der Berichtsdateiname verwendet. Der Titel ist sichtbar, wenn Sie ein Webpart zu einer Seite hinzufügen. Wenn dieses Kontrollkästchen aktiviert ist, wird der Titel bei jeder Aktualisierung der Seite generiert.|  
 |Automatisches Generieren von Detaillinks für Webparts|Ein generierter Link, der über dem Webpart angezeigt wird. Sie können auf den Link klicken, um den Bericht auf einer neuen Seite im Ganzseitenmodus anzuzeigen.|  
 |Anzeigen des Menüelements Berichts-Generator|Zeigt die Option des Menüs **Aktionen** an, mit der der Berichts-Generator geöffnet oder ausgeblendet wird.|  

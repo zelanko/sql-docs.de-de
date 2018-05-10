@@ -1,16 +1,14 @@
 ---
-title: "Aktive sekundäre Replikate: Lesbare sekundäre Replikate (Always On-Verfügbarkeitsgruppen) | Microsoft-Dokumentation"
-ms.custom: 
+title: 'Aktive sekundäre Replikate: Lesbare sekundäre Replikate (Always On-Verfügbarkeitsgruppen) | Microsoft-Dokumentation'
+ms.custom: ''
 ms.date: 06/06/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: availability-groups
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - connection access to availability replicas
 - Availability Groups [SQL Server], availability replicas
@@ -19,21 +17,20 @@ helpviewer_keywords:
 - readable secondary replicas
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
-caps.latest.revision: "80"
+caps.latest.revision: 80
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e18fc38d0f5baa2c49a487a362dc8612bc61f404
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3035046e6f474995ddb0584cf251dc03411072e2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Aktive sekundäre Replikate: Lesbare sekundäre Replikate (AlwaysOn-Verfügbarkeitsgruppen)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Die Funktionen für aktive sekundäre Replikate in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] umfassen Unterstützung für den schreibgeschützten Zugriff auf ein oder mehrere sekundäre Replikate (*lesbare sekundäre Replikate*). Lesbare sekundäre Replikate lassen den schreibgeschützten Zugriff auf alle eigenen sekundären Datenbanken zu. Bei lesbaren sekundären Datenbanken ist jedoch kein Schreibschutz festgelegt. Sie sind dynamisch. Eine sekundäre Datenbank wird geändert, wenn Änderungen an der zugehörigen primären Datenbank auf die sekundäre Datenbank angewendet werden. Bei einem typischen sekundären Replikat liegen die Daten in den sekundären Datenbanken nahezu in Echtzeit vor. Dies gilt auch für dauerhafte speicheroptimierte Tabellen. Weiterhin werden Volltextindizes mit den sekundären Datenbanken synchronisiert. In vielen Fällen beträgt die Datenlatenz zwischen einer primären Datenbank und der zugehörigen sekundären Datenbank nur wenige Sekunden.  
+  Die Funktionen für aktive sekundäre Replikate in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] umfassen Unterstützung für den schreibgeschützten Zugriff auf ein oder mehrere sekundäre Replikate (*lesbare sekundäre Replikate*). Ein lesbares sekundäres Replikat kann sich entweder im Verfügbarkeitsmodus mit synchronem oder asynchronem Commit befinden. Lesbare sekundäre Replikate lassen den schreibgeschützten Zugriff auf alle eigenen sekundären Datenbanken zu. Bei lesbaren sekundären Datenbanken ist jedoch kein Schreibschutz festgelegt. Sie sind dynamisch. Eine sekundäre Datenbank wird geändert, wenn Änderungen an der zugehörigen primären Datenbank auf die sekundäre Datenbank angewendet werden. Bei einem typischen sekundären Replikat liegen die Daten in den sekundären Datenbanken nahezu in Echtzeit vor. Dies gilt auch für dauerhafte speicheroptimierte Tabellen. Weiterhin werden Volltextindizes mit den sekundären Datenbanken synchronisiert. In vielen Fällen beträgt die Datenlatenz zwischen einer primären Datenbank und der zugehörigen sekundären Datenbank nur wenige Sekunden.  
   
  Sicherheitseinstellungen, die in den primären Datenbanken auftreten, werden in den sekundären Datenbanken beibehalten. Dazu gehören Benutzer, Datenbankrollen und Anwendungsrollen sowie die jeweiligen zugehörigen Berechtigungen und die transparente Datenverschlüsselung (TDE), wenn diese in der primären Datenbank aktiviert ist.  
   
@@ -71,7 +68,7 @@ ms.lasthandoff: 01/18/2018
   
 -   Schreibgeschützte Arbeitsauslastungen für datenträgerbasierte Tabellen verwenden die Zeilenversionsverwaltung, um Blockierungskonflikte für sekundäre Datenbanken aufzuheben. Alle Abfragen für sekundäre Datenbanken werden automatisch der Momentaufnahme-Transaktionsisolationsstufe zugeordnet, selbst wenn explizit andere Transaktionsisolationsstufen festgelegt wurden. Zudem werden alle Sperrhinweise ignoriert. Dies schließt Leser-/Schreiberkonflikte aus.  
   
--   Schreibgeschützte Arbeitsauslastungen für dauerhafte speicheroptimierte Tabellen greifen unter Verwendung von systemeigenen gespeicherten Prozeduren oder SQL-Interoperabilität, für die hinsichtlich der Transaktionsisolationsstufen dieselben Einschränkungen gelten (siehe [Isolationsstufen im Datenbankmodul](http://msdn.microsoft.com/en-us/8ac7780b-5147-420b-a539-4eb556e908a7)), auf genau dieselbe Weise auf Daten wie in der primären Datenbank zu. Auf dem primären Replikat ausgeführte Arbeitsauslastungen für die Berichterstellung oder schreibgeschützte Abfragen können unverändert auf dem sekundären Replikat ausgeführt werden. Analog dazu können auf einem sekundären Replikat ausgeführte Arbeitsauslastungen für die Berichterstellung oder schreibgeschützte Abfragen unverändert auf dem primären Replikat ausgeführt werden.  Ähnlich wie bei datenträgerbasierten Tabellen werden alle Abfragen für sekundäre Datenbanken automatisch der Momentaufnahme-Transaktionsisolationsstufe zugeordnet, selbst wenn explizit andere Transaktionsisolationsstufen festgelegt wurden.  
+-   Schreibgeschützte Arbeitsauslastungen für dauerhafte speicheroptimierte Tabellen greifen unter Verwendung von systemeigenen gespeicherten Prozeduren oder SQL-Interoperabilität, für die hinsichtlich der Transaktionsisolationsstufen dieselben Einschränkungen gelten (siehe [Isolationsstufen in der Datenbank-Engine](http://msdn.microsoft.com/en-us/8ac7780b-5147-420b-a539-4eb556e908a7)), auf genau dieselbe Weise auf Daten wie in der primären Datenbank zu. Auf dem primären Replikat ausgeführte Arbeitsauslastungen für die Berichterstellung oder schreibgeschützte Abfragen können unverändert auf dem sekundären Replikat ausgeführt werden. Analog dazu können auf einem sekundären Replikat ausgeführte Arbeitsauslastungen für die Berichterstellung oder schreibgeschützte Abfragen unverändert auf dem primären Replikat ausgeführt werden.  Ähnlich wie bei datenträgerbasierten Tabellen werden alle Abfragen für sekundäre Datenbanken automatisch der Momentaufnahme-Transaktionsisolationsstufe zugeordnet, selbst wenn explizit andere Transaktionsisolationsstufen festgelegt wurden.  
   
 -   DML-Vorgänge sind für Tabellenvariablen datenträgerbasierter und speicheroptimierter Tabellentypen auf dem sekundären Replikat zulässig.  
   

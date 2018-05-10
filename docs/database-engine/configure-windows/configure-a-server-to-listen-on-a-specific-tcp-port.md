@@ -1,17 +1,14 @@
 ---
-title: "Konfigurieren eines Servers für das Überwachen eines bestimmten TCP-Ports | Microsoft-Dokumentation"
-ms.custom: 
+title: Konfigurieren eines Servers für das Überwachen eines bestimmten TCP-Ports | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 04/25/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: configure-windows
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: configuration
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - fixed port
 - static ports
@@ -20,16 +17,15 @@ helpviewer_keywords:
 - dynamic ports [SQL Server]
 - TCP/IP [SQL Server], port numbers
 ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
-caps.latest.revision: 
+caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: d536334958c3f027de7d2d7dd9c78213938cbfe2
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 234996e85d88e9bed0313c2bf3abbf5f81eae65a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>Konfigurieren eines Servers für das Überwachen eines bestimmten TCP-Ports
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,18 +34,18 @@ ms.lasthandoff: 02/23/2018
 
 Da Port 1433 der bekannte Standard für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist, legen einige Organisationen fest, dass die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Portnummer geändert werden soll, um die Sicherheit zu verbessern. Dies kann in einigen Umgebungen hilfreich sein. Allerdings ermöglicht die TCP/IP-Architektur, dass ein [Portscanner](https://wikipedia.org/wiki/Port_scanner) nach offenen Ports fragt. Deshalb stellt das Ändern der Portnummer keine robuste Sicherheitsmaßnahme dar.
 
- Weitere Informationen zu den Standardeinstellungen der Windows-Firewall und eine Beschreibung der TCP-Ports, die sich auf Datenbankmodul, Analysis Services, Reporting Services und Integration Services auswirken, finden Sie unter [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
+ Weitere Informationen zu den Standardeinstellungen der Windows-Firewall und eine Beschreibung der TCP-Ports, die sich auf Datenbank-Engine, Analysis Services, Reporting Services und Integration Services auswirken, finden Sie unter [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 > [!TIP]  
->  Beachten Sie bei der Auswahl von Portnummern die Liste registrierter Ports, die bestimmten Anwendungen fest zugeordnet sind. Diese Liste finden Sie auf der Website [http://www.iana.org/assignments/port-numbers](http://www.iana.org/assignments/port-numbers) . Wählen Sie eine nicht zugewiesene Portnummer aus. Weitere Informationen finden Sie unter [Der dynamische Standardportbereich für TCP/IP hat sich in Windows Vista und Windows Server 2008 geändert](http://support.microsoft.com/kb/929851).  
+>  Beachten Sie bei der Auswahl von Portnummern die Liste registrierter Ports, die bestimmten Anwendungen fest zugeordnet sind. Diese Liste finden Sie auf der Website [http://www.iana.org/assignments/port-numbers](http://www.iana.org/assignments/port-numbers). Wählen Sie eine nicht zugewiesene Portnummer aus. Weitere Informationen finden Sie unter [Der dynamische Standardportbereich für TCP/IP hat sich in Windows Vista und Windows Server 2008 geändert](http://support.microsoft.com/kb/929851).  
   
 > [!WARNING]  
->  Nach einem Neustart lauscht das Datenbankmodul an einem neuen Port. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browserdienst überwacht jedoch die Registrierung und meldet die neue Portnummer, sobald die Konfiguration geändert wird, obwohl die Portnummer vom Datenbankmodul u. U. gar nicht verwendet wird. Starten Sie das Datenbankmodul erneut, um Konsistenz zu gewährleisten und Verbindungsfehler zu vermeiden.  
+>  Nach einem Neustart lauscht die Datenbank-Engine an einem neuen Port. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browserdienst überwacht jedoch die Registrierung und meldet die neue Portnummer, sobald die Konfiguration geändert wird, obwohl die Portnummer von der Datenbank-Engine u. U. gar nicht verwendet wird. Starten Sie die Datenbank-Engine erneut, um Konsistenz zu gewährleisten und Verbindungsfehler zu vermeiden.  
   
   
 ##  <a name="SSMSProcedure"></a> Verwenden des SQL Server-Konfigurations-Managers  
   
-#### <a name="to-assign-a-tcpip-port-number-to-the-sql-server-database-engine"></a>So weisen Sie dem SQL Server-Datenbankmodul einen TCP/IP-Port zu  
+#### <a name="to-assign-a-tcpip-port-number-to-the-sql-server-database-engine"></a>So weisen Sie der SQL Server-Datenbank-Engine einen TCP/IP-Port zu  
   
 1.  Erweitern Sie im Konsolenbereich des SQL Server-Konfigurations-Managers **SQL Server-Netzwerkkonfiguration** und **Protokolle für \<Instanzname>**. Klicken Sie dann doppelt auf **TCP/IP**.  
   

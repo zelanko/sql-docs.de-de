@@ -3,15 +3,12 @@ title: Lokale Überwachung für Feedbackerfassung zur SQL Server-Nutzung | Micro
 ms.custom: ''
 ms.date: 02/28/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: install-windows
+ms.prod_service: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Local Audit
 ms.assetid: a0665916-7789-4f94-9086-879275802cf3
@@ -19,12 +16,11 @@ caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f69dfadfb4de412794beba72f69b22fdc8a39287
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 2600f74d31b7daa6587575cdaf070417956f8817
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>Lokale Überwachung für Feedbackerfassung zur SQL Server-Nutzung
 
@@ -34,7 +30,7 @@ ms.lasthandoff: 04/16/2018
 
 Microsoft SQL Server enthält internetfähige Funktionen, die Daten über Ihren Computer oder Ihr Gerät („Standardcomputerinformationen“) erfassen und an Microsoft senden können. Die Komponente „Lokale Überwachung“ der [Feedbackerfassung zur SQL Server-Nutzung](http://support.microsoft.com/kb/3153756) schreibt die vom Dienst erfassten Daten, die die an Microsoft zu sendenden Daten (Protokolle) darstellen, in einen bestimmten Ordner. Der Zweck der lokalen Überwachung besteht darin, dass es Benutzern gestattet wird, alle Daten hinsichtlich Zustimmung, behördlicher Bestimmungen oder aus Datenschutzgründen anzuzeigen, die Microsoft mithilfe dieses Features erfasst.  
 
-Seit SQL Server 2016 CU2 kann die lokale Überwachung auf Instanzebene für SQL Server-Datenbankmodul und Analysis Services (SSAS) konfiguriert werden. In SQL Server 2016 CU4 und SQL Server 2016 SP1 ist die lokale Überwachung auch für SQL Server Integration Services (SSIS) aktiviert. Andere SQL Server-Komponenten, die beim Setup installiert werden, und SQL Server-Tools, die nach dem Setup heruntergeladen oder installiert werden, verfügen für die Feedbackerfassung hinsichtlich der Nutzung nicht über die Funktion zur lokalen Überwachung. 
+Seit SQL Server 2016 CU2 kann die lokale Überwachung auf Instanzebene für SQL Server-Datenbank-Engine und Analysis Services (SSAS) konfiguriert werden. In SQL Server 2016 CU4 und SQL Server 2016 SP1 ist die lokale Überwachung auch für SQL Server Integration Services (SSIS) aktiviert. Andere SQL Server-Komponenten, die beim Setup installiert werden, und SQL Server-Tools, die nach dem Setup heruntergeladen oder installiert werden, verfügen für die Feedbackerfassung hinsichtlich der Nutzung nicht über die Funktion zur lokalen Überwachung. 
 
 ## <a name="prerequisites"></a>Voraussetzungen 
 
@@ -56,7 +52,7 @@ Bevor Sie die lokale Überwachung aktivieren, muss ein Systemadministrator die f
 
 1. Er muss eine Registrierungsschlüsseleinstellung erstellen, um das Zielverzeichnis für die lokale Überwachung zu konfigurieren. 
 
-    Er muss für das Datenbankmodul und für Integration Services den Schlüssel unter *HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL14.\<INSTANZNAME\>\\CPE* erstellen. 
+    Er muss für die Datenbank-Engine und für Integration Services den Schlüssel unter *HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL14.\<INSTANZNAME\>\\CPE* erstellen. 
     
     Er muss für Analysis Services den Schlüssel unter *HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS14.\<INSTANZNAME\>\\CPE* erstellen.
 
@@ -66,7 +62,7 @@ Führen Sie die folgenden Schritte aus, um das Anmeldekonto für den SQL Server 
  
 1. Starten Sie **Dienste** , klicken Sie auf die **Windows**  -Schaltfläche, und geben Sie *services.msc*ein. 
 
-2. Navigieren Sie zu dem entsprechenden Dienst. Suchen Sie z. B. für das Datenbankmodul nach **SQL Server CEIP-Dienst \<Instanzname\>**erstellen. Suchen Sie für Analysis Services nach **SQL Server Analysis Services CEIP \<Instanzname\>**. Suchen Sie für Integration Services **SQL Server Integration Services-CEIP-Dienst 13**.
+2. Navigieren Sie zu dem entsprechenden Dienst. Suchen Sie z. B. für die Datenbank-Engine nach **SQL Server CEIP-Dienst \<Instanzname\>** erstellen. Suchen Sie für Analysis Services nach **SQL Server Analysis Services CEIP \<Instanzname\>**. Suchen Sie für Integration Services **SQL Server Integration Services-CEIP-Dienst 13**.
 
 3. Klicken Sie mit der rechten Maustaste auf den Dienst, und wählen Sie **Eigenschaften**aus. 
 
@@ -74,7 +70,7 @@ Führen Sie die folgenden Schritte aus, um das Anmeldekonto für den SQL Server 
 
 ### <a name="configure-a-new-folder-for-the-local-audit-files"></a>Er muss einen neuen Ordner für die Dateien der lokalen Überwachung konfigurieren.    
 
-Erstellen Sie einen neuen Ordner (Verzeichnis für die lokale Überwachung), in das die lokale Überwachung die Protokolle schreiben wird. Der vollständige Pfad zum Verzeichnis der lokalen Überwachung für eine Standardinstanz des Datenbankmoduls wäre beispielsweise: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*. 
+Erstellen Sie einen neuen Ordner (Verzeichnis für die lokale Überwachung), in das die lokale Überwachung die Protokolle schreiben wird. Der vollständige Pfad zum Verzeichnis der lokalen Überwachung für eine Standardinstanz der Datenbank-Engine wäre beispielsweise: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*. 
  
 > Hinweis: Konfigurieren Sie den Verzeichnispfad für die lokale Überwachung außerhalb des SQL Server-Installationspfads, um zu vermeiden, dass die Überwachungsfunktionen und das Patchen zu potenziellen Problemen mit SQL Server führen.
 
@@ -82,7 +78,7 @@ Erstellen Sie einen neuen Ordner (Verzeichnis für die lokale Überwachung), in 
   |------|-----------------|----------|  
   |![Kontrollkästchen](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|Speicherplatzverfügbarkeit |Planen Sie für mittlere Arbeitsauslastungen mit ungefähr 10 Datenbanken ca. 2 MB an Speicherplatz pro Tag und Instanz ein.|  
 |![Kontrollkästchen](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|Separate Verzeichnisse | Erstellen sie für jede Instanz ein Verzeichnis. Verwenden Sie z. B. *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* für eine SQL Server-Instanz namens `MSSQLSERVER`. Dies vereinfacht die Dateiverwaltung.
-|![Kontrollkästchen](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|Separate Ordner |Verwenden Sie für jeden Dienst einen bestimmten Ordner. Verwenden Sie z. B. für einen angegebenen Instanznamen einen Ordner für das Datenbankmodul. Wenn eine Instanz von SSAS denselben Instanznamen verwendet, erstellen Sie einen separaten Ordner für SSAS. Wenn sowohl Instanzen für Datenbankmodul und Analysis Services für denselben Ordner konfiguriert sind, führt dies dazu, dass die lokale Überwachung für beide Instanzen in dieselbe Protokolldatei schreibt.| 
+|![Kontrollkästchen](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|Separate Ordner |Verwenden Sie für jeden Dienst einen bestimmten Ordner. Verwenden Sie z. B. für einen angegebenen Instanznamen einen Ordner für die Datenbank-Engine. Wenn eine Instanz von SSAS denselben Instanznamen verwendet, erstellen Sie einen separaten Ordner für SSAS. Wenn sowohl Instanzen für Datenbank-Engine und Analysis Services für denselben Ordner konfiguriert sind, führt dies dazu, dass die lokale Überwachung für beide Instanzen in dieselbe Protokolldatei schreibt.| 
 |![Kontrollkästchen](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|Erteilen von Berechtigungen für das Anmeldekonto für den SQL Server CEIP-Telemetriedienst|Aktivieren des Zugriffs für **Ordnerinhalt auflisten**, **Lesen** und **Schreiben** für das Anmeldekonto für den SQL Server CEIP-Telemetriedienst|
 
 
@@ -108,7 +104,7 @@ Erstellen Sie einen neuen Ordner (Verzeichnis für die lokale Überwachung), in 
 
 1. Navigieren Sie zu dem entsprechenden CPE-Pfad. 
 
-    Verwenden Sie für das Datenbankmodul und Integration Services *HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL14.\<INSTANZNAME\>\\CPE*. 
+    Verwenden Sie für die Datenbank-Engine und Integration Services *HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL14.\<INSTANZNAME\>\\CPE*. 
     
     Verwenden Sie für Analysis Services *HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS14.\<INSTANZNAME\>\\CPE*.
 
@@ -124,7 +120,7 @@ Nachdem Sie die Schritte zur Vorkonfiguration abgeschlossen haben, können Sie d
 
 1. Navigieren Sie zu dem entsprechenden CPE-Pfad. 
 
-    Verwenden Sie für das Datenbankmodul und Integration Services *HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL14.\<INSTANZNAME\>\\CPE*. 
+    Verwenden Sie für die Datenbank-Engine und Integration Services *HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL14.\<INSTANZNAME\>\\CPE*. 
     
     Verwenden Sie für Analysis Services *HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS14.\<INSTANZNAME\>\\CPE*.
 
@@ -142,7 +138,7 @@ SQL Server CEIP sollte die Einstellung für die lokale Überwachung sofort erken
 
 1. Navigieren Sie zu dem entsprechenden Dienst. 
 
-    Für das Datenbankmodul verwenden Sie **SQL Server CEIP-Dienst (\<INSTANZNAME\>)**. 
+    Für die Datenbank-Engine verwenden Sie **SQL Server CEIP-Dienst (\<INSTANZNAME\>)**. 
     
     Für Analysis Services verwenden Sie **SQL Server Analysis Services CEIP (\<INSTANZNAME\>)**. 
 

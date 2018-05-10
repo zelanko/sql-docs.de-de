@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: building-packages-programmatically
 ms.reviewer: ''
 ms.suite: sql
@@ -25,12 +24,11 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 68a62828a3806493f587db281c8622ef04a0fca9
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 3bfa1f25ed3dbedf92340112a806bd91de6c0158
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-tasks-programmatically"></a>Programmgesteuertes Verbinden von Tasks
   Eine Rangfolgeneinschränkung, die in dem Objektmodell durch die <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>-Klasse dargestellt wird, legt die Reihenfolge, in der die <xref:Microsoft.SqlServer.Dts.Runtime.Executable>-Objekte in einem Paket ausgeführt werden, fest. Durch die Rangfolgeneinschränkung kann die Ausführung der Container und Tasks in einem Paket von dem Ergebnis der Ausführung eines vorherigen Tasks oder Containers abhängig gemacht werden. Rangfolgeneinschränkungen werden zwischen <xref:Microsoft.SqlServer.Dts.Runtime.Executable>-Objektpaaren durch Aufrufen der <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints.Add%2A>-Methode der <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints>-Auflistung für das Containerobjekt eingerichtet. Nachdem Sie eine Einschränkung zwischen zwei ausführbaren Objekten erstellt haben, legen Sie die <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A>-Eigenschaft fest, um die Kriterien für die Ausführung des zweiten ausführbaren in der Einschränkung definierten Objekts festzulegen.  

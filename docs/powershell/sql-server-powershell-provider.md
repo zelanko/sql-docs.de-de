@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: powershell
-ms.service: ''
 ms.component: powershell
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], provider
 - PowerShell [SQL Server], SQL Server PowerShell Provider
@@ -24,12 +23,11 @@ caps.latest.revision: 61
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 669c6fd2c0395569ee1169b5d493c6476f1b558f
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 0d4b699045824f5a2563dc4973b94a1b091ce7b5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell-Anbieter
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -85,7 +83,8 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
 |Beschreibt, wie Windows PowerShell-Cmdlets verwendet werden, um durch die Knoten in einem Pfad zu navigieren und an jedem Knoten eine Liste der Objekte in diesem Knoten abzurufen.|[Navigieren in SQL Server PowerShell-Pfaden](navigate-sql-server-powershell-paths.md)|  
 |Beschreibt, wie die SMO-Methoden und SMO-Eigenschaften verwendet werden, um Berichte über ein Objekt, das von einem Knoten in einem Pfad dargestellt wird, zu erstellen und es zu verarbeiten. Beschreibt darüber hinaus, wie eine Liste der SMO-Methoden und SMO-Eigenschaften für diesen Knoten abgerufen wird.|[Verwenden von SQL Server PowerShell-Pfaden](work-with-sql-server-powershell-paths.md)|  
 |Beschreibt, wie ein SMO Uniform Resource Name (URN) in einen SQL Server-Anbieterpfad konvertiert wird.|[Konvertieren von URNs in SQL Server-Anbieterpfade](https://docs.microsoft.com/powershell/module/sqlserver/Convert-UrnToPath)|  
-|Beschreibt, wie SQL Server-Authentifizierungsverbindungen mit dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anbieter geöffnet werden. Standardmäßig verwendet der Anbieter Windows-Authentifizierungsverbindungen, die mit den Anmeldeinformationen des Windows-Kontos hergestellt wurden, das die Windows PowerShell-Sitzung ausführt.|[Verwalten der Authentifizierung in PowerShell des Datenbankmoduls](manage-authentication-in-database-engine-powershell.md)|  
+|Beschreibt, wie SQL Server-Authentifizierungsverbindungen mit dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anbieter geöffnet werden. Standardmäßig verwendet der Anbieter Windows-Authentifizierungsverbindungen, die mit den Anmeldeinformationen des Windows-Kontos hergestellt wurden, das die Windows PowerShell-Sitzung ausführt.|
+  [Verwalten der Authentifizierung in PowerShell der Datenbank-Engine](manage-authentication-in-database-engine-powershell.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server-PowerShell](sql-server-powershell.md)  

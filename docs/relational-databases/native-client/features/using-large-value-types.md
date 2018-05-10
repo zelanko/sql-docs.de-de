@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
@@ -23,13 +22,12 @@ caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 420c4456970a2dcc0605bdc6d2f5ad3409298aec
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ac75426f9d3f965d85ba9005b95726b71299b33c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-large-value-types"></a>Verwenden von Datentypen mit umfangreichen Werten
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,11 +69,11 @@ ms.lasthandoff: 04/16/2018
   
  Wenn Sie die maximale Größe einer Spalte zu melden die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter meldet:  
   
--   Die definierte maximale Größe 2000 z. B. für ist eine **Varchar (**2000**)** Spalte, oder  
+-   Die definierte maximale Größe 2000 z. B. für ist eine **Varchar (** 2000 **)** Spalte, oder  
   
 -   Der Wert "unlimited", der im Fall einer **varchar(max)** Spalte gleich ~ 0. Dieser Wert wird für die DBCOLUMN_COLUMNSIZE-Metadateneigenschaft festgelegt.  
   
- Die Standardkonvertierungsregeln gilt für das ein **varchar(max)** Spalte für jede Konvertierung, die für gültig ist, d. h. eine **Varchar (**2000**)** Spalte werden ebenfalls gültig für eine **varchar(max)** Spalte. Dasselbe gilt für **nvarchar(max)** und **varbinary(max)** Spalten.  
+ Die Standardkonvertierungsregeln gilt für das ein **varchar(max)** Spalte für jede Konvertierung, die für gültig ist, d. h. eine **Varchar (** 2000 **)** Spalte werden ebenfalls gültig für eine **varchar(max)** Spalte. Dasselbe gilt für **nvarchar(max)** und **varbinary(max)** Spalten.  
   
  Beim Abrufen von Datentypen mit umfangreichen Werten besteht der effizienteste Ansatz im Binden als DBTYPE_IUNKNOWN und Festlegen der Rowseteigenschaft DBPROP_ACCESSORDER auf DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS. Dadurch wird der Wert direkt ohne Zwischenspeichern aus dem Netzwerkdatenstrom übertragen, wie im folgenden Beispiel gezeigt:  
   
@@ -708,7 +706,7 @@ _ExitProcessResultSet:
   
 -   Der Wert "unlimited", der im Fall einer **varchar(max)** Spalte gleich 0 ist.  
   
- Die Standardkonvertierungsregeln gelten für eine **varchar(max)** Spalte für jede Konvertierung, die für gültig ist, d. h. eine **Varchar (**2000**)** Spalte werden auch für eine ungültig**varchar(max)** Spalte. Dasselbe gilt für **nvarchar(max)** und **varbinary(max)** Spalten.  
+ Die Standardkonvertierungsregeln gelten für eine **varchar(max)** Spalte für jede Konvertierung, die für gültig ist, d. h. eine **Varchar (** 2000 **)** Spalte werden auch für eine ungültig**varchar(max)** Spalte. Dasselbe gilt für **nvarchar(max)** und **varbinary(max)** Spalten.  
   
  Die folgende Liste enthält ODBC API-Funktionen, die für die Arbeit mit Datentypen mit umfangreichen Werten erweitert wurden:  
   

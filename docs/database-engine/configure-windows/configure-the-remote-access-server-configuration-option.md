@@ -3,15 +3,12 @@ title: Konfigurieren der Serverkonfigurationsoption „Remotezugriff“ | Micros
 ms.custom: ''
 ms.date: 08/11/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - remote servers [SQL Server], stored procedure execution
 ms.assetid: f5de748d-1c55-4714-9661-38fe62e5095f
@@ -19,19 +16,19 @@ caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: c56dd8d2d882befbfc3cc55a0d5ab68f0fb489f2
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 2fcc2d8c7e3cb9b0a944619e22e5a9851bd4b179
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Remotezugriff
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   In diesem Thema wird das Feature "Remotezugriff" erläutert. Diese Konfigurationsoption ist eine ungünstige und veraltete Kommunikationsfunktion für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die Sie vermutlich nicht verwenden sollten. Wenn Sie zu dieser Seite gelangt, weil Sie Probleme beim Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]haben, lesen Sie stattdessen eines der folgenden Themen:  
   
--   [Lernprogramm: Erste Schritte mit dem Datenbankmodul](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
+-   
+  [Lernprogramm: Erste Schritte mit der Datenbank-Engine](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
   
 -   [Anmelden an SQL Server](../../database-engine/configure-windows/logging-in-to-sql-server.md)  
   
@@ -41,9 +38,11 @@ ms.lasthandoff: 04/19/2018
   
 -   [Herstellen einer Verbindung mit einer beliebigen SQL Server-Komponente aus SQL Server Management Studio](http://msdn.microsoft.com/library/5eeb41bd-b25b-4d3b-a005-a7d9e4b5978e)  
   
--   [Herstellen einer Verbindung mit dem Datenbankmodul mithilfe von sqlcmd](../../relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md)  
+-   
+  [Herstellen einer Verbindung mit der Datenbank-Engine mithilfe von sqlcmd](../../relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md)  
   
--   [So beheben Sie Verbindungsfehler mit dem SQL Server-Datenbankmodul](http://social.technet.microsoft.com/wiki/contents/articles/2102.how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
+-   
+  [So beheben Sie Verbindungsfehler mit der SQL Server-Datenbank-Engine](http://social.technet.microsoft.com/wiki/contents/articles/2102.how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
   
  Programmierer finden möglicherweise die folgenden Themen nützlich:  
   

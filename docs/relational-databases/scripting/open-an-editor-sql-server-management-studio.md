@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a97be4e5f33e387f2046cf2674b5a57cda7cf0e6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 56b4b6bce2f58c37ad7b883f7469e52be2e80c8b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Öffnen eines Editors (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +43,8 @@ ms.lasthandoff: 04/16/2018
   
 -   **Abfrage mit aktueller Verbindung** – Öffnet ein neues Editor-Fenster des Typs, der der aktuellen Verbindung in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]zugeordnet ist. Das Editor-Fenster verwendet die gleichen Authentifizierungsinformationen wie die aktuelle Verbindung. Wenn Sie z. B. im Objekt-Explorer eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auswählen und dann **Abfrage mit aktueller Verbindung**verwenden, wird von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ein [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor geöffnet, der mit der gleichen Instanz verbunden ist und die gleichen Authentifizierungsinformationen verwendet.  
   
--   **Datenbankmodul-Abfrage** – Öffnet einen neuen [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]erforderlichen Informationen abzurufen.  
+-   
+  **Datenbank-Engine-Abfrage** – Öffnet einen neuen [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]erforderlichen Informationen abzurufen.  
   
 -   **Analysis Services MDX-Abfrage** – Öffnet einen neuen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -MDX-Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erforderlichen Informationen abzurufen.  
   
@@ -64,7 +62,8 @@ ms.lasthandoff: 04/16/2018
   
 -   **Neue Abfrage** – Öffnet ein neues Editor-Fenster des Typs, der der aktuellen Verbindung in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]zugeordnet ist. Das Editor-Fenster verwendet die gleichen Authentifizierungsinformationen wie die aktuelle Verbindung. Wenn Sie z. B. im Objekt-Explorer eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auswählen und dann auf die Schaltfläche **Neue Abfrage** klicken, wird von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ein [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor geöffnet, der mit der gleichen Instanz verbunden ist und die gleichen Authentifizierungsinformationen verwendet.  
   
--   **Datenbankmodul-Abfrage** – Öffnet einen neuen [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]erforderlichen Informationen abzurufen.  
+-   
+  **Datenbank-Engine-Abfrage** – Öffnet einen neuen [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]erforderlichen Informationen abzurufen.  
   
 -   **Analysis Services MDX-Abfrage** – Öffnet einen neuen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -MDX-Abfrage-Editor und ein Dialogfeld, um die zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erforderlichen Informationen abzurufen.  
   
@@ -82,12 +81,12 @@ ms.lasthandoff: 04/16/2018
 ### <a name="using-solution-explorer"></a>Verwenden des Projektmappen-Explorers  
  Erweitern Sie im **Projektmappen-Explorer**einen Ordner, klicken Sie mit der rechten Maustaste auf ein Element im Ordner, und klicken Sie dann auf **Öffnen** , oder doppelklicken Sie auf das Element bzw. die Datei.  
   
-### <a name="using-template-browser-to-open-the-database-engine-query-editor"></a>Verwenden des Vorlagenbrowsers zum Öffnen des Datenbankmodul-Abfrage-Editors  
+### <a name="using-template-browser-to-open-the-database-engine-query-editor"></a>Verwenden des Vorlagenbrowsers zum Öffnen des Datenbank-Engine-Abfrage-Editors  
   
 -   Klicken Sie im Menü **Ansicht** auf **Vorlagen-Explorer**.  
   
 -   Das Fenster **Vorlagenbrowser** wird im rechten Bereich angezeigt.  
   
--   Doppelklicken Sie auf eine Vorlage, um ein Fenster für die Datenbankmodul-Abfrage mit dem Text der Vorlage zu öffnen. Um z. B. eine CREATE DATABASE-Vorlage zu öffnen, öffnen Sie den Ordner **SQL Server-Vorlagen** und dann den Ordner **Datenbanken** , und doppelklicken Sie auf **Datenbank erstellen**.  
+-   Doppelklicken Sie auf eine Vorlage, um ein Fenster für die Datenbank-Engine-Abfrage mit dem Text der Vorlage zu öffnen. Um z. B. eine CREATE DATABASE-Vorlage zu öffnen, öffnen Sie den Ordner **SQL Server-Vorlagen** und dann den Ordner **Datenbanken** , und doppelklicken Sie auf **Datenbank erstellen**.  
   
   

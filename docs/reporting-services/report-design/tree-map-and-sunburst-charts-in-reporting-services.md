@@ -1,30 +1,29 @@
 ---
 title: Treemap- und Sunburst-Diagramme in SQL Server Reporting Services | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 08/31/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1dcafd7c259a88fd57022da4e72f9e3abeb077b1
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 152507403574ae4c699a3aa30a2376c0ed6b2af2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Treemap- und Sunburst-Diagramme in Reporting Services
-[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)] Die SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Treemap- und Sunburst-Visualisierungselemente sind ausgezeichnet für die visuelle Darstellung von hierarchischen Daten geeignet. In diesem Artikel wird dargestellt, wie Sie ein Treemap- oder Sunburst-Diagramm zu einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Bericht hinzufügen. Außerdem beinhaltet er eine AdventureWorks-Beispielabfrage, um Sie bei den ersten Schritten zu unterstützen.  
+[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
+Die SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Treemap- und Sunburst-Visualisierungselemente sind ausgezeichnet für die visuelle Darstellung von hierarchischen Daten geeignet. In diesem Artikel wird dargestellt, wie Sie ein Treemap- oder Sunburst-Diagramm zu einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Bericht hinzufügen. Außerdem beinhaltet er eine AdventureWorks-Beispielabfrage, um Sie bei den ersten Schritten zu unterstützen.  
   
 ##  <a name="bkmk_treemap_chart"></a> Treemap-Diagramm  
 

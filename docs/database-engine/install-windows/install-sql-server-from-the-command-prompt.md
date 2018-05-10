@@ -3,15 +3,13 @@ title: Installieren von SQL Server von der Eingabeaufforderung | Microsoft-Dokum
 ms.custom: ''
 ms.date: 01/17/2018
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: install-windows
+ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - server-general
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, command prompt
 - installation scripts [SQL Server]
@@ -91,11 +89,11 @@ caps.latest.revision: 255
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 09d891f23f0e04b02f9d7bfd761be66c7db6747d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ac7f9dc22f86f5da53efaa0b348362e582045683
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Installieren von SQL Server von der Eingabeaufforderung
 
@@ -212,9 +210,9 @@ Entwickeln Sie anhand der folgenden Richtlinien Installationsbefehle mit der ric
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setupsteuerelement|/INSTANCEDIR<br /><br /> **Optional**|Gibt ein nicht standardmäßiges Installationsverzeichnis für instanzspezifische Komponenten an.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setupsteuerelement|/INSTANCEID<br /><br /> **Optional**|Gibt einen nicht standardmäßigen Wert für eine [InstanceID](#InstanceID)an.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setupsteuerelement|/INSTANCENAME<br /><br /> **Erforderlich**|Gibt einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanznamen an.<br /><br /> Weitere Informationen finden Sie unter [Instance Configuration](../../database-engine/install-windows/install-sql-server.md).|  
-|PolyBase|/PBENGSVCACCOUNT<br /><br /> **Optional**|Gibt das Konto für den Moduldienst an. Der Standardwert ist **NT Authority\NETWORK SERVICE**.|  
-|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Optional**|Gibt das Kennwort für das Moduldienstkonto an.|  
-|PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Optional**|Gibt den Startmodus für den PolyBase-Moduldienst an: Automatisch (Standard), Deaktiviert und Manuell.|  
+|PolyBase|/PBENGSVCACCOUNT<br /><br /> **Optional**|Gibt das Konto für den Engine-Dienst an. Der Standardwert ist **NT Authority\NETWORK SERVICE**.|  
+|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Optional**|Gibt das Kennwort für das Engine-Dienstkonto an.|  
+|PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Optional**|Gibt den Startmodus für den PolyBase-Engine-Dienst an: Automatisch (Standard), Deaktiviert und Manuell.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Optional**|Gibt einen Portbereich für PolyBase-Dienste mit mindestens sechs Ports an. Beispiel:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 |PolyBase|/PBSCALEOUT<br /><br /> **Optional**|Gibt an, ob die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz als Teil einer horizontalen Skalierung von PolyBase-Berechnungsgruppen verwendet wird. Unterstützte Werte: **True**, **False**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setupsteuerelement|/PID<br /><br /> **Optional**|Gibt den Product Key für die Edition von SQL Server an. Wenn dieser Parameter nicht angegeben wird, wird Evaluation verwendet.|  
@@ -309,9 +307,9 @@ setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setupsteuerelement|/INSTALLSHAREDDIR<br /><br /> **Optional**|Gibt ein nicht standardmäßiges Installationsverzeichnis für freigegebene 64-Bit-Komponenten an.<br /><br /> Die Standardeinstellung ist `%Program Files%\Microsoft SQL Server`.<br /><br /> Kann nicht auf `%Program Files(x86)%\Microsoft SQL Server` festgelegt werden.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setupsteuerelement|/INSTANCEDIR<br /><br /> **Optional**|Gibt ein nicht standardmäßiges Installationsverzeichnis für instanzspezifische Komponenten an.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setupsteuerelement|/INSTANCEID<br /><br /> Vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 (Januar 2013) **Erforderlich**<br /><br /> Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 **Erforderlich** für Instanzfunktionen.|Gibt eine InstanceID für die Instanz an, die vorbereitet ist.|  
-|PolyBase|/PBENGSVCACCOUNT<br /><br /> **Optional**|Gibt das Konto für den Moduldienst an. Der Standardwert ist **NT Authority\NETWORK SERVICE**.|  
-|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Optional**|Gibt das Kennwort für das Moduldienstkonto an.|  
-|PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Optional**|Gibt den Startmodus für den PolyBase-Moduldienst an: Automatisch (Standard), Deaktiviert und Manuell.|  
+|PolyBase|/PBENGSVCACCOUNT<br /><br /> **Optional**|Gibt das Konto für den Engine-Dienst an. Der Standardwert ist **NT Authority\NETWORK SERVICE**.|  
+|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Optional**|Gibt das Kennwort für das Engine-Dienstkonto an.|  
+|PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Optional**|Gibt den Startmodus für den PolyBase-Engine-Dienst an: Automatisch (Standard), Deaktiviert und Manuell.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Optional**|Gibt einen Portbereich für PolyBase-Dienste mit mindestens sechs Ports an. Beispiel:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 |PolyBase|/PBSCALEOUT<br /><br /> **Optional**|Gibt an, ob die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz als Teil einer horizontalen Skalierung von PolyBase-Berechnungsgruppen verwendet wird. Unterstützte Werte: **True**, **False**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setupsteuerelement|/Q<br /><br /> **Optional**|Gibt an, dass Setup ohne Benutzeroberfläche in einem stillen Modus ausgeführt wird. Dies wird für unbeaufsichtigte Installationen verwendet.|  
@@ -338,9 +336,9 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setupsteuerelement|/INDICATEPROGRESS<br /><br /> **Optional**|Gibt an, dass die ausführliche Setupprotokolldatei an die Konsole weitergeleitet wird.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setupsteuerelement|/INSTANCEID<br /><br /> Vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 (Januar 2013) **Erforderlich**<br /><br /> Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 **Optional**|Verwenden Sie die Instanz-ID, die während des Schritts zur Imagevorbereitung angegeben wurde.<br /><br /> Unterstützte Werte: InstanceID einer vorbereiteten Instanz.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setupsteuerelement|/INSTANCENAME<br /><br /> Vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 (Januar 2013) **Erforderlich**<br /><br /> Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 **Optional**|Gibt einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanznamen für die Instanz an, die abgeschlossen wird.<br /><br /> Weitere Informationen finden Sie unter [Instance Configuration](../../database-engine/install-windows/install-sql-server.md).|  
-|PolyBase|/PBENGSVCACCOUNT<br /><br /> **Optional**|Gibt das Konto für den Moduldienst an. Der Standardwert ist **NT Authority\NETWORK SERVICE**.|  
-|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Optional**|Gibt das Kennwort für das Moduldienstkonto an.|  
-|PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Optional**|Gibt den Startmodus für den PolyBase-Moduldienst an: Automatisch (Standard), Deaktiviert und Manuell.|  
+|PolyBase|/PBENGSVCACCOUNT<br /><br /> **Optional**|Gibt das Konto für den Engine-Dienst an. Der Standardwert ist **NT Authority\NETWORK SERVICE**.|  
+|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Optional**|Gibt das Kennwort für das Engine-Dienstkonto an.|  
+|PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Optional**|Gibt den Startmodus für den PolyBase-Engine-Dienst an: Automatisch (Standard), Deaktiviert und Manuell.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Optional**|Gibt einen Portbereich für PolyBase-Dienste mit mindestens sechs Ports an. Beispiel:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 |PolyBase|/PBSCALEOUT<br /><br /> **Optional**|Gibt an, ob die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz als Teil einer horizontalen Skalierung von PolyBase-Berechnungsgruppen verwendet wird. Unterstützte Werte: **True**, **False**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setupsteuerelement|/PID<br /><br /> **Optional**|Gibt den Product Key für die Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]an. Wenn dieser Parameter nicht angegeben wird, wird Evaluation verwendet.<br /><br /> **Hinweis:** Wenn Sie [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Tools oder [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services installieren, ist die PID vordefiniert.|  
@@ -436,9 +434,9 @@ setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/ENU<br /><br /> **Optional**|Verwenden Sie diesen Parameter, um die englische Version von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] unter einem lokalisierten Betriebssystem zu installieren, wenn die Installationsmedien Language Packs sowohl für Englisch als auch für die Sprache des Betriebssystems einschließen.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/FEATURES<br /><br /> **Erforderlich**|Gibt die [Komponenten](#Feature) für die Reparatur an.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/INSTANCENAME<br /><br /> **Erforderlich**|Gibt einen [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Instanznamen an.<br /><br /> Weitere Informationen finden Sie unter [Instance Configuration](../../database-engine/install-windows/install-sql-server.md).|  
-|PolyBase|/PBENGSVCACCOUNT<br /><br /> **Optional**|Gibt das Konto für den Moduldienst an. Der Standardwert ist **NT Authority\NETWORK SERVICE**.|  
-|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Optional**|Gibt das Kennwort für das Moduldienstkonto an.|  
-|PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Optional**|Gibt den Startmodus für den PolyBase-Moduldienst an: Automatisch (Standard), Deaktiviert und Manuell.|  
+|PolyBase|/PBENGSVCACCOUNT<br /><br /> **Optional**|Gibt das Konto für den Engine-Dienst an. Der Standardwert ist **NT Authority\NETWORK SERVICE**.|  
+|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Optional**|Gibt das Kennwort für das Engine-Dienstkonto an.|  
+|PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Optional**|Gibt den Startmodus für den PolyBase-Engine-Dienst an: Automatisch (Standard), Deaktiviert und Manuell.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Optional**|Gibt einen Portbereich für PolyBase-Dienste mit mindestens sechs Ports an. Beispiel:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 |PolyBase|/PBSCALEOUT<br /><br /> **Optional**|Gibt an, ob die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz als Teil einer horizontalen Skalierung von PolyBase-Berechnungsgruppen verwendet wird. Unterstützte Werte: **True**, **False**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/Q<br /><br /> **Optional**|Gibt an, dass Setup ohne Benutzeroberfläche in einem stillen Modus ausgeführt wird. Dies wird für unbeaufsichtigte Installationen verwendet.|  
@@ -523,9 +521,9 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Nur erforderlich, wenn der /Q-Parameter oder der /QS-Parameter für die unbeaufsichtigte Installation angegeben wird.**|Erforderlich, um das Einverständnis mit den Lizenzbedingungen zu erklären.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/ENU<br /><br /> **Optional**|Verwenden Sie diesen Parameter, um die englische Version von SQL Server unter einem lokalisierten Betriebssystem zu installieren, wenn die Installationsmedien sowohl Language Packs für Englisch als auch für die Sprache des Betriebssystems enthalten.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/FAILOVERCLUSTERGROUP<br /><br /> **Optional**|Gibt den Namen der Ressourcengruppe an, die für den [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Failovercluster verwendet werden soll. Es kann sich um den Namen einer vorhandenen Clustergruppe oder den Namen einer neuen Ressourcengruppe handeln.<br /><br /> Standardwert:<br /><br /> SQL Server (\<Instanzname>)|  
-|PolyBase|/PBENGSVCACCOUNT<br /><br /> **Optional**|Gibt das Konto für den Moduldienst an. Der Standardwert ist **NT Authority\NETWORK SERVICE**.|  
-|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Optional**|Gibt das Kennwort für das Moduldienstkonto an.|  
-|PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Optional**|Gibt den Startmodus für den PolyBase-Moduldienst an: Automatisch (Standard), Deaktiviert und Manuell.|  
+|PolyBase|/PBENGSVCACCOUNT<br /><br /> **Optional**|Gibt das Konto für den Engine-Dienst an. Der Standardwert ist **NT Authority\NETWORK SERVICE**.|  
+|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Optional**|Gibt das Kennwort für das Engine-Dienstkonto an.|  
+|PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Optional**|Gibt den Startmodus für den PolyBase-Engine-Dienst an: Automatisch (Standard), Deaktiviert und Manuell.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Optional**|Gibt einen Portbereich für PolyBase-Dienste mit mindestens sechs Ports an. Beispiel:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 |PolyBase|/PBSCALEOUT<br /><br /> **Optional**|Gibt an, ob die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz als Teil einer horizontalen Skalierung von PolyBase-Berechnungsgruppen verwendet wird. Unterstützte Werte: **True**, **False**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/*UpdateEnabled*<br /><br /> **Optional**|Geben Sie an, ob das SQL Server-Setup Produktupdates ermitteln und einschließen soll. Gültige Werte sind True und False oder 1 und 0. Standardmäßig schließt das SQL Server-Setup alle gefundenen Updates ein.|  
@@ -620,9 +618,9 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/INSTANCEDIR<br /><br /> **Optional**|Gibt ein nicht standardmäßiges Installationsverzeichnis für instanzspezifische Komponenten an.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/INSTANCEID<br /><br /> **Optional**|Gibt einen nicht standardmäßigen Wert für eine [InstanceID](#InstanceID)an.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/INSTANCENAME<br /><br /> **Erforderlich**|Gibt einen [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Instanznamen an.<br /><br /> Weitere Informationen finden Sie unter [Instance Configuration](../../database-engine/install-windows/install-sql-server.md).|  
-|PolyBase|/PBENGSVCACCOUNT<br /><br /> **Optional**|Gibt das Konto für den Moduldienst an. Der Standardwert ist **NT Authority\NETWORK SERVICE**.|  
-|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Optional**|Gibt das Kennwort für das Moduldienstkonto an.|  
-|PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Optional**|Gibt den Startmodus für den PolyBase-Moduldienst an: Automatisch (Standard), Deaktiviert und Manuell.|  
+|PolyBase|/PBENGSVCACCOUNT<br /><br /> **Optional**|Gibt das Konto für den Engine-Dienst an. Der Standardwert ist **NT Authority\NETWORK SERVICE**.|  
+|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Optional**|Gibt das Kennwort für das Engine-Dienstkonto an.|  
+|PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Optional**|Gibt den Startmodus für den PolyBase-Engine-Dienst an: Automatisch (Standard), Deaktiviert und Manuell.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Optional**|Gibt einen Portbereich für PolyBase-Dienste mit mindestens sechs Ports an. Beispiel:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 |PolyBase|/PBSCALEOUT<br /><br /> **Optional**|Gibt an, ob die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz als Teil einer horizontalen Skalierung von PolyBase-Berechnungsgruppen verwendet wird. Unterstützte Werte: **True**, **False**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/PID<br /><br /> **Optional**|Gibt den Product Key für die Edition von SQL Server an. Wenn dieser Parameter nicht angegeben wird,<br /><br /> wird Evaluation verwendet.|  
@@ -772,9 +770,9 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/HELP, H, ?<br /><br /> **Optional**|Zeigt die Verwendungsoptionen für die Parameter an.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/INDICATEPROGRESS<br /><br /> **Optional**|Gibt an, dass die ausführliche Setupprotokolldatei an die Konsole weitergeleitet wird.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/INSTANCENAME<br /><br /> **Erforderlich**|Gibt einen [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Instanznamen an.<br /><br /> Weitere Informationen finden Sie unter [Instance Configuration](../../database-engine/install-windows/install-sql-server.md).|  
-|PolyBase|/PBENGSVCACCOUNT<br /><br /> **Optional**|Gibt das Konto für den Moduldienst an. Der Standardwert ist **NT Authority\NETWORK SERVICE**.|  
-|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Optional**|Gibt das Kennwort für das Moduldienstkonto an.|  
-|PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Optional**|Gibt den Startmodus für den PolyBase-Moduldienst an: Automatisch (Standard), Deaktiviert und Manuell.|  
+|PolyBase|/PBENGSVCACCOUNT<br /><br /> **Optional**|Gibt das Konto für den Engine-Dienst an. Der Standardwert ist **NT Authority\NETWORK SERVICE**.|  
+|PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Optional**|Gibt das Kennwort für das Engine-Dienstkonto an.|  
+|PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Optional**|Gibt den Startmodus für den PolyBase-Engine-Dienst an: Automatisch (Standard), Deaktiviert und Manuell.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Optional**|Gibt einen Portbereich für PolyBase-Dienste mit mindestens sechs Ports an. Beispiel:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 |PolyBase|/PBSCALEOUT<br /><br /> **Optional**|Gibt an, ob die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz als Teil einer horizontalen Skalierung von PolyBase-Berechnungsgruppen verwendet wird. Unterstützte Werte: **True**, **False**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/PID<br /><br /> **Optional**|Gibt den Product Key für die Edition von SQL Server an. Wenn dieser Parameter nicht angegeben wird, wird Evaluation verwendet.|  
@@ -891,8 +889,10 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
 |-Rolle|Description|Installiert...|  
 |----------|-----------------|---------------|  
-|SPI_AS_ExistingFarm|Installiert [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] als benannte Instanz von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in einer vorhandenen [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] -Farm oder auf einem eigenständigen Server.|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Berechnungsmodul, vorkonfiguriert für Datenspeicherung und Verarbeitung im Arbeitsspeicher.<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Projektmappenpakete<br /><br /> Installationsprogramm für den [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]<br /><br /> SQL Server-Onlinedokumentation|  
-|SPI_AS_NewFarm|Installiert [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] und [!INCLUDE[ssDE](../../includes/ssde-md.md)] als benannte Instanz von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in einer neuen und nicht konfigurierten Office [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] -Farm oder auf einem eigenständigen Server. SQL Server-Setup konfiguriert die Farm während der Installation der Funktionsrolle.|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Berechnungsmodul, vorkonfiguriert für Datenspeicherung und Verarbeitung im Arbeitsspeicher.<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Projektmappenpakete<br /><br /> SQL Server-Onlinedokumentation<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> Konfigurationstools<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
+|SPI_AS_ExistingFarm|Installiert [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] als benannte Instanz von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in einer vorhandenen [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] -Farm oder auf einem eigenständigen Server.|
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Berechnungs-Engine, vorkonfiguriert für Datenspeicherung und Verarbeitung im Arbeitsspeicher.<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Projektmappenpakete<br /><br /> Installationsprogramm für den [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]<br /><br /> SQL Server-Onlinedokumentation|  
+|SPI_AS_NewFarm|Installiert [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] und [!INCLUDE[ssDE](../../includes/ssde-md.md)] als benannte Instanz von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in einer neuen und nicht konfigurierten Office [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] -Farm oder auf einem eigenständigen Server. SQL Server-Setup konfiguriert die Farm während der Installation der Funktionsrolle.|
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Berechnungs-Engine, vorkonfiguriert für Datenspeicherung und Verarbeitung im Arbeitsspeicher.<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Projektmappenpakete<br /><br /> SQL Server-Onlinedokumentation<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> Konfigurationstools<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
 |AllFeatures_WithDefaults|Installiert alle in der aktuellen Edition verfügbaren Funktionen.<br /><br /> Fügt der festen Serverrolle **sysadmin** von SQL Server den aktuellen Benutzer hinzu.<br /><br /> Unter [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] oder höheren Versionen und wenn das Betriebssystem kein Domänencontroller ist, werden [!INCLUDE[ssDE](../../includes/ssde-md.md)]und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] standardmäßig für die Verwendung des NT-AUTORITÄT\NETZWERKDIENST-Kontos und [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] standardmäßig für die Verwendung des NT-AUTORITÄT\LOKALER DIENST-Kontos konfiguriert.<br /><br /> Diese Rolle wird in Editionen von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]standardmäßig aktiviert. Für alle anderen Editionen ist diese Rolle nicht aktiviert, kann jedoch über die Benutzeroberfläche oder mit Befehlszeilenparametern angegeben werden.|Für Editionen von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]werden nur die in der Edition verfügbaren Funktionen installiert. Für andere Editionen werden alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktionen installiert.<br /><br /> Der **AllFeatures_WithDefaults** -Parameter kann mit anderen Parametern kombiniert werden, die die Einstellungen des **AllFeatures_WithDefaults** -Parameters überschreiben. Bei Verwendung des **AllFeatures_WithDefaults** -Parameters und des **/FEATURES = RS** -Parameters wird beispielsweise der Befehl zur Installation aller Funktionen überschrieben und nur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]installiert. Der **AllFeatures_WithDefaults-Parameter** zur Verwendung des Standarddienstkontos für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]wird jedoch berücksichtigt.<br /><br /> Wenn der **AllFeatures_WithDefaults** -Parameter zusammen mit **/ADDCURRENTUSERASSQLADMIN=FALSE** verwendet wird, wird das bereitstellende Dialogfeld nicht automatisch mit dem Namen des aktuellen Benutzers aufgefüllt. Fügen Sie **/AGTSVCACCOUNT** und **/AGTSVCPASSWORD** hinzu, um ein Dienstkonto und ein Kennwort für den SQL Server-Agent anzugeben.|  
   
 ##  <a name="RollOwnership"></a> Steuern des Failoververhaltens mithilfe des Parameters /FAILOVERCLUSTERROLLOWNERSHIP  

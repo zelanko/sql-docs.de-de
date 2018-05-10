@@ -3,15 +3,12 @@ title: Serverkonfigurationsoptionen (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/13/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 keywords:
 - Serverkonfiguration (SQL Server)
 helpviewer_keywords:
@@ -36,12 +33,11 @@ caps.latest.revision: 128
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 5311cde76a56b1da478462aa98a270af5143ed13
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5828db704dac636f034329d8e0c7de4b99922f72
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="server-configuration-options-sql-server"></a>Serverkonfigurationsoptionen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +68,7 @@ Selbstkonfigurierende Optionen sind jene Optionen, die von [!INCLUDE[ssNoVersion
   
 -   RR (Restart Required) = Optionen, die den Neustart von [!INCLUDE[ssDE](../../includes/ssde-md.md)]erfordern.  
   
--   RP (Restart PolyBase) = Optionen, die einen Neustart des PolyBase-Moduls erfordern.  
+-   RP (Restart PolyBase) = Optionen, die einen Neustart der PolyBase-Engine erfordern.  
   
 -   SC (Self-Configuring) = Selbstkonfigurierende Optionen.  
   

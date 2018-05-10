@@ -1,48 +1,26 @@
 ---
 title: Attribute und Attributhierarchien | Microsoft Docs
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- regular attributes [Analysis Services]
-- parent attributes [Analysis Services]
-- hierarchies [Analysis Services], attribute
-- attributes [Analysis Services], about attributes
-- account attributes [Analysis Services]
-- dimensions [Analysis Services], attributes
-- key attributes [Analysis Services]
-- OLAP objects [Analysis Services], attributes
-- attributes [Analysis Services], relationships
-- attributes [Analysis Services]
-- relationships [Analysis Services], attributes
-ms.assetid: 59de1ea2-e7a9-4a53-9ee0-14be52e95643
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 012caa5210886a9c2f6e72a6c1b7338154358d1f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 009b5857470b106cb5c68301537dceb438ec4406
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>Attribute und Attributhierarchien
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Dimensionen sind Auflistungen von Attributen, die an eine oder mehrere Spalten in einer Tabelle oder Sicht in der Datenquellensicht gebunden sind.  
+  Dimensionen sind Auflistungen von Attributen, die an eine oder mehrere Spalten in einer Tabelle oder Sicht in der Datenquellensicht gebunden sind.  
   
 ## <a name="key-attribute"></a>Schlüsselattribut  
- Jede Dimension enthält ein Schlüsselattribut. Jedes Attribut ist an mindestens eine Spalte in einer Dimensionstabelle gebunden. Das Schlüsselattribut ist das Attribut in einer Dimension, das die Spalten in der Dimensionshaupttabelle identifiziert, die in Fremdschlüsselbeziehungen zur Faktentabelle verwendet werden. Das Schlüsselattribut entspricht normalerweise den Primärschlüsselspalten in der Dimensionstabelle. Sie können einen logischen Primärschlüssel für eine Tabelle in einer Datenquellensicht definieren, die über keinen physischen Primärschlüssel in der zugrunde liegenden Datenquelle verfügt. **Weitere Informationen**, finden Sie unter [definieren logischer Primärschlüssel in einer Datenquellensicht &#40; Analysis Services &#41; ](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md). Beim Definieren von Schlüsselattributen versuchen der Cube-Assistent und der Dimensions-Assistent, die Primärschlüsselspalten der Dimensionstabelle in der Datenquellensicht zu verwenden. Wurde für die Dimensionstabelle weder ein logischer noch ein physischer Primärschlüssel definiert, sind die Assistenten möglicherweise nicht in der Lage, die Schlüsselattribute für die Dimension richtig zu definieren.  
+ Jede Dimension enthält ein Schlüsselattribut. Jedes Attribut ist an mindestens eine Spalte in einer Dimensionstabelle gebunden. Das Schlüsselattribut ist das Attribut in einer Dimension, das die Spalten in der Dimensionshaupttabelle identifiziert, die in Fremdschlüsselbeziehungen zur Faktentabelle verwendet werden. Das Schlüsselattribut entspricht normalerweise den Primärschlüsselspalten in der Dimensionstabelle. Sie können einen logischen Primärschlüssel für eine Tabelle in einer Datenquellensicht definieren, die über keinen physischen Primärschlüssel in der zugrunde liegenden Datenquelle verfügt. **Weitere Informationen**, finden Sie unter [definieren logischer Primärschlüssel in einer Datenquellensicht &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md). Beim Definieren von Schlüsselattributen versuchen der Cube-Assistent und der Dimensions-Assistent, die Primärschlüsselspalten der Dimensionstabelle in der Datenquellensicht zu verwenden. Wurde für die Dimensionstabelle weder ein logischer noch ein physischer Primärschlüssel definiert, sind die Assistenten möglicherweise nicht in der Lage, die Schlüsselattribute für die Dimension richtig zu definieren.  
   
 ## <a name="binding-an-attribute-to-columns-in-data-source-view-tables-or-views"></a>Binden eines Attributs an Spalten in Tabellen oder Sichten einer Datenquellensicht  
  Ein Attribut ist an Spalten in mindestens einer Tabelle oder Sicht einer Datenquellensicht gebunden. Ein Attribut ist immer an mindestens eine Schlüsselspalte gebunden, wodurch die in dem Attribut enthaltenen Elemente bestimmt werden. Standardmäßig ist dies die einzige Spalte, an die ein Attribut gebunden ist. Ein Attribut kann für bestimmte Zwecke auch an eine oder mehrere zusätzliche Spalten gebunden werden. Angenommen, ein Attribut des **NameColumn** Eigenschaft bestimmt den Namen, die dem Benutzer für die einzelnen Attributelemente angezeigt wird - diese Eigenschaft des Attributs an eine bestimmte Dimensionsspalte über einer Datenquellensicht gebunden werden kann oder sein kann Um eine berechnete Spalte in der Datenquellensicht gebunden. Weitere Informationen finden Sie unter [Dimensionsattributeigenschaftenverweis](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md).  

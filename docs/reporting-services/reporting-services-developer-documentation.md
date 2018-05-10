@@ -1,32 +1,31 @@
 ---
 title: Reporting Services-Entwicklerdokumentation | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - developer's guide [Reporting Services]
 - Reporting Services, programming
 - programming [Reporting Services]
 ms.assetid: d8afa405-1012-4349-a72d-e10d94f8453d
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 508253c11026074dc19ce93f173c036ae2751786
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d11e62a8a0a1f90d894c32c82aef938f89a61851
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reporting-services-developer-documentation"></a>Reporting Services-Entwicklerdokumentation
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] enthält mehrere Programmierschnittstellen, die Sie in Ihre eigenen Anwendungen einbauen können. Sie können die vorhandenen Funktionen und Funktionen von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] verwenden, um benutzerdefinierte Berichts- und Verwaltungstools in Websites und Windows-Anwendungen zu erstellen, oder Sie können die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Plattform erweitern.  
@@ -40,9 +39,12 @@ ms.lasthandoff: 01/09/2018
  [Integrating Reporting Services into Applications (Integration von Reporting Services in Anwendungen)](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)  
  Gibt eine Übersicht darüber, wie die Berichterstellung mithilfe von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in benutzerdefinierte Anwendungen integriert werden kann. Beschreibt, wann der direkte URL-Zugriff und wann der Webdienst für den Zugriff auf den Berichtsserver verwendet werden sollte.  
   
- [Report Server Web Service (Report Server-Webdienst)](../reporting-services/report-server-web-service/report-server-web-service.md)  
+ [Report Server Web Service for ASP.net and traditional applications (Berichtsserver-Webdienst für ASP.NET und herkömmliche Anwendungen)](../reporting-services/report-server-web-service/report-server-web-service.md)  
  Über den Berichtsserver-Webdienst erhalten Sie Zugriff auf die kompletten Funktionen des Berichtsservers. Der Webdienst verwendet SOAP über HTTP und wurde als Kommunikationsschnittstelle zwischen den Clientprogrammen und dem Berichtsserver konzipiert. Der Webdienst und seine Methoden stellen die Funktionen des Berichtsservers zur Verfügung und ermöglichen die Erstellung benutzerdefinierter Tools für jeden Teil des gesamten Berichtslebenszyklus, von der Verwaltung bis zur Ausführung.  
-  
+ 
+ [Develop with REST APIs for modern applications (Entwickeln mit REST-APIs für moderne Anwendungen)](developer/rest-api.md)</br>
+ Die Reporting Services REST-APIs stellen programmgesteuerten Zugriff auf die Objekte im Reporting Services-Berichtsserverkatalog bereit. Mithilfe der REST-APIs können Sie zu einer Ordnerhierarchie navigieren, die Inhalte eines Ordners ermitteln oder eine Berichtsdefinition herunterladen. Außerdem können Sie Objekte erstellen, aktualisieren und löschen.
+
  [URL-Zugriff (SSRS)](../reporting-services/url-access-ssrs.md)  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] unterstützt einen vollständige Satz URL-basierter Anforderungen, über die Sie schnell und problemlos auf die Berichtsnavigation und -anzeige zugreifen können. Sie können diese Technologie zusammen mit dem Berichtsserver-Webdienst verwenden, um eine vollständige Berichtslösung in Ihre vorhandenen Geschäftsanwendungen zu integrieren. Der URL-Zugriff ist dann besonders sinnvoll, wenn Sie Berichte als Teil eines Internetportals integrieren oder wenn Sie Berichte über einen Webbrowser anzeigen.  
   

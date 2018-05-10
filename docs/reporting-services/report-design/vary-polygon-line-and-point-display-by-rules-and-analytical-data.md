@@ -1,16 +1,15 @@
 ---
 title: Unterschiedliche Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - "10538"
 - "10537"
@@ -22,16 +21,15 @@ f1_keywords:
 - "10536"
 - sql13.rtp.rptdesigner.maplinelayerproperties.widthrules.f1
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
-caps.latest.revision: 
+caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 428f89c51b60f1e9f33170ab03cb43a87caf6a78
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3e78b0319639852d8bb4cac5be3f3b2157ac0703
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>Unterschiedliche Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten
   Die Anzeigeoptionen für Polygone, Linien und Punkte in einer Kartenebene werden gesteuert, indem Optionen für die Ebene sowie Regeln für die Kartenelemente in der Ebene festgelegt werden oder indem Optionen für bestimmte eingebettete Kartenelemente in einer Ebene überschrieben werden.  
@@ -123,7 +121,7 @@ ms.lasthandoff: 01/09/2018
   
  Um zu steuern, wo eine Legende angezeigt wird, verwenden Sie das Dialogfeld "Legendeneigenschaften", um eine Position relativ zum Kartenviewport anzugeben. Weitere Informationen finden Sie unter [Ändern der Kartenlegenden, Farbskala und zugeordneten Regeln &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
- Legenden werden automatisch erweitert, um den Legendentitel oder Legendentext anzuzeigen. Um den Text von Legendenelementen zu formatieren, verwenden Sie Kartenlegenden-Schlüsselwörter und benutzerdefinierte Formate. Weitere Informationen finden Sie unter [So ändern Sie das Format des Inhalts einer Legende](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md#ChangeFormatItems).  
+ Legenden werden automatisch erweitert, um den Legendentitel oder Legendentext anzuzeigen. Um den Text von Legendenelementen zu formatieren, verwenden Sie Kartenlegenden-Schlüsselwörter und benutzerdefinierte Formate. Weitere Informationen finden Sie unter [To change the format of content in a legend](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md#ChangeFormatItems).  
   
  Die folgenden Tabellen zeigen Beispiele für unterschiedliche Formate an, die Sie verwenden können.  
   

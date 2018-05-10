@@ -1,27 +1,25 @@
 ---
 title: Reporting Services-Datenwarnungen | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: c66c095233b8e7642e4c491767ce678218d8ef42
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 1cfc5097bc391a9d8487506b2958635dead23b7a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services-Datenwarnungen
 
@@ -125,7 +123,7 @@ Im Folgenden werden die wichtigsten Bereiche der [!INCLUDE[ssRSnoversion](../inc
   
  Weitere Informationen zum Installieren von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im SharePoint-Modus, einschließlich des gemeinsamen Diensts von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , der in der [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] - und [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienstanwendung neu ist und die Sie vor der Verwendung der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Funktionen erstellen und konfigurieren müssen, finden Sie unter [Installieren des SharePoint-Modus von Reporting Services für SharePoint 2010](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c) in der MSDN Library.  
   
- Gemäß des zuvor in diesem Thema gezeigten Diagramms verwenden Datenwarnungen SQL Server-Agent-Aufträge. Zum Erstellen des Auftrags muss der SQL Server-Agent ausgeführt werden. Unter Umständen haben Sie den SQL Server-Agent bei der Installation von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]so konfiguriert, dass er automatisch startet. Andernfalls lässt sich der SQL Server-Agent manuell starten. Weitere Informationen finden Sie unter [Konfigurieren des SQL Server-Agents](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900) und [Starten, Beenden, Anhalten, Fortsetzen und Neustarten des Datenbankmoduls, SQL Server-Agents oder des SQL Server-Browsers](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+ Gemäß des zuvor in diesem Thema gezeigten Diagramms verwenden Datenwarnungen SQL Server-Agent-Aufträge. Zum Erstellen des Auftrags muss der SQL Server-Agent ausgeführt werden. Unter Umständen haben Sie den SQL Server-Agent bei der Installation von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]so konfiguriert, dass er automatisch startet. Andernfalls lässt sich der SQL Server-Agent manuell starten. Weitere Informationen finden Sie unter [Konfigurieren des SQL Server-Agents](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900) und [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agents oder des SQL Server-Browsers](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
  Sie können in der SharePoint-Zentraladministration mithilfe der Seite **Abonnements und Warnungen bereitstellen** herausfinden, ob der SQL Server-Agent ausgeführt wird, und benutzerdefinierte [!INCLUDE[tsql](../includes/tsql-md.md)] -Skripts erstellen und herunterladen, die Sie dann ausführen, um dem SQL Server-Agent Berechtigungen zu gewähren. Erstellen Sie die [!INCLUDE[tsql](../includes/tsql-md.md)] -Skripts alternativ mithilfe von PowerShell. Weitere Informationen finden Sie unter [Bereitstellen von Abonnements und Warnungen für SSRS-Dienstanwendungen](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   

@@ -1,27 +1,24 @@
 ---
 title: Installieren von SQL Server 2016 unter Server Core | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 09/05/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: install-windows
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: install
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: install
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
-caps.latest.revision: 
+caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7de58227a8da5f90921b1e973a63949f71a25b52
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: af0c145508b13907716bd95d9b54a1063f325e9e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-sql-server-on-server-core"></a>Installieren von SQL Server unter Server Core
 
@@ -29,7 +26,7 @@ ms.lasthandoff: 02/09/2018
 
 Sie können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einer Server Core-Installation installieren.   
   
-Die Server Core-Installationsoption stellt eine minimale Umgebung zum Ausführen von bestimmten Serverrollen bereit. Dies hilft, Wartung und Verwaltungsanforderungen und die Angriffsfläche für jene Serverrollen zu reduzieren. Weitere Informationen zur Server Core-Installation finden Sie unter [Installieren von Server Core](http://docs.microsoft.com/windows-server/get-started/getting-started-with-server-core). Weitere Informationen zur Implementierung von Server Core unter [!INCLUDE[win8srv](../../includes/win8srv-md.md)]finden Sie unter [Server Core für Windows Server 2012](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (http://msdn.microsoft.com/library/hh846323(VS.85).aspx).  
+Die Server Core-Installationsoption stellt eine minimale Umgebung zum Ausführen von bestimmten Serverrollen bereit. Dies hilft, Wartung und Verwaltungsanforderungen und die Angriffsfläche für jene Serverrollen zu reduzieren. Weitere Informationen zur Server Core-Installation finden Sie unter [Installieren von Server Core](http://docs.microsoft.com/windows-server/get-started/getting-started-with-server-core). Weitere Informationen zur Implementierung von Server Core unter [!INCLUDE[win8srv](../../includes/win8srv-md.md)] finden Sie unter [Server Core für Windows Server 2012](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (http://msdn.microsoft.com/library/hh846323(VS.85).aspx)).  
   
  Eine Liste der aktuell unterstützten Betriebssysteme finden Sie unter [Hardware- und Softwareanforderungen für die Installation von SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
 
@@ -47,24 +44,24 @@ Die Server Core-Installationsoption stellt eine minimale Umgebung zum Ausführen
   
 |Funktion|Supported|Zusätzliche Informationen|  
 |-------------|---------------|----------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] Dienste|ja||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replikation|ja||  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] -Dienste|ja||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikation|ja||  
 |Volltextsuche|ja||  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|ja||  
 |[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]|ja||  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|nein||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|nein||  
 |Konnektivität der Clienttools|ja||  
-|Integration Services-Server|ja|Weitere Informationen zum neuen Integration Services-Server und dessen Funktionen in [!INCLUDE[ssCurrent](../../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md).|  
+|Integration Services-Server|ja||  
 |Clienttools-Abwärtskompatibilität|nein||  
 |Clienttools SDK|nein||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Onlinedokumentation|nein||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation|nein||  
 |Verwaltungstools - Einfach|Ausschließlich remote|Die Installation dieser Funktionen unter Server Core wird nicht unterstützt. Diese Komponenten können auf einem anderen Server installiert werden, der nicht Server Core ist und nicht mit den auf Server Core installierten [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Diensten verbunden ist.|  
 |Verwaltungstools - Vollständig|Ausschließlich remote|Die Installation dieser Funktionen unter Server Core wird nicht unterstützt. Diese Komponenten können auf einem anderen Server installiert werden, der nicht Server Core ist und nicht mit den auf Server Core installierten [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Diensten verbunden ist.|  
 |Distributed Replay Controller|nein||  
 |Distributed Replay Client|Ausschließlich remote|Die Installation dieser Funktionen unter Server Core wird nicht unterstützt. Diese Komponenten können auf einem anderen Server installiert werden, der nicht Server Core ist und nicht mit den auf Server Core installierten [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Diensten verbunden ist.|  
 |SQL Client Connectivity SDK|ja||  
-|Microsoft Sync Framework|ja|Microsoft Sync Framework ist im Installationspaket von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nicht enthalten. Sie können die geeignete Sync Framework-Version aus dem [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=221788) (http://go.microsoft.com/fwlink/?LinkId=221788) herunterladen und auf einem Computer mit der Server Core-Installation installieren.|  
+|Microsoft Sync Framework|ja|Microsoft Sync Framework ist im Installationspaket von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nicht enthalten. Sie können die geeignete Sync Framework-Version aus dem [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=221788) (http://go.microsoft.com/fwlink/?LinkId=221788)) herunterladen und auf einem Computer mit Server Core installieren.|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|nein||  
 |[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|nein||  
   
@@ -73,8 +70,8 @@ Die Server Core-Installationsoption stellt eine minimale Umgebung zum Ausführen
   
 |||  
 |-|-|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Editionen|Alle [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 64-Bit-Editionen*|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sprache|Alle Sprachen|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Editionen|Alle 64-Bit-Editionen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] |  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sprache|Alle Sprachen|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sprache auf Betriebssystem Sprache/Gebietsschema (Kombination)|ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf JPN (Japanisch) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf GER (Deutsch) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf CHS (Chinesisch-China) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf ARA (Arabisch (SA)) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf THA (Thai) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf TRK (Türkisch) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf pt-PT (Portugiesisch Portugal) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf ENG (Englisch) Windows|  
 |Windows-Edition|[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation|  
   
@@ -103,7 +100,7 @@ Die Server Core-Installationsoption stellt eine minimale Umgebung zum Ausführen
 |AS|Installiert alle [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Komponenten.|  
 |IS|Installiert alle [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Komponenten.|  
 |CONN|Installiert die Konnektivitätskomponenten.| 
-|ADVANCEDANALYTICS |Installiert R Services und erfordert das Datenbankmodul. Unbeaufsichtigte Installationen erfordern den Parameter /IACCEPTROPENLICENSETERMS.  |
+|ADVANCEDANALYTICS |Installiert R Services und erfordert die Datenbank-Engine. Unbeaufsichtigte Installationen erfordern den Parameter /IACCEPTROPENLICENSETERMS.  |
 
 
  Vergleichen Sie die folgenden Beispiele für die Verwendung von Funktionsparametern:  

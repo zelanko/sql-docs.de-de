@@ -3,15 +3,12 @@ title: Wiederherstellen einer Transaktionsprotokollsicherung (SQL Server) | Micr
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: backup-restore
+ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.restoretlog.general.f1
 - sql13.swb.restoretlog.options.f1
@@ -26,12 +23,11 @@ caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c8c80b3a4ffa0cce8aca2e48f170032d7ae90909
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5bdc7f31362cbcbebc489e447c86e88d5a9650f5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Wiederherstellen einer Transaktionsprotokollsicherung (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +113,7 @@ ms.lasthandoff: 04/16/2018
     |**Letzte LSN**|Protokollsequenznummer der letzten Transaktion im Sicherungssatz. Bei Dateisicherungen leer.|  
     |**Prüfpunkt-LSN**|Protokollsequenznummer des letzten Prüfpunkts zum Zeitpunkt der Erstellung der Sicherung.|  
     |**Vollständige LSN**|Protokollsequenznummer der neuesten vollständigen Datenbanksicherung.|  
-    |**Server**|Name der Instanz des Datenbankmoduls, durch die der Sicherungsvorgang ausgeführt wurde.|  
+    |**Server**|Name der Instanz der Datenbank-Engine, durch die der Sicherungsvorgang ausgeführt wurde.|  
     |**Benutzername**|Name des Benutzers, der den Sicherungsvorgang ausgeführt hat.|  
     |**Größe**|Größe des Sicherungssatzes in Byte.|  
     |**Position**|Position des Sicherungssatzes auf dem Volume.|  

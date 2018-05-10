@@ -1,16 +1,15 @@
 ---
-title: "Veröffentlichen von Berichten auf einem Berichtsserver | Microsoft-Dokumentation"
-ms.custom: 
+title: Veröffentlichen von Berichten auf einem Berichtsserver | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 06/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - production environments [Reporting Services]
 - report projects [Reporting Services]
@@ -25,16 +24,15 @@ helpviewer_keywords:
 - deploying [Reporting Services], reports
 - Report Designer [Reporting Services], publishing reports
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 94377a58c5d61ea2d62d5c8e75cea5d4b82f9a4f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 9a69b67fcbc9d047526ff0c30883731543a826a7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Veröffentlichen von Berichten auf einem Berichtsserver
   Nachdem Sie einen Bericht oder eine Reihe von Berichten entworfen und getestet haben, können Sie die Bereitstellungsfunktionen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] verwenden, um die Berichte auf einem Berichtsserver zu veröffentlichen. Sie können einzelne Berichte oder ein Berichtsserverprojekt veröffentlichen, das mehrere Berichte und Datenquellen enthalten kann. Die einfachste Möglichkeit zum Veröffentlichen mehrerer Berichte ist die Veröffentlichung eines Berichtsserverprojekts. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] verwendet den Begriff *Bereitstellen*anstelle von *Veröffentlichen*. Die beiden Begriffe sind austauschbar.  

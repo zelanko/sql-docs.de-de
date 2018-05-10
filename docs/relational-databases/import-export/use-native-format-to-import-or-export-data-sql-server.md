@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 09/30/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: import-export
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - native data format [SQL Server]
 - data formats [SQL Server], native
@@ -20,13 +18,12 @@ caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2920af076cd626ff689d8ed634ffb8b4cb4e4915
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 90f15cbee03a155745366ed1a29d101752406ae3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Verwenden des systemeigenen Formats zum Importieren oder Exportieren von Daten (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -86,7 +83,7 @@ Um Daten im systemeigenen Format erfolgreich zu importieren, müssen folgende Pu
   
      Wenn der Datentyp der Zielspalte nicht [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)ist, werden alle Datenwerte unter Einhaltung der üblichen Regeln der impliziten Datenkonvertierung in den Datentyp der Zielspalte konvertiert. Wenn während der Datenkonvertierung ein Fehler auftritt, wird für den aktuellen Batch ein Rollback ausgeführt. Bei Werten vom Typ [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) und [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md), die zwischen [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)-Spalten übertragen werden, treten möglicherweise Probleme bei der Codepagekonvertierung auf.  
   
-     Weitere Informationen zur Datenkonvertierung finden Sie unter [Datentypkonvertierung &#40;Datenbankmodul&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).  
+     Weitere Informationen zur Datenkonvertierung finden Sie unter [Datentypkonvertierung &amp;#40;Datenbank-Engine&amp;#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).  
   
 ## Befehlsoptionen für das systemeigene Format<a name="command_options"></a>  
 Sie können Daten im nativen Format importieren, unter Verwendung von [BCP](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) oder [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md).  Für einen [bcp](../../tools/bcp-utility.md) -Befehl oder eine [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) -Anweisung können Sie das Datenformat in der Anweisung angeben.  Für eine [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)-Anweisung müssen Sie das Datenformat in einer Formatdatei angeben.  
@@ -156,7 +153,7 @@ Notepad D:\BCP\myNative.fmt
 In dem folgenden Beispiel werden die Datenbank und die Formatdateien verwendet, die oben erstellt wurden.
 
 ### **Verwenden von bcp und des nativen Formats zum Exportieren von Daten**<a name="bcp_native_export"></a>
-Der Schalter**-n** und der **OUT** -Befehl.  Hinweis: Die in diesem Beispiel erstellte Datendatei wird auch in allen nachfolgenden Beispielen verwendet.  Geben Sie folgende Befehle an der Eingabeaufforderung ein:
+Der Schalter **-n** und der **OUT** -Befehl.  Hinweis: Die in diesem Beispiel erstellte Datendatei wird auch in allen nachfolgenden Beispielen verwendet.  Geben Sie folgende Befehle an der Eingabeaufforderung ein:
 
 ```cmd
 bcp TestDatabase.dbo.myNative OUT D:\BCP\myNative.bcp -T -n
@@ -166,7 +163,7 @@ NOTEPAD D:\BCP\myNative.bcp
 ```
 
 ### **Verwenden von bcp und des nativen Formats zum Importieren von Daten ohne eine Formatdatei**<a name="bcp_native_import"></a>
-Der Schalter**-n** und der **IN** -Befehl.  Geben Sie folgende Befehle an der Eingabeaufforderung ein:
+Der Schalter **-n** und der **IN** -Befehl.  Geben Sie folgende Befehle an der Eingabeaufforderung ein:
 
 ```cmd
 REM Truncate table (for testing)
@@ -180,7 +177,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 ```
 
 ### **Verwenden von bcp und des nativen Formats zum Importieren von Daten mit einer Nicht-XML-Formatdatei**<a name="bcp_native_import_fmt"></a>
-Die Schalter**-n** und **-f** switches und **IN** commund.  Geben Sie folgende Befehle an der Eingabeaufforderung ein:
+Die Schalter **-n** und **-f** switches und **IN** commund.  Geben Sie folgende Befehle an der Eingabeaufforderung ein:
 
 ```cmd
 REM Truncate table (for testing)

@@ -1,27 +1,25 @@
 ---
 title: 'Problembehandlung bei Berichten: Kartenberichte (Berichts-Generator und SSRS) | Microsoft-Dokumentation'
-ms.custom: 
+ms.custom: ''
 ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
-caps.latest.revision: 
+caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6c59854aa8fc9f976e52f9c9f678563be0174b44
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 7487c6e219f6e12b61ad6b1b5a93b012dbcb262f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Problembehandlung bei Berichten: Kartenberichte (Berichts-Generator und SSRS)
   Probleme mit Karten in einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht können auftreten, wenn Sie dem Bericht eine Karte oder eine Kartenebene hinzufügen, wenn Sie im Bericht eine vorhandene Karte oder eine Kartenebene anpassen, wenn Sie eine Karte in einem Bericht in der Vorschau anzeigen oder wenn Sie einen Bericht mit einer Karte veröffentlichen. Dieses Thema soll Ihnen beim Behandeln der folgenden Probleme helfen.  

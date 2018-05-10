@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.service: ''
 ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.mds.configmanager.dbmailprofileacct.f1
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
@@ -19,12 +18,11 @@ caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2ecb004b0ea8e6462f4880aefb455bb1c827d272
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: c26a495f590d7543401edceee6438bc7c84da384
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>Datenbank-E-Mail-Profil und -Konto erstellen (Dialogfeld)
 
@@ -59,7 +57,8 @@ ms.lasthandoff: 04/26/2018
   
 |Steuerelementname|Description|  
 |------------------|-----------------|  
-|**Windows-Authentifizierung mithilfe der Anmeldeinformationen des Datenbankmoduldiensts**|Geben Sie an, dass für Datenbank-E-Mail die Anmeldeinformationen des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] -Windows-Dienstkontos verwendet werden sollen, damit sie auf dem SMTP-Server authentifiziert werden kann.|  
+|
+  **Windows-Authentifizierung mithilfe der Anmeldeinformationen des Datenbank-Engine-Diensts**|Geben Sie an, dass für Datenbank-E-Mail die Anmeldeinformationen des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] -Windows-Dienstkontos verwendet werden sollen, damit sie auf dem SMTP-Server authentifiziert werden kann.|  
 |**Standardauthentifizierung**|Geben Sie an, dass für Datenbank-E-Mail ein bestimmter Benutzername und ein bestimmtes Kennwort verwendet werden sollen, damit sie auf dem SMTP-Server authentifiziert werden kann. Diese Informationen werden nur zur Authentifizierung mit dem E-Mail-Server verwendet, das Konto muss keinem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Benutzer bzw. keinem Benutzer auf dem Computer entsprechen, auf dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ausgeführt wird.|  
 |**User name**|Geben Sie den Namen des Benutzerkontos ein, das von Datenbank-E-Mail für die Anmeldung beim SMTP-Server verwendet wird. Ein Benutzername ist erforderlich, wenn der SMTP-Server die Standardauthentifizierung erfordert.|  
 |**Kennwort**|Geben Sie das Kennwort ein, mit dem sich Datenbank-E-Mail beim SMTP-Server anmeldet. Ein Kennwort ist erforderlich, wenn der SMTP-Server die Standardauthentifizierung erfordert.|  

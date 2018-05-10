@@ -1,25 +1,23 @@
 ---
-title: "PowerShell-Cmdlets für den SharePoint-Modus von Reporting Services | Microsoft-Dokumentation"
-ms.custom: 
+title: PowerShell-Cmdlets für den SharePoint-Modus von Reporting Services | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 7b2d501e76e281716d1d88f858d6642c3a0a1ef5
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 245a6f2b2c8484ad83d70c2e76dc55522fde7d1b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>PowerShell-Cmdlets für den SharePoint-Modus von Reporting Services
 
@@ -40,7 +38,7 @@ Bei der Installation von SQL Server 2016 Reporting Services im SharePoint-Modus 
 
 ## <a name="cmdlet-summary"></a>Cmdlet-Zusammenfassung
 
- Um die Cmdlets auszuführen, müssen Sie die SharePoint-Verwaltungsshell öffnen. Sie können auch den Editor für grafische Benutzeroberflächen **Windows PowerShell Integrated Scripting Environment (ISE)**verwenden, der in Microsoft Windows enthalten ist. Weitere Informationen finden Sie unter [Starting Windows PowerShell on Windows Server](http://technet.microsoft.com/library/hh847814.aspx)verwenden, der in Microsoft Windows enthalten ist. In den folgenden Zusammenfassungen von Cmdlets verweisen die Verweise auf die Dienstanwendung „Databases“ auf sämtliche mit einer Reporting Services-Dienstanwendung erstellten und von ihr verwendeten Datenbanken. Dies schließt die Konfigurations- und Warnungsdatenbanken sowie temporären Datenbanken ein.  
+ Um die Cmdlets auszuführen, müssen Sie die SharePoint-Verwaltungsshell öffnen. Sie können auch den Editor für grafische Benutzeroberflächen **Windows PowerShell Integrated Scripting Environment (ISE)** verwenden, der in Microsoft Windows enthalten ist. Weitere Informationen finden Sie unter [Starting Windows PowerShell on Windows Server](http://technet.microsoft.com/library/hh847814.aspx)verwenden, der in Microsoft Windows enthalten ist. In den folgenden Zusammenfassungen von Cmdlets verweisen die Verweise auf die Dienstanwendung „Databases“ auf sämtliche mit einer Reporting Services-Dienstanwendung erstellten und von ihr verwendeten Datenbanken. Dies schließt die Konfigurations- und Warnungsdatenbanken sowie temporären Datenbanken ein.  
   
  Wenn Sie bei der Eingabe der PowerShell-Beispiele eine Fehlermeldung mit etwa folgendem Wortlaut sehen:  
   

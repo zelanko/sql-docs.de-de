@@ -1,30 +1,28 @@
 ---
 title: Aktualisieren einer Ressource (Berichts-Manager) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - updating resources
 - resources [Reporting Services], updating
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0a7662d051951a32d15138b8c47c7cf5e6451729
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f994471cffe26d346c8a747fd1460df6bb8319a9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="update-a-resource-report-manager"></a>Aktualisieren einer Ressource (Berichts-Manager)
   Sie können eine Ressource aktualisieren, indem Sie sie durch eine neuere Version ersetzen. Ressourcen sind auf einem Berichtsserver gespeicherte Elemente, die den Inhalt aus einer Datei enthalten, die Sie hochladen. Sie können eine vorhandene Ressource ersetzen, indem Sie neue oder andere Dateiinhalte in die vorhandene Ressource importieren. Das Aktualisieren einer Ressource bietet eine Möglichkeit, den Inhalt zu aktualisieren und dabei die vorhandenen Eigenschaften und Sicherheitseinstellungen auf der Ressource beizubehalten.  

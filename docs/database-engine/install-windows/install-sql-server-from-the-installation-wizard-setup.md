@@ -3,15 +3,12 @@ title: Installieren von SQL Server 2016 vom Installations-Assistenten aus (Setup
 ms.custom: ''
 ms.date: 09/06/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: install-windows
+ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, steps
 - Setup [SQL Server], steps
@@ -21,11 +18,11 @@ caps.latest.revision: 91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8deb055e72bd4f3e8a3e6a35397a4bae5c621617
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3a3f6a57c25aec4390a2c4050f393eebe0ea2c2d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Installieren von SQL Server über den Installations-Assistenten (Setup)
 
@@ -85,7 +82,7 @@ Microsoft hat ein Problem bei der speziellen Version von Microsoft VC++ 2013 Run
 
 10. Wählen Sie unter **Installationstyp** entweder das Ausführen einer neuen Installation oder das Hinzufügen von Funktionen zu einer bestehenden Installation aus. Klicken Sie auf **Weiter**. 
   
-11. Wählen Sie auf der Seite Funktionsauswahl die Komponenten für die Installation aus. Um eine neue Instanz des Datenbankmoduls von SQL Server zu installieren, überprüfen Sie die **Datenbankmoduldienste**.
+11. Wählen Sie auf der Seite Funktionsauswahl die Komponenten für die Installation aus. Um eine neue Instanz der Datenbank-Engine von SQL Server zu installieren, überprüfen Sie die **Datenbank-Engine-Dienste**.
 
     Nach Auswahl des Funktionsnamens wird im Abschnitt **Funktionsbeschreibung** eine Beschreibung für die einzelnen Komponentengruppen angezeigt. Sie können jede beliebige Kombination von Kontrollkästchen aktivieren. Weitere Informationen finden Sie unter [Editionen und Komponenten von SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) und unter [Editionen und unterstützte Funktionen für SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
   
@@ -136,7 +133,7 @@ Microsoft hat ein Problem bei der speziellen Version von Microsoft VC++ 2013 Run
   
     -   Sicherheitsmodus — Wählen Sie für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]die Windows-Authentifizierung oder die Authentifizierung im gemischten Modus aus. Bei Auswahl des gemischten Authentifizierungsmodus müssen Sie ein sicheres Kennwort für das integrierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Systemadministratorkonto angeben.  
   
-         Nachdem ein Gerät erfolgreich eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat, wird für die Windows-Authentifizierung und den gemischten Modus derselbe Sicherheitsmechanismus verwendet. Weitere Informationen finden Sie unter [Konfiguration des Datenbankmoduls – Serverkonfiguration](../../sql-server/install/instance-configuration.md#database-engine-configuration---server-configuration).  
+         Nachdem ein Gerät erfolgreich eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat, wird für die Windows-Authentifizierung und den gemischten Modus derselbe Sicherheitsmechanismus verwendet. Weitere Informationen finden Sie unter [Konfiguration der Datenbank-Engine – Serverkonfiguration](../../sql-server/install/instance-configuration.md#database-engine-configuration---server-configuration).  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Administratoren – Sie müssen wenigstens einen Systemadministrator für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]angeben. Um das Konto hinzuzufügen, unter dem das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup ausgeführt werden soll, klicken Sie auf **Aktuellen Benutzer hinzufügen**. Um Konten zur Liste der Systemadministratoren hinzuzufügen bzw. daraus zu entfernen, klicken Sie auf **Hinzufügen** bzw. **Entfernen**, und bearbeiten Sie anschließend die Liste der Benutzer, Gruppen bzw. Computer, die Administratorrechte für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz haben sollen.  
   
@@ -145,11 +142,11 @@ Microsoft hat ein Problem bei der speziellen Version von Microsoft VC++ 2013 Run
     > [!IMPORTANT]  
     > Wenn Sie keine Standardverzeichnisse angeben, sollten Sie sicherstellen, dass die Installationsordner nur für die Instanz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet werden. Keines der Verzeichnisse in diesem Dialogfeld sollte gemeinsam mit Verzeichnissen anderer Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]genutzt werden.  
   
-     Weitere Informationen finden Sie unter [Konfiguration des Datenbankmoduls – Serverkonfiguration](../../sql-server/install/instance-configuration.md#database-engine-configuration---data-directories).  
+     Weitere Informationen finden Sie unter [Konfiguration der Datenbank-Engine – Serverkonfiguration](../../sql-server/install/instance-configuration.md#database-engine-configuration---data-directories).  
   
-     Aktivieren Sie auf der Seite „ [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Konfiguration – FILESTREAM“ den FILESTREAM für Ihre Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [Konfiguration des Datenbankmoduls - Filestream](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream).  
+     Aktivieren Sie auf der Seite „ [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Konfiguration – FILESTREAM“ den FILESTREAM für Ihre Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [Konfiguration der Datenbank-Engine - Filestream](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream).  
   
-     Verwenden Sie die Seite „ [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Konfiguration – TempDB“, um die Dateigröße, Anzahl der Dateien, nicht standardmäßige Installationsverzeichnisse und Dateiwachstumseinstellungen für TempDB zu konfigurieren. Weitere Informationen finden Sie unter [Datenbankmodulkonfiguration – tempDB](../../sql-server/install/instance-configuration.md#database-engine-configuration---tempdb).  
+     Verwenden Sie die Seite „ [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Konfiguration – TempDB“, um die Dateigröße, Anzahl der Dateien, nicht standardmäßige Installationsverzeichnisse und Dateiwachstumseinstellungen für TempDB zu konfigurieren. Weitere Informationen finden Sie unter [Datenbank-Engine-Konfiguration – tempDB](../../sql-server/install/instance-configuration.md#database-engine-configuration---tempdb).  
   
 16. Verwenden Sie die Seite [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Konfiguration – Kontenbereitstellung-Konfiguration – Kontenbereitstellung, um den Servermodus und die Benutzer oder Konten anzugeben, die über Administratorberechtigungen für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]verfügen sollen. Durch den Servermodus wird bestimmt, welcher Arbeitsspeicher und welche Speichersubsysteme auf dem Server verwendet werden. Die unterschiedlichen Projektmappentypen werden in verschiedenen Servermodi ausgeführt. Wenn Sie beabsichtigen, mehrdimensionale Cubedatenbanken auf dem Server auszuführen, wählen Sie die Standardoption, den mehrdimensionalen und Data Mining-Servermodus, aus. Damit Administratorberechtigungen vorhanden sind, müssen Sie mindestens einen Systemadministrator für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]angeben. Um das Konto hinzuzufügen, unter dem das SQL Server-Setup ausgeführt wird, klicken Sie auf **Aktuellen Benutzer hinzufügen**. Um Konten zur Liste der Systemadministratoren hinzuzufügen bzw. daraus zu entfernen, klicken Sie auf **Hinzufügen** bzw. **Entfernen**, und bearbeiten Sie anschließend die Liste der Benutzer, Gruppen bzw. Computer, die Administratorrechte für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]haben sollen. Weitere Informationen zu Servermodus und Administratorberechtigungen finden Sie unter [Analysis Services-Konfiguration – Kontobereitstellung](../../sql-server/install/instance-configuration.md#analysis-services-configuration---account-provisioning).  
 
@@ -190,7 +187,7 @@ Microsoft hat ein Problem bei der speziellen Version von Microsoft VC++ 2013 Run
   
 20. Während der Installation wird auf der Seite Installationsstatus der Status angezeigt, sodass Sie während der Installation den Installationsstatus überwachen können.  
   
-21. Nach der Installation bietet die Seite Abgeschlossen einen Link zur zusammenfassenden Protokolldatei für die Installation und andere wichtige Hinweise. Klicken Sie auf **Schließen** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um die Installation von abzuschließen.  
+21. Nach der Installation bietet die Seite Abgeschlossen einen Link zur zusammenfassenden Protokolldatei für die Installation und andere wichtige Hinweise. Klicken Sie auf Schließen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um die Installation von **abzuschließen**.  
   
 22. Starten Sie den Computer neu, falls Sie dazu aufgefordert werden. Wenn Sie den Setupvorgang abgeschlossen haben, sollten Sie unbedingt die vom Installations-Assistenten angezeigte Meldung lesen. Weitere Informationen finden Sie unter [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   

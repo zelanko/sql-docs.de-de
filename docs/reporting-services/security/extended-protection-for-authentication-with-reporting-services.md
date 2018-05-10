@@ -1,26 +1,25 @@
 ---
-title: "Erweiterter Schutz für die Authentifizierung mit Reporting Services | Microsoft-Dokumentation"
-ms.custom: 
+title: Erweiterter Schutz für die Authentifizierung mit Reporting Services | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
-caps.latest.revision: 
+caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 6f554b9ec04d894fbcd3da37e1bd326b39508571
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6abe1579a0b54f701ed648746b4a5fc5ae597b08
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Erweiterter Schutz für die Authentifizierung mit Reporting Services
 
@@ -119,8 +118,8 @@ SSRS unterstützt und erzwingt erweiterten Schutz, der im Betriebssystem aktivie
   
 |Einstellung|Description|  
 |-------------|-----------------|  
-|**RSWindowsExtendedProtectionLevel**|Gibt den Grad der Erzwingung des erweiterten Schutzes an. Gültige Werte sind:<br /><br /> **Aus:**Standard. Gibt keine Kanal- oder Dienstbindungsüberprüfung an.<br /><br /> **Zulassen** unterstützt erweiterten Schutz, erfordert ihn aber nicht.  Gibt Folgendes an:<br /><br /> – Erweiterter Schutz wird für Clientanwendungen, die unter Betriebssystemen ausgeführt werden, die erweiterten Schutz unterstützen, erzwungen. Die Art, wie Schutz erzwungen wird, wird durch die Einstellung **RsWindowsExtendedProtectionScenario**festgelegt.<br /><br /> – Die Authentifizierung ist für Anwendungen zulässig, die unter Betriebssystemen ausgeführt werden, die keinen erweiterten Schutz unterstützen.<br /><br /> **Erfordern** gibt Folgendes an:<br /><br /> – Erweiterter Schutz wird für Clientanwendungen, die unter Betriebssystemen ausgeführt werden, die erweiterten Schutz unterstützen, erzwungen.<br /><br /> – Die Authentifizierung ist **nicht** für Anwendungen zulässig, die unter Betriebssystemen ohne Unterstützung von erweitertem Schutz ausgeführt werden.|  
-|**RsWindowsExtendedProtectionScenario**|Gibt an, welche Arten des erweiterten Schutzes überprüft werden: Kanalbindung, Dienstbindung oder beide. Gültige Werte sind:<br /><br /> **Proxy:**Standard. Gibt Folgendes an:<br /><br /> – Windows-NTLM-, Kerberos- und Negotiate-Authentifizierung, wenn ein Kanalbindungstoken vorhanden ist.<br /><br /> – Dienstbindung wird erzwungen.<br /><br /> **Beliebig** gibt Folgendes an:<br /><br /> – Windows-NTLM-, Kerberos- und Negotiate-Authentifizierung sowie eine Kanalbindung sind nicht erforderlich.<br /><br /> – Dienstbindung wird erzwungen.<br /><br /> **Direkt** gibt Folgendes an:<br /><br /> – Windows-NTLM-, Kerberos- und Negotiate-Authentifizierung, wenn ein CBT vorhanden ist, eine SSL-Verbindung zum aktuellen Dienst vorhanden ist und das CBT für die SSL-Verbindung dem CBT des NTLM-, Kerberos- oder Negotiate-Tokens entspricht.<br /><br /> – Dienstbindung wird nicht erzwungen.<br /><br /> <br /><br /> Hinweis: Die Einstellung **RsWindowsExtendedProtectionScenario** wird ignoriert, wenn **RsWindowsExtendedProtectionLevel** den Wert **Aus**aufweist.|  
+|**RSWindowsExtendedProtectionLevel**|Gibt den Grad der Erzwingung des erweiterten Schutzes an. Gültige Werte sind:<br /><br /> **Aus:** Standard. Gibt keine Kanal- oder Dienstbindungsüberprüfung an.<br /><br /> **Zulassen** unterstützt erweiterten Schutz, erfordert ihn aber nicht.  Gibt Folgendes an:<br /><br /> – Erweiterter Schutz wird für Clientanwendungen, die unter Betriebssystemen ausgeführt werden, die erweiterten Schutz unterstützen, erzwungen. Die Art, wie Schutz erzwungen wird, wird durch die Einstellung **RsWindowsExtendedProtectionScenario**festgelegt.<br /><br /> – Die Authentifizierung ist für Anwendungen zulässig, die unter Betriebssystemen ausgeführt werden, die keinen erweiterten Schutz unterstützen.<br /><br /> **Erfordern** gibt Folgendes an:<br /><br /> – Erweiterter Schutz wird für Clientanwendungen, die unter Betriebssystemen ausgeführt werden, die erweiterten Schutz unterstützen, erzwungen.<br /><br /> – Die Authentifizierung ist **nicht** für Anwendungen zulässig, die unter Betriebssystemen ohne Unterstützung von erweitertem Schutz ausgeführt werden.|  
+|**RsWindowsExtendedProtectionScenario**|Gibt an, welche Arten des erweiterten Schutzes überprüft werden: Kanalbindung, Dienstbindung oder beide. Gültige Werte sind:<br /><br /> **Proxy:** Standard. Gibt Folgendes an:<br /><br /> – Windows-NTLM-, Kerberos- und Negotiate-Authentifizierung, wenn ein Kanalbindungstoken vorhanden ist.<br /><br /> – Dienstbindung wird erzwungen.<br /><br /> **Beliebig** gibt Folgendes an:<br /><br /> – Windows-NTLM-, Kerberos- und Negotiate-Authentifizierung sowie eine Kanalbindung sind nicht erforderlich.<br /><br /> – Dienstbindung wird erzwungen.<br /><br /> **Direkt** gibt Folgendes an:<br /><br /> – Windows-NTLM-, Kerberos- und Negotiate-Authentifizierung, wenn ein CBT vorhanden ist, eine SSL-Verbindung zum aktuellen Dienst vorhanden ist und das CBT für die SSL-Verbindung dem CBT des NTLM-, Kerberos- oder Negotiate-Tokens entspricht.<br /><br /> – Dienstbindung wird nicht erzwungen.<br /><br /> <br /><br /> Hinweis: Die Einstellung **RsWindowsExtendedProtectionScenario** wird ignoriert, wenn **RsWindowsExtendedProtectionLevel** den Wert **Aus**aufweist.|  
   
  Beispieleinträge in der Konfigurationsdatei **rsreportserver.config** :  
   
@@ -170,7 +169,8 @@ SSRS unterstützt und erzwingt erweiterten Schutz, der im Betriebssystem aktivie
   
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Herstellen einer Verbindung mit dem Datenbankmodul unter Verwendung von Erweiterter Schutz](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
+
+  [Herstellen einer Verbindung mit der Datenbank-Engine unter Verwendung von Erweiterter Schutz](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
 [Übersicht über den erweiterten Schutz für die Authentifizierung (möglicherweise auf Englisch)](http://go.microsoft.com/fwlink/?LinkID=177943)   
 [Integrierte Windows-Authentifizierung unter Verwendung von „Erweiterter Schutz“](http://go.microsoft.com/fwlink/?LinkId=179922)   
 [Microsoft-Sicherheitsempfehlung: Erweiterter Schutz für die Authentifizierung (möglicherweise auf Englisch)](http://go.microsoft.com/fwlink/?LinkId=179923)   

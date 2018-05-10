@@ -1,30 +1,28 @@
 ---
 title: Planen eines Berichts (Berichts-Generator) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - getting started
 - report design
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d66415bd5318a98bb45f92ed262f0324c61416a1
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 84f5898fcc0bf443440a6dcfd3bc88551534e8a5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="planning-a-report-report-builder"></a>Planen eines Berichts (Berichts-Generator)
   Mit dem Berichts-Generator können viele Arten von paginierten Berichten erstellt werden. Sie können beispielsweise Berichte erstellen, die zusammenfassende oder detaillierte Umsatzdaten, Marketing- und Umsatztrends sowie Betriebsberichte oder Dashboards enthalten. Sie können auch Berichte erstellen, die umfassend formatierten Text nutzen, beispielsweise für Bestellungen, Produktkataloge oder Serienbriefe. All diese Berichte werden mit unterschiedlichen Kombinationen derselben grundlegenden Bausteine im Berichts-Generator erstellt. Das Erstellen eines sinnvollen, verständlichen Berichts erfordert zunächst eine sorgfältige Planung. Bevor Sie beginnen, sollten Sie Folgendes beachten:  

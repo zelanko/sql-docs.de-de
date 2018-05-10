@@ -3,26 +3,22 @@ title: SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob 
 ms.custom: ''
 ms.date: 07/25/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: backup-restore
+ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e3cc1e3989a977d3785426737e2f5783a4a33bf6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 437b6205bc76b97bd48ca0b617088750af0088d2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +36,7 @@ ms.lasthandoff: 04/16/2018
   
 -   **Dateimomentaufnahmesicherungen für Datenbankdateien in Azure Blob Storage** Durch die Verwendung von Azure-Momentaufnahmen bieten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dateimomentaufnahme-Sicherungen die fast sofortigen Sicherungen und Wiederherstellungen für Datenbankdateien, die mithilfe von Azure Blob Storage Service gespeichert wurden. Diese Funktion ermöglicht Ihnen, Ihre Sicherungs- und Wiederherstellungsrichtlinien zu vereinfachen und sie unterstützt Point-in-Time-Wiederherstellung. Weitere Informationen finden Sie unter [Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md). Diese Funktion ist in SQL Server 2016 oder höher verfügbar.  
   
--   **Verwalten von SQL Server-Sicherungen in Microsoft Azure:** Konfigurieren Sie SQL Server, um die Sicherungsstrategie zu verwalten und Sicherungen für eine einzelne oder mehrere Datenbanken zu planen oder um Standardwerte auf Instanzebene festzulegen. Diese Funktion wird als **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]**bezeichnet. Weitere Informationen finden Sie unter [SQL Server Managed Backup für Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md). Diese Funktion ist in SQL Server 2014 oder höher verfügbar.  
+-   **Verwalten von SQL Server-Sicherungen in Microsoft Azure:** Konfigurieren Sie SQL Server, um die Sicherungsstrategie zu verwalten und Sicherungen für eine einzelne oder mehrere Datenbanken zu planen oder um Standardwerte auf Instanzebene festzulegen. Diese Funktion wird als **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** bezeichnet. Weitere Informationen finden Sie unter [SQL Server Managed Backup für Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md). Diese Funktion ist in SQL Server 2014 oder höher verfügbar.  
   
 ## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-includessnoversionincludesssnoversion-mdmd-backups"></a>Vorteile bei der Verwendung von Microsoft Azure Blob-Dienst für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen  
   

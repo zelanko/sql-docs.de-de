@@ -3,15 +3,12 @@ title: Wiederherstellen zu einer Protokollfolgenummer (SQL Server) | Microsoft-D
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: backup-restore
+ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - log sequence numbers [SQL Server]
 - STOPBEFOREMARK option [RESTORE statement]
@@ -28,12 +25,11 @@ caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8a4f7bf02ef09eb623afc88d4c36da3cbc31056d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 441daeb74bcc141c148edef396b04bf75aff3f0f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>Wiederherstellen zu einer Protokollfolgenummer (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,11 +67,11 @@ ms.lasthandoff: 04/16/2018
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>Transact-SQL-Syntax für die Wiederherstellung bis zu einer LSN  
  Mithilfe einer [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) -Anweisung können Sie an oder direkt vor der LSN stoppen, wie im Folgenden gezeigt:  
   
--   Verwenden Sie die WITH STOPATMARK **='**lsn:*<LSN-Nummer>***'**-Klausel, wobei lsn:*\<LSN-Nummer>* eine Zeichenfolge darstellt, die angibt, dass der Protokolldatensatz mit der angegebenen LSN der Wiederherstellungspunkt ist.  
+-   Verwenden Sie die WITH STOPATMARK **='** lsn:*<LSN-Nummer>***'**-Klausel, wobei lsn:*\<LSN-Nummer>* eine Zeichenfolge darstellt, die angibt, dass der Protokolldatensatz mit der angegebenen LSN der Wiederherstellungspunkt ist.  
   
      Von STOPATMARK wird ein Rollforward zur LSN ausgeführt und dieser Protokolldatensatz im Rollforward eingeschlossen.  
   
--   Verwenden Sie die WITH STOPBEFOREMARK **='**lsn:*<LSN-Nummer>****'-Klausel, wobei lsn:*\<LSN-Nummer>* eine Zeichenfolge darstellt, die angibt, dass der Protokolldatensatz direkt vor dem Protokolldatensatz mit der angegebenen LSN der Wiederherstellungspunkt ist.  
+-   Verwenden Sie die WITH STOPBEFOREMARK **='** lsn:*<LSN-Nummer>****'-Klausel, wobei lsn:*\<LSN-Nummer>* eine Zeichenfolge darstellt, die angibt, dass der Protokolldatensatz direkt vor dem Protokolldatensatz mit der angegebenen LSN der Wiederherstellungspunkt ist.  
   
      Von STOPBEFOREMARK wird ein Rollforward bis zur LSN ausgeführt und dieser Protokolldatensatz aus dem Rollforward ausgeschlossen.  
   

@@ -1,27 +1,25 @@
 ---
-title: "Angeben von Farben, die in mehreren Formdiagramme konsistent sind – Berichts-Generator und SSRS | Microsoft-Dokumentation"
-ms.custom: 
+title: Angeben von Farben, die in mehreren Formdiagramme konsistent sind – Berichts-Generator und SSRS | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: d52f68e9-2ba7-4bff-9053-4089e5164ab4
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fecb8cd6e36040876e21baa9e1789d95fb5dba49
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: fddd1c4466b3b30976bd1008ec7f6d616b71ba89
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>Angeben von Farben, die für mehrere Formdiagramme konsistent sind (Berichts-Generator und SSRS)
   Bei anderen Diagrammen als Formdiagrammen in paginierten Berichten wählt [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] eine neue Farbe anhand des Indexes von Reihen im Diagramm aus. Beispielsweise wird die erste Reihe im Diagramm der ersten Farbe in der Palette zugeordnet. Formdiagramme weisen jedoch ein anderes Verhalten auf. Bei Formdiagrammen wird jede Farbe in der Palette einem Datenpunkt im Dataset zugeordnet. Beispielsweise wird Datenpunkt 1 der ersten Farbe in der Palette zugeordnet, Datenpunkt 2 wird der zweiten Farbe in der Palette zugeordnet usw.  

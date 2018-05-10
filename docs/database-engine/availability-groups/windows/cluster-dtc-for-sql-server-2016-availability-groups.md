@@ -3,29 +3,28 @@ title: Cluster-DTC für SQL Server 2016-Verfügbarkeitsgruppen | Microsoft-Dokum
 ms.custom: ''
 ms.date: 08/30/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
 caps.latest.revision: 3
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: aed26f710495ef7bac77cf1a1a732fd73a9d77f2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 50ba8074a718beb3722daaff67f224bd0d5c5c66
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cluster-dtc-for-sql-server-2016-availability-groups"></a>Cluster-DTC für SQL Server 2016-Verfügbarkeitsgruppen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 In diesem Thema werden die Anforderungen und Schritte zum Gruppieren des Microsoft DTC-Diensts (Distributed Transaction Coordinator) für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] beschrieben. Weitere Informationen zu verteilten Transaktionen und [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] finden Sie unter [Datenbankübergreifende Transaktionen und verteilte Transaktionen für Always On-Verfügbarkeitsgruppen oder Datenbankspiegelung (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).
 
  ## <a name="checklist-preliminary-requirements"></a>Prüfliste: Vorbereitende Anforderungen
@@ -50,7 +49,8 @@ Nachdem Sie Ihre Verfügbarkeitsgruppenressource erstellt haben, erstellen Sie e
 |------|-----------------|----------|  
 |![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|Aktivieren Sie den sicheren Netzwerkzugriff für die gruppierte DTC-Ressource.|[Sicheres Aktivieren des Netzwerkzugriffs für MS DTC](https://technet.microsoft.com/library/cc753620(v=ws.10).aspx)|
 |![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|Beenden und deaktivieren Sie den lokalen DTC-Dienst.|[Konfigurieren des Startvorgangs für einen Dienst](https://technet.microsoft.com/library/cc755249(v=ws.11).aspx)|
-|![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|Durchlaufen Sie den SQL Server-Dienst für jede Instanz in der Verfügbarkeitsgruppe.  Führen Sie bei Bedarf einen Failover für die Verfügbarkeitsgruppe aus.|[Ausführen eines geplanten manuellen Failovers einer Verfügbarkeitsgruppe (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br />[Starten, Beenden, Anhalten, Fortsetzen und Neustarten des Datenbankmoduls, SQL Server-Agent oder des SQL Server-Browsers](../../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)|
+|![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|Durchlaufen Sie den SQL Server-Dienst für jede Instanz in der Verfügbarkeitsgruppe.  Führen Sie bei Bedarf einen Failover für die Verfügbarkeitsgruppe aus.|[Ausführen eines geplanten manuellen Failovers einer Verfügbarkeitsgruppe (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br />
+  [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](../../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)|
 
 - Wenn es sich bei dem Betriebssystem um Windows Server 2012 R2 handelt, benötigen Sie unbedingt [KB 3030373](http://support.microsoft.com/kb/3090973) .
 

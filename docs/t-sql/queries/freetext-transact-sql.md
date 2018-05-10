@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 10/23/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
 ms.component: t-sql|queries
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -28,12 +26,11 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: aa5d3e162d7f21732b20689d45970c3157d7522e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 01ce44ba1bc3a1e81b85c86d626d93e54542662b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -122,7 +119,7 @@ WHERE FREETEXT(Description, @SearchWord);
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Volltextprädikate und -funktionen gelten für eine einzelne Tabelle, die im FROM-Prädikat enthalten ist. Um eine Suche in mehreren Tabellen auszuführen, können Sie eine verknüpfte Tabelle in der FROM-Klausel verwenden, um in einem Resultset zu suchen, das aus mindestens zwei Tabellen erstellt wird.  
   
-Volltextabfragen mit FREETEXT sind nicht so genau wie Volltextabfragen mit CONTAINS. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Volltextsuchmodul identifiziert wichtige Wörter und Ausdrücke. Reservierten Schlüsselwörtern und Platzhalterzeichen, die normalerweise eine Bedeutung besitzen, wenn sie im \<contains_search_condition>-Parameter des CONTAINS-Prädikats angegeben werden, wird keine spezielle Bedeutung zugewiesen.
+Volltextabfragen mit FREETEXT sind nicht so genau wie Volltextabfragen mit CONTAINS. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Volltextsuch-Engine identifiziert wichtige Wörter und Ausdrücke. Reservierten Schlüsselwörtern und Platzhalterzeichen, die normalerweise eine Bedeutung besitzen, wenn sie im \<contains_search_condition>-Parameter des CONTAINS-Prädikats angegeben werden, wird keine spezielle Bedeutung zugewiesen.
   
  Volltextprädikate sind in der [OUTPUT-Klausel](../../t-sql/queries/output-clause-transact-sql.md) nicht zulässig, wenn der Kompatibilitätsgrad der Datenbank auf 100 festgelegt ist.  
   

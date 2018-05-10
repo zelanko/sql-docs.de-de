@@ -3,15 +3,12 @@ title: Failoveroption zur Datenbank-Integritätserkennung | Microsoft-Dokumentat
 ms.custom: ''
 ms.date: 04/28/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
@@ -25,12 +22,11 @@ caps.latest.revision: 4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: bd6840926fb8a67d20a38e5f87bc95be4f37492a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 179c6d1e4014dc6090adffe795390ae866fbd1f3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Failoveroption für die Integritätserkennung auf Datenbankebene in einer Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +46,7 @@ Obwohl sie allgemein empfohlen wird, ist die Option für die Datenbank-Integrit�
 
 Es gibt mehrere Möglichkeiten, um die Einstellung „Integritätserkennung auf Datenbankebene“ zu aktivieren:
 
-1. Stellen Sie in SQL Server Management Studio eine Verbindung mit dem SQL Server-Datenbankmodul her. Wenn Sie das Fenster des Objekt-Explorers verwenden, klicken Sie mit der rechten Maustaste auf den Knoten „Hohe Verfügbarkeit mit Always On“, und führen Sie den **Assistenten für neue Verfügbarkeitsgruppen** aus. Aktivieren Sie das Kontrollkästchen **Integritätserkennung auf Datenbankebene** auf der Seite „Namen angeben“. Schließen Sie anschließend die restlichen Seiten des Assistenten ab.
+1. Stellen Sie in SQL Server Management Studio eine Verbindung mit der SQL Server-Datenbank-Engine her. Wenn Sie das Fenster des Objekt-Explorers verwenden, klicken Sie mit der rechten Maustaste auf den Knoten „Hohe Verfügbarkeit mit Always On“, und führen Sie den **Assistenten für neue Verfügbarkeitsgruppen** aus. Aktivieren Sie das Kontrollkästchen **Integritätserkennung auf Datenbankebene** auf der Seite „Namen angeben“. Schließen Sie anschließend die restlichen Seiten des Assistenten ab.
 
    ![Always On-Kontrollkästchen zum Aktivieren der Datenbank-Integritätserkennung](../../../database-engine/availability-groups/windows/media/always-on-enable-database-health-checkbox.png)
 
@@ -86,7 +82,7 @@ Bitte beachten Sie, dass die Option „Integritätserkennung auf Datenbankebene�
 
 Wenn sich eine Datenbank beispielsweise im Leerlauf ohne aktive Transaktionen befindet und keine physischen Schreibvorgänge stattfinden, kann auf einige Datenbankdateien nicht mehr zugegriffen werden. SQL Server führt keine E/A-Lese- oder Schreibvorgänge für die Dateien aus und ändert den Status dieser Datenbank nicht sofort, sodass kein Failover ausgelöst werden würde. Wenn dann ein Datenbankprüfpunkt auftritt oder ein physischer Lese- oder Schreibvorgang ausgeführt wird, um eine Abfrage auszuführen, erkennt SQL Server das Dateiproblem und reagiert darauf mit einer Statusänderung der Datenbank. Anschließend würde die Verfügbarkeitsgruppe mit der aktivierten Integritätserkennung auf Datenbankebene wegen der Änderung des Datenbankzustands ein Failover auslösen.
 
-Wenn das SQL-Server-Datenbankmodul beispielsweise eine Datenseite lesen muss, um eine Abfrage auszuführen und die Datenseite im Pufferpoolspeicher zwischengespeichert ist, ist keine Festplatte nötig, die über physischen Zugriff gelesen wird, um die Abfrageanforderung auszuführen. Deshalb löst eine fehlende oder nicht verfügbare Datendatei nicht sofort ein automatisches Failover aus, auch wenn die Option für die Datenbank-Integritätserkennung aktiviert ist, da der Datenbankstatus nicht sofort geändert wird.
+Wenn die SQL-Server-Datenbank-Engine beispielsweise eine Datenseite lesen muss, um eine Abfrage auszuführen und die Datenseite im Pufferpoolspeicher zwischengespeichert ist, ist keine Festplatte nötig, die über physischen Zugriff gelesen wird, um die Abfrageanforderung auszuführen. Deshalb löst eine fehlende oder nicht verfügbare Datendatei nicht sofort ein automatisches Failover aus, auch wenn die Option für die Datenbank-Integritätserkennung aktiviert ist, da der Datenbankstatus nicht sofort geändert wird.
 
 
 ## <a name="database-failover-is-separate-from-flexible-failover-policy"></a>Das Datenbank-Failover ist von der flexiblen Failoverrichtlinie getrennt

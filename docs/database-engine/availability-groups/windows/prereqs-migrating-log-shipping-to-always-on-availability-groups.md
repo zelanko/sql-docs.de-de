@@ -3,15 +3,12 @@ title: Voraussetzungen für die Migration des Protokollversands zu Always On-Ver
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
@@ -20,12 +17,11 @@ caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8216dade1acbfeee2761d980d27e9c2e1ce488d3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: cab6f5e760501de73d6fecfe8abb4381dba6edc9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prereqs-migrating-log-shipping-to-always-on-availability-groups"></a>Voraussetzungen für die Migration des Protokollversands zu Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +104,8 @@ ms.lasthandoff: 04/16/2018
   
      [SQL Server AlwaysOn-Teamblogs: Der offizielle SQL Server AlwaysOn-Teamblog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-     [CSS SQL Server-Technikblogs](http://blogs.msdn.com/b/psssql/)  
+     
+  [CSS SQL Server-Technikblogs](http://blogs.msdn.com/b/psssql/)  
   
 -   **Whitepaper:**  
   

@@ -1,27 +1,25 @@
 ---
-title: "Von den SQL Server 2016-Editionen unterstützte Reporting Services-Funktionen | Microsoft-Dokumentation"
-ms.custom: 
+title: Von den SQL Server 2016-Editionen unterstützte Reporting Services-Funktionen | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: 39f03d2d-6e48-4b34-a9d3-07f86313b937
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: ef2e6405ce01442ca8a9709db2f1aa61a4934dc3
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 4fe2db69e67e0d0e7630bd34c1d926be49e7bbe2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reporting-services-features-supported-by-the-editions-of-sql-server-2016"></a>Von den SQL Server 2016-Editionen unterstützte Reporting Services-Funktionen
 
@@ -84,7 +82,7 @@ Um zur Tabelle für eine SQL Server-Technologie zu navigieren, klicken Sie auf d
 ## <a name="report-server-database-server-edition-requirements"></a>Anforderungen für die Berichtsserver-Datenbankserver-Edition  
  Wenn Sie eine Berichtsserver-Datenbank erstellen, können nicht alle Editionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zum Hosten der Datenbank verwendet werden. Folgende Tabelle zeigt, welche Editionen von [!INCLUDE[ssDE](../includes/ssde-md.md)] Sie für spezielle Editionen von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]verwenden können.  
   
-|Für diese Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services|Verwendung dieser Edition der Datenbankmodul-Instanz als Host für die Datenbank|  
+|Für diese Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services|Verwendung dieser Edition der Datenbank-Engine-Instanz als Host für die Datenbank|  
 |----------------------------------------------------------------------|---------------------------------------------------------------------------|  
 |Enterprise|Enterprise oder Standard Editions (lokal oder remote)|  
 |Standard|Enterprise oder Standard Editions (lokal oder remote)|  

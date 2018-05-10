@@ -1,16 +1,15 @@
 ---
-title: "Konfigurieren eines Berichtsservers für die Remoteverwaltung | Microsoft-Dokumentation"
+title: Konfigurieren eines Berichtsservers für die Remoteverwaltung | Microsoft-Dokumentation
 ms.date: 09/14/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
 - WMI provider [Reporting Services], remote configuration
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], configuring
 - remote server administration [Reporting Services]
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 77dfb20f08e02c035cc4898fa9a5157dadd03f41
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 4a76d3c8635716d072ac977ddf54989ec10b22f5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Konfigurieren eines Berichtsservers für die Remoteverwaltung
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]können Sie Berichtsserverinstanzen lokal oder remote konfigurieren. Zum Konfigurieren einer Remote-Berichtsserverinstanz können Sie das Reporting Services-Konfigurationstool verwenden oder benutzerdefinierten Code schreiben, der für den Anbieter der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Windows-Verwaltungsinstrumentation (Windows Management Instrumentation oder WMI) verwendet wird. Das Reporting Services-Konfigurationstool stellt dem WMI-Anbieter eine grafische Benutzeroberfläche bereit, sodass Sie einen Berichtsserver konfigurieren können, ohne Code schreiben zu müssen. Wenn Sie das Tool starten, können Sie einen Remoteserver angeben, zu dem eine Verbindung hergestellt werden soll.  
@@ -52,9 +50,9 @@ ms.lasthandoff: 01/09/2018
 ## <a name="tasks"></a>Aufgaben  
  Anhand folgender Tasks kann die Konfiguration des Remoteberichtsservers aktiviert werden:  
   
--   Ports in der Windows-Firewall aktivieren, um Anforderungen in Ports zuzulassen, die vom Berichtsserver und von der Instanz des SQL Server-Datenbankmoduls verwendet werden.  Siehe [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) und [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
+-   Ports in der Windows-Firewall aktivieren, um Anforderungen in Ports zuzulassen, die vom Berichtsserver und von der Instanz der SQL Server-Datenbank-Engine verwendet werden.  Siehe [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) und [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
--   Remoteverbindungen für die Instanz des Datenbankmoduls aktivieren, auf der die Berichtserver-Datenbank gehostet ist. Eine Remoteverbindung ist zum Konfigurieren der Berichtsserver-Datenbankverbindung und zum Verwalten der Verschlüsselungsschlüssel erforderlich.  
+-   Remoteverbindungen für die Instanz der Datenbank-Engine aktivieren, auf der die Berichtserver-Datenbank gehostet ist. Eine Remoteverbindung ist zum Konfigurieren der Berichtsserver-Datenbankverbindung und zum Verwalten der Verschlüsselungsschlüssel erforderlich.  
   
 -   Remote-WMI-Anforderungen aktivieren, sodass diese die [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Windows-Firewall passieren können.  
   

@@ -1,16 +1,14 @@
 ---
 title: UPDATE (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 09/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - UPDATE_TSQL
@@ -40,16 +38,16 @@ helpviewer_keywords:
 - FROM clause, UPDATE statement
 - WHERE clause, UPDATE statement
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
-caps.latest.revision: 
+caps.latest.revision: 91
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 227cafdd68eddac2ff6a515853f0fcded0c07f63
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b89e99a4ddc1848193d20cf9f49e591b4360a767
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -189,10 +187,10 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *property_name* | *field_name*  
  Member einer öffentlichen Eigenschaft oder öffentlicher Daten eines benutzerdefinierten Typs.  
   
- *method_name* **(** *Argument* [ **,**... *n*] **)**  
+ *method_name* **(** *argument* [ **,**... *n*] **)**  
  Eine nicht statische, öffentliche Mutatormethode von *udt_column_name*, die mindestens ein Argument umfasst.  
   
- **.**WRITE **(***expression***,***@Offset***,***@Length***)**  
+ **.** WRITE **(***expression***,***@Offset***,***@Length***)**  
  Gibt an, dass ein Teil des Werts von *column_name* geändert werden soll. *expression* ersetzt *@Length*-Einheiten, beginnend bei *@Offset* von *column_name*. Nur Spalten von **varchar(max)**, **nvarchar(max)** oder **varbinary(max)** können mit dieser Klausel angegeben werden. *column_name* darf nicht NULL sein und darf nicht mit einem Tabellennamen oder -alias qualifiziert werden.  
   
  *expression* ist der Wert, der in *column_name* kopiert wird. *expression* muss in den Typ *column_name* ausgewertet werden oder implizit umgewandelt werden können. Wenn *expression* auf NULL festgelegt wird, wird *@Length* ignoriert, und der Wert in *column_name* wird am angegebenen *@Offset* abgeschnitten.  
@@ -336,21 +334,21 @@ GO
 >  Die Datentypen **ntext**, **text** und **image** werden in einer zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt. Vermeiden Sie die Verwendung dieser Datentypen bei neuen Entwicklungen, und planen Sie die Änderung von Anwendungen, in denen sie aktuell verwendet werden. Verwenden Sie stattdessen [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)und [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) .  
   
 ### <a name="updating-large-value-data-types"></a>Aktualisieren von Datentypen mit umfangreichen Werten  
- Mit der **.**WRITE-Klausel (*expression***,** *@Offset***,***@Length*) können Sie ein teilweises oder ein vollständiges Update der Datentypen **varchar(max)**, **nvarchar(max)** und **varbinary(max)** ausführen. Bei dem teilweisen Update einer Spalte des Datentyps **varchar(max)** werden z.B. möglicherweise nur die ersten 200 Zeichen der Spalte gelöscht oder geändert, während bei einem vollständigen Update alle Daten in der Spalte gelöscht oder geändert würden. Updates mit **.**WRITE, bei denen neue Daten eingefügt oder angefügt werden, werden minimal protokolliert, wenn das Wiederherstellungsmodell für die Datenbank auf „Massenprotokolliert“ oder „Einfach“ festgelegt ist. Die minimale Protokollierung wird nicht verwendet, wenn vorhandene Werte aktualisiert werden. Weitere Informationen finden Sie unter [Das Transaktionsprotokoll &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ Mit der **.** WRITE-Klausel (*expression***,** *@Offset ***,***@Length*) können Sie ein teilweises oder ein vollständiges Update der Datentypen **varchar(max)**, **nvarchar(max)** und **varbinary(max)** ausführen. Bei dem teilweisen Update einer Spalte des Datentyps **varchar(max)** werden z.B. möglicherweise nur die ersten 200 Zeichen der Spalte gelöscht oder geändert, während bei einem vollständigen Update alle Daten in der Spalte gelöscht oder geändert würden. Updates mit **.** WRITE, bei denen neue Daten eingefügt oder angefügt werden, werden minimal protokolliert, wenn das Wiederherstellungsmodell für die Datenbank auf „Massenprotokolliert“ oder „Einfach“ festgelegt ist. Die minimale Protokollierung wird nicht verwendet, wenn vorhandene Werte aktualisiert werden. Weitere Informationen finden Sie unter [Das Transaktionsprotokoll &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] konvertiert ein teilweises Update in ein vollständiges Update, wenn die UPDATE-Anweisung eine dieser Aktionen bewirkt:  
 -   Ändert eine Schlüsselspalte der partitionierten Sicht oder Tabelle.  
 -   Ändert mehr als eine Zeile und aktualisiert außerdem den Schlüssel eines nicht eindeutigen gruppierten Index in einen nicht konstanten Wert.  
   
-Sie können die **.**WRITE-Klausel nicht zur Aktualisierung einer NULL-Spalte oder zum Festlegen des *column_name*-Werts auf NULL verwenden.  
+Sie können die **.** WRITE-Klausel nicht zur Aktualisierung einer NULL-Spalte oder zum Festlegen des *column_name*-Werts auf NULL verwenden.  
   
 *@Offset* und *@Length* werden für die Datentypen **varbinary** und **varchar** in Byte und für den Datentyp **nvarchar** in Zeichen angegeben. Die geeigneten Offsets werden für Doppelbyte-Zeichensatzsortierungen (DBCS, Double-Byte Character Set) berechnet.  
   
 Es wird empfohlen, Daten in Blockgrößen einzufügen bzw. zu aktualisieren, die ein Vielfaches von 8.040 Byte sind, um eine optimale Leistung zu erzielen.  
   
-Wenn in einer OUTPUT-Klausel auf die von der **.**WRITE-Klausel geänderte Spalte verwiesen wird, wird der vollständige Wert der Spalte (entweder das Anfangsimage in **deleted.***column_name* oder das Endimage in **inserted.***column_name*) an die angegebene Spalte in der Tabellenvariablen zurückgegeben. Weitere Informationen finden Sie unten im Beispiel R.  
+Wenn in einer OUTPUT-Klausel auf die von der **.** WRITE-Klausel geänderte Spalte verwiesen wird, wird der vollständige Wert der Spalte (entweder das Anfangsimage in **deleted.***column_name* oder das Endimage in **inserted.***column_name*) an die angegebene Spalte in der Tabellenvariablen zurückgegeben. Weitere Informationen finden Sie unten im Beispiel R.  
   
-Verwenden Sie [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md), um die gleiche Funktionalität der **.**WRITE-Klausel mit anderen Zeichen- oder binären Datentypen zu erzielen.  
+Verwenden Sie [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md), um die gleiche Funktionalität der **.** WRITE-Klausel mit anderen Zeichen- oder binären Datentypen zu erzielen.  
   
 ### <a name="updating-user-defined-type-columns"></a>Aktualisieren von Spalten mit benutzerdefiniertem Datentyp  
  Sie können Werte in benutzerdefinierten Spalten auf eine der folgenden Arten aktualisieren:  
@@ -464,7 +462,7 @@ ID     Value
  Eine UPDATE-Anweisung ruft immer eine exklusive (X) Sperre für die von ihr geänderte Tabelle ab und hält diese Sperre bis zum Abschluss der Transaktion aufrecht. Bei einer exklusiven Sperre können keine anderen Transaktionen Daten ändern. Sie können Tabellenhinweise angeben, um dieses Standardverhalten für die Dauer der UPDATE-Anweisung zu überschreiben, indem Sie eine andere Sperrmethode angeben. Es wird jedoch empfohlen, dass Hinweise nur von erfahrenen Entwicklern und Datenbankadministratoren und nur als letzte Möglichkeit verwendet werden. Weitere Informationen finden Sie unter [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 ## <a name="logging-behavior"></a>Protokollierungsverhalten  
- Die UPDATE-Anweisung wird protokolliert; Teilupdates von Datentypen mit umfangreichen Werten, welche die **.**WRITE-Klausel verwenden, werden allerdings nur minimal protokolliert. Weitere Informationen finden Sie im vorherigen Abschnitt "Datentypen" unter "Aktualisieren von Datentypen mit umfangreichen Werten".  
+ Die UPDATE-Anweisung wird protokolliert; Teilupdates von Datentypen mit umfangreichen Werten, welche die **.** WRITE-Klausel verwenden, werden allerdings nur minimal protokolliert. Weitere Informationen finden Sie im vorherigen Abschnitt "Datentypen" unter "Aktualisieren von Datentypen mit umfangreichen Werten".  
   
 ## <a name="security"></a>Security  
   
@@ -529,7 +527,7 @@ GO
 ```  
   
 #### <a name="d-using-the-top-clause"></a>D. Verwenden der TOP-Klausel  
- In den folgenden Beispielen wird mithilfe der TOP-Klausel die Anzahl der Zeilen beschränkt, die in einer UPDATE-Anweisung geändert werden. Wenn eine TOP (*n*)-Klausel mit UPDATE verwendet wird, wird der Updatevorgang für eine zufällige Auswahl von „*n*“ Anzahl der Zeilen ausgeführt. Im folgenden Beispiel wird die `VacationHours`-Spalte um 25 Prozent für 10 zufällige Zeilen in der `Employee`-Tabelle aktualisiert.  
+ In den folgenden Beispielen wird mithilfe der TOP-Klausel die Anzahl der Zeilen beschränkt, die in einer UPDATE-Anweisung geändert werden. Wenn eine TOP (*n*)-Klausel mit UPDATE verwendet wird, wird der Updatevorgang für eine zufällige Auswahl von *n* Zeilen ausgeführt. Im folgenden Beispiel wird die `VacationHours`-Spalte um 25 Prozent für 10 zufällige Zeilen in der `Employee`-Tabelle aktualisiert.  
   
 ```sql  
 USE AdventureWorks2012;
@@ -800,7 +798,7 @@ SET GroupName = 'Sales and Marketing';
 ```  
   
 #### <a name="q-updating-data-in-a-remote-table-by-using-the-opendatasource-function"></a>Q. Aktualisieren von Daten in einer Remotetabelle mithilfe der OPENDATASOURCE-Funktion  
- Im folgenden Beispiel wird durch Angabe der [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md)-Rowsetfunktion eine Zeile in eine Remotetabelle eingefügt. Geben Sie für die Datenquelle einen gültigen Servernamen im Format *server_name* oder *server_name\instance_name* an. Sie müssen möglicherweise die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für "Ad Hoc Distributed Queries" konfigurieren. Weitere Informationen finden Sie unter [Verteilte Ad-hoc-Abfragen (Serverkonfigurationsoption)](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md).  
+ Im folgenden Beispiel wird durch Angabe der Rowsetfunktion [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) eine Zeile in eine Remotetabelle eingefügt. Geben Sie im Format *server_name* oder *server_name\instance_name* einen gültigen Servernamen für die Datenquelle an. Sie müssen möglicherweise die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für "Ad Hoc Distributed Queries" konfigurieren. Weitere Informationen finden Sie unter [Verteilte Ad-hoc-Abfragen (Serverkonfigurationsoption)](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md).  
   
 ```sql  
 UPDATE OPENQUERY (MyLinkServer, 'SELECT GroupName FROM HumanResources.Department WHERE DepartmentID = 4')   

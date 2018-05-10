@@ -1,17 +1,14 @@
 ---
 title: Wiederherstellen einer Datenbank an einem neuen Speicherort (SQL Server) | Microsoft-Datenbank
-ms.custom: 
+ms.custom: ''
 ms.date: 08/05/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: backup-restore
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: backup-restore
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: backup-restore
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - restoring databases [SQL Server], moving
 - database restores [SQL Server], creating new databases
@@ -22,20 +19,19 @@ helpviewer_keywords:
 - restoring databases [SQL Server], renaming
 - database creation [SQL Server], restoring with move
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
-caps.latest.revision: 
+caps.latest.revision: 71
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: fab639dbd4bccffd5e4739d80a7e6830835c790c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 159436df1286717f2698b463a2645b6b4a58430d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Wiederherstellen einer Datenbank an einem neuen Speicherort (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von SQL Server Management Studio(SSMS) oder [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Datenbank an einem neuen Speicherort wiederherstellen und sie optional umbenennen können. Sie können eine Datenbank in ein neues Verzeichnis verschieben oder eine Kopie einer Datenbank entweder auf der gleichen oder einer anderen Serverinstanz erstellen.  
+  In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von SQL Server Management Studio(SSMS) oder [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Datenbank an einem neuen Speicherort wiederherstellen und sie optional umbenennen können. Sie können eine Datenbank in ein neues Verzeichnis verschieben oder eine Kopie einer Datenbank entweder auf der gleichen oder einer anderen Serverinstanz erstellen.  
     
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
@@ -162,7 +158,7 @@ In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssNoVersion](../../includ
   
      Weitere Informationen finden Sie unter [RESTORE-Argumente &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md) im Abschnitt „Angeben eines Sicherungssatzes“.  
   
-     MOVE **'***logischer-Dateiname_in_Sicherung***'** TO **'***Name-der-Betriebsystemdatei***'** [ **,**...*n* ]  
+     MOVE **'***logical_file_name_in_backup***'** TO **'***operating_system_file_name***'** [ **,**...*n* ]  
      Gibt an, dass die von *logical_file_name_in_backup* angegebenen Daten oder die Protokolldatei an dem von *operating_system_file_name*angegebenen Speicherort wiederhergestellt werden sollen. Geben Sie für jede logische Datei, die aus dem Sicherungssatz an einem neuen Speicherort wiederhergestellt werden soll, eine MOVE-Anweisung an.  
   
     |Option|Description|  

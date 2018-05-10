@@ -1,17 +1,14 @@
 ---
 title: Konfigurieren von Windows-Dienstkonten und -Berechtigungen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/15/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.date: 04/09/2018
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - startup service states [SQL Server]
 - Setup [SQL Server], user accounts
@@ -55,14 +52,13 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 caps.latest.revision: 207
 author: MikeRayMSFT
-ms.author: MikeRay
+ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 679dab613a948419e1407e66ef82b907465e1c2b
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: 5e6c8d3232bf821bce0be78e31c040d5cbb07d61
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Konfigurieren von Windows-Dienstkonten und -Berechtigungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +105,8 @@ ms.lasthandoff: 03/28/2018
     Launchpad kann nicht die Konten erstellen, die Launchpad verwendet, wenn Sie SQL Server auf einem Computer installieren, der auch als Domänencontroller verwendet wird. Daher tritt bei der Installation von R Services (datenbankintern) oder Machine Learning-Services (datenbankintern) auf einem Domänencontroller ein Fehler auf.
 
   
- - **SQL Server-PolyBase-Modul**: Bietet verteilte Abfragefunktionen für externe Datenquellen.
+ - 
+  **SQL Server PolyBase-Engine**: Bietet verteilte Abfragefunktionen für externe Datenquellen.
  
  - **SQL Server PolyBase-Datenverschiebungsdienst**: Ermöglicht Datentransfer zwischen SQL Server und externen Datenquellen und zwischen SQL-Knoten in PolyBase-Skalierungsgruppen.
   
@@ -137,7 +134,7 @@ Die folgende Tabelle enthält die beim Setup bei der Installation aller Komponen
 |---------------|------------------------------------|----------------------------------------------------------------|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)]|[NETZWERKDIENST](#Network_Service)|[Virtuelles Konto](#VA_Desc)*|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent|[NETZWERKDIENST](#Network_Service)|[Virtuelles Konto](#VA_Desc)*|  
-|[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[NETZWERKDIENST](#Network_Service)|[Virtuelles Konto](#VA_Desc)*|  
+|[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[NETZWERKDIENST](#Network_Service)|[Virtuelles Konto](#VA_Desc)* **|  
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[NETZWERKDIENST](#Network_Service)|[Virtuelles Konto](#VA_Desc)*|  
 |[!INCLUDE[ssRS](../../includes/ssrs-md.md)]|[NETZWERKDIENST](#Network_Service)|[Virtuelles Konto](#VA_Desc)*|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|[NETZWERKDIENST](#Network_Service)|[Virtuelles Konto](#VA_Desc)*|  
@@ -146,10 +143,11 @@ Die folgende Tabelle enthält die beim Setup bei der Installation aller Komponen
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser|[LOKALER DIENST](#Local_Service)|[LOKALER DIENST](#Local_Service)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer|[LOKALES SYSTEM](#Local_System)|[LOKALES SYSTEM](#Local_System)|  
 |[!INCLUDE[rsql_extensions](../../includes/rsql-extensions-md.md)]|NTSERVICE\MSSQLLaunchpad|NTSERVICE\MSSQLLaunchpad|  
-|PolyBase-Modul  |[NETZWERKDIENST](#Network_Service) |[NETZWERKDIENST](#Network_Service)  |
+|PolyBase-Engine  |[NETZWERKDIENST](#Network_Service) |[NETZWERKDIENST](#Network_Service)  |
 |PolyBase-Datenverschiebungsdienst |[NETZWERKDIENST](#Network_Service) |[NETZWERKDIENST](#Network_Service)  |
   
- *Wenn Ressourcen benötigt werden, die sich nicht auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Computer befinden, empfiehlt [!INCLUDE[msCoName](../../includes/msconame-md.md)] die Verwendung eines verwalteten Dienstkontos (Managed Service Account, MSA), das mit den erforderlichen Mindestberechtigungen konfiguriert wurde.  
+ *Wenn Ressourcen benötigt werden, die sich nicht auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Computer befinden, empfiehlt [!INCLUDE[msCoName](../../includes/msconame-md.md)] die Verwendung eines verwalteten Dienstkontos (Managed Service Account, MSA), das mit den erforderlichen Mindestberechtigungen konfiguriert wurde.   
+ ** Wenn ein Domänencontroller installiert ist, wird kein virtuelles Konto als Dienstkonto unterstützt.
   
  **SQL Server-Failoverclusterinstanz**
   
@@ -239,7 +237,7 @@ In der folgenden Tabelle sind die [!INCLUDE[ssNoVersion](../../includes/ssnovers
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|DRU_CTLR, CTLRSVCACCOUNT, CTLRSVCPASSWORD, CTLRSTARTUPTYPE, CTLRUSERS|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|DRU_CLT, CLTSVCACCOUNT, CLTSVCPASSWORD, CLTSTARTUPTYPE, CLTCTLRNAME, CLTWORKINGDIR, CLTRESULTDIR|  
 |[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]|EXTSVCACCOUNT, EXTSVCPASSWORD, ADVANCEDANALYTICS***|
-|PolyBase-Modul| PBENGSVCACCOUNT, PBENGSVCPASSWORD, PBENGSVCSTARTUPTYPE, PBDMSSVCACCOUNT, PBDMSSVCPASSWORD, PBDMSSVCSTARTUPTYPE, PBSCALEOUT, PBPORTRANGE
+|PolyBase-Engine| PBENGSVCACCOUNT, PBENGSVCPASSWORD, PBENGSVCSTARTUPTYPE, PBDMSSVCACCOUNT, PBDMSSVCPASSWORD, PBDMSSVCSTARTUPTYPE, PBSCALEOUT, PBPORTRANGE
   
  *Weitere Informationen und eine Beispielsyntax zu unbeaufsichtigten Installationen finden Sie unter [Installieren von SQL Server 2016 von der Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
@@ -295,7 +293,7 @@ In diesem Abschnitt werden die Berechtigungen beschrieben, die beim [!INCLUDE[ss
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienst|Vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup gewährte Berechtigungen|
 |---------------------------------------|------------------------------------------------------------|
-|**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (Der Pro-Dienst-SID werden alle Rechte gewährt. Standardinstanz: **NT SERVICE\MSSQLSERVER**. Benannte Instanz: **NT SERVICE\MSSQL$**Instanzname.)|**Als Dienst anmelden** (SeServiceLogonRight)<br /><br /> **Token auf Prozessebene ersetzen** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Traversierungsüberprüfung umgehen** (SeChangeNotifyPrivilege)<br /><br /> **Speicherkontingente für einen Prozess anpassen** (SeIncreaseQuotaPrivilege)<br /><br /> Berechtigung zum Starten von SQL Writer<br /><br /> Berechtigung zum Lesen des Ereignisprotokolldiensts<br /><br /> Berechtigung zum Lesen des Remoteprozeduraufruf-Diensts|  
+|**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (Der Pro-Dienst-SID werden alle Rechte gewährt. Standardinstanz: **NT SERVICE\MSSQLSERVER**. Benannte Instanz: **NT SERVICE\MSSQL$** Instanzname.)|**Als Dienst anmelden** (SeServiceLogonRight)<br /><br /> **Token auf Prozessebene ersetzen** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Traversierungsüberprüfung umgehen** (SeChangeNotifyPrivilege)<br /><br /> **Speicherkontingente für einen Prozess anpassen** (SeIncreaseQuotaPrivilege)<br /><br /> Berechtigung zum Starten von SQL Writer<br /><br /> Berechtigung zum Lesen des Ereignisprotokolldiensts<br /><br /> Berechtigung zum Lesen des Remoteprozeduraufruf-Diensts|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent:** \*<br /><br /> (Der Pro-Dienst-SID werden alle Rechte gewährt. Standardinstanz: **NT Service\SQLSERVERAGENT**. Benannte Instanz: **NT Service\SQLAGENT$***Instanzname*.)|**Als Dienst anmelden** (SeServiceLogonRight)<br /><br /> **Token auf Prozessebene ersetzen** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Traversierungsüberprüfung umgehen** (SeChangeNotifyPrivilege)<br /><br /> **Speicherkontingente für einen Prozess anpassen** (SeIncreaseQuotaPrivilege)|  
 |**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (Einer lokalen Windows-Gruppe werden alle Rechte gewährt. Standardinstanz: **SQLServerMSASUser$***Computername***$MSSQLSERVER**. Benannte Instanz: **SQLServerMSASUser$***Computername***$***Instanzname*. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] Benannte Instanz: **SQLServerMSASUser$***Computername***$***PowerPivot*.)|**Als Dienst anmelden** (SeServiceLogonRight)<br /><br /> Nur für tabellarisch:<br /><br /> **Arbeitssatz eines Prozesses vergrößern** (SeIncreaseWorkingSetPrivilege)<br /><br /> **Speicherkontingente für einen Prozess anpassen** (SeIncreaseQuotaSizePrivilege)<br /><br /> **Sperren von Seiten im Speicher** (SeLockMemoryPrivilege) – Dies ist nur erforderlich, wenn die Auslagerung vollständig ausgeschaltet wird.<br /><br /> Nur für Failoverclusterinstallationen:<br /><br /> **Anheben der Zeitplanungspriorität** (SeIncreaseBasePriorityPrivilege)|  
 |**[!INCLUDE[ssRS](../../includes/ssrs-md.md)]:**<br /><br /> (Der Pro-Dienst-SID werden alle Rechte gewährt. Standardinstanz: **NT SERVICE\ReportServer**. Benannte Instanz: **NT SERVICE\\ReportServer$***Instanzname*.)|**Als Dienst anmelden** (SeServiceLogonRight)|  
@@ -305,7 +303,8 @@ In diesem Abschnitt werden die Berechtigungen beschrieben, die beim [!INCLUDE[ss
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer:**<br /><br /> (Der Pro-Dienst-SID werden alle Rechte gewährt. Standardinstanz oder benannte Instanz: **NT Service\SQLWriter**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer verfügt über keinen separaten Prozess für eine benannte Instanz.)|Der SQLWriter-Dienst wird unter dem lokalen Systemkonto ausgeführt, das über alle erforderlichen Berechtigungen verfügt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup überprüft oder erteilt keine Berechtigungen für diesen Dienst.| 
   |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller:**|**Als Dienst anmelden** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client:**|**Als Dienst anmelden** (SeServiceLogonRight)|  
-|**PolyBase-Modul und DMS**| **Als Dienst anmelden** (SeServiceLogonRight)  |   
+|
+  **PolyBase-Engine und DMS**| **Als Dienst anmelden** (SeServiceLogonRight)  |   
 |**Launchpad:**|**Als Dienst anmelden** (SeServiceLogonRight) <br /><br /> **Token auf Prozessebene ersetzen** (SeAssignPrimaryTokenPrivilege)<br /><br />**Traversierungsüberprüfung umgehen** (SeChangeNotifyPrivilege)<br /><br />**Speicherkontingente für einen Prozess anpassen** (SeIncreaseQuotaPrivilege)|     
 |**R Services:** **SQLRUserGroup**  |**Lokales Anmelden zulassen** |   
 
@@ -399,7 +398,7 @@ In diesem Abschnitt werden die Berechtigungen beschrieben, die beim [!INCLUDE[ss
   
  *Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst ist auf [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] - und [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] -Instanzen mit Advanced Services deaktiviert.  
   
- Wenn Datenbankdateien an einem benutzerdefinierten Ort gespeichert werden, muss Pro-Dienst-SID-Zugriff auf diesen Ort gewährt sein. Weitere Informationen zum Gewähren von Dateisystemberechtigungen an einen pro-Dienst-SID finden Sie unter [Konfigurieren von Dateisystemberechtigungen für den Datenbankmodulzugriff](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md).  
+ Wenn Datenbankdateien an einem benutzerdefinierten Ort gespeichert werden, muss Pro-Dienst-SID-Zugriff auf diesen Ort gewährt sein. Weitere Informationen zum Gewähren von Dateisystemberechtigungen an einen pro-Dienst-SID finden Sie unter [Konfigurieren von Dateisystemberechtigungen für den Datenbank-Engine-Zugriff](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md).  
   
 ###  <a name="File_System_Other"></a> Anderen Windows-Benutzerkonten oder -Gruppen gewährte Dateisystemberechtigungen  
 
@@ -413,15 +412,15 @@ Einige Zugriffssteuerungsberechtigungen müssen u. U. für integrierte Konten od
 ||Nur Administrator|\\\\.\root\Microsoft\SqlServer\ServerEvents\\<Name_der_SQL-Instanz>*|Vollzugriff|  
 ||Administratoren, System|\tools\binn\schemas\sqlserver\2004\07\showplan|Vollzugriff|  
 ||Benutzer|\tools\binn\schemas\sqlserver\2004\07\showplan|Lesen, Ausführen|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|\<Berichtsserver-Webdienstkonto>|*\<Installationsverzeichnis>*\Reporting Services\LogFiles|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
-||Berichts-Manager-Anwendungspoolidentität, [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] -Konto, jeder|*\<Installationsverzeichnis>*\Reporting Services\ReportManager, *\<Installationsverzeichnis>*\Reporting Services\ReportManager\Pages\\\*.\*, *\<Installationsverzeichnis>*\Reporting Services\ReportManager\Styles\\\*.\*, *\<Installationsverzeichnis>*\Reporting Services\ReportManager\webctrl_client\1_0\\*.\*|Leseberechtigung|  
-||Anwendungspoolidentität für Berichts-Manager|*\<Installationsverzeichnis>*\Reporting Services\ReportManager\Pages\\*.\*|Leseberechtigung|  
-||\<Berichtsserver-Webdienstkonto>|*\<Installationsverzeichnis>*\Reporting Services\ReportServer|Leseberechtigung|  
-||\<Berichtsserver-Webdienstkonto>|*\<Installationsverzeichnis>*\Reporting Services\ReportServer\global.asax|Vollständig|  
-||Jeder|*\<Installationsverzeichnis>*\Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
-||NETZWERKDIENST|*\<Installationsverzeichnis>*\Reporting Services\ReportServer\ReportService.asmx|Vollständig|  
-||Jeder|*\<Installationsverzeichnis>*\Reporting Services\ReportServer\ReportService.asmx|READ_CONTROL<br /><br /> SYNCHRONIZE FILE_GENERIC_READ<br /><br /> FILE_GENERIC_EXECUTE<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_EXECUTE<br /><br /> FILE_READ_ATTRIBUTES|  
-||Report Server-Windows-Dienstkonto|*\<Installationsverzeichnis>*\Reporting Services\ReportServer\RSReportServer.config|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|\<Berichtsserver-Webdienstkonto>|*\<Installationsverzeichnis>* \Reporting Services\LogFiles|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+||Berichts-Manager-Anwendungspoolidentität, [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] -Konto, jeder|*\<Installationsverzeichnis>* \Reporting Services\ReportManager, *\<Installationsverzeichnis>* \Reporting Services\ReportManager\Pages\\\*.\*, *\<Installationsverzeichnis>* \Reporting Services\ReportManager\Styles\\\*.\*, *\<Installationsverzeichnis>* \Reporting Services\ReportManager\webctrl_client\1_0\\*.\*|Leseberechtigung|  
+||Anwendungspoolidentität für Berichts-Manager|*\<Installationsverzeichnis>* \Reporting Services\ReportManager\Pages\\*.\*|Leseberechtigung|  
+||\<Berichtsserver-Webdienstkonto>|*\<Installationsverzeichnis>* \Reporting Services\ReportServer|Leseberechtigung|  
+||\<Berichtsserver-Webdienstkonto>|*\<Installationsverzeichnis>* \Reporting Services\ReportServer\global.asax|Vollständig|  
+||Jeder|*\<Installationsverzeichnis>* \Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
+||NETZWERKDIENST|*\<Installationsverzeichnis>* \Reporting Services\ReportServer\ReportService.asmx|Vollständig|  
+||Jeder|*\<Installationsverzeichnis>* \Reporting Services\ReportServer\ReportService.asmx|READ_CONTROL<br /><br /> SYNCHRONIZE FILE_GENERIC_READ<br /><br /> FILE_GENERIC_EXECUTE<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_EXECUTE<br /><br /> FILE_READ_ATTRIBUTES|  
+||Report Server-Windows-Dienstkonto|*\<Installationsverzeichnis>* \Reporting Services\ReportServer\RSReportServer.config|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
 ||Jeder|Berichtsserverschlüssel (Instid-Struktur)|Wert abfragen<br /><br /> Unterschlüssel auflisten<br /><br /> Benachrichtigen<br /><br /> Lesezugriff|  
 ||Terminaldienstebenutzer|Berichtsserverschlüssel (Instid-Struktur)|Wert abfragen<br /><br /> Wert festlegen<br /><br /> Unterschlüssel erstellen<br /><br /> Unterschlüssel auflisten<br /><br /> Benachrichtigen<br /><br /> DELETE<br /><br /> Lesezugriff|  
 ||Hauptbenutzer|Berichtsserverschlüssel (Instid-Struktur)|Wert abfragen<br /><br /> Wert festlegen<br /><br /> Unterschlüssel erstellen<br /><br /> Unterschlüssel auflisten<br /><br /> Benachrichtigen<br /><br /> DELETE<br /><br /> Lesezugriff|  
@@ -497,7 +496,8 @@ Bei allen Installationen stellt das [!INCLUDE[ssNoVersion](../../includes/ssnove
 ##  <a name="Provisioning"></a> Bereitstellung  
  In diesem Abschnitt wird beschrieben, wie Konten in den verschiedenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten bereitgestellt werden.  
   
--   [Bereitstellung des Datenbankmoduls](#DE_Prov)  
+-   
+  [Bereitstellung der Datenbank-Engine](#DE_Prov)  
   
     -   [Windows-Prinzipale](#Win_Principals)  
   

@@ -1,10 +1,9 @@
 ---
-title: Wichtige Änderungen an Funktionen des Datenbankmoduls in SQL Server 2017 | Microsoft-Dokumentation
-description: Wichtige Änderungen an Funktionen des Datenbankmoduls in SQL Server 2017
+title: Wichtige Änderungen an Funktionen der Datenbank-Engine in SQL Server 2017 | Microsoft-Dokumentation
+description: Wichtige Änderungen an Funktionen der Datenbank-Engine in SQL Server 2017
 ms.date: 04/19/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
+ms.prod_service: high-availability
 ms.component: database-engine
 ms.reviewer: ''
 ms.suite: sql
@@ -12,7 +11,7 @@ ms.custom: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - breaking changes 2017 [SQL Server]
 ms.assetid: ''
@@ -20,15 +19,14 @@ caps.latest.revision: 1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d9b3dffa0deaa64a261f2d70fc53d8be7105832d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d709fa78a3c46d7e707b155b71ed5f49a83153c9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="breaking-changes-to-database-engine-features-in-includesssqlv14-mdincludessssqlv14-mdmd"></a>Wichtige Änderungen an Funktionen des Datenbankmoduls in [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]
+# <a name="breaking-changes-to-database-engine-features-in-includesssqlv14-mdincludessssqlv14-mdmd"></a>Wichtige Änderungen an Funktionen der Datenbank-Engine in [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 
@@ -43,18 +41,25 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="previous-versions"></a>Vorgängerversionen  
 
--   [Fehlerhafte Änderungen an Funktionen des Datenbankmoduls in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)  
+-   
+  [Fehlerhafte Änderungen an Funktionen der Datenbank-Engine in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)  
   
--   [Fehlerhafte Änderungen an Funktionen des Datenbankmoduls in SQL Server 2014](https://msdn.microsoft.com/library/ms143179\(v=sql.120\))  
+-   
+  [Fehlerhafte Änderungen an Funktionen der Datenbank-Engine in SQL Server 2014](https://msdn.microsoft.com/library/ms143179\(v=sql.120\))  
   
--   [Fehlerhafte Änderungen an Funktionen des Datenbankmoduls in SQL Server 2012](https://msdn.microsoft.com/library/ms143179\(v=sql.110\))  
+-   
+  [Fehlerhafte Änderungen an Funktionen der Datenbank-Engine in SQL Server 2012](https://msdn.microsoft.com/library/ms143179\(v=sql.110\))  
   
--   [Fehlerhafte Änderungen an Funktionen des Datenbankmoduls in SQL Server 2008](https://msdn.microsoft.com/library/ms143179\(v=sql.100\))  
+-   
+  [Fehlerhafte Änderungen an Funktionen der Datenbank-Engine in SQL Server 2008](https://msdn.microsoft.com/library/ms143179\(v=sql.100\))  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Als veraltet markierte Funktionen des Datenbankmoduls in SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
- [Nicht mehr unterstützte Datenbankmodul-Funktionalität in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [Abwärtskompatibilität des SQL Server-Datenbankmoduls](../database-engine/sql-server-database-engine-backward-compatibility.md)   
+ 
+  [Als veraltet markierte Funktionen der Datenbank-Engine in SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
+ 
+  [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
+ 
+  [Abwärtskompatibilität der SQL Server-Datenbank-Engine](../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   

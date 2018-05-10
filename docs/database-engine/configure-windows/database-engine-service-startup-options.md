@@ -1,17 +1,14 @@
 ---
-title: Startoptionen für den Datenbankmoduldienst | Microsoft-Dokumentation
+title: Startoptionen für den Datenbank-Engine-Dienst | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/23/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - single-user mode [SQL Server], startup option
 - overriding default startup options
@@ -32,14 +29,13 @@ caps.latest.revision: 80
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 47452c7a2f858dd72cf847f80f2352acace2d5a1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5cabb4763e85f8f1d052aa797ec6f868d9dac0aa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="database-engine-service-startup-options"></a>Startoptionen für den Datenbankmoduldienst
+# <a name="database-engine-service-startup-options"></a>Startoptionen für den Datenbank-Engine-Dienst
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Startoptionen legen bestimmte während des Starts benötigte Speicherorte fest und legen einige Bedingungen fest, die für den gesamten Server gelten. Die meisten Benutzer müssen keine Startoptionen angeben, es sei denn, Sie führen Fehlerbehebungen für [!INCLUDE[ssDE](../../includes/ssde-md.md)] durch oder es liegt ein ein außergewöhnliches Problem vor, und und Sie werden vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Produktsupport aufgefordert, eine Startoption zu verwenden.  
   
@@ -71,7 +67,7 @@ ms.lasthandoff: 04/16/2018
 |**-mName der Clientanwendung**|Beschränkt die Verbindungen auf eine angegebene Clientanwendung. `-mSQLCMD`  beschränkt Verbindungen z. B. auf eine einzelne Verbindung, und diese Verbindung muss sich als SQLCMD-Clientprogramm identifizieren. Verwenden Sie diese Option, wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Einzelbenutzermodus starten und eine unbekannte Clientanwendung die einzige verfügbare Verbindung belegt. Verwenden Sie `"Microsoft SQL Server Management Studio - Query" ` , um eine Verbindung mit dem SSMS Abfrage-Editor herzustellen. Die Option „SSMS Abfrage-Editor“ kann nicht über [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] -Konfigurations-Manager konfiguriert werden, weil sie den Bindestrich enthält, der vom Tool abgelehnt wird.<br /><br /> Beim Clientanwendungsnamen wird zwischen Groß- und Kleinschreibung unterschieden. Doppelte Anführungszeichen sind erforderlich, wenn der Anwendungsname Leerzeichen oder Sonderzeichen enthält.<br /><br />**Beispiele für ein Starten von der Befehlszeile aus:**<br /><br />`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\sqlserver -s MSSQLSERVER -m"Microsoft SQL Server Management Studio - Query"` <br /><br />`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\sqlserver -s MSSQLSERVER -mSQLCMD` <br /><br /> **Sicherheitshinweis**: Verwenden Sie diese Option nicht als Sicherheitsfeature. Die Clientanwendung gibt den Clientanwendungsnamen an und kann als Teil der Verbindungszeichenfolge einen falschen Namen angeben.|  
 |**-n**|Zeichnet keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ereignisse mithilfe des Windows-Anwendungsprotokolls auf. Wenn Sie eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz mit der Option **-n**starten, sollten Sie auch die Startoption **-e** verwenden. Andernfalls werden keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ereignisse protokolliert.|  
 |**-s**|Ermöglicht es Ihnen, eine benannte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz zu starten. Wenn der **-s** -Parameter nicht festgelegt wurde, wird versucht, die Standardinstanz zu starten. Sie müssen an der Eingabeaufforderung in das entsprechende BINN-Verzeichnis für die Instanz wechseln, bevor Sie **sqlservr.exe**starten. Wenn beispielsweise Instanz1 `\mssql$Instance1` für die zugehörigen Binärdateien verwendet, muss sich der Benutzer im Verzeichnis `\mssql$Instance1\binn` befinden, um **sqlservr.exe -s instance1** zu starten.|  
-|**-T**  *trace#*|Gibt an, dass eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz so gestartet werden soll, dass ein bestimmtes Ablaufverfolgungsflag (*trace#*) wirksam wird. Ablaufverfolgungsflags werden verwendet, um den Server mit nicht standardmäßigem Verhalten zu starten. Weitere Informationen finden Sie unter [Ablaufverfolgungsflags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).<br /><br /> **Wichtig**: Wenn Sie ein Ablaufverfolgungsflag mit der Option **-T** angeben, sollten Sie ein „T“ in Großbuchstaben verwenden, um die Nummer des Ablaufverfolgungsflags zu übergeben. Ein "t" in Kleinbuchstaben wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]akzeptiert, doch werden dadurch andere interne Ablaufverfolgungsflags festgelegt, die nur von Supporttechnikern für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] benötigt werden. (Startparameter, die über die Anwendung Dienste in der Systemsteuerung angegeben werden, werden nicht gelesen.)|  
+|**-T**  *trace#*|Gibt an, dass eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz so gestartet werden soll, dass ein bestimmtes Ablaufverfolgungsflag (*trace#*) wirksam wird. Ablaufverfolgungsflags werden verwendet, um den Server mit nicht standardmäßigem Verhalten zu starten. Weitere Informationen finden Sie unter [Ablaufverfolgungsflags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).<br /><br /> **Wichtig**: Wenn Sie ein Ablaufverfolgungsflag mit der Option **-T** angeben, sollten Sie ein „T“ in Großbuchstaben verwenden, um die Nummer des Ablaufverfolgungsflags zu übergeben. Ein "t" in Kleinbuchstaben wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] akzeptiert, doch werden dadurch andere interne Ablaufverfolgungsflags festgelegt, die nur von Supporttechnikern für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] benötigt werden. (Startparameter, die über die Anwendung Dienste in der Systemsteuerung angegeben werden, werden nicht gelesen.)|  
 |**-x**|Deaktiviert die folgenden Überwachungsfunktionen:<br /> - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Leistungsindikatoren<br /> – Beibehalten der Statistiken zu CPU-Zeit und zur Cachetrefferquote<br /> – Sammeln von Informationen für den Befehl „DBCC SQLPERF“<br /> – Sammeln von Informationen für einige dynamische Verwaltungssichten<br /> – viele Ereignispunkte für erweiterte Ereignisse<br /><br /> **Warnung**: Wenn Sie die Startoption **-x** verwenden, werden die Informationen, die Ihnen zum Diagnostizieren von Leistungs- und Funktionsproblemen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zur Verfügung stehen, erheblich reduziert.|  
 |**-E**|Erhöht die Anzahl der Blöcke, die jeder Datei in einer Dateigruppe zugeordnet werden. Diese Option ist möglicherweise bei Data Warehouse-Anwendungen nützlich, bei denen nur eine eingeschränkte Anzahl von Benutzern Index- oder Datenscans ausführen. Sie sollte bei anderen Anwendungen nicht verwendet werden, da sie sich möglicherweise negativ auf die Leistung auswirkt. Diese Option wird in 32-Bit-Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nicht unterstützt.|  
   
@@ -89,8 +85,9 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="related-tasks"></a>Related Tasks  
 [Konfigurieren der Serverkonfigurationsoption Startprozeduren suchen](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)  
-[Starten, Beenden, Anhalten, Fortsetzen und Neustarten des Datenbankmoduls, von SQL Server Agent oder des SQL Server-Browserdiensts](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)
-[Konfigurieren von Serverstartoptionen &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)
+
+  [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, von SQL Server Agent oder des SQL Server-Browserdiensts](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)
+[Konfigurieren von Serverstartoptionen &amp;#40;SQL Server-Konfigurations-Manager&amp;#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)   

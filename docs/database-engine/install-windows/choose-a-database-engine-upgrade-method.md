@@ -1,33 +1,31 @@
 ---
-title: Wählen einer Upgrademethode für das Datenbankmodul | Microsoft-Dokumentation
+title: Wählen einer Upgrademethode für die Datenbank-Engine | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/19/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: install-windows
+ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - server-general
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9049db61b062dc9211b47094886b831bc6667890
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f3ac9ae5a47adce9d5c46de99d00d7463becd590
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="choose-a-database-engine-upgrade-method"></a>Wählen einer Upgrademethode für das Datenbankmodul
+# <a name="choose-a-database-engine-upgrade-method"></a>Wählen einer Upgrademethode für die Datenbank-Engine
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
-  Es gibt verschiedene zu prüfende Ansätze beim Planen des Upgrades von [!INCLUDE[ssDE](../../includes/ssde-md.md)] von einer früheren Version von SQL Server, um Ausfallzeiten und Risiken zu minimieren. Sie können ein direktes Upgrade ausführen, zu einer neuen Installation migrieren oder ein paralleles Upgrade vornehmen. Das folgende Diagramm hilft Ihnen, zwischen diesen Ansätzen auszuwählen. Jeder der Ansätze im Diagramm wird außerdem nachstehend erläutert. Informationen zu den Entscheidungskriterien im Diagramm finden Sie auch unter [Planen und Testen des Upgradeplans für das Datenbankmodul](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
+  Es gibt verschiedene zu prüfende Ansätze beim Planen des Upgrades von [!INCLUDE[ssDE](../../includes/ssde-md.md)] von einer früheren Version von SQL Server, um Ausfallzeiten und Risiken zu minimieren. Sie können ein direktes Upgrade ausführen, zu einer neuen Installation migrieren oder ein paralleles Upgrade vornehmen. Das folgende Diagramm hilft Ihnen, zwischen diesen Ansätzen auszuwählen. Jeder der Ansätze im Diagramm wird außerdem nachstehend erläutert. Informationen zu den Entscheidungskriterien im Diagramm finden Sie auch unter [Planen und Testen des Upgradeplans für doe Datenbank-Engine](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
  ![Entscheidungsstruktur der Upgrademethode für das Datenbankmodul](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "Database Engine Upgrade Method Decision Tree")  
   
@@ -50,7 +48,7 @@ ms.lasthandoff: 04/16/2018
   
 -   Eine Entwicklungsumgebung ohne Konfiguration mit hoher Verfügbarkeit.  
   
--   Eine nicht unternehmenswichtige Produktionsumgebung mit Toleranz für Ausfallzeiten, die auf aktueller Hardware und Software ausgeführt wird. Die Länge der Ausfallzeit ist abhängig von der Größe Ihrer Datenbank und der Geschwindigkeit des E/A-Subsystems. Wenn während des Upgrades von SQL Server 2014 speicheroptimierte Tabellen verwendet werden, erfordert das Upgrade zusätzliche Zeit. Weitere Informationen finden Sie unter [Planen und Testen des Upgradeplans für das Datenbankmodul](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
+-   Eine nicht unternehmenswichtige Produktionsumgebung mit Toleranz für Ausfallzeiten, die auf aktueller Hardware und Software ausgeführt wird. Die Länge der Ausfallzeit ist abhängig von der Größe Ihrer Datenbank und der Geschwindigkeit des E/A-Subsystems. Wenn während des Upgrades von SQL Server 2014 speicheroptimierte Tabellen verwendet werden, erfordert das Upgrade zusätzliche Zeit. Weitere Informationen finden Sie unter [Planen und Testen des Upgradeplans für die Datenbank-Engine](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
 > [!WARNING]  
 >  Beim Ausführen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup-Programms wird die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz im Rahmen der vor dem Upgrade erfolgenden Überprüfungen beendet und neu gestartet.  
@@ -78,7 +76,7 @@ ms.lasthandoff: 04/16/2018
  Sobald die neue   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Umgebung über die gleichen Systemobjekte wie die vorhandene Umgebung verfügt, können Sie die Benutzerdatenbanken aus dem vorhandenen System in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz auf eine Weise migrieren, die Ausfallzeiten für das vorhandene System minimiert. Sie erreichen die Datenbankmigration entweder mittels Sicherung und Wiederherstellung oder indem Sie bei einer SAN-Umgebung die LUNs auf neue Ziele verweisen. Die Schritte für beide Methoden sind in den folgenden Diagrammen dargestellt.  
   
 > [!CAUTION]  
->  Die Länge der Ausfallzeit ist abhängig von der Größe Ihrer Datenbank und der Geschwindigkeit des E/A-Subsystems. Wenn während des Upgrades von SQL Server 2014 speicheroptimierte Tabellen verwendet werden, erfordert das Upgrade zusätzliche Zeit. Weitere Informationen finden Sie unter [Planen und Testen des Upgradeplans für das Datenbankmodul](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
+>  Die Länge der Ausfallzeit ist abhängig von der Größe Ihrer Datenbank und der Geschwindigkeit des E/A-Subsystems. Wenn während des Upgrades von SQL Server 2014 speicheroptimierte Tabellen verwendet werden, erfordert das Upgrade zusätzliche Zeit. Weitere Informationen finden Sie unter [Planen und Testen des Upgradeplans für die Datenbank-Engine](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
  Nach der Migration der Benutzerdatenbanken verweisen Sie neue Benutzer mithilfe verschiedener Methoden (z. B. Umbenennen des Servers, Verwenden eines DNS-Eintrags, Ändern von Verbindungszeichenfolgen) auf die neue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz.  Durch diesen neuen Installationsansatz werden Risiken und Ausfallzeiten im Vergleich mit einem direkten Upgrade reduziert und Upgrades von Hardware und Betriebssystem im Zusammenspiel mit dem Upgrade auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erleichtert.  
   
@@ -123,7 +121,9 @@ ms.lasthandoff: 04/16/2018
 -   Eine horizontal hochskalierte SQL Server Reporting Services-Umgebung: Ausführliche Schritte zum Ausführen eines parallelen Upgrades in dieser Umgebung finden Sie unter [Aktualisieren und Migrieren von Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
   
 ## <a name="next-steps"></a>Nächste Schritte
- [Planen und Testen des Upgradeplans für das Datenbankmodul](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
- [Abschließen des Datenbankmodul-Upgrades](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
+ 
+  [Planen und Testen des Upgradeplans für die Datenbank-Engine](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
+ 
+  [Abschließen des Datenbank-Engine-Upgrades](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
   
   

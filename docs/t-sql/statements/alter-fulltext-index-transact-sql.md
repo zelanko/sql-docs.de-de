@@ -1,16 +1,14 @@
 ---
 title: ALTER FULLTEXT INDEX (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 04/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER FULLTEXT INDEX
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - search property lists [SQL Server], associating with full-text indexes
 - ALTER FULLTEXT INDEX statement
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
-caps.latest.revision: 
+caps.latest.revision: 95
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 022cec421b1827c525d18d04d42bdd648936d147
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f757ad0379550472fe7f75628990180e5ba5b234
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -112,7 +109,7 @@ ALTER FULLTEXT INDEX ON table_name
  Geben Sie TYPE COLUMN *type_column_name* nur an, wenn *column_name* eine Spalte vom Typ **varbinary**, **varbinary(max)** oder **image** angibt, in der Daten als Binärdaten gespeichert werden. Andernfalls gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler zurück.  
   
 > [!NOTE]  
->  Bei der Indizierung verwendet die Volltext-Egine die Abkürzung in der Typspalte der einzelnen Tabellenzeilen, um den für das Dokument in *column_name* zu verwendenden Filter für die Volltextsuche zu ermitteln. Der Filter lädt das Dokument als binären Datenstrom, entfernt die Formatierungsinformationen und sendet den Text des Dokuments an die Wörtertrennungskomponente. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Filtern für die Suche](../../relational-databases/search/configure-and-manage-filters-for-search.md).  
+>  Bei der Indizierung verwendet die Volltext-Engine die Abkürzung in der Typspalte der einzelnen Tabellenzeilen, um den für das Dokument in *column_name* zu verwendenden Filter für die Volltextsuche zu ermitteln. Der Filter lädt das Dokument als binären Datenstrom, entfernt die Formatierungsinformationen und sendet den Text des Dokuments an die Wörtertrennungskomponente. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Filtern für die Suche](../../relational-databases/search/configure-and-manage-filters-for-search.md).  
   
  LANGUAGE *language_term*  
  Die Sprache der in **column_name** gespeicherten Daten.  
@@ -260,7 +257,7 @@ ALTER FULLTEXT INDEX ON table_name
     ALTER FULLTEXT INDEX ON table_1 SET SEARCH PROPERTY LIST spl_2;  
     ```  
   
-     Diese Anweisung verursacht standardmäßig eine vollständige Auffüllung.  Vor Beginn der Auffüllung wird der Index jedoch automatisch vom Volltextmodul abgeschnitten.  
+     Diese Anweisung verursacht standardmäßig eine vollständige Auffüllung.  Vor Beginn der Auffüllung wird der Index jedoch automatisch von der Volltext-Engine abgeschnitten.  
   
 ### <a name="scenario-b-turning-off-the-search-property-list-and-later-associating-the-index-with-any-search-property-list"></a>Szenario B: Deaktivieren der Sucheigenschaftenliste und späteres Zuordnen des Indexes zu einer Sucheigenschaftenliste  
   

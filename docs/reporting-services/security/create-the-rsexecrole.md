@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - RSExecRole
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
@@ -18,11 +17,11 @@ caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 4698782486ccae04b7f2b343beda95edad676568
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 7366850d1dd611f98ea51f849209ee66da389424
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-the-rsexecrole"></a>Erstellen der Rolle RSExecRole
 
@@ -47,7 +46,7 @@ ms.lasthandoff: 01/09/2018
   
 -   Fügen Sie die Datenbanken reportservertempdb und reportserver an. Zum Erstellen der Rolle ist das Anfügen der Datenbanken nicht erforderlich. Die Datenbanken müssen jedoch angefügt werden, damit Sie Ihre Implementierung testen können.  
   
- Die Anweisungen zum manuellen Erstellen der Rolle **RSExecRole** sollen im Kontext einer Migration der Berichtsserver-Installation verwendet werden. In diesem Thema wird auf wichtige Aufgaben, wie z. B. das Sichern und Verschieben der Berichtsserver-Datenbank, nicht eingegangen. Diese Aufgaben werden aber in der Dokumentation zum Datenbankmodul beschrieben.  
+ Die Anweisungen zum manuellen Erstellen der Rolle **RSExecRole** sollen im Kontext einer Migration der Berichtsserver-Installation verwendet werden. In diesem Thema wird auf wichtige Aufgaben, wie z. B. das Sichern und Verschieben der Berichtsserver-Datenbank, nicht eingegangen. Diese Aufgaben werden aber in der Dokumentation zur Datenbank-Engine beschrieben.  
   
 ## <a name="create-rsexecrole-in-master"></a>Erstellen der Rolle 'RSExecRole' in 'Master'  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wird durch den Einsatz von erweiterten gespeicherten Prozeduren sichergestellt, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst geplante Vorgänge unterstützt. Die folgenden Schritte erklären, wie der Rolle **RSExecRole** Berechtigungen zum Ausführen der Prozeduren gewährt werden.  
@@ -211,7 +210,7 @@ ms.lasthandoff: 01/09/2018
   
 4.  Sie können auch auf **Wählen Sie eine vorhandene Berichtsserver-Datenbank aus**klicken.  
   
-5.  Geben Sie den Servernamen des Datenbankmoduls ein. Wenn Sie die Berichtsserver-Datenbanken an eine benannte Instanz angefügt haben, müssen Sie den Instanznamen im folgenden Format eingeben: \<Servername>\\<Instanzname\>.  
+5.  Geben Sie den Servernamen der Datenbank-Engine ein. Wenn Sie die Berichtsserver-Datenbanken an eine benannte Instanz angefügt haben, müssen Sie den Instanznamen im folgenden Format eingeben: \<Servername>\\<Instanzname\>.  
   
 6.  Klicken Sie auf **Verbindung testen**.  
   
