@@ -1,16 +1,14 @@
 ---
-title: CHOOSE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: CHOOSE (Transact-SQL) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHOOSE
@@ -20,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - CHOOSE function
 ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 96e231ed5770e44018dac403e0ac895d85f00393
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b6a89d1e317c8118ba212b823be5ce4b6cab5c1e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="logical-functions---choose-transact-sql"></a>Logische Funktionen - CHOOSE (Transact-SQL)
+# <a name="logical-functions---choose-transact-sql"></a>Logische Funktionen: CHOOSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Gibt das Element am angegebenen Index aus einer Liste von Werten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Gibt das Element am angegebenen Index aus einer Werteliste in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,15 +46,15 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
  *Index*  
  Dies ist ein ganzzahliger Ausdruck, der einen auf 1 basierenden Index in der nachfolgenden Elementliste darstellt.  
   
- Wenn der angegebene Indexwert einen numerischen Datentyp, außer verfügt **Int**, und klicken Sie dann der Wert implizit in eine ganze Zahl konvertiert wird. Wenn der Indexwert die Grenzen des Wertarrays überschreitet, gibt CHOOSE Null zurück.  
+ Wenn der angegebene Indexwert einen anderen numerischen Datentyp als **int** hat, wird der Wert implizit in eine ganze Zahl konvertiert. Wenn der Indexwert die Grenzen des Wertarrays überschreitet, gibt CHOOSE Null zurück.  
   
- *val_1... Val_n*  
+ *val_1 … val_n*  
  Liste von durch Trennzeichen getrennte Werten eines beliebigen Datentyps.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  Gibt den Datentyp mit der höchsten Rangfolge aus dem Satz von Typen zurück, der an die Funktion übergeben wurde. Weitere Informationen finden Sie unter [Rangfolge der Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  CHOOSE hat die gleiche Funktion wie ein Index in einem Array, wobei das Array aus den Argumenten besteht, die dem Indexargument folgen. Das Indexargument bestimmt, welcher der folgenden Werte zurückgegeben wird.  
   
 ## <a name="examples"></a>Beispiele  
@@ -77,7 +74,7 @@ Developer
 (1 row(s) affected)  
 ```  
   
- Das folgende Beispiel gibt eine einfache Zeichenfolge basierend auf dem Wert in der `ProductCategoryID` Spalte.  
+ Im folgenden Beispiel wird eine einfache Zeichenfolge zurückgegeben, die auf dem Wert in der Spalte `ProductCategoryID` basiert.  
   
 ```  
 USE AdventureWorks2012;  
@@ -129,7 +126,7 @@ Sales Representative                               2007-07-01 Summer
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [IIF &#40; Transact-SQL &#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [IIF &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)  
   
   

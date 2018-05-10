@@ -3,15 +3,12 @@ title: Servernetzwerkkonfiguration | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/27/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Named Pipes [SQL Server], configuring
 - connections [SQL Server], server network configuration
@@ -25,12 +22,11 @@ caps.latest.revision: 50
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 72b4b52a2977bf5770c9e8a11e5e27fc32ab0396
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 43467af34ad8e6fde2fc8874ace1e6f7f2fa17e5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="server-network-configuration"></a>Server-Netzwerkkonfiguration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +43,13 @@ ms.lasthandoff: 04/16/2018
  Bei der Konfiguration für dynamische Anschlüsse verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] möglicherweise bei jedem Start einen anderen Anschluss. Wenn Sie durch eine Firewall eine Verbindung zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen, müssen Sie den von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendeten Anschluss öffnen. Konfigurieren Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Verwendung eines bestimmten Anschlusses, damit Sie die Firewall so konfigurieren können, dass die Kommunikation mit dem Server möglich ist. Weitere Informationen finden Sie unter [Konfigurieren eines Servers zur Überwachung eines bestimmten TCP-Ports &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
 ### <a name="changing-a-named-pipe"></a>Ändern einer Named Pipe  
- Sie können das Named Pipe-Protokoll so konfigurieren, dass an einer bestimmte Named Pipe gelauscht wird. Standardmäßig lauscht die Standardinstanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] an der Pipe „\\\\.\pipe\sql\query“ für die Standardinstanz und „\\\\.\pipe\MSSQL$*\<Instanzname>*\sql\query“ für eine benannte Instanz. [!INCLUDE[ssDE](../../includes/ssde-md.md)] kann nur an einer benannten Pipe lauschen, aber Sie können die Pipe bei Bedarf ändern. Mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser-Diensts können Clients die Pipe identifizieren, wenn sie eine Verbindung herstellen. Weitere Informationen finden Sie unter [Konfigurieren eines Servers für die Überwachung einer alternativen Pipe &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md).  
+ Sie können das Named Pipe-Protokoll so konfigurieren, dass an einer bestimmte Named Pipe gelauscht wird. Standardmäßig lauscht die Standardinstanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] an der Pipe „\\\\.\pipe\sql\query“ für die Standardinstanz und „\\\\.\pipe\MSSQL$*\<Instanzname>* \sql\query“ für eine benannte Instanz. [!INCLUDE[ssDE](../../includes/ssde-md.md)] kann nur an einer benannten Pipe lauschen, aber Sie können die Pipe bei Bedarf ändern. Mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser-Diensts können Clients die Pipe identifizieren, wenn sie eine Verbindung herstellen. Weitere Informationen finden Sie unter [Konfigurieren eines Servers für die Überwachung einer alternativen Pipe &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md).  
   
 ## <a name="force-encryption"></a>Erzwingen der Verschlüsselung  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] kann so konfiguriert werden, dass bei der Kommunikation mit Clientanwendungen eine Verschlüsselung erforderlich ist. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zum Datenbankmodul &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] kann so konfiguriert werden, dass bei der Kommunikation mit Clientanwendungen eine Verschlüsselung erforderlich ist. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp;#40;SQL Server-Konfigurations-Manager&amp;#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 ## <a name="extended-protection-for-authentication"></a>Erweiterter Schutz für die Authentifizierung  
- Die Unterstützung für den erweiterten Schutz für die Authentifizierung mit Kanalbindung und Dienstbindung ist für Betriebssysteme verfügbar, die den erweiterten Schutz unterstützen. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit dem Datenbankmodul unter Verwendung von Erweiterter Schutz](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md).  
+ Die Unterstützung für den erweiterten Schutz für die Authentifizierung mit Kanalbindung und Dienstbindung ist für Betriebssysteme verfügbar, die den erweiterten Schutz unterstützen. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit der Datenbank-Engine unter Verwendung von Erweiterter Schutz](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md).  
   
 ## <a name="authenticating-by-using-kerberos"></a>Authentifizierung durch Kerberos  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die Kerberos-Authentifizierung. Weitere Informationen finden Sie unter [Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md) und [Microsoft Kerberos Configuration Manager for SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).  
@@ -61,17 +57,18 @@ ms.lasthandoff: 04/16/2018
 ### <a name="registering-a-server-principal-name-spn"></a>Registrieren eines Serverprinzipalnamens (SPN)  
  Der Kerberos-Authentifizierungsdienst verwendet einen SPN zum Authentifizieren eines Diensts. Weitere Informationen finden Sie unter [Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
   
- SPNs können auch verwendet werden, um die Clientauthentifizierung bei der Verbindung mit NTLM sicherer zu gestalten. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit dem Datenbankmodul unter Verwendung von Erweiterter Schutz](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md).  
+ SPNs können auch verwendet werden, um die Clientauthentifizierung bei der Verbindung mit NTLM sicherer zu gestalten. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit der Datenbank-Engine unter Verwendung von Erweiterter Schutz](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md).  
   
 ## <a name="sql-server-browser-service"></a>SQL Server Browser Service  
- Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser-Dienst wird auf dem Server ausgeführt und unterstützt Clientcomputer bei der Suche nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browserdienst muss nicht konfiguriert werden, er muss jedoch in einigen Verbindungsszenarien ausgeführt werden. Weitere Informationen zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser finden Sie unter [SQL Server-Browserdienst &#40;Datenbankmodul und SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md).  
+ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser-Dienst wird auf dem Server ausgeführt und unterstützt Clientcomputer bei der Suche nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browserdienst muss nicht konfiguriert werden, er muss jedoch in einigen Verbindungsszenarien ausgeführt werden. Weitere Informationen zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser finden Sie unter [SQL Server-Browserdienst &amp;#40;Datenbank-Engine und SSAS&amp;#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md).  
   
 ## <a name="hiding-sql-server"></a>Ausblenden von SQL Server  
- Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser ausgeführt wird, antwortet er auf Abfragen mit dem Namen, der Version und den Verbindungsinformationen für jede installierte Instanz. Das Flag **HideInstance** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]für gibt an, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser nicht mit Informationen zu dieser Serverinstanz reagieren soll. Clientanwendungen können zwar eine Verbindung herstellen, aber sie müssen über die erforderlichen Verbindungsinformationen verfügen. Weitere Informationen finden Sie unter [Ausblenden einer Instanz des SQL Server-Datenbankmoduls](../../database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine.md).  
+ Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser ausgeführt wird, antwortet er auf Abfragen mit dem Namen, der Version und den Verbindungsinformationen für jede installierte Instanz. Das Flag **HideInstance** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]für gibt an, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser nicht mit Informationen zu dieser Serverinstanz reagieren soll. Clientanwendungen können zwar eine Verbindung herstellen, aber sie müssen über die erforderlichen Verbindungsinformationen verfügen. Weitere Informationen finden Sie unter [Ausblenden einer Instanz der SQL Server-Datenbank-Engine](../../database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine.md).  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  [Client-Netzwerkkonfiguration](../../database-engine/configure-windows/client-network-configuration.md)  
   
- [Verwalten der Datenbankmoduldienste](../../database-engine/configure-windows/manage-the-database-engine-services.md)  
+ 
+  [Verwalten der Datenbank-Engine-Dienste](../../database-engine/configure-windows/manage-the-database-engine-services.md)  
   
   

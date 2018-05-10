@@ -27,16 +27,16 @@ ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 76baefbaf0fc156d782c705e8a81683770bedc68
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 041b1bdcc190980d471b48e7525da0fa035d087a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>Sortierungsfunktionen: COLLATIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Gibt die Eigenschaft einer angegebenen Sortierung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] zurück.
+Diese Funktion gibt die Eigenschaft einer angegebenen Sortierung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] zurück.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,16 +48,16 @@ COLLATIONPROPERTY( collation_name , property )
   
 ## <a name="arguments"></a>Argumente  
 *collation_name*  
-Der Name der Sortierung. *collation_name* ist vom Datentyp **nvarchar(128)** und verfügt nicht über einen Standardwert.
+Der Name der Sortierung. Das Argument *collation_name* weist den Datentyp **nvarchar(128)** auf und verfügt über keinen Standardwert.
   
 *property*  
-Die Eigenschaft der Sortierung. *property* ist vom Datentyp **varchar(128)**. Die folgenden Werte sind möglich:
+Die Eigenschaft der Sortierung. Das Argument *property* weist den Datentyp **varchar(128)** auf und kann einen der folgenden Werte besitzen:
   
 |Eigenschaftenname|Description|  
 |---|---|
-|**CodePage**|Nicht-Unicode-Codepage der Sortierung. Informationen zum Übersetzen dieser Werte und zu ihren Zeichenzuordnungen finden Sie unter [Appendix G DBCS/Unicode Mapping Tables (Anhang G: DBCS/Tabellen zur Unicode-Zuordnung)](https://msdn.microsoft.com/en-us/library/cc194886.aspx) und [Appendix H Code Pages (Anhang H: Codeseiten)](https://msdn.microsoft.com/en-us/library/cc195051.aspx).|  
+|**CodePage**|Nicht-Unicode-Codepage der Sortierung. Informationen zum Übersetzen dieser Werte und zu ihren Zeichenzuordnungen finden Sie unter [Appendix G DBCS/Unicode Mapping Tables (Anhang G: Tabellen zur DBCS-/Unicode-Zuordnung)](https://msdn.microsoft.com/en-us/library/cc194886.aspx) und [Appendix H Code Pages (Anhang H: Codepages)](https://msdn.microsoft.com/en-us/library/cc195051.aspx).|  
 |**LCID**|Windows-LCID der Sortierung. Informationen zum Übersetzen dieser Werte erhalten Sie unter [LCID Structure (LCID-Struktur)](https://msdn.microsoft.com/en-us/library/cc233968.aspx). Sie müssen jedoch zunächst eine Konvertierung in **varbinary** vornehmen.|  
-|**ComparisonStyle**|Die Windows-Vergleichsart der Sortierung. Gibt 0 (null) für binäre Sortierungen zurück. Sowohl (\_BIN) als auch (\_BIN2) werden ebenfalls zurückgegeben, wenn alle Eigenschaften als sensibel eingestuft sind. Bitmaskenwerte:<br /><br /> Groß-/Kleinschreibung ignorieren: 1<br /><br /> Akzente ignorieren: 2<br /><br /> Kana ignorieren: 65536<br /><br /> Breite ignorieren: 131072<br /><br /> Hinweis: Die Option „Variierungswahlzeichen“ (\_VSS) ist in diesem Wert nicht widergespiegelt, obwohl sie Auswirkungen auf das Vergleichsverhalten hat.|  
+|**ComparisonStyle**|Die Windows-Vergleichsart der Sortierung. Gibt 0 (null) für alle binären Sortierungen zurück (sowohl für (\_BIN) als auch für (\_BIN2)). Dies gilt auch, wenn für alle Eigenschaften die Groß-/Kleinschreibung berücksichtigt wird. Bitmaskenwerte:<br /><br /> Groß-/Kleinschreibung ignorieren: 1<br /><br /> Akzente ignorieren: 2<br /><br /> Kana ignorieren: 65536<br /><br /> Breite ignorieren: 131072<br /><br /> Hinweis: Die Option \_VSS (Unterscheidung nach Variierungsauswahlzeichen) wird in diesem Wert nicht dargestellt, obwohl sie Auswirkungen auf das Vergleichsverhalten hat.|  
 |**Version**|Die Version der Sortierung, abgeleitet vom Versionsfeld der Sortierungs-ID. Gibt einen ganzzahligen Wert zwischen 0 und 3 zurück.<br /><br /> Sortierungen, in deren Namen die Zahl 140 enthalten ist, geben 3 zurück.<br /><br /> Sortierungen, in deren Namen die Zahl 100 enthalten ist, geben 2 zurück.<br /><br /> Sortierungen, in deren Namen die Zahl 90 enthalten ist, geben 1 zurück.<br /><br /> Alle anderen Sortierungen geben 0 zurück.|  
   
 ## <a name="return-types"></a>Rückgabetypen

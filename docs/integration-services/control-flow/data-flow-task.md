@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.dataflowtask.f1
 helpviewer_keywords:
@@ -25,26 +24,25 @@ caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 4d81f592ac5115e2c04361905d3d19c13689a06b
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: a0877a6de516ccc95b6b2ad403525437592f4d82
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-flow-task"></a>Datenflusstask
-  Der Datenflusstask kapselt das Datenflussmodul, mit dem Daten zwischen Quellen und Zielen verschoben werden, und ermöglicht dem Benutzer das Transformieren, Bereinigen und Ändern von Daten beim Verschieben. Durch das Hinzufügen eines Datenflusstasks zu einer Paketablaufsteuerung kann das Paket Daten extrahieren, transformieren und laden.  
+  Der Datenflusstask kapselt die Datenfluss-Engine, mit dem Daten zwischen Quellen und Zielen verschoben werden, und ermöglicht dem Benutzer das Transformieren, Bereinigen und Ändern von Daten beim Verschieben. Durch das Hinzufügen eines Datenflusstasks zu einer Paketablaufsteuerung kann das Paket Daten extrahieren, transformieren und laden.  
   
  Ein Datenfluss besteht aus mindestens einer Datenflusskomponente, normalerweise jedoch aus verbundenen Datenflusskomponenten. Dabei handelt es sich um Quellen zum Extrahieren von Daten, Transformationen zum Ändern, Routen oder Zusammenfassen von Daten sowie Ziele zum Laden von Daten.  
   
- Zur Laufzeit erstellt der Datenflusstask einen Ausführungsplan vom Datenfluss, und das Datenflussmodul führt den Plan aus. Sie können einen Datenflusstask ohne Datenfluss erstellen, aber der Task wird nur ausgeführt, wenn mindestens ein Datenfluss vorhanden ist.  
+ Zur Laufzeit erstellt der Datenflusstask einen Ausführungsplan vom Datenfluss, und die Datenfluss-Engine führt den Plan aus. Sie können einen Datenflusstask ohne Datenfluss erstellen, aber der Task wird nur ausgeführt, wenn mindestens ein Datenfluss vorhanden ist.  
   
  Zum Masseneinfügen von Daten aus Textdateien in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank können Sie den Masseneinfügungstask anstelle eines Datenflusstasks und eines Datenflusses verwenden. Mit dem Masseneinfügungstask ist es jedoch nicht möglich, Daten zu transformieren. Weitere Informationen finden Sie unter [Bulk Insert Task](../../integration-services/control-flow/bulk-insert-task.md).  
   
 ## <a name="multiple-flows"></a>Mehrere Flüsse  
  Ein Datenflusstask kann mehrere Datenflüsse einschließen. Falls ein Task mehrere Datasets kopiert und falls die Reihenfolge, in der die Daten kopiert werden, keine Rolle spielt, kann es praktischer sein, mehrere Datenflüsse in den Datenflusstask einzuschließen. Beispielsweise können Sie fünf Datenflüsse erstellen, von denen jeder Daten aus einer Flatfile in eine unterschiedliche Dimensionstabelle in einem Data Warehouse-Sternschema kopiert.  
   
- Das Datenflussmodul bestimmt jedoch die Ausführungsreihenfolge, wenn in einem einzigen Datenflusstask mehrere Datenflüsse vorhanden sind. Wenn deshalb die Reihenfolge eine Rolle spielt, sollte das Paket mehrere Datenflusstasks verwenden, wobei jeder Task einen Datenfluss enthält. Anschließend können Sie Rangfolgeneinschränkungen anwenden, um die Ausführungsreihenfolge der Tasks zu steuern.  
+ Die Datenfluss-Engine bestimmt jedoch die Ausführungsreihenfolge, wenn in einem einzigen Datenflusstask mehrere Datenflüsse vorhanden sind. Wenn deshalb die Reihenfolge eine Rolle spielt, sollte das Paket mehrere Datenflusstasks verwenden, wobei jeder Task einen Datenfluss enthält. Anschließend können Sie Rangfolgeneinschränkungen anwenden, um die Ausführungsreihenfolge der Tasks zu steuern.  
   
  Im folgenden Diagramm wird ein Datenflusstask mit mehreren Datenflüssen angezeigt.  
   
@@ -64,7 +62,7 @@ ms.lasthandoff: 04/26/2018
 |**PipelineBufferLeak**|Stellt Informationen zu Komponenten bereit, die Puffer aufrechterhalten haben, nachdem der Puffer-Manager beendet wurde. Aufrechterhaltene Puffer blockieren die Freigabe von Pufferressourcen und können Speicherverluste verursachen. Der Protokolleintrag stellt den Namen der Komponente und die ID des Puffers bereit.|  
 |**PipelineComponentTime**|Meldet den Zeitaufwand in Millisekunden, den die Komponente für jeden der Hauptverarbeitungsschritte "Validate", "PreExecute", "PostExecute", "ProcessInput" und "ProcessOutput" benötigt.|  
 |**PipelineExecutionPlan**|Berichtet den Ausführungsplan des Datenflusses. Der Ausführungsplan stellt Informationen dazu bereit, wie Puffer an Komponenten gesendet werden. Diese Informationen beschreiben in Kombination mit dem PipelineExecutionTrees-Protokolleintrag, was innerhalb des Datenflusstasks geschieht.|  
-|**PipelineExecutionTrees**|Berichtet die Ausführungsstrukturen des Layouts im Datenfluss. Die Datenfluss-Modulplanung verwendet die Strukturen zum Erstellen des Ausführungsplans des Datenflusses.|  
+|**PipelineExecutionTrees**|Berichtet die Ausführungsstrukturen des Layouts im Datenfluss. Die Datenfluss-Engine-Planung verwendet die Strukturen zum Erstellen des Ausführungsplans des Datenflusses.|  
 |**PipelineInitialization**|Bietet Initialisierungsinformationen zu dem Task. Zu diesen Informationen gehören die Verzeichnisse für die temporäre Speicherung von BLOB-Daten, die Standardpuffergröße und die Zeilenanzahl in einem Puffer. Je nach der Konfiguration des Datenflusstasks werden möglicherweise mehrere Protokolleinträge geschrieben.|  
   
  Diese Protokolleinträge stellen bei jeder Ausführung eines Pakets eine Fülle von Informationen zur Ausführung des Datenflusstasks bereit. Wenn Sie die Pakete wiederholt ausführen, können Sie Informationen erfassen, die im Laufe der Zeit wichtige Verlaufsinformationen zu der vom Task ausgeführten Verarbeitung, zu Problemen, die die Leistung beeinträchtigen können, und zu dem vom Task verarbeiteten Datenvolumen bereitstellen.  

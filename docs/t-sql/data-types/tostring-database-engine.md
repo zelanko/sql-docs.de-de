@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 7/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|data-types
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -24,14 +22,13 @@ caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: f0c02a0972657e3bf134dbf21158e604cf21f451
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e9f855f9ed950f67744b75caae6f40668dde4290
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="tostring-database-engine"></a>ToString (Datenbankmodul)
+# <a name="tostring-database-engine"></a>ToString (Datenbank-Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Gibt eine Zeichenfolge mit der logischen Darstellung von *this* zurück. ToString wird implizit aufgerufen, wenn eine Konvertierung von einem **hierarchyid**-Typ in einen Zeichenfolgentyp stattfindet. Fungiert als Gegenstück zu [Parse &#40;Datenbank-Engine&#41;](../../t-sql/data-types/parse-database-engine.md).

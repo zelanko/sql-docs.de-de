@@ -1,30 +1,28 @@
 ---
-title: "SQL Server-Connector – Wartung &amp; Problembehandlung | Microsoft-Dokumentation"
-ms.custom: 
+title: SQL Server-Connector – Wartung &amp; Problembehandlung | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 04/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Connector, appendix
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c0cce6f70771e67f55f987fe6c307d4713e3f928
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: a8f4b4a73139a698d481b65e1ebe93b524e2d863
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server-Connector – Wartung &amp; Problembehandlung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -157,7 +155,7 @@ Zusammengefasst ergeben sich folgende Schritte:
 * Im Fall eines Tresorfehlers erstellen Sie einen neuen Tresor in der gleichen geografischen Region. Der Benutzer, der ihn erstellt, sollte sich im gleichen Standardverzeichnis wie der Dienstprinzipal befinden, der für SQL Server eingerichtet wurde.  
 * Stellen Sie den Schlüssel für den neuen Tresor wieder her (mithilfe des PowerShell-Cmdlets „Restore-AzureKeyVaultKey“– dieses stellt den Schlüssel mit dem gleichen Namen wie zuvor wieder her). Wenn bereits ein Schlüssel mit dem gleichen Namen vorhanden ist, tritt ein Fehler bei der Wiederherstellung auf.  
 * Erteilen Sie dem SQL Server-Dienstprinzipal Berechtigungen zum Verwenden dieses neuen Tresors.  
-* Ändern Sie die vom Datenbankmodul verwendeten SQL Server-Anmeldeinformationen so, dass sie den neuen Tresornamen widerspiegeln (falls erforderlich).  
+* Ändern Sie die von der Datenbank-Engine verwendeten SQL Server-Anmeldeinformationen so, dass sie den neuen Tresornamen widerspiegeln (falls erforderlich).  
   
 Schlüsselsicherungen können übergreifend über Azure-Regionen wiederhergestellt werden, sofern sie in der gleichen geografischen Region oder nationalen Cloud bleiben: USA, Kanada, Japan, Australien, Indien, APAC, Europa, Brasilien, China, US-Regierung oder Deutschland.  
   
@@ -194,7 +192,7 @@ Schlüsselsicherungen können übergreifend über Azure-Regionen wiederhergestel
 
 ![aad-change-default-directory-helpsteps](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
 
-1. Gehen Sie zum klassischen Azure-Portal: [https://manage.windowsazure.com](https://manage.windowsazure.com)  
+1. Navigieren Sie zum klassischen Azure-Portal unter [https://manage.windowsazure.com](https://manage.windowsazure.com).  
 2. Scrollen Sie im Menü auf der linken Seite nach unten, und wählen Sie **Einstellungen**aus.
 3. Wählen Sie das Azure-Abonnement aus, das Sie aktuell verwenden, und klicken Sie in den Befehlen am unteren Bildschirmrand auf **Verzeichnis bearbeiten** .
 4. Verwenden Sie im Popupfenster die Dropdownliste **Verzeichnis** , um das Active Directory auszuwählen, das Sie verwenden möchten. Dadurch wird es als Standardverzeichnis festgelegt.
@@ -213,15 +211,15 @@ Fehlercode  |Symbol  |Description
 ---------|---------|---------  
 0 | scp_err_Success | Der Vorgang war erfolgreich.    
 1 | scp_err_Failure | Beim Vorgang ist ein Fehler aufgetreten.    
-2 | scp_err_InsufficientBuffer | Dieser Fehler weist das Modul an, mehr Arbeitsspeicher für den Puffer zuzuweisen.    
+2 | scp_err_InsufficientBuffer | Dieser Fehler weist die Engine an, mehr Arbeitsspeicher für den Puffer zuzuweisen.    
 3 | scp_err_NotSupported | Der Vorgang wird nicht unterstützt. Beispielsweise wird der angegebene Schlüsseltyp oder Algorithmus nicht vom EKM-Anbieter unterstützt.    
 4 | scp_err_NotFound | Der angegebene Schlüssel oder Algorithmus wurde vom EKM-Anbieter nicht gefunden.    
 5 | scp_err_AuthFailure | Authentifizierungsfehler beim EKM-Anbieter.    
 6 | scp_err_InvalidArgument | Das angegebene Argument ist ungültig.    
-7 | scp_err_ProviderError | Im EKM-Anbieter ist ein nicht angegebener Fehler aufgetreten, der vom SQL-Modul abgefangen wurde.    
-2049 | scp_err_KeyNameDoesNotFitThumbprint | Der Schlüsselname ist zu lang, um in den Fingerabdruck des SQL-Moduls zu passen. Der Schlüsselname darf 26 Zeichen nicht überschreiten.    
+7 | scp_err_ProviderError | Im EKM-Anbieter ist ein nicht angegebener Fehler aufgetreten, der von der SQL-Engine abgefangen wurde.    
+2049 | scp_err_KeyNameDoesNotFitThumbprint | Der Schlüsselname ist zu lang, um in den Fingerabdruck der SQL-Engine zu passen. Der Schlüsselname darf 26 Zeichen nicht überschreiten.    
 2050 | scp_err_PasswordTooShort | Die geheime Zeichenfolge, bei der es sich um die Verkettung von AAD-Client-ID und geheimem Schlüssel handelt, ist kürzer als 32 Zeichen.    
-2051 | scp_err_OutOfMemory | Das SQL-Modul verfügt nicht über ausreichend Arbeitsspeicher, deshalb ist beim Zuweisen von Arbeitsspeicher für den EKM-Anbieter ein Fehler aufgetreten.    
+2051 | scp_err_OutOfMemory | Die SQL-Engine verfügt nicht über ausreichend Arbeitsspeicher, deshalb ist beim Zuweisen von Arbeitsspeicher für den EKM-Anbieter ein Fehler aufgetreten.    
 2052 | scp_err_ConvertKeyNameToThumbprint | Fehler beim Konvertieren des Schlüsselnamens in den Fingerabdruck.    
 2053 | scp_err_ConvertThumbprintToKeyName|  Fehler beim Konvertieren des Fingerabdrucks in den Schlüsselnamen.    
 3000 | ErrorSuccess | Der AKV-Vorgang war erfolgreich.    

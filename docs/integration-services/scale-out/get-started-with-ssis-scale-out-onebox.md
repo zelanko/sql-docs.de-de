@@ -5,31 +5,29 @@ ms.custom: ''
 ms.date: 12/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: scale-out
 ms.reviewer: douglasl
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b6b392bac743f1817f731693c0f89e85c152b52c
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: fbcd13fd6f9a3ecbad7a4076df2dad93171896ee
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="get-started-with-integration-services-ssis-scale-out-on-a-single-computer"></a>Erste Schritte mit Integration Services (SSIS) Scale Out auf einem einzelnen Computer
 In diesem Artikel finden Sie eine Anleitung zum Einrichten von Integration Services Scale Out in einer Umgebung mit einem Computer mithilfe von Standardeinstellungen.
 
 ## <a name="1-install-sql-server-features"></a>1. Installieren von SQL Server-Funktionen
 Wählen Sie im Installations-Assistenten auf der Seite **Funktionsauswahl** folgende Elemente aus:
--   Datenbankmoduldienste
+-   -Datenbank-Engine-Dienste
 -   Integration Services
     -   Scale Out-Master
     -   Scale Out-Worker
@@ -42,7 +40,7 @@ Klicken Sie auf der Seite **Serverkonfiguration** auf **Weiter**, um Standarddie
 
 Wählen Sie auf der Seite **Database Engine Configuration** (Konfiguration der Datenbank-Engine) **gemischter Modus** aus, und klicken Sie auf **Aktuellen Benutzer hinzufügen**. 
 
-![Modulkonfiguration](media/engine-config.PNG)
+![Engine-Konfiguration](media/engine-config.PNG)
 
 Klicken Sie auf den Seiten **Integration Services Scale Out-Konfiguration – Masterknoten** und **Integration Services Scale Out-Konfiguration – Workerknoten** auf **Weiter**, um die Standardeinstellungen für den Port und die Zertifikate anzunehmen.
 

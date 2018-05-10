@@ -1,17 +1,16 @@
 ---
-title: SQL Server Audit (Datenbankmodul) | Microsoft-Dokumentation
+title: SQL Server Audit (Datenbank-Engine) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/21/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - audit
 helpviewer_keywords:
@@ -22,15 +21,14 @@ caps.latest.revision: 58
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8adf7b836ac81c2a83390740f23cfac647860aca
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 61ff78d987e173c875e68f992d4ef4a57fee28b3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Datenbankmodul)
+# <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Die*Überwachung* einer Instanz von [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] oder einer einzelnen Datenbank umfasst die Nachverfolgung und Protokollierung von Ereignissen, die in [!INCLUDE[ssDE](../../../includes/ssde-md.md)]auftreten. Mithilfe von[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit können Serverüberwachungen erstellt werden, die Serverüberwachungsspezifikationen für Ereignisse auf Serverebene sowie Datenbank-Überwachungsspezifikationen für Ereignisse auf Datenbankebene beinhalten können. Überwachte Ereignisse können in die Ereignisprotokolle oder Überwachungsdateien geschrieben werden.  
@@ -66,7 +64,8 @@ ms.lasthandoff: 04/16/2018
 ### <a name="database-audit-specification"></a>Datenbank-Überwachungsspezifikation  
  Das *Datenbank-Überwachungsspezifikation* -Objekt gehört ebenfalls zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit. Sie können eine Datenbank-Überwachungsspezifikation pro [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank und pro Überwachung erstellen.  
   
- Die Datenbank-Überwachungsspezifikation listet viele Überwachungsaktionen auf Datenbankebene auf, die von erweiterten Ereignissen ausgelöst werden. Sie können einer Datenbank-Überwachungsspezifikation Überwachungsaktionsgruppen oder Überwachungsereignisse hinzufügen. *Überwachungsereignisse* sind die unteilbaren Aktionen, die vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Modul überwacht werden können. *Überwachungsaktionsgruppen* sind vorab definierte Aktionsgruppen. Beide befinden sich im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbankbereich. Diese Aktionen werden an die Überwachung gesendet, die sie im Ziel aufzeichnet. Beziehen Sie in einer Benutzerdatenbank-Überwachungsspezifikation keine Objekte mit Serverbereich ein, wie Systemsichten.  
+ Die Datenbank-Überwachungsspezifikation listet viele Überwachungsaktionen auf Datenbankebene auf, die von erweiterten Ereignissen ausgelöst werden. Sie können einer Datenbank-Überwachungsspezifikation Überwachungsaktionsgruppen oder Überwachungsereignisse hinzufügen. 
+  *Überwachungsereignisse* sind die unteilbaren Aktionen, die von der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Engine überwacht werden können. *Überwachungsaktionsgruppen* sind vorab definierte Aktionsgruppen. Beide befinden sich im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbankbereich. Diese Aktionen werden an die Überwachung gesendet, die sie im Ziel aufzeichnet. Beziehen Sie in einer Benutzerdatenbank-Überwachungsspezifikation keine Objekte mit Serverbereich ein, wie Systemsichten.  
   
  Überwachungsaktionsgruppen auf Datenbankebene und Überwachungsaktionen werden im Thema [SQL Server Audit-Aktionsgruppen und -Aktionen](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)beschrieben.  
   
@@ -76,7 +75,7 @@ ms.lasthandoff: 04/16/2018
 > [!IMPORTANT]  
 >  Jeder authentifizierte Benutzer kann das Windows-Anwendungsereignisprotokoll lesen und Datensätze darin schreiben. Für das Anwendungsereignisprotokoll sind niedrigere Berechtigungen als für das Windows-Sicherheitsereignisprotokoll erforderlich, daher ist es jedoch auch weniger sicher als das Windows-Sicherheitsereignisprotokoll.  
   
- Wenn Sie einen Datensatz im Windows-Sicherheitsprotokoll schreiben möchten, muss das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkonto der Richtlinie **Generieren von Sicherheitsüberwachungen** hinzugefügt werden. Standardmäßig sind das lokale System, der lokale Dienst und der Netzwerkdienst ein Teil dieser Richtlinie. Diese Einstellung kann mit dem Sicherheitsrichtlinien-Snap-In (secpol.msc) konfiguriert werden. Darüber hinaus muss die Sicherheitsrichtlinie **Objektzugriffsversuche überwachen** sowohl für **Erfolg** als auch für **Fehler**aktiviert sein. Diese Einstellung kann mit dem Sicherheitsrichtlinien-Snap-In (secpol.msc) konfiguriert werden. In [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] oder Windows Server 2008 können Sie die **automatisch generierte** Richtlinie mit feinerer Granularität über die Befehlszeile mit dem Überwachungsrichtlinienprogramm (**AuditPol.exe)**festlegen. Weitere Informationen zu den Schritten zum Aktivieren des Schreibens in das Windows-Sicherheitsprotokoll finden Sie unter [Schreiben von SQL-Serverüberwachungsereignissen in das Sicherheitsprotokoll](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md). Weitere Informationen über das Programm Auditpol.exe finden Sie im Knowledge Base-Artikel 921469, [How to use Group Policy to configure detailed security auditing](http://support.microsoft.com/kb/921469/)(in englischer Sprache). Die Windows-Ereignisprotokolle gelten global für das Windows-Betriebssystem. Weitere Informationen zu den Windows-Ereignisprotokollen finden Sie unter [Ereignisanzeige (Übersicht)](http://go.microsoft.com/fwlink/?LinkId=101455). Wenn Sie präzisere Berechtigungen für die Überwachung benötigen, verwenden Sie das Binärdateiziel.  
+ Wenn Sie einen Datensatz im Windows-Sicherheitsprotokoll schreiben möchten, muss das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkonto der Richtlinie **Generieren von Sicherheitsüberwachungen** hinzugefügt werden. Standardmäßig sind das lokale System, der lokale Dienst und der Netzwerkdienst ein Teil dieser Richtlinie. Diese Einstellung kann mit dem Sicherheitsrichtlinien-Snap-In (secpol.msc) konfiguriert werden. Darüber hinaus muss die Sicherheitsrichtlinie **Objektzugriffsversuche überwachen** sowohl für **Erfolg** als auch für **Fehler**aktiviert sein. Diese Einstellung kann mit dem Sicherheitsrichtlinien-Snap-In (secpol.msc) konfiguriert werden. In [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] oder Windows Server 2008 können Sie die **automatisch generierte** Richtlinie mit feinerer Granularität über die Befehlszeile mit dem Überwachungsrichtlinienprogramm (**AuditPol.exe)** festlegen. Weitere Informationen zu den Schritten zum Aktivieren des Schreibens in das Windows-Sicherheitsprotokoll finden Sie unter [Schreiben von SQL-Serverüberwachungsereignissen in das Sicherheitsprotokoll](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md). Weitere Informationen über das Programm Auditpol.exe finden Sie im Knowledge Base-Artikel 921469, [How to use Group Policy to configure detailed security auditing](http://support.microsoft.com/kb/921469/)(in englischer Sprache). Die Windows-Ereignisprotokolle gelten global für das Windows-Betriebssystem. Weitere Informationen zu den Windows-Ereignisprotokollen finden Sie unter [Ereignisanzeige (Übersicht)](http://go.microsoft.com/fwlink/?LinkId=101455). Wenn Sie präzisere Berechtigungen für die Überwachung benötigen, verwenden Sie das Binärdateiziel.  
   
  Um beim Speichern von Überwachungsinformationen in eine Datei Manipulationen zu verhindern, können Sie den Zugriff auf deren Speicherort auf folgende Weise einschränken:  
   
@@ -124,7 +123,7 @@ ms.lasthandoff: 04/16/2018
   
  Wenn aufgrund eines Überwachungsfehlers der Server heruntergefahren wird oder nicht startet, da für die Überwachung ON_FAILURE=SHUTDOWN festgelegt wurde, wird das Ereignis MSG_AUDIT_FORCED_SHUTDOWN in das Protokoll geschrieben. Da der Server schon beim ersten Auftreten dieser Einstellung heruntergefahren wird, wird das Ereignis nur einmal im Protokoll aufgezeichnet. Das Ereignis wird erst nach der Fehlermeldung für die Überwachung, die das Herunterfahren verursacht, geschrieben. Ein Administrator kann ein durch eine Überwachung verursachtes Herunterfahren umgehen, indem er [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit dem Flag **–m** im Einzelbenutzermodus startet. Wenn Sie sich im Einzelbenutzermodus anmelden, wird jede Überwachung herabgestuft, für die festgelegt wurde, dass ON_FAILURE=SHUTDOWN in dieser Sitzung als ON_FAILURE=CONTINUE ausgeführt wird. Wenn [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit dem Flag **–m** gestartet wird, wird die Meldung MSG_AUDIT_SHUTDOWN_BYPASSED im Fehlerprotokoll aufgezeichnet.  
   
- Weitere Informationen zu Dienststartoptionen finden Sie unter [Startoptionen für den Datenbankmoduldienst](../../../database-engine/configure-windows/database-engine-service-startup-options.md).  
+ Weitere Informationen zu Dienststartoptionen finden Sie unter [Startoptionen für den Datenbank-Engine-Dienst](../../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
 ### <a name="attaching-a-database-with-an-audit-defined"></a>Anfügen einer Datenbank mit einer definierten Überwachung  
  Wenn Sie eine Datenbank anfügen, für die eine Überwachungsspezifikation festgelegt wurde und die eine GUID bestimmt, die sich nicht auf dem Server befindet, entsteht eine *verwaiste* Überwachungsspezifikation. Da eine Überwachung mit einer entsprechenden GUID nicht auf der Serverinstanz vorliegt, werden keine Überwachungsereignisse aufgezeichnet. Verwenden Sie den Befehl ALTER DATABASE AUDIT SPECIFICATION, um die verwaiste Überwachungsspezifikation mit einer vorhandenen Serverüberwachung zu verbinden und somit den Fehler zu beheben. Oder verwenden Sie den Befehl CREATE SERVER AUDIT, um eine neue Serverüberwachung mit der angegebenen GUID zu erstellen.  

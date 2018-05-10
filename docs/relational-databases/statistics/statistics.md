@@ -1,17 +1,16 @@
 ---
 title: Statistik | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 12/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: statistics
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-statistics
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - statistical information [SQL Server], query optimization
 - query performance [SQL Server], statistics
@@ -26,19 +25,20 @@ helpviewer_keywords:
 - query optimizer [SQL Server], statistics
 - statistics [SQL Server]
 ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
-caps.latest.revision: 
+caps.latest.revision: 70
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2ed0124e677f79bd25b11a4ac994f60e65f8fe82
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: bb4fb973ed9311fd6b2ad6a89022b55208971ebd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="statistics"></a>Statistik
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Der Abfrageoptimierer verwendet Statistiken zum Erstellen von Abfrageplänen, die die Abfrageleistung verbessern. Bei den meisten Abfragen generiert der Abfrageoptimierer automatisch die notwendigen Statistiken für einen hochwertigen Abfrageplan. In einigen Fällen müssen Sie weitere Statistiken erstellen oder den Abfrageentwurf ändern, um optimale Ergebnisse zu erzielen. Dieses Thema enthält eine Erläuterung von Statistikkonzepten sowie Richtlinien zur effektiven Verwendung von Abfrageoptimierungsstatistiken.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Der Abfrageoptimierer verwendet Statistiken zum Erstellen von Abfrageplänen, die die Abfrageleistung verbessern. Bei den meisten Abfragen generiert der Abfrageoptimierer automatisch die notwendigen Statistiken für einen hochwertigen Abfrageplan. In einigen Fällen müssen Sie weitere Statistiken erstellen oder den Abfrageentwurf ändern, um optimale Ergebnisse zu erzielen. Dieses Thema enthält eine Erläuterung von Statistikkonzepten sowie Richtlinien zur effektiven Verwendung von Abfrageoptimierungsstatistiken.  
   
 ##  <a name="DefinitionQOStatistics"></a> Komponenten und Konzepte  
 ### <a name="statistics"></a>Statistik  
@@ -117,7 +117,7 @@ ORDER BY s.name;
     * Wenn die Tabellenkardinalität zum Zeitpunkt der Statistikauswertung 500 oder weniger beträgt, wird nach jeweils 500 Änderungen eine Aktualisierung durchgeführt.
     * Wenn die Tabellenkardinalität zum Zeitpunkt der Statistikauswertung über 500 liegt, wird nach jeweils 500 Änderungen + 20 Prozent eine Aktualisierung durchgeführt.
 
-* Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und bei einem [Kompatibilitätsgrad](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) von unter 130 verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen abnehmenden dynamischen Schwellenwert für das Statistikupdate, der gemäß der Anzahl von Zeilen in der Tabelle angepasst wird. Dieser berechnet sich als Quadratwurzel aus 1.000 multipliziert mit der aktuellen Tabellenkardinalität. Durch diese Änderung werden Statistiken für große Tabellen häufiger aktualisiert. Weist eine Datenbank jedoch einen Kompatibilitätsgrad unter 130 auf, dann gilt der Schwellenwert [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+* Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und bei einem [Kompatibilitätsgrad](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) von unter 130 verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen abnehmenden dynamischen Schwellenwert für das Statistikupdate, der gemäß der Anzahl von Zeilen in der Tabelle angepasst wird. Dieser berechnet sich als Quadratwurzel des Produkts von 1000 und der aktuellen Tabellenkardinalität. Wenn Ihre Tabelle beispielsweise 2 Millionen Zeilen enthält, entspricht die Berechnung SQRT (1000 × 2000000) = 44721,359. Durch diese Änderung werden Statistiken für große Tabellen häufiger aktualisiert. Weist eine Datenbank jedoch einen Kompatibilitätsgrad unter 130 auf, dann gilt der Schwellenwert [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
 
 > [!IMPORTANT]
 > Ab [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] bis [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] oder in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verwenden Sie bei einem [Kompatibilitätsgrad der Datenbank](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) unter 130 das [Ablaufverfolgungsflag 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet dann einen abnehmenden dynamischen Schwellenwert für das Statistikupdate, der gemäß der Anzahl von Zeilen in der Tabelle angepasst wird.
@@ -228,7 +228,7 @@ GO
 ### <a name="query-identifies-missing-statistics"></a>Abfrage identifiziert fehlende Statistiken  
 Wenn der Abfrageoptimierer aufgrund eines Fehlers oder eines anderen Ereignisses keine Statistiken erstellen kann, erstellt er den Abfrageplan ohne Verwendung von Statistiken. Der Abfrageoptimierer kennzeichnet die Statistik als nicht vorhanden und versucht beim nächsten Ausführen der Abfrage, die Statistik erneut zu generieren.  
   
-Fehlende Statistiken werden als Warnungen angegeben (Tabellenname als rot formatierter Text), wenn der Ausführungsplan einer Abfrage mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]grafisch angezeigt wird. Das Fehlen von Statistiken wird zudem angezeigt, wenn die **Missing Column Statistics**-Ereignisklasse mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] überwacht wird. Weitere Informationen finden Sie unter [Fehler und Warnungen-Ereigniskategorie &#40;Datenbankmodul&#41;](../../relational-databases/event-classes/errors-and-warnings-event-category-database-engine.md).  
+Fehlende Statistiken werden als Warnungen angegeben (Tabellenname als rot formatierter Text), wenn der Ausführungsplan einer Abfrage mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]grafisch angezeigt wird. Das Fehlen von Statistiken wird zudem angezeigt, wenn die **Missing Column Statistics**-Ereignisklasse mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] überwacht wird. Weitere Informationen finden Sie unter [Fehler und Warnungen-Ereigniskategorie &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/event-classes/errors-and-warnings-event-category-database-engine.md).  
   
  Wenn Statistiken fehlen, führen Sie die folgenden Schritte aus:  
   

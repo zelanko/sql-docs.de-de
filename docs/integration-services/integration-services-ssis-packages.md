@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 08/31/2016
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, about packages
 - packages [Integration Services], about packages
@@ -27,12 +26,11 @@ caps.latest.revision: 72
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: ddec07e9150696f640a2f7e45c7234a10c6954dd
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: dd4ba6a65e476005214c27b602bc5592c07291b2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services-Pakete (SSIS)
   Bei einem Paket handelt es sich um eine organisierte Auflistung von Verbindungen, Ablaufsteuerungselementen, Datenflusselementen, Ereignishandlern, Variablen, Parametern und Konfigurationen, die Sie entweder mit den grafischen Designtools von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] oder programmgesteuert erstellen.  Sie speichern dann das fertige Paket in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], dem [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paketspeicher oder im Dateisystem, oder Sie können das ssISnoversion-Projekt auf dem Server [!INCLUDE[ssIS](../includes/ssis-md.md)] bereitstellen. Das Paket ist jene Arbeitseinheit, die abgerufen, ausgeführt und gespeichert wird.  
@@ -50,7 +48,7 @@ ms.lasthandoff: 04/26/2018
 ## <a name="contents-of-a-package"></a>Inhalt eines Pakets  
  **Tasks und Container (Ablaufsteuerung).** Eine Ablaufsteuerung besteht aus Tasks und Containern, die beim Ausführen des Pakets ausgeführt werden. Um die Reihenfolge zu steuern oder die Bedingungen zum Ausführen des nächsten Tasks oder Containers in der Paketablaufsteuerung zu definieren, verbinden Sie mithilfe von Rangfolgeneinschränkungen die Tasks und Container in einem Paket. Eine Teilmenge der Tasks und Container kann auch gruppiert und wiederholt als eine Einheit innerhalb der Paketablaufsteuerung ausgeführt werden. Weitere Informationen finden Sie unter [Control Flow](../integration-services/control-flow/control-flow.md).  
   
- **Datenquellen und Ziele (Datenfluss).** Ein Datenfluss besteht aus den Quellen und Zielen zum Extrahieren und Laden von Daten, den Transformationen zum Ändern und Erweitern von Daten sowie den Pfaden zum Verlinken von Quellen, Transformationen und Zielen. Bevor Sie einem Paket einen Datenfluss hinzufügen können, muss die Paketablaufsteuerung einen Datenflusstask einschließen. Der Datenflusstask ist die ausführbare Datei im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paket, das den Datenfluss erstellt, anordnet und ausführt. Eine separate Instanz des Datenflussmoduls wird für jeden Datenflusstask in einem Paket geöffnet. Weitere Informationen finden Sie unter [Data Flow Task](../integration-services/control-flow/data-flow-task.md) und [Data Flow](../integration-services/data-flow/data-flow.md).  
+ **Datenquellen und Ziele (Datenfluss).** Ein Datenfluss besteht aus den Quellen und Zielen zum Extrahieren und Laden von Daten, den Transformationen zum Ändern und Erweitern von Daten sowie den Pfaden zum Verlinken von Quellen, Transformationen und Zielen. Bevor Sie einem Paket einen Datenfluss hinzufügen können, muss die Paketablaufsteuerung einen Datenflusstask einschließen. Der Datenflusstask ist die ausführbare Datei im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paket, das den Datenfluss erstellt, anordnet und ausführt. Eine separate Instanz der Datenfluss-Engine wird für jeden Datenflusstask in einem Paket geöffnet. Weitere Informationen finden Sie unter [Data Flow Task](../integration-services/control-flow/data-flow-task.md) und [Data Flow](../integration-services/data-flow/data-flow.md).  
   
  **Verbindungs-Manager (Verbindungen).** Ein Paket schließt in der Regel mindestens einen Verbindungs-Manager ein. Ein Verbindungs-Manager ist ein Link zwischen einem Paket und einer Datenquelle, die die Verbindungszeichenfolge für den Zugriff auf die Daten definiert, die von den Tasks, Transformationen und Ereignishandlern im Paket verwendet wird. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] schließt Verbindungstypen für Datenquellen ein, wie z. B. Text- und XML-Dateien, relationale Datenbanken und [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbanken und -Projekte. Weitere Informationen finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](../integration-services/connection-manager/integration-services-ssis-connections.md).  
   

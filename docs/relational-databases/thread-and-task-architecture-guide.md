@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 10/26/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: relational-databases-misc
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - guide, thread and task architecture
 - thread and task architecture guide
@@ -20,13 +19,12 @@ caps.latest.revision: 3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9d17f3c6543d78efc86f07cec995ddbdc03cd195
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: dcb886bee40d358bf0b2815e8fb669876f32d3a6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="thread-and-task-architecture-guide"></a>Handbuch zur Thread- und Taskarchitektur
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +39,7 @@ Threads ermöglichen, dass komplexe Anwendungen CPUs effizienter verwenden; dies
 
 ### <a name="allocating-threads-to-a-cpu"></a>Reservieren von Threads für eine CPU
 
-Standardmäßig startet jede Instanz von SQL Server jeden Thread. Wenn Affinität aktiviert wurde, weist das Betriebssystem jeden Thread einer bestimmten CPU zu. Das Betriebssystem verteilt Threads von SQL Server-Instanzen je nach Auslastung auf die Mikroprozessoren oder CPUs eines Computers. Manchmal kann das Betriebssystem einen Thread auch von einer stark beanspruchten CPU zu einer anderen CPU verlagern. Im Gegensatz dazu weist das SQL Server-Datenbankmodul Arbeitsthreads Zeitplanungsmodulen zu, die die Threads gleichmäßig auf die CPUs verteilen.
+Standardmäßig startet jede Instanz von SQL Server jeden Thread. Wenn Affinität aktiviert wurde, weist das Betriebssystem jeden Thread einer bestimmten CPU zu. Das Betriebssystem verteilt Threads von SQL Server-Instanzen je nach Auslastung auf die Mikroprozessoren oder CPUs eines Computers. Manchmal kann das Betriebssystem einen Thread auch von einer stark beanspruchten CPU zu einer anderen CPU verlagern. Im Gegensatz dazu weist die SQL Server-Datenbank-Engine Arbeitsthreads Zeitplanungs-Engines zu, die die Threads gleichmäßig auf die CPUs verteilen.
 
 Die Affinitätsmaskenoption wird mit [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md)festgelegt. Wenn die Affinitätsmaske nicht festgelegt wird, ordnet die SQL Server-Instanz den Zeitplanungsmodulen, die nicht durch die Maske ausgeschlossen werden, gleichmäßig Arbeitsthreads zu.
 
@@ -124,7 +122,7 @@ In der folgenden Tabelle sind SQL Server-Komponenten aufgeführt, und es wird an
 
 |Prozessname   |Ausführbares Programm |Verwenden von mehr als 64 CPUs |  
 |----------|----------|----------|  
-|SQL Server-Datenbankmodul |Sqlserver.exe  |ja |  
+|SQL Server-Datenbank-Engine |Sqlserver.exe  |ja |  
 |Reporting Services |Rs.exe |nein |  
 |Analysis Services  |As.exe |nein |  
 |Integration Services   |Is.exe |nein |  

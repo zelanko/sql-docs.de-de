@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.dtsserver.packageroles.f1
 helpviewer_keywords:
@@ -27,12 +26,11 @@ caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 79b84fc3f52cb12a77d1a2e51acbc074f810c6d0
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 2a4ff7652fb572a5981f32bb71b5fdfb713befc9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="integration-services-roles-ssis-service"></a>Integration Services-Rollen (SSIS-Dienst)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt bestimmte feste Rollen auf Datenbankebene für den sicheren Zugriff auf Pakete bereit, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gespeichert sind. Die verfügbaren Rollen unterscheiden sich abhängig davon, ob Sie Pakete in der SSIS-Katalogdatenbank (SSISDB) oder in der msdb-Datenbank speichern.  
@@ -82,7 +80,8 @@ ms.lasthandoff: 04/26/2018
   
  Die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Rollen auf Datenbankebene gewähren den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Systemtabellen in der msdb-Datenbank Rechte.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (der MSSQLSERVER-Dienst) muss gestartet werden, bevor Sie eine Verbindung zum Datenbankmodul herstellen und auf die **msdb** -Datenbank zugreifen können.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (der MSSQLSERVER-Dienst) muss gestartet werden, bevor Sie eine Verbindung zur Datenbank-Engine herstellen und auf die **msdb** -Datenbank zugreifen können.  
   
  Um Rollen Paketen zuzuweisen, müssen Sie die folgenden Tasks ausführen.  
   
@@ -119,7 +118,7 @@ ms.lasthandoff: 04/26/2018
   
 2.  Klicken Sie im Menü **Ansicht** auf **Objekt-Explorer** .  
   
-3.  Klicken Sie auf der Symbolleiste des Objekt-Explorers auf **Verbinden**, und klicken Sie dann auf **Datenbankmodul**.  
+3.  Klicken Sie auf der Symbolleiste des Objekt-Explorers auf **Verbinden**, und klicken Sie dann auf **Datenbank-Engine**.  
   
 4.  Geben Sie im Dialogfeld **Verbindung mit Server herstellen** einen Servernamen ein, und wählen Sie einen Authentifizierungsmodus aus. Sie können einen Punkt (.), (local) oder **localhost** zum Angeben des lokalen Servers verwenden.  
   

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: data-tier-applications
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.deletedacwizard.deletedac.f1
 - sql13.swb.deletedacwizard.summary.f1
@@ -27,12 +26,11 @@ caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6278b9532ef6401df57dd7d96320db6b5a310f40
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1d516f4a697d4555575a2b6423bdd4c98262afb9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="delete-a-data-tier-application"></a>Löschen einer Datenebenenanwendung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +46,7 @@ ms.lasthandoff: 04/16/2018
 |Option|Datenbankaktionen|  
 |------------|----------------------|  
 |Registrierung löschen|Die zugeordnete Datenbank bleibt intakt.|  
-|Datenbank trennen|Die zugeordnete Datenbank wird getrennt. Die Instanz des Datenbankmoduls kann nicht auf die Datenbank verweisen, die Daten und Protokolldateien bleiben jedoch intakt.|  
+|Datenbank trennen|Die zugeordnete Datenbank wird getrennt. Die Instanz der Datenbank-Engine kann nicht auf die Datenbank verweisen, die Daten und Protokolldateien bleiben jedoch intakt.|  
 |Datenbank löschen|Die zugeordnete Datenbank wird gelöscht. Die Daten und Protokolldateien werden gelöscht.|  
   
 ###  <a name="LimitationsRestrictions"></a> Einschränkungen  
@@ -75,7 +73,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  Erweitern Sie den Knoten **Datenebenenanwendungen** .  
   
-4.  Klicken Sie mit der rechten Maustaste auf die zu löschende DAC, und wählen Sie anschließend **Datenebenenanwendung löschen...**aus.  
+4.  Klicken Sie mit der rechten Maustaste auf die zu löschende DAC, und wählen Sie anschließend **Datenebenenanwendung löschen...** aus.  
   
 5.  Bearbeiten Sie die Dialogfenster des Assistenten:  
   

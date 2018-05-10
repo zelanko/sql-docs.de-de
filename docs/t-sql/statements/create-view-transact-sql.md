@@ -1,16 +1,14 @@
 ---
 title: CREATE VIEW (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE VIEW
@@ -39,16 +37,16 @@ helpviewer_keywords:
 - views [SQL Server], indexed views
 - maximum number of columns per view
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
-caps.latest.revision: 
+caps.latest.revision: 85
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 633179d7540ba4a6515c3614724a4849f40de391
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 687c4507996d436d6964603049a56d8b8cbcaea0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -153,7 +151,7 @@ OR ALTER
  Verschlüsselt die Einträge in [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md), die den Text der CREATE VIEW-Anweisung enthalten. Mit WITH ENCRYPTION kann verhindert werden, dass die Sicht als Teil der SQL Server-Replikation veröffentlicht wird.  
   
  SCHEMABINDING  
- Bindet die Sicht an das Schema der zugrunde liegenden Basistabellen. Wenn SCHEMABINDING angegeben ist, können an der/den Basistabelle(n) keine Änderungen vorgenommen werden, die die Sichtdefinition betreffen können. Zunächst muss die Sichtdefinition selbst geändert oder gelöscht werden, um Abhängigkeiten in der zu ändernden Tabelle zu entfernen. Wenn Sie SCHEMABINDING verwenden, muss *select_statement* die zweiteiligen Namen (*schema***.***object*) der Tabellen, Sicht oder benutzerdefinierten Funktionen einschließen, auf die verwiesen wird. Alle Objekte, auf die verwiesen wird, müssen in derselben Datenbank vorhanden sein.  
+ Bindet die Sicht an das Schema der zugrunde liegenden Basistabellen. Wenn SCHEMABINDING angegeben ist, können an der/den Basistabelle(n) keine Änderungen vorgenommen werden, die die Sichtdefinition betreffen können. Zunächst muss die Sichtdefinition selbst geändert oder gelöscht werden, um Abhängigkeiten in der zu ändernden Tabelle zu entfernen. Wenn Sie SCHEMABINDING verwenden, muss *select_statement* die zweiteiligen Namen (*schema ***.*** object*) der Tabellen, Sichten oder benutzerdefinierten Funktionen einschließen, auf die verwiesen wird. Alle Objekte, auf die verwiesen wird, müssen in derselben Datenbank vorhanden sein.  
   
  Sichten oder Tabellen, die Bestandteil einer mit der SCHEMABINDING-Klausel erstellten Sicht sind, können erst dann gelöscht werden, wenn diese Sicht gelöscht oder geändert wurde, sodass keine Schemabindung mehr vorhanden ist. Andernfalls löst [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen Fehler aus. Darüber hinaus schlagen ALTER TABLE-Anweisungen für Tabellen fehl, die Bestandteil von Sichten mit Schemabindung sind, wenn diese Anweisungen die Sichtdefinition betreffen.  
   
@@ -194,7 +192,7 @@ OR ALTER
   
 -   In der Anweisung *select_statement* der Sicht wird TOP nicht zusammen mit der Klausel WITH CHECK OPTION verwendet.  
   
- Die vorigen Einschränkungen gelten, so wie für die Sicht selbst, für alle Unterabfragen in der FROM-Klausel der Sicht. Im Allgemeinen muss [!INCLUDE[ssDE](../../includes/ssde-md.md)] Änderungen von der Sichtdefinition an einer Basistabelle eindeutig nachverfolgen können. Weitere Informationen finden Sie unter [Modify Data Through a View (Ändern von Daten über eine Sicht)](../../relational-databases/views/modify-data-through-a-view.md).  
+ Die vorigen Einschränkungen gelten, so wie für die Sicht selbst, für alle Unterabfragen in der FROM-Klausel der Sicht. Im Allgemeinen muss [!INCLUDE[ssDE](../../includes/ssde-md.md)] Änderungen von der Sichtdefinition an einer Basistabelle eindeutig nachverfolgen können. Weitere Informationen finden Sie unter [Modify Data Through a View](../../relational-databases/views/modify-data-through-a-view.md) (Ändern von Daten über eine Sicht).  
   
  Wenn Sie aufgrund der vorigen Einschränkungen die Daten nicht direkt über eine Sicht ändern können, sollten Sie die folgenden Optionen berücksichtigen:  
   
@@ -286,7 +284,7 @@ FROM Tn;
   
     -   Eine berechnete Spalte, eine Identitätspalte, eine Standardspalte oder eine **timestamp**-Spalte darf hierfür nicht verwendet werden.  
   
-    -   Wenn es für eine Spalte einer Mitgliedstabelle mehrere Einschränkungen gibt, ignoriert das Datenbankmodul alle diese Einschränkungen und berücksichtigt sie nicht, wenn ermittelt wird, ob die Sicht eine partitionierte Sicht ist. Damit die Bedingungen für partitionierte Sichten erfüllt werden, sollte es für die Partitionierungsspalte nur eine Partitionierungseinschränkung geben.  
+    -   Wenn es für eine Spalte einer Mitgliedstabelle mehrere Einschränkungen gibt, ignoriert die Datenbank-Engine alle diese Einschränkungen und berücksichtigt sie nicht, wenn ermittelt wird, ob die Sicht eine partitionierte Sicht ist. Damit die Bedingungen für partitionierte Sichten erfüllt werden, sollte es für die Partitionierungsspalte nur eine Partitionierungseinschränkung geben.  
   
     -   Für Partitionierungsspalten gelten keine Einschränkungen hinsichtlich der Aktualisierbarkeit.  
   

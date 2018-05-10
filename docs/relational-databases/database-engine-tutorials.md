@@ -1,35 +1,33 @@
 ---
-title: Tutorials zum Datenbankmodul | Microsoft-Dokumentation
+title: Tutorials zur Datenbank-Engine | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: relational-databases-misc
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-query-tuning
+ms.technology: performance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 caps.latest.revision: 14
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 68aa0255d50eabd13f3a42b5dd89d4651c4d78c6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7c5e486ef0801742323dbb62236e4410fa8f074c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="database-engine-tutorials"></a>Lernprogramme zum Datenbankmodul
+# <a name="database-engine-tutorials"></a>Lernprogramme zur Datenbank-Engine
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Dieser Abschnitt enthält Lernprogramme für [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  
   
-[Lernprogramm: Erste Schritte mit dem Datenbankmodul](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
+
+  [Lernprogramm: Erste Schritte mit der Datenbank-Engine](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
 In diesem Lernprogramm erfahren Sie, wie Sie eine Verbindung mit einer [!INCLUDE[ssDE](../includes/ssde-md.md)]instanz herstellen.  
   
 [Lernprogramm: SQL Server Management Studio](../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
@@ -38,7 +36,8 @@ Dieses Tutorial bietet eine Einführung in die integrierte Umgebung zum Verwalte
 [Lernprogramm: Schreiben von Transact-SQL-Anweisungen](../t-sql/tutorial-writing-transact-sql-statements.md)  
 Dieses Tutorial vermittelt die grundlegenden Kenntnisse zum Schreiben der [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen, die für das Erstellen und Verwalten von Objekten in einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank erforderlich sind.  
   
-[Lernprogramm: Datenbankoptimierungsratgeber](../tools/dta/tutorial-database-engine-tuning-advisor.md)  
+
+  [Tutorial: Datenbankoptimierungsratgeber](../tools/dta/tutorial-database-engine-tuning-advisor.md)  
 Dieses Lernprogramm veranschaulicht die Verwendung des Ratgebers und zeigt, wie Abfragen verarbeitet und Empfehlungen zur Verbesserung der Abfrageleistung umgesetzt werden.  
   
 [Lernprogramm: Verwenden des hierarchyid-Datentyps](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)  

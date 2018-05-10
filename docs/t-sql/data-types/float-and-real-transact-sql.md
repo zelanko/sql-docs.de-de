@@ -1,16 +1,14 @@
 ---
 title: float und real (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 7/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - float
@@ -25,16 +23,16 @@ helpviewer_keywords:
 - floating point data [SQL Server]
 - real data type
 ms.assetid: 08ea66b7-624e-4d8b-86bc-750ff76cdfc5
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 5f955e5d367a17602959f5294f9fb5d393b186b5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7a9980c471f81b00f4011b449a1dfcaf9a1f5c98
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="float-and-real-transact-sql"></a>float und real (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,15 +42,15 @@ Ungefähre Zahlendatentypen für numerische Gleitkommadaten. Gleitkommadaten sin
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
-**float** [ **(***n***)** ] Wenn *n* die Anzahl von Bits ist, die zum Speichern der Mantisse der **float**-Zahl in der wissenschaftlichen Schreibweise verwendet werden, und dadurch die Genauigkeit und Speichergröße festlegt. Wenn *n* angegeben wird, muss es sich um einen Wert zwischen **1** und **53** handeln. Der Standardwert von *n* ist **53**.
+**float** [ **(***n***)** ]. Hierbei entspricht *n* der Anzahl von Bits, die zum Speichern der Mantisse der **Gleitkommazahl** in der wissenschaftlichen Schreibweise verwendet werden. Dadurch werden die Genauigkeit und die Speichergröße festlegt. Wenn *n* angegeben wird, muss es sich um einen Wert zwischen **1** und **53** handeln. Der Standardwert von *n* lautet **53**.
   
-|*n* Wert|Genauigkeit|Speichergröße|  
+|Wert *n*|Genauigkeit|Speichergröße|  
 |---|---|---|
 |**1-24**|7 Stellen|4 Byte|  
 |**25-53**|15 Stellen|8 Byte|  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] behandelt *n* als einen von zwei möglichen Werten. Wenn **1**<=n<=**24**, wird *n* als **24** verarbeitet. Wenn **25**<=n<=**53**, wird *n* als **53** verarbeitet.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verarbeitet *n* als einen von zwei möglichen Werten. Wenn **1**<=n<=**24** gegeben ist, wird *n* als **24** behandelt. Wenn **25**<=n<=**53** gegeben ist, wird *n* als **53** behandelt.  
   
 Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float**[**(n)**]-Datentyp entspricht dem ISO-Standard für alle Werte von *n* zwischen **1** und **53**. Das Synonym für **double precision** lautet **float(53)**.
   

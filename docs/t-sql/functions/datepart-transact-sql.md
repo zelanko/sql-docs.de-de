@@ -1,16 +1,14 @@
 ---
 title: DATEPART (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 07/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATEPART_TSQL
@@ -29,23 +27,23 @@ helpviewer_keywords:
 - DATEPART function [SQL Server]
 - dates [SQL Server], dateparts
 ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
-caps.latest.revision: 
+caps.latest.revision: 57
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: a972e0646d68620b915fe441e35ebfb617d06859
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: eee173d268af8e18343c286bda29384b2a327860
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Gibt einen Integer zurück, der den angegebenen *datepart*-Wert des angegebenen *date*-Werts darstellt.
   
-Eine Übersicht über alle Datums- und Uhrzeitdatentypen und zugehörige Funktionen für [!INCLUDE[tsql](../../includes/tsql-md.md)] finden Sie unter [Datums- und Uhrzeitdatentypen und zugehörige Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Eine Übersicht über alle Datums- und Uhrzeitdatentypen und zugehörige Funktionen für [!INCLUDE[tsql](../../includes/tsql-md.md)] finden Sie unter [Date and Time Data Types and Functions &#40;Transact-SQL&#41; (Datums- und Uhrzeitdatentypen und zugehörige Funktionen)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -85,11 +83,11 @@ Um Mehrdeutigkeiten zu vermeiden, sollten Sie vierstellige Jahreszahlen verwende
  **int**  
   
 ## <a name="return-value"></a>Rückgabewert  
-Jedes *datepart*-Argument und die zugehörigen Abkürzungen geben denselben Wert zurück.
+Jedes *datepart*-Argument und die zugehörigen Abkürzungen geben den gleichen Wert zurück.
   
 Der Rückgabewert hängt von der Sprachumgebung ab, die durch [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) und durch die [Konfiguration der Serverkonfigurationsoption „Standardsprache“](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) für die Anmeldung festgelegt wurde. Wenn *date* ein Zeichenfolgenliteral für einige Formate darstellt, hängt der Rückgabewert von dem Format ab, das mit [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) festgelegt wurde. SET DATEFORMAT wirkt sich nicht auf den Rückgabewert aus, wenn das Datum ein Spaltenausdruck für Daten vom Typ Datum oder Uhrzeit darstellt.
   
-In der folgenden Tabelle werden alle *datepart*-Argumente mit den entsprechenden Rückgabewerten für die Anweisung `SELECT DATEPART(datepart,'2007-10-30 12:15:32.1234567 +05:10')` aufgelistet. Der Datentyp des *date*-Arguments ist **datetimeoffset(7)**. Der **nanosecond**-Rückgabewert von *datetime* verfügt über 9 Dezimalstellen (,123456700), wobei die letzten beiden Stellen immer 00 sind.
+In der folgenden Tabelle werden alle *datepart*-Argumente mit den entsprechenden Rückgabewerten für die Anweisung `SELECT DATEPART(datepart,'2007-10-30 12:15:32.1234567 +05:10')` aufgelistet. Der Datentyp des *date*-Arguments ist **datetimeoffset(7)**. Der Rückgabewert **nanosecond***datepart* verfügt über 9 Dezimalstellen (,123456700). Hierbei sind die letzten beiden Stellen immer 00.
   
 |*datepart*|Rückgabewert|  
 |---|---|
@@ -111,9 +109,9 @@ In der folgenden Tabelle werden alle *datepart*-Argumente mit den entsprechenden
 ## <a name="week-and-weekday-datepart-arguments"></a>datepart-Argumente des Typs week und weekday
 Wenn für *datepart* **week** (**wk**, **ww**) oder **weekday** (**dw**) angegeben wurde, hängt der Rückgabewert von dem Wert ab, der durch [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md) festgelegt wurde.
   
-Der 1. Januar eines Jahres definiert die Anfangszahl für das *datepart*-Argument **week**. Beispiel: DATEPART (**wk**, 'Jan 1, *xxx*x') = 1, wobei *xxxx* ein beliebiges Jahr ist.
+Der 1. Januar eines Jahres definiert die Anfangszahl für **week***datepart*. Beispiel: DATEPART (** wk**, 'Jan 1, *xxx*x') = 1. Hierbei entspricht *xxxx* einem beliebigen Jahr.
   
-In der folgenden Tabelle wird für jedes SET DATEFIRST-Argument der Rückgabewert des Arguments **week** und **weekday** von *datepart* für '2007-04-21' aufgelistet. Der 1. Januar ist im Jahr 2007 ein Montag. Der 21. April ist im Jahr 2007 ein Samstag. SET DATEFIRST 7 (Sonntag) ist die Standardeinstellung für Englisch (USA). Englisch.
+In der folgenden Tabelle wird für jedes SET DATEFIRST-Argument der Rückgabewert von **week** and **weekday***datepart* für '2007-04-21' aufgelistet. Der 1. Januar ist im Jahr 2007 ein Montag. Der 21. April ist im Jahr 2007 ein Samstag. SET DATEFIRST 7 (Sonntag) ist die Standardeinstellung für Englisch (USA). Englisch.
   
 |SET DATEFIRST<br /><br /> Argument|week<br /><br /> hat zurückgegeben|weekday<br /><br /> hat zurückgegeben|  
 |---|---|---|

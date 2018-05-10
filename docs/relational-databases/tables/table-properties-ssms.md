@@ -3,15 +3,12 @@ title: Tabelleneigenschaften – SSMS | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
-ms.component: tables
+ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.tableproperties.storage.f1
 - sql13.swb.tableproperties.changetracking.f1
@@ -23,13 +20,12 @@ caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f9f9d31974b90f04faca1164bdc3c0e3916a37b0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 23b4e9001a95da177b0b1f5a2d25fefa329ebfb3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -75,7 +71,7 @@ ms.lasthandoff: 04/16/2018
  Gibt an, ob das Objekt mit der Option „Bezeichner in Anführungszeichen“ auf ON erstellt wurde. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)  
   
  **Sperrenausweitung**  
- Gibt die Granularität der Sperrenausweitung der Tabelle an. Weitere Informationen zum Sperren im Datenbankmodul finden Sie im [Handbuch zu Transaktionssperren und Zeilenversionsverwaltung in SQL Server](http://msdn.microsoft.com/library/jj856598.aspx). Folgende Werte sind möglich:  
+ Gibt die Granularität der Sperrenausweitung der Tabelle an. Weitere Informationen zum Sperren in der Datenbank-Engine finden Sie im [Handbuch zu Transaktionssperren und Zeilenversionsverwaltung in SQL Server](http://msdn.microsoft.com/library/jj856598.aspx). Folgende Werte sind möglich:  
   
  AUTO  
  Mit dieser Option kann von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] die für das Tabellenschema geeignete Granularität der Sperrenausweitung ausgewählt werden.  
@@ -181,6 +177,7 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Anzeigen der Tabellendefinition](../../relational-databases/tables/view-the-table-definition.md)   
- [Ändern von Spalten &#40;Datenbankmodul&#41;](../../relational-databases/tables/modify-columns-database-engine.md)  
+ 
+  [Ändern von Spalten &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/tables/modify-columns-database-engine.md)  
   
   

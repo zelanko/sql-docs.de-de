@@ -1,30 +1,27 @@
 ---
-title: "Reporting Services mit Always On-Verfügbarkeitsgruppen (SQL Server) | Microsoft-Dokumentation"
-ms.custom: 
+title: Reporting Services mit Always On-Verfügbarkeitsgruppen (SQL Server) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: availability-groups
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: eec3793f658bf1194787c0f3e2391903308d3ea6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6e89f8b784c822f8792c823054c62ae01ddd7e42
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services mit Always On-Verfügbarkeitsgruppen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +30,7 @@ ms.lasthandoff: 01/08/2018
   
  Ein entscheidender Vorteil bei der Verwendung von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] mit [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Datenquellen liegt darin, dass lesbare sekundäre Replikate als Berichtsdatenquelle genutzt werden, während gleichzeitig die sekundären Replikate ein Failover für eine primäre Datenbank bereitstellen.  
   
- Allgemeine Informationen zu [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]finden Sie unter [FAQ zu Always On für SQL Server 2012 (http://msdn.microsoft.com/sqlserver/gg508768)](http://msdn.microsoft.com/sqlserver/gg508768).  
+ Weitere Informationen zu [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] finden Sie unter [Always On FAQ for SQL Server 2012 (Häufig gestellte Fragen zu Always On für SQL Server 2012 (http://msdn.microsoft.com/sqlserver/gg508768)](http://msdn.microsoft.com/sqlserver/gg508768))).  
   
  **In diesem Thema:**  
   
@@ -148,7 +145,7 @@ ms.lasthandoff: 01/08/2018
   
 -   ReportServerTempDB  
   
- Der einheitliche Modus unterstützt bzw. verwendet Warnungsdatenbanken und zugehörige Funktionen nicht. Berichtsserver im einheitlichen Modus konfigurieren Sie im [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager. Im SharePoint-Modus konfigurieren Sie den Dienstanwendungsdatenbanknamen als Namen des "Clientzugriffspunkts", den Sie als Teil der SharePoint-Konfiguration erstellten. Weitere Informationen zum Konfigurieren von SharePoint mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]finden Sie unter [Konfigurieren und Verwalten von SQL Server-Verfügbarkeitsgruppen für SharePoint Server (http://go.microsoft.com/fwlink/?LinkId=245165)](http://go.microsoft.com/fwlink/?LinkId=245165).  
+ Der einheitliche Modus unterstützt bzw. verwendet Warnungsdatenbanken und zugehörige Funktionen nicht. Berichtsserver im einheitlichen Modus konfigurieren Sie im [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager. Im SharePoint-Modus konfigurieren Sie den Dienstanwendungsdatenbanknamen als Namen des "Clientzugriffspunkts", den Sie als Teil der SharePoint-Konfiguration erstellten. Weitere Informationen zum Konfigurieren von SharePoint mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] finden Sie unter [Konfigurieren und Verwalten von SQL Server-Verfügbarkeitsgruppen für SharePoint Server (http://go.microsoft.com/fwlink/?LinkId=245165)](http://go.microsoft.com/fwlink/?LinkId=245165)).  
   
 > [!NOTE]  
 >  Berichtsserver im SharePoint-Modus verwenden einen Synchronisierungsvorgang zwischen den [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Dienstanwendungsdatenbanken und den SharePoint-Inhaltsdatenbanken. Es ist wichtig, die Berichtsserver-Datenbanken und Inhaltsdatenbanken zusammen zu verwalten. Sie sollten erwägen, sie in den gleichen Verfügbarkeitsgruppen zu konfigurieren, damit sie bei Failover und Wiederherstellung als Satz behandelt werden. Nehmen Sie das folgende Szenario als Beispiel:  
@@ -173,7 +170,7 @@ ms.lasthandoff: 01/08/2018
 ###  <a name="bkmk_steps_to_complete_failover"></a> Schritte zum Abschluss der Notfallwiederherstellung von Berichtsserver-Datenbanken  
  Die folgenden Schritte müssen nach einem [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Failover zu einem sekundären Replikat ausgeführt werden:  
   
-1.  Beenden Sie die Instanz des SQL Agent-Diensts, der vom primären Datenbankmodul verwendet wurde, das die [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Datenbanken hostet.  
+1.  Beenden Sie die Instanz des SQL Agent-Diensts, der von der primären Datenbank-Engine verwendet wurde, das die [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Datenbanken hostet.  
   
 2.  Starten Sie den SQL Agent-Dienst auf dem Computer, der das neue primäre Replikat ist.  
   

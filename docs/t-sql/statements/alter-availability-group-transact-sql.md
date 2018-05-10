@@ -1,16 +1,14 @@
 ---
 title: ALTER AVAILABILITY GROUP (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 01/02/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_AVAILABILITY_GROUP_TSQL
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
-caps.latest.revision: 
+caps.latest.revision: 152
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d9f18ee709fde7c9f239b08f553eaf43fad6e9d2
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: b00b6e36b24dbe000a3651841ca347b8539e690c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -193,7 +190,7 @@ ALTER AVAILABILITY GROUP group_name
 >  Um die automatisierte Sicherungseinstellung einer vorhandenen Verfügbarkeitsgruppe anzuzeigen, wählen Sie die Spalten **automated_backup_preference** oder **automated_backup_preference_desc** der Katalogsicht [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) aus. Darüber hinaus kann [sys.fn_hadr_backup_is_preferred_replica &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) verwendet werden, um das bevorzugte Sicherungsreplikat zu bestimmen.  Diese Funktion gibt immer 1 für mindestens eines der Replikate zurück, sogar wenn `AUTOMATED_BACKUP_PREFERENCE = NONE` ist.  
   
  FAILURE_CONDITION_LEVEL **=** { 1 | 2 | **3** | 4 | 5 }  
- Gibt an, welche Fehlerbedingungen ein automatisches Failover für diese Verfügbarkeitsgruppe auslösen. FAILURE_CONDITION_LEVEL wird auf Gruppenebene festgelegt, ist aber nur auf Verfügbarkeitsreplikaten relevant, die für den Verfügbarkeitsmodus mit synchronen Commits (AVAILIBILITY_MODE **=** SYNCHRONOUS_COMMIT) konfiguriert sind. Weiterhin können Fehlerbedingungen ein automatisches Failover nur auslösen, wenn das primäre und das sekundäre Replikat für den automatischen Failovermodus konfiguriert sind (FAILOVER_MODE **=** AUTOMATIC) und das sekundäre Replikat gerade mit dem primären Replikat synchronisiert wird.  
+ Gibt an, welche Fehlerbedingungen ein automatisches Failover für diese Verfügbarkeitsgruppe auslösen. FAILURE_CONDITION_LEVEL wird auf Gruppenebene festgelegt, ist aber nur auf Verfügbarkeitsreplikaten relevant, die für den Verfügbarkeitsmodus mit synchronen Commits (AVAILIBILITY_MODE **=** SYNCHRONOUS_COMMIT) konfiguriert sind. Weiterhin können Fehlerbedingungen nur ein automatisches Failover auslösen, wenn das primäre und das sekundäre Replikat für den automatischen Failovermodus konfiguriert sind (FAILOVER_MODE **=** AUTOMATIC) und das sekundäre Replikat gerade mit dem primären Replikat synchronisiert wird.  
   
  Wird nur für das primäre Replikat unterstützt.  
   
@@ -232,7 +229,7 @@ ALTER AVAILABILITY GROUP group_name
  Eingeführt in SQL Server 2017. Dient zum Festlegen einer minimalen Anzahl synchroner sekundärer Replikate, um einen Commit auszuführen, bevor das primäre Replikat einen Commit für die Transaktion ausführt. Garantiert, dass die SQL Server-Transaktion wartet, bis die Transaktionsprotokolle für die minimale Anzahl von sekundären Replikaten aktualisiert werden. Der Standardwert ist 0. Dies bietet das gleiche Verhalten wie SQL Server 2016. Der Mindestwert beträgt 0. Der maximale Wert ist die Anzahl der Replikate minus 1. Diese Option bezieht sich auf Replikate im synchronen Commitmodus. Wenn sich Replikate im synchronen Commitmodus befinden, warten Schreibvorgänge auf dem primären Replikat, bis Schreibvorgänge auf dem zweiten synchronen Replikat an das Transaktionsprotokoll der Replikatsdatenbank übergeben werden. Wenn ein SQL Server, der ein sekundäres synchronisiertes Replikat hostet, nicht mehr reagiert, markiert der SQL Server, der das erste primäre Replikat hostet, dieses sekundäre Replikat als NOT SYNCHRONIZED (nicht synchronisiert). Wenn die nicht reagierende Datenbank wieder online geschaltet wird, befindet sie sich im Zustand „nicht synchronisiert“ und das Replikat wird als fehlerhaft markiert bis das primäre Replikat den Zustand „synchron“ wieder herstellen kann. Diese Einstellung stellt sicher, dass das primäre Replikat wartet, bis die minimale Anzahl der Replikate ein Commit für jede Transaktion ausgeführt hat. Wenn die minimale Anzahl der Replikate nicht verfügbar ist, schlagen Commits auf dem primären Replikat fehl. Für den Clustertyp `EXTERNAL` wird diese Einstellung geändert, wenn die Verfügbarkeitsgruppe der Clusterressource hinzugefügt wird. Weitere Informationen finden Sie unter [Hochverfügbarkeit und Schutz von Daten für Verfügbarkeitsgruppenkonfigurationen](../../linux/sql-server-linux-availability-group-ha.md).
   
  ADD DATABASE *database_name*  
- Gibt eine Liste von Benutzerdatenbanken an, die Sie der Verfügbarkeitsgruppe hinzufügen möchten. Diese Datenbanken müssen sich auf der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] befinden, die das aktuelle primäre Replikat hostet. Sie können mehrere Datenbanken für eine Verfügbarkeitsgruppe angeben, aber jede Datenbank kann nur zu einer Verfügbarkeitsgruppe gehören. Informationen über die Datenbanktypen, für die eine Verfügbarkeitsgruppe Unterstützung bietet finden Sie unter [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md). In der **replica_id**-Spalte in der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)-Katalogsicht können Sie herausfinden, welche lokalen Datenbanken bereits zu einer Verfügbarkeitsgruppe gehören.  
+ Gibt eine Liste von Benutzerdatenbanken an, die Sie der Verfügbarkeitsgruppe hinzufügen möchten. Diese Datenbanken müssen sich auf der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] befinden, die das aktuelle primäre Replikat hostet. Sie können mehrere Datenbanken für eine Verfügbarkeitsgruppe angeben, aber jede Datenbank kann nur zu einer Verfügbarkeitsgruppe gehören. Informationen über die Datenbanktypen, für die eine Verfügbarkeitsgruppe Unterstützung bietet finden Sie unter [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md). In der Spalte **replica_id** in der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)-Katalogsicht können Sie überprüfen, welche lokalen Datenbanken bereits zu einer Verfügbarkeitsgruppe gehören.  
   
  Wird nur für das primäre Replikat unterstützt.  
   
@@ -268,7 +265,7 @@ ALTER AVAILABILITY GROUP group_name
  Ist der Name einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz, die von *system_name* oder *FCI_network_name* gehostet wird und für die Always On aktiviert ist. Bei einer Standardserverinstanz ist *instance_name* optional. Bei dem Instanznamen wird die Groß-/Kleinschreibung berücksichtigt. In einer eigenständigen Serverinstanz stimmt der Name dieses Werts mit dem Wert überein, der beim Ausführen von SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) zurückgegeben wird.  
   
  \  
- Ist ein Trennzeichen, das nur beim Angeben von *instance_name* zum Trennen von *system_name* bzw. *FCI_network_name* verwendet wird.  
+ Ist eine Trennzeichen, das nur bei der Angabe von *instance_name* verwendet wird, um dieses Element von *system_name* oder *FCI_network_name* zu trennen.  
   
  Informationen zu den Voraussetzungen für WSFC-Knoten und Serverinstanzen finden Sie unter [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
@@ -277,7 +274,7 @@ ALTER AVAILABILITY GROUP group_name
   
  ENDPOINT_URL ist in der ADD REPLICA ON-Klausel erforderlich und in der MODIFY REPLICA ON-Klausel optional.  Weitere Informationen finden Sie unter [Angeben der Endpunkt-URL beim Hinzufügen oder Ändern eines Verfügbarkeitsreplikats &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)zu unterstützen.  
   
- **'**TCP**://***system-address***:***port***'**  
+ **'** TCP **://***system-address***:***port***'**  
  Gibt eine URL zum Bestimmen einer Endpunkt-URL oder einer URL für das schreibgeschützte Routing an. Die URL-Parameter lauten wie folgt:  
   
  *system-address*  
@@ -330,7 +327,7 @@ ALTER AVAILABILITY GROUP group_name
 >  Um das direkte Seeding zu ermöglichen, müssen Sie die Datenbankerstellung auf jedem sekundären Replikat zulassen, indem Sie den Befehl **ALTER AVAILABILITY GROUP** mit der Option **GRANT CREATE ANY DATABASE** aufrufen.  
   
  MANUAL  
- Gibt das manuelle Seeding an (Standard). Bei dieser Methode müssen Sie eine Sicherungskopie der Datenbank auf dem primären Replikat erstellen und sie manuell auf dem sekundären Replikat wiederherstellen.  
+ Gibt das manuelle Seeding an (Standard). Bei dieser Methode müssen Sie eine Sicherungskopie der Datenbank auf dem primären Replikat erstellen und diese manuell auf dem sekundären Replikat wiederherstellen.  
   
  BACKUP_PRIORITY **=***n*  
  Gibt die Priorität für die Ausführung von Sicherungen auf diesem Replikat in Relation zu den anderen Replikaten in derselben Verfügbarkeitsgruppe an. Der Wert liegt im Bereich von 0 bis 100 und ist eine ganze Zahl. Diese Werte haben die folgenden Bedeutungen:  
@@ -353,15 +350,15 @@ ALTER AVAILABILITY GROUP group_name
  Es werden keine Verbindungen mit sekundären Datenbanken dieses Replikats zugelassen. Sie sind für den Lesezugriff nicht verfügbar. Dies ist das Standardverhalten.  
   
  READ_ONLY  
- Verbindungen mit den Datenbanken im sekundären Replikat sind nur zulässig, wenn die Anwendungsabsicht-Eigenschaft auf **ReadOnly** festgelegt ist. Weitere Informationen zu dieser Eigenschaft finden Sie unter [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Verbindungen mit den Datenbanken im sekundären Replikat sind nur zulässig, wenn die Eigenschaft für die Anwendungsabsicht auf **ReadOnly** festgelegt ist. Weitere Informationen zu dieser Eigenschaft finden Sie unter [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
  ALL  
  Für alle Verbindungen mit den Datenbanken im sekundären Replikat ist der schreibgeschützte Zugriff zugelassen.  
   
  Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Lesbare sekundäre Replikate &#40;Always On-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)wichtig sind.  
   
- READ_ONLY_ROUTING_URL **='**TCP**://***system-address***:***port***'**  
- Gibt die URL an, die zum Weiterleiten von Verbindungsanforderungen für beabsichtigte Lesevorgänge zu diesem Verfügbarkeitsreplikat verwendet werden soll. Dies ist die URL, die das SQL Server-Datenbankmodul überwacht. In der Regel überwacht die Standardinstanz des SQL Server-Datenbankmoduls auf TCP-Port 1433.  
+ READ_ONLY_ROUTING_URL **='** TCP **://***system-address***:***port***'**  
+ Gibt die URL an, die zum Weiterleiten von Verbindungsanforderungen für beabsichtigte Lesevorgänge zu diesem Verfügbarkeitsreplikat verwendet werden soll. Dies ist die URL, die die SQL Server-Datenbank-Engine überwacht. In der Regel überwacht die Standardinstanz der SQL Server-Datenbank-Engine auf TCP-Port 1433.  
   
  Für eine benannte Instanz können Sie die Portnummer durch das Abfragen der Spalten **port** und **type_desc** der dynamischen [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)-Verwaltungssicht abrufen. Die Serverinstanz verwendet den Transact-SQL-Listener (**type_desc='TSQL'**).  
   
@@ -398,7 +395,7 @@ ALTER AVAILABILITY GROUP group_name
   
  Verwenden Sie eine durch Trennzeichen getrennte Liste, um alle der Serverinstanzen anzugeben, die ein lesbares sekundäres Replikat hosten könnten. Schreibgeschütztes Routing erfolgt in der Reihenfolge, in der Serverinstanzen in der Liste angegeben werden. Wenn Sie die Hostserverinstanz eines Replikats auf der schreibgeschützten Routingliste des Replikats einschließen, ist es eine empfohlene Vorgehensweise, diese Serverinstanz am Ende der Liste zu platzieren, damit Verbindungen für beabsichtigte Lesevorgänge bei Verfügbarkeit zu einem sekundären Replikat wechseln.  
   
- Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] können Sie einen Lastenausgleich für Anforderungen von beabsichtigten Lesevorgängen über lesbare sekundäre Replikate durchführen. Dies können Sie angeben, indem Sie die Replikate in geschachtelten Klammern innerhalb der schreibgeschützten Routingliste platzieren. Weitere Informationen und Beispiele finden Sie unter [Konfigurieren von Lastenausgleich über schreibgeschützte Replikate hinweg](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing).  
+ Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] können Sie einen Lastenausgleich für Anforderungen von beabsichtigten Lesevorgängen über lesbare sekundäre Replikate durchführen. Dies können Sie angeben, indem Sie die Replikate in geschachtelten Klammern innerhalb der schreibgeschützten Routingliste platzieren. Weitere Informationen und Beispiele finden Sie unter [Configure load-balancing across read-only replicas (Konfigurieren des Lastenausgleichs für mehrere schreibgeschützte Replikate)](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing).  
   
  Keine  
  Gibt an, dass, wenn dieses Verfügbarkeitsreplikat das primäre Replikat ist, schreibgeschütztes Routing nicht unterstützt wird. Dies ist das Standardverhalten. Wenn dieser Wert zusammen mit MODIFY REPLICA ON verwendet wird, aktiviert er ggf. die vorhandene Liste.  
@@ -481,19 +478,19 @@ ALTER AVAILABILITY GROUP group_name
  \<ag_name>  
  Gibt den Namen der Verfügbarkeitsgruppe an, die eine Hälfte der verteilten Verfügbarkeitsgruppe ausmacht.  
   
- LISTENER **='**TCP**://***system-address***:***port***'**  
+ LISTENER **='** TCP **://***system-address***:***port***'**  
  Gibt den URL-Pfad für den Listener an, der der Verfügbarkeitsgruppe zugeordnet ist.  
   
  Die LISTENER-Klausel ist erforderlich.  
   
- **'**TCP**://***system-address***:***port***'**  
+ **'** TCP **://***system-address***:***port***'**  
  Gibt eine URL für den Listener an, der der Verfügbarkeitsgruppe zugeordnet ist. Die URL-Parameter lauten wie folgt:  
   
  *system-address*  
- Ist eine Zeichenfolge, beispielsweise ein Systemname, ein vollqualifizierter Domänenname oder eine IP-Adresse, die den Listener eindeutig identifiziert.  
+ Eine Zeichenfolge, beispielsweise ein Systemname, ein vollqualifizierter Domänenname oder eine IP-Adresse, die den Listener eindeutig identifiziert.  
   
  *port*  
- Ist eine Portnummer, die dem Spiegelungsendpunkt der Verfügbarkeitsgruppe zugeordnet ist. Beachten Sie, dass dies nicht der Port des Listeners ist.  
+ Eine Portnummer, die dem Spiegelungsendpunkt der Verfügbarkeitsgruppe zugeordnet ist. Beachten Sie, dass dies nicht der Port des Listeners ist.  
   
  AVAILABILITY_MODE **=** { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }  
  Gibt an, ob das primäre Replikat auf die sekundäre Verfügbarkeitsgruppe warten muss, um das Verstärken (Schreiben) der Protokolldatensätze auf einem Datenträger zu bestätigen, bevor das primäre Replikat die Transaktion auf einer bestimmten primären Datenbank ausführen kann.  
@@ -565,7 +562,7 @@ ALTER AVAILABILITY GROUP group_name
  Gibt eine IPv6-Adresse für einen Verfügbarkeitsgruppenlistener an. Beispiel: `2001::4898:23:1002:20f:1fff:feff:b3a3`.  
   
  PORT **=** *listener_port*  
- Gibt die Portnummer – *listener_port* – an, die von einem Verfügbarkeitsgruppenlistener verwendet wird, der anhand einer WITH IP-Klausel angegeben wird. PORT ist optional.  
+ Gibt die Portnummer (*listener_port*) an, die von einem Verfügbarkeitsgruppenlistener verwendet wird, der anhand einer WITH IP-Klausel angegeben wird. PORT ist optional.  
   
  Die Standardportnummer 1433 wird unterstützt. Wenn Sie jedoch Sicherheitsbedenken hegen, empfehlen wir die Verwendung einer anderen Portnummer.  
   

@@ -3,26 +3,22 @@ title: Erstellen einer verschlüsselten Sicherung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/04/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: backup-restore
+ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 3a4d39f21fb357c4900fa6c3d2fc99601e1e2980
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d963909a74b3d82bc9f851eff18ccf48036b9657
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-an-encrypted-backup"></a>Erstellen einer verschlüsselten Sicherung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +33,7 @@ ms.lasthandoff: 04/16/2018
   
  Führen Sie die folgenden Schritte aus, um eine verschlüsselte Sicherung einer Datenbank auf einem lokalen Datenträger zu erstellen. In diesem Beispiel wird eine Benutzerdatenbank mit dem Namen MyTestDB verwendet.  
   
-1.  **Erstellen Sie einen Datenbank-Hauptschlüssel der Masterdatenbank:** Wählen Sie ein Kennwort zum Verschlüsseln der Kopie des Hauptschlüssels aus, der in der Datenbank gespeichert wird. Stellen Sie eine Verbindung mit dem Datenbankmodul her, öffnen Sie ein neues Abfragefenster, kopieren Sie das folgende Beispiel, fügen Sie es ein, und klicken Sie auf **Ausführen**.  
+1.  **Erstellen Sie einen Datenbank-Hauptschlüssel der Masterdatenbank:** Wählen Sie ein Kennwort zum Verschlüsseln der Kopie des Hauptschlüssels aus, der in der Datenbank gespeichert wird. Stellen Sie eine Verbindung mit der Datenbank-Engine her, öffnen Sie ein neues Abfragefenster, kopieren Sie das folgende Beispiel, fügen Sie es ein, und klicken Sie auf **Ausführen**.  
   
     ```  
     -- Creates a database master key.   
@@ -88,7 +84,8 @@ ms.lasthandoff: 04/16/2018
   
 -   Ein Datenbank-Hauptschlüssel für die Masterdatenbank und ein Zertifikat oder ein asymmetrischer Schlüssel in der SQL Server-Instanz. Informationen zu Verschlüsselungsanforderungen und Berechtigungen finden Sie unter [Backup Encryption](../../relational-databases/backup-restore/backup-encryption.md).  
   
-1.  **Erstellen Sie SQL Server-Anmeldeinformationen:** Um SQL Server-Anmeldeinformationen zu erstellen, stellen Sie eine Verbindung mit dem Datenbankmodul her, öffnen Sie ein neues Abfragefenster, kopieren Sie das folgende Beispiel, fügen Sie es ein, und klicken Sie auf **Ausführen**.  
+1.  
+  **Erstellen Sie SQL Server-Anmeldeinformationen:** Um SQL Server-Anmeldeinformationen zu erstellen, stellen Sie eine Verbindung mit der Datenbank-Engine her, öffnen Sie ein neues Abfragefenster, kopieren Sie das folgende Beispiel, fügen Sie es ein, und klicken Sie auf **Ausführen**.  
   
     ```  
     CREATE CREDENTIAL mycredential   
@@ -96,7 +93,7 @@ ms.lasthandoff: 04/16/2018
     , SECRET = '<storage account access key>' – this should be either the Primary or Secondary Access Key for the storage account  
     ```  
   
-2.  **Erstellen Sie einen Datenbank-Hauptschlüssel:** Wählen Sie ein Kennwort zum Verschlüsseln der Kopie des Hauptschlüssels aus, der in der Datenbank gespeichert wird. Stellen Sie eine Verbindung mit dem Datenbankmodul her, öffnen Sie ein neues Abfragefenster, kopieren Sie das folgende Beispiel, fügen Sie es ein, und klicken Sie auf **Ausführen**.  
+2.  **Erstellen Sie einen Datenbank-Hauptschlüssel:** Wählen Sie ein Kennwort zum Verschlüsseln der Kopie des Hauptschlüssels aus, der in der Datenbank gespeichert wird. Stellen Sie eine Verbindung mit der Datenbank-Engine her, öffnen Sie ein neues Abfragefenster, kopieren Sie das folgende Beispiel, fügen Sie es ein, und klicken Sie auf **Ausführen**.  
   
     ```  
     -- Creates a database master key.  

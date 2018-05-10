@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
@@ -17,12 +16,11 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2d15f0865ccecd60dc6af558cafcd67e8646043a
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 026b01925fbcf0ec615da77793dff7f84221322f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="functions---dmexecutionperformancecounters"></a>Funktionen – dm_execution_performance_counters
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -47,15 +45,15 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
   
 |Indikatorname|Description|  
 |------------------|-----------------|  
-|Gelesene BLOB-Bytes|Anzahl der Bytes der BLOB-Daten (Binary Large Object), die das Datenflussmodul in allen Datenquellen liest.|  
-|Geschriebene BLOB-Bytes|Anzahl der Bytes der BLOB-Daten (Binary Large Object), die das Datenflussmodul in alle Ziele schreibt.|  
-|Verwendete BLOB-Dateien|Anzahl von BLOB-Dateien, die das Datenflussmodul zum Spoolen verwendet.|  
+|Gelesene BLOB-Bytes|Anzahl der Bytes der BLOB-Daten (Binary Large Object), die die Datenfluss-Engine in allen Datenquellen liest.|  
+|Geschriebene BLOB-Bytes|Anzahl der Bytes der BLOB-Daten (Binary Large Object), die die Datenfluss-Engine in alle Ziele schreibt.|  
+|Verwendete BLOB-Dateien|Anzahl von BLOB-Dateien, die die Datenfluss-Engine zum Spoolen verwendet.|  
 |Pufferspeicher|Arbeitsspeicher, der von den Integration Services-Puffern verwendet wird, einschließlich des physischen und virtuellen Arbeitsspeichers.|  
-|Verwendete Puffer|Anzahl von Pufferobjekten aller Typen, die alle Datenflusskomponenten und das Datenflussmodul verwenden.|  
+|Verwendete Puffer|Anzahl von Pufferobjekten aller Typen, die alle Datenflusskomponenten und die Datenfluss-Engine verwenden.|  
 |Gespoolte Puffer|Anzahl der auf den Datenträger geschriebenen Puffer.|  
 |Flatpufferspeicher|Arbeitsspeicher in Bytes, der von allen Flatpuffern verwendet wird. Als Flatpuffer werden Speicherblöcke bezeichnet, die von einer Komponente zum Speichern von Daten verwendet werden.|  
-|Verwendete Flatpuffer|Anzahl der vom Datenflussmodul verwendeten Flatpuffer. Alle Flatpuffer sind private Puffer.|  
-|Privater Pufferspeicher|Arbeitsspeicher, die von allen privaten Puffern verwendet wird. Ein Puffer wird als privat bezeichnet, wenn er von einer Transformation für temporäre Arbeitsvorgänge verwendet wird.<br /><br /> Ein Puffer ist nicht privat, wenn das Datenflussmodul den Puffer zur Unterstützung des Datenflusses erstellt.|  
+|Verwendete Flatpuffer|Anzahl der von der Datenfluss-Engine verwendeten Flatpuffer. Alle Flatpuffer sind private Puffer.|  
+|Privater Pufferspeicher|Arbeitsspeicher, die von allen privaten Puffern verwendet wird. Ein Puffer wird als privat bezeichnet, wenn er von einer Transformation für temporäre Arbeitsvorgänge verwendet wird.<br /><br /> Ein Puffer ist nicht privat, wenn die Datenfluss-Engine den Puffer zur Unterstützung des Datenflusses erstellt.|  
 |Private verwendete Puffer|Anzahl von Puffern, die die Transformationen für temporäre Arbeitsvorgänge verwenden.|  
 |Gelesene Zeilen|Gesamtzahl der für die Ausführung bereiten Zeilen.|  
 |Geschriebene Zeilen|Gesamtzahl der von der Ausführung geschriebenen Zeilen.|  

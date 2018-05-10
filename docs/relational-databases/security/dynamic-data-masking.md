@@ -1,7 +1,7 @@
 ---
 title: Dynamische Datenmaskierung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/26/2016
+ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
@@ -19,11 +19,11 @@ ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1a261930d257f4c787a5f28af59d82ee75a7af7c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 453399db3852ff7165bfd569a255b16797675fc5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dynamic-data-masking"></a>Dynamische Datenmaskierung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ Ein Supportmitarbeiter in einem Call Center kann z. B. Anrufer anhand mehrerer 
   
 -   Die Verwendung von `SELECT INTO` oder `INSERT INTO` zum Kopieren von Daten aus einer maskierten Spalte in eine andere Tabelle führt zu maskierten Daten in der Zieltabelle.  
   
--   Die dynamische Datenmaskierung wird beim Ausführen von Import- und Exportvorgängen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angewendet. Eine Datenbank mit maskierten Spalten führt zu einer Sicherungsdatei mit maskierten Daten (vorausgesetzt, sie wird durch einen Benutzer ohne **UNMASK** -Berechtigungen exportiert), und die importierte Datenbank enthält statisch maskierte Daten.  
+-   Die dynamische Datenmaskierung wird beim Ausführen von Import- und Exportvorgängen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angewendet. Eine Datenbank mit maskierten Spalten führt zu einer exportierten Datendatei mit maskierten Daten (vorausgesetzt, sie wird durch einen Benutzer ohne **UNMASK**-Berechtigungen exportiert), und die importierte Datenbank enthält statisch maskierte Daten.  
   
 ## <a name="querying-for-masked-columns"></a>Abfragen von maskierten Spalten  
  Verwenden Sie die **sys.masked_columns** -Ansicht zum Abfragen von Tabellenspalten, auf die eine Maskierungsfunktion angewendet wird. Diese Ansicht erbt von der **sys.columns** -Ansicht. Sie gibt alle Spalten in der **sys.columns** -Ansicht sowie die Spalten **is_masked** und **masking_function** zurück, wobei angegeben wird, ob die Spalte maskiert ist. Ist dies der Fall, gibt die Ansicht die definierte Maskierungsfunktion an. Diese Ansicht zeigt nur die Spalten an, auf die eine Maskierungsfunktion angewendet wird.  

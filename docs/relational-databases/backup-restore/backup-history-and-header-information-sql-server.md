@@ -3,15 +3,12 @@ title: Sicherungsverlauf und Headerinformationen (SQL Server) | Microsoft-Dokume
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: backup-restore
+ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backup headers [SQL Server]
 - history tables [SQL Server]
@@ -40,12 +37,11 @@ caps.latest.revision: 54
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d03a11e3048a65ef344b14dbcd2a7840a619b52f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: cd442f668c272795321a93d23faf2ae832673788
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Sicherungsverlauf und Headerinformationen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -129,7 +125,7 @@ ms.lasthandoff: 04/16/2018
  Weitere Informationen finden Sie unter [Vergleich von Medienheader- und Sicherungsheaderinformationen](#CompareMediaHeaderBackupHeader)weiter unten in diesem Thema.  
   
 ### <a name="which-backup-set-to-restore"></a>Wiederherzustellender Sicherungssatz  
- Anhand der Informationen im Sicherungsheader können Sie den wiederherzustellenden Sicherungssatz identifizieren. Das Datenbankmodul nummeriert jeden Sicherungssatz auf den Sicherungsmedien. Dadurch können Sie den wiederherzustellenden Sicherungssatz mithilfe seiner Position auf dem Medium identifizieren. Beispielsweise enthalten die folgenden Medien drei Sicherungssätze.  
+ Anhand der Informationen im Sicherungsheader können Sie den wiederherzustellenden Sicherungssatz identifizieren. Die Datenbank-Engine nummeriert jeden Sicherungssatz auf den Sicherungsmedien. Dadurch können Sie den wiederherzustellenden Sicherungssatz mithilfe seiner Position auf dem Medium identifizieren. Beispielsweise enthalten die folgenden Medien drei Sicherungssätze.  
   
  ![Sichern von Medien mit SQL Server-Sicherungssätzen](../../relational-databases/backup-restore/media/bnr-media-backup-sets.gif "Backup media containing SQL Server backup sets")  
   

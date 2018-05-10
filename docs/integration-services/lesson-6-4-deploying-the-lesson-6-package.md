@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
@@ -19,12 +18,11 @@ caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a1ad68091495902bd1dff186d2ee4e1be0e5f13c
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 068b41cad8d65dd7fda2d1ad511113a9b1d1d868
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-6-4---deploying-the-lesson-6-package"></a>Lektion 6-4 – Bereitstellen des Pakets aus Lektion 6
 Zum Bereitstellen des Pakets muss das Paket dem SSISDB-Katalog in Integration Services in einer Instanz von SQL Server hinzugefügt werden. In dieser Lektion werden Sie dem SSISDB-Katalog das Paket aus Lektion 6 hinzufügen, den Parameter festlegen und das Paket ausführen. Für diese Lektion werden Sie mithilfe von SQL Server Management Studio dem SSISDB-Katalog das Paket aus Lektion 6 hinzufügen und das Paket bereitstellen. Nach dem Bereitstellen des Pakets, ändern Sie den Parameter, um auf einen neuen Speicherort zu verweisen, und führen dann das Paket aus.  
@@ -43,7 +41,7 @@ In dieser Lektion führen Sie die folgenden Aktionen aus:
   
 1.  Klicken Sie auf "Start", zeigen Sie auf "Alle Programme" und auf "Microsoft SQL Server 2012", und klicken Sie anschließend auf "SQL Management Studio".  
   
-2.  Überprüfen Sie im Dialogfeld "Verbindung mit dem Server herstellen" die Standardeinstellungen, und klicken Sie dann auf "Verbinden". Damit die Verbindung hergestellt werden kann, muss das Feld "Servername" den Namen des Computers enthalten, auf dem SQL Server installiert ist. Wenn es sich beim Datenbankmodul um eine benannte Instanz handelt, sollte das Feld „Servername“ zudem den Instanznamen im Format <Computername>\\<Instanzname> enthalten.  
+2.  Überprüfen Sie im Dialogfeld "Verbindung mit dem Server herstellen" die Standardeinstellungen, und klicken Sie dann auf "Verbinden". Damit die Verbindung hergestellt werden kann, muss das Feld "Servername" den Namen des Computers enthalten, auf dem SQL Server installiert ist. Wenn es sich bei der Datenbank-Engine um eine benannte Instanz handelt, sollte das Feld „Servername“ zudem den Instanznamen im Format &lt;Computername&gt;\\&lt;Instanzname&gt; enthalten.  
   
 3.  Erweitern Sie im Objekt-Explorer "Integration Services-Kataloge".  
   

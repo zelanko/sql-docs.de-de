@@ -1,17 +1,14 @@
 ---
-title: SQL Server-Browserdienst (Datenbankmodul und SSAS) | Microsoft-Dokumentation
+title: SQL Server-Browserdienst (Datenbank-Engine und SSAS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - services [SQL Server], security
 - SQL Browser service (See SQL Server Browser service)
@@ -22,14 +19,13 @@ caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 85ecf79351e7d6968d56e9047a0c557248b9d157
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 30dbda01d302bb70a9a4297c3eb9e38b60a6ba49
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="sql-server-browser-service-database-engine-and-ssas"></a>SQL Server-Browserdienst (Datenbankmodul und SSAS)
+# <a name="sql-server-browser-service-database-engine-and-ssas"></a>SQL Server-Browserdienst (Datenbank-Engine und SSAS)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browserprogramm wird als Windows-Dienst ausgeführt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser lauscht auf eingehende Anforderungen für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressourcen und stellt Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen zur Verfügung, die auf dem Computer installiert sind. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser unterstützt folgende Aktionen:  
   
@@ -61,7 +57,7 @@ ms.lasthandoff: 04/16/2018
   
  Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Clients [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressourcen anfordern, sendet die Clientnetzwerkbibliothek über den Port 1434 eine UDP-Nachricht an den Server. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser antwortet mit dem TCP/IP-Port oder der Named Pipe der angeforderten Instanz. Anschließend wird die Verbindung durch die Netzwerkbibliothek der Clientanwendung vollständig abgeschlossen, indem über den Port oder die Named Pipe der gewünschten Instanz eine Anforderung an den Server gesendet wird. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser gibt keine Portinformationen für die Standardinstanz zurück.  
   
- Informationen zum Starten und Beenden des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browserdiensts finden Sie unter [Starten, Beenden, Anhalten, Fortsetzen und Neustarten des Datenbankmoduls, SQL Server-Agent oder des SQL Server-Browsers](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+ Informationen zum Starten und Beenden des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browserdiensts finden Sie unter [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 ## <a name="using-sql-server-browser"></a>Verwenden von SQL Server-Browser  
  Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browserdienst nicht ausgeführt wird, können Sie dennoch eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen, wenn Sie die richtige Anschlussnummer bzw. die richtig benannte Pipe angeben. Sie können beispielsweise über TCP/IP eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen, wenn sie an Port 1433 ausgeführt wird.  

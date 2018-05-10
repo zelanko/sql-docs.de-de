@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 06/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.roleproperties.database.f1
 - sql13.swb.roleproperties.object.f1
@@ -44,13 +43,12 @@ caps.latest.revision: 49
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 13c32f97dca41d3b5707c7df867d2fb3b6d3be15
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b1a99af7b5758f77883da3f2a755aaa4bdfdd1a9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-level-roles"></a>Rollen auf Datenbankebene
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +66,7 @@ Zum Hinzufügen und Entfernen von Benutzern zu oder aus einer Datenbankrolle ver
 > [!TIP]  
 >  Fügen Sie keine benutzerdefinierten Datenbankrollen als Mitglieder fester Rollen hinzu. Dies könnte zu einer unbeabsichtigten Ausweitung von Privilegien führen.  
 
-Die Berechtigungen von benutzerdefinierten Datenbankrollen können mithilfe der Anweisungen GRANT, DENY und REVOKE angepasst werden. Weitere Informationen finden Sie unter [Berechtigungen (Datenbankmodul)](../../../relational-databases/security/permissions-database-engine.md).
+Die Berechtigungen von benutzerdefinierten Datenbankrollen können mithilfe der Anweisungen GRANT, DENY und REVOKE angepasst werden. Weitere Informationen finden Sie unter [Berechtigungen (Datenbank-Engine)](../../../relational-databases/security/permissions-database-engine.md).
 
 Eine Liste aller Berechtigungen finden Sie auf dem Poster [Database Engine Permissions (Berechtigungen im Datenbankmodul)](https://aka.ms/sql-permissions-poster) . (Datenbankrollen können keine Berechtigungen auf Serverebene erteilt werden. Anmeldungen und andere Prinzipale auf Serverebene (wie etwa Serverrollen) können Datenbankrollen nicht hinzugefügt werden. Verwenden Sie für Sicherheit auf Serverebene in [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]stattdessen [Serverrollen](../../../relational-databases/security/authentication-access/server-level-roles.md) . Berechtigungen auf Serverebene können nicht mithilfe von Rollen in [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] und [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]erteilt werden.)
 
