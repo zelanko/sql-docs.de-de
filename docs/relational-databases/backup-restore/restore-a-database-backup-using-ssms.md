@@ -3,15 +3,12 @@ title: Wiederherstellen einer Datenbanksicherung (SQL Server Management Studio) 
 ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: backup-restore
+ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.locatebackupfileazure.f1
 - sql13.swb.specifybackup.f1
@@ -26,12 +23,11 @@ caps.latest.revision: 79
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: a02973a198043163ce6ece5d3bc490f05048f7e7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 01e55085d117541e2ecb8d8c4ee585afec205b03
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -221,7 +217,7 @@ Im folgenden Beispiel wird eine Datenbank in den am 30. Mai 2016 um 13:23:17 Uhr
 ### <a name="e--restore-a-backup-from-the-microsoft-azure-storage-service"></a>**E.  Wiederherstellen einer Sicherung aus dem Microsoft Azure-Speicherdienst**
 #### <a name="common-steps"></a>**Allgemeine Schritte**
 In den beiden folgenden Beispielen wird eine Wiederherstellung von `Sales` aus einer Sicherung ausgeführt, die sich im Microsoft Azure-Speicherdienst befindet.  Der Speicherkontoname lautet `mystorageaccount`.  Der Container heißt `myfirstcontainer`.  Aus Gründen der Übersichtlichkeit sind die ersten sechs Schritte hier einmal aufgelistet und alle Beispiele beginnen mit **Schritt 7**.
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz des SQL Server-Datenbankmoduls her, und erweitern Sie dann diese Instanz.
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz der SQL Server-Datenbank-Engine her, und erweitern Sie anschließend diese Instanz.
 
 2.  Klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Datenbank wiederherstellen**aus.
 
@@ -263,7 +259,7 @@ In den beiden folgenden Beispielen wird eine Wiederherstellung von `Sales` aus e
 
 #### <a name="f---restore-local-backup-to-microsoft-azure-storage-url"></a>**F.   Wiederherstellen einer lokalen Sicherung in Microsoft Azure-Speicher (URL)**
 Die Datenbank `Sales` wird aus einer Sicherung unter `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` im Microsoft Azure-Speichercontainer `E:\MSSQL\BAK`wiederhergestellt.  Die SQL Server-Anmeldeinformationen für den Azure-Container wurden bereits erstellt.  SQL Server-Anmeldeinformationen für den Zielcontainer müssen bereits vorhanden sein, da sie durch den **Wiederherstellungstask** nicht erstellt werden können.  Die Datenbank `Sales` ist auf dem Server derzeit nicht vorhanden.
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz des SQL Server-Datenbankmoduls her, und erweitern Sie dann diese Instanz.
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz der SQL Server-Datenbank-Engine her, und erweitern Sie anschließend diese Instanz.
 
 2.  Klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Datenbank wiederherstellen**aus.
 3.  Wählen Sie auf der Seite **Allgemein** im Abschnitt **Quelle** die Option **Gerät** aus.
@@ -274,7 +270,7 @@ Die Datenbank `Sales` wird aus einer Sicherung unter `https://mystorageaccount.b
 8.  Klicken Sie auf **OK** , um zur Seite **Allgemein** zurückzukehren.
 9.  Klicken Sie im Fensterbereich **Seite auswählen** auf **Dateien** .
 10. Aktivieren Sie das Kontrollkästchen **Alle Dateien verschieben in Ordner**.
-11. Geben Sie den Container ( `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`) in die Textfelder für **Datendateiordner:** und **Protokolldateiordner:**ein.
+11. Geben Sie den Container ( `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`) in die Textfelder für **Datendateiordner:** und **Protokolldateiordner:** ein.
 12. Klicken Sie auf **OK**.
 
 

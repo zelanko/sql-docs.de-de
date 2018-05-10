@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 10/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: collations
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - binary collations [SQL Server]
 - expression-level collations [SQL Server]
@@ -34,13 +33,12 @@ caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7138f878e035b463ea6db7631d9c2f79518313b3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 25b36b25efbb7c99d3595da26587007f784bfc25
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,7 +71,7 @@ ms.lasthandoff: 04/16/2018
 |Unterscheidung nach Akzent (_AS)|Unterscheidet zwischen Zeichen mit Akzent und Zeichen ohne Akzent. Beispielsweise ist 'a' nicht mit 'ấ' identisch. Wenn diese Option nicht aktiviert wird, wird bei der Sortierung nicht nach Akzent unterschieden. D. h. SQL Server betrachtet die Versionen von Buchstaben mit und ohne Akzent für Sortierzwecke als identisch. Sie können die Nichtunterscheidung nach Akzent durch Angeben von "_AI" explizit auswählen.|    
 |Unterscheidung nach Kana (_KS)|Unterscheidet zwischen den zwei Arten japanischer Kana-Zeichen: Hiragana und Katakana. Wenn diese Option nicht aktiviert wird, wird bei der Sortierung Kana nicht beachtet. D. h. SQL Server unterscheidet bei der Sortierung nicht zwischen Hiragana- und Katakana-Zeichen. Das Weglassen dieser Option ist die einzige Möglichkeit, die Nichtbeachtung von Kana anzugeben.|    
 |Unterscheidung nach Breite (_WS)|Unterscheidet zwischen Zeichen halber Breite und Zeichen normaler Breite. Wenn diese Option nicht ausgewählt ist, betrachtet SQL Server die Darstellung in halber Breite und in normaler Breite desselben Zeichens für Sortierzwecke als identisch. Das Weglassen dieser Option ist die einzige Möglichkeit, die Nichtbeachtung der Breite anzugeben.|    
-|Mit Unterscheidung nach Variierungsauswahlzeichen (_VSS) | Unterscheidet zwischen verschiedenen Variierungsauswahlzeichen für Ideogramme in den japanischen Sortierungen Japanese_Bushu_Kakusu_140 und Japanese_XJIS_140, die erstmals in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]eingeführt wurden. Eine Variierungssequenz besteht aus einem Basiszeichen plus einem ergänzenden Variierungsauswahlzeichen. Wenn diese _VSS-Option nicht aktiviert ist, berücksichtigt die Sortierung die Variierung nicht, und das Variierungsauswahlzeichen wird im Vergleich nicht berücksichtigt. Das bedeutet, dass SQL Server Zeichen, die auf dem gleichen Basiszeichen aufbauen, aber verschiedene Variierungsauswahlzeichen aufweisen, für Sortierungszwecke als identisch. Weitere Informationen enthält auch die  [Unicode Ideographic Variation Database (Unicode-Datenbank der Ideogrammvariierungen)](http://www.unicode.org/reports/tr37/). <br/><br/> Variierungsauswahlzeichen unterstützende Sortierungen (_VSS) werden in Indizes für die Volltextsuche nicht unterstützt. Indizes für die Volltextsuche unterstützen nur Optionen für die Unterscheidung nach Akzent (_AS), Kana (_KS) und Breite (_WS). Die SQL Server XML- und CLR-Module unterstützen keine Variierungsauswahlzeichen (_VSS).
+|Mit Unterscheidung nach Variierungsauswahlzeichen (_VSS) | Unterscheidet zwischen verschiedenen Variierungsauswahlzeichen für Ideogramme in den japanischen Sortierungen Japanese_Bushu_Kakusu_140 und Japanese_XJIS_140, die erstmals in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]eingeführt wurden. Eine Variierungssequenz besteht aus einem Basiszeichen plus einem ergänzenden Variierungsauswahlzeichen. Wenn diese _VSS-Option nicht aktiviert ist, berücksichtigt die Sortierung die Variierung nicht, und das Variierungsauswahlzeichen wird im Vergleich nicht berücksichtigt. Das bedeutet, dass SQL Server Zeichen, die auf dem gleichen Basiszeichen aufbauen, aber verschiedene Variierungsauswahlzeichen aufweisen, für Sortierungszwecke als identisch. Weitere Informationen enthält auch die  [Unicode Ideographic Variation Database (Unicode-Datenbank der Ideogrammvariierungen)](http://www.unicode.org/reports/tr37/). <br/><br/> Variierungsauswahlzeichen unterstützende Sortierungen (_VSS) werden in Indizes für die Volltextsuche nicht unterstützt. Indizes für die Volltextsuche unterstützen nur Optionen für die Unterscheidung nach Akzent (_AS), Kana (_KS) und Breite (_WS). Die SQL Server XML- und CLR-Engines unterstützen keine Variierungsauswahlzeichen (_VSS).
     
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die folgenden Sortierungssätze:    
     
@@ -215,7 +213,7 @@ Datenbankanwendungen, die mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
  
 Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] werden zwei neue japanische Sortierungsfamilien unterstützt, bei denen es sich um Permutationen verschiedener Optionen (\_CS, \_AS, \_KS, \_WS, \_VSS) handelt. 
 
-Sie können das SQL Server-Datenbankmodul abfragen, um diese Sortierungen aufzulisten:
+Sie können die SQL Server-Datenbank-Engine abfragen, um diese Sortierungen aufzulisten:
 ``` 
 SELECT Name, Description FROM fn_helpcollations()  
 WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
@@ -223,7 +221,7 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 
 Alle neuen Sortierungen verfügen über integrierte Unterstützung für ergänzende Zeichen, sodass keine der neuen Sortierungen das SC-Flag besitzt (oder benötigt).
 
-Diese Sortierungen werden in Indizes des Datenbankmoduls, in für den Arbeitsspeicher optimierten Tabellen, in Columnstore-Indizes und in nativ kompilierten Modulen unterstützt.
+Diese Sortierungen werden in Indizes der Datenbank-Engine, in für den Arbeitsspeicher optimierten Tabellen, in Columnstore-Indizes und in nativ kompilierten Modulen unterstützt.
     
 ##  <a name="Related_Tasks"></a> Verwandte Aufgaben    
     

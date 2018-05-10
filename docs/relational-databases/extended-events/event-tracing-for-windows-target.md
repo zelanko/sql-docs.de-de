@@ -4,12 +4,11 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: xevents
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - event tracing for windows target
 - ETW target
@@ -19,13 +18,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 424a671a4ee42865442d92e26b68f6941775c2ca
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7f3471f30347decd4a6a7f882aed43c8d1325107
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="event-tracing-for-windows-target"></a>Ereignisablaufverfolgung für Windows-Ziel
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,12 +34,12 @@ ms.lasthandoff: 04/16/2018
   
 -   [Verbessertes Debugging und Leistungsoptimierung mit ETW](http://go.microsoft.com/fwlink/?LinkId=92381)  
   
- Das ETW-Ziel ist ein Singletonziel, auch wenn es mehreren Sitzungen hinzugefügt werden kann. Auch wenn ein Ereignis in vielen Sitzungen ausgelöst wird, wird das Ereignis nur einmal je aufgetretenem Ereignis an das ETW-Ziel weitergeleitet. Das Modul für erweiterte Ereignisse ist pro Prozess auf eine einzelne Instanz beschränkt.  
+ Das ETW-Ziel ist ein Singletonziel, auch wenn es mehreren Sitzungen hinzugefügt werden kann. Auch wenn ein Ereignis in vielen Sitzungen ausgelöst wird, wird das Ereignis nur einmal je aufgetretenem Ereignis an das ETW-Ziel weitergeleitet. Die Engine für erweiterte Ereignisse ist pro Prozess auf eine einzelne Instanz beschränkt.  
   
 > [!IMPORTANT]  
 >  Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienststartkonto muss Mitglied der Gruppe der Leistungsprotokollbenutzer sein, damit das ETW-Ziel funktionieren kann.  
   
- Die Konfiguration der Ereignisse in einer ETW-Sitzung wird von einem Prozess gesteuert, in dem das Modul für erweiterte Ereignisse gehostet ist. Das Modul steuert, welche Ereignisse ausgelöst werden und welche Bedingungen erfüllt sein müssen, damit ein Ereignis ausgelöst wird.  
+ Die Konfiguration der Ereignisse in einer ETW-Sitzung wird von einem Prozess gesteuert, in dem die Engine für erweiterte Ereignisse gehostet ist. Die Engine steuert, welche Ereignisse ausgelöst werden und welche Bedingungen erfüllt sein müssen, damit ein Ereignis ausgelöst wird.  
   
  Nachdem ein ETW-Ziel an eine Sitzung für erweiterte Ereignisse gebunden wurde, in der das ETW-Ziel zum ersten Mal während der Lebenszeit eines Prozesses angefügt wird, öffnet das ETW-Ziel eine einzelne ETW-Sitzung für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anbieter. Wenn bereits eine ETW-Sitzung vorhanden ist, erhält das ETW-Ziel einen Verweis auf die vorhandene Sitzung. Diese ETW-Sitzung ist für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen auf einem bestimmten Computer freigegeben. Diese ETW-Sitzung empfängt alle Ereignisse von Sitzungen, die das ETW-Ziel aufweisen.  
   
@@ -83,7 +81,7 @@ ms.lasthandoff: 04/16/2018
     > [!IMPORTANT]  
     >  Der Dateipfad kann nicht geändert werden, nachdem die erste Sitzung gestartet wurde.  
   
--   MOF-Dateien (Managed Object Format) befinden sich im Ordner *<Installationspfad\<*\Microsoft SQL Server\Shared. Weitere Informationen finden Sie unter [Managed Object Format](http://go.microsoft.com/fwlink/?LinkId=92851) auf der MSDN-Website.  
+-   MOF-Dateien (Managed Object Format) befinden sich im Ordner *<Installationspfad\<* \Microsoft SQL Server\Shared. Weitere Informationen finden Sie unter [Managed Object Format](http://go.microsoft.com/fwlink/?LinkId=92851) auf der MSDN-Website.  
   
 ## <a name="adding-the-target-to-a-session"></a>Hinzufügen des Ziels zu einer Sitzung  
  Wenn Sie das ETW-Ziel einer Sitzung für erweiterte Ereignisse hinzufügen möchten, müssen Sie beim Erstellen oder Ändern einer Ereignissitzung die folgende Anweisung einschließen:  

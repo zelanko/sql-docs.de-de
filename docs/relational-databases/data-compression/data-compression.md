@@ -4,14 +4,11 @@ ms.custom: ''
 ms.date: 08/31/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: compression
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-data-compression
+ms.technology: performance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - page compression [Database Engine]
 - indexes [SQL Server], compressed
@@ -29,13 +26,12 @@ caps.latest.revision: 60
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e40e73b73ba78b470ef20924a5dd1509717bd937
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1ed791ca34a8a88ce9dd8b25d38740430ce18424
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-compression"></a>Datenkomprimierung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -195,10 +191,10 @@ Die folgende Tabelle enthält Replikationseinstellungen, mit denen die Komprimie
 ## <a name="how-compression-affects-other-sql-server-components"></a>Auswirkungen der Komprimierung auf andere SQL Server-Komponenten 
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [aktuelle Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
    
- Die Komprimierung erfolgt im Speichermodul, und die Daten werden in den meisten anderen Komponenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im unkomprimierten Zustand dargestellt. Hierdurch werden die Auswirkungen der Komprimierung auf die anderen Komponenten auf folgende Punkte beschränkt:  
+ Die Komprimierung erfolgt im der Speicher-Engine, und die Daten werden in den meisten anderen Komponenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im unkomprimierten Zustand dargestellt. Hierdurch werden die Auswirkungen der Komprimierung auf die anderen Komponenten auf folgende Punkte beschränkt:  
 -   Massenimport- und -exportvorgänge  
      Exportierte Daten werden im unkomprimierten Zeilenformat ausgegeben. Dies gilt auch für systemeigene Datenformate. Aus diesem Grund kann die exportierte Datendatei erheblich größer sein als die Quelldaten.  
-     Beim Importieren von Daten werden die Daten im Speichermodul in das komprimierte Zeilenformat konvertiert, falls die Komprimierung in der Zieltabelle aktiviert wurde. Hierbei ist die CPU-Nutzung höher als beim Import von Daten in eine unkomprimierte Tabelle.  
+     Beim Importieren von Daten werden die Daten in der Speicher-Engine in das komprimierte Zeilenformat konvertiert, falls die Komprimierung in der Zieltabelle aktiviert wurde. Hierbei ist die CPU-Nutzung höher als beim Import von Daten in eine unkomprimierte Tabelle.  
      Beim Massenimport von Daten in einen Heap mit Seitenkomprimierung versucht der Massenimportvorgang die Daten beim Einfügen mit der Seitenkomprimierung zu komprimieren.  
 -   Die Komprimierung hat keine Auswirkungen auf Sicherungs- und Wiederherstellungsvorgänge.  
 -   Die Komprimierung hat keine Auswirkungen auf den Protokollversand.  

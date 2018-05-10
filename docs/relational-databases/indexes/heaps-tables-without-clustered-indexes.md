@@ -3,29 +3,25 @@ title: Heaps (Tabellen ohne gruppierte Indizes) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/01/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: indexes
+ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - heaps
 ms.assetid: df5c4dfb-d372-4d0f-859a-a2d2533ee0d7
 caps.latest.revision: 8
-author: barbkess
-ms.author: barbkess
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 062e79df3d54a046527a71622d47d67901dd2e37
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: fef08462d85ef86f76eb7647cadba6063126d7d2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="heaps-tables-without-clustered-indexes"></a>Heaps (Tabellen ohne gruppierte Indizes)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -73,7 +69,7 @@ Die Spalte `first_iam_page` in der Systemsicht `sys.system_internals_allocation_
  
 Tabellenscans oder serielle Lesevorgänge in einem Heap können durchgeführt werden, indem die IAM-Seiten gescannt werden, um auf diese Weise die Blöcke zu ermitteln, die Seiten des Heaps enthalten. Da die IAM die Blöcke in derselben Reihenfolge darstellt, in der sie in der Datendatei vorliegen, werden serielle Heapscans immer sequenziell durch jede Datei ausgeführt. Das Verwenden der IAM-Seiten zum Festlegen der Scanfolge bedeutet weiterhin, dass Zeilen aus dem Heap nicht notwendigerweise in der Reihenfolge zurückgegeben werden, in der sie eingefügt wurden.
 
-Die folgende Abbildung zeigt, wie das SQL Server-Datenbankmodul die IAM-Seiten zum Abrufen von Datenzeilen in einem Heap mit einer einzelnen Partition verwendet. 
+Die folgende Abbildung zeigt, wie die SQL Server-Datenbank-Engine die IAM-Seiten zum Abrufen von Datenzeilen in einem Heap mit einer einzelnen Partition verwendet. 
 
 ![iam_heap](../../relational-databases/indexes/media/iam-heap.gif)
 

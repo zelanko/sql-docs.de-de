@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 07/18/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: data-tier-applications
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.extractdacwizard.validationandsummary.f1
 - sql13.swb.extractdacwizard.introduction.f1
@@ -28,12 +27,11 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 35745b0b3e167a34ceb73f8e7cee7f9af7d8d3d6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f7141252a11e4391d14a4b8aff5240e849ad27d8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="extract-a-dac-from-a-database"></a>Extrahieren einer DAC aus einer Datenbank
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +39,7 @@ ms.lasthandoff: 04/16/2018
   
  
 ## <a name="before-you-begin"></a>Vorbereitungen  
- Sie können DAC aus Datenbanken extrahieren, die sich auf Instanzen von [!INCLUDE[ssSDS](../../includes/sssds-md.md)]oder [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 (SP4) oder höher befinden. Wenn der Extrahierungsprozess für eine Datenbank ausgeführt wird, die über eine DAC bereitgestellt wurde, werden nur die Definitionen der Objekte in der Datenbank extrahiert. Der Prozess verweist nicht auf die in **msdb** (**master** in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]) registrierte DAC. Der Extrahierungsprozess registriert die DAC-Definition nicht in der aktuellen Instanz des Datenbankmoduls. Weitere Informationen zum Registrieren einer DAC finden Sie unter [Register a Database As a DAC](../../relational-databases/data-tier-applications/register-a-database-as-a-dac.md).  
+ Sie können DAC aus Datenbanken extrahieren, die sich auf Instanzen von [!INCLUDE[ssSDS](../../includes/sssds-md.md)]oder [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 (SP4) oder höher befinden. Wenn der Extrahierungsprozess für eine Datenbank ausgeführt wird, die über eine DAC bereitgestellt wurde, werden nur die Definitionen der Objekte in der Datenbank extrahiert. Der Prozess verweist nicht auf die in **msdb** (**master** in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]) registrierte DAC. Der Extrahierungsprozess registriert die DAC-Definition nicht in der aktuellen Instanz der Datenbank-Engine. Weitere Informationen zum Registrieren einer DAC finden Sie unter [Register a Database As a DAC](../../relational-databases/data-tier-applications/register-a-database-as-a-dac.md).  
   
 ##  <a name="LimitationsRestrictions"></a> Einschränkungen  
  Eine DAC kann nur aus einer Datenbank in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]oder [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) oder höher extrahiert werden. Eine DAC kann nicht registriert werden, wenn die Datenbank in einer DAC nicht unterstützte Objekte oder enthaltene Benutzer enthält. Weitere Informationen zu den in einer DAC unterstützten Objekttypen finden Sie unter [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
@@ -110,7 +108,7 @@ Wählen Sie die Verweisdaten aus, die Sie in die Paketdatei der Datenebenenanwen
   
  **Zusammenfassung:** Unter **DAC-Eigenschaften**wird eine Übersicht zu den von Ihnen ausgewählten Optionen aufgeführt. Die Ergebnisse der Überprüfung sind unter **DAC-Objekte**aufgeführt. Es gibt drei Typen von Überprüfungsergebnissen:  
   
--   **Objekte, die erfolgreich in die DAC eingeschlossen wurden:**Diese Objekte und ihre Abhängigkeiten werden unterstützt und können erfolgreich in die DAC eingeschlossen werden.  
+-   **Objekte, die erfolgreich in die DAC eingeschlossen wurden:** Diese Objekte und ihre Abhängigkeiten werden unterstützt und können erfolgreich in die DAC eingeschlossen werden.  
   
 -   **Objekte, die mit Warnungen in DAC eingeschlossen wurden**: Diese Objekte werden unterstützt, sind aber von anderen Objekten abhängig, die nicht in einer DAC unterstützt werden.  
   

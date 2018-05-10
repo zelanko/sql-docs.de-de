@@ -3,15 +3,12 @@ title: Erstellen einer vollständigen Datenbanksicherung (SQL Server) | Microsof
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: backup-restore
+ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up databases [SQL Server], full backups
 - backing up databases [SQL Server], SQL Server Management Studio
@@ -22,12 +19,11 @@ caps.latest.revision: 63
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: ee32fb6e10c9bcfbfe60c739f2f5083f4bf90e6c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0cdafe9c854ccce0dd554d52afb850b39c97a7d3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Erstellen einer vollständigen Datenbanksicherung (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -161,7 +157,7 @@ Sie können den [Wartungsplanungs-Assistenten](../maintenance-plans/use-the-main
 ### <a name="examples"></a>Beispiele  
 #### <a name="a--full-back-up-to-disk-to-default-location"></a>**A.  Vollständige Sicherung auf Datenträger am Standardspeicherort**
 In diesem Beispiel wird die `Sales` -Datenbank auf dem Datenträger am standardmäßigen Sicherungsspeicherort gesichert.  Es wurde nie eine Sicherung von `Sales` erstellt.
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz des SQL Server-Datenbankmoduls her, und erweitern Sie dann diese Instanz.
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz der SQL Server-Datenbank-Engine her, und erweitern Sie anschließend diese Instanz.
 
 2.  Erweitern Sie die **Datenbank**, klicken Sie mit der rechten Maustaste auf `Sales`,zeigen Sie auf **Tasks**, und klicken Sie anschließend auf **Sichern...**.
 
@@ -169,7 +165,7 @@ In diesem Beispiel wird die `Sales` -Datenbank auf dem Datenträger am standardm
 
 #### <a name="b--full-back-up-to-disk-to-non-default-location"></a>**B.  Vollständige Sicherung auf Datenträger an einem anderen als dem Standardspeicherort**
 In diesem Beispiel wird die `Sales` -Datenbank auf Datenträger unter `E:\MSSQL\BAK`gesichert.  Frühere Sicherungen von `Sales` wurden erstellt.
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz des SQL Server-Datenbankmoduls her, und erweitern Sie dann diese Instanz.
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz der SQL Server-Datenbank-Engine her, und erweitern Sie anschließend diese Instanz.
 
 2.  Erweitern Sie die **Datenbank**, klicken Sie mit der rechten Maustaste auf `Sales`,zeigen Sie auf **Tasks**, und klicken Sie anschließend auf **Sichern...**.
 
@@ -187,7 +183,7 @@ In diesem Beispiel wird die `Sales` -Datenbank auf Datenträger unter `E:\MSSQL\
 
 #### <a name="c--create-an-encrypted-backup"></a>**C.  Erstellen einer verschlüsselten Sicherung**
 In diesem Beispiel wird die `Sales` -Datenbank mit Verschlüsselung am standardmäßigen Sicherungsspeicherort gesichert.  Ein  [**Datenbank-Hauptschlüssel**](../../relational-databases/security/encryption/create-a-database-master-key.md) wurde bereits erstellt.  Ein  [**Zertifikat**](../../t-sql/statements/create-certificate-transact-sql.md) mit dem Namen `MyCertificate`wurde bereits erstellt. Ein T-SQL-Beispiel zum Erstellen eines **Datenbank-Hauptschlüssels** und eines **Zertifikats** finden Sie unter [Erstellen einer verschlüsselten Sicherung](../../relational-databases/backup-restore/create-an-encrypted-backup.md).  
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz des SQL Server-Datenbankmoduls her, und erweitern Sie anschließend diese Instanz.
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz der SQL Server-Datenbank-Engine her, und erweitern Sie anschließend diese Instanz.
 
 2.  Erweitern Sie die **Datenbank**, klicken Sie mit der rechten Maustaste auf `Sales`,zeigen Sie auf **Tasks**, und klicken Sie anschließend auf **Sichern...**.
 
@@ -204,7 +200,7 @@ In diesem Beispiel wird die `Sales` -Datenbank mit Verschlüsselung am standardm
 #### <a name="d--back-up-to-the-azure-blob-storage-service"></a>**D.  Sichern auf den Azure-BLOB-Speicherdienst**
 #### <a name="common-steps"></a>**Allgemeine Schritte**  
 In den drei folgenden Beispielen wird eine vollständige Sicherung der `Sales` -Datenbank in den Microsoft Azure BLOB-Speicherdienst ausgeführt.  Der Speicherkontoname lautet `mystorageaccount`.  Der Container heißt `myfirstcontainer`.  Aus Gründen der Übersichtlichkeit sind die ersten vier Schritte hier einmal aufgelistet und alle Beispiele beginnen mit **Schritt 5**.
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz des SQL Server-Datenbankmoduls her, und erweitern Sie dann diese Instanz.
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz der SQL Server-Datenbank-Engine her, und erweitern Sie anschließend diese Instanz.
 
 2.  Erweitern Sie die **Datenbank**, klicken Sie mit der rechten Maustaste auf `Sales`,zeigen Sie auf **Tasks**, und klicken Sie anschließend auf **Sichern...**.
 

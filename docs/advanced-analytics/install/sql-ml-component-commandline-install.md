@@ -7,11 +7,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1bc0cda53059b715a04d6e9a350e40d3a265d5e0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 921bdddf6ae1638ae637df58a0a7e8301fd91dc0
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="install-sql-server-machine-learning-components-from-the-command-line"></a>Installieren von SQL Server-Machine Learning-Komponenten über die Befehlszeile
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,7 +64,7 @@ In der Datenbank Analytics stehen für datenbankmodulinstanzen, die erforderlich
 
 Um Statusinformationen ohne die interaktive auf dem Bildschirm eingabeaufforderungen anzuzeigen, verwenden Sie den/QS-Argument.
 
-> [!Important]
+> [!IMPORTANT]
 > Bleiben zwei zusätzliche Konfigurationsschritte nach der Installation. Integration ist nicht abgeschlossen, bevor diese Tasks ausgeführt werden. Finden Sie unter [Aufgaben nach der Installation](#post-install) Anweisungen.
 
 ### <a name="sql-server-2017-database-engine-advanced-analytics-with-python-and-r"></a>SQLServer 2017: Datenbankmodul, Erweiterte Analysen mit Python und R

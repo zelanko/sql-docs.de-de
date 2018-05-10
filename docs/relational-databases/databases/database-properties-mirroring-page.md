@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: databases
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.databaseproperties.mirroring.f1
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
@@ -19,12 +18,11 @@ caps.latest.revision: 86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d706b8cdb3ee366aa60a7324f949132a0acaa7bd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a14e748959ca5553dc6a8e2af6d26700ab418e7d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-properties-mirroring-page"></a>Datenbankeigenschaften (Seite Wird gespiegelt)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +87,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
 -   Die Sicherheit wurde ordnungsgemäß konfiguriert.  
   
- Klicken Sie auf **Spiegeln starten** , um die Sitzung einzuleiten. Vom Datenbankmodul wird versucht, eine automatische Verbindung mit dem Spiegelungspartner herzustellen, um zu überprüfen, ob der Spiegelserver ordnungsgemäß konfiguriert ist, und um die Spiegelungssitzung zu beginnen. Wenn die Spiegelung gestartet werden kann, wird ein Auftrag zum Überwachen der Datenbank erstellt.  
+ Klicken Sie auf **Spiegeln starten** , um die Sitzung einzuleiten. Von der Datenbank-Engine wird versucht, eine automatische Verbindung mit dem Spiegelungspartner herzustellen, um zu überprüfen, ob der Spiegelserver ordnungsgemäß konfiguriert ist, und um die Spiegelungssitzung zu beginnen. Wenn die Spiegelung gestartet werden kann, wird ein Auftrag zum Überwachen der Datenbank erstellt.  
   
  **Anhalten** oder **Fortsetzen**  
  Klicken Sie während einer Datenbank-Spiegelungssitzung auf **Anhalten** , um die Sitzung anzuhalten. Wenn Sie in der Bestätigungsaufforderung auf **Ja**klicken, wird die Sitzung angehalten und die Schaltfläche erhält die Bezeichnung **Fortsetzen**. Klicken Sie zum Fortsetzen der Sitzung auf **Fortsetzen**.  
@@ -106,7 +104,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  **Failover**  
  Klicken Sie hier, um manuell ein Failover der Prinzipaldatenbank zur Spiegeldatenbank ausführen.  
   
-> **HINWEIS:** Wenn die Spiegelungssitzung im Modus für hohe Leistung ausgeführt wird, wird das manuelle Failover nicht unterstützt. Zum Ausführen eines manuellen Failovers müssen Sie zuerst den Betriebsmodus in **Hohe Sicherheit ohne automatisches Failover (synchron)**ändern. Nach Abschluss des Failovers können Sie den Modus auf der neuen Prinzipalserverinstanz wieder in **Hohe Leistung (asynchron)** ändern.  
+> **HINWEIS:** Wenn die Spiegelungssitzung im Modus für hohe Leistung ausgeführt wird, wird das manuelle Failover nicht unterstützt. Zum Ausführen eines manuellen Failovers müssen Sie zuerst den Betriebsmodus in **Hohe Sicherheit ohne automatisches Failover (synchron)** ändern. Nach Abschluss des Failovers können Sie den Modus auf der neuen Prinzipalserverinstanz wieder in **Hohe Leistung (asynchron)** ändern.  
   
  Es wird eine Bestätigungsaufforderung angezeigt. Wenn Sie auf **Ja**klicken, wird versucht, ein Failover auszuführen. Der Prinzipalserver versucht als erstes, mithilfe der Windows-Authentifizierung eine Verbindung mit dem Spiegelserver herzustellen. Wenn die Windows-Authentifizierung nicht funktioniert, zeigt der Prinzipalserver das Dialogfeld **Verbindung mit Server herstellen** an. Wenn der Spiegelserver die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwendet, wählen Sie im Feld **Authentifizierung** die Option **SQL Server-Authentifizierung** aus. Geben Sie im Textfeld **Anmeldename** das Anmeldekonto an, mit dem auf dem Spiegelserver eine Verbindung hergestellt werden soll, und geben Sie im Textfeld **Kennwort** das Kennwort für dieses Konto an.  
   
