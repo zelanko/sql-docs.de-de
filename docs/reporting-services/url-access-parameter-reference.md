@@ -1,30 +1,28 @@
 ---
-title: "Referenz für URL-Zugriffsparameter | Microsoft-Dokumentation"
-ms.custom: 
+title: Referenz für URL-Zugriffsparameter | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 09/09/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - reports [Reporting Services], display options
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
-caps.latest.revision: "48"
+caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 32a53f285348210ef551a3189a7676f87366fb17
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 76f7e0be913313c56b8f05eeb24e43534407ceec
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="url-access-parameter-reference"></a>URL-Zugriffsparameterreferenz
   Sie können die folgenden Parameter als Teil einer URL verwenden, um das Aussehen und Verhalten Ihrer [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]-Berichte zu konfigurieren. In diesem Abschnitt sind die am häufigsten verwendeten Parameter aufgeführt. Bei Parametern muss keine Groß- und Kleinschreibung beachtet werden. Sie beginnen mit dem Präfix *rs:* , wenn sie an den Berichtsserver weitergeleitet werden, und mit *rs:* , wenn sie zu einem HTML-Viewer weitergeleitet werden. Sie können außerdem Parameter angeben, die für Geräte oder Renderingerweiterungen spezifisch sind. Weitere Informationen zu gerätespezifischen Parametern finden Sie unter [Angeben von Geräteinformationseinstellungen in einer URL](../reporting-services/specify-device-information-settings-in-a-url.md).  
@@ -43,7 +41,7 @@ ms.lasthandoff: 01/09/2018
 -   [Befehle des Berichts-Viewer-Webparts (rv:)](#bkmk_webpart)  
   
 ##  <a name="bkmk_htmlviewer"></a> Befehle des HTML-Viewers (rc:)  
- HTML-Viewer-Befehle werden verwendet, um den HTML-Viewer (z.B. vom Berichts-Manager) auszuwählen, und sind mit dem Präfix *rc:*versehen:  
+ HTML-Viewer-Befehle werden verwendet, um den HTML-Viewer (z.B. vom Berichts-Manager) auszuwählen, und sind mit dem Präfix *rc:* versehen:  
   
 -   *Symbolleiste* :  
                   Zeigt die Symbolleiste an oder blendet sie aus. Wenn der Wert dieses Parameters **FALSE**ist, werden alle verbleibenden Optionen ignoriert. Wenn Sie diesen Parameter weglassen, wird die Symbolleiste automatisch für Renderingformate angezeigt, die sie unterstützen. Der Standardwert dieses Parameters ist **true**.  

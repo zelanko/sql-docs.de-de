@@ -3,15 +3,12 @@ title: Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfüg
 ms.custom: ''
 ms.date: 05/02/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], server instance
 - Availability Groups [SQL Server], deploying
@@ -26,12 +23,11 @@ caps.latest.revision: 151
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 0a81bf1cc891f467819a115dcb253fe2507a8c57
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 018db964697d8aacf29422c901bda17fddecd1c2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>Voraussetzungen, Einschränkungen und Empfehlungen (Always On-Verfügbarkeitsgruppen)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -183,7 +179,7 @@ ms.lasthandoff: 04/16/2018
   
     -   Von einer Sicherung auf einem sekundären Replikat wird ein Thread auf dem primären Replikat für die Dauer des Sicherungsvorgangs beibehalten.  
   
- Weitere Informationen finden Sie unter [Always On – HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (Always On - HADRON-Lernreihe: Nutzung des Arbeitsthreadpools für HADRON-fähige Datenbanken) (ein CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Technikblog).  
+ Weitere Informationen finden Sie unter [Always On – HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (Always On - HADRON-Lernreihe: Nutzung des Arbeitsthreadpools für HADRON-fähige Datenbanken) (ein CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Technikblog).  
   
 ###  <a name="PermissionsSI"></a> Berechtigungen (Serverinstanz)  
   

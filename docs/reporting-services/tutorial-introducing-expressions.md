@@ -1,29 +1,27 @@
 ---
-title: "Tutorial: Einführung in Ausdrücke | Microsoft-Dokumentation"
-ms.custom: 
+title: 'Tutorial: Einführung in Ausdrücke | Microsoft-Dokumentation'
+ms.custom: ''
 ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-caps.latest.revision: 
+caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a75e3eb0532359a4528af38270820126e14f4b36
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e2b42df295abda51349793a4db8697ab03cb3cd4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-introducing-expressions"></a>Lernprogramm: Einführung in Ausdrücke
 In diesem [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] -Tutorial verwenden Sie Ausdrücke mit allgemeinen Funktionen und Operatoren zum Erstellen von leistungsstarken und flexiblen [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginierten Berichten. 
@@ -183,7 +181,7 @@ In diesem Abschnitt verwenden Sie die **Left** -Funktion und den Operator zum **
   
 7.  Doppelklicken Sie in der Liste **Werte** auf **FirstName**.  
   
-8.  Geben Sie **, 1)**ein  
+8.  Geben Sie **, 1)** ein  
   
     Der Ausdruck extrahiert ein Zeichen aus dem Wert **FirstName** , beginnend von links.  
   
@@ -379,7 +377,7 @@ In diesem Abschnitt erstellen Sie das CountryRegion-Dataset und verwenden die **
   
 6.  Klicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)**, und doppelklicken Sie in der Liste **Werte** auf **CountryRegionID**.  
   
-8.  Platzieren Sie den Cursor direkt hinter `CountryRegionID.Value`, und geben Sie **,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")**ein.  
+8.  Platzieren Sie den Cursor direkt hinter `CountryRegionID.Value`, und geben Sie **,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")** ein.  
   
     Der vollständige Ausdruck lautet wie folgt: `=Lookup(Fields!CountryRegionID.Value,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")`  
   
@@ -419,7 +417,7 @@ In diesem Abschnitt fügen Sie eine Spalte hinzu und verwenden anschließend die
     > [!WARNING]  
     > In Produktionsberichten dürfen Sie nicht die **Now** -Funktion in Ausdrücken verwenden, die beim Rendern des Berichts mehrmals ausgewertet werden (z.B. in den Detailzeilen eines Berichts). Der Wert von **Now** ändert sich von Zeile zu Zeile, und die verschiedenen Werte wirken sich auf die Auswertungsergebnisse der Ausdrücke aus, was zu inkonsistenten Resultaten führt. Verwenden Sie stattdessen die globale Variable `ExecutionTime` , die von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] bereitgestellt wird.  
   
-15. Löschen Sie die öffnende Klammer nach `Now(`, und geben Sie dann eine schließende Klammer **)**ein.  
+15. Löschen Sie die öffnende Klammer nach `Now(`, und geben Sie dann eine schließende Klammer **)** ein.  
   
     Der vollständige Ausdruck lautet wie folgt: `=DateDiff("d", Fields!LastPurchase.Value, Now)`.  
     
@@ -472,7 +470,7 @@ Das Konfigurieren des Indikators und seiner Zustände erfordert viele Schritte. 
   
 11. Klicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)**, und doppelklicken Sie in der Liste **Werte** auf **YTDPurchase**.  
   
-13. Geben Sie unmittelbar hinter `Fields!YTDPurchase.Value` **, "Expressions"))**ein.  
+13. Geben Sie unmittelbar hinter `Fields!YTDPurchase.Value` **, "Expressions"))** ein.  
   
     Der vollständige Ausdruck lautet wie folgt: `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions"))`.  
   
@@ -593,11 +591,11 @@ Erstellen Sie einen Parameter, damit die Leser des Berichts die Farbe bestimmen 
   
 8.  Klicken Sie unter **Allgemeine Funktionen**auf **Verschiedenes**, und doppelklicken Sie in der Liste **Element** auf **RowNumber**.  
 
-9. Geben Sie unmittelbar hinter **RowNumber(**  **Nothing) MOD 2,**ein.
+9. Geben Sie unmittelbar hinter **RowNumber(**  **Nothing) MOD 2,** ein.
   
 8. Klicken Sie auf **Parameter** und doppelklicken Sie in der Liste **Werte** auf **Spaltenfarbe**.  
   
-22. Geben Sie unmittelbar hinter `Parameters!RowColor.Value` **, “White”)**ein.  
+22. Geben Sie unmittelbar hinter `Parameters!RowColor.Value` **, “White”)** ein.  
   
     Der vollständige Ausdruck lautet wie folgt: `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, “White”)`.  
     

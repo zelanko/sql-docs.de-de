@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: databases
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cross-database queries [SQL Server]
 - logins [SQL Server], recreating on another server instance
@@ -41,12 +40,11 @@ caps.latest.revision: 84
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b3faf3d48d2e5799d203300e45f098895aab8295
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0eb4e0cb4da6395d0c48da787b0e21b6f27dcae4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einem anderen Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +85,8 @@ ms.lasthandoff: 04/16/2018
   
 -   [Erweiterte gespeicherte Prozeduren](#extended_stored_procedures)  
   
--   [Eigenschaften des Volltextsuchmoduls für SQL Server](#ifts_service_properties)  
+-   
+  [Eigenschaften der Volltextsuch-Engine für SQL Server](#ifts_service_properties)  
   
 -   [Aufträge](#jobs)  
   
@@ -112,7 +111,7 @@ ms.lasthandoff: 04/16/2018
 ##  <a name="credentials"></a> Anmeldeinformationen  
  Anmeldeinformationen sind in einem Datensatz gespeichert, in dem die Authentifizierungsinformationen enthalten sind, die zum Herstellen einer Verbindung mit einer Ressource außerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erforderlich sind. Die meisten Anmeldeinformationen bestehen aus einem Windows-Anmeldenamen und -Kennwort.  
   
- Weitere Informationen zu diesem Feature finden Sie unter [Anmeldeinformationen &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).  
+ Weitere Informationen zu diesem Feature finden Sie unter [Anmeldeinformationen &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
 > **HINWEIS:** Agent-Proxykonten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwenden Anmeldeinformationen. Die ID der von einem Proxykonto verwendeten Anmeldeinformationen kann anhand der [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) -Systemtabelle festgestellt werden.  
   
@@ -129,7 +128,7 @@ ms.lasthandoff: 04/16/2018
  Wenn eine Datenbank auf einem anderen Computer wiederhergestellt wird, wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldename oder der Windows-Benutzer, der den Wiederherstellungsvorgang initiiert, automatisch zum Besitzer der neuen Datenbank. Nach dem Wiederherstellen der Datenbank kann der Systemadministrator oder der neue Datenbankbesitzer den Datenbankbesitz ändern.  
   
 ##  <a name="distributed_queries_and_linked_servers"></a> Verteilte Abfragen und Verbindungsserver  
- Verteilte Abfragen und Verbindungsserver werden für OLE DB-Anwendungen unterstützt. Verteilte Abfragen greifen auf Daten von mehreren heterogenen Datenquellen auf demselben oder auf unterschiedlichen Computern zu. Durch die Konfiguration von Verbindungsservern ist es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] möglich, Befehle für OLE DB-Datenquellen auf Remoteservern auszuführen. Weitere Informationen zu diesen Features finden Sie unter [Verbindungsserver &#40;Datenbankmodul&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
+ Verteilte Abfragen und Verbindungsserver werden für OLE DB-Anwendungen unterstützt. Verteilte Abfragen greifen auf Daten von mehreren heterogenen Datenquellen auf demselben oder auf unterschiedlichen Computern zu. Durch die Konfiguration von Verbindungsservern ist es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] möglich, Befehle für OLE DB-Datenquellen auf Remoteservern auszuführen. Weitere Informationen zu diesen Features finden Sie unter [Verbindungsserver &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
   
   
 ##  <a name="encrypted_data"></a> Encrypted Data  
@@ -196,7 +195,7 @@ ms.lasthandoff: 04/16/2018
   
   
 ##  <a name="ifts_service_properties"></a> Full-Text Engine for SQL Server Properties  
- Die Eigenschaften für das Volltextsuchmodul werden mit [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)festgelegt. Stellen Sie sicher, dass die Zielserverinstanz die erforderlichen Einstellungen für diese Eigenschaften aufweist. Weitere Informationen zu diesen Eigenschaften finden Sie unter [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md).  
+ Die Eigenschaften für die Volltext-Engine werden mit [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)festgelegt. Stellen Sie sicher, dass die Zielserverinstanz die erforderlichen Einstellungen für diese Eigenschaften aufweist. Weitere Informationen zu diesen Eigenschaften finden Sie unter [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md).  
   
  Wenn die [Wörtertrennungs- und Wortstammerkennungs](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)-Komponente oder die [Filterkomponente](../../relational-databases/search/configure-and-manage-filters-for-search.md) auf der ursprünglichen Serverinstanz und der Zielserverinstanz jeweils unterschiedliche Versionen haben, weisen die Volltextindizierung und die Volltextabfragen möglicherweise ein anderes Verhalten auf. Ebenso wird der [Thesaurus](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md) in instanzspezifischen Dateien gespeichert. Sie müssen entweder eine Kopie dieser Dateien in einen entsprechenden Speicherort auf der Zielserverinstanz übertragen oder die Dateien auf der neuen Instanz erneut erstellen.  
   
@@ -268,7 +267,7 @@ ms.lasthandoff: 04/16/2018
   
  Zum Erstellen eines Skripts für einige oder für alle Objekte in der ursprünglichen Kopie der Datenbank können Sie den Assistenten zum Generieren von SQL Server-Skripts verwenden und im Dialogfeld **Skriptoptionen auswählen** die Option **Skripterstellung für Anmeldungen** auf **True**festlegen.  
   
-> **HINWEIS:**Informationen zum Einrichten von Anmeldenamen für eine gespiegelte Datenbank finden Sie unter [Einrichten von Anmeldekonten für die Datenbankspiegelung oder Always On-Verfügbarkeitsgruppen (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) und [Verwaltung von Anmeldenamen und Aufträgen nach einem Rollenwechsel &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
+> **HINWEIS:** Informationen zum Einrichten von Anmeldenamen für eine gespiegelte Datenbank finden Sie unter [Einrichten von Anmeldekonten für die Datenbankspiegelung oder Always On-Verfügbarkeitsgruppen (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) und [Verwaltung von Anmeldenamen und Aufträgen nach einem Rollenwechsel &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
   
 ##  <a name="permissions"></a> Berechtigungen  

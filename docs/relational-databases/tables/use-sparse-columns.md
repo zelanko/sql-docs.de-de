@@ -3,15 +3,12 @@ title: Verwenden von Spalten mit geringer Dichte | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/22/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
-ms.component: tables
+ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sparse columns, described
 - null columns
@@ -21,13 +18,12 @@ caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9e961f19e0cf4ce99a93286d9f8c448a6944e824
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ced43e7bbddaa59d1f88446294a3c0a519e5410f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-sparse-columns"></a>Verwenden von Spalten mit geringer Dichte
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -148,7 +144,7 @@ ms.lasthandoff: 04/16/2018
   
 -   Spalten mit geringer Dichte sind inkompatibel mit der Datenkomprimierung. Daher ist es nicht möglich, Sparsespalten komprimierten Tabellen hinzuzufügen, und Tabellen mit Sparsespalten können nicht komprimiert werden.  
   
--   Um eine Spalte mit geringer Dichte in eine ohne geringe Dichte zu ändern oder um eine Spalte ohne geringe Dichte in eine mit geringer Dichte zu ändern, muss das Speicherformat der Spalte geändert werden. Das SQL Server-Datenbankmodul verwendet die folgende Prozedur, um diese Änderung auszuführen:  
+-   Um eine Spalte mit geringer Dichte in eine ohne geringe Dichte zu ändern oder um eine Spalte ohne geringe Dichte in eine mit geringer Dichte zu ändern, muss das Speicherformat der Spalte geändert werden. Die SQL Server-Datenbank-Engine verwendet die folgende Prozedur, um diese Änderung auszuführen:  
   
     1.  Fügt der Tabelle eine neue Spalte in der neuen Speichergröße und dem neuen Format hinzu.  
   

@@ -4,25 +4,23 @@ ms.custom: ''
 ms.date: 07/08/2016
 ms.prod: sql
 ms.prod_service: mds
-ms.service: ''
 ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 caps.latest.revision: 85
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e92fe1300d891f6c76f04f636fd53da5cf3a2b67
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: a5014bd5e72a6a6bb448e7d78195c837577418d8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Neues in Master Data Services (MDS)
 
@@ -52,7 +50,7 @@ ms.lasthandoff: 04/26/2018
   
 -   Auf der Entitätsebene erfolgt eine Datenkomprimierung, die standardmäßig aktiviert ist. Wenn die Datenkomprimierung aktiviert ist, werden die auf Tabellen und Indizes bezogenen Entitäten mit der SQL-Row-Level-Komprimierung komprimiert. Dies verringert die Datenträger-E/A beim Lesen oder Aktualisieren der Masterdaten erheblich. Das gilt insbesondere, wenn die Masterdaten Millionen von Zeilen und/oder viele Spalten mit NULL-Werten umfassen.  
   
-     Da ein leichten Anstieg der CPU-Auslastung auf der Seite des SQL Server-Moduls zu erwarten ist, wenn der Server CPU-abhängig ist, können Sie die Datenkomprimierung deaktivieren, indem Sie die Entität bearbeiten.  
+     Da ein leichten Anstieg der CPU-Auslastung auf der Seite der SQL Server-Engine zu erwarten ist, wenn der Server CPU-abhängig ist, können Sie die Datenkomprimierung deaktivieren, indem Sie die Entität bearbeiten.  
   
      Weitere Informationen finden Sie unter [Erstellen einer Entität &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md) und [Datenkomprimierung](../relational-databases/data-compression/data-compression.md).  
   

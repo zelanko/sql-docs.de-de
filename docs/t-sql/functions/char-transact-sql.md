@@ -1,16 +1,14 @@
 ---
 title: CHAR (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - char_TSQL
@@ -29,21 +27,21 @@ helpviewer_keywords:
 - line feed
 - printing ASCII values
 ms.assetid: 955afe94-539c-465d-af22-16ec45da432a
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 5dd3a4f8b6fd308560ddcf2db3c6940625dc6ee3
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7aad9053901e9278aaac15affa694ffccdc832bb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Wandelt einen **int**-ASCII-Code in ein Zeichen um.
+Diese Funktion wandelt einen **int**-ASCII-Code in einen Zeichenwert um.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -55,13 +53,13 @@ CHAR ( integer_expression )
   
 ## <a name="arguments"></a>Argumente  
 *integer_expression*  
-Eine ganze Zahl zwischen 0 und 255. `NULL` wird zurückgegeben, wenn der Integerausdruck außerhalb dieses Bereichs liegt.
+Eine ganze Zahl zwischen 0 und 255. `CHAR` gibt einen `NULL`-Wert für ganzzahlige Ausdrücke außerhalb dieses Bereichs zurück.
   
 ## <a name="return-types"></a>Rückgabetypen
 **char(1)**
   
 ## <a name="remarks"></a>Remarks  
-Mit `CHAR` können Steuerzeichen in Zeichenfolgen eingefügt werden. In der folgenden Tabelle finden Sie einige häufig verwendete Steuerzeichen.
+Verwenden Sie `CHAR`, um Steuerzeichen in Zeichenfolgen einzufügen. In dieser Tabelle finden Sie einige häufig verwendete Steuerzeichen.
   
 |Steuerzeichen|value|  
 |---|---|
@@ -72,7 +70,7 @@ Mit `CHAR` können Steuerzeichen in Zeichenfolgen eingefügt werden. In der folg
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-using-ascii-and-char-to-print-ascii-values-from-a-string"></a>A. Verwenden von ASCII und CHAR, um die ASCII-Werte einer Zeichenfolge auszugeben  
-Im folgenden Beispiel werden der ASCII-Wert und das Zeichen für jedes in der Zeichenfolge `New Moon` enthaltene Zeichen ausgegeben.
+In diesem Beispiel werden der ASCII-Wert und das Zeichen für jedes in der Zeichenfolge `New Moon` enthaltene Zeichen ausgegeben.
   
 ```sql
 SET TEXTSIZE 0;  
@@ -113,7 +111,7 @@ GO
 ```
   
 ### <a name="b-using-char-to-insert-a-control-character"></a>B. Verwenden von CHAR, um ein Steuerzeichen einzufügen  
-Im folgenden Beispiel wird `CHAR(13)` verwendet, um den Namen und die E-Mail-Adresse eines Mitarbeiters in separaten Zeilen auszugeben, wenn die Ergebnisse in einem Text zurückgegeben werden. In diesem Beispiel wird die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank verwendet.
+In diesem Beispiel wird `CHAR(13)` verwendet, um den Namen und die E-Mail-Adresse eines Mitarbeiters in separaten Zeilen auszugeben, wenn die Ergebnisse der Abfrage als Text zurückgegeben werden. In diesem Beispiel wird die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank verwendet.
   
 ```sql
 SELECT p.FirstName + ' ' + p.LastName, + CHAR(13)  + pe.EmailAddress   
@@ -135,7 +133,7 @@ ken0@adventure-works.com
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="c-using-ascii-and-char-to-print-ascii-values-from-a-string"></a>C. Verwenden von ASCII und CHAR, um die ASCII-Werte einer Zeichenfolge auszugeben  
-Im folgenden Beispiel, in dem von einem ASCII-Zeichensatz ausgegangen wird, wird der Zeichenwert für sechs ASCII-Zeichennummern zurückgegeben.
+Dieses Beispiel geht von einem ASCII-Zeichensatz aus. Es gibt den Zeichenwert für sechs verschiedene Zahlenwerte von ASCII-Zeichen zurück.
   
 ```sql
 SELECT CHAR(65) AS [65], CHAR(66) AS [66],   
@@ -152,7 +150,7 @@ A    B    a    b    1    2
 ```
   
 ### <a name="d-using-char-to-insert-a-control-character"></a>D. Verwenden von CHAR, um ein Steuerzeichen einzufügen  
-Im folgenden Beispiel wird `CHAR(13)` verwendet, um Informationen zu den Datenbanken auf unterschiedlichen Zeilen zurückzugeben, wenn die Ergebnisse in Textform zurückgegeben werden.
+In diesem Beispiel wird `CHAR(13)` verwendet, um Informationen von „sys.databases“ in separaten Zeilen zurückzugeben, wenn die Ergebnisse der Abfrage als Text zurückgegeben werden.
   
 ```sql
 SELECT name, 'was created on ', create_date, CHAR(13), name, 'is currently ', state_desc   

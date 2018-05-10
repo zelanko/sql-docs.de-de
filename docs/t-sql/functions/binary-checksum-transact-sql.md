@@ -2,14 +2,12 @@
 title: BINARY_CHECKSUM (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -25,12 +23,12 @@ caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 9ff8368877b3fb2153685554f1484b5fbbcc7c3a
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 2b493b23ef0726dbc34a2073c7a50c7d1abb1b37
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="binarychecksum--transact-sql"></a>BINARY_CHECKSUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -47,7 +45,14 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
   
 ## <a name="arguments"></a>Argumente  
 *\**  
-Gibt an, dass die Berechnung für alle Spalten der Tabelle erfolgt. BINARY_CHECKSUM ignoriert in seiner Berechnung jede Spalte, die einen nicht vergleichbaren Datentyp hat. Folgende Datentypen zählen zu den nicht vergleichbaren Datentypen: **text**, **ntext**, **image**, **cursor** und **xml** sowie nicht vergleichbare, benutzerdefinierte CLR-Typen (Common Language Runtime).
+Gibt an, dass die Berechnung für alle Spalten der Tabelle erfolgt. BINARY_CHECKSUM ignoriert in seiner Berechnung jede Spalte, die einen nicht vergleichbaren Datentyp hat. Die folgenden Datentypen sind z.B. nicht vergleichbar:  
+* **Cursor**  
+* **image**  
+* **ntext**  
+* **text**  
+* **xml**  
+
+Außerdem gehören auch benutzerdefinierte CLR-Typen (Common Language Runtime) zu den nicht vergleichbaren Datentypen.
   
 *expression*  
 Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) beliebigen Typs. BINARY_CHECKSUM ignoriert in seiner Berechnung jeden Ausdruck, der einen nicht vergleichbaren Datentyp hat.
@@ -56,13 +61,24 @@ Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) belieb
  **int**
   
 ## <a name="remarks"></a>Remarks  
-Wird BINARY_CHECKSUM(*) für eine beliebige Zeile einer Tabelle berechnet, gibt die Anweisung den gleichen Wert zurück, solange die Zeile nicht nachfolgend geändert wird. BINARY_CHECKSUM erfüllt die Eigenschaften einer Hashfunktion: Wenn BINARY_CHECKSUM auf zwei beliebige Listen mit Ausdrücken angewendet wird, wird immer derselbe Wert zurückgegeben, falls die entsprechenden Elemente der beiden Listen vom gleichen Typ sind und bezüglich des Vergleichs mit dem Gleichheitsoperator (=) gleich sind. Bei dieser Definition wird für NULL-Werte eines angegebenen Typs angenommen, dass sie bei einem Vergleich "gleich" sind. Wenn sich einer der Werte in der Liste mit Ausdrücken ändert, ändert sich gewöhnlich auch die Prüfsumme der Liste. Es besteht jedoch eine geringe Möglichkeit, dass sich die Prüfsumme nicht ändert. Aus diesem Grund wird nicht empfohlen, BINARY_CHECKSUM für die Überprüfung auf geänderte Werte zu verwenden, außer es spielt für die Anwendung keine große Rolle, wenn gelegentlich eine Änderung nicht erkannt wird. Sie sollten in Betracht ziehen, stattdessen HashBytes verwenden. Wenn ein MD5-Hashalgorithmus angegeben wird, ist die Wahrscheinlichkeit, dass HashBytes für zwei verschiedene Eingaben dasselbe Ergebnis zurückgibt, wesentlich geringer als bei BINARY_CHECKSUM.
+Wird BINARY_CHECKSUM(*) für eine beliebige Zeile einer Tabelle berechnet, gibt die Anweisung den gleichen Wert zurück, solange die Zeile nicht nachfolgend geändert wird. BINARY_CHECKSUM erfüllt die Eigenschaften einer Hashfunktion: Wenn BINARY_CHECKSUM auf zwei beliebige Listen mit Ausdrücken angewendet wird, wird immer derselbe Wert zurückgegeben, falls die entsprechenden Elemente der beiden Listen vom gleichen Typ sind und bezüglich des Vergleichs mit dem Gleichheitsoperator (=) gleich sind. Bei dieser Definition werden die NULL-Werte eines angegebenen Typs bei einem Vergleich als gleiche Werte angesehen. Wenn sich einer der Werte in der Liste mit Ausdrücken ändert, ändert sich gewöhnlich auch die Prüfsumme des Ausdrucks. Dies ist jedoch nicht immer der Fall. Daher wird empfohlen, BINARY_CHECKSUM nur zur Ermittlung von Änderungen der Daten zu verwenden, wenn Ihre Anwendung auch bei gelegentlich nicht ausgeführte Änderungen weiter ausgeführt werden kann. Wenn dies nicht der Fall ist, sollten Sie stattdessen die Verwendung von HASHBYTES in Betracht ziehen. Wenn ein MD5-Hashalgorithmus angegeben ist, ist die Wahrscheinlichkeit, dass HASHBYTES für zwei verschiedene Eingaben dasselbe Ergebnis zurückgibt, wesentlich geringer als bei der Verwendung von BINARY_CHECKSUM.
   
 BINARY_CHECKSUM kann auf eine Liste von Ausdrücken angewendet werden und gibt den gleichen Wert für eine angegebene Liste zurück. Wenn BINARY_CHECKSUM auf zwei beliebige Listen von Ausdrücken angewendet wird, wird stets der gleiche Wert zurückgegeben, wenn die entsprechenden Elemente der beiden Listen denselben Typ und dieselbe Bytedarstellung haben. Für diese Definition wird bei NULL-Werten eines angegebenen Datentyps angenommen, dass sie dieselbe Bytedarstellung haben.
   
-BINARY_CHECKSUM und CHECKSUM können zur Berechnung eines Prüfsummenwerts für eine Liste mit Ausdrücken verwendet werden, wobei der berechnete Wert von der Reihenfolge der Ausdrücke abhängt. Die Reihenfolge von Spalten für BINARY_CHECKSUM(*) entspricht der in der Tabellen- oder Sichtdefinition angegebenen Reihenfolge von Spalten. Dazu gehören berechnete Spalten.
+BINARY_CHECKSUM und CHECKSUM können zur Berechnung eines Prüfsummenwerts für eine Liste mit Ausdrücken verwendet werden, wobei der berechnete Wert von der Reihenfolge der Ausdrücke abhängt. Die Reihenfolge von Spalten für BINARY_CHECKSUM(*) entspricht der in der Tabellen- oder Sichtdefinition angegebenen Reihenfolge von Spalten. Dies schließt die berechneten Spalten ein.
   
-CHECKSUM und BINARY_CHECKSUM geben unterschiedliche Werte für die Zeichenfolgen-Datentypen zurück, bei denen aufgrund des Gebietsschemas unterschiedliche Repräsentationen als gleich betrachtet werden können. Die Zeichenfolgendatentypen lauten **char**, **varchar**, **nchar**, **nvarchar**, oder **sql_variant** (wenn es sich bei dem Basistyp von **sql_variant** um einen Zeichenfolgendatentyp handelt). Die BINARY_CHECKSUM-Werte für die Zeichenfolgen "McCavity" und "Mccavity" sind unterschiedlich. Bei einem Server ohne Unterscheidung nach Groß-/Kleinschreibung gibt CHECKSUM jedoch für diese Zeichenfolgen dieselben Prüfsummenwerte zurück. CHECKSUM-Werte sollten nicht mit BINARY_CHECKSUM-Werten verglichen werden.
+CHECKSUM und BINARY_CHECKSUM geben unterschiedliche Werte für die String-Datentypen zurück, bei denen aufgrund des Gebietsschemas unterschiedliche Repräsentationen als gleich betrachtet werden können. String-Datentypen sind z.B.:  
+
+* **char**  
+* **nchar**  
+* **nvarchar**  
+* **varchar**  
+
+oder  
+
+* **sql_variant** (wenn der Basistyp von **sql_variant** ein String-Datentyp ist).  
+  
+Die BINARY_CHECKSUM-Werte für die Zeichenfolgen „McCavity“ und „Mccavity“ sind unterschiedlich. Bei einem Server ohne Unterscheidung nach Groß-/Kleinschreibung gibt CHECKSUM jedoch für diese Zeichenfolgen dieselben Prüfsummenwerte zurück. Sie sollten Vergleiche zwischen CHECKSUM-Werten und BINARY_CHECKSUM-Werten vermeiden.
  
 BINARY_CHECKSUM unterstützt bis zu 8.000 Zeichen vom Typ **varbinary(max)** und bis zu 255 Zeichen vom Typ **nvarchar(max)**.
   

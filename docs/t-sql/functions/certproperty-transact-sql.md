@@ -1,16 +1,14 @@
 ---
 title: CERTPROPERTY (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CERTPROPERTY
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - schemas [SQL Server], names
 - CERTPROPERTY function
 ms.assetid: 966c09aa-bc4e-45b0-ba53-c8381871f638
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d63968d8b07a37ea49662bd0727632a1675b3913
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 986553e34dd8f4093ffe3ed7a54e979e048418e9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="certproperty-transact-sql"></a>CERTPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +49,7 @@ CertProperty ( Cert_ID , '<PropertyName>' )
   
 ## <a name="arguments"></a>Argumente  
 *Cert_ID*  
-Die ID des Zertifikats. *Cert_ID* ist vom Datentyp int.
+Der ID-Wert des Zertifikats, der den Datentyp „int“ aufweist.
   
 *Expiry_Date*  
 Das Ablaufdatum des Zertifikats.
@@ -67,7 +64,7 @@ Der Name des Zertifikatausstellers.
 Die Seriennummer des Zertifikats.
   
 *Betreff*  
-Der Zertifikatsantragsteller.
+Der Zertifikatantragsteller.
   
  *SID*  
 Die SID des Zertifikats. Dies ist auch die SID eines diesem Zertifikat zugeordneten Anmeldenamens oder Benutzers.
@@ -78,16 +75,16 @@ Die SID des Zertifikats als Zeichenfolge. Dies ist auch die SID eines diesem Zer
 ## <a name="return-types"></a>Rückgabetypen
 Die Angabe der Eigenschaft muss in einfache Anführungszeichen eingeschlossen werden.
   
-Der Rückgabetyp hängt von der im Funktionsaufruf angegebenen Eigenschaft ab. Alle Rückgabewerte werden in den Rückgabetyp **sql_variant**eingebunden.
+Der Rückgabetyp hängt von der im Funktionsaufruf angegebenen Eigenschaft ab. Der Rückgabetyp **sql_variant** umschließt alle Rückgabewerte.
 -   *Expiry_Date* und *Start_Date* geben **datetime**zurück.  
--   *Cert_Serial_Number*, *Issuer_Name*, *Subject*und *String_SID* geben **nvarchar**zurück.  
+-   *Cert_Serial_Number*, *Issuer_Name*, *String_SID* und *Subject* geben **nvarchar** zurück.  
 -   *SID* gibt **varbinary**zurück.  
   
 ## <a name="remarks"></a>Remarks  
-Informationen zu Zertifikaten werden in der [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)-Katalogsicht angezeigt.
+Weitere Informationen zu Zertifikaten finden Sie in der Katalogsicht [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md).
   
 ## <a name="permissions"></a>Berechtigungen  
-Erfordert bestimmte Berechtigungen für das Zertifikat, und dem Aufrufer darf die VIEW DEFINITION-Berechtigung für das Zertifikat nicht verweigert worden sein.
+Erfordert geeignete Berechtigungen für das Zertifikat, und dem Aufrufer darf die VIEW-Berechtigung für das Zertifikat nicht verweigert worden sein. Weitere Informationen zu Zertifikatberechtigungen finden Sie unter [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md) und [GRANT CERTIFICATE PERMISSIONS &#40;Transact-SQL&#41;](../../t-sql/statements/grant-certificate-permissions-transact-sql.md).
   
 ## <a name="examples"></a>Beispiele  
 Im folgenden Beispiel wird der Zertifikatsantragsteller zurückgegeben.
@@ -96,7 +93,7 @@ Im folgenden Beispiel wird der Zertifikatsantragsteller zurückgegeben.
 -- First create a certificate.  
 CREATE CERTIFICATE Marketing19 WITH   
     START_DATE = '04/04/2004' ,  
-    EXPIRY_DATE = '07/07/2007' ,  
+    EXPIRY_DATE = '07/07/2040' ,  
     SUBJECT = 'Marketing Print Division';  
 GO  
   

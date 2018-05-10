@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f867d3c994187afaa411a19687eda36a039557f4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: HT
+ms.openlocfilehash: 53467f6dfcab26fa4fded8a9b32086417c8c0af6
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="sysdmossysinfo-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -80,9 +80,9 @@ ms.lasthandoff: 05/04/2018
 |**sql_memory_model**|**int**|**Gilt für:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Gibt an, das Speichermodell verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] belegt werden. Lässt keine NULL-Werte zu.<br /><br />1 = konventionellen Arbeitsspeicher gespeicherten Modells<br />2 = Lock Pages in Memory<br /> 3 = große Seiten im Speicher|
 |**sql_memory_model_desc**|**nvarchar(120)**|**Gilt für:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Gibt an, das Speichermodell verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] belegt werden. Lässt keine NULL-Werte zu.<br /><br />**HERKÖMMLICHE**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendeten Modells konventionellen Arbeitsspeicher belegt werden. Dies ist die Sql-Standardarbeitsspeicher Modell [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienstkonto keine Sperren von Seiten im Speicher Berechtigungen während des Starts.<br />**LOCK_PAGES**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendeten Sperren von Seiten im Arbeitsspeicher belegt werden. Dies ist der Standard-Sql-Speicher-Manager, wenn SQL Server-Dienstkonto über Sperren von Seiten im Speicher-Berechtigung verfügen, während des Starts von SQL Server.<br /> **LARGE_PAGES**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendeten große Seiten im Arbeitsspeicher belegt werden. SQL Server verwendete große Seiten Allocator Speicher nur mit Enterprise Edition, wenn SQL Server-Dienstkonto Sperren von Seiten im Speicher-Berechtigung besitzen, während des Serverstarts und wenn die Trace Flag 834 aktiviert ist.|
 |**pdw_node_id**|**int**|**Gilt für:** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
-|**socket_count** |**int** | **Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Gibt die Anzahl von prozessorsockets verfügbar im System an. |  
-|**cores_per_socket** |**int** | **Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Gibt die Anzahl der Prozessoren pro Socket verfügbar im System an. |  
-|**numa_node_count** |**int** | **Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Gibt die Anzahl der verfügbaren Numa-Knoten auf dem System an. Diese Spalte enthält die physischen Numa-Knoten als auch von soft-Numa-Knoten. |  
+|**socket_count** |**int** | **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br />Gibt die Anzahl von prozessorsockets verfügbar im System an. |  
+|**cores_per_socket** |**int** | **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br />Gibt die Anzahl der Prozessoren pro Socket verfügbar im System an. |  
+|**numa_node_count** |**int** | **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br />Gibt die Anzahl der verfügbaren Numa-Knoten auf dem System an. Diese Spalte enthält die physischen Numa-Knoten als auch von soft-Numa-Knoten. |  
   
 ## <a name="permissions"></a>Berechtigungen
 

@@ -1,27 +1,25 @@
 ---
 title: Verweise auf Datasetfeldauflistungen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 93e0f3ac2c38d3fa61ec63c65c3a5ceb664bc4d8
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d7b5f9f4e9dba9018455eec10d552cdb9afc54e5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Datasetfeldauflistung (Berichts-Generator und SSRS)
   Datasetfelder stellen die Daten aus einer Datenverbindung dar. Ein Feld kann entweder numerische oder nicht numerische Daten darstellen. Dazu zählen z. B. Umsätze, der Gesamtumsatz, Kundennamen, Datenbankbezeichner, URLs, Bilder, räumliche Daten und E-Mail-Adressen. Auf der Entwurfsoberfläche werden Felder als Ausdrücke in Berichtselementen wie z. B. Textfelder, Tabellen und Diagramme angezeigt.  
@@ -104,7 +102,7 @@ ms.lasthandoff: 01/09/2018
     |**DateTimeTZ**|**DateTimeOffset**|Datum und Uhrzeit mit Zeitzonenoffset|  
     |**DateTime2**|**DateTime**|Datum und Uhrzeit mit Bruchteilen von Millisekunden|  
   
- Weitere Informationen über [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanktypen finden Sie unter [Datentypen (Datenbankmodul)](http://go.microsoft.com/fwlink/?linkid=98362) und [Datums- und Uhrzeitdatentypen und zugehörige Funktionen (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98360).  
+ Weitere Informationen über [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanktypen finden Sie unter [Datentypen (Datenbank-Engine)](http://go.microsoft.com/fwlink/?linkid=98362) und [Datums- und Uhrzeitdatentypen und zugehörige Funktionen (Transact-SQL)](http://go.microsoft.com/fwlink/?linkid=98360).  
   
  Weitere Informationen zum Einschließen von Verweisen auf ein Datasetfeld aus einem Ausdruck finden Sie unter [Datentypen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md).  
   

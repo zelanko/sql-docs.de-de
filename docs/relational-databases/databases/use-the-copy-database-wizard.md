@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 07/26/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: databases
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.cdw.packageconfiguration.f1
 - sql13.swb.cdw.schedule.f1
@@ -32,12 +31,11 @@ caps.latest.revision: 64
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 103e5a579ea802636e0d79c6a9ec531cdff3784c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 298bc4c6f485f89b24e43536644dcca02d22dbf9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-the-copy-database-wizard"></a>Verwenden des Assistenten zum Kopieren von Datenbanken
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -305,7 +303,7 @@ Stellt alle von jedem Schritt zurückgegebenen Meldungen bereit.
 ### <a name="common-steps"></a>**Allgemeine Schritte** 
 Unabhängig davon, ob Sie sich für **Verschieben** oder **Kopieren**, **Trennen und Anfügen** oder **SMO**entscheiden, sind die unten aufgeführten fünf Schritte identisch.  Aus Gründen der Übersichtlichkeit sind die Schritte hier einmal aufgelistet und alle Beispiele beginnen mit **Schritt 6**.
 
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz des SQL Server-Datenbankmoduls her, und erweitern Sie dann diese Instanz.
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz der SQL Server-Datenbank-Engine her, und erweitern Sie anschließend diese Instanz.
 
 2.  Erweitern Sie **Datenbanken**, klicken Sie mit der rechten Maustaste auf die gewünschte Datenbank, zeigen Sie auf **Tasks**, und klicken Sie anschließend auf **Datenbank kopieren...**.
 
@@ -328,7 +326,7 @@ Im folgenden Beispiel wird die `Sales` -Datenbank, eine Windows-Anmeldung namens
   
 9.  Seite**Zieldatenbank konfigurieren** : Der **Assistent** hat erkannt, dass `Sales` bereits auf dem Zielserver vorhanden ist, wie oben in **Schritt 6** erstellt, und hat `_new` an den Namen der **Zieldatenbank** angefügt.  Löschen Sie `_new` aus dem Textfeld **Zieldatenbank** .  Ändern Sie bei Bedarf die Werte für **Dateiname**und **Zielordner**.  Wählen Sie **Löschen Sie jede auf dem Zielserver vorhandene Datenbank, die denselben Namen hat, und setzen Sie dann die Datenbankübertragung fort, wobei vorhandene Datenbankdateien überschrieben werden**aus.  Klicken Sie auf **Weiter**.
   
-10. Seite**Serverobjekte auswählen** : Klicken Sie im Bereich **Ausgewählte verbundene Objekte:** auf die Schaltfläche mit den Auslassungspunkten für **Objektnamenanmeldungen**.  Wählen Sie unter **Kopieroptionen** die Option **Nur die ausgewählten Anmeldenamen kopieren:**aus.  Aktivieren Sie das Kontrollkästchen für **Alle Serveranmeldungen anzeigen**.  Aktivieren Sie das Feld **Anmeldung** für `contoso\Jennie`.  Klicken Sie auf **OK**.  Wählen Sie im Bereich **Verfügbare verbundene Objekte:** die Option **SQL Server-Agentaufträge** aus, und klicken Sie dann auf die Schaltfläche **>** .  Klicken Sie im Bereich **Ausgewählte verbundene Objekte:** auf die Schaltfläche mit den Auslassungspunkten für **SQL Server-Agentaufträge**.  Wählen Sie unter **Kopieroptionen** die Option **Nur die ausgewählten Aufträge kopieren:**aus.  Aktivieren Sie das Kontrollkästchen für `Jennie’s Report`.  Klicken Sie auf **OK**.  Klicken Sie auf **Weiter**.  
+10. Seite**Serverobjekte auswählen** : Klicken Sie im Bereich **Ausgewählte verbundene Objekte:** auf die Schaltfläche mit den Auslassungspunkten für **Objektnamenanmeldungen**.  Wählen Sie unter **Kopieroptionen** die Option **Nur die ausgewählten Anmeldenamen kopieren:** aus.  Aktivieren Sie das Kontrollkästchen für **Alle Serveranmeldungen anzeigen**.  Aktivieren Sie das Feld **Anmeldung** für `contoso\Jennie`.  Klicken Sie auf **OK**.  Wählen Sie im Bereich **Verfügbare verbundene Objekte:** die Option **SQL Server-Agentaufträge** aus, und klicken Sie dann auf die Schaltfläche **>** .  Klicken Sie im Bereich **Ausgewählte verbundene Objekte:** auf die Schaltfläche mit den Auslassungspunkten für **SQL Server-Agentaufträge**.  Wählen Sie unter **Kopieroptionen** die Option **Nur die ausgewählten Aufträge kopieren:** aus.  Aktivieren Sie das Kontrollkästchen für `Jennie’s Report`.  Klicken Sie auf **OK**.  Klicken Sie auf **Weiter**.  
   
 11. Seite**Speicherort der Quelldatenbankdateien** : Klicken Sie auf die Schaltfläche mit den Auslassungspunkten für **Dateifreigabe auf dem Quellserver** , und navigieren Sie zum Speicherort für den angegebenen Ordner.  Verwenden Sie z. B. für den Ordnerspeicherort `D:\MSSQL13.MSSQLSERVER\MSSQL\DATA` die Option `\\Server1\D$\MSSQL13.MSSQLSERVER\MSSQL\DATA` für **Dateifreigabe auf dem Quellserver**.  Klicken Sie auf **Weiter**.
   

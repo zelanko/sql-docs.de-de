@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -26,17 +24,16 @@ caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5c26df937a654289c6a5313631a612bfbd386cc6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 608c00d948a619d99ef23e62c8c9ba13dbe2fd7c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Gibt Informationen über eine Spalte oder einen Parameter zurück.
+Diese Funktion gibt Informationen zu Spalten oder Parametern zurück.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -54,35 +51,35 @@ Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der d
 Ein Ausdruck, der den Namen der Spalte oder des Parameters enthält.
   
 *property*  
-Ein Ausdruck, der die Informationen enthält, die für *id* zurückgegeben werden. Die folgenden Werte sind möglich:
+Das *property*-Argument gibt für das *id*-Argument den Informationstyp an, den die `COLUMNPROPERTY`-Funktion zurückgibt. Für das *property*-Argument sind die folgenden Werte möglich:
   
 |value|Description|Zurückgegebener Wert|  
 |---|---|---|
-|**AllowsNull**|Lässt NULL-Werte zu.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
+|**AllowsNull**|Lässt NULL-Werte zu.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe|  
 |**ColumnId**|Der Wert der Spalten-ID, der **sys.columns.column_id** entspricht.|Column ID<br /><br /> **Hinweis:** Wenn mehrere Spalten abgefragt werden, können Lücken in der Abfolge von Werten für Spalten-IDs auftreten.|  
-|**FullTextTypeColumn**|Der TYPE COLUMN-Wert in der Tabelle, der die Dokumenttypinformationen der *Spalte* enthält.|Die ID der Volltexttypspalte TYPE COLUMN für die Spalte, die als zweiter Parameter dieser Eigenschaft übergeben wurde.|  
-|**IsComputed**|Die Spalte ist eine berechnete Spalte.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**IsCursorType**|Der Prozedurparameter ist vom Typ CURSOR.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**IsDeterministic**|Die Spalte ist deterministisch. Diese Eigenschaft gilt nur für berechnete Spalten und Sichtspalten.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig. Keine berechnete Spalte oder Sichtspalte.|  
-|**IsFulltextIndexed**|Die Spalte wurde für die Volltextindizierung registriert.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**IsIdentity**|Die Spalte verwendet die IDENTITY-Eigenschaft.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**IsIdNotForRepl**|In der Spalte wird die IDENTITY_INSERT-Einstellung überprüft.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**IsIndexable**|Diese Spalte kann indiziert werden.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**isoutparam**|Der Prozedurparameter ist ein Ausgabeparameter.|1 = TRUE<br /><br /> 0 = False NULL = Eingabe ist nicht gültig|  
-|**IsPrecise**|Diese Spalte ist eine genaue Spalte. Diese Eigenschaft wird nur auf deterministische Spalten angewendet.|1 = TRUE<br /><br /> 0 = False NULL = Eingabe ist nicht gültig Keine deterministische Spalte|  
-|**IsRowGuidCol**|Die Spalte hat den Datentyp **uniqueidentifier** und wird über die ROWGUIDCOL-Eigenschaft definiert.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**IsSystemVerified**|Die Determinismus- und Genauigkeitseigenschaften der Spalte können von [!INCLUDE[ssDE](../../includes/ssde-md.md)] überprüft werden. Diese Eigenschaft gilt nur für berechnete Spalten und Spalten von Sichten.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**IsXmlIndexable**|Die XML-Spalte kann in einem XML-Index verwendet werden.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**Genauigkeit**|Die Länge des Datentyps der Spalte oder des Parameters.|Die Länge des angegebenen Spaltendatentyps.<br /><br /> –1 = **xml** oder ein Typ für hohe Werte.<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**Dezimalstellen**|Dezimalstellen des Datentyps der Spalte oder des Parameters.|Die Dezimalstellen<br /><br /> NULL = Eingabe ist nicht gültig.|  
+|**FullTextTypeColumn**|Der TYPE COLUMN-Wert in der Tabelle, die die Dokumenttypinformationen der *Spalte* enthält.|Die ID der Volltexttypspalte TYPE COLUMN für den Ausdruck des Spaltennamens, der als zweiter Parameter dieser Funktion übergeben wurde.|  
+|**GeneratedAlwaysType**|Wird durch den Spaltenwert systemgeneriert. Entspricht **sys.columns.generated_always_type**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 = Nicht immer generiert<br /><br /> 1 = Immer am Zeilenanfang generiert<br /><br /> 2 = Immer am Zeilenende generiert|  
+|**IsColumnSet**|Spalte ist ein Spaltensatz. Weitere Informationen finden Sie unter [Verwenden von Spaltensätzen](../../relational-databases/tables/use-column-sets.md).|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe|  
+|**IsComputed**|Die Spalte ist eine berechnete Spalte.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe|  
+|**IsCursorType**|Der Prozedurparameter ist vom Typ CURSOR.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe|  
+|**IsDeterministic**|Die Spalte ist deterministisch. Diese Eigenschaft gilt nur für berechnete Spalten und Sichtspalten.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe Keine berechnete Spalte oder Sichtspalte.|  
+|**IsFulltextIndexed**|Die Spalte wird für die Volltextindizierung registriert.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe|  
+|**IsHidden**|Wird durch den Spaltenwert systemgeneriert. Entspricht **sys.columns.is_hidden**|**Gilt für**: [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 = Nicht ausgeblendet<br /><br /> 1 = Ausgeblendet|  
+|**IsIdentity**|Die Spalte verwendet die IDENTITY-Eigenschaft.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe|  
+|**IsIdNotForRepl**|In der Spalte wird die IDENTITY_INSERT-Einstellung überprüft.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe|  
+|**IsIndexable**|Diese Spalte kann indiziert werden.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe|  
+|**isoutparam**|Der Prozedurparameter ist ein Ausgabeparameter.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe|  
+|**IsPrecise**|Diese Spalte ist eine genaue Spalte. Diese Eigenschaft wird nur auf deterministische Spalten angewendet.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe Keine deterministische Spalte|  
+|**IsRowGuidCol**|Die Spalte weist den Datentyp **uniqueidentifier** auf und wird über die ROWGUIDCOL-Eigenschaft definiert.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe|  
+|**IsSparse**|Spalte ist eine Sparsespalte. Weitere Informationen finden Sie unter [Verwenden von Spalten mit geringer Dichte](../../relational-databases/tables/use-sparse-columns.md).|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe|  
+|**IsSystemVerified**|Die Eigenschaften für Determinismus und Genauigkeit der Spalte können von [!INCLUDE[ssDE](../../includes/ssde-md.md)] überprüft werden. Diese Eigenschaft gilt nur für berechnete Spalten und Spalten von Sichten.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe|  
+|**IsXmlIndexable**|Die XML-Spalte kann in einem XML-Index verwendet werden.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe|  
+|**Genauigkeit**|Länge des Datentyps der Spalte oder des Parameters.|Die Länge des angegebenen Spaltendatentyps.<br /><br /> -1 = **xml** oder Typen für hohe Werte<br /><br /> NULL = Ungültige Eingabe|  
+|**Dezimalstellen**|Dezimalstellen des Datentyps der Spalte oder des Parameters.|Wert der Dezimalstellen<br /><br /> NULL = Ungültige Eingabe|  
 |**StatisticalSemantics**|Spalte ist für die semantische Indizierung aktiviert.|1 = TRUE<br /><br /> 0 = FALSE|  
-|**SystemDataAccess**|Die Spalte wird von einer Funktion abgeleitet, die auf Daten in den Systemkatalogen oder virtuellen Tabellen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugreift. Diese Eigenschaft gilt nur für berechnete Spalten und Spalten von Sichten.|1 = True (gibt schreibgeschützten Zugriff an)<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**UserDataAccess**|Die Spalte wird von einer Funktion abgeleitet, die auf Daten in Benutzertabellen zugreift, einschließlich Sichten und temporäre Tabellen, die in der lokalen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert sind. Diese Eigenschaft gilt nur für berechnete Spalten und Spalten von Sichten.|1 = True (gibt schreibgeschützten Zugriff an)<br /><br /> 0 = FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**UsesAnsiTrim**|Bei der Erstellung der Tabelle wurde für ANSI_PADDING die Einstellung ON festgelegt. Diese Eigenschaft gilt nur für Spalten oder Parameter vom Typ **char** oder **varchar**.|1= TRUE<br /><br /> 0= FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**IsSparse**|Spalte ist eine Sparsespalte. Weitere Informationen finden Sie unter [Verwenden von Spalten mit geringer Dichte](../../relational-databases/tables/use-sparse-columns.md).|1= TRUE<br /><br /> 0= FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**IsColumnSet**|Spalte ist ein Spaltensatz. Weitere Informationen finden Sie unter [Verwenden von Spaltensätzen](../../relational-databases/tables/use-column-sets.md).|1= TRUE<br /><br /> 0= FALSE<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**GeneratedAlwaysType**|Entspricht dem vom System generierten Spaltenwert. Entspricht **sys.columns.generated_always_type**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 = Nicht immer generiert<br /><br /> 1 = Immer als Zeilenanfang generiert<br /><br /> 2 = Immer als Zeilenende generiert|  
-|**IsHidden**|Entspricht dem vom System generierten Spaltenwert. Entspricht **sys.columns.is_hidden**|**Gilt für**: [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 = Nicht ausgeblendet<br /><br /> 1 = Ausgeblendet|  
+|**SystemDataAccess**|Die Spalte wird von einer Funktion abgeleitet, die auf Daten in den Systemkatalogen oder virtuellen Tabellen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugreift. Diese Eigenschaft gilt nur für berechnete Spalten und Spalten von Sichten.|1 = TRUE (gibt schreibgeschützten Zugriff an)<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe|  
+|**UserDataAccess**|Die Spalte wird von einer Funktion abgeleitet, die auf Daten in Benutzertabellen zugreift, einschließlich Sichten und temporäre Tabellen, die in der lokalen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert sind. Diese Eigenschaft gilt nur für berechnete Spalten und Spalten von Sichten.|1 = TRUE (gibt schreibgeschützten Zugriff an)<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe|  
+|**UsesAnsiTrim**|ANSI_PADDING wurde zum Zeitpunkt der Erstellung der Tabelle auf ON festgelegt. Diese Eigenschaft gilt nur für Spalten oder Parameter vom Typ **char** oder **varchar**.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Ungültige Eingabe|  
   
 ## <a name="return-types"></a>Rückgabetypen
  **int**  
@@ -90,13 +87,13 @@ Ein Ausdruck, der die Informationen enthält, die für *id* zurückgegeben werde
 ## <a name="exceptions"></a>Ausnahmen  
 Gibt NULL bei einem Fehler zurück oder wenn ein Aufrufer nicht über Berechtigungen zum Anzeigen des Objekts verfügt.
   
-Ein Benutzer kann nur die Metadaten sicherungsfähiger Elemente anzeigen, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Dies bedeutet, dass Metadaten ausgebende integrierte Funktionen, z. B. COLUMNPROPERTY, möglicherweise NULL zurückgeben, wenn dem Benutzer für das Objekt keine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
+Ein Benutzer kann nur die Metadaten sicherungsfähiger Elemente anzeigen, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Dies bedeutet, dass Metadaten ausgebende integrierte Funktionen, z.B. `COLUMNPROPERTY`, möglicherweise NULL zurückgeben, wenn dem Benutzer für das Objekt nicht die korrekte Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Konfigurieren der Sichtbarkeit von Metadaten](../../relational-databases/security/metadata-visibility-configuration.md).
   
 ## <a name="remarks"></a>Remarks  
-Beim Prüfen einer deterministischen Eigenschaft einer Spalte prüfen Sie zuerst, ob die Spalte eine berechnete Spalte ist. **IsDeterministic** gibt für nicht berechnete Spalten NULL zurück. Berechnete Spalten können als Indexspalten angegeben werden.
+Beim Überprüfen der deterministischen Eigenschaft einer Spalte prüfen Sie zuerst, ob die Spalte eine berechnete Spalte ist. Das Argument **IsDeterministic** gibt für nicht berechnete Spalten NULL zurück. Berechnete Spalten können als Indexspalten angegeben werden.
   
 ## <a name="examples"></a>Beispiele  
-Das folgende Beispiel gibt die Länge der Spalte `LastName` zurück.
+Dieses Beispiel gibt die Länge der Spalte `LastName` zurück.
   
 ```sql
 USE AdventureWorks2012;  
