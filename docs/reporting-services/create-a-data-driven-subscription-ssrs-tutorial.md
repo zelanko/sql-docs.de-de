@@ -1,15 +1,14 @@
 ---
 title: Erstellen eines datengesteuerten Abonnements (SSRS-Tutorial) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 05/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - walkthroughs [Reporting Services]
 - data-driven subscriptions
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
-caps.latest.revision: 
+caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 731e14ba0da7b3d9b54b1ba24aa2fda41adda49b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: da6c81701af24b495e84cb26dc3a6581d00ba1f6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Erstellen eines datengesteuerten Abonnements (SSRS-Lernprogramm)
 In diesem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Tutorial lernen Sie die Konzepte von datengesteuerten Abonnements kennen, indem Sie durch ein einfaches Beispiel geführt werden, mit dem ein datengesteuertes Abonnement erstellt wird, das zum Generieren und Speichern einer gefilterten Berichtsausgabe in eine Dateifreigabe verwendet wird. 
@@ -76,7 +74,7 @@ Auf Ihrem Computer müssen für die Verwendung dieses Lernprogramms folgende Anw
   
 -   Die **AdventureWorks2014** -Beispieldatenbank, die Daten für den Beispielbericht bereitstellt.  
   
--   Eine [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Rollenzuordnung, welche die Aufgabe Alle Abonnements verwalten für den Beispielbericht umfasst. Diese Aufgabe ist für das Definieren eines datengesteuerten Abonnements erforderlich. Wenn Sie als Administrator am Computer angemeldet sind, gewährt die standardmäßige Rollenzuweisung für lokale Administratoren die zum Erstellen datengesteuerter Abonnements erforderlichen Berechtigungen. Weitere Informationen finden Sie unter [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
+-   Eine [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Rollenzuordnung, welche die Aufgabe Alle Abonnements verwalten für den Beispielbericht umfasst. Diese Aufgabe ist für das Definieren eines datengesteuerten Abonnements erforderlich. Wenn Sie als Administrator am Computer angemeldet sind, gewährt die standardmäßige Rollenzuweisung für lokale Administratoren die zum Erstellen datengesteuerter Abonnements erforderlichen Berechtigungen. Weitere Informationen finden Sie unter [Granting Permissions on a Native Mode Report Server](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
   
 -   Ein freigegebener Ordner, für den Sie Schreibberechtigungen besitzen. Auf den freigegebenen Ordner muss über eine Netzwerkverbindung zugegriffen werden können.  
   

@@ -1,25 +1,23 @@
 ---
-title: "Übersicht über Claims to Windows Token Service (C2WTS) und Reporting Services | Microsoft-Dokumentation"
-ms.custom: 
+title: Übersicht über Claims to Windows Token Service (C2WTS) und Reporting Services | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 09/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: fcc2707cb5febc11d033e745a41fd15dbdbddb7c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 82145ec54fc4a619bc5b399d44b9d34f858b3fa4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) und Reporting Services
 
@@ -54,7 +52,7 @@ Wenn in der Umgebung die eingeschränkte Kerberos-Delegierung verwendet wird, da
 
 2. Konfigurieren Sie die Delegierung für das C2WTS-Dienstkonto.
 
-    Das Konto muss für die eingeschränkte Delegierung mit Protokollübergang konfiguriert werden. Außerdem benötigt es Berechtigungen für die Delegierung an Dienste, mit denen es kommunizieren muss (d.h. SQL Server-Datenbankmodul oder SQL Server Analysis Services). Verwenden Sie das Snap-In „Active Directory-Benutzer und -Computer“, um die Delegierung zu konfigurieren. Dafür müssen Sie als Domänenadministrator angemeldet sein.
+    Das Konto muss für die eingeschränkte Delegierung mit Protokollübergang konfiguriert werden. Außerdem benötigt es Berechtigungen für die Delegierung an Dienste, mit denen es kommunizieren muss (d.h. SQL Server-Datenbank-Engine oder SQL Server Analysis Services). Verwenden Sie das Snap-In „Active Directory-Benutzer und -Computer“, um die Delegierung zu konfigurieren. Dafür müssen Sie als Domänenadministrator angemeldet sein.
 
     > [!IMPORTANT]
     > Alle Einstellungen, die Sie für das C2WTS-Dienstkonto auf der Registerkarte „Delegierung“ konfigurieren, müssen dem Hauptdienstkonto entsprechen. Für das **Berichts-Viewer-Webpart** ist dies das Dienstkonto für die SharePoint-Webanwendung. Für den **integrierten SharePoint-Modus** ist dies das Reporting Services-Dienstkonto.

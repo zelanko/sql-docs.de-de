@@ -1,16 +1,15 @@
 ---
 title: Formatieren der Legende in einem Diagramm (Berichts-Generator und SSRS) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.calculatedseriesproperties.legend.f1
 - "10183"
@@ -29,16 +28,15 @@ f1_keywords:
 - sql13.rtp.rptdesigner.legendtitleproperties.general.f1
 - sql13.rtp.rptdesigner.legendproperties.font.f1
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 6671b7465773e0c0f27b2ba2ec5bf1d16e2b1b2c
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: ece29c4bf152cfe96f79bcf47c6eea5e7e195871
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="chart-legend---formatting-report-builder"></a>Diagrammlegende: Formatierung (Berichts-Generator)
   Die Diagrammlegende enthält Beschreibungen für jede Kategorie in einem Diagramm. Eine Legende umfasst immer ein oder mehrere Legendenelemente. Jedes Legendenelement besteht aus einem farbigen Kästchen, das für die Reihe steht, und einer Textzeichenfolge, die die Reihe beschreibt. Dies ist in der folgenden Abbildung dargestellt.  
@@ -55,7 +53,7 @@ ms.lasthandoff: 01/09/2018
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="ordering-legend-items-in-the-legend"></a>Sortieren von Legendenelementen in der Legende  
- Reihen werden in der Legende in der Reihenfolge sortiert, in der sie vom [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Verarbeitungsmodul verarbeitet werden. Sie können die Reihenfolge ändern, indem Sie die Reihenfolge der Felder in der Datenfeld-Ablagezone ändern. Wenn Sie eine Reihengruppierung verwenden, sind die Reihendaten erst bei der Verarbeitung bekannt. Es gibt also keine Möglichkeit, diese Elemente neu zu sortieren. Sie können die Änderungen in der Vorschau anzeigen. Weitere Informationen zur Reihengruppierung finden Sie unter [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
+ Reihen werden in der Legende in der Reihenfolge sortiert, in der sie von der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Verarbeitungs-Engine verarbeitet werden. Sie können die Reihenfolge ändern, indem Sie die Reihenfolge der Felder in der Datenfeld-Ablagezone ändern. Wenn Sie eine Reihengruppierung verwenden, sind die Reihendaten erst bei der Verarbeitung bekannt. Es gibt also keine Möglichkeit, diese Elemente neu zu sortieren. Sie können die Änderungen in der Vorschau anzeigen. Weitere Informationen zur Reihengruppierung finden Sie unter [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
   
  Sie können für jede Reihe einzeln verhindern, dass sie in der Legende angezeigt wird. Wenn Sie die Reihengruppierung verwenden, werden alle Reihen mit Bezug zum Datenfeld ausgeblendet. Weitere Informationen finden Sie unter [Ausblenden von Legendenelementen im Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md).  
   

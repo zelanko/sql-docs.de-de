@@ -1,27 +1,25 @@
 ---
 title: SQL Server Parallel Data Warehouse-Verbindungstyp (SSRS) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d73b3b84f1a2c2fb8a9427cde1deba7a8745c90e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 4644af09bedc2582c10ee00f29c525d244bd398f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server Parallel Data Warehouse-Verbindungstyp (SSRS)
 
@@ -87,7 +85,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  Der von [!INCLUDE[ssDW](../../includes/ssdw-md.md)] verwendete grafische Abfrage-Designer bietet integrierte Unterstützung für das Gruppieren und Aggregate. Sie können daher Abfragen schreiben, durch die nur Zusammenfassungsdaten abgerufen werden. Die [!INCLUDE[DWsql](../../includes/dwsql-md.md)] -Sprachfunktionen sind die GROUP BY-Klausel, das DISTINCT-Schlüsselwort und Aggregate wie SUM und COUNT. Der textbasierte Abfrage-Designer bietet vollständige Unterstützung für die [!INCLUDE[DWsql](../../includes/dwsql-md.md)] -Sprache, einschließlich Gruppieren und Aggregate.  
   
- Weitere Informationen zu [!INCLUDE[tsql](../../includes/tsql-md.md)] finden Sie unter [Transact-SQL-Referenz &#40;Datenbankmodul&#41;](../../t-sql/transact-sql-reference-database-engine.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[Onlinedokumentation](http://go.microsoft.com/fwlink/?LinkId=141687) auf „msdn.microsoft.com“.  
+ Weitere Informationen zu [!INCLUDE[tsql](../../includes/tsql-md.md)] finden Sie unter [Transact-SQL-Referenz &amp;#40;Datenbank-Engine&amp;#41;](../../t-sql/transact-sql-reference-database-engine.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[Onlinedokumentation](http://go.microsoft.com/fwlink/?LinkId=141687) auf „msdn.microsoft.com“.  
   
 ###  <a name="QueryText"></a> Verwenden des Abfragetyps "Text"  
  Im textbasierten Abfrage-Designer geben Sie [!INCLUDE[DWsql](../../includes/dwsql-md.md)] -Befehle ein, um die Daten in einem Dataset zu definieren. Die Abfragen, mit denen Sie Daten aus [!INCLUDE[ssDW](../../includes/ssdw-md.md)] abrufen, sind mit denen identisch, die Sie zum Abrufen von Daten aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen verwenden, die nicht innerhalb einer [!INCLUDE[ssDW](../../includes/ssdw-md.md)] -Anwendung ausgeführt werden. Mit der folgenden [!INCLUDE[DWsql](../../includes/dwsql-md.md)] -Abfrage werden z. B. die Namen aller Mitarbeiter ausgewählt, die Marketingassistenten sind:  

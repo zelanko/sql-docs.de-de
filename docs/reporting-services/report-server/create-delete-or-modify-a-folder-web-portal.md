@@ -1,27 +1,25 @@
 ---
-title: "Erstellen, Löschen oder Ändern eines Ordners (Webportal) | Microsoft-Dokumentation"
-ms.custom: 
+title: Erstellen, Löschen oder Ändern eines Ordners (Webportal) | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a569bbb511fda6089ba8d3e14bad5858ab1bbf4b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: e74001a999a6a401c6c221ce4839e32b344f3bba
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-delete-or-modify-a-folder-web-portal"></a>Erstellen, Löschen oder Ändern eines Ordners (Webportal)
   Sie können Ordner erstellen, um die auf einem Berichtsserver zu veröffentlichenden Elemente zu organisieren und zu verwalten. Mit der Erstellung von Ordnern können Benutzer relevante Berichte leichter finden. Für Inhalts-Manager stellen Ordner ein Framework für die Anwendung von Berechtigungen dar. Sie können Rollenzuweisungen für bestimmte Ordner erstellen, um den Zugriff auf Berichte einzuschränken, die sich aktuell in der Entwicklung befinden oder die nur bestimmten Personen zugänglich gemacht werden sollen.  

@@ -1,16 +1,14 @@
 ---
 title: TYPE_NAME (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TYPE_NAME_TSQL
@@ -24,16 +22,16 @@ helpviewer_keywords:
 - data types [SQL Server], names
 - TYPE_NAME function
 ms.assetid: e4075a2e-5f70-440f-986b-9ec8434e07c1
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: efd210bc036ed301f426e81feb6c783984f9fb4d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 297cfa981df9478b8a26d2c6401c3ddbdaa01a9d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="typename-transact-sql"></a>TYPE_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +61,7 @@ TYPE_NAME ( type_id )
 ## <a name="remarks"></a>Remarks  
  TYPE_NAME gibt NULL zurück, wenn *type_id* ungültig ist oder der Aufrufer nicht über die erforderlichen Berechtigungen zum Verweisen auf den Typ verfügt.  
   
- TYPE_NAME funktioniert sowohl für Systemdatentypen als auch für benutzerdefinierte Datentypen. Der Typ kann in einem beliebigen Schema enthalten sein, aber ein nicht qualifizierter Typname wird immer zurückgegeben. Dies bedeutet, dass der Name nicht über das *schema***.**-Präfix verfügt .  
+ TYPE_NAME funktioniert sowohl für Systemdatentypen als auch für benutzerdefinierte Datentypen. Der Typ kann in einem beliebigen Schema enthalten sein, aber ein nicht qualifizierter Typname wird immer zurückgegeben. Dies bedeutet, dass der Name nicht über das Präfix *schema***.** verfügt.  
   
  Systemfunktionen können in der SELECT-Liste, in einer WHERE-Klausel und überall dort verwendet werden, wo ein Ausdruck zulässig ist. Weitere Informationen finden Sie unter [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md) und [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md).  
   

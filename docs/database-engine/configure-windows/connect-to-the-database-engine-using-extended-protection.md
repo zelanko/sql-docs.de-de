@@ -1,17 +1,14 @@
 ---
-title: Herstellen einer Verbindung mit dem Datenbankmodul unter Verwendung von „Erweiterter Schutz“ | Microsoft-Dokumentation
+title: Herstellen einer Verbindung mit der Datenbank-Engine unter Verwendung von „Erweiterter Schutz“ | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - spoofing attacks
 - service binding
@@ -24,14 +21,13 @@ caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bbcd2fcb55fabd3c8b9f4828f205c6017547e151
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f0eae05397ebe6ce2c73841e9c27746e9a946dfc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="connect-to-the-database-engine-using-extended-protection"></a>Herstellen einer Verbindung mit dem Datenbankmodul unter Verwendung von Erweiterter Schutz
+# <a name="connect-to-the-database-engine-using-extended-protection"></a>Herstellen einer Verbindung mit der Datenbank-Engine unter Verwendung von Erweiterter Schutz
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Erweiterter Schutz **wird von** ab [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]unterstützt. **Erweiterter Schutz für die Authentifizierung** ist eine Funktion der vom Betriebssystem implementierten Netzwerkkomponenten. **Erweiterter Schutz** wird in Windows 7 und Windows Server 2008 R2 unterstützt. **Erweiterter Schutz** ist in Service Packs für ältere [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Betriebssystemen enthalten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist sicherer, wenn Verbindungen möglichst mithilfe des **erweiterten Schutzes**hergestellt werden.  
   
@@ -86,14 +82,14 @@ ms.lasthandoff: 04/16/2018
   
      Die Variable **Akzeptierte NTLM-SPNs** wird benötigt, wenn ein Server durch mehr als einen SPN identifiziert wird. Wenn ein Client versucht, mithilfe eines gültigen, dem Server nicht bekannten SPNs eine Verbindung mit dem Server herzustellen, verursacht die Dienstbindung einen Fehler. Um dieses Problem zu vermeiden, können Benutzer mithilfe von **Akzeptierte NTLM-SPNs**mehrere SPNs für den Server angeben. **Akzeptierte NTLM-SPNs** umfasst eine Reihe durch Semikolons getrennter SPNs. Beispiel: Um die Verwendung der SPNs **MSSQLSvc/ HostName1.Contoso.com** und **MSSQLSvc/ HostName2.Contoso.com**zuzulassen, geben Sie im Feld **Akzeptierte NTLM-SPNs** die Zeichenfolge **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com** ein. Die maximale Länge der Variablen beträgt 2.048 Zeichen. **Akzeptierte NTLM-SPNs** befindet sich im **-Konfigurations-Manager unter** Protokolle für MSSQLSERVER-Eigenschaften (Registerkarte „Erweitert“) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="enabling-extended-protection-for-the-database-engine"></a>Aktivieren von "Erweiterter Schutz" für das Datenbankmodul  
+## <a name="enabling-extended-protection-for-the-database-engine"></a>Aktivieren von "Erweiterter Schutz" für die Datenbank-Engine  
  Zur Verwendung von **Erweiterter Schutz**benötigen sowohl der Server als auch der Client ein Betriebssystem, das **Erweiterter Schutz**unterstützt, und die Funktion **Erweiterter Schutz** muss für das Betriebssystem aktiviert sein. Weitere Informationen zum Aktivieren von **Erweiterter Schutz** für das Betriebssystem finden Sie unter [Erweiterter Schutz für die Authentifizierung](http://support.microsoft.com/kb/968389).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Erweiterter Schutz **wird von** ab [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]unterstützt. Für einige frühere**-Versionen wird** Erweiterter Schutz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in zukünftigen Updates verfügbar sein. Nachdem Sie **Erweiterter Schutz** auf dem Servercomputer aktiviert haben, führen Sie die folgenden Schritte aus, um **Erweiterter Schutz**zu aktivieren:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Erweiterter Schutz **wird von** ab [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]unterstützt. Für einige frühere **-Versionen wird** Erweiterter Schutz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in zukünftigen Updates verfügbar sein. Nachdem Sie **Erweiterter Schutz** auf dem Servercomputer aktiviert haben, führen Sie die folgenden Schritte aus, um **Erweiterter Schutz**zu aktivieren:  
   
 1.  Zeigen Sie im Menü **Start** auf **Alle Programme**, zeigen Sie auf **Microsoft SQL Server** , und klicken Sie dann auf **SQL Server-Konfigurations-Manager**.  
   
-2.  Erweitern Sie **SQL Server-Netzwerkkonfiguration**, klicken Sie mit der rechten Maustaste auf **Protokolle für** *\<*Instanzname*>*, und klicken Sie dann auf **Eigenschaften**.  
+2.  Erweitern Sie **SQL Server-Netzwerkkonfiguration**, klicken Sie mit der rechten Maustaste auf **Protokolle für** *\<* Instanzname*>*, und klicken Sie dann auf **Eigenschaften**.  
   
 3.  Legen Sie sowohl für die Kanalbindung als auch für die Dienstbindung auf der Registerkarte **Erweitert** die geeignete Einstellung für die Funktion **Erweiterter Schutz** fest.  
   

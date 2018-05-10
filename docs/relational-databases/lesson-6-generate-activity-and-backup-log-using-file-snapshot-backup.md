@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
@@ -19,12 +17,11 @@ caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9a0c763bb826140ef12e51d32900623d7f82764e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 282f88a0b41749a4e38d73285a794e357155d9d7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup"></a>Lektion 6: Generate activity and backup log using file-snapshot backup (Generieren von Aktivität und Erstellen einer Sicherung eines Protokolls mithilfe der Dateimomentaufnahme-Sicherung)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +31,7 @@ Um Aktivität in der AdventureWorks2014-Datenbank zu generieren und regelmäßig
   
 1.  Stellen Sie eine Verbindung mit SQL Server Management Studio her.  
   
-2.  Öffnen Sie zwei neue Abfragefenster und stellen Sie von jedem Abfragefenster aus eine Verbindung mit der SQL Server 2016-Instanz des Datenbankmoduls auf Ihrem virtuellen Azure-Computer her.  
+2.  Öffnen Sie zwei neue Abfragefenster und stellen Sie von jedem Abfragefenster aus eine Verbindung mit der SQL Server 2016-Instanz der Datenbank-Engine auf Ihrem virtuellen Azure-Computer her.  
   
 3.  Kopieren Sie das folgende Transact-SQL-Skript, fügen Sie es in ein Abfragefenster ein und führen Sie es aus. Beachten Sie, dass die Production.Location-Tabelle über 14 Zeilen verfügt, bevor wir neue Zeilen in Schritt 4 hinzufügen.  
   

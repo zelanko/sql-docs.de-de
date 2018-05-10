@@ -1,17 +1,16 @@
 ---
 title: SSIS-Katalog | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/30/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: service
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.ssms.iscreatecatalog.f1
 - sql13.ssis.ssms.iscatalogprop.general.f1
@@ -21,12 +20,11 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 50a4beefe7038fbce957209b9c34863d076bec41
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 0285d3dbaf5bd1ed5def180029a75c32fe4fcb83
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ssis-catalog"></a>SSIS-Katalog
   Der **SSISDB**-Katalog ist der zentrale Punkt zum Arbeiten mit [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]-Projekten (SSIS), die Sie auf dem [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]-Server bereitgestellt haben. Sie legen beispielsweise Projekt- und Paketparameter fest, konfigurieren Umgebungen, um Laufzeitwerte für Pakete anzugeben, führen Pakete aus, behandeln Paketprobleme und verwalten [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] -Servervorgänge.  
@@ -41,7 +39,7 @@ ms.lasthandoff: 04/26/2018
   
  Weitere Informationen zum Anzeigen von Vorgangsdaten finden Sie unter [Ausführen von Paketen und andere Vorgänge überwachen](../../integration-services/performance/monitor-running-packages-and-other-operations.md).  
   
- Sie können den **SSISDB** -Katalog in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] aufrufen, indem Sie eine Verbindung zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankmodul herstellen und dann den Knoten **Integration Services-Kataloge** im Objekt-Explorer erweitern. In **greifen Sie auf die SSISDB-Datenbank zu, indem Sie den Knoten** Datenbanken [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] im Objekt-Explorer erweitern.  
+ Sie können den **SSISDB** -Katalog in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] aufrufen, indem Sie eine Verbindung zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank-Engine herstellen und dann den Knoten **Integration Services-Kataloge** im Objekt-Explorer erweitern. In **greifen Sie auf die SSISDB-Datenbank zu, indem Sie den Knoten** Datenbanken [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] im Objekt-Explorer erweitern.  
   
 > [!NOTE]
 > Sie können die **SSISDB** -Datenbank nicht umbenennen.  
@@ -315,7 +313,7 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags**erstellt SSIS die SQL Server-A
   
 1.  Öffnen Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-2.  Stellen Sie eine Verbindung mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankmodul her.  
+2.  Stellen Sie eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank-Engine her.  
   
 3.  Erweitern Sie im Objekt-Explorer den Serverknoten, klicken Sie mit der rechten Maustaste auf **Integration Services-Kataloge** , und klicken Sie anschließend auf **Katalog erstellen**.  
   
@@ -374,7 +372,7 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags**erstellt SSIS die SQL Server-A
   
 1.  Öffnen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-2.  Stellen Sie eine Verbindung mit einer Microsoft SQL Server-Datenbank her.  
+2.  Stellen Sie eine Verbindung mit einer Microsoft SQL Server-Datenbank-Engine her.  
   
 3.  Erweitern Sie im Objekt-Explorer den Knoten **Integration Services** , klicken Sie mit der rechten Maustaste auf den Knoten **SSISDB**, und klicken Sie anschließend auf **Eigenschaften**.  
   
@@ -619,9 +617,7 @@ Das Hinzufügen der SSISDB-Datenbank zu einer Always On-Verfügbarkeitsgruppe is
   
 Geben Sie das Kennwort an, das Sie beim Erstellen des SSIS-Katalogs auf der Seite **Datenbanken auswählen** im Assistenten für die **Neue Verfügbarkeitsgruppe** angegeben haben.
 
-Wenn die Aufforderung **Wählen Sie die Einstellung für die Datensynchronisierung aus** angezeigt wird, klicken Sie auf **Anfängliche Datensynchronisierung überspringen**.
-  
- ![Neue Verfügbarkeitsgruppe](../../integration-services/service/media/ssis-newavailabilitygroup.png "Neue Verfügbarkeitsgruppe")  
+![Neue Verfügbarkeitsgruppe](../../integration-services/service/media/ssis-newavailabilitygroup.png "Neue Verfügbarkeitsgruppe")  
   
 ####  <a name="Step3"></a> Schritt 3: Aktivieren der SSIS-Unterstützung für Always On  
  Nach dem Erstellen des Integration Service-Katalogs klicken Sie mit der rechten Maustaste auf den Knoten **Kataloge des Integrationsdiensts**, und klicken Sie auf **Always On-Unterstützung aktivieren**. Daraufhin sollte das Dialogfeld **Unterstützung für Always On aktivieren** angezeigt werden. Wenn dieses Menüelement deaktiviert ist, vergewissern Sie sich, dass Sie alle erforderlichen Komponenten installiert haben, und klicken Sie auf **Aktualisieren**.  
@@ -651,7 +647,7 @@ Wenn im Kontextmenü angezeigt wird, dass die Option **Always On-Unterstützung 
   
 4.  Nachdem Sie alle Knoten aktualisiert haben, fügen Sie die SSISDB-Datenbank wieder zur Always On-Verfügbarkeitsgruppe hinzu. Weitere Informationen finden Sie unter [Hinzufügen einer Datenbank zu einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/availability-group-add-a-database.md).  
   
- Wenn das Upgrade von SQL Server nicht blockiert wird und SSISDB sich in einer Always On-Verfügbarkeitsgruppe befindet, aktualisieren Sie SSISDB nach dem Upgrade des SQL Server-Datenbankmoduls gesondert. Verwenden Sie den SSIS-Upgrade-Assistenten, um die SSISDB upzugraden, wie im folgenden Verfahren beschrieben.  
+ Wenn das Upgrade von SQL Server nicht blockiert wird und SSISDB sich in einer Always On-Verfügbarkeitsgruppe befindet, aktualisieren Sie SSISDB nach dem Upgrade der SQL Server-Datenbank-Engine gesondert. Verwenden Sie den SSIS-Upgrade-Assistenten, um die SSISDB upzugraden, wie im folgenden Verfahren beschrieben.  
   
 1.  Verschieben Sie die SSISDB-Datenbank aus der Verfügbarkeitsgruppe, oder löschen Sie die Verfügbarkeitsgruppe, falls SSISDB die einzige Datenbank in der Verfügbarkeitsgruppe ist. Sie müssen **SQL Server Management Studio** auf dem **Primärknoten** der Verfügbarkeitsgruppe starten, um diese Aufgabe auszuführen.  
   

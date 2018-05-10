@@ -1,32 +1,32 @@
 ---
 title: Fehler- und Meldungsreferenz von Integration Services | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - error numbers [Integration Services]
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-caps.latest.revision: 
+caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 16f1793a182cf762882a90889ec8576c9fc6d99e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a318c197ceaa9d9b45eec2d4a7d14c4c92460c6c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-error-and-message-reference"></a>Fehler- und Meldungsreferenz von Integration Services
   In den folgenden Tabellen sind vordefinierte Fehler-, Warn- und Informationsmeldungen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in aufsteigender numerischer Reihenfolge innerhalb jeder Kategorie aufgeführt, inklusive der jeweiligen numerischen Codes und symbolischen Namen. Jeder dieser Fehler ist als Feld der Klasse <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> im Namespace <xref:Microsoft.SqlServer.Dts.Runtime> definiert.  
@@ -236,8 +236,8 @@ ms.lasthandoff: 01/25/2018
 |0xC0015004|-1073655804|DTS_E_CANTWRITETOFILE|Die Datei "%1" konnte nicht zum Schreiben geöffnet werden. Möglicherweise ist die Datei schreibgeschützt, oder Sie verfügen nicht über die erforderlichen Berechtigungen.|  
 |0xC0015005|-1073655803|DTS_E_NOROWSETRETURNED|Der Ausführung dieser Abfrage ist kein Ergebnisrowset zugeordnet. Das Ergebnis ist nicht richtig angegeben.|  
 |0xC0015105|-1073655547|DTS_E_DUMP_FAILED|Debugdumpdateien wurden nicht korrekt generiert. Das Ergebnis lautet 0x%1!8.8X!.|  
-|0xC0016001|-1073651711|DTS_E_INVALIDURL|Die angegebene URL ist ungültig. Dies ist auf eine Server- oder Proxy-URL gleich NULL oder auf ein falsches Format zurückzuführen. Eine gültige URL entspricht dem Format http://ServerName:Port/ResourcePath oder https://ServerName:Port/ResourcePath.|  
-|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|Die URL %1 ist ungültig. Dieses Problem tritt auf, wenn ein anderes als das http- oder https-Schema angegeben ist oder die URL ein falsches Format aufweist. Eine gültige URL entspricht dem Format http://ServerName:Port/ResourcePath oder https://ServerName:Port/ResourcePath.|  
+|0xC0016001|-1073651711|DTS_E_INVALIDURL|Die angegebene URL ist ungültig. Dies ist auf eine Server- oder Proxy-URL gleich NULL oder auf ein falsches Format zurückzuführen. Ein gültiges URL-Format lautet http://ServerName:Port/ResourcePath oder https://ServerName:Port/ResourcePath.|  
+|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|Die URL %1 ist ungültig. Dieses Problem tritt auf, wenn ein anderes als das http- oder https-Schema angegeben ist oder die URL ein falsches Format aufweist. Ein gültiges URL-Format lautet http://ServerName:Port/ResourcePath oder https://ServerName:Port/ResourcePath.|  
 |0xC0016003|-1073651709|DTS_E_WINHTTPCANNOTCONNECT|Mit dem Server %1 kann keine Verbindung hergestellt werden. Dieser Fehler tritt auf, wenn der Server nicht vorhanden ist oder die Proxyeinstellungen falsch sind.|  
 |0xC0016004|-1073651708|DTS_E_CONNECTIONTERMINATED|Die Verbindung mit dem Server wurde zurückgesetzt oder beendet. Versuchen Sie es später noch einmal.|  
 |0xC0016005|-1073651707|DTS_E_LOGINFAILURE|Fehler beim Anmeldeversuch für "%1". Dieser Fehler tritt auf, wenn die bereitgestellten Anmeldeinformationen falsch sind. Überprüfen Sie die Anmeldeinformationen.|  
@@ -2019,7 +2019,7 @@ ms.lasthandoff: 01/25/2018
 |0xC0209318|-1071607016|DTS_E_XMLDATATYPECHANGED|Die Datentypinformationen des XML-Schemas für "%1" im Element "%2" wurden geändert.  Initialisieren Sie die Metadaten für diese Komponente neu, und überprüfen Sie die Spaltenzuordnungen.|  
 |0xC0209319|-1071607015|DTS_E_TXLOOKUP_UNUSEDINPUTCOLUMN|%1 wird im Join oder in der Kopie nicht verwendet. Entfernen Sie die nicht verwendete Spalte aus der Eingabespaltenliste.|  
 |0xC020931A|-1071607014|DTS_E_SORTSTACKOVERFLOW|Die Sortierung eines eingehenden Puffers ist aufgrund eines Stapelüberlaufs fehlgeschlagen.  Reduzieren Sie die DefaultBufferMaxRows-Eigenschaft im Datenflusstask.|  
-|0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|Erwägen Sie, den ANBIETER in der Verbindungszeichenfolge auf %1 zu ändern, oder besuchen Sie http://www.microsoft.com/downloads, um Unterstützung für %2 zu finden und zu installieren.|  
+|0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|Erwägen Sie, den ANBIETER in der Verbindungszeichenfolge auf %1 zu ändern, oder finden und installieren Sie Unterstützung für %2 unter http://www.microsoft.com/downloads.|  
 |||DTS_E_INITTASKOBJECTFAILED|Fehler beim Initialisieren des Taskobjekts für Task „%1!s!“ vom Typ „%2!s!“. Es kann aufgrund des Fehlers 0x%3!8.8X! „%4! s!“ nicht erstellt werden.|  
 |||DTS_E_GETCATMANAGERFAILED|Fehler beim Erstellen des COM-Komponenten-Kategorien-Managers aufgrund des Fehlers 0x%1!8.8X! „%2!s!“.|  
 |||DTS_E_COMPONENTINITFAILED|Komponente %1!s! konnte nicht gestartet werden, und zwar aufgrund des Fehlers 0x%2!8.8X! „%3!s!“.|  

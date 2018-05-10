@@ -1,29 +1,27 @@
 ---
-title: "Lektion 6: Hinzufügen von Gruppierungen und Gesamtergebnissen (Reporting Services) | Microsoft-Dokumentation"
-ms.custom: 
+title: 'Lektion 6: Hinzufügen von Gruppierungen und Gesamtergebnissen (Reporting Services) | Microsoft-Dokumentation'
+ms.custom: ''
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
-caps.latest.revision: 
+caps.latest.revision: 56
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 2949110180da3c51a0bb536279cc9003d60be947
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f069b1f4303566aed0bcb486717b7f254691553d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 In dieser Lektion des Tutorials werden Sie Ihrem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Report Gruppierungen und Gesamtergebnisse hinzufügen, um Ihre Daten zu organisieren und zusammenzufassen.  
@@ -57,7 +55,7 @@ In dieser Lektion des Tutorials werden Sie Ihrem [!INCLUDE[ssRSnoversion](../inc
   
 8.  Wählen Sie im Feld **Typ** die Option **31. Januar 2000**aus.  
   
-9.  [!INCLUDE[clickOK](../includes/clickok-md.md)]zugreifen.  
+9.  [!INCLUDE[clickOK](../includes/clickok-md.md)].  
   
 10.  Wechseln Sie zur Registerkarte **Vorschau** , um eine Vorschau des Berichts anzuzeigen. Die Vorschau sollte ähnlich der folgenden Abbildung aussehen:  
     ![rs_Basistabelle_Gruppen_Vorschau](../reporting-services/media/rs-basictablegroupspreview.png) 

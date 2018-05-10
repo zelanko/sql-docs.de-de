@@ -4,25 +4,23 @@ ms.custom: ''
 ms.date: 02/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
 caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 57326cdaab173fa0ab3255da4b336eb4b294e19b
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 73e11ad9c4da2f1a87eb7c148b9a37688273c8ce
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Herstellen einer Verbindung mit einer Flatfile-Datenquelle (SQL Server-Import/Export-Assistent)
 In diesem Artikel wird erläutert, wie Sie eine Verbindung mit einer **Flatfile**-Datenquelle (Textdatei) von der Seite **Datenquelle auswählen** oder **Ziel auswählen** des SQL Server-Import/Export-Assistenten herstellen. Für Flatfiles enthalten diese beiden Seiten des Assistenten verschiedene Optionen, deshalb werden in diesem Artikel die Flatfilequelle und das Flatfileziel separat beschrieben.

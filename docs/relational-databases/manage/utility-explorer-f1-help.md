@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/19/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: maintenance-plans
 ms.reviewer: ''
 ms.suite: sql
@@ -26,12 +25,11 @@ caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 195806725d74efb689c14200529d6dafc6a17316
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 30fc710837c06d61788b330bfe0c603748e3d6a8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="utility-explorer-f1-help"></a>Hilfsprogramm-Explorer (F1-Hilfe)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +69,7 @@ ms.lasthandoff: 04/16/2018
   
  Um eine gefilterte Sicht einer verwalteten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder einer Datenebenenanwendung zu erstellen, klicken Sie auf den Link für eine Auslastungskategorie neben dem entsprechenden verschiebbaren Indikator im Hilfsprogrammdashboard. Wenn Sie z. B. im Bereich **Inhalt des Hilfsprogramm-Explorers** auf **Überausgelastete Instanz-CPU** klicken, erstellt SSMS eine gefilterte Listenansicht von verwalteten Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die auf der Grundlage der aktuellen Richtlinieneinstellungen eine überausgelastete CPU haben.  
   
- Beachten Sie, dass der entsprechende Knoten im Hilfsprogramm-Explorer-Navigationsbereich mit **(gefiltert)** angefügt wird, wenn Sie auf einen Link für eine Auslastungskategorie klicken, d.h., **Verwaltete Instanzen** wird als **Verwaltete Instanzen (gefiltert)**bezeichnet. Um Filtereinstellungen anzuzeigen, klicken Sie mit der rechten Maustaste auf den Knoten im Navigationsbereich, wählen Sie **Filter**aus, und klicken Sie dann auf **Filtereinstellungen**. Um Filtereinstellungen zu löschen, klicken Sie mit der rechten Maustaste auf den Knoten im Navigationsbereich, wählen **Filter** aus und klicken dann auf **Filter entfernen**.  
+ Beachten Sie, dass der entsprechende Knoten im Hilfsprogramm-Explorer-Navigationsbereich mit **(gefiltert)** angefügt wird, wenn Sie auf einen Link für eine Auslastungskategorie klicken, d.h., **Verwaltete Instanzen** wird als **Verwaltete Instanzen (gefiltert)** bezeichnet. Um Filtereinstellungen anzuzeigen, klicken Sie mit der rechten Maustaste auf den Knoten im Navigationsbereich, wählen Sie **Filter**aus, und klicken Sie dann auf **Filtereinstellungen**. Um Filtereinstellungen zu löschen, klicken Sie mit der rechten Maustaste auf den Knoten im Navigationsbereich, wählen **Filter** aus und klicken dann auf **Filter entfernen**.  
   
  Weitere Informationen zum Anzeigen des Zustands einzelner Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bzw. zum Anzeigen oder Ändern der Einstellungen für die Richtlinienkonfiguration finden Sie unter [Details zu verwalteten Instanzen &#40;SQL Server-Hilfsprogramm&#41;](http://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2).  
   

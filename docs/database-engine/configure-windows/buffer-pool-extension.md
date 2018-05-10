@@ -3,33 +3,29 @@ title: Pufferpoolerweiterung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 4ffff5a902f7758e901301cc733b1260ef4d5dd6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5aa357b9e5afaf48a99b30fd7215cf4b1dbb7b03
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="buffer-pool-extension"></a>Pufferpoolerweiterung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Seit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]ermöglicht die Pufferpoolerweiterung die nahtlose Integration einer NVRAM (Non-Volatile Random Access Memory)-Erweiterung, d. h. Solid State Drive, in den [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Pufferpool, um den E/A-Durchsatz deutlich zu verbessern. Die Pufferpoolerweiterung ist nicht in jeder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Edition verfügbar. Weitere Informationen finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ## <a name="benefits-of-the-buffer-pool-extension"></a>Vorteile der Pufferpoolerweiterung  
- Der Hauptzweck einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank ist das Speichern und Abrufen von Daten. Daher stellt eine hohe Ein-/Ausgabe auf dem Datenträger ein Hauptmerkmal des Datenbankmoduls dar. Datenträger-E/A-Vorgänge beanspruchen ggf. viele Ressourcen und benötigen relativ viel Zeit für die Ausführung. Daher ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] so konzipiert, dass E/A-Vorgänge möglichst effizient gestaltet werden. Der Pufferpool ist eine primäre Speicherbelegungsquelle von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die Pufferverwaltung ist eine zentrale Komponente zum Erreichen dieser Effizienz. Die Pufferverwaltungskomponente weist zwei Mechanismen auf: den Puffer-Manager, mit dem auf Datenbankseiten zugegriffen wird und mit dem sie aktualisiert werden, und den Pufferpool, mit dem Datenbankdatei-E/A-Vorgänge reduziert werden.  
+ Der Hauptzweck einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank ist das Speichern und Abrufen von Daten. Daher stellt eine hohe Ein-/Ausgabe auf dem Datenträger ein Hauptmerkmal der Datenbank-Engine dar. Datenträger-E/A-Vorgänge beanspruchen ggf. viele Ressourcen und benötigen relativ viel Zeit für die Ausführung. Daher ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] so konzipiert, dass E/A-Vorgänge möglichst effizient gestaltet werden. Der Pufferpool ist eine primäre Speicherbelegungsquelle von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die Pufferverwaltung ist eine zentrale Komponente zum Erreichen dieser Effizienz. Die Pufferverwaltungskomponente weist zwei Mechanismen auf: den Puffer-Manager, mit dem auf Datenbankseiten zugegriffen wird und mit dem sie aktualisiert werden, und den Pufferpool, mit dem Datenbankdatei-E/A-Vorgänge reduziert werden.  
   
  Daten- und Indexseiten werden vom Datenträger in den Pufferpool gelesen und geänderte Seiten (auch bekannt als modifizierte Seiten) werden zurück auf den Datenträger geschrieben. Ungenügender Arbeitsspeicher auf den Server- und Datenbankprüfpunkten bewirkt heiße (aktive) modifizierte Seiten im Puffercache, die aus dem Cache entfernt und auf mechanische Datenträger geschrieben und dann wieder in den Cache gelesen werden. Diese E/A-Vorgänge sind in der Regel kleine zufällige Lese- und Schreibvorgänge in der Größenordnung von 4 bis 16 KB Daten. Kleine zufällige E/A-Muster verursachen häufige Suchen, die um den mechanischen Datenträgerarm konkurrieren, die E/A-Latenzzeit erhöhen und den aggregierten E/A-Durchsatz des Systems verringern.  
   

@@ -1,17 +1,14 @@
 ---
-title: Konfigurieren des Datenbankmoduls zum Überwachen mehrerer TCP-Ports | Microsoft-Dokumentation
+title: Konfigurieren der Datenbank-Engine zum Überwachen mehrerer TCP-Ports | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: configure-windows
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], multiple
 - TDS
@@ -25,14 +22,13 @@ caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 7181881b40e7a06d8f8ef11ec7670eeec961e4b7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 32e9798bc161821f3136581692933d8fe548d762
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>Konfigurieren des Datenbankmoduls zum Überwachen mehrerer TCP-Ports
+# <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>Konfigurieren der Datenbank-Engine zum Überwachen mehrerer TCP-Ports
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Thema wird beschrieben, wie Sie [!INCLUDE[ssDE](../../includes/ssde-md.md)] konfigurieren können, um auf mehreren TCP-Ports in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe des SQL Server-Konfigurations-Managers lauschen zu können. Wenn TCP/IP für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aktiviert wird, überwacht der [!INCLUDE[ssDE](../../includes/ssde-md.md)] eingehende Verbindungen auf einem Verbindungspunkt, der aus der IP-Adresse und der TCP-Portnummer besteht. Die folgenden Prozeduren erstellen einen Tabular Data Stream-Endpunkt (TDS), damit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem zusätzlichen TCP-Port lauschen kann.  
   
@@ -50,7 +46,7 @@ ms.lasthandoff: 04/16/2018
   
 -   Angeben der TCP-Portnummer für die ausgewählte IP-Adresse.  
   
- Weitere Informationen zu den Standardeinstellungen der Windows-Firewall und eine Beschreibung der TCP-Ports, die sich auf Datenbankmodul, Analysis Services, Reporting Services und Integration Services auswirken, finden Sie unter [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
+ Weitere Informationen zu den Standardeinstellungen der Windows-Firewall und eine Beschreibung der TCP-Ports, die sich auf Datenbank-Engine, Analysis Services, Reporting Services und Integration Services auswirken, finden Sie unter [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 ##  <a name="SSMSProcedure"></a>  
   
@@ -80,7 +76,7 @@ ms.lasthandoff: 04/16/2018
     GO  
     ```  
   
-#### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>So konfigurieren Sie das SQL Server-Datenbankmodul zum Lauschen an einem zusätzlichen TCP-Port  
+#### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>So konfigurieren Sie die SQL Server-Datenbank-Engine zum Lauschen an einem zusätzlichen TCP-Port  
   
 1.  Erweitern Sie im SQL Server-Konfigurations-Manager den Eintrag **SQL Server-Netzwerkkonfiguration**, und klicken Sie dann auf **Protokolle für***<Instanzname>*.  
   

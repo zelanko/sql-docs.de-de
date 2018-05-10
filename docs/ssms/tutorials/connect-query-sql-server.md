@@ -10,11 +10,13 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: fe8d438d95e994438df565013eaf79da92ccf9b3
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.prod: sql
+ms.technology: ssms
+ms.openlocfilehash: e663bf07fb724e5b65a47573f26702a6b1ccae14
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Tutorial: Herstellen einer Verbindung mit und Abfragen von einer SQL Server-Instanz über SQL Server Management Studio
 In diesem Tutorial erfahren Sie, wie Sie mit SQL Server Management Studio (SSMS) eine Verbindung mit einer SQL Server-Instanz herstellen und grundlegende T-SQL-Befehle (Transact-SQL) ausführen. In diesem Artikel erhalten Sie Informationen zu folgenden Themen:
@@ -49,8 +51,6 @@ Wenn Sie über keinen Zugriff auf eine SQL Server-Instanz verfügen, wählen Sie
 
     - Wählen Sie für **Servertyp** die Option **Datenbank-Engine** (normalerweise die Standardoption) aus.
     - Geben Sie für **Servername** den Namen Ihrer SQL Server-Instanz ein. (In diesem Artikel wird der Instanzname „SQL2016ST“ auf dem Hostnamen „NODE5“ [NODE5\SQL2016ST] verwendet.) Wenn Sie nicht genau wissen, wie Sie Ihren SQL Server-Instanznamen bestimmen sollen, erhalten Sie hier [zusätzliche Tipps und Tricks für die Verwendung von SSMS](ssms-tricks.md#determine-sql-server-name).  
-
-    ![Feld „Servername“ mit Beispielinstanznamen](media/connect-query-sql-server/connection.png)
 
     ![Feld „Servername“ mit der Option zur Verwendung der SQL Server-Instanz](media/connect-query-sql-server/connection2.png)
 

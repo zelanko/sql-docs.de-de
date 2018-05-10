@@ -3,15 +3,13 @@ title: Hinzufügen eines Zeugen für die Datenbankspiegelung mithilfe der Window
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
+ms.prod_service: high-availability
 ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - witness [SQL Server], establishing
 - Windows authentication [SQL Server]
@@ -21,16 +19,15 @@ caps.latest.revision: 51
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ac2992afd40c4890c5fe54da83d2a8528aedd4b9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ca7ab8872d8205ae7120913a7c481b3422f05f3b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Hinzufügen eines Zeugen für die Datenbankspiegelung mithilfe der Windows-Authentifizierung (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Um einen Zeugen für eine Datenbank einzurichten, weist der Datenbankbesitzer einer Instanz des Datenbankmoduls die Rolle des Zeugenservers zu. Die Zeugenserverinstanz kann auf demselben Computer wie die Prinzipal- oder Spiegelserverinstanz ausgeführt werden. Hierdurch wird jedoch die Zuverlässigkeit des automatischen Failovers erheblich reduziert.  
+  Um einen Zeugen für eine Datenbank einzurichten, weist der Datenbankbesitzer einer Instanz der Datenbank-Engine die Rolle des Zeugenservers zu. Die Zeugenserverinstanz kann auf demselben Computer wie die Prinzipal- oder Spiegelserverinstanz ausgeführt werden. Hierdurch wird jedoch die Zuverlässigkeit des automatischen Failovers erheblich reduziert.  
   
  Wir raten dringend, den Zeugen auf einem separaten Computer zu platzieren. Ein Server kann an mehreren gleichzeitigen Datenbank-Spiegelungssitzungen mit den gleichen oder anderen Partnern teilnehmen. Ein Server kann bei manchen Sitzungen als Partnerserver und bei anderen Sitzungen als Zeugenserver dienen.  
   
@@ -41,7 +38,7 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="to-establish-a-witness"></a>So richten Sie einen Zeugen ein  
   
-1.  Stellen Sie für die Zeugenserverinstanz sicher, dass ein Endpunkt für die Datenbankspiegelung vorhanden ist. Unabhängig von der Anzahl von Spiegelungssitzungen, die unterstützt werden sollen, darf die Serverinstanz nur einen Endpunkt der Datenbankspiegelung aufweisen. Wenn Sie diese Serverinstanz ausschließlich als Zeugen bei Datenbank-Spiegelungssitzungen verwenden möchten, weisen Sie dem Endpunkt die Rolle des Zeugen zu (ROLE**=**WITNESS). Wenn Sie diese Serverinstanz als Partner bei mindestens einer Datenbank-Spiegelungssitzung verwenden möchten, weisen Sie die Rolle des Endpunkts als ALL zu.  
+1.  Stellen Sie für die Zeugenserverinstanz sicher, dass ein Endpunkt für die Datenbankspiegelung vorhanden ist. Unabhängig von der Anzahl von Spiegelungssitzungen, die unterstützt werden sollen, darf die Serverinstanz nur einen Endpunkt der Datenbankspiegelung aufweisen. Wenn Sie diese Serverinstanz ausschließlich als Zeugen bei Datenbank-Spiegelungssitzungen verwenden möchten, weisen Sie dem Endpunkt die Rolle des Zeugen zu (ROLE**=** WITNESS). Wenn Sie diese Serverinstanz als Partner bei mindestens einer Datenbank-Spiegelungssitzung verwenden möchten, weisen Sie die Rolle des Endpunkts als ALL zu.  
   
      Zum Ausführen einer SET WITNESS-Anweisung muss die Datenbank-Spiegelungssitzung bereits gestartet sein (zwischen den Partnern), und als STATE muss für den Endpunkt des Zeugen STARTED festgelegt sein.  
   
@@ -66,7 +63,7 @@ ms.lasthandoff: 04/16/2018
   
      Die Syntax für eine Server-Netzwerkadresse lautet folgendermaßen:  
   
-     TCP**://**\<*Systemadresse>***:**\<*Port>*  
+     TCP **://**\<*Systemadresse>***:**\<* Port>*  
   
      Dabei ist \<*Systemadresse>* eine Zeichenfolge, die das Zielcomputersystem eindeutig identifiziert, und \<*Port>* ist die vom Spiegelungsendpunkt der Partnerserverinstanz verwendete Portnummer. Weitere Informationen finden Sie unter [Angeben einer Servernetzwerkadresse &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)verwendet.  
   

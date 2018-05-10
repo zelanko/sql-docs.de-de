@@ -1,32 +1,29 @@
 ---
 title: XML-Datentyp und -Spalten (SQL Server) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: xml
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
-caps.latest.revision: 
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 1c46731315da67c4258b4a08983b54e381bd6dbf
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: d76704d665b985804b2383690cd7dbeb22189201
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML-Datentyp und -Spalten (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-In diesem Thema werden die Vorteile und die Einschränkungen des **XML** -Datentyps für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erläutert. Es soll Ihnen zudem die Entscheidung vereinfachen, wie XML-Daten gespeichert werden.  
+  In diesem Thema werden die Vorteile und die Einschränkungen des **XML** -Datentyps für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erläutert. Es soll Ihnen zudem die Entscheidung vereinfachen, wie XML-Daten gespeichert werden.  
   
 ## <a name="relational-or-xml-data-model"></a>Relationales oder XML-Datenmodell  
  Wenn Ihre Daten sehr strukturiert sind und ein bekanntes Schema aufweisen, ist das relationale Modell möglicherweise zur Datenspeicherung am besten geeignet. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt die dazu erforderliche Funktionalität und die benötigten Tools bereit. Wenn Ihre Daten dagegen halbstrukturiert oder nicht strukturiert sind oder ihre Struktur unbekannt ist, müssen Sie das Modellieren dieser Daten in Erwägung ziehen.  
@@ -41,7 +38,7 @@ In diesem Thema werden die Vorteile und die Einschränkungen des **XML** -Datent
   
 -   Sie wollen basierend auf der Struktur Ihrer Daten Abfragen in den Daten ausführen oder Teile der Daten aktualisieren.  
   
- Wenn keine dieser Bedingungen zutrifft, sollten Sie das relationale Datenmodell verwenden. Wenn die Daten z.B. im XML-Format vorliegen, die Anwendung die Datenbank jedoch ausschließlich zum Speichern und Abrufen der Daten verwendet, benötigen Sie lediglich eine **[n]varchar(max)** -Spalte. Das Speichern der Daten in einer XML-Spalte bietet weitere Vorteile. Beispielsweise kann mit dem Modul ermittelt werden, ob die Daten wohlgeformt oder gültig sind, und es werden auch differenzierte Abfragen und Updates der XML-Daten unterstützt.  
+ Wenn keine dieser Bedingungen zutrifft, sollten Sie das relationale Datenmodell verwenden. Wenn die Daten z.B. im XML-Format vorliegen, die Anwendung die Datenbank jedoch ausschließlich zum Speichern und Abrufen der Daten verwendet, benötigen Sie lediglich eine **[n]varchar(max)** -Spalte. Das Speichern der Daten in einer XML-Spalte bietet weitere Vorteile. Beispielsweise kann mit der Engine ermittelt werden, ob die Daten wohlgeformt oder gültig sind, und es werden auch differenzierte Abfragen und Updates der XML-Daten unterstützt.  
   
 ## <a name="reasons-for-storing-xml-data-in-sql-server"></a>Gründe für das Speichern von XML-Daten in SQL Server  
  Im Folgenden werden einige Gründe angeführt, die dafür sprechen, Ihre Daten nicht im Dateisystem zu verwalten, sondern die systemeigenen XML-Funktionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu verwenden.  
@@ -69,7 +66,7 @@ In diesem Thema werden die Vorteile und die Einschränkungen des **XML** -Datent
   
      Die Daten werden in einer internen Darstellung gespeichert, die den XML-Inhalt der Daten beibehält. Diese interne Darstellung umfasst Informationen über die Einkapselungshierarchie, die Dokumentreihenfolge sowie die Element- und Attributwerte. Insbesondere bleibt der InfoSet-Inhalt der XML-Daten erhalten. Weitere Informationen zu InfoSet finden Sie unter [http://www.w3.org/TR/xml-infoset](http://go.microsoft.com/fwlink/?LinkId=48843). Der InfoSet-Inhalt ist möglicherweise keine identische Kopie der Text-XML, weil die folgenden Informationen nicht erhalten bleiben: insignifikante Leerzeichen, Reihenfolge der Attribute, Namespace-Präfixe und XML-Deklaration.  
   
-     Für den typisierten **XML** -Datentyp, ein an **XML** -Schemas gebundener -Datentyp, werden durch das PSVI (Post-Schema Validation InfoSet) dem InfoSet Typinformationen hinzugefügt und in der internen Darstellung codiert. Das führt zu einer erheblichen Steigerung der Analysegeschwindigkeit. Weitere Informationen finden Sie in den Spezifikationen zum W3C XML-Schema unter [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?LinkId=48881) und [http://www.w3.org/TR/xmlschema-2](http://go.microsoft.com/fwlink/?LinkId=4871).  
+     Für den typisierten **XML** -Datentyp, ein an **XML** -Schemas gebundener -Datentyp, werden durch das PSVI (Post-Schema Validation InfoSet) dem InfoSet Typinformationen hinzugefügt und in der internen Darstellung codiert. Das führt zu einer erheblichen Steigerung der Analysegeschwindigkeit. Weitere Informationen finden Sie in den W3C-XML-Schemaspezifikationen unter [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?LinkId=48881) und [http://www.w3.org/TR/xmlschema-2](http://go.microsoft.com/fwlink/?LinkId=4871).  
   
 -   Zuordnung zwischen XML- und relationaler Speicherung  
   

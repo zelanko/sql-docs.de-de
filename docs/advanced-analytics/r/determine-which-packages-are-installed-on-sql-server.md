@@ -1,25 +1,24 @@
 ---
-title: Anzeigen von R oder Python-Pakete, die auf SQL Server installiert | Microsoft Docs
+title: Abrufen von Informationen von R und Python-Paket für SQL Server-Machine Learning | Microsoft Docs
+description: R und Python-Paketversion ermitteln, überprüfen Sie die Installation und eine Liste der installierten Pakete auf SQL Server R Services "oder" Machine Learning Services abzurufen.
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/08/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7cea8b82337ca7d5b4cd17b1038a1eccc99370be
-ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
-ms.translationtype: MT
+ms.openlocfilehash: 3295bbdbb00c73c9aaa37dcb15d35121b82454bb
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/08/2018
 ---
-# <a name="viewing-r-or-python-packages-installed-on-sql-server"></a>Anzeigen von R oder Python-Pakete, die auf SQL Server installiert
+#  <a name="get-r-and-python-package-information-on-sql-server-machine-learning"></a>Abrufen von Informationen von R und Python-Paket für SQL Server-Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Wenn Sie mehrere Python-Umgebungen installiert haben oder mehrere R-Tools verwenden, ist es einfach installiert ein Paket auf der falschen Bibliothek oder der Umgebung und dann nicht möglich, später zu finden. 
-
-Dieser Artikel enthält einige Abfragen, die Sie verwenden können, um Ihrer aktuellen Version zu bestimmen und die Pakete aufzulisten, die in der aktuellen SQL Server-Umgebung installiert sind.
+Wenn Sie mehrere Python-Umgebungen installiert haben oder mehrere R-Tools verwenden, ist es einfach installiert ein Paket auf der falschen Bibliothek oder der Umgebung und dann nicht möglich, später zu finden. Dieser Artikel enthält Hinweise, die hilfreich für Determininga Paketversion und auf die Pakete aufzulisten, die in der aktuellen SQL Server-Umgebung installiert sind und Abfragen.
 
 ## <a name="verify-the-current-default-library"></a>Überprüfen Sie die aktuelle Standardbibliothek
 

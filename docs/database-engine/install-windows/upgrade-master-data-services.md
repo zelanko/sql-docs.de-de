@@ -3,25 +3,23 @@ title: Aktualisieren von Master Data Services | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/21/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: install-windows
+ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4abb0b1083aab2b944636e838586a39990e6ad06
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 216ea0f5416dd45f428d9cda336e7b5c194195c6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrade-master-data-services"></a>Aktualisieren von Master Data Services
 
@@ -29,9 +27,11 @@ ms.lasthandoff: 04/16/2018
   
   Im Folgenden sind die Szenarien zum Aktualisieren von Microsoft [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]-Master Data Services.  
   
--   [Upgrade ohne Datenbankmodulupgrade](../../database-engine/install-windows/upgrade-master-data-services.md#noengine)  
+-   
+  [Upgrade ohne Datenbank-Engine-Upgrade](../../database-engine/install-windows/upgrade-master-data-services.md#noengine)  
   
--   [Upgrade mit Datenbankmodulupgrade](../../database-engine/install-windows/upgrade-master-data-services.md#engine)  
+-   
+  [Upgrade mit Datenbank-Engine-Upgrade](../../database-engine/install-windows/upgrade-master-data-services.md#engine)  
   
 -   [Upgrade in einem Szenario mit zwei Computern](../../database-engine/install-windows/upgrade-master-data-services.md#twocomputer)  
   
@@ -61,7 +61,8 @@ ms.lasthandoff: 04/16/2018
   
  Sie können die aktuelle [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] und eine frühere Version von [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] auf demselben Computer installieren. Die Dateien werden in verschiedenen Speicherorten installiert, wie in [Dateispeicherort](#fileLocation)dargestellt.  
   
- **So upgraden Sie ohne das Upgrade des Datenbankmoduls**  
+ 
+  **So upgraden Sie ohne das Upgrade der Datenbank-Engine**  
   
 1.  Installieren Sie [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] und beliebige andere Funktionen.  
   
@@ -114,15 +115,16 @@ ms.lasthandoff: 04/16/2018
     3.  Klicken Sie auf **Anwenden**.  
   
 ##  <a name="engine"></a> Upgrade mit Datenbankmodulupgrade  
- In diesem Szenario aktualisieren Sie sowohl das Datenbankmodul als auch die [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Anwendung von einer früheren Version auf [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] oder [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)].  
+ In diesem Szenario aktualisieren Sie sowohl die Datenbank-Engine als auch die [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Anwendung von einer früheren Version auf [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] oder [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)].  
   
- **So upgraden Sie mit dem Upgrade des Datenbankmoduls**  
+ 
+  **So upgraden Sie mit dem Upgrade der Datenbank-Engine**  
   
 1.  **Nur für [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]**: Öffnen Sie **Systemsteuerung** > **Programme und Funktionen**, und deinstallieren Sie Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
-2.  Aktualisieren Sie das Datenbankmodul auf [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] oder [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]. Weitere Informationen finden Sie unter [Auswählen einer Upgrademethode für das Datenbankmodul](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
+2.  Aktualisieren Sie die Datenbank-Engine auf [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] oder [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]. Weitere Informationen finden Sie unter [Auswählen einer Upgrademethode für die Datenbank-Engine](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
   
-3.  Führen Sie alle Schritte in [Upgrade ohne Datenbankmodulupgrade](#noengine) aus.  
+3.  Führen Sie alle Schritte in [Upgrade ohne Datenbank-Engine-Upgrade](#noengine) aus.  
   
 ##  <a name="twocomputer"></a> Upgrade in einem Szenario mit zwei Computern  
  In diesem Szenario wird das Upgrade eines Systems durchgeführt, in dem SQL Server auf zwei Computern installiert ist: auf einem ist [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] oder [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] installiert, auf dem anderen eine frühere Version von [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)].  
@@ -131,7 +133,7 @@ ms.lasthandoff: 04/16/2018
   
  **So upgraden Sie in einem Szenario mit zwei Computern**  
   
--   Führen Sie alle Schritte in [Upgrade ohne Datenbankmodulupgrade](#noengine)aus.  
+-   Führen Sie alle Schritte in [Upgrade ohne Datenbank-Engine-Upgrade](#noengine) aus.  
   
 ##  <a name="restore"></a> Upgrade mithilfe einer Wiederherstellung einer Datenbank aus einer Sicherung  
  In diesem Szenario ist entweder [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] oder [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] zusammen mit einer früheren Version auf demselben Computer oder auf zwei unterschiedlichen Computern installiert. Vor dem Upgrade wurde eine Datenbank in einer früheren Version als [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] oder [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] gesichert und muss nun wiederhergestellt werden.  
@@ -152,7 +154,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  Stellen Sie die Datenbank wieder her, die gesichert wurde.  
   
-3.  Upgraden Sie das MDS-Datenbankschema, erstellen Sie eine Webanwendung, und ordnen Sie die neue Webanwendung der upgegradeten MDS-Datenbank zu. Anweisungen finden Sie in den Schritten 2 – 4 im Abschnitt [Upgrade ohne Datenbankmodulupgrade](#noengine).  
+3.  Upgraden Sie das MDS-Datenbankschema, erstellen Sie eine Webanwendung, und ordnen Sie die neue Webanwendung der upgegradeten MDS-Datenbank zu. Anweisungen finden Sie in den Schritten 2 – 4 im Abschnitt [Upgrade ohne Datenbank-Engine-Upgrade](#noengine).  
   
 ## <a name="troubleshooting"></a>Problembehandlung  
  **Problem** : Wenn Sie die [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]-, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] oder [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] -Webanwendung öffnen, wird die Fehlermeldung „Die Clientversion ist nicht mit der Datenbankversion kompatibel“ angezeigt.  

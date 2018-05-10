@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 09/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: xevents
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7ae393df8bcdd89f0cfc6a7398ce75e649c4c47c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 28dad124a7c4552418f103dc03d6893d5718632b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>Schnellstart: Erweiterte Ereignisse in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -117,7 +115,7 @@ Der Text und die unterstützenden Screenshots können im Laufe der Monate oder J
 
 8. Wählen Sie in der Dropdownliste **Feld** die Option **sqlserver.sql_text**aus.
    - Wählen Sie für **Operator** einen LIKE-Operator aus.
-   - Geben Sie für **Wert** die Option **%SELECT%HAVING%**ein.
+   - Geben Sie für **Wert** die Option **%SELECT%HAVING%** ein.
 
     > [!NOTE]
     > In diesem zweiteiligen Namen stellt *sqlserver* den Paketnamen und *sql_text* den Feldnamen dar. Das zuvor von uns ausgewählte Ereignis, *sql_statement_completed* muss sich in demselben Paket wie das ausgewählte Feld befinden.
@@ -653,7 +651,7 @@ Hier folgen Links zu Dokumentationen, die sich auf diese SELECT-Anweisungen und 
 - [GRANT (Serverberechtigungen) (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)
 - [sys.server_principals (Transact-SQL)](http://msdn.microsoft.com/library/ms188786.aspx)
 - Insbesondere für Azure SQL-Datenbank, [sys.database_principals (Transact-SQL)](http://msdn.microsoft.com/library/ms187328.aspx)
-- Blog: [Effektive Datenbankmodulberechtigungen](http://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)
+- Blog: [Effektive Datenbank-Engine-Berechtigungen](http://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)
 - Zoombare [Poster](https://aka.ms/sql-permissions-poster)als PDF-Datei, die die Hierarchie aller SQL Server-Berechtigungen anzeigt.
 
 

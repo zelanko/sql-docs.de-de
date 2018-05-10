@@ -1,17 +1,17 @@
 ---
 title: Grundlegendes zu Sicherheitsrichtlinien| Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: extensions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - code groups [Reporting Services]
 - code access security [Reporting Services], security policies
@@ -24,16 +24,15 @@ helpviewer_keywords:
 - security policies [Reporting Services]
 - named permission sets [Reporting Services]
 ms.assetid: a9bf043a-139a-4929-9a58-244815323df0
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1e38526ea1804c4a38a1a2dccec1339c4718f290
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 2ea917eee66e6fea9fc374a2df6e5827b6a3bdc7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-security-policies"></a>Grundlegendes zu Sicherheitsrichtlinien
   Jeder Code, der von einem Berichtsserver ausgeführt wird, muss Teil einer bestimmten Codezugriff-Sicherheitsrichtlinie sein. Diese Sicherheitsrichtlinien bestehen aus Codegruppen, die einem Satz von benannten Berechtigungen Beweise zuordnen. Häufig sind Codegruppen einem benannten Berechtigungssatz zugeordnet, der die zulässigen Berechtigungen für Code in dieser Gruppe angibt. Die Laufzeit bestimmt anhand von Beweisen, die von einem vertrauenswürdigen Host oder dem Ladeprogramm bereitgestellt werden, zu welchen Codegruppen der Code gehört und welche Berechtigungen ihm daher zuzuweisen sind. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verwendet diese von der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Common Language Runtime (CLR) definierte Sicherheitsrichtlinienarchitektur. In den nachfolgenden Abschnitten werden die verschiedenen Codetypen in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sowie die damit verknüpften Richtlinienregeln aufgeführt.  

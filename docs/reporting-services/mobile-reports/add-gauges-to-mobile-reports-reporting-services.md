@@ -1,27 +1,25 @@
 ---
-title: "Hinzufügen von Messgeräten zu mobilen Berichten | Reporting Services | Microsoft-Dokumentation"
-ms.custom: 
+title: Hinzufügen von Messgeräten zu mobilen Berichten | Reporting Services | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1e06346c3562f438e962eda3ff01a4068bafa750
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 985bde62deff88231ff889e1f403ad82edc55a0d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>Hinzufügen von Messgeräten zu mobilen Berichten | Reporting Services
 Messgeräte sind die grundlegendsten und häufig genutzten visuellen Elemente in mobilen Berichten. Sie zeigen einen einzelnen Wert in einem Dataset an – lediglich den Wert, oder den Wert im Vergleich mit einem Ziel.

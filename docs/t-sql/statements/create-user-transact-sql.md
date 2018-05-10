@@ -1,16 +1,14 @@
 ---
 title: CREATE USER (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 07/28/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WITHOUT_LOGIN_TSQL
@@ -31,16 +29,16 @@ helpviewer_keywords:
 - users [SQL Server], adding
 - users [SQL Server]
 ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
-caps.latest.revision: 
+caps.latest.revision: 111
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: cc1b66f561ce413016e154bc329384566a8384b8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 0f7d8f9a4eadec915a52c3dfc39ba79f1ab177b9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -460,7 +458,8 @@ Möglicherweise möchten Sie der Rolle [GRANT-Objektberechtigungen](../../t-sql/
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [Eigenständige Datenbanken](../../relational-databases/databases/contained-databases.md)   
  [Herstellen einer Verbindung mit SQL-Datenbank unter Verwendung der Azure Active Directory-Authentifizierung](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)   
- [Erste Schritte mit Berechtigungen für das Datenbankmodul](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)  
+ 
+  [Erste Schritte mit Berechtigungen für die Datenbank-Engine](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)  
   
   
 

@@ -1,17 +1,16 @@
 ---
-title: "Zugriffssteuerung für sensible Daten in Paketen | Microsoft-Dokumentation"
-ms.custom: 
+title: Zugriffssteuerung für sensible Daten in Paketen | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.packageprotectionlevel.f1
 - sql13.ssis.bids.projectprotectionlevel.f1
@@ -26,16 +25,15 @@ helpviewer_keywords:
 - cryptography [Integration Services]
 - security [Integration Services], protection levels
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
-caps.latest.revision: 
+caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: fd094efc965679119e0a15d9fc0fc97be27db4f4
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 329a9cbc48f2576160c53701dc199fb689ad9674
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Zugriffssteuerung für vertrauliche Daten in Paketen
   Sie können die Daten in einem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket schützen, indem Sie eine Schutzebene festlegen, mit der nur vertrauliche Daten oder alle Daten im Paket geschützt werden. Darüber hinaus können Sie diese Daten mit einem Kennwort oder Benutzerschlüssel verschlüsseln oder die Daten von der Datenbank verschlüsseln lassen. Die für ein Paket verwendete Schutzebene ist außerdem nicht unbedingt statisch, sondern ändert sich im Lebenszyklus eines Pakets. Häufig wird eine Schutzebene während der Entwicklung und eine andere Schutzebene beim Bereitstellen des Pakets festgelegt.  

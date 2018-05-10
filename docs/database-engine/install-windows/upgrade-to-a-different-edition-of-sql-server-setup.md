@@ -3,25 +3,22 @@ title: Aktualisieren auf eine andere Edition von SQL Server 2016 (Setup) | Micro
 ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: install-windows
+ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 752c9439124331200af3ee7aeba09b4a895c7934
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1f23d04ecdaaafe3fdb2a7033a51e750eb61d519
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>Aktualisieren auf eine andere Edition von SQL Server (Setup)
 
@@ -35,7 +32,7 @@ ms.lasthandoff: 04/16/2018
 - [Hardware- und Softwareanforderungen für die Installation von SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
-> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a failover cluster instance: (Auf einer Failoverclusterinstanz:)** Running edition upgrade on one of the nodes of (Das Ausführen eines Editionsupgrades auf einem der Knoten der) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failoverclusterinstanz ist ausreichend. Dieser Knoten kann entweder aktiv oder passiv sein, und das Modul schaltet während des Editionsupgrades die Ressourcen nicht offline. Nach dem Editionsupgrade muss entweder die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz oder das Failover auf einem anderen Knoten neu gestartet werden.  
+> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a failover cluster instance: (Auf einer Failoverclusterinstanz:)** Running edition upgrade on one of the nodes of (Das Ausführen eines Editionsupgrades auf einem der Knoten der) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failoverclusterinstanz ist ausreichend. Dieser Knoten kann entweder aktiv oder passiv sein, und die Engine schaltet während des Editionsupgrades die Ressourcen nicht offline. Nach dem Editionsupgrade muss entweder die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz oder das Failover auf einem anderen Knoten neu gestartet werden.  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
 Bei lokalen Installationen müssen Sie das Setup als Administrator ausführen. Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von einer Remotefreigabe installieren, müssen Sie auf der Remotefreigabe ein Domänenkonto mit Leseberechtigungen verwenden.  

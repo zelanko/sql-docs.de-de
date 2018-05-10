@@ -1,32 +1,30 @@
 ---
-title: "Lektion 2: Ändern der Eigenschaften der Berichtsdatenquelle | Microsoft-Dokumentation"
-ms.custom: 
+title: 'Lektion 2: Ändern der Eigenschaften der Berichtsdatenquelle | Microsoft-Dokumentation'
+ms.custom: ''
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
-caps.latest.revision: 
+caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 52547af895d362214e6a33c69c29fe2cd2c3cb8a
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 7ec0c1cc3ce7e2be9b058fc881d0971922f5994f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lektion 2: Ändern der Eigenschaften der Berichtsdatenquelle
-In dieser Lektion des [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Tutorials verwenden Sie das Webportal, um einen Bericht auszuwählen, der an Empfänger übermittelt werden soll. Das datengesteuerte Abonnement, das Sie definieren, verteilt den im Tutorial **Erstellen eines einfachen Tabellenberichts &#40;SSRS-Tutorial&#41;** erstellten Bericht [Erstellen eines einfachen Tabellenberichts &#40;SSRS-Tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  In den folgenden Schritten wird erläutert, wie Sie die Datenquellen-Verbindungsinformationen ändern, die vom Bericht zum Abrufen von Daten verwendet werden. Nur Berichte, die **gespeicherte Anmeldeinformationen** für das Zugreifen auf eine Berichtsdatenquelle verwenden, können über ein datengesteuertes Abonnement verteilt werden. Für die unbeaufsichtigte Berichtsverarbeitung sind gespeicherte Anmeldeinformationen erforderlich.  
+In dieser Lektion des [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Tutorials verwenden Sie das Webportal, um einen Bericht auszuwählen, der an Empfänger übermittelt werden soll. Das datengesteuerte Abonnement, das Sie definieren, verteilt den im Tutorial **Erstellen eines einfachen Tabellenberichts &#40;SSRS-Tutorial&#41;** erstellten Bericht [Erstellen eines einfachen Tabellenberichts &amp;#40;SSRS-Tutorial&amp;#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  In den folgenden Schritten wird erläutert, wie Sie die Datenquellen-Verbindungsinformationen ändern, die vom Bericht zum Abrufen von Daten verwendet werden. Nur Berichte, die **gespeicherte Anmeldeinformationen** für das Zugreifen auf eine Berichtsdatenquelle verwenden, können über ein datengesteuertes Abonnement verteilt werden. Für die unbeaufsichtigte Berichtsverarbeitung sind gespeicherte Anmeldeinformationen erforderlich.  
   
 Sie ändern auch das Dataset und den Bericht, um einen Parameter zu verwenden, mit dem der Bericht nach `[Order]` gefiltert wird, damit das Abonnement verschiedene Instanzen des Berichts für bestimmte Aufträge und Renderingformate ausgeben kann.  
   
@@ -99,7 +97,7 @@ Sie ändern auch das Dataset und den Bericht, um einen Parameter zu verwenden, m
   
 3.  **Prompt** muss `OrderNumber`sein.  
   
-4.  Wählen Sie **Leeren Wert zulassen ("")**aus.  
+4.  Wählen Sie **Leeren Wert zulassen ("")** aus.  
   
 5.  Wählen Sie **NULL-Wert zulassen**aus.  
   

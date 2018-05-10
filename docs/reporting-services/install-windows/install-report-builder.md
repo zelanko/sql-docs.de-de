@@ -1,27 +1,25 @@
 ---
 title: Installieren des Berichts-Generators | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 09/22/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
-caps.latest.revision: 
+caps.latest.revision: 20
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 395ec440e3cae0ac4013edc9c35af36e32a73d0c
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3812692b30c5ff4436403d22de834e9fe8d6d73b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-report-builder"></a>Installieren Sie den Berichts-Generator
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] ist eine eigenständige App, die von Ihnen oder einem Administrator auf dem Computer installiert wird. Sie können sie über das Microsoft Download Center, über einen [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] -Berichtsserver oder über eine in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]integrierte SharePoint-Website installieren.  
@@ -72,7 +70,7 @@ ms.lasthandoff: 01/09/2018
   
      Dadurch wird der SQL Server-Assistent für den [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] gestartet.  
   
-3.  Schließen Sie die übrigen Schritte ab, die unter [So installieren Sie Berichts-Generator von der Downloadwebsite aus](#download)aufgeführt sind.  
+3.  Schließen Sie die übrigen Schritte ab, die unter [To install Report Builder from the download site](#download)aufgeführt sind.  
   
 ## <a name="to-install-includessrbnoversionincludesssrbnoversion-mdmd-from-the-command-line"></a>So installieren Sie [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] über die Befehlszeile 
 
