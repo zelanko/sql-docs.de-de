@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: ''
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a65481f7f3bb911fd57e91b32c71860a0ceee0ce
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 5dc22d57109f45f946b7acb1e062fdd0866a7dd3
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -224,7 +224,7 @@ ms.lasthandoff: 05/03/2018
   
  **SharePoint 2010**  
   
- Wenn Sie SharePoint 2010 verwenden, müssen Sie keine Ports in der Windows-Firewall öffnen. SharePoint öffnet die Ports nach Bedarf selbst, und Add-Ins wie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint werden innerhalb der SharePoint-Umgebung ausgeführt. Bei einer Installation von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint 2010 verwendet der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdienst exklusiv die lokale Instanz SQL Server Analysis Services-Diensts ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]), die auf demselben Computer installiert ist. Dabei werden lokale Verbindungen und keine Netzwerkverbindungen verwendet, um auf den lokalen Analysis Services-Moduldienst zuzugreifen, der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten auf den SharePoint-Server lädt, abfragt und verarbeitet. Für die Anforderung von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten von Clientanwendungen werden Anforderungen über Ports weitergeleitet, die durch das SharePoint-Setup geöffnet werden. (Es werden insbesondere eingehende Regeln definiert, um den Zugriff auf SharePoint – 80, die SharePoint-Zentraladministration v4, SharePoint-Webdienste und SPUserCodeV4 zuzulassen.) Da [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Webdienste in einer SharePoint-Farm ausgeführt werden, reichen die SharePoint-Firewallregeln für den Remotezugriff auf [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten in einer SharePoint-Farm aus.  
+ Wenn Sie SharePoint 2010 verwenden, müssen Sie keine Ports in der Windows-Firewall öffnen. SharePoint öffnet die Ports nach Bedarf selbst, und Add-Ins wie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint werden innerhalb der SharePoint-Umgebung ausgeführt. Bei einer Installation von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint 2010 verwendet der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdienst exklusiv die lokale Instanz SQL Server Analysis Services-Diensts ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]), die auf demselben Computer installiert ist. Dabei werden lokale Verbindungen und keine Netzwerkverbindungen verwendet, um auf den lokalen Analysis Services-Engine-Dienst zuzugreifen, der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Daten auf den SharePoint-Server lädt, abfragt und verarbeitet. Für die Anforderung von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten von Clientanwendungen werden Anforderungen über Ports weitergeleitet, die durch das SharePoint-Setup geöffnet werden. (Es werden insbesondere eingehende Regeln definiert, um den Zugriff auf SharePoint – 80, die SharePoint-Zentraladministration v4, SharePoint-Webdienste und SPUserCodeV4 zuzulassen.) Da [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Webdienste in einer SharePoint-Farm ausgeführt werden, reichen die SharePoint-Firewallregeln für den Remotezugriff auf [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten in einer SharePoint-Farm aus.  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server-Browserdienst &#40;Datenbankmodul und SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   

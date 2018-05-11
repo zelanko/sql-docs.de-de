@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3295bbdbb00c73c9aaa37dcb15d35121b82454bb
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: e19217fb00cba1f9369bf79a09790f58f9dc2e66
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 #  <a name="get-r-and-python-package-information-on-sql-server-machine-learning"></a>Abrufen von Informationen von R und Python-Paket für SQL Server-Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Wenn Sie mehrere Python-Umgebungen installiert haben oder mehrere R-Tools verwenden, ist es einfach installiert ein Paket auf der falschen Bibliothek oder der Umgebung und dann nicht möglich, später zu finden. Dieser Artikel enthält Hinweise, die hilfreich für Determininga Paketversion und auf die Pakete aufzulisten, die in der aktuellen SQL Server-Umgebung installiert sind und Abfragen.
+Wenn Sie mehrere Python-Umgebungen installiert haben oder mehrere R-Tools verwenden, ist es einfach installiert ein Paket auf der falschen Bibliothek oder der Umgebung und dann nicht möglich, später zu finden. Dieser Artikel enthält Hinweise, die hilfreich für Determinin Ga-Paketversion und auf die Pakete aufzulisten, die in der aktuellen SQL Server-Umgebung installiert sind und Abfragen.
 
 ## <a name="verify-the-current-default-library"></a>Überprüfen Sie die aktuelle Standardbibliothek
 

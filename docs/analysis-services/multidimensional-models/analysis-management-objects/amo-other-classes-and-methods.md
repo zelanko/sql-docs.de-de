@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: amo
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9923daa4b7cb9b504fde047f073579279b3d05e8
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 6af27bdf70978e0a29c39a3af2d421dca2437cfe
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="amo-other-classes-and-methods"></a>Andere AMO-Klassen und Methoden
   Dieser Abschnitt enthält gängige Klassen, die nicht spezifisch auf OLAP oder Datamining sind und, sind hilfreich bei der Verwaltung Verwalten von Objekten in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Diese Klassen decken Funktionen wie gespeicherte Prozeduren, Ablaufverfolgung, Ausnahmen sowie Sicherung und Wiederherstellung ab.  

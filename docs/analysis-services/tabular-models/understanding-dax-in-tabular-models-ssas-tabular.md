@@ -4,16 +4,16 @@ ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: tabular-models
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 00799aeaa59ca6dce27816f4cd4344a75a84b3bf
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 9eb68f66eca44ff886a53ca88e1bf9ee6bda6c5f
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="dax-in-tabular-models"></a>DAX in tabellarischen Modellen 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -261,7 +261,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  Zusammengefasst speichert die EARLIER-Funktion den Zeilenkontext des Vorgangs, der dem aktuellen Vorgang vorausging. Die Funktion speichert zu jedem Zeitpunkt zwei Kontextsätze im Arbeitsspeicher: Ein Kontextsatz stellt die aktuelle Zeile für die innere Schleife der Formel dar, und ein weiterer Kontextsatz stellt die aktuelle Zeile für die äußere Schleife der Formel dar. DAX übermittelt automatisch Werte zwischen den zwei Schleifen, sodass komplexe Aggregate erstellt werden können.  
   
 ####  <a name="bkmk_query_context"></a> Abfragekontext  
- Der*Abfragekontext* ist die Teilmenge von Daten, die implizit für eine Formel abgerufen wird. Wenn ein Benutzer ein Measure oder ein anderes Wertfeld in einer PivotTable oder einem Bericht platziert, die bzw. der auf einem tabellarischen Modell basiert, untersucht das Modul die Zeilen- und Spaltenüberschriften, die Slicer und die Berichtsfilter, um den Kontext zu ermitteln. Anschließend werden die erforderlichen Abfragen für die Datenquelle ausgeführt, um die richtige Teilmenge der Daten abzurufen, die von der Formel definierten Berechnungen auszuführen und dann jede Zelle in der PivotTable oder dem Bericht aufzufüllen. Der Datensatz, der abgerufen wird, ist der Abfragekontext für jede Zelle.  
+ Der*Abfragekontext* ist die Teilmenge von Daten, die implizit für eine Formel abgerufen wird. Wenn ein Benutzer ein Measure oder ein anderes Wertfeld in einer PivotTable oder einem Bericht platziert, die bzw. der auf einem tabellarischen Modell basiert, untersucht die Engine die Zeilen- und Spaltenüberschriften, die Slicer und die Berichtsfilter, um den Kontext zu ermitteln. Anschließend werden die erforderlichen Abfragen für die Datenquelle ausgeführt, um die richtige Teilmenge der Daten abzurufen, die von der Formel definierten Berechnungen auszuführen und dann jede Zelle in der PivotTable oder dem Bericht aufzufüllen. Der Datensatz, der abgerufen wird, ist der Abfragekontext für jede Zelle.  
   
 > [!WARNING]  
 >  In einem Modell, das den DirectQuery-Modus verwendet, wird der Kontext ausgewertet, und anschließend werden die Set-Vorgänge, mit denen die richtige Teilmenge der Daten abgerufen und die Ergebnisse berechnet werden, in SQL-Anweisungen übersetzt. Diese Anweisungen werden dann direkt auf dem relationalen Datenspeicher ausgeführt. Daher ändert sich der Kontext selbst nicht, obwohl die Methode zum Abrufen der Daten und Berechnen der Ergebnisse anders ist.  
@@ -370,7 +370,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 -   Die Formel verweist auf eine nicht vorhandene Spalte, Tabelle oder Funktion.  
   
--   Die Formel scheint korrekt zu sein, aber wenn das Datenmodul die Daten abruft, wird ein Typenkonflikt erkannt und ein Fehler ausgelöst.  
+-   Die Formel scheint korrekt zu sein, aber wenn die Daten-Engine die Daten abruft, wird ein Typenkonflikt erkannt und ein Fehler ausgelöst.  
   
 -   Die Formel übergibt eine falsche Zahl oder einen falschen Typ von Parametern an eine Funktion.  
   

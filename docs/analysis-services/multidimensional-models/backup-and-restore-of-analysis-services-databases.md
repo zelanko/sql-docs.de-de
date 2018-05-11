@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: multidimensional-models
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d744fbed12ab9231e044d879db2e168ab23fa22b
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 69e2c77457ffb3c50ab12c5bac4276fff5953ebd
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Sichern und Wiederherstellen von Analysis Services-Datenbanken
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/03/2018
  Administratoren können eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank unabhängig von der Datenbankgröße in einer einzelnen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Sicherungsdatei (.abf) sichern. Schritt-für-Schritt-Anweisungen finden Sie auf der TechMantra-Seite unter [How to Backup an Analysis Services Database](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) (Sichern einer Analysis Services-Datenbank) und unter [Automate Backup an Analysis Services Database](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html)(Automatische Sicherung einer Analysis Services-Datenbank).  
   
 > [!NOTE]  
->  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], zum Laden und Abfragen von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Datenmodelle in einer SharePoint-Umgebung werden die Modelle aus SharePoint-Inhaltsdatenbanken geladen. Diese Inhaltsdatenbanken sind relational und werden im relationalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankmodul ausgeführt. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet folglich keine Sicherungs-/Wiederherstellungsstrategie für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenmodelle. Wenn Sie einen Notfallwiederherstellungsplan für SharePoint-Inhalte eingerichtet haben, umfasst der Plan die in den Inhaltsdatenbanken gespeicherten [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenmodelle.  
+>  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], zum Laden und Abfragen von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Datenmodelle in einer SharePoint-Umgebung werden die Modelle aus SharePoint-Inhaltsdatenbanken geladen. Diese Inhaltsdatenbanken sind relational und werden in der relationalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank-Engine ausgeführt. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet folglich keine Sicherungs-/Wiederherstellungsstrategie für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenmodelle. Wenn Sie einen Notfallwiederherstellungsplan für SharePoint-Inhalte eingerichtet haben, umfasst der Plan die in den Inhaltsdatenbanken gespeicherten [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenmodelle.  
   
  **Remotepartitionen**  
   

@@ -25,11 +25,11 @@ caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b1bc7964fafb35a4da03f8d5414f93835b49ed17
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5c4e752c1d8c88a4b0f9dadc129213a6f2ac8951
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
 |is_dropped|BIT|Der Wert 1 gibt an, dass es sich um eine gelöschte Datenbank handelt.|  
 |credential_name|SYSNAME|Der Name der SQL-Anmeldeinformationen, der zur Authentifizierung beim Speicherkonto verwendet wird. Ein NULL-Wert gibt an, dass keine SQL-Anmeldeinformationen festgelegt sind.|  
 |retention_days|INT|Die aktuelle Beibehaltungsdauer in Tagen. Ein NULL-Wert gibt an, dass [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] nie für diese Datenbank konfiguriert wurde.|  
-|is_smart_backup_enabled|INT|Gibt an, ob [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] derzeit für diese Datenbank aktiviert ist. Der Wert 1 gibt an, dass [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] derzeit aktiviert ist, der Wert 0 gibt an, dass [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] für diese Datenbank deaktiviert ist.|  
+|is_managed_backup_enabled|INT|Gibt an, ob [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] derzeit für diese Datenbank aktiviert ist. Der Wert 1 gibt an, dass [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] derzeit aktiviert ist, der Wert 0 gibt an, dass [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] für diese Datenbank deaktiviert ist.|  
 |storage_url|NVARCHAR(1024)|Die URL des Speicherkontos.|  
 |Encryption_algorithm|NCHAR(20)|Gibt den aktuellen Verschlüsselungsalgorithmus zurück, der beim Verschlüsseln der Sicherung verwendet werden soll.|  
 |Encryptor_type|NCHAR(15)|Gibt die Verschlüsselungseinstellung zurück: Zertifikat oder Asymmetrischer Schlüssel.|  

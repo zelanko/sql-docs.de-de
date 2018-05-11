@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: multidimensional-models
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a6895d06c363cd63833cb27450faef33af13d1bb
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: c6d3576b8705ef93ddd3395de465f6bd9d3e7f1b
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Erstellen von Analysis Services-Projekten (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 05/03/2018
   
 |Dateien (im Ordner bin)|Description|  
 |-----------------------------|-----------------|  
-|*Projectname*.asdatabase|Enthält die ASSL-Elemente, die die Metadaten für die Objekte des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts in einer Bereitstellungsskriptdatei definieren. Diese Datei wird vom Bereitstellungsmodul zum Bereitstellen der Objekte in einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank verwendet.|  
+|*Projectname*.asdatabase|Enthält die ASSL-Elemente, die die Metadaten für die Objekte des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts in einer Bereitstellungsskriptdatei definieren. Diese Datei wird von der Bereitstellungs-Engine zum Bereitstellen der Objekte in einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbank verwendet.|  
 |*Projectname*.configsettings|Enthält während der Bereitstellung verwendete Konfigurationseinstellungen, die Sie direkt oder im Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ändern können (z. B. die Verbindungszeichenfolge für die Datenquellen).|  
 |*Projectname*.deploymenttargets|Enthält die während der Bereitstellung verwendeten Zieleinstellungen, die Sie direkt oder im Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ändern können (z. B. den Server- und Datenbanknamen).|  
 |*Projectname*.deploymentoptions|Enthält verschiedene während der Bereitstellung verwendete Optionseinstellungen, die Sie direkt oder im Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ändern können (z. B. Speicherorte).|  

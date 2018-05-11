@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: adomd
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d5661d2a35a7f2d13c342fd2daadbf1c1bbc4a4d
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 9c52978621631f263011d0340f8d9b67b971ea10
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="retrieving-data-using-the-adomddatareader"></a>Abrufen von Daten mittels AdomdDataReader
   Beim Abruf von analytischen Daten stellt das <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>-Objekt ein ausgewogenes Gleichgewicht zwischen Verwaltung und Interaktivität bereit. Das <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>-Objekt ruft einen schreibgeschützten, vereinfachten Vorwärtsdatenstrom von einer analytischen Datenquelle ab. Dieser nicht zwischengespeicherte Datenstrom ermöglicht es der prozeduralen Logik, die Ergebnisse von einer analytischen Datenquelle effektiv sequenziell zu verarbeiten. Daher ist <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> eine gute Wahl für das Abrufen großer Datenmengen zu Anzeigezwecken, da die Daten nicht zwischengespeichert werden.  

@@ -1,27 +1,18 @@
 ---
 title: Installieren Sie Sample Data and Projects | Microsoft Docs
-ms.custom: ''
-ms.date: 02/13/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
-ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
-caps.latest.revision: 16
-author: Minewiskan
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: f5a377263d2bed1cc9798fa0e1b17749ce326ada
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 7aa48fa5e4e74392e2082c7e1cccc7db3221c335
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="install-sample-data-and-multidimensional-projects"></a>Installieren von Beispieldaten und mehrdimensionale Projekte 
 [!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
@@ -65,7 +56,7 @@ Um die Datenbank zu installieren, führen Sie folgende Schritte aus:
   
 2.  Kopieren Sie die Sicherungsdatei in das Datenverzeichnis der lokalen SQL Server-Datenbankmodul-Instanz.
   
-3.  Starten Sie SQL Server Management Studio, und stellen Sie eine Verbindung mit der Datenbankmodul-Instanz her.  
+3.  Starten Sie SQL Server Management Studio, und stellen Sie eine Verbindung mit der Datenbank-Engine-Instanz her.  
   
 4.  Stellen Sie die Datenbank wieder her.  
   
@@ -77,7 +68,7 @@ In den Beispielprojekten werden Einstellungen für den Datenquellenidentitätswe
   
 1.  Bestimmen Sie das Dienstkonto. Sie können Kontoinformationen mit dem SQL Server-Konfigurations-Manager oder der Konsolenanwendung Dienste anzeigen. Wenn Sie Analysis Services als Standardinstanz installiert haben, wird der Dienst als **NT Service\MSSQLServerOLAPService**ausgeführt.  
   
-2.  Stellen Sie in Management Studio eine Verbindung mit der Datenbankmodul-Instanz her.  
+2.  Stellen Sie in Management Studio eine Verbindung mit der Datenbank-Engine-Instanz her.  
   
 3.  Erweitern Sie den Knoten Sicherheit, klicken Sie mit der rechten Maustaste auf Anmeldungen, und wählen Sie **Neue Anmeldung**aus.  
   
@@ -105,11 +96,11 @@ Das Lernprogramm enthält Beispielprojekte, damit Sie Ihre Ergebnisse mit einem 
   
 6.  Bereitstellen der Lösung, um sicherzustellen, dass die Datenbankberechtigungen und Informationen zum Serverstandort ordnungsgemäß eingerichtet sind.  
   
-    Wenn Analysis Services und das Datenbankmodul als Standardinstanz (MSSQLServer) installiert sind und sämtliche Software auf demselben Computer ausgeführt wird, können Sie im Menü Erstellen auf **Projektmappe bereitstellen** klicken, um das Beispielprojekt zu erstellen und auf der lokalen Instanz von Analysis Services bereitzustellen. Während der Bereitstellung Daten verarbeitet (oder importiert) aus der **AdventureWorksDW** Datenbank auf dem lokalen Datenbankmodulinstanz her. Eine neue Analysis Services-Datenbank wird auf der Analysis Services-Instanz erstellt, die vom Datenbankmodul abgerufenen Daten enthält.  
+    Wenn Analysis Services und die Datenbank-Engine als Standardinstanz (MSSQLServer) installiert sind und sämtliche Software auf demselben Computer ausgeführt wird, können Sie im Menü Erstellen auf **Projektmappe bereitstellen** klicken, um das Beispielprojekt zu erstellen und auf der lokalen Instanz von Analysis Services bereitzustellen. Während der Bereitstellung Daten verarbeitet (oder importiert) aus der **AdventureWorksDW** Datenbank auf dem lokalen Datenbankmodulinstanz her. Eine neue Analysis Services-Datenbank wird auf der Analysis Services-Instanz erstellt, die vom Datenbankmodul abgerufenen Daten enthält.  
   
     Wenn Fehler auftreten, überprüfen Sie die vorherigen Schritte zum Einrichten von Datenbankberechtigungen. Zusätzlich müssen u. U. auch Servernamen geändert werden. Der Standardservername lautet "localhost". Wenn die Server auf Remotecomputern oder als benannte Instanzen installiert werden, müssen Sie den Standardnamen mit einem für Ihre Installation gültigen Servernamen überschreiben. Wenn sich die Server auf Remotecomputern befinden, müssen Sie möglicherweise außerdem die Windows-Firewall so konfigurieren, dass sie den Zugriff auf die Server zulässt.  
   
-    Der Servername für Verbindungen mit dem Datenbankmodul wird im Datenquellenobjekt der mehrdimensionalen Projektmappe (Adventure Works-Lernprogramm) angegeben und im Projektmappen-Explorer angezeigt.  
+    Der Servername für Verbindungen mit der Datenbank-Engine wird im Datenquellenobjekt der mehrdimensionalen Projektmappe (Adventure Works-Lernprogramm) angegeben und im Projektmappen-Explorer angezeigt.  
   
     Der Servername für Verbindungen mit Analysis Services wird in den Eigenschaftenseiten des Projekts auf der Registerkarte Bereitstellung angegeben und ebenfalls im Projektmappen-Explorer angezeigt.  
   

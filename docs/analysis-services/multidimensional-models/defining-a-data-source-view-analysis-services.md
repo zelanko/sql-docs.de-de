@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: multidimensional-models
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e245a82dc88c039d723522afd6f504ccbb94cbf9
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 1175a0bd764a10645b66cdfb63dbf99e0401e688
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Definieren einer Datenquellensicht (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -106,7 +106,7 @@ ms.lasthandoff: 05/03/2018
  Um Tabellen und Spalten aus einer zweiten Datenquelle hinzuzufügen, doppelklicken Sie im Projektmappen-Explorer auf die Datenquellensicht, um sie im Datenquellensicht-Designer zu öffnen und verwenden dann das Dialogfeld Tabellen hinzufügen/entfernen, um Objekte aus anderen im Projekt definierten Datenquellen einzuschließen. Weitere Informationen finden Sie unter [Hinzufügen oder Entfernen von Tabellen oder Sichten in einer Datenquellensicht &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)aus.  
   
 ##  <a name="bkmk_NameMatch"></a> Angeben von Namensübereinstimmungskriterien für Beziehungen  
- Wenn Sie eine Datenquellensicht erstellen, werden Beziehungen zwischen Tabellen erstellt, die auf FOREIGN KEY-Einschränkungen in der Datenquelle basieren. Diese Beziehungen sind erforderlich, damit das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Modul die geeigneten OLAP-Verarbeitungs- und Data Mining-Abfragen erstellen kann. Manchmal hat eine Datenquelle mit mehreren Tabellen keine FOREIGN KEY-Einschränkungen. Wenn eine Datenquelle nicht über FOREIGN KEY-Einschränkungen verfügt, werden Sie vom Datenquellensicht-Assistenten aufgefordert zu definieren, wie der Assistent Spaltennamen verschiedener Tabellen vergleichen soll.  
+ Wenn Sie eine Datenquellensicht erstellen, werden Beziehungen zwischen Tabellen erstellt, die auf FOREIGN KEY-Einschränkungen in der Datenquelle basieren. Diese Beziehungen sind erforderlich, damit die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Engine die geeigneten OLAP-Verarbeitungs- und Data Mining-Abfragen erstellen kann. Manchmal hat eine Datenquelle mit mehreren Tabellen keine FOREIGN KEY-Einschränkungen. Wenn eine Datenquelle nicht über FOREIGN KEY-Einschränkungen verfügt, werden Sie vom Datenquellensicht-Assistenten aufgefordert zu definieren, wie der Assistent Spaltennamen verschiedener Tabellen vergleichen soll.  
   
 > [!NOTE]  
 >  Sie werden nur dann aufgefordert, Namensübereinstimmungskriterien anzugeben, wenn in der zugrunde liegenden Datenquelle keine Fremdschlüsselbeziehungen erkannt werden. Wenn Fremdschlüsselbeziehungen erkannt werden, werden die gefundenen Beziehungen verwendet. Zusätzliche Beziehungen, die Sie in die Datenquellensicht einschließen möchten, einschließlich logischer Primärschlüssel, müssen manuell definiert werden. Weitere Informationen finden Sie unter [Definieren von logischen Beziehungen in einer Datenquellensicht &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-logical-relationships-in-a-data-source-view-analysis-services.md) und [Definieren logischer Primärschlüssel in einer Datenquellensicht &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md).  

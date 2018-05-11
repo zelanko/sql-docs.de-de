@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: multidimensional-models
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 653e28218cf7a89a7a8b4fae7735b16d3b875f61
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: e8f1be66280d6555750f8213f6d1f1045cc659c7
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="schema-generation-wizard-analysis-services"></a>Schemagenerierungs-Assistent (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -25,7 +25,7 @@ ms.lasthandoff: 05/03/2018
   
  Dies ist eine iterative Vorgehensweise. Wahrscheinlich müssen Sie den Assistenten mehrere Male erneut ausführen, während Sie das Design der Dimensionen und Cubes ändern. Bei jeder Ausführung des Assistenten werden die Änderungen in die zugrunde liegenden Objekte integriert und so viele Daten der zugrunde liegenden Datenbanken wie möglich beibehalten.  
   
- Das generierte Schema entspricht einem relationalen SQL Server-Datenbankmodulschema. Der Assistent generiert keine Schemas für andere relationale Datenbankprodukte.  
+ Das generierte Schema entspricht einem relationalen SQL Server-Datenbank-Engine-Schema. Der Assistent generiert keine Schemas für andere relationale Datenbankprodukte.  
   
  Die Daten, mit denen die Themenbereichsdatenbank aufgefüllt wird, werden getrennt hinzugefügt, und zwar mit dem Tools und Techniken, die Sie zum Auffüllen einer relationalen SQL Server-Datenbank verwenden. In den meisten Fällen werden die Daten beibehalten, wenn Sie den Assistenten erneut ausführen; es gibt jedoch auch Ausnahmen. Einige Daten müssen beispielsweise gelöscht werden, wenn Sie Dimensionen oder Attribute löschen, in denen diese Daten enthalten sind. Wenn der Schemagenerierungs-Assistent einige Daten aufgrund einer Schemaänderung löschen muss, wird vor dem Löschen der Daten eine Warnung angezeigt, sodass Sie die erneute Generierung abbrechen können.  
   

@@ -1,22 +1,23 @@
 ---
-title: Installieren und Verwalten von Machine Learning-Paketen in SQL Server | Microsoft Docs
+title: Packen von R und Python-Verwaltung in SQL Server-Machine Learning | Microsoft Docs
+description: Abrufen von Informationen für R und Python-Paket, fügen Sie neue Pakete hinzu und aktivieren Sie Clientzugriff auf einer SQL Server-Instanz, die für Machine Learning konfiguriert.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/15/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cbab4687dd0d5a8cb250fa38fc4c4c7dbb9d68a6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: abc77eee8d803fd94a58abfdab6f1c3cbe6621dd
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="install-and-manage-machine-learning-packages-in-sql-server"></a>Installieren und Verwalten von Machine Learning-Paketen in SQL Server
+# <a name="r-and-python-package-management-in-sql-server-machine-learning"></a>R und Python-paketverwaltung in SQL Server-Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In diesem Artikel wird beschrieben, wie Sie neue R oder Python-Pakete in SQL Server-2017 und SQL Server 2016 installieren können. Es beschreibt auch Einschränkungen auf die Pakete, die Sie auf SQL Server installieren können.
+Dieser Artikel führt R und Python-Verwaltung in SQL Server 2017 Machine Learning und SQL Server 2016-R-Services-Paket. Es beschreibt auch Einschränkungen auf die Pakete, die Sie auf SQL Server installieren können.
 
 ## <a name="overview-of-package-management-methods-and-requirements"></a>Übersicht über die Paket-Verwaltungsmethoden und Anforderungen
 
@@ -28,7 +29,7 @@ Im Gegensatz zu einer typischen R oder Python-Entwicklung müssen die Pakete, di
 
 Diese Einschränkung bedeutet jedoch unbedingt einige Änderungen bei der Datenerfassung, die Datenanalysten und Analytiker arbeiten:
 
-+ Im Allgemeinen ist Administratorzugriff auf dem Server erforderlich. In SQL Server-2017 kann der Datenbankadministrator Rollen verwenden, um bestimmten Benutzern die Möglichkeit zum Installieren der Pakete zur privaten Verwendung, aber der Administrator kann weiterhin auf diese Funktion zu aktivieren.
++ Im Allgemeinen ist die Installation des Pakets in SQL Server Administratorzugriff erforderlich. In SQL Server-2017 kann der Datenbankadministrator Rollen verwenden, um bestimmten Benutzern die Möglichkeit zum Installieren der Pakete zur privaten Verwendung, aber der Administrator kann weiterhin auf diese Funktion zu aktivieren.
 + Anzahl der Server keine Zugang zum Internet. Installieren von Paketen auf diesen Computern erfordert einige zusätzliche Vorbereitung.
 + Pakete werden in einer Bibliothek Instanz installiert. Pakete können nicht über Instanzen freigegeben werden.
 + Benutzer können keine Pakete ausführen, die in einer Benutzerbibliothek installiert wurde.
@@ -37,7 +38,7 @@ Diese Einschränkung bedeutet jedoch unbedingt einige Änderungen bei der Datene
 
 Finden Sie unter den folgenden Artikeln Ausführliche Schritte zum Installieren neuer R oder Python-Pakete ein. 
 
-### <a name="install-new-r-packages"></a>Installieren Sie neue R-Pakete
+### <a name="r-packages"></a>R-Pakete
 
 + [Installieren Sie zusätzliche R-Pakete unter SQL Server](install-additional-r-packages-on-sql-server.md)
 
@@ -47,7 +48,7 @@ Finden Sie unter den folgenden Artikeln Ausführliche Schritte zum Installieren 
 
     Sie können auch R-Pakete in SQL Server-2017 mithilfe von DDL-Anweisungen installieren.
 
-### <a name="install-new-python-packages"></a>Installieren neuer Python-Pakete
+### <a name="python-packages"></a>Python-Pakete
 
 + [Installieren neuer Python-Pakete unter SQL Server](../python/install-additional-python-packages-on-sql-server.md)
 
@@ -55,7 +56,7 @@ Finden Sie unter den folgenden Artikeln Ausführliche Schritte zum Installieren 
 
 Bevor Sie versuchen, herunterladen oder installieren ein neues Paket, überprüfen Sie die Anforderungen:
 
-+ Stellen Sie sicher, dass eine Windows-Version des Pakets vorhanden ist: [abrufen, die richtige Paketversion und Format](#packageVersion)
++ Stellen Sie sicher, dass eine Windows-Version des Pakets vorhanden ist.
 
 + Identifizieren Sie alle Abhängigkeiten des Pakets und ermitteln Sie deren Kompatibilität mit SQL Server-Umgebung zu.
 
@@ -84,4 +85,4 @@ Im Allgemeinen gestatten auf Servern, Produktionsdatenbanken hosten, keine Verbi
 
 Identifizieren alle Abhängigkeiten kann kompliziert sein. Für R, empfehlen wir die Verwendung [MiniCRAN](create-a-local-package-repository-using-minicran.md) um ein Repository Offlinepaket vorzubereiten.
 
-Auf ähnliche Weise müssen Sie für Python bereiten Sie alle Abhängigkeiten vor und lokal speichern. Achten Sie darauf, um ein Windows-kompatiblen Binärdateien und den WHL Format verwenden.
+Auf ähnliche Weise müssen Sie für Python bereiten Sie alle Abhängigkeiten vor und lokal speichern. Achten Sie darauf, dass Windows-kompatiblen Binärdateien und das WHL-Format verwenden.

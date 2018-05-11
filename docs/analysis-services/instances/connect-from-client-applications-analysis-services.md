@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: ''
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 772d01c114f0eb276d063fb96e8bdd2a2fb54a05
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 7b49e6ea5e6ee7f328d50098152255f146647650
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>Herstellen einer Verbindung von Clientanwendungen (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 05/03/2018
   
      Bei einer benannten Instanz muss der Servername in folgendem Format angegeben werden: Servername\Instanzname. Ein Beispiel für diese Namenskonvention könnte ADV-SRV062-\Finance für einen Server sein, der den Netzwerknamen ADV-SRV062 hat, wo Analysis Services als benannte Instanz mit der Bezeichnung Finance installiert war.  
   
-     Bei Servern, die in einem Failovercluster bereitgestellt werden, stellen Sie die Verbindung über den Netzwerknamen des SSAS-Clusters her. Dieser Name wird beim SQL Server-Setup als **Name des SQL Server-Netzwerks**angegeben. Wenn Sie SSAS als benannte Instanz auf einem Windows Server-Failovercluster (WSFC) installiert haben, wird der Instanzname der Verbindung niemals hinzugefügt. Diese Vorgehensweise ist charakteristisch für SSAS. Bei einer benannten Instanz einer gruppierten relationalen Datenbank-Engine ist der Instanzname im Gegensatz dazu enthalten. Wenn Sie z. B. sowohl SSAS als auch das Datenbankmodul als benannte Instanz (Contoso-Accounting) mit dem SQL Server-Netzwerknamen "SQL-CLU" installiert haben, würden Sie die Verbindung mit SSAS mit "SQL-CLU" und die Verbindung mit dem Datenbankmodul mit "SQL-CLU\Contoso-Accounting" herstellen. Weitere Informationen und Beispiele finden Sie unter [Verwenden von SQL Server Analysis Services in einem Cluster](http://go.microsoft.com/fwlink/p/?LinkId=396548) .  
+     Bei Servern, die in einem Failovercluster bereitgestellt werden, stellen Sie die Verbindung über den Netzwerknamen des SSAS-Clusters her. Dieser Name wird beim SQL Server-Setup als **Name des SQL Server-Netzwerks**angegeben. Wenn Sie SSAS als benannte Instanz auf einem Windows Server-Failovercluster (WSFC) installiert haben, wird der Instanzname der Verbindung niemals hinzugefügt. Diese Vorgehensweise ist charakteristisch für SSAS. Bei einer benannten Instanz einer gruppierten relationalen Datenbank-Engine ist der Instanzname im Gegensatz dazu enthalten. Wenn Sie z. B. sowohl SSAS als auch die Datenbank-Engine als benannte Instanz (Contoso-Accounting) mit dem SQL Server-Netzwerknamen "SQL-CLU" installiert haben, würden Sie die Verbindung mit SSAS mit "SQL-CLU" und die Verbindung mit der Datenbank-Engine mit "SQL-CLU\Contoso-Accounting" herstellen. Weitere Informationen und Beispiele finden Sie unter [Verwenden von SQL Server Analysis Services in einem Cluster](http://go.microsoft.com/fwlink/p/?LinkId=396548) .  
   
      Bei Servern, die in einem Cluster mit Netzwerklastenausgleich bereitgestellt werden, stellen Sie mithilfe des virtuellen Netzwerknamens des NLB-Servers eine Verbindung her.  
   

@@ -4,16 +4,16 @@ ms.date: 05/03/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: ''
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b213f21e21d796274d915378107ef24e903431a1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.openlocfilehash: d6fafda72279d82de81986d779447890f01d90fa
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="thread-pool-properties"></a>Threadpooleigenschaften
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/04/2018
 >  Die tabellarische Bereitstellung für NUMA-Systeme geht über dieses Thema hinaus. Obwohl es möglich ist, tabellarische Lösungen erfolgreich in NUMA-Systemen bereitzustellen, können die Leistungsmerkmale der von tabellarischen Modellen verwendeten speicherinternen Datenbanktechnologie bei Architekturen mit hoher zentraler Skalierung nur begrenzte Vorteile aufweisen. Weitere Informationen finden Sie unter [An Analysis Services Case Study: Using Tabular Models in a Large-scale Commercial Solution](http://msdn.microsoft.com/library/dn751533.aspx) (Verwenden von tabellarischen Modellen in umfangreichen kommerziellen Lösungen) und [Hardware Sizing a Tabular Solution (SQL Server Analysis Services)](http://go.microsoft.com/fwlink/?LinkId=330359)(Hardwareanforderungen für eine tabellarische Lösung).  
   
 ##  <a name="bkmk_threadarch"></a> Threadverwaltung in Analysis Services  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet Multithreading, um die verfügbaren CPU-Ressourcen optimal zu nutzen, indem die Anzahl der parallel ausgeführten Tasks erhöht wird. Das Speichermodul basiert auf dem Multithreadprinzip. Zu den Beispielen für Multithreadaufträge, die im Speichermodul ausgeführt werden, zählt die parallele Verarbeitung von Objekten, die Behandlung diskreter Abfragen, die an das Speichermodul weitergegeben wurden, oder die Rückgabe von Datenwerten, die von einer Abfrage angefordert wurden. Das Formelmodul ist ein Singlethread-Formelmodul, da die ausgewerteten Berechnungen seriell sind. Jede Abfrage wird hauptsächlich in einem einzelnen Thread ausgeführt. Hierbei werden Daten angefordert, und es wird oft auf die Rückgabe dieser Daten vom Speichermodul gewartet. Die Ausführung von Abfragethreads dauert länger. Sie werden erst nach Abschluss der gesamten Abfrage freigegeben.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet Multithreading, um die verfügbaren CPU-Ressourcen optimal zu nutzen, indem die Anzahl der parallel ausgeführten Tasks erhöht wird. Die Speicher-Engine basiert auf dem Multithreadprinzip. Zu den Beispielen für Multithreadaufträge, die in der Speicher-Engine ausgeführt werden, zählt die parallele Verarbeitung von Objekten, die Behandlung diskreter Abfragen, die an die Speicher-Engine weitergegeben wurden, oder die Rückgabe von Datenwerten, die von einer Abfrage angefordert wurden. Die Formel-Engine ist eine Singlethread-Formel-Engine, da die ausgewerteten Berechnungen seriell sind. Jede Abfrage wird hauptsächlich in einem einzelnen Thread ausgeführt. Hierbei werden Daten angefordert, und es wird oft auf die Rückgabe dieser Daten von der Speicher-Engine gewartet. Die Ausführung von Abfragethreads dauert länger. Sie werden erst nach Abschluss der gesamten Abfrage freigegeben.  
   
  In den Versionen [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher verwendet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] standardmäßig alle verfügbaren logischen Prozessoren. Auf Systemen mit höheren Editionen von Windows und SQL Server kann die Anzahl bis zu 640 betragen. Beim Starten wird der Prozess „msmdsrv.exe“ einer bestimmten Prozessorgruppe zugewiesen, aber im Laufe der Zeit können Threads für jeden logischen Prozessor oder in jeder Prozessorgruppe geplant werden.  
   
@@ -62,9 +62,11 @@ Wir empfehlen das kumulative Update 1 für SQL Server 2016 (CU1) oder höher fü
   
 -   **Threadpool\Query** ist der Threadpool, der alle Anforderungen ausführt, die nicht vom Analysethreadpool behandelt werden. Threads in diesem Threadpool führen alle Vorgangstypen aus, z. B. Ermittlungen, MDX-, DAX-, DMX- und DDL-Befehle. Ein
   
--   **Threadpool\IOProcess** wird für E/A-Aufträge verwendet, die Speichermodulabfragen im mehrdimensionalen Modul zugeordnet sind. Die von diesen Threads verarbeiteten Aufgaben sollten erwartungsgemäß keine Abhängigkeiten von anderen Threads aufweisen. Diese Threads scannen in der Regel ein einzelnes Segment einer Partition und führen eine Filterung und Aggregation der Segmentdaten durch. **IOProcess** -Threads reagieren besonders empfindlich auf die NUMA-Hardwarekonfigurationen. Dieser Threadpool verfügt über die **PerNumaNode** -Konfigurationseigenschaft, die verwendet werden kann, um die Leistung bei Bedarf zu optimieren. 
+-   
+  **Threadpool\IOProcess** wird für E/A-Aufträge verwendet, die Speicher-Engine-Abfragen in der mehrdimensionalen Engine zugeordnet sind. Die von diesen Threads verarbeiteten Aufgaben sollten erwartungsgemäß keine Abhängigkeiten von anderen Threads aufweisen. Diese Threads scannen in der Regel ein einzelnes Segment einer Partition und führen eine Filterung und Aggregation der Segmentdaten durch. **IOProcess** -Threads reagieren besonders empfindlich auf die NUMA-Hardwarekonfigurationen. Dieser Threadpool verfügt über die **PerNumaNode** -Konfigurationseigenschaft, die verwendet werden kann, um die Leistung bei Bedarf zu optimieren. 
   
--   **Threadpool\Process** wird für längere Speichermodulaufträge verwendet, darunter Aggregationen, Indizierungen und Commitvorgänge. Der ROLAP-Speichermodus verwendet ebenfalls Threads aus dem Verarbeitungsthreadpool.  
+-   
+  **Threadpool\Process** wird für längere Speicher-Engine-Aufträge verwendet, darunter Aggregationen, Indizierungen und Commitvorgänge. Der ROLAP-Speichermodus verwendet ebenfalls Threads aus dem Verarbeitungsthreadpool.  
 
 - **VertiPaq\ThreadPool** ist der Threadpool für die Ausführung von Tabellenscans in einem tabellarischen Modell.
   
@@ -208,13 +210,13 @@ Wir empfehlen das kumulative Update 1 für SQL Server 2016 (CU1) oder höher fü
 ###  <a name="bkmk_workdistrib"></a> Arbeitsverteilung unter IOProcess-Threads  
  Bei der Überlegung, ob Sie die **PerNumaNode** -Eigenschaft festlegen sollen oder nicht, hilft es zu wissen, wie **IOProcess** -Threads eingesetzt werden.  
   
- Bedenken Sie, dass **IOProcess** für E/A-Aufträge verwendet wird, die Speichermodulabfragen im mehrdimensionalen Modul zugeordnet sind.  
+ Bedenken Sie, dass **IOProcess** für E/A-Aufträge verwendet wird, die Speicher-Engine-Abfragen in der mehrdimensionalen Engine zugeordnet sind.  
   
- Beim Scannen eines Segments identifiziert das Modul die Partition, der das Segment angehört, und versucht, den Segmentauftrag in die Warteschlange des von der Partition verwendeten Threadpools einzureihen. Generell reihen alle Segmente, die einer Partition angehören, ihre Tasks in die Warteschlange desselben Threadpools ein. Insbesondere bei NUMA-Systemen ist dieses Verhalten von Vorteil, da bei allen Partitionsscans der Arbeitsspeicher im Dateisystemcache verwendet wird, der diesem NUMA-Knoten lokal zugeordnet ist.  
+ Beim Scannen eines Segments identifiziert die Engine die Partition, der das Segment angehört, und versucht, den Segmentauftrag in die Warteschlange des von der Partition verwendeten Threadpools einzureihen. Generell reihen alle Segmente, die einer Partition angehören, ihre Tasks in die Warteschlange desselben Threadpools ein. Insbesondere bei NUMA-Systemen ist dieses Verhalten von Vorteil, da bei allen Partitionsscans der Arbeitsspeicher im Dateisystemcache verwendet wird, der diesem NUMA-Knoten lokal zugeordnet ist.  
   
  In den folgenden Szenarien werden Änderungen vorgeschlagen, durch die die Abfrageleistung bei NUMA-Systemen in manchen Fällen verbessert werden kann:  
   
--   Erhöhen Sie bei Measuregruppen, die unterpartitioniert sind (z. B. nur über eine Partition verfügen), die Anzahl der Partitionen. Die Verwendung nur einer Partition führt dazu, dass das Modul Tasks immer nur in die Warteschlange eines Threadpools (Threadpool 0) einreiht. Durch das Hinzufügen weiterer Partitionen kann das Modul zusätzliche Threadpools nutzen.  
+-   Erhöhen Sie bei Measuregruppen, die unterpartitioniert sind (z. B. nur über eine Partition verfügen), die Anzahl der Partitionen. Die Verwendung nur einer Partition führt dazu, dass die Engine Tasks immer nur in die Warteschlange eines Threadpools (Threadpool 0) einreiht. Durch das Hinzufügen weiterer Partitionen kann die Engine zusätzliche Threadpools nutzen.  
   
      Wenn Sie keine zusätzlichen Partitionen erstellen können, versuchen Sie stattdessen, **PerNumaNode**=0 festzulegen, um die Anzahl der für Threadpool 0 verfügbaren Threads zu erhöhen.  
   
@@ -234,7 +236,7 @@ Wir empfehlen das kumulative Update 1 für SQL Server 2016 (CU1) oder höher fü
   
  Analysis Services verwendet einen Koordinatorthread zum Erfassen der Daten, die zum Abschließen einer Verarbeitungs- oder Abfrageanforderung erforderlich sind. Der Koordinator stellt zunächst einen Auftrag für jede Partition in die Warteschlange, die verwendet werden muss. Jeder dieser Aufträge stellt dann weitere Aufträge in die Warteschlange. Dies hängt von der Gesamtzahl der Segmente ab, die in der Partition durchsucht werden müssen.  
   
- Der Standardwert für **CoordinatorExecutionMode** lautet -4. Das heißt, es gilt eine Begrenzung von vier parallelen Aufträgen pro Kern, wodurch die Gesamtzahl von Koordinatoraufträgen begrenzt wird, die parallel durch eine Teilcubeanforderung im Speichermodul ausgeführt werden können.  
+ Der Standardwert für **CoordinatorExecutionMode** lautet -4. Das heißt, es gilt eine Begrenzung von vier parallelen Aufträgen pro Kern, wodurch die Gesamtzahl von Koordinatoraufträgen begrenzt wird, die parallel durch eine Teilcubeanforderung in der Speicher-Engine ausgeführt werden können.  
   
  Der Standardwert für **CoordinatorQueryMaxThreads** lautet 16, wodurch die Anzahl der Segmentaufträge eingeschränkt wird, die für jede Partition parallel ausgeführt werden können.  
   

@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: ppvt-sharepoint
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 24bf58f255e20188b17ec53f0b75762a5e89a0b1
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: bc381e88d959dc819c7cfa401c2e5350f2934069
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Installieren von Analysis Services im PowerPivot-Modus
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -92,7 +92,7 @@ ms.lasthandoff: 05/03/2018
   
     -   Für [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]können Sie ein **Domänenbenutzerkonto** oder ein **NetworkService-Konto** verwenden. Das LocalSystem- oder LocalService-Konto sollte nicht verwendet werden.  
   
-    -   Wenn Sie das SQL Server-Datenbankmodul und den SQL Server-Agent hinzugefügt haben, können Sie die Dienste zur Ausführung unter Domänenbenutzerkonten oder unter dem standardmäßigen virtuellen Konto konfigurieren.  
+    -   Wenn Sie die SQL Server-Datenbank-Engine und den SQL Server-Agent hinzugefügt haben, können Sie die Dienste zur Ausführung unter Domänenbenutzerkonten oder unter dem standardmäßigen virtuellen Konto konfigurieren.  
   
     -   Stellen Sie niemals Dienstkonten unter Ihrem eigenen Domänenbenutzerkonto bereit. Dies gewährt dem Server die gleichen Berechtigungen, über die Sie für die Ressourcen im Netzwerk verfügen. Wenn der Server von einem böswilligen Benutzer angegriffen wird, wird dieser Benutzer mit Ihren Domänenanmeldeinformationen angemeldet. Der Benutzer ist dann berechtigt, die gleichen Daten und Anwendungen herunterzuladen und zu verwenden wie Sie.  
   
@@ -100,7 +100,7 @@ ms.lasthandoff: 05/03/2018
   
      ![Setup für SQL - Serverkonfiguration Angebotsseite](../../../analysis-services/instances/install-windows/media/sql2016-pp-server-config-landing-page.png "Setup für SQL - Serverkonfiguration-Angebotsseite")  
   
-14. Wenn Sie das [!INCLUDE[ssDE](../../../includes/ssde-md.md)]installieren, wird die Seite **Datenbankmodulkonfiguration** angezeigt. Wählen Sie in der [!INCLUDE[ssDE](../../../includes/ssde-md.md)] -Konfiguration **Aktuellen Benutzer hinzufügen** aus, um Ihrem Benutzerkonto Administratorberechtigungen für die Datenbankmodulinstanz zu gewähren.  
+14. Wenn Sie das [!INCLUDE[ssDE](../../../includes/ssde-md.md)]installieren, wird die Seite **Datenbank-Engine-Konfiguration** angezeigt. Wählen Sie in der [!INCLUDE[ssDE](../../../includes/ssde-md.md)] -Konfiguration **Aktuellen Benutzer hinzufügen** aus, um Ihrem Benutzerkonto Administratorberechtigungen für die Datenbank-Engine-Instanz zu gewähren.  
   
      Wählen Sie **Weiter**aus.  
   

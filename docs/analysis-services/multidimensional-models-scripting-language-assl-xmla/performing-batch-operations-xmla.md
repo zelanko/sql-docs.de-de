@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: xmla
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7fcf1074de0d233c3df24ddf1696e26a8d3bd84a
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 6d8fc92672858886a3c770d485bc21f6eb9f8eaa
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="performing-batch-operations-xmla"></a>Ausführen von Batchvorgängen (XMLA)
   Können Sie die [Batch](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) -Befehl in XML for Analysis (XMLA) mehrere XMLA-Befehle, die mit einer einzigen XMLA-ausführen [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) Methode. Sie können mehrere Befehle, die in enthaltenen Ausführen der **Batch** -Befehl entweder als einzelne Transaktion oder als individuelle Transaktionen für jeden Befehl in Serie oder parallel. Sie können auch angeben, Out-of-Line-Bindungen und andere Eigenschaften in der **Batch** Befehl für die Verarbeitung mehrerer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Objekte.  

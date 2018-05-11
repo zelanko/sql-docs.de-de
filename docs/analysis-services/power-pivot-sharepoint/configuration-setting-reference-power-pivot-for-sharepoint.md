@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: ppvt-sharepoint
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4c3c7b19acab1757f8f691c6a32afdb96445b83a
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: d58ca9b3c3769a34164157f7297269f100ea8c1d
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="configuration-setting-reference-power-pivot-for-sharepoint"></a>Konfigurationseinstellungsverweis (Power Pivot für SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
 |Name|Standardwert|Gültige Werte|Description|  
 |----------|-------------|------------------|-----------------|  
-|Data Load Timeout|1800 (in Sekunden)|1 bis 3600|Gibt an, wie lange eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung auf eine Antwort von einer bestimmten Analysis Services-Serverinstanz wartet.<br /><br /> Standardmäßig wartet die Dienstanwendung 30 Minuten auf eine Datennutzlast von der Moduldienstinstanz, an die sie eine bestimmte Anforderung weitergeleitet hat.<br /><br /> Falls die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenquelle nicht innerhalb dieses Zeitraums geladen werden kann, wird der Thread beendet und ein neuer gestartet.|  
+|Data Load Timeout|1800 (in Sekunden)|1 bis 3600|Gibt an, wie lange eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung auf eine Antwort von einer bestimmten Analysis Services-Serverinstanz wartet.<br /><br /> Standardmäßig wartet die Dienstanwendung 30 Minuten auf eine Datennutzlast von der Engine-Dienstinstanz, an die sie eine bestimmte Anforderung weitergeleitet hat.<br /><br /> Falls die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenquelle nicht innerhalb dieses Zeitraums geladen werden kann, wird der Thread beendet und ein neuer gestartet.|  
   
 ##  <a name="ConnectionPool"></a> Verbindungspools  
  Die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung erstellt und verwaltet Verbindungspools, damit Verbindungen wiederverwendet werden können. Es gibt zwei Typen von Verbindungspools: ein Typ für Datenverbindungen mit schreibgeschützten Daten und ein weiterer für Serververbindungen.  

@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: ppvt-sharepoint
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5748a659aad37878869135c6a3d8358880979fe7
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 03580ce0d35c95ee5759a14f7a1866b67406fbd4
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-and-configure-power-pivot-service-application-in-ca"></a>Erstellen und Konfigurieren von PowerPivot-Dienstanwendung in der Zertifizierungsstelle
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -60,7 +60,7 @@ ms.lasthandoff: 05/03/2018
   
 5.  Erstellen Sie in Anwendungspool einen neuen Anwendungspool für die Anwendung (empfohlen). Wählen Sie ein verwaltetes Konto für den Anwendungspool aus, oder erstellen Sie es. Sie müssen ein Domänenbenutzerkonto angeben. Ein Domänenbenutzerkonto ermöglicht die Verwendung der in SharePoint verfügbaren Funktion Verwaltetes Konto, mit der Sie Kennwörter und Kontoinformationen zentral aktualisieren können. Domänenkonten sind auch erforderlich, wenn Sie beabsichtigen, die Bereitstellung auf zusätzlichen Dienstinstanzen, die unter der gleichen Identität ausgeführt werden, zu skalieren.  
   
-6.  Der Standardwert unter **Datenbankserver**entspricht der SQL Server-Datenbankmodul-Instanz, die die Konfigurationsdatenbanken der Farm hostet. Sie können diesen Server verwenden oder einen anderen SQL Server auswählen.  
+6.  Der Standardwert unter **Datenbankserver**entspricht der SQL Server-Datenbank-Engine-Instanz, die die Konfigurationsdatenbanken der Farm hostet. Sie können diesen Server verwenden oder einen anderen SQL Server auswählen.  
   
 7.  In **Datenbankname**, der Standardwert ist PowerPivotServiceApplication1_\<Guid >. Sie müssen eine eindeutige Datenbank für jede [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung erstellen. Der Standardname für die Datenbank entspricht dem Standardnamen der Dienstanwendung. Wenn Sie einen eindeutigen Dienstanwendungsnamen eingegeben haben, verwenden Sie eine ähnliche Benennungskonvention für den Datenbanknamen, damit Sie sie zusammen verwalten können.  
   

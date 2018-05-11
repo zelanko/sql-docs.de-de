@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: adomd
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 01fee3784b60b6b36c8e1ad5b187fb6786c168dc
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 9954141f2f4c69d42be879960ea183fc11d4e162
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="retrieving-data-using-the-cellset"></a>Abrufen von Daten mittels Cellset
   Beim Abruf analytischer Daten bietet das <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>-Objekt die meiste Interaktivität und Flexibilität. Das <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>-Objekt ist ein im Arbeitsspeicher befindlicher Cache für hierarchische Daten und Metadaten, der die ursprüngliche Dimensionalität der Daten beibehält. Das <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>-Objekt kann darüber hinaus in einen Online- oder Offlinezustand traversiert werden. Aufgrund dieser Offline-Fähigkeit kann das <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>-Objekt verwendet werden, um Daten und Metadaten in beliebiger Reihenfolge einzusehen, und es stellt das umfangreichste Objektmodell für die Datenabfrage bereit. Diese Offline-Fähigkeit führt dazu, dass das <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>-Objekt den größten Verwaltungsaufwand erfordert und von allen ADOMD.NET-Objektmodellen zur Datenabfrage das langsamste ist.  

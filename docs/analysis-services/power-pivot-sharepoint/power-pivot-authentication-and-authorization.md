@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: ppvt-sharepoint
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 710db3b55eb8e3bd1e885dfd71e2bde15360092c
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: af9bd2072d84edaa55114b11fac13385c5983e23
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Power Pivot-Authentifizierung und -Autorisierung
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="bkmk_auth"></a> Windows-Authentifizierung unter Verwendung der Anmeldungsanforderung im klassischen Modus  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint unterstützt eine eingeschränkte Anzahl der Authentifizierungsoptionen, die in SharePoint verfügbar sind. Von den verfügbaren Authentifizierungsoptionen wird nur die Windows-Authentifizierung für eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Bereitstellung unterstützt. Außerdem muss die Webanwendung, über die die Anmeldung erfolgt, für den klassischen Modus konfiguriert sein.  
   
- Die Windows-Authentifizierung ist erforderlich, weil das Analysis Services-Datenmodul in einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Bereitstellung nur die Windows-Authentifizierung unterstützt. Excel Services stellt über den MSOLAP OLE DB-Anbieter Verbindungen mit Analysis Services her. Dabei wird die Identität eines Windows-Benutzers verwendet, der über NTLM oder das Kerberos-Protokoll authentifiziert wurde.  
+ Die Windows-Authentifizierung ist erforderlich, weil die Analysis Services-Daten-Engine in einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Bereitstellung nur die Windows-Authentifizierung unterstützt. Excel Services stellt über den MSOLAP OLE DB-Anbieter Verbindungen mit Analysis Services her. Dabei wird die Identität eines Windows-Benutzers verwendet, der über NTLM oder das Kerberos-Protokoll authentifiziert wurde.  
   
  Durch die zweite Anforderung, dass für die Webanwendung die Authentifizierung im klassischen Modus verwendet werden soll, wird sichergestellt, dass der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Webdienst funktioniert. Der Webdienst ist eine Komponente, die auf einem Web-Front-End ausgeführt wird und die HTTP-Umleitung an einen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Server in der Farm vornimmt. Während der Webdienst bei der Dienst-zu-Dienst-Kommunikation als eine Ansprüche unterstützende Anwendung fungiert, trifft dies für Datenverbindungsanforderungen, die an einen freigegebenen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienst in der Farm umgeleitet werden, nicht zu. Anforderungen zum Laden von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten werden nur für authentifizierte Verbindungen unterstützt, die unter Verwendung einer Windows-Identität von IIS gesendet werden. Die Anmeldung im klassischen Modus in der Webanwendung ermöglicht eine erfolgreiche Verbindung vom [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Webdienst zu freigegebenen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Diensten in der Farm.  
   

@@ -4,16 +4,16 @@ ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: tabular-models
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fe3a8f7f41ecf754e64c9b98ffd08d52cad5ab03
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 06f3ca4719c59c7b71adc16340fcd583fb4d55ad
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="define-partitions-in-directquery-models"></a>Definieren von Partitionen im DirectQuery-Modellen
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/08/2018
   
  Aus diesem Grund verwendet der Server für im DirectQuery-Modus beantwortete Abfragen eine einzelne Partition, die als primäre Partition für DirectQuery-Zugriff markiert wurde und als *DirectQuery-Partition*bezeichnet wird.  Die in der Definition dieser Partition angegebene SQL-Abfrage definiert den vollständigen Satz der Daten, die zur Beantwortung von Abfragen im DirectQuery-Modus verwendet werden können.  
   
- Wenn Sie eine Partition nicht explizit definieren, gibt das Modul lediglich eine SQL-Abfrage an die gesamte relationale Datenquelle aus, führt alle satzbasierten Vorgänge aus, die gemäß DAX-Formel vorgeschrieben sind, und gibt die Abfrageergebnisse zurück.  
+ Wenn Sie eine Partition nicht explizit definieren, gibt die Engine lediglich eine SQL-Abfrage an die gesamte relationale Datenquelle aus, führt alle satzbasierten Vorgänge aus, die gemäß DAX-Formel vorgeschrieben sind, und gibt die Abfrageergebnisse zurück.  
   
   
 ## <a name="change-a-directquery-partition"></a>Ändern einer DirectQuery-Partition  

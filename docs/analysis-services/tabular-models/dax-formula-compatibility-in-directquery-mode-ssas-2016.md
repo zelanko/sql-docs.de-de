@@ -4,16 +4,16 @@ ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: tabular-models
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c22e69c2b3bf2fbaaa89095483ed5f250c7aa201
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 66e604afaf3aa775091225bf49dd6cee223921fc
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>DAX-formelkompatibilität im DirectQuery-Modus 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -42,7 +42,7 @@ Diese Funktionen sind nicht optimiert worden, um die Arbeitsweise mit DirectQuer
 
  Hier sind nicht alle Funktionen aufgelistet. Wenn eine Funktion nicht in einer der obigen Listen mit optimierten Funktionen enthalten ist, handelt es sich nicht um eine für DirectQuery optimierte Funktion.
 
-Ein Grund, warum eine bestimmte Funktion nicht für DirectQuery optimiert werden kann, ist zum einen, dass das zugrunde liegende Modul keine Berechnungen durchführen kann, die denen durch das xVelocity-Modul entsprechen. Zum anderen ist es möglich, dass die Formel nicht in einen entsprechenden SQL-Ausdruck umgewandelt werden kann. In anderen Fällen sind die Leistung des umgewandelten Ausdrucks und die resultierenden Berechnungen ggf. nicht akzeptabel.
+Ein Grund, warum eine bestimmte Funktion nicht für DirectQuery optimiert werden kann, ist zum einen, dass die zugrunde liegende Engine keine Berechnungen durchführen kann, die denen durch die xVelocity-Engine entsprechen. Zum anderen ist es möglich, dass die Formel nicht in einen entsprechenden SQL-Ausdruck umgewandelt werden kann. In anderen Fällen sind die Leistung des umgewandelten Ausdrucks und die resultierenden Berechnungen ggf. nicht akzeptabel.
 
 Weitere Informationen zu allen DAX-Funktionen finden Sie unter [DAX-Funktionsreferenz]. (https://msdn.microsoft.com/en-us/library/ee634396.aspx)
 
@@ -52,11 +52,11 @@ Alle DAX-Vergleichsvorgängen sowie arithmetischen Operatoren werden im DirectQu
 
  
 ## <a name="differences-between-in-memory-and-directquery-mode"></a>Unterschiede zwischen dem speicherinternen und DirectQuery-Modus  
-Abfragen eines Modells, das im DirectQuery-Modus bereitgestellt wird, können andere Ergebnisse zurückgeben als bei der Bereitstellung desselben Modells im Arbeitsspeicher. Das liegt daran, dass Daten bei DirectQuery direkt aus einem relationalen Datenspeicher abgerufen und für Formeln erforderliche Aggregationen mithilfe des relevanten relationalen Moduls (SQL, Oracle, Teradata) ausgeführt werden, anstatt das xVelocity-Modul für Datenanalyse im Arbeitsspeicher für Speicherungs- und Rechenvorgänge zu verwenden.  
+Abfragen eines Modells, das im DirectQuery-Modus bereitgestellt wird, können andere Ergebnisse zurückgeben als bei der Bereitstellung desselben Modells im Arbeitsspeicher. Das liegt daran, dass Daten bei DirectQuery direkt aus einem relationalen Datenspeicher abgerufen und für Formeln erforderliche Aggregationen mithilfe der relevanten relationalen Engine (SQL, Oracle, Teradata) ausgeführt werden, anstatt die xVelocity-Engine für Datenanalyse im Arbeitsspeicher für Speicherungs- und Rechenvorgänge zu verwenden.  
   
 Beispielsweise behandeln bestimmte relationale Datenspeicher numerische Werte, Daten, NULL-Werte usw. auf unterschiedliche Weise.  
   
-Im Gegensatz dazu dient die DAX-Programmiersprache zum möglichst genauen Emulieren des Verhaltens von Funktionen in Microsoft Excel. Beispielsweise versucht Excel bei der Behandlung von NULL-Werten, leeren Zeichenfolgen und Werten gleich 0 unabhängig vom genauen Datentyp die optimale Antwort bereitzustellen. Folglich verhält sich das xVelocity-Modul auf die gleiche Weise. Wird jedoch ein Tabellenmodell im DirectQuery-Modus bereitgestellt und übergibt es Formeln an eine relationale Datenquelle, müssen die Daten gemäß der Semantik der relationalen Datenquelle behandelt werden. Dabei werden in der Regel leere Zeichenfolgen anders behandelt als NULL-Zeichenfolgen. Aus diesem Grund kann die gleiche Formel ein anderes Ergebnis zurückgeben als im Fall der Auswertung anhand von zwischengespeicherten Daten sowie Daten, die lediglich aus dem relationalen Speicher zurückgegeben wurden.  
+Im Gegensatz dazu dient die DAX-Programmiersprache zum möglichst genauen Emulieren des Verhaltens von Funktionen in Microsoft Excel. Beispielsweise versucht Excel bei der Behandlung von NULL-Werten, leeren Zeichenfolgen und Werten gleich 0 unabhängig vom genauen Datentyp die optimale Antwort bereitzustellen. Folglich verhält sich die xVelocity-Engine auf die gleiche Weise. Wird jedoch ein Tabellenmodell im DirectQuery-Modus bereitgestellt und übergibt es Formeln an eine relationale Datenquelle, müssen die Daten gemäß der Semantik der relationalen Datenquelle behandelt werden. Dabei werden in der Regel leere Zeichenfolgen anders behandelt als NULL-Zeichenfolgen. Aus diesem Grund kann die gleiche Formel ein anderes Ergebnis zurückgeben als im Fall der Auswertung anhand von zwischengespeicherten Daten sowie Daten, die lediglich aus dem relationalen Speicher zurückgegeben wurden.  
   
 Darüber sind einige Funktionen nicht für den DirectQuery-Modus optimiert, da andernfalls die Berechnung erfordern würde, dass die Daten im aktuellen Kontext an die relationale Datenquelle als Parameter gesendet werden. Dies gilt beispielsweise für Measures, die Zeitintelligenzfunktionen nutzen, die auf Datumsbereiche in einer Kalendertabelle verweisen. Eine relationale Datenquelle enthält möglicherweise keine Kalendertabelle.  
   
@@ -64,7 +64,7 @@ Darüber sind einige Funktionen nicht für den DirectQuery-Modus optimiert, da a
 Dieser Abschnitt listet die Typen der üblichen semantischen Unterschiede auf. Zudem werden Einschränkungen beschrieben, die u. U. für die Verwendung von Funktionen oder für Abfrageergebnisse gelten.  
   
 ### <a name="comparisons"></a>Vergleiche  
-Die DAX-Programmiersprache in speicherinternen Modellen unterstützt Vergleiche von zwei Ausdrücken, die in Skalarwerte verschiedener Datentypen aufgelöst werden. Modelle, die im DirectQuery-Modus bereitgestellt werden, verwenden jedoch die Datentypen und Vergleichsoperatoren des relationalen Moduls und geben daher u. U. unterschiedliche Ergebnisse zurück.  
+Die DAX-Programmiersprache in speicherinternen Modellen unterstützt Vergleiche von zwei Ausdrücken, die in Skalarwerte verschiedener Datentypen aufgelöst werden. Modelle, die im DirectQuery-Modus bereitgestellt werden, verwenden jedoch die Datentypen und Vergleichsoperatoren der relationalen Engine und geben daher u. U. unterschiedliche Ergebnisse zurück.  
   
 Die folgenden Vergleiche geben immer einen Fehler zurück, wenn sie in einer Berechnung in einer DirectQuery-Datenquelle verwendet werden:  
   
@@ -74,7 +74,7 @@ Die folgenden Vergleiche geben immer einen Fehler zurück, wenn sie in einer Ber
   
 -   Zeichenfolgen-Datentyp im Vergleich zu einem booleschen Wert  
   
-Im Allgemeinen toleriert die DAX-Programmiersprache mehr Datentypkonflikte in speicherinternen Modellen und versucht bis zu zweimal, eine implizite Umwandlung von Werten durchzuführen (wie in diesem Abschnitt beschrieben). An einen relationalen Datenspeicher im DirectQuery-Modus gesendete Formeln werden jedoch strenger ausgewertet, wobei die Regeln des relationalen Moduls berücksichtigt werden und mit höherer Wahrscheinlichkeit ein Fehlschlag auftritt.  
+Im Allgemeinen toleriert die DAX-Programmiersprache mehr Datentypkonflikte in speicherinternen Modellen und versucht bis zu zweimal, eine implizite Umwandlung von Werten durchzuführen (wie in diesem Abschnitt beschrieben). An einen relationalen Datenspeicher im DirectQuery-Modus gesendete Formeln werden jedoch strenger ausgewertet, wobei die Regeln der relationalen Engine berücksichtigt werden und mit höherer Wahrscheinlichkeit ein Fehlschlag auftritt.  
   
 **Vergleiche von Zeichenfolgen und Zahlen**  
 BEISPIEL: `“2” < 3`  
@@ -130,7 +130,7 @@ Bei speicherinternen Modellen erfolgt oftmals ein zweiter Umwandlungsversuch, we
   
 BEISPIEL: `TODAY() + “13:14:15”`  
   
-In diesem Ausdruck weist der erste Parameter den Typ **datetime** und der zweite Parameter den Typ **string**auf. Die Umwandlungen werden jedoch im Fall der Kombination der Operanden unterschiedlich gehandhabt. DAX führt eine implizite Umwandlung von **string** in **double**aus. Bei speicherinternen Modellen versucht das Formelmodul, eine direkte Umwandlung in **double**vorzunehmen. Missling dieser Vorgang, wird versucht, die Zeichenfolge in **datetime**umzuwandeln.  
+In diesem Ausdruck weist der erste Parameter den Typ **datetime** und der zweite Parameter den Typ **string**auf. Die Umwandlungen werden jedoch im Fall der Kombination der Operanden unterschiedlich gehandhabt. DAX führt eine implizite Umwandlung von **string** in **double**aus. Bei speicherinternen Modellen versucht die Formel-Engine, eine direkte Umwandlung in **double** vorzunehmen. Missling dieser Vorgang, wird versucht, die Zeichenfolge in **datetime** umzuwandeln.  
   
 Im DirectQuery-Modus wird nur die direkte Umwandlung von **string** in **double** übernommen. Schlägt diese Umwandlung fehl, gibt die Formel einen Fehler zurück.  
   
@@ -150,10 +150,10 @@ Bei einem speicherinternen Modell gibt die Formel den Wert "-4" zurück.
 **Numerische Überlaufvorgänge**  
 In Transact-SQL geben Vorgänge, die zu einem numerischen Überlauf führen, einen Überlauffehler zurück. Daher geben auch Formeln, die zu einem Überlauf führen, einen Fehler im DirectQuery-Modus zurück.  
   
-Die gleiche Formel gibt allerdings bei Verwendung in einem speicherinternen Modell eine ganze Zahl mit einer Länge von acht Byte zurück. Das liegt daran, dass das Formelmodul keine Überprüfungen für numerische Überläufe ausführt.  
+Die gleiche Formel gibt allerdings bei Verwendung in einem speicherinternen Modell eine ganze Zahl mit einer Länge von acht Byte zurück. Das liegt daran, dass die Formel-Engine keine Überprüfungen für numerische Überläufe ausführt.  
   
 **LOG-Funktionen mit Leerzeichen geben andere Ergebnisse zurück.**  
-SQL Server behandelt NULL-Werte und Leerzeichen anders als das xVelocity-Modul. Daher gibt die folgende Formel einen Fehler im DirectQuery-Modus zurück, während sie beim speicherinternen Modell den Unendlichkeitswert (–inf) zurückgibt.  
+SQL Server behandelt NULL-Werte und Leerzeichen anders als die xVelocity-Engine. Daher gibt die folgende Formel einen Fehler im DirectQuery-Modus zurück, während sie beim speicherinternen Modell den Unendlichkeitswert (–inf) zurückgibt.  
   
 `EXAMPLE: LOG(blank())`  
   
@@ -241,7 +241,7 @@ Im folgenden Beispiel wird veranschaulicht, wie dieser Wert berechnet wird:
 **SQL-Zeitdatentyp nicht unterstützt**  
 Bei speicherinternen Modellen wird die Verwendung des neuen **Time** -Datentyps nicht unterstützt. Im DirectQuery-Modus geben Formeln, die mit diesem Datentyp auf Spalten verweisen, einen Fehler zurück. Zeitdatenspalten können nicht in ein speicherinternes Modell importiert werden.  
   
-Mitunter wandelt das Modul den Zeitwert in einen zulässigen Datentyp um, und die Formel gibt ein Ergebnis zurück.  
+Mitunter wandelt die Engine den Zeitwert in einen zulässigen Datentyp um, und die Formel gibt ein Ergebnis zurück.  
   
 Dieses Verhalten beeinflusst alle Funktionen, die eine Datumsspalte als Parameter verwenden.  
   
@@ -285,7 +285,7 @@ Darüber hinaus unterstützen einige Textfunktionen in SQL Server zusätzliche A
 **Vorgänge, die ein Zeichen mit LEFT, RIGHT usw. zurückgeben, geben möglicherweise das richtige Zeichen zurück – allerdings in einer anderen Schreibweise. Alternativ werden keine Ergebnisse zurückgegeben.**  
 BEISPIEL: `LEFT([“text”], 2)`  
   
-Im DirectQuery-Modus entspricht die Schreibweise des Zeichens, das zurückgegeben wird, stets dem Buchstaben, der in der Datenbank gespeichert wird. Das xVelocity-Modul verwendet jedoch aus Leistungsgründen einen anderen Algorithmus für die Komprimierung und Indizierung von Werten.  
+Im DirectQuery-Modus entspricht die Schreibweise des Zeichens, das zurückgegeben wird, stets dem Buchstaben, der in der Datenbank gespeichert wird. Das xVelocity-Engine verwendet jedoch aus Leistungsgründen einen anderen Algorithmus für die Komprimierung und Indizierung von Werten.  
   
 Standardmäßig wird die Latin1_General-Sortierung verwendet (ohne Berücksichtigung der Groß-/Kleinschreibung und mit Unterscheidung von Akzenten). Sind mehrere Instanzen einer Textzeichenfolge in Kleinbuchstaben, Großbuchstaben oder mit gemischter Schreibweise vorhanden, werden folglich alle Instanzen als gleiche Zeichenfolge betrachtet, und nur die erste Instanz der Zeichenfolge wird im Index gespeichert. Sämtliche Textfunktionen, die bei gespeicherten Zeichenfolgen ausgeführt werden, rufen den angegebenen Teil des indizierten Formulars ab. Daher gibt die Beispielformel den gleichen Wert für die gesamte Spalte zurück und verwendet dabei die erste Instanz als Eingabe.  
   

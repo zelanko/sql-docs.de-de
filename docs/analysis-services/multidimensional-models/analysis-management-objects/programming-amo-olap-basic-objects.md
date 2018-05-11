@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: amo
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6df874fb1819f2360991d19557090aa30dec1a42
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: b75256253cc9b40c73705fbbb6d74fd92374bd66
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="programming-amo-olap-basic-objects"></a>Programming AMO OLAP basic objects
   Die Erstellung komplexer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Objekte ist einfach und unkompliziert. Allerdings müssen Details genau beachtet werden. In diesem Thema werden die Programmierdetails von grundlegenden OLAP-Objekten erläutert. Dieses Thema enthält folgende Abschnitte:  

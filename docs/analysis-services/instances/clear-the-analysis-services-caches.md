@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: ''
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d5c736d07a6bac184e255e38abbe6d3f3afa416d
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 4960e9fc58dc8ac773db3b96b8d994b75d45c823
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="clear-the-analysis-services-caches"></a>Löschen des Zwischenspeichers von Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.lasthandoff: 05/03/2018
   
  Tabellarische Modelle werden im Allgemeinen im Arbeitsspeicher gespeichert, wo Aggregationen und andere Berechnungen beim Ausführen einer Abfrage ausgeführt werden. Der ClearCache-Befehl hat nur eingeschränkte Auswirkungen auf tabellarische Modelle. Bei einem tabellarischen Modell werden Daten möglicherweise dem Analysis Services-Zwischenspeicher hinzugefügt, wenn MDX-Abfragen ausgeführt werden. DAX-Measures (verwiesen durch MDX) und Autoexists-Vorgänge können im Einzelnen Ergebnisse im Formular- bzw. Dimensionszwischenspeicher zwischenspeichern. Beachten Sie jedoch, dass unnatürliche Hierarchien und Measuregruppenabfragen im Speichermodul keine Ergebnisse zwischenspeichern. Darüber hinaus ist es wichtig zu wissen, dass DAX-Abfragen die Ergebnisse nicht im Formular- bzw. im Speichermodul zwischenspeichern. Falls Caches als Ergebnis von MDX-Abfragen vorhanden sind, werden durch das Ausführen von ClearCache auf ein tabellarisches Modell alle zwischengespeicherten Daten vom System ungültig.  
   
- Durch das Ausführen von ClearCache wird auch der speicherinterne Cache im xVelocity-Modul für Datenanalyse im Arbeitsspeicher (VertiPaq) gelöscht. Das xVelocity-Modul behält einen kleinen Satz zwischengespeicherter Ergebnisse bei. Durch das Ausführen von ClearCache werden diese Zwischenspeicher im xVelocity-Modul ungültig.  
+ Durch das Ausführen von ClearCache wird auch der speicherinterne Cache im xVelocity-Modul für Datenanalyse im Arbeitsspeicher (VertiPaq) gelöscht. Das xVelocity-Modul behält einen kleinen Satz zwischengespeicherter Ergebnisse bei. Durch das Ausführen von ClearCache werden diese Zwischenspeicher in der xVelocity-Engine ungültig.  
   
  Schließlich werden durch das Ausführen von ClearCache auch restliche Daten entfernt, die im Arbeitsspeicher übrig sind, wenn ein tabellarisches Modell für den **DirectQuery** -Modus neu konfiguriert wird. Dies ist besonders wichtig, wenn das Modell sensible Daten enthält, die engen Kontrollen unterliegen. In diesem Fall ist das Ausführen von ClearCache eine vorbeugende Aktion, die Sie ergreifen können, um sicherzustellen, dass sensible Daten nur dort vorhanden sind, wo Sie sie erwarten. Das manuelle Löschen des Zwischenspeichers ist notwendig, wenn Sie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] verwenden, um das Modell bereitzustellen und den Abfragemodus zu ändern. Demgegenüber wird durch die Verwendung von [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] zur Bestimmung von **DirectQuery** auf dem Modell der Zwischenspeicher durch die Partitionen automatisch gelöscht, wenn Sie das Modell umschalten, um diesen Abfragemodus zu verwenden.  
   

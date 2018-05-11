@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: multidimensional-models
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4c7f24ee1d0a22b6f3a3bb62a88650afaca1162f
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: d381bfd9c2421664a4910c56f45d9c73c0c9687c
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Erstellen einer Datenquelle (SSAS – mehrdimensional)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -71,13 +71,14 @@ ms.lasthandoff: 05/03/2018
   
 4.  Wählen Sie den [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework- oder den systemeigenen OLE DB-Anbieter aus, der für die Verbindung verwendet werden soll.  
   
-     Der Standardanbieter für eine neue Verbindung ist der Native OLE DB\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Native Client-Anbieter. Dieser Anbieter wird dazu verwendet, mit OLE DB eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankmodulinstanz herzustellen. Für Verbindungen zu einer relationalen SQL Server-Datenbank ist die Verwendung von Native OLE DB\SQL Server Native Client 11.0 oftmals schneller als die Verwendung von alternativen Anbietern.  
+     Der Standardanbieter für eine neue Verbindung ist der Native OLE DB\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Native Client-Anbieter. Dieser Anbieter wird dazu verwendet, mit OLE DB eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank-Engine-Instanz herzustellen. Für Verbindungen zu einer relationalen SQL Server-Datenbank ist die Verwendung von Native OLE DB\SQL Server Native Client 11.0 oftmals schneller als die Verwendung von alternativen Anbietern.  
   
      Sie können einen anderen Anbieter auswählen, um auf andere Datenquellen zuzugreifen. Eine Liste der von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]unterstützten Anbieter und relationalen Datenbanken finden Sie unter [Unterstützte Datenquellen &#40;SSAS – Mehrdimensional&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
   
 5.  Geben Sie die für den ausgewählten Anbieter angeforderten Informationen ein, um eine Verbindung mit der zugrunde liegenden Datenquelle herzustellen. Wenn Sie den Anbieter **Native OLE DB\SQL Server Native Client** ausgewählt haben, geben Sie die folgenden Informationen ein:  
   
-    1.  **Servername** ist der Netzwerkname der Datenbankmodulinstanz. Er kann als IP-Adresse, NETBIOS-Name des Computers oder als vollqualifizierter Domänenname angegeben werden. Wenn der Server als benannte Instanz installiert ist, müssen Sie den Instanznamen beinhalten (z. B. \<Computername >\\< Instancename\>).  
+    1.  
+  **Servername** ist der Netzwerkname der Datenbank-Engine-Instanz. Er kann als IP-Adresse, NETBIOS-Name des Computers oder als vollqualifizierter Domänenname angegeben werden. Wenn der Server als benannte Instanz installiert ist, müssen Sie den Instanznamen beinhalten (z. B. \<Computername >\\< Instancename\>).  
   
     2.  **Am Server anmelden** gibt an, wie die Verbindung authentifiziert wird. **Windows-Authentifizierung verwenden** verwendet die Windows-Authentifizierung. Mit**SQL Server-Authentifizierung verwenden** wird eine Datenbank-Benutzeranmeldung für eine Windows Azure SQL-Datenbank- oder SQL Server-Instanz angegeben, die eine Authentifizierung im gemischten Modus unterstützt.  
   

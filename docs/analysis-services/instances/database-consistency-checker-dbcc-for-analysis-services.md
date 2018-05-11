@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: ''
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4a25919df6cb26609e008b6910ae6fb67bafba84
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: ccc07126dbc948ea5f67584cf5bc38105e7cb1a3
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Datenbankkonsistenzprüfung (DBCC) für Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -230,7 +230,7 @@ Execution complete
 |Hierarchy|Die in der Hierarchie ausgeführten Prüfungen sind abhängig vom internen Typ des verwendeten Hierarchiezuordnungsschemas.<br /><br /> Alle Hierarchien werden auf den richtigen verarbeiteten Status, auf das Vorhandensein des Hierarchiespeichers und ggf. auf das Vorhandensein von Datenstrukturen, die für eine Konvertierung der Daten-ID in eine Hierarchieposition verwendet werden, überprüft.<br /><br /> Wenn alle Prüfungen erfolgreich sind, wird die Hierarchiestruktur durchlaufen, um sicherzustellen, dass jede Position in der Hierarchie auf das richtige Element verweist.<br />Wenn einer dieser Tests fehlschlägt, wird ein Fehler ausgelöst.|Fehler bei Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Hierarchie „%{hier/}“.|  
 |Benutzerdefinierte Hierarchie|Überprüft, ob die Namen der Hierarchieebenen festgelegt wurden.<br /><br /> Wenn die Hierarchie verarbeitet wurde, wird überprüft, ob der interne Hierarchiedatenspeicher das richtige Format aufweist.  Es wird sichergestellt, dass der interne Hierarchiespeicher keine ungültigen Datenwerte enthält.<br /><br /> Wenn die Hierarchie als nicht verarbeitet gekennzeichnet ist, vergewissern Sie sich, dass dieser Status für alte Datenstrukturen gilt und dass alle Ebenen der Hierarchie als leer markiert sind.|Fehler bei Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Hierarchie „%{hier/}“.|  
 |Column|Ein Fehler wird ausgelöst, wenn die für die Spalte verwendete Codierung nicht auf einen bekannten Wert festgelegt ist.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Spaltenstatistik fehlgeschlagen.|  
-|Column|Es wird überprüft, ob die Spalte vom Modul im Speicher komprimiert wurde.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Spaltenstatistik fehlgeschlagen.|  
+|Column|Es wird überprüft, ob die Spalte von der Engine im Speicher komprimiert wurde.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Spaltenstatistik fehlgeschlagen.|  
 |Column|Der Typ der Komprimierung der Spalte wird auf bekannte Werte überprüft.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Spaltenstatistik fehlgeschlagen.|  
 |Column|Wenn die „Tokenisierung“ der Spalte nicht auf einen bekannten Wert festgelegt ist, wird ein Fehler ausgelöst.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Spaltenstatistik fehlgeschlagen.|  
 |Column|Wenn der für ein Datenwörterbuch für Spalten gespeicherte ID-Bereich nicht mit der Anzahl der Werte im Datenwörterbuch übereinstimmt oder außerhalb des zulässigen Bereichs liegt, wird ein Fehler ausgelöst.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens des Datenwörterbuchs fehlgeschlagen.|  

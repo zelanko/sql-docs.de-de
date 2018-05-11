@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: ''
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 277372a74d58ece125c4d7e7b8a2b59a447031ff
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 581453eb32efef5141b17e33a6be05095b378c56
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Konfigurieren von Analysis Services für die eingeschränkte Kerberos-Delegierung
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 05/03/2018
 |Schritt 4: Testen von Verbindungen|Stellen Sie beim Testen Verbindungen von Remotecomputern unter verschiedenen Identitäten her, und fragen Sie Analysis Services mit den gleichen Anwendungen ab, die von Benutzern im geschäftlichen Bereich verwendet werden. Mithilfe von SQL Server Profiler können Sie die Verbindung überwachen. Die Benutzeridentität für die Anforderung sollte angezeigt werden. Weitere Informationen finden Sie unter [Prüfen, ob eine Identität angenommen oder delegiert wurde](#bkmk_test) in diesem Abschnitt.|  
   
 ##  <a name="bkmk_delegate"></a> Konfigurieren von Analysis Services für die vertrauenswürdige Delegierung  
- Indem Sie Analysis Services für die eingeschränkte Kerberos-Delegierung konfigurieren, ermöglichen Sie dem Dienst, eine Clientidentität für einen untergeordneten Dienst, z. B. das relationale Datenbankmodul, anzunehmen. Daraufhin können die Daten so abgefragt werden, als wäre der Client direkt verbunden.  
+ Indem Sie Analysis Services für die eingeschränkte Kerberos-Delegierung konfigurieren, ermöglichen Sie dem Dienst, eine Clientidentität für einen untergeordneten Dienst, z.B. die relationale Datenbank-Engine, anzunehmen. Daraufhin können die Daten so abgefragt werden, als wäre der Client direkt verbunden.  
   
  Delegierungsszenarien für Analysis Services sind auf tabellarische Modelle beschränkt, die für den **DirectQuery** -Modus konfiguriert sind. Dies ist das einzige Szenario, bei dem Analysis Services delegierte Anmeldeinformationen an einen anderen Dienst übergeben kann. In allen anderen Szenarien wie den im vorherigen Abschnitt erwähnten SharePoint-Szenarien ist Analysis Services am empfangenden Ende der Delegierungskette. Weitere Informationen zu DirectQuery finden Sie unter [DirectQuery-Modus](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).  
   

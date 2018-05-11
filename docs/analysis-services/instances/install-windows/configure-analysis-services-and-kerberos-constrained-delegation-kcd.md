@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: ''
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 644ac2ac09f331bf60be08ac7aacecd16734ba0e
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 136b9930f8679109efdca0ea175bad77799d6977
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>Konfigurieren von Analysis Services und der eingeschränkten Kerberos-Delegierung
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/03/2018
   
 -   Domänencontroller  
   
--   SQL Server-Datenbankmodul und Analysis Services im Power Pivot-Modus. Die Instanz des Datenbankmoduls wird für die SharePoint-Inhaltsdatenbank verwendet.  
+-   SQL Server-Datenbank-Engine und Analysis Services im Power Pivot-Modus. Die Instanz der Datenbank-Engine wird für die SharePoint-Inhaltsdatenbank verwendet.  
   
 -   SharePoint Server 2016  
   
@@ -88,12 +88,12 @@ ms.lasthandoff: 05/03/2018
   
  ![SSAS-Server im Powerpivot-Modus](../../../analysis-services/instances/install-windows/media/ssas-kcd-powerpivotserver-icon.png "Ssas-Server im Powerpivot-Modus")  
   
-### <a name="2016-sql-server-database-engine-and-analysis-services-in-power-pivot-mode"></a>SQL Server 2016-Datenbankmodul und Analysis Services im Power Pivot-Modus  
+### <a name="2016-sql-server-database-engine-and-analysis-services-in-power-pivot-mode"></a>SQL Server 2016-Datenbank-Engine und Analysis Services im Power Pivot-Modus  
  Es folgt eine Übersicht der auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Computer zu installierenden Elemente.  
   
  ![Hinweis](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Hinweis") In der [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Setup-Assistenten [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in Power Pivot-Modus als Teil des Feature Selection Workflows installiert ist.  
   
-1.  Führen Sie den Setup-Assistenten von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aus, und klicken Sie auf der Seite zur Auswahl von Funktionen auf das Datenbankmodul ( [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]) und die Verwaltungstools. Bei einem späteren Setup können Sie für den Setup-Assistenten den [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Modus für [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]angeben.  
+1.  Führen Sie den Setup-Assistenten von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aus, und klicken Sie auf der Seite zur Auswahl von Funktionen auf die Datenbank-Engine ( [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]) und die Verwaltungstools. Bei einem späteren Setup können Sie für den Setup-Assistenten den [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Modus für [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]angeben.  
   
 2.  Konfigurieren Sie für die Instanzkonfiguration eine benannte Instanz von „POWERPIVOT“.  
   

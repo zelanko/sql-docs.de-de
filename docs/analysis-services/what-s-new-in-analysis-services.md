@@ -1,25 +1,18 @@
 ---
 title: Was ist neu in Analysis Services | Microsoft Docs
-ms.custom: ''
-ms.date: 03/24/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
-ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
-caps.latest.revision: 97
-author: Minewiskan
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2aeaed0a4a105d48e8dde01d1bb87245c30a3068
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 355308661c7a1d7e6ef8a67f89b5a247223688ea
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="what39s-new-in-analysis-services"></a>Was ist neu in Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -37,7 +30,8 @@ Analysis Services für SQL Server 2016 Service SP1 bieten verbesserte Leistung u
 
 Insbesondere bieten Analysis Services für SQL Server 2016 SP1 Verbesserungen in diesen wichtigen Bereichen:
 
--   **NUMA-Unterstützung** : Zum Erzielen einer besseren NUMA-Unterstützung verwaltet das In-Memory-Modul (VertiPaq) innerhalb von Analysis Services jetzt eine separate Auftragswarteschlange auf jedem NUMA-Knoten. Dadurch wird sichergestellt, dass die Segmentscanaufträge auf dem gleichen Knoten ausgeführt werden, auf dem der Arbeitsspeicher für die Segmentdaten zugewiesen ist. Beachten Sie, dass NUMA-Unterstützung standardmäßig nur auf Systemen mit mindestens vier NUMA-Knoten aktiviert ist. Auf Systemen mit zwei Knoten wiegen die Kosten für den Zugriff auf remote zugewiesenen Speicher im Allgemeinen den Mehraufwand für die Verwaltung der NUMA-Anforderungen nicht auf.
+-   
+  **NUMA-Unterstützung**: Zum Erzielen einer besseren NUMA-Unterstützung verwaltet die In-Memory-Engine (VertiPaq) innerhalb von Analysis Services jetzt eine separate Auftragswarteschlange auf jedem NUMA-Knoten. Dadurch wird sichergestellt, dass die Segmentscanaufträge auf dem gleichen Knoten ausgeführt werden, auf dem der Arbeitsspeicher für die Segmentdaten zugewiesen ist. Beachten Sie, dass NUMA-Unterstützung standardmäßig nur auf Systemen mit mindestens vier NUMA-Knoten aktiviert ist. Auf Systemen mit zwei Knoten wiegen die Kosten für den Zugriff auf remote zugewiesenen Speicher im Allgemeinen den Mehraufwand für die Verwaltung der NUMA-Anforderungen nicht auf.
 -   **Speicherbelegung** : Analysis Services wurden mithilfe von Intel Threading Building Blocks beschleunigt, einem skalierbaren Allozierungsmodul, das für jeden Kern separate Speicherpools bereitstellt. Mit zunehmender Kernanzahl kann das System nahezu linear skalieren.
 -   **Heapfragmentierung** : Das auf Intel TBB basierende skalierbare Allozierungsmodul hilft auch beim Abschwächen von Leistungsproblemen aufgrund von Heapfragmentierung, die für den Windows-Heap nachgewiesen werden konnte.
 
@@ -149,10 +143,10 @@ Mit dieser Version stellt DAX über 50 neue Funktionen zur Unterstützung schnel
 Sie können jetzt unvollständige DAX-Measures direkt in einem Projekt mit einem tabellarischen 1200-Modell speichern und erneut verwenden, wenn Sie fortfahren möchten.
 ### <a name="additional-dax-enhancements"></a>Zusätzliche DAX-Erweiterungen
 - Nicht leere Berechnung: reduziert die Anzahl der Scans, die für nicht leere Berechnungen erforderlich sind.
-- Measurezusammenführung: Mehrere Measures aus der gleichen Tabelle werden in einer Abfrage für das Speichermodul zusammengefasst.
+- Measurezusammenführung: Mehrere Measures aus der gleichen Tabelle werden in einer Abfrage für die Speicher-Engine zusammengefasst.
 - Gruppierungssätze: Wenn eine Abfrage Measures auf mehrere Granularitäten (Summe/Jahr/Monat) abfragt, wird nur eine Abfrage auf der untersten Ebene gesendet, und die restlichen Granularitäten werden von der niedrigsten Ebene abgeleitet.     
-- Beseitigung redundanter Verknüpfungen: Eine einzelne Abfrage an das Speichermodul gibt sowohl die Dimensionsspalten als auch die Measurewerte zurück.
-- Strenge Evaluierung von IF/SWITCH: Eine Verzweigung, deren Bedingung FALSE ist, führt nicht mehr zu Speichermodulabfragen. Früher wurden Verzweigungen sorgfältig ausgewertet, aber die Ergebnisse später verworfen.     
+- Beseitigung redundanter Verknüpfungen: Eine einzelne Abfrage an die Speicher-Engine gibt sowohl die Dimensionsspalten als auch die Measurewerte zurück.
+- Strenge Evaluierung von IF/SWITCH: Eine Verzweigung, deren Bedingung FALSE ist, führt nicht mehr zu Speicher-Engine-Abfragen. Früher wurden Verzweigungen sorgfältig ausgewertet, aber die Ergebnisse später verworfen.     
     
 ## <a name="developer"></a>Entwickler    
  ### <a name="microsoftanalysisservicestabular-namespace-for-tabular-1200-programmability-in-amo"></a>Microsoft.AnalysisServices.Tabular-Namespace für tabellarische 1200-Programmierbarkeit in AMO

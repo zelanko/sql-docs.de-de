@@ -4,20 +4,20 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: ''
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ef749103d80d7a1f2528f71955229598c7da9575
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 4b24903ae17cc97ea1a87f912271cf63a55714b5
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="monitor-analysis-services-with-sql-server-extended-events"></a>Überwachen von Analysis Services mit den erweiterten Ereignissen von SQL Server
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-  Die erweiterten Ereignisse (*xEvents*) sind ein kompaktes Ablaufverfolgungs- und Leistungsüberwachungssystem, das sehr wenige Ressourcen verwendet. Dadurch stellen sie ein ideales Tool zum Diagnostizieren von Problemen sowohl auf Produktions- als auch auf Testservern dar. Sie sind zudem hoch skalierbar, konfigurierbar und durch den neuen integrierten Toolsupport in SQL Server 2016 einfacher zu verwenden. In SQL Server Management Studio können Sie bei Verbindungen mit Analysis Services-Instanzen eine Live-Ablaufverfolgung konfigurieren, ausführen und überwachen, ähnlich der Verwendung von SQL Server Profiler. Das Hinzufügen besserer Tools sollte xEvents zu einem sinnvolleren Ersatz für SQL Server Profiler machen und für mehr Symmetrie bei der Diagnostizierung von Problemen in Ihrem Datenbankmodul und Analysis Services-Workloads sorgen.  
+  Die erweiterten Ereignisse (*xEvents*) sind ein kompaktes Ablaufverfolgungs- und Leistungsüberwachungssystem, das sehr wenige Ressourcen verwendet. Dadurch stellen sie ein ideales Tool zum Diagnostizieren von Problemen sowohl auf Produktions- als auch auf Testservern dar. Sie sind zudem hoch skalierbar, konfigurierbar und durch den neuen integrierten Toolsupport in SQL Server 2016 einfacher zu verwenden. In SQL Server Management Studio können Sie bei Verbindungen mit Analysis Services-Instanzen eine Live-Ablaufverfolgung konfigurieren, ausführen und überwachen, ähnlich der Verwendung von SQL Server Profiler. Das Hinzufügen besserer Tools sollte xEvents zu einem sinnvolleren Ersatz für SQL Server Profiler machen und für mehr Symmetrie bei der Diagnostizierung von Problemen in Ihrer Datenbank-Engine und Analysis Services-Workloads sorgen.  
   
  Neben [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]können Sie  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Sitzungen für erweiterte Ereignisse auch über die bisherige Methode (Erstellen von XMLA-Skripts) konfigurieren, die in vorherigen Releases unterstützt wurde.  
   

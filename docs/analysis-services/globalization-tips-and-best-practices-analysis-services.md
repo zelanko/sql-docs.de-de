@@ -1,31 +1,18 @@
 ---
 title: Globalisierung Tipps und empfohlene Vorgehensweisen (Analysis Services) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-helpviewer_keywords:
-- translations [Analysis Services], client applications
-- date comparisons
-- day-of-week comparisons [Analysis Services]
-- time [Analysis Services]
-- month comparisons [Analysis Services]
-ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
-caps.latest.revision: 33
-author: Minewiskan
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8d5a756c6db3e5b3997e159c29ffb1b2c8533135
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e1cbd0aff52503a5c44ce3f52ce8a58d50f7aea8
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>Tipps und Best Practices für die Globalisierung (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -35,13 +22,13 @@ ms.lasthandoff: 05/03/2018
  Diese Tipps und Richtlinien können helfen, die Portabilität von Business Intelligence-Lösungen zu erhöhen und Fehler zu vermeiden, die direkt mit der Sprache und Sortierung verbunden sind.  
   
 ##  <a name="bkmk_sameColl"></a> Verwenden ähnlicher Sortierungen im ganzen Stapel  
- Versuchen Sie, möglichst dieselben Sortierungseinstellungen in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] wie für das Datenbankmodul zu verwenden. Legen Sie entsprechende Einstellungen für Unterscheidung nach Breite, Groß-/Kleinschreibung und Akzent fest.  
+ Versuchen Sie, möglichst dieselben Sortierungseinstellungen in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] wie für die Datenbank-Engine zu verwenden. Legen Sie entsprechende Einstellungen für Unterscheidung nach Breite, Groß-/Kleinschreibung und Akzent fest.  
   
- Jeder Dienst besitzt eigene Einstellungen für die Sortierreihenfolge. Der Standardwert ist für das Datenbankmodul auf "SQL_Latin1_General_CP1_CI_AS" und für Analysis Services auf "Latin1_General_AS" festgelegt. Die Standardwerte sind bezüglich Unterscheidung nach Groß-/Kleinschreibung, Breite und Akzent kompatibel. Beachten Sie, dass durch Ändern der Einstellungen einer der Sortierungen Probleme auftreten können, wenn sich die Sortierungseigenschaften grundlegend unterscheiden.  
+ Jeder Dienst besitzt eigene Einstellungen für die Sortierreihenfolge. Der Standardwert ist für die Datenbank-Engine auf "SQL_Latin1_General_CP1_CI_AS" und für Analysis Services auf "Latin1_General_AS" festgelegt. Die Standardwerte sind bezüglich Unterscheidung nach Groß-/Kleinschreibung, Breite und Akzent kompatibel. Beachten Sie, dass durch Ändern der Einstellungen einer der Sortierungen Probleme auftreten können, wenn sich die Sortierungseigenschaften grundlegend unterscheiden.  
   
  Auch wenn Sortierungseinstellungen funktionell gleichwertig sind, kann ein spezieller Fall auftreten, bei dem ein Leerzeichen in einer Zeichenfolge von jedem Dienst anders interpretiert wird.  
   
- Das Leerzeichen ist ein besonderer Fall, da es in Unicode als Single-Byte- (SBCS) oder Double-Byte-Zeichensatz (DBCS) dargestellt werden kann. Im relationalen Modul werden zwei durch ein Leerzeichen getrennte, zusammengesetzte Zeichenfolgen – eine in SBCS, die andere in DBCS – als identisch betrachtet. In Analysis Services sind während der Verarbeitung die gleichen zwei zusammengesetzten Zeichenfolgen nicht identisch, und die zweite Instanz wird als Duplikat gekennzeichnet.  
+ Das Leerzeichen ist ein besonderer Fall, da es in Unicode als Single-Byte- (SBCS) oder Double-Byte-Zeichensatz (DBCS) dargestellt werden kann. In der relationalen Engine werden zwei durch ein Leerzeichen getrennte, zusammengesetzte Zeichenfolgen – eine in SBCS, die andere in DBCS – als identisch betrachtet. In Analysis Services sind während der Verarbeitung die gleichen zwei zusammengesetzten Zeichenfolgen nicht identisch, und die zweite Instanz wird als Duplikat gekennzeichnet.  
   
  Weitere Details und mögliche Problemumgehungen finden Sie unter [Leerzeichen in einer Unicode-Zeichenfolge liefern je nach Sortierung unterschiedliche Verarbeitungsergebnisse](http://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx).  
   
@@ -66,7 +53,7 @@ ms.lasthandoff: 05/03/2018
   
      Auch andere Regionen (z. B. Hongkong und Macau) verwenden traditionelles Chinesisch. Für Sortierungen in Hongkong wird häufig Chinese_Hong_Kong_Stroke_90 (in SQL Server 2005) verwendet. In Macau wird Chinese_Traditional_Stroke_Count_100 (in SQL Server 2008 und höher) recht häufig verwendet.  
   
--   Für Japanisch ist die am häufigsten verwendete Sortierung Japanese_CI_AS. Japanese_XJIS_100 wird bei Installationen verwendet, die [JIS2004](http://en.wikipedia.org/wiki/JIS_X_0213)unterstützen. Japanese_BIN2 wird in der Regel in Datenmigrationsprojekten verwendet, deren Daten von anderen als Windows-Plattformen oder aus anderen Datenquellen als dem relationalen Datenbankmodul von SQL Server stammen.  
+-   Für Japanisch ist die am häufigsten verwendete Sortierung Japanese_CI_AS. Japanese_XJIS_100 wird bei Installationen verwendet, die [JIS2004](http://en.wikipedia.org/wiki/JIS_X_0213)unterstützen. Japanese_BIN2 wird in der Regel in Datenmigrationsprojekten verwendet, deren Daten von anderen als Windows-Plattformen oder aus anderen Datenquellen als der relationalen Datenbank-Engine von SQL Server stammen.  
   
      Japanese_Bushu_Kakusu_100 wird selten auf Servern verwendet, die Analysis Services-Arbeitsauslastungen ausführen.  
   
@@ -82,7 +69,7 @@ ms.lasthandoff: 05/03/2018
   
  **Auswirkungen der Unterscheidung nach Groß-/Kleinschreibung für Objektkennungen**  
   
- Die in der Tabelle beschriebenen Verhaltensweisen bezüglich Groß-/Kleinschreibung gelten nur für Objektbezeichner und nicht für Objektnamen. Wenn Sie eine geänderte Funktionsweise Ihrer Lösung beobachten (bei einem Vorher/nachher-Vergleich nach der Installation von SQL Server 2012 SP2 oder höher), handelt es sich wahrscheinlich um ein Problem der Verarbeitung. Abfragen werden nicht von Objektbezeichnern betroffen. Für beide Abfragesprachen (DAX und MDX) verwendet das Formelmodul den Objektnamen (nicht den Bezeichner).  
+ Die in der Tabelle beschriebenen Verhaltensweisen bezüglich Groß-/Kleinschreibung gelten nur für Objektbezeichner und nicht für Objektnamen. Wenn Sie eine geänderte Funktionsweise Ihrer Lösung beobachten (bei einem Vorher/nachher-Vergleich nach der Installation von SQL Server 2012 SP2 oder höher), handelt es sich wahrscheinlich um ein Problem der Verarbeitung. Abfragen werden nicht von Objektbezeichnern betroffen. Für beide Abfragesprachen (DAX und MDX) verwendet die Formel-Engine den Objektnamen (nicht den Bezeichner).  
   
 > [!NOTE]  
 >  Codeänderungen, die im Zusammenhang mit der Groß-/Kleinschreibung stehen, bedeuteten eine erhebliche Änderung für einige Anwendungen. Weitere Informationen finden Sie unter [Wichtige Änderungen von Analysis Services-Funktionen in SQL Server 2016](../analysis-services/breaking-changes-to-analysis-services-features-in-sql-server-2016.md) .  

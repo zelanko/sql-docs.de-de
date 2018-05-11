@@ -2,9 +2,9 @@
 title: Versionshinweise für Microsoft SQL Operations Studio (Vorschau) | Microsoft Docs
 description: Versionshinweise für Microsoft SQL Operations Studio (Vorschau)
 ms.custom: tools|sos
-ms.date: 04/25/2018
+ms.date: 05/08/2018
 ms.prod: sql
-ms.reviewer: alayu; erickang; sstein
+ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
@@ -13,15 +13,42 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e13f0604ebbfc616a70768d7382b0e044055ec6
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 47c5e129ca6c77f9116b6be928f202341d457041
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>Versionshinweise für SQL-Vorgänge Studio (Vorschau)
 
-**[April Public Preview herunterladen](download.md)**
+**[Herunterladen der öffentlichen Vorschau von Mai](download.md)**
+
+
+## <a name="may-2018-may-public-preview"></a>Mai 2018 (kann öffentliche Vorschau)
+
+Veröffentlichungsdatum: 7 Mai 2018  
+Version: 0.29.3
+
+Die *öffentliche Vorschau möglicherweise* konzentriert sich auf die Stabilisierung und Programmfehlerbehebungen. Dieser Build enthält die folgenden Merkmale:  
+
+- Ankündigung Redgate SQL Search-Erweiterung im Erweiterungs-Manager verfügbar.
+- Community-Lokalisierung für 10 Sprachen verfügbar: Deutsch, Spanisch, Französisch, Italienisch, Japanisch, Koreanisch, Portugiesisch, Russisch, vereinfachtes Chinesisch und traditionelles Chinesisch.
+- GDPR kompatible Build wurde Telemetrie-Erfassung, verbesserter teilnehmen und produktinterne Links auf Privacy Statement reduziert.
+- Erweiterungs-Manager verfügt über verbesserte Marketplace, um mühelos ermitteln, Communityerweiterungen auftreten.
+- Zeigen zur Verbesserung der SQL Agentaufträge mit Erweiterung und Auftragsverlauf auf.
+- Updates für Whoisactive und Serverberichten-Erweiterungen.
+- Verbessern Sie die Dashboardeigenschaften verwalten Durchführen eines Bildlaufs.
+- Beheben von Problemen von GitHub:
+   - Beheben Sie [ausstellen 703](https://github.com/Microsoft/sqlopsstudio/issues/703): HTML-ähnlichen Text eingeben, Bearbeiten von Daten führt dazu, dass Wert, bis die Aktualisierung nicht ordnungsgemäß angezeigt
+   - Beheben Sie [ausstellen 821](https://github.com/Microsoft/sqlopsstudio/issues/821): sqlopsstudio.deb paketabhängigkeit
+   - Beheben Sie [ausstellen 1260](https://github.com/Microsoft/sqlopsstudio/issues/1260): Schlüsselwort 'distinct' nicht hervorgehoben
+   - Beheben Sie [ausstellen 1332](https://github.com/Microsoft/sqlopsstudio/issues/1332): Bearbeitungsdaten wiederherstellen Zeile funktioniert nicht
+   - Beheben Sie [ausstellen 1215](https://github.com/Microsoft/sqlopsstudio/issues/1215): SQL Agent-Erweiterung und die Statusleiste
+   - Beheben Sie [ausstellen 1316](https://github.com/Microsoft/sqlopsstudio/issues/1316): SQL-Agent nicht Größe nach Windows kann Größe ändern
+
+
+Weitere Informationen finden Sie unter der [Änderungsprotokoll](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), und [Versionen](https://github.com/Microsoft/sqlopsstudio/releases).
+
 
 
 ## <a name="april-2018-april-public-preview"></a>April 2018 (April öffentliche Vorschau)

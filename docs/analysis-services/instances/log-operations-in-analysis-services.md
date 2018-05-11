@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: ''
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4a4968a3c66100fd40871fa5e8231f19711361e2
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: c9dada0f489c86d31b5de7b6f353d4213eedf47e
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="log-operations-in-analysis-services"></a>Protokollvorgänge in Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -118,7 +118,7 @@ ms.lasthandoff: 05/03/2018
   
  ![Abfrage-protokolleinstellungen in Management Studio](../../analysis-services/instances/media/ssas-querylogsettings.png "abfrageprotokolleinstellungen in Management Studio")  
   
- Führen Sie nach der Festlegen der Konfigurationseinstellungen mehrmals eine MDX-Abfrage aus. Wenn die Stichprobenanforderung auf 10 festgelegt sind, wird führen Sie die Abfrage elf Mal aus. Überprüfen Sie, ob die Tabelle erstellt wurde. Stellen Sie in Management Studio eine Verbindung mit dem relationalen Datenbankmodul her, öffnen Sie den Datenbankordner, öffnen Sie den Ordner **Tabellen** , und überprüfen Sie, ob **OlapQueryLog** vorhanden ist. Wenn Sie die Tabelle nicht sofort sehen, aktualisieren Sie den Ordner, um Änderungen am Inhalt zu übernehmen.  
+ Führen Sie nach der Festlegen der Konfigurationseinstellungen mehrmals eine MDX-Abfrage aus. Wenn die Stichprobenanforderung auf 10 festgelegt sind, wird führen Sie die Abfrage elf Mal aus. Überprüfen Sie, ob die Tabelle erstellt wurde. Stellen Sie in Management Studio eine Verbindung mit der relationalen Datenbank-Engine her, öffnen Sie den Datenbankordner, öffnen Sie den Ordner **Tabellen** , und überprüfen Sie, ob **OlapQueryLog** vorhanden ist. Wenn Sie die Tabelle nicht sofort sehen, aktualisieren Sie den Ordner, um Änderungen am Inhalt zu übernehmen.  
   
  Lassen Sie das Abfrageprotokoll ausreichend Daten für den verwendungsbasierten Optimierung-Assistenten sammeln. Wenn die Abfragemengen zyklisch sind, erfassen Sie genügend Datenverkehr, um eine repräsentative Menge von Daten zu erhalten. Anweisungen zum Ausführen des Assistenten finden Sie unter [Assistent für verwendungsbasierte Optimierung](https://msdn.microsoft.com/library/ms189706.aspx) .  
   

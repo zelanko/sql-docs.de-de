@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: ''
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3eb3d358f22c22472185c61baebc4197792f6353
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 4c61195622e4515976582316a11e23bdfd7a5a16
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Hohe Verfügbarkeit und Skalierbarkeit in Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,12 +24,12 @@ ms.lasthandoff: 05/03/2018
  Techniken, mit denen Analysis Services hoch verfügbar und skalierbar gestaltet werden, sind tendenziell für alle Servermodi (mehrdimensionaler, tabellarischer und integrierter SharePoint-Modus) gleich. Sofern nicht spezifisch anders vermerkt, können Sie davon ausgehen, dass sich die Informationen in diesem Artikel auf alle Modi beziehen.  
   
 ## <a name="key-points"></a>Die wichtigsten Punkte  
- Da sich die Techniken zum Erzielen hoher Verfügbarkeit und Skalierbarkeit von denen des relationalen Datenbankmoduls unterscheiden, stellt eine kurze Zusammenfassung der wichtigsten Punkte eine wirksame Einführung in die für Analysis Services verwendeten Techniken dar:  
+ Da sich die Techniken zum Erzielen hoher Verfügbarkeit und Skalierbarkeit von denen der relationalen Datenbank-Engine unterscheiden, stellt eine kurze Zusammenfassung der wichtigsten Punkte eine wirksame Einführung in die für Analysis Services verwendeten Techniken dar:  
   
 -   Analysis Services verwendet die in die Windows-Serverplattform integrierten Mechanismen für Hochverfügbarkeit und Skalierbarkeit: Netzwerklastenausgleich (NLB, Network Load Balancing), Windows Server Failover Clustering (WSFC) oder beide.  
   
     > [!NOTE]  
-    >  Das Feature Always On des relationalen Datenbankmoduls erstreckt sich nicht auf Analysis Services.  Eine Analysis Services-Instanz kann nicht für die Ausführung in einer Always On-Verfügbarkeitsgruppe konfiguriert werden.  
+    >  Das Feature Always On der relationalen Datenbank-Engine erstreckt sich nicht auf Analysis Services.  Eine Analysis Services-Instanz kann nicht für die Ausführung in einer Always On-Verfügbarkeitsgruppe konfiguriert werden.  
     >   
     >  Zwar wird Analysis Services nicht in Always On-Verfügbarkeitsgruppen ausgeführt, jedoch können Daten aus relationalen Always On-Datenbanken sowohl abgerufen als auch verarbeitet werden. Anweisungen zum Konfigurieren einer hoch verfügbaren relationalen Datenbank für die Verwendung durch Analysis Services finden Sie unter [Analysis Services mit Always On-Verfügbarkeitsgruppen](../../database-engine/availability-groups/windows/analysis-services-with-always-on-availability-groups.md).  
   

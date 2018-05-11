@@ -1,35 +1,18 @@
 ---
 title: Sprachen und Sortierungen (Analysis Services) | Microsoft Docs
-ms.custom: ''
-ms.date: 04/20/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-keywords:
-- Analysis Services testen
-helpviewer_keywords:
-- Windows collations [Analysis Services]
-- default collations
-- languages [Analysis Services]
-- sort orders [Analysis Services]
-- language identifiers [Analysis Services]
-- default languages
-- collations [Analysis Services]
-ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
-caps.latest.revision: 26
-author: Minewiskan
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: dbe4ad71a5cf5819e62c39d8b70e0b230b58c19d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b70a75981599b234c6a2e0b6cd66aea7f3a58024
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="languages-and-collations-analysis-services"></a>Sprachen und Sortierungen (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -59,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
  Darüber hinaus können Sie **Language**alleine für ein **Translation** -Objekt festlegen.  
   
- Ein Übersetzungsobjekt wird erstellt, wenn Sie Übersetzungen zu einem Cube oder einer Dimension hinzufügen. **Language** ist Teil der Übersetzungsdefinition. **Collation**hingegen wird auf der Cube- oder einer höheren Ebene festgelegt und von allen Übersetzungen gemeinsam verwendet. Dies zeigt sich im XMLA eines Cubes, der Übersetzungen enthält– hier sehen Sie mehrere Spracheigenschaften (eine für jede Übersetzung), jedoch nur eine Sortierung. Beachten Sie, dass es eine Ausnahme für Übersetzungen von Dimensionsattributen gibt, bei der Sie die Cubesortierung überschreiben können, um eine Attributsortierung anzugeben, die mit der Quellspalte übereinstimmt (das Datenbankmodul unterstützt das Festlegen einer Sortierung für einzelne Spalten, und in der Regel werden einzelne Übersetzungen konfiguriert, um die Elementdaten aus den verschiedenen Quellspalten abzurufen). Für alle anderen Übersetzungen wird andernfalls **Language** alleine ohne begleitende **Collation** verwendet. Weitere Informationen finden Sie unter [Unterstützung für Übersetzungen in Analysis Services](../analysis-services/translation-support-in-analysis-services.md) .  
+ Ein Übersetzungsobjekt wird erstellt, wenn Sie Übersetzungen zu einem Cube oder einer Dimension hinzufügen. **Language** ist Teil der Übersetzungsdefinition. **Collation**hingegen wird auf der Cube- oder einer höheren Ebene festgelegt und von allen Übersetzungen gemeinsam verwendet. Dies zeigt sich im XMLA eines Cubes, der Übersetzungen enthält– hier sehen Sie mehrere Spracheigenschaften (eine für jede Übersetzung), jedoch nur eine Sortierung. Beachten Sie, dass es eine Ausnahme für Übersetzungen von Dimensionsattributen gibt, bei der Sie die Cubesortierung überschreiben können, um eine Attributsortierung anzugeben, die mit der Quellspalte übereinstimmt (die Datenbank-Engine unterstützt das Festlegen einer Sortierung für einzelne Spalten, und in der Regel werden einzelne Übersetzungen konfiguriert, um die Elementdaten aus den verschiedenen Quellspalten abzurufen). Für alle anderen Übersetzungen wird andernfalls **Language** alleine ohne begleitende **Collation** verwendet. Weitere Informationen finden Sie unter [Unterstützung für Übersetzungen in Analysis Services](../analysis-services/translation-support-in-analysis-services.md) .  
   
 ##  <a name="bkmk_lang"></a> Sprachunterstützung in Analysis Services  
  Die Eigenschaft **Sprache** legt das Gebietsschema eines Objekts fest, das während der Verarbeitung, Abfrage und mit **Untertiteln** und **Übersetzungen** zur Unterstützung von mehrsprachigen Szenarios verwendet wird. Gebietsschemas basieren auf einem Sprachbezeichner, z. B. Englisch, und einem Gebiet, wie z. B. USA oder Australien, wodurch Datums- und Uhrzeitdarstellungen weiter verfeinert werden.  
