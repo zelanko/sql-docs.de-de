@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 10/13/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
-ms.service: ''
-ms.component: t-sql|database-console-commands
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -28,16 +25,15 @@ helpviewer_keywords:
 - clearing procedure cache
 ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
 caps.latest.revision: 61
-author: barbkess
-ms.author: barbkess
+author: uc-msft
+ms.author: umajay
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c2403d697ca1906e26c5f20bf7648acad21415e0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a6d9b899fa1bfd606b30c1759da3cb1052643d7b
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -95,7 +91,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 > [!NOTE]
 > Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ist `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` verfügbar, um den Prozedur-/Plancache für die Datenbank im Bereich zu löschen.
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
 Verwenden Sie DBCC FREEPROCCACHE, um den Plancache sorgfältig zu leeren. Durch das Löschen des Prozedur-/Plancaches werden alle Pläne entfernt, und eingehende Abfrageausführungen werden mit einem neuen Plan kompiliert, statt dass alle zuvor zwischengespeicherten Pläne wieder verwendet werden. 
 
 Bei steigender Anzahl von Kompilierungen kann es zu einer plötzlichen, vorübergehenden Abnahme der Abfrageleistung kommen. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll enthält für jeden geleerten Cachespeicher im Plancache folgende Meldung zur Information: „[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat für den '%2!s!'-Cachespeicher (Bestandteil des Plancache) %1!s! Leerungen des Cachespeichers gefunden, die von 'DBCC FREEPROCCACHE'- oder 'DBCC FREESYSTEMCACHE'-Vorgängen ausgelöst wurden.“ Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.

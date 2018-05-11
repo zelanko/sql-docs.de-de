@@ -1,16 +1,13 @@
 ---
 title: DBCC CHECKFILEGROUP (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
-ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKFILEGROUP_TSQL
@@ -28,19 +25,19 @@ helpviewer_keywords:
 - table integrity checks [SQL Server]
 - checking database objects
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 60
+author: uc-msft
+ms.author: umajay
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fc36aa0cfddcceefda1aefc6f4e7dc040f9a4b5f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 76189bd8ce8057d50671c93c09fbb7a5f0883544
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Überprüft die Zuordnung und strukturelle Integrität aller Tabellen und indizierten Sichten in der angegebenen Dateigruppe der aktuellen Datenbank.
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Überprüft die Zuordnung und strukturelle Integrität aller Tabellen und indizierten Sichten in der angegebenen Dateigruppe der aktuellen Datenbank.
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
@@ -105,7 +102,7 @@ DBCC CHECKFILEGROUP
 > [!CAUTION]  
 >  Wenn MAXDOP auf 0 (Null) festgelegt wird, wählt der Server den maximalen Grad an Parallelität aus.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
 DBCC CHECKFILEGROUP und DBCC CHECKDB sind ähnliche DBCC-Befehle. Der Hauptunterschied besteht darin, dass DBCC CHECKFILEGROUP auf die einzelne angegebene Dateigruppe und die erforderlichen Tabellen beschränkt ist.
 Von DBCC CHECKFILEGROUP werden die folgenden Befehle ausgeführt:
 -   [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md) für die Dateigruppe.  
@@ -137,7 +134,7 @@ Wenn eine partitionierte Tabelle für mehrere Dateigruppen vorhanden ist, überp
 ## <a name="understanding-dbcc-error-messages"></a>Grundlegendes zu DBCC-Fehlermeldungen  
 Nach Ausführung des DBCC CHECKFILEGROUP-Befehls wird eine Meldung im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll verzeichnet. Wurde der DBCC-Befehl erfolgreich ausgeführt, zeigt die Meldung den erfolgreichen Abschluss und die Ausführungsdauer des Befehls an. Wurde der DBCC-Befehl aufgrund eines Fehlers vor Abschluss der Überprüfung beendet, zeigt die Meldung an, dass der Befehl beendet wurde. Außerdem wird ein Statuswert und die Ausführungsdauer des Befehls angegeben. In der folgenden Tabelle sind die Statuswerte aufgeführt und beschrieben, die in der Meldung enthalten sein können.
   
-|Status|Description|  
+|Status|Beschreibung|  
 |-----------|-----------------|  
 |0|Fehlernummer 8930 wurde ausgelöst. Dies weist auf beschädigte Metadaten hin, die die Beendigung des DBCC-Befehls verursacht haben.|  
 |1|Fehlernummer 8967 wurde ausgelöst. Ein interner DBCC-Fehler ist aufgetreten.|  
@@ -147,7 +144,7 @@ Nach Ausführung des DBCC CHECKFILEGROUP-Befehls wird eine Meldung im [!INCLUDE[
 |5|Ein unbekannter Fehler ist aufgetreten, der den DBCC-Befehl beendet hat.|  
   
 ## <a name="error-reporting"></a>Fehlerberichterstellung  
-Eine Minidumpdatei (SQLDUMP*nnnn*.txt) wird jedes Mal im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verzeichnis „LOG“ erstellt, wenn DBCC CHECKFILEGROUP einen Fehler durch eine Beschädigung erkennt. Falls die Funktionen zur Verwendung der Datensammlung und zur Fehlerberichterstellung für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz aktiviert sind, wird die Datei automatisch an [!INCLUDE[msCoName](../../includes/msconame-md.md)] weitergeleitet. Die gesammelten Daten werden zur Verbesserung der Funktionalität von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet.
+Eine Minidumpdatei (SQLDUMP*nnnn*.txt) wird jedes Mal im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verzeichnis LOG erstellt, wenn DBCC CHECKFILEGROUP einen Fehler durch eine Beschädigung erkennt. Falls die Funktionen zur Verwendung der Datensammlung und zur Fehlerberichterstellung für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz aktiviert sind, wird die Datei automatisch an [!INCLUDE[msCoName](../../includes/msconame-md.md)] weitergeleitet. Die gesammelten Daten werden zur Verbesserung der Funktionalität von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet.
 Die Sicherungsdatei enthält die Ergebnisse des DBCC CHECKFILEGROUP-Befehls sowie eine zusätzliche Diagnoseausgabe. Die Datei verfügt über eingeschränkte, besitzverwaltete Zugriffssteuerungslisten (Discretionary Access Control List, DACL). Der Zugriff ist auf das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienstkonto und Mitglieder der **sysadmin**-Rolle beschränkt. Die **sysadmin**-Rolle enthält standardmäßig alle Mitglieder der Windows-Gruppe VORDEFINIERT\Administratoren und der Gruppe lokaler Administratoren. Ein Fehler bei der Datensammlung verursacht keinen Fehler des DBCC-Befehls.
   
 ## <a name="resolving-errors"></a>Auflösen von Fehlern  

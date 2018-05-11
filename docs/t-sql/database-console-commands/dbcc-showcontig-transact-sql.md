@@ -4,12 +4,8 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
-ms.component: t-sql|database-console-commands
-ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -28,15 +24,14 @@ helpviewer_keywords:
 - index defragmenting [SQL Server]
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 caps.latest.revision: 78
-author: barbkess
-ms.author: barbkess
+author: uc-msft
+ms.author: umajay
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ebc23e00ed03e4e4cca50b4a1655c373816d563e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d473c726aefc9f0f2975e975027bb8cfcd008d24
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +71,7 @@ DBCC SHOWCONTIG
  *index_name* | *index_id*  
  Der Index, für den die Fragmentierungsinformationen überprüft werden sollen. Falls nicht angegeben, wird der Basisindex der angegebenen Tabelle oder Sicht von der Anweisung verarbeitet. Verwenden Sie die [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)-Katalogsicht, um die Index-ID abzurufen.  
   
- mit  
+ WITH  
  Gibt die Optionen für den von der DBCC-Anweisung zurückgegebenen Informationstyp an.  
   
  FAST  
@@ -97,7 +92,7 @@ DBCC SHOWCONTIG
 ## <a name="result-sets"></a>Resultsets  
 In der folgenden Tabelle finden Sie eine Beschreibung der Informationen des Resultsets:
   
-|Statistik|Description|  
+|Statistik|Beschreibung|  
 |---|---|
 |**Gescannte Seiten**|Anzahl der Seiten in der Tabelle oder im Index.|  
 |**Gescannte Blöcke**|Anzahl der Blöcke in der Tabelle oder im Index.|  
@@ -118,7 +113,7 @@ Wenn *table_id* und FAST angegeben sind, gibt DBCC SHOWCONTIG ein Resultset mit 
   
 Wenn TABLERESULTS angegeben ist, gibt DBCC SHOWCONTIG die neun in der ersten Tabelle beschriebenen Spalten sowie die folgenden Spalten zurück.
   
-|Statistik|Description|  
+|Statistik|Beschreibung|  
 |---|---|
 |**Objektnamen**|Der Name der verarbeiteten Tabelle oder Sicht.|  
 |**ObjectID**|ID des Objektnamens.|  
@@ -150,13 +145,13 @@ Wenn WITH TABLERESULTS und FAST angegeben sind, ist das Resultset dasselbe wie b
 |**AverageRecordSize**|**ExtentFragmentation**|  
 |**ForwardedRecords**||  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
 Die DBCC SHOWCONTIG-Anweisung durchläuft die Seitenkette des angegebenen Indexes auf Blattebene, wenn *index_id* angegeben wurde. Wenn nur *table_id* angegeben wurde oder wenn *index_id* den Wert 0 aufweist, werden die Datenseiten der angegebenen Tabelle gescannt. Dieser Vorgang erfordert nur eine beabsichtigte gemeinsame Tabellensperre (IS). Auf diese Weise können alle Updates und Einfügungen ausgeführt werden, außer jenen, die eine exklusive Tabellensperre (X) erfordern. Dies schafft einen Kompromiss zwischen der Ausführungsgeschwindigkeit ohne Verringerung der Parallelität und der Anzahl der zurückgegebenen Statistiken. Wenn der Befehl jedoch nur zum Messen der Fragmentierung verwendet wird, wird die Verwendung der WITH FAST-Option empfohlen, um eine optimale Leistung zu erreichen. Bei einem schnellen Scan werden die Seiten auf Blatt- oder Datenebene des Indexes nicht gelesen. Die Option WITH FAST gilt nicht für einen Heap.
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Einschränkungen  
 DBCC SHOWCONTIG zeigt Daten mit den Datentypen **ntext**, **text** und **image** nicht an. Dies liegt daran, dass Textindizes, die Text- und Imagedaten speichern, nicht mehr verwendet werden.
   
-Zudem bietet DBCC SHOWCONTIG keine Unterstützung für einige neue Funktionen. Zum Beispiel:
+Zudem bietet DBCC SHOWCONTIG keine Unterstützung für einige neue Funktionen. Beispiel:
 -   Falls die angegebene Tabelle oder der angegebene Index partitioniert ist, zeigt DBCC SHOWCONTIG nur die erste Partition der angegebenen Tabelle oder des angegebenen Indexes an.  
 -   DBCC SHOWCONTIG zeigt keine Zeilenüberlauf-Speicherinformationen und andere neue Datentypen außerhalb von Zeilen an, z.B. **nvarchar(max)**, **varchar(max)**, **varbinary(max)** und **xml**.  
 -   Räumliche Indizes werden von DBCC SHOWCONTIG nicht unterstützt.  

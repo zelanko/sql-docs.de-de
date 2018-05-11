@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.dataprofilingtask.f1
 helpviewer_keywords:
@@ -23,12 +22,11 @@ caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: f13b87b12f22b05984574a41b4b74d9ef1c748cf
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: a59e91ef39974021474d90bb65885b80831307da
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-profiling-task"></a>Datenprofilerstellungs-Task
   Der Datenprofilerstellungs-Task berechnet verschiedene Profile, mit deren Hilfe Sie sich mit einer Datenquelle vertraut machen und Probleme bei den Daten identifizieren können, die behoben werden müssen.  
@@ -56,20 +54,20 @@ ms.lasthandoff: 04/26/2018
   
  Die folgenden fünf Profile analysieren einzelne Spalten.  
   
-|Profile, die einzelne Spalten analysieren|Description|  
+|Profile, die einzelne Spalten analysieren|Beschreibung|  
 |----------------------------------------------|-----------------|  
-|Verteilungsprofil für Spaltenlänge|Meldet alle eindeutigen Längen der Zeichenfolgenwerte in der ausgewählten Spalte sowie den Prozentsatz der Zeilen in der Tabelle, die jede Länge repräsentiert.<br /><br /> Dieses Profil hilft Ihnen, Probleme mit den Daten zu identifizieren, z. B. Werte, die nicht gültig sind. Beispiel: Sie erstellen ein Profil einer Spalte mit den Codes der US-amerikanischen Bundesstaaten, die zwei Zeichen lang sein sollen, und entdecken Werte, die länger als zwei Zeichen sind.|  
+|Verteilungsprofil für Spaltenlänge|Meldet alle eindeutigen Längen der Zeichenfolgenwerte in der ausgewählten Spalte sowie den Prozentsatz der Zeilen in der Tabelle, die jede Länge repräsentiert.<br /><br /> Dieses Profil hilft Ihnen, Probleme mit den Daten zu identifizieren, z. B. Werte, die nicht gültig sind. Beispiel: Sie erstellen ein Profil einer Spalte mit den Codes der US-amerikanischen Bundesstaaten, die zwei Zeichen lang sein sollen, und entdecken Werte, die länger als zwei Zeichen sind.|  
 |Profil für Spalten-NULL-Verhältnis|Meldet den Prozentsatz der NULL-Werte in der ausgewählten Spalte.<br /><br /> Dieses Profil hilft Ihnen, Probleme mit den Daten zu identifizieren, z. B. ein unerwartet hohes Verhältnis der NULL-Werte in einer Spalte. Beispiel: Sie erstellen ein Profil der Spalte für die Postleitzahl und entdecken einen unerwartet hohen Prozentsatz an fehlenden Codes.|  
-|Spaltenmusterprofil|Meldet einen Satz von regulären Ausdrücken, die den angegebenen Prozentsatz der Werte in einer Zeichenfolgenspalte abdecken.<br /><br /> Dieses Profil hilft Ihnen, Probleme mit den Daten zu identifizieren, z. B. Zeichenfolgen, die nicht gültig sind. Dieses Profil kann außerdem reguläre Ausdrücke vorschlagen, die künftig zur Überprüfung neuer Werte verwendet werden können. Beispiel: Ein Musterprofil einer Spalte für den US-amerikanischen Zip Code kann folgende reguläre Ausdrücke erstellen: \d{5}-\d{4}, \d{5} und \d{9}. Wenn Sie andere reguläre Ausdrücke erhalten, enthalten Ihre Daten wahrscheinlich ungültige oder falsch formatierte Werte.|  
+|Spaltenmusterprofil|Meldet einen Satz von regulären Ausdrücken, die den angegebenen Prozentsatz der Werte in einer Zeichenfolgenspalte abdecken.<br /><br /> Dieses Profil hilft Ihnen, Probleme mit den Daten zu identifizieren, z. B. Zeichenfolgen, die nicht gültig sind. Dieses Profil kann außerdem reguläre Ausdrücke vorschlagen, die künftig zur Überprüfung neuer Werte verwendet werden können. Beispiel: Ein Musterprofil einer Spalte für den US-amerikanischen Zip Code kann folgende reguläre Ausdrücke erstellen: \d{5}-\d{4}, \d{5} und \d{9}. Wenn Sie andere reguläre Ausdrücke erhalten, enthalten Ihre Daten wahrscheinlich ungültige oder falsch formatierte Werte.|  
 |Spaltenstatistikprofil|Meldet Statistiken, wie minimale, maximale, durchschnittliche und standardmäßige Abweichung für numerische Spalten und den Mindest- und Höchstwert für **datetime** -Spalten.<br /><br /> Dieses Profil hilft Ihnen, Probleme bei den Daten zu identifizieren, z. B. Datumswerte, die nicht gültig sind. Beispiel: Sie erstellen ein Profil einer Spalte mit historischen Daten und entdecken einen Maximalwert, der in der Zukunft liegt.|  
 |Verteilungsprofil für Spaltenwerte|Meldet alle eindeutigen Werte in der ausgewählten Spalte sowie den Prozentsatz der Zeilen in der Tabelle, die jeder Wert repräsentiert. Kann auch Werte melden, die mehr als einen angegebenen Prozentsatz der Zeilen in der Tabelle darstellen.<br /><br /> Dieses Profil hilft Ihnen, Probleme mit den Daten zu identifizieren, z. B. eine falsche Anzahl eindeutiger Werte in einer Spalte. Beispiel: Sie erstellen ein Profil einer Spalte, die die US-amerikanischen Bundesstaaten enthalten soll, und entdecken mehr als 50 eindeutige Werte.|  
   
  Die folgenden drei Profile analysieren einzelne Spalten oder Beziehungen zwischen Spalten und Tabellen.  
   
-|Profile, die mehrere Spalten analysieren|Description|  
+|Profile, die mehrere Spalten analysieren|Beschreibung|  
 |--------------------------------------------|-----------------|  
 |Kandidatenschlüsselprofil|Meldet, ob eine Spalte oder eine Gruppe von Spalten ein Schlüssel oder ein ungefährer Schlüssel für die ausgewählte Tabelle ist.<br /><br /> Dieses Profil hilft Ihnen auch, Probleme bei den Daten zu identifizieren, z. B. doppelte Werte in einer potenziellen Schlüsselspalte.|  
-|Funktionales Abhängigkeitsprofil|Meldet, in welchem Maß die Werte in einer Spalte (die abhängige Spalte) von den Werten in einer Spalte oder einer Gruppe von Spalten (der determinanten Spalte) abhängig sind.<br /><br /> Dieses Profil hilft Ihnen auch, Probleme bei den Daten zu identifizieren, z. B. Werte, die nicht gültig sind. Beispiel: Sie erstellen ein Profil der Abhängigkeit zwischen einer Spalte, die US-amerikanische Zip Codes enthält, und einer Spalte mit US-amerikanischen Bundesstaaten. Die gleiche Postleitzahl sollte immer denselben Bundesstaat aufweisen, doch das Profil entdeckt Verstöße gegen dieses Abhängigkeitsverhältnis.|  
+|Funktionales Abhängigkeitsprofil|Meldet, in welchem Maß die Werte in einer Spalte (die abhängige Spalte) von den Werten in einer Spalte oder einer Gruppe von Spalten (der determinanten Spalte) abhängig sind.<br /><br /> Dieses Profil hilft Ihnen auch, Probleme bei den Daten zu identifizieren, z. B. Werte, die nicht gültig sind. Beispiel: Sie erstellen ein Profil der Abhängigkeit zwischen einer Spalte, die US-amerikanische Zip Codes enthält, und einer Spalte mit US-amerikanischen Bundesstaaten. Die gleiche Postleitzahl sollte immer denselben Bundesstaat aufweisen, doch das Profil entdeckt Verstöße gegen dieses Abhängigkeitsverhältnis.|  
 |Wertinklusionsprofil|Berechnet die Überschneidung in den Werten zwischen zwei Spalten oder Gruppen von Spalten. Dieses Profil kann bestimmen, ob eine Spalte oder eine Gruppe von Spalten geeignet ist, als Fremdschlüssel zwischen den ausgewählten Tabellen zu fungieren.<br /><br /> Dieses Profil hilft Ihnen auch, Probleme bei den Daten zu identifizieren, z. B. Werte, die nicht gültig sind. Beispiel: Sie erstellen ein Profil der Spalte ProductID einer Vertriebstabelle und stellen fest, dass die Spalte Werte enthält, die nicht in der Spalte ProductID der Produkttabelle enthalten sind.|  
   
 ## <a name="prerequisites-for-a-valid-profile"></a>Erforderliche Komponenten für ein gültiges Profil  
@@ -118,7 +116,7 @@ ms.lasthandoff: 04/26/2018
 ## <a name="custom-logging-messages-available-on-the-data-profililng-task"></a>Verfügbare benutzerdefinierte Meldungen für den Datenprofilerstellungs-Task  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Datenprofilerstellungs-Task aufgelistet. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |**DataProfilingTaskTrace**|Stellt beschreibende Informationen zum Taskstatus zur Verfügung. Nachrichten beinhalten folgende Informationen:<br /><br /> Start der Anforderungsverarbeitung<br /><br /> Abfragestart<br /><br /> Abfrageende<br /><br /> Beenden der Anforderungsverarbeitung|  
   

@@ -5,12 +5,11 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: search, sql-database
 ms.component: search
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - languages [full-text search]
 - full-text indexes [SQL Server], languages
@@ -25,19 +24,18 @@ caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8727bb46905582bb8959dfa9bfc658e4ac0d2bab
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 90d15ff0623ddef99d5209b4a6f3050ebef33486
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Auswählen einer Sprache beim Erstellen eines Volltextindex
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Wenn Sie einen Volltextindex erstellen, müssen Sie für die indizierte Spalte eine Spaltensprache angeben. Die [Wörtertrennung und Wortstammerkennung](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) der angegebenen Sprache wird von Volltextabfragen für die Spalte verwendet. Bei der Wahl der Spaltensprache für die Erstellung eines Volltextindex sind mehrere Dinge zu bedenken. Diese beziehen sich darauf, wie der Text vom Volltextmodul in Token zerlegt und anschließend indiziert wird.  
+  Wenn Sie einen Volltextindex erstellen, müssen Sie für die indizierte Spalte eine Spaltensprache angeben. Die [Wörtertrennung und Wortstammerkennung](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) der angegebenen Sprache wird von Volltextabfragen für die Spalte verwendet. Bei der Wahl der Spaltensprache für die Erstellung eines Volltextindex sind mehrere Dinge zu bedenken. Diese beziehen sich darauf, wie der Text von der Volltext-Engine in Token zerlegt und anschließend indiziert wird.  
   
 > [!NOTE]  
 >  Um für einen Volltextindex eine Spaltensprache anzugeben, verwenden Sie beim Angeben der Spalte die Klausel *language_term*. Weitere Informationen finden Sie unter [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md) und [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md).  
@@ -99,7 +97,7 @@ ms.lasthandoff: 04/18/2018
   
 -   Für binären Inhalt (z.&nbsp;B. Microsoft Word-Dokumente)  
   
-     Wenn der indizierte Inhalt den Typ **binary** aufweist, beachtet der Filter für die Volltextsuche, der den Text vor dem Senden an die Wörtertrennung verarbeitet, ggf. die in der binären Daten enthaltenen spezifischen Sprachtags. In diesem Fall gibt der Filter bei der Indizierung die richtige LCID für ein Dokument oder einen Abschnitt eines Dokuments aus. Das Volltextmodul ruft mit dieser LCID dann die Wörtertrennung für die Sprache auf. Nach dem Indizieren von mehrsprachigem Inhalt ist es jedoch ratsam, den Inhalt auf die richtige Indizierung zu überprüfen.  
+     Wenn der indizierte Inhalt den Typ **binary** aufweist, beachtet der Filter für die Volltextsuche, der den Text vor dem Senden an die Wörtertrennung verarbeitet, ggf. die in der binären Daten enthaltenen spezifischen Sprachtags. In diesem Fall gibt der Filter bei der Indizierung die richtige LCID für ein Dokument oder einen Abschnitt eines Dokuments aus. Die Volltext-Engine ruft mit dieser LCID dann die Wörtertrennung für die Sprache auf. Nach dem Indizieren von mehrsprachigem Inhalt ist es jedoch ratsam, den Inhalt auf die richtige Indizierung zu überprüfen.  
   
 -   Nur-Text-Inhalt  
   

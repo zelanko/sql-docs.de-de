@@ -1,30 +1,24 @@
 ---
 title: 'Problembehandlung: PolyBase-Kerberos-Konnektivität | Microsoft-Dokumentation'
-description: ''
-services: ''
-documentationcenter: ''
 author: alazad-msft
-manager: ''
-editor: ''
-tags: ''
+ms.author: alazad
+manager: craigg
 ms.assetid: ''
-ms.service: ''
 ms.component: polybase
+ms.technology: database
 ms.suite: sql
 ms.custom: ''
-ms.workload: ''
 ms.tgt_pltfrm: na
 ms.devlang: ''
 ms.topic: article
 ms.date: 07/19/2017"
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.author: alazad
-ms.openlocfilehash: d41adcd958af3c5bc87c03b83a4d1330fdf1c779
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: dce5bc3018cb223a8d3c9f0f85aa56c8aba1e4f3
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Problembehandlung: PolyBase-Kerberos-Konnektivität
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +26,7 @@ Sie können ein interaktives, in PolyBase integriertes Diagnosetool verwenden, u
 
 Dieser Artikel dient als Hilfestellung beim Debuggingprozess solcher Probleme mit diesem Tool.
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 1. SQL Server 2016 RTM CU6/SQL Server 2016 SP1 CU3/SQL Server 2017 oder höher mit installiertem PolyBase
 1. Ein Hadoop-Cluster (Cloudera oder Hortonworks), das durch Kerberos gesicherte wird (Active Directory oder MIT)
@@ -94,7 +88,7 @@ Das Tool wird unabhängig von SQL Server ausgeführt. Dies bedeutet, dass es wed
 ```
 
 ## <a name="arguments"></a>Argumente
-| Argument | Description|
+| Argument | Beschreibung|
 | --- | --- |
 | *Namenknotenadresse* | Die IP oder der FQDN des Namenknotens. Dies verweist auf das „LOCATION“-Argument ihrer T-SQL „CREATE EXTERNAL DATA SOURCE“.|
 | *Namenknotenport* | Der Port des Namensknotens. Dies verweist auf das „LOCATION“-Argument ihrer T-SQL „CREATE EXTERNAL DATA SOURCE“. Normalerweise ist dies 8020. |

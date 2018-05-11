@@ -3,15 +3,13 @@ title: Suchen von Wörtern in der Nähe eines anderen Worts mit NEAR | Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
+ms.prod_service: search, sql-database
 ms.component: search
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -27,13 +25,12 @@ caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 00e3df715e7a608c47eff977448d20f6364a467c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6259d7685ef0e06855325c6903daa204ee83fbf2
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Suchen von Wörtern in der Nähe eines anderen Worts mit NEAR
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -81,7 +78,7 @@ Weitere Informationen zur Syntax finden Sie unter [CONTAINS &#40;Transact-SQL&#4
 
 ## <a name="examples"></a>Beispiele
 ### <a name="example-1"></a>Beispiel 1
- Sie können z. B. innerhalb der zwei Begriffe von 'Smith' wie folgt nach 'John' suchen:  
+ Sie können z. B. innerhalb der zwei Begriffe von 'Smith' wie folgt nach 'John' suchen:  
   
 ```sql
 ... CONTAINS(column_name, 'NEAR((John, Smith), 2)')
@@ -91,7 +88,7 @@ Weitere Informationen zur Syntax finden Sie unter [CONTAINS &#40;Transact-SQL&#4
   
  Um festzulegen, dass die Begriffe in der angegebenen Reihenfolge gefunden werden müssen, müssen Sie den NEAR-Begriff im Beispiel in `NEAR((John, Smith),2, TRUE).` ändern. Damit wird in zwei Begriffen von "`John`" nach "`Smith`" gesucht, jedoch nur, wenn "`John`" vor "`Smith`" enthalten ist. In einer von links nach rechts geschriebenen Sprache wie Englisch ist "`John Jacob Smith`" ein Beispiel für eine übereinstimmende Zeichenfolge.  
   
- Beachten Sie, dass das Volltextmodul bei von rechts nach links geschriebenen Sprachen (z. B. Arabisch oder Hebräisch) die angegebenen Begriffe in umgekehrter Reihenfolge anwendet. Auch der Objekt-Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] kehrt die Anzeigereihenfolge von angegebenen Wörtern in Sprachen mit einer Leserichtung von rechts nach links automatisch um.   
+ Beachten Sie, dass die Volltext-Engine bei von rechts nach links geschriebenen Sprachen (z. B. Arabisch oder Hebräisch) die angegebenen Begriffe in umgekehrter Reihenfolge anwendet. Auch der Objekt-Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] kehrt die Anzeigereihenfolge von angegebenen Wörtern in Sprachen mit einer Leserichtung von rechts nach links automatisch um.   
 
 ### <a name="example-2"></a>Beispiel 2
  Im folgenden Beispiel wird die Tabelle `Production.Document` der Beispieldatenbank `AdventureWorks` nach allen Dokumentzusammenfassungen durchsucht, bei denen das Wort "reflector" im selben Dokument wie das Wort "bracket" enthalten ist.  
@@ -117,7 +114,7 @@ GO
  "`Cats` `enjoy` `hunting mice``, but usually avoid` `dogs``.`"  
   
 ## <a name="combine-near-with-other-terms"></a>Kombinieren von NEAR mit anderen Begriffen  
- Sie können NEAR mit einigen anderen Begriffen kombinieren. Sie können einen benutzerdefinierten NEAR-Begriff mit AND (&), OR (|) oder AND NOT (&!) mit einem anderen benutzerdefinierten NEAR-Begriff, einem einfachen Begriff oder einem Präfixbegriff kombinieren. Zum Beispiel:  
+ Sie können NEAR mit einigen anderen Begriffen kombinieren. Sie können einen benutzerdefinierten NEAR-Begriff mit AND (&), OR (|) oder AND NOT (&!) mit einem anderen benutzerdefinierten NEAR-Begriff, einem einfachen Begriff oder einem Präfixbegriff kombinieren. Beispiel:  
   
 -   CONTAINS('NEAR((*Begriff1*, *Begriff2*),5) AND *Begriff3*')  
   
@@ -156,7 +153,7 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
   
 -   Auswirkungen von NEAR-Begriffen auf das Generieren der Rangfolge durch die CONTAINSTABLE-Funktion  
   
-    Wenn NEAR in der CONTAINSTABLE-Funktion verwendet wird, wirken sich die Anzahl der Treffer in einem Dokument relativ zu seiner Länge sowie der Abstand zwischen dem ersten und dem letzten Suchbegriff in den einzelnen Treffern auf die Rangfolge des jeweiligen Dokuments aus. Wenn für einen generischen NEAR-Begriff die gefundenen Suchbegriffe >50 logische Begriffe auseinander liegen, ist der für ein Dokument zurückgegebene Rang gleich 0 (null). Wenn für einen benutzerdefinierten NEAR-Begriff keine ganze Zahl als maximaler Abstand angegeben ist, erhält ein Dokument, das nur Treffer mit einer Lücke >100 logische Begriffe aufweist, den Rang 0 (null). Weitere Informationen zum Generieren der Rangfolge bei benutzerdefinierten NEAR-Suchen finden Sie unter [Einschränken von Suchergebnissen mit RANK](../../relational-databases/search/limit-search-results-with-rank.md).  
+    Wenn NEAR in der CONTAINSTABLE-Funktion verwendet wird, wirken sich die Anzahl der Treffer in einem Dokument relativ zu seiner Länge sowie der Abstand zwischen dem ersten und dem letzten Suchbegriff in den einzelnen Treffern auf die Rangfolge des jeweiligen Dokuments aus. Wenn für einen generischen NEAR-Begriff die gefundenen Suchbegriffe >50 logische Begriffe auseinander liegen, ist der für ein Dokument zurückgegebene Rang gleich 0 (null). Wenn für einen benutzerdefinierten NEAR-Begriff keine ganze Zahl als maximaler Abstand angegeben ist, erhält ein Dokument, das nur Treffer mit einer Lücke >100 logische Begriffe aufweist, den Rang 0 (null). Weitere Informationen zum Generieren der Rangfolge bei benutzerdefinierten NEAR-Suchen finden Sie unter [Einschränken von Suchergebnissen mit RANK](../../relational-databases/search/limit-search-results-with-rank.md).  
   
 -   **Füllwörtertransformation** (Serveroption)  
   

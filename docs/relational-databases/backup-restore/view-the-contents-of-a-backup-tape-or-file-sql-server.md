@@ -3,15 +3,12 @@ title: Anzeigen der Inhalte eines Sicherungsbands oder einer Sicherungsdatei (SQ
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: backup-restore
+ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backup devices [SQL Server], tapes
 - displaying backup content
@@ -24,12 +21,11 @@ caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 033ab83100ff5ddac9a0510def6bb504fd2adaec
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1aba266320d3da0ff1ef308ae70ac24960de9e6e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-the-contents-of-a-backup-tape-or-file-sql-server"></a>Anzeigen der Inhalte eines Sicherungsbands oder einer -datei (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +81,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
-3.  Verwenden Sie die [](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) RESTORE HEADERONLY-Anweisung. In diesem Beispiel werden Informationen über die Datei `AdventureWorks2012-FullBackup.bak`zurückgegeben:  
+3.  Verwenden Sie die [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)-Anweisung. In diesem Beispiel werden Informationen über die Datei `AdventureWorks2012-FullBackup.bak`zurückgegeben:  
   
 ```sql  
 USE AdventureWorks2012;  

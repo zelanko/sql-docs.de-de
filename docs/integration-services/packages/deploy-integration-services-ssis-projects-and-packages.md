@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: packages
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.bids.converttolegacydeployment.f1
 - sql13.ssis.deploymentwizard.f1
@@ -25,12 +24,11 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: b47e41f52d58f055ff8cf596a89b15a29fa85587
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 16a9dda229e7f5c99dbc97fa7d827df74d79649f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Bereitstellen von SQL Server Integration Services-Projekten und Paketen (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterstützt zwei Bereitstellungsmodelle: das Projektbereitstellungsmodell und das Legacy-Paketbereitstellungsmodell. Mithilfe des Projektbereitstellungsmodells können Sie Projekte auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitstellen.  
@@ -49,10 +47,10 @@ Weitere Informationen zum Legacy-Paketbereitstellungsmodell finden Sie unter [Le
 |Parameter werden verwendet, um Paketeigenschaften Werte zuzuweisen.|Konfigurationen werden verwendet, um Paketeigenschaften Werte zuzuweisen.|  
 |Aus einem Projekt, das Pakete und Parameter enthält, wird eine Projektbereitstellungsdatei (Erweiterung .ISPAC) erstellt.|Pakete (Erweiterung .DTSX) und Konfigurationen (Erweiterung .DTSCONFIG) werden einzeln im Dateisystem gespeichert.|  
 |Ein Projekt, das Pakete und Parameter enthält, wird im SSISDB-Katalog auf einer Instanz von SQL Server bereitgestellt.|Pakete und Konfigurationen werden in das Dateisystem auf einem anderen Computer kopiert. Pakete können auch in der MSDB-Datenbank auf einer Instanz von SQL Server gespeichert werden.|  
-|Auf dem Datenbankmodul ist die CLR-Integration erforderlich.|Auf dem Datenbankmodul ist die CLR-Integration nicht erforderlich.|  
+|Auf der Datenbank-Engine ist die CLR-Integration erforderlich.|Auf der Datenbank-Engine ist die CLR-Integration nicht erforderlich.|  
 |Umgebungsspezifische Parameterwerte werden in Umgebungsvariablen gespeichert.|Umgebungsspezifische Konfigurationswerte werden in Konfigurationsdateien gespeichert.|  
 |Im Katalog enthaltene Projekte und Pakete können vor der Ausführung auf dem Server überprüft werden. Sie können die Überprüfung mithilfe von SQL Server Management Studio, gespeicherten Prozeduren oder verwaltetem Code ausführen.|Pakete werden unmittelbar vor der Ausführung überprüft. Ein Paket kann auch mit dtExec oder verwaltetem Code überprüft werden.|  
-|Pakete werden ausgeführt, indem mit dem Datenbankmodul eine Ausführung gestartet wird. Einer Ausführung werden vor dem Start ein Projektbezeichner, explizite Parameterwerte (optional) und Umgebungsverweise (optional) zugewiesen.<br /><br /> Sie können Pakete mit **dtExec**ausführen.|Pakete werden mit den Ausführungshilfsprogrammen **dtExec** und **DTExecUI** ausgeführt. Anwendbare Konfigurationen werden durch Eingabeaufforderungsargumente (optional) identifiziert.|  
+|Pakete werden ausgeführt, indem mit der Datenbank-Engine eine Ausführung gestartet wird. Einer Ausführung werden vor dem Start ein Projektbezeichner, explizite Parameterwerte (optional) und Umgebungsverweise (optional) zugewiesen.<br /><br /> Sie können Pakete mit **dtExec**ausführen.|Pakete werden mit den Ausführungshilfsprogrammen **dtExec** und **DTExecUI** ausgeführt. Anwendbare Konfigurationen werden durch Eingabeaufforderungsargumente (optional) identifiziert.|  
 |Während der Ausführung werden Ereignisse, die vom Paket erzeugt werden, automatisch aufgezeichnet und im Katalog gespeichert. Sie können diese Ereignisse mit Transact-SQL-Sichten abfragen.|Während der Ausführung werden Ereignisse, die von einem Paket erzeugt werden, nicht automatisch aufgezeichnet. Dem Paket muss ein Protokollanbieter zum Aufzeichnen von Ereignissen hinzugefügt werden.|  
 |Pakete werden in einem separaten Windows-Prozess ausgeführt.|Pakete werden in einem separaten Windows-Prozess ausgeführt.|  
 |SQL Server-Agent wird verwendet, um die Paketausführung zu planen.|SQL Server-Agent wird verwendet, um die Paketausführung zu planen.|  
@@ -483,7 +481,7 @@ Starten Sie den Assistenten auf eine der folgenden Arten:
   
  Bevor Sie die gespeicherten Prozeduren ausführen, müssen Sie die folgenden Schritte ausführen.  
   
--   Erstellen Sie ein Verbindungsserverobjekt. Weitere Informationen finden Sie unter [Erstellen von Verbindungsservern &#40;SQL Server-Datenbankmodul&#41;](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md).  
+-   Erstellen Sie ein Verbindungsserverobjekt. Weitere Informationen finden Sie unter [Erstellen von Verbindungsservern &amp;#40;SQL Server-Datenbank-Engine&amp;#41;](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md).  
   
      Legen Sie auf der Seite **Serveroptionen** des Dialogfelds **Eigenschaften des Verbindungsservers** die Optionen **RPC** und **RPC-Ausgabe** auf **True**fest. Legen Sie außerdem **Höherstufung von verteilten Transaktionen für RPC aktivieren** auf **False**fest.  
   

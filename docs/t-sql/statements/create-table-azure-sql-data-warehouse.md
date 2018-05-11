@@ -1,30 +1,29 @@
 ---
 title: CREATE TABLE (Azure SQL Data Warehouse) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 07/14/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 59
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: f6e639bf97ed132b6ace7128b4cbe9b6f3ce474e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 237c0a53319d7b4c0478cdd8527737401ab5b5f1
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -174,12 +173,12 @@ Erstellt eine oder mehrere Tabellenpartitionen. Hierbei handelt es sich um horiz
 Eine Tabelle mit Datentypkonvertierungen finden Sie im Abschnitt über implizite Konvertierungen unter [CAST und CONVERT (Transact-SQL)](http://msdn.microsoft.com/library/ms187928/).
 
 `datetimeoffset` [ ( *n* ) ]  
- Der Standardwert für *n* lautet 7.  
+ Der Standardwert für *n* ist 7.  
   
  `datetime2` [ ( *n* ) ]  
-Entspricht `datetime`, jedoch mit der Ausnahme, dass die Anzahl von Sekundenbruchteilen angegeben werden kann. Der Standardwert für *n* lautet `7`.  
+Entspricht `datetime`, jedoch mit der Ausnahme, dass die Anzahl von Sekundenbruchteilen angegeben werden kann. Der Standardwert für *n* ist `7`.  
   
-|*n*-Wert|Genauigkeit|Dezimalstellen|  
+|Wert *n*|Genauigkeit|Dezimalstellen|  
 |--:|--:|-:|  
 |`0`|19|0|  
 |`1`|21|1|  
@@ -200,17 +199,17 @@ Entspricht `datetime`, jedoch mit der Ausnahme, dass die Anzahl von Sekundenbruc
  Speichert ein Datum mit maximal 10 Zeichen für das Jahr, den Monat und den Tag gemäß dem gregorianischen Kalender. Die Speichergröße beträgt 3 Byte. Das Datum wird als ganze Zahl gespeichert.  
   
  `time` [ ( *n* ) ]  
- Der Standardwert für *n* lautet `7`.  
+ Der Standardwert für *n* ist `7`.  
   
  `float` [ ( *n* ) ]  
  Ungefähre Zahlendatentypen für numerische Gleitkommadaten. Gleitkommadaten sind Näherungswerte. Deshalb können nicht alle Werte im Bereich des Datentyps exakt dargestellt werden. *n* gibt die Anzahl der Bits zum Speichern der Mantisse von `float` in wissenschaftlicher Schreibweise an. Somit bestimmt *n* die Genauigkeit und die Speichergröße. Wenn *n* angegeben ist, muss es sich um einen Wert zwischen `1` und `53` handeln. Der Standardwert von *n* lautet `53`.  
   
-| *n*-Wert | Genauigkeit | Speichergröße |  
+| Wert *n* | Genauigkeit | Speichergröße |  
 | --------: | --------: | -----------: |  
 | 1-24   | 7 Stellen  | 4 Byte      |  
 | 25-53  | 15 Stellen | 8 Byte      |  
   
- [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] verarbeitet *n* als einen von zwei möglichen Werten. Wenn `1`<= *n* <= `24`, wird *n* als `24` verarbeitet. Wenn `25` <= *n* <= `53`, wird *n* als `53` verarbeitet.  
+ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] verarbeitet *n* als einen von zwei möglichen Werten. Wenn `1`<= *n* <= `24` gegeben ist, wird *n* als `24` behandelt. Wenn `25` <= *n* <= `53` gegeben ist, wird *n* als `53` behandelt.  
   
  Der [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] `float`-Datentyp entspricht dem ISO-Standard für alle Werte von *n* zwischen `1` und `53`. Das Synonym für double precision lautet `float(53)`.  
   
@@ -254,23 +253,23 @@ Entspricht `datetime`, jedoch mit der Ausnahme, dass die Anzahl von Sekundenbruc
  `bit`  
  Ein ganzzahliger Datentyp, der den Wert `1`, `0` oder NULL annehmen kann. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] optimiert das Speichern von bit-Spalten. Wenn in einer Tabelle 8 oder weniger bit-Spalten vorhanden sind, werden die Spalten als 1 Byte gespeichert. Sind zwischen 9 und 16 bit-Spalten vorhanden, werden diese als 2 Byte gespeichert usw.  
   
- `nvarchar` [ ( *n* | `max` ) ]  -- `max` applies only to [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
+ `nvarchar` [ ( *n* | `max` ) ]  -- `max` gilt nur für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
  Unicode-Daten variabler Länge. *n* muss ein Wert zwischen 1 und 4000 sein. `max` gibt an, dass die maximale Speichergröße 2^31-1 Byte (2 GB) beträgt. Die Speichergröße in Byte ist doppelt so groß wie die Anzahl eingegebener Zeichen + 2 Byte. Die eingegebenen Daten können 0 Zeichen lang sein.  
   
  `nchar` [ ( *n* ) ]  
  Unicode-Zeichendaten mit einer festen Länge von *n* Zeichen. *n* muss ein Wert zwischen `1` und `4000` sein. Die Speichergröße beträgt zweimal *n* Byte.  
   
- `varchar` [ ( *n*  | `max` ) ]  -- `max` applies only to [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].   
+ `varchar` [ ( *n*  | `max` ) ]  -- `max` gilt nur für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].   
  Nicht-Unicode-Zeichendaten mit einer variablen Länge von *n* Byte. *n* muss ein Wert zwischen `1` und `8000` sein. `max` gibt an, dass die maximale Speichergröße 2^31-1 Byte (2 GB) beträgt. Die Speichergröße ist die tatsächliche Länge der eingegebenen Daten + 2 Byte.  
   
  `char` [ ( *n* ) ]  
  Nicht-Unicode-Zeichendaten mit einer festen Länge von *n* Byte. *n* muss ein Wert zwischen `1` und `8000` sein. Die Speichergröße beträgt *n* Byte. Der Standardwert für *n* lautet `1`.  
   
- `varbinary` [ ( *n*  | `max` ) ]  -- `max` applies only to [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
- Binärdaten mit variabler Länge. *n* kann ein Wert zwischen `1` und `8000` sein. `max` gibt an, dass die maximale Speichergröße 2^31-1 Byte (2 GB) beträgt. Die Speichergröße ist die tatsächliche Länge der eingegebenen Daten + 2 Byte. Der Standardwert für *n* lautet 7.  
+ `varbinary` [ ( *n*  | `max` ) ]  -- `max` gilt nur für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
+ Binärdaten mit variabler Länge. *n* kann ein Wert zwischen `1` und `8000` sein. `max` gibt an, dass die maximale Speichergröße 2^31-1 Byte (2 GB) beträgt. Die Speichergröße ist die tatsächliche Länge der eingegebenen Daten + 2 Byte. Der Standardwert für *n* ist 7.  
   
  `binary` [ ( *n* ) ]  
- Binärdaten fester Länge mit einer Länge von *n* Byte. *n* kann ein Wert zwischen `1` und `8000` sein. Die Speichergröße beträgt *n* Byte. Der Standardwert für *n* lautet `7`.  
+ Binärdaten mit einer festen Länge von *n* Byte. *n* kann ein Wert zwischen `1` und `8000` sein. Die Speichergröße beträgt *n* Byte. Der Standardwert für *n* ist `7`.  
   
  `uniqueidentifier`  
  Ein 16-Byte-GUID.  

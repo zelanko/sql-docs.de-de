@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssms-visual-db
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.columnselection
 - vdtsql.chm:65548
@@ -20,12 +18,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ff6bf15e45c7f6caad411a5c7ba012b5613560ed
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 5a90789da720dc0f8a660076e775aad8d97c03de
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>Spaltenauswahl (Dialogfeld) (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +30,7 @@ Mit diesem Dialogfeld können Sie die benutzerdefinierte Sicht für Tabellen im 
   
 Dieses Dialogfeld wird angezeigt, wenn Sie mit der rechten Maustaste auf eine Tabelle klicken und anschließend im Kontextmenü die Option **Benutzerdefinierte Sicht ändern** auswählen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Verfügbare Spalten**  
 Führt alle in der ausgewählten Datenbanktabelle vorhandenen Spalten auf. Die hier aufgeführten Spalten sind von den Eigenschaften der Datenbanktabelle und dem Datenbanktyp abhängig. Markieren Sie die gewünschte Spalte, und verschieben Sie diese mithilfe der Pfeilschaltflächen in das Feld **Ausgewählte Spalten** .  
   

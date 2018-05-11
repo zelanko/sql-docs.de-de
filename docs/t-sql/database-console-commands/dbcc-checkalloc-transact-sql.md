@@ -1,16 +1,13 @@
 ---
 title: DBCC CHECKALLOC (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
-ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKALLOC_TSQL
@@ -29,16 +26,15 @@ helpviewer_keywords:
 - disk space [SQL Server], allocation consistency checks
 - space allocation [SQL Server], checking
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 76
+author: uc-msft
+ms.author: umajay
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 69a22a7e7b3859ba2232fe7c60f5b0b885af8b17
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5532f6870e19e830a4d8925fbfca68862493fa6a
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -89,7 +85,7 @@ Datenbanknamen müssen den Regeln für [Bezeichner](../../relational-databases/d
  Nicht verfügbar.  
  Verwenden Sie die REPAIR-Optionen nur als letzte Möglichkeit. Zum Reparieren von Fehlern empfiehlt sich das Wiederherstellen mithilfe einer Sicherung. Bei Reparaturvorgängen werden keine Einschränkungen berücksichtigt, die möglicherweise in oder zwischen Tabellen vorhanden sind. Wenn die angegebene Tabelle an einer oder mehreren Einschränkungen beteiligt ist, ist es empfehlenswert, nach einem Reparaturvorgang DBCC CHECKCONSTRAINTS auszuführen. Wenn Sie REPAIR verwenden müssen, sollten Sie DBCC CHECKDB ohne Reparaturoption ausführen, um die zu verwendende Reparaturstufe zu ermitteln. Wenn Sie die REPAIR_ALLOW_DATA_LOSS-Ebene verwenden, empfiehlt es sich, die Datenbank vor dem Ausführen von DBCC CHECKDB zu sichern.
 
- mit  
+ WITH  
  Aktiviert anzugebende Optionen.
 
  ALL_ERRORMSGS  
@@ -104,7 +100,7 @@ Datenbanknamen müssen den Regeln für [Bezeichner](../../relational-databases/d
  ESTIMATEONLY  
  Zeigt den tempdb-Speicherplatz an, der schätzungsweise erforderlich ist, um DBCC CHECKALLOC auszuführen, wenn alle anderen Optionen angegeben sind.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
 DBCC CHECKALLOC überprüft die Zuordnung aller Seiten in der Datenbank, unabhängig vom Typ der Seite oder des Objekts, zu dem sie gehören. Außerdem überprüft der Befehl die verschiedenen internen Strukturen, mit deren Hilfe diese Seiten und die Beziehungen zwischen ihnen nachverfolgt werden.
 Wird NO_INFOMSGS nicht angegeben, sammelt DBCC CHECKALLOC Informationen zur Speicherplatzverwendung für alle Objekte in der Datenbank. Diese Informationen werden anschließend zusammen mit den gefundenen Fehlern ausgegeben.
   
@@ -120,7 +116,7 @@ DBCC CHECKALLOC verwendet eine internen Datenbankmomentaufnahme, um die für die
 ## <a name="understanding-dbcc-error-messages"></a>Grundlegendes zu DBCC-Fehlermeldungen  
 Nach Abschluss des Befehls DBCC CHECKALLOC wird eine Meldung im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll verzeichnet. Wurde der DBCC-Befehl erfolgreich ausgeführt, zeigt die Meldung den erfolgreichen Abschluss und die Ausführungsdauer des Befehls an. Wurde der DBCC-Befehl aufgrund eines Fehlers vor Abschluss der Überprüfung beendet, zeigt die Meldung an, dass der Befehl beendet wurde. Außerdem wird ein Statuswert und die Ausführungsdauer des Befehls angegeben. In der folgenden Tabelle sind die Statuswerte aufgeführt und beschrieben, die in der Meldung enthalten sein können.
   
-|Status|Description|  
+|Status|Beschreibung|  
 |---|---|  
 |0|Fehlernummer 8930 wurde ausgelöst. Dies weist auf beschädigte Metadaten hin, die die Beendigung des DBCC-Befehls verursacht haben.|  
 |1|Fehlernummer 8967 wurde ausgelöst. Ein interner DBCC-Fehler ist aufgetreten.|  
@@ -130,7 +126,7 @@ Nach Abschluss des Befehls DBCC CHECKALLOC wird eine Meldung im [!INCLUDE[ssNoVe
 |5|Ein unbekannter Fehler ist aufgetreten, der den DBCC-Befehl beendet hat.|  
   
 ## <a name="error-reporting"></a>Fehlerberichterstellung  
-Eine Minidumpdatei (SQLDUMP*nnnn*.txt) wird jedes Mal im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verzeichnis „LOG“ erstellt, wenn DBCC CHECKALLOC einen Fehler durch eine Beschädigung erkennt. Falls die Funktionen zur Verwendung der Datensammlung und zur Fehlerberichterstellung für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz aktiviert sind, wird die Datei automatisch an [!INCLUDE[msCoName](../../includes/msconame-md.md)] weitergeleitet. Die gesammelten Daten werden zur Verbesserung der Funktionalität von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet.
+Eine Minidumpdatei (SQLDUMP*nnnn*.txt) wird jedes Mal im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verzeichnis LOG erstellt, wenn DBCC CHECKALLOC einen Fehler durch eine Beschädigung erkennt. Falls die Funktionen zur Verwendung der Datensammlung und zur Fehlerberichterstellung für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz aktiviert sind, wird die Datei automatisch an [!INCLUDE[msCoName](../../includes/msconame-md.md)] weitergeleitet. Die gesammelten Daten werden zur Verbesserung der Funktionalität von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet.
 Die Sicherungsdatei enthält die Ergebnisse des DBCC CHECKALLOC-Befehls sowie eine zusätzliche Diagnoseausgabe. Die Datei verfügt über eingeschränkte, besitzverwaltete Zugriffssteuerungslisten (Discretionary Access Control List, DACL). Der Zugriff ist auf das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienstkonto und Mitglieder der Systemadministratorrolle beschränkt. Die Systemadministratorrolle enthält standardmäßig alle Mitglieder der Windows-Gruppe VORDEFINIERT\Administratoren und der Gruppe lokaler Administratoren. Ein Fehler bei der Datensammlung verursacht keinen Fehler des DBCC-Befehls.
   
 ## <a name="resolving-errors"></a>Auflösen von Fehlern  
@@ -140,7 +136,7 @@ Eine Reparatur kann in einer Benutzertransaktion ausgeführt werden. Dies ermög
 ## <a name="result-sets"></a>Resultsets  
 In den folgenden Tabellen werden die von DBCC CHECKALLOC zurückgegebenen Informationen beschrieben.
   
-|Element|Description|  
+|Element|Beschreibung|  
 |---|---|  
 |FirstIAM|Nur interne Verwendung.|  
 |Root|Nur interne Verwendung.|  
@@ -150,7 +146,7 @@ In den folgenden Tabellen werden die von DBCC CHECKALLOC zurückgegebenen Inform
   
 DBCC CHECKALLOC meldet außerdem eine Zuordnungszusammenfassung für jeden Index und jede Partition in jeder Datei. In dieser Zusammenfassung wird die Verteilung der Daten beschrieben.
   
-|Element|Description|  
+|Element|Beschreibung|  
 |---|---|  
 |Zugeordnete Seiten|Seiten, die für den Index zugeordnet wurden, und nicht verwendete Seiten in zugeordneten Blöcken.|  
 |Verwendete Seiten|Zugeordnete Seiten, die vom Index verwendet werden.|  

@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
-ms.component: t-sql|database-console-commands
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -28,15 +25,14 @@ helpviewer_keywords:
 - displaying trace flag status
 ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
 caps.latest.revision: 36
-author: barbkess
-ms.author: barbkess
+author: uc-msft
+ms.author: umajay
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c85cf36412afdda2e050df6159e52c59e96287bf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c4bcd9cb45503a872a752f950b96d2a363f88db0
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dbcc-tracestatus-transact-sql"></a>DBCC TRACESTATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +64,7 @@ Unterdrückt alle Informationsmeldungen mit einem Schweregrad von 0 bis 10.
 ## <a name="result-sets"></a>Resultsets  
 In der folgenden Tabelle finden Sie eine Beschreibung der Informationen des Resultsets:
   
-|Spaltenname|Description|  
+|Spaltenname|Beschreibung|  
 |---|---|
 |**TraceFlag**|Name des Ablaufverfolgungsflags|  
 |**Status**|Zeigt an, ob das Ablaufverfolgungsflag entweder global oder für die Sitzung auf ON oder OFF festgelegt wurde.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
@@ -77,7 +73,7 @@ In der folgenden Tabelle finden Sie eine Beschreibung der Informationen des Resu
   
 DBCC TRACESTATUS gibt eine Spalte für die Nummer des Ablaufverfolgungsflags und eine Spalte für den Status zurück. Zeigt an, ob das Ablaufverfolgungsflag auf ON (1) oder OFF (0) festgelegt ist. Die Spaltenüberschrift für die Nummer des Ablaufverfolgungsflags lautet entweder **Global Trace Flag** oder **Session Trace Flag**, je nachdem, ob Sie den Status eines Ablaufverfolgungsflags vom Typ „Global“ oder „Session“ überprüfen.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt es zwei Typen von Ablaufverfolgungsflags: Sitzung und global. Ablaufverfolgungsflags des Typs Session werden für eine Verbindung aktiviert und sind nur für diese Verbindung sichtbar. Globale Ablaufverfolgungsflags werden auf Serverebene festgelegt und sind für jede Verbindung auf dem Server sichtbar.
   
 ## <a name="permissions"></a>Berechtigungen  

@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 07/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: t-sql|database-console-commands
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -32,15 +29,14 @@ helpviewer_keywords:
 - reporting current identity values
 ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
 caps.latest.revision: 63
-author: barbkess
-ms.author: barbkess
+author: uc-msft
+ms.author: umajay
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 7991b0a03ae7613341d1f49206892b55232a2dba
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d934c10c82898b87829df94c63bb0615ec70d060
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,7 +74,7 @@ DBCC CHECKIDENT
  WITH NO_INFOMSGS  
  Alle Informationsmeldungen werden unterdrückt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
  Die spezifischen Korrekturen, die am aktuellen Identitätswert vorgenommen werden, sind abhängig von den Parameterangaben.  
   
 |DBCC CHECKIDENT-Befehl|Durchgeführte Identitätskorrekturen|  
@@ -92,7 +88,7 @@ DBCC CHECKIDENT
   
 |Bedingung|Methoden zum Zurücksetzen|  
 |---------------|-------------------|  
-|Der aktuelle Identitätswert ist größer als der maximale Wert in der Tabelle.|Führen Sie DBCC CHECKIDENT (*table_name*, NORESEED) aus, um den aktuellen maximalen Wert in der Spalte zu bestimmen, und geben Sie anschließend diesen Wert für *new_reseed_value* im Befehl DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*) an.<br /><br /> -oder-<br /><br /> Führen Sie DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*) aus, und legen Sie dabei *new_reseed_value* auf einen niedrigen Wert fest. Führen Sie dann DBCC CHECKIDENT (*table_name*, RESEED) aus, um den Wert zu korrigieren.|  
+|Der aktuelle Identitätswert ist größer als der maximale Wert in der Tabelle.|Führen Sie DBCC CHECKIDENT (*table_name*, NORESEED) aus, um den aktuellen maximalen Wert in der Spalte zu bestimmen, und geben Sie anschließend diesen Wert für *new_reseed_value* im Befehl DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*) an.<br /><br /> -ODER-<br /><br /> Führen Sie DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*) aus, und legen Sie dabei *new_reseed_value* auf einen niedrigen Wert fest. Führen Sie dann DBCC CHECKIDENT (*table_name*, RESEED) aus, um den Wert zu korrigieren.|  
 |Alle Zeilen werden aus der Tabelle gelöscht.|Führen Sie DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*) aus, und legen Sie dabei *new_reseed_value* auf den gewünschten Startwert fest.|  
   
 ## <a name="changing-the-seed-value"></a>Ändern des Ausgangswerts  

@@ -8,7 +8,7 @@ ms.suite: sql
 ms.custom: ''
 ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - build notes
 - release issues
@@ -16,15 +16,14 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.workload: Active
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4f51786ac37a0d167c7c9c18b52710a06fea052b
-ms.sourcegitcommit: 9f61aa4d556bb5726b1e49d619ae2bbccf1590e3
+ms.openlocfilehash: bc83f2e17c82ca074fe07f6312fd5c3c864c9e74
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="sql-server-2016-release-notes"></a>Versionsanmerkungen zu SQL Server 2016
+# <a name="sql-server-2016-release-notes"></a>Versionsanmerkungen zu SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
   Im folgenden Artikel werden Einschränkungen und Probleme mit Releases von SQL Server 2016, Service Packs inbegriffen, beschrieben. Informationen zu Neuerungen finden Sie unter [Neues im Berichts-Generator für SQL Server 2016](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016).
 
@@ -42,7 +41,7 @@ ms.lasthandoff: 04/29/2018
 Sie müssen Ihren Computer möglicherweise nach der Installation von SQL Server 2016 SP2 neu starten. Als bewährte Methode wird empfohlen, nach der Installation von SQL Server 2016 SP2 einen Neustart zu planen und durchzuführen.
 
 Leistungs- und skalierungsbasierte Verbesserungen, die in SQL Server 2016 SP2 enthalten sind
-|Funktion|Description|Weitere Informationen|
+|Funktion|Beschreibung|Weitere Informationen|
 |   --- |   --- |   --- |
 |Verbesserter Cleanupvorgang für die Verteilungsdatenbank |   Übergroße Verteilungsdatenbanktabellen führten zu Blockierungs- und Deadlocksituationen. Im Rahmen einer verbesserten Cleanup-Prozedur sollen einige davon beseitigt werden. |   [KB4040276](https://support.microsoft.com/help/4040276/fix-indirect-checkpoints-on-the-tempdb-database-cause-non-yielding)  |
 |Bereinigen der Änderungsnachverfolgung    |   Verbesserte Leistung und Effizienz des Cleanups für Nebentabellen bei der Änderungsnachverfolgung.    |   [KB4052129](https://support.microsoft.com//help/4052129/update-for-manual-change-tracking-cleanup-procedure-in-sql-server-2016) |
@@ -56,7 +55,7 @@ Leistungs- und skalierungsbasierte Verbesserungen, die in SQL Server 2016 SP2 en
 |Verbessertes Update für automatische Statistiken für inkrementelle Statistiken |    Wenn z.B. mehrere Datenänderungen für mehrere Partitionen in einer Tabelle vorgenommen wurden und die Anzahl aller Änderung für inkrementelle Statistiken – jedoch keine einzelnen Partitionen – den Grenzwert für automatische Updates überschreitet, kann sich das Statistikupdate so lange verzögern, bis weitere Änderungen in der Tabelle vorgenommen werden. Dieses Verhalten wird unter dem Ablaufverfolgungsflag 11024 korrigiert.   |       |
 
 Unterstützbarkeit und Diagnose betreffende Verbesserungen sind in SQL Server 2016 SP2 beinhaltet.
-|Funktion |Description   |Weitere Informationen   |
+|Funktion |Beschreibung   |Weitere Informationen   |
 |   --- |   --- |   --- |
 |Vollständige DTC-Unterstützung für Datenbanken in einer Verfügbarkeitsgruppe    |   Datenbankübergreifende Transaktionen für Datenbanken, die Teil einer Verfügbarkeitsgruppe sind, werden für SQL Server 2016 nicht unterstützt. Mit SQL Server 2016 SP2 führen wir die vollständige Unterstützung für verteilte Transaktionen mit Datenbanken der Verfügbarkeitsgruppe ein.   |       |
 |Update für die Spalte „is_encrypted“ in „sys.database“ zur genauen Wiedergabe des Verschlüsselungsstatus für TempDB |   Der Wert der Spalte „is_encrypted“ in „sys.databases“ beträgt 1 für tempdb, auch wenn Sie die Verschlüsselung für alle Benutzerdatenbanken deaktivieren und SQL Server neu starten. Das erwartete Verhalten ist, dass der Wert 0 (null) ist, da tempdb in dieser Situation nicht länger verschlüsselt ist. Beginnend mit SQL Server 2016 SP2 gibt „is_encrypted“ in „sys.databases“ nun den Verschlüsselungsstatus für tempdb genau wieder.  |       |
@@ -94,7 +93,7 @@ Unterstützbarkeit und Diagnose betreffende Verbesserungen sind in SQL Server 20
 Die folgenden Features sind in der Standard, Web, Express und Local DB Edition von SQL Server SP1 verfügbar (sofern nicht anders angegeben):
 - Always Encrypted
 - Geänderte Datenerfassung (in Express nicht verfügbar)
-- columnstore
+- Columnstore
 - Komprimierung
 - Dynamische Datenmaskierung
 - Differenzierte Überwachung
@@ -106,7 +105,7 @@ Die folgenden Features sind in der Standard, Web, Express und Local DB Edition v
 
 In der folgenden Tabelle werden wichtige Verbesserungen in SQL Server 2016 SP1 zusammengefasst.
 
-|Funktion|Description|Weitere Informationen finden Sie unter|
+|Funktion|Beschreibung|Weitere Informationen finden Sie unter|
 |---|---|---|
 |Masseneinfügung in Heaps mit automatischem TABLOCK unter TF 715| Das Ablaufverfolgungsflag 715 aktiviert Tabellensperren für Massenladevorgänge in einen Heap ohne nicht gruppierte Indizes.|[Migrating SAP workloads to SQL Server just got 2.5x faster (Beschleunigung der Migration von SAP-Workloads zu SQL Server um das 2,5-fache)](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
 |CREATE OR ALTER|Bereitstellen von Objekten wie gespeicherten Prozeduren, Triggern, benutzerdefinierten Funktionen und Ansichten.|[Blog der SQL Server-Datenbank-Engine](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
@@ -137,7 +136,8 @@ Für die Installation von SQL Server 2016 SP1 ist nach der Installation möglich
 ![horizontal-bar.png](media/horizontal-bar.png)
 
 ##  <a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
--   [Datenbankmodul (GA)](#bkmk_ga_instalpatch) 
+-   
+  [Datenbank-Engine (GA)](#bkmk_ga_instalpatch) 
 -   [Stretch Database (GA)](#bkmk_ga_stretch)
 -   [Abfragespeicher (GA)](#bkmk_ga_query_store)
 -   [Produktdokumentation (GA)](#bkmk_ga_docs)
@@ -152,7 +152,7 @@ Für die Installation von SQL Server 2016 SP1 ist nach der Installation möglich
     Wenn SQL Server 2016 bereits installiert ist, führen Sie nacheinander die folgenden Schritte aus:
 
     1.  Laden Sie die passende *vcredist_\*exe* herunter.
-    1.  Beenden Sie den SQL Server-Dienst für alle Instanzen des Datenbankmoduls.
+    1.  Beenden Sie den SQL Server-Dienst für alle Instanzen der Datenbank-Engine.
     1.  Installieren Sie **KB 3138367**.
     1.  Starten Sie den Computer neu.
  

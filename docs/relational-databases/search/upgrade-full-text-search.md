@@ -3,15 +3,13 @@ title: Upgrade der Volltextsuche | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
+ms.prod_service: search, sql-database
 ms.component: search
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], installing
 - migrating full-text indexes [SQL Server]
@@ -23,13 +21,12 @@ caps.latest.revision: 106
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f0215117505c5873fdaeda174de3e50e8c22a610
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 19df5a08fc062975792718c6210b93aa89f1f842
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="upgrade-full-text-search"></a>Upgrade der Volltextsuche
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +40,7 @@ ms.lasthandoff: 04/16/2018
  Jede Instanz verwendet ihren eigenen Satz von Wörtertrennung, Wortstammerkennung und Filtern, anstatt auf die Betriebssystemversion dieser Komponenten zurückzugreifen. Diese Komponenten sind auf Instanzebene einfacher zu registrieren und zu konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) und [Konfigurieren und Verwalten von Filtern für die Suche](../../relational-databases/search/configure-and-manage-filters-for-search.md).  
   
  Filterdaemonhost  
- Bei Volltext-Filterdaemonhosts handelt es sich um Prozesse, die erweiterbare externe Komponenten für Indizierung und Abfragen wie Wörtertrennung, Wortstammerkennung und Filter auf sichere Weise laden und ausführen, ohne die Integrität des Volltextmoduls zu gefährden. Eine Serverinstanz verwendet einen Multithreadprozess für alle Multithreadfilter und einen Singlethreadprozess für alle Filter mit einem einzigen Thread.  
+ Bei Volltext-Filterdaemonhosts handelt es sich um Prozesse, die erweiterbare externe Komponenten für Indizierung und Abfragen wie Wörtertrennung, Wortstammerkennung und Filter auf sichere Weise laden und ausführen, ohne die Integrität der Volltext-Engine zu gefährden. Eine Serverinstanz verwendet einen Multithreadprozess für alle Multithreadfilter und einen Singlethreadprozess für alle Filter mit einem einzigen Thread.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Mit wurde ein Dienstkonto für den FDHOST-Startdienst (MSSQLFDLauncher) eingeführt. Dieser Dienst gibt die Dienstkontoinformationen an die Filterdaemonhost-Prozesse einer bestimmten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]weiter. Informationen zum Festlegen des Dienstkontos finden Sie unter [Festlegen des Dienstkontos für das Startprogramm des Volltextfilterdaemons](../../relational-databases/search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md).  
@@ -58,7 +55,7 @@ ms.lasthandoff: 04/16/2018
  Volltextkataloge werden importiert. Normalerweise ist der Import bedeutend schneller als eine Neuerstellung. Wenn Sie zum Beispiel nur eine CPU verwenden, läuft ein Import etwa zehnmal schneller ab als eine Neuerstellung. Ein importierter Volltextkatalog verwendet jedoch nicht die neuen mit der letzten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installierten Wörtertrennungen. Volltextkataloge müssen neu erstellt werden, um die Konsistenz in Abfrageergebnissen sicherzustellen.  
   
 > [!NOTE]  
->  Sie können die Neuerstellung im Multithreadmodus ausführen. Wenn mehr als 10 CPUs verfügbar sind, ist die Neuerstellung ggf. schneller als der Import, falls dabei alle CPUs genutzt werden können.  
+>  Sie können die Neuerstellung im Multithreadmodus ausführen. Wenn mehr als 10 CPUs verfügbar sind, ist die Neuerstellung ggf. schneller als der Import, falls dabei alle CPUs genutzt werden können.  
   
  Wenn ein Volltextkatalog nicht verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt. Diese Option ist nur für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Datenbanken verfügbar.  
   

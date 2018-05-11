@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -34,15 +32,14 @@ helpviewer_keywords:
 - starting conversations
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 caps.latest.revision: 47
-author: barbkess
-ms.author: barbkess
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 465c4d071315329a404ac0705719279d68570223
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9fe9b50774df844b108fbd62c1fd1fb184ea86e1
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -113,7 +110,7 @@ WHERE database_id = DB_ID() ;
 > [!NOTE]  
 >  Nachrichten, die mit Diensten in derselben Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgetauscht werden, sind nie verschlüsselt. Jedoch sind ein Hauptschlüssel für die Datenbank und die Zertifikate für die Verschlüsselung für diejenigen Konversationen mit Verschlüsselung erforderlich, bei denen sich die Dienste für die Konversation auf verschiedenen Datenbanken befinden. Damit kann die Konversation auch dann fortgesetzt werden, wenn während der Ausführung der Konversation eine der Datenbanken auf eine andere Instanz verschoben wird.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
  Alle Nachrichten sind Teil einer Konversation. Deshalb muss ein initialisierender Dienst eine Konversation mit dem Zieldienst beginnen, bevor eine Nachricht an den Zieldienst gesandt wird. Die in der BEGIN DIALOG CONVERSATION-Anweisung angegebenen Informationen sind mit der Adresse auf einem Brief vergleichbar; [!INCLUDE[ssSB](../../includes/sssb-md.md)] verwendet diese Informationen, um Nachrichten an den richtigen Dienst zu übermitteln. Der Dienst, der in der TO SERVICE-Klausel angegeben wird, ist die Adresse, an die die Nachrichten gesandt werden. Der Dienst, der in der FROM SERVICE-Klausel angegeben wird, ist die Rückadresse für Antwortnachrichten.  
   
  Das Ziel einer Konversation muss nicht BEGIN DIALOG CONVERSATION aufrufen. [!INCLUDE[ssSB](../../includes/sssb-md.md)] erstellt eine Konversation in der Zieldatenbank, wenn die erste Nachricht in der Konversation vom Initiator eintrifft.  

@@ -3,13 +3,13 @@ title: Volltextsuche | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/10/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: search, sql-database
 ms.component: search
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server]
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
@@ -17,13 +17,12 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 31862df0971da8de6e6ced430f7095587f9f7926
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5464c11f7c9594e613bb4385731736a3204c08f9
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="full-text-search"></a>Volltextsuche
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,12 +38,12 @@ Dieses Thema bietet einen Überblick über die Volltextsuche und beschreibt dere
 -   [Abfragen mit Volltextsuche](../../relational-databases/search/query-with-full-text-search.md)
 
 > [!NOTE]
-> Full-Text Search is an optional component of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankmoduls. Wenn Sie bei der Installation von SQL Server nicht die Volltextsuche ausgewählt haben, führen Sie SQL Server-Setup erneut aus, um sie hinzuzufügen.
+> Die Volltextsuche ist eine optinale Komponente der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank-Engine. Wenn Sie bei der Installation von SQL Server nicht die Volltextsuche ausgewählt haben, führen Sie SQL Server-Setup erneut aus, um sie hinzuzufügen.
 
 ## <a name="overview"></a>Übersicht
 Ein Volltextindex umfasst eine oder mehrere zeichenbasierte Spalten in einer Tabelle. Diese Spalten können jeden der folgenden Datentypen aufweisen: **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml** oder **varbinary(max)** und **FILESTREAM**. Jeder Volltextindex indiziert mindestens eine Spalte aus der Basistabelle. Für jede Spalte kann hierbei eine eigene Sprache verwendet werden.  
   
- Volltextabfragen führen linguistische Suchvorgänge für Textdaten in Volltextindizes durch. Dabei werden Wörter und Ausdrücke anhand der Regeln einer bestimmten Sprache (z.B. Englisch oder Japanisch) verarbeitet. Volltextabfragen können einfache Wörter und Ausdrücke oder mehrere Formen eines Worts bzw. Ausdrucks enthalten. Eine Volltextabfrage gibt alle Dokumente zurück, die mindestens eine Übereinstimmung (auch als *Treffer*bezeichnet) enthalten. Eine Übereinstimmung wird gefunden, wenn ein Zieldokument alle in der Volltextabfrage angegebenen Begriffe enthält und alle sonstigen Suchbedingungen erfüllt sind, z. B. der Abstand zwischen den übereinstimmenden Begriffen.    
+ Volltextabfragen führen linguistische Suchvorgänge für Textdaten in Volltextindizes durch. Dabei werden Wörter und Ausdrücke anhand der Regeln einer bestimmten Sprache (z.B. Englisch oder Japanisch) verarbeitet. Volltextabfragen können einfache Wörter und Ausdrücke oder mehrere Formen eines Worts bzw. Ausdrucks enthalten. Eine Volltextabfrage gibt alle Dokumente zurück, die mindestens eine Übereinstimmung (auch als *Treffer*bezeichnet) enthalten. Eine Übereinstimmung wird gefunden, wenn ein Zieldokument alle in der Volltextabfrage angegebenen Begriffe enthält und alle sonstigen Suchbedingungen erfüllt sind, z. B. der Abstand zwischen den übereinstimmenden Begriffen.    
   
 ##  <a name="queries"></a> Volltextsuchabfragen  
  Nachdem einem Volltextindex Spalten hinzugefügt wurden, können Benutzer und Anwendungen Volltextabfragen zum Text in diesen Spalten ausführen. Bei diesen Abfragen kann nach Folgendem gesucht werden:  
@@ -63,7 +62,7 @@ Ein Volltextindex umfasst eine oder mehrere zeichenbasierte Spalten in einer Tab
   
  Bei Volltextabfragen wird die Groß- und Kleinschreibung nicht beachtet. Wenn Sie beispielsweise nach "Aluminium" oder "aluminium" suchen, werden dieselben Ergebnisse zurückgegeben.  
   
- Volltextabfragen verwenden eine geringe Anzahl von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prädikaten (CONTAINS und FREETEXT) und -Funktionen (CONTAINSTABLE und FREETEXTTABLE). Die Suchziele des jeweiligen Geschäftsszenarios beeinflussen jedoch die Struktur von Volltextabfragen. Zum Beispiel:  
+ Volltextabfragen verwenden eine geringe Anzahl von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prädikaten (CONTAINS und FREETEXT) und -Funktionen (CONTAINSTABLE und FREETEXTTABLE). Die Suchziele des jeweiligen Geschäftsszenarios beeinflussen jedoch die Struktur von Volltextabfragen. Beispiel:  
   
 -   e-Business – Suchen nach einem Produkt auf einer Website:  
   
@@ -111,19 +110,20 @@ Ein Volltextindex umfasst eine oder mehrere zeichenbasierte Spalten in einer Tab
   
 -   **Stopplistenobjekte** Stopplistenobjekte enthalten eine Liste häufig auftretender Wörter, die nicht nützlich für die Suche sind. Weitere Informationen finden sie unter [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
--   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abfrageprozessor** Der Abfrageprozessor kompiliert SQL-Abfragen und führt diese aus. Wenn eine SQL-Abfrage eine Volltextsuchabfrage enthält, wird die Abfrage sowohl während der Kompilierung als auch während der Ausführung an das Volltextsuchmodul gesendet. Das Abfrageergebnis wird mit dem Volltextindex verglichen.  
+-   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abfrageprozessor** Der Abfrageprozessor kompiliert SQL-Abfragen und führt diese aus. Wenn eine SQL-Abfrage eine Volltextsuchabfrage enthält, wird die Abfrage sowohl während der Kompilierung als auch während der Ausführung an die Volltext-Engine gesendet. Das Abfrageergebnis wird mit dem Volltextindex verglichen.  
   
--   **Volltextmodul** Das Volltextsuchmodul in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist vollständig in den Abfrageprozessor integriert. Das Volltextsuchmodul kompiliert Volltextabfragen und führt diese aus. Im Rahmen der Abfrageausführung empfängt das Volltextsuchmodul möglicherweise Eingaben vom Thesaurus und von der Stoppliste.  
+-   
+  **Volltext-Engine** Die Volltext-Engine in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist vollständig in den Abfrageprozessor integriert. Die Volltextsuch-Engine kompiliert Volltextabfragen und führt diese aus. Im Rahmen der Abfrageausführung empfängt die Volltext-Engine möglicherweise Eingaben vom Thesaurus und von der Stoppliste.  
 
     >[!NOTE]  
-    >  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höheren Versionen befindet sich das Volltextmodul im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozess, anstatt in einem separaten Dienst. Durch die Integration des Volltextmoduls in das Datenbankmodul konnte die Verwaltbarkeit verbessert und die Leistung bei gemischten Abfragen sowie die Leistung insgesamt optimiert werden.  
+    >  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höheren Versionen befindet sich die Volltext-Engine im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozess, anstatt in einem separaten Dienst. Durch die Integration der Volltext-Engine in die Datenbank-Engine konnte die Verwaltbarkeit verbessert und die Leistung bei gemischten Abfragen sowie die Leistung insgesamt optimiert werden.  
  
 -   **Indexschreiber (Indexer)** Der Indexschreiber erstellt die Struktur, die zum Speichern der indizierten Token verwendet wird.  
   
--   **Filterdaemon-Manager** Der Filterdaemon-Manager ist für die Überwachung des Status des Filterdaemonhosts des Volltextsuchmoduls verantwortlich.  
+-   **Filterdaemon-Manager** Der Filterdaemon-Manager ist für die Überwachung des Status des Filterdaemonhosts der Volltext-Engine verantwortlich.  
   
 ###  <a name="fdhostprocess"></a> Filter Daemon Host process  
- Der Filterdaemonhost ist ein Prozess, der vom Volltextsuchmodul gestartet wird. Er führt die folgenden Komponenten der Volltextsuche aus, die für den Zugriff auf, die Filterung von und die Wörtertrennung für Daten aus Tabellen sowie für die Wörtertrennung und Wortstammerkennung für Abfrageeingaben verantwortlich sind.  
+ Der Filterdaemonhost ist ein Prozess, der von der Volltext-Engine gestartet wird. Er führt die folgenden Komponenten der Volltextsuche aus, die für den Zugriff auf, die Filterung von und die Wörtertrennung für Daten aus Tabellen sowie für die Wörtertrennung und Wortstammerkennung für Abfrageeingaben verantwortlich sind.  
   
  Der Filterdaemonhost umfasst die folgenden Komponenten:  
   
@@ -134,10 +134,10 @@ Ein Volltextindex umfasst eine oder mehrere zeichenbasierte Spalten in einer Tab
 -   **Wörtertrennung und Wortstammerkennung** Die Wörtertrennung ist eine sprachspezifische Komponente, die anhand von lexikalischen Regeln einer bestimmten Sprache Wortgrenzen erkennt (*Wörtertrennung*). Jede Wörtertrennung ist einer sprachspezifischen Wortstammerkennungskomponente zugeordnet, die Verben konjugiert und flektierende Erweiterungen vornimmt. Bei der Indizierung verwendet der Filterdaemonhost die Wörtertrennung und die Wortstammerkennung, um eine linguistische Analyse der Textdaten aus einer angegebenen Tabellenspalte durchzuführen. Die Sprache, die einer Tabellenspalte im Volltextindex zugeordnet ist, bestimmt, welche Wörtertrennung und Wortstammerkennung zum Indizieren der Spalte verwendet wird. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
 ##  <a name="processing"></a> Verarbeitung der Volltextsuche  
- Die Volltextsuche beruht auf dem Volltextmodul. Das Volltextmodul erfüllt zwei Funktionen: Unterstützung der Indizierung und Unterstützung von Abfragen.  
+ Die Volltextsuche beruht auf der Volltext-Engine. Die Volltext-Engine erfüllt zwei Funktionen: Unterstützung der Indizierung und Unterstützung von Abfragen.  
   
 ###  <a name="indexing"></a> Der Vorgang der Volltextindizierung  
- Wenn eine Volltextauffüllung (auch als "Durchforstung" bezeichnet) initiiert wird, werden vom Volltextmodul große Batches von Daten in den Arbeitsspeicher geladen, und der Filterdaemonhost wird benachrichtigt. Der Host führt Filterung und Wörtertrennung aus und konvertiert die Daten in invertierte Wortlisten. Die konvertierten Daten werden dann von der Volltextsuche aus den Wortlisten abgerufen, Stoppwörter werden entfernt, und die Wortlisten werden für einen Batch in einem oder mehreren invertierten Indizes gespeichert.  
+ Wenn eine Volltextauffüllung (auch als "Durchforstung" bezeichnet) initiiert wird, werden von der Volltext-Engine große Batches von Daten in den Arbeitsspeicher geladen, und der Filterdaemonhost wird benachrichtigt. Der Host führt Filterung und Wörtertrennung aus und konvertiert die Daten in invertierte Wortlisten. Die konvertierten Daten werden dann von der Volltextsuche aus den Wortlisten abgerufen, Stoppwörter werden entfernt, und die Wortlisten werden für einen Batch in einem oder mehreren invertierten Indizes gespeichert.  
   
  Sind die Indizierungsdaten in einer **varbinary(max)** - oder **image** -Spalte gespeichert, extrahiert der Filter, der die **IFilter** -Schnittstelle implementiert, Text basierend auf dem angegebenen Dateiformat für diese Daten (z.B. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word). In manchen Fällen erfordern die Filterkomponenten, dass die **varbinary(max)**- oder **image** -Daten statt in den Arbeitsspeicher in den Filterdatenordner geschrieben werden.  
   
@@ -148,17 +148,17 @@ Ein Volltextindex umfasst eine oder mehrere zeichenbasierte Spalten in einer Tab
  Nach dem Ende einer Auffüllung wird ein abschließender Mergeprozess ausgelöst, der die Indexfragmente zu einem Mastervolltextindex zusammenführt. Dies ermöglicht eine verbesserte Abfrageleistung, da statt mehrerer Indexfragmente nur der Masterindex abgefragt werden muss. Zudem können bessere Bewertungsstatistiken zum Erstellen der Relevanzrangfolge verwendet werden.  
   
 ###  <a name="querying"></a> Der Vorgang der Volltextabfrage  
- Der Abfrageprozessor übergibt die Volltextteile einer Abfrage zur Verarbeitung an das Volltextmodul. Das Volltextmodul führt Worttrennungen sowie optional Thesauruserweiterungen, Wortstammerkennung und Stoppwort-/Füllwortverarbeitung durch. Die Volltextteile der Abfrage werden dann in Form von SQL-Operatoren dargestellt, vorrangig als Streaming-Tabellenwertfunktionen. Während der Abfrageausführung greifen diese Streaming-Tabellenwertfunktionen auf den invertierten Index zu, um die richtigen Ergebnisse abzurufen. Die Ergebnisse werden entweder zu diesem Zeitpunkt an den Client zurückgegeben oder vor der Rückgabe an den Client weiter verarbeitet.  
+ Der Abfrageprozessor übergibt die Volltextteile einer Abfrage zur Verarbeitung an die Volltext-Engine. Die Volltext-Engine führt Worttrennungen sowie optional Thesauruserweiterungen, Wortstammerkennung und Stoppwort-/Füllwortverarbeitung durch. Die Volltextteile der Abfrage werden dann in Form von SQL-Operatoren dargestellt, vorrangig als Streaming-Tabellenwertfunktionen. Während der Abfrageausführung greifen diese Streaming-Tabellenwertfunktionen auf den invertierten Index zu, um die richtigen Ergebnisse abzurufen. Die Ergebnisse werden entweder zu diesem Zeitpunkt an den Client zurückgegeben oder vor der Rückgabe an den Client weiter verarbeitet.  
 
 ## <a name="full-text-index-architecture"></a>Architektur von Volltextindizes
-  Die Informationen in Volltextindizes werden vom Volltextmodul verwendet, um Volltextabfragen zu kompilieren, die eine Tabelle schnell nach bestimmten Wörtern oder Wortkombination durchsuchen können. In einem Volltextindex werden Informationen zu signifikanten Wörtern und ihre Position innerhalb einer oder mehreren Spalte einer Datenbanktabelle gespeichert. Ein Volltextindex ist besonderer Typ eines tokenbasierten funktionellen Index, der durch das Volltextmodul für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erstellt und verwaltet wird. Der Vorgang der Erstellung eines Volltextindexes unterscheidet sich vom Erstellen anderer Indextypen. Statt eine B-Struktur basierend auf einem Wert in einer bestimmten Zeile aufzubauen, erstellt das Volltextsuchmodul eine invertierte, gestapelte, komprimierte Indexstruktur basierend auf einzelnen Token aus dem zu indizierenden Text.  Die Größe des Volltextindexes wird nur durch den verfügbaren Speicherplatz des Computers eingeschränkt, auf dem die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.  
+  Die Informationen in Volltextindizes werden von der Volltext-Engine verwendet, um Volltextabfragen zu kompilieren, die eine Tabelle schnell nach bestimmten Wörtern oder Wortkombination durchsuchen können. In einem Volltextindex werden Informationen zu signifikanten Wörtern und ihre Position innerhalb einer oder mehreren Spalte einer Datenbanktabelle gespeichert. Ein Volltextindex ist besonderer Typ eines tokenbasierten funktionellen Index, der durch die Volltext-Engine für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt und verwaltet wird. Der Vorgang der Erstellung eines Volltextindexes unterscheidet sich vom Erstellen anderer Indextypen. Statt eine B-Struktur basierend auf einem Wert in einer bestimmten Zeile aufzubauen, erstellt die Volltextsuch-Engine eine invertierte, gestapelte, komprimierte Indexstruktur basierend auf einzelnen Token aus dem zu indizierenden Text.  Die Größe des Volltextindexes wird nur durch den verfügbaren Speicherplatz des Computers eingeschränkt, auf dem die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.  
   
- Beginnend mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]sind Volltextindizes in das Datenbankmodul integriert und befinden sich nicht mehr im Dateisystem, wie dies in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]der Fall war. Bei einer neuen Datenbank ist ein Volltextkatalog jetzt ein virtuelles Objekt, das keiner Dateigruppe angehört. Es ist lediglich ein logisches Konzept, das für eine Gruppe von Volltextindizes steht. Beachten Sie jedoch, dass während des Upgrades einer [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Datenbank für alle Volltextkataloge, die Datendateien enthalten, eine neue Dateigruppe erstellt wird. Weitere Information finden Sie unter [Upgrade der Volltextsuche](../../relational-databases/search/upgrade-full-text-search.md).  
+ Beginnend mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sind Volltextindizes in die Datenbank-Engine integriert und befinden sich nicht mehr im Dateisystem, wie dies in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Fall war. Bei einer neuen Datenbank ist ein Volltextkatalog jetzt ein virtuelles Objekt, das keiner Dateigruppe angehört. Es ist lediglich ein logisches Konzept, das für eine Gruppe von Volltextindizes steht. Beachten Sie jedoch, dass während des Upgrades einer [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Datenbank für alle Volltextkataloge, die Datendateien enthalten, eine neue Dateigruppe erstellt wird. Weitere Information finden Sie unter [Upgrade der Volltextsuche](../../relational-databases/search/upgrade-full-text-search.md).  
   
 Nur ein Volltextindex pro Tabelle ist zulässig. Damit ein Volltextindex für eine Tabelle erstellt werden kann, muss die Tabelle eine einzelne eindeutige Spalte aufweisen, die keine NULL-Werte enthält. Sie können einen Volltextindex für die Volltextsuche für alle Spalten vom Typ **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary**und **varbinary(max)** erstellen. Beim Erstellen eines Volltextindex für eine Spalte, dessen Datentyp  **varbinary**, **varbinary(max)**, **image**oder **xml** lautet, müssen Sie eine Typspalte angeben. Eine *Typspalte* ist eine Tabellenspalte, in der die Dateierweiterung (DOC, PDF, XLS usw.) für das Dokument in der betreffenden Zeile gespeichert wird.  
 
 ###  <a name="structure"></a> Struktur der Volltextindizes  
- Die Kenntnis der Struktur eines Volltextindex hilft Ihnen dabei, die Funktionsweise des Volltextsuchmoduls zu verstehen. In diesem Thema wird der folgende Auszug der Tabelle **Dokument** in [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] als Beispieltabelle verwendet. Der Auszug enthält nur zwei Spalten, **DocumentID** und **Title** , und drei Zeilen der Tabelle.  
+ Die Kenntnis der Struktur eines Volltextindex hilft Ihnen dabei, die Funktionsweise der Volltext-Engine zu verstehen. In diesem Thema wird der folgende Auszug der Tabelle **Dokument** in [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] als Beispieltabelle verwendet. Der Auszug enthält nur zwei Spalten, **DocumentID** und **Title** , und drei Zeilen der Tabelle.  
   
  Für dieses Beispiel wird davon ausgegangen, dass ein Volltextindex für die **Title** -Spalte erstellt wurde.  
   
@@ -199,7 +199,7 @@ Nur ein Volltextindex pro Tabelle ist zulässig. Damit ein Volltextindex für ei
   
  Die **DocId** -Spalte enthält Werte für eine aus acht Bytes bestehende ganze Zahl, die einem bestimmten Volltextschlüsselwert in einer volltextindizierten Tabelle zugeordnet ist. Diese Zuordnung ist notwendig, wenn der Volltextschlüssel kein ganzzahliger Datentyp ist. In diesen Fällen werden Zuordnungen zwischen Volltextschlüsselwerten und **DocId** -Werten in einer separaten Tabelle mit der Bezeichnung DocId-Zuordnungstabelle verwaltet. Um diese Zuordnungen abzufragen, verwenden Sie die gespeicherte Systemprozedur [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md) . Um eine Suchbedingung zu erfüllen, müssen DocId-Werte aus der obigen Tabelle mit der DocId-Zuordnungstabelle verknüpft werden, um Zeilen aus der abgefragten Basistabelle abzurufen. Wenn der Volltextschlüsselwert der Basistabelle ein ganzzahliger Typ ist, wird der Wert direkt als DocID verwendet, und es ist keine Zuordnung erforderlich. Die Verwendung von ganzzahligen Volltextschlüsselwerten kann also zur Optimierung von Volltextabfragen beitragen.  
   
- Die Spalte **Vorkommen** enthält einen ganzzahligen Wert. Für jeden DocId-Wert ist eine Liste von Vorkommenwerten vorhanden, die den relativen Wortoffsets des betreffenden Schlüsselworts innerhalb dieser DocId entsprechen. Die Vorkommenwerte sind zum Ermitteln von Ausdrucks- oder NEAR-Übereinstimmungen hilfreich, da z. B. Ausdrücke numerisch aufeinander folgende Vorkommenwerte besitzen. Zum Berechnen von Relevanzbewertungen erfüllen sie ebenfalls eine hilfreiche Funktion. So kann z. B. die Anzahl der Vorkommen eines Schlüsselworts in einer DocId zur Rangfolgenberechnung verwendet werden.   
+ Die Spalte **Vorkommen** enthält einen ganzzahligen Wert. Für jeden DocId-Wert ist eine Liste von Vorkommenwerten vorhanden, die den relativen Wortoffsets des betreffenden Schlüsselworts innerhalb dieser DocId entsprechen. Die Vorkommenwerte sind zum Ermitteln von Ausdrucks- oder NEAR-Übereinstimmungen hilfreich, da z. B. Ausdrücke numerisch aufeinander folgende Vorkommenwerte besitzen. Zum Berechnen von Relevanzbewertungen erfüllen sie ebenfalls eine hilfreiche Funktion. So kann z. B. die Anzahl der Vorkommen eines Schlüsselworts in einer DocId zur Rangfolgenberechnung verwendet werden.   
   
 ###  <a name="fragments"></a> Volltextindexfragmente  
  Der logische Volltextindex wird normalerweise auf mehrere interne Tabellen aufgeteilt. Jede interne Tabelle wird als Volltextindexfragment bezeichnet. Einige dieser Fragmente enthalten ggf. aktuellere Daten als andere. Wenn Benutzer z. B. die folgende Zeile aktualisieren, deren DocId den Wert 3 hat, und für die Tabelle die automatische Änderungsnachverfolgung verwendet wird, wird ein neues Fragment erstellt.  

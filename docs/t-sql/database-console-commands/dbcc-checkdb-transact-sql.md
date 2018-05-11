@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 12/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: t-sql|database-console-commands
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -38,15 +35,14 @@ helpviewer_keywords:
 - page count accuracy [SQL Server]
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 caps.latest.revision: 144
-author: barbkess
-ms.author: barbkess
+author: uc-msft
+ms.author: umajay
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 545a7e012059a76e953b8cb34f275174f1b11d02
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7f270fd58e58b7e6c850a520dff4cd37e2ddb4ec
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -65,7 +61,7 @@ Das bedeutet, dass die Befehle DBCC CHECKALLOC, DBCC CHECKTABLE oder DBCC CHECKC
 > [!NOTE]
 > DBCC CHECKDB wird für Datenbanken unterstützt, die speicheroptimierte Tabellen enthalten. Die Überprüfung wird jedoch nur für Tabellen auf dem Datenträger ausgeführt. Im Rahmen der Sicherung und Wiederherstellung von Datenbanken wird die CHECKSUM-Überprüfung jedoch für Dateien in speicheroptimierten Dateigruppen ausgeführt.    
 >     
-> Da DBCC-Reparaturoptionen für speicheroptimierte Tabellen nicht verfügbar sind, müssen Sie Ihre Datenbanken regelmäßig sichern und die Sicherungen testen. Wenn bei einer speicheroptimierten Tabelle Datenintegritätsprobleme auftreten, müssen Sie die Tabelle aus der letzten bekannten fehlerfreien Sicherung wiederherstellen.    
+> Da DBCC-Reparaturoptionen sind nicht für speicheroptimierte Tabellen verfügbar. Sie müssen die Datenbanken regelmäßig sichern und die Sicherungen testen. Wenn bei einer speicheroptimierten Tabelle Datenintegritätsprobleme auftreten, müssen Sie die Tabelle von der letzten bekannten fehlerfreien Sicherung wiederherstellen.    
 
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
@@ -175,7 +171,7 @@ DATA_PURITY
 > [!WARNING] 
 > Wenn MAXDOP auf 0 (Null) festgelegt wird, wählt SQL Server den maximalen Grad an Parallelität aus, der verwendet werden soll.    
 
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>Hinweise    
 Deaktivierte Indizes werden von DBCC CHECKDB nicht untersucht. Weitere Informationen zu deaktivierten Indizes finden Sie unter [Deaktivieren von Indizes und Einschränkungen](../../relational-databases/indexes/disable-indexes-and-constraints.md).    
 
 Wenn ein benutzerdefinierter Typ als Typ markiert ist, dessen Sortierreihenfolge eine Bytereihenfolge ist, darf es nur eine Serialisierung des benutzerdefinierten Typs geben. Wenn keine konsistente Serialisierung benutzerdefinierter Typen vorhanden ist, deren Sortierreihenfolge eine Bytereihenfolge ist, wird bei der Ausführung von DBCC CHECKDB der Fehler 2537 ausgegeben. Weitere Informationen finden Sie unter [Erstellen von benutzerdefinierten Typen – Anforderungen](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md).    
@@ -220,7 +216,7 @@ Standardmäßig führt DBCC CHECKDB eine parallele Überprüfung von Objekten au
 ## <a name="understanding-dbcc-error-messages"></a>Grundlegendes zu DBCC-Fehlermeldungen    
 Nach der Fertigstellung des Befehls DBCC CHECKDB wird eine Meldung in das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll geschrieben. Falls der DBCC-Befehl erfolgreich ausgeführt wird, gibt die Meldung den Erfolg und die Dauer der Ausführung an. Falls der DBCC-Befehl vor Abschluss der Überprüfung aufgrund eines Fehlers beendet wird, gibt die Meldung die Beendigung des Befehls, einen Statuswert sowie die Dauer der Ausführung an. In der folgenden Tabelle sind die Statuswerte aufgeführt und beschrieben, die in der Meldung enthalten sein können.
     
-|Status|Description|    
+|Status|Beschreibung|    
 |-----------|-----------------|    
 |0|Fehlernummer 8930 wurde ausgelöst. Dies weist auf eine Beschädigung der Metadaten hin, die zur Beendigung des DBCC-Befehls geführt hat.|    
 |1|Fehlernummer 8967 wurde ausgelöst. Ein interner DBCC-Fehler ist aufgetreten.|    

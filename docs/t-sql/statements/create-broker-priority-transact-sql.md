@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -29,15 +27,14 @@ helpviewer_keywords:
 - CREATE BROKER PRIORITY statement
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 caps.latest.revision: 40
-author: barbkess
-ms.author: barbkess
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9503c441d1c57bf84e27b6190b1afc751be8861e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b05a5095ccae50b33b2ad1ccb2a68f12f59b2531
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +114,7 @@ FOR CONVERSATION
  PRIORITY_LEVEL = { *PriorityValue* | **DEFAULT** }  
  Gibt die Priorität an, die jedem Konversationsendpunkt zugeordnet werden soll, der die für die Konversationspriorität angegebenen Verträge und Dienste verwendet. *PriorityValue* muss ein ganzahliges Literal zwischen 1 (niedrigste Priorität) und 10 (höchste Priorität) sein. Der Standardwert ist 5.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
  In [!INCLUDE[ssSB](../../includes/sssb-md.md)] werden Prioritätsebenen Konversationsendpunkte zugeordnet. Mithilfe der Prioritätsebene wird die Priorität der dem Endpunkt zugeordneten Vorgänge gesteuert. Jede Konversation verfügt über zwei Konversationsendpunkte:  
   
 -   Der Konversationsendpunkt für den Initiator ordnet eine Seite der Konversation dem Initiatordienst und der Initiatorwarteschlange zu. Der Konversationsendpunkt für den Initiator wird beim Ausführen der BEGIN DIALOG-Anweisung erstellt. Zu den dem Konversationsendpunkt für den Initiator zugeordneten Vorgängen zählen folgende:  
@@ -161,7 +158,7 @@ FOR CONVERSATION
   
 -   Nachrichten werden aus einer Datenbank übermittelt, für die die Datenbankoption HONOR_BROKER_PRIORITY auf OFF festgelegt ist. Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
--   Nachrichten werden zwischen Diensten in der gleichen Instanz des Datenbankmoduls übermittelt.  
+-   Nachrichten werden zwischen Diensten in der gleichen Instanz der Datenbank-Engine übermittelt.  
   
 -   Allen [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Vorgängen in einer Datenbank wird die Standardpriorität 5 zugewiesen, wenn in der Datenbank keine Konversationsprioritäten erstellt wurden.  
   

@@ -4,25 +4,23 @@ ms.custom: ''
 ms.date: 08/26/2016
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: packages
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e308835f8b71b851f2a86b0a778a138234710899
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 19120f136913925721b61aacd59364f787ac0816
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dtexec-utility"></a>dtexec (Hilfsprogramm)
   Das Befehlszeilen-Hilfsprogramm **dtexec** dient zum Konfigurieren und Ausführen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen. Das Hilfsprogramm **dtexec** ermöglicht den Zugriff auf alle Features zur Paketkonfiguration und -ausführung, z.B. Parameter, Verbindungen, Eigenschaften, Variablen und Statusanzeigen. Das Hilfsprogramm **dtexec** ermöglicht das Laden von Paketen aus diesen Quellen: dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server, einer ISPAC-Projektdatei, einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank, dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher und dem Dateisystem.  
@@ -162,7 +160,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/CheckF[Ile]** *Dateiangabe*: (Optional). Legt den Pfad und die Datei, der bzw. die in der **Dateiangabe** angegeben ist, als Wert für die *CheckpointFileName*-Eigenschaft des Pakets fest. Diese Datei wird beim erneuten Starten des Pakets verwendet. Wird diese Option angegeben, ohne einen Wert für den Dateinamen bereitzustellen, wird für die **CheckpointFileName** -Eigenschaft des Pakets eine leere Zeichenfolge festgelegt. Wenn diese Option nicht angegeben wird, werden die Werte im Paket beibehalten.  
   
--   **/CheckP[ointing]** *{on\off}* : (Optional). Legt einen Wert fest, der bestimmt, ob das Paket während der Paketausführung Prüfpunkte verwendet. Der Wert **on** gibt an, dass das fehlerhafte Paket erneut ausgeführt wird. Wenn das fehlerhafte Paket erneut ausgeführt wird, verwendet das Laufzeitmodul die Prüfpunktdatei, um das Paket von dem Punkt an, an dem der Fehler aufgetreten ist, erneut auszuführen.  
+-   **/CheckP[ointing]** *{on\off}* : (Optional). Legt einen Wert fest, der bestimmt, ob das Paket während der Paketausführung Prüfpunkte verwendet. Der Wert **on** gibt an, dass das fehlerhafte Paket erneut ausgeführt wird. Wenn das fehlerhafte Paket erneut ausgeführt wird, verwendet die Runtime-Engine die Prüfpunktdatei, um das Paket von dem Punkt an, an dem der Fehler aufgetreten ist, erneut auszuführen.  
   
      Der Standardwert ist "on", wenn die Option ohne Angabe eines Wertes deklariert wird. Die Paketausführung erzeugt einen Fehler, wenn der Wert auf "on" festgelegt wurde und die Prüfpunktdatei nicht gefunden werden kann. Wenn diese Option nicht angegeben wird, wird der im Paket festgelegte Wert beibehalten. Weitere Informationen finden Sie unter [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   

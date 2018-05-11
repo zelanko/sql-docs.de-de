@@ -1,44 +1,41 @@
 ---
 title: Problembehandlung in PolyBase | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 8/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-polybase
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: database
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - PolyBase, monitoring
 - PolyBase, performance monitoring
 helpviewer_keywords:
 - PolyBase, troubleshooting
 ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 22
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 94e965bdb0b407759b078e4fb75838888f9a3b37
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: d7e8013d3c450f6a0846ad5d33a4a26715f12458
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="polybase-troubleshooting"></a>Problembehandlung in PolyBase
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Verwenden Sie die in diesem Thema vorgestellten Methoden, um in PolyBase eine Problembehandlung durchzuführen.  
+  Verwenden Sie die in diesem Thema vorgestellten Methoden, um in PolyBase eine Problembehandlung durchzuführen.  
   
 ## <a name="catalog-views"></a>Katalogsichten  
  Verwenden Sie die hier aufgelisteten Katalogsichten, um PolyBase-Vorgänge zu verwalten.  
   
 |||  
 |-|-|  
-|Anzeigen|Description|  
+|Sicht|Beschreibung|  
 |[sys.external_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)|Identifiziert externe Tabellen.|  
 |[sys.external_data_sources &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)|Identifiziert externe Datenquellen.|  
 |[sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)|Identifiziert externe Dateiformate.|  
@@ -243,7 +240,7 @@ Problemumgehung: Verwenden Sie den DNS-Namen, um Verbindungen zum aktiven Namenk
 
 ## <a name="error-messages-and-possible-solutions"></a>Fehlermeldungen und mögliche Lösungen
 
-Wie Sie Fehler in externen Tabellen beheben, erfahren Sie in diesem Blog von Murshed Zaman: [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/] (https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase setup errors and possible solutions") (PolyBase-Setupfehler und mögliche Lösungen).
+Weitere Informationen zum Beheben von Fehlern in externen Tabellen finden Sie auf Murshed Zamans Blog unter [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase setup errors and possible solutions (Setupfehler von PolyBase und mögliche Lösungen)").
 
 ## <a name="see-also"></a>Siehe auch
 [Troubleshoot PolyBase Kerberos connectivity (Problembehandlung: PolyBase-Kerberos-Konnektivität)](polybase-troubleshoot-connectivity.md)

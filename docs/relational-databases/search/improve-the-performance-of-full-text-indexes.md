@@ -3,15 +3,13 @@ title: Verbessern der Leistung von Volltextindizes | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
+ms.prod_service: search, sql-database
 ms.component: search
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - performance [SQL Server], full-text search
 - full-text queries [SQL Server], performance
@@ -24,13 +22,12 @@ caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a3255ca28229a171f65a0e64ef553d7d0a80333f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d5c8427cc756a3aa4635e97288cec3aa2e6fb8e0
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Verbessern der Leistung von Volltextindizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +46,7 @@ Der Hauptgrund für eine eingeschränkte Leistung beim Erstellen von Volltextind
 -   **Datenträger**. Wenn die durchschnittliche Warteschlangenlänge des Datenträgers zweimal so groß wie die Anzahl von Leseköpfen ist, dann besteht ein Engpass auf dem Datenträger. Die erste Problemumgehung ist das Erstellen von Volltextkatalogen, die getrennt von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankendateien und -protokollen sind. Platzieren Sie Protokolle, die Datenbankdateien und Volltextkataloge auf getrennten Datenträgern. Installieren Sie schnellere Datenträger, und verwenden Sie RAID, um die Indexleistung zu verbessern.  
   
     > [!NOTE]  
-    >  Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] kann das Volltextmodul den AWE-Speicher verwenden, weil das Volltextmodul Teil von sqlservr.exe ist.  
+    >  Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] kann die Volltext-Engine den AWE-Speicher verwenden, weil die Volltext-Engine Teil von sqlservr.exe ist.  
 
 ### <a name="full-text-batching-issues"></a>Volltext-Batchverarbeitungs Probleme
  Wenn auf dem System keine Hardwareengpässe vorhanden sind, hängt die Indizierungsleistung der Volltextsuche vor allem von folgenden Faktoren ab:  
@@ -93,7 +90,7 @@ Die variablen Teile des Durchforstungsprotokolldatei-Namens sind die folgenden.
 -   <**Volltext-Katalog-ID**>: Die ID eines Volltextkatalogs. <**catid**> ist eine fünfstellige Zahl mit führenden Nullen.  
 -   <**n**>: Ist eine ganze Zahl, die angibt, dass mindestens ein Durchforstungsprotokoll desselben Volltextkatalogs vorhanden ist.  
   
- `SQLFT0000500008.2` ist z.B. die Durchforstungsprotokolldatei für eine Datenbank mit der Datenbank-ID = 5 und der Volltextkatalog-ID = 8. Die 2 am Ende des Dateinamens gibt an, dass zwei Durchforstungsprotokolldateien für dieses Datenbank-Katalog-Paar vorhanden sind.  
+ `SQLFT0000500008.2` ist z.B. die Durchforstungsprotokolldatei für eine Datenbank mit der Datenbank-ID = 5 und der Volltextkatalog-ID = 8. Die 2 am Ende des Dateinamens gibt an, dass zwei Durchforstungsprotokolldateien für dieses Datenbank-Katalog-Paar vorhanden sind.  
 
 ### <a name="check-physical-memory-usage"></a>Überprüfen Sie die Verwendung des physischen Speichers  
  Während einer Volltextauffüllung ist es möglich, dass fdhost.exe oder sqlservr.exe viel Arbeitsspeicher beansprucht oder nicht genügend Arbeitsspeicher vorhanden ist.
@@ -111,7 +108,7 @@ Die variablen Teile des Durchforstungsprotokolldatei-Namens sind die folgenden.
 
 -   **Speicherkonflikte**. Während einer Volltextauffüllung können auf Multi-CPU-Computern Konflikte zwischen fdhost.exe oder sqlservr.exe um den Pufferpoolarbeitsspeicher auftreten. Der daraus resultierende Mangel an gemeinsam genutztem Speicherbereich verursacht Batchwiederholungen, Arbeitsspeicherüberlastung und Dumps durch den Prozess "fdhost.exe".  
 
--   **Auslagerungsprobleme** Eine zu kleine Auslagerungsdatei, z. B. wenn ein System über eine kleine Auslagerungsdatei mit eingeschränkter Vergrößerung verfügt, kann ebenfalls dazu führen, dass fdhost.exe oder sqlservr.exe nicht mehr auf genügend Arbeitsspeicher zugreifen können. Wenn die Crawlprotokolle keine speicherbezogenen Fehler anzeigen, ist die Leistung wahrscheinlich aufgrund zu vieler Auslagerungen beeinträchtigt.  
+-   **Auslagerungsprobleme** Eine zu kleine Auslagerungsdatei, z. B. wenn ein System über eine kleine Auslagerungsdatei mit eingeschränkter Vergrößerung verfügt, kann ebenfalls dazu führen, dass fdhost.exe oder sqlservr.exe nicht mehr auf genügend Arbeitsspeicher zugreifen können. Wenn die Crawlprotokolle keine speicherbezogenen Fehler anzeigen, ist die Leistung wahrscheinlich aufgrund zu vieler Auslagerungen beeinträchtigt.  
   
 ### <a name="estimate-the-memory-requirements-of-the-filter-daemon-host-process-fdhostexe"></a>Schätzen der Arbeitsspeicheranforderungen des Filterdaemon-Hostprozesses (fdhost.exe)  
  Der vom fdhost.exe-Prozess für eine Auffüllung benötigte Arbeitsspeicher hängt hauptsächlich von den verwendeten Volltext-Crawlbereichen, der Größe des Inbound Shared Memory (ISM) und der maximalen Anzahl von ISM-Instanzen ab.  
@@ -144,7 +141,7 @@ Wichtige Informationen zu den folgenden Formeln finden Sie in den Notizen unter 
 |x64|*F* = *Anzahl der Durchforstungsbereiche** 10 * 8|*M* = *T* – *F* – 500|  
 
 **Hinweise zu den Formeln**
-1.  Wenn mehrere vollständige Auffüllungen ausgeführt werden, berechnen Sie die Arbeitsspeicheranforderungen für „fdhost.exe“ separat, also *F1*, *F2*, usw. Berechnen Sie anschließend *M* als *T***–** Sigma**(***F*i**)**.  
+1.  Wenn mehrere vollständige Auffüllungen ausgeführt werden, berechnen Sie die Arbeitsspeicheranforderungen für „fdhost.exe“ separat, also *F1*, *F2*, usw. Berechnen Sie anschließend *M* als *T***–** Sigma **(***F*i**)**.  
 2.  500 MB ist eine Schätzung des erforderlichen Speichers, der von den anderen Prozessen im System benötigt wird. Wenn das System noch weitere Aufgaben durchführt, sollten Sie diesen Wert entsprechend erhöhen.  
 3.  .*ism_size* wird 8 MB für x64-Plattformen angenommen.  
   
@@ -186,7 +183,7 @@ Es ist wahrscheinlich, dass die Leistung der vollständigen Auffüllungen nicht 
   
      In der folgenden Tabelle sind die relevanten Wartetypen aufgeführt.  
   
-    |Wartetyp|Description|Mögliche Lösung|  
+    |Wartetyp|Beschreibung|Mögliche Lösung|  
     |---------------|-----------------|-------------------------|  
     |PAGEIO_LATCH_SH (_EX oder _UP)|Dies kann auf einen E/A-Engpass hinweisen. In diesem Fall ist normalerweise auch eine hohe durchschnittliche Warteschlangenlänge des Datenträgers zu erkennen.|Sie können den E/A-Engpass ggf. reduzieren, indem Sie den Volltextindex in eine andere Dateigruppe auf einem anderen Datenträger verschieben.|  
     |PAGELATCH_EX (oder _UP)|Dies kann auf eine hohe Zahl von Konflikten zwischen Threads hinweisen, die versuchen, in dieselbe Datenbankdatei zu schreiben.|Diese Konflikte können ggf. verringert werden, indem Sie Dateien der Dateigruppe hinzufügen, auf der sich der Volltextindex befindet.|  
@@ -208,11 +205,11 @@ Es ist wahrscheinlich, dass die Leistung der vollständigen Auffüllungen nicht 
 > [!NOTE]
 > Dieser Abschnitt beschreibt ein Problem, das nur Kunden betrifft, die Dokumente indizieren (z.B. Microsoft Word-Dokumente), in die andere Dokumenttypen eingebettet sind.
 
-Beim Auffüllen eines Volltextindexes werden vom Volltextmodul zwei Arten von Filtern verwendet, Multithread-Filter und Filter mit einem einzigen Thread.
+Beim Auffüllen eines Volltextindexes werden von der Volltext-Engine zwei Arten von Filtern verwendet, Multithread-Filter und Filter mit einem einzigen Thread.
 -   Einige Dokumente, wie z. B. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word-Dokumente, werden mit einem Multithreadfilter gefiltert.
 -   Andere Dokumente, wie z. B. Adobe Acrobat PDF-Dokumente (Portable Document Format), werden hingegen mit einem Filter mit einem einzigen Thread gefiltert.  
   
- Aus Sicherheitsgründen werden Filter mit Filterdaemon-Hostprozessen geladen. Eine Serverinstanz verwendet einen Multithreadprozess für alle Multithreadfilter und einen Singlethreadprozess für alle Filter mit einem einzigen Thread. Wenn in einem Dokument, für das ein Multithreadfilter verwendet wird, ein Dokument eingebettet ist, für das ein Filter mit einem einzigen Thread verwendet wird, startet das Volltextmodul einen Singlethreadprozess für das eingebettete Dokument. Beispiel: Bei einem Word-Dokument, das ein PDF-Dokument enthält, verwendet das Volltextmodul einen Multithreadprozess für den Inhalt des Word-Dokuments und einen Singlethreadprozess für den Inhalt des PDF-Dokuments. Ein Filter mit einem einzigen Thread funktioniert in dieser Umgebung jedoch möglicherweise nicht ordnungsgemäß und kann die Stabilität des Filterprozesses gefährden. Unter bestimmten Umständen mit vielen eingebetteten Dokumenten, kann Destabilisierung zum Absturz des Prozesses führen. In diesem Fall verbindet das Volltextmodul alle Dokumente, bei denen Fehler auftraten (z.B. ein Word-Dokument mit eingebettetem PDF-Inhalt), erneut mit dem Singlethread-Filterprozess. Kommt dies häufig vor, hat das eine Leistungsminderung des Volltextindizierungsprozesses zur Folge.  
+ Aus Sicherheitsgründen werden Filter mit Filterdaemon-Hostprozessen geladen. Eine Serverinstanz verwendet einen Multithreadprozess für alle Multithreadfilter und einen Singlethreadprozess für alle Filter mit einem einzigen Thread. Wenn in einem Dokument, für das ein Multithreadfilter verwendet wird, ein Dokument eingebettet ist, für das ein Filter mit einem einzigen Thread verwendet wird, startet die Volltext-Engine einen Singlethreadprozess für das eingebettete Dokument. Beispiel: Bei einem Word-Dokument, das ein PDF-Dokument enthält, verwendet die Volltext-Engine einen Multithreadprozess für den Inhalt des Word-Dokuments und einen Singlethreadprozess für den Inhalt des PDF-Dokuments. Ein Filter mit einem einzigen Thread funktioniert in dieser Umgebung jedoch möglicherweise nicht ordnungsgemäß und kann die Stabilität des Filterprozesses gefährden. Unter bestimmten Umständen mit vielen eingebetteten Dokumenten, kann Destabilisierung zum Absturz des Prozesses führen. In diesem Fall verbindet die Volltext-Engine alle Dokumente, bei denen Fehler auftraten (z.B. ein Word-Dokument mit eingebettetem PDF-Inhalt), erneut mit dem Singlethread-Filterprozess. Kommt dies häufig vor, hat das eine Leistungsminderung des Volltextindizierungsprozesses zur Folge.  
   
 Sie müssen den Filter für das Containerdokument (hier das Word-Dokument) als Filter mit einem einzigen Thread kennzeichnen, um dieses Problem zu umgehen. Hierzu müssen Sie den Registrierungswert **ThreadingModel** für den Filter auf **Apartment Threaded** festlegen. Informationen zu Singlethreadapartments finden Sie im Whitepaper [Understanding and Using COM Threading Models](http://go.microsoft.com/fwlink/?LinkId=209159)(Grundlegendes zur Verwendung von COM-Threadingmodellen).  
   

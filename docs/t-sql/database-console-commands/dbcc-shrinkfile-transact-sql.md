@@ -1,16 +1,13 @@
 ---
 title: DBCC SHRINKFILE (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
-ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SHRINKFILE
@@ -32,16 +29,15 @@ helpviewer_keywords:
 - reducing database size
 - DBCC SHRINKFILE statement
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 87
+author: uc-msft
+ms.author: umajay
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 94ad5652920129790045e33c93e2a8fbb83816bd
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 70ac1b9a973aff7f15309d29a85e3fddd6f2954f
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -102,7 +98,7 @@ Alle Informationsmeldungen werden unterdrückt.
 ## <a name="result-sets"></a>Resultsets  
 In der folgenden Tabelle werden die Spalten des Resultsets beschrieben:
   
-|Spaltenname|Description|  
+|Spaltenname|Beschreibung|  
 |---|---|
 |**DbId**|Die Datenbank-ID der Datei, die das [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu verkleinern versuchte.|  
 |**FileId**|Die Datei-ID der Datei, die [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu verkleinern versuchte.|  
@@ -111,10 +107,10 @@ In der folgenden Tabelle werden die Spalten des Resultsets beschrieben:
 |**UsedPages**|Die Anzahl von 8-KB-Seiten, die derzeit von der Datei verwendet werden.|  
 |**EstimatedPages**|Die Anzahl an 8-KB-Seiten, auf die die Datei wahrscheinlich vom [!INCLUDE[ssDE](../../includes/ssde-md.md)] verkleinert werden kann.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
 DBCC SHRINKFILE gilt für die Dateien der aktuellen Datenbank. Weitere Informationen zum Ändern der aktuellen Datenbank finden Sie unter [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md).
   
-DBCC SHRINKFILE-Vorgänge können an jeder Stelle des Prozesses beendet werden, wobei der abgeschlossene Anteil erhalten bleibt.
+DBCC SHRINKFILE-Vorgänge können an jeder Stelle des Prozesses beendet werden, wobei der abgeschlossene Anteil erhalten bleibt. Wenn der EMPTYFILE-Parameter in einer Datei verwendet und der Vorgang unterbrochen wird, wird die Datei nicht markiert, um das Hinzufügen weiterer Daten zu verhindern.
   
 Wenn ein DBCC SHRINKFILE-Vorgang fehlschlägt, wird ein Fehler ausgelöst.
   

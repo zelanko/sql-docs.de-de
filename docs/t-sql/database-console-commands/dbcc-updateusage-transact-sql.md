@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
-ms.component: t-sql|database-console-commands
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -37,15 +34,14 @@ helpviewer_keywords:
 - page count accuracy [SQL Server]
 ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
 caps.latest.revision: 56
-author: barbkess
-ms.author: barbkess
+author: uc-msft
+ms.author: umajay
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 3338bfa3aaf532d639184b78554240228e077428
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0ef83c4b349e44f7a5f399a7bf84c2be9cd2ca01
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +70,7 @@ Name oder ID der Tabelle oder indizierten Sicht, deren Statistiken zur Speicherv
 *index_id* | *index_name*  
 ID oder Name des zu verwendenden Indexes. Falls nicht angegeben, werden von der Anweisung alle Indizes der angegebenen Tabelle oder Sicht verarbeitet.  
   
-mit  
+WITH  
 Ermöglicht die Angabe von Optionen.  
   
 NO_INFOMSGS  
@@ -83,7 +79,7 @@ Alle Informationsmeldungen werden unterdrückt.
 COUNT_ROWS  
 Gibt an, dass die row count-Spalte mit der aktuellen Anzahl von Tabellen- oder Sichtzeilen aktualisiert wird.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
 DBCC UPDATEUSAGE korrigiert die Anzahl der Zeilen, verwendeten Seiten, reservierten Seiten, Blattseiten und Datenseiten jeder Partition in Tabellen und Indizes. Wurden keine Ungenauigkeiten in den Systemtabellen festgestellt, werden von DBCC UPDATEUSAGE keine Daten zurückgegeben. Wurden Ungenauigkeiten gefunden und korrigiert und wurde WITH NO_INFOMSGS nicht verwendet, gibt DBCC UPDATEUSAGE die Zeilen und Spalten zurück, die in den Systemtabellen aktualisiert wurden.
   
 DBCC CHECKDB wurde verbessert, sodass nun erkannt wird, wenn Seiten- oder Zeilenzähler negativ werden. Wenn dies festgestellt wird, enthält die Ausgabe von DBCC CHECKDB eine Warnung und die Empfehlung, DBCC UPDATEUSAGE auszuführen, um das Problem zu beseitigen.

@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 01/04/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -23,15 +21,14 @@ helpviewer_keywords:
 - CREATE WORKLOAD GROUP statement
 ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
 caps.latest.revision: 47
-author: barbkess
-ms.author: barbkess
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fbdb42b7844da74806e1e40ff97743d4ae2db41d
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 82f3df3e82ae7be0c8df9e12e29afbffdb43f92d
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +115,7 @@ CREATE WORKLOAD GROUP group_name
  MAX_DOP =*value*  
  Gibt den maximalen Grad der Parallelität (DOP) für parallele Anforderungen an. *value* muss 0 (null) oder ein positiver Integer sein. Der zulässige Bereich für *value* liegt zwischen 0 und 64. Die *value*-Standardeinstellung 0 verwendet die globale Einstellung. MAX_DOP wird wie folgt behandelt:  
   
--   MAX_DOP als Abfragehinweis wird so lange verwendet, wie die Arbeitsauslastungsgruppe MAX_DOP nicht überschritten wird. Wenn der Wert des MAXDOP-Abfragehinweises den mit der Ressourcenkontrolle konfigurierten Wert überschreitet, verwendet das Datenbankmodul den MAXDOP-Wert der Ressourcenkontrolle.  
+-   MAX_DOP als Abfragehinweis wird so lange verwendet, wie die Arbeitsauslastungsgruppe MAX_DOP nicht überschritten wird. Wenn der Wert des MAXDOP-Abfragehinweises den mit der Ressourcenkontrolle konfigurierten Wert überschreitet, verwendet die Datenbank-Engine den MAXDOP-Wert der Ressourcenkontrolle.  
   
 -   ###MAX_DOP als Abfragehinweis überschreibt immer sp_configure 'max. Grad an Parallelität'.  
   
@@ -148,7 +145,7 @@ CREATE WORKLOAD GROUP group_name
   
 -   Ein externer Ressourcenpool für externe Prozesse. Weitere Informationen finden Sie unter [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
  REQUEST_MEMORY_GRANT_PERCENT: Die Indexerstellung kann verwendet werden, um mehr Arbeitsbereichsspeicher als ursprünglich zugewiesen zu verwenden, damit eine bessere Leistung erzielt wird. Diese besondere Behandlung wird von der Ressourcenkontrolle in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt. Die Zuweisung anfänglichen und zusätzlichen Arbeitsspeichers wird jedoch durch den Ressourcenpool und die Einstellungen der Arbeitsauslastungsgruppe begrenzt.  
   
  **Indexerstellung für eine partitionierte Tabelle**  
