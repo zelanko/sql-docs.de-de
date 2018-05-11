@@ -5,14 +5,13 @@ ms.custom:
 ms.date: 09/28/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, what's new
 - what's new [Integration Services]
@@ -21,12 +20,11 @@ caps.latest.revision: 183
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 039def0c2b07934959f8cd066b9a83d90781277a
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 31022138b7bab28bfd5774453282f87cf3a37b75
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Neuigkeiten in Integration Services in SQL Server 2016
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -246,7 +244,7 @@ Mit der Funktion für inkrementelle Paketbereitstellung können Sie ein oder meh
  Wenn Sie SSIS-Projekte aus früheren Versionen auf die aktuelle Version upgraden, funktionieren die auf Projektebene ausgeführten Verbindungs-Manager weiterhin wie erwartet, und das Paketlayout und die Anmerkungen werden beibehalten.  
 
 ####  <a name="BufferSize"></a> Die Eigenschaft „AutoAdjustBufferSize“ berechnet automatisch die Puffergröße für den Datenfluss  
- Wenn Sie den Wert der Eigenschaft **AutoAdjustBufferSize** auf **true**festlegen, berechnet das Datenflussmodul automatisch die Puffergröße für den Datenfluss. Weitere Informationen finden Sie unter [Data Flow Performance Features](../integration-services/data-flow/data-flow-performance-features.md).  
+ Wenn Sie den Wert der Eigenschaft **AutoAdjustBufferSize** auf **true** festlegen, berechnet die Datenfluss-Engine automatisch die Puffergröße für den Datenfluss. Weitere Informationen finden Sie unter [Data Flow Performance Features](../integration-services/data-flow/data-flow-performance-features.md).  
 
 ####  <a name="Templates"></a> Wiederverwendbare Vorlagen der Ablaufsteuerung  
  Sie können nun einen häufig verwendeten Ablaufsteuerungstask oder Container in einer eigenständigen Vorlagendatei speichern. Mithilfe Ablaufsteuerungsvorlagen kann diese Datei in einem oder mehreren Paketen in einem Projekt mehrmalig wiederverwendet werden. Die Wiederverwendbarkeit erleichtert das Design und die Verwaltung von SSIS-Paketen. Weitere Informationen finden Sie unter [Wiederverwenden der Ablaufsteuerung für Pakete mithilfe von Ablaufsteuerungs-Paketteilen](../integration-services/reuse-control-flow-across-packages-by-using-control-flow-package-parts.md).  

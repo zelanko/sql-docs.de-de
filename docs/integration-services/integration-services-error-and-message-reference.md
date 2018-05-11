@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - error numbers [Integration Services]
 - hresults [Integration Services]
@@ -21,12 +20,11 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: a318c197ceaa9d9b45eec2d4a7d14c4c92460c6c
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 55b664bda08e6842333fed67dafeab6e58a605e5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="integration-services-error-and-message-reference"></a>Fehler- und Meldungsreferenz von Integration Services
   In den folgenden Tabellen sind vordefinierte Fehler-, Warn- und Informationsmeldungen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in aufsteigender numerischer Reihenfolge innerhalb jeder Kategorie aufgeführt, inklusive der jeweiligen numerischen Codes und symbolischen Namen. Jeder dieser Fehler ist als Feld der Klasse <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> im Namespace <xref:Microsoft.SqlServer.Dts.Runtime> definiert.  
@@ -355,7 +353,7 @@ ms.lasthandoff: 04/26/2018
 |0xC001F187|-1073614457|DTS_E_EXPREVALASSIGNMENTTOREADONLYVARIABLE|Fehler bei der Verwendung der schreibgeschützten "%1"-Variablen in einem Zuweisungsausdruck. Das Ausdrucksergebnis kann nicht der Variablen zugewiesen werden, weil die Variable schreibgeschützt ist. Wählen Sie eine Variable aus, in die geschrieben werden kann, oder entfernen Sie den Ausdruck aus dieser Variablen.|  
 |0xC001F188|-1073614456|DTS_E_EXPREVALASSIGNMENTVARIABLELOCKFORWRITEFAILED|Der Ausdruck "%1" kann nicht ausgewertet werden, weil die "%2"-Variable nicht vorhanden ist oder weil es nicht möglich ist, in die Variable zu schreiben. Das Ausdrucksergebnis kann der Variablen nicht zugewiesen werden, weil die Variable nicht gefunden wurde oder weil sie nicht für den Schreibzugriff gesperrt werden konnte.|  
 |0xC001F189|-1073614455|DTS_E_EXPREVALRESULTTYPENOTSUPPORTED|Der Ausdruck "%1" weist den Ergebnistyp "%2" auf, der nicht in einen unterstützten Typ konvertiert werden kann.|  
-|0xC001F18A|-1073614454|DTS_E_EXPREVALRESULTTYPECONVERSIONFAILED|Fehler beim Konvertieren des Ergebnisses für den Ausdruck "%1" vom Typ "%1" in einen unterstützten Typ (Fehlercode: 0x%3!8.8X!). Beim Konvertieren des Ausdrucksergebnisses in einen vom Laufzeitmodul unterstützten Typ ist ein unerwarteter Fehler aufgetreten, obwohl die Typkonvertierung unterstützt wird.|  
+|0xC001F18A|-1073614454|DTS_E_EXPREVALRESULTTYPECONVERSIONFAILED|Fehler beim Konvertieren des Ergebnisses für den Ausdruck "%1" vom Typ "%1" in einen unterstützten Typ (Fehlercode: 0x%3!8.8X!). Beim Konvertieren des Ausdrucksergebnisses in einen von der Runtime-Engine unterstützten Typ ist ein unerwarteter Fehler aufgetreten, obwohl die Typkonvertierung unterstützt wird.|  
 |0xC001F200|-1073614336|DTS_E_DTSNAME_NOTNULL|Der Objektname ist ungültig. Der Name kann nicht auf NULL festgelegt werden.|  
 |0xC001F201|-1073614335|DTS_E_DTSNAME_NOTEMPTY|Der Objektname ist ungültig. Der Name darf nicht leer sein.|  
 |0xC001F202|-1073614334|DTS_E_DTSNAME_LEGAL|Der Objektname "%1" ist ungültig. Der Name darf keines der folgenden Zeichen enthalten: / \ : [ ] . =|  
@@ -398,9 +396,9 @@ ms.lasthandoff: 04/26/2018
 |0xC0029107|-1073573625|DTS_E_AXTASKUTIL_SCRIPTHOST_CREATE_FAILED|Fehler beim Erstellen des ActiveX-Skripthosts. Überprüfen Sie, ob der Skripthost ordnungsgemäß installiert ist.|  
 |0xC0029108|-1073573624|DTS_E_AXTASKUTIL_SCRIPTHOSTINIT_FAILED|Fehler beim Instanziieren des Skripthosts für die ausgewählte Skriptsprache. Überprüfen Sie, ob die ausgewählte Skriptsprache auf dem System installiert ist.|  
 |0xC0029109|-1073573623|DTS_E_AXTASKUTIL_ADDVARIABLES_FAILED|Fehler beim Hinzufügen der SSIS-Variablen zum Skripthostnamespace. Dadurch können möglicherweise keine SSIS-Variablen im Taskskript verwendet werden.|  
-|0xC002910A|-1073573622|DTS_E_AXTASKUTIL_SCRIPT_PARSING_FAILED|Schwerwiegender Fehler beim Analysieren des Skripttexts. Überprüfen Sie, ob das Skriptmodul für die ausgewählte Sprache ordnungsgemäß installiert ist.|  
+|0xC002910A|-1073573622|DTS_E_AXTASKUTIL_SCRIPT_PARSING_FAILED|Schwerwiegender Fehler beim Analysieren des Skripttexts. Überprüfen Sie, ob die Skript-Engine für die ausgewählte Sprache ordnungsgemäß installiert ist.|  
 |0xC002910B|-1073573621|DTS_E_AXTASKUTIL_MSG_BAD_FUNCTION|Der eingegebene Funktionsname ist ungültig. Überprüfen Sie, ob ein gültiger Funktionsname angegeben wurde.|  
-|0xC002910C|-1073573620|DTS_E_AXTASKUTIL_EXECUTION_FAILED|Fehler beim Ausführen des Skripts. Überprüfen Sie, ob das Skriptmodul für die ausgewählte Sprache ordnungsgemäß installiert ist.|  
+|0xC002910C|-1073573620|DTS_E_AXTASKUTIL_EXECUTION_FAILED|Fehler beim Ausführen des Skripts. Überprüfen Sie, ob die Skript-Engine für die ausgewählte Sprache ordnungsgemäß installiert ist.|  
 |0xC002910D|-1073573619|DTS_E_AXTASKUTIL_ADDTYPELIB_FAILED|Fehler beim Hinzufügen der Bibliothek für verwaltete Typen zum Skripthost. Überprüfen Sie, ob DTS 2000 Runtime installiert ist.|  
 |0xC002910E|-1073573618|DTS_E_BITASK_INITIALIZATION_WITH_WRONG_XML_ELEMENT|Der Masseneinfügungstask wurde mit einem falschen XML-Element initiiert.|  
 |0xC002910F|-1073573617|DTS_E_BITASK_DATA_FILE_NOT_SPECIFIED|Der Datendateiname ist nicht angegeben.|  
@@ -920,7 +918,7 @@ ms.lasthandoff: 04/26/2018
 |0xC004700B|-1073450997|DTS_E_VALIDATIONFAILEDONLAYOUT|Fehler beim Überprüfen des Layouts.|  
 |0xC004700C|-1073450996|DTS_E_VALIDATIONFAILEDONCOMPONENTS|Fehler beim Überprüfen von mindestens einer Komponente.|  
 |0xC004700D|-1073450995|DTS_E_VALIDATIONFAILED|Fehler beim Überprüfen des Layouts und mindestens einer Komponente.|  
-|0xC004700E|-1073450994|DTS_E_THREADSTARTUPFAILED|Fehler beim Starten des Datenflusstask-Moduls, weil mindestens ein erforderlicher Thread nicht erstellt werden konnte.|  
+|0xC004700E|-1073450994|DTS_E_THREADSTARTUPFAILED|Fehler beim Starten der Datenflusstask-Engine, weil mindestens ein erforderlicher Thread nicht erstellt werden konnte.|  
 |0xC004700F|-1073450993|DTS_E_CANTGETMUTEX|Fehler beim Erstellen des Mutex durch einen Thread bei der Initialisierung.|  
 |0xC0047010|-1073450992|DTS_E_CANTGETSEMAPHORE|Fehler beim Erstellen der Semaphore durch einen Thread bei der Initialisierung.|  
 |0xC0047011|-1073450991|DTS_E_BUFFERFAILUREDETAILS|Das System meldet eine Arbeitsspeicherbelastung von %1!d!. Es sind %2 Bytes physischer Arbeitsspeicher mit %3 freien Bytes verfügbar. Es sind %4 Bytes virtueller Arbeitsspeicher mit %5 freien Bytes verfügbar. Die Auslagerungsdatei verfügt über %6 Bytes, davon %7 freie Bytes.|  
@@ -941,8 +939,8 @@ ms.lasthandoff: 04/26/2018
 |0xC0047022|-1073450974|DTS_E_PROCESSINPUTFAILED|SSIS-Fehlercode DTS_E_PROCESSINPUTFAILED.  Fehler bei der ProcessInput-Methode in der Komponente "%1" (%2!d!) mit dem Fehlercode 0x%3!8.8X! beim Verarbeiten der Eingabe "% 4" (% 5! d!). Die identifizierte Komponente hat einen Fehler von der ProcessInput-Methode zurückgegeben. Der Fehler ist komponentenspezifisch. Es handelt sich jedoch um einen schwerwiegenden Fehler, sodass die Ausführung des Datenflusstasks unterbrochen wird.  Möglicherweise wurden bereits Fehlermeldungen veröffentlicht, die weitere Fehlerinformationen beinhalten.|  
 |0xC0047023|-1073450973|DTS_E_CANTREALIZEVIRTUALBUFFERS|Eine Gruppe von virtuellen Puffern wurde nicht gefunden.|  
 |0xC0047024|-1073450972|DTS_E_PIPELINETOOCOMPLEX|Für die Pipeline sind %1!d! Threads erforderlich. Der Wert überschreitet die Systemgrenze von %2!d!. Die Pipeline benötigt in dieser Konfiguration zu viele Threads. Es sind zu viele asynchrone Ausgaben vorhanden, oder für die EngineThreads-Eigenschaft ist ein zu hoher Wert festgelegt. Teilen Sie die Pipeline in mehrere Pakete auf, oder reduzieren Sie den Wert der EngineThreads-Eigenschaft.|  
-|0xC0047028|-1073450968|DTS_E_SCHEDULERCOULDNOTCOUNTSOURCES|Die Datenfluss-Modulplanung kann die Anzahl von Quellen im Layout nicht abrufen.|  
-|0xC0047029|-1073450967|DTS_E_SCHEDULERCOULDNOTCOUNTDESTINATIONS|Die Datenfluss-Modulplanung kann die Anzahl von Zielen im Layout nicht abrufen.|  
+|0xC0047028|-1073450968|DTS_E_SCHEDULERCOULDNOTCOUNTSOURCES|Die Datenfluss-Engine-Planung kann die Anzahl von Quellen im Layout nicht abrufen.|  
+|0xC0047029|-1073450967|DTS_E_SCHEDULERCOULDNOTCOUNTDESTINATIONS|Die Datenfluss-Engine-Planung kann die Anzahl von Zielen im Layout nicht abrufen.|  
 |0xC004702A|-1073450966|DTS_E_COMPONENTVIEWISUNAVAILABLE|Die Komponentensicht ist nicht verfügbar. Stellen Sie sicher, dass die Komponentensicht erstellt wurde.|  
 |0xC004702B|-1073450965|DTS_E_INCORRECTCOMPONENTVIEWID|Die Komponentensicht-ID ist falsch. Die Komponentensicht ist möglicherweise nicht mehr synchronisiert. Geben Sie die Komponentensicht frei, und erstellen Sie sie neu.|  
 |0xC004702C|-1073450964|DTS_E_BUFFERNOTLOCKED|Dieser Puffer ist nicht gesperrt und kann nicht manipuliert werden.|  
@@ -956,7 +954,7 @@ ms.lasthandoff: 04/26/2018
 |0xC0047035|-1073450955|DTS_E_BUFFERLOCKUNDERFLOW|Die Sperre des Puffers war bereits aufgehoben.|  
 |0xC0047036|-1073450954|DTS_E_INDIVIDUALCACHEINTERFACESFAILED|Fehler beim Initialisieren von %1 (Fehlercode: 0x%2!8.8X!).|  
 |0xC0047037|-1073450953|DTS_E_INDIVIDUALRELEASEINTERFACESFAILED|Fehler bei %1 beim Herunterfahren (Fehlercode: 0x%2!8.8X!). Die Schnittstellen einer Komponente konnten nicht freigegeben werden.|  
-|0xC0047038|-1073450952|DTS_E_PRIMEOUTPUTFAILED|SSIS-Fehlercode DTS_E_PRIMEOUTPUTFAILED.  Die PrimeOutput-Methode in %1 hat den Fehlercode 0x%2!8.8X! zurückgegeben.  Die Komponente gab einen Fehlercode zurück, als das Pipelinemodul PrimeOutput() aufgerufen hat. Die Bedeutung des Fehlercodes wird von der Komponente definiert. Der Fehler ist jedoch schwerwiegend, und die Ausführung der Pipeline wurde beendet.  Möglicherweise wurden bereits Fehlermeldungen veröffentlicht, die weitere Fehlerinformationen beinhalten.|  
+|0xC0047038|-1073450952|DTS_E_PRIMEOUTPUTFAILED|SSIS-Fehlercode DTS_E_PRIMEOUTPUTFAILED.  Die PrimeOutput-Methode in %1 hat den Fehlercode 0x%2!8.8X! zurückgegeben.  Die Komponente gab einen Fehlercode zurück, als die Pipeline-Engine PrimeOutput() aufgerufen hat. Die Bedeutung des Fehlercodes wird von der Komponente definiert. Der Fehler ist jedoch schwerwiegend, und die Ausführung der Pipeline wurde beendet.  Möglicherweise wurden bereits Fehlermeldungen veröffentlicht, die weitere Fehlerinformationen beinhalten.|  
 |0xC0047039|-1073450951|DTS_E_THREADCANCELLED|SSIS-Fehlercode DTS_E_THREADCANCELLED.  Der Thread "%1" hat ein Signal zum Herunterfahren erhalten und wird beendet. Der Benutzer hat das Herunterfahren angefordert, oder ein Fehler in einem anderen Thread hat dazu geführt, dass die Pipeline heruntergefahren wird.  Möglicherweise wurden bereits Fehlermeldungen veröffentlicht, die weitere Informationen zum Abbruch des Threads beinhalten.|  
 |0xC004703A|-1073450950|DTS_E_DISTRIBUTORCANTSETPROPERTY|Der Verteiler für den Thread "%1" konnte die "%2"-Eigenschaft in der "%3"-Komponente aufgrund des Fehlers 0x%8.8X nicht initialisieren. Der Verteiler konnte die Eigenschaft der Komponente nicht initialisieren und kann nicht weiter ausgeführt werden.|  
 |0xC004703B|-1073450949|DTS_E_CANTREGISTERVIEWBUFFERTYPE|Der Datenflusstask kann einen Sichtpuffertyp nicht registrieren. Der Typ wies %1!d! Spalten auf und war für die Eingabe-ID %2!d! bestimmt.|  
@@ -976,10 +974,10 @@ ms.lasthandoff: 04/26/2018
 |0xC004704F|-1073450929|DTS_E_EXECUTIONTREECYCLESETTINGID|Die ID %1 kann nicht auf %2!d! festgelegt werden, weil dadurch eine Schleife erstellt würde.|  
 |0xC0047050|-1073450928|DTS_E_NOMOREBUFFERTYPES|Der Puffer-Manager konnte die Tabelle mit den Puffertypen nicht erweitern, weil nicht genügend Arbeitsspeicher verfügbar war. Dieser Fehler tritt auf, weil nicht genügend Speicherplatz vorhanden ist.|  
 |0xC0047051|-1073450927|DTS_E_CANTCREATENEWTYPE|Fehler beim Erstellen eines neuen Puffertyps durch den Puffer-Manager.|  
-|0xC0047053|-1073450925|DTS_E_SCHEDULERBADTREE|Fehler beim Abrufen der Ausführungsstruktur mit dem Index %1!d! aus dem Layout nicht aus dem Layout abrufen. Die Planung hat mehr Ausführungsstrukturen erhalten, als tatsächlich vorhanden sind.|  
+|0xC0047053|-1073450925|DTS_E_SCHEDULERBADTREE|Fehler bei Datenfluss-Engine-Scheduler mit dem Index %1!d! aus dem Layout nicht aus dem Layout abrufen. Die Planung hat mehr Ausführungsstrukturen erhalten, als tatsächlich vorhanden sind.|  
 |0xC0047056|-1073450922|DTS_E_CANTCREATEPRIMEOUTPUTBUFFER|Fehler beim Erstellen des Puffers zum Abrufen von PrimeOutput für die Ausgabe "%3" (%4!d!) in der Komponente "%1" (%2!d!) durch den Datenflusstask. Dieser Fehler tritt gewöhnlich auf, wenn nicht genügend Arbeitsspeicher verfügbar ist.|  
-|0xC0047057|-1073450921|DTS_E_SCHEDULERTHREADMEMORY|Fehler beim Erstellen eines Threadobjekts durch die Datenfluss-Modulplanung. Dieser Fehler tritt auf, weil nicht genügend Speicherplatz vorhanden ist.|  
-|0xC004705A|-1073450918|DTS_E_SCHEDULEROBJECT|Die Datenfluss-Modulplanung kann das Objekt mit der ID %1!d! nicht aus dem Layout abrufen. Die Datenfluss-Modulplanung fand zuvor ein Objekt, das nun nicht mehr verfügbar ist.|  
+|0xC0047057|-1073450921|DTS_E_SCHEDULERTHREADMEMORY|Fehler beim Erstellen eines Threadobjekts durch die Datenfluss-Engine-Planung. Dieser Fehler tritt auf, weil nicht genügend Speicherplatz vorhanden ist.|  
+|0xC004705A|-1073450918|DTS_E_SCHEDULEROBJECT|Die Datenfluss-Engine-Planung kann das Objekt mit der ID %1!d! nicht aus dem Layout abrufen. Die Datenfluss-Engine-Planung fand zuvor ein Objekt, das nun nicht mehr verfügbar ist.|  
 |0xC004705B|-1073450917|DTS_E_PREPARETREENODEFAILED|Fehler beim Vorbereiten des Puffers für den Ausführungsstrukturknoten beginnend an der Ausgabe "%1" (%2!d!).|  
 |0xC004705C|-1073450916|DTS_E_CANTCREATEVIRTUALBUFFER|Der Datenflusstask kann einen virtuellen Puffer nicht zur Vorbereitung für die Ausführung erstellen.|  
 |0xC004705E|-1073450914|DTS_E_NOMOREIDS|Die maximale Anzahl an IDs wurde erreicht. Es sind keine weiteren IDs verfügbar, die Objekten zugewiesen werden können.|  
@@ -987,7 +985,7 @@ ms.lasthandoff: 04/26/2018
 |0xC0047060|-1073450912|DTS_E_OUTPUTCOLUMNNAMECONFLICT|Der Spaltenname "%1" in der Ausgabe "%2" kann nicht verwendet werden, weil er in Konflikt mit einer gleichnamigen Spalte in der synchronen Eingabe "%3" steht.|  
 |0xC0047061|-1073450911|DTS_E_EOFANNOUNCEMENTFAILED|Der Datenflusstask kann keinen Puffer erstellen, um das Ende des Rowsets zu kennzeichnen.|  
 |0xC0047062|-1073450910|DTS_E_USERCOMPONENTEXCEPTION|Eine verwaltete Benutzerkomponente hat die Ausnahme "%1" zurückgegeben.|  
-|0xC0047063|-1073450909|DTS_E_SCHEDULERMEMORY|Die Datenfluss-Modulplanung kann den Ausführungsstrukturen nicht genügend Arbeitsspeicher zuordnen. Schon vor Ausführungsbeginn war auf dem System wenig Arbeitsspeicher verfügbar.|  
+|0xC0047063|-1073450909|DTS_E_SCHEDULERMEMORY|Die Datenfluss-Engine-Planung kann den Ausführungsstrukturen nicht genügend Arbeitsspeicher zuordnen. Schon vor Ausführungsbeginn war auf dem System wenig Arbeitsspeicher verfügbar.|  
 |0xC0047064|-1073450908|DTS_E_BUFFERNOOBJECTMEMORY|Das Pufferobjekt konnte nicht erstellt werden, weil nicht genügend Arbeitsspeicher verfügbar war.|  
 |0xC0047065|-1073450907|DTS_E_BUFFERNOMAPMEMORY|Die Herkunfts-IDs eines Puffers können nicht DTP_HCOL-Indizes zugeordnet werden, weil nicht genügend Arbeitsspeicher verfügbar ist.|  
 |0xC0047066|-1073450906|DTS_E_INDIVIDUALPUTVARIABLESFAILED|„%1! s!“ kann die Variablenauflistung nicht zwischenspeichern und gab den Fehlercode „0x%2!8.8X“ zurück.|  
@@ -1097,7 +1095,7 @@ ms.lasthandoff: 04/26/2018
 |0xC00470DB|-1073450789|DTS_E_EXPREVALAMBIGUOUSINPUTCOLUMNNAME|Es sind mehrere Eingabespalten mit dem Namen "%1" vorhanden. Die gewünschte Eingabespalte muss eindeutig im Format [Komponentenname].[%2] oder mithilfe der Herkunfts-ID angegeben werden. Derzeit ist die angegebene Eingabespalte in mehreren Komponenten vorhanden.|  
 |0xC00470DC|-1073450788|DTS_E_EXPREVALDOTTEDINPUTCOLUMNNAMENOTFOUND|Fehler beim Suchen der Eingabespalte "[%1].[%2]" (Fehlercode: 0x%3!8.8X!). Die Eingabespalte wurde in der Eingabespaltenauflistung nicht gefunden.|  
 |0xC00470DD|-1073450787|DTS_E_EXPREVALAMBIGUOUSVARIABLENNAME|Es sind mehrere Variablen mit dem Namen "%1" vorhanden. Die gewünschte Variable muss eindeutig im Format @[Namespace::%2] angegeben werden. Die Variable ist in mehreren Namespaces vorhanden.|  
-|0xC00470DE|-1073450786|DTS_E_REDUCTIONFAILED|Die Datenfluss-Modulplanung konnte den Ausführungsplan für die Pipeline nicht reduzieren. Legen Sie die OptimizedMode-Eigenschaft auf False fest.|  
+|0xC00470DE|-1073450786|DTS_E_REDUCTIONFAILED|Die Datenfluss-Engine-Planung konnte den Ausführungsplan für die Pipeline nicht reduzieren. Legen Sie die OptimizedMode-Eigenschaft auf False fest.|  
 |0xC00470DF|-1073450785|DTS_E_EXPREVALSQRTINVALIDPARAM|Die SQRT-Funktion kann nicht für negative Werte verwendet werden. Ein negativer Wert wurde jedoch an die SQRT-Funktion übergeben.|  
 |0xC00470E0|-1073450784|DTS_E_EXPREVALLNINVALIDPARAM|Die LN-Funktion kann nicht für NULL-Werte oder negative Werte verwendet werden. Ein NULL-Wert oder negativer Wert wurde jedoch an die LN-Funktion übergeben.|  
 |0xC00470E1|-1073450783|DTS_E_EXPREVALLOGINVALIDPARAM|Die LOG-Funktion kann nicht für NULL-Werte oder negative Werte verwendet werden. Ein NULL-Wert oder negativer Wert wurde jedoch an die LOG-Funktion übergeben.|  
@@ -1142,10 +1140,10 @@ ms.lasthandoff: 04/26/2018
 |0xC0048008|-1073446904|DTS_E_DUPLICATEIDFOUND|Es wurde versucht, die ID %1!d! mehrmals im Datenflusstask zu verwenden.|  
 |0xC0048009|-1073446903|DTS_E_CANNOTRETRIEVEBYLINEAGE|Ein Element kann nicht anhand der Herkunfts-ID aus einer Auflistung abgerufen werden, die keine Spalten enthält.|  
 |0xC004800B|-1073446901|DTS_E_CANNOTMAPRUNTIMECONNECTIONMANAGER|Der Verbindungs-Manager mit der ID "%1" wurde aufgrund des Fehlercodes 0x%2!8.8X! nicht in der Verbindungs-Manager-Auflistung gefunden. Dieser Verbindungs-Manager wird von "%3" in der Verbindungs-Manager-Auflistung von "%4" benötigt. Überprüfen Sie, ob in der Verbindungs-Manager-Auflistung Connections ein Verbindungs-Manager mit dieser ID erstellt wurde.|  
-|0xC004800E|-1073446898|DTS_E_INPUTNOTKNOWN|Der Thread "%1" hat einen Puffer für die Eingabe %2!d! erhalten, aber der Thread ist nicht für die Eingabe zuständig. Ein Fehler bewirkte, dass die Datenfluss-Modulplanung einen fehlerhaften Ausführungsplan erstellt hat.|  
+|0xC004800E|-1073446898|DTS_E_INPUTNOTKNOWN|Der Thread "%1" hat einen Puffer für die Eingabe %2!d! erhalten, aber der Thread ist nicht für die Eingabe zuständig. Ein Fehler bewirkte, dass die Datenfluss-Engine-Planung einen fehlerhaften Ausführungsplan erstellt hat.|  
 |0xC004800F|-1073446897|DTS_E_GETRTINTERFACEFAILED|Die Komponente "%1" (%2!d!) kann keine IDTSRuntimeComponent100-Schnittstelle bereitstellen.|  
-|0xC0048011|-1073446895|DTS_E_CANTGIVEAWAYBUFFER|Fehler beim Kopieren eines Puffers durch das Datenflusstask-Modul, um einen anderen Thread zuzuweisen.|  
-|0xC0048012|-1073446894|DTS_E_CANTCREATEVIEWBUFFER|Das Datenflusstask-Modul konnte keinen Sichtpuffer vom Typ %1!d! basierend auf dem Typ %2!d! für den Puffer %3!d erstellen.|  
+|0xC0048011|-1073446895|DTS_E_CANTGIVEAWAYBUFFER|Fehler beim Kopieren eines Puffers durch die Datenflusstask-Engine, um einen anderen Thread zuzuweisen.|  
+|0xC0048012|-1073446894|DTS_E_CANTCREATEVIEWBUFFER|Die Datenflusstask-Engine konnte keinen Sichtpuffer vom Typ %1!d! basierend auf dem Typ %2!d! für den Puffer %3!d erstellen.|  
 |0xC0048013|-1073446893|DTS_E_UNUSABLETEMPORARYPATH|Der Puffer-Manager konnte eine temporäre Datei im Pfad "%1" nicht erstellen. Der Pfad wird nicht mehr für den temporären Speicher berücksichtigt.|  
 |0xC0048014|-1073446892|DTS_E_DIRECTTONONERROROUTPUT|Der Puffer-Manager versuchte, eine Fehlerzeile in eine Ausgabe zu übertragen, die nicht als Fehlerausgabe registriert war. DirectErrorRow wurde in einer Ausgabe aufgerufen, für die die IsErrorOut-Eigenschaft nicht auf TRUE festgelegt ist.|  
 |0xC0048015|-1073446891|DTS_E_BUFFERISPRIVATE|Eine Puffermethode wurde in einem privaten Puffer aufgerufen. Dieser Vorgang wird jedoch von privaten Puffern nicht unterstützt.|  
@@ -1769,14 +1767,14 @@ ms.lasthandoff: 04/26/2018
 |0xC020835A|-1071611046|DTS_E_TERMLOOKUP_SORREFERENCETERM|Fehler beim Sortieren von Verweisausdrücken. Der Fehlercode 0x%1!8.8X! wurde zurückgegeben.|  
 |0xC020835B|-1071611045|DTS_E_TERMLOOKUP_COUNTTERM|Fehler beim Zählen von Ausdruckskandidaten. Der Fehlercode 0x%1!8.8X! wurde zurückgegeben.|  
 |0xC020835C|-1071611044|DTS_E_FUZZYLOOKUP_REFERENCECACHEFULL|Die Fuzzysuche konnte nicht die gesamte Verweistabelle in den Hauptspeicher laden, was bei aktivierter Exhaustive-Eigenschaft erforderlich ist.  Es war nicht genügend Systemarbeitsspeicher verfügbar, oder für 'MaxMemoryUsage' wurde eine Grenze angegeben, das zum Laden der Verweistabelle nicht ausreichend war.  Legen Sie MaxMemoryUsage auf 0 (null) fest, oder geben Sie einen deutlich höheren als den aktuellen Wert an.  Alternativ können Sie Exhaustive deaktivieren.|  
-|0xC020835D|-1071611043|DTS_E_TERMLOOKUP_INITIALIZE|Fehler beim Initialisieren des Moduls für die Ausdruckssuche. Der Fehlercode 0x%1!8.8X! wurde zurückgegeben.|  
+|0xC020835D|-1071611043|DTS_E_TERMLOOKUP_INITIALIZE|Fehler beim Initialisieren der Engine für die Ausdruckssuche. Der Fehlercode 0x%1!8.8X! wurde zurückgegeben.|  
 |0xC020835E|-1071611042|DTS_E_TERMLOOKUP_PROCESSSENTENCE|Fehler beim Verarbeiten von Sätzen. Der Fehlercode 0x%1!8.8X! wurde zurückgegeben.|  
 |0xC020835F|-1071611041|DTS_E_TEXTMININGBASE_APPENDTOTEMPBUFFER|Fehler beim Hinzufügen von Zeichenfolgen zu einem internen Puffer. Der Fehlercode 0x%1!8.8X! wurde zurückgegeben.|  
 |0xC0208360|-1071611040|DTS_E_TERMEXTRACTION_SAVEPOSTAG|Fehler beim Speichern von Wortart-Tags in einem internen Puffer. Der Fehlercode 0x%1!8.8X! wurde zurückgegeben.|  
 |0xC0208361|-1071611039|DTS_E_TERMEXTRACTION_COUNTTERM|Fehler beim Zählen von Ausdruckskandidaten. Der Fehlercode 0x%1!8.8X! wurde zurückgegeben.|  
 |0xC0208362|-1071611038|DTS_E_TERMEXTRACTION_INITPOSPROCESSOR|Fehler beim Initialisieren des Wortart-Prozessors. Der Fehlercode 0x%1!8.8X! wurde zurückgegeben.|  
 |0xC0208363|-1071611037|DTS_E_TERMEXTRACTION_INITFSA|Fehler beim Laden des endlichen Automaten. Der Fehlercode 0x%1!8.8X! wurde zurückgegeben.|  
-|0xC0208364|-1071611036|DTS_E_TERMEXTRACTION_INITIALIZE|Fehler beim Initialisieren des Moduls für die Ausdrucksextrahierung. Der Fehlercode 0x%1!8.8X! wurde zurückgegeben.|  
+|0xC0208364|-1071611036|DTS_E_TERMEXTRACTION_INITIALIZE|Fehler beim Initialisieren der Engine für die Ausdrucksextrahierung. Der Fehlercode 0x%1!8.8X! wurde zurückgegeben.|  
 |0xC0208365|-1071611035|DTS_E_TERMEXTRACTION_PROCESSSENTENCE|Fehler beim Verarbeiten innerhalb eines Satzes. Der Fehlercode 0x%1!8.8X! wurde zurückgegeben.|  
 |0xC0208366|-1071611034|DTS_E_TERMEXTRACTION_INITPOSTAGVECTOR|Fehler beim Initialisieren des Wortart-Prozessors. Der Fehlercode 0x%1!8.8X! wurde zurückgegeben.|  
 |0xC0208367|-1071611033|DTS_E_TERMEXTRACTION_SAVEPTRSTRING|Fehler beim Hinzufügen von Zeichenfolgen zu einem internen Puffer. Der Fehlercode 0x%1!8.8X! wurde zurückgegeben.|  

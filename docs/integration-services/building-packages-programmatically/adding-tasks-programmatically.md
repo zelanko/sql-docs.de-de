@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: building-packages-programmatically
 ms.reviewer: ''
 ms.suite: sql
@@ -24,15 +23,14 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f5019516fbbacf91d1c7eacd8004cd3ae9129879
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: c94a0b04d75d7fe4b16da3da480b04f1411587b7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-tasks-programmatically"></a>Programmgesteuertes Hinzufügen von Tasks
-  Folgenden Objekttypen im Laufzeitmodul können Tasks hinzugefügt werden:  
+  Folgenden Objekttypen in der Runtime-Engine können Tasks hinzugefügt werden:  
   
 -   <xref:Microsoft.SqlServer.Dts.Runtime.Package>  
   
@@ -46,7 +44,7 @@ ms.lasthandoff: 04/26/2018
   
  Diese Klassen werden als Container angesehen, und sie alle erben die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSequence.Executables%2A>-Eigenschaft. Container können eine Auflistung von Tasks enthalten. Dies sind ausführbare Objekte, die von der Laufzeit bei der Ausführung des Containers verarbeitet werden. Die Ausführungsreihenfolge der Objekte in der Auflistung hängt von den <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> ab, die für die einzelnen Tasks im Container festgelegt wurden. Rangfolgeneinschränkungen ermöglichen eine verzweigte Ausführung, abhängig vom Erfolg, Fehlschlag oder der Beendigung einer <xref:Microsoft.SqlServer.Dts.Runtime.Executable> in der Auflistung.  
   
- Jeder Container verfügt über eine <xref:Microsoft.SqlServer.Dts.Runtime.Executables>-Auflistung, die die einzelnen <xref:Microsoft.SqlServer.Dts.Runtime.Executable>-Objekte enthält. Jeder ausführbare Task erbt und implementiert die <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A>-Methode sowie die <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A>-Methode. Diese zwei Methoden werden vom Laufzeitmodul aufgerufen, um jede <xref:Microsoft.SqlServer.Dts.Runtime.Executable> zu verarbeiten.  
+ Jeder Container verfügt über eine <xref:Microsoft.SqlServer.Dts.Runtime.Executables>-Auflistung, die die einzelnen <xref:Microsoft.SqlServer.Dts.Runtime.Executable>-Objekte enthält. Jeder ausführbare Task erbt und implementiert die <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A>-Methode sowie die <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A>-Methode. Diese zwei Methoden werden von der Runtime-Engine aufgerufen, um jede <xref:Microsoft.SqlServer.Dts.Runtime.Executable> zu verarbeiten.  
   
  Um einem Paket einen Task hinzuzufügen, benötigen Sie einen Container mit einer Auflistung vorhandener <xref:Microsoft.SqlServer.Dts.Runtime.Executables>. Meist handelt es sich bei dem Task, den Sie der Auflistung hinzufügen, um ein Paket. Um der Auflistung des Containers die neue ausführbare Datei des Tasks hinzuzufügen, rufen Sie die <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A>-Methode auf. Die Methode verfügt über einen Parameter, eine Zeichenfolge, die den CLSID-, PROGID- bzw. STOCK-Moniker oder den <xref:Microsoft.SqlServer.Dts.Runtime.TaskInfo.CreationName%2A> des Tasks, den Sie hinzufügen, enthält.  
   
