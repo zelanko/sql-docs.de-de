@@ -1,25 +1,23 @@
 ---
-title: "Bereitstellen des Webparts des Berichts-Viewers für SQL Server Reporting Services auf einer SharePoint-Website | Microsoft-Dokumentation"
-ms.custom: 
+title: Bereitstellen des Webparts des Berichts-Viewers für SQL Server Reporting Services auf einer SharePoint-Website | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f5fd405e91f9ca16caf9345a4a3e8f7852a3ad37
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 155e01d4c19f111b553510a8db648d66b4f4a788
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Bereitstellen des Webparts des Berichts-Viewers für SQL Server Reporting Services auf einer SharePoint-Website
 
@@ -33,7 +31,11 @@ Verwenden Sie die folgenden Anweisungen, um zwei Lösungspakete manuell bereitzu
 
 ## <a name="requirements"></a>Anforderungen
 
-**Unterstützte SharePoint Server-Versionen:**  
+> [!IMPORTANT]
+> Sie können dieses Webpart derzeit nicht installieren, wenn Sie bereits den integrierten SharePoint-Modus von Reporting Services konfiguriert haben.
+>
+
+**Unterstützte SharePoint Server-Versionen:**
 * SharePoint Server 2016
 * SharePoint Server 2013
 
@@ -148,6 +150,26 @@ Für das Webpart werden die folgenden Sprachen unterstützt:
 * Russisch (RU)
 * Chinesisch (vereinfacht: zh-HANS und zh-CHS)
 * Chinesisch (traditionell: zh-HANT und zh-CHT)
+
+## <a name="troubleshoot"></a>Problembehandlung
+
+* Fehler beim Deinstallieren von SSRS, wenn Sie den integrierten SharePoint-Modus konfiguriert haben:
+
+    Install-SPRSService : [A] Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService cannot be cast to [B]Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService. ([A] Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService kann nicht in [B] Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService umgewandelt werden.) Type A originates from 'Microsoft.ReportingServices.SharePoint.SharedService,Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' in the context 'Default' at location 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'. (Typ A stammt von 'Microsoft.ReportingServices.SharePoint.SharedService,Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' im Kontext 'Default' am Speicherort 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'.) Type B originates from 'Microsoft.ReportingServices.SharePoint.SharedService,Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' in the context 'Default' at location 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'. (Typ A stammt von 'Microsoft.ReportingServices.SharePoint.SharedService,Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' im Kontext 'Default' am Speicherort 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'.)
+    
+    Lösung:
+    1. Entfernen des Berichts-Viewer-Webparts
+    2. Deinstallieren von SSRS
+    3. Neuinstallieren des Berichts-Viewer-Webparts
+
+* Fehler beim Upgrade von SharePoint, wenn Sie den integrierten SharePoint-Modus konfiguriert haben:
+
+    Could not load file or assembly 'Microsoft.ReportingServices.Alerting.ServiceContract, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. (Die Datei oder Assembly 'Microsoft.ReportingServices.Alerting.ServiceContract, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' oder eine Abhängigkeit davon wurde nicht gefunden.) Die angegebene Datei wurde nicht gefunden. 00000000-0000-0000-0000-000000000000
+    
+    Lösung:
+    1. Entfernen des Berichts-Viewer-Webparts
+    2. Deinstallieren von SSRS
+    3. Neuinstallieren des Berichts-Viewer-Webparts
 
 ## <a name="next-steps"></a>Nächste Schritte
 
