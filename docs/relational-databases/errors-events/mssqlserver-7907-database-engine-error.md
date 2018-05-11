@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: errors-events
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 7907 (Database Engine error)
 ms.assetid: a1c94e4a-7e91-46e0-9fac-07bbbf6dd018
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 85bd07f2b2221b6515c0492bd89fd9ddafedba07
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 41592afb145ab7a7ae398a8c463c82a47fb98779
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mssqlserver7907"></a>MSSQLSERVER_7907
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +38,7 @@ ms.lasthandoff: 04/16/2018
 |Meldungstext|Tabellenfehler: Das Verzeichnis 'DIRECTORY' in Partitions-ID PN_ID stellt kein gültiges Filestream-Verzeichnis dar.|  
   
 ## <a name="explanation"></a>Erklärung  
-Der Name eines Spaltenverzeichnisses stellt die Spalten-ID der Partition des relationalen Moduls dar. Wenn ein Spaltenverzeichnisname nicht in eine Spalten-ID konvertiert werden kann, stellt das Verzeichnis kein gültiges Spaltenverzeichnis dar.  
+Der Name eines Spaltenverzeichnisses stellt die Spalten-ID der Partition der relationalen Engine dar. Wenn ein Spaltenverzeichnisname nicht in eine Spalten-ID konvertiert werden kann, stellt das Verzeichnis kein gültiges Spaltenverzeichnis dar.  
   
 ## <a name="user-action"></a>Benutzeraktion  
   

@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssms-visual-db
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Query Designer [SQL Server], Diagram pane
 - View Designer, Diagram pane
@@ -22,12 +20,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 62fbb6619719adb82bfd0de041077cc65b7aa6db
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: a749cafa34c8db9d7cf2bc81c97e90da39e1bed3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="diagram-pane-visual-database-tools"></a>Diagrammbereich (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +40,7 @@ Wenn Sie Änderungen im Diagrammbereich vornehmen, werden die Werte im Kriterien
   
 Jede Tabelle und jedes Tabellenwertobjekt wird im Diagrammbereich in einem separaten Fenster angezeigt. Das Symbol in der Titelleiste jedes Rechtecks gibt den dargestellten Objekttyp wieder, wie in der folgenden Tabelle beschrieben.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Tabellen**  
 Listet die Tabellen auf, die dem Diagrammbereich hinzugefügt werden können. Um eine Tabelle hinzuzufügen, wählen Sie sie aus, und klicken Sie auf **Hinzufügen**. Um mehrere Tabellen gleichzeitig hinzuzufügen, wählen Sie sie aus, und klicken Sie auf **Hinzufügen**.  
   
@@ -71,10 +68,10 @@ Jedes Rechteck zeigt die Datenspalten für die Tabelle bzw. das Tabellenwertobje
   
 In der folgenden Tabelle werden die verwendeten Kontrollkästchen und Symbole für die einzelnen Tabellen bzw. Tabellenwertobjekte erläutert.  
   
-|Kontrollkästchen oder Symbol|Description|  
+|Kontrollkästchen oder Symbol|Beschreibung|  
 |-----------------------|---------------|  
 |![Symbol für Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi7.gif "Visual Database Tools icon")<br /><br />![Symbol für Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi8.gif "Visual Database Tools icon")<br /><br />![Symbol für Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi9.gif "Visual Database Tools icon")<br /><br />![Symbol für Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbia.gif "Visual Database Tools icon")|Gibt an, ob eine Datenspalte im Resultset der Abfrage enthalten ist oder nicht (SELECT-Abfrage) oder ob sie in einer UPDATE-, INSERT FROM-, MAKE TABLE- oder INSERT INTO-Abfrage verwendet wird. Wählen Sie die Spalte aus, um sie in die Ergebnisse aufzunehmen. Wenn **(Alle Spalten)** ausgewählt ist, werden in der Ausgabe alle Datenspalten angezeigt.<br /><br />Das mit dem Kontrollkästchen verwendete Symbol ändert sich entsprechend dem Typ der erstellten Abfrage. Beim Erstellen einer DELETE-Abfrage können Sie keine einzelnen Spalten auswählen.|  
-|![Symbol für Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbib.gif "Visual Database Tools icon")<br /><br />![Symbol für Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbic.gif "Visual Database Tools icon")|Zeigt an, dass die Datenspalte zum Sortieren der Abfrageergebnisse verwendet wird (d. h. Teil einer ORDER BY-Klausel ist). Das Symbol wird als A-Z bei aufsteigender oder als Z-A bei absteigender Sortierreihenfolge dargestellt.|  
+|![Symbol für Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbib.gif "Visual Database Tools icon")<br /><br />![Symbol für Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbic.gif "Visual Database Tools icon")|Zeigt an, dass die Datenspalte zum Sortieren der Abfrageergebnisse verwendet wird (d. h. Teil einer ORDER BY-Klausel ist). Das Symbol wird als A-Z bei aufsteigender oder als Z-A bei absteigender Sortierreihenfolge dargestellt.|  
 |![Symbol für Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbid.gif "Visual Database Tools icon")|Zeigt an, dass die Datenspalte in einer Aggregatabfrage zum Erstellen eines gruppierten Resultsets verwendet wird (d. h. Teil einer GROUP BY-Klausel ist).|  
 |![Symbol für Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbie.gif "Visual Database Tools icon")|Zeigt an, dass die Datenspalte in eine Suchbedingung der Abfrage eingebunden ist (d. h. Teil einer WHERE- oder HAVING-Klausel ist).|  
 |![Symbol für Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbif.gif "Visual Database Tools icon")|Zeigt an, dass die Inhalte der Datenspalte für die Ausgabe zusammengefasst werden (d. h. in eine SUM- oder AVG- oder eine andere Aggregatfunktion eingebunden sind).|  
@@ -87,7 +84,7 @@ Wenn die Abfrage einen Join enthält, wird eine Joinlinie zwischen den verknüpf
   
 Die Form des Symbols in der Mitte der Joinlinie zeigt an, wie die Tabellen oder Objekte mit Tabellenstruktur verknüpft sind. Wenn die Joinklausel einen anderen Operator als "gleich" (=) verwendet, wird der Operator im Symbol der Joinlinie angezeigt. In der folgenden Tabelle werden die in Joinlinien verwendeten Symbole aufgelistet.  
   
-|Joinliniensymbol|Description|  
+|Joinliniensymbol|Beschreibung|  
 |------------------|---------------|  
 |![Symbol für Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbih.gif "Visual Database Tools icon")|Innerer Join (erstellt mit einem Gleichheitszeichen).|  
 |![Symbol für Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbii.gif "Visual Database Tools icon")|Innerer Join mit dem Operator "größer als". (Der im Symbol der Joinlinie angezeigte Operator gibt den im Join verwendeten Operator wieder.)|  
@@ -97,7 +94,7 @@ Die Form des Symbols in der Mitte der Joinlinie zeigt an, wie die Tabellen oder 
   
 Symbole an den Enden der Joinlinie zeigen den Jointyp an. In der folgenden Tabelle werden die Jointypen und die an den Enden der Joinlinien verwendeten Symbole aufgelistet.  
   
-|Symbole an den Enden der Joinlinien|Description|  
+|Symbole an den Enden der Joinlinien|Beschreibung|  
 |-----------------------------|---------------|  
 |![Symbol für Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbim.gif "Visual Database Tools icon")|1:1-Join|  
 |![Symbol für Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbin.gif "Visual Database Tools icon")|1:n-Join|  

@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 04/19/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -27,15 +25,14 @@ helpviewer_keywords:
 - ALTER ASSEMBLY statement
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 caps.latest.revision: 76
-author: barbkess
-ms.author: barbkess
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 9e1da75295dafbc44940b48663af0d2d9dcd2237
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 366a5352806860cf80b289976350e4150787c16b
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -129,7 +126,7 @@ ALTER ASSEMBLY assembly_name
 > [!NOTE]  
 >  Diese Option ist in einer enthaltenen Datenbank nicht verfügbar.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
  Mit ALTER ASSEMBLY werden zurzeit ausgeführte Sitzungen, die Code in der zu ändernden Assembly ausführen, nicht unterbrochen. Die Ausführung wird von den aktuellen Sitzungen abgeschlossen, indem die nicht geänderten Bits der Assembly verwendet werden.  
   
  Ist die FROM-Klausel angegeben, aktualisiert ALTER ASSEMBLY die Assembly in Bezug auf die letzten Kopien der bereitgestellten Module. Da CLR-Funktionen, gespeicherte Prozeduren, Trigger, Datentypen und benutzerdefinierte Aggregatfunktionen in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorhanden sein können, die bereits für die Assembly definiert wurden, bindet ALTER ASSEMBLY diese Elemente erneut an die neueste Implementierung der Assembly. Für diese Neubindung müssen die Methoden, die den CLR-Funktionen, gespeicherten Prozeduren und Triggern zugeordnet sind, in der geänderten Assembly mit denselben Signaturen vorhanden sein. Die Klassen, die CLR-benutzerdefinierte Typen und benutzerdefinierte Aggregatfunktionen implementieren, müssen weiterhin die Anforderungen für den benutzerdefinierten Typ oder das benutzerdefinierte Aggregat erfüllen.  

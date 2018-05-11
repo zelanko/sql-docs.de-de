@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 05/24/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: polybase
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-polybase
+ms.technology: database
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - PolyBase
 - PolyBase, scale-out groups
 - scale-out PolyBase
 ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
 caps.latest.revision: 20
-author: barbkess
-ms.author: barbkess
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e20ca5840b78e36e31f80247f77686135db489f3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: afc1daa68b7d7be51f2227834e63533e3f1f78aa
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase-Erweiterungsgruppen
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,24 +36,24 @@ ms.lasthandoff: 04/16/2018
 ## <a name="overview"></a>Übersicht  
   
 ### <a name="head-node"></a>Hauptknoten  
- Der Hauptknoten enthält die SQL Server-Instanz, an die die PolyBase-Abfragen geschickt werden. Jede PolyBase-Gruppe kann nur einen Hauptknoten haben. Ein Hauptknoten ist eine logische Gruppe aus SQL-Datenbankmodul, PolyBase-Modul und PolyBase-Datenverschiebungsdienst auf der SQL Server-Instanz.  
+ Der Hauptknoten enthält die SQL Server-Instanz, an die die PolyBase-Abfragen geschickt werden. Jede PolyBase-Gruppe kann nur einen Hauptknoten haben. Ein Hauptknoten ist eine logische Gruppe aus SQL-Datenbank-Engine, PolyBase-Engine und PolyBase-Datenverschiebungsdienst auf der SQL Server-Instanz.  
   
 ### <a name="compute-node"></a>Computeknoten  
  Ein Computeknoten enthält die SQL Server-Instanz, die bei der Verarbeitung von Hochskalierungsabfragen für externe Daten hilft. Ein Computeknoten ist eine logische Gruppe aus SQL Server und dem PolyBase-Datenverschiebungsdienst auf der SQL Server-Instanz. Eine PolyBase-Gruppe kann mehrere Computeknoten umfassen.  Auf den Hauptknoten und den Computeknoten muss die gleiche Version von SQL Server ausgeführt werden.
   
 ### <a name="distributed-query-processing"></a>Verarbeiten verteilter Abfragen  
- PolyBase-Abfragen werden an den SQL Server auf dem Hauptknoten gesendet. Der Teil der Abfrage, der sich auf externe Tabellen bezieht, wird an das PolyBase-Modul übergeben.  
+ PolyBase-Abfragen werden an den SQL Server auf dem Hauptknoten gesendet. Der Teil der Abfrage, der sich auf externe Tabellen bezieht, wird an die PolyBase-Engine übergeben.  
   
- Das PolyBase-Modul ist die zentrale Komponente von PolyBase-Abfragen. Es analysiert die Abfrage an externen Daten, erstellt den Abfrageplan und gibt die Arbeit für die Ausführung an den Datenverschiebungsdienst auf den Computeknoten weiter. Nach Abschluss der Arbeit erhält es die Ergebnisse von den Computeknoten und übergibt sie an SQL Server für die Verarbeitung und die Rückgabe an den Client.  
+ Die PolyBase-Engine ist die zentrale Komponente von PolyBase-Abfragen. Es analysiert die Abfrage an externen Daten, erstellt den Abfrageplan und gibt die Arbeit für die Ausführung an den Datenverschiebungsdienst auf den Computeknoten weiter. Nach Abschluss der Arbeit erhält es die Ergebnisse von den Computeknoten und übergibt sie an SQL Server für die Verarbeitung und die Rückgabe an den Client.  
   
- Der PolyBase-Datenverschiebungsdienst erhält Anweisungen vom PolyBase-Modul und überträgt die Daten zwischen HDFS und SQL Server sowie zwischen SQL Server-Instanzen auf den Haupt- und Serverknoten.  
+ Der PolyBase-Datenverschiebungsdienst erhält Anweisungen von der PolyBase-Engine und überträgt die Daten zwischen HDFS und SQL Server sowie zwischen SQL Server-Instanzen auf den Haupt- und Serverknoten.  
   
 ### <a name="editions-availability"></a>Verfügbarkeit in den einzelnen Editionen  
  Nach dem Setup von SQL Server kann die Instanz entweder als Hauptknoten oder als Computeknoten festgelegt werden.  Die Wahl hängt davon ab, auf welcher Version von SQL Server PolyBase ausgeführt wird. In einer Installation der Enterprise-Version kann die Instanz entweder als Hauptknoten oder als Computeknoten festgelegt werden. Bei einer Standard Edition kann die Instanz nur als Computeknoten festgelegt werden.  
   
 ## <a name="to-configure-a-polybase-group"></a>So konfigurieren Sie eine PolyBase-Gruppe  
   
-### <a name="prerequisites"></a>Voraussetzungen  
+### <a name="prerequisites"></a>Erforderliche Komponenten  
   
 -   N Computer in der gleichen Domäne  
   
@@ -91,11 +88,11 @@ ms.lasthandoff: 04/16/2018
   
 2.  Wählen Sie auf der Seite für die Funktionsauswahl **PolyBase Query Service for External Data**(PolyBase-Abfragedienst für externe Daten) aus.  
   
-3.  Verwenden Sie das **Domänenkonto** PQTH4A\PolybaseUser für SQL Server PolyBase-Modul und SQL Server PolyBase-Datenverschiebungsdienst auf der Konfigurationsseite des Servers.  
+3.  Verwenden Sie das **Domänenkonto** PQTH4A\PolybaseUser für SQL Server PolyBase-Engine und SQL Server PolyBase-Datenverschiebungsdienst auf der Konfigurationsseite des Servers.  
   
 4.  Wählen Sie auf der PolyBase-Konfigurationsseite die Option **Use the SQL Server instance as part of a PolyBase scale-out group**(SQL Server-Instanz als Teil einer PolyBase-Erweiterungsgruppe verwenden). Dies öffnet die Firewall, um eingehende Verbindungen an die PolyBase-Dienste zuzulassen.  
   
-5.  Nachdem das Setup abgeschlossen ist, führen Sie **services.msc**aus. Überprüfen Sie, ob SQL Server, das PolyBase-Modul und der PolyBase-Datenverschiebungsdienst ausgeführt werden.  
+5.  Nachdem das Setup abgeschlossen ist, führen Sie **services.msc**aus. Überprüfen Sie, ob SQL Server, die PolyBase-Engine und der PolyBase-Datenverschiebungsdienst ausgeführt werden.  
   
      ![PolyBase-Dienste](../../relational-databases/polybase/media/polybase-services.png "PolyBase services")  
   
@@ -118,7 +115,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  Führen Sie „services.msc“ auf den Computeknoten (PQTH4A CMP02) aus.  
   
-4.  Fahren Sie das PolyBase-Modul herunter, und starten Sie den PolyBase-Datenverschiebedienst neu.  
+4.  Fahren Sie die PolyBase-Engine herunter, und starten Sie den PolyBase-Datenverschiebedienst neu.  
   
 #### <a name="optional-remove-a-compute-node"></a>Optional: Entfernen eines Computeknotens  
   
@@ -132,7 +129,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  Führen Sie „services.msc“ auf dem Computeknoten (PQTH4A CMP02) aus, der entfernt wird.  
   
-4.  Starten Sie das PolyBase-Modul. Starten Sie den SQL Server PolyBase-Datenverschiebungsdienst neu.  
+4.  Starten Sie die PolyBase-Engine. Starten Sie den SQL Server PolyBase-Datenverschiebungsdienst neu.  
   
 5.  Überprüfen Sie, ob der Knoten entfernt wurde, indem Sie die DMV „sys.dm_exec_compute_nodes“ auf PQTH4A CMP01 ausführen. Jetzt fungiert PQTH4A-CMP02 als eigenständiger Hauptknoten.  
   

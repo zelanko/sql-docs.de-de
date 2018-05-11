@@ -1,17 +1,15 @@
 ---
 title: PolyBase-Abfragen | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 12/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-polybase
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: database
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 keywords:
 - PolyBase
 helpviewer_keywords:
@@ -21,21 +19,20 @@ helpviewer_keywords:
 - Azure blob storage, import with PolyBase
 - Azure blob storage, export with PolyBase
 ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 18
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 332661e69cde4a1ca8ec55c4082e1b3a23077571
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: cc94681164ea07dac5ebc52afdfb7ebb273f6bb1
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="polybase-queries"></a>PolyBase-Abfragen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Dieser Artikel bietet Beispiele für Abfragen mit dem [PolyBase](../../relational-databases/polybase/polybase-guide.md)-Feature von SQL Server 2016. Bevor Sie diese Beispiele verwenden können, müssen Sie zudem die T-SQL-Anweisungen zum Einrichten von PolyBase verstehen (siehe [PolyBase T-SQL objects](../../relational-databases/polybase/polybase-t-sql-objects.md) [PolyBase T-SQL-Objekte]).
+  Dieser Artikel bietet Beispiele für Abfragen mit dem [PolyBase](../../relational-databases/polybase/polybase-guide.md)-Feature von SQL Server (ab 2016). Bevor Sie diese Beispiele verwenden können, müssen Sie zudem die T-SQL-Anweisungen zum Einrichten von PolyBase verstehen (siehe [PolyBase T-SQL objects](../../relational-databases/polybase/polybase-t-sql-objects.md) [PolyBase T-SQL-Objekte]).
   
 ## <a name="queries"></a>Abfragen  
  Führen Sie Transact-SQL-Anweisungen für externe Tabellen aus, oder verwenden Sie BI-Tools, um externe Tabellen abzufragen.
@@ -156,9 +153,10 @@ CREATE CLUSTERED COLUMNSTORE INDEX CCI_FastCustomers ON Fast_Customers;
 
 Exportieren von Daten aus SQL Server in Hadoop oder Azure Storage 
 
-Aktivieren Sie zunächst die Exportfunktion, indem Sie den Wert `sp_configure` von „allow polybase export“ auf 1 festlegen. Erstellen Sie anschließend eine externe Tabelle, die auf das Zielverzeichnis verweist. Verwenden Sie dann INSERT INTO zum Exportieren von Daten aus einer lokalen SQL Server-Tabelle in eine externe Datenquelle. 
+Aktivieren Sie zunächst die Exportfunktion, indem Sie den Wert `sp_configure` von „allow polybase export“ auf 1 festlegen. Erstellen Sie anschließend eine externe Tabelle, die auf das Zielverzeichnis verweist. Die Anweisung CREATE EXTERNAL TABLE erstellt das Zielverzeichnis, wenn dieses noch nicht vorhanden ist. Verwenden Sie dann INSERT INTO zum Exportieren von Daten aus einer lokalen SQL Server-Tabelle in die externe Datenquelle. 
 
-Die INSERT INTO-Anweisung erstellt das Zielverzeichnis, falls nicht vorhanden, und die Ergebnisse der SELECT-Anweisung werden zu einem angegebenen Speicherort im angegebenen Dateiformat exportiert. Die externen Dateien heißen *QueryID_date_time_ID.format*, wobei *ID* ein inkrementeller Bezeichner ist und *Format* das Format der exportierten Daten. Beispielsweise kann ein Dateiname „QID776_20160130_182739_0.orc“ lauten.
+Die Ergebnisse der SELECT-Anweisung werden an die angegebene Position im angegebenen Dateiformat exportiert. Die externen Dateien heißen *QueryID_date_time_ID.format*, wobei *ID* ein inkrementeller Bezeichner ist und *Format* das Format der exportierten Daten. Beispielsweise kann ein Dateiname „QID776_20160130_182739_0.orc“ lauten.
+
 
 > [!NOTE]
 > Beim Exportieren von Daten nach Hadoop oder Azure Blob Storage über PolyBase werden nur die Daten exportiert, nicht die Spaltennamen (Metadaten), wie im CREATE EXTERNAL TABLE-Befehl definiert.

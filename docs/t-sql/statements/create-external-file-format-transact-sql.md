@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 2/20/2018
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - PolyBase, external file format
 ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 caps.latest.revision: 25
-author: barbkess
-ms.author: barbkess
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 790c3bdce51c2359a9cc34aad4a51b4b2f199fd1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f478c5f06ff846d313625dc0792b33708a9ca358
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -189,23 +186,23 @@ Hinweise zur Tabelle:
   
 -   Die Angabe von AM oder PM (tt) ist nicht erforderlich. Der Standardwert ist AM.
   
-|Datumstyp|Beispiel|Description|  
+|Datumstyp|Beispiel|Beschreibung|  
 |---------------|-------------|-----------------|  
-|datetime|DATE_FORMAT = 'JJJJ-MM-TT HH:mm:ss.fff'|Neben dem Jahr, dem Monat und dem Tag umfasst dieses Datumsformat 00 bis 24 Stunden, 00 bis 59 Minuten, 00 bis 59 Sekunden und 3 Ziffern für Millisekunden.|  
-|datetime|DATE_FORMAT = 'JJJJ-MM-TT hh:mm:ss.ffftt'|Neben dem Jahr, dem Monat und dem Tag umfasst dieses Datumsformat 00 bis 12 Stunden, 00 bis 59 Minuten, 00 bis 59 Sekunden, 3 Ziffern für Millisekunden und AM bzw. am oder PM bzw. pm. |  
+|DateTime|DATE_FORMAT = 'JJJJ-MM-TT HH:mm:ss.fff'|Neben dem Jahr, dem Monat und dem Tag umfasst dieses Datumsformat 00 bis 24 Stunden, 00 bis 59 Minuten, 00 bis 59 Sekunden und 3 Ziffern für Millisekunden.|  
+|DateTime|DATE_FORMAT = 'JJJJ-MM-TT hh:mm:ss.ffftt'|Neben dem Jahr, dem Monat und dem Tag umfasst dieses Datumsformat 00 bis 12 Stunden, 00 bis 59 Minuten, 00 bis 59 Sekunden, 3 Ziffern für Millisekunden und AM bzw. am oder PM bzw. pm. |  
 |SmallDateTime|DATE_FORMAT = 'JJJJ-MM-TT HH:mm'|Neben dem Jahr, dem Monat und dem Tag umfasst dieses Datumsformat 00 bis 23 Stunden, 00 bis 59 Minuten.|  
 |SmallDateTime|DATE_FORMAT = 'JJJJ-MM-TT hh:mmtt'|Neben dem Jahr, dem Monat und dem Tag umfasst dieses Datumsformat 00 bis 11 Stunden, 00 bis 59 Minuten, keine Sekunden und AM bzw. am und PM bzw. pm.|  
-|date|DATE_FORMAT = 'JJJJ-MM-TT'|Jahr, Monat und Tag. Es ist kein Zeitelement enthalten.|  
-|date|DATE_FORMAT = 'JJJJ-MMM-TT'|Jahr, Monat und Tag. Wenn der Monat mit 3 Ms angegeben ist, steht der Eingabewert für eine der folgenden Zeichenfolgen: Jan, Feb, Mrz, Apr, Mai, Jun, Jul, Aug, Sep, Okt, Nov oder Dez.|  
-|datetime2|DATE_FORMAT = 'JJJJ-MM-TT HH:mm:ss.fffffff'|Neben dem Jahr, dem Monat und dem Tag umfasst dieses Datumsformat 00 bis 23 Stunden, 00 bis 59 Minuten, 00 bis 59 Sekunden und 7 Ziffern für Millisekunden.|  
-|datetime2|DATE_FORMAT = 'JJJJ-MM-TT hh:mm:ss.ffffffftt'|Neben dem Jahr, dem Monat und dem Tag umfasst dieses Datumsformat 00 bis 11 Stunden, 00 bis 59 Minuten, 00 bis 59 Sekunden, 7 Ziffern für Millisekunden und AM bzw. am oder PM bzw. pm.|  
+|Datum|DATE_FORMAT = 'JJJJ-MM-TT'|Jahr, Monat und Tag. Es ist kein Zeitelement enthalten.|  
+|Datum|DATE_FORMAT = 'JJJJ-MMM-TT'|Jahr, Monat und Tag. Wenn der Monat mit 3 Ms angegeben ist, steht der Eingabewert für eine der folgenden Zeichenfolgen: Jan, Feb, Mrz, Apr, Mai, Jun, Jul, Aug, Sep, Okt, Nov oder Dez.|  
+|DateTime2|DATE_FORMAT = 'JJJJ-MM-TT HH:mm:ss.fffffff'|Neben dem Jahr, dem Monat und dem Tag umfasst dieses Datumsformat 00 bis 23 Stunden, 00 bis 59 Minuten, 00 bis 59 Sekunden und 7 Ziffern für Millisekunden.|  
+|DateTime2|DATE_FORMAT = 'JJJJ-MM-TT hh:mm:ss.ffffffftt'|Neben dem Jahr, dem Monat und dem Tag umfasst dieses Datumsformat 00 bis 11 Stunden, 00 bis 59 Minuten, 00 bis 59 Sekunden, 7 Ziffern für Millisekunden und AM bzw. am oder PM bzw. pm.|  
 |DateTimeOffset|DATE_FORMAT = 'JJJJ-MM-TT HH:mm:ss.fffffff zzz'|Neben dem Jahr, dem Monat und dem Tag umfasst dieses Datumsformat 00 bis 23 Stunden, 00 bis 59 Minuten, 00 bis 59 Sekunden, 7 Ziffern für Millisekunden und den Offsetwert für die Zeitzone, den Sie als `{+&#124;-}HH:ss` in die Eingabedatei eingefügt haben. Da die Uhrzeit in Los Angeles beispielsweise ohne Umschaltung der Sommer-/Winterzeit 8 hinter UTC liegt, gibt der Wert -08:00 in der Eingabedatei die Zeitzone für Los Angeles an.|  
 |DateTimeOffset|DATE_FORMAT = 'JJJJ-MM-TT hh:mm:ss.ffffffftt zzz'|Neben dem Jahr, dem Monat und dem Tag umfasst dieses Datumsformat 00 bis 11 Stunden, 00 bis 59 Minuten, 00 bis 59 Sekunden, 7 Ziffern für Millisekunden, (AM bzw. am oder PM bzw. pm) und den Offsetwert für die Zeitzone. Eine Beschreibung finden Sie in der vorherigen Zeile.|  
 |Uhrzeit|DATE_FORMAT = 'HH:mm:ss'|Es ist kein Datumswert vorhanden, nur 00 bis 23 Stunden, 00 bis 59 Minuten und 00 bis 59 Sekunden.|  
   
  Alle unterstützten Datumsformate:
   
-|DATETIME|smalldatetime|date|datetime2|datetimeoffset|  
+|datetime|smalldatetime|Datum|datetime2|datetimeoffset|  
 |--------------|-------------------|----------|---------------|--------------------|  
 |[M[M]]M-[T]T-[JJ]JJ HH:mm:ss[.fff]|[M[M]]M-[T]T-[JJ]JJ HH:mm[:00]|[M[M]]M-[T]T-[JJ]JJ|[M[M]]M-[T]T-[JJ]JJ HH:mm:ss[.fffffff]|[M[M]]M-[T]T-[JJ]JJ HH:mm:ss[.fffffff] zzz|  
 |[M[M]]M-[T]T-[JJ]JJ hh:mm:ss[.fff][tt]|[M[M]]M-[T]T-[JJ]JJ hh:mm[:00][tt]||[M[M]]M-[T]T-[JJ]JJ hh:mm:ss[.fffffff][tt]|[M[M]]M-[T]T-[JJ]JJ hh:mm:ss[.fffffff][tt] zzz|  

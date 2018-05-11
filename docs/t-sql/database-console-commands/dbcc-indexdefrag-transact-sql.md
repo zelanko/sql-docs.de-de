@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 07/16/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
-ms.component: t-sql|database-console-commands
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -27,15 +24,14 @@ helpviewer_keywords:
 - index defragmenting [SQL Server]
 ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
 caps.latest.revision: 49
-author: barbkess
-ms.author: barbkess
+author: uc-msft
+ms.author: umajay
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 474be1cd3f0d81e6247cbbf69544ab8ca436274e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0421192834696a0fb6b785b3a3387507a3b9d827
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +73,7 @@ DBCC INDEXDEFRAG
  WITH NO_INFOMSGS  
  Unterdrückt alle Informationsmeldungen mit einem Schweregrad von 0 bis 10.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
 DBCC INDEXDEFRAG defragmentiert die Blattebene eines Indexes, sodass die physische Reihenfolge der Seiten mit der logischen Reihenfolge (von links nach rechts) der Blattknoten übereinstimmt. Dadurch wird die Leistung beim Durchsuchen des Indexes verbessert.
   
 > [!NOTE]  
@@ -93,7 +89,7 @@ Im Gegensatz zu DBCC DBREINDEX (oder der Indexerstellung allgemein) ist DBCC IND
   
 Die Defragmentierung wird immer vollständig protokolliert, unabhängig von der Einstellung des Datenbank-Wiederherstellungsmodells. Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md). Bei der Defragmentierung eines stark fragmentierten Indexes werden möglicherweise mehr Protokolleinträge erstellt als bei der Indexerstellung mit vollständiger Protokollierung. Die Defragmentierung wird jedoch als eine Reihe von kurzen Transaktionen ausgeführt und benötigt somit kein großes Protokoll, wenn häufig eine Protokollsicherung durchgeführt wird oder SIMPLE als Einstellung für das Wiederherstellungsmodell festgelegt ist.
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Einschränkungen  
 DBCC INDEXDEFRAG verschiebt Indexblattseiten an andere Stellen. Daher führt das Ausführen von DBCC INDEXDEFRAG für einen Index, der mit anderen Indizes auf dem Datenträger verzahnt ist, nicht dazu, dass die Blattseiten im Index zusammenhängen. Erstellen Sie den Index neu, um das Gruppieren von Seiten zu verbessern.
 DBCC INDEXDEFRAG kann nicht verwendet werden, um die folgenden Indizes zu defragmentieren:
 -   Deaktivierte Indizes  

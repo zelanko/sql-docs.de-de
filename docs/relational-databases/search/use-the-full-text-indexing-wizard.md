@@ -3,15 +3,13 @@ title: Verwenden des Volltextindizierungs-Assistenten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/19/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
+ms.prod_service: search, sql-database
 ms.component: search
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.fulltextindexingwizard.welcome.f1
 - sql13.swb.fulltextindexingwizard.selectorcreatepopschedules.f1
@@ -30,13 +28,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: be8a57c51f67af28d41968255e5296ba7b6966be
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f176dec2a4eca0cc313bd010729b5ba267ce6323
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Verwenden des Volltextindizierungs-Assistenten
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -92,10 +89,10 @@ ms.lasthandoff: 04/16/2018
  10. **Neuen Katalog erstellen**
  - Volltextkatalog auswählen  
   
-    A. **Name**  
+    a. **Name**  
      Geben Sie einen Namen für Ihren neuen Volltextkatalog ein.  
   
-     B. **Als Standardkatalog festlegen**  
+     b. **Als Standardkatalog festlegen**  
      Wählen Sie diese Option aus, um diesen Katalog als Standardkatalog für die Datenbank festzulegen.  
   
      c. **Unterscheidung nach Akzent**  
@@ -105,7 +102,7 @@ ms.lasthandoff: 04/16/2018
      Geben Sie die Dateigruppe an, für die der Volltextindex erstellt werden soll.  
   
      e. Wählen Sie einen Wert:  
-      |value|Description|  
+      |value|Beschreibung|  
       |-----------|-----------------|
       |**<default>**| Wenn die Tabelle oder Sicht nicht partitioniert ist, wählen Sie diese Option, um dieselbe Dateigruppe wie die zugrunde liegende Tabelle oder Sicht zu verwenden. Wenn die Tabelle oder Sicht partitioniert ist, wird die primäre Dateigruppe verwendet.|
       |**PRIMARY**|Wählen Sie diese Option, um die primäre Dateigruppe für den neuen Volltextindex zu verwenden.|
@@ -119,7 +116,7 @@ ms.lasthandoff: 04/16/2018
   
      Folgende Werte sind möglich:  
   
-   |value|Description|  
+   |value|Beschreibung|  
     |-----------|-----------------|  
     |**<system>**|Wählen Sie diese Option, um die Systemstoppliste für den neuen Volltextindex zu verwenden. Dies ist die Standardeinstellung.|  
     |**<off>**|Wählen Sie diese Option, um Stopplisten für den neuen Volltextindex zu deaktivieren.|  

@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -25,15 +23,14 @@ helpviewer_keywords:
 - message types [Service Broker], contracts
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 caps.latest.revision: 48
-author: barbkess
-ms.author: barbkess
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5a685fc43b0ce595c98deefb0eac73e1e077d2fc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 70191a58152cb2754a5713f452065324b8c2fa85
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +79,7 @@ CREATE CONTRACT contract_name
  [DEFAULT]  
  Gibt an, dass dieser Vertrag Nachrichten vom Standardnachrichtentyp unterstützt. Standardmäßig enthalten alle Datenbanken einen Nachrichtentyp namens DEFAULT. Dieser Nachrichtentyp verwendet NONE für die Überprüfung. Im Kontext dieser Klausel ist DEFAULT kein Schlüsselwort und muss als Bezeichner begrenzt sein. Microsoft SQL Server stellt auch einen DEFAULT-Vertrag bereit, der den Nachrichtentyp DEFAULT angibt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
  Die Reihenfolge von Nachrichtentypen im Vertrag ist nicht von Bedeutung. Nachdem das Ziel die erste Nachricht erhalten hat, ermöglicht [!INCLUDE[ssSB](../../includes/sssb-md.md)] beiden Seiten der Konversation, zu jeder Zeit Nachrichten zu senden, die für die jeweilige Konversationsseite zulässig sind. Kann der Initiator der Konversation beispielsweise den Nachrichtentyp **//Adventure-Works.com/Expenses/SubmitExpense** senden, ermöglicht [!INCLUDE[ssSB](../../includes/sssb-md.md)] dem Initiator das Senden beliebig vieler **SubmitExpense**-Nachrichten zu jeder Zeit im Verlauf der Konversation.  
   
  Die Nachrichtentypen und -richtungen in einem Vertrag können nicht geändert werden. Verwenden Sie die ALTER AUTHORIZATION-Anweisung, wenn Sie den Wert von AUTHORIZATION für einen Vertrag ändern möchten.  

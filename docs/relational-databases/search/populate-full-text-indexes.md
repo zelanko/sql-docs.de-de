@@ -3,15 +3,13 @@ title: Auffüllen von Volltextindizes | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
+ms.prod_service: search, sql-database
 ms.component: search
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - index populations [full-text search]
 - incremental populations [full-text search]
@@ -31,13 +29,12 @@ caps.latest.revision: 78
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1aaf0f00a3db140918df6988f13833251abcb9c1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 15619488c2b8d9f71423af9a0ca853b74ed5b12b
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="populate-full-text-indexes"></a>Auffüllen von Volltextindizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -56,7 +53,7 @@ Standardmäßig füllt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 -   Die vollständige Auffüllung kann einerseits eine deutliche Beanspruchung der Ressourcen bedeuten. Beim Erstellen eines Volltextindexes zu Zeiten mit hohen Lastwerten wird daher empfohlen, die vollständige Auffüllung bis zu einem späteren Zeitpunkt mit geringerer Auslastung zu verzögern, insbesondere, wenn die Basistabelle eines Volltextindexes sehr groß ist.
 -   Der Volltextkatalog ist andererseits bis zum Abschluss der vollständigen Auffüllung der zugehörigen Volltextindizes nicht verfügbar.
 
-Geben Sie in der `CREATE FULLTEXT INDEX`-Anweisung die `CHANGE_TRACKING OFF, NO POPULATION`-Klausel an, um einen Volltextindex zu erstellen, ohne ihn sofort aufzufüllen. Bei Angabe von `CHANGE_TRACKING MANUAL` füllt das Volltextmodul den neuen Volltextindex erst auf, wenn Sie eine `ALTER FULLTEXT INDEX`-Anweisung mithilfe der `START FULL POPULATION`- oder `START INCREMENTAL POPULATION`-Klausel ausführen. 
+Geben Sie in der `CREATE FULLTEXT INDEX`-Anweisung die `CHANGE_TRACKING OFF, NO POPULATION`-Klausel an, um einen Volltextindex zu erstellen, ohne ihn sofort aufzufüllen. Bei Angabe von `CHANGE_TRACKING MANUAL` füllt die Volltext-Engine den neuen Volltextindex erst auf, wenn Sie eine `ALTER FULLTEXT INDEX`-Anweisung mithilfe der `START FULL POPULATION`- oder `START INCREMENTAL POPULATION`-Klausel ausführen. 
 
 ### <a name="example---create-a-full-text-index-without-running-a-full-population"></a>Beispiel: Erstellen eines Volltextindexes ohne Ausführung der vollständigen Auffüllung  
  Im folgenden Beispiel wird ein Volltextindex für die `Production.Document` -Tabelle der `AdventureWorks` -Beispieldatenbank erstellt. In diesem Beispiel wird `WITH CHANGE_TRACKING OFF, NO POPULATION` verwendet, um die erste vollständige Auffüllung zu verzögern.  
@@ -102,7 +99,7 @@ Es gibt zwei Typen der Änderungsnachverfolgung:
   
 -   **Automatische Auffüllung**  
   
-     Das Volltextmodul verwendet standardmäßig die automatische Auffüllung für den Volltextindex oder bei Angabe von `CHANGE_TRACKING AUTO`. Nachdem die ursprüngliche vollständige Auffüllung abgeschlossen wurde, werden Änderungen nachverfolgt und automatisch weitergegeben, wenn Daten in der Basistabelle geändert werden. Der Volltextindex wird im Hintergrund aktualisiert. Die so weitergegebenen Änderungen werden u. U. jedoch nicht sofort im Index wiedergegeben.  
+     Die Volltext-Engine verwendet standardmäßig die automatische Auffüllung für den Volltextindex oder bei Angabe von `CHANGE_TRACKING AUTO`. Nachdem die ursprüngliche vollständige Auffüllung abgeschlossen wurde, werden Änderungen nachverfolgt und automatisch weitergegeben, wenn Daten in der Basistabelle geändert werden. Der Volltextindex wird im Hintergrund aktualisiert. Die so weitergegebenen Änderungen werden u. U. jedoch nicht sofort im Index wiedergegeben.  
   
      **Starten der Änderungsnachverfolgung mit automatischer Auffüllung**  
   
@@ -122,7 +119,7 @@ Es gibt zwei Typen der Änderungsnachverfolgung:
   
 -   **Manuelle Auffüllung**  
   
-     Wenn Sie CHANGE_TRACKING MANUAL angeben, verwendet das Volltextmodul die manuelle Auffüllung für den Volltextindex. Nachdem die ursprüngliche vollständige Auffüllung abgeschlossen wurde, werden Änderungen nachverfolgt, wenn Daten in der Basistabelle geändert werden. Sie werden jedoch nicht an den Volltextindex weitergegeben, bis Sie eine ALTER FULLTEXT INDEX … START UPDATE POPULATION -Anweisung anwenden. Sie können den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent verwenden, um die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung in regelmäßigen Abständen aufzurufen.  
+     Wenn Sie CHANGE_TRACKING MANUAL angeben, verwendet die Volltext-Engine die manuelle Auffüllung für den Volltextindex. Nachdem die ursprüngliche vollständige Auffüllung abgeschlossen wurde, werden Änderungen nachverfolgt, wenn Daten in der Basistabelle geändert werden. Sie werden jedoch nicht an den Volltextindex weitergegeben, bis Sie eine ALTER FULLTEXT INDEX … START UPDATE POPULATION -Anweisung anwenden. Sie können den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent verwenden, um die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung in regelmäßigen Abständen aufzurufen.  
   
      **So beginnen Sie die Änderungsnachverfolgung mit manueller Auffüllung**  
   
@@ -168,7 +165,7 @@ Es gibt zwei Typen der Änderungsnachverfolgung:
   
  Voraussetzung für die inkrementelle Auffüllung ist, dass die indizierte Tabelle eine Spalte vom Datentyp **timestamp** aufweist. Ist keine **timestamp** -Spalte vorhanden, kann die inkrementelle Auffüllung nicht ausgeführt werden.   
 
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet die Spalte **timestamp** , um Zeilen zu identifizieren, die sich seit der letzten Auffüllung geändert haben. Bei der inkrementellen Auffüllung wird der Volltextindex bezüglich der Zeilen aktualisiert, die seit der letzten Auffüllung oder während des letzten Auffüllungsvorgangs hinzugefügt, gelöscht oder geändert wurden. Am Ende einer Auffüllung wird vom Volltextsuchmodul ein neuer **timestamp** -Wert aufgezeichnet. Dieser Wert entspricht dem größten in SQL Gatherer gefundenen **Zeitstempel**-Wert. Der Wert wird verwendet, wenn die nachfolgende inkrementelle Auffüllung gestartet wird.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet die Spalte **timestamp** , um Zeilen zu identifizieren, die sich seit der letzten Auffüllung geändert haben. Bei der inkrementellen Auffüllung wird der Volltextindex bezüglich der Zeilen aktualisiert, die seit der letzten Auffüllung oder während des letzten Auffüllungsvorgangs hinzugefügt, gelöscht oder geändert wurden. Am Ende einer Auffüllung wird von der Volltext-Engine ein neuer **timestamp**-Wert aufgezeichnet. Dieser Wert entspricht dem größten in SQL Gatherer gefundenen **Zeitstempel**-Wert. Der Wert wird verwendet, wenn die nachfolgende inkrementelle Auffüllung gestartet wird.  
  
 In einigen Fällen führt die Anforderung für eine inkrementelle Auffüllung zu einer vollständigen Auffüllung.
 -   Eine Anforderung für eine inkrementelle Auffüllung für eine Tabelle ohne **timestamp** -Spalte führt zu einer vollständigen Auffüllung.
@@ -194,7 +191,7 @@ In einigen Fällen führt die Anforderung für eine inkrementelle Auffüllung zu
       
 1.  Wählen Sie im Bereich **Seite auswählen** **Zeitpläne** aus.  
   
-     Verwenden Sie diese Seite, um Zeitpläne für einen SQL Server-Agent-Auftrag zu erstellen oder zu verwalten, der eine inkrementelle Tabellenauffüllung für die Basistabelle oder indizierte Sicht eines Volltextindex beginnt.  
+     Verwenden Sie diese Seite, um Zeitpläne für einen SQL Server-Agent-Auftrag zu erstellen oder zu verwalten, der eine inkrementelle Tabellenauffüllung für die Basistabelle oder indizierte Sicht eines Volltextindex beginnt.  
 
      Folgende Optionen stehen zur Verfügung:  
   
@@ -228,7 +225,7 @@ Die variablen Teile des Durchforstungsprotokolldatei-Namens sind die folgenden.
 -   <**Volltext-Katalog-ID**>: Die ID eines Volltextkatalogs. <**catid**> ist eine fünfstellige Zahl mit führenden Nullen.  
 -   <**n**>: Ist eine ganze Zahl, die angibt, dass mindestens ein Durchforstungsprotokoll desselben Volltextkatalogs vorhanden ist.  
   
- `SQLFT0000500008.2` ist z.B. die Durchforstungsprotokolldatei für eine Datenbank mit der Datenbank-ID = 5 und der Volltextkatalog-ID = 8. Die 2 am Ende des Dateinamens gibt an, dass zwei Durchforstungsprotokolldateien für dieses Datenbank-Katalog-Paar vorhanden sind.  
+ `SQLFT0000500008.2` ist z.B. die Durchforstungsprotokolldatei für eine Datenbank mit der Datenbank-ID = 5 und der Volltextkatalog-ID = 8. Die 2 am Ende des Dateinamens gibt an, dass zwei Durchforstungsprotokolldateien für dieses Datenbank-Katalog-Paar vorhanden sind.  
 
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)   

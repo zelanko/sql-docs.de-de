@@ -1,17 +1,15 @@
 ---
-title: Grundlegendes zu Datenbankmodulfehlern | Microsoft-Dokumentation
+title: Grundlegendes zu Datenbank-Engine-Fehlern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: errors-events
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - errors [SQL Server], about errors
 - errors [SQL Server], Database Engine
@@ -19,26 +17,25 @@ helpviewer_keywords:
 - Database Engine [SQL Server], errors
 ms.assetid: ddaca9d3-956f-46a5-8cd3-a7a15ec75878
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cdd35c45e3e6828a9faf1da3ee78236791de372d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5deba5923535da8a349b5bc45b2c988f1190bc3e
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="understanding-database-engine-errors"></a>Grundlegendes zu Datenbankmodulfehlern
+# <a name="understanding-database-engine-errors"></a>Grundlegendes zu Datenbank-Engine-Fehlern
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ausgelöste Fehler weisen die in der folgenden Tabelle beschriebenen Attribute auf.  
   
-|attribute|Description|  
+|Attribut|Beschreibung|  
 |---------------|-----------------|  
 |Fehlernummer|Jede Fehlermeldung besitzt eine eindeutige Fehlernummer.|  
 |Fehlermeldungs-Zeichenfolge|Die Fehlermeldung enthält Diagnoseinformationen über die Ursache des Fehlers. Zahlreiche Fehlermeldungen haben Ersetzungsvariablen, in die Informationen, wie z. B. der Name des Objekts, das den Fehler generiert, eingefügt werden.|  
-|Schweregrad|Der Schweregrad zeigt an, wie schwerwiegend der Fehler ist. Fehler mit einem niedrigen Schweregrad, wie z. B. 1 oder 2, sind Informationsmeldungen oder Warnungen auf niedriger Ebene. Fehler mit einem hohen Schweregrad deuten auf Probleme hin, die so bald wie möglich behoben werden sollten. Weitere Informationen zu den Schweregraden finden Sie unter [Schweregrade von Datenbankmodulfehlern](../../relational-databases/errors-events/database-engine-error-severities.md).|  
+|Severity|Der Schweregrad zeigt an, wie schwerwiegend der Fehler ist. Fehler mit einem niedrigen Schweregrad, wie z. B. 1 oder 2, sind Informationsmeldungen oder Warnungen auf niedriger Ebene. Fehler mit einem hohen Schweregrad deuten auf Probleme hin, die so bald wie möglich behoben werden sollten. Weitere Informationen zu den Schweregraden finden Sie unter [Schweregrade von Datenbank-Engine-Fehlern](../../relational-databases/errors-events/database-engine-error-severities.md).|  
 |Status|Einige Fehlermeldungen können für mehrere Elemente im Code für [!INCLUDE[ssDE](../../includes/ssde-md.md)]ausgelöst werden. So kann z. B. der Fehler 1105 aufgrund verschiedener Bedingungen ausgelöst werden. Jeder Bedingung, die einen Fehler auslöst, wird ein eindeutiger Statuscode zugewiesen.<br /><br /> Beim Anzeigen von Datenbanken von bekannten Problemen, wie z. B. der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base, können Sie mithilfe der Statusnummer bestimmen, ob das aufgezeichnete Problem mit dem aufgetretenen Fehler übereinstimmt. Wenn z. B. ein Knowledge Base-Artikel den Fehler 1105 mit dem Status 2 erläutert und die von Ihnen empfangene Fehlermeldung 1105 den Status 3 aufwies, ist der Fehler möglicherweise auf eine andere als die im Artikel gemeldete Ursache zurückzuführen.<br /><br /> Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Software Service kann auch den Statuscode von einem Fehler verwenden, um den Ort im Quellcode zu finden, wo der Fehler entstanden ist. Diese Informationen stellen möglicherweise zusätzliche Ideen zur Problemdiagnose bereit.|  
 |Name der Prozedur|Ist der Name der gespeicherten Prozedur oder des Triggers, in der oder in dem der Fehler aufgetreten ist.|  
 |Zeilennummer|Zeigt an, welche Anweisung in einem Batch, einer gespeicherten Prozedur, einem Trigger oder einer Funktion den Fehler generiert hat.|  

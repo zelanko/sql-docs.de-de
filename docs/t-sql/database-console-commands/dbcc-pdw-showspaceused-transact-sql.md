@@ -6,26 +6,23 @@ ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.service: sql-data-warehouse
-ms.component: t-sql|database-console-commands
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 caps.latest.revision: 10
-author: barbkess
-ms.author: barbkess
+author: edmacauley
+ms.author: umajay
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fa831d374c6df3e25e2dfb7ede6f2fa13563de35
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b372a5cb516dbbeaa2732dfbfa676921d63708f3
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -56,23 +53,23 @@ Erfordert die VIEW SERVER STATE-Berechtigung.
 ## <a name="result-sets"></a>Resultsets  
 Im Folgenden wird das Resultset für alle Tabellen aufgeführt.
   
-|Spalte|Datentyp|Description|  
+|Spalte|Datentyp|Beschreibung|  
 |------------|---------------|-----------------|  
-|reserved_space|BIGINT|Insgesamt durch die Datenbank belegter Speicherplatz in KB.|  
-|data_space|BIGINT|Durch die Daten belegter Speicherplatz in KB.|  
-|index_space|BIGINT|Durch die Daten belegter Speicherplatz in KB.|  
-|unused_space|BIGINT|Speicherplatz in KB, der zum reservierten Speicherplatz gehört und nicht verwendet wird.|  
+|reserved_space|bigint|Insgesamt durch die Datenbank belegter Speicherplatz in KB.|  
+|data_space|bigint|Durch die Daten belegter Speicherplatz in KB.|  
+|index_space|bigint|Durch die Daten belegter Speicherplatz in KB.|  
+|unused_space|bigint|Speicherplatz in KB, der zum reservierten Speicherplatz gehört und nicht verwendet wird.|  
 |pdw_node_id|ssNoversion|Computeknoten, der für die Daten verwendet wird.|  
   
 Im Folgenden wird das Resultset für eine Tabelle aufgeführt.
   
-|Spalte|Datentyp|Description|Bereich|  
+|Spalte|Datentyp|Beschreibung|Bereich|  
 |------------|---------------|-----------------|-----------|  
-|rows|BIGINT|Anzahl von Zeilen.||  
-|reserved_space|BIGINT|Gesamtspeicherplatz in KB, der für das Objekt reserviert ist.||  
-|data_space|BIGINT|Durch die Daten belegter Speicherplatz in KB.||  
-|index_space|BIGINT|Durch die Daten belegter Speicherplatz in KB.||  
-|unused_space|BIGINT|Speicherplatz in KB, der zum reservierten Speicherplatz gehört und nicht verwendet wird.||  
+|rows|bigint|Anzahl von Zeilen.||  
+|reserved_space|bigint|Gesamtspeicherplatz in KB, der für das Objekt reserviert ist.||  
+|data_space|bigint|Durch die Daten belegter Speicherplatz in KB.||  
+|index_space|bigint|Durch die Daten belegter Speicherplatz in KB.||  
+|unused_space|bigint|Speicherplatz in KB, der zum reservierten Speicherplatz gehört und nicht verwendet wird.||  
 |pdw_node_id|ssNoversion|Computeknoten, der zum Erstellen von Berichten zum Speicherplatz verwendet wird.||  
 |distribution_id|ssNoversion|Verteilung, die zum Erstellen von Berichten zum Speicherplatz verwendet wird.|Der Wert für replizierte Tabellen ist –1.|  
   

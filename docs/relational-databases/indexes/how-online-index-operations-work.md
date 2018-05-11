@@ -4,9 +4,9 @@ ms.custom: ''
 ms.date: 02/17/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - online index operations
 - source indexes [SQL Server]
@@ -16,20 +16,18 @@ helpviewer_keywords:
 - index temporary mappings [SQL Server]
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
 caps.latest.revision: 28
-author: barbkess
-ms.author: barbkess
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ms.suite: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: indexes
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 72625d173021cb8bd543edd7930e5a38e0c30020
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b863b7f22b87b35fdec90812170aad1e4121b433
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-online-index-operations-work"></a>Funktionsweise von Onlineindexvorgängen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -75,7 +73,7 @@ ms.lasthandoff: 04/18/2018
   
  ** Die Ressourcensperre INDEX_BUILD_INTERNAL_RESOURCE verhindert die Ausführung gleichzeitiger DDL-Vorgänge für die Quelle und bereits vorhandene Strukturen, während der Indexvorgang ausgeführt wird. Diese Sperre verhindert beispielsweise die gleichzeitige Neuerstellung zweier Indizes für dieselbe Tabelle. Obwohl diese Ressourcensperre der Sch-M-Sperre zugeordnet ist, verhindert sie keine Datenbearbeitungsanweisungen.  
   
- Die vorherige Tabelle zeigt eine einzelne freigegebene Sperre (Shared, S) an, die während der Erstellungsphase eines Onlineindexvorgangs, der einen einzelnen Index einschließt, eingerichtet wurde. Wenn gruppierte und nicht gruppierte Indizes erstellt oder neu erstellt werden, werden bei einem einzelnen Onlineindexvorgang (z. B. während der anfänglichen Erstellung eines gruppierten Indexes für eine Tabelle, die einen oder mehrere nicht gruppierte Indizes enthält) zwei kurzfristige S-Sperren gefolgt von langfristigen beabsichtigten gemeinsamen Sperren (IS-Sperren) während der Erstellungsphase eingerichtet. Eine S-Sperre wird zunächst für die Erstellung des gruppierten Indexes eingerichtet, und wenn die Erstellung des gruppierten Indexes abgeschlossen ist, wird eine zweite kurzfristige S-Sperre für die Erstellung der nicht gruppierten Indizes eingerichtet. Nachdem die nicht gruppierten Indizes erstellt wurden, wird die S-Sperre bis zur Endphase des Onlineindexvorgangs auf eine IS-Sperre herabgestuft.  
+ Die vorherige Tabelle zeigt eine einzelne freigegebene Sperre (Shared, S) an, die während der Erstellungsphase eines Onlineindexvorgangs, der einen einzelnen Index einschließt, eingerichtet wurde. Wenn gruppierte und nicht gruppierte Indizes erstellt oder neu erstellt werden, werden bei einem einzelnen Onlineindexvorgang (z. B. während der anfänglichen Erstellung eines gruppierten Indexes für eine Tabelle, die einen oder mehrere nicht gruppierte Indizes enthält) zwei kurzfristige S-Sperren gefolgt von langfristigen beabsichtigten gemeinsamen Sperren (IS-Sperren) während der Erstellungsphase eingerichtet. Eine S-Sperre wird zunächst für die Erstellung des gruppierten Indexes eingerichtet, und wenn die Erstellung des gruppierten Indexes abgeschlossen ist, wird eine zweite kurzfristige S-Sperre für die Erstellung der nicht gruppierten Indizes eingerichtet. Nachdem die nicht gruppierten Indizes erstellt wurden, wird die S-Sperre bis zur Endphase des Onlineindexvorgangs auf eine IS-Sperre herabgestuft.  
   
 ### <a name="target-structure-activities"></a>Zielstrukturaktivitäten  
  Die folgende Tabelle enthält die Aktivitäten in Bezug auf die Zielstrukturen während der einzelnen Phasen des Indexvorgangs und die entsprechende Sperrstrategie.  

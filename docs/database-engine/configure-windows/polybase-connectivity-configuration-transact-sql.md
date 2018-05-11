@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 08/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: ''
-ms.component: configure-windows
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - PolyBase
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
 caps.latest.revision: 14
-author: barbkess
-ms.author: barbkess
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9317c064d5d083cbe2cf41f3ecd936f16c128277
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: bb82ed8c4a4dc7c881ac2b94dee9ea88ce009858
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>Konfiguration der PolyBase-Netzwerkkonnektivität (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -90,7 +86,7 @@ RECONFIGURE
  **RECONFIGURE**  
  Aktualisiert den Ausführungswert (run_value), damit er mit dem Konfigurationswert (config_value) übereinstimmt. Definitionen von „run_value“ und „config_value“ finden Sie unter [Resultsets](#ResultSets) . Der neue Konfigurationswert, der von sp_configure festgelegt wird, wird erst dann wirksam, wenn der Ausführungswert durch die RECONFIGURE-Anweisung festgelegt wird.  
   
- Nach der Ausführung von RECONFIGURE müssen Sie den SQL Server-Dienst beenden und neu starten. Beachten Sie, dass beim Beenden des SQL Server-Diensts die zwei zusätzlichen PolyBase-Modul- und Datenverschiebungsdienste automatisch beendet werden. Starten Sie diese zwei Dienste nach dem Neustart des SQL Server-Moduldiensts neu (sie starten nicht automatisch).  
+ Nach der Ausführung von RECONFIGURE müssen Sie den SQL Server-Dienst beenden und neu starten. Beachten Sie, dass beim Beenden des SQL Server-Diensts die zwei zusätzlichen PolyBase-Engine- und Datenverschiebungsdienste automatisch beendet werden. Starten Sie diese zwei Dienste nach dem Neustart des SQL Server-Engine-Diensts neu (sie starten nicht automatisch).  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -98,7 +94,7 @@ RECONFIGURE
 ##  <a name="ResultSets"></a> Resultsets  
  Bei der Ausführung ohne Parameter gibt **sp_configure** ein Resultset mit fünf Spalten zurück.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(35)**|Der Name der Konfigurationsoption.|  
 |**minimum**|**int**|Der Mindestwert der Konfigurationsoption.|  

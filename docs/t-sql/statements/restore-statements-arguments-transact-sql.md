@@ -1,16 +1,14 @@
 ---
 title: RESTORE-Argumente (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 09/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - RESTORE statement, arguments
 - RESTORE statement
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 154
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: db010db48a42113c147751021404ac0dbc29ecaf
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f16195a10c186e406571f65d8d79e2809f23dbad
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE-Anweisungen – Argumente (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +69,7 @@ ms.lasthandoff: 01/25/2018
  { *database_name* | **@***database_name_var*}  
  **Unterstützt durch:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
- Dies ist die Datenbank, in die das Protokoll oder die vollständige Datenbank wiederhergestellt wird. Wird das Argument in Form einer Variablen angegeben (**@***database_name_var*), kann dieser Name entweder als Zeichenfolgenkonstante (**@***database_name_var* = *database*_*name*) oder als Variable eines Zeichenfolgen-Datentyps (mit Ausnahme des Datentyps **ntext** oder **text**) angegeben werden.  
+ Dies ist die Datenbank, in die das Protokoll oder die vollständige Datenbank wiederhergestellt wird. Wird das Argument in Form einer Variablen angegeben (**@***database_name_var*), kann dieser Name entweder als Zeichenfolgenkonstante (**@***database_name_var* = *database*_* name*) oder als Variable eines Zeichenfolgen-Datentyps (mit Ausnahme des Datentyps **ntext** oder **text**) angegeben werden.  
   
  \<file_or_filegroup_or_page> [ **,**...*n* ]  
  **Unterstützt durch:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -98,7 +95,7 @@ FILEGROUP **=** { *logical_filegroup_name* | **@***logical_filegroup_name_var* }
 READ_WRITE_FILEGROUPS  
  Wählt alle Dateigruppen mit Lese-/Schreibzugriff aus. Diese Option ist besonders hilfreich, wenn Sie schreibgeschützte Dateigruppen nach der Wiederherstellung von Dateigruppen mit Lese-/Schreibzugriff wiederherstellen möchten.  
   
-PAGE = **'***file***:***page* [ **,**...*n* ]**'**  
+PAGE = **'***file***:***page* [ **,**...* n* ]**'**  
  Gibt eine Liste mit mindestens einer Seite für eine Seitenwiederherstellung an. Diese wird nur für Datenbanken unterstützt, die das vollständige oder massenprotokollierte Wiederherstellungsmodell verwenden. Mit den Parametern werden folgende Werte angegeben:  
   
 PAGE  
@@ -135,7 +132,7 @@ FROM { \<backup_device> [ **,**...*n* ]| \<database_snapshot> } Gibt normalerwei
   
  { *logical_backup_device_name* | **@***logical_backup_device_name_var* } Der logische Name, der von **sp_addumpdevice** erstellten Sicherungsmedien, von denen die Datenbank wiederhergestellt wird. Der Name muss den Regeln für Bezeichner entsprechen. Bei der Angabe als Variable (**@***logical_backup_device_name_var*) kann der Name des Sicherungsmediums entweder als Zeichenfolgenkonstante (**@***logical_backup_device_name_var* = *logical_backup_device_name*) oder als Variable eines Zeichenfolgen-Datentyps (mit Ausnahme der Datentypen **ntext** oder **text**) angegeben werden.  
   
- {DISK | TAPE } **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* } Ermöglicht die Wiederherstellung von Sicherungen vom angegebenen Datenträger oder vom Bandmedium. Die Gerätetypen von Datenträgern und Bändern sollten durch die tatsächlichen Namen des Geräts angegeben werden (z.B. vollständiger Pfad und Dateiname): `DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` oder `TAPE ='\\\\.\TAPE0'`. Bei der Angabe als Variable (**@***physical_backup_device_name_var*) kann der Name des Geräts entweder als Zeichenfolgenkonstante (**@***physical_backup_device_name_var* = '*physcial_backup_device_name*') oder als Variable eines Zeichenfolgen-Datentyps (mit Ausnahme der Datentypen **ntext** oder **text**) angegeben werden.  
+ {DISK | TAPE } **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* } Ermöglicht die Wiederherstellung von Sicherungen vom angegebenen Datenträger oder vom Bandmedium. Die Gerätetypen von Datenträgern und Bändern sollten durch die tatsächlichen Namen des Geräts angegeben werden (z.B. vollständiger Pfad und Dateiname): `DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` oder `TAPE ='\\\\.\TAPE0'`. Bei der Angabe als Variable (**@***physical_backup_device_name_var*) kann der Name des Geräts entweder als Zeichenfolgenkonstante (**@***physical_backup_device_name_var* = '* physcial_backup_device_name*') oder als Variable eines Zeichenfolgen-Datentyps (mit Ausnahme der Datentypen **ntext** oder **text**) angegeben werden.  
   
  Wenn Sie einen Netzwerkserver mit einem UNC-Namen (der einen Computernamen enthalten muss) verwenden, geben Sie die Geräteart Datenträger (DISK) an. Weitere Informationen zur Verwendung von UNC-Namen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
@@ -354,7 +351,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
   
  Gibt die Gesamtanzahl von E/A-Puffern an, die für den Wiederherstellungsvorgang verwendet werden sollen. Sie können eine beliebige positive ganze Zahl angeben. Eine große Pufferanzahl kann jedoch wegen eines ungeeigneten virtuellen Adressraumes im Prozess Sqlservr.exe zu Fehlern aufgrund von nicht genügend Arbeitsspeicher führen.  
   
- Der gesamte von den Puffern belegte Speicherplatz wird durch *buffercount***\****maxtransfersize* bestimmt.  
+ Der gesamte von den Puffern belegte Speicherplatz wird durch *buffercount***\**** maxtransfersize* bestimmt.  
   
  MAXTRANSFERSIZE **=** { *maxtransfersize* | **@***maxtransfersize_variable* }  
  **Unterstützt durch:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -511,7 +508,7 @@ Verwenden Sie KEEP_REPLICATION, wenn eine Replikation für die Verwendung von Pr
   
  Informationen finden Sie unter [Wiederherstellen einer SQL Server-Datenbank auf einen Zeitpunkt &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
- STOPATMARK **=** { **'***mark_name***'** | **'**lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
+ STOPATMARK **=** { **'***mark_name***'** | **'** lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
  Gibt die Wiederherstellung bis zu einem bestimmten Wiederherstellungspunkt an. Die angegebene Transaktion wird in die Wiederherstellung eingeschlossen. Es wird jedoch nur dann ein Commit für die Transaktion ausgeführt, wenn auch für die ursprünglich generierte Transaktion ein Commit ausgeführt wurde.  
   
  Sowohl für RESTORE DATABASE als auch für RESTORE LOG wird der *lsn_number*-Parameter unterstützt. Mit diesem Parameter wird eine Protokollfolgenummer angegeben.  
@@ -525,7 +522,7 @@ Verwenden Sie KEEP_REPLICATION, wenn eine Replikation für die Verwendung von Pr
   
  Weitere Informationen finden Sie unter [Wiederherstellen von verwandten Datenbanken mithilfe von markierten Transaktionen &#40;Vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md) und unter [Wiederherstellen einer Protokollfolgenummer &#40;SQL Server&#41;](../../relational-databases/backup-restore/recover-to-a-log-sequence-number-sql-server.md).  
   
- STOPBEFOREMARK **=** { **'***mark_name***'** | **'**lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
+ STOPBEFOREMARK **=** { **'***mark_name***'** | **'** lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
  Gibt die Wiederherstellung bis zu einem bestimmten Wiederherstellungspunkt an. Die angegebene Transaktion wird nicht in die Wiederherstellung aufgenommen, und es wird ein Rollback für sie ausgeführt, wenn WITH RECOVERY verwendet wird.  
   
  Sowohl für RESTORE DATABASE als auch für RESTORE LOG wird der *lsn_number*-Parameter unterstützt. Mit diesem Parameter wird eine Protokollfolgenummer angegeben.  
@@ -546,7 +543,7 @@ Verwenden Sie KEEP_REPLICATION, wenn eine Replikation für die Verwendung von Pr
   
 -   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
  Zusätzliche Hinweise finden Sie in den folgenden Themen:  
   
 -   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -570,7 +567,7 @@ Verwenden Sie KEEP_REPLICATION, wenn eine Replikation für die Verwendung von Pr
   
  Das Verhalten der Option hängt von der Anweisung ab, wie in der folgenden Tabelle beschrieben:  
   
-|-Anweisung.|Verhalten der Sicherungssatzoption FILE|  
+|Statement|Verhalten der Sicherungssatzoption FILE|  
 |---------------|-----------------------------------------|  
 |RESTORE|Der Standardwert für die Sicherungssatz-Dateinummer ist 1. In einer RESTORE-Anweisung ist nur eine einzelne Sicherungssatzoption FILE zulässig. Es ist wichtig, dass Sicherungssätze in der richtigen Reihenfolge angegeben werden.|  
 |RESTORE FILELISTONLY|Der Standardwert für die Sicherungssatz-Dateinummer ist 1.|  
