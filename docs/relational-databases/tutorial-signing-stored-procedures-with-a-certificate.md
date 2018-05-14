@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
@@ -21,12 +20,11 @@ caps.latest.revision: 11
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a072ff22eedd74f4bb1c6e05ad0217a89a3c388f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b0cfd18b508f13499ce5cf7bdf4cc12be4440562
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>Lernprogramm: Signieren von gespeicherten Prozeduren mit einem Zertifikat
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -119,7 +117,7 @@ ADD SIGNATURE TO TestCreditRatingSP
 GO  
 ```  
   
-Weitere Informationen zum Aufrufen von gespeicherten Prozeduren finden Sie unter [Gespeicherte Prozeduren &#40;Datenbankmodul&#41;](../relational-databases/stored-procedures/stored-procedures-database-engine.md).  
+Weitere Informationen zum Aufrufen von gespeicherten Prozeduren finden Sie unter [Gespeicherte Prozeduren &amp;#40;Datenbank-Engine&amp;#41;](../relational-databases/stored-procedures/stored-procedures-database-engine.md).  
   
 Weitere Informationen zum Signieren von gespeicherten Prozeduren finden Sie unter [ADD SIGNATURE &#40;Transact-SQL&#41;](../t-sql/statements/add-signature-transact-sql.md).  
   
@@ -299,7 +297,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
-[Sicherheitscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+
+  [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
   

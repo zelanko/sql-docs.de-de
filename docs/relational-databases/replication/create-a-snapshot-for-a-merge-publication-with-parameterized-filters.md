@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 05/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameterized filters [SQL Server replication], snapshots
 - snapshots [SQL Server replication], parameterized filters and
@@ -21,12 +20,11 @@ caps.latest.revision: 45
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4f86115fb622f48f9bdb36e276d4c4d8f4f4059f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: cb2fb7f8a2a7519e89d05259e2723ccb700be6cf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Erstellen einer Momentaufnahme für eine Mergeveröffentlichung mit parametrisierten Filtern
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,7 +122,7 @@ ms.lasthandoff: 04/16/2018
 2.  Führen Sie auf dem Verleger [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) aus. Geben Sie den in Schritt 1 verwendeten Veröffentlichungsnamen für **@publication** und die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldeinformationen, unter denen der [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md) ausgeführt wird, für **@job_login** und **@password**. Wenn der Agent zum Herstellen der Verbindung mit dem Verleger die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwendet, müssen Sie zudem den Wert **0** für **@publisher_security_mode** und die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen für **@publisher_login** und **@publisher_password**. Dadurch wird ein Auftrag des Momentaufnahme-Agents für die Veröffentlichung erstellt. Weitere Informationen darüber, wie eine Anfangsmomentaufnahme generiert und ein benutzerdefinierter Zeitplan für den Momentaufnahme-Agent definiert wird, finden Sie unter [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
     > [!IMPORTANT]  
-    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zum Datenbankmodul &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp;#40;SQL Server-Konfigurations-Manager&amp;#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 3.  Führen Sie [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) aus, um der Veröffentlichung Artikel hinzuzufügen. Diese gespeicherte Prozedur muss einmal für jeden Artikel in der Veröffentlichung ausgeführt werden. Wenn Sie parametrisierte Filter verwenden, müssen Sie mithilfe des Parameters **@subset_filterclause** einen parametrisierten Filter für einen oder mehrere Artikel angeben. Weitere Informationen finden Sie unter [Define and Modify a Parameterized Row Filter for a Merge Article](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
@@ -139,7 +137,7 @@ ms.lasthandoff: 04/16/2018
 2.  Führen Sie auf dem Verleger [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) aus. Geben Sie den in Schritt 1 verwendeten Veröffentlichungsnamen für **@publication** und die Windows-Anmeldeinformationen, unter denen der Momentaufnahme-Agent ausgeführt wird, für **@job_login** und **@password**. Wenn der Agent zum Herstellen der Verbindung mit dem Verleger die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwendet, müssen Sie zudem den Wert **0** für **@publisher_security_mode** und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen für **@publisher_login** und **@publisher_password**. Dadurch wird ein Auftrag des Momentaufnahme-Agents für die Veröffentlichung erstellt. Weitere Informationen darüber, wie eine Anfangsmomentaufnahme generiert und ein benutzerdefinierter Zeitplan für den Momentaufnahme-Agent definiert wird, finden Sie unter [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
     > [!IMPORTANT]  
-    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zum Datenbankmodul &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp;#40;SQL Server-Konfigurations-Manager&amp;#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 3.  Führen Sie [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) aus, um der Veröffentlichung Artikel hinzuzufügen. Diese gespeicherte Prozedur muss einmal für jeden Artikel in der Veröffentlichung ausgeführt werden. Wenn Sie parametrisierte Filter verwenden, müssen Sie mithilfe des Parameters **@subset_filterclause** einen parametrisierten Filter für einen oder mehrere Artikel angeben. Weitere Informationen finden Sie unter [Define and Modify a Parameterized Row Filter for a Merge Article](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
@@ -171,7 +169,7 @@ ms.lasthandoff: 04/16/2018
 2.  Führen Sie auf dem Verleger [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) aus. Geben Sie den in Schritt 1 verwendeten Veröffentlichungsnamen für **@publication** und die Windows-Anmeldeinformationen, unter denen der Momentaufnahme-Agent ausgeführt wird, für **@job_login** und **@password**. Wenn der Agent zum Herstellen der Verbindung mit dem Verleger die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwendet, müssen Sie zudem den Wert **0** für **@publisher_security_mode** und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen für **@publisher_login** und **@publisher_password**. Dadurch wird ein Auftrag des Momentaufnahme-Agents für die Veröffentlichung erstellt. Weitere Informationen darüber, wie eine Anfangsmomentaufnahme generiert und ein benutzerdefinierter Zeitplan für den Momentaufnahme-Agent definiert wird, finden Sie unter [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
     > [!IMPORTANT]  
-    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zum Datenbankmodul &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp;#40;SQL Server-Konfigurations-Manager&amp;#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 3.  Führen Sie [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) aus, um der Veröffentlichung Artikel hinzuzufügen. Diese gespeicherte Prozedur muss einmal für jeden Artikel in der Veröffentlichung ausgeführt werden. Wenn Sie parametrisierte Filter verwenden, müssen Sie mithilfe des Parameters **@subset_filterclause** einen parametrisierten Filter für einen oder mehrere Artikel angeben. Weitere Informationen finden Sie unter [Define and Modify a Parameterized Row Filter for a Merge Article](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
@@ -311,7 +309,7 @@ PAUSE
 5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> -Methode auf, um die Veröffentlichung zu erstellen.  
   
     > [!IMPORTANT]  
-    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Eigenschaften einschließlich <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie die <xref:Microsoft.SqlServer.Replication.Publication.Create%2A>-Methode aufrufen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zum Datenbankmodul &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Eigenschaften einschließlich <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie die <xref:Microsoft.SqlServer.Replication.Publication.Create%2A>-Methode aufrufen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp;#40;SQL Server-Konfigurations-Manager&amp;#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 6.  Verwenden Sie die <xref:Microsoft.SqlServer.Replication.MergeArticle> -Eigenschaft, um der Veröffentlichung Artikel hinzuzufügen. Geben Sie die <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> -Eigenschaft für wenigstens einen Artikel an, der den parametrisierten Filter definiert. (Optional) Erstellen Sie <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> -Objekte, die Joinfilter zwischen Artikeln definieren. Weitere Informationen finden Sie unter [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
   

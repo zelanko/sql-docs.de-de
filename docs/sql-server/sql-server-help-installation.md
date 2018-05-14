@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 12/15/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.service: ''
 ms.component: sql-non-specified
 ms.technology: server-general
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 - SQL Server 2016
@@ -20,12 +19,11 @@ caps.latest.revision: 8
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2e809edd12049ed249500b4662495a82ece748df
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 3d00aa3a4085b17f8fcc40fc9317b8acd77e5998
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Offlinehilfe und Help Viewer für SQL Server
 
@@ -105,7 +103,7 @@ SSMS 17.x und VS 2015 und 2017 verwenden Help Viewer 2.x. Diese Version unterst�
 |SQL Server unter Linux | SQL Server unter Linux|
 |Technische Dokumentation zu SQL Server | Technische Dokumentation für SQL Server (SSIS, SSRS, Datenbank-Engine, Setup)|
 |Tools und Hilfsprogramme für Azure SQL-Datenbank | SQL Server-Tools|
-|Transact-SQL-Referenz (Datenbankmodul) | Transact-SQL-Referenz|
+|Transact-SQL-Referenz (Datenbank-Engine) | Transact-SQL-Referenz|
 |XQuery-Sprachreferenz (SQL Server) | XQuery-Sprachreferenz (SQL Server)|
 
 > [!NOTE]

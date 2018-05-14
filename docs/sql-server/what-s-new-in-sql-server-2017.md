@@ -4,26 +4,24 @@ ms.custom: ''
 ms.date: 10/19/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.service: ''
 ms.component: sql-non-specified
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - server-general
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 caps.latest.revision: 71
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.workload: Active
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 386ab67ce1196af9cec19c6daf9149dc051915f1
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 3c433301c633813fb5d04f95ec5e2dd14a85bc6c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Neues in SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -34,9 +32,9 @@ SQL Server 2017 stellt einen wichtigen Schritt dar, um SQL Server zu einer Platt
 > [!NOTE]
 > Zusätzlich zu den nachfolgenden Änderungen werden kumulative Updates in regelmäßigen Abständen nach dem allgemein verfügbaren Release veröffentlicht. Diese kumulativen Updates enthalten viele Verbesserungen und Fehlerbehebungen. Weitere Informationen zu den aktuellen kumulativen Updates finden Sie unter [SQL Server 2017 Cumulative updates (Kumulative Updates für SQL Server 2017)](http://aka.ms/sql2017cu).
 
-## <a name="sql-server-2017-database-engine"></a>SQL Server 2017-Datenbankmodul
+## <a name="sql-server-2017-database-engine"></a>SQL Server 2017-Datenbank-Engine
 
-SQL Server-2017 umfasst viele neue Datenbankmodulfunktionen, Verbesserungen und Leistungsverbesserungen. 
+SQL Server-2017 umfasst viele neue Datenbank-Engine-Funktionen, Verbesserungen und Leistungsverbesserungen. 
 - **CLR-Assemblys** können jetzt einer Positivliste hinzugefügt werden, als Problemumgehung für die in CTP 2.0 beschriebene Funktion `clr strict security`. [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) und [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) wurden hinzugefügt, um die Positivliste von vertrauenswürdigen Assemblys zu unterstützen (RC1).  
 - **Fortsetzbare Online-Indexneuerstellung** setzt den Vorgang einer Online-Indexneuerstellung dort fort, wo es nach einem Fehler aufgehört hat (z.B. einem Failover in einem Replikat oder nicht genügend Speicherplatz), oder es pausiert und der Vorgang einer Online-Indexneuerstellung wird später fortgeführt. Finden Sie unter [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) und [Richtlinien für Onlineindexvorgänge](../relational-databases/indexes/guidelines-for-online-index-operations.md). (CTP 2.0)
 - Mit der Option **IDENTITY_CACHE** für ALTER DATABASE SCOPED CONFIGURATION können Sie Lücken in den Werten von Identitätsspalten vermeiden, wenn ein Server unerwartet neu startet oder ein Failover zu einem sekundären Server ausführt. Finden Sie unter [ALTER ausgelegte DATENBANKKONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). (CTP 2.0)

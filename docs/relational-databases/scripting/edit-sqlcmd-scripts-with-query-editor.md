@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scripts [SQL Server], SQLCMD scripts
 - SQLCMD scripts
@@ -23,13 +21,12 @@ caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 383564a5aed33b7263c0c4ade4b0339f9afbfe87
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: eea43371071a0664c5aece98541cc37977c4867f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Bearbeiten von SQLCMD-Skripts mit dem Abfrage-Editor
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +53,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="enable-sqlcmd-scripting-in-query-editor"></a>Aktivieren von SQLCMD-Skripts im Abfrage-Editor  
  Verwenden Sie das folgende Verfahren, um die SQLCMD-Skripterstellung für ein aktives Fenster des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editors zu aktivieren.  
   
-#### <a name="to-switch-a-database-engine-query-editor-window-to-sqlcmd-mode"></a>So wechseln Sie in einem Abfrage-Editorfenster des Datenbankmoduls in den SQLCMD-Modus  
+#### <a name="to-switch-a-database-engine-query-editor-window-to-sqlcmd-mode"></a>So wechseln Sie in einem Abfrage-Editorfenster der Datenbank-Engine in den SQLCMD-Modus  
   
 1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf den Server, und klicken Sie dann auf **Neue Abfrage**, um ein neues [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editorfenster zu öffnen.  
   

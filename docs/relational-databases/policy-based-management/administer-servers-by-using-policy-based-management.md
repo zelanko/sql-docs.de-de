@@ -1,17 +1,16 @@
 ---
 title: Verwalten von Servern mit der richtlinienbasierten Verwaltung | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 08/12/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - facet See facets
 - Declarative Management Framework See Policy-Based Management
@@ -23,19 +22,19 @@ helpviewer_keywords:
 - facets [Policy-Based Management], about facets
 - PolicyAdministratorRole role
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
-caps.latest.revision: 
+caps.latest.revision: 76
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 928ac23212fc1941db34ee409d6adec44142b79e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 8bd3cc266d1f706179c6627316dcd8dfcdcf4a09
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Verwalten von Servern mit der richtlinienbasierten Verwaltung
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Richtlinienbasierte Verwaltung ist ein richtlinienbasiertes System zum Verwalten einer oder mehrerer Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Verwenden Sie diese, um Bedingungen zu erstellen, die Bedingungsausdrücke enthalten. Erstellen Sie dann Richtlinien, die die Bedingungen für Datenbankzielobjekte übernehmen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+   Die richtlinienbasierte Verwaltung ist ein richtlinienbasiertes System zum Verwalten einer oder mehrerer Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Verwenden Sie diese, um Bedingungen zu erstellen, die Bedingungsausdrücke enthalten. Erstellen Sie dann Richtlinien, die die Bedingungen für Datenbankzielobjekte übernehmen.  
 
 Beispielsweise könnte es sein, dass Sie als Datenbankadministrator sicherstellen möchten, dass für bestimmte Server Datenbank-E-Mail nicht aktiviert ist. Also erstellen Sie eine Bedingung und eine Richtlinie, die diese Serveroption festgelegt. 
    
@@ -53,7 +52,7 @@ Beispielsweise könnte es sein, dass Sie als Datenbankadministrator sicherstelle
   
  Für Fehler bei Richtlinien wird im Objekt-Explorer eine kritische Zustandswarnung in Form eines roten Symbols neben dem Ziel und den übergeordneten Knoten in der Strukturansicht des Objekt-Explorers angezeigt.  
   
-> **HINWEIS:** Wenn das System den Objektsatz für eine Richtlinie berechnet, werden die Systemobjekte standardmäßig ausgeschlossen.  Falls der Objektsatz der Richtlinie z. B. auf alle Tabellen verweist, gilt die Richtlinie nicht für Systemtabellen. Wenn Benutzer eine Richtlinie in Verbindung mit Systemobjekten auswerten möchten, können sie dem Objektsatz Systemobjekte explizit hinzufügen. Obwohl alle Richtlinien für den Auswertungsmodus **Zeitplan prüfen** unterstützt werden, werden aus Leistungsgründen jedoch nicht alle Richtlinien mit beliebigen Objektsätzen für den Auswertungsmodus **Änderungen prüfen** unterstützt. Weitere Informationen finden Sie unter [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
+> **HINWEIS:** Wenn das System den Objektsatz für eine Richtlinie berechnet, werden die Systemobjekte standardmäßig ausgeschlossen.  Falls der Objektsatz der Richtlinie z. B. auf alle Tabellen verweist, gilt die Richtlinie nicht für Systemtabellen. Wenn Benutzer eine Richtlinie in Verbindung mit Systemobjekten auswerten möchten, können sie dem Objektsatz Systemobjekte explizit hinzufügen. Obwohl alle Richtlinien für den Auswertungsmodus **Zeitplan prüfen** unterstützt werden, werden aus Leistungsgründen jedoch nicht alle Richtlinien mit beliebigen Objektsätzen für den Auswertungsmodus **Änderungen prüfen** unterstützt. Weitere Informationen finden Sie unter [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx).  
   
 ## <a name="three-policy-based-management-components"></a>Drei Komponenten für richtlinienbasierte Verwaltung  
  Die richtlinienbasierte Verwaltung besteht aus drei Komponenten:  

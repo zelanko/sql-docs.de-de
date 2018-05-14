@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 ms.assetid: 766a0846-db15-4346-b814-4049039bcbfc
@@ -19,12 +18,11 @@ caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6ae8b4c3290b15b55d792f47186cefd3cc972f4b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 32a5bad72add276eae015433f697cad01b8158c3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-9-manage-backup-sets-and-file-snapshot-backups"></a>Lektion 9: Verwalten von Sicherungssätzen und Dateimomentaufnahme-Sicherungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +35,7 @@ Befolgen Sie folgende Schritte, um einen Dateimomentaufnahme-Sicherungssatz zu l
   
 1.  Stellen Sie eine Verbindung mit SQL Server Management Studio her.  
   
-2.  Öffnen Sie ein neues Abfragefenster, und stellen Sie eine Verbinden mit der SQL Server 2016-Instanz des Datenbankmoduls auf Ihrem virtuellen Azure-Computer her (oder mit einer beliebigen SQL Server 2016-Instanz mit Lese-/Schreibberechtigungen für diesen Container).  
+2.  Öffnen Sie ein neues Abfragefenster, und stellen Sie eine Verbinden mit der SQL Server 2016-Instanz der Datenbank-Engine auf Ihrem virtuellen Azure-Computer her (oder mit einer beliebigen SQL Server 2016-Instanz mit Lese-/Schreibberechtigungen für diesen Container).  
   
 3.  Kopieren Sie das folgende Transact-SQL-Skript in das Abfragefenster. Wählen Sie die Protokollsicherung aus, die Sie zusammen mit den zugehörigen Dateimomentaufnahmen löschen möchten. Ändern Sie die URL gemäß Ihres Speicherkontonamens und des Containers, den Sie in Lektion 1 angegeben haben, geben Sie den Namen der Protokollsicherungsdatei an, und führen Sie dieses Skript anschließend aus.  
   

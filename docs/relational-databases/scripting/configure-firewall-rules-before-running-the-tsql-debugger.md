@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 10/20/2016
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.error.sqlde_register_failed
 - vs.debug.error.sqlde_accessdenied
@@ -28,20 +26,19 @@ caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d402891970dbed7e36c9533b9fa85ae9a8df5d74
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8e0d79fab11ac6d12180447dc0d4d8df44905589
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>Konfigurieren von Firewallregeln vor dem Ausführen des TSQL-Debuggers
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Sie müssen Windows-Firewall-Regeln so konfigurieren, dass das Debuggen von [!INCLUDE[tsql](../../includes/tsql-md.md)] aktiviert ist, wenn eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] hergestellt wird, die auf einem anderen Computer als der [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Abfrage-Editor ausgeführt wird.  
   
 ## <a name="configuring-the-transact-sql-debugger"></a>Konfigurieren des Transact-SQL-Debuggers  
- Der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger umfasst sowohl serverseitige als auch clientseitige Komponenten. Die serverseitigen Debuggerkomponenten werden mit jeder Instanz des Datenbankmoduls von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) oder höher installiert. Die clientseitigen Debuggerkomponenten sind inbegriffen:  
+ Der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger umfasst sowohl serverseitige als auch clientseitige Komponenten. Die serverseitigen Debuggerkomponenten werden mit jeder Instanz der Datenbank-Engine von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) oder höher installiert. Die clientseitigen Debuggerkomponenten sind inbegriffen:  
   
 -   Wenn Sie die clientseitigen Tools von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher installieren.  
   
@@ -172,6 +169,7 @@ ms.lasthandoff: 04/16/2018
  [Ausführen des Transact-SQL-Debuggers](../../relational-databases/scripting/run-the-transact-sql-debugger.md)   
  [Schrittweises Durchlaufen von Transact-SQL-Code](../../relational-databases/scripting/step-through-transact-sql-code.md)   
  [Transact-SQL-Debuggerinformationen](../../relational-databases/scripting/transact-sql-debugger-information.md)   
- [Abfrage-Editor des Datenbankmoduls &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)  
+ 
+  [Abfrage-Editor der Datenbank-Engine &amp;#40;SQL Server Management Studio&amp;#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)  
   
   

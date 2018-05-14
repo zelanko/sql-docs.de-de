@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
@@ -22,12 +21,11 @@ caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d380293dd100c2d148b3ced0bf1e081596be81d9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 22aa54280e01854e44b8b3d64eefbd797eb98276
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +103,7 @@ GRANT CREATE PROCEDURE
 GO  
 ```  
   
-Weitere Informationen zur GRANT-Anweisung finden Sie unter [GRANT &#40;Transact-SQL&#41;](../t-sql/statements/grant-transact-sql.md). Weitere Informationen zum Aufrufen von gespeicherten Prozeduren finden Sie unter [Gespeicherte Prozeduren &#40;Datenbankmodul&#41;](../relational-databases/stored-procedures/stored-procedures-database-engine.md). Ein Poster mit allen [!INCLUDE[ssDE](../includes/ssde-md.md)]-Berechtigungen finden Sie unter [https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster).  
+Weitere Informationen zur GRANT-Anweisung finden Sie unter [GRANT &#40;Transact-SQL&#41;](../t-sql/statements/grant-transact-sql.md). Weitere Informationen zum Aufrufen von gespeicherten Prozeduren finden Sie unter [Gespeicherte Prozeduren &amp;#40;Datenbank-Engine&amp;#41;](../relational-databases/stored-procedures/stored-procedures-database-engine.md). Ein Poster mit allen [!INCLUDE[ssDE](../includes/ssde-md.md)]-Berechtigungen finden Sie unter [https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster).  
   
 ## <a name="2-create-a-stored-procedure-to-access-data"></a>2. Erstellen einer gespeicherten Prozedur für Zugriff auf Daten  
 Um den Kontext innerhalb einer Datenbank zu wechseln, verwenden Sie die EXECUTE AS-Anweisung. EXECUTE AS erfordert IMPERSONATE-Berechtigungen.  
@@ -332,7 +330,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
-[Sicherheitscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+
+  [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
   

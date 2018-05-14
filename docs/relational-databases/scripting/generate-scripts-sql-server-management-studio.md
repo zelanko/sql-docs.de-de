@@ -1,35 +1,33 @@
 ---
 title: Erstellen von Skripts (SQL Server Management Studio) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
-ms.component: ssms-scripting
-ms.reviewer: 
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.reviewer: mathoma
+ms.suite: sql
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
-caps.latest.revision: 
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d1afb1297566bb7f203956d24b0ea62b56817d28
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4b1ce5863bc1b714b5e2248151aafe16f4979efd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Erstellen von Skripts (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] stellt zwei Mechanismen zum Generieren von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skripts bereit. Verwenden Sie zum Erstellen von Skripts für mehrere Objekte den **Assistenten zum Generieren und Veröffentlichen von Skripts**. Sie können ein Skript für einzelne Objekte oder mehrere Objekte auch über das Menü **Skript für** im **Objekt-Explorer**generieren.  
-  
-1.  **Auswählen einer Methode:**  [Assistent zum Generieren und Veröffentlichen von Skripts](#GenPubScriptWiz), [Objekt-Explorer-Menü "Skript für Objekttyp als"](#OEScriptAsMenu)  
-  
-2.  **So verwenden Sie das Menü "Skript für":**  [Erstellen eines Skripts für ein einzelnes Objekt](#ScriptSingleObject), [Erstellen eines Skripts für zwei Objekte mithilfe des Objekt-Explorers](#ScriptTwoObjectsOE), [Erstellen eines Skripts für zwei Objekte mithilfe von "Details zum Objekt-Explorer"](#ScriptTwoObjectsOED)  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] stellt zwei Mechanismen zum Generieren von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts bereit. Verwenden Sie zum Erstellen von Skripts für mehrere Objekte den **Assistenten zum Generieren und Veröffentlichen von Skripts**. Sie können ein Skript für einzelne Objekte oder mehrere Objekte auch über das Menü **Skript für** im **Objekt-Explorer**generieren.  
+
+Ein ausführliches Tutorial zur Skripterstellung für verschiedene Objekte mithilfe von SQL Server Management Studio finden Sie unter [Tutorial: Scripting in SSMS (Tutorial: Skripterstellung in SSMS)](https://docs.microsoft.com/en-us/sql/ssms/tutorials/scripting-ssms).
+
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
  Wählen Sie den Mechanismus aus, der Ihre Anforderungen am besten erfüllt.  
@@ -38,7 +36,7 @@ ms.lasthandoff: 01/24/2018
  Verwenden Sie den **Assistenten zum Generieren und Veröffentlichen von Skripts** , um ein [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript für zahlreiche Objekte zu erstellen. Der Assistent generiert ein Skript für alle in einer Datenbank enthaltenen Objekte bzw. für eine ausgewählte Teilmenge der Objekte. Der Assistent verfügt über viele Optionen für Skripts, z. B. ob Berechtigungen, Sortierung, Einschränkungen usw. eingeschlossen werden sollen. Anweisungen zum Verwenden des Assistenten finden Sie unter [Generate and Publish Scripts Wizard](../../relational-databases/scripting/generate-and-publish-scripts-wizard.md).  
   
 ###  <a name="OEScriptAsMenu"></a> Objekt-Explorer-Menü "Skript für Objekttyp als"  
- Sie können das Objekt-Explorer-Menü **Skript für Objekttyp als** verwenden, um ein Skript für ein einzelnes Objekt, für mehrere Objekte bzw. mehrere Anweisungen für einzelne Objekte zu erstellen. Sie können unter mehreren Skripttypen auswählen: z. B. zum Erstellen, Ändern oder Löschen des Objekts. Sie können das Skript entweder im Abfrage-Editor-Fenster, in einer Datei oder in der Zwischenablage speichern. Das Skript wird im Unicode-Format erstellt.  
+ Sie können das Menü **Skripterstellung als** des Objekt-Explorers verwenden, um ein Skript für ein einzelnes Objekt, für mehrere Objekte bzw. mehrere Anweisungen für einzelne Objekte zu erstellen. Sie können unter mehreren Skripttypen auswählen: z. B. zum Erstellen, Ändern oder Löschen des Objekts. Sie können das Skript entweder im Abfrage-Editor-Fenster, in einer Datei oder in der Zwischenablage speichern. Das Skript wird im Unicode-Format erstellt.  
   
 ##  <a name="ScriptSingleObject"></a> So generieren Sie ein Skript für ein einzelnes Objekt  
  **So erstellen Sie ein Skript für ein einzelnes Objekt**  
@@ -54,28 +52,11 @@ ms.lasthandoff: 01/24/2018
 5.  Zeigen Sie auf den Skripttyp, z. B. **CREATE in** oder **ALTER in**.  
   
 6.  Wählen Sie den Speicherort zum Speichern des Skripts aus, z. B. **Neues Abfrage-Editor-Fenster** oder **Zwischenablage**.  
+
+    ![Skripterstellung für Tabellen](media/generate-scripts-sql-server-management-studio/scripttable.png)
   
-##  <a name="ScriptTwoObjectsOE"></a> So generieren Sie mithilfe des Objekt-Explorers ein Skript für zwei Objekte  
- **So erstellen Sie ein Skript für zwei Objekte mithilfe des Objekt-Explorers**  
   
- Möglicherweise benötigen Sie in einigen Fällen ein Skript mit mehreren Optionen, z. B. zum Löschen und anschließenden Erstellen einer Prozedur oder zum Erstellen und anschließenden Ändern einer Tabelle. Die folgenden Verfahren zum Generieren von Skripts für mehrere Objekte sind auch erfolgreich, wenn Sie ein Skript erstellen müssen, das auf verschiedene Objekttypen verweist, z. B. Tabellen, Sichten und gespeicherte Prozeduren.  
-  
-1.  Stellen Sie im Objekt-Explorer eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her, und erweitern Sie dann diese Instanz.  
-  
-2.  Erweitern Sie **Datenbanken**, und erweitern Sie dann die Datenbank, die die Objekte enthält, die geschrieben werden sollen.  
-  
-3.  Klicken Sie mit der rechten Maustaste auf das erste zu schreibende Objekt, zeigen Sie auf **Skript für \<Objekttyp> als**, und wählen Sie unter **Speichern unter** die Option **Neues Fenster für den Abfrageeditor** als Ausgabeziel aus.  
-  
-4.  Navigieren Sie zum zweiten Objekt, für das Sie ein Skript erstellen möchten.  
-  
-5.  Klicken Sie mit der rechten Maustaste auf das Objekt, zeigen Sie auf **Skript für \<Objekttyp> als**, und wählen Sie unter **Speichern unter** die Option **Zwischenablage** als Ausgabeziel aus.  
-  
-6.  Fügen Sie in dem für das erste Objekt geöffneten Abfrage-Editor-Fenster das Skript für das zweite Objekt aus der Zwischenablage ein.  
-  
-##  <a name="ScriptTwoObjectsOED"></a> So generieren Sie mit "Details zum Objekt-Explorer" ein Skript für zwei Objekte  
- **So erstellen Sie ein Skript für zwei Objekte mithilfe von "Details zum Objekt-Explorer"**  
-  
- Sie können den Bereich **Details zum Objekt-Explorer** verwenden, um ein Skript für mehrere Objekte der gleichen Kategorie zu generieren.  
+ Sie können den Bereich **Details** des Objekt-Explorers verwenden, um ein Skript für mehrere Objekte der gleichen Kategorie zu generieren.  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her, und erweitern Sie dann diese Instanz.  
   
@@ -90,5 +71,7 @@ ms.lasthandoff: 01/24/2018
 6.  Klicken Sie bei gedrückter STRG-TASTE mit der linken Maustaste auf das zweite Objekt, für das Sie ein Skript erstellen möchten.  
   
 7.  Klicken Sie mit der rechten Maustaste auf eines der ausgewählten Objekte, und wählen Sie **Skript für \<Objekttyp> als** aus.  
+
+    ![Objekt-Explorer](media/generate-scripts-sql-server-management-studio/objectexplorerdetails.png)
   
   

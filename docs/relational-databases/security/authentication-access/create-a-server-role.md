@@ -1,17 +1,16 @@
 ---
 title: Erstellen einer Serverrolle | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - SQL13.SWB.SERVERROLE.GENERAL.F1
 - sql13.swb.serverrole.memberships.f1
@@ -19,19 +18,20 @@ f1_keywords:
 helpviewer_keywords:
 - SERVER ROLE, creating
 ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ca312c8c2d5d83b7e8fb233f9d9dfac3c37fcaab
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 20712a5c126d359eaf6bdbf4ea05c3dd79423c25
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-server-role"></a>Erstellen einer Serverrolle
-[!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)] In diesem Thema wird beschrieben, wie Sie eine neue Serverrolle in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)] erstellen können.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
+  In diesem Thema wird beschrieben, wie Sie einen neuen Server in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]erstellen können.  
   
  **In diesem Thema**  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/21/2017
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So erstellen Sie eine neue Serverrolle mit**  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
  Serverrollen kann keine Berechtigung für sicherungsfähige Elemente auf Datenbankebene gewährt werden. Informationen zum Erstellen von Datenbankrollen finden Sie unter [CREATE ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-role-transact-sql.md).  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Erfordert die CREATE SERVER ROLE-Berechtigung oder die Mitgliedschaft in der festen sysadmin-Serverrolle.  
   
--   Erfordert für Anmeldenamen außerdem IMPERSONATE für den *server_principal* , die ALTER-Berechtigung für Serverrollen, die als *server_principal* verwendet werden, oder die Mitgliedschaft in einer Windows-Gruppe, die als server_principal verwendet wird.  
+-   Erfordert für Anmeldenamen außerdem IMPERSONATE für den *server_principal* , die ALTER-Berechtigung für Serverrollen, die als *server_principal*verwendet werden, oder die Mitgliedschaft in einer Windows-Gruppe, die als server_principal verwendet wird.  
   
 -   Wenn Sie die AUTHORIZATION-Option verwenden, um den Besitz für Serverrollen zuzuweisen, sind außerdem folgende Berechtigungen erforderlich:  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/21/2017
   
     -   Um einer Serverrolle eine andere Serverrolle als Besitzer zuzuweisen, ist die Mitgliedschaft in der Empfängerserverrolle oder die ALTER-Berechtigung für diese Serverrolle erforderlich.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-a-new-server-role"></a>So erstellen Sie eine neue Serverrolle  
   

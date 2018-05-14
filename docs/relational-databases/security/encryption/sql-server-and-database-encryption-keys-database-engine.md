@@ -1,17 +1,16 @@
 ---
-title: Verschlüsselungsschlüssel für SQL Server und Datenbank (Datenbankmodul) | Microsoft-Dokumentation
+title: Verschlüsselungsschlüssel für SQL Server und Datenbank (Datenbank-Engine) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - keys [SQL Server], database encryption
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
@@ -19,14 +18,13 @@ caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 7d640b7fc6ce4aa49b19dac142d9fcfa1d412993
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 828201676955e7cd53c1cd6f49f23a88f0a47911
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="sql-server-and-database-encryption-keys-database-engine"></a>Verschlüsselungsschlüssel für SQL Server und Datenbank (Datenbankmodul)
+# <a name="sql-server-and-database-encryption-keys-database-engine"></a>Verschlüsselungsschlüssel für SQL Server und Datenbank (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet Verschlüsselungsschlüssel, um Daten, Anmelde- und Verbindungsinformationen zu sichern, die in einer Berichtsserver-Datenbank gespeichert sind. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] besitzt zwei Arten von Schlüsseln: *symmetrische* und *asymmetrische*. Symmetrische Schlüssel verwenden das gleiche Kennwort, um Daten zu verschlüsseln und zu entschlüsseln. Asymmetrische Schlüssel verwenden ein Kennwort zum Verschlüsseln der Daten (den *öffentlichen* Schlüssel) und ein weiteres zum Entschlüsseln der Daten (den *privaten* Schlüssel).  
   

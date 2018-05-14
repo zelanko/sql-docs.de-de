@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server replication], join
 - merge replication join filters [SQL Server replication]
@@ -22,12 +21,11 @@ caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1635b5e35a6056b9c44db159ae6ba4c58d4c0fbe
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bf7d996475800dfc34e472b42e76aa86696c0345
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>Definieren und Ändern eines Verknüpfungsfilters zwischen Mergeartikeln
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +70,7 @@ ms.lasthandoff: 04/16/2018
   
     -   Wenn Sie auswählen, dass der Generator verwendet werden soll, verwenden Sie die Spalten im Raster (**Konjunktion**, **Gefilterte Tabellenspalte**, **Operator**und **Verknüpfte Tabellenspalte**), um eine Joinanweisung zu erstellen.  
   
-         Die Spalten in der Tabelle enthalten jeweils ein Dropdown-Kombinationsfeld, in dem Sie zwei Spalten und einen Operator (**=**, **<>**, **<=**, **\<**, **>=**, **>**und **like**) auswählen können. Die Ergebnisse werden im Textbereich **Vorschau** angezeigt. Wenn sich der Join auf mehr als ein Spaltenpaar bezieht, wählen Sie in der **Konjunktion** -Spalte eine Konjunktion aus (AND oder OR), und geben Sie dann zwei weitere Spalten und einen Operator ein.  
+         Die Spalten in der Tabelle enthalten jeweils ein Dropdown-Kombinationsfeld, in dem Sie zwei Spalten und einen Operator (**=**, **<>**, **<=**, **\<**, **>=**, **>** und **like**) auswählen können. Die Ergebnisse werden im Textbereich **Vorschau** angezeigt. Wenn sich der Join auf mehr als ein Spaltenpaar bezieht, wählen Sie in der **Konjunktion** -Spalte eine Konjunktion aus (AND oder OR), und geben Sie dann zwei weitere Spalten und einen Operator ein.  
   
     -   Wenn Sie ausgewählt haben, dass die Anweisung manuell geschrieben wird, schreiben Sie die Joinanweisung im Textbereich **Joinanweisung** . Ziehen Sie die gewünschten Spalten aus den Listenfeldern **Spalten der gefilterten Tabelle** und **Spalten der verknüpften Tabelle** in den Textbereich **Joinanweisung** .  
   

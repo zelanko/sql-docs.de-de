@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssms-agent
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, security
 - security [SQL Server Agent], about security
@@ -22,13 +20,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3b2546c855a65c035cbc5bbea049963f930f2977
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 65e30fea2df001d16bc7873fb64b2da594d3dacf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implement-sql-server-agent-security"></a>Implementieren der SQL Server-Agent-Sicherheit
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -90,5 +87,6 @@ Befolgen Sie diese Richtlinien, um die Sicherheit Ihrer [!INCLUDE[ssNoVersion](.
 [Verwenden vordefinierter Rollen](http://msdn.microsoft.com/en-us/6b46db51-7c30-467d-a251-50f50647fe21)  
 [sp_addrolemember (Transact-SQL)](http://msdn.microsoft.com/en-us/a583c087-bdb3-46d2-b9e5-3921b3e6d10b)  
 [sp_droprolemember (Transact-SQL)](http://msdn.microsoft.com/en-us/c2f19ab1-e742-4d56-ba8e-8ffd40cf4925)  
-[Sicherheit und Schutz (Datenbankmodul)](http://msdn.microsoft.com/en-us/dfb39d16-722a-4734-94bb-98e61e014ee7)  
+
+  [Sicherheit und Schutz (Datenbank-Engine)](http://msdn.microsoft.com/en-us/dfb39d16-722a-4734-94bb-98e61e014ee7)  
   

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: sql-trace
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], example
 - traces [SQL Server], creating
@@ -20,12 +19,11 @@ caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 655bacebe7471bc6df99480850f1fc61c1a591d0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a187fc923c2dc47a178d4a1cecc8bc851a072598
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-trace-transact-sql"></a>Erstellen einer Ablaufverfolgung (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +40,7 @@ ms.lasthandoff: 04/16/2018
      **sp_trace_setevent** und **sp_trace_setfilter** können nur für vorhandene, beendete Ablaufverfolgungen ausgeführt werden.  
   
     > [!IMPORTANT]  
-    >  Im Gegensatz zu regulären gespeicherten Prozeduren werden die Parameter für alle gespeicherten Prozeduren von SQL Profiler (**sp_trace_*xx***) genau eingegeben und unterstützen die automatische Datentypkonvertierung nicht. Wenn diese Parameter nicht mit den richtigen Datentypen für Eingabeparameter aufgerufen werden, wie in der Argumentbeschreibung angegeben, gibt die gespeicherte Prozedur einen Fehler zurück.  
+    >  Im Gegensatz zu regulären gespeicherten Prozeduren werden die Parameter für alle gespeicherten Prozeduren von SQL Profiler (**sp_trace_* xx***) genau eingegeben und unterstützen die automatische Datentypkonvertierung nicht. Wenn diese Parameter nicht mit den richtigen Datentypen für Eingabeparameter aufgerufen werden, wie in der Argumentbeschreibung angegeben, gibt die gespeicherte Prozedur einen Fehler zurück.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Code wird das Erstellen einer Ablaufverfolgung mit [!INCLUDE[tsql](../../includes/tsql-md.md)]veranschaulicht. Der Code ist in drei Abschnitte unterteilt: Erstellen der Ablaufverfolgung, Auffüllen der Ablaufverfolgungsdatei und Beenden der Ablaufverfolgung. Passen Sie die Ablaufverfolgung an, indem Sie die Ereignisse hinzufügen, die Sie aufzeichnen möchten. Die Liste der Ereignisse und Spalten finden Sie unter [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)veranschaulicht.  

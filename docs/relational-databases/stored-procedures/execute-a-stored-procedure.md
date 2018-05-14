@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: stored-procedures
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stored-Procs
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.executeprocedure.general.f1
 - sql13.swb.executeprocedure.f1
@@ -26,13 +25,12 @@ caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ac4f09f4e00e4590ebc2725a5fab3e49d5eea3ed
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 422273339e93fa5804b6cd0f5b3c4d2f1a7f833f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="execute-a-stored-procedure"></a>Ausführen einer gespeicherten Prozedur
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -220,6 +218,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
  [Konfigurieren der Serverkonfigurationsoption Startprozeduren suchen](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
- [Gespeicherte Prozeduren &#40;Datenbankmodul&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)  
+ 
+  [Gespeicherte Prozeduren &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)  
   
   

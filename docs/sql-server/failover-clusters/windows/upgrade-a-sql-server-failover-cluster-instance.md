@@ -3,15 +3,12 @@ title: Aktualisieren einer SQL Server-Failoverclusterinstanz| Microsoft-Dokument
 ms.custom: ''
 ms.date: 10/01/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: failover-clusters
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading failover clusters
 - clusters [SQL Server], upgrading
@@ -21,12 +18,11 @@ caps.latest.revision: 47
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 1acb84179caac743aa8c5593a005259a3f7ea21c
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: a4326012731d0237a118a8f44f1d3486d9bc881f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance"></a>Aktualisieren einer SQL Server-Failoverclusterinstanz (Setup)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +44,7 @@ ms.lasthandoff: 04/26/2018
   
     -   Änderungen der Edition des Failoverclusters sind auf bestimmte Szenarien beschränkt. Weitere Informationen finden Sie unter [Unterstützte Versions- und Editionsupgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
--   Während des Failoverclusterupgrades wird die Ausfallzeit auf die Failoverzeit und auf die Ausführungszeit der Upgradeskripts begrenzt. Wenn Sie ein paralleles Upgrade eines Failoverclusters wie unten beschrieben ausführen und vor Beginn des Upgrades alle Voraussetzungen auf allen Knoten erfüllt sind, ist die Downtime minimal. Wenn während des Upgrades von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] speicheroptimierte Tabellen verwendet werden, erfordert das Upgrade zusätzliche Zeit. Weitere Informationen finden Sie unter [Planen und Testen des Upgradeplans für das Datenbankmodul](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
+-   Während des Failoverclusterupgrades wird die Ausfallzeit auf die Failoverzeit und auf die Ausführungszeit der Upgradeskripts begrenzt. Wenn Sie ein paralleles Upgrade eines Failoverclusters wie unten beschrieben ausführen und vor Beginn des Upgrades alle Voraussetzungen auf allen Knoten erfüllt sind, ist die Downtime minimal. Wenn während des Upgrades von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] speicheroptimierte Tabellen verwendet werden, erfordert das Upgrade zusätzliche Zeit. Weitere Informationen finden Sie unter [Planen und Testen des Upgradeplans für die Datenbank-Engine](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
  Lesen Sie die folgenden wichtigen Informationen, bevor Sie beginnen:  
@@ -57,7 +53,8 @@ ms.lasthandoff: 04/26/2018
   
 -   [Choose a Database Engine Upgrade Method](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): Wählen Sie die passende Upgrademethode und die Schritte aus, die sowohl auf Ihrer Betrachtung der unterstützten Version und Editionsupgrades als auch auf den anderen in Ihrer Umgebung installierten Komponenten basieren, um die Komponenten in der richtigen Reihenfolge upzugraden.  
   
--   [Planen und Testen des Upgradeplans für das Datenbankmodul](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): Überprüfen Sie die Anmerkungen zu dieser Version, die bekannten Upgradeprobleme und die Prüfliste vor dem Upgrade. Entwickeln und testen Sie den Upgradeplan.  
+-   
+  [Planen und Testen des Upgradeplans für die Datenbank-Engine](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): Überprüfen Sie die Anmerkungen zu dieser Version, die bekannten Upgradeprobleme und die Prüfliste vor dem Upgrade. Entwickeln und testen Sie den Upgradeplan.  
   
 -   [Hardware- und Softwareanforderungen für die Installation von SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): Überprüfen Sie die Softwareanforderungen für die Installation von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Falls zusätzliche Software erforderlich ist, installieren Sie diese auf jedem Knoten, bevor Sie mit dem Upgradevorgang beginnen, um die Downtime zu minimieren.  
   

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 08/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: performance-monitor
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dmf.condition.advancededit.f1
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
@@ -19,12 +18,11 @@ caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 34d57610273cd1496c0cfb7be8e79f3ba674d671
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 375d21441757d274dbd62bcd94638b03a0ded57f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>Dialogfeld 'Erweiterte Bearbeitung (Bedingung)'
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,15 +89,15 @@ ms.lasthandoff: 04/16/2018
 |**Guid()**|Guid Guid(String *guidZeichenfolge*)|Gibt eine GUID aus einer Zeichenfolge zurück.|*guidZeichenfolge* : Die Zeichenfolgendarstellung der zu erstellenden GUID.|Gibt die GUID zurück, die aus der Zeichenfolge erstellt wurde.|`Guid('12340000-0000-3455-0000-000000000454')`|  
 |**IsNull()**|Variant IsNull (Variant *Prüfausdruck*, Variant *Ersatzwert*)|Der Wert von *Prüfausdruck* wird zurückgegeben, wenn der Wert nicht NULL ist. Andernfalls wird *Ersatzwert* zurückgegeben. Sind die Typen unterschiedlich, wird *Ersatzwert* implizit in den Typ von *Prüfausdruck*konvertiert.|*Prüfausdruck* : Der Ausdruck, der auf NULL überprüft werden soll. *Prüfausdruck* kann ein beliebiger von der richtlinienbasierten Verwaltung unterstützter Typ sein: Numeric, String, Bool, DateTime, Array und Guid.<br /><br /> *Ersatzwert* : Der Ausdruck, der zurückgegeben werden soll, wenn *Prüfausdruck* NULL ist. *Ersatzwert* muss einen Typ aufweisen, der implizit in den Typ von *Prüfausdruck*konvertiert wird.|Der Rückgabetyp entspricht dem Typ von *Prüfausdruck* , wenn *Prüfausdruck* nicht NULL ist, andernfalls wird der Typ von *Ersatzwert* zurückgegeben.||  
 |**Len()**|Numeric Len (*Zeichenfolgenausdruck*)|Gibt die Anzahl von Zeichen des angegebenen Zeichenfolgenausdrucks zurück, jedoch ohne nachfolgende Leerzeichen.|*Zeichenfolgenausdruck* : Der auszuwertende Zeichenfolgenausdruck.|Gibt den Wert der Datentypkategorie „Integer“ zurück.|`Len('Hello')` gibt in diesem Beispiel `5` zurück.|  
-|**Lower()**|String Lower (String*_Ausdruck*)|Gibt die Zeichenfolge zurück, nachdem alle Großbuchstaben in Kleinbuchstaben konvertiert wurden.|*Ausdruck* : Der Quellzeichenfolgen-Ausdruck.|Gibt eine Zeichenfolge zurück, die den Quellzeichenfolgen-Ausdruck darstellt, nachdem alle Großbuchstaben in Kleinbuchstaben konvertiert wurden.|`Len('HeLlO')` gibt in diesem Beispiel `'hello'` zurück.|  
+|**Lower()**|String Lower (String *_Ausdruck*)|Gibt die Zeichenfolge zurück, nachdem alle Großbuchstaben in Kleinbuchstaben konvertiert wurden.|*Ausdruck* : Der Quellzeichenfolgen-Ausdruck.|Gibt eine Zeichenfolge zurück, die den Quellzeichenfolgen-Ausdruck darstellt, nachdem alle Großbuchstaben in Kleinbuchstaben konvertiert wurden.|`Len('HeLlO')` gibt in diesem Beispiel `'hello'` zurück.|  
 |**Mod()**|Numeric Mod (Numeric *Ausdruck_Dividend*, Numeric *Ausdruck_Divisor*)|Stellt den ganzzahligen Rest einer Division des ersten numerischen Ausdrucks durch den zweiten numerischen Ausdruck bereit.|*Ausdruck_Dividend* : Der numerische Ausdruck, der geteilt werden soll. *Ausdruck_Dividend* muss ein gültiger Ausdruck eines Datentyps aus den Datentypkategorien für ganze Zahlen oder numerische Werte sein.<br /><br /> *Ausdruck_Divisor* : Der numerische Ausdruck, durch den der Dividend geteilt werden soll. *Ausdruck_Divisor* muss ein gültiger Ausdruck eines Datentyps aus den Datentypkategorien für ganze Zahlen oder numerische Werte sein.|Gibt den Wert der Datentypkategorie „Integer“ zurück.|`Mod(Property1, 3)`|  
 |**Multiply()**|Numeric Multiply (Numeric *Ausdruck1*, Numeric *Ausdruck2*)|Multipliziert zwei Ausdrücke.|*Ausdruck1* und *Ausdruck2* : Jeder gültige Ausdruck eines beliebigen Datentyps der numerischen Kategorie, mit Ausnahme des Datentyps **datetime** .|Gibt den Datentyp des Arguments zurück, das in der Rangfolge höher eingestuft ist.|`Multiply(Property1, .20)`|  
 |**Power()**|Numeric Power (Numeric *Numerischer_Ausdruck*, Numeric *Ausdruck_Potenz*)|Gibt den Wert des angegebenen Ausdrucks in der angegebenen Potenz zurück.|*Numerischer_Ausdruck* : Ein Ausdruck der genauen numerischen oder ungefähren numerischen Datentypkategorie, mit Ausnahme des bit-Datentyps.<br /><br /> *Ausdruck_Potenz* : Die Potenz, in die *Numerischer_Ausdruck*erhoben werden soll. *Ausdruck_Potenz* kann ein Ausdruck der genauen numerischen oder ungefähren numerischen Datentypkategorie sein, mit Ausnahme des **bit** -Datentyps.|Der Rückgabetyp entspricht dem Typ von *Numerischer_Ausdruck*.|`Power(Property1, 3)`|  
 |**Round()**|Numeric Round (Numeric *Ausdruck*, Numeric *Ausdruck_Genauigkeit*)|Gibt einen numerischen Ausdruck zurück, der auf die angegebene Länge oder Genauigkeit gerundet wurde.|*Ausdruck* : Ein Ausdruck der genauen numerischen oder ungefähren numerischen Datentypkategorie, mit Ausnahme des **bit** -Datentyps.<br /><br /> *Ausdruck_Genauigkeit* : Die Genauigkeit, auf die der Ausdruck gerundet werden soll. Wenn *Ausdruck_Genauigkeit* eine positive Zahl ist, wird *Numerischer_Ausdruck* auf die Anzahl der durch „length“ angegebenen Dezimalstellen gerundet. Wenn *Ausdruck_Genauigkeit* eine negative Zahl ist, wird *Numerischer_Ausdruck* auf der linken Seite des Dezimaltrennzeichens gerundet, wie durch *Ausdruck_Genauigkeit*angegeben.|Gibt denselben Typ wie *Numerischer Ausdruck*zurück.|`Round(5.333, 0)`|  
-|**String()**|String String (Variant*_Ausdruck*)|Konvertiert einen Variant-Wert in eine Zeichenfolge.|*Ausdruck* : Der Variant-Ausdruck, der zu einer Zeichenfolge konvertiert werden soll.|Gibt den Zeichenfolgenwert des Variant-Ausdrucks zurück.|`String(4)`|  
+|**String()**|String String (Variant *_Ausdruck*)|Konvertiert einen Variant-Wert in eine Zeichenfolge.|*Ausdruck* : Der Variant-Ausdruck, der zu einer Zeichenfolge konvertiert werden soll.|Gibt den Zeichenfolgenwert des Variant-Ausdrucks zurück.|`String(4)`|  
 |**Sum()**|Numeric Sum (*VarArgs*)|Gibt die Summe aller Werte in der Argumentliste zurück. Sum kann mit numerischen Werten verwendet werden.|*VarArgs*: Eine Liste der Variant-Ausdrücke der genauen numerischen oder ungefähren numerischen Datentypkategorie, mit Ausnahme des **bit** -Datentyps.|Gibt die Summe aller Ausdruckswerte im genauesten Ausdrucksdatentyp zurück.<br /><br /> Wenn das Ausdrucksergebnis einen Datentyp der Kategorien **integer**, **numeric**, **money** oder **smallmoney**, **float** und **real** aufweist, lauten die Rückgabetypen **int**, **numeric**, **money**bzw. **float**;.|`Sum(1.0, 2.0, 3.0, 4.0, 5.0)` gibt in diesem Beispiel `15` zurück.|  
 |**True()**|Bool TRUE()|Gibt den booleschen Wert TRUE zurück.||Gibt den booleschen Wert TRUE zurück.|`IsDatabaseMailEnabled = True()`|  
-|**Upper()**|String Upper (String*_Ausdruck*)|Gibt die Zeichenfolge zurück, nachdem alle Kleinbuchstaben in Großbuchstaben konvertiert wurden.|*Ausdruck* : Der Quellzeichenfolgen-Ausdruck.|Gibt eine Zeichenfolge zurück, die den Quellzeichenfolgen-Ausdruck darstellt, nachdem alle Kleinbuchstaben in Großbuchstaben konvertiert wurden.|`Upper('HeLlO')` gibt in diesem Beispiel `'HELLO'` zurück.|  
+|**Upper()**|String Upper (String *_Ausdruck*)|Gibt die Zeichenfolge zurück, nachdem alle Kleinbuchstaben in Großbuchstaben konvertiert wurden.|*Ausdruck* : Der Quellzeichenfolgen-Ausdruck.|Gibt eine Zeichenfolge zurück, die den Quellzeichenfolgen-Ausdruck darstellt, nachdem alle Kleinbuchstaben in Großbuchstaben konvertiert wurden.|`Upper('HeLlO')` gibt in diesem Beispiel `'HELLO'` zurück.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Dialogfeld 'Neue Bedingung erstellen' oder 'Bedingung öffnen', Seite 'Allgemein'](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)   

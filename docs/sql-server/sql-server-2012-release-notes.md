@@ -8,20 +8,19 @@ ms.date: 01/31/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Release Notes, SQL Server
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.workload: Inactive
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 978145deb3a5203118770e1eb87d804cc023af65
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: cf9360da746f08bc555a4796d5134a11c6b08d32
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-2012-release-notes"></a>Versionsanmerkungen zu SQL Server 2012
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +115,7 @@ Nachfolgend wird das Verhalten der erforderlichen Installationskomponenten beim 
   
 -   Die Installation von SQL Server 2012 wird nur unter Windows 7 SP1 oder Windows Server 2008 R2 SP1 unterstützt. Das Setupprogramm verhindert eine Installation von SQL Server 2012 unter Windows 7 oder Windows Server 2008 R2 jedoch nicht.  
   
--   .NET Framework 3.5 SP1 ist für SQL Server 2012 erforderlich, wenn Sie Datenbankmodul, Replikation, Master Data Services, Reporting Services, Data Quality Services (DQS) oder SQL Server Management Studio auswählen. Das Framework wird vom SQL Server-Setup nicht mehr installiert.  
+-   .NET Framework 3.5 SP1 ist für SQL Server 2012 erforderlich, wenn Sie Datenbank-Engine, Replikation, Master Data Services, Reporting Services, Data Quality Services (DQS) oder SQL Server Management Studio auswählen. Das Framework wird vom SQL Server-Setup nicht mehr installiert.  
   
     -   Wenn Sie Setup auf einem Computer mit dem Betriebssystem Windows Vista SP2 oder Windows Server 2008 SP2 ausführen und .NET Framework 3.5 SP1 nicht installiert ist, fordert SQL Server-Setup Sie auf, .NET Framework 3.5 SP1 herunterzuladen und zu installieren, bevor Sie die SQL Server-Installation fortsetzen können. Sie können .NET Framework 3.5 SP1 über Windows Update oder direkt [hier](https://www.microsoft.com/download/details.aspx?id=25150)herunterladen. Um eine Unterbrechung beim SQL Server-Setup zu vermeiden, sollten Sie .NET Framework 3.5 SP1 herunterladen und installieren, bevor Sie SQL Server-Setup ausführen.  
   
@@ -189,13 +188,13 @@ Nachfolgend wird das Verhalten der erforderlichen Installationskomponenten beim 
   
     -   Wenn Sie SQL Server 2012 auf einem Computer mit dem Betriebssystem Windows 7 SP1 oder Windows Server 2008 R2 SP1 installieren, ist dieses Update bereits auf dem Computer installiert.  
   
--   Windows PowerShell 2.0 ist für die Installation der SQL Server 2012-Datenbankmodulkomponenten und von SQL Server Management Studio erforderlich. Windows PowerShell wird jedoch nicht mehr vom SQL Server-Setup installiert. Wenn PowerShell 2.0 nicht auf dem Computer vorhanden ist, folgen Sie den Anweisungen auf der Seite [Windows Management Framework](http://support.microsoft.com/kb/968929) , um die Komponente zu aktivieren. Windows PowerShell 2.0 wird abhängig vom verwendeten Betriebssystem auf unterschiedliche Weise zur Verfügung gestellt:  
+-   Windows PowerShell 2.0 ist für die Installation der SQL Server 2012-Datenbank-Engine-Komponenten und von SQL Server Management Studio erforderlich. Windows PowerShell wird jedoch nicht mehr vom SQL Server-Setup installiert. Wenn PowerShell 2.0 nicht auf dem Computer vorhanden ist, folgen Sie den Anweisungen auf der Seite [Windows Management Framework](http://support.microsoft.com/kb/968929) , um die Komponente zu aktivieren. Windows PowerShell 2.0 wird abhängig vom verwendeten Betriebssystem auf unterschiedliche Weise zur Verfügung gestellt:  
   
     -   Windows Server 2008 – Windows PowerShell 1.0 ist eine Funktion, die hinzugefügt werden kann. Windows PowerShell 2.0-Versionen werden (in Form eines Betriebssystempatches) heruntergeladen und installiert.  
   
     -   Windows 7/Windows Server 2008 R2 – Windows PowerShell 2.0 wird standardmäßig installiert.  
   
--   Falls Sie beabsichtigen, SQL Server 2012-Funktionen in einer SharePoint-Umgebung zu verwenden, sind SharePoint Server 2010 Service Pack 1 (SP1) und das kumulative Update für SharePoint von August erforderlich. Sie müssen SP1 und das [kumulative Update von August](http://blogs.technet.com/b/stefan_gossner/archive/2010/09/02/august-2010-cumulative-update-for-sharepoint-has-been-released.aspx)für SharePoint, installieren und die Serverfarm vollständig patchen, bevor Sie der Farm SQL Server 2012-Funktionen hinzufügen. Diese Anforderung bezieht sich auf die folgenden SQL Server 2012-Funktionen: Verwenden einer Instanz des Datenbankmoduls als Datenbankserver der Farm, Konfigurieren von PowerPivot für SharePoint oder Bereitstellen von Reporting Services im SharePoint-Modus.  
+-   Falls Sie beabsichtigen, SQL Server 2012-Funktionen in einer SharePoint-Umgebung zu verwenden, sind SharePoint Server 2010 Service Pack 1 (SP1) und das kumulative Update für SharePoint von August erforderlich. Sie müssen SP1 und das [kumulative Update von August](http://blogs.technet.com/b/stefan_gossner/archive/2010/09/02/august-2010-cumulative-update-for-sharepoint-has-been-released.aspx)für SharePoint, installieren und die Serverfarm vollständig patchen, bevor Sie der Farm SQL Server 2012-Funktionen hinzufügen. Diese Anforderung bezieht sich auf die folgenden SQL Server 2012-Funktionen: Verwenden einer Instanz der Datenbank-Engine als Datenbankserver der Farm, Konfigurieren von PowerPivot für SharePoint oder Bereitstellen von Reporting Services im SharePoint-Modus.  
   
 ### <a name="18-supported-operating-systems-for-sql-server-2012"></a>1.8 Unterstützte Betriebssysteme für SQL Server 2012  
 SQL Server 2012 wird unter den Betriebssystemen Windows Vista SP2, Windows Server 2008 SP2, Windows 2008 R2 SP1 und Windows 7 SP1 unterstützt.  

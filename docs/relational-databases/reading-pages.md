@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: relational-databases-misc
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - server-general
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - pages
 ms.assetid: f8da760e-aacb-4661-9f3a-2578d8c11e4e
@@ -19,19 +18,18 @@ caps.latest.revision: 3
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a5227d01257a2a41562724038caa8017cd24abd9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 34fc49117e2d406b58a8dce9731b8fdf89634c52
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reading-pages"></a>Lesen von Seiten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Die E/A-Aktivitäten einer Instanz von SQL Server [!INCLUDE[ssDE](../includes/ssde-md.md)] schließen logische und physische Lesevorgänge ein. Ein logischer Lesevorgang erfolgt immer dann, wenn das [!INCLUDE[ssDE](../includes/ssde-md.md)] eine Seite aus dem [Puffercache](../relational-databases/memory-management-architecture-guide.md)anfordert. Wenn sich die Seite derzeit nicht im Puffercache befindet, wird ein physischer Lesevorgang durchgeführt, um die Seite vom Datenträger in den Puffercache zu kopieren.
 
-Die von einer Instanz des [!INCLUDE[ssDE](../includes/ssde-md.md)] s generierten Leseanforderungen werden vom relationalen Modul gesteuert und vom Speichermodul weiter optimiert. Das relationale Modul ermittelt die effizienteste Zugriffsmethode (Tabellenscan, Indexscan oder schlüsselgesteuerter Lesevorgang); die Zugriffsmethoden und Puffer-Manager-Komponenten des Speichermoduls bestimmen das allgemeine Muster der durchzuführenden Lesevorgänge und optimieren die Lesevorgänge, die für die Implementierung der Zugriffsmethode erforderlich sind. Der Thread, der den Batch ausführt, plant die Ausführung der Lesevorgänge.
+Die von einer Instanz des [!INCLUDE[ssDE](../includes/ssde-md.md)] generierten Leseanforderungen werden von der relationalen Engine gesteuert und von der Speicher-Engine weiter optimiert. Die relationale Engine ermittelt die effizienteste Zugriffsmethode (Tabellenscan, Indexscan oder schlüsselgesteuerter Lesevorgang); die Zugriffsmethoden und Puffer-Manager-Komponenten der Speicher-Engine bestimmen das allgemeine Muster der durchzuführenden Lesevorgänge und optimieren die Lesevorgänge, die für die Implementierung der Zugriffsmethode erforderlich sind. Der Thread, der den Batch ausführt, plant die Ausführung der Lesevorgänge.
 
 ## <a name="read-ahead"></a>Vorauslesen (Read-Ahead)
 Das [!INCLUDE[ssDE](../includes/ssde-md.md)] unterstützt einen Leistungsoptimierungsmechanismus, der als Read-Ahead oder Vorauslesen bekannt ist. Dieser Mechanismus antizipiert die für die Erfüllung eines Abfrageausführungsplans erforderlichen Daten und Indexseiten und platziert diese Seiten in den Puffercache, noch bevor sie von der Abfrage benötigt werden. Dies ermöglicht eine Überlappung von Berechnungs- und E/A-Aktivitäten, sodass sowohl die CPU- als auch die Datenträgerressourcen voll ausgenutzt werden können. 
@@ -41,16 +39,16 @@ Mithilfe des Read-Ahead-Mechanismus kann das [!INCLUDE[ssDE](../includes/ssde-md
 Für Datenseiten und Indexseiten ist je ein unterschiedlicher Read-Ahead-Mechanismus verfügbar.
 
 ### <a name="reading-data-pages"></a>Lesen von Datenseiten
-Tabellenscans, die zum Lesen von Datenseiten verwendet werden, sind in [!INCLUDE[ssDE](../includes/ssde-md.md)]sehr effizient. Die IAM-Seiten (Index Allocation Map) in einer SQL Server-Datenbank listen die von einer Tabelle oder einem Index verwendeten Datenblöcke auf. Das Speichermodul kann die IAM lesen, um eine geordnete Liste der Datenträgeradressen zu erstellen, die gelesen werden müssen. Hierdurch wird dem Speichermodul ermöglicht, E/A-Operationen in Form von langen, sequenziellen Lesevorgängen zu optimieren, die abhängig von ihrem Speicherort auf dem Datenträger nacheinander ausgeführt werden. Weitere Informationen zu IAM-Seiten finden Sie unter [Verwalten des von Objekten verwendeten Speicherplatzes](../relational-databases/pages-and-extents-architecture-guide.md).
+Tabellenscans, die zum Lesen von Datenseiten verwendet werden, sind in [!INCLUDE[ssDE](../includes/ssde-md.md)]sehr effizient. Die IAM-Seiten (Index Allocation Map) in einer SQL Server-Datenbank listen die von einer Tabelle oder einem Index verwendeten Datenblöcke auf. Die Speicher-Engine kann die IAM lesen, um eine geordnete Liste der Datenträgeradressen zu erstellen, die gelesen werden müssen. Hierdurch wird der Speicher-Engine ermöglicht, E/A-Operationen in Form von langen, sequenziellen Lesevorgängen zu optimieren, die abhängig von ihrem Speicherort auf dem Datenträger nacheinander ausgeführt werden. Weitere Informationen zu IAM-Seiten finden Sie unter [Verwalten des von Objekten verwendeten Speicherplatzes](../relational-databases/pages-and-extents-architecture-guide.md).
 
 ### <a name="reading-index-pages"></a>Lesen von Indexseiten
-Im Speichermodul werden Indexseiten nacheinander in der Reihenfolge der Schlüssel gelesen. Diese Abbildung zeigt z. B. eine vereinfachte Darstellung eines Satzes von Blattseiten, die einen Satz von Schlüsseln enthalten, und den Zwischenindexknoten, der eine Zuordnung der Blattseiten vornimmt. Weitere Informationen zur Struktur von Seiten in einem Index finden Sie unter [Gruppierte Indexstrukturen](../relational-databases/pages-and-extents-architecture-guide.md).
+In der Speicher-Engine werden Indexseiten nacheinander in der Reihenfolge der Schlüssel gelesen. Diese Abbildung zeigt z. B. eine vereinfachte Darstellung eines Satzes von Blattseiten, die einen Satz von Schlüsseln enthalten, und den Zwischenindexknoten, der eine Zuordnung der Blattseiten vornimmt. Weitere Informationen zur Struktur von Seiten in einem Index finden Sie unter [Gruppierte Indexstrukturen](../relational-databases/pages-and-extents-architecture-guide.md).
 
 ![Reading_Pages](../relational-databases/media/reading-pages.gif)
 
-Das Speichermodul verwendet die Informationen der Zwischenindexseite oberhalb der Blattebene, um serielle Read-Ahead-Operationen für die Seiten zu planen, die die Schlüssel enthalten. Wenn eine Anforderung für alle Schlüssel von ABC bis DEF erfolgt, liest das Speichermodul zunächst die Indexseite oberhalb der Blattseite. Es wird jedoch nicht einfach ein Lesevorgang in der Reihenfolge von Seite 504 bis Seite 556, der letzten Seite mit Schlüsseln im gewünschten Bereich, durchgeführt. Stattdessen scannt das Speichermodul die Zwischenindexseite und erstellt eine Liste der Blattseiten, die gelesen werden müssen. Anschließend plant das Speichermodul alle Lesevorgänge, geordnet nach Schlüsseln. Das Speichermodul erkennt ebenfalls, dass es sich bei den Seiten 504/505 und 527/528 um zusammenhängende Seiten handelt, und führt einen einzelnen Scatter-Lesevorgang aus, um angrenzende Seiten in einem einzigen Vorgang abzurufen. Wenn viele Seiten in einem seriellen Vorgang abgerufen werden sollen, plant das Speichermodul einen Block von Lesevorgängen zur selben Zeit. Wenn eine Teilmenge dieser Lesevorgänge abgeschlossen ist, plant das Speichermodul dieselbe Anzahl neuer Lesevorgänge, bis alle erforderlichen Lesevorgänge geplant sind.
+Die Speicher-Engine verwendet die Informationen der Zwischenindexseite oberhalb der Blattebene, um serielle Read-Ahead-Operationen für die Seiten zu planen, die die Schlüssel enthalten. Wenn eine Anforderung für alle Schlüssel von ABC bis DEF erfolgt, liest die Speicher-Engine zunächst die Indexseite oberhalb der Blattseite. Es wird jedoch nicht einfach ein Lesevorgang in der Reihenfolge von Seite 504 bis Seite 556, der letzten Seite mit Schlüsseln im gewünschten Bereich, durchgeführt. Stattdessen scannt die Speicher-Engine die Zwischenindexseite und erstellt eine Liste der Blattseiten, die gelesen werden müssen. Anschließend plant die Speicher-Engine alle Lesevorgänge, geordnet nach Schlüsseln. Die Speicher-Engine erkennt ebenfalls, dass es sich bei den Seiten 504/505 und 527/528 um zusammenhängende Seiten handelt, und führt einen einzelnen Scatter-Lesevorgang aus, um angrenzende Seiten in einem einzigen Vorgang abzurufen. Wenn viele Seiten in einem seriellen Vorgang abgerufen werden sollen, plant die Speicher-Engine einen Block von Lesevorgängen zur selben Zeit. Wenn eine Teilmenge dieser Lesevorgänge abgeschlossen ist, plant die Speicher-Engine dieselbe Anzahl neuer Lesevorgänge, bis alle erforderlichen Lesevorgänge geplant sind.
 
-Das Speichermodul verwendet Vorababrufvorgänge, um Basistabellen-Nachschlagevorgänge in nicht gruppierten Indizes zu beschleunigen. Die Blattzeilen eines nicht gruppierten Indexes enthalten Zeiger auf die Datenzeilen, die die jeweiligen Schlüsselwerte enthalten. Während das Speichermodul die Blattseiten des nicht gruppierten Indexes liest, beginnt es mit der Planung asynchroner Lesevorgänge für die Datenzeilen, deren Zeiger bereits abgerufen wurden. Auf diese Weise kann das Speichermodul Datenzeilen aus der zugrunde liegenden Tabelle abrufen, bevor der Scan des nicht gruppierten Indexes abgeschlossen ist. Dieses Verfahren wird unabhängig davon eingesetzt, ob die Tabelle über einen gruppierten Index verfügt. SQL Server Enterprise verwendet Vorababrufvorgänge häufiger als andere Editionen von SQL Server, wodurch mehr Seiten im Read-Ahead-Modus gelesen werden können. Der Grad der Vorababrufvorgänge kann in keiner Edition konfiguriert werden. Weitere Informationen zu nicht gruppierten Indizes finden Sie unter [Strukturen nicht gruppierter Indizes](../relational-databases/pages-and-extents-architecture-guide.md).
+Die Speicher-Engine verwendet Vorababrufvorgänge, um Basistabellen-Nachschlagevorgänge in nicht gruppierten Indizes zu beschleunigen. Die Blattzeilen eines nicht gruppierten Indexes enthalten Zeiger auf die Datenzeilen, die die jeweiligen Schlüsselwerte enthalten. Während die Speicher-Engine die Blattseiten des nicht gruppierten Indexes liest, beginnt es mit der Planung asynchroner Lesevorgänge für die Datenzeilen, deren Zeiger bereits abgerufen wurden. Auf diese Weise kann die Speicher-Engine Datenzeilen aus der zugrunde liegenden Tabelle abrufen, bevor der Scan des nicht gruppierten Indexes abgeschlossen ist. Dieses Verfahren wird unabhängig davon eingesetzt, ob die Tabelle über einen gruppierten Index verfügt. SQL Server Enterprise verwendet Vorababrufvorgänge häufiger als andere Editionen von SQL Server, wodurch mehr Seiten im Read-Ahead-Modus gelesen werden können. Der Grad der Vorababrufvorgänge kann in keiner Edition konfiguriert werden. Weitere Informationen zu nicht gruppierten Indizes finden Sie unter [Strukturen nicht gruppierter Indizes](../relational-databases/pages-and-extents-architecture-guide.md).
 
 ## <a name="advanced-scanning"></a>Erweitertes Scannen
 Die erweiterte Scanfunktion von SQL Server Enterprise ermöglicht es, dass vollständige Tabellenscans für mehrere Tasks freigegeben werden. Wenn für einen Ausführungsplan einer Transact-SQL-Anweisung ein Scan der Datenseiten in einer Tabelle erforderlich ist und das [!INCLUDE[ssDE](../includes/ssde-md.md)] erkennt, dass die Tabelle bereits für einen anderen Ausführungsplan gescannt wurde, verknüpft [!INCLUDE[ssDE](../includes/ssde-md.md)] den zweiten Scan mit dem ersten Scan, und zwar an der aktuellen Position des zweiten Scans. [!INCLUDE[ssDE](../includes/ssde-md.md)] liest jede Seite einmal und übergibt die Zeilen jeder Seite an beide Ausführungspläne. Dieser Vorgang wird fortgesetzt, bis das Ende der Tabelle erreicht ist. 

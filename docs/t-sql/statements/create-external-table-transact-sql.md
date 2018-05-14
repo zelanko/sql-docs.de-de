@@ -1,16 +1,14 @@
 ---
 title: CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 11/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_EXTERNAL_TABLE
@@ -23,16 +21,16 @@ helpviewer_keywords:
 - External, table create
 - PolyBase, external table
 ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 30
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 146fd91bfab0ceb5d9b289ef9be6c7446c77f073
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: fc04195092a1371be93410cc77d8d06460c957da
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -43,7 +41,7 @@ ms.lasthandoff: 02/24/2018
 >  PolyBase wird nur in SQL Server 2016 (oder höher), Azure SQL Data Warehouse und Parallel Data Warehouse unterstützt. Elastische Datenbankabfragen werden nur auf Azure SQL-Datenbank v12 oder höher unterstützt.  
 
 
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server verwendet externe Tabellen, um auf Daten in einem Hadoop-Cluster oder in Azure Blob Storage zuzugreifen. Eine externe PolyBase-Tabelle, die auf Daten in einem Hadoop-Cluster oder in Azure Blob Storage verweist, kann auch zum Erstellen einer externen Tabelle für [elastische Datenbankabfragen](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/) verwendet werden.  
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet externe Tabellen, um auf Daten in einem Hadoop-Cluster oder in Azure Blob Storage zuzugreifen. Eine externe PolyBase-Tabelle, die auf Daten in einem Hadoop-Cluster oder in Azure Blob Storage verweist, kann auch zum Erstellen einer externen Tabelle für [elastische Datenbankabfragen](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/) verwendet werden.  
   
  Verwenden Sie eine externe Tabelle, um:  
   
@@ -146,7 +144,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  *database_name* . [ schema_name ] . | schema_name. ] *table_name*  
  Ein- bis dreiteiliger Name der Tabelle, die erstellt werden soll. Für eine externe Tabelle werden nur die Metadaten der Tabelle zusammen mit den grundlegenden Statistiken über die Datei oder Ordner, auf die in Hadoop oder Azure Blob Storage verwiesen wird, gespeichert. Es werden keine tatsächlichen Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verschoben oder gespeichert.  
   
- \<column_definition> [,...*n* ] CREATE EXTERNAL TABLE erlaubt eine oder mehrere Spaltendefinitionen. CREATE EXTERNAL TABLE und CREATE TABLE verwenden dieselbe Syntax zur Spaltendefinition. Eine Ausnahme ist die Tatsache, dass Sie DEFAULT CONSTRAINT nicht in externen Tabellen verwenden können. Die vollständigen Details zu Spaltendefinitionen und deren Datentypen finden Sie unter [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) und [CREATE TABLE in der Azure SQL-Datenbank](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
+ \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE erlaubt eine oder mehrere Spaltendefinitionen. CREATE EXTERNAL TABLE und CREATE TABLE verwenden dieselbe Syntax zur Spaltendefinition. Eine Ausnahme ist die Tatsache, dass Sie DEFAULT CONSTRAINT nicht in externen Tabellen verwenden können. Die vollständigen Details zu Spaltendefinitionen und deren Datentypen finden Sie unter [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) und [CREATE TABLE in der Azure SQL-Datenbank](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
   
  Die Spaltendefinitionen, einschließlich der Datentypen und die Anzahl der Spalten, müssen mit den Daten in externen Dateien übereinstimmen. Wenn ein Konflikt besteht, werden die Zeilen der Datei beim Abfragen der tatsächlichen Daten zurückgewiesen.  
   
@@ -182,6 +180,12 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  LOCATION =  '*folder_or_filepath*'  
  Gibt den Ordner oder den Dateipfad und Dateinamen für die tatsächlichen Daten in Hadoop oder Azure Blob Storage an. Der Speicherort beginnt im Stammordner. Der Stammordner ist der in der externen Datenquelle angegebene Datenspeicherort.  
+
+
+In SQL Server erstellt die Anweisung CREATE EXTERNAL TABLE den Pfad und den Ordner, wenn diese noch nicht vorhanden sind. Sie können dann INSERT INTO zum Exportieren von Daten aus einer lokalen SQL Server-Tabelle in die externe Datenquelle verwenden. Weitere Informationen finden Sie unter [PolyBase-Abfragen](/sql/relational-databases/polybase/polybase-queries). 
+
+In SQL Data Warehouse und Analytics Platform System erstellt die Anweisung [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) den Pfad und den Ordner, wenn diese noch nicht vorhanden sind. In diesen zwei Produkten erstellt CREATE EXTERNAL TABLE den Pfad und den Ordner nicht.
+
   
  Wenn LOCATION als Ordner angegeben wird, ruft eine PolyBase-Abfrage, die aus der externen Tabelle auswählt, Dateien aus dem Ordner und allen Unterordnern ab. Hadoop und PolyBase geben keine ausgeblendeten Ordner zurück. Es werden auch keine Dateien zurückgegeben, deren Dateiname mit einem Unterstrich (_) oder einem Punkt (.) beginnt.  
   
@@ -203,7 +207,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  Wenn Sie die Reject-Werte nicht angeben oder ändern, verwendet PolyBase Standardwerte. Diese Informationen über die Reject-Parameter werden als zusätzliche Metadaten gespeichert, wenn Sie eine externe Tabelle mit der CREATE EXTERNAL TABLE-Anweisung erstellen.   Wenn eine zukünftige SELECT- oder SELECT INTO SELECT-Anweisung Daten aus der externen Tabelle auswählt, wird PolyBase die Reject-Optionen verwenden, um die Anzahl oder den Prozentsatz der Zeilen zu bestimmen, die zurückgewiesen werden können, bevor die tatsächliche Abfrage fehlschlägt. zugreifen. Die Abfrage wird (Teil-) Ergebnisse zurückgeben, bis der Reject-Schwellenwert überschritten wird. Es wird dann eine entsprechende Fehlermeldung ausgelöst.  
   
  REJECT_TYPE = **value** | percentage  
- Verdeutlicht, ob die Option REJECT_VALUE als Literalwert oder als Prozentsatz angegeben wird.  
+ Gibt an, ob die Option „REJECT_VALUE“ als Literalwert oder als Prozentsatz angegeben wird.  
   
  Wert  
  REJECT_VALUE ist ein Literalwert und kein Prozentsatz. Die PolyBase-Abfrage schlägt fehl, wenn die Anzahl der abgelehnten Zeilen *reject_value* überschreitet.  
@@ -277,7 +281,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 
  > [!IMPORTANT]  
 
->  Mit der Berechtigung ALTER ANY EXTERNAL DATA SOURCE besitzt jeder Prinzipal die Fähigkeit, alle externen Datenquellenobjekte zu erstellen und zu ändern. Damit können sie auch auf alle datenbankweit gültigen Anmeldeinformationen der Datenbank zugreifen. Da es sich hierbei um weitreichende Berechtigungen handelt, darf sie nur vertrauenswürdigen Prinzipalen innerhalb des Systems erteilt werden.
+>  Mit der Berechtigung ALTER ANY EXTERNAL DATA SOURCE besitzt jeder Prinzipal die Fähigkeit, alle externen Datenquellenobjekte zu erstellen und zu ändern. Damit können sie auch auf alle datenbankweit gültigen Anmeldeinformationen der Datenbank zugreifen. Da es sich hierbei um eine weitreichende Berechtigung handelt, darf sie nur vertrauenswürdigen Prinzipalen innerhalb des Systems erteilt werden.
 
 ## <a name="error-handling"></a>Fehlerbehandlung  
  Beim Ausführen der CREATE EXTERNAL TABLE-Anweisung versucht PolyBase, eine Verbindung mit der externen Datenquelle herzustellen. Tritt bei der Verbindung ein Fehler auf, schlägt die Anweisung fehl. Die externe Tabelle wird nicht erstellt. Da PolyBase erneut versucht, die Verbindung aufzubauen, bevor die Abfrage endgültig fehlschlägt, kann es eine Minute oder länger dauern, bis der Befehl fehlschlägt.  

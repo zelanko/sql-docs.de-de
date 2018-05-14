@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Setup [SQL Server], software
 - software [SQL Server]
@@ -52,11 +51,11 @@ caps.latest.revision: 333
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8f82c8c25aa7834f5d1cc4fbc3a8a496c514a915
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 63b782f8026e25ab7ad1544ae2fd4cc481e78283
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Hardware- und Softwareanforderungen für die Installation von SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -96,7 +95,8 @@ Die folgenden Anforderungen gelten für alle Installationen:
   
 |Komponente|Anforderung|  
 |---------------|-----------------|  
-|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 und höher erfordern [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 für das Datenbankmodul, die Master Data Services oder die Replikation. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016-Setup installiert automatisch [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Sie können [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] auch manuell von der Seite [Microsoft .NET Framework 4.6 (Web Installer) für Windows](http://support.microsoft.com/kb/3045560)aus installieren.<br/><br/> Weitere Informationen, Empfehlungen und Anleitungen zu [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 finden Sie unter [Handbuch für die Bereitstellung von .NET Framework für Entwickler](http://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx).<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]und [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] erfordern [KB2919355](http://support.microsoft.com/kb/2919355) vor der Installation von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.|  
+|.NET Framework|
+  [!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 und höher erfordern [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 für die Datenbank-Engine, die Master Data Services oder die Replikation. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016-Setup installiert automatisch [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Sie können [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] auch manuell von der Seite [Microsoft .NET Framework 4.6 (Web Installer) für Windows](http://support.microsoft.com/kb/3045560)aus installieren.<br/><br/> Weitere Informationen, Empfehlungen und Anleitungen zu [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 finden Sie unter [Handbuch für die Bereitstellung von .NET Framework für Entwickler](http://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx).<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]und [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] erfordern [KB2919355](http://support.microsoft.com/kb/2919355) vor der Installation von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.|  
 |Netzwerksoftware|Die unterstützten Betriebssysteme für [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] verfügen über integrierte Netzwerksoftware. Benannte und Standardinstanzen einer eigenständigen Installation unterstützen die folgenden Netzwerkprotokolle: Shared Memory, Named Pipes, TCP/IP und VIA.<br/><br/> Hinweis: Das Shared Memory-Protokoll und VIA werden in Failoverclustern nicht unterstützt.<br/><br/> Beachten Sie auch, dass das VIA-Protokoll veraltet ist. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> <br/><br/> Weitere Informationen zu Netzwerkprotokollen und Netzwerkbibliotheken finden Sie unter [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md).|  
 |Festplatte|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] erfordert mindestens 6 GB verfügbaren Festplattenspeicher.<br/><br/> Der erforderliche freie Festplattenspeicher ist von den installierten [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] -Komponenten abhängig. Weitere Informationen finden Sie unter [Anforderungen an den Festplattenspeicherplatz](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) weiter unten in diesem Artikel. Informationen zu unterstützten Speichertypen für Datendateien finden Sie unter [Speichertypen für Datendateien](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes).|  
 |Laufwerk|Ein DVD-Laufwerk ist erforderlich, falls die Installation von einem DVD-Medium erfolgt.|  

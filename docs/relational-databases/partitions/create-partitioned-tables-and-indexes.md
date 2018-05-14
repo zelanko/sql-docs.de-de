@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: partitions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-partition
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.createpartition.progress.f1
 - sql13.swb.createpartition.partitioncolumn.f1
@@ -35,13 +34,12 @@ caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c0abc49c1884a0516bc9e0b46b0f4d879ccbacfa
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b5a1b3f5f8c27861818a06c780dd30ef53a4600d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Erstellen partitionierter Tabellen und Indizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -114,7 +112,7 @@ ms.lasthandoff: 04/16/2018
   
 8.  Fügen Sie weiter Zeilen hinzu, bis Sie mindestens eine Datei für jede Dateigruppe erstellt haben.  
   
-9. Erweitern Sie den Ordner **Tabellen** , und erstellen Sie eine Tabelle. Weitere Informationen finden Sie unter [Verbindungsserver &#40;Datenbankmodul&#41;](../../relational-databases/tables/create-tables-database-engine.md). Alternativ können Sie in der nächsten Prozedur eine vorhandene Tabelle angeben.  
+9. Erweitern Sie den Ordner **Tabellen** , und erstellen Sie eine Tabelle. Weitere Informationen finden Sie unter [Verbindungsserver &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/tables/create-tables-database-engine.md). Alternativ können Sie in der nächsten Prozedur eine vorhandene Tabelle angeben.  
   
 #### <a name="to-create-a-partitioned-table"></a>So erstellen Sie eine partitionierte Tabelle  
   
@@ -216,7 +214,7 @@ ms.lasthandoff: 04/16/2018
   
             -   Wenn Sie **Einmalig um**auswählen, geben Sie im Feld **Einmalig um** die spezifische Tageszeit ein, zu der der Auftragszeitplan ausgeführt werden soll. Geben Sie die Stunde, Minute und Sekunde des Tages sowie AM oder PM ein.  
   
-            -   Wenn Sie **Alle**auswählen, geben Sie an, wie oft der Auftragszeitplan an dem unter **Häufigkeit**ausgewählten Tag ausgeführt werden soll. Wenn Sie z.B. möchten, dass der Auftragszeitplan am Tag seiner Ausführung alle 2 Stunden wiederholt wird, wählen Sie **Alle**aus, geben in das erste Feld „2“ ein und wählen in der Liste **Stunde(n)** aus. Aus dieser Liste können Sie auch **Minute(n)** und **Sekunde(n)**auswählen. Beachten Sie, dass die größte im ersten Feld zugelassene Zahl "100" ist.  
+            -   Wenn Sie **Alle**auswählen, geben Sie an, wie oft der Auftragszeitplan an dem unter **Häufigkeit**ausgewählten Tag ausgeführt werden soll. Wenn Sie z.B. möchten, dass der Auftragszeitplan am Tag seiner Ausführung alle 2 Stunden wiederholt wird, wählen Sie **Alle**aus, geben in das erste Feld „2“ ein und wählen in der Liste **Stunde(n)** aus. Aus dieser Liste können Sie auch **Minute(n)** und **Sekunde(n)** auswählen. Beachten Sie, dass die größte im ersten Feld zugelassene Zahl "100" ist.  
   
                  Geben Sie im Feld **Start** die Zeit ein, zu der die Ausführung des Auftragszeitplans beginnen soll. Geben Sie im Feld **Ende** die Zeit ein, zu der die Ausführung des Auftragszeitplans enden soll. Geben Sie die Stunde, Minute und Sekunde des Tages sowie AM oder PM ein.  
   

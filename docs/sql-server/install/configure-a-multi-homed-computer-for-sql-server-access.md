@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], multi-homed computer
 - multi-homed computer [SQL Server] configuring ports
@@ -21,12 +20,11 @@ caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 501f68523b74081f50b36c2d6b0ac02a02b49afd
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 14c731e7ee2601ef81963efc27fa5a341d34f487
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Konfigurieren eines mehrfach vernetzten Computers für SQL Server-Zugriff
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -113,7 +111,7 @@ ms.lasthandoff: 04/26/2018
 10. Überprüfen Sie die Optionen auf der Seite **Aktion** . In diesem Beispiel verwenden Sie nicht die Firewall, um sichere Verbindungen zu gewährleisten. Klicken Sie daher auf **Verbindung zulassen**und anschließend auf **Weiter**.  
   
     > [!NOTE]  
-    >  Möglicherweise sind für die Umgebung sichere Verbindungen erforderlich. Wenn Sie eine der Optionen für sichere Verbindungen auswählen, müssen Sie möglicherweise ein Zertifikat und die Option **Verschlüsselung erzwingen** konfigurieren. Weitere Informationen zu sicheren Verbindungen finden Sie unter [Aktivieren von verschlüsselten Verbindungen mit dem Datenbankmodul &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)[Aktivieren von verschlüsselten Verbindungen zum Datenbankmodul & #40; SQL Server-Konfigurations-Manager & #41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Möglicherweise sind für die Umgebung sichere Verbindungen erforderlich. Wenn Sie eine der Optionen für sichere Verbindungen auswählen, müssen Sie möglicherweise ein Zertifikat und die Option **Verschlüsselung erzwingen** konfigurieren. Weitere Informationen zu sicheren Verbindungen finden Sie unter [Aktivieren von verschlüsselten Verbindungen mit der Datenbank-Engine &amp;#40;SQL Server Configuration Manager&amp;#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)[Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp; #40; SQL Server-Konfigurations-Manager &amp; #41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 11. Wählen Sie auf der Seite **Profil** mindestens ein Profil für die Regel aus. Wenn Sie mit Firewallprofilen nicht vertraut sind, klicken Sie im Firewallprogramm auf den Link **Weitere Informationen zu Profilen** .  
   
@@ -148,7 +146,8 @@ ms.lasthandoff: 04/26/2018
 9. Um die anderen IP-Adressen auf einem mehrfach vernetzten Computer zu konfigurieren, wiederholen Sie diesen Vorgang mit einer anderen IP-Adresse und einer anderen Regel.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [SQL Server-Browserdienst &#40;Datenbankmodul und SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
+ 
+  [SQL Server-Browserdienst &amp;#40;Datenbank-Engine und SSAS&amp;#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
  [Verbindungsaufbau mit SQL Server über einen Proxyserver &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager.md)  
   
   

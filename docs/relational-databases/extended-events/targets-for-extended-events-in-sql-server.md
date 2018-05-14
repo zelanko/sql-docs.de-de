@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 04/17/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: xevents
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 90dc83f080a2b2b64771ccb48e5cc3839e0a67e7
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: ff8bbd4060e6aa309c3e98f52c04fe88b76721fa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Ziele für erweiterte Ereignisse in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -108,7 +106,7 @@ Im Gegensatz zu den meisten anderen Zielen:
 
 - Im Gegensatz zu den meisten Zielen verarbeitet das event_counter-Ziel die empfangenen Daten *synchron*
     - Die synchrone Verarbeitung ist für den einfachen event_counter akzeptabel, da event_counter sehr wenig Verarbeitungsleitung beansprucht
-    - Das Datenbankmodul bewirkt die Trennung von jedem Ziel, das zu langsam ist und dadurch die Leistung des Datenbankmoduls zu beeinträchtigen (bremsen) droht. Das ist ein Grund, warum die meisten Ziele *asynchrone*Verarbeitung aufweisen.
+    - Die Datenbank-Engine bewirkt die Trennung von jedem Ziel, das zu langsam ist und dadurch die Leistung der Datenbank-Engine zu beeinträchtigen (bremsen) droht. Das ist ein Grund, warum die meisten Ziele *asynchrone*Verarbeitung aufweisen.
 
 
 #### <a name="example-output-captured-by-eventcounter"></a>Von event_counter erfasste Beispielausgabe
@@ -791,7 +789,7 @@ Ein Grund, warum wir wissen, dass diese beiden Ziele in T-SQL nicht verwendet we
 
 Das event_stream-Ziel kann in .NET-Programmen verwendet werden, die in Sprachen wie C# erstellt wurden. C#- und andere .NET-Entwickler können auf einen Ereignisstream mithilfe einer .NET Framework-Klasse zugreifen, wie etwa im Namespace Microsoft.SqlServer.XEvents.Linq.
 
-Wenn er auftritt, bedeutet Fehler **25726** , dass der Ereignisstream sich schneller mit Daten gefüllt hat, als der Client die Daten nutzen konnte. Dadurch wurde die Verbindung des Datenbankmoduls mit dem Ereignisstream getrennt, um eine Beeinträchtigung der Serverleistung zu vermeiden.
+Wenn er auftritt, bedeutet Fehler **25726** , dass der Ereignisstream sich schneller mit Daten gefüllt hat, als der Client die Daten nutzen konnte. Dadurch wurde die Verbindung der Datenbank-Engine mit dem Ereignisstream getrennt, um eine Beeinträchtigung der Serverleistung zu vermeiden.
 
 
 ### <a name="xevent-namespaces"></a>XEvent-Namespaces

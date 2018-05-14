@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dta.general.f1
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
@@ -19,16 +18,15 @@ caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 9a0f6d0921c4d530c8ed1b46264d933c46678140
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: cf9a22ea519e6dc5093c2e8fa999ad847894303c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
+# <a name="database-engine-tuning-advisor"></a>Datenbankoptimierungsratgeber
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Datenbankoptimierungsratgeber (DTA) analysiert Datenbanken und gibt Empfehlungen zum Optimieren der Abfrageleistung. Mit dem Datenbankoptimierungsratgeber können Sie einen optimalen Satz von Indizes, indizierten Sichten oder Tabellenpartitionen auswählen und erstellen, auch wenn Sie nicht über detaillierte Kenntnisse bezüglich der Datenbankstruktur oder der internen Mechanismen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügen. Mit dem DTA können Sie die folgenden Aufgaben ausführen:  
+  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Datenbankoptimierungsratgeber (DTA) analysiert Datenbanken und gibt Empfehlungen zum Optimieren der Abfrageleistung. Mit dem Datenbankoptimierungsratgeber können Sie einen optimalen Satz von Indizes, indizierten Sichten oder Tabellenpartitionen auswählen und erstellen, auch wenn Sie nicht über detaillierte Kenntnisse bezüglich der Datenbankstruktur oder der internen Mechanismen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügen. Mit dem DTA können Sie die folgenden Aufgaben ausführen:  
   
 -   Beheben der Leistungsprobleme einer bestimmten Problemabfrage  
   
@@ -111,7 +109,7 @@ ms.lasthandoff: 04/16/2018
 -   Der Datenbankoptimierungsratgeber speichert Daten zu Optimierungssitzungen und andere Informationen in der **msdb** -Datenbank. Wenn an der **msdb** -Datenbank Änderungen vorgenommen werden, besteht das Risiko, dass Optimierungssitzungsdaten verloren gehen. Um dieses Risiko zu umgehen, müssen Sie für die **msdb** -Datenbank eine geeignete Sicherungsstrategie implementieren.  
   
 ## <a name="performance-considerations"></a>Überlegungen zur Leistung  
- Der Datenbankmodul-Optimierungsratgeber kann bei der Analyse signifikante Prozessor- und Arbeitsspeicherressourcen belegen. Um zu vermeiden, dass die Leistung des Produktionsservers beeinträchtigt wird, wenden Sie eine der folgenden Strategien an:  
+ Der Datenbankoptimierungsratgeber kann bei der Analyse signifikante Prozessor- und Arbeitsspeicherressourcen belegen. Um zu vermeiden, dass die Leistung des Produktionsservers beeinträchtigt wird, wenden Sie eine der folgenden Strategien an:  
   
 -   Optimieren Sie die Datenbanken, wenn der Server frei ist. Der Datenbankoptimierungsratgeber kann sich auf Wartungstasks auswirken.  
   
@@ -120,7 +118,7 @@ ms.lasthandoff: 04/16/2018
 -   Geben Sie nur die Strukturen für den physischen Datenbankentwurf an, die der Datenbankoptimierungsratgeber analysieren soll. Der Datenbankoptimierungsratgeber stellt zahlreiche Optionen zur Verfügung, gibt jedoch nur die wirklich erforderlichen an.  
   
 ## <a name="dependency-on-xpmsver-extended-stored-procedure"></a>Abhängigkeit von der erweiterten gespeicherten Prozedur xp_msver  
- Der Datenbankoptimierungsratgeber ist von der erweiterten gespeicherten Prozedur **xp_msver** abhängig, um vollständige Funktionalität bereitzustellen. Diese erweiterte gespeicherte Prozedur wird standardmäßig aktiviert. Der Datenbankoptimierungsratgeber verwendet diese erweiterte gespeicherte Prozedur, um die Anzahl der Prozessoren und den verfügbaren Speicher auf dem Computer abzurufen, auf dem sich die zu optimierende Datenbank befindet. Wenn **xp_msver** nicht verfügbar ist, übernimmt der Datenbankoptimierungsratgeber die Hardwaremerkmale des Computers, auf dem er ausgeführt wird. Wenn die Hardwaremerkmale des Computers, auf dem der Datenbankmodul-Optimierungsratgeber ausgeführt wird, nicht zur Verfügung stehen, geht der Ratgeber von einem Prozessor und 1024 MB (Megabyte) Speicher aus.  
+ Der Datenbankoptimierungsratgeber ist von der erweiterten gespeicherten Prozedur **xp_msver** abhängig, um vollständige Funktionalität bereitzustellen. Diese erweiterte gespeicherte Prozedur wird standardmäßig aktiviert. Der Datenbankoptimierungsratgeber verwendet diese erweiterte gespeicherte Prozedur, um die Anzahl der Prozessoren und den verfügbaren Speicher auf dem Computer abzurufen, auf dem sich die zu optimierende Datenbank befindet. Wenn **xp_msver** nicht verfügbar ist, übernimmt der Datenbankoptimierungsratgeber die Hardwaremerkmale des Computers, auf dem er ausgeführt wird. Wenn die Hardwaremerkmale des Computers, auf dem der Datenbankoptimierungsratgeber ausgeführt wird, nicht zur Verfügung stehen, geht der Ratgeber von einem Prozessor und 1024 MB (Megabyte) Speicher aus.  
   
  Diese Abhängigkeit hat Auswirkungen auf die Partitionierungsempfehlungen, da die Anzahl der empfohlenen Partitionen von diesen beiden Werten (Anzahl der Prozessoren und verfügbarer Speicher) abhängt. Diese Abhängigkeit hat auch Auswirkungen auf die Optimierungsergebnisse, wenn Sie einen Testserver verwenden, um Ihren Produktionsserver zu optimieren. In diesem Szenario verwendet der Datenbankoptimierungsratgeber **xp_msver** , um Hardwareeigenschaften vom Produktionsserver abzurufen. Nach dem Optimieren der Arbeitsauslastung auf dem Testserver verwendet der Datenbankoptimierungsratgeber diese Hardwareeigenschaften dazu, eine Empfehlung zu generieren. Weitere Informationen finden Sie unter [xp_msver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-msver-transact-sql.md).  
   
@@ -129,7 +127,9 @@ ms.lasthandoff: 04/16/2018
   
 |Datenbankoptimierungsratgeber-Aufgabe|Thema|  
 |-----------------------------------------|-----------|  
-|Initialisieren und Starten des Datenbankoptimierungsratgebers<br /><br /> Erstellen einer Arbeitsauslastung durch Angeben des Plancache, Erstellen eines Skripts oder Generieren einer Ablaufverfolgungsdatei oder Ablaufverfolgungstabelle<br /><br /> Optimieren einer Datenbank mithilfe der grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers<br /><br /> Erstellen von XML-Eingabedateien zum Optimieren von Arbeitsauslastungen<br /><br /> Anzeigen von Beschreibungen für die Benutzeroberflächenoptionen des Datenbankoptimierungsratgebers|[Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)|  
-|Anzeigen der Ergebnisse des Datenbankoptimierungsvorgangs<br /><br /> Auswählen und Implementieren von Optimierungsempfehlungen<br /><br /> Durchführen einer Was-wäre-wenn-Analyse für die Arbeitsauslastung<br /><br /> Überprüfen vorhandener Optimierungssitzungen, Klonen von Sitzungen auf Grundlage vorhandener Sitzungen <br />oder Bearbeiten vorhandener Optimierungsempfehlungen zur weiteren Auswertung oder Implementierung<br /><br /> Anzeigen von Beschreibungen für die Benutzeroberflächenoptionen des Datenbankoptimierungsratgebers|[Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)|  
+|Initialisieren und Starten des Datenbankoptimierungsratgebers<br /><br /> Erstellen einer Arbeitsauslastung durch Angeben des Plancache, Erstellen eines Skripts oder Generieren einer Ablaufverfolgungsdatei oder Ablaufverfolgungstabelle<br /><br /> Optimieren einer Datenbank mithilfe der grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers<br /><br /> Erstellen von XML-Eingabedateien zum Optimieren von Arbeitsauslastungen<br /><br /> Anzeigen von Beschreibungen für die Benutzeroberflächenoptionen des Datenbankoptimierungsratgebers|
+  [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)|  
+|Anzeigen der Ergebnisse des Datenbankoptimierungsvorgangs<br /><br /> Auswählen und Implementieren von Optimierungsempfehlungen<br /><br /> Durchführen einer Was-wäre-wenn-Analyse für die Arbeitsauslastung<br /><br /> Überprüfen vorhandener Optimierungssitzungen, Klonen von Sitzungen auf Grundlage vorhandener Sitzungen <br />oder Bearbeiten vorhandener Optimierungsempfehlungen zur weiteren Auswertung oder Implementierung<br /><br /> Anzeigen von Beschreibungen für die Benutzeroberflächenoptionen des Datenbankoptimierungsratgebers|
+  [Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)|  
   
   

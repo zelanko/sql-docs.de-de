@@ -1,30 +1,29 @@
 ---
-title: "Übersicht über räumliche Indizes | Microsoft-Dokumentation"
-ms.custom: 
+title: Übersicht über räumliche Indizes | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 09/12/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: spatial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - spatial indexes [SQL Server]
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
-caps.latest.revision: 
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 97c9aa05a5dc7eba5a47a616f15ba5e4faca0b16
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a9c73a6851fe5e1e538af9ebe15f2be8a0d43f4c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spatial-indexes-overview"></a>Übersicht über räumliche Indizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

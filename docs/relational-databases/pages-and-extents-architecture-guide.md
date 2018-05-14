@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 10/21/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: relational-databases-misc
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - page and extent architecture guide
 - guide, page and extent architecture
@@ -20,13 +19,12 @@ caps.latest.revision: 2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 76c3411535c32c4d921ed464a877868b9600c9af
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6f42360e4a0b3a23a7e39d390b711870e855129b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Handbuch zur Architektur von Seiten und Blöcken
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -122,7 +120,7 @@ Dies führt zu einfachen Algorithmen für die Blockverwaltung.
 
 **PFS-Seiten (Page Free Space)** zeichnen den Zuordnungsstatus der einzelnen Seiten auf, ob eine einzelne Seite zugeordnet wurde und die Menge des freien Speicherplatzes für die einzelnen Seiten. Der PFS verfügt über ein Byte pro Seite und zeichnet auf, ob die Seite zugeordnet ist, und sofern dies der Fall ist, ob sie leer, 1 bis 50 Prozent voll, 51 bis 80 Prozent voll, 81 bis 95 Prozent voll oder 96 bis 100 Prozent voll ist.
 
-Nachdem ein Block einem Objekt zugeordnet wurde, verwendet das Datenbankmodul die PFS-Seiten, um aufzuzeichnen, welche Seiten in dem jeweiligen Block zugeordnet und welche Seiten frei sind. Diese Informationen werden verwendet, wenn das Datenbankmodul eine neue Seite zuordnen muss. Die Menge des freien Speicherplatzes auf einer Seite wird nur für Heap- und Text/Image-Seiten verwaltet. Diese Information wird verwendet, wenn das Datenbankmodul eine Seite mit verfügbarem freien Speicherplatz sucht, um eine neu eingefügte Zeile aufzunehmen. Indizes erfordern nicht, dass der Page Free Space nachverfolgt werden soll, da die Stelle, an der eine neue Zeile eingefügt werden soll, von den Indexschlüsselwerten festgelegt wird.
+Nachdem ein Block einem Objekt zugeordnet wurde, verwendet die Datenbank-Engine die PFS-Seiten, um aufzuzeichnen, welche Seiten in dem jeweiligen Block zugeordnet und welche Seiten frei sind. Diese Informationen werden verwendet, wenn die Datenbank-Engine eine neue Seite zuordnen muss. Die Menge des freien Speicherplatzes auf einer Seite wird nur für Heap- und Text/Image-Seiten verwaltet. Diese Information wird verwendet, wenn die Datenbank-Engine eine Seite mit verfügbarem freien Speicherplatz sucht, um eine neu eingefügte Zeile aufzunehmen. Indizes erfordern nicht, dass der Page Free Space nachverfolgt werden soll, da die Stelle, an der eine neue Zeile eingefügt werden soll, von den Indexschlüsselwerten festgelegt wird.
 
 Eine PFS-Seite ist nach der Dateiheaderseite die erste Seite in einer Datendatei (Seiten-ID 1). Auf diese folgt eine GAM-Seite (Seiten-ID 2) und anschließend eine SGAM-Seite (Seiten-ID 3). Ungefähr alle 8.000 Seiten nach der ersten PFS-Seite folgt eine weitere PFS-Seite. 64.000 Blöcke nach der ersten GAM-Seite folgt eine weitere GAM-Seite auf Seite 2. Eine weitere SGAM-Seite folgt 64.000 Blöcke nach der ersten SGAM-Seite auf Seite 3. Folgende Abbildung veranschaulicht die Abfolge der Seiten, die von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] für das Zuordnen und Verwalten von Blöcken verwendet werden.
 

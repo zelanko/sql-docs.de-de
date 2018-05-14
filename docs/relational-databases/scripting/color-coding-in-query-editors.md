@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], color coding
 - color coding [Query Editor]
@@ -20,13 +18,12 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b51afacfd047298f5f498bf956e9a70443ad71c7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 2e81aaeb83e6a0199c20e9bb1652f89db72b2217
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="color-coding-in-query-editors"></a>Farbcodierung im Abfrage-Editor
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +44,7 @@ ms.lasthandoff: 04/16/2018
 |Dunkelgrau|Operatoren|  
   
 ## <a name="status-bar"></a>Statusleiste  
- Sie können registrierte Server oder [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Server im Objekt-Explorer konfigurieren, damit sie in der Statusleiste des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editors andere Farben aufweisen. Damit können Sie identifizieren, zu welchem Server die einzelnen Editor-Fenster gehören, wenn viele Fenster gleichzeitig geöffnet sind. Weitere Informationen zum Festlegen der Statusleistenfarben finden Sie unter [Statusleiste &#40;Abfrage-Editor des Datenbankmoduls&#41;](../../relational-databases/scripting/status-bar-database-engine-query-editor.md).  
+ Sie können registrierte Server oder [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Server im Objekt-Explorer konfigurieren, damit sie in der Statusleiste des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editors andere Farben aufweisen. Damit können Sie identifizieren, zu welchem Server die einzelnen Editor-Fenster gehören, wenn viele Fenster gleichzeitig geöffnet sind. Weitere Informationen zum Festlegen der Statusleistenfarben finden Sie unter [Statusleiste &amp;#40;Abfrage-Editor der Datenbank-Engine&amp;#41;](../../relational-databases/scripting/status-bar-database-engine-query-editor.md).  
   
  In manchen Editor-Typen wird die Statusleiste nicht angezeigt, oder es werden keine verschiedenen Farben unterstützt.  
   

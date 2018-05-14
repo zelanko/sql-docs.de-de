@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 09/13/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, data collection
 ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
@@ -19,13 +18,12 @@ caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8b3903f39cd93f78a20becab1d063a4cfe152b0b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: dafc740c11cf79294786440204e8e284dcbd518e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-query-store-collects-data"></a>So werden Daten im Abfragespeicher gesammelt
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +63,7 @@ ms.lasthandoff: 04/16/2018
   
  ![abfrage-speicher-prozess-2prozessor](../../relational-databases/performance/media/query-store-process-2processor.png "abfrage-speicher-prozess-2prozessor")  
   
- Zur Minimierung des E/A-Aufwands werden neue Daten im Speicher erfasst. Schreibvorgänge werden in eine Warteschlange eingereiht und danach auf den Datenträger geleert. Abfrage- und Planinformationen („Plan Store“ im nachstehenden Diagramm) werden mit minimaler Latenz geleert. Die Laufzeitstatistiken (Runtime Stats) verbleiben solange im Arbeitsspeicher, wie dies mit der `DATA_FLUSH_INTERVAL_SECONDS``SET QUERY_STORE`. Im SSMS-Dialogfeld „Abfragespeicher“ können Sie einen Wert für **Datenleerungsintervall (Minuten)**eingeben, der in einen Sekundenwert konvertiert wird.  
+ Zur Minimierung des E/A-Aufwands werden neue Daten im Speicher erfasst. Schreibvorgänge werden in eine Warteschlange eingereiht und danach auf den Datenträger geleert. Abfrage- und Planinformationen („Plan Store“ im nachstehenden Diagramm) werden mit minimaler Latenz geleert. Die Laufzeitstatistiken (Runtime Stats) verbleiben solange im Arbeitsspeicher, wie dies mit der `DATA_FLUSH_INTERVAL_SECONDS``SET QUERY_STORE`. Im SSMS-Dialogfeld „Abfragespeicher“ können Sie einen Wert für **Datenleerungsintervall (Minuten)** eingeben, der in einen Sekundenwert konvertiert wird.  
   
  ![abfrage-speicher-prozess-3plan](../../relational-databases/performance/media/query-store-process-3.png "abfrage-speicher-prozess-3plan")  
   

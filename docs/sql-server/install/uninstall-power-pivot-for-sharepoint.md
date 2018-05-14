@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6d66a95ce77dca325d4f99247bcb3a5d2cb6cbdf
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 437b8dcba0034bc1ab82778f54a0658824de8c09
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="uninstall-power-pivot-for-sharepoint"></a>Deinstallieren von Power Pivot für SharePoint
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -50,7 +48,7 @@ ms.lasthandoff: 04/26/2018
   
 -   Sie müssen ein SharePoint-Farmadministrator oder ein Dienstanwendungsadministrator sein, um Funktionen und Lösungen in der Farm zu deinstallieren.  
   
--   Sie müssen SQL Server-Systemadministrator und Mitglied der lokalen Administratorengruppe sein, wenn Sie auch das Datenbankmodul deinstallieren.  
+-   Sie müssen SQL Server-Systemadministrator und Mitglied der lokalen Administratorengruppe sein, wenn Sie auch die Datenbank-Engine deinstallieren.  
   
 -   Sie müssen Analysis Services-Systemadministrator und Mitglied der lokalen Administratorengruppe sein, um Analysis Services und [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]zu deinstallieren.  
   
@@ -143,7 +141,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
 ##  <a name="bkmk_uninstall"></a> Schritt 3: Ausführen des SQL Server-Setups zum Entfernen von Programmen vom lokalen Computer  
  Programmdateien zu löschen erfordert, dass Sie SQL Server-Setup ausführen, um die Software zu deinstallieren. Durch das Deinstallieren werden die Dateien und die von Setup erstellten Registrierungseinträge entfernt. Sie können die Seite Programme und Funktionen verwenden, um die Software zu deinstallieren. Eine Installation von [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] ist Teil einer SQL Server-Installation.  
   
- Sie können einen Teil einer Installation deinstallieren, ohne dabei andere SQL Server-Instanzen (oder Funktionen in der gleichen Instanz) zu beeinflussen, die bereits installiert sind. Sie können z.B. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint deinstallieren, aber andere Komponenten wie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oder das Datenbankmodul, installiert lassen.  
+ Sie können einen Teil einer Installation deinstallieren, ohne dabei andere SQL Server-Instanzen (oder Funktionen in der gleichen Instanz) zu beeinflussen, die bereits installiert sind. Sie können z.B. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint deinstallieren, aber andere Komponenten wie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oder die Datenbank-Engine, installiert lassen.  
   
 1.  Wählen Sie **Microsoft SQL Server 2014 (64-Bit)** aus der Programmliste aus.  
   

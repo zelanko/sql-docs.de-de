@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 05/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows Firewall ports
 - WMI firewall ports
@@ -30,12 +29,11 @@ caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 64e8f497247a0c670c4091dca5c0531ed5715cb6
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: aa7b14005bacef0d094abd18bfe7e4d2e2e81665
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +50,8 @@ Um über eine Firewall auf eine Instanz von [!INCLUDE[ssNoVersion](../../include
   
  Benutzer, die mit dem Element **Windows-Firewall** in der Systemsteuerung und mit dem MMC-Snap-In (Microsoft Management Console) „Windows-Firewall mit erweiterter Sicherheit“ vertraut sind und wissen, welche Firewalleinstellungen sie konfigurieren möchten, können direkt zu den Artikeln in der folgenden Liste wechseln:  
   
--   [Konfigurieren einer Windows-Firewall für Datenbankmodulzugriff](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
+-   
+  [Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
 -   [Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
@@ -130,7 +129,7 @@ Konfigurieren Sie die Einstellungen der Windows-Firewall entweder über **Micros
 |Replikation|Für Replikationsverbindungen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden die typischen regulären [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Ports (TCP-Port 1433 für die Standardinstanz usw.) verwendet.<br /><br /> Die Websynchronisierung und der FTP-/UNC-Zugriff für die Replikationsmomentaufnahme erfordern das Öffnen zusätzlicher Ports auf der Firewall. Zur Übertragung der Anfangsdaten und des Schemas zwischen unterschiedlichen Standorten kann für die Replikation FTP (TCP-Port 21), die Synchronisierung über HTTP (TCP-Port 80) oder die Dateifreigabe verwendet werden. Die Dateifreigabe verwendet die UDP-Ports 137 und 138 und den TCP-Port 139, wenn NetBIOS verwendet wird. Für die Dateifreigabe wird der TCP-Port 445 verwendet.|Bei der Synchronisierung über HTTP wird für die Replikation der IIS-Endpunkt (Ports, die dafür konfigurierbar sind, standardmäßig aber Port 80) verwendet, aber der IIS-Prozess stellt eine Verbindung mit Back-End- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über die Standardports (1433 für die Standardinstanz) her.<br /><br /> Bei der Websynchronisierung mittels FTP findet die FTP-Übertragung zwischen IIS und dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verleger und nicht zwischen Abonnent und IIS statt.|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger|TCP-Port 135<br /><br /> Siehe [Spezielle Überlegungen zu Port 135](#BKMK_port_135)<br /><br /> Die [IPsec](#BKMK_IPsec) -Ausnahme ist möglicherweise auch erforderlich.|Bei Verwendung von [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]müssen Sie außerdem auf dem [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] -Hostcomputer **Devenv.exe** zur Ausnahmeliste hinzufügen und den TCP-Port 135 öffnen.<br /><br /> Bei Verwendung von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]müssen Sie außerdem auf dem [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] -Hostcomputer **ssms.exe** zur Ausnahmeliste hinzufügen und TCP-Port 135 öffnen. Weitere Informationen finden Sie unter [Konfigurieren von Firewallregeln vor dem Ausführen des TSQL-Debuggers](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).|  
   
- Eine Schritt-für-Schritt-Anleitung zum Konfigurieren der Windows-Firewall für das [!INCLUDE[ssDE](../../includes/ssde-md.md)]finden Sie unter [Konfigurieren einer Windows-Firewall für Datenbankmodulzugriff](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
+ Eine Schritt-für-Schritt-Anleitung zum Konfigurieren der Windows-Firewall für das [!INCLUDE[ssDE](../../includes/ssde-md.md)] finden Sie unter [Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
 ####  <a name="BKMK_dynamic_ports"></a> Dynamische Ports  
  Standardmäßig verwenden benannte Instanzen (einschließlich [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) dynamische Ports. Dies bedeutet, dass immer dann, wenn [!INCLUDE[ssDE](../../includes/ssde-md.md)] startet, ein verfügbarer Port identifiziert und die entsprechende Portnummer verwendet wird. Wenn es sich bei der benannten Instanz um die einzige von [!INCLUDE[ssDE](../../includes/ssde-md.md)] installierte Instanz handelt, wird wahrscheinlich TCP-Port 1433 verwendet. Wenn weitere Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)] installiert sind, wird wahrscheinlich ein anderer TCP-Port verwendet. Da sich der ausgewählte Port bei jedem Start von [!INCLUDE[ssDE](../../includes/ssde-md.md)] ändern kann, ist es schwierig, die Firewall so zu konfigurieren, dass der Zugriff auf die richtige Portnummer ermöglicht wird. Daher wird bei Verwendung einer Firewall eine Neukonfiguration von [!INCLUDE[ssDE](../../includes/ssde-md.md)] empfohlen, damit jedes Mal dieselbe Portnummer verwendet wird. Der betreffende Port wird als fester oder statischer Port bezeichnet. Weitere Informationen finden Sie unter [Konfigurieren eines Servers zur Überwachung eines bestimmten TCP-Ports &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
@@ -159,7 +158,7 @@ Konfigurieren Sie die Einstellungen der Windows-Firewall entweder über **Micros
 
 1. Geben Sie in **Name**einen Namen für die Regel ein. Klicken Sie auf **Fertig stellen**.
 
-Weitere Informationen über Endpunkte finden Sie unter [Konfigurieren des Datenbankmoduls zum Überwachen mehrerer TCP-Ports](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) und [Endpunkte-Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md). 
+Weitere Informationen über Endpunkte finden Sie unter [Konfigurieren der Datenbank-Engine zum Überwachen mehrerer TCP-Ports](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) und [Endpunkte-Katalogsichten &amp;#40;Transact-SQL&amp;#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md). 
   
 ###  <a name="BKMK_ssas"></a> Von Analysis Services verwendete Ports  
  In der folgenden Tabelle werden die häufig von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]verwendeten Ports aufgeführt.  
@@ -201,7 +200,7 @@ Die folgende Tabelle enthält Ports und Dienste, von denen [!INCLUDE[ssNoVersion
 |--------------|----------|--------------|  
 |Windows-Verwaltungsinstrumentation<br /><br /> Weitere Informationen zu WMI finden Sie unter [WMI Provider for Configuration Management Concepts](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md).|WMI wird als Teil eines Hosts für gemeinsame Dienste ausgeführt, wobei Ports über DCOM zugewiesen werden. WMI verwendet möglicherweise den TCP-Port 135.<br /><br /> Siehe [Spezielle Überlegungen zu Port 135](#BKMK_port_135)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager verwendet WMI zum Auflisten und Verwalten von Diensten. Es wird empfohlen, die vorkonfigurierte Regelgruppe **Windows-Verwaltungsinstrumentation (WMI)** zu verwenden. Weitere Informationen finden Sie im Abschnitt [Interaktion mit anderen Firewallregeln](#BKMK_other_rules) weiter unten.|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC)|TCP-Port 135<br /><br /> Siehe [Spezielle Überlegungen zu Port 135](#BKMK_port_135)|Wenn Ihre Anwendung verteilte Transaktionen verwendet, müssen Sie die Firewall möglicherweise so konfigurieren, dass MS DTC-Datenverkehr ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator) zwischen separaten MS DTC-Instanzen sowie zwischen MS DTC und Ressourcen-Managern wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]übermittelt werden kann. Es wird empfohlen, die vorkonfigurierte Regelgruppe **Distributed Transaction Coordinator** zu verwenden.<br /><br /> Bei Konfiguration eines einzelnen freigegebenen MS-DTCs für den gesamten Cluster in einer separaten Gruppe sollten Sie sqlservr.exe der Firewall als Ausnahme hinzufügen.|  
-|Die Schaltfläche zum Durchsuchen in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] verwendet UDP, um eine Verbindung mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browserdienst herzustellen. Weitere Informationen finden Sie unter [SQL Server-Browserdienst &#40;Datenbankmodul und SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md).|UDP-Port 1434|UDP ist ein verbindungsloses Protokoll.<br /><br /> Die Firewall verfügt über eine Einstellung mit dem Namen [UnicastResponsesToMulticastBroadcastDisabled Property of the INetFwProfile Interface](http://go.microsoft.com/fwlink/?LinkId=118371) , die das Verhalten der Firewall in Hinblick auf Unicast-Antworten auf eine Broadcast- (oder Multicast-) UDP-Anforderung steuert.  Es sind zwei Verhaltensweisen möglich:<br /><br /> Wenn die Einstellung TRUE ist, werden überhaupt keine Unicastantworten auf einen Broadcast zugelassen. Das Auflisten der Dienste schlägt fehl.<br /><br /> Wenn die Einstellung FALSE (Standard) ist, werden Unicastantworten 3 Sekunden lang zugelassen. Die Zeitdauer ist nicht konfigurierbar. In einem überlasteten Netzwerk oder einem Netzwerk mit häufiger Latenz oder bei stark ausgelasteten Servern wird bei den Versuchen, Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufzulisten, möglicherweise eine Teilliste zurückgegeben, die die Benutzer irreführen kann.|  
+|Die Schaltfläche zum Durchsuchen in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] verwendet UDP, um eine Verbindung mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browserdienst herzustellen. Weitere Informationen finden Sie unter [SQL Server-Browserdienst &amp;#40;Datenbank-Engine und SSAS&amp;#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md).|UDP-Port 1434|UDP ist ein verbindungsloses Protokoll.<br /><br /> Die Firewall verfügt über eine Einstellung mit dem Namen [UnicastResponsesToMulticastBroadcastDisabled Property of the INetFwProfile Interface](http://go.microsoft.com/fwlink/?LinkId=118371) , die das Verhalten der Firewall in Hinblick auf Unicast-Antworten auf eine Broadcast- (oder Multicast-) UDP-Anforderung steuert.  Es sind zwei Verhaltensweisen möglich:<br /><br /> Wenn die Einstellung TRUE ist, werden überhaupt keine Unicastantworten auf einen Broadcast zugelassen. Das Auflisten der Dienste schlägt fehl.<br /><br /> Wenn die Einstellung FALSE (Standard) ist, werden Unicastantworten 3 Sekunden lang zugelassen. Die Zeitdauer ist nicht konfigurierbar. In einem überlasteten Netzwerk oder einem Netzwerk mit häufiger Latenz oder bei stark ausgelasteten Servern wird bei den Versuchen, Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufzulisten, möglicherweise eine Teilliste zurückgegeben, die die Benutzer irreführen kann.|  
 |<a name="BKMK_IPsec"></a> IPsec-Datenverkehr|UDP-Port 500 und UDP-Port 4500|Wenn die Domänenrichtlinie eine Netzwerkkommunikation über IPSec erfordert, müssen Sie auch den UDP-Port 4500 und den UDP-Port 500 der Ausnahmeliste hinzufügen. IPsec ist eine Option, die den **Assistenten für neue eingehende Regel** im Windows-Firewall-Snap-In verwendet. Weitere Informationen finden Sie unter [Verwenden des Snap-Ins „Windows-Firewall mit erweiterter Sicherheit“](#BKMK_WF_msc) weiter unten in diesem Thema.|  
 |Verwenden der Windows-Authentifizierung mit vertrauenswürdigen Domänen|Firewalls müssen konfiguriert werden, um Authentifizierungsanforderungen zuzulassen.|Weitere Informationen finden Sie unter [Konfigurieren einer Firewall für Domänen und Vertrauensstellungen](http://support.microsoft.com/kb/179442/).|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Windows-Clusterunterstützung|Die Clusterunterstützung erfordert zusätzliche Ports, die keine direkte Beziehung zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aufweisen.|Weitere Informationen finden Sie unter [Enable a network for cluster use](http://go.microsoft.com/fwlink/?LinkId=118372).|  

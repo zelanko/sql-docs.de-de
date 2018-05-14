@@ -1,17 +1,14 @@
 ---
-title: Hinzufügen von Spalten zu einer Tabelle (Datenbankmodul) | Microsoft-Dokumentation
+title: Hinzufügen von Spalten zu einer Tabelle (Datenbank-Engine) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/27/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
-ms.component: tables
+ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - inserting columns
 - columns [SQL Server], adding
@@ -21,18 +18,17 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6c4aacbc8abc1b454acd0a27cac9c8dc1a089f30
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a2785f0ebfd810d95f50f741d8544170730da52f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="add-columns-to-a-table-database-engine"></a>Hinzufügen von Spalten zu einer Tabelle (Datenbankmodul)
+# <a name="add-columns-to-a-table-database-engine"></a>Hinzufügen von Spalten zu einer Tabelle (Datenbank-Engine)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
- > Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [Hinzufügen von Spalten zu einer Tabelle (Datenbankmodul)](https://msdn.microsoft.com/en-US/library/ms190238(SQL.120).aspx).
+ > Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [Hinzufügen von Spalten zu einer Tabelle (Datenbank-Engine)](https://msdn.microsoft.com/en-US/library/ms190238(SQL.120).aspx).
 
 
   In diesem Thema wird beschrieben, wie mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Tabellenspalten in [!INCLUDE[tsql](../../includes/tsql-md.md)]hinzugefügt werden können.  

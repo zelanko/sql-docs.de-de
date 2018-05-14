@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - non-SQL Server Subscribers, IBM DB2
 - data types [SQL Server replication], non-SQL Server Subscribers
@@ -23,12 +22,11 @@ caps.latest.revision: 74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 69d8b0b5152a929ca515240f38c0ba711f7f21e5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 452c82ff5fb19f90b3c20ad030c77b40f6de33d5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -161,7 +159,7 @@ ms.lasthandoff: 04/16/2018
   
      Dadurch kann die Tabelle erfolgreich auf dem Abonnenten erstellt werden, sofern die Einschränkung der DB2-Seitengröße die maximale Größe der Zeile zulässt. Stellen Sie sicher, dass die für den Zugriff auf die DB2 verwendete Anmeldung über die Berechtigungen verfügt, um auf Tabellenbereiche von ausreichender Größe für die auf DB2 zu replizierenden Tabellen zugreifen zu können.  
   
--   DB2 unterstützt VARCHAR-Spalten bis zu 32 KB. Deshalb können einige LOB-Spalten (Large Object) von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ordnungsgemäß VARCHAR-Spalten von DB2 zugeordnet werden. Der von der Replikation für DB2 verwendete OLE DB-Anbieter unterstützt jedoch keine Zuordnung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -LOB zu DB2-LOB. Deshalb werden die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **text**auf **varchar(max)**auf **ntext**und **nvarchar(max)** in den generierten Erstellungsskripts VARCHAR(0) zugeordnet. Der Längenwert 0 muss in einen ordnungsgemäßen Wert geändert werden, bevor das Skript auf den Abonnenten angewendet wird. Wird die Länge des Datentyps nicht geändert, löst DB2 Fehler 604 bei dem Versuch der Tabellenerstellung auf dem DB2-Abonnenten aus (Fehler 604 bedeutet, dass das Genauigkeits- oder Längenattribut des Datentyps ungültig ist).  
+-   DB2 unterstützt VARCHAR-Spalten bis zu 32 KB. Deshalb können einige LOB-Spalten (Large Object) von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ordnungsgemäß VARCHAR-Spalten von DB2 zugeordnet werden. Der von der Replikation für DB2 verwendete OLE DB-Anbieter unterstützt jedoch keine Zuordnung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -LOB zu DB2-LOB. Deshalb werden die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **text**auf **varchar(max)** auf **ntext**und **nvarchar(max)** in den generierten Erstellungsskripts VARCHAR(0) zugeordnet. Der Längenwert 0 muss in einen ordnungsgemäßen Wert geändert werden, bevor das Skript auf den Abonnenten angewendet wird. Wird die Länge des Datentyps nicht geändert, löst DB2 Fehler 604 bei dem Versuch der Tabellenerstellung auf dem DB2-Abonnenten aus (Fehler 604 bedeutet, dass das Genauigkeits- oder Längenattribut des Datentyps ungültig ist).  
   
      Bestimmen Sie basierend auf Ihrer Kenntnis der von Ihnen replizierten Quelltabelle, ob es angemessen ist, einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -LOB einem DB2-Objekt variabler Länge zuzuordnen, und geben Sie eine angemessene maximale Länge in einem benutzerdefinierten Erstellungsskript an. Informationen zum Angeben eines benutzerdefinierten Erstellungsskripts finden Sie in Schritt 5 im Abschnitt zum Konfigurieren eines IBM DB2-Abonnenten in diesem Thema.  
   

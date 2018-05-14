@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 01/20/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: partitions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-partition
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partitioned tables [SQL Server], about partitioned tables
 - partitioned indexes [SQL Server], architecture
@@ -22,13 +21,12 @@ caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d8af645cee08f550eb8d22ba06d6ab68da50312e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bd4402ca30b3f99e8470282aea9fa46a4667cb05
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +58,7 @@ ms.lasthandoff: 04/16/2018
  Ein Datenbankobjekt, das die Partitionen einer Partitionsfunktion Dateigruppen zuordnet. Der wichtigste Grund dafür, dass Partitionen in separaten Dateigruppen platziert werden, besteht darin, sicherzustellen, dass Sie Sicherungsvorgänge unabhängig für Partitionen ausführen können. Dies liegt daran, dass Sie Sicherungen für einzelne Dateigruppen ausführen können.  
   
  Partitionierungsspalte  
- Die Spalte einer Tabelle oder eines Indexes, die von einer Partitionsfunktion zum Partitionieren der Tabelle oder des Indexes verwendet wird. Berechnete Spalten, die in eine Partitionsfunktion einbezogen werden, müssen explizit als PERSISTED gekennzeichnet sein. Alle Datentypen, die zum Verwenden als Indexspalten zulässig sind, können als Partitionsspalte verwenden werden, mit Ausnahme des Datentyps **timestamp**. Die Datentypen **ntext**-, **text**-, **image**-, **xml**-, **varchar(max)**-, **nvarchar(max)**oder **varbinary(max)** können nicht angegeben werden. Zudem können der benutzerdefinierte CLR-Typ (Common Language Runtime) von Microsoft .NET Framework und die Spalten mit dem Aliasdatentyp nicht angegeben werden.  
+ Die Spalte einer Tabelle oder eines Indexes, die von einer Partitionsfunktion zum Partitionieren der Tabelle oder des Indexes verwendet wird. Berechnete Spalten, die in eine Partitionsfunktion einbezogen werden, müssen explizit als PERSISTED gekennzeichnet sein. Alle Datentypen, die zum Verwenden als Indexspalten zulässig sind, können als Partitionsspalte verwenden werden, mit Ausnahme des Datentyps **timestamp**. Die Datentypen **ntext**-, **text**-, **image**-, **xml**-, **varchar(max)**-, **nvarchar(max)** oder **varbinary(max)** können nicht angegeben werden. Zudem können der benutzerdefinierte CLR-Typ (Common Language Runtime) von Microsoft .NET Framework und die Spalten mit dem Aliasdatentyp nicht angegeben werden.  
   
  Ausgerichteter Index  
  Ein Index, der auf dem gleichen Partitionsschema wie die zugehörige Tabelle aufbaut. Wenn eine Tabelle und ihre Indizes aneinander ausgerichtet sind, kann SQL Server schnell zwischen Partitionen wechseln und gleichzeitig die Partitionsstruktur sowohl der Tabelle als auch ihrer Indizes beibehalten. Ein Index muss nicht an derselben benannten Partitionsfunktion beteiligt sein, um an ihrer Basistabelle ausgerichtet zu sein. Allerdings muss die Partitionsfunktion des Indexes und der Basistabelle im Wesentlichen übereinstimmen, und zwar dahingehend, dass 1) die Argumente der Partitionsfunktionen denselben Datentyp haben, dass sie 2) dieselbe Anzahl von Partitionen definieren und dass sie 3) dieselben Begrenzungswerte für Partitionen definieren.  

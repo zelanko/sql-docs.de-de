@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 05/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: performance-monitor
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
 - performance counters [SQL Server], deprecated features
@@ -22,12 +21,11 @@ caps.latest.revision: 61
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 04d361317e1e02378b62429fffdfc535e6405293
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 92353cf4dde604e191d26dc971edf83f16ae4b51
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-deprecated-features-object"></a>'SQL Server:Als veraltet markierte Funktionen'-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -286,11 +284,13 @@ In der folgenden Tabelle wird das SQL Server-Leistungsobjekt **Als veraltet mark
 |xp_revokelogin|Die Prozedur xp_revokelogin wurde gefunden. Verwenden Sie stattdessen ALTER LOGIN DISABLE oder DROP LOGIN. Tritt einmal pro Kompilierung auf.|  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Als veraltet markierte Funktionen des Datenbankmoduls in SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
+ 
+  [Als veraltet markierte Funktionen der Datenbank-Engine in SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [Als veraltet markierte Funktionen der Volltextsuche in SQL Server 2016](../../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)   
  [Deprecation Announcement-Ereignisklasse](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   
  [Deprecation Final Support (Ereignisklasse)](../../relational-databases/event-classes/deprecation-final-support-event-class.md)   
- [Nicht mehr unterstützte Datenbankmodul-Funktionalität in SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
+ 
+  [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
  [Nicht mehr unterstützte Funktionen der Volltextsuche in SQL Server 2016](http://msdn.microsoft.com/library/70587b3c-cc77-4681-924d-a1df7cdf1517)   
  [Verwenden von SQL Server-Objekten](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
   

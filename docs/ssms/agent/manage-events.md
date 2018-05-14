@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssms-agent
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - event forwarding servers [SQL Server]
 - events [SQL Server], forwarding
@@ -25,13 +23,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9f78bdf6ecd1e9d9b0a8d3db48f18db29243e67a
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: a0262ff33df1f98283c7eb5ebdc63256c69f0f88
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-events"></a>Verwalten von Ereignissen
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -78,7 +75,7 @@ Beachten Sie beim Konfigurieren eines Warnungsverwaltungsservers folgende Richtl
   
 -   Nach dem Konfigurieren des Warnungssystems sollten Sie das Microsoft Windows-Anwendungsprotokoll auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Ereignisse hin überprüfen.  
   
-    Fehlerbedingungen, die vom Warnungsmodul erkannt werden, werden mit dem Quellnamen "SQL Server-Agent" in das lokale Windows-Anwendungsprotokoll geschrieben. Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent beispielsweise eine E-Mail-Benachrichtigung nicht wie definiert senden kann, wird ein Ereignis im Anwendungsprotokoll protokolliert.  
+    Fehlerbedingungen, die von der Warnungs-Engine erkannt werden, werden mit dem Quellnamen "SQL Server-Agent" in das lokale Windows-Anwendungsprotokoll geschrieben. Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent beispielsweise eine E-Mail-Benachrichtigung nicht wie definiert senden kann, wird ein Ereignis im Anwendungsprotokoll protokolliert.  
   
 Tritt nach dem Deaktivieren einer lokal definierten Warnung ein Ereignis auf, das diese Warnung ausgelöst hätte, wird dieses Ereignis an den Warnungsverwaltungsserver weitergeleitet (sofern die Bedingung für die Warnungsweiterleitung erfüllt wird). Die Weiterleitung ermöglicht es, dass lokale Überschreibungen (lokal definierte Warnungen, die auch auf dem Warnungsverwaltungsserver definiert sind) nach Bedarf des Benutzers am lokalen Standort aktiviert und deaktiviert werden können. Sie können auch anfordern, dass Ereignisse immer weitergeleitet werden, selbst wenn sie auch von lokalen Warnungen behandelt werden.  
   

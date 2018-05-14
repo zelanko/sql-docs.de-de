@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: maintenance-plans
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.SWB.makemanaged.agentaccount.F1
 - sql13.SWB.makemanaged.welcome.F1
@@ -27,12 +26,11 @@ caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c0d376edffe2ec77eac825c5cb9920c05625044f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ebe062a78caf3a0589afaef68b7cde988b8bcae4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Registrieren einer Instanz von SQL Server (SQL Server-Hilfsprogramm)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,17 +93,17 @@ ms.lasthandoff: 04/16/2018
 -   [Registrieren der Instanz von SQL Server](#Enrolling)  
   
 ##  <a name="Welcome"></a> Einführung in den Instanzregistrierungs-Assistenten  
- Um den Assistenten zu starten, erweitern Sie auf einem Steuerungspunkt für das Hilfsprogramm (UCP, Utility Control Point) die Hilfsprogramm-Explorer-Struktur, klicken mit der rechten Maustaste auf **Verwaltete Instanzen**und wählen **Verwaltete Instanz hinzufügen...**aus.  
+ Um den Assistenten zu starten, erweitern Sie auf einem Steuerungspunkt für das Hilfsprogramm (UCP, Utility Control Point) die Hilfsprogramm-Explorer-Struktur, klicken mit der rechten Maustaste auf **Verwaltete Instanzen**und wählen **Verwaltete Instanz hinzufügen...** aus.  
   
  Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   
 ##  <a name="Instance_name"></a> Angeben der Instanz von SQL Server  
- Um eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Verbindungsdialogfeld auszuwählen, klicken Sie auf **Verbinden**. Stellen Sie den Computernamen und den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanznamen im Format „Computername\Instanzname“ bereit. Weitere Informationen finden Sie unter [Verbindung mit Server herstellen &#40;Datenbankmodul&#41;](http://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
+ Um eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Verbindungsdialogfeld auszuwählen, klicken Sie auf **Verbinden**. Stellen Sie den Computernamen und den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanznamen im Format „Computername\Instanzname“ bereit. Weitere Informationen finden Sie unter [Verbindung mit Server herstellen &amp;#40;Datenbank-Engine&amp;#41;](http://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
   
  Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   
 ##  <a name="Connection_dialog"></a> Verbindungsdialogfeld  
- Überprüfen Sie im Dialogfeld Verbindung mit Server herstellen den Servertyp, den Computernamen und die Informationen zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanznamen. Weitere Informationen finden Sie unter [Verbindung mit Server herstellen &#40;Datenbankmodul&#41;](http://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
+ Überprüfen Sie im Dialogfeld Verbindung mit Server herstellen den Servertyp, den Computernamen und die Informationen zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanznamen. Weitere Informationen finden Sie unter [Verbindung mit Server herstellen &amp;#40;Datenbank-Engine&amp;#41;](http://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
   
 > [!NOTE]  
 >  Wenn die Verbindung verschlüsselt ist, wird dieser Verbindungstyp verwendet. Wenn die Verbindung nicht verschlüsselt ist, stellt das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm über eine verschlüsselte Verbindung erneut eine Verbindung her.  

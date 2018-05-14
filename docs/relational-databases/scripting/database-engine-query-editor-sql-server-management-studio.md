@@ -1,17 +1,15 @@
 ---
-title: Abfrage-Editor des Datenbankmoduls (SQL Server Management Studio) | Microsoft-Dokumentation
+title: Abfrage-Editor der Datenbank-Engine (SQL Server Management Studio) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.tsqlquery.f1
 dev_langs:
@@ -29,26 +27,25 @@ caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: aba0786e713acd4ec90c958e21cbe22ff421ed32
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 848faca088e9ddf0ddf1efa2f48a84df042471c1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="database-engine-query-editor-sql-server-management-studio"></a>Abfrage-Editor des Datenbankmoduls (SQL Server Management Studio)
+# <a name="database-engine-query-editor-sql-server-management-studio"></a>Abfrage-Editor der Datenbank-Engine (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Mithilfe des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editors können Sie Skripts mit [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen erstellen und ausführen. Der Editor unterstützt auch das Ausführen von Skripts, die **sqlcmd** -Befehle enthalten.  
   
 ## <a name="transact-sql-f1-help"></a>F1-Hilfe für Transact-SQL  
- Der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor unterstützt bei der Auswahl von F1 den Link zu einem Referenzthema einer bestimmten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung. Markieren Sie hierzu den Namen einer Transact-SQL-Anweisung, und wählen Sie dann F1 aus. Das Hilfesuchmodul sucht dann nach einem Thema mit einem F1-Hilfeattribut, das der markierten Zeichenfolge entspricht.  
+ Der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor unterstützt bei der Auswahl von F1 den Link zu einem Referenzthema einer bestimmten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung. Markieren Sie hierzu den Namen einer Transact-SQL-Anweisung, und wählen Sie dann F1 aus. Die Hilfesuch-Engine sucht dann nach einem Thema mit einem F1-Hilfeattribut, das der markierten Zeichenfolge entspricht.  
   
- Wenn das Hilfesuchmodul kein Thema mit einem F1-Hilfeschlüsselwort findet, das genau der markierten Zeichenfolge entspricht, wird dieses Thema angezeigt. In diesem Fall gibt es zwei Ansätze zum Suchen der gewünschten Hilfe:  
+ Wenn die Hilfesuch-Engine kein Thema mit einem F1-Hilfeschlüsselwort findet, das genau der markierten Zeichenfolge entspricht, wird dieses Thema angezeigt. In diesem Fall gibt es zwei Ansätze zum Suchen der gewünschten Hilfe:  
   
 -   Kopieren Sie die markierte Zeichenfolge aus dem Editor, fügen Sie diese in der SQL Server-Onlinedokumentation in die Registerkarte "Suchen" ein, und führen Sie eine Suche aus.  
   
--   Markieren Sie nur den Teil der Transact-SQL-Anweisung, die am ehesten zu einem F1-Hilfeschlüsselwort passt, das auf ein Thema angewendet wird, und wählen Sie erneut F1 aus. Für das Suchmodul ist eine genaue Übereinstimmung zwischen der markierten Zeichenfolge und einem einem Thema zugewiesenen F1-Hilfeschlüsselwort erforderlich. Enthält die markierte Zeichenfolge für Ihre Umgebung eindeutige Elemente, z. B. Spalten- oder Parameternamen, erhält das Suchmodul keine Übereinstimmung. Zu den Zeichenfolgen, die markiert werden können, gehören die folgenden:  
+-   Markieren Sie nur den Teil der Transact-SQL-Anweisung, die am ehesten zu einem F1-Hilfeschlüsselwort passt, das auf ein Thema angewendet wird, und wählen Sie erneut F1 aus. Für die Such-Engine ist eine genaue Übereinstimmung zwischen der markierten Zeichenfolge und einem Thema zugewiesenen F1-Hilfeschlüsselwort erforderlich. Enthält die markierte Zeichenfolge für Ihre Umgebung eindeutige Elemente, z. B. Spalten- oder Parameternamen, erhält die Such-Engine keine Übereinstimmung. Zu den Zeichenfolgen, die markiert werden können, gehören die folgenden:  
   
     -   Der Name einer Transact-SQL-Anweisung, zum Beispiel SELECT, CREATE DATABASE oder BEGIN TRANSACTION.  
   
@@ -56,7 +53,7 @@ ms.lasthandoff: 04/16/2018
   
     -   Der Name einer im System gespeicherten Prozedurtabelle oder einer Sicht, z. B. "sys.data_spaces" oder "sp_tableoption".  
   
-## <a name="working-with-the-database-engine-query-editor"></a>Arbeiten mit dem Datenbankmodul-Abfrage-Editor  
+## <a name="working-with-the-database-engine-query-editor"></a>Arbeiten mit dem Datenbank-Engine-Abfrage-Editor  
  Der [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Abfrage-Editor ist einer von vier in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] implementierten Editoren. Eine Beschreibung der im [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Abfrage-Editor implementierten Funktionalität und der Hauptaufgaben, die Sie mit dem Editor ausführen können, finden Sie unter [Abfrage-Editor des Datenbankmoduls &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md).  
   
 ## <a name="sql-editor-toolbar"></a>SQL-Editor-Symbolleiste  

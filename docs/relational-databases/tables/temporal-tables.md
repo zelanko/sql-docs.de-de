@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 07/11/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: tables
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
 caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b6d11216c2597f4a1b74f1092ab4ce83e8917c76
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b7e70190afc73d0dbad741f89e7d1dfc47404c87
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="temporal-tables"></a>Temporale Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -65,7 +61,7 @@ ms.lasthandoff: 04/16/2018
 -   **Video:** Eine 20-minütige Erörterung des Temporal-Features finden Sie unter [Temporal in SQL Server 2016](http://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016).  
   
 ## <a name="what-is-a-system-versioned-temporal-table"></a>Was ist eine temporale Tabelle mit Versionsverwaltung durch das System?  
- Eine temporale Tabelle mit Systemversionsverwaltung ist ein Benutzertabellentyp, der darauf ausgelegt ist, den Verlauf aller Datenänderungen lückenlos zu speichern und einfache Zeitpunktanalysen zu ermöglichen. Bei diesem Typ von temporaler Tabelle spricht man von Versionsverwaltung durch das System, da die Gültigkeitsdauer für jede Zeile vom System (d.h. vom Datenbankmodul) verwaltet wird.  
+ Eine temporale Tabelle mit Systemversionsverwaltung ist ein Benutzertabellentyp, der darauf ausgelegt ist, den Verlauf aller Datenänderungen lückenlos zu speichern und einfache Zeitpunktanalysen zu ermöglichen. Bei diesem Typ von temporaler Tabelle spricht man von Versionsverwaltung durch das System, da die Gültigkeitsdauer für jede Zeile vom System (d.h. von der Datenbank-Engine) verwaltet wird.  
   
  Jede temporale Tabelle weist zwei explizit definierte Spalten auf, beide vom Datentyp **datetime2** . Diese Spalten werden als Zeitraumspalten bezeichnet. Diese Zeitraumspalten werden bei jeder Änderung einer Zeile ausschließlich vom System zum Aufzeichnen des Gültigkeitszeitraums verwendet.  
   

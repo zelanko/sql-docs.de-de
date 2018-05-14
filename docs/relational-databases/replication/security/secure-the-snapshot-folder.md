@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], security
 ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
@@ -19,12 +18,11 @@ caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 19997da29e8ecbcfb49f03666b09c458f4831948
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 2884a1cd4507775e75764d632dfab50185596949
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="secure-the-snapshot-folder"></a>Sichern des Momentaufnahmeordners
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +31,7 @@ ms.lasthandoff: 04/16/2018
 > [!NOTE]  
 >  Die Benutzerkontensteuerung (User Account Control, UAC) unterstützt Administratoren bei der Verwaltung erhöhter Benutzerrechte (auch *Privilegien*genannt). Bei der Ausführung unter Betriebssystemen mit aktivierter Benutzerkontensteuerung nutzen Administratoren keine Administratorrechte. Sie führen stattdessen die meisten Aktionen als Standardbenutzer (nicht als Administrator) aus und nehmen ihre Administratorrechte nur bei Bedarf vorübergehend in Anspruch. Durch die Benutzerkontensteuerung wird möglicherweise der Administratorzugriff auf die Momentaufnahmefreigabe verhindert. Sie müssen daher den vom Momentaufnahme-Agent, Verteilungs-Agent und Merge-Agent verwendeten Windows-Konten explizit Berechtigungen für die Momentaufnahmefreigabe erteilen. Dies ist auch dann erforderlich, wenn die Windows-Konten Mitglieder der Administratorengruppe sind.  
   
- Wenn Sie mit dem Verteilungskonfigurations-Assistenten oder mit dem Assistenten für neue Veröffentlichung einen Verteiler konfigurieren, wird als Momentaufnahmeordner standardmäßig das lokale Verzeichnis X:\Programme\Microsoft SQL Server\\*\<instance>*\MSSQL\ReplData verwendet. Wenn Sie einen Remoteverteiler oder Pullabonnements verwenden, müssen Sie eine UNC-Netzwerkfreigabe (z.B. \\\\<*Computername>*\Momentaufnahme) anstelle eines lokalen Pfads angeben.  
+ Wenn Sie mit dem Verteilungskonfigurations-Assistenten oder mit dem Assistenten für neue Veröffentlichung einen Verteiler konfigurieren, wird als Momentaufnahmeordner standardmäßig das lokale Verzeichnis X:\Programme\Microsoft SQL Server\\*\<instance>* \MSSQL\ReplData verwendet. Wenn Sie einen Remoteverteiler oder Pullabonnements verwenden, müssen Sie eine UNC-Netzwerkfreigabe (z.B. \\\\<*Computername>* \Momentaufnahme) anstelle eines lokalen Pfads angeben.  
   
  Wenn Sie Zugriffsberechtigungen für den Momentaufnahmeordner erteilen, müssen Sie sie entsprechend der Zugriffsweise für den Ordner festlegen. Unter [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 2003 werden die folgenden Registerkarten des Dialogfelds verwendet:  
   

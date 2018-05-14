@@ -3,7 +3,6 @@ title: Verwenden des Wartungsplanungs-Assistenten | Microsoft-Dokumentation
 ms.date: 06/20/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: maintenance-plans
 ms.reviewer: ''
 ms.suite: sql
@@ -11,7 +10,7 @@ ms.custom: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.ag.maintwiz.integrity.f1
 - sql13.ag.maintwiz.order.f1
@@ -41,12 +40,11 @@ caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: e0aa3d178355e9b50ad381f3ef3517aabce8c78f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 233ca9b2714bcce3ddccf400cdb85acbc07afb5b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Verwenden des Wartungsplanungs-Assistenten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -127,7 +125,7 @@ Sie müssen [Agent XPs (Serverkonfigurationsoption)](../../database-engine/confi
   
                 -   Wenn Sie **Einmalig um**auswählen, geben Sie im Feld **Einmalig um** die spezifische Tageszeit ein, zu der der Auftragszeitplan ausgeführt werden soll. Geben Sie die Stunde, Minute und Sekunde des Tages sowie AM oder PM ein.  
   
-                -   Wenn Sie **Alle**auswählen, geben Sie an, wie oft der Auftragszeitplan an dem unter **Häufigkeit**ausgewählten Tag ausgeführt werden soll. Wenn Sie z.B. möchten, dass der Auftragszeitplan am Tag seiner Ausführung alle 2 Stunden wiederholt wird, wählen Sie **Alle**aus, geben in das erste Feld „2“ ein und wählen in der Liste **Stunde(n)** aus. Aus dieser Liste können Sie auch **Minute(n)** und **Sekunde(n)**auswählen. Beachten Sie, dass die größte im ersten Feld zugelassene Zahl "100" ist.  
+                -   Wenn Sie **Alle**auswählen, geben Sie an, wie oft der Auftragszeitplan an dem unter **Häufigkeit**ausgewählten Tag ausgeführt werden soll. Wenn Sie z.B. möchten, dass der Auftragszeitplan am Tag seiner Ausführung alle 2 Stunden wiederholt wird, wählen Sie **Alle**aus, geben in das erste Feld „2“ ein und wählen in der Liste **Stunde(n)** aus. Aus dieser Liste können Sie auch **Minute(n)** und **Sekunde(n)** auswählen. Beachten Sie, dass die größte im ersten Feld zugelassene Zahl "100" ist.  
   
                      Geben Sie im Feld **Start** die Zeit ein, zu der die Ausführung des Auftragszeitplans beginnen soll. Geben Sie im Feld **Ende** die Zeit ein, zu der die Ausführung des Auftragszeitplans enden soll. Geben Sie die Stunde, Minute und Sekunde des Tages sowie AM oder PM ein.  
   
@@ -321,7 +319,7 @@ Kontrollkästchen**Indizes einschließen**
      Dieser Verlauf kann Ihnen bei der Problembehandlung fehlgeschlagener Wartungsplanaufträge bzw. der Ermittlung der Ursache von Datenbankaktionen helfen.  
   
      **Verlaufsdaten entfernen, die älter sind als**  
-     Geben Sie das Alter an, in dem Elemente gelöscht werden sollen. Sie können **Stunde(n)**, **Tag(e)**, **Woche(n)** (Standardeinstellung), **Monat(e)**oder **Jahr(e)**angeben.  
+     Geben Sie das Alter an, in dem Elemente gelöscht werden sollen. Sie können **Stunde(n)**, **Tag(e)**, **Woche(n)** (Standardeinstellung), **Monat(e)** oder **Jahr(e)** angeben.  
   
 #### <a name="define-the-execute-agent-job-task"></a>Definieren des Tasks zum Ausführen von Agentaufträgen  
   
@@ -375,7 +373,7 @@ Kontrollkästchen**Indizes einschließen**
      **SQL-Anmeldeinformationen**  
      Wählen Sie SQL-Anmeldeinformationen aus, die zur Authentifizierung beim Windows Azure-Speicher verwendet werden sollen. Wenn Sie über keine vorhandenen geeigneten SQL-Anmeldeinformationen verfügen, klicken Sie auf die Schaltfläche **Erstellen** , um neue SQL-Anmeldeinformationen zu erstellen.  
   
-    > **WICHTIG!** Das Dialogfeld, das beim Klicken auf **Erstellen** geöffnet wird, erfordert ein Verwaltungszertifikat oder das Veröffentlichungsprofil für das Abonnement. Wenn Sie keinen Zugriff auf das Verwaltungszertifikat oder Veröffentlichungsprofil haben, können Sie SQL-Anmeldeinformationen erstellen, indem Sie den Namen des Speicherkontos und die Informationen zum Zugriffsschlüssel mithilfe von Transact-SQL oder SQL Server Management Studio angeben. Der Beispielcode im Thema [Erstellen von Anmeldeinformationen](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) veranschaulicht das Erstellen von Anmeldeinformationen mithilfe von Transact-SQL. Alternativ können Sie auf der Datenbankmodulinstanz in SQL Server Management Studio mit der rechten Maustaste auf **Sicherheit**klicken und **Neu**sowie **Anmeldeinformationen**auswählen. Geben Sie im Feld **Identität** den Namen des Speicherkontos und im Feld **Kennwort** den Zugriffsschlüssel an.  
+    > **WICHTIG!** Das Dialogfeld, das beim Klicken auf **Erstellen** geöffnet wird, erfordert ein Verwaltungszertifikat oder das Veröffentlichungsprofil für das Abonnement. Wenn Sie keinen Zugriff auf das Verwaltungszertifikat oder Veröffentlichungsprofil haben, können Sie SQL-Anmeldeinformationen erstellen, indem Sie den Namen des Speicherkontos und die Informationen zum Zugriffsschlüssel mithilfe von Transact-SQL oder SQL Server Management Studio angeben. Der Beispielcode im Thema [Erstellen von Anmeldeinformationen](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) veranschaulicht das Erstellen von Anmeldeinformationen mithilfe von Transact-SQL. Alternativ können Sie auf der Datenbank-Engine-Instanz in SQL Server Management Studio mit der rechten Maustaste auf **Sicherheit**klicken und **Neu**sowie **Anmeldeinformationen**auswählen. Geben Sie im Feld **Identität** den Namen des Speicherkontos und im Feld **Kennwort** den Zugriffsschlüssel an.  
   
      **Azure-Speichercontainer**  
      Geben Sie den Namen des Windows Azure-Speichercontainers an.  

@@ -1,17 +1,16 @@
 ---
 title: Joins (SQL Server) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 02/18/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - joins
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - HASH join
 - NESTED LOOPS join
@@ -22,19 +21,19 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 7cecbf07ab49ca9f5e4545e6ca5376a200c6fe3d
-ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: fdb2184237101230d882bc269396ce21614007c5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="joins-sql-server"></a>Joins (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verwendet bei Sortier-, Schnittmengen-, Vereinigungs- und Vorgängen zum Feststellen von Unterschieden arbeitsspeicherinterne Sortierverfahren und Hashjointechniken. Beim Verwenden dieses Abfrageplantyps unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die vertikale Tabellenpartitionierung, auch spaltenweise Speicherung genannt.   
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet bei Sortier-, Schnittmengen- und Vereinigungsvorgängen sowie bei Vorgängen zum Feststellen von Unterschieden arbeitsspeicherinterne Sortierverfahren und Hashjointechniken. Beim Verwenden dieses Abfrageplantyps unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die vertikale Tabellenpartitionierung, auch spaltenweise Speicherung genannt.   
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Unterstützt drei Typen von Joinvorgängen:    
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt drei Typen von Joinvorgängen:    
 -   Joins geschachtelter Schleifen     
 -   Zusammenführungsjoins   
 -   Hashjoins   
@@ -101,7 +100,7 @@ Die SELECT-Liste für einen Join kann auf alle Spalten in den verknüpften Tabel
 
 Obwohl Joinbedingungen normalerweise Übereinstimmungsvergleiche (=) enthalten, können andere Vergleichsoperatoren oder relationale Operatoren ebenso wie andere Prädikate angegeben werden. Weitere Informationen finden Sie unter [Vergleichsoperatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md) und [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md).  
 
-Beim Verarbeiten von Joins durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wählt das Abfragemodul aus verschiedenen Möglichkeiten die effizienteste Methode aus. Die physische Ausführung von verschiedenen Joins kann viele verschiedene Optimierungen verwenden, weshalb keine zuverlässige Einschätzung möglich ist.   
+Beim Verarbeiten von Joins durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wählt die Abfrage-Engine aus verschiedenen Möglichkeiten die effizienteste Methode aus. Die physische Ausführung von verschiedenen Joins kann viele verschiedene Optimierungen verwenden, weshalb keine zuverlässige Einschätzung möglich ist.   
 
 Spalten, die in einer Joinbedingung verwendet werden, müssen nicht den gleichen Namen oder Datentyp haben. Die Datentypen müssen jedoch kompatibel sein, falls sie nicht identisch sind, oder es müssen Datentypen sein, die SQL Server implizit konvertieren kann. Wenn die Datentypen nicht implizit konvertiert werden können, muss die Joinbedingung den Datentyp mithilfe der `CAST`-Funktion explizit konvertieren. Weitere Informationen zur impliziten und expliziten Konvertierung finden Sie unter [Datentypkonvertierung &#40;Datenbank-Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).    
 

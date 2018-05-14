@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 01/10/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL10.REP.CONFIGWEBSYNCWIZARD.SNAPSHARE.F1
 - SQL13.REP.CONFIGWEBSYNCWIZARD.SNAPSHARE.F1
@@ -39,12 +38,11 @@ caps.latest.revision: 74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b7a50c27d51b9cab9e2d874b756fd32180a7074a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e806f794a378672b28aa2334eda1afe076bd2ab9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-web-synchronization"></a>Websynchronisierung konfigurieren
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +58,7 @@ ms.lasthandoff: 04/16/2018
 4.  Konfigurieren Sie ein oder mehrere Abonnements zur Verwendung der Websynchronisierung.  
   
 > [!NOTE]  
->  Wenn Sie große Datenmengen replizieren oder umfangreiche Datentypen wie **varchar(max)**verwenden möchten, lesen Sie den Abschnitt "Replizieren großer Datenmengen" in diesem Thema.  
+>  Wenn Sie große Datenmengen replizieren oder umfangreiche Datentypen wie **varchar(max)** verwenden möchten, lesen Sie den Abschnitt "Replizieren großer Datenmengen" in diesem Thema.  
   
  Um die Websynchronisierung erfolgreich einzurichten, müssen Sie entscheiden, wie die Sicherheit gemäß bestimmter Anforderungen und Richtlinien konfiguriert werden soll. Es wird empfohlen, diese Entscheidungen zu treffen und die notwendigen Konten zu erstellen, bevor Sie IIS, die Veröffentlichung und die Abonnements konfigurieren.  
   
@@ -138,7 +136,7 @@ ms.lasthandoff: 04/16/2018
   
  Die maximale Größe für die XML-Datei beträgt 4 GB, aber die Replikation synchronisiert die Änderungen aus dieser Datei batchweise. Die Batchgröße von Daten und Metadaten beträgt maximal 25 MB. Achten Sie daher darauf, dass die Daten in jedem Batch höchstens 20 MB ausmachen, damit ausreichend Platz für Metadaten und andere Komponenten vorhanden ist. Diese Grenze bringt die folgenden Auswirkungen mit sich:  
   
--   Es können keine Spalten repliziert werden, die bewirken, dass Daten und Metadaten 25 MB überschreiten. Dies stellt möglicherweise ein Problem dar, wenn Sie Zeilen mit umfangreichen Datentypen wie **varchar(max)**replizieren.  
+-   Es können keine Spalten repliziert werden, die bewirken, dass Daten und Metadaten 25 MB überschreiten. Dies stellt möglicherweise ein Problem dar, wenn Sie Zeilen mit umfangreichen Datentypen wie **varchar(max)** replizieren.  
   
 -   Wenn Sie große Datenmengen replizieren, müssen Sie ggf. die Batchgröße des Merge-Agents anpassen.  
   

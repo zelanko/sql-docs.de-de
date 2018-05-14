@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-plan-guides
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - checking plan guides
 - plan guides [SQL Server], testing
@@ -29,12 +28,11 @@ caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0a19fd733c0367c53c56228aeb1e04293f3eb2ad
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 856ccf92fbebd897a04789142fa1c2403c3a78d5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Verwenden von SQL Server Profiler zum Erstellen und Testen von Planhinweislisten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +72,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  Öffnen Sie die Batchtextdatei in Editor, und kopieren Sie den Text in die Zwischenablage.  
   
-8.  Erstellen Sie die Planhinweisliste, und fügen Sie den kopierten Text zwischen die Anführungszeichen (**''**) ein, die für das **@stmt** -Argument angegeben sind. Sie müssen alle einfachen Anführungszeichen im **@stmt** -Argument abgrenzen, indem Sie ihnen ein weiteres einfaches Anführungszeichen voranstellen. Achten Sie darauf, beim Einfügen dieser einfachen Anführungszeichen keine weiteren Zeichen hinzuzufügen oder zu entfernen. So muss z. B. das Datumsliteral **'**20000101**'** als **''**20000101**''**abgegrenzt werden.  
+8.  Erstellen Sie die Planhinweisliste, und fügen Sie den kopierten Text zwischen die Anführungszeichen (**''**) ein, die für das **@stmt** -Argument angegeben sind. Sie müssen alle einfachen Anführungszeichen im **@stmt** -Argument abgrenzen, indem Sie ihnen ein weiteres einfaches Anführungszeichen voranstellen. Achten Sie darauf, beim Einfügen dieser einfachen Anführungszeichen keine weiteren Zeichen hinzuzufügen oder zu entfernen. So muss z. B. das Datumsliteral **'** 20000101 **'** als **''** 20000101 **''** abgegrenzt werden.  
   
  Die Planhinweisliste sieht dann folgendermaßen aus:  
   

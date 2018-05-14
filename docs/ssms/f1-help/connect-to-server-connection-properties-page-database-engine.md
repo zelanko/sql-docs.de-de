@@ -1,17 +1,15 @@
 ---
-title: Verbinden mit SQL Server-Datenbankmodul (Eigenschaftenseite Verbindung) | Microsoft-Dokumentation
+title: Verbinden mit SQL Server-Datenbank-Engine (Eigenschaftenseite Verbindung) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssms-f1
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.connecttoce.connectionproperties.f1
 - sql13.swb.connecttosqlserver.connectionproperties.f1
@@ -20,21 +18,20 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6c4e49bf97fda2b453af9254d6ecf040172c8bf0
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 6687b8dd57301ae62f6b5fbe6d11a70aad18c141
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="connect-to-server-connection-properties-page-database-engine"></a>Verbinden mit SQL Server-Datenbankmodul (Eigenschaftenseite Verbindung)
+# <a name="connect-to-server-connection-properties-page-database-engine"></a>Verbinden mit SQL Server-Datenbank-Engine (Eigenschaftenseite Verbindung)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Auf dieser Registerkarte können Optionen für Verbindungen mit einer Instanz von [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] angezeigt oder angegeben werden, oder Sie können mit dieser Registerkarte [!INCLUDE[ssDE](../../includes/ssde_md.md)] in **Registrierte Server**registrieren. Die Felder**Verbinden** und **Optionen** werden nur beim Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde_md.md)]in diesem Dialogfeld angezeigt. Die Felder**Testen** und **Speichern** werden nur beim Registrieren von [!INCLUDE[ssDE](../../includes/ssde_md.md)]in diesem Dialogfeld angezeigt.  
   
 **Verbindung mit Datenbank herstellen**  
 Wählen Sie eine Datenbank aus der Liste aus, zu der eine Verbindung hergestellt werden soll. Wenn Sie **<default>** auswählen, wird eine Verbindung zur Standarddatenbank des Servers hergestellt. Wenn Sie **<Browse server>** auswählen, können Sie den Server nach der Datenbank durchsuchen, mit der Sie eine Verbindung herstellen möchten.  
   
-Wenn Sie über die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] eine Verbindung mit einer Instanz des [!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)]-Datenbankmoduls herstellen, müssen Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Authentifizierung verwenden und im Dialogfeld **Verbindung mit Server herstellen** auf der Registerkarte **Verbindungseigenschaften** eine Datenbank angeben. Das Kontrollkästchen **Verbindung verschlüsseln** muss aktiviert sein.  
+Wenn Sie über die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] eine Verbindung mit einer Instanz der [!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)]-Datenbank-Engine herstellen, müssen Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Authentifizierung verwenden und im Dialogfeld **Verbindung mit Server herstellen** auf der Registerkarte **Verbindungseigenschaften** eine Datenbank angeben. Das Kontrollkästchen **Verbindung verschlüsseln** muss aktiviert sein.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] stellt standardmäßig eine Verbindung mit der **master**-Datenbank her. Wenn Sie eine Benutzerdatenbank beim Verbinden mit [!INCLUDE[ssSDS](../../includes/sssds_md.md)] angeben, wird im Objekt-Explorer nur diese Datenbank mit den zugehörigen Objekten angezeigt. Wenn Sie eine Verbindung mit der **master**-Datenbank herstellen, werden alle Datenbanken angezeigt. Weitere Informationen finden Sie in der [Übersicht zu Windows Azure SQL-Datenbanken](http://go.microsoft.com/fwlink/?LinkId=163948).  
   
@@ -60,7 +57,7 @@ Wählen Sie diese Option aus, um die Hintergrundfarbe für die Statusleiste in e
   
 -   Wenn Sie eine Farbe für einen Servereintrag im Bereich **Registrierte Server** angeben, wird diese Farbe verwendet, wenn Sie ein Abfrage-Editor-Fenster öffnen. Um ein Abfrage-Editor-Fenster zu öffnen, klicken Sie entweder mit der rechten Maustaste auf den Servereintrag, und wählen Sie **Neue Abfrage**, oder – wenn der Bereich **Registrierte Server** aktiv und auf diesen Server fokussiert ist – klicken Sie auf der Symbolleiste auf **Neue Abfrage** .  
   
--   Wenn Sie im Menü **Datei** auf **Neu** und dann auf **Datenbankmodul-Abfrage**klicken, wird die Farbe, die Sie im Dialogfeld **Verbindung mit Server herstellen** angeben, für dieses Abfrage-Editor-Fenster übernommen.  
+-   Wenn Sie im Menü **Datei** auf **Neu** und dann auf **Datenbank-Engine-Abfrage** klicken, wird die Farbe, die Sie im Dialogfeld **Verbindung mit Server herstellen** angeben, für dieses Abfrage-Editor-Fenster übernommen.  
   
 **AD-Domänenname und Mandanten-ID**  
 Wenn Sie eine Verbindung mit der **Active Directory – Universelle MFA** herstellen, geben Sie die authentifizierende Domäne an. Diese Option ist nur verfügbar, wenn Sie SSMS Version 17.2 oder höher verwenden. 

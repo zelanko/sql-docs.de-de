@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssms-registration
 ms.reviewer: ''
 ms.suite: sql
@@ -21,12 +20,11 @@ caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 22a9a95e73b34a9c094abf24a0b12998bc8cfc87
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 00fe3c62180ada724cf202ae1dc2c3e6e9c6df8e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registered-servers-f1-help"></a>Registrierte Server (F1-Hilfe)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -124,7 +122,7 @@ ms.lasthandoff: 04/26/2018
   
 ### <a name="options"></a>Tastatur  
  **Servertyp**  
- Wenn Sie einen Server über „Registrierte Server“ registrieren, ist das Feld **Servertyp** schreibgeschützt, wobei der Feldeintrag mit dem im Bereich für registrierte Server angezeigten Servertyp übereinstimmt. Um einen anderen Servertyp zu registrieren, bevor Sie mit dem Registrieren eines neuen Servers beginnen, klicken Sie auf der Symbolleiste **Registrierte Server**, **Datenbankmodul**, **Analysis-Server**, **Analysis-Server** **SQL Server Compact** **Registrierte Server** auf **Integration Services** .  
+ Wenn Sie einen Server über „Registrierte Server“ registrieren, ist das Feld **Servertyp** schreibgeschützt, wobei der Feldeintrag mit dem im Bereich für registrierte Server angezeigten Servertyp übereinstimmt. Um einen anderen Servertyp zu registrieren, bevor Sie mit dem Registrieren eines neuen Servers beginnen, klicken Sie auf der Symbolleiste **Registrierte Server**, **Datenbank-Engine**, **Analysis-Server**, **Analysis-Server****SQL Server Compact****Registrierte Server** auf **Integration Services**.  
   
  **Servername**  
  Wählen Sie den Server aus, mit dem eine Verbindung hergestellt werden soll. Standardmäßig wird der Server angezeigt, mit dem zuletzt eine Verbindung hergestellt wurde.  

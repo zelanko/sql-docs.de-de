@@ -1,35 +1,34 @@
 ---
-title: "Dialogfeld 'Neue Richtlinie erstellen' oder 'Richtlinie öffnen', Seite 'Allgemein'|Microsoft-Dokumentation"
-ms.custom: 
+title: Dialogfeld 'Neue Richtlinie erstellen' oder 'Richtlinie öffnen', Seite 'Allgemein'|Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dmf.policy.f1
 - sql13.swb.dmf.policy.filter.f1
 - sql13.swb.dmf.newgroup.f1
 ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
-caps.latest.revision: 
+caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 028b2e39f916f29a4332f9a04b2d2af6fbcf2304
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 1e1f14d52a6bd9198b529ad748175d194d5eeaee
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>Dialogfeld 'Neue Richtlinie erstellen' oder 'Richtlinie öffnen', Seite 'Allgemein'
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe dieses Dialogfelds können Sie eine neue Richtlinie für die richtlinienbasierte Verwaltung erstellen oder eine vorhandene Richtlinie ändern. Verwenden Sie die Bereiche **Für Ziele** und **Serverbeschränkung** als Filter, um Richtlinien auf eine Teilmenge aller möglichen Ziele zu beschränken. Damit Bedingungen als Zielfilter verwendet werden können, müssen sie auf einem physischen Facet definiert werden und dürfen weder Funktionen noch den LIKE-Operator enthalten. Wenn das System den Objektsatz für eine Richtlinie berechnet, werden die Systemobjekte standardmäßig ausgeschlossen.  Falls der Objektsatz der Richtlinie z. B. auf alle Tabellen verweist, gilt die Richtlinie nicht für Systemtabellen. Wenn Benutzer eine Richtlinie in Verbindung mit Systemobjekten auswerten möchten, können sie dem Objektsatz Systemobjekte explizit hinzufügen. Obwohl alle Richtlinien für den Auswertungsmodus **Zeitplan prüfen** unterstützt werden, werden aus Leistungsgründen jedoch nicht alle Richtlinien mit beliebigen Objektsätzen für den Auswertungsmodus **Änderungen prüfen** unterstützt. Weitere Informationen finden Sie unter [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Mithilfe dieses Dialogfelds können Sie eine neue richtlinienbasierte Verwaltungsrichtlinie erstellen oder eine vorhandene Richtlinie ändern. Verwenden Sie die Bereiche **Für Ziele** und **Serverbeschränkung** als Filter, um Richtlinien auf eine Teilmenge aller möglichen Ziele zu beschränken. Damit Bedingungen als Zielfilter verwendet werden können, müssen sie auf einem physischen Facet definiert werden und dürfen weder Funktionen noch den LIKE-Operator enthalten. Wenn das System den Objektsatz für eine Richtlinie berechnet, werden die Systemobjekte standardmäßig ausgeschlossen.  Falls der Objektsatz der Richtlinie z. B. auf alle Tabellen verweist, gilt die Richtlinie nicht für Systemtabellen. Wenn Benutzer eine Richtlinie in Verbindung mit Systemobjekten auswerten möchten, können sie dem Objektsatz Systemobjekte explizit hinzufügen. Obwohl alle Richtlinien für den Auswertungsmodus **Zeitplan prüfen** unterstützt werden, werden aus Leistungsgründen jedoch nicht alle Richtlinien mit beliebigen Objektsätzen für den Auswertungsmodus **Änderungen prüfen** unterstützt. Weitere Informationen finden Sie unter [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx).  
   
 ## <a name="options"></a>Tastatur  
  **Name**  

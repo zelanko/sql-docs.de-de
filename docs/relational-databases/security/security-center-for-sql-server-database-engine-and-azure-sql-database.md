@@ -1,17 +1,16 @@
 ---
-title: Sicherheitscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank | Microsoft-Dokumentation
+title: Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.service: ''
 ms.component: security
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Security [SQL Server]
 helpviewer_keywords:
@@ -24,15 +23,14 @@ caps.latest.revision: 55
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 09c051ece663a046a9286b27ddfd5356ab534e7a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8e07f44a6d09e0c5416f43c4a9113b633e2aa689
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>Sicherheitscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank
+# <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Diese Seite enthält Links, mit deren Hilfe Sie die erforderlichen Informationen zur Sicherheit und zum Schutz in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] und [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]finden.  
@@ -47,13 +45,16 @@ ms.lasthandoff: 04/16/2018
 |-|-|  
 |**Wer authentifiziert?**<br /><br /> ![Sicherheitscenter-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") Windows-Authentifizierung<br /><br /> ![sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "security-center-both") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung<br /><br /> ![sicherheitscenter-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Azure Active Directory|Wer authentifiziert? (Windows oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])<br /><br /> [Auswählen eines Authentifizierungsmodus](../../relational-databases/security/choose-an-authentication-mode.md)<br /><br /> [Herstellen einer Verbindung mit SQL-Datenbank unter Verwendung der Azure Active Directory-Authentifizierung](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)|  
 |**Wo authentifiziert?**<br /><br /> ![sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "security-center-both") In der Masterdatenbank: Anmeldenamen und Datenbankbenutzer<br /><br /> ![sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "security-center-both") In der Benutzerdatenbank: Eigenständige Datenbankbenutzer|Authentifizierung bei der Masterdatenbank (Anmeldenamen und Datenbankbenutzer)<br /><br /> [Erstellen eines SQL Server-Anmeldenamens](../../relational-databases/security/authentication-access/create-a-login.md)<br /><br /> [Verwalten von Datenbanken und Anmeldenamen in Azure SQL-Datenbank](http://msdn.microsoft.com/library/ee336235.aspx)<br /><br /> [Erstellen eines Datenbankbenutzers](../../relational-databases/security/authentication-access/create-a-database-user.md)<br /><br /> <br /><br /> Authentifizierung bei einer Benutzerdatenbank<br /><br /> [Eigenständige Datenbankbenutzer - machen Sie Ihre Datenbank portabel](../../relational-databases/security/contained-database-users-making-your-database-portable.md)|  
-|**Verwenden anderer Identitäten**<br /><br /> ![sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "security-center-both") Anmeldeinformationen<br /><br /> ![sicherheitscenter-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") Ausführen unter anderem Anmeldenamen<br /><br /> ![sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "security-center-both") Ausführen als anderer Datenbankbenutzer|[Anmeldeinformationen &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)<br /><br /> [Ausführen unter anderem Anmeldenamen](../../t-sql/statements/execute-as-transact-sql.md)<br /><br /> [Ausführen als anderer Datenbankbenutzer](../../t-sql/statements/execute-as-transact-sql.md)|  
+|**Verwenden anderer Identitäten**<br /><br /> ![sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "security-center-both") Anmeldeinformationen<br /><br /> ![sicherheitscenter-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") Ausführen unter anderem Anmeldenamen<br /><br /> ![sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "security-center-both") Ausführen als anderer Datenbankbenutzer|
+  [Anmeldeinformationen &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)<br /><br /> [Ausführen unter anderem Anmeldenamen](../../t-sql/statements/execute-as-transact-sql.md)<br /><br /> [Ausführen als anderer Datenbankbenutzer](../../t-sql/statements/execute-as-transact-sql.md)|  
   
 ##  <a name="What"></a> Autorisierung: Was können Sie tun?  
   
 |||  
 |-|-|  
-|**Gewährung, Widerrufen und Verweigern von Berechtigungen**<br /><br /> ![sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "security-center-both") Sicherungsfähige Klassen<br /><br /> ![sicherheitscenter-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") Granulare Serverberechtigungen<br /><br /> ![sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "security-center-both") Granulare Datenbankberechtigungen|[Berechtigungshierarchie &#40;Datenbankmodul&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)<br /><br /> [Berechtigungen](../../relational-databases/security/permissions-database-engine.md)<br /><br /> [Sicherungsfähige Elemente](../../relational-databases/security/securables.md)<br /><br /> [Erste Schritte mit Berechtigungen für das Datenbankmodul](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)|  
+|**Gewährung, Widerrufen und Verweigern von Berechtigungen**<br /><br /> ![sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "security-center-both") Sicherungsfähige Klassen<br /><br /> ![sicherheitscenter-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") Granulare Serverberechtigungen<br /><br /> ![sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "security-center-both") Granulare Datenbankberechtigungen|
+  [Berechtigungshierarchie &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)<br /><br /> [Berechtigungen](../../relational-databases/security/permissions-database-engine.md)<br /><br /> [Sicherungsfähige Elemente](../../relational-databases/security/securables.md)<br /><br /> 
+  [Erste Schritte mit Berechtigungen für die Datenbank-Engine](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)|  
 |**Sicherheit durch Rollen**<br /><br /> ![sicherheitscenter-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") Rollen auf Serverebene<br /><br /> ![sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "security-center-both") Rollen auf Datenbankebene|[Rollen auf Serverebene](../../relational-databases/security/authentication-access/server-level-roles.md)<br /><br /> [Rollen auf Datenbankebene](../../relational-databases/security/authentication-access/database-level-roles.md)|  
 |**Einschränken des Datenzugriffs auf ausgewählte Datenelemente**<br /><br /> ![sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "security-center-both") Einschränken des Datenzugriffs mit Ansichten/Verfahren<br /><br /> ![sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "security-center-both") Sicherheit auf Zeilenebene<br /><br /> ![sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "security-center-both") Dynamische Datenmaskierung<br /><br /> ![sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "security-center-both") Signierte Objekte|Einschränken des Datenzugriffs mit [Ansichten](../../relational-databases/views/views.md) und [Verfahren](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)<br /><br /> [Sicherheit auf Zeilenebene (SQL Server)](../../relational-databases/security/row-level-security.md)<br /><br /> [Sicherheit auf Zeilenebene (Azure SQL-Datenbank)](http://msdn.microsoft.com/library/azure/dn765131.aspx)<br /><br /> [Dynamische Datenmaskierung (SQL Server)](../../relational-databases/security/dynamic-data-masking.md)<br /><br /> [Dynamische Datenmaskierung (Azure SQL-Datenbank)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)<br /><br /> [Signierte Objekte](../../t-sql/statements/add-signature-transact-sql.md)|  
   
@@ -69,14 +70,17 @@ ms.lasthandoff: 04/16/2018
   
 |||  
 |-|-|  
-|**Firewallschutz**<br /><br /> ![sicherheitscenter-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") Windows-Firewalleinstellungen<br /><br /> ![sicherheitscenter-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Azure Service-Firewalleinstellungen<br /><br /> ![sicherheitscenter-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Datenbank-Firewalleinstellungen|[Konfigurieren einer Windows-Firewall für Datenbankmodulzugriff](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)<br /><br /> [Azure SQL-Datenbank-Firewalleinstellungen](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)<br /><br /> [Azure Service-Firewalleinstellungen](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)|  
-|**Verschlüsseln von Daten in Transit**<br /><br /> ![sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "security-center-both") Erzwungene SSL-Verbindungen<br /><br /> ![Sicherheitscenter-SQLServer](../../relational-databases/performance/media/security-center-sqlserver.png "Sicherheitscenter-SQLServer") Optionale SSL-Verbindungen|[Secure Sockets Layer für das Datenbankmodul](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)<br /><br /> [Secure Sockets Layer für SQL-Datenbank](https://msdn.microsoft.com/library/azure/ff394108.aspx)<br /><br /> [TLS 1.2-Unterstützung für Microsoft SQL Server](https://support.microsoft.com/kb/3135244)|  
+|**Firewallschutz**<br /><br /> ![sicherheitscenter-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") Windows-Firewalleinstellungen<br /><br /> ![sicherheitscenter-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Azure Service-Firewalleinstellungen<br /><br /> ![sicherheitscenter-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Datenbank-Firewalleinstellungen|
+  [Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)<br /><br /> [Azure SQL-Datenbank-Firewalleinstellungen](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)<br /><br /> [Azure Service-Firewalleinstellungen](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)|  
+|**Verschlüsseln von Daten in Transit**<br /><br /> ![sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "security-center-both") Erzwungene SSL-Verbindungen<br /><br /> ![Sicherheitscenter-SQLServer](../../relational-databases/performance/media/security-center-sqlserver.png "Sicherheitscenter-SQLServer") Optionale SSL-Verbindungen|
+  [Secure Sockets Layer für die Datenbank-Engine](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)<br /><br /> [Secure Sockets Layer für SQL-Datenbank](https://msdn.microsoft.com/library/azure/ff394108.aspx)<br /><br /> [TLS 1.2-Unterstützung für Microsoft SQL Server](https://support.microsoft.com/kb/3135244)|  
   
 ##  <a name="Audit"></a> Überwachung: Aufzeichnen des Zugriffs  
   
 |||  
 |-|-|  
-|**Automatisierte Überwachung**<br /><br /> ![sicherheitscenter-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Überwachung (Server- und Datenbankebene)<br /><br /> ![sicherheitscenter-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Überwachung (Datenbankebene)<br /><br /> ![sicherheitscenter-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Bedrohungserkennung| <br /><br /> [SQL Server Audit &#40;Datenbankmodul&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)<br /><br /> [SQL-Datenbanküberwachung](http://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)<br /><br /> [Erste Schritte mit der SQL-Datenbanküberwachung](https://azure.microsoft.com/documentation/articles/sql-database-threat-detection-get-started/) <br /><br /> [Sicherheitsrisikobewertung mit der SQL-Datenbank](https://docs.microsoft.com/en-us/azure/sql-database/sql-vulnerability-assessment) |  
+|**Automatisierte Überwachung**<br /><br /> ![sicherheitscenter-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Überwachung (Server- und Datenbankebene)<br /><br /> ![sicherheitscenter-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Überwachung (Datenbankebene)<br /><br /> ![sicherheitscenter-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Bedrohungserkennung| <br /><br /> 
+  [SQL Server Audit &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)<br /><br /> [SQL-Datenbanküberwachung](http://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)<br /><br /> [Erste Schritte mit der SQL-Datenbanküberwachung](https://azure.microsoft.com/documentation/articles/sql-database-threat-detection-get-started/) <br /><br /> [Sicherheitsrisikobewertung mit der SQL-Datenbank](https://docs.microsoft.com/en-us/azure/sql-database/sql-vulnerability-assessment) |  
 |**Benutzerdefinierte Überwachung**<br /><br /> ![sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "security-center-both") Trigger|Benutzerdefinierte Überwachungsimplementierung: Erstellen von [DDL-Triggern](../../relational-databases/triggers/ddl-triggers.md) und [DML-Triggern](../../relational-databases/triggers/dml-triggers.md)|  
 |**Kompatibilität**<br /><br /> ![sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "security-center-both") Kompatibilität|SQL Server:<br />                        [Common Criteria](http://go.microsoft.com/fwlink/?LinkId=616319)<br /><br /> SQL-Datenbank:<br />                        [Microsoft Azure Trust Center: Compliance nach Features](http://azure.microsoft.com/support/trust-center/services/)|  
   
@@ -92,14 +96,17 @@ ms.lasthandoff: 04/16/2018
 -   [Gewusst wie: Schutz vor Einschleusung von SQL-Befehlen in ASP.NET](https://msdn.microsoft.com/library/ff648339.aspx)  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Erste Schritte mit Berechtigungen für das Datenbankmodul](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)   
+ 
+  [Erste Schritte mit Berechtigungen für die Datenbank-Engine](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)   
  [Sichern von SQL Server](../../relational-databases/security/securing-sql-server.md)   
- [Prinzipale &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ 
+  [Prinzipale &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [SQL Server-Zertifikate und asymmetrische Schlüssel](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)   
  [SQL Server-Verschlüsselung](../../relational-databases/security/encryption/sql-server-encryption.md)   
  [Oberflächenkonfiguration](../../relational-databases/security/surface-area-configuration.md)   
  [Sichere Kennwörter](../../relational-databases/security/strong-passwords.md)   
  [TRUSTWORTHY-Datenbankeigenschaft](../../relational-databases/security/trustworthy-database-property.md)   
- [Datenbankmodulfunktionen und Tasks](http://msdn.microsoft.com/library/d9efe145-3306-4d61-bd77-e2af43e19c34)  
+ 
+  [Datenbank-Engine-Funktionen und Tasks](http://msdn.microsoft.com/library/d9efe145-3306-4d61-bd77-e2af43e19c34)  
  [Schutz Ihres geistigen SQL Server-Eigentums](../../relational-databases/security/protecting-your-sql-server-intellectual-property.md)   
   

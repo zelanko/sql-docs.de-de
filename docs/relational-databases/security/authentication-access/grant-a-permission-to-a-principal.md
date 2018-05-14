@@ -1,33 +1,33 @@
 ---
-title: "Erteilen einer Berechtigung für einen Prinzipal | Microsoft-Dokumentation"
-ms.custom: 
+title: Erteilen einer Berechtigung für einen Prinzipal | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Grant permission to a principal
 ms.assetid: 4107389d-05b6-4aa3-9fa8-95b40cdf05dc
-caps.latest.revision: 
+caps.latest.revision: 12
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 3d22ba04e498423840ea77a40d17949980887da7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e7d8c1990cb43aa5398a179bb00c053afe98f651
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-a-permission-to-a-principal"></a>Erteilen einer Berechtigung für einen Prinzipal
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In diesem Thema wird beschrieben, wie Sie mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)] Berechtigungen für einen Prinzipal in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] gewähren können.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  In diesem Thema wird beschrieben, wie Sie mit [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] Berechtigungen für einen Prinzipal in [!INCLUDE[tsql](../../../includes/tsql-md.md)]gewähren können.  
   
  **In diesem Thema**  
   
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So erteilen Sie eine Berechtigung für einen Prinzipal mit**  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
  Mit den folgenden Best Practices wird die Verwaltung von Berechtigungen erleichtert.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/21/2017
 ####  <a name="Permissions"></a> Berechtigungen  
  Der Berechtigende (oder der mit der AS-Option angegebene Prinzipal) muss entweder über die Berechtigung selbst mit GRANT OPTION oder über eine höhere Berechtigung verfügen, in der die erteilte Berechtigung impliziert ist. Mitglieder der festen Serverrolle **sysadmin** können beliebige Berechtigungen erteilen.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-grant-permission-to-a-principal"></a>So erteilen Sie eine Berechtigung für einen Prinzipal  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  Klicken Sie mit der rechten Maustaste auf eine gespeicherte Prozedur, und wählen Sie **Eigenschaften**aus.  
   
-5.  Wählen Sie im Dialogfeld **Eigenschaften der gespeicherten Prozedur –***stored_procedure_name* unter „Seite auswählen“ die Option **Berechtigungen**aus. Verwenden Sie diese Seite, um der gespeicherten Prozedur Benutzer oder Rollen hinzuzufügen und um die Berechtigungen anzugeben, die diese Benutzer oder Rollen haben.  
+5.  Klicken Sie im Dialogfeld *Eigenschaften der gespeicherten Prozedur –***stored_procedure_name* unter „Seite auswählen“ auf die Option **Berechtigungen**. Verwenden Sie diese Seite, um der gespeicherten Prozedur Benutzer oder Rollen hinzuzufügen und um die Berechtigungen anzugeben, die diese Benutzer oder Rollen haben.  
   
 6.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/21/2017
   
 #### <a name="to-grant-permission-to-a-principal"></a>So erteilen Sie eine Berechtigung für einen Prinzipal  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -97,7 +97,8 @@ ms.lasthandoff: 11/21/2017
   
  Weitere Informationen finden Sie unter [GRANT &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-transact-sql.md) und [GRANT (Objektberechtigungen)&#40;Transact-SQL&#41;](../../../t-sql/statements/grant-object-permissions-transact-sql.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Prinzipale &#40;Datenbankmodul&#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ 
+  [Prinzipale &amp;#40;Datenbank-Engine&amp;#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

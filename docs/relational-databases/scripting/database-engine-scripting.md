@@ -1,17 +1,15 @@
 ---
-title: Datenbankmodul-Skripterstellung | Microsoft-Dokumentation
+title: Datenbank-Engine-Skripterstellung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scripts [SQL Server], PowerShell
 - scripts [SQL Server]
@@ -19,18 +17,17 @@ helpviewer_keywords:
 - scripting [SQL Server Database Engine], PowerShell
 ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
 caps.latest.revision: 23
-author: mightypen
+author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3b2a2725fa32bc7c3d4f451bd05b5663594eb7be
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: efb8fa1b76ba21b7d3b42b04b4c2dccb5f58e330
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="database-engine-scripting"></a>Datenbankmodul-Skripterstellung
+# <a name="database-engine-scripting"></a>Datenbank-Engine-Skripterstellung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] unterstützt die [!INCLUDE[msCoName](../../includes/msconame-md.md)] -PowerShell-Skriptumgebung zum Verwalten der Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)] und der Objekte in den Instanzen. Sie können zudem [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfragen mit [!INCLUDE[tsql](../../includes/tsql-md.md)] und XQuery in Umgebungen erstellen und ausführen, die mit Skriptumgebungen vergleichbar sind.  
   
@@ -49,7 +46,7 @@ ms.lasthandoff: 04/16/2018
   
 -   Das **sqlps** -Hilfsprogramm, das PowerShell startet und das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Modul importiert. Sie können dann alle vom Modul unterstützten Aktionen ausführen. Sie können das **sqlps** -Hilfsprogramm an einer Eingabeaufforderung starten oder indem Sie mit der rechten Maustaste auf die Knoten in der Struktur des Objekt-Explorers von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio klicken und **PowerShell starten**auswählen.  
   
-## <a name="database-engine-queries"></a>Datenbankmodul-Abfragen  
+## <a name="database-engine-queries"></a>Datenbank-Engine-Abfragen  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrageskripts enthalten drei Typen von Elementen:  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] -Sprachanweisungen  
@@ -76,7 +73,7 @@ ms.lasthandoff: 04/16/2018
   
  Außerdem können Sie mithilfe des Assistenten zum Generieren von Skripts in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts generieren. Sie können mit der rechten Maustaste im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Objekt-Explorer auf Objekte klicken und anschließend das Menüelement **Skript generieren** auswählen. Mit**Skript generieren** wird der Assistent gestartet, der Sie durch den Vorgang der Skripterstellung führt.  
   
-## <a name="database-engine-scripting-tasks"></a>Tasks der Datenbankmodul-Skripterstellung  
+## <a name="database-engine-scripting-tasks"></a>Tasks der Datenbank-Engine-Skripterstellung  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  

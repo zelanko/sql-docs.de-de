@@ -1,17 +1,16 @@
 ---
-title: Berechtigungshierarchie (Datenbankmodul) | Microsoft-Dokumentation
+title: Berechtigungshierarchie (Datenbank-Engine) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/23/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.server.permissions.f1--May use common.permissions
 helpviewer_keywords:
@@ -26,15 +25,14 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3e9959a2e4558d22d0a7f6e120a8db558807f5e5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 032b8a68e4e390c82fdf6cdc5659a9c8695f89fa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="permissions-hierarchy-database-engine"></a>Berechtigungshierarchie (Datenbankmodul)
+# <a name="permissions-hierarchy-database-engine"></a>Berechtigungshierarchie (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   In [!INCLUDE[ssDE](../../includes/ssde-md.md)] wird eine hierarchische Auflistung der Entitäten verwaltet, die mit Berechtigungen gesichert werden können. Diese Entitäten werden als *sicherungsfähige Elemente*bezeichnet. Die wichtigsten sicherungsfähigen Elemente sind Server und Datenbanken, diskrete Berechtigungen können jedoch auf einer viel differenzierteren Ebene festgelegt werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reguliert die Aktionen von Prinzipalen auf sicherungsfähigen Elementen, indem überprüft wird, ob ihnen entsprechende Berechtigungen gewährt wurden.  
@@ -55,9 +53,11 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Sichern von SQL Server](../../relational-databases/security/securing-sql-server.md)   
- [Berechtigungen &#40;Datenbankmodul&#41;](../../relational-databases/security/permissions-database-engine.md)   
+ 
+  [Berechtigungen &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   
- [Prinzipale &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ 
+  [Prinzipale &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   

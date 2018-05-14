@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 11/30/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL13.SWB.COLUMNMASTERKEY.PAGE.F1
 - SQL13.SWB.COLUMNENCRYPTIONKEY.PAGE.F1
@@ -23,13 +22,12 @@ caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ec97d1903bd5b3123c72e16052c98c0e9b7bd544
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7ace7cc5ca437a6ad67c5f7bf8cd138e470d0047
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Konfigurieren von Always Encrypted mithilfe von SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -128,14 +126,14 @@ WHERE [SSN] = @SSN
 
 So aktivieren Sie „Parametrisierung für Always Encrypted“ für das aktuelle Fenster „Abfrage-Editor“   
 1.  Wählen Sie im Hauptmenü **Abfrage** aus.   
-2.  Wählen Sie **Abfrageoptionen...**aus.   
+2.  Wählen Sie **Abfrageoptionen...** aus.   
 3.  Navigieren Sie zu **Ausführung** > **Erweitert**.   
 4.  Aktivieren bzw. deaktivieren **Parametrisierung für Always Encrypted**.   
 5.  Klicken Sie auf **OK**.   
 
 So aktivieren oder deaktivieren Sie „Parametrisierung für Always Encrypted“ für künftige „Abfrage-Editor“-Fenster   
 1.  Wählen Sie im Hauptmenü **Tools** aus.   
-2.  Wählen Sie **Optionen...**aus.   
+2.  Wählen Sie **Optionen...** aus.   
 3.  Navigieren Sie zu **Abfrageausführung** > **SQL Server** > **Erweitert**.   
 4.  Aktivieren bzw. deaktivieren **Parametrisierung für Always Encrypted**.   
 5.  Klicken Sie auf **OK**.   
@@ -256,7 +254,7 @@ SQL Server Management Studio erstellt Metadaten für Ihren Spaltenhauptschlüsse
 Mit dem Dialogfeld **Neuer Spaltenverschlüsselungsschlüssel** können Sie einen Spaltenverschlüsselungsschlüssel generieren, mit einem Spaltenhauptschlüssel verschlüsseln und Metadaten zu dem Spaltenverschlüsselungsschlüssel in der Datenbank erstellen.
 
 1.  Navigieren Sie über den **Objekt-Explorer**zu dem Ordner **Sicherheit &gt; Always Encrypted-Schlüssel** in Ihrer Datenbank.
-2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Spaltenverschlüsselungsschlüssel** , und wählen Sie **Neuer Spaltenverschlüsselungsschlüssel...**aus. 
+2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Spaltenverschlüsselungsschlüssel** , und wählen Sie **Neuer Spaltenverschlüsselungsschlüssel...** aus. 
 3.  Geben Sie im Dialogfeld **Neuer Spaltenverschlüsselungsschlüssel** den Namen des Spaltenverschlüsselungsschlüssel-Metadatenobjekts ein.
 4.  Wählen Sie ein Metadatenobjekt aus, das Ihren Spaltenhauptschlüssel in der Datenbank darstellt.
 5.  Klicken Sie auf **OK**. 
@@ -465,7 +463,8 @@ Außerdem benötigen Sie Zugriff auf die Spaltenhauptschlüssel, die für die Sp
 Weitere Informationen finden Sie unter [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)(Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)).
 
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter
-- [Always Encrypted (Datenbankmodul)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- 
+  [„Immer verschlüsselt“ (Datenbank-Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted-Assistent](../../../relational-databases/security/encryption/always-encrypted-wizard.md)
 - [Übersicht über die Schlüsselverwaltung für Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)

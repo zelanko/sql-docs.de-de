@@ -1,17 +1,16 @@
 ---
-title: Leistungscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank | Microsoft-Dokumentation
+title: Leistungscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/08/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.service: ''
 ms.component: performance
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Performance (SQL Server)
 - Performance (SQL Database)
@@ -27,14 +26,13 @@ caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2dbcdb3dd0b92d9c6554bbd14854d85fccc729bd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4f95779084ebec71ed169abdb5d4461c7532d288
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>Leistungscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank
+# <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>Leistungscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Diese Seite enthält Links, mit deren Hilfe Sie die erforderlichen Informationen zur Leistung in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] und [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]finden.  
   
@@ -43,7 +41,8 @@ ms.lasthandoff: 04/16/2018
  ![Sicherheitscenter-Legende](../../relational-databases/performance/media/security-center-legend.PNG "security-center-legend")  
   
 ## <a name="configuration-options-for-performance"></a>Konfigurationsoptionen für Leistung  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet die Möglichkeit, die Leistung des Datenbankmoduls mit einer Anzahl von Konfigurationsoptionen auf dem [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Level zu beeinflussen. Mit [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], führt Microsoft die meisten dieser Optimierungen für Sie aus, jedoch nicht alle.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet die Möglichkeit, die Leistung der Datenbank-Engine mit einer Anzahl von Konfigurationsoptionen auf dem [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Level zu beeinflussen. Mit [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], führt Microsoft die meisten dieser Optimierungen für Sie aus, jedoch nicht alle.  
   
 |||  
 |-|-|  
@@ -53,7 +52,8 @@ ms.lasthandoff: 04/16/2018
 |**Serverkonfigurationsoptionen**|<ul><li>**Prozessorkonfigurationsoptionen**<br /><br /> <ul><li>![Sicherheitscenter-SQLServer](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Affinitätsmaske (Serverkonfigurationsoption)](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md)</li><li>![Sicherheitscenter-SQLServer](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Affinity I/O Mask (Serverkonfigurationsoption)](../../database-engine/configure-windows/affinity-input-output-mask-server-configuration-option.md)</li><li>![Sicherheitscenter-SQLServer](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Affinity64 Mask (Serverkonfigurationsoption)](../../database-engine/configure-windows/affinity64-mask-server-configuration-option.md)</li><li>![Sicherheitscenter-SQLServer](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [affinity64 I/O mask (Serverkonfigurationsoption)](../../database-engine/configure-windows/affinity64-input-output-mask-server-configuration-option.md)</li><li>![Sicherheitscenter-SQLServer](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Konfigurieren der Serverkonfigurationsoption Maximale Anzahl von Arbeitsthreads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)</li></ul></li><li>**Speicherkonfigurationsoptionen**<br /><br /> <ul><li>![Sicherheitscenter-SQLServer](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Serverkonfigurationsoptionen für den Serverarbeitsspeicher](../../database-engine/configure-windows/server-memory-server-configuration-options.md)</li></ul></li><li>**Indexkonfigurationsoptionen**<br /><br /> <ul><li>![Sicherheitscenter-SQLServer](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Konfigurieren der Serverkonfigurationsoption Füllfaktor](../../database-engine/configure-windows/configure-the-fill-factor-server-configuration-option.md)</li></ul></li><li>**Abfragekonfigurationsoptionen**<br /><br /> <ul><li>![Sicherheitscenter-SQLServer](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Konfigurieren der Serverkonfigurationsoption Min. Arbeitsspeicher pro Abfrage](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)</li><li>![Sicherheitscenter-SQLServer](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Konfigurieren der Serverkonfigurationsoption Kostenbeschränkung der Abfragekontrolle](../../database-engine/configure-windows/configure-the-query-governor-cost-limit-server-configuration-option.md)</li><li>![Sicherheitscenter-SQLServer](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)</li><li>![Sicherheitscenter-SQLServer](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Konfigurieren der Serverkonfigurationsoption Kostenschwellenwert für Parallelität](../../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)</li><li>![Sicherheitscenter-SQLServer](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Für Ad-hoc-Arbeitsauslastungen optimieren (Serverkonfigurationsoption)](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md)</li></ul></li><li>**Sicherungskonfigurationsoptionen**<br /><br /> <ul><li>![Sicherheitscenter-SQLServer](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Anzeigen oder Konfigurieren der Serverkonfigurationsoption Standardeinstellung für die Sicherungskomprimierung](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)</li></ul></li></ul>|  
 |**Optimisierungsoptionen für die Datenbankkonfiguration**|![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md)<br />![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [Anzeigen oder Ändern des Kompatibilitätsgrads einer Datenbank](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)<br />![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|  
 |**Tabellenkonfigurationsoptimierung**|![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Partitionierte Tabellen und Indizes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)|  
-|**Leistung des Datenbankmoduls auf einem virtuellen Azure-Computer**|![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Kurze Checkliste](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-performance-best-practices/)<br />![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Überlegungen zur Größe von virtuellen Computern und zu Speicherkonten](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-sql-server-performance-best-practices/)<br />![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Überlegungen zu Datenträgern und zur Leistung](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-performance-best-practices/)<br />![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Überlegungen zur E/A-Leistung](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-sql-server-performance-best-practices/)<br />![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Überlegungen zur funktionsspezifischen Leistung](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-performance-best-practices/)|  
+|
+  **Leistung der Datenbank-Engine auf einem virtuellen Azure-Computer**|![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Kurze Checkliste](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-performance-best-practices/)<br />![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Überlegungen zur Größe von virtuellen Computern und zu Speicherkonten](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-sql-server-performance-best-practices/)<br />![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Überlegungen zu Datenträgern und zur Leistung](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-performance-best-practices/)<br />![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Überlegungen zur E/A-Leistung](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-sql-server-performance-best-practices/)<br />![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [Überlegungen zur funktionsspezifischen Leistung](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-performance-best-practices/)|  
   
 ## <a name="query-performance-options"></a>Abfrageleistungsoptionen  
   

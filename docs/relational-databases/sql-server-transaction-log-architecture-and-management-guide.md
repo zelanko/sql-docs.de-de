@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 01/05/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: relational-databases-misc
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transaction log architecture guide
 - guide, transaction log architecture
@@ -27,13 +26,12 @@ caps.latest.revision: 3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e6d9a9107e0ddb997492bec813938120e0fd6bf1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 23119e2fafd68797b15a9baf525d52906f311178
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Handbuch zur Architektur und Verwaltung von Transaktionsprotokollen in SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -206,17 +204,17 @@ Prüfpunkte treten in den folgenden Situationen auf:
 
 ### <a name="automatic-checkpoints"></a>Automatische Prüfpunkte
 
-Das SQL Server-Datenbankmodul generiert automatische Prüfpunkte. Das Intervall zwischen automatischen Prüfpunkten wird anhand des belegten Speicherplatzes des Protokolls und der seit dem letzten Prüfpunkt verstrichenen Zeitspanne festgelegt. Werden nur wenige Änderungen in der Datenbank vorgenommen, kann das Zeitintervall zwischen den automatischen Prüfpunkten sehr unterschiedlich bzw. lang sein. Wenn eine Vielzahl von Daten geändert werden, können automatische Prüfpunkte ebenfalls häufig auftreten.
+Die SQL Server-Datenbank-Engine generiert automatische Prüfpunkte. Das Intervall zwischen automatischen Prüfpunkten wird anhand des belegten Speicherplatzes des Protokolls und der seit dem letzten Prüfpunkt verstrichenen Zeitspanne festgelegt. Werden nur wenige Änderungen in der Datenbank vorgenommen, kann das Zeitintervall zwischen den automatischen Prüfpunkten sehr unterschiedlich bzw. lang sein. Wenn eine Vielzahl von Daten geändert werden, können automatische Prüfpunkte ebenfalls häufig auftreten.
 
-Verwenden Sie die Serverkonfigurationsoption **Wiederherstellungsintervall** , um das Intervall zwischen den automatischen Prüfpunkten aller Datenbanken in einer Serverinstanz zu berechnen. Durch diese Option wird angegeben, wie viel Zeit das Datenbankmodul höchstens benötigen sollte, um eine Datenbank während des Systemstarts wiederherzustellen. Das Datenbankmodul schätzt, wie viele Protokolldatensätze während einer Datenbankwiederherstellung in dem **Wiederherstellungsintervall** verarbeitet werden können. 
+Verwenden Sie die Serverkonfigurationsoption **Wiederherstellungsintervall** , um das Intervall zwischen den automatischen Prüfpunkten aller Datenbanken in einer Serverinstanz zu berechnen. Durch diese Option wird angegeben, wie viel Zeit die Datenbank-Engine höchstens benötigen sollte, um eine Datenbank während des Systemstarts wiederherzustellen. Die Datenbank-Engine schätzt, wie viele Protokolldatensätze während einer Datenbankwiederherstellung in dem **Wiederherstellungsintervall** verarbeitet werden können. 
 
 Das Intervall zwischen automatischen Prüfpunkten hängt außerdem vom Wiederherstellungsmodell ab:
 
-* Wenn die Datenbank entweder das vollständige oder das massenprotokollierte Wiederherstellungsmodell verwendet, wird ein automatischer Prüfpunkt generiert, sobald die Anzahl der Protokolldatensätze die Anzahl an Einträgen erreicht, die laut dem Datenbankmodul in dem Zeitraum verarbeitet werden können, der in der Option „Wiederherstellungsintervall“ angegeben ist.
+* Wenn die Datenbank entweder das vollständige oder das massenprotokollierte Wiederherstellungsmodell verwendet, wird ein automatischer Prüfpunkt generiert, sobald die Anzahl der Protokolldatensätze die Anzahl an Einträgen erreicht, die laut der Datenbank-Engine in dem Zeitraum verarbeitet werden können, der in der Option „Wiederherstellungsintervall“ angegeben ist.
 * Wenn die Datenbank das einfache Wiederherstellungsmodell verwendet, wird ein automatischer Prüfpunkt erzeugt, sobald die Anzahl der Protokolldatensätze dem jeweils kleineren der beiden folgenden Werte entspricht: 
 
     * Das Protokoll ist zu 70 % gefüllt.
-    * Die Anzahl der tatsächlichen Protokolldatensätze erreicht die vom Datenbankmodul geschätzte Anzahl an Einträgen, die in dem Zeitraum verarbeitet werden können, der in der Option „Wiederherstellungsintervall“ angegeben ist.
+    * Die Anzahl der tatsächlichen Protokolldatensätze erreicht die von der Datenbank-Engine geschätzte Anzahl an Einträgen, die in dem Zeitraum verarbeitet werden können, der in der Option „Wiederherstellungsintervall“ angegeben ist.
 
 Informationen zum Festlegen des Wiederherstellungsintervalls finden Sie unter [Konfigurieren der Serverkonfigurationsoption „Wiederherstellungsintervall“](../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).
 
@@ -239,7 +237,7 @@ LSN 148 ist der letzte Eintrag im Transaktionsprotokoll. Zum Zeitpunkt der Verar
 
 ### <a name="long-running-transactions"></a>Lang andauernde Transaktionen
 
-Das aktive Protokoll muss jeden Teil aller Transaktionen umfassen, für die noch kein Commit ausgeführt wurde. Eine Anwendung, die eine Transaktion startet und für diese Transaktion keinen Commit oder Rollback ausführt, verhindert, dass das Datenbankmodul die MinLSN heraufsetzt. Dies kann zu zwei Arten von Problemen führen:
+Das aktive Protokoll muss jeden Teil aller Transaktionen umfassen, für die noch kein Commit ausgeführt wurde. Eine Anwendung, die eine Transaktion startet und für diese Transaktion keinen Commit oder Rollback ausführt, verhindert, dass die Datenbank-Engine die MinLSN heraufsetzt. Dies kann zu zwei Arten von Problemen führen:
 
 * Wenn das System heruntergefahren wird, nachdem die Transaktion zahlreiche Änderungen vorgenommen hat, für die kein Commit ausgeführt wurde, kann die Wiederherstellungsphase beim nachfolgenden Neustart erheblich länger dauern, als durch die Option **Wiederherstellungsintervall festgelegt** wurde.
 * Das Protokoll kann sehr umfangreich werden, da das Protokoll nicht hinter der MinLSN abgeschnitten werden kann. Dies tritt auch dann auf, wenn die Datenbank das einfache Wiederherstellungsmodell verwendet, bei dem das Transaktionsprotokoll in der Regel bei jedem automatischen Prüfpunkt abgeschnitten wird.

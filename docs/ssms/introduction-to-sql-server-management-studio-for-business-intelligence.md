@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssms
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio for Integration Services
 - SQL Server Management Studio for Reporting Services
@@ -21,12 +19,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: aff53fdbf39ab41ec73c1b97330c11c61988b9c1
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 823a2ed8a1a4c81587d71d1646e19312c0afea8f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-sql-server-management-studio-for-business-intelligence"></a>Einführung in SQL Server Management Studio für Business Intelligence
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +45,7 @@ Weitere Informationen zur Verwendung von [!INCLUDE[ssManStudioFull](../includes/
 ## <a name="managing-reporting-services-projects-using-sql-server-management-studio"></a>Verwalten von Reporting Services-Projekten mit SQL Server Management Studio  
 Verwenden Sie SQL Server Management Studio zum Aktivieren von Reporting Services-Funktionen und zum Verwalten von Server und Datenbanken sowie von Rollen und Aufträgen.  
   
-Verwalten Sie freigegebene Zeitpläne mit dem Ordner Freigegebene Zeitpläne, und verwalten Sie Berichtsserver-Datenbanken (ReportServer, ReportServerTempdb). Sie können darüber hinaus eine RSExecRole-Rolle in der master-Systemdatenbank erstellen, wenn Sie eine Berichtsserver-Datenbank in ein neues oder anderes SQL Server-Datenbankmodul ([!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)]) verschieben. Weitere Informationen zu diesen Aufgaben finden Sie unter den folgenden Themen:  
+Verwalten Sie freigegebene Zeitpläne mit dem Ordner Freigegebene Zeitpläne, und verwalten Sie Berichtsserver-Datenbanken (ReportServer, ReportServerTempdb). Sie können darüber hinaus eine RSExecRole-Rolle in der master-Systemdatenbank erstellen, wenn Sie eine Berichtsserver-Datenbank in eine neue oder andere SQL Server-Datenbank-Engine ([!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)][!INCLUDE[ssDE](../includes/ssde_md.md)]) verschieben. Weitere Informationen zu diesen Aufgaben finden Sie unter den folgenden Themen:  
   
 -   [Management Studio (Themen zur Vorgehensweisen)](http://msdn.microsoft.com/en-us/60685458-9108-47bf-820a-5e7db454d408)  
   

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssms-registration
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying registered server or server group names
 - server groups [SQL Server]
@@ -23,12 +22,11 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: f4fb580232155e78f039c2b511c4f9549dd55547
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: d9a1455eadba4fe4d8ec2072df8f5f5fc11f29ef
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="change-the-name-of-registered-server-or-registered-server-group"></a>Ändern des Namens eines registrierten Servers oder einer Servergruppe
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +36,7 @@ ms.lasthandoff: 04/26/2018
 Navigieren Sie über das Menü zu **Ansicht\\Registrierte Server**, um den Bereich **Registrierte Server** zu öffnen.  
 #### <a name="to-change-the-name-of-a-server"></a>So ändern Sie den Namen eines Servers  
   
-1.  Erweitern Sie in **Registrierte Server**die Option **Datenbankmodul** und anschließend **Lokale Servergruppen**.  
+1.  Erweitern Sie in **Registrierte Server**die Option **Datenbank-Engine** und anschließend **Lokale Servergruppen**.  
 
 2.  Klicken Sie mit der rechten Maustaste zum Auswählen auf **Eigenschaften** , um das Dialogfeld **Serverregistrierungseigenschaften bearbeiten** zu öffnen.
   
@@ -46,7 +44,7 @@ Navigieren Sie über das Menü zu **Ansicht\\Registrierte Server**, um den Berei
   
 #### <a name="to-change-the-name-of-a-server-group"></a>So ändern Sie den Namen einer Servergruppe  
   
-1.  Erweitern Sie in **Registrierte Server**die Option **Datenbankmodul** und anschließend **Lokale Servergruppen**.  
+1.  Erweitern Sie in **Registrierte Server**die Option **Datenbank-Engine** und anschließend **Lokale Servergruppen**.  
 
 2.  Klicken Sie mit der rechten Maustaste auf eine Servergruppe, und wählen Sie **Eigenschaften** aus, um das Dialogfeld **Servergruppeneigenschaften bearbeiten** zu öffnen. 
   

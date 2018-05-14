@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reducing attackable surface area
 - upgrading SQL Server, security
@@ -24,12 +23,11 @@ caps.latest.revision: 79
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 399484dfea5e83f8204a48c2da80c7e6db81c09f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3adc1c1bdc8faf8f0f03c6fc78eb51352c05066a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="surface-area-configuration"></a>Oberflächenkonfiguration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,13 +71,14 @@ ms.lasthandoff: 04/16/2018
  Verwenden Sie die Eigenschaftseinstellungen in **, um die** EnableIntegrated Security [!INCLUDE[ssRS](../../includes/ssrs-md.md)]-Eigenschaft von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]zu ändern. Bearbeiten Sie die Konfigurationsdatei **RSReportServer.config** , um die Eigenschaften **Geplante Ereignisse und Berichtsübermittlung** und **Webdienst und HTTP-Zugriff** zu ändern.  
   
 ## <a name="command-prompt-options"></a>Befehlszeilenoptionen  
- Mit dem PowerShell-Cmdlet **Invoke-PolicyEvaluation** von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Sie Oberflächenkonfigurations-Richtlinien aufrufen. Weitere Informationen finden Sie unter [Verwenden der Datenbankmodul-Cmdlets](../../relational-databases/scripting/use-the-database-engine-cmdlets.md).  
+ Mit dem PowerShell-Cmdlet **Invoke-PolicyEvaluation** von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Sie Oberflächenkonfigurations-Richtlinien aufrufen. Weitere Informationen finden Sie unter [Verwenden der Datenbank-Engine-Cmdlets](../../relational-databases/scripting/use-the-database-engine-cmdlets.md).  
   
 ## <a name="soap-and-service-broker-endpoints"></a>SOAP- und Service Broker-Endpunkte  
  Mithilfe der richtlinienbasierte Verwaltung können Sie Endpunkte ausschalten. Verwenden Sie zum Erstellen und Ändern der Eigenschaften von Endpunkten [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md) und [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- [Sicherheitscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ 
+  [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   

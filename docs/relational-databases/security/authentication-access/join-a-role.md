@@ -1,36 +1,36 @@
 ---
-title: "Verknüpfen einer Rolle | Microsoft-Dokumentation"
-ms.custom: 
+title: Verknüpfen einer Rolle | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 07/14/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - SQL13.SWB.DATABASEUSER.MEMBERSHIP.F1
 helpviewer_keywords:
 - adding a member to a role
 - join a role
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 12899d16a1055b4b6a63cb880df1829fc61b4c6e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c7e223fe95d2e541ead02b819ede070a0ed554de
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="join-a-role"></a>Verknüpfen einer Rolle
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In diesem Thema wird beschrieben, wie Rollen in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)] Anmeldenamen und Datenbankbenutzern zugewiesen werden. Für die effiziente Verwaltung von Berechtigungen in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwenden Sie Rollen. Weisen Sie Rollen Berechtigungen zu, und fügen Sie den Rollen dann Benutzer und Anmeldenamen hinzu, oder entfernen Sie solche. Bei Verwendung von Rollen müssen Berechtigungen nicht für jeden Benutzer einzeln verwaltet werden.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  In diesem Thema wird beschrieben, wie Rollen in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]Anmeldenamen und Datenbankbenutzern zugewiesen werden. Für die effiziente Verwaltung von Berechtigungen in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwenden Sie Rollen. Weisen Sie Rollen Berechtigungen zu, und fügen Sie den Rollen dann Benutzer und Anmeldenamen hinzu, oder entfernen Sie solche. Bei Verwendung von Rollen müssen Berechtigungen nicht für jeden Benutzer einzeln verwaltet werden.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt vier Typen von Rollen.  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Zuweisen von Rollen zu Anmeldenamen und Datenbankbenutzern mit:**  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/21/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/21/2017
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die **ALTER ANY ROLE** -Berechtigung für die Datenbank, die **ALTER** -Berechtigung für die Rolle oder die Mitgliedschaft in **db_securityadmin**.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-add-a-member-to-a-fixed-server-role"></a>So fügen Sie einer festen Serverrolle ein Mitglied hinzu  
   
@@ -85,7 +85,7 @@ ms.lasthandoff: 11/21/2017
   
 5.  Klicken Sie im Dialogfeld **Serverrolleneigenschaften –***server_role_name* auf der Seite **Mitglieder** auf **Hinzufügen**.  
   
-6.  Geben Sie im Dialogfeld **Serveranmeldenamen oder -rolle auswählen** unter **Geben Sie die Namen der auszuwählenden Objekte ein (Beispiele)**den Anmeldenamen oder die Serverrolle ein, den bzw. die Sie dieser Serverrolle hinzufügen möchten. Alternativ können Sie auf **Durchsuchen** klicken und verfügbare Objekte im Dialogfeld **Nach Objekten suchen** auswählen. Klicken Sie auf **OK** , um zum Dialogfeld **Serverrolleneigenschaften –***server_role_name* zurückzukehren.  
+6.  Geben Sie im Dialogfeld **Serveranmeldenamen oder -rolle auswählen** unter **Geben Sie die Namen der auszuwählenden Objekte ein (Beispiele)** den Anmeldenamen oder die Serverrolle ein, den bzw. die Sie dieser Serverrolle hinzufügen möchten. Alternativ können Sie auf **Durchsuchen** klicken und verfügbare Objekte im Dialogfeld **Nach Objekten suchen** auswählen. Klicken Sie auf **OK**, um zum Dialogfeld **Serverrolleneigenschaften –***server_role_name* zurückzukehren.  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -107,7 +107,7 @@ ms.lasthandoff: 11/21/2017
   
 8.  Klicken Sie im Dialogfeld **Eigenschaften der Datenbankrolle –***database_role_name* auf der Seite **Allgemein** auf **Hinzufügen**.  
   
-9. Geben Sie im Dialogfeld **Datenbankbenutzer oder -rolle auswählen** unter **Geben Sie die Namen der auszuwählenden Objekte ein (Beispiele)**den Anmeldenamen oder die Datenbankrolle ein, den bzw. die Sie dieser Datenbankrolle hinzufügen möchten. Alternativ können Sie auf **Durchsuchen** klicken und verfügbare Objekte im Dialogfeld **Nach Objekten suchen** auswählen. Klicken Sie auf **OK** , um zum Dialogfeld **Eigenschaften der Datenbankrolle –***database_role_name* zurückzukehren.  
+9. Geben Sie im Dialogfeld **Datenbankbenutzer oder -rolle auswählen** unter **Geben Sie die Namen der auszuwählenden Objekte ein (Beispiele)** den Anmeldenamen oder die Datenbankrolle ein, den bzw. die Sie dieser Datenbankrolle hinzufügen möchten. Alternativ können Sie auf **Durchsuchen** klicken und verfügbare Objekte im Dialogfeld **Nach Objekten suchen** auswählen. Klicken Sie auf **OK**, um zum Dialogfeld **Eigenschaften der Datenbankrolle –***database_role_name* zurückzukehren.  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -115,7 +115,7 @@ ms.lasthandoff: 11/21/2017
   
 #### <a name="to-add-a-member-to-a-fixed-server-role"></a>So fügen Sie einer festen Serverrolle ein Mitglied hinzu  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -143,7 +143,7 @@ ms.lasthandoff: 11/21/2017
   
  Weitere Informationen finden Sie unter [sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Rollen auf Serverebene](../../../relational-databases/security/authentication-access/server-level-roles.md)   
  [Rollen auf Datenbankebene](../../../relational-databases/security/authentication-access/database-level-roles.md)   
  [Anwendungsrollen](../../../relational-databases/security/authentication-access/application-roles.md)  

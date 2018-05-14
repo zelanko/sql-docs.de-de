@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 08/25/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
 caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d68ef38d362b9910d1f28b1c4caa82f1c4571aa3
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 6d2e99003a6b4805590bdf88b5b942b3f5432388
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>Dateispeicherorte für Standard- und benannte Instanzen von SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -121,7 +120,8 @@ ms.lasthandoff: 04/26/2018
 |Clientkomponenten (außer bcp.exe und sqlcmd.exe)|\<Installationsverzeichnis>\140\Tools\\ <sup>1</sup> |Konfigurierbar |  
 |Clientkomponenten (bcp.exe und sqlcmd.exe)|\<Installationsverzeichnis>\Client SDK\ODBC\110\Tools\Binn|Fester Pfad|  
 |Replikations- und serverbasierte COM-Objekte|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\\ <sup>2</sup> |Fester Pfad|  
-|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Von Integration Services bereitgestellte DLLs für das Data Transformation Runtime-Modul, das Data Transformation Pipeline-Modul und das **dtexec** -Eingabeaufforderungshilfsprogramm|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|Fester Pfad|  
+|
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Von Integration Services bereitgestellte DLLs für die Data Transformation Runtime-Engine, die Data Transformation Pipeline-Engine und das **dtexec** -Eingabeaufforderungshilfsprogramm|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|Fester Pfad|  
 |DLLs, die die Verbindungsunterstützung für Integration Services verwalten [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Verbindungen|Fester Pfad|  
 |DLLs für alle Arten von Enumeratoren, die von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterstützt werden|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\ForEach-Enumeratoren|Fester Pfad|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser-Dienst, WMI-Anbieter|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Shared\ |Fester Pfad|  
@@ -149,7 +149,8 @@ Beachten Sie, dass das Standardlaufwerk für Dateispeicherorte *systemdrive*laut
 >  Datendateien werden erwartungsgemäß immer in einem untergeordneten Verzeichnis mit dem Namen Data gesucht. Geben Sie beispielsweise beim Upgrade „C:\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]MSSQL14.\<Instanzname>\“ als Stammpfad zum Datenverzeichnis der Systemdatenbanken an, wenn sich die Datendateien unter „C:\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]MSSQL14.\<Instanzname>\MSSQL\Data“ befinden.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Konfiguration des Datenbankmodells - Datenverzeichnisse](http://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487)   
+ 
+  [Konfiguration der Datenbank-Engine – Datenverzeichnisse](http://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487)   
  [Konfigurationseigenschaften von Analysis Services – Datenverzeichnisse](http://msdn.microsoft.com/library/ef732855-b7af-4f40-a619-5573c1c354bb)  
   
   

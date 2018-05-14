@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 11/04/2015
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Always Encrypted, bulk import
 ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
@@ -19,13 +18,12 @@ caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f3e3e9a41fca762ae1303be0f451cbdc4e33e6c2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d0a119b5c88775b4a4f70f31c139c6fb809ab200
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="migrate-sensitive-data-protected-by-always-encrypted"></a>Migrieren von durch Always Encrypted geschützten sensiblen Daten
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -80,6 +78,7 @@ Verwenden Sie diese Option nicht zum Entwickeln neuer Anwendungen. Verwenden Sie
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)   
 [ALTER USER &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-user-transact-sql.md)   
-[Always Encrypted &#40;Datenbankmodul&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+
+  [Always Encrypted &amp;#40;Datenbank-Engine&amp;#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
 [Always Encrypted-Assistent](../../../relational-databases/security/encryption/always-encrypted-wizard.md)   
 [Always Encrypted &#40;Cliententwicklung&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  

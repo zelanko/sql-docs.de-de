@@ -3,15 +3,12 @@ title: Failoverrichtlinie für Failoverclusterinstanzen | Microsoft-Dokumentatio
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: failover-clusters
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - flexible failover policy
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
@@ -19,12 +16,11 @@ caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 38de2e18f27eb4ca6f8435414ce69aeae13524ef
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: a4b63755975f79e5dc601b952cc09eb5ab144116
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Failoverrichtlinie für Failoverclusterinstanzen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +59,7 @@ ms.lasthandoff: 04/26/2018
  Der WSFC-Dienst überwacht den Startstatus des SQL Server-Diensts auf dem aktiven FCI-Knoten, um die Beendigung des SQL Server-Diensts zu erkennen.  
   
 ####  <a name="instance"></a> Reaktionsfähigkeit der SQL Server-Instanz  
- Während des Starts von SQL Server verwendet der WSFC-Dienst die Ressourcen-DLL des SQL Server-Datenbankmoduls, um eine neue Verbindung auf einem separaten Thread zu erstellen, die ausschließlich zum Überwachen des Integritätsstatus verwendet wird. Dadurch wird sichergestellt, dass die SQL-Instanz auch unter höherer Auslastung über die erforderlichen Ressourcen zum Übermitteln ihres Integritätsstatus verfügt. Unter Verwendung dieser dedizierten Verbindung führt SQL Server die gespeicherte Systemprozedur [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) im Wiederholungsmodus aus, um regelmäßig den Integritätsstatus der SQL Server-Komponenten an die Ressourcen-DLL zu übermitteln.  
+ Während des Starts von SQL Server verwendet der WSFC-Dienst die Ressourcen-DLL der SQL Server-Datenbank-Engine, um eine neue Verbindung auf einem separaten Thread zu erstellen, die ausschließlich zum Überwachen des Integritätsstatus verwendet wird. Dadurch wird sichergestellt, dass die SQL-Instanz auch unter höherer Auslastung über die erforderlichen Ressourcen zum Übermitteln ihres Integritätsstatus verfügt. Unter Verwendung dieser dedizierten Verbindung führt SQL Server die gespeicherte Systemprozedur [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) im Wiederholungsmodus aus, um regelmäßig den Integritätsstatus der SQL Server-Komponenten an die Ressourcen-DLL zu übermitteln.  
   
  Die Ressourcen-DLL bestimmt die Reaktionsfähigkeit der SQL-Instanz mithilfe eines Timeouts für die Zustandsüberprüfung. Die HealthCheckTimeout-Eigenschaft definiert, wie lange die Ressourcen-DLL auf eine Antwort von der gespeicherten Prozedur sp_server_diagnostics wartet, bevor der WSFC-Dienst die Meldung erhält, dass die SQL-Instanz nicht reagiert. Diese Eigenschaft kann sowohl mit T-SQL als auch im Failovercluster-Manager-Snap-In konfiguriert werden. Weitere Informationen finden Sie unter [Configure HealthCheckTimeout Property Settings](../../../sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings.md). Nachfolgend wird beschrieben, wie sich diese Eigenschaft auf die Einstellungen bezüglich Timeout und Wiederholungsintervall auswirken:  
   
@@ -94,7 +90,7 @@ ms.lasthandoff: 04/26/2018
 >  Die gespeicherte Prozedur sp_server_diagnostic wird von der SQL Server Always On-Technologie genutzt und kann in jeder SQL Server-Instanz zur einfacheren Problemerkennung und -behandlung verwendet werden.  
   
 ####  <a name="determine"></a> Bestimmen von Fehlern  
- Die Ressourcen-DLL des SQL Server-Datenbankmoduls bestimmt anhand der FailureConditionLevel-Eigenschaft, ob der erkannte Integritätsstatus eine Fehlerbedingung darstellt. Durch die FailureConditionLevel-Eigenschaft wird definiert, welcher erkannte Integritätsstatus zu einem Neustart oder Failover führt. Die unterschiedlichsten Optionen sind verfügbar: So kann beispielsweise nie ein automatischer Neustart oder ein automatisches Failover ausgelöst werden, oder bei jeder möglichen Fehlerbedingung wird immer ein automatischer Neustart bzw. ein automatisches Failover ausgeführt. Weitere Informationen zum Konfigurieren dieser Eigenschaft finden Sie unter [Configure FailureConditionLevel Property Settings](../../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).  
+ Die Ressourcen-DLL der SQL Server-Datenbank-Engine bestimmt anhand der FailureConditionLevel-Eigenschaft, ob der erkannte Integritätsstatus eine Fehlerbedingung darstellt. Durch die FailureConditionLevel-Eigenschaft wird definiert, welcher erkannte Integritätsstatus zu einem Neustart oder Failover führt. Die unterschiedlichsten Optionen sind verfügbar: So kann beispielsweise nie ein automatischer Neustart oder ein automatisches Failover ausgelöst werden, oder bei jeder möglichen Fehlerbedingung wird immer ein automatischer Neustart bzw. ein automatisches Failover ausgeführt. Weitere Informationen zum Konfigurieren dieser Eigenschaft finden Sie unter [Configure FailureConditionLevel Property Settings](../../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).  
   
  Die Fehlerbedingungen werden auf einer ansteigenden Skala festgelegt. Auf der Ebene 1-5 enthält jede Ebene die Bedingungen der vorherigen Ebenen sowie die eigenen Bedingungen. Dies bedeutet, dass die Wahrscheinlichkeit eines Failovers oder Neustarts mit jeder Ebene zunimmt. Die Fehlerbedingungsebenen werden in der folgenden Tabelle beschrieben.  
   

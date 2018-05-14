@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 04/17/2018
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssms
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 641bb062bc450f83a79ae3a5fa8d9f0d6dcfde94
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 8b53c720b6f08583dc94fd45c270ee07bff399a6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio – Änderungsprotokoll (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -398,7 +395,7 @@ Allgemein verfügbar | Buildnummer: 14.0.17177.0
 - Aktivierter Sicht-Designer für Azure SQL-Datenbanken
 - Die Standardoptionen für die Skripterstellung für Skripterstellungsobjekte aus dem Objekt-Explorer in SSMS haben sich geändert:
   - Zuvor war das generierte Skript bei einer neuen Installation standardmäßig auf die neueste Version von SQL Server (aktuell SQL Server 2017) ausgerichtet.
-  - Mit SSMS 17.2 wurde eine neue Option hinzugefügt: *Skripteinstellungen mit Quelle abgleichen*. Mit der Einstellung *TRUE* ist das generierte Skript auf dieselbe Version, denselben Modultyp und dieselbe Moduledition wie die des Servers, von dem aus das Skript für das Objekt erstellt wird, ausgerichtet.
+  - Mit SSMS 17.2 wurde eine neue Option hinzugefügt: *Skripteinstellungen mit Quelle abgleichen*. Mit der Einstellung *TRUE* ist das generierte Skript auf dieselbe Version, denselben Engine-Typ und dieselbe Engine-Edition wie die des Servers, von dem aus das Skript für das Objekt erstellt wird, ausgerichtet.
   - Der Wert für *Skripteinstellungen mit Quelle abgleichen* ist standardmäßig auf *TRUE* festgelegt. Neue Installationen von SSMS verfügen somit automatisch über die Standardeinstellung, dass die Skripte von Objekten an dasselbe Ziel wie das des Originalservers gerichtet werden.
   - Wenn der Wert für *Skripteinstellungen mit Quelle abgleichen* auf *FALSE* festgelegt ist, werden die normalen Zieloptionen für die Skripterstellung aktiviert und funktionieren wie bisher.
     - Zusätzlich wurden alle Skripterstellungsoptionen in ihren eigenen Abschnitt verschoben: *Versionsoptionen*. Sie befinden sich nicht länger unter*Allgemeine Skriptoptionen*.
@@ -657,7 +654,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - „Task-Skript generieren“ generiert keine Skripts für „Datenbank erstellen“ in der Azure SQL-Datenbank.
 - Die Bildlaufleiste im Sicht-Designer scheint deaktiviert zu sein.
 - AVK-Schlüsselpfade „Always Encrypted“ enthalten keine Versions-IDs.
-- Verminderte Anzahl der Modul-Editionsabfragen im Abfragefenster. [Microsoft Connect-Artikel](http://connect.microsoft.com/SQLServer/feedback/details/3113387)
+- Verminderte Anzahl der Engine-Editionsabfragen im Abfragefenster. [Microsoft Connect-Artikel](http://connect.microsoft.com/SQLServer/feedback/details/3113387)
 - Fehler bei „Always Encrypted“ durch das Aktualisieren von Modulen nach der Verschlüsselung werden falsch verarbeitet.
 - Verändertes Standardverbindungstimeout für OLTP und OLAP zwischen 15 und 30 Sekunden, um eine Klasse ignorierter Verbindungsfehler zu korrigieren. 
 - Der Absturz von SSMS nach dem Starten eines benutzerdefinierten Berichts wurde behoben. [Microsoft Connect-Artikel](http://connect.microsoft.com/SQLServer/feedback/details/3118856)

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - overhead [Database Engine Tuning Advisor]
 - tuning overhead [SQL Server]
@@ -26,12 +25,11 @@ caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1dea281ca7666a1d2b680a3d264f136785ebb3a5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 92cec8ebef07f3d058f9eca8b28b242d0568ef42
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="considerations-for-using-test-servers"></a>Gesichtspunkte bei der Verwendung von Testservern
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +60,7 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="issues-related-to-the-shell-database"></a>Aspekte im Zusammenhang mit der Shelldatenbank  
   
--   Nach der Optimierung entfernt der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber alle Metadaten, die er während der Optimierung auf dem Testserver erstellt hat. Dazu gehört auch die Shelldatenbank. Wenn Sie eine Reihe von Optimierungssitzungen mit demselben Produktions- und demselben Testserver ausführen, ist es sinnvoll, die Shelldatenbank beizubehalten, um Zeit zu sparen. Geben Sie dazu in der XML-Eingabedatei das untergeordnete **RetainShellDB** -Element zusammen mit den anderen untergeordneten Elementen des übergeordneten **TuningOptions** -Elements an. Mit diesen Optionen wird der [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Optimierungsratgeber veranlasst, die Shelldatenbank beizubehalten. Weitere Informationen finden Sie unter [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
+-   Nach der Optimierung entfernt der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber alle Metadaten, die er während der Optimierung auf dem Testserver erstellt hat. Dazu gehört auch die Shelldatenbank. Wenn Sie eine Reihe von Optimierungssitzungen mit demselben Produktions- und demselben Testserver ausführen, ist es sinnvoll, die Shelldatenbank beizubehalten, um Zeit zu sparen. Geben Sie dazu in der XML-Eingabedatei das untergeordnete **RetainShellDB** -Element zusammen mit den anderen untergeordneten Elementen des übergeordneten **TuningOptions** -Elements an. Mit diesen Optionen wird der [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Optimierungsratgeber veranlasst, die Shelldatenbank beizubehalten. Weitere Informationen finden Sie unter [XML-Eingabedateireferenz &amp;#40;Datenbankoptimierungsratgeber&amp;#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
 -   Nach einer erfolgreichen Optimierungssitzung für einen Testserver/Produktionsserver können Shelldatenbanken auf dem Testserver verbleiben, selbst wenn Sie das Unterelement **RetainShellDB** nicht angegeben haben. Diese unerwünschten Shelldatenbanken können nachfolgende Optimierungssitzungen beeinträchtigen und sollten gelöscht werden, bevor Sie eine weitere Optimierungssitzung für einen Testserver/Produktionsserver ausführen. Wenn darüber hinaus eine Optimierungssitzung unerwartet beendet wird, verbleiben die Shelldatenbanken auf dem Testserver und die Objekte innerhalb dieser Datenbanken möglicherweise auf dem Testserver. Sie sollten auch diese Datenbanken und Objekte löschen, bevor Sie eine neue Optimierungssitzung für den Testserver/Produktionsserver starten.  
   

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 10/31/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.service: ''
 ms.component: sql-non-specified
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-query-tuning
+ms.technology: performance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 caps.latest.revision: 40
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: f78dda74c079f5c6d1df2b8f407973cb744c85a3
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 954ab1ff985054fa0aebaa3aba0711cacd5b4a35
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorials-for-sql-server"></a>Tutorials für SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +35,8 @@ ms.lasthandoff: 04/26/2018
 |Technologie|Description|  
 |--------------|---------------|  
 |[Analysis Services-Tutorials &#40;SSAS&#41;](../analysis-services/analysis-services-tutorials-ssas.md)|Hier erfahren Sie, wie tabellarische oder mehrdimensionale [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Modelle entwickelt und bereitgestellt werden. Darüber hinaus wird erläutert, wie Sie die in den Modellen enthaltenen Daten mithilfe von Tools wie PowerPivot analysieren.|  
-|[Lernprogramme zum Datenbankmodul](../relational-databases/database-engine-tutorials.md)|Hier erfahren Sie, wie Sie eine Verbindung mit einer Datenbankmodulinstanz herstellen und dann Transact-SQL-Anweisungen erstellen und ausführen.|  
+|
+  [Lernprogramme zur Datenbank-Engine](../relational-databases/database-engine-tutorials.md)|Hier erfahren Sie, wie Sie eine Verbindung mit einer Datenbank-Engine-Instanz herstellen und dann Transact-SQL-Anweisungen erstellen und ausführen.|  
 |[Enterprise Information Management-Lernprogramme](http://msdn.microsoft.com/library/8745dc80-193d-4de0-9f17-ba648ab1e81c)|Hier erfahren Sie, wie Informationen in einem Unternehmen mit EIM-Technologien von Microsoft verwaltet werden.|  
 |[Integration Services-Lernprogramme](../integration-services/integration-services-tutorials.md)|Hier erfahren Sie, wie [!INCLUDE[ssIS](../includes/ssis-md.md)] -Pakete erstellt und bereitgestellt werden.|  
 |[Lernprogramme zur Replikation](../relational-databases/replication/replication-tutorials.md)|Hier erfahren Sie, wie Sie Replikationstopologien mit [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]einrichten und ausführen.|  

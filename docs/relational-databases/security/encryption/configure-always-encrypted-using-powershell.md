@@ -3,27 +3,23 @@ title: Konfigurieren von Always Encrypted mithilfe von PowerShell | Microsoft-Do
 ms.custom: ''
 ms.date: 05/17/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: security
+ms.prod_service: security, sql-database
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 12f2bde5-e100-41fa-b474-2d2332fc7650
 caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 57b85f77c6ad119495f1738aada84b069288cae5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f5fce37c6ab5bf10a5678397bd60e1f059ccaf02
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>Konfigurieren von Always Encrypted mithilfe von PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -155,7 +151,8 @@ Die folgenden PowerShell-Cmdlets sind für Always Encrypted verfügbar:
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- [Always Encrypted (Datenbankmodul)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- 
+  [„Immer verschlüsselt“ (Datenbank-Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Overview of Key Management for Always Encrypted (Übersicht über die Schlüsselverwaltung für Always Encrypted)](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [Verwenden von Always Encrypted mit .NET Framework-Datenanbieter für SQL Server:](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
 - [Konfigurieren von Always Encrypted mithilfe von SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)

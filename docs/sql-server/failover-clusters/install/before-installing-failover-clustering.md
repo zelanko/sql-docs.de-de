@@ -3,15 +3,13 @@ title: Vor dem Installieren des Failoverclusterings | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: failover-clusters
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], preinstallation checklist
 - installing failover clusters
@@ -21,12 +19,11 @@ caps.latest.revision: 141
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 500d06f16cb1fdab142b37dcec5233614e1a5db3
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 8ff0fa410d3ba7e4c023955c2961a2c7e95ef892
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="before-installing-failover-clustering"></a>Vor dem Installieren des Failoverclusterings
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -123,7 +120,7 @@ ms.lasthandoff: 04/26/2018
   
     -   Nach der Einbindung zusätzlicher Laufwerke wird keine Laufwerkformatierung unterstützt.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstallation wird nur der lokale Datenträger zum Installieren der tempdb-Dateien unterstützt. Stellen Sie sicher, dass der für die tempdb-Daten und die Protokolldateien angegebene Pfad auf allen Clusterknoten gültig ist. Sind die tempdb-Verzeichnisse auf dem Failoverzielknoten während des Failovers nicht verfügbar, wird die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressource nicht online geschaltet. Weitere Informationen finden Sie unter [Speichertypen für Datendateien](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes) und [Konfiguration des Datenbankmoduls – Datenverzeichnisse](http://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstallation wird nur der lokale Datenträger zum Installieren der tempdb-Dateien unterstützt. Stellen Sie sicher, dass der für die tempdb-Daten und die Protokolldateien angegebene Pfad auf allen Clusterknoten gültig ist. Sind die tempdb-Verzeichnisse auf dem Failoverzielknoten während des Failovers nicht verfügbar, wird die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressource nicht online geschaltet. Weitere Informationen finden Sie unter [Speichertypen für Datendateien](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes) und [Konfiguration der Datenbank-Engine – Datenverzeichnisse](http://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487).  
   
 -   Wenn Sie einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster auf Komponenten mit iSCSI-Technologie (Internet Small Computer System Interface) bereitstellen, ist es empfehlenswert, mit entsprechender Vorsicht vorzugehen. Weitere Informationen finden Sie unter [Unterstützung für SQL Server auf iSCSI-Technologiekomponenten](http://go.microsoft.com/fwlink/?LinkId=116960).  
   

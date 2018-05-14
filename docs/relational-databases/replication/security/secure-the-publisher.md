@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logins [SQL Server replication], publication access list
 - publications [SQL Server replication], publication access lists
@@ -24,12 +23,11 @@ caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3f32e12afaffd5092bd45259264f654bfd4c9c3e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9be3105dc5264a655487b650eeda270331d4df63
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="secure-the-publisher"></a>Sichern des Verlegers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +78,8 @@ ms.lasthandoff: 04/16/2018
  Für sämtliche Verleger und Veröffentlichungen (die Abonnements mit verzögerten Updates über eine Warteschlange zulassen), die einem bestimmten Verleger zugeordnet sind, gibt es einen Warteschlangenlese-Agent. Weitere Informationen finden Sie unter [Aktivieren des Aktualisierens von Abonnements für Transaktionsveröffentlichungen](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md).  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Aktivieren von verschlüsselten Verbindungen zum Datenbankmodul &#40;SQL Server-Konfigurations-Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
+ 
+  [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp;#40;SQL Server-Konfigurations-Manager&amp;#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
  [Sicherheit und Schutz &#40;Replikation&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
   

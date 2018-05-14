@@ -4,14 +4,11 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
-ms.component: tables
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
@@ -21,18 +18,17 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 90d149080610093800061aa0107691dee1972330
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7a1058effc6a942bbe75d0f6369860fb4ab73330
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-2-4---reordering-data-in-a-hierarchical-table-using-hierarchical-methods"></a>Lektion 2.4: Neuanordnen von Daten in einer hierarchischen Tabelle mit hierarchischen Methoden
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 Eine Hierarchie neu zu ordnen, ist eine allgemeine Wartungsaufgabe. In dieser Aufgabe werden wir eine UPDATE-Anweisung mit der [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) -Methode verwenden, um zunächst eine einzelne Zeile an eine neue Position in der Hierarchie zu verschieben. Dann verschieben wir eine ganze Teilstruktur an eine neue Position.  
   
-Die `GetReparentedValue` -Methode benötigt zwei Argumente. Das erste Argument beschreibt den Teil der Hierarchie, der geändert werden soll. Möchten Sie zum Beispiel in der Hierarchie **/1/4/2/3/** den Abschnitt **/1/4/** so ändern, dass die Hierarchie zu **/2/1/2/3/**wird, wobei die beiden letzten Knoten (**2/3/**) unverändert bleiben, müssen Sie die zu ändernden Knoten (**/1/4/**) als erstes Argument angeben. Das zweite Argument gibt die neue Hierarchieebene an, in unserem Beispiel **/2/1/**. Die zwei Argumente dürfen nicht die gleichen Ebenennummern enthalten.  
+Die `GetReparentedValue` -Methode benötigt zwei Argumente. Das erste Argument beschreibt den Teil der Hierarchie, der geändert werden soll. Möchten Sie zum Beispiel in der Hierarchie **/1/4/2/3/** den Abschnitt **/1/4/** so ändern, dass die Hierarchie zu **/2/1/2/3/** wird, wobei die beiden letzten Knoten (**2/3/**) unverändert bleiben, müssen Sie die zu ändernden Knoten (**/1/4/**) als erstes Argument angeben. Das zweite Argument gibt die neue Hierarchieebene an, in unserem Beispiel **/2/1/**. Die zwei Argumente dürfen nicht die gleichen Ebenennummern enthalten.  
   
 ### <a name="to-move-a-single-row-to-a-new-location-in-the-hierarchy"></a>So verschieben Sie eine einzelne Zeile an eine neue Position in der Hierarchie  
   
@@ -62,7 +58,7 @@ Die `GetReparentedValue` -Methode benötigt zwei Argumente. Das erste Argument b
     GO  
     ```  
   
-    Wanida ist jetzt dem Knoten **/3/1/**zugeordnet.  
+    Wanida ist jetzt dem Knoten **/3/1/** zugeordnet.  
   
 ### <a name="to-reorganize-a-section-of-a-hierarchy"></a>So reorganisieren Sie einen Abschnitt einer Hierarchie  
   
@@ -73,7 +69,7 @@ Die `GetReparentedValue` -Methode benötigt zwei Argumente. Das erste Argument b
     GO  
     ```  
   
-2.  Jetzt berichtet Kevin Wanida, der Jill berichtet, die ihrerseits David berichtet. Das bedeutet, dass sich Kevin auf Ebene **/3/1/1/**befindet. Um alle Untergebenen von Jill zu einem neuen Manager zu verschieben, aktualisieren wir alle Knoten mit dem Wert **/3/** für **OrgNode** mit einem neuen Wert. Führen Sie den folgenden Code aus, um Wanida so zu aktualisieren, dass sie Sariya unterstellt ist; Kevin hingegen soll weiterhin Wanida unterstellt sein:  
+2.  Jetzt berichtet Kevin Wanida, der Jill berichtet, die ihrerseits David berichtet. Das bedeutet, dass sich Kevin auf Ebene **/3/1/1/** befindet. Um alle Untergebenen von Jill zu einem neuen Manager zu verschieben, aktualisieren wir alle Knoten mit dem Wert **/3/** für **OrgNode** mit einem neuen Wert. Führen Sie den folgenden Code aus, um Wanida so zu aktualisieren, dass sie Sariya unterstellt ist; Kevin hingegen soll weiterhin Wanida unterstellt sein:  
   
     ```  
     DECLARE @OldParent hierarchyid, @NewParent hierarchyid  

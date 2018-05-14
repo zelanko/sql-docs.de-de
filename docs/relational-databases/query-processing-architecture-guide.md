@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 02/16/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: relational-databases-misc
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - guide, query processing architecture
 - query processing architecture guide
@@ -20,12 +19,11 @@ caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1f1e2a721201fbc1e497cdd65daab9ec46ad9c06
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 15fd6269a2e879eba086af8d1d143cc0e0cffc1c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="query-processing-architecture-guide"></a>Handbuch zur Architektur der Abfrageverarbeitung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -113,8 +111,8 @@ Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer ist
 1. Der Parser scannt die `SELECT` -Anweisung und spaltet sie in ihre logischen Einheiten auf, wie z.B. Schlüsselwörter, Ausdrücke, Operatoren und Bezeichner.
 2. Eine Abfragestruktur, manchmal auch Sequenzstruktur genannt, wird erstellt, die die logischen Schritte beschreibt, die für die Transformation der Quelldaten in das für das Resultset benötigte Format erforderlich sind.
 3. Der Abfrageoptimierer analysiert verschiedene Arten des Zugriffs auf die Quelltabellen. Anschließend wählt er die Reihenfolge der Schritte aus, mit denen die Ergebnisse am schnellsten mithilfe möglichst weniger Ressourcen zurückgegeben werden. Die Abfragestruktur wird aktualisiert, um diese genaue Reihenfolge von Schritten aufzuzeichnen. Die endgültige, optimierte Version der Abfragestruktur wird als Ausführungsplan bezeichnet.
-4. Das relationale Modul beginnt mit der Ausführung des Ausführungsplans. Während der Verarbeitung von Schritten, für die Daten aus den Basistabellen erforderlich sind, fordert das relationale Modul an, dass das Speichermodul die Daten aus den Rowsets übergibt, die durch das relationale Modul angefordert wurden.
-5. Das relationale Modul transformiert die Daten, die von dem Speichermodul zurückgegeben werden, in das für das Resultset definierte Format und gibt das Resultset an den Client zurück.
+4. Die relationale Engine beginnt mit der Ausführung des Ausführungsplans. Während der Verarbeitung von Schritten, für die Daten aus den Basistabellen erforderlich sind, fordert die relationale Engine an, dass die Speicher-Engine die Daten aus den Rowsets übergibt, die durch die relationale Engine angefordert wurden.
+5. Die relationale Engine transformiert die Daten, die von der Speicher-Engine zurückgegeben werden, in das für das Resultset definierte Format und gibt das Resultset an den Client zurück.
 
 #### <a name="processing-other-statements"></a>Verarbeiten anderer Anweisungen
 
@@ -124,7 +122,7 @@ Sogar DDL-Anweisungen (Data Definition Language, Datendefinitionssprache), wie z
 
 ### <a name="worktables"></a>Arbeitstabellen
 
-Um eine logische Operation ausführen zu können, die in einer SQL-Anweisung angegeben wurde, muss das relationale Modul ggf. eine Arbeitstabelle erstellen. Arbeitstabellen sind interne Tabellen, die zum Speichern von Zwischenergebnissen verwendet werden. Arbeitstabellen werden für bestimmte `GROUP BY`-, `ORDER BY`- oder `UNION` -Abfragen generiert. Wenn z.B. eine `ORDER BY` -Klausel auf Spalten verweist, die nicht durch Indizes erfasst werden, muss das relationale Modul eventuell eine Arbeitstabelle generieren, um das Resultset in der angeforderten Reihenfolge sortieren zu können. Arbeitstabellen werden mitunter auch als Spool-Speicher verwendet, die vorübergehend das Ergebnis der Ausführung eines Teils eines Abfrageplans aufnehmen. Arbeitstabellen werden in `tempdb` erstellt und automatisch wieder gelöscht, sobald sie nicht mehr benötigt werden.
+Um eine logische Operation ausführen zu können, die in einer SQL-Anweisung angegeben wurde, muss die relationale Engine ggf. eine Arbeitstabelle erstellen. Arbeitstabellen sind interne Tabellen, die zum Speichern von Zwischenergebnissen verwendet werden. Arbeitstabellen werden für bestimmte `GROUP BY`-, `ORDER BY`- oder `UNION` -Abfragen generiert. Wenn z.B. eine `ORDER BY`-Klausel auf Spalten verweist, die nicht durch Indizes erfasst werden, muss die relationale Engine eventuell eine Arbeitstabelle generieren, um das Resultset in der angeforderten Reihenfolge sortieren zu können. Arbeitstabellen werden mitunter auch als Spool-Speicher verwendet, die vorübergehend das Ergebnis der Ausführung eines Teils eines Abfrageplans aufnehmen. Arbeitstabellen werden in `tempdb` erstellt und automatisch wieder gelöscht, sobald sie nicht mehr benötigt werden.
 
 ### <a name="view-resolution"></a>Sichtauflösung
 
@@ -170,7 +168,7 @@ ON e.BusinessEntityID =p.BusinessEntityID
 WHERE OrderDate > '20020531';
 ```
 
-Durch die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio-Showplanfunktion wird deutlich, dass das relationale Modul für beide `SELECT`-Anweisungen denselben Ausführungsplan erstellt.
+Durch die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio-Showplanfunktion wird deutlich, dass die relationale Engine für beide `SELECT`-Anweisungen denselben Ausführungsplan erstellt.
 
 #### <a name="using-hints-with-views"></a>Verwenden von Hinweisen mit Sichten
 
@@ -316,7 +314,7 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 
 ## <a name="stored-procedure-and-trigger-execution"></a>Ausführung von gespeicherten Prozeduren und Triggern
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] speichert nur die Quelle für gespeicherte Prozeduren und Trigger. Wenn eine gespeicherte Prozedur oder ein Trigger das erste Mal ausgeführt wird, wird die Quelle zu einem Ausführungsplan kompiliert. Wenn die gespeicherte Prozedur oder der Trigger erneut ausgeführt wird, bevor der Ausführungsplan aus dem Arbeitsspeicher entfernt wurde, erkennt das relationale Modul den vorhandenen Plan und verwendet ihn erneut. Wenn der Plan aus dem Arbeitsspeicher entfernt wurde, wird ein neuer Plan erstellt. Dieser Vorgang ist mit dem Verfahren vergleichbar, das [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für alle SQL-Anweisungen anwendet. Der wesentliche Leistungsvorteil, den gespeicherte Prozeduren und Trigger in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] im Vergleich zu Batch- oder dynamischem SQL besitzen, besteht darin, dass ihre SQL-Anweisungen immer identisch sind. Aus diesem Grund können sie durch das relationale Modul auf einfache Weise vorhandenen Ausführungsplänen zugeordnet werden. Pläne für gespeicherte Prozeduren und Trigger können einfach erneut verwendet werden.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] speichert nur die Quelle für gespeicherte Prozeduren und Trigger. Wenn eine gespeicherte Prozedur oder ein Trigger das erste Mal ausgeführt wird, wird die Quelle zu einem Ausführungsplan kompiliert. Wenn die gespeicherte Prozedur oder der Trigger erneut ausgeführt wird, bevor der Ausführungsplan aus dem Arbeitsspeicher entfernt wurde, erkennt die relationale Engine den vorhandenen Plan und verwendet ihn erneut. Wenn der Plan aus dem Arbeitsspeicher entfernt wurde, wird ein neuer Plan erstellt. Dieser Vorgang ist mit dem Verfahren vergleichbar, das [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für alle SQL-Anweisungen anwendet. Der wesentliche Leistungsvorteil, den gespeicherte Prozeduren und Trigger in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] im Vergleich zu Batch- oder dynamischem SQL besitzen, besteht darin, dass ihre SQL-Anweisungen immer identisch sind. Aus diesem Grund können sie durch die relationale Engine auf einfache Weise vorhandenen Ausführungsplänen zugeordnet werden. Pläne für gespeicherte Prozeduren und Trigger können einfach erneut verwendet werden.
 
 Der Ausführungsplan für gespeicherte Prozeduren und Trigger wird getrennt von dem Ausführungsplan für den Batch ausgeführt, der die gespeicherte Prozedur aufruft oder den Trigger auslöst. Dadurch können die Ausführungspläne für gespeicherte Prozeduren und Trigger mehrmals erneut verwendet werden.
 
@@ -331,7 +329,7 @@ Der Ausführungsplan für gespeicherte Prozeduren und Trigger wird getrennt von 
 
 ![execution_context](../relational-databases/media/execution-context.gif)
 
-Wenn eine SQL-Anweisung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgeführt wird, durchsucht das relationale Modul zunächst den Plancache, um zu überprüfen, ob ein vorhandener Ausführungsplan für die SQL-Anweisung vorhanden ist. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet sämtliche vorhandenen Pläne, die hierbei gefunden werden, wieder und spart somit den Aufwand für das erneute Kompilieren der SQL-Anweisung ein. Wenn kein Ausführungsplan vorhanden ist, generiert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] einen neuen Ausführungsplan für die Abfrage.
+Wenn eine SQL-Anweisung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgeführt wird, durchsucht die relationale Engine zunächst den Plancache, um zu überprüfen, ob ein vorhandener Ausführungsplan für die SQL-Anweisung vorhanden ist. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet sämtliche vorhandenen Pläne, die hierbei gefunden werden, wieder und spart somit den Aufwand für das erneute Kompilieren der SQL-Anweisung ein. Wenn kein Ausführungsplan vorhanden ist, generiert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] einen neuen Ausführungsplan für die Abfrage.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet einen effizienten Algorithmus, um vorhandene Ausführungspläne für bestimmte SQL-Anweisungen zu suchen. In den meisten Systemen können durch das erneute Verwenden vorhandener Pläne anstelle des erneuten Kompilierens jeder SQL-Anweisung mehr Ressourcen eingespart werden, als für den Scan nach vorhandenen Plänen benötigt werden.
 
@@ -431,7 +429,7 @@ WHERE ProductSubcategoryID = 4;
 
 Die Ausführungspläne für diese Abfragen unterscheiden sich lediglich hinsichtlich des Werts, der für den Vergleich mit der `ProductSubcategoryID` -Spalte gespeichert wird. Das Ziel von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], stets zu erkennen, wenn Anweisungen im Prinzip den gleichen Plan generieren, und diesen Plan dann wiederzuverwenden, kann von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in komplexen SQL-Anweisungen manchmal nicht erfüllt werden.
 
-Wenn Sie Konstanten mithilfe von Parametern von den SQL-Anweisungen trennen, unterstützen Sie das relationale Modul dabei, doppelte Pläne zu erkennen. Es gibt folgende Möglichkeiten, um Parameter zu verwenden: 
+Wenn Sie Konstanten mithilfe von Parametern von den SQL-Anweisungen trennen, unterstützen Sie die relationale Engine dabei, doppelte Pläne zu erkennen. Es gibt folgende Möglichkeiten, um Parameter zu verwenden: 
 
 * Verwenden Sie in Transact-SQL `sp_executesql`: 
 
@@ -479,7 +477,7 @@ Sie kann jedoch nach den Regeln der einfachen Parametrisierung parametrisiert we
 
 ### <a name="SimpleParam"></a> Einfache Parametrisierung
 
-In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird durch das Verwenden von Parametern oder Parametermarkierungen in Transact-SQL-Anweisungen die Fähigkeit des relationalen Moduls verbessert, neue SQL-Anweisungen vorhandenen, zuvor kompilierten Ausführungsplänen zuzuordnen.
+In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird durch das Verwenden von Parametern oder Parametermarkierungen in Transact-SQL-Anweisungen die Fähigkeit der relationalen Engine verbessert, neue SQL-Anweisungen vorhandenen, zuvor kompilierten Ausführungsplänen zuzuordnen.
 
 > [!WARNING] 
 > Es ist sicherer, Parameter oder Parametermarkierungen zu verwenden, die vom Endbenutzer eingegebene Werte enthalten, als die Werte in einer Zeichenfolge zu verketten, die dann mithilfe einer API-Datenzugriffsmethode, einer `EXECUTE` -Anweisung oder einer gespeicherten `sp_executesql` -Prozedur ausgeführt werden.
@@ -493,7 +491,7 @@ SELECT * FROM AdventureWorks2014.Production.Product
 WHERE ProductSubcategoryID = 1;
 ```
 
-Der Wert 1 am Ende der Anweisung kann als Parameter angegeben werden. Das relationale Modul erstellt den Ausführungsplan für diesen Batch so, als ob anstelle des Werts 1 ein Parameter angegeben worden wäre. Aufgrund dieser einfachen Parametrisierung erkennt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], dass die folgenden beiden Anweisungen im Prinzip den gleichen Ausführungsplan generieren, und verwendet den ersten Plan auch für die zweite Anweisung:
+Der Wert 1 am Ende der Anweisung kann als Parameter angegeben werden. Die relationale Engine erstellt den Ausführungsplan für diesen Batch so, als ob anstelle des Werts 1 ein Parameter angegeben worden wäre. Aufgrund dieser einfachen Parametrisierung erkennt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], dass die folgenden beiden Anweisungen im Prinzip den gleichen Ausführungsplan generieren, und verwendet den ersten Plan auch für die zweite Anweisung:
 
 ```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
@@ -504,7 +502,7 @@ SELECT * FROM AdventureWorks2014.Production.Product
 WHERE ProductSubcategoryID = 4;
 ```
 
-Bei der Verarbeitung komplexer SQL-Anweisungen können für das relationale Modul eventuell Schwierigkeiten bei der Bestimmung der Ausdrücke auftreten, die parametrisiert werden können. Um die Wahrscheinlichkeit zu erhöhen, dass das relationale Modul Übereinstimmungen zwischen komplexen SQL-Anweisungen und vorhandenen, nicht verwendeten Ausführungsplänen erkennt, sollten Sie die Parameter explizit mithilfe von „sp_executesql“ oder Parametermarkierungen angeben. 
+Bei der Verarbeitung komplexer SQL-Anweisungen können für die relationale Engine eventuell Schwierigkeiten bei der Bestimmung der Ausdrücke auftreten, die parametrisiert werden können. Um die Wahrscheinlichkeit zu erhöhen, dass die relationale Engine Übereinstimmungen zwischen komplexen SQL-Anweisungen und vorhandenen, nicht verwendeten Ausführungsplänen erkennt, sollten Sie die Parameter explizit mithilfe von „sp_executesql“ oder Parametermarkierungen angeben. 
 
 > [!NOTE]
 > Wenn die arithmetischen Operatoren +, –, \*, / oder % zur impliziten oder expliziten Konvertierung von Konstantenwerten der Datentypen „int“, „smallint“, „tinyint“ oder „bigint“ in die Datentypen „float“, „real“, „decimal“ oder „numeric“ verwendet werden, wendet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] spezielle Regeln an, um den Typ und die Genauigkeit der Ausdrucksergebnisse zu berechnen. Allerdings unterscheiden sich diese Regeln in Abhängigkeit davon, ob die Abfrage parametrisiert ist oder nicht. Daher können gleiche Ausdrücke in Abfragen in einigen Fällen zu unterschiedlichen Ergebnissen führen.
@@ -581,7 +579,7 @@ Sie können das Verhalten der erzwungenen Parametrisierung überschreiben, indem
 
 ### <a name="preparing-sql-statements"></a>Vorbereiten von SQL-Anweisungen
 
-Das relationale Modul von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bietet vollständige Unterstützung für die Vorbereitung von SQL-Anweisungen vor ihrer Ausführung. Wenn eine Anwendung eine SQL-Anweisung mehrfach ausführen muss, kann mithilfe der Datenbank-API Folgendes erreicht werden: 
+Die relationale Engine von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bietet vollständige Unterstützung für die Vorbereitung von SQL-Anweisungen vor ihrer Ausführung. Wenn eine Anwendung eine SQL-Anweisung mehrfach ausführen muss, kann mithilfe der Datenbank-API Folgendes erreicht werden: 
 
 * Einmaliges Vorbereiten der Anweisung. Mit diesem Schritt wird die SQL-Anweisung zu einem Ausführungsplan kompiliert.
 * Ausführen des vorkompilierten Ausführungsplans immer dann, wenn die Anweisung ausgeführt werden muss. Auf diese Weise muss die SQL-Anweisung nach der ersten Ausführung nicht jedes Mal erneut kompiliert werden.   
@@ -816,9 +814,10 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt zw
         Employees);
   ```
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet OLE DB für die Kommunikation zwischen dem relationalen Modul und dem Speichermodul. Das relationale Modul zerlegt jede Transact-SQL-Anweisung in eine Reihe von Vorgängen für einfache OLE DB-Rowsets, die durch das Speichermodul aus den Basistabellen geöffnet werden. Dies bedeutet, dass das relationale Modul einfache OLE DB-Rowsets auch für jede OLE DB-Datenquelle öffnen kann.  
+
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet OLE DB für die Kommunikation zwischen der relationalen Engine und der Speicher-Engine. Die relationale Engine zerlegt jede Transact-SQL-Anweisung in eine Reihe von Vorgängen für einfache OLE DB-Rowsets, die durch die Speicher-Engine aus den Basistabellen geöffnet werden. Dies bedeutet, dass die relationale Engine einfache OLE DB-Rowsets auch für jede OLE DB-Datenquelle öffnen kann.  
 ![oledb_storage](../relational-databases/media/oledb-storage.gif)  
-Das relationale Modul verwendet die OLE DB-API (Application Programming Interface), um die Rowsets auf Verbindungsservern zu öffnen, die Zeilen abzurufen und Transaktionen zu verwalten.
+Die relationale Engine verwendet die OLE DB-API (Application Programming Interface), um die Rowsets auf Verbindungsservern zu öffnen, die Zeilen abzurufen und Transaktionen zu verwalten.
 
 Auf dem Server, auf dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgeführt wird, muss für jede OLE DB-Datenquelle, auf die als Verbindungsserver zugegriffen wird, ein OLE DB-Anbieter vorhanden sein. Die Reihe von Transact-SQL-Vorgängen, die für eine bestimmte OLE DB-Datenquelle angewendet werden können, wird durch die Funktionalität des OLE DB-Anbieters bestimmt.
 

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 04/10/2018
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssdt
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- tools-ssdt
+ms.technology: ssdt
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
 caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b3a732222875ec5ce447e005bde41d982408d8b8
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 7e2348aa63bce657c85ce0b9d6644be471e1f487
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Änderungsprotokoll für SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -379,7 +376,7 @@ Buildnummer: : 14.0.61705.170
 - Es wurden eine Reihe von Problemen behoben, die bei der Integration von Power Query in Tabellenmodelle mit Kompatibilitätsgrad 1400 von Analysis Services auftreten konnten
 - Es wurde ein Problem im neuen Toolfenster des DAX-Editors behoben, bei dem der Zuweisungsoperator beim Definieren eines Measure nicht in einer eigenen Zeile stehen konnte
 - Es wurde ein Problem, bei dem das Aktualisieren der tabellarischen Measureanzeige bei der Umbenennung von Measures in Perspektive verhindert wurde
-- Aktualisierung des in Analysis Services integrierten Arbeitsbereichmodells und des tabellarischen Objektmodells, wodurch eine Regression repariert werden konnte, durch die tabellarische Modelle vom 1200-Typ, die Translationen enthalten, nicht auf einem Server von SQL Server 2016 Analysis Service bereitgestellt werden konnten
+- Aktualisierung der in Analysis Services integrierten Arbeitsbereich-Engine und des tabellarischen Objektmodells, wodurch eine Regression repariert werden konnte, durch die tabellarische Modelle vom 1200-Typ, die Translationen enthalten, nicht auf einem Server von SQL Server 2016 Analysis Service bereitgestellt werden konnten
 - Es wurde ein Leistungsproblem behoben, bei dem das Erstellen und Löschen von neuen tabellarischen Datenquellen vom 1400-Typ sehr langsam erfolgte
 - Es wurde ein Problem behoben, bei dem das DSV-Diagramm bei mehrdimensionalen Modellen das Rendern beenden konnte, wenn die Ansicht schnell zwischen verschiedenen DSVs gewechselt wurde
 
@@ -409,9 +406,9 @@ Buildnummer: : 14.0.61704.140
 - Integration der Analysis Services-Power Query (tabellarisches Modell mit Kompatibilitätsgrad 1400):
     - DirectQuery ist für SQL Oracle und Teradata verfügbar, wenn der Benutzer Treiber von Drittanbietern installiert hat
     - Hinzufügen von Spalten anhand eines Beispiels in PowerQuery
-    - Datenzugriffsoptionen in Modellen vom 1400-Typ (vom M-Modul verwendete Eigenschaften auf Modellebene)
-        - Aktivieren von schnellem Kombinieren (der Standardwert ist „FALSE“, wenn er auf „TRUE“ gesetzt wird, ignoriert das Mashup-Modul die Datenschutzebenen der Datenquellen beim Kombinieren von Daten)
-        - Aktivieren von Legacy-Umleitungen (der Standardwert ist „FALSE“, wenn er auf „TRUE“ gesetzt wird, folgt das Mashup-Modul HTTP-Umleitungen, die potenziell unsicher sind.  Beispielsweise eine Umleitung von einer HTTPS- zu einer HTTP-URI)  
+    - Datenzugriffsoptionen in Modellen vom 1400-Typ (von der M-Engine verwendete Eigenschaften auf Modellebene)
+        - Aktivieren von schnellem Kombinieren (der Standardwert ist „FALSE“, wenn er auf „TRUE“ gesetzt wird, ignoriert die Mashup-Engine die Datenschutzebenen der Datenquellen beim Kombinieren von Daten)
+        - Aktivieren von Legacy-Umleitungen (der Standardwert ist „FALSE“, wenn er auf „TRUE“ gesetzt wird, folgt die Mashup-Engine HTTP-Umleitungen, die potenziell unsicher sind.  Beispielsweise eine Umleitung von einer HTTPS- zu einer HTTP-URI)  
         - Zurückgeben von Fehlerwerten als NULL (der Standardwert ist „FALSE“, wenn er auf „TRUE“ gesetzt wird, werden Fehler auf Zellebene als NULL zurückgegeben. Wenn der Wert „FALSE“ ist, wird eine Ausnahme ausgelöst, falls die Zelle einen Fehler enthält)  
     - Zusätzliche Datenquellen (Dateidatenquellen) mithilfe von PowerQuery
         - Excel 
@@ -675,7 +672,8 @@ Buildnummer: 14.0.60629.0
 **Neuigkeiten**  
 * **Always Encrypted-Unterstützung:** Für Datenbanken, die Always Encrypted-Spalten enthalten, bietet diese Version über unsere Kern-APIs und unser Befehlszeilentool (SqlPackage.exe) vollständige Unterstützung für Always Encrypted. Sie können Datenbankprojekte erstellen und veröffentlichen und auf die vollständige Unterstützung für alle Always Encrypted-Funktionen zurückgreifen.  
 * **Verbesserte Unterstützung für temporale Tabellen:** Die Erfahrung temporaler Tabellen wurde vereinfacht, indem ihre Verknüpfung vor Änderungen aufgehoben und nach Abschluss der Änderungen wiederhergestellt wurde. Dies bedeutet, dass zwischen temporalen Tabellen und anderen Tabellentypen (Standard- oder speicherinternen Tabellen) im Hinblick auf die Vorgänge, die unterstützt werden, Parität herrscht. 
-* **SqlPackage.exe und Installationsänderungen:** Es wurden Änderungen durchgeführt, um SSDT vom SQL Server-Modul und von SSMS-Updates zu isolieren. Weitere Informationen finden Sie unter [Changes to SSDT and SqlPackage.exe installation and updates (Änderungen an SSDT und Installationen und Aktualisierungen von SqlPackage.exe)](https://blogs.msdn.microsoft.com/ssdt/2016/06/30/changes-to-ssdt-and-sqlpackage-exe-installation-and-updates/).
+* 
+  **SqlPackage.exe und Installationsänderungen:** Es wurden Änderungen durchgeführt, um SSDT von der SQL Server-Engine und von SSMS-Updates zu isolieren. Weitere Informationen finden Sie unter [Changes to SSDT and SqlPackage.exe installation and updates (Änderungen an SSDT und Installationen und Aktualisierungen von SqlPackage.exe)](https://blogs.msdn.microsoft.com/ssdt/2016/06/30/changes-to-ssdt-and-sqlpackage-exe-installation-and-updates/).
 
  
 
@@ -694,11 +692,11 @@ Buildnummer: 14.0.60629.0
     * Folgendes SxS-Problem mit MSOLAP OLEDB-Anbieter wurde behoben: Nur der 32-Bit-Anbieter wurde installiert, was sich auf die Herstellung einer Verbindung zwischen 64-Bit-Excel 2016 und SQL Server 2014 auswirkte (nicht reproduzierbar mit ClickOnce-Installierungen von Office 365, sondern nur MSI Excel-Installation).
     * Folgendes Problem wurde behoben: In Grenzfällen konnten die bei der Aktualisierung des AS-Modells von Kompatibilitätsebene 1103 auf 1200 eingefügten Tabellen den Fehler „Relationship uses an invalid column ID“ (Beziehung verwendet eine ungültige Spalten-ID) auslösen.
     * Folgendes SxS-Problem wurde behoben: SSDT-BI 2013 konnte nach der Deinstallation von SSDT 2015 (Registrierungseinstellung für gemeinsam genutzte Cartridges) auf demselben Computer keine Daten mehr in den AS-Tabellen-Designer importieren.
-    * Die Stabilität wurde erhöht, um mit Problemen und Abstürzen umzugehen, wenn die Verbindung mit dem AS-Modul unterbrochen wurde (d.h. SSDT bleibt über Nacht offen, und der AS-Server wird wiederverwendet und andere vorübergehende Unterbrechungen der Verbindung). 
+    * Die Stabilität wurde erhöht, um mit Problemen und Abstürzen umzugehen, wenn die Verbindung mit der AS-Engine unterbrochen wurde (d.h. SSDT bleibt über Nacht offen, und der AS-Server wird wiederverwendet und andere vorübergehende Unterbrechungen der Verbindung). 
     * Folgendes Problem wurde behoben: Dialogfelder wurden auf anderen Bildschirmen als VS in Szenarios mit mehreren Monitoren geöffnet. 
     * Folgendes Problem wurde behoben: Unterstützung zum Einfügen aus HTML-Tabellen (Rasterdaten) in eingefügte Tabellen des AS-Tabellen-Designers wurde aktiviert. 
     * Folgendes Problem wurde behoben: Bei einem Upgrade wurde eine leere einfügte Tabelle nicht auf 1200 aktualisiert (Verwendung nur als Containertabelle für Measures). 
-    * Folgendes Problem wurde behoben: Das tabellarische AS-Modell wurde mit eingefügten Tabellen auf 1200 aktualisiert, um einen AS-Modulfehler bei Calc-Tabellen (die für eingefügte Tabellen in 1200 verwendet werden) zu umgehen. Jetzt wird nach dem Upgrade ein vollständiger Prozess auf die neuen Calc-Tabellen durchgeführt. 
+    * Folgendes Problem wurde behoben: Das tabellarische AS-Modell wurde mit eingefügten Tabellen auf 1200 aktualisiert, um einen AS-Engine-Fehler bei Calc-Tabellen (die für eingefügte Tabellen in 1200 verwendet werden) zu umgehen. Jetzt wird nach dem Upgrade ein vollständiger Prozess auf die neuen Calc-Tabellen durchgeführt. 
     * Folgendes Problem wurde behoben: Beim Abbrechen der Erstellung einer neuen berechneten AS-Modelltabelle vom Typ 1200 mit unvollständigem DAX-Ausdruck konnte es zum Absturz kommen. 
     * Folgendes Problem wurde behoben: Beim Importieren eines Modells vom Typ 1200 von AS-Server in ein AS-Projekts in SSDT, bei dem Datenbankname und Tabellennamen identisch waren, konnte ein Fehler auftreten. 
     * Folgendes Problem wurde behoben: Beim Editieren einer KPI-Measure im tabellarischen Modell vom Typ 1103 konnte ein Fehler auftreten. 
@@ -723,7 +721,8 @@ SSDT General Availability (GA) ist nun erhältlich. Das Update von SSDT GA vom J
   
 [Herunterladen von SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [Vorgängerversionen von SQL Server Data Tools &#40;SSDT and SSDT-BI&#41;](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)  
-[Neuigkeiten im Datenbankmodul](https://msdn.microsoft.com/library/bb510411.aspx)  
+
+  [Neuigkeiten in der Datenbank-Engine](https://msdn.microsoft.com/library/bb510411.aspx)  
 [Neuigkeiten in Analysis Services](../analysis-services/what-s-new-in-analysis-services.md)  
 [Neuigkeiten in Integration Services](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
   

@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 09/29/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: import-export
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data formats [SQL Server], character
 - character formats [SQL Server]
@@ -20,13 +18,12 @@ caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f7bf18d9a0cff7b9185b66e3cfecebbcb2d5c443
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 994dbd67b155d791cc7d4ee25dc8525c471a5f11
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Verwenden des Zeichenformats zum Importieren und Exportieren von Daten (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,7 +58,7 @@ Beim Verwenden des Zeichenformats sollten Sie Folgendes berücksichtigen:
   
 -   Um den Verlust von Sonderzeichen zu verhindern, verwenden Sie das Unicode-Zeichenformat, oder geben Sie eine Codepage an.  
   
--   Alle [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) -Daten, die in einer Zeichenformatdatei gespeichert sind, werden ohne Metadaten gespeichert. Alle Datenwerte werden gemäß den Regeln der impliziten Datenkonvertierung in das [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) -Format konvertiert. Beim Importieren in eine [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) -Spalte werden die Daten als [char](../../t-sql/data-types/char-and-varchar-transact-sql.md)-Datentyp importiert. Beim Importieren in eine Spalte mit einem anderen Datentyp als [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) werden die Daten mithilfe der impliziten Konvertierung von [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) konvertiert. Weitere Informationen zur Datenkonvertierung finden Sie unter [Datentypkonvertierung &#40;Datenbankmodul&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).  
+-   Alle [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) -Daten, die in einer Zeichenformatdatei gespeichert sind, werden ohne Metadaten gespeichert. Alle Datenwerte werden gemäß den Regeln der impliziten Datenkonvertierung in das [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) -Format konvertiert. Beim Importieren in eine [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) -Spalte werden die Daten als [char](../../t-sql/data-types/char-and-varchar-transact-sql.md)-Datentyp importiert. Beim Importieren in eine Spalte mit einem anderen Datentyp als [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) werden die Daten mithilfe der impliziten Konvertierung von [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) konvertiert. Weitere Informationen zur Datenkonvertierung finden Sie unter [Datentypkonvertierung &amp;#40;Datenbank-Engine&amp;#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).  
   
 -   Das [Hilfsprogramm „bcp“](../../tools/bcp-utility.md) exportiert [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)-Werte in Datendateien im Zeichenformat mit vier Stellen nach dem Dezimaltrennzeichen und ohne Symbole für die Zifferngruppierung, wie z.B. Kommas. So wird z.B. eine [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) -Spalte mit dem Wert 1,234,567.123456 beim Massenkopieren in eine Datendatei als die Zeichenfolge 1234567.1235 massenexportiert.  
   
@@ -131,7 +128,7 @@ Notepad D:\BCP\myChar.fmt
 In dem folgenden Beispiel werden die Datenbank und die Formatdateien verwendet, die oben erstellt wurden.
 
 ### **Verwenden von bcp und dem Zeichenformat zum Exportieren von Daten**<a name="bcp_char_export"></a>
-Der Schalter**-c** und der **OUT** -Befehl.  Hinweis: Die in diesem Beispiel erstellte Datendatei wird auch in allen nachfolgenden Beispielen verwendet.  Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
+Der Schalter **-c** und der **OUT** -Befehl.  Hinweis: Die in diesem Beispiel erstellte Datendatei wird auch in allen nachfolgenden Beispielen verwendet.  Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 
 ```cmd
 bcp TestDatabase.dbo.myChar OUT D:\BCP\myChar.bcp -T -c
@@ -141,7 +138,7 @@ NOTEPAD D:\BCP\myChar.bcp
 ```
 
 ### **Verwenden von bcp und dem Zeichenformat zum Importieren von Daten ohne eine Formatdatei**<a name="bcp_char_import"></a>
-Der Schalter**-c** und der **IN** -Befehl.  Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
+Der Schalter **-c** und der **IN** -Befehl.  Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 
 ```cmd
 REM Truncate table (for testing)
@@ -155,7 +152,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myChar;"
 ```
 
 ### **Verwenden von bcp und dem Zeichenformat zum Importieren von Daten mit einer Nicht-XML-Formatdatei**<a name="bcp_char_import_fmt"></a>
-Die Schalter**-c** und **-f** switches und **IN** commund.  Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
+Die Schalter **-c** und **-f** switches und **IN** commund.  Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 
 ```cmd
 REM Truncate table (for testing)

@@ -1,17 +1,16 @@
 ---
-title: Prinzipale (Datenbankmodul) | Microsoft-Dokumentation
+title: Prinzipale (Datenbank-Engine) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.roleproperties.selectroll.f1
 - sql13.swb.databaseuser.permissions.user.f1--May use common.permissions
@@ -35,15 +34,14 @@ caps.latest.revision: 57
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c071c953f36a1e32612366c6cbb7a4a1666ef5f9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d70f44041140b8205ead612789bf463ae94d9122
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="principals-database-engine"></a>Prinzipale (Datenbankmodul)
+# <a name="principals-database-engine"></a>Prinzipale (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   *Prinzipale* sind Entitäten, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressourcen anfordern können. Wie bei anderen Komponenten des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Autorisierungsmodells können Prinzipale hierarchisch angeordnet werden. Der Einflussbereich eines Prinzipals richtet sich nach dem Definitionsbereich des Prinzipals (Windows, Server, Datenbank) und danach, ob der Prinzipal unteilbar ist oder es sich um eine Auflistung handelt. Ein Windows-Anmeldename ist ein Beispiel eines unteilbaren Prinzipals und eine Windows-Gruppe das eines Prinzipals, der eine Auflistung darstellt. Jeder Prinzipal weist eine Sicherheits-ID (SID) auf. Dieses Thema gilt für alle Versionen von SQL Server, jedoch gibt es bei Prinzipalen auf Serverebene in der SQL-Datenbank oder SQL Data Warehouse eine Reihe von Einschränkungen. 
@@ -75,7 +73,7 @@ Der `dbo`-Benutzer besitzt das `dbo`-Schema. Das `dbo`-Schema ist das Standardsc
 Jeder Anmeldename gehört zu der festen Serverrolle `public`, und jeder Datenbankbenutzer gehört zu der Datenbankrolle `public`. Wenn einem Anmeldenamen oder Benutzer keine bestimmten Berechtigungen für ein sicherungsfähiges Element erteilt oder verweigert werden, erbt der Anmeldename oder Benutzer die Berechtigungen, die der Datenbankrolle public für dieses sicherungsfähige Element erteilt wurden. Die feste Serverrolle `public` und die feste Datenbankrolle `public` können nicht gelöscht werden. Sie können jedoch Berechtigungen für die Rollen `public` widerrufen. Es gibt viele Berechtigungen, die den Rollen `public` standardmäßig zugewiesen sind. Die meisten dieser Berechtigungen sind für Routinevorgänge in der Datenbank erforderlich. Diese Vorgänge sollten von jedem ausgeführt werden können. Gehen Sie beim Aufheben der Berechtigungen von public-Anmeldenamen oder -Benutzern vorsichtig vor, da sich die Aufhebung auf alle Anmeldenamen/Benutzer auswirkt. Im Allgemeinen sollten Sie public-Berechtigungen nicht verweigern, da die DENY-Anweisung alle GRANT-Anweisungen außer Kraft setzt, die Sie möglicherweise einzelnen Benutzern gewähren. 
   
 ## <a name="informationschema-and-sys-users-and-schemas"></a>INFORMATION_SCHEMA und sys-Benutzer und -Schemas 
- Jede Datenbank enthält zwei Entitäten, die in Katalogsichten als Benutzer angezeigt werden: `INFORMATION_SCHEMA` und `sys`. Diese Entitäten sind für die interne Verwendung durch das Datenbankmodul erforderlich. Sie können nicht geändert oder gelöscht werden.  
+ Jede Datenbank enthält zwei Entitäten, die in Katalogsichten als Benutzer angezeigt werden: `INFORMATION_SCHEMA` und `sys`. Diese Entitäten sind für die interne Verwendung durch die Datenbank-Engine erforderlich. Sie können nicht geändert oder gelöscht werden.  
   
 ## <a name="certificate-based-sql-server-logins"></a>Zertifikatbasierte SQL Server-Anmeldenamen  
  Serverprinzipale, deren Name von doppelten Nummernzeichen (##) eingeschlossen ist, sind nur für die systeminterne Verwendung vorgesehen. Die folgenden Prinzipale werden bei der Installation von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aus Zertifikaten erstellt und sollten nicht gelöscht werden.  

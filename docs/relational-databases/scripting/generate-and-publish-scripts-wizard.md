@@ -1,17 +1,15 @@
 ---
-title: "Assistenten zum Generieren und Veröffentlichen von Skripts | Microsoft-Dokumentation"
-ms.custom: 
+title: Assistenten zum Generieren und Veröffentlichen von Skripts | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
-ms.component: ssms-scripting
-ms.reviewer: 
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.reviewer: ''
+ms.suite: sql
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql9.swb.generatescriptswizard.chooseviews.f1
 - sql13.swb.generatescriptswizard.manageproviders.f1
@@ -45,23 +43,24 @@ helpviewer_keywords:
 - databases [SQL Server], generating scripts
 - Publish Database Wizard
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
-caps.latest.revision: 
+caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 6a9e1ba4f4afadc27174f3dfd61b03005a33ef16
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: fbfcc5d2674632686900c3501aa181ba4846908d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistenten zum Generieren und Veröffentlichen von Skripts
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können mit dem **Assistenten zum Generieren und Veröffentlichen von Skripts** Skripts zur Übertragung einer Datenbank zwischen Instanzen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] oder [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] erstellen. Sie können Skripts für eine Datenbank auf einer Datenbankmodul-Instanz im lokalen Netzwerk oder von [!INCLUDE[ssSDS](../../includes/sssds-md.md)]aus generieren. Die generierten Skripts können auf einer anderen Datenbankmodul-Instanz oder von [!INCLUDE[ssSDS](../../includes/sssds-md.md)]aus ausgeführt werden. Sie können den Assistenten außerdem dazu verwenden, den Inhalt einer Datenbank direkt in einem Webdienst zu veröffentlichen, der mit den Datenbank-Veröffentlichungsdiensten erstellt wurde. Sie können Skripts für eine gesamte Datenbank oder für eine Auswahl bestimmter Objekte erstellen.  
-  
-1.  **Vorbereitungen:**  [Veröffentlichen in einem gehosteten Dienst](#PubHostSvc), [Berechtigungen](#Permissions)  
-  
-2.  **Generieren oder Veröffentlichen eines Skripts mithilfe von:**  [Der Assistent zum Generieren und Veröffentlichen von Skripts](#GenPubScriptWiz)  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Sie können mit dem **Assistenten zum Generieren und Veröffentlichen von Skripts** Skripts zur Übertragung einer Datenbank zwischen Instanzen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] oder [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]erstellen. Sie können Skripts für eine Datenbank auf einer Datenbank-Engine-Instanz im lokalen Netzwerk oder von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] aus generieren. Die generierten Skripts können auf einer anderen Datenbank-Engine-Instanz oder von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] aus ausgeführt werden. Sie können den Assistenten außerdem dazu verwenden, den Inhalt einer Datenbank direkt in einem Webdienst zu veröffentlichen, der mit den Datenbank-Veröffentlichungsdiensten erstellt wurde. Sie können Skripts für eine gesamte Datenbank oder für eine Auswahl bestimmter Objekte erstellen.  
+
+Ein ausführlicheres Tutorial zum Verwenden des Assistenten zum Generieren und Veröffentlichen von Skripts finden Sie unter [Tutorial: Generate Scripts Wizard (Tutorial: Assistent zum Generieren von Skripts)](https://docs.microsoft.com/en-us/sql/ssms/tutorials/scripting-ssms#script-database-using-generate-scripts-option).
+
+
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
  Die Quell- und Zieldatenbank können sich auf [!INCLUDE[ssSDS](../../includes/sssds-md.md)]oder einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] befinden, die mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher ausgeführt wird.  
@@ -82,40 +81,34 @@ ms.lasthandoff: 01/24/2018
 1.  Erweitern Sie im **Objekt-Explorer**den Knoten für die Instanz, die die Datenbank enthält, für die ein Skript erstellt werden soll.  
   
 2.  Zeigen Sie auf **Tasks**, und klicken Sie anschließend auf **Skripts generieren**.  
+
+    ![Assistent zum Generieren von Skripts](media/generate-and-publish-scripts-wizard/generatescripts.png)
   
 3.  Bearbeiten Sie die Dialogfenster des Assistenten:  
   
     -   [Seite "Einführung"](#Introduction)  
-  
-    -   [Seite "Objekte auswählen"](#ChooseObjects)  
-  
+    -   [Seite "Objekte auswählen"](#ChooseObjects)   
     -   [Seite "Skripterstellungsoptionen festlegen"](#SetScriptOpt)  
-  
     -   [Seite "Erweiterte Skripterstellungsoptionen"](#AdvScriptOpt)  
-  
-    -   [Seite "Anbieter verwalten"](#MgProviders)  
-  
+    -   [Seite "Anbieter verwalten"](#MgProviders)   
     -   [Seite "Erweiterte Veröffentlichungsoptionen"](#AdvPubOpts)  
-  
     -   [Seite "Anbieterkonfiguration"](#ProvConfig)  
-  
-    -   [Seite "Zusammenfassung"](#Summary)  
-  
+    -   [Seite "Zusammenfassung"](#Summary)   
     -   [Seite "Skripts speichern oder veröffentlichen"](#SavePubScripts)  
   
 ###  <a name="Introduction"></a> Seite "Einführung"  
  Auf dieser Seite werden die Schritte zum Generieren oder Veröffentlichen eines Skripts beschrieben.  
   
- **Diese Seite nicht mehr anzeigen** – Diese Seite wird beim nächsten Starten des **Assistenten zum Generieren und Veröffentlichen von Skripts** übersprungen.  
+ **Diese Seite nicht mehr anzeigen** – Diese Seite wird beim nächsten Starten des **Assistenten zum Generieren und Veröffentlichen von Skripts**übersprungen.  
   
- **Weiter >** – Geht zur Seite **Methode auswählen** über.  
-  
- **Abbrechen** – Beendet den Assistenten, ohne ein Skript aus der Datenbank zu generieren oder veröffentlichen.  
+  ![Seite "Einführung"](media/generate-and-publish-scripts-wizard/intro.png)
   
 ###  <a name="ChooseObjects"></a> Seite "Objekte auswählen"  
  Wählen Sie auf dieser Seite aus, welche Objekte in die von diesem Assistenten generierten Skripts eingeschlossen werden sollen. Auf der folgenden Seite des Assistenten können Sie diese Skripts am Speicherort Ihrer Wahl speichern oder sie verwenden, um Datenbankobjekte an einen Remotewebhostinganbieter zu veröffentlichen, bei dem die [SQL Server-Datenbank-Veröffentlichungsdienste](http://go.microsoft.com/fwlink/?LinkId=142025)installiert sind.  
   
- **Option „Skript für gesamte Datenbank erstellen“** – Klicken Sie hier, um Skripts für alle Objekte in der Datenbank zu generieren und ein Skript für die Datenbank selbst einzuschließen.  
+ **Option „Skript für gesamte Datenbank erstellen“** – Klicken Sie hier, um Skripts für alle Objekte in der Datenbank zu generieren und ein Skript für die Datenbank selbst einzuschließen. 
+
+   ![Skripts für alle Datenbanken](media/generate-and-publish-scripts-wizard/scriptall.png) 
   
  **Bestimmte Datenbankobjekte auswählen** – Klicken Sie hier, um den Assistenten auf die Generierung von Skripts für von Ihnen ausgewählte Objekte in der Datenbank einzuschränken:  
   
@@ -124,21 +117,24 @@ ms.lasthandoff: 01/24/2018
 -   **Alles auswählen** – Aktiviert alle verfügbaren Kontrollkästchen.  
   
 -   **Auswahl aufheben** – Deaktiviert alle Kontrollkästchen. Sie müssen in diesem Fall mindestens ein Datenbankobjekt auswählen, um den Vorgang fortsetzen zu können.  
+
+   ![Skriptspezifisch](media/generate-and-publish-scripts-wizard/scriptspecificobjects.png)
   
 ###  <a name="SetScriptOpt"></a> Seite "Skripterstellungsoptionen festlegen"  
  Auf dieser Seite können Sie angeben, ob Skripts vom Assistenten am ausgewählten Speicherort gespeichert werden, oder ob damit Datenbankobjekte bei einem Remotewebhostinganbieter veröffentlicht werden. Für die Veröffentlichung müssen Sie Zugriff auf einen Webdienst haben, der mithilfe des Webdiensts "Datenbank-Veröffentlichungsdienste" installiert wird.  
   
- **Optionen** – Wenn der Assistent Skripts an einem Speicherort Ihrer Wahl speichern soll, wählen Sie **Skripts an einem bestimmten Speicherort speichern**aus. Sie können die Skripts später für eine Datenbankmodul-Instanz oder für [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ausführen. Wenn der Assistent die Datenbankobjekte in einem Remote-Webhostinganbieter veröffentlichen soll, wählen Sie **In Webdienst veröffentlichen**aus.  
+ **Optionen** – Wenn der Assistent Skripts an einem Speicherort Ihrer Wahl speichern soll, wählen Sie **Skripts an einem bestimmten Speicherort speichern**aus. Sie können die Skripts später für eine Datenbank-Engine-Instanz oder für [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ausführen. Wenn der Assistent die Datenbankobjekte in einem Remote-Webhostinganbieter veröffentlichen soll, wählen Sie **In Webdienst veröffentlichen**aus.  
   
- **Skripts an einem bestimmten Speicherort speichern** – Speichern Sie mindestens eine Transact-SQL-Skriptdatei an einem angegebenen Speicherort.  
-  
--   **Erweitert** – Zeigt das Dialogfeld **Erweiterte Skripterstellungsoptionen** an, in dem Sie erweiterte Optionen für die Skripterstellung auswählen können.  
+ **Skripts an einem bestimmten Speicherort speichern:** Speichern Sie mindestens eine Transact-SQL-Skriptdatei an einem angegebenen Speicherort.  
+
+  ![Speichern](media/generate-and-publish-scripts-wizard/save.png)   
   
 -   **In Datei speichern** – Speichert das Skript in einer oder mehreren SQL-Dateien. Klicken Sie auf die Schaltfläche zum Durchsuchen (**…**), um Namen und Speicherort für die Datei anzugeben. Aktivieren Sie das Kontrollkästchen **Vorhandene Datei überschreiben** , um die Datei zu ersetzen, wenn bereits eine Datei mit dem gleichen Namen vorhanden ist. Klicken Sie auf **Einzelne Datei** oder **Einzelne Datei pro Objekt** , um anzugeben, wie die Skripts generiert werden sollen. Klicken Sie auf **Unicode-Text** oder **ANSI-Text** , um die Art von Text anzugeben, die im Skript verwendet werden soll.  
   
 -   **In Zwischenablage speichern** – Speichert das Transact-SQL-Skript in die Zwischenablage.  
   
--   **In neuem Abfragefenster speichern** – Generiert das Skript in einem Fenster des Datenbankmodul-Abfrage-Editors. Wenn kein Editor-Fenster geöffnet ist, wird ein neues Editor-Fenster als Skriptziel geöffnet.  
+-   
+  **In neuem Abfragefenster speichern** – Generiert das Skript in einem Fenster des Datenbank-Engine-Abfrage-Editors. Wenn kein Editor-Fenster geöffnet ist, wird ein neues Editor-Fenster als Skriptziel geöffnet.  
   
  **In Webdienst veröffentlichen** – Veröffentlichen Sie die ausgewählten Objekte in einem Remote-Webhostingdienst, für den Sie einen Anbieter konfiguriert haben.  
   
@@ -151,7 +147,9 @@ ms.lasthandoff: 01/24/2018
 -   **Zieldatenbank** – Wählt die Zieldatenbank aus, in der Sie die von Ihnen ausgewählten Objekte veröffentlichen möchten. Sie müssen vor dem Auswählen einer Zieldatenbank einen Anbieter auswählen.  
   
 ###  <a name="AdvScriptOpt"></a> Seite "Erweiterte Skripterstellungsoptionen"  
- Verwenden Sie diese Seite, um festzulegen, wie dieser Assistent Skripts generieren soll. Es sind viele verschiedene Optionen verfügbar. Die Optionen werden abgeblendet dargestellt, wenn sie von der SQL Server- oder [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Version, die in **Datenbankmodultyp**angegeben ist, nicht unterstützt werden.  
+ Verwenden Sie diese Seite, um festzulegen, wie dieser Assistent Skripts generieren soll. Es sind viele verschiedene Optionen verfügbar. Die Optionen werden abgeblendet dargestellt, wenn sie von der SQL Server- oder [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Version, die in **Datenbank-Engine-Typ** angegeben ist, nicht unterstützt werden.  
+
+![Erweiterte Optionen](media/generate-and-publish-scripts-wizard/advanced.png)
   
  **Optionen** – Sie können erweiterte Skriptoptionen angeben, indem Sie einen Wert aus der Liste der verfügbaren Einstellungen rechts neben den einzelnen Optionen auswählen.  
   
@@ -171,9 +169,10 @@ ms.lasthandoff: 01/24/2018
   
 -   **„IF NOT EXISTS“ einschließen** – Im Falle von **True**enthält das Skript eine Anweisung, um zu überprüfen, ob das Objekt bereits in der Datenbank vorhanden ist, und versucht nicht, ein neues Objekt zu erstellen, wenn das Objekt bereits vorhanden ist. Der Standardwert ist **False**.  
   
--   **Einschränkungsnamen des Systems einschließen** – Im Falle von **False**(Standardwert) werden Einschränkungen, die automatisch in der Ursprungsdatenbank benannt wurden, in der Zieldatenbank automatisch umbenannt. Im Falle von **True**haben Einschränkungen in der Ursprungs- und der Zieldatenbank den gleichen Namen.  
+-   **Einschränkungsnamen des Systems einschließen:** Im Fall von **FALSE**(Standardwert) werden Einschränkungen, die automatisch in der Ursprungsdatenbank benannt wurden, in der Zieldatenbank automatisch umbenannt. Im Falle von **True**haben Einschränkungen in der Ursprungs- und der Zieldatenbank den gleichen Namen.  
   
--   **Nicht unterstützte Anweisungen einschließen** – Im Falle von **False**enthält das Skript keine Anweisungen für Objekte, die unter der ausgewählten Serverversion bzw. dem ausgewählten Modultyp nicht unterstützt werden. Bei **True**enthält das Skript nicht unterstützte Objekte. Jede Anweisung für ein nicht unterstütztes Objekt enthält einen Kommentar, dass die Anweisung bearbeitet werden muss, bevor das Skript für die ausgewählte SQL Server-Version bzw. den ausgewählten Modultyp ausgeführt werden kann. Der Standardwert ist **False**.  
+-   
+  **Nicht unterstützte Anweisungen einschließen** – Im Falle von **False**enthält das Skript keine Anweisungen für Objekte, die unter der ausgewählten Serverversion bzw. dem ausgewählten Engine-Typ nicht unterstützt werden. Bei **True**enthält das Skript nicht unterstützte Objekte. Jede Anweisung für ein nicht unterstütztes Objekt enthält einen Kommentar, dass die Anweisung bearbeitet werden muss, bevor das Skript für die ausgewählte SQL Server-Version bzw. den ausgewählten Engine-Typ ausgeführt werden kann. Der Standardwert ist **False**.  
   
 -   **Objektnamen mit Schema qualifizieren** – Schließt den Schemanamen im Namen der erstellten Objekte ein. Der Standardwert ist **True**.  
   
@@ -187,7 +186,8 @@ ms.lasthandoff: 01/24/2018
   
 -   **Skripterstellung für erweiterte Eigenschaften** – Enthält erweiterte Eigenschaften im Skript, wenn das Objekt über erweiterte Eigenschaften verfügt. Der Standardwert ist **True**.  
   
--   **Skripterstellung für Modultyp** – Erstellt ein Skript, das für den ausgewählten Typ von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] bzw. den ausgewählten Typ einer Instanz des SQL Server-Datenbankmoduls ausgeführt werden kann. Für den angegebenen Typ nicht unterstützte Objekte werden nicht in das Skript eingeschlossen. Der Standardwert ist der Typ des Ursprungsservers.  
+-   
+  **Skripterstellung für Engine-Typ** – Erstellt ein Skript, das für den ausgewählten Typ von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] bzw. den ausgewählten Typ einer Instanz der SQL Server-Datenbank-Engine ausgeführt werden kann. Für den angegebenen Typ nicht unterstützte Objekte werden nicht in das Skript eingeschlossen. Der Standardwert ist der Typ des Ursprungsservers.  
   
 -   **Skripterstellung für Serverversion** – Erstellt ein Skript, das für die ausgewählte Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt werden kann. Neue Funktionen in einer Version können für eine Skripterstellung für frühere Versionen nicht verwendet werden. Der Standard ist die Version des Ursprungsservers.  
   
@@ -239,7 +239,9 @@ ms.lasthandoff: 01/24/2018
  **Abbrechen** – Macht alle Änderungen rückgängig, die Sie im Dialogfeld **Hostinganbieter** vorgenommen haben.  
   
 ###  <a name="AdvPubOpts"></a> Seite "Erweiterte Veröffentlichungsoptionen"  
- Verwenden Sie diese Seite, um festzulegen, wie dieser Assistent eine Datenbank veröffentlichen soll. Es sind viele verschiedene Optionen verfügbar. Die Optionen werden abgeblendet dargestellt, wenn sie von der SQL Server- oder [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Version, die in **Datenbankmodultyp**angegeben ist, nicht unterstützt werden.  
+ Verwenden Sie diese Seite, um festzulegen, wie dieser Assistent eine Datenbank veröffentlichen soll. Es sind viele verschiedene Optionen verfügbar. Die Optionen werden abgeblendet dargestellt, wenn sie von der SQL Server- oder [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Version, die in **Datenbank-Engine-Typ** angegeben ist, nicht unterstützt werden.  
+
+  ![Erweitertes Veröffentlichen](media/generate-and-publish-scripts-wizard/advancedpublish.png)
   
  **Optionen** – Sie können erweiterte Skriptoptionen angeben, indem Sie einen Wert aus der Liste der verfügbaren Einstellungen rechts neben den einzelnen Optionen auswählen.  
   
@@ -352,8 +354,8 @@ Damit Sie Skripts für Objekte mit der [!INCLUDE[ssSDW_md](../../includes/sssdw-
 
 1. Klicken Sie auf **Tools** und dann auf **Optionen**.  
 2. Legen Sie unter **Allgemeine Skripterstellungsoptionen** Folgendes fest:  
-    1. Skript für den Datenbankmodultyp: **Microsoft Azure SQL-Datenbank**.  
-    2. Skript für die Datenbankmoduledition: **Microsoft Azure SQL Data Warehouse Edition**.  
+    1. Skript für den Datenbank-Engine-Typ: **Microsoft Azure SQL-Datenbank**.  
+    2. Skript für die Datenbank-Engine-Edition: **Microsoft Azure SQL Data Warehouse Edition**.  
 3. Klicken Sie auf **OK**.
 
 ### <a name="how-to-generate-scripts-for-sql-data-warehouse-when-it-is-not-the-default-scripting-option"></a>Generieren von Skripts für SQL Data Warehouse, wenn es nicht die Standardoption für die Skripterstellung ist  
@@ -361,11 +363,11 @@ Damit Sie Skripts für Objekte mit der [!INCLUDE[ssSDW_md](../../includes/sssdw-
 Wenn Sie [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] wie oben gezeigt als Standardoption für die Skripterstellung festlegen, können diese Anweisungen ignoriert werden. Wenn Sie jedoch andere Standardoptionen für die Skripterstellung verwenden, könnte ein Fehler auftreten. Um Fehler zu vermeiden, führen Sie folgende Schritte aus, um Skripts für [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]zu generieren und zu veröffentlichen:  
 
 1. Klicken Sie mit der rechten Maustaste auf Ihre SQL Data Warehouse-Datenbank.  
-2. Wählen Sie **Skripts generieren...**aus.  
+2. Wählen Sie **Skripts generieren...** aus.  
 3. Wählen Sie die Objekte aus, für die Sie Skripts erstellen möchten.  
 4. Klicken Sie in **Skripterstellungsoptionen**auf **Erweitert**. Legen Sie unter **Allgemein** Folgendes fest:  
-    1. Skript für den Datenbankmodultyp: **Microsoft Azure SQL-Datenbank**.  
-    2. Skript für die Datenbankmoduledition: **Microsoft Azure SQL Data Warehouse Edition**.  
+    1. Skript für den Datenbank-Engine-Typ: **Microsoft Azure SQL-Datenbank**.  
+    2. Skript für die Datenbank-Engine-Edition: **Microsoft Azure SQL Data Warehouse Edition**.  
 5. Klicken Sie auf **Skripts speichern oder veröffentlichen** und dann auf **Fertig stellen**.  
 
 Die in Schritt 4 festgelegten Optionen werden nicht gespeichert. Wenn Sie diese Optionen speichern möchten, befolgen Sie die Anweisungen in **Festlegen der Standardoptionen für die Skripterstellung auf SQL Data Warehouse**.  

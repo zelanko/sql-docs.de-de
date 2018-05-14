@@ -1,17 +1,16 @@
 ---
-title: Handbuch zum SQL Server Indexentwurf | Microsoft-Dokumentation
+title: Leitfaden zur Architektur und zum Design von SQL Server-Indizes | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/03/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: relational-databases-misc
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - index design guide
 - index design guidance
@@ -28,17 +27,17 @@ caps.latest.revision: 3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b6e1617f3ea9d4f725d2a95b9b1d55fbacf85876
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 92aa59127e07e684c6325a811e17469689e403ed
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="sql-server-index-design-guide"></a>Handbuch zum SQL Server Indexentwurf
+# <a name="sql-server-index-architecture-and-design-guide"></a>Leitfaden zur Architektur und zum Design von SQL Server-Indizes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Schlecht entworfene oder fehlende Indizes sind die Hauptquellen für Engpässe der Datenbankanwendung. Ein effizienter Indexentwurf ist zum Erzielen einer guten Datenbank- und Anwendungsleistung unabdinglich. Dieses Handbuch zum Entwerfen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Indizes enthält Informationen und bewährte Methoden, die Sie beim Entwerfen effektiver Indizes, die den Anforderungen Ihrer Anwendung entsprechen, unterstützen sollen.  
+Schlecht entworfene oder fehlende Indizes sind die Hauptquellen für Engpässe der Datenbankanwendung. Ein effizienter Indexentwurf ist zum Erzielen einer guten Datenbank- und Anwendungsleistung unabdinglich. Dieser Leitfaden zum Entwerfen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Indizes enthält Informationen zur Indexarchitektur und bewährte Methoden, die Sie beim Entwerfen effektiver Indizes unterstützen sollen, die den Anforderungen Ihrer Anwendung entsprechen.  
     
 In diesem Handbuch wird davon ausgegangen, dass der Leser grundsätzlich mit den in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verfügbaren Indextypen vertraut ist. Eine allgemeine Beschreibung zu Indextypen finden Sie unter [Indextypen](../relational-databases/indexes/indexes.md).  
 
@@ -121,7 +120,7 @@ Weitere Informationen zu Volltextindizes finden Sie unter [Auffüllen von Vollte
   
 -   Wählen Sie für gruppierte Indizes einen kurzen Indexschlüssel aus. Gruppierte Indizes bieten darüber hinaus den Vorteil, dass sie für eindeutige oder Nicht-NULL-Spalten erstellt werden.  
   
--   Die Datentypen **ntext**, **text**, **image**, **varchar(max)**, **nvarchar(max)**und **varbinary(max)** können nicht als Indexschlüsselspalten angegeben werden. **varchar(max)**, **nvarchar(max)**, **varbinary(max)**und **xml** -Datentypen können jedoch als Nichtschlüssel-Indexspalten in einen nicht gruppierten Index aufgenommen werden. Weitere Informationen finden Sie im Abschnitt [Index mit eingeschlossenen Spalten](#Included_Columns)in diesem Handbuch.  
+-   Die Datentypen **ntext**, **text**, **image**, **varchar(max)**, **nvarchar(max)** und **varbinary(max)** können nicht als Indexschlüsselspalten angegeben werden. **varchar(max)**, **nvarchar(max)**, **varbinary(max)** und **xml** -Datentypen können jedoch als Nichtschlüssel-Indexspalten in einen nicht gruppierten Index aufgenommen werden. Weitere Informationen finden Sie im Abschnitt [Index mit eingeschlossenen Spalten](#Included_Columns)in diesem Handbuch.  
   
 -   Ein **xml** -Datentyp kann nur in einem XML-Index eine Schlüsselspalte sein. Weitere Informationen finden Sie unter [XML-Indizes &#40;SQL Server&#41;](../relational-databases/xml/xml-indexes-sql-server.md). Mit SQL Server 2012 SP1 wird ein neuer XML-Indextyp eingeführt, der als selektiver XML-Index bezeichnet wird. Durch diesen neuen Index kann die Abfrageleistung bei Daten verbessert werden, die als XML in SQL Server gespeichert sind. Das sorgt für eine schnellere Indizierung großer XML-Datenmengen und für höhere Skalierbarkeit, indem die Speicherkosten des Indexes gesenkt werden. Weitere Informationen finden Sie unter [Selektive XML-Indizes &#40;SXI&#41;](../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
@@ -456,7 +455,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   Es passen weniger Indexzeilen auf eine Seite. Dies kann zu einer Zunahme der E/A und verringerter Cacheeffizienz führen.  
   
--   Zum Speichern des Indexes ist eine größere Menge an Speicherplatz erforderlich. Insbesondere das Hinzufügen von **varchar(max)**, **nvarchar(max)**, **varbinary(max)**oder **xml** -Datentypen als Nichtschlüssel-Indexspalten kann die Anforderungen an den Speicherplatz erheblich erhöhen. Der Grund liegt darin, dass die Spaltenwerte in die Blattebene des Indexes kopiert werden. Daher werden sie sowohl im Index als auch in der Basistabelle gespeichert.  
+-   Zum Speichern des Indexes ist eine größere Menge an Speicherplatz erforderlich. Insbesondere das Hinzufügen von **varchar(max)**, **nvarchar(max)**, **varbinary(max)** oder **xml** -Datentypen als Nichtschlüssel-Indexspalten kann die Anforderungen an den Speicherplatz erheblich erhöhen. Der Grund liegt darin, dass die Spaltenwerte in die Blattebene des Indexes kopiert werden. Daher werden sie sowohl im Index als auch in der Basistabelle gespeichert.  
   
 -   Die Indexwartung kann zu einem größeren Zeitaufwand für das Ausführen von Änderungen, Einfügungen, Updates oder Löschvorgängen an der zugrunde liegenden Tabelle oder indizierten Sicht führen.  
   

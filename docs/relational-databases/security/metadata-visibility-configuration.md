@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subcomponents visibility [SQL Server]
 - metadata [SQL Server], visibility
@@ -26,13 +25,12 @@ caps.latest.revision: 51
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: df71c443adb1e598ddc083a97eb568f0fb3d90ee
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8b0d06ef7357d4986cc9af5902d36939efaadf24
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="metadata-visibility-configuration"></a>Konfigurieren der Sichtbarkeit von Metadaten
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -111,7 +109,7 @@ GO
 ## <a name="benefits-and-limits-of-metadata-visibility-configuration"></a>Vorteile und Einschränkungen der Konfiguration der Metadatensichtbarkeit  
  Die Konfiguration der Metadatensichtbarkeit kann eine wichtige Rolle in Ihrem allgemeinen Sicherheitsplan spielen. Es gibt jedoch Fälle, in denen ein technisch versierter Benutzer das Anzeigen einiger Metadaten erzwingen kann, wenn er das will. Wir empfehlen deshalb, dass Sie neben anderen Schutzmaßnahmen Metadatenberechtigungen bereitstellen.  
   
- Es ist theoretisch möglich, die Ausgabe von Metadaten in Fehlermeldungen zu erzwingen, indem die Reihenfolge der Prädikatauswertung in Abfragen verändert wird. Die Möglichkeit solcher *Trial and Error-Angriffe* ist nicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifisch. Dies wird durch die in relationaler Algebra zulässigen, assoziativen und kommutativen Transformationen impliziert. Sie können dieses Risiko verringern, indem Sie die in Fehlermeldungen zurückgegebenen Informationen einschränken. Um die Sichtbarkeit von Metadaten auf diese Weise noch stärker einzuschränken, können Sie den Server mit dem Ablaufverfolgungsflag 3625 starten. Mit diesem Ablaufverfolgungsflag wird die in Fehlermeldungen angezeigte Menge an Informationen eingeschränkt. Auf diese Weise können Sie die erzwungene Anzeige von Daten verhindern. Der Nachteil hierbei ist jedoch, dass die Fehlermeldungen nicht ausführlich sind und sie u. U. nicht zu Debugzwecken verwendet werden können. Weitere Informationen finden Sie unter [Startoptionen für den Datenbankmoduldienst](../../database-engine/configure-windows/database-engine-service-startup-options.md) und [Ablaufverfolgungsflags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
+ Es ist theoretisch möglich, die Ausgabe von Metadaten in Fehlermeldungen zu erzwingen, indem die Reihenfolge der Prädikatauswertung in Abfragen verändert wird. Die Möglichkeit solcher *Trial and Error-Angriffe* ist nicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifisch. Dies wird durch die in relationaler Algebra zulässigen, assoziativen und kommutativen Transformationen impliziert. Sie können dieses Risiko verringern, indem Sie die in Fehlermeldungen zurückgegebenen Informationen einschränken. Um die Sichtbarkeit von Metadaten auf diese Weise noch stärker einzuschränken, können Sie den Server mit dem Ablaufverfolgungsflag 3625 starten. Mit diesem Ablaufverfolgungsflag wird die in Fehlermeldungen angezeigte Menge an Informationen eingeschränkt. Auf diese Weise können Sie die erzwungene Anzeige von Daten verhindern. Der Nachteil hierbei ist jedoch, dass die Fehlermeldungen nicht ausführlich sind und sie u. U. nicht zu Debugzwecken verwendet werden können. Weitere Informationen finden Sie unter [Startoptionen für den Datenbank-Engine-Dienst](../../database-engine/configure-windows/database-engine-service-startup-options.md) und [Ablaufverfolgungsflags &amp;#40;Transact-SQL&amp;#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
  Für die folgenden Metadaten ist die erzwungene Anzeige nicht möglich:  
   
@@ -166,7 +164,7 @@ GO
  Auf welche Metadaten feste Rollen zugreifen können, richtet sich nach den impliziten Berechtigungen der jeweiligen Rolle.  
   
 ### <a name="scope-of-permissions"></a>Geltungsbereich von Berechtigungen  
- Berechtigungen in einem Geltungsbereich implizieren die Sichtbarkeit von Metadaten in diesem Geltungsbereich sowie in allen eingeschlossenen Geltungsbereichen. So impliziert z. B. die SELECT-Berechtigung für ein Schema, dass der Empfänger dieser Berechtigung die SELECT-Berechtigung auch für alle in diesem Schema enthaltenen sicherungsfähigen Elemente hat. Das Erteilen der SELECT-Berechtigung für ein Schema ermöglicht deshalb einem Benutzer, die Metadaten des Schemas sowie aller Tabellen, Sichten, Funktionen, Prozeduren, Warteschlangen, Synonyme, Typen und XML-Schemaauflistungen, die im Schema enthalten sind, anzuzeigen. Weitere Informationen zu Bereichen finden Sie unter [Berechtigungshierarchie &#40;Datenbankmodul&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md).  
+ Berechtigungen in einem Geltungsbereich implizieren die Sichtbarkeit von Metadaten in diesem Geltungsbereich sowie in allen eingeschlossenen Geltungsbereichen. So impliziert z. B. die SELECT-Berechtigung für ein Schema, dass der Empfänger dieser Berechtigung die SELECT-Berechtigung auch für alle in diesem Schema enthaltenen sicherungsfähigen Elemente hat. Das Erteilen der SELECT-Berechtigung für ein Schema ermöglicht deshalb einem Benutzer, die Metadaten des Schemas sowie aller Tabellen, Sichten, Funktionen, Prozeduren, Warteschlangen, Synonyme, Typen und XML-Schemaauflistungen, die im Schema enthalten sind, anzuzeigen. Weitere Informationen zu Bereichen finden Sie unter [Berechtigungshierarchie &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md).  
   
 ### <a name="precedence-of-deny"></a>Vorrang von DENY  
  DENY hat üblicherweise Vorrang vor anderen Berechtigungen. Wenn einem Datenbankbenutzer z. B. die EXECUTE-Berechtigung für ein Schema erteilt wurde, ihm aber die EXECUTE-Berechtigung für eine gespeicherte Prozedur in diesem Schema verweigert wurde, kann der Benutzer die Metadaten für diese gespeicherte Prozedur nicht anzeigen.  

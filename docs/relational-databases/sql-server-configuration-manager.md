@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 07/13/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: relational-databases-misc
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - protocols [SQL Server], managing
 - network protocols [SQL Server], managing
@@ -28,12 +27,11 @@ caps.latest.revision: 58
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 2d182ecd79c2a5b6f202a57f94d56bb79f58657c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: cb28981e42dd6bc12a4f9b47eb5378db6bacd88e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server-Konfigurations-Manager
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +92,8 @@ ms.lasthandoff: 04/16/2018
 ## <a name="related-tasks"></a>Related Tasks  
  [Verwalten von Diensten: Themen zur Vorgehensweise &#40;SQL Server-Konfigurations-Manager&#41;](http://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
   
- [Starten, Beenden, Anhalten, Fortsetzen und Neustarten des Datenbankmoduls, SQL Server-Agent oder des SQL Server-Browsers](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
+ 
+  [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
  [Starten, Beenden oder Anhalten des SQL Server-Agent-Dienstes](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
   

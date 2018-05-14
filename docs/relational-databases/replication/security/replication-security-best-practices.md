@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [SQL Server replication], best practices
 - security [SQL Server replication], between domains
@@ -22,12 +21,11 @@ caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 3e29fe56cf49342e08cef0fe00fc3b18cbae0adf
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1eb628ec551940c03bdd76b48ed780b233b77584
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="replication-security-best-practices"></a>Bewährte Methoden für die Replikationssicherheit
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +33,7 @@ ms.lasthandoff: 04/16/2018
   
  Folgende Informationen sind für die Replikation in sämtlichen Umgebungen relevant:  
   
--   Verschlüsseln Sie die Verbindungen zwischen Computern in einer Replikationstopologie mithilfe einer Industriestandardmethode, wie beispielsweise Virtual Private Networks (VPN), Secure Sockets Layer (SSL) oder IP Security (IPSEC). Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zum Datenbankmodul &#40;SQL Server-Konfigurations-Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md). Informationen zum Verwenden von VPN und SSL für die Replikation von Daten über das Internet finden Sie unter [Securing Replication Over the Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md).  
+-   Verschlüsseln Sie die Verbindungen zwischen Computern in einer Replikationstopologie mithilfe einer Industriestandardmethode, wie beispielsweise Virtual Private Networks (VPN), Secure Sockets Layer (SSL) oder IP Security (IPSEC). Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp;#40;SQL Server-Konfigurations-Manager&amp;#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md). Informationen zum Verwenden von VPN und SSL für die Replikation von Daten über das Internet finden Sie unter [Securing Replication Over the Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md).  
   
      Wenn Sie SSL zum Sichern der Verbindungen zwischen Computern in einer Replikationstopologie verwenden, geben Sie den Wert **1** oder **2** für den Parameter **-EncryptionLevel** der einzelnen Replikations-Agents an (der Wert **2** wird empfohlen). Mit dem Wert **1** wird angegeben, dass eine Verschlüsselung verwendet wird. Der Agent überprüft aber nicht, ob das SSL-Serverzertifikat von einem vertrauenswürdigen Aussteller signiert wurde. Mit dem Wert **2** wird angegeben, dass das Zertifikat überprüft wurde. Agentparameter können in den Agentprofilen und in der Befehlszeile angegeben werden. Weitere Informationen finden Sie in den folgenden Themen:  
   
@@ -76,7 +74,8 @@ ms.lasthandoff: 04/16/2018
     -   In Situationen, für die die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung erforderlich ist, ist der Zugriff auf die UNC-Momentaufnahmefreigabe oft nicht verfügbar (der Zugriff kann z. B. durch eine Firewall gesperrt sein). In diesem Fall können Sie die Momentaufnahme über das Dateiübertragungsprotokoll (FTP, File Transfer Protokoll) auf Abonnenten übertragen. Weitere Informationen finden Sie unter [Übertragen von Momentaufnahmen über FTP](../../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Aktivieren von verschlüsselten Verbindungen zum Datenbankmodul &#40;SQL Server-Konfigurations-Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
+ 
+  [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp;#40;SQL Server-Konfigurations-Manager&amp;#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replikation über das Internet](../../../relational-databases/replication/replication-over-the-internet.md)   
  [Sichern des Abonnenten](../../../relational-databases/replication/security/secure-the-subscriber.md)   
  [Schützen des Verteilers](../../../relational-databases/replication/security/secure-the-distributor.md)   

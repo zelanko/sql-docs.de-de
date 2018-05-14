@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 05/04/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.alwaysencryptedwizard.encryption.f1
 - sql13.swb.alwaysencryptedwizard.f1
@@ -23,18 +22,17 @@ caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a4c51eabac1ed59fcda896e84aef7525a4271228
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: cd3233b7c6ffc70b0fad8ce71ace6501f79d371a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="always-encrypted-wizard"></a>Always Encrypted-Assistent
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Verwenden Sie den **Always Encrypted-Assistent** zum Schutz sensibler Daten, die in einer SQL Server-Datenbank gespeichert sind. „Immer verschlüsselt“ ermöglicht es Clients, sensible Daten in Clientanwendungen zu verschlüsseln und die Verschlüsselungsschlüssel niemals an SQL Server weiterzugeben. Always Encrypted trennt daher zwischen denjenigen Benutzern, die die Daten besitzen (und sie ansehen können) und denjenigen, die die Daten verwalten, (aber keinen Zugriff haben sollten).  Eine vollständige Beschreibung des Features finden Sie unter [Always Encrypted &#40;Datenbankmodul&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
+Verwenden Sie den **Always Encrypted-Assistent** zum Schutz sensibler Daten, die in einer SQL Server-Datenbank gespeichert sind. „Immer verschlüsselt“ ermöglicht es Clients, sensible Daten in Clientanwendungen zu verschlüsseln und die Verschlüsselungsschlüssel niemals an SQL Server weiterzugeben. Always Encrypted trennt daher zwischen denjenigen Benutzern, die die Daten besitzen (und sie ansehen können) und denjenigen, die die Daten verwalten, (aber keinen Zugriff haben sollten).  Eine vollständige Beschreibung des Features finden Sie unter [Always Encrypted &amp;#40;Datenbank-Engine&amp;#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
  
  - Eine exemplarische End-to-End-Vorgehensweise, die das Konfigurieren von Always Encrypted mit dem Assistenten sowie die Verwendung in einer Clientanwendung veranschaulicht, finden Sie unter [Tutorial zur SQL-Datenbank: Schützen von sensiblen Daten mit Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).  
  
@@ -79,5 +77,6 @@ Verwenden Sie den **Always Encrypted-Assistent** zum Schutz sensibler Daten, die
  - **Spaltenverschlüsselungsschlüssel** werden verwendet, um sensible Daten zu verschlüsseln, die in Datenbankspalten gespeichert sind. Alle Werte in einer Spalte können mit einem einzelnen Spaltenverschlüsselungsschlüssel verschlüsselt werden. Verschlüsselte Werte der Spaltenverschlüsselungsschlüssel werden in der Datenbank in Systemkatalogsichten gespeichert. Sie sollten eine Sicherung der Spaltenverschlüsselungsschlüssel an einem sicheren/vertrauenswürdigen Ort speichern.  
 
  ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- - [Always Encrypted &#40;Datenbankmodul&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ - 
+  [Always Encrypted &amp;#40;Datenbank-Engine&amp;#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  - [Erweiterbare Schlüsselverwaltung mit Azure Key Vault &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  

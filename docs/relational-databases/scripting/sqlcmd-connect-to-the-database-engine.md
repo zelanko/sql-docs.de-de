@@ -1,17 +1,15 @@
 ---
-title: Herstellen einer Verbindung mit dem Datenbankmodul mithilfe von „sqlcmd“ | Microsoft-Dokumentation
+title: Herstellen einer Verbindung mit der Datenbank-Engine mithilfe von „sqlcmd“ | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sqlcmd utility, Database Engine connections
 - Named Pipes [SQL Server], sqlcmd utility
@@ -22,18 +20,17 @@ helpviewer_keywords:
 - client protocols [SQL Server]
 ms.assetid: 74b0fb71-7f8e-4171-9431-d07528532524
 caps.latest.revision: 20
-author: mightypen
+author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 66503e8905b2a081bd1edf27d8533d4381b1e767
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: fb0bccabed3dfb6430a197a443ee6ac0d961b43c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="sqlcmd---connect-to-the-database-engine"></a>Herstellen einer Verbindung mit dem Datenbankmodul mithilfe von „sqlcmd“
+# <a name="sqlcmd---connect-to-the-database-engine"></a>Herstellen einer Verbindung mit der Datenbank-Engine mithilfe von „sqlcmd“
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die Clientkommunikation mit dem TCP/IP-Netzwerkprotokoll (Standardeinstellung) und dem Named Pipes-Protokoll. Auch das Shared Memory-Protokoll steht zur Verfügung, wenn der Client eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz auf demselben Computer herstellt. Zum Auswählen des Protokolls stehen drei allgemeine Methoden zur Verfügung. Das vom **sqlcmd** -Hilfsprogramm verwendete Protokoll wird in der folgenden Reihenfolge bestimmt:  
   

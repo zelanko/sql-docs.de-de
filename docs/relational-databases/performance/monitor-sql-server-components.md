@@ -4,25 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
 caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 98a13e1b94edad10f54f21e1028521696d450f64
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 64eb2996426561b4bc83cc246058e4bef7c9c3ac
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="monitor-sql-server-components"></a>Überwachen von SQL Server-Komponenten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +68,7 @@ ms.lasthandoff: 04/16/2018
 -   Bestimmen des Zeitpunkts für die Änderung der Hardwarekonfiguration.  
   
 ## <a name="select-the-appropriate-tool"></a>Auswählen des geeigneten Tools  
- Nachdem Sie die Gründe für die Überwachung ermittelt haben, müssen Sie die geeigneten Tools für den Typ der Überwachung auswählen. Das Windows-Betriebssystem und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellen einen vollständigen Satz von Tools bereit, um Server in transaktionsintensiven Umgebungen zu überwachen. Diese Tools zeigen den Zustand einer Instanz des SQL Server-Datenbankmoduls oder einer Instanz von SQL Server Analysis Services an.  
+ Nachdem Sie die Gründe für die Überwachung ermittelt haben, müssen Sie die geeigneten Tools für den Typ der Überwachung auswählen. Das Windows-Betriebssystem und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellen einen vollständigen Satz von Tools bereit, um Server in transaktionsintensiven Umgebungen zu überwachen. Diese Tools zeigen den Zustand einer Instanz der SQL Server-Datenbank-Engine oder einer Instanz von SQL Server Analysis Services an.  
   
  Windows stellt die folgenden Tools bereit, um die auf einem Server ausgeführten Anwendungen zu überwachen:  
   

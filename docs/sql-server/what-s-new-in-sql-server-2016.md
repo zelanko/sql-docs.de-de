@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 07/21/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.service: ''
 ms.component: sql-non-specified
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - server-general
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 keywords:
 - Neu SQL Server
 helpviewer_keywords:
@@ -24,12 +23,11 @@ caps.latest.revision: 224
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: d6ac83721d53902cca28f109056c140836054c0c
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: c75528700e090c125f90aad47213d1a2e5332c30
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Was ist neu in SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -44,12 +42,12 @@ Auf dieser Seite finden Sie eine zusammenfassende Übersicht sowie Links zu deta
 - Laden Sie die neueste Version von [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) herunter. 
 - Sie haben ein Azure-Konto? Starten Sie einen [virtuellen Computer mit vorinstalliertem SQL Server 2016](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/).
 
-## <a name="sql-server-2016-database-engine"></a>SQL Server 2016-Datenbankmodul
+## <a name="sql-server-2016-database-engine"></a>SQL Server 2016-Datenbank-Engine
 - Sie können jetzt während der Installation und Einrichtung von SQL Server **mehrere tempDB**-Datenbankdateien konfigurieren.
 - Der neue **Abfragespeicher** speichert Abfragetexte, Ausführungspläne und Leistungsmetriken in der Datenbank und ermöglicht so eine einfache Leistungsüberwachung und Behebung von Leistungsproblemen. Ein Dashboard zeigt an, welche Abfragen am längsten dauern und am meisten Arbeitsspeicher- oder CPU-Ressourcen verbrauchen.
 - **Temporale Tabellen** sind Verlaufstabellen, in denen alle Datenänderungen erfasst werden, einschließlich Datum und Uhrzeit.
 - Die neue integrierte **JSON-Unterstützung** in SQL Server unterstützt Import-, Export-, Analyse- und Speichervorgänge in JSON.
-- Das neue **PolyBase**-Abfragemodul integriert SQL Server mit externen Daten in Hadoop oder Azure Blob Storage. Sie können Daten importieren und exportieren sowie Abfragen ausführen.
+- Die neue **PolyBase**-Abfrage-Engine integriert SQL Server mit externen Daten in Hadoop oder Azure Blob Storage. Sie können Daten importieren und exportieren sowie Abfragen ausführen.
 - Mit dem neuen **Stretch Database**-Feature können Sie Daten aus einer lokalen SQL Server-Datenbank dynamisch und sicher in einer Azure SQL-Datenbank in der Cloud archivieren. SQL Server fragt automatisch sowohl die lokalen Daten als auch die Remotedaten in den verknüpften Datenbanken ab. 
 - **In-Memory-OLTP:** 
     - Unterstützt jetzt die Einschränkungen FOREIGN KEY, UNIQUE und CHECK sowie die nativen kompilierten gespeicherte Prozeduren OR, NOT, SELECT DISTINCT, OUTER JOIN und Unterabfragen in SELECT.
@@ -58,9 +56,10 @@ Auf dieser Seite finden Sie eine zusammenfassende Übersicht sowie Links zu deta
 - Neue Sicherheitsfeatures:
     - **Always Encrypted:** Wenn dieses Feature aktiviert ist, kann nur die Anwendung, die über den Verschlüsselungsschlüssel verfügt, auf die verschlüsselten sensiblen Daten in einer SQL Server 2016-Datenbank zugreifen. Der Schlüssel wird nie an SQL Server übergeben.
     - **Dynamische Datenmaskierung:** Wenn dieses Feature in der Tabellendefinition angegeben ist, werden maskierte Daten für die meisten Benutzer ausgeblendet, und nur Benutzer mit einer UNMASK-Berechtigung können alle Daten anzeigen.
-    - **Sicherheit auf Zeilenebene:** Der Datenzugriff kann auf Ebene des Datenbankmoduls eingeschränkt werden, sodass Benutzer nur die Daten anzeigen können, die für sie relevant sind. 
+    - 
+  **Sicherheit auf Zeilenebene:** Der Datenzugriff kann auf Ebene der Datenbank-Engine eingeschränkt werden, sodass Benutzer nur die Daten anzeigen können, die für sie relevant sind. 
 
-Weitere Informationen finden Sie unter [Datenbankmodul](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md).
+Weitere Informationen finden Sie unter [Datenbank-Engine](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md).
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SQL Server 2016 Analysis Services (SSAS)
 SQL Server 2016 Analysis Services bietet eine verbesserte Leistung und Funktionalität für die Erstellung, Datenbankverwaltung, Filterung, Verarbeitung und viele weitere Vorgänge für Tabellenmodelldatenbanken mit **Kompatibilitätsgrad 1200**.
 - **[SQL Server R Services](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)** integrieren die für die statistische Analyse verwendete Programmiersprache R in SQL Server. 
@@ -70,7 +69,7 @@ SQL Server 2016 Analysis Services bietet eine verbesserte Leistung und Funktiona
 - Der neue Namespace **[Microsoft.AnalysisServices.Tabular](http://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** verwaltet Instanzen und Modelle im tabellarischen Modus. 
 - [Analysis Services Management Objects (AMO)](http://msdn.microsoft.com/library/mt436122.aspx) wurde überarbeitet und enthält jetzt eine zweite Assembly: **Microsoft.AnalysisServices.Core.dll**.
 
-Weitere Informationen finden Sie unter [Analysis Services-Modul (SSAS)](../analysis-services/what-s-new-in-analysis-services.md). 
+Weitere Informationen finden Sie unter [Analysis Services-Engine (SSAS)](../analysis-services/what-s-new-in-analysis-services.md). 
 
 ## <a name="sql-server-2016-integration-services-ssis"></a>SQL Server 2016 Integration Services (SSIS)
 - Unterstützung für **Always On-Verfügbarkeitsgruppen**
@@ -99,7 +98,8 @@ Weitere Informationen finden Sie unter [Master Data Services (MDS)](../master-da
 Microsoft hat die Reporting Services in diesem Release sehr gründlich überarbeitet. 
 - Neues **webbasiertes Berichtportal** mit KPI-Feature
 - Neuer **Publisher für mobile Berichte**
-- **Neu gestaltetes Modul zum Rendern von Berichten**, das HTML5 unterstützt 
+- 
+  **Neu gestaltete Engine zum Rendern von Berichten**, die HTML5 unterstützt 
 - Neue **Diagrammtypen**: Treemap und Sunburst 
 
 Weitere Informationen finden Sie unter [Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
