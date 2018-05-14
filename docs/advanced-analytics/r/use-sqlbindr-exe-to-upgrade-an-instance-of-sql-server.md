@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f58eb498843c259c4bc9ac9a5d453456dac21b54
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: aa67fbf2480de093ffe2f919e9c50ee2d5082b83
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Aktualisieren des Machine learning (R und Python) Komponenten in SQL Server-Instanzen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -305,9 +305,9 @@ Wenn Sie den Ordner mit einem Namen wie folgt finden, können Sie diesen entfern
 
 <a name="sqlbinder-error-codes"><a/>
 
-### <a name="errors"></a>Fehler
+## <a name="binding-errors"></a>Bindungsfehler
 
-Die Abfrage gibt die folgenden Fehlermeldungen zurück:
+MLS Installer und SqlBindR werden die folgenden Fehlercodes und Nachrichten zurückgegeben.
 
 |Fehlercode  | MessageBox           | Details               |
 |------------|-------------------|-----------------------|
@@ -317,7 +317,7 @@ Die Abfrage gibt die folgenden Fehlermeldungen zurück:
 |Binden Sie Fehler 3 | Ungültige Instanz | Eine Instanz vorhanden ist, jedoch ist für die Bindung ungültig. |
 |Binden Sie Fehler 4 | Nicht bindbar. | |
 |Fehler: 5 binden | Bereits gebunden. | Sie haben den *bind* -Befehl ausgeführt, die angegebene Instanz ist aber bereits gebunden. |
-|Fehler: 6 binden | Fehler beim Binden | Fehler beim Aufheben der Bindung der Instanz. Dieser Fehler kann auftreten, wenn Sie das MLS-Installationsprogramm ausführen, ohne Sie alle Funktionen auswählen.|
+|Fehler: 6 binden | Fehler beim Binden | Fehler beim Aufheben der Bindung der Instanz. Dieser Fehler kann auftreten, wenn Sie das MLS-Installationsprogramm ausführen, ohne Sie alle Funktionen auswählen. Bindung erfordert, dass die Auswahl einer MSSQL-Instanz und die R und Python, vorausgesetzt, die Instanz ist SQL Server-2017.|
 |Binden Sie Fehler 7 | Nicht gebunden | Die Datenbank-Modulinstanz verfügt über R Services oder SQL Server-Machine Learning-Services. Die Instanz ist nicht an Microsoft Machine Learning-Server gebunden. |
 |Binden Sie Fehler 8 | Aufheben der Bindung fehlgeschlagen | Fehler beim Aufheben der Bindung der Instanz. |
 |Binden Sie Fehler 9 | Keine Instanzen gefunden | Auf diesem Computer wurden keine Datenbank-Engine-Instanzen gefunden. |

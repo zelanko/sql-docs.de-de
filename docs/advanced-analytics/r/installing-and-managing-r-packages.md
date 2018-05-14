@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 48fb451e35f58cf606c47cd64cf5f9093069c274
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: 9df4ec00d1800ebfbe8725d26d4bf220eda49566
+ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="default-r-and-python-packages-in-sql-server"></a>Standard-R und Python-Paketen in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,23 +31,23 @@ Auch wenn Sie den Computer besitzen, sollten Sie die Nützlichkeit der jedes bes
 
 ### <a name="in-database-engine-instance-file-paths"></a>Im Datenbankmodul-Instanz Dateipfade
 
-Die folgende Tabelle zeigt den Speicherort von R und Python für Version und Datenbank Kombinationen der Datenbankmodul-Instanz. 
+Die folgende Tabelle zeigt den Speicherort von R und Python für Version und Datenbank Kombinationen der Datenbankmodul-Instanz. MSSQL13 gibt an, SQL Server 2016 und wird nur für R. MSSQL14 gibt SQL Server-2017 an und weist R und Python-Ordner. 
 
-|Version | Instanzname|Standardpfad|
-|--------|--------------|------------|
-| SQL Server 2016 |Standardinstanz| C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\R_SERVICES\library|
-| SQL Server 2016 |Benannte Instanz | C:\Programme\Microsoft SQL Server\MSSQL13. < Instanzname > \R_SERVICES\library|
-| SQLServer 2017 mit R|Standardinstanz | C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES\library |
-| SQLServer 2017 mit R|Benannte Instanz| C:\Program Files\Microsoft SQL Server\MSSQL14. MyNamedInstance\R_SERVICES\library |
-| SQLServer 2017 mit Python |Standardinstanz | C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\library |
-| SQLServer 2017 mit Python|Benannte Instanz| C:\Programme\Microsoft SQL Server\MSSQL14. < Instanzname > \PYTHON_SERVICES\library |
+Dateipfade umfassen auch Instanznamen. SQL Server installiert [Datenbank Instanzen des Datenbankmoduls](../../database-engine/configure-windows/database-engine-instances-sql-server.md) als Standardinstanz (MSSQLSERVER) oder als eine benutzerdefinierte benannte Instanz. Wenn SQL Server als benannte Instanz installiert ist, wird dieses Namens angehängt wie folgt angezeigt: `MSSQL13.<instance_name>`.
+
+|Version und Sprache  | Standardpfad|
+|----------------------|------------|
+| SQL Server 2016 |C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\R_SERVICES\library|
+| SQLServer 2017 mit R|C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES\library |
+| SQLServer 2017 mit Python |C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\Lib\site-Pakete |
+
 
 ### <a name="standalone-server-file-paths"></a>Eigenständige Server Dateipfade 
 
 Die folgende Tabelle enthält die Standardpfade der Binärdateien aus, wenn SQL Server 2016 R Server (eigenständig) oder SQL Server 2017 Machine Learning-Server (eigenständig) Server installiert ist. 
 
 |Version| Installation|Standardpfad|
-|------|------|------|
+|-------|-------------|------------|
 | SQL Server 2016|R-Server (eigenständig)| C:\Program Files\Microsoft SQL Server\130\R_SERVER|
 |SQL Server 2017|Machine Learning-Server mit R |C:\Program Files\Microsoft SQL Server\140\R_SERVER|
 |SQL Server 2017|Machine Learning-Server mit Python |C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER|
@@ -61,17 +61,23 @@ Dieser Abschnitt fasst die R und Python Features in einer Standardinstallation z
 
 ### <a name="r-components"></a>R-Komponenten
 
-Open-Source-R ist Microsofts Verteilung [Microsoft R Open (MRO)](https://mran.microsoft.com/open). Base R-Pakete enthalten grundlegende Funktionen, z. B. **Stats** und **Utils**. Sie können ausführen `installed.packages(priority = "base")` um eine Liste der Pakete zurück. Eine Basisinstallation von R hinaus zahlreiche beispieldatasets und R-Standardtools wie "rgui.exe" (eine einfache interaktive-Editor) und RTerm (ein R-Eingabeaufforderung).
+Open-Source-R ist Microsofts Verteilung [Microsoft R Open (MRO)](https://mran.microsoft.com/open). Sprachunterstützung für R enthält grundlegende Funktionen, wie z. B. **Basis**, **Stats**, **Utils**, und andere. Eine Basisinstallation von R enthält außerdem zahlreiche beispieldatasets und R-Standardtools wie z. B. **"rgui.exe"** (eine einfache interaktive-Editor) und **RTerm** (ein R-Eingabeaufforderung). MRO fügt Wert Basis R von einschließlich zusätzliche Open-Source-Pakete, wie z. B. die [mathematische Kernenbibliothek von Intel](https://en.wikipedia.org/wiki/Math_Kernel_Library).
 
-Proprietäre R-Pakete enthalten ["revoscaler"](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) für remote rechenkontexte, streaming, Rx-Funktionen für den Datenimport und die Transformation für die Ausführung paralleler, Modellierung und Visualisierung und Analyse. [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package) fügt Machine Learning in r Modellierung Andere Microsoft-Pakete enthalten [OlapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) zum Schreiben von MDX-Anweisungen in R und [Sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) zum Einschließen von R-Skripts in gespeicherten Prozeduren.
+Proprietäre R-Pakete in Ihrer Installation enthalten sein:
 
++ ["Revoscaler"](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) für remote rechenkontexte, streaming, Rx-Funktionen für den Datenimport und die Transformation für die Ausführung paralleler, Modellierung und Visualisierung und Analyse. 
++ [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package) fügt Machine Learning in r Modellierung
++ [OlapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) zum Schreiben von MDX-Anweisungen in R.
++ [Sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) zum Einschließen von R-Skripts in gespeicherten Prozeduren.
+
+In der folgenden Tabelle werden zusammengefasst, die Version von R von MRO als auch die Microsoft-Pakete, die mit bestimmten in-Database-Analyse-Module installiert wird.
 
 |Release             | R-version       | Microsoft-Pakete    |
 |--------------------|-----------------|-----------------------|
-| SQL Server 2016 R Services | 3.2.2   | "Revoscaler", sqlrutil  |
-| SQL Server 2017-Machine Learning-Dienste| 3.3.3 | "Revoscaler", MicrosoftML, OlapR, sqlrutil|
+| [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) | 3.2.2   | "Revoscaler", sqlrutil  |
+| [SQL Server 2017 Machine Learning-Dienste](../install/sql-machine-learning-services-windows-install.md) | 3.3.3 | "Revoscaler", MicrosoftML, OlapR, sqlrutil|
 
-Sie können R-Komponenten Pakete aktualisieren, fügen neue R-Pakete und vorinstallierte Modelle von Bindung hinzu Supportrichtlinie für moderne Lebenszyklus. Bindung ändert das Dienstmodell. Standardmäßig werden R-Pakete nach der ersten Installation über Servicepacks und kumulativen Updates aktualisiert. Zusätzliche Pakete und vollständige Versionsupgrade für R-Kernkomponenten sind nur möglich, über Produktupgrades (von SQL Server 2016, SQL Server-2017) oder durch das Binden von R mit Microsoft Machine Learning-Server unterstützen. Weitere Informationen finden Sie unter [R aktualisieren und Python-Komponenten in SQL Server](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+Können Sie R-Komponenten Pakete aktualisieren, Hinzufügen von neuen R-Pakete und vorinstallierte Modellen von *Bindung* für die moderne Lifecycle Support-Richtlinie. Bindung ändert das Dienstmodell. Standardmäßig werden R-Pakete nach der ersten Installation über Servicepacks und kumulativen Updates aktualisiert. Zusätzliche Pakete und vollständige Versionsupgrade für R-Kernkomponenten sind nur möglich, über Produktupgrades (von SQL Server 2016, SQL Server-2017) oder durch das Binden von R mit Microsoft Machine Learning-Server unterstützen. Weitere Informationen finden Sie unter [R aktualisieren und Python-Komponenten in SQL Server](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 ### <a name="python-components"></a>Python-Komponenten
 
