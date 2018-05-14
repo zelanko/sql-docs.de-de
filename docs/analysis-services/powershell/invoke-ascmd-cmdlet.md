@@ -3,17 +3,17 @@ title: Cmdlet "Invoke-ASCmd" | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: ''
+ms.custom: powershell
 ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ac32e81d735b9fe6ea3641b88481d69dd3bddc66
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: cf570da0e7be70fda804a3f17d11f6c8498c1605
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="invoke-ascmd-cmdlet"></a>Invoke-ASCmd-Cmdlet
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -167,7 +167,7 @@ ms.lasthandoff: 05/03/2018
 |Platzhalterzeichen akzeptieren?|false|  
   
 ### <a name="-tracetimeout-int"></a>-TraceTimeout \<Int >  
- Gibt an, wie viele Sekunden das Analysis Services-Modul wartet, bevor die Ablaufverfolgung beendet wird (wenn der –TraceFile-Parameter angegeben wird). Die Ablaufverfolgung gilt als beendet, wenn während des angegebenen Zeitraums keine Meldungen zur Ablaufverfolgung aufgezeichnet wurden. Standardmäßig beträgt der Timeoutwert für die Ablaufverfolgung 5 Sekunden.  
+ Gibt an, wie viele Sekunden die Analysis Services-Engine wartet, bevor die Ablaufverfolgung beendet wird (wenn der –TraceFile-Parameter angegeben wird). Die Ablaufverfolgung gilt als beendet, wenn während des angegebenen Zeitraums keine Meldungen zur Ablaufverfolgung aufgezeichnet wurden. Standardmäßig beträgt der Timeoutwert für die Ablaufverfolgung 5 Sekunden.  
   
 |||  
 |-|-|  
