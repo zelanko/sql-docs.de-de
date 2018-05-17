@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: t-sql|queries
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -35,16 +33,15 @@ helpviewer_keywords:
 - summary values [SQL Server]
 ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 caps.latest.revision: 80
-author: barbkess
-ms.author: barbkess
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f83c1fa093977eb77fec9f58c0f02223ce581212
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 47f0a4be2697714c9fa41c632337c5da7863510d
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT – GROUP BY – Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -154,7 +151,7 @@ Die Sales-Tabelle enthält folgende Zeilen:
 | Canada | Alberta | 100 |
 | Canada | British Columbia | 200 |
 | Canada | British Columbia | 300 |
-| United States | Montana | 100 |
+| USA | Montana | 100 |
 
 Die nächste Abfrage gruppiert Land und Region und gibt die aggregierte Summe für jede Wertkombination zurück.  
  
@@ -169,7 +166,7 @@ Das Abfrageergebnis enthält 3 Zeilen, da 3 Wertkombinationen für Land und Regi
 |---------|--------|-------|
 | Canada | Alberta | 100 |
 | Canada | British Columbia | 500 |
-| United States | Montana | 100 |
+| USA | Montana | 100 |
 
 ### <a name="group-by-rollup"></a>GROUP BY ROLLUP
 
@@ -200,8 +197,8 @@ Das Abfrageergebnis enthält die gleichen Aggregationen wie der einfache GROUP B
 | Canada | Alberta | 100 |
 | Canada | British Columbia | 500 |
 | Canada | NULL | 600 |
-| United States | Montana | 100 |
-| United States | NULL | 100 |
+| USA | Montana | 100 |
+| USA | NULL | 100 |
 | NULL | NULL | 700 |
 
 ### <a name="group-by-cube--"></a>GROUP BY CUBE ( )  
@@ -224,11 +221,11 @@ Das Abfrageergebnis enthält Gruppen für eindeutige Werte von (Land, Region), (
 | NULL | Alberta | 100 |
 | Canada | British Columbia | 500 |
 | NULL | British Columbia | 500 |
-| United States | Montana | 100 |
+| USA | Montana | 100 |
 | NULL | Montana | 100 |
 | NULL | NULL | 700
 | Canada | NULL | 600 |
-| United States | NULL | 100 |
+| USA | NULL | 100 |
    
  ### <a name="group-by-grouping-sets--"></a>GROUP BY GROUPING SETS ( )  
  
@@ -351,15 +348,15 @@ Die GROUP BY-Klausel unterstützt alle GROUP BY-Features, die in SQL 2006-Standa
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |DISTINCT-Aggregate|Nicht unterstützt für WITH CUBE oder WITH ROLLUP.|Unterstützt für WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE oder ROLLUP.|Wie bei Kompatibilitätsgrad 100|  
 |Benutzerdefinierte Funktion mit CUBE- oder ROLLUP-Namen in der GROUP BY-Klausel|Benutzerdefinierte Funktionen **dbo.cube(***arg1***,***...argN***)** oder **dbo.rollup(***arg1***,**...*argN***)** in der GROUP BY-Klausel sind zulässig.<br /><br /> Beispiel: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|Benutzerdefinierte Funktionen **dbo.cube (***arg1***,**...argN **)** oder **dbo.rollup(** arg1 **,***...argN***)** in der GROUP BY-Klausel sind nicht zulässig.<br /><br /> Beispiel: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Es wird folgende Fehlermeldung zurückgegeben: "Incorrect syntax near the keyword 'cube'&#124;'rollup'." (Falsche Syntax in der Nähe des 'cube'&#124;'rollup'-Schlüsselworts.).<br /><br /> Ersetzen Sie `dbo.cube` durch `[dbo].[cube]` oder `dbo.rollup` durch `[dbo].[rollup]`, um dieses Problem zu vermeiden.<br /><br /> Das folgende Beispiel ist zulässig: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|Benutzerdefinierte Funktionen *dbo.cube ***(arg1***,***...argN*) oder **dbo.rollup(***arg1***,***...argN***)** in der GROUP BY-Klausel sind zulässig.<br /><br /> Beispiel: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
-|GROUPING SETS|Nicht unterstützt|Supported|Supported|  
-|CUBE|Nicht unterstützt|Supported|Nicht unterstützt|  
-|ROLLUP|Nicht unterstützt|Supported|Nicht unterstützt|  
-|Gesamtergebnis, z. B. GROUP BY ()|Nicht unterstützt|Supported|Supported|  
-|GROUPING_ID-Funktion|Nicht unterstützt|Supported|Supported|  
-|GROUPING-Funktion|Supported|Supported|Supported|  
-|WITH CUBE|Supported|Supported|Supported|  
-|WITH ROLLUP|Supported|Supported|Supported|  
-|WITH CUBE- oder WITH ROLLUP-Entfernung "doppelter" Gruppierungen|Supported|Supported|Supported| 
+|GROUPING SETS|Nicht unterstützt|Unterstützt|Unterstützt|  
+|CUBE|Nicht unterstützt|Unterstützt|Nicht unterstützt|  
+|ROLLUP|Nicht unterstützt|Unterstützt|Nicht unterstützt|  
+|Gesamtergebnis, z. B. GROUP BY ()|Nicht unterstützt|Unterstützt|Unterstützt|  
+|GROUPING_ID-Funktion|Nicht unterstützt|Unterstützt|Unterstützt|  
+|GROUPING-Funktion|Unterstützt|Unterstützt|Unterstützt|  
+|WITH CUBE|Unterstützt|Unterstützt|Unterstützt|  
+|WITH ROLLUP|Unterstützt|Unterstützt|Unterstützt|  
+|WITH CUBE- oder WITH ROLLUP-Entfernung "doppelter" Gruppierungen|Unterstützt|Unterstützt|Unterstützt| 
  
   
 ## <a name="examples"></a>Beispiele  

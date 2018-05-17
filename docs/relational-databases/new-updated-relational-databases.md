@@ -7,14 +7,16 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql
+ms.technology: release-landing
+ms.prod: sql
+ms.prod_service: sql-non-specified
 ms.component: relational-databases
-ms.date: 02/03/2018
-ms.openlocfilehash: fc37abbb88aa597a6173fa5579fa320e0024581f
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.date: 04/28/2018
+ms.openlocfilehash: a885befe2411a76dc8c68bf2a7b543a838a52877
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-and-recently-updated-relational-databases-docs"></a>Neu und zuletzt aktualisiert: Dokumentation zu relationalen Datenbanken
 
@@ -28,7 +30,7 @@ Neueste Updates werden für den folgenden Datumsbereich und Themenbereich gemeld
 
 
 
-- *Datumsbereich des Updates:* &nbsp; **3.12.2017** &nbsp; bis &nbsp; **3.2.2018**
+- *Datumsbereich des Updates:* &nbsp; **03.02.2018** &nbsp; bis &nbsp; **28.04.2018**
 - *Themenbereich:* &nbsp; **Relationale Datenbanken**
 
 
@@ -41,8 +43,13 @@ Neueste Updates werden für den folgenden Datumsbereich und Themenbereich gemeld
 Die folgenden Links leiten Sie zu den neuen Artikeln weiter, die erst kürzlich erstellt wurden.
 
 
-1. [Speichern von JSON-Dokumenten in SQL Server oder SQL-Datenbank](json/store-json-documents-in-sql-tables.md)
-2. [Sicherheitsrisikobewertung mit der SQL](security/sql-vulnerability-assessment.md)
+1. [Joins (SQL Server)](performance/joins.md)
+2. [Unterabfragen (SQL Server)](performance/subqueries.md)
+3. [Einrichten der Verteilungsdatenbank für die Replikation in einer Always On-Verfügbarkeitsgruppe](replication/configure-distribution-availability-group.md)
+4. [SQL-Datenermittlung und -klassifizierung](security/sql-data-discovery-and-classification.md)
+5. [Handbuch zu Transaktionssperren und Zeilenversionsverwaltung](sql-server-transaction-locking-and-row-versioning-guide.md)
+6. [sys.dm_os_job_object (Azure SQL-Datenbank)](system-dynamic-management-views/sys-dm-os-job-object-transact-sql.md)
+7. [Gespeicherte Systemprozeduren für Filestream und FileTable (Transact-SQL)](system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)
 
 
 
@@ -68,15 +75,16 @@ Kopieren Sie aus diesem und anderen Gründen auf gar keinen Fall Code aus diesen
 
 Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Abschnitt Auszüge aufgeführt sind.
 
-1. [Datenbankdatei-Initialisierung](#TitleNum_1)
-2. [tempdb-Datenbank](#TitleNum_2)
-3. [JSON-Daten in SQL Server](#TitleNum_3)
-4. [Lektion 1: Herstellen einer Verbindung mit dem Datenbankmodul](#TitleNum_4)
-5. [Verwalten der Größe der Transaktionsprotokolldatei](#TitleNum_5)
-6. [bcp_bind](#TitleNum_6)
-7. [Handbuch zum SQL Server Indexentwurf](#TitleNum_7)
-8. [sp_execute_external_script (Transact-SQL)](#TitleNum_8)
-9. [Erstellen von Primärschlüsseln](#TitleNum_9)
+1. [Überspringen einer Tabellenspalte mithilfe einer Formatdatei (SQL Server)](#TitleNum_1)
+2. [JSON-Daten in SQL Server](#TitleNum_2)
+3. [Handbuch zur Architektur der Abfrageverarbeitung](#TitleNum_3)
+4. [Tutorial: Prepare SQL Server For Replication - Publisher, Distributor, Subscriber (Tutorial: Vorbereiten von SQL Server auf die Replikation (Verleger, Verteiler und Abonnent))](#TitleNum_4)
+5. [Tutorial: Konfigurieren der Replikation zwischen zwei Servern mit kontinuierlicher Verbindung (transaktional)](#TitleNum_5)
+6. [Tutorial: Konfigurieren der Replikation zwischen einem Server und mobilen Clients (Mergereplikation)](#TitleNum_6)
+7. [Abfragen mit Volltextsuche](#TitleNum_7)
+8. [Transparent Data Encryption mit Bring Your Own Key-Unterstützung für Azure SQL-Datenbank und Data Warehouse](#TitleNum_8)
+9. [PowerShell und CLI: Aktivieren von Transparent Data Encryption mithilfe eines eigenen Azure Key Vault-Schlüssels](#TitleNum_9)
+10. [Über Change Data Capture (SQL Server)](#TitleNum_10)
 
 
 
@@ -87,32 +95,43 @@ Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Absch
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-database-file-initializationdatabasesdatabase-instant-file-initializationmd"></a>1. &nbsp; [Datenbankdatei-Initialisierung](databases/database-instant-file-initialization.md)
+### <a name="1-nbsp-use-a-format-file-to-skip-a-table-column-sql-serverimport-exportuse-a-format-file-to-skip-a-table-column-sql-servermd"></a>1. &nbsp; [Überspringen einer Tabellenspalte mithilfe einer Formatdatei (SQL Server)](import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)
 
-*Aktualisiert: 23.1.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Weiter](#TitleNum_2))
+*Aktualisiert: 13.04.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Weiter](#TitleNum_2))
 
-<!-- Source markdown line 81.  ms.author= "sstein".  -->
+<!-- Source markdown line 221.  ms.author= "douglasl".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 c5f2aa53a8b43d4c43e0602cf945cb7c7028a27d 04c261c6588af1f53cda2fce3e9a86167c50b686  (PR=4702  ,  Filename=database-instant-file-initialization.md  ,  Dirpath=docs\relational-databases\databases\  ,  MergeCommitSha40=3206a31870f8febab7d1718fa59fe0590d4d45db) -->
+<!-- git diff --ignore-all-space --unified=0 167916d79c5de1e7f13990cb7acc41ceb541b9a7 cb92eb201292294e3397879c98f353fba45f1c1c  (PR=0  ,  Filename=use-a-format-file-to-skip-a-table-column-sql-server.md  ,  Dirpath=docs\relational-databases\import-export\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
+
+**Verwenden von OPENROWSET(BULK...)**
+
+
+Um eine XML-Formatdatei zu verwenden, die unter Verwendung von `OPENROWSET(BULK...)` eine Tabellenspalte überspringt, muss eine explizite Liste von Spalten in der Auswahlliste und in der Zieltabelle angegeben werden:
 
 ```
-Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
+    INSERT ...<column_list> SELECT <column_list> FROM OPENROWSET(BULK...)
 ```
 
-**Gilt für:** SQL Server (ab SQL Server 2012 SP4, SQL Server 2014 SP2 und von SQL Server 2016 bis SQL Server 2017)
+Im folgenden Beispiel werden der Massenrowsetanbieter `OPENROWSET` und die Formatdatei `myTestSkipCol2.xml` verwendet. Die Datendatei `myTestSkipCol2.dat` wird per Massenimport in die `myTestSkipCol` -Tabelle übertragen. Die Anweisung enthält anforderungsgemäß eine explizite Liste der Spalten in der Auswahlliste und in der Zieltabelle.
 
-**Überlegungen zur Sicherheit**
+Führen Sie den folgenden Code in SSMS aus: Aktualisieren Sie die Dateisystempfade für den Speicherort der Beispieldateien auf Ihrem Computer.
 
-Da bei Verwendung der schnellen Dateiinitialisierung (Instant File Initialization, IFI) der gelöschte Datenträgerinhalt nur überschrieben wird, wenn neue Daten in die Dateien geschrieben werden, kann ein nicht autorisierter Prinzipal möglicherweise so lange auf den gelöschten Inhalt zugreifen, bis andere Daten in diesen Bereich der Datendatei geschrieben werden. Während die Datenbankdatei an die Instanz von SQL Server angefügt ist, wird diese Gefahr einer Offenlegung von Informationen durch die besitzerverwaltete Zugriffssteuerungsliste (Discretionary Access Control List, DACL) in der Datei verringert. Diese DACL gewährt den Dateizugriff nur für das SQL Server-Dienstkonto und den lokalen Administrator. Wenn die Datei jedoch getrennt wird, kann möglicherweise ein Benutzer oder Dienst darauf zugreifen, der nicht über SE\_MANAGE\_VOLUME_NAME verfügt. Eine ähnliche Betrachtung ergibt sich bei der Sicherung der Datenbank: Der gelöschte Inhalt kann für einen nicht autorisierten Benutzer oder Dienst verfügbar werden, wenn die Sicherungsdatei nicht mit einer entsprechenden DACL geschützt wird.
-
-Außerdem kann es sein, dass ein SQL Server-Administrator Zugriff auf die grundlegenden Inhalte der Seite und bereits gelöschte Inhalte erhält, wenn eine Datei über die schnelle Dateiinitialisierung erstellt wird.
-
-Wenn die Datenbankdateien auf einem Storage Area Network gehostet werden, kann es außerdem sein, dass das Storage Area Network neue Seiten immer als vorinitialisiert anzeigt und die Vorinitialisierung der Seiten durch das Betriebssystem würde einen unnötigen zeitlichen Mehraufwand bedeuten.
+```
+USE WideWorldImporters;
+GO
+INSERT INTO myTestSkipCol
+  (Col1,Col3)
+    SELECT Col1,Col3
+      FROM  OPENROWSET(BULK  'C:\myTestSkipCol2.Dat',
+      FORMATFILE='C:\myTestSkipCol2.Xml'
+       ) as t1 ;
+GO
+```
 
 
 
@@ -124,46 +143,53 @@ Wenn die Datenbankdateien auf einem Storage Area Network gehostet werden, kann e
 
 <a name="TitleNum_2"/>
 
-### <a name="2-nbsp-tempdb-databasedatabasestempdb-databasemd"></a>2. &nbsp; [tempdb-Datenbank](databases/tempdb-database.md)
+### <a name="2-nbsp-json-data-in-sql-serverjsonjson-data-sql-servermd"></a>2. &nbsp; [JSON-Daten in SQL Server](json/json-data-sql-server.md)
 
-*Aktualisiert: 17.1.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Vorheriger](#TitleNum_1) | [Nächster](#TitleNum_3))
+*Aktualisiert: 13.04.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Vorheriger](#TitleNum_1) | [Nächster](#TitleNum_3))
 
-<!-- Source markdown line 100.  ms.author= "sstein".  -->
+<!-- Source markdown line 145.  ms.author= "jovanpop".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 337555ea28f4c3fdd6b78f1bfb4d62607a6bf92d 3257c92d6e2a88968fc44e5f6262c02cd0624635  (PR=0  ,  Filename=tempdb-database.md  ,  Dirpath=docs\relational-databases\databases\  ,  MergeCommitSha40=45e6082acc29ba306525e7c08d2c22cc2b86eec3) -->
+<!-- git diff --ignore-all-space --unified=0 19e276637a463b412f2c29a84f9fb7d0b0f5fcc5 e2f2e8b4732779b3f24561cc0c4da3a958f4edbb  (PR=0  ,  Filename=json-data-sql-server.md  ,  Dirpath=docs\relational-databases\json\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
- Eine Beschreibung dieser Datenbankoptionen finden Sie unter [ALTER DATABASE SET-Optionen (Transact-SQL)](databases/../../t-sql/statements/alter-database-transact-sql-set-options.md).
+JSON-Dokumente enthalten möglicherweise untergeordnete Elemente und hierarchische Daten, die relationalen Standardspalten nicht direkt zugeordnet werden können. Sie können in diesem Fall die JSON-Hierarchie vereinfachen, indem Sie die übergeordnete Entität mit untergeordneten Arrays verknüpfen.
 
-**tempdb-Datenbank in SQL-Datenbank**
+Im folgenden Beispiel weist das zweite Objekt des Arrays untergeordnete Arrays auf, die Fähigkeiten von Personen darstellen (Skills-Array). Jedes untergeordnete Objekt kann mithilfe des zusätzlichen Funktionsaufrufs `OPENJSON` analysiert werden:
 
+```
+DECLARE @json NVARCHAR(MAX)
+SET @json =
+N'[
+       { "id" : 2,"info": { "name": "John", "surname": "Smith" }, "age": 25 },
+       { "id" : 5,"info": { "name": "Jane", "surname": "Smith", "skills": ["SQL", "C#", "Azure"] }, "dob": "2005-11-04T12:00:00" }
+ ]'
 
-|SLO|Maximale Dateigröße für tempdb-Daten (MB)|Anzahl von tempdb-Datendateien|Maximale Datengröße für tempdb (MB)|
-|---|---:|---:|---:|
-|Standard|14,225|1|14,225|
-|S0|14,225|1|14,225|
-|S1|14,225|1|14,225|
-|S2|14,225| 1|14,225|
-|S3|32,768|1|32,768|
-|S4|32,768|2|65,536|
-|S6|32,768|3|98,304|
-|S7|32,768|6|196,608|
-|S9|32,768|12|393,216|
-|S12|32,768|12|393,216|
-|P1|32,768|12|393,216|
-|P2|32,768|12|393,216|
-|P4|32,768|12|393,216|
-|P6|32,768|12|393,216|
-|P11|32,768|12|393,216|
-|P15|32,768|12|393,216|
-|Elastischer Premium-Pool (alle DTU-Konfigurationen)|14,225|12|170,700|
-|Elastischer Standard-Pool (alle DTU-Konfigurationen)|14,225|12|170,700|
-|Elastischer Basic-Pool (alle DTU-Konfigurationen)|14,225|12|170,700|
-||||
+SELECT *
+FROM OPENJSON(@json)
+  WITH (id int 'strict $.id',
+        firstName nvarchar(50) '$.info.name', lastName nvarchar(50) '$.info.surname',
+        age int, dateOfBirth datetime2 '$.dob',
+    skills nvarchar(max) '$.skills' as json)
+    outer apply openjson( a.skills )
+                     with ( skill nvarchar(8) '$' ) as b
+```
+Das **Skills**-Array wird im ersten `OPENJSON`-Element als das ursprüngliche JSON-Textfragment angegeben und mithilfe des `APPLY`-Operators an eine andere `OPENJSON`-Funktion übergeben. Die zweite `OPENJSON`-Funktion analysiert das JSON-Array und gibt Zeichenfolgenwerte als Rowsets mit nur einer Spalte zurück, die mit dem Ergebnis des ersten `OPENJSON`-Elements verknüpft werden.
+Das Ergebnis dieser Abfrage wird in der folgenden Tabelle dargestellt:
+
+**Ergebnisse**
+
+|id|firstName|lastName|age|dateOfBirth|skill|
+|--------|---------------|--------------|---------|-----------------|----------|
+|2|John|Smith|25|||
+|5|Jane|Smith||2005-11-04T12:00:00|SQL|
+|5|Jane|Smith||2005-11-04T12:00:00|C#|
+|5|Jane|Smith||2005-11-04T12:00:00|Azure|
+
+`OUTER APPLY OPENJSON` verknüpft die Entität auf der ersten Ebene mit dem untergeordneten Array und gibt ein vereinfachtes Resultset zurück. Aufgrund der JOIN-Methode wird die zweite Zeile für jedes Skill-Array wiederholt.
 
 
 
@@ -176,40 +202,54 @@ Wenn die Datenbankdateien auf einem Storage Area Network gehostet werden, kann e
 
 <a name="TitleNum_3"/>
 
-### <a name="3-nbsp-json-data-in-sql-serverjsonjson-data-sql-servermd"></a>3. &nbsp; [JSON-Daten in SQL Server](json/json-data-sql-server.md)
+### <a name="3-nbsp-query-processing-architecture-guidequery-processing-architecture-guidemd"></a>3. &nbsp; [Leitfaden zur Architektur der Abfrageverarbeitung](query-processing-architecture-guide.md)
 
-*Aktualisiert: 1.2.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Vorheriger](#TitleNum_2) | [Nächster](#TitleNum_4))
+*Aktualisiert: 13.04.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Vorheriger](#TitleNum_2) | [Nächster](#TitleNum_4))
 
-<!-- Source markdown line 233.  ms.author= "douglasl".  -->
+<!-- Source markdown line 34.  ms.author= "jroth".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 62dd9c68d8cb72d6bf51b941a0731224514f0a7f 19e276637a463b412f2c29a84f9fb7d0b0f5fcc5  (PR=4783  ,  Filename=json-data-sql-server.md  ,  Dirpath=docs\relational-databases\json\  ,  MergeCommitSha40=73f18ae24a9a48234bf997ee9a2ef441bc4918b9) -->
+<!-- git diff --ignore-all-space --unified=0 96d91b39acdb2f32aaff323e374e92d6f229d241 2c1d2f8585632ada174388399782dc3ed2721dba  (PR=0  ,  Filename=query-processing-architecture-guide.md  ,  Dirpath=docs\relational-databases\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
--   [Load GeoJSON data into SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/loading-geojson-data-into-sql-server/)
+**Rangfolge logischer Operatoren**
 
-**Analysieren von JSON-Daten mit SQL-Abfragen**
 
-Wenn Sie JSON-Daten für Berichtszwecke filtern oder aggregieren müssen, können Sie JSON mithilfe von **OPENJSON** in ein relationales Format transformieren. Sie können dann Standard-Transact-SQL-Funktionen oder integrierte Funktionen verwenden, um die Berichte vorzubereiten.
+Wenn mehr als ein logischer Operator in einer Anweisung verwendet wird, wird `NOT` zuerst ausgewertet, dann `AND` und schließlich `OR`. Arithmetische (und bitweise) Operatoren werden vor logischen Operatoren verarbeitet. Weitere Informationen finden Sie unter „Operator Precedence“ (Operatorrangfolge).
+
+Im folgenden Beispiel ist die Color-Bedingung nur für ProductModel 21 anwendbar und nicht für ProductModel 20, weil `AND` Vorrang gegenüber `OR` hat.
 
 ```
-SELECT Tab.Id, SalesOrderJsonData.Customer, SalesOrderJsonData.Date
-FROM   SalesOrderRecord AS Tab
-          CROSS APPLY
-     OPENJSON (Tab.json, N'$.Orders.OrdersArray')
-           WITH (
-              Number   varchar(200) N'$.Order.Number',
-              Date     datetime     N'$.Order.Date',
-              Customer varchar(200) N'$.AccountNumber',
-              Quantity int          N'$.Item.Quantity'
-           )
-  AS SalesOrderJsonData
-WHERE JSON_VALUE(Tab.json, '$.Status') = N'Closed'
-ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR ProductModelID = 21
+  AND Color = 'Red';
+GO
 ```
+
+Sie können die Bedeutung der Abfrage ändern, indem Sie durch Hinzufügen von Klammern veranlassen, dass der Operator `OR` zuerst ausgewertet wird. Die folgende Abfrage findet nur Produkte unter den Modellen 20 und 21, deren Farbe „red“ (rot) ist.
+
+```
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE (ProductModelID = 20 OR ProductModelID = 21)
+  AND Color = 'Red';
+GO
+```
+
+Die Verwendung von Klammern kann auch dann empfehlenswert sein, wenn diese nicht unbedingt erforderlich sind, da sie die Übersichtlichkeit von Abfragen verbessern und zudem die Wahrscheinlichkeit von Flüchtigkeitsfehlern verringern, die sich aus der Rangfolge der Operatorenauswertung ergeben. Die Leistung wird durch den Einsatz von Klammern nicht wesentlich beeinträchtigt. Das folgende Beispiel ist leichter zu lesen als das ursprüngliche Beispiel, obwohl sie syntaktisch übereinstimmen:
+
+```
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR (ProductModelID = 21
+  AND Color = 'Red');
+GO
+```
+
 
 
 
@@ -221,35 +261,37 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 
 <a name="TitleNum_4"/>
 
-### <a name="4-nbsp-lesson-1-connecting-to-the-database-enginelesson-1-connecting-to-the-database-enginemd"></a>4. &nbsp; [Lektion 1: Herstellen einer Verbindung mit der Datenbank-Engine](lesson-1-connecting-to-the-database-engine.md)
+### <a name="4-nbsp-tutorial-prepare-sql-server-for-replication---publisher-distributor-subscriberreplicationtutorial-preparing-the-server-for-replicationmd"></a>4. &nbsp; [Tutorial: Vorbereiten von SQL Server auf die Replikation (Verleger, Verteiler und Abonnent)](replication/tutorial-preparing-the-server-for-replication.md)
 
-*Aktualisiert: 13.12.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Vorheriger](#TitleNum_3) | [Nächster](#TitleNum_5))
+*Aktualisiert: 13.04.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Vorheriger](#TitleNum_3) | [Nächster](#TitleNum_5))
 
-<!-- Source markdown line 79.  ms.author= "rickbyh".  -->
+<!-- Source markdown line 56.  ms.author= "mathoma".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 3c070935895450fd2ea054e2be9e1c48f7dc2b6c 0c386e3d47fb7f8f1e63b9301f0cafec2bc88ab0  (PR=4282  ,  Filename=lesson-1-connecting-to-the-database-engine.md  ,  Dirpath=docs\relational-databases\  ,  MergeCommitSha40=6e016a4ffd28b09456008f40ff88aef3d911c7ba) -->
+<!-- git diff --ignore-all-space --unified=0 6e5caedacff193ce79bdd98708ae1b9dc91f0a8f 9f7af4d3f8b1cffd048db2a5b29fc9e6013f5ed2  (PR=0  ,  Filename=tutorial-preparing-the-server-for-replication.md  ,  Dirpath=docs\relational-databases\replication\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
-2.  Wählen Sie **Datenbankmodul**aus.
+- Installieren Sie [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Installieren Sie die [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- Laden Sie eine [AdventureWorks-Beispieldatenbank](https://github.com/Microsoft/sql-server-samples/releases) herunter. Weitere Informationen zum Wiederherstellen einer Datenbank in SSMS finden Sie unter [Wiederherstellen einer Datenbank](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).
 
-    ![Objekt-Explorer](../relational-databases/media/object-explorer.png)
+>[!NOTE]
+> - Die Replikation wird für SQL Server-Versionen, zwischen denen mehr als zwei Versionen liegen, nicht unterstützt. Weitere Informationen finden Sie unter [In der Replikationstopologie unterstützte SQL-Versionen](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/).
+> - In *{hier stehen die eingeschlossenen Inhalte}* muss eine Verbindung mit dem Verleger und dem Abonnenten hergestellt werden. Dazu wird ein Anmeldename verwendet, der Mitglied der festen Serverrolle **sysadmin** ist. Weitere Informationen zur Rolle „sysadmin“ finden Sie unter [Rollen auf Serverebene](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).
 
-3.  Geben Sie im Feld **Servername** den Namen der Instanz der Datenbank-Engine ein. Bei der Standardinstanz von SQL Server ist der Servername der Name des Computers. Bei einer benannten Instanz von SQL Server ist der Servername der *<Computername>***\\***<Instanzname>*, wie z.B. **ACCTG_SRVR\SQLEXPRESS**. Der folgende Screenshot zeigt das Herstellen einer Verbindung mit der (unbenannten) Standardinstanz von SQL Server auf einem Computer namens „PracticeComputer“. Der Benutzer, der bei Windows angemeldet ist, ist Mary aus der Domain „Contoso“. Bei Verwendung der Windows-Authentifizierung können Sie den Benutzernamen nicht ändern.
 
-    ![Verbindung-mit-Server-herstellen](../relational-databases/media/connect-to-server.png)
+**Geschätzte Dauer: 30 Minuten**
 
-4.  Klicken Sie auf **Verbinden**.
+**Erstellen von Windows-Konten für die Replikation**
 
-> [!NOTE]
-> In diesem Tutorial wird davon ausgegangen, dass Sie noch keine Vorkenntnisse zu SQL Server besitzen und keine besonderen Probleme beim Herstellen einer Verbindung haben. Dies sollte für die meisten Benutzer ausreichen, und so wird das Tutorial einfach gehalten. Detaillierte Schritte zur Fehlerbehebung finden Sie unter [Beheben von Verbindungsfehlern mit dem SQL Server-Datenbankmodul](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md).
+In diesem Abschnitt erstellen Sie Windows-Konten zum Ausführen von Replikations-Agents. Sie erstellen für die folgenden Agents ein separates Windows-Konto auf dem lokalen Server:
 
-**<a name="additional"></a>Autorisieren zusätzlicher Verbindungen**
-
-Nachdem Sie als Administrator eine Verbindung mit SQL Server hergestellt haben, besteht eine Ihrer ersten Aufgaben darin, andere Benutzer zum Herstellen einer Verbindung zu autorisieren. Dazu erstellen Sie eine Anmeldung und erteilen dieser Anmeldung die Berechtigung, als Benutzer auf eine Datenbank zuzugreifen. Anmeldungen können über die Windows-Authentifizierung erfolgen, die Windows-Anmeldeinformationen verwendet, oder über die SQL Server-Authentifizierung, die Authentifizierungsinformationen in SQL Server speichert und von Ihren Windows-Anmeldeinformationen unabhängig ist. Verwenden Sie nach Möglichkeit immer Windows-Authentifizierung.
+|Agent|Speicherort|Kontoname|
+|---------|------------|----------------|
+|Momentaufnahme-Agent|Verleger|<*machine_name*>\repl_snapshot|
 
 
 
@@ -261,28 +303,41 @@ Nachdem Sie als Administrator eine Verbindung mit SQL Server hergestellt haben, 
 
 <a name="TitleNum_5"/>
 
-### <a name="5-nbsp-manage-the-size-of-the-transaction-log-filelogsmanage-the-size-of-the-transaction-log-filemd"></a>5. &nbsp; [Verwalten der Größe der Transaktionsprotokolldatei](logs/manage-the-size-of-the-transaction-log-file.md)
+### <a name="5-nbsp-tutorial-configure-replication-between-two-fully-connected-servers-transactionalreplicationtutorial-replicating-data-between-continuously-connected-serversmd"></a>5. &nbsp; [Tutorial: Konfigurieren der Replikation zwischen zwei Servern mit kontinuierlicher Verbindung (transaktional)](replication/tutorial-replicating-data-between-continuously-connected-servers.md)
 
-*Aktualisiert: 17.1.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Vorheriger](#TitleNum_4) | [Nächster](#TitleNum_6))
+*Aktualisiert: 13.04.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Vorheriger](#TitleNum_4) | [Nächster](#TitleNum_6))
 
-<!-- Source markdown line 105.  ms.author= "jhubbard".  -->
+<!-- Source markdown line 162.  ms.author= "mathoma".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 5847b31cf8f6003a380f0c8aaa289efdc55be678 84e45320d81db218cde17fbf8b9668a9ac3805a7  (PR=0  ,  Filename=manage-the-size-of-the-transaction-log-file.md  ,  Dirpath=docs\relational-databases\logs\  ,  MergeCommitSha40=45e6082acc29ba306525e7c08d2c22cc2b86eec3) -->
+<!-- git diff --ignore-all-space --unified=0 0d74f984d0ffc01cce0376837e6d94df3c5654d7 4ecf4d724286130927dd43687d6845059af6f9b7  (PR=0  ,  Filename=tutorial-replicating-data-between-continuously-connected-servers.md  ,  Dirpath=docs\relational-databases\replication\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
--   Ein kleines Vergrößerungsinkrement könnte dazu führen, dass zu viele kleine [VLFs](logs/../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) generiert werden und die Leistung beeinträchtigt wird. Informationen darüber, wie Sie die optimale VLF-Verteilung für die aktuelle Größe des Transaktionsprotokolls aller Datenbanken in einer bestimmten Instanz sowie die benötigten Wachstumsinkremente zum Erreichen der erforderlichen Größe ermitteln, finden Sie in [diesem Skript](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
+**Erstellen eines Abonnements für die Transaktionsveröffentlichung**
 
--   Ein großes Vergrößerungsinkrement könnte dazu führen, dass wenige große [VLFs](logs/../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) generiert werden und darüber hinaus die Leistung beeinträchtigt. Informationen darüber, wie Sie die optimale VLF-Verteilung für die aktuelle Größe des Transaktionsprotokolls aller Datenbanken in einer bestimmten Instanz sowie die benötigten Wachstumsinkremente zum Erreichen der erforderlichen Größe ermitteln, finden Sie in [diesem Skript](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
+In diesem Abschnitt erfahren Sie, wie Sie einen Abonnenten zu der zuvor erstellten Veröffentlichung hinzufügen. In diesem Tutorial wird ein Remote-Abonnent (NODE2\SQL2016) verwendet, ein Abonnement kann jedoch auch lokal zum Verleger hinzugefügt werden.
 
--   Auch bei aktiviertem autogrow-Inkrement können Sie eine Meldung erhalten, dass das Transaktionsprotokoll voll ist, wenn es nicht schnell genug wachsen kann, um die Anforderungen Ihrer Abfrage zu erfüllen. Weitere Informationen zum Ändern des Vergrößerungsinkrements finden Sie unter [ALTER DATABASE-Optionen FILE und FILEGROUP &#40;Transact-SQL&#41;](logs/../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
+**So erstellen Sie das Abonnement**
 
--   Durch die Verwaltung von mehreren Protokolldateien in einer Datenbank wird die Leistung in keiner Weise verbessert, da die Transaktionsprotokolldateien nicht wie Datendateien eine [proportionale Füllung](logs/../../relational-databases/pages-and-extents-architecture-guide.md#ProportionalFill) in derselben Dateigruppe durchführen.
 
--   Für Protokolldateien kann eine automatische Verkleinerung durchgeführt werden. Dies wird jedoch **nicht empfohlen**, und die Datenbankeigenschaft **auto_shrink** ist standardmäßig auf FALSE festgelegt. Wenn **auto_shrink** auf TRUE festgelegt ist, wird die Größe einer Datei nur dann automatisch verkleinert, wenn mehr als 25 Prozent des Speicherplatzes ungenutzt sind.
+1.  Stellen Sie in *{hier stehen die eingeschlossenen Inhalte}* eine Verbindung mit dem Verleger her, und erweitern Sie dann den Serverknoten und den Ordner **Replikation**.
+
+2.  Klicken Sie im Ordner **Lokale Veröffentlichungen** mit der rechten Maustaste auf die Veröffentlichung **AdvWorksProductTrans**, und wählen Sie anschließend **Neue Abonnements** aus.  Der Assistent für neue Abonnements wird gestartet:
+
+    Neues Abonnement
+
+3.  Wählen Sie auf der Seite „Veröffentlichung“ die Veröffentlichung **AdvWorksProductTrans** und anschließend **Weiter** aus:
+
+    Tran.-Verleger auswählen
+
+4.  Wählen Sie auf der Seite „Speicherort des Verteilungs-Agents“ die Option **Alle Agents auf dem Verteiler ausführen** und anschließend **Weiter** aus.  Weitere Informationen zu Push- und Pullabonnements finden Sie unter [Abonnieren von Veröffentlichungen](https://docs.microsoft.com/sql/relational-databases/replication/subscribe-to-publications):
+
+    Agents auf dem Verteiler ausführen
+
+5.  Wählen Sie auf der Seite „Abonnenten“ die Option **Abonnent hinzufügen** und anschließend in der Dropdownliste **SQL Server-Abonnent hinzufügen** aus, wenn der Name der Abonnenteninstanz nicht angezeigt wird. Dadurch wird das Dialogfeld **Mit Server verbinden** angezeigt. Geben Sie den Namen der Abonnenteninstanz ein, und wählen Sie anschließend **Verbinden** aus.
 
 
 
@@ -294,62 +349,39 @@ Nachdem Sie als Administrator eine Verbindung mit SQL Server hergestellt haben, 
 
 <a name="TitleNum_6"/>
 
-### <a name="6-nbsp-bcpbindnative-client-odbc-extensions-bulk-copy-functionsbcp-bindmd"></a>6. &nbsp; [bcp_bind](native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)
+### <a name="6-nbsp-tutorial-configure-replication-between-a-server-and-mobile-clients-mergereplicationtutorial-replicating-data-with-mobile-clientsmd"></a>6. &nbsp; [Tutorial: Konfigurieren der Replikation zwischen einem Server und mobilen Clients (Mergereplikation)](replication/tutorial-replicating-data-with-mobile-clients.md)
 
-*Aktualisiert: 30.1.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Vorheriger](#TitleNum_5) | [Nächster](#TitleNum_7))
+*Aktualisiert: 13.04.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Vorheriger](#TitleNum_5) | [Nächster](#TitleNum_7))
 
-<!-- Source markdown line 127.  ms.author= "genemi".  -->
+<!-- Source markdown line 93.  ms.author= "mathoma".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 d50791cef948ce8b3066438e317ab4d34d535258 e6f70559e7237cfc86dfc5746d218c08bec52af6  (PR=4762  ,  Filename=bcp-bind.md  ,  Dirpath=docs\relational-databases\native-client-odbc-extensions-bulk-copy-functions\  ,  MergeCommitSha40=60006e90d03fdb75b282bbc0dad3d40571bacacc) -->
+<!-- git diff --ignore-all-space --unified=0 0eed78dfe83c88358c030539a2b25d11ef5ec2d3 79b2a3f32c940fede94b11ad2a3ef8a00b911a39  (PR=0  ,  Filename=tutorial-replicating-data-with-mobile-clients.md  ,  Dirpath=docs\relational-databases\replication\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
- Die folgende Tabelle führt gültige enumerierte Datentypen und die entsprechenden ODBC-C-Datentypen auf.
+Die Employee-Tabelle enthält eine OrganizationNode-Spalte vom Datentyp hierarchyid, die nur für die Replikation in SQL 2017 unterstützt wird. Wenn Sie einen Build verwenden, der niedriger als SQL 2017 ist, wird unten auf dem Bildschirm eine Meldung angezeigt, in der Sie darüber informiert werden, dass möglicherweise Daten verloren gehen können, wenn Sie diese Spalte in einer bidirektionalen Replikation verwenden. Diese Meldung kann für dieses Tutorial ignoriert werden. Trotzdem sollte dieser Datentyp nur in einer Produktionsumgebung repliziert werden, wenn Sie den unterstützten Build verwenden. Weitere Informationen zum Replizieren des hierarchyid-Datentyps finden Sie unter [Verwenden von hierarchyid-Spalten in replizierten Tabellen](https://docs.microsoft.com/sql/t-sql/data-types/hierarchyid-data-type-method-reference#using-hierarchyid-columns-in-replicated-tables).
 
-|eDataType|C-Typ|
-|-----------------------|------------|
-|SQLTEXT|char *|
-|SQLNTEXT|wchar_t *|
-|SQLCHARACTER|char *|
-|SQLBIGCHAR|char *|
-|SQLVARCHAR|char *|
-|SQLBIGVARCHAR|char *|
-|SQLNCHAR|wchar_t *|
-|SQLNVARCHAR|wchar_t *|
-|SQLBINARY|unsigned char *|
-|SQLBIGBINARY|unsigned char *|
-|SQLVARBINARY|unsigned char *|
-|SQLBIGVARBINARY|unsigned char *|
-|SQLBIT|char|
-|SQLBITN|char|
-|SQLINT1|char|
-|SQLINT2|short int|
-|SQLINT4|ssNoversion|
-|SQLINT8|_int64|
-|SQLINTN|*cbIndicator*<br /> 1: SQLINT1<br /> 2: SQLINT2<br /> 4: SQLINT4<br /> 8: SQLINT8|
-|SQLFLT4|FLOAT|
-|SQLFLT8|FLOAT|
-|SQLFLTN|*cbIndicator*<br /> 4: SQLFLT4<br /> 8: SQLFLT8|
-|SQLDECIMALN|SQL_NUMERIC_STRUCT|
-|SQLNUMERICN|SQL_NUMERIC_STRUCT|
-|SQLMONEY|DBMONEY|
-|SQLMONEY4|DBMONEY4|
-|SQLMONEYN|*cbIndicator*<br /> 4: SQLMONEY4<br /> 8: SQLMONEY|
-|SQLTIMEN|SQL_SS_TIME2_STRUCT|
-|SQLDATEN|SQL_DATE_STRUCT|
-|SQLDATETIM4|DBDATETIM4|
-|SQLDATETIME|DBDATETIME|
-|SQLDATETIMN|*cbIndicator*<br /> 4: SQLDATETIM4<br /> 8: SQLDATETIME|
-|SQLDATETIME2N|SQL_TIMESTAMP_STRUCT|
-|SQLDATETIMEOFFSETN|SQL_SS_TIMESTAMPOFFSET_STRUCT|
-|SQLIMAGE|unsigned char *|
-|SQLUDT|unsigned char *|
-|SQLUNIQUEID|SQLGUID|
-|SQLVARIANT|*Jeder Datentyp außer:*<br />-   text<br />-   ntext<br />-   image<br />-   varchar(max)<br />-   varbinary(max)<br />-   nvarchar(max)<br />-   xml<br />-   timestamp|
-|SQLXML|*Unterstützte C-Datentypen:*<br />-   char*<br />-   wchar_t *<br />-   unsigned char *|
+
+-  Klicken Sie auf der Seite „Tabellenzeilen filtern“ auf **Hinzufügen**, und klicken Sie anschließend auf **Filter hinzufügen**.
+
+-  Klicken Sie im Dialogfeld **Filter hinzufügen** auf **Employee (HumanResources)** unter **Wählen Sie die zu filternde Tabelle aus**. Klicken Sie erst auf die Spalte **LoginID** und dann auf den Pfeil nach rechts, um der WHERE-Klausel der Filterabfrage die Spalte hinzuzufügen, und ändern Sie die WHERE-Klausel wie folgt:
+
+    ```
+    WHERE [LoginID] = HOST_NAME()
+    ```
+
+    A. Klicken Sie erst auf **Eine Zeile aus dieser Tabelle wird nur an ein Abonnement gesendet** und anschließend auf **OK**:
+
+    Hinzufügen eines Filters
+
+
+
+- Klicken Sie erst auf der Seite **Tabellenzeilen filtern** auf **Employee (Human Resources)** (Mitarbeiter (Personalabteilung)), dann auf **Hinzufügen** und anschließend auf **Add Join to Extend the Selected Filter** (Join hinzufügen, um den ausgewählten Filter zu erweitern).
+
+    A. Wählen Sie im Dialogfeld **Join hinzufügen** unter **Verknüpfte Tabelle** den Eintrag **Sales.SalesOrderDetail** aus. Klicken Sie auf **Write the join statement manually** (Joinanweisung manuell schreiben), und schließen Sie den Vorgang wie folgt ab:
 
 
 
@@ -361,36 +393,36 @@ Nachdem Sie als Administrator eine Verbindung mit SQL Server hergestellt haben, 
 
 <a name="TitleNum_7"/>
 
-### <a name="7-nbsp-sql-server-index-design-guidesql-server-index-design-guidemd"></a>7. &nbsp; [Handbuch zum SQL Server-Indexentwurf](sql-server-index-design-guide.md)
+### <a name="7-nbsp-query-with-full-text-searchsearchquery-with-full-text-searchmd"></a>7. &nbsp; [Abfragen mit Volltextsuche](search/query-with-full-text-search.md)
 
-*Aktualisiert: 2.1.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Vorheriger](#TitleNum_6) | [Nächster](#TitleNum_8))
+*Aktualisiert: 13.04.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Vorheriger](#TitleNum_6) | [Nächster](#TitleNum_8))
 
-<!-- Source markdown line 700.  ms.author= "rickbyh".  -->
+<!-- Source markdown line 247.  ms.author= "douglasl".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 bd09c9e66cd3cf5f3ebebe7ffa6e937978353169 8e5cbbf0063971676a8bafefba75aa5c7c28be61  (PR=0  ,  Filename=sql-server-index-design-guide.md  ,  Dirpath=docs\relational-databases\  ,  MergeCommitSha40=74daee358fef75a25d75c69d971d08536c5bd2be) -->
+<!-- git diff --ignore-all-space --unified=0 5ec67b56aa0a6eadadbcfa8b73b6726e75eca2bb 4eb108b202d3dd035a312bac7872cf02bcf31cfa  (PR=0  ,  Filename=query-with-full-text-search.md  ,  Dirpath=docs\relational-databases\search\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
-Ab SQL Server 2016 können Sie einen aktualisierbaren, **nicht gruppierten Columnstore-Index für eine Rowstore-Tabelle** erstellen. Der Columnstore-Index speichert eine Kopie der Daten, sodass Sie keinen zusätzlichen Speicher benötigen. Allerdings werden die Daten in den Columnstore-Index komprimiert, auf eine kleinere Größe als die Rowstore-Tabelle es erfordert.  Durch dieses Vorgehen können Sie Analysen mit dem Columnstore-Index und Transaktionen mit dem Rowstore-Index zur gleichen Zeit ausführen. Der Spaltenspeicher wird aktualisiert, wenn sich die Daten in der Rowstore-Tabelle ändern, daher arbeiten beide Indizes auf den gleichen Daten.
-
-Ab SQL Server 2016 können Sie über **mehrere nicht gruppierte Rowstore-Indizes in einem Columnstore-Index** verfügen. Auf diese Weise können effiziente Tabellensuchvorgänge im zugrundeliegenden Columnstore ausgeführt werden. Auch weitere Optionen werden dadurch verfügbar. Beispielsweise können Sie eine Primärschlüsseleinschränkung durchsetzen, indem Sie eine UNIQUE-Bedingung auf die Rowstore-Tabelle anwenden. Da ein nicht eindeutiger Wert nicht in die Rowstore-Tabelle eingefügt werden kann, kann SQL Server den Wert nicht in den Columnstore einfügen.
-
-**Überlegungen zur Leistung**
+**Weitere Informationen zu Generierungsbegriffsuchen**
 
 
--   Die Definition des nicht gruppierten Columnstore-Index unterstützt gefilterte Bedingungen. Um die Auswirkung auf die Leistung beim Hinzufügen eines Columnstore-Indexes in eine OLTP-Tabelle zu verringern, verwenden Sie eine gefilterte Bedingung, um einen nicht gruppierten Columnstore-Index anhand der kalten Daten Ihrer Betriebsworkload zu erstellen.
+Bei den *Flexionsformen* handelt es sich um die verschiedenen Tempora und Konjugationen eines Verbs oder die Singular- und Pluralformen eines Substantivs.
 
--   Eine In-Memory-Tabelle kann nur über einen Columnstore-Index verfügen. Sie können ihn bei Erstellung der Tabelle generieren oder später mit [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md) hinzufügen. Vor SQL Server 2016 konnte nur eine datenträgerbasierte Tabelle über einen Columnstore-Index verfügen.
+Suchen Sie z.B. nach der Flexionsform des Worts „drive“. Wenn mehrere Zeilen in der Tabelle die Wörter „drive“, „drives“, „drove“, „driving“ und „driven“ enthalten, werden alle in das Resultset aufgenommen, da jedes dieser Wörter durch Flexion aus dem Wort „drive“ generiert werden kann.
 
-Weitere Informationen finden Sie unter [Columnstore-Indizes: Abfrageleistung](../relational-databases/indexes/columnstore-indexes-query-performance.md).
+[FREETEXT] und [FREETEXTTABLE] suchen standardmäßig nach den Flexionsformen aller angegebenen Wörter. [CONTAINS] und [CONTAINSTABLE] unterstützen ein optionales `INFLECTIONAL`-Argument.
 
-**Leitfaden zum Entwurf**
+**Suche nach Synonymen eines bestimmten Worts**
 
 
--   Eine Rowstore-Tabelle kann über einen aktualisierbaren nicht gruppierten Columnstore-Index verfügen. Vor SQL Server 2014 war der nicht gruppierte Columnstore-Index schreibgeschützt.
+Ein *Thesaurus* definiert vom Benutzer angegebene Synonyme für Ausdrücke. Weitere Informationen zu Thesaurusdateien finden Sie unter [Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche].
+
+Wird einem Thesaurus beispielsweise ein Eintrag „{car, automobile, truck, van}“ hinzugefügt, können Sie nach der Thesaurusform des Worts „car“ suchen. Alle Zeilen in der abgefragten Tabelle, die die Wörter „automobile“, „truck“, „van“ oder „car“ enthalten, werden im Resultset angezeigt, weil jedes dieser Wörter zum Synonymerweiterungssatz gehört, der das Wort „car“ enthält.
+
+[FREETEXT] und [FREETEXTTABLE] verwenden standardmäßig den Thesaurus. [CONTAINS] und [CONTAINSTABLE] unterstützen ein optionales `THESAURUS`-Argument.
 
 
 
@@ -402,63 +434,37 @@ Weitere Informationen finden Sie unter [Columnstore-Indizes: Abfrageleistung](..
 
 <a name="TitleNum_8"/>
 
-### <a name="8-nbsp-spexecuteexternalscript-transact-sqlsystem-stored-proceduressp-execute-external-script-transact-sqlmd"></a>8. &nbsp; [sp_execute_external_script (Transact-SQL)](system-stored-procedures/sp-execute-external-script-transact-sql.md)
+### <a name="8-nbsp-transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehousesecurityencryptiontransparent-data-encryption-byok-azure-sqlmd"></a>8. &nbsp; [Transparent Data Encryption mit Bring Your Own Key-Unterstützung für Azure SQL-Datenbank und Data Warehouse](security/encryption/transparent-data-encryption-byok-azure-sql.md)
 
-*Aktualisiert: 23.1.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Vorheriger](#TitleNum_7) | [Nächster](#TitleNum_9))
+*Aktualisiert: 24.04.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Vorheriger](#TitleNum_7) | [Nächster](#TitleNum_9))
 
-<!-- Source markdown line 207.  ms.author= "edmaca".  -->
+<!-- Source markdown line 110.  ms.author= "aliceku".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 0ee4d591ae9d9a5c015eec98aad9ccbb86268761 ac9b439c23ffae5fcc77639de6ff955763cf5844  (PR=4696  ,  Filename=sp-execute-external-script-transact-sql.md  ,  Dirpath=docs\relational-databases\system-stored-procedures\  ,  MergeCommitSha40=d7dcbcebbf416298f838a39dd5de6a46ca9f77aa) -->
+<!-- git diff --ignore-all-space --unified=0 9527658848d430bf0148be84474a75b232cbd112 70ed2a129c580962384f808e8526673957f00d2c  (PR=5662  ,  Filename=transparent-data-encryption-byok-azure-sql.md  ,  Dirpath=docs\relational-databases\security\encryption\  ,  MergeCommitSha40=91a9c812739a1c9a6ec9e7b8cda71ee1f5adae3d) -->
 
 
 
-Um ein ähnliches Modell mithilfe von Python zu generieren, ändern Sie die Sprachen-ID von `@language=N'R'` zu `@language = N'Python'` und nehmen die notwendigen Änderungen im `@script`-Argument vor. Alle anderen Parameter funktionieren genauso wie bei R.
-
-**C. Erstellen eines Python-Modells und Generieren von Bewertungen daraus**
+**Vorgehensweise: Konfigurieren von Georedundanzen mit Azure Key Vault**
 
 
-Dieses Beispiel veranschaulicht, wie Sie „sp\_execute\_external\_script“ verwenden, um Bewertungen in einem einfachen Python-Modell zu generieren.
+Es ist erforderlich, redundante Azure Key Vaults anhand der vorhandenen oder gewünschten SQL-Datenbank-Failovergruppen oder der aktiven Georedundanzinstanzen zu konfigurieren, um die Hochverfügbarkeit der TDE Protectors für verschlüsselte Datenbanken zu erhalten.  Jeder georeplizierte Server erfordert einen separaten Schlüsseltresor, der sich in derselben Azure-Region wie der Server befinden muss. Wenn es in einer Region zu einem Ausfall kommen sollte, nach dem nicht mehr auf die primäre Datenbank zugegriffen werden kann und ein Failover ausgelöst wird, kann die sekundäre Datenbank einspringen und den sekundären Schlüsseltresor verwenden.
 
-```
-CREATE PROCEDURE [dbo].[py_generate_customer_scores]
-AS
-BEGIN
+Für georeplizierte Azure SQL-Datenbanken ist die folgende Konfiguration von Azure Key Vault erforderlich:
+- Eine primäre Datenbank mit einem Schlüsseltresor in der Region und eine sekundäre Datenbank mit einem Schlüsseltresor in der Region.
+- Mindestens eine sekundäre Datenbank ist erforderlich, es werden bis zu vier sekundäre Datenbanken unterstützt.
+- Sekundäre Datenbanken von sekundären Datenbanken (Verkettung) werden nicht unterstützt.
 
-**Input query to generate the customer data**
+Im folgenden Abschnitt werden die Schritte für die Einrichtung und Konfiguration im Detail besprochen.
 
-DECLARE @input_query NVARCHAR(MAX) = N'SELECT customer, orders, items, cost FROM dbo.Sales.Orders`
+**Konfigurationsschritte für Azure Key Vault**
 
-EXEC sp_execute_external_script @language = N'Python', @script = N'
-import pandas as pd
-from sklearn.cluster import KMeans
 
-**Get data from input query**
-
-customer_data = my_input_data
-
-**Define the model**
-
-n_clusters = 4
-est = KMeans(n_clusters=n_clusters, random_state=111).fit(customer_data[["orders","items","cost"]])
-clusters = est.labels_
-customer_data["cluster"] = clusters
-
-OutputDataSet = customer_data
-'
-, @input_data_1 = @input_query
-, @input_data_1_name = N'my_input_data'
-WITH RESULT SETS (("CustomerID" int, "Orders" float,"Items" float,"Cost" float,"ClusterResult" float));
-END;
-GO
-```
-
-In Python-Code verwendete Spaltenüberschriften werden nicht an SQL Server ausgegeben; geben Sie daher mit der WITH RESULTS-Anweisung die Spaltennamen und Datentypen an, die SQL verwenden soll.
-
-Zur Bewertung können Sie auch die native [PREDICT](system-stored-procedures/../../t-sql/queries/predict-transact-sql.md)-Funktion verwenden, die in der Regel schneller ist, weil sie die Python- bzw. R-Laufzeit nicht aufrufen muss.
-
+- Installieren Sie [PowerShell](https://docs.microsoft.com/powershell/azure/install-azurerm-ps?view=azurermps-5.6.0)
+- Erstellen Sie zwei Azure-Schlüsseltresore in zwei verschiedenen Regionen, und verwenden Sie [PowerShell zum Aktivieren der Eigenschaft „vorläufiges Löschen“](https://docs.microsoft.com/azure/key-vault/key-vault-soft-delete-powershell) in den Schlüsseltresoren (diese Option ist noch nicht im AKV-Portal verfügbar – wird aber von SQL gefordert).
+- Beide Azure-Schlüsseltresore müssen sich in Regionen befinden, die in derselben Azure-Geografie verfügbar sind, damit Schlüssel gesichert und wiederhergestellt werden können.  Wenn zwei Schlüsseltresore in unterschiedlichen Geografien die georedundanten SQL-Anforderungen erfüllen müssen, führen Sie den [BYOK-Prozess](https://docs.microsoft.com/azure/key-vault/key-vault-hsm-protected-keys) durch, der das Importieren eines Schlüssels von einem lokalen HSM ermöglicht.
 
 
 
@@ -470,42 +476,89 @@ Zur Bewertung können Sie auch die native [PREDICT](system-stored-procedures/../
 
 <a name="TitleNum_9"/>
 
-### <a name="9-nbsp-create-primary-keystablescreate-primary-keysmd"></a>9. &nbsp; [Erstellen von Primärschlüsseln](tables/create-primary-keys.md)
+### <a name="9-nbsp-powershell-and-cli-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vaultsecurityencryptiontransparent-data-encryption-byok-azure-sql-configuremd"></a>9. &nbsp; [PowerShell und CLI: Aktivieren von Transparent Data Encryption mithilfe eines eigenen Azure Key Vault-Schlüssels](security/encryption/transparent-data-encryption-byok-azure-sql-configure.md)
 
-*Aktualisiert: 18.01.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Vorheriger](#TitleNum_8))
+*Aktualisiert: 24.04.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Vorheriger](#TitleNum_8) | [Nächster](#TitleNum_10))
 
-<!-- Source markdown line 102.  ms.author= "sstein".  -->
+<!-- Source markdown line 196.  ms.author= "aliceku".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 d18b485f314cc005d624cab8a51650d3b8f55f89 9bd2e9453206e8940d30b0a01c43f9d8e1aed606  (PR=4652  ,  Filename=create-primary-keys.md  ,  Dirpath=docs\relational-databases\tables\  ,  MergeCommitSha40=6b4aae3706247ce9b311682774b13ac067f60a79) -->
+<!-- git diff --ignore-all-space --unified=0 a0e00f5701d9a493f503a477c69097ce65aba174 721e8fb856a55ee1e8e9e7fc06036a03adab647b  (PR=5662  ,  Filename=transparent-data-encryption-byok-azure-sql-configure.md  ,  Dirpath=docs\relational-databases\security\encryption\  ,  MergeCommitSha40=91a9c812739a1c9a6ec9e7b8cda71ee1f5adae3d) -->
 
 
 
-**So erstellen Sie einen Primärschlüssel mit einem nicht gruppierten Index in einer neuen Tabelle**
+**Erforderliche Komponenten für die CLI**
 
 
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz der Datenbank-Engine her.
+- Sie müssen über ein Azure-Abonnement verfügen und Administrator für dieses Abonnement sein.
+- [Empfohlen aber optional] Sie sollten ein Hardwaresicherheitsmodul (HSM) oder einen lokalen Schlüsselspeicher zum Erstellen einer lokalen Kopie des Schlüsselmaterials für den TDE-Schutz besitzen.
+- CLI 2.0 oder höhere Version. Wie Sie die neueste Version installieren und eine Verbindung mit Ihrem Azure-Abonnement herstellen, können Sie unter [Installieren und Konfigurieren der plattformübergreifenden Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) nachlesen.
+- Sie müssen einen Azure Key Vault-Schlüsseltresor und einen Schlüssel für die Verwendung für TDE erstellen.
+   - [Manage Key Vault using CLI 2.0 (Verwalten von Key Vault mithilfe der CLI 2.0)](https://docs.microsoft.com/azure/key-vault/key-vault-manage-with-cli2)
+   - [Instructions for using a hardware security module (HSM) and Key Vault (Anweisungen zur Verwendung eines Hardwaresicherheitsmodells (HSM) und Key Vault)](https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
+ - Der Schlüsseltresor muss über folgende Eigenschaft verfügen, um für TDE verwendet werden zu können:
+   - [Vorläufiges Löschen](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)
+   - [Verwenden des vorläufigen Löschens in Key Vault mit CLI](https://docs.microsoft.com/azure/key-vault/key-vault-soft-delete-cli)
+- Der Schlüssel muss über folgende Attribute verfügen, um für TDE verwendet werden zu können:
+   - Kein Ablaufdatum
+   - Nicht deaktiviert
+   - Muss die Operationen *get*, *wrap key* und *unwrap key* ausführen können
 
-2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.
+**Schritt: Erstellen eines Servers und Zuweisen einer Azure AD-Identität zum Server**
 
-3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. Im Beispiel wird eine Tabelle erstellt sowie ein Primärschlüssel für die Spalte `CustomerID` und ein gruppierter Index für `TransactionID` definiert.
+      cli
+      # create server (with identity) and database
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_10"/>
+
+### <a name="10-nbsp-about-change-data-capture-sql-servertrack-changesabout-change-data-capture-sql-servermd"></a>10. &nbsp; [Über Change Data Capture (SQL Server)](track-changes/about-change-data-capture-sql-server.md)
+
+*Aktualisiert: 17.04.2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Zurück](#TitleNum_9))
+
+<!-- Source markdown line 112.  ms.author= "jroth".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 588bff652adefd719e799e9777a416b70184c5f8 77ebdbb1b98b24054d5c5afbb3f1d40e94d1e6bc  (PR=5574  ,  Filename=about-change-data-capture-sql-server.md  ,  Dirpath=docs\relational-databases\track-changes\  ,  MergeCommitSha40=bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68) -->
+
+
+
+**Arbeiten mit Datenbanken und Tabellen bei unterschiedlicher Sortierung**
+
+
+Sie sollten wissen, was zu beachten ist, wenn eine Datenbank und die Spalten einer Tabelle, die für Change Data Capture (CDC) konfiguriert sind, in unterschiedlicher Reihenfolge sortiert sind. CDC verwendet einen Zwischenspeicher, um Tabellen aufzufüllen. Wenn in einer Tabelle CHAR- oder VARCHAR-Spalten enthalten sind, deren Sortierung von der Datenbanksortierung abweicht, und wenn in diesen Spalten Zeichen enthalten sind, bei denen es sich nicht um ASCII-Zeichen handelt (z.B. Doppelbyte-Zeichensätze), kann CDC möglicherweise die geänderten Daten nicht speichern, damit diese mit den Daten in der Basistabelle übereinstimmen. Dies ist darauf zurückzuführen, dass den Zwischenspeichervariablen keine Sortierungen zugeordnet werden können.
+
+Ziehen Sie einen der folgenden Ansätze in Betracht, um sicherzustellen, dass CDC-Daten mit den Daten in der Basistabelle übereinstimmen:
+
+- Verwenden Sie die Datentypen NCHAR oder NVARCHAR für Spalten, die Daten enthalten, bei denen es sich nicht um ASCII-Daten handelt.
+
+- Stattdessen können Sie auch die Spalten und die Datenbank in derselben Reihenfolge sortieren.
+
+Wenn Sie z.B. über eine Datenbank verfügen, die eine SQL_Latin1_General_CP1_CI_AS-Sortierung verwendet, beachten Sie die folgende Tabelle:
 
 ```
-    USE AdventureWorks2012;
-    GO
-    CREATE TABLE Production.TransactionHistoryArchive1
-    (
-       CustomerID uniqueidentifier DEFAULT NEWSEQUENTIALID(),
-       TransactionID int IDENTITY (1,1) NOT NULL,
-       CONSTRAINT PK_TransactionHistoryArchive_TransactionID PRIMARY KEY NONCLUSTERED (uniqueidentifier)
-    );
-    GO
+CREATE TABLE T1(
+     C1 INT PRIMARY KEY,
+     C2 VARCHAR(10) collate Chinese_PRC_CI_AI)
+```
 
-    -- Now add the clustered index
-    CREATE CLUSTERED INDEX CIX_TransactionID ON Production.TransactionHistoryArchive1 (TransactionID);
-    GO
+CDC kann möglicherweise die Binärdaten für die Spalte C2 nicht speichern, da deren Sortierung von dieser Sortierung abweicht (Chinese_PRC_CI_AI). Verwenden Sie NVARCHAR, um dieses Problem zu vermeiden:
+
+```
+CREATE TABLE T1(
+     C1 INT PRIMARY KEY,
+     C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type)
 ```
 
 
@@ -519,40 +572,36 @@ Zur Bewertung können Sie auch die native [PREDICT](system-stored-procedures/../
 Dieser Abschnitt enthält sehr ähnliche Artikel für zuletzt aktualisierte Artikel in anderen Themenbereichen innerhalb des gleichen GitHub-Repositorys: [MicrosoftDocs/sql-docs-pr](https://github.com/MicrosoftDocs/sql-docs/).
 
 
+
 #### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Themenbereiche, die *über* neue oder kürzlich aktualisierte Artikel verfügen
 
-
-- [Neu und aktualisiert (1+3):&nbsp;Dokumente zu **Advanced Analytics für SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Neu und aktualisiert (0+1):&nbsp;Dokumente zum **Analytics Platform System für SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [Neu und aktualisiert (0+1):&nbsp;Dokumente zum **Herstellen einer Verbindung mit SQL**](../connect/new-updated-connect.md)
-- [Neu und aktualisiert (0+1):&nbsp;Dokumente zur **Datenbank-Engine für SQL**](../database-engine/new-updated-database-engine.md)
-- [Neu und aktualisiert (12+1): Dokumente zu **Integration Services für SQL**](../integration-services/new-updated-integration-services.md)
-- [Neu und aktualisiert (6+2):&nbsp;Dokumente zu **Linux für SQL**](../linux/new-updated-linux.md)
-- [Neu und aktualisiert (15+0): Dokumente zu **PowerShell für SQL**](../powershell/new-updated-powershell.md)
-- [Neu und aktualisiert (2+9):&nbsp;Dokumente zu **relationalen Datenbanken für SQL**](../relational-databases/new-updated-relational-databases.md)
-- [Neu und aktualisiert (1+0):&nbsp;Dokumente zu **Reporting Services für SQL**](../reporting-services/new-updated-reporting-services.md)
-- [Neu und aktualisiert (1+1):&nbsp;Dokumente zu **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [Neu und aktualisiert (1+1):&nbsp;Dokumente zu **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [Neu und aktualisiert (0+1):&nbsp;Dokumente zu **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
-- [Neu und aktualisiert (1+2):&nbsp;Dokumente zu **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
-- [Neu und aktualisiert (0+2):&nbsp;Dokumente zu **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+- [Neu und aktualisiert (11+6):&nbsp; Dokumente zu &nbsp;**Advanced Analytics für SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Neu und aktualisiert (18+0):&nbsp; Dokumente zu &nbsp;**Analysis Services für SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Neu und aktualisiert (218+14):**Dokumente zum**Herstellen einer Verbindung mit SQL](../connect/new-updated-connect.md)
+- [Neu und aktualisiert (14+0):&nbsp; Dokumente zur &nbsp;**Datenbank-Engine für SQL**](../database-engine/new-updated-database-engine.md)
+- [Neu und aktualisiert (3+2):&nbsp; Dokumente zu &nbsp;**Integration Services für SQL**](../integration-services/new-updated-integration-services.md)
+- [Neu und aktualisiert (3+3):&nbsp; Dokumente zu &nbsp;**Linux für SQL**](../linux/new-updated-linux.md)
+- [Neu und aktualisiert (7+10):&nbsp; Dokumente zu &nbsp;**relationalen Datenbanken für SQL**](../relational-databases/new-updated-relational-databases.md)
+- [Neu und aktualisiert (0+2):&nbsp; Dokumente zu &nbsp;**Reporting Services für SQL**](../reporting-services/new-updated-reporting-services.md)
+- [Neu und aktualisiert (1+3):&nbsp; Dokumente zu &nbsp;**SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Neu und aktualisiert (2+3):&nbsp; Dokumente zu &nbsp;**Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
+- [Neu und aktualisiert (1+1):&nbsp; Dokumente zu &nbsp;**SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
+- [Neu und aktualisiert (5+2):&nbsp; Dokumente zu &nbsp;**SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
+- [Neu und aktualisiert (0+2):&nbsp; Dokumente zu &nbsp;**Transact-SQL**](../t-sql/new-updated-t-sql.md)
+- [Neu + Aktualisiert (1+1):&nbsp; Dokumente zu &nbsp;**Tools für SQL**](../tools/new-updated-tools.md)
 
 
 
 #### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Themenbereiche, die *nicht* über neue oder kürzlich aktualisierte Artikel verfügen
 
-
-- [Neu + Aktualisiert (0+0): Dokumente zu **Data Migration Assistant (DMA) für SQL**](../dma/new-updated-dma.md)
-- [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs (Neu + Aktualisiert (0+0): ActiveX Data Objects (ADO) für SQL-Dokumente)](../ado/new-updated-ado.md)
-- [New + Updated (0+0): **Analysis Services for SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zu Analysis Services für SQL)](../analysis-services/new-updated-analysis-services.md)
+- [Neu und aktualisiert (0+0): Dokumente zum **Analytics Platform System für SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs (Neu + Aktualisiert (0+0): Data Quality Services für SQL-Dokumente)](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs (Neu + Aktualisiert (0+0): Data Mining-Erweiterungen (DMX) für SQL)](../dmx/new-updated-dmx.md)
 - [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zu Master Data Services (MDS) für SQL)](../master-data-services/new-updated-master-data-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs (Neu + Aktualisiert (0+0): Mehrdimensionale Ausdrücke für SQL)](../mdx/new-updated-mdx.md)
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs (Neu + Aktualisiert (0+0): Open Database Connectivity für SQL-Dokumente)](../odbc/new-updated-odbc.md)
+- [New + Updated (0+0): **PowerShell for SQL** docs (Neu + Aktualisiert (0+0): PowerShell für SQL-Dokumente)](../powershell/new-updated-powershell.md)
 - [New + Updated (0+0): **Samples for SQL** docs (Neu + Aktualisiert (0+0): Beispiele für SQL-Dokumente)](../samples/new-updated-samples.md)
 - [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs (Neu + Aktualisiert (0+0): SQL Server Migration Assistant-Dokumente (SSMA))](../ssma/new-updated-ssma.md)
-- [Neu + Aktualisiert (0+0): Dokumentation zu **Tools für SQL**](../tools/new-updated-tools.md)
 - [New + Updated (0+0): **XQuery for SQL** docs (Neu + Aktualisiert (0+0): XQuery für SQL-Dokumente)](../xquery/new-updated-xquery.md)
-
 

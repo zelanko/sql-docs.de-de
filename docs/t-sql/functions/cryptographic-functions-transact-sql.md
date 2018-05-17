@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
@@ -26,17 +24,16 @@ caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 823f6fd583be606672905acf3908e1854a873e75
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bd25f4a498c11bc3eec36f21877f5a0204b7617f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cryptographic-functions-transact-sql"></a>Kryptografiefunktionen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Die folgenden Funktionen unterstützen die Verschlüsselung, die Entschlüsselung, digitale Signaturen und die Überprüfung digitaler Signaturen.
+Diese Funktionen unterstützen digitale Signaturen, die Überprüfung von digitalen Signaturen, Verschlüsselung und Entschlüsselung.
   
 ## <a name="symmetric-encryption-and-decryption"></a>Symmetrische Ver- und Entschlüsselung
   
@@ -76,7 +73,7 @@ Die folgenden Funktionen unterstützen die Verschlüsselung, die Entschlüsselun
 |-|-|  
 |[HASHBYTES](../../t-sql/functions/hashbytes-transact-sql.md)||  
   
-## <a name="copying-certificates"></a>Kopieren von Zertifikaten
+## <a name="certificate-copying"></a>Kopieren von Zertifikaten
   
 |||  
 |-|-|  
@@ -86,7 +83,8 @@ Die folgenden Funktionen unterstützen die Verschlüsselung, die Entschlüsselun
 ## <a name="see-also"></a>Siehe auch
 [Funktionen](../../t-sql/functions/functions.md)  
 [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-[Berechtigungshierarchie &#40;Datenbankmodul&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)  
+
+  [Berechtigungshierarchie &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)  
 [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
 [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)  
 [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)  

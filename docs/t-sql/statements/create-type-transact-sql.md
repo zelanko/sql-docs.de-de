@@ -1,16 +1,14 @@
 ---
 title: CREATE TYPE (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 04/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sql13.swb.sysdatatype.properties.f1
@@ -29,16 +27,15 @@ helpviewer_keywords:
 - alias data types [SQL Server], creating
 - data types [SQL Server], creating
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
-caps.latest.revision: 
+caps.latest.revision: 92
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 145f60bcec81e8a29761a44146df025f66a21b80
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a284d0d144b4cdc091a866d4c660d6a84ad0c2dc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +45,7 @@ ms.lasthandoff: 11/21/2017
  Die Option zum Ausführen von CLR-Code ist standardmäßig in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deaktiviert. Sie können Datenbankobjekte, die auf verwaltete Codemodule verweisen, erstellen, ändern und löschen. Diese Verweise werden jedoch nur dann in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt, wenn die Option [clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) mithilfe von [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) aktiviert wird.  
  
 > [!NOTE]  
->  Die Integration der .NET Framework-CLR in SQL Server wird in diesem Thema erläutert. Die Integration der CLR gilt nicht für Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+>  Die Integration der .NET Framework-CLR in SQL Server wird in diesem Thema erläutert. Die CLR-Integration gilt nicht für Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -180,9 +177,9 @@ column_name <data_type>
 |**Datum**|**datetime**|**datetime2**|**datetimeoffset**|  
 |**decimal**|**float**|**image**|**int**|  
 |**money**|**nchar(** *n* **)**|**ntext**|**numeric**|  
-|**nvarchar(** *n* &#124; **max)**|**real**|**smalldatetime**|**smallint**|  
+|**nvarchar(** *n* | **max)**|**real**|**smalldatetime**|**smallint**|  
 |**smallmoney**|**sql_variant**|**text**|**Uhrzeit**|  
-|**tinyint**|**uniqueidentifier**|**varbinary(** *n* &#124; **max)**|**varchar(** *n* &#124; **max)**|  
+|**tinyint**|**uniqueidentifier**|**varbinary(** *n* | **max)**|**varchar(** *n* | **max)**|  
   
  *base_type* kann außerdem jedes Synonym für Datentypen sein, das einem dieser Systemdatentypen zugeordnet wird.  
   
@@ -230,17 +227,17 @@ column_name <data_type>
  Sie müssen Spalten- und Tabellenindizes als Teil der CREATE TABLE-Anweisung angeben. CREATE INDEX und DROP INDEX werden für speicheroptimierte Tabellen nicht unterstützt.  
   
  MEMORY_OPTIMIZED  
- **Gilt für:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Gibt an, ob der Tabellentyp speicheroptimiert ist. Diese Option ist standardmäßig deaktiviert; die Tabelle (der Tabellentyp) ist keine speicheroptimierte Tabelle (kein speicheroptimierter Tabellentyp). Speicheroptimierte Tabellentypen sind speicheroptimierte Benutzertabellen, deren Schema auf dem Datenträger ähnlich anderen Benutzertabellen beibehalten wird.  
   
  BUCKET_COUNT  
- **Gilt für:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Gibt die Anzahl der Buckets an, die im Hashindex erstellt werden sollen. Der maximale Wert für BUCKET_COUNT in Hashindizes beträgt 1.073.741.824. Weitere Informationen zu Indizes für speicheroptimierte Tabellen finden Sie unter [Indexes for Memory-Optimized Tables (Indizes für speicheroptimierte Tabellen)](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md). *bucket_count* ist ein erforderliches Argument.  
   
  HASH  
- **Gilt für:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Gibt an, dass ein HASH-Index erstellt wird. Hashindizes werden nur für speicheroptimierte Tabellen unterstützt.  
   
@@ -270,6 +267,12 @@ column_name <data_type>
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die CREATE TYPE-Berechtigung für die aktuelle Datenbank und die ALTER-Berechtigung für *schema_name*. Wenn *schema_name* nicht angegeben wird, gelten die Standardregeln für die Namensauflösung, um das Schema für den aktuellen Benutzer zu bestimmen. Wird *assembly_name* angegeben, muss ein Benutzer entweder Besitzer der Assembly sein oder die REFERENCES-Berechtigung für die Assembly besitzen.  
+
+ Wenn in der CREATE TABLE-Anweisung eine Spalte als Spalte eines benutzerdefinierten Typs definiert wird, ist die REFERENCES-Berechtigung für den benutzerdefinierten Typ erforderlich.
+ 
+   >[!NOTE]
+  > Eine Benutzer, der eine Tabelle mit einer Spalte erstellt, die einen benutzerdefinierten Typ verwendet, benötigt die REFERENCES-Berechtigung für den benutzerdefinierten Typ.
+  > Wenn diese Tabelle in TempDB erstellt werden muss, muss entweder **vor** jedem Erstellen der Tabelle die REFERENCES-Berechtigung explizit erteilt werden, oder der betreffende Datentyp und die REFERENCES-Berechtigungen müssen der Modelldatenbank hinzugefügt werden. Wenn dies erfolgt ist, stehen der betreffende Datentyp und die Berechtigungen dauerhaft in TempDB zur Verfügung. Andernfalls verschwinden der benutzerdefinierte Datentyp und die Berechtigungen bei einem Neustart von SQL Server. Weitere Informationen finden Sie unter [CREATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/create-table-transact-sql?view=sql-server-2017#permissions-1)
   
 ## <a name="examples"></a>Beispiele  
   

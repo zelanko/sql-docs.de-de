@@ -26,28 +26,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e727b05f4b57e00694c2bf12aa60a972838a9af2
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 3d61d87f1e19088d7f667029bdaaf935d150dc88
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Erstellt eine externe Tabelle und exportiert gleichzeitig die Ergebnisse einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-SELECT-Anweisung in Hadoop oder Azure Storage Blob.  
-  
- Verwenden Sie die Anweisung CREATE EXTERNAL TABLE AS SELECT (CETAS) für folgende Vorgänge:  
-  
--   Exportieren einer Datenbanktabelle in Hadoop oder Azure Blob Storage  
-  
--   Importieren von Daten aus Hadoop oder Azure Blob Storage und Speichern der Daten in der Datenbank  
-  
--   Abfragen von Daten aus Hadoop oder Azure Blob Storage, Verknüpfen der Daten mit relationalen Datenbanktabellen und Zurückschreiben der Ergebnisse in Hadoop oder Azure Blob Storage  
-  
--   Abfragen von Daten aus Hadoop oder Azure Blob Storage, Transformieren der Daten mithilfe der schnellen Verarbeitungsfunktionen der Datenbank und Zurückschreiben der Daten in Hadoop oder Azure Blob Storage  
-  
- Weitere Informationen finden Sie unter [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)(Erste Schritte mit PolyBase).  
   
  ![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

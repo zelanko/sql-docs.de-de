@@ -1,16 +1,15 @@
 ---
 title: rskeymgmt-Hilfsprogramm (SSRS) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
 - joining report server instances [SQL Server]
@@ -23,16 +22,15 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-caps.latest.revision: 
+caps.latest.revision: 56
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3e78a5b9e393dc24c1bfdb1ccc72cd05a0675bfd
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: c2bdcd2610eb4a4c6d351868a8fbb7aac9a44bf7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt-Hilfsprogramm (SSRS)
   Dient zum Extrahieren, Wiederherstellen, Erstellen und Löschen des symmetrischen Schlüssels, der verwendet wird, um vertrauliche Berichtsserverdaten vor nicht autorisiertem Zugriff zu schützen. Dieses Hilfsprogramm wird auch verwendet, um Berichtsserverinstanzen in einer Bereitstellung für horizontales Skalieren zu verknüpfen. Eine *Berichtsserverbereitstellung für horizontales Skalieren* bezeichnet mehrere Berichtsserverinstanzen, die gemeinsam eine einzelne Berichtsserver-Datenbank nutzen.  
@@ -65,12 +63,12 @@ rskeymgmt {-?}
  **-e**  
  Extrahiert den symmetrischen Schlüssel, der zum Verschlüsseln und Entschlüsseln von Daten für die Berichtsserverinstanz verwendet wird, sodass Sie ihn in eine Datei kopieren können.  
   
- Dieses Argument enthält keinen Wert. Sie müssen jedoch zusätzliche Argumente in der Befehlszeile einschließen, um die Extrahierung abzuschließen. Zu den Argumenten, die Sie angeben müssen, gehören **-f** und**-p**.  
+ Dieses Argument enthält keinen Wert. Sie müssen jedoch zusätzliche Argumente in der Befehlszeile einschließen, um die Extrahierung abzuschließen. Zu den Argumenten, die Sie angeben müssen, gehören **-f** und **-p**.  
   
  **-a**  
  Ersetzt einen vorhandenen symmetrischen Schlüssel durch eine Kopie, die Sie in einer kennwortgeschützten Sicherungsdatei bereitstellen. Alle Instanzen des symmetrischen Schlüssels werden aktualisiert.  
   
- Dieses Argument enthält keinen Wert. Sie müssen jedoch zusätzliche Argumente in der Befehlszeile angeben, um die Datei mit dem anzuwendenden Schlüssel auszuwählen. Zu den Argumenten, die Sie angeben können, gehören **-f** und**-p**.  
+ Dieses Argument enthält keinen Wert. Sie müssen jedoch zusätzliche Argumente in der Befehlszeile angeben, um die Datei mit dem anzuwendenden Schlüssel auszuwählen. Zu den Argumenten, die Sie angeben können, gehören **-f** und **-p**.  
   
  **-d**  
  Löscht alle Instanzen des symmetrischen Schlüssels und alle verschlüsselten Daten in einer Berichtsserver-Datenbank. Dieses Argument enthält keinen Wert.  
@@ -103,7 +101,7 @@ rskeymgmt {-?}
  **-n**  
  Gibt den Namen der Berichtsserverinstanz auf einem Remotecomputer an. Dieses Argument ist optional, wenn Sie den Berichtsserver auf der standardmäßigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz installiert haben (der Standardwert für **-n** ist MSSQLSERVER). Wenn Sie den Berichtsserver als benannte Instanz installiert haben, ist **-n** erforderlich.  
   
- **-u**  *Benutzerkonto*  
+ **-u**  *useraccount*  
  Gibt das Administratorkonto auf dem Remotecomputer an, den Sie der Bereitstellung für horizontales Skalieren hinzufügen. Wird kein Konto angegeben, werden die Anmeldeinformationen des aktuellen Benutzers verwendet.  
   
  **-v**  *Kennwort*  

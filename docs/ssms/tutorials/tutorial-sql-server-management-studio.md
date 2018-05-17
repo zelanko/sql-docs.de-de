@@ -26,11 +26,11 @@ caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8bc9af7ef49cfcb86b286e8ce090cad1be57e49e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fa41bd4f5cbae85af4ad7cf93fa0690b5cca9421
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>Tutorials zu SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -80,7 +80,7 @@ Zum Durchlaufen dieses Tutorials muss Folgendes installiert sein:
 
   -   Installieren Sie die neueste Version von [SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md).  
 
-Im ersten Artikel erfahren Sie, wie Sie eine Datenbank erstellen. Weitere beispielhafte Datenbanken finden Sie unter [AdventureWorks-Beispieldatenbanken](https://github.com/Microsoft/sql-server-samples/releases). Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Restoring a Database (Wiederherstellen einer Datenbank)](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+Im ersten Artikel erfahren Sie, wie Sie eine Datenbank erstellen. Weitere beispielhafte Datenbanken finden Sie unter [AdventureWorks-Beispieldatenbanken](https://github.com/Microsoft/sql-server-samples/releases). Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Restoring a Database (Wiederherstellen einer Datenbank)](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 
   

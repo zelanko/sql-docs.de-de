@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dta.workload.f1
 - sql13.dta.general.f1
@@ -26,12 +25,11 @@ caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 8decab3a7a2bece72e381a2c1efc579e914df82c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b23898d9d14b75608d86518fa25ef750a9192d0c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Starten und Verwenden des Datenbankoptimierungsratgebers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +45,7 @@ ms.lasthandoff: 04/16/2018
 -   Verwenden Sie das Hilfsprogramm **dta** , um die erste Arbeitsauslastung zu optimieren. Weitere Informationen hierzu finden Sie unter [Verwenden des dta-Hilfsprogramms](#dta) an späterer Stelle in diesem Thema.  
   
 ##  <a name="Start"></a> Starten Sie den Datenbankoptimierungsratgeber  
- Sie können die grafische Benutzeroberfläche (GUI, Graphical User Interface) des Datenbankmodul-Optimierungsratgebers auf verschiedene Arten starten, um in einer Reihe von Szenarien das Optimieren von Datenbanken zu unterstützen. Zu den unterschiedlichen Startmöglichkeiten des Datenbankoptimierungsratgebers gehören Folgende: über das Menü **Start** , über das Menü **Extras** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], über den Abfrage-Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]und über das Menü **Extras** in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Wenn Sie den Datenbankoptimierungsratgeber zum ersten Mal starten, wird das Dialogfeld **Verbindung mit Server herstellen** angezeigt, in dem Sie die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angeben können, zu der Sie eine Verbindung herstellen möchten.  
+ Sie können die grafische Benutzeroberfläche (GUI, Graphical User Interface) des Datenbankoptimierungsratgebers auf verschiedene Arten starten, um in einer Reihe von Szenarien das Optimieren von Datenbanken zu unterstützen. Zu den unterschiedlichen Startmöglichkeiten des Datenbankoptimierungsratgebers gehören Folgende: über das Menü **Start** , über das Menü **Extras** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], über den Abfrage-Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]und über das Menü **Extras** in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Wenn Sie den Datenbankoptimierungsratgeber zum ersten Mal starten, wird das Dialogfeld **Verbindung mit Server herstellen** angezeigt, in dem Sie die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angeben können, zu der Sie eine Verbindung herstellen möchten.  
   
 > [!WARNING]  
 >  Starten Sie den Datenbankoptimierungsratgeber nicht, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Einzelbenutzermodus ausgeführt wird. Wenn Sie versuchen ihn zu starten, während der Server im Einzelbenutzermodus ausgeführt wird, wird ein Fehler zurückgegeben und der Datenbankoptimierungsratgeber wird nicht gestartet. Weitere Informationen zum Einzelbenutzermodus finden Sie unter [Starten von SQL Server im Einzelbenutzermodus](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md).  
@@ -58,13 +56,13 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-management-studio"></a>So starten Sie den Datenbankoptimierungsratgeber in SQL Server Management Studio  
   
-1.  Klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Extras** auf **Datenbankoptimierungsratgeber**.  
+1.  Klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**Extras** auf **Datenbankoptimierungsratgeber**.  
   
 #### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>So starten Sie den Datenbankoptimierungsratgeber über den Abfrage-Editor von SQL Server Management Studio  
   
 1.  Öffnen Sie in [!INCLUDE[tsql](../../includes/tsql-md.md)] eine [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Skriptdatei. Weitere Informationen finden Sie unter [Abfrage- und Text-Editoren &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md).  
   
-2.  Wählen Sie im [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skript eine Abfrage aus, oder wählen Sie das gesamte Skript aus, klicken Sie mit der rechten Maustaste auf die Auswahl, und wählen Sie **Abfrage mit dem Datenbankoptimierungsratgeber analysieren**. Die GUI des Datenbankoptimierungsratgebers wird geöffnet und importiert das Skript als Arbeitsauslastung in Form einer XML-Datei. Sie können einen Namen für die Sitzung und Optimierungsoptionen angeben, um die ausgewählten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfragen als Arbeitsauslastung zu optimieren.  
+2.  Wählen Sie im [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript eine Abfrage aus, oder wählen Sie das gesamte Skript aus, klicken Sie mit der rechten Maustaste auf die Auswahl, und wählen Sie **Abfrage mit dem Datenbankoptimierungsratgeber analysieren**. Die GUI des Datenbankoptimierungsratgebers wird geöffnet und importiert das Skript als Arbeitsauslastung in Form einer XML-Datei. Sie können einen Namen für die Sitzung und Optimierungsoptionen angeben, um die ausgewählten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfragen als Arbeitsauslastung zu optimieren.  
   
 #### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-profiler"></a>So starten Sie den Datenbankoptimierungsratgeber in SQL Server Profiler  
   
@@ -180,7 +178,8 @@ Weitere Informationen finden Sie unter [Tuning Database Using Workload from Quer
   
      Wenn Sie die Optimierungssitzung nach dem Start anhalten möchten, wählen Sie eine der folgenden Optionen aus dem Menü **Aktionen** aus:  
   
-    -   **Analyse beenden (mit Empfehlungen)** beendet die Optimierungssitzung und fragt, ob Sie möchten, dass der Datenbankoptimierungsratgeber auf der Basis der bisher ausgeführten Analyse Empfehlungen generiert.  
+    -   
+  **Analyse beenden (mit Empfehlungen)** beendet die Optimierungssitzung und fragt, ob Sie möchten, dass der Datenbankoptimierungsratgeber auf der Basis der bisher ausgeführten Analyse Empfehlungen generiert.  
   
     -   **Analyse beenden** beendet die Optimierungssitzung ohne Erstellung von Empfehlungen.  
   
@@ -193,7 +192,7 @@ Weitere Informationen finden Sie unter [Tuning Database Using Workload from Quer
   
 2.  Erstellen Sie eine Arbeitsauslastung. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Erstellen einer Arbeitsauslastung](#Create) .  
   
-3.  Starten Sie den Datenbankoptimierungsratgeber, und melden Sie sich bei einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]an. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Starten des Datenbankoptimierungsratgebers](#Start) .  
+3.  Starten Sie den Datenbankoptimierungsratgeber, und melden Sie sich bei einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]an. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Starten des Datenbankoptimierungsratgebers](#Start) .  
   
 4.  Geben Sie auf der Registerkarte **Allgemein** einen Namen in **Sitzungsname** ein, um eine neue Optimierungssitzung zu erstellen.  
   
@@ -208,7 +207,7 @@ Weitere Informationen finden Sie unter [Tuning Database Using Workload from Quer
   
      Klicken Sie auf **Durchsuchen**, um nach einer Arbeitsauslastungsdatei oder -tabelle zu suchen. Der Datenbankoptimierungsratgeber geht davon aus, dass es sich bei allen Arbeitsauslastungsdateien um Rolloverdateien handelt. Weitere Informationen zu Rolloverdateien finden Sie unter [Limit Trace File and Table Sizes](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md).  
   
-     Wenn Sie eine Ablaufverfolgungstabelle als Arbeitsauslastung verwenden, muss die betreffende Tabelle auf dem Server vorhanden sein, der mit dem Datenbankoptimierungsratgeber optimiert wird. Wenn Sie die Ablaufverfolgungstabelle auf einem anderen Server erstellen, verschieben Sie sie auf den Server, der mit dem Datenbankmodul-Optimierungsratgeber optimiert wird, bevor Sie sie als Arbeitsauslastung verwenden.  
+     Wenn Sie eine Ablaufverfolgungstabelle als Arbeitsauslastung verwenden, muss die betreffende Tabelle auf dem Server vorhanden sein, der mit dem Datenbankoptimierungsratgeber optimiert wird. Wenn Sie die Ablaufverfolgungstabelle auf einem anderen Server erstellen, verschieben Sie sie auf den Server, der mit dem Datenbankoptimierungsratgeber optimiert wird, bevor Sie sie als Arbeitsauslastung verwenden.  
   
 6.  Wählen Sie die Datenbanken und Tabellen aus, mit denen Sie die in Schritt 5 ausgewählte Arbeitsauslastung ausführen möchten. Klicken Sie zum Auswählen der Tabellen auf den Pfeil **Ausgewählte Tabellen** .  
   
@@ -222,7 +221,8 @@ Weitere Informationen finden Sie unter [Tuning Database Using Workload from Quer
   
      Wenn Sie die Optimierungssitzung nach dem Start anhalten möchten, wählen Sie eine der folgenden Optionen aus dem Menü **Aktionen** aus:  
   
-    -   **Analyse beenden (mit Empfehlungen)** beendet die Optimierungssitzung und fragt, ob Sie möchten, dass der Datenbankoptimierungsratgeber auf der Basis der bisher ausgeführten Analyse Empfehlungen generiert.  
+    -   
+  **Analyse beenden (mit Empfehlungen)** beendet die Optimierungssitzung und fragt, ob Sie möchten, dass der Datenbankoptimierungsratgeber auf der Basis der bisher ausgeführten Analyse Empfehlungen generiert.  
   
     -   **Analyse beenden** beendet die Optimierungssitzung ohne Erstellung von Empfehlungen.  
   
@@ -501,7 +501,8 @@ database_name.owner_name.table_name
   
  Wenn Sie die Optimierungssitzung nach dem Start anhalten möchten, wählen Sie eine der folgenden Optionen aus dem Menü **Aktionen** aus:  
   
--   **Analyse beenden (mit Empfehlungen)** beendet die Optimierungssitzung und fragt, ob Sie möchten, dass der Datenbankoptimierungsratgeber auf der Basis der bisher ausgeführten Analyse Empfehlungen generiert.  
+-   
+  **Analyse beenden (mit Empfehlungen)** beendet die Optimierungssitzung und fragt, ob Sie möchten, dass der Datenbankoptimierungsratgeber auf der Basis der bisher ausgeführten Analyse Empfehlungen generiert.  
   
 -   **Analyse beenden** beendet die Optimierungssitzung ohne Erstellung von Empfehlungen.  
   
@@ -524,7 +525,8 @@ database_name.owner_name.table_name
  Enthält Informationen bezüglich dieser Optimierungssitzung. Um dieses Protokoll zu drucken, klicken Sie mit der rechten Maustaste auf das Protokoll, und klicken Sie auf **Drucken**.  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
+ 
+  [Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
  [dta Utility](../../tools/dta/dta-utility.md)  
   
   

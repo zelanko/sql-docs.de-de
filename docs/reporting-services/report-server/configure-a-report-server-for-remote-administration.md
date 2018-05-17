@@ -50,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="tasks"></a>Aufgaben  
  Anhand folgender Tasks kann die Konfiguration des Remoteberichtsservers aktiviert werden:  
   
--   Ports in der Windows-Firewall aktivieren, um Anforderungen in Ports zuzulassen, die vom Berichtsserver und von der Instanz der SQL Server-Datenbank-Engine verwendet werden.  Siehe [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) und [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
+-   Ports in der Windows-Firewall aktivieren, um Anforderungen in Ports zuzulassen, die vom Berichtsserver und von der Instanz der SQL Server-Datenbank-Engine verwendet werden.  Siehe [Konfigurieren einer Windows-Firewall für Datenbankmodulzugriff](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) und [Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
 -   Remoteverbindungen für die Instanz der Datenbank-Engine aktivieren, auf der die Berichtserver-Datenbank gehostet ist. Eine Remoteverbindung ist zum Konfigurieren der Berichtsserver-Datenbankverbindung und zum Verwalten der Verschlüsselungsschlüssel erforderlich.  
   

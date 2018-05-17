@@ -1,25 +1,23 @@
 ---
-title: "Hinzufügen des Webparts des Berichts-Viewers für SQL Server Reporting Services zu einer SharePoint-Seite | Microsoft-Dokumentation"
-ms.custom: 
+title: Hinzufügen des Webparts des Berichts-Viewers für SQL Server Reporting Services zu einer SharePoint-Seite | Microsoft-Dokumentation
+ms.custom: ''
 ms.date: 09/26/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 93137662ea40589495e692ca021c693920786185
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3d63f40c62c1997be2d4944c8b67f328d2b64c2d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Hinzufügen des Webparts des Berichts-Viewers für SQL Server Reporting Services zu einer SharePoint-Seite
 
@@ -63,7 +61,7 @@ Führen Sie folgende Schritte aus, um das Webpart zu konfigurieren, das auf eine
 
     ![Bearbeiten Sie die Webseite über die Dropdownliste des Webparts.](media/sharepoint-edit-web-part.png)
 
-2. Geben Sie die **Berichtsserver-URL** des Berichtsserver ein, der Ihren Bericht hostet. Dies sollte in etwa wie folgt aussehen: *http://myrsserver/reportserver*.
+2. Geben Sie die **Berichtsserver-URL** des Berichtsserver ein, der Ihren Bericht hostet. Dies sollte etwa wie folgt aussehen: *http://myrsserver/reportserver*.
 
 3. Geben Sie den Pfad und den Namen des Berichts an, den Sie im Webpart anzeigen möchten. Dies sollte in etwa wie folgt aussehen: */AdventureWorks Sample Reports/Company Sales*. In diesem Beispiel befindet sich der Bericht *Company Sales* (Firmenumsatz) in einem Ordner mit der Bezeichnung *AdventureWorks Sample Reports* (AdventureWorks-Beispielberichte).
 

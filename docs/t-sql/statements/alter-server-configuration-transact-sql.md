@@ -1,16 +1,14 @@
 ---
 title: ALTER SERVER CONFIGURATION (Transact-SQL) | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 05/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER SERVER CONFIGURATION
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - ALTER SERVER CONFIGURATION statement
 - setting process affinity
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
-caps.latest.revision: 
+caps.latest.revision: 72
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 4489934ad1bb21c79cbb0ece01e7d061fd794c2a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: fb2dd1c54653b825d135e9ca3fb1b478212f70f3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -186,26 +183,29 @@ SQLDUMPEREDUMPFLAGS
  Die Bedingungen, unter denen für die SQL Server-Failoverclusterinstanz ein Failover oder Neustart durchgeführt werden soll. Der Standardwert ist 3; das bedeutet, dass für die SQL Server-Ressource bei kritischen Serverfehlern ein Failover oder Neustart durchgeführt wird. Weitere Informationen zum Konfigurieren dieser Eigenschaft finden Sie unter [Configure FailureConditionLevel Property Settings (Konfigurieren von FailureConditionLevel-Eigenschafteneinstellungen)](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).  
   
  HEALTHCHECKTIMEOUT = { 'health_check_time-out' | DEFAULT }  
- Der Timeoutwert, der festlegt, wie lange die Ressourcen-DLL des SQL Server-Datenbankmoduls auf Informationen über den Serverzustand warten soll, bevor eine Instanz von SQL Server als nicht reagierend eingestuft wird. Der Timeoutwert wird in Millisekunden angegeben. Der Standardwert beträgt 60.000 Millisekunden (60 Sekunden).  
+ Der Timeoutwert, der festlegt, wie lange die Ressourcen-DLL der SQL Server-Datenbank-Engine auf Informationen über den Serverzustand warten soll, bevor eine Instanz von SQL Server als nicht reagierend eingestuft wird. Der Timeoutwert wird in Millisekunden angegeben. Der Standardwert beträgt 60.000 Millisekunden (60 Sekunden).  
   
  **\<hadr_cluster_context> ::=**  
   
 **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  HADR CLUSTER CONTEXT **=** { **'***remote_windows_cluster***'** | LOCAL }  
- Wechselt mit dem HADR-Clusterkontext der Serverinstanz zum angegebenen Windows Server Failover Clustering-Cluster (WSFC). Der *HADR-Clusterkontext* bestimmt, welcher Windows Server Failover Clustering-Cluster (WSFC) die Metadaten für die von der Serverinstanz gehosteten Verfügbarkeitsreplikate verwaltet. Verwenden Sie die SET HADR CLUSTER CONTEXT-Option nur während einer clusterübergreifenden Migration von [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] zu einer Instanz von [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] oder höher auf einem neuen WSFC-Cluster.  
+ Wechselt mit dem HADR-Clusterkontext der Serverinstanz zum angegebenen WSFC (Windows Server Failover Cluster). Der *HADR-Clusterkontext* bestimmt, welcher WSFC die Metadaten für die von der Serverinstanz gehosteten Verfügbarkeitsreplikate verwaltet. Verwenden Sie die SET HADR CLUSTER CONTEXT-Option nur während einer clusterübergreifenden Migration von [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] zu einer Instanz von [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] oder höher auf einem neuen WSFC.  
   
- Sie können mit dem HADR-Clusterkontext nur vom lokalen WSFC-Cluster zu einem Remotecluster und dann zurück vom Remotecluster zum lokalen Cluster wechseln. Der HADR-Clusterkontext kann nur zu einem Remotecluster wechseln, wenn die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keine Verfügbarkeitsreplikate hostet.  
+ Sie können mit dem HADR-Clusterkontext nur vom lokalen WSFC zu einem Remote-WSFC und dann zurück vom Remote-WSFC zum lokalen WSFC wechseln. Der HADR-Clusterkontext kann nur zu einem Remotecluster wechseln, wenn die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keine Verfügbarkeitsreplikate hostet.  
   
  Ein Remote-HADR-Clusterkontext kann jederzeit zurück zum lokalen Cluster wechseln. Der Kontext kann jedoch nicht erneut gewechselt werden, solange die Serverinstanz Verfügbarkeitsreplikate hostet.  
   
  Um den Zielcluster zu identifizieren, geben Sie einen der folgenden Werte an:  
   
  *Windows-Cluster*  
- Der Clusterobjektname (CON) eines WSFC-Clusters. Sie können entweder den Kurznamen oder den vollständigen Domänennamen angeben. ALTER SERVER CONFIGURATION sucht die Ziel-IP-Adresse eines Kurznamens mithilfe einer DNS-Auflösung. In einigen Situationen könnte ein Kurzname für Verwirrung sorgen, und DNS gibt möglicherweise die falsche IP-Adresse zurück. Daher empfiehlt es sich, dass Sie den vollständigen Domänennamen angeben.  
+ Der Netzwerkname eines WSFCs. Sie können entweder den Kurznamen oder den vollständigen Domänennamen angeben. ALTER SERVER CONFIGURATION sucht die Ziel-IP-Adresse eines Kurznamens mithilfe einer DNS-Auflösung. In einigen Situationen könnte ein Kurzname für Verwirrung sorgen, und DNS gibt möglicherweise die falsche IP-Adresse zurück. Daher empfiehlt es sich, dass Sie den vollständigen Domänennamen angeben.  
+  
+  > [!NOTE] 
+  > Eine clusterübergreifende Migration unter Verwendung dieser Einstellung wird nicht mehr unterstützt. Verwenden Sie zum Ausführen einer clusterübergreifenden Migration eine verteilte Verfügbarkeitsgruppe oder eine andere Methode, wie etwa Protokollversand. 
   
  LOCAL  
- Der lokale WSFC-Cluster.  
+ Der lokale WSFC.  
   
  Weitere Informationen finden Sie unter [Ändern des HADR-Clusterkontexts der Serverinstanz &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md).  
   

@@ -1,29 +1,23 @@
 ---
 title: Dynamische Datenmaskierung | Microsoft-Dokumentation
-ms.custom: ''
 ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
-caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 453399db3852ff7165bfd569a255b16797675fc5
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 0aa8b9f31337bbbe2b4a545574c3a9cfc0e03116
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dynamic-data-masking"></a>Dynamische Datenmaskierung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,9 +35,9 @@ Mit der dynamischen Datenmaskierung können Sie unbefugten Zugriff auf sensible 
 
 Ein Supportmitarbeiter in einem Call Center kann z. B. Anrufer anhand mehrerer Ziffern seiner Sozialversicherungs- oder Kreditkartennummer identifizieren. Diese Datenelemente dürfen dem Supportmitarbeiter aber nicht vollständig verfügbar gemacht werden. Es kann eine Maskierungsregel definiert werden, die alle außer den letzten vier Ziffern einer Sozialversicherungsnummer oder Kreditkartennummer im Resultset einer beliebigen Abfrage maskiert. Als weiteres Beispiel kann ein Entwickler Produktionsumgebungen zu Problembehandlungszwecken abfragen, ohne gegen Genehmigungsregeln zu verstoßen, indem er die entsprechende Datenmaske zum Schützen von personenbezogenen Daten verwendet.
 
- Der Zweck der dynamischen Datenmaskierung besteht darin, die Offenlegung sensibler Daten zu beschränken, die Benutzer an der Anzeige der Daten hindert, die keinen Zugriff auf diese erhalten sollten. Die dynamische Datenmaskierung ist nicht darauf ausgerichtet, Datenbankbenutzer daran zu hindern, eine direkte Verbindung zur Datenbank herzustellen und umfassende Abfragen auszuführen, die Teile der vertraulichen Daten verfügbar machen. Die dynamische Datenmaskierung ist eine Ergänzung zu anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherheitsfunktionen (Überwachung, Verschlüsselung, Sicherheit auf Zeilenebene...), und es empfiehlt sich dringend, dieses Feature in Verbindung mit diesen anderen Funktionen zu verwenden, um die sensiblen Daten in der Datenbank besser zu schützen.  
+Der Zweck der dynamischen Datenmaskierung besteht darin, die Offenlegung sensibler Daten zu beschränken, die Benutzer an der Anzeige der Daten hindert, die keinen Zugriff auf diese erhalten sollten. Die dynamische Datenmaskierung ist nicht darauf ausgerichtet, Datenbankbenutzer daran zu hindern, eine direkte Verbindung zur Datenbank herzustellen und umfassende Abfragen auszuführen, die Teile der vertraulichen Daten verfügbar machen. Die dynamische Datenmaskierung ist eine Ergänzung zu anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherheitsfunktionen (Überwachung, Verschlüsselung, Sicherheit auf Zeilenebene...), und es empfiehlt sich dringend, dieses Feature in Verbindung mit diesen anderen Funktionen zu verwenden, um die sensiblen Daten in der Datenbank besser zu schützen.  
   
- Die dynamische Datenmaskierung steht in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]zur Verfügung und wird mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Befehlen konfiguriert. Weitere Informationen zum Konfigurieren der dynamischen Datenmaskierung über das Azure-Portal finden Sie unter [Erste Schritte mit der dynamischen Datenmaskierung für SQL-Datenbank (Azure-Portal)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/).  
+Die dynamische Datenmaskierung steht in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]zur Verfügung und wird mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Befehlen konfiguriert. Weitere Informationen zum Konfigurieren der dynamischen Datenmaskierung über das Azure-Portal finden Sie unter [Erste Schritte mit der dynamischen Datenmaskierung für SQL-Datenbank (Azure-Portal)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/).  
   
 ## <a name="defining-a-dynamic-data-mask"></a>Definieren einer dynamischen Datenmaske  
  Eine Maskierungsregel kann für eine Spalte in einer Tabelle definiert werden, um die Daten in dieser Spalte zu verschleiern. Es stehen vier Arten von Masken zur Verfügung.  
@@ -75,7 +69,7 @@ Ein Supportmitarbeiter in einem Call Center kann z. B. Anrufer anhand mehrerer 
 ## <a name="querying-for-masked-columns"></a>Abfragen von maskierten Spalten  
  Verwenden Sie die **sys.masked_columns** -Ansicht zum Abfragen von Tabellenspalten, auf die eine Maskierungsfunktion angewendet wird. Diese Ansicht erbt von der **sys.columns** -Ansicht. Sie gibt alle Spalten in der **sys.columns** -Ansicht sowie die Spalten **is_masked** und **masking_function** zurück, wobei angegeben wird, ob die Spalte maskiert ist. Ist dies der Fall, gibt die Ansicht die definierte Maskierungsfunktion an. Diese Ansicht zeigt nur die Spalten an, auf die eine Maskierungsfunktion angewendet wird.  
   
-```  
+```sql 
 SELECT c.name, tbl.name as table_name, c.is_masked, c.masking_function  
 FROM sys.masked_columns AS c  
 JOIN sys.tables AS tbl   
@@ -108,7 +102,7 @@ Die dynamische Datenmaskierung dient zur Vereinfachung der Anwendungsentwicklung
 Betrachten Sie dazu als Beispiel einen Datenbankprinzipal, der über ausreichende Berechtigungen zum Ausführen von Ad-hoc-Abfragen für die Datenbank verfügt und versucht, die zugrunde liegenden Daten zu „erraten“ und letztlich die tatsächlichen Werte abzuleiten. Nehmen Sie an, es liegt eine definierte Maske für die `[Employee].[Salary]` -Spalte vor, und dieser Benutzer stellt eine direkte Verbindung zur Datenbank her und beginnt mit dem Raten von Werten, wodurch letztendlich der `[Salary]` -Wert einer Reihe von Mitarbeitern gefolgert wird:
  
 
-```
+```sql
 SELECT ID, Name, Salary FROM Employees
 WHERE Salary > 99999 and Salary < 100001;
 ```
@@ -128,7 +122,7 @@ Es ist wichtig, die Berechtigungen für die Datenbank ordnungsgemäß zu verwalt
 ### <a name="creating-a-dynamic-data-mask"></a>Erstellen einer dynamischen Datenmaske  
  Mit dem folgenden Beispiel wird eine Tabelle mit drei verschiedenen Typen von dynamischen Datenmasken erstellt. Das Beispiel füllt die Tabelle und wählt sie aus, um das Ergebnis anzuzeigen.  
   
-```  
+```sql
 CREATE TABLE Membership  
   (MemberID int IDENTITY PRIMARY KEY,  
    FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)') NULL,  
@@ -145,7 +139,7 @@ SELECT * FROM Membership;
   
  Es wird ein neuer Benutzer erstellt und diesem die Berechtigung **SELECT** für die Tabelle erteilt. Abfragen werden für durch die `TestUser` -Ansicht maskierte Daten ausgeführt.  
   
-```  
+```sql 
 CREATE USER TestUser WITHOUT LOGIN;  
 GRANT SELECT ON Membership TO TestUser;  
   
@@ -166,14 +160,14 @@ REVERT;
  Verwenden Sie die **ALTER TABLE** -Anweisung zum Hinzufügen einer Maske zu einer vorhandenen Spalte in der Tabelle oder zum Bearbeiten der Maske für die betreffende Spalte.  
 Im folgenden Beispiel wird eine Maskierungsfunktion zur Spalte `LastName` hinzugefügt:  
   
-```  
+```sql  
 ALTER TABLE Membership  
 ALTER COLUMN LastName ADD MASKED WITH (FUNCTION = 'partial(2,"XXX",0)');  
 ```  
   
  Im folgenden Beispiel wird eine Maskierungsfunktion für die Spalte `LastName` geändert:  
-  
-```  
+
+```sql  
 ALTER TABLE Membership  
 ALTER COLUMN LastName varchar(100) MASKED WITH (FUNCTION = 'default()');  
 ```  
@@ -181,7 +175,7 @@ ALTER COLUMN LastName varchar(100) MASKED WITH (FUNCTION = 'default()');
 ### <a name="granting-permissions-to-view-unmasked-data"></a>Erteilen von Berechtigungen zum Anzeigen von Daten ohne Maskierung  
  Das Erteilen der **UNMASK** -Berechtigung ermöglicht dem `TestUser` das Anzeigen der Daten ohne Maskierung.  
   
-```  
+```sql
 GRANT UNMASK TO TestUser;  
 EXECUTE AS USER = 'TestUser';  
 SELECT * FROM Membership;  
@@ -194,7 +188,7 @@ REVOKE UNMASK TO TestUser;
 ### <a name="dropping-a-dynamic-data-mask"></a>Löschen einer dynamischen Datenmaske  
  Die folgende Anweisung löscht die Maske für die Spalte `LastName` , die im vorherigen Beispiel erstellt wurde:  
   
-```  
+```sql  
 ALTER TABLE Membership   
 ALTER COLUMN LastName DROP MASKED;  
 ```  
@@ -205,5 +199,3 @@ ALTER COLUMN LastName DROP MASKED;
  [column_definition &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
  [sys.masked_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-masked-columns-transact-sql.md)   
  [Erste Schritte mit der dynamischen Datenmaskierung für die SQL-Datenbank (Azure-Vorschauportal)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
-  
-  

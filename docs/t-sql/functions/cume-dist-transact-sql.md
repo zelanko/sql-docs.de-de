@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -25,18 +23,17 @@ caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cc8aa5d921d0d72dc32453143c42a29c28a553b3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 08d38d1d876ee5b39498e6a28247b20c6cb6cab9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cumedist-transact-sql"></a>CUME_DIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-Berechnet die kumulierte Verteilung eines Werts innerhalb einer Gruppe von Werte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CUME_DIST berechnet somit die relative Position eines angegebenen Werts in einer Gruppe von Werten. Für eine Zeile *r* bei aufsteigender Reihenfolge entspricht der CUME_DIST-Wert von *r* der Anzahl der Zeilen mit Werten, die niedriger oder gleich dem Wert von *r*, geteilt durch die Anzahl der in der Partition oder dem Abfrageresultset ausgewerteten Zeilen sind. CUME_DIST ähnelt der PERCENT_RANK-Funktion.
+Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] berechnet diese Funktion die kumulierte Verteilung eines Werts innerhalb einer Gruppe von Werten. Das heißt, `CUME_DIST` berechnet die relative Position eines angegebenen Werts in einer Gruppe von Werten. Ausgehend von aufsteigender Sortierreihenfolge ist der `CUME_DIST`-Wert eines Werts in Zeile *r* definiert als die Anzahl der Zeilen mit Werten kleiner oder gleich dem Wert in Zeile *r*, geteilt durch die Anzahl der ausgewerteten Zeilen in der Partition oder dem Resultset der Abfrage. `CUME_DIST` ähnelt der `PERCENT_RANK`-Funktion.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,19 +46,20 @@ CUME_DIST( )
 ```  
   
 ## <a name="arguments"></a>Argumente  
-OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
-*partition_by_clause* unterteilt das von der FROM-Klausel erzeugte Resultset in Partitionen, auf die die Funktion angewendet wird. Wird dies nicht angegeben, verarbeitet die Funktion alle Zeilen des Abfrageresultsets als einzelne Gruppe. *order_by_clause* bestimmt die logische Reihenfolge, in der der Vorgang ausgeführt wird. *order_by_clause* ist erforderlich. Die \<Zeilen- oder Bereichsklausel> der OVER-Syntax kann für die CUME_DIST-Funktion nicht angegeben werden. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
+OVER **(** [ *partition_by_clause* ] *order_by_clause)*  
+
+Das Argument *partition_by_clause* unterteilt das Resultset der FROM-Klausel in Partitionen, auf die die Funktion angewendet wird. Wenn das Argument *partition_by_clause* nicht angegeben wird, behandelt `CUME_DIST` alle Zeilen von Resultsets von Abfragen als eine einzelne Gruppe. *order_by_clause* bestimmt die logische Reihenfolge, in der der Vorgang ausgeführt wird. Für `CUME_DIST` ist *order_by_clause* erforderlich. `CUME_DIST` akzeptiert die \<Zeilen- oder Bereichsklausel> der OVER-Syntax nicht. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
   
 ## <a name="return-types"></a>Rückgabetypen
 **float(53)**
   
 ## <a name="remarks"></a>Remarks  
-Der von CUME_DIST zurückgegebene Wertebereich ist größer als 0 und kleiner oder gleich 1. Gleichwertige Werte ergeben immer den gleichen kumulierten Verteilungswert. NULL-Werte sind standardmäßig eingeschlossen und werden als niedrigste mögliche Werte behandelt.
+`CUME_DIST` gibt einen Bereich von Werten größer als 0 und kleiner als oder gleich 1 zurück. Gleichwertige Werte ergeben immer den gleichen kumulierten Verteilungswert. `CUME_DIST` schließt standardmäßig NULL-Werte ein und behandelt diese Werte als die niedrigsten möglichen Werte.
   
-CUME_DIST ist nicht deterministisch. Weitere Informationen finden Sie unter [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
+`CUME_DIST` ist nicht deterministisch. Weitere Informationen finden Sie unter [Deterministische und nicht deterministische Funktionen](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
   
 ## <a name="examples"></a>Beispiele  
-Das folgende Beispiel berechnet das Gehaltsquantil für jeden Mitarbeiter innerhalb einer angegebenen Abteilung mithilfe der CUME_DIST-Funktion. Der von der CUME_DIST-Funktion zurückgegebene Wert stellt den Prozentsatz der Mitarbeiter dar, deren Gehalt kleiner oder gleich dem des aktuellen Mitarbeiters in derselben Abteilung ist. Die PERCENT_RANK-Funktion berechnet den prozentualen Rang des Gehalts des Mitarbeiters innerhalb einer Abteilung. Um die Zeilen im Resultset nach Abteilung zu partitionieren, wird die PARTITION BY-Klausel angegeben. Die ORDER BY-Klausel in der OVER-Klausel sortiert die Zeilen in jeder Partition logisch. Die ORDER BY-Klausel in der SELECT-Anweisung bestimmt die Anzeigereihenfolge des Resultsets.
+Das folgende Beispiel verwendet die `CUME_DIST`-Funktion, um das Gehaltsquantil für jeden Mitarbeiter innerhalb einer angegebenen Abteilung zu berechnen. Die `CUME_DIST`-Funktion gibt einen Wert zurück, der den Prozentsatz der Mitarbeiter darstellt, deren Gehalt kleiner oder gleich dem des aktuellen Mitarbeiters in der gleichen Abteilung ist. Die `PERCENT_RANK`-Funktion berechnet den prozentualen Rang des Gehalts des Mitarbeiters innerhalb einer Abteilung. Um die Zeilen im Resultset nach Abteilung zu partitionieren, gibt das Beispiel den *partition_by_clause*-Wert an. Die ORDER BY-Klausel der OVER-Klausel sortiert die Zeilen in jeder Partition logisch. Die ORDER BY-Klausel der SELECT-Anweisung bestimmt die Anzeigereihenfolge des Resultsets.
   
 ```sql
 USE AdventureWorks2012;  

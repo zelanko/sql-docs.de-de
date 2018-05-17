@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -26,18 +24,17 @@ caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6d72cdc92b923dc00eec9dbe3b6f075f1e21e322
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 165cd76209927d223e90be73bad6fd0b383e5404
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="acos-transact-sql"></a>ACOS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Eine mathematische Funktion, die den Winkel im Bogenmaß zurückgibt, dessen Kosinus der angegebene **float**-Ausdruck (auch Arkuskosinus genannt) ist.
+Eine Funktion, die den Winkel im Bogenmaß zurück gibt, dessen Kosinus dem angegebenen float-Ausdruck entspricht. Dies wird auch als Arkuskosinus bezeichnet.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,35 +46,16 @@ ACOS ( float_expression )
   
 ## <a name="arguments"></a>Argumente  
 *float_expression*  
-Ein Ausdruck vom Typ **float** oder von einem Typ, der implizit in **float** konvertiert werden kann, mit einem Wert von –1 bis 1. Bei Werten außerhalb dieses Bereichs wird NULL zurückgegeben und ein Domänenfehler gemeldet.
+Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) vom Typ **float** oder von einem Typ, der implizit in float konvertiert werden kann. Nur ein Wert von -1,00 bis 1,00 ist gültig. Bei Werten außerhalb dieses Bereichs wird NULL zurückgegeben und ASIN meldet einen Domänenfehler.
   
 ## <a name="return-types"></a>Rückgabetypen  
 **float**
   
 ## <a name="examples"></a>Beispiele  
-Im folgenden Beispiel wird der ACOS der angegebenen Zahl zurückgegeben.
+In diesem Beispiel wird der `ACOS`-Wert der angegebenen Zahl zurückgegeben.
   
 ```sql
 SET NOCOUNT OFF;  
-DECLARE @cos float;  
-SET @cos = -1.0;  
-SELECT 'The ACOS of the number is: ' + CONVERT(varchar, ACOS(@cos));  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```sql
----------------------------------   
-The ACOS of the number is: 3.14159   
-  
-(1 row(s) affected)  
-```  
-  
-### <a name="includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
-
-Im folgenden Beispiel wird der ACOS der angegebenen Zahl zurückgegeben.
-  
-```sql
 DECLARE @cos float;  
 SET @cos = -1.0;  
 SELECT 'The ACOS of the number is: ' + CONVERT(varchar, ACOS(@cos));  

@@ -1,27 +1,25 @@
 ---
 title: Benutzerdefinierte Karten in mobilen Reporting Services-Berichten | Microsoft-Dokumentation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 59a4ebad-587a-4770-afcd-c69216b8afd9
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b4143913d2bab5425fede35cea6758f86820236f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: ea22c2ea60a681accc747e9426fbecb4aad7b515
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="custom-maps-in-reporting-services-mobile-reports"></a>Benutzerdefinierte Karten in mobilen Reporting Services-Berichten
 Geografische Karten werden im Publisher für mobile Berichte von Microsoft SQL Server in dem Format *Shapefile* von ESRI definiert.  
@@ -33,14 +31,14 @@ Dieses wurde ursprünglich von einem privaten Unternehmen entwickelt und ist inz
   
 Die Basisdateinamen müssen übereinstimmen (z. B. *canada.shp* und *canada.dbf*). Die Metadaten müssen das Feld *NAME* mit dem Namen (Schlüssel) der entsprechenden Shape enthalten, die beim Auffüllen der Karte mit Daten verwendet werden soll.  
   
-> **Hinweis:**: Die beiden Kartendateien – die SHP-Datei und die DBF-Datei – dürfen zusammen nicht größer als 512 KB sein. Wenn die Kartendateien zu groß sind, verkleinern Sie sie mit einem Tool, z.B. [http://mapshaper.org/](http://mapshaper.org/) .  
+> **Hinweis:**: Die beiden Kartendateien – die SHP-Datei und die DBF-Datei – dürfen zusammen nicht größer als 512 KB sein. Wenn die Kartendateien zu groß sind, verkleinern Sie sie mit einem Tool, z.B. [http://mapshaper.org/](http://mapshaper.org/).  
   
 Erfahren Sie, wie Sie [mobilen Berichten benutzerdefinierte Karten hinzufügen](../../reporting-services/mobile-reports/add-a-custom-map-to-a-reporting-services-mobile-report.md).  
   
 ## <a name="technical-information"></a>Technische Informationen  
   
-- Die offizielle Spezifikation: [http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf](http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf)  
-- Der Wikipedia-Artikel zu Shape-Dateien: [http://de.wikipedia.org/wiki/Shapefile](http://en.wikipedia.org/wiki/Shapefile)  
+- Offizielle Spezifikation: [http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf](http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf)  
+- Wikipedia-Shape-Datei-Artikel: [http://en.wikipedia.org/wiki/Shapefile](http://en.wikipedia.org/wiki/Shapefile)  
   
 ## <a name="creating--editing-map-geometry"></a>Erstellen und Bearbeiten der Kartengeometrie  
   
@@ -49,7 +47,7 @@ Das Erstellen und Bearbeiten von Shape-Dateien ist ein komplexer Prozess, dessen
 - ArcGIS: [http://www.arcgis.com/](http://www.arcgis.com/)  
 - MAPublisher-Plug-In für Adobe Illustrator: [http://www.avenza.com/mapublisher](http://www.avenza.com/mapublisher)  
 - QuantumGIS (kostenlos): [http://www.qgis.org/](http://www.qgis.org/)  
-- Manco Shapefile Editor: [http://www.mancosoftware.com/ShapeFileEditor](http://www.mancosoftware.com/ShapeFileEditor)  
+- Manco Shape-Datei-Editor: [http://www.mancosoftware.com/ShapeFileEditor](http://www.mancosoftware.com/ShapeFileEditor)  
   
 ## <a name="existing-shapefiles"></a>Vorhandene Shape-Dateien  
   

@@ -21,11 +21,11 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 27ad3ba5560be3fa547975d0d86099b3f4ab1450
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: HT
+ms.openlocfilehash: d4f66b0608afcfa883f4e12d0e3dfe39e8bf7512
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cdcfncdcgetnetchangesltcaptureinstancegt-transact-sql"></a>CDC. fn_cdc_get_net_changes_&lt;Capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,12 +57,12 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="arguments"></a>Argumente  
  *from_lsn*  
- Legen Sie die LSN, die den unteren Endpunkt des LSN-Bereichs in das Ergebnis eingeschlossen darstellt. *From_lsn* ist **("Binary(10)").**.  
+ Legen Sie die LSN, die den unteren Endpunkt des LSN-Bereichs in das Ergebnis eingeschlossen darstellt. *From_lsn* ist **("Binary(10)")**.  
   
  Nur Zeilen aus der [cdc.&#91; Capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) Änderungstabelle mit einem Wert in __ $Start_lsn größer als oder gleich *From_lsn* im Resultset enthalten sind.  
   
  *to_lsn*  
- Legen Sie die LSN, die für den oberen Endpunkt des LSN-Bereichs in das Ergebnis eingeschlossen werden sollen. *To_lsn* ist **("Binary(10)").**.  
+ Legen Sie die LSN, die für den oberen Endpunkt des LSN-Bereichs in das Ergebnis eingeschlossen werden sollen. *To_lsn* ist **("Binary(10)")**.  
   
  Nur Zeilen aus der [cdc.&#91; Capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) Änderungstabelle mit einem Wert in __ $Start_lsn kleiner als oder gleich *From_lsn* gleich *To_lsn* im Resultset enthalten sind.  
   
@@ -93,7 +93,9 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  Erfordert die Mitgliedschaft in der festen Serverrolle sysadmin oder in der festen Datenbankrolle db_owner. Für alle anderen Benutzer ist die SELECT-Berechtigung für alle aufgezeichneten Spalten in der Quelltabelle und, wenn eine Gatingrolle für die Aufzeichnungsinstanz definiert wurde, eine Mitgliedschaft in dieser Datenbankrolle erforderlich. Wenn der Aufrufer nicht über die Berechtigungen zum Anzeigen der Quelldaten verfügt, gibt die Funktion Fehler 208 (Ungültiger Objektname) zurück.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn der angegebene LSN-Bereich nicht in den Zeitraum der Änderungsnachverfolgung der Aufzeichnungsinstanz fällt, gibt die Funktion Fehler 208 (Ungültiger Objektname) zurück.  
+ Wenn der angegebene LSN-Bereich nicht in den Zeitraum der Änderungsnachverfolgung der Aufzeichnungsinstanz fällt, gibt die Funktion Fehler 208 (Ungültiger Objektname) zurück.
+
+ Änderungen an der eindeutige Bezeichner einer Zeile führt dazu, dass Fn_cdc_get_net_changes anzeigen (Befehl) das erste UPDATE durch eine Löschung, und klicken Sie dann stattdessen INSERT-Befehl.  Dieses Verhalten ist erforderlich, um den Schlüssel vor und nach der Änderung zu verfolgen.
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die Funktion `cdc.fn_cdc_get_net_changes_HR_Department` melden die net Änderungen an der Quelltabelle `HumanResources.Department` während eines bestimmten Zeitintervalls.  

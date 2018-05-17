@@ -40,11 +40,11 @@ caps.latest.revision: 50
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: a244e1e6a1f0c32f56e183f389ac4940b25cb00f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6dbf227ec42614e77cb4129c273ec55609781b2f
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="dbcc-transact-sql"></a>DBCC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ Die **sys.dm_exec_requests**-Katalogsicht enthält Informationen zum Fortschritt
   
 Die Definition einer Statuseinheit hängt von der aktuellen Ausführungsphase des DBCC-Befehls ab. Manchmal wird der Status mit der Granularität einer Datenbankseite angezeigt, in anderen Phasen wird er mit der Granularität einer einzelnen Datenbank oder Zuordnungsreparatur gemeldet. In der folgenden Tabelle werden die einzelnen Ausführungsphasen beschrieben sowie die Granularität, mit der der Status der Befehlsausführung gemeldet wird.
   
-|Ausführungsphase|Description|Granularität der Statusmeldungen|  
+|Ausführungsphase|und Beschreibung|Granularität der Statusmeldungen|  
 |---------------------|-----------------|------------------------------------|  
 |DBCC TABLE CHECK|Während dieser Phase wird die logische und physische Konsistenz der Objekte in der Datenbank geprüft.|Der Status wird auf Datenbankseitenebene angezeigt.<br /><br /> Der Wert der Statusmeldung wird nach jeweils 1000 geprüften Datenbankseiten aktualisiert.|  
 |DBCC TABLE REPAIR|Während dieser Phase werden Datenbankreparaturen ausgeführt, sofern REPAIR_FAST, REPAIR_REBUILD oder REPAIR_ALLOW_DATA_LOSS angegeben ist und Objektfehler vorliegen, die behoben werden müssen.|Der Status wird auf der Ebene einzelner Reparaturvorgänge angezeigt.<br /><br /> Der Zähler wird für jeden abgeschlossenen Reparaturvorgang aktualisiert.|  
@@ -146,6 +146,6 @@ Die Definition einer Statuseinheit hängt von der aktuellen Ausführungsphase de
 |[DBCC dllname (FREE)](../../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md)|[DBCC HELP](../../t-sql/database-console-commands/dbcc-help-transact-sql.md)|  
 |[DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)|[DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)|  
 |[DBCC FREESESSIONCACHE](../../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)|[DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)|  
-|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](https://support.microsoft.com/en-us/kb/3177838) <br /><br /> **Gilt für:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2|  
+|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](../../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md) <br /><br /> **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
   
   

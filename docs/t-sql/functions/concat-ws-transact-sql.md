@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - CONCAT_WS
 - CONCAT_WS_TSQL
@@ -24,18 +22,17 @@ caps.latest.revision: 5
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 171d063e746393709629720dae40eb207d45d584
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e1a3d184ccdd0a1716fdace286b2bb8ed6a6cae6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="concatws-transact-sql"></a>CONCAT_WS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-Verkettet eine variable Anzahl von Argumenten mit einem Trennzeichen, das im ersten Argument festgelegt wird. (`CONCAT_WS` gibt die Anweisung *concatenate with separator* (mit Trennzeichen verketten) an.)
+Diese Funktion gibt eine Zeichenfolge zurück, die das Ergebnis einer End-to-End-Verkettung oder -Verknüpfung von mindestens zwei Zeichenfolgenwerten darstellt. Sie trennt diese verketteten Zeichenfolgenwerte mit dem in ersten Funktionsargument angegebenen Trennzeichen. (`CONCAT_WS` gibt die Anweisung *concatenate with separator* (mit Trennzeichen verketten) an.)
 
 ##  <a name="syntax"></a>Syntax   
 ```sql
@@ -44,16 +41,16 @@ CONCAT_WS ( separator, argument1, argument1 [, argumentN]… )
 
 ## <a name="arguments"></a>Argumente   
 Trennzeichen  
-Ein Ausdruck beliebigen Typs (`nvarchar`, `varchar`, `nchar` oder `char`).
+Ein Ausdruck beliebigen Typs (`char`, `nchar`, `nvarchar` oder `varchar`).
 
 argument1, argument2, argument*N*  
-Ein Ausdruck eines beliebigen Typs.
+Ein Ausdruck beliebigen Typs.
 
 ## <a name="return-types"></a>Rückgabetypen
-Zeichenfolge. Länge und Typ sind von der Eingabe abhängig.
+Ein Zeichenfolgenwert, dessen Länge und Typ von der Eingabe abhängig sind.
 
 ## <a name="remarks"></a>Remarks   
-`CONCAT_WS` lässt eine variable Anzahl von Argumenten zu und verkettet sie in einer einzelnen Zeichenfolge. Dabei wird das erste Argument als Trennzeichen verwendet. Es sind ein Trennzeichen und mindestens zwei Eingabewerte erforderlich. Andernfalls wird ein Fehler ausgelöst. Alle Argumente werden implizit in Zeichenfolgentypen konvertiert und anschließend verkettet. 
+`CONCAT_WS` lässt eine variable Anzahl von Zeichenfolgenargumenten zu und verkettet (oder verknüpft) sie in einer einzelnen Zeichenfolge. Sie trennt diese verketteten Zeichenfolgenwerte mit dem im ersten Funktionsargument angegebenen Trennzeichen. `CONCAT_WS` erfordert ein Trennzeichen und mindestens zwei weitere Zeichenfolgenwerte als Argumente, andernfalls gibt `CONCAT_WS` einen Fehler aus. Alle Argumente werden von `CONCAT_WS` vor der Verkettung implizit in Zeichenfolgentypen konvertiert. 
 
 Die implizite Konvertierung in Zeichenfolgen erfolgt basierend auf den vorhandenen Regeln für Datentypkonvertierungen. Weitere Informationen zu Verhaltens- und Datentypkonvertierungen finden Sie unter [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md).
 
@@ -61,16 +58,16 @@ Die implizite Konvertierung in Zeichenfolgen erfolgt basierend auf den vorhanden
 
 `CONCAT_WS` ignoriert die `SET CONCAT_NULL_YIELDS_NULL {ON|OFF}`-Einstellung.
 
-Wenn alle Argumente NULL sind, wird eine leere Zeichenfolge vom Typ `varchar(1)` zurückgegeben. 
+Wenn `CONCAT_WS` Argumente nur mit NULL-Werten empfängt, wird eine leere Zeichenfolge vom Typ varchar(1) zurückgegeben.
 
-NULL-Werte werden bei der Verkettung ignoriert und fügen keine Trennzeichen hinzu. Dadurch werden häufig verwendete Szenarios zum Verketten von Zeichenfolgen vereinfacht, die regelmäßig leere Werte wie ein zweites Adressfeld beinhalten. Siehe Beispiel B.
+`CONCAT_WS` ignoriert NULL-Werte bei der Verkettung und fügt keine Trennzeichen zwischen NULL-Werten hinzu. Daher kann `CONCAT_WS` die Verkettung von Zeichenfolgen, in denen möglicherweise „leere“ Werte auftreten, wie etwa ein zweites Adressfeld, sauber verarbeiten. Weitere Informationen finden Sie unter Beispiel B.
 
-Wenn Ihr Szenario erfordert, dass einem Trennzeichen NULL-Werte hinzugefügt werden sollen, finden Sie Informationen in Beispiel C, in dem die `ISNULL`-Funktion verwendet wird.
+Wenn ein Szenario durch ein Trennzeichen getrennte NULL-Werte beinhaltet, ziehen Sie die Funktion `ISNULL` in Erwägung. Weitere Informationen finden Sie unter Beispiel C.
 
 ## <a name="examples"></a>Beispiele   
 
 ### <a name="a--concatenating-values-with-separator"></a>A.  Verketten von Werten mit einem Trennzeichen
-Das folgende Beispiel verkettet drei Spalten der sys.databases-Tabelle, wobei die Werte durch das Trennzeichen `- ` voneinander getrennt werden.   
+Dieses Beispiel verkettet drei Spalten der sys.databases-Tabelle, wobei die Werte durch das Trennzeichen `- ` voneinander getrennt werden.   
 
 ```sql
 SELECT CONCAT_WS( ' - ', database_id, recovery_model_desc, containment_desc) AS DatabaseInfo
@@ -88,7 +85,7 @@ FROM sys.databases;
 
 
 ### <a name="b--skipping-null-values"></a>B.  Überspringen von NULL-Werten
-Im folgenden Beispiel werden `NULL`-Werte in der Argumentliste ignoriert.
+In diesem Beispiel werden `NULL`-Werte in der Argumentliste ignoriert.
 
 ```sql
 SELECT CONCAT_WS(',','1 Microsoft Way', NULL, NULL, 'Redmond', 'WA', 98052) AS Address;
@@ -103,7 +100,7 @@ Address
 ```
 
 ### <a name="c--generating-csv-file-from-table"></a>C.  Generieren einer CSV-Datei aus einer Tabelle
-Im folgenden wird ein Komma als Trennzeichen verwendet und ein Wagenrücklaufzeichen hinzugefügt, sodass ein durch Kommas getrenntes Werteformat entsteht.
+Dieses Beispiel verwendet ein Komma `,` als Trennzeichen und fügt ein Wagenrücklaufzeichen `char(13)` hinzu, sodass ein durch Kommas getrenntes Werteformat im Resultset entsteht.
 
 ```sql
 SELECT 
@@ -122,7 +119,7 @@ DatabaseInfo
 4,SIMPLE,NONE 
 ```
 
-CONCAT_WS ignoriert NULL-Werte in den Spalten. Wenn einige der Spalten NULL-Werte zulassen, sollten Sie diese mit der `ISNULL`-Funktion umschließen und wie im folgenden Beispiel dargestellt einen Standardwert bereitstellen:
+CONCAT_WS ignoriert NULL-Werte in den Spalten. Umschließen Sie eine Spalte, die NULL-Werte zulässt, mit der `ISNULL`-Funktion, und geben Sie einen Standardwert an. Weitere Informationen finden Sie in diesem Beispiel:
 
 ```sql
 SELECT 

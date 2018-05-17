@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|spatial-geography
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -24,12 +22,11 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1fa39e1d111c0a73a7fc85b4ac648e1612bdce15
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9a20f55565e5cd5cf0eecdb55fdd8fe6cf4e3aa1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="isvaliddetailed-geography-data-type"></a>IsValidDetailed (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -57,7 +54,7 @@ ms.lasthandoff: 04/16/2018
 |24401|Ungültig, die Ursache ist unbekannt.|  
 |24402|Ungültig, weil der Punkt {0} ein isolierter Punkt ist, der für diesen Objekttyp ungültig ist.|  
 |24403|Ungültig, weil sich ein Polygonkantenpaar überlappt.|  
-|24404|Ungültig, weil eine Überschneidung des Polygonrings {0} mit sich selbst oder einem anderen Ring vorliegt.|  
+|24404|Ungültig, weil eine Überschneidung von Polygonring {0} mit sich selbst oder einem anderen Ring vorliegt.|  
 |24405|Ungültig, weil eine Überschneidung eines Polygonrings mit sich selbst oder einem anderen Ring vorliegt.|  
 |24406|Ungültig, weil die Kurve {0} zu einem Punkt degeneriert wird.|  
 |24407|Ungültig, weil der Polygonring {0} auf eine Linie an Punkt {1} reduziert wird.|  
@@ -67,7 +64,7 @@ ms.lasthandoff: 04/16/2018
 |24411|Ungültig, weil der Ring {0} außerhalb des äußeren Rings {1} des zugehörigen Polygons liegt.|  
 |24412|Ungültig, weil das Innere eines Polygons mit den Ringen {0} und {1} unverbunden ist.|  
 |24413|Ungültig aufgrund von zwei überlappenden Kanten in Kurve {0}.|  
-|24414|Ungültig, weil sich eine Kante der Kurve {0} und eine Kante der Kurve {1} überlappen.|  
+|24414|Ungültig, weil sich eine Kante der Kurve {0} und eine Kante der Kurve {1} überschneiden.|  
 |24415|Ungültig, weil ein Polygon über eine ungültige Ringstruktur verfügt.|  
 |24416|Ungültig, weil die Kante, die an Punkt {1} beginnt, in Kurve {0} entweder eine Linie oder ein degenerierter Bogen mit entgegengesetzten Endpunkten ist.|  
   
