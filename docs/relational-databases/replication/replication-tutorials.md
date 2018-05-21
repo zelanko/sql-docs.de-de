@@ -1,17 +1,16 @@
 ---
 title: Tutorials zur Replikation | Microsoft-Dokumentation
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.custom: ''
+ms.date: 04/09/2018
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
@@ -19,38 +18,46 @@ helpviewer_keywords:
 - walkthroughs [SQL Server replication]
 - replication [SQL Server], tutorials
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: bdd9595c58147cc654f389232589e4ab664caf98
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: f168e135dd563d1b76d99254bfa17d7ba8cf721a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="replication-tutorials"></a>Lernprogramme zur Replikation
+# <a name="replication-tutorials"></a>Tutorials zur Replikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Zur Replikation stehen Lernprogramme zur Verfügung, in denen Sie lernen können, wie Replikationstopologien mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eingerichtet und ausgeführt werden.  
+Die Replikation ist ein wichtiges Mittel zum Bewegen von Daten oder Teilmengen von Daten zwischen verschiedenen Servern. Sie können Daten auf mehreren Servern replizieren, die durch eine Transaktionsreplikation vollständig miteinander verbunden sind. Außerdem können Sie Daten auf Servern und Clients replizieren, die zeitweilig über eine Mergereplikation miteinander verbunden werden. In diesem Artikel sind Tutorials aufgeführt, die Ihnen dabei helfen sollen, Ihren Server auf Replikationen vorzubereiten. Außerdem erhalten Sie Informationen zum Konfigurieren der Transaktions- bzw. Mergereplikation. 
   
-In den Lernprogrammen zur Replikation bezieht sich "Verleger" auf den Server, der die zu replizierenden Quelldaten enthält, und "Abonnent" bezieht sich auf den Zielserver. Verleger und Abonnent können dieselbe Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gemeinsam verwenden; dies ist jedoch keine Anforderung. Weitere Informationen finden Sie unter [Das Replikationsveröffentlichungsmodell (Übersicht)](../../relational-databases/replication/publish/replication-publishing-model-overview.md).  
+In den Tutorials zur Replikation bezieht sich „Verleger“ auf den Server, der die zu replizierenden Quelldaten enthält. „Abonnent“ bezieht sich auf den Zielserver. Verleger und Abonnent können dieselbe Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gemeinsam verwenden. Dies ist jedoch nicht obligatorisch. Weitere Informationen finden Sie in der [Übersicht über das Replikationsveröffentlichungsmodell](../../relational-databases/replication/publish/replication-publishing-model-overview.md).  
+
+In diesen Tutorials wird NODE1\SQL2016 als Verleger und Verteiler verwendet. NODE2\SQL2016 wird als Abonnent verwendet. 
   
 > [!NOTE]  
-> Die meisten der in diesen Lernprogrammen vorgestellten Aufgaben können programmgesteuert ausgeführt werden. Weitere Informationen finden Sie in der [Entwicklerhandbuch (Replikation)](../../relational-databases/replication/concepts/replication-developer-documentation.md).  
+> Die meisten der in diesen Lernprogrammen vorgestellten Aufgaben können programmgesteuert ausgeführt werden. Weitere Informationen finden Sie in der [Replikation des Entwicklerhandbuchs](../../relational-databases/replication/concepts/replication-developer-documentation.md).  
   
-## <a name="replication-tutorials"></a>Lernprogramme zur Replikation  
-[Vorbereiten des Servers für die Replikation](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md)  
+## <a name="replication-tutorials"></a>Tutorials zur Replikation  
+[Tutorial: Vorbereiten von SQL Server auf die Replikation (Verleger, Verteiler und Abonnent)](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md) 
+ 
 Hier erfahren Sie, wie Server so vorbereitet werden, dass die Replikation mit geringsten Benutzerrechten ausgeführt werden kann. Es ist erforderlich, dieses Lernprogramm vor den anderen Lernprogrammen zur Replikation abzuschließen.  
   
-[Replizieren von Daten zwischen Servern mit kontinuierlicher Verbindung](../../relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers.md)  
-Hier erfahren Sie, wie Daten mithilfe der Transaktionsreplikation zwischen vollständig verbundenen Servern repliziert werden.  
+[Tutorial: Konfigurieren der Replikation zwischen zwei Servern mit kontinuierlicher Verbindung (transaktional)](../../relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers.md)
+
+Informationen zum Konfigurieren der Transaktionsreplikation zum Replizieren von Daten zwischen vollständig verbundenen Servern. Außerdem umfasst dieses Tutorial einige grundlegende Methoden zum Beheben von Fehlern. 
+
   
-[Replizieren von Daten mit mobilen Clients](../../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md)  
-Hier erfahren Sie, wie Daten mithilfe der Mergereplikation zwischen einem Server und einem oder mehreren Clients ausgetauscht werden, die nur gelegentlich verbunden sind.  
+[Tutorial: Konfigurieren der Replikation zwischen einem Server und mobilen Clients (Mergereplikation)](../../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md)
+
+Erfahren Sie, wie Daten mithilfe der Mergereplikation zwischen einem Server und mindestens einem Client ausgetauscht werden, die nur gelegentlich miteinander verbunden sind.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
-[Sicherheit und Schutz &#40;Replikation&#41;](../../relational-databases/replication/security/security-and-protection-replication.md)  
-  
-  
+## <a name="see-also"></a>Siehe auch  
+[Sicherheit und Schutz (Replikation)](../../relational-databases/replication/security/security-and-protection-replication.md) 
+
+[Transaktionsreplikation (Übersicht)](https://docs.microsoft.com/en-us/sql/relational-databases/replication/transactional/transactional-replication) 
+
+[Mergereplikation (Übersicht)](https://docs.microsoft.com/en-us/sql/relational-databases/replication/merge/merge-replication)
+
   

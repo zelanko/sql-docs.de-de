@@ -21,11 +21,11 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: e812b2dcdc7293a51f1c014681d04674c9995d37
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 961c9f7e093f61db909360f0dd7f8ac30f2d13e1
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tutorial-script-objects-in-sql-server-management-studio"></a>Tutorial: Erstellen von Skripts für Objekte in SQL Server Management Studio
 In diesem Tutorial erfahren Sie, wie Sie T-SQL-Skripts (Transact-SQL) für verschiedene Objekte in SQL Server Management Studio (SSMS) erstellen können. Dabei wird die Skripterstellung für die folgenden Objekte beschrieben:
@@ -43,11 +43,11 @@ Zum Erstellen eines Skripts für ein beliebiges Objekt im **Objekt-Explorer** kl
 ## <a name="prerequisites"></a>Voraussetzungen
 Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio, Zugriff auf einen Server, auf dem SQL-Server ausgeführt wird, und eine AdventureWorks-Datenbank.
 
-- Installieren Sie [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
-- Installieren Sie die [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
+- Installieren Sie [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Installieren Sie die [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Laden Sie die [AdventureWorks 2016-Beispieldatenbank](https://github.com/Microsoft/sql-server-samples/releases) herunter.
 
-Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Restore a Database (Wiederherstellen einer Datenbank)](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Restore a Database (Wiederherstellen einer Datenbank)](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 
 ## <a name="script-queries-from-the-gui"></a>Erstellen von Skripts für Abfragen über die grafische Benutzeroberfläche
@@ -134,7 +134,7 @@ Im folgenden Abschnitt erfahren Sie, wie Sie mit den Optionen **Script As** (Skr
    ![Erstellen von Skripts für Objekte](media/scripting-ssms/advancedscripts.png)
 
    > [!NOTE]
-   > Sie können für die Datenbank Skripts für die Daten erstellen, indem Sie für die Option **Datentypen, für die ein Skript erstellt wird** *Schema und Daten* auswählen. Allerdings ist dies bei großen Datenbanken nicht ideal. Möglicherweise ist mehr Arbeitsspeicher erforderlich, als SSMS zuordnen kann. Diese Einschränkung ist für kleine Datenbanken aber unproblematisch. Wenn Sie Daten für eine größere Datenbank verschieben möchten, verwenden Sie den [Import- und Export-Assistenten](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
+   > Sie können für die Datenbank Skripts für die Daten erstellen, indem Sie für die Option **Datentypen, für die ein Skript erstellt wird** *Schema und Daten* auswählen. Allerdings ist dies bei großen Datenbanken nicht ideal. Möglicherweise ist mehr Arbeitsspeicher erforderlich, als SSMS zuordnen kann. Diese Einschränkung ist für kleine Datenbanken aber unproblematisch. Wenn Sie Daten für eine größere Datenbank verschieben möchten, verwenden Sie den [Import- und Export-Assistenten](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 
 
 1. Wählen Sie **OK**, und wählen Sie anschließend **Weiter**aus.
@@ -173,7 +173,7 @@ In diesem Abschnitt erfahren Sie, wie Sie eine gespeicherte Prozedur löschen un
     ![Erstellen von Skripts für gespeicherte Prozeduren](media/scripting-ssms/scriptstoredprocedure.PNG)
 
 ## <a name="script-extended-events"></a>Erstellen von Skripts für erweiterte Ereignisse
-In diesem Abschnitt wird beschrieben, wie Sie ein Skript für [erweiterte Ereignisse](https://docs.microsoft.com/en-us/sql/relational-databases/extended-events/extended-events) erstellen.
+In diesem Abschnitt wird beschrieben, wie Sie ein Skript für [erweiterte Ereignisse](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events) erstellen.
 
 1. Stellen Sie eine Verbindung mit einem Server her, der SQL Server ausführt.
 2. Erweitern Sie den Knoten **Verwaltung**.

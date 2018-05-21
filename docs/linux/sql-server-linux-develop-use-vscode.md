@@ -1,8 +1,8 @@
 ---
 title: Verwenden Sie die Visual Studio Code-Mssql-Erweiterung für SQL Server | Microsoft Docs
 description: In diesem Lernprogramm wird gezeigt, wie die Mssql-Erweiterung für Visual Studio Code verwendet wird. Diese Erweiterung ermöglicht das Bearbeiten und Ausführen von Transact-SQL-Skripts in Visual Studio Code.
-author: erickangMSFT
-ms.author: erickang
+author: rothja
+ms.author: jroth
 manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
@@ -10,14 +10,14 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
-ms.openlocfilehash: fa5e383d5d2a20487295e4b76076cf6c9cee113e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: ccbd45cb28a4c1cea48b832fbe77dc662ab7eeb4
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Verwenden von Visual Studio-Code zum Erstellen und Ausführen von Transact-SQL-Skripts für SQL Server
 

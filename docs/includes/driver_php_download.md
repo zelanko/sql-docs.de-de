@@ -1,1 +1,1 @@
-![Herunterladen](../ssdt/media/download.png)[PHP-Treiber herunterladen](https://go.microsoft.com/fwlink/?linkid=871846)
+![Herunterladen](../ssdt/media/download.png)[PHP-Treiber herunterladen](../connect/php/download-drivers-php-sql-server.md)

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Connector, using
 - EKM, with SQL Server Connector
@@ -20,13 +19,12 @@ caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1a3f616c25da5e01234d6a8d4145783053e8bb11
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b22b47922534fc38d72c1d89104a9a301cb3637e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Verwenden von SQL Server-Connector mit SQL-Verschlüsselungsfunktionen
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
@@ -49,9 +47,10 @@ Sie müssen Anmeldeinformationen und eine Anmeldung sowie einen Datenbankverschl
   
  ![ekm&#45;key&#45;hierarchy&#45;with&#45;akv](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  
   
-1.  **Erstellen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldeinformationen für das Datenbankmodul für die Nutzung von TDE**  
+1.  
+  **Erstellen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldeinformationen für die Datenbank-Engine für die Nutzung von TDE**  
   
-     Das Datenbankmodul verwendet die Anmeldeinformationen für den Zugriff auf den Schlüsseltresor während des Ladens der Datenbank. Es wird empfohlen, in Teil I eine weitere Azure Active Directory- **Client-ID** und einen weiteren **geheimen Schlüssel** für das [!INCLUDE[ssDE](../../../includes/ssde-md.md)]zu erstellen, um die erteilten Schlüsseltresorberechtigungen einzuschränken.  
+     Die Datenbank-Engine verwendet die Anmeldeinformationen für den Zugriff auf den Schlüsseltresor während des Ladens der Datenbank. Es wird empfohlen, in Teil I eine weitere Azure Active Directory- **Client-ID** und einen weiteren **geheimen Schlüssel** für das [!INCLUDE[ssDE](../../../includes/ssde-md.md)]zu erstellen, um die erteilten Schlüsseltresorberechtigungen einzuschränken.  
   
      Ändern Sie das [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Skript unten in der folgenden Weise:  
   
@@ -146,9 +145,10 @@ Sie müssen Anmeldeinformationen und eine Anmeldung sowie einen Datenbankverschl
   
 ## <a name="encrypting-backups-by-using-an-asymmetric-key-from-the-key-vault"></a>Verschlüsseln von Sicherungen mit einem asymmetrischen Schlüssel aus dem Schlüsseltresor  
  Verschlüsselte Sicherungen werden ab [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]unterstützt. Im folgenden Beispiel wird eine Sicherung erstellt und wiederhergestellt, die mit einem Verschlüsselungsschlüssel verschlüsselt wurde, der durch den asymmetrischen Schlüssel im Schlüsseltresor geschützt wird.  
-Das [!INCLUDE[ssDE](../../../includes/ssde-md.md)] benötigt die Anmeldeinformationen zum Zugriff auf den Schlüsseltresor während des Ladens der Datenbank. Es wird empfohlen, in Teil I eine weitere Azure Active Directory-Client-ID und einen weiteren geheimen Schlüssel für das Datenbankmodul zu erstellen, um die erteilten Schlüsseltresorberechtigungen einzuschränken.  
+Das [!INCLUDE[ssDE](../../../includes/ssde-md.md)] benötigt die Anmeldeinformationen zum Zugriff auf den Schlüsseltresor während des Ladens der Datenbank. Es wird empfohlen, in Teil I eine weitere Azure Active Directory-Client-ID und einen weiteren geheimen Schlüssel für die Datenbank-Engine zu erstellen, um die erteilten Schlüsseltresorberechtigungen einzuschränken.  
   
-1.  **Erstellen von SQL Server-Anmeldeinformationen für das Datenbankmodul für die Sicherungsverschlüsselung**  
+1.  
+  **Erstellen von SQL Server-Anmeldeinformationen für die Datenbank-Engine für die Sicherungsverschlüsselung**  
   
      Ändern Sie das [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Skript unten in der folgenden Weise:  
   

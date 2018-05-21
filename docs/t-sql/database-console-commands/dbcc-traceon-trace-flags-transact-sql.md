@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 01/08/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
-ms.component: t-sql|database-console-commands
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
@@ -27,12 +24,11 @@ caps.latest.revision: 171
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 64ec9fcd7b4a8411d665a96614ee99f2dacddcd6
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 52ad63dc661cce6950b5d0939d4a6d508fb6a137
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON – Ablaufverfolgungsflags
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +44,7 @@ In der folgenden Tabelle werden die in [!INCLUDE[ssNoVersion](../../includes/ssn
 > Das Verhalten von Ablaufverfolgungsflags wird in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] möglicherweise nicht mehr unterstützt. 
 
   
-|Ablaufverfolgungsflag|Description|  
+|Ablaufverfolgungsflag|Beschreibung|  
 |---|---|
 |**139**| Erzwingt die richtige Konvertierungssemantik im Bereich der DBCC-Prüfbefehle wie [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md) und [DBCC CHECKCONSTRAINTS](../../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md), wenn damit auf einer Datenbank mit einem niedrigeren Kompatibilitätsgrad die verbesserte Genauigkeit und die Konvertierungslogik analysiert wird, die mit dem Kompatibilitätsgrad 130 für bestimmte Datentypen eingeführt wurde. Weitere Informationen finden Sie im folgenden [Microsoft Support-Artikel](http://support.microsoft.com/help/4010261).<br /><br />**Hinweis:** Dieses Ablaufverfolgungsflag ist in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM CU3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 und höheren Builds verfügbar.<br /><br />**Warnung:** Das Ablaufverfolgungsflag 139 ist nicht dafür vorgesehen, kontinuierlich in einer Produktionsumgebung aktiviert zu sein, und sollte nur dazu verwendet werden, ausschließlich die in diesem [Microsoft Support-Artikel](http://support.microsoft.com/help/4010261) beschriebenen Datenbanküberprüfungen auszuführen. Es sollte sofort deaktiviert werden, wenn die Überprüfungen abgeschlossen sind.<br /><br />**Bereich:** nur global|
 |**174**|Erhöht die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Plancache-Bucketanzahl von 40.009 auf 160.001 auf 64-Bit-Systemen. Weitere Informationen finden Sie im folgenden [Microsoft Support-Artikel](http://support.microsoft.com/kb/3026083).<br /><br />**Hinweis:** Stellen Sie sicher, dass Sie diese Option ausgiebig testen, bevor Sie sie in einer Produktionsumgebung bereitstellen.<br /><br />**Bereich:** nur global|
@@ -99,6 +95,7 @@ In der folgenden Tabelle werden die in [!INCLUDE[ssNoVersion](../../includes/ssn
 |**3226**|Standardmäßig wird bei jedem erfolgreichen Sicherungsvorgang dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll und dem Systemereignisprotokoll ein Eintrag hinzugefügt. Wenn Sie regelmäßige Protokollsicherungen erstellen, kann die Anzahl dieser Erfolgsmeldungen schnell ansteigen, d.h. es entstehen sehr große Fehlerprotokolle, die das Suchen nach anderen Meldungen erschweren können.<br /><br />Mit diesem Ablaufverfolgungsflag können Sie diese Protokolleinträge unterdrücken. Dies ist hilfreich, wenn Sie regelmäßig Protokollsicherungen ausführen und keines der Skripts von diesen Einträgen abhängig ist.<br /><br />**Bereich:** nur global|   
 |**3427**|Aktiviert eine Fehlerbehebung für ein Problem, das auftritt, wenn viele aufeinander folgende Transaktionen Daten in die temporäre Tabelle in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] oder [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] einfügen und deswegen mehr CPU-Leistung beanspruchen als in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Weitere Informationen finden Sie in diesem [Microsoft Support-Artikel](http://support.microsoft.com/help/3216543).<br /><br />**Hinweis:** Dieses Ablaufverfolgungsflag ist in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU2 und höheren Builds verfügbar. Ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU4 hat dieses Ablaufverfolgungsflag keine Auswirkungen.<br /><br />**Bereich:** nur global|  
 |**3459**|Deaktiviert die parallele Wiederholung. Weitere Informationen finden Sie in [diesem](http://support.microsoft.com/help/3200975) und [diesem](http://support.microsoft.com/help/4101554) Microsoft Support-Artikel.<br /><br />**Hinweis:** Dieses Ablaufverfolgungsflag gilt für [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].<br /><br />**Bereich:** nur global| 
+|**3468**|Deaktiviert die [indirekten Prüfpunkte](https://docs.microsoft.com/en-us/sql/relational-databases/logs/database-checkpoints-sql-server?view=sql-server-2017#IndirectChkpt) auf TempDB.<br /><br />**Hinweis:** Dieses Ablaufverfolgungsflag ist in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU5, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 und höheren Builds verfügbar.<br /><br />**Bereich:** nur global|  
 |**3608**|Verhindert, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatisch gestartet wird und andere Datenbanken als die **Masterdatenbank** wiederherstellt. Wenn Aktivitäten, die **tempdb** erfordern, initiiert werden, wird **model** wiederhergestellt und **tempdb** erstellt. Andere Datenbanken werden gestartet und wiederhergestellt, wenn darauf zugegriffen wird. Einige Funktionen, z. B. Momentaufnahmeisolation und Read Committed-Momentaufnahme, funktionieren möglicherweise nicht. Nutzen Sie es zum [Verschieben von Systemdatenbanken](../../relational-databases/databases/move-system-databases.md) und [Verschieben von Benutzerdatenbanken](../../relational-databases/databases/move-user-databases.md).<br /><br />**Hinweis:** Verwenden Sie es nicht im Normalbetrieb.<br /><br />**Bereich:** nur global|   
 |**3625**|Beschränkt die Menge von Informationen, die an Benutzer zurückgegeben wird, die keine Mitglieder der festen Serverrolle „sysadmin“ sind, indem die Parameter einiger Fehlermeldungen mit „\*\*\*\*\*\*“ maskiert werden. Dadurch kann verhindert werden, dass vertrauliche Informationen offen gelegt werden.<br /><br />**Bereich:** nur global|  
 |**4136**|Deaktiviert die Parameterermittlung, es sei denn, OPTION(RECOMPILE), WITH RECOMPILE oder OPTIMIZE FOR \<Wert> wird verwendet. Weitere Informationen finden Sie im folgenden [Microsoft Support-Artikel](http://support.microsoft.com/kb/980653). Um dies auf Datenbankebene zu erreichen, lesen Sie den Hilfeartikel zur Option PARAMETER_SNIFFING unter [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Um dies auf Abfrageebene zu erreichen, fügen Sie den [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md) OPTIMIZE FOR UNKNOWN hinzu. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 können Sie dies auch auf Abfrageebene erreichen, indem Sie den [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md) USE HINT 'PARAMETER_SNIFFING' anstelle dieses Ablaufverfolgungsflags verwenden.<br /><br />**Hinweis:** Stellen Sie sicher, dass Sie diese Option ausgiebig testen, bevor Sie sie in einer Produktionsumgebung bereitstellen.<br /><br />**Bereich:** global oder Sitzung|  
@@ -156,7 +153,7 @@ In der folgenden Tabelle werden die in [!INCLUDE[ssNoVersion](../../includes/ssn
 |**11023**|Deaktiviert die Verwendung der letzten permanenten Samplingrate für alle nachfolgenden Statistikupdates, in denen keine Samplingrate explizit als Teil der [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)-Anweisung angegeben wurde. Weitere Informationen finden Sie im folgenden [Microsoft Support-Artikel](http://support.microsoft.com/kb/4039284).<br /><br />**Bereich:** global oder Sitzung|    
 |**11024**|Aktiviert das Auslösen des automatischen Updates von Statistiken, wenn die Änderungsanzahl einer Partition den lokalen [Schwellenwert](../../relational-databases/statistics/statistics.md#AutoUpdateStats) überschreitet. Weitere Informationen finden Sie im folgenden [Microsoft Support-Artikel](http://support.microsoft.com/kb/4041811).<br /><br />**Hinweis:** Dieses Ablaufverfolgungsflag ist in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 und höheren Builds verfügbar.<br /><br />**Bereich:** global oder Sitzung| 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Hinweise  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt es drei Typen von Ablaufverfolgungsflags: für Abfragen, für Sitzungen und globale. Ablaufverfolgungsflags des Typs „Abfrage“ sind im Kontext einer bestimmten Abfrage aktiv. Ablaufverfolgungsflags vom Typ Sitzung sind für die Dauer einer Verbindung aktiv und nur für diese Verbindung sichtbar. Globale Ablaufverfolgungsflags werden auf Serverebene festgelegt und sind für jede Verbindung auf dem Server sichtbar. Einige Flags können nur als globale Flags aktiviert werden, einige können entweder mit globalem Bereich oder mit Sitzungsbereich aktiviert werden.  
   
  Dabei gelten die folgenden Regeln:  
@@ -167,7 +164,7 @@ Ablaufverfolgungsflags werden mithilfe einer der folgenden Methoden auf on oder 
 -   Mithilfe der Befehle DBCC TRACEON und DBCC TRACEOFF.  
      Um das Ablaufverfolgungsflag 2528 global zu aktivieren, verwenden Sie [DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md) mit dem Argument -1: `DBCC TRACEON (2528, -1)`. Die Auswirkungen der Aktivierung eines globalen Ablaufverfolgungsflags mit DBCC TRACEON gehen beim Serverneustart verloren. Um das globale Ablaufverfolgungsflag zu deaktivieren, verwenden Sie [DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md) mit dem Argument -1.  
 -   Mithilfe der Startoption **-T** können Sie angeben, dass das Ablaufverfolgungsflag beim Start aktiviert werden soll.  
-     Durch die Startoption **-T** wird ein Ablaufverfolgungsflag global aktiviert. Ablaufverfolgungsflags auf Sitzungsebene können nicht mit einer Startoption aktiviert werden. Dadurch wird sichergestellt, dass das Ablaufverfolgungsflag nach dem Neustart eines Servers aktiv bleibt. Weitere Informationen finden Sie unter [Startoptionen für den Datenbankmoduldienst](../../database-engine/configure-windows/database-engine-service-startup-options.md).
+     Durch die Startoption **-T** wird ein Ablaufverfolgungsflag global aktiviert. Ablaufverfolgungsflags auf Sitzungsebene können nicht mit einer Startoption aktiviert werden. Dadurch wird sichergestellt, dass das Ablaufverfolgungsflag nach dem Neustart eines Servers aktiv bleibt. Weitere Informationen finden Sie unter [Startoptionen für den Datenbank-Engine-Dienst](../../database-engine/configure-windows/database-engine-service-startup-options.md).
 -   Auf Abfrageebene mithilfe des [Abfragehinweises](http://support.microsoft.com/kb/2801413) QUERYTRACEON.
   
 Mithilfe des Befehls `DBCC TRACESTATUS` lässt sich bestimmen, welche Ablaufverfolgungsflags zurzeit aktiv sind.

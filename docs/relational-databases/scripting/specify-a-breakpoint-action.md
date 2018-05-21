@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.breakpt.action
 helpviewer_keywords:
@@ -22,13 +20,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fc843d4ee2866eaaa90a78ce6d4141c5ba8bf400
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 464273e745849429dc4c19382457c2accb72ad56
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specify-a-breakpoint-action"></a>Angeben einer Breakpointaktion
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +36,7 @@ ms.lasthandoff: 04/16/2018
   
  Ausgabemeldungen werden mit der Option **Meldung drucken** festgelegt und als Textzeichenfolge angegeben, die Ausdrücke mit Informationen aus dem zu debuggenden [!INCLUDE[tsql](../../includes/tsql-md.md)] enthalten. Mögliche Ausdrücke:  
   
--   Ein [!INCLUDE[tsql](../../includes/tsql-md.md)] -Ausdruck in geschweiften Klammern ({}). Die Ausdrücke können [!INCLUDE[tsql](../../includes/tsql-md.md)] -Variablen, -Parameter und integrierte Funktionen enthalten. Beispiele hierfür sind {@MyVariable}, {@NameParameter}, {@@SPID} oder {SERVERPROPERTY('ProcessID')}.  
+-   Ein [!INCLUDE[tsql](../../includes/tsql-md.md)]-Ausdruck in geschweiften Klammern ({}). Die Ausdrücke können [!INCLUDE[tsql](../../includes/tsql-md.md)] -Variablen, -Parameter und integrierte Funktionen enthalten. Beispiele hierfür sind {@MyVariable}, {@NameParameter}, {@@SPID} oder {SERVERPROPERTY('ProcessID')}.  
   
 -   Eines der folgenden Schlüsselwörter:  
   
@@ -51,9 +48,9 @@ ms.lasthandoff: 04/16/2018
   
     4.  $FUNCTION gibt den Namen der gespeicherten Prozedur oder benutzerdefinierten Funktion zurück, in der der Breakpoint festgelegt ist. Wenn der Breakpoint im Editorfenster festgelegt wird, gibt $FUNCTION den Namen der Skriptdatei zurück, die bearbeitet wird.  
   
-    5.  $PID und $PNAME geben die ID und den Namen des Betriebssystemprozesses zurück, der die Instanz des Datenbankmoduls ausführt, in dem das [!INCLUDE[tsql](../../includes/tsql-md.md)] ausgeführt wird. $PID gibt die gleiche ID wie SERVERPROPERTY('ProcessID') zurück, jedoch ist $PID ein Hexadezimalwert, während SERVERPROPERTY('ProcessID') ein Dezimalwert ist.  
+    5.  $PID und $PNAME geben die ID und den Namen des Betriebssystemprozesses zurück, der die Instanz der Datenbank-Engine ausführt, in der das [!INCLUDE[tsql](../../includes/tsql-md.md)] ausgeführt wird. $PID gibt die gleiche ID wie SERVERPROPERTY('ProcessID') zurück, jedoch ist $PID ein Hexadezimalwert, während SERVERPROPERTY('ProcessID') ein Dezimalwert ist.  
   
-    6.  $TID und $TNAME geben die ID und den Namen des Betriebssystemthreads zurück, der den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Batch ausführt. Der Thread ist dem Prozess zugeordnet, der die Instanz des Datenbankmoduls ausführt. $TID gibt den gleichen Wert wie SELECT kpid FROM sys.sysprocesses WHERE spid = @@SPID zurück, mit dem einzigen Unterschied, dass $TID ein Hexadezimalwert und kpid ein Dezimalwert ist.  
+    6.  $TID und $TNAME geben die ID und den Namen des Betriebssystemthreads zurück, der den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Batch ausführt. Der Thread ist dem Prozess zugeordnet, der die Instanz der Datenbank-Engine ausführt. $TID gibt den gleichen Wert wie SELECT kpid FROM sys.sysprocesses WHERE spid = @@SPID zurück, mit dem einzigen Unterschied, dass $TID ein Hexadezimalwert und kpid ein Dezimalwert ist.  
   
 -   Sie können auch den umgekehrten Schrägstrich (\\) als Escapezeichen verwenden, um geschweifte Klammern und umgekehrte Schrägstriche in der Meldung zuzulassen: \\{, \\} und \\\\.  
   
