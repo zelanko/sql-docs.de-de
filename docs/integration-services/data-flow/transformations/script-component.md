@@ -74,7 +74,7 @@ ms.lasthandoff: 05/03/2018
   
  VSTA unterstützt die Programmiersprachen [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# und [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic.  
   
- Informationen zum Programmieren der Skriptkomponente finden Sie unter [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md). Detailliertere Informationen zum Konfigurieren der Skriptkomponente als Quelle, Transformation oder Ziel finden Sie unter [Developing Specific Types of Script Components](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md). Zusätzliche Beispiele, welche die Verwendung der Skriptkomponente veranschaulichen (wie z. B. ODBC-Ziele), finden Sie unter [Additional Script Component Examples](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md).  
+ Informationen zum Programmieren der Skriptkomponente finden Sie unter [Erweitern des Datenflusses mit der Skriptkomponente](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md). Detailliertere Informationen zum Konfigurieren der Skriptkomponente als Quelle, Transformation oder Ziel finden Sie unter [Developing Specific Types of Script Components](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md). Zusätzliche Beispiele, welche die Verwendung der Skriptkomponente veranschaulichen (wie z. B. ODBC-Ziele), finden Sie unter [Additional Script Component Examples](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md).  
   
 > [!NOTE]  
 >  Anders als in früheren Versionen, in denen Sie angeben konnten, ob die Skripts vorkompiliert sind, werden in [!INCLUDE[ssISversion10](../../../includes/ssisversion10-md.md)] und nachfolgenden Versionen alle Skripts vorkompiliert. Wenn ein Skript vorkompiliert ist, wird die Sprach-Engine zur Laufzeit nicht geladen, und das Paket wird schneller ausgeführt. Kompilierte binäre Dateien belegen jedoch erheblich mehr Speicherplatz.  
@@ -116,7 +116,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="select-script-component-type"></a>Skriptkomponententyp auswählen
   Mithilfe des Dialogfelds **Skriptkomponententyp auswählen** können Sie angeben, ob eine Skripttransformation mit einer Vorkonfiguration als Quelle, Transformation oder Ziel verwendet wird.  
   
- Weitere Informationen zur Skriptkomponente finden Sie unter [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) (Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor). Weitere Informationen zur Programmierung der Skriptkomponente finden Sie unter [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Weitere Informationen zur Skriptkomponente finden Sie unter [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) (Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor). Weitere Informationen zur Programmierung der Skriptkomponente finden Sie unter [Erweitern des Datenflusses mit der Skriptkomponente](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ### <a name="options"></a>Tastatur  
  Ihre Auswahl zwischen **Quelle**, **Ziel**und **Transformation** beeinflusst die Konfiguration der Skripttransformation und die Seiten des Transformations-Editors für die Skripterstellung.  
@@ -124,7 +124,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="script-transformation-editor-connection-managers-page"></a>Transformations-Editor für Skripterstellung (Seite Verbindungs-Manager)
   Auf der Seite **Verbindungs-Manager** von **Transformations-Editor für Skripterstellung** können Sie Verbindungen angeben, die vom Skript verwendet werden.  
   
- Weitere Informationen zur Skriptkomponente finden Sie unter [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) (Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor). Weitere Informationen zur Programmierung der Skriptkomponente finden Sie unter [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Weitere Informationen zur Skriptkomponente finden Sie unter [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) (Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor). Weitere Informationen zur Programmierung der Skriptkomponente finden Sie unter [Erweitern des Datenflusses mit der Skriptkomponente](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ### <a name="options"></a>Tastatur  
  **Connection managers**  
@@ -151,7 +151,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  Für Quellkomponenten, die Ausgaben, aber keine Eingaben haben, wird die Seite **Eingabespalten** nicht angezeigt.  
   
- Weitere Informationen zur Skriptkomponente finden Sie unter [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) (Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor). Weitere Informationen zur Programmierung der Skriptkomponente finden Sie unter [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Weitere Informationen zur Skriptkomponente finden Sie unter [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) (Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor). Weitere Informationen zur Programmierung der Skriptkomponente finden Sie unter [Erweitern des Datenflusses mit der Skriptkomponente](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ### <a name="options"></a>Tastatur  
  **Eingabename**  
@@ -175,7 +175,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  Für Quellkomponenten sind keine Eingaben, sondern nur Ausgaben, und für Zielkomponenten keine Ausgaben, sondern nur Eingaben vorhanden. Transformationen verfügen über Ein- und Ausgaben.  
   
- Weitere Informationen zur Skriptkomponente finden Sie unter [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) (Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor). Weitere Informationen zur Programmierung der Skriptkomponente finden Sie unter [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Weitere Informationen zur Skriptkomponente finden Sie unter [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) (Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor). Weitere Informationen zur Programmierung der Skriptkomponente finden Sie unter [Erweitern des Datenflusses mit der Skriptkomponente](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ### <a name="options"></a>Tastatur  
  **Inputs and outputs**  
@@ -200,7 +200,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="script-transformation-editor-script-page"></a>Transformations-Editor für Skripterstellung (Seite Skript)
   Auf der Registerkarte **Skript** des Dialogfelds **Transformations-Editor für Skripterstellung** können Sie ein Skript und verknüpfte Eigenschaften angeben.  
   
- Weitere Informationen zur Skriptkomponente finden Sie unter [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) (Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor). Weitere Informationen zur Programmierung der Skriptkomponente finden Sie unter [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Weitere Informationen zur Skriptkomponente finden Sie unter [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) (Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor). Weitere Informationen zur Programmierung der Skriptkomponente finden Sie unter [Erweitern des Datenflusses mit der Skriptkomponente](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ### <a name="options"></a>Tastatur  
  **Eigenschaften**  
@@ -223,6 +223,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="related-content"></a>Verwandte Inhalte  
  [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
- [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
+ [Erweitern des Datenflusses mit der Skriptkomponente](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
   
   
