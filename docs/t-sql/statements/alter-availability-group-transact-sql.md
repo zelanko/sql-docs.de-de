@@ -27,11 +27,11 @@ caps.latest.revision: 152
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b00b6e36b24dbe000a3651841ca347b8539e690c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0791b05bdb2526da5d744c067b2f221f6cf4e1be
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -429,7 +429,7 @@ ALTER AVAILABILITY GROUP group_name
  Weitere Informationen finden Sie unter [Verknüpfen eines sekundären Replikats mit einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)mit einer Always On-Verfügbarkeitsgruppe verknüpft wird.  
   
  FAILOVER  
- Initiiert ein manuelles Failover der Verfügbarkeitsgruppe ohne Datenverlust an das sekundäre Replikat, mit dem Sie verbunden sind. Das Replikat, auf dem Sie einen Failoverzielbefehl eingeben, wird als  bezeichnet.  Das Failoverziel übernimmt die primäre Rolle und stellt seine Kopie jeder Datenbank wieder her und schaltet sie als neue primäre Datenbanken online. Das frühere primäre Replikat geht gleichzeitig in die sekundäre Rolle über, und seine Datenbanken werden sekundäre Datenbanken und werden sofort angehalten. Zwischen diesen Rollen kann möglicherweise durch eine Reihe von Fehlern hin- und hergeschaltet werden.  
+Initiiert ein manuelles Failover der Verfügbarkeitsgruppe ohne Datenverlust an das sekundäre Replikat, mit dem Sie verbunden sind. Das Replikat, von dem das primäre Replikat gehostet wird, wird das *Failoverziel*.  Das Failoverziel übernimmt die primäre Rolle und stellt seine Kopie jeder Datenbank wieder her und schaltet sie als neue primäre Datenbanken online. Das frühere primäre Replikat geht gleichzeitig in die sekundäre Rolle über, und seine Datenbanken werden sekundäre Datenbanken und werden sofort angehalten. Zwischen diesen Rollen kann möglicherweise durch eine Reihe von Fehlern hin- und hergeschaltet werden.  
   
  Wird nur auf einem sekundären Replikat mit synchronem Commit unterstützt, das derzeit mit dem primären Replikat synchronisiert ist. Hinweis: Damit das sekundäre Replikat synchronisiert werden kann, muss das primäre Replikat ebenfalls im Modus mit synchronem Commit ausgeführt werden.  
   
@@ -574,7 +574,7 @@ ALTER AVAILABILITY GROUP group_name
  \<modify_listener_option>  
  MODIFY LISTENER verwendet eine der folgenden Optionen:  
   
- ADD IP { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘**dns_name*ipv6_address***’)** }  
+ ADD IP { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘** dns_name*ipv6_address***’)** }  
  Fügt die angegebene IP-Adresse dem von *dns_name* angegebenen Verfügbarkeitsgruppenlistener hinzu.  
   
  PORT **=** *listener_port*  

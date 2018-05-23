@@ -17,13 +17,13 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bc83f2e17c82ca074fe07f6312fd5c3c864c9e74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2568e2d57cb05164153fa5a9b2a22a49bcb31dac
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="sql-server-2016-release-notes"></a>Versionsanmerkungen zu SQL Server 2016
+# <a name="sql-server-2016-release-notes"></a>Versionsanmerkungen zu SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
   Im folgenden Artikel werden Einschränkungen und Probleme mit Releases von SQL Server 2016, Service Packs inbegriffen, beschrieben. Informationen zu Neuerungen finden Sie unter [Neues im Berichts-Generator für SQL Server 2016](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016).
 
@@ -41,21 +41,21 @@ ms.lasthandoff: 05/03/2018
 Sie müssen Ihren Computer möglicherweise nach der Installation von SQL Server 2016 SP2 neu starten. Als bewährte Methode wird empfohlen, nach der Installation von SQL Server 2016 SP2 einen Neustart zu planen und durchzuführen.
 
 Leistungs- und skalierungsbasierte Verbesserungen, die in SQL Server 2016 SP2 enthalten sind
-|Funktion|Beschreibung|Weitere Informationen|
+|Funktion|und Beschreibung|Weitere Informationen|
 |   --- |   --- |   --- |
 |Verbesserter Cleanupvorgang für die Verteilungsdatenbank |   Übergroße Verteilungsdatenbanktabellen führten zu Blockierungs- und Deadlocksituationen. Im Rahmen einer verbesserten Cleanup-Prozedur sollen einige davon beseitigt werden. |   [KB4040276](https://support.microsoft.com/help/4040276/fix-indirect-checkpoints-on-the-tempdb-database-cause-non-yielding)  |
 |Bereinigen der Änderungsnachverfolgung    |   Verbesserte Leistung und Effizienz des Cleanups für Nebentabellen bei der Änderungsnachverfolgung.    |   [KB4052129](https://support.microsoft.com//help/4052129/update-for-manual-change-tracking-cleanup-procedure-in-sql-server-2016) |
 |Verwenden von CPU-Timeout zum Abbrechen von Resource Governor-Anforderungen   |   Verbessert die Handhabung von Abfrageanforderungen, indem die Anforderung tatsächlich abgebrochen wird, falls CPU-Schwellenwerte für eine Anforderung erreicht werden. Dieses Verhalten wird unter dem Ablaufverfolgungsflag 2422 aktiviert. |   [KB4038419](https://support.microsoft.com/help/4038419/add-cpu-timeout-to-resource-governor-request-max-cpu-time-sec)   |
 |Verwenden von SELECT INTO zum Erstellen einer Zieltabelle in der Dateigruppe    |   Ab SQL Server 2016 SP2 unterstützt die T-SQL-Syntax SELECT INTO das Laden einer Tabelle in eine Dateigruppe, die nicht die Standarddateigruppe des Benutzers ist, die das Schlüsselwort ON <Filegroup name> in der T-SQL-Syntax verwendet. |       |
 |Verbesserter indirekter Prüfpunkt für tempdb    |   Das Verwenden eines indirekten Prüfpunkts für tempdb wurde verbessert, um die Spinlock-Konflikte für DPLists zu reduzieren. Diese Verbesserung erlaubt der tempdb-Workload in SQL Server 2016 eine sofort einsatzbereite zentrale Hochskalierung, falls die Verwendung des indirekten Prüfpunkts für tempdb ON (Ein) ist.    |   [KB4040276](https://support.microsoft.com/en-us/help/4040276)   |
-|Verbesserte Leistung bei der Datenbanksicherung auf Computern mit großem Speicher  |   SQL Server 2016 SP2 optimiert die Art und Weise, wie wir die fortlaufende E/A während der Sicherung ausgleichen, wodurch wir eine deutliche Leistungssteigerung bei der Sicherung für kleine bis mittlere Datenbanken erreichen. Wenn Sicherungen der Systemdatenbank auf einem Computer mit 2 TB durchgeführt werden, ist die Leistung stark verbessert. Die Ergebnisse umfangreicherer Leistungstests für unterschiedliche Datenbank sind weiter unten dargestellt. Die Leistungssteigerung sinkt mit steigender Datenbankgröße, da die zu sichernden Seiten und die Sicherungs-E/A im Vergleich zur Iteration des Pufferpools mehr Zeit in Anspruch nehmen. Durch diese Verbesserung können Sie die Sicherungsleistung für Kunden optimieren, die mehrere kleine Datenbanken auf hochwertigen Servern mit hoher Speicherkapazität hosten. |       |
+|Verbesserte Leistung bei der Datenbanksicherung auf Computern mit großem Speicher  |   SQL Server 2016 SP2 optimiert die Art und Weise, wie wir die fortlaufende E/A während der Sicherung ausgleichen, wodurch wir eine deutliche Leistungssteigerung bei der Sicherung für kleine bis mittlere Datenbanken erreichen. Wenn Sicherungen der Systemdatenbank auf einem Computer mit 2 TB durchgeführt werden, ist die Leistung stark verbessert. Die Leistungssteigerung sinkt mit steigender Datenbankgröße, da die zu sichernden Seiten und die Sicherungs-E/A im Vergleich zur Iteration des Pufferpools mehr Zeit in Anspruch nehmen. Durch diese Änderung können Sie die Sicherungsleistung für Kunden optimieren, die mehrere kleine Datenbanken auf hochwertigen Servern mit hoher Speicherkapazität hosten.    |       |
 |Unterstützung für die VDI-Sicherungskomprimierung für mit TDE aktivierte Datenbanken   |   SQL Server 2016 SP2 fügt VDI-Support hinzu, damit VDI-Sicherungslösungen die Komprimierung für mit TDE aktivierte Datenbanken nutzen können. Durch diese Verbesserung wurde ein neues Sicherungsformat eingeführt, um die Sicherungskomprimierung für mit TDE-aktivierte Datenbanken zu unterstützen. Die SQL Server-Engine verarbeitet transparent neue und alte Sicherungsformate, um die Sicherungen wiederherzustellen.   |       |
 |Dynamisches Laden von Profilparametern des Replikations-Agents    |   Mithilfe dieser neuen Erweiterungen können Replikations-Agent-Parameter dynamisch geladen werden, ohne dass der Agent neu gestartet werden muss. Diese Änderung gilt nur für die am häufigsten verwendeten Agent-Profilparameter. |       |
 |Support der MAXDOP-Option für die CREATE STATISTICS-Anweisung und UPDATE STATISTICS-Anweisung |    Mit dieser Erweiterung kann die MAXDOP-Option für eine CREATE STATISTICS-Anweisung und UPDATE STATISTICS-Anweisung angegeben werden. Zudem kann sichergestellt werden, dass die richtige MAXDOP-Einstellung verwendet wird, wenn Statistiken als Teil eines Erstellungs- oder Neuerstellungsvorgangs für alle Indextypen aktualisiert werden (falls die MAXDOP-Option nicht vorhanden ist).   |   [KB4041809](https://support.microsoft.com/en-us/help/4041809)   |
 |Verbessertes Update für automatische Statistiken für inkrementelle Statistiken |    Wenn z.B. mehrere Datenänderungen für mehrere Partitionen in einer Tabelle vorgenommen wurden und die Anzahl aller Änderung für inkrementelle Statistiken – jedoch keine einzelnen Partitionen – den Grenzwert für automatische Updates überschreitet, kann sich das Statistikupdate so lange verzögern, bis weitere Änderungen in der Tabelle vorgenommen werden. Dieses Verhalten wird unter dem Ablaufverfolgungsflag 11024 korrigiert.   |       |
 
 Unterstützbarkeit und Diagnose betreffende Verbesserungen sind in SQL Server 2016 SP2 beinhaltet.
-|Funktion |Beschreibung   |Weitere Informationen   |
+|Funktion |und Beschreibung   |Weitere Informationen   |
 |   --- |   --- |   --- |
 |Vollständige DTC-Unterstützung für Datenbanken in einer Verfügbarkeitsgruppe    |   Datenbankübergreifende Transaktionen für Datenbanken, die Teil einer Verfügbarkeitsgruppe sind, werden für SQL Server 2016 nicht unterstützt. Mit SQL Server 2016 SP2 führen wir die vollständige Unterstützung für verteilte Transaktionen mit Datenbanken der Verfügbarkeitsgruppe ein.   |       |
 |Update für die Spalte „is_encrypted“ in „sys.database“ zur genauen Wiedergabe des Verschlüsselungsstatus für TempDB |   Der Wert der Spalte „is_encrypted“ in „sys.databases“ beträgt 1 für tempdb, auch wenn Sie die Verschlüsselung für alle Benutzerdatenbanken deaktivieren und SQL Server neu starten. Das erwartete Verhalten ist, dass der Wert 0 (null) ist, da tempdb in dieser Situation nicht länger verschlüsselt ist. Beginnend mit SQL Server 2016 SP2 gibt „is_encrypted“ in „sys.databases“ nun den Verschlüsselungsstatus für tempdb genau wieder.  |       |
@@ -64,6 +64,7 @@ Unterstützbarkeit und Diagnose betreffende Verbesserungen sind in SQL Server 20
 |Neue dynamische Verwaltungssicht (DMV) zur Überwachung des tempdb-Speicherplatzverbrauchs    |   Die neue DMV „sys.dm_tran_version_store_space_usage“ wird in SQL Server 2016 SP2 eingeführt, um die Überwachung von tempdb für die Versionsspeichernutzung zu aktivieren. Datenbankadministratoren können tempdb-Größen basierend auf der Anforderung an die Versionsspeichernutzung pro Datenbank proaktiv planen. Dies geschieht ohne Mehraufwand an Leistung, wenn die Ausführung auf Produktionsservern erfolgt. |       |
 |Unterstützung von vollständigen Speicherabbildern für Replikations-Agents | Wenn Replikations-Agents auf Ausnahmefehler stoßen, erstellen sie aktuell standardmäßig ein Miniabbild der Ausnahmesymptome. Dadurch wird die Problembehandlung von Ausnahmefehlern sehr schwierig. Mit dieser Änderung führen wir einen neuen Registrierungsschlüssel ein, der die Erstellung eines vollständigen Speicherabbilds für Replikations-Agents ermöglicht.  |       |
 |Verbesserung für erweiterte Ereignisse zum Lesen von Routingfehlern für eine Verfügbarkeitsgruppe |   Derzeit wird „read_only_rout_fail xEvent“ nur ausgelöst, wenn zwar eine Routingliste besteht, jedoch zu keinem der Server auf der Liste eine Verbindung hergestellt werden kann. SQL Server 2016 SP2 beinhaltet zusätzliche Informationen zur Unterstützung bei der Problembehandlung und Erweiterungen zu den Codepunkten, bei denen xEvent ausgelöst wird.  |       |
+|Neue DMV, um das Transaktionsprotokoll zu überwachen |   Die neue DMV „sys.dm_db_log_stats“ wurde hinzugefügt, die zusammenfassende Ebenenattribute und Informationen zu den Transaktionsprotokolldateien von Datenbanken zurückgibt. |       |
 |Neue DMV zum Überwachen von VLF-Informationen |   Die neue DMV „sys.dm_db_log_info“ wird in SQL Server 2016 SP2 eingeführt, mit der Sie VLF-Informationen ähnlich wie DBCC LOGINFO verfügbar machen können, um potentielle Transaktionsprotokollprobleme, die von Kunden gemeldet wurden, zu überwachen, davor zu warnen und diese zu vermeiden.    |       |
 |Prozessorinformationen in „sys.dm_os_sys_info“|   Neue Spalten, die der DMV „sys.dm_os_sys_info“ hinzugefügt wurden, um die sich auf den Prozessor beziehenden Informationen verfügbar zu machen, wie „socket_count und cores_per_numa“  |       |
 |Erweiterung modifizierter Informationen in „sys.dm_db_file_space_usage“| Eine neue Spalte, die „sys.dm_db_file_space_usage“ hinzugefügt wurde, um die Anzahl der geänderten Erweiterungen seit der letzten vollständigen Sicherung nachzuverfolgen  |       |
@@ -93,7 +94,7 @@ Unterstützbarkeit und Diagnose betreffende Verbesserungen sind in SQL Server 20
 Die folgenden Features sind in der Standard, Web, Express und Local DB Edition von SQL Server SP1 verfügbar (sofern nicht anders angegeben):
 - Always Encrypted
 - Geänderte Datenerfassung (in Express nicht verfügbar)
-- Columnstore
+- columnstore
 - Komprimierung
 - Dynamische Datenmaskierung
 - Differenzierte Überwachung
@@ -105,7 +106,7 @@ Die folgenden Features sind in der Standard, Web, Express und Local DB Edition v
 
 In der folgenden Tabelle werden wichtige Verbesserungen in SQL Server 2016 SP1 zusammengefasst.
 
-|Funktion|Beschreibung|Weitere Informationen finden Sie unter|
+|Funktion|und Beschreibung|Weitere Informationen finden Sie unter|
 |---|---|---|
 |Masseneinfügung in Heaps mit automatischem TABLOCK unter TF 715| Das Ablaufverfolgungsflag 715 aktiviert Tabellensperren für Massenladevorgänge in einen Heap ohne nicht gruppierte Indizes.|[Migrating SAP workloads to SQL Server just got 2.5x faster (Beschleunigung der Migration von SAP-Workloads zu SQL Server um das 2,5-fache)](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
 |CREATE OR ALTER|Bereitstellen von Objekten wie gespeicherten Prozeduren, Triggern, benutzerdefinierten Funktionen und Ansichten.|[Blog der SQL Server-Datenbank-Engine](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
@@ -222,12 +223,13 @@ Führen Sie außerdem die folgenden gespeicherten Prozeduren des Abfragespeicher
     
 * Öffnen Sie die Datei „%LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings“ | „HlpViewer_VisualStudio14_en-US.settings“ im Editor, und ändern Sie das Datum im folgenden Code in einen Zeitpunkt in der Zukunft.
 
+```
      Cache LastRefreshed="12/31/2017 00:00:00"    
 ```
 
-## Additional Information
-+ [SQL Server 2016 installation](../database-engine/install-windows/installation-for-sql-server-2016.md)
-+ [SQL Server Update Center - links and information for all supported versions](https://msdn.microsoft.com/library/ff803383.aspx)
+## <a name="additional-information"></a>Zusätzliche Informationen
++ [SQL Server 2016-Installation](../database-engine/install-windows/installation-for-sql-server-2016.md)
++ [SQL Server-Update Center – Links und Informationen zu allen unterstützten Versionen](https://msdn.microsoft.com/library/ff803383.aspx)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

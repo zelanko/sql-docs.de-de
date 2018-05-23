@@ -13,19 +13,19 @@ ms.service: sql-database
 ms.component: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-ms.date: 04/10/2018
+ms.date: 05/08/2018
 ms.author: rebeccaz
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: bc007f1021c68c782d8a3e2e426cad3c43f3047a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b88dfeac58ef9c00307b2cfee35aca3ea0549f02
+ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="transparent-data-encryption-for-sql-database-and-data-warehouse"></a>Transparente Datenverschlüsselung für SQL-Datenbank und Data Warehouse
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-Die transparente Datenverschlüsselung unterstützt Maßnahmen zum Schutz von Azure SQL-Datenbank und Azure Data Warehouse vor schädlichen Aktivitäten. Sie führt die Verschlüsselung und Entschlüsselung der Datenbank sowie der ihr zugeordneten Sicherheitskopien und der Transaktionsprotokolle in Ruhephasen in Echtzeit durch, ohne Änderungen an der Anwendung zu erfordern.
+Die transparente Datenverschlüsselung unterstützt Maßnahmen zum Schutz von Azure SQL-Datenbank und Azure Data Warehouse vor schädlichen Aktivitäten. Sie führt die Verschlüsselung und Entschlüsselung der Datenbank sowie der ihr zugeordneten Sicherheitskopien und der Transaktionsprotokolle in Ruhephasen in Echtzeit durch, ohne Änderungen an der Anwendung zu erfordern. Standardmäßig wird die transparente Datenverschlüsselung für alle neu bereitgestellten Azure SQL-Datenbanken aktiviert, muss für ältere Datenbanken aber möglicherweise manuell aktiviert werden.  
 
 Die transparente Datenverschlüsselung verschlüsselt den Speicher einer gesamten Datenbank mithilfe eines symmetrischen Schlüssels, der als Verschlüsselungsschlüssel für die Datenbank bezeichnet wird. Dieser Verschlüsselungsschlüssel für die Datenbank wird durch die Schutzvorrichtung der transparenten Datenverschlüsselung geschützt. Bei dieser Schutzvorrichtung handelt es sich entweder um ein von einem Dienst verwaltetes Zertifikat (von einem Dienst verwaltete transparente Datenverschlüsselung) oder um einen asymmetrischen Schlüssel, der in Azure Key Vault (Bring Your Own Key) gespeichert ist. Sie legen die Schutzvorrichtung für die transparente Datenverschlüsselung auf Serverebene fest. 
 
@@ -84,7 +84,7 @@ Der Hauptschlüssel für die transparente Datenverschlüsselung, der auch als Sc
 
 Sie müssen eine Verbindung als Azure-Besitzer, Azure-Mitwirkender oder SQL-Sicherheitsmanager herstellen, um die transparente Datenverschlüsselung über PowerShell zu konfigurieren. 
 
-| Cmdlet | Description |
+| Cmdlet | und Beschreibung |
 | --- | --- |
 | [Set-AzureRmSqlDatabaseTransparentDataEncryption](/powershell/module/azurerm.sql/set-azurermsqldatabasetransparentdataencryption) |Aktiviert oder deaktiviert die transparente Datenverschlüsselung für eine Datenbank|
 | [Get-Azure-Rm-Sql-Database-Transparent-Data-Encryption](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryption) |Ruft den Status der transparenten Datenverschlüsselung für eine Datenbank ab |
@@ -100,7 +100,7 @@ Sie müssen eine Verbindung als Azure-Besitzer, Azure-Mitwirkender oder SQL-Sich
 
 Stellen Sie eine Verbindung mit der Datenbank mithilfe eines Kontos her, das ein Administratorkonto oder ein Mitglied der Rolle **dbmanager** in der Masterdatenbank ist.
 
-| Befehl | Description |
+| Befehl | und Beschreibung |
 | --- | --- |
 | [ALTER DATABASE (Azure SQL-Datenbank)](/sql/t-sql/statements/alter-database-azure-sql-database) | Durch SET ENCRYPTION ON/OFF wird eine Datenbank verschlüsselt oder entschlüsselt |
 | [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) |Gibt Informationen über den Verschlüsselungsstatus einer Datenbank und die ihr zugeordneten Verschlüsselungsschlüssel zurück |
@@ -113,7 +113,7 @@ Sie können die Schutzvorrichtung der transparenten Datenverschlüsselung mithil
  
 Sie müssen eine Verbindung als Azure-Besitzer, Azure-Mitwirkender oder SQL-Sicherheitsmanager herstellen, um die transparente Datenverschlüsselung über die REST-API zu konfigurieren. 
 
-| Befehl | Description |
+| Befehl | und Beschreibung |
 | --- | --- |
 |[Server erstellen oder aktualisieren](/rest/api/sql/servers/createorupdate)|Fügt eine Azure Active Directory-Identität zu einer Instanz von SQL Server hinzu, die für den Zugriff auf Key Vault verwendet wird|
 |[Serverschlüssel erstellen oder aktualisieren](/rest/api/sql/serverkeys/createorupdate)|Fügt einer Instanz von SQL Server einen Key Vault-Schlüssel hinzu|

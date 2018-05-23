@@ -51,11 +51,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e7d913d7cf3214acb8683bca2bb0a7ebca0e7b45
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cbd5a65f85fa7b54964abf60e01c24a94969753e
+ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -242,7 +242,7 @@ PARTITION
  PARTITION = ALL erstellt alle Partitionen neu.  
   
 > [!WARNING]
->  Das Erstellen bzw. Neuerstellen von nicht ausgerichteten Indizes für eine Tabelle mit mehr als 1.000 Partitionen ist möglich, wird aber nicht unterstützt. Dies hätte Leistungseinbußen oder eine zu hohe Speicherauslastung während der Vorgänge zur Folge. Es empfiehlt sich, bei mehr als 1.000 Partitionen nur ausgerichtete Indizes zu verwenden.  
+> Das Erstellen bzw. Neuerstellen von nicht ausgerichteten Indizes für eine Tabelle mit mehr als 1.000 Partitionen ist möglich, wird aber nicht unterstützt. Dies hätte Leistungseinbußen oder eine zu hohe Speicherauslastung während der Vorgänge zur Folge. Es empfiehlt sich, bei mehr als 1.000 Partitionen nur ausgerichtete Indizes zu verwenden.  
   
  *partition_number*  
    
@@ -260,14 +260,11 @@ PARTITION
  Markiert den Index als deaktiviert und als nicht verfügbar für das [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Jeder Index kann deaktiviert werden. Die Indexdefinition eines deaktivierten Indexes bleibt weiterhin im Systemkatalog ohne zugrunde liegende Indexdaten bestehen. Durch das Deaktivieren eines gruppierten Indexes wird der Benutzerzugriff auf die zugrunde liegenden Tabellendaten verhindert. Verwenden Sie ALTER INDEX REBUILD oder CREATE INDEX WITH DROP_EXISTING, um einen Index zu aktivieren. Weitere Informationen finden Sie unter [Deaktivieren von Indizes und Einschränkungen](../../relational-databases/indexes/disable-indexes-and-constraints.md) und [Aktivieren von Indizes und Einschränkungen](../../relational-databases/indexes/enable-indexes-and-constraints.md).  
   
  REORGANIZE bei einem Rowstore-Index  
- Gibt für Rowstore-Indizes an, dass die Indexblattebene neu organisiert wird.  Für den REORGANIZE-Vorgang gilt:  
+ Gibt für Rowstore-Indizes an, dass die Indexblattebene neu organisiert wird. Für den REORGANIZE-Vorgang gilt:  
   
 -   Wird immer online ausgeführt. Das bedeutet, dass blockierende Langzeitsperren für Tabellen nicht aufrechterhalten werden und Abfragen oder Updates der zugrunde liegenden Tabelle während der ALTER INDEX REORGANIZE-Transaktion fortgesetzt werden können.  
-  
 -   Nicht zulässig für einen deaktivierten Index.  
-  
 -   Nicht zulässig, wenn ALLOW_PAGE_LOCKS auf OFF festgelegt ist.  
-  
 -   Es wird kein Rollback durchgeführt, wenn er innerhalb einer Transaktion ausgeführt wird, für die ein Rollback durchgeführt wird.  
   
 REORGANIZE WITH **(** LOB_COMPACTION = { **ON** | OFF } **)**  
@@ -289,10 +286,8 @@ LOB_COMPACTION = OFF
   
 -   Die Einstellung OFF hat keine Auswirkungen auf einen Heap.  
   
-REORGANIZE bei einem Columnstore-Index  
-Der Vorgang REORGANIZE wird online ausgeführt.  
-  
-Bei Columnstore-Indizes wird durch REORGANIZE jede geschlossene Delta-Zeilengruppe (CLOSED) im Columnstore als eine komprimierte Zeilengruppe komprimiert.  
+ REORGANIZE bei einem Columnstore-Index  
+ Bei Columnstore-Indizes wird durch REORGANIZE jede geschlossene Delta-Zeilengruppe (CLOSED) im Columnstore als eine komprimierte Zeilengruppe komprimiert. Der REORGANIZE-Vorgang wird immer online ausgeführt. Das bedeutet, dass blockierende Langzeitsperren für Tabellen nicht aufrechterhalten werden und Abfragen oder Updates der zugrunde liegenden Tabelle während der ALTER INDEX REORGANIZE-Transaktion fortgesetzt werden können. 
   
 -   REORGANIZE ist für das Verschieben von CLOSED-Delta-Zeilengruppen in komprimierte Zeilengruppen nicht erforderlich. Der im Hintergrund ausgeführte Tupelverschiebungsvorgang (TM, Tuple Mover) wird in bestimmten Zeitabständen reaktiviert, um CLOSED-Delta-Zeilengruppen zu komprimieren. Es wird empfohlen, REORGANIZE zu verwenden, wenn TM im Rückstand ist. Mit REORGANIZE können Zeilengruppen aggressiver komprimiert werden.  
   
@@ -304,7 +299,7 @@ Bei Columnstore-Indizes in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
   
 -   Eine oder mehrere komprimierte Zeilengruppen werden kombiniert, um die Anzahl der Zeilen pro Zeilengruppe auf maximal 1.024.576 Zeilen zu erhöhen. Bei einem Massenexport von 5 Batches mit 102.400 Zeilen erhalten Sie beispielsweise 5 komprimierte Zeilengruppen. Wenn Sie REORGANIZE ausführen, werden diese Zeilengruppen in eine komprimierte Zeilengruppe mit 512.000 Zeilen zusammengeführt. Dies setzt voraus, dass keine Wörterbuchumfangsbegrenzungen oder Arbeitsspeichereinschränkungen vorhanden sind.  
   
--   Zeilengruppen, in denen mindestens 10 % der Zeilen logisch gelöscht wurden, versucht SQL Server mit einer oder mehreren Zeilengruppen zu kombinieren.    Beispiel: Zeilengruppe 1 ist mit 500.000 Zeilen komprimiert und Zeilengruppe 21 mit dem Maximalwert von 1.048.576 Zeilen.  In Zeilengruppe 21 wurden 60 % der Zeilen gelöscht, wodurch noch 409.830 Zeilen vorhanden sind. In SQL Server werden diese beiden Zeilengruppen vorzugsweise kombiniert, um eine neue Zeilengruppe mit 909.830 Zeilen zu komprimieren.  
+-   Zeilengruppen, in denen mindestens 10 % der Zeilen logisch gelöscht wurden, versucht SQL Server mit einer oder mehreren Zeilengruppen zu kombinieren. Beispiel: Zeilengruppe 1 ist mit 500.000 Zeilen komprimiert und Zeilengruppe 21 mit dem Maximalwert von 1.048.576 Zeilen.  In Zeilengruppe 21 wurden 60 % der Zeilen gelöscht, wodurch noch 409.830 Zeilen vorhanden sind. In SQL Server werden diese beiden Zeilengruppen vorzugsweise kombiniert, um eine neue Zeilengruppe mit 909.830 Zeilen zu komprimieren.  
   
 REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = { ON | **OFF** } )  
 
@@ -344,7 +339,7 @@ FILLFACTOR = *fillfactor*
  Verwenden Sie zum Anzeigen der Füllfaktoreinstellung **sys.indexes**.  
   
 > [!IMPORTANT]
->  Das Erstellen oder Ändern eines gruppierten Indexes mit einem FILLFACTOR-Wert wirkt sich auf den Speicherplatz aus, den die Daten belegen, da das [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Daten beim Erstellen des gruppierten Indexes neu verteilt.  
+> Das Erstellen oder Ändern eines gruppierten Indexes mit einem FILLFACTOR-Wert wirkt sich auf den Speicherplatz aus, den die Daten belegen, da das [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Daten beim Erstellen des gruppierten Indexes neu verteilt.  
   
  SORT_IN_TEMPDB = { ON | **OFF** }  
  
@@ -633,27 +628,34 @@ ABORT
 Abbrechen eines ausgeführten oder angehaltenen Indexvorgangs, der als fortsetzbar deklariert wurde. Zum Beenden eines fortsetzbaren Indexneuerstellungsvorgangs müssen Sie einen **ABORT**-Befehl explizit ausführen. Durch das Auftreten eines Fehlers oder durch Anhalten eines fortsetzbaren Indexvorgangs wird dessen Ausführung nicht beendet. Der Vorgang befindet sich stattdessen in einem unbestimmten Pausezustand.
   
 ## <a name="remarks"></a>Remarks  
- ALTER INDEX kann nicht verwendet werden, um einen Index neu zu partitionieren oder ihn in eine andere Dateigruppe zu verschieben. Diese Anweisung kann nicht verwendet werden, um die Indexdefinition, wie z. B. das Hinzufügen oder Löschen von Spalten oder das Ändern der Spaltenreihenfolge, zu ändern. Verwenden Sie CREATE INDEX mit der DROP_EXISTING-Klausel zum Ausführen dieser Vorgänge.  
+`ALTER INDEX` kann nicht verwendet werden, um einen Index neu zu partitionieren oder ihn in eine andere Dateigruppe zu verschieben. Diese Anweisung kann nicht verwendet werden, um die Indexdefinition, wie z. B. das Hinzufügen oder Löschen von Spalten oder das Ändern der Spaltenreihenfolge, zu ändern. Verwenden Sie `CREATE INDEX` mit der `DROP_EXISTING`-Klausel, um diese Vorgänge auszuführen.  
   
- Wenn eine Option nicht explizit angegeben ist, wird die aktuelle Einstellung angewendet. Wenn in der REBUILD-Klausel beispielsweise keine FILLFACTOR-Einstellung angegeben ist, wird der im Systemkatalog gespeicherte Füllfaktorwert während der Neuerstellung verwendet. Verwenden Sie zum Anzeigen der aktuellen Indexoptionseinstellungen [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
+Wenn eine Option nicht explizit angegeben ist, wird die aktuelle Einstellung angewendet. Wenn in der `REBUILD`-Klausel beispielsweise keine `FILLFACTOR`-Einstellung angegeben ist, wird der im Systemkatalog gespeicherte Füllfaktorwert während der Neuerstellung verwendet. Verwenden Sie zum Anzeigen der aktuellen Indexoptionseinstellungen [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
-> [!NOTE]
-> Die Werte für ONLINE, MAXDOP und SORT_IN_TEMPDB werden nicht im Systemkatalog gespeichert. Der Standardwert der Option wird verwendet, sofern die Option nicht in der Indexanweisung angegeben ist.
+Die Werte für `ONLINE`, `MAXDOP` und `SORT_IN_TEMPDB` werden nicht im Systemkatalog gespeichert. Der Standardwert der Option wird verwendet, sofern die Option nicht in der Indexanweisung angegeben ist.
   
- Auf Mehrprozessorcomputern werden für ALTER INDEX REBUILD wie bei allen anderen Abfragen automatisch mehr Prozessoren verwendet, um bei Indexänderungen Scan- und Sortierungsvorgänge auszuführen. Wenn Sie ALTER INDEX REORGANIZE mit oder ohne LOB_COMPACTION ausführen, entspricht der Wert von **Max. Grad an Parallelität** einem einzelnen Threadvorgang. Weitere Informationen finden Sie unter [Konfigurieren von Parallelindexvorgängen](../../relational-databases/indexes/configure-parallel-index-operations.md).  
+Auf Mehrprozessorcomputern werden für `ALTER INDEX ... REBUILD`, wie bei anderen Abfragen auch, automatisch weitere Prozessoren verwendet, um die Scan- und Sortierungsvorgänge auszuführen, die mit einem Ändern des Index verbunden sind. Wenn Sie `ALTER INDEX ... REORGANIZE` mit oder ohne `LOB_COMPACTION` ausführen, entspricht der Wert von **Max. Grad an Parallelität** einem einzelnen Threadvorgang. Weitere Informationen finden Sie unter [Konfigurieren von Parallelindexvorgängen](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
- Ein Index kann nicht neu organisiert oder neu erstellt werden, wenn die Dateigruppe, in der er enthalten ist, eine Offline- oder schreibgeschützte Dateigruppe ist. Wenn das Schlüsselwort ALL angegeben ist und mindestens ein Index in einer Offline- oder schreibgeschützten Dateigruppe enthalten ist, erzeugt die Anweisung einen Fehler.  
+> [!IMPORTANT]
+> Ein Index kann nicht neu organisiert oder neu erstellt werden, wenn die Dateigruppe, in der er enthalten ist, eine Offline- oder schreibgeschützte Dateigruppe ist. Wenn das Schlüsselwort `ALL` angegeben ist und mindestens ein Index in einer Offline- oder schreibgeschützten Dateigruppe enthalten ist, erzeugt die Anweisung einen Fehler.  
   
 ## <a name="rebuilding-indexes"></a> Neuerstellen von Indizes  
- Beim Neuerstellen eines Indexes wird der Index gelöscht und neu erstellt. Bei diesem Vorgang wird die Fragmentierung entfernt, Speicherplatz wird freigegeben, indem die Seiten auf der Grundlage der angegebenen oder vorhandenen Füllfaktoreinstellung komprimiert werden, und die Indexzeilen werden in aufeinanderfolgenden Seiten neu geordnet. Wenn ALL angegeben ist, werden alle Indizes der Tabelle in einer einzelnen Transaktion gelöscht und neu erstellt. FOREIGN KEY-Einschränkungen müssen nicht im Voraus gelöscht werden. Wenn Indizes mit mindestens 128 Blöcken neu erstellt werden, verzögert das [!INCLUDE[ssDE](../../includes/ssde-md.md)] die tatsächlichen aufgehobenen Seitenzuordnungen sowie deren zugeordnete Sperren, bis für die Transaktion ein Commit ausgeführt wird.  
+Beim Neuerstellen eines Indexes wird der Index gelöscht und neu erstellt. Bei diesem Vorgang wird die Fragmentierung entfernt, Speicherplatz wird freigegeben, indem die Seiten auf der Grundlage der angegebenen oder vorhandenen Füllfaktoreinstellung komprimiert werden, und die Indexzeilen werden in aufeinanderfolgenden Seiten neu geordnet. Wenn `ALL` angegeben ist, werden alle Indizes der Tabelle in einer einzelnen Transaktion gelöscht und neu erstellt. Fremdschlüsseleinschränkungen müssen nicht im Voraus gelöscht werden. Wenn Indizes mit mindestens 128 Blöcken neu erstellt werden, verzögert das [!INCLUDE[ssDE](../../includes/ssde-md.md)] die tatsächlichen aufgehobenen Seitenzuordnungen sowie deren zugeordnete Sperren, bis für die Transaktion ein Commit ausgeführt wird.  
+ 
+Weitere Informationen finden Sie unter [Neuorganisieren und Neuerstellen von Indizes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md). 
   
- Durch das erneute Erstellen oder Organisieren kleiner Indizes lässt sich die Fragmentierung häufig nicht verringern. Die Seiten kleiner Indizes werden manchmal in gemischten Blöcken gespeichert. Da gemischte Blöcke von bis zu acht Objekten gemeinsam genutzt werden, lässt sich die Fragmentierung in einem kleinen Index durch die erneute Erstellung oder Organisation des Indexes möglicherweise nicht verringern.  
+> [!NOTE]
+> Durch das erneute Erstellen oder Organisieren kleiner Indizes lässt sich die Fragmentierung häufig nicht verringern. Die Seiten kleiner Indizes werden manchmal in gemischten Blöcken gespeichert. Da gemischte Blöcke von bis zu acht Objekten gemeinsam genutzt werden, lässt sich die Fragmentierung in einem kleinen Index durch die erneute Erstellung oder Organisation des Indexes möglicherweise nicht verringern.  
   
- Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]werden Statistiken nicht durch das Scannen aller Zeilen in der Tabelle erstellt, wenn ein partitionierter Index erstellt oder neu erstellt wird. Der Abfrageoptimierer generiert stattdessen Statistiken mithilfe des Standardalgorithmus zur Stichprobenentnahme. Um Statistiken zu partitionierten Indizes durch das Scannen aller Zeilen in der Tabelle abzurufen, verwenden Sie CREATE STATISTICS oder UPDATE STATISTICS mit der FULLSCAN-Klausel.  
+> [!IMPORTANT]
+> Wenn ein Index in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt oder neu erstellt wird, werden Statistiken erstellt oder aktualisiert, indem alle Zeilen in der Tabelle gescannt werden.
+> 
+> Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] werden Statistiken aber mehr nicht durch das Scannen aller Zeilen in der Tabelle erstellt, wenn ein partitionierter Index erstellt oder neu erstellt wird. Stattdessen verwendet der Abfrageoptimierer den Standardalgorithmus zur Stichprobenentnahme, um diese Statistiken zu generieren. Um Statistiken zu partitionierten Indizes durch das Scannen aller Zeilen in der Tabelle abzurufen, verwenden Sie `CREATE STATISTICS` oder `UPDATE STATISTICS` mit der `FULLSCAN`-Klausel.  
   
- In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konnte in einigen Fällen ein nicht gruppierter Index neu erstellt werden, um durch Hardwarefehler verursachte Inkonsistenzen zu korrigieren. Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sind Sie u. U. weiterhin in der Lage, derartige Inkonsistenzen zwischen dem Index und dem gruppierten Index zu beheben, indem Sie einen nicht gruppierten Index offline erstellen. Sie können die Inkonsistenzen eines nicht gruppierten Indexes jedoch nicht beheben, indem Sie den Index online neu erstellen, da der Onlineneuerstellungsmechanismus den vorhandenen nicht gruppierten Index als Grundlage für die Neuerstellung verwendet und somit die Inkonsistenzen bestehen bleiben. Wird der Index offline neu erstellt, wird in manchen Fällen ein Scan des gruppierten Indexes (oder Heaps) erzwungen. um dadurch Inkonsistenzen zu entfernen. Um eine Neuerstellung des gruppierten Indexes zu gewährleisten, löschen Sie den nicht gruppierten Index und erstellen Sie ihn neu. Wie in früheren Versionen wird zum Entfernen von Inkonsistenzen empfohlenen, die betroffenen Daten aus einer Sicherung wiederherzustellen. Die Inkonsistenzen des Indexes können möglicherweise auch behoben werden, indem der nicht gruppierte Index offline neu erstellt wird. Weitere Informationen finden Sie unter [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).  
+In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konnte in einigen Fällen ein nicht gruppierter Index neu erstellt werden, um durch Hardwarefehler verursachte Inkonsistenzen zu korrigieren.    
+Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sind Sie u. U. weiterhin in der Lage, derartige Inkonsistenzen zwischen dem Index und dem gruppierten Index zu beheben, indem Sie einen nicht gruppierten Index offline erstellen. Sie können die Inkonsistenzen eines nicht gruppierten Indexes jedoch nicht beheben, indem Sie den Index online neu erstellen, da der Onlineneuerstellungsmechanismus den vorhandenen nicht gruppierten Index als Grundlage für die Neuerstellung verwendet und somit die Inkonsistenzen bestehen bleiben. Wird der Index offline neu erstellt, wird in manchen Fällen ein Scan des gruppierten Indexes (oder Heaps) erzwungen. um dadurch Inkonsistenzen zu entfernen. Um eine Neuerstellung des gruppierten Indexes zu gewährleisten, löschen Sie den nicht gruppierten Index und erstellen Sie ihn neu. Wie in früheren Versionen wird zum Entfernen von Inkonsistenzen empfohlenen, die betroffenen Daten aus einer Sicherung wiederherzustellen. Die Inkonsistenzen des Indexes können möglicherweise auch behoben werden, indem der nicht gruppierte Index offline neu erstellt wird. Weitere Informationen finden Sie unter [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).  
   
- Die Neuerstellung eines gruppierten columnstore-Indexes verläuft in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wie folgt:  
+Die Neuerstellung eines gruppierten columnstore-Indexes verläuft in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wie folgt:  
   
 1.  Abrufen einer exklusiven Sperre für die Tabelle oder Partition, während die Neuerstellung ausgeführt wird. Die Daten sind während der Neuerstellung "offline" und nicht verfügbar.  
   
@@ -664,28 +666,31 @@ Abbrechen eines ausgeführten oder angehaltenen Indexvorgangs, der als fortsetzb
 4.  Auf dem physischen Medium muss ausreichend freier Speicherplatz zur Verfügung stehen, um während der Neuerstellung zwei Kopien des Columnstore-Indexes speichern zu können. Nach Abschluss der Neuerstellung wird der ursprüngliche gruppierte Columnstore-Index von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gelöscht.  
   
 ## <a name="reorganizing-indexes"></a> Neuorganisieren von Indizes  
- Das Neuorganisieren eines Indexes beansprucht minimale Systemressourcen. Dabei wird die Blattebene von gruppierten und nicht gruppierten Indizes in Tabellen und Sichten defragmentiert, indem die Blattebenenseiten physisch neu geordnet werden, damit sie mit der logischen Reihenfolge der Blattknoten von links nach rechts übereinstimmen. Durch das Neuorganisieren werden die Indexseiten auch komprimiert. Die Komprimierung basiert auf dem vorhandenen Füllfaktorwert. Verwenden Sie zum Anzeigen der Füllfaktoreinstellung [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
+Das Neuorganisieren eines Indexes beansprucht minimale Systemressourcen. Dabei wird die Blattebene von gruppierten und nicht gruppierten Indizes in Tabellen und Sichten defragmentiert, indem die Blattebenenseiten physisch neu geordnet werden, damit sie mit der logischen Reihenfolge der Blattknoten von links nach rechts übereinstimmen. Durch das Neuorganisieren werden die Indexseiten auch komprimiert. Die Komprimierung basiert auf dem vorhandenen Füllfaktorwert. Verwenden Sie zum Anzeigen der Füllfaktoreinstellung [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
- Wenn ALL angegeben ist,  werden relationale Indizes, sowohl gruppierte als auch nicht gruppierte, und XML-Indizes der Tabelle neu organisiert. Bei Angabe von ALL gelten einige Einschränkungen; diese finden Sie in der Definition zu ALL im Abschnitt "Argumente".  
+Wenn `ALL` angegeben ist, werden relationale Indizes, sowohl gruppierte als auch nicht gruppierte, und XML-Indizes der Tabelle neu organisiert. Bei Angabe von `ALL` gelten einige Einschränkungen; diese finden Sie in der Definition für `ALL` in diesem Artikel im Abschnitt „Argumente“.  
   
- Weitere Informationen finden Sie unter [Neuorganisieren und Neuerstellen von Indizes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
+Weitere Informationen finden Sie unter [Neuorganisieren und Neuerstellen von Indizes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
+ 
+> [!IMPORTANT]
+> Wann wird ein Index in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu organisiert wird, werden Statistiken nicht aktualisiert.
   
 ## <a name="disabling-indexes"></a> Deaktivieren von Indizes  
- Durch das Deaktivieren eines Indexes wird der Benutzerzugriff auf den Index sowie auf die zugrunde liegenden Tabellendaten gruppierter Indizes verhindert. Die Indexdefinition bleibt im Systemkatalog erhalten. Beim Deaktivieren eines nicht gruppierten oder gruppierten Indexes in einer Sicht werden die Indexdaten physisch gelöscht. Durch das Deaktivieren eines gruppierten Indexes wird der Benutzerzugriff auf die Daten verhindert; die Daten bleiben jedoch in der B-Struktur unverwaltet, bis der Index gelöscht oder neu erstellt wird. Führen Sie eine Abfrage für die **is_disabled**-Spalte in der **sys.indexes**-Katalogsicht aus, um den Status eines aktivierten oder deaktivierten Index anzuzeigen.  
+Durch das Deaktivieren eines Indexes wird der Benutzerzugriff auf den Index sowie auf die zugrunde liegenden Tabellendaten gruppierter Indizes verhindert. Die Indexdefinition bleibt im Systemkatalog erhalten. Beim Deaktivieren eines nicht gruppierten oder gruppierten Indexes in einer Sicht werden die Indexdaten physisch gelöscht. Durch das Deaktivieren eines gruppierten Indexes wird der Benutzerzugriff auf die Daten verhindert; die Daten bleiben jedoch in der B-Struktur unverwaltet, bis der Index gelöscht oder neu erstellt wird. Führen Sie eine Abfrage für die **is_disabled**-Spalte in der **sys.indexes**-Katalogsicht aus, um den Status eines aktivierten oder deaktivierten Index anzuzeigen.  
   
- Befindet sich eine Tabelle in einer Transaktionsreplikationsveröffentlichung, können die Indizes, die mit Primärschlüsselspalten verknüpft sind, nicht deaktiviert werden, weil diese Indizes von der Replikation benötigt werden. Wenn Sie einen Index deaktivieren möchten, müssen Sie zuerst die Tabelle aus der Veröffentlichung löschen. Weitere Informationen finden Sie unter [Veröffentlichen von Daten und Datenbankobjekten](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
+Befindet sich eine Tabelle in einer Transaktionsreplikationsveröffentlichung, können die Indizes, die mit Primärschlüsselspalten verknüpft sind, nicht deaktiviert werden, weil diese Indizes von der Replikation benötigt werden. Wenn Sie einen Index deaktivieren möchten, müssen Sie zuerst die Tabelle aus der Veröffentlichung löschen. Weitere Informationen finden Sie unter [Veröffentlichen von Daten und Datenbankobjekten](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
- Verwenden Sie die ALTER INDEX REBUILD-Anweisung oder die CREATE INDEX WITH DROP_EXISTING-Anweisung, um den Index zu aktivieren. Das Neuerstellen eines deaktivierten gruppierten Indexes kann nicht durchgeführt werden, wenn die ONLINE-Option auf ON festgelegt ist. Weitere Informationen finden Sie unter [Deaktivieren von Indizes und Einschränkungen](../../relational-databases/indexes/disable-indexes-and-constraints.md).  
+Verwenden Sie die ALTER INDEX REBUILD-Anweisung oder die CREATE INDEX WITH DROP_EXISTING-Anweisung, um den Index zu aktivieren. Das Neuerstellen eines deaktivierten gruppierten Indexes kann nicht durchgeführt werden, wenn die ONLINE-Option auf ON festgelegt ist. Weitere Informationen finden Sie unter [Deaktivieren von Indizes und Einschränkungen](../../relational-databases/indexes/disable-indexes-and-constraints.md).  
   
 ## <a name="setting-options"></a>Festlegen von Optionen  
- Sie können die Optionen ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, IGNORE_DUP_KEY und STATISTICS_NORECOMPUTE für einen angegebenen Index festlegen, ohne den Index neu zu erstellen oder zu organisieren. Die geänderten Werte werden sofort auf den Index angewendet. Verwenden Sie zum Anzeigen dieser Einstellungen **sys.indexes**. Weitere Informationen finden Sie unter [Festlegen von Indexoptionen](../../relational-databases/indexes/set-index-options.md).  
+Sie können die Optionen `ALLOW_ROW_LOCKS`, `ALLOW_PAGE_LOCKS`, `IGNORE_DUP_KEY` und `STATISTICS_NORECOMPUTE` für einen angegebenen Index festlegen, ohne diesen Index neu zu erstellen oder neu zu organisieren. Die geänderten Werte werden sofort auf den Index angewendet. Verwenden Sie zum Anzeigen dieser Einstellungen **sys.indexes**. Weitere Informationen finden Sie unter [Festlegen von Indexoptionen](../../relational-databases/indexes/set-index-options.md).  
   
 ### <a name="row-and-page-locks-options"></a>Zeilen- und Seitensperren (Optionen)  
- Wenn ALLOW_ROW_LOCKS und ALLOW_PAGE_LOCK auf ON festgelegt sind, sind Sperren auf Zeilen-, Seiten- und Tabellenebene beim Zugriff auf den Index zulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] wählt die geeignete Sperre aus und kann die Sperre von einer Zeilen- oder Seitensperre auf eine Tabellensperre ausweiten.  
+Wenn `ALLOW_ROW_LOCKS = ON` und `ALLOW_PAGE_LOCK = ON` angegeben sind, sind Sperren auf Zeilen-, Seiten- und Tabellenebene zulässig, wenn auf den Index zugegriffen wird. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] wählt die geeignete Sperre aus und kann die Sperre von einer Zeilen- oder Seitensperre auf eine Tabellensperre ausweiten.  
   
- Wenn ALLOW_ROW_LOCKS auf OFF und ALLOW_PAGE_LOCK auf OFF festgelegt sind, sind beim Zugriff auf den Index nur Sperren auf Tabellenebene zulässig.  
+Wenn `ALLOW_ROW_LOCKS = OFF` und `ALLOW_PAGE_LOCK = OFF` angegeben sind, ist nur eine Sperre auf Tabellenebene zulässig, wenn auf den Index zugegriffen wird.  
   
- Wenn beim Festlegen der Optionen für Zeilen- oder Seitensperren ALL angegeben ist, werden die Einstellungen auf alle Indizes angewendet. Wenn es sich bei der zugrunde liegenden Tabelle um einen Heap handelt, werden die Einstellungen folgendermaßen angewendet:  
+Wenn beim Festlegen der Optionen für Zeilen- oder Seitensperren `ALL` angegeben ist, werden die Einstellungen auf alle Indizes angewendet. Wenn es sich bei der zugrunde liegenden Tabelle um einen Heap handelt, werden die Einstellungen folgendermaßen angewendet:  
   
 |||  
 |-|-|  
@@ -694,28 +699,27 @@ Abbrechen eines ausgeführten oder angehaltenen Indexvorgangs, der als fortsetzb
 |ALLOW_PAGE_LOCKS = OFF|Vollständig für die nicht gruppierten Indizes. Dies bedeutet, dass für die nicht gruppierten Indizes keine Seitensperren zulässig sind. Beim Heap sind nur gemeinsame Sperren (S, Shared), Updatesperren (U, Update) und exklusive Sperren (X, Exclusive) für die Seite unzulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] kann weiterhin eine beabsichtigte Seitensperre (IS, IU oder IX) für interne Zwecke abrufen.|  
   
 ## <a name="online-index-operations"></a> Onlineindexvorgänge  
- Wenn Sie einen Index neu erstellen, und die ONLINE-Option ist auf ON festgelegt, sind die zugrunde liegenden Objekte, die Tabellen und zugeordneten Indizes für Abfragen und Datenänderungen verfügbar. Sie können auch einen Teil eines Indexes online neu erstellen, der sich in einer einzelnen Partition befindet. Exklusive Tabellensperren werden während des Änderungsprozesses nur für einen kurzen Zeitraum aufrechterhalten.  
+Wenn Sie einen Index neu erstellen, und die ONLINE-Option ist auf ON festgelegt, sind die zugrunde liegenden Objekte, die Tabellen und zugeordneten Indizes für Abfragen und Datenänderungen verfügbar. Sie können auch einen Teil eines Indexes online neu erstellen, der sich in einer einzelnen Partition befindet. Exklusive Tabellensperren werden während des Änderungsprozesses nur für einen kurzen Zeitraum aufrechterhalten.  
   
- Das Neuorganisieren eines Indexes wird stets online durchgeführt. Bei dem Prozess werden Sperren nicht dauerhaft aufrechterhalten; daher werden Abfragen oder Updates, die ausgeführt werden, nicht blockiert.  
+Das Neuorganisieren eines Indexes wird stets online durchgeführt. Bei dem Prozess werden Sperren nicht dauerhaft aufrechterhalten; daher werden Abfragen oder Updates, die ausgeführt werden, nicht blockiert.  
   
- Gleichzeitige Onlineindexvorgänge können in derselben Tabelle oder Tabellenpartition nur bei den folgenden Aktionen ausgeführt werden:  
+Gleichzeitige Onlineindexvorgänge können in derselben Tabelle oder Tabellenpartition nur bei den folgenden Aktionen ausgeführt werden:  
   
 -   Erstellen mehrerer nicht gruppierter Indizes.  
 -   Neuorganisieren unterschiedlicher Indizes in derselben Tabelle.  
 -   Neuorganisieren unterschiedlicher Indizes während der Neuerstellung von nicht überlappenden Indizes derselben Tabelle.  
   
- Alle anderen gleichzeitig durchgeführten Onlineindexvorgänge erzeugen einen Fehler. Sie können beispielsweise nicht zwei oder mehr Indizes zur gleichen Zeit für dieselbe Tabelle neu erstellen bzw. beim Neuerstellen eines vorhandenen Indexes keinen neuen Index für dieselbe Tabelle erstellen.  
+Alle anderen gleichzeitig durchgeführten Onlineindexvorgänge erzeugen einen Fehler. Sie können beispielsweise nicht zwei oder mehr Indizes zur gleichen Zeit für dieselbe Tabelle neu erstellen bzw. beim Neuerstellen eines vorhandenen Indexes keinen neuen Index für dieselbe Tabelle erstellen.  
 
 ### <a name="resumable-indexes"></a>Fortsetzbare Indexvorgänge
 
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
-ONLINE INDEX REBUILD wird als fortsetzbar angegeben, wenn die Option RESUMABLE=ON verwendet wird. 
--  Die RESUMABLE-Option wird in den Metadaten nicht für einen bestimmten Index beibehalten und gilt nur für die Dauer der aktuellen DDL-Anweisung.  Zum Aktivieren der Fortsetzungsmöglichkeit muss die Klausel RESUMABLE=ON daher explizit angegeben werden.
--  Es gibt zwei verschiedene MAX_DURATION-Optionen. Die eine bezieht sich auf low_priority_lock_wait, die andere auf die Option RESUMABLE=ON.
-   -  Die MAX_DURATION-Option wird für die Option RESUMABLE=ON oder die Argumentoption **low_priority_lock_wait** unterstützt. 
+Eine Onlineneuerstellung eines Indexes wird mit der `RESUMABLE = ON`-Option als fortsetzbar angegeben. 
+-  Die `RESUMABLE`-Option wird in den Metadaten nicht für einen bestimmten Index beibehalten und gilt nur für die Dauer der aktuellen DDL-Anweisung. Daher muss die `RESUMABLE = ON`-Klausel explizit angegeben werden, wenn Fortsetzbarkeit aktiviert werden soll.
+-  Die MAX_DURATION-Option wird für die Option RESUMABLE = ON oder die Argumentoption **low_priority_lock_wait** unterstützt. 
    -  MAX_DURATION gibt bei der RESUMABLE-Option das Zeitintervall an, in dem ein Index neu erstellt wird. Sobald dieses Zeitintervall beendet ist, wird die Indexneuerstellung entweder angehalten oder in ihrer Ausführung beendet. Der Benutzer entscheidet, wann die Neuerstellung eines angehaltenen Index fortgesetzt werden kann. Die **Zeitspanne** für MAX_DURATION in Minuten muss größer als 0 Minuten und kleiner oder gleich einer Woche (7 * 24 * 60 = 10.080 Minuten) sein. Das lange Anhalten eines Indexvorgangs kann Auswirkungen auf die DML-Leistung für eine bestimmte Tabelle sowie die Datenträgerkapazität der Datenbank haben, da sowohl der ursprüngliche Index als auch der neu erstellte Index Speicherplatz benötigen und während der DML-Vorgänge aktualisiert werden müssen. Wird die MAX_DURATION-Option ausgelassen, dann wird der Indexvorgang bis zum vollständigen Abschluss oder bis ein Fehler auftritt fortgeführt. 
--   Mit der Argumentoption \<low_priority_lock_wait> können Sie entscheiden, wie der Indexvorgang fortgesetzt werden kann, wenn er für die Sch-M-Sperre blockiert wird.
+   -  Mit der Argumentoption \<low_priority_lock_wait> können Sie entscheiden, wie der Indexvorgang fortgesetzt werden kann, wenn er für die Sch-M-Sperre blockiert wird.
  
 -  Durch das erneute Ausführen der ursprünglichen ALTER INDEX REBUILD-Anweisung mit denselben Parametern wird ein angehaltener Indexneuerstellungsvorgang fortgesetzt. Auch durch Ausführen der ALTER INDEX RESUME-Anweisung kann ein angehaltener Indexneuerstellungsvorgang fortgesetzt werden.
 -  Die Option SORT_IN_TEMPDB=ON wird für den fortsetzbaren Index nicht unterstützt. 

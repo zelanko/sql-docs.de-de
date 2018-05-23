@@ -40,15 +40,15 @@ caps.latest.revision: 84
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0eb4e0cb4da6395d0c48da787b0e21b6f27dcae4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a0b300bc3f204af062eac1e151933659216dd921
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einem anderen Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Dieses Thema ist in den folgenden Situationen relevant:  
+  Dieser Artikel ist in den folgenden Situationen relevant:  
   
 -   Konfigurieren der Verfügbarkeitsreplikate einer [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] -Verfügbarkeitsgruppe.  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 05/03/2018
  Wenn Sie die Datenbank für eine Anwendung auf eine andere Serverinstanz verschieben, müssen Sie alle Metadaten der abhängigen Entitäten und Objekte in **master** und **msdb** auf der Zielserverinstanz neu erstellen. Wenn für eine Datenbankanwendung beispielsweise Trigger auf Serverebene verwendet werden, genügt es nicht, die Datenbank im neuen System lediglich anzufügen oder wiederherzustellen. Die Datenbank funktioniert nicht wie erwartet, wenn Sie die Metadaten für diese Trigger in der **master** -Datenbank nicht manuell neu erstellen.  
   
 ##  <a name="information_entities_and_objects"></a> Informationen, Entitäten und Objekte, die außerhalb der Benutzerdatenbanken gespeichert werden  
- Im übrigen Teil dieses Themas werden die potenziellen Probleme zusammengefasst, die eine Datenbank betreffen können, die auf einer anderen Serverinstanz bereitgestellt werden soll. Möglicherweise müssen Sie einen oder mehrere Typen von Informationen, Entitäten oder Objekten neu erstellen, die in der folgenden Liste aufgeführt sind. Klicken Sie zum Anzeigen einer Zusammenfassung auf den Link für das Element.  
+ Im restlichen Teil dieses Artikels die potenziellen Probleme zusammengefasst, die eine Datenbank betreffen können, die auf einer anderen Serverinstanz bereitgestellt werden soll. Möglicherweise müssen Sie einen oder mehrere Typen von Informationen, Entitäten oder Objekten neu erstellen, die in der folgenden Liste aufgeführt sind. Klicken Sie zum Anzeigen einer Zusammenfassung auf den Link für das Element.  
   
 -   [Serverkonfigurationseinstellungen](#server_configuration_settings)  
   
@@ -117,7 +117,7 @@ ms.lasthandoff: 05/03/2018
   
   
 ##  <a name="cross_database_queries"></a> Cross-Database Queries  
- Die Datenbankoptionen DB_CHAINING und TRUSTWORTHY sind standardmäßig auf OFF festgelegt. Falls eine dieser Optionen für die ursprüngliche Datenbank auf ON festgelegt ist, müssen Sie die betreffende Option u. U. auch auf der Zielserverinstanz aktivieren. Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+ Die Datenbankoptionen DB_CHAINING und TRUSTWORTHY sind standardmäßig auf OFF festgelegt. Ist eine dieser Optionen für die ursprüngliche Datenbank auf ON festgelegt, müssen Sie die betreffende Option u. U. auch auf der Zielserverinstanz aktivieren. Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
  Durch Anfüge- und Trennvorgänge wird die datenbankübergreifende Besitzverkettung für die Datenbank deaktiviert. Informationen zum Aktivieren der Verkettung finden Sie unter [Datenbankübergreifende Besitzverkettung (Serverkonfigurationsoption)](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md).  
   
@@ -189,7 +189,8 @@ ms.lasthandoff: 05/03/2018
   
  Erweiterte gespeicherte Prozeduren werden direkt im Adressraum einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt und können Arbeitsspeicherverluste oder andere Probleme hervorrufen, die die Leistung und Zuverlässigkeit des Servers reduzieren. Sie sollten in Betracht ziehen, erweiterte gespeicherte Prozeduren in einer anderen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als der Instanz zu speichern, die die Daten enthält, auf die verwiesen wird. Erwägen Sie auch die Verwendung von verteilten Abfragen für den Zugriff auf die Datenbank.  
   
-> **WICHTIG!** Systemadministratoren sollten, bevor sie dem Server erweiterte gespeicherte Prozeduren hinzufügen und Benutzern EXECUTE-Berechtigungen für die Prozedur erteilen, jede Prozedur gründlich überprüfen, um sicherzustellen, dass sie keinen schädlichen oder bösartigen Code enthält.  
+  > [!IMPORTANT]
+  > Systemadministratoren sollten, bevor sie dem Server erweiterte gespeicherte Prozeduren hinzufügen und Benutzern EXECUTE-Berechtigungen für die Prozedur erteilen, jede Prozedur gründlich überprüfen, um sicherzustellen, dass sie keinen schädlichen oder bösartigen Code enthält.  
   
  Weitere Informationen finden Sie unter [GRANT (Objektberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md), [DENY (Objektberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md) und [REVOKE (Objektberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md).  
   
@@ -280,9 +281,10 @@ ms.lasthandoff: 05/03/2018
 ### <a name="grant-revoke-and-deny-permissions-on-system-objects"></a>GRANT-, REVOKE- und DENY-Berechtigungen für Systemobjekte  
  Berechtigungen für Systemobjekte wie z. B. gespeicherte Prozeduren, erweiterte gespeicherte Prozeduren, Funktionen und Sichten werden in der **master** -Datenbank gespeichert und müssen auf der Zielserverinstanz konfiguriert werden.  
   
- Zum Erstellen eines Skripts für einige oder für alle Objekte in der ursprünglichen Kopie der Datenbank können Sie den Assistenten zum Generieren von SQL Server-Skripts verwenden und im Dialogfeld **Skriptoptionen auswählen** die Option **Skripterstellung für Berechtigungen auf Objektebene** auf **True** festlegen.  
+ Zum Erstellen eines Skripts für einige oder für alle Objekte in der ursprünglichen Kopie der Datenbank können Sie den Assistenten zum Generieren von SQL Server-Skripts verwenden und im Dialogfeld **Skriptoptionen auswählen** die Option **Skripterstellung für Berechtigungen auf Objektebene** auf **True**festlegen.  
   
-> **WICHTIG!** Wenn Sie Skripts für Anmeldungen erstellen, werden keine Skripts für die Kennwörter erstellt. Bei Anmeldungen, die die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden, müssen Sie das Skript auf dem Ziel ändern.  
+   > [!IMPORTANT]
+   > Wenn Sie Skripts für Anmeldungen erstellen, werden keine Skripts für die Kennwörter erstellt. Bei Anmeldungen, die die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden, müssen Sie das Skript auf dem Ziel ändern.  
   
  Systemobjekte werden in der [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) -Katalogsicht angezeigt. Die Berechtigungen für Systemobjekte werden in der [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)-Katalogsicht in der **master**-Datenbank angezeigt. Informationen zum Abfragen dieser Katalogsichten und zum Erteilen von Berechtigungen für Systemobjekte finden Sie unter [GRANT (Berechtigungen für Systemobjekte) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md). Weitere Informationen finden Sie unter [REVOKE (Systemobjektberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md) und [DENY (Systemobjektberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md).  
   
@@ -314,7 +316,10 @@ ms.lasthandoff: 05/03/2018
   
  Weitere Informationen zu Zertifikaten und asymmetrischen Schlüsseln finden Sie unter [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md).  
   
-  
+## <a name="trustworthy-property"></a>Trustworthy-Eigenschaft
+Die TRUSTWORTHY-Datenbankeigenschaft gibt an, ob diese Instanz von SQL Server die Datenbank und ihre Inhalte als vertrauenswürdig einstuft. Wenn eine Datenbank angefügt wird, ist diese Option standardmäßig und aus Sicherheitsgründen auf OFF festgelegt, selbst wenn sie im ursprünglichen Server auf ON festgelegt ist. Weitere Informationen zu dieser Eigenschaft finden Sie unter [TRUSTWORTHY-Datenbankeigenschaft](../security/trustworthy-database-property.md), und Informationen zum Ändern dieser Option auf ON finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+
+
 ##  <a name="replication_settings"></a> Replication Settings  
  Wenn Sie eine Sicherungskopie einer replizierten Datenbank auf einem anderen Server bzw. in einer anderen Datenbank wiederherstellen, können Replikationseinstellungen nicht beibehalten werden. In diesem Fall müssen nach der Wiederherstellung der Sicherungskopien sämtliche Veröffentlichungen und Abonnements neu erstellt werden. Um diesen Vorgang zu vereinfachen, können Sie für die aktuellen Replikationseinstellungen und auch für das Aktivieren und Deaktivieren der Replikation Skripts erstellen. Damit Sie diese Skripts beim Neuerstellen der Replikationseinstellungen verwenden können, kopieren Sie diese Skripts, und ändern Sie die Verweise auf die Servernamen passend für die Zielserverinstanz.  
   
@@ -322,7 +327,7 @@ ms.lasthandoff: 05/03/2018
   
   
 ##  <a name="sb_applications"></a> Service Broker Applications  
- Viele Aspekte einer [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Anwendung werden zusammen mit der Datenbank verschoben. Einige Aspekte der Anwendung müssen jedoch erneut erstellt oder am neuen Speicherort neu konfiguriert werden.  
+ Viele Aspekte einer [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Anwendung werden zusammen mit der Datenbank verschoben. Einige Aspekte der Anwendung müssen jedoch erneut erstellt oder am neuen Speicherort neu konfiguriert werden.  Standardmäßig und aus Sicherheitsgründen sind die Optionen für *is_broker_enabled* und *is_honoor_broker_priority_on* auf OFF festgelegt, wenn eine Datenbank aus einem anderen Server angefügt wird. Informationen darüber, wie diese Optionen auf ON festgelegt werden, finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
   
 ##  <a name="startup_procedures"></a> Startup Procedures  

@@ -24,16 +24,16 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 4d04041eee085a4fc29d899ad1245ee5ae43743c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2bc5eff629bc16e655094c08c71b3cef195420bc
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="cursorstatus-transact-sql"></a>CURSOR_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Eine Skalarfunktion, mit welcher der Aufrufer einer gespeicherten Prozedur festlegen kann, ob die Prozedur einen Cursor und ein Resultset für einen angegebenen Parameter zurückgegeben hat.
+Für einen bestimmten Parameter gibt `CURSOR_STATUS` an, ob eine Cursordeklaration einen Cursor und ein Resultset zurückgegeben hat oder nicht.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,16 +50,16 @@ CURSOR_STATUS
   
 ## <a name="arguments"></a>Argumente  
 'local'  
-Gibt eine Konstante an, die anzeigt, dass die Quelle des Cursors ein lokaler Cursorname ist.
+Gibt eine Konstante an, die kennzeichnet, dass die Cursorquelle ein lokaler Cursorname ist.
   
 '*cursor_name*'  
-Der Name des Cursors. Ein Cursorname muss den Regeln für Bezeichner entsprechen.
+Der Name des Cursors. Ein Cursorname muss den [Regeln für Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen.
   
 'global'  
-Gibt eine Konstante an, die anzeigt, dass die Quelle des Cursors ein globaler Cursorname ist.
+Gibt eine Konstante an, die kennzeichnet, dass die Quelle des Cursors ein globaler Cursorname ist.
   
 'variable'  
-Gibt eine Konstante an, die anzeigt, dass die Quelle des Cursors eine lokale Variable ist.
+Gibt eine Konstante an, die kennzeichnet, dass die Quelle des Cursors eine lokale Variable ist.
   
 '*cursor_variable*'  
 Der Name der Cursorvariablen. Eine Cursorvariable muss mithilfe des **cursor**-Datentyps definiert werden.
@@ -72,13 +72,13 @@ Der Name der Cursorvariablen. Eine Cursorvariable muss mithilfe des **cursor**-D
 |1|Das Resultset des Cursors hat mindestens eine Zeile.<br /><br /> Für INSENSITIVE- und KEYSET-Cursor hat das Resultset mindestens eine Zeile.<br /><br /> Für dynamische Cursor kann das Resultset keine, eine oder mehrere Zeilen haben.|Der für diese Variable zugeordnete Cursor ist geöffnet.<br /><br /> Für INSENSITIVE- und KEYSET-Cursor hat das Resultset mindestens eine Zeile.<br /><br /> Für dynamische Cursor kann das Resultset keine, eine oder mehrere Zeilen haben.|  
 |0|Das Resultset des Cursors ist leer.*|Der dieser Variable zugeordnete Cursor ist geöffnet, das Resultset ist jedoch definitiv leer.*|  
 |-1|Der Cursor ist geschlossen.|Der dieser Variable zugeordnete Cursor ist geschlossen.|  
-|-2|Nicht verfügbar.|Mögliche Werte sind:<br /><br /> Für diese OUTPUT-Variable wurde kein Cursor durch die zuvor aufgerufene Prozedur zugewiesen.<br /><br /> Die zuvor aufgerufene Prozedur hat dieser OUTPUT-Variablen einen Cursor zugewiesen; bei Abschluss der Prozedur befand sich der Cursor jedoch in geschlossenem Status. Deshalb wird die Zuordnung aufgehoben, und der Cursor wird nicht zur aufrufenden Prozedur zurückgegeben.<br /><br /> Einer deklarierten Cursorvariablen wird kein Cursor zugewiesen.|  
-|-3|Ein Cursor mit dem angegebenen Namen ist nicht vorhanden.|Die Cursorvariable mit dem angegebenen Namen ist nicht vorhanden, oder für sie wurde noch kein Cursor zugeordnet.|  
+|-2|Nicht verfügbar.|Eine der folgenden Möglichkeiten trifft zu:<br /><br /> Die zuvor aufgerufene Prozedur hat dieser OUTPUT-Variablen keinen Cursor zugewiesen.<br /><br /> Die zuvor zugewiesene Prozedur hat dieser OUTPUT-Variablen einen Cursor zugewiesen, aber der Cursor war bei Abschluss der Prozedur geschlossen. Deshalb wird die Zuordnung des Cursors aufgehoben, und der Cursor wird nicht an die aufrufende Prozedur zurückgegeben.<br /><br /> Der deklarierten Cursorvariablen wird kein Cursor zugewiesen.|  
+|-3|Ein Cursor mit dem angegebenen Namen ist nicht vorhanden.|Eine Cursorvariable mit dem angegebenen Namen ist nicht vorhanden, oder ihr wurde, wenn sie vorhanden ist, noch kein Cursor zugeordnet.|  
   
 * Dynamische Cursor geben dieses Ergebnis nie zurück.
   
 ## <a name="examples"></a>Beispiele  
-Das folgende Beispiel verwendet die `CURSOR_STATUS`-Funktion, um den Status eines Cursors darzustellen, nachdem er geöffnet und geschlossen wurde.
+In diesem Beispiel wird die `CURSOR_STATUS`-Funktion verwendet, um den Status eines Cursors mitzuteilen: nach seiner Deklaration, nachdem er geöffnet und nachdem er geschlossen wurde.
   
 ```sql
 CREATE TABLE #TMP  

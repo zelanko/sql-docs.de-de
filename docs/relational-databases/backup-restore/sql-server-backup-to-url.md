@@ -14,11 +14,11 @@ caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e63134bbf85d2894140d8640fb5ade10daa4340f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9d688171b49697b785f571f7e08fee0bfe339858
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server-Sicherung über URLs
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ms.lasthandoff: 05/03/2018
   
 -   Das Sichern auf Premium-Speicher wird nicht unterstützt.  
   
--   Die maximal unterstützte Größe von Sicherungen bei Verwendung eines Seiten-BLOBs wird durch die maximale Größe eines einzelnen Seiten-BLOBs beschränkt, d. h. 1 TB. Die maximal unterstützte Größe von Sicherungen bei Verwendung eines Block-BLOBs wird nicht durch die maximale Größe eines Block-BLOBs (200 GB) beschränkt, da die Sicherung in Block-BLOBs das Striping und somit erheblich größere Sicherungen unterstützt.  
+-   SQL Server schränkt die maximale Sicherungsgröße, die mit einem Seitenblob unterstützt wird, auf 1 TB ein. Die maximal unterstützte Größe für Sicherungen mit Blockblobs ist auf ca. 200 MB (50.000 Blöcke * 4 MB MAXTRANSFERSIZE) beschränkt. Für Blockblobs wird Striping unterstützt, damit erheblich größere Sicherungen unterstützt werden.  
   
 -   Sie können Sicherungs- oder Wiederherstellungsanweisungen ausgeben, indem Sie TSQL, SMO, PowerShell-Cmdlets, SQL Server Management Studio Backup oder den Wiederherstellungs-Assistenten verwenden.   
   

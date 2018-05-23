@@ -27,16 +27,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5387cd3acba6a6d4dab83213fbb44ef7c9e8c3e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 29765164d6eb5e677c307091cf37aa8623674f00
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="currentuser-transact-sql"></a>CURRENT_USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Gibt den Namen des aktuellen Benutzers zurück. Diese Funktion entspricht USER_NAME().
+Diese Funktion gibt den Namen des aktuellen Benutzers zurück. Diese Funktion ist gleichbedeutend mit `USER_NAME()`.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,14 +50,14 @@ CURRENT_USER
 **sysname**
   
 ## <a name="remarks"></a>Remarks  
-Mit CURRENT_USER wird der Name des aktuellen Sicherheitskontexts zurückgegeben. Wird CURRENT_USER nach dem Kontextwechsel eines Aufrufs von EXECUTE AS ausgeführt, gibt CURRENT_USER den Namen des Kontexts zurück, dessen Identität angenommen wurde. Wenn ein Windows-Prinzipal über die Mitgliedschaft in einer Gruppe auf die Datenbank zugegriffen hat, wird der Name des Windows-Prinzipals anstelle des Namens der Gruppe zurückgegeben.
+`CURRENT_USER` gibt den Namen des aktuellen Sicherheitskontexts zurück. Wird `CURRENT_USER` ausgeführt, nachdem der Kontext über einen Aufruf von `EXECUTE AS` gewechselt wurde, gibt `CURRENT_USER` den Namen des gewechselten Identitätskontexts zurück. Falls ein Windows-Prinzipal über eine Mitgliedschaft in einer Gruppe auf die Datenbank zugegriffen hat, gibt `CURRENT_USER` den Namen des Windows-Prinzipals anstelle des Gruppennamens zurück.
   
-Weitere Informationen zum Zurückgeben des Anmeldenamens an den aktuellen Benutzer finden Sie unter [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md) und [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md).
+Weitere Informationen dazu, wie der Anmeldename des aktuellen Benutzers zurückgegeben werden kann, finden Sie unter [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md) und [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md).
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-using-currentuser-to-return-the-current-user-name"></a>A. Verwenden von CURRENT_USER zur Rückgabe des aktuellen Benutzernamens  
-Im folgenden Beispiel wird der Name des aktuellen Benutzers zurückgegeben.
+In diesem Beispiel wird der Name des aktuellen Benutzers zurückgegeben.
   
 ```sql
 SELECT CURRENT_USER;  
@@ -65,7 +65,7 @@ GO
 ```  
   
 ### <a name="b-using-currentuser-as-a-default-constraint"></a>B. Verwenden von CURRENT_USER als DEFAULT-Einschränkung  
-Im folgenden Beispiel wird eine Tabelle erstellt, die `CURRENT_USER` als `DEFAULT`-Einschränkung für die `order_person`-Spalte in einer Zeile mit Verkaufszahlen verwendet.
+In diesem Beispiel wird eine Tabelle erstellt, die `CURRENT_USER` als `DEFAULT`-Einschränkung für die `order_person`-Spalte in einer Zeile mit Verkaufszahlen verwendet.
   
 ```sql
 USE AdventureWorks2012;  
@@ -86,7 +86,7 @@ order_person char(30) NOT NULL DEFAULT CURRENT_USER
 GO  
 ```  
   
-Der folgende Code fügt einen Datensatz in die Tabelle ein. Der Benutzer, der diese Anweisungen ausführt, heißt `Wanida`.
+In diesem Beispiel wird ein Datensatz in die Tabelle eingefügt. Die Benutzerin mit dem Namen `Wanida` führt diese Anweisungen aus.
   
 ```sql
 INSERT orders22 (cust_id, order_amt)  
@@ -96,7 +96,7 @@ SET NOCOUNT OFF;
 GO  
 ```  
   
-In der folgenden Abfrage werden alle Informationen aus der `orders22`-Tabelle ausgewählt.
+In dieser Abfrage werden alle Informationen in der `orders22`-Tabelle ausgewählt.
   
 ```sql
 SELECT * FROM orders22;  
@@ -114,12 +114,12 @@ order_id    cust_id     order_date           order_amt    order_person
 ```
   
 ### <a name="c-using-currentuser-from-an-impersonated-context"></a>C. Verwenden von CURRENT_USER aus einem Kontext, dessen Identität angenommen wurde  
-Im folgenden Beispiel führt Benutzer `Wanida` den folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code aus.
+In diesem Beispiel führt die Benutzerin `Wanida` den folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code aus.
   
 ```sql
 SELECT CURRENT_USER;  
 GO  
-EXECUTE AS USER = 'Arnalfo';  
+EXECUTE AS USER = 'Wanida';  
 GO  
 SELECT CURRENT_USER;  
 GO  

@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio – Änderungsprotokoll (SSMS) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/17/2018
+ms.date: 05/09/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -15,22 +15,91 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8b53c720b6f08583dc94fd45c270ee07bff399a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5190c4bbd8e0ade4f32831f5d696cc6f26296e5
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio – Änderungsprotokoll (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Dieser Artikel enthält Details zu Updates, Verbesserungen und Fehlerbehebungen für die aktuellen und früheren Versionen von SSMS. Laden Sie die [previous SSMS versions below (Vorgängerversionen von SSMS weiter unten)](#previous-ssms-releases) herunter.
 
 
-## <a name="ssms-176download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.6](download-sql-server-management-studio-ssms.md)
+## <a name="ssms-177download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.7](download-sql-server-management-studio-ssms.md)
 
-Releasenummer: 17.6<br>
+Releasenummer: 17.7<br>
+Buildnummer: 14.0.17254.0<br>
+Veröffentlichungsdatum: 09. Mai 2018
+
+### <a name="whats-new"></a>Neues
+
+**SSMS Allgemein**
+
+Replikationsmonitor:   
+- Der Replikationsmonitor unterstützt jetzt das Registrieren eines Listeners für Szenarien, in denen die Verlegerdatenbank und/oder die Verteilerdatenbank zur Verfügbarkeitsgruppe gehören. Sie können nun Replikationsumgebungen überwachen, in denen die Verlegerdatenbank und/oder die Verteilerdatenbank zu Always On gehören. 
+ 
+Azure SQL Data Warehouse: 
+- Unterstützung für „Speicherort abgelehnter Zeilen“ wurde für externe Tabellen in SQL Data Warehouse hinzugefügt. 
+
+**Integration Services**
+
+- Es wurde ein Planungsfeature für SSIS-Pakete hinzugefügt, die in Azure SQL-Datenbank bereitgestellt werden. Im Gegensatz zu lokaler SQL Server-Infrastruktur und zur verwalteten Azure SQL-Datenbank-Instanz (Vorschau), die SQL Server-Agent als erstklassigen Auftragsplaner umfassen, hat SQL-Datenbank keinen integrierten Planer. Dieses neue SSMS-Feature bietet eine vertraute Benutzeroberfläche, die SQL Server-Agent sehr ähnlich ist, zum Planen von Paketen, die in SQL-Datenbank bereitgestellt werden. Wenn Sie die SSIS-Katalogdatenbank (SSISDB) mit SQL-Datenbank hosten, können Sie dieses SSMS-Feature verwenden, um die Data Factory-Pipelines, -Aktivitäten und -Trigger zu generieren, die zum Planen von SSIS-Paketen erforderlich sind. Sie können diese Objekte dann in Data Factory bearbeiten und erweitern. Weitere Informationen finden Sie unter [Planen der Ausführung eines SSIS-Pakets in Azure mit SQL Server Management Studio (SSMS)](../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md). Weitere Informationen zu Azure Data Factory-Pipelines, -Aktivitäten und -Triggern finden Sie unter [Pipelines und Aktivitäten in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities) und [Pipelineausführung und Trigger in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers).
+- Unterstützung für SSIS-Paketplanung in SQL-Agent in verwalteter SQL-Instanz. Es ist jetzt möglich, SQL-Agent-Aufträge zu erstellen, um SSIS-Pakete für die verwaltete Instanz auszuführen. 
+
+### <a name="bug-fixes"></a>Behebung von Programmfehlern
+
+**SSMS Allgemein** 
+
+Wartungsplan:   
+- Beheben eines Problems, bei dem bei dem Versuch, den Zeitplan für einen vorhandenen Wartungsplan zu ändern, eine Ausnahme ausgelöst wurde. Ausführlichere Informationen finden Sie unter [SSMS 17.6 crashes when clicking on a schedule in a maintenance plan](https://feedback.azure.com/forums/908035-sql-server/suggestions/33712924).
+
+Always On: 
+- Beheben eines Problems, bei dem das Always On-Dashboard für Latenzzeit nicht mit SQL Server 2012 funktioniert hat.
+ 
+Skripterstellung: 
+- Beheben eines Problems, bei dem ein Nicht-Administratorbenutzer gespeicherte Prozeduren für Azure SQL Data Warehouse nicht als Skripts erstellen konnte.
+- Beheben eines Problems, bei dem bei einer Skripterstellung für Azure SQL-Datenbank die *SCOPED CONFIGURATION*-Eigenschaften nicht einbezogen wurden.
+ 
+Telemetrie: 
+- Beheben eines Problems, bei dem SSMS abstürzt, wenn das Herstellen einer Verbindung mit einem Server versucht wird, nachdem das Abonnement für Senden von Telemetriedaten gekündigt wurde.
+ 
+Azure SQL-Datenbank: 
+- Beheben eines Problems, bei dem der Benutzer den Kompatibilitätsgrad weder festlegen noch oder ändern konnte (die Dropdownliste war leer). Hinweis: Um den Kompatibilitätsgrad auf 150 festzulegen, muss der Benutzer weiterhin die Schaltfläche *Skript* verwenden und das Skript manuell bearbeiten. 
+ 
+SMO: 
+- Verfügbar gemachte Einstellung für Fehlerprotokollgröße in SMO. Ausführliche Informationen finden Sie unter [Set the Maximum Size of the SQL Server Error Logs](https://feedback.azure.com/forums/908035-sql-server/suggestions/33624115).  
+- Korrigieren von Zeilenvorschub bei der Skripterstellung in SMO unter Linux.
+- Verschiedene Leistungsverbesserungen für das Abrufen von selten verwendeten Eigenschaften.  
+
+IntelliSense: 
+- Leistungsverbesserung: Verringerte Menge von IntelliSense-Abfragen für Spaltendaten. Dies ist besonders nützlich, wenn mit Tabellen gearbeitet wird, die eine sehr große Anzahl von Spalten haben. 
+
+SSMS-Benutzereinstellungen:
+- Beheben eines Problems, bei dem die Größenänderung der Seite für Optionen nicht ordnungsgemäß funktionierte.
+
+Verschiedenes:  
+- Verbesserung der Art und Weise, wie Text auf Seite für *Statistikdetails* angezeigt wird. 
+
+**Integration Services**
+
+- Bessere Unterstützung für die verwaltete Azure SQL-Datenbank-Instanz.
+- Beheben eines Problems, bei dem der Benutzer keinen Katalog für SQL Server 2014 oder früher erstellen konnte.
+- Beheben von zwei Probleme mit Berichten:
+   - Die Computernamen für Azure-Server wurden entfernt.
+   - Die Verarbeitung von lokalisierten Objektnamen wurde verbessert.
+
+
+### <a name="known-issues"></a>Bekannte Probleme
+
+In einigen Dialogfeldern wird ein Fehler wegen ungültiger Edition angezeigt, wenn mit einer der neuen Azure SQL-Datenbank-Editionen *Allgemein* oder *Unternehmenskritisch* gearbeitet wird.
+
+## <a name="downloadssdtmediadownloadpng-ssms-176httpsgomicrosoftcomfwlinklinkid870039"></a>![Herunterladen](../ssdt/media/download.png) [SSMS 17.6](https://go.microsoft.com/fwlink/?linkid=870039)
+
 Buildnummer: 14.0.17230.0<br>
 Releasedatum: 20. März 2018
+
+[Chinesisch (Volksrepublik China)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x804) | [Chinesisch (Taiwan)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40a)
 
 ### <a name="whats-new"></a>Neues
 
@@ -832,7 +901,7 @@ Allgemein verfügbar | Versionsnummer: 13.0.15700.28
 
 * Die monatlichen Releases von SSMS werden nun nummeriert.
 
-* [Neue Authentifizierungsoption**„Universelle Active Directory-Authentifizierung“**](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/). Dieser tokenbasierte Authentifizierungsmechanismus wird durch Azure Active Directory gestützt und bietet Unterstützung für mehrstufige, kennwortbasierte und integrierte Authentifizierungsmechanismen.
+* [Neue Authentifizierungsoption **„Universelle Active Directory-Authentifizierung“**](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/). Dieser tokenbasierte Authentifizierungsmechanismus wird durch Azure Active Directory gestützt und bietet Unterstützung für mehrstufige, kennwortbasierte und integrierte Authentifizierungsmechanismen.
 
 * Neue Vorlagen für erweiterte Ereignisse mit derselben Funktionalität wie SQL Server Profiler-Vorlagen [(Microsoft Connect-Element #2543925)](../tools/sql-server-profiler/sql-server-profiler-templates.md).
 

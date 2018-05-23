@@ -2,7 +2,7 @@
 title: Problembehandlung in Scale Out mit SQL Server Integration Services (SSIS) | Microsoft-Dokumentation
 ms.description: This article describes how to troubleshoot common issues with SSIS Scale Out
 ms.custom: ''
-ms.date: 12/19/2017
+ms.date: 05/09/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: scale-out
@@ -16,11 +16,11 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 5baceaa51a0e4f4b1059bce5e19a0fd79fa3a71d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d1fa967fa5e755a8072a6837df44c327b39087c
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="troubleshoot-scale-out"></a>Problembehandlung in Scale Out
 
@@ -141,7 +141,15 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
     Wertdaten: **0 (FALSE)**
 
-4.  Wenn es nicht möglich ist, alle nicht selbst signierten Zertifikate in Schritt 2 zu bereinigen, legen Sie den Wert des Registrierungsschlüssels in Schritt 3 auf „2“ fest.
+4.  Ist es nicht möglich, alle nicht selbstsignierten Zertifikate zu bereinigen, wie dies in Schritt 2 beschrieben ist, legen Sie den Wert des folgenden Registrierungsschlüssels auf „2“ fest.
+
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`
+
+    Wertname: **ClientAuthTrustMode** 
+
+    Werttyp: **REG_DWORD** 
+
+    Wertdaten: **2**
 
 ## <a name="http-request-error"></a>Fehler bei der HTTP-Anforderung
 

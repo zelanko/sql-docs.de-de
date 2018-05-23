@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/03/2018
+ms.date: 05/142018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: t-sql|statements
@@ -26,11 +26,11 @@ caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9d9f156deb3fa8b59de0703da2b7f1f309862c16
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b164097dd08b5b428797319a7152974ac626b84b
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,6 +45,8 @@ ms.lasthandoff: 05/03/2018
 - Aktivieren oder Deaktivieren des Identitätscache auf Datenbankebene.
 - Aktivieren oder Deaktivieren eines Stubs des kompilierten Plans, der bei der erstmaligen Kompilierung eines Batches im Cache gespeichert werden soll.  
 - Aktivieren oder Deaktivieren von Sammlungen von Ausführungsstatistiken für nativ kompilierte T-SQL-Module.
+- Aktivieren oder Deaktivieren von online über Standardoptionen für DDL-Anweisungen, die die ONLINE =-Syntax unterstützen
+- Aktivieren oder Deaktivieren von fortsetzbar (resumable) über Standardoptionen für DDL-Anweisungen, die die RESUMABLE =-Syntax unterstützen 
   
  ![Linksymbol](../../database-engine/configure-windows/media/topic-link.gif "Linksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -68,7 +70,9 @@ ALTER DATABASE SCOPED CONFIGURATION
     | IDENTITY_CACHE = { ON | OFF }
     | OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
     | XTP_PROCEDURE_EXECUTION_STATISTICS = { ON | OFF } 
-    | XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }     
+    | XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }    
+    | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED } 
+    | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }  
 }  
 ```  
   
@@ -133,7 +137,7 @@ Löscht den Cache der Datenbank für die Prozedur bzw. den Prozedurplan. Dieser 
 
 IDENTITY_CACHE **=** { **ON** | OFF }  
 
-**Gilt für** : [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**Gilt für **: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 Aktiviert oder deaktiviert den Identitätscache auf Datenbankebene. Der Standardwert ist **ON**. Identitätszwischenspeichern wird verwendet, um die Leistung von INSERT in Tabellen mit Identitätsspalten zu verbessern. Deaktiviert die Option IDENTITY_CACHE, um Lücken in einer Identitätsspalte zu vermeiden, wenn der Server unerwartet neu gestartet oder ein Failover zu einem sekundären Server ausgeführt wird. Diese Option ist mit dem vorhandenen [Ablaufverfolgungsflag 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) vergleichbar. Der einzige Unterschied besteht darin, dass sie auf Datenbankebene und nicht nur auf Serverebene festgelegt werden kann.   
 
@@ -163,6 +167,40 @@ Aktiviert oder deaktiviert die Sammlung von Ausführungsstatistiken auf Anweisun
 Ausführungsstatistiken auf Anweisungsebene für nativ kompilierte T-SQL-Module werden gesammelt, wenn diese Option auf „ON“ festgelegt ist, oder die Sammlung von Statistiken durch [sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) aktiviert ist.
 
 Weitere Informationen über die Leistungsüberwachung von nativ kompilierten T-SQL-Modulen finden Sie unter [Überwachen der Leistung von systemintern kompilierten gespeicherten Prozeduren](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md).
+
+ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+
+**Gilt für**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (das Feature befindet sich in der öffentlichen Vorschau)
+
+Ermöglicht es Ihnen, Optionen auszuwählen, die das Modul dazu veranlassen, unterstützte Vorgänge automatisch in den Onlinezustand zu erhöhen. Der Standardwert ist OFF, was bedeutet, dass Vorgänge nicht in den Onlinezustand erhöht werden, es sei denn, dies ist in der Anweisung angegeben. [sys. database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) enthält den aktuellen Wert von ELEVATE_ONLINE. Diese Optionen gelten nur für Vorgänge, die grundsätzlich für den Onlinezustand unterstützt werden.  
+
+FAIL_UNSUPPORTED
+
+Dieser Wert erhöht alle unterstützten DDL-Vorgänge in ONLINE. Vorgänge, die keine Onlineausführung unterstützen, schlagen fehl und lösen eine Warnung aus.
+
+WHEN_SUPPORTED  
+
+Dieser Wert erhöht Vorgänge, die ONLINE unterstützen. Vorgänge, die den Onlinezustand nicht unterstützen, werden offline ausgeführt.
+
+> [!NOTE]
+> Sie können die Standardeinstellung überschreiben, indem Sie eine Anweisung senden, in der die ONLINE-Option angegeben ist. 
+ 
+ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+
+**Gilt für**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (das Feature befindet sich in der öffentlichen Vorschau)
+
+Ermöglicht es Ihnen, Optionen auszuwählen, die das Modul dazu veranlassen, unterstützte Vorgänge automatisch in fortsetzbar zu erhöhen. Der Standardwert ist OFF, was bedeutet, dass Vorgänge nicht in fortsetzbar erhöht werden, es sei denn, dies ist in der Anweisung angegeben. [sys. database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) enthält den aktuellen Wert von ELEVATE_RESUMABLE. Diese Optionen gelten nur für Vorgänge, die grundsätzlich für fortsetzbar unterstützt werden. 
+
+FAIL_UNSUPPORTED
+
+Dieser Wert erhöht alle unterstützten DDL-Vorgänge in RESUMABLE. Vorgänge, die keine fortsetzbare Ausführung unterstützen, schlagen fehl und lösen eine Warnung aus.
+
+WHEN_SUPPORTED  
+
+Dieser Wert erhöht Vorgänge, die RESUMABLE unterstützen. Vorgänge, die fortsetzbar nicht unterstützen, werden als nicht fortsetzbar ausgeführt.  
+
+> [!NOTE]
+> Sie können die Standardeinstellung überschreiben, indem Sie eine Anweisung senden, in der die RESUMABLE-Option angegeben ist. 
 
 ##  <a name="Permissions"></a> Berechtigungen  
  Macht ALTER ANY DATABASE SCOPE CONFIGURATION   
@@ -205,6 +243,15 @@ für die Datenbank erforderlich. Diese Berechtigung kann von einem Benutzer mit 
 **DacFx**  
   
  Da ALTER DATABASE SCOPED CONFIGURATION in Azure SQL-Datenbank und SQL Server ab SQL Server 2016 ein neues Feature ist, das Auswirkungen auf das Datenbankschema hat, können Exporte des Schemas (mit oder ohne Daten) nicht in eine ältere Version von SQL Server wie z.B. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] oder [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] importiert werden. Ein Export in ein [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) oder ein [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) aus einer Datenbank von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] oder [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], in der dieses neue Feature verwendet wird, könnte nicht in einen Server der Vorgängerversion importiert werden.  
+
+**ELEVATE_ONLINE** 
+
+Diese Option gilt nur für DDL-Anweisungen, die die WITH(ONLINE =-Syntax unterstützen. XML-Indizes sind nicht betroffen. 
+
+**ELEVATE_RESUMABLE**
+
+Diese Option gilt nur für DDL-Anweisungen, die die WITH(ONLINE =-Syntax unterstützen. XML-Indizes sind nicht betroffen. 
+
   
 ## <a name="metadata"></a>Metadaten  
 
@@ -307,6 +354,63 @@ In diesem Beispiel wird ein Stub des kompilierten Plans aktiviert, der bei der e
 ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ```
 
+### <a name="i--set-elevateonline"></a>I.  Festlegen von ELEVATE_ONLINE 
+
+**Gilt für**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (das Feature befindet sich in der öffentlichen Vorschau)
+ 
+In diesem Beispiel wird ELEVATE_ONLINE auf FAIL_UNSUPPORTED festgelegt.  tsqlCopy 
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE=FAIL_UNSUPPORTED ;
+```  
+
+### <a name="j-set-elevateresumable"></a>J. Festlegen von ELEVATE_RESUMABLE 
+
+**Gilt für**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (das Feature befindet sich in der öffentlichen Vorschau)
+
+In diesem Beispiel wird ELEVEATE_RESUMABLE auf WHEN_SUPPORTED festgelegt.  tsqlCopy 
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE=WHEN_SUPPORTED ;  
+``` 
+
+### <a name="k-query-state-of-alter-database-scoped-configuration-based-on-different-statements"></a>K. Abfragestatus von ALTER DATABASE SCOPED CONFIGURATION entsprechend unterschiedlicher Anweisungen
+
+**Gilt für**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (das Feature befindet sich in der öffentlichen Vorschau)
+
+```sql 
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = OFF;
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = OFF;
+SELECT * FROM sys.database_scoped_configurations WHERE NAME LIKE '%ELEVATE%'
+GO
+
+|configuration_id|name|value|value_for_secondary|is_value_default|
+|----------------|:---|:----|:------------------|:---------------|
+|11|ELEVATE_ONLINE|OFF|NULL|1|
+|12|ELEVATE_RESUMABLE|OFF|NULL|1|
+
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = WHEN_SUPPORTED;
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED;
+SELECT * FROM sys.database_scoped_configurations WHERE NAME LIKE '%ELEVATE%'
+GO
+
+|configuration_id|name|value|value_for_secondary|is_value_default|
+|----------------|:---|:----|:------------------|:---------------|
+|11|ELEVATE_ONLINE|WHEN_SUPPORTED|NULL|0|
+|12|ELEVATE_RESUMABLE|WHEN_SUPPORTED|NULL|0|
+
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = FAIL_UNSUPPORTED;
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = FAIL_UNSUPPORTED;
+SELECT * FROM sys.database_scoped_configurations WHERE NAME LIKE '%ELEVATE%'
+GO
+
+|configuration_id|name|value|value_for_secondary|is_value_default|
+|----------------|:---|:----|:------------------|:---------------|
+|11|ELEVATE_ONLINE|FAIL_UNSUPPORTED|NULL|0|
+|12|ELEVATE_RESUMABLE|FAIL_UNSUPPORTED|NULL|0|
+
+```
+
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 ### <a name="maxdop-resources"></a>Ressourcen von MAXDOP 
@@ -325,6 +429,14 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 * [Ablaufverfolgungsflags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 * [SQL Server query optimizer hotfix trace flag 4199 servicing model](https://support.microsoft.com/en-us/kb/974006) (Wartungsmodell für SQL Server-Hotfix für Abfrageoptimierer – Ablaufverfolgungsflag 4199)
 
+### <a name="elevateonline-resources"></a>ELEVATE_ONLINE-Ressourcen 
+
+- [Richtlinien für Onlineindexvorgänge](../../relational-databases/indexes/guidelines-for-online-index-operations.md) 
+
+### <a name="elevateresumable-resources"></a>ELEVATE_RESUMABLE-Ressourcen 
+
+- [Richtlinien für Onlineindexvorgänge](../../relational-databases/indexes/guidelines-for-online-index-operations.md) 
+ 
 ## <a name="more-information"></a>Weitere Informationen  
  [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
  [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   

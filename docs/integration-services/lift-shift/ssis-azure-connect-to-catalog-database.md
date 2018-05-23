@@ -1,5 +1,5 @@
 ---
-title: Herstellen einer Verbindung mit der SSISDB-Katalogdatenbank in Azure | Microsoft-Dokumentation
+title: Herstellen einer Verbindung mit der SSIS-Katalogdatenbank (SSISDB) in Azure | Microsoft-Dokumentation
 ms.date: 09/25/2017
 ms.topic: conceptual
 ms.prod: sql
@@ -12,13 +12,13 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b34e28dca32da44b60f65f92934373d1f7a42f12
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ef69dc52b041541b89052038cadad94b9fa2f45c
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
-# <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>Herstellen einer Verbindung mit der SSISDB-Katalogdatenbank in Azure
+# <a name="connect-to-the-ssis-catalog-database-ssisdb-in-azure"></a>Herstellen einer Verbindung mit der SSIS-Katalogdatenbank (SSISDB) in Azure
 
 Rufen Sie die Verbindungsinformationen ab, die benötigt werden, um eine Verbindung mit der auf einem Azure SQL-Datenbankserver gehosteten SSISDB-Katalogdatenbank herzustellen. Sie benötigen Folgendes, um eine Verbindung herzustellen:
 - Vollqualifizierten Servernamen
@@ -45,11 +45,11 @@ Prüfen Sie, ob Sie über die Version 17.2 oder höher von SQL Server Management
 
 2. **Stellen Sie eine Verbindung mit dem Server her**. Geben Sie im Dialogfeld **Verbindung mit dem Server herstellen** die folgenden Informationen ein:
 
-   | Einstellung       | Vorgeschlagener Wert | Description | 
+   | Einstellung       | Vorgeschlagener Wert | und Beschreibung | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Servertyp** | Datenbank-Engine | Dieser Wert ist erforderlich. |
    | **Servername** | Der vollqualifizierte Servername | Der Name muss das folgende Format aufweisen: **mysqldbserver.database.windows.net**. |
-   | **Authentifizierung** | SQL Server-Authentifizierung | In diesem Schnellstart wird die SQL-Authentifizierung verwendet. |
+   | **Authentifizierung** | SQL Server-Authentifizierung | |
    | **Anmeldename** | Das Konto des Serveradministrators | Dabei handelt es sich um das Konto, das Sie beim Erstellen des Servers angegeben haben. |
    | **Kennwort** | Das Kennwort für das Konto des Serveradministrators | Dabei handelt es sich um das Kennwort, das Sie beim Erstellen des Servers angegeben haben. |
 

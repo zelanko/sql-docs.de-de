@@ -5,19 +5,18 @@ author: annashres
 ms.author: anshrest
 manager: craigg
 ms.date: 07/12/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: sql
 ms.component: sql-non-specified
 ms.suite: sql
 ms.custom: ''
-ms.technology: database-engine
-ms.assetid: ''
-ms.openlocfilehash: 8941a2e2e542a33f08a1c30f71a7745072a9c495
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.technology: configuration
+ms.openlocfilehash: 6684d58710b8be2cf96e06029792836cab9c69a3
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>Konfigurieren von SQL Server zum Senden von Feedback an Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ Beachten Sie, dass dieser Prozess auf den erforderlichen Mechanismus für die Li
 - Mit der Anwendung „Fehler- und Verwendungsberichterstellung“
 - Mit dem Festlegen von Registrierungsunterschlüsseln auf dem Server
 
-Schauen Sie sich [Kundenfeedback zu SQL Server unter Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-customer-feedback.md) an, um Informationen zu SQL Server unter Linux zu erhalten.
+Schauen Sie sich [Kundenfeedback zu SQL Server unter Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-customer-feedback) an, um Informationen zu SQL Server unter Linux zu erhalten.
 
 > [!NOTE]
 > Sie können das Senden von Informationen an Microsoft nur in bezahlten Versionen von SQL Server deaktivieren.
@@ -107,15 +106,15 @@ Enterprise-Kunden können die Einstellungen für Gruppenrichtlinien konfiguriere
 
     Eingabetyp DWORD: 0 bedeutet deaktivieren; 1 bedeutet aktivieren
 
-Darüber hinaus könne Sie durch Festlegen des folgenden Registrierungsunterschlüssels und der folgenden Einstellungen die Fehler- und Verwendungsberichterstellung auf Ebene von Visual Studio deaktivieren:
+    Außerdem basiert SSMS 17.x auf der Visual Studio 2015-Shell, und die Visual Studio-Installation ermöglicht standardmäßig Kundenfeedback.  
 
--    Unterschlüssel = HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\Telemetry
+    Um Visual Studio so zu konfigurieren, dass Kundenfeedback auf einzelnen Computern deaktiviert ist, ändern Sie den Wert des folgenden Registrierungsunterschlüssels in die Zeichenfolge „0“:  
+    HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn
 
--    Name des Registrierungseintrags = TurnOffSwitch
+    Beispiel: Ändern Sie den Unterschlüssel wie folgt:  
+    HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn="0")
 
--    Eingabetyp DWORD: 0 bedeutet deaktivieren; 1 bedeutet aktivieren
- 
-Die registrierungsbasierte Gruppenrichtlinie dieses Registrierungsschlüssels wird von der Nutzungsdatenerfassung von SQL Server 2017 berücksichtigt.
+    Die registrierungsbasierte Gruppenrichtlinie dieses Registrierungsschlüssels wird von der Nutzungsdatenerfassung von SQL Server 2017 berücksichtigt.
 
 ## <a name="set-registry-subkeys-for-crash-dump-collection"></a>Festlegen des Registrierungsunterschlüssels für die Absturzabbilderfassung
 

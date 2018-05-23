@@ -25,16 +25,16 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 481c4205bec9032b31b4405830827405050abb8b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a608d12c790b9b9808ef0f1d84264f1423ba472b
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="x40x40cursorrows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Gibt die Anzahl der kennzeichnenden Zeilen zurück, die sich aktuell im letzten für die Verbindung geöffneten Cursor befinden. Zur Verbesserung der Leistung kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] große statische und keysetgesteuerte Cursor asynchron auffüllen. @@CURSOR_ROWS kann aufgerufen werden, um zu bestimmen, dass die Anzahl der einen Cursor kennzeichnenden Zeilen zum Zeitpunkt des Aufrufens von @@CURSOR_ROWS abgerufen wurde.
+Diese Funktion gibt die Anzahl der kennzeichnenden Zeilen zurück, die sich aktuell im letzten für die Verbindung geöffneten Cursor befinden. Zur Verbesserung der Leistung kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] große statische und keysetgesteuerte Cursor asynchron auffüllen. `@@CURSOR_ROWS` kann aufgerufen werden, um zu bestimmen, dass die Anzahl der einen Cursor kennzeichnenden Zeilen zum Zeitpunkt des @@CURSOR_ROWS-Aufrufs abgerufen wird.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,18 +49,18 @@ Gibt die Anzahl der kennzeichnenden Zeilen zurück, die sich aktuell im letzten 
   
 ## <a name="return-value"></a>Rückgabewert  
   
-|Rückgabewert|Description|  
+|Rückgabewert|und Beschreibung|  
 |---|---|
 |-*m*|Der Cursor wird asynchron aufgefüllt. Der zurückgegebene Wert (-*m*) entspricht der aktuellen Anzahl der Zeilen im Keyset.|  
-|-1|Der Cursor ist dynamisch. Da dynamische Cursor alle Änderungen widerspiegeln, ändert sich die Anzahl der Zeilen, die den Cursor kennzeichnen, ständig. Es kann nie definitiv mitgeteilt werden, dass alle gekennzeichneten Zeilen abgerufen wurden.|  
+|-1|Der Cursor ist dynamisch. Da dynamische Cursor alle Änderungen widerspiegeln, ändert sich die Anzahl der Zeilen, die den Cursor kennzeichnen, ständig. Für den Cursor werden nicht unbedingt alle kennzeichnenden Zeilen abgerufen.|  
 |0|Es wurden keine Cursor geöffnet, keine Zeilen kennzeichnen den zuletzt geöffneten Cursor, oder der zuletzt geöffnete Cursor wurde geschlossen oder seine Zuordnung aufgehoben.|  
 |*n*|Der Cursor ist vollständig aufgefüllt. Der zurückgegebene Wert (*n*) entspricht der Gesamtanzahl der Zeilen im Cursor.|  
   
 ## <a name="remarks"></a>Remarks  
-Die von @@CURSOR_ROWS zurückgegebene Zahl ist negativ, wenn der letzte Cursor asynchron geöffnet wurde. Keysetgesteuerte oder statische Cursor werden asynchron geöffnet, wenn der Wert für den Cursorschwellenwert sp_configure größer als 0 (null) ist und die Anzahl der Zeilen im Cursorresultset größer als der Cursorschwellenwert ist.
+`@@CURSOR_ROWS` gibt eine negative Zahl zurück, wenn der letzte Cursor asynchron geöffnet wurde. Keysetgesteuerte oder statische Cursor werden asynchron geöffnet, wenn der Wert für den Cursorschwellenwert „sp_configure“ größer als 0 (null) und die Anzahl der Zeilen im Cursorresultset größer als der Cursorschwellenwert ist.
   
 ## <a name="examples"></a>Beispiele  
-Im folgenden Beispiel wird ein Cursor deklariert und `SELECT` zur Anzeige des Werts von `@@CURSOR_ROWS` verwendet. Die Einstellung hat den Wert `0`, bevor der Cursor geöffnet wird, und den Wert `-1`, um anzugeben, dass das Keyset des Cursors asynchron aufgefüllt wird.
+In diesem Beispiel wird zunächst ein Cursor deklariert und dann `SELECT` verwendet, um den Wert von `@@CURSOR_ROWS` anzuzeigen. Die Einstellung hat den Wert `0`, bevor der Cursor geöffnet wird, und hat dann den Wert `-1`, um zu kennzeichnen, dass das Keyset des Cursors asynchron aufgefüllt wird.
   
 ```sql
 USE AdventureWorks2012;  

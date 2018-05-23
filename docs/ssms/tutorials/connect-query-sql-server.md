@@ -12,11 +12,11 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: e663bf07fb724e5b65a47573f26702a6b1ccae14
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 5ccc024b8589efa95af2503a8ea5bdba0c47147b
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Tutorial: Herstellen einer Verbindung mit und Abfragen von einer SQL Server-Instanz über SQL Server Management Studio
 In diesem Tutorial erfahren Sie, wie Sie mit SQL Server Management Studio (SSMS) eine Verbindung mit einer SQL Server-Instanz herstellen und grundlegende T-SQL-Befehle (Transact-SQL) ausführen. In diesem Artikel erhalten Sie Informationen zu folgenden Themen:
@@ -33,17 +33,16 @@ In diesem Tutorial erfahren Sie, wie Sie mit SQL Server Management Studio (SSMS)
 ## <a name="prerequisites"></a>Voraussetzungen
 Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio und Zugriff auf eine SQL Server-Instanz. 
 
-- Installieren Sie [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
+- Installieren Sie [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 Wenn Sie über keinen Zugriff auf eine SQL Server-Instanz verfügen, wählen Sie Ihre Plattform aus den folgenden Links aus. Wenn Sie die SQL-Authentifizierung wählen, verwenden Sie Ihre SQL Server-Anmeldeinformationen.
-- **Windows**: [Herunterladen der SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-- **macOS**: [Herunterladen von SQL Server 2017 für Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
+- **Windows**: [Herunterladen der SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)
+- **macOS**: [Herunterladen von SQL Server 2017 für Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
 
 
 ## <a name="connect-to-a-sql-server-instance"></a>Eine Verbindung mit einer SQL Server-Instanz herstellen
 
-1. Starten von SQL Server Management Studio  
-    Beim ersten Ausführen von SSMS wird das Fenster **Connect to Server** (Verbindung mit Server herstellen) geöffnet. Wenn das Fenster nicht geöffnet wird, können Sie es manuell öffnen, indem Sie auf **Objekt-Explorer** > **Verbinden** > **Datenbank-Engine** klicken.
+1. Starten von SQL Server Management Studio Beim ersten Ausführen von SSMS wird das Fenster **Connect to Server** (Verbindung mit Server herstellen) geöffnet. Wenn das Fenster nicht geöffnet wird, können Sie es manuell öffnen, indem Sie auf **Objekt-Explorer** > **Verbinden** > **Datenbank-Engine** klicken.
 
     ![Die Verknüpfung „Verbinden“ im Objekt-Explorer](media/connect-query-sql-server/connectobjexp.png)
 
@@ -54,15 +53,21 @@ Wenn Sie über keinen Zugriff auf eine SQL Server-Instanz verfügen, wählen Sie
 
     ![Feld „Servername“ mit der Option zur Verwendung der SQL Server-Instanz](media/connect-query-sql-server/connection2.png)
 
-    - Wählen Sie für **Authentifizierung** die Option **Windows-Authentifizierung** aus. In diesem Artikel wird die Windows-Authentifizierung verwendet, jedoch wird ebenso die SQL Server-Anmeldung unterstützt. Wenn Sie **SQL-Anmeldung** auswählen, werden Sie aufgefordert, Ihren Benutzernamen und Ihr Kennwort einzugeben. Weitere Informationen zu Authentifizierungstypen finden Sie unter [Verbindung mit Server herstellen (Datenbank-Engine)](https://docs.microsoft.com/en-us/sql/ssms/f1-help/connect-to-server-database-engine).
+    - Wählen Sie für **Authentifizierung** die Option **Windows-Authentifizierung** aus. In diesem Artikel wird die Windows-Authentifizierung verwendet, jedoch wird ebenso die SQL Server-Anmeldung unterstützt. Wenn Sie **SQL-Anmeldung** auswählen, werden Sie aufgefordert, Ihren Benutzernamen und Ihr Kennwort einzugeben. Weitere Informationen zu Authentifizierungstypen finden Sie unter [Verbindung mit Server herstellen (Datenbank-Engine)](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine).
 
     Sie können auch zusätzliche Verbindungsoptionen ändern, indem Sie **Optionen** auswählen. Beispiele für Verbindungsoptionen sind die Datenbank, mit der Sie sich verbinden, der Verbindungstimeoutwert und das Netzwerkprotokoll. In diesem Artikel werden die Standardwerte für alle Optionen verwendet. 
 
 3. Nachdem Sie alle Felder ausgefüllt haben, klicken Sie auf **Verbinden**. 
 
-4. Überprüfen Sie, ob die Verbindung mit Ihrer SQL Server-Instanz erfolgreich ist, indem Sie die Objekte im Objekt-Explorer wie hier dargestellt durchsuchen: 
+### <a name="examples-of-successful-connections"></a>Beispiele für erfolgreiche Verbindungen
+Um zu prüfen, ob eine Verbindung mit SQL Server erfolgreich hergestellt wurde, erweitern Sie die Objekte im **Objekt-Explorer**, und sehen Sie sich die Objekte an. Diese Objekte sind je nach dem Typ des Servers, mit dem Sie eine Verbindung hergestellt haben, unterschiedlich. 
 
-   ![Erfolgreicher Verbindungsaufbau](media/connect-query-sql-server/successfulconnection.png)
+- Herstellen einer Verbindung mit einer lokalen SQL Server-Instanz – in diesem Fall NODE5\SQL2016ST: ![Herstellen einer Verbindung mit einem lokalen Server](media/connect-query-sql-server/connect-on-prem.png)
+
+- Herstellen einer Verbindung mit einer SQL Azure-Datenbank – in diesem Fall „msftestserver.database.windows.net“: ![Herstellen einer Verbindung mit einer SQL Azure-Datenbank](media/connect-query-sql-server/connect-sql-azure.png)
+
+  >[!NOTE]
+  > In diesem Tutorial haben Sie zuvor *Windows-Authentifizierung* verwendet, um eine Verbindung mit Ihrer lokalen SQL Server-Instanz herzustellen. Diese Methode wird aber für SQL Azure-Datenbanken nicht unterstützt. Daher ist in diesem Bild gezeigt, wie über SQL-Authentifizierung eine Verbindung mit der SQL Azure-Datenbank hergestellt wird. Weitere Informationen finden Sie unter [Auswählen eines Authentifizierungsmodus](../../relational-databases/security/choose-an-authentication-mode.md) und [SQL Azure-Authentifizierung](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#control-access). 
 
 ## <a name="create-a-database"></a>Erstellen einer Datenbank
 Erstellen Sie mithilfe folgender Schritte eine Datenbank namens „TutorialDB“: 
@@ -170,8 +175,7 @@ Informationen zu Verbindungseigenschaften finden Sie unter den Ergebnissen einer
 ## <a name="change-the-server-that-the-query-window-is-connected-to"></a>Ändern des Servers, mit dem das Abfragefenster verbunden ist
 Mit den folgenden Schritten können Sie die Serververbindung für das aktuelle Abfragefenster ändern:
 
-1. Klicken Sie mit der rechten Maustaste in das Abfragefenster, und wählen Sie dann **Verbindung** > **Verbindung ändern** aus.  
-    Das Fenster **Mit Server verbinden** wird erneut geöffnet.
+1. Klicken Sie mit der rechten Maustaste in das Abfragefenster, und wählen Sie dann **Verbindung** > **Verbindung ändern** aus. Das Fenster **Mit Server verbinden** wird erneut geöffnet.
 2. Ändern Sie den Server, mit dem Ihr Abfragefenster verbunden ist. 
  
    ![Der Befehl „Verbindung ändern“](media/connect-query-sql-server/changeconnection.png)

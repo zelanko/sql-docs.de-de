@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/18/2018
+ms.date: 05/09/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: t-sql|statements
@@ -28,11 +28,11 @@ caps.latest.revision: 89
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 3bdc0c85068e4933b0c97cb508bd819ee1cc481d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3a59000dabcaddbcb096fd715d1f6168dfbb7930
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,21 +70,20 @@ SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }
 |SQL Server 2000|8|80|80|  
   
 > [!NOTE]  
-> Seit **Januar 2018** lautet der Standardkompatibilitätsgrad für neu erstellte Datenbanken in SQL-Datenbank 140. Für vorhandene Datenbanken wird der Datenbank-Kompatibilitätsgrad nicht angepasst. Kunden können diesen nach Ihren eigenen Bedürfnissen anpassen. Dennoch wird dringend empfohlen, zum aktuellen Kompatibilitätsgrad zu wechseln, um von den neuesten Verbesserungen profitieren zu können.
+> Seit **Januar 2018** ist der Standardkompatibilitätsgrad für neu erstellte Datenbanken in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] gleich „140“. Für vorhandene Datenbanken wird der Datenbank-Kompatibilitätsgrad nicht angepasst. Kunden können diesen nach Ihren eigenen Bedürfnissen anpassen. Dennoch wird dringend empfohlen, zum aktuellen Kompatibilitätsgrad zu wechseln, um von den neuesten Verbesserungen profitieren zu können.
 > 
-> Wenn Sie für Ihre Datenbanken generell den Kompatibilitätsgrad 140 festlegen möchten, den Algorithmus der **Kardinalitätsschätzung** in Höhe von 110 jedoch bevorzugen, finden Sie unter [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) und insbesondere unter dem zugehörigen Schlüsselwort `LEGACY_CARDINALITY_ESTIMATION = ON` weitere Informationen.
+> Wenn Sie den Datenbank-Kompatibilitätsgrad „140“ für Ihre gesamte Datenbank nutzen möchten, aber aus irgendeinem Grund das **Kardinalitätsschätzung**smodell von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bevorzugen, sodass eine Zuordnung zum Datenbank-Kompatibilitätsgrad „110“ erfolgt, sollten Sie die Dokumentation zur Anweisung [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) und insbesondere den Abschnitt zu deren Schlüsselwort `LEGACY_CARDINALITY_ESTIMATION = ON` lesen.
 >  
->  Weitere Einzelheiten zur Bewertung der Leistungsunterschiede bei Ihren wichtigsten Abfragen zwischen zwei Kompatibilitätsgraden in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] finden Sie unter [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/) (Verbesserte Abfrageleistung bei Kompatibilitätsgrad 130 in Azure SQL-Datenbank). Beachten Sie, dass dieser Artikel sich auf Kompatibilitätsgrad 130 und SQL Server bezieht. Es gelten jedoch die gleichen Vorgehensweisen für den Wechsel zu 140 für SQL Server und Azure SQL-Datenbank.
+> Weitere Einzelheiten zur Bewertung der Leistungsunterschiede bei Ihren wichtigsten Abfragen zwischen zwei Kompatibilitätsgraden in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] finden Sie unter [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/) (Verbesserte Abfrageleistung bei Kompatibilitätsgrad 130 in Azure SQL-Datenbank). Beachten Sie, dass dieser Artikel sich auf den Kompatibilitätsgrad „130“ und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bezieht. Es gelten jedoch die gleichen Vorgehensweisen für den Wechsel zu „140“ für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-
- Führen Sie die folgende Abfrage aus, um die [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Version zu bestimmen, mit der Sie verbunden sind.  
+Führen Sie die folgende Abfrage aus, um die [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Version zu bestimmen, mit der Sie verbunden sind.  
   
 ```sql  
 SELECT SERVERPROPERTY('ProductVersion');  
 ```  
   
 > [!NOTE]  
-> [!INCLUDE[ssSDS](../../includes/sssds-md.md)] unterstützt nicht alle Features, die nach Kompatibilitätsgrad variieren.  
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] unterstützt nicht alle Features, die nach Kompatibilitätsgrad variieren.  
 
  Führen Sie eine Abfrage für die Spalte **compatibility_level** von [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) aus, um die aktuellen Kompatibilitätsgrad zu ermitteln.  
   
@@ -93,24 +92,60 @@ SELECT name, compatibility_level FROM sys.databases;
 ```  
   
 ## <a name="remarks"></a>Remarks  
-Bei allen Installationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist der Standardkompatibilitätsgrad auf die Version der [!INCLUDE[ssDE](../../includes/ssde-md.md)] festgelegt. Datenbanken sind auf diesen Grad festgelegt, sofern der Kompatibilitätsgrad der **model**-Datenbank nicht niedriger ist. Wenn für eine Datenbank ein Upgrade von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, behält die Datenbank ihren vorhandenen Kompatibilitätsgrad, wenn es sich dabei zumindest um die zulässigen Mindestwert für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] handelt. Beim Ausführen eines Upgrades für eine Datenbank, deren Kompatibilitätsgrad unterhalb des zulässigen Grads liegt, wird die Datenbank auf den niedrigsten zulässigen Kompatibilitätsgrad festgelegt. Dies gilt sowohl für die System- als auch für die Benutzerdatenbanken. Verwenden Sie **ALTER DATABASE**, um den Kompatibilitätsgrad der Datenbank zu ändern. Fragen Sie die Spalte **compatibility_level** in der Katalogsicht [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) ab, um den aktuellen Kompatibilitätsgrad einer Datenbank anzuzeigen.  
+Bei allen Installationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist der Standardkompatibilitätsgrad auf die Version der [!INCLUDE[ssDE](../../includes/ssde-md.md)] festgelegt. Datenbanken sind auf diesen Grad festgelegt, sofern der Kompatibilitätsgrad der **model**-Datenbank nicht niedriger ist. Wenn für eine Datenbank ein Upgrade von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, behält die Datenbank ihren vorhandenen Kompatibilitätsgrad, wenn es sich dabei zumindest um die zulässigen Mindestwert für diese Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] handelt. Beim Ausführen eines Upgrades für eine Datenbank, deren Kompatibilitätsgrad unterhalb des zulässigen Grads liegt, wird die Datenbank automatisch auf den niedrigsten zulässigen Kompatibilitätsgrad festgelegt. Dies gilt sowohl für die System- als auch für die Benutzerdatenbanken.   
+
+Die folgenden Verhaltensweisen werden für [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] erwartet, wenn eine Datenbank angefügt oder wiederhergestellt wird, und werden nach einem direkten Upgrade erwartet: 
+- War der Kompatibilitätsgrad einer Benutzerdatenbank vor dem Upgrade 100 oder höher, wird er nach dem Upgrade beibehalten.    
+- War der Kompatibilitätsgrad einer Benutzerdatenbank vor dem Upgrade 90, wird er auf 100 gesetzt, was dem niedrigsten unterstützten Kompatibilitätsgrad in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] entspricht.    
+- Der Kompatibilitätsgrad der Datenbanken „tempdb“, „model“, „msdb“ und „Resource“ wird nach dem Upgrade auf den aktuellen Kompatibilitätsgrad festgelegt.  
+- Die „master“-Systemdatenbank behält den Kompatibilitätsgrad von vor dem Upgrade bei.
+
+Verwenden Sie `ALTER DATABASE`, um den Kompatibilitätsgrad der Datenbank zu ändern. Die neue Kompatibilitätsgradeinstellung für eine Datenbank wird wirksam, wenn ein `USE <database>`-Befehl ausgegeben oder eine neue Anmeldung mit dieser Datenbank als Standarddatenbankkontext verarbeitet wird.     
+Fragen Sie die Spalte **compatibility_level** in der Katalogsicht [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) ab, um den aktuellen Kompatibilitätsgrad einer Datenbank anzuzeigen.  
 
 > [!NOTE]  
-> Eine [Verteilungsdatenbank](../../relational-databases/replication/distribution-database.md), die in einer früheren Version von SQL Server erstellt wurde und auf [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM oder Service Pack 1 aktualisiert wurde, verfügt über einen Kompatibilitätsgrad von 90, was für andere Datenbanken nicht unterstützt wird. Dies wirkt sich nicht auf die Funktionstüchtigkeit der Replikation aus. Das Upgrade auf ein späteres Service Pack oder eine spätere Version führt dazu, dass der Kompatibilitätsgrad der Verteilungsdatenbank auf denjenigen der **Hauptdatenbank** erhöht wird.
-  
+> Eine [Verteilungsdatenbank](../../relational-databases/replication/distribution-database.md), die in einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt wurde und auf [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM oder Service Pack 1 aktualisiert wurde, verfügt über einen Kompatibilitätsgrad von „90“, was für andere Datenbanken nicht unterstützt wird. Dies wirkt sich nicht auf die Funktionstüchtigkeit der Replikation aus. Ein Upgrade auf ein späteres Service Pack oder eine spätere Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] führt dazu, dass der Kompatibilitätsgrad der Verteilungsdatenbank auf denjenigen der **Master**datenbank erhöht wird.
+
+## <a name="compatibility-levels-and-sql-server-upgrades"></a>Kompatibilitätsgrade und SQL Server-Upgrades  
+Datenbank-Kompatibilitätsgrad ist ein wichtiges Tool zur Unterstützung von Datenbankmodernisierung, denn damit können Upgrades für [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] durchgeführt werden, während der funktionale Status von anbindenden Anwendungen erhalten bleibt, indem der vor einem Upgrade wirksame Kompatibilitätsgrad beibehalten wird. Solange für die jeweilige Anwendung keine Verbesserungen genutzt werden müssen, die nur in einem höheren Datenbank-Kompatibilitätsgrad verfügbar sind, ist dies ein gültiger Ansatz zum Durchführen eines Upgrades der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] und Beibehalten des vorherigen Datenbank-Kompatibilitätsgrads. Weitere Informationen zum Verwenden des Kompatibilitätsgrads für Abwärtskompatibilität finden Sie unter [Verwenden des Kompatibilitätsgrads für die Abwärtskompatibilität](#using-compatibility-level-for-backward-compatibility) weiter unten in diesem Artikel.    
+
+Für Neuentwicklungen oder für den Fall, dass eine vorhandene Anwendung die Nutzung neuer Features erfordert, und für Leistungsverbesserungen, die in der Abfrageoptimiererumgebung erfolgen, sollten Sie ein Upgrade auf den neuesten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbaren Datenbank-Kompatibilitätsgrad planen und Ihre Anwendung so zertifizieren, dass sie mit diesem Kompatibilitätsgrad funktioniert. Ausführlichere Informationen zum Aktualisieren des Datenbank-Kompatibilitätsgrads finden Sie unter [Bewährte Methoden zum Aktualisieren des Datenbank-Kompatibilitätsgrads](#best-practices-for-upgrading-database-compatibility-level) weiter unten in diesem Artikel.     
+
+> [!TIP] 
+> Wurde eine Anwendung für eine bestimmte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version getestet und zertifiziert, wurde sie implizit für den systemeigenen Datenbank-Kompatibilitätsgrad dieser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version getestet und zertifiziert.
+> 
+> Auf diese Weise bietet der Datenbank-Kompatibilitätsgrad einen einfachen Zertifizierungsweg für eine vorhandene Anwendung, wenn der Datenbank-Kompatibilitätsgrad verwendet wird, der der getesteten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version entspricht.
+>
+> Weitere Informationen zu Unterschieden zwischen den Kompatibilitätsgraden finden Sie in den entsprechenden Abschnitten weiter unten in diesem Artikel. 
+
+Um für die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ein Upgrade auf die neueste Version durchzuführen, dabei aber den Datenbank-Kompatibilitätsgrad, der vor dem Upgrade vorhanden war, und dessen Unterstützbarkeitsstatus beizubehalten, empfiehlt es sich, mit dem [Microsoft-Datenmigrations-Assistent](http://www.microsoft.com/download/details.aspx?id=53595) (DMA) eine statische Funktionsprüfung des Oberflächenbereichs des Anwendungscodes in der Datenbank auszuführen. Gibt es in der Ausgabe von DMA keine Fehler hinsichtlich fehlender oder inkompatibler Funktionalität, ist zu erwarten, dass es keine funktionalen Rückschritte für die Anwendung in der neuen Zielversion gibt. Weitere Informationen zum DMA finden Sie [hier](http://blogs.msdn.microsoft.com/datamigration/dma).
+
+> [!NOTE] 
+> DMA unterstützt Datenbank-Kompatibilitätsgrad 100 und höher. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ist als Quellversion ausgeschlossen. 
+
+> [!IMPORTANT] 
+> Microsoft empfiehlt, dass einige minimale Tests ausgeführt werden, um den Erfolg eines Upgrades zu überprüfen, wenn der frühere Datenbank-Kompatibilitätsgrad beibehalten wird. Sie sollten bestimmen, was „minimale Tests“ im Zusammenhang Ihrer Anwendung und Ihres Szenarios bedeutet. 
+
+> [!NOTE] 
+> Microsoft bietet Schutz für eine Abfrageplanform, wenn Folgendes zutrifft:
+> - Die neue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version (Ziel) wird auf Hardware ausgeführt, die mit der Hardware vergleichbar ist, auf der die vorherige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version (Quelle) ausgeführt wurde. 
+> - Derselbe [unterstützte Datenbank-Kompatibilitätsgrad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#remarks) wird sowohl in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ziel- als auch in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Quellinstanz verwendet. 
+> 
+> Alle Rückschritte der Abfrageplanform (im Vergleich mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Quellinstanz), die bei den oben genannten Bedingungen auftreten, werden behandelt. Wenden Sie sich an den Microsoft-Kundensupport, wenn dies der Fall ist.
+
 ## <a name="using-compatibility-level-for-backward-compatibility"></a>Verwenden des Kompatibilitätsgrads für die Abwärtskompatibilität  
- Der Kompatibilitätsgrad wirkt sich nicht auf den gesamten Server, sondern nur auf das Verhalten der angegebenen Datenbank aus. Der Kompatibilitätsgrad bietet nur partielle Abwärtskompatibilität mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Beginnend mit dem Kompatibilitätsmodus 130 wurden sämtliche neue Features, die Auswirkungen auf den Abfrageplan haben, nur zum neuen Kompatibilitätsmodus hinzugefügt. Dadurch sollte das Risiko während der Upgrades minimiert werden, die durch Leistungseinbußen aufgrund von Abfrageplanänderungen entstanden sind. Aus Sicht einer Anwendung besteht das Ziel weiterhin darin, über den neuesten Kompatibilitätsgrad zu verfügen, damit einige der neuen Features übernommen werden können und im Bereich des Abfrageoptimierers auf kontrollierte Weise Leistungssteigerungen erzielt werden können. Verwenden Sie den Kompatibilitätsgrad als vorläufige Migrationshilfe, um versionsbedingte Unterschiede in den Verhaltensweisen zu umgehen, die über die jeweilige Einstellung für den Kompatibilitätsgrad gesteuert werden. Weitere Informationen finden Sie unter „Upgrade – Bewährte Methoden“ weiter unten im Artikel.  
+Die Einstellung für *Datenbank-Kompatibilitätsgrad* wirkt sich nicht auf den gesamten Server, sondern nur auf das Verhalten der angegebenen Datenbank aus. Der Datenbank-Kompatibilitätsgrad bietet nur partielle Abwärtskompatibilität mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
+Beginnend mit dem Kompatibilitätsmodus 130 wurden sämtliche neue Features, die Auswirkungen auf einen Abfrageplan haben, ausdrücklich nur zum neuen Kompatibilitätsmodus hinzugefügt. Dadurch sollte das Risiko während der Upgrades minimiert werden, die durch Leistungseinbußen aufgrund von Abfrageplanänderungen entstanden sind.   
+Aus Sicht einer Anwendung sollte das Ziel weiterhin darin bestehen, zu irgendeinem Zeitpunkt auf den neuesten Kompatibilitätsgrad zu aktualisieren, damit einige der neuen Features übernommen werden können und im Bereich des Abfrageoptimierers auf kontrollierte Weise Leistungssteigerungen erzielt werden können. Verwenden Sie den niedrigeren Kompatibilitätsgrad als sichere Migrationshilfe, um versionsbedingte Unterschiede in den Verhaltensweisen zu umgehen, die über die jeweilige Einstellung für den Kompatibilitätsgrad gesteuert werden. Ausführlichere Informationen, samt dem empfohlenen Workflow zum Aktualisieren des Datenbank-Kompatibilitätsgrads, finden Sie unter [Bewährte Methoden zum Aktualisieren des Datenbank-Kompatibilitätsgrads](#best-practices-for-upgrading-database-compatibility-evel) weiter unten in diesem Artikel.  
   
- Wenn sich Verhaltensunterschiede in Ihrer Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf vorhandene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anwendungen auswirken, sollten Sie die Anwendung konvertieren, damit eine reibungslose Ausführung mit dem neuen Kompatibilitätsmodus gewährleistet ist. Verwenden Sie anschließend `ALTER DATABASE`, um den Kompatibilitätsgrad in 130 zu ändern. Die neue Kompatibilitätseinstellung für eine Datenbank wird wirksam, wenn eine `USE <database>` ausgegeben wird oder eine neue Anmeldung mit dieser Datenbank als Standarddatenbank verarbeitet wird.  
- 
 > [!IMPORTANT]
-> Nicht mehr unterstützte Funktionalitäten, die in einer bestimmten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eingeführt wurden, werden durch den Kompatibilitätsgrad nicht geschützt.
+> Nicht mehr unterstützte Funktionalitäten, die in einer bestimmten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eingeführt wurden, werden durch den Kompatibilitätsgrad nicht geschützt. Dies bezieht sich auf Funktionalität, die aus der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] entfernt wurde.
 > 
 > Der `FASTFIRSTROW`-Hinweis wurde beispielweise in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] nicht mehr unterstützt und durch den `OPTION (FAST n )`-Hinweis ersetzt. Wenn der Kompatibilitätsgrad der Datenbank auf 110 festgelegt wird, wird der nicht mehr unterstützte Hinweis nicht wiederhergestellt.
 > Weitere Informationen zu nicht mehr unterstützten Funktionen finden Sie unter [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2014](http://msdn.microsoft.com/library/ms144262(v=sql.120)), [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2012](http://msdn.microsoft.com/library/ms144262(v=sql.110)) und unter [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2008](http://msdn.microsoft.com/library/ms144262(v=sql.100)).
 
 > [!IMPORTANT]
-> Wichtige Änderungen, die in einer bestimmten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eingeführt wurden, werden möglicherweise **nicht** durch den Kompatibilitätsgrad geschützt. Das Verhalten von [!INCLUDE[tsql](../../includes/tsql-md.md)] wird normalerweise durch den Kompatibilitätsgrad geschützt. Geänderte oder entfernte Systemobjekte werden jedoch **nicht** durch den Kompatibilitätsgrad geschützt.
+> Wichtige Änderungen, die in einer bestimmten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eingeführt wurden, werden möglicherweise **nicht** durch den Kompatibilitätsgrad geschützt. Dies bezieht sich auf Verhaltensänderungen zwischen Versionen der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Das Verhalten von [!INCLUDE[tsql](../../includes/tsql-md.md)] wird normalerweise durch den Kompatibilitätsgrad geschützt. Geänderte oder entfernte Systemobjekte werden jedoch **nicht** durch den Kompatibilitätsgrad geschützt.
 >
 > Ein Beispiel für eine wichtige Änderung, die durch den Kompatibilitätsgrad **geschützt** wird, ist eine implizite Konvertierung vom Datentyp „DateTime“ in den Datentyp „DateTime2“. Unter dem Datenbankkompatibilitätsgrad 130 ergibt daraus eine verbesserte Genauigkeit, indem die Bruchteile von Millisekunden berücksichtigt werden, wodurch sich unterschiedliche konvertierte Werte ergeben. Legen Sie zum Wiederherstellen des vorherigen Konvertierungsverhaltens den Kompatibilitätsgrad der Datenbank auf 120 oder niedriger fest.
 >
@@ -120,9 +155,9 @@ Bei allen Installationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
 >
 > Weitere Informationen zu wichtigen Änderungen finden Sie unter [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2014](http://msdn.microsoft.com/library/ms143179(v=sql.120)), [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2012](http://msdn.microsoft.com/library/ms143179(v=sql.110)) und [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2008](http://msdn.microsoft.com/library/ms143179(v=sql.100)).
   
-## <a name="best-practices"></a>Bewährte Methoden  
+## <a name="best-practices-for-upgrading-database-compatibility-level"></a>Bewährte Methoden zum Aktualisieren des Datenbank-Kompatibilitätsgrads 
 Den empfohlenen Workflow für das Aktualisieren des Kompatibilitätsgrads finden Sie unter [Change the Database Compatibility Mode and Use the Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md) (Ändern des Datenbank-Kompatibilitätsmodus und Verwenden des Abfragespeichers).  
-  
+
 ## <a name="compatibility-levels-and-stored-procedures"></a>Kompatibilitätsgrade und gespeicherte Prozeduren  
  Wenn eine gespeicherte Prozedur ausgeführt wird, verwendet sie den aktuellen Kompatibilitätsgrad der Datenbank, in der sie definiert ist. Wenn die Kompatibilitätseinstellung einer Datenbank geändert wird, werden alle zugehörigen gespeicherten Prozeduren automatisch entsprechend neu kompiliert.  
 

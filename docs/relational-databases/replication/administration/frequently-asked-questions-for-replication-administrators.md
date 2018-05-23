@@ -19,11 +19,11 @@ caps.latest.revision: 59
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce21bef20a2fa73ca0a9acee22e2eeddefd5fce1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd85694c8b2678d85b66db6c84b89a409fa0fc4a
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Häufig gestellte Fragen für Replikationsadministratoren
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -164,7 +164,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="database-maintenance"></a>Datenbankwartung  
   
 ### <a name="why-cant-i-run-truncate-table-on-a-published-table"></a>Warum kann ich TRUNCATE TABLE für eine veröffentlichte Tabelle nicht ausführen?  
- Bei TRUNCATE TABLE handelt es sich um eine nicht protokollierte Operation, bei der keine Trigger ausgelöst werden. Dieser Vorgang ist nicht zulässig, da die von der Operation verursachten Änderungen bei der Replikation nicht nachverfolgt werden können: Bei der Transaktionsreplikation werden Änderungen über das Transaktionsprotokoll verfolgt; bei der Mergereplikation werden Änderungen über Trigger in veröffentlichten Tabellen verfolgt.  
+ TRUNCATE TABLE ist eine DDL-Anweisung, für die keine einzelnen Zeilenlöschungen protokolliert und keine DML-Trigger ausgelöst werden. Dies ist nicht zulässig, da die von der Operation verursachten Änderungen bei der Replikation nicht nachverfolgt werden können: Bei der Transaktionsreplikation werden Änderungen über das Transaktionsprotokoll verfolgt; bei der Mergereplikation werden Änderungen über DML-Trigger in veröffentlichten Tabellen verfolgt.  
   
 ### <a name="what-is-the-effect-of-running-a-bulk-insert-command-on-a-replicated-database"></a>Welche Auswirkungen hat die Ausführung eines Masseneinfügungsbefehls für eine replizierte Datenbank?  
  Bei Transaktionsreplikationen werden Masseneinfügungen wie andere Einfügungen verfolgt und repliziert. Bei Mergereplikationen muss sichergestellt werden, dass die Metadaten zur Änderungsnachverfolgung ordnungsgemäß aktualisiert werden.  

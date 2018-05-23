@@ -33,11 +33,11 @@ caps.latest.revision: 98
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c7254b34f1664953d92723371f26c3c58fdd168
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d77629ddd1ebd711d9ec026c0b1a7a4ae9001f1b
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Anfügen und Trennen von Datenbanken (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +109,10 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Metadata"></a> Ändern von Metadaten beim Anfügen einer Datenbank  
  Wenn eine schreibgeschützte Datenbank getrennt und dann erneut angefügt wird, gehen die Sicherungsinformationen zur aktuellen differenziellen Basis verloren. Bei der *differenziellen Basis* handelt es sich um die letzte vollständige Sicherung aller Daten in der Datenbank oder einer Teilmenge ihrer Dateien oder Dateigruppen. Ohne die Basissicherungsinformationen ist die **master** -Datenbank nicht mehr mit der schreibgeschützten Datenbank synchronisiert. Daher können später erstellte differenzielle Sicherungen zu unerwarteten Ergebnissen führen. Wenn Sie deshalb differenzielle Sicherungen für eine schreibgeschützte Datenbank verwenden, sollten Sie nach dem erneuten Anfügen der Datenbank eine neue differenzielle Basis einrichten, indem Sie eine vollständige Sicherung erstellen. Informationen zum Verwenden von differenziellen Sicherungen finden Sie unter [Differenzielle Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
   
- Beim Anfügen wird die Datenbank gestartet. Im Allgemeinen wird die Datenbank beim Anfügen in genau demselben Status wieder verfügbar gemacht, in dem sie sich unmittelbar vor dem Trennen oder Kopieren befunden hat. Die datenbankübergreifenden Besitzketten für die Datenbank werden durch Trenn- und Anfügevorgänge jedoch deaktiviert. Informationen zum Aktivieren der Verkettung finden Sie unter [Datenbankübergreifende Besitzverkettung (Serverkonfigurationsoption)](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md). Außerdem wird TRUSTWORTHY auf OFF festgelegt, wenn die Datenbank angefügt wird. Informationen zum Festlegen von TRUSTWORTHY auf ON finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+ Beim Anfügen wird die Datenbank gestartet. Im Allgemeinen wird die Datenbank beim Anfügen in genau demselben Status wieder verfügbar gemacht, in dem sie sich unmittelbar vor dem Trennen oder Kopieren befunden hat. Die datenbankübergreifenden Besitzketten für die Datenbank werden durch Trenn- und Anfügevorgänge jedoch deaktiviert. Informationen zum Aktivieren der Verkettung finden Sie unter [Datenbankübergreifende Besitzverkettung (Serverkonfigurationsoption)](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md). 
+
+ >[!IMPORTANT]
+ > Standardmäßig und aus Sicherheitsgründen sind die Optionen für *is_broker_enabled*, *is_honoor_broker_priority_on* und *is_trustworthy_on* auf OFF festgelegt, wenn die Datenbank angefügt wird. Informationen darüber, wie diese Optionen auf ON festgelegt werden, finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  Weitere Informationen zu Metadaten finden Sie unter [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einem anderen Server](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).
   
 ### <a name="backup-and-restore-and-attach"></a>Sichern, Wiederherstellen und Anfügen  
  Eine Datenbank mit Wiederherstellungsdateien kann ebenso wie eine Datenbank, die vollständig oder teilweise offline ist, nicht angefügt werden. Sie können die Datenbank anfügen, wenn Sie die Wiederherstellungssequenz beenden. Sie können die Wiederherstellungssequenz anschließend erneut starten.  

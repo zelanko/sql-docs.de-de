@@ -13,11 +13,11 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 245a6f2b2c8484ad83d70c2e76dc55522fde7d1b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2ccff01afbd9e51f0754ceaecf885b36a5b28f9b
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>PowerShell-Cmdlets für den SharePoint-Modus von Reporting Services
 
@@ -73,7 +73,7 @@ Bei der Installation von SQL Server 2016 Reporting Services im SharePoint-Modus 
 
  Die folgende Tabelle enthält die PowerShell-Cmdlets für den freigegebenen SharePoint-Dienst für Reporting Services.  
   
-|Cmdlet|Description|  
+|Cmdlet|und Beschreibung|  
 |------------|-----------------|  
 |Install-SPRSService|Installiert und registriert bzw. deinstalliert den freigegebenen Reporting Services-Dienst. Dieser Schritt kann nur auf einem Computer erfolgen, auf dem eine SQL Server Reporting Services-Installation im SharePoint-Modus vorhanden ist. Für die Installation sind zwei Vorgänge möglich:<br /><br /> – Der Reporting Services-Dienst wird in der Farm installiert.<br /><br /> – Die Reporting Services-Dienstinstanz wird auf dem aktuellen Computer installiert.<br /><br /> Für die Deinstallation sind zwei Vorgänge möglich:<br /><br /> – Der Reporting Services-Dienst wird auf dem aktuellen Computer deinstalliert.<br /><br /> – Der Reporting Services-Dienst wird in der Farm deinstalliert.<br /><br /> <br /><br /> Wenn die Farm andere Computer umfasst, auf denen der Reporting Services-Dienst installiert ist, oder wenn immer noch Reporting Services-Dienstanwendungen in der Farm ausgeführt werden, wird eine Fehlermeldung angezeigt.|  
 |Install-SPRSServiceProxy|Installiert und registriert bzw. deinstalliert den Reporting Services-Dienstproxy in der SharePoint-Farm.|  
@@ -84,7 +84,7 @@ Bei der Installation von SQL Server 2016 Reporting Services im SharePoint-Modus 
 
  Die folgende Tabelle enthält die PowerShell-Cmdlets für Reporting Services-Dienstanwendungen und ihre zugeordneten Proxys.  
   
-|Cmdlet|Description|  
+|Cmdlet|und Beschreibung|  
 |------------|-----------------|  
 |Get-SPRSServiceApplication|Ruft mindestens ein Objekt für eine Reporting Services-Anwendung ab.|  
 |New-SPRSServiceApplication|Erstellen Sie eine neue Reporting Services-Dienstanwendung und zugeordnete Datenbanken.<br /><br /> LogonType-Parameter: Gibt an, ob der Berichtsserver das SSRS-Anwendungspoolkonto oder einen SQL Server-Anmeldenamen für den Zugriff auf die Berichtsserver-Datenbank verwendet. Gültige Werte sind:<br /><br /> 0 Windows-Authentifizierung<br /><br /> 1 SQL Server<br /><br /> 2 Anwendungspoolkonto (Standard)|  
@@ -102,9 +102,9 @@ Bei der Installation von SQL Server 2016 Reporting Services im SharePoint-Modus 
 |Get-SPRSDatabaseRightsScript|Gibt das Datenbankrechte-Skript für die Datenbank einer Reporting Services-Dienstanwendung auf dem Bildschirm aus. Es fordert die Eingabe des gewünschten Benutzers und der Datenbank und gibt dann Transact-SQL zurück, das zum Ändern von Berechtigungen ausgeführt werden kann. Sie können dann dieses Skript in SQL Server Management Studio ausführen.|  
 |Get-SPRSDatabaseUpgradeScript|Gibt ein Datenbankupgradeskript auf dem Bildschirm aus. Das Skript führt ein Upgrade der Reporting Services-Dienstanwendungsdatenbanken auf die Datenbankversion der aktuellen Reporting Services-Installation durch.|  
   
-## <a name="reporting-services-custom-runctionality-cmdlets"></a>Benutzerdefinierte Reporting Services-Funktionalitäts-Cmdlets
+## <a name="reporting-services-custom-functionality-cmdlets"></a>Benutzerdefinierte Reporting Services-Funktionalitäts-Cmdlets
   
-|Cmdlet|Description|  
+|Cmdlet|und Beschreibung|  
 |------------|-----------------|  
 |Update-SPRSEncryptionKey|Aktualisiert den Verschlüsselungsschlüssel für die angegebene Reporting Services-Dienstanwendung und verschlüsselt die Daten erneut.|  
 |Restore-SPRSEncryptionKey|Stellt einen zuvor gesicherten Verschlüsselungsschlüssel für eine Reporting Services-Dienstanwendung wieder her.|  

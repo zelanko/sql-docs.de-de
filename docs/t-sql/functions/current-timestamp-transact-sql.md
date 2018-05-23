@@ -36,23 +36,23 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 465567e7b115b0ce92f2154a2e6047de4000a831
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a5dd72c23867d45fa015ebd8c055f7e8758c188
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="currenttimestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Gibt den aktuellen Zeitstempel des Datenbanksystems ohne den Zeitzonenoffset der Datenbank als **datetime**-Wert zurück. Dieser Wert wird aus dem Betriebssystem des Computers abgeleitet, auf dem die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.
+Diese Funktion gibt den aktuellen Zeitstempel des Datenbanksystems ohne den Zeitzonenoffset der Datenbank als **datetime**-Wert zurück. `CURRENT_TIMESTAMP` leitet diesen Wert aus dem Betriebssystem des Computers ab, auf dem die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.
   
 > [!NOTE]  
->  SYSDATETIME und SYSUTCDATE weisen eine höhere Genauigkeit bezüglich der Bruchteile von Sekunden auf als GETDATE und GETUTCDATE. SYSDATETIMEOFFSET schließt den Zeitzonenoffset des Systems ein. SYSDATETIME, SYSUTCDATE und SYSDATETIMEOFFSET können einer Variablen eines beliebigen Datums- und Zeittyps zugewiesen werden.  
+>  `SYSDATETIME` und `SYSUTCDATE` haben, weil sie in Sekundenbruchteilen gemessen werden, eine höhere Genauigkeit als `GETDATE` und `GETUTCDATE`. Die `SYSDATETIMEOFFSET`-Funktion berücksichtigt den Zeitzonenoffset des Systems. Sie können `SYSDATETIME`, `SYSUTCDATE` und `SYSDATETIMEOFFSET` einer Variablen zuweisen, die einen der Datums- und Uhrzeittypen hat.  
   
 Diese Funktion ist die ANSI SQL-Entsprechung zu [GETDATE](../../t-sql/functions/getdate-transact-sql.md).
   
-Eine Übersicht über alle Datums- und Uhrzeitdatentypen und zugehörige Funktionen für [!INCLUDE[tsql](../../includes/tsql-md.md)] finden Sie unter [Datums- und Uhrzeitdatentypen und Funktionen](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Unter [Datums- und Uhrzeitdatentypen und Funktionen ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) finden Sie eine Übersicht über alle Datums- und Uhrzeitdatentypen und -funktionen für [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -63,18 +63,18 @@ CURRENT_TIMESTAMP
 ```  
   
 ## <a name="arguments"></a>Argumente  
-Besitzt keine Argumente.
+Diese Funktion akzeptiert keine Argumente.
   
 ## <a name="return-type"></a>Rückgabetyp  
 **datetime**
   
 ## <a name="remarks"></a>Remarks  
-[!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen können auf eine beliebige Position von CURRENT_TIMESTAMP verweisen, die auf einen **datetime**-Ausdruck verweisen kann.
+[!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen können an jeder Stelle auf `CURRENT_TIMESTAMP` verweisen, an der sie auf einen **datetime**-Ausdruck verweisen können.
   
-CURRENT_TIMESTAMP ist eine nicht deterministische Funktion. Sichten und Ausdrücke, die auf diese Spalte verweisen, können nicht indiziert werden.
+`CURRENT_TIMESTAMP` ist eine nicht deterministische Funktion. Sichten und Ausdrücke, die auf diese Spalte verweisen, können nicht indiziert werden.
   
 ## <a name="examples"></a>Beispiele  
-In den folgenden Beispielen werden die sechs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Systemfunktionen verwendet, die das aktuelle Datum, die aktuelle Uhrzeit oder beides zurückgeben. Die Werte werden der Reihe nach zurückgegeben und können sich daher in Bruchteilen von Sekunden unterscheiden.
+In diesen Beispielen werden die sechs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Systemfunktionen, die aktuelle Datums- und Uhrzeitwerte zurückgeben, dazu verwendet, das Datum, die Uhrzeit oder beides zurückzugeben. In den Beispielen werden die Werte der Reihe nach zurückgegeben, sodass sich deren Sekundenbruchteile unterscheiden können. Beachten Sie, dass die tatsächlich zurückgegebenen Werte dem tatsächlichen Zeitpunkt (Tag und Uhrzeit) der Ausführung entsprechen.
   
 ### <a name="a-get-the-current-system-date-and-time"></a>A. Abrufen des aktuellen Systemdatums und der aktuellen Systemzeit  
   
@@ -92,6 +92,7 @@ SYSUTCDATETIME()   2007-04-30 20:10:02.0474381
 CURRENT_TIMESTAMP  2007-04-30 13:10:02.047  
 GETDATE()          2007-04-30 13:10:02.047  
 GETUTCDATE()       2007-04-30 20:10:02.047  
+*/
 ```  
   
 ### <a name="b-get-the-current-system-date"></a>B. Abrufen des aktuellen Systemdatums  
