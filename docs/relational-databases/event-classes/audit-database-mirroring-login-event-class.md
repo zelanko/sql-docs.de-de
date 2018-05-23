@@ -3,12 +3,9 @@ title: Audit Database Mirroring Login (Ereignisklasse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: event-classes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3bc56d4598d39d31d26c43357c76fc6889c5e53c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac0ba1d2748dbb6d4e30c62af36ce2dd823a63c3
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login (Ereignisklasse)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +30,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="audit-database-mirroring-login-event-class-data-columns"></a>Datenspalten der Audit Database Mirroring Login-Ereignisklasse  
   
-|Datenspalte|Typ|Description|Spaltennummer|Filterbar|  
+|Datenspalte|Typ|und Beschreibung|Spaltennummer|Filterbar|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Wird in dieser Ereignisklasse nicht verwendet.|10|ja|  
 |**ClientProcessID**|**int**|Wird in dieser Ereignisklasse nicht verwendet.|9|ja|  
@@ -60,7 +57,7 @@ ms.lasthandoff: 05/03/2018
   
  In der folgenden Tabelle sind die Unterklassenwerte für diese Ereignisklasse aufgelistet.  
   
-|ID|Unterklasse|Description|  
+|ID|Unterklasse|und Beschreibung|  
 |--------|--------------|-----------------|  
 |1|Login Success|Ein Login Success-Ereignis meldet, dass der letzte Datenbankspiegelungs-Anmeldeprozess erfolgreich abgeschlossen wurde.|  
 |2|Login Protocol Error|Ein Login Protocol Error-Ereignis meldet, dass die Datenbankspiegelungs-Anmeldung eine Meldung erhält, die zwar wohlgeformt, jedoch für den aktuellen Status des Anmeldeprozesses ungültig ist. Die Meldung ging eventuell verloren oder wurde außer der Reihe versendet.|  

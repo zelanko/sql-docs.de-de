@@ -7,8 +7,7 @@ ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.component: in-memory-oltp
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
@@ -17,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f258adcc432f932dcc88a816eff17d9f89124199
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 647bf6e7d60b30fb3a698232552f0b3760c6a8e3
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transaktionen mit speicheroptimierten Tabellen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -116,7 +115,7 @@ Datenträgerbasierte Tabellen weisen indirekt ein System zur Zeilenversionsverwa
   
 Die folgende Tabelle enthält die möglichen Stufen der Transaktionsisolation, wobei mit der niedrigsten Isolationsstufe begonnen wird. Informationen zu möglichen Konflikten und der Wiederholungslogik zum Beheben dieser Konflikte finden Sie unter [Konflikterkennung und Wiederholungslogik](#confdetretry34ni). 
   
-| Isolationsebene | Description |   
+| Isolationsebene | und Beschreibung |   
 | :-- | :-- |   
 | READ UNCOMMITTED | Nicht verfügbar: Auf der Isolationsstufe „Read Uncommitted“ kann nicht auf speicheroptimierte Tabellen zugegriffen werden. Der Zugriff auf speicheroptimierte Tabellen auf der Isolationsstufe SNAPSHOT ist weiterhin möglich, wenn TRANSACTION ISOLATION LEVEL auf Sitzungsebene auf READ UNCOMMITTED festgelegt ist. Verwenden Sie hierzu den Tabellenhinweis WITH (SNAPSHOT), oder legen Sie die Datenbankeinstellung MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT auf ON fest. | 
 | READ COMMITTED | Nur für speicheroptimierte Tabellen unterstützt, wenn der Autocommitmodus aktiviert ist. Der Zugriff auf speicheroptimierte Tabellen auf der Isolationsstufe SNAPSHOT ist weiterhin möglich, wenn TRANSACTION ISOLATION LEVEL auf Sitzungsebene auf READ COMMITTED festgelegt ist. Verwenden Sie hierzu den Tabellenhinweis WITH (SNAPSHOT), oder legen Sie die Datenbankeinstellung MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT auf ON fest.<br/><br/>Wenn für die Datenbankoption READ_COMMITTED_SNAPSHOT „ON“ festgelegt ist, ist es nicht erlaubt, mit der gleichen Anweisung sowohl auf eine speicheroptimierte als auch auf eine datenträgerbasierte Tabelle auf der Isolationsstufe READ COMMITTED zuzugreifen. |  
@@ -164,7 +163,7 @@ Es gibt zwei Arten von transaktionsbezogenen Fehlerbedingungen, die einen Fehler
 
 Im Folgenden finden Sie eine Auflistung der Fehlerbedingungen, die dazu führen können, dass Transaktionen nicht auf speicheroptimierte Tabellen zugreifen können.
 
-| Fehlercode | Description | Ursache |
+| Fehlercode | und Beschreibung | Ursache |
 | :-- | :-- | :-- |
 | **41302** | Es wurde versucht, eine Zeile zu aktualisieren, die seit dem Start der aktuellen Transaktion in einer anderen Transaktion aktualisiert wurde. | Diese Fehlerbedingung tritt auf, wenn zwei gleichzeitige Transaktionen versuchen, die gleiche Zeile zur gleichen Zeit zu aktualisieren oder zu löschen. Eine der beiden Transaktionen empfängt diese Fehlermeldung und muss wiederholt werden. <br/><br/>  | 
 | **41305**| REPEATABLE READ-Überprüfungsfehler. Eine Zeile einer speicheroptimierten Tabelle, die von dieser Transaktion gelesen wird, wurde von einer anderen Transaktion aktualisiert, für die vor dem Commit dieser Transaktion ein Commit ausgeführt wurde. | Dieser Fehler kann bei Verwendung der REPEATABLE READ- oder SERIALIZABLE-Isolation auftreten. Er kann auch auftreten, wenn die Aktionen einer gleichzeitigen Transaktion eine FOREIGN KEY-Einschränkung verletzen. <br/><br/>Solche Verletzungen von FOREIGN KEY-Einschränkungen sind selten und weisen in der Regel auf ein Problem mit der Anwendungslogik oder der Dateneingabe hin. Dieser Fehler kann allerdings auch auftreten, wenn in den Spalten, die an der FOREIGN KEY-Einschränkung beteiligt sind, kein Index vorhanden ist. Es empfiehlt sich daher, in FOREIGN KEY-Spalten einer speicheroptimierten Tabelle immer einen Index zu erstellen. <br/><br/> Ausführlichere Überlegungen zu Überprüfungsfehlern, die durch FOREIGN KEY-Verletzungen verursacht werden, finden Sie in [diesem Blogbeitrag](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) des SQL Server-Kundenberatungsteams. |  

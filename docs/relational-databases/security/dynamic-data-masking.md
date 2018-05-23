@@ -13,11 +13,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0aa8b9f31337bbbe2b4a545574c3a9cfc0e03116
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bdd58460e8dc3c9d763f92a335b0d2a0cee850b2
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="dynamic-data-masking"></a>Dynamische Datenmaskierung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ Die dynamische Datenmaskierung steht in [!INCLUDE[ssSQL15](../../includes/sssql1
 ## <a name="defining-a-dynamic-data-mask"></a>Definieren einer dynamischen Datenmaske  
  Eine Maskierungsregel kann für eine Spalte in einer Tabelle definiert werden, um die Daten in dieser Spalte zu verschleiern. Es stehen vier Arten von Masken zur Verfügung.  
   
-|Funktion|Description|Beispiele|  
+|Funktion|und Beschreibung|Beispiele|  
 |--------------|-----------------|--------------|  
 |Default|Die vollständige Maskierung gemäß der Datentypen der festgelegten Felder.<br /><br /> Verwenden Sie XXXX oder weniger X-Platzhalter für Zeichenfolge-Datentypen, wenn die Größe des Felds weniger als vier Zeichen umfasst (**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> Verwenden Sie für numerische Datentypen den Wert 0 (null) (**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> Verwenden Sie für die Datentypen für Datum und Uhrzeit 01.01.1900 00:00:00.0000000 (**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**).<br /><br />Verwenden Sie für binäre Datentypen ein Einzelbyte des ASCII-Werts 0 (**binary**, **varbinary**, **image**).|Beispielsyntax der Spaltendefinition: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> Beispiel für ALTER-Syntax: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
 |Email|Eine Maskierungsmethode, die den ersten Buchstaben einer E-Mail-Adresse und das konstante Suffix „.com“ in Form einer E-Mail-Adresse verfügbar macht. zugreifen. `aXXX@XXXX.com`.|Beispielsyntax der Definition: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> Beispiel für ALTER-Syntax: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
@@ -127,10 +127,10 @@ CREATE TABLE Membership
   (MemberID int IDENTITY PRIMARY KEY,  
    FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)') NULL,  
    LastName varchar(100) NOT NULL,  
-   Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL,  
+   Phone varchar(12) MASKED WITH (FUNCTION = 'default()') NULL,  
    Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL);  
   
-INSERT Membership (FirstName, LastName, Phone#, Email) VALUES   
+INSERT Membership (FirstName, LastName, Phone, Email) VALUES   
 ('Roberto', 'Tamburello', '555.123.4567', 'RTamburello@contoso.com'),  
 ('Janice', 'Galvin', '555.123.4568', 'JGalvin@contoso.com.co'),  
 ('Zheng', 'Mu', '555.123.4569', 'ZMu@contoso.net');  

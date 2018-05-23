@@ -22,11 +22,11 @@ caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 50569b63d34534472e4db8d0afc9dd48e1160f96
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0f67623539244916e430976d46f07f4a1e73baf4
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Tutorial: Konfigurieren der Replikation zwischen zwei Servern mit kontinuierlicher Verbindung (Transaktionsreplikation)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ Für dieses Tutorial benötigen Sie SQL Server, SQL Server Management Studio (SS
 - Laden Sie die [AdventureWorks-Beispieldatenbank](https://github.com/Microsoft/sql-server-samples/releases) herunter. Weitere Informationen zum Wiederherstellen einer Datenbank in SSMS finden Sie unter [Wiederherstellen einer Datenbank](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
  
 >[!NOTE]
-> - Die Replikation wird für SQL Server-Instanzen, zwischen denen mehr als zwei Versionen liegen, nicht unterstützt. Weitere Informationen finden Sie unter [Supported SQL Server Versions in Replication Topology (In der Replikationstopologie unterstützte SQL-Versionen)](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/).
+> - Die Replikation wird für SQL Server-Instanzen, zwischen denen mehr als zwei Versionen liegen, nicht unterstützt. Weitere Informationen finden Sie unter [In der Replikationstopologie unterstützte SQL Server-Versionen](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/).
 > - Sie müssen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Verbindung mit dem Verleger und dem Abonnenten herstellen. Dazu verwenden Sie einen Anmeldenamen eines Mitglieds der festen Serverrolle **sysadmin** ist. Weitere Informationen zu dieser Rolle finden Sie unter [Rollen auf Serverebene](https://docs.microsoft.com/en-us/sql/relational-databases/security/authentication-access/server-level-roles).  
   
   
@@ -72,7 +72,7 @@ In diesem Abschnitt erstellen Sie mithilfe von [!INCLUDE[ssManStudioFull](../../
 
 
 ### <a name="create-a-publication-and-define-articles"></a>Erstellen einer Veröffentlichung und Definieren von Artikeln
-1. Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Verbindung mit dem Verleger her, und erweitern Sie anschließend den Serverknoten.  
+1. Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Verbindung mit dem Verleger her, und erweitern Sie dann den Serverknoten.  
   
 2. Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent**, und klicken Sie anschließend auf **Starten**. Der SQL Server-Agent muss ausgeführt werden, bevor Sie die Veröffentlichung erstellen. Wenn der Agent nicht gestartet wird, müssen Sie ihn manuell über den SQL Server-Konfigurations-Manager starten. 
 3. Erweitern Sie den Ordner **Replikation**, und klicken Sie mit der rechten Maustaste auf den Ordner **Lokale Veröffentlichungen**. Klicken Sie anschließend auf **Neue Veröffentlichung**. Dadurch wird der Assistent für neue Veröffentlichungen gestartet:  
@@ -130,7 +130,7 @@ Wenn Ihr SQL Server-Agent bei dem Versuch, die Veröffentlichung zu erstellen, n
   
 ### <a name="view-the-status-of-snapshot-generation"></a>Anzeigen des Status der Momentaufnahmeerstellung  
   
-1. Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Verbindung mit dem Verleger her, und erweitern Sie anschließend zuerst den Serverknoten und dann den Ordner **Replikation**.  
+1. Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Verbindung mit dem Verleger her, und erweitern Sie dann den Serverknoten und den Ordner **Replikation**.  
   
 2. Klicken Sie im Ordner **Lokale Veröffentlichungen** mit der rechten Maustaste auf **AdvWorksProductTrans**, und wählen Sie anschließend **Status des Momentaufnahmen-Agents anzeigen** aus:  
    ![Menüelement im Kontextmenü zur Anzeige des Status des Momentaufnahmen-Agents](media/tutorial-replicating-data-between-continuously-connected-servers/viewsnapshot.png)
@@ -141,12 +141,12 @@ Anhand des Status des Momentaufnahmen-Agents für Ihre Veröffentlichung können
 
 ![Schaltfläche „Starten“ und Statusmeldungsänderung, durch die darauf aufmerksam gemacht wird, dass der Momentaufnahmen-Agent ausgeführt wurde](media/tutorial-replicating-data-between-continuously-connected-servers/startsnapshotagent.png)
      
-Wenn Ihnen hier ein Fehler angezeigt wird, finden Sie unter [Troubleshooting Snapshot Agent errors (Problembehandlung bei Fehlern im Zusammenhang mit dem Momentaufnahmen-Agent)](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md#troubleshoot-errors-with-snapshot-agent) weitere Informationen. 
+Wenn Ihnen hier ein Fehler angezeigt wird, finden Sie unter [Troubleshooting Snapshot Agent errors (Problembehandlung bei Fehlern im Zusammenhang mit dem Momentaufnahmen-Agent)](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md#find-errors-with-snapshot-agent) weitere Informationen. 
 
   
 ### <a name="add-the-distribution-agent-login-to-the-pal"></a>Hinzufügen der Verteilungs-Agent-Anmeldung zur PAL  
   
-1. Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Verbindung mit dem Verleger her, und erweitern Sie anschließend zuerst den Serverknoten und dann den Ordner **Replikation**.  
+1. Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Verbindung mit dem Verleger her, und erweitern Sie dann den Serverknoten und den Ordner **Replikation**.  
   
 2. Klicken Sie im Ordner **Lokale Veröffentlichungen** mit der rechten Maustaste auf **AdvWorksProductTrans**, und wählen Sie anschließend **Eigenschaften** aus.  Das Dialogfeld **Veröffentlichungseigenschaften** wird angezeigt.    
   
@@ -163,7 +163,7 @@ In diesem Abschnitt fügen Sie der zuvor erstellten Veröffentlichung einen Abon
 
 ### <a name="create-the-subscription"></a>Erstellen des Abonnements  
   
-1. Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Verbindung mit dem Verleger her, und erweitern Sie anschließend zuerst den Serverknoten und dann den Ordner **Replikation**.  
+1. Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Verbindung mit dem Verleger her, und erweitern Sie dann den Serverknoten und den Ordner **Replikation**.  
   
 2. Klicken Sie im Ordner **Lokale Veröffentlichungen** mit der rechten Maustaste auf die Veröffentlichung **AdvWorksProductTrans**, und wählen Sie anschließend **Neue Abonnements** aus. Der Assistent für neue Abonnements wird gestartet: 
  

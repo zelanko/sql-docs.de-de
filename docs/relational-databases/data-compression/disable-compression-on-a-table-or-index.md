@@ -6,7 +6,6 @@ ms.prod: sql
 ms.reviewer: ''
 ms.suite: SQL
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: data-compression
 ms.technology: performance
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
@@ -18,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1079f9c04bed6bff12e5b67a5003a84a95daf3c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f49f2a3f3201b732d3bf9b291f5940218c05ad0c
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>Deaktivieren der Komprimierung für eine Tabelle oder einen Index
 
@@ -65,7 +64,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  Erweitern Sie in Objekt-Explorer die Datenbank, die die Tabelle enthält, für die Sie die Komprimierung deaktivieren möchten, und erweitern Sie dann den Ordner **Tabellen** .  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Tabelle oder den Index, für die bzw. den Sie die Komprimierung deaktivieren möchten, zeigen Sie auf **Speicher** , und wählen Sie **Komprimierung verwalten…**aus.  
+2.  Klicken Sie mit der rechten Maustaste auf die Tabelle oder den Index, für die bzw. den Sie die Komprimierung deaktivieren möchten, zeigen Sie auf **Speicher** , und wählen Sie **Komprimierung verwalten…** aus.  
   
 3.  Um die Komprimierung für einen Index zu deaktivieren, erweitern Sie die Tabelle, die den Index enthält, und dann erweitern Sie den Ordner **Indizes** .  
   

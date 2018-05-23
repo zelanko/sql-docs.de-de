@@ -2,27 +2,21 @@
 title: Timeout der Integritätsprüfung für Lease der SQL Server-Verfügbarkeitsgruppe | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/02/2018
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ''
-caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4b39a5efee4f6ee5c73b9dfefb85c360a18b10f4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9433c4ab54b51663979118d27f665b16cae7150a
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts"></a>Mechanismen und Richtlinien der Timeouts für Lease, Cluster und Integritätsprüfung 
 
@@ -48,7 +42,7 @@ Wenn die Integritätserkennung der Ressourcen-DLL über mehrere Intervalle keine
 
 Im Gegensatz zu anderen Failovermechanismen spielt die SQL Server-Instanz beim Leasemechanismus eine aktive Rolle. Wenn die Verfügbarkeitsgruppe als primäres Replikat online geschaltet wird, erzeugt die SQL Server-Instanz einen dedizierten Leaseworkerthread für die Verfügbarkeitsgruppe. Der Leaseworker teilt sich einen kleinen Bereich des Speichers mit dem Ressourcenhost, der die Ereignisse für Leaseverlängerung und Leasebeendigung enthält. Der Leaseworker und der Ressourcenhost arbeiten kreisförmig, indem sie das jeweilige Leaseverlängerungsereignis signalisieren und dann im Ruhezustand darauf warten, dass die andere Seite das eigene Leaseverlängerungsereignis oder das Beendigungsereignis signalisiert. Sowohl der Ressourcenhost als auch der SQL Server-Leasethread besitzen einen Wert für die Gültigkeitsdauer, der jedes Mal dann aktualisiert wird, wenn der Thread nach der Signalisierung durch den anderen Thread aktiviert wird. Wenn beim Warten auf das Signal die Gültigkeitsdauer erreicht wird, läuft die Lease ab und das Replikat geht dann in den Auflösungsstatus für die jeweilige Verfügbarkeitsgruppe über. Wenn das Leasebeendigungsereignis signalisiert wird, geht das Replikat in eine Auflösungsrolle über. 
 
-![Bild](media/availability-group-lease-healthcheck-timeout/image1.png) 
+![image](media/availability-group-lease-healthcheck-timeout/image1.png) 
 
 Der Leasemechanismus erzwingt die Synchronisierung zwischen SQL Server und Windows Server-Failovercluster. Bei Ausgabe eines Failoverbefehls sendet der Clusterdienst einen Offlineaufruf an die Ressourcen-DLL des aktuellen primären Replikats. Die Ressourcen-DLL versucht zunächst, die Verfügbarkeitsgruppe anhand einer gespeicherten Prozedur offline zu schalten. Wenn bei dieser gespeicherten Prozedur ein Fehler oder ein Timeout auftritt, wird dies dem Clusterdienst zurückgemeldet, der dann einen Befehl zum Beenden ausgibt. Bei diesem Befehl wird erneut versucht, dieselbe gespeicherte Prozedur auszuführen, doch wartet der Cluster diesmal nicht, dass die Ressourcen-DLL einen Erfolg oder Fehler meldet, bevor die Verfügbarkeitsgruppe auf einem neuen Replikat online geschaltet wird. Wenn dieser zweite Prozeduraufruf fehlschlägt, muss sich der Ressourcenhost darauf verlassen, dass die Instanz vom Leasemechanismus offline geschaltet wird. Wenn die Ressourcen-DLL zum Offlineschalten der Verfügbarkeitsgruppe aufgerufen wird, signalisiert die Ressourcen-DLL das Leasebeendigungsereignis und aktiviert dadurch den SQL Server-Leaseworkerthread, um die Verfügbarkeitsgruppe offline zu schalten. Auch wenn dieses Beendigungsereignis nicht signalisiert wird, läuft die Lease ab und das Replikat geht in den Auflösungsstatus über. 
 

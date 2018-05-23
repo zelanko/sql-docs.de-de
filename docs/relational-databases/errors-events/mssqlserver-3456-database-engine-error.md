@@ -3,8 +3,6 @@ title: MSSQLSERVER_3456 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: errors-events
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: supportability
@@ -17,11 +15,11 @@ caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d06739b8d95741295c5f401fa96f9733d3d1cbc4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0d12ab4f39655a606e3bfa7afcb519fffe9ffcc4
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="mssqlserver3456"></a>MSSQLSERVER_3456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +36,7 @@ ms.lasthandoff: 05/04/2018
 |Meldungstext|Der Protokolleintrag %S_LSN für die Transaktions-ID %S_XID auf Seite %S_PGID, %.*ls-Datenbank (Datenbank-ID %d) konnte nicht rückgängig gemacht werden. Seite: LSN = %S_LSN, Typ = %ld. Protokoll: OpCode = %ld, Kontext %ld, PrevPageLSN: %S_LSN. Stellen Sie die Datenbank von einer Sicherung wieder her, oder reparieren Sie die Datenbank.|  
   
 ## <a name="explanation"></a>Erklärung  
-Der Wiederherstellungsvorgang konnte das Transaktionsprotokoll nicht wiederholen. Durch diesen Fehler wurde die Datenbank in den SUSPECT-Status geschaltet. Die primäre Dateigruppe und möglicherweise weitere Dateigruppen sind fehlerverdächtig und u. U. beschädigt. Die Datenbank kann während Starts von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht wiederhergestellt werden und ist daher nicht verfügbar. Eine Aktion seitens des Benutzers ist erforderlich, um das Problem zu beheben.  
+Der Wiederherstellungsvorgang konnte das Transaktionsprotokoll nicht wiederholen. Durch diesen Fehler wurde die Datenbank in den SUSPECT-Status geschaltet. Die primäre Dateigruppe und möglicherweise weitere Dateigruppen sind fehlerverdächtig und u. U. beschädigt. Die Datenbank kann während Starts von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht wiederhergestellt werden und ist daher nicht verfügbar. Eine Aktion seitens des Benutzers ist erforderlich, um das Problem zu beheben.  
   
 Falls dieser Fehler für **tempdb**auftritt, wird die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz heruntergefahren.  
   

@@ -6,7 +6,6 @@ ms.prod: sql
 ms.reviewer: ''
 ms.suite: SQL
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: data-compression
 ms.technology: performance
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
@@ -28,11 +27,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ed2333257a75033a6a7abb38451b118c07084551
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 688d14a811c812d0b00f42bb961fc9e31ea9cd3a
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Aktivieren der Komprimierung für eine Tabelle oder einen Index
 
@@ -77,7 +76,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  Um einen Index zu komprimieren, erweitern Sie die Tabelle mit dem Index, den Sie komprimieren möchten, und erweitern Sie dann den Ordner **Indizes** .  
   
-3.  Klicken Sie mit der rechten Maustaste auf die Tabelle oder den Index, die bzw. den Sie komprimieren möchten, zeigen Sie auf **Speicher** , und wählen Sie **Komprimierung verwalten…**aus.  
+3.  Klicken Sie mit der rechten Maustaste auf die Tabelle oder den Index, die bzw. den Sie komprimieren möchten, zeigen Sie auf **Speicher** , und wählen Sie **Komprimierung verwalten…** aus.  
   
 4.  Klicken Sie auf der Seite **Willkommen** des Datenkomprimierungs-Assistenten auf **Weiter**.  
   

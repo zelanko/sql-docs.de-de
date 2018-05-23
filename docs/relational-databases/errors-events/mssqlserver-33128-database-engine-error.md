@@ -3,8 +3,6 @@ title: MSSQLSERVER_33128 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: errors-events
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: supportability
@@ -17,11 +15,11 @@ caps.latest.revision: 8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c2b33e7edfd392da913d6887ae8bbbbef6630093
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e06181582c7a08a7165f7e8545a170b5eec27310
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="mssqlserver33128"></a>MSSQLSERVER_33128
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +45,7 @@ Wenn der Kompatibilitätsgrad der Datenbank 110 oder höher beträgt, werden En
 > [!NOTE]  
 > Der Ringpuffer ist eine interne Komponente, die nicht vollständig dokumentiert ist und nicht für die Verwendung durch Kunden bestimmt ist. Meldungen aus dem Ringpuffer sind bei der Kontaktaufnahme mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Kundensupport hilfreich. Zum Anzeigen des Ringpuffers fragen Sie die dynamische Verwaltungssicht sys.dm_os_ring_buffers ab.  
   
-|Status|Beschreibung|  
+|Status|und Beschreibung|  
 |---------|---------------|  
 |1|Ein RC4-Schlüssel wird in der integrierten encryptbykey()-Funktion verwendet. Die integrierte Funktion gibt NULL zurück. Diese Meldung wird nur im Ringpuffer angezeigt.|  
 |2|Ein RC4-Schlüssel wird in von der integrierten decryptbykey()-Funktion verwendet. Diese Meldung wird nur im Ringpuffer angezeigt.|  

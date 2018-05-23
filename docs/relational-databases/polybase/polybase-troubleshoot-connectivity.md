@@ -5,7 +5,7 @@ ms.author: alazad
 manager: craigg
 ms.assetid: ''
 ms.component: polybase
-ms.technology: database
+ms.technology: polybase
 ms.suite: sql
 ms.custom: ''
 ms.tgt_pltfrm: na
@@ -13,12 +13,12 @@ ms.devlang: ''
 ms.topic: article
 ms.date: 07/19/2017"
 ms.prod: sql
-ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.openlocfilehash: dce5bc3018cb223a8d3c9f0f85aa56c8aba1e4f3
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.prod_service: polybase, sql-data-warehouse, pdw
+ms.openlocfilehash: fc09df1265c81f1fe1a127e17c4ebd4edcc66a1a
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Problembehandlung: PolyBase-Kerberos-Konnektivität
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ Sie können ein interaktives, in PolyBase integriertes Diagnosetool verwenden, u
 
 Dieser Artikel dient als Hilfestellung beim Debuggingprozess solcher Probleme mit diesem Tool.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 1. SQL Server 2016 RTM CU6/SQL Server 2016 SP1 CU3/SQL Server 2017 oder höher mit installiertem PolyBase
 1. Ein Hadoop-Cluster (Cloudera oder Hortonworks), das durch Kerberos gesicherte wird (Active Directory oder MIT)
@@ -88,7 +88,7 @@ Das Tool wird unabhängig von SQL Server ausgeführt. Dies bedeutet, dass es wed
 ```
 
 ## <a name="arguments"></a>Argumente
-| Argument | Beschreibung|
+| Argument | und Beschreibung|
 | --- | --- |
 | *Namenknotenadresse* | Die IP oder der FQDN des Namenknotens. Dies verweist auf das „LOCATION“-Argument ihrer T-SQL „CREATE EXTERNAL DATA SOURCE“.|
 | *Namenknotenport* | Der Port des Namensknotens. Dies verweist auf das „LOCATION“-Argument ihrer T-SQL „CREATE EXTERNAL DATA SOURCE“. Normalerweise ist dies 8020. |

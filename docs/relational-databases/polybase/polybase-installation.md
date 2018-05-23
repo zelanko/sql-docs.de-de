@@ -7,36 +7,36 @@ ms.prod_service: database-engine
 ms.component: polybase
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: database
+ms.technology: polybase
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - PolyBase, installation
-author: MashaMSFT
-ms.author: mathoma
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ebb1794c1fcefcab24c5c60f4fcceff42dacc6e0
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 7a897b2a3a74900763cb6de6eb398e14b5d1bdb1
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="polybase-installation"></a>PolyBase-Installation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Besuchen Sie [SQL Server Evaluierungsversionen](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016), um eine Testversion von SQL Server zu installieren. 
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
   
 - Eine 64-Bit-Evaluierungs-Edition von SQL Server  
   
 - Microsoft .NET Framework 4.5.  
 
-- Oracle Java SE Runtime Environment (JRE). Version 7 (ab 7.51) und 8 werden unterstützt ([JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) oder [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html)). Wechseln Sie zu [Java SE-Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Das Installationsprogramm löst einen Fehler aus, wenn JRE nicht vorhanden ist. JRE9 und JRE10 werden nicht unterstützt.
+- Oracle Java SE Runtime Environment (JRE). Version 7 (ab 7.51) und 8 werden unterstützt ([JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) oder [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html)). Wechseln Sie zu [Java SE-Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Das Installationsprogramm schlägt fehl, wenn JRE nicht vorhanden ist. JRE9 und JRE10 werden nicht unterstützt.
     
 - Mindestens erforderlicher Arbeitsspeicher: 4 GB  
   
-- Mindestens erforderlicher Speicherplatz: 2 GB  
+- Mindestfestplattenspeicher: 2 GB  
   
 - TCP/IP muss für Polybase aktiviert sein, damit es ordnungsgemäß funktioniert. TCP/IP ist standardmäßig in allen Editionen von SQL Server aktiviert. Davon ausgenommen sind nur die Editionen Developer und Express SQL Server. Damit Polybase auch in den Developer- und Express-Edition ordnungsgemäß funktionieren kann, müssen Sie die TCP/IP-Konnektivität aktivieren (Informationen dazu finden Sie unter [Enable or Disable a Server Network Protocol (Aktivieren und -Deaktivieren eines Server-Netzwerkprotokolls](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)).
 
@@ -82,12 +82,12 @@ Sobald PolyBase entweder eigenständig oder in einer Gruppe mit horizontaler Ska
   
          Durch Auswahl dieser Option werden auch Firewallverbindungen des Microsoft Distributed Transaction Coordinator (MSDTC)-Diensts zugelassen und die MSDTC-Registrierungseinstellungen geändert.  
   
-6.  Geben Sie auf der Seite **PolyBase-Konfiguration**den Portbereich mit mindestens sechs Ports an. SQL Server-Setup weist die ersten sechs verfügbaren Ports aus diesem Bereich zu.  
+6.  Geben Sie auf der Seite **PolyBase-Konfiguration**den Portbereich mit mindestens sechs Ports an. SQL Server-Setup wird die ersten sechs verfügbaren Ports aus diesem Bereich zuweisen.  
   
 ##  <a name="installing"></a> Installieren mithilfe einer Eingabeaufforderung  
  Verwenden Sie die Werte in dieser Tabelle, um Installationsskripte zu erstellen. Die beiden Dienste **SQL Server PolyBase-Engine** und **SQL Server PolyBase-Datenverschiebung** müssen unter demselben Konto ausgeführt werden. In einer PolyBase-Gruppe mit horizontaler Skalierung müssen PolyBase-Dienste auf allen Knoten unter demselben Domänenkonto ausgeführt werden.  
   
-|SQL Server-Komponente|Parameter und Werte|Beschreibung|  
+|SQL Server-Komponente|Parameter und Werte|und Beschreibung|  
 |--------------------------|--------------------------|-----------------|  
 |SQL Server-Setupsteuerung|**Erforderlich**<br /><br /> /FEATURES=PolyBase|Wählt die PolyBase-Funktion aus.|  
 |SQL Server PolyBase-Engine|**Optional**<br /><br /> /PBENGSVCACCOUNT|Gibt das Konto für den Engine-Dienst an. Der Standardwert ist **NT Authority\NETWORK SERVICE**.|  

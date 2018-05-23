@@ -3,12 +3,9 @@ title: Performance Statistics-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: event-classes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aef48d5ad774acfc01f127400863272b8c9d3c3c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 54ba7634152d355f16d73a48f0a430e83b861fc5
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics-Ereignisklasse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +31,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="eventsubclass-0"></a>EventSubClass 0  
   
-|Datenspaltenname|Datentyp|Description|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|ja|  
 |BinaryData|**image**|NULL|2|ja|  
@@ -53,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="eventsubclass-1"></a>EventSubClass 1  
   
-|Datenspaltenname|Datentyp|Description|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|Die Gesamtanzahl der Neukompilierungen dieses Plans.|52|ja|  
 |BinaryData|**image**|Binary XML des kompilierten Plans.|2|ja|  
@@ -77,7 +74,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="eventsubclass-2"></a>EventSubClass 2  
   
-|Datenspaltenname|Datentyp|Description|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|Die Gesamtanzahl der Neukompilierungen dieses Plans.|52|ja|  
 |BinaryData|**image**|Binary XML des kompilierten Plans.|2|ja|  
@@ -100,7 +97,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="eventsubclass-3"></a>EventSubClass 3  
   
-|Datenspaltenname|Datentyp|Description|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|Die Gesamtanzahl der Neukompilierungen dieses Plans.|52|ja|  
 |BinaryData|**image**|NULL|2|ja|  
@@ -120,7 +117,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="eventsubclass-4"></a>EventSubClass 4  
   
-|Datenspaltenname|Datentyp|Description|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|ja|  
 |BinaryData|**image**|NULL|2|ja|  
@@ -140,7 +137,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="eventsubclass-5"></a>EventSubClass 5  
   
-|Datenspaltenname|Datentyp|Description|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|ja|  
 |BinaryData|**image**|NULL|2|ja|  
