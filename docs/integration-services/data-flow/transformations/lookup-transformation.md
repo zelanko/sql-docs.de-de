@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 # <a name="lookup-transformation"></a>Transformation für Suche
   Die Transformation für die Suche führt Suchvorgänge aus, indem Daten in Eingabespalten mit Spalten in einem Verweisdataset verknüpft werden. Mithilfe der Transformation für Suche können Sie auf zusätzliche Informationen in einer zugehörigen Tabelle zugreifen, die auf Werten in gemeinsamen Spalten basiert.  
   
- Das Verweisdataset kann eine Cachedatei, eine vorhandene Tabelle oder Sicht, eine neue Tabelle oder das Ergebnis einer SQL-Abfrage sein. Die Transformation für Suche stellt entweder mithilfe eines OLE DB-Verbindungs-Managers oder eines Cacheverbindungs-Managers eine Verbindung mit dem Verweisdataset her. Weitere Informationen finden Sie unter [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md) und [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md)  
+ Das Verweisdataset kann eine Cachedatei, eine vorhandene Tabelle oder Sicht, eine neue Tabelle oder das Ergebnis einer SQL-Abfrage sein. Die Transformation für Suche stellt entweder mithilfe eines OLE DB-Verbindungs-Managers oder eines Cacheverbindungs-Managers eine Verbindung mit dem Verweisdataset her. Weitere Informationen finden Sie unter [OLE DB-Verbindungs-Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md) und [Cacheverbindungs-Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md)  
   
  Es gibt folgende Möglichkeiten, um die Transformation für die Suche zu konfigurieren:  
   
@@ -108,7 +108,7 @@ ms.lasthandoff: 05/03/2018
   
      Diese Option für die Zwischenspeicherung ist kompatibel mit der Option für die vollständige Zwischenspeicherung, die für die Transformation für Suche in [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)]verfügbar ist.  
   
--   Das Verweisdataset wird aus einer verbundenen Datenquelle im Datenfluss oder aus einer Cachefile generiert und in den Cache geladen, bevor die Transformation für Suche ausgeführt wird. Für den Zugriff auf das Dataset verwenden Sie den Cacheverbindungs-Manager und optional die Cachetransformation. Weitere Informationen finden Sie unter [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md) und [Cache Transform](../../../integration-services/data-flow/transformations/cache-transform.md).  
+-   Das Verweisdataset wird aus einer verbundenen Datenquelle im Datenfluss oder aus einer Cachefile generiert und in den Cache geladen, bevor die Transformation für Suche ausgeführt wird. Für den Zugriff auf das Dataset verwenden Sie den Cacheverbindungs-Manager und optional die Cachetransformation. Weitere Informationen finden Sie unter [Cacheverbindungs-Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md) und [Cachetransformation](../../../integration-services/data-flow/transformations/cache-transform.md).  
   
 -   Das Verweisdataset wird durch die Verwendung einer Tabelle, Sicht oder SQL-Abfrage während der Ausführung der Transformation für Suche generiert. Die Zeilen mit übereinstimmenden Einträgen im Verweisdataset und die Zeilen ohne übereinstimmende Einträge im Dataset werden in den Cache geladen.  
   
