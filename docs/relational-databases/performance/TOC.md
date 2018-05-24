@@ -1,10 +1,12 @@
 
-# [Leistungscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank](performance-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+# 
+  [Leistungscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](performance-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 # [Konfigurieren von Speicherplätzen mit NVDIMM-N-Zurückschreibcache](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
 
-# [Adaptive Abfrageverarbeitung](adaptive-query-processing.md)
 # [Automatic Tuning (Automatische Optimierung)](../automatic-tuning/automatic-tuning.md)
 # [Kardinalitätsschätzung](cardinality-estimation-sql-server.md)  
+# [Intelligente Abfrageverarbeitung](intelligent-query-processing.md)
+## [Adaptive Abfrageverarbeitung](adaptive-query-processing.md)
 
 # [Überwachen und Optimieren der Leistung](monitor-and-tune-for-performance.md)  
 ## [Überwachen von SQL Server-Komponenten](monitor-sql-server-components.md)  
@@ -35,13 +37,17 @@
 
 
 # [Datenbankoptimierungsratgeber](database-engine-tuning-advisor.md)  
-## [Starten und Verwenden des Datenbankoptimierungsratgebers](start-and-use-the-database-engine-tuning-advisor.md)  
+## 
+  [Starten und Verwenden des Datenbankoptimierungsratgebers](start-and-use-the-database-engine-tuning-advisor.md)  
 ## [Reduzieren der Optimierungsauslastung des Produktionsservers](reduce-the-production-server-tuning-load.md)  
 ### [Gesichtspunkte bei der Verwendung von Testservern](considerations-for-using-test-servers.md)  
-## [Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers](view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)  
-## [Empfehlungen für Columnstore-Index im Datenbankoptimierungsratgeber (DTA)](columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)  
+## 
+  [Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers](view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)  
+## 
+  [Empfehlungen für Columnstore-Index im Datenbankoptimierungsratgeber (DTA)](columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)  
 ## [Datenbankoptimierung mithilfe der Arbeitsauslastung aus dem Abfragespeicher](tuning-database-using-workload-from-query-store.md)  
-## [Leistungsverbesserungen mithilfe von Empfehlungen des Datenbankoptimierungsratgebers (DTA)](performance-improvements-using-dta-recommendations.md)  
+## 
+  [Leistungsverbesserungen mithilfe von Empfehlungen des Datenbankoptimierungsratgebers (DTA)](performance-improvements-using-dta-recommendations.md)  
 
 # [Planhinweislisten](plan-guides.md)  
 ## [Erstellen einer neuen Planhinweisliste](create-a-new-plan-guide.md)  

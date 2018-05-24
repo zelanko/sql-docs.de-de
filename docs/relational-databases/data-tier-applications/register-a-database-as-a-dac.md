@@ -58,7 +58,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  Erweitern Sie den Knoten **Datenbanken** .  
   
-3.  Klicken Sie mit der rechten Maustaste auf die zu registrierende Datenbank, zeigen Sie auf **Tasks**, und wählen Sie dann **Als Datenschichtanwendung registrieren…**aus.  
+3.  Klicken Sie mit der rechten Maustaste auf die zu registrierende Datenbank, zeigen Sie auf **Tasks**, und wählen Sie dann **Als Datenschichtanwendung registrieren…** aus.  
   
 4.  Bearbeiten Sie die Dialogfenster des Assistenten:  
   

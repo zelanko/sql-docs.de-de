@@ -140,7 +140,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  Erweitern Sie die Tabelle, für die Sie einen eindeutigen Index erstellen möchten.  
   
-4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Index** , zeigen Sie auf **Neuer Index**, und wählen Sie **Nicht gruppierter Index…**aus.  
+4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Index** , zeigen Sie auf **Neuer Index**, und wählen Sie **Nicht gruppierter Index…** aus.  
   
 5.  Geben Sie in das Dialogfeld **Neuer Index** auf der Seite **Allgemein** den Namen des neuen Indexes in das Feld **Indexname** ein.  
   

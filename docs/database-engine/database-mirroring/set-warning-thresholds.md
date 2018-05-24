@@ -35,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="options"></a>Tastatur  
  *Serverinstanz und zugehöriger Verbindungsstatus*  
- Name einer Partnerserverinstanz in der Form *SYSTEM***\\*** INSTANZNAME*. Für eine Standardserverinstanz wird nur der Systemname angezeigt.  
+ Name einer Partnerserverinstanz in der Form *SYSTEM***\\***INSTANZNAME*. Für eine Standardserverinstanz wird nur der Systemname angezeigt.  
   
  Dieses Feld zeigt auch an, ob der Monitor zum aktuellen Zeitpunkt mit der Serverinstanz verbunden ist. Folgende Werte sind für den Verbindungsstatus möglich:  
   

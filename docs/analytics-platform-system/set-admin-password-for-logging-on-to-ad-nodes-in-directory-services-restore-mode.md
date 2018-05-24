@@ -20,7 +20,7 @@ Directory Verzeichnisdienst-Wiederherstellungsmodus (DSRM) ist eine Startmethode
   
 ## <a name="HowToDSRM"></a>Das Administratorkennwort zurücksetzen  
   
-1.  Öffnen Sie ein Eingabeaufforderungsfenster auf einem Gerät AD ***Appliance_domain*– AD*Xx***virtuellen Computer.  
+1.  Öffnen Sie ein Eingabeaufforderungsfenster auf einem Gerät AD ***Appliance_domain *– AD*Xx***virtuellen Computer.  
   
 2.  Geben Sie an der Eingabeaufforderung `ntdsutil`.  
   

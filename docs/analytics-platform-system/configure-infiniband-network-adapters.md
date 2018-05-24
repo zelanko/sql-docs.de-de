@@ -69,7 +69,7 @@ Um Ihren eigenen geschäftsanforderungen zu erfüllen, können Sie die Clientser
   
 3.  Klicken Sie im Fenster Netzwerkverbindungen mit der rechten Maustaste auf das Team IB1, und wählen Sie Eigenschaften aus.  
   
-    ![InfiniBand-Verbindungen auf dem Verwaltungsknoten](media/network-teamib.png "InfiniBand-Verbindungen auf den Knoten "Management"")  
+    ![InfiniBand-Verbindungen auf dem Verwaltungsknoten](media/network-teamib.png "InfiniBand-Verbindungen auf den Knoten \"Management\"")  
   
 4.  Im Fenster Eigenschaften von Internetprotokoll Version 4 (TCP/IPv4) Notieren Sie sich die Werte für die **IP-Adresse** und **Subnetzmaske**.  Die IP-Adresse der ***Appliance_domain *-AD01** Knoten ist die IP-Adresse des Analytics Platform System, DNS-Servers.  
   
