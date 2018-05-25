@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: aa67fbf2480de093ffe2f919e9c50ee2d5082b83
-ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.openlocfilehash: 694cbb2a6addc89f40dd6d9670768ad13a84ef3f
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Aktualisieren des Machine learning (R und Python) Komponenten in SQL Server-Instanzen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -258,37 +258,6 @@ Alternativ können Sie dies mehr Arbeit ist, aber Sie könnten auch vollständig
 
 Sie können andere Open Source- oder Drittanbieter-Pakete für die Paket-Bibliotheksfreigabe hinzugefügt haben. Da den Speicherort des Pakets Standardbibliothek Umkehren der Bindungsnamens gewechselt wird, müssen Sie die Pakete in der Bibliothek, die R und Python jetzt verwenden, neu installieren. Weitere Informationen finden Sie unter [Standard Pakete](installing-and-managing-r-packages.md), [neue R-Pakete installieren](install-additional-r-packages-on-sql-server.md), und [neue Python Installationspakete](../python/install-additional-python-packages-on-sql-server.md).
 
-## <a name="known-issues"></a>Bekannte Probleme
-
-Dieser Abschnitt enthält bekannte Probleme im Zusammenhang Verwendung des Hilfsprogramms SqlBindR.exe oder für Upgrades von Machine Learning-Server, die SQL Server-Instanzen beeinträchtigen können.
-
-### <a name="restoring-packages-that-were-previously-installed"></a>Wiederherstellen von Paketen, die zuvor installiert wurden
-
-Wenn Sie auf Microsoft R Server 9.0.1 aktualisiert, die Version des SqlBindR.exe für die jeweilige Version konnte nicht die ursprünglichen Pakete wiederhergestellt oder R-Komponenten vollständig zu erfordern, dass der Benutzer auf der Instanz, SQL Server-Reparatur Ausführen aller Service Releases gelten, und starten Sie die Instanz.
-
-Folgeversion von SqlBindR automatisch die ursprüngliche R-Funktionen, entfällt das Erfordernis Neuinstallation des R-Komponenten wiederherstellen oder erneut Patch für den Server. Allerdings müssen Sie alle Updates der R-Paket installieren, die nach der Erstinstallation hinzugefügt wurden.
-
-Wenn Sie zum Installieren und Freigeben von Paket die Paket-Verwaltungsrollen verwendet haben, ist diese Aufgabe sehr viel einfacher: Sie können R-Befehle verwenden, mit dem installierten Pakete im Dateisystem verwenden die Datensätze in der Datenbank synchronisiert und umgekehrt. Weitere Informationen finden Sie unter [paketverwaltung für SQL Server R](r-package-management-for-sql-server-r-services.md).
-
-### <a name="problems-with-multiple-upgrades-from-sql-server"></a>Probleme bei mehreren Upgrades von SQL Server
-
-Wenn Sie beim Ausführen von mit dem neuen Installers für Microsoft R Server 9.1.0 zuvor eine Instanz von SQL Server 2016 R Services zu 9.0.1 aktualisiert haben, zeigt eine Liste aller gültigen Instanzen und wählt dann standardmäßig bereits gebundenen Instanzen aus. Wenn Sie den Vorgang fortsetzen, sind die zuvor gebundenen Instanzen aufgehoben. Als Ergebnis der früheren 9.0.1 Installation entfernt wird, einschließlich aller Pakete verknüpft, aber die neue Version von Microsoft R Server (9.1.0) ist nicht installiert.
-
-Dieses Problem zu umgehen können Sie die vorhandene Installation von R-Server wie folgt ändern:
-1. Öffnen Sie in der Systemsteuerung **Software**.
-2. Suchen von Microsoft R Server, und klicken Sie auf **ändern "/" ändern**.
-3. Wenn das Installationsprogramm gestartet wird, wählen Sie die Instanzen, die Sie an 9.1.0 binden möchten.
-
-Microsoft Machine Learning Server 9.2.1 und 9.3 verfügen nicht über dieses Problem.
-
-### <a name="binding-or-unbinding-leaves-multiple-temporary-folders"></a>Binden oder Aufheben der Bindung bewirkt, dass mehrere temporären Ordner
-
-Treten ggf. Fehler bei der Bindung und Aufheben der Bindung Vorgänge zum Bereinigen von temporären Ordner.
-Wenn Sie den Ordner mit einem Namen wie folgt finden, können Sie diesen entfernen, nachdem die Installation abgeschlossen ist: R_SERVICES_<guid>
-
-> [!NOTE]
-> Achten Sie darauf warten, bis die Installation abgeschlossen ist. Es dauert sehr lange zum Entfernen von R-Bibliotheken, die eine Version zugeordnet, und fügen Sie dann die neuen R-Bibliotheken. Wenn der Vorgang abgeschlossen ist, werden temporäre Ordner entfernt.
-
 ## <a name="sqlbindrexe-command-syntax"></a>SqlBindR.exe Befehlssyntax
 
 ### <a name="usage"></a>Verwendung
@@ -322,6 +291,36 @@ MLS Installer und SqlBindR werden die folgenden Fehlercodes und Nachrichten zur�
 |Binden Sie Fehler 8 | Aufheben der Bindung fehlgeschlagen | Fehler beim Aufheben der Bindung der Instanz. |
 |Binden Sie Fehler 9 | Keine Instanzen gefunden | Auf diesem Computer wurden keine Datenbank-Engine-Instanzen gefunden. |
 
+## <a name="known-issues"></a>Bekannte Probleme
+
+Dieser Abschnitt enthält bekannte Probleme im Zusammenhang Verwendung des Hilfsprogramms SqlBindR.exe oder für Upgrades von Machine Learning-Server, die SQL Server-Instanzen beeinträchtigen können.
+
+### <a name="restoring-packages-that-were-previously-installed"></a>Wiederherstellen von Paketen, die zuvor installiert wurden
+
+Wenn Sie auf Microsoft R Server 9.0.1 aktualisiert, die Version des SqlBindR.exe für die jeweilige Version konnte nicht die ursprünglichen Pakete wiederhergestellt oder R-Komponenten vollständig zu erfordern, dass der Benutzer auf der Instanz, SQL Server-Reparatur Ausführen aller Service Releases gelten, und starten Sie die Instanz.
+
+Folgeversion von SqlBindR automatisch die ursprüngliche R-Funktionen, entfällt das Erfordernis Neuinstallation des R-Komponenten wiederherstellen oder erneut Patch für den Server. Allerdings müssen Sie alle Updates der R-Paket installieren, die nach der Erstinstallation hinzugefügt wurden.
+
+Wenn Sie zum Installieren und Freigeben von Paket die Paket-Verwaltungsrollen verwendet haben, ist diese Aufgabe sehr viel einfacher: Sie können R-Befehle verwenden, mit dem installierten Pakete im Dateisystem verwenden die Datensätze in der Datenbank synchronisiert und umgekehrt. Weitere Informationen finden Sie unter [paketverwaltung für SQL Server R](r-package-management-for-sql-server-r-services.md).
+
+### <a name="problems-with-multiple-upgrades-from-sql-server"></a>Probleme bei mehreren Upgrades von SQL Server
+
+Wenn Sie beim Ausführen von mit dem neuen Installers für Microsoft R Server 9.1.0 zuvor eine Instanz von SQL Server 2016 R Services zu 9.0.1 aktualisiert haben, zeigt eine Liste aller gültigen Instanzen und wählt dann standardmäßig bereits gebundenen Instanzen aus. Wenn Sie den Vorgang fortsetzen, sind die zuvor gebundenen Instanzen aufgehoben. Als Ergebnis der früheren 9.0.1 Installation entfernt wird, einschließlich aller Pakete verknüpft, aber die neue Version von Microsoft R Server (9.1.0) ist nicht installiert.
+
+Dieses Problem zu umgehen können Sie die vorhandene Installation von R-Server wie folgt ändern:
+1. Öffnen Sie in der Systemsteuerung **Software**.
+2. Suchen von Microsoft R Server, und klicken Sie auf **ändern "/" ändern**.
+3. Wenn das Installationsprogramm gestartet wird, wählen Sie die Instanzen, die Sie an 9.1.0 binden möchten.
+
+Microsoft Machine Learning Server 9.2.1 und 9.3 verfügen nicht über dieses Problem.
+
+### <a name="binding-or-unbinding-leaves-multiple-temporary-folders"></a>Binden oder Aufheben der Bindung bewirkt, dass mehrere temporären Ordner
+
+Treten ggf. Fehler bei der Bindung und Aufheben der Bindung Vorgänge zum Bereinigen von temporären Ordner.
+Wenn Sie den Ordner mit einem Namen wie folgt finden, können Sie diesen entfernen, nachdem die Installation abgeschlossen ist: R_SERVICES_<guid>
+
+> [!NOTE]
+> Achten Sie darauf warten, bis die Installation abgeschlossen ist. Es dauert sehr lange zum Entfernen von R-Bibliotheken, die eine Version zugeordnet, und fügen Sie dann die neuen R-Bibliotheken. Wenn der Vorgang abgeschlossen ist, werden temporäre Ordner entfernt.
 
 ## <a name="see-also"></a>Siehe auch
 

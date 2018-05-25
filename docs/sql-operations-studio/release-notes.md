@@ -13,11 +13,11 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 47c5e129ca6c77f9116b6be928f202341d457041
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 3f461b78c3d76f7e6b848b83d8a2333dffe5de3c
+ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>Versionshinweise für SQL-Vorgänge Studio (Vorschau)
 
@@ -33,7 +33,7 @@ Die *öffentliche Vorschau möglicherweise* konzentriert sich auf die Stabilisie
 
 - Ankündigung Redgate SQL Search-Erweiterung im Erweiterungs-Manager verfügbar.
 - Community-Lokalisierung für 10 Sprachen verfügbar: Deutsch, Spanisch, Französisch, Italienisch, Japanisch, Koreanisch, Portugiesisch, Russisch, vereinfachtes Chinesisch und traditionelles Chinesisch.
-- GDPR kompatible Build wurde Telemetrie-Erfassung, verbesserter teilnehmen und produktinterne Links auf Privacy Statement reduziert.
+- Reduzierte Telemetrie-Erfassung, verbesserter teilnehmen und produktinterne Links zu Datenschutzbestimmungen.
 - Erweiterungs-Manager verfügt über verbesserte Marketplace, um mühelos ermitteln, Communityerweiterungen auftreten.
 - Zeigen zur Verbesserung der SQL Agentaufträge mit Erweiterung und Auftragsverlauf auf.
 - Updates für Whoisactive und Serverberichten-Erweiterungen.

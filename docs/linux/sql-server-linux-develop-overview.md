@@ -7,17 +7,16 @@ manager: craigg
 ms.date: 11/17/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.custom: sql-linux
 ms.suite: sql
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.openlocfilehash: 7f816c90c51c34d09c501dd41dc266b2fc3ba687
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5445deb30d2e3c3dfd5cc4964f3b5d3ed2d9d391
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Erste Schritte Entwickeln von Anwendungen für SQL Server on Linux
 
@@ -55,11 +54,11 @@ Tools, die derzeit unter Windows wie SSMS, SSDT und PowerShell ausgeführt, funk
 
 Finden Sie unter den folgenden Themen Weitere Informationen:
 
-- [SQL Server Management Studio (SSMS)](sql-server-linux-develop-use-ssms.md)
+- [SQL Server Management Studio (SSMS)](sql-server-linux-manage-ssms.md)
 - [SQL Server Data Tools (SSDT)](sql-server-linux-develop-use-ssdt.md)
 - [SQL-PowerShell](sql-server-linux-manage-powershell.md)
 
-> [!Note] 
+> [!Note]
 > Stellen Sie sicher, dass Sie die neuesten Versionen der Tools für optimale Ergebnisse verwenden.
 
 ## <a name="use-new-sql-tools-for-linux"></a>Verwenden Sie neue SQL-Tools für Linux

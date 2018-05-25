@@ -26,11 +26,11 @@ caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b164097dd08b5b428797319a7152974ac626b84b
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: 1fc2b483ff3a3b4a60d02c281041bb403485aaa2
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,9 +45,9 @@ ms.lasthandoff: 05/15/2018
 - Aktivieren oder Deaktivieren des Identitätscache auf Datenbankebene.
 - Aktivieren oder Deaktivieren eines Stubs des kompilierten Plans, der bei der erstmaligen Kompilierung eines Batches im Cache gespeichert werden soll.  
 - Aktivieren oder Deaktivieren von Sammlungen von Ausführungsstatistiken für nativ kompilierte T-SQL-Module.
-- Aktivieren oder Deaktivieren von online über Standardoptionen für DDL-Anweisungen, die die ONLINE =-Syntax unterstützen
-- Aktivieren oder Deaktivieren von fortsetzbar (resumable) über Standardoptionen für DDL-Anweisungen, die die RESUMABLE =-Syntax unterstützen 
-  
+- Aktivieren oder Deaktivieren von „Online by default“-Optionen (Standardmäßig online) für DDL-Anweisungen, die ONLINE =-Syntax unterstützen.
+- Aktivieren oder Deaktivieren von „Resumable by default“-Optionen (Standardmäßig fortsetzbar) für DDL-Anweisungen, die RESUMABLE =-Syntax unterstützen. 
+
  ![Linksymbol](../../database-engine/configure-windows/media/topic-link.gif "Linksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
@@ -137,7 +137,7 @@ Löscht den Cache der Datenbank für die Prozedur bzw. den Prozedurplan. Dieser 
 
 IDENTITY_CACHE **=** { **ON** | OFF }  
 
-**Gilt für **: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**Gilt für** : [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 Aktiviert oder deaktiviert den Identitätscache auf Datenbankebene. Der Standardwert ist **ON**. Identitätszwischenspeichern wird verwendet, um die Leistung von INSERT in Tabellen mit Identitätsspalten zu verbessern. Deaktiviert die Option IDENTITY_CACHE, um Lücken in einer Identitätsspalte zu vermeiden, wenn der Server unerwartet neu gestartet oder ein Failover zu einem sekundären Server ausgeführt wird. Diese Option ist mit dem vorhandenen [Ablaufverfolgungsflag 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) vergleichbar. Der einzige Unterschied besteht darin, dass sie auf Datenbankebene und nicht nur auf Serverebene festgelegt werden kann.   
 
@@ -246,11 +246,11 @@ für die Datenbank erforderlich. Diese Berechtigung kann von einem Benutzer mit 
 
 **ELEVATE_ONLINE** 
 
-Diese Option gilt nur für DDL-Anweisungen, die die WITH(ONLINE =-Syntax unterstützen. XML-Indizes sind nicht betroffen. 
+Diese Option gilt nur für DDL-Anweisungen, die WITH(ONLINE =-Syntax) unterstützen. XML-Indizes sind nicht betroffen. 
 
 **ELEVATE_RESUMABLE**
 
-Diese Option gilt nur für DDL-Anweisungen, die die WITH(ONLINE =-Syntax unterstützen. XML-Indizes sind nicht betroffen. 
+Diese Option gilt nur für DDL-Anweisungen, die WITH(ONLINE =-Syntax) unterstützen. XML-Indizes sind nicht betroffen. 
 
   
 ## <a name="metadata"></a>Metadaten  
@@ -373,43 +373,6 @@ In diesem Beispiel wird ELEVEATE_RESUMABLE auf WHEN_SUPPORTED festgelegt.  tsqlC
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE=WHEN_SUPPORTED ;  
 ``` 
-
-### <a name="k-query-state-of-alter-database-scoped-configuration-based-on-different-statements"></a>K. Abfragestatus von ALTER DATABASE SCOPED CONFIGURATION entsprechend unterschiedlicher Anweisungen
-
-**Gilt für**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (das Feature befindet sich in der öffentlichen Vorschau)
-
-```sql 
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = OFF;
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = OFF;
-SELECT * FROM sys.database_scoped_configurations WHERE NAME LIKE '%ELEVATE%'
-GO
-
-|configuration_id|name|value|value_for_secondary|is_value_default|
-|----------------|:---|:----|:------------------|:---------------|
-|11|ELEVATE_ONLINE|OFF|NULL|1|
-|12|ELEVATE_RESUMABLE|OFF|NULL|1|
-
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = WHEN_SUPPORTED;
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED;
-SELECT * FROM sys.database_scoped_configurations WHERE NAME LIKE '%ELEVATE%'
-GO
-
-|configuration_id|name|value|value_for_secondary|is_value_default|
-|----------------|:---|:----|:------------------|:---------------|
-|11|ELEVATE_ONLINE|WHEN_SUPPORTED|NULL|0|
-|12|ELEVATE_RESUMABLE|WHEN_SUPPORTED|NULL|0|
-
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = FAIL_UNSUPPORTED;
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = FAIL_UNSUPPORTED;
-SELECT * FROM sys.database_scoped_configurations WHERE NAME LIKE '%ELEVATE%'
-GO
-
-|configuration_id|name|value|value_for_secondary|is_value_default|
-|----------------|:---|:----|:------------------|:---------------|
-|11|ELEVATE_ONLINE|FAIL_UNSUPPORTED|NULL|0|
-|12|ELEVATE_RESUMABLE|FAIL_UNSUPPORTED|NULL|0|
-
-```
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 

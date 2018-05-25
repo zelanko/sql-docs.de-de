@@ -7,16 +7,15 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
-ms.openlocfilehash: 0e86081f681c87e09b5cfde1fec85f20967de1a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.technology: linux
+ms.openlocfilehash: dbab0dd07db4859c83a827285e810ee818c3aeb8
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Wiederherstellen einer SQL Server-Datenbank in einem Linux-Docker-container
 
@@ -139,7 +138,7 @@ Dieses Lernprogramm verwendet den [Beispieldatenbank von Wide World Importers](.
 Die Sicherungsdatei befindet sich jetzt innerhalb des Containers. Bevor Sie die Sicherung wiederherstellt, ist es wichtig zu wissen, logische Dateinamen und Dateitypen in der Sicherung. Die folgenden Transact-SQL-Befehle überprüfen Sie die Sicherung und die Ausführung der Wiederherstellung mit **Sqlcmd** im Container.
 
 > [!TIP]
-> Dieses Lernprogramm verwendet **Sqlcmd** innerhalb des Containers, da der Container mit diesem Tool vorinstallierte Version stammt. Sie können jedoch auch ausführen Transact-SQL-Anweisungen mit anderen Client Tools außerhalb der Container, z. B. [Visual Studio Code](sql-server-linux-develop-use-vscode.md) oder [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md). Um eine Verbindung herzustellen, verwenden Sie den hostPort, der Port 1433 im Container zugeordnet wurde. In diesem Beispiel ist das **"localhost", "1401** auf dem Hostcomputer und **Host_IP_Address 1401** Remote.
+> Dieses Lernprogramm verwendet **Sqlcmd** innerhalb des Containers, da der Container mit diesem Tool vorinstallierte Version stammt. Sie können jedoch auch ausführen Transact-SQL-Anweisungen mit anderen Client Tools außerhalb der Container, z. B. [Visual Studio Code](sql-server-linux-develop-use-vscode.md) oder [SQL Server Management Studio](sql-server-linux-manage-ssms.md). Um eine Verbindung herzustellen, verwenden Sie den hostPort, der Port 1433 im Container zugeordnet wurde. In diesem Beispiel ist das **"localhost", "1401** auf dem Hostcomputer und **Host_IP_Address 1401** Remote.
 
 1. Führen Sie **Sqlcmd** im Container aufzulisten logischen Dateinamen und Pfade innerhalb der Sicherung. Dies erfolgt mit der **RESTORE FILELISTONLY** Transact-SQL-Anweisung.
 

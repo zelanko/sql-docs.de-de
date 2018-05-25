@@ -1,7 +1,7 @@
 ---
 title: Herunterladen von SQL Server Management Studio (SSMS) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/09/2018
+ms.date: 05/14/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -28,11 +28,11 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 83dfecad826aea459a842b1eb908801bb469c5e8
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 8075a2ac4eaeb7b37d828eeee255f2a4e141968e
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Herunterladen von SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -130,7 +130,7 @@ Dieses Release von SSMS unterstützt die folgenden 64-Bit-Plattformen, wenn sie 
   * Überprüfen Sie, ob die .NET Framework-Version auf dem Computer 4.6.1 (oder höher) ist.
   * Schließen Sie alle anderen Instanzen von Visual Studio, die auf dem Computer geöffnet sind.
   * Stellen Sie sicher, dass die neuesten Betriebssystemupdates auf dem Computer installiert sind.
-  * Die registrierten Aktionen werden normalerweise nur einmal benötigt. Es gibt einige Fälle, in denen ein Neustart während zusätzlichen Upgrades auf dieselbe Hauptversion von SSMS notwendig sind. Für kleinere Upgrades sind alle Voraussetzungen für SSMS bereits auf dem Computer installiert.
+  * Die registrierten Aktionen werden normalerweise nur einmal benötigt. Es gibt einige Fälle, in denen ein Neustart während zusätzlichen Upgrades auf dieselbe Hauptversion von SSMS notwendig sind. Für kleinere Upgrades sind alle Voraussetzungen für SSMS bereits auf dem Computer vorhanden.
 
 
 ## <a name="release-notes"></a>Versionsanmerkungen
@@ -138,6 +138,33 @@ Dieses Release von SSMS unterstützt die folgenden 64-Bit-Plattformen, wenn sie 
 Release 17.7 weist folgende Probleme und Einschränkungen auf:
 
 In einigen Dialogfeldern wird ein Fehler wegen ungültiger Edition angezeigt, wenn mit einer der neuen Azure SQL-Datenbank-Editionen *Allgemein* oder *Unternehmenskritisch* gearbeitet wird.
+
+
+## <a name="uninstall-and-reinstall-ssms"></a>Deinstallation und Neuinstallation von SSMS
+
+Wenn Sie Probleme bei der SSMS-Installation haben und die Standarddeinstallation und erneute Installation diese nicht lösen können, können Sie zunächst versuchen, Visual Studio 2015 IsoShell zu [reparieren](https://support.microsoft.com/help/4028054/windows-10-repair-or-remove-programs). Falls die Reparatur von Visual Studio 2015 IsoShell das Problem nicht behebt, können womöglich die folgenden bewährten Lösungen helfen:
+
+1.  Deinstallieren Sie SSMS so, wie Sie auch jede andere Anwendung deinstallieren würden (je nach Ihrer Windows-Version über *Apps & Features*, *Programme und Funktionen* usw.).
+
+2.  Deinstallieren Sie Visual Studio 2015 IsoShell **über eine erweiterte CMD-Aufforderung**:
+   
+    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```
+
+    ```vs_isoshell.exe /Uninstall /Force /PromptRestart```
+
+3.  Deinstallieren Sie Microsoft Visual C++ 2015 Redistributable genau so, wie Sie auch jede andere Anwendung deinstallieren würden. Deinstallieren Sie jeweils x86 und x64, falls sich diese Versionen auf Ihrem Computer befinden.
+
+4.  Installieren Sie Visual Studio 2015 IsoShell erneut **über eine erweiterte CMD-Aufforderung**:  
+
+    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```  
+ 
+    ```vs_isoshell.exe /PromptRestart```
+
+5.  Installieren Sie SSMS erneut.
+
+6.  Führen Sie ein Upgrade auf die [neueste Version von Visual C++ 2015 Redistributable](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads) aus, wenn Sie diese noch nicht besitzen.
+
+
 
 
 ## <a name="previous-releases"></a>Vorgängerversionen

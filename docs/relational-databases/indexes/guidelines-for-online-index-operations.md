@@ -22,11 +22,11 @@ manager: craigg
 ms.suite: sql
 ms.prod_service: table-view-index, sql-database
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 97a125f6de05f5a17a5b1015c247f6d84cf8d434
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: 7762c5e00dde9e317cc1a1521385faad4c7d1d49
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="guidelines-for-online-index-operations"></a>Richtlinien für Onlineindexvorgänge
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -114,8 +114,11 @@ Im Allgemeinen besteht kein Unterschied bei der Defragmentierungsqualität zwisc
 
 ## <a name="online-default-options"></a>Standardoptionen für Online 
 
-Sie können Standardoptionen für online oder fortsetzbar auf Datenbankebene festlegen, indem Sie die datenbankbezogenen Konfigurationsoptionen ELEVATE_ONLINE und ELEVATE_RESUMABLE festlegen. Mit diesen Standardoptionen können Sie versehentliches Ausführen eines Vorgangs verhindern, der die Datenbank offline schalten würde. Beide Optionen bewirken, dass die Engine bestimmte Vorgänge automatisch in Online- oder fortsetzbare Ausführung erhöht.  
-Sie können beide Optionen jeweils auf FAIL_UNSUPPORTED, WHEN_SUPPORTED oder NEVER festlegen. Sie können verschiedene Werte für online und fortsetzbar festlegen. 
+> [!IMPORTANT]
+> Diese Optionen befinden sich in der öffentlichen Vorschau.
+
+Sie können Standardoptionen für online oder fortsetzbar auf Datenbankebene festlegen, indem Sie die datenbankbezogenen Konfigurationsoptionen ELEVATE_ONLINE und ELEVATE_RESUMABLE festlegen. Mit diesen Standardoptionen können Sie versehentliches Ausführen eines Vorgangs verhindern, der die Datenbanktabelle offline schalten würde. Beide Optionen bewirken, dass die Engine bestimmte Vorgänge automatisch in Online- oder fortsetzbare Ausführung erhöht.  
+Sie können die Option über den Befehl [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) entweder auf FAIL_UNSUPPORTED, WHEN_SUPPORTED oder OFF festlegen. Sie können verschiedene Werte für online und fortsetzbar festlegen. 
 
 Sowohl ELEVATE_ONLINE als auch ELEVATE_RESUMABLE gelten nur für DDL-Anweisungen, die die Syntax für online bzw. fortsetzbar unterstützen. Wenn Sie beispielsweise versuchen, einen XML-Index mit ELEVATE_ONLINE = FAIL_UNSUPORTED zu erstellen, wird der Vorgang offline ausgeführt, weil für XML-Indizes die ONLINE =-Syntax nicht unterstützt wird. Die Optionen wirken sich nur auf DDL-Anweisungen aus, die ohne Angabe einer ONLINE- oder RESUMABLE-Option gesendet werden. Wird z. B. eine Anweisung ONLINE=OFF oder RESUMABLE=OFF gesendet, kann der Benutzer eine FAIL_UNSUPPORTED-Einstellung außer Kraft setzen und eine Anweisung offline und/oder nicht fortsetzbar ausführen. 
  

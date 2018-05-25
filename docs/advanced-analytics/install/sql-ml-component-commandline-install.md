@@ -7,21 +7,21 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 921bdddf6ae1638ae637df58a0a7e8301fd91dc0
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 7211eda2caaf579267e4c6089be13750022f0ef8
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="install-sql-server-machine-learning-components-from-the-command-line"></a>Installieren von SQL Server-Machine Learning-Komponenten über die Befehlszeile
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel enthält Anweisungen zum Installieren SQL Server-Machine learning-Komponenten über die Befehlszeile:
 
-+ [In der Datenbank-Instanz](#indb)
++ [Neue In-Database-Instanz](#indb)
 + [Fügen Sie zu einer vorhandenen Datenbank-Engine-Instanz hinzu](#add-existing)
 + [Automatische Installation](#silent)
-+ [Eigenständiger Server](#shared-feature)
++ [Neuer eigenständiger server](#shared-feature)
 
 Sie können automatische, Standard- oder vollständige Interaktion mit der Setup-Benutzeroberfläche angeben. In diesem Artikel stellt eine Ergänzung [Installieren von SQL Server von der Befehlszeile aus](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md), behandelt die Parameter, die nur für R und Python Machine Learning-Komponenten.
 

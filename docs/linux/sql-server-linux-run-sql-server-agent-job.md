@@ -7,17 +7,16 @@ manager: craigg
 ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.openlocfilehash: 3ec6c974cd461eceb8cc4adaaa0ab53655074a7b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 162015772bb54023816fcc7d911ca34fbd4a3ac7
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Erstellen und Ausführen von SQL Server-Agent-Aufträge unter Linux
 
@@ -157,7 +156,7 @@ Die folgenden Schritte erstellen einen SQL Server-Agent-Auftrag unter Linux mit 
 
 Sie können auch erstellen und verwalten Aufträge mehr Remote mit SQL Server Management Studio (SSMS) unter Windows.
 
-1. Starten Sie SSMS unter Windows, und Verbinden mit Ihrer Linux SQL Server-Instanz. Weitere Informationen finden Sie unter [Verwalten von SQL Server unter Linux mit SSMS](sql-server-linux-develop-use-ssms.md).
+1. Starten Sie SSMS unter Windows, und Verbinden mit Ihrer Linux SQL Server-Instanz. Weitere Informationen finden Sie unter [Verwalten von SQL Server unter Linux mit SSMS](sql-server-linux-manage-ssms.md).
 
 1. Stellen Sie sicher, dass Sie eine Beispieldatenbank mit dem Namen erstellt haben **SampleDB**.
 

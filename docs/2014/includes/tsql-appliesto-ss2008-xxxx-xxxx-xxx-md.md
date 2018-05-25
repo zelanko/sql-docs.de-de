@@ -1,0 +1,1 @@
+**Dieses Thema gilt für:** ![Ja](media/yes.png "Ja")SQL Server \(ab 2008\) ![keine](media/no.png "keine")Azure SQL-Datenbank ![keine](media/no.png "keine")Azure SQL Datawarehouse ![keine](media/no.png "keine")Parallel Datawarehouse

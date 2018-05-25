@@ -15,11 +15,11 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ca29dddb3ce5a6c933cd118c703b0ee3d09e388b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d80bf7637c5c17cdade7c47f25265a6d2b6c94c1
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Was ist neu in SSMA für Oracle (OracleToSQL)
 In diesem Thema werden die SSMA für Oracle-Änderungen in jeder Version aufgelistet.  
@@ -80,7 +80,7 @@ Die V7. 3-Version von SSMA für Oracle enthält die folgenden Änderungen:
   - Bibliotheken, die zum Ausführen von benutzerdefinierter Konvertierungen von SSMA genutzt werden können.
     - Jetzt können Sie Code erstellen, die benutzerdefinierte Syntax Konvertierungen und Konvertierungen, die zuvor vom SSMA verarbeitet wurden nicht verarbeiten kann.
       - Anweisungen zum Erstellen eines benutzerdefinierten Konverters stehen in diesem Blogbeitrag [Erweitern von SQL Server Migration Assistant Funktionen](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
-      - Beispielprojekt für die Konvertierung herunterladen dies [Blogbeitrag](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
+      - Laden Sie ein Beispielprojekt für die Konvertierung von diesem [Blogbeitrag](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
 
 
 ## <a name="ssma-v72"></a>SSMA V7. 2
@@ -103,18 +103,28 @@ Die v7.1-Version von SSMA für Oracle enthält die folgenden Änderungen:
 ## <a name="may-2016"></a>Mai 2016  
 Die Mai 2016-Version von SSMA für Oracle enthält die folgenden Änderungen:  
 
--   Unterstützung für SQL Server 2016.
--   Hinzugefügte Konvertierung von Oracle Flashback Archivtabellen in temporalen Tabellen mit SQL Server.
--   Zusätzliche Konvertierung von Oracle VPD-Richtlinie, die beim Konvertieren in SQL Server-Richtlinienobjekten (Sicherheit auf Zeilenebene für Oracle).
--   Eine verringerte Zeit des anfänglichen Ladevorgangs für Oracle.
--   Verbesserte Parser und den resolvereinstellungen.
--   Überprüfen Sie Installationsprogramm für .net 2.0 wird entfernt.
--   Aktualisierte Erweiterung Pack Abhängigkeit von .net 3.5, .net 4.0.
--   Feste "Speichern" Projekt"und"Projekt öffnen"-Befehle für SSMA-Konsole.
--   Feste "Securepassword"-Befehl für SSMA-Konsole.
--   Korrektur von Objekten für das erstmalige laden zählen.
--   Korrektur der Zeichendatentypen beim Konvertieren eines für Oracle.
--   Korrektur von Bug in den globalen Einstellungen.
+- Unterstützung für SQL Server 2016.
+- Hinzugefügte Konvertierung von Oracle Flashback Archivtabellen in temporalen Tabellen mit SQL Server.
+
+    **Hinweis** -SSMA Verlaufsdaten aus Tabellen der Oracle Flashback Datenarchiv nicht kopiert. Daher müssen die Verlaufsdaten während der Migration manuell kopiert werden. Darüber hinaus während SSMA nicht die Verlaufstabelle auf der SQL Server-Metadaten-Explorer angezeigt werden, da es als eine Systemtabelle behandelt wird, können Sie die Verlaufstabelle in SQL Server Management Studio anzeigen.
+    SQL Server 2016 unterstützt nicht mehrere Oracle Flashback-Funktionen, einschließlich:
+    - Oracle Flashback Transaktion Abfrage
+    - DBMS_FLASHBACK-Paket
+    - Flashback Transaktion
+    - Flashback Datenarchiv
+    - Flashback-Tabelle
+    - Flashback löschen
+    - Flashback Database
+- Hinzugefügte Konvertierung von Oracle VPD-Richtlinie in SQL Server-Richtlinienobjekten (Sicherheit auf Zeilenebene für Oracle).
+- Eine verringerte Zeit des anfänglichen Ladevorgangs für Oracle.
+- Verbesserte Parser und den resolvereinstellungen.
+- Überprüfen Sie Installationsprogramm für .net 2.0 wird entfernt.
+- Aktualisierte Erweiterung Pack Abhängigkeit von .net 3.5, .net 4.0.
+- Feste "Speichern" Projekt"und"Projekt öffnen"-Befehle für SSMA-Konsole.
+- Feste "Securepassword"-Befehl für SSMA-Konsole.
+- Korrektur von Objekten für das erstmalige laden zählen.
+- Korrektur der Zeichendatentypen beim Konvertieren eines für Oracle.
+- Korrektur von Bug in den globalen Einstellungen.
   
 ## <a name="march-2016"></a>März 2016  
 März 2016 Preview-Version von SSMA für Oracle enthält die folgenden Änderungen:  

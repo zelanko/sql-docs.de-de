@@ -8,16 +8,23 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1106d0f1505f29a3b54f9fc036fcaf28b8715b75
-ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
+ms.openlocfilehash: 20ef7181c5ab8c0494f73b205dddcdf1ac0a620e
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>Installieren Sie neue R-Pakete unter SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dieser Artikel beschreibt, wie neue R-Pakete mit einer Instanz von SQL Server installieren, Machine Learning aktiviert ist. Es gibt mehrere Methoden für die Installation von neuen R-Pakete, je nach von Ihnen installierten Version von SQL Server, und gibt an, ob der Server über eine Internetverbindung verfügt.
+Dieser Artikel beschreibt, wie neue R-Pakete mit einer Instanz von SQL Server installieren, Machine Learning aktiviert ist. Es gibt mehrere Methoden für die Installation von neuen R-Pakete, je nach von Ihnen installierten Version von SQL Server, und gibt an, ob der Server über eine Internetverbindung verfügt. Die folgenden Ansätze für die Neuinstallation des Pakets sind möglich.
+
+| Vorgehensweise                           | Berechtigungen  | Remote/Local |
+|------------------------------------|---------------------------|-------|
+| [Verwenden Sie herkömmliche R-Paket-Manager](#bkmk_rInstall)  | Admin | Lokal |
+| [Verwenden von RevoScaleR](use-revoscaler-to-manage-r-packages.md) | Admin | Lokal |
+| [Verwenden von T-SQL (externe Bibliothek erstellen)](install-r-packages-tsql.md) | Administratorrechte verfügen, um Setup danach Datenbankrollen | both 
+| [Verwenden Sie eine MiniCRAN, um ein lokales Repository erstellt werden.](create-a-local-package-repository-using-minicran.md) | Administratorrechte verfügen, um Setup danach Datenbankrollen | both |
 
 ## <a name="bkmk_rInstall"></a> Installieren von R-Pakete über eine Internetverbindung
 
@@ -75,51 +82,6 @@ Dieses Verfahren setzt voraus, dass Sie alle Pakete vorbereitet haben, im ZIP-Fo
     Dieser Befehl extrahiert das R-Paket `mynewpackage` aus der lokalen ZIP-Datei, sofern Sie die Kopie im Verzeichnis gespeichert ist `C:\Temp\Downloaded packages`, und das Paket auf dem lokalen Computer installiert. Wenn das Paket keine Abhängigkeiten enthält, überprüft das Installationsprogramm für vorhandene Pakete in der Bibliothek. Wenn Sie ein Repository, die die Abhängigkeiten enthält erstellt haben, installiert das Installationsprogramm die erforderlichen Pakete auch an.
 
     Wenn alle erforderlichen Pakete in der Bibliothek für die Instanz nicht vorhanden sind und können nicht in die ZIP-Dateien gefunden werden, schlägt fehl, die Installation des Ziel-Pakets.
-
-## <a name="bkmk_createlibrary"></a> Verwenden Sie externe Bibliothek erstellen
-
-**Gilt für:**  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
-
-Die [externe Bibliothek erstellen](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) -Anweisung ist es möglich, ein Paket oder eine Reihe von Paketen zu einer Instanz oder eine bestimmte Datenbank hinzuzufügen, ohne Ausführen von R oder Python-code direkt. Diese Methode erfordert jedoch Paket Vorbereitung und zusätzliche Datenbankberechtigungen.
-
-+ Alle Pakete als eine lokale ZIP-Datei verfügbar sein muss, anstatt bei Bedarf aus dem Internet heruntergeladen.
-
-    Wenn Sie keinen Zugriff auf das Dateisystem auf dem Server haben, können Sie auch ein vollständiges Paket als Variable übergeben mit einem binary-Format. Weitere Informationen finden Sie unter [externe Bibliothek erstellen](../../t-sql/statements/create-external-library-transact-sql.md).
-
-+ Alle Abhängigkeiten müssen nach Name und Version identifiziert, und in der Zipdatei enthalten. Die Anweisung schlägt fehl, wenn die erforderlichen Pakete stehen nicht zur Verfügung, einschließlich downstream-paketabhängigkeiten. Es wird empfohlen, **MiniCRAN** oder **Igraph** zum Analysieren von Paketen Abhängigkeiten. Installieren die falsche Version des Pakets oder paketabhängigkeit kann auch zum Fehlschlagen die Anweisung führen. 
-
-+ Sie müssen die erforderlichen Berechtigungen für die Datenbank verfügen. Weitere Informationen finden Sie unter [externe Bibliothek erstellen](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
-
-### <a name="prepare-the-packages-in-archive-format"></a>Vorbereiten der Pakete im Archivformat
-
-1. Wenn Sie ein einzelnes Paket installieren, wird herunterladen Sie das Paket im ZIP-Format. 
-
-2. Wenn das Paket andere Pakete erfordert, müssen Sie sicherstellen, dass die erforderlichen Pakete verfügbar sind. Sie können MiniCRAN analysieren Das Zielpaket und identifizieren alle abhängigen Elemente. 
-
-3. Kopieren Sie die ZIP-Dateien oder MiniCRAN Repository, alle Pakete in einen lokalen Ordner auf dem Server enthält.
-
-4. Öffnen einer **Abfrage** Fenster mit einem Konto mit Administratorrechten aus.
-
-5. Führen Sie die T-SQL-Anweisung `CREATE EXTERNAL LIBRARY` zum Hochladen von ZIP-Paket-Auflistung in der Datenbank.
-
-    Die folgende Anweisung benennt beispielsweise als Paketquelle eine MiniCRAN "Repository" enthält die **RandomForest** -Paket, zusammen mit seiner Abhängigkeiten. 
-
-    ```R
-    CREATE EXTERNAL LIBRARY randomForest
-    FROM (CONTENT = 'C:\Temp\Rpackages\randomForest_4.6-12.zip')
-    WITH (LANGUAGE = 'R');
-    ```
-
-    Sie können keinen beliebigen Namen verwenden. den Namen der externen muss den gleichen Namen haben, den voraussichtlich verwenden, wenn beim Laden oder das Paket aufgerufen.
-
-6. Wenn die Bibliothek erfolgreich erstellt wurde, können Sie das Paket in SQL Server ausführen, indem sie innerhalb einer gespeicherten Prozedur aufgerufen wird.
-    
-    ```SQL
-    EXEC sp_execute_external_script
-    @language =N'R',
-    @script=N'
-    library(randomForest)'
-    ```
 
 ## <a name="tips-for-package-installation"></a>Tipps für die Paketinstallation
 

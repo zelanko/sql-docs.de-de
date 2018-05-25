@@ -33,11 +33,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6454e750ae8ed30c3e06a91e374ffae47037d566
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96ade458ea294f3f2cfe051449578acd97ff2fe5
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MTE
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -679,7 +679,7 @@ Legt „Column Encryption Setting“ auf `Enabled`fest. Weitere Informationen hi
   
  Die Rückgabewerte −1 bis −99 sind für SQL Server reserviert. **sqlcmd** definiert die folgenden zusätzlichen Rückgabewerte:  
   
-|Rückgabewerte|Description|  
+|Rückgabewerte|und Beschreibung|  
 |-------------------|-----------------|  
 |-100|Vor dem Auswählen des Rückgabewerts ist ein Fehler aufgetreten.|  
 |-101|Beim Auswählen eines Rückgabewerts wurden keine Zeilen gefunden.|  
@@ -849,7 +849,8 @@ sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -U bob@contoso.com -P MyA
  [Ausführen von Transact-SQL-Skriptdateien mithilfe von „sqlcmd“](~/relational-databases/scripting/sqlcmd-run-transact-sql-script-files.md)   
  [Verwenden des Hilfsprogramms „sqlcmd“](~/relational-databases/scripting/sqlcmd-use-the-utility.md)   
  [Verwenden von „sqlcmd“ mit Skriptvariablen](~/relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)   
- [Herstellen einer Verbindung mit dem Datenbankmodul mithilfe von „sqlcmd“](~/relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md)   
+ 
+  [Herstellen einer Verbindung mit der Datenbank-Engine mithilfe von „sqlcmd“](~/relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md)   
  [Bearbeiten von SQLCMD-Skripts mit dem Abfrage-Editor](~/relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)   
  [Verwalten von Auftragsschritten](~/ssms/agent/manage-job-steps.md)   
  [Erstellen eines CmdExec-Auftragsschritts](~/ssms/agent/create-a-cmdexec-job-step.md)  
