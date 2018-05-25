@@ -1,6 +1,5 @@
 
-# 
-  [Leistungscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](performance-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+# [Leistungscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](performance-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 # [Konfigurieren von Speicherplätzen mit NVDIMM-N-Zurückschreibcache](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
 
 # [Automatic Tuning (Automatische Optimierung)](../automatic-tuning/automatic-tuning.md)
