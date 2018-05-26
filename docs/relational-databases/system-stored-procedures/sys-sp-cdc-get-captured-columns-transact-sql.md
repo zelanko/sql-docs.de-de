@@ -26,11 +26,11 @@ caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 5c9c09866f34736adec722c8988c18dab16fc2dd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b131dce10e231bc0ee479ff0157a614bcfb2d6f4
+ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="sysspcdcgetcapturedcolumns-transact-sql"></a>sys.sp_cdc_get_captured_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ sys.sp_cdc_get_captured_columns
 |capture_instance|**sysname**|Name der Aufzeichnungsinstanz.|  
 |column_name|**sysname**|Name der aufgezeichneten Quellspalte.|  
 |column_id|**int**|ID der Spalte in der Quelltabelle.|  
-|ordinal_position|**int**|Position der Spalte innerhalb der Quelltabelle.|  
+|column_ordinal|**int**|Position der Spalte innerhalb der Quelltabelle.|  
 |data_type|**sysname**|Datentyp der Spalte.|  
 |character_maximum_length|**int**|Maximale Zeichenlänge der zeichenbasierten Spalte; andernfalls NULL.|  
 |numeric_precision|**tinyint**|Genauigkeit der Spalte, wenn sie auf numerischen Werten basiert; andernfalls NULL.|  
