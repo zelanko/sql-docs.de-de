@@ -36,17 +36,13 @@
 
 
 # [Datenbankoptimierungsratgeber](database-engine-tuning-advisor.md)  
-## 
-  [Starten und Verwenden des Datenbankoptimierungsratgebers](start-and-use-the-database-engine-tuning-advisor.md)  
+## [Starten und Verwenden des Datenbankoptimierungsratgebers](start-and-use-the-database-engine-tuning-advisor.md)  
 ## [Reduzieren der Optimierungsauslastung des Produktionsservers](reduce-the-production-server-tuning-load.md)  
 ### [Gesichtspunkte bei der Verwendung von Testservern](considerations-for-using-test-servers.md)  
-## 
-  [Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers](view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)  
-## 
-  [Empfehlungen für Columnstore-Index im Datenbankoptimierungsratgeber (DTA)](columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)  
+## [Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers](view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)  
+## [Empfehlungen für Columnstore-Index im Datenbankoptimierungsratgeber (DTA)](columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)  
 ## [Datenbankoptimierung mithilfe der Arbeitsauslastung aus dem Abfragespeicher](tuning-database-using-workload-from-query-store.md)  
-## 
-  [Leistungsverbesserungen mithilfe von Empfehlungen des Datenbankoptimierungsratgebers (DTA)](performance-improvements-using-dta-recommendations.md)  
+## [Leistungsverbesserungen mithilfe von Empfehlungen des Datenbankoptimierungsratgebers (DTA)](performance-improvements-using-dta-recommendations.md)  
 
 # [Planhinweislisten](plan-guides.md)  
 ## [Erstellen einer neuen Planhinweisliste](create-a-new-plan-guide.md)  
