@@ -7,17 +7,16 @@ manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
-ms.openlocfilehash: 41eabe46f654f2cb0464d2f7589cb0ce50a7c214
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
-ms.translationtype: HT
+ms.openlocfilehash: efc03030c4d0c329fa7736e3622c621f684eecb3
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Verwenden Sie Visual Studio zum Erstellen von Datenbanken für SQL Server on Linux
 
@@ -27,7 +26,7 @@ SQL Server Data Tools (SSDT) wandelt Visual Studio in eine leistungsstarke Entwi
 
 ## <a name="install-visual-studio-and-sql-server-data-tools"></a>Visual Studio und SQL Server Datatools installieren
 
-1. Wenn Sie nicht bereits Visual Studio auf Ihrem Windows-Computer installiert haben [herunterladen und installieren Sie Visual Studio]. Wenn Sie nicht über eine Visual Studio-Lizenz verfügen, wird Visual Studio Community Edition ist eine kostenlose, vollständig ausgestatteten IDE für Studenten, Open Source- und einzelne Entwickler.
+1. Wenn Sie nicht bereits Visual Studio auf Ihrem Windows-Computer installiert haben [Herunterladen und Installieren von Visual Studio]. Wenn Sie nicht über eine Visual Studio-Lizenz verfügen, wird Visual Studio Community Edition ist eine kostenlose, vollständig ausgestatteten IDE für Studenten, Open Source- und einzelne Entwickler.
 
 2. Wählen Sie während der Installation von Visual Studio **benutzerdefinierte** für die **wählen Sie die Installationsart** Option. Klicken Sie auf **Weiter**.
 
@@ -113,7 +112,7 @@ Wenn Sie noch nicht in T-SQL vertraut sind, finden Sie unter [Lernprogramm: Schr
 
 Weitere Informationen zum Entwickeln von einer Datenbank mit SQL Data Tools finden Sie unter [SSDT MSDN-Dokumente]
 
-[herunterladen und installieren Sie Visual Studio]:https://www.visualstudio.com/downloads/
+[Herunterladen und Installieren von Visual Studio]:https://www.visualstudio.com/downloads/
 [Download and Install SSDT 17.0 RC2]:https://aka.ms/ssdt-download
 [SSDT MSDN-Dokumente]: https://msdn.microsoft.com/en-us/library/hh272686(v=vs.103).aspx
 [Lernprogramm: Schreiben von Transact-SQL-Anweisungen]:https://msdn.microsoft.com/library/ms365303.aspx

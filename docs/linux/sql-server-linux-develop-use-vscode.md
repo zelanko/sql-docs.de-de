@@ -7,17 +7,16 @@ manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
-ms.openlocfilehash: ccbd45cb28a4c1cea48b832fbe77dc662ab7eeb4
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
-ms.translationtype: HT
+ms.openlocfilehash: 3291767b4fa1f7b18e751661f9beeb0e061f8146
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Verwenden von Visual Studio-Code zum Erstellen und Ausführen von Transact-SQL-Skripts für SQL Server
 
@@ -28,7 +27,7 @@ Dieser Artikel zeigt, wie die **Mssql** -Erweiterung für Visual Studio-Code (Vi
 Visual Studio-Code ist eine grafische Code-Editor für Linux, Mac OS und Windows, der Erweiterungen unterstützt. Die [**Mssql** -Erweiterung für Visual Studio Code] ermöglicht es Ihnen, eine Verbindung mit SQL Server, Abfrage mit Transact-SQL (T-SQL) und die Ergebnisse anzuzeigen.
 
 ## <a name="install-vs-code"></a>Installieren von VS-Code
-1. Wenn Sie Visual Studio-Code nicht bereits installiert haben [herunterladen und installieren Sie Visual Studio Code] auf Ihrem Computer.
+1. Wenn Sie Visual Studio-Code nicht bereits installiert haben [Herunterladen und Installieren von VS-Code] auf Ihrem Computer.
 
 2. Starten Sie Visual Studio Code.
 
@@ -50,7 +49,7 @@ Die folgenden Schritte erläutern, wie zum Installieren der Mssql-Erweiterung.
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-install-success-notification.png" alt="Installation success notification" style="width: 600px;"/>
 
    > [!NOTE]
-   > Für MacOS müssen Sie OpenSSL installieren. Dies ist eine Voraussetzung für .net Core, die von der Mssql-Erweiterung verwendet. Führen Sie die **Voraussetzung installieren** Schritte in der [.Net Core Anweisungen]. Oder Sie können die folgenden Befehle ausführen, in Ihrem MacOS Terminaldienste.
+   > Für MacOS müssen Sie OpenSSL installieren. Dies ist eine Voraussetzung für .net Core, die von der Mssql-Erweiterung verwendet. Führen Sie die **Voraussetzung installieren** Schritte in der [.NET Core-Anweisungen]. Oder Sie können die folgenden Befehle ausführen, in Ihrem MacOS Terminaldienste.
    >
    >   ```bash
    >   brew update
@@ -108,7 +107,7 @@ Die folgenden Schritte zeigen, Herstellen einer Verbindung mit SQL Server mit Vi
 6. Drücken Sie die **ESC**-Taste, um die Meldung zu schließen, in der Sie darüber informiert werden, dass das Profil erstellt und eine Verbindung hergestellt wurde.
 
    > [!TIP]
-   > Wenn Sie einen Verbindungsfehler erhalten, versuchen zunächst, die diagnose des Problems aus der Fehlermeldung, in der **Ausgabe** Bereich in Visual Studio Code (Wählen Sie **Ausgabe** auf die **Ansicht** im Menü). Überprüfen Sie anschließend die [Empfehlungen zur Verbindungsproblembehandlung].
+   > Wenn Sie einen Verbindungsfehler erhalten, versuchen zunächst, die diagnose des Problems aus der Fehlermeldung, in der **Ausgabe** Bereich in Visual Studio Code (Wählen Sie **Ausgabe** auf die **Ansicht** im Menü). Überprüfen Sie anschließend die [Problembehandlung bei verbindungsempfehlungen].
 
 7. Überprüfen Sie Ihre Verbindung in der Statusleiste.
 
@@ -141,7 +140,7 @@ Die folgenden Schritte zeigen, Herstellen einer Verbindung mit SQL Server mit Vi
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-create-database-messages.png" alt="create database messages" style="width: 500px;" />
 
    > [!TIP]
-   > Sie können die Verknüpfung von schlüsselbindungen für die Befehle der Mssql-Erweiterung anpassen. Finden Sie unter [Tastenkombinationen anpassen].
+   > Sie können die Verknüpfung von schlüsselbindungen für die Befehle der Mssql-Erweiterung anpassen. Finden Sie unter [Anpassen von Tastenkombinationen].
 
 ## <a name="create-a-table"></a>Erstellen einer Tabelle
 
@@ -225,7 +224,7 @@ Die folgenden Schritte zeigen, Herstellen einer Verbindung mit SQL Server mit Vi
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-toggle-messages-pannel.png" alt="Toggle Messages" style="width: 500px;" />
 
    > [!TIP]
-   > Sie können das Standardverhalten der Mssql-Erweiterung anpassen. Finden Sie unter [Erweiterung Optionen anpassen].
+   > Sie können das Standardverhalten der Mssql-Erweiterung anpassen. Finden Sie unter [Passen Sie die Erweiterung-Optionen].
 
 2. Klicken Sie auf das Symbol "Raster maximieren" auf der zweiten Ergebnisrasters zu vergrößern.
 
@@ -254,19 +253,19 @@ In einem realen Szenario könnten Sie ein Skript, die Sie benötigen, speichern 
 
 Wenn Sie noch nicht in T-SQL vertraut sind, finden Sie unter [Lernprogramm: Schreiben von Transact-SQL-Anweisungen] und [Transact-SQL-Referenz (Datenbankmodul)].
 
-Weitere Informationen zu verwenden, oder der Mssql-Erweiterung verwendet werden sollen, finden Sie unter [Mssql Erweiterung Projekt Wiki].
+Weitere Informationen zu verwenden, oder der Mssql-Erweiterung verwendet werden sollen, finden Sie unter [der Mssql-Erweiterung Projekt wiki].
 
 Weitere Informationen zur Verwendung von Visual Studio Code finden Sie unter der [Dokumentation zu Visual Studio Code](https://code.visualstudio.com/docs).
 
 [**Mssql** -Erweiterung für Visual Studio Code]:https://aka.ms/mssql-marketplace
-[herunterladen und installieren Sie Visual Studio Code]:https://code.visualstudio.com/Download
-[.Net Core Anweisungen]:https://www.microsoft.com/net/core
+[Herunterladen und Installieren von VS-Code]:https://code.visualstudio.com/Download
+[.NET Core-Anweisungen]:https://www.microsoft.com/net/core
 [Verwalten von remoteverbindungsprofilen]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
-[Empfehlungen zur Verbindungsproblembehandlung]:./sql-server-linux-troubleshooting-guide.md#connection
-[Tastenkombinationen anpassen]:https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts
+[Problembehandlung bei verbindungsempfehlungen]:./sql-server-linux-troubleshooting-guide.md#connection
+[Anpassen von Tastenkombinationen]:https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts
 [Lernprogramm: Schreiben von Transact-SQL-Anweisungen]:https://msdn.microsoft.com/library/ms365303.aspx
 [Transact-SQL-Referenz (Datenbankmodul)]:https://msdn.microsoft.com/library/bb510741.aspx
 [Visual Studio Code documentation]:https://code.visualstudio.com/docs
 [Windows 10 universelle C-Laufzeit]:https://github.com/Microsoft/vscode-mssql/wiki/windows10-universal-c-runtime-requirement
-[Erweiterung Optionen anpassen]: https://github.com/Microsoft/vscode-mssql/wiki/customize-options
-[Mssql Erweiterung Projekt Wiki]: https://github.com/Microsoft/vscode-mssql/wiki
+[Passen Sie die Erweiterung-Optionen]: https://github.com/Microsoft/vscode-mssql/wiki/customize-options
+[der Mssql-Erweiterung Projekt wiki]: https://github.com/Microsoft/vscode-mssql/wiki
