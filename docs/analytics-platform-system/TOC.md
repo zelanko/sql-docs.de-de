@@ -17,7 +17,8 @@
 ## [Worksheet zur Kapazitätsplanung eines Sicherungsservers](backup-capacity-planning-worksheet.md)
 ## [Konfiguration von InfiniBand-Netzwerkadaptern](configure-infiniband-network-adapters.md)
 
-# Abfrage
+# Dataseteigenschaften
+## [Konfiguration von automatisch erstellten Statistiken](configure-auto-statistics.md)
 ## [Überwachen aktiver Abfragen](monitoring-active-queries.md)
 
 # Load
@@ -50,7 +51,7 @@
 ## [Verwaltung von Arbeitsauslastungen](workload-management.md)
 ### [Tasks zur Verwaltung von Arbeitsauslastungen](workload-management-tasks.md)
 
-# Sicherheit
+# Security
 ## [Transparent Data Encryption](transparent-data-encryption.md)
 ## [Bereitstellen eines Zertifikats](provision-certificate.md)
 
@@ -69,6 +70,7 @@
 ### [Konfiguration des Netzwerks der Appliance](appliance-network-configuration.md)
 ### [PDW-Topologie](pdw-topology.md)
 ### [PDW-Zertifikatbereitstellung](pdw-certificate-provisioning.md)
+### [PDW-Featureschalter](appliance-feature-switch.md)
 ### [PDW-Firewallkonfiguration](pdw-firewall-configuration.md)
 ### [PDW-Dienststatus](pdw-services-status.md)
 ### [Konfiguration der sofortigen Dateiinitialisierung](instant-file-initialization-configuration.md)
