@@ -1,6 +1,6 @@
 ---
 title: Bereitstellen eines SSIS-Pakets mit Transact-SQL (VS Code) | Microsoft-Dokumentation
-ms.date: 09/25/2017
+ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,17 +12,15 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6c32302d499f1c8dc450d6e10451f080b30249d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4611b711b9f220af26a7f629480fa9f7b4c071c
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455443"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Bereitstellen eines SSIS-Pakets aus Visual Studio Code mit Transact-SQL
-In diesem Schnellstart wird erläutert, wie Sie Visual Studio Code verwenden müssen, um eine Verbindung mit der SSIS-Katalogdatenbank herzustellen, und wie Sie anschließend Transact-SQL-Anweisungen verwenden müssen, um ein im SSIS-Katalog gespeichertes SSIS-Projekt bereitzustellen.
-
-> [!NOTE]
-> Die in diesem Artikel beschriebene Methode ist nicht verfügbar, wenn Sie mit VS Code eine Verbindung mit einem Azure SQL-Datenbankserver herstellen. Die gespeicherte Prozedur `catalog.deploy_project` erwartet den Pfad zur Datei `.ispac` im lokalen Dateisystem.
+In diesem Schnellstart wird erläutert, wie Sie mit Visual Studio Code eine Verbindung mit der SSIS-Katalogdatenbank herstellen und anschließend mithilfe von Transact-SQL-Anweisungen ein im SSIS-Katalog gespeichertes SSIS-Projekt bereitstellen.
 
 Visual Studio Code ist ein Code-Editor für Windows, macOS und Linux, der Erweiterungen unterstützt. Dazu gehört auch die `mssql`-Erweiterung zum Herstellen einer Verbindung mit Microsoft SQL Server, Azure SQL-Datenbank und Azure SQL Data Warehouse. Weitere Informationen zu VS Code finden Sie unter [Visual Studio Code](https://code.visualstudio.com/).
 
@@ -31,6 +29,16 @@ Visual Studio Code ist ein Code-Editor für Windows, macOS und Linux, der Erweit
 Prüfen Sie, bevor Sie beginnen, ob Sie die neueste Version von Visual Studio Code installiert haben und die `mssql`-Erweiterung geladen ist. Informationen zum Herunterladen dieser Tools finden Sie auf den folgenden Seiten:
 -   [Herunterladen von Visual Studio Code](https://code.visualstudio.com/Download)
 -   [mssql extension (mssql-Erweiterung)](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
+
+## <a name="supported-platforms"></a>Unterstützte Plattformen
+
+Mithilfe der Informationen in diesem Schnellstart können Sie auf den folgenden Plattformen SSIS-Projekte bereitstellen:
+
+-   SQL Server unter Windows
+
+Mithilfe der Informationen in diesem Schnellstart können Sie keine SSIS-Pakete in Azure SQL-Datenbank bereitstellen. Die gespeicherte Prozedur `catalog.deploy_project` erwartet den Pfad zur Datei `.ispac` im lokalen Dateisystem. Weitere Informationen zum Bereitstellen und Ausführen von Paketen in Azure finden Sie unter [Migration von SQL Server Integration Services-Workloads in die Cloud per Lift und Shift](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+
+Dieser Schnellstart enthält keine Anleitung zum Bereitstellen von SSIS-Paketen in SQL Server unter Linux. Weitere Informationen zum Ausführen von Paketen finden Sie unter [Extrahieren, Transformieren und Laden von Daten unter Linux mit SSIS](../linux/sql-server-linux-migrate-ssis.md).
 
 ## <a name="set-language-mode-to-sql-in-vs-code"></a>Festlegen des Sprachmodus auf SQL in VS Code
 
@@ -46,9 +54,6 @@ Legen Sie den Sprachmodus auf `mssql`SQL**in Visual Studio Code fest, um**-Befeh
 
 Verwenden Sie Visual Studio Code, um eine Verbindung mit dem SSIS-Katalog herzustellen.
 
-> [!IMPORTANT]
-> Bevor Sie fortfahren, stellen Sie sicher, dass Sie die erforderlichen Server-, Datenbank- und Anmeldeinformationen zur Hand haben. Wenn Sie den Fokus von Visual Studio Code ändern, nachdem Sie mit der Eingabe der Verbindungsprofilinformationen begonnen haben, müssen Sie erneut mit dem Erstellen des Verbindungsprofils beginnen.
-
 1. Drücken Sie in VS Code **STRG+UMSCHALT+P** (oder **F1**), um die Befehlspalette zu öffnen.
 
 2. Geben Sie **sqlcon** ein, und drücken Sie die **EINGABETASTE**.
@@ -61,7 +66,7 @@ Verwenden Sie Visual Studio Code, um eine Verbindung mit dem SSIS-Katalog herzus
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Servername** | Der vollqualifizierte Servername |  |
    | **Datenbankname** | **SSISDB** | Dies ist der Name der Datenbank, mit der eine Verbindung hergestellt werden soll. |
-   | **Authentifizierung** | SQL-Anmeldung| In diesem Schnellstart wird die SQL-Authentifizierung verwendet. |
+   | **Authentifizierung** | SQL-Anmeldung | |
    | **User name** | Das Konto des Serveradministrators | Dabei handelt es sich um das Konto, das Sie beim Erstellen des Servers angegeben haben. |
    | **Kennwort (SQL-Anmeldung)** | Das Kennwort für das Konto des Serveradministrators | Dabei handelt es sich um das Kennwort, das Sie beim Erstellen des Servers angegeben haben. |
    | **Kennwort speichern** | Ja oder Nein | Wenn Sie nicht bei jedem Neustart Ihr Kennwort eingeben möchten, wählen Sie „Ja“ aus. |

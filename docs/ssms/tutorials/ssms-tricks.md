@@ -1,5 +1,5 @@
 ---
-Title: 'Tutorial: Additional Tips and Tricks for using SSMS'
+Title: 'Tutorial: Additional tips and tricks for using SQL Server Management Studio'
 description: 'Ein Tutorial, das einige zusätzliche Tipps und Tricks für die Verwendung von SSMS enthält. '
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -18,19 +18,20 @@ helpviewer_keywords:
 - tutorials [SQL Server Management Studio]
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
-ms.openlocfilehash: e358fb73ff4f248b7de368364b8bb758f70018ff
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 80d50132c4e2b38ecda9d24b3c0f4c09b93ca4e6
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455254"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Tutorial: Zusätzliche Tipps und Tricks für die Verwendung von SSMS
-Dieses Tutorial enthält einige zusätzliche Tricks für die Verwendung von SQL Server Management Studio. In diesem Artikel lernen Sie Folgendes: 
+Dieses Tutorial enthält einige zusätzliche Tricks für die Verwendung von SQL Server Management Studio (SSMS). In diesem Artikel lernen Sie Folgendes: 
 
 > [!div class="checklist"]
-> * Kommentieren/Aufheben der Auskommentierung Ihres T-SQL-Texts (Transact-SQL)
+> * Kommentieren bzw. Aufheben der Auskommentierung Ihres T-SQL-Texts (Transact-SQL)
 > * Einziehen Ihres Texts
-> * Filtern von Objekten in Objekt-Explorer
+> * Filtern von Objekten im Objekt-Explorer
 > * Zugreifen auf Ihr SQL Server-Fehlerprotokoll
 > * Suchen des Namens Ihrer SQL Server-Instanz
 
@@ -39,15 +40,16 @@ Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio, 
 
 - Installieren Sie [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Installieren Sie die [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Laden Sie eine [AdventureWorks-Beispieldatenbank](https://github.com/Microsoft/sql-server-samples/releases) herunter. Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Restoring a Database (Wiederherstellen einer Datenbank)](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+- Laden Sie eine [AdventureWorks-Beispieldatenbank](https://github.com/Microsoft/sql-server-samples/releases) herunter. Weitere Informationen zum Wiederherstellen einer Datenbank in SSMS finden Sie unter [Restoring a database (Wiederherstellen einer Datenbank)](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
-## <a name="comment--uncomment-your-t-sql-code"></a>Kommentieren Sie Ihren T-SQL-Code oder entfernen Sie die Kommentare
-Über die Schaltfläche für Kommentare in der Symbolleiste können Sie bei Teilen Ihres Texts Kommentare hinzufügen und Auskommentierungen aufheben. Auskommentierter Text wird nicht ausgeführt. 
+
+## <a name="commentuncomment-your-t-sql-code"></a>Kommentieren und Aufheben der Auskommentierung in T-SQL-Code
+Mit der Schaltfläche **Kommentar** in der Symbolleiste können Sie bei Teilen Ihres Texts Kommentare hinzufügen und Auskommentierungen aufheben. Auskommentierter Text wird nicht ausgeführt. 
 
 1. Öffnen Sie SQL Server Management Studio. 
-2. Stellen Sie eine Verbindung mit Ihrem SQL Server her.
-3. Öffnen Sie das Fenster **Neue Abfrage**. 
-4. Fügen Sie folgenden T-SQL-Codeausschnitt in Ihr Textfenster ein: 
+2. Stellen Sie eine Verbindung mit SQL Server her.
+3. Öffnen Sie das Fenster „Neue Abfrage“. 
+4. Fügen Sie den folgenden T-SQL-Code in Ihr Textfenster ein: 
 
   ```sql
     USE master
@@ -71,25 +73,25 @@ Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio, 
  ``` 
 
 
-5. Markieren Sie den Teil des Texts mit dem Befehl **Alter Database**, und klicken Sie in der Symbolleiste auf **Kommentar**: 
+5. Markieren Sie den Teil des Texts mit dem Befehl **Alter Database**, und klicken Sie dann auf der Symbolleiste auf die Schaltfläche **Kommentar**: 
 
-    ![Anmerkung](media/ssms-tricks/comment.png)
+    ![Die Schaltfläche „Kommentar“](media/ssms-tricks/comment.png)
 6. Klicken Sie auf **Ausführen**, um den Teil des Texts auszuführen, bei dem Auskommentierungen aufgehoben wurden. 
-7. Markieren Sie den gesamten Text bis auf den Befehl **Alter Database**, und klicken Sie in der Symbolleiste auf **Kommentar**:
+7. Markieren Sie alles außer dem Befehl **Alter Database**, und klicken Sie auf die Schaltfläche **Auskommentieren**:
 
-    ![Gesamten Text kommentieren](media/ssms-tricks/commenteverything.png)
+    ![Alles auskommentieren](media/ssms-tricks/commenteverything.png)
 
-8. Markieren Sie den Abschnitt mit dem Befehl **Alter Database**, und klicken Sie auf **Auskommentierung aufheben**, um die Auskommentierung des Texts aufzuheben:
+8. Markieren Sie den Teil des Texts mit dem Befehl **Alter Database**, und klicken Sie dann auf der Symbolleiste auf die Schaltfläche **Auskommentierung aufheben**, um die Auskommentierung aufzuheben:
 
-    ![Auskommentierungen aufheben](media/ssms-tricks/uncomment.png)
+    ![Auskommentierung aufheben](media/ssms-tricks/uncomment.png)
     
 9. Klicken Sie auf **Ausführen**, um den Teil des Texts auszuführen, bei dem Auskommentierungen aufgehoben wurden. 
 
 ## <a name="indent-your-text"></a>Einziehen Ihres Texts
-Sie können den Einzug Ihres Texts über die Schaltflächen für den Einzug vergrößern oder verringern. 
+Sie können die Schaltflächen für den Einzug auf der Symbolleiste verwenden, um den Einzug Ihres Texts zu vergrößern oder zu verkleinern. 
 
-1. Öffnen Sie das Fenster **Neue Abfrage**. 
-2. Fügen Sie folgenden T-SQL-Codeausschnitt in Ihr Textfenster ein: 
+1. Öffnen Sie das Fenster „Neue Abfrage“. 
+2. Fügen Sie den folgenden T-SQL-Code in Ihr Textfenster ein: 
 
   ```sql
     USE master
@@ -112,123 +114,133 @@ Sie können den Einzug Ihres Texts über die Schaltflächen für den Einzug verg
     GO
  ``` 
  
-3. Markieren Sie den Teil des Texts mit dem Befehl **Alter Database**, und klicken Sie in der Symbolleiste auf **Einzug vergrößern**, um diesen Text zu verschieben:
+3. Markieren Sie den Teil des Texts mit dem Befehl **Alter Database**, und klicken Sie in der Symbolleiste auf die Schaltfläche **Einzug vergrößern**, um diesen Text nach vorne zu verschieben:
 
-    ![Einzug vergrößern](media/ssms-tricks/increaseindent.png)
+    ![Vergrößern des Einzugs](media/ssms-tricks/increaseindent.png)
 
-4. Markieren Sie erneut den Teil des Texts mit dem Befehl **Alter Database**, und klicken Sie diesmal auf **Einzug verkleinern**, um diesen Text wieder an die alte Position zu verschieben. 
-    ![Einzug verkleinern](media/ssms-tricks/decreaseindent.png)
+4. Markieren Sie den Teil des Texts mit dem Befehl **Alter Database** erneut, und klicken Sie auf die Schaltfläche **Einzug verkleinern**, um diesen Text zurück zu verschieben:
+
+    ![Verkleinern des Einzugs](media/ssms-tricks/decreaseindent.png)
 
 
-## <a name="filter-objects-in-object-explorer"></a>Filtern von Objekten in Objekt-Explorer
-Wenn eine Datenbank viele Objekte enthält, kann sich die Suche nach einem bestimmten Objekt als schwierig erweisen. Zur Vereinfachung dieses Vorgangs können Sie Objekte filtern. In diesem Abschnitt wird erläutert, wie Tabellen gefiltert werden. Die gleichen Schritte können jedoch auch auf alle anderen Knoten in **Objekt-Explorer** angewendet werden.
+## <a name="filter-objects-in-object-explorer"></a>Filtern von Objekten im Objekt-Explorer
+Sie können Objekte filtern, um ein bestimmtes Objekt in Datenbanken mit vielen Objekten einfacher zu finden. In diesem Abschnitt wird beschrieben, wie Sie Tabellen filtern können. Sie können die folgenden Schritte aber auch für jeden anderen Knoten im Objekt-Explorer verwenden:
 
-1. Stellen Sie eine Verbindung mit Ihrem SQL Server her.
-2. Erweitern Sie den Knoten **Datenbanken**.
-3. Erweitern Sie den Datenbankknoten **AdventureWorks**. 
-4. Erweitern Sie den Knoten **Tabellen**. 
-   - Sie werden bemerken, dass Ihnen alle in der Datenbank enthaltenen Tabellen angezeigt werden.
-5. Klicken Sie mit der rechten Maustaste auf den Knoten **Tabellen** > **Filter** > **Filtereinstellungen**:
+1. Stellen Sie eine Verbindung mit SQL Server her.
+2. Erweitern Sie **Datenbanken** > **AdventureWorks** > **Tabellen**. Alle Tabellen in der Datenbank werden angezeigt.
+5. Klicken Sie mit der rechten Maustaste auf **Tabellen**, und klicken Sie dann auf **Filter** > **Filtereinstellungen**:
 
     ![Filtereinstellungen](media/ssms-tricks/filtersettings.png)
 
-6. Im Fenster „Filtereinstellungen“ können Sie die Filtereinstellungen ändern. Einige Beispiele:
-    - Nach Namen filtern: ![Filter by Name](media/ssms-tricks/filterbyname.png) (Nach Namen filtern)
-    - Nach Schema filtern: ![Filter by Schema](media/ssms-tricks/filterbyschema.png) (Nach Schema filtern)
+6. Im Fenster **Filtereinstellungen** können Sie die einige der folgenden Filtereinstellungen ändern:
+    - Nach Name filtern: 
+   
+      ![Nach Name filtern](media/ssms-tricks/filterbyname.png)
 
-7. Klicken Sie mit der rechten Maustaste auf **Tabellen** > **Filter entfernen**, um den Filter zu löschen.
+    - Nach Schema filtern: 
+    
+      ![Nach Schema filtern](media/ssms-tricks/filterbyschema.png)
+
+7. Klicken Sie mit der rechten Maustaste auf **Tabellen**, und klicken Sie dann auf **Filter entfernen**, um den Filter zu löschen.
 
     ![Filter entfernen](media/ssms-tricks/removefilter.png)
     
 
 
 ## <a name="access-your-sql-server-error-log"></a>Zugreifen auf Ihr SQL Server-Fehlerprotokoll
-Das Fehlerprotokoll ist eine Datei mit Details zu Ereignissen, die auf Ihrem SQL-Server auftreten. Es kann in SSMS durchsucht und abgefragt werden. Es kann auch als Protokolldatei auf dem Datenträger gefunden werden.
+Das Fehlerprotokoll ist eine Datei mit Details zu Ereignissen, die in Ihrer SQL Server-Instanz auftreten. Sie können das Fehlerprotokoll in SSMS durchsuchen und abfragen. Das Fehlerprotokoll ist eine LOG-Datei, die sich auf Ihrem Datenträger befindet.
 
-### <a name="open-error-log-within-ssms"></a>Öffnen des Fehlerprotokolls in SSMS
-1. Stellen Sie eine Verbindung mit Ihrem SQL Server her.
-2. Erweitern Sie den Knoten **Verwaltung** . 
-3. Erweitern Sie den Knoten **SQL Server-Protokolle**. 
-4. Klicken Sie mit der rechten Maustaste auf das Fehlerprotokoll **Aktuell** > **SQL Server-Protokoll anzeigen**:
+### <a name="open-the-error-log-in-ssms"></a>Öffnen des Fehlerprotokolls in SSMS
+1. Stellen Sie eine Verbindung mit SQL Server her.  
+2. Erweitern Sie **Verwaltung** > **SQL Server-Protokolle**. 
+4. Klicken Sie mit der rechten Maustaste auf das Fehlerprotokoll **Current** (Aktuell), und klicken Sie dann auf **SQL Server-Protokoll anzeigen**:
 
-    ![Fehlerprotokoll in SSMS anzeigen](media/ssms-tricks/viewerrorloginssms.png)
+    ![Öffnen des Fehlerprotokolls in SSMS](media/ssms-tricks/viewerrorloginssms.png)
 
-### <a name="query-error-log-within-ssms"></a>Abfragen des Fehlerprotokolls in SSMS
-1. Stellen Sie eine Verbindung mit Ihrem SQL Server her.
-2. Öffnen Sie das Fenster **Neue Abfrage**.
-3. Fügen Sie folgenden T-SQL-Codeausschnitt in Ihr Abfragefenster ein:
+### <a name="query-the-error-log-in-ssms"></a>Abfragen des Fehlerprotokolls in SSMS
+1. Stellen Sie eine Verbindung mit SQL Server her.
+2. Öffnen Sie das Fenster „Neue Abfrage“.
+3. Fügen Sie den folgenden T-SQL-Code in Ihr Abfragefenster ein:
 
  ```sql
    sp_readerrorlog 0,1,'Server process ID' 
   ``` 
-4. Ändern Sie den Text in einfachen Anführungszeichen in den gewünschten Text.
+
+4. Ändern Sie den Text in den einfachen Anführungszeichen in den gewünschten Suchtext.
 5. Führen Sie die Abfrage aus, und überprüfen Sie die Ergebnisse:
    
     ![Fehlerprotokoll abfragen](media/ssms-tricks/queryerrorlog.png)
 
 
-### <a name="find-error-log-location-if-youre-connected-to-sql"></a>Suchen des Speicherorts des Fehlerprotokolls, wenn Sie mit SQL verbunden sind
+### <a name="find-the-error-log-location-if-youre-connected-to-sql-server"></a>Suchen des Speicherorts des Fehlerprotokolls, wenn Sie mit SQL Server verbunden sind
 1. Stellen Sie eine Verbindung mit SQL Server her.
-2. Öffnen Sie das Fenster **Neue Abfrage**.
-3. Fügen Sie folgenden T-SQL-Codeausschnitt in Ihr Abfragefenster ein, und klicken Sie auf **Ausführen**:
+2. Öffnen Sie das Fenster „Neue Abfrage“.
+3. Fügen Sie den folgenden T-SQL-Code in das Abfragefenster ein, und klicken Sie auf **Ausführen**:
 
  ```sql
     SELECT SERVERPROPERTY('ErrorLogFileName') AS 'Error log file location'  
   ``` 
 
-4. Die Ergebnisse zeigen den Speicherort des Fehlerprotokolls innerhalb des Dateisystems an: 
+4. Die Ergebnisse zeigen den Speicherort des Fehlerprotokolls in dem Dateisystem an: 
 
-    ![Suchen des Fehlerprotokolls nach Abfrage](media/ssms-tricks/finderrorlogquery.png)
+    ![Fehlerprotokoll durch Abfrage suchen](media/ssms-tricks/finderrorlogquery.png)
 
-### <a name="find-error-log-location-if-you-cannot-connect-to-sql"></a>Suchen des Speicherorts des Fehlerprotokolls, wenn kein Verbindung mit SQL möglich ist
+### <a name="find-the-error-log-location-if-you-cant-connect-to-sql-server"></a>Suchen des Speicherorts des Fehlerprotokolls, wenn keine Verbindung mit SQL Server möglich ist
 1. Öffnen Sie den SQL Server-Konfigurations-Manager. 
-2. Erweitern Sie den Knoten **Dienste**.
-3. Klicken Sie mit der rechten Maustaste auf Ihre SQL Server-Instanz > **Eigenschaften**:
+2. Erweitern Sie **Dienste**.
+3. Klicken Sie mit der rechten Maustaste auf Ihre SQL Server-Instanz, und klicken Sie dann auf **Eigenschaften**:
 
-    ![Servereigenschaften für den Konfigurations-Manager](media/ssms-tricks/serverproperties.PNG)
+    ![Konfigurations-Manager-Servereigenschaften](media/ssms-tricks/serverproperties.PNG)
 
 4. Wählen Sie die Registerkarte **Startparameter** aus.
-5. Im Bereich **Vorhandene Parameter** ist im Pfad hinter „-e“ der Speicherort des Fehlerprotokolls enthalten: 
+5. Der Pfad nach „-e“ im Bereich **Vorhandene Parameter** ist der Speicherort des Fehlerprotokolls: 
     
     ![Fehlerprotokoll](media/ssms-tricks/errorlog.png)
-    - Sie werden feststellen, dass an diesem Speicherort mehrere errorlog.*-Dateien vorhanden sind. Bei der Datei mit „*.log“ handelt es sich um das aktuelle Fehlerprotokoll. Die Dateien, die mit Ziffern enden, sind vorhergehende Protokolle, da bei jedem Neustart von SQL Server ein neues Protokoll erstellt wird. 
-6. Öffnen Sie diese Datei in Notepad. 
+    
+    Dort sind mehrere ERRORLOG.*-Dateien gespeichert. Der Dateiname, der auf „*.log“ endet, gehört zur aktuellen Fehlerprotokolldatei. Dateien mit Namen, die auf Zahlen enden, sind vorherige Protokolldateien. Jedes Mal, wenn SQL Server neu gestartet wird, wird ein neues Protokoll erstellt.
 
-## <a name="determine-sql-server-name"></a>Bestimmen Sie den Azure SQL-Servernamen...
-Der Name Ihres Servers von SQL Server kann auf verschiedenen Wegen vor und nach dem Herstellen einer Verbindung mit Ihrem SQL Server bestimmt werden.  
+6. Öffnen Sie die Datei „errorlog.log“ in Notepad. 
 
-### <a name="when-you-dont-know-it"></a>... wenn er Ihnen nicht bekannt ist
+## <a name="determine-sql-server-name"></a>Ermitteln des Namens Ihres SQL-Servers
+Es gibt mehrere Optionen, den Namen Ihres SQL-Servers zu finden, bevor oder nachdem eine Verbindung mit SQL Server hergestellt wurde.  
+
+### <a name="before-you-connect-to-sql-server"></a>Vor dem Herstellen einer Verbindung mit SQL Server
 1. Führen Sie die Schritte zum Finden des [SQL Server-Fehlerprotokolls auf dem Datenträger](#finding-your-error-log-if-you-cannot-connect-to-sql) aus. 
-2. Öffnen Sie die Datei „errorlog.log“ in Notepad. 
-3. Navigieren Sie durch die Datei, bis Sie den Text „Server name is“ (Servername lautet) finden:
-  - Bei dem Text, der in einfachen Anführungszeichen steht, handelt es sich um den Namen der SQL Server-Instanz, mit der Sie verbunden werden: ![Servername im Fehlerprotokoll](media/ssms-tricks/servernameinlog.png) Das Format des Namens ist 'HOSTNAME\INSTANZNAME'. Wenn nur der Hostname angezeigt wird, haben Sie die Standardinstanz installiert, und Ihr Instanzname ist „MSSQLSERVER“. Wenn Sie eine Verbindung mit einer Standardinstanz erstellen, müssen Sie nur den Hostnamen eingeben, um eine Verbindung mit SQL Server herzustellen.  
+2. Öffnen Sie die Datei „errorlog.log“ in Notepad.  
+3. Suchen Sie nach dem Text *Server name is* (Der Servername lautet).
+    
+    Das, was in einfachen Anführungszeichen steht, ist der Name der SQL Server-Instanz, mit der Sie eine Verbindung herstellen:
 
-### <a name="once-youre-connected-to-sql"></a>Sobald Sie eine Verbindung mit SQL hergestellt haben 
-Sie können den Namen der SQL Server-Instanz, mit der Sie verbunden sind, an drei Positionen finden. 
+    ![Servername im Fehlerprotokoll suchen](media/ssms-tricks/servernameinlog.png)
+    
+    Das Format des Namens ist Hostname\Instanzname. Wenn nur der Hostname angezeigt wird, haben Sie die Standardinstanz installiert, und Ihr Instanzname ist „MSSQLSERVER“. Wenn Sie eine Verbindung mit einer Standardinstanz erstellen, müssen Sie nur den Hostnamen eingeben, um eine Verbindung mit SQL Server herzustellen.  
 
-1. Der Name des Servers wird im **Objekt-Explorer** aufgeführt:
+### <a name="when-youre-connected-to-sql-server"></a>Wenn Sie eine Verbindung mit SQL Server hergestellt haben 
+Wenn Sie eine Verbindung mit SQL Server hergestellt haben, können Sie den Servernamen an drei Stellen finden: 
 
-    ![Instanzname in Objekt-Explorer](media/ssms-tricks/nameinobjectexplorer.png)
+1. Der Name des Servers wird im Objekt-Explorer aufgeführt:
+
+    ![SQL Server-Instanzname im Objekt-Explorer](media/ssms-tricks/nameinobjectexplorer.png)
 2. Der Name des Servers wird im Abfragefenster aufgeführt:
 
-    ![Name im Abfragefenster](media/ssms-tricks/nameinquerywindow.png)
-3. Der Name des Servers wird zudem im Fenster **Eigenschaften** aufgeführt.
-    - Öffnen Sie das Menü **Ansicht** > **Eigenschaften**, um darauf zugreifen zu können:
+    ![Der SQL Server-Instanzname im Abfragefenster](media/ssms-tricks/nameinquerywindow.png)
+3. Der Name des Servers wird unter **Eigenschaften** aufgeführt.
+    - Klicken Sie im Menü **Ansicht** auf **Eigenschaftenfenster**:
 
-    ![Name in Eigenschaften](media/ssms-tricks/nameinproperties.png)
+      ![Der SQL Server-Instanzname im Eigenschaftenfenster](media/ssms-tricks/nameinproperties.png)
 
-### <a name="if-youre-connected-to-an-alias-or-availability-group-listener"></a>... wenn Sie mit einem Alias oder einem Verfügbarkeitsgruppenlistener verbunden sind 
-Wenn Sie mit einem Alias oder einem Verfügbarkeitsgruppenlistener verbunden sind, wird Ihnen dies im **Objekt-Explorer** und im Fenster **Eigenschaften** angezeigt. In diesem Fall ist der SQL Server-Name möglicherweise nicht sofort erkennbar und muss abgefragt werden. 
+### <a name="if-youre-connected-to-an-alias-or-availability-group-listener"></a>Wenn Sie mit einem Alias oder einem Verfügbarkeitsgruppenlistener verbunden sind 
+Wenn Sie mit einem Alias oder einem Verfügbarkeitsgruppenlistener verbunden sind, werden Ihnen diese Information im Objekt-Explorer und in den Eigenschaften angezeigt. In diesem Fall ist der SQL Server-Name möglicherweise nicht sofort erkennbar und muss abgefragt werden: 
 
 1. Stellen Sie eine Verbindung mit SQL Server her.
-2. Öffnen Sie das Fenster **Neue Abfrage**.
-3. Fügen Sie folgenden T-SQL-Codeausschnitt in das Fenster ein: 
+2. Öffnen Sie das Fenster „Neue Abfrage“.
+3. Fügen Sie den folgenden T-SQL-Code in das Fenster ein: 
 
   ```sql
    select @@Servername 
  ``` 
-4. Zeigen Sie die Ergebnisse der Abfrage an, um den SQL Server-Namen zu ermitteln, mit dem Sie verbunden sind: 
+4. Zeigen Sie die Ergebnisse der Abfrage an, um den Namen der SQL Server-Instanz zu ermitteln, mit der Sie verbunden sind: 
     
-    ![Servernamen abfragen](media/ssms-tricks/queryservername.png)
+    ![Abfragen des Namens vom SQL-Server](media/ssms-tricks/queryservername.png)
 
 

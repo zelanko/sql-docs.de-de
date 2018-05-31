@@ -34,11 +34,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e1ea30abed242b49684c685b55b05622b360159e
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: f00d346a509c7a240b00ce287782001804126311
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34236141"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -340,8 +341,8 @@ Wenn die zugrunde liegende Tabelle eine Spalte enthält, die einen Datentyp aufw
 -   uniqueidentifier (gilt für [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
 
 **Nicht gruppierte Columnstore-Indizes:**
--   Kann nicht mehr als 1024 Spalten enthalten.  
--   Eine Tabelle mit einem nicht gruppierten columnstore-Index kann über UNIQUE-, PRIMARY KEY- oder FOREIGN KEY-Einschränkungen verfügen, die Einschränkungen können aber nicht in den nicht gruppierten columnstore-Index eingeschlossen werden.  
+-   Kann nicht mehr als 1024 Spalten enthalten.
+-   Kann nicht als einschränkungsbasierter Index erstellt werden. Es ist möglich, dass Tabellen mit einem Columnstore-Index UNIQUE-, PRIMARY KEY- oder FOREIGN KEY-Einschränkungen enthalten. Einschränkungen werden immer mit einem Zeilenspeicherindex durchgesetzt. Sie können nie mit einem Columnstore-Index erzwungen werden, egal ob geclustert oder nicht.
 -   Kann nicht für eine Sicht oder indizierte Sicht erstellt werden.  
 -   Kann keine Sparsespalte enthalten.  
 -   Kann nicht mithilfe der **ALTER INDEX**-Anweisung geändert werden. Um den nicht gruppierten Index zu ändern, müssen Sie stattdessen den columnstore-Index löschen und neu erstellen. Sie können einen Columnstore-Index mithilfe von **ALTER INDEX** deaktivieren und neu erstellen.  

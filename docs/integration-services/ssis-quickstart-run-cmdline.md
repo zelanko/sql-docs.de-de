@@ -1,6 +1,6 @@
 ---
 title: Ausführen eines SSIS-Pakets über die Eingabeaufforderung | Microsoft-Dokumentation
-ms.date: 09/25/2017
+ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,19 +12,30 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0dec4f11b797cc138f11f20a521e1c304efa0463
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 018a1b6e8e75ce89a1c1679262d185381f432b39
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34454863"
 ---
 # <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>Ausführen eines SSIS-Pakets über die Eingabeaufforderung mit „DTExec.exe“
-Dieses Schnellstarttutorial zeigt das Ausführen eines SSIS-Pakets über die Eingabeaufforderung mittels Ausführung von `DTExec.exe` mit den entsprechenden Parametern.
+In diesem Schnellstart wird gezeigt, wie Sie ein SSIS-Paket über die Eingabeaufforderung ausführen, indem Sie `DTExec.exe` mit den entsprechenden Parametern ausführen.
 
 > [!NOTE]
 > Die in diesem Artikel beschriebene Methode wurde nicht Paketen getestet, die für einen Azure SQL-Datenbank-Server bereitgestellt werden.
 
 Weitere Informationen zu `DTExec.exe` finden Sie unter [dtexec Utility](https://docs.microsoft.com/sql/integration-services/packages/dtexec-utility) (Hilfprogramm dtexec).
+
+## <a name="supported-platforms"></a>Unterstützte Plattformen
+
+Mithilfe der Informationen in diesem Schnellstart können Sie auf den folgenden Plattformen SSIS-Pakete ausführen:
+
+-   SQL Server unter Windows
+
+Die in diesem Artikel beschriebene Methode wurde nicht Paketen getestet, die für einen Azure SQL-Datenbank-Server bereitgestellt werden. Weitere Informationen zum Bereitstellen und Ausführen von Paketen in Azure finden Sie unter [Migration von SQL Server Integration Services-Workloads in die Cloud per Lift & Shift](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+
+Anhand der Informationen in diesem Schnellstart können Sie unter Linux keine SSIS-Pakete ausführen. Weitere Informationen zum Ausführen von Paketen finden Sie unter [Extrahieren, Transformieren und Laden von Daten unter Linux mit SSIS](../linux/sql-server-linux-migrate-ssis.md).
 
 ## <a name="run-a-package-with-dtexec"></a>Ausführen eines Pakets mit dtexec
 

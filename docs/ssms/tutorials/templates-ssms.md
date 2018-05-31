@@ -1,6 +1,6 @@
 ---
-Title: 'Tutorial: Using Templates in SQL Server Management Studio'
-description: Ein Tutorial zur Verwendung von Vorlagen in SSMS. zugreifen.
+Title: 'Tutorial: Using templates in SQL Server Management Studio'
+description: Ein Tutorial zur Verwendung von Vorlagen in SSMS.
 keywords: SQL Server, SSMS, SQL Server Management Studio, Vorlagen
 author: MashaMSFT
 ms.author: mathoma
@@ -20,19 +20,20 @@ helpviewer_keywords:
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: c4ddbf149048b7cb7f89be24369c60afc47bdb4a
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 539906b1a09838e43e34be96e4ee32daec19fab7
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455224"
 ---
-# <a name="tutorial-using-templates-within-sql-server-management-studio"></a>Tutorial: Verwenden von Vorlagen in SQL Server Management Studio
+# <a name="tutorial-using-templates-in-sql-server-management-studio"></a>Tutorial: Verwenden von Vorlagen in SQL Server Management Studio
 In diesem Tutorial werden die vorgefertigten T-SQL-Vorlagen (Transact-SQL) vorgestellt, die in SQL Server Management Studio (SSMS) verfügbar sind. In diesem Artikel lernen Sie Folgendes:
 
 > [!div class="checklist"]
-> * Verwenden des Vorlagenbrowsers zum Generieren von T-SQL-Skripts
+> * Das Verwenden des Vorlagenbrowsers zum Generieren von T-SQL-Skripts
 > * Bearbeiten einer vorhandenen Vorlage 
-> * Suchen der Vorlagen auf dem Datenträger
+> * Suchen von Vorlagen auf dem Datenträger
 > * Erstellen einer neuen Vorlage
    
 
@@ -44,72 +45,73 @@ Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio u
 
  
 
-## <a name="using-the-template-browser"></a>Verwenden des Vorlagenbrowsers
-In diesem Abschnitt erfahren Sie, wie Sie den **Vorlagenbrowser** suchen und verwenden. 
+## <a name="use-template-browser"></a>Verwenden des Vorlagenbrowsers
+In diesem Abschnitt erfahren Sie, wie Sie den Vorlagenbrowser finden und verwenden. 
 
-1. Starten Sie SQL Server Management Studio.
-2. Über das Menü **Ansicht** > **Vorlagenbrowser** (Strg + Alt + T): 
+1. Öffnen Sie SQL Server Management Studio.
+2. Klicken Sie im Menü **Ansicht** auf **Vorlagenbrowser** (STRG+ALT+T): 
 
-    ![Vorlagenbrowser](media/templates-ssms/templatebrowser.png)
-    - Im unteren Bereich des **Vorlagenbrowsers** können Sie auch aktuell verwendete Vorlagen sehen.
-
-3. Erweitern Sie den Knoten, der für Sie von Interesse ist, und klicken Sie mit der rechten Maustaste auf „Vorlage“ > „Öffnen“:
-
-    ![Vorlage öffnen](media/templates-ssms/opentemplate.png)
-    - Ein Doppelklick auf die Vorlage hat den gleichen Effekt.
-
-4. Hierdurch wird ein neues Abfragefenster geöffnet, in dem T-SQL bereits aufgefüllt wurde. 
-5. Ändern Sie die Vorlage Ihren Anforderungen entsprechend, und klicken Sie anschließend bei der Abfrage auf **Ausführen**:
+    ![Öffnen des Vorlagenbrowsers](media/templates-ssms/templatebrowser.png)
     
-    ![Datenbankvorlage erstellen](media/templates-ssms/createdbtemplate.png)
+    Im unteren Bereich des Vorlagenbrowsers können Sie aktuell verwendete Vorlagen sehen.
+
+3. Erweitern Sie den Knoten, der Sie interessiert. Führen Sie einen Rechtsklick auf die Vorlage aus, und klicken Sie dann auf **Öffnen**:
+
+    ![Öffnen einer Vorlage](media/templates-ssms/opentemplate.png)
+    
+    Sie können auch auf den Vorlagennamen doppelklicken, um sie zu öffnen.
+
+4. Ein neues Abfragefenster wird geöffnet. Das T-SQL-Skript ist bereits aufgefüllt. 
+5. Ändern Sie die Vorlage Ihren Anforderungen entsprechend, und klicken Sie anschließend auf **Ausführen**, um die Abfrage auszuführen:
+    
+    ![Erstellen einer Datenbankvorlage](media/templates-ssms/createdbtemplate.png)
 
 
 ## <a name="edit-an-existing-template"></a>Bearbeiten einer vorhandenen Vorlage
-Sie können die vorhandenen Vorlagen auch im **Vorlagenbrowser** bearbeiten.  
+Sie können vorhandene Vorlagen auch im Vorlagenbrowser bearbeiten.  
 
-1. Suchen Sie die gewünschte Vorlage im **Vorlagenbrowser**.
-2. Klicken Sie mit der rechten Maustaste auf die Vorlage und dann auf **Bearbeiten**:
+1. Navigieren Sie im Vorlagenbrowser zu der Vorlage, mit der Sie arbeiten möchten.
+2. Führen Sie einen Rechtsklick auf die Vorlage aus, und klicken Sie dann auf **Bearbeiten**:
 
-    ![Vorlage bearbeiten](media/templates-ssms/edittemplate.png)
+    ![Bearbeiten einer Vorlage](media/templates-ssms/edittemplate.png)
 
-3. Nehmen Sie in dem Abfragefenster, das geöffnet wird, die gewünschten Änderungen vor.
-4. Speichern Sie die Vorlage, indem Sie zu **Datei** > **Speichern** (Strg + S) navigieren.
+3. Nehmen Sie Ihre Änderungen in dem geöffneten Abfragefenster vor.
+4. Klicken Sie zum Speichern der Vorlage auf **Datei** > **Speichern** (STRG+S).
 5. Schließen Sie das Abfragefenster.
-6. Öffnen Sie die gespeicherte Vorlage erneut. Ihre neuen Bearbeitungen müssten nun darin enthalten sein.
+6. Öffnen Sie die Vorlage erneut. Ihre Änderungen sollten angezeigt werden.
  
 
-## <a name="locate-the-templates-on-disk"></a>Suchen der Vorlagen auf dem Datenträger
-Sobald eine Vorlage geöffnet wurde, können Sie diese anschließend auf dem Datenträger suchen.
+## <a name="locate-templates-on-disk"></a>Suchen von Vorlagen auf dem Datenträger
+Wenn eine Vorlage offen ist, können Sie die Vorlagen suchen, die auf dem Datenträger sind.
 
-1. Wählen Sie eine Vorlage im **Vorlagenbrowser** > **Bearbeiten** aus.
-2. Klicken Sie mit der rechten Maustaste auf **Abfragetitel** > **Übergeordneten Ordner öffnen**. Dadurch müsste Ihr Explorer dort geöffnet werden, wo die Vorlagen auf dem Datenträger gespeichert sind: 
+1. Wählen Sie im Vorlagenbrowser eine Vorlage aus, und klicken Sie dann auf **Bearbeiten**.
+2. Klicken Sie mit der rechten Maustaste auf **Abfragetitel**, und klicken Sie dann auf **Übergeordneten Ordner öffnen**. Der Explorer sollte den Speicherort der Vorlagen auf dem Datenträger öffnen: 
 
-    ![Vorlagen auf dem Datenträger](media/templates-ssms/templatesondisk.png)
+   ![Vorlagen auf dem Datenträger](media/templates-ssms/templatesondisk.png)
   
 
 ## <a name="create-a-new-template"></a>Erstellen einer neuen Vorlage
-Sie können im **Vorlagenbrowser** auch neue Vorlagen erstellen. In den folgenden Schritten erfahren Sie, wie Sie einen neuen Ordner erstellen und anschließend innerhalb dieses Ordners eine neue Vorlage erstellen können. Mit diesen Schritten können Sie jedoch auch in den vorhandenen Ordnern eine benutzerdefinierte Vorlage erstellen. 
+Sie können im Vorlagenbrowser auch eine neue Vorlage erstellen. In den folgenden Schritten erfahren Sie, wie Sie einen neuen Ordner erstellen und anschließend in diesem Ordner eine neue Vorlage erstellen können. Mithilfe dieser Schritte können Sie auch eine benutzerdefinierte Vorlage in einem vorhandenen Ordner erstellen. 
 
-1. Öffnen Sie den **Vorlagenbrowser**.
-2. Klicken Sie mit der rechten Maustaste auf „SQL Server-Vorlagen“ und dann auf **Neu** > **Ordner**.
+1. Öffnen Sie den Vorlagenbrowser.
+2. Klicken Sie mit der rechten Maustaste auf **SQL Server-Vorlagen**, und klicken Sie dann auf **Neu** > **Ordner**.
 3. Geben Sie diesem Ordner den Namen **Benutzerdefinierte Vorlagen**:
 
-    ![Erstellen benutzerdefinierter Vorlagen](media/templates-ssms/creatingcustomtemplate.png)
+    ![Erstellen eines Ordners für benutzerdefinierte Vorlagen](media/templates-ssms/creatingcustomtemplate.png)
 
-4. Klicken Sie mit der rechten Maustaste auf den neu erstellten Ordner **Benutzerdefinierte Vorlagen** und dann auf **Neu** > **Vorlage**, und geben Sie Ihrer Vorlage einen Namen:
+4. Klicken Sie mit der rechten Maustaste auf den neu erstellten Ordner „Benutzerdefinierte Vorlagen“, und klicken Sie dann auf **Neu** > **Vorlage**. Geben Sie einen Namen für Ihre Vorlage ein:
  
-    ![Erstellen benutzerdefinierter Vorlagen](media/templates-ssms/createnewtemplate.png)
+    ![Erstellen einer benutzerdefinierten Vorlage](media/templates-ssms/createnewtemplate.png)
    
-5. Klicken Sie mit der rechten Maustaste auf die gerade erstellte Vorlage > **Bearbeiten**. Dadurch wird ein **Neues Abfragefenster** geöffnet.
+5. Führen Sie einen Rechtsklick auf die erstellte Vorlage aus, und klicken Sie dann auf **Bearbeiten**. Ein neues Abfragefenster wird geöffnet.
 6. Geben Sie den T-SQL-Text ein, der gespeichert werden soll. 
-7. Speichern Sie die Datei, indem Sie zum Menü **Datei** > **Speichern** navigieren.
-8. Schließen Sie das vorhandene **Abfragefenster**, und öffnen Sie Ihre neue benutzerdefinierte Vorlage. 
+7. Klicken Sie im Menü **Datei** auf **Speichern**.
+8. Schließen Sie das vorhandene Abfragefenster, und öffnen Sie Ihre neue benutzerdefinierte Vorlage. 
 
     
 
 ## <a name="next-steps"></a>Nächste Schritte
-Der nachfolgende Artikel enthält einige zusätzliche Tipps und Tricks zur Verwendung von SQL Server Management Studio. 
+Der nachfolgende Artikel enthält zusätzliche Tipps und Tricks zur Verwendung von SQL Server Management Studio. 
 
-Für weitere Informationen zum nächsten Artikel blättern
 > [!div class="nextstepaction"]
-> [Schaltfläche „Nächste Schritte“](ssms-tricks.md)
+> [Zusätzliche Tipps und Tricks für die Verwendung von SSMS](ssms-tricks.md)

@@ -51,11 +51,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 81267bd94920ba0398a9ed6e3ca8192eaa3cdaa4
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 3c7d97d9c8ee56af89807f07cd335b16c50fbcc1
+ms.sourcegitcommit: 02c889a1544b0859c8049827878d66b2301315f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34225346"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -700,10 +701,11 @@ Bei Verwendung der Sicherungskomprimierung mit [Transparent Data Encryption (TDE
 Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ermöglicht dies einen optimierten Komprimierungsalgorithmus für TDE-verschlüsselte Datenbanken, der eine Seite zuerst entschlüsselt, komprimiert und dann erneut verschlüsselt. Bei Verwendung von `MAXTRANSFERSIZE = 65536` (64 KB), komprimiert die Sicherungskomprimierung mit TDE-verschlüsselten Datenbanken die verschlüsselten Seiten direkt und gibt möglicherweise keine guten Komprimierungsraten aus. Weitere Informationen finden Sie unter [Backup Compression for TDE-enabled Databases (Sicherungskomprimierung für TDE-fähige Datenbanken)](http://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/).
 
 > [!NOTE]  
-> Der optimierte Komprimierungsalgorithmus für TDE-verschlüsselte Datenbanken wird automatisch verwendet, wenn:
-> * 
->  In diesem Fall wird die Standardeinstellung `MAXTRANSFERSIZE` in 1048576 (1 MB) geändert und nicht auf einen niedrigeren Wert erzwungen.
-> * Die Datenbank mehrere Datendateien besitzt. In diesem Fall wird die Standardeinstellung `MAXTRANSFERSIZE` in ein Vielfaches von 65536 (64 KB) und nicht in einen niedrigeren Wert geändert (z.B. `MAXTRANSFERSIZE = 65536`). 
+> In einigen Fällen ist die Standardeinstellung von `MAXTRANSFERSIZE` größer als 64 KB:
+> * Wenn die Datenbank mehrere Datendateien erstellt hat, wird `MAXTRANSFERSIZE` > 64 KB verwendet.
+> * Beim Ausführen der Sicherung über URLs beträgt die Standardeinstellung `MAXTRANSFERSIZE = 1048576` (1 MB).
+>   
+> Selbst wenn eine der folgenden Bedingungen gilt, müssen Sie explizit festlegen, dass `MAXTRANSFERSIZE` im Sicherungsbefehl größer als 64 KB ist, damit der neue Algorithmus für die Sicherungskomprimierung zurückgegeben wird.
   
 Standardmäßig wird bei jedem erfolgreichen Sicherungsvorgang dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll und dem Systemereignisprotokoll ein Eintrag hinzugefügt. Wenn Sie das Protokoll regelmäßig sichern, kann die Anzahl dieser Erfolgsmeldungen schnell ansteigen, d. h., es entstehen sehr große Fehlerprotokolle, die das Suchen nach anderen Meldungen erschweren können. In solchen Fällen können Sie diese Protokolleinträge mithilfe des Ablaufverfolgungsflags 3226 unterdrücken, wenn keines der Skripts von diesen Einträgen abhängig ist. Weitere Informationen finden Sie unter [Ablaufverfolgungsflags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   

@@ -20,11 +20,12 @@ caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eeacfa947295ed049cb8ce7aa2af2db32a0c6e47
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d8bff088048ed6a547eae419a870d32da9ba8112
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34300578"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Always On-Verfügbarkeitsgruppen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +34,8 @@ ms.lasthandoff: 05/03/2018
   
  Eine Verfügbarkeitsgruppe führt auf der Ebene eines Verfügbarkeitsreplikats ein Failover aus. Failover werden nicht durch Datenbankprobleme verursacht, z. B., wenn eine Datenbank aufgrund eines Verlusts einer Datendatei, des Löschens einer Datenbank oder der Beschädigung eines Transaktionsprotokolls, verdächtig wird.  
  
- >[HINWEIS] Der vollständige, formale Name für diese Verfügbarkeitsfunktionen lautet „Always On-Verfügbarkeitsgruppen“. Die englische Abkürzung für diesen Begriff lautet AG (Always On Availability groups). Bitte verwenden Sie nicht die Abkürzungen AOAG oder AAG. 
+ >[!NOTE]
+ >Der vollständige, formale Name für diese Verfügbarkeitsfeature lautet „Always On-Verfügbarkeitsgruppen“. Die englische Abkürzung für diesen Begriff lautet AG (Always On Availability groups). Bitte verwenden Sie nicht die Abkürzungen AOAG oder AAG. 
   
 ##  <a name="Benefits"></a> Vorteile  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] stellen ein breites Spektrum von Optionen bereit, durch die die Datenbankverfügbarkeit verbessert und eine optimale Ressourcenverwendung ermöglicht werden. Die wichtigsten Komponenten sind:  

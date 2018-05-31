@@ -33,11 +33,12 @@ caps.latest.revision: 87
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 70ac1b9a973aff7f15309d29a85e3fddd6f2954f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a771f30b82a81fa05ea65409bce9a132cbb42dad
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34300338"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,7 +78,8 @@ Diese Option wird in FILESTREAM-Dateigruppencontainern nicht unterstützt.
 Wenn *target_size* angegeben wird, versucht DBCC SHRINKFILE, die Datei auf die gewünschte Größe zu verkleinern. Bereits verwendete Seiten in dem Teil der Datei, der freigegeben werden soll, werden auf freien Speicherplatz in dem Teil der Datei verschoben, der beibehalten werden soll. Ist z.B. eine Datendatei mit einer Größe von 10 MB vorhanden, wird durch einen DBCC SHRINKFILE-Vorgang mit einem *target_size*-Wert von 8 veranlasst, dass alle verwendeten Seiten, die sich in den letzten 2 MB der Datei befinden, in nicht zugeordnete Seiten der ersten 8 MB dieser Datei verschoben werden. DBCC SHRINKFILE verkleinert die Datei nur so weit, dass der erforderliche Speicherplatz für die Daten unangetastet bleibt. Werden beispielsweise 7 MB einer 10 MB großen Datendatei verwendet, verkleinert eine DBCC SHRINKFILE-Anweisung mit einem *target_size*-Wert von 6 die Datei lediglich auf 7 MB statt auf 6 MB.
   
 EMPTYFILE  
-Verlagert alle Daten aus der angegebenen Datei in andere Dateien in **derselben Dateigruppe**. EMPTYFILE migriert die Daten also aus der angegebenen Datei zu anderen Dateien in derselben Dateigruppe. EMPTYFILE stellt sicher, dass der Datei keine neuen Daten hinzugefügt werden. Die Datei kann mithilfe der [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)-Anweisung entfernt werden.
+Verlagert alle Daten aus der angegebenen Datei in andere Dateien in **derselben Dateigruppe**. EMPTYFILE migriert die Daten also aus der angegebenen Datei zu anderen Dateien in derselben Dateigruppe. EMPTYFILE stellt sicher, dass der Datei keine neuen Daten hinzugefügt werden, obwohl sie nicht als schreibgeschützt markiert ist. Die Datei kann mithilfe der [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)-Anweisung entfernt werden. Wenn die Dateigröße mit der [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)-Anweisung geändert wird, wird das Flag „schreibgeschützt“ zurückgesetzt, und Daten können hinzugefügt werden.
+
 Die Datei kann aus FILESTREAM-Dateigruppencontainern erst dann mit ALTER DATABASE entfernt werden, nachdem der FILESTREAM-Garbage Collector ausgeführt und alle nicht benötigten Dateigruppen-Containerdateien gelöscht wurden, die von EMPTYFILE in einen anderen Container kopiert wurden. Weitere Informationen finden Sie unter [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md).
   
 > [!NOTE]  
@@ -98,7 +100,7 @@ Alle Informationsmeldungen werden unterdrückt.
 ## <a name="result-sets"></a>Resultsets  
 In der folgenden Tabelle werden die Spalten des Resultsets beschrieben:
   
-|Spaltenname|Beschreibung|  
+|Spaltenname|und Beschreibung|  
 |---|---|
 |**DbId**|Die Datenbank-ID der Datei, die das [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu verkleinern versuchte.|  
 |**FileId**|Die Datei-ID der Datei, die [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu verkleinern versuchte.|  
@@ -107,7 +109,7 @@ In der folgenden Tabelle werden die Spalten des Resultsets beschrieben:
 |**UsedPages**|Die Anzahl von 8-KB-Seiten, die derzeit von der Datei verwendet werden.|  
 |**EstimatedPages**|Die Anzahl an 8-KB-Seiten, auf die die Datei wahrscheinlich vom [!INCLUDE[ssDE](../../includes/ssde-md.md)] verkleinert werden kann.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 DBCC SHRINKFILE gilt für die Dateien der aktuellen Datenbank. Weitere Informationen zum Ändern der aktuellen Datenbank finden Sie unter [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md).
   
 DBCC SHRINKFILE-Vorgänge können an jeder Stelle des Prozesses beendet werden, wobei der abgeschlossene Anteil erhalten bleibt. Wenn der EMPTYFILE-Parameter in einer Datei verwendet und der Vorgang unterbrochen wird, wird die Datei nicht markiert, um das Hinzufügen weiterer Daten zu verhindern.

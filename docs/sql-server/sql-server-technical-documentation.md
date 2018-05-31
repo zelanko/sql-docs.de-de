@@ -24,11 +24,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fe7bb29dbea7d45687cc0a1395b93e8b54fbc142
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b2fc97c10ee40d90704459dd820882c5b97d22d2
+ms.sourcegitcommit: 02c889a1544b0859c8049827878d66b2301315f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34225438"
 ---
 # <a name="sql-server-documentation"></a>SQL Server-Dokumentation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,6 +108,7 @@ SQL Server ist ein zentraler Bestandteil der Microsoft-Datenplattform. SQL Serve
 - [Importieren und Exportieren von Daten mit dem SQL Server-Import/Export-Assistenten](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 - [Migrieren Ihrer SQL Server-Datenbank zu Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
 - [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595)
+- [Azure migration journey - assets, migrate, optimize (Azure-Migration – Ressourcen, Migration, Optimierung)](https://azure.microsoft.com/en-us/migration/)
 ::: moniker-end
 
 ::: moniker range=">= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
@@ -116,6 +118,7 @@ SQL Server ist ein zentraler Bestandteil der Microsoft-Datenplattform. SQL Serve
 - [Migrate data to SQL Server on Linux (Migrieren von Daten zu SQL Server für Linux)](../linux/sql-server-linux-migrate-overview.md)
 - [Migrieren Ihrer SQL Server-Datenbank zu Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
 - [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595)
+- [Importieren von Daten aus Excel in SQL Server oder Azure SQL-Datenbank](https://docs.microsoft.com/sql/relational-databases/import-export/import-data-from-excel-to-sql?view=sql-server-2017)
 ::: moniker-end
 
 ## <a name="update-your-version-of-sql-server"></a>Aktualisieren Ihrer Version von SQL Server

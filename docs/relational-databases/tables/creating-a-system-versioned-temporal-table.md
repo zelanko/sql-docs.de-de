@@ -15,11 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f7415cfbe4343f9f50de42c26db5444b6582a572
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 03077d7ede10d42b4d4812ce6ef93a35dd295a22
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455553"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Erstellen einer temporalen Tabelle mit Systemversionsverwaltung
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -184,7 +185,8 @@ ALTER TABLE InsurancePolicy
   
 -   Durch das Hinzufügen eines Zeitraums wird für die aktuelle Tabelle eine Datenkonsistenzprüfung durchgeführt, um sicherzustellen, dass die Standardwerte für Zeitraumspalten gültig sind.  
   
--   Wenn bei der Aktivierung von **SYSTEM_VERSIONING**eine vorhandene Verlaufstabelle angegeben wird, erfolgt eine Datenkonsistenzprüfung der aktuellen Tabelle und der Verlaufstabelle. Diese Prüfung kann übersprungen werden, indem Sie **DATA_CONISTENCY_CHECK = OFF** als zusätzlichen Parameter angeben.  
+-   Wenn bei der Aktivierung von **SYSTEM_VERSIONING** eine vorhandene Verlaufstabelle angegeben wird, erfolgt eine Datenkonsistenzprüfung der aktuellen Tabelle und der Verlaufstabelle.
+ Diese kann übersprungen werden, indem Sie **DATA_CONSISTENCY_CHECK = OFF** als zusätzlichen Parameter angeben.  
   
 ### <a name="migrate-existing-tables-to-built-in-support"></a>Migrieren von vorhandenen Tabellen zu integrierter Unterstützung  
  Dieses Beispiel zeigt, wie eine vorhandene Lösung basierend auf Triggern zu integrierter temporaler Unterstützung migriert wird. In diesem Beispiel wird angenommen, dass in der aktuellen benutzerdefinierten Lösung die aktuellen und die historischen Daten auf zwei getrennte Benutzertabellen aufgeteilt sind (**ProjectTaskCurrent** und **ProjectTaskHistory**). Wenn Ihre vorhandene Lösung sowohl die aktuellen als auch die historischen Zeilen in einer einzigen Tabelle speichert, sollten Sie die Daten auf zwei Tabellen aufteilen, bevor Sie die in diesem Beispiel gezeigten Migrationsschritte ausführen:  

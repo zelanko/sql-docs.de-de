@@ -31,11 +31,12 @@ caps.latest.revision: 62
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: b6fe7fcf315849e6779b66087e8a87d2953d96d0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e6022b5609c2d4b4d362f90088bee4e84ad874c7
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34236411"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -80,7 +81,7 @@ DBCC SHRINKDATABASE
 ## <a name="result-sets"></a>Resultsets  
 In der folgenden Tabelle werden die Spalten des Resultsets beschrieben:
   
-|Spaltenname|Beschreibung|  
+|Spaltenname|und Beschreibung|  
 |-----------------|-----------------|  
 |**DbId**|Die Datenbank-ID der Datei, die das [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu verkleinern versuchte.|  
 |**FileId**|Datei-ID der Datei, die das [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu verkleinern versuchte.|  
@@ -92,7 +93,11 @@ In der folgenden Tabelle werden die Spalten des Resultsets beschrieben:
 >[!NOTE]
 > Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] zeigt keine Zeilen für Dateien an, die nicht verkleinert wurden.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
+
+>[!NOTE]
+> Aktuell wird DBCC SHRINKDATABASE von Azure SQL Data Warehouse nicht unterstützt. Das Ausführen dieses Befehls wird nicht empfohlen, da der Vorgang sehr E/A-intensiv ist und Ihr Datawarehouse offline schalten kann. Darüber hinaus ändern sich die Kosten Ihrer Datawarehouse-Momentaufnahmen nach dem Ausführen dieses Befehls. 
+
 Zum Verkleinern aller Daten- und Protokolldateien einer bestimmten Datenbank führen Sie den DBCC SHRINKDATABASE-Befehl aus. Führen Sie zum Verkleinern einer einzelnen Daten- oder Protokolldatei einer bestimmten Datenbank den Befehl [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) aus.
   
 Führen Sie [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) zum Anzeigen des aktuellen freien (nicht zugeordneten) Speicherplatzes in der Datenbank aus.
@@ -106,9 +111,6 @@ Das Ausführen von DBCC SHRINKDATABASE ohne eine der Optionen NOTRUNCATE oder TR
 Die Datenbank, die verkleinert werden soll, muss sich nicht im Einzelbenutzermodus befinden. Andere Benutzer können während der Verkleinerung darin arbeiten. Das gilt auch für Systemdatenbanken.
   
 Während einer Datenbanksicherung können Sie die Datenbank nicht verkleinern. Umgekehrt können Sie eine Datenbank nicht sichern, während ein Verkleinerungsvorgang für die Datenbank ausgeführt wird.
-
->[!NOTE]
-> Aktuell wird DBCC SHRINKDATABASE von Azure SQL Data Warehouse nicht unterstützt, wenn TDE aktiviert ist.
   
 ## <a name="how-dbcc-shrinkdatabase-works"></a>Funktionsweise von DBCC SHRINKDATABASE  
 DBCC SHRINKDATABASE verkleinert Datendateien pro Datei, Protokolldateien jedoch so, als lägen alle Protokolldateien in einem zusammenhängenden Protokollpool vor. Dateien werden immer am Ende verkleinert.

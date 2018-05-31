@@ -1,7 +1,7 @@
 ---
 title: Planen und Testen des Upgradeplans für die Datenbank-Engine | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/20/2016
+ms.date: 05/18/2018
 ms.prod: sql
 ms.prod_service: install
 ms.reviewer: ''
@@ -15,11 +15,12 @@ caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ccdef1d662006900a6d1338acbb24db907bc9192
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bbe0ecaee2d03865f7e8f6700b6aa5a146c533f1
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34300208"
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>Planen und Testen des Upgradeplans für die Datenbank-Engine
 
@@ -35,13 +36,13 @@ ms.lasthandoff: 05/03/2018
 - Artikel [Abwärtskompatibilität der SQL Server-Datenbank-Engine](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
   
 ## <a name="pre-upgrade-planning-checklist"></a>Planungsprüfliste zur Vorbereitung des Upgrades  
- Lesen Sie vor dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Upgrade die folgende Prüfliste und die dazugehörigen Artikel. Diese Artikel gelten für alle Upgrades, unabhängig von der Upgrademethode, und unterstützen Sie dabei, die am besten geeignete Upgrademethode zu ermitteln: entweder ein paralleles oder direktes Upgrade oder die Neuinstallation der aktuellen Programmversion. So kann es beispielsweise geschehen, dass Sie kein direktes oder paralleles Upgrade durchführen können, wenn Sie das Betriebssystem, SQL Server 2005 oder eine 32-Bit-Version von SQL Server upgraden. Eine Entscheidungsstruktur finden Sie unter [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
+ Lesen Sie vor dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Upgrade die folgende Prüfliste und die dazugehörigen Artikel. Der Inhalt dieser Artikel gilt unabhängig von der Upgrademethode für alle Upgrades und hilft Ihnen dabei, die am besten geeignete Upgrademethode zu bestimmen: Paralleles Upgrade, Upgrade durch Neuinstallation oder direktes Upgrade. So kann es beispielsweise geschehen, dass Sie kein direktes oder paralleles Upgrade durchführen können, wenn Sie das Betriebssystem, SQL Server 2005 oder eine 32-Bit-Version von SQL Server upgraden. Eine Entscheidungsstruktur finden Sie unter [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
   
 -   **Hardware- und Softwareanforderungen:** Lesen Sie das Thema zu den Hardware- und Softwareanforderungen für die Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Diese Anforderungen finden Sie unter [Hardware- und Softwareanforderungen für die Installation von SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). Es gehört zu jedem Upgradeplanungszyklus, ein Upgrade des Betriebssystems und der Hardware in Betracht zu ziehen, da neuere Hardware schneller ist und den Lizenzbedarf aufgrund der geringeren Anzahl von Prozessoren oder aufgrund der Datenbank- und Serverkonsolidierung reduzieren kann. Diese Art von Hardware- und Softwareänderungen wirken sich darauf aus, welche Upgrademethode Sie wählen.  
   
 -   **Aktuelle Umgebung:** Überprüfen Sie die aktuelle Umgebung, um die verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten und die mit Ihrer Umgebung verbundenen Clients zu verstehen.  
   
-    -   **Client-Anbieter:** Obwohl ein Upgrade kein gleichzeitiges Update aller Ihrer Clients erfordert, steht es Ihnen frei, dies zu tun. Wenn Sie ein Upgrade von [!INCLUDE[sql14](../../includes/sssql14-md.md)] oder höher durchführen, setzen die folgenden [!INCLUDE[sql15](../../includes/sssql15-md.md)]-Funktionen eine Anbieteraktualisierung generell voraus oder benötigen diese, um Ihnen zusätzliche Funktionen zur Verfügung stellen zu können.  
+    -   **Client-Anbieter:** Obwohl ein Upgrade kein gleichzeitiges Update aller Ihrer Clients erfordert, steht es Ihnen frei, dies zu tun. Wenn Sie ein Upgrade von [!INCLUDE[sql14](../../includes/sssql14-md.md)] oder älter durchführen, erfordern die folgenden [!INCLUDE[sql15](../../includes/sssql15-md.md)]-Features entweder einen aktualisierten Anbieter für jeden Client oder einen Anbieter, der zusätzliche Funktionen bereitstellt:  
   
        -   
   [Always Encrypted &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
@@ -66,20 +67,20 @@ ms.lasthandoff: 05/03/2018
   
 -   **Abwärtskompatibilität:** Lesen Sie den Artikel zur Abwärtskompatibilität der [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]-Datenbank-Engine, um sich über Änderungen im Verhalten zwischen [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version zu informieren, für die Sie das Upgrade durchführen. Siehe [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md).  
   
--   **Aktualisierungsratgeber:**  Führen Sie den Aktualisierungsratgeber für [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] aus, um Hilfestellung bei Problemen zu erhalten, die den Upgradeprozess blockieren oder auf Grund besonders wichtiger Änderungen Modifikationen an Skripten oder Anwendungen erfordern. [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] enthält eine neue Version des Aktualisierungsratgebers, um Kunden beim Vorbereiten des Upgrades eines vorhandenen Systems zu unterstützen.  Mit diesem Tool können Sie außerdem prüfen, ob Ihre vorhandenen Datenbanken nach dem Upgrade neue Funktionen wie Stretch-Tabellen nutzen können.   
-    Sie können den [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]Aktualisierungsratgeber  [hier](https://www.microsoft.com/en-us/download/details.aspx?id=48119)herunterladen.  
+-   **Datenmigrations-Assistent:** Führen Sie den Datenmigrations-Assistent aus, um bei der Diagnose von Problemen zu helfen, die den Upgradeprozess blockieren oder aufgrund eines Breaking Change Änderungen an vorhandenen Skripts oder Anwendungen erfordern.
+    Sie können den Datenmigrations-Assistent [hier herunterladen](https://aka.ms/get-dma).  
   
--   **Systemkonfigurationsprüfung:**  Führen Sie die [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] -Systemkonfigurationsprüfung (System Configuration Checker; SCC) aus, um festzustellen, ob das SQL Server-Setupprogramm Blockierungsprobleme erkennt, bevor Sie das Upgrade tatsächlich planen. Weitere Informationen finden Sie unter [Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md).  
+-   **Systemkonfigurationsprüfung:** Führen Sie die [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]-Systemkonfigurationsprüfung (System Configuration Checker, SCC) aus, um zu ermitteln, ob das SQL Server-Setupprogramm Blockierungsprobleme entdeckt, bevor Sie das Upgrade planen. Weitere Informationen finden Sie unter [Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md).  
   
--   **Upgraden von speicheroptimierten Tabellen:** Wenn Sie eine SQL Server 2014-Datenbankinstanz mit speicheroptimierten Tabellen auf SQL Server 2016 aktualisieren, benötigt der Vorgang zusätzliche Zeit, um die speicheroptimierten Tabellen in das neue Format auf dem Datenträger zu konvertieren (die Datenbank ist währenddessen offline).   Die Zeitspanne hängt von der Größe der speicheroptimierten Tabellen und der Geschwindigkeit des E/A-Subsystems ab. Das Upgrade erfordert für direkte und neue Installationsupgrades drei Vorgänge hinsichtlich der Datengröße (Schritt 1 ist für parallele Upgrades nicht notwendig, die Schritte 2 und 3 indes schon):  
+-   **Aktualisieren von speicheroptimierten Tabellen:** Wenn Sie eine SQL Server 2014-Datenbankinstanz mit speicheroptimierten Tabellen auf SQL Server 2016 aktualisieren, benötigt der Upgradeprozess zusätzliche Zeit, um die speicheroptimierten Tabellen in das neue Format auf dem Datenträger zu konvertieren (die Datenbank ist währenddessen offline).   Die Zeitspanne hängt von der Größe der speicheroptimierten Tabellen und der Geschwindigkeit des E/A-Subsystems ab. Das Upgrade erfordert für direkte und neue Installationsupgrades drei Vorgänge hinsichtlich der Datengrößen (Schritt 1 ist für parallele Upgrades nicht notwendig, die Schritte 2 und 3 indes schon):  
   
-    1.  Führen Sie die Datenbankwiederherstellung mithilfe des alten Datenträgerformats aus (dies bedeutet, dass alle speicheroptimierten Tabellen vom Datenträger in den Speicher geladen werden).  
+    1.  Führen Sie die Datenbankwiederherstellung mithilfe des alten Datenträgerformats aus (dabei werden alle speicheroptimierten Tabellen vom Datenträger in den Speicher geladen).  
   
     2.  Serialisieren Sie die Daten auf dem Datenträger im neuen Format auf dem Datenträger  
   
-    3.  Führen Sie die Datenbankwiederherstellung mithilfe des neuen Formats aus (dies bedeutet, dass alle speicheroptimierten Tabellen vom Datenträger in den Speicher geladen werden).  
+    3.  Führen Sie die Datenbankwiederherstellung mithilfe des neuen Formats aus (dabei werden alle speicheroptimierten Tabellen vom Datenträger in den Speicher geladen).  
   
-     Wenn während dieses Vorgangs nicht genügend Speicherplatz auf dem Datenträger verfügbar ist, kann die Wiederherstellung nicht erfolgreich durchgeführt werden. Wenn Sie ein direktes Upgrade ausführen oder eine SQL Server 2014-Datenbank an eine SQL Server 2016-Instanz anfügen möchten, sollten Sie sicherstellen, dass genügend Speicherplatz auf dem Datenträger verfügbar ist, um die vorhandene Datenbank und den zusätzlichen Speicher zu speichern. Der zusätzliche Speicher entspricht hierbei der aktuellen Größe der Container in der MEMORY_OPTIMIZED_DATA-Dateigruppe in der Datenbank. Mithilfe der folgenden Abfrage können Sie den Speicherplatz ermitteln, den derzeit die MEMORY_OPTIMIZED_DATA-Dateigruppe und folglich auch die Menge des für eine erfolgreiches Upgrade erforderlichen Speicherplatzes erfordert:  
+     Außerdem schlägt die Wiederherstellung fehl, wenn während dem Prozess nicht genügend Speicherplatz auf dem Datenträger verfügbar ist. Stellen Sie sicher, dass ausreichend Speicherplatz auf dem Datenträger verfügbar ist, um die vorhandene Datenbank und die Container in der Dateigruppe MEMORY_OPTIMIZED_DATA zu speichern, um ein direktes Upgrade auszuführen oder eine SQL Server 2014-Datenbank an eine SQL Server 2016-Instanz anzufügen. Verwenden Sie die folgende Abfrage, um den Speicherplatz zu ermitteln, der derzeit für die Dateigruppe MEMORY_OPTIMIZED_DATA erforderlich ist, und infolgedessen auch den Speicherplatz, der erforderlich ist, damit das Upgrade erfolgreich abgeschlossen wird:  
   
     ```  
     select cast(sum(size) as float)*8/1024/1024 'size in GB'   
@@ -88,19 +89,20 @@ ms.lasthandoff: 05/03/2018
     ```  
   
 ## <a name="develop-and-test-the-upgrade-plan"></a>Entwickeln und Testen des Upgradeplans  
- Die beste Herangehensweise ist, das Upgrade wie jedes andere IT-Projekt zu behandeln. Sie sollten ein Upgrade-Team ernennen, das die für das Upgrade maßgeblichen Qualifikationen für die Datenbankverwaltung, das Netzwerk sowie das Extrahieren, Transformieren und Laden (ETL) besitzt. Das Team muss:  
+ Die beste Herangehensweise ist, das Upgrade wie jedes andere IT-Projekt zu behandeln. Organisieren Sie ein Upgrade-Team, das die für das Upgrade erforderlichen Qualifikationen für die Datenbankverwaltung, das Netzwerk sowie das Extrahieren, Transformieren und Laden (ETL) besitzt. Das Team muss:  
   
 -   
   **Informationen zum Auswählen einer Upgrademethode** finden Sie unter [Wählen einer Upgrademethode für die Datenbank-Engine](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
   
--   **Entwickeln eines Wiederherstellungsplans:**. Mit diesem Plan können Sie Ihre ursprüngliche Umgebung wiederherstellen, wenn Sie sie zurücksetzen müssen.  
+-   **Entwickeln eines Wiederherstellungsplans:** Mit diesem Plan können Sie Ihre ursprüngliche Umgebung wiederherstellen, wenn Sie sie zurücksetzen müssen.  
   
--   **Akzeptanzkriterien bestimmen:** Sie müssen wissen, ob das Upgrade erfolgreich war, bevor Sie Benutzer auf die upgegradete Umgebung umstellen.  
+-   **Akzeptanzkriterien bestimmen:** Überprüfen Sie, ob das Upgrade erfolgreich war, bevor Sie Benutzer auf die aktualisierte Umgebung umstellen.  
   
 -   **Den Upgradeplan testen:** Verwenden Sie Microsoft SQL Server Distributed Replay Utility, um die Leistung mit der tatsächlichen Arbeitsauslastung zu testen. Dieses Hilfsprogramm kann Ablaufverfolgungsdaten mithilfe mehrerer Computer wiedergeben, indem es eine für die Unternehmung maßgebliche Arbeitsauslastung simuliert. Durch Ausführen einer Wiedergabe auf einem Testserver vor und nach einem SQL Server-Upgrade können Sie Leistungsunterschiede messen und nach Inkompatibilitäten der Anwendung suchen, die möglicherweise durch das Upgrade verursacht werden. Weitere Informationen finden Sie unter [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md) und [Befehlszeilenoptionen für das Verwaltungstool &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md).  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- 
-  [Aktualisieren der Datenbank-Engine](../../database-engine/install-windows/upgrade-database-engine.md)  
+
+  [Aktualisieren der Datenbank-Engine](../../database-engine/install-windows/upgrade-database-engine.md) 
   
-  
+## <a name="additional-resources"></a>Weitere Ressourcen 
+[Datenbankmigrationsanleitung](https://aka.ms/datamigration)  

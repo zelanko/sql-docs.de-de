@@ -26,23 +26,20 @@ caps.latest.revision: 91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 22b55997d2631001afe9e220f87056026c49b4aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f5a985cffb4aa982e598cbaaeb5c8ddb57133fd7
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455673"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Sichern und Wiederherstellen von SQL Server-Datenbanken
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-
-  In diesem Thema werden die Vorteile der Sicherung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken und grundlegende Begriffe zu Sicherung und Wiederherstellung erläutert. Darüber hinaus bietet das Thema eine Einführung in Sicherungs- und Wiederherstellungsstrategien für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Sicherheitsüberlegungen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen und -Wiederherstellungen. 
-  
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Dieser Artikel erläutert die Vorteile der Sicherung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken und grundlegende Begriffe zu Sicherung und Wiederherstellung. Darüber hinaus bietet der Artikel eine Einführung in Sicherungs- und Wiederherstellungsstrategien für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sowie Sicherheitsüberlegungen zu Sicherungen und Wiederherstellungen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
 > **Suchen Sie nach Schritt-für-Schritt-Anweisungen?** Dieses Thema enthält **keine spezifischen Schritte zum Ausführen von Sicherungen!** Wenn Sie sofort zum eigentlichen Sicherungsvorgang gelangen möchten, scrollen Sie auf dieser Seite nach unten bis zum Abschnitt mit den Links, die nach Sicherungsaufgaben und nach der Verwendung von SSMS oder T-SQL gegliedert sind.  
   
- Durch die Sicherungs- und Wiederherstellungskomponente von SQL Server wird eine wichtige Vorrichtung zum Schutz wichtiger Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken bereitgestellt. Um das Risiko schwerwiegenden Datenverlusts zu verringern, müssen Sie die Datenbanken regelmäßig sichern, um Änderungen an den Daten beizubehalten. Eine sorgfältig geplante Sicherungs- und Wiederherstellungsstrategie schützt Datenbanken vor Datenverlust, der durch die verschiedensten Fehler verursacht werden kann. Testen Sie Ihre Strategie, indem Sie einen Sicherungssatz wiederherstellen und dann die Datenbank wiederherstellen, um im Notfall effektiv reagieren zu können.  
+ Durch die Sicherungs- und Wiederherstellungskomponente von SQL Server wird eine wichtige Vorrichtung zum Schutz wichtiger Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken bereitgestellt. Um das Risiko schwerwiegenden Datenverlusts zu verringern, müssen Sie die Datenbanken regelmäßig sichern, um Änderungen an den Daten beizubehalten. Eine sorgfältig geplante Sicherungs- und Wiederherstellungsstrategie schützt Datenbanken vor Datenverlust, der durch die verschiedensten Fehler verursacht werden kann. Testen Sie Ihre Strategie, indem Sie einen Sicherungssatz wiederherstellen und dann die Datenbank wiederherstellen, um im Notfall effektiv reagieren zu können.
   
  Neben dem lokalen Speicher für das Speichern der Sicherung unterstützt SQL Server auch das Sichern und Wiederherstellen mit dem Windows Azure-BLOB-Speicherdienst. Weitere Informationen finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Für Datenbankdateien, die mit dem Microsoft Azure Blob-Speicherdienst gespeichert wurden, bietet [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] die Option, Azure-Momentaufnahmen für nahezu sofortige Sicherungen und schnellere Wiederherstellungen zu nutzen. Weitere Informationen finden Sie unter [Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
@@ -51,12 +48,9 @@ ms.lasthandoff: 05/03/2018
 
      Mithilfe gültiger Datenbanksicherungen können Sie die Daten nach vielen Fehlern wiederherstellen, z. B.:  
   
-    -   Medienfehler  
-  
-    -   Benutzerfehler (z. B. versehentliches Löschen einer Tabelle)  
-  
-    -   Hardwarefehler (z. B. ein beschädigter Datenträger oder der endgültige Verlust eines Servers)  
-  
+    -   Medienfehler    
+    -   Benutzerfehler (z. B. versehentliches Löschen einer Tabelle)    
+    -   Hardwarefehler (z. B. ein beschädigter Datenträger oder der endgültige Verlust eines Servers)    
     -   Naturkatastrophen. Mit der SQL Server-Sicherung im Windows Azure-BLOB-Speicherdienst können Sie eine externe Sicherung in einer anderen Region als an Ihrem lokalen Standort erstellen. Diese wird dann verwendet, wenn der lokale Standort durch eine Naturkatastrophe in Mitleidenschaft gezogen wird.  
   
 -   Darüber hinaus sind Sicherungen einer Datenbank hilfreich für Routineverwaltungsaufgaben, wie z. B. Kopieren einer Datenbank zwischen Servern, Einrichten von [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] oder Datenbankspiegelung und Archivierung.  
@@ -72,7 +66,7 @@ ms.lasthandoff: 05/03/2018
  Ein Datenträger oder Bandgerät, auf den bzw. das SQL Server-Sicherungen geschrieben werden und von dem sie wiederhergestellt werden können. SQL Server-Sicherungen können auch in einen Windows Azure-BLOB-Speicherdienst geschrieben werden. Das **URL** -Format wird verwendet, um das Ziel und den Namen der Sicherungsdatei anzugeben. Weitere Informationen finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 **Sicherungsmedien**  
- Bänder oder Datenträgerdateien, auf die Sicherungen geschrieben wurden.  
+ Bänder oder Datenträgerdateien, auf die Sicherungen geschrieben wurden  
   
 **Datensicherung**  
  Eine Sicherung von Daten einer vollständigen Datenbank (Datenbanksicherung), einer partiellen Datenbank (partielle Sicherung) oder einem Satz von Datendateien oder Dateigruppen (Dateisicherung).  
@@ -104,10 +98,10 @@ ms.lasthandoff: 05/03/2018
  ##  <a name="backup-and-restore-strategies"></a>Sicherungs- und Wiederherstellungsstrategien  
  Das Sichern und Wiederherstellen von Daten muss jedoch auf die entsprechende Umgebung und auf die verfügbaren Ressourcen abgestimmt werden. Die zuverlässige Verwendung von Sicherungen und Wiederherstellungen erfordert daher eine Sicherungs- und Wiederherstellungsstrategie. Eine sorgfältig geplante Sicherungs- und Wiederherstellungsstrategie maximiert Datenverfügbarkeit und minimiert Datenverluste, wobei die besonderen Anforderungen des entsprechenden Unternehmens berücksichtigt werden.  
   
-#### <a name="important"></a>Wichtig! 
-**Platzieren Sie die Datenbank und die Sicherungen auf separaten Medien. Andernfalls stehen Ihre Sicherungen nicht mehr zur Verfügung, wenn auf dem Medium mit den Datenbankdateien Fehler auftreten. Wenn Sie die Daten und die Sicherungen auf separaten Medien speichern, wird auch die E/A-Leistung für das Schreiben von Sicherungen sowie für die produktive Nutzung der Datenbank optimiert.**  
+  > [!IMPORTANT] 
+  > Platzieren Sie die Datenbank und die Sicherungen auf separaten Medien. Andernfalls stehen Ihre Sicherungen nicht mehr zur Verfügung, wenn auf dem Medium mit den Datenbankdateien Fehler auftreten. Wenn Sie die Daten und die Sicherungen auf separaten Medien speichern, wird auch die E/A-Leistung für das Schreiben von Sicherungen sowie für die Nutzung der Datenbank in der Produktion optimiert.**  
   
- Eine Sicherungs- und Wiederherstellungsstrategie enthält einen Sicherungsteil und einen Wiederherstellungsteil. Der Sicherungsteil der Strategie definiert den Typ und die Häufigkeit der Sicherungen, die Art und die Geschwindigkeit der dafür benötigten Hardware, die vorgesehene Testmethode für die Sicherungen sowie Aufbewahrungsort und -methode von Sicherungsmedien (einschließlich Sicherheitsüberlegungen). Der Wiederherstellungsteil der Strategie definiert, wer für die Ausführung der Wiederherstellungen verantwortlich ist und wie Wiederherstellungen ausgeführt werden sollen, um die jeweiligen Ziele hinsichtlich der Verfügbarkeit der Datenbank und Minimierung von Datenverlusten zu erreichen. Es empfiehlt sich, Sicherungs- und Wiederherstellungsprozeduren zu dokumentieren und eine Kopie der Dokumentation im Ausführungsbuch aufzubewahren.  
+ Eine Sicherungs- und Wiederherstellungsstrategie enthält einen Sicherungsteil und einen Wiederherstellungsteil. Der Sicherungsteil der Strategie definiert den Typ und die Häufigkeit der Sicherungen, die Art und die Geschwindigkeit der dafür benötigten Hardware, die vorgesehene Testmethode für die Sicherungen sowie Speicherort und -methode von Sicherungsmedien (einschließlich Sicherheitsüberlegungen). Der Wiederherstellungsteil der Strategie definiert, wer für die Ausführung der Wiederherstellungen verantwortlich ist und wie Wiederherstellungen ausgeführt werden sollen, um die jeweiligen Ziele hinsichtlich der Verfügbarkeit der Datenbank und Minimierung von Datenverlusten zu erreichen. Es empfiehlt sich, Sicherungs- und Wiederherstellungsprozeduren zu dokumentieren und eine Kopie der Dokumentation im Ausführungsbuch aufzubewahren.  
   
  Das Entwerfen einer effektiven Sicherungs- und Wiederherstellungsstrategie erfordert sorgfältiges Planen, Implementieren und Testen. Die Testphase ist erforderlich. Sie verfügen erst dann über eine Sicherungsstrategie, wenn Sie die Sicherungen, die in Ihrer Wiederherstellungsstrategie enthalten sind, in allen Kombinationen erfolgreich wiederhergestellt haben. Sie müssen eine Vielzahl von Faktoren berücksichtigen: Dabei handelt es sich z. B. um:  
   
@@ -151,12 +145,46 @@ ms.lasthandoff: 05/03/2018
    
 >  Informationen zu Parallelitätseinschränkungen während der Sicherung finden Sie unter [Übersicht über Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
- Nachdem Sie entschieden haben, welche Arten von Sicherungen Sie benötigen und wie oft Sie diese jeweils durchführen müssen, empfiehlt es sich, im Rahmen eines Datenbankwartungsplans für die Datenbank die regelmäßige Durchführung dieser Sicherungen zu planen. Informationen zu Wartungsplänen für Datenbank- und Protokollsicherungen und zu deren Erstellung finden Sie unter [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md).  
+ Nachdem Sie entschieden haben, welche Arten von Sicherungen Sie benötigen und wie oft Sie diese jeweils durchführen müssen, empfiehlt es sich, im Rahmen eines Datenbankwartungsplans für die Datenbank die regelmäßige Durchführung dieser Sicherungen zu planen. Informationen zu Wartungsplänen für Datenbank- und Protokollsicherungen und zu deren Erstellung finden Sie unter [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md).
   
 ### <a name="test-your-backups"></a>Testen von Sicherungen  
- Sie verfügen erst dann über eine Wiederherstellungsstrategie, wenn Sie die Sicherungen getestet haben. Es ist entscheidend, dass Sie Ihre Sicherungsstrategie für jede Ihrer Datenbanken gründlich testen, indem Sie eine Kopie der Datenbank auf einem Testsystem wiederherstellen. Sie müssen die Wiederherstellung jedes Sicherungstyps testen, den Sie zu verwenden beabsichtigen.  
+ Sie verfügen erst dann über eine Wiederherstellungsstrategie, wenn Sie die Sicherungen getestet haben. Es ist entscheidend, dass Sie Ihre Sicherungsstrategie für jede Ihrer Datenbanken gründlich testen, indem Sie eine Kopie der Datenbank auf einem Testsystem wiederherstellen. Sie müssen die Wiederherstellung jedes Sicherungstyps testen, den Sie zu verwenden beabsichtigen.
   
- Es empfiehlt sich, für jede Datenbank ein Betriebshandbuch zu führen. In diesem Betriebshandbuch sollten der Aufbewahrungsort der Sicherungen, ggf. die Namen der Sicherungsmedien sowie Angaben zum Zeitaufwand für die Wiederherstellung der Testsicherungen vermerkt sein.  
+ Es empfiehlt sich, für jede Datenbank ein Betriebshandbuch zu führen. In diesem Betriebshandbuch sollten der Aufbewahrungsort der Sicherungen, ggf. die Namen der Sicherungsmedien sowie Angaben zum Zeitaufwand für die Wiederherstellung der Testsicherungen vermerkt sein.
+
+## <a name="monitor-progress-with-xevent"></a>Überwachen des Fortschritts mit xEvent
+Sicherungs- und Wiederherstellungsvorgänge können aufgrund der Größe der Datenbank und der Komplexität der notwendigen Vorgänge viel Zeit in Anspruch nehmen. Wenn bei einer der beiden Vorgänge ein Problem auftritt, können Sie das erweiterte Ereignis **backup_restore_progress_trace** verwenden, um den Fortschritt in Echtzeit zu überwachen. Weitere Informationen zu erweiterten Ereignissen finden Sie unter [Erweiterte Ereignisse](../extended-events/extended-events.md).
+
+  >[!WARNING]
+  > Die Verwendung des erweiterten Ereignisses „backup_restore_progress_trace“ kann zu Leistungsproblemen führen und einen beträchtlichen Teil des Speicherplatzes verbrauchen. Verwenden Sie dieses Ereignis mit Bedacht über kurze Zeiträume, und testen Sie es sorgfältig, bevor Sie es in einer Produktionsumgebung implementieren.
+
+
+```sql
+-- Create the backup_restore_progress_trace extended event esssion
+CREATE EVENT SESSION [BackupRestoreTrace] ON SERVER 
+ADD EVENT sqlserver.backup_restore_progress_trace
+ADD TARGET package0.event_file(SET filename=N'BackupRestoreTrace')
+WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPATCH_LATENCY=5 SECONDS,MAX_EVENT_SIZE=0 KB,MEMORY_PARTITION_MODE=NONE,TRACK_CAUSALITY=OFF,STARTUP_STATE=OFF)
+GO
+
+-- Start the event session  
+ALTER EVENT SESSION [BackupRestoreTrace]  
+ON SERVER  
+STATE = start;  
+GO  
+
+-- Stop the event session  
+ALTER EVENT SESSION [BackupRestoreTrace]  
+ON SERVER  
+STATE = stop;  
+GO  
+```
+
+### <a name="sample-output-from-extended-event"></a>Beispielausgabe für erweiterte Ereignisse 
+
+![Beispiel für die Sicherung der Xevent-Ausgabe](media/back-up-and-restore-of-sql-server-databases/backup-xevent-example.png)
+![Example of restore xevent output](media/back-up-and-restore-of-sql-server-databases/restore-xevent-example.png)
+ 
   
 ## <a name="more-about-backup-tasks"></a>Weitere Informationen zu Sicherungstasks  
 -   [Erstellen eines Wartungsplans](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)  

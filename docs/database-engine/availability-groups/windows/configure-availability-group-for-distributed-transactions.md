@@ -1,7 +1,7 @@
 ---
 title: Konfigurieren von Verfügbarkeitsgrupppen für verteilte Transaktionen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/19/2017
+ms.date: 05/22/2018
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -20,11 +20,12 @@ caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 73563a02f1e51e91719a4831ac8b5dd34465aaa6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bde3ca6e1b9712e34a3e0b43f0a52687de25a40f
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455533"
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>Konfigurieren von Verfügbarkeitsgrupppen für verteilte Transaktionen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/03/2018
 Um verteilte Transaktionen gewährleisten zu können, muss die Verfügbarkeitsgruppe so konfiguriert sein, dass Datenbanken als Ressourcenmanager verteilter Transaktionen registriert werden.  
 
 >[!NOTE]
->Auch in [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] werden verteilte Transaktionen unterstützt. In [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] ist diese Unterstützung aber eingeschränkt. In [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] werden verteilte Transaktionen mit einer Datenbank in einer Verfügbarkeitsgruppe nicht unterstützt, wenn auf einem Server mehr als eine Datenbank enthalten ist. Diese Einschränkung besteht in [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] nicht. 
+>[!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] Service Pack 2 und höher stellt vollständige Unterstützung für verteilte Transaktionen in Verfügbarkeitsgruppen bereit. In älteren [!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)]-Versionen als Service Pack 2 werden datenbankübergreifende verteilte Transaktionen nicht unterstützt, wenn sie eine Datenbank in einer Verfügbarkeitsgruppe enthalten. Bei diesen Transaktionen werden nur Datenbanken auf der gleichen SQL Server-Instanz verwendet. Diese Einschränkung besteht in [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] nicht. 
 >
 >Die Einrichtungsschritte für [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] sind identisch mit denen für [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)].
 
@@ -56,7 +57,7 @@ Konfigurieren Sie eine Verfügbarkeitsgruppe so, dass sie verteilte Transaktione
 
 Die Erstellung von Verfügbarkeitsgruppen für verteilte Transaktionen ist ab [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] möglich. Um eine Verfügbarkeitsgruppe für verteilte Transaktionen zu erstellen, müssen Sie `DTC_SUPPORT = PER_DB` in die Definition einer Verfügbarkeitsgruppe einschließen. Das folgende Skript erstellt eine Verfügbarkeitsgruppe für verteilte Transaktionen. 
 
-```transact-sql
+```sql
 CREATE AVAILABILITY GROUP MyAG
    WITH (
       DTC_SUPPORT = PER_DB  
@@ -82,7 +83,7 @@ CREATE AVAILABILITY GROUP MyAG
 
 Ab [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] lasen sich Verfügbarkeitsgruppen für verteilte Transaktionen ändern. Um eine Verfügbarkeitsgruppe für verteilte Transaktionen zu ändern, nehmen Sie `DTC_SUPPORT = PER_DB` in das Skript `ALTER AVAILABILITY GROUP` auf. Das Beispielskript aktiviert für eine Verfügbarkeitsgruppe die Unterstützung verteilter Transaktionen. 
 
-```transact-sql
+```sql
 ALTER AVAILABILITY GROUP MyaAG
    SET (
       DTC_SUPPORT = PER_DB  
@@ -167,19 +168,19 @@ Führen Sie nur eines der folgenden Skripte aus:
 
    * Um Transaktionen zu committen, aktualisieren Sie das folgende Skript, indem Sie `yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy` durch die UOW der unsicheren Transaktion aus der vorherigen Fehlermeldung ersetzen, und führen Sie es aus:
 
-      ```transact-sql
-      KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH COMMIT
-      ```
+   ```sql
+   KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH COMMIT
+   ```
 
    * Um einen Rollback für die Transaktion durchzuführen, aktualisieren Sie das folgende Skript, indem Sie `yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy` durch UOW der unsicheren Transaktion aus der vorherigen Fehlermeldung ersetzen, und führen Sie es aus:
 
-      ```transact-sql
-      KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH ROLLBACK
-     ```
+   ```sql
+   KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH ROLLBACK
+   ```
 
 Nach dem Rollback oder Commit der Transaktion können Sie die Datenbank mit `ALTER DATABASE` online schalten. Aktualisieren Sie das folgende Skript, indem Sie als Datenbankname den Namen der verdächtigen Datenbank angeben:
 
-   ```transact-sql
+   ```sql
    ALTER DATABASE [DB1] SET ONLINE
    ```
 

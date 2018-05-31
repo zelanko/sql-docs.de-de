@@ -21,11 +21,12 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fdf20d18d4397b0d8ed2f0598b287a88d03caf0e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 20e98a86e61ba084073022eb515d436787f6a341
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455414"
 ---
 # <a name="odata-source"></a>OData-Quelle
 Verwenden Sie die OData-Quellkomponente in einem SSIS-Paket, um Daten aus einem Open Data Protocol (OData)-Dienst zu nutzen. Die Komponente unterstützt die OData v3 und v4-Protokolle.  
@@ -37,7 +38,10 @@ Verwenden Sie die OData-Quellkomponente in einem SSIS-Paket, um Daten aus einem 
 Die OData-Quelle umfasst Unterstützung für die folgenden Datenquellen:
 -   Microsoft Dynamics AX Online und Microsoft Dynamics CRM Online
 -   SharePoint-Listen. Um alle Listen auf einem SharePoint-Server anzuzeigen, verwenden Sie die folgende URL: „http://\<Server>/_vti_bin/ListData.svc“. Weitere Informationen zu den URL-Konventionen in SharePoint finden Sie unter [SharePoint Foundation-REST-Schnittstelle](http://msdn.microsoft.com/library/ff521587.aspx).
-  
+
+> [!NOTE]
+> Die OData-Quellkomponente unterstützt keine komplexen Typen wie Multiple-Choice-Elemente in SharePoint-Listen.
+
 ## <a name="odata-format-and-performance"></a>OData-Format und Leistung
  Die meisten OData-Dienste können Ergebnisse in verschiedenen Formaten zurückgeben. Sie können das Format des Resultsets mithilfe der `$format`-Abfrageoption angeben. Formate wie JSON und JSON Light sind effizienter als ATOM oder XML und erzielen bei der Übertragung großer Datenmengen möglicherweise eine bessere Leistung. In der folgenden Tabelle sind Ergebnisse aus Beispieltests dargestellt. Wie Sie erkennen können, ergab der Wechsel von ATOM zu JSON einen Leistungszuwachs von 30-53% und der Wechsel von ATOM zum neuen JSON Light-Format (verfügbar in WCF Data Services 5.1) einen Leistungszuwachs von 67 %.  
   
@@ -69,7 +73,7 @@ Die OData-Quelle umfasst Unterstützung für die folgenden Datenquellen:
  **Auflistung oder Ressourcenpfad verwenden**  
  Geben Sie die Methode für die Auswahl von Daten aus der Quelle an.  
   
-|Option|Description|  
+|Option|und Beschreibung|  
 |------------|-----------------|  
 |Auflistung|Rufen Sie mithilfe eines Auflistungsnamens Daten aus der OData-Quelle ab.|  
 |Ressourcenpfad|Rufen Sie mithilfe eines Ressourcenpfads Daten aus der OData-Quelle ab.|  
