@@ -21,11 +21,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e26659de53d43f14863e0bf83d70f5f6d3dbcfd0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a4cd609a06e0d30e28a451a4308cfec337d47f68
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707508"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>Anhang A: Daten und Dienstanbieter
 In diesem Abschnitt behandelt die drei Arten von Anbietern: Datenanbieter Dienstanbieter und Dienstkomponenten. Anbieter können zwei Kategorien zugeordnet: Bereitstellen von Daten und die Dienste bereitstellen. Ein *Datenanbieter* besitzt seine eigenen Daten und es in tabellarischer Form an Ihre Anwendung verfügbar gemacht. Ein *Dienstanbieter* kapselt einen Dienst durch erzeugen und Nutzen von Daten, die Funktionen in den ADO-Anwendungen zu erweitern. Ein Dienstanbieter kann als auch genauer definiert eine *Dienstkomponente*, die zusammen mit anderen Dienstanbietern oder Komponenten arbeiten müssen.
@@ -57,7 +58,7 @@ In diesem Abschnitt behandelt die drei Arten von Anbietern: Datenanbieter Dienst
 ## <a name="provider-specific-dynamic-properties"></a>Anbieterspezifische dynamische Eigenschaften
  Die [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Sammlungen von der [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md), [Befehl](../../../ado/reference/ado-api/command-object-ado.md), und [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekten zählen die dynamische Eigenschaften, die spezifisch für die Anbieter. Diese Eigenschaften stellen Informationen zu spezifischen Funktionen bereit, an den Anbieter über das integrierten Eigenschaften, die ADO unterstützt.
 
- Verwenden Sie nach dem Herstellen der Verbindung, und Erstellen dieser Objekte, die [aktualisieren](../../../ado/reference/ado-api/refresh-method-ado.md) Methode für die **Eigenschaften** Auflistung des Objekts, das die anbieterspezifischen Eigenschaften zu erhalten. Finden Sie in der Dokumentation und der [OLE DB Programmer's Guide](http://msdn.microsoft.com/en-us/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) ausführliche Informationen über diese dynamischen Eigenschaften.
+ Verwenden Sie nach dem Herstellen der Verbindung, und Erstellen dieser Objekte, die [aktualisieren](../../../ado/reference/ado-api/refresh-method-ado.md) Methode für die **Eigenschaften** Auflistung des Objekts, das die anbieterspezifischen Eigenschaften zu erhalten. Finden Sie in der Dokumentation und der [OLE DB Programmer's Guide](http://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) ausführliche Informationen über diese dynamischen Eigenschaften.
 
 ## <a name="service-providers"></a>Dienstanbieter
  Wenn einen Dienstanbieter verwenden möchten, müssen Sie ein Schlüsselwort angeben. Sie sollten auch die anbieterspezifische dynamische Eigenschaften mit jedem Dienstanbieter beachten. Anbieterspezifische Informationen sind für jeden Dienstanbieter aufgeführt, die derzeit von Microsoft verfügbar ist:

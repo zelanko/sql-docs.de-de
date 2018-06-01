@@ -9,11 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 6fba7a7e5dfded26d617ac905449a4799c19249b
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: a4f748ed39705f865a303f1b59ae352068f93431
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707098"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Arbeitsauslastungsverwaltung in Analyseplattformsystem
 
@@ -36,7 +37,7 @@ Arbeitsauslastungsverwaltung
 Ressourcenklasse  
 In SQL Server-PDW eine *Ressourcenklasse* ist eine integrierte Serverrolle, die vorab zugeordneten für den Arbeitsspeicher und Parallelität Grenzwerten. SQL Server PDW ordnet die Ressourcen auf Anforderungen gemäß der Ressource Klasse Serverrollen-Mitgliedschaft des Anmeldenamens, der den Anforderungen übermittelt.  
   
-Auf den Serverknoten verwendet die Implementierung der Ressourcenklassen das Feature "Ressourcenkontrolle" in SQL Server an. Weitere Informationen zur Ressourcenkontrolle finden Sie unter [Resource Governor](http://msdn.microsoft.com/en-us/library/bb933866(v=sql.11).aspx) auf MSDN.  
+Auf den Serverknoten verwendet die Implementierung der Ressourcenklassen das Feature "Ressourcenkontrolle" in SQL Server an. Weitere Informationen zur Ressourcenkontrolle finden Sie unter [Resource Governor](http://msdn.microsoft.com/library/bb933866(v=sql.11).aspx) auf MSDN.  
   
 ### <a name="understand-current-resource-utilization"></a>Verstehen der aktuellen Ressourcenverwendung  
 Um System-Ressourcenverwendung für die momentan ausgeführten Anforderungen zu verstehen, verwenden Sie die dynamischen Verwaltungssichten von SQL Server PDW. Sie können z. B. DMVs verwenden, um zu verstehen, wenn ein langsam ausgeführte große HashJoin profitieren kann, durch die Verwendung von mehr Arbeitsspeicher.  
@@ -130,7 +131,7 @@ SQL-Anweisungen und Vorgänge, die Ressourcenklassen unterliegen:
   
 -   UPDATE  
   
--   DELETE  
+-   Delete  
   
 -   RESTORE DATABASE, wenn in einem eingebaut mit Weitere Serverknoten wiederherstellen.  
   

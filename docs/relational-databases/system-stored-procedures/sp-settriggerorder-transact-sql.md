@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -25,11 +23,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5059547366dbc167c4c73e3c8cabac53d0007382
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: bef1fdf427c6bc510e77f8df55f3281d5b5db6cd
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33263561"
 ---
 # <a name="spsettriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,11 +57,11 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 > [!IMPORTANT]  
 >  Die **erste** und **letzten** Trigger müssen zwei unterschiedliche Trigger sein.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Erster**|Trigger wird zuerst ausgelöst|  
 |**Letzter**|Trigger wird zuletzt ausgelöst|  
-|**InclusionThresholdSetting**|Trigger wird in nicht definierter Reihenfolge ausgelöst|  
+|**Keine**|Trigger wird in nicht definierter Reihenfolge ausgelöst|  
   
  [  **@stmttype=** ] **"***Statement_type***"**  
  Gibt die SQL-Anweisung an, die den Trigger auslöst. *Statement_type* ist **varchar(50)-Spalte** möglich INSERT-, Update-, DELETE-, LOGON oder eine [!INCLUDE[tsql](../../includes/tsql-md.md)] anweisungsereignisses abgelesen [DDL-Ereignisse](../../relational-databases/triggers/ddl-events.md). Ereignisgruppen können nicht angegeben werden.  

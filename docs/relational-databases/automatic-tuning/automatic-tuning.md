@@ -20,11 +20,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: de3984b5005114a2b8644c99706dcce48ab873e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0e77a1d7e24fa2635b3e699672338e588c1f5c1c
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707768"
 ---
 # <a name="automatic-tuning"></a>Automatische Optimierung
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -95,7 +96,7 @@ Manuell erzwungene Plänen sollte nicht immer erzwungen werden, da die [!INCLUDE
 
 In [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], Plan planauswahlregression abfragespeichersichten System finden. In [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], [!INCLUDE[ssde_md](../../includes/ssde_md.md)] erkennt und zeigt mögliche Plan planauswahlregression und den empfohlenen Aktionen, die in angewendet werden sollen die [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) anzeigen. Die Ansicht zeigt Informationen über das Problem, das die Wichtigkeit der das Problem, und Details wie z. B. die identifizierten Abfrage, die zurückgestellte Plan-ID, die ID des Plans, der für den Vergleich, als Basislinie verwendet wurde und die [!INCLUDE[tsql_md](../../includes/tsql_md.md)] -Anweisung, die ausgeführt werden kann, zum Beheben der Problem.
 
-| Typ | description | datetime | score | Details | … |
+| Typ | description | DATETIME | score | Details | … |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | CPU-Zeit von 4 ms in 14 ms geändert | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | CPU-Zeit in ms 84 aus 37 ms geändert | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
@@ -165,7 +166,7 @@ Suchen von optimalen Satzes an Indizes, die Leistung der Abfragen zu verbessern,
 
 Zusätzlich zur Erkennung [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] identifizierte Empfehlungen automatisch anwenden können. Wenn Sie feststellen, dass die integrierten Regeln auf die Leistung Ihrer Datenbank verbessern, können Sie [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] automatisch Ihre Indizes zu verwalten.
 
-Zum Aktivieren der automatischen Optimierung in Azure SQL-Datenbank und die Funktion zum automatischen Optimierung Ihrer arbeitsauslastung vollständig verwalten können, finden Sie unter [Aktivieren der automatischen Optimierung in Azure SQL-Datenbank, die mit Azure-Portal](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-automatic-tuning-enable).
+Zum Aktivieren der automatischen Optimierung in Azure SQL-Datenbank und die Funktion zum automatischen Optimierung Ihrer arbeitsauslastung vollständig verwalten können, finden Sie unter [Aktivieren der automatischen Optimierung in Azure SQL-Datenbank, die mit Azure-Portal](https://docs.microsoft.com/azure/sql-database/sql-database-automatic-tuning-enable).
 
 Wenn die [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] gilt eine Empfehlung CREATE Index- oder DROP INDEX automatisch überwacht die Leistung von Abfragen, die vom Index betroffen sind. Neuer Index werden nur dann, wenn Leistungsdaten der betroffenen Abfragen verbessert werden beibehalten. Der gelöschte Index wird automatisch neu erstellt werden, wenn es gibt einige Abfragen, die aufgrund der Abwesenheit des Indexes langsamer ausgeführt.
 
@@ -177,7 +178,7 @@ Schritte zum Erstellen von erforderlichen Indizes in [!INCLUDE[ssazure_md](../..
 
 Ohne automatische indexverwaltung, müssten die Benutzer manuell Abfragen [Sys. dm_db_missing_index_details &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) Sicht zu suchen, die möglicherweise die Leistung zu verbessern, erstellen Sie Indizes, die mithilfe der Angaben Indizes in dieser Sicht und manuell Überwachen der Leistung der Abfrage bereitgestellt. Um die Indizes zu suchen, die gelöscht werden sollen, müssen Benutzer operational Verwendungsstatistik der Indizes zu suchen, die selten verwendete Indizes überwachen.
 
-[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] vereinfacht diesen Vorgang. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] Ihre Arbeitslast analysiert, die Abfragen identifiziert, die mit einem neuen Index schneller ausgeführt werden konnte und oder doppelte Tabellenindizes identifiziert. Weitere Informationen zur Identifikation von Indizes, die zur geändert werden sollte [finden Sie im Azure-Portal indexempfehlungen](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-advisor-portal).
+[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] vereinfacht diesen Vorgang. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] Ihre Arbeitslast analysiert, die Abfragen identifiziert, die mit einem neuen Index schneller ausgeführt werden konnte und oder doppelte Tabellenindizes identifiziert. Weitere Informationen zur Identifikation von Indizes, die zur geändert werden sollte [finden Sie im Azure-Portal indexempfehlungen](https://docs.microsoft.com/azure/sql-database/sql-database-advisor-portal).
 
 ## <a name="see-also"></a>Siehe auch  
  [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   

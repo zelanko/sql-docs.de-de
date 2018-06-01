@@ -19,10 +19,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 8162c57738ee978289a90f2898198c9fd6c05d06
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707268"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>Vorgehensweisen zum Verarbeiten von Ergebnissen (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,15 +33,15 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Führen Sie eine gespeicherte Prozedur & #40; Mithilfe der ODBC CALL-Syntax & #41; und Verarbeiten von Return Rückgabecodes und Ausgabeparameter & #40; OLE DB & #41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-odbc-call-and-process-output.md)  
+-   [Ausführen einer gespeicherten Prozedur &#40;mithilfe der ODBC CALL-Syntax&#41; und Verarbeiten von Rückgabecodes und Ausgabeparametern &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-odbc-call-and-process-output.md)  
   
--   [Führen Sie eine gespeicherte Prozedur & #40; Mithilfe der RPC-Syntax & #41; und Verarbeiten von Return Rückgabecodes und Ausgabeparameter & #40; OLE DB & #41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)  
+-   [Ausführen einer gespeicherten Prozedur &#40;mithilfe von RPC-Syntax&#41; und Verarbeiten von Rückgabecodes und Ausgabeparametern &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)  
   
--   [Führen Sie eine benutzerdefinierte Funktion und Verarbeiten von Return Code & #40; OLE DB & #41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-a-user-defined-function-and-process-return-code-ole-db.md)  
+-   [Ausführen eine benutzerdefinierten Funktion und Verarbeiten des Rückgabecodes &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-a-user-defined-function-and-process-return-code-ole-db.md)  
   
--   [Abrufen von Zeilen aus einem Resultset & #40; OLE DB & #41;](../../../relational-databases/native-client-ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md)  
+-   [Rufen Sie Zeilen aus einem Resultset &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE DB-Themen zur Vorgehensweise](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+ [Vorgehensweisen für OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   
