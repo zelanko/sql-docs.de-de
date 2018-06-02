@@ -7,11 +7,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d52196007b5a1de4753e9846e4057295113baa7b
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: ecd58ee9670724a2732ce8aabc5d9f2c62042995
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585452"
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>Was ist SQL Server-Machine Learning-Services?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -101,4 +102,4 @@ Neueren Versionen von SQL Server-Dokumentation werden die Unabhängigkeit von de
 
 **Schritt 3:** Ihrer bevorzugten R und Python-Pakete hinzufügen und verwenden sie zusammen mit Paketen, die von Microsoft bereitgestellten
 
-+ [Verwaltung von R-Paket für SQL Server](r/r-package-management-for-sql-server-r-services.md)
++ [Verwaltung von R-Paket für SQL Server](r/install-additional-r-packages-on-sql-server.md)

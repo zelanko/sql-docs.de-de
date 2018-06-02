@@ -9,15 +9,16 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: a505a099e239049aab40c616c9e98e44e328537c
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: b7a05e5381c2ad687c37926ad449cd6765403ceb
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585782"
 ---
 # <a name="load-data-with-insert-into-parallel-data-warehouse"></a>Laden Sie Daten mit INSERT in Parallel Data Warehouse
 
-Sie können die t-SQL-INSERT-Anweisung verwenden, zum Laden von Daten in eine SQLServer Parallel Datawarehouse (PDW) verteilt, oder der replizierten Tabelle. Weitere Informationen zum Einfügen, finden Sie unter [einfügen](../t-sql/statements/insert-transact-sql.md). Für replizierte Tabellen und alle nichtverteilungsspalte Spalten in einer verteilten Tabelle verwendet PDW SQL Server, um die Datenwerte in der Anweisung in den Datentyp der Spalte "Ziel" angegebenen implizit zu konvertieren. Weitere Informationen zu Konvertierungsregeln für SQL Server-Daten, finden Sie unter [datentypkonvertierung für SQL](http://msdn.microsoft.com/library/ms191530&#40;v=sql11&#40;.aspx). Für verteilungsspalten unterstützt PDW jedoch nur eine Teilmenge von impliziten Konvertierungen, die SQL Server unterstützt. Wenn Sie die INSERT-Anweisung zum Laden von Daten in eine verteilungsspalte verwenden, müssen daher die Quelldaten in eines der Formate, die in den folgenden Tabellen definiert angegeben werden.  
+Sie können die t-SQL-INSERT-Anweisung verwenden, zum Laden von Daten in eine SQLServer Parallel Datawarehouse (PDW) verteilt, oder der replizierten Tabelle. Weitere Informationen zum Einfügen, finden Sie unter [einfügen](../t-sql/statements/insert-transact-sql.md). Für replizierte Tabellen und alle nichtverteilungsspalte Spalten in einer verteilten Tabelle verwendet PDW SQL Server, um die Datenwerte in der Anweisung in den Datentyp der Spalte "Ziel" angegebenen implizit zu konvertieren. Weitere Informationen zu Konvertierungsregeln für SQL Server-Daten, finden Sie unter [datentypkonvertierung für SQL](http://msdn.microsoft.com/library/ms191530\(v=sql11\).aspx). Für verteilungsspalten unterstützt PDW jedoch nur eine Teilmenge von impliziten Konvertierungen, die SQL Server unterstützt. Wenn Sie die INSERT-Anweisung zum Laden von Daten in eine verteilungsspalte verwenden, müssen daher die Quelldaten in eines der Formate, die in den folgenden Tabellen definiert angegeben werden.  
   
   
 ## <a name="InsertingLiteralsBinary"></a>Binärtypen Literale einfügen  
@@ -123,8 +124,8 @@ In der folgenden Tabelle definiert, die akzeptierte Formate und die Regeln zum E
   
 |Literaltyp|Format|Aufgrund von Konvertierungsregeln|  
 |------------|------|----------------|
-|Zeichenfolgenliteral im **Ganzzahl** Format|"Nnnnnnnnnnnnnn"<br /><br />Beispiel: "321312313123"| Keine |  
-|Integer-literal|nnnnnnnnnnnnnn<br /><br />Beispiel: 321312313123| Keine|  
+|Zeichenfolgenliteral im **Ganzzahl** Format|"Nnnnnnnnnnnnnn"<br /><br />Beispiel: "321312313123"| InclusionThresholdSetting |  
+|Integer-literal|nnnnnnnnnnnnnn<br /><br />Beispiel: 321312313123| InclusionThresholdSetting|  
 |Decimal-literal|nnnnnn.nnnnn<br /><br />Beispiel: 123344.34455|Die Werte, die rechts neben dem Dezimaltrennzeichen werden abgeschnitten.|  
   
 ### <a name="money-and-smallmoney-data-types"></a>Datentypen Money und smallmoney  
@@ -147,10 +148,10 @@ In der folgenden Tabelle definiert, die akzeptierte Formate und die Regeln zum E
   
 |Literaltyp|Format|Aufgrund von Konvertierungsregeln|  
 |----------------|----------|--------------------|  
-|Ein Zeichenfolgenliteral handeln|Format: "Zeichenfolge"<br /><br />Beispiel: 'Abc'| Keine|  
-|Unicode-Zeichenfolgenliteral|: Formatzeichenfolge N'character "<br /><br />Beispiel: N '|  Keine |  
-|Integer-literal|Format: Nnnnnnnnnnn<br /><br />Beispiel: 321312313123| Keine |  
-|Decimal-literal|Format: nnnnnn.nnnnnnn<br /><br />Beispiel: 12344.34455| Keine |  
+|Ein Zeichenfolgenliteral handeln|Format: "Zeichenfolge"<br /><br />Beispiel: 'Abc'| InclusionThresholdSetting|  
+|Unicode-Zeichenfolgenliteral|: Formatzeichenfolge N'character "<br /><br />Beispiel: N '|  InclusionThresholdSetting |  
+|Integer-literal|Format: Nnnnnnnnnnn<br /><br />Beispiel: 321312313123| InclusionThresholdSetting |  
+|Decimal-literal|Format: nnnnnn.nnnnnnn<br /><br />Beispiel: 12344.34455| InclusionThresholdSetting |  
 |Money-literal|Format: $nnnnnn.nnnnn<br /><br />Beispiel: $123456.99|Das Währungssymbol wird nicht mit dem Wert eingefügt. Um das Währungssymbol einzufügen, geben Sie den Wert als Zeichenfolgenliteral. Dies entspricht das Format der **Dwloader** Tool, das jedes Literal als Zeichenfolgenliteral behandelt.<br /><br />Kommas sind nicht zulässig.<br /><br />Wenn die Anzahl der Ziffern nach dem Dezimaltrennzeichen 2 überschreitet, wird der Wert auf den nächsten Wert aufgerundet. Beispielsweise wird der Wert 123.946789 als 123.95 eingefügt.<br /><br />Nur das Standardformat 0 (keine Kommas und 2 Ziffern nach dem Dezimaltrennzeichen) ist zulässig, wenn die CONVERT-Funktion zu verwenden, um Money Literale einzufügen.|  
 
   

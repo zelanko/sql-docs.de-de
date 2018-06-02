@@ -1,25 +1,20 @@
 ---
 title: VBA-Funktionen in MDX und DAX | Microsoft Docs
-ms.custom: ''
-ms.date: 01/30/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-ms.assetid: 420452fd-9507-4093-8857-71d3e70d96cc
-caps.latest.revision: 11
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6dce57c7a8043a8d25b31b389e47763df261baa8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: a9764d4e302a663800bd71a5c7083d985ea230bc
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34582522"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>VBA-Funktionen in MDX und DAX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +51,7 @@ ms.lasthandoff: 05/03/2018
 |CurDir|Nicht unterstützt||  
 |ZVariant|Nur MDX||  
 |CVErr|Nicht unterstützt||  
-|Datum|Nur MDX|**Warnung** DAX implementiert eine andere Funktion mit dem gleichen Namen; die Funktion DATE (Year, Month, Day) verwendet, um einen datumstypwert zu generieren, aus den angegebenen Argumenten|  
+|date|Nur MDX|**Warnung** DAX implementiert eine andere Funktion mit dem gleichen Namen; die Funktion DATE (Year, Month, Day) verwendet, um einen datumstypwert zu generieren, aus den angegebenen Argumenten|  
 |DateAdd|Nur MDX|**Warnung** DAX implementiert eine andere Funktion mit dem gleichen Namen; die DATEADD (\<Datumsangaben >, < Number_of_intervals >,\<Intervall >)-Funktion wird verwendet, um bestimmten Datumsangaben verschoben um eine Anzahl von Intervallen angegeben|  
 |DateDiff]|Nur MDX||  
 |DatTeil|Nur MDX||  
@@ -73,7 +68,7 @@ ms.lasthandoff: 05/03/2018
 |FileAttr|Nicht unterstützt||  
 |FileDateTime|Nicht unterstützt||  
 |FileLen|Nicht unterstützt||  
-|Filter|Nicht unterstützt|**Warnung** MDX implementiert eine andere Funktion mit dem gleichen Namen; die FILTER (Set_Expression, Logical_Expression)-Funktion gibt die Menge, die daraus resultiert einen bestimmter Satz basierend auf einer Suchbedingung aus den angegebenen Argumenten zurück.<br /><br /> **Warnung** DAX implementiert eine andere Funktion mit dem gleichen Namen; die FILTER (\<Tabelle >,\<Filter >)-Funktion gibt eine Tabelle, die einen Teil einer anderen Tabelle oder einen Ausdruck aus den angegebenen Argumenten darstellt.|  
+|Filtern|Nicht unterstützt|**Warnung** MDX implementiert eine andere Funktion mit dem gleichen Namen; die FILTER (Set_Expression, Logical_Expression)-Funktion gibt die Menge, die daraus resultiert einen bestimmter Satz basierend auf einer Suchbedingung aus den angegebenen Argumenten zurück.<br /><br /> **Warnung** DAX implementiert eine andere Funktion mit dem gleichen Namen; die FILTER (\<Tabelle >,\<Filter >)-Funktion gibt eine Tabelle, die einen Teil einer anderen Tabelle oder einen Ausdruck aus den angegebenen Argumenten darstellt.|  
 |Fix|Nur MDX||  
 |Format (Visual Basic für Applikationen)|DAX, MDX||  
 |FormatWährung|Nicht unterstützt||  
@@ -157,7 +152,7 @@ ms.lasthandoff: 05/03/2018
 |DIA|Nur MDX||  
 |Registerkarte|Nicht unterstützt||  
 |Tan|Nur MDX||  
-|Zeit|Nicht unterstützt||  
+|Uhrzeit|Nicht unterstützt||  
 |Zeitgeber|Nur MDX||  
 |ZeitSeriell|Nur MDX||  
 |ZeitSeriellStr|DAX, MDX||  

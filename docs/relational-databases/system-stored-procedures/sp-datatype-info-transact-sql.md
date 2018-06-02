@@ -1,7 +1,7 @@
 ---
 title: Sp_datatype_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/25/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-stored-procedures
@@ -22,14 +22,15 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: b5dd1eff2fb088fa96498334899631e2dd04a90f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 187b7969d46b6ab0a85779d108a66cbe8ae2d62b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34553750"
 ---
 # <a name="spdatatypeinfo-transact-sql"></a>sp_datatype_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
   Gibt Informationen zu den von der aktuellen Umgebung unterstützten Datentypen zurück.  
   
@@ -51,7 +52,7 @@ sp_datatype_info [ [ @data_type = ] data_type ]
  Die verwendete ODBC-Version. *Odbc_version* ist **"tinyint"**, Standardwert ist 2.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- Keine  
+ InclusionThresholdSetting  
   
 ## <a name="result-sets"></a>Resultsets  
   

@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1f390f6f8b33e9dbf316fa98eb35574a5daebeed
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4806224a1606fff58f63f6083fa577aa4066c795
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585702"
 ---
 # <a name="managing-and-monitoring-machine-learning-solutions"></a>Verwalten und Überwachen von Machine Learning-Lösungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -20,7 +21,7 @@ Dieser Artikel beschreibt die Funktionen in SQL Server Machine Learning Services
 
 **Gilt für:** SQL Server 2016-R-Services, SqlServer 2017 Machine Learning-Dienste
 
-## <a name="security"></a>Sicherheit
+## <a name="security"></a>Security
 
 Datenbankadministratoren müssen Datenzugriff bieten, nicht nur auf die Datenanalysten sondern mit einer Vielzahl von Berichts-Entwickler, Wirtschaftsanalytikern und Nutzern von Geschäftsdaten. Die Integration von R (und nun Python) in SQL Server bietet viele Vorteile, an dem Datenbankadministrator, der die Data Science-Rolle unterstützt.
 
@@ -38,7 +39,7 @@ Weitere Informationen finden Sie in den folgenden Ressourcen:
 
 + [Python-Sicherheit (Übersicht)](../python/security-overview-sql-server-python-services.md)
 
-+ [Installieren und Verwalten von R-Paketen](../../advanced-analytics/r-services/installing-and-managing-r-packages.md)
++ [Standard-R und Python-Paketen in SQL Server](installing-and-managing-r-packages.md)
 
 ## <a name="configuration-and-management"></a>Konfiguration und Verwaltung
 

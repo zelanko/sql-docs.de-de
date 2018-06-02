@@ -7,11 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 21bc5d6af2ad34a23bb56a589f7bcbacb6034ff3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e1ff2799ba37c97f5ff82c1c15cdeb986220a947
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585272"
 ---
 # <a name="in-database-r-analytics-for-sql-developers-tutorial"></a>In-Database-R-Analyse für SQL-Entwickler (Lernprogramm)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -60,7 +61,7 @@ Dieses Lernprogramm verwendet ein bekannten öffentlichen Dataset basierend auf 
 
 ### <a name="requirements"></a>Anforderungen
 
-Dieses Lernprogramm ist für Benutzer vorgesehen, die bereits mit grundlegenden Datenbankvorgängen, wie Datenbanken und Tabellen erstellen, Importieren von Daten in Tabellen und Erstellen von SQL-Abfragen vertraut sind. Der gesamte R-Code wird bereitgestellt, damit keine R-Entwicklungsumgebung erforderlich ist. Einen erfahrenen SQL-Programmierer sollten in der Lage, mithilfe dieses Beispiel zu vervollständigen [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], und durch das Ausführen der bereitgestellten PowerShell-Skripts.
+Dieses Lernprogramm ist für Benutzer, die mit grundlegenden Datenbankvorgängen wie Datenbanken und Tabellen erstellen, Importieren von Daten in Tabellen und das Schreiben von SQL-Abfragen vertraut sind. Der gesamte R-Code wird bereitgestellt, damit keine R-Entwicklungsumgebung erforderlich ist. Ein erfahrener SQL-Programmierer können [! EINSCHLIEßEN von [t-SQL] (.. /.. / enthält/Tsql-md.md)] in [! INCLUDE [SsManStudioFull] (.. /.. / enthält / Ssmanstudiofull md.md), und führen Sie die bereitgestellte PowerShell-Skript, um dieses Beispiel zu vervollständigen. Bevor Sie dieses Lernprogramm beginnen, sollten Sie die folgenden Vorbereitungen ausführen:
 
 Bevor Sie das Tutorial starten, müssen Sie jedoch diese Vorbereitungen ausführen:
 

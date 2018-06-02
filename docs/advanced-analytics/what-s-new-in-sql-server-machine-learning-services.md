@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 45cfb2f67cbd575913739b118e21626448b80866
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 092216f7bc1142125156b3658f035154d809c2e9
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34586072"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Neuigkeiten in SQL Server-Machine Learning-Services 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,7 +36,7 @@ Diese Version auch eingeführt **SQL Server Machine Learning-Server (eigenständ
 | Erste Veröffentlichung |[**Python-Integration für die Analyse in der Datenbank**](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/) <br/><br/>Die [Revoscalepy](python/what-is-revoscalepy.md) Paket ist die Python-Entsprechung von "revoscaler". Sie können die Python-Modelle für linear und logistische Regressionen, Entscheidungsstrukturen, verstärkten Bäumen und zufällige Gesamtstrukturen, alle parallelisiert und kann in remote rechenkontexte ausgeführt erstellen. Dieses Paket unterstützt die Verwendung von mehreren Datenquellen und remote rechenkontexte. Der datenanalyst oder Entwickler kann Python-Code auf einem remote-SQL-Server zum Durchsuchen von Daten oder Modelle erstellen, ohne Verschieben von Daten ausführen. <br/><br/>Die [Microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) Paket ist die Python-Entsprechung des MicrosoftML R-Pakets.<br/><br/>T-SQL und Python-Integration über [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). Sie können eine beliebige Python-Code, der mit dieser gespeicherten Prozedur aufrufen. Diese sichere Infrastruktur ermöglicht die Bereitstellung von Enterprise-Grade von Python-Modellen und Skripts, die von einer Anwendung mithilfe einer einfachen gespeicherten Prozedur aufgerufen werden können. Zusätzliche Leistungssteigerungen werden durch streaming von Daten aus SQL Python-Prozesse und MPI Ring Parallelisierung erreicht. <br/><br/>Können Sie die T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) Funktion ausführen [native Bewertung](sql-native-scoring.md) auf ein vortrainiertes Modell, die zuvor in das erforderliche Binärformat gespeichert wurde.|
 | Erste Veröffentlichung | [**MicrosoftML (R)** ](using-the-microsoftml-package.md) enthält das ClipArt-Machine learning-Algorithmen und die Datentransformation, die skalierte oder Ausführen in remote rechenkontexte sein können. Algorithmen sind anpassbare Tiefe neuronale Netzwerke, schnelle Entscheidungsstrukturen und entscheidungswälder, lineare Regression und logistische Regression. |
 | Erste Veröffentlichung | [**Pre-tained Modelle** ](r/install-pretrained-models-sql-server.md) für bilderkennung und positiv Negative stimmungsanalyse. Verwenden Sie diese Modelle, um auf Ihre eigenen Daten Vorhersagen zu generieren. |
-| Erste Veröffentlichung | [**Paket Management**](r/r-package-management-for-sql-server-r-services.md), einschließlich der folgenden Vorteilen: Datenbankrollen können der DBA-Pakete verwalten und Zuweisen von Berechtigungen zum Installieren der Pakete, [externe Bibliothek erstellen](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) in T-SQL-Anweisung Hilfe DBAs Pakete verwalten, ohne Wissen der R sowie ein umfangreichen Satz von R-Funktionen in ["revoscaler"](r/use-revoscaler-to-manage-r-packages.md) zu installieren, entfernen oder Pakete auflisten Besitz des Benutzers. |
+| Erste Veröffentlichung | [**R-paketverwaltung**](r/install-additional-r-packages-on-sql-server.md), einschließlich der folgenden Vorteilen: Datenbankrollen können der DBA-Pakete verwalten und Zuweisen von Berechtigungen zum Installieren der Pakete, [externe Bibliothek erstellen](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) in T-SQL-Anweisung Hilfe DBAs Pakete verwalten, ohne Wissen der R sowie ein umfangreichen Satz von R-Funktionen in ["revoscaler"](r/use-revoscaler-to-manage-r-packages.md) zu installieren, entfernen oder Pakete auflisten Besitz des Benutzers. |
 | Erste Veröffentlichung | [**Operationalisierung über Mrsdeploy** ](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package) für die Bereitstellung und hosting von R-Skript als Webdienst. Gilt für nur R-Skript (keine Python-Entsprechung). Vorgesehen für die Serveroption (eigenständig), um Ressourcen Wettbewerb mit anderen SQL Server-Vorgängen zu vermeiden. |
 
 

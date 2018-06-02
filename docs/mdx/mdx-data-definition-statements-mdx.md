@@ -1,32 +1,20 @@
 ---
 title: MDX-Datendefinitionsanweisungen (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- MDX [Analysis Services], data manipulation
-- data manipulation [MDX]
-- data definition statements [MDX]
-- Multidimensional Expressions [Analysis Services], data manipulation
-ms.assetid: 1f975d7f-8875-43b6-a571-9d5cd7c70217
-caps.latest.revision: 33
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 84a173a4e3496d61f8f1b1fc837908d2706af5b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: abd819871af876d15354af4258c3cd76e0e52197
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579672"
 ---
 # <a name="mdx-data-definition-statements-mdx"></a>MDX-Datendefinitionsanweisungen (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,13 +25,13 @@ ms.lasthandoff: 05/03/2018
   
 |Thema|Description|  
 |-----------|-----------------|  
-|[ALTER CUBE-Anweisung & #40; MDX & #41;](../mdx/mdx-data-definition-alter-cube.md)|Ändert die Struktur eines angegebenen Cubes.|  
+|[ALTER CUBE-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-alter-cube.md)|Ändert die Struktur eines angegebenen Cubes.|  
 |[CREATE ACTION-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-create-action.md)|Erstellt eine Aktion, die einem Cube, einer Dimension, einer Hierarchie oder einem untergeordneten Objekt zugeordnet werden kann.|  
-|[Erstellen Sie CELL CALCULATION-Anweisung & #40; MDX & #41;](../mdx/mdx-data-definition-create-cell-calculation.md)|Erstellt eine Berechnung, die einen MDX-Ausdruck für eine angegebene Tupelmenge in einem Cube auswertet.|  
+|[CELL CALCULATION-Anweisung erstellen &#40;MDX&#41;](../mdx/mdx-data-definition-create-cell-calculation.md)|Erstellt eine Berechnung, die einen MDX-Ausdruck für eine angegebene Tupelmenge in einem Cube auswertet.|  
 |[CREATE GLOBAL CUBE-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-create-global-cube.md)|Erstellt einen lokal persistenten Cube, der auf einem Teilcube aus einem Cube auf dem Server basiert, und füllt ihn auf. Für die Verbindung mit dem lokal persistenten Cube ist keine Verbindung mit dem Server erforderlich.|  
-|[Erstellen Sie MEMBER-Anweisung & #40; MDX & #41;](../mdx/mdx-data-definition-create-member.md)|Erstellt ein berechnetes Element.|  
+|[CREATE MEMBER-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-create-member.md)|Erstellt ein berechnetes Element.|  
 |[CREATE SESSION CUBE-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)|Erstellt einen Cube, der auf Cubes auf dem Server basiert und für alle Abfragen in derselben Sitzung verfügbar ist, und füllt den Cube auf.|  
-|[Erstellen Sie die SET-Anweisung & #40; MDX & #41;](../mdx/mdx-data-definition-create-set.md)|Erstellt eine benannte Menge für einen angegebenen Cube.|  
+|[CREATE SET-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-create-set.md)|Erstellt eine benannte Menge für einen angegebenen Cube.|  
 |[CREATE SUBCUBE-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)|Definiert den Cuberaum eines angegebenen Cubes oder Teilcubes neu zu einem angegebenen Teilcube.|  
 |[DROP ACTION-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md)|Löscht eine angegebene Aktion aus einem angegebenen Cube.|  
 |[DROP CELL CALCULATION-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)|Entfernt die angegebene Zellenberechnung.|  
@@ -55,6 +43,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="see-also"></a>Siehe auch  
  [MDX-Anweisungsreferenz &#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)   
  [MDX-Datenbearbeitungsanweisungen &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [MDX-Skriptanweisungen & #40; MDX & #41;](../mdx/mdx-scripting-statements-mdx.md)  
+ [MDX-Skriptanweisungen &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

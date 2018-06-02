@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 98605a5eb5291444e0bd46d64bd3b84ab7c1b008
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5a30ff30651bacde42c60a1e0b265105e3c932e3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563758"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>Leistung für R Services – Data-Optimierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +31,7 @@ Bei der Arbeit mit großen Datenmengen sollten Sie immer den SQL Compute Context
 
 ## <a name="factors"></a>Faktoren
 
-Die Sprache "R" wurde das Konzept der "Faktoren", die spezielle Variable für Kategoriedaten sind. Datenanalysten häufig Faktor Variablen in ihrer Formel verwenden, da Behandlung von kategorievariablen als Faktoren, die die Daten wird sichergestellt, dass ordnungsgemäß von Machine Learning-Funktionen verarbeitet wird. Weitere Informationen finden Sie unter [R für Anfänger: Faktor Variablen] (http://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/).
+Die Sprache "R" wurde das Konzept der "Faktoren", die spezielle Variable für Kategoriedaten sind. Datenanalysten häufig Faktor Variablen in ihrer Formel verwenden, da Behandlung von kategorievariablen als Faktoren, die die Daten wird sichergestellt, dass ordnungsgemäß von Machine Learning-Funktionen verarbeitet wird. Weitere Informationen finden Sie unter [R für Anfänger: Faktor Variablen](http://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/).
 
 Programmbedingt können Faktor Variablen in ganze Zahlen und zurück erneut zur Speicherung oder die Verarbeitung von Zeichenfolgen konvertiert werden. R `data.frame` Funktion als Faktor Variablen, alle Zeichenfolgen behandelt, es sei denn, das Argument *StringsAsFactors* festgelegt ist, um **"false"**. Was bedeutet dies, dass die Zeichenfolgen werden automatisch konvertiert in eine ganze Zahl für die Verarbeitung, und klicken Sie dann zurück an die ursprüngliche Zeichenfolge zugeordnet.
 
@@ -54,7 +55,7 @@ Ist keine semantische Unterschiede in der modellgenerierung, kann der zweite Ans
 
 ## <a name="data-transformations"></a>Datentransformationen
 
-Datenanalysten verwenden häufig Transformationsfunktionen, die als Teil der Analyse in R geschrieben werden. Die Transformation wird auf jede Zeile aus der Tabelle abgerufen angewendet. In SQL Server werden solche Transformationen angewendet, auf alle Zeilen abgerufen, die in einem Batch, der Kommunikation zwischen R-Interpreter und das Modul erforderlich ist. Zum Ausführen der Umwandlungen werden die Daten von SQL an das Datenanalysemodul und dann an den Prozess der R-Interpreter verschoben und zurück.
+Datenanalysten verwenden häufig Transformationsfunktionen, die als Teil der Analyse in R geschrieben werden. Die Transformation wird auf jede Zeile aus der Tabelle abgerufen angewendet. In SQL Server werden solche Transformationen angewendet, auf alle Zeilen abgerufen, die in einem Batch, der Kommunikation zwischen R-Interpreter und das Modul erforderlich ist. Zum Ausführen der Umwandlungen werden die Daten von SQL an die Datenanalyse-Engine und dann an den Prozess der R-Interpreter verschoben und zurück.
 
 Aus diesem Grund kann mithilfe von Transformationen als Teil des Codes R erhebliche negative Auswirkungen auf die Leistung des Algorithmus, der abhängig vom Umfang der zu verarbeitenden Daten haben.
 

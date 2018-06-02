@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a0ec6834bf3aee8a7f8176bc5fd6d6d66d367b62
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 289f304cf445882981fb110e9c00a395cac90e5f
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585612"
 ---
 # <a name="install-sql-server-machine-learning-components-without-internet-access"></a>Installieren von SQL Server-Machine learning-Komponenten ohne Internetzugang
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -71,6 +72,12 @@ Microsoft R Open     |keine Änderung; Vorheriges verwenden|
 Microsoft R Server      |[SRS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871074&clcid=1033)|
 Öffnen Sie Microsoft-Python     |keine Änderung; Vorheriges verwenden|
 Microsoft-Python-Server    |[SPS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871073&clcid=1033)|
+**SQL Server 2017 CU7** |
+Microsoft R Open     |keine Änderung; Vorheriges verwenden|
+Microsoft R Server      |o ändern; Vorheriges verwenden|
+Öffnen Sie Microsoft-Python     |keine Änderung; Vorheriges verwenden|
+Microsoft-Python-Server    |keine Änderung; Vorheriges verwenden|
+
 
 ### <a name="bkmk_2016Installers"></a>Downloads für SQLServer 2016
 
@@ -167,7 +174,7 @@ Als Slipstream-Einrichtung wird die Möglichkeit bezeichnet, einen Patch oder ei
 
 + Wenn Sie diese Komponenten zu einer vorhandenen Installation hinzufügen, verwenden Sie die aktualisierte Version des SQL Server-Installationsprogramm und die entsprechenden aktualisierte Version der zusätzlichen Komponenten. Wenn Sie angeben, dass die R-Funktion installiert werden, sucht das Installationsprogramm für die passende Version der Installationsprogramme für Machine learning-Komponenten.
 
-## <a name="get-help"></a>Abrufen von Hilfe
+## <a name="get-help"></a>Hilfe
 
 Benötigen Sie Hilfe bei der Installation oder Aktualisierung? Antworten auf häufig gestellte Fragen und bekannte Probleme finden Sie im folgenden Artikel:
 
