@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 00f5fb3cb394d0cd138d3d40880b6a2e8614671f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8bf91c689addd9aa08054c716c0ceb714769d759
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578312"
 ---
 # <a name="isdefaultmeasure-element-xml"></a>IsDefaultMeasure-Element (XML)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,18 +33,18 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Boolean|  
 |Standardwert|false|  
-|Kardinalität|0-1: Optionales Element, das nur einmal auftritt.|  
+|Cardinality|0-1: Optionales Element, das nur einmal auftritt.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[RelationshipEndVisualizationProperties](../../../analysis-services/scripting/data-type/relationshipendvisualizationproperties-data-type-assl.md)|  
-|Untergeordnete Elemente|Keine|  
+|Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
  Für **RelationshipEndVisualizationProperties** -Elemente gibt das **IsDefaultMeasure** -Element an, dass das Standardmeasure für diese Entität durch Navigieren zum anderen Ende der Beziehung abgerufen werden kann. Der Standardwert **false** gibt an, dass kein abzurufendes Standardmeasure vorhanden ist.  

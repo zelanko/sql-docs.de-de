@@ -7,11 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 226712010118a54ac1c5350e128bf50cc261a128
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 52b03b16c55b4ae8a772c2c12861fcc4b184d1f4
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585742"
 ---
 # <a name="using-r-functions-with-sql-server-data-r-in-sql-quickstart"></a>Verwenden von R-Funktionen mit SQL Server-Daten (R in SQL-Schnellstart)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -71,12 +72,6 @@ Nun haben Sie die R-Funktion in einer gespeicherten Prozedur eingeschlossen und 
 ```sql
 EXEC MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 ```
-
-## <a name="related-resources"></a>Verwandte Ressourcen
-
-+ Möchten Sie weitere R-Pakete installieren, statistische Funktionen, um mehr erhalten erweiterte? Finden Sie unter [installieren und Verwalten von R-Paketen](../r/installing-and-managing-r-packages.md).
-
-+ Damit können den eigenständigen R-Code in ein Format zu konvertieren, die leicht mit SQL Server gespeicherte Prozeduren parametrisiert werden können, hat das Team von Microsoft R ein neues R-Paket bereitgestellt **Sqlrutils**. Weitere Informationen finden Sie unter [zum Erstellen einer gespeicherten Prozedur mithilfe von Sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md).
 
 ## <a name="use-r-utility-functions-for-troubleshooting"></a>Verwenden von R-Hilfsfunktionen für die Problembehandlung
 

@@ -3,8 +3,6 @@ title: 'Vorgehensweise: Abrufen von e/a-Parameter mit dem SQLSRV-Treiber | Micro
 ms.custom: ''
 ms.date: 04/12/2018
 ms.prod: sql
-ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +15,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5ef60cf4ef6710690d0ba63b5e159400f724268b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 57143ae8694bba2bdeae3ff552b2ebb089ce6536
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563928"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>How to: Retrieve Input and Output Parameters Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +30,7 @@ In diesem Thema wird veranschaulicht, wie der SQLSRV-Treiber verwendet wird, um 
 > [!NOTE]  
 > Variablen, die auf **NULL**, **DateTime**oder Streamtypen aktualisiert oder initialisiert werden, können nicht als Ausgabeparameter verwendet werden.  
   
-## <a name="example"></a>Beispiel  
+## <a name="example-1"></a>Beispiel 1
 Im folgenden Beispiel wird eine gespeicherte Prozedur aufgerufen, die genommene Urlaubsstunden von den verfügbaren Urlaubsstunden eines bestimmten Mitarbeiters subtrahiert. Die Variable, die die genommenen Urlaubsstunden darstellt, *$vacationHrs*, wird an die gespeicherte Prozedur als Eingabeparameter übergeben. Nach der Aktualisierung der verfügbaren Urlaubsstunden verwendet die gespeicherte Prozedur den gleichen Parameter, um die Anzahl der verbleibenden Urlaubsstunden zurückzugeben.  
   
 > [!NOTE]  
@@ -129,7 +128,7 @@ sqlsrv_close( $conn);
 > [!NOTE]
 > Beim Binden ein Eingabe-/Ausgabeparameter an einen Typ "bigint", wenn der Wert außerhalb des Bereichs der annehmen kann ein [Ganzzahl](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), Sie müssen die SQL-Feldtyp als SQLSRV_SQLTYPE_BIGINT angeben. Andernfalls kann er eine Ausnahme "der Wert außerhalb des gültigen Bereichs" führen.
 
-## <a name="example"></a>Beispiel  
+## <a name="example-2"></a>Beispiel 2
 Dieses Codebeispiel zeigt, wie einen große Bigint-Wert als eine Eingabe-/Ausgabeparameter zu binden.  
 
 ```

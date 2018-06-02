@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 86263158581b92af42a7ad1ce9b538b2c1cdbfa7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5d8cf1c6bb2ac59a2745aceb979c5f566917548a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585592"
 ---
 # <a name="install-sql-server-2016-r-services-in-database"></a>Installieren von SQL Server 2016 R Services (datenbankintern) 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -76,7 +77,7 @@ Bei lokalen Installationen müssen Sie das Setup als Administrator ausführen. W
 
 6. Auf der **Installationsbereit** Seite, stellen Sie sicher, dass die folgenden Elemente enthalten sind, und Sie dann wählen **installieren**.
 
-   + Datenbankmoduldienste
+   + -Datenbank-Engine-Dienste
    + R Services (In-Database)
 
     Notieren Sie sich den Speicherort des Ordners, unter dem Pfad `..\Setup Bootstrap\Log` , in dem die Konfigurationsdateien gespeichert werden. Wenn Setup abgeschlossen ist, können Sie die installierten Komponenten in der Statusdatei überprüfen.
@@ -184,7 +185,7 @@ Jedoch, wenn Sie, führen Sie R-Skripts von einem remote Data Science-Client mö
     + Bei Verwendung einer _benannte Instanz_, wird der Instanzname dem Standardnamen angefügt `SQLRUserGroup`. Daher, wenn die Instanz "MLTEST" benannt wird, der Standardbenutzernamen Gruppe für diese Instanz wäre **SQLRUserGroupMLTest**.
 5. Klicken Sie auf **OK** , schließen Sie das Dialogfeld "Erweiterte Suche" aus, und stellen Sie sicher, dass Sie das richtige Konto für die Instanz ausgewählt haben. Jede Instanz können eigenen Launchpad-Dienst und die Gruppe für diesen Dienst erstellt haben.
 6. Klicken Sie auf **OK** einmal zum Schließen der **Benutzer oder Gruppe auswählen** (Dialogfeld).
-7. In der **Anmeldung - neu** (Dialogfeld), klicken Sie auf **OK**. In der Standardeinstellung ist die Anmeldung der **öffentlichen** Rolle zugewiesen und verfügt über die Berechtigung, eine Verbindung zum Datenbankmodul herzustellen.
+7. In der **Anmeldung - neu** (Dialogfeld), klicken Sie auf **OK**. In der Standardeinstellung ist die Anmeldung der **öffentlichen** Rolle zugewiesen und verfügt über die Berechtigung, eine Verbindung zur Datenbank-Engine herzustellen.
 
 ### <a name="bkmk_AllowLogon"></a>Vergabe von Benutzerberechtigungen für das Ausführen externer Skripts.
 
@@ -257,10 +258,10 @@ R-Lösungen, die Sie für SQL Server erstellen, können grundlegende R-Funktione
 
 Pakete, die Sie von SQL Server verwenden möchten, müssen in der Standardbibliothek installiert sein, die von der Instanz verwendet wird. Wenn Sie eine separate Installation von R auf dem Computer oder bei Installation von Paketen in benutzerbibliotheken nicht auf diese Pakete von T-SQL verwenden kann.
 
-In SQL Server 2016 und SQL Server-2017 unterscheidet sich die Verfahren zum Installieren und Verwalten von R-Pakete. In SQL Server 2016 muss ein Datenbankadministrator R-Pakete installieren, die Benutzer benötigen. In SQL Server 2017 können Sie Benutzergruppen einrichten, Pakete auf einer pro-Datenbankebene freigeben oder Konfigurieren von Datenbankrollen, damit Benutzer ihre eigenen Pakete installieren können. Weitere Informationen finden Sie unter [Paket Management](../r/r-package-management-for-sql-server-r-services.md).
+In SQL Server 2016 und SQL Server-2017 unterscheidet sich die Verfahren zum Installieren und Verwalten von R-Pakete. In SQL Server 2016 muss ein Datenbankadministrator R-Pakete installieren, die Benutzer benötigen. In SQL Server 2017 können Sie Benutzergruppen einrichten, Pakete auf einer pro-Datenbankebene freigeben oder Konfigurieren von Datenbankrollen, damit Benutzer ihre eigenen Pakete installieren können. Weitere Informationen finden Sie unter [neue R-Pakete installieren](../r/install-additional-r-packages-on-sql-server.md).
 
 
-## <a name="get-help"></a>Abrufen von Hilfe
+## <a name="get-help"></a>Hilfe
 
 Benötigen Sie Hilfe bei der Installation oder Aktualisierung? Antworten auf häufig gestellte Fragen und bekannte Probleme finden Sie im folgenden Artikel:
 

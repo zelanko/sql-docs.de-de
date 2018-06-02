@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0df58b0279d7035ac01df0b582ca0a6d1ac2b5cf
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a1e93de452634e0f97d648e6548357cc040b9aca
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574112"
 ---
 # <a name="cubeinfo-element-xmla"></a>CubeInfo-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,11 +35,11 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|Keine|  
-|Standardwert|Keine|  
-|Kardinalität|1-1: Erforderliches Element, das nur einmal auftritt.|  
+|Datentyp und -länge|InclusionThresholdSetting|  
+|Standardwert|InclusionThresholdSetting|  
+|Cardinality|1-1: Erforderliches Element, das nur einmal auftritt.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
@@ -51,9 +52,9 @@ ms.lasthandoff: 05/10/2018
  Die **CubeInfo** -Element enthält ein **Cube** -Element für jeden Cube, in dem multidimensionalen Datensatz verwiesen wird.  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Gibt nur einen einzigen **Cube** Element in dieser Auflistung da [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] unterstützt keine Anweisungen, die mehrere Cubes in der FROM-Klausel der Sprache MDX (Multidimensional Expressions) verweisen.  
+>  Analysis Services gibt nur einen einzigen **Cube** Element in dieser Auflistung da [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] unterstützt keine Anweisungen, die mehrere Cubes in der FROM-Klausel der Sprache MDX (Multidimensional Expressions) verweisen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbankeigenschaften & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Siehe auch
+ [Eigenschaften &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

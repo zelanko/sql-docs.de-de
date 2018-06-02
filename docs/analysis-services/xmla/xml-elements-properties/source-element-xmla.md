@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f0c18df53f7e53d044c5a5fe1ef3f59d9c4f7dd7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8aaef002e649e01a51b99bd007ae5459e8cdbd97
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576422"
 ---
 # <a name="source-element-xmla"></a>Source-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Stellt eine Quellpartition dar, die während eines [MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) -Befehls zusammengeführt wird.  
+  Stellt eine Quellpartition während der zusammenzuführenden eine [MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) Befehl.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,11 +36,11 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|Keine|  
-|Standardwert|Keine|  
-|Kardinalität|1-n: Erforderliches Element, das mehr als einmal auftreten kann.|  
+|Datentyp und -länge|InclusionThresholdSetting|  
+|Standardwert|InclusionThresholdSetting|  
+|Cardinality|1-n: Erforderliches Element, das mehr als einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 05/10/2018
  Das **Source** -Element ist ein Objektverweis auf eine einzelne Partition, die mit einer Zielpartition zusammengeführt wird, die vom **Target** -Element des übergeordneten **MergePartitions** -Elements angegeben wird.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel werden alle vier Partitionen der `Internet Sales` -Measuregruppe mit der `Internet_Sales_2004` -Zielpartition kombiniert. Das Beispiel verweist auf den **Adventure Works** -Cube der [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] -Beispiel- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Datenbank.  
+ Im folgenden Beispiel werden alle vier Partitionen der `Internet Sales` -Measuregruppe mit der `Internet_Sales_2004` -Zielpartition kombiniert. Das Beispiel verweist auf die **Adventure Works** Cube, der die [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] Beispiel [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Datenbank.  
   
 ```  
 <MergePartitions xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -68,8 +69,8 @@ ms.lasthandoff: 05/10/2018
 </MergePartitions>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Target-Element & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)   
- [Datenbankeigenschaften & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Siehe auch
+ [Element als Ziel &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)   
+ [Eigenschaften &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 02b9c91f30c45e59d0f5eba00a5b76262070d711
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3a8dfff1c8a551157661bcb1de5700bf51a7f914
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574912"
 ---
 # <a name="axes-element-xmla"></a>Axes-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,18 +35,18 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Any|  
-|Standardwert|Keine|  
-|Kardinalität|1-1: Erforderliches Element, das nur einmal auftritt.|  
+|Standardwert|InclusionThresholdSetting|  
+|Cardinality|1-1: Erforderliches Element, das nur einmal auftritt.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Stamm](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
-|Untergeordnete Elemente|[Achse](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
+|Untergeordnete Elemente|[Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
   
 ## <a name="remarks"></a>Hinweise  
  Unter den **Achsen** Element, das **Achse** Elemente in der Reihenfolge im Dataset, beginnend mit NULL Auftretens aufgeführt sind. Die **AxisFormat** XMLA-eigenschafteneinstellung bestimmt wie **Achse** -Elemente formatiert werden. Weitere Informationen zu den **AxisFormat** Eigenschaft finden Sie unter [XMLA-Eigenschaften unterstützt &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
@@ -75,7 +76,7 @@ ms.lasthandoff: 05/10/2018
 |Vorgang|Description|  
 |---------------|-----------------|  
 |Member|Die kleinste Einheit einer Achse, die das Element einer Dimensionshierarchie darstellt.|  
-|Element|Eine Auflistung von **Member** Objekte aus der gleichen Dimensionshierarchie.|  
+|Member|Eine Auflistung von **Member** Objekte aus der gleichen Dimensionshierarchie.|  
 |Tupel|Eine Auflistung von Elementen anderer Dimensionshierarchien.|  
 |Tupel|Eine Auflistung von **Tupel** Objekte mit der gleichen Dimensionalität.|  
 |Union|Eine Vereinigung von Sätzen.|  
@@ -103,8 +104,8 @@ CrossProduct (
   
  Kann ein Client verwenden die **AxisFormat** Eigenschaft, um eine bestimmte Darstellung anzufordern.  
   
-## <a name="see-also"></a>Siehe auch  
- [MDDataSet-Datentyp & #40; XMLA & #41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
- [Datenbankeigenschaften & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Siehe auch
+ [MDDataSet-Datentyp &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
+ [Eigenschaften &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

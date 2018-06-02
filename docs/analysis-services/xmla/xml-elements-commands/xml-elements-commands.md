@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e65ba594cee3bf24679326a9d0cd75451034b9ee
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0edfa63feef9af48290e5fe845d9c0cf02f53e29
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574592"
 ---
 # <a name="xml-elements---commands"></a>XML-Elemente - Befehle
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -21,9 +22,9 @@ ms.lasthandoff: 05/10/2018
   
 |Element|Description|  
 |-------------|-----------------|  
-|[Alter-Element (XMLA)](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)|Enthält Analysis Services Scripting Language (ASSL)-Elemente, die von der [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) -Methode zum Ändern einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]verwendet werden.|  
-|[Backup-Element](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)|Sichert eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Datenbank in einer Sicherungsdatei.|  
-|[Batch-Element](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)|Führt einen oder mehrere XMLA-Befehle (XML for Analysis) entweder sequentiell oder parallel auf einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]als Batchvorgang aus.|  
+|[Alter-Element (XMLA)](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)|Enthält Analysis Services Scripting Language (ASSL)-Elementen, die verwendet werden, indem die [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) Methode, um Objekte auf einer Instanz von Analysis Services geändert.|  
+|[Backup-Element](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)|Sichert eine Analysis Services-Datenbank in einer Sicherungsdatei.|  
+|[Batch-Element](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)|Führt eine oder mehrere XML für Analysis (XMLA) Befehle als Batchvorgang, sequenziell oder parallel auf einer Instanz von Analysis Services.|  
 |[BeginTransaction-Element](../../../analysis-services/xmla/xml-elements-commands/begintransaction-element-xmla.md)|Startet in der aktuellen Sitzung eine Transaktion mit einer Analysis Services-Instanz.|  
 |[Cancel-Element](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)|Bricht in einer Analysis Services-Instanz einen gerade ausgeführten Befehl ab.|  
 |[ClearCache-Element](../../../analysis-services/xmla/xml-elements-commands/clearcache-element-xmla.md)|Löscht den Arbeitsspeichercache des angegebenen Objekts in einer Analysis Services-Instanz.|  

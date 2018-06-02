@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f9ea766dc0ada056d85398e6ce2079df6b24b34a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 20a3742c9dfc956accd902539524724cac3f9b8c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563858"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Bekannte Probleme in Machine Learning-Diensten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -96,7 +97,7 @@ Diese Meldung wird angezeigt, wenn eine der beiden folgenden Anweisungen ist "tr
 + R Server (eigenständig) wird auf einem Clientcomputer installiert, mithilfe des Setup-Assistenten für [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].
 + Sie installiert Microsoft R Server mithilfe der [separate Windows Installer](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows).
 
-Um sicherzustellen, dass der Server und der Client die gleiche Version verwenden, Sie möglicherweise verwenden müssen _Bindung_, unterstützte für Microsoft R Server 9.0 und späteren Versionen die R-Komponenten in SQL Server 2016-Instanzen zu aktualisieren. Zum bestimmen, ob die Unterstützung für Upgrades steht für Ihre Version von R-Services finden Sie unter [Aktualisieren einer Instanz von R-Dienste, die mithilfe von SqlBindR.exe](/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+Um sicherzustellen, dass der Server und der Client die gleiche Version verwenden, Sie möglicherweise verwenden müssen _Bindung_, unterstützte für Microsoft R Server 9.0 und späteren Versionen die R-Komponenten in SQL Server 2016-Instanzen zu aktualisieren. Zum bestimmen, ob die Unterstützung für Upgrades steht für Ihre Version von R-Services finden Sie unter [Aktualisieren einer Instanz von R-Dienste, die mithilfe von SqlBindR.exe](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 **Gilt für:** SQL Server 2016 R Services mit R-Server Version 9.0.0 oder früher
 
@@ -174,7 +175,7 @@ Weitere bekannte Probleme, die R-Lösungen beeinträchtigen können, finden Sie 
 
 ### <a name="access-denied-warning-when-executing-r-scripts-on-sql-server-in-a-non-default-location"></a>"Zugriff verweigert" Warnung bei der Ausführung von R-Skripts an SQL Server auf einem Nichtstandard-Speicherort
 
-Wenn z. B. SQL Server-Instanz an einen nicht standardmäßigen Speicherort installiert wurde außerhalb der `Program Files` Ordner, der die Warnung ACCESS_DENIED ausgelöst wird, wenn Sie versuchen, Skripts auszuführen, die ein Paket zu installieren. Beispiel:
+Wenn z. B. SQL Server-Instanz an einen nicht standardmäßigen Speicherort installiert wurde außerhalb der `Program Files` Ordner, der die Warnung ACCESS_DENIED ausgelöst wird, wenn Sie versuchen, Skripts auszuführen, die ein Paket zu installieren. Zum Beispiel:
 
 > *In `normalizePath(path.expand(path), winslash, mustWork)` : Pfad [2] = "~ExternalLibraries/R/8/1": Zugriff wurde verweigert.*
 
@@ -320,7 +321,7 @@ Nehmen wir beispielsweise an, dass Sie zwei Funktionen definiert haben `f` und `
 
 Wenn dieses Problem auftritt, können Sie es umgehen, indem Sie die Definition von `f` innerhalb der Definition von `g`an einer Stelle einbetten, vor der `g` normalerweise `f`aufrufen würde.
 
-Beispiel:
+Zum Beispiel:
 
 ```r
 f <- function(x) { 2*x * 3 }
