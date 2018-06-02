@@ -3,8 +3,6 @@ title: 'Vorgehensweise: Abrufen von Ausgabeparametern mit dem SQLSRV-Treiber | M
 ms.custom: ''
 ms.date: 04/11/2018
 ms.prod: sql
-ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +15,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8699d76ace19555c57ff3bcd8992f60a5cef526a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 81a94f68d7198285125236337a0025e41f1bf8ef
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563888"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>Vorgehensweise: Abrufen von Eingabe-/Ausgabeparametern mit dem SQLSRV-Treiber
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,7 +32,7 @@ In diesem Thema wird veranschaulicht, wie eine gespeicherten Prozedur aufgerufen
   
 Es kann vorkommen, dass Daten abgeschnitten werden, wenn Streamtypen wie z. B. SQLSRV_SQLTYPE_VARCHAR('max') als Ausgabeparameter verwendet werden. Streamtypen werden nicht als Ausgabeparameter unterstützt. Bei nicht-Streamtypen kann es vorkommen, dass Daten abgeschnitten werden, wenn die Länge der Ausgabeparameter nicht angegeben wird oder wenn die angegebene Länge nicht groß genug für den Ausgabeparameter ist.  
   
-## <a name="example"></a>Beispiel  
+## <a name="example-1"></a>Beispiel 1
 Das folgende Beispiel ruft eine gespeicherte Prozedur auf, die die Jahr-bis-heute-Verkäufe eines bestimmten Mitarbeiters zurückgibt. Die PHP-Variable *$lastName* ist ein Eingabeparameter und *$salesYTD* ist ein Ausgabeparameter.  
   
 > [!NOTE]  
@@ -125,9 +124,9 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> Beim Binden eines Output-Parameters an einen Bigint-Wert, wenn der Wert außerhalb des Bereichs der enden kann ein [Ganzzahl](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), Sie müssen die SQL-Feldtyp als SQLSRV_SQLTYPE_BIGINT angeben. Andernfalls kann er eine Ausnahme "der Wert außerhalb des gültigen Bereichs" führen.
+> Beim Binden von eines Output-Parameters an einen Typ "bigint", wenn der Wert außerhalb des Bereichs der annehmen kann ein [Ganzzahl](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), Sie müssen die SQL-Feldtyp als SQLSRV_SQLTYPE_BIGINT angeben. Andernfalls kann er eine Ausnahme "der Wert außerhalb des gültigen Bereichs" führen.
 
-## <a name="example"></a>Beispiel  
+## <a name="example-2"></a>Beispiel 2
 In diesem Codebeispiel wird gezeigt, wie einen große Bigint-Wert als Output-Parameter gebunden wird.  
 
 ```

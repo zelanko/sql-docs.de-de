@@ -9,11 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: efc077bda6d05642107a6e8694d53418401ff12c
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 718a076822a4304e0ba951f3ca1903bb7c009e17
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34586062"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Laden von Daten mit Integration Services Parallel Data Warehouse
 Stellt Referenz- und Bereitstellung von Informationen zum Laden von Daten in SQL Server Parallel Data Warehouse mithilfe von SQL Server Integration Services (SSIS)-Pakete bereit.  
@@ -28,7 +29,7 @@ Before you can start loading data, use the following topics to install the Integ
   
 -   [Connect With Integration Services for loading](connect-with-ssis-for-loading.md)  
   
-For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091&#40;v=sql11&#40;.aspx) on MSDN.  
+For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx) on MSDN.  
 
 -->
   
@@ -55,7 +56,7 @@ Führen Sie das Paket in SQL Server Data Tools, mit der rechten Maustaste auf da
 ### <a name="run-from-powershell"></a>Ausführen von PowerShell  
 Zum Ausführen des Pakets von Windows PowerShell mit der **Dtexec** Hilfsprogramm: `dtexec /FILE <packagePath>`  
   
-Beispiel: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+Beispielsweise `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ### <a name="run-from-a-windows-command-prompt"></a>Ausführen von Windows-Befehlszeile 
 Zum Ausführen des Pakets aus einer Windows-Eingabeaufforderung mit dem **Dtexec** Hilfsprogramm: `dtexec /FILE <packagePath>`  
@@ -247,16 +248,16 @@ Führen Sie das Paket auf dem Integration Services-Computer.
   
 ## <a name="see-also"></a>Siehe auch  
 [Erstellen Sie einen Skripttask, der den SSIS-PDW-Zieladapter verwendet.](create-ssis-script-task-using-pdw-destination-adapter.md)  
-[SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026&#40;v=sql11&#40;.aspx)  
-[Entwerfen und Implementieren von Paketen (Integration Services)](http://msdn.microsoft.com/library/ms141091&#40;v=sql11&#40;.aspx)  
-[Lernprogramm: Erstellen eines einfachen Pakets mithilfe eines Assistenten](http://technet.microsoft.com/library/ms365330&#40;v=sql11&#40;.aspx)  
+[SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026\(v=sql11\).aspx)  
+[Entwerfen und Implementieren von Paketen (Integration Services)](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
+[Lernprogramm: Erstellen eines einfachen Pakets mithilfe eines Assistenten](http://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
 [Erste Schritte (Integration Services)](http://go.microsoft.com/fwlink/?LinkId=202412)  
 [Dynamische Generierung (Paketbeispiel)](http://go.microsoft.com/fwlink/?LinkId=202413)  
 [Entwerfen der SSIS-Pakete für Parallelität (SQL Server-Video)](http://msdn.microsoft.com/library/dd795221.aspx)  
 [Microsoft SQL Server-Community-Beispiele: Integrationsservices](http://go.microsoft.com/fwlink/?LinkId=202415)  
-[Verbessern des inkrementellen Ladens mit Change Data Capture](http://msdn.microsoft.com/library/bb895315&#40;v=sql11&#40;.aspx)  
-[Transformation für langsam veränderliche Dimensionen](http://msdn.microsoft.com/library/ms141715&#40;v=sql11&#40;.aspx)  
-[Masseneinfügungstask](http://msdn.microsoft.com/library/ms141239&#40;v=sql11&#40;.aspx)  
+[Verbessern des inkrementellen Ladens mit Change Data Capture](http://msdn.microsoft.com/library/bb895315\(v=sql11\).aspx)  
+[Transformation für langsam veränderliche Dimensionen](http://msdn.microsoft.com/library/ms141715\(v=sql11\).aspx)  
+[Masseneinfügungstask](http://msdn.microsoft.com/library/ms141239\(v=sql11\).aspx)  
   
 <!-- MISSING LINKS
 [Grant permissions to load data](grant-permissions-to-load-data.md)  

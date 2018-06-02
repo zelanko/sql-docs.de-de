@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bb1a181a73a6e6a2f4998fb12381c522afb4e510
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a795b4cf935f7eae8052c52a3527005f362b533c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34573802"
 ---
 # <a name="enumstring-data-type-xmla"></a>EnumString-Datentyp (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -28,23 +29,23 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="data-type-characteristics"></a>Datentypmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
 |Basisdatentypen|**Zeichenfolge**|  
-|Abgeleitete Datentypen|Keine|  
+|Abgeleitete Datentypen|InclusionThresholdSetting|  
   
 ## <a name="data-type-relationships"></a>Datentypbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|Keine|  
-|Untergeordnete Elemente|Keine|  
-|Abgeleitete Elemente|Keine|  
+|Übergeordnete Elemente|InclusionThresholdSetting|  
+|Untergeordnete Elemente|InclusionThresholdSetting|  
+|Abgeleitete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
  XML for Analysis (XMLA) schränkt Zeichenfolgenwerte mithilfe von Enumerationen auf einen Satz überprüfbarer Einstellungen ein. **EnumString** verwendet den standardmäßig **string** -XML-Datentyp. Die bestimmten Werte für jede der genannten Konstanten werden mit der Enumeratordefinition angegeben. Enumeratoren werden definiert, indem Sie sie zum Hinzufügen der [DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md) -Schemarowset, und kann abgerufen werden, indem die [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) Methode mit dem DISCOVER_ENUMERATORS-Anforderungstyp.  
   
- Die folgende Tabelle beschreibt die Enumeratoren, die von einer Instanz von unterstützt [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ Die folgende Tabelle beschreibt die Enumeratoren, die von einer Instanz von Analysis Services unterstützt.  
   
 |Enumerator|Description|  
 |----------------|-----------------|  
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/10/2018
 |ResultsetContents|Unterstützt die XMLA-Eigenschaft, **Content**, die bestimmt, ob Metadaten oder Daten in einem **root** -Element zurückgegeben werden.<br /><br /> Weitere Informationen zu **Content**, finden Sie unter [XMLA-Eigenschaften unterstützt &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).|  
 |MDXSupportLevel|Unterstützt die XMLA-Eigenschaft, **MDXSupport**, womit MDX (Multidimensional Expressions) unterstützt, die auf eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz.<br /><br /> Weitere Informationen zu **MDXSupport**, finden Sie unter [XMLA-Eigenschaften unterstützt &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Siehe auch
  [XML-Datentypen &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

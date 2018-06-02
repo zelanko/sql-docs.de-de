@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e8995dbf106db2d9b067e6c26c4277d561d68902
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8f0714f223145acd65a0dd57d02b105e5ec2aa0e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563649"
 ---
 # <a name="api-reference-for-sql-server-machine-learning-services"></a>API-Referenz für SQL Server-Machine Learning-Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +32,7 @@ SQL Server nutzt größtenteils, die gleichen R und Python-Bibliotheken, die in 
 
     Skalierbare Algorithmen, die remote rechenkontexte und mehrere Datenquellen zu unterstützen.
 
-+ [MicrosoftML](https://docs.microsoft.com/machine-learning-serverr-reference/microsoftml/microsoftml-package)
++ [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
 
     Schnelle, skalierbare den Machine learning-Algorithmen und Transformationen für r erfordert "revoscaler".
 

@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5c3a4d20c7799281f40fa6ae13e89010cebe1ec6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 11804b9b6ca9ac430bdb47c0b9050b8c6995cf7f
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574562"
 ---
 # <a name="synchronize-element-xmla"></a>Synchronize-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Synchronisiert eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Datenbank mit einer anderen vorhandenen Datenbank.  
+  Synchronisiert eine Analysis Services-Datenbank mit einer anderen vorhandenen Datenbank.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,11 +36,11 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|Keine|  
-|Standardwert|Keine|  
-|Kardinalität|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
+|Datentyp und -länge|InclusionThresholdSetting|  
+|Standardwert|InclusionThresholdSetting|  
+|Cardinality|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/10/2018
   
  Je nach dem Speichermodus der in der Sicherungsdatei gespeicherten Objekte werden mit dem **Synchronize** -Befehl die in der folgenden Tabelle aufgelisteten Informationen synchronisiert.  
   
-|Speichermodus|Informationen|  
+|Speichermodus|Information|  
 |------------------|-----------------|  
 |Mehrdimensionale OLAP (MOLAP)|Quelldaten, Aggregationen und Metadaten|  
 |Hybride OLAP (HOLAP)|Aggregationen und Metadaten|  
@@ -63,11 +64,11 @@ ms.lasthandoff: 05/10/2018
   
  Weitere Informationen zum Synchronisieren von Datenbanken finden Sie unter [sichern, wiederherstellen und Synchronisieren von Datenbanken &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Backup-Element & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
- [Batch-Element & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
- [Parallel-Element & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/parallel-element-xmla.md)   
- [Restore-Element & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
- [Befehle & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+## <a name="see-also"></a>Siehe auch
+ [Sichern des Elements &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
+ [Batch-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
+ [Parallele Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/parallel-element-xmla.md)   
+ [Restore-Element &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
+ [Befehle &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

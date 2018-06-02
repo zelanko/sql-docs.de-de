@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5b6d52e6347ee4f0a864d0ada84ae9971f1b54e3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0536e7fd2d2e5df4c07e477cb771c16fd1f85fd4
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576182"
 ---
 # <a name="partitionid-element-xmla"></a>PartitionID-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -23,7 +24,7 @@ ms.lasthandoff: 05/10/2018
   
 ```xml  
   
-<Object> <!-- or one of the elements listed below in the Element Relationships table -->  
+<Object> <!-- or one of the elements listed below in the Element relationships table -->  
    ...  
    <PartitionID>...</PartitionID>  
    ...  
@@ -32,13 +33,13 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|String|  
-|Standardwert|Keine|  
-|Kardinalität|Siehe Tabelle unten.|  
+|Datentyp und -länge|Zeichenfolge|  
+|Standardwert|InclusionThresholdSetting|  
+|Cardinality|Siehe Tabelle unten.|  
   
-|Vorgänger oder übergeordnetes Element|Kardinalität|  
+|Vorgänger oder übergeordnetes Element|Cardinality|  
 |------------------------|-----------------|  
 |[Source](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md), [Target](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)|1-1: Erforderliches Element, das nur einmal auftritt.|  
 |Alle sonstigen|0-1: Optionales Element, das nur einmal auftreten kann.|  
@@ -48,11 +49,11 @@ ms.lasthandoff: 05/10/2018
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Object](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md), [ParentObject](../../../analysis-services/xmla/xml-elements-properties/parentobject-element-xmla.md), [Source](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md), [Target](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)|  
-|Untergeordnete Elemente|Keine|  
+|Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbankeigenschaften & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Siehe auch
+ [Eigenschaften &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

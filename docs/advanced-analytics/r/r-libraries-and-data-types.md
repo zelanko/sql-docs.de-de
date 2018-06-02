@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 56a3bc495fa6541208a094f82ede9a43b4021c23
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d06f34210f5ec4aee741d3f3a70a01f60f10fb98
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34586042"
 ---
 # <a name="r-libraries-and-r-data-types"></a>R-Bibliotheken und R-Datentypen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +35,7 @@ Beide Produkte, R Services und Machine Learning-Dienste mit R, sind bestimmte Ve
 
 Die Version von R in einer bestimmten Version von Microsoft R Server enthalten, finden Sie unter [R-Server – neues](https://msdn.microsoft.com/microsoft-r/rserver-whats-new#new-and-updated-packages).
 
-Beachten Sie, dass die paketverwaltungssystem in SQL Server bedeutet, dass mehrere Versionen der R-Paket mit mehreren Benutzern Freigabe desselben Pakets oder über verschiedene Versionen desselben Pakets nicht auf demselben Computer installiert werden können. Weitere Informationen finden Sie unter [R-Paketverwaltung in SQL Server](../r/r-package-management-for-sql-server-r-services.md).
+Beachten Sie, dass die paketverwaltungssystem in SQL Server bedeutet, dass mehrere Versionen der R-Paket mit mehreren Benutzern Freigabe desselben Pakets oder über verschiedene Versionen desselben Pakets nicht auf demselben Computer installiert werden können. Weitere Informationen finden Sie unter [R-Paketverwaltung in SQL Server](../r/install-additional-r-packages-on-sql-server.md).
 
 ## <a name="r-and-sql-data-types"></a>R und SQL-Datentypen
 
@@ -166,7 +167,7 @@ Daraus können Sie erkennen, dass die folgenden Datentypenkonvertierungen impliz
   
 -   **Spalte C2**. Die Spalte wird in **ssNoversion** als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in R als `factor` und im Ausgaberesultset als **varchar(max)** dargestellt.  
   
-     Beachten Sie, wie sich die Ausgabe ändert; jede Zeichenfolge von R (entweder ein Faktor oder eine reguläre Zeichenfolge) wird als **varchar(max)**dargestellt, unabhängig von der Länge der Zeichenfolge.  
+     Beachten Sie, wie sich die Ausgabe ändert; jede Zeichenfolge von R (entweder ein Faktor oder eine reguläre Zeichenfolge) wird als **varchar(max)** dargestellt, unabhängig von der Länge der Zeichenfolge.  
   
 -   **Spalte C3**.  Die Spalte wird in **ssNoversion** als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in R als `character` und im Ausgaberesultset als **varchar(max)** dargestellt.
   

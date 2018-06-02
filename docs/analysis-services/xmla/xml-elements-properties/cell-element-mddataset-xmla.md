@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6af1143891fff7bc5ddc8fd25d4908fae5246bba
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1ba73a6ea5926de6f445c5ca5cec8142b3e196bd
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576272"
 ---
 # <a name="cell-element-mddataset-xmla"></a>Cell-Element (MDDataSet) (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,11 +35,11 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|Keine|  
-|Standardwert|Keine|  
-|Kardinalität|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
+|Datentyp und -länge|InclusionThresholdSetting|  
+|Standardwert|InclusionThresholdSetting|  
+|Cardinality|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="attributes"></a>Attribute  
   
-|Attribut|Beschreibung|  
+|attribute|Description|  
 |---------------|-----------------|  
 |CellOrdinal|Erforderliche **UnsignedInt** Attribut. Die Ordnungsposition der Zelle innerhalb des mehrdimensionalen Datasets.|  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/10/2018
  Der Datentyp eines Zelleneigenschaftswerts wird nur für die VALUE-Zelleneigenschaft angegeben. Die Datentypen anderer Zelleneigenschaften werden durch die zelleneigenschaftsdefinition im bestimmt die **CellInfo** Element. Ein zelleneigenschaftswert kann ausgeschlossen werden, wenn ein Standardwert angegeben wurde (durch Einschließen einer **Standard** -Element für die Definition einer Zelleneigenschaft in enthaltenen der **CellInfo** Element) für eine Zelleneigenschaft oder wenn kein Standardwert angegeben wurde und der Wert der Zelleneigenschaft null ist.  
   
 ## <a name="cell-property-errors"></a>Zelleneigenschaftsfehler  
- Wenn eine Zelleneigenschaft aufgrund eines Fehlers zurückgegeben werden kann, die für die Instanz von stattfindet [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], z. B. ein Berechnungsfehler, der verhindert, dass den Wert, der für eine bestimmte Zelle zurückgegeben wird ein **Fehler** Element ersetzt den Inhalt der fraglichen Zelleneigenschaft. Das folgende XML-Beispiel beschreibt einen Zelleneigenschaftsfehler:  
+ Wenn eine Zelleneigenschaft aufgrund eines Fehlers zurückgegeben werden kann, die auf der Instanz von Analysis Services, z. B. ein Berechnungsfehler auftritt, die verhindert, dass den Wert, der für eine bestimmte Zelle zurückgegeben wird ein **Fehler** Element ersetzt den Inhalt der fraglichen Zelleneigenschaft. Das folgende XML-Beispiel beschreibt einen Zelleneigenschaftsfehler:  
   
 ```  
 <Cell CellOrdinal="0">  
@@ -125,8 +126,8 @@ ms.lasthandoff: 05/10/2018
 </CellData>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDDataSet-Datentyp & #40; XMLA & #41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
- [Datenbankeigenschaften & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Siehe auch
+ [MDDataSet-Datentyp &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
+ [Eigenschaften &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
