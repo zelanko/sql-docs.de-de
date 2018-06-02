@@ -20,11 +20,12 @@ caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 9f16a1eeccefbcf1299bf677f337c443d0e4004a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aeb915c231cdaef032259a83ae647a75db4e3db7
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708868"
 ---
 # <a name="installing-ssma-for-mysql-mysqltosql"></a>Installieren von SSMA für MySQL (MySqlToSql)
 SQL Server Migration Assistant (SSMA) for MySQL besteht aus einer Clientanwendung, die Sie verwenden zum Durchführen einer Migration von MySQL zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure. Es enthält auch einen Erweiterung Pack, der die Datenmigration sowie die Verwendung von MySQL-Systemfunktionen in der migrierten Datenbanken unterstützt.  
@@ -40,7 +41,7 @@ Wenn Sie auf eine höhere Version von SSMA für MySQL aktualisieren möchten, m�
 |-|-|  
 |**Thema**|**Beschreibung**|  
 |[Installieren von SSMA für MySQL-Client &#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)|Enthält Informationen und Anweisungen zur Installation des SSMA-Clients.|  
-|[Installieren SSMA-Komponenten auf SQLServer (MySQL zu SQL)](http://msdn.microsoft.com/en-us/6772d0c5-258f-4d7b-afb0-b5f810e71af1)|Enthält Informationen und Anweisungen für die Installation der Erweiterung Pack auf Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
+|[Installieren SSMA-Komponenten auf SQLServer (MySQL zu SQL)](http://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)|Enthält Informationen und Anweisungen für die Installation der Erweiterung Pack auf Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
 |[Entfernen von SSMA für die MySQL-Komponenten &#40;MySQLToSql&#41;](../../ssma/mysql/removing-the-ssma-for-mysql-components-mysqltosql.md)|Enthält Anweisungen zur Deinstallation des Clientprogramms.|  
   
 ## <a name="see-also"></a>Siehe auch  

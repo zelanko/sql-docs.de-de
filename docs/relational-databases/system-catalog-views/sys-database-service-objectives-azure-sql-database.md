@@ -22,11 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: a63c3142cdc5ca670117ef7d14c4d6079b575972
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 0dd29dbfe5e71f3dbae8d0330c1413dda2d3cc26
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708598"
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>Sys.database_service_objectives (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/19/2018
 Ggf. für eine Azure SQL-Datenbank oder einer Azure SQL Data Warehouse die Edition (Dienstebene), der dienstziel (Tarif) und der Name des elastischen Pools zurückgegeben werden soll. Wenn der master-Datenbank in einer Azure SQL-Datenbankserver angemeldet, gibt die Informationen für alle Datenbanken zurück. Für Azure SQL Data Warehouse müssen Sie mit der master-Datenbank verbunden sein.  
   
   
- Informationen zu den Preisen von finden Sie unter [SQL-Datenbank-Optionen und Leistungsstufen: SQL-Datenbank – Preise](https://azure.microsoft.com/en-us/pricing/details/sql-database/) und [SQL Data Warehouse – Preise](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
+ Informationen zu den Preisen von finden Sie unter [SQL-Datenbank-Optionen und Leistungsstufen: SQL-Datenbank – Preise](https://azure.microsoft.com/pricing/details/sql-database/) und [SQL Data Warehouse – Preise](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
   
  Um die Einstellungen zu ändern, finden Sie unter [ALTER DATABASE (Azure SQL-Datenbank)](../../t-sql/statements/alter-database-azure-sql-database.md) und [ALTER DATABASE (Azure SQL Data Warehouse)](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md).  
   
@@ -42,7 +43,7 @@ Ggf. für eine Azure SQL-Datenbank oder einer Azure SQL Data Warehouse die Editi
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|int|Die ID der Datenbank, eindeutig innerhalb einer Instanz von Azure SQL-Datenbankserver. Mit beigetreten [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
+|database_id|ssNoversion|Die ID der Datenbank, eindeutig innerhalb einer Instanz von Azure SQL-Datenbankserver. Mit beigetreten [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |-Edition|sysname|Die Dienstebene für die Datenbank oder vorhandenem Data Warehouse: **grundlegende**, **Standard**, **Premium** oder **Data Warehouse**.|  
 |service_objective|sysname|Der Tarif der Datenbank. Gibt zurück, wenn die Datenbank in einem elastischen Pool befindet, **ElasticPool**.<br /><br /> Auf der **grundlegende** -Ebene gibt **grundlegende**.<br /><br /> **Einzelne Datenbank in eine standard-Dienstebene** gibt einen der folgenden zurück: S0, S1, S2 oder S3.<br /><br /> **Einzelne Datenbank in einem Premium-Dienstebene** gibt Folgendes zurück: P1, P2, P4, P6/P3 oder P11.<br /><br /> **SQL Data Warehouse** DW100 über DW10000c zurückgibt.|  
 |elastic_pool_name|sysname|Der Name des der [elastischen Pool](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) , die die Datenbank angehört. Gibt **NULL** , wenn die Datenbank eine einzelne Datenbank oder eine Warehoue Daten ist.|  

@@ -20,10 +20,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: b01347982ad7c680f13907c61cacded2f718c483
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708118"
 ---
 # <a name="bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc"></a>Vorgehensweisen: Massenkopieren mit dem SQL Server-ODBC-Treiber (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,19 +32,19 @@ ms.lasthandoff: 05/03/2018
 
   Wird er zusammen mit Microsoft® SQL Server™ 2005 verwendet, unterstützt der SQL Server-ODBC-Treiber dieselben Massenkopierfunktionen wie die DB-Library-API.  
   
- Informationen über eine wichtige Änderung, im Massenkopiervorgang ab [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], finden Sie unter [Durchführen von Massenkopiervorgängen & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
+ Informationen über eine wichtige Änderung, im Massenkopiervorgang ab [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], finden Sie unter [Durchführen von Massenkopiervorgängen &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Massenkopieren ohne einer Formatdatei & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copy-without-a-format-file-odbc.md)  
+-   [Massenkopieren ohne Formatdatei &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copy-without-a-format-file-odbc.md)  
   
--   [Massenkopieren eines SELECT-Resultsets & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copy-a-select-result-set-odbc.md)  
+-   [Massenkopieren ein SELECT-Resultsets &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copy-a-select-result-set-odbc.md)  
   
--   [Erstellen Sie eine Formatdatei für Massenkopieren & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/create-a-bulk-copy-format-file-odbc.md)  
+-   [Erstellen eine Formatdatei für Massenkopieren &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/create-a-bulk-copy-format-file-odbc.md)  
   
--   [Massenkopieren mithilfe einer Formatdatei & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copy-by-using-a-format-file-odbc.md)  
+-   [Massenkopieren mithilfe einer Formatdatei &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copy-by-using-a-format-file-odbc.md)  
   
--   [Massenimport von Daten aus Programmvariablen & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copy-data-from-program-variables-odbc.md)  
+-   [Massenkopieren von Daten aus Programmvariablen &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copy-data-from-program-variables-odbc.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Vorgehensweisen zu ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  

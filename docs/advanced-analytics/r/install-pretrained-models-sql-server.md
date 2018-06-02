@@ -2,23 +2,24 @@
 title: Installieren von Pre-tained Machine Learning-Modellen in SQL Server | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/31/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b21245bd74f59f4ad7fe2370ad3587053e756a03
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e3abc1b1581216bb0207fbba2d857993b947afae
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707578"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Installieren Sie Pre-tained Machine learning-Modelle mit SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In diesem Artikel wird beschrieben, wie ein SQL Server-Instanz (In-Database) vorab trainierten Modelle hinzu, die bereits über R Services oder SQL Server-Machine Learning-Services installiert. 
+In diesem Artikel wird beschrieben, wie Pre-tained Machine learning-Modellen für Sentiment Analysis "und" Image merkmalbereitstellung mit einer Instanz (In-Database) von SQL Server hinzufügen, die bereits über R Services oder SQL Server Machine Learning-Services installiert. 
 
-Pre-tained Modelle, die zum Unterstützen von Kunden, die Aufgaben wie das Sentiment Analysis "oder" Image merkmalbereitstellung müssen, jedoch nicht die Ressourcen zum Abrufen großer Datasets oder ein komplexes Modell trainieren besitzen, vorhanden sein. Das Team Machine Learning-Server erstellt und trainiert diese Modelle können Sie den ersten Schritten für Text- und effizient verarbeiten. Weitere Informationen finden Sie unter der [Ressourcen](#bkmk_resources) Abschnitt dieses Artikels.
+Pre-tained Modelle vorhanden sein, um Kunden dabei zu unterstützen, müssen stimmungsanalyse auszuführen oder image merkmalbereitstellung, aber keine Ressourcen zum Abrufen großer Datasets oder ein komplexes Modell zu trainieren. Das Team Machine Learning-Server erstellt und trainiert diese Modelle können Sie den ersten Schritten für Text- und effizient verarbeiten. Weitere Informationen finden Sie unter der [Ressourcen](#bkmk_resources) Abschnitt dieses Artikels.
 
 Ein Beispiel dafür, wie mithilfe der Pre-tained Modelle mit SQL Server-Daten finden Sie unter diesem Blogbeitrag vom SQL Server-Machine Learning-Team: [stimmungsanalyse mit Python in SQL Server-Machine Learning-Services](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)
 
@@ -30,8 +31,8 @@ Pre-tained Modelle funktionieren mit der folgenden Produkte und Sprachen. Das Se
 
 + SQL Server 2016 R Services (Datenbankintern) - R nur mit der [MicrosoftML-Bibliothek](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
 + SQL Server 2016 R Server (eigenständig) - R nur mit der [MicrosoftML-Bibliothek](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
-+ SQL Server 2017 Machine Learning Services (Datenbankintern) - R mit [MicrosoftML Bibliothek] (https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), Python, mit der [Microsoftml-Bibliothek](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
-+ SQL Server 2017 Machine Learning-Server (eigenständig) - R mit [MicrosoftML Bibliothek] (https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), Python, mit der [Microsoftml-Bibliothek](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
++ SQL Server 2017 Machine Learning Services (Datenbankintern) - R mit der [MicrosoftML Bibliothek](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), Python mit der [Microsoftml-Bibliothek](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
++ SQL Server 2017 Machine Learning-Server (eigenständig) - R mit der [MicrosoftML Bibliothek](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), Python mit der [Microsoftml-Bibliothek](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
 
 Während des Installationsvorgangs unterscheidet sich abhängig von Ihrer Version von SQL Server. Finden Sie unter den folgenden Abschnitten Anweisungen für die einzelnen Versionen.
 
@@ -106,12 +107,30 @@ Mit SQL Server 2016 müssen Sie einige zusätzliche Schritte zum Registrieren di
     + ResNet\_18\_Updated.model
     + ResNet\_50\_Updated.model
 
-## <a name="install-pre-trained-models-on-sql-server-machine-learning-services-in-database"></a>Installieren Sie vorab trainierten Modelle auf SQL Server Machine Learning-Services (Datenbankintern)
+## <a name="install-pre-trained-models-on-sql-server-2017-machine-learning-services-in-database"></a>Installieren Sie vorab trainierten Modelle auf SQL Server 2017 Machine Learning Services (Datenbankintern)
 
 Wenn Sie SQL Server-2017 bereits installiert haben, können Sie die vorab trainierten Modelle auf zwei Arten abrufen:
 
-+ Aktualisieren Sie die Python- und R-Komponenten mithilfe der Bindung, und installieren Sie die vorab trainierten Modelle zur gleichen Zeit
 + Installieren Sie nur die Pre-tained Modelle
++ Aktualisieren Sie die Python- und R-Komponenten mithilfe der Bindung, und installieren Sie die vorab trainierten Modelle zur gleichen Zeit
+
+### <a name="add-pre-trained-models-only"></a>Pre-tained Modelle nur hinzufügen
+
+Um die Pre-tained Modelle hinzufügen, können Sie RSetup.exe über die Befehlszeile ausführen.
+
+Installieren Sie für die R-Version der Modelle die MLM-Komponente zu R_SERVICES:
+
+```
+RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES"
+```
+
+Installieren Sie für die Python-Version der Modelle die MLM-Komponente zu PYTHON_SERVICES:
+
+```
+RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES"
+```
+
+### <a name="bind-and-install-pre-trained-models"></a>Binden Sie, und installieren Sie vorab trainierten Modelle
 
 Die folgenden Anweisungen beschreiben das Verfahren zum Aktualisieren der Machine Learning-Komponenten und Abrufen von Pre-tained Modelle zur gleichen Zeit.
 
@@ -146,7 +165,7 @@ Die folgenden Anweisungen wird beschrieben, wie Aktualisieren von R-Komponenten 
 2. Wählen Sie die Sprachen, die Sie verwenden möchten, aktualisieren, und wählen Sie die **Pre-trained Modelle** Option.
 
     > [!TIP]
-    > Wenn Sie zuvor ausgeführt, haben die Installer zum Aktualisieren von R Server (eigenständig), und nur die Pre-tained Modelle hinzufügen möchten, lassen Sie alle vorherigen Auswahl **als**, und wählen Sie nur am vorkonfigurierten**-Modelle trainiert** Option . **Nicht** deaktivieren Sie alle zuvor ausgewählten Optionen; in diesem Fall wird das Installationsprogramm Komponenten entfernt.
+    > Wenn Sie zuvor ausgeführt, haben die Installer zum Aktualisieren von R Server (eigenständig), und nur die Pre-tained Modelle hinzufügen möchten, lassen Sie alle vorherigen Auswahl **als**, und wählen Sie nur am vorkonfigurierten **-Modelle trainiert** Option . **Nicht** deaktivieren Sie alle zuvor ausgewählten Optionen; in diesem Fall wird das Installationsprogramm Komponenten entfernt.
 
     Es wird empfohlen, dass Sie die Standardeinstellungen für die Modell-Speicherorte akzeptieren.
 

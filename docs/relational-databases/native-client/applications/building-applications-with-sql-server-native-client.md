@@ -22,10 +22,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 7f05a62a79bb0773563d29a053f3221b10f6d931
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708238"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>Erstellen von Anwendungen mit SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/03/2018
  [Verwenden von Schlüsselwörtern für Verbindungszeichenfolgen mit SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
  Erläutert die verschiedenen Verbindungszeichenfolgen, die beim Herstellen einer Verbindung zu einer Datenbank mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client verwendet werden können.  
   
- [Mithilfe der SQL Server Native Client-Header und Bibliotheksdateien](../../../relational-databases/native-client/applications/using-the-sql-server-native-client-header-and-library-files.md)  
+ [Verwenden der SQL Server Native Client-Header- und Bibliotheksdateien](../../../relational-databases/native-client/applications/using-the-sql-server-native-client-header-and-library-files.md)  
  Erläutert die Verwendung der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Header- und Bibliotheksdateien innerhalb einer Anwendung.  
   
  [Aktualisieren einer Anwendung von MDAC auf SQL Server Native Client](../../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md)  
@@ -64,6 +65,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="see-also"></a>Siehe auch  
  [Programmierung für SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
  [Vorgehensweisen zu ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
- [OLE DB-Themen zur Vorgehensweise](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+ [Vorgehensweisen für OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

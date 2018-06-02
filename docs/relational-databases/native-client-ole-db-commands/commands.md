@@ -20,10 +20,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 56749be182165535e7fb8678cdda09a3a485a95f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707978"
 ---
 # <a name="commands"></a>Befehle
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 
   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter macht die **ICommand** Schnittstelle sowie die Befehlsobjekte, die in diesem Abschnitt beschrieben werden:  
   
--   [Befehlssyntax](../../relational-databases/native-client-ole-db-commands/command-syntax.md)  
+-   [Befehlsyntax](../../relational-databases/native-client-ole-db-commands/command-syntax.md)  
   
 -   [Befehlsparameter](../../relational-databases/native-client-ole-db-commands/command-parameters.md)  
   

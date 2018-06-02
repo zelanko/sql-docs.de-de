@@ -4,27 +4,28 @@ description: R und Python-Paketversion ermitteln, überprüfen Sie die Installat
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/08/2018
+ms.date: 05/29/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 21975b4a59cbfaf1e3a203bc732543144856633f
-ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.openlocfilehash: 85ea4658ca8b60fc24d7e4f7849de1655eab6082
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707888"
 ---
-#  <a name="get-r-and-python-package-information-on-sql-server"></a>Abrufen von Informationen von R und Python-Paket für SQL Server
+#  <a name="get-r-and-python-package-information"></a>Abrufen von Informationen für R und Python-Paket
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Auch müssen wenn Sie mit mehreren Umgebungen oder Installationen von R oder Python arbeiten, Sie sicherstellen, dass der Code, den Sie ausführen, die erwartete Umgebung für Python oder den Arbeitsbereich "richtige" für r verwendet wird Upgrade von Machine learning-Komponenten mithilfe von Bindung kann z. B. der Pfad zum R-Bibliothek in einem anderen Ordner als den Standardwert sein. Wenn Sie R-Client oder eine Instanz des eigenständigen Servers installieren, müssen Sie außerdem möglicherweise mehrere R-Bibliotheken auf Ihrem Computer.
+Auch müssen wenn Sie mit mehreren Umgebungen oder Installationen von R oder Python arbeiten, Sie sicherstellen, dass der Code, den Sie ausführen, die erwartete Umgebung für Python oder den Arbeitsbereich "richtige" für r verwendet wird Upgrade von Machine learning-Komponenten über beispielsweise [Bindung](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md), möglicherweise der Pfad zum R-Bibliothek in einem anderen Ordner als den Standardwert. Wenn Sie R-Client oder eine Instanz des eigenständigen Servers installieren, müssen Sie außerdem möglicherweise mehrere R-Bibliotheken auf Ihrem Computer.
 
-In diesem Artikel Beispielen zum Abrufen der Pfad und die Version der Bibliothek, die von SQL Server verwendet wird.
+R und Python-Skript-Beispiele in diesem Artikel veranschaulichen das Abrufen der Pfad und die Version von Paketen, die von SQL Server verwendet.
 
-## <a name="get-the-current-r-library"></a>Abrufen der aktuellen R-Bibliothek
+## <a name="get-the-r-library-location"></a>Abrufen des Standorts der R-Bibliothek
 
-Für **R** in einer beliebigen Version von SQL Server, führen Sie die folgende Anweisung aus, um die Standardbibliothek für die aktuelle Instanz zu überprüfen:
+Für alle Versionen von SQL Server, führen Sie die folgende Anweisung zum Überprüfen der [Standardbibliothek R-Paket](installing-and-managing-r-packages.md) für die aktuelle Instanz:
 
 ```sql
 EXECUTE sp_execute_external_script  
@@ -34,7 +35,7 @@ WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
 
-Optional können Sie RxSqlLibPaths verwenden, in neueren Versionen von "revoscaler" in SQL Server 2017 Machine Learning Services oder [R Services aktualisierten R auf mindestens "revoscaler" 9.0.1](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). Diese gespeicherte Prozedur gibt den Pfad der Instanz-Bibliothek und die Version von "revoscaler" von SQL Server verwendet:
+Optional können Sie [RxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) in neueren Versionen von "revoscaler" in SQL Server 2017 Machine Learning Services oder [R Services aktualisierten R auf mindestens "revoscaler" 9.0.1](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). Diese gespeicherte Prozedur gibt den Pfad der Instanz-Bibliothek und die Version von "revoscaler" von SQL Server verwendet:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -57,7 +58,7 @@ STDOUT message(s) from external script:
 [1] '9.3.0'
 ```
 
-## <a name="get-the-current-python-library"></a>Abrufen der aktuellen Python-Bibliothek
+## <a name="get-the-python-library-location"></a>Abrufen des Standorts der Python-Bibliothek
 
 Für **Python** in SQL Server-2017, führen Sie die folgende Anweisung aus, um zu überprüfen, ob die Standardbibliothek für die aktuelle Instanz. In diesem Beispiel gibt die Liste der Ordner für die Python `sys.path` Variable. Die Liste enthält das aktuelle Verzeichnis und den Pfad der Standardbibliothek.
 

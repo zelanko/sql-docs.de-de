@@ -8,11 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 694cbb2a6addc89f40dd6d9670768ad13a84ef3f
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 11b9e58c583712d8ee5ae70f4dbb98b6c175239c
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707688"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Aktualisieren des Machine learning (R und Python) Komponenten in SQL Server-Instanzen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,30 +27,26 @@ Bindung ändert sich nicht auf die Grundlagen der Installation: R und Python-Int
 > [!NOTE]
 > Bindung gilt für nur Instanzen (In-Database). Bindung ist nicht für eine Installation (eigenständig) relevant.
 
-**SQL Server 2017**
+**SQL Server-2017 Bindung Überlegungen**
 
 Für SQL Server 2017 Machine Learning Services würden Sie in Betracht ziehen Bindung nur, wenn Microsoft Machine Learning-Server beginnt, um zusätzliche Pakete oder neuere Versionen über was Sie bereits verfügen.
 
-**SQL Server 2016**
+**Überlegungen zu SQL Server 2016-Bindung**
 
-Für Kunden, die SQL Server 2016-R-Services, es gibt zwei Pfade für die erste neue und aktualisierte R-Pakete. Eine Methode besteht im aktualisieren auf SQL Server-2017; die zweite, binden an Microsoft Machine Learning-Server.
+Für SQL Server 2016 R Services Kunden, die Bindung bietet R-Pakete, neue Pakete nicht Teil der ursprünglichen Installation und vortrainierte Modelle aktualisiert, die alle weiteren in jeder neuen Haupt- und Nebenversionsnummern-Version von Microsoft Machine Learning-Server aktualisiert werden können. Bindung ist nicht Ihnen Python-Unterstützung, weshalb eine SQL Server-2017-Funktion ist. 
 
-Upgrade auf SQL Server-2017 ruft Sie R-Pakete auf die Versionen, die in dieser Version sowie die Python-Features enthalten. Bindung ruft aktualisiert auch R-Pakete, mit denen weiter in jeder neuen Haupt- und Nebenversionsnummern-Version von Microsoft Machine Learning-Server aktualisiert werden können. 
+## <a name="version-map"></a>Version-Karte
 
-Bindung ist nicht Ihnen Python-Unterstützung, weshalb eine SQL Server-2017-Funktion ist. 
+Die folgende Tabelle enthält eine Version Code Map, die Paketversionen über Freigabe angezeigt werden, so, dass Sie Potentional Upgradepfade, beim Binden an Microsoft Machine Learning-Server ermitteln können (vormals bekannt als R-Server vor dem Hinzufügen der Unterstützung der Python Starten in MLS 9.2.1). 
 
-**Upgrades bei den Komponenten über Microsoft Machine Learning-Server zur Verfügung.**
-
-Die folgende Tabelle ist eine Version-Zuordnung, mit der Version, die mit SQL Server installiert, mit möglichen Upgrades beim Binden an Microsoft Machine Learning-Server (vormals bekannt als R-Server vor dem Hinzufügen der Unterstützung der Python MLS 9.2.1 ab). 
-
-Beachten Sie, dass die Bindung nicht mit die neueste Version von R oder Anaconda garantiert. Wenn Sie sich an Microsoft Machine Learning-Server binden, erhalten Sie die R oder Python-Version installiert, über das Setupprogramm aus, die nicht unbedingt die neueste Version sind im Web verfügbar.
+Beachten Sie, dass die Bindung nicht mit die neueste Version von R oder Anaconda garantiert. Wenn Sie zum Microsoft Machine Learning Server (MLS) binden, erhalten Sie die R oder Python-Version installiert über Setup, die möglicherweise nicht die neueste Version sind im Web verfügbar.
 
 [**SQL Server 2016 R Services**](../install/sql-r-services-windows-install.md)
 
-Komponente |Erste Version | R Server 9.0.1 | R Server 9.1 | MLS 9.2.1 | MLS 9.3 |
+Komponente |Erste Version | [R Server 9.0.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [MLS 9.2.1](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) | [MLS 9.3](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) |
 ----------|----------------|----------------|--------------|---------|-------|
 Microsoft R Open (MRO) über R | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | R 3.4.3 |
-[RevoScaleR](https://docs.microsoft.com/achine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
+[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)| entfällt | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [vortrainierte Modelle](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| entfällt | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| entfällt | 1,0 |  1,0 |  1,0 |  1,0 |
@@ -301,7 +298,7 @@ Wenn Sie auf Microsoft R Server 9.0.1 aktualisiert, die Version des SqlBindR.exe
 
 Folgeversion von SqlBindR automatisch die ursprüngliche R-Funktionen, entfällt das Erfordernis Neuinstallation des R-Komponenten wiederherstellen oder erneut Patch für den Server. Allerdings müssen Sie alle Updates der R-Paket installieren, die nach der Erstinstallation hinzugefügt wurden.
 
-Wenn Sie zum Installieren und Freigeben von Paket die Paket-Verwaltungsrollen verwendet haben, ist diese Aufgabe sehr viel einfacher: Sie können R-Befehle verwenden, mit dem installierten Pakete im Dateisystem verwenden die Datensätze in der Datenbank synchronisiert und umgekehrt. Weitere Informationen finden Sie unter [paketverwaltung für SQL Server R](r-package-management-for-sql-server-r-services.md).
+Wenn Sie zum Installieren und Freigeben von Paket die Paket-Verwaltungsrollen verwendet haben, ist diese Aufgabe sehr viel einfacher: Sie können R-Befehle verwenden, mit dem installierten Pakete im Dateisystem verwenden die Datensätze in der Datenbank synchronisiert und umgekehrt. Weitere Informationen finden Sie unter [paketverwaltung für SQL Server R](install-additional-r-packages-on-sql-server.md).
 
 ### <a name="problems-with-multiple-upgrades-from-sql-server"></a>Probleme bei mehreren Upgrades von SQL Server
 

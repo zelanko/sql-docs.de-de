@@ -8,25 +8,26 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 88604b48f93a7ec322e5e7f9a9bdba6b9eb2cc3c
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 997db094cb5e69e0cbf82d9a7e247cb13ec1d452
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707658"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>Aktivieren Sie oder deaktivieren Sie der remote-paketverwaltung für SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dieser Artikel beschreibt die Verwaltung von R-Pakete aus einer Remoteinstanz von Machine Learning-Server zu ermöglichen. Nachdem das Paket-Feature aktiviert wurde, können Sie "revoscaler"-Befehle verwenden, um Pakete auf einer Datenbank von einem Remoteclient aus installieren.
+Dieser Artikel beschreibt das Aktivieren der Remoteverwaltung der R-Pakete von einer Clientarbeitsstation oder einem anderen Machine Learning-Server. Nachdem das Paket-Feature in SQL Server aktiviert wurde, können Sie "revoscaler"-Befehle auf einem Client verwenden, um Pakete auf SQL Server installieren.
 
 > [!NOTE]
 > Derzeit wird die Verwaltung von R-Bibliotheken unterstützt. Unterstützung für Python geplant ist.
 
-Standardmäßig wird die Verwaltungsfunktion externe Paket für SQL Server deaktiviert, auch wenn Machine Learning-Funktionen installiert wurden. Sie müssen ein separates Skript, um die Funktion zu aktivieren, wie im nächsten Abschnitt beschrieben ausführen.
+Standardmäßig wird die Verwaltungsfunktion externe Paket für SQL Server deaktiviert. Sie müssen ein separates Skript, um die Funktion zu aktivieren, wie im nächsten Abschnitt beschrieben ausführen.
 
 ## <a name="overview-of-process-and-tools"></a>Übersicht über Prozess- und tools
 
-Zum Aktivieren oder Deaktivieren der paketverwaltung, verwenden Sie das Befehlszeile-Hilfsprogramm **RegisterRExt.exe**, ist die im Lieferumfang der **"revoscaler"** Paket.
+Verwenden Sie zum Aktivieren oder Deaktivieren der paketverwaltung auf SQL Server, die Befehlszeile-Hilfsprogramm **RegisterRExt.exe**, ist die im Lieferumfang der **"revoscaler"** Paket.
 
 [Aktivieren der](#bkmk_enable) diese Funktion ist ein zweistufiger Prozess, einen Datenbankadministrator muss dann: Sie paketverwaltung auf SQL Server-Instanz (einmal pro SQL Server-Instanz) zu aktivieren, und klicken Sie dann aktivieren paketverwaltung für die SQL-Datenbank (einmal pro SQL Server -Datenbank).
 
@@ -34,7 +35,7 @@ Zum Aktivieren oder Deaktivieren der paketverwaltung, verwenden Sie das Befehlsz
 
 ## <a name="bkmk_enable"></a> Aktivieren Sie die paketverwaltung
 
-1. Öffnen Sie ein Eingabeaufforderungsfenster mit erhöhten Rechten, und navigieren Sie zu dem Ordner mit dem Hilfsprogramm RegisterRExt.exe. Der Standardspeicherort ist `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`.
+1. Öffnen Sie auf SQL Server ein Eingabeaufforderungsfenster mit erhöhten Rechten, und navigieren Sie zu dem Ordner mit dem Hilfsprogramm RegisterRExt.exe. Der Standardspeicherort ist `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`.
 
 2. Führen Sie den folgenden Befehl, der entsprechenden Argumente für Ihre Umgebung bereitstellen:
 
@@ -93,3 +94,8 @@ Nachdem Sie diese Funktion aktiviert haben, können Sie "revoscaler"-Funktion zu
 
     Dieser Befehl entfernt die Paket-Verwaltungsfunktion aus der Instanz an. Sie müssen möglicherweise einmal, um Änderungen finden Sie unter den Launchpad-Dienst manuell neu zu starten.
 
+## <a name="next-steps"></a>Nächste Schritte
+
++ [Verwenden Sie "revoscaler", um neue R-Pakete installieren](use-revoscaler-to-manage-r-packages.md)
++ [Tipps für die Installation von R-Pakete](packages-installed-in-user-libraries.md)
++ [Standardpakete](installing-and-managing-r-packages.md)

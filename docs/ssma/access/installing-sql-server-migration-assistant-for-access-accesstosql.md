@@ -31,11 +31,12 @@ caps.latest.revision: 31
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4232c955646b44be8c1d41a9095146a47aa75e97
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 39c6aef71584fbc3a50ec8611ead82ff5ad9f351
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34709088"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>Installieren von SQL Server Migration Assistant für Access (AccessToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) für den Zugriff ist mithilfe ein Windows Installer-basierten Assistenten installiert. Dieses Thema enthält Informationen über Installationsvoraussetzungen, einen Link auf die neueste Version von SSMA und Anweisungen zum Installieren, Lizenzierung, deinstallieren und Aktualisieren von SSMA.  
@@ -47,7 +48,7 @@ Bevor Sie SSMA installiert haben, stellen Sie sicher, dass Ihr System die folgen
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 oder höher.  
   
--   Die [!INCLUDE[msCoName](../../includes/msconame_md.md)] Version von .NET Framework 4.0 oder höher. .NET Framework, Version 4.0 wird über die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Produkt-CD, und mithilfe der Informationen in der [Handbuch für Microsoft .NET](https://docs.microsoft.com/en-us/dotnet/framework/).
+-   Die [!INCLUDE[msCoName](../../includes/msconame_md.md)] Version von .NET Framework 4.0 oder höher. .NET Framework, Version 4.0 wird über die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Produkt-CD, und mithilfe der Informationen in der [Handbuch für Microsoft .NET](https://docs.microsoft.com/dotnet/framework/).
   
 -   Zugriff auf sowie ausreichende Berechtigungen auf dem Computer, der die Zielinstanz des hostet [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SQL Azure-Datenbank zu dem Sie Datenbankobjekte und Daten migrieren.  
   

@@ -2,57 +2,45 @@
 title: So verwenden Sie RevoScaleR-Funktionen zum Suchen, oder installieren Sie R-Paketen auf SQL Server | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/31/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c872a945388696a75a07116c0a84a64d64d668d4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d92b3e993968ce48d7489b0c17d6bdba005809a3
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707528"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>So verwenden Sie RevoScaleR-Funktionen zum Suchen, oder installieren R-Pakete auf SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Microsoft R Server-Version 9.0.1 eingeführten neue RevoScaleR-Funktionen, dass die Verwendung in einer SQL Server-computekontext Pakete installiert. Diese neuen Funktionen vereinfachen Datenanalysten zum Ausführen von R-Code und Installieren von Paketen auf SQL Server ohne direkten Zugriff auf den Server.
+"Revoscaler" 9.0.1 und höher inklusive Funktionen für die Verwaltung der R-Paket einen SQL Server-computekontext. Diese Funktionen können remote, nicht-Administratoren verwendet werden, um Pakete auf SQL Server ohne direkten Zugriff auf den Server zu installieren.
 
-## <a name="how-does-it-work"></a>Wie funktioniert es
+SQL Server 2017 Machine Learning Services enthält bereits eine neuere Version von "revoscaler". SQL Server 2016-R-Services-Kunden müssen einen [Komponentenupdate](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md) RevoScaleR-Paket-Verwaltungsfunktionen abrufen. Anweisungen zum Abrufen von Version und des Inhalts zu verpacken, finden Sie unter [abrufen Paketinformationen](determine-which-packages-are-installed-on-sql-server.md).
 
-Wenn Sie R-Server 9.0.1 oder höher Sie können die [RxInstallPackages](https://docs.microsoft.com/en-us/machine-learning-server/r-reference/revoscaler/rxinstallpackages) Funktion von einem Remoteclient "R" zum Installieren der Pakete in einer SQL Server-computekontext. Um diese Option verwenden zu können, müssen Sie paketverwaltung auf dem Server und die Datenbank aktiviert haben. Dieses Feature erfordert auch, dass eine entsprechende Version von R Services "oder" Machine Learning-Dienste auf dem Server installiert werden.
+## <a name="revoscaler-functions-for-package-management"></a>RevoScaleR-Funktionen für paketverwaltung
 
-Die neue Version von "revoscaler" enthält auch diese Funktionen: 
+Die folgende Tabelle beschreibt die Funktionen für R-Paket-Installation und Verwaltung verwendet.
 
-+ Die [RxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage) Funktion ruft den Pfad für ein oder mehrere Pakete in der angegebenen computekontext ab.
+| Funktion | Description |
+|----------|-------------|
+| [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) | Ermitteln des Pfads der Instanz-Bibliothek auf dem SQL-Remoteserver. |
+| [rxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage) | Ruft den Pfad für ein oder mehrere Pakete auf dem SQL-Remoteserver. |
+| [rxInstallPackages](https://docs.microsoft.com/en-us/machine-learning-server/r-reference/revoscaler/rxinstallpackages) | Mit dieser Funktion wird von einem Remoteclient "R" zum Installieren der Pakete in einer SQL Server-computekontext, entweder aus einem angegebenen Repository oder durch Lesen der komprimierten Pakete lokal gespeichert. Diese Funktion überprüft, ob Abhängigkeiten und stellt sicher, dass alle zugehörigen Pakete zu SQL Server, wie durch die Installation von R-Paket im lokalen rechenkontext installiert werden können. Um diese Option verwenden zu können, müssen Sie paketverwaltung auf dem Server und die Datenbank aktiviert haben. Client- und Server-Umgebungen müssen die gleiche Version von "revoscaler" haben. |
+| [rxInstalledPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstalledpackages) | Ruft eine Liste der Pakete installiert, die in der angegebenen computekontext ab. |
+| [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) | Kopieren Sie die Informationen zu einer Bibliothek Paket zwischen dem Dateisystem und die Datenbank, für die angegebene computekontext. |
+| [rxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages) | Entfernt Pakete aus einer angegebenen computekontext. Außerdem Abhängigkeiten berechnet, und es wird sichergestellt, dass Pakete, die von anderen Paketen in SQL Server nicht mehr verwendet werden entfernt werden, um Ressourcen freizugeben. |
 
-    Eine Kombination aus Benutzer und Bereich können Sie Pakete suchen oder eine bestimmte Datenbank Pakete hinzugefügt werden:
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
-+ Die [RxInstalledPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstalledpackages) Funktion ruft eine Liste der Pakete installiert, die in der angegebenen computekontext ab.
++ [Aktivieren der R-Paket Remoteverwaltung auf SQL Server](r-package-how-to-enable-or-disable.md)
 
-+ Die [RxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) -Funktion installiert die Pakete in einen computekontext, entweder aus einem angegebenen Repository oder durch Lesen lokal gespeicherte ZIP-Paketen.
++ "Revoscaler"-Versionen müssen auf dem Client und Server-Umgebungen entsprechen. Weitere Informationen finden Sie unter [abrufen Paketinformationen](determine-which-packages-are-installed-on-sql-server.md).
 
-    Diese Funktion überprüft, ob Abhängigkeiten und stellt sicher, dass alle zugehörigen Pakete zu SQL Server, wie durch die Installation von R-Paket im lokalen rechenkontext installiert werden können.
-
-+ Die [RxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages) -Funktion entfernt Pakete aus einem angegebenen computekontext.
-
-    Außerdem Abhängigkeiten berechnet, und es wird sichergestellt, dass Pakete, die von anderen Paketen in SQL Server nicht mehr verwendet werden entfernt werden, um Ressourcen freizugeben.
-
-+ Verwenden der [RxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) Funktion, um Informationen zu einer Bibliothek Paket zwischen dem Dateisystem und die Datenbank, für die angegebene computekontext zu kopieren.
-
-+ Verwenden der [RxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) Funktion, um zu bestimmen, den Pfad der Instanz-Bibliothek auf einem SQL Server-computekontext.
-
-**Gilt für:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]. Wird auch unterstützt [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] mit einem Upgrade auf R Server 9.0 oder höher. Andere Einschränkungen gelten.
-
-## <a name="requirements"></a>Anforderungen
-
-+ Um diese Funktionen ausführen zu können, benötigen Sie Berechtigungen für die Verbindung mit dem Server und Ihrer Datenbank und R-Befehle ausführen.
-
-+ Bei Verwendung dieser Funktionen aus einem R-Remoteclient müssen zuerst erstellen Sie eine Compute Context-Objekt, mit der [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) Funktion. Übergeben Sie für jede Paket-Management-Funktion, die Sie verwenden und danach computekontext als Argument.
-
-+ Wenn Sie nicht angeben einen Benutzernamen und das Kennwort bei der Erstellung des computekontexts, dient die Identität des Benutzers, den R-Code ausführt.
-
-+ Es ist auch möglich, führen Sie die Paket-Verwaltungsfunktionen in `sp_execute_external_script`. Wenn Sie dies tun, wird die Funktion mithilfe des Sicherheitskontexts des Aufrufers gespeicherte Prozedur ausgeführt.
++ Berechtigung für die Verbindung mit dem Server und Ihrer Datenbank und R-Befehle auszuführen. Sie müssen ein Mitglied einer Datenbankrolle sein, die Ihnen ermöglicht, die Pakete auf die angegebene Instanz und die Datenbank zu installieren.
 
 + Pakete in **freigegebener Bereich** installiert werden, indem der Benutzer, die die `rpkgs-shared` Rolle in einer angegebenen Datenbank. Alle Benutzer in dieser Rolle können freigegebene Pakete zu deinstallieren.
 
@@ -60,14 +48,13 @@ Die neue Version von "revoscaler" enthält auch diese Funktionen:
 
 + Datenbankbesitzer können freigegeben oder privat Pakete verwenden.
 
-## <a name="package-installation-from-machine-learning-server-or-remote-r-client"></a>Paketinstallation von Machine Learning-Server oder remote-R-client
+## <a name="client-connections"></a>Clientverbindungen
 
-Bevor Sie beginnen, stellen Sie sicher, dass diese Bedingungen erfüllt sind:
+Kann von eine Clientarbeitsstation [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/install-on-windows) oder ein [Microsoft Machine Learning-Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) (Datenanalysten verwenden häufig die kostenlose Developer Edition) im selben Netzwerk.
 
-+ Der Client hat RevoScale 9.0.1 oder höher.
-+ Eine entsprechende Version von "revoscaler" wurde auf SQL Server-Instanz installiert.
-+ Die [Paket Verwaltungsfeature](..\r\r-package-how-to-enable-or-disable.md) für die Instanz aktiviert wurde.
-+ Sie sind Mitglied einer Datenbankrolle, die Ihnen ermöglicht, die Pakete auf die angegebene Instanz und die Datenbank zu installieren. In Zukunft werden Rollen Installieren von Paketen auf einen Speicherort freigegeben oder privaten unterstützt. Jetzt können Sie Pakete installieren, wenn Sie ein Datenbankbesitzer sind.
+Beim Aufrufen von Paket-Verwaltungsfunktionen von einem Remoteclient R müssen zuerst erstellen Sie eine Compute Context-Objekt, mit der [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) Funktion. Übergeben Sie für jede Paket-Management-Funktion, die Sie verwenden und danach computekontext als Argument.
+
+Identität des Benutzers wird beim Festlegen des computekontexts in der Regel angegeben. Wenn Sie nicht angeben einen Benutzernamen und das Kennwort bei der Erstellung des computekontexts, dient die Identität des Benutzers, den R-Code ausführt.
 
 1. Definieren Sie über eine Befehlszeile R eine Verbindungszeichenfolge für die Instanz und die Datenbank ein.
 2. Verwenden der [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) Konstruktor, um einen SQL Server-computekontext, mithilfe der Verbindungszeichenfolge zu definieren.
@@ -91,6 +78,10 @@ Bevor Sie beginnen, stellen Sie sicher, dass diese Bedingungen erfüllt sind:
     
     Pakete werden mit den Anmeldeinformationen des Benutzers vornimmt, die Verbindung in den Standardbereich für diesen Benutzer installiert.
 
+## <a name="call-package-management-functions-in-stored-procedures"></a>Rufen Sie die Paket-Verwaltungsfunktionen in gespeicherten Prozeduren
+
+Cam führen Sie die Paket-Verwaltungsfunktionen in `sp_execute_external_script`. Wenn Sie dies tun, wird die Funktion mithilfe des Sicherheitskontexts des Aufrufers gespeicherte Prozedur ausgeführt.
+
 ## <a name="examples"></a>Beispiele
 
 Dieser Abschnitt enthält Beispiele zur Verwendung dieser Funktionen von einem Remoteclient aus, bei der Verbindung mit einer SQL Server-Instanz oder Datenbank als computekontext.
@@ -98,7 +89,7 @@ Dieser Abschnitt enthält Beispiele zur Verwendung dieser Funktionen von einem R
 Für alle Beispiele müssen Sie eine Verbindungszeichenfolge oder einen computekontext, wofür eine Verbindungszeichenfolge bereitstellen. In diesem Beispiel bietet eine Möglichkeit, einen computekontext für SQL Server zu erstellen:
 
 ```R
-instance_name <- "Machine name/Instance name";
+instance_name <- "computer-name/instance-name";
 database_name <- "TestDB";
 sqlWait= TRUE;
 sqlConsoleOutput <- TRUE;
@@ -106,15 +97,15 @@ connString <- paste("Driver=SQL Server;Server=", instance_name, ";Database=", da
 sqlcc <- RxInSqlServer(connectionString = connString, wait = sqlWait, consoleOutput = sqlConsoleOutput, numTasks = 4);
 ```
 
-Je nachdem, wo sich der Server befindet, und das Sicherheitsmodell müssen Sie eine Domäne und ein Subnetz-Spezifikation in der Verbindungszeichenfolge bereitstellen, oder verwenden Sie eine SQL-Anmeldung. Beispiel:
+Je nachdem, wo sich der Server befindet, und das Sicherheitsmodell müssen Sie eine Domäne und ein Subnetz-Spezifikation in der Verbindungszeichenfolge bereitstellen, oder verwenden Sie eine SQL-Anmeldung. Zum Beispiel:
 
 ```R
 connStr <- "Driver=SQL Server;Server=myserver.financeweb.contoso.com;Database=Finance;Uid=RUser1;Pwd=RUserPassword"
+```
 
+### <a name="get-package-path-on-a-remote-sql-server-compute-context"></a>Abrufen von Paketpfad auf einen Remoteserver SQL Server-computekontext
 
-### Get package path on a remote SQL Server compute context
-
-This example gets the path for the **RevoScaleR** package on the compute context, `sqlcc`.
+In diesem Beispiel ruft den Pfad für die **"revoscaler"** Paket auf die computekontext `sqlcc`.
 
 ```R
 sqlPackagePaths <- rxFindPackage(package = "RevoScaleR", computeContext = sqlcc)
@@ -216,3 +207,9 @@ exec sp_execute_external_script
   @database_name = @database_name;
 ```
 
+## <a name="see-also"></a>Siehe auch
+
++ [Remoteverwaltung für R-Pakete aktivieren](r-package-how-to-enable-or-disable.md)
++ [Synchronisieren von R-Paketen](package-install-uninstall-and-sync.md)
++ [Tipps für die Installation von R-Pakete](packages-installed-in-user-libraries.md)
++ [Standardpakete](installing-and-managing-r-packages.md)

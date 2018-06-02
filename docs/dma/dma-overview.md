@@ -17,18 +17,19 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 16550b6c195f426d914f5a4b4d521cbd739765ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dd681a6445c6759b0ec17e06dc0b4dbf24b3b72f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707968"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Übersicht über Data-Migrations-Assistenten
 
 Die Daten Migration Assistant (DMA) können Sie zum Aktualisieren auf eine moderne Datenplattform durch das Erkennen von Kompatibilitätsproblemen zu Fragen, die in der neuen Version von SQL Server und Azure SQL-Datenbank-Funktionalität auswirken können. DMA empfiehlt, Leistung und Zuverlässigkeit Verbesserungen für Ihre zielumgebung und können Sie Ihr Schema, Daten und nicht enthaltene Objekte vom Quellserver auf dem Zielserver zu verschieben.
 
 > [!NOTE] 
-> Für große (im Hinblick auf Anzahl und Größe der Datenbanken) Migrationen, es wird empfohlen, verwenden Sie die [Migration-Dienst von Azure-Datenbank](https://docs.microsoft.com/en-us/azure/dms/dms-overview), können die Datenbanken zu migrieren.
+> Für große (im Hinblick auf Anzahl und Größe der Datenbanken) Migrationen, es wird empfohlen, verwenden Sie die [Migration-Dienst von Azure-Datenbank](https://docs.microsoft.com/azure/dms/dms-overview), können die Datenbanken zu migrieren.
   
 ## <a name="capabilities"></a>Funktionen
 
@@ -47,7 +48,7 @@ Die Daten Migration Assistant (DMA) können Sie zum Aktualisieren auf eine moder
 - Entdecken Sie neue Funktionen in die Zielplattform für das SQL Server, die die Datenbank nach einem Upgrade von profitieren kann. Diese werden als Funktion Empfehlungen beschrieben und werden in den folgenden Kategorien organisiert:
 
   - Leistung
-  - Sicherheit
+  - Security
   - Speicherung
 
 - Migrieren einer lokalen SQL Server-Instanz zu einem modernen SQL Server-Instanz gehostet wird, lokal oder auf einem virtuellen Azure-Computer (VM), der von Ihrem lokalen Netzwerk aus zugänglich ist. Die Azure-VM kann über eine VPN- oder anderen Technologien zugegriffen werden. Workflow bei der Migration können Sie die folgenden Komponenten migrieren:
@@ -66,18 +67,18 @@ DMA ersetzt alle vorherige Versionen von SQL Server Upgrade Advisor und Upgrades
 **Datenquellen**
 - SQL Server 2005
 - SQL Server 2008
-- SQL Server 2008 R2
+- SQL Server 2008 R2
 - SQL Server 2012 
-- SQL Server 2014
+- SQLServer 2014
 - SQL Server 2016
 - SQLServer 2017 unter Windows
 
 **Ziele**
 - SQL Server 2012
-- SQL Server 2014
+- SQLServer 2014
 - SQL Server 2016
 - SQLServer 2017 unter Windows und Linux
-- Azure SQL Database
+- Azure SQL-Datenbank
 
 > [!NOTE] 
 > DMA unterstützt Azure SQL-Datenbank verwaltete Instanz als Ziel augenblicklich nicht.

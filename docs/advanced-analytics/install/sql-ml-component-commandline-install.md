@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7211eda2caaf579267e4c6089be13750022f0ef8
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 814e0f8172e02d9b02be95888c8dab286429e533
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707958"
 ---
 # <a name="install-sql-server-machine-learning-components-from-the-command-line"></a>Installieren von SQL Server-Machine Learning-Komponenten über die Befehlszeile
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -159,11 +160,11 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR
 
 Wenn Setup abgeschlossen ist, müssen Sie einen Server, Microsoft-Pakete, Open Source-Verteilung von R und Python-Tools, Beispiele und Skripts, die Teil der Verteilung sind. 
 
-So öffnen Sie ein R-Konsolenfenster, wechseln Sie zu \Programme\Microsoft SQL Server\140 (oder 130) \R_SERVER\bin\x64, und doppelklicken Sie auf **RGui.exe**. Haben Sie noch keine Erfahrung mit R? Wiederholen Sie dieses Lernprogramm: [grundlegende R-Befehle und RevoScaleR-Funktionen: 25 gängige Beispiele](https://docs.microsoft.com/en-us/machine-learning-server/r/tutorial-r-to-revoscaler).
+So öffnen Sie ein R-Konsolenfenster, wechseln Sie zu \Programme\Microsoft SQL Server\140 (oder 130) \R_SERVER\bin\x64, und doppelklicken Sie auf **RGui.exe**. Haben Sie noch keine Erfahrung mit R? Wiederholen Sie dieses Lernprogramm: [grundlegende R-Befehle und RevoScaleR-Funktionen: 25 gängige Beispiele](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler).
 
 Um eine Python-Befehl zu öffnen, wechseln Sie zu \Programme\Microsoft SQL Server\140\PYTHON_SERVER\bin\x64, und doppelklicken Sie auf **python.exe**.
 
-## <a name="get-help"></a>Abrufen von Hilfe
+## <a name="get-help"></a>Hilfe
 
 Benötigen Sie Hilfe bei der Installation oder Aktualisierung? Antworten auf häufig gestellte Fragen und bekannte Probleme finden Sie im folgenden Artikel:
 

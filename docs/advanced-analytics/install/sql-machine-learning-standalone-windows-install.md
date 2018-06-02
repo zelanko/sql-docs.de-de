@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1c56d3cb9420d8d0e48ec936008d0351d5d32eb4
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: cb906a8a05221204ec10310d652f6891861d35e2
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708268"
 ---
 # <a name="install-sql-server-2017-machine-learning-server-standalone-on-windows"></a>Installieren von SQL Server 2017 Machine Learning-Server (eigenständig) unter Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -89,9 +90,9 @@ Die folgende Tabelle enthält die Pfade für jede Installation.
 
 Eine Entwicklungsaufgabe IDE ist nicht als Teil von Setup installiert. Zusätzliche Tools sind nicht erforderlich, da alle Standardtools eingeschlossen werden würde, die mit einer Verteilung von R oder Python angegeben werden.
 
-Es wird empfohlen, dass Sie die neue Version von versuchen [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] oder [Python für Visual Studio](https://docs.microsoft.com/en-us/visualstudio/python/installing-python-support-in-visual-studio). Visual Studio unterstützt sowohl R und Python sowie Tools zur Datenbankentwicklung, Konnektivität mit SQL Server und BI-Tools. Sie können jedoch bevorzugte Entwicklungsumgebung einschließlich RStudio.
+Es wird empfohlen, dass Sie die neue Version von versuchen [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] oder [Python für Visual Studio](https://docs.microsoft.com/visualstudio/python/installing-python-support-in-visual-studio). Visual Studio unterstützt sowohl R und Python sowie Tools zur Datenbankentwicklung, Konnektivität mit SQL Server und BI-Tools. Sie können jedoch bevorzugte Entwicklungsumgebung einschließlich RStudio.
 
-## <a name="get-help"></a>Abrufen von Hilfe
+## <a name="get-help"></a>Hilfe
 
 Benötigen Sie Hilfe bei der Installation oder Aktualisierung? Antworten auf häufig gestellte Fragen und bekannte Probleme finden Sie im folgenden Artikel:
 

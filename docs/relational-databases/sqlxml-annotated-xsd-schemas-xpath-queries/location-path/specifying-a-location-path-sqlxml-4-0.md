@@ -23,10 +23,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2c2cad3730cd0948f94adc8ad5b877fd2e921bc3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708738"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Angeben eines Speicherortpfads (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="location-steps"></a>Positionsschritte  
  Ein Speicherortpfad (absolut oder relativ) besteht aus Positionsschritten, die drei Teile enthalten:  
   
--   **Achse**  
+-   **Axis**  
   
      Die Achse gibt die Strukturbeziehung zwischen den vom Positionsschritt ausgewählten Knoten und dem Kontextknoten an. Die **übergeordneten**, **untergeordneten**, **Attribut**, und **self** Achsen werden unterstützt. Wenn eine **untergeordneten** angegebenen Achse im Speicherortpfad, alle von der Abfrage ausgewählten Knoten werden die untergeordneten Elemente des Kontextknotens. Wenn eine **übergeordneten** Achse angegeben wird, werden die ausgewählten Knoten ist der übergeordnete Knoten des Kontextknotens. Wenn ein **Attribut** Achse angegeben wird, sind die ausgewählten Knoten die Attribute des Kontextknotens.  
   
