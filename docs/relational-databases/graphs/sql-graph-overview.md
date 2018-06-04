@@ -21,10 +21,11 @@ ms.author: shkale
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 8c2ad7f5b31a97de5d0bfb22074b55bd61bb825b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707048"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Diagramm, die Verarbeitung mit SQL Server und Azure SQL-Datenbank
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -62,7 +63,7 @@ CREATE TABLE friends (StartDate date) AS EDGE;
 Knoten und Kanten werden als Tabellen gespeichert.  
 
 ### <a name="query-language-extensions"></a>Abfrage-spracherweiterungen  
-Neue `MATCH` Klausel wurde eingeführt, um einen Musterabgleich und Multi-Hop-Navigation durch das Diagramm zu unterstützen. Die `MATCH` Funktion verwendet die Syntax lautet: ASCII-Grafiken für den Mustervergleich. Beispiel:  
+Neue `MATCH` Klausel wurde eingeführt, um einen Musterabgleich und Multi-Hop-Navigation durch das Diagramm zu unterstützen. Die `MATCH` Funktion verwendet die Syntax lautet: ASCII-Grafiken für den Mustervergleich. Zum Beispiel:  
 
 ```   
 -- Find friends of John
