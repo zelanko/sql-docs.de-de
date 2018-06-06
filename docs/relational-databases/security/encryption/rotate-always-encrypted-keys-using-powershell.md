@@ -15,11 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0b16ad6c18bec1954d9c52ada5fd22202e3ff9da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fed2dac0cb435e906a3c880022f53fdc35880754
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34581982"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>Rotation von Always Encrypted-Schlüsseln mithilfe von PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -312,7 +313,7 @@ Sie können einen Spaltenverschlüsselungsschlüssel offline oder online rotiere
 |Schritt 3: Authentifizieren Sie sich bei Azure, wenn Ihr Spaltenhauptschlüssel (der den Spaltenverschlüsselungsschlüssel schützt, der rotiert werden soll) in Azure Key Vault gespeichert ist. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | ja | nein
 |Schritt 4. Generieren Sie einen neuen Spaltenverschlüsselungsschlüssel, verschlüsseln Sie ihn mit dem Spaltenhauptschlüssel, und erstellen Sie Spaltenverschlüsselungsschlüssel-Metadaten in der Datenbank.  | [New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**Hinweis:** Verwenden Sie eine Variation des Cmdlets, dass intern einen Spaltenverschlüsselungsschlüssel generiert und verschlüsselt.<br>Im Hintergrund gibt das Cmdlet die Anweisung [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) heraus, um die Schlüsselmetadaten zu erstellen. | ja | ja
 |Schritt 5. Suchen Sie alle Spalten, die mit dem alten Spaltenverschlüsselungsschlüssel verschlüsselt sind. | [Programmierungshandbuch für SQL Server Management Objects (SMO)](../../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | nein | ja
-|Schritt 6. Erstellen Sie ein *SqlColumnEncryptionSettings* -Objekt für jede betroffene Spalte.  SqlColumnMasterKeySettings ist ein Objekt, das im Arbeitsspeicher (in PowerShell) vorhanden ist. Es gibt das Zielverschlüsselungsschema für eine Spalte an. In diesem Fall sollte das Objekt angeben, dass die betroffene Spalte mit dem neuen Spaltenverschlüsselungsschlüssel verschlüsselt werden soll. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeysettings) | nein | nein
+|Schritt 6. Erstellen Sie ein *SqlColumnEncryptionSettings* -Objekt für jede betroffene Spalte.  SqlColumnMasterKeySettings ist ein Objekt, das im Arbeitsspeicher (in PowerShell) vorhanden ist. Es gibt das Zielverschlüsselungsschema für eine Spalte an. In diesem Fall sollte das Objekt angeben, dass die betroffene Spalte mit dem neuen Spaltenverschlüsselungsschlüssel verschlüsselt werden soll. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | nein | nein
 |Schritt 7. Verschlüsseln Sie die Spalten, die in Schritt 5 angegeben sind, erneut mit dem neuen Verschlüsselungsschlüssel. | [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Hinweis:** Dieser Schritt kann lange dauern. Je nach gewähltem Ansatz (online oder offline) können Ihre Anwendungen während des gesamten Vorgangs nicht auf die Tabellen oder Teile davon zugreifen. | ja | ja
 |Schritt 8. Entfernen Sie die Metadaten für den alten Spaltenverschlüsselungsschlüssel. | [Remove-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkey) | nein | ja
 

@@ -1,7 +1,7 @@
 ---
 title: Entwickeln mit REST-APIs für Reporting Services | Microsoft-Dokumentation
 ms.description: The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
-ms.date: 10/19/2017
+ms.date: 05/25/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: developer
@@ -14,11 +14,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5a180e19628ad832b970026422e9b03e7373ecfb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8f2f0959639736379bc28c6add71d09769352fed
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34553831"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Entwickeln mit REST-APIs für Reporting Services
 
@@ -27,6 +28,8 @@ ms.lasthandoff: 05/03/2018
 Microsoft SQL Server 2017 Reporting Services unterstützen Representational State Transfer-APIs (REST). Diese REST-APIs sind Dienstendpunkte, die verschiedene HTTP-Vorgänge (Methoden) unterstützen, die Zugriff auf Ressourcen in einem Berichtsserver herstellen, abrufen, aktualisieren oder löschen.
 
 Die REST-API stellt programmgesteuerten Zugriff auf die Objekte in einem SQL Server 2017 Reporting Services-Berichtsserverkatalog bereit. Bei diesen Objekten handelt es sich beispielsweise um Ordner, Berichte, KPIs, Datenquellen, Datasets, Aktualisierungspläne, Abonnements, etc. Mithilfe der REST-API können Sie z.B. die Ordnerhierarchie navigieren, die Inhalte eines Ordners ermitteln oder eine Berichtsdefinition herunterladen. Außerdem können Sie Objekte erstellen, aktualisieren und löschen. Die Objekte unterstützen Sie u.a. bei dem Upload von Berichten, dem Ausführen eines Aktualisierungsplans oder dem Löschen eines Ordners.
+
+[!INCLUDE [GDPR-related guidance](../../includes/gdpr-hybrid-note.md)]
 
 ## <a name="components-of-a-rest-api-requestresponse"></a>Komponenten einer REST-API-Anforderung/Antwort
 

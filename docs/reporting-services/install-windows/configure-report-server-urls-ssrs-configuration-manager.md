@@ -14,17 +14,17 @@ helpviewer_keywords:
 - Report Server Windows service, virtual directories
 - report servers [Reporting Services], virtual directories
 - virtual directories [Reporting Services]
-- Report Manager [Reporting Services], virtual directories
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 4421895de0ba4bddc3d6905a142bee7907888033
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8fadb6163b7ad9e52f02834a3982feb30cd9a3c8
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550561"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Konfigurieren von Berichtsserver-URLs (SSRS-Konfigurations-Manager)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]werden URLs für den Zugriff auf den Report Server-Webdienst und das [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]verwendet. Bevor Sie die eine der Anwendungen verwenden können, müssen Sie mindestens je eine URL für den Webdienst und das [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]konfigurieren. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bietet Standardwerte für beide Anwendungs-URLs, die in den meisten Bereitstellungsszenarien gut funktionieren, auch in parallelen Bereitstellungen mit anderen Webdiensten und -anwendungen.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="defining-a-report-server-url"></a>Definieren einer Berichtsserver-URL  
  Die URL gibt den Ort für die Instanz einer Berichtsserveranwendung genau im Netzwerk an. Wenn Sie eine Berichtsserver-URL erstellen, müssen Sie die folgenden Teile angeben.  
   
-|Teil|Description|  
+|Teil|und Beschreibung|  
 |----------|-----------------|  
 |Hostname|Ein TCP/IP-Netzwerk verwendet eine IP-Adresse, um ein Gerät im Netzwerk eindeutig zu bestimmen. Es gibt eine physische IP-Adresse für jede in einem Computer installierte Netzwerkkarte. Wenn die IP-Adresse in einen Hostheader aufgelöst wird, können Sie den Hostheader angeben. Wenn Sie den Berichtsserver in einem Unternehmensnetzwerk bereitstellen, können Sie den Netzwerknamen des Computers verwenden.|  
 |Port|Ein TCP-Port ist ein Endpunkt im Gerät. Der Berichtsserver lauscht Anforderungen auf einem festgelegten Port.|  

@@ -20,11 +20,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 379eedbd4fb8df885e98d12042679b5bf748291d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 807dbb9143a02e78b56c6af84fb804a1ae04b92c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582082"
 ---
 # <a name="lesson-3-1---deleting-database-objects"></a>Lektion 3.1: Löschen von Datenbankobjekten
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -74,7 +75,7 @@ Sie könnten einfach nur die Datenbank löschen, um dieses Lernprogramm vollstä
 6.  Verwenden Sie die `DROP` -Anweisung zum Entfernen der `vw_Names`-Sicht:  
   
     ```  
-    DROP View vw_Names;  
+    DROP VIEW vw_Names;  
     GO  
   
     ```  
@@ -90,7 +91,7 @@ Sie könnten einfach nur die Datenbank löschen, um dieses Lernprogramm vollstä
 8.  Verwenden Sie die `DROP` -Anweisung zum Entfernen der `Products` -Tabelle:  
   
     ```  
-    DROP Table Products;  
+    DROP TABLE Products;  
     GO  
   
     ```  

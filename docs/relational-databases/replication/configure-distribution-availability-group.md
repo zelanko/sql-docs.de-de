@@ -1,7 +1,7 @@
 ---
 title: Konfigurieren einer SQL Server-Verteilungsdatenbank in einer Verfügbarkeitsgruppe | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/19/2018
+ms.date: 05/23/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -23,11 +23,12 @@ caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a7253c3cc263d653c9e2d86e03da49ead9731e31
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 11574b8454c425c3f022ed1daf415e71ea317535
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34473884"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Einrichten der Verteilungsdatenbank für die Replikation in einer Always On-Verfügbarkeitsgruppe
 
@@ -76,7 +77,6 @@ Nachdem eine Verteilungsdatenbank gemäß der nachfolgenden Anleitung in der Ver
 - Nehmen Sie in allen Replikaten, die Teil der Verfügbarkeitsgruppe der Verteilungsdatenbank sind, Änderungen an den Eigenschaften des Verteilers oder der Verteilungsdatenbank vor.
 - Nehmen Sie in allen Replikaten, die Teil der Verfügbarkeitsgruppe der Verteilungsdatenbank sind, mithilfe von gespeicherten msdb-Prozeduren oder SQL Server Management Studio Änderungen an Replikationsaufträgen vor.
 - Die Konfiguration des Verteilers auf dem Verleger muss mithilfe von Skripts ausgeführt werden. Der Replikations-Assistent kann nicht verwendet werden. Replikations-Assistenten und Eigenschaftenblätter, die anderen Zwecken dienen, werden unterstützt.
-- Der Replikationsmonitor und andere Teile der Replikationsbenutzeroberfläche, die mithilfe des Listenernamens der Verfügbarkeitsgruppe eine Verbindung herstellen, werden bis einschließlich SQL Server 2017 CU 6 nicht unterstützt. Verwenden Sie zum Verwalten von Replikations-Agents, die der Verteilungsdatenbank über eine Verfügbarkeitsgruppe zugeordnet sind, Auftragseigenschaften und den Auftragsverlauf.
 - Die Konfiguration von Verfügbarkeitsgruppen für Verteilungsdatenbanken kann nur mithilfe von Skripts erfolgen.
 - Die Einrichtung von Verteilungsdatenbanken in einer Verfügbarkeitsgruppe erfordert eine neue Replikationskonfiguration. Das Verschieben einer vorhandenen Verteilungsdatenbank in eine Verfügbarkeitsgruppe wird nicht unterstützt. Sobald eine Verteilungsdatenbank aus einer Verfügbarkeitsgruppe entfernt wurde, kann sie nicht mehr als eine gültige Verteilungsdatenbank fungieren und sollte gelöscht werden.
 

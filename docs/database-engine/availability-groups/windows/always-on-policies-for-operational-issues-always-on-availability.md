@@ -3,7 +3,6 @@ title: 'Always On-Richtlinien für Betriebsprobleme: Always On-Verfügbarkeit | 
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -14,14 +13,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 caps.latest.revision: 19
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fcc2a4f92bad4d12a8fd1b54601a53e3d801d23e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8fe881c82173877dba98e99c1af5b197ce5fba20
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34768986"
 ---
 # <a name="always-on-policies-for-operational-issues---always-on-availability"></a>Always On-Richtlinien für Betriebsprobleme: Always On-Verfügbarkeit
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ ms.lasthandoff: 05/03/2018
   
  Eine benutzerdefinierte Richtlinie kann beliebige der verfügbaren PBM-Facets verwenden, einschließlich der von vordefinierten Always On-Richtlinien verwendeten Facets (siehe [Vordefinierte Richtlinien und Probleme](#Always OnPBM)weiter oben in diesem Thema). Das Serverfacet stellt die folgenden Eigenschaften zum Überwachen des [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Zustands bereit:**(IsHadrEnabled** und **HadrManagerStatus**). Das Serverfacet stellt auch Eigenschaften der folgenden Richtlinien zum Überwachen der WSFC-Clusterkonfiguration bereit: **ClusterQuorumType**und **ClusterQuorumState**.  
   
- Weitere Informationen finden Sie im SQL Server-Always On-Teamblog unter [The Always On Health Model Part 2 – Extending the Health Model](http://blogs.msdn.com/b/sqlAlways On/archive/2012/02/13/extending-the-Always On-health-model.aspx) (Das Always On-Zustandsmodell Teil 2 – Erweitern des Zustandsmodells).  
+ Weitere Informationen finden Sie im SQL Server-Always On-Teamblog unter [The Always On Health Model Part 2 – Extending the Health Model](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/) (Das Always On-Zustandsmodell Teil 2 – Erweitern des Zustandsmodells).  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   
@@ -122,9 +122,9 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [The Always On Health Model Part 1 -- Health Model Architecture (Das Always On-Zustandsmodell Teil 1 – Zustandsmodellarchitektur)](http://blogs.msdn.com/b/sqlAlways On/archive/2012/02/13/extending-the-Always On-health-model.aspx)  
+-   [The Always On Health Model Part 1 -- Health Model Architecture (Das Always On-Zustandsmodell Teil 1 – Zustandsmodellarchitektur)](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/08/the-alwayson-health-model-part-1-health-model-architecture/)  
   
--   [The Always On Health Model Part 2 – Extending the Health Model](http://blogs.msdn.com/b/sqlAlways On/archive/2012/02/13/extending-the-Always On-health-model.aspx)  
+-   [The Always On Health Model Part 2 – Extending the Health Model](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/)  
   
 -   [Microsoft SQL Server AlwaysOn-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung](http://go.microsoft.com/fwlink/?LinkId=227600)  
   

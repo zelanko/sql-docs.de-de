@@ -3,7 +3,6 @@ title: Überwachen von Verfügbarkeitsgruppen anhand der Details im Objekt-Explo
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -17,14 +16,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server]
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 caps.latest.revision: 28
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d5525a27e67c6096713f4487ee3e5f4aae898190
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f955e14d91bd62208d9e03e7c8b0aa6705a879b1
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34770186"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>Überwachen von Verfügbarkeitsgruppen anhand der Details im Objekt-Explorer
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.lasthandoff: 05/03/2018
   
  Die folgenden Werte sind möglich:  
   
-|value|Description|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |**Keine Verbindungen zulassen**|Es sind keine direkten Verbindungen zu den Verfügbarkeitsdatenbanken zulässig, wenn dieses Verfügbarkeitsreplikat als sekundäres Replikat dient. Sekundäre Datenbanken sind nicht für Lesezugriff verfügbar.|  
 |**Nur Verbindungen für beabsichtigte Lesevorgänge zulassen**|Es sind nur direkte, schreibgeschützte Verbindungen zulässig, wenn dieses Replikat als sekundäres Replikat dient. Alle Datenbanken im Replikat sind für den Lesezugriff verfügbar.|  
@@ -100,7 +100,7 @@ ms.lasthandoff: 05/03/2018
  **Verbindungsstatus**  
  Gibt an, ob ein sekundäres Replikat derzeit mit dem primären Replikat verbunden ist. Die folgenden Werte sind möglich:  
   
-|value|Description|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |**Getrennt**|Gibt bei einem Remoteverfügbarkeitsreplikat an, dass es vom lokalen Verfügbarkeitsreplikat getrennt ist. Die Antwort des lokalen Replikats auf den Status "Getrennt" hängt wie folgt von dessen Rolle ab:<br /><br /> Wenn auf dem primären Replikat ein sekundäres Replikat getrennt ist, werden die sekundären Datenbanken auf dem primären Replikat als **Nicht synchronisiert** gekennzeichnet, und das primäre Replikat wartet, bis das sekundäre Replikat wieder verbunden ist.<br /><br /> Wird erkannt, dass das sekundäre Replikat getrennt ist, wird versucht, die Verbindung des sekundären Replikats mit dem primären Replikat wiederherzustellen.|  
 |**Verbunden**|Ein Remoteverfügbarkeitsreplikat, das derzeit mit dem lokalen Replikat verbunden ist.|  
@@ -109,7 +109,7 @@ ms.lasthandoff: 05/03/2018
  **Synchronisierungsstatus**  
  Gibt an, ob ein sekundäres Replikat gerade mit dem primärem Replikat synchronisiert wird. Die folgenden Werte sind möglich:  
   
-|value|Description|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |**Nicht synchronisiert**|Die Datenbank ist nicht synchronisiert oder wurde noch nicht mit der Verfügbarkeitsgruppe verknüpft.|  
 |**Synchronisiert**|Die Datenbank ist mit der primären Datenbank auf dem aktuellen primären Replikat (falls vorhanden) oder auf dem letzten primären Replikat synchronisiert.<br /><br /> Hinweis: Im Leistungsmodus befindet sich die Datenbank nie im Status "Synchronisiert".|  
@@ -129,7 +129,7 @@ ms.lasthandoff: 05/03/2018
   
  Folgende Werte sind für den Synchronisierungsstatus möglich:  
   
-|value|Description|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |Wird synchronisiert|Die sekundäre Datenbank hat die Transaktionsprotokoll-Datensätze für die primäre Datenbank empfangen, die noch nicht auf den Datenträger geschrieben (festgeschrieben) wurden.<br /><br /> Hinweis: Im Modus mit asynchronem Commit lautet der Synchronisierungsstatus immer **Wird synchronisiert**.|  
 |||  
@@ -137,7 +137,7 @@ ms.lasthandoff: 05/03/2018
  **Angehalten**  
  Gibt an, ob die Verfügbarkeitsdatenbank gerade online ist. Die folgenden Werte sind möglich:  
   
-|value|Description|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |**Angehalten**|Dieser Status gibt an, dass die Datenbank lokal angehalten wird und manuell fortgesetzt werden muss.<br /><br /> Auf dem primären Replikat ist der Wert für eine sekundäre Datenbank unzuverlässig. Um zuverlässig zu bestimmen, ob eine sekundäre Datenbank angehalten wird, fragen Sie sie auf dem sekundären Replikat ab, das die Datenbank hostet.|  
 |**Nicht verknüpft**|Gibt an, dass die sekundäre Datenbank entweder nicht mit der Verfügbarkeitsgruppe verknüpft wurde oder aus der Gruppe entfernt wurde.|  

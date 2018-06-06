@@ -19,10 +19,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e5dfdc3c08bd548530e4ba2deb50871808efc00f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34706858"
 ---
 # <a name="extended-events"></a>Erweiterte Ereignisse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ Weitere Informationen zu erweiterten Ereignissen finden Sie hier:
   
  In der folgenden Tabelle werden die Konzepte von "Erweiterte Ereignisse" beschrieben.  
   
-|Thema|Description|  
+|Thema|und Beschreibung|  
 |-----------|-----------------|  
 |[Pakete für erweiterte Ereignisse von SQL Server](../../relational-databases/extended-events/sql-server-extended-events-packages.md)|Beschreibt die Pakete für erweiterte Ereignisse, in denen Objekte enthalten sind, mit denen Daten beim Ausführen einer Sitzung für erweiterte Ereignisse abgerufen und verarbeitet werden.|  
 |[Ziele für erweiterte Ereignisse von SQL Server](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)|Beschreibt die Ereignisconsumer, die während einer Ereignissitzung Daten empfangen können.|  

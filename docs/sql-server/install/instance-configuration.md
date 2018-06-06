@@ -3,12 +3,9 @@ title: Hilfe zum Installations-Assistenten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 2017-04-21
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,15 +14,16 @@ helpviewer_keywords:
 - Instance Name page [SQL Server Installation Wizard]
 - SQL Server Installation Wizard, Instance Name page
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
-caps.latest.revision: 62
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 0366b0613623960afd56a2877ad9462fded60bf5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b2224040e62b1c9f75cf93e4231cef1443edfbac
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772766"
 ---
 # <a name="installation-wizard-help"></a>Hilfe zum Installations-Assistenten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -135,7 +133,7 @@ Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz besteht 
   
 ### <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
   
-|Description|Standardverzeichnis|Empfehlungen|  
+|und Beschreibung|Standardverzeichnis|Empfehlungen|  
 |-----------------|-----------------------|---------------------|  
 |Datenstammverzeichnis|C:\Programme\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data\ |Stellen Sie sicher, dass der Ordner \Programme\Microsoft SQL Server\ durch entsprechend eingeschränkte Berechtigungen geschützt wird. Die Leistung von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ist in vielen Konfigurationen von der Leistung des Speichers abhängig, in dem sich das Datenverzeichnis befindet. Platzieren Sie dieses Verzeichnis im Speicher mit der höchsten Leistung, der mit dem System verknüpft ist. Stellen Sie für Failoverclusterinstallationen sicher, dass Datenverzeichnisse auf dem freigegebenen Datenträger platziert werden.|  
 |Protokolldateiverzeichnis|C:\Programme\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log\ |Dies ist das Verzeichnis für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Protokolldateien, das auch das FlightRecorder-Protokoll enthält. Wenn Sie die Dauer von Flight Recorder erhöhen, stellen Sie sicher, dass für das Protokollverzeichnis genügend Speicherplatz zur Verfügung steht.|  
@@ -173,7 +171,7 @@ Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz besteht 
   
 ### <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
   
-|Description|Unterstützter Speichertyp|Standardverzeichnis|Empfehlungen|  
+|und Beschreibung|Unterstützter Speichertyp|Standardverzeichnis|Empfehlungen|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |Datenstammverzeichnis|Lokaler Datenträger, SMB-Dateiserver, freigegebener Speicher* |C:\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ |Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup konfiguriert Zugriffssteuerungslisten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verzeichnisse und unterbricht während der Konfiguration die Vererbung.|  
 |Benutzerdatenbankverzeichnis|Lokaler Datenträger, SMB-Dateiserver, freigegebener Speicher*|C:\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data |Welche Vorgehensweise für Benutzerdatenverzeichnisse empfohlen wird, hängt von der Arbeitsauslastung und den Leistungsanforderungen ab.|  
@@ -185,7 +183,7 @@ Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz besteht 
 ### <a name="failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failoverclusterinstanz  
  In der folgenden Tabelle sind die unterstützten Speichertypen und die Standardverzeichnisse für eine Failoverclusterinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgeführt, die während des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setups vom Benutzer konfigurierbar sind.  
   
-|Description|Unterstützter Speichertyp|Standardverzeichnis|Empfehlungen|  
+|und Beschreibung|Unterstützter Speichertyp|Standardverzeichnis|Empfehlungen|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |Datenstammverzeichnis|Freigegebener Speicher, SMB-Dateiserver|\<Laufwerk:>\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> Tipp: Wenn "Freigegebener Datenträger" auf der Seite **Datenträgerauswahl für Cluster** ausgewählt wurde, ist der Standard der erste freigegebene Datenträger. Dieses Feld ist standardmäßig leer, wenn keine Auswahl auf der Seite **Datenträgerauswahl für Cluster** getroffen wurde.|Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup konfiguriert Zugriffssteuerungslisten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verzeichnisse und unterbricht während der Konfiguration die Vererbung.|  
 |Benutzerdatenbankverzeichnis|Freigegebener Speicher, SMB-Dateiserver|\<Laufwerk:>Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> Tipp: Wenn "Freigegebener Datenträger" auf der Seite **Datenträgerauswahl für Cluster** ausgewählt wurde, ist der Standard der erste freigegebene Datenträger. Dieses Feld ist standardmäßig leer, wenn keine Auswahl auf der Seite **Datenträgerauswahl für Cluster** getroffen wurde.|Welche Vorgehensweise für Benutzerdatenverzeichnisse empfohlen wird, hängt von der Arbeitsauslastung und den Leistungsanforderungen ab.|  
@@ -225,7 +223,7 @@ Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz besteht 
   
 #### <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
   
-|Description|Standardverzeichnis|Empfehlungen|  
+|und Beschreibung|Standardverzeichnis|Empfehlungen|  
 |-----------------|-----------------------|---------------------|  
 |Datenstammverzeichnis |C:\Programme\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data |Stellen Sie sicher, dass der Ordner \Programme\Microsoft SQL Server\ durch entsprechend eingeschränkte Berechtigungen geschützt wird. Die Leistung von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ist in vielen Konfigurationen von der Leistung des Speichers abhängig, in dem sich das Datenverzeichnis befindet. Platzieren Sie dieses Verzeichnis im Speicher mit der höchsten Leistung, der mit dem System verknüpft ist. Stellen Sie für Failoverclusterinstallationen sicher, dass Datenverzeichnisse auf dem freigegebenen Datenträger platziert werden.|  
 |Protokolldateiverzeichnis|C:\Programme\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log |Dies ist das Verzeichnis für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Protokolldateien, das auch das FlightRecorder-Protokoll enthält. Wenn Sie die Dauer von Flight Recorder erhöhen, stellen Sie sicher, dass für das Protokollverzeichnis genügend Speicherplatz zur Verfügung steht.|  
@@ -369,7 +367,7 @@ Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz besteht 
 ### <a name="data-and-log-directories-for--a-stand-alone-instance-of--includessnoversionincludesssnoversion-mdmd"></a>Daten- und Protokollverzeichnisse für eine eigenständige Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  In der folgenden Tabelle sind die unterstützten Speichertypen und Standardverzeichnisse für eigenständige Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgeführt, die Sie während des Setups konfigurieren können.  
   
-|Description|Unterstützter Speichertyp|Standardverzeichnis|Empfehlungen|  
+|und Beschreibung|Unterstützter Speichertyp|Standardverzeichnis|Empfehlungen|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |**Datenverzeichnisse**|Lokaler Datenträger, SMB-Dateiserver, freigegebener Speicher* |C:\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup konfiguriert Zugriffssteuerungslisten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verzeichnisse und unterbricht während der Konfiguration die Vererbung.<br /><br /> Welche Vorgehensweise für die **temdb** -Verzeichnisse empfohlen wird, hängt von der Arbeitsauslastung und den Leistungsanforderungen ab. Geben Sie verschiedenen Ordner/Laufwerke an, um die Datendateien über mehrere Volumes zu verteilen.|  
 |**Protokollverzeichnis**|Lokaler Datenträger, SMB-Dateiserver, freigegebener Speicher*|C:\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|Stellen Sie sicher, dass ausreichend Speicherplatz für das Protokollverzeichnis verfügbar ist.|  
@@ -379,7 +377,7 @@ Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz besteht 
 ### <a name="data-and-log-directories-for-a-failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Daten- und Protokollverzeichnisse für eine Failoverclusterinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  In der folgenden Tabelle sind die unterstützten Speichertypen und die Standardverzeichnisse für eine Failoverclusterinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgeführt, die während des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setups vom Benutzer konfigurierbar sind.  
   
-|Description|Unterstützter Speichertyp|Standardverzeichnis|Empfehlungen|  
+|und Beschreibung|Unterstützter Speichertyp|Standardverzeichnis|Empfehlungen|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |**tempdb** -Datenverzeichnis|Lokaler Datenträger, freigegebener Speicher, SMB-Dateiserver|\<Laufwerk:>\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\Data<br /><br /> Tipp: Wenn "Freigegebener Datenträger" auf der Seite **Datenträgerauswahl für Cluster** ausgewählt wurde, ist der Standard der erste freigegebene Datenträger. Dieses Feld ist standardmäßig leer, wenn keine Auswahl auf der Seite **Datenträgerauswahl für Cluster** getroffen wurde.|Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup konfiguriert Zugriffssteuerungslisten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verzeichnisse und unterbricht während der Konfiguration die Vererbung.<br /><br /> Stellen Sie sicher, dass das angegebene Verzeichnis oder die angegebenen Verzeichnisse (falls mehrere Dateien angegeben sind) für alle Clusterknoten gültig sind. Falls die **tempdb** -Verzeichnisse auf dem Failoverzielknoten während des Failovers nicht verfügbar sind, wird die SQL Server-Ressource nicht online geschaltet.|  
 |**tempdb** -Protokollverzeichnis|Lokaler Datenträger, freigegebener Speicher, SMB-Dateiserver|\<Laufwerk:>\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> Tipp: Wenn "Freigegebener Datenträger" auf der Seite **Datenträgerauswahl für Cluster** ausgewählt wurde, ist der Standard der erste freigegebene Datenträger. Dieses Feld ist standardmäßig leer, wenn keine Auswahl auf der Seite **Datenträgerauswahl für Cluster** getroffen wurde.|Welche Vorgehensweise für Benutzerdatenverzeichnisse empfohlen wird, hängt von der Arbeitsauslastung und den Leistungsanforderungen ab.<br /><br /> Stellen Sie sicher, dass das angegebene Verzeichnis für alle Clusterknoten gültig ist. Falls die **tempdb** -Verzeichnisse auf dem Failoverzielknoten während des Failovers nicht verfügbar sind, wird die SQL Server-Ressource nicht online geschaltet.<br /><br /> Stellen Sie sicher, dass ausreichend Speicherplatz für das Protokollverzeichnis verfügbar ist.|  

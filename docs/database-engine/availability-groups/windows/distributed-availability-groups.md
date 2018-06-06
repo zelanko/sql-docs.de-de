@@ -3,7 +3,6 @@ title: Verteilte Verfügbarkeitsgruppen (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/12/2018
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -14,17 +13,18 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: allanhirt
-ms.author: mikeray
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4ce87751cb0f279b74a19159ceb966d8cadaec52
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0b2f8ba15720726e177884aa4481fb43dae6084f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34769336"
 ---
 # <a name="distributed-availability-groups"></a>Verteilte Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Verteilte Verfügbarkeitsgruppen sind eine neue Funktion, die in SQL Server 2016 als Variation der bestehenden Funktion für Always On-Verfügbarkeitsgruppen eingeführt. Dieser Artikel erläutert einige Aspekte von verteilten Verfügbarkeitsgruppen und ergänzt die bestehende [SQL Server documentation (SQL Server-Dokumentation)](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation).
+Verteilte Verfügbarkeitsgruppen sind eine neue Funktion, die in SQL Server 2016 als Variation der bestehenden Funktion für Always On-Verfügbarkeitsgruppen eingeführt. Dieser Artikel erläutert einige Aspekte von verteilten Verfügbarkeitsgruppen und ergänzt die bestehende [SQL Server documentation (SQL Server-Dokumentation)](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation).
 
 > [!NOTE]
 > „DAG“ ist nicht die offizielle Abkürzung für *verteilte Verfügbarkeitsgruppe*, da die Abkürzung bereits für die Database Availability Group-Exchange-Funktion verwendet wird. Diese Exchange-Funktion steht nicht in Zusammenhang mit den Verfügbarkeitsgruppen oder verteilten Verfügbarkeitsgruppen in SQL Server.
@@ -48,7 +48,7 @@ Sie können die Datenverschiebung in verteilten Verfügbarkeitsgruppen als „sy
 
 ![Datenverschiebung in verteilten Verfügbarkeitsgruppen][2]
 
-Die einzige Möglichkeit, um dem primären Replikat von AG 2 das Akzeptieren von Einfügungen, Updates und Löschungen zu ermöglichen, ist das Auslösen eines manuellen Failovers der verteilten Verfügbarkeitsgruppe von AG 1. In der obigen Abbildung enthält AG 1 die beschreibbare Kopie der Datenbank, deshalb macht das Auslösen eines Failovers AG 2 zu der Verfügbarkeitsgruppe, die Einfügungen, Updates und Löschungen verarbeiten kann. Weitere Informationen dazu, wie eine verteilte Verfügbarkeitsgruppe ein Failover auf eine andere auslösen kann, finden Sie unter [Failover to a secondary availability group (Failover auf eine sekundäre Verfügbarkeitsgruppe)]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups).
+Die einzige Möglichkeit, um dem primären Replikat von AG 2 das Akzeptieren von Einfügungen, Updates und Löschungen zu ermöglichen, ist das Auslösen eines manuellen Failovers der verteilten Verfügbarkeitsgruppe von AG 1. In der obigen Abbildung enthält AG 1 die beschreibbare Kopie der Datenbank, deshalb macht das Auslösen eines Failovers AG 2 zu der Verfügbarkeitsgruppe, die Einfügungen, Updates und Löschungen verarbeiten kann. Weitere Informationen dazu, wie eine verteilte Verfügbarkeitsgruppe ein Failover auf eine andere auslösen kann, finden Sie unter [Failover to a secondary availability group (Failover auf eine sekundäre Verfügbarkeitsgruppe)]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups).
 
 > [!NOTE]
 > Verteilte Verfügbarkeitsgruppen in SQL Server 2016 unterstützen die Failover-Funktion nur von einer Verfügbarkeitsgruppe auf eine andere mithilfe der Option „FORCE_FAILOVER_ALLOW_DATA_LOSS“.
@@ -90,7 +90,7 @@ Für die einzelnen WSFC-Cluster und ihre entsprechenden Verfügbarkeitsgruppen g
 
 Wenn beide WSFC-Cluster mit derselben Domäne (gilt nicht für vertrauenswürdige Domänen), müssen Sie beim Erstellen der verteilten Verfügbarkeitsgruppe keine weiteren Schritte durchführen. Bei Verfügbarkeitsgruppen und WSFC-Clustern, die nicht mit derselben Domäne verknüpft sind, müssen Sie Zertifikate verwenden, damit die verteilte Verfügbarkeitsgruppe funktioniert. Dabei gehen Sie so vor wie beim Erstellen einer Verfügbarkeitsgruppe für eine domänenunabhängige Verfügbarkeitsgruppe. Weitere Informationen zum Konfigurieren von Zertifikaten für eine verteilte Verfügbarkeitsgruppe finden Sie in den Schritten 3 bis 13 unter [Create a domain-independent availability group (Erstellen einer domänenunabhängigen Verfügbarkeitsgruppe)](domain-independent-availability-groups.md#create-a-domain-independent-availability-group).
 
-Bei einer verteilten Verfügbarkeitsgruppe müssen die primären Replikate in jeder zugrunde liegenden Verfügbarkeitsgruppe jeweils die Zertifikate der anderen besitzen. Wenn Sie bereits Endpunkte haben, die keine Zertifikate verwenden, konfigurieren Sie diese Endpunkte neu, indem Sie die Anweisung [ALTER ENDPOINT](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-endpoint-transact-sql) verwenden, um das Verwenden von Zertifikaten zu berücksichtigen.
+Bei einer verteilten Verfügbarkeitsgruppe müssen die primären Replikate in jeder zugrunde liegenden Verfügbarkeitsgruppe jeweils die Zertifikate der anderen besitzen. Wenn Sie bereits Endpunkte haben, die keine Zertifikate verwenden, konfigurieren Sie diese Endpunkte neu, indem Sie die Anweisung [ALTER ENDPOINT](https://docs.microsoft.com/sql/t-sql/statements/alter-endpoint-transact-sql) verwenden, um das Verwenden von Zertifikaten zu berücksichtigen.
 
 ## <a name="distributed-availability-group-usage-scenarios"></a>Verwendungsszenarios für verteilte Verfügbarkeitsgruppen
 
@@ -106,7 +106,7 @@ Bei einer herkömmlichen Verfügbarkeitsgruppe ist erforderlich, dass alle Serve
 
 ![Herkömmliche Verfügbarkeitsgruppe mit mehreren Standorten][4]
 
-Verteilte Verfügbarkeitsgruppen bieten ein flexibleres Bereitstellungsszenario für Verfügbarkeitsgruppen, die mehrere Rechenzentren umfassen. Sie können verteilte Verfügbarkeitsgruppen sogar statt in der Vergangenheit verwendeten Funktionen, zum Beispiel [log shipping (Protokollversand)]( https://docs.microsoft.com/en-us/sql/database-engine/log-shipping/about-log-shipping-sql-server), verwenden. Anders als bei herkömmlichen Verfügbarkeitsgruppen ist bei verteilten Verfügbarkeitsgruppen jedoch keine verzögerte Anwendung von Transaktionen möglich. Das bedeutet, dass weder Verfügbarkeitsgruppen noch verteilte Verfügbarkeitsgruppen Sie im Fall eines menschlichen Fehlers unterstützen können, wenn beispielsweise Daten falsch aktualisiert oder gelöscht werden.
+Verteilte Verfügbarkeitsgruppen bieten ein flexibleres Bereitstellungsszenario für Verfügbarkeitsgruppen, die mehrere Rechenzentren umfassen. Sie können verteilte Verfügbarkeitsgruppen sogar statt in der Vergangenheit verwendeten Funktionen, zum Beispiel [log shipping (Protokollversand)]( https://docs.microsoft.com/sql/database-engine/log-shipping/about-log-shipping-sql-server), verwenden. Anders als bei herkömmlichen Verfügbarkeitsgruppen ist bei verteilten Verfügbarkeitsgruppen jedoch keine verzögerte Anwendung von Transaktionen möglich. Das bedeutet, dass weder Verfügbarkeitsgruppen noch verteilte Verfügbarkeitsgruppen Sie im Fall eines menschlichen Fehlers unterstützen können, wenn beispielsweise Daten falsch aktualisiert oder gelöscht werden.
 
 Verteilte Verfügbarkeitsgruppen sind lose gekoppelt, was in diesem Fall bedeutet, dass sie keinen einzelnen WSFC-Cluster erfordern und von SQL Server verwaltet werden. Da die WSFC-Cluster einzeln verwaltet werden und die Synchronisation zwischen den beiden Verfügbarkeitsgruppen in erster Linie asynchron abläuft, ist die Konfiguration der Notfallwiederherstellung auf einer anderen Website einfacher. Die primären Replikate in jeder Verfügbarkeitsgruppe synchronisieren ihre eigenen sekundären Replikate.
 
@@ -149,7 +149,7 @@ Die folgende Abbildung zeigt AG 1 als das primäre Replikat von zwei unterschied
 
 In den beiden obigen Beispielen können insgesamt bis zu 27 Replikate in den drei Verfügbarkeitsgruppen vorhanden sein, von denen jedes für schreibgeschützte Abfragen verwendet werden kann. 
 
-Das [schreibgeschützte Routing]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) funktioniert nicht vollständig mit verteilten Verfügbarkeitsgruppen. Genauer gesagt
+Das [schreibgeschützte Routing]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) funktioniert nicht vollständig mit verteilten Verfügbarkeitsgruppen. Genauer gesagt
 
 1. kann das schreibgeschützte Routing konfiguriert werden, um für die primäre Verfügbarkeitsgruppe der verteilten Verfügbarkeitsgruppe zu funktionieren. 
 2. Das schreibgeschützte Routing kann konfiguriert werden, funktioniert jedoch nicht für die sekundäre Verfügbarkeitsgruppe der verteilten Verfügbarkeitsgruppe. Alle Abfragen, die den Listener verwenden, um eine Verbindung mit der sekundären Verfügbarkeitsgruppe herzustellen, werden an das primäre Replikat der sekundären Verfügbarkeitsgruppe weitergeleitet. Andernfalls müssen Sie jedes Replikat so konfigurieren, dass alle Verbindungen als sekundäres Replikat zugelassen werden und direkt auf diese zugegriffen wird. Das schreibgeschützte Routing funktioniert jedoch, wenn die sekundäre Verfügbarkeitsgruppe nach einem Failover zur primären Verfügbarkeitsgruppe wird. Dieses Verhalten wird mit einem Update zu SQL Server 2016 oder in einer zukünftigen Version von SQL Server möglicherweise geändert.
@@ -157,7 +157,7 @@ Das [schreibgeschützte Routing]( https://docs.microsoft.com/en-us/sql/database-
 
 ## <a name="initialize-secondary-availability-groups-in-a-distributed-availability-group"></a>Initialisieren von sekundären Verfügbarkeitsgruppen in eine verteilte Verfügbarkeitsgruppe
 
-Verteilte Verfügbarkeitsgruppen wurden mit [automatischem Seeding]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group) als Hauptmethode zum Initialisieren des primären Replikats auf die sekundäre Verfügbarkeitsgruppe entwickelt. Eine vollständige Wiederherstellung einer Datenbank auf dem primären Replikat der sekundären Verfügbarkeitsgruppe ist möglich, wenn Sie folgende Aktionen durchführen:
+Verteilte Verfügbarkeitsgruppen wurden mit [automatischem Seeding]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group) als Hauptmethode zum Initialisieren des primären Replikats auf die sekundäre Verfügbarkeitsgruppe entwickelt. Eine vollständige Wiederherstellung einer Datenbank auf dem primären Replikat der sekundären Verfügbarkeitsgruppe ist möglich, wenn Sie folgende Aktionen durchführen:
 
 1. Stellen Sie die Datenbanksicherung mit „WITH NORECOVERY“ wieder her.
 2. Falls nötig, stellen Sie die richtigen Sicherungen der Transaktionsprotokolle mit „WITH NORECOVERY“ wieder her.
@@ -168,7 +168,7 @@ Wenn Sie das primäre Replikat der sekundären Verfügbarkeitsgruppe zu der vert
 
 * Die Ausgabe in `sys.dm_hadr_automatic_seeding` auf dem primären Replikat der sekundären Verfügbarkeitsgruppe wird als `current_state` „FAILED“ mit dem Hinweis „Nachrichtentimeout bei der Seedingüberprüfung“ angezeigt.
 
-* Das aktuelle SQL Server-Protokoll auf dem primären Replikat der sekundären Verfügbarkeitsgruppe wird anzeigen, dass das Seeding erfolgreich war und dass die [LSNs]( https://docs.microsoft.com/en-us/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide) synchronisiert wurden.
+* Das aktuelle SQL Server-Protokoll auf dem primären Replikat der sekundären Verfügbarkeitsgruppe wird anzeigen, dass das Seeding erfolgreich war und dass die [LSNs]( https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide) synchronisiert wurden.
 
 * Die Ausgabe, die in `sys.dm_hadr_automatic_seeding` auf dem primären Replikat der primären Verfügbarkeitsgruppe angezeigt wird, zeigt „COMPLETED“ als „current_state“ an. 
 

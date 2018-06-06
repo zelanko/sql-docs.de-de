@@ -21,11 +21,12 @@ caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 82533018e021d38612b7cb73f5cfaa6788f23e60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f4a41d9238315719bc6e47fb3bc9c598222673a6
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550771"
 ---
 # <a name="secure-reports-and-resources"></a>Sichere Berichte und Ressourcen
   Die Sicherheit kann für einzelne Berichte und Ressourcen festgelegt werden, um die Zugriffsebene der Benutzer für diese Objekte zu steuern. In der Standardeinstellung können nur Benutzer, die Mitglieder der integrierten Gruppe **Administratoren** sind, Berichte ausführen, Ressourcen anzeigen, Eigenschaften ändern und die Elemente löschen. Für alle anderen Benutzer müssen Rollenzuweisungen erstellt werden, die den Zugriff auf einen Bericht oder eine Ressource zulassen.  
@@ -79,7 +80,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen und Verwalten von Rollenzuweisungen](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [Konfigurieren des Berichts-Generator-Zugriffs](../../reporting-services/report-server/configure-report-builder-access.md)   
  [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Sichern freigegebener Datenquellenelemente](../../reporting-services/security/secure-shared-data-source-items.md)   
  [Store Credentials in a Reporting Services Data Source (Speichern von Anmeldeinformationen in einer Reporting Services-Datenquelle)](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  

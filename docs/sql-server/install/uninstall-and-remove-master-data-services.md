@@ -3,24 +3,21 @@ title: Deinstallieren und Entfernen von Master Data Services | Microsoft-Dokumen
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: efc2431c-588b-42e7-b23b-c875145a33f6
-caps.latest.revision: 10
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0dd16cf3ac03192ae5c0e65f831ea237e07c45f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c210840b717f5cc13fac3fe0ca2e9c9e7f763952
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772556"
 ---
 # <a name="uninstall-and-remove-master-data-services"></a>Deinstallieren und Entfernen von Master Data Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +26,7 @@ ms.lasthandoff: 05/03/2018
   
  Um Datenverluste oder Auswirkungen auf andere Computer im System zu verhindern, werden bestimmte Elemente vom Deinstallationsvorgang nicht entfernt oder geändert. Überprüfen Sie anhand der folgenden Tabelle, welche Elemente beibehalten und welche Elemente entfernt werden sollten.  
   
-|Element|Description|  
+|Element|und Beschreibung|  
 |----------|-----------------|  
 |Ordner und Dateien|Beim Deinstallationsvorgang werden die meisten Ordner und Dateien aus dem Installationspfad entfernt.<br /><br /> Die Ordner Master Data Services und MDSTempDir werden durch den Deinstallationsvorgang jedoch nicht aus dem Installationspfad gelöscht. Nach Abschluss der Deinstallation können Sie diese Ordner manuell aus dem Dateisystem löschen. Weitere Informationen finden Sie unter [Ordner- und Dateiberechtigungen &#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md).|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Assemblys|Der Deinstallationsvorgang entfernt [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Assemblys aus dem Global Assembly Cache (GAC).|  

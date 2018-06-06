@@ -3,7 +3,6 @@ title: Verwenden des Assistenten für Failover-Verfügbarkeitsgruppen (SQL Serve
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -21,14 +20,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 caps.latest.revision: 26
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 60787866e1f26cb577c210c2c8b1a67e996ca871
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 756f260b8e2b3459f2ac2bf4368a3e4bdafa74e7
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771136"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Verwenden des Assistenten für Failover-Verfügbarkeitsgruppen (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ ms.lasthandoff: 05/03/2018
  **Quorum-Status**  
  Zeigt den Quorum-Status des Verfügbarkeitsreplikats für den WSFC-Clustertyp an, der einen der folgenden Werte haben kann:  
   
-   |value|Description|  
+   |value|und Beschreibung|  
    |-----------|-----------------|  
    |**Normales Quorum**|Der Cluster hat mit einem normalem Quorum begonnen.|  
    |**Erzwungenes Quorum**|Der Cluster hat mit einem erzwungenem Quorum begonnen.|  
@@ -131,7 +131,7 @@ ms.lasthandoff: 05/03/2018
  **Verfügbarkeitsmodus**  
  Zeigt den Verfügbarkeitsmodus der Serverinstanz an und kann einen der folgenden Werte haben:  
   
-|value|Description|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |**Synchroner Commit**|Im Modus für synchrone Commits wartet ein primäres Replikat mit synchronen Commits vor dem Commit für Transaktionen auf ein sekundäres Replikat mit synchronen Commits, um zu bestätigen, dass das Schreiben des Protokolls abgeschlossen wurde. Im Modus für synchrone Commits wird sichergestellt, dass Transaktionen, für die ein Commit ausgeführt wird, vollständig geschützt sind, sobald eine angegebene sekundäre Datenbank mit der primären Datenbank synchronisiert wird.|  
 |**Asynchroner Commit**|Im Modus für asynchrone Commits führt das primäre Replikat einen Commit für Transaktionen aus, ohne auf die Bestätigung zu warten, dass ein sekundäres Replikat mit asynchronem Commit das Protokoll geschrieben hat. Im Modus für asynchrone Commits wird die Transaktionswartezeit auf den sekundären Datenbanken minimiert. Dabei liegen sie jedoch möglicherweise hinter den primären Datenbanken zurück, was Datenverluste zur Folge haben kann.|  
@@ -141,7 +141,7 @@ ms.lasthandoff: 05/03/2018
  **Failovermodus**  
  Zeigt den Failovermodus der Serverinstanz an und kann einen der folgenden Werte haben:  
   
-|value|Description|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |**Automatic**|Ein sekundäres Replikat, das für ein automatisches Failover konfiguriert wurde, unterstützt auch ein geplantes manuelles Failover, wenn das sekundäre Replikat mit dem primären Replikat synchronisiert wird.|  
 |**Manuell**|Man unterscheidet zwei manuelle Failovertypen: geplantes Failover (ohne Datenverlust) und erzwungenes Failover (mit möglichem Datenverlust). Die Unterstützung für ein erzwungenes Failover hängt vom Verfügbarkeitsmodus und für den Modus mit synchronem Commit vom Synchronisierungsstatus des sekundären Replikats wie folgt ab: Welche Form von manuellem Failover gegenwärtig von einem angegebenen sekundären Replikat unterstützt wird, können Sie der Spalte **Failoverbereitschaft** dieses Rasters entnehmen.|  
@@ -151,7 +151,7 @@ ms.lasthandoff: 05/03/2018
  **Failoverbereitschaft**  
  Zeigt die Failoverbereitschaft des sekundären Replikats an und kann einen der folgenden Werte enthalten:  
   
-|value|Description|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |**Kein Datenverlust**|Dieses sekundäre Replikat unterstützt gegenwärtig geplante Failover. Dieser Wert tritt nur dann auf, wenn ein für den Verfügbarkeitsmodus mit synchronem Commit konfiguriertes sekundäres Replikat mit dem primären Replikat synchronisiert wird.|  
 |**Datenverlust, Warnungen (** *#* **)**|Dieses sekundäre Replikat unterstützt nur erzwungene manuelle Failover (mit möglichem Datenverlust). Dieser Wert tritt immer dann auf, wenn das sekundäre Replikat nicht mit dem primären Replikat synchronisiert ist. Klicken Sie den Link für Datenverlust-Warnungen, um Informationen zum möglichen Datenverlust zu erhalten.|  

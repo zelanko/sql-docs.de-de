@@ -3,7 +3,6 @@ title: Verwenden von Always On-Richtlinien zum Anzeigen des Zustands einer Verf�
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -13,14 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 caps.latest.revision: 17
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a7c91fe30fe34bcc60d7a70bcf4dab046713d1d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2d6b7d17286077ca860021984f1d5e806782d332
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34770506"
 ---
 # <a name="use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server"></a>Verwenden von AlwaysOn-Richtlinien zum Anzeigen des Zustands einer Verf체gbarkeitsgruppe (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ ms.lasthandoff: 05/03/2018
   
      Diese Cmdlets akzeptieren die folgenden Optionen:  
   
-    |Option|Description|  
+    |Option|und Beschreibung|  
     |------------|-----------------|  
     |**AllowUserPolicies**|F체hrt in den AlwaysOn-Richtlinienkategorien gefundene Benutzerrichtlinien aus.|  
     |**InputObject**|Eine Auflistung von Objekten, die abh채ngig vom verwendeten Cmdlet den Status von Verf체gbarkeitsgruppen, Verf체gbarkeitsreplikaten oder Verf체gbarkeitsdatenbanken darstellen. Das Cmdlet berechnet die Integrit채t der angegebenen Objekte.|  

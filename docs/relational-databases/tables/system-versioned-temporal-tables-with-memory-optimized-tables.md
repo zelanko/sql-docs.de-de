@@ -15,11 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4454cfd34cf23c1fb22417acf275d7172c16063b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b8f6870e0e7881f9ce31a7b9d120b4fb4906a926
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563718"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Temporale Tabellen mit Systemversionsverwaltung und speicheroptimierten Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
 -   Die Verlaufstabelle für speicheroptimierte Tabellen mit Systemversionsverwaltung muss datenträgerbasiert sein, unabhängig davon, ob sie vom Endbenutzer oder vom System erstellt wurde.  
   
--   Abfragen, die nur die aktuelle (speicherinterne) Tabelle betreffen, können in [nativ kompilierten T-SQL-Modulen](https://msdnstage.redmond.corp.microsoft.com/en-us/library/dn133184.aspx)verwendet werden. Temporale Abfragen mit der Klausel FOR SYSTEM TIME werden in nativ kompilierten Modulen nicht unterstützt. In Ad-hoc-Abfragen und nicht nativen Modulen wird die Verwendung der Klausel FOR SYSTEM TIME mit speicheroptimierten Tabellen unterstützt.  
+-   Abfragen, die nur die aktuelle (speicherinterne) Tabelle betreffen, können in [nativ kompilierten T-SQL-Modulen](https://msdn.microsoft.com/en-us/library/dn133184.aspx)verwendet werden. Temporale Abfragen mit der Klausel FOR SYSTEM TIME werden in nativ kompilierten Modulen nicht unterstützt. In Ad-hoc-Abfragen und nicht nativen Modulen wird die Verwendung der Klausel FOR SYSTEM TIME mit speicheroptimierten Tabellen unterstützt.  
   
 -   Wenn **SYSTEM_VERSIONING = ON**, wird automatisch eine interne speicheroptimierte Stagingtabelle erstellt, um die neuesten mit der Systemversionsverwaltung erfassten Änderungen, zu übernehmen, die das Ergebnis von Aktualisierungs- und Löschvorgängen in der aktuellen speicheroptimierten Tabelle sind.  
   

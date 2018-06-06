@@ -24,11 +24,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8e07f44a6d09e0c5416f43c4a9113b633e2aa689
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3ebdcbdde0a274df0240b6e7d182ce600bd62ed7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708098"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -80,7 +81,7 @@ ms.lasthandoff: 05/03/2018
 |||  
 |-|-|  
 |**Automatisierte Überwachung**<br /><br /> ![sicherheitscenter-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Überwachung (Server- und Datenbankebene)<br /><br /> ![sicherheitscenter-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Überwachung (Datenbankebene)<br /><br /> ![sicherheitscenter-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Bedrohungserkennung| <br /><br /> 
-  [SQL Server Audit &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)<br /><br /> [SQL-Datenbanküberwachung](http://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)<br /><br /> [Erste Schritte mit der SQL-Datenbanküberwachung](https://azure.microsoft.com/documentation/articles/sql-database-threat-detection-get-started/) <br /><br /> [Sicherheitsrisikobewertung mit der SQL-Datenbank](https://docs.microsoft.com/en-us/azure/sql-database/sql-vulnerability-assessment) |  
+  [SQL Server Audit &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)<br /><br /> [SQL-Datenbanküberwachung](http://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)<br /><br /> [Erste Schritte mit der SQL-Datenbanküberwachung](https://azure.microsoft.com/documentation/articles/sql-database-threat-detection-get-started/) <br /><br /> [Sicherheitsrisikobewertung mit der SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-vulnerability-assessment) |  
 |**Benutzerdefinierte Überwachung**<br /><br /> ![sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "security-center-both") Trigger|Benutzerdefinierte Überwachungsimplementierung: Erstellen von [DDL-Triggern](../../relational-databases/triggers/ddl-triggers.md) und [DML-Triggern](../../relational-databases/triggers/dml-triggers.md)|  
 |**Kompatibilität**<br /><br /> ![sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "security-center-both") Kompatibilität|SQL Server:<br />                        [Common Criteria](http://go.microsoft.com/fwlink/?LinkId=616319)<br /><br /> SQL-Datenbank:<br />                        [Microsoft Azure Trust Center: Compliance nach Features](http://azure.microsoft.com/support/trust-center/services/)|  
   

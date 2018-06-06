@@ -3,7 +3,6 @@ title: Installieren von SQL Server 2016 unter Server Core | Microsoft-Dokumentat
 ms.custom: ''
 ms.date: 09/05/2017
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: install
@@ -11,14 +10,15 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 caps.latest.revision: 43
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: af0c145508b13907716bd95d9b54a1063f325e9e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 979cb0b59ba0528ef7450de0fc4a7b96dd9d4338
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34770916"
 ---
 # <a name="install-sql-server-on-server-core"></a>Installieren von SQL Server unter Server Core
 
@@ -92,7 +92,7 @@ Die Server Core-Installationsoption stellt eine minimale Umgebung zum Ausführen
   
 ### <a name="feature-parameters"></a>Funktionsparameter  
   
-|Funktionsparameter|Description|  
+|Funktionsparameter|und Beschreibung|  
 |-----------------------|-----------------|  
 |SQLENGINE|Installiert nur [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |-Replikation|Installiert die Replikationskomponente und das [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
@@ -105,7 +105,7 @@ Die Server Core-Installationsoption stellt eine minimale Umgebung zum Ausführen
 
  Vergleichen Sie die folgenden Beispiele für die Verwendung von Funktionsparametern:  
   
-|Parameter und Werte|Description|  
+|Parameter und Werte|und Beschreibung|  
 |--------------------------|-----------------|  
 |/FEATURES=SQLEngine|Installiert nur [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |/FEATURES=SQLEngine,FullText|Installiert das [!INCLUDE[ssDE](../../includes/ssde-md.md)] und Volltext.|  

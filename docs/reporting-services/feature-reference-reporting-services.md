@@ -1,7 +1,7 @@
 ---
 title: Funktionsreferenz (Reporting Services) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: reporting-services
@@ -20,11 +20,12 @@ caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 7feb24933727c6d107404888f5c3fa5ca58a6a74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e6eace09048fd6ba2399e5314d6868efd9e7baf7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550081"
 ---
 # <a name="feature-reference-reporting-services"></a>Funktionsreferenz (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] enthält zahlreiche Tools und Anwendungen, die Sie zum Erstellen, Verwalten und Anzeigen von Berichten verwenden können. Dieser Abschnitt enthält Themen zu den einzelnen Dialogfeldern, Webseiten und Assistenten dieser Tools und Anwendungen.  
@@ -34,9 +35,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Berichts-Designer (F1-Hilfe)](../reporting-services/tools/report-designer-f1-help.md)  
  Stellt die Hilfe für den Berichts-Designer und die dazugehörigen Dialogfelder, den Berichts-Assistenten und den Bild-Assistenten bereit.  
-  
- [Berichts-Manager (F1-Hilfe)](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
- Stellt die Hilfe für den Berichts-Manager bereit, eine Webanwendung, mit der eine einzelne Berichtsserverinstanz verwaltet werden kann.  
   
  [Reporting Services-Konfigurationsmanager-Hilfethemen](http://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
  Stellt die Hilfe für das [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Konfigurationstool bereit, das für die Bereitstellung und die Verwaltung von Berichtsserverinstanzen verwendet wird.  

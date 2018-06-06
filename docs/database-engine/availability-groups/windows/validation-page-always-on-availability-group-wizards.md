@@ -3,7 +3,6 @@ title: Seite „Überprüfung“ (Always On-Verfügbarkeitsgruppen-Assistenten) 
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -17,14 +16,15 @@ helpviewer_keywords:
 - ', listeners'
 ms.assetid: c8971556-240c-491a-bc86-9cc72f71a3dd
 caps.latest.revision: 16
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bfce0aacbd7349263ca699ea532998546df92fe3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3fa76ae69b35257d1419a6ce664677287e333180
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771278"
 ---
 # <a name="validation-page-always-on-availability-group-wizards"></a>Seite „Überprüfung“ (Always On-Verfügbarkeitsgruppen-Assistenten)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 05/03/2018
  **Ergebnis**  
  Zeigt einen der folgenden Linktexte an. Klicken Sie auf den Link, um weitere Informationen zum Ergebnis eines bestimmten Überprüfungsschritts anzuzeigen.  
   
-|Ergebnis|Description|  
+|Ergebnis|und Beschreibung|  
 |------------|-----------------|  
 |**Fehler**|Gibt an, dass der Überprüfungsschritt fehlgeschlagen ist. Klicken Sie auf den Link, um die Fehlermeldung anzuzeigen.|  
 |**Ausgelassen**|Gibt an, dass der Überprüfungsschritt ausgelassen wurde, da er für die Optionen nicht erforderlich ist. Klicken Sie auf den Link, um die Ursache für das Auslassen eines Schritts anzuzeigen.|  

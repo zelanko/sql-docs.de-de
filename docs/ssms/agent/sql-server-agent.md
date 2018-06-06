@@ -19,11 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6eacddc4432560bcde519602dd26c2b472b37041
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 80b6776f555fd5bdaa8ed4c4977dc5193a27eba2
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708938"
 ---
 # <a name="sql-server-agent"></a>SQL Server-Agent
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -119,7 +120,7 @@ Ein *Operator* definiert die Kontaktinformationen einer Person, die für die Ver
 > [!IMPORTANT]  
 > Die Pager- und **net send**-Optionen werden in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] nicht mehr im [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agent vorhanden sein. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktionen zurzeit verwenden.  
   
-Um Operatoren Benachrichtigungen per E-Mail oder Pager zu senden, müssen Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agent so konfigurieren, dass Datenbank-E-Mail verwendet wird. Weitere Informationen finden Sie unter [Datenbank-E-Mail](http://msdn.microsoft.com/en-us/9e4563dd-4799-4b32-a78a-048ea44a44c1).  
+Um Operatoren Benachrichtigungen per E-Mail oder Pager zu senden, müssen Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agent so konfigurieren, dass Datenbank-E-Mail verwendet wird. Weitere Informationen finden Sie unter [Datenbank-E-Mail](http://msdn.microsoft.com/9e4563dd-4799-4b32-a78a-048ea44a44c1).  
   
 Ein Operator kann auch als Alias für eine Gruppe von Personen definiert werden. In diesem Fall werden alle Mitglieder dieses Alias zur selben Zeit benachrichtigt. Weitere Informationen finden Sie unter [Operatoren](../../ssms/agent/operators.md).  
   
@@ -134,7 +135,7 @@ Ein Subsystem ist ein vordefiniertes Objekt, das die für einen Auftragsschritt 
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] definiert die in der folgenden Tabelle aufgeführten Subsysteme:  
   
-|Name des Subsystems|Description|  
+|Name des Subsystems|und Beschreibung|  
 |--------------|-----------|  
 |Microsoft ActiveX-Skript|Ausführen eines ActiveX-Skriptauftragsschritts.<br /><br />**Warnung:** Das ActiveX-Skriptsubsystem wird in einer zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] aus dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agent entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
 |Betriebssystem (**CmdExec**)|Ausführen eines ausführbaren Programms.|  
@@ -174,16 +175,16 @@ Falls Sie mehrere Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversio
   
 Verwenden Sie für die ersten Schritte mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agent die folgenden Aufgaben:  
   
-|Description|Thema|  
+|und Beschreibung|Thema|  
 |-----------|-----|  
 |Beschreibt, wie der SQL Server-Agent konfiguriert wird.|[Konfigurieren des SQL Server-Agents](../../ssms/agent/configure-sql-server-agent.md)|  
 |Beschreibt, wie der SQL Server-Agent-Dienst gestartet, beendet und angehalten wird.|[Starten, Beenden oder Anhalten des SQL Server-Agent-Diensts](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)|  
 |Beschreibt Überlegungen zum Angeben eines Kontos für den SQL Server-Agent-Dienst.|[Auswählen eines Kontos für den SQL Server-Agent-Dienst](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)|  
 |Beschreibt, wie das SQL Server-Agent-Fehlerprotokoll verwendet wird.|[SQL Server-Agent-Fehlerprotokoll](../../ssms/agent/sql-server-agent-error-log.md)|  
 |Beschreibt, wie Leistungsobjekte verwendet werden.|[Verwenden von Leistungsobjekten](../../ssms/agent/use-performance-objects.md)|  
-|Beschreibt den Wartungsplanungs-Assistenten. Hierbei handelt es sich um ein Hilfsprogramm, mit dem Sie Aufträge, Warnungen und Operatoren erstellen können, um die Verwaltung einer SQL Server-Instanz zu automatisieren.|[Verwenden des Wartungsplanungs-Assistenten](http://msdn.microsoft.com/en-us/db65c726-9892-480c-873b-3af29afcee44)|  
+|Beschreibt den Wartungsplanungs-Assistenten. Hierbei handelt es sich um ein Hilfsprogramm, mit dem Sie Aufträge, Warnungen und Operatoren erstellen können, um die Verwaltung einer SQL Server-Instanz zu automatisieren.|[Verwenden des Wartungsplanungs-Assistenten](http://msdn.microsoft.com/db65c726-9892-480c-873b-3af29afcee44)|  
 |Beschreibt, wie administrative Aufgaben mit dem SQL Server-Agent automatisiert werden.|[Automatisierte Administrationstasks &#40;SQL Server-Agent&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
-[Oberflächenkonfiguration](http://msdn.microsoft.com/en-us/f741169c-1453-4ad2-830b-bf2be27d712f)  
+[Oberflächenkonfiguration](http://msdn.microsoft.com/f741169c-1453-4ad2-830b-bf2be27d712f)  
   

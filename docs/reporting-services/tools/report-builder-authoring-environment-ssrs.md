@@ -15,11 +15,12 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9a8daf190f0fbd77bc36e2be7d079a2c7176db6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 343372d210fa960ca85ca672e96b0e1aaedf6277
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550071"
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>Berichterstellungsumgebung des Berichts-Generators (SSRS)
   Der [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] Berichts-Generator ist eine eigenständige Berichterstellungsumgebung zum Erstellen von paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichten außerhalb von Visual Studio. Beim Entwurf eines Berichts geben Sie an, wo die Daten abgerufen werden sollen, welche Daten abgerufen werden sollen und wie die Daten angezeigt werden sollen. Bei der Ausführung des Berichts übernimmt der Berichtsprozessor alle angegebenen Informationen, ruft die Daten ab und kombiniert sie mit dem Berichtslayout, um den Bericht zu generieren. Die Installation kann über das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webportal oder über das Microsoft Download Center erfolgen.  
@@ -51,7 +52,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Installieren Sie den Berichts-Generator](../../reporting-services/install-windows/install-report-builder.md)   
- [Konfigurieren des Berichts-Generator-Zugriffs](../../reporting-services/report-server/configure-report-builder-access.md)   
  [Reporting Services-Tools](../../reporting-services/tools/reporting-services-tools.md)   
  [Entwerfen von Berichten mithilfe des Berichts-Designers (SSRS)](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   
