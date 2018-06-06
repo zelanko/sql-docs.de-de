@@ -36,7 +36,7 @@ Diese Funktion gibt eine Zeichenfolge zurück, die das Ergebnis einer End-to-End
 
 ##  <a name="syntax"></a>Syntax   
 ```sql
-CONCAT_WS ( separator, argument1, argument1 [, argumentN]… ) 
+CONCAT_WS ( separator, argument1, argument2 [, argumentN]… ) 
 ```
 
 ## <a name="arguments"></a>Argumente   
