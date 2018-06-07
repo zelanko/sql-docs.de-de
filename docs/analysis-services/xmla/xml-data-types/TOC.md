@@ -1,4 +1,4 @@
-# [XML-Datentypen (XMLA)](xml-data-types-xmla.md)
+# [XMLA-Datentypen](xml-data-types-xmla.md)
 
 # [EmptyResult-Datentyp (XMLA)](emptyresult-data-type-xmla.md)
 # [EnumString-Datentyp (XMLA)](enumstring-data-type-xmla.md)

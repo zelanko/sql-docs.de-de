@@ -3,8 +3,7 @@
 # [Konvertierung](data-type-conversion-database-engine.md)  
 # [Rangfolge](data-type-precedence-transact-sql.md)  
 # [Synonyme](data-type-synonyms-transact-sql.md)  
-# [Genauigkeit, Dezimalstellen und Länge](precision-scale-and-length-transact-sql.md)  
-# [bit](bit-transact-sql.md)  
+# [Genauigkeit, Dezimalstellen und Länge](precision-scale-and-length-transact-sql.md)    
 # [Cursor](cursor-transact-sql.md)  
 # [Datum und Uhrzeit](date-and-time-types.md)  
 ## [Datum](date-transact-sql.md)  
@@ -15,18 +14,29 @@
 ## [Uhrzeit](time-transact-sql.md)  
 
 # [Hierarchyid-Methoden](hierarchyid-data-type-method-reference.md)  
-## [GetAncestor (Datenbankmodul)](getancestor-database-engine.md)  
-## [GetDescendant (Datenbankmodul)](getdescendant-database-engine.md)  
-## [GetLevel (Datenbankmodul)](getlevel-database-engine.md)  
-## [GetRoot (Datenbankmodul)](getroot-database-engine.md)  
-## [IsDescendantOf (Datenbankmodul)](isdescendantof-database-engine.md)  
-## [Parse (Datenbankmodul)](parse-database-engine.md)  
-## [Read (Datenbankmodul)](read-database-engine.md)  
-## [GetReparentedValue (Datenbankmodul)](getreparentedvalue-database-engine.md)  
-## [ToString (Datenbankmodul)](tostring-database-engine.md)  
-## [Write (Datenbankmodul)](write-database-engine.md)  
+## 
+  [GetAncestor (Datenbank-Engine)](getancestor-database-engine.md)  
+## 
+  [GetDescendant (Datenbank-Engine)](getdescendant-database-engine.md)  
+## 
+  [GetLevel (Datenbank-Engine)](getlevel-database-engine.md)  
+## 
+  [GetRoot (Datenbank-Engine)](getroot-database-engine.md)  
+## 
+  [IsDescendantOf (Datenbank-Engine)](isdescendantof-database-engine.md)  
+## 
+  [Parse (Datenbank-Engine)](parse-database-engine.md)  
+## 
+  [Read (Datenbank-Engine)](read-database-engine.md)  
+## 
+  [GetReparentedValue (Datenbank-Engine)](getreparentedvalue-database-engine.md)  
+## 
+  [ToString (Datenbank-Engine)](tostring-database-engine.md)  
+## 
+  [Write (Datenbank-Engine)](write-database-engine.md)  
 
 # [Numerisch](numeric-types.md)  
+## [bit](bit-transact-sql.md)
 ## [decimal und numeric](decimal-and-numeric-transact-sql.md)  
 ## [float und real](float-and-real-transact-sql.md)  
 ## [int, bigint, smallint und tinyint](int-bigint-smallint-and-tinyint-transact-sql.md)  
