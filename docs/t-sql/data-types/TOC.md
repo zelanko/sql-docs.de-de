@@ -14,26 +14,16 @@
 ## [Uhrzeit](time-transact-sql.md)  
 
 # [Hierarchyid-Methoden](hierarchyid-data-type-method-reference.md)  
-## 
-  [GetAncestor (Datenbank-Engine)](getancestor-database-engine.md)  
-## 
-  [GetDescendant (Datenbank-Engine)](getdescendant-database-engine.md)  
-## 
-  [GetLevel (Datenbank-Engine)](getlevel-database-engine.md)  
-## 
-  [GetRoot (Datenbank-Engine)](getroot-database-engine.md)  
-## 
-  [IsDescendantOf (Datenbank-Engine)](isdescendantof-database-engine.md)  
-## 
-  [Parse (Datenbank-Engine)](parse-database-engine.md)  
-## 
-  [Read (Datenbank-Engine)](read-database-engine.md)  
-## 
-  [GetReparentedValue (Datenbank-Engine)](getreparentedvalue-database-engine.md)  
-## 
-  [ToString (Datenbank-Engine)](tostring-database-engine.md)  
-## 
-  [Write (Datenbank-Engine)](write-database-engine.md)  
+## [GetAncestor (Datenbank-Engine)](getancestor-database-engine.md)  
+## [GetDescendant (Datenbank-Engine)](getdescendant-database-engine.md)  
+## [GetLevel (Datenbank-Engine)](getlevel-database-engine.md)  
+## [GetRoot (Datenbank-Engine)](getroot-database-engine.md)  
+## [IsDescendantOf (Datenbank-Engine)](isdescendantof-database-engine.md)  
+## [Parse (Datenbank-Engine)](parse-database-engine.md)  
+## [Read (Datenbank-Engine)](read-database-engine.md)  
+## [GetReparentedValue (Datenbank-Engine)](getreparentedvalue-database-engine.md)  
+## [ToString (Datenbank-Engine)](tostring-database-engine.md)  
+## [Write (Datenbank-Engine)](write-database-engine.md)  
 
 # [Numerisch](numeric-types.md)  
 ## [bit](bit-transact-sql.md)
