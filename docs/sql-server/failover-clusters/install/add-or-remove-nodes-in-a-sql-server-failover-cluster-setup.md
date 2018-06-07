@@ -2,12 +2,10 @@
 title: Hinzufügen oder Entfernen von Knoten in einem SQL Server-Failovercluster (Setup) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.prod: sql
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,14 +18,15 @@ helpviewer_keywords:
 - removing nodes
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 caps.latest.revision: 49
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12cbc36ae9c085dce8aedc4b0c2fe00b43ae6c5c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 19371730407754e0e78bae502f036033a10f82f8
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771867"
 ---
 # <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>Hinzufügen oder Entfernen von Knoten in einem SQL Server-Failovercluster (Setup)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +83,7 @@ ms.lasthandoff: 05/03/2018
   
 13. Auf der Seite Status des Vorgangs des Hinzufügens eines Knotens wird der Status angegeben, sodass Sie während des Setupvorgangs den Fortschritt der Installation überwachen können.  
   
-14. Nach der Installation bietet die Seite Abgeschlossen einen Link zur zusammenfassenden Protokolldatei für die Installation und andere wichtige Hinweise. Klicken Sie auf Schließen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], um die Installation von **abzuschließen**.  
+14. Nach der Installation bietet die Seite Abgeschlossen einen Link zur zusammenfassenden Protokolldatei für die Installation und andere wichtige Hinweise. Klicken Sie auf **Schließen** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , um die Installation von abzuschließen.  
   
 15. Starten Sie den Computer neu, falls Sie dazu aufgefordert werden. Nachdem das Setup abgeschlossen ist, sollten Sie unbedingt die vom Installations-Assistenten ausgegebene Meldung lesen. Weitere Informationen zu Setupprotokolldateien finden Sie unter [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
