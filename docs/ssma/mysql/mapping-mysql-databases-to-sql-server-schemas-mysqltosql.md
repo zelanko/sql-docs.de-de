@@ -1,8 +1,6 @@
 ---
 title: Zuordnen von MySQL-Datenbanken zu SQL Server-Schemas (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6fc24887570cd1cf4422705282514530308706d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9ad7ad2647e0f1c9c6145d3277c1bee911fdcde9
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776716"
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>Zuordnen von MySQL-Datenbanken zu SQL Server-Schemas (MySQLToSQL)
 Standardmäßig SSMA für die MySQL migriert alle Objekte in einer MySQL-Schema in einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Datenbank mit dem Namen für das Schema. Sie können jedoch die Zuordnung zwischen Schemas MySQL anpassen und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Datenbanken.  

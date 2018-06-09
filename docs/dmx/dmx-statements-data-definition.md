@@ -1,31 +1,20 @@
 ---
 title: Data Mining-Erweiterungen (DMX)-Datendefinitionsanweisungen | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- statements [DMX], data definition statements
-- data definition statements [DMX]
-- DDL
-ms.assetid: a215bbe9-0fc6-4256-b5a1-7ef03493bb3f
-caps.latest.revision: 31
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 0e738a6e6a62f0bccf68b61cae807f12b6f0fc70
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 6cc294a4def8d7913ba202895aca34ccdbfdba3a
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34841583"
 ---
 # <a name="dmx-statements---data-definition"></a>DMX-Anweisungen - Datendefinition 
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,17 +23,17 @@ ms.lasthandoff: 05/03/2018
   
 |-Anweisung.|Description|  
 |---------------|-----------------|  
-|[ERSTELLEN SIE DIE MININGSTRUKTUR & #40; DMX & #41;](../dmx/create-mining-structure-dmx.md)|Erstellt eine neue Miningstruktur in der Datenbank.|  
+|[ERSTELLEN DER MININGSTRUKTUR &AMP;#40;DMX&AMP;#41;](../dmx/create-mining-structure-dmx.md)|Erstellt eine neue Miningstruktur in der Datenbank.|  
 |[ALTER MINING STRUCTURE &AMP;#40;DMX&AMP;#41;](../dmx/alter-mining-structure-dmx.md)|Fügt einer vorhandenen Miningstruktur ein Miningmodell hinzu.|  
 |[ERSTELLEN DES MININGMODELLS &AMP;#40;DMX&AMP;#41;](../dmx/create-mining-model-dmx.md)|Erstellt eine neue Miningstruktur und ein neues Miningmodell in der Datenbank.|  
-|[DROP MINING MODEL & #40; DMX & #41;](../dmx/drop-mining-model-dmx.md)|Löscht ein Miningmodell aus der Datenbank.|  
+|[DROP MINING MODEL &AMP;#40;DMX&AMP;#41;](../dmx/drop-mining-model-dmx.md)|Löscht ein Miningmodell aus der Datenbank.|  
 |[DROP MINING STRUCTURE &AMP;#40;DMX&AMP;#41;](../dmx/drop-mining-structure-dmx.md)|Löscht eine Miningstruktur aus der Datenbank.|  
-|[EXPORT & #40; DMX & #41;](../dmx/export-dmx.md)|Exportiert ein Miningmodell oder eine Miningstruktur und zugeordnete Objekte in eine ABF-Datei.|  
-|[-IMPORT & #40; DMX & #41;](../dmx/import-dmx.md)|Importiert ein Miningmodell oder eine Miningstruktur und zugeordnete Objekte aus einer ABF-Datei.|  
+|[EXPORTIEREN SIE &AMP;#40;DMX&AMP;#41;](../dmx/export-dmx.md)|Exportiert ein Miningmodell oder eine Miningstruktur und zugeordnete Objekte in eine ABF-Datei.|  
+|[IMPORT &AMP;#40;DMX&AMP;#41;](../dmx/import-dmx.md)|Importiert ein Miningmodell oder eine Miningstruktur und zugeordnete Objekte aus einer ABF-Datei.|  
 |[SELECT INTO &AMP;#40;DMX&AMP;#41;](../dmx/select-into-dmx.md)|Erstellt eine Kopie eines vorhandenen Miningmodells.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datamining-Erweiterungen &#40;DMX&#41; -Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [Datamining-Erweiterungen & #40; DMX & #41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

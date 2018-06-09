@@ -1,8 +1,6 @@
 ---
 title: Herstellen einer Verbindung mit Oracle (OracleToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,19 +13,20 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: f682fd589ed585c84c7cb3a4f9efed5f2d185999
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3d002682b0671bedbe15a3c790429b9a80452a35
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776996"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Herstellen einer Verbindung mit Oracle (OracleToSQL)
 Verwenden der **Connect to Oracle** Dialogfeld Verbindung mit der Oracle-Datenbank, die Sie migrieren möchten.  
   
 Zum Zugriff auf dieses Dialogfeld, in dem **Datei** klicken Sie im Menü **Connect to Oracle**. Wenn Sie zuvor eine Verbindung hergestellt haben, wird der Befehl ist **eine erneute Verbindung mit Oracle**.  
   
-## <a name="options"></a>enthalten  
-**Provider**  
+## <a name="options"></a>Tastatur  
+**Anbieter**  
 Auswählen der Datenzugriffsanbieter für die Verbindung mit der Oracle-Datenbank. Verfügbare Anbieter sind die Oracle-Client-Anbieter und der OLE DB-Anbieter. Der Standardwert ist die Oracle-Client-Anbieter.  
   
 **Mode**  

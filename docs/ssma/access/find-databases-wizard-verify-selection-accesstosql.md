@@ -1,8 +1,6 @@
 ---
 title: Suchen von Datenbanken (Auswahl überprüfen) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,18 +18,19 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 05baf274638892040fe8ddf5d81d4c153c61ed0c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b68d96abdb7ed64cfa12fc51b70386729212cb6a
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774186"
 ---
 # <a name="find-databases-wizard-verify-selection-accesstosql"></a>Suchen von Datenbanken (Auswahl überprüfen) (AccessToSQL)
 Die Seite zur Auswahl Überprüfen des Assistenten Datenbanken Suchen listet die Dateien SSMA hinzugefügt werden. Wenn die Liste der Dateien auf falsch festgelegt ist, klicken Sie auf **wieder** so ändern Sie die Liste. Klicken Sie andernfalls auf **Fertig stellen** Dateien hinzufügen.  
   
 Zum Öffnen des Assistenten Datenbanken suchen auf der **Datei** im Menü klicken Sie auf **Datenbanken suchen**.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Dateiname**  
 Zeigt den Namen des Access-Datenbankdatei SSMA hinzu.  
   

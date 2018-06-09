@@ -1,8 +1,6 @@
 ---
 title: Projekteinstellungen (Azure SQL-Datenbank) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a01c8f7f7c8d58747d0d818140bed7593c82192a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9aafaa73bcbbede50fc2aa274b0fca6b655b61dd
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776546"
 ---
 # <a name="project-settings-azure-sql-db-mysqltosql"></a>Projekteinstellungen (Azure SQL-Datenbank) (MySQLToSQL)
 Die Einstellungen der SQL Azure-Projekt können Sie konfigurieren das Suffix des SQL Azure-Datenbank auch können taktmechanismus in Verbindung mit SQL Azure implementieren und klicken Sie im Dialogfeld "Verbindung" hinzugefügt werden.  
@@ -33,9 +32,9 @@ Im Bereich SQL Azure finden Sie in der **Projekteinstellungen** und **Projekt St
   
 -   Verwenden Sie das Dialogfeld Projekt Standardeinstellungen, um Konfigurationsoptionen für alle Projekte festzulegen. Zum Zugriff auf die SQL Azure-Einstellungen in der **Tools** klicken Sie im Menü **DefaultProject Einstellungen**, wählen Sie die Migration Projekttyp als SQL Azure aus **Migration Zielversion** Dropdown-Liste die Einstellungen in SQL Azure-Bereich zuzugreifen, klicken Sie auf **allgemeine** am unteren Rand des linken Bereich, und klicken Sie dann wählen **SQL Azure**.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
   
-## <a name="connectivity"></a>Konnektivität  
+## <a name="connectivity"></a>Connectivity  
 **Taktintervall**  
   
 Gibt ein Zeitintervall, das für taktmechanismus verwendet werden, um die Azure SQL-Verbindung in aufrechtzuerhalten "Minuten: Sekunden-Format.  

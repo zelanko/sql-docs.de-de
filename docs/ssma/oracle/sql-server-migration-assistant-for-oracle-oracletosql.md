@@ -1,8 +1,6 @@
 ---
 title: SQL Server Migration Assistant für Oracle (OracleToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 08/09/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 3987db5b69d17e4e545702b347bd156fe945c457
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c8a23651676ddacba59e66cd04c0e348a7d061ce
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777996"
 ---
 # <a name="sql-server-migration-assistant-for-oracle-oracletosql"></a>SQL Server Migration Assistant für Oracle (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Oracle ist ein Tool zum Migrieren von Oracle-Datenbanken zu [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2017 auf Windows- und Linux (Preview) und Azure SQL-Datenbank. SSMA für die Oracle konvertiert Oracle-Datenbankobjekte [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Datenbankobjekte auf, erstellt die Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], und klicken Sie dann Migrieren von Daten aus Oracle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  

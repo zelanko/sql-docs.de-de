@@ -1,8 +1,6 @@
 ---
 title: Ausführen von Testfällen (OracleToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: a0affe85a5c823fdeecf530cd2c661011076c18f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 283dac366a8cfdf7e6fba39037a7c728945e0f67
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777906"
 ---
 # <a name="running-test-cases-oracletosql"></a>Ausführen von Testfällen (OracleToSQL)
 Wenn SSMA Tester einen Testfall ausgeführt wird, führt die Objekte, die zu Testzwecken ausgewählt und erstellt einen Bericht über die Ergebnisse der Überprüfung. Wenn die Ergebnisse auf beiden Plattformen identisch sind, war der Test erfolgreich. Die Entsprechung von Objekten zwischen Oracle und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] richtet sich danach die schemazuordnung Einstellungen für das aktuelle SSMA-Projekt.  
@@ -49,8 +48,8 @@ Wird davon ausgegangen Sie, dass die überprüfte Tabelle USER_TABLE heißt. Bei
 |-|-|-|  
 |Name|Typ|Description|  
 |USER_TABLE$ "TRG"|Trigger (trigger)|Trigger, der die Änderungen in der überprüften Tabelle überwachen.|  
-|USER_TABLE$ AUD|table|Die Tabelle, in dem überschriebene, und gelöschte Zeilen gespeichert werden.|  
-|USER_TABLE$ AUDID|table|Die Tabelle, in dem neue und geänderte Zeilen gespeichert werden.|  
+|USER_TABLE$ AUD|-Tabelle|Die Tabelle, in dem überschriebene, und gelöschte Zeilen gespeichert werden.|  
+|USER_TABLE$ AUDID|-Tabelle|Die Tabelle, in dem neue und geänderte Zeilen gespeichert werden.|  
 |USER_TABLE|Ansicht|Vereinfachte Darstellung der tabellenänderungen.|  
 |NEUE USER_TABLE$|Ansicht|Vereinfachte Darstellung der eingefügten Zeilen überschrieben.|  
 |USER_TABLE$ NEW_ID|Ansicht|Kennung des eingefügten und geänderten Zeilen.|  
@@ -68,8 +67,8 @@ Und die folgenden Objekte werden erstellt am [!INCLUDE[ssNoVersion](../../includ
 ||||  
 |-|-|-|  
 |Name|Typ|Description|  
-|USER_TABLE$ Aud|table|Die Tabelle, in dem überschriebene, und gelöschte Zeilen gespeichert werden.|  
-|USER_TABLE$ AudID|table|Die Tabelle, in dem neue und geänderte Zeilen gespeichert werden.|  
+|USER_TABLE$ Aud|-Tabelle|Die Tabelle, in dem überschriebene, und gelöschte Zeilen gespeichert werden.|  
+|USER_TABLE$ AudID|-Tabelle|Die Tabelle, in dem neue und geänderte Zeilen gespeichert werden.|  
 |USER_TABLE|Ansicht|Vereinfachte Darstellung der tabellenänderungen.|  
 |USER_TABLE$new|Ansicht|Vereinfachte Darstellung der eingefügten Zeilen überschrieben.|  
 |USER_TABLE$new_id|Ansicht|Kennung des eingefügten und geänderten Zeilen.|  

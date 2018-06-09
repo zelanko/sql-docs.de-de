@@ -1,43 +1,20 @@
 ---
 title: Data Mining-Erweiterungen (DMX)-Referenz | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- DMX [Analysis Services]
-- statements [DMX]
-- Data Mining Extensions [Analysis Services], statements
-- DMX [Analysis Services], about Data Mining Extensions
-- DMX [Analysis Services], statements
-- data definition statements [DMX]
-- predictions [DMX]
-- Data Mining Extensions [Analysis Services]
-- SSAS, DMX
-- queries [DMX], extensions reference
-- SQL Server Analysis Services, DMX
-- OLE DB for Data Mining
-- data manipulation statements [DMX]
-- Data Mining Extensions [Analysis Services], about Data Mining Extensions
-- mining models [Analysis Services], DMX
-ms.assetid: 6d85ca20-de67-4e20-b3b5-b734c6cfcece
-caps.latest.revision: 40
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 2a9338c6db570ae14e78b0aa7b8c6e891b648385
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: dcf3231fbff0ec4c3ea32e94f7b974a62faf05e6
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842823"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>Data Mining-Erweiterungen (DMX) - Referenz
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -119,14 +96,14 @@ ms.lasthandoff: 05/03/2018
   
  Mit DMX-Funktionen können Sie Informationen abrufen, die während des Trainings eines Modells ermittelt wurden, sowie neue Informationen berechnen. Sie können diese Funktionen für viele Zwecke verwenden, so z. B. zum Zurückgeben von Statistiken, die die zugrunde liegenden Daten oder die Genauigkeit einer Vorhersage beschreiben, oder zum Zurückgeben einer erweiterten Erläuterung einer Vorhersage.  
   
- **Weitere****Informationen:** [Verständnis der DMX Select-Anweisung](../dmx/understanding-the-dmx-select-statement.md), [allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md), [Struktur und die Verwendung von DMX-Vorhersageabfragen](../dmx/structure-and-usage-of-dmx-prediction-queries.md), [Datamining-Erweiterungen &#40;DMX&#41; Verweis-Funktion  ](../dmx/data-mining-extensions-dmx-function-reference.md)  
+ **Weitere****Informationen:** [Verständnis der DMX Select-Anweisung](../dmx/understanding-the-dmx-select-statement.md), [allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md), [Struktur und die Verwendung von DMX-Vorhersageabfragen](../dmx/structure-and-usage-of-dmx-prediction-queries.md), [Datamining-Erweiterungen &#40;DMX&#41; Verweis-Funktion](../dmx/data-mining-extensions-dmx-function-reference.md)  
   
  [Zurück zu den DMX-Anweisungen](#BKMK_DMXStatements)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datamining-Erweiterungen &#40;DMX&#41; Verweis-Funktion](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; Operator (Referenz)](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Datamining-Erweiterungen & #40; DMX & #41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; -Syntaxkonventionen](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; Syntaxelemente](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   

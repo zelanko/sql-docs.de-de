@@ -3,8 +3,6 @@ title: SQL Server Migration Assistant | Microsoft Docs
 ms.custom: ''
 ms.date: 09/30/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 1a49b3e1d9516d0276c689b7c61defc80bd2cb9c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a76b6092cfc092c44b6ec023e97b4914520c4ed6
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778106"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
 Microsoft SQL Server Migration Assistant (SSMA) ist ein Tool zur Automatisierung der Datenbankmigration zu SQL Server aus Microsoft Access, DB2, MySQL, Oracle und SAP ASE konzipiert.  
@@ -45,11 +44,11 @@ Microsoft SQL Server Migration Assistant (SSMA) ist ein Tool zur Automatisierung
 Die folgende Zielversionen werden für SSMA unterstützt.
 
 - SQL Server 2008
-- SQL Server 2008 R2
+- SQL Server 2008 R2
 - SQL Server 2012
-- SQL Server 2014
+- SQLServer 2014
 - SQL Server 2016
-- Azure SQL Database
+- Azure SQL-Datenbank
 - SQLServer 2017 unter Windows und Linux (Vorschau)
 - ** Azure SQL Datawarehouse
 
@@ -104,4 +103,3 @@ Es gibt Fälle, in denen bestimmte Funktionen von Kunden nicht direkt verwendet 
 Kunden sollten keine nicht dokumentierten APIs nutzen, was u. a. für folgende Elemente gilt: gespeicherte Prozeduren, erweiterte gespeicherte Prozeduren, Funktionen, Ansichten, Tabellen, Spalten, Eigenschaften und Metadaten. Microsoft-Kundensupport unterstützt keine Datenbanken oder Anwendungen, die nutzen oder verwenden nicht dokumentierte Einstiegspunkte.  
   
 Server- und Datenbankupgrades auf zukünftige Versionen von SQL Server werden nicht für Anwendungen und Datenbanken garantiert, die nicht dokumentierte Einstiegspunkte nutzen und verwenden. Die Verwendung von SQL Server-Features und -Funktionen muss auf solche beschränkt sein, die in der Microsoft SQL Server-Dokumentation enthalten sind. Wenn eine Funktion nicht in der Microsoft SQL Server-Dokumentation erfasst ist, zählt sie nicht zum unterstützten Teil von SQL Server.  
-  

@@ -1,32 +1,20 @@
 ---
 title: Data Mining-Erweiterungen (DMX)-Syntaxelemente | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- Data Mining Extensions [Analysis Services], syntax elements
-- syntax elements [DMX]
-- statements [DMX], syntax elements
-- DMX [Analysis Services], syntax elements
-ms.assetid: 25e45fa4-6409-47e0-a888-4af26d1c69b0
-caps.latest.revision: 35
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: b9aadbc43562ef6a550afa6ac4e2b3a8fd00a024
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: a745449428a0a348dc60a5b47304612bb889556c
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842383"
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>Data Mining-Erweiterungen (DMX) - Syntaxelemente
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -64,14 +52,14 @@ ms.lasthandoff: 05/03/2018
  [Verwendung &#40;DMX&#41;](../dmx/usage-dmx.md)  
  Definiert, wie ein Miningmodell die Spalten verwendet, die in ihm enthalten sind.  
   
- [Modellierungsflags & #40; DMX & #41;](../dmx/modeling-flags-dmx.md)  
+ [Modellierungsflags &#40;DMX&#41;](../dmx/modeling-flags-dmx.md)  
  Definiert zusätzliche Hinweise, die der Algorithmus verwenden kann, um ein Miningmodell zu verarbeiten.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen & #40; DMX & #41; Referenz](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; Verweis](../dmx/data-mining-extensions-dmx-reference.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; Verweis-Funktion](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; Operator (Referenz)](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Datamining-Erweiterungen & #40; DMX & #41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; -Syntaxkonventionen](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Struktur und die Verwendung von DMX-Vorhersageabfragen](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   

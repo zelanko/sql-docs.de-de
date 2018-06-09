@@ -5,24 +5,25 @@ author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 06/06/2018
 ms.topic: article
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 8e666a50f90a390307f00e8fd310f965fb7a50b7
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 33f798fd3b7816cae61137292392cb9cca729ec7
+ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34822203"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Einschränkungen und bekannten Probleme für SSIS unter Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Dieser Artikel beschreibt aktuelle Einschränkungen und bekannten Probleme für Microsoft SQL Server Integration Services (SSIS) unter Linux.
+Dieser Artikel beschreibt Einschränkungen und bekannten Probleme für Microsoft SQL Server Integration Services (SSIS) unter Linux.
 
 ## <a name="general-limitations-and-known-issues"></a>Allgemeine Einschränkungen und bekannte Probleme
 
@@ -41,11 +42,9 @@ Andere Einschränkungen und bekannte Probleme mit SSIS unter Linux finden Sie in
 
 ## <a name="components"></a> Unterstützte und nicht unterstützte Komponenten
 
-Die folgenden integrierten Integration Services-Komponenten werden unter Linux unterstützt. Einige von ihnen haben Einschränkungen für die Linux-Plattform, wie in den folgenden Tabellen beschrieben.
+Die folgenden integrierten Integration Services-Komponenten werden unter Linux unterstützt. Einige davon gelten Einschränkungen für die Linux-Plattform. Integrierte Komponenten, die hier nicht aufgeführt sind, werden nicht unter Linux unterstützt.
 
-Integrierte Komponenten, die hier nicht aufgeführt sind, werden nicht unter Linux unterstützt.
-
-### <a name="supported-control-flow-tasks"></a>Ablaufsteuerungstasks unterstützt
+## <a name="supported-control-flow-tasks"></a>Ablaufsteuerungstasks unterstützt
 - Masseneinfügungstask
 - Datenflusstask
 - Datenprofilerstellungs-Task
@@ -54,9 +53,9 @@ Integrierte Komponenten, die hier nicht aufgeführt sind, werden nicht unter Lin
 - Task 'Ausdruck'
 - FTP-Task
 - Webdienst (Task)
-- XML Task
+- XML-Task
 
-### <a name="control-flow-tasks-supported-with-limitations"></a>Ablaufsteuerungstasks unterstützt mit Einschränkungen
+## <a name="control-flow-tasks-supported-with-limitations"></a>Ablaufsteuerungstasks unterstützt mit Einschränkungen
 
 | Task | Einschränkungen |
 |------------|---|
@@ -67,16 +66,34 @@ Integrierte Komponenten, die hier nicht aufgeführt sind, werden nicht unter Lin
 | Tasks "Datenbank übertragen" | UNC-Pfade werden nicht unterstützt. |
 | | |
 
-### <a name="supported-control-flow-containers"></a>Unterstützt ablaufsteuerungscontainer
+## <a name="supported-and-unsupported-maintenance-plan-tasks"></a>Unterstützte und nicht unterstützte Wartungsplantasks
+
+In einer SQL Server-Wartungsplans können Sie in der Regel eine Vielzahl von SSIS-Tasks.
+
+Die folgenden Wartungsplantasks sind unter Linux nicht unterstützt:
+- Operator benachrichtigen
+- Führen Sie SQL Server-Agent-Auftrag
+
+Die folgenden Wartungsplantasks sind unter Linux unterstützt:
+- Datenbankintegrität überprüfen
+- Datenbank verkleinern
+- Index neu organisieren
+- Index neu erstellen
+- Statistikaktualisierung
+- Verlauf bereinigen
+- Sichern der Datenbank
+- T-SQL-Anweisung
+
+## <a name="supported-control-flow-containers"></a>Unterstützt ablaufsteuerungscontainer
 - Sequenzcontainer
 - For-Schleifencontainer
 - Foreach-Schleifencontainer
 
-### <a name="supported-data-flow-sources-and-destinations"></a>Unterstützte datenflussquellen und Ziele
+## <a name="supported-data-flow-sources-and-destinations"></a>Unterstützte datenflussquellen und Ziele
 - Rohdatendatei-Quelle und Ziel
 - XML-Quelle
 
-### <a name="data-flow-sources-and-destinations-supported-with-limitations"></a>Datenflussquellen und Ziele, die mit Einschränkungen unterstützt
+## <a name="data-flow-sources-and-destinations-supported-with-limitations"></a>Datenflussquellen und Ziele, die mit Einschränkungen unterstützt
 
 | Komponente | Einschränkungen |
 |------------|---|
@@ -87,7 +104,7 @@ Integrierte Komponenten, die hier nicht aufgeführt sind, werden nicht unter Lin
 | OLE DB-Quelle und Ziel | Nur SQL Server Native Client 11.0 und Microsoft OLE DB-Anbieter für SQL Server unterstützt werden. |
 | | |
 
-### <a name="supported-data-flow-transformations"></a>Datenflusstransformationen unterstützt
+## <a name="supported-data-flow-transformations"></a>Datenflusstransformationen unterstützt
 - Aggregat
 - Überwachen von
 - Balanced Data Distributor
@@ -112,7 +129,7 @@ Integrierte Komponenten, die hier nicht aufgeführt sind, werden nicht unter Lin
 - Union All
 - Entpivotieren
 
-### <a name="data-flow-transformations-supported-with-limitations"></a>Datenflusstransformationen unterstützt mit Einschränkungen
+## <a name="data-flow-transformations-supported-with-limitations"></a>Datenflusstransformationen unterstützt mit Einschränkungen
 
 | Komponente | Einschränkungen |
 |------------|---|
@@ -120,7 +137,7 @@ Integrierte Komponenten, die hier nicht aufgeführt sind, werden nicht unter Lin
 | Skriptkomponente | Unterstützt nur die standardmäßigen .NET Framework-APIs. |
 | | |
 
-### <a name="supported-and-unsupported-log-providers"></a>Unterstützte und nicht unterstützte Protokollanbieter
+## <a name="supported-and-unsupported-log-providers"></a>Unterstützte und nicht unterstützte Protokollanbieter
 Alle integrierten SSIS-Protokollanbieter unter Linux unterstützt werden mit Ausnahme der Windows-Ereignisprotokollprovider.
 
 Der Protokollanbieter für SQL Server unterstützt nur die SQL-Authentifizierung; Er unterstützt keine Windows-Authentifizierung.

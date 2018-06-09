@@ -1,8 +1,6 @@
 ---
 title: Zugriff auf Lager Schemas (AccessToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -41,15 +39,15 @@ helpviewer_keywords:
 - SSMA_Access_InventoryTables
 - tables, inventory
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
-caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: db3476f35a5388d127d34ebb183364e0f63184f3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c9614227b73058459fee7c902823bdb032ef2bc3
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773306"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Access-Inventur-Schemas (AccessToSQL)
 In den folgenden Abschnitten wird beschrieben, die Tabellen, die von SSMA erstellt werden, wenn Sie zu Access-Schemas exportieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -62,7 +60,7 @@ Datenbank-Metadaten in exportiert wird die **SSMA_Access_InventoryDatabases** Ta
 |**DatabaseId**|**uniqueidentifier**|Eine GUID, die jede Datenbank eindeutig identifiziert. Diese Spalte wird auch der Primärschlüssel für die Tabelle.|  
 |**DatabaseName**|**nvarchar(4000)**|Der Name der Access-Datenbank.|  
 |**ExportTime**|**datetime**|Datum und Uhrzeit der Erstellung dieser Metadaten von SSMA.|  
-|**FilePath**|**nvarchar(4000)**|Der vollständige Pfad und Name der Access-Datenbank.|  
+|**filePath**|**nvarchar(4000)**|Der vollständige Pfad und Name der Access-Datenbank.|  
 |**FileSize**|**bigint**|Die Größe der Access-Datenbank in KB.|  
 |**FileOwner**|**nvarchar(4000)**|Das Windows-Konto, das als Besitzer der Access-Datenbank angegeben ist.|  
 |**DateCreated**|**datetime**|Das Datum und Uhrzeit der Erstellung die Access-Datenbank.|  
@@ -92,7 +90,7 @@ Tabellenmetadaten ist exportiert der **SSMA_Access_InventoryTables** Tabelle. Di
 |**LinkedTable**|**nvarchar(4000)**|Eine andere Tabelle, sofern vorhanden, die mit der Tabelle verknüpft ist. Ermöglicht das Verknüpfen von Tabellen Hinzufügungen, löschungen und Updates für die andere Tabelle mithilfe dieser Tabelle.|  
 |**ExternalSource**|**nvarchar(4000)**|Die Datenquelle ist ggf., die der Tabelle zugeordnet. Wenn eine Tabelle verknüpft ist, muss es sich um eine externe Datenquelle, die in diesem Feld angegeben.|  
   
-## <a name="columns"></a>Spalten  
+## <a name="columns"></a>Spalte  
 Spaltenmetadaten ist exportiert der **SSMA_Access_InventoryColumns** Tabelle. Diese Tabelle enthält die folgenden Spalten:  
   
 |Spaltenname|Datentyp|Description|  

@@ -1,38 +1,20 @@
 ---
 title: ERSTELLEN VON MINING-MODELL (DMX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CREATE MINING MODEL
-- CREATE
-- CREATE_MINING_MODEL
-dev_langs:
-- DMX
-helpviewer_keywords:
-- RELATED TO column
-- mining models [Analysis Services], creating
-- column definition lists [DMX]
-- parameter lists [DMX]
-- SESSION clause
-- CREATE MINING MODEL statement
-ms.assetid: 43e4b591-7b34-494c-9b2d-7f0fe69af788
-caps.latest.revision: 57
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: b496ad8ea528345fed110c388c1ffa632c6b0cb3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: b1bf442083845359affea6237a7c994ae1229fa9
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842633"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -113,13 +95,13 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Eine Liste der Datentypen, Inhaltstypen, Spaltendistributionen und Modellierungsflags, mit denen Sie eine Spalte definieren können, finden Sie in den folgenden Themen:  
   
--   [Datentypen & #40; Datamining & #41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [Datentypen &#40;Datamining&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [Content-Arten & #40; Datamining & #41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [Inhaltstypen &#40;Datamining&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
 -   [Spaltenverteilungen &#40;Datamining&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [Modellieren von Ablaufverfolgungsflags & #40; Datamining & #41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [Modellierungsflags &#40;Datamining&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  Sie können der Anweisung eine Klausel hinzufügen, um die Beziehung zwischen zwei Spalten zu beschreiben. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt die Verwendung der folgenden \<Column Relationship >-Klausel.  
   
@@ -208,6 +190,6 @@ USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP
 ## <a name="see-also"></a>Siehe auch  
  [Datamining-Erweiterungen &#40;DMX&#41; -Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; -Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [Datamining-Erweiterungen & #40; DMX & #41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

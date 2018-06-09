@@ -1,6 +1,6 @@
 ---
 title: DAX-Eigenschaften | Microsoft Docs
-ms.date: 05/03/2018
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,14 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e683c5b99bee1b19e7d57e31b65983bb27561537
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 9150eb13b6c39f74f1e65743b6a79aca0a07676a
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35238840"
 ---
 # <a name="dax-properties"></a>DAX-Eigenschaften
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
    Der DAX-Abschnitt von „msmdsrv.ini“ enthält Einstellungen zur Steuerung bestimmter Verhaltensweisen von Abfragen in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], wie z.B. die maximale Anzahl von Zeilen, die in einem DAX-Abfrageresultset zurückgegeben werden.
 
   Bei sehr großen Rowsets – etwa den in DirectQuery-Modellen zurückgegebenen – ist der Standardwert von einer Million Zeilen möglicherweise nicht ausreichend. Wissen Sie, ob die Grenze anpassen benötigt, wenn Sie diesen Fehler erhalten: Das Resultset einer Abfrage einer externen Datenquelle hat die maximal zulässige Größe von ‚1000000' Zeilen überschritten.
@@ -41,7 +43,7 @@ Um die Obergrenze zu erhöhen, legen Sie die Konfigurationseinstellung **MaxInte
 
 ## <a name="property-descriptions"></a>Eigenschaftsbeschreibungen
 
-Einstellung |Wert |Description
+Einstellung |value |Description
 --------|-------|-----------
 MaxIntermediateRowsetSize | 1000000 | Maximale Anzahl von in einer DAX-Abfrage zurückgegebenen Zeilen. Fügen Sie diesen Eintrag manuell zur Datei „msmdsrv.ini“ hinzu, und erhöhen Sie den Wert, wenn die Standardeinstellung zu niedrig ist.
 PredicateCheckSpoolCardinalityThreshold| 5000 | Eine erweiterte Eigenschaft, die nur unter Anleitung des Microsoft-Supports geändert werden sollte.

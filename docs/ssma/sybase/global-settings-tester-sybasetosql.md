@@ -3,8 +3,6 @@ title: Globale Einstellungen (Tester) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,18 +16,19 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 02db2a2f89f91d745d3ffb0510f50e9e67d2ecd3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cff28dcfed7c8afe35ecbc2b4241cb89de537dea
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778926"
 ---
 # <a name="global-settings-tester-sybasetosql"></a>Globale Einstellungen (Tester) (SybaseToSQL)
 Verwenden Sie die Seite "Tester" von der **globale Einstellungen** Dialogfeld Einstellungen für SSMA Tester angeben.  
   
 Die Tester-Einstellungen für den Zugriff auf die **Tools** klicken Sie im Menü **globale Einstellungen**, und klicken Sie auf **Tester** unten im linken Bereich.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Testfähig Objekt analysis**  
 Diese Einstellung gibt an, ob die Analyse der testfähig Objekte. Wählen Sie **Ja** Wenn SSMA Tester zu analysieren und suchen automatisch die abhängigen Objekte gelöscht werden sollen. Standard-Option festgelegt ist **Ja**.  
   

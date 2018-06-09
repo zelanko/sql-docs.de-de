@@ -1,8 +1,6 @@
 ---
 title: Installieren von SSMA für Oracle-Client (OracleToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,11 +15,12 @@ caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 5b778ea75d6594b8b7ee880a00d4641f6efe5d5e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bacc738ab794c3ce215c000ee2c6980c09722b46
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777526"
 ---
 # <a name="installing-ssma-for-oracle-client-oracletosql"></a>Installieren von SSMA für die Oracle-Client (OracleToSQL)
 Die SSMA-Client besteht aus der Programmdateien an, die die folgenden Aufgaben ausführen:  

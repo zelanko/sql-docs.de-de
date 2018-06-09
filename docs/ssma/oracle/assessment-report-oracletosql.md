@@ -1,8 +1,6 @@
 ---
 title: Bewertungsbericht (OracleToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,18 +13,19 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: d4c6122aa22ffc706a89e371a1d95277fdd6503b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aeba85eece49f126ac22f5f048e751f5bef16a15
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777096"
 ---
 # <a name="assessment-report-oracletosql"></a>Bewertungsbericht (OracleToSQL)
 Assessment Berichtfenster zeigt die Ergebnisse der Konvertierung von Datenbankobjekten zu [!INCLUDE[tsql](../../includes/tsql_md.md)] Syntax, und kann ebenfalls dazu beitragen, die Sie schätzen, die Komplexität und Kosten der Migrationsprojekte.  
   
 Zugriff auf den Assessment-Bericht ausgewählten Objekten, die für die Konvertierung in Quelle Metadaten-Explorer Maustaste **Schemas** oder **Synonyme**, und wählen Sie dann **Bericht erstellen**.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
   
 |||  
 |-|-|  

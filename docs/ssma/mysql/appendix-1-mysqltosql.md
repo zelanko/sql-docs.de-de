@@ -1,8 +1,6 @@
 ---
 title: Anhang - 1 (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 13d99dd4296f1548ec4b94e3b79dabb06f21afdd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 288084b2ff794a5b6b82bec15baa263a28caada9
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775526"
 ---
 # <a name="appendix---1-mysqltosql"></a>Anhang - 1 (MySQLToSQL)
 Kurze Übersicht über die Befehlszeilenoptionen SSMA-Konsole:  

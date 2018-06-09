@@ -1,8 +1,6 @@
 ---
 title: Anhang - 1 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 69752dfd2ced7946b2fb6470bc3780df286cc3f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f85d517f6161eff9a683d4af8bce4dd8f707e409
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774406"
 ---
 # <a name="appendix---1-db2tosql"></a>Anhang - 1 (DB2ToSQL)
 Kurze Übersicht über die Befehlszeilenoptionen SSMA-Konsole:  

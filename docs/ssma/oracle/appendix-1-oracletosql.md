@@ -1,8 +1,6 @@
 ---
 title: Anhang - 1 (OracleToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 4afeb0ab89e38f9d0b5533bcc56405a0dbdb3cbf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 97f7f7e220dee3a03b0ff9530b063ec9840da0b1
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776777"
 ---
 # <a name="appendix---1-oracletosql"></a>Anhang - 1 (OracleToSQL)
 Kurze Übersicht über die Befehlszeilenoptionen SSMA-Konsole:  

@@ -1,40 +1,20 @@
 ---
 title: Kommentare (DMX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- comments [DMX]
-- Data Mining Extensions [Analysis Services], comments
-- double forward slashes
-- commenting characters
-- text strings [SQL Server]
-- remarks [DMX]
-- forward slash-asterisk character pairs
-- DMX [Analysis Services], comments
-- /*...*/ (comment)
-- double hyphens
-- // (comment)
-- -- (comment character)
-ms.assetid: 64d10eb5-4fe8-42c6-b387-eff336315e56
-caps.latest.revision: 30
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: eb8bb33e09514117ec2b7f8f8ea8f96f4de3be63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: f319457da85378000ef974c3ace1ddbba87d18e1
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842953"
 ---
 # <a name="comments-dmx"></a>Kommentare (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -58,10 +38,10 @@ ms.lasthandoff: 05/03/2018
 -   **/\* ... \*/ (Schrägstrich/Sternchen-Zeichenpaare).** Verwenden Sie diese Kommentarzeichen, um einen Kommentar auf der gleichen Zeile wie der auszuführende Code, einen Kommentar auf einer eigenen Zeile oder Kommentare innerhalb des ausführbaren Codes zu schreiben. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Wertet den gesamten Text aus dem öffnenden kommentarzeichenpaar (/ *), zum schließenden kommentarzeichenpaar (\*/) als Teil des Kommentars. Um einen mehrzeiligen Kommentar erstellen möchten, starten Sie den Kommentar mit dem Öffnen Kommentarzeichen (/\*), und beenden Sie den Kommentar mit dem Schließen Kommentarzeichen (\*/). Die Zeilen des Kommentars sollten keine anderen Kommentarzeichen enthalten. Weitere Informationen zu diesen Kommentarzeichen finden Sie unter [Schrägstrich Stern &#40;Kommentar&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen & #40; DMX & #41; Referenz](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; Verweis](../dmx/data-mining-extensions-dmx-reference.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; Verweis-Funktion](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; Operator (Referenz)](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Datamining-Erweiterungen & #40; DMX & #41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; -Syntaxkonventionen](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; Syntaxelemente](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   

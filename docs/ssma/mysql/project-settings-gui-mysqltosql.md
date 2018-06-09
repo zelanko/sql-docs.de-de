@@ -1,8 +1,6 @@
 ---
 title: Projekteinstellungen (GUI) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6edf8639163114a7de885c7069d95ee5444973a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd5c74d5fb7e3c33581e2b3646c157ec24d9c209
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776558"
 ---
 # <a name="project-settings-gui--mysqltosql"></a>Projekteinstellungen (GUI) (MySQLToSQL)
 Die GUI-projekteinstellungen können Sie konfigurieren, wie Daten auf angezeigt wird der **Daten** Registerkarte und, wenn Datenberichte mit Assessment-Berichten einschließen.  
@@ -33,7 +32,7 @@ Die GUI-Bereich finden Sie in der **Projekteinstellungen** und **Projekt Standar
   
 -   Verwenden der **Projekt Standardeinstellungen** im Dialogfeld Optionen der Benutzeroberfläche für alle Projekte festgelegt. Die GUI-Einstellungen für den Zugriff auf die **Tools** klicken Sie im Menü **Projekt Standardeinstellungen**, und klicken Sie dann auf **GUI** unten im linken Bereich.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Maximale Anzahl für die Quelle**  
 Konfiguriert die Anzahl von Zeilen mit Daten, die angezeigt wird, auf die **Daten** Registerkarte für die ausgewählte Quelltabelle.  
   

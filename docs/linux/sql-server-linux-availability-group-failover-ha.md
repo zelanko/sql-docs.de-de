@@ -12,11 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 26868cfd136f3d06366a47ec7d52fa17e3c8fe39
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: ddbe5f25cf3153b3354425fd426798e7061bdf36
+ms.sourcegitcommit: 99e355b71ff2554782f6bc8e0da86e6d9e3e0bef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34799810"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Failover von AlwaysOn-Verfügbarkeitsgruppe unter Linux
 
@@ -71,7 +72,7 @@ Während eines manuellen Failovers der `pcs` Befehl `move` oder `crm` Befehl `mi
 - **RHEL/Ubuntu-Beispiel**
 
    ```bash
-   sudo pcs constraint --full
+   sudo pcs constraint list --full
    ```
 
 - **SLES-Beispiel**
@@ -80,35 +81,17 @@ Während eines manuellen Failovers der `pcs` Befehl `move` oder `crm` Befehl `mi
    crm config show
    ```
 
-Entfernen Sie die standorteinschränkung, damit zukünftige - einschließlich Automatisches Failover - Failover erfolgreich ausgeführt werden. 
-
-Um die Einschränkung zu entfernen, führen Sie den folgenden Befehl ein: 
-
-- **RHEL/Ubuntu-Beispiel**
-
-   In diesem Beispiel `ag_cluster-master` ist der Name der Ressource, die ein Failover ausgeführt. 
-
-   ```bash
-   sudo pcs resource clear ag_cluster-master 
-   ```
-
-- **SLES-Beispiel**
-
-   In diesem Beispiel `ag_cluster` ist der Name der Ressource, die ein Failover ausgeführt. 
-
-   ```bash
-   crm resource clear ag_cluster
-   ```
-
-Alternativ können Sie den folgenden Befehl ausführen, um die Speicherorteinschränkung zu entfernen.  
+Ein Beispiel für die Einschränkung, die aufgrund eines manuellen Failovers erstellt wird. 
+ `Enabled on: Node1 (score:INFINITY) (role: Master) (id:cli-prefer-ag_cluster-master)`
 
 - **RHEL/Ubuntu-Beispiel**
 
-   Im folgenden Befehl ist `cli-prefer-ag_cluster-master` die ID der Einschränkung, die entfernt werden muss. `sudo pcs constraint --full` gibt diese ID zurück. 
-
+   Im folgenden Befehl ist `cli-prefer-ag_cluster-master` die ID der Einschränkung, die entfernt werden muss. `sudo pcs constraint list --full` gibt diese ID zurück. 
+   
    ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  
    ```
+   
 - **SLES-Beispiel**
 
    In den folgenden Befehl `cli-prefer-ms-ag_cluster` ist die ID der Einschränkung. `crm config show` gibt diese ID zurück. 
@@ -122,7 +105,7 @@ Alternativ können Sie den folgenden Befehl ausführen, um die Speicherorteinsch
 >[!NOTE]
 >Das automatische Failover fügt keine Speicherorteinschränkung hinzu, also ist keine Bereinigung notwendig. 
 
-Weitere Informationen:
+Weitere Informationen:  
 - [Red Hat - Managing Cluster Resources (Red Hat – Verwalten von Clusterressourcen)](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-manageresource-HAAR.html)
 - [Schrittmacher - Ressourcen manuell verschieben](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-pcs/html/Clusters_from_Scratch/_move_resources_manually.html)
  [SLES Administratorhandbuch - Ressourcen](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
@@ -137,13 +120,13 @@ Dieser Vorgang für das Erzwingen eines Failovers ist spezifisch für SQL Server
 
 1. Stellen Sie sicher, dass die AG-Ressource nicht mehr vom Cluster verwaltet wird. 
 
-      - Legen Sie die Ressource in den nicht verwalteten Modus auf dem Ziel-Clusterknoten. Mit diesem Befehl signalisiert den Resource-Agent beenden ressourcenüberwachung und Verwaltung. Beispiel: 
+      - Legen Sie die Ressource in den nicht verwalteten Modus auf dem Ziel-Clusterknoten. Mit diesem Befehl signalisiert den Resource-Agent beenden ressourcenüberwachung und Verwaltung. Zum Beispiel: 
       
       ```bash
       sudo pcs resource unmanage <resourceName>
       ```
 
-      - Löschen Sie die Ressource, schlägt der Versuch, den ressourcenmodus in den nicht verwalteten Modus festzulegen. Beispiel:
+      - Löschen Sie die Ressource, schlägt der Versuch, den ressourcenmodus in den nicht verwalteten Modus festzulegen. Zum Beispiel:
 
       ```bash
       sudo pcs resource delete <resourceName>
