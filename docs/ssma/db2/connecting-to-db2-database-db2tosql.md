@@ -1,8 +1,6 @@
 ---
 title: Herstellen einer Verbindung mit DB2-Datenbank (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d9f3d4b687c86804cc2339d675333c3a7e73ff6b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 802cb8a20152f32bc6edcd44e36252754e740426
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774606"
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>Herstellen einer Verbindung mit DB2-Datenbank (DB2ToSQL)
 Zum Migrieren von DB2-Datenbanken zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], Sie müssen die Verbindung mit der DB2-Datenbank, die Sie migrieren möchten. Wenn Sie eine Verbindung herstellen, SSMA Ruft Metadaten über alle DB2-Schemas ab, und anschließend in der DB2-Metadaten-Explorer-Bereich angezeigt. SSMA speichert Informationen über den Datenbankserver, aber die Kennwörter werden nicht gespeichert.  

@@ -1,6 +1,6 @@
 ---
 title: Erstellen von SESSION CUBE-Anweisung (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 12a450b8184f7a1d6ef8b6068d73f99e17063c5d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 09e093b46127090d232f023a7c7277c398ec349c
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579422"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742469"
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>Datendefinition der MDX - SITZUNGSCUBE erstellen
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Erstellt einen Sitzungscube aus einem vorhandenen Servercube und füllt ihn auf. Der Sitzungscube ist nur innerhalb der aktuellen Sitzung sichtbar. Er kann nicht durchsucht oder aus einer anderen Sitzung abgefragt werden. Der Sitzungscube wird beim Beenden der Sitzung implizit gelöscht.  
   

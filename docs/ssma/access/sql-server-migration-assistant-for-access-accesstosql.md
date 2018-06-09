@@ -1,8 +1,6 @@
 ---
 title: SQL Server Migration Assistant für Access (AccessToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 08/14/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 43b725e800fba4bdb085b03cd0ea183624249b9b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 00aad675a67b5dab1a5cb0d68d35b0da99493ed7
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774786"
 ---
 # <a name="sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server Migration Assistant für Access (AccessToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Access ist ein Tool zur Migration von Datenbanken von [!INCLUDE[msCoName](../../includes/msconame_md.md)] Zugriff auf die Versionen 97 bis 2010 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2017 unter Windows und Linux (Preview) / [!INCLUDE[msCoName](../../includes/msconame_md.md)] Azure SQL-Datenbank. SSMA für Access konvertiert den Zugriff auf Datenbankobjekte zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbankobjekte, lädt die Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL- und dann migriert Daten aus den Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure.  

@@ -1,26 +1,28 @@
 ---
-title: Lektion 1 herunterladen, die Beispieldaten | Microsoft Docs
+title: Lektion 1-Download-Beispieldaten und Skripts für eingebettete R (SQL Server-Machine Learning) | Microsoft Docs
+description: Lernprogramm zur Einbettung von R in SQL Server gespeicherte Prozeduren und Funktionen des T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a87d307dafa733e449c6ec893ece21645fe65640
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 74a60a95da4fb701f3862c36e35a4bada6ef933b
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249833"
 ---
-# <a name="lesson-1-download-the-sample-data"></a>Lektion 1: Herunterladen der Beispieldaten
+# <a name="lesson-1-download-data-and-scripts"></a>Lektion 1: Herunterladen von Daten und Skripts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel ist Teil eines Lernprogramms für SQL-Entwicklern zum Verwenden von R in SQL Server.
 
 In diesem Schritt fügen Sie das Beispieldataset herunterladen und die [!INCLUDE[tsql](../../includes/tsql-md.md)] Skriptdateien, die in diesem Lernprogramm verwendet werden. Die Daten und die Skriptdateien auf GitHub freigegeben werden, aber das PowerShell-Skript Daten-und Skripts auf Ihrer Wahl ein lokales Verzeichnis herunter.
 
-## <a name="download-the-data-and-scripts"></a>Laden Sie die Daten und Skripts
+## <a name="download-tutorial-files-from-github"></a>Herunterladen der Lernprogrammdateien von Github
 
 1.  Öffnen Sie eine Windows PowerShell-Befehlskonsole.
   
@@ -64,4 +66,4 @@ In diesem Schritt fügen Sie das Beispieldataset herunterladen und die [!INCLUDE
 
 ## <a name="previous-lesson"></a>Vorherige Lektion
 
-[In der Datenbank-R-Analyse für SQL-Entwickler](../tutorials/sqldev-in-database-r-for-sql-developers.md)
+[Eingebetteten R-Analyse für SQL-Entwickler](../tutorials/sqldev-in-database-r-for-sql-developers.md)

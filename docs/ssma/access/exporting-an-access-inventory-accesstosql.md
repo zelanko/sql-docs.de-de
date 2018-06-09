@@ -1,8 +1,6 @@
 ---
 title: Exportieren eine Access-Inventur (AccessToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -27,11 +25,12 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 7d0877666e13f490463e77ec30bf7792367747d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb5d6e4bcd3699d99dd512ea766087a33f2adf45
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773536"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Exportieren eine Access-Inventur (AccessToSQL)
 Wenn Sie mehrere Access-Datenbanken verfügen und Sie nicht sicher, welche Informationen zum Migrieren sind in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], können Sie ein Inventar aller Access-Datenbanken in einem Projekt exportieren. Sie können anschließend überprüfen und Fragen Sie die Metadaten Inventar, um zu bestimmen, welche Datenbanken und Objekte innerhalb dieser Datenbanken migrieren. Diese Inventur können Sie schnell beantwortet Fragen, wie die folgenden:  

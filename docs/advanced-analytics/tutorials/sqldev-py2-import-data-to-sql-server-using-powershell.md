@@ -2,23 +2,24 @@
 title: Schritt 2 von Daten in SQL Server mit PowerShell | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d85419c06915cc7d96c9713053239c27c70a9f0b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 14606b42d17acdd56527795d2d475a263d918d7d
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249993"
 ---
 # <a name="step-2-import-data-to-sql-server-using-powershell"></a>Schritt 2: Importieren von Daten in SQL Server mit PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel ist Teil eines Lernprogramms [In Datenbank-Python-Analyse für SQL-Entwickler](sqldev-in-database-python-for-sql-developers.md). 
 
-In diesem Schritt führen Sie eines der heruntergeladenen Skripts, die für die exemplarische Vorgehensweise erforderlichen Datenbankobjekte zu erstellen. Das Skript auch verschiedene gespeicherte Prozeduren erstellt und die Beispieldaten in einer Tabelle in der angegebenen Datenbank hochgeladen.
+In diesem Schritt führen Sie eines der heruntergeladenen Skripts zum Erstellen von Datenbankobjekten, die für die exemplarische Vorgehensweise erforderlich. Das Skript auch verschiedene gespeicherte Prozeduren erstellt und die Beispieldaten in einer Tabelle in der angegebenen Datenbank hochgeladen.
 
 ## <a name="create-database-objects-and-load-data"></a>Erstellen von Datenbankobjekten und Laden von Daten
 
@@ -34,6 +35,16 @@ Das Skript führt folgende Aktionen aus:
 
 Wenn Probleme auftreten, können Sie das Skript als Referenz verwenden, die Schritte manuell ausführen.
 
+### <a name="modify-the-script-to-use-a-trusted-windows-identity"></a>Ändern Sie das Skript aus, um einen vertrauenswürdigen Windows-Identität verwenden
+
+Standardmäßig nimmt das Skript an eine SQL Server-Datenbank-Benutzername und Kennwort. Wenn Sie unter Ihrem Windows-Benutzerkonto Db_owner sind, können Sie Ihre Windows-Identität, zum Erstellen der Objekte. Öffnen Sie hierzu `RunSQL_SQL_Walkthrough.ps1` in einem Codeeditor anzufügende **`-T`** Bulk insert die BCP-Befehl:
+
+```text
+bcp $db_tb in $csvfilepath -t ',' -S $server -f taxiimportfmt.xml -F 2 -C "RAW" -b 200000 -U $u -P $p -T
+```
+
+### <a name="run-the-script"></a>Führen Sie das Skript
+
 1. Öffnen Sie eine PowerShell-Eingabeaufforderung als Administrator an. Wenn Sie noch nicht in den Ordner, der im vorherigen Schritt erstellt sind, navigieren Sie zu dem Ordner, und führen Sie den folgenden Befehl:
   
     ```ps
@@ -44,8 +55,8 @@ Wenn Probleme auftreten, können Sie das Skript als Referenz verwenden, die Schr
 
     - Der Name oder die Adresse des eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Instanz, in denen Machine Learning-Dienste mit Python installiert wurde.
     - Den Benutzernamen und das Kennwort für ein Konto auf der Instanz. Das Konto, das Sie verwenden, benötigen die Möglichkeit zum Erstellen von Datenbanken, Tabellen und gespeicherte Prozeduren erstellen und Massenimport von Daten in Tabellen laden. 
-    - Wenn Sie nicht den Benutzernamen und das Kennwort angeben, Ihre Windows-Identität wird verwendet, um die Anmeldung beim SQL Server, und Sie werden höher gestuft, um ein Kennwort einzugeben.
-    - Der Pfad und der Dateiname der Beispieldatendatei, die Sie zuvor heruntergeladen haben. Beispiel: `C:\temp\pysql\nyctaxi1pct.csv`
+    - Wenn Sie nicht den Benutzernamen und das Kennwort angeben, wird Ihre Windows-Identität verwendet SQL Server anzumelden.
+    - Der Pfad und der Dateiname der Beispieldatendatei, die Sie zuvor heruntergeladen haben. Beispielsweise `C:\temp\pysql\nyctaxi1pct.csv`
 
     > [!NOTE]
     > Um die Daten erfolgreich zu laden, müssen der Bibliothek "xmlrw.dll" im gleichen Ordner wie bcp.exe sein.

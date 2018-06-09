@@ -1,8 +1,6 @@
 ---
 title: Arbeiten mit SSMA-Projekten (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e4526d78daa021731c09a04a6704c9a66411e178
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c0f9cf55498ec5637b18f542ea079517571640b0
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775556"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>Arbeiten mit SSMA-Projekten (DB2ToSQL)
 Zum Migrieren von DB2-Datenbanken zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], erstellen Sie zunächst ein SSMA-Projekt. Das Projekt ist eine Datei mit den folgenden Informationen an:  

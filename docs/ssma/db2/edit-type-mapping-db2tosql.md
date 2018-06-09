@@ -1,8 +1,6 @@
 ---
 title: Bearbeiten der Zuordnung (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3f9eb22b6d0da038c26e535cbe1061637f332b8a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bfd91a77ef5abb230277d90cbc068c1794abdb80
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774526"
 ---
 # <a name="edit-type-mapping-db2tosql"></a>Bearbeiten der Zuordnung (DB2ToSQL)
 Die **bearbeiten Type Mapping** Dialogfeld können Sie angeben, wie Datentypen zwischen Quelle und Ziel-Datenbankobjekten zugeordnet sind.  
@@ -35,13 +34,13 @@ Sie können dieses Dialogfeld an mehreren Stellen zuzugreifen:
   
 Tabelle-spezifische Zuordnungen datentypzuordnungen für Projekte und Datenbank zu überschreiben. Datenbank-spezifische Zuordnungen überschreiben Projekt Zuordnungen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Quelltyp**  
 Wählen Sie den Quelltyp für die Daten zum Zuweisen einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Datentyp.  
   
 Wenn der Datentyp mit variabler Länge ist, erscheint die folgenden Felder unter **Datenquellentyp**:  
   
-**Von**  
+**From**  
 Geben Sie die minimale Länge für diese Zuordnung. Z. B. für die **Nchar** -Datentyp, können Sie 10, um anzugeben, dass diese Zuordnung für einen Bereich beginnend ist eingeben **nchar(10)**.  
   
 **Aktion**  

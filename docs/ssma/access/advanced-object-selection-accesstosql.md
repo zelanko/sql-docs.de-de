@@ -1,8 +1,6 @@
 ---
 title: Erweiterte Objektauswahl (AccessToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b4c9e8ee7b1b8587ecdcfdd162eb9bb89388c1e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5e1aacf823b1c76859b1e445ac9e0bb08ff6b3c9
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773276"
 ---
 # <a name="advanced-object-selection--accesstosql"></a>Erweiterte Objektauswahl (AccessToSQL)
 Die **Objektabschnitt erweiterte** Dialogfeld können Sie die Datenbankobjekte mithilfe von Zeichenfolgen und Teilzeichenfolgen in Objektnamen, Filtern und dann zu aktivieren oder deaktivieren diese Objekte. SSMA führt konvertieren und Migrieren von Vorgängen für ausgewählte Objekte.  
@@ -33,7 +32,7 @@ Wenn Sie das Dialogfeld zum ersten Mal öffnen, klicken Sie auf **Unterkategorie
   
 Bevor Sie dieses Dialogfeld verwenden, empfiehlt es sich, erzwingen von SSMA alle Metadaten durch Konvertieren von Schemas oder speichern das Projekt geladen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Überprüfen Sie alle Elemente**  
 Fügt ein Häkchen neben allen Elementen. Diese Elemente werden sofort in den Metadaten-Explorer ausgewählt werden.  
   

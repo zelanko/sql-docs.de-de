@@ -1,8 +1,6 @@
 ---
 title: Arbeiten mit der Konsole-Skriptdateien (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a756a39a82a607eadd26601006f70dba36391c0e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ff200ae57ecbfe426b0ccdf7e9ed71af4cfc8bc2
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775466"
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>Arbeiten mit der Konsole-Skriptdateien (DB2ToSQL)
 Einige Beispieldateien wurden zusammen mit dem Produkt für die Benutzer-Verweis und die Verwendung bereitgestellt. Dieser Abschnitt beschreibt die Möglichkeit, diese Skripts, sodass die Endbenutzer Bedürfnissen problemlos anzupassen.  
@@ -77,7 +76,7 @@ Referenz für den Benutzer haben die folgenden Konsole Skript Beispieldateien f�
   
 5.  **ConversionAndDataMigrationSample.xml:** in diesem Beispiel kann der Benutzer eine End-to-End-Migration von der Konvertierung in die Datenmigration ausgeführt werden. Die Liste der erforderlichen Attributwerte, die sie ändern, wird im folgenden aufgeführt:  
   
-    |Befehlsname|Description|Attribut|  
+    |Befehlsname|Description|attribute|  
     |----------------|---------------|-------------|  
     |`map-schema`|Schemazuordnung der Quelldatenbank mit dem Zielschema.|`source-schema:` Gibt die Quelldatenbank, die erforderlich sind, konvertiert werden soll.<br /><br />`sql-server-schema`: Gibt an, die Zieldatenbank, die migriert werden|  
     |`convert-schema`|Schemakonvertierung von der Quelle in das Zielschema durchgeführt.<br /><br />Wenn der Benutzer verfügt über mehrere Objekte bewerten / Datenbanken er mehrere festlegbaren `metabase-object` Knoten wie im veranschaulicht die `convert-schema` des Befehls Beispiel 4 von der Konsole Beispielskriptdatei.|`object-name`: Geben Sie die Quelldatenbank / Objektnamen Sie, die erforderlich sind, konvertiert werden soll. Sicherstellen, dass das entsprechende `object-type` wird basierend auf den Typ des Objekts, das im angegebenen geändert, die `object-name`|  

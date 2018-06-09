@@ -1,19 +1,21 @@
 ---
-title: Lektion 4 Sie Data-Funktionen, die mithilfe des T-SQL | Microsoft Docs
+title: Lektion 4 Sie Data-Funktionen, die mithilfe von T-SQL-Funktionen (SQL Server-Machine Learning) | Microsoft Docs
+description: Lernprogramm zur Einbettung von R in SQL Server gespeicherte Prozeduren und Funktionen des T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7007d418b14e2c965252ca2a4f7bc3c529e63173
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 98182e8e602b8bba8ca7d7fd58cf23f3fcaaa435
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249543"
 ---
-# <a name="lesson-4-create-data-features-using-t-sql"></a>Lektion 4: Erstellen von Data-Funktionen, die mithilfe des T-SQL
+# <a name="lesson-4-create-data-features-using-r-and-t-sql"></a>Lektion 4: Erstellen von Data-Funktionen, die mittels R und T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel ist Teil eines Lernprogramms für SQL-Entwicklern zum Verwenden von R in SQL Server.
@@ -125,4 +127,4 @@ Um die berechneten Werte in einer Tabelle hinzuzufügen, die zum Trainieren des 
 
 ## <a name="previous-lesson"></a>Vorherige Lektion
 
-[Lektion 3: Durchsuchen und Visualisieren von Daten](../tutorials/sqldev-explore-and-visualize-the-data.md)
+[Lektion 3: Durchsuchen Sie und Visualisieren Sie die Daten mithilfe von R und gespeicherte Prozeduren](../tutorials/sqldev-explore-and-visualize-the-data.md)

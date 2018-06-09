@@ -1,8 +1,6 @@
 ---
 title: Arbeiten mit Beispiel-Konsole Skript FilesExecuting SSMA-Konsole | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a581236e29da44646eee8fa55f432ad92e9d586c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8b6ebe456c8dc7f678740ab479c317eff041e132
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774266"
 ---
 # <a name="working-with-the-sample-console-script-filesexecuting-the-ssma-console-accesstosql"></a>Arbeiten mit der Beispiel-Konsole Skript FilesExecuting SSMA-Konsole (AccessToSQL)
 Einige Beispieldateien wurden zusammen mit dem Produkt für die Benutzer-Verweis und die Verwendung bereitgestellt. Dieser Abschnitt beschreibt die Möglichkeit, diese Skripts, sodass die Endbenutzer Bedürfnissen problemlos anzupassen.  
@@ -64,7 +63,7 @@ Referenz für den Benutzer haben die folgenden Konsole Skript Beispieldateien f�
   
 -   **ConversionAndDataMigrationSample.xml:** in diesem Beispiel kann der Benutzer eine End-to-End-Migration von der Konvertierung in die Datenmigration ausgeführt werden. Die Liste der erforderlichen Attributwerte, die sie ändern, wird im folgenden aufgeführt:  
   
-    |Befehlsname|Description|Attribut|  
+    |Befehlsname|Description|attribute|  
     |----------------|---------------|-------------|  
     |`map-schema`|Schemazuordnung der Quelldatenbank mit dem Zielschema.|`source-schema:` Gibt die Quelldatenbank, die erforderlich sind, konvertiert werden soll.<br /><br />`sql-server-schema`: Gibt an, die Zieldatenbank, die migriert werden|  
     |`convert-schema`|Schemakonvertierung von der Quelle in das Zielschema durchgeführt.<br /><br />Wenn der Benutzer verfügt über mehrere Objekte bewerten / Datenbanken er mehrere festlegbaren `metabase-object` Knoten wie im veranschaulicht die `convert-schema` des Befehls Beispiel 4 von der Konsole Beispielskriptdatei.|`object-name`: Geben Sie die Quelldatenbank / Objektnamen Sie, die erforderlich sind, konvertiert werden soll. Sicherstellen, dass das entsprechende `object-type` wird basierend auf den Typ des Objekts, das im angegebenen geändert, die `object-name`|  

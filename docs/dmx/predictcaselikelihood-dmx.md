@@ -1,31 +1,20 @@
 ---
 title: PredictCaseLikelihood (DMX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PredictCaseLikelihood
-dev_langs:
-- DMX
-helpviewer_keywords:
-- PredictCaseLikelihood function
-ms.assetid: b00180e5-b2eb-49e2-891d-e39fb378f50a
-caps.latest.revision: 39
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 3d9cbe8c92be301fa56c2d5a9f78e741ef5765f9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: d8159af8ac4b3c9bf21dcdc68a0cfb30c46e33e5
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34841777"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -92,7 +81,7 @@ NATURAL PREDICTION JOIN
  Der Unterschied zwischen diesen Ergebnissen veranschaulicht den Effekt der Normalisierung. Der Rohwert für **CaseLikelihood** schlägt vor, dass die Wahrscheinlichkeit des Falles ungefähr 20 Prozent; Wenn Sie die Ergebnisse normalisieren, es jedoch ersichtlich ist wird, dass die Wahrscheinlichkeit des Falls gering ist.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Algorithmen & #40; Analysis Services – Datamining & #41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Datamining-Algorithmen &#40;Analysis Services – Datamining&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; Verweis-Funktion](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  

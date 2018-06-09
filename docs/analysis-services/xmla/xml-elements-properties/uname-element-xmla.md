@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 343a1104058807f1832621c312d09d52ddd71184
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2c860bcd21f6c717bae06478ca1ec1194383a75b
+ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34577982"
 ---
 # <a name="uname-element-xmla"></a>UName-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,25 +33,25 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|String|  
-|Standardwert|Keine|  
-|Kardinalität|1-1: Erforderliches Element, das nur einmal auftritt.|  
+|Datentyp und -länge|Zeichenfolge|  
+|Standardwert|InclusionThresholdSetting|  
+|Cardinality|1-1: Erforderliches Element, das nur einmal auftritt.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[HierarchyInfo](../../../analysis-services/xmla/xml-elements-properties/hierarchyinfo-element-xmla.md), [Member](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)|  
-|Untergeordnete Elemente|Keine|  
+|Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
  Bei **HierarchyInfo** -Elementen enthält das **UName** -Element den Namen der Eigenschaft, die die eindeutigen Elementnamen der Hierarchie bereitstellt. Der Wert entspricht der MEMBER_UNIQUE_NAME-Eigenschaft, die in der OLE DB-Spezifikation für OLAP für Achsen-Rowsets definiert ist.  
   
  Bei **Member** -Elementen enthält das **UName** -Element den eindeutigen Namen des übergeordneten **Member** -Elements.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbankeigenschaften & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Siehe auch
+ [Eigenschaften &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

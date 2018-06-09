@@ -1,6 +1,6 @@
 ---
 title: Vorgänger (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bb15caffbe8461da0ce04385bc58d7f1815483b5
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 0c108ea102e03000481d18bfc69f657e6bd8a0ce
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34577002"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740049"
 ---
 # <a name="ancestors-mdx"></a>Ancestors (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Eine Funktion, die die Menge aller Vorgänger eines angegebenen Elements in einer angegebenen Ebene oder in einem angegebenen Abstand vom Element zurückgibt. Mit [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], die zurückgegebene Menge stets ein einzelnes Element – [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt nicht mehrere übergeordnete Elemente für ein einzelnes Element.  
+
+  Eine Funktion, die die Menge aller Vorgänger eines angegebenen Elements in einer angegebenen Ebene oder in einem angegebenen Abstand vom Element zurückgibt. Mit [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], die zurückgegebene Menge stets ein einzelnes Element – [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt nicht mehrere übergeordnete Elemente für ein einzelnes Element.  
   
 ## <a name="syntax"></a>Syntax  
   

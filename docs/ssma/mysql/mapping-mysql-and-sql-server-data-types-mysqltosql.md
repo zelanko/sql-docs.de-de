@@ -1,8 +1,6 @@
 ---
 title: Zuordnen von MySQL und SQL Server-Datentypen (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d35530153b4e26f865b6fd8fefa102718752dafa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 248e908567dfa40f0a8f64596e3f9e9754e03e44
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776506"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>Zuordnen von MySQL und SQL Server-Datentypen (MySQLToSQL)
 MySQL-Datenbank-Datentypen unterscheiden sich von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Datenbank-Datentypen. Bei der Konvertierung von MySQL-Datenbankobjekte [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Objekte, müssen Sie angeben, Zuordnen von Datentypen von MySQL zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure. Sie können die standardmäßigen datentypzuordnungen übernehmen, oder die Zuordnungen können angepasst werden, wie in den folgenden Verfahren gezeigt.  

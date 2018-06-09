@@ -1,8 +1,6 @@
 ---
 title: Migrations-Assistent (AccessToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -27,11 +25,12 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 356f06ec66e0fa18c0406f34ce706eae0eaf2886
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f2479b1b3061cf675830607e7cbff46140e75a1b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774016"
 ---
 # <a name="migration-wizard-accesstosql"></a>Migrations-Assistent (AccessToSQL)
 Der Migrations-Assistent führt Sie durch die Migration von einer oder mehreren Datenbanken aus Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure. Mithilfe des Assistenten zum Erstellen eines Projekts, fügen Sie Datenbanken auf das Projekt, wählen Sie Objekte zu migrieren, und Verbinden mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure. Sie werden auch konvertieren, laden und Migrieren von Access-Schemas und Daten. Optional können Sie den Zugriff auf Tabellen zu verknüpfen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Tabellen.  

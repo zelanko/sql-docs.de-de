@@ -1,6 +1,6 @@
 ---
 title: CalculationPassValue (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 88d7d8c52105feb14c982586f9a819977fc81ed0
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: ca5966492ac83599cd4a053ea526e2ce366e4b0e
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34577232"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34739989"
 ---
 # <a name="calculationpassvalue-mdx"></a>CalculationPassValue (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Gibt entweder den numerischen oder den Zeichenfolgenwert eines MDX-Ausdrucks (Multidimensional Expressions) zurück, der über den angegebenen Berechnungsdurchlauf eines Cubes ausgewertet wird.  
   
@@ -55,7 +55,7 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
   
  Wenn ein Zeichenfolgenausdruck angegeben wird, die Funktion gibt einen Zeichenfolgenwert zurück, durch das Auswerten des angegebene MDX-Zeichenfolgenausdruck im angegebenen Berechnungsdurchlauf auswertet, und optional geändert durch ein Zugriffsflag und einen zugriffsflagmodifizierer *.*  
   
- Durch die automatische rekursionsauflösung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], diese Funktion hat kaum noch praktischen nutzen.  
+ Durch die automatische rekursionsauflösung in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], diese Funktion hat kaum noch praktischen nutzen.  
   
 > [!NOTE]  
 >  Nur Administratoren können die **CalculationPassValue** Funktion innerhalb eines MDX-Skripts. Wenn ein MDX-Skript mit dieser Funktion im Kontext einer Rolle ausgeführt wird, die nicht über Administratorprivilegien verfügt, tritt ein Fehler auf.  

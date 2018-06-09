@@ -1,8 +1,6 @@
 ---
 title: Verwalten von Sicherungen (OracleToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 76fe6ed52f7d321db361d5d13b718ac61a07cdec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a17cbc5aef7874555520db18464c79698ee41c30
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777326"
 ---
 # <a name="managing-backups-oracletosql"></a>Verwalten von Sicherungen (OracleToSQL)
 Oracle-Sicherungsverwaltung können Sie sichern und Wiederherstellen der Daten vor oder nach dem Ausführen eines Tests Tabelle. Sie können auch der Sicherungsinhalt Sicherungsinhalt verwalten Dialogfeld verwalten.  

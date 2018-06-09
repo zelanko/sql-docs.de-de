@@ -1,8 +1,6 @@
 ---
 title: Projekteinstellungen (Zuordnung) (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 523486520f1698c841d9c3e7a09d06fc23978b82
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8232193c56feb0a9403b9cebaad896c7dbef8ad9
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775286"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>Projekteinstellungen (Zuordnung) (DB2ToSQL)
 Die Seite "Type Mapping", der die **Projekteinstellungen** Dialogfeld enthält Einstellungen, anpassen, wie SSMA DB2-Datentypen in konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datentypen.  
@@ -35,7 +34,7 @@ Die Seite "Type Mapping" steht in der **Projekteinstellungen** und **Projekt Sta
   
 Verwenden Sie zum Angeben von Einstellungen für das aktuelle Objekt oder eine Klasse von Objekten der **Type Mapping** Registerkarte im primären SSMA-Fenster.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 Die folgende Tabelle zeigt die **Type Mapping** Registerkarte Optionen:  
   
 **Quelltyp**  
@@ -69,7 +68,7 @@ Die folgende Tabelle enthält die standardmäßige datentypzuordnung für Argume
 |BFILE|varbinary(max)|  
 |binary_double|"float" [53]|  
 |binary_float|"float" [53]|  
-|binary_integer|int|  
+|binary_integer|ssNoversion|  
 |Blob|varbinary(max)|  
 |boolean|bit|  
 |char|varchar(max)|  
@@ -77,13 +76,13 @@ Die folgende Tabelle enthält die standardmäßige datentypzuordnung für Argume
 |character|varchar(max)|  
 |character varying|varchar(max)|  
 |CLOB|varchar(max)|  
-|Datum|datetime2 [0]|  
+|date|datetime2 [0]|  
 |dec|dec[38][0]|  
 |Decimal|"float" [53]|  
 |mit doppelter Genauigkeit|"float" [53]|  
-|float|"float" [53]|  
-|int|int|  
-|integer|int|  
+|FLOAT|"float" [53]|  
+|ssNoversion|ssNoversion|  
+|integer|ssNoversion|  
 |long|varchar(max)|  
 |Long raw|varbinary(max)|  
 |Long raw [\*... 8000]<sup>*</sup>|Varbinary [*]|  
@@ -96,19 +95,19 @@ Die folgende Tabelle enthält die standardmäßige datentypzuordnung für Argume
 |NCHAR|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
 |number|"float" [53]|  
-|numeric|"float" [53]|  
+|NUMERIC|"float" [53]|  
 |NVARCHAR2|nvarchar(max)|  
-|pls_integer|int|  
+|pls_integer|ssNoversion|  
 |raw|varbinary(max)|  
-|real|"float" [53]|  
-|ROWID|uniqueidentifier|  
-|Signtype|smallint|  
-|smallint|smallint|  
+|REAL|"float" [53]|  
+|ROWID|UNIQUEIDENTIFIER|  
+|Signtype|SMALLINT|  
+|SMALLINT|SMALLINT|  
 |Zeichenfolge|varchar(max)|  
 |timestamp|datetime2|  
 |Zeitstempel mit der lokalen Zeitzone|datetimeoffset|  
 |Zeitstempel mit Zeitzone|datetimeoffset|  
-|UROWID|uniqueidentifier|  
+|UROWID|UNIQUEIDENTIFIER|  
 |varchar|varchar(max)|  
 |VARCHAR2|varchar(max)|  
 |xmltype|xml|  
@@ -133,7 +132,7 @@ Die folgende Tabelle enthält die Standard-Typzuordnung für Spalten.
 |unterschiedliche Zeichen [*.. \*]|Varchar [*]|  
 |Zeichen [*.. \*]|Char [*]|  
 |CLOB|varchar(max)|  
-|Datum|datetime2 [0]|  
+|date|datetime2 [0]|  
 |dec|dec[38][0]|  
 |DEC [*.. \*]|DEC [*] [0]|  
 |dec[*..\*][\*..\*]|dec[*][\*]|  
@@ -141,11 +140,11 @@ Die folgende Tabelle enthält die Standard-Typzuordnung für Spalten.
 |Dezimal [*.. \*]|Dezimal [*] [0]|  
 |Dezimal [*.. \*][\*.. \*]|Dezimal [*] [\*]|  
 |mit doppelter Genauigkeit|"float" [53]|  
-|float|"float" [53]|  
+|FLOAT|"float" [53]|  
 |"float" [*.. 53]|"float" [*]|  
 |"float" [54.. *]|"float" [53]|  
-|int|int|  
-|integer|int|  
+|ssNoversion|ssNoversion|  
+|integer|ssNoversion|  
 |long|varchar(max)|  
 |Long raw|varbinary(max)|  
 |Long raw [*.. 8000]|Varbinary [*]|  
@@ -165,22 +164,22 @@ Die folgende Tabelle enthält die Standard-Typzuordnung für Spalten.
 |number|"float" [53]|  
 |Anzahl [*.. \*]|numeric[*]|  
 |Anzahl [*.. \*][\*.. \*]|numeric[*][\*]|  
-|numeric|numeric|  
+|NUMERIC|NUMERIC|  
 |numerische [*.. \*]|numeric[*]|  
 |numerische [*.. \*][\*.. \*]|numeric[*][\*]|  
 |NVARCHAR2 [*.. \*]|Nvarchar [*]|  
 |Rohdaten [*.. \*]|Varbinary [*]|  
-|real|"float" [53]|  
-|ROWID|uniqueidentifier|  
-|smallint|smallint|  
+|REAL|"float" [53]|  
+|ROWID|UNIQUEIDENTIFIER|  
+|SMALLINT|SMALLINT|  
 |timestamp|datetime2|  
 |Zeitstempel mit der lokalen Zeitzone|datetimeoffset|  
 |Zeitstempel mit der lokalen Zeitzone [*.. \*]|"DateTimeOffset" [*]|  
 |Zeitstempel mit Zeitzone|datetimeoffset|  
 |Zeitstempel mit Zeitzone [*.. \*]|"DateTimeOffset" [*]|  
 |Zeitstempel [*.. \*]|datetime2 [*]|  
-|UROWID|uniqueidentifier|  
-|UROWID [*.. \*]|uniqueidentifier|  
+|UROWID|UNIQUEIDENTIFIER|  
+|UROWID [*.. \*]|UNIQUEIDENTIFIER|  
 |Varchar [*.. \*]|Varchar [*]|  
 |VARCHAR2 [*.. \*]|Varchar [*]|  
 |XmlType|xml|  
@@ -193,7 +192,7 @@ Die folgende Tabelle enthält die Standard-Typzuordnung für lokale Variablen.
 |BFILE|varbinary(max)|  
 |binary_double|"float" [53]|  
 |binary_float|"float" [53]|  
-|binary_interger|int|  
+|binary_interger|ssNoversion|  
 |Blob|varbinary(max)|  
 |Boolean|bit|  
 |Char|char|  
@@ -207,7 +206,7 @@ Die folgende Tabelle enthält die Standard-Typzuordnung für lokale Variablen.
 |Zeichen [*.. 8000]|Char [*]|  
 |Zeichen [8001.. *]|varchar(max)|  
 |CLOB|varchar(max)|  
-|Datum|datetime2 [0]|  
+|date|datetime2 [0]|  
 |dec|dec[38][0]|  
 |DEC [*.. \*]|DEC [*] [0]|  
 |dec[*..\*][\*..\*]|dec[*][\*]|  
@@ -215,11 +214,11 @@ Die folgende Tabelle enthält die Standard-Typzuordnung für lokale Variablen.
 |Dezimal [*.. \*]|Dezimal [*] [0]|  
 |Dezimal [*.. \*][\*.. \*]|Dezimal [*] [\*]|  
 |mit doppelter Genauigkeit|"float" [53]|  
-|Float|"float" [53]|  
+|float|"float" [53]|  
 |"float" [*.. 53]|"float" [*]|  
 |"float" [54.. *]|"float" [53]|  
-|int|int|  
-|Integer|int|  
+|int|ssNoversion|  
+|Integer|ssNoversion|  
 |ganze Zahl [*.. \*]|numerische [*] [0]|  
 |Long|varchar(max)|  
 |Long raw|varbinary(max)|  
@@ -249,13 +248,13 @@ Die folgende Tabelle enthält die Standard-Typzuordnung für lokale Variablen.
 |numerische [*.. \*][\*.. \*]|numeric[*][\*]|  
 |NVARCHAR2 [*.. 4000]|Nvarchar [*]|  
 |NVARCHAR2 [4001.. *]|nvarchar(max)|  
-|pls_integer|int|  
+|pls_integer|ssNoversion|  
 |Rohdaten [*.. 8000]|Varbinary [*]|  
 |Rohdaten [8001.. *]|varbinary(max)|  
 |Real|"float" [53]|  
-|ROWID|uniqueidentifier|  
-|Signtype|smallint|  
-|Smallint|smallint|  
+|ROWID|UNIQUEIDENTIFIER|  
+|Signtype|SMALLINT|  
+|Smallint|SMALLINT|  
 |Zeichenfolge [*.. 8000]|Varchar [*]|  
 |Zeichenfolge [8001.. *]|varchar(max)|  
 |timestamp|datetime2|  
@@ -264,8 +263,8 @@ Die folgende Tabelle enthält die Standard-Typzuordnung für lokale Variablen.
 |Zeitstempel mit der lokalen Zeitzone [*.. \*]|"DateTimeOffset" [*]|  
 |Zeitstempel mit Zeitzone [*.. \*]|"DateTimeOffset" [*]|  
 |Zeitstempel [*.. \*]|datetime2 [*]|  
-|UROWID|uniqueidentifier|  
-|UROWID [*.. \*]|uniqueidentifier|  
+|UROWID|UNIQUEIDENTIFIER|  
+|UROWID [*.. \*]|UNIQUEIDENTIFIER|  
 |Varchar [*.. 8000]|Varchar [*]|  
 |Varchar [8001.. *]|varchar(max)|  
 |VARCHAR2 [*.. 8000]|Varchar [*]|  

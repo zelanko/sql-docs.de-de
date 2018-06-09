@@ -1,8 +1,6 @@
 ---
 title: Herstellen einer Verbindung mit Azure SQL-Datenbank (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: caa08a1a450e53e42e2b27bad33a7610e65220bc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2092062d5409db561ba6b3f9055d180c8d10db48
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775686"
 ---
 # <a name="connecting-to-azure-sql-db-mysqltosql"></a>Herstellen einer Verbindung mit Azure SQL-Datenbank (MySQLToSQL)
 Um MySQL-Datenbanken zu SQL Azure zu migrieren, müssen Sie mit der Zielinstanz von SQL Azure verbinden. Wenn Sie eine Verbindung herstellen, wird SSMA Ruft Metadaten zu allen Datenbanken in der Instanz von SQL Azure ab und Datenbank-Metadaten in der SQL Azure-Metadaten-Explorer zeigt. SSMA speichert Informationen der Instanz von SQL Azure Sie verbunden sind, jedoch werden Kennwörter nicht gespeichert.  

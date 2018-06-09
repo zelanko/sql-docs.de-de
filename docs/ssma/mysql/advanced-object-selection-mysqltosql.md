@@ -1,8 +1,6 @@
 ---
 title: Erweiterte Objektauswahl (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ff84e14790640ccd117412ec734867d4d3837983
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3e71f671e49bc78f7739cc76c47eb535d76f6e31
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775536"
 ---
 # <a name="advanced-object-selection--mysqltosql"></a>Erweiterte Objektauswahl (MySQLToSQL)
 Die **Objektabschnitt erweiterte** Dialogfeld können Sie die Datenbankobjekte mithilfe von Zeichenfolgen und Teilzeichenfolgen in Objektnamen, Filtern und dann zu aktivieren oder deaktivieren diese Objekte. SSMA führt konvertieren und Migrieren von Vorgängen für ausgewählte Objekte.  
@@ -33,7 +32,7 @@ Wenn Sie das Dialogfeld zum ersten Mal öffnen, klicken Sie auf **Unterkategorie
   
 Bevor Sie dieses Dialogfeld verwenden, empfiehlt es sich, erzwingen von SSMA alle Metadaten durch Konvertieren von Schemas oder speichern das Projekt geladen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Überprüfen Sie alle Elemente**  
 Fügt ein Häkchen neben allen Elementen. Diese Elemente werden sofort in den Metadaten-Explorer ausgewählt werden.  
   

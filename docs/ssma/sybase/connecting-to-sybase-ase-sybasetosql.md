@@ -3,8 +3,6 @@ title: Herstellen einer Verbindung mit der Sybase ASE (SybaseToSQL) | Microsoft 
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,11 +18,12 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ac144d636536bac66f7330825f536f01200738b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2fb1bb6047dca0965d71e80b1042d9fe1d8bca97
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778456"
 ---
 # <a name="connecting-to-sybase-ase-sybasetosql"></a>Herstellen einer Verbindung mit der Sybase ASE (SybaseToSQL)
 Zum Migrieren von Datenbanken von Sybase Adaptive Server Enterprise (ASE) zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure, Sie müssen die Verbindung mit dem Adaptive Server mit den Datenbanken, die Sie migrieren möchten. Wenn Sie eine Verbindung herstellen, SSMA Ruft Metadaten zu allen Datenbanken auf dem Adaptive Server ab, und Sie werden Datenbankmetadaten in der Sybase-Metadaten-Explorer-Bereich angezeigt. SSMA speichert Informationen über den Datenbankserver, aber die Kennwörter werden nicht gespeichert.  

@@ -1,8 +1,6 @@
 ---
 title: Globale Einstellungen (Dialogfelder) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,18 +16,19 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f7d514991dc7af4ef7c030b47ed471d0eb4cddeb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f561631a965704f6c3eea05365db2249b42d5bf4
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774136"
 ---
 # <a name="global-settings-dialogs-accesstosql"></a>Globale Einstellungen (Dialogfelder) (AccessToSQL)
 Mithilfe der Dialogfelder Seite der **globale Einstellungen** (Dialogfeld), um die Standardaktion für Benutzer und die Warnung-Einstellungen für SSMA anzugeben.  
   
 Die Einstellungen des Dialogfelds für den Zugriff auf die **Tools** klicken Sie im Menü **globale Einstellungen**, klicken Sie auf **GUI** am unteren Rand des linken Bereich, und klicken Sie dann wählen **Dialoge**.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Migrations-Assistent beim Start anzeigen**  
 In SSMA für Access, haben Sie eine Option zum Aktivieren oder deaktivieren Sie **Paketmigrations-Assistent** beim Start von SSMA-Anwendung. Standardmäßig ist diese Option **"true"**.  
   

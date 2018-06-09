@@ -1,24 +1,26 @@
 ---
-title: Lektion 5 trainieren, und speichern Sie ein Modell mithilfe des T-SQL | Microsoft Docs
+title: Lektion 5 trainieren, und speichern Sie ein Modell mithilfe von R und T-SQL (SQL Server-Machine Learning) | Microsoft Docs
+description: Lernprogramm zur Einbettung von R in SQL Server gespeicherte Prozeduren und Funktionen des T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4d8bedd65e150d94c6030ea6c9c9fc6483bdaafd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bd5bdc7d256a22dbab6662a74dc39073892dbb4d
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35250063"
 ---
 # <a name="lesson-5-train-and-save-a-model-using-t-sql"></a>Lektion 5: Trainieren Sie, und speichern Sie ein Modell mithilfe des T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel ist Teil eines Lernprogramms für SQL-Entwicklern zum Verwenden von R in SQL Server.
 
-In dieser Lektion erfahren Sie, wie Sie ein Machine Learning-Modell zu trainieren, mithilfe von r Sie Trainieren des Modells mithilfe der Data-Features, die Sie gerade erstellt haben, und speichern Sie dann das trainierte Modell in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle. In diesem Fall werden die R-Pakete mit bereits installiert [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], sodass alle Funktionen von SQL erfolgen kann.
+In dieser Lektion erfahren Sie, wie Sie ein Machine Learning-Modell zu trainieren, mithilfe von r Sie Trainieren des Modells mithilfe der Data-Features, die Sie in der vorherigen Lektion erstellt haben, und speichern Sie dann das trainierte Modell in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle. In diesem Fall werden die R-Pakete mit bereits installiert [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], sodass alle Funktionen von SQL erfolgen kann.
 
 ## <a name="create-the-stored-procedure"></a>Erstellen Sie die gespeicherte Prozedur
 
@@ -80,7 +82,7 @@ Da die gespeicherte Prozedur, die bereits eine Definition der Eingabedaten enth�
     EXEC TrainTipPredictionModel
     ```
 
-2. Überwachen der **Nachrichten** Zeitfenster [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] für Nachrichten, die an der R weitergeleitet werden würde **"stdout"** Stream, wie diese Messaage: 
+2. Überwachen der **Nachrichten** Zeitfenster [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] für Nachrichten, die an der R weitergeleitet werden würde **"stdout"** Stream, wie diese Meldung: 
 
     "Stdout-Meldung(en) aus dem externen Skript: Gelesene Zeilen: 1193025, insgesamt Zeilen verarbeitet: 1193025, Segment Gesamtzeit: 0.093 Sekunden"
 
@@ -104,5 +106,5 @@ Im nächsten Schritt verwenden Sie das trainierte Modell zum Erstellen von Vorhe
 
 ## <a name="previous-lesson"></a>Vorherige Lektion
 
-[Lektion 4: Erstellen von Data-Funktionen, die mithilfe des T-SQL](..//tutorials/sqldev-create-data-features-using-t-sql.md)
+[Lektion 4: Erstellen von Data-Funktionen, die mit R und T-SQL-Funktionen](..//tutorials/sqldev-create-data-features-using-t-sql.md)
 

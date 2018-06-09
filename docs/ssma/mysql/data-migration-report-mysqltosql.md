@@ -1,8 +1,6 @@
 ---
 title: Migration Datenbericht (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,20 +16,21 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c9ffe3c71bca0ef6fbd439a4f29ae0e8703901fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: db7d1b46e61ba2f658e08a29e4484b36c912d855
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775996"
 ---
 # <a name="data-migration-report--mysqltosql"></a>Migration Datenbericht (MySQLToSQL)
 Die **Daten Migrationsbericht** Dialogfeld wird angezeigt, nach dem Migrieren von Daten an [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Status**  
 Zeigt den Status der Datenmigration von der Quell-in die Zieldatenbank.  
   
-**Von**  
+**From**  
 Die Quelltabelle.  
   
 **Aktion**  

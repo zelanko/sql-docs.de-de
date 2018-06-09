@@ -1,8 +1,6 @@
 ---
 title: Globale Einstellungen (Protokollierung) (OracleToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,18 +13,19 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 072beda7133350d0061d9bf921fd23b034fe8a70
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fb59fd7a35ec14639c8c74b28a5d6660b6a00e95
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777260"
 ---
 # <a name="global-settings-logging-oracletosql"></a>Globale Einstellungen (Protokollierung) (OracleToSQL)
 Verwenden der **globale Einstellungen** (Dialogfeld), um die protokollierungseinstellungen für SSMA anzugeben. In der Regel ändern Sie diese Einstellungen nur bei der Arbeit mit Microsoft Support Services.  
   
 Zum Zugriff auf dieses Dialogfeld, in dem **Tools** klicken Sie im Menü **globale Einstellungen** , und klicken Sie dann auf die **Protokollierung** unten im linken Bereich.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Nachrichten-Ebene**  
 Die folgenden Optionen sind verfügbar unter **Nachrichten Ebene**:  
   

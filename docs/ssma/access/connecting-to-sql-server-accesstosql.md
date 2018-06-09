@@ -1,8 +1,6 @@
 ---
 title: Herstellen einer Verbindung mit SQLServer (AccessToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -30,11 +28,12 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 5dcda82bcfbdd8c0120158025e9ba476df704c2e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8130650ac55171207ab663b40a73a5940efc112b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773366"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>Herstellen einer Verbindung mit SQLServer (AccessToSQL)
 Zum Migrieren von Access-Datenbanken zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], Sie müssen die Verbindung mit der Zielinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Wenn Sie eine Verbindung herstellen, erhält SSMA Metadaten zu den Datenbanken in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] und zeigt Sie Datenbank-Metadaten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadaten-Explorer. SSMA speichert Informationen zu welcher Instanz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Sie verbunden sind, jedoch werden Kennwörter nicht gespeichert.  

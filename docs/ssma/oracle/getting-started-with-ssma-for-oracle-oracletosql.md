@@ -1,8 +1,6 @@
 ---
 title: Erste Schritte mit SSMA für Oracle (OracleToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 7979226878df0f30983d262c69b74dfc439eaab3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8cb4d61015eb680c4841a88de174548d56ab8f4e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777261"
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>Erste Schritte mit SSMA für Oracle (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) für Oracle können Sie schnell, konvertieren Sie Oracle-Datenbankschemas auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Schemas Hochladen der resultierenden Schemas in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] und Migrieren von Daten aus Oracle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  

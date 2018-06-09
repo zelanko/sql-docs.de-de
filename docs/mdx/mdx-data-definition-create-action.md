@@ -1,42 +1,23 @@
 ---
 title: CREATE ACTION-Anweisung (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CREATE ACTION
-- Action
-- CREATE
-- CREATE_ACTION
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- invocation types [MDX]
-- dimensions [Analysis Services], actions
-- CREATE ACTION statement
-- cubes [Analysis Services], actions
-- actions [MDX]
-- hierarchies [Analysis Services], actions
-ms.assetid: 0419f349-ece2-42ba-8552-a1023f268a41
-caps.latest.revision: 36
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: dbb6e815e1cc9c66706641c16a9e169bb217ad6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 762c2c1cc18d67ccafb05b0f61d213e5215de8b2
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741289"
 ---
 # <a name="mdx-data-definition---create-action"></a>MDX-Datendefinition - Aktion zu erstellen
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Erstellt eine Aktion, die einem Cube, einer Dimension, einer Hierarchie oder einem untergeordneten Objekt zugeordnet werden kann.  
   
@@ -95,10 +76,10 @@ FOR
  Es ist möglich, dass Clientanwendungen unsichere Aktionen erstellen und ausführen oder unsichere Funktionen verwenden. Um diese Situationen zu vermeiden, verwenden die **Safety Options** Eigenschaft. Weitere Informationen finden Sie im Abschnitt zur Safety Options-Eigenschaft.  
   
 > [!NOTE]  
->  Diese Anweisung wird nur aus Gründen der Abwärtskompatibilität bereitgestellt. Aktionen, die noch nicht mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], z. B. Drillthrough- oder berichtsaktionen, werden nicht unterstützt.  
+>  Diese Anweisung wird nur aus Gründen der Abwärtskompatibilität bereitgestellt. Aktionen, die noch nicht mit [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], z. B. Drillthrough- oder berichtsaktionen, werden nicht unterstützt.  
   
 ## <a name="action-types"></a>Aktionstypen  
- Die folgende Tabelle beschreibt die verschiedenen Typen von verfügbaren Aktionen im [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+ Die folgende Tabelle beschreibt die verschiedenen Typen von verfügbaren Aktionen im [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 |Aktionstyp|Description|  
 |-----------------|-----------------|  
@@ -119,7 +100,7 @@ FOR
 |**ON_OPEN**|Die Aktion sollte von der Clientanwendung aufgerufen werden, wenn das Zielobjekt geöffnet wird. Dieser Aufruftyp ist zurzeit nicht implementiert.|  
 |**BATCH**|Die Aktion sollte von der Clientanwendung aufgerufen werden, wenn das Zielobjekt an einem von der Clientanwendung bestimmten Batchvorgang beteiligt ist. Dieser Aufruftyp ist zurzeit nicht implementiert.|  
   
-### <a name="scope"></a>Scope  
+### <a name="scope"></a>Bereich  
  Jede Aktion ist für einen bestimmten Cube definiert und besitzt einen eindeutigen Namen innerhalb des Cubes. Eine Aktion kann für einen der Bereiche in der folgenden Tabelle gelten.  
   
  Cubebereich  

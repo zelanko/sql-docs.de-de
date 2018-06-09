@@ -1,8 +1,6 @@
 ---
 title: Projekteinstellungen (Konvertierung) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f5e2bb08277adfcb2a4d609a92a726db6220552d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0d910b3d32f9ff05571fd965d29ac3028cc43144
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774566"
 ---
 # <a name="project-settings-conversion-accesstosql"></a>Projekteinstellungen (Konvertierung) (AccessToSQL)
 Die Konvertierung projekteinstellungen können Sie konfigurieren, wie Objekte aus den Zugriff auf Datenbankobjekte zu umgewandelt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Datenbankobjekte.  
@@ -36,7 +35,7 @@ Bereich Konvertierung finden Sie in der **Projekteinstellungen** und **Projekt S
   
 -   Verwenden der **Projekt Standardeinstellungen** (Dialogfeld), Konfigurationsoptionen für alle Projekte festzulegen. Zum Zugriff auf den Konvertierungseinstellungen für die in den **Tools** klicken Sie im Menü **Projekt Standardeinstellungen**, Migrationstyp-Projekt für die Einstellungen erforderlich sind, angezeigt oder geändert werden, wählen **Migration Zielversion** Dropdown-Liste, klicken Sie auf **allgemeine** am unteren Rand des linken Bereich, und klicken Sie dann wählen **Konvertierung**.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Primärschlüssel hinzufügen**  
 Erstellt einen neuen primären Schlüssel in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Tabelle, wenn eine Access-Tabelle ohne Primärschlüssel oder eindeutigen Index verfügt.  
   

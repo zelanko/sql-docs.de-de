@@ -1,6 +1,6 @@
 ---
 title: DRILLTHROUGH-Anweisung (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4f5b56c03ec6e575b647ed7eecaf26d35bfae047
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 82dd8a9527b85350cae31396ad4d238ef1c8c850
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580062"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742279"
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>Datenbearbeitung für MDX - DRILLTHROUGH
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Ruft die zugrunde liegenden Tabellenzeilen ab, die zum Erstellen einer bestimmten Zelle in einem Cube verwendet wurden.  
   
@@ -43,7 +43,7 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
  Eine Liste mit durch Trennzeichen getrennten Dimensionsattributen und Measures  
   
 ## <a name="remarks"></a>Hinweise  
- Drillthrough ist ein Vorgang, bei dem ein Endbenutzer eine einzelne Zelle in einem Cube auswählt und ein Resultset aus den Quelldaten dieser Zelle abruft, um detailliertere Informationen zu erhalten. Standardmäßig wird ein Drillthrough-Resultset aus den Tabellenzellen abgeleitet, die zur Berechnung des Werts der ausgewählten Cubezelle ausgewertet wurden. Endbenutzer können einen Drillthrough nur dann durchführen, wenn die Clientanwendung diese Funktion unterstützt. In [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], die Ergebnisse direkt aus dem MOLAP-Speicher abgerufen werden, es sei denn, die ROLAP-Partition oder-Dimension abgefragt werden.  
+ Drillthrough ist ein Vorgang, bei dem ein Endbenutzer eine einzelne Zelle in einem Cube auswählt und ein Resultset aus den Quelldaten dieser Zelle abruft, um detailliertere Informationen zu erhalten. Standardmäßig wird ein Drillthrough-Resultset aus den Tabellenzellen abgeleitet, die zur Berechnung des Werts der ausgewählten Cubezelle ausgewertet wurden. Endbenutzer können einen Drillthrough nur dann durchführen, wenn die Clientanwendung diese Funktion unterstützt. In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], die Ergebnisse direkt aus dem MOLAP-Speicher abgerufen werden, es sei denn, die ROLAP-Partition oder-Dimension abgefragt werden.  
   
 > [!IMPORTANT]  
 >  Die Drillthrough-Sicherheit basiert auf den für den Cube definierten allgemeinen Sicherheitsoptionen. Erhält ein Benutzer auf bestimmte Daten keinen Zugriff über MDX, ist sein Zugriff über Drillthrough auf genau die gleiche Weise eingeschränkt.  

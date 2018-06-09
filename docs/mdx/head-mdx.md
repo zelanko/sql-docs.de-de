@@ -1,34 +1,23 @@
 ---
 title: Head (MDX) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- HEAD
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Head function
-ms.assetid: 2a909bda-1366-4537-93b0-c089554fc11f
-caps.latest.revision: 35
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: b0e25718c55dbe433bd34438b459aed31b2097f9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 05cfcb3c23a0369f010b8440d4a27e94ffacdb21
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740479"
 ---
 # <a name="head-mdx"></a>Head (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Gibt die erste angegebene Anzahl von Elementen aus einer Menge zurück, wobei doppelte Werte beibehalten werden.  
   
@@ -43,7 +32,7 @@ Head(Set_Expression [ ,Count ] )
  *Set_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
- *Count*  
+ *Anzahl*  
  Ein gültiger numerischer Ausdruck, der die Anzahl der Tupel angibt, die zurückgegeben werden sollen.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -71,6 +60,6 @@ FROM [Adventure Works]
  [Element &#40;Tupel&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md)   
  [Element &#40;Member&#41; &#40;MDX&#41;](../mdx/item-member-mdx.md)   
  [Rang &#40;MDX&#41;](../mdx/rank-mdx.md)   
- [MDX-Funktionsreferenz & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

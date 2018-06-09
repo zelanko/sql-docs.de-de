@@ -1,8 +1,6 @@
 ---
 title: Bewertungsbericht (AccessToSQL) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,18 +19,19 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d5d2d79c47dd1a819e602e55aad36844445e6c79
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c9a7cdcd7df17e17b61ec867da6ea02f9bb1c5c3
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773266"
 ---
 # <a name="assessment-report-accesstosql"></a>Bewertungsbericht (AccessToSQL)
 Assessment Berichtfenster zeigt die Ergebnisse der Konvertierung von Datenbankobjekten zu [!INCLUDE[tsql](../../includes/tsql_md.md)] Syntax, und kann ebenfalls dazu beitragen, die Sie schätzen, die Komplexität und Kosten der Migrationsprojekte.  
   
 So erstellen Sie einen Assessment-Bericht ausgewählten Objekten, die für die Konvertierung in der Quelle Metadaten-Explorer Maustaste **Datenbanken**, und wählen Sie dann **Bericht erstellen**. Sie können in diesem Bericht auch automatisch angezeigt, nachdem Sie Schemas konvertieren. Allerdings wird der Berichtsname Konvertierungsbericht sein. Weitere Informationen finden Sie unter [Projekt Einstellungen (GUI) (SSMA häufigen Spalten)](http://msdn.microsoft.com/en-us/cf06baf1-8714-48a3-95dc-781f6ca53693).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Explorer-Bereich**  
 Enthält eine Hierarchie von Objekten in den Bewertungsbericht. Erweitern Sie die Ordner, um die einzelnen Objekte und Unterkomponenten anzeigen. Wenn Sie eine Kategorie oder ein Objekt klicken, werden die Konvertierungsstatistiken für diese Kategorie oder ein Objekt im Detailbereich angezeigt.  
   

@@ -1,6 +1,6 @@
 ---
 title: StDev (MDX) | Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d6b788d972ade8ef8cbd44b738b55d97f5cd3130
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: a1ef1d720928298e8a44e075f45937903d178ef6
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34581072"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743039"
 ---
 # <a name="stdev-mdx"></a>Stdev (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Gibt die Stichproben-Standardabweichung eines über einer Menge ausgewerteten numerischen Ausdrucks zurück, die mithilfe der Formel für die ausgewogene Auffüllung (geteilt durch n-1) berechnet wurde.  
   
