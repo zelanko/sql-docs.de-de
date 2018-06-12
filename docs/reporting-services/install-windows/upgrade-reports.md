@@ -1,7 +1,7 @@
 ---
-title: Aktualisieren von Berichten | Microsoft-Dokumentation
+title: Upgraden von Berichten (SSRS) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/30/2017
+ms.date: 06/04/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: install-windows
@@ -24,27 +24,26 @@ caps.latest.revision: 70
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3ae563ddf9c21fc0add692493504dd7ccbdd09fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 569a67511ecf28a4e9800182f823719d47e61120
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771826"
 ---
-# <a name="upgrade-reports"></a>Upgrade Reports
+# <a name="upgrade-reports-ssrs"></a>Upgraden von Berichten (SSRS)
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
-  Berichtsdefinitionsdateien (RDL) werden auf folgende Weise automatisch aktualisiert:  
+Berichtsdefinitionsdateien (RDL) werden auf folgende Weise automatisch aktualisiert:  
   
--   Wenn Sie einen Bericht im Berichts-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]öffnen, wird die Berichtsdefinition auf das derzeit unterstützte RDL-Schema aktualisiert. Wenn Sie in den Projekteigenschaften als Berichtsserver [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]oder [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] angeben, wird die Berichtsdefinition in einem Schema gespeichert, das mit dem Zielserver kompatibel ist.  
+-   Wenn Sie einen paginierten Bericht im Berichts-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] öffnen, wird die Berichtsdefinition auf das derzeit unterstützte RDL-Schema aktualisiert. Wenn Sie in den Projekteigenschaften als Berichtsserver [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]oder [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] angeben, wird die Berichtsdefinition in einem Schema gespeichert, das mit dem Zielserver kompatibel ist.  
   
 -   Wenn Sie eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Installation auf eine [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] -Installation aktualisieren, werden vorhandene Berichte und Momentaufnahmen, die auf einem Berichtsserver veröffentlicht wurden, kompiliert und automatisch auf das neue Schema aktualisiert, wenn sie zum ersten Mal verarbeitet werden. Wenn ein Bericht nicht automatisch aktualisiert werden kann, wird er im Abwärtskompatibilitätsmodus verarbeitet. Die Berichtsdefinition bleibt im ursprünglichen Schema erhalten.  
   
- Berichte werden nicht aktualisiert, wenn Sie eine Berichtsdefinitionsdatei direkt auf den Berichtsserver oder auf eine SharePoint-Website hochladen. Das Upgrade einer Berichtsdefinition in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ist die einzige Möglichkeit, die RDL-Datei zu aktualisieren.  
-  
  Nachdem ein Bericht lokal oder auf dem Berichtsserver aktualisiert wurde, werden möglicherweise weitere Fehler, Warnungen und Meldungen angezeigt. Das ist das Ergebnis der Änderungen am internen Berichtsobjektmodell und an Verarbeitungskomponenten, die das Anzeigen von Meldungen bewirken, sobald zugrunde liegende Probleme im Bericht erkannt werden. Weitere Informationen finden Sie unter [Reporting Services Backward Compatibility](../../reporting-services/reporting-services-backward-compatibility.md).  
   
- Weitere Informationen zu neuen Funktionen für [!INCLUDE[ssRSCurrent](../what-s-new-in-sql-server-reporting-services-ssrs.md).  
+ Weitere Informationen zu neuen Features für [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] finden Sie unter [Neues in SQL Server Reporting Services (SSRS)](../what-s-new-in-sql-server-reporting-services-ssrs.md).  
 
 ##  <a name="bkmk_versionsupported"></a> Vom Upgrade unterstützte Versionen  
  Berichte, die in einer vorherigen Version von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] erstellt wurden, können aktualisiert werden. Dazu gehören die folgenden Versionen:  
@@ -109,7 +108,7 @@ ms.lasthandoff: 05/03/2018
  Weitere Informationen zum Identifizieren des aktuellen RDL-Namespace für einen Berichtsserver, für [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] oder für einem Bericht finden Sie unter [Suchen der Berichtsdefinitions-Schemaversion (SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
 ### <a name="upgrading-reports-on-a-report-server"></a>Aktualisieren eines Berichts auf einem Berichtsserver  
- Wenn ein [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-, [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]-, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]- oder [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht erstmals auf einem Berichtsserver ausgeführt wird, der auf einen [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] -Berichtsserver aktualisiert wurde, wird der Bericht automatisch auf den aktuellen, vom Berichtsserver unterstützten Berichtsdefinitionsnamespace aktualisiert. Der Bericht kann vor dem Upgrade auf dem Berichtsserver vorhanden gewesen sein, oder der Bericht kann mit dem Berichts-Manager hochgeladen oder vom Berichts-Designer in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]oder [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]auf dem Berichtsserver veröffentlicht worden sein.  
+ Wenn ein [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-, [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]-, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]- oder [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht erstmals auf einem Berichtsserver ausgeführt wird, der auf einen [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] -Berichtsserver aktualisiert wurde, wird der Bericht automatisch auf den aktuellen, vom Berichtsserver unterstützten Berichtsdefinitionsnamespace aktualisiert. Der Bericht kann vor dem Upgrade auf dem Berichtsserver vorhanden gewesen sein, oder der Bericht kann über das Webportal hochgeladen oder vom Berichts-Designer in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]oder [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] auf dem Berichtsserver veröffentlicht worden sein.  
   
  In der folgenden Tabelle werden die Upgradeaktionen aufgeführt, die vom Berichtsserver für bestimmte Typen von CRIs in einem Bericht ausgeführt werden.  
   

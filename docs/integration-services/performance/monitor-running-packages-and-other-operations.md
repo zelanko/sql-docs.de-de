@@ -1,7 +1,7 @@
 ---
 title: Überwachen der Ausführung von Paketen und anderen Vorgängen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: performance
@@ -19,11 +19,12 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ed3dff81ab07e210b9b239987fc2a7c9c2c52b2a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e2b5a991661e3aa53de611a0cf78e04b2a6d23b5
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772144"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Überwachen der Ausführung von Paketen und anderen Vorgängen
   Sie können [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketausführungen, Projektüberprüfungen und andere Vorgänge mit einem oder mehreren der folgenden Tools überwachen. Bestimmte Tools, z. B. Datenabzweigungen, sind nur für Projekte verfügbar, die auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitgestellt werden.  
@@ -45,7 +46,12 @@ ms.lasthandoff: 05/03/2018
      Weitere Informationen finden Sie unter [Performance Counters](../../integration-services/performance/performance-counters.md).  
   
 -   Datenabzweigungen  
-  
+
+> [!NOTE]
+> In diesem Artikel wird beschrieben, wie Sie ausgeführte SSIS-Pakete allgemein und lokal überwachen. Sie können SSIS-Pakete auch in Azure SQL-Datenbank ausführen und überwachen. Weitere Informationen finden Sie unter [Migration von SQL Server Integration Services-Workloads in die Cloud per Lift und Shift](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+>
+> Sie können SSIS-Pakete zwar auch unter Linux ausführen, dort werden jedoch keine Überwachungstools bereitgestellt. Weitere Informationen finden Sie unter [Extrahieren, Transformieren und Laden von Daten unter Linux mit SSIS](../../linux/sql-server-linux-migrate-ssis.md).
+
 ## <a name="operation-types"></a>Vorgangstypen  
  Mehrere verschiedene Typen von Vorgängen werden im **SSISDB** -Katalog auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server überwacht. Jeder Vorgang kann mehrere ihm zugeordnete Meldungen aufweisen. Jede Meldung kann einem von mehreren Typklassen zugeordnet werden. Eine Meldung kann z. B. vom Typ Information, Warnung oder Fehler sein. Die vollständige Liste von Meldungstypen finden Sie in der Dokumentation zur Transact-SQL-Sicht [catalog.operation_messages &#40;SSISDB-Datenbank&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md). Eine vollständige Liste der Vorgangstypen finden Sie unter [catalog.operations &#40;SSISDB-Datenbank&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md).  
   
@@ -135,7 +141,7 @@ ms.lasthandoff: 05/03/2018
   
  Der Bericht zeigt die folgenden Abschnitte von Informationen an.  
   
-|Abschnitt|Description|  
+|Abschnitt|und Beschreibung|  
 |-------------|-----------------|  
 |**Ausführungsinformationen**|Zeigt die Anzahl von Ausführungen an, die in den vergangenen 24 Stunden unterschiedliche Status (fehlerhaft, ausgeführt, erfolgreich, andere) aufgewiesen haben.|  
 |**Paketinformationen**|Zeigt die Gesamtanzahl der Pakete, die in den letzten 24 Stunden ausgeführt wurden.|  
@@ -149,7 +155,7 @@ ms.lasthandoff: 05/03/2018
   
  Der Bericht zeigt die folgenden Abschnitte von Informationen an.  
   
-|Abschnitt|Description|  
+|Abschnitt|und Beschreibung|  
 |-------------|-----------------|  
 |Filter|Zeigt den aktuellen Filter an, der für den Bericht verwendet wird, z. B. der Startzeitraum.|  
 |Ausführungsinformationen|Zeigt die Startzeit, die Endzeit und die Dauer für jede Paketausführung an. Sie können eine Liste der Parameterwerte anzeigen, die bei einer Paketausführung verwendet wurden, z. B. Werte, die mit dem Task "Paket ausführen" an ein untergeordnetes Paket übergeben wurden. Um die Parameterliste anzuzeigen, klicken Sie auf "Übersicht".|  
@@ -163,7 +169,7 @@ ms.lasthandoff: 05/03/2018
   
  Der Bericht zeigt die folgenden Abschnitte von Informationen an.  
   
-|Abschnitt|Description|  
+|Abschnitt|und Beschreibung|  
 |-------------|-----------------|  
 |Filtern|Zeigt den aktuellen Filter an, der für den Bericht verwendet wird, z. B. Verbindungen mit einer angegebenen Zeichenfolge und dem Bereich **Uhrzeit des letzten Fehlers** .<br /><br /> Sie legen den Bereich **Uhrzeit des letzten Fehlers** fest, um lediglich Verbindungsfehler anzuzeigen, die während eines Datumsbereichs aufgetreten sind. Der Bereich kann mehrere Tage, Monate oder Jahre umfassen.|  
 |Details|Zeigt die Verbindungszeichenfolge, die Anzahl der Ausführungen, bei denen eine Verbindung nicht hergestellt werden konnte, und das Datum an, wann die Verbindung zuletzt nicht hergestellt werden konnte.|  

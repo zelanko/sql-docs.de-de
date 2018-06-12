@@ -3,7 +3,6 @@ title: Schreibgeschützte Verfügbarkeitsgruppen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/24/2017
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -11,19 +10,20 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ''
 caps.latest.revision: 9
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dca3919c6ec8b74342122a750da6d4b77e37d93c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ee88654a69d926c2d467876d9e9e7c4f824d0b49
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34769416"
 ---
 # <a name="read-scale-availability-groups"></a>Schreibgeschützte Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Eine Verfügbarkeitsgruppe ist eine umfassende Lösung, die hohe Verfügbarkeit für SQL Server bereitstellt und darüber hinaus integrierte Skalierungslösungen bietet. In einer typischen Datenbankanwendung führen mehrere Clients verschiedene Arten von Arbeitsauslastung aus. Manchmal können sich Engpässe aufgrund von Ressourceneinschränkungen entwickeln. Sie können Ressourcen freigeben und einen höheren Durchsatz für den OLTP-Workload erreichen. Ferner können Sie höhere Leistung und Skalierung für schreibgeschützte Workloads bereitstellen. Nutzen Sie dazu die schnellste Technologie zur Replikation für SQL Server, und erstellen Sie eine Gruppe replizierter Datenbanken, um die Berichterstellung und Analyseworkloads in schreibgeschützte Replikate auszulagern. 
+Eine Verfügbarkeitsgruppe ist eine umfassende Lösung, die hohe Verfügbarkeit für SQL Server bereitstellt und darüber hinaus integrierte Skalierungslösungen bietet. In einer typischen Datenbankanwendung führen mehrere Clients verschiedene Arten von Arbeitsauslastung aus. Manchmal können sich Engpässe aufgrund von Ressourceneinschränkungen entwickeln. Sie können Ressourcen freigeben und einen höheren Durchsatz für den OLTP-Workload erreichen. Ferner können Sie höhere Leistung und Skalierung für schreibgeschützte Workloads bereitstellen. Nutzen Sie dazu die schnellste Technologie zur Replikation für SQL Server, und erstellen Sie eine Gruppe replizierter Datenbanken, um die Berichterstellung und Analyseworkloads in schreibgeschützte Replikate auszulagern.
 
 Mit Verfügbarkeitsgruppen kann mindestens ein sekundäres Replikat so konfiguriert werden, dass es den schreibgeschützten Zugriff auf sekundäre Datenbanken unterstützt.
 
@@ -31,12 +31,12 @@ Die Clientanwendungen, die Analysen durchführen oder Berichte zu Workloads erst
 
 ## <a name="read-scale-availability-groups-without-cluster"></a>Schreibgeschützte Verfügbarkeitsgruppen ohne Cluster
 
-In [!INCLUDE[sssql15-md](..\..\..\includes\sssql15-md.md)] und früher war für alle Verfügbarkeitsgruppen ein Cluster erforderlich. Der Cluster hat für Geschäftskontinuität gesorgt: Hochverfügbarkeit und Notfallwiederherstellung (HADR). Darüber hinaus wurden für Lesevorgänge sekundäre Replikate konfiguriert. Wenn hohe Verfügbarkeit nicht das eigentliche Ziel darstellte, bedeuteten die Konfiguration und der Betrieb eines Clusters einen erheblichen Mehraufwand im Betrieb. SQL Server 2017 führt schreibgeschützte Verfügbarkeitsgruppen ohne Cluster ein. 
+In [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] und früher war für alle Verfügbarkeitsgruppen ein Cluster erforderlich. Der Cluster hat für Geschäftskontinuität gesorgt: Hochverfügbarkeit und Notfallwiederherstellung (HADR). Darüber hinaus wurden für Lesevorgänge sekundäre Replikate konfiguriert. Wenn hohe Verfügbarkeit nicht das eigentliche Ziel darstellte, bedeuteten die Konfiguration und der Betrieb eines Clusters einen erheblichen Mehraufwand im Betrieb. SQL Server 2017 führt schreibgeschützte Verfügbarkeitsgruppen ohne Cluster ein. 
 
 Wenn es eine Unternehmensanforderung ist, die Ressourcen unternehmenskritischer Workloads aufrechtzuerhalten, die auf dem primären Replikat ausgeführt werden, können Sie jetzt das schreibgeschützte Routing verwenden oder eine direkte Verbindung zu lesbaren sekundären Replikaten herstellen. Sie müssen sich nicht auf die Integration von Clustertechnologie einlassen. Diese Funktionen sind für SQL Server 2017 unter Windows- und Linux-Plattformen verfügbar.
 
 >[!IMPORTANT]
->Dabei handelt es sich nicht um eine Einrichtung mit hoher Verfügbarkeit. Es gibt keine Infrastruktur zur Überwachung und Koordinierung der Fehlererkennung und eines automatischen Failovers. Ohne einen Cluster kann SQL Server nicht die niedrige Zielsetzung für die Wiederherstellungszeit (RTO, Recovery time objective) gewährleisten, die eine automatisierte Hochverfügbarkeitslösung bereitstellt. Wenn Sie hohe Verfügbarkeit benötigen, verwenden Sie einen Cluster-Manager (Windows Server Failover Clustering unter Windows oder Pacemaker unter Linux). 
+>Dabei handelt es sich nicht um eine Einrichtung mit hoher Verfügbarkeit. Es gibt keine Infrastruktur zur Überwachung und Koordinierung der Fehlererkennung und eines automatischen Failovers. Ohne einen Cluster kann SQL Server nicht die niedrige Zielsetzung für die Wiederherstellungszeit (RTO, Recovery time objective) gewährleisten, die eine automatisierte Hochverfügbarkeitslösung bereitstellt. Wenn Sie hohe Verfügbarkeit benötigen, verwenden Sie einen Cluster-Manager (Windows Server Failover Clustering unter Windows oder Pacemaker unter Linux).
 >
 >Die schreibgeschützte Verfügbarkeitsgruppe kann Funktionen für die Notfallwiederherstellung bereitstellen. Wenn sich die schreibgeschützten Replikate im synchronen Commitmodus befinden, bieten diese eine RPO (Recovery point objective) von 0 (null). Weitere Informationen zum Ausführen eines Failovers einer schreibgeschützten Verfügbarkeitsgruppe finden Sie unter [Ausführen eines Failovers des primären Replikats auf einer schreibgeschützten Verfügbarkeitsgruppe](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md#ReadScaleOutOnly).
 
@@ -49,11 +49,11 @@ Eine einzelne verteilte Verfügbarkeitsgruppe kann bis zu 17 lesbare sekundäre 
 
 
 
-## <a name="next-steps"></a>Nächste Schritte 
+## <a name="next-steps"></a>Nächste Schritte
 
 [Konfigurieren von schreibgeschützten Verfügbarkeitsgruppen unter Linux](../../../linux/sql-server-linux-availability-group-configure-rs.md)
+[Configure a read-scale availability group on Windows (Konfigurieren von schreibgeschützten Verfügbarkeitsgruppen unter Windows)](configure-read-scale-availability-groups.md)
 
-## <a name="see-also"></a>Siehe auch 
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 
-  
-  
+## <a name="see-also"></a>Siehe auch
+
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
