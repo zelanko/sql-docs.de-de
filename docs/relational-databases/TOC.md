@@ -92,10 +92,8 @@
 
 # [Tutorials](database-engine-tutorials.md)  
 
-## 
-  [Erste Schritte mit der Datenbank-Engine](tutorial-getting-started-with-the-database-engine.md)  
-### 
-  [Lektion 1: Herstellen einer Verbindung mit der Datenbank-Engine](lesson-1-connecting-to-the-database-engine.md)  
+## [Erste Schritte mit der Datenbank-Engine](tutorial-getting-started-with-the-database-engine.md)  
+### [Lektion 1: Herstellen einer Verbindung mit der Datenbank-Engine](lesson-1-connecting-to-the-database-engine.md)  
 ### [Lektion 2: Herstellen einer Verbindung von einem anderen Computer](lesson-2-connecting-from-another-computer.md)  
 
 ## [SQL Server-Sicherung und -Wiederherstellung mit dem Azure-BLOB-Speicherdienst](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  

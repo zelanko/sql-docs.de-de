@@ -107,7 +107,7 @@ Beim Berechnen des Rückgabewerts verwendet `DATEDIFF` keine Komponente von *sta
   
 Da [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) nur auf die Minute genaue Werte zurückgibt, werden im Rückgabewert die Sekunden und Millisekunden immer auf 0 (null) festgelegt, wenn *startdate* oder *enddate* einen **smalldatetime**-Wert aufweist.
   
-Wenn der Variablen eines Datumsdatentyps nur ein Uhrzeitwert zugewiesen ist, legt `DATEDIFF` den Wert für den fehlenden Datumsteil auf den Standardwert fest: 1900-01-01. Wenn der Variablen eines Uhrzeit- oder Datumsdatentyps nur ein Datumswert zugewiesen ist, legt `DATEDIFF` den Wert des fehlenden Uhrzeitteils auf den Standardwert fest: 00:00:00. Wenn entweder *startdate* oder *enddate* nur über einen Uhrzeitteil und der andere nur über einen Datumsteil verfügen, legt `DATEDIFF` für die fehlenden Uhrzeit- und Datumsteile die Standardwerte fest.
+Wenn der Variablen eines Datumsdatentyps nur ein Uhrzeitwert zugewiesen ist, legt `DATEDIFF` den Wert für den fehlenden Datumsteil auf den Standardwert fest: 1900-01-01. Wenn der Variablen eines Uhrzeit- oder Datumsdatentyps nur ein Datumswert zugewiesen ist, legt `DATEDIFF` den Wert des fehlenden Uhrzeitteils auf den Standardwert fest: 00:00:00. Wenn entweder *startdate* oder *enddate* nur über einen Uhrzeitteil und der andere nur über einen Datumsteil verfügt, legt `DATEDIFF` für die fehlenden Uhrzeit- und Datumstypen die Standardwerte fest.
   
 Wenn *startdate* und *enddate* unterschiedliche Datumsdatentypen aufweisen und ein Datentyp mehr Uhrzeitteile oder eine höhere Genauigkeit bezüglich der Bruchteile von Sekunden aufweist als der andere Teil, legt `DATEDIFF` für die fehlenden Teile des anderen Datentyps 0 (null) fest.
   
