@@ -25,16 +25,17 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 57a2175b3c4096ab9af7203d7f7d3733947f8e78
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f9e1e678fba7a2b2d24a85f4d57f1112b3d4cb8
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779476"
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Entschlüsselt Daten mit einem symmetrischen Schlüssel.  
+Diese Funktion verwendet einen symmetrischen Schlüssel zum Entschlüsseln von Daten.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,38 +48,36 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *ciphertext*  
- Mit dem Schlüssel verschlüsselte Daten. *ciphertext* ist vom Datentyp **varbinary**.  
+*ciphertext*  
+Eine Variable vom Typ **varbinary**, die Daten enthält, die mit dem Schlüssel verschlüsselt wurden.  
   
- **@ciphertext**  
- Eine Variable vom Datentyp **varbinary** , in der die mit dem Schlüssel verschlüsselten Daten enthalten sind.  
+**@ciphertext**  
+Eine Variable vom Typ **varbinary**, die Daten enthält, die mit dem Schlüssel verschlüsselt wurden.  
   
  *add_authenticator*  
- Gibt an, ob zusammen mit dem Nur-Text auch ein Authentifikator verschlüsselt wurde. Dies muss derselbe Wert sein, der beim Verschlüsseln der Daten an EncryptByKey übergeben wurde. *add_authenticator* ist vom Datentyp **int**.  
+Gibt an, ob durch den ursprünglichen Verschlüsselungsprozess ein Authentifikator zusammen mit dem Klartext einbezogen und verschlüsselt wurde. Muss mit dem Wert übereinstimmen, der während der Datenverschlüsselung an [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) übergeben wurde. *add_authenticator* verfügt über einen **int**-Datentyp.  
   
  *authenticator*  
- Die Daten, aus denen ein Authentifikator generiert werden soll. Dies muss derselbe Wert sein, der an EncryptByKey übergeben wurde. *authenticator* ist vom Datentyp **sysname**.  
-  
- **@authenticator**  
- Eine Variable, die Daten enthält, aus denen ein Authentifikator generiert werden soll. Dies muss derselbe Wert sein, der an EncryptByKey übergeben wurde.  
-  
+Die Daten, die als Grundlage für die Generierung des Authentifikators verwendet werden. Diese müssen mit dem Wert übereinstimmen, der für [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) bereitgestellt wurde. *authenticator* verfügt über einen **sysname**-Datentyp.  
+
+**@authenticator**  
+Eine Variable, die Daten für die Generierung durch den Authentifikator enthält. Diese müssen mit dem Wert übereinstimmen, der für [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) bereitgestellt wurde. *@authenticator* verfügt über einen **sysname**-Datentyp.  
+
 ## <a name="return-types"></a>Rückgabetypen  
- **varbinary** mit einer maximalen Größe von 8.000 Bytes.
- 
-Gibt NULL zurück, wenn der symmetrische Schlüssel, der für das Verschlüsseln der Daten verwendet wurde, nicht geöffnet ist oder *ciphertext* den Wert NULL aufweist.
+**varbinary** mit einer maximalen Größe von 8.000 Byte. `DECRYPTBYKEY` gibt NULL zurück, wenn der für die Datenverschlüsselung verwendete symmetrische Schlüssel nicht geöffnet ist oder wenn *ciphertext* den Wert NULL aufweist.  
   
 ## <a name="remarks"></a>Remarks  
- DecryptByKey verwendet einen symmetrischen Schlüssel. Dieser symmetrische Schlüssel muss bereits in der Datenbank geöffnet sein. Es können mehrere Schlüssel gleichzeitig geöffnet sein. Der Schlüssel muss nicht unmittelbar vor dem Entschlüsseln von verschlüsseltem Text geöffnet werden.  
+`DECRYPTBYKEY` verwendet einen symmetrischen Schlüssel. Dieser symmetrische Schlüssel muss in der Datenbank bereits geöffnet sein. `DECRYPTBYKEY` lässt zu, dass mehrere Schlüssel gleichzeitig geöffnet sind. Der Schlüssel muss nicht unmittelbar vor dem Entschlüsseln von verschlüsseltem Text geöffnet werden.  
   
- Die symmetrische Ver- und Entschlüsselung erfolgt relativ schnell und kann auch bei großen Datenmengen verwendet werden.  
+Die symmetrische Ver- und Entschlüsselung erfolgt in der Regel relativ schnell und eignet sich gut für Vorgänge, die große Datenmengen umfassen.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert, dass der symmetrische Schlüssel in der aktuellen Sitzung geöffnet wurde. Weitere Informationen finden Sie unter [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md).  
+Dieser symmetrische Schlüssel muss in der aktuellen Sitzung bereits geöffnet sein. Weitere Informationen finden Sie unter [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md).  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-decrypting-by-using-a-symmetric-key"></a>A. Entschlüsseln mit einem symmetrischen Schlüssel  
- Im folgenden Beispiel wird verschlüsselter Text mit einem symmetrischen Schlüssel entschlüsselt.  
+In diesem Beispiel wird verschlüsselter Text mit einem symmetrischen Schlüssel entschlüsselt.  
   
 ```  
 -- First, open the symmetric key with which to decrypt the data.  
@@ -98,7 +97,7 @@ GO
 ```  
   
 ### <a name="b-decrypting-by-using-a-symmetric-key-and-an-authenticating-hash"></a>B. Entschlüsseln mit einem symmetrischen Schlüssel und einem Authentifizierungshash  
- Im folgenden Beispiel werden Daten entschlüsselt, die zusammen mit einem Authentifikator verschlüsselt wurden.  
+In diesem Beispiel werden Daten entschlüsselt, die ursprünglich zusammen mit einem Authentifikator verschlüsselt wurden.  
   
 ```  
 -- First, open the symmetric key with which to decrypt the data  

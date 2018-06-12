@@ -24,16 +24,17 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 98b08c914c0eb74e55d2d3c8a9e032432391a054
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d0ac0821494677a42766c340f4d1e75ff9661711
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779486"
 ---
 # <a name="decryptbyasymkey-transact-sql"></a>DECRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Entschlüsselt Daten mit einem asymmetrischen Schlüssel.  
+Diese Funktion verwendet einen asymmetrischen Schlüssel zum Entschlüsseln verschlüsselter Daten.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,28 +48,28 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
   
 ## <a name="arguments"></a>Argumente  
  *Asym_Key_ID*  
- Die ID eines asymmetrischen Schlüssels in der Datenbank. *Asym_Key_ID* ist vom Datentyp **int**.  
+Die ID eines asymmetrischen Schlüssels in der Datenbank. *Asym_Key_ID* weist den Datentyp **int** auf.  
   
  *ciphertext*  
- Eine Zeichenfolge mit Daten, die mit dem asymmetrischen Schlüssel verschlüsselt wurden.  
+Die Zeichenfolge der Daten, die mit dem asymmetrischen Schlüssel verschlüsselt wurden.  
   
  @ciphertext  
- Eine Variable vom Typ **varbinary** , die Daten enthält, die mit dem asymmetrischen Schlüssel verschlüsselt wurden.  
+Eine Variable vom Typ **varbinary**, die Daten enthält, die mit dem asymmetrischen Schlüssel verschlüsselt wurden.  
   
  *Asym_Key_Password*  
- Das Kennwort, mit dem der asymmetrische Schlüssel in der Datenbank verschlüsselt wurde.  
+Das Kennwort, mit dem der asymmetrische Schlüssel in der Datenbank verschlüsselt wurde.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **varbinary** mit einer maximalen Größe von 8.000 Bytes.  
+**varbinary** mit einer maximalen Größe von 8.000 Byte.  
   
 ## <a name="remarks"></a>Remarks  
- Das Verschlüsseln/Entschlüsseln mit einem asymmetrischen Schlüssel ist im Vergleich zum Verschlüsseln/Entschlüsseln mit einem symmetrischen Schlüssel sehr teuer. Von einem asymmetrischen Schlüssel wird abgeraten, wenn Sie große Datasets wie z. B. Benutzerdaten in Tabellen verwenden.  
+Im Vergleich zur symmetrischen Verschlüsselung/Entschlüsselung ist die Verschlüsselung/Entschlüsselung mit asymmetrischen Schlüsseln kostspielig. Wenn Sie mit großen Datasets arbeiten (z.B. in Tabellen gespeicherte Benutzerdaten), wird empfohlen, dass Entwickler die Verschlüsselung/Entschlüsselung mit asymmetrischen Schlüsseln vermeiden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die CONTROL-Berechtigung für den asymmetrischen Schlüssel.  
+`DECRYPTBYASYMKEY` erfordert die CONTROL-Berechtigung für den asymmetrischen Schlüssel.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird verschlüsselter Text entschlüsselt, der mit dem asymmetrischen Schlüssel `JanainaAsymKey02`verschlüsselt wurde, der in `AdventureWorks2012.ProtectedData04`gespeichert war. Die zurückgegebenen Daten werden mit dem asymmetrischen Schlüssel `JanainaAsymKey02`entschlüsselt, der mit dem Kennwort `pGFD4bb925DGvbd2439587y`entschlüsselt wurde. Der Nur-Text wird in den Datentyp **nvarchar**konvertiert.  
+In diesem Beispiel wird Chiffretext entschlüsselt, der ursprünglich mit dem asymmetrischen Schlüssel `JanainaAsymKey02` verschlüsselt wurde. Dieser asymmetrische Schlüssel ist in `AdventureWorks2012.ProtectedData04` gespeichert. Im Beispiel wurden die zurückgegebenen Daten mit dem asymmetrischen Schlüssel `JanainaAsymKey02` entschlüsselt. Im Beispiel wurde das Kennwort `pGFD4bb925DGvbd2439587y` verwendet, um diesen asymmetrischen Schlüssel zu entschlüsseln. Im Beispiel wurde der zurückgegebenen Klartext in den Typ **nvarchar** konvertiert.  
   
 ```  
 SELECT CONVERT(nvarchar(max),  

@@ -1,7 +1,7 @@
 ---
 title: Ausführen von Integration Services-Paketen (SSIS) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 12/16/2016
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: packages
@@ -27,18 +27,20 @@ caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fe9d96b588130d1b4bab8e611dc2e0143ab457c9
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: bfe2420cace44b4bc83844ed61898008d4d8fffb
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455603"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771856"
 ---
 # <a name="run-integration-services-ssis-packages"></a>Ausführen von Integration Services-Paketen (SSIS)
   Zum Ausführen eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets können Sie, abhängig vom Speicherort dieser Pakete, unterschiedliche Tools verwenden. Die Tools werden in der Tabelle unten aufgeführt.  
 
 > [!NOTE]
-> Seit dem Release von SQL Server für Linux können Sie auch SSIS-Pakete unter Linux ausführen. Weitere Informationen finden Sie unter [Extrahieren, Transformieren und Laden von Daten unter Linux mit SSIS](../../linux/sql-server-linux-migrate-ssis.md).
+> In diesem Artikel wird beschrieben, wie Sie SSIS-Pakete allgemein und Pakete lokal ausführen. Sie können SSIS-Pakete auch auf folgenden Plattformen ausführen:
+> - **Die Microsoft Azure-Cloud**. Weitere Informationen finden Sie unter [Migration von SQL Server Integration Services-Workloads in die Cloud per Lift und Shift](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md) und [Run an SSIS package in Azure (Ausführen eines SSIS-Pakets in Azure)](../lift-shift/ssis-azure-run-packages.md).
+> - **Linux**. Weitere Informationen finden Sie unter [Extrahieren, Transformieren und Laden von Daten unter Linux mit SSIS](../../linux/sql-server-linux-migrate-ssis.md).
   
  Zum Speichern eines Pakets auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server verwenden Sie das Projektbereitstellungsmodell, um das Projekt auf dem Server bereitzustellen. Weitere Informationen finden Sie unter [Bereitstellen von SQL Server Integration Services-Projekten und Paketen (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   

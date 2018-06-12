@@ -23,16 +23,17 @@ caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: d221859035c02156005bdbf36d0a39ff79297f6c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52bd6f1e2c6b0e6163325e6e3c83a4cbc7d2ac2f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779366"
 ---
 # <a name="x40x40dbts-transact-sql"></a>&#x40;&#x40;DBTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Gibt den aktuellen Wert vom Datentyp **timestamp** für die aktuelle Datenbank zurück. Dieser timestamp-Wert ist in der Datenbank definitiv nur einmal vorhanden.
+Diese Funkion gibt den aktuellen Wert vom Datentyp **timestamp** für die aktuelle Datenbank zurück. Die aktuelle Datenbank hat auf jeden Fall einen eindeutigen timestamp-Wert.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -46,12 +47,12 @@ Gibt den aktuellen Wert vom Datentyp **timestamp** für die aktuelle Datenbank z
 **varbinary**
   
 ## <a name="remarks"></a>Remarks  
-@@DBTS gibt den zuletzt verwendeten Timestampwert der aktuellen Datenbank zurück. Ein neuer Timestampwert wird generiert, wenn eine Zeile mit einer **timestamp** -Spalte eingefügt oder aktualisiert wird.
+@@DBTS gibt den zuletzt verwendeten Timestampwert der aktuellen Datenbank zurück. Ein neuer Timestampwert wird generiert, wenn eine Zeile mit einer **timestamp**-Spalte eingefügt oder aktualisiert wird.
   
 Die Funktion @@DBTS ist nicht von Änderungen der Transaktionsisolationsstufen betroffen.
   
 ## <a name="examples"></a>Beispiele  
-Das folgende Beispiel gibt den aktuellen **timestamp**-Wert aus der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurück.
+In diesem Beispiel wird der aktuelle **timestamp**-Wert aus der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurückgegeben.
   
 ```sql
 USE AdventureWorks2012;  

@@ -19,11 +19,12 @@ caps.latest.revision: 58
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a6bdd055cc32d6f01ec017f72c7caa8f503754f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3fdedcbb66bbf9c62a7001750c1dc149c4427cbb
+ms.sourcegitcommit: 99e355b71ff2554782f6bc8e0da86e6d9e3e0bef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34799830"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Wiederherstellen einer Datenbank zu einer Datenbank-Momentaufnahme
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Restrictions"></a> Einschränkungen  
  Die Wiederherstellung wird unter folgenden Bedingungen nicht unterstützt:  
   
--   Die Datenbank darf derzeit nur über eine Datenbank-Momentaufnahme verfügen, mit der die Wiederherstellung ausgeführt werden soll.  
+-   Für die Datenbank sind mehrere Momentaufnahmen vorhanden. Für die Wiederherstellung darf nur eine Momentaufnahme für die Datenbank vorhanden sein, auf der Sie die Wiederherstellung durchführen möchten.  
   
 -   Die Datenbank enthält schreibgeschützte oder komprimierte Dateigruppen.  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 05/03/2018
   
  Beachten Sie folgende Einschränkungen, bevor Sie eine Wiederherstellung aus einer Datenbank-Momentaufnahme ausführen:  
   
--   Die Wiederherstellung bezieht sich nicht auf die Wiederherstellung von Medien. zugreifen. Eine Datenbank-Momentaufnahme ist eine unvollständige Kopie der Datenbankdateien. Wenn also die Datenbank oder die Datenbank-Momentaufnahme beschädigt wurde, ist die Wiederherstellung aus einer Momentaufnahme wahrscheinlich unmöglich. Zudem ist es eher unwahrscheinlich, dass das Problem durch eine Wiederherstellung im Falle einer Beschädigung behoben wird, selbst wenn eine Wiederherstellung möglich ist. Regelmäßige Sicherungen und Tests des Wiederherstellungsplans sind deshalb für den Schutz einer Datenbank unverzichtbar. Weitere Informationen finden Sie unter [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
+-   Die Wiederherstellung bezieht sich nicht auf die Wiederherstellung von Medien. Eine Datenbank-Momentaufnahme ist eine unvollständige Kopie der Datenbankdateien. Wenn also die Datenbank oder die Datenbank-Momentaufnahme beschädigt wurde, ist die Wiederherstellung aus einer Momentaufnahme wahrscheinlich unmöglich. Zudem ist es eher unwahrscheinlich, dass das Problem durch eine Wiederherstellung im Falle einer Beschädigung behoben wird, selbst wenn eine Wiederherstellung möglich ist. Regelmäßige Sicherungen und Tests des Wiederherstellungsplans sind deshalb für den Schutz einer Datenbank unverzichtbar. Weitere Informationen finden Sie unter [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
     > [!NOTE]  
     >  Wenn Sie die Quelldatenbank zu dem Zeitpunkt wiederherstellen müssen, an dem Sie eine Datenbank-Momentaufnahme erstellt haben, nutzen Sie das Modell der vollständigen Wiederherstellung, und implementieren Sie eine Sicherungsrichtlinie, die Ihnen dies ermöglicht.  

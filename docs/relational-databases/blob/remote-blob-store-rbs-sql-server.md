@@ -19,11 +19,12 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 270c8dafa42e45ecac226edda71237edc44c27f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d7fa5a31e0ffaafdff982fdfb64fd6f260624f70
+ms.sourcegitcommit: 99e355b71ff2554782f6bc8e0da86e6d9e3e0bef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34799820"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Remote Blob Store (RBS) (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="efficient-blob-management"></a>Effiziente Verwaltung von BLOBs  
  Mehrere RBS-Funktionen unterstützen die Verwaltung gespeicherter BLOBs:  
   
--   BLOBs werden mithilfe von ACID-Transaktionen (atomic consistency isolation durable; Unteilbarkeit, Konsistenz, Isolation, Dauerhaftigkeit) verwaltet.  
+-   BLOBs werden mithilfe von ACID-Transaktionen (atomic, consistent, isolatable, durable; Unteilbarkeit, Konsistenz, Isolation, Dauerhaftigkeit) verwaltet.  
   
 -   BLOBs sind in Auflistungen unterteilt.  
   

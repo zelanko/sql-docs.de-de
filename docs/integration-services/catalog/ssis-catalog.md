@@ -1,7 +1,7 @@
 ---
 title: SSIS-Katalog | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: service
@@ -20,15 +20,21 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0285d3dbaf5bd1ed5def180029a75c32fe4fcb83
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 711bc7d70060cc3e5b1ac9f6fa38187bc82a48de
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772666"
 ---
 # <a name="ssis-catalog"></a>SSIS-Katalog
   Der **SSISDB**-Katalog ist der zentrale Punkt zum Arbeiten mit [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]-Projekten (SSIS), die Sie auf dem [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]-Server bereitgestellt haben. Sie legen beispielsweise Projekt- und Paketparameter fest, konfigurieren Umgebungen, um Laufzeitwerte für Pakete anzugeben, führen Pakete aus, behandeln Paketprobleme und verwalten [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] -Servervorgänge.  
-  
+ 
+> [!NOTE]
+> In diesem Artikel wird der SSIS-Katalog allgemein beschrieben, und es wird auf einen lokalen SSIS-Katalog im Speziellen eingegangen. Sie können auch einen SSIS-Katalog in Azure SQL-Datenbank erstellen und SSIS-Pakete in Azure bereitstellen. Weitere Informationen finden Sie unter [Migration von SQL Server Integration Services-Workloads in die Cloud per Lift und Shift](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+>
+> Sie können SSIS-Pakete zwar unter Linux ausführen, der SSIS-Katalog wird allerdings nicht unter Linux unterstützt. Weitere Informationen finden Sie unter [Extrahieren, Transformieren und Laden von Daten unter Linux mit SSIS](../../linux/sql-server-linux-migrate-ssis.md).
+ 
  Die Objekte, die im **SSISDB** -Katalog gespeichert werden, umfassen Projekte, Pakete, Parameter, Umgebungen und Verwendungsverläufe.  
   
  Sie können Sichten in der **SSISDB** -Datenbank abfragen, um im **SSISDB** -Katalog gespeicherte Objekte, Einstellungen und operative Daten zu überprüfen. Sie verwalten die Objekte, indem Sie gespeicherte Prozeduren in der **SSISDB** -Datenbank oder über die Benutzeroberfläche des **SSISDB** -Katalogs aufrufen. In vielen Fällen kann der gleiche Task in der Benutzeroberfläche oder durch das Aufrufen einer gespeicherten Prozedur ausgeführt werden.  
@@ -381,7 +387,7 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags**erstellt SSIS die SQL Server-A
 #### <a name="options"></a>Tastatur  
  In der folgenden Tabelle werden spezifische Eigenschaften in dem Dialogfeld und die entsprechenden Eigenschaften in der catalog.catalog_property-Sicht beschrieben.  
   
-|Eigenschaftsname (Dialogfeld Katalogeigenschaften)|Eigenschaftsname (catalog.catalog_property-Sicht)|Description|  
+|Eigenschaftsname (Dialogfeld Katalogeigenschaften)|Eigenschaftsname (catalog.catalog_property-Sicht)|und Beschreibung|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
 |Name des Verschlüsselungsalgorithmus|ENCRYPTION_CLEANUP_ENABLED|Gibt den Verschlüsselungstyp an, der zur Verschlüsselung der sensiblen Parameterwerte im Katalog verwendet wird. Folgende Werte sind möglich:<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256 (Standard)|  
 |Überprüfungstimeout (Sekunden)|VALIDATION_TIMEOUT|Geben Sie die maximale Ausführungsdauer in Sekunden an, bevor eine Projekt- oder Paketüberprüfung beendet wird. Der Standardwert beträgt 300 Sekunden.<br /><br /> Die Validierung ist ein asynchroner Vorgang. Je größer das Projekt oder Paket ist, desto mehr Zeit nimmt die Validierung in Anspruch.<br /><br /> Informationen zum Überprüfen von Projekten und Paketen finden Sie unter [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).|  
