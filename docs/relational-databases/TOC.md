@@ -14,6 +14,7 @@
 ## [Thread and Task Architecture (Thread- und Taskarchitektur)](thread-and-task-architecture-guide.md)
 ## [Transaction Log Architecture and Management Guide (Handbuch zur Architektur und Verwaltung von Transaktionsprotokollen)](sql-server-transaction-log-architecture-and-management-guide.md)
 ## [Handbuch zu Transaktionssperren und Zeilenversionsverwaltung](sql-server-transaction-locking-and-row-versioning-guide.md)
+## [Bereinigungsprozess für inaktive Datensätze](ghost-record-cleanup-process-guide.md)
 
 # [Sichern und Wiederherstellen](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
 # [Blob](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)
@@ -91,8 +92,10 @@
 
 # [Tutorials](database-engine-tutorials.md)  
 
-## [Erste Schritte mit dem Datenbankmodul](tutorial-getting-started-with-the-database-engine.md)  
-### [Lektion 1: Herstellen einer Verbindung mit dem Datenbankmodul](lesson-1-connecting-to-the-database-engine.md)  
+## 
+  [Erste Schritte mit der Datenbank-Engine](tutorial-getting-started-with-the-database-engine.md)  
+### 
+  [Lektion 1: Herstellen einer Verbindung mit der Datenbank-Engine](lesson-1-connecting-to-the-database-engine.md)  
 ### [Lektion 2: Herstellen einer Verbindung von einem anderen Computer](lesson-2-connecting-from-another-computer.md)  
 
 ## [SQL Server-Sicherung und -Wiederherstellung mit dem Azure-BLOB-Speicherdienst](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  

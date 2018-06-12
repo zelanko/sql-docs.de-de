@@ -30,11 +30,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1e1a05133d905e6211cded5afc46dba8db75757f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe1bbff7ae50d44885c061eee1550adc78f1df11
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582562"
 ---
 # <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -66,7 +67,22 @@ SET ANSI_NULLS ON
  Wenn SET ANSI_NULLS auf OFF festgelegt ist, folgen die Vergleichsoperatoren Gleich (=) und Ungleich (<>) nicht dem ISO-Standard. Eine SELECT-Anweisung, in der WHERE *column_name* = **NULL** verwendet wird, gibt die Zeilen zurück, die NULL-Werte in *column_name* enthalten. Eine SELECT-Anweisung, die WHERE *column_name* <> **NULL** verwendet, gibt die Zeilen mit Werten ungleich NULL in der Spalte zurück. Außerdem gibt eine SELECT-Anweisung, in der *column_name* <> *XYZ_value* verwendet wird, alle Zeilen zurück, die nicht gleich *XYZ_value* und nicht NULL sind.  
   
  Wenn SET ANSI_NULLS auf ON festgelegt ist, werden alle Vergleiche mit einem NULL-Wert zu UNKNOWN ausgewertet. Wenn SET ANSI_NULLS auf OFF festgelegt ist, werden alle Datenvergleiche mit einem NULL-Wert zu TRUE ausgewertet, falls der Datenwert NULL ist. Falls SET ANSI_NULLS nicht angegeben ist, gilt die Einstellung der Option ANSI_NULLS der aktuellen Datenbank. Weitere Informationen zur Datenbankoption ANSI_NULLS finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+
+ Die folgende Tabelle stellt dar, wie die Einstellung von ANSI_NULLS die Ergebnisse mehrerer boolescher Ausdrücke mithilfe von NULL-Werten und Werten ungleich NULL beeinflusst.  
   
+|Boolescher Ausdruck|SET ANSI_NULLS ON|SET ANSI_NULLS OFF|  
+|---------------|---------------|------------|  
+|NULL = NULL|UNKNOWN|TRUE|  
+|1 = NULL|UNKNOWN|FALSE|  
+|NULL <> NULL|UNKNOWN|FALSE|  
+|1 <> NULL|UNKNOWN|TRUE|  
+|NULL > NULL|UNKNOWN|UNKNOWN|  
+|1 > NULL|UNKNOWN|UNKNOWN|  
+|NULL IS NULL|TRUE|TRUE|  
+|1 IS NULL|FALSE|FALSE|  
+|NULL IS NOT NULL|FALSE|FALSE|  
+|1 IS NOT NULL|TRUE|TRUE|  
+
  SET ANSI_NULLS ON hat nur dann Auswirkungen auf einen Vergleich, wenn einer der Operanden des Vergleichs entweder eine Variable, die NULL ist, oder ein Literal NULL ist. Falls beide Seiten des Vergleichs Spalten oder zusammengesetzte Ausdrücke sind, hat die Einstellung keine Auswirkungen auf den Vergleich.  
   
  Ein Skript wird unabhängig von der Datenbankoption ANSI_NULLS und der Einstellung von SET ANSI_NULLS wie beabsichtigt ausgeführt, wenn Sie IS NULL und IS NOT NULL in Vergleichen verwenden, die möglicherweise NULL-Werte enthalten.  

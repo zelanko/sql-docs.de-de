@@ -27,11 +27,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 23119e2fafd68797b15a9baf525d52906f311178
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c6cd03ce43fd2b0a2fd454681e64edbd49e5f87a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34467976"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Handbuch zur Architektur und Verwaltung von Transaktionsprotokollen in SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -138,7 +139,7 @@ Weitere Informationen zu den Argumenten `FILEGROWTH` und `SIZE` von `ALTER DATAB
   
  Um die Funktionsweise des Write-Ahead-Protokolls zu verstehen, müssen Sie zunächst wissen, wie geänderte Daten auf den Datenträger geschrieben werden. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwaltet einen Puffercache, in den Datenseiten gelesen werden, wenn Daten abgerufen werden müssen. Eine Seite, die im Puffercache geändert wurde, wird nicht sofort auf den Datenträger geschrieben, sondern als *geändert*markiert. Auf einer Datenseite können mehrere logische Schreibvorgänge ausgeführt werden, bevor sie physisch auf den Datenträger geschrieben wird. Für jeden logischen Schreibvorgang wird ein Transaktionsprotokoll-Datensatz in den Protokollcache geschrieben, der die Änderung aufzeichnet. Die Protokolldatensätze müssen auf den Datenträger geschrieben werden, bevor die zugehörige modifizierte Seite aus dem Puffercache entfernt und auf den Datenträger geschrieben wird. Mit dem Prüfpunktprozess (checkpoint) wird der Puffercache regelmäßig auf Puffer mit Seiten aus einer angegebenen Datenbank überprüft, und alle modifizierten Seiten werden auf den Datenträger geschrieben. Durch Prüfpunkte kann bei einer späteren Wiederherstellung Zeit eingespart werden, da ein Punkt erstellt wird, an dem auf jeden Fall alle modifizierten Seiten auf den Datenträger geschrieben worden sind.  
   
- Wird eine geänderte Datenseite aus dem Puffercache auf den Datenträger geschrieben, wird dies als Leeren der Seite bezeichnet. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Durch die Logik von wird verhindert, dass eine geänderte Seite geleert wird, bevor der zugehörige Protokolldatensatz geschrieben wurde. Protokolldatensätze werden auf den Datenträger geschrieben, wenn ein Commit für die Transaktionen ausgeführt wird.  
+ Wird eine geänderte Datenseite aus dem Puffercache auf den Datenträger geschrieben, wird dies als Leeren der Seite bezeichnet. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Durch die Logik von wird verhindert, dass eine geänderte Seite geleert wird, bevor der zugehörige Protokolldatensatz geschrieben wurde. Protokolldatensätze werden auf den Datenträger geschrieben, wenn die Protokollpuffer geleert werden.  Dies geschieht immer dann, wenn eine Transaktion committet wird oder der Protokollpuffer voll wird.  
   
 ##  <a name="Backups"></a> Transaktionsprotokollsicherungen  
  In diesem Abschnitt werden Konzepte zum Sichern und Wiederherstellen (Anwenden) von Transaktionsprotokollen vorgestellt. Beim vollständigen und beim massenprotokollierten Wiederherstellungsmodell müssen zur Wiederherstellung von Daten routinemäßige Sicherungen der Transaktionsprotokolle (*Protokollsicherungen*) ausgeführt werden. Sie können das Protokoll sichern, während eine vollständige Sicherung ausgeführt wird. Weitere Informationen zu Wiederherstellungsmodellen finden Sie unter [Sichern und Wiederherstellen von SQL Server-Datenbanken](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  

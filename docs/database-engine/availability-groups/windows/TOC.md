@@ -61,6 +61,7 @@
 ### [Konfigurieren der Sicherung auf Replikaten](configure-backup-on-availability-replicas-sql-server.md)  
 ### [Konfigurieren verteilter Verfügbarkeitsgruppen](configure-distributed-availability-groups.md)
 ### [Konfigurieren für verteilte Transaktionen](configure-availability-group-for-distributed-transactions.md)
+### [Konfigurieren von schreibgeschützten Verfügbarkeitsgruppen](configure-read-scale-availability-groups.md)
 ### [Konfigurieren des schreibgeschützten Zugriffs auf Replikate](configure-read-only-access-on-an-availability-replica-sql-server.md)  
 ### [Konfigurieren des schreibgeschützten Routings](configure-read-only-routing-for-an-availability-group-sql-server.md)  
 ### [Entfernen des Listeners](remove-an-availability-group-listener-sql-server.md)  

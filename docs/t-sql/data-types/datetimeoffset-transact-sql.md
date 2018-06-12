@@ -28,11 +28,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5a86b7102b60c5485afe849f32d32cf8f369f159
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71483471c764f9af60208be2acd79bc77c89717b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550841"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +76,7 @@ Definiert ein auf dem 24-Stunden-Format basierendes Datum, das mit einer Uhrzeit
 ## <a name="supported-string-literal-formats-for-datetimeoffset"></a>Unterstützte Formate der Zeichenfolgenliterale für datetimeoffset
 In der folgenden Tabelle werden die unterstützten ISO 8601-Zeichenfolgenliterale für **datetimeoffset** aufgelistet. Informationen zu alphabetischen, numerischen und unstrukturierten Formaten sowie zu Zeitformaten für die Datums- und Uhrzeitteile von **datetimeoffset** finden Sie unter [date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md) und [time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md).
   
-|ISO 8601|Description|  
+|ISO 8601|und Beschreibung|  
 |---|---|
 |JJJJ-MM-TTThh:mm:ss[.nnnnnnn][{+&#124;-}hh:mm]|Diese beiden Formate werden nicht von den Gebietsschemaeinstellungen für Sitzungen SET LANGUAGE und SET DATEFORMAT beeinflusst. Leerzeichen zwischen **datetimeoffset**- und **datetime**-Teilen sind nicht zulässig.|  
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn]Z (UTC)|Dieses Format gibt gemäß ISO-Definition an, dass der **datetime**-Teil in koordinierter Weltzeit (Coordinated Universal Time; UTC) ausgedrückt werden soll. Beispiel: 1999-12-12 12:30:30.12345 -07:00 soll als 1999-12-12 19:30:30.12345Z dargestellt werden.|  

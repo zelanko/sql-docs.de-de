@@ -16,18 +16,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3d199b9822d591c10f1f4d9af232b9f74d7e8a81
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: b17fcc15be4c8faf496c469bb1e46fe2c6d42012
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550491"
 ---
 # <a name="alter-database-parallel-data-warehouse"></a>ALTER DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Ändert die Optionen für die maximale Datenbankgröße für replizierte Tabellen und verteilte Tabellen sowie für das Transaktionsprotokoll in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Verwenden Sie diese Anweisung, um die Speicherplatzzuordnungen für eine Datenbank zu verwalten, wenn sich diese vergrößert oder verkleinert.  
+  Ändert die Optionen für die maximale Datenbankgröße für replizierte Tabellen und verteilte Tabellen sowie für das Transaktionsprotokoll in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Verwenden Sie diese Anweisung, um die Speicherplatzzuordnungen für eine Datenbank zu verwalten, wenn sich diese vergrößert oder verkleinert. Darüber hinaus wird in diesem Thema die Syntax zum Festlegen von Datenbankoptionen in Parallel Data Warehouse beschrieben. 
   
- ![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol zum Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol zum Themenlink") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,7 +43,10 @@ ALTER DATABASE database_name
     AUTOGROW = { ON | OFF }  
     | REPLICATED_SIZE = size [GB]  
     | DISTRIBUTED_SIZE = size [GB]  
-    | LOG_SIZE = size [GB]  
+    | LOG_SIZE = size [GB]
+    | SET AUTO_CREATE_STATISTICS { ON | OFF }
+    | SET AUTO_UPDATE_STATISTICS { ON | OFF } 
+    | SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }
 }  
   
 <db_encryption_option> ::=  
@@ -67,10 +71,33 @@ ALTER DATABASE database_name
   
  ENCRYPTION { ON | OFF }  
  Legt fest, ob die Datenbank verschlüsselt (ON) oder nicht verschlüsselt (OFF) werden soll. Die Verschlüsselung kann nur für [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] konfiguriert werden, wenn [sp_pdw_database_encryption](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e) auf **1** festgelegt wurde. Ein Datenbank-Verschlüsselungsschlüssel muss erstellt werden, bevor Transparent Data Encryption konfiguriert werden kann. Weitere Informationen zur Datenbankverschlüsselung finden Sie unter [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+
+ SET AUTO_CREATE_STATISTICS { ON | OFF } Wenn die Option zum automatischen Erstellen von Statistiken, AUTO_CREATE_STATISTICS, auf ON festgelegt ist, erstellt der Abfrageoptimierer nach Bedarf Statistiken für einzelne Spalten im Abfrageprädikat, um Kardinalitätsschätzungen für den Abfrageplan zu verbessern. Diese Statistiken für einzelne Spalten werden für Spalten erstellt, die noch nicht über ein Histogramm in einem vorhandenen Statistikobjekt verfügen.
+
+ Bei neuen Datenbanken, die nach dem Upgrade auf AU7 erstellt wurden, ist die Option standardmäßig auf ON festgelegt. Bei Datenbanken, die vor dem Upgrade erstellt wurden, ist die Option standardmäßig auf OFF festgelegt. 
+
+ Weitere Informationen zu Statistiken finden Sie unter [Statistik](/sql/relational-databases/statistics/statistics)
+
+ SET AUTO_UPDATE_STATISTICS { ON | OFF } Wenn die Option zum automatischen Aktualisieren von Statistiken, AUTO_UPDATE_STATISTICS, auf ON festgelegt ist, stellt der Abfrageoptimierer fest, wann Statistiken möglicherweise veraltet sind, und aktualisiert diese Statistiken, sobald sie von einer Abfrage verwendet werden. Statistiken sind veraltet, wenn die Datenverteilung in der Tabelle oder indizierten Sicht durch die Vorgänge INSERT, UPDATE, DELETE oder MERGE geändert wurde. Der Abfrageoptimierer stellt fest, wann Statistiken veraltet sein könnten, indem er die Anzahl der Datenänderungen seit des letzten Statistikupdates ermittelt und sie mit einem Schwellenwert vergleicht. Der Schwellenwert basiert auf der Anzahl von Zeilen in der Tabelle oder indizierten Sicht.
+
+ Bei neuen Datenbanken, die nach dem Upgrade auf AU7 erstellt wurden, ist die Option standardmäßig auf ON festgelegt. Bei Datenbanken, die vor dem Upgrade erstellt wurden, ist die Option standardmäßig auf OFF festgelegt. 
+
+ Weitere Informationen zu Statistiken finden Sie unter [Statistik](/sql/relational-databases/statistics/statistics).
+
+
+ SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } Mit der Option für asynchrone Statistikupdates, AUTO_UPDATE_STATISTICS_ASYNC, wird festgelegt, ob der Abfrageoptimierer das synchrone oder asynchrone Statistikupdate verwendet. Die Option AUTO_UPDATE_STATISTICS_ASYNC gilt für Statistikobjekte, die für Indizes, einzelne Spalten in Abfrageprädikaten und mit der CREATE STATISTICS-Anweisung generierte Statistiken erstellt wurden.
+
+ Bei neuen Datenbanken, die nach dem Upgrade auf AU7 erstellt wurden, ist die Option standardmäßig auf ON festgelegt. Bei Datenbanken, die vor dem Upgrade erstellt wurden, ist die Option standardmäßig auf OFF festgelegt. 
+
+ Weitere Informationen zu Statistiken finden Sie unter [Statistik](/sql/relational-databases/statistics/statistics).
+
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Datenbank.  
   
+## <a name="error-messages"></a>Fehlermeldungen
+Wenn „auto-stats“ deaktiviert ist und Sie versuchen, die Statistikeinstellungen zu ändern, gibt PDW folgende Fehlermeldung aus: „This option is not supported in PDW“ (Diese Option wird in PDW nicht unterstützt.). Der Systemadministrator kann „auto-stats“ aktivieren, indem er den Featureschalter [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md) aktiviert.
+
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Die Werte für REPLICATED_SIZE, DISTRIBUTED_SIZE und LOG_SIZE können größer, gleich oder kleiner als die aktuellen Werte für die Datenbank sein.  
   
@@ -78,6 +105,8 @@ ALTER DATABASE database_name
  Vergrößerungs- und Verkleinerungsvorgänge sind ungenau. Die resultierenden tatsächlichen Größen können von den Größenparametern abweichen.  
   
  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] führt die ALTER DATABASE-Anweisung nicht als unteilbaren Vorgang aus. Wenn die Anweisung während der Ausführung abgebrochen wird, bleiben Änderungen, die bereits durchgeführt wurden, erhalten.  
+
+Die Statistikeinstellungen funktionieren nur, wenn der Administrator „auto-stats“ aktiviert hat.  Wenn Sie Administrator sind, aktivieren oder deaktivieren Sie „auto-stats“ mithilfe des Featureschalters [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md). 
   
 ## <a name="locking-behavior"></a>Sperrverhalten  
  Führt eine gemeinsame Sperre für das DATABASE-Objekt durch. Sie können eine Datenbank, die von einem anderen Benutzer im Lese- oder Schreibmodus verwendet wird, nicht ändern. Dies schließt auch Sitzungen ein, die eine [USE](http://msdn.microsoft.com/158ec56b-b822-410f-a7c4-1a196d4f0e15)-Anweisung für die Datenbank ausgeführt haben.  
@@ -165,6 +194,29 @@ ALTER DATABASE CustomerSales
 ALTER DATABASE CustomerSales  
     SET ( LOG_SIZE = 10 GB );  
 ```  
+
+### <a name="e-check-for-current-statistics-values"></a>E. Überprüfung auf aktuelle Statistikwerte
+
+Die folgende Abfrage gibt die aktuellen Statistikwerte für sämtliche Datenbanken zurück. Der Wert 1 bedeutet, dass das Feature aktiviert ist, und 0 (null) bedeutet, dass das Feature deaktiviert ist.
+
+```sql
+SELECT NAME,
+    is_auto_create_stats_on,
+    is_auto_update_stats_on,
+    is_auto_update_stats_async_on
+FROM sys.databases;
+```
+### <a name="f-enable-auto-create-and-auto-update-stats-for-a-database"></a>F. Aktivieren der automatischen Erstellung und des automatischen Updates von Statistiken für eine Datenbank
+Mit der folgenden Anweisung können Sie Statistiken zur automatischen und asynchronen Erstellung und Aktualisierung für die Datenbank „CustomerSales“ aktivieren.  Dadurch werden zur Erstellung hochwertiger Abfragepläne nach Bedarf einspaltige Statistiken erstellt und aktualisiert.
+
+```sql
+ALTER DATABASE CustomerSales
+    SET AUTO_CREATE_STATISTICS ON;
+ALTER DATABASE CustomerSales
+    SET AUTO_UPDATE_STATISTICS ON; 
+ALTER DATABASE CustomerSales
+    SET AUTO_UPDATE_STATISTICS_ASYNC ON;
+```
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/create-database-parallel-data-warehouse.md)   
