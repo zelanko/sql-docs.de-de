@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915555"
 ---
 # <a name="update-delete-and-insert-statements"></a>Update-, DELETE- und INSERT-Anweisungen
 SQL-basierte Anwendungen und nehmen Sie Änderungen an Tabellen durch Ausführen der **UPDATE**, **löschen**, und **einfügen** Anweisungen. Diese Anweisungen sind Teil der Konformitätsgrad des minimale SQL-Grammatik und von allen Treibern und Datenquellen unterstützt werden müssen.  

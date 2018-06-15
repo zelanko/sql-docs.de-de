@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32946955"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Führen Sie die gespeicherte Prozedur mit dem ODBC aufrufen und Verarbeiten von Ausgabe
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

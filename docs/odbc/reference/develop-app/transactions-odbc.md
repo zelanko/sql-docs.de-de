@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916295"
 ---
 # <a name="transactions-odbc"></a>ODBC-Transaktionen
 Ein *Transaktion* ist eine Arbeitseinheit, die als einzelne, atomaren Vorgang erfolgt; bedeutet, dass der Vorgang erfolgreich ist oder ein Fehler auftritt, als Ganzes. Betrachten Sie z. B. Geld von einem Bankkonto auf einen anderen übertragen. Dies umfasst zwei Schritte: das Geld vom ersten Konto das Abbuchen und es in der zweiten einzahlen. Es ist wichtig, dass beide Schritte erfolgreich sind. Es ist nicht akzeptabel ein Schritt erfolgreich ausgeführt werden kann und die andere fehlschlägt. Eine Datenbank, die Transaktionen unterstützt kann dies zu garantieren.  

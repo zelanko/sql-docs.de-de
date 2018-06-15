@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912045"
 ---
 # <a name="interface-conformance-levels"></a>Übereinstimmungsebenen-Schnittstelle
 Der Zweck der Abgleich ist auf die Anwendung darüber zu informieren, welche Funktionen, aus dem Treiber verfügbar sind. Ein fehlerisolierung Schema basierend auf Funktionen ist nicht ausreichend dieses Ziel erreichen. In ODBC 3. *x*, Treiber klassifiziert sind, basierend auf den Funktionen, die sie besitzen. Unterstützung der Funktion kann sind die Unterstützung der Funktion; Er kann auch die Unterstützung von einem Beschreibungsfeld, ein Anweisungsattribut, einen Wert "Y" für ein zurückgegebenes Informationstyp enthalten **SQLGetInfo**und so weiter.  

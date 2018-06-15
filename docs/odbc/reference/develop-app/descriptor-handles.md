@@ -32,6 +32,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912625"
 ---
 # <a name="descriptor-handles"></a>Deskriptorhandles
 Ein *Deskriptor* ist eine Auflistung von Metadaten, die den Parametern einer SQL-Anweisung oder die Spalten eines Resultsets beschreibt, von der Anwendung oder Treiber (auch bekannt als die *Implementierung*). Ein Deskriptor kann daher einer der vier Rollen ausfüllen:  

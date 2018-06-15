@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916724"
 ---
 # <a name="translation-dll-function-summary"></a>Zusammenfassung der Übersetzung DLL-Funktion
 Die folgende Tabelle beschreibt die Übersetzung von DLL-Funktionen. Weitere Informationen zur Syntax und Semantik für die einzelnen Funktionen finden Sie unter [Übersetzung DLL-Funktionsreferenz](../../../odbc/reference/syntax/translation-dll-api-reference.md).  

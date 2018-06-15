@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914375"
 ---
 # <a name="numeric-functions"></a>Numerische Funktionen
 Die folgende Tabelle beschreibt die numerische Funktionen, die in der ODBC-Skalarfunktion Menge enthalten sind. Durch Aufrufen von **SQLGetInfo** mit einem *Informationstyp* von SQL_NUMERIC_FUNCTIONS, kann eine Anwendung ermitteln, welche numerischen Funktionen von einem-Treiber unterstützt werden.  

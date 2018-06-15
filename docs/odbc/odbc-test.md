@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914505"
 ---
 # <a name="odbc-test"></a>ODBC-Test
 Testen Sie Microsoft® ODBC ist eine ODBC-fähige Anwendung, die Sie verwenden können, um ODBC-Treiber und der ODBC-Treiber-Manager zu testen. ODBC 3.51 enthält ANSI- und Unicode-kompatible Versionen der ODBC-Test. Die entsprechenden Dateien lauten wie folgt:  

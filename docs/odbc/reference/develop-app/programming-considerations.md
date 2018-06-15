@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913415"
 ---
 # <a name="programming-considerations"></a>Überlegungen zur Programmierung
 Dieser Abschnitt beschreibt kurz eine Reihe von Themen im Zusammenhang mit ODBC-Anwendungen und-Treiber schreiben.  

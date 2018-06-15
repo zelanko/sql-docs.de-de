@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913955"
 ---
 # <a name="statement-parameters"></a>Anweisungsparametern
 Ein *Parameter* ist eine Variable in einer SQL­Anweisung. Angenommen Sie, dass eine Parts-Tabelle Spalten PartID, Beschreibung und Price verfügt. Ein Teil ohne Parameter hinzufügen, müsste z. B. eine SQL-Anweisung erstellen:  

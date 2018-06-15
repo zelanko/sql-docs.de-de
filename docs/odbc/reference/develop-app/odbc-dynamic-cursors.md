@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912875"
 ---
 # <a name="odbc-dynamic-cursors"></a>ODBC-Cursorn
 Ein dynamischer Cursor handelt es sich um: dynamische. Sie können erkennen, dass alle Änderungen an der Mitgliedschaft, Reihenfolge und Werte des Resultsets nach dem Öffnen des Cursors. Nehmen wir beispielsweise an ein dynamischer Cursor ruft zwei Zeilen ab, und eine andere Anwendung klicken Sie dann eine dieser Zeilen aktualisiert und löscht die andere. Wenn der dynamische Cursor dann versucht, diese Zeilen erneut abzurufen, wird die gelöschte Zeile nicht gefunden, aber die neuen Werte für die aktualisierte Zeile zurück.  

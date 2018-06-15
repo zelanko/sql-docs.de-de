@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914755"
 ---
 # <a name="vertical-applications"></a>Vertikale Anwendungen
 Vertikale Anwendungen führen in der Regel eine klar definierte Aufgabe für eine einzelnes DBMS. Beispielsweise wird in eine Anwendung die Bestellungen in einem Unternehmen nachverfolgt. Was diese Anwendungstypen Gemeinsamkeit aufweisen, darin, dass das Datenbankschema in der Regel vom Anwendungsentwickler entwickelt wurde und die Anwendung mit einer Reihe von verschiedenen DBMS funktioniert, zwar möglicherweise generische Vergleich mit einer einzelnen DBMS für einen einzelnen Kunden funktioniert.  

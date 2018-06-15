@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32919125"
 ---
 # <a name="upgrading-a-35-driver-to-a-38-driver"></a>Aktualisieren eines 3.5 Treibers 3.8-Treiber
 Dieses Thema enthält Richtlinien und Überlegungen zum Upgrade von eines ODBC 3.5-Treibers auf ODBC 3.8-Treiber.  

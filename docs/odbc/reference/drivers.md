@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915195"
 ---
 # <a name="drivers"></a>Treiber
 *Treiber* sind Bibliotheken, die die Funktionen der ODBC-API zu implementieren. Jede bezieht sich auf ein bestimmtes DBMS; z. B. keinen Treiber für Oracle direkten Zugriff auf Daten in einer Informix-DBMS. Treiber verfügbar machen, das die Funktionen des zugrunde liegenden DBMS. Sie sind nicht erforderlich, zum Implementieren von Funktionen, die nicht vom DBMS unterstützt. Sollten Sie den Treiber z. B. wenn das zugrunde liegende DBMS outer-Joins dann weder nicht unterstützt. Nur wichtige Ausnahme ist, dass die Treiber für DBMS-Systeme, die keine eigenständigen Datenbankmodule, z. B. Xbase, eine Datenbank-Engine implementieren müssen, die mindestens eine minimale Menge an SQL unterstützt.  

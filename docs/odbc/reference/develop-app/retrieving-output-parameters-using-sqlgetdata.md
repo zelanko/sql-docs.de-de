@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913865"
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>Abrufen von Ausgabeparametern mit SQLGetData
 Vor der ODBC 3.8 konnte eine Anwendung nur die Output-Parameter einer Abfrage mit einer gebundenen Ausgabepuffer abrufen. Allerdings ist es schwierig, einen sehr umfangreichen Puffer zuzuordnen, wenn die Größe des Parameterwerts sehr groß ist (z. B. ein großes Bild). ODBC 3.8 führt eine neue Methode zum Abrufen von Ausgabeparametern in Teilen. Eine Anwendung kann nun Aufrufen **SQLGetData** mit einem kleinen Puffer mehrere Male auf, um einen großen Parameterwert abzurufen. Dies ähnelt der welcher Spaltendaten abrufen.  

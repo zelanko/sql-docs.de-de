@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908585"
 ---
 # <a name="allocating-a-connection-handle-odbc"></a>Zuordnen eines Verbindungshandles ODBC
 Bevor die Anwendung auf eine Datenquelle oder Treiber zugreifen kann, müssen sie ein Verbindungshandle wie folgt zuordnen:  

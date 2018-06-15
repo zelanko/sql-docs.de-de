@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913165"
 ---
 # <a name="setting-parameter-values"></a>Festlegen von Parameterwerten
 Um den Wert eines Parameters festlegen, legt die Anwendung einfach den Wert der an den Parameter gebundenen Variablen. Es ist nicht wichtig, wenn dieser Wert festgelegt ist, solange er festgelegt ist, bevor die Anweisung ausgeführt wird. Die Anwendung kann den Wert festlegen, vor oder nach dem die Variable binden, und kann es ändern Sie den Wert so oft wie möglich. Wenn die Anweisung ausgeführt wird, ruft der Treiber einfach den aktuellen Wert der Variablen ab. Dies ist besonders nützlich, wenn mehr als einmal eine vorbereitete Anweisung ausgeführt wird; die Anwendung legt neue Werte für einige oder alle Variablen jedes Mal, wenn die Anweisung ausgeführt wird. Ein Beispiel hierfür finden Sie unter [vorbereitete Ausführung](../../../odbc/reference/develop-app/prepared-execution-odbc.md)weiter oben in diesem Abschnitt.  

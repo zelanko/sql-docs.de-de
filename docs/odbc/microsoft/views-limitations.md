@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908169"
 ---
 # <a name="views-limitations"></a>Einschränkungen von Ansichten
 Unterstützt nicht von dBASE, Microsoft Excel, Paradox oder Text-Treiber.

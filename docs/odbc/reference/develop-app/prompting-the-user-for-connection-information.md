@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913285"
 ---
 # <a name="prompting-the-user-for-connection-information"></a>Der Benutzer aufgefordert, Verbindungsinformationen
 Wenn die Anwendung verwendet **SQLConnect** und muss den Benutzer für alle Verbindungsinformationen aufzufordern wie Benutzername und Kennwort muss geschieht dies selbst. Obwohl dadurch die Anwendung die Steuerung des "Erscheinungsbilds" kann die Anwendung, die Treiber-spezifischen Code enthalten Internet Explorer erzwungen. Dies tritt auf, wenn die Anwendung den Benutzer zur treiberspezifische Verbindungsinformationen aufzufordern muss. Dies stellt eine unmöglich Situation für allgemeiner Anwendungen, die darauf ausgelegt sind, funktionieren alle Treiber, einschließlich der Treiber, die nicht vorhanden sind, wenn die Anwendung geschrieben wird.  

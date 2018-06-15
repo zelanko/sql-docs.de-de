@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914895"
 ---
 # <a name="tables-and-views"></a>Tabellen und Sichten
 In ODBC-Funktionen sind die Tabellen und Sichten austauschbar. Der Begriff *Tabelle* dient für Tabellen und Sichten, mit Ausnahme des Speicherorts der Begriff *Ansicht* explizit verwendet wird.

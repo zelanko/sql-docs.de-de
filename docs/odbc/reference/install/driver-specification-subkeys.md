@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32920395"
 ---
 # <a name="driver-specification-subkeys"></a>Treiber-Spezifikation Unterschlüssel
 Jeder Treiber in den ODBC-Treiber-Unterschlüssel aufgeführt verfügt über einen Unterschlüssel selbst. Dieser Unterschlüssel verfügt über den gleichen Namen wie der entsprechende Wert unter dem Unterschlüssel ODBC-Treiber. Die Werte unter dieser Unterschlüssel auflisten, das die vollständigen Pfade der Treiber und Treiber-Setup-DLLs, die Werte der Treiber Schlüsselwörter zurückgegebenes **SQLDrivers**, und die Verwendungsanzahl der. Die Formate der Werte sind wie in der folgenden Tabelle gezeigt.  

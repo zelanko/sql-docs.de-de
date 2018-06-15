@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32947765"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Neue Uhrzeitfunktionen zu Datum und mit früheren SQL Server-Versionen (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

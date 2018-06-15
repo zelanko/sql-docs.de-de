@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916195"
 ---
 # <a name="unicode-applications"></a>Unicode-Anwendungen
 Sie können eine Anwendung als Unicode-Anwendung in einer von zwei Methoden kompilieren:  

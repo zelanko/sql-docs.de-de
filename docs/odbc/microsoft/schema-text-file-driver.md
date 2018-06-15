@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899635"
 ---
 # <a name="schema-text-file-driver"></a>Schema (Text-Datei-Treiber)
 Das Schema enthält Informationen zu jeder Tabelle (Textdatei) in einer Datenquelle, einschließlich der tabellenspezifischen Format, die Anzahl der Zeilen um Spaltentypen, zu bestimmen, ob die erste Zeile der Tabelle Spaltennamen enthält, ob die Quelldatei mithilfe der OEM geschrieben wird oder ANSI-Codepage, und jede Spalte der Name, Datentyp und Breite.

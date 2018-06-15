@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912265"
 ---
 # <a name="fetching-rows-with-sqlbulkoperations"></a>Abrufen von Zeilen mit SQLBulkOperations
 Daten können in ein Rowset mithilfe von Lesezeichen erneut abgerufen werden, durch den Aufruf von **SQLBulkOperations.** Die Zeilen abgerufen werden sollen, werden durch die Lesezeichen in einer Lesezeichenspalte gebundenen identifiziert. Spalten mit einem Wert von SQL_COLUMN_IGNORE werden nicht abgerufen.  

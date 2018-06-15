@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908705"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Uhrzeit und Datumsfunktionen (Visual FoxPro-ODBC-Treiber)
 Die folgende Tabelle listet die ODBC-Datum und die Funktionen von der Visual FoxPro-ODBC-Treiber unterstützt; Wenn die Visual FoxPro-Grammatik für dieselbe Funktion aus der ODBC-Syntax unterscheidet, wird der entsprechende Visual FoxPro aufgeführt.  

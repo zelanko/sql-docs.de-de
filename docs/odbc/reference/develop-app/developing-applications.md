@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910735"
 ---
 # <a name="developing-applications"></a>Entwickeln von Anwendungen
 Dieser Abschnitt enthält Informationen zum Entwickeln von Anwendungen, die die ODBC-Schnittstelle und Treiber, die ihn implementieren.  

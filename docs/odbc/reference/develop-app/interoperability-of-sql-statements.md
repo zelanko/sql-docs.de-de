@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909865"
 ---
 # <a name="interoperability-of-sql-statements"></a>Die Interoperabilität von SQL-Anweisungen
 Wie der übrige einer Anwendung SQL-Anweisungen interoperable oder DBMS-spezifische möglich. Und wie der Rest der Anwendung, die Auswahl des wie interoperable SQL-Anweisungen werden müssen, hängt vom Typ der Anwendung. Benutzerdefinierte Anwendungen sind weniger wahrscheinlich, dass Sie interoperable SQL-Anweisungen verwendet werden, da sie in der Regel dienen, das die Funktionen des DBMS für ein oder möglicherweise zwei auszunutzen. Allgemeine Anwendungen verwenden interoperable SQL-Anweisungen aus, da sie entwickelt werden, um mit einer Vielzahl von DBMS zu arbeiten. Und für vertikale Anwendungen in der Regel an einer Stelle in der Zwischenzeit ein gewisses Maß an Funktionalität anspruchsvollen jedoch andernfalls interoperable SQL-Anweisungen verwenden.  

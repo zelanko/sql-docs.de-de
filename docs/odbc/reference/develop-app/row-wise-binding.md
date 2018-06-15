@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912061"
 ---
 # <a name="row-wise-binding"></a>Zeilenweise Bindung
 Verwenden die zeilenweise Bindung, eine Anwendung definiert eine Struktur, enthält nur ein oder zwei, oder in einigen Fällen mit drei Elemente für jede Spalte, die für die Daten zurückgegeben werden. Das erste Element enthält den Datenwert und das zweite Element enthält die Längen-/Indikatorpuffers. Indikatoren und Längenwerte können in separaten Puffer gespeichert werden, durch die deskriptorfelder SQL_DESC_INDICATOR_PTR und SQL_DESC_OCTET_LENGTH_PTR auf unterschiedliche Werte festlegen; Wenn dies erfolgt, enthält die Struktur ein drittes Element. Klicken Sie dann die Anwendung weist ein Array dieser Strukturen enthält, die so viele Elemente als Zeilen im Rowset vorhanden sind.  

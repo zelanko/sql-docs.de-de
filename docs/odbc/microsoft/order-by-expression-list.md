@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904625"
 ---
 # <a name="order-by-expression-list"></a>ORDER BY-Ausdruck-Liste
 Ausdrücke können in der ORDER BY-Klausel verwendet werden. Beispielsweise in den folgenden Klauseln in der Tabelle sortiert wird, ist durch drei wichtigsten Ausdrücke: a + b, C + d und e.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915505"
 ---
 # <a name="step-3-build-and-execute-an-sql-statement"></a>Schritt 3: Erstellen und Ausführen einer SQL­Anweisung
 Der dritte Schritt ist zum Erstellen und Ausführen einer SQL-Anweisung, wie in der folgenden Abbildung dargestellt. Methoden zum Ausführen dieses Schritts werden wahrscheinlich erheblich variieren. Die Anwendung kann der Benutzer aufgefordert, geben eine SQL-Anweisung ein, und erstellen eine SQL-Anweisung basierend auf Benutzereingaben oder eine hartcodierten SQL-Anweisung verwenden. Weitere Informationen finden Sie unter [SQL-Anweisungen konstruieren](../../../odbc/reference/develop-app/constructing-sql-statements.md).  

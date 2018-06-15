@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913335"
 ---
 # <a name="supported-odbc-api-functions"></a>Unterstützte ODBC-API-Funktionen
 Der Zweck der Abgleich ist auf die Anwendung darüber zu informieren, welche Funktionen, aus dem Treiber verfügbar sind. Microsoft ODBC-Desktop-Datenbanktreiber unterstützen alle Core und Level 1-Funktionen.  

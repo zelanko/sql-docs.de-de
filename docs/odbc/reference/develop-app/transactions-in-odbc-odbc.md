@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915480"
 ---
 # <a name="transactions-in-odbc-odbc"></a>Transaktionen in ODBC ODBC
 Transaktionen in ODBC werden auf der Verbindungsebene abgeschlossen; d. h., wenn eine Anwendung eine Transaktion abschließt, es ein Commit oder Rollback alle Arbeit, die über alle Anweisungshandles dieser Verbindung.  

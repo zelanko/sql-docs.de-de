@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911325"
 ---
 # <a name="connecting-using-file-data-sources"></a>Herstellen einer Verbindung mit Datenquellen
 Die Verbindungsinformationen für eine Datei als Datenquelle wird in einer DSN-Datei gespeichert. Daher kann die Verbindungszeichenfolge wiederholt verwendet werden, indem ein einzelner Benutzer oder für mehrere Benutzer freigegeben werden, wenn sie den entsprechenden Treiber installiert haben. Die Datei enthält einen Treibernamen (oder einen anderen Datenquellennamen im Falle einer Dateidatenquelle) und optional eine Verbindungszeichenfolge, die von verwendet werden kann **SQLDriverConnect**. Der Treiber-Manager erstellt die Verbindungszeichenfolge für den Aufruf von **SQLDriverConnect** aus der Schlüsselwörter in der DSN-Datei.  

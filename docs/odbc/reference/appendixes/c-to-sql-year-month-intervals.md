@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906315"
 ---
 # <a name="c-to-sql-year-month-intervals"></a>C, um SQL: Jahr-Monat-Intervallen
 Der Bezeichner für die Jahr-Monat-Intervall ODBC C-Datentypen sind:  

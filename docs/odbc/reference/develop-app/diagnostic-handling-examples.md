@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908195"
 ---
 # <a name="diagnostic-handling-examples"></a>Beispiele für die Diagnose Behandlung
 Die folgenden Beispiele zeigen, wie verschiedene Komponenten in einer ODBC-Verbindung diagnosemeldungen generieren können, und wie verschiedene Treiber Diagnose an die Anwendung mit zurückgeben möglicherweise **SQLGetDiagRec**.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914365"
 ---
 # <a name="datetime-data-type-changes"></a>Änderungen des Datentyps "DateTime"
 In ODBC 3. *x*, die Bezeichner für das Datum, Zeit und Zeitstempel SQL-Datentypen von SQL_DATE, SQL_TIME und SQL_TIMESTAMP geändert haben (mit Instanzen von **#define** in der Headerdatei 9, 10 und 11) zu SQL_TYPE_DATE, SQL_TYPE_TIME und SQL_TYPE_TIMESTAMP (mit Instanzen von **#define** in der Headerdatei von 91, 92 und 93) zugeordnet. Die entsprechenden C-Typ-IDs haben bzw. von SQL_C_DATE SQL_C_TIME und SQL_C_TIMESTAMP SQL_C_TYPE_DATE, SQL_C_TYPE_TIME und SQL_C_TYPE_TIMESTAMP geändert.  

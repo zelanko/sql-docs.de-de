@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916225"
 ---
 # <a name="types-of-applications"></a>Anwendungstypen
 ODBC-Anwendungen können wie folgt klassifiziert werden:  

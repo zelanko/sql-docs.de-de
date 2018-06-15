@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904615"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>ODBC-Visual FoxPro einrichten (Dialogfeld)
 Die **ODBC Visual FoxPro-Setup** Dialogfeld können Sie zum Hinzufügen oder Ändern einer Visual FoxPro-Datenquelle.  

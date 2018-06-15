@@ -18,6 +18,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32862155"
 ---
 # <a name="dynamic-management-views-and-system-catalog-views-always-on-availability-groups"></a>Dynamische Verwaltungssichten und Systemkatalogsichten (Always On-Verfügbarkeitsgruppen)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

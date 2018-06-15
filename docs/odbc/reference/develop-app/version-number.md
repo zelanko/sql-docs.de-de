@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917305"
 ---
 # <a name="version-number"></a>Versionsnummer
 Es sind mehrere Versionen von ODBC, jeweils mit verschiedenen Funktionen. Eine Anwendung bestimmt, die durch Aufrufen von ODBC-Version der Treiber-Manager als auch einen bestimmten Treiber unterstützen **SQLGetInfo** mit den Optionen SQL_ODBC_VER und SQL_DRIVER_ODBC_VER.

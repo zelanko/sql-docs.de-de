@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910701"
 ---
 # <a name="establishing-a-connection"></a>Herstellen einer Verbindung
 Nach dem Zuweisen der umgebungs- und Verbindungshandles und Festlegen der Verbindungsattribute, ist die Anwendung für die Datenquelle oder der Treiber die Verbindung bereit. Es gibt drei verschiedene Funktionen, die die Anwendung zu diesem Zweck verwenden kann: **SQLConnect** (Core-Schnittstelle Konformitätsgrad), **SQLDriverConnect** (Core), und **SQLBrowseConnect**(Stufe 1). Jeder der drei wird in ein anderes Szenario verwendet werden sollen. Bevor Sie eine Verbindung herstellen, kann die Anwendung bestimmen, welche dieser Funktionen mit unterstützt wird die **ConnectFunctions** Schlüsselwort zurückgegebenes **SQLDrivers**.  

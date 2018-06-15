@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904375"
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE - SQL-Befehl
 Programmgesteuertes Ändern der Struktur einer Tabelle.  

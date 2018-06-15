@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913065"
 ---
 # <a name="sqlstates"></a>SQLSTATEs
 SQLSTATEs bieten ausführliche Informationen zur Ursache einer Warnung oder Fehler. Die SQLSTATEs in diesem Handbuch basiert auf solche, die in der ISO/IEF CLI-Spezifikation, obwohl diese SQLSTATEs, die mit Instant Messaging-Diensten beginnen für ODBC spezifisch sind.  

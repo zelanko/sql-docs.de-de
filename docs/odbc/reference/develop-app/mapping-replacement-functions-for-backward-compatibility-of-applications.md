@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913975"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Zuordnungsfunktionen Ersatz für die Abwärtskompatibilität von Anwendungen
 Eine ODBC 3.*.x* Anwendung arbeiten, über die ODBC 3.*.x* -Treiber-Manager funktioniert mit einer ODBC 2. *X* Treiber solange keine neuen Funktionen verwendet werden. Beide Funktionen dupliziert und verhaltensänderungen, allerdings wirken sich die Möglichkeit, die ODBC-3. *x* Anwendung funktioniert, in einer ODBC 2. *X* Treiber. Wenn Sie mit einer ODBC 2. arbeiten zu können. *x* -Treiber verwenden, wird der Treiber-Manager die folgenden ODBC 3. zugeordnet. *X* -Funktionen, die eine oder mehrere ODBC 2. ersetzt haben. *X* -Funktionen in der entsprechenden ODBC 2. *X* Funktionen.  

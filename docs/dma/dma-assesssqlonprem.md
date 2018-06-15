@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32870725"
 ---
 # <a name="perform-a-sql-server-migration-assessment"></a>Führen Sie eine SQL Server-Migrations-Bewertung
 Die folgenden schrittweisen Anweisungen unterstützen Sie Ihre erste Bewertung für die Migration zu einer lokalen SQL Server, SQL Server auf einem virtuellen Azure-Computer oder die Azure SQL-Datenbank ausgeführt wird, mithilfe des Migrations-Assistenten Daten ausführen.

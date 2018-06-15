@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913345"
 ---
 # <a name="new-features"></a>Neue Funktionen
 Die folgende neue Funktionen wurde in ODBC 3. eingeführt. *x*. Eine ODBC-3. *x* Anwendung arbeiten mit einer ODBC 2.*.x* Treiber wird nicht in der Lage, diese Funktionalität verwenden. Der ODBC-3. *x* -Treiber-Manager zugeordnet ist diese Funktionen bei der Arbeit mit einer ODBC 2.*.x* Treiber.  

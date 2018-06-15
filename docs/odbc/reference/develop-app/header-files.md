@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912395"
 ---
 # <a name="header-files"></a>Headerdateien
 Die Headerdatei Sql.h enthält die Prototypen für die Funktionen und Funktionen in der ODBC-Kernschnittstelle Konformitätsgrad. Die Sqlext.h-Header-Datei enthält die Prototypen für die Funktionen und Funktionen in der Ebene 1 und Level 2-API-Übereinstimmungsebenen. Die Headerdatei Sqltypes.h enthält Typdefinitionen und Indikatoren für die SQL-Datentypen.  
