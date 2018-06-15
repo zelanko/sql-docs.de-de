@@ -2,7 +2,6 @@
 title: SaveOptionsEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 502b6cf58647b7fe3a2b8dd8e7b627e60869cb43
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 739e06a2038a61c821fd9acf779ec70df9621b16
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281539"
 ---
 # <a name="saveoptionsenum"></a>SaveOptionsEnum
 Gibt an, ob eine Datei erstellt oder werden, beim Speichern überschrieben von werden eine [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt. Die Werte sind möglich **AdSaveCreateNotExist** oder **AdSaveCreateOverWrite**...  
   
-|Konstante|Wert|Description|  
+|Konstante|value|Description|  
 |--------------|-----------|-----------------|  
 |**adSaveCreateNotExist**|1|Standard. Erstellt eine neue Datei, wenn die Datei, wird angegeben die *FileName* Parameter noch nicht vorhanden.|  
 |**adSaveCreateOverWrite**|2|Überschreibt die Datei mit den Daten aus den aktuell geöffneten **Stream** Objekt, wenn die angegebene Datei durch die *Filename* Parameter bereits vorhanden ist. Wenn die Datei, wird angegeben die *Filename* Parameter ist nicht vorhanden, wird eine neue Datei erstellt.|  
