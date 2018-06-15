@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030197"
 ---
 # <a name="configurationsetting-property---iswebserviceenabled"></a>ConfigurationSetting-Eigenschaft: IsWebServiceEnabled
   Gibt an, ob der Report Server-Webdienst aktiviert ist. Schreibgeschützt.  

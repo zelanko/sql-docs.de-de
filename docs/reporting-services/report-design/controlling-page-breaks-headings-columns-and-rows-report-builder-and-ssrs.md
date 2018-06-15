@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019467"
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>Steuern von Seitenumbrüchen, Überschriften, Spalten und Zeilen (Berichts-Generator und SSRS)
   Ein Seitenumbruch unterteilt einen Bericht in getrennte Seiten, damit dieser einfacher angezeigt und gedruckt werden kann. Seitenumbrüche legen fest, wie der Inhalt für die optimale Anzeige bei der Vorschau eines Berichts oder beim Exportieren in ein anderes Dateiformat an eine Berichtsseite angepasst wird.  

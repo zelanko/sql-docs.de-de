@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030867"
 ---
 # <a name="configurationsetting-method---reencryptsecureinformation"></a>ConfigurationSetting Method – ReencryptSecureInformation (ConfigurationSetting-Methode: ReencryptSecureInformation)
   Generiert einen neuen Verschlüsselungsschlüssel und verschlüsselt alle sicheren Informationen im Katalog erneut mit diesem neuen Schlüssel  

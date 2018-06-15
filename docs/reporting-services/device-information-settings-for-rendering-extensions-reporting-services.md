@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015977"
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>Geräteinformationseinstellungen für Renderingerweiterungen (Reporting Services)
   In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]werden Geräteinformationseinstellungen zum Übergeben von Renderingparametern an eine Renderingerweiterung verwendet. Jede Renderingerweiterung akzeptiert einen bestimmten Satz von Einstellungen.  

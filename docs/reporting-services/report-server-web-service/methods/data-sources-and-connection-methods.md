@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025737"
 ---
 # <a name="data-sources-and-connection-methods"></a>Datenquellen- und Verbindungsmethoden
   Mit diesen Methoden können Sie Datenquellenverbindungen und Anmeldeinformationen festlegen und verwalten.  

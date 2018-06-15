@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33014447"
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>Integrieren von Reporting Services mit URL-Zugriff
   Mit URL-Zugriff können Sie über eine Berichtsserver-URL auf Berichte zugreifen. Eine URL-Anforderung ermöglicht Ihnen, auf einen spezifischen Berichtsserver und die Berichte, Ressourcen und anderen Elemente in der Berichtsserver-Datenbank zuzugreifen. Sie können auch die Art und Weise anpassen, wie Benutzer Berichte anzeigen und in ihnen navigieren können. Die Abfragezeichenfolge der URL enthält Geräteinformationseinstellungen sowie Berichtsparameter, die den Bericht und die gewählte Renderingausgabe als Ziel haben. Wie URL-Anforderungen vom Berichtsserver behandelt werden, hängt von den Parametern, den Parameterpräfixen sowie dem Elementtyp ab, auf den Sie über die URL zugreifen.  

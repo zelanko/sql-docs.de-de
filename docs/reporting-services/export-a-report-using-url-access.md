@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015067"
 ---
 # <a name="export-a-report-using-url-access"></a>Exportieren von Berichten über URL-Zugriff
   Sie können mit dem *rs:Format* -URL-Parameter optional das Format angeben, in dem ein Bericht gerendert werden soll.  Die Formate HTML4.0 und HTM5 (Renderingerweiterung) werden im Browser und für andere Formate gerendert, der Browser fordert zum Speichern der Berichtsausgabe in einer lokalen Datei auf.  

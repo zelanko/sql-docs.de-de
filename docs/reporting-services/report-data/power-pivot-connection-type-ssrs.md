@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021657"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Power Pivot-Verbindungstyp (SSRS)
   Sie können Daten mithilfe der SQL Server Analysis Services-Datenverarbeitungserweiterung aus einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe abrufen, die in einem SharePoint- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog veröffentlicht ist.  

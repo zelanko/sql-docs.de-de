@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029287"
 ---
 # <a name="securable-items"></a>Sicherbare Elemente
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet rollenbasierte Sicherheit zur Steuerung des Zugriffs auf die Elemente, die auf einem Berichtsserver gespeichert sind. Wenn Sie Benutzerzugriff auf einen Berichtsserver gewähren, erstellen Sie in der Regel ein Rollenzuweisungspaar:  

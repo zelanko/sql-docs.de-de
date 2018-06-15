@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33032267"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Verwenden einer externen Datenquelle für Abonnentendaten (datengesteuertes Abonnement)
   In einem datengesteuerten Abonnement werden dynamische Abonnementdaten von einer Abfrage oder einem Befehl bereitgestellt, die bzw. der Daten aus einer externen Datenquelle abruft. Abonnementdaten können aus allen unterstützten Datenquellen abgerufen werden, die die Anforderungen der datengesteuerten Abonnementverarbeitung erfüllen. Die Abfrage- oder Befehlssyntax muss für eine Datenverarbeitungserweiterung gültig sein, die mit dem Berichtsserver installiert wurde.  

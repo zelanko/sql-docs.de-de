@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018087"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>Verwenden des ReportViewer-Steuerelements in WinForms
   Zur Anzeige von Berichten, die auf einem Berichtsserver bereitgestellt werden oder die sich auf einem lokalen Dateisystem befinden, können Sie das ReportViewer-Steuerelement für WinForms verwenden, um die Berichte in eine Windows-Anwendung zu rendern.  

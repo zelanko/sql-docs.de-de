@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029267"
 ---
 # <a name="report-designer-f1-help"></a>Berichts-Designer (F1-Hilfe)
   Dieser Abschnitt stellt F1-Hilfe für die Assistenten, Ansichten und Dialogfelder des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichts-Designers in [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]bereit. Sie können die F1-Hilfe auch bei geöffnetem Dialogfeld durch Drücken der F1-Taste oder durch Klicken auf die im Dialogfeld angezeigte Schaltfläche Hilfe öffnen.  

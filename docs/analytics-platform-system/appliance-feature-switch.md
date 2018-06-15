@@ -14,6 +14,7 @@ ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34550901"
 ---
 #<a name="appliance-feature-switch"></a>Appliance-Feature-Switch
 Die **Funktionsschalter** Seite Informationen zu den zwei funktionsschalter, die eingeführt werden in Analytics Platform System AU7 angezeigt. Verwenden Sie diese Seite zu aktualisieren oder zu aktivieren/deaktivieren von Funktionen und Einstellungen in Analytics Platform System. Ändern von Werten für Funktion Switch erfordert einen Neustart des Diensts.
