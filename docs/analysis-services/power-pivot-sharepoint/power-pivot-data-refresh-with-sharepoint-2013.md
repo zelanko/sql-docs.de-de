@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024877"
 ---
 # <a name="power-pivot-data-refresh-with-sharepoint-2013"></a>Power Pivot-Datenaktualisierung mit SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -160,7 +161,7 @@ ms.lasthandoff: 05/10/2018
   
     -   Erneutes Speichern der Arbeitsmappe in der Inhaltsdatenbank  
   
- ![Verwalten von Data Refresh-Kontextmenü](../../analysis-services/power-pivot-sharepoint/media/as-manage-datarefresh-sharepoint2013.gif "Daten aktualisieren Kontextmenü "verwalten"")  
+ ![Verwalten von Data Refresh-Kontextmenü](../../analysis-services/power-pivot-sharepoint/media/as-manage-datarefresh-sharepoint2013.gif "Daten aktualisieren Kontextmenü \"verwalten\"")  
   
 > [!TIP]  
 >  Informationen zum Aktualisieren von Arbeitsmappen aus SharePoint online finden Sie unter [Aktualisieren von Excel-Arbeitsmappen mit eingebundenen Power Pivot-Modellen aus SharePoint Online (Whitepaper)](http://technet.microsoft.com/library/jj992650.aspx) (http://technet.microsoft.com/library/jj992650.aspx).  

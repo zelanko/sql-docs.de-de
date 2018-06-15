@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34027157"
 ---
 # <a name="configure-power-pivot-health-rules"></a>Konfigurieren von Power Pivot-Integritätsregeln
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -107,7 +108,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
 3.  Das [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Management-Dashboard wird angezeigt. Klicken Sie auf **Einstellungen für Dienstanwendung konfigurieren** in der Liste **Aktionen** , um die Seite mit den Einstellungen der Dienstanwendung zu öffnen.  
   
-     ![Screenshot des Dashboards, konzentrieren sich auf die Liste "Aktionen"](../../analysis-services/power-pivot-sharepoint/media/ssas-centraladmin-actionslist.gif "Screenshot des Dashboards, konzentrieren sich auf die Liste "Aktionen"")  
+     ![Screenshot des Dashboards, konzentrieren sich auf die Liste "Aktionen"](../../analysis-services/power-pivot-sharepoint/media/ssas-centraladmin-actionslist.gif "Screenshot des Dashboards, konzentrieren sich auf die Liste \"Aktionen\"")  
   
 4.  Ändern Sie in den Integritätsregeleinstellungen die folgenden Einstellungen:  
   

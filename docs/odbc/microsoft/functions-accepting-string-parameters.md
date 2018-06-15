@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900455"
 ---
 # <a name="functions-accepting-string-parameters"></a>Funktionen, die Zeichenfolgenparameter akzeptieren
 Alle Funktionen, die String-Parameter akzeptieren, werden in Unicode konvertiert werden. (Das Format "W" die Funktion wird exportiert werden.) Die Anzahl von Bytes wird konvertiert, um die Anzahl von Zeichen für die entsprechenden ODBC-APIs. Dies gilt für die folgenden Funktionen:  

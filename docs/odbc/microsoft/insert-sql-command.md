@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900689"
 ---
 # <a name="insert---sql-command"></a>INSERT - SQL-Befehl
 Fügt einen Datensatz an das Ende einer Tabelle, die die angegebenen Werte enthält.  

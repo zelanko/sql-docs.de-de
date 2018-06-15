@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897825"
 ---
 # <a name="creating-and-dropping-views-and-procedures-using-extendedansisql"></a>Erstellen und Löschen von Sichten und Prozeduren, die mit ExtendedAnsiSQL
 Wenn das ExtendedAnsiSQL-Flag aktiviert ist, unterstützt Jet 4.0 die Möglichkeit zum Erstellen und Löschen von Sichten und Prozeduren über SQL an. Diese Sichten und Prozeduren werden über den Zugriff nicht sichtbar.

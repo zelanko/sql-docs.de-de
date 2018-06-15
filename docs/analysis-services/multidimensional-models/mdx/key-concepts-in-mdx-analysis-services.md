@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024587"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>Schlüsselkonzepte in MDX (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +40,7 @@ ms.lasthandoff: 05/10/2018
   
  Modell-Metadaten werden in Excel in der Feldliste der PivotTable angezeigt.  Vergleichen Sie die obige PivotTable mit der folgenden Feldliste. Beachten Sie, dass die Feldliste Vertriebsgebiet, Gruppe, Land, Region (Metadaten) enthält, und die PivotTable dagegen nur die Elemente (Datenwerte). Wenn Sie die Symbole kennen, können Sie die Teile von mehrdimensionalen Modellen schnell und einfach einer PivotTable in Excel zuordnen.  
   
- ![Feldliste "PivotTable"](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-ptfieldlist.png "Feldliste "PivotTable"")  
+ ![Feldliste "PivotTable"](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-ptfieldlist.png "Feldliste \"PivotTable\"")  
   
 ## <a name="attribute-hierarchies"></a>Attributhierarchien  
  Sie wissen beinahe intuitiv, welche Werte in einer PivotTable steigen oder fallen, wenn Sie die Werte auf den Achsen erweitern und reduzieren. Warum ist dies so? Die Antwort liegt in den Attributhierarchien.  

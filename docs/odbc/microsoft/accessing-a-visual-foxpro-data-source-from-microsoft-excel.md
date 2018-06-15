@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899445"
 ---
 # <a name="accessing-a-visual-foxpro-data-source-from-microsoft-excel"></a>Zugriff auf eine Visual FoxPro-Datenquelle aus Microsoft Excel
 Wenn Sie Microsoft Query installiert haben, können Sie eine Datenquelle in Microsoft Excel erstellen, die mit Visual FoxPro-Daten verbindet.  

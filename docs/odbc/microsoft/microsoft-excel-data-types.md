@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901465"
 ---
 # <a name="microsoft-excel-data-types"></a>Microsoft Excel-Datentypen
 Die folgende Tabelle zeigt, wie Microsoft Excel-Treiber-Datentypen in ODBC-SQL-Datentypen zugeordnet werden. Microsoft Excel-Treibers weist dieser Datentypen zu Spalten in Microsoft Excel-Tabellen basierend auf den Daten in der Spalte.  

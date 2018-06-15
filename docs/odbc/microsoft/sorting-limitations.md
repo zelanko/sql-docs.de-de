@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901275"
 ---
 # <a name="sorting-limitations"></a>Sortieren von Einschränkungen
 Die maximale Länge des Sortierschlüssel in einer GROUP BY-Klausel, die ORDER BY-Klausel, die SELECT DISTINCT-Anweisung oder die äußeren Join ist 255 Bytes. die maximale Länge der in einer Zeile alle Sortierschlüssel ist 65.500 Bytes.

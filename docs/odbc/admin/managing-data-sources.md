@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901715"
 ---
 # <a name="managing-data-sources"></a>Verwalten von Datenquellen
 Nachdem Sie einen ODBC-Treiber vom Setupprogramm der Treiber installiert haben, können Sie eine oder mehrere Datenquellen dafür definieren. Der Datenquellenname (DSN) sollte eine eindeutige Beschreibung des ausgewählten angeben; beispielsweise *Payroll* oder *"Accounts Payable"*. Die Benutzer und System-Datenquellen, die für alle Treiber installierten definiert sind, werden aufgeführt, der **Benutzer-DSN** oder **System-DSN** Registerkarten der **ODBC-Datenquellen-Administrator**(Dialogfeld). Die Datei-Datenquellen in einem bestimmten Verzeichnis sind aufgeführt, der **Datei-DSN** Registerkarte; in das Verzeichnis angezeigt werden eingegeben wird die **Suchen in** im Feld der **Datei-DSN** Registerkarte.  
