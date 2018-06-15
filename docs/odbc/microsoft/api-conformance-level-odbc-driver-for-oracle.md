@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900235"
 ---
 # <a name="api-conformance-level-odbc-driver-for-oracle"></a>API-Konformitätsgrad (ODBC-Treiber für Oracle)
 > [!IMPORTANT]  

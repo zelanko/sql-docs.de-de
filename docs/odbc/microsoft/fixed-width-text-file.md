@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897965"
 ---
 # <a name="fixed-width-text-file"></a>Textdatei mit fester Breite
 Wenn der Text-Treiber verwendet wird, kann die letzte Spalte in einer Textdatei mit fester Breite variabler Länge.
