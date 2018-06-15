@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024697"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>Erstellen und Verwalten einer lokalen Partition (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +51,7 @@ ms.lasthandoff: 05/10/2018
   
 3.  Klicken Sie in der Quellspalte auf die Schaltfläche zum Durchsuchen (. .), um das Dialogfeld Partitionsquelle zu öffnen.  
   
-     ![Quellspalte im Bereich "Partition"](../../analysis-services/multidimensional-models/media/ssas-partitionsource.png "Quellspalte im Bereich "Partition"")  
+     ![Quellspalte im Bereich "Partition"](../../analysis-services/multidimensional-models/media/ssas-partitionsource.png "Quellspalte im Bereich \"Partition\"")  
   
 4.  Wählen Sie unter Bindungstyp die Option **Abfragebindung**aus. Die SQL-Abfrage zur Auswahl der Daten wird automatisch eingeblendet.  
   

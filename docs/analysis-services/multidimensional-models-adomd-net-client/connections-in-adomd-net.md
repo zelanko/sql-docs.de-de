@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34027410"
 ---
 # <a name="connections-in-adomdnet"></a>Verbindungen in ADOMD.NET
   In ADOMD.NET verwenden Sie die <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> -Objekt, z. B. Öffnen von Verbindungen mit analytischen Datenquellen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbanken. Wenn die Verbindung nicht mehr benötigt wird, sollten Sie die Verbindung explizit schließen.  

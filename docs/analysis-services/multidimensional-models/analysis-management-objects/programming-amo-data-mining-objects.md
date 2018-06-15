@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34021800"
 ---
 # <a name="programming-amo-data-mining-objects"></a>Programmieren von AMO-Data Mining-Objekten
   Das Programmieren von Data Mining-Objekten mithilfe von AMO ist unkompliziert und einfach. Der erste Schritt ist, das Datenstrukturmodell zu erstellen, um das Miningprojekt zu unterstützen. Anschließend erstellen Sie das Data Mining-Modell, das den Miningalgorithmus unterstützt, den Sie für die Vorhersage oder für die Ermittlung der Ihren Daten zugrundeliegenden unsichtbaren Beziehungen verwenden möchten. Nachdem Sie Ihr Miningprojekt erstellt haben (einschließlich Struktur und Algorithmus), können Sie die Miningmodelle verarbeiten, um die trainierten Modelle abzurufen, die Sie später verwenden, wenn Sie Abfragen und Vorhersagen über die Clientanwendung ausführen.  
