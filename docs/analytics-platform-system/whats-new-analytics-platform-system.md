@@ -14,6 +14,7 @@ ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34550641"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Was ist neu in Analytics Platform System ein horizontaler MPP Datawarehouse
 Neuigkeiten Sie in der aktuellen Einheit Updates für Microsoft® Analytics Platform System (APS). APS ist ein lokaler mit horizontaler Skalierung, die MPP SQL Server Parallel Data Warehouse hostet. 

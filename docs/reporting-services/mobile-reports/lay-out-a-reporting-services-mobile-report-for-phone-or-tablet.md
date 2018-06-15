@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018257"
 ---
 # <a name="lay-out-a-reporting-services-mobile-report-for-phone-or-tablet"></a>Gestalten eines mobilen Reporting Services-Berichts für Telefone oder Tablets
 Nachdem Sie in [Ihren mobilen Reporting Services-Bericht erstellt haben](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md) [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-long.md)], können Sie eine für Telefone und Tablets angepasste Version dieses Berichts gestalten.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "34424518"
 ---
 # <a name="documentation-for-sql-server-2014-is-moving-to-docs"></a>Dokumentation für SQL Server 2014 ist auf Dokumente verschieben.
 
