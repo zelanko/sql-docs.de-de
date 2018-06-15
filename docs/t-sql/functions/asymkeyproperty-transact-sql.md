@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33051877"
 ---
 # <a name="asymkeyproperty-transact-sql"></a>ASYMKEYPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,10 +46,10 @@ ASYMKEYPROPERTY (Key_ID , 'algorithm_desc' | 'string_sid' | 'sid')
 *Key_ID*  
 Die Key_ID eines asymmetrischen Schlüssels in der Datenbank. Wenn Sie nur den Schlüsselnamen kennen, verwenden Sie ASYMKEY_ID, um die KEY_ID zu finden. *Key_ID* weist den Datentyp **int** auf.
   
-**‚**algorithm_desc**’**  
+**‚** algorithm_desc **’**  
 Gibt an, dass die Ausgabe die Algorithmusbeschreibung des asymmetrischen Schlüssels zurückgibt. Nur verfügbar für aus einem EKM-Modul erstellte asymmetrische Schlüssel.
   
-**‚**string_sid**’**  
+**‚** string_sid **’**  
 Gibt an, dass die Ausgabe die SID des asymmetrischen Schlüssels im **nvarchar()**-Format zurückgibt.
   
 **'** sid **'**  

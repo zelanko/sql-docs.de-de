@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020197"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>Hinzufügen oder Löschen einer Gruppe in einem Diagramm (Berichts-Generator und SSRS)
 Klicken Sie in paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichten in den Diagrammdatenbereich, um den Bereich **Diagrammdaten** anzuzeigen. Erstellen Sie Gruppen, indem Sie Datasetfelder zu den Bereichen **Kategoriegruppen** und **Reihengruppen** ziehen. Wenn Sie geschachtelte Gruppen hinzufügen möchten, fügen Sie dem Bereich mehrere Felder hinzu.  

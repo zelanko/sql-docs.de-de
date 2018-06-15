@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33008037"
 ---
 # <a name="lesson-1-2---populating-a-table-with-existing-hierarchical-data"></a>Lektion 1-2 – Auffüllen einer Tabelle mit vorhandenen hierarchischen Daten
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

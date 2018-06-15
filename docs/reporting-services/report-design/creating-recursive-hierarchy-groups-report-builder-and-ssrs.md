@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020597"
 ---
 # <a name="creating-recursive-hierarchy-groups-report-builder-and-ssrs"></a>Erstellen von rekursiven Hierarchiegruppen (Berichts-Generator und SSRS)
 Legen Sie den Gruppenausdruck des Datenbereichs basierend auf dem untergeordneten Feld und die übergeordnete Eigenschaft basierend auf dem übergeordneten Feld fest, um rekursive Daten in paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichten anzuzeigen (wobei die Beziehung zwischen übergeordnetem und untergeordnetem Feld von Feldern im Dataset dargestellt wird).  
