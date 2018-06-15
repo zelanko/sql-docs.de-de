@@ -1,11 +1,8 @@
 ---
 title: 'ADO-Ereignis-Instanziierung: VBScript | Microsoft Docs'
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: ado
-ms.technology:
-- drivers
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,11 +16,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6cbbb9854d4043cce64c1885cb650942c8e48961
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: d4dbb327293b12761c21b6db8b3333f9097a39c5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270139"
 ---
 # <a name="ado-event-instantiation-vbscript"></a>ADO-Ereignis-Instanziierung: VBScript
 ADO-Ereignisse werden von Microsoft Visual Basic Scripting Edition nicht unterstützt.

@@ -2,7 +2,6 @@
 title: Microsoft OLE DB-Anbieter für Microsoft Jet | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c0046abe221607ff85b237c1b15ad331ba09c4e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd81c1c5efcb2ca8ebedac756d569ca947aac051
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271619"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Microsoft OLE DB-Anbieter für Microsoft Jet-Übersicht
 Der OLE DB-Anbieter für Microsoft Jet können ADO auf Microsoft Jet-Datenbanken zugreifen.
@@ -48,8 +48,8 @@ Microsoft.Jet.OLEDB.4.0
 
 |Schlüsselwort|Description|
 |-------------|-----------------|
-|**Provider**|Gibt die OLE DB-Anbieter für Microsoft Jet.|
-|**Datenquelle**|Gibt den Datenbanknamen Pfad und Dateinamen an (z. B. `c:\Northwind.mdb`).|
+|**Anbieter**|Gibt die OLE DB-Anbieter für Microsoft Jet.|
+|**Data Source**|Gibt den Datenbanknamen Pfad und Dateinamen an (z. B. `c:\Northwind.mdb`).|
 |**Benutzer-ID**|Gibt den Benutzernamen an. Wenn dieses Schlüsselwort nicht angegeben ist, die Zeichenfolge "`admin`", wird standardmäßig verwendet.|
 |**Kennwort**|Gibt das Kennwort des Benutzers an. Wenn dieses Schlüsselwort nicht angegeben ist, die leere Zeichenfolge (""), wird standardmäßig verwendet.|
 
@@ -150,7 +150,7 @@ Microsoft.Jet.OLEDB.4.0
 |Maximale Zeilengröße|DBPROP_MAXROWSIZE|
 |Maximale Zeilengröße schließt BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |Maximale Anzahl von Tabellen in SELECT|DBPROP_MAXTABLESINSELECT|
-|Modus|DBPROP_INIT_MODE|
+|Mode|DBPROP_INIT_MODE|
 |Mehrere Parametersätze|DBPROP_MULTIPLEPARAMSETS|
 |Mehrere Ergebnisse|DBPROP_MULTIPLERESULTS|
 |Mehrere Speicherobjekte|DBPROP_MULTIPLESTORAGEOBJECTS|

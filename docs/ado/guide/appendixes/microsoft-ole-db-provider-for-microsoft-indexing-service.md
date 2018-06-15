@@ -2,7 +2,6 @@
 title: Microsoft OLE DB-Anbieter für Microsoft Indexdienst | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dc341794d419559b3683c06d51766d2e7b6287a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b789802f6a8d565119450183889d238d2e3f498e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271309"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB-Anbieter für Microsoft Indexing Service – Übersicht
 Microsoft OLE DB-Anbieter für Microsoft Indexdienst bietet programmgesteuerten nur-Lese Zugriff auf System- und Web-Daten, die vom Microsoft Indexdienst indiziert Datei. ADO-Anwendungen können SQL-Abfragen zum Abrufen von Inhalten und Eigenschaftsinformationen ausgeben.
@@ -50,8 +50,8 @@ MSIDXS
 
 |Schlüsselwort|Description|
 |-------------|-----------------|
-|**Provider**|Gibt den OLE DB-Anbieter für Microsoft Indexdienst. In der Regel ist dies das einzige-Schlüsselwort in der Verbindungszeichenfolge angegeben.|
-|**Datenquelle**|Gibt den Namen der Indexdienst-Katalog. Wenn dieses Schlüsselwort nicht angegeben ist, wird der Standardkatalog für das System verwendet.|
+|**Anbieter**|Gibt den OLE DB-Anbieter für Microsoft Indexdienst. In der Regel ist dies das einzige-Schlüsselwort in der Verbindungszeichenfolge angegeben.|
+|**Data Source**|Gibt den Namen der Indexdienst-Katalog. Wenn dieses Schlüsselwort nicht angegeben ist, wird der Standardkatalog für das System verwendet.|
 |**Locale Identifier**|Gibt eine eindeutige 32-Bit-Zahl (z. B. 1033), die Einstellungen im Zusammenhang mit der Sprache des Benutzers angibt. Wenn dieses Schlüsselwort nicht angegeben ist, wird das System Standardgebietsschema-ID verwendet.|
 
 ## <a name="command-text"></a>Befehlstext
@@ -105,12 +105,12 @@ MSIDXS
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|nein|
 |[Klon](../../../ado/reference/ado-api/clone-method-ado.md)|ja|
 |[Schließen](../../../ado/reference/ado-api/close-method-ado.md)|ja|
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|nein|
+|[Löschen](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|nein|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|ja|
 |[Verschieben](../../../ado/reference/ado-api/move-method-ado.md)|ja|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|ja|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|ja|
-|[Öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md)|ja|
+|[Datei](../../../ado/reference/ado-api/open-method-ado-recordset.md)|ja|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|ja|
 |[Erneut synchronisieren](../../../ado/reference/ado-api/resync-method.md)|ja|
 |[Unterstützt](../../../ado/reference/ado-api/supports-method.md)|ja|

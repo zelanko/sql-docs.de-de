@@ -2,7 +2,6 @@
 title: 'Anhang A: Anbieter | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,12 +20,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4cd609a06e0d30e28a451a4308cfec337d47f68
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 7cd4f36537158452eee32a92bd5544acc0956a91
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707508"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271279"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>Anhang A: Daten und Dienstanbieter
 In diesem Abschnitt behandelt die drei Arten von Anbietern: Datenanbieter Dienstanbieter und Dienstkomponenten. Anbieter können zwei Kategorien zugeordnet: Bereitstellen von Daten und die Dienste bereitstellen. Ein *Datenanbieter* besitzt seine eigenen Daten und es in tabellarischer Form an Ihre Anwendung verfügbar gemacht. Ein *Dienstanbieter* kapselt einen Dienst durch erzeugen und Nutzen von Daten, die Funktionen in den ADO-Anwendungen zu erweitern. Ein Dienstanbieter kann als auch genauer definiert eine *Dienstkomponente*, die zusammen mit anderen Dienstanbietern oder Komponenten arbeiten müssen.

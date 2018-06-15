@@ -2,7 +2,6 @@
 title: Einfache Microsoft OLE DB-Anbieter | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5e757ad77f0312d682027d2363944db552217eba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8d3abb4d2d34220800a1d8c71b6227cc8de0fd88
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271519"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB-einfachen Anbieter (Übersicht)
 Der Microsoft OLE DB-einfachen Anbieter (OSP) können auf alle Daten zugreifen, für die ein Anbieter geschrieben wurde mithilfe von, ADO der [OLE DB-einfachen Anbieter (OSP) Toolkit](http://msdn.microsoft.com/en-us/6e7b7931-9e4a-4151-ae51-672abd3f84a6). Einfache Anbieter dienen dem Zugriff auf Datenquellen, die nur grundlegende OLE DB-Unterstützung, z. B. in-Memory-Arrays oder XML-Dokumenten erforderlich ist.
@@ -50,8 +50,8 @@ MSDAOSP
 
 |Schlüsselwort|Description|
 |-------------|-----------------|
-|**Provider**|Gibt die OLE DB-Anbieter für SQL Server an.|
-|**Datenquelle**|Gibt den Namen eines Servers.|
+|**Anbieter**|Gibt die OLE DB-Anbieter für SQL Server an.|
+|**Data Source**|Gibt den Namen eines Servers.|
 
 ## <a name="xml-document-example"></a>XML-Dokument (Beispiel)
  Der OLE DB-einfachen Anbieter (OSP) in MDAC 2.7 oder höher und Windows Data Access Components (Windows DAC) wurde verbessert, um das Öffnen von hierarchischen ADO unterstützt **Recordsets** über beliebige XML-Dateien. Diese XML-Dateien können das ADO-XML-Persistenz-Schema enthalten, aber es ist nicht erforderlich. Dies wurde durch Herstellen einer Verbindung das OSP, implementiert die **"Msxml2.dll"** daher **"Msxml2.dll"** oder höher erforderlich.

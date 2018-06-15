@@ -2,7 +2,6 @@
 title: Verwenden von Visual C++-Erweiterungen | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a1c832cff45ad5998918c6f5f67927e49bc9d4e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06e2d13c589d4dc88f3a148122322f483c49d2fb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271589"
 ---
 # <a name="visual-c-extensions"></a>Visual C++-Erweiterungen
 ## <a name="the-iadorecordbinding-interface"></a>Die IADORecordBinding-Schnittstelle
@@ -116,9 +116,9 @@ Update(CADORecordBinding *binding)
 
 |Parameter|Description|
 |---------------|-----------------|
-|*Class*|Klasse, die in dem die Bindungseinträge und die C/C++-Variablen definiert werden.|
+|*Klasse*|Klasse, die in dem die Bindungseinträge und die C/C++-Variablen definiert werden.|
 |*Ordinal*|Ordnungszahl, beginnend mit 1, der die **Recordset** Feld, das die C/C++-Variable entspricht.|
-|*DataType*|Entsprechende ADO-Datentyp, der die C/C++-Variable (finden Sie unter [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) eine Liste gültiger Datentypen). Der Wert, der die **Recordset** Feld wird in diesen Datentyp konvertiert werden, bei Bedarf.|
+|*Datentyp*|Entsprechende ADO-Datentyp, der die C/C++-Variable (finden Sie unter [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) eine Liste gültiger Datentypen). Der Wert, der die **Recordset** Feld wird in diesen Datentyp konvertiert werden, bei Bedarf.|
 |*Buffer*|Name der C/C++-Variablen, in denen die **Recordset** Feld gespeichert werden.|
 |*Größe*|Maximale Größe in Byte der *Puffer*. Wenn *Puffer* enthält eine Zeichenfolge variabler Länge Platz für ein abschließendes NULL zulassen.|
 |*Status*|Name einer Variablen, die angibt, ob der Inhalt des *Puffer* gültig sind, und gibt an, ob die Konvertierung des Felds, das *DataType* war erfolgreich.<br /><br /> Die beiden wichtigsten Werte für diese Variable sind **AdFldOK**, was bedeutet, dass die Konvertierung war erfolgreich, und **AdFldNull**, was bedeutet, dass den Wert des Felds wäre eine Variante des Typs VT_NULL und nicht nur leer.<br /><br /> Mögliche Werte für *Status* sind aufgeführt, in der nächsten Tabelle, "Statuswerte".|
@@ -132,7 +132,7 @@ Update(CADORecordBinding *binding)
 
  Beim Festlegen der Daten, *Status* kann festgelegt werden, um **AdFldNull** an, dass die **Recordset** Feld sollte festgelegt werden auf Null.
 
-|Konstante|Wert|Description|
+|Konstante|value|Description|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|Ein Wert ungleich Null-Felds wurde zurückgegeben.|
 |**adFldBadAccessor**|1|Bindung war ungültig.|

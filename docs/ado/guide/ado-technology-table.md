@@ -7,7 +7,6 @@ ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,11 +16,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9f343cd75bed65062975f75e9560eabb43ee9212
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: af9be3799708422734034f5ffe49d54bc1958037
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271569"
 ---
 # <a name="products-and-technologies-table"></a>Produkte und Technologien-Tabelle
 Die folgende Tabelle enthält die Microsoft-Produkte, Tools und Technologien, die in der ADO-Programmiererhandbuch erläutert. Auch Links, nach Möglichkeit zu relevanten Themen im Handbuch.
@@ -39,7 +39,7 @@ Die folgende Tabelle enthält die Microsoft-Produkte, Tools und Technologien, di
 |ODBC|[Verwenden von RDS mit ODBC-Verbindungspooling](../../ado/guide/remote-data-service/using-rds-with-odbc-connection-pooling.md)<br /><br /> [Microsoft OLE DB-Anbieter für ODBC](../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)|
 |OLE DB|[OLE DB-Anbieter](../../ado/guide/data/ole-db-providers-ado.md)<br /><br /> [Anhang A: Daten und Dienstanbieter](../../ado/guide/appendixes/appendix-a-providers.md)<br /><br /> [Anbieterfehler](../../ado/guide/data/provider-errors.md)|
 |Oracle|[Microsoft OLE DB-Anbieter für Oracle](../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md)|
-|SQL Server|[Steuern von Transaktionen](../../ado/guide/data/controlling-transactions-ado.md)<br /><br /> [Aufrufen einer gespeicherten Prozedur mit einem Befehl](../../ado/guide/data/calling-a-stored-procedure-with-a-command.md)<br /><br /> [Aktueller Datensatz und Größe des Recordsets](../../ado/guide/data/current-record-and-size-of-recordset.md)<br /><br /> [Vorwärtscursor](../../ado/guide/data/forward-only-cursors.md)<br /><br /> [Command-Streams](../../ado/guide/data/command-streams.md)<br /><br /> [Abrufen von Resultsets in Streams](../../ado/guide/data/retrieving-resultsets-into-streams.md)<br /><br /> [Ausführen des Adress Book-SQL-Skripts](../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)<br /><br /> [Sicherstellen, dass ausreichend TempDB-Speicherplatz vorhanden ist](../../ado/guide/remote-data-service/ensuring-sufficient-tempdb-space.md)<br /><br /> [Minimieren des Verbrauchs an Protokolldatei-Speicherplatz](../../ado/guide/remote-data-service/minimizing-log-file-space-usage.md)<br /><br /> [Microsoft OLE DB-Anbieter für SQLServer](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)|
+|SQL Server|[Steuern von Transaktionen](../../ado/guide/data/controlling-transactions-ado.md)<br /><br /> [Aufrufen einer gespeicherten Prozedur mit einem Befehl](../../ado/guide/data/calling-a-stored-procedure-with-a-command.md)<br /><br /> [Aktueller Datensatz und Größe des Recordsets](../../ado/guide/data/current-record-and-size-of-recordset.md)<br /><br /> [Vorwärtscursor](../../ado/guide/data/forward-only-cursors.md)<br /><br /> [Command-Streams](../../ado/guide/data/command-streams.md)<br /><br /> [Abrufen von Resultsets in Streams](../../ado/guide/data/retrieving-resultsets-into-streams.md)<br /><br /> [Ausführen des Adress Book-SQL-Skripts](../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)<br /><br /> [Sicherstellen, dass ausreichend TempDB-Speicherplatz vorhanden ist](../../ado/guide/remote-data-service/ensuring-sufficient-tempdb-space.md)<br /><br /> [Minimieren des Verbrauchs an Protokolldatei-Speicherplatz](../../ado/guide/remote-data-service/minimizing-log-file-space-usage.md)<br /><br /> [Microsoft OLE DB-Anbieter für SQLServer](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)|
 |Transaction Server|[Ausführen von Geschäftsobjekten in Komponentendiensten](../../ado/guide/remote-data-service/running-business-objects-in-component-services.md)|
 |VBScript|[Behandeln von Fehlern in anderen Sprachen](../../ado/guide/data/handling-errors-in-other-languages.md)<br /><br /> [Visual Basic für Applikationen-Funktionen](../../ado/guide/data/visual-basic-for-applications-functions.md)<br /><br /> [Command-Streams](../../ado/guide/data/command-streams.md)<br /><br /> [Lösungen für Remotedatenzugriff](../../ado/guide/remote-data-service/solutions-for-remote-data-access.md)<br /><br /> [RDS-Szenario](../../ado/guide/remote-data-service/rds-scenario.md)<br /><br /> [RDS-Tutorial (VBScript)](../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)<br /><br /> [VBScript-ADO-Programmierung](../../ado/guide/appendixes/vbscript-ado-programming.md)<br /><br /> [ADO-Codebeispiele in Microsoft Visual Basic Scripting Edition](../../ado/reference/ado-api/ado-code-examples-vbscript.md)|
 |Visual Basic|[Fehler](../../ado/guide/data/errors-ado.md)<br /><br /> [ADO-Fehler](../../ado/guide/data/ado-errors.md)<br /><br /> [ADO-Ereignisinstanziierung nach Sprache](../../ado/guide/data/ado-event-instantiation-by-language.md)<br /><br /> [Visual Basic für Applikationen-Funktionen](../../ado/guide/data/visual-basic-for-applications-functions.md)<br /><br /> [RDS-Tutorial](../../ado/guide/remote-data-service/rds-tutorial.md)<br /><br /> [Verwenden von ADO mit Microsoft Visual Basic](../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)<br /><br /> [ADO-Codebeispiele in Microsoft Visual Basic](../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)|

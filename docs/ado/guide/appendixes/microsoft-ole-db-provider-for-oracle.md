@@ -2,7 +2,6 @@
 title: Microsoft OLE DB-Anbieter für Oracle | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,15 +18,16 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: de312ff17a7d66bf58a5b8f1fb7a6c33aa27acec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 241a3ac024ef2a15bfe403e49ea9778939d22bc8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271099"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB-Anbieter für Oracle (Übersicht)
 > [!IMPORTANT]
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Verwenden Sie stattdessen den Oracle OLE DB-Anbieter.
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den Oracle OLE DB-Anbieter.
 
  Der Microsoft OLE DB-Anbieter für Oracle ermöglicht ADO auf Oracle-Datenbanken zugreifen.
 
@@ -53,8 +53,8 @@ MSDAORA
 
 |Schlüsselwort|Description|
 |-------------|-----------------|
-|**Provider**|Gibt die OLE DB-Anbieter für Oracle.|
-|**Datenquelle**|Gibt den Namen eines Servers.|
+|**Anbieter**|Gibt die OLE DB-Anbieter für Oracle.|
+|**Data Source**|Gibt den Namen eines Servers.|
 |**Benutzer-ID**|Gibt den Benutzernamen an.|
 |**Kennwort**|Gibt das Kennwort des Benutzers an.|
 

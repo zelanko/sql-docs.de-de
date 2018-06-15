@@ -2,7 +2,6 @@
 title: Microsoft OLE DB-Anbieter für ODBC | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 612ca78e6af181aaf3e2d3b1eb16ae5fea7eec3c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f539df9c19bacbe449479f45d5e7fd4fe59613d5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271629"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB-Anbieter für ODBC (Übersicht)
 Ein ADO- oder RDS-Programmierer würde idealerweise möglich in dem jede Datenquelle eine OLE DB-Schnittstelle verfügbar macht, damit ADO direkt in der Datenquelle aufrufen kann. Obwohl Datenbankanbieter zunehmend OLE DB-Schnittstellen implementieren, sind einige Datenquellen noch nicht auf diese Weise bereitgestellt. Allerdings können die meisten DBMS-Systeme heute über ODBC zugegriffen werden.
@@ -55,7 +55,7 @@ MSDASQL
 
 |Schlüsselwort|Description|
 |-------------|-----------------|
-|**Provider**|Gibt die OLE DB-Anbieter für ODBC.|
+|**Anbieter**|Gibt die OLE DB-Anbieter für ODBC.|
 |**DSN**|Gibt die Namen der Datenquelle an.|
 |**UID**|Gibt den Benutzernamen an.|
 |**PWD**|Gibt das Kennwort des Benutzers an.|
@@ -208,9 +208,9 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[Abbrechen](../../../ado/reference/ado-api/cancel-method-ado.md)|ja|ja|ja|ja|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|ja|ja|ja|ja|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|ja|ja|ja|ja|
-|[Klon](../../../ado/reference/ado-api/clone-method-ado.md)|nein|Nein|ja|ja|
+|[Klon](../../../ado/reference/ado-api/clone-method-ado.md)|nein|nein|ja|ja|
 |[Schließen](../../../ado/reference/ado-api/close-method-ado.md)|ja|ja|ja|ja|
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|ja|ja|ja|ja|
+|[Löschen](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|ja|ja|ja|ja|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|ja|ja|ja|ja|
 |[Verschieben](../../../ado/reference/ado-api/move-method-ado.md)|ja|ja|ja|ja|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|ja|ja|ja|ja|
@@ -218,9 +218,9 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|ja|ja|ja|ja|
 |[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|nein|ja|ja|ja|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|ja|ja|ja|ja|
-|[Öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md)|ja|ja|ja|ja|
+|[Datei](../../../ado/reference/ado-api/open-method-ado-recordset.md)|ja|ja|ja|ja|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|ja|ja|ja|ja|
-|[Erneut synchronisieren](../../../ado/reference/ado-api/resync-method.md)|nein|Nein|ja|ja|
+|[Erneut synchronisieren](../../../ado/reference/ado-api/resync-method.md)|nein|nein|ja|ja|
 |[Unterstützt](../../../ado/reference/ado-api/supports-method.md)|ja|ja|ja|ja|
 |[Update](../../../ado/reference/ado-api/update-method.md)|ja|ja|ja|ja|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|ja|ja|ja|ja|
@@ -264,7 +264,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Maximale Zeilengröße|DBPROP_MAXROWSIZE|
 |Maximale Zeilengröße schließt BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |Maximale Anzahl von Tabellen in SELECT|DBPROP_MAXTABLESINSELECT|
-|Modus|DBPROP_INIT_MODE|
+|Mode|DBPROP_INIT_MODE|
 |Mehrere Parametersätze|DBPROP_MULTIPLEPARAMSETS|
 |Mehrere Ergebnisse|DBPROP_MULTIPLERESULTS|
 |Mehrere Speicherobjekte|DBPROP_MULTIPLESTORAGEOBJECTS|

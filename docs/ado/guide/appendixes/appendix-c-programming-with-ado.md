@@ -2,7 +2,6 @@
 title: 'Anhang C: Programmieren mit ADO | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ab784d3fd9231cb9306a2150c0bbcf314051226
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fc648bb210f7f8d526886043b2b096de95c456ab
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270249"
 ---
 # <a name="appendix-c-programming-with-ado-in-development-environments"></a>Anhang C: Programmieren mit ADO in Entwicklungsumgebungen
 ADO ist eine COM-Automatisierung Schnittstelle-Komponente, die mit vielen Programmiersprachen, einschließlich Microsoft Visual Basic, VBScript, JScript und Visual C++ verwendet werden kann. Eine Version von ADO wird mit jedem dieser Tools und Anwendungen, z. B. Microsoft Office und Microsoft SQL Server installiert.

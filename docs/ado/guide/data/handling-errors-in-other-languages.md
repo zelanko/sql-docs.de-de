@@ -2,7 +2,6 @@
 title: Behandeln von Fehlern In anderen Sprachen | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/14/2017
@@ -15,11 +14,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4b3d01f0af7a943661140a6d1f8d031b35fee76f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d66aba3ea356cb5f59438e38d79aa3ff56a5b9e3
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270318"
 ---
 # <a name="handling-errors-in-other-languages"></a>Behandeln von Fehlern In anderen Sprachen
 Bisher wurde in diesem Abschnitt aus einem Microsoft® Visual Basic® Sicht Fehler erläutert. Der übrige Teil dieses Abschnitts erhalten Sie einen Überblick über die Fehlerbehandlung in anderen Sprachen als Visual Basic.  
