@@ -2,7 +2,6 @@
 title: CreateParameter-Methode (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 878ebc66b72724eea326683634cde7f122a815f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 865b2b0b8009b03e33e24f72ab4f336910a17ace
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277249"
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter-Methode (ADO)
 Erstellt ein neues [Parameter](../../../ado/reference/ado-api/parameter-object.md) Objekt mit den angegebenen Eigenschaften.  
@@ -53,7 +53,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  *Größe*  
  Optional. Ein **lange** Wert, der die maximale Länge für den Parameterwert in Zeichen oder Bytes angibt.  
   
- *Wert*  
+ *ReplTest1*  
  Optional. Ein **Variant** , die angibt, dass des Werts für die **Parameter** Objekt.  
   
 ## <a name="remarks"></a>Hinweise  

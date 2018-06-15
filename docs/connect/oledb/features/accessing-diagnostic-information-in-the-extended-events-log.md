@@ -2,7 +2,7 @@
 title: Zugreifen auf Diagnoseinformationen im Protokoll für erweiterte Ereignisse | Microsoft Docs
 description: Ablaufverfolgung von OLE DB-Treiber für SQL Server und den Zugriff auf Diagnoseinformationen im Protokoll für erweiterte Ereignisse
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -14,14 +14,17 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 255daa268cb3b8aeaee0e371052ae8af01241f72
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 57103074c0dd9453678e115bafcdfabf2270d1ba
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611655"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Zugreifen auf Diagnoseinformationen im Protokoll der erweiterten Ereignisse
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Ab [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], OLE DB-Treiber für SQL-Servers samt Daten Datenzugriffs-Ablaufverfolgung ([Datenzugriffsablaufverfolgung](http://go.microsoft.com/fwlink/?LinkId=125805)) wurden aktualisiert, um Diagnoseinformationen zum Verbindungsfehler aus dem konnektivitätsringpuffer abrufen zu vereinfachen und Leistung der Anwendungsinformationen aus dem Protokoll für erweiterte Ereignisse.  
   

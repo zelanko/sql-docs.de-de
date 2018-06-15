@@ -2,7 +2,6 @@
 title: Open-Methode (ADO-Datensatz) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 432f2a821bd276efd46f61497f4ef7ae95502bf7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fa486265426f52dfd5986c6d173bcd1ffdb45210
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280509"
 ---
 # <a name="open-method-ado-record"></a>Open-Methode (ADO-Datensatz)
 Öffnet ein vorhandenes [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) -Objekt oder erstellt ein neues Element, dargestellt durch die **Datensatz**, z. B. eine Datei oder ein Verzeichnis.  
@@ -50,7 +50,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
  *CreateOptions*  
  Optional. Ein [RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md) Wert, der angibt, ob eine vorhandene Datei oder das Verzeichnis geöffnet werden soll, oder eine neue Datei oder ein Verzeichnis erstellt werden soll. Standardwert ist **AdFailIfNotExists**. Wenn auf den Standardwert festgelegt, der Zugriffsmodus aus abgerufen wird die [Modus](../../../ado/reference/ado-api/mode-property-ado.md) Eigenschaft. Dieser Parameter wird ignoriert, wenn die *Quelle* Parameter enthält keine URL.  
   
- *Optionen*  
+ *enthalten*  
  Optional. Ein [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md) Wert, der angibt, die Optionen zum Öffnen der **Datensatz**. Standardwert ist **AdOpenRecordUnspecified**. Diese Werte können kombiniert werden.  
   
  *UserName*  

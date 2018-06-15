@@ -2,7 +2,6 @@
 title: Find-Methode (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 953398f5ed01cc3e0f7c0da1fee769d5e64209af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6569d6c65698738025267de0d97001eb041573e8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278719"
 ---
 # <a name="find-method-ado"></a>Find-Methode (ADO)
 Sucht eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) für die Zeile, die die angegebenen Kriterien erfüllt. Optional kann die Richtung der Suche, Startzeile und Offset von der Startzeile angegeben werden. Wenn die Kriterien erfüllt sind, wird die aktuelle Zeilenposition bei dem gefundenen Datensatz festgelegt. Andernfalls wird die Position festgelegt, Ende (oder Start) von der **Recordset**.  
@@ -47,7 +47,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  *SearchDirection*  
  Optionale *.* Ein [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) Wert, der angibt, ob die Suche auf der aktuellen Zeile oder die nächste verfügbare Zeile in die Richtung der Suche beginnen soll. Eine Suche nicht erfolgreiche beendet wird, am Ende der **Recordset** ist der Wert **AdSearchForward**. Eine Suche nicht erfolgreiche beendet wird, am Anfang der **Recordset** ist der Wert **AdSearchBackward**.  
   
- *Start*  
+ *Starten*  
  Optional. Ein **Variant** Lesezeichen, das als die Startposition für die Suche funktioniert.  
   
 ## <a name="remarks"></a>Hinweise  

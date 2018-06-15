@@ -2,7 +2,6 @@
 title: OriginalValue-Eigenschaft (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 503a1f8dae4140337ecae9410dc91570fedc8df9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c77c1badaa812efb13767b8f30afa37341bc07c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280022"
 ---
 # <a name="originalvalue-property-ado"></a>OriginalValue-Eigenschaft (ADO)
 Gibt den Wert einer [Feld](../../../ado/reference/ado-api/field-object.md) , die im Datensatz vorhanden waren, bevor Änderungen vorgenommen wurden.  
