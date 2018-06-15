@@ -2,9 +2,10 @@
 title: Auflisten von OLE DB-Datenquellen (OLE DB) | Microsoft Docs
 description: Auflisten von OLE DB-Datenquellen mit MSOLEDBSQL-enumerator
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,15 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: f788a3d34490292d1bc1a04b24a35f6e5738da2d
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: HT
+ms.openlocfilehash: 9b4911e94ec5cb21e2950a09b0a0e18d5f842bd7
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35305959"
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665880"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>Auflisten von OLE DB-Datenquellen (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Dieses Beispiel zeigt, wie das Enumeratorobjekt zum Auflisten der verfügbaren Datenquellen verwendet wird.  
   

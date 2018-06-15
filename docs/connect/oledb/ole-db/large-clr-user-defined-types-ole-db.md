@@ -2,10 +2,10 @@
 title: Große benutzerdefinierte CLR-Typen (OLE DB) | Microsoft Docs
 description: Große benutzerdefinierte CLR-Typen (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db
+ms.component: oledb|ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,14 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a2b62d0206fc36b69394975f93b7369465edebe1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac07bf034e65d654a2b8577bdad8d5f3fb8ff48d
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611985"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Große benutzerdefinierte CLR-Typen (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   In diesem Thema werden die Änderungen an OLE DB in OLE DB-Treiber für SQL Server zur Unterstützung großer common Language Runtime (CLR) eine benutzerdefinierte Typen (UDTs) erläutert.  
   
@@ -34,7 +37,7 @@ ms.lasthandoff: 05/03/2018
   
  In der folgenden Tabelle wird die Datentypzuordnung in Parametern und Rowsets dargestellt:  
   
-|SQL Server-Datentyp|OLE DB-Datentyp|Speicherlayout|Wert|  
+|SQL Server-Datentyp|OLE DB-Datentyp|Speicherlayout|value|  
 |--------------------------|----------------------|-------------------|-----------|  
 |CLR-UDT|DBTYPE_UDT|BYTE [] (Byte-array\)|132 ("OleDb.h")|  
   
@@ -128,7 +131,7 @@ ms.lasthandoff: 05/03/2018
 |DBTYPE_BSTR|Unterstützt (2), (5)|–|Unterstützte (3), (5)|–|  
 |DBTYPE_STR|Unterstützt (2), (5)|–|Unterstützte (3), (5)|–|  
 |DBTYPE_IUNKNOWN|Unterstützte (6)|–|Unterstützte (6)|–|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Unterstützt (5)|–|Unterstützte (3), (5)|–|  
+|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|Unterstützt (5)|–|Unterstützte (3), (5)|–|  
 |DBTYPE_VARIANT (VT_BSTR)|Unterstützt (2), (5)|–|–|–|  
   
 ### <a name="key-to-symbols"></a>Aufschlüsselung der Symbole  

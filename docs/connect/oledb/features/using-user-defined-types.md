@@ -2,7 +2,7 @@
 title: Verwenden von benutzerdefinierten Typen | Microsoft Docs
 description: Verwenden von benutzerdefinierten Typen mit OLE DB-Treiber für SQLServer
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -25,14 +25,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 06f444fed839be02320351f1f3862e42500df66f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6dd1191c3bb987f99b854f2e736f86dafb9e5ed1
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612235"
 ---
 # <a name="using-user-defined-types"></a>Verwenden von benutzerdefinierten Typen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] wurden benutzerdefinierte Typen (User-Defined Types, UDTs) eingeführt. UDTs erweitern das SQL-Typsystem, sodass Sie zum Speichern von Objekten und benutzerdefinierte Datenstrukturen in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datenbank. UDTs können mehrere Datentypen enthalten und Verhalten zeigen, das sie von den herkömmlichen Aliasdatentypen aus einem einzelnen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Systemdatentyp unterscheidet. UDTs werden in einer beliebigen, von .NET CLR (Common Language Runtime) unterstützten Sprache definiert, die überprüfbaren Code generiert. Dies schließt Microsoft Visual C#-<sup>®</sup> und Visual Basic<sup>®</sup> .NET. Die Daten werden in Feldern und Eigenschaften einer .NET-Klasse oder -Struktur verfügbar gemacht. Das Verhalten wird durch die Methoden der Klasse oder Struktur definiert.  
   
@@ -50,13 +53,13 @@ ms.lasthandoff: 05/03/2018
 |Datentyp|Zu Server<br /><br /> **UDT**|Zu Server<br /><br /> **non-UDT**|Von Server<br /><br /> **UDT**|Von Server<br /><br /> **non-UDT**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_UDT|Unterstützt<sup>6</sup>|Fehler<sup>1</sup>|Unterstützt<sup>6</sup>|Fehler<sup>5</sup>|  
-|DBTYPE_BYTES|Unterstützt<sup>6</sup>|N/A<sup>2</sup>|Unterstützt<sup>6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_WSTR|Unterstützt<sup>3,6</sup>|N/A<sup>2</sup>|Unterstützt<sup>4,6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_BSTR|Unterstützt<sup>3,6</sup>|N/A<sup>2</sup>|Unterstützt<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_STR|Unterstützt<sup>3,6</sup>|N/A<sup>2</sup>|Unterstützt<sup>4,6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_IUNKNOWN|Nicht unterstützt|N/A<sup>2</sup>|Nicht unterstützt|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Unterstützt<sup>6</sup>|N/A<sup>2</sup>|Unterstützt<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|Unterstützt<sup>3,6</sup>|N/A<sup>2</sup>|–|N/A<sup>2</sup>|  
+|DBTYPE_BYTES|Unterstützt<sup>6</sup>|N/V<sup>2</sup>|Unterstützt<sup>6</sup>|N/V<sup>2</sup>|  
+|DBTYPE_WSTR|Unterstützt<sup>3,6</sup>|N/V<sup>2</sup>|Unterstützt<sup>4,6</sup>|N/V<sup>2</sup>|  
+|DBTYPE_BSTR|Unterstützt<sup>3,6</sup>|N/V<sup>2</sup>|Unterstützt<sup>4</sup>|N/V<sup>2</sup>|  
+|DBTYPE_STR|Unterstützt<sup>3,6</sup>|N/V<sup>2</sup>|Unterstützt<sup>4,6</sup>|N/V<sup>2</sup>|  
+|DBTYPE_IUNKNOWN|Nicht unterstützt|N/V<sup>2</sup>|Nicht unterstützt|N/V<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|Unterstützt<sup>6</sup>|N/V<sup>2</sup>|Unterstützt<sup>4</sup>|N/V<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|Unterstützt<sup>3,6</sup>|N/V<sup>2</sup>|–|N/V<sup>2</sup>|  
   
  <sup>1</sup>, wenn ein anderer Servertyp als DBTYPE_UDT mit Indexparametern **ICommandWithParameters:: SetParameterInfo** und ist der Accessortyp DBTYPE_UDT, ein Fehler auftritt, wenn die Anweisung ausgeführt wird (DB_E_ERRORSOCCURRED; das Parameterstatus ist DBSTATUS_E_BADACCESSOR). Andernfalls werden die Daten an den Server gesendet, der Server gibt jedoch einen Fehler zurück und zeigt an, dass keine implizite Umwandlung des UDT in den Parameterdatentyp erfolgt.  
   
@@ -196,6 +199,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>Siehe auch  
  [OLE DB-Treiber für SQL Server-Funktionen](../../oledb/features/oledb-driver-for-sql-server-features.md)    
- [ISSCommandWithParameters & #40; OLE DB & #41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

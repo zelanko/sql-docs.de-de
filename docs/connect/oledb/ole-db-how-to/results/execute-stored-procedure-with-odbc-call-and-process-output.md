@@ -2,9 +2,10 @@
 title: Führen Sie die gespeicherte Prozedur mit dem ODBC aufrufen und Verarbeiten von Ausgabe | Microsoft Docs
 description: Verarbeiten Sie Rückgabecodes und Ausgabeparameter enthalten, die mithilfe von OLE DB-Treiber für SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,15 +17,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 5a7ac8e2f84bf428e743c6a9aaff3e2337835408
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: HT
+ms.openlocfilehash: 89e08882d06111e02057a95586c4f38c27b8db76
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35305669"
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665560"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Führen Sie die gespeicherte Prozedur mit dem ODBC aufrufen und Verarbeiten von Ausgabe
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] gespeicherte Prozeduren können ganzzahlige Rückgabecodes und Ausgabeparameter aufweisen. Die Rückgabecodes und Ausgabeparameter werden im letzten Paket des Servers gesendet und stehen der Anwendung demnach erst zur Verfügung, wenn das Rowset vollständig freigegeben wurde. Wenn der Befehl mehrere Ergebnisse zurückgibt, stehen Ausgabeparameterdaten zur Verfügung, wenn **IMultipleResults::GetResult** DB_S_NORESULT zurückgibt oder die **IMultipleResults** -Schnittstelle vollständig freigegeben wird, je nachdem, was zuerst eintritt.  
   

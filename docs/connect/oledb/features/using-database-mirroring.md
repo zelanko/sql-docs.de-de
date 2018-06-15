@@ -2,7 +2,7 @@
 title: Die Verwendung der Datenbankspiegelung | Microsoft Docs
 description: Verwendung von datenbankspiegelung mit OLE DB-Treiber für SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -21,18 +21,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9ba469d6f17618f06b92c257982b430c3636b916
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 69cf01aa4211bcc75e2bcbecec47a42fabf57e34
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612035"
 ---
 # <a name="using-database-mirroring"></a>Verwenden der Datenbankspiegelung
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]Verwendung [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] stattdessen.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
  Die in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] eingeführte Datenbankspiegelung ist eine Lösung zum Erhöhen der Datenbankverfügbarkeit und Datenredundanz. OLE DB-Treiber für SQL Server stellt implizite Unterstützung für die datenbankspiegelung, der Entwickler muss sich nicht auf zusätzlichen Code schreiben oder andere Aktionen ausführen, nachdem es für die Datenbank konfiguriert wurde.  
   

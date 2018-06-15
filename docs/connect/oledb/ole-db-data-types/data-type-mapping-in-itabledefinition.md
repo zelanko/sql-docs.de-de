@@ -2,9 +2,10 @@
 title: Datentypzuordnung itabledefinition | Microsoft Docs
 description: Datentypzuordnung itabledefinition
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -21,15 +22,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 31917fb7724ac9009db2d789ad08db8200944b1b
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: HT
+ms.openlocfilehash: d613fc7be394bbf16c86c5e217e3dfe83a4296a1
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35305979"
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666350"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>Datentypzuordnung zu ITableDefinition
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Beim Erstellen von Tabellen mit der **itabledefinition:: CreateTable** -Funktion, die OLE DB-Treiber für SQL Server-Consumer festlegbaren [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datentypen in der *PwszTypeName* Mitglied der DBCOLUMNDESC-Arrays, übergeben wird. Wenn der Consumer den Datentyp einer Spalte namentlich angibt, OLE DB-datentypzuordnung, dargestellt durch die *wType* Element der DBCOLUMNDESC-Struktur wird ignoriert.  
   

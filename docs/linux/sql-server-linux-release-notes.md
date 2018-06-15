@@ -12,11 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 07782a5b8290b41a5a11557c503fcbfd0736790b
-ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
+ms.openlocfilehash: f853cb623bee0fcd27d5cc7e6203610ed1603335
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611975"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Versionshinweise für SQL Server-2017 unter Linux
 
@@ -215,6 +216,7 @@ Die folgenden Features und Dienste sind zum Zeitpunkt der GA-Version nicht verf�
 | &nbsp; | Stretch DB |
 | &nbsp; | Polybase |
 | &nbsp; | Verteilte Abfragen mit 3rd Party Verbindungen |
+| &nbsp; | Verbindungsserver Datenquellen als SQL Server |
 | &nbsp; | Erweiterte gespeicherte Systemprozeduren (XP_CMDSHELL, usw.). |
 | &nbsp; | Filetable, FILESTREAM |
 | &nbsp; | Legen Sie die CLR-Assemblys mit der EXTERNAL_ACCESS oder UNSAFE-Berechtigung |
@@ -225,7 +227,7 @@ Die folgenden Features und Dienste sind zum Zeitpunkt der GA-Version nicht verf�
 | &nbsp; | Change Data Capture |
 | &nbsp; | Verwaltete Sicherung |
 | **High Availability (Hohe Verfügbarkeit)** | Datenbankspiegelung  |
-| **Sicherheit** | Erweiterbare Schlüsselverwaltung |
+| **Security** | Erweiterbare Schlüsselverwaltung |
 | &nbsp; | AD-Authentifizierung für Verbindungsserver | 
 | &nbsp; | AD-Authentifizierung für Verfügbarkeitsgruppen (Testreihen) | 
 | &nbsp; | 3rd Party AD-Tools (Centrify Vintela, Powerbroker) | 

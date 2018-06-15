@@ -2,7 +2,7 @@
 title: Ändern von Kennwörtern programmgesteuert | Microsoft Docs
 description: Ändern von Kennwörtern programmgesteuert mithilfe von OLE DB-Treiber für SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -24,14 +24,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8ac5c5c127b67fb872a6b10ffc7bd32ec7458092
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e09154c595f2e008f29ef6bd690968388cbe062b
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611996"
 ---
 # <a name="changing-passwords-programmatically"></a>Programmgesteuertes Ändern von Kennwörtern
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] konnte nur ein Administrator ein abgelaufenes Kennwort eines Benutzers zurücksetzen. Beginnend mit [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], OLE DB-Treiber für SQL Server unterstützt, die von abgelaufenen Kennwörtern programmgesteuert über OLE DB-Treiber und über Änderungen an der **SQL Server-Anmeldung** Dialogfelder.  
   

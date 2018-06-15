@@ -2,9 +2,10 @@
 title: Konvertierungen von Server aus ausgeführt werden, um Client | Microsoft Docs
 description: Konvertierungen, die vom Server zum client
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-date-time
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,15 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: dac321333ca4e1cb421c98be64c8f58ce1b77881
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: HT
+ms.openlocfilehash: a90953e9ee026f4f2c941520b1fe94bcf74eb1d5
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35305929"
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666410"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Server/Client-Konvertierungen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Dieser Artikel beschreibt die Datum/Uhrzeit-Konvertierungen zwischen [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (oder höher) und einer Clientanwendung, die mit OLE DB-Treiber für SQL Server geschrieben.  
   

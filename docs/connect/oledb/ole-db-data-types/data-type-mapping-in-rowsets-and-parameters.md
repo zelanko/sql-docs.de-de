@@ -2,9 +2,10 @@
 title: Datentypzuordnung zu Rowsets und Parametern | Microsoft Docs
 description: Datentypzuordnung zu Rowsets und Parametern
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -24,15 +25,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9fc5601f883f8d5e1cce27e476d3c2face12029a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: HT
+ms.openlocfilehash: 5814771fe9ea11adc0908d2791af4e1b4f7dd881
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306029"
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666120"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>Datentypzuordnung zu Rowsets und Parametern
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   In Rowsets und als Parameterwerte stellt der OLE DB-Treiber für SQL Server [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Daten über die folgenden OLE DB definierten Datentypen, die in den Funktionen gemeldet **IColumnsInfo:: GetColumnInfo** und  **ICommandWithParameters:: GetParameterInfo**.  
   

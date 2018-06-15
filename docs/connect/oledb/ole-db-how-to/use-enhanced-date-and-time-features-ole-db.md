@@ -2,9 +2,10 @@
 title: Verwenden von verbesserten Datums- und Uhrzeitfunktionen (OLE DB) | Microsoft Docs
 description: Verwenden der verbesserte Datums- und Uhrzeitfunktionen (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -13,15 +14,17 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d5a59baba26434df98ccd1768fdd2b050f43a4b4
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: HT
+ms.openlocfilehash: 1875ed56ee92fbb02013cfd3df0477453a272be5
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35305759"
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665840"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>Verwenden von verbesserten Datums- und Uhrzeitfunktionen (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Dieses Beispiel zeigt, wie die Datum/Uhrzeit-Funktionen, die in eingeführt wurden [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]. Dieses Beispiel verwendet die vier neuen Datums- und Uhrzeittypen (**date**, **time**, **datetime2**und **datetimeoffset**) zum Ausführen von Befehlen mit Parametern und zum Abrufen von Rowset-Ergebnissen.  
   

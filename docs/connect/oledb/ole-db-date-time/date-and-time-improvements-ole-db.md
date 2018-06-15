@@ -2,9 +2,10 @@
 title: Datum und Uhrzeit-Verbesserungen (OLE DB) | Microsoft Docs
 description: Datum und Uhrzeit-Verbesserungen (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-date-time
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,15 +17,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 40d4cec0a013a482cf2d25685c1f6d2bb23c7277
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: HT
+ms.openlocfilehash: 2edfdd322ca0400d3e811cb7960dfbc6cb73c1bf
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35305809"
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665720"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>Datum und Uhrzeit-Verbesserungen (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] führt neue Datums- und Uhrzeitdatentypen ein. In diesem Abschnitt wird beschrieben, wie diese neuen Typen als Erweiterungen in OLE DB-Treiber für SQL Server verfügbar gemacht werden. Einen Überblick über die OLE DB-Treiber für SQL Server-Unterstützung für die neuen Datums- und Uhrzeitdatentypen finden Sie unter [Datum und Uhrzeit-Verbesserungen](../../oledb/features/date-and-time-improvements.md). Ein Beispiel finden Sie unter [erweiterte Verwenden von Datums- und Uhrzeitfunktionen &#40;OLE DB-&#41;](../../oledb/ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md).  
   
