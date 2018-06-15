@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030687"
 ---
 # <a name="configurationsetting-method---reserveurl"></a>ConfigurationSetting-Methode: ReserveURL
   Fügt eine URL-Reservierung für eine gegebene Anwendung hinzu  

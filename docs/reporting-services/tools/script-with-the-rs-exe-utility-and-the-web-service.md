@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029421"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>Skripterstellung mit dem Hilfsprogramm rs.exe und dem Webdienst
   Entwickler und Berichtsserveradministratoren können auf einem Berichtsserver mithilfe des Hilfsprogramms **rs** (RS.exe) Vorgänge ausführen. In diesem Hilfsprogramm können Sie mithilfe von mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]geschriebenen Skripts Berichtsserver programmgesteuert verwalten.  
