@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 5497a74c256282fd14f7c5301f7eea4cfa9aa596
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b26077abc7d714ffebdf36068a2f3d5fc081d7e
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306779"
 ---
 # <a name="creating-sql-server-tables"></a>Erstellen von SQL Server-Tabellen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  **CreateTable** gibt db_e_badtype zurück, wenn der Consumer die *pTypeInfo* oder *Pclsid* Member Datentyp der Spalte an.  
   
- Der Consumer gibt den Spaltennamen in der *PwszName* Mitglied der *uName* -Vereinigung des DBCOLUMNDESC *Dbcid* Member. Der Spaltenname wird als Unicode-Zeichenfolge angegeben. Die *eKind* Mitglied *Dbcid* muss DBKIND_NAME sein. **CreateTable** gibt db_e_badcolumnid zurück, wenn *eKind* ist ungültig, *PwszName* NULL ist, oder wenn der Wert der *PwszName* ist kein gültiger [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Bezeichner.  
+ Der Consumer gibt den Spaltennamen in der *PwszName* Mitglied der *uName* -Vereinigung des DBCOLUMNDESC *Dbcid* Member. Der Spaltenname wird als Unicode-Zeichenfolge angegeben. Die *eKind* Mitglied *Dbcid* muss DBKIND_NAME sein. **CreateTable** gibt db_e_badcolumnid zurück, wenn *eKind* ist ungültig, *PwszName* NULL ist, oder wenn der Wert der *PwszName* ist kein gültiger [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Der Bezeichner.  
   
  Alle Spalteneigenschaften sind in allen für die Tabelle definierten Spalten verfügbar. **CreateTable** kann DB_S_ERRORSOCCURRED oder DB_E_ERRORSOCCURRED zurückgeben werden, wenn in Konflikt stehende Werte festgelegt sind. **CreateTable** gibt einen Fehler zurück, wenn ungültige Spalteneigenschaften führen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -tabellenerstellung.  
   

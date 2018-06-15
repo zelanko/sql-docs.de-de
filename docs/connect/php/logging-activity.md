@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a36683429987afff72c3ee9aa98124c4ee0f613
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 146365e4a4a0a287992bb1873a104f62cc79fc0b
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307889"
 ---
 # <a name="logging-activity"></a>Protokollieren von Aktivitäten
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,7 +40,7 @@ pdo_sqlsrv.log_severity = <number>
   
 Für**log_severity** sind die folgenden Werte möglich.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |---------|---------------|  
 |0|Die Protokollierung ist deaktiviert (Standardeinstellung, wenn nichts definiert ist).|  
 |-1|Gibt an, dass Fehler, Warnungen und Hinweise protokolliert werden.|  

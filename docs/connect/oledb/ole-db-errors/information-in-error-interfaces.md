@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-errors
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -21,11 +20,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: f9f6573916c890e7ae904f8a4b5dabed5ece62db
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 36a8e0885e7da31ff32e380f9a4d5fc08ab93bbd
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305969"
 ---
 # <a name="information-in-error-interfaces"></a>Informationen in Fehlerschnittstellen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,8 +38,8 @@ ms.lasthandoff: 05/03/2018
 |---------------------|-----------------|  
 |**GetDescription**|Beschreibende Fehlermeldungs-Zeichenfolge.|  
 |**GetGUID**|GUID der Schnittstelle, die den Fehler definiert hat.|  
-|**GetHelpContext**|Nicht unterstützt. Es wird immer NULL zurückgegeben.|  
-|**GetHelpFile**|Nicht unterstützt. Gibt immer NULL zurück.|  
+|**GetHelpContext**|Wird nicht unterstützt. Es wird immer NULL zurückgegeben.|  
+|**GetHelpFile**|Wird nicht unterstützt. Gibt immer NULL zurück.|  
 |**GetSource**|Zeichenfolge "Microsoft OLE DB-Treiber für SQLServer".|  
   
  Der OLE DB-Treiber für SQL Server unterstützt für Consumer verfügbare **IErrorRecords** -Elementfunktionen wie folgt.  
