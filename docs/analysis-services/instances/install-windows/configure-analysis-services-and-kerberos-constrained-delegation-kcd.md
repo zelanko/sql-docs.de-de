@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34019247"
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>Konfigurieren von Analysis Services und der eingeschränkten Kerberos-Delegierung
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -99,7 +100,7 @@ ms.lasthandoff: 05/10/2018
   
 3.  Konfigurieren Sie auf der Seite „Analysis Services-Konfiguration“ den Analysis Services-Server für den **Power Pivot** -Modus, und fügen Sie den **Computernamen** von Office Online Server zur Liste der Analysis Services-Serveradministratoren hinzu. Weitere Informationen finden Sie unter [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
-4.  Beachten Sie, dass der Objekttyp „Computer“ nicht standardmäßig in der Suche enthalten ist. Klicken Sie auf ![klicken Sie auf die Objekte zum Hinzufügen von Konto "Computer"](../../../analysis-services/instances/install-windows/media/ss-objects-button.png "klicken Sie auf die Objekte zum Hinzufügen von Konto "Computer"") zum Hinzufügen der Computer-Objekts.  
+4.  Beachten Sie, dass der Objekttyp „Computer“ nicht standardmäßig in der Suche enthalten ist. Klicken Sie auf ![klicken Sie auf die Objekte zum Hinzufügen von Konto "Computer"](../../../analysis-services/instances/install-windows/media/ss-objects-button.png "klicken Sie auf die Objekte zum Hinzufügen von Konto \"Computer\"") zum Hinzufügen der Computer-Objekts.  
   
      ![Hinzufügen von Computerkonten als Administratoren von Ssas](../../../analysis-services/instances/media/ssas-in-ssms-computerobjects.png "Hinzufügen von Computerkonten als Administratoren von Ssas")  
   

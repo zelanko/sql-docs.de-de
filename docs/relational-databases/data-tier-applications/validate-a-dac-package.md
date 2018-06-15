@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32931211"
 ---
 # <a name="validate-a-dac-package"></a>Überprüfen eines DAC-Pakets
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
  **Anzeigen einer DAC in SQL Server Developer Tools**  
   
-1.  Öffnen Sie das Menü **Datei** , und wählen Sie **Neu**und dann **Projekt…**aus.  
+1.  Öffnen Sie das Menü **Datei** , und wählen Sie **Neu**und dann **Projekt…** aus.  
   
 2.  Wählen Sie die **SQL Server** -Projektvorlage aus, und geben Sie **Name**, **Speicherort**und **Projektmappenname**ein.  
   

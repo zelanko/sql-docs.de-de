@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34018047"
 ---
 # <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>Lektion 8-1: definieren und Verwenden einer Drillthroughaktion
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +55,7 @@ Im Rahmen der Tasks in diesem Thema definieren Sie eine Drillthroughaktion, die 
   
 8.  Geben Sie in das Feld **Maximale Zeilenanzahl** die Ziffer **10**ein.  
   
-9. Geben Sie in das Feld **Beschriftung** die Beschreibung **Drillthrough to Order Details…**ein.  
+9. Geben Sie in das Feld **Beschriftung** die Beschreibung **Drillthrough to Order Details…** ein.  
   
     Durch diese Einstellungen wird die Anzahl der zurückgegebenen Zeilen beschränkt und die Beschriftung angegeben, die im Clientanwendungsmenü angezeigt wird. In der folgenden Abbildung werden diese Einstellungen im Feld **Weitere Eigenschaften** dargestellt.  
   
