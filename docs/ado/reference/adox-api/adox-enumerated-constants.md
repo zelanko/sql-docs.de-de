@@ -2,7 +2,6 @@
 title: ADOX-Enumerationskonstanten | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ba95b08ddaa4a75a8243f6830b0f9ce9637d819
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a862168ffd8be5d7490a7151813bb6c1272f6d86
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284779"
 ---
 # <a name="adox-enumerated-constants"></a>ADOX-Enumerationskonstanten
 Zur Unterstützung des Debugprozesses Listen die Konstanten auf ADOX aufgezählt einen Wert für jede Konstante. Dieser Wert ist nur eine Empfehlung und kann von einer Version von ADOX in einen anderen ändern. Der Code sollte nur auf den Namen, die nicht der tatsächliche Wert Enumerationskonstanten abhängig sein.  

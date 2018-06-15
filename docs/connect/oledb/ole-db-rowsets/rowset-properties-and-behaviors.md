@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,11 +18,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 35a330703d6664422bf4de80a6ac13e309a83549
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2526d6279d9ef4c38249b5fd841a0336e418b6df
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306399"
 ---
 # <a name="rowset-properties-and-behaviors"></a>Eigenschaften und Verhaltensweisen von Rowsets
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -101,7 +101,7 @@ ms.lasthandoff: 05/03/2018
 |SSPROP_MAXBLOBLENGTH|Spalte: No<br /><br /> R/w: Lesen/Schreiben<br /><br /> Typ: VT_I4<br /><br /> Standard: Der Anbieter schränkt die Größe des vom Server zurückgegebenen Texts nicht ein, und der Eigenschaftswert wird auf das Maximum festgelegt. Beispiel: 2147483647.<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server führt eine SET TEXTSIZE-Anweisung, um die Länge der Daten binary large Object (BLOB), die in einer SELECT-Anweisung zurückgegebenen eingeschränkt.|  
 |SSPROP_NOCOUNT_STATUS|Spalte: NoCount<br /><br /> R/w: schreibgeschützt<br /><br /> Typ: VT_BOOL<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Ein boolescher Wert, der den Status von SET NOCOUNT ON/OFF in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] darstellt:<br /><br /> VARIANT_TRUE: wenn SET NOCOUNT ON<br /><br /> VARIANT_FALSE: wenn SET NOCOUNT OFF|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|Spalte: No<br /><br /> R/w: Lesen/Schreiben<br /><br /> Typ: VT_BSTR (1-2000 Zeichen zulässig)<br /><br /> Standard: leere Zeichenfolge<br /><br /> Beschreibung: Der Nachrichtentext der Abfragebenachrichtigung. Dieser ist benutzerdefiniert und weist kein bestimmtes Format auf.|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|Spalte: No<br /><br /> R/w: Lesen/Schreiben<br /><br /> Typ: VT_BSTR<br /><br /> Standard: leere Zeichenfolge<br /><br /> Beschreibung: Die Abfragebenachrichtigungsoptionen. Diese werden in einer Zeichenfolge mit `name=value` angegeben. Der Benutzer ist für das Erstellen des Diensts und Lesen von Benachrichtigungen von der Warteschlange verantwortlich. Die Syntax der Benachrichtigungen Optionen Abfragezeichenfolge lautet:<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> Beispiel:<br /><br /> `service=mySSBService;local database=mydb`|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|Spalte: No<br /><br /> R/w: Lesen/Schreiben<br /><br /> Typ: VT_BSTR<br /><br /> Standard: leere Zeichenfolge<br /><br /> Beschreibung: Die Abfragebenachrichtigungsoptionen. Diese werden in einer Zeichenfolge mit `name=value` angegeben. Der Benutzer ist für das Erstellen des Diensts und Lesen von Benachrichtigungen von der Warteschlange verantwortlich. Die Syntax der Benachrichtigungen Optionen Abfragezeichenfolge lautet:<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> Zum Beispiel:<br /><br /> `service=mySSBService;local database=mydb`|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|Spalte: No<br /><br /> R/w: Lesen/Schreiben<br /><br /> Typ: VT_UI4<br /><br /> Standard: 432000 Sekunden (5 Tage).<br /><br /> Minimum: 1 Sekunde<br /><br /> Maximum: 2^31-1 Sekunden<br /><br /> Beschreibung: Die Anzahl der Sekunden, während der die Abfragebenachrichtigung aktiv bleiben soll.|  
   
 ## <a name="see-also"></a>Siehe auch  

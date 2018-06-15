@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-date-time
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,11 +15,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 91d3e482964b706f603ba3648c307414978fbaee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: dac321333ca4e1cb421c98be64c8f58ce1b77881
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305929"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Server/Client-Konvertierungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,10 +32,10 @@ ms.lasthandoff: 05/03/2018
   
 |To -><br /><br /> Von|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|Datum|1, 7|OK|-|-|1|1, 3|1, 7|-|OK ("VT_BSTR")|OK|OK|4|4|  
-|Zeit|5, 6, 7|-|9|OK|6|3, 6|5, 6|-|OK ("VT_BSTR")|OK|OK|4|4|  
+|date|1, 7|OK|-|-|1|1, 3|1, 7|-|OK ("VT_BSTR")|OK|OK|4|4|  
+|Uhrzeit|5, 6, 7|-|9|OK|6|3, 6|5, 6|-|OK ("VT_BSTR")|OK|OK|4|4|  
 |Smalldatetime|7|8|9, 10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
-|Datetime|5, 7|8|9, 10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
+|DATETIME|5, 7|8|9, 10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
 |Datetime2|5, 7|8|9, 10|10|7|3|5, 7|-|OK ("VT_BSTR")|OK|OK|4|4|  
 |Datetimeoffset|5, 7, 11|8, 11|9, 10, 11|10, 11|7, 11|OK|5, 7, 11|-|OK ("VT_BSTR")|OK|OK|4|4|  
 |Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12, 9|12|12|12|7, 13|–|–|–|–|–|–|  

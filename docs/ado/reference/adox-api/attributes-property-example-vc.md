@@ -2,7 +2,6 @@
 title: Attribute-Eigenschaft (VC++-Beispiel) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 29d31a09c384784b067a7b8c2bfaa4bee2162bdc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0372befbf0c69beaf036228d97e217766f99d480
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285349"
 ---
 # <a name="attributes-property-example-vc"></a>Attribute-Eigenschaft (VC++-Beispiel)
 Dieses Beispiel zeigt die [Attribute](../../../ado/reference/adox-api/attributes-property-adox.md) Eigenschaft eine [Spalte](../../../ado/reference/adox-api/column-object-adox.md). Bei der Einstellung **eine** ermöglicht es dem Benutzer zum Festlegen des Werts von einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) [Feld](../../../ado/reference/ado-api/field-object.md) auf eine leere Zeichenfolge. In diesem Fall kann der Benutzer unterscheiden, zwischen einer, in dem Daten nicht bekannt ist, und ein Datensatz, in dem die Daten nicht gilt.  

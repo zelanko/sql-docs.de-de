@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-date-time
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,11 +15,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ee8dc8c918f36c3d6dc8626254c87ced79c253ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 3b4e2d41a281c94f1e5ec50abd9a3300189512e1
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306169"
 ---
 # <a name="metadata---parameter-and-rowset"></a>Metadaten - Parameter und Rowsets
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,10 +42,10 @@ ms.lasthandoff: 05/03/2018
   
 |Parametertyp|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|Datum|DBTYPE_DBDATE|6|10|0|Löschen|  
+|date|DBTYPE_DBDATE|6|10|0|Löschen|  
 |Uhrzeit|DBTYPE_DBTIME2|10|8, 10..16|0..7|Legen Sie|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Löschen|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Löschen|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Löschen|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Legen Sie|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Legen Sie|  
   
@@ -59,11 +59,11 @@ ms.lasthandoff: 05/03/2018
 |*pwszDataSourceType*<br /><br /> (anbieterspezifisch)|*pwszDataSourceType*<br /><br /> (OLE DB-generisch)|*ulParamSize*|*bScale*|  
 |----------------------------------------------------|-------------------------------------------------|-------------------|--------------|  
 ||DBTYPE_DATE|6|Wird ignoriert.|  
-|Datum|DBTYPE_DBDATE|6|Wird ignoriert.|  
+|date|DBTYPE_DBDATE|6|Wird ignoriert.|  
 ||DBTYPE_DBTIME|10|Wird ignoriert.|  
 |Uhrzeit|DBTYPE_DBTIME2|10|0..7|  
 |smalldatetime||16|Wird ignoriert.|  
-|datetime||16|Wird ignoriert.|  
+|DATETIME||16|Wird ignoriert.|  
 |datetime2 oder DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 05/03/2018
 |Bindungstyp|*pwszDataSourceType*<br /><br /> (anbieterspezifisch)|  
 |------------------|----------------------------------------------------|  
 |DBTYPE_DATE|datetime2(0)|  
-|DBTYPE_DBDATE|Datum|  
+|DBTYPE_DBDATE|date|  
 |DBTYPE_DBTIME|time(0)|  
 |DBTYPE_DBTIME2|time(7)|  
 |DBTYPE_DBTIMESTAMP|datetime2(7)|  
@@ -87,10 +87,10 @@ ms.lasthandoff: 05/03/2018
   
 |Spaltentyp|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|Datum|DBTYPE_DBDATE|6|10|0|Löschen|  
+|date|DBTYPE_DBDATE|6|10|0|Löschen|  
 |Uhrzeit|DBTYPE_DBTIME2|10|8, 10..16|0..7|Legen Sie|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Löschen|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Löschen|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Löschen|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Legen Sie|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Legen Sie|  
   
@@ -121,10 +121,10 @@ ms.lasthandoff: 05/03/2018
   
 |Parametertyp|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|Datum|DBTYPE_DBDATE|6|10|0|Löschen|  
+|date|DBTYPE_DBDATE|6|10|0|Löschen|  
 |time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|Legen Sie|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Löschen|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Löschen|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Löschen|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Legen Sie|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Legen Sie|  
   

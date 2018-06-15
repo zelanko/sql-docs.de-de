@@ -7,7 +7,6 @@ ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,11 +16,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bdb021c9d036a3daab6b0e5c3f4912c0da4059eb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d38ec14d124bcf45c4eb22188f86849d95f0275
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283409"
 ---
 # <a name="ado-glossary"></a>ADO-Glossar
 In diesem Thema werden Begriffe, die relevant für ADO definiert.  
@@ -68,7 +68,7 @@ In diesem Thema werden Begriffe, die relevant für ADO definiert.
  Geschäftsregel  
  Die Kombination aus Überprüfung Bearbeitungen, Anmeldung Überprüfungen DatenbankSuchen, Richtlinien und algorithmische Transformationen, die Möglichkeit, ein Unternehmen Geschäftsaktivitäten zu bilden. Auch bekannt als *Geschäftslogik*.  
   
-## <a name="c"></a>C  
+## <a name="c"></a>c  
  berechneter Ausdruck  
  Ein Ausdruck, der nicht konstant ist jedoch, deren Wert hängt von anderen Werten. Um ausgewertet werden, muss ein berechneter Ausdruck abrufen und Werte aus anderen Quellen, in der Regel in anderen Feldern oder Zeilen zu berechnen.  
   
@@ -267,7 +267,7 @@ In diesem Thema werden Begriffe, die relevant für ADO definiert.
  Ein Satz von Zeilen aus einer Datenquelle, mit immer das gleiche Feldschema. Ein Rowset kann alle oder einige Felder aus einer Tabelle darstellen. Ein Rowset kann auch eine virtuelle Tabelle, die von einer Abfrage oder ein Join von zwei oder mehr Tabellen erstellt repräsentieren. In ADO werden Rowsets durch dargestellt **Recordset** Objekte.  
   
 ## <a name="s"></a>S  
- Scope  
+ Bereich  
  Der Bereich des Verweises für ein Objekt oder eine Variable oder einen Bereich von Datensätzen in einer Sicht oder Tabelle. Lokale Variablen können beispielsweise nur innerhalb der Prozedur verwiesen werden in denen sie definiert wurden. Öffentliche Variablen werden an einer beliebigen Stelle in der Anwendung zugegriffen werden. Objekte, z. B. der aktuellen Datenbank befinden sich im Gültigkeitsbereich, wenn Suchpfad definiert werden. Datensatz Bereiche können mit einer Scope-Klausel in zahlreichen Befehlen angegeben werden.  
   
  Dienstanbieter  
@@ -292,7 +292,7 @@ In diesem Thema werden Begriffe, die relevant für ADO definiert.
  Ein Vorgang, durch Code, der abgeschlossen ist, bevor der nächste Vorgang möglicherweise schon initiiert. Siehe auch asynchronen Vorgang.  
   
 ## <a name="t-z"></a>T-Z  
- Struktur  
+ trEE  
  Eine Struktur, die eine hierarchische Beziehung zwischen Elementen (Knoten) darstellt. Ein Knoten ist auf der obersten Ebene einer Struktur (Stamm) vorhanden. Unter dem Stammelement kann mehrere untergeordnete Elemente vorhanden sein. Jedes untergeordnete Element kann wiederum das übergeordnete Element eines weiteren untergeordneten Elementen, Verzweigen wie eine Struktur sein. Ein Ordner, Dokumente und andere Ordner enthält ist ein typisches Beispiel für eine Struktur. Siehe auch Hierarchie, Knoten, Root, untergeordneten und übergeordneten.  
   
  Webserver  

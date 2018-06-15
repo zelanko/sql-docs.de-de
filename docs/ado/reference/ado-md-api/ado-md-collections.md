@@ -2,7 +2,6 @@
 title: ADO MD-Auflistungen | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,21 +17,22 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57892d73a5c3dc3e410d267a1237fa91d0d60c8a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f2419977d062292dc87c2c0096b825fa2b5a0f89
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283249"
 ---
 # <a name="ado-md-collections"></a>ADO MD-Auflistungen
 |||  
 |-|-|  
 |[Achsen](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|Enthält die **Achse** Objekten, die ein Cellset definieren.|  
 |[CubeDefs](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|Enthält die **CubeDef** Objekte, die einen Cube aus einem multidimensionalen Katalog darstellen.|  
-|[Dimensionen](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Enthält die **Dimension** Objekte, aus denen ein Cube besteht.|  
+|[Dimensions](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Enthält die **Dimension** Objekte, aus denen ein Cube besteht.|  
 |[Hierarchien](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|Enthält den Satz **Hierarchie** Objekte aus einer Dimension.|  
 |[Levels](../../../ado/reference/ado-md-api/level-object-ado-md.md)|Enthält die **Ebene** Objekte, die eine Hierarchie bilden.|  
-|[Element](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|Enthält die **Member** Objekte aus einer Ebene oder einer Position auf einer Achse.|  
+|[Elemente](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|Enthält die **Member** Objekte aus einer Ebene oder einer Position auf einer Achse.|  
 |[Positionen](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|Enthält die **Position** Objekte, die einen Punkt auf einer Achse zu definieren.|  
   
 ## <a name="see-also"></a>Siehe auch  
