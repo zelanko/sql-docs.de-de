@@ -2,7 +2,6 @@
 title: CursorLocationEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c11977f3ca3ce90efb01ed96ec9075103cdad34d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2e7752b4c460bccbca1b98d9a95d04df96006ea6
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277419"
 ---
 # <a name="cursorlocationenum"></a>CursorLocationEnum
 Gibt den Speicherort des Cursordiensts.  
   
-|Konstante|Wert|Description|  
+|Konstante|value|Description|  
 |--------------|-----------|-----------------|  
 |**adUseClient**|3|Verwendet die clientseitige Cursor, die von einer lokalen Cursorbibliothek bereitgestellt. Lokale Cursor Services ermöglichen häufig viele Funktionen, die Cursor-Treiber bereitgestellte möglicherweise nicht so verwenden diese Einstellung einen Vorteil im Hinblick auf Funktionen bereitgestellt werden, die konfiguriert werden. Um Abwärtskompatibilität zu gewährleisten, das Synonym **AdUseClientBatch** wird ebenfalls unterstützt.|  
 |**adUseNone**|1|Wird kein Cursor Services verwendet werden. (Diese Konstante ist veraltet und wird aus Gründen der Abwärtskompatibilität angezeigt.)|  

@@ -2,7 +2,6 @@
 title: AppendChunk-Methode (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ba8020b9bf2666ba3b2ab0ffe9156c771360c95
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b3446061f98047d6af28725095ede2a30208969a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275909"
 ---
 # <a name="appendchunk-method-ado"></a>AppendChunk-Methode (ADO)
 Fügt Daten an eine große Text- oder Binärdaten [Feld](../../../ado/reference/ado-api/field-object.md), oder auf eine [Parameter](../../../ado/reference/ado-api/parameter-object.md) Objekt.  
@@ -38,7 +38,7 @@ object.AppendChunk Data
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Objekt*  
+ *object*  
  Ein **Feld** oder **Parameter** Objekt.  
   
  *Daten*  

@@ -2,7 +2,6 @@
 title: CursorType LockType und EditMode Eigenschaften-Beispiel (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 207ef59f8dd2263fcc3f32aee1ba63270bdcda61
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6e624b9b45ae02524cba20d6a01915818b5589fa
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277319"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>CursorType LockType und EditMode Eigenschaften-Beispiel (VB)
 Dieses Beispiel veranschaulicht das Festlegen der [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) und [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) Eigenschaften vor dem Öffnen einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Es zeigt auch den Wert von der [EditMode](../../../ado/reference/ado-api/editmode-property.md) Eigenschaft unter verschiedenen Bedingungen. Die EditModeOutput-Funktion wird zum Ausführen dieser Prozedur erforderlich.  

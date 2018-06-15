@@ -1,11 +1,8 @@
 ---
 title: Ordinal-Eigenschaft (ADO MD Position) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: ado
-ms.technology:
-- drivers
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dac93d9c0c9fa57139b15fde2ce1c691883e68a0
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 2b800c41c5d3dfb306b503d013c042477778929f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284665"
 ---
 # <a name="ordinal-property-ado-md-position"></a>Ordinal-Eigenschaft (ADO MD Position)
 Identifiziert eindeutig eine [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md) auf einer Achse.  

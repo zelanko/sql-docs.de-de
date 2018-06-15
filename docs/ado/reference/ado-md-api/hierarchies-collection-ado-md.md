@@ -1,11 +1,8 @@
 ---
 title: Hierarchies-Auflistung (ADO MD) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: ado
-ms.technology:
-- drivers
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30d8343c5d497b1d0ee46502c6405a67d422a0c7
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 33ca4bac4e6334793d56a9c6e38ded79160b731b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283939"
 ---
 # <a name="hierarchies-collection-ado-md"></a>Hierarchies-Auflistung (ADO MD)
 Enthält den Satz von [Hierarchie](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) Objekte aus einer Dimension.  

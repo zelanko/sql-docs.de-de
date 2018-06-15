@@ -2,7 +2,7 @@
 title: Aktualisieren von einer Anwendung auf OLE DB-Treiber für SQLServer von MDAC | Microsoft Docs
 description: Aktualisieren von einer Anwendung auf OLE DB-Treiber für SQL Server von MDAC
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|applications
@@ -20,32 +20,33 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 907e1c08f422809a04d3e3c8846d91f7982bb7ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11597ed3b7cd80cae8604291bd8b662bf6a9ed80
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612105"
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>Aktualisieren von einer Anwendung auf OLE DB-Treiber für SQLServer von MDAC
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Es gibt eine Reihe von Unterschieden zwischen OLE DB-Treiber für SQL Server und Microsoft Data Access Components (MDAC); ab Windows Vista, werden die Datenzugriffskomponenten jetzt Windows Data Access Components (oder Windows DAC) bezeichnet. Obwohl beide bieten die systemeigenen Datenzugriff auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datenbanken, OLE DB-Treiber für SQL Server speziell entworfen wurde, um die neuen Funktionen von verfügbar zu machen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], während gleichzeitig Abwärtskompatibilität mit früheren Versionen zu verwalten.   
+  Es gibt eine Reihe von Unterschieden zwischen OLE DB-Treiber für SQL Server und Microsoft Data Access Components (MDAC); ab Windows Vista, werden die Datenzugriffskomponenten jetzt Windows Data Access Components (oder Windows DAC) bezeichnet. Obwohl beide bieten die systemeigenen Datenzugriff auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datenbanken, OLE DB-Treiber für SQL Server entwickelt wurde, um die neuen Funktionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], während gleichzeitig Abwärtskompatibilität mit früheren Versionen zu verwalten.   
 
  Darüber hinaus Obwohl MDAC Komponenten zur Verwendung von OLE DB, ODBC und ActiveX Data Objects (ADO) enthält, implementiert OLE DB-Treiber für SQL Server nur OLE DB (obwohl ADO die Funktionalität des OLE DB-Treiber für SQL Server zugreifen kann).  
 
  OLE DB-Treiber für SQL Server und MDAC unterscheiden sich in folgenden Bereichen:  
 
--   Benutzer, die ADO verwenden, um einen OLE DB-Treiber für SQL Server zugreifen können möglicherweise weniger Filterfunktionen zur Verfügung als wenn sie einen SQL OLE DB-Anbieter zugegriffen.  
+-   Benutzer, die ADO verwenden, um den OLE DB-Treiber für SQL Server zugreifen können möglicherweise weniger Filterfunktionen zur Verfügung als wenn sie den SQL OLE DB-Anbieter zugegriffen.  
 
--   Wenn eine ADO-Anwendung OLE DB-Treiber für SQL Server verwendet und versucht, eine berechnete Spalte zu aktualisieren, wird ein Fehler gemeldet werden. Mit MDAC wurde das Update akzeptiert, jedoch ignoriert.  
+-   Wenn eine ADO-Anwendung OLE DB-Treiber für SQL Server verwendet und versucht, eine berechnete Spalte zu aktualisieren, wird ein Fehler gemeldet werden. Mit MDAC wurde das Update akzeptiert und ignoriert.  
 
 -   OLE DB-Treiber für SQL Server ist eine einzelne, eigenständige dynamic Link Library (DLL)-Datei. Die öffentlich verfügbaren Schnittstellen wurden auf ein Minimum reduziert, um sowohl die Verteilung zu erleichtern als auch die Sicherheitsrisiken einzuschränken.  
 
 -   Es werden nur OLE DB-Schnittstellen unterstützt.  
 
--   Der OLE DB-Treiber für SQL Server-Namen unterscheiden sich von den mit MDAC verwendeten.  
+-   Der OLE DB-Treiber für SQL Server-Namen unterscheiden sich von den mit MDAC verwendeten Namen.  
 
 -   Benutzer zugänglichen von MDAC-Komponenten bereitgestellte Funktionalität ist bei Verwendung von OLE DB-Treiber für SQL Server verfügbar. Dazu gehören u. a.: Verbindungspooling, ADO-Unterstützung und Clientcursorunterstützung. Wenn eine dieser Funktionen verwendet wird, stellt OLE DB-Treiber für SQL Server nur Datenbankkonnektivität bereit. MDAC stellt Funktionen wie Ablaufverfolgung, Verwaltungssteuerelemente und Leistungsindikatoren bereit.  
 
@@ -63,7 +64,7 @@ ms.lasthandoff: 05/03/2018
 
 -   OLE DB-Treiber für SQL Server hat die strengere fehlerprüfung als MDAC, dies bedeutet, dass einige Anwendungen, die nicht unbedingt den OLE DB-Spezifikationen entsprechen sich anders verhalten. Z. B. der SQLOLEDB-Anbieter die Regel, die Parameternamen mit beginnen müssen nicht erzwingen "@" für Ergebnis Parameter, aber der OLE DB-Treiber für SQL Server verfügt.  
 
--   OLE DB-Treiber für SQL Server Verhalten sich anders als MDAC in Bezug auf fehlgeschlagene Verbindungen. MDAC gibt beispielsweise zwischengespeicherte Eigenschaftswerte für eine Verbindung, die Fehler aufgetreten ist, zurück, während die OLE DB-Treiber für SQL Server einen Fehler an die aufrufende Anwendung meldet.  
+-   OLE DB-Treiber für SQL Server Verhalten sich anders als MDAC zu fehlerhaften Verbindungen. MDAC gibt beispielsweise zwischengespeicherte Eigenschaftswerte für eine Verbindung, die Fehler aufgetreten ist, zurück, während die OLE DB-Treiber für SQL Server einen Fehler an die aufrufende Anwendung meldet.  
 
 -   OLE DB-Treiber für SQL Server generiert keine Visual Studio Analyzer-Ereignisse, sondern stattdessen Windows-Ablaufverfolgungsereignisse.  
 
@@ -75,7 +76,7 @@ ms.lasthandoff: 05/03/2018
 
 -   Der OLE DB-Treiber für SQL Server gibt Synonyme in den Tabellen und TABLE_INFO zurück, wobei der Wert TABLE_TYPE auf SYNONYM gesetzt-Schemarowsets.  
 
--   Rückgabewerte vom Datentyp **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **Xml**, **Udt**, oder andere LOB-Typen können nicht zurückgegeben werden, um Clientversionen vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Wenn Sie diese Typen als Rückgabewerte verwenden möchten, müssen Sie den OLE DB-Treiber für SQL Server verwenden.  
+-   Rückgabewerte vom Datentyp **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **Xml**, **Udt**, oder andere LOB-Typen zurückgegeben werden können, um Clientversionen vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Wenn Sie diese Typen als Rückgabewerte verwenden möchten, müssen Sie den OLE DB-Treiber für SQL Server verwenden.  
 
 -   MDAC lässt die folgenden Anweisungen am Anfang des manueller und impliziter Transaktionen ausgeführt werden, OLE DB-Treiber für SQL Server jedoch nicht. Die Anweisungen müssen im Autocommitmodus ausgeführt werden.  
 
@@ -107,7 +108,7 @@ ms.lasthandoff: 05/03/2018
 
 -   Wenn Sie einen OLE DB-Aufruf zum Starten von Transaktionen verwenden, besteht ein Unterschied im Verhalten zwischen OLE DB-Treiber für SQL Server und MDAC; Transaktionen beginnt sofort mit OLE DB-Treiber für SQL Server, jedoch Transaktionen beginnt, nachdem der Zugriff auf die erste Datenbank MDAC verwenden. Dies kann das Verhalten von gespeicherten Prozeduren und Batches auswirken, da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] @ erfordert@TRANCOUNT identisch sein, nach einem Batch oder einer gespeicherten Prozedur Beenden der Ausführung des Batches oder gespeicherte Prozedur gestartet wurde.  
 
--   Mit OLE DB-Treiber für SQL Server wird ITransactionLocal::BeginTransaction dazu führen, dass eine Transaktion sofort gestartet werden soll. Mit MDAC wurde der Transaktionsstart verzögert, bis die Anwendung eine Anweisung ausgeführt hat, die eine Transaktion im impliziten Transaktionsmodus erforderte. Weitere Informationen finden Sie unter [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
+-   Mit OLE DB-Treiber für SQL Server wird ITransactionLocal::BeginTransaction dazu führen, dass eine Transaktion sofort gestartet werden soll. Mit MDAC wurde der Transaktionsstart verzögert, bis die Anwendung eine Anweisung ausgeführt, die eine Transaktion im impliziten Transaktionsmodus erforderlich. Weitere Informationen finden Sie unter [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
 
 
  Beide OLE DB-Treiber für SQL Server auch MDAC unterstützen lesen committed-Transaktionsisolation mit zeilenversionsverwaltung, aber nur OLE DB-Treiber für SQL Server unterstützt die Momentaufnahmen-Transaktionsisolation. (Programmiertechnisch ausgedrückt bedeutet dies, dass die Read Committed-Transaktionsisolation mit Zeilenversionsverwaltung gleichbedeutend mit einer Read Committed-Transaktion ist.)  

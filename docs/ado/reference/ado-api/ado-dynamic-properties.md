@@ -1,9 +1,8 @@
 ---
 title: Dynamische Eigenschaften von ADO.NET | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
+ms.prod_service: connectivity
 ms.service: ''
-ms.component: reference
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 93d699a75045afde3b03a9f977657d0d6db87933
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5aa6d237b16c6ac24c0e921d51f19a26c36e3bbe
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275449"
 ---
 # <a name="ado-dynamic-properties"></a>Dynamische Eigenschaften von ADO.NET
 Dynamische Eigenschaften hinzugefügt werden können die [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Sammlungen von der [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md), [Befehl](../../../ado/reference/ado-api/command-object-ado.md), oder [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekte. Die Quelle für diese Eigenschaften ist entweder ein Datenanbieter, wie z. B. die [OLE DB-Anbieter für SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), oder ein Dienstanbieter, wie z. B. die [Microsoft Cursor Service für OLE DB-](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md). Finden Sie in der entsprechenden Datenanbieter oder die Service Provider Dokumentation weitere Informationen zu einer bestimmten dynamische Eigenschaft.  

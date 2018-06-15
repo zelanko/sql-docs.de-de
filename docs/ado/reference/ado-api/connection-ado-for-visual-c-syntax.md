@@ -1,11 +1,8 @@
 ---
 title: Verbindung (ADO für Visual C++-Syntax) | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: ado
-ms.technology:
-- drivers
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c550ce0b7781f20d387b9d398fb3f823f54429ca
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 661fc6283829948ac8c7186df5653d7ca35fd289
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276929"
 ---
 # <a name="connection-ado-for-visual-c-syntax"></a>Verbindung (ADO für Visual C++-Syntax)
 ## <a name="methods"></a>Methoden  
