@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907965"
 ---
 # <a name="allocating-and-freeing-buffers"></a>Zuweisen und Freigeben von Puffern
 Alle Puffer werden reserviert und freigegeben, indem die Anwendung. Wenn Sie ein Puffer nicht verzögert wird, müssen sie nur für die Dauer des Aufrufs einer Funktion vorhanden sein. Beispielsweise **SQLGetInfo** gibt den Wert mit einer bestimmten Option im Puffer, die durch die *InfoValuePtr* Argument. Dieser Puffer kann freigegeben werden, sofort nach dem Aufruf von **SQLGetInfo**, wie im folgenden Codebeispiel gezeigt:  

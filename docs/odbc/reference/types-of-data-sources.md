@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917225"
 ---
 # <a name="types-of-data-sources"></a>Typen von Datenquellen
 Es gibt zwei Arten von Datenquellen: Computer, Datenquellen und Dateidatenquellen. Obwohl beide ähnliche Informationen über die Quelle der Daten enthalten, unterscheiden sich jedoch auf die Weise, die diese Informationen gespeichert werden. Aufgrund dieser Unterschiede werden diese in unterschiedliche Arten verwendet.  

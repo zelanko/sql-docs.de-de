@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915585"
 ---
 # <a name="file-data-sources"></a>Dateidatenquellen
 *Datei-Datenquellen* werden in einer Datei gespeichert und ermöglichen Sie Verbindungsinformationen wiederholt durch einen einzelnen Benutzer verwendet oder von mehreren Benutzern gemeinsam genutzt werden. Wenn eine Datei als Datenquelle verwendet wird, stellt der Treiber-Manager die Verbindung mit der Datenquelle anhand der Informationen in einem DSN-Datei her. Diese Datei kann wie jede andere Datei bearbeitet werden. Eine Datei als Datenquelle einen Datenquellennamen keinen ist eine Datenquelle für den Computer, und nicht auf einen Benutzer oder Computer registriert ist.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914705"
 ---
 # <a name="configuring-data-sources"></a>Konfigurieren von Datenquellen
 Informationen zu den Datenquellen werden in der systemregistrierung gespeichert. Benutzer ändern Datenquelleninformationen über eine Anwendung für die Verwaltung. Dies kann der ODBC-Administrator, das ODBC-Systemsteuerung-Gerät oder einen-Verwaltungsprogramm, die von einer Anwendung oder Treiber Developer geschrieben sein.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911675"
 ---
 # <a name="is-odbc-the-answer"></a>Ist ODBC-die Antwort?
 Vor dem befassen sich in der Frage, Interoperabilität, berücksichtigen Sie folgende Frage: die Anwendung die zu verwendende ODBC überhaupt? Dies mag eine ungewöhnliche Frage in eine Anleitung für ODBC, aber es ist tatsächlich eine rechtmäßige. ODBC wurde nicht entwickelt, um systemeigenen Datenbank-APIs vollständig zu ersetzen, und es bietet Datenbankzugriff in allen Fällen. Es wurde entworfen, um eine allgemeine Schnittstelle für Datenbanken bereitzustellen und wurde frei Anwendungsprogrammierer zu lernen, und Links zu mehreren Datenbanken verwalten soll.  
