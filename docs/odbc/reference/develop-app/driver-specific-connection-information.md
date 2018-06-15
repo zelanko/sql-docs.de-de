@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912275"
 ---
 # <a name="driver-specific-connection-information"></a>Treiberspezifische Verbindungsinformationen
 **SQLConnect** wird davon ausgegangen, dass Datenquellenname, Benutzer-ID und Kennwort sind ausreichend für die Verbindung mit einer Datenquelle und alle anderen Verbindungsinformationen auf das System gespeichert werden kann. Dies ist häufig nicht der Fall. Ein Treiber möglicherweise z. B. eine Benutzer-ID und Kennwort zum Anmelden bei einem Server und einen anderen Benutzer-ID und ein Kennwort zum Anmelden bei einem DBMS. Da **SQLConnect** akzeptiert einen einzelnen Benutzer-ID und ein Kennwort, das bedeutet, dass andere Benutzer-ID und Kennwort mit Informationen für die Datenquelle auf dem System Wenn gespeichert werden müssen **SQLConnect** verwendet werden soll. Dies ist eine potenzielle Verletzung der Sicherheit und sollte vermieden werden, es sei denn, das Kennwort verschlüsselt ist.  

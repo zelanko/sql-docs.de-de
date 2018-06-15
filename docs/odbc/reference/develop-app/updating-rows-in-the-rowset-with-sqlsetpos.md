@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916335"
 ---
 # <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>Aktualisieren von Zeilen im Rowset mit SQLSetPos
 Der Updatevorgang des **SQLSetPos** macht die Datenquelle, die eine oder mehrere ausgewählte Zeilen einer Tabelle mit Daten in die Anwendungspuffer für jede gebundene Spalte ein, (es sei denn, der Wert in die Längen-/Indikatorpuffers SQL_COLUMN_IGNORE ist) aktualisieren. Spalten, die nicht gebunden sind, werden nicht aktualisiert werden.  

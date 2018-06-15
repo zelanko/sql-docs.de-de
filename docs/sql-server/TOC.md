@@ -28,8 +28,7 @@
 
 # [SQL Server unter Linux](../linux/sql-server-linux-overview.md)
 # [Analysis Services](../analysis-services/analysis-services.md)
-# 
-  [Datenbank-Engine](../database-engine/sql-server-database-engine-overview.md)
+# [Datenbank-Engine](../database-engine/sql-server-database-engine-overview.md)
 # [Data Quality Services](../data-quality-services/data-quality-services.md)
 # [Failovercluster](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)
 # [Installation (Windows)](../sql-server/install/planning-a-sql-server-installation.md)
@@ -47,8 +46,7 @@
 
 ## Blogs
 ### [SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
-### 
-  [SQL Server-Datenbank-Engine](https://blogs.msdn.microsoft.com/sqlserverstorageengine/)
+### [SQL Server-Datenbank-Engine](https://blogs.msdn.microsoft.com/sqlserverstorageengine/)
 ### [SQL Server-Sicherheit](https://blogs.msdn.microsoft.com/sqlsecurity/)
 ### [SQL Server Data Tools](https://blogs.msdn.microsoft.com/ssdt/)
 

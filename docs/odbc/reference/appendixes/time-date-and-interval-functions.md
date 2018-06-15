@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914265"
 ---
 # <a name="time-date-and-interval-functions"></a>Uhrzeit-, Datums- und Intervallfunktionen
 Die folgende Tabelle enthält Datum und Uhrzeit-Funktionen, die in der ODBC-Skalarfunktion Menge enthalten sind. Eine Anwendung kann bestimmen, welche Funktionen für Datum und Uhrzeit durch Aufrufen von einem-Treiber unterstützt werden **SQLGetInfo** mit einem *Informationstyp* von SQL_TIMEDATE_FUNCTIONS.  
