@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024757"
 ---
 # <a name="amo-olap-classes"></a>AMO-OLAP-Klassen
   OLAP-Klassen in Analysis Management Objects (AMO) erleichtern das Erstellen, Bearbeiten, Löschen und Verarbeiten von Cubes, Dimensionen und verknüpften Objekten wie Key Performance Indicators (KPIs), Aktionen und proaktiver Zwischenspeicherung.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32922065"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Entwickeln von Verbindungspool wissen in eine ODBC-Treiber
 In diesem Artikel werden die Details der Entwicklung von eines ODBC-Treibers, der enthält Informationen darüber, wie der Treiber Connection pooling-Dienste bieten sollte.  

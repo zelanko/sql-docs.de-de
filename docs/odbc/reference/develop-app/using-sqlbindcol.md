@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917475"
 ---
 # <a name="using-sqlbindcol"></a>SQLBindCol verwenden
 Die Anwendung bindet Spalten durch Aufrufen von **SQLBindCol**. Diese Funktion wird jeweils eine Spalte gebunden. Mithilfe dieser Option gibt die Anwendung Folgendes an:  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32918525"
 ---
 # <a name="the-driver-manager"></a>Der Treiber-Manager
 Die *Treibermanager* ist eine Bibliothek, die Kommunikation zwischen Anwendungen und-Treiber verwaltet. Beispielsweise ist der Treiber-Manager für Microsoft® Windows®-Plattformen eine Dynamic Link Library (DLL), die von Microsoft geschrieben und kann von Benutzern das verteilbare MDAC 2.8 SP1 SDK verteilt werden.  

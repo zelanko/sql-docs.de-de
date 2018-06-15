@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32921845"
 ---
 # <a name="odbc-function-summary"></a>Zusammenfassung der ODBC-Funktion
 In der folgenden Tabelle listet ODBC-Funktionen, gruppiert nach Typ der Aufgabe, und enthält die Konformität Bezeichnung und eine kurze Beschreibung zum Zweck der einzelnen Funktionen. Weitere Informationen zur Konformität Bezeichnungen finden Sie unter [ODBC und die Standard-CLI](../../../odbc/reference/odbc-and-the-standard-cli.md). Weitere Informationen zur Syntax und Semantik für die einzelnen Funktionen finden Sie unter [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md).  

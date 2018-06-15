@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538600"
 ---
 # <a name="appliance-topology---analytics-platform-system"></a>Anwendungstopologie - Analyseplattformsystem
 Zeigt zusammenfassende Informationen für die gesamte Analytics Platform System an.  

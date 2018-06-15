@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34018857"
 ---
 # <a name="grant-server-admin-rights-to-an--analysis-services-instance"></a>Erteilen von serverweiten Administratorrechten für eine Analysis Services-Instanz
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/10/2018
   
 2.  Klicken Sie im Bereich **Seite auswählen** auf **Sicherheit** , und klicken Sie anschließend unten auf der Seite auf **Hinzufügen** , um der Serverrolle einen oder mehrere Windows-Benutzer bzw. Windows-Benutzergruppen hinzuzufügen.  
   
-     ![Benutzer Dialogfelds "hinzufügen" in Management Studio](../../analysis-services/instances/media/ssas-serveradminadd.png "Benutzer Dialogfelds "hinzufügen" in Management Studio")  
+     ![Benutzer Dialogfelds "hinzufügen" in Management Studio](../../analysis-services/instances/media/ssas-serveradminadd.png "Benutzer Dialogfelds \"hinzufügen\" in Management Studio")  
   
 ### <a name="add-computer-accounts"></a>Hinzufügen von Computerkonten  
  Mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Sie auch ein Computerkonto zur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Administratorengruppe hinzufügen.  

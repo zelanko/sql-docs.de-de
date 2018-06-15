@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34017657"
 ---
 # <a name="lesson-4-4---hiding-and-disabling-attribute-hierarchies"></a>Lektion 4-4-ausblenden und Deaktivieren von Attributhierarchien
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -77,7 +78,7 @@ Mithilfe der Aufgaben in diesem Thema werden Sie Sozialversicherungsnummern und 
   
     Die folgende Abbildung zeigt die **AttributeHierarchyEnabled** -Eigenschaft mit dem Wert False für die ausgewählten Attribute.  
   
-    ![AttributeHierarchyEnabled-Eigenschaft auf "false"](../analysis-services/media/l4-hierarchyenabled-1.gif "AttributeHierarchyEnabled-Eigenschaft auf "false"")  
+    ![AttributeHierarchyEnabled-Eigenschaft auf "false"](../analysis-services/media/l4-hierarchyenabled-1.gif "AttributeHierarchyEnabled-Eigenschaft auf \"false\"")  
   
 5.  Klicken Sie im Menü **Erstellen** auf **Analysis Services Tutorial bereitstellen**.  
   
@@ -107,7 +108,7 @@ Mithilfe der Aufgaben in diesem Thema werden Sie Sozialversicherungsnummern und 
   
     Im folgenden Bild wird die **AttributeHierarchyVisible** -Eigenschaft mit dem Wert False gezeigt.  
   
-    ![AttributeHierarchyVisible-Eigenschaft auf "false" festgelegt](../analysis-services/media/l4-hierarchyvisible-1.gif "AttributeHierarchyVisible-Eigenschaft auf "false" festgelegt")  
+    ![AttributeHierarchyVisible-Eigenschaft auf "false" festgelegt](../analysis-services/media/l4-hierarchyvisible-1.gif "AttributeHierarchyVisible-Eigenschaft auf \"false\" festgelegt")  
   
 5.  Ziehen Sie das **Postal Code** -Attribut aus dem Bereich **Attribute** in die **Customer Geography** -Benutzerhierarchie im Bereich **Hierarchien und Ebenen** direkt unter der **City** -Ebene.  
   
