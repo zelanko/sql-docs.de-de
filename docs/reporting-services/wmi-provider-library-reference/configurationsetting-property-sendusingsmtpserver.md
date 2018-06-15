@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030527"
 ---
 # <a name="configurationsetting-property---sendusingsmtpserver"></a>ConfigurationSetting-Eigenschaft: SendUsingSMTPServer
   Gibt an, ob das **SendUsing** -Element in der E-Mail-Konfiguration für den Berichtsserver auf **true**festgelegt wurde.  
