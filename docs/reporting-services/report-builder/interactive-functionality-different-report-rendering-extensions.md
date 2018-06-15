@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020957"
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bietet Funktionen für die Interaktion mit einem paginierten Bericht zur Laufzeit. Nicht alle Berichtsrenderingformate unterstützen die interaktiven Funktionen in vollem Umfang. In der folgenden Tabelle ist die Funktionsweise der einzelnen interaktiven Funktionen in bestimmten Formaten beschrieben.  

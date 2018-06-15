@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34463626"
 ---
 # <a name="resource-governor-related-dynamic-management-views-transact-sql"></a>Dynamische Verwaltungssichten in Verbindung mit der Ressourcenkontrolle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
