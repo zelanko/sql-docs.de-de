@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538750"
 ---
 # <a name="software-servicing-in-analytics-platform-system"></a>Software-Wartung in Analytics Platform System
 In diesem Abschnitt wird die Software, die wartungsanforderungen für Analytics Platform System-Einheiten, z. B. WSUS und Analytics Platform System Updates zusammengefasst.  

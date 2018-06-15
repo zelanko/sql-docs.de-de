@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538950"
 ---
 # <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies---parallel-data-warehouse"></a>Konfigurieren Sie eine externe SMP-SQL-Server für den Empfang von Remotetabelle Kopien - Parallel Data Warehouse
 Beschreibt, wie eine externe SQL Server-Instanz zum Empfangen der Remotetabelle Kopien von Parallel Data Warehouse konfiguriert.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539760"
 ---
 # <a name="understanding-admin-console-alerts-in-analytics-platform-system"></a>Grundlegendes zu Admin Console-Warnungen in Analytics Platform System
 Warnungen werden angezeigt, in der Einheit **Admin Console** und **System Center Operations Manager** (SCOM). Verwenden Sie diese Liste der Warnungen, um zu bestimmen, welche Warnungen zusätzliche untersucht werden müssen.  

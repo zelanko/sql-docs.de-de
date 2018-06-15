@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539140"
 ---
 # <a name="backup-server-capacity-planning-worksheet---parallel-data-warehouse"></a>Sicherungsserver Capacity planning Arbeitsblatt - Parallel Data Warehouse
 Mit diesem Arbeitsblatt Kapazität unterstützt Sie beim Bestimmen der Anforderungen für die backup-Server zum Ausführen von SQL Server PDW Sicherung und Wiederherstellung. Hiermit können Sie Ihren Plan für Kaufverhalten neue oder Bereitstellung vorhandene Sicherungsserver erstellen.  

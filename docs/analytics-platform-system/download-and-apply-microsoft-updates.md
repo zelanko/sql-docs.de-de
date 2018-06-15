@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539520"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>Herunterladen und Anwenden von Microsoft-Updates für Analytics Platform System
 In diesem Thema wird erläutert, wie Updates von Microsoft Update-Katalog zu Windows Server Update Services (WSUS) herunterladen und diese Updates auf die Analytics Platform System Appliance-Server angewendet werden. Microsoft Update werden alle anwendbaren Updates für Windows und SQL Server installieren. WSUS ist auf dem VMM-virtuellen Computer von dem Gerät installiert.  

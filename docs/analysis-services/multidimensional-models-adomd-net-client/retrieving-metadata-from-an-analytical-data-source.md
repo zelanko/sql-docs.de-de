@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34021167"
 ---
 # <a name="retrieving-metadata-from-an-analytical-data-source"></a>Abrufen von Metadaten aus einer analytischen Datenquelle
   Metadaten sind wichtig für Anwendungen, die analytische Daten abrufen und damit arbeiten. Beim Abrufen von Daten aus einer relationalen Datenquelle ist die Dimensionalität dieser Daten selbst bei geschachtelten Datasets vorhersehbar. Resultsets aus einer relationalen Datenbank haben meist eine zweidimensionale oder skalare Struktur. Aus analytischen Datenquellen abgerufene Daten können jedoch eine variable Dimensionalität aufweisen und möglicherweise entlang tiefer Hierarchien organisiert sein.  

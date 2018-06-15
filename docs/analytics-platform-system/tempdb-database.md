@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538860"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>Tempdb-Datenbank in Parallel Data Warehouse
 **Tempdb** ist eine SQL Server PDW-Systemdatenbank, in der lokale temporäre Tabellen für die Benutzerdatenbanken gespeichert. Temporäre Tabellen werden häufig verwendet, um die abfrageleistung zu verbessern. Sie können beispielsweise eine temporäre Tabelle verwenden, um ein Skript zu modularisieren und berechnete Daten wiederverwenden.  

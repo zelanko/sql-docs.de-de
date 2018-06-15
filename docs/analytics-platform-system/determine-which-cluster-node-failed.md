@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544742"
 ---
 # <a name="determine-which-cluster-node-failed-for-analytics-platform-system"></a>Bestimmen Sie die Cluster Fehler bei Knoten für Analytics Platform System
 Dieses Thema beschreibt, wie Sie den Namen des Knotens Analytics Platform System (APS) zu ermitteln, die fehlgeschlagen ein Clusterfailover aufgetreten ist und eine Cluster-Failover-Warnung ausgelöst wurde. Im Rahmen der Problembehandlung eines clusterfailovers durchgeführt müssen Sie den Namen des Knotens ermitteln, die nicht vor der Kontaktaufnahme mit Microsoft, um das Problem zu beheben.  

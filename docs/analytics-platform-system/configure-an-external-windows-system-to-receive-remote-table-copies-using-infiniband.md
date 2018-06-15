@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538770"
 ---
 # <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband---parallel-data-warehouse"></a>Konfigurieren von einem externen WindowsSystem zum Empfangen der Remotetabelle Kopien mit InfiniBand - Parallel Data Warehouse
 Beschreibt, wie erwerben und Konfigurieren von einem nicht-Appliance-Windows-Betriebssystem mit dem InfiniBand-Netzwerk für die Verwendung mit der Funktion zum Kopieren von Remotetabelle in SQL Server PDW verbunden. Das Windows-System hostet der SQL Server-Datenbank, die die Remotetabelle Kopie aus einer SQL Server PDW-Datenbank empfängt. Es ist auf dem Gerät separat verkauft und mit dem Gerät InfiniBand-Netzwerk verbunden.  

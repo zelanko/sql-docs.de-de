@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544812"
 ---
 # <a name="backup-and-restore"></a>Sichern und Wiederherstellen
 Beschreibt, wie die Daten sichern und Wiederherstellen funktioniert für Parallel Data Warehouse (PDW). Sicherungs-und Wiederherstellungsvorgänge sind für die Wiederherstellung im Notfall verwendet werden. Sicherung und Wiederherstellung können auch zum Kopieren einer Datenbank auf einem Gerät in einer anderen Anwendung verwendet werden.  

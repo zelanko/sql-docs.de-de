@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538890"
 ---
 # <a name="t-sql-statements-for-parallel-data-warehouse"></a>T-SQL-Anweisungen für Parallel Data Warehouse
 Transact-SQL (T-SQL)-Anweisungen für analytische Platform System (APS) SQL Server Parallel Data Warehouse (PDW).

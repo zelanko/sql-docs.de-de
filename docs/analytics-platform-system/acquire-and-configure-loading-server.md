@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538990"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>Erwerben Sie und konfigurieren Sie einen Server Laden für Parallel Data Warehouse
 Dieser Artikel beschreibt das Abrufen und konfigurieren Sie einen laden-Server als ein nicht-Appliance-Windows-System für die Einreichung von riesige Datenmengen zu Parallel Data Warehouse (PDW).  

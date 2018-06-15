@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539310"
 ---
 # <a name="appliance-network-configuration-for-analytics-platform-system"></a>Appliance-Netzwerkkonfiguration für Analytics Platform System
 Das Analytics Platform System (APS)-Gerät wird erstellt und mit einem Update von IP-Adressen in allen Servern und Geräten aus der IHV Herstellerstandort konfiguriert. Bei der Übermittlung der Appliance muss die externen (Ethernet) IP-Adresse gerichtet neu konfiguriert werden, um die kundenspezifischen Daten Center Anforderungen entsprechen.  

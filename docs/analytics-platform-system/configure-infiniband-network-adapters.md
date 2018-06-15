@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539020"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>InfiniBand-Netzwerkadapter für Analytics Platform System konfigurieren
 Beschreibt, wie die InfiniBand-Netzwerkadapter auf einem nicht-Appliance Clientserver für die Verbindung mit dem Steuerungsknoten auf Parallel Data Warehouse (PDW) konfigurieren. Verwenden Sie diese Anweisungen für grundlegende Konnektivität und hohe Verfügbarkeit, sodass laden, Sicherung und andere Prozesse automatisch mit dem aktiven InfiniBand-Netzwerk verbunden.  

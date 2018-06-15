@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539450"
 ---
 # <a name="reserved-database-names-in-parallel-data-warehouse"></a>Reservierte Datenbanknamen in Parallel Data Warehouse
 Reservierte Datenbankname ist ein Name, der mit einer Benutzerdatenbank in SQL Server PDW zugewiesen werden kann.  

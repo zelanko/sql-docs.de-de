@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538760"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Schalten Sie das Gerät aktiviert oder deaktiviert für Analytics Platform System
 In diesem Thema wird beschrieben, wie zum Einschalten oder Ausschalten der Analytics Platform Systemappliance, die Parallel Data Warehouse ausgeführt wird, und optional eine HDInsight-Region ausgeführt werden. Mithilfe dieser Informationen beim Verschieben einer Analytics Platform System Appliance oder Power auf eine Anwendung nach einem schwerwiegenden Stromausfall.  

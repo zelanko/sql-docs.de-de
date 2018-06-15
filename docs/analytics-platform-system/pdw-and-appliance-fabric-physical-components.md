@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538880"
 ---
 # <a name="appliance-physical-components---analytics-platform-system"></a>Physische Komponenten der Appliance - Analyseplattformsystem
 Namen und Beschreibungen für die PDW und Appliance, physischen Fabric-Komponenten. 

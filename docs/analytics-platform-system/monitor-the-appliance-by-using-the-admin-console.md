@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544982"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>Überwachen Sie die Einheit mit der Verwaltungskonsole - Analyseplattformsystem
 Die Verwaltungskonsole ist eine SQL Server PDW-Webanwendung, die die Appliance Zustand, Integrität und Leistung Informationen bereitstellt. Benutzer eine Verbindung herstellen, um die Verwaltungskonsole über Internet Explorer.  

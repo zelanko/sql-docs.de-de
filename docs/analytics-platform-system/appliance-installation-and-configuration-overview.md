@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538620"
 ---
 # <a name="appliance-installation-and-configuration-for-analytics-platform-system"></a>Appliance-Installation und Konfiguration für Analytics Platform System
 Führt Analytics Platform System (APS) Appliance-Administratoren über die ersten Schritte zum Einrichten und erste Schritte mit Ihrer neuen Anwendung.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538700"
 ---
 # <a name="monitoring-active-queries---parallel-data-warehouse"></a>Überwachen von aktiven Abfragen - Parallel Data Warehouse
 In diesem Artikel wird gezeigt, wie die-Verwaltungskonsole und die SQL Server PDW-Systemsichten zu verwenden, um aktive Abfragen zu überwachen. Finden Sie unter [überwachen Sie die Anwendung mithilfe der Verwaltungskonsole](monitor-the-appliance-by-using-the-admin-console.md) und [Systemsichten](tsql-system-views.md) Informationen zu diesen Tools.  

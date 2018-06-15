@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538900"
 ---
 # <a name="information-to-obtain-from-your-ihv"></a>Informationen zum Abrufen von Ihrem IHV
 Wenn Ihre neue SQL Server PDW Appliance durch unabhängige Hardwarehersteller (IHVS) an Sie übermittelt wird, werden sie auch übermitteln Informationen auf die Appliance-Hardware und die Konfiguration, dass sie auf Ihrem Gerät ausgeführt haben. Sie benötigen diese Informationen, um Ihr Gerät verwalten.  

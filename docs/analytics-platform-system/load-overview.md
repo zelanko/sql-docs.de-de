@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539080"
 ---
 # <a name="loading-data-into-parallel-data-warehouse"></a>Laden von Daten in Parallel Data Warehouse
 Laden oder Einfügen von Daten in SQL Server Parallel Data Warehouse (PDW) mit Integration Services, [Bcp (Hilfsprogramm)](../tools/bcp-utility.md), **Dwloader** Command-Line-Ladeprogramm oder die SQL-INSERT-Anweisung.  

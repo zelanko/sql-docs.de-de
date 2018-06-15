@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539000"
 ---
 # <a name="parallel-data-warehouse-services-status-for-analytics-platform-system"></a>Parallel Data Warehouse-Dienststatus für Analytics Platform System
 Die Parallel Data Warehouse **Dienststatus** Seite im Microsoft Analytics Platform System Konfigurations-Manager zeigt den aktuellen Status aller SQL Server PDW-Dienste, und bietet die Möglichkeit, die PDW-Dienste beenden und starten. Dies ist die einzige unterstützte Methode für die PDW-Dienste starten und beenden. Beachten Sie, dass die einzelnen Komponenten oder Dienste unabhängig voneinander gestartet werden können.  
