@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029457"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Berichtsserver im Management Studio (F1-Hilfe)
   Dieser Abschnitt enthält die Themen zu den Dialogfeldern in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , die zum Verwalten von Berichtsservern verwendet werden können.  

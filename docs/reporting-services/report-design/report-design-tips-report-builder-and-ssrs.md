@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027417"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>Berichtsentwurfstipps (Berichts-Generator und SSRS)
   Nutzen Sie die folgenden Tipps zum Entwerfen paginierter [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichte.  

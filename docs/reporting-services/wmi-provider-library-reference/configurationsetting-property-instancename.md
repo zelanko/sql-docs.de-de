@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030167"
 ---
 # <a name="configurationsetting-property---instancename"></a>ConfigurationSetting-Eigenschaft: InstanceName
   Gibt den Namen einer Berichtsserverinstanz auf einem bestimmten Computer an. Schreibgeschützt.  
