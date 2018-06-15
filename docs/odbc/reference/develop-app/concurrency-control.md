@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910315"
 ---
 # <a name="concurrency-control"></a>Parallelitätssteuerung
 *Parallelität* ist die Fähigkeit von zwei Transaktionen gleichzeitig dieselben Daten verwenden und mit erhöhter Transaction Isolation normalerweise reduzierten Parallelität ist. Dies ist, da die Isolation jeder Transaktion wird durch Sperren von Zeilen in der Regel implementiert, und wie weitere Zeilen gesperrt sind, weniger Transaktionen abgeschlossen werden, können ohne durch eine gesperrte Zeile zumindest vorübergehend blockiert. Während reduzierter Parallelität in der Regel als ein Kompromiss für höheren Isolationsstufen von Transaktionen für das Verwalten der Datenbankintegrität erforderlich akzeptiert wird, kann es ein Problem bei der interaktiven Anwendungen mit hoher Lese-/Schreibzugriff-Aktivität, die Cursor verwendet werden.  

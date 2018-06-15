@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34027297"
 ---
 # <a name="redistributing-adomdnet"></a>Neuverteilen von ADOMD.NET
   Wenn Sie Anwendungen schreiben, die ADOMD.NET verwenden, müssen Sie die entsprechende ADOMD.NET-Version zusammen mit der Anwendung erneut verteilen. Um ADOMD.NET erneut zu verteilen, fügen Sie das ADOMD.NET-Setupprogramm in das Setupprogramm Ihrer Anwendung ein.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024717"
 ---
 # <a name="amo-other-classes-and-methods"></a>Andere AMO-Klassen und Methoden
   Dieser Abschnitt enthält gängige Klassen, die nicht spezifisch auf OLAP oder Datamining sind und, sind hilfreich bei der Verwaltung Verwalten von Objekten in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Diese Klassen decken Funktionen wie gespeicherte Prozeduren, Ablaufverfolgung, Ausnahmen sowie Sicherung und Wiederherstellung ab.  

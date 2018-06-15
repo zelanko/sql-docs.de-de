@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902005"
 ---
 # <a name="bookmark-support-visual-foxpro-odbc-driver"></a>Lesezeichenunterstützung (Visual FoxPro-ODBC-Treiber)
 Der Visual FoxPro-ODBC-Treiber unterstützt die einfache Lesezeichen. Beim Aufruf [SQLGetInfo](../../odbc/microsoft/sqlgetinfo-visual-foxpro-odbc-driver.md) mit der SQL_BOOKMARK_PERSISTENCE *Infotyp*, SQL_BP_SCROLL zurückgegeben wird.  

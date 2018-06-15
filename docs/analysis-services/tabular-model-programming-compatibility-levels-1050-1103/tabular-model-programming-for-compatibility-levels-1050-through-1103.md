@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34039064"
 ---
 # <a name="tabular-model-programming-for-compatibility-levels-1050-through-1103"></a>Programmierung von tabellarischen Modellen aus Kompatibilitätsgründen Ebenen 1050 bis 1103
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

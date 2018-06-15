@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899529"
 ---
 # <a name="order-by-clause-limitations"></a>ORDER BY-Klausel Einschränkungen
 Wenn eine SELECT-Anweisung eine GROUP BY-Klausel und eine ORDER BY-Klausel enthält, kann die ORDER BY-Klausel nur eine Spalte im Resultset oder einen Ausdruck in der GROUP BY-Klausel enthalten.

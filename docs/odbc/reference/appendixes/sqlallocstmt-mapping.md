@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909215"
 ---
 # <a name="sqlallocstmt-mapping"></a>Zuordnung von SQLAllocStmt:
 Wenn eine Anwendung ruft **SQLAllocStmt:** über einen ODBC 3.*.x* Treiber, den Aufruf von:  

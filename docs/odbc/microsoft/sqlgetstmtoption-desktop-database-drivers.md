@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902435"
 ---
 # <a name="sqlgetstmtoption-desktop-database-drivers"></a>SQLGetStmtOption (Desktop-Datenbanktreiber)
 Die zurückgegebene Lesezeichen ein *fOption* von SQL_GETBOOKMARK sind nur gültig, während die Abfrage geöffnet ist, und werden für ungültig erklärt, wenn die Abfrage erneut ausgestellt wird. Persistente Lesezeichen werden nicht unterstützt.
