@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,11 +15,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 5a1d3136717e2afdb91d87da8c3c928d9eabc874
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 846fe498ad0a245c7b3b61a4fdd361839399a17d
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35304529"
 ---
 # <a name="ole-db-how-to-topics"></a>Vorgehensweisen für OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,37 +29,37 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Verarbeiten von Ergebnissen Gewusst-wie-Themen zur Vorgehensweise & #40; OLE DB & #41;](../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+-   [Ergebnisse Vorgehensweisen zum Verarbeiten &#40;OLE DB&#41;](../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
--   [Festlegen von großen Daten & #40; OLE DB & #41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)  
+-   [Festlegen von großen Daten &#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)  
   
--   [Auflisten von OLE DB-Datenquellen & #40; OLE DB & #41;](../../oledb/ole-db-how-to/enumerate-ole-db-data-sources-ole-db.md)  
+-   [Auflisten von OLE DB-Datenquellen &#40;OLE DB&#41;](../../oledb/ole-db-how-to/enumerate-ole-db-data-sources-ole-db.md)  
   
--   [Massenimport von Daten mithilfe von IRowsetFastLoad & #40; OLE DB & #41;](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)  
+-   [Massenkopieren von Daten mithilfe von IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)  
   
 -   [Abrufen eines FAST_FORWARD-Cursors](../../oledb/ole-db-how-to/obtain-a-fast-forward-cursor.md)  
   
--   [Abrufen von Zeilen mithilfe von Lesezeichen & #40; OLE DB & #41;](../../oledb/ole-db-how-to/retrieve-rows-using-bookmarks-ole-db.md)  
+-   [Abrufen von Zeilen mithilfe von Lesezeichen &#40;OLE DB&#41;](../../oledb/ole-db-how-to/retrieve-rows-using-bookmarks-ole-db.md)  
   
--   [Abrufen von Spalten mithilfe von IRow:: GetColumns & #40; oder IRow:: Open & #41; und ISequentialStream](../../oledb/ole-db-how-to/fetch-columns-using-irow-getcolumns-or-irow-open-and-isequentialstream.md)  
+-   [Abrufen von Spalten mithilfe von IRow:: GetColumns &#40;oder IRow:: Open&#41; und ISequentialStream](../../oledb/ole-db-how-to/fetch-columns-using-irow-getcolumns-or-irow-open-and-isequentialstream.md)  
   
--   [Abrufen von Spalten mithilfe von IRow:: GetColumns & #40; OLE DB & #41;](../../oledb/ole-db-how-to/fetch-columns-using-irow-getcolumns-ole-db.md)  
+-   [Abrufen von Spalten mithilfe von IRow:: GetColumns &#40;OLE DB&#41;](../../oledb/ole-db-how-to/fetch-columns-using-irow-getcolumns-ole-db.md)  
   
--   [Ändern eines SQL Server-Authentifizierungsbenutzerkennworts & #40; OLE DB & #41;](../../oledb/ole-db-how-to/change-a-sql-server-authentication-user-password-ole-db.md)  
+-   [Ändern ein SQL Server-Authentifizierungsbenutzerkennworts &#40;OLE DB&#41;](../../oledb/ole-db-how-to/change-a-sql-server-authentication-user-password-ole-db.md)  
   
--   [Verwenden von verbesserten Datums- und Uhrzeitfunktionen & #40; OLE DB & #41;](../../oledb/ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)  
+-   [Verwenden von verbesserten Datums- und Uhrzeitfunktionen &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)  
   
--   [FileStream und OLE DB](../../oledb/ole-db-how-to/filestream/filestream-and-ole-db.md)  
+-   [FILESTREAM und OLE DB](../../oledb/ole-db-how-to/filestream/filestream-and-ole-db.md)  
   
--   [Senden von BLOB-Daten an SQLServer mit IROWSETFASTLOAD und ISEQUENTIALSTREAM & #40; OLE DB & #41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
+-   [Senden von BLOB-Daten mit SQLServer mit IROWSETFASTLOAD und ISEQUENTIALSTREAM &#40;OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
   
--   [Verwenden von großen CLR-UDTs & #40; OLE DB & #41;](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md)  
+-   [Verwenden Sie große CLR-UDTs &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md)  
   
--   [Anzeigen von Spalten- und Katalogmetadaten für Spalten mit geringer Dichte & #40; OLE DB & #41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
+-   [Anzeigen von Spalten- und Katalogmetadaten für Spalten mit geringer Dichte &#40;OLE DB&#41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
   
--   [Integrierte Kerberos-Authentifizierung & #40; OLE DB & #41;](../../oledb/ole-db-how-to/integrated-kerberos-authentication-ole-db.md)  
+-   [Die integrierte Kerberosauthentifizierung &#40;OLE DB&#41;](../../oledb/ole-db-how-to/integrated-kerberos-authentication-ole-db.md)  
   
--   [Verwenden des Table-Valued Parameters & #40; OLE DB & #41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+-   [Verwenden von Tabellenwertparametern &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [OLE DB-Treiber für SQL-Server](../../oledb/oledb-driver-for-sql-server.md)  

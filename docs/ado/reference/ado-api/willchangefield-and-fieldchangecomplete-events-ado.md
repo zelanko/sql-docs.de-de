@@ -2,7 +2,6 @@
 title: WillChangeField- und FieldChangeComplete-Ereignisse (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7e141b989d671e37818f09cf4dbf173e9fd23d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 108aea1a4f8106c3a84b411591d4866235726efc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282850"
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>WillChangeField- und FieldChangeComplete-Ereignisse (ADO)
 Die **WillChangeField** Ereignis wird aufgerufen, bevor ein ausstehender Vorgang verwendet den Wert einer oder mehrerer ändert [Feld](../../../ado/reference/ado-api/field-object.md) Objekte in der [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Die **FieldChangeComplete** Ereignis wird aufgerufen, nachdem der Wert aus einem oder mehreren **Feld** Objekte wurde geändert.  

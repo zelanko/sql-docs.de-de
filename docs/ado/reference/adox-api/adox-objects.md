@@ -2,7 +2,6 @@
 title: ADOX-Objekte | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2278420958e856b290f013f33869ff0f46270609
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5665c90c4dd1935f529c275d2feccb68e67cafea
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284869"
 ---
 # <a name="adox-objects"></a>ADOX-Objekte
 ## <a name="adox-object-summary"></a>ADOX: Zusammenfassung  
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
 |------------|-----------------|  
 |[Katalog](../../../ado/reference/adox-api/catalog-object-adox.md)|Enthält Auflistungen, die den Schema-Katalog für die Datenquelle beschreiben.|  
 |[Column](../../../ado/reference/adox-api/column-object-adox.md)|Stellt eine Spalte aus einer Tabelle, Index oder Schlüssel.|  
-|[Gruppieren](../../../ado/reference/adox-api/group-object-adox.md)|Stellt ein Gruppenkonto, das über Zugriffsberechtigungen in einer gesicherten Datenbank verfügt.|  
+|[Gruppe](../../../ado/reference/adox-api/group-object-adox.md)|Stellt ein Gruppenkonto, das über Zugriffsberechtigungen in einer gesicherten Datenbank verfügt.|  
 |[Index](../../../ado/reference/adox-api/index-object-adox.md)|Stellt einen Index aus einer Datenbanktabelle dar.|  
 |[Key](../../../ado/reference/adox-api/key-object-adox.md)|Stellt eine primäre, Fremdschlüssel oder eindeutigen Schlüsselfeld aus einer Datenbanktabelle dar.|  
 |[Prozedur](../../../ado/reference/adox-api/procedure-object-adox.md)|Eine gespeicherte Prozedur dargestellt.|  
