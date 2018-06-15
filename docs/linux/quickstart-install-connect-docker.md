@@ -18,6 +18,7 @@ ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455494"
 ---
 # <a name="quickstart-run-the-sql-server-2017-container-image-with-docker"></a>Schnellstart: Führen Sie die 2017 von SQL Server-Container-Image mit Docker
 

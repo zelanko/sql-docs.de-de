@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022797"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Diagramme (Berichts-Generator und SSRS)
 Erfahren Sie mehr über das Verwenden von Diagrammdatenbereichen, um die Leser Ihrer paginierten Berichte von [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] dabei zu unterstützen, große Mengen von aggregierten Daten auf einen Blick zu verstehen.  

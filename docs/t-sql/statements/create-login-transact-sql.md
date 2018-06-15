@@ -145,7 +145,7 @@ Gibt den Namen eines asymmetrischen Schlüssels an, der diesem Anmeldenamen zuge
 - Falls die Option **CREDENTIAL** verwendet wird, ist auch die **ALTER ANY CREDENTIAL**-Berechtigung auf dem Server erforderlich. 
   
 ## <a name="after-creating-a-login"></a>Nach dem Erstellen eines Anmeldenamens  
-Nach dem Erstellen eines Anmeldenamens kann mit dem Namen eine Verbindung mit SQL Server hergestellt werden, er verfügt jedoch nur über die der Rolle **public** gewährten Berechtigungen. Ziehen Sie das Ausführen einiger der folgenden Aktivitäten in Betracht. 
+Nach dem Erstellen eines Anmeldenamens kann mit dem Namen eine Verbindung mit SQL Server hergestellt werden, er verfügt jedoch nur über die der Rolle **public** gewährten Berechtigungen. Ziehen Sie die Ausführung einiger der folgenden Aktivitäten in Betracht. 
   
  - Erstellen Sie zum Herstellen einer Verbindung mit einer Datenbank einen Datenbankbenutzer für den Anmeldenamen. Weitere Informationen finden Sie unter [CREATE USER](../../t-sql/statements/create-user-transact-sql.md). 
   
