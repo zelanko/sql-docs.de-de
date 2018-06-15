@@ -32,6 +32,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33035217"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   In diesem Hilfethema erhalten Sie Informationen zum Erstellen, Ändern und Löschen von freigegebenen [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Zeitplänen.  Freigegebene Zeitpläne für den einheitlichen Modus werden auf der Seite „Zeitpläne“ im Webportal oder im Ordner „Freigegebene Zeitpläne“ in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]verwaltet. Verwenden Sie für den SharePoint-Modus die Verwaltungsseiten für die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung.  

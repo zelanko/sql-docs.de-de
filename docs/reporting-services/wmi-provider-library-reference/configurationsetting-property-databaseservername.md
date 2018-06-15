@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030577"
 ---
 # <a name="configurationsetting-property---databaseservername"></a>ConfigurationSetting-Eigenschaft: DatabaseServerName
   Gibt den Namen des Servers an, auf dem die Berichtsserver-Datenbank installiert ist Lese-/Schreibzugriff.  

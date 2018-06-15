@@ -17,6 +17,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34323401"
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Installieren von SQL Server-Agent für Linux
 
