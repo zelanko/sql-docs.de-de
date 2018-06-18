@@ -26,11 +26,12 @@ caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fa41bd4f5cbae85af4ad7cf93fa0690b5cca9421
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: c9005b8c5910b6129037f16d947e1997c7a83072
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239197"
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>Tutorials zu SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -86,7 +87,7 @@ Im ersten Artikel erfahren Sie, wie Sie eine Datenbank erstellen. Weitere beispi
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 
-  [Lernprogramme zur Datenbank-Engine](../../relational-databases/database-engine-tutorials.md)  
+  [Lernprogramme zur Datenbank-Engine](../../relational-databases/database-engine-tutorials.md)          
   
   
   

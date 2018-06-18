@@ -2,8 +2,6 @@
 title: Mitwirken an der SQL Server-Dokumentation | Microsoft-Dokumentation
 ms.date: 04/12/2018
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
@@ -14,11 +12,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 41bdbc55a67865e195ea06a10610af8224edf06b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 508dd4a658810bb6c62c1b4cf7eb067d9ccc563d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288759"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Mitwirken an der SQL Server-Dokumentation
 
@@ -75,7 +74,7 @@ Weitere Informationen zu dieser Bearbeitungsoption finden Sie in den folgenden A
 - [Einrichten eines GitHub-Kontos](https://docs.microsoft.com/contribute/get-started-setup-github)
 - [Install content authoring tools (Installieren von Erstellungstools für Inhalte)](https://docs.microsoft.com/contribute/get-started-setup-tools)
 - [Lokales Einrichten von Git für die Dokumentation](https://docs.microsoft.com/contribute/get-started-setup-local)
-- [Verwenden von Tools zum Einreichen von Änderungen](https://docs.microsoft.com/contribute/full-workflow)
+- [Verwenden von Tools zum Einreichen von Änderungen](https://docs.microsoft.com/contribute/how-to-write-workflows-majo)
 
 Wenn Sie einen Pull Request mit umfassenden Änderungen an der Dokumentation einreichen, wird in GitHub ein Kommentar angezeigt, in dem Sie aufgefordert werden, online eine **Lizenzvereinbarung für Mitwirkende** zu übermitteln. Sie müssen dieses Onlineformular ausfüllen, damit Ihr Pull Request akzeptiert wird.
 
@@ -94,7 +93,7 @@ Dieser Abschnitt enthält zusätzliche Hinweise zur Arbeit mit dem **sql-docs**-
 
 Zur Organisation von Inhalten werden im [sql-docs](https://github.com/MicrosoftDocs/sql-docs)-Repository die folgenden Standardordner verwendet:
 
-| Ordner | Description |
+| Ordner | und Beschreibung |
 |---|---|
 | [docs](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs) | Enthält alle veröffentlichten SQL Server-Inhalte. In Unterordnern werden verschiedene Inhaltsbereiche organisiert. |
 | [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) | Enthält Includedateien. Diese Dateien bestehen aus Inhaltsblöcken, die in ein oder mehrere Artikel aufgenommen werden können. |
@@ -138,5 +137,3 @@ Auf GitHub können Sie einen genaueren Blick auf das [sql-docs-Repository](https
 Außerdem haben Sie die Möglichkeit, Artikel zu suchen, Änderungen einzureichen und die SQL Server-Community zu unterstützen. 
 
 Wir bedanken uns für Ihre Hilfe.
-
-
