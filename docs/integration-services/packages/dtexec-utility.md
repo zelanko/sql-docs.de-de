@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 08/26/2016
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: packages
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
@@ -16,11 +14,12 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 19120f136913925721b61aacd59364f787ac0816
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2583631f47e2f986e238880acb3e420515eeda60
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335684"
 ---
 # <a name="dtexec-utility"></a>dtexec (Hilfsprogramm)
   Das Befehlszeilen-Hilfsprogramm **dtexec** dient zum Konfigurieren und Ausführen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen. Das Hilfsprogramm **dtexec** ermöglicht den Zugriff auf alle Features zur Paketkonfiguration und -ausführung, z.B. Parameter, Verbindungen, Eigenschaften, Variablen und Statusanzeigen. Das Hilfsprogramm **dtexec** ermöglicht das Laden von Paketen aus diesen Quellen: dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server, einer ISPAC-Projektdatei, einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank, dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher und dem Dateisystem.  
@@ -106,7 +105,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  Wenn ein Paket ausgeführt wird, kann **dtexec** einen Exitcode zurückgeben. Der Exitcode wird dazu verwendet, die ERRORLEVEL-Variable aufzufüllen, deren Wert anschließend in bedingten Anweisungen oder in einer Verzweigungslogik innerhalb einer Batchdatei getestet werden kann. In der folgenden Tabelle sind die Werte aufgeführt, die das Hilfsprogramm **dtexec** beim Beenden festlegen kann.  
   
-|value|Description|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |0|Das Paket wurde erfolgreich ausgeführt.|  
 |1|Bei der Paketausführung ist ein Fehler aufgetreten.|  
