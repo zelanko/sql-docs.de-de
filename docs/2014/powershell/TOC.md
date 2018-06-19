@@ -1,0 +1,20 @@
+# [SQL Server-PowerShell](sql-server-powershell.md)
+# [Laden der SMO-Assemblys in Windows PowerShell](load-the-smo-assemblies-in-windows-powershell.md)
+# [Ausführen von Windows PowerShell über SQL Server Management Studio](run-windows-powershell-from-sql-server-management-studio.md)
+# [Ausführen von Windows PowerShell-Schritten in SQL Server-Agent](run-windows-powershell-steps-in-sql-server-agent.md)
+# [SQL Server PowerShell-Anbieter](sql-server-powershell-provider.md)
+## [Navigieren in SQL Server PowerShell-Pfaden](navigate-sql-server-powershell-paths.md)
+## [Verwenden von SQL Server PowerShell-Pfaden](work-with-sql-server-powershell-paths.md)
+# [SQL Server-Bezeichnern in PowerShell](sql-server-identifiers-in-powershell.md)
+## [Angeben von Instanzen im SQL Server PowerShell-Anbieter](specify-instances-in-the-sql-server-powershell-provider.md)
+## [Codierung und Decodierung von SQL Server-Bezeichnern](encode-and-decode-sql-server-identifiers.md)
+## [Escape-Bezeichner für SQL Server](escape-sql-server-identifiers.md)
+# 
+  [Verwalten der Authentifizierung in PowerShell der Datenbank-Engine](manage-authentication-in-database-engine-powershell.md)
+# [Verwalten der Befehlszeilenergänzung (SQL Server PowerShell)](manage-tab-completion-sql-server-powershell.md)
+# [Importieren des SQLPS-Moduls](../database-engine/import-the-sqlps-module.md)
+# [Konvertieren von URNs in SQL Server-Anbieterpfade](../database-engine/convert-urns-to-sql-server-provider-paths.md)
+# 
+  [Verwenden der Datenbank-Engine-Cmdlets](../database-engine/use-the-database-engine-cmdlets.md)
+# [Get Help SQL Server PowerShell](../database-engine/get-help-sql-server-powershell.md)
+
