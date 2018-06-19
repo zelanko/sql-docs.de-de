@@ -1,6 +1,5 @@
 # [Programmieren erweiterter gespeicherter Prozeduren](database-engine-extended-stored-procedures-programming.md)
-## 
-  [Datenbank-Engine – Programmierung der erweiterten gespeicherten Prozedur](../database-engine-extended-stored-procedure-programming.md)
+## [Datenbank-Engine – Programmierung der erweiterten gespeicherten Prozedur](../database-engine-extended-stored-procedure-programming.md)
 ## [Funktionsweise erweiterter gespeicherter Prozeduren](how-extended-stored-procedures-work.md)
 ## [Erstellen erweiterter gespeicherter Prozeduren](creating-extended-stored-procedures.md)
 ## [Senden von Resultsets an den Server (API für erweiterte gespeicherte Prozeduren)](sending-result-sets-to-the-server-extended-stored-procedure-api.md)

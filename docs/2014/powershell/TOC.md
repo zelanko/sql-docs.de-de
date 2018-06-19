@@ -9,12 +9,10 @@
 ## [Angeben von Instanzen im SQL Server PowerShell-Anbieter](specify-instances-in-the-sql-server-powershell-provider.md)
 ## [Codierung und Decodierung von SQL Server-Bezeichnern](encode-and-decode-sql-server-identifiers.md)
 ## [Escape-Bezeichner für SQL Server](escape-sql-server-identifiers.md)
-# 
-  [Verwalten der Authentifizierung in PowerShell der Datenbank-Engine](manage-authentication-in-database-engine-powershell.md)
+# [Verwalten der Authentifizierung in PowerShell der Datenbank-Engine](manage-authentication-in-database-engine-powershell.md)
 # [Verwalten der Befehlszeilenergänzung (SQL Server PowerShell)](manage-tab-completion-sql-server-powershell.md)
 # [Importieren des SQLPS-Moduls](../database-engine/import-the-sqlps-module.md)
 # [Konvertieren von URNs in SQL Server-Anbieterpfade](../database-engine/convert-urns-to-sql-server-provider-paths.md)
-# 
-  [Verwenden der Datenbank-Engine-Cmdlets](../database-engine/use-the-database-engine-cmdlets.md)
+# [Verwenden der Datenbank-Engine-Cmdlets](../database-engine/use-the-database-engine-cmdlets.md)
 # [Get Help SQL Server PowerShell](../database-engine/get-help-sql-server-powershell.md)
 

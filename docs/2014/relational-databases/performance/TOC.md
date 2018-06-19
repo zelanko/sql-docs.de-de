@@ -30,8 +30,7 @@
 ## [Überprüfen von Planhinweislisten nach einem Upgrade](validate-plan-guides-after-upgrade.md)
 ## [Löschen einer Planhinweisliste](delete-a-plan-guide.md)
 ## [Aktivieren oder Deaktivieren einer Planhinweisliste](enable-or-disable-a-plan-guide.md)
-# 
-  [Datenbankoptimierungsratgeber](database-engine-tuning-advisor.md)
+# [Datenbankoptimierungsratgeber](database-engine-tuning-advisor.md)
 ## [Starten und Verwenden des Datenbankoptimierungsratgebers](start-and-use-the-database-engine-tuning-advisor.md)
 ## [Reduzieren der Optimierungsauslastung des Produktionsservers](reduce-the-production-server-tuning-load.md)
 ## [Gesichtspunkte bei der Verwendung von Testservern](considerations-for-using-test-servers.md)

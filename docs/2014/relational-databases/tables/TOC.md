@@ -1,31 +1,23 @@
 # [Tabellen](tables.md)
-## 
-  [Erstellen von Tabellen (Datenbank-Engine)](create-tables-database-engine.md)
-## 
-  [Löschen von Tabellen (Datenbank-Engine)](delete-tables-database-engine.md)
+## [Erstellen von Tabellen (Datenbank-Engine)](create-tables-database-engine.md)
+## [Löschen von Tabellen (Datenbank-Engine)](delete-tables-database-engine.md)
 ## [Duplizieren von Tabellen](duplicate-tables.md)
-## 
-  [Umbenennen von Tabellen (Datenbank-Engine)](rename-tables-database-engine.md)  
+## [Umbenennen von Tabellen (Datenbank-Engine)](rename-tables-database-engine.md)  
 ## [Anzeigen der Tabellendefinition](view-the-table-definition.md)
 ### [Tabelleneigenschaften](table-properties-ssms.md)
 ### [Spalteneigenschaften (Registerkarte „Allgemein“)](column-properties-general-page.md)
 ## [Anzeigen der Abhängigkeiten einer Tabelle](view-the-dependencies-of-a-table.md)
-## 
-  [Hinzufügen von Spalten zu einer Tabelle (Datenbank-Engine)](add-columns-to-a-table-database-engine.md)
+## [Hinzufügen von Spalten zu einer Tabelle (Datenbank-Engine)](add-columns-to-a-table-database-engine.md)
 ## [Spalten aus einer Tabelle löschen](delete-columns-from-a-table.md)
-## 
-  [Umbenennen von Spalten (Datenbank-Engine)](rename-columns-database-engine.md)
-## 
-  [Kopieren von Spalten von einer Tabelle in eine andere Tabelle (Datenbank-Engine)](copy-columns-from-one-table-to-another-database-engine.md)
-## 
-  [Ändern von Spalten (Datenbank-Engine)](modify-columns-database-engine.md)
+## [Umbenennen von Spalten (Datenbank-Engine)](rename-columns-database-engine.md)
+## [Kopieren von Spalten von einer Tabelle in eine andere Tabelle (Datenbank-Engine)](copy-columns-from-one-table-to-another-database-engine.md)
+## [Ändern von Spalten (Datenbank-Engine)](modify-columns-database-engine.md)
 ## [Ändern der Spaltenreihenfolge einer Tabelle](change-column-order-in-a-table.md)
 ## [Angeben von berechneten Spalten in einer Tabelle](specify-computed-columns-in-a-table.md)
 ## [Angeben von Standardwerten für Spalten](specify-default-values-for-columns.md)
 ## [Verwenden von Spalten mit geringer Dichte](use-sparse-columns.md)
 ## [Verwenden von Spaltensätzen](use-column-sets.md)
-## 
-  [Verwenden von Tabellenwertparameter (Datenbank-Engine)](use-table-valued-parameters-database-engine.md)
+## [Verwenden von Tabellenwertparameter (Datenbank-Engine)](use-table-valued-parameters-database-engine.md)
 # [Primärschlüssel- und Fremdschlüsseleinschränkungen](primary-and-foreign-key-constraints.md)
 ## [Erstellen von Primärschlüsseln](create-primary-keys.md)
 ## [Ändern von Primärschlüsseln](modify-primary-keys.md)

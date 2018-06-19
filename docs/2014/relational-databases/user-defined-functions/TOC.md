@@ -1,7 +1,6 @@
 # [Benutzerdefinierte Funktionen](user-defined-functions.md)
 ## [Deterministische und nicht deterministische Funktionen](deterministic-and-nondeterministic-functions.md)
-## 
-  [Erstellen von benutzerdefinierten Funktionen (Datenbank-Engine)](create-user-defined-functions-database-engine.md)
+## [Erstellen von benutzerdefinierten Funktionen (Datenbank-Engine)](create-user-defined-functions-database-engine.md)
 ## [Erstellen von CLR-Funktionen](create-clr-functions.md)
 ## [Erstellen benutzerdefinierter Aggregate](create-user-defined-aggregates.md)
 ## [Ändern benutzerdefinierter Funktionen](modify-user-defined-functions.md)
