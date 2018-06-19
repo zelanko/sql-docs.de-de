@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 940d6c966eb92ab9070f654298e7471fad2af791
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a18d54250582490506bfe5222f8b4fab17563c5
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410032"
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>Website erstellen (Dialogfeld im Konfigurations-Manager für Master Data Services)
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="web-site"></a>Website  
   
-|Steuerelementname|Description|  
+|Steuerelementname|und Beschreibung|  
 |------------------|-----------------|  
 |**Websitename**|Geben Sie einen Namen für die Website ein, oder verwenden Sie den Standardnamen. Dieser Name ist ein Anzeigename, der nur zur Identifizierung der Website in IIS verwendet wird. Er wird nicht verwendet, um von einem Webbrowser aus auf die Website zuzugreifen.<br /><br /> Der Name muss für alle Websites in IIS auf dem lokalen Computer eindeutig sein.|  
 |**Protokoll**|Zeigt **http**an. Verwenden Sie das Hypertext Transfer-Protokoll (HTTP), wenn für die Kommunikation zwischen Client und Server kein verschlüsselter Kanal erforderlich ist.<br /><br /> **Hinweis**: Sie können keine HTTPS-Site in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]erstellen. HTTPS ist das auf SSL (Secure Sockets Layer) basierende HTTP-Protokoll. Es empfiehlt sich beim Austausch vertraulicher oder persönlicher Daten oder wenn Benutzer vor dem Übertragen persönlicher Informationen die Identität des Servers bestätigen sollen. Wenn Ihre Informationen zwischen dem Server und einem Client über einen verschlüsselten Channel übertragen werden sollen, müssen Sie mit einem IIS-Tool wie IIS-Manager die Website mit einer HTTPS-Bindung konfigurieren und die Websitebindung einem Serverzertifikat zuzuordnen. Erst dann können Sie die Website erfolgreich in einem Webbrowser öffnen. Weitere Informationen zu Serverzertifikaten finden Sie unter [Konfigurieren von Serverzertifikaten in IIS 7](http://go.microsoft.com/fwlink/?LinkId=163220) auf [!INCLUDE[msCoName](../includes/msconame-md.md)] TechNet.|  
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="application-pool"></a>Anwendungspool  
   
-|Steuerelementname|Description|  
+|Steuerelementname|und Beschreibung|  
 |------------------|-----------------|  
 |**Name**|Geben Sie einen eindeutigen Anzeigenamen für einen neuen Anwendungspool ein, oder verwenden Sie den bereitgestellten Standardnamen. Die Stammwebanwendung für diese Website wird in diesem Anwendungspool ausgeführt.<br /><br /> Anwendungspools verfügen über immanente Grenzen, durch die Anwendungen in einem Anwendungspool daran gehindert werden, Einfluss auf Anwendungen in einem anderen Anwendungspool zu nehmen.|  
 |**User name**|Geben Sie einen Domänen- und Benutzernamen aus Active Directory ein. Dieses Konto entspricht der Identität des Anwendungspools, in dem die Webanwendung ausgeführt wird.<br /><br /> Das Konto wird für den Datenbankzugriff der mds_exec-Datenbankrolle in der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank hinzugefügt. Weitere Informationen finden Sie unter [Datenbankanmeldenamen, -benutzer und -rollen &#40;Master Data Services&#41;](../master-data-services/database-logins-users-and-roles-master-data-services.md). Es wird darüber hinaus einer [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]-Windows-Gruppe wie **MDS_ServiceAccounts** hinzugefügt. Ihr wurden Berechtigungen auf das temporäre Kompilierungsverzeichnis, **MDSTempDir** im Dateisystem erteilt. Weitere Informationen finden Sie unter [Ordner- und Dateiberechtigungen &#40;Master Data Services&#41;](../master-data-services/folder-and-file-permissions-master-data-services.md).|  

@@ -19,11 +19,12 @@ caps.latest.revision: 9
 author: jeannt
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: a84fc90e8ec1f18c97d5ba6d56a7c515a5f4efb6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f0dcd3474939b1f2b533651b159b81cd978dd383
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404822"
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>Externe Skripts aktiviert – Serverkonfigurationsoption
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +59,7 @@ RECONFIGURE WITH OVERRIDE;
 
 Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu, damit diese Änderung wirksam wird.
 
-Weitere Informationen finden Sie unter [Einrichten von SQL Server Machine Learning-Services (Datenbankintern)](/../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md).
+Weitere Informationen finden Sie unter [Einrichten von SQL Server Machine Learning-Services (Datenbankintern)](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md).
 
 ## <a name="see-also"></a>Siehe auch
 
