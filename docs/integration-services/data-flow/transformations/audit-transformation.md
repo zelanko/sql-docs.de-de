@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a7479bfd0d246bf3e70f7dc65a089844362f9b6e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: be17c584af2fc584be7d95ebcc4069fc9f545b97
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331074"
 ---
 # <a name="audit-transformation"></a>Überwachungstransformation
   Mithilfe der Überwachungstransformation werden in den Datenfluss eines Pakets Daten zur Umgebung, in der das Paket ausgeführt wird, eingeschlossen. Dem Datenfluss kann z. B. der Name des Pakets, Computers und Operators hinzugefügt werden. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] schließt Systemvariablen ein, die diese Informationen bereitstellen.  
@@ -34,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="system-variables"></a>Systemvariablen  
  In der folgenden Tabelle sind die Systemvariablen beschrieben, die von der Überwachungstransformation verwendet werden können.  
   
-|Systemvariable|Index|Description|  
+|Systemvariable|Index|und Beschreibung|  
 |---------------------|-----------|-----------------|  
 |**ExecutionInstanceGUID**|0|Der GUID, der die Ausführungsinstanz des Pakets identifiziert.|  
 |**PackageID**|1|Der eindeutige Bezeichner des Pakets.|  
@@ -71,7 +70,7 @@ ms.lasthandoff: 05/03/2018
  **Überwachungstyp**  
  Wählen Sie eine verfügbare Systemvariable zum Bereitstellen der Überwachungsinformationen aus.  
   
-|value|Description|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |**GUID der Ausführungsinstanz**|Fügen Sie die GUID ein, die die Ausführungsinstanz des Pakets eindeutig identifiziert.|  
 |**Paket-ID**|Fügen Sie die GUID ein, die das Paket eindeutig identifiziert.|  

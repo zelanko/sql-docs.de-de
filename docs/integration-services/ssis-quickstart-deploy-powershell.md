@@ -1,23 +1,21 @@
 ---
 title: Bereitstellen eines SSIS-Projekts mit PowerShell | Microsoft- Dokumentation
 ms.date: 05/21/2018
-ms.topic: conceptual
+ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: quick-start
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f245553e318ccdba4f8f5d212e5c4c92ec5564ca
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: eaa4be65ce76caaf8a772ff15805a1b8976068fc
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455123"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329194"
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>Bereitstellen eines SSIS-Projekts mit PowerShell
 In diesem Schnellstart wird dargestellt, wie Sie mit einem PowerShell-Skript eine Verbindung zu einem Datenbankserver herstellen und SSIS-Projekte im SSIS-Katalog bereitstellen.
@@ -41,7 +39,7 @@ Dieser Schnellstart enthält keine Anleitung zum Bereitstellen von SSIS-Paketen 
 Um das Paket in Azure SQL-Datenbank bereitzustellen, rufen Sie die Verbindungsinformationen ab, die für die Verbindungsherstellung mit der SSIS-Katalogdatenbank (SSISDB) benötigt werden. Sie benötigen den vollqualifizierten Servernamen und die Anmeldeinformationen für die folgenden Prozeduren.
 
 1. Melden Sie sich beim [Azure-Portal](https://portal.azure.com/)an.
-2. Wählen Sie aus dem Menü links **SQL-Datenbanken** aus, und klicken Sie auf der Seite **SQL-Datenbanken** auf die SSISDB-Datenbank. 
+2. Wählen Sie aus dem Menü auf der linken Seite **SQL-Datenbanken** aus, und klicken Sie auf der Seite **SQL-Datenbanken** auf die SSISDB-Datenbank. 
 3. Überprüfen Sie auf der **Übersichtsseite** Ihrer Datenbank den vollqualifizierten Servernamen. Zeigen Sie auf den Servernamen, damit die Option **Klicken Sie zum Kopieren** angezeigt wird. 
 4. Wenn Sie die Anmeldeinformationen für Ihren Azure SQL-Datenbankserver vergessen, navigieren Sie zur Seite „SQL Datenbankserver“, damit der Serveradministratorname angezeigt wird. Sie können das Kennwort falls erforderlich zurücksetzen.
 5. Klicken Sie auf **Datenbank-Verbindungszeichenfolgen anzeigen**.

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 17
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 19f244d7febe15f03b5510ba484b985044ad3548
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9f4162789cf09c326b3b5d016e22bafed9fe790b
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330134"
 ---
 # <a name="system-settings-master-data-services"></a>Systemeinstellungen (Master Data Services)
 
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="General"></a> Allgemeine Einstellungen  
   
-|Einstellung des Konfigurations-Managers|Systemeinstellung|Description|  
+|Einstellung des Konfigurations-Managers|Systemeinstellung|und Beschreibung|  
 |-----------------------------------|--------------------|-----------------|  
 |**Timeout für Datenbankverbindung**|**DatabaseConnectionTimeOut**|Die Anzahl von Sekunden, während der die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank auf die Herstellung einer Verbindung wartet. Wenn die Verbindung innerhalb dieser Zeit nicht hergestellt wird, wird sie abgebrochen, und es wird ein Fehler zurückgegeben. Der Standardwert ist **60** Sekunden (1 Minute).|  
 |**Timeout für Datenbankbefehl**|**DatabaseCommandTimeOut**|Die Anzahl von Sekunden, während der die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank auf den Abschluss eines Befehls wartet. Wenn der Befehl innerhalb dieser Zeit nicht abgeschlossen wird, wird er abgebrochen, und es wird ein Fehler zurückgegeben. Der Standardwert ist **3600** Sekunden (60 Minuten).|  
@@ -68,7 +68,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="Versions"></a> Versionsverwaltungseinstellungen  
   
-|Einstellung des Konfigurations-Managers|Systemeinstellung|Description|  
+|Einstellung des Konfigurations-Managers|Systemeinstellung|und Beschreibung|  
 |-----------------------------------|--------------------|-----------------|  
 |**Nur Versionen kopieren, für die ein Commit ausgeführt wurde**|**CopyOnlyCommittedVersion**|Gibt in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]an, ob Benutzer nur Modellversionen mit dem Status **Commit wurde ausgeführt**oder Versionen mit einem beliebigen anderen Status kopieren können. Der Standardwert ist **Ja** oder **1**. Er gibt an, dass Benutzer nur Versionen mit dem Status **Commit wurde ausgeführt** kopieren können. Wenn Sie den Wert in **Nein** oder **2** ändern, können Benutzer alle Versionen kopieren.|  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="Staging"></a> Stagingeinstellungen  
   
-|Einstellung des Konfigurations-Managers|Systemeinstellung|Description|  
+|Einstellung des Konfigurations-Managers|Systemeinstellung|und Beschreibung|  
 |-----------------------------------|--------------------|-----------------|  
 |**Protokollieren aller Stagingtransaktionen**|**StagingTransactionLogging**|Gilt nur für SQL Server 2008 R2. Legt fest, ob Transaktionen beim Laden von Stagingdatensätzen in die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank protokolliert werden. Der Standardwert ist **Aus** oder **2**. Ändern Sie den Wert in **Ein** oder **1** , um die Protokollierung zu aktivieren.|  
 |**Staging-Batchintervall**|**StagingBatchInterval**|Gibt im Funktionsbereich [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Integration Management** functional area, the number of seconds after you select **Start Batches** that your batch is processed. Der Standardwert ist **60** Sekunden (1 Minute).|  
@@ -85,23 +85,23 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="Explorer"></a> Explorereinstellungen  
   
-|Einstellung des Konfigurations-Managers|Systemeinstellung|Description|  
+|Einstellung des Konfigurations-Managers|Systemeinstellung|und Beschreibung|  
 |-----------------------------------|--------------------|-----------------|  
-|**Die Standardanzahl der Elemente in der Hierarchie.**|**HierarchyChildNodeLimit**|Gibt im Funktionsbereich [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **des** an, wie viele Elemente maximal in den einzelnen Hierarchieknoten angezeigt werden, bevor **…More…**des angezeigt. Sie können auf **…More…**(Mehr) klicken, um die nächste Gruppe von Elementen anzuzeigen. Der Standardwert lautet **50**.|  
+|**Die Standardanzahl der Elemente in der Hierarchie.**|**HierarchyChildNodeLimit**|Gibt im Funktionsbereich [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **des** an, wie viele Elemente maximal in den einzelnen Hierarchieknoten angezeigt werden, bevor **…More…** des angezeigt. Sie können auf **…More…**(Mehr) klicken, um die nächste Gruppe von Elementen anzuzeigen. Der Standardwert lautet **50**.|  
 |**Standardmäßig Namen in Hierarchie anzeigen**|**ShowNamesInHierarchy**|Legt im Funktionsbereich [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, determines the default setting that is selected when you view hierarchies.<br /><br /> Der Standardwert ist **Yes** oder **1**. Er gibt an, dass Name und Code der einzelnen Elemente angezeigt werden. Ändern Sie den Wert in **No** oder **2** , wenn Sie nur den Code anzeigen möchten.|  
 |**Anzahl domänenbasierter Attribute in Liste**|**DBAListRowLimit**|Gibt an, wie viele Attribute in einer Liste im Funktionsbereich des [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the number of attributes that are displayed in a list when you double-click a domain-based attribute value in the grid. Der Standardwert lautet **50**. Wenn mehr als 50 Elemente vorhanden sind, wird stattdessen ein durchsuchbares Dialogfeld angezeigt.|  
 ||**GridFilterDefaultFuzzySimilarityLevel**|Gibt im Funktionsbereich [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the level of similarity used when using the **Matches** filter criteria. Der Standardwert ist **0,3**. Legen Sie als Wert eine Zahl in der Nähe von **1** fest, um ein Ergebnis zurückzugeben, das den Suchkriterien besser entspricht. Eine exakte Übereinstimmung erhalten Sie, wenn Sie den Wert auf **1** festlegen.|  
   
 ##  <a name="xls"></a> Einstellungen für Add-In für Excel  
   
-|Einstellung des Konfigurations-Managers|Systemeinstellung|Description|  
+|Einstellung des Konfigurations-Managers|Systemeinstellung|und Beschreibung|  
 |-----------------------------------|--------------------|-----------------|  
 |Anzeigen von Add-In für Excel-Text auf Websitehomepage|ShowAddInText|Zeigt auf der Startseite von [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] einen Link an, damit Benutzer das [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]herunterladen können.|  
 |Add-In für Excel-Installationspfad auf Websitehomepage|AddInURL|Dies ist auf der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Homepage, wenn der Link zum [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] angezeigt wird, der Speicherort, zu dem die Benutzer nach Anklicken des Links geführt werden.|  
   
 ##  <a name="BusinessRules"></a> Geschäftsregeleinstellungen  
   
-|Einstellung des Konfigurations-Managers|Systemeinstellung|Description|  
+|Einstellung des Konfigurations-Managers|Systemeinstellung|und Beschreibung|  
 |-----------------------------------|--------------------|-----------------|  
 |**Zahl, mit der neue Geschäftsregeln inkrementiert werden**|**BusinessRuleDefaultPriorityIncrement**|Im Funktionsbereich [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **System Administration** functional area, the number the priority of each new business rule is incremented by. Der Standardwert lautet **10**.|  
 |**Anzahl von Elementen zur Anwendung von Geschäftsregeln.**|**BusinessRuleRealtimeMemberCount**|Gibt im Funktionsbereich [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the maximum number of members in the grid to apply business rules to. In [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]die maximale Anzahl von Elementen im aktiven Arbeitsblatt, auf die Geschäftsregeln angewendet werden sollen. Der Standardwert ist **10000**.|  
@@ -110,7 +110,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="Notifications"></a> Benachrichtigungseinstellungen  
   
-|Einstellung des Konfigurations-Managers|Systemeinstellung|Description|  
+|Einstellung des Konfigurations-Managers|Systemeinstellung|und Beschreibung|  
 |-----------------------------------|--------------------|-----------------|  
 |**Master Data Manager-URL für Benachrichtigungen**|**MDMRootURL**|Gibt die URL für die [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]-Webanwendung an, die im Link in E-Mail-Benachrichtigungen verwendet wird, z.B. `http://constoso/mds`.|  
 |**Benachrichtigungs-E-Mail-Intervall**|**NotificationInterval**|Die Häufigkeit in Sekunden, in der E-Mail-Benachrichtigungen gesendet werden. Der Standardwert ist **120** Sekunden (2 Minuten).|  
@@ -128,7 +128,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="Security"></a> Sicherheitseinstellungen  
   
-|Einstellung des Konfigurations-Managers|Systemeinstellung|Description|  
+|Einstellung des Konfigurations-Managers|Systemeinstellung|und Beschreibung|  
 |-----------------------------------|--------------------|-----------------|  
 ||**SecurityMemberProcessInterval**|Gibt im Funktionsbereich [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **User and Group Permissions** functional area, the frequency, in seconds, that user and group permissions set on the **Hierarchy Members** tab are applied. Der Standardwert ist **3600** Sekunden (60 Minuten).|  
   

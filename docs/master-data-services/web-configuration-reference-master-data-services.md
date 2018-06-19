@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -18,11 +17,12 @@ caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0debbd16d8f250d5ee59ef0120a19485d2d5e289
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cdc430e3e74043896df8b25993dc78cf8d8ed70e
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330094"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Webkonfigurationsreferenz (Master Data Services)
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="webconfig-elements"></a>Web.Config-Elemente  
  Die Datei „Web.config“ enthält zusätzlich zu den Konfigurationselementen Standard-IIS, .NET Framework, ASP.NET und Windows Communication Foundation (WCF) ein benutzerdefiniertes [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]-Element, und zwar **\<masterDataServices>**. Die folgende Tabelle beschreibt die Elemente mit den enthaltenen Web.config-Dateien.  
   
-|Konfigurationselement|Description|  
+|Konfigurationselement|und Beschreibung|  
 |---------------------------|-----------------|  
 |**masterDataServices**|Benutzerdefiniertes Element. Verbindet den [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Web-Service mit einer [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank.|  
 |**connectionStrings**|ASP.NET-Element. Weitere Informationen finden Sie unter [connectionStrings-Element (ASP.NET-Einstellungsschema)](http://go.microsoft.com/fwlink/?LinkId=178347) in der MSDN Library.|  
@@ -60,7 +60,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="elements-and-attributes"></a>Elemente und Attribute  
   
-|Element|Description|  
+|Element|und Beschreibung|  
 |----------|-----------------|  
 |**Instanz**|Untergeordnetes Element. Enthält Attribute, die Informationen für den Webdienst und Datenbankverbindungszeichenfolge angeben.|  
 |**virtualPath**|Attribute. Gibt den virtuellen Pfad der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung und des entsprechenden Diensts an. Dies entspricht dem Wert des **path**-Attributs des **\<application>**-Elements unter dem **\<site>**-Element der IIS-Datei „ApplicationHost.config“.|  

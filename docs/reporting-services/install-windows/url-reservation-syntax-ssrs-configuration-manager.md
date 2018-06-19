@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -17,11 +16,12 @@ caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 969c505870bf0354f9b183d940643c641453946f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 39057237b4b62248cb3af260d0b4bb2cee1dff15
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322709"
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>Syntax für URL-Reservierungen (SSRS-Konfigurations-Manager)
   Dieses Thema beschreibt die Komponenten der URL-Zeichenfolge für den Report Server-Webdienst und den Berichts-Manager. Die intern gespeicherte URL-Zeichenfolge verfügt über eine andere Struktur als eine URL, die Sie in die Adressleiste eines Browserfensters eingeben. Die Zeichenfolge für die URL-Reservierung erscheint im Fenster Ergebnisse des Reporting Services-Konfigurationstools, wenn Sie eine URL konfigurieren, sowie in der Datei RSReportServer.config. Zu wissen, wie die URL-Zeichenfolge definiert wird, kann sich als nützlich erweisen, wenn Sie URL-Reservierungsprobleme beheben oder http.SYS abfragen, um die auf Ihrem Server definierten internen URL-Reservierungen anzuzeigen.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
  In der folgenden Tabelle werden die einzelnen Eigenschaften sowie die jeweils gültigen Werte beschrieben.  
   
-|Eigenschaft|Gültige Werte|Description|  
+|Eigenschaft|Gültige Werte|und Beschreibung|  
 |--------------|------------------|-----------------|  
 |Schema|http oder https|Präfixe für Nicht-SSL- und SSL-Verbindungen.|  
 |Hostname|(+) Starker Platzhalter, entspricht dem Wert **(Alle zugewiesenen)** für die IP-Adresse.<br /><br /> (\*) Schwacher Platzhalter, entspricht einer IP-Adresse von **(Alle nicht zugewiesenen)**.<br /><br /> Vollqualifizierter Domänenname<br /><br /> Computername<br /><br /> IP-Adresse (IPV4)<br /><br /> IP-Adresse (IPV6)|Identifiziert den Server auf dem Netzwerk.<br /><br /> (+) Starker Platzhalter ist der Standard. HTTP.SYS akzeptiert alle Anforderungen auf allen Netzwerkadaptern für eine bestimmte Kombination aus Port und virtuellem Verzeichnis. Der Berichtsserver akzeptiert jede Anforderung auf dem Port.<br /><br /> (\*) Schwacher Platzhalter. HTTP.SYS akzeptiert alle Anforderungen, die nicht von anderen URL-Reservierungen auf allen Netzwerkadaptern für eine bestimmte Kombination aus Port und virtuellem Verzeichnis verarbeitet werden.<br /><br /> Der Computername ist der NETBIOS-Name des Computers im Netzwerk.<br /><br /> Der vollqualifizierte Domänenname umfasst die Domänenadresse und den Servernamen, wie bei einem Domänencontroller oder öffentlichen DNS-Server registriert.<br /><br /> Die IP-Adresse (IPV4) ist die IP-Adresse eines Netzwerkadapters auf dem Computer im IPV4-Format: *nnn.nnn.nnn.nnn*.<br /><br /> Die IP-Adresse (IPV6) ist die IP-Adresse eines Netzwerkadapters auf dem Computer im IPV6-Format: \<Header>:\<Header>:*nnn.nnn.nnn.nnn*.|  

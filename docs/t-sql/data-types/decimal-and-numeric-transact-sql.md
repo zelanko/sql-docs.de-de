@@ -28,11 +28,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2c86af3c5e32a92b3210327881cdc140f6fe7d20
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: db844700627b7eb1cbc9266a667d1dadad47d3e2
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249563"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal und numeric (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +51,7 @@ Die maximale Gesamtanzahl von Dezimalstellen, sowohl links als auch rechts vom D
 >  Informatica unterstützt unabhängig von der angegebenen Präzision und dem Dezimalstellenwert nur 16 signifikante Ziffern.  
   
 *s* (Dezimalstellenwert)  
-Die Anzahl von Dezimalstellen rechts vom Dezimalkomma, die gespeichert wird. Diese Anzahl wird von *p* subtrahiert, um die maximale Anzahl der Stellen links von der Dezimalstelle zu bestimmen. Die maximal speicherbare Zahl an Dezimalstellen rechts vom Dezimalkomma. Der Dezimalstellenwert muss in einem Bereich zwischen 0 und *p* liegen. Der Dezimalstellenwert kann nur angegeben werden, wenn eine Genauigkeit angegeben ist. Der Standardwert ist 0 (null). Daher gilt: 0 <= *s* \<= *p*. Die maximalen Speichergrößen variieren abhängig von der Genauigkeit.
+Die Anzahl von Dezimalstellen rechts vom Dezimalkomma, die gespeichert wird. Diese Anzahl wird von *p* subtrahiert, um die maximale Anzahl der Stellen links von der Dezimalstelle zu bestimmen. Der Dezimalstellenwert muss in einem Bereich zwischen 0 und *p* liegen. Der Dezimalstellenwert kann nur angegeben werden, wenn eine Genauigkeit angegeben ist. Der Standardwert ist 0 (null). Daher gilt: 0 <= *s* \<= *p*. Die maximalen Speichergrößen variieren abhängig von der Genauigkeit.
   
 |Genauigkeit|Speicherplatz in Bytes|  
 |---|---|

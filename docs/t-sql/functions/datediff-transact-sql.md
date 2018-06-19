@@ -36,12 +36,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5c989b3d9d2f35f4270f997b2ac169c72c402a68
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 7dfad584cfbdbf130053557edcace42579cb8470
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744039"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249933"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -115,15 +115,15 @@ Wenn *startdate* und *enddate* unterschiedliche Datumsdatentypen aufweisen und e
 Die folgenden Anweisungen weisen bei *startdate* und *enddate* den gleichen Wert auf. Die Datumsangaben folgen aufeinander und unterscheiden sich in der Uhrzeit um 0,0000001 Sekunden. Der Unterschied zwischen *startdate* und *enddate* in jeder Anweisung überschreitet eine Kalender- oder Uhrzeitbegrenzung des zugehörigen *datepart*. Jede Anweisung gibt 1 zurück. Wenn *startdate* und *enddate* unterschiedliche Jahreswerte aufweisen, die Kalenderwochenwerte jedoch identisch sind, gibt `DATEDIFF` für den *datepart*-Wert **week** 0 (null) zurück.
   
 ```sql
-SELECT DATEDIFF(year, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
-SELECT DATEDIFF(quarter, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
-SELECT DATEDIFF(month, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
-SELECT DATEDIFF(dayofyear, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
-SELECT DATEDIFF(day, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
-SELECT DATEDIFF(week, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
-SELECT DATEDIFF(hour, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
-SELECT DATEDIFF(minute, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
-SELECT DATEDIFF(second, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF(year,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF(quarter,     '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF(month,       '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF(dayofyear,   '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF(day,         '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF(week,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF(hour,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF(minute,      '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF(second,      '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 ```
   
@@ -142,14 +142,13 @@ In diesem Beispiel wird die Anzahl der Tagesbegrenzungen berechnet, die von den 
   
 ```sql
 CREATE TABLE dbo.Duration  
-    (  
-    startDate datetime2  
-    ,endDate datetime2  
-    );  
-INSERT INTO dbo.Duration(startDate,endDate)  
-    VALUES('2007-05-06 12:10:09','2007-05-07 12:10:09');  
-SELECT DATEDIFF(day,startDate,endDate) AS 'Duration'  
-FROM dbo.Duration;  
+    (startDate datetime2, endDate datetime2);  
+    
+INSERT INTO dbo.Duration(startDate, endDate)  
+    VALUES ('2007-05-06 12:10:09', '2007-05-07 12:10:09');  
+    
+SELECT DATEDIFF(day, startDate, endDate) AS 'Duration'  
+    FROM dbo.Duration;  
 -- Returns: 1  
 ```  
   
@@ -158,7 +157,7 @@ In diesem Beispiel werden benutzerdefinierte Variablen als Argumente für *start
   
 ```sql
 DECLARE @startdate datetime2 = '2007-05-05 12:10:09.3312722';  
-DECLARE @enddate datetime2 = '2007-05-04 12:10:09.3312722';   
+DECLARE @enddate   datetime2 = '2007-05-04 12:10:09.3312722';   
 SELECT DATEDIFF(day, @startdate, @enddate);  
 ```  
   
@@ -175,7 +174,8 @@ In diesem Beispiel werden skalare Unterabfragen und skalare Funktionen als Argum
 ```sql
 USE AdventureWorks2012;  
 GO  
-SELECT DATEDIFF(day,(SELECT MIN(OrderDate) FROM Sales.SalesOrderHeader),  
+SELECT DATEDIFF(day,
+    (SELECT MIN(OrderDate) FROM Sales.SalesOrderHeader),  
     (SELECT MAX(OrderDate) FROM Sales.SalesOrderHeader));  
 ```  
   
@@ -183,24 +183,25 @@ SELECT DATEDIFF(day,(SELECT MIN(OrderDate) FROM Sales.SalesOrderHeader),
 In diesem Beispiel werden Zeichenkonstanten als Argumente für *startdate* und *enddate* verwendet.
   
 ```sql
-SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635'  
-    , '2007-05-08 09:53:01.0376635');  
+SELECT DATEDIFF(day,
+   '2007-05-07 09:53:01.0376635',
+   '2007-05-08 09:53:01.0376635');  
 ```  
   
 ### <a name="f-specifying-numeric-expressions-and-scalar-system-functions-for-enddate"></a>F. Angeben von numerischen Ausdrücken und skalaren Systemfunktionen für enddate  
-In diesem Beispiel werden ein numerischer Ausdruck, `(GETDATE ()+ 1)`, und skalare Systemfunktionen, `GETDATE` und `SYSDATETIME`, als Argumente für *enddate* verwendet.
+In diesem Beispiel werden ein numerischer Ausdruck, `(GETDATE() + 1)`, und skalare Systemfunktionen, `GETDATE` und `SYSDATETIME`, als Argumente für *enddate* verwendet.
   
 ```sql
 USE AdventureWorks2012;  
 GO  
-SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635', GETDATE()+ 1)   
+SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635', GETDATE() + 1)   
     AS NumberOfDays  
-FROM Sales.SalesOrderHeader;  
+    FROM Sales.SalesOrderHeader;  
 GO  
 USE AdventureWorks2012;  
 GO  
-SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635', DATEADD(day,1,SYSDATETIME())) AS NumberOfDays  
-FROM Sales.SalesOrderHeader;  
+SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635', DATEADD(day, 1, SYSDATETIME())) AS NumberOfDays  
+    FROM Sales.SalesOrderHeader;  
 GO  
 ```  
   
@@ -211,8 +212,8 @@ In diesem Beispiel wird eine Rangfolgefunktion als Argument für *startdate* ver
 USE AdventureWorks2012;  
 GO  
 SELECT p.FirstName, p.LastName  
-    ,DATEDIFF(day,ROW_NUMBER() OVER (ORDER BY   
-        a.PostalCode),SYSDATETIME()) AS 'Row Number'  
+    ,DATEDIFF(day, ROW_NUMBER() OVER (ORDER BY   
+        a.PostalCode), SYSDATETIME()) AS 'Row Number'  
 FROM Sales.SalesPerson s   
     INNER JOIN Person.Person p   
         ON s.BusinessEntityID = p.BusinessEntityID  
@@ -228,13 +229,13 @@ In diesem Beispiel wird eine Aggregatfensterfunktion als Argument für *startdat
 ```sql
 USE AdventureWorks2012;  
 GO  
-SELECT soh.SalesOrderID, sod.ProductID, sod.OrderQty,soh.OrderDate  
-    ,DATEDIFF(day,MIN(soh.OrderDate)   
-        OVER(PARTITION BY soh.SalesOrderID),SYSDATETIME() ) AS 'Total'  
+SELECT soh.SalesOrderID, sod.ProductID, sod.OrderQty, soh.OrderDate,
+    DATEDIFF(day, MIN(soh.OrderDate)   
+        OVER(PARTITION BY soh.SalesOrderID), SYSDATETIME()) AS 'Total'  
 FROM Sales.SalesOrderDetail sod  
     INNER JOIN Sales.SalesOrderHeader soh  
         ON sod.SalesOrderID = soh.SalesOrderID  
-WHERE soh.SalesOrderID IN(43659,58918);  
+WHERE soh.SalesOrderID IN(43659, 58918);  
 GO  
 ```  
   
@@ -245,14 +246,14 @@ In diesen Beispielen werden verschiedene Typen von Ausdrücken als Argumente fü
 In diesem Beispiel wird die Anzahl der Tagesbegrenzungen berechnet, die von den Datumsangaben in zwei Spalten in einer Tabelle überschritten wurden.
   
 ```sql
-CREATE TABLE dbo.Duration (  
-    startDate datetime2  
-    ,endDate datetime2  
-    );  
-INSERT INTO dbo.Duration(startDate,endDate)  
-    VALUES('2007-05-06 12:10:09','2007-05-07 12:10:09');  
-SELECT TOP(1) DATEDIFF(day,startDate,endDate) AS Duration  
-FROM dbo.Duration;  
+CREATE TABLE dbo.Duration 
+    (startDate datetime2, endDate datetime2);
+    
+INSERT INTO dbo.Duration (startDate, endDate)  
+    VALUES ('2007-05-06 12:10:09', '2007-05-07 12:10:09');  
+    
+SELECT TOP(1) DATEDIFF(day, startDate, endDate) AS Duration  
+    FROM dbo.Duration;  
 -- Returns: 1  
 ```  
   
@@ -262,7 +263,7 @@ In diesem Beispiel werden skalare Unterabfragen und skalare Funktionen als Argum
 ```sql
 -- Uses AdventureWorks  
   
-SELECT TOP(1) DATEDIFF(day,(SELECT MIN(HireDate) FROM dbo.DimEmployee),  
+SELECT TOP(1) DATEDIFF(day, (SELECT MIN(HireDate) FROM dbo.DimEmployee),  
     (SELECT MAX(HireDate) FROM dbo.DimEmployee))   
 FROM dbo.DimEmployee;  
   
@@ -274,8 +275,9 @@ In diesem Beispiel werden Zeichenkonstanten als Argumente für *startdate* und *
 ```sql
 -- Uses AdventureWorks  
   
-SELECT TOP(1) DATEDIFF(day, '2007-05-07 09:53:01.0376635'  
-    , '2007-05-08 09:53:01.0376635') FROM DimCustomer;  
+SELECT TOP(1) DATEDIFF(day,
+    '2007-05-07 09:53:01.0376635',
+    '2007-05-08 09:53:01.0376635') FROM DimCustomer;  
 ```  
   
 ### <a name="l-specifying-ranking-functions-for-startdate"></a>L. Angeben von Rangfolgefunktionen für startdate  
@@ -284,9 +286,9 @@ In diesem Beispiel wird eine Rangfolgefunktion als Argument für *startdate* ver
 ```sql
 -- Uses AdventureWorks  
   
-SELECT FirstName, LastName  
-,DATEDIFF(day,ROW_NUMBER() OVER (ORDER BY   
-        DepartmentName),SYSDATETIME()) AS RowNumber  
+SELECT FirstName, LastName,
+    DATEDIFF(day, ROW_NUMBER() OVER (ORDER BY   
+        DepartmentName), SYSDATETIME()) AS RowNumber  
 FROM dbo.DimEmployee;  
 ```  
   
@@ -296,9 +298,9 @@ In diesem Beispiel wird eine Aggregatfensterfunktion als Argument für *startdat
 ```sql
 -- Uses AdventureWorks  
   
-SELECT FirstName, LastName, DepartmentName  
-    ,DATEDIFF(year,MAX(HireDate)  
-             OVER (PARTITION BY DepartmentName),SYSDATETIME()) AS SomeValue  
+SELECT FirstName, LastName, DepartmentName,
+    DATEDIFF(year, MAX(HireDate)  
+        OVER (PARTITION BY DepartmentName), SYSDATETIME()) AS SomeValue  
 FROM dbo.DimEmployee  
 ```  
   

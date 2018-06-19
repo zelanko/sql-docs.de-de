@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -19,11 +18,12 @@ caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 613c588ff3807aa767b9702a56edabeb1001fa42
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5a8219948f4d1673d5e7b7b45882c89db0580609
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35311949"
 ---
 # <a name="database-mirroring-monitor-overview"></a>Datenbankspiegelungs-Monitor (Übersicht)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 05/03/2018
  *\<Status>*  
  Im Folgenden sind die möglichen Statuswerte und die zugehörigen Symbole aufgeführt:  
   
-|Symbol|Status|Description|  
+|Symbol|Status|und Beschreibung|  
 |----------|------------|-----------------|  
 |Warnungssymbol|**Unbekannt**|Der Monitor ist mit keinem der beiden Partner verbunden. Es sind nur die Informationen verfügbar, die vom Monitor zwischengespeichert wurden.|  
 |Warnungssymbol|**Wird synchronisiert**|Der Inhalt der Spiegeldatenbank hält mit dem Inhalt der Prinzipaldatenbank nicht Schritt. Die Prinzipalserverinstanz sendet Protokolldatensätze an die Spiegelserverinstanz, die die Änderungen auf die Spiegeldatenbank anwendet, um ein Rollforward dafür auszuführen.<br /><br /> Beim Start einer Datenbank-Spiegelungssitzung befinden sich Spiegel- und Prinzipaldatenbank in diesem Status.|  
@@ -91,14 +91,14 @@ ms.lasthandoff: 05/03/2018
 ## <a name="action-menu"></a>Menü Aktion  
  Das Menü **Aktion** enthält immer die folgenden Befehle:  
   
-|Befehl|Description|  
+|Befehl|und Beschreibung|  
 |-------------|-----------------|  
 |**Gespiegelte Datenbank registrieren...**|Öffnet das Dialogfeld **Gespiegelte Datenbank registrieren** . Verwenden Sie dieses Dialogfeld, um eine oder mehrere gespiegelte Datenbanken auf einer bestimmten Serverinstanz zu registrieren, indem Sie die Datenbank bzw. Datenbanken dem Datenbankspiegelungs-Monitor hinzufügen. Wenn eine Datenbank hinzugefügt wurde, werden Informationen zu der Datenbank, zu ihren Partnern und zum Herstellen von Verbindungen mit den Partnern vom Datenbankspiegelungs-Monitor lokal zwischengespeichert.|  
 |**Serverinstanzverbindungen verwalten...**|Wenn Sie diesen Befehl auswählen, wird das Dialogfeld **Serververbindungen verwalten** geöffnet. In diesem Dialogfeld können Sie eine Serverinstanz auswählen, für die Sie Anmeldeinformationen angeben möchten, die der Monitor beim Herstellen einer Verbindung mit einem bestimmten Partner verwenden soll.<br /><br /> Suchen Sie den betreffenden Eintrag im Raster **Serverinstanzen** , und klicken Sie in dieser Zeile auf **Bearbeiten** , um die Anmeldeinformationen für einen Partner zu bearbeiten. Das Dialogfeld **Verbindung mit Server herstellen** wird mit festgelegtem Serverinstanznamen und mit auf den aktuellen zwischengespeicherten Wert initialisierten Steuerelementen für die Anmeldeinformationen angezeigt. Ändern Sie die Authentifizierungsinformationen nach Bedarf, und klicken Sie auf **Verbinden**. Wenn die Anmeldeinformationen über ausreichende Privilegien verfügen, wird die **Verbindung herstellen über** -Spalte mit den neuen Anmeldeinformationen aktualisiert.|  
   
  Wenn Sie eine Datenbank auswählen, enthält das Menü **Aktion** auch die folgenden Befehle.  
   
-|Befehl|Description|  
+|Befehl|und Beschreibung|  
 |-------------|-----------------|  
 |**Registrierung für diese Datenbank aufheben**|Entfernt die ausgewählte Datenbank aus dem Datenbankspiegelungs-Monitor.|  
 |**Schwellenwerte für Warnung festlegen...**|Öffnet das Dialogfeld **Schwellenwerte für Warnung festlegen** . In diesem Dialogfeld kann ein Systemadministrator Warnungen für die Datenbank auf jedem der Partner aktivieren oder deaktivieren und den Schwellenwert jeder Warnung ändern. Es ist empfehlenswert, einen Schwellenwert für eine bestimmte Warnung auf beiden Partnern festzulegen, um sicherzustellen, dass die Warnung weiterhin angezeigt wird, wenn ein Failover der Datenbank erfolgt. Der geeignete Schwellenwert für jeden Partner ist abhängig von der Leistungsfähigkeit des Systems des betreffenden Partners.<br /><br /> Ein Ereignis wird nur dann in das Ereignisprotokoll für eine Leistung geschrieben, sofern der Wert seinen Schwellenwert erreicht oder überschreitet, wenn die Statustabelle aktualisiert wird. Wenn ein Spitzenwert den Schwellenwert vorübergehend zwischen zwei Statusupdates erreicht, wird dieser Spitzenwert nicht erkannt.|  

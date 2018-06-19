@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
@@ -16,11 +14,12 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1f15cffa118a8783b02a1d04fcd953aa4dbb14b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3fe47762ce9aac0d8a077bf7843a62a9aaf6ca61
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330074"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>Verbinden mit einer Oracle-Datenquelle (SQL Server-Import/Export-Assistent)
 In diesem Artikel wird erläutert, wie Sie eine Verbindung mit einer **Oracle**-Datenquelle von den Seiten **Datenquelle auswählen** oder **Ziel auswählen** des SQL Server-Import/Export-Assistenten herstellen. Es gibt mehrere Datenanbieter, die Sie verwenden können, um eine Verbindung mit Oracle herzustellen.
@@ -36,7 +35,7 @@ Nachdem Sie **.NET Framework-Datenanbieter für Oracle** auf der Seite **Datenqu
 
 |Erforderliche Informationen|.NET Framework-Datenanbieter für die Oracle-Eigenschaft|
 |---|---|
-|Servername|**Datenquelle**|
+|Servername|**Data Source**|
 |Authentifizierungsinformationen (Anmeldung)|**Benutzer-ID** und **Kennwort**, oder **Integrierte Sicherheit**|
 
 Sie müssen die Verbindungszeichenfolge nicht im Feld **ConnectionString** in der Liste eintragen. Nachdem Sie einzelne Werte für den Oracle-Servernamen (**Datenquelle**) und die Anmeldedaten eingegeben haben, assembliert der Assistent die Verbindungszeichenfolge aus den einzelnen Eigenschaften und deren Werten. 

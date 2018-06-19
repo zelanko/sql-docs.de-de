@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -27,11 +25,12 @@ caps.latest.revision: 101
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 81566c11122cd67e37e1304f1d56760fcae1ce29
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2f63cd49b5a78a42bdff0ef25f69ca9f55217c48
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35328334"
 ---
 # <a name="ado-net-source"></a>ADO NET-Quelle
   Die ADO NET-Quelle verwendet Daten von einem .NET-Anbieter und stellt sie dem Datenfluss zur Verfügung.  
@@ -116,7 +115,7 @@ ms.lasthandoff: 05/03/2018
  **Datenzugriffsmodus**  
  Geben Sie die Methode für die Auswahl von Daten aus der Quelle an.  
   
-|Option|Description|  
+|Option|und Beschreibung|  
 |------------|-----------------|  
 |Tabelle oder Sicht|Rufen Sie Daten aus einer Tabelle oder Sicht in der [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Datenquelle ab.|  
 |SQL-Befehl|Rufen Sie mit SQL-Abfrage Daten aus der [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Datenquelle ab.|  

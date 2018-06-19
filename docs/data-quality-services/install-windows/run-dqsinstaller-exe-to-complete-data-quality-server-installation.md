@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 789dca5f79bfcd3f00a67e17da2a613c936cd639
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 275d8a790ab95d6ffd3bfb02f7427d8e2e3cecdf
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35311269"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>Ausführen von DQSInstaller.exe zum Abschließen der Installation von Data Quality Server
 
@@ -74,7 +74,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="CommandPrompt"></a> Ausführen von „DQSInstaller.exe“ über Befehlszeile  
  Sie können DQSInstaller.exe über die Eingabeaufforderung mit den folgenden Befehlszeilenparametern ausführen:  
   
-|DQSInstaller.exe-Parameter|Description|Beispielsyntax|  
+|DQSInstaller.exe-Parameter|und Beschreibung|Beispielsyntax|  
 |--------------------------------|-----------------|-------------------|  
 |-collation|Die Serversortierung, die zum Installieren von [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]verwendet werden soll.<br /><br /> DQS unterstützt nur eine Sortierung, bei der die Groß-/Kleinschreibung nicht beachtet wird. Wenn Sie eine Sortierung angeben, bei der die Groß-/Kleinschreibung beachtet wird, versucht das Installationsprogramm, die Version der angegebenen Sortierung zu verwenden, bei der die Groß-/Kleinschreibung nicht beachtet wird. Wenn keine Version vorhanden ist, bei der die Groß-/Kleinschreibung nicht beachtet wird oder wenn die Sortierung von SQL nicht unterstützt wird, kann die [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] -Installation nicht durchgeführt werden.<br /><br /> Wenn keine Serversortierung angegeben wird, wird die Standardsortierung, SQL_Latin1_General_CP1_CI_AS, verwendet.|`dqsinstaller.exe –collation <collation_name>`|  
 |-upgradedlls|Überspringt das Neuerstellen der DQS-Datenbanken (DQS_MAIN, DQS_PROJECTS und DQS_STAGING_DATA) und aktualisiert nur die SQLCLR-Assemblys (SQL Common Language Runtime), die von DQS in der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbank verwendet werden.<br /><br /> Weitere Informationen finden Sie unter [Aktualisieren der SQLCLR-Assemblys nach dem Aktualisieren von .NET Framework](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md).|`dqsinstaller.exe -upgradedlls`|  

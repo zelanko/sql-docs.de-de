@@ -1,14 +1,12 @@
 ---
 title: Überprüfen von Daten (MDS-Add-In für Excel) | Microsoft-Dokumentation
-ms.custom: ''
+ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: microsoft-excel-add-in
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 71eda98f-01a4-4fff-8246-be3133782523
@@ -16,11 +14,12 @@ caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ab8cf0017260edd45a7538191689cd47198f8a05
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 94fd34fa9224f7de468a6e89dd91c20903e96cb8
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335784"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>Überprüfen von Daten (MDS-Add-In für Excel)
 
@@ -44,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
  Weitere Informationen zu zusätzlichen Status finden Sie unter [Überprüfungsstatus &#40;Master Data Services&#41;](../../master-data-services/validation-statuses-master-data-services.md).  
   
-|Status|Description|  
+|Status|und Beschreibung|  
 |------------|-----------------|  
 |Fehler bei der Überprüfung|Für einen oder mehrere Werte in der Zeile ist bei der Überprüfung auf Grundlage der Geschäftsregeln, die von einem MDS-Administrator definiert wurden, ein Fehler aufgetreten.|  
 |Die Überprüfung war erfolgreich|Alle Werte in der Zeile haben die Überprüfung auf Grundlage der Geschäftsregeln bestanden.|  
@@ -52,7 +51,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="input-statuses"></a>Eingabestatus  
  Beim Veröffentlichen von Daten werden in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]sind die folgenden Eingabestatus möglich.  
   
-|Status|Description|  
+|Status|und Beschreibung|  
 |------------|-----------------|  
 |Fehler|Ein oder mehrere Werte in der Zeile erfüllen die Systemanforderungen nicht, z. B. Länge oder Datentyp. Der Wert wird im MDS-Repository nicht aktualisiert.|  
 |Neue Zeile|Die Werte in der Zeile wurden noch nicht im MDS-Repository veröffentlicht.|  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.component: data-quality-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -21,11 +20,12 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 70f7975e2bf6408239bd4d4fe7c07af169e0bf29
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 78335b05976d63c1da39a69766fd44e073ad4e54
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35310319"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Bereinigen von Daten mit (internem) DQS-Wissen
 
@@ -111,7 +111,7 @@ ms.lasthandoff: 05/03/2018
   
  Abhängig vom Vertrauensgrad werden die Werte auf einer der folgenden fünf Registerkarten angezeigt:  
   
-|Registerkarte|Description|  
+|Registerkarte|und Beschreibung|  
 |---------|-----------------|  
 |**Vorgeschlagen**|Zeigt die Domänenwerte an, für die DQS die vorgeschlagenen Werte gefunden hat, die einen Vertrauensgrad aufweisen, der höher als der *automatisch vorgeschlagene Schwellenwert* , aber niedriger als der *Schwellenwert für die automatische Korrektur* ist.<br /><br /> Die vorgeschlagenen Werte werden in der Spalte **Korrigieren in** im Vergleich zum ursprünglichen Wert angezeigt. Sie können auf das Optionsfeld in der Spalte **Genehmigen** oder **Ablehnen** für einen Wert im oberen Raster klicken, um den Vorschlag für alle Instanzen des Wertes anzunehmen oder abzulehnen. In diesem Fall wird der angenommene Wert auf die Registerkarte **Korrigiert** verschoben, und der abgelehnte Wert wird auf die Registerkarte **Ungültig** verschoben.|  
 |**Neu**|Zeigt die gültige Domäne an, für die DQS nicht genug Informationen aufweist, und die daher keiner anderen Registerkarte zugeordnet werden kann. Außerdem enthält diese Registerkarte auch Werte, die einen Vertrauensgrad aufweisen, der unterhalb des *automatisch vorgeschlagenen Schwellenwerts* liegt, aber hoch genug ist, um als gültig markiert zu werden.<br /><br /> Wenn Sie glauben, dass der Wert richtig ist, klicken Sie auf das Optionsfeld in der Spalte **Genehmigen** . Klicken Sie andernfalls auf das Optionsfeld in der Spalte **Ablehnen** . Der angenommene Wert wird auf die Registerkarte **Richtig** verschoben, und der abgelehnte Wert wird auf die Registerkarte **Ungültig** verschoben. Sie können den richtigen Wert auch manuell als Ersatz für den ursprünglichen Wert in der Spalte **Korrigieren in** eingeben und dann auf das Optionsfeld in der Spalte **Genehmigen** klicken, um die Änderung anzunehmen. In diesem Fall wird der Wert auf die Registerkarte **Korrigiert** verschoben.|  

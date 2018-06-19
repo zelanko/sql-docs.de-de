@@ -1,23 +1,21 @@
 ---
 title: Bereitstellen eines SSIS-Projekts mit SSMS | Microsoft-Dokumentation
 ms.date: 05/21/2018
-ms.topic: conceptual
+ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: quick-start
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d93e2d18fa2d13106ae0add8c9be5bfe269602e3
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 5ba8568b89863edcc5cf246c1ee09efb956d6a4a
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455345"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332084"
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>Bereitstellen eines SSIS-Projekts mit SQL Server Management Studio (SSMS)
 In diesem Schnellstart wird erläutert, wie Sie SQL Server Management Studio (SSMS) verwenden, um eine Verbindung mit der SSIS-Katalogdatenbank herzustellen, und wie Sie anschließend den Bereitstellungs-Assistent für Integration Services verwenden, um ein im SSIS-Katalog gespeichertes SSIS-Projekt bereitzustellen. 

@@ -1,23 +1,21 @@
 ---
 title: Ausführen eines SSIS-Pakets über die Eingabeaufforderung | Microsoft-Dokumentation
 ms.date: 05/21/2018
-ms.topic: conceptual
+ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: quick-start
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 018a1b6e8e75ce89a1c1679262d185381f432b39
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 596d1ac410c3fa590ea6b808c3f3bda049abe752
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34454863"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332034"
 ---
 # <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>Ausführen eines SSIS-Pakets über die Eingabeaufforderung mit „DTExec.exe“
 In diesem Schnellstart wird gezeigt, wie Sie ein SSIS-Paket über die Eingabeaufforderung ausführen, indem Sie `DTExec.exe` mit den entsprechenden Parametern ausführen.

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -31,11 +29,12 @@ caps.latest.revision: 114
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a3978535dd221b4df0534b1e559d688d14741168
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6c795635de7aad15099cb490bf621329a23fcd26
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331224"
 ---
 # <a name="dtutil-utility"></a>dtutil Utility
   Das Eingabeaufforderungs-Hilfsprogramm **dtutil** dient zum Verwalten von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paketen. Mit dem Hilfsprogramm kann ein Paket kopiert, verschoben oder gelöscht und das Vorhandensein eines Pakets überprüft werden. Diese Aktionen können für jedes [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paket ausgeführt werden, das sich an einem der drei folgenden Speicherorte befindet: in einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank, im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paketspeicher oder im Dateisystem. Falls das Hilfsprogramm auf ein Paket zugreift, das in **msdb**gespeichert ist, werden Sie möglicherweise zur Eingabe eines Benutzernamens und eines Kennworts aufgefordert. Wenn die Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung verwendet, ist sowohl ein Benutzername als auch ein Kennwort erforderlich. Falls der Benutzername fehlt, versucht **dtutil** sich bei [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mit der Windows-Authentifizierung anzumelden. Der Speichertyp des Pakets wird durch die Optionen **/SQL**, **/FILE**und **/DTS** identifiziert.  
@@ -88,7 +87,7 @@ dtutil /option [value] [/option [value]]...
   
 #### <a name="parameters"></a>Parameter  
   
-|Option|Description|  
+|Option|und Beschreibung|  
 |------------|-----------------|  
 |/?|Zeigt die Befehlszeilenoptionen an.|  
 |/C[opy] *location;destinationPathandPackageName*|Gibt eine Kopieraktion für ein [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paket an. Sie müssen zunächst mithilfe der Option **/FI**, **/SQ**oder **DT** den Speicherort des Pakets angeben, um diesen Parameter verwenden zu können. Geben Sie anschließend den Zielspeicherort und den Zielpaketnamen an. Das *destinationPathandPackageName* -Argument gibt an, wohin das [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paket kopiert wird. Wenn *SQL* als Ziel- **location**angegeben wird, müssen im Befehl auch die Argumente *DestUser*, *DestPassword* und *DestServer* angegeben werden.<br /><br /> Wenn bei der **Copy** -Aktion ein vorhandenes Paket am Ziel gefunden wird, fordert **dtutil** den Benutzer auf, das Löschen des Pakets zu bestätigen. Die Angabe von **Y** bewirkt, dass das Paket überschrieben wird; mit **N** wird das Programm beendet. Wenn der Befehl das *Quiet* -Argument einschließt, wird keine Aufforderung angezeigt, und vorhandene Pakete werden ggf. überschrieben.|  
@@ -121,7 +120,7 @@ dtutil /option [value] [/option [value]]...
 ## <a name="dtutil-exit-codes"></a>dtutil-Exitcodes  
  **dtutil** legt einen Exitcode fest, der Sie informiert, wenn Syntaxfehler erkannt, falsche Argumente verwendet oder ungültige Optionskombinationen angegeben werden. Andernfalls meldet das Hilfsprogramm „Der Vorgang wurde erfolgreich abgeschlossen“. In der folgenden Tabelle sind die Werte aufgeführt, die vom Hilfsprogramm **dtutil** beim Beenden festgelegt werden können.  
   
-|value|Description|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |0|Das Hilfsprogramm wurde erfolgreich ausgeführt.|  
 |1|Beim Ausführen des Hilfsprogramms ist ein Fehler aufgetreten.|  
