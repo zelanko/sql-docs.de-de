@@ -1,0 +1,6 @@
+# [Data Compression](data-compression.md) (Datenkomprimierung)
+## [Implementierung von Zeilenkomprimierung](row-compression-implementation.md)
+## [Implementierung von Seitenkomprimierung](page-compression-implementation.md)
+## [Implementierung von Unicode-Komprimierung](unicode-compression-implementation.md)
+## [Aktivieren der Komprimierung für eine Tabelle oder einen Index](enable-compression-on-a-table-or-index.md)
+## [Deaktivieren der Komprimierung für eine Tabelle oder einen Index](disable-compression-on-a-table-or-index.md)
