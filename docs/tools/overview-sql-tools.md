@@ -18,10 +18,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: be35a6b708e2f8a5430a796b466705f222d9748d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34709028"
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL-Tools und Hilfsprogramme für SQLServer, Azure SQL-Datenbank und SQL Azure Datawarehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +34,7 @@ Dieser Artikel enthält Informationen zu den verfügbaren Tools zum Arbeiten mit
 
 ## <a name="tools-to-run-queries-and-manage-databases"></a>Tools zum Ausführen von Abfragen und Verwalten von Datenbanken  
 
-| Tool | Description |
+| Tool | und Beschreibung |
 |:--|:--|
 | [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] ist eine kostenlose, leicht-Tool zum Verwalten von Datenbanken, wo sie ausgeführt werden. Diese Preview-Version stellt die Datenbank-Verwaltungsfunktionen, z. B. eine erweiterte Transact-SQL-Editor und anpassbare Einblicke in den Betriebsstatus Ihrer Datenbanken bereit. **[!INCLUDE[name-sos](../includes/name-sos-short.md)] unter Windows, Mac OS und Linux ausgeführt wird**.|
 | [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Verwenden Sie SQL Server Management Studio (SSMS), um Abfragen, Entwerfen und Verwalten Ihrer SQL Server, Azure SQL-Datenbank und Azure SQL Data Warehouse. **SSMS unter Windows ausgeführt wird**.|
@@ -51,7 +52,7 @@ Dieser Artikel enthält Informationen zu den verfügbaren Tools zum Arbeiten mit
 
 ## <a name="additional-tools"></a>Zusätzliche tools
 
-| Tool | Description |
+| Tool | und Beschreibung |
 |:--|:--|
 | [Configuration Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md) | Verwenden Sie SQL Server Configuration Manager, zum Konfigurieren von SQL Server-Dienste und Netzwerkkonnektivität. Konfigurations-Manager unter Windows ausgeführt wird.|
 |[MSSQL-conf](../linux/sql-server-linux-configure-mssql-conf.md)|Verwenden Sie Mssql-Conf so konfigurieren Sie SQL Server auf dem Linux ausgeführt wird.|
