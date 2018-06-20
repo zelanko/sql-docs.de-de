@@ -1,8 +1,5 @@
 # [Übersicht](integration-services-ssis-connections.md)  
 # [Datenquellen](data-sources.md)  
-# [Herstellen einer Verbindung zu einer Access-Datenbank](connect-to-an-access-database.md)  
-# [Herstellen einer Verbindung mit einer dBASE- oder einer anderen DBF-Datei](connect-to-a-dbase-or-other-dbf-file.md)  
-# [Herstellen einer Verbindung mit einer Excel-Arbeitsmappe](connect-to-an-excel-workbook.md)  
 # [ADO-Verbindungs-Manager](ado-connection-manager.md)  
 # [ADO.NET-Verbindungs-Manager](ado-net-connection-manager.md)  
 # [Analysis Services-Verbindungs-Manager](analysis-services-connection-manager.md)  
