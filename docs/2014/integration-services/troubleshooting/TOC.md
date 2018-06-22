@@ -1,0 +1,7 @@
+# [Tools zur Problembehandlung für die Paketentwicklung](troubleshooting-tools-for-package-development.md)
+## [Debuggen der Ablaufsteuerung](debugging-control-flow.md)
+## [Debuggen von Skript](debugging-script.md)
+## [Debuggen des Datenflusses](debugging-data-flow.md)
+## [Debuggen eines Pakets durch Festlegen von Breakpoints auf einem Task oder Container](../debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md)
+## [Hinzufügen eines Daten-Viewers zu einem Datenfluss](../add-a-data-viewer-to-a-data-flow.md)
+## [Konfigurieren einer Fehlerausgabe in einer Datenflusskomponente](../configure-an-error-output-in-a-data-flow-component.md)

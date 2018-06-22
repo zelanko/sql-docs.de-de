@@ -2,7 +2,7 @@
 # [Übersicht über SQL Server-Tools und -Dienstprogramme](../tools/overview-sql-tools.md)
 # [Neue und aktualisierte Artikel](new-updated-tools.md)
 
-# [SQL Operations Studio (Vorschau)](../sql-operations-studio/what-is.md)
+# [SQL Operations Studio (preview)](../sql-operations-studio/what-is.md)
 
 # [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
@@ -13,7 +13,8 @@
 # [Configuration Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md)
 # [mssql-conf (Linux)](../linux/sql-server-linux-configure-mssql-conf.md)
 # [Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md)
-# [Datenbankoptimierungsratgeber (DTA)](../tools/dta/dta-utility.md)
+# 
+  [Datenbankoptimierungsratgeber (DTA)](../tools/dta/dta-utility.md)
 # [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)
 # [Service Broker (ssbdiagnose)](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)
 
@@ -30,3 +31,7 @@
 ## [sqlps (Hilfsprogramm)](sqlps-utility.md)  
 ## [sqlservr](sqlservr-application.md)  
 ## [tablediff (Hilfsprogramm)](tablediff-utility.md)
+
+# sqlpackage
+## [Installieren von sqlpackage](sqlpackage-download.md)
+## [Referenz zu sqlpackage](sqlpackage.md)

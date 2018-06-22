@@ -1,0 +1,12 @@
+# [Transaktionsreplikation](transactional-replication.md)
+## [Veröffentlichungstypen der Transaktionsreplikation](publication-types-for-transactional-replication.md)
+## [Updatable Subscriptions for Transactional Replication](updatable-subscriptions-for-transactional-replication.md)
+## [Queued Updating Conflict Detection and Resolution](updatable-subscriptions-queued-updating-conflict-resolution.md)
+## [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)
+## [Konflikterkennung bei der Peer-zu-Peer-Replikation](peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)
+## [Bidirektionale Transaktionsreplikation](bidirectional-transactional-replication.md)
+## [Article Options for Transactional Replication](article-options-for-transactional-replication.md)
+## [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](transactional-articles-specify-how-changes-are-propagated.md)
+## [Erneutes Generieren von Transaktionsprozeduren zur Erfassung von Schemaänderungen](transactional-articles-regenerate-to-reflect-schema-changes.md)
+## [Veröffentlichen der Ausführung von gespeicherten Prozeduren in der Transaktionsreplikation](publishing-stored-procedure-execution-in-transactional-replication.md)
+

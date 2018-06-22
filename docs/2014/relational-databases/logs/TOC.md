@@ -1,0 +1,8 @@
+# [Protokolldatei-Viewer](log-file-viewer.md)
+## [Öffnen des Protokolldatei-Viewers](open-log-file-viewer.md)
+## [Anzeigen von Offlineprotokolldateien](view-offline-log-files.md)
+## [Protokolldatei-Viewer (F1-Hilfe)](log-file-viewer-f1-help.md)
+# [Das Transaktionsprotokoll (SQL Server)](the-transaction-log-sql-server.md)
+## [Verwalten der Größe der Transaktionsprotokolldatei](manage-the-size-of-the-transaction-log-file.md)
+## [Problembehandlung bei vollen Transaktionsprotokollen (SQL Server-Fehler 9002)](troubleshoot-a-full-transaction-log-sql-server-error-9002.md)
+## [Steuern der Transaktionsdauerhaftigkeit](control-transaction-durability.md)
