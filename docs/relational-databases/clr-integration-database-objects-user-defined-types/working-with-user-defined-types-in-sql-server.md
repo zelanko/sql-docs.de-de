@@ -3,11 +3,9 @@ title: Arbeiten mit benutzerdefinierten Typen in SQLServer | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,19 +19,19 @@ caps.latest.revision: 12
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ec87067607515fe555bc6c58743ba454ff508013
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd0a2dcedc20cc1448ef16b89bc3f933e986ce15
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918205"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703111"
 ---
 # <a name="working-with-user-defined-types-in-sql-server"></a>Arbeiten mit benutzerdefinierten Typen in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Sie erreichen den benutzerdefinierten Typ (UDT) Funktionen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus der [!INCLUDE[tsql](../../includes/tsql-md.md)] Sprache mithilfe von regulären Abfragesyntax. UDTs können für die Definition von Datenbankobjekten, als Variablen in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batches, in Funktionen und gespeicherten Prozeduren und als Argumente in Funktionen und gespeicherten Prozeduren verwendet werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Definieren von UDT-Tabellen und Spalten](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-defining-udt-tables-and-columns.md)  
+ [Definieren von UDT-Tabellen und -Spalten](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-defining-udt-tables-and-columns.md)  
  Beschreibt, wie [!INCLUDE[tsql](../../includes/tsql-md.md)] verwendet wird, um eine UDT-Spalte in einer Tabelle zu erstellen.  
   
  [Bearbeiten von UDT-Daten](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-manipulating-udt-data.md)  
