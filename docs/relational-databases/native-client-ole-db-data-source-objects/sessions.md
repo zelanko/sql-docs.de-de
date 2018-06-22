@@ -4,27 +4,25 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-data-source-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - sessions [OLE DB]
 - SQL Server Native Client OLE DB provider, sessions
 ms.assetid: 3a980816-675c-4fba-acc9-429297d85bbd
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6de9aa78a6cbdd26900eb4565f3edc7783acdeb9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6dd1fbcb2a8d1eee4ad76decb2b81972b8cc2dd2
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946285"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701471"
 ---
 # <a name="sessions"></a>Sitzungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -187,14 +185,14 @@ EXIT:
 }  
 ```  
   
- Herstellen einer Verbindung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-anbietersitzungsobjekten mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erheblichen Mehraufwand für Anwendungen, die kontinuierlich sitzungsbojekte erstellen und Freigeben von Sitzungsobjekte generieren können. Der Aufwand minimiert werden kann, durch die Verwaltung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-anbietersitzungsobjekten effizient. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB-anbieteranwendungen können behalten die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verbindung eines Sitzungsobjekts aktiv ist, indem Sie einen Verweis auf mindestens eine Schnittstelle des Objekts zu verwalten.  
+ Herstellen einer Verbindung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-anbietersitzungsobjekten mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erheblichen Mehraufwand für Anwendungen, die kontinuierlich sitzungsbojekte erstellen und Freigeben von Sitzungsobjekte generieren können. Der Aufwand minimiert werden kann, durch die Verwaltung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-anbietersitzungsobjekten effizient. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-anbieteranwendungen können behalten die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verbindung eines Sitzungsobjekts aktiv ist, indem Sie einen Verweis auf mindestens eine Schnittstelle des Objekts zu verwalten.  
   
  Durch Aufrechterhalten eines Pools von Verweisen auf Befehlserstellungsobjekte können aktive Verbindungen für diese Sitzungsobjekte im Pool aktiviert bleiben. Wie Session-Objekte erforderlich sind, übergibt der poolverwaltungscode einen gültigen **IDBCreateCommand** Schnittstellenzeiger auf die Anwendungsmethode die Sitzung erfordert. Wenn die Anwendungsmethode die Sitzung nicht mehr erfordert, gibt die Methode den Schnittstellenzeiger an den Poolverwaltungscode zurück, anstatt den Verweis der Anwendung auf das Befehlserstellungsobjekt freizugeben.  
   
 > [!NOTE]  
->  Im vorherigen Beispiel der **IDBCreateCommand** Schnittstelle wird verwendet, da die **ICommand** -Schnittstelle implementiert die **GetDBSession** -Methode, die einzige Methode im Befehls- oder rowsetbereich, die einem Objekt Gelegenheit zu die Sitzung zu ermitteln, auf dem es erstellt wurde. Daher ermöglicht einzig ein Befehlsobjekt einer Anwendung das Abrufen eines Datenquellobjekt-Zeigers, von dem aus weitere Sitzungen erstellt werden können.  
+>  Im vorherigen Beispiel der **IDBCreateCommand** Schnittstelle wird verwendet, da die **ICommand** -Schnittstelle implementiert die **GetDBSession** -Methode, die einzige Methode im Befehl oder rowsetbereich, der einem Objekt Gelegenheit zu die Sitzung zu ermitteln, auf der es erstellt wurde. Daher ermöglicht einzig ein Befehlsobjekt einer Anwendung das Abrufen eines Datenquellobjekt-Zeigers, von dem aus weitere Sitzungen erstellt werden können.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenquellenobjekte & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Datenquellenobjekte &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   
