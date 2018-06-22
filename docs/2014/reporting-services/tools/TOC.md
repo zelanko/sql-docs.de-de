@@ -53,6 +53,7 @@
 ### [Server Properties (History Page) (Servereigenschaften (Seite Verlauf))](server-properties-history-page.md)
 ### [Server Properties (Logging Page) (Servereigenschaften (Seite Protokollierung))](server-properties-logging-page.md)
 ### [Server Properties (Security Page) (Servereigenschaften (Seite Sicherheit))](server-properties-security-page-reporting-services.md)
+### [Server Properties (Advanced Page) (Servereigenschaften (Seite Erweitert))](server-properties-advanced-page-reporting-services.md)
 ### [System Role Properties (Systemrolleneigenschaften)](system-role-properties-management-studio.md)
 ### [User Role Properties (Benutzerrolleneigenschaften)](user-role-properties-management-studio.md)
 # [Report Builder (Berichts-Generator)](report-builder-authoring-environment-ssrs.md)

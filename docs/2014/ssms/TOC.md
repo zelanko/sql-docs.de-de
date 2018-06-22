@@ -6,6 +6,7 @@
 ### [SQL Server Management Studio-Webbrowser](sql-server-management-studio-web-browser.md)
 ### [Externe Tools (Dialogfeld)](external-tools-dialog-box.md)
 ### [Argumente (Dialogfeld)](arguments-dialog-box.md)
+### [Arguments für externe Tools](use-of-sql-server-features-and-capabilities-wwi-oltp.md)
 ### [Eigenschaftenfenster (Management Studio)](properties-window-management-studio.md)
 ### [Verwenden der Toolbox](use-the-toolbox.md)
 ## [Funktionen in SQL Server Management Studio](../database-engine/features-in-sql-server-management-studio.md)

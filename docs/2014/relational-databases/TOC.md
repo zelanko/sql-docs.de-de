@@ -69,7 +69,8 @@
 ## [Programmierungshandbuch für SQL Server Management Objects (SMO) +](server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)
 ## [Windows-Verwaltungsinstrumentation](../database-engine/dev-guide/windows-management-instrumentation.md)
 ## [Konzepte des WMI-Anbieters für die Konfigurationsverwaltung +](wmi-provider-configuration/wmi-provider-for-configuration-management.md)
-
+## [SqlToolsVSNativeHelpers](sqltoolsvsnativehelpers.md)
+### [FrameWindowVisible](sqltoolsvsnativehelpers-framewindowvisible.md)
 # 
   [Lernprogramme zur Datenbank-Engine](database-engine-tutorials.md)
 ## 
