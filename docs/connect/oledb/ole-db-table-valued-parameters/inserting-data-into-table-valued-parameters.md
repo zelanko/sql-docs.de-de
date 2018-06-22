@@ -2,9 +2,10 @@
 title: Einfügen von Daten in Tabellenwertparameter | Microsoft Docs
 description: Verwenden von OLE DB-Treiber für SQL Server zum Einfügen von Daten in Tabellenwertparameter
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,15 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8806d301eeaa25f00b8e3a3fe3553fb08e7005a5
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: e3d0e0fedb2c64c4c5ac9e5e9515016f256e44a1
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306459"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689323"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>Einfügen von Daten in Tabellenwertparameter
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Der OLE DB-Treiber für SQL Server unterstützt zwei Modelle für den Consumer Daten für Tabellenwertparameter-Zeilen angeben: ein Push- und Pull-Modell. Ein Beispiel für die das Pullmodell ist verfügbar. finden Sie unter [Programmierbeispiele für SQL Server Data](http://msftdpprodsamples.codeplex.com/).  
   

@@ -2,9 +2,10 @@
 title: 'Isscommandwithparameters:: Getparameterproperties (OLE DB) | Microsoft Docs'
 description: "'ISSCommandWithParameters::GetParameterProperties' (OLE DB)"
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,15 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 2a8e0d02ab4aef8d9550e0ea25b6166ccbf03da5
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 9c0f35cd59a670e35db6400f681187c52e4b97ef
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35305609"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689993"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>'ISSCommandWithParameters::GetParameterProperties' (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Gibt ein Array aus SSPARAMPROPS-Eigenschaftensatzstrukturen zurück – einen SSPARAMPROPS-Eigenschaftensatz für jeden UDT- oder XML-Parameter.  
   
@@ -45,7 +48,7 @@ HRESULT GetParameterProperties(
  Ein Zeiger auf den Arbeitsspeicher, der die Anzahl von SSPARAMPROPS-Strukturen enthält, die in *prgParamProperties*zurückgegeben werden.  
   
  *prgParamProperties*[out]  
- Ein Zeiger auf den Arbeitsspeicher, in den ein Array aus SSPARAMPROPS-Strukturen zurückgegeben wird. Der Anbieter teilt Speicher für die Strukturen und gibt die Adresse zu diesem Arbeitsspeicher zurück, der Consumer gibt diesen Arbeitsspeicher mit **IMalloc:: Free** wenn er die Strukturen nicht mehr benötigt. Vor dem Aufruf **IMalloc:: Free** für *PrgParamProperties*, der Consumer muss auch aufrufen, **VariantClear** für die *vValue* Eigenschaft Geben Sie z. B. einen BSTR, jeder DBPROP-Struktur, um einen Speicherverlust in Fällen zu vermeiden, in dem die Variante einen Verweis enthält. Wenn *PcParams* ist 0 (null) bei der Ausgabe oder ein anderer Fehler als DB_E_ERRORSOCCURRED auftritt, teilt der Anbieter keine Arbeitsspeicher und wird sichergestellt, dass *PrgParamProperties* bei Ausgabe ein null-Zeiger ist.  
+ Ein Zeiger auf den Arbeitsspeicher, in den ein Array aus SSPARAMPROPS-Strukturen zurückgegeben wird. Der Anbieter teilt Speicher für die Strukturen und gibt die Adresse zu diesem Arbeitsspeicher zurück, der Consumer gibt diesen Arbeitsspeicher mit **IMalloc:: Free** wenn er die Strukturen nicht mehr benötigt. Vor dem Aufruf **IMalloc:: Free** für *PrgParamProperties*, der Consumer muss auch aufrufen, **VariantClear** für die *vValue* Eigenschaft Geben Sie z. B. einen BSTR, jeder DBPROP-Struktur, um einen Speicherverlust in Fällen zu verhindern, in dem die Variante einen Verweis enthält. Wenn *PcParams* ist 0 (null) bei der Ausgabe oder ein anderer Fehler als DB_E_ERRORSOCCURRED auftritt, der Anbieter nicht Arbeitsspeicher zu und stellt sicher *PrgParamProperties* bei Ausgabe ein null-Zeiger ist.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  Die **GetParameterProperties** Methodenrückgabe die gleichen Fehlercodes wie die OLE DB- **ICommandProperties:: GetProperties** -Methode, mit Ausnahme von DB_S_ERRORSOCCURRED und DB_E_ERRORSOCCURED nicht möglich wird ausgelöst.  

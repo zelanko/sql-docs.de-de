@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - adding tables
 - CreateTable function
 ms.assetid: a7b8d142-d76a-44d9-a583-86ac5109fbe8
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: aaa1f66f1f860752056c44617046ae00eff6167a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 955444b94d4d30ef247c40a21fe8cb017f84f400
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956915"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695981"
 ---
 # <a name="creating-sql-server-tables"></a>Erstellen von SQL Server-Tabellen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +37,7 @@ ms.locfileid: "32956915"
   
  Wenn Consumer geben den Tabellennamen in der *PwszName* Mitglied der *uName* -Vereinigung der *pTableID* Parameter, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter erstellt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle mit diesem Namen. Es gelten die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Einschränkungen für Tabellennamen, und der Tabellenname kann eine dauerhafte Tabelle angeben oder entweder eine lokale oder globale temporäre Tabelle. Weitere Informationen finden Sie unter [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md). Die *PpTableID* Parameter kann NULL sein.  
   
- Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter kann die Namen der permanente oder temporäre Tabellen zu generieren. Wenn der Consumer legt den *pTableID* Parameter auf NULL und legt *PpTableID* , zeigen Sie auf eine gültige DBID\*, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter gibt zurück, der generierte Name der Tabelle in der *PwszName* Mitglied der *uName* Kombination DBI gezeigt wird durch den Wert des *PpTableID*. Erstellen einen temporären [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter benannte Tabelle schließt der Consumer die OLE DB-Tabelleneigenschaft DBPROP_TBL_TEMPTABLE in einen tabelleneigenschaftensatz verwiesen wird, in der *RgPropertySets* Parameter. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB-Anbieter benannte temporäre Tabellen sind lokal.  
+ Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter kann die Namen der permanente oder temporäre Tabellen zu generieren. Wenn der Consumer legt den *pTableID* Parameter auf NULL und legt *PpTableID* , zeigen Sie auf eine gültige DBID\*, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter gibt zurück, der generierte Name der der -Tabelle in der *PwszName* Mitglied der *uName* Kombination DBI gezeigt wird durch den Wert des *PpTableID*. Erstellen einen temporären [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter benannte Tabelle schließt der Consumer die OLE DB-Tabelleneigenschaft DBPROP_TBL_TEMPTABLE in einen tabelleneigenschaftensatz verwiesen wird, in der *RgPropertySets* Parameter. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter benannte temporäre Tabellen sind lokal.  
   
  **CreateTable** gibt db_e_badtableid zurück, wenn die *eKind* Mitglied der *pTableID* -Parameters nicht dbkind_name.  
   
@@ -53,7 +51,7 @@ ms.locfileid: "32956915"
 > [!NOTE]  
 >  **CreateTable** gibt db_e_badtype zurück, wenn der Consumer die *pTypeInfo* oder *Pclsid* Member Datentyp der Spalte an.  
   
- Der Consumer gibt den Spaltennamen in der *PwszName* Mitglied der *uName* -Vereinigung des DBCOLUMNDESC *Dbcid* Member. Der Spaltenname wird als Unicode-Zeichenfolge angegeben. Die *eKind* Mitglied *Dbcid* muss DBKIND_NAME sein. **CreateTable** gibt db_e_badcolumnid zurück, wenn *eKind* ist ungültig, *PwszName* NULL ist, oder wenn der Wert der *PwszName* ist kein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Bezeichner.  
+ Der Consumer gibt den Spaltennamen in der *PwszName* Mitglied der *uName* -Vereinigung des DBCOLUMNDESC *Dbcid* Member. Der Spaltenname wird als Unicode-Zeichenfolge angegeben. Die *eKind* Mitglied *Dbcid* muss DBKIND_NAME sein. **CreateTable** gibt db_e_badcolumnid zurück, wenn *eKind* ist ungültig, *PwszName* NULL ist, oder wenn der Wert der *PwszName* ist kein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Der Bezeichner.  
   
  Alle Spalteneigenschaften sind in allen für die Tabelle definierten Spalten verfügbar. **CreateTable** kann DB_S_ERRORSOCCURRED oder DB_E_ERRORSOCCURRED zurückgeben werden, wenn in Konflikt stehende Werte festgelegt sind. **CreateTable** gibt einen Fehler zurück, wenn ungültige Spalteneigenschaften führen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -tabellenerstellung.  
   
@@ -61,7 +59,7 @@ ms.locfileid: "32956915"
   
 |Eigenschafts-ID|Description|  
 |-----------------|-----------------|  
-|DBPROP_COL_AUTOINCREMENT|R/w: Lesen/Schreiben<br /><br /> Standard: VARIANT_FALSE-Beschreibung: Legt die IDENTITY-Eigenschaft der Spalte, die erstellt wird, fest. Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist die IDENTITY-Eigenschaft für eine einzelne Spalte innerhalb einer Tabelle gültig. Festlegen der Eigenschaft auf VARIANT_TRUE fest, für mehr als eine einzelne Spalte generiert einen Fehler bei der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter versucht, die Tabelle auf dem Server zu erstellen.<br /><br /> Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Identity-Eigenschaft ist nur gültig für die **Ganzzahl**, **numerischen**, und **decimal** Typen, wenn der Dezimalstellenwert 0 ist. Festlegen der Eigenschaft auf VARIANT_TRUE fest, auf eine Spalte mit einem beliebigen anderen Datentyp wird ein Fehler generiert, wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter versucht, die Tabelle auf dem Server zu erstellen.<br /><br /> Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter gibt DB_S_ERRORSOCCURRED zurück, wenn DBPROP_COL_AUTOINCREMENT als auch DBPROP_COL_NULLABLE den Wert VARIANT_TRUE haben und die *DwOption* von DBPROP_COL_NULLABLE ist nicht dbpropoptions_required ist. DB_E_ERRORSOCCURRED wird zurückgegeben, wenn DBPROP_COL_AUTOINCREMENT als auch DBPROP_COL_NULLABLE den Wert VARIANT_TRUE haben und die *DwOption* von DBPROP_COL_NULLABLE gleich dbpropoptions_required ist. Die Spalte definiert ist, mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Identity-Eigenschaft und das DBPROP_COL_NULLABLE *DwStatus* Element wird auf DBPROPSTATUS_CONFLICTING gesetzt.|  
+|DBPROP_COL_AUTOINCREMENT|R/w: Lesen/Schreiben<br /><br /> Standard: VARIANT_FALSE-Beschreibung: Legt die IDENTITY-Eigenschaft der Spalte, die erstellt wird, fest. Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist die IDENTITY-Eigenschaft für eine einzelne Spalte innerhalb einer Tabelle gültig. Festlegen der Eigenschaft auf VARIANT_TRUE fest, für mehr als eine einzelne Spalte generiert einen Fehler bei der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter versucht, die Tabelle auf dem Server zu erstellen.<br /><br /> Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Identity-Eigenschaft ist nur gültig für die **Ganzzahl**, **numerischen**, und **decimal** Typen, wenn der Dezimalstellenwert 0 ist. Festlegen der Eigenschaft auf VARIANT_TRUE fest, auf eine Spalte mit einem beliebigen anderen Datentyp wird ein Fehler generiert, wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter versucht, die Tabelle auf dem Server zu erstellen.<br /><br /> Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter gibt DB_S_ERRORSOCCURRED zurück, wenn DBPROP_COL_AUTOINCREMENT als auch DBPROP_COL_NULLABLE den Wert VARIANT_TRUE haben und die *DwOption* von DBPROP_COL_NULLABLE ist nicht DBPROPOPTIONS_ Erforderlich. DB_E_ERRORSOCCURRED wird zurückgegeben, wenn DBPROP_COL_AUTOINCREMENT als auch DBPROP_COL_NULLABLE den Wert VARIANT_TRUE haben und die *DwOption* von DBPROP_COL_NULLABLE gleich dbpropoptions_required ist. Die Spalte definiert ist, mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Identity-Eigenschaft und das DBPROP_COL_NULLABLE *DwStatus* Element wird auf DBPROPSTATUS_CONFLICTING gesetzt.|  
 |DBPROP_COL_DEFAULT|R/w: Lesen/Schreiben<br /><br /> Standard: keiner<br /><br /> Beschreibung: Erstellt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DEFAULT-Einschränkung für die Spalte.<br /><br /> Die *vValue* DBPROP-Element kann eine beliebige Anzahl von Typen. Die *vValue.vt* Member sollte einen Typ, der kompatibel mit dem Datentyp der Spalte angeben. Beispielsweise ist BSTR N/A als Standardwert für eine Spalte geeignet, die als DBTYPE_WSTR definiert ist. Definieren die gleiche Standard für eine Spalte definiert, wie DBTYPE_R8 einen Fehler generiert bei der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter versucht, die Tabelle auf dem Server zu erstellen.|  
 |DBPROP_COL_DESCRIPTION|R/w: Lesen/Schreiben<br /><br /> Standard: keiner<br /><br /> Beschreibung: Die Spalteneigenschaft dbprop_col_description wird nicht durch implementiert die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter.<br /><br /> Die *DwStatus* -Element der DBPROP-Struktur gibt DBPROPSTATUS_NOTSUPPORTED zurück, wenn der Consumer versucht, den Eigenschaftenwert zu schreiben.<br /><br /> Festlegen der Eigenschaft wird, keinen schwerwiegenden Fehler für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter. Wenn alle anderen Parameterwerte gültig sind, wird die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle erstellt.|  
 |DBPROP_COL_FIXEDLENGTH|R/w: Lesen/Schreiben<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter verwendet DBPROP_COL_FIXEDLENGTH, um die datentypzuordnung zu bestimmen, wann der Consumer einen Spaltendatentyp mithilfe definiert die *wType* Mitglied der dbcolumndesc-Struktur. Weitere Informationen finden Sie unter [Data Type Mapping itabledefinition](../../relational-databases/native-client-ole-db-data-types/data-type-mapping-in-itabledefinition.md).|  
