@@ -24,18 +24,15 @@ caps.latest.revision: 77
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.openlocfilehash: 5ead833d28c31a1c34da1ce6e2182cbaa418f156
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+ms.openlocfilehash: f6b3cbdff4e837facc8a6cd2c2b0498ae6bf92a7
+ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049945"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36324704"
 ---
 # <a name="ole-db-destination"></a>OLE DB-Ziel
   Das OLE DB-Ziel lädt Daten mithilfe einer Datenbanktabelle, einer Sicht oder eines SQL-Befehls in eine Reihe von OLE DB-kompatible Datenbanken. Beispielsweise können aus der OLE DB-Quelle Daten in Tabellen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access- und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken geladen werden.  
-  
-> [!NOTE]  
->  Wenn es sich bei der Datenquelle um [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 handelt, erfordert die Datenquelle einen anderen Verbindungs-Manager als frühere Versionen von Excel. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einer Excel-Arbeitsmappe](../connection-manager/connect-to-an-excel-workbook.md).  
   
  Das OLE DB-Ziel stellt fünf verschiedene Datenzugriffsmodi zum Laden von Daten bereit:  
   
