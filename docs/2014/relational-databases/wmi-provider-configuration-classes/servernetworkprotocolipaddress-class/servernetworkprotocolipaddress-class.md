@@ -1,0 +1,49 @@
+---
+title: ServerNetworkProtocolIPAddress-Klasse | Microsoft Docs
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+- docset-sql-devref
+ms.tgt_pltfrm: ''
+ms.topic: reference
+api_name:
+- ServerNetworkProtocolIPAddress Class
+api_location:
+- sqlmgmproviderxpsp2up.mof
+topic_type:
+- apiref
+helpviewer_keywords:
+- ServerNetworkProtocolIPAddress class
+ms.assetid: 1dbea791-c5a2-4911-b23c-64bddd860dae
+caps.latest.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 35a9492435fe5e7c1aef2aa9a78432b1068c2813
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36161490"
+---
+# <a name="servernetworkprotocolipaddress-class"></a>ServerNetworkProtocolIPAddress-Klasse
+  [ServerNetworkProtocolIPAddress-Klasse] Servernetworkprotocolipaddress-class.md) stellt eine IP-Adresse von Server-Netzwerkprotokoll unterstützt werden.  
+  
+ Mit dem [ServerNetworkProtocolIPAddress-Klasse] Servernetworkprotocolipaddress-class.md) können Sie die folgenden Aufgaben ausführen:  
+  
+-   Überprüfen des Namens der Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  
+-   Überprüfen des IP-Adressnamens und des Protokollnamens.  
+  
+-   Verweisen auf die Eigenschaften der IP-Adresse.  
+  
+-   Aktivieren und Deaktivieren der IP-Adresse.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+  
+  

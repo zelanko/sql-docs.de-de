@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -19,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 36e0a367dfbdacb16dbd37ddbae68789f82b8781
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a4d71d73a5abe3b36764df7e973add335a42978a
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948565"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698981"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "32948565"
 > [!NOTE]  
 >  Das Standard-ODBC-Verbindungsattribut SQL_ATTR_CONNECTION_DEAD gibt den letzten Status der Verbindung zurück. Dabei handelt es sich nicht zwingend um den aktuellen Verbindungsstatus.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|Die Verbindung zum Server wurde unterbrochen.|  
 |SQL_CD_FALSE|Die Verbindung besteht und ist für die Anweisungsverarbeitung verfügbar.|  
@@ -56,7 +55,7 @@ ms.locfileid: "32948565"
   
  Weitere Informationen finden Sie unter [Zugriff auf Diagnoseinformationen im Protokoll für erweiterte Ereignisse](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |SQL_ERROR|Die Verbindung konnte nicht hergestellt werden.|  
 |SQL_SUCCESS|Die Verbindung wurde erfolgreich hergestellt. Die Clientverbindungs-ID befindet sich im Ausgabepuffer.|  
@@ -64,7 +63,7 @@ ms.locfileid: "32948565"
 ## <a name="sqlcoptssperfdata"></a>SQL_COPT_SS_PERF_DATA  
  Das SQL_COPT_SS_PERF_DATA-Attribut gibt einen Zeiger auf eine SQLPERF-Struktur zurück, die die aktuellen statistischen Daten zur Treiberleistung enthält. **SQLGetConnectAttr** gibt NULL zurück, wenn die leistungsprotokollierung nicht aktiviert ist. Die Statistik in der SQLPERF-Struktur wird nicht dynamisch vom Treiber aktualisiert. Rufen Sie **SQLGetConnectAttr** jedes Mal die Leistungsstatistik aktualisiert werden müssen.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |NULL|Die Leistungsprotokollierung wird nicht aktiviert.|  
 |Ein beliebiger anderer Wert.|Ein Zeiger auf eine SQLPERF-Struktur.|  
@@ -75,7 +74,7 @@ ms.locfileid: "32948565"
 ## <a name="sqlcoptssuserdata"></a>SQL_COPT_SS_USER_DATA  
  Das SQL_COPT_SS_USER_DATA-Attribut ruft den Benutzerdatenzeiger ab. Benutzerdaten im clienteigenen Arbeitsspeicher gespeichert und pro Verbindung aufgezeichnet. Wenn der Benutzerdatenzeiger nicht festgelegt wurde, wird SQL_UD_NOTSET, ein NULL-Zeiger, zurückgegeben.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|Es ist kein Benutzerdatenzeiger festgelegt.|  
 |Ein beliebiger anderer Wert.|Ein Zeiger auf die Benutzerdaten.|  
@@ -87,12 +86,12 @@ ms.locfileid: "32948565"
   
  Wenn SQL_COPT_SS_SERVER_SPN oder SQL_COPT_SS_FAILOVER_PARTNER nicht festgelegt wurde, wird der Standardwert (eine leere Zeichenfolge) zurückgegeben.  
   
- Weitere Informationen zu SPNs finden Sie unter [Dienstprinzipalnamen & #40; Dienstprinzipalnamen & #41; in Clientverbindungen & #40; ODBC & #41; ](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
+ Weitere Informationen zu SPNs finden Sie unter [Service Principal Names &#40;SPNs&#41; in Clientverbindungen &#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQLGetConnectAttr-Funktion](http://go.microsoft.com/fwlink/?LinkId=59347)   
  [ODBC-API-Implementierungsdetails](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
- [SET QUOTED_IDENTIFIER & #40; Transact-SQL & #41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
+ [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
  [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  

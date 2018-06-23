@@ -3,11 +3,9 @@ title: Zugreifen auf benutzerdefinierte Typen in ADO.NET | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,12 +17,12 @@ caps.latest.revision: 12
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7747896143f8ecb4d13c17d1f0ff36773b7583a9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f9df05bab46774ebd9e033c47565294ee9c46857
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918745"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696731"
 ---
 # <a name="accessing-user-defined-types-in-adonet"></a>Zugreifen auf benutzerdefinierte Typen in ADO.NET
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +40,7 @@ ms.locfileid: "32918745"
  [Abrufen von UDT-Daten](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-retrieving-udt-data.md)  
  Beschreibt, wie UDT-Daten abgerufen und Parameter angegeben werden.  
   
- [Aktualisieren von UDT-Spalten mit "DataAdapters"](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-updating-udt-columns-with-dataadapters.md)  
+ [Aktualisieren von UDT-Spalten mit DataAdapters](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-updating-udt-columns-with-dataadapters.md)  
  Beschreibt das Arbeiten mit UDTs in **DataSets** und zum Aktualisieren von UDT-Daten mit **"DataAdapters"**.  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -1,0 +1,63 @@
+---
+title: 'Lektion 4: Erstellen eines Sequenzclusterszenarios (Datamining-Lernprogramm für fortgeschrittene) | Microsoft Docs'
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- data mining [Analysis Services], tutorials
+- sequence clustering algorithms [Analysis Services]
+- tutorials [Data Mining]
+ms.assetid: 63436bbd-0f73-4012-b6f1-358c81e4d92a
+caps.latest.revision: 29
+author: minewiskan
+ms.author: owend
+manager: kfile
+ms.openlocfilehash: 7bfa4dd3a739e81b5a7f10cda0b17452fe48c4d0
+ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36311878"
+---
+# <a name="lesson-4-building-a-sequence-clustering-scenario-intermediate-data-mining-tutorial"></a>Lektion 4: Erstellen eines Sequenzclusterszenarios (Data Mining-Lernprogramm für Fortgeschrittene)
+  Die marketingabteilung von [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] möchte verstehen, wie Kunden durch Verschieben der [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] Website. Das Unternehmen vermutet, dass es ein Muster für die Reihenfolge gibt, in der Kunden Produkte in ihre Einkaufskörbe legen. Die Reihenfolge der Einkaufssequenzen soll analysiert werden, um zu ermitteln, wie Kunden ihren Einkaufskörben zugehörige Elemente hinzufügen. Anhand dieser Informationen kann die Website dann so angepasst werden, dass Kunden angeregt werden, weitere Produkte zu kaufen.  
+  
+ Wenn Sie die Aufgaben in dieser Lektion ausgeführt haben, haben Sie ein Miningmodell erstellt, mit dem Sie, durch die Anwendung des [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering-Algorithmus, das nächste Element vorhersagen können, das Kunden in ihren Einkaufskorb legen. Sie werden zwei Versionen des Modells ausprobieren: Eine analysiert nur die Reihenfolge der Produkte, während die andere einige zusätzliche demografische Kundendaten zum Clustering enthält. Abschließend werden Sie anhand der Modelle Vorhersagen erstellen, mit denen Sie Kunden bestimmte Produkte empfehlen können.  
+  
+ Zum Ausführen der Aufgaben in der Lektion verwenden Sie die Market Basket-Miningstruktur, die Sie in erstellt [Lektion 3: Erstellen eines Warenkorbszenarios &#40;Data Mining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md). Diese Lektion enthält die folgenden Aufgaben:  
+  
+-   [Erstellen einer Sequence Clustering-Miningmodellstruktur &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/create-sequence-clustering-mining-model-intermediate-data-mining.md)  
+  
+-   [Verarbeiten des Sequenzclustermodells](../../2014/tutorials/processing-the-sequence-clustering-model.md)  
+  
+-   [Prüfen der Sequence Clustering-Modell &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial.md)  
+  
+-   [Erstellen ein Clustermodells für verwandte Sequenzen &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial.md)  
+  
+-   [Erstellen von Vorhersagen für ein Sequenzclustermodell &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/create-predictions-on-model-intermediate-data-mining-tutorial.md)  
+  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+ [Erstellen einer Sequence Clustering-Miningmodellstruktur &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/create-sequence-clustering-mining-model-intermediate-data-mining.md)  
+  
+## <a name="all-lessons"></a>Alle Lektionen  
+ [Lektion 1: Erstellen der mittleres Datamining-Lösung &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
+  
+ [Lektion 2: Erstellen eines Planungserstellungsszenarios &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+  
+ [Lektion 3: Erstellen eines Warenkorbszenarios &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+  
+ Lektion 4: Sequenzclusterszenarios (Data Mining-Tutorial für Fortgeschrittene).  
+  
+ [Lektion 5: Erstellen von neuronalen Netzwerk- und logistischen Regressionsmodellen &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Lernprogramm zu Datamining-Lernprogramm](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [Datamining-Lernprogramm für fortgeschrittene &#40;Analysis Services – Datamining&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
+  
+  

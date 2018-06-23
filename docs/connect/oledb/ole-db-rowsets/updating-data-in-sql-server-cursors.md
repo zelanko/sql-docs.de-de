@@ -2,9 +2,10 @@
 title: Aktualisieren von Daten in SQL Server-Cursor | Microsoft Docs
 description: Aktualisieren von Daten in SQL Server-Cursor
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,15 +21,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 321700be33a81b511f30af7e7b263bd188e54264
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 8cece02b19e2334246dbddc096cafbeeae705684
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307709"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689503"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>Aktualisieren von Daten in SQL Server-Cursorn
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Beim Abrufen und Aktualisieren von Daten über [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Cursor, eine OLE DB-Treiber für SQL Server-Consumer-Anwendung gebunden ist, durch die gleichen Überlegungen und Einschränkungen, die für jede andere Clientanwendung gelten.  
   

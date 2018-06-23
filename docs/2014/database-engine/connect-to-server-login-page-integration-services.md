@@ -1,0 +1,58 @@
+---
+title: Verbinden mit SQL Server Integration Services (Seite Anmeldung) | Microsoft-Dokumentation
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dbe-cross-instance
+ms.tgt_pltfrm: ''
+ms.topic: article
+f1_keywords:
+- sql12.swb.connecttodtsserver.login.f1
+- sql12.swb.connecttodts.login.f1
+ms.assetid: 402c2de4-f4ea-40b0-909f-3ddf3bd59950
+caps.latest.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e41104462b18f9d236a289dbea0196f981006f44
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36150655"
+---
+# <a name="connect-to-server-login-page-integration-services"></a>Verbinden mit SQL Server Integration Services (Seite Anmeldung)
+  Verwenden Sie diese Registerkarte, um die folgenden Optionen für Verbindungen mit [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]anzuzeigen oder anzugeben.  
+  
+## <a name="options"></a>Tastatur  
+ **Servertyp**  
+ Wenn Sie einen Server über den Objekt-Explorer registrieren, wählen Sie den Typ des Servers aus, mit dem eine Verbindung hergestellt wird: [!INCLUDE[ssDE](../includes/ssde-md.md)], Analysis Services, Reporting Services oder Integration Services. Im verbleibenden Bereich des Dialogfelds werden nur die Optionen angezeigt, die auf den ausgewählten Servertyp zutreffen. Wenn Sie einen Server über „Registrierte Server“ registrieren, ist das Feld **Servertyp** schreibgeschützt, wobei der Feldeintrag mit dem in der Komponente „Registrierte Server“ angezeigten Servertyp übereinstimmt. Zum Registrieren eines anderen Servertyps wählen Sie auf der Symbolleiste "Registrierte Server" die Option [!INCLUDE[ssDE](../includes/ssde-md.md)], "Analysis Services", "Reporting Services" oder "Integration Services" aus. Anschließend können Sie mit der Registrierung eines neuen Servers beginnen.  
+  
+ **Servername**  
+ Wählen Sie den Server für die Verbindungsherstellung aus. Standardmäßig wird die Serverinstanz angezeigt, mit der zuletzt eine Verbindung bestanden hat.  
+  
+> [!NOTE]  
+>  Verwenden Sie keine  *\<Servername >*\\*\<Instancename >*, da [!INCLUDE[ssIS](../includes/ssis-md.md)] unterstützt nicht mehrere Instanzen auf einem Computer.  
+  
+ **Authentifizierung**  
+ Für [!INCLUDE[msCoName](../includes/msconame-md.md)] steht nur die [!INCLUDE[ssIS](../includes/ssis-md.md)]Windows-Authentifizierung zur Verfügung. Der Windows Authentifizierungsmodus ermöglicht Benutzern die Verbindung über ein Windows-Benutzerkonto.  
+  
+ **Benutzername**  
+ Diese Option ist nicht verfügbar, da für [!INCLUDE[ssIS](../includes/ssis-md.md)]nur die Windows-Authentifizierung zur Verfügung steht.  
+  
+ **Kennwort**  
+ Diese Option ist nicht verfügbar, da für [!INCLUDE[ssIS](../includes/ssis-md.md)]nur die Windows-Authentifizierung zur Verfügung steht.  
+  
+ **Kennwort speichern**  
+ Diese Option ist nicht verfügbar, da für [!INCLUDE[ssIS](../includes/ssis-md.md)]nur die Windows-Authentifizierung zur Verfügung steht.  
+  
+ **Verbinden**  
+ Stellt eine Verbindung zu dem oben ausgewählten Server her.  
+  
+ **Optionen**  
+ Klicken Sie hier, um die Anzeige des Dialogfelds zu ändern und die zusätzlichen Serververbindungsoptionen, z. B. Speichern des Kennworts, auszublenden.  
+  
+  

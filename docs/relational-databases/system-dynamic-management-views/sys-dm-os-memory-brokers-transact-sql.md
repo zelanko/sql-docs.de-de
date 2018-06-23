@@ -22,12 +22,12 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0d32ef0b368c0e3c5a0de1cbb9c0a2f60110050
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 9799cc3ed5f33e1260c6d4b1907329a9a01b3ffc
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466326"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262334"
 ---
 # <a name="sysdmosmemorybrokers-transact-sql"></a>sys.dm_os_memory_brokers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "34466326"
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|**int**|ID des Ressourcenpools, wenn er einem Ressourcenkontrollenpool zugeordnet ist.|  
-|**memory_broker_type**|**nvarchar(60)**|Typ des Speicherbrokers. Es gibt derzeit drei Typen von speicherbrokern in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], unten mit ihren Beschreibungen aufgelistet.<br /><br /> **MEMORYBROKER_FOR_CACHE** : für die Verwendung von zugeordneten Arbeitsspeichers zwischengespeicherte Objekte.<br /><br /> **MEMORYBROKER_FOR_STEAL** : Arbeitsspeicher an, die aus dem Pufferpool gestohlen wird. Dieser Speicher ist erst dann zur Wiederverwendung durch andere Komponenten verfügbar, wenn er durch den aktuellen Besitzer freigegeben wird.<br /><br /> **MEMORYBROKER_FOR_RESERVE** : Arbeitsspeicher für die zukünftige Verwendung durch momentan ausgeführte Anforderungen reserviert.|  
+|**memory_broker_type**|**nvarchar(60)**|Typ des Speicherbrokers. Es gibt derzeit drei Typen von speicherbrokern in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], unten mit ihren Beschreibungen aufgelistet.<br /><br /> **MEMORYBROKER_FOR_CACHE** : für die Verwendung von zugeordneten Arbeitsspeichers zwischengespeicherte Objekte (nicht Pufferpool Cache).<br /><br /> **MEMORYBROKER_FOR_STEAL** : Arbeitsspeicher an, die aus dem Pufferpool gestohlen wird. Dieser Speicher ist erst dann zur Wiederverwendung durch andere Komponenten verfügbar, wenn er durch den aktuellen Besitzer freigegeben wird.<br /><br /> **MEMORYBROKER_FOR_RESERVE** : Arbeitsspeicher für die zukünftige Verwendung durch momentan ausgeführte Anforderungen reserviert.|  
 |**allocations_kb**|**bigint**|Größe des Arbeitsspeichers in Kilobyte (KB), der diesem Typ Broker zugeordnet wurde.|  
 |**allocations_kb_per_sec**|**bigint**|Rate der Speicherbelegungen in Kilobyte (KB) pro Sekunde. Dieser Wert kann für die Aufhebung von Arbeitsspeicherzuordnungen negativ sein.|  
 |**predicted_allocations_kb**|**bigint**|Vorhergesagte Größe des durch den Broker belegten Arbeitsspeichers. Dieser Wert basiert auf dem Speicherauslastungsmuster.|  
