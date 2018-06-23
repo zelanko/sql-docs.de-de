@@ -4,18 +4,18 @@ description: Beschreibt, wie SQL Server Feedback von Kunden aufgelistet und auf 
 author: annashres
 ms.author: anshrest
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 06/22/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 66275b164e1d6514d04e0c8a6f1a666de0a02425
-ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.openlocfilehash: 69a1e82544ad1566cdf9ec1937d88a8cc2a61975
+ms.sourcegitcommit: 23e71a8afba194e0893f31532db0aaa29288acb2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2018
-ms.locfileid: "34074293"
+ms.lasthandoff: 06/23/2018
+ms.locfileid: "36329505"
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>Feedback von Kunden für SQLServer on Linux
 
@@ -23,7 +23,7 @@ ms.locfileid: "34074293"
 
 Microsoft SQL Server erfasst standardmäßig Informationen darüber, wie Kunden die Anwendung verwenden. Dies bedeutet, dass SQL Server Informationen zur Installationserfahrung, Nutzung und Leistung sammelt. Mit diesen Informationen kann Microsoft besser an die Bedürfnisse der Kunden anpassen. Microsoft erfasst z.B. Informationen zu Fehlercodes von Kunden, sodass wir damit verknüpfte Probleme beheben, die Dokumentation zu SQL Server verbessern und bestimmen können, ob wir dem Produkt weitere Funktionen hinzufügen müssen, um die Benutzererfahrung zu optimieren.
 
-Dieses Dokument enthält ausführliche Informationen dazu, welche Arten von Informationen gesammelt werden und Informationen zum Konfigurieren von Microsoft SQL Server für Linux, um das gesammelten senden Informationen an Microsoft. SQL Server-2017 enthält eine Datenschutzrichtlinie, die welche Informationen erläutern wir führen und Sammeln von Benutzern nicht. Lesen Sie die Datenschutzrichtlinie an.
+Dieses Dokument enthält ausführliche Informationen dazu, welche Arten von Informationen gesammelt werden und Informationen zum Konfigurieren von Microsoft SQL Server für Linux, um das gesammelten senden Informationen an Microsoft. SQL Server-2017 enthält eine Datenschutzrichtlinie, die welche Informationen erläutern wir führen und Sammeln von Benutzern nicht. Weitere Informationen finden Sie unter der [Datenschutzbestimmungen](http://go.microsoft.com/fwlink/?LinkID=868444).
 
 Microsoft sendet nicht die folgenden Informationen mit diesem Mechanismus:
 
@@ -40,6 +40,9 @@ SQL Server 2017 erfasst und sammelt kontinuierlich Informationen zur Installatio
 
 Diese Option können Sie ändern, wenn SQL Server Feedback an Microsoft oder ein nicht sendet. Dieser Wert wird standardmäßig festgelegt auf "true". Um den Wert zu ändern, führen Sie die folgenden Befehle ein:
 
+> [!IMPORTANT]
+> Sie können nicht Kundenfeedback kostenlos Editionen von SQL Server, Express und Entwickler deaktivieren.
+
 ### <a name="on-red-hat-suse-and-ubuntu"></a>Auf Red Hat und SUSE Ubuntu
 
 1. Führen Sie das Skript Mssql-Conf als Root mit der **festgelegt** -Befehl für **telemetry.customerfeedback**. Im folgende Beispiel wird deaktiviert Kundenfeedback durch Angabe **"false"**.
@@ -55,7 +58,7 @@ Diese Option können Sie ändern, wenn SQL Server Feedback an Microsoft oder ein
    ```
    
 ### <a name="on-docker"></a>Für Docker
-So deaktivieren Sie die Kundenfeedback auf Docker benötigen Sie Docker [behält Ihre Daten](sql-server-linux-configure-docker.md). 
+Zum Deaktivieren der Kundenfeedback auf Docker benötigen Sie Docker [behält Ihre Daten](sql-server-linux-configure-docker.md). 
 
 1. Hinzufügen einer `mssql.conf` Datei mit den Zeilen `[telemetry]` und `customerfeedback = false` im Hostverzeichnis:
  
@@ -111,7 +114,7 @@ Diese Option ermöglicht lokalen Überwachung und das Verzeichnis festgelegt, in
    ```
    
 ### <a name="on-docker"></a>Für Docker
-Zum Aktivieren der lokalen Überwachung auf Docker benötigen Sie Docker [behält Ihre Daten](sql-server-linux-configure-docker.md). 
+Um lokale Überwachung für Docker zu aktivieren, benötigen Sie Docker [behält Ihre Daten](sql-server-linux-configure-docker.md). 
 
 1. Das Zielverzeichnis für neue lokale Überwachungsprotokolle werden im Container. Erstellen Sie ein Zielverzeichnis für neue lokale Überwachungsprotokolle im Hostverzeichnis auf Ihrem Computer. Das folgende Beispiel erstellt ein neues **/audit** Verzeichnis:
 

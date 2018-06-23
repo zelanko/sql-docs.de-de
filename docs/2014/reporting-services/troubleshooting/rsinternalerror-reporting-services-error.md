@@ -1,0 +1,55 @@
+---
+title: 'rsInternalError: Reporting Services-Fehler | Microsoft-Dokumentation'
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- rsInternalError
+ms.assetid: 52613d52-fc78-4870-93f0-7d393ab9c335
+caps.latest.revision: 21
+author: markingmyname
+ms.author: maghan
+manager: mblythe
+ms.openlocfilehash: 84b2079bbc588447991f767f74a216eafd9cac46
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36049624"
+---
+# <a name="rsinternalerror---reporting-services-error"></a>rsInternalError – Reporting Services-Fehler
+    
+## <a name="details"></a>Details  
+  
+|||  
+|-|-|  
+|Produktname|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Ereignis-ID|rsInternalError|  
+|Ereignisquelle|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings|  
+|Komponente|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
+|Meldungstext|Interner Fehler beim Berichtsserver. Weitere Informationen finden Sie im Fehlerprotokoll.|  
+  
+## <a name="explanation"></a>Erklärung  
+ Dies ist eine generische Fehlermeldung, auf die häufig ein Fehler mit ausführlicher Beschreibung folgt, die weitere Informationen enthält.  
+  
+ Interne Fehler treten nicht häufig auf. Wenn dieser Fehler ausgegeben wird, finden Sie weitere Informationen in den Ablaufverfolgungsprotokollen des Berichtsservers. Wenn Sie an demselben Computer als lokaler Administrator angemeldet sind, können Sie zusätzlich die Aufrufliste anzeigen, um weitere Informationen zu erhalten.  
+  
+## <a name="user-action"></a>Benutzeraktion  
+ Überprüfen Sie die Berichtsserver-Protokolldateien, um die genaue Ursache dieser Meldung zu bestimmen. Sie finden diese Dateien unter \Microsoft SQL Server\MSRS12.\<Instanzname>\Reporting Services\LogFiles. Weitere Informationen finden Sie unter [Reporting Services-Protokolldateien und Quellen](../report-server/reporting-services-log-files-and-sources.md).  
+  
+ Um die Aufrufliste anzuzeigen, klicken Sie mit der rechten Maustaste auf die Seite, auf der der Fehler auftritt, und zeigen Sie auf **Quelle anzeigen**. Um die Aufrufliste anzuzeigen, sind Administratorberechtigungen für den gleichen Computer erforderlich, auf dem der Fehler aufgetreten ist.  
+  
+ Wenn keine weiteren Informationen verfügbar sind, versuchen Sie erneut, die Anforderung durchzuführen.  
+  
+## <a name="internal-only"></a>Nur intern  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Start and Stop the Report Server Service (Starten und Beenden des Berichtsserverdiensts)](../report-server/start-and-stop-the-report-server-service.md)  
+  
+  

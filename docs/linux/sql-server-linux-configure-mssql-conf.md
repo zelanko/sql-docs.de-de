@@ -4,7 +4,7 @@ description: Dieser Artikel beschreibt, wie der Mssql-Conf-Tool verwenden, um di
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/20/2018
+ms.date: 06/22/2018
 ms.topic: article
 ms.prod: sql
 ms.component: ''
@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 6369c3144a9ce641765358621027729ce235f69d
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 9506096746c0f93b147f8040bbd7066e99d69bad
+ms.sourcegitcommit: 23e71a8afba194e0893f31532db0aaa29288acb2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34324051"
+ms.lasthandoff: 06/23/2018
+ms.locfileid: "36329485"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Konfigurieren von SQL Server unter Linux mit dem Mssql-Conf-tool
 
@@ -98,7 +98,10 @@ Führen Sie eine Liste der unterstützten Sortierungen, die [Sys. fn_helpcollati
 
 ## <a id="customerfeedback"></a> Konfigurieren von Kundenfeedback
 
-Die **telemetry.customerfeedback** Änderungen festlegen, ob SQL Server Feedback an Microsoft oder nicht sendet. Standardmäßig ist dieser Wert festgelegt, um **"true"**. Um den Wert zu ändern, führen Sie die folgenden Befehle ein:
+Die **telemetry.customerfeedback** Änderungen festlegen, ob SQL Server Feedback an Microsoft oder nicht sendet. Standardmäßig ist dieser Wert festgelegt, um **"true"** für alle Editionen. Um den Wert zu ändern, führen Sie die folgenden Befehle ein:
+
+> [!IMPORTANT]
+> Sie können nicht Kundenfeedback kostenlos Editionen von SQL Server, Express und Entwickler deaktivieren.
 
 1. Führen Sie das Skript Mssql-Conf als Root mit der **festgelegt** -Befehl für **telemetry.customerfeedback**. Im folgende Beispiel wird deaktiviert Kundenfeedback durch Angabe **"false"**.
 
@@ -112,7 +115,7 @@ Die **telemetry.customerfeedback** Änderungen festlegen, ob SQL Server Feedback
    sudo systemctl restart mssql-server
    ```
 
-Weitere Informationen finden Sie unter [Feedback von Kunden für SQL Server on Linux](sql-server-linux-customer-feedback.md).
+Weitere Informationen finden Sie unter [Feedback von Kunden für SQL Server on Linux](sql-server-linux-customer-feedback.md) und [Datenschutzbestimmungen für SQL Server](http://go.microsoft.com/fwlink/?LinkID=868444).
 
 ## <a id="datadir"></a> Ändern Sie das Standardverzeichnis Daten- oder Protokolldatei
 

@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-date-time
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fe025209a14da132e6f6e3e1efd55d2263bdf997
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a97f77780d9c376a121373ea5890949eb48091c4
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948045"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696831"
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>DateTime-Datentypkonvertierungen von SQL-in C
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,6 +73,6 @@ ms.locfileid: "32948045"
  Die Tabelle in diesem Thema beschreibt die Konvertierung der Typen, die an den Client zurückgegeben werden, aus den in der Bindung verwendeten Typen. Für Output-Parameter Wenn der Servertyp in angegeben SQLBindParameter entspricht nicht dem tatsächlichen Typ auf dem Server, wird eine implizite Konvertierung vom Server ausgeführt werden und die an den Client zurückgegebene Typ entspricht des Typs über SQLBindParameter angegeben. Dies kann zu unerwarteten konvertierungsergebnissen führen, wenn Konvertierungsregeln des Servers aus, die in der obigen Tabelle aufgeführten unterscheiden. Wenn beispielsweise ein Standarddatum bereitgestellt werden muss, verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 1900-1-1 statt des aktuellen Datums.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datum und Uhrzeit-Verbesserungen & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [Datum und Uhrzeit-Verbesserungen &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   
