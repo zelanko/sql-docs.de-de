@@ -26,12 +26,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 148c1d6573b0731b0b3dc4361dfafb8d98de7048
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: ff9639268b4b7db33cd36f0cb6dc9d0407379ade
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466586"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702231"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>Sys.DM\_Db\_Optimierung\_Empfehlungen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34466586"
   
  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]können dynamische Verwaltungssichten keine Informationen verfügbar machen, die sich auf die Datenbankkapselung auswirken würden oder die sich auf andere Datenbanken beziehen, auf die der Benutzer Zugriff hat. Um zu vermeiden, dass diese Informationen verfügbar gemacht werden, wird jede Zeile mit Daten, die zum verbundenen Mandanten gehören, herausgefiltert.
 
-| **Spaltenname** | **Datentyp** | **Beschreibung** |
+| **Spaltenname** | **Data type** | **Beschreibung** |
 | --- | --- | --- |
 | **name** | **nvarchar(4000)** | Eindeutiger Name der Empfehlung. |
 | **type** | **nvarchar(4000)** | Der Name der automatischen Optimierung Option, die die Empfehlung, z. B. erzeugt, `FORCE_LAST_GOOD_PLAN` |
@@ -92,9 +92,9 @@ JSON-Dokument in `state` Spalte enthält den Grund, die beschreibt, warum die Em
  Statistik in der Spalte "Details" (z. B. aktuelle CPU-Zeit) Laufzeitstatistiken Plan nicht anzeigen. Zum Zeitpunkt der Erkennung von Regression stammen und eine Beschreibung für verdeutlichen, warum die Empfehlung Details [!INCLUDE[ssde_md](../../includes/ssde_md.md)] Leistungsverlust identifiziert. Verwendung `regressedPlanId` und `recommendedPlanId` abzufragende [Katalogsichten des Abfragespeichers](../../relational-databases/performance/how-query-store-collects-data.md) genaue Plan Laufzeitstatistiken gefunden.
 
 ## <a name="using-tuning-recommendations-information"></a>Verwenden die Optimierung Empfehlungsinformationen  
- Sie können die folgende Abfrage verwenden, beim Abrufen des T-SQL-Skripts, mit denen das Problem behoben wird:  
+Können Sie die folgende Abfrage zum Abrufen der [!INCLUDE[tsql](../../includes/tsql-md.md)] Skript, das das Problem behoben werden:  
  
-```
+```sql
 SELECT name, reason, score,
         JSON_VALUE(details, '$.implementationDetails.script') as script,
         details.* 

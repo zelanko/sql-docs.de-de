@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-errors
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - OLE DB error handling, error details
 - ISQLServerErrorInfo interface
 ms.assetid: 51500ee3-3d78-47ec-b90f-ebfc55642e06
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7dbaa5d805b8b1102e07b0e63bf269129077e539
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4b70a652ace8f7ccaf89ed23434ebed15410102
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32945145"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701991"
 ---
 # <a name="sql-server-error-detail"></a>SQL Server-Fehlerdetail
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +36,7 @@ ms.locfileid: "32945145"
   
  Es gibt zwei Möglichkeiten, erhalten Zugriff auf **ISQLServerErrorInfo** Schnittstelle.  
   
- Der Consumer kann aufgerufen werden **IErrorRecords:: Getcustomererrorobject** zum Abrufen einer **ISQLServerErrorInfo** -Zeiger ist, wie im folgenden Codebeispiel gezeigt. (Besteht keine Notwendigkeit zum Abrufen **ISQLErrorInfo.**) Beide **ISQLErrorInfo** und **ISQLServerErrorInfo** sind benutzerdefinierte OLE DB-Fehlerobjekte mit **ISQLServerErrorInfo** wird die Schnittstelle zum Abrufen von Informationen zu Serverfehlern einschließlich Details wie Prozedurname und Zeilennummern Zeilennummern.  
+ Der Consumer kann aufgerufen werden **IErrorRecords:: Getcustomererrorobject** zum Abrufen einer **ISQLServerErrorInfo** -Zeiger ist, wie im folgenden Codebeispiel gezeigt. (Besteht keine Notwendigkeit zum Abrufen **ISQLErrorInfo.**) Beide **ISQLErrorInfo** und **ISQLServerErrorInfo** sind benutzerdefinierte OLE DB-Fehlerobjekte mit **ISQLServerErrorInfo** wird die Schnittstelle zum Abrufen von Informationen Serverfehlern einschließlich Details wie Prozedurname und Zeilennummern Zeilennummern.  
   
 ```  
 // Get the SQL Server custom error object.  
@@ -47,7 +45,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
    (IUnknown**)&pISQLServerErrorErrorInfo)))  
 ```  
   
- Eine weitere Möglichkeit zum Abrufen einer **ISQLServerErrorInfo** Zeiger besteht im Aufrufen der **QueryInterface** Methode für einen bereits erhaltenen **ISQLErrorInfo** Zeiger. Beachten Sie, dass, weil **ISQLServerErrorInfo** enthält eine Obermenge der verfügbaren Informationen von **ISQLErrorInfo**, es ist sinnvoll, direkt **ISQLServerErrorInfo** über **ISQLServerErrorInfo**.  
+ Eine weitere Möglichkeit zum Abrufen einer **ISQLServerErrorInfo** Zeiger besteht im Aufrufen der **QueryInterface** Methode für einen bereits erhaltenen **ISQLErrorInfo** Zeiger. Beachten Sie, dass, weil **ISQLServerErrorInfo** enthält eine Obermenge der verfügbaren Informationen von **ISQLErrorInfo**, es ist sinnvoll, direkt **ISQLServerErrorInfo**über **ISQLServerErrorInfo**.  
   
  Die **ISQLServerErrorInfo** Schnittstelle macht eine Memberfunktion, [ISQLServerErrorInfo:: GetErrorInfo](../../relational-databases/native-client-ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md). Die Funktion gibt einen Zeiger auf eine SSERRORINFO-Struktur und einen Zeiger auf einen Zeichenfolgenpuffer zurück. Beide Zeiger verweisen auf den Arbeitsspeicher, die der Consumer muss Aufheben der Zuordnung mithilfe der **IMalloc:: Free** Methode.  
   
@@ -65,6 +63,6 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
   
 ## <a name="see-also"></a>Siehe auch  
  [Fehler](../../relational-databases/native-client-ole-db-errors/errors.md)   
- [RAISERROR & #40; Transact-SQL & #41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
+ [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

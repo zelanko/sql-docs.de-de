@@ -22,12 +22,12 @@ caps.latest.revision: 53
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 95723f90b248d214638a4bfcd38b1fc40bcfb121
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3f1ce62c23519f44e9673e425662bd0e24dc80da
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240570"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262234"
 ---
 # <a name="spaddschedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,15 +60,15 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 ## <a name="arguments"></a>Argumente  
  [ **@schedule_name =** ] **'***schedule_name***'**  
- Der Name des Zeitplans. *Schedule_name*ist **Sysname**, hat keinen Standardwert.  
+ Der Name des Zeitplans. *Schedule_name* ist **Sysname**, hat keinen Standardwert.  
   
  [ **@enabled =** ] *enabled*  
- Gibt den aktuellen Status des Zeitplans an. *aktiviert*ist **"tinyint"**, hat den Standardwert **1** (aktiviert). Wenn **0**, der Zeitplan ist nicht aktiviert. Wenn der Zeitplan nicht aktiviert ist, werden über diesen Zeitplan keine Aufträge ausgeführt.  
+ Gibt den aktuellen Status des Zeitplans an. *aktiviert* ist **"tinyint"**, hat den Standardwert **1** (aktiviert). Wenn **0**, der Zeitplan ist nicht aktiviert. Wenn der Zeitplan nicht aktiviert ist, werden über diesen Zeitplan keine Aufträge ausgeführt.  
   
  [ **@freq_type =** ] *freq_type*  
- Ein Wert, der angibt, wann ein Auftrag ausgeführt werden soll. *Freq_type*ist **Int**, hat den Standardwert **0**, und kann einen der folgenden Werte sein.  
+ Ein Wert, der angibt, wann ein Auftrag ausgeführt werden soll. *Freq_type* ist **Int**, hat den Standardwert **0**, und kann einen der folgenden Werte sein.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**1**|Einmal|  
 |**4**|Täglich|  
@@ -92,9 +92,9 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**128**|*Freq_interval* wird nicht verwendet.|  
   
  [ **@freq_subday_type =** ] *freq_subday_type*  
- Gibt die Einheiten für *Freq_subday_interval*. *Freq_subday_type*ist **Int**, hat den Standardwert **0**, und kann einen der folgenden Werte sein.  
+ Gibt die Einheiten für *Freq_subday_interval*. *Freq_subday_type* ist **Int**, hat den Standardwert **0**, und kann einen der folgenden Werte sein.  
   
-|Wert|Beschreibung (Einheit)|  
+|value|Beschreibung (Einheit)|  
 |-----------|--------------------------|  
 |**0x1**|Zum angegebenen Zeitpunkt|  
 |**0x2**|Sekunden|  
@@ -102,12 +102,12 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**0x8**|Stunden|  
   
  [ **@freq_subday_interval =** ] *freq_subday_interval*  
- Die Anzahl der *Freq_subday_type* -Perioden zwischen den einzelnen Ausführungen eines Auftrags auftreten. *Freq_subday_interval*ist **Int**, hat den Standardwert **0**. Hinweis: Das Intervall sollte nicht länger als 10 Sekunden sein. *Freq_subday_interval* wird in diesen Fällen ignoriert, in denen *Freq_subday_type* gleich **1**.  
+ Die Anzahl der *Freq_subday_type* -Perioden zwischen den einzelnen Ausführungen eines Auftrags auftreten. *Freq_subday_interval* ist **Int**, hat den Standardwert **0**. Hinweis: Das Intervall sollte nicht länger als 10 Sekunden sein. *Freq_subday_interval* wird in diesen Fällen ignoriert, in denen *Freq_subday_type* gleich **1**.  
   
  [ **@freq_relative_interval =** ] *freq_relative_interval*  
- Ein Einzelvorgang des *Freq_interval* in jedem Monat, wenn *Freq_interval* beträgt 32 (monatlich, relativ). *Freq_relative_interval*ist **Int**, hat den Standardwert **0**, und kann einen der folgenden Werte sein. *Freq_relative_interval* wird in diesen Fällen ignoriert, in denen *Freq_type* stimmt nicht mit 32.  
+ Ein Einzelvorgang des *Freq_interval* in jedem Monat, wenn *Freq_interval* beträgt 32 (monatlich, relativ). *Freq_relative_interval* ist **Int**, hat den Standardwert **0**, und kann einen der folgenden Werte sein. *Freq_relative_interval* wird in diesen Fällen ignoriert, in denen *Freq_type* stimmt nicht mit 32.  
   
-|Wert|Beschreibung (Einheit)|  
+|value|Beschreibung (Einheit)|  
 |-----------|--------------------------|  
 |**1**|Erster|  
 |**2**|Zweimal|  
@@ -116,23 +116,23 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**16**|Letzter|  
   
  [ **@freq_recurrence_factor =** ] *freq_recurrence_factor*  
- Die Anzahl der Wochen oder Monate zwischen der geplanten Ausführung eines Auftrags. *Freq_recurrence_factor* wird nur verwendet, wenn *Freq_type* ist **8**, **16**, oder **32**. *Freq_recurrence_factor*ist **Int**, hat den Standardwert **0**.  
+ Die Anzahl der Wochen oder Monate zwischen der geplanten Ausführung eines Auftrags. *Freq_recurrence_factor* wird nur verwendet, wenn *Freq_type* ist **8**, **16**, oder **32**. *Freq_recurrence_factor* ist **Int**, hat den Standardwert **0**.  
   
  [ **@active_start_date =** ] *active_start_date*  
- Das Datum, an dem die Ausführung eines Auftrags beginnen kann. *Active_start_date*ist **Int**, hat den Standardwert NULL, womit des heutigen Datums. Das Datum wird das Format YYYYMMDD. Wenn *Active_start_date* ist nicht NULL ist, muss das Datum größer oder gleich 19900101 sein.  
+ Das Datum, an dem die Ausführung eines Auftrags beginnen kann. *Active_start_date* ist **Int**, hat den Standardwert NULL, womit des heutigen Datums. Das Datum wird das Format YYYYMMDD. Wenn *Active_start_date* ist nicht NULL ist, muss das Datum größer oder gleich 19900101 sein.  
   
  Überprüfen Sie nach dem Erstellen des Zeitplans, ob das Startdatum korrekt ist. Weitere Informationen finden Sie im Abschnitt "Planen von Startdaten" in [erstellen und Zuweisen von Zeitplänen zu Aufträgen](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5).  
   
  Bei wöchentlichen oder monatlichen Zeitplänen wird vom Agent nicht berücksichtigt, ob active_start_date in der Vergangenheit liegt, und das aktuelle Datum verwendet. Beim Erstellen eines SQL-Agentzeitplans mithilfe von sp_add_schedule kann der active_start_date-Parameter angegeben werden, der das Startdatum der Auftragsausführung darstellt. Wenn der Zeitplantyp "Wöchentlich" oder "Monatlich" lautet und der active_start_date-Parameter auf ein Datum in der Vergangenheit festgelegt ist, werden der active_start_date-Parameter ignoriert und das aktuelle Datum für active_start_date verwendet.  
   
  [ **@active_end_date =** ] *active_end_date*  
- Das Datum, an dem die Ausführung eines Auftrags beendet werden kann. *Active_end_date*ist **Int**, hat den Standardwert **99991231**, womit der 31. Dezember 9999 angegeben. Im Format JJJJMMTT.  
+ Das Datum, an dem die Ausführung eines Auftrags beendet werden kann. *Active_end_date* ist **Int**, hat den Standardwert **99991231**, womit der 31. Dezember 9999 angegeben. Im Format JJJJMMTT.  
   
  [ **@active_start_time =** ] *active_start_time*  
- Die Zeit an einem beliebigen Tag zwischen *Active_start_date* und *Active_end_date* die Ausführung eines Auftrags beginnen soll. *Active_start_time*ist **Int**, hat den Standardwert **000000**, womit 00:00:00 Uhr im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
+ Die Zeit an einem beliebigen Tag zwischen *Active_start_date* und *Active_end_date* die Ausführung eines Auftrags beginnen soll. *Active_start_time* ist **Int**, hat den Standardwert **000000**, womit 00:00:00 Uhr im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
   
  [ **@active_end_time =** ] *active_end_time*  
- Die Zeit an einem beliebigen Tag zwischen *Active_start_date* und *Active_end_date* zu der die Ausführung eines Auftrags. *Active_end_time*ist **Int**, hat den Standardwert **235959**, womit 23:59:59 Uhr im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
+ Die Zeit an einem beliebigen Tag zwischen *Active_start_date* und *Active_end_date* zu der die Ausführung eines Auftrags. *Active_end_time* ist **Int**, hat den Standardwert **235959**, womit 23:59:59 Uhr im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
   
  [ **@owner_login_name**=] **"***Owner_login_name***"**  
  Der Name des Serverprinzipals, der Besitzer des Zeitplans ist. *Owner_login_name* ist **Sysname**, hat den Standardwert NULL, gibt an, dass der Zeitplan im Besitz des Erstellers ist.  
@@ -150,7 +150,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>Hinweise  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Aufträge problemlos mithilfe einer grafischen Oberfläche verwaltet werden. Dies ist die empfohlene Vorgehensweise für die Erstellung und Verwaltung der Auftragsinfrastruktur.  

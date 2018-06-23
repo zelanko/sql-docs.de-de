@@ -2,9 +2,10 @@
 title: OLE DB-Treiber für SQL Server (OLE DB)-Referenz | Microsoft Docs
 description: OLE DB-Treiber für SQL Server (OLE DB)-Referenz
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,15 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a77e923f6910b2b87a67bb1fb57a14850bff30da
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 4877a5a4a3965b65bd9a61f33303dabff34af4e6
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35304399"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690163"
 ---
 # <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>OLE DB-Treiber für SQL Server (OLE DB)-Schnittstellen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Der OLE DB-Treiber für SQL Server macht Schnittstellen für Consumer möchte den Zugriff auf Daten auf einem oder mehreren Computern ausgeführt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Der OLE DB-Treiber für SQL Server ist mit OLE DB Version 2.0 kompatibel.  
   

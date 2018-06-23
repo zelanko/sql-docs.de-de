@@ -1,1 +1,1 @@
-SQL Server 2014
+SQLServer 2014
