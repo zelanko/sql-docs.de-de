@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-queries
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - SQLExecute function
 - statements [ODBC], prepared execution
 ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ea7feff8896d3fc8e29ff385e69b2ef021f6f2c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8ae1bfdadd360b41f451d7b0e7840af9e3f6ff94
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946795"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696901"
 ---
 # <a name="prepared-execution"></a>Die vorbereitete Ausführung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,11 +36,11 @@ ms.locfileid: "32946795"
   
  Bei den meisten Datenbanken ist die vorbereitete Ausführung schneller als eine direkte Ausführung von Anweisungen, die mehr als drei- oder viermal ausgeführt werden, hauptsächlich da die Anweisung nur einmal kompiliert wird, während die direkt ausgeführten Anweisungen bei jeder Ausführung kompiliert werden. Die vorbereitete Ausführung kann auch zu einer Reduzierung des Netzwerkverkehrs beitragen, da der Treiber bei jeder Ausführung der Anweisung eine Ausführungsplan-ID und die Parameterwerte an die Datenquelle senden kann, anstatt die gesamte SQL-Anweisung zu senden.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]reduziert den Leistungsunterschied zwischen direkter und vorbereiteter Ausführung mithilfe verbesserter Algorithmen zur Erkennung und Wiederverwendung von Ausführungsplänen aus **SQLExecDirect**. Dadurch stehen einige der Leistungsvorteile einer vorbereiteten Ausführung auch für direkt ausgeführte Anweisungen zur Verfügung. Weitere Informationen finden Sie unter [direkte Ausführung](../../../relational-databases/native-client-odbc-queries/executing-statements/direct-execution.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] reduziert den Leistungsunterschied zwischen direkter und vorbereiteter Ausführung mithilfe verbesserter Algorithmen zur Erkennung und Wiederverwendung von Ausführungsplänen aus **SQLExecDirect**. Dadurch stehen einige der Leistungsvorteile einer vorbereiteten Ausführung auch für direkt ausgeführte Anweisungen zur Verfügung. Weitere Informationen finden Sie unter [direkte Ausführung](../../../relational-databases/native-client-odbc-queries/executing-statements/direct-execution.md).  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt außerdem auch eine systemeigene Unterstützung für die vorbereitete Ausführung bereit. Ein Ausführungsplan basiert auf **SQLPrepare** und später ausgeführt wird, wenn **SQLExecute** aufgerufen wird. Da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ist nicht erforderlich, das Erstellen temporär gespeicherter Prozeduren auf **SQLPrepare**, es ist kein zusätzlicher Aufwand für die Systemtabellen in **Tempdb**.  
   
- Aus Leistungsgründen wird die anweisungsvorbereitung verzögert, bis **SQLExecute** aufgerufen wird oder ein metaeigenschaftsvorgang (z. B. [SQLDescribeCol](../../../relational-databases/native-client-odbc-api/sqldescribecol.md) oder [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) in ODBC) ausgeführt wird. Dies ist das Standardverhalten. Fehler in der vorbereiteten Anweisung werden erst dann erkannt, wenn die Anweisung ausgeführt oder ein Metaeigenschaftsvorgang durchgeführt wird. Wenn Sie das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-treiberspezifische Anweisungsattribut SQL_SOPT_SS_DEFER_PREPARE auf SQL_DP_OFF setzen, kann dieses Standardverhalten deaktiviert werden.  
+ Aus Leistungsgründen wird die anweisungsvorbereitung verzögert, bis **SQLExecute** aufgerufen wird oder ein metaeigenschaftsvorgang (z. B. [SQLDescribeCol](../../../relational-databases/native-client-odbc-api/sqldescribecol.md) oder [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md)in ODBC) ausgeführt wird. Dies ist das Standardverhalten. Fehler in der vorbereiteten Anweisung werden erst dann erkannt, wenn die Anweisung ausgeführt oder ein Metaeigenschaftsvorgang durchgeführt wird. Wenn Sie das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-treiberspezifische Anweisungsattribut SQL_SOPT_SS_DEFER_PREPARE auf SQL_DP_OFF setzen, kann dieses Standardverhalten deaktiviert werden.  
   
  Verzögertem vorbereiten wird durch das Aufrufen **SQLDescribeCol** oder **SQLDescribeParam** vor dem Aufruf **SQLExecute** einen zusätzlichen Roundtrip zum Server generiert. Auf **SQLDescribeCol**, der Treiber die WHERE-Klausel der Abfrage entfernt und sendet es an den Server mit SET FMTONLY ON, um die Beschreibung der Spalten in das erste Resultset, das von der Abfrage zurückgegebenen abzurufen. Auf **SQLDescribeParam**, der Treiber Ruft den Server, um eine Beschreibung der Ausdrücke oder Spalten, die von einem Parametermarker in der Abfrage verwiesen wird. Bei dieser Methode kommt es auch zu einigen Einschränkungen, z. B. können keine Parameter in Unterabfragen gelöst werden.  
   
@@ -53,6 +51,6 @@ ms.locfileid: "32946795"
  Einige ältere ODBC-Anwendungen **SQLPrepare** jederzeit [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md) verwendet wurde. **SQLBindParameter** erfordert nicht die Verwendung von **SQLPrepare**, sondern kann verwendet werden, mit **SQLExecDirect**. Verwenden Sie z. B. **SQLExecDirect** mit **SQLBindParameter** den Rückgabecode abrufen oder Ausgabeparameter aus einer gespeicherten Prozedur, die nur einmal ausgeführt wird. Verwenden Sie keine **SQLPrepare** mit **SQLBindParameter** , wenn die gleiche Anweisung mehrmals ausgeführt wird.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ausführen von Anweisungen & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
+ [Ausführen von Anweisungen &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
   
   

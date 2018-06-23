@@ -1,0 +1,69 @@
+---
+title: Verwenden den SQLXMLOLEDB-Anbieter (SQLXML 4.0) | Microsoft Docs
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+- docset-sql-devref
+ms.tgt_pltfrm: ''
+ms.topic: reference
+helpviewer_keywords:
+- sample applications [SQLXML]
+- SQLXMLOLEDB Provider, samples
+- ClientSideXML property
+ms.assetid: fbcefac5-29c9-478b-b0e0-d510b593f446
+caps.latest.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 37cfc512f02bef664756bf6d46574479112b7efa
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36162443"
+---
+# <a name="using-the-sqlxmloledb-provider-sqlxml-40"></a>Verwenden des SQLXMLOLEDB-Anbieters (SQLXML 4.0)
+  Die Themen in diesem Abschnitt enthalten ADO-Beispielanwendungen, die die Verwendung SQLXMLOLEDB-Anbieter-spezifischer Eigenschaften veranschaulichen.  
+  
+## <a name="application-requirements-for-sqlxmloledb-40-provider"></a>Anwendungsanforderungen für SQLXMLOLEDB 4.0-Anbieter  
+ Um funktionierende Beispiele, die SQLXMLOLEDB 4.0 verwenden, zu erstellen, müssen Sie die folgenden Schritte ausführen:  
+  
+1.  Erstellen Sie eine Microsoft Visual Basic .exe-Anwendung, und fügen Sie einen der folgenden Verweise hinzu:  
+  
+    -   Microsoft ActiveX Data Objects 2.6-Bibliothek  
+  
+    -   Microsoft ActiveX Data Objects 2.7-Bibliothek  
+  
+    -   Microsoft ActiveX Data Objects 2.8-Bibliothek  
+  
+2.  Stellen Sie SQLXML 4.0 und den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client bereit, und installieren Sie sie.  
+  
+     Weitere Informationen finden Sie auf [SQLXML 4.0-Programmierkonzepte](../../sqlxml/sqlxml-4-0-programming-concepts.md) und [Installieren von SQL Server Native Client](../../native-client/applications/installing-sql-server-native-client.md).  
+  
+## <a name="in-this-section"></a>In diesem Abschnitt  
+ [Ausführen von SQL-Abfragen &#40;SQLXMLOLEDB-Anbieter&#41;](executing-sql-queries-sqlxmloledb-provider.md)  
+ Veranschaulicht die Verwendung der Eigenschaften ClientSideXML und XML-Stamm auszuführende SQL-Abfragen.  
+  
+ [Ausführen von Vorlagen, die SQL-Abfragen enthalten &#40;SQLXMLOLEDB-Anbieter&#41;](executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md)  
+ Veranschaulicht die Verwendung der ClientSideXML-Eigenschaft.  
+  
+ [Ausführen von XPath-Abfragen &#40;SQLXMLOLEDB-Anbieter&#41;](executing-xpath-queries-sqlxmloledb-provider.md)  
+ Veranschaulicht die Verwendung der Eigenschaften ClientSideXML, Base Pfad und Zuordnen von Schemas.  
+  
+ [Ausführen von XPath-Abfragen mit Namespaces &#40;SQLXMLOLEDB-Anbieter&#41;](executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md)  
+ Veranschaulicht, wie Namespace-qualifizierte Schemas abgefragt werden.  
+  
+ [Ausführen von Vorlagen, die XPath-Abfragen enthalten &#40;SQLXMLOLEDB-Anbieter&#41;](executing-templates-that-contain-xpath-queries-sqlxmloledb-provider.md)  
+ Veranschaulicht das Ausführen von Vorlagen mit SQL-Abfragen mithilfe der Eigenschaften ClientSideXML, Base Pfad und Zuordnen von Schemas.  
+  
+ [Anwenden einer XSL-Transformation &#40;SQLXMLOLEDB-Anbieter&#41;](applying-an-xsl-transformation-sqlxmloledb-provider.md)  
+ Veranschaulicht die Verwendung der ClientSideXML und XSL-Eigenschaften in das Anwenden einer XSL-Transformation.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Systemanforderungen für SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md)  
+  
+  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -19,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e735efbd7aa155d8f4618afffc203cf4558fe9ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ca8fab6d42ab562caa4fd0da380094ed42409d0d
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947325"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695681"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,15 +71,15 @@ ms.locfileid: "32947325"
 |SS_IS_COMPUTED|Smallint|Für eine Spalte vom Datentyp TABLE_TYPE ist dies SQL_TRUE, wenn es sich um eine berechnete Spalte handelt, andernfalls SQL_FALSE.|  
 |SS_IS_IDENTITY|Smallint|SQL_TRUE, wenn die Spalte eine Identitätsspalte ist, andernfalls SQL_FALSE.|  
   
- Weitere Informationen zu Tabellenwertparametern finden Sie unter [Table-Valued Parameters & #40; ODBC & #41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Weitere Informationen zu Tabellenwertparametern finden Sie unter [Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-enhanced-date-and-time-features"></a>SQLColumns-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit  
  Informationen über die zurückgegebenen Werte für Datum/Uhrzeit-Typen finden Sie unter [Katalogmetadaten](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md).  
   
- Weitere Informationen finden Sie unter [Datum und Uhrzeit-Verbesserungen & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Weitere Informationen finden Sie unter [Datum und Uhrzeit-Verbesserungen &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-large-clr-udts"></a>SQLColumns-Unterstützung für große CLR-UDTs  
- **SQLColumns** unterstützt große CLR-benutzerdefinierte Typen (UDTs). Weitere Informationen finden Sie unter [Large CLR User-Defined Datentypen & #40; ODBC & #41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLColumns** unterstützt große CLR-benutzerdefinierte Typen (UDTs). Weitere Informationen finden Sie unter [Large CLR User-Defined Typen &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>SQLColumns-Unterstützung für Spalten mit geringer Dichte  
  Zwei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bestimmte Spalten wurden dem Resultset für SQLColumns hinzugefügt:  

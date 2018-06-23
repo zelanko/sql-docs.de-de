@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-errors
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - ISQLErrorInfo interface
 - errors [OLE DB], error interfaces
 ms.assetid: 4620f03f-1193-43e7-ba19-ad022737d300
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6687b4dbc8dd0a47c3e2116b27e814240463cc90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f6259d21a8b538742509b6f17efedc6530d5e60c
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32945125"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699131"
 ---
 # <a name="information-in-error-interfaces"></a>Informationen in Fehlerschnittstellen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,8 +40,8 @@ ms.locfileid: "32945125"
 |---------------------|-----------------|  
 |**GetDescription**|Beschreibende Fehlermeldungs-Zeichenfolge.|  
 |**GetGUID**|GUID der Schnittstelle, die den Fehler definiert hat.|  
-|**GetHelpContext**|Nicht unterstützt. Es wird immer NULL zurückgegeben.|  
-|**GetHelpFile**|Nicht unterstützt. Gibt immer NULL zurück.|  
+|**GetHelpContext**|Wird nicht unterstützt. Es wird immer NULL zurückgegeben.|  
+|**GetHelpFile**|Wird nicht unterstützt. Gibt immer NULL zurück.|  
 |**GetSource**|Zeichenfolge "Microsoft SQL Server Native Client".|  
   
  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt für Consumer verfügbare **IErrorRecords** -Elementfunktionen wie folgt.  

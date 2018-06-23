@@ -1,0 +1,76 @@
+---
+title: Common Language Runtime (CLR) Integration Programmierkonzepte | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+- docset-sql-devref
+ms.tgt_pltfrm: ''
+ms.topic: reference
+helpviewer_keywords:
+- CLR [SQL Server] See common language runtime [SQL Server]
+- Database Engine [SQL Server], .NET Framework
+- .NET Framework [SQL Server], Database Engine programming
+- common language runtime [SQL Server]
+- .NET Framework [SQL Server]
+ms.assetid: 951bf851-3e6e-4361-ae6a-2bcd5b837ebd
+caps.latest.revision: 56
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 3f508cdada9905c2a8ec322319df58cb5504af14
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36150379"
+---
+# <a name="common-language-runtime-clr-integration-programming-concepts"></a>Programmierkonzepte für die Common Language Runtime (CLR)-Integration
+  Ab [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] enthält [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die Integration der CLR-Komponente (Common Language Runtime) des .NET Framework für [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Dies bedeutet, dass Sie jetzt gespeicherte Prozeduren, Trigger, benutzerdefinierte Typen, benutzerdefinierte Funktionen, benutzerdefinierte Aggregate und streaming-Tabellenwertfunktionen, schreiben können, mit einer beliebigen .NET Framework-Sprache, einschließlich [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET und [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual c#.  
+  
+ Der Microsoft.SqlServer.Server-Namespace beinhaltet Kernfunktionalität für CLR-Programmierung in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Der Microsoft.SqlServer.Server-Namespace hingegen ist im NET Framework SDK dokumentiert. Diese Dokumentation ist nicht in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] der Onlinedokumentation enthalten.  
+  
+> [!IMPORTANT]  
+>  Standardmäßig ist .NET Framework unter [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installiert; dies gilt jedoch nicht für .NET Framework SDK. Wenn SDK auf Ihrem Computer nicht installiert ist und nicht in der Onlinedokumentation aufgeführt wird, funktionieren die in diesem Abschnitt aufgeführten Links zu SDK-Inhalten nicht. Installieren Sie das .NET Framework SDK. Fügen Sie das SDK nach der Installation der Onlinedokumentation und dem Inhaltsverzeichnis hinzu, indem Sie die Anweisungen unter [Installieren des .NET Framework SDKs](http://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)befolgen.  
+  
+ In der folgenden Tabelle sind die Themen dieses Abschnitts aufgeführt.  
+  
+ [Common Language Runtime &#40;CLR&#41; Integration (Übersicht)](common-language-runtime-integration-overview.md)  
+ Bietet eine kurze Übersicht über die CLR und beschreibt, wie und warum diese Technologie in verwendet wurde [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Beschreibt die Vorteile der Verwendung von CLR zur Erstellung von Datenbankobjekten.  
+  
+ 
+  [Assemblys &amp;#40;Datenbank-Engine&amp;#41;](assemblies-database-engine.md)  
+ Beschreibt, wie Assemblys in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet werden, um Funktionen, gespeicherte Prozeduren, Trigger, benutzerdefinierte Aggregate und benutzerdefinierte Typen bereitzustellen, die in einer der verwalteten Codesprachen geschrieben wurden, die von der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework-CLR (Common Language Runtime) gehostet werden, und nicht in [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+  
+ [Erstellen von Datenbankobjekten mit Common Language Runtime &#40;CLR&#41; Integration](database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  
+ Beschreibt, welche Objekte mit CLR erstellt werden können, sowie die Anforderungen zur Erstellung von CLR-Datenbankobjekten.  
+  
+ [Datenzugriff von CLR-Datenbankobjekten aus](data-access/data-access-from-clr-database-objects.md)  
+ Beschreibt, wie eine CLR-Routine auf Daten zugreifen kann, die in einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gespeichert sind.  
+  
+ [Sicherheit der CLR-Integration](security/clr-integration-security.md)  
+ Beschreibt das Sicherheitsmodell der CLR-Integration.  
+  
+ [Debuggen von CLR-Datenbankobjekten](debugging-clr-database-objects.md)  
+ Beschreibt Einschränkungen und Anforderungen des Debuggens von CLR-Datenbankobjekten.  
+  
+ [Bereitstellen von CLR-Datenbankobjekten](deploying-clr-database-objects.md)  
+ Beschreibt die Bereitstellung von Assemblys auf Produktionsservern.  
+  
+ [Verwalten von CLR-Integrationsassemblys](assemblies/managing-clr-integration-assemblies.md)  
+ Beschreibt das Erstellen und Löschen der Assemblys zur CLR-Integration.  
+  
+ [Überwachung und Problembehandlung von verwalteten Datenbankobjekten](monitoring-and-troubleshooting-managed-database-objects.md)  
+ Enthält Informationen zu den Tools, die verwendet werden kann, um die Überwachung und Problembehandlung von verwalteten Datenbankobjekten und Assemblys in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  
+ [Verwendungsszenarios und Beispiele für Common Language Runtime-Integration &#40;CLR&#41;](../../database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ Beschreibt Verwendungsszenarien und Codebeispiele mit CLR-Objekten.  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Assemblys &#40;-Datenbankmodul&#41;](assemblies-database-engine.md)   
+ [Installieren von .NET Framework SDK](http://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
+  
+  

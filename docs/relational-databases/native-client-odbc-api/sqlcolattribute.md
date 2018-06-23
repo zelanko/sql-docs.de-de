@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -19,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6a846851ac4558c3b39bd821f32f32c20a0993f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1228481d34256568947f9bc85ea2251f31f07db8
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947235"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696791"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -104,10 +103,10 @@ ms.locfileid: "32947235"
 ## <a name="sqlcolattribute-support-for-enhanced-date-and-time-features"></a>SQLColAttribute-Unterstützung für erweiterte Funktionen zu Datum und Uhrzeit  
  Für die Werte für Datum/Uhrzeit-Typen zurückgegeben wird, finden Sie im Abschnitt "Informationen zurückgegeben, in IRD-Feldern" in [Parameter- und Ergebnismetadaten](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md).  
   
- Weitere Informationen finden Sie unter [Datum und Uhrzeit-Verbesserungen & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Weitere Informationen finden Sie unter [Datum und Uhrzeit-Verbesserungen &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlcolattribute-support-for-large-clr-udts"></a>SQLColAttribute-Unterstützung für große CLR-UDTs  
- **SQLColAttribute** unterstützt große CLR-benutzerdefinierte Typen (UDTs). Weitere Informationen finden Sie unter [Large CLR User-Defined Datentypen & #40; ODBC & #41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLColAttribute** unterstützt große CLR-benutzerdefinierte Typen (UDTs). Weitere Informationen finden Sie unter [Large CLR User-Defined Typen &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlcolattribute-support-for-sparse-columns"></a>SQLColAttribute-Unterstützung für Spalten mit geringer Dichte  
  SQLColAttribute fragt die neue Implementierung Zeile (IRD) Deskriptorfeld, sql_ca_ss_is_column_set ab, um zu bestimmen, ob eine Spalte ist eine **Column_set** Spalte.  

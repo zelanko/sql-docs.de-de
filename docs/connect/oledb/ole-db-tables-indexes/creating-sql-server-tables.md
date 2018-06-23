@@ -2,9 +2,10 @@
 title: Erstellen von SQL Server-Tabellen | Microsoft Docs
 description: Erstellen von SQL Server-Tabellen, die mithilfe von OLE DB-Treiber für SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,15 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 6b26077abc7d714ffebdf36068a2f3d5fc081d7e
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: d9c2e60b177a38e684eb92c1b406e091b575d675
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306779"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689593"
 ---
 # <a name="creating-sql-server-tables"></a>Erstellen von SQL Server-Tabellen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Der OLE DB-Treiber für SQL Server macht die **itabledefinition:: CreateTable** -Funktion, ermöglicht es Consumern, erstellen Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Tabellen. Consumer verwenden **CreateTable** zum Erstellen von dauerhaften Tabellen Consumer benannt und permanente oder temporäre Tabellen mit eindeutigen Namen, die von der OLE DB-Treiber für SQL Server generiert.  
   
