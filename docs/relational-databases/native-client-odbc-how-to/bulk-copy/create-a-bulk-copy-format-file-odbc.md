@@ -4,27 +4,25 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk copy [ODBC], file formats
 - bulk copy [ODBC], data files
 ms.assetid: 0572fef3-daf5-409e-b557-c2a632f9a06d
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0b498c658bee05b9d55eeb8d037136df2633de64
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f251a04118e1c21e55dc4cf11afb133675c1bd9e
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946715"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699431"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>Erstellen einer Formatdatei für das Massenkopieren (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +41,7 @@ ms.locfileid: "32946715"
   
 3.  Stellen Sie eine Verbindung mit SQL Server her.  
   
-4.  Rufen Sie [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) auf, um die folgenden Informationen festzulegen:  
+4.  Rufen Sie [Bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) um die folgenden Informationen festzulegen:  
   
     -   Name der Tabelle oder Sicht, aus der bzw. in die massenkopiert werden soll  
   
@@ -59,7 +57,7 @@ ms.locfileid: "32946715"
   
 7.  Rufen Sie [Bcp_writefmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) zum Erstellen einer Formatdatei beschreiben die Datendatei des Massenkopiervorgangs erstellt werden.  
   
-8.  Rufen Sie [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) auf, um den Massenkopiervorgang auszuführen.  
+8.  Rufen Sie [Bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) um den Massenkopiervorgang auszuführen.  
   
  Mit einem auf diese Weise ausgeführten Massenkopiervorgang werden sowohl eine Datendatei, die die massenkopierten Daten enthält, als auch eine Formatdatei erstellt, die das Layout der Datendatei beschreibt, erstellt.  
   
@@ -68,7 +66,7 @@ ms.locfileid: "32946715"
   
  In diesem Beispiel wird eine Verbindung mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Standardinstanz des Computers hergestellt. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Definition der ODBC-Datenquelle, um die Instanz im folgenden Format anzugeben: Server\benannteInstanz. Standardmäßig wird [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] in einer benannten Instanz installiert.  
   
- Führen Sie das erste Codelisting ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) aus, um die im Beispiel verwendete Tabelle zu erstellen.  
+ Führen Sie das erste ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) zum Erstellen der Tabelle, die im Beispiel verwendete Codelisting.  
   
  Kompilieren Sie das zweite Codelisting (C++) mit odbc32.lib und odbcbcp.lib.  
   
@@ -221,7 +219,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Das Massenkopieren mit der SQL Server-ODBC-Treiber Themen zur Vorgehensweise & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+ [Massenkopieren mit SQL Server-ODBC-Treiber – Themen &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Verwenden von Datendateien und Formatdateien](../../../relational-databases/native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

@@ -3,11 +3,9 @@ title: Hosten Sie Schutzattribute und CLR-Integrationsprogrammierung | Microsoft
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,12 +20,12 @@ caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8c844f2f5a3491c7eea71b6d3ffab7efff254a97
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4230a545122968a6b87005f4d10ad8f72ce03df2
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921249"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699241"
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>Hostschutzattribute und Programmierung der CLR-Integration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +50,7 @@ ms.locfileid: "32921249"
   
 -   Sie können zur Destabilisierung des Serverprozesses führen.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lässt einen Typ oder Member mit einer **HostProtectionAttribute** , die angibt, eine **System.Security.Permissions.HostProtectionResource** -Enumeration mit dem Wert des  **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**,  **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **Synchronisierung**, oder **UI**. Dies verhindert, dass Assemblys Elemente aufrufen, die die Freigabe des Zustands aktivieren, Synchronisierungen durchführen, einen Ressourcenverlust bei der Beendigung hervorrufen oder die Integrität des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozesses beeinträchtigen.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disallows the use of a type or member that has a **HostProtectionAttribute** that specifies a **System.Security.Permissions.HostProtectionResource** enumeration with a value of **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **Synchronization**, or **UI**. Dies verhindert, dass Assemblys Elemente aufrufen, die die Freigabe des Zustands aktivieren, Synchronisierungen durchführen, einen Ressourcenverlust bei der Beendigung hervorrufen oder die Integrität des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozesses beeinträchtigen.  
   
 ### <a name="disallowed-types-and-members"></a>Unzulässige Typen und Member  
  In den folgenden Themen zu identifizieren, Typen und Membern, deren **HostProtectionResource** Werte nicht zulässig sind, indem Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -61,24 +59,24 @@ ms.locfileid: "32921249"
 >  Die Listen in diesen Themen wurden von den unterstützten Assemblys generiert.  Weitere Informationen finden Sie unter [unterstützt .NET Framework-Bibliotheken](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Unzulässige Typen und Member in "Microsoft.VisualBasic.dll"](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)  
+ [Unzulässige Typen und Elemente in „Microsoft.VisualBasic.dll“](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)  
  Listet die Typen und Elemente in Microsoft.VisualBasic.dll auf, deren Hostschutzattributwerte nicht zugelassen werden.  
   
- [Unzulässige Typen und Member in "mscorlib.dll"](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)  
+ [Unzulässige Typen und Elemente in „mscorlib.dll“](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)  
  Listet die Typen und Elemente in mscorlib.dll auf, deren Hostschutzattributwerte nicht zugelassen werden.  
   
- [Unzulässige Typen und Member in "System.dll"](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)  
+ [Unzulässige Typen und Elemente in „System.dll“](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)  
  Listet die Typen und Elemente in System.dll auf, deren Hostschutzattributwerte nicht zugelassen werden.  
   
- [Unzulässige Typen und Member in "System.Data.dll"](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)  
+ [Unzulässige Typen und Elemente in „System.Data.dll“](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)  
  Listet die Typen und Elemente in System.Data.dll auf, deren Hostschutzattributwerte nicht zugelassen werden.  
   
- [Unzulässige Typen und Member in "System.Core.dll"](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md)  
+ [Unzulässige Typen und Elemente in „System.Core.dll“](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md)  
  Listet die Typen und Elemente in System.Core.dll auf, deren Hostschutzattributwerte nicht zugelassen werden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CLR Integration Code Access Security](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [CLR-Integration Einschränkungen des Programmiermodells](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)   
- [Erstellen einer Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
+ [Erstellen von Assemblys](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
   
   

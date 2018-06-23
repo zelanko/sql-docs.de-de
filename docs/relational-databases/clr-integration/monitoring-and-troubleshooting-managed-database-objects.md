@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], performance
@@ -19,12 +17,12 @@ caps.latest.revision: 18
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e5797bbbf25138658fd5db595a2cc1203046dd32
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 741a863617109c6193fe45e0fe9da94136890e96
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32930605"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702761"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>Überwachung und Problembehandlung von verwalteten Datenbankobjekten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +39,7 @@ ms.locfileid: "32930605"
 |[SP: Starting-Ereignisklasse](../../relational-databases/event-classes/sp-starting-event-class.md), [SP: Completed (Ereignisklasse)](../../relational-databases/event-classes/sp-completed-event-class.md)|Wird verwendet, um die Ausführung von gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozeduren zu überwachen.|  
 |[SQL: StmtStarting-Ereignisklasse](../../relational-databases/event-classes/sql-stmtstarting-event-class.md), [SQL: StmtCompleted (Ereignisklasse)](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md)|Wird verwendet, um die Ausführung von CLR- und [!INCLUDE[tsql](../../includes/tsql-md.md)]-Routinen zu überwachen.|  
   
-## <a name="performance-counters"></a>Leistungsindikatoren  
+## <a name="performance-counters"></a>Performance Counters  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Objekte und Leistungsindikatoren bereitgestellt, die vom Systemmonitor zum Überwachen der Aktivität von Computern, die eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführen, verwendet werden können. Ein Objekt ist eine beliebige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ressource, z. B. eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sperre oder ein Windows-Prozess. Jedes Objekt enthält einen oder mehrere Leistungsindikatoren, die verschiedene Aspekte der zu überwachenden Objekte ermitteln. Weitere Informationen finden Sie unter [Verwenden von SQL Server-Objekten](../../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
 |Objekt|Description|  

@@ -1,0 +1,69 @@
+---
+title: Erstellen eines einfachen Tabellenberichts (SSRS-Tutorial) | Microsoft-Dokumentation
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- walkthroughs [Reporting Services]
+- tutorials [Reporting Services]
+- reports [Reporting Services], creating
+ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
+caps.latest.revision: 61
+author: markingmyname
+ms.author: maghan
+manager: mblythe
+ms.openlocfilehash: 4f8b3f60d82a94fa7289054d0028ab539abade64
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36061337"
+---
+# <a name="create-a-basic-table-report-ssrs-tutorial"></a>Erstellen eines einfachen Tabellenberichts (SSRS-Lernprogramm)
+  Dieses Lernprogramm wurde entwickelt, helfen Ihnen beim Erstellen eines einfachen Tabellenberichts basierend auf der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] -Datenbank mithilfe von Berichts-Designer. Sie können die Berichte auch mithilfe des Berichts-Generators oder des Berichts-Assistenten erstellen. In diesem Lernprogramm erstellen Sie ein Berichtsprojekt, richten Verbindungsinformationen ein, definieren eine Abfrage, fügen einen Tabellendatenbereich hinzu und zeigen den Bericht in der Vorschau an.  
+  
+> [!NOTE]  
+>  Zum Durcharbeiten dieses Lernprogramms müssen Sie [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im einheitlichen Modus ausführen. Wenn Sie [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im integrierten SharePoint-Modus verwenden, können die Schritte nicht ausgeführt werden, in denen Berichtsserver-URLs enthalten sind. Weitere Informationen zu [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Modi finden Sie unter [Reporting Services-Berichtsserver](reporting-services-report-server.md).  
+  
+## <a name="requirements"></a>Anforderungen  
+ Auf Ihrem System müssen zum Verwenden dieses Lernprogramms folgende Anwendungen installiert sein:  
+  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Datenbankmodul.  
+  
+-   Die [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]-Datenbank.  Weitere Informationen finden Sie unter [Adventure Works für SQL Server 2012 (Adventure Works für SQL Server 2012)](http://go.microsoft.com/fwlink/?LinkId=245471) (http://go.microsoft.com/fwlink/?LinkId=245471).. Weitere Informationen zur Unterstützung für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Beispieldatenbanken und Beispielcode für [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], finden Sie unter [Databases and Samples Overview](http://go.microsoft.com/fwlink/?LinkId=110391) auf der CodePlex-Website.  
+  
+-   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]installiert haben.  
+  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+  
+    > [!NOTE]  
+    >  [!INCLUDE[ssNote64Samp](../includes/ssnote64samp-md.md)]  
+  
+ Sie benötigen auch nur-Lese Zugriff zum Abrufen von Daten aus der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] Datenbank.  
+  
+## <a name="tasks"></a>Aufgaben  
+ [Lektion 1: Erstellen eines Berichtsserverprojekts &#40;Reporting Services&#41;](lesson-1-creating-a-report-server-project-reporting-services.md)  
+  
+ [Lektion 2: Angeben von Verbindungsinformationen &#40;Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md)  
+  
+ [Lektion 3: Definieren eines Datasets für den Tabellenbericht &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)  
+  
+ [Lektion 4: Hinzufügen einer Tabellenstatus zum Bericht &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)  
+  
+ [Lektion 5: Formatieren eines Berichts &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md)  
+  
+ [Lektion 6: Hinzufügen von Gruppierungen und Gesamtwerten &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)  
+  
+> [!NOTE]  
+>  Anzeige der Lernprogramme empfehlen wir, hinzuzufügen, **Weiter** und **vorherige** der Dokumentanzeige die Schaltflächen. Weitere Informationen finden Sie weiter oben unter  
+  
+## <a name="see-also"></a>Siehe auch  
+ [Reporting Services-Tutorials &#40;SSRS&#41;](reporting-services-tutorials-ssrs.md)  
+  
+  

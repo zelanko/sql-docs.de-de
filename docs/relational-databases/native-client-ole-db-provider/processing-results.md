@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client-ole-db-provider
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - rowsets [SQL Server], results processing
 - results [SQL Server Native Client]
 ms.assetid: 20887ac4-f649-4e7f-92e6-f929e2e70952
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8261fed484c457a1245fbce3a0659e495d689fd2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 18dddb9c3244a50a81d64b25fa200ca16e634284
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32949095"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699951"
 ---
 # <a name="processing-results"></a>Ergebnisverarbeitung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "32949095"
 
   Wenn ein Rowsetobjekt durch die Ausführung eines Befehls oder vom Anbieter direkt erzeugt wird, muss der Consumer die Daten im Rowset abrufen und darauf zugreifen können.  
   
- Rowsets sind die zentralen Objekte, die es dem OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ermöglichen, Daten in tabellarischer Form verfügbar zu machen. Grundsätzlich ist ein Rowset ein Satz von Zeilen, in dem jede Zeile Spaltendaten aufweist. Ein Rowsetobjekt macht Schnittstellen verfügbar, z. B. **IRowset** (enthält Methoden zum sequenziellen Abrufen von Zeilen aus dem Rowset), **IAccessor** (ermöglicht die Definition einer Gruppe von spaltenbindungen, beschreibt die Möglichkeit, die Tabellendaten an Programmvariablen des Consumers gebunden ist), **IColumnsInfo** (bietet Informationen zu den Spalten im Rowset), und **IRowsetInfo** (bietet Informationen zu Schemarowsets).  
+ Rowsets sind die zentralen Objekte, die es dem OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ermöglichen, Daten in tabellarischer Form verfügbar zu machen. Grundsätzlich ist ein Rowset ein Satz von Zeilen, in dem jede Zeile Spaltendaten aufweist. Ein Rowsetobjekt macht Schnittstellen verfügbar, z. B. **IRowset** (enthält Methoden zum sequenziellen Abrufen von Zeilen aus dem Rowset), **IAccessor** (ermöglicht die Definition einer Gruppe von spaltenbindungen beschreiben die wie Tabellendaten werden an Programmvariablen des Consumers gebunden), **IColumnsInfo** (bietet Informationen zu den Spalten im Rowset), und **IRowsetInfo** (bietet Informationen zu Schemarowsets).  
   
  Ein Consumer aufrufen kann die **IRowset:: GetData** Methode, um eine Zeile mit Daten in einen Puffer aus dem Rowset abrufen. Vor dem **GetData** wird aufgerufen, beschreibt der Consumer den Puffer mit einem Satz von DBBINDING-Strukturen. Jede Bindung beschreibt, wie eine Spalte des Rowsets in einem Puffer des Consumer gespeichert werden soll, und enthält folgende Angaben:  
   
@@ -52,6 +51,6 @@ ms.locfileid: "32949095"
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen eine SQL Server Native Client OLE DB-Anbieteranwendung](../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)   
- [OLE DB-Themen zur Vorgehensweise](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+ [Vorgehensweisen für OLE DB](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

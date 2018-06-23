@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client-odbc-results
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,17 +23,16 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data types
 - SQLGetData function
 ms.assetid: b289c7fb-5017-4d7e-a2d3-19401e9fc4cd
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2909c4472a4ab8dee56c37da3cdf23db1ee3e512
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1cb4046f669a3d35de7c99b0d1d754bd85f067f6
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946815"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695872"
 ---
 # <a name="fetching-result-data"></a>Abrufen von Ergebnisdaten
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,7 +64,7 @@ ms.locfileid: "32946815"
   
  Beim Verwenden von SQL_C_DEFAULT zur Angabe des Typs der C-Variablen müssen Sie mit Bedacht vorgehen. SQL_C_DEFAULT gibt an, dass der Typ der C-Variablen mit dem SQL-Datentyp der Spalte oder des Parameters übereinstimmt. Wenn SQL_C_DEFAULT für angegeben ist ein **Ntext**, **Nchar**, oder **Nvarchar** Spalte Unicode-Daten an die Anwendung zurückgegeben. Dies kann verschiedene Probleme verursachen, wenn die Anwendung nicht codiert wurde, um Unicode-Daten zu behandeln. Ist möglich, die dieselbe Art von Problemen mit der **"uniqueidentifier"** (SQL_GUID)-Datentyp.  
   
- **Text**, **Ntext**, und **Image** Daten ist normalerweise zu groß für eine einzige Programmvariable und wird in der Regel mit verarbeitet **SQLGetData** anstelle von **SQLBindCol**. Wenn Servercursor verwendet die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber optimiert und überträgt keine Daten für ungebundene **Text**, **Ntext**, oder **Image** Spalten in der Uhrzeit, zu der Zeile abgerufen wird. Die **Text**, **Ntext**, oder **Image** Daten werden erst der Anwendungsprobleme nicht tatsächlich vom Server abgerufenen **SQLGetData** für die Spalte.  
+ **Text**, **Ntext**, und **Image** Daten ist normalerweise zu groß für eine einzige Programmvariable und wird in der Regel mit verarbeitet **SQLGetData** anstelle von **SQLBindCol**. Wenn Servercursor verwendet die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber optimiert und überträgt keine Daten für ungebundene **Text**, **Ntext**, oder **Image** Spalten in der Uhrzeit, zu der Zeile abgerufen wird. Die **Text**, **Ntext**, oder **Image** Daten werden erst der Anwendungsprobleme nicht tatsächlich vom Server abgerufenen **SQLGetData** für die die Spalte.  
   
  Diese Optimierung kann auf Anwendungen angewendet werden, damit keine **Text**, **Ntext**, oder **Image** Daten werden angezeigt, während ein Benutzer nach oben oder unten ein Cursor einen Bildlauf ist. Nachdem der Benutzer eine Zeile ausgewählt hat, kann die Anwendung aufrufen **SQLGetData** zum Abrufen der **Text**, **Ntext**, oder **Image** Daten. Dies spart Übertragung der **Text**, **Ntext**, oder **Image** Daten für alle Zeilen der Benutzer nicht ausgewählt und die Übertragung sehr großer Datenmengen speichern können.  
   

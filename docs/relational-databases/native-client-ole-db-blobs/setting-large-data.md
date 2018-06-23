@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
-caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e23fa666cda37c573d55071739ecfe3df7c7c6d1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac496025b9131e026d29920450d9ad2b45cc52be
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947015"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701461"
 ---
 # <a name="setting-large-data"></a>Festlegen großer Datenmengen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +58,7 @@ ms.locfileid: "32947015"
   
 5.  Rufen Sie **GetNextRows** auf, um die nächsten Zeilen für das Rowset abzurufen. Rufen Sie **GetData** auf, um die Daten aus dem Rowset zu lesen.  
   
-6.  Erstellen Sie ein Speicherobjekt, das die Daten (und auch den Längenindikator) enthält, und klicken Sie dann rufen **IRowsetChange:: SetData** (oder **IRowsetChange:: InsertRow**) mit dem Accessor auf, das Festlegen der BLOB-Spalte bindet.  
+6.  Erstellen Sie ein Speicherobjekt, das die Daten (und auch den Längenindikator) enthält, und klicken Sie dann rufen **IRowsetChange:: SetData** (oder **IRowsetChange:: InsertRow**) mit dem Accessor auf, die zum Festlegen der BLOB-Spalte bindet die Daten.  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird gezeigt, wie BLOB-Daten festgelegt werden. Im Beispiel wird eine Tabelle erstellt, ein Beispieldatensatz hinzugefügt, dieser Datensatz im Rowset abgerufen und anschließend der Wert des BLOB-Felds festgelegt.  

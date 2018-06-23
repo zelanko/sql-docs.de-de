@@ -1,0 +1,43 @@
+---
+title: LOCALDB_ERROR_INSTANCE_CONFIGURATION_CORRUPT | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+- docset-sql-devref
+ms.tgt_pltfrm: ''
+ms.topic: reference
+ms.assetid: fdf2b601-4d5d-4789-9bf8-93d884a16350
+caps.latest.revision: 8
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: b5f3edd60862589671009d82133d105fe5d6ecad
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36059356"
+---
+# <a name="localdberrorinstanceconfigurationcorrupt"></a>LOCALDB_ERROR_INSTANCE_CONFIGURATION_CORRUPT
+    
+## <a name="details"></a>Details  
+  
+|||  
+|-|-|  
+|Produktname|SQL Server|  
+|Ereignis-ID|267|  
+|Ereignisquelle|Lokale SQL Server-Datenbanklaufzeit 12.0|  
+|Komponente|Laufzeit-API der lokalen Datenbank|  
+|Meldungstext|Die lokale Datenbankinstanz ist beschädigt. Ausführliche Fehlerinformationen finden Sie im Windows-Anwendungsereignisprotokoll.|  
+  
+## <a name="explanation"></a>Erklärung  
+ Eine Instanzkonfiguration ist beschädigt.  
+  
+## <a name="user-action"></a>Benutzeraktion  
+ Korrigieren Sie die beschädigte Instanz, oder löschen Sie sie explizit manuell.  
+  
+  

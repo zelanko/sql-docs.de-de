@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - routines [CLR integration]
@@ -22,12 +20,12 @@ caps.latest.revision: 48
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 597645c52f37034ba4f294784cbde2a7489516d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2be82adf07487e66bed43a16af289e30d751a414
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923935"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699621"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>Erstellen von Datenbankobjekten mit CLR-Integration (Common Language Runtime)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +60,7 @@ ms.locfileid: "32923935"
  [SQL Server-Datentypen in .NET Framework](../../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
  Eine Übersicht über [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentypen und die .NET Framework-Entsprechungen.  
   
- [Übersicht über benutzerdefinierte Attribute von CLR-Integration](http://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)  
+ [Übersicht über benutzerdefinierte Attribute der CLR-Integration](http://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)  
  Enthält Informationen zu benutzerdefinierten Attributen der CLR-Integration.  
   
  [CLR-benutzerdefinierte Funktionen](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  
@@ -78,6 +76,6 @@ ms.locfileid: "32923935"
  Beschreibt die Implementierung und Verwendung von CLR-Triggern.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Common Language Runtime & #40; CLR & #41; Übersicht über die Integration](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
+ [Common Language Runtime &#40;CLR&#41; Integration (Übersicht)](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
   
   

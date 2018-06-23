@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -27,12 +26,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 902180da98af11feeccc65295d0f4c1dbdd28727
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 9274c4cb2b6f4381a0d4fe89ec518a9f73dcd768
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332531"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695941"
 ---
 # <a name="using-user-defined-types"></a>Verwenden von benutzerdefinierten Typen
 [!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
@@ -54,13 +53,13 @@ ms.locfileid: "34332531"
 |Datentyp|Zu Server<br /><br /> **UDT**|Zu Server<br /><br /> **non-UDT**|Von Server<br /><br /> **UDT**|Von Server<br /><br /> **non-UDT**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_UDT|Unterstützt<sup>6</sup>|Fehler<sup>1</sup>|Unterstützt<sup>6</sup>|Fehler<sup>5</sup>|  
-|DBTYPE_BYTES|Unterstützt<sup>6</sup>|N/A<sup>2</sup>|Unterstützt<sup>6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_WSTR|Unterstützt<sup>3,6</sup>|N/A<sup>2</sup>|Unterstützt<sup>4,6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_BSTR|Unterstützt<sup>3,6</sup>|N/A<sup>2</sup>|Unterstützt<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_STR|Unterstützt<sup>3,6</sup>|N/A<sup>2</sup>|Unterstützt<sup>4,6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_IUNKNOWN|Nicht unterstützt|N/A<sup>2</sup>|Nicht unterstützt|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Unterstützt<sup>6</sup>|N/A<sup>2</sup>|Unterstützt<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|Unterstützt<sup>3,6</sup>|N/A<sup>2</sup>|–|N/A<sup>2</sup>|  
+|DBTYPE_BYTES|Unterstützt<sup>6</sup>|N/V<sup>2</sup>|Unterstützt<sup>6</sup>|N/V<sup>2</sup>|  
+|DBTYPE_WSTR|Unterstützt<sup>3,6</sup>|N/V<sup>2</sup>|Unterstützt<sup>4,6</sup>|N/V<sup>2</sup>|  
+|DBTYPE_BSTR|Unterstützt<sup>3,6</sup>|N/V<sup>2</sup>|Unterstützt<sup>4</sup>|N/V<sup>2</sup>|  
+|DBTYPE_STR|Unterstützt<sup>3,6</sup>|N/V<sup>2</sup>|Unterstützt<sup>4,6</sup>|N/V<sup>2</sup>|  
+|DBTYPE_IUNKNOWN|Nicht unterstützt|N/V<sup>2</sup>|Nicht unterstützt|N/V<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|Unterstützt<sup>6</sup>|N/V<sup>2</sup>|Unterstützt<sup>4</sup>|N/V<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|Unterstützt<sup>3,6</sup>|N/V<sup>2</sup>|–|N/V<sup>2</sup>|  
   
  <sup>1</sup>, wenn ein anderer Servertyp als DBTYPE_UDT mit Indexparametern **ICommandWithParameters:: SetParameterInfo** und ist der Accessortyp DBTYPE_UDT, ein Fehler auftritt, wenn die Anweisung ausgeführt wird (DB_E_ERRORSOCCURRED; das Parameterstatus ist DBSTATUS_E_BADACCESSOR). Andernfalls werden die Daten an den Server gesendet, der Server gibt jedoch einen Fehler zurück und zeigt an, dass keine implizite Umwandlung des UDT in den Parameterdatentyp erfolgt.  
   
@@ -86,7 +85,7 @@ ms.locfileid: "34332531"
  Datenkonvertierungen durch OLE DB-Basisdienste (**IDataConvert**) sind nicht in DBTYPE_UDT anwendbar. Es werden keine weiteren Bindungen unterstützt.  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>Hinzufügungen und Änderungen am OLE DB-Rowset  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client fügt neue Werte oder Änderungen in zahlreichen Core-OLE DB-Schemarowsets.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fügt neue Werte oder Änderungen in zahlreichen Core-OLE DB-Schemarowsets.  
   
 #### <a name="the-procedureparameters-schema-rowset"></a>Das PROCEDURE_PARAMETERS-Schemarowset  
  Die folgenden Hinzufügungen wurden am PROCEDURE_PARAMETERS-Schemarowset vorgenommen.  
@@ -141,7 +140,7 @@ ms.locfileid: "34332531"
 |SS_UDT_ASSEMBLY_TYPENAME|DBTYPE_WSTR|Vollständiger Typname (AQN) einschließlich Typname mit Namespace als Präfix (falls zutreffend).|  
   
 ### <a name="ole-db-property-set-additions-and-changes"></a>Hinzufügungen und Änderungen an der OLE DB-Eigenschaftengruppe  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client fügt neue Werte oder Änderungen in zahlreichen Core-OLE DB-Eigenschaft legt.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fügt neue Werte oder Änderungen in zahlreichen Core-OLE DB-Eigenschaft legt.  
   
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>Die DBPROPSET_SQLSERVERPARAMETER-Eigenschaftengruppe  
  Um UDTs durch OLE DB zu unterstützen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementiert die neue DBPROPSET_SQLSERVERPARAMETER-Eigenschaftengruppe mit folgenden Werten.  
@@ -177,10 +176,10 @@ ms.locfileid: "34332531"
  Befindet sich die UDT-Definition in einer anderen Datenbank, müssen SSPROP_COL_UDT_CATALOGNAME und SSPROP_COL_UDT_SCHEMANAME angegeben werden.  
   
 ### <a name="ole-db-interface-additions-and-changes"></a>Hinzufügungen und Änderungen an der OLE DB-Schnittstelle  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client fügt neue Werte oder Änderungen in zahlreichen Core-OLE DB-Schnittstellen.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fügt neue Werte oder Änderungen in zahlreichen Core-OLE DB-Schnittstellen.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>Die ISSCommandWithParameters-Schnittstelle  
- Um UDTs durch OLE DB zu unterstützen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementiert eine Reihe von Änderungen, z. B. das Hinzufügen der **ISSCommandWithParameters** Schnittstelle. Diese neue Schnittstelle erbt von der OLE DB-Kernschnittstelle **ICommandWithParameters**. Zusätzlich zu den drei von geerbten Methoden **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**, und **SetParameterInfo**; **ISSCommandWithParameters** bietet die **GetParameterProperties** und **SetParameterProperties** Methoden, die verwendet werden, um Datentypen zu behandeln.  
+ Um UDTs durch OLE DB zu unterstützen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementiert eine Reihe von Änderungen, z. B. das Hinzufügen der **ISSCommandWithParameters** Schnittstelle. Diese neue Schnittstelle erbt von der OLE DB-Kernschnittstelle **ICommandWithParameters**. Zusätzlich zu den drei von geerbten Methoden **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**, und **SetParameterInfo**; **ISSCommandWithParameters** bietet die **GetParameterProperties** und **SetParameterProperties** Methoden, die verwendet werden, um Server spezifische behandeln Datentypen.  
   
 > [!NOTE]  
 >  Die **ISSCommandWithParameters** -Schnittstelle nutzt auch verwenden, die neue ssparamprops Struktur.  
@@ -215,6 +214,6 @@ ms.locfileid: "34332531"
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server Native Client-Funktionen](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [ISSCommandWithParameters & #40; OLE DB & #41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

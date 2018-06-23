@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fd0b9ffce6667a1023cf3faa317a488ade577a99
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9cace9bb5008c035711e7d16b2c27bd678b9c111
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948135"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35694701"
 ---
 # <a name="profiling-odbc-driver-performance-data"></a>Profilerstellung für Leistungsdaten zum ODBC-Treiber
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "32948135"
   
 ### <a name="to-log-driver-performance-data-programmatically"></a>So protokollieren Sie programmgesteuert Treiberleistungsdaten  
   
-1.  Rufen Sie [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) mit SQL_COPT_SS_PERF_DATA_LOG und dem vollständigen Pfad und Dateinamen der Leistungsdaten-Protokolldatei. Beispiel:  
+1.  Rufen Sie [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) mit SQL_COPT_SS_PERF_DATA_LOG und dem vollständigen Pfad und Dateinamen der Leistungsdaten-Protokolldatei. Zum Beispiel:  
   
     ```  
     "C:\\Odbcperf.log"  
