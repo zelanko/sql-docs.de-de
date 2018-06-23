@@ -1,0 +1,61 @@
+---
+title: Parametrisieren Sie das Dialogfeld | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: ''
+ms.topic: article
+f1_keywords:
+- sql12.ssis.designer.parameter.f1
+ms.assetid: fac02b6d-d247-447a-8940-e8700c7ac350
+caps.latest.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.openlocfilehash: 9a8f684eb94884d14c433539d2a617485379a784
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36162744"
+---
+# <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
+  Im Dialogfeld **Parametrisieren** können Sie einen neuen oder vorhandenen Parameter der Eigenschaft eines Tasks zuordnen. Sie öffnen das Dialogfeld, indem Sie mit der rechten Maustaste auf einen Task oder die Registerkarte „Ablaufsteuerung“ im [!INCLUDE[ssIS](../includes/ssis-md.md)]-Designer klicken und dann auf **Parametrisieren** klicken. Die folgende Liste beschreibt Benutzeroberflächenelemente im Dialogfeld. Weitere Informationen zu Parametern finden Sie unter [Integration Services-Parameter &#40;SSIS&#41;](integration-services-ssis-package-and-project-parameters.md).  
+  
+## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+ **Eigenschaft**  
+ Wählen Sie die Eigenschaft der Aufgabe aus, der Sie einem Parameter zuordnen möchten. Diese Liste wird mit allen Eigenschaften aufgefüllt, die parametrisiert werden können.  
+  
+ **Vorhandenen Parameter verwenden**  
+ Aktivieren Sie diese Option, um die Eigenschaft der Aufgaben einem vorhandenen Parameter zuzuordnen und dann den Parameter aus Dropdownliste auszuwählen.  
+  
+ **Keinen Parameter verwenden**  
+ Wählen Sie diese Option aus, um einen Verweist auf einen Parameter zu entfernen. Der Parameter wurde nicht gelöscht.  
+  
+ **Neuen Parameter erstellen**  
+ Aktivieren Sie diese Option, um einen neuen Parameter zu erstellen, den Sie der Eigenschaft der Aufgabe zuordnen möchten.  
+  
+ **Name**  
+ Geben Sie den Namen des Parameters an, den Sie erstellen möchten.  
+  
+ **Beschreibung**  
+ Geben Sie die Beschreibung für den Parameter an.  
+  
+ **ReplTest1**  
+ Geben Sie den Standardwert für den Parameter an. Dies wird auch als der Entwurfsstandard bezeichnet, der später zur Bereitstellungszeit überschrieben werden kann.  
+  
+ **Scope**  
+ Geben Sie den Bereich des Parameters an, indem Sie die Option **Projekt** oder die Option **Paket** aktivieren. Projektparameter werden verwendet, um jegliche externen Eingaben bereitzustellen, die das Projekt für ein oder mehrere Pakete im Projekt empfängt. Mit Paketparametern können Sie die Paketausführung ändern, ohne das Paket bearbeiten und erneut bereitstellen zu müssen.  
+  
+ **Vertraulich**  
+ Geben Sie an, ob der Parameter vertraulich ist, indem Sie das Kontrollkästchen aktivieren oder deaktivieren. Vertrauliche Parameterwerte werden im Katalog verschlüsselt und in Transact-SQL oder SQL Server Management Studio als NULL-Wert angezeigt.  
+  
+ **Erforderlich**  
+ Geben Sie an, ob für den Parameter ein anderer als der Entwurfsstandardwert angegeben werden muss, bevor das Paket ausgeführt werden kann.  
+  
+## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+  
