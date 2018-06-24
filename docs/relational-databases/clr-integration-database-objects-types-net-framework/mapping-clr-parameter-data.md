@@ -3,11 +3,9 @@ title: Zuordnen von CLR-Parameterdaten | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -31,12 +29,12 @@ caps.latest.revision: 71
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 23e4350f5bc8f639ccb529bc28927ca93261ce09
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5b1965107b1215a1a03817c7fc048ddc50ab8346
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923505"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696571"
 ---
 # <a name="mapping-clr-parameter-data"></a>Zuordnen von CLR-Parameterdaten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,41 +46,41 @@ ms.locfileid: "32923505"
 |**bigint**|**SqlInt64**|**Int64, NULL-Werte zulassen\<Int64 >**|  
 |**binary**|**SqlBytes, SqlBinary**|**Byte[]**|  
 |**bit**|**SqlBoolean**|**Boolean "," NULL-Werte zulassen\<booleschen >**|  
-|**char**|Keine|Keine|  
-|**Cursor**|Keine|Keine|  
+|**char**|InclusionThresholdSetting|InclusionThresholdSetting|  
+|**Cursor**|InclusionThresholdSetting|InclusionThresholdSetting|  
 |**Datum**|**SqlDateTime**|**"DateTime", NULL-Werte zulassen\<"DateTime" >**|  
 |**datetime**|**SqlDateTime**|**"DateTime", NULL-Werte zulassen\<"DateTime" >**|  
-|**datetime2**|Keine|**"DateTime", NULL-Werte zulassen\<"DateTime" >**|  
-|**DATETIMEOFFSET**|**InclusionThresholdSetting**|**"DateTimeOffset", NULL-Werte zulassen\<"DateTimeOffset" >**|  
+|**datetime2**|InclusionThresholdSetting|**"DateTime", NULL-Werte zulassen\<"DateTime" >**|  
+|**DATETIMEOFFSET**|**Keine**|**"DateTimeOffset", NULL-Werte zulassen\<"DateTimeOffset" >**|  
 |**decimal**|**SqlDecimal**|**Decimal, NULL-Werte zulassen\<Decimal >**|  
 |**float**|**SqlDouble**|**Double, NULL-Werte zulassen\<doppelte >**|  
-|**geography**|**"Sqlgeography"**<br /><br /> **"Sqlgeography"** ist definiert in Microsoft.SqlServer.Types.dll wird mit SQL Server installiert und kann von heruntergeladen werden die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [-feature Pack](https://www.microsoft.com/download/details.aspx?id=52676).|Keine|  
-|**Geometrie**|**"Sqlgeometry"**<br /><br /> **"Sqlgeometry"** ist definiert in Microsoft.SqlServer.Types.dll wird mit SQL Server installiert und kann von heruntergeladen werden die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [-feature Pack](https://www.microsoft.com/download/details.aspx?id=52676).|Keine|  
-|**hierarchyid**|**SqlHierarchyId**<br /><br /> **Fehler bei SqlHierarchyId** ist definiert in Microsoft.SqlServer.Types.dll wird mit SQL Server installiert und kann von heruntergeladen werden die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [-feature Pack](https://www.microsoft.com/download/details.aspx?id=52676).|Keine|  
-|**image**|Keine|Keine|  
+|**geography**|**"Sqlgeography"**<br /><br /> **"Sqlgeography"** ist definiert in Microsoft.SqlServer.Types.dll wird mit SQL Server installiert und kann von heruntergeladen werden die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [-feature Pack](https://www.microsoft.com/download/details.aspx?id=52676).|InclusionThresholdSetting|  
+|**Geometrie**|**"Sqlgeometry"**<br /><br /> **"Sqlgeometry"** ist definiert in Microsoft.SqlServer.Types.dll wird mit SQL Server installiert und kann von heruntergeladen werden die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [-feature Pack](https://www.microsoft.com/download/details.aspx?id=52676).|InclusionThresholdSetting|  
+|**hierarchyid**|**SqlHierarchyId**<br /><br /> **Fehler bei SqlHierarchyId** ist definiert in Microsoft.SqlServer.Types.dll wird mit SQL Server installiert und kann von heruntergeladen werden die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [-feature Pack](https://www.microsoft.com/download/details.aspx?id=52676).|InclusionThresholdSetting|  
+|**image**|InclusionThresholdSetting|InclusionThresholdSetting|  
 |**int**|**SqlInt32**|**Int32, NULL-Werte zulassen\<Int32 >**|  
 |**money**|**SqlMoney**|**Decimal, NULL-Werte zulassen\<Decimal >**|  
 |**nchar**|**SqlChars SqlString**|**String, Char[]**|  
-|**ntext**|Keine|Keine|  
+|**ntext**|InclusionThresholdSetting|InclusionThresholdSetting|  
 |**numeric**|**SqlDecimal**|**Decimal, NULL-Werte zulassen\<Decimal >**|  
 |**nvarchar**|**SqlChars SqlString**<br /><br /> **SQLChars** ist eine bessere Übereinstimmung für Datenübertragungen und Datenzugriff, und **SQLString** ist eine bessere Übereinstimmung für Vorgänge der Zeichenfolge.|**String, Char[]**|  
 |**nvarchar(1), nchar(1)-Wert**|**SqlChars SqlString**|**Char, String, Char [], Nullable\<Char >**|  
 |**real**|**SqlSingle** (des Bereichs von **SqlSingle**, ist jedoch größer als **real**)|**Einzelne, NULL-Werte zulassen\<einzelne >**|  
-|**rowversion**|Keine|**Byte[]**|  
+|**rowversion**|InclusionThresholdSetting|**Byte[]**|  
 |**smallint**|**SqlInt16**|**Int16, NULL-Werte zulassen\<Int16 >**|  
 |**smallmoney**|**SqlMoney**|**Decimal, NULL-Werte zulassen\<Decimal >**|  
-|**sql_variant**|Keine|**Objekt**|  
-|**table**|Keine|Keine|  
-|**text**|Keine|Keine|  
-|**Uhrzeit**|Keine|**Zeitspanne, die NULL-Werte zulassen\<TimeSpan >**|  
-|**timestamp**|Keine|Keine|  
+|**sql_variant**|InclusionThresholdSetting|**Objekt**|  
+|**table**|InclusionThresholdSetting|InclusionThresholdSetting|  
+|**text**|InclusionThresholdSetting|InclusionThresholdSetting|  
+|**Uhrzeit**|InclusionThresholdSetting|**Zeitspanne, die NULL-Werte zulassen\<TimeSpan >**|  
+|**timestamp**|InclusionThresholdSetting|InclusionThresholdSetting|  
 |**tinyint**|**SqlByte**|**Byte, NULL-Werte zulassen\<Byte >**|  
 |**uniqueidentifier**|**SqlGuid**|**GUID, die NULL-Werte zulassen\<Guid >**|  
-|**Benutzerdefinierte type(UDT)**|Keine|Dieselbe Klasse, die in derselben Assembly oder einer abhängigen Assembly an den benutzerdefinierten Typ gebunden ist.|  
+|**Benutzerdefinierte type(UDT)**|InclusionThresholdSetting|Dieselbe Klasse, die in derselben Assembly oder einer abhängigen Assembly an den benutzerdefinierten Typ gebunden ist.|  
 |**varbinary**|**SqlBytes, SqlBinary**|**Byte[]**|  
 |**varbinary(1), binary(1)**|**SqlBytes, SqlBinary**|**Byte, Byte [], Nullable\<Byte >**|  
-|**varchar**|Keine|Keine|  
-|**xml**|**SqlXml**|Keine|  
+|**varchar**|InclusionThresholdSetting|InclusionThresholdSetting|  
+|**xml**|**SqlXml**|InclusionThresholdSetting|  
   
 ## <a name="automatic-data-type-conversion-with-out-parameters"></a>Automatische Datentypkonvertierung mit Out-Parametern  
  Eine CLR-Methode kann Informationen an den aufrufenden Code oder Anwendung zurückgeben, markieren Sie zunächst einen Eingabeparameter mit dem **out** Modifizierer (Microsoft Visual c#) oder  **\<Out() > ByRef** (Microsoft Visual Basic) Wenn der Eingabeparameter ein CLR-Datentyp in ist die **System.Data.SqlTypes** Namespace und dem aufrufenden Programm gibt an, dessen Entsprechung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp als Eingabeparameter, erfolgt automatisch, eine Konvertierung vom Typ Wenn die CLR-Methode den Datentyp zurückgegeben.  
@@ -116,8 +114,8 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |||  
 |-|-|  
 |**CLR-Datentyp (SQL Server)**|**SQL Server-Datentyp**|  
-|**Dezimalzahl**|smallmoney|  
-|**SqlMoney**|smallmoney|  
+|**Dezimalzahl**|SMALLMONEY|  
+|**SqlMoney**|SMALLMONEY|  
 |**Dezimalzahl**|money|  
 |**DateTime**|smalldatetime|  
 |**SQLDateTime**|smalldatetime|  

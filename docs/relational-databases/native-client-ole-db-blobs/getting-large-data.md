@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 313fdc999b80c8c1797f6be376836b41adc710e2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f04fb06f29ed9a9e46f749804d92cb4c2fc931eb
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946365"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699511"
 ---
 # <a name="getting-large-data"></a>Abrufen großer Datenmengen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +40,7 @@ ms.locfileid: "32946365"
   
 -   ICommand::Execute  
   
- Wenn die Eigenschaft DBPROP_ACCESSORDER (in der Rowset-Eigenschaftengruppe) auf einen der Werte DBPROPVAL_AO_SEQUENTIAL oder DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS festgelegt ist, sollte der Consumer nur eine einzelne Zeile mit Daten in einem Aufruf von fetch die **GetNextRows** Methode da BLOB-Daten nicht zwischengespeichert werden. Wenn der Wert von DBPROP_ACCESSORDER auf DBPROPVAL_AO_RANDOM eingestellt, kann der Consumer mehrere Zeilen mit Daten in fetch **GetNextRows**.  
+ Wenn die Eigenschaft DBPROP_ACCESSORDER (in der Rowset-Eigenschaftengruppe) auf einen der Werte DBPROPVAL_AO_SEQUENTIAL oder DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS festgelegt ist, sollte der Consumer nur eine einzelne Zeile mit Daten in einem Aufruf von fetch die **GetNextRows**  Methode da BLOB-Daten nicht zwischengespeichert werden. Wenn der Wert von DBPROP_ACCESSORDER auf DBPROPVAL_AO_RANDOM eingestellt, kann der Consumer mehrere Zeilen mit Daten in fetch **GetNextRows**.  
   
  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter ist nicht abgerufen werden große Datenmengen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erst vom Consumer dazu aufgefordert. Der Consumer sollte alle kleinen Datenmengen in einem Accessor zusammenfassen und dann einen oder mehrere Accessoren zum Abrufen großer Datenwerte verwenden.  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1e0b8bdab13a6a937c6e97cec3ece700a685deb1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cc5e54ef357214a3121c1a7ed964c9ee9bf5955b
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946065"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703581"
 ---
 # <a name="bcpsetbulkmode"></a>bcp_setbulkmode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +48,7 @@ RETCODE bcp_setbulkmode (
  *HDBC*  
  Das für den Massenkopiervorgang aktivierte ODBC-Verbindungshandle.  
   
- *Eigenschaft*  
+ *property*  
  Eine Konstante vom Typ BYTE. Eine Liste der Konstanten finden Sie in der Tabelle im Abschnitt mit Hinweisen.  
   
  *pField*  
@@ -75,7 +73,7 @@ RETCODE bcp_setbulkmode (
   
  In der folgenden Tabelle sind die Konstanten für den *property* -Parameter aufgelistet.  
   
-|property|Beschreibung|  
+|property|Description|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|Gibt den Zeichenausgabemodus an.<br /><br /> Entspricht der – C-Option in BCP. EXE-Datei, und Bcp_setcolfmt mit **BCP_FMT_TYPE** -Eigenschaftensatz auf **SQLCHARACTER**.|  
 |BCP_OUT_WIDE_CHARACTER_MODE|Gibt den Unicode-Ausgabemodus an.<br /><br /> Entspricht der – w-Option in BCP. EXE-Datei und Bcp_setcolfmt mit **BCP_FMT_TYPE** -Eigenschaftensatz auf **SQLNCHAR**.|  
@@ -292,6 +290,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Funktionen zum Massenkopieren](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
+ [Massenkopierfunktionen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   
