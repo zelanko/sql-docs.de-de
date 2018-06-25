@@ -1,5 +1,4 @@
-# 
-  [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](security-center-for-sql-server-database-engine-and-azure-sql-database.md)
+# [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](security-center-for-sql-server-database-engine-and-azure-sql-database.md)
 # [Sichern von SQL Server](securing-sql-server.md)
 # [Principals](authentication-access/principals-database-engine.md)
 ## [Verwalten von Anmeldungen, Benutzern und Schemas: Vorgehensweisen](authentication-access/managing-logins-users-and-schemas-how-to-topics.md)
@@ -46,8 +45,7 @@
 ### [Verschlüsseln einer Datenspalte](encryption/encrypt-a-column-of-data.md)
 # [Sicherheit auf Zeilenebene](row-level-security.md)
 # [SQL Server-Zertifikate und asymmetrische Schlüssel](sql-server-certificates-and-asymmetric-keys.md)
-# 
-  [SQL Server Audit (Datenbank-Engine)](auditing/sql-server-audit-database-engine.md)
+# [SQL Server Audit (Datenbank-Engine)](auditing/sql-server-audit-database-engine.md)
 ## [SQL Server-Überwachungsaktionsgruppen und -aktionen](auditing/sql-server-audit-action-groups-and-actions.md)
 ## [SQL Server-Überwachungsdatensätze](auditing/sql-server-audit-records.md)
 ## [Erstellen einer Serverüberwachung und einer Serverüberwachungsspezifikation](auditing/create-a-server-audit-and-server-audit-specification.md)

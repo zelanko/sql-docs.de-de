@@ -1,12 +1,13 @@
 ---
 title: BLOBs und OLE-Objekte | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
-ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: sql
-ms.technology: connectivity
+ms.suite: ''
+ms.technology:
+- database-engine
+- docset-sql-devref
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,24 +17,21 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
-author: MightyPen
-ms.author: genemi
-manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3f04ce9d13aa9587521b7a1bb38da6cee8e1674a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+caps.latest.revision: 42
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: a4c6a32f003206d9d1d92944c3ec8b1a6f48076a
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697151"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36159773"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOBs und OLE-Objekte
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
-
   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter macht die **ISequentialStream** -Schnittstelle zur Unterstützung der Consumerzugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Ntext**, **Text**, **Image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, und Xml-Datentypen als binary large Objects (BLOBs ). Die **lesen** Methode **ISequentialStream** ermöglicht dem Consumer, die viel Datenmengen in überschaubaren Abschnitten abzurufen.  
   
- Ein Beispiel für diese Funktion ist, finden Sie unter [Festlegen von großen Daten &#40;OLE DB-&#41;](../../relational-databases/native-client-ole-db-how-to/set-large-data-ole-db.md).  
+ Ein Beispiel für diese Funktion ist, finden Sie unter [Festlegen von großen Daten &#40;OLE DB-&#41;](../native-client-ole-db-how-to/set-large-data-ole-db.md).  
   
  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter können Sie eine vom Consumer implementierte **IStorage** Schnittstelle, wenn der Consumer den Schnittstellenzeiger in einem Accessor sorgt für datenänderungen gebundenen.  
   
@@ -63,14 +61,14 @@ ms.locfileid: "35697151"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Abrufen großer Datenmengen](../../relational-databases/native-client-ole-db-blobs/getting-large-data.md)  
+-   [Abrufen großer Datenmengen](getting-large-data.md)  
   
--   [Festlegen großer Datenmengen](../../relational-databases/native-client-ole-db-blobs/setting-large-data.md)  
+-   [Festlegen großer Datenmengen](setting-large-data.md)  
   
--   [Streamingunterstützung für BLOB-Ausgabeparameter](../../relational-databases/native-client-ole-db-blobs/streaming-support-for-blob-output-parameters.md)  
+-   [Streamingunterstützung für BLOB-Ausgabeparameter](streaming-support-for-blob-output-parameters.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
- [Verwenden von Datentypen mit umfangreichen Werten](../../relational-databases/native-client/features/using-large-value-types.md)  
+ [SQL Server Native Client &#40;OLE DB&#41;](../native-client/ole-db/sql-server-native-client-ole-db.md)   
+ [Verwenden von Datentypen mit umfangreichen Werten](../native-client/features/using-large-value-types.md)  
   
   

@@ -3,6 +3,7 @@
 # [Anwendungen +](../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)
 # [OLE DB-Programmierung +](../oledb/ole-db/oledb-driver-for-sql-server-programming.md)
 
+# [Versionsanmerkungen für Microsoft OLE DB Driver for SQL Server](release-notes-for-oledb-driver-for-sql-server.md)
 # [Herunterladen von Microsoft OLE DB-Treiber für SQL Server](download-oledb-driver-for-sql-server.md)
 # [Weitere Informationen zum OLE DB-Treiber für SQL Server](finding-more-oledb-driver-for-sql-server-information.md)
 # [Systemanforderungen für den OLE DB-Treiber für SQL Server](system-requirements-for-oledb-driver-for-sql-server.md)

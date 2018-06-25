@@ -1,12 +1,13 @@
 ---
 title: DiagnoseDatensätze und-Felder | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2017
-ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: sql
-ms.technology: connectivity
+ms.suite: ''
+ms.technology:
+- database-engine
+- docset-sql-devref
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,26 +20,24 @@ helpviewer_keywords:
 - errors [ODBC], diagnostic records
 - fields [ODBC]
 - status information [ODBC]
-author: MightyPen
-ms.author: genemi
-manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0571217617017eaf370f70a490274f9c89613d46
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.assetid: 4949530c-62d1-4f1a-b592-144244444ce0
+caps.latest.revision: 29
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e64b74787af32a25090e68de41d111290106b8cf
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698592"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36046434"
 ---
 # <a name="diagnostic-records-and-fields"></a>Diagnosedatensätze und -felder
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
-
   Diagnosedatensätze sind ODBC-Umgebungs-, Verbindungs-, Anweisungs- oder Deskriptorhandles zugeordnet. Wenn eine ODBC-Funktion einen anderen Rückgabecode als SQL_SUCCESS oder SQL_INVALID_HANDLE auslöst, verfügt das von der Funktion aufgerufene Handle über zugeordnete Diagnosedatensätze mit Informations- oder Fehlermeldungen. Diese Datensätze werden so lange beibehalten, bis eine andere Funktion mit diesem Handle aufgerufen wird. Anschließend werden sie verworfen. Die Zahl der Diagnosedatensätze, die einem Handle zugeordnet sein können, ist unbegrenzt.  
   
  Es gibt zwei Arten von Diagnosedatensätzen: Header und Status. Der Headerdatensatz ist Datensatz 0; wenn es Statusdatensätze gibt, sind dies die Datensätze 1 und höher. Diagnosedatensätze enthalten andere Felder für den Headerdatensatz und die Statusdatensätze. ODBC-Komponenten können auch eigene Diagnosedatensatzfelder definieren.  
   
- Felder im Headerdatensatz enthalten allgemeine Informationen über die Ausführung einer Funktion, einschließlich Rückgabecode, Zeilenanzahl, Anzahl der Statusdatensätze und Typ der ausgeführten Anweisung. Der Headerdatensatz wird immer erstellt, es sei denn, eine ODBC-Funktion gibt SQL_INVALID_HANDLE zurück. Eine vollständige Liste der Felder im Headerdatensatz, finden Sie unter [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md).  
+ Felder im Headerdatensatz enthalten allgemeine Informationen über die Ausführung einer Funktion, einschließlich Rückgabecode, Zeilenanzahl, Anzahl der Statusdatensätze und Typ der ausgeführten Anweisung. Der Headerdatensatz wird immer erstellt, es sei denn, eine ODBC-Funktion gibt SQL_INVALID_HANDLE zurück. Eine vollständige Liste der Felder im Headerdatensatz, finden Sie unter [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md).  
   
  Felder in den Statusdatensätzen enthalten Informationen über bestimmte Fehler oder Warnungen, die vom ODBC-Treiber-Manager, vom Treiber oder von der Datenquelle zurückgegeben werden, einschließlich SQLSTATE, systemeigener Fehlernummer, Diagnosemeldung, Spaltennummer und Zeilennummer. Statusdatensätze werden nur erstellt, wenn die Funktion SQL_ERROR, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_NEED_DATA oder SQL_STILL_EXECUTING zurückgibt. Eine vollständige Liste der Felder in den statusdatensätzen finden Sie unter **SQLGetDiagField**.  
   
@@ -53,6 +52,6 @@ ms.locfileid: "35698592"
  Die meisten Fehler gemeldet werden, indem Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber kann effektiv nur die zurückgegebenen Informationen durch diagnostiziert werden **SQLGetDiagRec**. In einigen Fällen sind jedoch die von den treiberspezifischen Diagnosefeldern zurückgegebenen Informationen für die Fehlerdiagnose wichtig. Beim Codieren eines ODBC-fehlerhandlers für Anwendungen, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber ist es ratsam, auch **SQLGetDiagField** abzurufenden, dass mindestens die SQL_DIAG_SS_MSGSTATE und SQL_DIAG_SS_SEVERITY treiberspezifische Felder. Wenn ein bestimmter Fehler an mehreren Orten im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Code ausgelöst werden kann, erkennt der Microsoft Software Service anhand von SQL_DIAG_SS_MSGSTATE, wo genau ein Fehler ausgelöst wurde, was mitunter für die Problemdiagnose hilfreich ist.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Behandlung von Fehlern und Meldungen](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
+ [Behandlung von Fehlern und Meldungen](handling-errors-and-messages.md)  
   
   

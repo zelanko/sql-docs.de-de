@@ -1,38 +1,36 @@
 ---
 title: Bcp_colfmt | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: sql
-ms.technology: connectivity
+ms.suite: ''
+ms.technology:
+- database-engine
+- docset-sql-devref
 ms.tgt_pltfrm: ''
 ms.topic: reference
-apiname:
+api_name:
 - bcp_colfmt
-apilocation:
+api_location:
 - sqlncli11.dll
-apitype: DLLExport
+topic_type:
+- apiref
 helpviewer_keywords:
 - bcp_colfmt function
 ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
 caps.latest.revision: 35
-author: MightyPen
-ms.author: genemi
-manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4fcd18d87599e214b27473d716b27f9c19df487c
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: f4c800d1652529374506137b2f536b9bef958025
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701851"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36160640"
 ---
 # <a name="bcpcolfmt"></a>bcp_colfmt
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
-
   Gibt das Quell- oder Zielformat der Daten in einer Benutzerdatei an. Bei Verwendung als Quellformat **Bcp_colfmt** gibt das Format einer vorhandenen Datendatei verwendet, die als Quelle der Daten in einem Massenkopiervorgang in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle. Bei Verwendung als Zielformat wird die Datendatei wird erstellt mithilfe der angegebenen mit Spaltenformate **Bcp_colfmt**.  
   
 ## <a name="syntax"></a>Syntax  
@@ -40,14 +38,31 @@ ms.locfileid: "35701851"
 ```  
   
 RETCODE bcp_colfmt (  
-        HDBC hdbc,  
-        INT idxUserDataCol,  
-        BYTE eUserDataType,  
-        INT cbIndicator,  
-        DBINT cbUserData,  
-        LPCBYTE pUserDataTerm,  
-        INT cbUserDataTerm,  
-        INT idxServerCol);  
+HDBC   
+hdbc  
+,  
+INT  
+idxUserDataCol  
+,  
+BYTE   
+eUserDataType  
+,  
+INT   
+cbIndicator  
+,  
+DBINT   
+cbUserData  
+,  
+LPCBYTE   
+pUserDataTerm  
+,  
+INT   
+cbUserDataTerm  
+,  
+INT   
+idxServerCol  
+);  
+  
 ```  
   
 ## <a name="arguments"></a>Argumente  
@@ -109,7 +124,7 @@ RETCODE bcp_colfmt (
  Die Länge (in Byte) der Abschlusszeichensequenz, die für diese Spalte verwendet werden soll. Wenn kein Abschlusszeichen vorhanden ist oder in den Daten gewünscht wird, legen Sie diesen Wert auf 0 fest.  
   
  *idxServerCol*  
- Ist die Ordnungsposition der Spalte in der Datenbanktabelle. Die erste Spaltennummer ist 1. Die Ordnungsposition einer Spalte wird von [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md)ausgegeben.  
+ Ist die Ordnungsposition der Spalte in der Datenbanktabelle. Die erste Spaltennummer ist 1. Die Ordnungsposition einer Spalte wird von [SQLColumns](../native-client-odbc-api/sqlcolumns.md)ausgegeben.  
   
  Wenn dieser Wert 0 ist, wird beim Massenkopieren die Spalte in der Datendatei ignoriert.  
   
@@ -131,9 +146,9 @@ RETCODE bcp_colfmt (
   
 -   Die Länge der optionalen abschließenden Bytesequenz  
   
- Jeder Aufruf von **Bcp_colfmt** gibt das Format für eine benutzerdateispalte an. Angenommen, um die Standardeinstellungen für drei Spalten in einer Benutzerdatendatei fünf Spalten zu ändern, rufen Sie zuerst [Bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)**(5)**, und rufen dann **Bcp_colfmt** fünf Mal mit drei dieser Aufrufe Ihr benutzerdefiniertes Format festgelegt. Legen Sie für die verbleibenden zwei Aufrufe *eUserDataType* auf 0 und *CbIndicator*, *CbUserData*, und *CbUserDataTerm* auf 0, SQL_VARLEN _Data, und 0 bzw. Mit diesem Verfahren werden alle fünf Spalten kopiert, drei mit dem benutzerdefinierten Format und zwei mit dem Standardformat.  
+ Jeder Aufruf von **Bcp_colfmt** gibt das Format für eine benutzerdateispalte an. Angenommen, um die Standardeinstellungen für drei Spalten in einer Benutzerdatendatei fünf Spalten zu ändern, rufen Sie zuerst [Bcp_columns](bcp-columns.md)**(5)**, und rufen dann **Bcp_colfmt** fünf Mal mit drei dieser Aufrufe Ihr benutzerdefiniertes Format festgelegt. Legen Sie für die verbleibenden zwei Aufrufe *eUserDataType* auf 0 und *CbIndicator*, *CbUserData*, und *CbUserDataTerm* auf 0, SQL_VARLEN _Data, und 0 bzw. Mit diesem Verfahren werden alle fünf Spalten kopiert, drei mit dem benutzerdefinierten Format und zwei mit dem Standardformat.  
   
- Für *CbIndicator*, ein Wert von 8, um einen großen Werttyp anzugeben ist jetzt gültig. Wenn das Präfix für ein Feld angegeben wird, dessen entsprechende Spalte den neuen max-Typ aufweist, kann dafür nur 8 festgelegt werden. Weitere Informationen finden Sie unter [Bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md).  
+ Für *CbIndicator*, ein Wert von 8, um einen großen Werttyp anzugeben ist jetzt gültig. Wenn das Präfix für ein Feld angegeben wird, dessen entsprechende Spalte den neuen max-Typ aufweist, kann dafür nur 8 festgelegt werden. Weitere Informationen finden Sie unter [Bcp_bind](bcp-bind.md).  
   
  Die **Bcp_columns** -Funktion muss aufgerufen werden, bevor Aufrufe **Bcp_colfmt**.  
   
@@ -143,14 +158,14 @@ RETCODE bcp_colfmt (
   
  Sie brauchen nicht alle Daten in einer Benutzerdatei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle kopieren. Um eine Spalte zu überspringen, geben Sie das Format der Daten für die Spalte an, indem die *IdxServerCol* Parameter auf 0. Wenn Sie eine Spalte überspringen möchten, müssen Sie ihren Typ angeben.  
   
- Die [Bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) Funktion kann verwendet werden, um die Formatspezifikation persistent zu speichern.  
+ Die [Bcp_writefmt](bcp-writefmt.md) Funktion kann verwendet werden, um die Formatspezifikation persistent zu speichern.  
   
 ## <a name="bcpcolfmt-support-for-enhanced-date-and-time-features"></a>'bcp_colfmt'-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit  
- Informationen zu den Arten der Verwendung der *eUserDataType* -Parameter für Datum/Uhrzeit-Typen finden Sie unter [Massenkopieränderungen für erweiterte Datums- und Uhrzeittypen &#40;OLE DB- und ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+ Informationen über Typen verwendet werden, mit der *eUserDataType* -Parameter für Datum/Uhrzeit-Typen finden Sie unter [Massenkopieränderungen für erweiterte Datums- und Uhrzeittypen &#40;OLE DB- und ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
- Weitere Informationen finden Sie unter [Datum und Uhrzeit-Verbesserungen &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Weitere Informationen finden Sie unter [Datum und Uhrzeit-Verbesserungen &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Massenkopierfunktionen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
+ [Massenkopierfunktionen](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

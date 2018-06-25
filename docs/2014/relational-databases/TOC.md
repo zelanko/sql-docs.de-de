@@ -71,10 +71,8 @@
 ## [Konzepte des WMI-Anbieters für die Konfigurationsverwaltung +](wmi-provider-configuration/wmi-provider-for-configuration-management.md)
 ## [SqlToolsVSNativeHelpers](sqltoolsvsnativehelpers.md)
 ### [FrameWindowVisible](sqltoolsvsnativehelpers-framewindowvisible.md)
-# 
-  [Lernprogramme zur Datenbank-Engine](database-engine-tutorials.md)
-## 
-  [Lernprogramm: Erste Schritte mit der Datenbank-Engine](tutorial-getting-started-with-the-database-engine.md)
+# [Lernprogramme zur Datenbank-Engine](database-engine-tutorials.md)
+## [Lernprogramm: Erste Schritte mit der Datenbank-Engine](tutorial-getting-started-with-the-database-engine.md)
 ### [Lektion 1: Herstellen einer Verbindung mit der Datenbank-Engine](lesson-1-connecting-to-the-database-engine.md)
 ### [Lektion 2: Herstellen einer Verbindung von einem anderen Computer](lesson-2-connecting-from-another-computer.md)
 ## [Tutorial: Verwenden des hierarchyid-Datentyps](tables/tutorial-using-the-hierarchyid-data-type.md)

@@ -1,12 +1,13 @@
 ---
 title: Große Werttypen mit | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: sql
-ms.technology: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+- docset-sql-devref
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,22 +18,18 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, large value data types
 - SQL Server Native Client OLE DB provider, large value data types
 ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
-caps.latest.revision: 53
-author: MightyPen
-ms.author: genemi
-manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0a15cafe078958a4957941ced08d8986f83b3aae
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+caps.latest.revision: 52
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 98c0d87975289930194faf380740ea85b0599afe
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699851"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36056681"
 ---
 # <a name="using-large-value-types"></a>Verwenden von Datentypen mit umfangreichen Werten
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
-
   Vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] war für Datentypen mit umfangreichen Werten eine besondere Behandlung erforderlich. Datentypen mit hohen Werten überschreiten eine maximale Zeilengröße von 8 KB. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] eingeführt eine **max** Spezifizierer für **Varchar**, **Nvarchar** und **Varbinary** von Datentypen für die Speicherung von Werten so groß wie 2 zulassen ^ 31-1 Bytes. Spalten der Tabelle und [!INCLUDE[tsql](../../../includes/tsql-md.md)] Variablen geben möglicherweise **varchar(max)**, **nvarchar(max)** oder **varbinary(max)** Datentypen.  
   
 > [!NOTE]  
@@ -41,7 +38,7 @@ ms.locfileid: "35699851"
  Zuvor nur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datentypen wie **Text**, **Ntext** und **Image** derartige Längen erreichen konnte. Die **max** Spezifizierer für **Varchar**, **Nvarchar** und **Varbinary** wurden diese Datentypen redundant. Da Datentypen mit umfangreichen Werten nach wie vor verfügbar sind, bleiben die meisten Schnittstellen zu den OLE DB- und ODBC-Datenzugriffskomponenten unverändert. Zur Gewährleistung der Abwärtskompatibilität mit früheren Versionen wird das DBCOLUMNFLAGS_ISLONG-Flag im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter und das SQL_LONGVARCHAR-Flag im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber weiterhin verwendet. Für [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] und höher entwickelte Anbieter und Treiber verwenden diese Bedingungen für die neuen Typen weiter, wenn keine Größenbeschränkung angegeben wird.  
   
 > [!NOTE]  
->  Sie können auch angeben, **varchar(max)**, **nvarchar(max)**, und **varbinary(max)** Datentypen als Eingabe- und Parametertypen von gespeicherten Prozeduren, die Funktion Rückgabetypen , oder im [CAST und CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md) Funktionen.  
+>  Sie können auch angeben, **varchar(max)**, **nvarchar(max)**, und **varbinary(max)** Datentypen als Eingabe- und Parametertypen von gespeicherten Prozeduren, die Funktion Rückgabetypen , oder im [CAST und CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql) Funktionen.  
   
 > [!NOTE]  
 >  Wenn das Replizieren von Daten müssen Sie möglicherweise so konfigurieren Sie die [max Text Repl Size Server Configuration-Option](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) auf-1 festgelegt.  
@@ -695,7 +692,7 @@ _ExitProcessResultSet:
 }  
 ```  
   
- Weitere Informationen darüber, wie die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter macht von Datentypen mit umfangreichen Werten, finden Sie unter [BLOBs und OLE-Objekte](../../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md).  
+ Weitere Informationen darüber, wie die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter macht von Datentypen mit umfangreichen Werten, finden Sie unter [BLOBs und OLE-Objekte](../../native-client-ole-db-blobs/blobs-and-ole-objects.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>ODBC-Treiber für SQL Server Native Client  
  Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber macht die **varchar(max)**, **varbinary(max)** und **nvarchar(max)** Typen als SQL_VARCHAR, SQL_VARBINARY und SQL_ Die WVARCHAR in ODBC-API-Funktionen, die akzeptieren oder geben Sie ODBC-SQL-Datentypen zurück.  
@@ -710,23 +707,23 @@ _ExitProcessResultSet:
   
  Die folgende Liste enthält ODBC API-Funktionen, die für die Arbeit mit Datentypen mit umfangreichen Werten erweitert wurden:  
   
--   [SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md)  
+-   [SQLBindCol](../../native-client-odbc-api/sqlbindcol.md)  
   
--   [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)  
+-   [SQLBindParameter](../../native-client-odbc-api/sqlbindparameter.md)  
   
--   [SQLColAttribute](../../../relational-databases/native-client-odbc-api/sqlcolattribute.md)  
+-   [SQLColAttribute](../../native-client-odbc-api/sqlcolattribute.md)  
   
--   [SQLColumns](../../../relational-databases/native-client-odbc-api/sqlcolumns.md)  
+-   [SQLColumns](../../native-client-odbc-api/sqlcolumns.md)  
   
--   [SQLDescribeCol](../../../relational-databases/native-client-odbc-api/sqldescribecol.md)  
+-   [SQLDescribeCol](../../native-client-odbc-api/sqldescribecol.md)  
   
--   [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md)  
+-   [SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md)  
   
--   [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md)  
+-   [SQLGetData](../../native-client-odbc-api/sqlgetdata.md)  
   
--   [SQLGetTypeInfo](../../../relational-databases/native-client-odbc-api/sqlgettypeinfo.md)  
+-   [SQLGetTypeInfo](../../native-client-odbc-api/sqlgettypeinfo.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server Native Client-Features](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
+ [SQL Server Native Client-Features](sql-server-native-client-features.md)  
   
   

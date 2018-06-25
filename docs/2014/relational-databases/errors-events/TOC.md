@@ -1,14 +1,10 @@
 # [Fehler- und Ereignisreferenz](errors-and-events-reference-database-engine.md)
 # [Referenz zu logischen und physischen Showplanoperatoren](../showplan-logical-and-physical-operators-reference.md)
 # [Ereignisklassen in SQL Server: Referenz +](../event-classes/sql-server-event-class-reference.md)
-# 
-  [Datenbank-Engine (Fehler und Ereignisse)](database-engine-events-and-errors.md)
-## 
-  [Grundlegendes zu Datenbank-Engine-Fehlern](understanding-database-engine-errors.md)
-## 
-  [Schweregrade von Datenbank-Engine-Fehlern](database-engine-error-severities.md)
-## 
-  [Ursachen und Lösungen für Datenbank-Engine-Fehler](../../database-engine/cause-and-resolution-of-database-engine-errors.md)
+# [Datenbank-Engine (Fehler und Ereignisse)](database-engine-events-and-errors.md)
+## [Grundlegendes zu Datenbank-Engine-Fehlern](understanding-database-engine-errors.md)
+## [Schweregrade von Datenbank-Engine-Fehlern](database-engine-error-severities.md)
+## [Ursachen und Lösungen für Datenbank-Engine-Fehler](../../database-engine/cause-and-resolution-of-database-engine-errors.md)
 ## [MSSQLSERVER_-2](mssqlserver-neg2-database-engine-error.md)
 ## [MSSQLSERVER_-1](mssqlserver-1-database-engine-error.md)
 ## [MSSQLSERVER2](mssqlserver-2-database-engine-error.md)

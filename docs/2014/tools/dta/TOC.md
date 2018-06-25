@@ -38,8 +38,7 @@
 ## [Simple XML Input File Sample (DTA) (Beispiel für eine einfache XML-Eingabedatei (DTA))](simple-xml-input-file-sample-dta.md)
 ## [XML Input File Sample with Inline Workload (DTA) (Beispiel für eine XML-Eingabedatei mit Inlinearbeitsauslastung (DTA))](xml-input-file-sample-with-inline-workload-dta.md)
 ## [XML Input File Sample with User-specified Configuration (DTA) (Beispiel für eine XML-Eingabedatei mit benutzerdefinierter Konfiguration (DTA))](xml-input-file-sample-with-user-specified-configuration-dta.md)
-# 
-  [Tutorial: Datenbankoptimierungsratgeber](tutorial-database-engine-tuning-advisor.md)
+# [Tutorial: Datenbankoptimierungsratgeber](tutorial-database-engine-tuning-advisor.md)
 ## [Lesson 1: Basic Navigation in Database Engine Tuning Advisor (Lektion 1: Grundlagen zur Navigation im Datenbankoptimierungsratgeber)](lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)
 ### [Starten des Datenbankoptimierungsratgebers](lesson-1-1-launching-database-engine-tuning-advisor.md)
 ### [Festlegen von Optionen und Layout](lesson-1-2-setting-tool-options-and-layout.md)

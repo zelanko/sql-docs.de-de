@@ -1,5 +1,4 @@
-# 
-  [Konfigurieren von Datenbank-Engine-Instanzen](configure-database-engine-instances-sql-server.md)
+# [Konfigurieren von Datenbank-Engine-Instanzen](configure-database-engine-instances-sql-server.md)
 ## [Serverkonfigurationsoptionen (SQL Server)](server-configuration-options-sql-server.md)
 ## [Serverkonfigurationsoptionen für den Zugriffsüberprüfungscache](access-check-cache-server-configuration-options.md)
 ## [Verteilte Ad-hoc-Abfragen (Serverkonfigurationsoption)](ad-hoc-distributed-queries-server-configuration-option.md)
@@ -83,19 +82,14 @@
 ## [Konfigurieren von SQL Server zur Verwendung von Soft-NUMA (SQL Server)](soft-numa-sql-server.md)
 ## [Zuordnen von TCP/IP-Ports zu NUMA-Knoten (SQL Server)](map-tcp-ip-ports-to-numa-nodes-sql-server.md)
 ## [Aktivieren der Option Sperren von Seiten im Speicher (Windows)](enable-the-lock-pages-in-memory-option-windows.md)
-# 
-  [Verwalten der Datenbank-Engine-Dienste](manage-the-database-engine-services.md)
+# [Verwalten der Datenbank-Engine-Dienste](manage-the-database-engine-services.md)
 ## [Sicherheitsanforderungen für das Verwalten von Diensten](security-requirements-for-managing-services.md)
 ## [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](configure-windows-service-accounts-and-permissions.md)
-## 
-  [Konfigurieren von Dateisystemberechtigungen für den Datenbank-Engine-Zugriff](configure-file-system-permissions-for-database-engine-access.md)
+## [Konfigurieren von Dateisystemberechtigungen für den Datenbank-Engine-Zugriff](configure-file-system-permissions-for-database-engine-access.md)
 ## [Ausführen von SQL Server mit oder ohne Netzwerk](run-sql-server-with-or-without-a-network.md)
-## 
-  [SQL Server-Browserdienst (Datenbank-Engine und SSAS)](sql-server-browser-service-database-engine-and-ssas.md)
-## 
-  [Startoptionen für den Datenbank-Engine-Dienst](database-engine-service-startup-options.md)
-## 
-  [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](start-stop-pause-resume-restart-sql-server-services.md)
+## [SQL Server-Browserdienst (Datenbank-Engine und SSAS)](sql-server-browser-service-database-engine-and-ssas.md)
+## [Startoptionen für den Datenbank-Engine-Dienst](database-engine-service-startup-options.md)
+## [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](start-stop-pause-resume-restart-sql-server-services.md)
 ## [Starten von SQL Server im Einzelbenutzermodus](start-sql-server-in-single-user-mode.md)
 ## [Starten Sie von SQL Server mit Minimalkonfiguration](start-sql-server-with-minimal-configuration.md)
 ## [Verwalten von Diensten: Themen zur Vorgehensweise (SQL Server-Konfigurations-Manager)](../managing-services-how-to-topics-sql-server-configuration-manager.md)
@@ -115,19 +109,13 @@
 ## [Aktivieren oder Deaktivieren eines Servernetzwerkprotokolls](enable-or-disable-a-server-network-protocol.md)
 ## [Konfigurieren eines Servers zur Überwachung eines bestimmten TCP-Ports (SQL Server-Konfigurations-Manager)](configure-a-server-to-listen-on-a-specific-tcp-port.md)
 ## [Konfigurieren eines Servers für die Überwachung einer alternativen Pipe (SQL Server-Konfigurations-Manager)](configure-a-server-to-listen-on-an-alternate-pipe.md)
-## 
-  [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine (SQL Server-Konfigurations-Manager)](enable-encrypted-connections-to-the-database-engine.md)
+## [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine (SQL Server-Konfigurations-Manager)](enable-encrypted-connections-to-the-database-engine.md)
 ## [Verbindungsaufbau mit SQL Server über einen Proxyserver (SQL Server-Konfigurations-Manager)](connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager.md)
-## 
-  [Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff](configure-a-windows-firewall-for-database-engine-access.md)
-## 
-  [Ausblenden einer Instanz der SQL Server-Datenbank-Engine](hide-an-instance-of-sql-server-database-engine.md)
-## 
-  [Konfigurieren der Datenbank-Engine zum Überwachen mehrerer TCP-Ports](configure-the-database-engine-to-listen-on-multiple-tcp-ports.md)
-## 
-  [Bestimmen, ob die Datenbank-Engine installiert und gestartet wurde](determine-whether-the-database-engine-is-installed-and-started.md)
-## 
-  [Herstellen einer Verbindung mit der Datenbank-Engine unter Verwendung von Erweiterter Schutz](connect-to-the-database-engine-using-extended-protection.md)
+## [Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff](configure-a-windows-firewall-for-database-engine-access.md)
+## [Ausblenden einer Instanz der SQL Server-Datenbank-Engine](hide-an-instance-of-sql-server-database-engine.md)
+## [Konfigurieren der Datenbank-Engine zum Überwachen mehrerer TCP-Ports](configure-the-database-engine-to-listen-on-multiple-tcp-ports.md)
+## [Bestimmen, ob die Datenbank-Engine installiert und gestartet wurde](determine-whether-the-database-engine-is-installed-and-started.md)
+## [Herstellen einer Verbindung mit der Datenbank-Engine unter Verwendung von Erweiterter Schutz](connect-to-the-database-engine-using-extended-protection.md)
 ## [Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen](register-a-service-principal-name-for-kerberos-connections.md)
 # [Client-Netzwerkkonfiguration](client-network-configuration.md)
 ## [Konfigurieren von Clientprotokollen](configure-client-protocols.md)

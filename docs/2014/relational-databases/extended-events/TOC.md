@@ -13,8 +13,7 @@
 ## [Histogrammziel](../../database-engine/histogram-target.md)
 ## [Ringpufferziel](../../database-engine/ring-buffer-target.md)
 ## [Ereignisablaufverfolgung für Windows-Ziel](event-tracing-for-windows-target.md)
-# 
-  [Engine für erweiterte Ereignisse](sql-server-extended-events-engine.md)
+# [Engine für erweiterte Ereignisse](sql-server-extended-events-engine.md)
 # [Sitzungen für erweiterte Ereignisse](sql-server-extended-events-sessions.md)
 # [Tools für erweiterte Ereignisse](extended-events-tools.md)
 ## [Verwenden der system_health-Sitzung](use-the-ssms-xe-profiler.md)

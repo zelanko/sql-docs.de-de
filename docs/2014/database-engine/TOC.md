@@ -2,10 +2,8 @@
 ## [Neuigkeiten (Datenbank-Engine)](whats-new-in-sql-server-2016.md)
 ## [Abwärtskompatibilität der SQL Server-Datenbank-Engine](sql-server-database-engine-backward-compatibility.md)
 ### [Als veraltet markierte Features der Datenbank-Engine in SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md)
-### 
-  [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md)
-### 
-  [Fehlerhafte Änderungen an Funktionen der Datenbank-Engine in SQL Server 2014](breaking-changes-to-database-engine-features-in-sql-server-2016.md)
+### [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md)
+### [Fehlerhafte Änderungen an Funktionen der Datenbank-Engine in SQL Server 2014](breaking-changes-to-database-engine-features-in-sql-server-2016.md)
 ### [Behavior Changes von Datenbank-Engine-Features in SQL Server 2014](behavior-changes-to-database-engine-features-in-sql-server-2014.md)
 ### [Abwärtskompatibilität der Volltextsuche](full-text-search-backward-compatibility.md)
 #### [Nicht mehr unterstützte Features der Volltextsuche in SQL Server 2014](discontinued-full-text-search-features-in-sql-server-2014.md)
@@ -16,10 +14,8 @@
 ### [Nicht mehr unterstützte Features der Verwaltungstools in SQL Server 2014](discontinued-management-tools-features-in-sql-server-2014.md)
 ### [Breaking Changes von Features der Verwaltungstools in SQL Server 2014](breaking-changes-to-management-tools-features-in-sql-server-2014.md)
 ### [Behavior Changes an Features der Verwaltungstools in SQL Server 2014](behavior-changes-to-management-tools-features-in-sql-server-2014.md)
-# 
-  [Datenbank-Engine-Funktionen und Tasks](database-engine-features-and-tasks.md)
-# 
-  [Datenbank-Engine-Instanzen (SQL Server)](configure-windows/database-engine-instances-sql-server.md)
+# [Datenbank-Engine-Funktionen und Tasks](database-engine-features-and-tasks.md)
+# [Datenbank-Engine-Instanzen (SQL Server)](configure-windows/database-engine-instances-sql-server.md)
 ## [Konfigurieren von Datenbank-Engine-Instanzen (SQL Server) +](configure-windows/configure-database-engine-instances-sql-server.md)
 ## [Unterstützung für die Sortierung und Unicode +](../relational-databases/collations/collation-and-unicode-support.md)
 ## [Verbindungsserver (Datenbank-Engine)](../relational-databases/linked-servers/linked-servers-database-engine.md)
@@ -47,8 +43,7 @@
 ## [Service Broker](configure-windows/sql-server-service-broker.md)
 ## [Pufferpoolerweiterung](configure-windows/buffer-pool-extension.md)
 # [Datenbankfeatures +](../relational-databases/database-features.md)
-# 
-  [Instanzübergreifende Datenbank-Engine-Funktionen](database-engine-cross-instance-features.md)
+# [Instanzübergreifende Datenbank-Engine-Funktionen](database-engine-cross-instance-features.md)
 ## [SQL Server Management Studio +](../ssms/sql-server-management-studio-ssms.md)
 ## [Datenbank-Lebenszyklusverwaltung](../relational-databases/database-lifecycle-management.md)
 ## [Features und Tasks im SQL Server-Hilfsprogramm +](../relational-databases/manage/sql-server-utility-features-and-tasks.md)

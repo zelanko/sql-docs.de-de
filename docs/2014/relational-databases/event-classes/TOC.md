@@ -30,8 +30,7 @@
 # [Veraltung (Ereigniskategorie)](deprecation-event-category.md)
 ## [Deprecation Announcement-Ereignisklasse](deprecation-announcement-event-class.md)
 ## [Deprecation Final Support (Ereignisklasse)](deprecation-final-support-event-class.md)
-# 
-  [Fehler und Warnungen-Ereigniskategorie (Datenbank-Engine)](errors-and-warnings-event-category-database-engine.md)
+# [Fehler und Warnungen-Ereigniskategorie (Datenbank-Engine)](errors-and-warnings-event-category-database-engine.md)
 ## [Attention-Ereignisklasse](attention-event-class.md)
 ## [Background Job Error-Ereignisklasse](background-job-error-event-class.md)
 ## [Bitmap Warning-Ereignisklasse](bitmap-warning-event-class.md)

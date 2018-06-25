@@ -1,8 +1,6 @@
-# 
-  [Datenbank-Engine-Skripterstellung](database-engine-scripting.md)
+# [Datenbank-Engine-Skripterstellung](database-engine-scripting.md)
 # [Abfrage- und Text-Editoren (SQL Server Management Studio)](query-and-text-editors-sql-server-management-studio.md)
-## 
-  [Abfrage-Editor der Datenbank-Engine (SQL Server Management Studio)](database-engine-query-editor-sql-server-management-studio.md)
+## [Abfrage-Editor der Datenbank-Engine (SQL Server Management Studio)](database-engine-query-editor-sql-server-management-studio.md)
 ## [XML-Editor (SQL Server Management Studio)](xml-editor-sql-server-management-studio.md)
 ## [Konfigurieren von Editoren (SQL Server Management Studio)](configure-editors-sql-server-management-studio.md)
 ## [Zuordnen von Dateierweiterungen zu einem Code-Editor](associate-file-extensions-to-a-code-editor.md)
@@ -39,6 +37,7 @@
 ### [Optionen (Abfrageergebnisse > SQL Server > Seite „Ergebnisse in Raster“)](../../database-engine/options-query-results-sql-server-results-to-grid-page.md)
 ### [Optionen (Abfrageergebnisse > SQL Server > Seite „Ergebnisse in Text“)](../../database-engine/options-query-results-sql-server-results-to-text-page.md)
 ### [Optionen (Abfrageergebnisse > SQL Server > Multiserver)](../../database-engine/options-query-results-sql-server-multi-server.md)
+### [Optionen (Abfrageausführung/Analysis Server/Seite Allgemein)](../../database-engine/options-query-execution-analysis-server-general-page.md)
 ### [Optionen (Abfrageergebnisse > Analysis Server > Seite „Allgemein“)](../../database-engine/options-query-results-analysis-server-general-page.md)
 ### [Optionen (Abfrageergebnisse und Seite „Abhängigkeitsdienste“)](../../database-engine/options-query-results-and-dependency-services-page.md)
 ## [Öffnen eines Editors (SQL Server Management Studio)](open-an-editor-sql-server-management-studio.md)
@@ -97,15 +96,13 @@
 ## [Ausgabefenster](transact-sql-debugger-output-window.md)
 ## [Überwachung (Fenster)](transact-sql-debugger-watch-window.md)
 ## [Dialogfeld „Schnellüberwachung“](transact-sql-debugger-quickwatch-dialog-box.md)
-# 
-  [Statusleiste (Abfrage-Editor der Datenbank-Engine)](status-bar-database-engine-query-editor.md)
+# [Statusleiste (Abfrage-Editor der Datenbank-Engine)](status-bar-database-engine-query-editor.md)
 # [Anzeigen räumlicher Daten im Objekt-Explorer](view-spatial-data-in-object-explorer.md)
 ## [Fenster „Räumliche Ergebnisse“](spatial-results-window.md)
 # [Themen zur Vorgehensweise für sqlcmd](sqlcmd-how-to.md)
 ## [Starten des Hilfsprogramms „sqlcmd“](sqlcmd-start-the-utility.md)
 ## [Verwenden des Hilfsprogramms sqlcmd](sqlcmd-use-the-utility.md)
-## 
-  [Herstellen einer Verbindung mit der Datenbank-Engine mithilfe von sqlcmd](sqlcmd-connect-to-the-database-engine.md)
+## [Herstellen einer Verbindung mit der Datenbank-Engine mithilfe von sqlcmd](sqlcmd-connect-to-the-database-engine.md)
 ## [Ausführen von Transact-SQL-Skriptdateien mithilfe von sqlcmd](sqlcmd-run-transact-sql-script-files.md)
 ## [Verwenden von sqlcmd mit Skriptvariablen](sqlcmd-use-with-scripting-variables.md)
 # [SQL Server PowerShell +](../../powershell/sql-server-powershell.md)
