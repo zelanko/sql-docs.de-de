@@ -41,8 +41,7 @@
 ### [Aggregationen und Aggregationsentwürfe](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)
 ### [Sicherheitsrollen](../multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)
 ## [Physische Architektur](../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)
-### 
-  [OLAP-Engine-Serverkomponenten](../multidimensional-models/olap-physical/olap-engine-server-components.md)
+### [OLAP-Engine-Serverkomponenten](../multidimensional-models/olap-physical/olap-engine-server-components.md)
 ### [Objektbenennungsregeln](../multidimensional-models/olap-physical/object-naming-rules-analysis-services.md)
 ### [Spezifikationen der maximalen Kapazität](../multidimensional-models/olap-physical/maximum-capacity-specifications-analysis-services.md)
 ### [Datentypen in Analysis Services](../multidimensional-models/olap-physical/data-types-in-analysis-services.md)
