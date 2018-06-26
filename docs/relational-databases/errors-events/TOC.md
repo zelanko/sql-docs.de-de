@@ -1,10 +1,7 @@
 # [Übersicht](errors-and-events-reference-database-engine.md)  
-# 
-  [Datenbank-Engine (Fehler und Ereignisse)](database-engine-events-and-errors.md)  
-# 
-  [Grundlegendes zu Datenbank-Engine-Fehlern](understanding-database-engine-errors.md)  
-# 
-  [Schweregrade von Datenbank-Engine-Fehlern](database-engine-error-severities.md)  
+# [Datenbank-Engine (Fehler und Ereignisse)](database-engine-events-and-errors.md)  
+# [Grundlegendes zu Datenbank-Engine-Fehlern](understanding-database-engine-errors.md)  
+# [Schweregrade von Datenbank-Engine-Fehlern](database-engine-error-severities.md)  
 
 
 
