@@ -13,8 +13,7 @@
 # [Configuration Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md)
 # [mssql-conf (Linux)](../linux/sql-server-linux-configure-mssql-conf.md)
 # [Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md)
-# 
-  [Datenbankoptimierungsratgeber (DTA)](../tools/dta/dta-utility.md)
+# [Datenbankoptimierungsratgeber (DTA)](../tools/dta/dta-utility.md)
 # [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)
 # [Service Broker (ssbdiagnose)](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)
 
