@@ -88,12 +88,12 @@ caps.latest.revision: 255
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6f0416cb5e49cb04da00d7f816d3e888e221a78
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 8a2fee1a2a0c4f52138cdbeb1580926b21eae89c
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771506"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "35999876"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Installieren von SQL Server von der Eingabeaufforderung
 
@@ -196,7 +196,7 @@ Entwickeln Sie anhand der folgenden Richtlinien Installationsbefehle mit der ric
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setupsteuerelement|/ACTION<br /><br /> **Erforderlich**|Erforderlich, um den Installationsworkflow anzugeben.<br /><br /> Unterstützte Werte: **Install**.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Nur erforderlich, wenn der /Q-Parameter oder der /QS-Parameter für die unbeaufsichtigte Installation angegeben wird.**|Erforderlich, um das Einverständnis mit den Lizenzbedingungen zu erklären.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setupsteuerelement R|/IACCEPTPYTHONOPENLICENSETERMS <br /><br /> **Nur erforderlich, wenn der /Q-Parameter oder der /QS-Parameter für die unbeaufsichtigte Installation angegeben wird, die das Anaconda Python-Paket enthält**|Erforderlich, um das Einverständnis mit den Lizenzbedingungen zu erklären.| 
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Python-Setupsteuerelement|/IACCEPTPYTHONLICENSETERMS <br /><br /> **Nur erforderlich, wenn der /Q-Parameter oder der /QS-Parameter für die unbeaufsichtigte Installation angegeben wird, die das Anaconda Python-Paket enthält**|Erforderlich, um das Einverständnis mit den Lizenzbedingungen zu erklären.| 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setupsteuerelement R|/IACCEPTROPENLICENSETERMS <br /><br /> **Nur erforderlich, wenn der /Q-Parameter oder der /QS-Parameter für die unbeaufsichtigte Installation angegeben wird, die das Microsoft R Open-Paket enthält**|Erforderlich, um das Einverständnis mit den Lizenzbedingungen zu erklären.| 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setupsteuerelement|/ENU<br /><br /> **Optional**|Verwenden Sie diesen Parameter, um die englische Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter einem lokalisierten Betriebssystem zu installieren, wenn die Installationsmedien Language Packs sowohl für Englisch als auch für die Sprache des Betriebssystems einschließen.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setupsteuerelement|/UpdateEnabled<br /><br /> **Optional**|Geben Sie an, ob Produktupdates vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup ermittelt und eingeschlossen werden sollen. Gültige Werte sind True und False oder 1 und 0. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup schließt standardmäßig alle gefundenen Updates ein.|  

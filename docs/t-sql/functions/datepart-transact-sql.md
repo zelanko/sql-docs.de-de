@@ -32,18 +32,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: eee173d268af8e18343c286bda29384b2a327860
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 511c961ee1a4d6c8099e171de8c161592d986f96
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249803"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Gibt einen Integer zurück, der den angegebenen *datepart*-Wert des angegebenen *date*-Werts darstellt.
+Diese Funktion gibt eine ganze Zahl zurück, die das angegebene *datepart*-Argument des angegebenen *date*-Arguments darstellt.
   
-Eine Übersicht über alle Datums- und Uhrzeitdatentypen und zugehörige Funktionen für [!INCLUDE[tsql](../../includes/tsql-md.md)] finden Sie unter [Date and Time Data Types and Functions &#40;Transact-SQL&#41; (Datums- und Uhrzeitdatentypen und zugehörige Funktionen)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Unter [Datums- und Uhrzeitdatentypen und zugehörige Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) finden Sie eine Übersicht über alle [!INCLUDE[tsql](../../includes/tsql-md.md)] Datums- und Uhrzeitdatentypen und zugehörige Funktionen.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -55,7 +56,10 @@ DATEPART ( datepart , date )
   
 ## <a name="arguments"></a>Argumente  
 *datepart*  
-Der *date*-Teil (ein Datums- oder Zeitwert), für den ein **Integer** zurückgegeben wird. In der folgenden Tabelle werden alle gültigen *datepart*-Argumente aufgeführt. Benutzerdefinierte Variablenentsprechungen sind nicht gültig.
+Der bestimmte Teil des *date*-Arguments, für das `DATEPART` eine **ganze Zahl** zurückgibt. In der folgenden Tabelle werden alle gültigen *datepart*-Argumente aufgeführt.
+
+> [!NOTE]
+> `DATEPART` akzeptiert keine benutzerdefinierten Variablenentsprechungen für die *datepart*-Argumente.
   
 |*datepart*|Abkürzungen|  
 |---|---|
@@ -76,8 +80,16 @@ Der *date*-Teil (ein Datums- oder Zeitwert), für den ein **Integer** zurückgeg
 |**ISO_WEEK**|**isowk**, **isoww**|  
   
 *Datum*  
-Ein Ausdruck, der in einen der folgenden Werte aufgelöst werden kann: **time**, **date**, **smalldatetime**, **datetime**, **datetime2** oder **datetimeoffset**. *date* kann ein Ausdruck, ein Spaltenausdruck, eine benutzerdefinierte Variable oder ein Zeichenfolgenliteral sein.  
-Um Mehrdeutigkeiten zu vermeiden, sollten Sie vierstellige Jahreszahlen verwenden. Informationen zu zweistelligen Jahreszahlen finden Sie unter [Konfigurieren der Serverkonfigurationsoption „Umstellungsjahr für Angaben mit zwei Ziffern“](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
+Ein Ausdruck, der in einen der folgenden Datentypen aufgelöst werden kann: 
+
++ **Datum**
++ **datetime**
++ **datetimeoffset**
++ **datetime2** 
++ **smalldatetime**
++ **Uhrzeit**
+
+Bei *date* akzeptiert `DATEPART` einen Spaltenausdruck, einen Ausdruck, ein Zeichenfolgenliteral oder eine benutzerdefinierte Variable. Um Mehrdeutigkeiten zu vermeiden, sollten Sie vierstellige Jahreszahlen verwenden. Unter [Konfigurieren der Serverkonfigurationsoption „Umstellungsjahr für Angaben mit zwei Ziffern“](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) finden Sie weitere Informationen zu zweistelligen Jahreszahlen.
   
 ## <a name="return-type"></a>Rückgabetyp  
  **int**  
@@ -85,9 +97,11 @@ Um Mehrdeutigkeiten zu vermeiden, sollten Sie vierstellige Jahreszahlen verwende
 ## <a name="return-value"></a>Rückgabewert  
 Jedes *datepart*-Argument und die zugehörigen Abkürzungen geben den gleichen Wert zurück.
   
-Der Rückgabewert hängt von der Sprachumgebung ab, die durch [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) und durch die [Konfiguration der Serverkonfigurationsoption „Standardsprache“](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) für die Anmeldung festgelegt wurde. Wenn *date* ein Zeichenfolgenliteral für einige Formate darstellt, hängt der Rückgabewert von dem Format ab, das mit [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) festgelegt wurde. SET DATEFORMAT wirkt sich nicht auf den Rückgabewert aus, wenn das Datum ein Spaltenausdruck für Daten vom Typ Datum oder Uhrzeit darstellt.
+Der Rückgabewert hängt von der Sprachumgebung ab, die durch [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) und durch die [Konfiguration der Serverkonfigurationsoption „Standardsprache“](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) für die Anmeldung festgelegt wurde. Der Rückgabewert hängt von [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) ab, wenn *date* ein Zeichenfolgenliteral einiger Formate darstellt. SET DATEFORMAT ändert den Rückgabewert nicht, wenn das Datum ein Spaltenausdruck für Daten vom Typ Datum oder Uhrzeit darstellt.
   
-In der folgenden Tabelle werden alle *datepart*-Argumente mit den entsprechenden Rückgabewerten für die Anweisung `SELECT DATEPART(datepart,'2007-10-30 12:15:32.1234567 +05:10')` aufgelistet. Der Datentyp des *date*-Arguments ist **datetimeoffset(7)**. Der Rückgabewert **nanosecond***datepart* verfügt über 9 Dezimalstellen (,123456700). Hierbei sind die letzten beiden Stellen immer 00.
+In dieser Tabelle werden alle *datepart*-Argumente mit den entsprechenden Rückgabewerten für die Anweisung `SELECT DATEPART(datepart,'2007-10-30 12:15:32.1234567 +05:10')` aufgelistet. Das *date*-Argument weist den Datentyp **datetimeoffset(7)** auf. Die letzten beiden Stellen des Rückgabewerts des *datepart*-Arguments **nanosecond** sind immer `00`, und dieser Wert verfügt über 9 Dezimalstellen:
+
+**,123456700**
   
 |*datepart*|Rückgabewert|  
 |---|---|
@@ -107,11 +121,25 @@ In der folgenden Tabelle werden alle *datepart*-Argumente mit den entsprechenden
 |**TZoffset, tz**|310|  
   
 ## <a name="week-and-weekday-datepart-arguments"></a>datepart-Argumente des Typs week und weekday
-Wenn für *datepart* **week** (**wk**, **ww**) oder **weekday** (**dw**) angegeben wurde, hängt der Rückgabewert von dem Wert ab, der durch [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md) festgelegt wurde.
+Für das *datepart*-Argument **week** (**wk**, **ww**) oder **weekday** (**dw**) hängt der Rückgabewert `DATEPART` von dem von [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md) festgelegten Wert ab.
   
-Der 1. Januar eines Jahres definiert die Anfangszahl für **week***datepart*. Beispiel: DATEPART (** wk**, 'Jan 1, *xxx*x') = 1. Hierbei entspricht *xxxx* einem beliebigen Jahr.
+Der 1. Januar eines Jahres definiert die Anfangszahl für **week***datepart*. Zum Beispiel:
+
+DATEPART (**wk**, 'Jan 1, *xxx*x') = 1
+
+Hierbei steht *xxxx* für ein beliebiges Jahr.
   
-In der folgenden Tabelle wird für jedes SET DATEFIRST-Argument der Rückgabewert von **week** and **weekday***datepart* für '2007-04-21' aufgelistet. Der 1. Januar ist im Jahr 2007 ein Montag. Der 21. April ist im Jahr 2007 ein Samstag. SET DATEFIRST 7 (Sonntag) ist die Standardeinstellung für Englisch (USA). Englisch.
+Diese Tabelle enthält den Rückgabewert für die *datepart*-Argumente **week** und **weekday** für
+
+'2007-04-21'
+
+für jedes SET DATEFIRST-Argument. Der 1. Januar 2007 ist ein Montag. Der 21. April 2007 ist ein Sonntag. Für Englisch (USA) dient
+
+SET DATEFIRST 7 -- ( Sunday )
+
+als Standardeinstellung. Nachdem Sie DATEFIRST festgelegt haben, verwenden Sie diese empfohlene SQL-Anweisung für die datepart-Tabellenwerte:
+
+`SELECT DATEPART(week, '2007-04-21 '), DATEPART(weekday, '2007-04-21 ')`
   
 |SET DATEFIRST<br /><br /> Argument|week<br /><br /> hat zurückgegeben|weekday<br /><br /> hat zurückgegeben|  
 |---|---|---|
@@ -127,9 +155,11 @@ In der folgenden Tabelle wird für jedes SET DATEFIRST-Argument der Rückgabewer
 Die für DATEPART (**year**, *date*), DATEPART (**month**, *date*) und DATEPART (**day**, *date*) zurückgegebenen Werte entsprechen den jeweiligen Rückgabewerten der Funktionen [YEAR](../../t-sql/functions/year-transact-sql.md), [MONTH](../../t-sql/functions/month-transact-sql.md) und [DAY](../../t-sql/functions/day-transact-sql.md).
   
 ## <a name="isoweek-datepart"></a>ISO_WEEK datepart  
-ISO 8601 schließt das ISO-Wochensystem zur Nummerierung von Wochen ein. Die einzelnen Wochen werden mit dem Jahr verknüpft, in dem Donnerstag auftritt. Beispielsweise startet die Woche 1 im Jahr 2004 (2004W01) am 29. Dezember 2003 (Montag) und endet am 4. Januar 2004 (Sonntag). Die höchste Wochennummer kann in einem Jahr 52 oder 53 sein. Diese Art der Nummerierung wird in der Regel in europäischen Ländern bzw. Regionen verwendet. In anderen Ländern wird sie eher selten angewendet.
+ISO 8601 schließt das ISO-Wochensystem zur Nummerierung von Wochen ein. Die einzelnen Wochen werden mit dem Jahr verknüpft, in dem Donnerstag auftritt. Beispielsweise beginnt die Woche 1 im Jahr 2004 (2004W01) am 29. Dezember 2003 (Montag) und endet am 4. Januar 2004 (Sonntag). Europäische Länder und Regionen verwenden üblicherweise diese Art der Nummerierung. Nichteuropäische Länder und Regionen verwenden diese üblicherweise nicht.
+
+Hinweis: Die höchste Wochennummer in einem Jahr kann 52 oder 53 sein.
   
-Das Nummerierungssystem in anderen Ländern oder Regionen entspricht möglicherweise nicht dem ISO-Standard. Es gibt mindestens sechs Möglichkeiten, wie in der folgenden Tabelle dargestellt.
+Das Nummerierungssystem anderer Länder oder Regionen entspricht möglicherweise nicht dem ISO-Standard. Diese Tabelle stellt sechs Möglichkeiten dar:
   
 |Erster Tag der Woche|Erste Woche im Jahr enthält|Doppelt zugewiesene Wochen|Verwendet von/in|  
 |---|---|---|---|
@@ -141,24 +171,24 @@ Das Nummerierungssystem in anderen Ländern oder Regionen entspricht möglicherw
 |Samstag|1. Januar<br /><br /> Erster Freitag<br /><br /> 1–7 Tage im Jahr|ja||  
   
 ## <a name="tzoffset"></a>TZoffset  
-Das Argument **TZoffset** (**tz**) wird als die Anzahl der Minuten (mit Vorzeichen) zurückgegeben. Die folgende Anweisung gibt ein Zeitzonenoffset von 310 Minuten zurück.
+`DATEPART` gibt den Wert **TZoffset** (**tz**) als Anzahl der Minuten (mit Vorzeichen) zurück. Diese Anweisung gibt einen Zeitzonenoffset von 310 Minuten zurück:
   
 ```sql
 SELECT DATEPART (TZoffset, '2007-05-10  00:00:01.1234567 +05:10');  
 ```  
-Der TZoffset wird wie folgt dargestellt:
+`DATEPART` rendert den TZoffset-Wert folgendermaßen:
 - Für datetimeoffset und datetime2 gibt TZoffset den Zeitoffset in Minuten an, wobei der Offset für datetime2 immer 0 Minuten beträgt.
-- Für Datentypen, die implizit in datetimeoffset oder datetime2 konvertiert werden können, wird mit Ausnahme der anderen date/time-Datentypen der Zeitoffset in Minuten zurückgegeben.
+- Für Datentypen, die implizit in **datetimeoffset** oder **datetime2** konvertiert werden können, gibt `DATEPART` den Zeitoffset in Minuten an. Eine Ausnahme stellen andere Datums- und Uhrzeitdatentypen dar.
 - Parameter aller anderen Typen führen zu einem Fehler.
   
   
 ## <a name="smalldatetime-date-argument"></a>date-Argument des Typs smalldatetime  
-Wenn *date* vom Typ [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) ist, werden Sekunden in der Form 00 zurückgegeben.
+Für den *date*-Wert [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) gibt `DATEPART` die Sekunden als 00 zurück.
   
 ## <a name="default-returned-for-a-datepart-that-is-not-in-a-date-argument"></a>Zurückgeben des Standardwerts für ein datepart-Argument, das nicht in einem date-Argument enthalten ist  
-Enthält der Datentyp des *date*-Arguments keine Angabe zu *datepart*, wird der Standardwert für *datepart* nur zurückgegeben, wenn für *date* ein Literal angegeben ist.
+Enthält der Datentyp des *date*-Arguments keine Angabe zu *datepart*, gibt `DATEPART` den Standardwert für *datepart* nur zurück, wenn für *date* ein Literal angegeben ist.
   
-Beispielsweise wird bei Jahr-Monat-Tag für jeden **date**-Datentyp standardmäßig der Wert 1900-01-01 angegeben. Die folgende Anweisung verfügt über datepart-Argumente für *datepart*, ein time-Argument für *date* und gibt `1900, 1, 1, 1, 2` zurück.
+Beispielsweise wird bei Jahr-Monat-Tag für jeden **date**-Datentyp standardmäßig der Wert 1900-01-01 angegeben. Diese Anweisung verfügt über datepart-Argumente für *datepart*, ein time-Argument für *date* und gibt `1900, 1, 1, 1, 2` zurück.
   
 ```sql
 SELECT DATEPART(year, '12:10:30.123')  
@@ -168,7 +198,7 @@ SELECT DATEPART(year, '12:10:30.123')
     ,DATEPART(weekday, '12:10:30.123');  
 ```  
   
-Wenn *date* als Variable oder Tabellenspalte angegeben ist und der Datentyp für diese Variable oder Spalte nicht über das angegebene *datepart*-Argument verfügt, wird der Fehler 9810 zurückgegeben. Im folgenden Codebeispiel tritt ein Fehler auf, weil der year-Datumsteil für den für die *@t*-Variable deklarierten **time**-Datentyp nicht gültig ist.
+Wenn *date* als Variable oder Tabellenspalte angegeben ist und der Datentyp für diese Variable oder Spalte nicht über das angegebene *datepart*-Argument verfügt, gibt `DATEPART` den Fehler 9810 zurück. In diesem Beispiel verfügt die Variable *@t* über den Datentyp **time**. Das Beispiel schlägt fehl, da das Datumsteil „year“ für den **time**-Datentyp ungültig ist:
   
 ```sql
 DECLARE @t time = '12:10:30.123';   
@@ -176,7 +206,7 @@ SELECT DATEPART(year, @t);
 ```  
   
 ## <a name="fractional-seconds"></a>Sekundenbruchteile
-Die folgenden Anweisungen verdeutlichen, wie Sekundenbruchteile zurückgegeben werden:
+Diese Anweisungen veranschaulichen, dass `DATEPART` Sekundenbruchteile zurückgibt:
   
 ```sql
 SELECT DATEPART(millisecond, '00:00:01.1234567'); -- Returns 123  
@@ -185,19 +215,19 @@ SELECT DATEPART(nanosecond,  '00:00:01.1234567'); -- Returns 123456700
 ```  
   
 ## <a name="remarks"></a>Remarks  
-DATEPART kann in den Klauseln WHERE, HAVING, GROUP BY und ORDER BY der SELECT-Liste verwendet werden.
+`DATEPART` kann in den Klauseln SELECT <Liste>, WHERE, HAVING, GROUP BY und ORDER BY verwendet werden.
   
-In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] wandelt DATEPART Zeichenfolgenliterale implizit in den **datetime2**-Typ um. Daher unterstützt DATEPART das Format YDM nicht, wenn das Datum als Zeichenfolge übergeben wird. Sie müssen die Zeichenfolge explizit in den Typ **datetime** oder **smalldatetime** umwandeln, um das YDM-Format zu verwenden.
+In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] wandelt DATEPART Zeichenfolgenliterale implizit in den **datetime2**-Typ um. Daher unterstützt DATENAME das Format YDM nicht, wenn das Datum als Zeichenfolge übergeben wird. Sie müssen die Zeichenfolge explizit in den Typ **datetime** oder **smalldatetime** umwandeln, um das YDM-Format zu verwenden.
   
 ## <a name="examples"></a>Beispiele  
-Das folgende Beispiel gibt das Basisjahr zurück. Das Basisjahr ist für Datumsberechnungen nützlich. Im Beispiel wird das Datum in Form einer Zahl angegeben. Beachten Sie, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Wert 0 als 1. Januar 1900 interpretiert.
+In diesem Beispiel wird das Basisjahr zurückgegeben. Das Basisjahr ist bei Datumsberechnungen nützlich. Im Beispiel gibt eine Zahl das Datum an. Beachten Sie, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Wert 0 als 1. Januar 1900 interpretiert.
   
 ```sql
 SELECT DATEPART(year, 0), DATEPART(month, 0), DATEPART(day, 0);  
 -- Returns: 1900    1    1 */  
 ```  
   
-Im folgenden Beispiel wird der Tag des Datums `12/20/1974` zurückgegeben.
+In diesem Beispiel wird der Tag des Datums (`12/20/1974`) zurückgegeben.
   
 ```sql
 -- Uses AdventureWorks  
@@ -212,7 +242,7 @@ SELECT TOP(1) DATEPART (day,'12/20/1974') FROM dbo.DimCustomer;
 20
 ```  
   
-Im folgenden Beispiel wird das Jahr des Datums `12/20/1974` zurückgegeben.
+In diesem Beispiel wird das Jahr des Datums (`12/20/1974`) zurückgegeben.
   
 ```sql
 -- Uses AdventureWorks  

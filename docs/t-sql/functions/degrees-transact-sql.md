@@ -24,16 +24,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: da5dd2d0e7e3135097fd7993e9ebf75c64c15739
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3cc037faa43eefed7af80e0e5a9fb51a917471b6
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239149"
 ---
 # <a name="degrees-transact-sql"></a>DEGREES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Gibt den entsprechenden Winkel in Grad für einen im Bogenmaß angegebenen Winkel zurück.  
+Diese Funktion gibt den entsprechenden Winkel in Grad für einen im Bogenmaß angegebenen Winkel zurück.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,13 +46,13 @@ DEGREES ( numeric_expression )
   
 ## <a name="arguments"></a>Argumente  
  *numeric_expression*  
- Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) der genauen numerischen oder ungefähren numerischen Datentypkategorie, mit Ausnahme des **bit**-Datentyps.  
+Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) der genauen numerischen oder ungefähren numerischen Datentypkategorie, mit Ausnahme des **bit**-Datentyps.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- Gibt denselben Typ wie *Numerischer Ausdruck*zurück.  
+Geben Werte zurück, deren Datentyp mit dem Datentyp von *numeric_expression* übereinstimmt.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird die Gradzahl des Winkels von PI/2 zurückgegeben.  
+Im folgenden Beispiel wird die Gradzahl des Winkels von PI/2 zurückgegeben.  
   
 ```  
 SELECT 'The number of degrees in PI/2 radians is: ' +   
@@ -70,5 +71,3 @@ The number of degrees in PI/2 radians is 90
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Mathematische Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
-  
-

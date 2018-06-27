@@ -1,28 +1,26 @@
 ---
 title: Ausführen von SSIS-Paketen in Azure | Microsoft-Dokumentation
-ms.description: Provides an overview of the available methods for running packages deployed to Azure SQL Database.
+description: Übersicht über die verfügbaren Methoden zum Ausführen von SSIS-Paketen, die für Azure SQL-Datenbank bereitgestellt sind.
 ms.date: 05/29/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e4d733b49f8353fc430f90161ef25c352c8cac8f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 2d3c70085117e7d10aac5a7e29bde2448d383efe
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34586085"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330154"
 ---
-# <a name="run-an-ssis-package-in-azure"></a>Ausführen eines SSIS-Pakets in Azure
+# <a name="run-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Ausführen von in Azure bereitgestellten SSIS-Paketen
 
-Sie können die in der Datenbank des SSISDB-Katalogs bereitgestellten SSIS-Pakete auf einem Azure SQL-Datenbankserver ausführen, indem Sie eine der in diesem Artikel erläuterten Optionen auswählen. Sie können ein Paket direkt oder als Teil einer Azure Data Factory-Pipeline ausführen. Eine Übersicht über SSIS in Azure finden Sie unter [Migration von SQL Server Integration Services-Workloads in die Cloud per Lift und Shift](ssis-azure-lift-shift-ssis-packages-overview.md).
+Sie können SSIS-Pakete ausführen, die im SSISDB-Katalog eines Azure SQL-Datenbankservers bereitgestellt sind, indem Sie eine der in diesem Artikel beschriebenen Methoden verwenden. Sie können ein Paket direkt oder als Teil einer Azure Data Factory-Pipeline ausführen. Eine Übersicht über SSIS in Azure finden Sie unter [Bereitstellen und Ausführen von SSIS-Paketen in Azure](ssis-azure-lift-shift-ssis-packages-overview.md).
 
 - Direktes Ausführen eines Pakets
 

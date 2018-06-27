@@ -1,25 +1,26 @@
 ---
 title: Überprüfen von in Azure bereitgestellten SSIS-Paketen | Microsoft-Dokumentation
+description: Erfahren Sie, wie der Assistent für die Bereitstellung von SSIS-Paketen Pakete auf bekannte Probleme überprüft, die die ordnungsgemäße Ausführung der Pakete in Azure verhindern können.
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 09086d0f4ff9c5a3f69a922e0c17c046c84001fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0e19b7fe45acfdea692d1334719e9dc8721124df
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35328624"
 ---
-# <a name="validate-ssis-packages-deployed-to-azure"></a>Überprüfen von in Azure bereitgestellten SSIS-Paketen
-Wenn Sie auf einem Azure-Server ein SSIS-Projekt (SQL Server Integration Services) in der SSIS-Katalogdatenbank (SSISDB) bereitstellen, fügt der Assistent für die Paketbereitstellung hinter der Seite **Überprüfen** einen zusätzlichen Überprüfungsschritt hinzu. In diesem Überprüfungsschritt werden die im Projekt enthaltenen Pakete auf bekannte Probleme hin überprüft, die möglicherweise eine erwartungsgemäße Ausführung in der Azure SSIS Integration Runtime verhindern. Anschließend zeigt der Assistent alle zutreffenden Warnungen auf der Seite **Überprüfen** an.
+# <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>Überprüfen von in Azure bereitgestellten SSIS-Paketen
+
+Wenn Sie auf einem Azure-Server ein SSIS-Projekt (SQL Server Integration Services) in der SSIS-Katalog (SSISDB) bereitstellen, fügt der Assistent für die Paketbereitstellung hinter der Seite **Überprüfen** einen zusätzlichen Überprüfungsschritt hinzu. In diesem Überprüfungsschritt werden die im Projekt enthaltenen Pakete auf bekannte Probleme hin überprüft, die möglicherweise eine erwartungsgemäße Ausführung in der Azure SSIS Integration Runtime verhindern. Anschließend zeigt der Assistent alle zutreffenden Warnungen auf der Seite **Überprüfen** an.
 
 > [!IMPORTANT]
 > Die in diesem Artikel beschriebene Überprüfung tritt ein, wenn Sie ein Projekt mit SQL Server Data Tools (SSDT), Version 17.4 oder höher, bereitstellen. Informationen zum Abrufen der neuesten Version von SSDT finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md).
@@ -29,7 +30,7 @@ Weitere Informationen zum Assistenten für die Paketbereitstellung finden sie un
 ## <a name="validate-connection-managers"></a>Überprüfen von Verbindungs-Managern
 
 Der Assistent überprüft bestimmte Verbindungs-Manager auf die folgenden Probleme, die zu einem Verbindungsfehler führen können:
-- **Windows-Authentifizierung**. Wenn eine Verbindung Windows-Authentifizierung verwendet, löst die Überprüfung eine Warnung aus. Für Windows-Authentifizierung sind zusätzliche Konfigurationsschritte erforderlich. Weitere Informationen finden Sie unter [Herstellen von Verbindungen mit lokalen Datenquellen mit Windows-Authentifizierung](ssis-azure-connect-with-windows-auth.md).
+- **Windows-Authentifizierung**. Wenn eine Verbindung Windows-Authentifizierung verwendet, löst die Überprüfung eine Warnung aus. Für Windows-Authentifizierung sind zusätzliche Konfigurationsschritte erforderlich. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit Datenquellen und Dateifreigaben mit der Windows-Authentifizierung](ssis-azure-connect-with-windows-auth.md).
 - **Dateipfad**. Wenn eine Verbindungszeichenfolge einen hartcodierten lokalen Dateipfad wie `C:\\...` enthält, löst die Überprüfung eine Warnung aus. Bei Paketen, die einen absoluten Pfad enthalten, tritt möglicherweise ein Fehler auf.
 - **UNC-Pfad**. Wenn eine Verbindungszeichenfolge einen UNC-Pfad enthält, löst die Überprüfung eine Warnung aus. Bei Paketen, die einen UNC-Pfad enthalten, tritt möglicherweise ein Fehler auf, normalerweise, weil für den Zugriff auf einen UNC-Pfad Windows-Authentifizierung erforderlich ist.
 - **HostName**. Wenn eine Servereigenschaft den Hostnamen anstelle der IP-Adresse enthält, löst die Überprüfung eine Warnung aus. Bei Paketen, die einen Hostnamen enthalten, tritt möglicherweise ein Fehler auf, normalerweise, weil für das virtuelle Azure-Netzwerk die richtige DNS-Konfiguration erforderlich ist, damit die DNS-Namensauflösung unterstützt werden kann.
@@ -80,4 +81,4 @@ Die Überprüfung löst eine Warnung aus, wenn ein Paket eine Skriptaufgabe oder
 Das ORC-Format wird für das HDFS-Ziel und das Azure Data Lake Store-Ziel nicht unterstützt.
 
 ## <a name="next-steps"></a>Nächste Schritte
-Informationen zum Erlernen des Planens der Paketausführung unter Azure finden Sie unter [Planen der Ausführung eines SSIS-Pakets unter Azure](ssis-azure-schedule-packages.md).
+Informationen zum Planen der Paketausführung in Azure finden Sie unter [Planen der Ausführung eines SSIS-Pakets in Azure](ssis-azure-schedule-packages.md).

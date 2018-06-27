@@ -23,16 +23,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d74e96029a7f28e6547c74c34bc5de9e0b656d8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 45446ffcf04092574737640fd338a35f04497181
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239030"
 ---
 # <a name="datefromparts-transact-sql"></a>DATEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Gibt einen **date**-Wert für das angegebene Jahr, den Monat und den Tag zurück.
+Diese Funktion gibt einen **date**-Wert zurück, der den angegebenen Jahres-, Monats- und Tageswerten zugeordnet wird.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -44,24 +45,24 @@ DATEFROMPARTS ( year, month, day )
   
 ## <a name="arguments"></a>Argumente  
 *year*  
-Ganzzahliger Ausdruck, der ein Jahr angibt.
+Ein ganzzahliger Ausdruck, der ein Jahr angibt.
   
 *month*  
-Ganzzahliger Ausdruck, der einen Monat angibt (von 1 bis 12).
+Ein ganzzahliger Ausdruck, der einen Monat angibt (von 1 bis 12).
   
 *day*  
-Ganzzahliger Ausdruck, der einen Tag angibt.
+Ein ganzzahliger Ausdruck, der einen Tag angibt.
   
 ## <a name="return-types"></a>Rückgabetypen
-**Datum**
+**date**
   
 ## <a name="remarks"></a>Remarks  
-**DATEFROMPARTS** gibt einen **date**-Wert zurück, bei dem die Datumskomponente auf das angegebene Jahr, den Monat und den Tag sowie die Uhrzeitkomponente auf den Standardwert festgelegt sind. Wenn die Argumente nicht gültig sind, wird ein Fehler ausgelöst. Wenn erforderliche Argumente den Wert NULL haben, wird NULL zurückgegeben.
+`DATEFROMPARTS` gibt einen **date**-Wert zurück, bei dem die Datumskomponente auf das angegebene Jahr, den Monat und den Tag und die Uhrzeitkomponente auf den Standardwert festgelegt sind. Bei ungültigen Argumenten löst `DATEFROMPARTS` einen Fehler aus. `DATEFROMPARTS` gibt NULL zurück, wenn mindestens ein erforderliches Argument den Wert NULL enthält.
   
-Diese Funktion kann remote auf [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-Servern oder höher ausgeführt werden. Eine Remoteausführung auf Servern mit einer Version unter [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ist nicht möglich.
+Diese Funktion kann das Remoting zu [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-Servern und höher verarbeiten. Sie kann nicht das Remoting zu Servern einer niedrigeren Version als [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] verarbeiten.
   
 ## <a name="examples"></a>Beispiele  
-Das folgende Beispiel zeigt die Verwendung dieser **DATEFROMPARTS**-Funktion.
+In diesem Beispiel wird die `DATEFROMPARTS`-Funktion in Aktion dargestellt.
   
 ```sql
 SELECT DATEFROMPARTS ( 2010, 12, 31 ) AS Result;  

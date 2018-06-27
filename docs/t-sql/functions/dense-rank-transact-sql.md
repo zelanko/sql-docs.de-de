@@ -26,18 +26,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 54121ef549fb76639ec526b3128ffa8abfd7a849
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9f63145f4a828507660b4401c3c52e79f9e49153
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239280"
 ---
 # <a name="denserank-transact-sql"></a>DENSE_RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Gibt den Rang von Zeilen innerhalb der Partition eines Resultsets ohne Lücken in der Rangfolge an. Der Rang einer Zeile ist 1 plus die Anzahl der Ränge vor der fraglichen Zeile.  
+Diese Funktion gibt den Rang jeder Zeile innerhalb einer Resultsetpartition ohne Lücken in den Rangwerten zurück. Der Rang einer bestimmten Zeile ist 1 plus die Anzahl der unterschiedlichen Rangwerte vor dieser Zeile.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,25 +48,25 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
   
 ## <a name="arguments"></a>Argumente  
  \<partition_by_clause>  
- Teilt das von der [FROM](../../t-sql/queries/from-transact-sql.md)-Klausel erzeugte Resultset in Partitionen, auf die die DENSE_RANK-Funktion angewendet wird. Weitere Informationen zur Syntax von PARTITION BY finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+Hierdurch wir das von der [FROM-Klausel](../../t-sql/queries/from-transact-sql.md) erzeugte Resultset zunächst partitioniert. Anschließend wird die `DENSE_RANK`-Funktion auf alle Partitionen angewendet. Weitere Informationen zur `PARTITION BY`-Syntax finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
  \<order_by_clause>  
- Legt die Reihenfolge fest, in der die DENSE_RANK-Funktion auf die Zeilen in einer Partition angewendet werden.  
+Bestimmt die Reihenfolge, in der die `DENSE_RANK`-Funktion auf die Zeilen in einer Partition angewendet wird.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **bigint**  
   
 ## <a name="remarks"></a>Remarks  
- Wenn zwei oder mehr Zeilen den gleichen Rang in einer Partition beanspruchen, erhalten alle entsprechenden Zeilen denselben Rang. Wenn beispielsweise zwei Vertriebsmitarbeiter denselben SalesYTD-Wert aufweisen, erhalten beide den Rang 1. Der Vertriebsmitarbeiter mit dem nächsthöchsten SalesYTD-Wert erhält Rang 2. Diese Zahl ist um 1 höher als die Anzahl der unterschiedlichen Zeilen vor dieser Zeile. Deshalb weisen die von der DENSE_RANK-Funktion zurückgegebenen Zahlen keine Lücken auf und bilden stets fortlaufende Rangfolgen.  
+Wenn zwei oder mehr Zeilen den gleichen Rangwert in derselben Partition aufweisen, erhalten diese Zeilen den gleichen Rang. Wenn beispielsweise zwei Vertriebsmitarbeiter denselben SalesYTD-Wert aufweisen, erhalten beide den Rangwert 1. Der Vertriebsmitarbeiter mit dem nächsthöchsten SalesYTD-Wert erhält den Rangwert 2. Dies überschreitet die Anzahl der unterschiedlichen Zeilen, die vor der fraglichen Zeile stehen, um 1. Deshalb weisen die von der `DENSE_RANK`-Funktion zurückgegebenen Zahlen keine Lücken auf und bilden stets fortlaufende Rangwerte.  
   
- Die für die gesamte Abfrage verwendete Sortierreihenfolge bestimmt die Reihenfolge, in der die Zeilen in einem Resultset angezeigt werden. Daraus geht hervor, dass eine als Rang 1 festgelegte Zeile nicht notwendigerweise die erste Zeile in der Partition sein muss.  
+Die für die gesamte Abfrage verwendete Sortierreihenfolge bestimmt die Reihenfolge der Zeilen im Resultset. Daraus geht hervor, dass eine als Rang 1 festgelegte Zeile nicht notwendigerweise die erste Zeile in der Partition sein muss.  
   
- DENSE_RANK ist nicht deterministisch. Weitere Informationen finden Sie unter [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+`DENSE_RANK` ist nicht deterministisch. Weitere Informationen finden Sie unter [Deterministische und nicht deterministische Funktionen](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-ranking-rows-within-a-partition"></a>A. Ordnen von Zeilen innerhalb einer Partition  
- Im folgenden Beispiel wird die Rangfolge der Produkte im Bestand für die angegebenen Lagerstandorte gemäß ihren Mengen bestimmt. Das Resultset wird nach `LocationID` partitioniert und logisch nach `Quantity` sortiert. Beachten Sie, dass die Produkte 494 und 495 die gleiche Menge haben. Da sie verbunden sind, wird beiden Rang 1 zugeordnet.  
+In diesem Beispiel wird die Rangfolge der Produkte im Bestand für die angegebenen Lagerstandorte gemäß ihren Mengen bestimmt. `DENSE_RANK` partitioniert das Resultset nach `LocationID` und sortiert es logisch nach `Quantity`. Beachten Sie, dass die Produkte 494 und 495 die gleiche Menge haben. Da beide den gleichen Mengenwert aufweisen, haben sie einen Rangwert von 1.  
   
 ```  
 USE AdventureWorks2012;  
@@ -102,7 +103,7 @@ ProductID   Name                               LocationID Quantity Rank
 ```  
   
 ### <a name="b-ranking-all-rows-in-a-result-set"></a>B. Ordnen aller Zeilen in einem Resultset  
- Im folgenden Beispiel werden die ersten zehn nach ihrem Gehalt geordneten Mitarbeiter zurückgegeben. Da keine PARTITION BY-Klausel angegeben wurde, wurde die DENSE_RANK-Funktion auf alle Zeilen im Resultset angewendet.  
+In diesem Beispiel werden die ersten zehn Mitarbeiter nach ihrem Gehalt geordneten zurückgegeben. Da die `SELECT`-Anweisung keine `PARTITION BY`-Klausel angegeben hat, gilt die `DENSE_RANK`-Funktion für alle Resultsetzeilen.  
   
 ```  
 USE AdventureWorks2012;  
@@ -130,7 +131,14 @@ BusinessEntityID Rate                  RankBySalary
 ```  
   
 ## <a name="c-four-ranking-functions-used-in-the-same-query"></a>C. Vier Rangfolgefunktionen, die in derselben Abfrage verwendet werden  
- Im Folgenden sind die in derselben Abfrage verwendeten vier Rangfolgefunktionen dargestellt. Funktionsspezifische Beispiele finden Sie unter der jeweiligen Rangfolgefunktion.  
+In diesem Beispiel werden die vier Rangfolgefunktionen veranschaulicht:
+
++ [DENSE_RANK()](./dense-rank-transact-sql.md)
++ [NTILE()](./ntile-transact-sql.md)
++ [RANK()](./rank-transact-sql.md)
++ [ROW_NUMBER()](./row-number-transact-sql.md)
+
+Diese werden hier in derselben Abfrage verwendet. Funktionsspezifische Beispiele finden Sie unter der jeweiligen Rangfolgefunktion.  
   
 ```  
 USE AdventureWorks2012;  
@@ -172,7 +180,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="d-ranking-rows-within-a-partition"></a>D: Ordnen von Zeilen innerhalb einer Partition  
- Im folgenden Beispiel wird die Rangfolge der Vertriebsmitarbeiter in jedem Vertriebsgebiet auf Grundlage von deren Gesamtumsatz bestimmt. Das Rowset wird auf der Grundlage von `SalesTerritoryGroup` partitioniert und nach `SalesAmountQuota` sortiert.  
+Im diesem Beispiel wird die Rangfolge der Vertriebsmitarbeiter in jedem Vertriebsgebiet auf Grundlage von deren Gesamtumsatz bestimmt. `DENSE_RANK` partitioniert das Rowset nach `SalesTerritoryGroup` und sortiert das Resultset nach `SalesAmountQuota`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -183,7 +191,7 @@ FROM dbo.DimEmployee AS e
 INNER JOIN dbo.FactSalesQuota AS sq ON e.EmployeeKey = sq.EmployeeKey  
 INNER JOIN dbo.DimSalesTerritory AS st ON e.SalesTerritoryKey = st.SalesTerritoryKey  
 WHERE SalesPersonFlag = 1 AND SalesTerritoryGroup != N'NA'  
-GROUP BY LastName,SalesTerritoryGroup;  
+GROUP BY LastName, SalesTerritoryGroup;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

@@ -24,46 +24,76 @@ caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 212ce15f0d28b16b81a9c07d785c129b039cdc6d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 61fef12748ce57eee1008fee29c864246774831b
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239144"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Verschlüsselt Daten mit einem asymmetrischen Schlüssel.  
+Diese Funktion verschlüsselt Daten mit einem asymmetrischen Schlüssel.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )  
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Asym_Key_ID*  
- Die ID eines asymmetrischen Schlüssels in der Datenbank. **int**.  
+*asym_key_ID*  
+Die ID eines asymmetrischen Schlüssels in der Datenbank. *asym_Key_ID* weist den Datentyp **int** auf.  
   
- *Klartext*  
- Eine Zeichenfolge der Daten, die mit dem asymmetrischen Schlüssel verschlüsselt werden.  
+*Klartext*  
+Eine Zeichenfolge von Daten, die `ENCRYPTBYASYMKEY` mit dem asymmetrischen Schlüssel verschlüsselt. *Klartext* kann die Datentypen
+ 
++ **binary**
++ **char**
++ **nchar**
++ **nvarchar**
++ **varbinary**
   
- **@plaintext**  
- Eine Variable vom Typ **nvarchar**, **char**, **varchar**, **binary**, **varbinary** oder **nchar** mit Daten, die mit dem asymmetrischen Schlüssel verschlüsselt werden sollen.  
+oder
+  
++ **varchar**
+ 
+aufweisen.  
+  
+**@plaintext**  
+Eine Variable, die einen Wert enthält, der von `ENCRYPTBYASYMKEY` mit dem asymmetrischen Schlüssel verschlüsselt wird. **@plaintext** kann die Datentypen
+  
++ **binary**
++ **char**
++ **nchar**
++ **nvarchar**
++ **varbinary**
+  
+oder
+  
++ **varchar**
+ 
+aufweisen.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **varbinary** mit einer maximalen Größe von 8.000 Bytes.  
+**varbinary** mit einer maximalen Größe von 8.000 Byte.  
   
 ## <a name="remarks"></a>Remarks  
- Das Verschlüsseln und Entschlüsseln mit einem asymmetrischen Schlüssel ist im Vergleich zum Verschlüsseln und Entschlüsseln mit einem symmetrischen Schlüssel sehr teuer. Es ist nicht empfehlenswert, große Datasets, wie z. B. Benutzerdaten in Tabellen, mithilfe eines asymmetrischen Schlüssels zu verschlüsseln. Stattdessen sollten Sie die Daten mithilfe eines starken symmetrischen Schlüssels verschlüsseln und den symmetrischen Schlüssel mithilfe eines asymmetrischen Schlüssels verschlüsseln.  
+Verschlüsselungs- und Entschlüsselungsvorgänge, die asymmetrische Schlüssel verwenden, verwenden viele Ressourcen und werden deshalb sehr aufwendig, verglichen mit der Verschlüsselung und Entschlüsselung mit einem symmetrischen Schlüssel. Es wird empfohlen, dass Entwickler asymmetrische Schlüssel für Verschlüsselungs- und Entschlüsselungsvorgänge auf großen Datasets vermeiden, z.B. bei Benutzerdaten in Datenbanktabellen. Stattdessen sollten Entwickler die Daten zunächst mit einem starken symmetrischen Schlüssel verschlüsseln und dann diesen symmetrischen Schlüssel mit einem asymmetrischen Schlüssel verschlüsseln.  
   
- **EncryptByAsymKey** gibt je nach Algorithmus **NULL** zurück, wenn die Eingabe eine bestimmte Anzahl von Bytes überschreitet. Die Grenzwerte lauten wie folgt: ein 512-Bit-RSA-Schlüssel kann bis zu 53 Bytes verschlüsseln, ein 1024-Bit-Schlüssel kann bis zu 117 Bytes verschlüsseln, und ein 2048-Bit-Schlüssel kann bis zu 245 Bytes verschlüsseln. (Beachten Sie, dass in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beide Zertifikate und asymmetrischen Schlüssel Wrapper für RSA-Schlüssel sind.)  
+`ENCRYPTBYASYMKEY` gibt je nach Algorithmus **NULL** zurück, wenn die Eingabe eine bestimmte Anzahl von Bytes überschreitet. Die spezifischen Grenzwerte:
+
++ Ein 512-Bit-RSA-Schlüssel kann bis zu 53 Bytes verschlüsseln
++ Ein 1024-Bit-Schlüssel kann bis zu 117 Bytes verschlüsseln
++ Ein 2048-Bit-Schlüssel kann bis zu 245 Bytes verschlüsseln
+
+Beachten Sie, dass sowohl Zertifikate als auch asymmetrische Schlüssel in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Wrapper für RSA-Schlüssel dienen.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird der in `@cleartext` gespeicherte Text mit dem asymmetrischen Schlüssel `JanainaAsymKey02` verschlüsselt. Die verschlüsselten Daten werden in die `ProtectedData04`-Tabelle eingefügt.  
+Im folgenden Beispiel wird der in `@cleartext` gespeicherte Text mit dem asymmetrischen Schlüssel `JanainaAsymKey02` verschlüsselt. Due Anweisung fügt die verschlüsselten Daten in die Tabelle `ProtectedData04` ein.  
   
 ```  
 INSERT INTO AdventureWorks2012.Sales.ProtectedData04   

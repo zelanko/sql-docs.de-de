@@ -27,17 +27,18 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d17356f6730db14e85b9ab3c8186f4b474525608
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 87e80452c46d74c819affb9e9dd2695ec2789115
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249523"
 ---
 # <a name="errorseverity-transact-sql"></a>ERROR_SEVERITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Gibt den Schweregrad des Fehlers zurück, der die Ausführung des CATCH-Blockes eines TRY…CATCH-Konstrukts bewirkt hat.  
-  
+Diese Funktion gibt den Wert des Schweregrads für den Fehler zurück, an dem der Fehler auftritt, wenn durch diesen die Ausführung des CATCH-Blocks eines TRY…CATCH-Konstrukts verursacht wurde.  
+
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
@@ -50,22 +51,21 @@ ERROR_SEVERITY ( )
  **int**  
   
 ## <a name="return-value"></a>Rückgabewert  
- Bei einem Aufruf in einem CATCH-Block wird der Schweregrad der Fehlermeldung zurückgegeben, die die Ausführung des CATCH-Blockes bewirkt hat.  
-  
- Gibt NULL zurück, wenn die Funktion außerhalb des Bereichs eines CATCH-Blockes aufgerufen wird.  
+Wenn diese Funktion in einem CATCH-Block aufgerufen wird, in dem ein Fehler auftritt, gibt `ERROR_SEVERITY` den Wert des Schweregrads für den Fehler zurück, der die Ausführung des `CATCH`-Blocks ausgelöst hat.  
+
+`ERROR_SEVERITY` gibt NULL zurück, wenn die Funktion außerhalb des Bereichs eines CATCH-Blocks aufgerufen wird.  
   
 ## <a name="remarks"></a>Remarks  
- ERROR_SEVERITY kann von einer beliebigen Stelle innerhalb des Bereichs eines CATCH-Blockes aufgerufen werden.  
+`ERROR_SEVERITY` kann überall im Bereich eines CATCH-Blocks aufgerufen werden.  
   
- ERROR_SEVERITY gibt den Fehlerschweregrad unabhängig von der Anzahl der Ausführungen oder von der Stelle der Ausführung innerhalb des Bereichs des CATCH-Blockes zurück. Dies steht im Gegensatz zu Funktionen wie @@ERROR, die nur die Fehlernummer in der Anweisung zurückgeben, die unmittelbar auf die einen Fehler verursachende Anweisung folgt oder in der ersten Anweisung eines CATCH-Blocks steht.  
+`ERROR_SEVERITY` gibt unabhängig von der Anzahl der Aufrufe und dem Bereich des `CATCH`-Blocks den Wert des Fehlerschweregrads zurück. Dies steht im Gegensatz zu Funktionen wie @@ERROR, die nur eine Fehlernummer in der Anweisung zurückgeben, die unmittelbar auf die Anweisung folgt, die einen Fehler auslöst.  
   
- In geschachtelten CATCH-Blöcken gibt ERROR_SEVERITY den für den Bereich des CATCH-Blockes spezifischen Fehlerschweregrad zurück, auf den im Block verwiesen wird. Beispielsweise könnte der CATCH-Block eines äußeren TRY...CATCH-Konstrukts ein geschachteltes TRY...CATCH-Konstrukt aufweisen. Innerhalb des geschachtelten CATCH-Blockes gibt ERROR_SEVERITY den Schweregrad des Fehlers zurück, der den geschachtelten CATCH-Block aufgerufen hat. Wird ERROR_SEVERITY im äußeren CATCH-Block ausgeführt, wird der Schweregrad des Fehlers zurückgegeben, der den CATCH-Block aufgerufen hat.  
+`ERROR_SEVERITY` arbeitet in der Regel in einem geschachtelten `CATCH`-Block. `ERROR_SEVERITY` gibt den Wert des Fehlerschweregrads für den entsprechenden Bereich des `CATCH`-Blocks zurück, der auf den `CATCH`-Block verwiesen hat. Zum Beispiel könnte der `CATCH`-Block eines äußeren TRY...CATCH-Konstrukts ein inneres `TRY...CATCH`-Konstrukt aufweisen. In diesem inneren `CATCH`-Block gibt `ERROR_SEVERITY` die Wert des Schweregrads für den Fehler zurück, der den inneren `CATCH`-Block aufgerufen hat. Wenn `ERROR_SEVERITY` im äußeren `CATCH`-Block ausgeführt wird, wird der Wert des Schweregrads für den Fehler zurückgegeben, der den äußeren `CATCH`-Block aufgerufen hat.  
   
-## <a name="examples"></a>Beispiele  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="a-using-errorseverity-in-a-catch-block"></a>A. Verwenden von ERROR_SEVERITY in einem CATCH-Block  
- Das folgende Beispiel zeigt eine `SELECT`-Anweisung, die einen Fehler aufgrund einer Division durch 0 (null) generiert. Der Schweregrad des Fehlers wird zurückgegeben.  
-  
+Dieses Beispiel zeigt eine gespeicherte Prozedur, in der ein Fehler aufgrund einer Division durch 0 (null) generiert wird. `ERROR_SEVERITY` gibt den Wert für den Schweregrad des Fehlers zurück.  
 ```  
   
 BEGIN TRY  
@@ -76,11 +76,22 @@ BEGIN CATCH
     SELECT ERROR_SEVERITY() AS ErrorSeverity;  
 END CATCH;  
 GO  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorSeverity
+-------------
+16
+
+(1 row(s) affected)
+
 ```  
   
 ### <a name="b-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>B. Verwenden von ERROR_SEVERITY in einem CATCH-Block mit anderen Tools zur Fehlerbehandlung  
- Das folgende Beispiel zeigt eine `SELECT`-Anweisung, die einen Fehler aufgrund einer Division durch Null generiert. Abgesehen von Schweregrad werden Informationen im Zusammenhang mit dem Fehler zurückgegeben.  
-  
+Das folgende Beispiel zeigt eine `SELECT`-Anweisung, die einen Fehler aufgrund einer Division durch 0 (null) generiert. Die gespeicherte Prozedur gibt Informationen über den Fehler zurück.  
+
 ```  
   
 BEGIN TRY  
@@ -97,28 +108,17 @@ BEGIN CATCH
         ERROR_MESSAGE() AS ErrorMessage;  
 END CATCH;  
 GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
-  
-### <a name="c-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>C. Verwenden von ERROR_SEVERITY in einem CATCH-Block mit anderen Tools zur Fehlerbehandlung  
- Das folgende Beispiel zeigt eine `SELECT`-Anweisung, die einen Fehler aufgrund einer Division durch Null generiert. Abgesehen von Schweregrad werden Informationen im Zusammenhang mit dem Fehler zurückgegeben.  
-  
-```  
-  
-BEGIN TRY  
-    -- Generate a divide-by-zero error.  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT  
-        ERROR_NUMBER() AS ErrorNumber,  
-        ERROR_SEVERITY() AS ErrorSeverity,  
-        ERROR_STATE() AS ErrorState,  
-        ERROR_PROCEDURE() AS ErrorProcedure,  
-        ERROR_MESSAGE() AS ErrorMessage;  
-END CATCH;  
-GO  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorNumber ErrorSeverity ErrorState  ErrorProcedure  ErrorLine   ErrorMessage
+----------- ------------- ----------- --------------- ----------- ----------------------------------
+8134        16            1           NULL            4           Divide by zero error encountered.
+
+(1 row(s) affected)
+
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  

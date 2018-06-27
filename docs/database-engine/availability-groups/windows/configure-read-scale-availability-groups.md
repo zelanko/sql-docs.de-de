@@ -11,29 +11,35 @@ ms.prod: sql
 ms.suite: sql
 ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.openlocfilehash: de62bd96371e93e9491b9c781da3b41f7086dc75
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 926e97d7aa6026946235d7abebdd5d3fd7023891
+ms.sourcegitcommit: 9e83f308008c9e0da505a6064f652c638b8dfe76
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34768346"
+ms.lasthandoff: 06/13/2018
+ms.locfileid: "35513005"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-windows"></a>Konfigurieren einer SQL Server-Verfügbarkeitsgruppe zur Leseskalierung unter Windows
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Sie können eine SQL Server-Always On-Verfügbarkeitsgruppe unter Windows für Workloads zur Leseskalierung konfigurieren. Für Verfügbarkeitsgruppen gibt es zwei Architekturtypen. Bei einer Architektur für Hochverfügbarkeit wird ein Cluster-Manager zur Gewährleistung einer verbesserten Geschäftskontinuität verwendet. Sie kann lesbare sekundäre Replikate enthalten. Informationen zur Erstellung dieser Architektur für Hochverfügbarkeit finden Sie unter [Erstellung und Konfiguration von Verfügbarkeitsgruppen unter Windows](creation-and-configuration-of-availability-groups-sql-server.md). Die andere Architektur unterstützt nur Workloads zur Leseskalierung. In diesem Artikel wird erläutert, wie eine Verfügbarkeitsgruppe ohne Cluster-Manager für Workloads zur Leseskalierung erstellt wird. Diese Architektur bietet nur Leseskalierung. Sie bietet keine Hochverfügbarkeit.
+Sie können eine SQL Server-Always On-Verfügbarkeitsgruppe unter Windows für Workloads zur Leseskalierung konfigurieren. Es gibt zwei Architekturtypen für Verfügbarkeitsgruppen:
+* Eine Architektur für Hochverfügbarkeit, die einen Cluster-Manager zur Gewährleistung einer verbesserten Geschäftskontinuität verwendet und lesbare sekundäre Replikate enthalten kann. Informationen zur Erstellung dieser Architektur für Hochverfügbarkeit finden Sie unter [Erstellung und Konfiguration von Verfügbarkeitsgruppen unter Windows](creation-and-configuration-of-availability-groups-sql-server.md). 
+* Eine Architektur, die nur Workloads zur Leseskalierung unterstützt. 
+
+In diesem Artikel wird erläutert, wie eine Verfügbarkeitsgruppe ohne Cluster-Manager für Workloads zur Leseskalierung erstellt wird. Diese Architektur bietet nur Leseskalierung. Sie bietet keine Hochverfügbarkeit.
 
 >[!NOTE]
->Eine Verfügbarkeitsgruppe mit `CLUSTER_TYPE = NONE` kann Replikate enthalten, die auf verschiedenen Betriebssystemplattformen gehostet werden. Sie kann keine Unterstützung für Hochverfügbarkeit bieten. Weitere Informationen für Linux-Betriebssysteme finden Sie unter [Konfigurieren einer SQL Server-Verfügbarkeitsgruppe zur Leseskalierung unter Linux](../../../linux/sql-server-linux-availability-group-configure-rs.md)
+>Eine Verfügbarkeitsgruppe mit `CLUSTER_TYPE = NONE` kann Replikate enthalten, die auf verschiedenen Betriebssystemplattformen gehostet werden. Sie kann keine Unterstützung für Hochverfügbarkeit bieten. Weitere Informationen für Linux-Betriebssysteme finden Sie unter [Konfigurieren einer SQL Server-Verfügbarkeitsgruppe zur Leseskalierung unter Linux](../../../linux/sql-server-linux-availability-group-configure-rs.md).
 
 [!INCLUDE [Create prerequisites](../../../includes/ss-availability-group-rs-prereq.md)]
 
-## <a name="create-the-ag"></a>Erstellen der Verfügbarkeitsgruppe
+## <a name="create-an-availability-group"></a>Erstellen einer Verfügbarkeitsgruppe
 
-Erstellen Sie die Verfügbarkeitsgruppe. Legen Sie `CLUSTER_TYPE = NONE` fest. Darüber hinaus sollten Sie jedes Replikat mit `FAILOVER_MODE = NONE` festlegen. Clientanwendungen, die Analysen durchführen oder Berichte zu Workloads erstellen, können eine direkte Verbindung mit der sekundären Datenbank herstellen. Sie können auch eine schreibgeschützte Routingliste erstellen. Anforderungen zum Lesen der Verbindung werden dann über Verbindungen mit dem primären Replikat in Round-Robin-Manier an jedes der in der Routingliste enthaltene sekundäre Replikat weitergeleitet.
+Erstellen einer Verfügbarkeitsgruppe Legen Sie `CLUSTER_TYPE = NONE` fest. Darüber hinaus sollten Sie jedes Replikat mit `FAILOVER_MODE = NONE` festlegen. Clientanwendungen, die Analysen durchführen oder Berichte zu Workloads erstellen, können eine direkte Verbindung mit sekundären Datenbanken herstellen. Sie können ebenfalls eine schreibgeschützte Routingliste erstellen. Anforderungen zum Lesen der Verbindung werden dann über Verbindungen mit dem primären Replikat in Round-Robin-Manier an jedes der in der Routingliste enthaltene sekundäre Replikat weitergeleitet.
 
-Das folgende Transact-SQL-Skript erstellt eine Verfügbarkeitsgruppe mit dem Namen `ag1`. Das Skript konfiguriert die Verfügbarkeitsgruppenreplikate mit `SEEDING_MODE = AUTOMATIC`. Diese Einstellung bewirkt, dass SQL Server die Datenbank automatisch auf jedem sekundären Server erstellt, nachdem diese zur Verfügbarkeitsgruppe hinzugefügt wurde. Aktualisieren Sie das folgende Skript für Ihre Umgebung. Ersetzen Sie die Werte `<node1>` und `<node2>` durch die Namen der SQL Server-Instanzen, auf denen die Replikate gehostet werden. Ersetzen Sie den Wert `<5022>` durch den Port, den Sie für den Endpunkt festgelegt haben. Führen Sie auf dem primären SQL Server-Replikat das folgende Transact-SQL-Skript aus:
+Im folgenden Transact-SQL-Skript wird eine Verfügbarkeitsgruppe namens `ag1` erstellt. Das Skript konfiguriert die Verfügbarkeitsgruppenreplikate mit `SEEDING_MODE = AUTOMATIC`. Diese Einstellung bewirkt, dass SQL Server die Datenbank automatisch auf jedem sekundären Server erstellt, nachdem diese zur Verfügbarkeitsgruppe hinzugefügt wurde. 
+
+Aktualisieren Sie das folgende Skript für Ihre Umgebung. Ersetzen Sie die Werte `<node1>` und `<node2>` durch die Namen der SQL Server-Instanzen, auf denen die Replikate gehostet werden. Ersetzen Sie den Wert `<5022>` durch den Port, den Sie für den Endpunkt festgelegt haben. Führen Sie auf dem primären SQL Server-Replikat das folgende Transact-SQL-Skript aus:
 
 ```sql
 CREATE AVAILABILITY GROUP [ag1]
@@ -57,9 +63,9 @@ CREATE AVAILABILITY GROUP [ag1]
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 ```
 
-### <a name="join-secondary-sql-servers-to-the-ag"></a>Verknüpfen sekundärer SQL-Server mit der Verfügbarkeitsgruppe
+### <a name="join-secondary-sql-server-instances-to-the-availability-group"></a>Verknüpfen von sekundären SQL Server-Instanzen mit der Verfügbarkeitsgruppe
 
-Das folgende Transact-SQL-Skript verknüpft einen Server mit einer Verfügbarkeitsgruppe mit dem Namen `ag1`. Aktualisieren Sie das Skript für Ihre Umgebung. Führen Sie auf jedem sekundären SQL Server-Replikat das folgende Transact-SQL-Skript aus, um die Verfügbarkeitsgruppe zu verknüpfen:
+Das folgende Transact-SQL-Skript verknüpft einen Server mit einer Verfügbarkeitsgruppe namens `ag1`. Aktualisieren Sie das Skript für Ihre Umgebung. Führen Sie folgendes Transact-SQL-Skript auf jedem sekundären SQL Server-Replikat aus, um die Verfügbarkeitsgruppe zu verknüpfen:
 
 ```sql
 ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = NONE);
@@ -69,14 +75,13 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 [!INCLUDE [Create post](../../../includes/ss-availability-group-rs-postactivity.md)]
 
-Bei dieser Verfügbarkeitsgruppe handelt es sich um keine Hochverfügbarkeitskonfiguration. Wenn Sie Hochverfügbarkeit benötigen, befolgen Sie die Anweisungen unter [Konfigurieren einer Always On-Verfügbarkeitsgruppe für SQL Server unter Linux](../../../linux/sql-server-linux-availability-group-configure-ha.md) oder unter [Erstellung und Konfiguration von Verfügbarkeitsgruppen unter Windows](creation-and-configuration-of-availability-groups-sql-server.md).
+Bei dieser Verfügbarkeitsgruppe handelt es sich nicht um eine Hochverfügbarkeitskonfiguration. Wenn Sie Hochverfügbarkeit benötigen, befolgen Sie die Anweisungen unter [Konfigurieren einer Always On-Verfügbarkeitsgruppe für SQL Server unter Linux](../../../linux/sql-server-linux-availability-group-configure-ha.md) oder unter [Erstellung und Konfiguration von Verfügbarkeitsgruppen unter Windows](creation-and-configuration-of-availability-groups-sql-server.md).
 
 ## <a name="connect-to-read-only-secondary-replicas"></a>Verbinden mit schreibgeschützten sekundären Replikaten
 
-Es gibt zwei Möglichkeiten für die Verbindung mit schreibgeschützten sekundären Replikaten. Anwendungen können eine direkte Verbindung mit der SQL Server-Instanz herstellen, auf der das sekundäre Replikat gehostet wird, und die Datenbanken abfragen. Sie können auch schreibgeschütztes Routing verwenden, wofür ein Listener erforderlich ist.
-
-* [Lesbare sekundäre Replikate](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)
-* [Schreibgeschütztes Routing](listeners-client-connectivity-application-failover.md#ConnectToSecondary)
+Es gibt zwei Möglichkeiten für die Verbindung mit schreibgeschützten sekundären Replikaten:
+* Anwendungen können eine direkte Verbindung mit der SQL Server-Instanz herstellen, auf der das sekundäre Replikat gehostet wird, und die Datenbanken abfragen. Weitere Informationen finden Sie unter [Lesbare sekundäre Replikate](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).
+* Anwendungen können ebenfalls schreibgeschütztes Routing verwenden. Hierfür ist ein Listener erforderlich. Weitere Informationen finden Sie unter [Schreibgeschütztes Routing](listeners-client-connectivity-application-failover.md#ConnectToSecondary).
 
 ## <a name="fail-over-the-primary-replica-on-a-read-scale-availability-group"></a>Ausführen eines Failovers des primären Replikats auf eine schreibgeschützte Verfügbarkeitsgruppe
 

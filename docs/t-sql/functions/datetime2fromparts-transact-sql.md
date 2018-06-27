@@ -23,16 +23,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1a6cee0f40ba7cd92024fd11b82a32c3de99d0e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6e6f5d64408bc74b069ba4fbd7f39b98ed2f278d
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239230"
 ---
 # <a name="datetime2fromparts-transact-sql"></a>DATETIME2FROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Gibt einen **datetime2**-Wert für das angegebene Datum und die angegebene Uhrzeit mit der angegebenen Genauigkeit zurück.
+Diese Funktion gibt einen **datetime2**-Wert für die angegebenen Argumente für Datum und Zeit zurück. Der zurückgegebene Wert verfügt über eine Genauigkeit, die durch das precision-Argument angegeben wird.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -44,41 +45,42 @@ DATETIME2FROMPARTS ( year, month, day, hour, minute, seconds, fractions, precisi
   
 ## <a name="arguments"></a>Argumente  
 *year*  
-Ganzzahliger Ausdruck, der ein Jahr angibt.
+Ein ganzzahliger Ausdruck, der ein Jahr angibt.
   
 *month*  
-Ganzzahliger Ausdruck, der einen Monat angibt.
+Ein ganzzahliger Ausdruck, der einen Monat angibt.
   
 *day*  
-Ganzzahliger Ausdruck, der einen Tag angibt.
+Ein ganzzahliger Ausdruck, der einen Tag angibt.
   
- *hour*  
-Ganzzahliger Ausdruck, der die Stunden angibt.
+*hour*  
+Ein ganzzahliger Ausdruck, der die Stunden angibt.
   
-*minute*-Integerausdruck, der die Minuten angibt.
+*minute*  
+Ein ganzzahliger Ausdruck, der die Minuten angibt.
   
 *Sekunden*  
-Ganzzahliger Ausdruck, der die Sekunden angibt.
+Ein ganzzahliger Ausdruck, der die Sekunden angibt.
   
 *fractions*  
-Ganzzahliger Ausdruck, der die Sekundenbruchteile angibt.
+Ein ganzzahliger Ausdruck, der einen Wert für Sekundenbruchteile angibt.
   
 *precision*  
-Ganzzahliges Literal, das die Genauigkeit des zurückzugebenden **datetime2**-Werts angibt.
+Ein ganzzahliger Ausdruck, der die Genauigkeit des **datetime2**-Werts angibt, der von `DATETIME2FROMPARTS` zurückgegeben wird.
   
 ## <a name="return-types"></a>Rückgabetypen
 **datetime2(** *precision* **)**
   
 ## <a name="remarks"></a>Remarks  
-**DATETIME2FROMPARTS** gibt einen vollständig initialisierten **datetime2**-Wert zurück. Wenn die Argumente nicht gültig sind, wird ein Fehler ausgelöst. Wenn erforderliche Argumente den Wert NULL haben, wird NULL zurückgegeben. Wenn jedoch das *precision*-Argument NULL ist, wird ein Fehler ausgelöst.
+`DATETIME2FROMPARTS` gibt einen vollständig initialisierten **datetime2**-Wert zurück. `DATETIME2FROMPARTS` löst einen Fehler aus, wenn mindestens ein erforderliches Argument über einen ungültigen Wert verfügt. `DATETIME2FROMPARTS` gibt NULL zurück, wenn mindestens ein erforderliches Argument den Wert NULL enthält. Wenn das *precision*-Argument jedoch einen NULL-Wert enthält, löst `DATETIME2FROMPARTS` einen Fehler aus.
+
+Das *fractions*-Argument ist vom *precision*-Argument abhängig. Wenn *precision* beispielsweise den Wert 7 aufweist, stellt jeder Bruchteil 100 Nanosekunden dar. Wenn *precision* jedoch den Wert 3 aufweist, stellt jeder Bruchteil eine Millisekunde dar. Wenn der Wert von *precision* 0 (null) ist, muss auch der Wert von *fractions* 0 (null) sein; andernfalls löst `DATETIME2FROMPARTS` einen Fehler aus.
   
-Das *fractions*-Argument ist vom *precision*-Argument abhängig. Wenn beispielsweise *precision* den Wert 7 hat, stellt jeder Bruchteil 100 Nanosekunden dar. Ist *precision* jedoch 3, stellt jeder Bruchteil eine Millisekunde dar. Wenn der Wert von *precision* 0 (null) ist, muss auch der Wert von *fractions* 0 (null) sein; andernfalls wird ein Fehler ausgelöst.
-  
-Diese Funktion kann remote auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Servern oder höher ausgeführt werden. Eine Remoteausführung auf Servern mit einer Version vor [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ist nicht möglich.
+Diese Funktion unterstützt das Remoting zu [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Servern und höher. Sie unterstützt nicht das Remoting zu Servern mit einer Version unter [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-simple-example-without-fractions-of-a-second"></a>A. Einfaches Beispiel ohne Sekundenbruchteile  
+### <a name="a-an-example-without-fractions-of-a-second"></a>A. Ein Beispiel ohne Sekundenbruchteile  
   
 ```sql
 SELECT DATETIME2FROMPARTS ( 2010, 12, 31, 23, 59, 59, 0, 0 ) AS Result;  
@@ -95,7 +97,7 @@ Result
 ```  
   
 ### <a name="b-example-with-fractions-of-a-second"></a>B. Beispiel mit Sekundenbruchteilen  
-Das folgende Beispiel zeigt die Verwendung der Parameter *fractions* und *precision*:
+Dieses Beispiel zeigt die Verwendung der Parameter *fractions* und *precision*:
   
 1.  Wenn *fractions* den Wert 5 und *precision* den Wert 1 hat, stellt der Wert von *fractions* 5/10 einer Sekunde dar.  
   

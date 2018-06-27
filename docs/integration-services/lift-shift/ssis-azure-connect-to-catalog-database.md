@@ -1,32 +1,32 @@
 ---
-title: Herstellen einer Verbindung mit der SSIS-Katalogdatenbank (SSISDB) in Azure | Microsoft-Dokumentation
+title: Herstellen einer Verbindung mit dem SSIS-Katalog (SSISDB) in Azure | Microsoft-Dokumentation
+description: Finden Sie Verbindungsinformationen, die benötigt werden, um eine Verbindung mit dem auf einem Azure SQL-Datenbankserver gehosteten SSIS-Katalog (SSISDB) herzustellen.
 ms.date: 09/25/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ef69dc52b041541b89052038cadad94b9fa2f45c
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 00e2c2e9ce845a6775ea4baee458253ba5e1162c
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405672"
 ---
-# <a name="connect-to-the-ssis-catalog-database-ssisdb-in-azure"></a>Herstellen einer Verbindung mit der SSIS-Katalogdatenbank (SSISDB) in Azure
+# <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>Herstellen einer Verbindung mit dem SSIS-Katalog (SSISDB) in Azure
 
-Rufen Sie die Verbindungsinformationen ab, die benötigt werden, um eine Verbindung mit der auf einem Azure SQL-Datenbankserver gehosteten SSISDB-Katalogdatenbank herzustellen. Sie benötigen Folgendes, um eine Verbindung herzustellen:
+Finden Sie Verbindungsinformationen, die benötigt werden, um eine Verbindung mit dem auf einem Azure SQL-Datenbankserver gehosteten SSIS-Katalog (SSISDB) herzustellen. Sie benötigen die folgenden Elemente, um eine Verbindung herzustellen:
 - Vollqualifizierten Servernamen
 - Datenbanknamen
 - Anmeldeinformationen 
 
 > [!IMPORTANT]
-> Derzeit können Sie die SSISDB-Katalogdatenbank in Azure SQL-Datenbank nicht erstellen, ohne auch Integration Runtime für Azure-SSIS in Azure Data Factory Version 2 zu erstellen. SSIS-Pakete werden über Integration Runtime für Azure-SSIS in Azure ausgeführt. Weitere Informationen finden Sie unter [Bereitstellen von SQL Server Integration Services-Paketen in Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal). 
+> Derzeit können Sie die SSISDB-Katalogdatenbank in Azure SQL-Datenbank nicht erstellen, ohne auch Integration Runtime für Azure-SSIS in Azure Data Factory Version 2 zu erstellen. Die Azure SSIS IR ist die Laufzeitumgebung, die SSIS-Pakete auf Azure ausführt. Einen exemplarischen Prozess finden Sie unter [Bereitstellen und Ausführen von SSIS-Paketen in Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal). 
 
 ## <a name="prerequisites"></a>Voraussetzungen
 Prüfen Sie, ob Sie über die Version 17.2 oder höher von SQL Server Management Studio (SSMS) verfügen, bevor Sie beginnen. Wenn die SSISDB-Katalogdatenbank auf einer verwalteten SQL-Datenbank-Instanz (Vorschauversion) gehostet wird, stellen Sie sicher, dass Sie die Version 17.6 oder höher von SSMS verwenden. Die neueste Version von SSMS können Sie unter [Herunterladen von SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) herunterladen.
@@ -71,4 +71,4 @@ Prüfen Sie, ob Sie über die Version 17.2 oder höher von SQL Server Management
 ## <a name="next-steps"></a>Nächste Schritte
 - Stellen Sie ein Paket bereit. Weitere Informationen finden Sie unter [Deploy an SSIS project with SQL Server Management Studio (SSMS) (Bereitstellen eines SSIS-Projekts mit SQL Server Management Studio (SSMS))](../ssis-quickstart-deploy-ssms.md).
 - Führen Sie ein Paket aus. Weitere Informationen finden Sie unter [Run an SSIS package with SQL Server Management Studio (SSMS) (Ausführen eines SSIS-Pakets mit SQL Server Management Studio (SSMS))](../ssis-quickstart-run-ssms.md).
-- Planen Sie ein Paket. Weitere Informationen finden Sie unter [Planen der Ausführung von SSIS-Paketen in Azure](ssis-azure-schedule-packages.md).
+- Planen Sie ein Paket. Weitere Informationen finden Sie unter [Planen der Ausführung eines SSIS-Pakets in Azure](ssis-azure-schedule-packages.md).

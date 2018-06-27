@@ -27,17 +27,18 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 45ad8be1da81b29b446ed18dd0c4688013a18875
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9ae22c38ef34ad8db35c625de80d47f08a0e6073
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35250013"
 ---
 # <a name="errornumber-transact-sql"></a>ERROR_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Gibt die Fehlernummer des Fehlers zurück, der die Ausführung des CATCH-Blockes eines TRY…CATCH-Konstruktes verursacht hat.  
-  
+Diese Funktion gibt die Fehlernummer des Fehlers zurück, der die Ausführung des CATCH-Blocks eines TRY…CATCH-Konstrukts ausgelöst hat.  
+
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
@@ -50,21 +51,21 @@ ERROR_NUMBER ( )
  **int**  
   
 ## <a name="return-value"></a>Rückgabewert  
- Bei Aufruf in einem CATCH-Block wird die Fehlernummer der Fehlermeldung zurückgegeben, die die Ausführung des CATCH-Blockes verursacht hat.  
-  
- Gibt NULL zurück, wenn die Funktion außerhalb des Bereichs eines CATCH-Blockes aufgerufen wird.  
+Wenn `ERROR_NUMBER` in einem CATCH-Block aufgerufen wird, wird die Fehlernummer des Fehlers zurückgegeben, der die Ausführung des CATCH-Blocks ausgelöst hat.  
+
+`ERROR_NUMBER` gibt NULL zurück, wenn die Funktion außerhalb des Bereichs eines CATCH-Blocks aufgerufen wird.  
   
 ## <a name="remarks"></a>Remarks  
- Diese Funktion kann an jeder beliebigen Position im Gültigkeitsbereich eines CATCH-Blockes aufgerufen werden.  
+`ERROR_NUMBER` kann überall im Bereich eines CATCH-Blocks aufgerufen werden.  
   
- ERROR_NUMBER gibt die Fehlermeldung unabhängig davon zurück, wie oft die Funktion ausgeführt wird oder wo innerhalb des Gültigkeitsbereiches des CATCH-Blockes sie ausgeführt wird. Dies steht im Gegensatz zur @@ERROR-Funktion, die die Fehlernummer in der Anweisung sofort nach der Anweisung zurückgibt, die einen Fehler verursacht hat, oder in der ersten Anweisung eines CATCH-Blocks.  
-  
- In geschachtelten CATCH-Blöcken gibt ERROR_NUMBER die Fehlernummer zurück, die für den Gültigkeitsbereich des CATCH-Blockes, in dem auf die Funktion verwiesen wird, spezifisch ist. Beispielsweise könnte der CATCH-Block eines äußeren TRY...CATCH-Konstrukts ein geschachteltes TRY...CATCH-Konstrukt aufweisen. Innerhalb des geschachtelten CATCH-Blockes gibt ERROR_NUMBER die Nummer des Fehlers zurück, der den geschachtelten CATCH-Block aufgerufen hat. Falls ERROR_NUMBER im äußeren CATCH-Block ausgeführt wird, wird die Nummer des Fehlers zurückgegeben, der den CATCH-Block aufgerufen hat.  
+`ERROR_NUMBER` gibt unabhängig von der Anzahl der Aufrufe und dem Bereich des `CATCH`-Blocks eine relevante Fehlernummer zurück. Dies steht im Gegensatz zu Funktionen wie @@ERROR, die nur eine Fehlernummer in der Anweisung zurückgeben, die unmittelbar auf der Anweisung folgt, die einen Fehler auslöst.  
+
+`ERROR_NUMBER` gibt in einem geschachtelten `CATCH`-Block die Fehlernummer für den entsprechenden Bereich des `CATCH`-Blocks zurück, der auf den `CATCH`-Block verwiesen hat. Zum Beispiel könnte der `CATCH`-Block eines äußeren TRY...CATCH-Konstrukts ein inneres `TRY...CATCH`-Konstrukt aufweisen. In diesem inneren `CATCH`-Block gibt `ERROR_NUMBER` die Nummer des Fehlers zurück, der den inneren `CATCH`-Block aufgerufen hat. Wenn `ERROR_NUMBER` im äußeren `CATCH`-Block ausgeführt wird, wird die Nummer des Fehlers zurückgegeben, der den äußeren `CATCH`-Block aufgerufen hat.  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-using-errornumber-in-a-catch-block"></a>A. Verwenden von ERROR_NUMBER in einem CATCH-Block  
- Das folgende Codebeispiel zeigt eine `SELECT`-Anweisung, die einen Fehler aufgrund einer Division durch 0 generiert. Die Nummer des Fehlers wird zurückgegeben.  
+Das folgende Beispiel zeigt eine `SELECT`-Anweisung, die einen Fehler aufgrund einer Division durch 0 (null) generiert. Der `CATCH`-Block gibt die Fehlernummer zurück.  
   
 ```  
 BEGIN TRY  
@@ -75,11 +76,22 @@ BEGIN CATCH
     SELECT ERROR_NUMBER() AS ErrorNumber;  
 END CATCH;  
 GO  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorNumber
+-----------
+8134
+
+(1 row(s) affected)
+
 ```  
   
 ### <a name="b-using-errornumber-in-a-catch-block-with-other-error-handling-tools"></a>B. Verwenden von ERROR_NUMBER in einem CATCH-Block mit anderen Fehlerbehandlungstools  
- Das folgende Codebeispiel zeigt eine `SELECT`-Anweisung, die einen Fehler aufgrund einer Division durch 0 generiert. Zusammen mit der Fehlernummer werden Informationen zum Fehler zurückgegeben.  
-  
+Das folgende Beispiel zeigt eine `SELECT`-Anweisung, die einen Fehler aufgrund einer Division durch 0 (null) generiert. Der `CATCH`-Block gibt zusammen mir der Fehlernummer Informationen zum Fehler zurück.  
+
 ```  
   
 BEGIN TRY  
@@ -96,28 +108,17 @@ BEGIN CATCH
         ERROR_MESSAGE() AS ErrorMessage;  
 END CATCH;  
 GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
-  
-### <a name="c-using-errornumber-in-a-catch-block-with-other-error-handling-tools"></a>C. Verwenden von ERROR_NUMBER in einem CATCH-Block mit anderen Fehlerbehandlungstools  
- Das folgende Codebeispiel zeigt eine `SELECT`-Anweisung, die einen Fehler aufgrund einer Division durch 0 generiert. Zusammen mit der Fehlernummer werden Informationen zum Fehler zurückgegeben.  
-  
-```  
-  
-BEGIN TRY  
-    -- Generate a divide-by-zero error.  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT  
-        ERROR_NUMBER() AS ErrorNumber,  
-        ERROR_SEVERITY() AS ErrorSeverity,  
-        ERROR_STATE() AS ErrorState,  
-        ERROR_PROCEDURE() AS ErrorProcedure,  
-        ERROR_MESSAGE() AS ErrorMessage;  
-END CATCH;  
-GO  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorNumber ErrorSeverity ErrorState  ErrorProcedure   ErrorLine  ErrorMessage
+----------- ------------- ----------- ---------------  ---------- ----------------------------------
+8134        16            1           NULL             4          Divide by zero error encountered.
+
+(1 row(s) affected)
+
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter  

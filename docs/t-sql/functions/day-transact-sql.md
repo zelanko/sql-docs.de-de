@@ -28,18 +28,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8c248e735b25dbdbc2f7bd263698007acfc8600e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 50e6d900b90d777514859601c4b211e4e0e3b5d0
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35238980"
 ---
 # <a name="day-transact-sql"></a>DAY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Gibt einen Integer zurück, der den *date*-Wert für den Tag (Tag des Monats) des angegebenen Datums darstellt.
+Diese Funktion gibt eine ganze Zahl zurück, die den Tag (Tag des Monats) des angegebenen *Datums* darstellt.
   
-Eine Übersicht über alle Datums- und Uhrzeitdatentypen und zugehörige Funktionen für [!INCLUDE[tsql](../../includes/tsql-md.md)] finden Sie unter [Date and Time Data Types and Functions &#40;Transact-SQL&#41; (Datums- und Uhrzeitdatentypen und zugehörige Funktionen)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Unter [Datums- und Uhrzeitdatentypen und zugehörige Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) finden Sie eine Übersicht über alle [!INCLUDE[tsql](../../includes/tsql-md.md)] Datums- und Uhrzeitdatentypen und zugehörige Funktionen.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -51,7 +52,16 @@ DAY ( date )
   
 ## <a name="arguments"></a>Argumente  
 *Datum*  
-Ein Ausdruck, der in einen der folgenden Werte aufgelöst werden kann: **time**, **date**, **smalldatetime**, **datetime**, **datetime2** oder **datetimeoffset**. Bei dem *date*-Argument kann es sich um einen Ausdruck, einen Spaltenausdruck, eine benutzerdefinierte Variable oder ein Zeichenfolgenliteral handeln.
+Ein Ausdruck, der in einen der folgenden Datentypen aufgelöst werden kann:
+
++ **Datum**
++ **datetime**
++ **datetimeoffset**
++ **datetime2** 
++ **smalldatetime**
++ **Uhrzeit**
+
+Bei *date* akzeptiert `DAY` einen Spaltenausdruck, einen Ausdruck, ein Zeichenfolgenliteral oder eine benutzerdefinierte Variable.
   
 ## <a name="return-type"></a>Rückgabetyp  
 **int**
@@ -59,16 +69,16 @@ Ein Ausdruck, der in einen der folgenden Werte aufgelöst werden kann: **time**,
 ## <a name="return-value"></a>Rückgabewert  
 DAY gibt den gleichen Wert zurück wie [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (**day**, *date*).
   
-Wenn *date* nur einen Uhrzeitteil enthält, lautet der Rückgabewert 1. Hierbei handelt es sich um den Basistag.
+Wenn *date* nur einen Uhrzeitabschnitt enthält, gibt `DAY` 1 zurück. Hierbei handelt es sich um dem Basistag.
   
 ## <a name="examples"></a>Beispiele  
-Die folgende Anweisung gibt `30` zurück. Dies ist der Tag.
+Diese Anweisung gibt `30` zurück, was der Zahl des Tags selbst entspricht.
   
 ```sql
 SELECT DAY('2015-04-30 01:01:01.1234567');  
 ```  
   
-Die folgende Anweisung gibt `1900, 1, 1` zurück. Das Argument für *date* ist die Zahl `0`. `0` wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als 1. Januar 1900 interpretiert.
+Diese Anweisung gibt `1900, 1, 1` zurück. Das Argument *date* verfügt über einen Zahlenwert von `0`. `0` wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als 1. Januar 1900 interpretiert.
   
 ```sql
 SELECT YEAR(0), MONTH(0), DAY(0);  

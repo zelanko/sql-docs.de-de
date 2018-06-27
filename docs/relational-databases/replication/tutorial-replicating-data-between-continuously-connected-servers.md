@@ -22,12 +22,12 @@ caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d8c3441f219017125b755b498a534317a1fca01
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: e8b3b6eccf11b959ae04a4d0888bd1bf76bfe869
+ms.sourcegitcommit: 73ca0313b185e730579f09f9bc32a852c9dd2ef4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550481"
+ms.lasthandoff: 06/13/2018
+ms.locfileid: "35452180"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Tutorial: Konfigurieren der Replikation zwischen zwei Servern mit kontinuierlicher Verbindung (Transaktionsreplikation)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -142,7 +142,8 @@ Anhand des Status des Momentaufnahmen-Agents für Ihre Veröffentlichung können
 
 ![Schaltfläche „Starten“ und Statusmeldungsänderung, durch die darauf aufmerksam gemacht wird, dass der Momentaufnahmen-Agent ausgeführt wurde](media/tutorial-replicating-data-between-continuously-connected-servers/startsnapshotagent.png)
      
-Wenn Ihnen hier ein Fehler angezeigt wird, finden Sie unter [Troubleshooting Snapshot Agent errors (Problembehandlung bei Fehlern im Zusammenhang mit dem Momentaufnahmen-Agent)](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md#find-errors-with-the-snapshot-agent) weitere Informationen. 
+Wenn Ihnen hier ein Fehler angezeigt wird, finden Sie unter [Troubleshooting Snapshot Agent errors (Problembehandlung für den Momentaufnahmen-Agent)](troubleshoot-tran-repl-errors.md#find-errors-with-the-snapshot-agent) weitere Informationen.
+
 
   
 ### <a name="add-the-distribution-agent-login-to-the-pal"></a>Hinzufügen der Verteilungs-Agent-Anmeldung zur PAL  
@@ -239,7 +240,7 @@ In diesem Abschnitt verwenden Sie Überwachungstoken, um zu überprüfen, ob die
 
 Weitere Informationen finden Sie in den folgenden Themen: 
 - [Messen der Wartezeit und Überprüfen der Verbindungen bei Transaktionsreplikationen](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
-- [Troubleshooting transactional replication sync errors (Problembehandlung bei Synchronisierungsfehlern im Zusammenhang mit Transaktionsreplikationen)](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md)
+- [Suchen nach Fehlern bei Transaktionsreplikation-Agents](troubleshoot-tran-repl-errors.md)
 
 
 ## <a name="next-steps"></a>Nächste Schritte
@@ -249,5 +250,3 @@ Im nächsten Artikel lernen Sie, wie eine Mergereplikation konfiguriert wird:
 
 > [!div class="nextstepaction"]
 > [Tutorial: Konfigurieren der Replikation zwischen einem Server und mobilen Clients (Mergereplikation)](tutorial-replicating-data-with-mobile-clients.md)
-
-  

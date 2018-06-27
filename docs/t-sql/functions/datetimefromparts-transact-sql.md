@@ -23,16 +23,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d8afd19d73538ca459d14c9964a4067619c52b84
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 70b225db949dec01343c56a24299d882d553e44e
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239050"
 ---
 # <a name="datetimefromparts-transact-sql"></a>DATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Gibt einen **datetime**-Wert für das angegebene Datum und die Uhrzeit zurück.
+Diese Funktion gibt einen **datetime**-Wert für die angegebenen Argumente für Datum und Zeit zurück.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -44,33 +45,33 @@ DATETIMEFROMPARTS ( year, month, day, hour, minute, seconds, milliseconds )
   
 ## <a name="arguments"></a>Argumente  
 *year*  
-Ganzzahliger Ausdruck, der ein Jahr angibt.
+Ein ganzzahliger Ausdruck, der ein Jahr angibt.
   
 *month*  
-Ganzzahliger Ausdruck, der einen Monat angibt.
+Ein ganzzahliger Ausdruck, der einen Monat angibt.
   
 *day*  
-Ganzzahliger Ausdruck, der einen Tag angibt.
+Ein ganzzahliger Ausdruck, der einen Tag angibt.
   
 *hour*  
-Ganzzahliger Ausdruck, der die Stunden angibt.
+Ein ganzzahliger Ausdruck, der Stunden angibt.
   
 *minute*  
-Ganzzahliger Ausdruck, der die Minuten angibt.
+Ein ganzzahliger Ausdruck, der Minuten angibt.
   
 *Sekunden*  
-Ganzzahliger Ausdruck, der die Sekunden angibt.
+Ein ganzzahliger Ausdruck, der Sekunden angibt.
   
 *milliseconds*  
-Ganzzahliger Ausdruck, der die Millisekunden angibt.
+Ein ganzzahliger Ausdruck, der Millisekunden angibt.
   
 ## <a name="return-types"></a>Rückgabetypen
 **datetime**
   
 ## <a name="remarks"></a>Remarks  
-**DATETIMEFROMPARTS** gibt einen vollständig initialisierten **datetime**-Wert zurück. Wenn die Argumente nicht gültig sind, wird ein Fehler ausgelöst. Wenn erforderliche Argumente den Wert NULL haben, wird auch NULL zurückgegeben.
+`DATETIMEFROMPARTS` gibt einen vollständig initialisierten **datetime**-Wert zurück. `DATETIMEFROMPARTS` löst einen Fehler aus, wenn mindestens ein erforderliches Argument über einen ungültigen Wert verfügt. `DATETIMEFROMPARTS` gibt NULL zurück, wenn mindestens ein erforderliches Argument den Wert NULL enthält.
   
-Diese Funktion kann remote auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Servern oder höher ausgeführt werden. Eine Remoteausführung auf Servern mit einer Version vor [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ist nicht möglich.
+Diese Funktion unterstützt das Remoting zu [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Servern und höher. Sie unterstützt nicht das Remoting zu Servern mit einer Version unter [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ## <a name="examples"></a>Beispiele  
   

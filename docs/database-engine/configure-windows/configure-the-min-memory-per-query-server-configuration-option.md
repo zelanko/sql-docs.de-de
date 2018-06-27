@@ -14,21 +14,23 @@ helpviewer_keywords:
 - minimum query memory
 - queries [SQL Server], memory
 - min memory per query option
+- min memory grant
 ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
 caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5b81b6ada1e8be2c88d7956ff5f56ba904ea417a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e68c2617af6a2828e1183733ee53fdd142747f66
+ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34811914"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Min. Arbeitsspeicher pro Abfrage
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  In diesem Thema wird beschrieben, wie die Serverkonfigurationsoption **Min. Arbeitsspeicher pro Abfrage** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]konfiguriert wird. Sie können mithilfe der Option **Min. Arbeitsspeicher pro Abfrage** die Mindestmenge an Arbeitsspeicher (in KB) angeben, die für das Ausführen einer Abfrage zugeordnet wird. Wenn Sie z. B. **Min. Arbeitsspeicher pro Abfrage** auf 2.048 KB festlegen, wird sichergestellt, dass der Abfrage mindestens so viel Arbeitsspeicher zugeordnet wird. Der Standardwert ist 1.024 KB. 512 KB ist der Minimalwert, und 2.147.483.647 KB (2 GB) ist der Maximalwert.  
+  In diesem Thema wird beschrieben, wie die Serverkonfigurationsoption **Min. Arbeitsspeicher pro Abfrage** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]konfiguriert wird. Sie können mithilfe der Option **Min. Arbeitsspeicher pro Abfrage** die Mindestmenge an Arbeitsspeicher (in KB) angeben, die für das Ausführen einer Abfrage zugeordnet wird. Dies ist auch als minimale Arbeitsspeicherzuweisung bekannt. Wenn Sie z. B. **Min. Arbeitsspeicher pro Abfrage** auf 2.048 KB festlegen, wird sichergestellt, dass der Abfrage mindestens so viel Arbeitsspeicher zugeordnet wird. Der Standardwert ist 1.024 KB. 512 KB ist der Minimalwert, und 2.147.483.647 KB (2 GB) ist der Maximalwert.  
   
  **In diesem Thema**  
   
@@ -60,8 +62,10 @@ ms.lasthandoff: 05/03/2018
   
 -   Der Abfrageprozessor von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht, den optimalen Umfang an Speicher zu bestimmen, der von einer Abfrage belegt werden soll. Mit der Option Min. Arbeitsspeicher pro Abfrage kann der Administrator den Umfang an Speicher angeben, der für eine einzelne Abfrage mindestens zur Verfügung gestellt wird. Abfragen erhalten im Allgemeinen mehr Speicher als hier angegeben, wenn Hash- und Sortiervorgänge für umfangreiche Datenmengen ausgeführt werden. Durch die Erhöhung des Werts für Min. Arbeitsspeicher pro Abfrage kann es bei einigen Abfragen mit geringem bis mittlerem Umfang zur Leistungssteigerung, jedoch auch zu stärkerem Wettbewerb um Speicherressourcen kommen. Die Option „Min. Arbeitsspeicher pro Abfrage“ schließt den für Sortiervorgänge zugeordneten Arbeitsspeicher ein.  
 
--    Legen Sie die Serverkonfigurationsoption „Min Arbeitsspeicher pro Abfrage“ nicht zu hoch fest, insbesondere auf sehr ausgelasteten Systemen, da die Abfrage warten muss, bis die minimalen Arbeitsspeicheranforderungen erfüllt werden können, oder bis der in der Serverkonfigurationsoption Abfragewartezeit angegebene Wert erreicht ist. Wenn zum Ausführen der Abfrage mehr Arbeitsspeicher als der angegebene Minimalwert vorhanden ist, darf die Abfrage den zusätzlichen Arbeitsspeicher verwenden, vorausgesetzt, der Arbeitsspeicher kann von der Abfrage effizient verwendet werden. 
-  
+-    Legen Sie die Serverkonfigurationsoption „Min Arbeitsspeicher pro Abfrage“ nicht zu hoch fest, insbesondere auf sehr ausgelasteten Systemen, da die Abfrage warten<sup>1</sup> muss, bis die minimalen Arbeitsspeicheranforderungen erfüllt werden können, oder bis der in der Serverkonfigurationsoption Abfragewartezeit angegebene Wert erreicht ist. Wenn zum Ausführen der Abfrage mehr Arbeitsspeicher als der angegebene Minimalwert vorhanden ist, darf die Abfrage den zusätzlichen Arbeitsspeicher verwenden, vorausgesetzt, der Arbeitsspeicher kann von der Abfrage effizient verwendet werden.     
+
+<sup>1</sup> In diesem Szenario ist der Wartetyp in der Regel RESOURCE_SEMAPHORE. Weitere Informationen finden Sie unter [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).
+
 ###  <a name="Security"></a> Sicherheit  
   
 ####  <a name="Permissions"></a> Berechtigungen  
@@ -107,6 +111,8 @@ GO
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [Configure the index create memory Server Configuration Option](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)  
+ [Konfigurieren der Serverkonfigurationsoption „Speicher für Indexerstellung“](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)     
+ [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
+ [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)
   
   

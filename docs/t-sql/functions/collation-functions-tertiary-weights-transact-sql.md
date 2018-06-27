@@ -25,16 +25,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e4a96e71ae1222951914743ad88d229d5a1ee9b8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9c3504238274c2aac2e9fd043068b822150f91ca
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239320"
 ---
 # <a name="collation-functions---tertiaryweights-transact-sql"></a>Sortierungsfunktionen: TERTIARY_WEIGHTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Gibt eine binäre Zeichenfolge der Schriftbreiten für jedes Zeichen in einem Nicht-Unicode-Zeichenfolgenausdruck zurück, der für eine tertiäre SQL-Sortierung definiert ist.
+Diese Funktion gibt für jedes Zeichen in einem nicht Unicode-Zeichenfolgenausdruck, der für eine tertiäre SQL-Sortierung definiert ist, eine binäre Zeichenfolge von Schriftbreiten zurück.
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,10 +50,10 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
 Ein [Zeichenfolgenausdruck](../../t-sql/language-elements/expressions-transact-sql.md) vom Datentyp **char**, **varchar** oder **varchar(max)**, der für eine tertiäre SQL-Sortierung definiert ist. Eine Liste dieser Sortierungen finden Sie unter Hinweise.
   
 ## <a name="return-types"></a>Rückgabetypen
-TERTIARY_WEIGHTS gibt **varbinary** zurück, wenn *non_Unicode_character_string_expression* vom Datentyp **char** oder **varchar** ist, und gibt **varbinary(max)** zurück, wenn *non_Unicode_character_string_expression* vom Datentyp **varchar(max)** ist.
+`TERTIARY_WEIGHTS` gibt **varbinary** zurück, wenn *non_Unicode_character_string_expression* vom Datentyp **char** oder **varchar** ist, und gibt **varbinary(max)** zurück, wenn *non_Unicode_character_string_expression* vom Datentyp **varchar(max)** ist.
   
 ## <a name="remarks"></a>Remarks  
-TERTIARY_WEIGHTS gibt NULL zurück, wenn *non_Unicode_character_string_expression* nicht für eine tertiäre SQL-Sortierung definiert ist. In der folgenden Tabelle werden die tertiären SQL-Sortierungen dargestellt.
+`TERTIARY_WEIGHTS` gibt NULL zurück, wenn eine tertiäre SQL-Sortierung *non_Unicode_character_string_expression* nicht definiert. In der folgenden Tabelle werden die tertiären SQL-Sortierungen dargestellt:
   
 |Sortierreihenfolge-ID|SQL-Sortierung|  
 |---|---|
@@ -89,10 +90,10 @@ TERTIARY_WEIGHTS gibt NULL zurück, wenn *non_Unicode_character_string_expressio
 |185|SQL_SwedishStd_Pref_CP1_CI_AS|  
 |186|SQL_Icelandic_Pref_CP1_CI_AS|  
   
-TERTIARY_WEIGHTS ist zum Definieren einer berechneten Spalte vorgesehen, die mit den Werten einer Spalte vom Datentyp **char**, **varchar** oder **varchar(max)** definiert wird. Das Definieren eines Index für die berechnete Spalte und die Spalte vom Datentyp **char**, **varchar** oder **varchar(max)** kann die Leistung verbessern, wenn die Spalte vom Datentyp **char**, **varchar** oder **varchar(max)** in der ORDER BY-Klausel einer Abfrage angegeben wird.
+Verwenden Sie `TERTIARY_WEIGHTS` zum Definieren einer berechneten Spalte, die mit den Werten einer Spalte vom Datentyp **char**, **varchar** oder **varchar(max)** definiert wird. Das Definieren eines Index für die berechnete Spalte und die Spalte vom Datentyp **char**, **varchar** oder **varchar(max)** kann die Leistung verbessern, wenn die Spalte vom Datentyp **char**, **varchar** oder **varchar(max)** in der ORDER BY-Klausel einer Abfrage angegeben wird.
   
 ## <a name="examples"></a>Beispiele  
-Im folgenden Beispiel wird eine berechnete Spalte in einer Tabelle erstellt, die die `TERTIARY_WEIGHTS`-Funktion auf die Werte einer Spalte vom Datentyp `char` anwendet.
+Im folgenden Beispiel wird eine berechnete Spalte in einer Tabelle erstellt, die die `TERTIARY_WEIGHTS`-Funktion auf die Werte einer Spalte vom Datentyp `char` anwendet:
   
 ```sql
 CREATE TABLE TertColTable  

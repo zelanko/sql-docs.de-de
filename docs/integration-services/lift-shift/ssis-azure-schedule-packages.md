@@ -1,26 +1,26 @@
 ---
-title: Planen der SIS-Pakete in Azure | Microsoft-Dokumentation
+title: Planen der SSIS-Pakete in Azure | Microsoft-Dokumentation
+description: Übersicht über die verfügbaren Methoden zum Planen der Ausführung von SSIS-Paketen, die für Azure SQL-Datenbank bereitgestellt sind.
 ms.date: 05/29/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 62980562b7f89293177307cd4c3ad02f54e977f0
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 53417e2f5431bd040c7b3a6be381e93c858d128e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585842"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411582"
 ---
-# <a name="schedule-the-execution-of-an-ssis-package-in-azure"></a>Planen der Ausführung eines SSIS-Pakets in Azure
-Sie können die Ausführung der in der Datenbank des SSISDB-Katalogs bereitgestellten SSIS-Pakete auf einem Azure SQL-Datenbankserver planen, indem Sie eine der in diesem Artikel erläuterten Optionen auswählen. Sie können ein Paket direkt oder indirekt als Teil einer Azure Data Factory-Pipeline planen. Eine Übersicht über SSIS in Azure finden Sie unter [Migration von SQL Server Integration Services-Workloads in die Cloud per Lift und Shift](ssis-azure-lift-shift-ssis-packages-overview.md).
+# <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Planen der Ausführung von in Azure bereitgestellten SSIS-Paketen
+
+Sie können die Ausführung von SSIS-Paketen planen, die im SSISDB-Katalog eines Azure SQL-Datenbankservers bereitgestellt sind, indem Sie eine der in diesem Artikel beschriebenen Methoden verwenden. Sie können ein Paket direkt oder indirekt als Teil einer Azure Data Factory-Pipeline planen. Eine Übersicht über SSIS in Azure finden Sie unter [Migration von SQL Server Integration Services-Workloads in die Cloud per Lift und Shift](ssis-azure-lift-shift-ssis-packages-overview.md).
 
 - Direktes Planen eines Pakets
 
@@ -35,7 +35,7 @@ Sie können die Ausführung der in der Datenbank des SSISDB-Katalogs bereitgeste
 
 ## <a name="ssms"></a> Planen eines Pakets mit SSMS
 
-In SQL Server Management Studio (SSMS) können Sie mit der rechten Maustaste auf ein Paket klicken, das in der SSIS-Katalogdatenbank SSISDB bereitgestellt wird, und **Zeitplan** auswählen, um das Dialogfeld **Neuer Zeitplan** zu öffnen. Weitere Informationen finden Sie unter [Planen der Ausführung eines SSIS-Pakets in Azure mit SSMS](ssis-azure-schedule-packages-ssms.md).
+In SQL Server Management Studio (SSMS) können Sie mit der rechten Maustaste auf ein Paket klicken, das in der SSIS-Katalogdatenbank SSISDB bereitgestellt wird, und **Zeitplan** auswählen, um das Dialogfeld **Neuer Zeitplan** zu öffnen. Weitere Informationen finden Sie unter [Planen der Ausführung von SSIS-Paketen in Azure mit SSMS](ssis-azure-schedule-packages-ssms.md).
 
 Dieses Feature erfordert SQL Server Management Studio, Version 17.7 oder höher. Die neueste Version von SSMS können Sie unter [Herunterladen von SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) abrufen.
 
@@ -177,4 +177,4 @@ Verwenden Sie eine der folgenden Aktivitäten, um ein SSIS-Paket als Teil einer 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Überprüfen Sie die Optionen für das Ausführen von SSIS-Paketen, die in Azure bereitgestellt wurden. Weitere Informationen finden Sie unter [Run an SSIS package in Azure (Ausführen eines SSIS-Pakets in Azure)](ssis-azure-run-packages.md).
+Überprüfen Sie die Optionen für das Ausführen von SSIS-Paketen, die in Azure bereitgestellt wurden. Weitere Informationen finden Sie unter [Ausführen eines SSIS-Pakets in Azure](ssis-azure-run-packages.md).

@@ -24,16 +24,17 @@ caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 01e01348ab88ef33ab38a9fd9040d5ff0174cb26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b9aecb41372915f28eaf0e3b41a0fa405faccfc0
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239060"
 ---
 # <a name="decryptbypassphrase-transact-sql"></a>DECRYPTBYPASSPHRASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Entschlüsselt Daten, die mit einer Passphrase verschlüsselt wurden.  
+Diese Funktion entschlüsselt Daten, die ursprünglich mit einer Passphrase verschlüsselt wurden.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,43 +50,51 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
   
 ## <a name="arguments"></a>Argumente  
  *passphrase*  
- Die Passphrase, die zum Generieren des Schlüssels für die Entschlüsselung verwendet wird.  
+Die Passphrase, die zum Generieren des Entschlüsselungsschlüssels verwendet wird.  
   
  @passphrase  
- Eine Variable vom Typ **nvarchar**, **char**, **varchar**oder **nchar** , die die Passphrase enthält, die zum Generieren des Schlüssels für die Entschlüsselung verwendet wird.  
+Eine Variable vom Typ
+
++ **char**
++ **nchar**
++ **nvarchar**
+
+oder
+
++ **varchar**
+
+, die die Passphrase zum Generieren des Entschlüsselungsschlüssels enthält.  
   
- '*ciphertext*'  
- Der zu entschlüsselnde verschlüsselte Text.  
+'*ciphertext*'  
+Die Zeichenfolge der Daten, die mit dem Schlüssel verschlüsselt wurden. *ciphertext* verfügt über einen **varbinary**-Datentyp.  
+ 
+@ciphertext  
+Eine Variable vom Typ **varbinary**, die Daten enthält, die mit dem Schlüssel verschlüsselt wurden. Die *@ciphertext*-Variable verfügt über eine maximale Größe von 8.000 Bytes.  
   
- @ciphertext  
- Eine Variable vom Typ **varbinary** , die den verschlüsselten Text enthält. Die maximale Größe beträgt 8.000 Bytes.  
+*add_authenticator*  
+Gibt an, ob durch den ursprünglichen Verschlüsselungsprozess ein Authentifikator zusammen mit dem Klartext einbezogen und verschlüsselt wurde. *add_authenticator* weist den Wert 1 auf, wenn im Verschlüsselungsprozess ein Authentifikator verwendet wurde. *add_authenticator* verfügt über einen **int**-Datentyp.  
   
- *add_authenticator*  
- Gibt an, ob zusammen mit dem Nur-Text auch ein Authentifikator verschlüsselt wurde. Hat den Wert 1, wenn ein Authentifikator verwendet wurde. **int**.  
+@add_authenticator  
+Eine Variable, die angibt, ob durch den ursprünglichen Verschlüsselungsprozess ein Authentifikator zusammen mit dem Klartext einbezogen, und verschlüsselt, wurde. *@add_authenticator* weist den Wert 1 auf, wenn ein Authentifikator im Verschlüsselungsprozess verwendet wurde. *@add_authenticator* verfügt über einen **int**-Datentyp.  
+
+*authenticator*  
+Die Daten, die als Grundlage für die Generierung des Authentifikators verwendet werden. *authenticator* verfügt über einen **sysname**-Datentyp.  
   
- @add_authenticator  
- Gibt an, ob zusammen mit dem Nur-Text auch ein Authentifikator verschlüsselt wurde. Hat den Wert 1, wenn ein Authentifikator verwendet wurde. **int**.  
-  
- *authenticator*  
- Die Authentifikatordaten. **sysname**.  
-  
- @authenticator  
- Eine Variable, die Daten enthält, von denen ein Authentifikator abgeleitet werden soll.  
+@authenticator  
+Eine Variable, die Daten enthält, die als Grundlage für die Generierung der Authentifikatoren verwendet wurden. *@authenticator* verfügt über einen **sysname**-Datentyp.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **varbinary** mit einer maximalen Größe von 8.000 Bytes.  
+**varbinary** mit einer maximalen Größe von 8.000 Byte.  
   
 ## <a name="remarks"></a>Remarks  
- Zum Ausführen dieser Funktion sind keine Berechtigungen erforderlich.  
+`DECRYPTBYPASSPHRASE` erfordert keine Berechtigungen für die Ausführung. `DECRYPTBYPASSPHRASE` gibt NULL zurück, wenn die falsche Passphrase oder falsche Authentifikatorinformationen übergeben werden.  
   
- Gibt NULL zurück, wenn der falsche Passphrase oder falsche Authentifikatorinformationen verwendet werden.  
+`DECRYPTBYPASSPHRASE` verwendet die Passphrase zum Generieren eines Entschlüsselungsschlüssels. Der Entschlüsselungsschlüssel bleibt nicht erhalten.  
   
- Die Passphrase wird zum Generieren eines Entschlüsselungsschlüssels verwendet, der nicht persistent ist.  
-  
- Falls beim Verschlüsseln des verschlüsselten Texts ein Authentifikator eingeschlossen wurde, muss der Authentifikator zur Entschlüsselungszeit bereitgestellt werden. Falls der zur Entschlüsselungszeit bereitgestellte Authentifikatorwert nicht mit dem mit den Daten verschlüsselten Authentifikatorwert übereinstimmt, kann die Entschlüsselung nicht ausgeführt werden.  
+Wenn zum Zeitpunkt der Verschlüsselung des Chiffretexts ein Authentifikator enthalten war, muss `DECRYPTBYPASSPHRASE` denselben Authentifikator für den Entschlüsselungsprozess erhalten. Wenn der für den Entschlüsselungsprozess angegebene Authentifikatorwert nicht mit dem Authentifikatorwert übereinstimmt, der ursprünglich zum Verschlüsseln der Daten verwendet wurde, schlägt der `DECRYPTBYPASSPHRASE`-Vorgang fehl.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird der unter [EncryptByPassPhrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md) aktualisierte Datensatz entschlüsselt.  
+Im folgenden Beispiel wird der unter [EncryptByPassPhrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md) aktualisierte Datensatz entschlüsselt.  
   
 ```  
 USE AdventureWorks2012;  

@@ -22,12 +22,12 @@ caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 05ab6a324d1193c301539780b55bdbd5494c3524
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 6c42d3aea3b73f5afae90e5f7612e9c3d65bfc22
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779546"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35238960"
 ---
 # <a name="decryptbykeyautoasymkey-transact-sql"></a>DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +53,7 @@ Die ID des asymmetrischen Schlüssels, der für die Entschlüsselung des symmetr
  *akey_password*  
 Das Kennwort, mit dem der asymmetrische Schlüssel geschützt wird. *akey_password* kann den Wert NULL aufweisen, wenn der Datenbank-Hauptschlüssel den asymmetrischen privaten Schlüssel schützt. *akey_password* verfügt über einen **nvarchar**-Datentyp.  
   
- '*ciphertext*'  
-Die mit dem Schlüssel verschlüsselten Daten. *ciphertext* verfügt über einen **varbinary**-Datentyp.  
+ *ciphertext* entspricht den mit dem Schlüssel verschlüsselten Daten. *ciphertext* verfügt über einen **varbinary**-Datentyp.  
   
  @ciphertext  
 Eine Variable vom Typ **varbinary**, die Daten enthält, die mit dem symmetrischen Schlüssel verschlüsselt wurden.  
@@ -71,18 +70,27 @@ Die Daten, die als Grundlage für die Generierung des Authentifikators verwendet
  @authenticator  
 Eine Variable, die Daten für die Generierung durch den Authentifikator enthält. Diese müssen mit dem Wert übereinstimmen, der für [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) bereitgestellt wurde. *@authenticator* verfügt über einen **sysname**-Datentyp.  
   
+@add_authenticator  
+Eine Variable, die angibt, ob durch den ursprünglichen Verschlüsselungsprozess ein Authentifikator zusammen mit dem Klartext einbezogen, und verschlüsselt, wurde. Muss mit dem Wert übereinstimmen, der während der Datenverschlüsselung an [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) übergeben wurde. *@add_authenticator* verfügt über einen **int**-Datentyp.  
+
+*authenticator*  
+Die Daten, die als Grundlage für die Generierung des Authentifikators verwendet werden. Diese müssen mit dem Wert übereinstimmen, der für [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) bereitgestellt wurde. *authenticator* verfügt über einen **sysname**-Datentyp.
+
+@authenticator  
+Eine Variable, die Daten für die Generierung durch den Authentifikator enthält. Diese müssen mit dem Wert übereinstimmen, der für [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) bereitgestellt wurde. *@authenticator* verfügt über einen **sysname**-Datentyp.  
+
 ## <a name="return-types"></a>Rückgabetypen  
 **varbinary** mit einer maximalen Größe von 8.000 Byte.  
   
 ## <a name="remarks"></a>Remarks  
-`DECRYPTBYKEYAUTOASYMKEY` kombiniert die Funktionalität von OPEN SYMMETRIC KEY und DecryptByKey. In einem einzelnen Vorgang wird ein symmetrischer Schlüssel entschlüsselt, und mit diesem Schlüssel wird der verschlüsselte Text entschlüsselt.  
+`DECRYPTBYKEYAUTOASYMKEY` kombiniert die Funktionen von `OPEN SYMMETRIC KEY` und `DECRYPTBYKEY`. In einem einzelnen Vorgang wird zunächst ein symmetrischer Schlüssel entschlüsselt, und mit diesem Schlüssel wird dann der verschlüsselte Chiffretext entschlüsselt.  
   
 ## <a name="permissions"></a>Berechtigungen  
 Erfordert die `VIEW DEFINITION`-Berechtigung für den symmetrischen Schlüssel und die `CONTROL`-Berechtigung für den asymmetrischen Schlüssel.  
   
-## <a name="examples"></a>Beispiele  
-In diesem Beispiel wird die Verwendung von `DECRYPTBYKEYAUTOASYMKEY` zur Vereinfachung des Entschlüsselungscodes dargestellt. Dieser Code sollte für eine [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank ausgeführt werden, die nicht bereits über einen Datenbank-Hauptschlüssel verfügt.  
-  
+## <a name="examples"></a>Beispiele
+In diesem Beispiel wird dargestellt, wie `DECRYPTBYKEYAUTOASYMKEY` den Entschlüsselungscode vereinfachen kann. Dieser Code sollte für eine [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank ausgeführt werden, die nicht bereits über einen Datenbank-Hauptschlüssel verfügt.  
+
 ```  
 --Create the keys and certificate.  
 USE AdventureWorks2012;  
