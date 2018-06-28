@@ -6,6 +6,7 @@
 ## [Erstellen, Ändern und Löschen eines datengesteuerten Abonnements](create-modify-and-delete-data-driven-subscriptions.md)
 ## [Use an External Data Source for Subscriber Data (Verwenden einer externen Datenquelle für Abonnentendaten)](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)
 # [Create and Manage Subscriptions for Native Mode Report Servers (Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus)](create-and-manage-subscriptions-for-native-mode-report-servers.md)
+## [Erstellen, Ändern und Löschen von Standard-Abonnements](../create-manage-subscriptions-native-mode-report-servers.md)
 ## [Verwenden von „Meine Abonnements“](use-my-subscriptions-native-mode-report-server.md)
 ## [Anhalten der Berichts- und Abonnementverarbeitung](disable-or-pause-report-and-subscription-processing.md)
 ## [Steuern der Berichtsverteilung](../control-report-distribution.md)
