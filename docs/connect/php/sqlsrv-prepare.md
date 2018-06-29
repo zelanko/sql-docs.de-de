@@ -87,7 +87,7 @@ Die Kombination von **sqlsrv_prepare** und **sqlsrv_execute** trennt Anweisungsv
   
 Alternative Strategien zum Schreiben und Lesen großer Datenmengen Informationen finden Sie unter [Batches von SQL-Anweisungen](../../odbc/reference/develop-app/batches-of-sql-statements.md) und [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
-Weitere Informationen finden Sie unter [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
+Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen von Eingabe-/Ausgabeparametern mit dem SQLSRV-Treiberr](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Beispiel  
 Im folgenden Beispiel wird eine Anweisung vorbereitet und ausgeführt. Die Anweisung ausgeführt (finden Sie unter [Sqlsrv_execute](../../connect/php/sqlsrv-execute.md)), aktualisiert diese ein Feld in der *Sales.SalesOrderDetail* Tabelle der AdventureWorks-Datenbank. Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
