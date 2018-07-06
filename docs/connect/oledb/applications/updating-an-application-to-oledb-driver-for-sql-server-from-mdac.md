@@ -22,7 +22,7 @@ ms.author: Pedro.Lopes
 manager: craigg
 ms.openlocfilehash: 11597ed3b7cd80cae8604291bd8b662bf6a9ed80
 ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/14/2018
 ms.locfileid: "35612105"
@@ -62,7 +62,7 @@ ms.locfileid: "35612105"
 
 -   An Warnungen und Fehlern wurden geringfügige Änderungen vorgenommen. Warnungen und Fehler, die vom Server zurückgegebenen behalten den gleichen Schweregrad bei OLE DB-Treiber für SQL Server an. Sie sollten sicherstellen, dass die Anwendung gründlich getestet wurde, wenn Sie auf das Abfangen bestimmter Warnungen und Fehler angewiesen sind.  
 
--   OLE DB-Treiber für SQL Server hat die strengere fehlerprüfung als MDAC, dies bedeutet, dass einige Anwendungen, die nicht unbedingt den OLE DB-Spezifikationen entsprechen sich anders verhalten. Z. B. der SQLOLEDB-Anbieter die Regel, die Parameternamen mit beginnen müssen nicht erzwingen "@" für Ergebnis Parameter, aber der OLE DB-Treiber für SQL Server verfügt.  
+-   OLE DB-Treiber für SQL Server hat die strengere fehlerprüfung als MDAC, dies bedeutet, dass einige Anwendungen, die nicht unbedingt den OLE DB-Spezifikationen entsprechen sich anders verhalten. Z. B. der SQLOLEDB-Anbieter die Regel, die Parameternamen mit beginnen müssen nicht erzwingen "\@" für Ergebnis Parameter, aber der OLE DB-Treiber für SQL Server verfügt.  
 
 -   OLE DB-Treiber für SQL Server Verhalten sich anders als MDAC zu fehlerhaften Verbindungen. MDAC gibt beispielsweise zwischengespeicherte Eigenschaftswerte für eine Verbindung, die Fehler aufgetreten ist, zurück, während die OLE DB-Treiber für SQL Server einen Fehler an die aufrufende Anwendung meldet.  
 
@@ -106,7 +106,7 @@ ms.locfileid: "35612105"
 
 -   OLE DB-Treiber für SQL Server ermöglicht Mehrdeutigkeit in Verbindungszeichenfolgen (z. B. einige Schlüsselwörter können mehr als einmal angegeben werden, und konfliktverursachende Schlüsselwörter können mit einer Auflösung basierend auf der Position oder Rangfolge zugelassen werden) aus Gründen der Abwärtskompatibilität. Zukünftige Versionen von OLE DB-Treiber für SQL Server u. u. nicht Mehrdeutigkeit in Verbindungszeichenfolgen zu. Es wird empfohlen, beim Ändern von Anwendungen, OLE DB-Treiber für SQL Server zu verwenden, um eine Abhängigkeit von Mehrdeutigkeit von Verbindungszeichenfolgen zu vermeiden.  
 
--   Wenn Sie einen OLE DB-Aufruf zum Starten von Transaktionen verwenden, besteht ein Unterschied im Verhalten zwischen OLE DB-Treiber für SQL Server und MDAC; Transaktionen beginnt sofort mit OLE DB-Treiber für SQL Server, jedoch Transaktionen beginnt, nachdem der Zugriff auf die erste Datenbank MDAC verwenden. Dies kann das Verhalten von gespeicherten Prozeduren und Batches auswirken, da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] @ erfordert@TRANCOUNT identisch sein, nach einem Batch oder einer gespeicherten Prozedur Beenden der Ausführung des Batches oder gespeicherte Prozedur gestartet wurde.  
+-   Wenn Sie einen OLE DB-Aufruf zum Starten von Transaktionen verwenden, besteht ein Unterschied im Verhalten zwischen OLE DB-Treiber für SQL Server und MDAC; Transaktionen beginnt sofort mit OLE DB-Treiber für SQL Server, jedoch Transaktionen beginnt, nachdem der Zugriff auf die erste Datenbank MDAC verwenden. Dies kann das Verhalten von gespeicherten Prozeduren und Batches auswirken, da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] \@ erfordert@TRANCOUNT identisch sein, nach einem Batch oder einer gespeicherten Prozedur Beenden der Ausführung des Batches oder gespeicherte Prozedur gestartet wurde.  
 
 -   Mit OLE DB-Treiber für SQL Server wird ITransactionLocal::BeginTransaction dazu führen, dass eine Transaktion sofort gestartet werden soll. Mit MDAC wurde der Transaktionsstart verzögert, bis die Anwendung eine Anweisung ausgeführt, die eine Transaktion im impliziten Transaktionsmodus erforderlich. Weitere Informationen finden Sie unter [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
 
