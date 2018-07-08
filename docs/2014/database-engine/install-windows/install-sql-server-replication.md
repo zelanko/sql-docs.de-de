@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - components [SQL Server replication]
 - command line installations [SQL Server replication]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - command prompt [SQL Server replication]
 ms.assetid: c50ad078-060b-4a8d-ad45-9e31a8d85729
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f63d8eee7708b70eedf9b9e00b85e646132dd986
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 70978d835a5c63589de69ad48fbeeef690dfef2c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056751"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278223"
 ---
 # <a name="install-sql-server-replication"></a>Installieren der SQL Server-Replikation
   Die Replikationskomponenten können mithilfe des Installations-Assistenten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder über die Eingabeaufforderung installiert werden. Installieren Sie die Replikation, wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installieren oder wenn Sie eine vorhandene Instanz ändern.  
@@ -43,11 +43,11 @@ ms.locfileid: "36056751"
 ## <a name="installing-replication-from-the-command-prompt"></a>Installieren der Replikation an der Eingabeaufforderung  
  **So installieren Sie die Replikation, wenn Sie eine neue Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  
   
--   Finden Sie unter [Installieren von SQLServer 2014 von der Befehlszeile aus](install-sql-server-from-the-command-prompt.md).  
+-   Finden Sie unter [Installieren von SQLServer 2014 über die Eingabeaufforderung](install-sql-server-from-the-command-prompt.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Installieren von SQLServer 2014](install-sql-server.md)   
- [Installieren von SQLServer 2014 von der Befehlszeile aus](install-sql-server-from-the-command-prompt.md)   
+ [Installieren von SQLServer 2014 über die Eingabeaufforderung](install-sql-server-from-the-command-prompt.md)   
  [Von den SQL Server 2014-Editionen unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
   

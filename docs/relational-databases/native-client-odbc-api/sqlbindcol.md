@@ -1,12 +1,12 @@
 ---
-title: SQLBindCol | Microsoft Docs
+title: SQLBindCol | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 076871eaca6526a0768576b130c713ff9bfe6554
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 1418d72f0ab6737e5815abbad4549f4b903ef904
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696851"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421179"
 ---
 # <a name="sqlbindcol"></a>SQLBindCol
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,18 +31,18 @@ ms.locfileid: "35696851"
 
   In der Regel sollten Sie die Auswirkungen der Verwendung von **SQLBindCol** zur Datenkonvertierung. Bindungskonvertierungen sind Clientprozesse. Wenn Sie beispielsweise einen Gleitkommawert, der an eine Zeichenspalte gebunden ist, abrufen, führt der Treiber die Gleitkomma-in-Zeichen-Konvertierung lokal durch, wenn eine Zeile abgerufen wird. Die [!INCLUDE[tsql](../../includes/tsql-md.md)] CONVERT-Funktion kann zum Übertragen der Kosten einer Datenkonvertierung auf den Server verwendet werden.  
   
- Eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann mehrere Sets an Ergebniszeilen bei einer einzelnen Anweisungsausführung zurückgeben. Jedes Resultset muss getrennt gebunden sein. Weitere Informationen zum Binden für mehrere Resultsets finden Sie unter [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md).  
+ Eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann mehrere Sets an Ergebniszeilen bei einer einzelnen Anweisungsausführung zurückgeben. Jedes Resultset muss getrennt gebunden sein. Weitere Informationen zur Bindung für mehrere Resultsets finden Sie unter [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md).  
   
  Der Entwickler kann Spalten binden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifischen C-Datentypen mithilfe der *TargetType* Wert **SQL_C_BINARY**. An [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifische Typen gebundene Spalten sind nicht übertragbar. Die definierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifischen ODBC-C-Datentypen entsprechen den Typdefinitionen für DB-Library, und DB-Library-Entwickler, die Anwendungen übertragen, können diese Funktion nutzen.  
   
- Berichterstattung über die datenabschneidung ist ein kostengünstiger Prozess für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber. Sie können das Abschneiden vermeiden, indem Sie sicherstellen, dass alle gebundenen Datenpuffer weit genug sind, um Daten zurückzugeben. Bei Zeichendaten sollte die Breite ausreichend Platz für ein Zeichenfolgeabschlusszeichen bieten, wenn das Standardtreiberverhalten für den Zeichenfolgenabschluss verwendet wird. Binden Sie z. B. eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **char(5)** Spalte in ein Array mit fünf Zeichen Abschneidung jedes abgerufenen Werts. Wenn Sie die gleiche Spalte an ein Array mit sechs Zeichen binden, wird die Abschneidung vermieden, indem ein Zeichenelement bereitgestellt wird, in dem das Null-Abschlusszeichen gespeichert werden soll. [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) können verwendet werden, um lange Zeichenfolgen und binäre Daten ohne Abschneidung effizient abzurufen.  
+ Berichterstattung über die datenabschneidung ist ein kostengünstiger Prozess für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber. Sie können das Abschneiden vermeiden, indem Sie sicherstellen, dass alle gebundenen Datenpuffer weit genug sind, um Daten zurückzugeben. Bei Zeichendaten sollte die Breite ausreichend Platz für ein Zeichenfolgeabschlusszeichen bieten, wenn das Standardtreiberverhalten für den Zeichenfolgenabschluss verwendet wird. Binden Sie z. B. eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **char(5)** Spalte in ein Array mit fünf Zeichen verursacht Abschneidung jedes abgerufenen Werts. Wenn Sie die gleiche Spalte an ein Array mit sechs Zeichen binden, wird die Abschneidung vermieden, indem ein Zeichenelement bereitgestellt wird, in dem das Null-Abschlusszeichen gespeichert werden soll. [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) können verwendet werden, um lange Zeichenfolgen und binäre Daten ohne Abschneidung effizient abrufen.  
   
- Für große Datenwerttypen, wenn der Benutzer bereitgestellte Puffer nicht groß genug für den gesamten Wert der Spalte, ist **SQL_SUCCESS_WITH_INFO** wird zurückgegeben, und die "Zeichenfolgendaten; rechts abgeschnitten"Warnung wird ausgegeben. Die **StrLen_or_IndPtr** Argument wird die Anzahl der im Puffer gespeicherten Zeichen/Bytes enthalten.  
+ Für große Datenwerttypen, wenn der Benutzer bereitgestellte Puffer nicht groß genug für den gesamten Wert der Spalte ist **SQL_SUCCESS_WITH_INFO** wird zurückgegeben, und die "die Zeichenfolgedaten; rechts abgeschnitten"wird ausgegeben. Die **StrLen_or_IndPtr** Argument wird die Anzahl der im Puffer gespeicherten Zeichen/Bytes enthalten.  
   
 ## <a name="sqlbindcol-support-for-enhanced-date-and-time-features"></a>SQLBindCol-Unterstützung für verbesserte Funktionen für Datum/Uhrzeit  
  Ergebnisspaltenwerte von Datum-/Uhrzeit-Typen werden konvertiert, wie in beschrieben [Konvertierungen von SQL-in C](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md). Beachten Sie, dass zum Abrufen von Time und Datetimeoffset-Spalten als entsprechenden Strukturen (**SQL_SS_TIME2_STRUCT** und **sql_ss_timestampoffset_struct-Wert**), *TargetType*muss angegeben werden, als **SQL_C_DEFAULT** oder **SQL_C_BINARY**.  
   
- Weitere Informationen finden Sie unter [Datum und Uhrzeit-Verbesserungen &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Weitere Informationen finden Sie unter [Datums- / Uhrzeitverbesserungen &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlbindcol-support-for-large-clr-udts"></a>SQLBindCol-Unterstützung für große CLR-UDTs  
  **SQLBindCol** unterstützt große CLR-benutzerdefinierte Typen (UDTs). Weitere Informationen finden Sie unter [Large CLR User-Defined Typen &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  

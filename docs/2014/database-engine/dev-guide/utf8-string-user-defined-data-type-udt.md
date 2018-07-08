@@ -1,5 +1,5 @@
 ---
-title: UTF8 String den benutzerdefinierten Typ (UDT) | Microsoft Docs
+title: UTF8 String den benutzerdefinierten Typ (UDT) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 41b84606-1fa8-4e4b-8f4c-bdc66537c613
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fcb411e3947de3e939a3f7e328c80b0605bf47d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e9ffea3675f13320d68d5b829cde29272c83f28d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057019"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259176"
 ---
 # <a name="utf8-string-user-defined-data-type-udt"></a>UTF8 String (benutzerdefinierter Datentyp, UDT)
   Das UTF8String-Beispiel für SQL Server veranschaulicht die Implementierung eines benutzerdefinierten Datentyps. Dieses Beispiel zeigt die Implementierung eines benutzerdefinierten UTF8-Datentyps, der das Typensystem der Datenbank erweitert, um UTF8-codierte Werte speichern zu können. Dieser Typ implementiert auch Code für die Konvertierung von Unicode-Zeichenfolgen in und aus UTF8.  
@@ -53,7 +53,7 @@ ms.locfileid: "36057019"
      `GO`  
   
     > [!NOTE]  
-    >  Um CLR zu aktivieren, benötigen Sie `ALTER SETTINGS` Serverberechtigung, die implizit von Mitgliedern der erhalten die `sysadmin` und `serveradmin` festen Serverrollen.  
+    >  Um CLR zu aktivieren, benötigen Sie `ALTER SETTINGS` Serverberechtigung, die implizit Mitglieder erhalten die `sysadmin` und `serveradmin` festen Serverrollen.  
   
 -   Die AdventureWorks-Datenbank muss in der von Ihnen verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz installiert sein.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36057019"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-10. Kopie [!INCLUDE[tsql](../../includes/tsql-md.md)] -testbefehlsskript in eine Datei, und speichern Sie sie als `test.sql` im Beispielverzeichnis.  
+10. Kopie [!INCLUDE[tsql](../../includes/tsql-md.md)] -testbefehlsskript in eine Datei, und speichern Sie ihn `test.sql` im Beispielverzeichnis.  
   
 11. Führen Sie das Testskript mit dem folgenden Befehl aus:  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], what's new
 - breaking changes [SQL Server replication]
 ms.assetid: 449a2f57-fcbd-4478-8f21-2c646d801699
 caps.latest.revision: 45
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ec7d1259ca9d4a1f92e7a16eb584683429ff4e2e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6091b41a26b291245de30ac47529643a6eb4f7ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060012"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149117"
 ---
 # <a name="breaking-changes-in-sql-server-replication"></a>Wichtige Änderungen in der SQL Server-Replikation
   In diesem Thema werden wichtige Änderungen an der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikation beschrieben. Diese Änderungen können u. U. zur Funktionsunfähigkeit von Anwendungen, Skripts oder Funktionen führen, die auf früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]basieren. Diese Probleme können nach einem Upgrade auftreten. Weitere Informationen finden Sie unter [Use Upgrade Advisor to Prepare for Upgrades](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  

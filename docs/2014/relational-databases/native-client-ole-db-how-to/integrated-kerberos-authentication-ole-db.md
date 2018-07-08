@@ -1,34 +1,32 @@
 ---
-title: Die integrierte Kerberosauthentifizierung (OLE DB) | Microsoft Docs
+title: Integrierte Kerberos-Authentifizierung (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 953ee253-a4be-4f47-bbad-d2f6600207b2
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bd1ccb608aec68f96671ea52cdb17c5ff66c7182
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f2ad40a930192dcaf91afeb14f2d54a7c08db0b7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048968"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410299"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>Integrierte Kerberos-Authentifizierung (OLE DB)
-  In diesem Beispiel wird gezeigt, wie gegenseitigen Kerberos-Authentifizierung mithilfe von OLE DB in abrufen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Dieses Beispiel wird mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher ausgeführt.  
+  In diesem Beispiel wird gezeigt, wie gegenseitigen Kerberos-Authentifizierung abgerufen werden, mithilfe von OLE DB in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Dieses Beispiel wird mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher ausgeführt.  
   
- Weitere Informationen zu SPNs und Kerberos-Authentifizierung finden Sie unter [Service Principal Name &#40;SPN&#41; -Unterstützung in Clientverbindungen](../native-client/features/service-principal-name-spn-support-in-client-connections.md).  
+ Weitere Informationen zu SPNs und Kerberos-Authentifizierung, finden Sie unter [Service Principal Name &#40;SPN&#41; Unterstützung in Clientverbindungen](../native-client/features/service-principal-name-spn-support-in-client-connections.md).  
   
 ## <a name="example"></a>Beispiel  
- Sie müssen einen Server angeben. Ändern Sie in der CPP-Datei "MyServer" in einen Computernamen, die eine von Instanz [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (oder höher).  
+ Sie müssen einen Server angeben. Ändern Sie "MyServer" in der CPP-Datei den Namen eines Computers, der eine von Instanz [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (oder höher).  
   
  Sie müssen auch einen vom Kunden bereitgestellten SPN angeben. Ändern Sie in der CPP-Datei "CPSPN" in einen vom Kunden bereitgestellten SPN.  
   

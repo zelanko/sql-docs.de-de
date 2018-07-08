@@ -1,5 +1,5 @@
 ---
-title: Verhindern des automatischen Starts einer Instanz von SQLServer (SQL Server-Konfigurations-Manager) | Microsoft Docs
+title: Verhindern des automatischen Starts einer Instanz von SQLServer (SQL Server-Konfigurations-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - automatic SQL Server startup
 - SQL Server, stopping
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - preventing automatic startups [SQL Server]
 ms.assetid: 782663cf-f3d7-4cc6-b621-21e4550f0322
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b21ac71b54c9bfee76079f86c1d6d1a32fc0f9dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 894b63a9ffe56a89eb6dd01cf1c91ca06a6cacf5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049264"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182740"
 ---
 # <a name="prevent-automatic-startup-of-an-instance-of-sql-server-sql-server-configuration-manager"></a>Verhindern des automatischen Starts einer Instanz von SQL Server (SQL Server-Konfigurations-Manager)
   In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des SQL Server-Konfigurations-Managers verhindern können, dass eine Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] automatisch gestartet wird. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist normalerweise für den automatischen Start konfiguriert. Sie können diese Einstellung ändern, indem Sie den Startmodus für die Instanz auf manuell festlegen.  
@@ -41,12 +41,11 @@ ms.locfileid: "36049264"
   
 3.  Klicken Sie im Detailbereich mit der rechten Maustaste auf **MSSQLServer**, und klicken Sie dann auf **Eigenschaften**.  
   
-4.  In der **SQL Server \< ***Instancename***> Eigenschaften** Dialogfeld die **Eigenschaften** legen den Wert des **Startmodus**auf **manuell**.  
+4.  In der **SQL Server \< ***Instancename***> Eigenschaften** Dialogfeld die **Eigenschaften** legen den Wert der **Startmodus**zu **manuelle**.  
   
 5.  Klicken Sie auf **OK**, um das Dialogfeld **SQL Server \<***Instanzname***> Eigenschaften** zu schließen, und schließen Sie dann den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Manager.  
   
 ## <a name="see-also"></a>Siehe auch  
- 
-  [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](start-stop-pause-resume-restart-sql-server-services.md)  
+ [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](start-stop-pause-resume-restart-sql-server-services.md)  
   
   

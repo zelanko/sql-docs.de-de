@@ -1,5 +1,5 @@
 ---
-title: Exception-Element (XMLA) | Microsoft Docs
+title: Exception-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Exception element
 ms.assetid: 0be4cc2f-c03e-490a-a6f7-8b1ede5d09ba
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 824743a3e8aeb7d735d6844dd1b025de06e09e9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 33af06aa3243b0860bca6d9ae8ff15595ae1ad4f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057884"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156811"
 ---
 # <a name="exception-element-xmla"></a>Exception-Element (XMLA)
-  Gibt an, dass eine Ausnahme zurückgegeben wurde, aus einer [Discover](../xml-elements-methods-discover.md) oder [Execute](../xml-elements-methods-execute.md) -Methodenaufruf.  
+  Gibt an, dass eine Ausnahme zurückgegeben wurde eine [Discover](../xml-elements-methods-discover.md) oder [Execute](../xml-elements-methods-execute.md) Methodenaufruf.  
   
  **Namespace** http://schemas.microsoft.com/analysisservices/2003/exception  
   
@@ -62,11 +62,11 @@ ms.locfileid: "36057884"
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|[Stamm](root-element-xmla.md)|  
+|Übergeordnete Elemente|[Stammverzeichnis](root-element-xmla.md)|  
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Bei einem während der Ausführung Fehler einer `Discover` Methodenaufruf oder ein einzelner XMLA-Befehl in eine `Execute` -Methodenaufruf, der die Methode oder der Befehl abgeschlossen ist, verhindert die `root` -Element für diese Methode / diesen Befehl enthält ein `Exception` Element und ein `Messages` Element. Das `Exception`-Element gibt an, dass ein Fehler aufgetreten ist, der verhindert, dass die Methode oder der Befehl erfolgreich ausgeführt wird, und das `Messages`-Element enthält die Liste der entsprechenden Fehler- oder Warnmeldungen.  
+ Bei einem während der Ausführung Fehler eine `Discover` Methodenaufruf oder ein einzelner XMLA-Befehl in einer `Execute` Methodenaufruf der Methode oder der Befehl abgeschlossen ist, der verhindert, dass die `root` -Element für diese Methode / diesen Befehl enthält eine `Exception` Element und ein `Messages` Element. Das `Exception`-Element gibt an, dass ein Fehler aufgetreten ist, der verhindert, dass die Methode oder der Befehl erfolgreich ausgeführt wird, und das `Messages`-Element enthält die Liste der entsprechenden Fehler- oder Warnmeldungen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Element Nachrichten &#40;XMLA&#41;](messages-element-xmla.md)   

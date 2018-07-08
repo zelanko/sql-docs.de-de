@@ -1,5 +1,5 @@
 ---
-title: SetNumericalValue-Methode (ClientNetworkProtocolProperty-Klasse) | Microsoft Docs
+title: SetNumericalValue-Methode (ClientNetworkProtocolProperty-Klasse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetNumericalValue method
 ms.assetid: d4d6df52-9e68-4003-9e28-ece6716ba7f1
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1796c1e5ab1c5f5047072a6cfd80db53aae5af43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: b8adfe2eec24a8af8e785d6a8528d63050049e7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057125"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228870"
 ---
 # <a name="setnumericalvalue-method-clientnetworkprotocolproperty-class"></a>SetNumericalValue-Methode (ClientNetworkProtocolProperty-Klasse)
   Legt den numerischen Wert der aktuellen Eigenschaft fest, auf die durch den [PropertyIdx-Eigenschaftswert (ClientNetworkProtocolProperty-Klasse)](clientnetworkprotocolproperty-class.md) verwiesen wird.  
@@ -49,10 +49,10 @@ object
   
 |Parameter|Description|  
 |---------------|-----------------|  
-|*value*|Ein `uint32` Wert, der angibt, den numerischen Wert der Eigenschaft verwiesen wird.|  
+|*value*|Ein `uint32` -Wert, der den numerischen Wert der referenzierten Eigenschaft angibt.|  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
- Ein `uint32` Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert 1, wenn die Anforderung nicht unterstützt wird, wurde, und jede andere Zahl gibt einen Fehler an.  
+ Ein `uint32` -Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert 1, wenn die Anforderung nicht unterstützt wird, wurde, und jede andere Zahl gibt einen Fehler an.  
   
 ## <a name="remarks"></a>Hinweise  
   

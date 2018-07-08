@@ -1,5 +1,5 @@
 ---
-title: DMSCHEMA_MINING_SERVICES-Rowset | Microsoft Docs
+title: DMSCHEMA_MINING_SERVICES-Rowset | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_SERVICES rowset
 ms.assetid: 4a672f2f-d637-4def-a572-c18556f83d34
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b268abe234c8df71672ca434494ee89717a15947
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6ccfdba24d7bc23b97eb15e61321f82e5ab1d9b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046542"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278224"
 ---
 # <a name="dmschemaminingservices-rowset"></a>DMSCHEMA_MINING_SERVICES-Rowset
   Stellt eine Beschreibung jedes Data Mining-Algorithmus bereit, den der Anbieter unterstützt.  
@@ -46,14 +46,14 @@ ms.locfileid: "36046542"
 |`SUPPORTED_INPUT_CONTENT_TYPES`|`DBTYPE_WSTR`||Eine durch Trennzeichen getrennte Liste von Flags, die die Eingabeinhaltstypen beschreibt, die vom Algorithmus unterstützt werden. Diese Spalte enthält mindestens einen der folgenden Werte:<br /><br /> -   "`KEY`"<br />-   "`DISCRETE`"<br />-   "`CONTINUOUS`"<br />-   "`DISCRETIZED`"<br />-   "`ORDERED`"<br />-"SCHLÜSSEL `SEQUENCE`"<br />-   "`CYCLICAL`"<br />-   "`PROBABILITY`"<br />-   "`VARIANCE`"<br />-   "`STDEV`"<br />-   "`SUPPORT`"<br />-   "`PROBABILITY VARIANCE`"<br />-   "`PROBABILITY STDEV`"<br />-   "`KEY TIME`"|  
 |`SUPPORTED_PREDICTION_CONTENT_TYPES`|`DBTYPE_WSTR`||Eine durch Trennzeichen getrennte Liste von Flags, die die Vorhersageinhaltstypen beschreibt, die vom Algorithmus unterstützt werden. Diese Spalte enthält mindestens einen der folgenden Werte:<br /><br /> -   "`KEY`"<br />-   "`DISCRETE`"<br />-   "`CONTINUOUS`"<br />-   "`DISCRETIZED`"<br />-   "`ORDERED`"<br />-"SCHLÜSSEL `SEQUENCE` "<br />-   "`CYCLICAL`"<br />-   "`PROBABILITY`"<br />-   "`VARIANCE`"<br />-   "`STDEV`"<br />-   "`SUPPORT`"<br />-   "`PROBABILITY VARIANCE`"<br />-   "`PROBABILITY STDEV`"<br />-"KEY TIME"|  
 |`SUPPORTED_MODELING_FLAGS`|`DBTYPE_WSTR`||Eine durch Trennzeichen getrennte Liste der Modellierungsflags, die vom Algorithmus unterstützt werden. Diese Spalte enthält mindestens einen der folgenden Werte:<br /><br /> -   "`MODEL_EXISTENCE_ONLY`"<br />-   "`REGRESSOR`"<br /><br /> Es können auch anbieterspezifische Flags definiert werden.|  
-|`SUPPORTED_SOURCE_QUERY`|`DBTYPE_WSTR`||– Diese Spalte wird für Abwärtskompatibilität unterstützt.|  
-|`TRAINING_COMPLEXITY`|`DBTYPE_I4`||Die Zeitpanne, die das Training voraussichtlich dauern wird:<br /><br /> -   `DM_TRAINING_COMPLEXITY_LOW` Gibt an, dass die Ausführungszeit relativ kurz und proportional zur Eingabe.<br />-   **DM_TRAINING_COMPLEXITY_MEDIUM** gibt an, dass die Ausführungszeit länger sein kann, aber es im Allgemeinen proportional zur Eingabe ist.<br />-   **DM_TRAINING_COMPLEXITY_HIGH** gibt an, dass die Ausführungszeit lang ist und es möglicherweise in Beziehung zu der Anzahl der Trainingsfälle exponentiell.|  
-|`PREDICTION_COMPLEXITY`|`DBTYPE_I4`||Die Zeitpanne, die die Vorhersage voraussichtlich dauern wird:<br /><br /> -   **DM_PREDICTION_COMPLEXITY_LOW** gibt an, dass die Ausführungszeit relativ kurz und proportional zur Eingabe.<br />-   **DM_PREDICTION_COMPLEXITY_MEDIUM** gibt an, dass die Ausführungszeit länger sein kann, aber es im Allgemeinen proportional zur Eingabe ist.<br />-   **DM_PREDICTION_COMPLEXITY_HIGH** gibt an, dass die Ausführungszeit lang ist und es möglicherweise in Beziehung zu der Anzahl der Trainingsfälle exponentiell.|  
+|`SUPPORTED_SOURCE_QUERY`|`DBTYPE_WSTR`||– Diese Spalte wird für die Abwärtskompatibilität unterstützt.|  
+|`TRAINING_COMPLEXITY`|`DBTYPE_I4`||Die Zeitpanne, die das Training voraussichtlich dauern wird:<br /><br /> -   `DM_TRAINING_COMPLEXITY_LOW` Gibt an, dass die Ausführungszeit relativ kurz und proportional zur Eingabe.<br />-   **DM_TRAINING_COMPLEXITY_MEDIUM** gibt an, dass die Ausführungszeit länger sein kann, aber es im Allgemeinen proportional zur Eingabe ist.<br />-   **DM_TRAINING_COMPLEXITY_HIGH** gibt an, dass die Ausführungszeit lang ist und es in Beziehung zu die Anzahl der Trainingsfälle exponentiell kann.|  
+|`PREDICTION_COMPLEXITY`|`DBTYPE_I4`||Die Zeitpanne, die die Vorhersage voraussichtlich dauern wird:<br /><br /> -   **DM_PREDICTION_COMPLEXITY_LOW** gibt an, dass die Ausführungszeit relativ kurz und proportional zur Eingabe.<br />-   **DM_PREDICTION_COMPLEXITY_MEDIUM** gibt an, dass die Ausführungszeit länger sein kann, aber es im Allgemeinen proportional zur Eingabe ist.<br />-   **DM_PREDICTION_COMPLEXITY_HIGH** gibt an, dass die Ausführungszeit lang ist und es in Beziehung zu die Anzahl der Trainingsfälle exponentiell kann.|  
 |`EXPECTED_QUALITY`|`DBTYPE_I4`||Die erwartete Qualität des mit diesem Algorithmus erstellten Modells:<br /><br /> -   `DM_EXPECTED_QUALITY_LOW`<br />-   `DM_EXPECTED_QUALITY_MEDIUM`<br />-   **DM_EXPECTED_QUALITY_HIGH**|  
 |`SCALING`|`DBTYPE_I4`||Die Skalierbarkeit des Algorithmus:<br /><br /> -   **DM_SCALING_LOW**<br />-   `DM_SCALING_MEDIUM`<br />-   **DM_SCALING_HIGH**|  
 |`ALLOW_INCREMENTAL_INSERT`|`DBTYPE_BOOL`||Ein boolescher Wert, der angibt, ob der Algorithmus inkrementelles Training unterstützt, d. h. das Aktualisieren der erkannten Muster auf der Grundlage der neuen tatsächlichen Daten, anstatt die Muster vollständig neu zu erkennen.|  
 |`ALLOW_PMML_INITIALIZATION`|`DBTYPE_BOOL`||Ein boolescher Wert, der anzeigt, ob Miningmodelle auf der Grundlage einer PMML 2.1-Zeichenfolge erstellt werden können.<br /><br /> Wenn auf `TRUE` festgelegt, unterstützt der Algorithmus die Initialisierung von PMML 2.1-Inhalten.|  
-|`CONTROL`|`DBTYPE_I4`||Die vom Dienst bereitgestellte Unterstützung, wenn das Training unterbrochen wird:<br /><br /> -   `DM_CONTROL_NONE` Gibt an, dass der Algorithmus kann nicht abgebrochen werden, nach dem Start zum Trainieren des Modells.<br />-   `DM_CONTROL_CANCEL` Gibt an, dass der Algorithmus abgebrochen werden kann, nachdem es zum Trainieren des Modells beginnt, jedoch neu gestartet werden, muss um das Training fortzusetzen.<br />-   `DM_CONTROL_SUSPENDRESUME` Gibt an, dass der Algorithmus abgebrochen und jederzeit fortgesetzt werden kann, aber auf die Ergebnisse nicht verfügbar, sind bis das Training abgeschlossen ist.<br />-   `DM_CONTROL_SUSPENDWITHRESULT` Gibt an, dass der Algorithmus abgebrochen und jederzeit fortgesetzt werden kann, und alle inkrementellen Ergebnisse abgerufen werden können.|  
+|`CONTROL`|`DBTYPE_I4`||Die vom Dienst bereitgestellte Unterstützung, wenn das Training unterbrochen wird:<br /><br /> -   `DM_CONTROL_NONE` Gibt an, dass der Algorithmus nicht abgebrochen werden kann, nach dem Start zum Trainieren des Modells.<br />-   `DM_CONTROL_CANCEL` Gibt an, dass der Algorithmus abgebrochen werden kann, nachdem es beginnt, die zum Trainieren des Modells und neu gestartet werden, muss um das Training fortzusetzen.<br />-   `DM_CONTROL_SUSPENDRESUME` Gibt an, dass der Algorithmus abgebrochen und zu einem beliebigen Zeitpunkt fortgesetzt werden kann, aber auf die Ergebnisse nicht verfügbar, sind bis die Schulung abgeschlossen ist.<br />-   `DM_CONTROL_SUSPENDWITHRESULT` Gibt an, dass der Algorithmus abgebrochen und zu einem beliebigen Zeitpunkt fortgesetzt werden kann, und alle inkrementellen Ergebnisse abgerufen werden können.|  
 |`ALLOW_DUPLICATE_KEY`|`DBTYPE_BOOL`||Ein boolescher Wert, der angibt, ob Fälle doppelte Schlüssel enthalten können.<br /><br /> Wenn `VARIANT_TRUE` festgelegt ist, können Fälle doppelte Schlüssel enthalten.|  
 |`VIEWER_TYPE`|`DBTYPE_WSTR`||Der empfohlene Viewer für dieses Modell.|  
 |`HELP_FILE`|`DBTYPE_WSTR`||(Optional) Der Name der Datei, die die Dokumentation für diesen Dienst enthält.|  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 caps.latest.revision: 24
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6ae7c26bce8b52e58124b04c435af6be7d6dc84f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9c72123024fff48604919df0804694e0cd6ec480
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057823"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152101"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
   Die Excel-Renderingerweiterung von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] rendert einen Bericht im systemeigenen Format von [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010. Mit der Excel-Renderingerweiterung spiegelt die Breite von Spalten in Excel die Breite von Spalten in Berichten genauer wider.  
@@ -33,7 +33,7 @@ ms.locfileid: "36057823"
 >   
 >  Weitere Informationen zu diesem Problem finden Sie unter [FIX: SSRS 2012 kann Berichte, die größer als 10 MB sind, nicht in das Excel-Format exportieren](http://go.microsoft.com/fwlink/p/?LinkId=402513)  
 >   
->  Das neueste Servicepack für die abzurufenden [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], finden Sie unter [so erhalten Sie das neueste Servicepack für SQL Server 2012](http://go.microsoft.com/fwlink/p/?LinkId=402512)  
+>  Zum Abrufen der neuesten Servicepack für [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], finden Sie unter [so erhalten Sie das neueste Servicepack für SQL Server 2012](http://go.microsoft.com/fwlink/p/?LinkId=402512)  
   
 > [!IMPORTANT]  
 >  Wenn Sie einen Parameter vom Typ definieren `String`, erhält der Benutzer ein Textfeld, das jeden beliebigen Wert annehmen kann. Wenn ein Berichtsparameter nicht an einen Abfrageparameter gebunden ist und die Parameterwerte im Bericht enthalten sind, können Benutzer des Berichts Ausdruckssyntax, ein Skript oder eine URL in den Parameterwert eingeben und den Bericht für Excel rendern. Wenn anschließend ein anderer Benutzer den Bericht anzeigt und auf die gerenderten Parameterinhalte klickt, führt der Benutzer möglicherweise unbeabsichtigt das bösartige Skript bzw. den bösartigen Link aus.  
@@ -97,7 +97,7 @@ ms.locfileid: "36057823"
   
 -   Für Kopf- und -Fußzeilen in Excel werden einschließlich Markup maximal 256 Zeichen unterstützt. Die Renderingerweiterung schneidet die Zeichenfolge bei 256 Zeichen ab.  
   
--   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] unterstützt keine Ränder in Berichtskopf- und-Fußzeilen. Wenn die Randwerte in Excel exportiert werden, werden sie auf 0 (null) festgelegt, und abhängig von den Druckereinstellungen werden unter Umständen von allen Kopf- oder Fußzeilen, die mehrere Datenzeilen enthalten, nicht mehrere Zeilen gedruckt.  
+-   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Ränder unterstützt unter berichtskopfzeilen und-Fußzeilen nicht. Wenn die Randwerte in Excel exportiert werden, werden sie auf 0 (null) festgelegt, und abhängig von den Druckereinstellungen werden unter Umständen von allen Kopf- oder Fußzeilen, die mehrere Datenzeilen enthalten, nicht mehrere Zeilen gedruckt.  
   
 -   Textfelder in einer Kopf- oder Fußzeile behalten beim Export in Excel ihre Formatierung, jedoch nicht ihre Ausrichtung bei. Dies liegt daran, dass führende und nachfolgende Leerzeichen abgeschnitten werden, wenn der Bericht in Excel gerendert wird.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "36057823"
 ## <a name="excel-renderer"></a>Excel-Renderer  
   
 ### <a name="excel-2007-2010-renderer"></a>Excel 2007-2010-Renderer  
- In [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], den standardmäßigen Excel-Renderer ist die Version, die kompatibel mit [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010. Dies ist die **Excel** -Option, die in den Menüs **Exportieren** in Berichts-Manager und SharePoint aufgeführt ist.  
+ In [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], der Standard-Excel-Renderer ist die Version, die kompatibel mit [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010. Dies ist die **Excel** -Option, die in den Menüs **Exportieren** in Berichts-Manager und SharePoint aufgeführt ist.  
   
  Wenn Sie den standardmäßigen Excel-Renderer statt des früheren Excel 2003-Renderers verwenden, können Sie das Microsoft Office Compatibility Pack für Word, Excel und PowerPoint installieren, damit frühere Versionen von Excel die exportierten Dateien öffnen können.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "36057823"
   
 -   Berichts-Generator im getrennten Modus, und Sie zeigen einen Bericht im Berichts-Generator in der Vorschau an. Da sich die RSReportServer-Konfigurationsdatei auf dem Berichtsserver befindet, müssen die Tools oder Produkten, aus denen Sie Berichte exportieren, mit einem Berichtsserver verbunden sein, um die Konfigurationsdatei zu lesen.  
   
-     Dieser Fehler tritt in sowohl die [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] und die eigenständige Version des Berichts-Generators.  
+     Dieser Fehler tritt in sowohl die [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] und der eigenständigen Version des Berichts-Generators.  
   
 -   Berichts-Viewer-Webpart im lokalen Modus, und die SharePoint-Farm ist nicht in einen [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Berichtsserver integriert. Weitere Informationen zum lokalen Modus finden Sie unter [Berichte im lokalen Modus im Vergleich zu Berichten im verbundenen Modus im Berichts-Viewer (Reporting Services im SharePoint-Modus)](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
   
@@ -161,7 +161,7 @@ ms.locfileid: "36057823"
   
 -   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] und Sie zeigen eine Berichtsvorschau.  
   
--   Berichts-Generator, der mit einem Berichtsserver verbunden ist. Dies kann eine [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] oder die eigenständige Version des Berichts-Generators.  
+-   Berichts-Generator, der mit einem Berichtsserver verbunden ist. Dies liegt möglicherweise ein [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] oder eigenständige Version von Berichts-Generator.  
   
 -   Das Berichts-Viewer-Webpart im Remotemodus.  
   
@@ -229,7 +229,7 @@ ms.locfileid: "36057823"
  Excel-Kopf- und -Fußzeilenabschnitte unterstützen einschließlich Markup ein Maximum von 256 Zeichen. Falls diese Grenze überschritten wird, entfernt der Excel-Renderer vom Ende der Zeichenfolge des Seitenkopfs und/oder Seitenfußes her Markupzeichen, um die Anzahl der Zeichen insgesamt zu verringern. Falls alle Markupzeichen entfernt werden und die Länge noch immer über der maximal zulässigen liegt, wird die Zeichenfolge von rechts her abgeschnitten.  
   
 ### <a name="simplepageheader-settings"></a>SimplePageHeader-Einstellungen  
- Standardmäßig ist die Einstellung der Geräteinformationen SimplePageHeaders auf festgelegt `False`; daher werden die Seitenköpfe im Bericht auf der Excel-arbeitsblattoberfläche als Zeilen gerendert. Die Arbeitsblattzeilen, die die Kopfzeilen enthalten, werden gesperrte Zeilen. Sie können den Bereich in Excel fixieren oder die Fixierung des Bereichs aufheben.  
+ Standardmäßig ist die Einstellung der Geräteinformationen SimplePageHeaders auf festgelegt `False`; aus diesem Grund werden die Seitenköpfe im Bericht auf der Excel-arbeitsblattoberfläche als Zeilen gerendert. Die Arbeitsblattzeilen, die die Kopfzeilen enthalten, werden gesperrte Zeilen. Sie können den Bereich in Excel fixieren oder die Fixierung des Bereichs aufheben.  
   
 > [!NOTE]  
 >  Wenn die Option **Titel drucken** aktiviert ist, werden diese Kopfzeilen auf jeder Arbeitsblattseite ausgedruckt.  
@@ -246,7 +246,7 @@ ms.locfileid: "36057823"
  Einige interaktive Elemente werden in Excel unterstützt. Im Folgenden werden spezifische Funktionsweisen beschrieben.  
   
 ### <a name="show-and-hide"></a>Einblenden und Ausblenden  
- [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] weist Einschränkungen wie ausgeblendete und angezeigte Berichtselemente beim verwaltet exportiert werden. Gruppen, Zeilen und Spalten, die Berichtselemente enthalten, die ein- und ausgeschaltet werden können, werden als Excel-Gliederungen gerendert. Excel erstellt Gliederungen, die Zeilen und Spalten über die gesamte Zeile oder Spalte hinweg erweitern oder reduzieren. Dadurch können unter Umständen Berichtselemente reduziert werden, die nicht zum Reduzieren vorgesehen sind. Darüber hinaus können die Gliederungssymbole von Excel übermäßig viele sich überschneidende Gliederungen enthalten. Beim Verwenden der Excel-Renderingerweiterung werden daher die folgenden Gliederungsregeln angewendet, um diese Probleme zu vermeiden:  
+ [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] weist Einschränkungen wie ausgeblendete und angezeigte Berichtselemente beim verwaltet sie exportiert werden. Gruppen, Zeilen und Spalten, die Berichtselemente enthalten, die ein- und ausgeschaltet werden können, werden als Excel-Gliederungen gerendert. Excel erstellt Gliederungen, die Zeilen und Spalten über die gesamte Zeile oder Spalte hinweg erweitern oder reduzieren. Dadurch können unter Umständen Berichtselemente reduziert werden, die nicht zum Reduzieren vorgesehen sind. Darüber hinaus können die Gliederungssymbole von Excel übermäßig viele sich überschneidende Gliederungen enthalten. Beim Verwenden der Excel-Renderingerweiterung werden daher die folgenden Gliederungsregeln angewendet, um diese Probleme zu vermeiden:  
   
 -   Das Berichtselement oben links, das ein- und ausgeschaltet werden kann, kann in Excel weiterhin ein- und ausgeschaltet werden. Berichtselemente, die ein- und ausgeschaltet werden können und einen gemeinsamen horizontalen oder vertikalen Bereich mit dem Berichtselement aufweisen, das oben links ein- und ausgeschaltet werden kann, können in Excel nicht ein- und ausgeschaltet werden.  
   

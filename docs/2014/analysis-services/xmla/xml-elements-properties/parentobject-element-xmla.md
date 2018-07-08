@@ -1,5 +1,5 @@
 ---
-title: ParentObject-Element (XMLA) | Microsoft Docs
+title: ParentObject-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - ParentObject element
 ms.assetid: f821f8f1-554a-4f16-bf09-262a9448e304
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1fae76d5f4c4dc1e3fbd64ca456af60719de4aaa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: c9795913ee483aa3b89b8f9fac88ec9515acf834
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056786"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259166"
 ---
 # <a name="parentobject-element-xmla"></a>ParentObject-Element (XMLA)
-  Enthält den Bezeichner des übergeordneten Objekts, unter denen zum Erstellen der Objekte, die vom übergeordneten Element definiert [erstellen](../xml-elements-commands/create-element-xmla.md) Element.  
+  Enthält den Bezeichner des übergeordneten Objekts, unter dem die vom übergeordneten Element definierten Objekte erstellt [erstellen](../xml-elements-commands/create-element-xmla.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   

@@ -1,5 +1,5 @@
 ---
-title: ASSL-Objekte und-Objekteigenschaften | Microsoft Docs
+title: ASSL-Objekte und Objekteigenschaften | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - expansion [Analysis Services Scripting Language]
 ms.assetid: 6e5c28b5-c0bc-4ccd-82e5-e174bbb71386
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5e5f98511df4b952f6598909d1cea2c373ff7476
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 95e2277f9d618dfc13c4fe93ea6a565550ec1e87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046299"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277896"
 ---
 # <a name="assl-objects-and-object-characteristics"></a>ASSL-Objekte und -Objekteigenschaften
   Objekte in Analysis Services Scripting Language (ASSL) folgen spezifischen Richtlinien in Bezug auf Objektgruppen, Vererbung, Benennung, Erweiterung und Verarbeitung.  
@@ -68,12 +68,12 @@ ms.locfileid: "36046299"
   
 -   `LastSchemaUpdate`  
   
--   `LastProcessed` (falls zutreffend)  
+-   `LastProcessed` (wenn geeignet)  
   
 > [!NOTE]  
->  Die Klassifizierung eines Objekts als Hauptobjekt wirkt sich darauf aus, wie eine Instanz von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] dieses Objekt behandelt und wie es in der Objektdefinitionssprache gehandhabt wird. Diese Klassifizierung ist jedoch nicht garantiert, die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Verwaltungs-und Entwicklungstools werden das unabhängige erstellen, ändern oder Löschen dieser Objekte zulassen.  
+>  Die Klassifizierung eines Objekts als Hauptobjekt wirkt sich darauf aus, wie eine Instanz von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] dieses Objekt behandelt und wie es in der Objektdefinitionssprache gehandhabt wird. Diese Klassifizierung ist jedoch nicht garantiert, die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Verwaltungs-und Entwicklungstools ermöglicht die unabhängige Erstellung, Änderung oder Löschung dieser Objekte.  
   
- **Nebenobjekte**  
+ **Untergeordnete Objekte**  
  Nebenobjekte sind Objekte, die nur im Rahmen des Erstellens, Änderns oder Löschens des übergeordneten Hauptobjekts erstellt, geändert oder gelöscht werden können. Zu den Nebenobjekten gehören:  
   
 -   Hierarchien und Ebenen  
@@ -101,8 +101,8 @@ ms.locfileid: "36046299"
  In diesem ASSL-Verweisabschnitt wird die *ExpandFull* -Darstellung beschrieben. Alle anderen `ObjectExpansion` -Ebenen werden von dieser Ebene abgeleitet.  
   
 ## <a name="object-processing"></a>Objektverarbeitung  
- ASSL enthält schreibgeschützte Elemente oder Eigenschaften (z. B. `LastProcessed`), die gelesen werden können, aus der [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz, jedoch ausgelassen werden, wenn Befehlsskripts an die Instanz übermittelt werden. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ignoriert geänderte Werte für schreibgeschützte Elemente ohne Warnmeldungen oder Fehler an.  
+ ASSL enthält schreibgeschützte Elemente oder Eigenschaften (z. B. `LastProcessed`), die gelesen werden können, aus der [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Instanz, jedoch nicht angegeben werden, wenn Befehlsskripts an die Instanz übermittelt werden. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ignoriert geänderte Werte für schreibgeschützte Elemente ohne Warnung oder Fehler.  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ignoriert auch unpassende oder irrelevante Eigenschaften, ohne Überprüfungsfehler auszulösen. Beispielsweise sollte das X-Element nur vorhanden sein, wenn das Y-Element einen besonderen Wert aufweist. Die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Instanz ignoriert das X-Element, anstatt es zu überprüfen, mit dem Wert des Y-Elements.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ignoriert auch unpassende oder irrelevante Eigenschaften, ohne Überprüfungsfehler auszulösen. Beispielsweise sollte das X-Element nur vorhanden sein, wenn das Y-Element einen besonderen Wert aufweist. Die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Instanz ignoriert das X-Element, anstatt die Validierung dieses Elements mit dem Wert des Y-Elements.  
   
   

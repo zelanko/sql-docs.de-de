@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7a8ce540cb3ecf555e5abc22a1927482409bc582
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 6b1b12938e2043ee126c81313fc955454742bcde
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049637"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149411"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server Parallel Data Warehouse-Verbindungstyp (SSRS)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] ist eine skalierbare Datawarehouse-Anwendung, die durch massive parallelverarbeitung Leistung und Skalierbarkeit bietet. [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] verwendet [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Datenbanken für die verteilte Verarbeitung und datenspeicherung.  
   
- Die Anwendung partitioniert große Datenbanktabellen auf mehrere physische Knoten, wobei jeder Knoten eine eigene Instanz von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]ausführt. Wenn ein Bericht eine Verbindung mit [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] herstellt, um Berichtsdaten abzurufen, wird eine Verbindung mit dem Steuerungsknoten hergestellt, der die Abfrageverarbeitung in der [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] -Anwendung verwaltet. Nachdem die Verbindung hergestellt wird, bestehen keine Unterschiede zwischen dem Arbeiten mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , und ist nicht in einer [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] Umgebung.  
+ Die Anwendung partitioniert große Datenbanktabellen auf mehrere physische Knoten, wobei jeder Knoten eine eigene Instanz von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]ausführt. Wenn ein Bericht eine Verbindung mit [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] herstellt, um Berichtsdaten abzurufen, wird eine Verbindung mit dem Steuerungsknoten hergestellt, der die Abfrageverarbeitung in der [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] -Anwendung verwaltet. Nachdem die Verbindung hergestellt wurde, bestehen keine Unterschiede zwischen der Arbeit mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , und ist nicht in einem [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] Umgebung.  
   
- Zum Einschließen von Daten aus [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] in Ihrem Bericht benötigen Sie ein Dataset, das basierend auf einer Berichtsdatenquelle vom Typ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Parallel Data Warehouse. Dieser integrierte Datenquellentyp basiert auf der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Parallel Data Warehouse-datenerweiterung. Verwenden Sie diesen Datenquellentyp herstellen und Abrufen von Daten aus [!INCLUDE[ssDW](../../../includes/ssdw-md.md)].  
+ Zum Einschließen von Daten aus [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] in Ihrem Bericht verwenden, benötigen Sie ein Dataset, das basierend auf einer Berichtsdatenquelle vom Typ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Parallel Data Warehouse. Dieser integrierte Datenquellentyp basiert auf der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Parallel Data Warehouse-datenerweiterung. Verwenden Sie diesen Datenquellentyp herstellen und Abrufen von Daten aus [!INCLUDE[ssDW](../../../includes/ssdw-md.md)].  
   
  Diese Datenerweiterung unterstützt mehrwertige Parameter, Serveraggregate und getrennt von der Verbindungszeichenfolge verwaltete Anmeldeinformationen.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "36049637"
  Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstellen. Schrittweise Anweisungen finden Sie unter [hinzufügen und Prüfen einer Datenverbindung oder Datenquelle &#40;Berichts-Generator und SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 ##  <a name="Connection"></a> Verbindungszeichenfolge  
- Wenn Sie eine Verbindung mit [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]herstellen, stellen Sie eine Verbindung mit einem Datenbankobjekt in einer [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] -Anwendung her. Sie geben das zu verwendende Datenbankobjekt im Abfrage-Designer an. Falls Sie in der Verbindungszeichenfolge keine Datenbank angeben, wird eine Verbindung mit der vom Administrator zugewiesenen Standarddatenbank hergestellt. Erfragen Sie bei Ihrem Datenbankadministrator die Verbindungsinformationen und die Anmeldeinformationen, die verwendet werden sollen, um eine Verbindung mit der Datenquelle herzustellen. Die folgende Verbindungszeichenfolge gibt die Beispieldatenbank **CustomerSales**in die [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] Appliance:  
+ Wenn Sie eine Verbindung mit [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]herstellen, stellen Sie eine Verbindung mit einem Datenbankobjekt in einer [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] -Anwendung her. Sie geben das zu verwendende Datenbankobjekt im Abfrage-Designer an. Falls Sie in der Verbindungszeichenfolge keine Datenbank angeben, wird eine Verbindung mit der vom Administrator zugewiesenen Standarddatenbank hergestellt. Erfragen Sie bei Ihrem Datenbankadministrator die Verbindungsinformationen und die Anmeldeinformationen, die verwendet werden sollen, um eine Verbindung mit der Datenquelle herzustellen. Das folgende Beispiel einer Verbindungszeichenfolge gibt die-Beispieldatenbank **CustomerSales**in die [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] Appliance:  
   
 ```  
 HOST=<IP address>; database= CustomerSales; port=<port>  
@@ -56,7 +56,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   Anmeldeinformationen sind nicht erforderlich. Zur Verwendung dieser Option müssen Sie zuvor das Konto für die unbeaufsichtigte Ausführung auf dem Berichtsserver konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren des unbeaufsichtigten Ausführungskontos (SSRS-Konfigurations-Manager)](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) in der [Reporting Services-Dokumentation](http://go.microsoft.com/fwlink/?linkid=121312) auf msdn.microsoft.com.  
   
- Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) oder [Geben Sie Anmeldeinformationen im Berichts-Generator](../specify-credentials-in-report-builder.md).  
+ Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) oder [angeben von Anmeldeinformationen im Berichts-Generator](../specify-credentials-in-report-builder.md).  
   
  ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#BackToTop)  
   
@@ -67,7 +67,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   Erstellen Sie eine Abfrage interaktiv. Verwenden Sie den relationalen Abfrage-Designer, in dem eine nach Datenbankschema geordnete hierarchische Ansicht der Tabellen, Sichten und anderen Datenbankelemente angezeigt wird. Wählen Sie Spalten aus Tabellen oder Sichten aus. Beschränken Sie die Anzahl abzurufender Datenzeilen mit Filterkriterien, einer Gruppierung und Aggregaten. Passen Sie den Filter an, wenn der Bericht ausgeführt wird, indem Sie die Parameteroption festlegen.  
   
--   Geben Sie eine Abfrage ein, oder fügen Sie sie ein. Den textbasierte Abfrage-Designer verwenden, um einzugeben [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] Text direkt, Abfragetext aus einer anderen Quelle, komplexe Abfragen einzugeben, die mit dem relationalen Abfrage-Designer erstellt werden kann, oder um abfragebasierte Ausdrücke einzugeben einzufügen.  
+-   Geben Sie eine Abfrage ein, oder fügen Sie sie ein. Verwenden Sie den textbasierten Abfrage-Designer, um einzugeben [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] Text direkt zum Einfügen von Abfragetext aus einer anderen Quelle, komplexe Abfragen einzugeben, die mit dem relationalen Abfrage-Designer erstellt werden kann, oder um abfragebasierte Ausdrücke einzugeben.  
   
 -   Importiert eine vorhandene Abfrage aus einer Datei oder einem Bericht. Verwenden Sie die Schaltfläche **Abfrage importieren** in einem Abfrage-Designer, um nach einer SQL- oder RDL-Datei zu suchen und eine Abfrage zu importieren.  
   
@@ -81,14 +81,14 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  Eine Abfrage, die Berichtsdaten aus einer großen Datenbank abruft (z. B. einem Data Warehouse wie [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]), kann ein Resultset mit sehr vielen Zeilen generieren, sofern Sie die Daten nicht aggregieren und zusammenfassen, um die Anzahl der zurückgegebenen Zeilen zu reduzieren. Abfragen, die Aggregate und eine Gruppierung enthalten, können mit dem grafischen oder dem textbasierten Abfrage-Designer geschrieben werden.  
   
- [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] unterstützt die Klausel, das Schlüsselwort und die Aggregate, die der Abfrage-Designer bereitstellt, um Daten zusammenzufassen.  
+ [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] unterstützt die Klausel, Schlüsselwort und Aggregate, die der Abfrage-Designer bereitstellt, um Daten zusammenzufassen.  
   
- Der von [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] verwendete grafische Abfrage-Designer bietet integrierte Unterstützung für das Gruppieren und Aggregate. Sie können daher Abfragen schreiben, durch die nur Zusammenfassungsdaten abgerufen werden. Die [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] Sprachfunktionen sind: die GROUP BY-Klausel, DISTINCT-Schlüsselwort und Aggregate wie SUM und COUNT. Der textbasierte Abfrage-Designer bietet vollständige Unterstützung für die [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] Sprache, einschließlich gruppieren und Aggregate.  
+ Der von [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] verwendete grafische Abfrage-Designer bietet integrierte Unterstützung für das Gruppieren und Aggregate. Sie können daher Abfragen schreiben, durch die nur Zusammenfassungsdaten abgerufen werden. Die [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] Sprachfunktionen sind: die GROUP BY-Klausel, DISTINCT-Schlüsselwort und Aggregate wie SUM und COUNT. Der textbasierte Abfrage-Designer bietet vollständige Unterstützung für die [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] Sprache, einschließlich der Gruppierung und Aggregate.  
   
  Weitere Informationen zu [!INCLUDE[tsql](../../../includes/tsql-md.md)] finden Sie unter [Transact-SQL-Referenz &amp;#40;Datenbank-Engine&amp;#41;](/sql/t-sql/language-reference) in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-[Onlinedokumentation](http://go.microsoft.com/fwlink/?LinkId=141687) auf „msdn.microsoft.com“.  
   
 ###  <a name="QueryText"></a> Verwenden des Abfragetyps "Text"  
- Im textbasierten Abfrage-Designer geben Sie [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] -Befehle ein, um die Daten in einem Dataset zu definieren. Die Abfragen, die Sie verwenden, um das Abrufen von Daten aus [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] sind identisch mit der für das Abrufen von Daten von Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausführen, die nicht innerhalb einer [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] Anwendung. Beispielsweise die folgenden [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] Abfrage wählt die Namen aller Mitarbeiter marketingassistenten sind:  
+ Im textbasierten Abfrage-Designer geben Sie [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] -Befehle ein, um die Daten in einem Dataset zu definieren. Abfragen, die Sie verwenden, um das Abrufen von Daten aus [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] sind identisch mit denen Sie verwenden, um das Abrufen von Daten aus Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausführen, die nicht innerhalb einer [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] Anwendung. Beispielsweise die folgenden [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] -Abfrage wählt die Namen aller Mitarbeiter, die marketingassistenten sind:  
   
 ```  
 SELECT  

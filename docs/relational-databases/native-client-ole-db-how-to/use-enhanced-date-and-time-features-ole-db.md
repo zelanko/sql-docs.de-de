@@ -1,12 +1,12 @@
 ---
-title: Verwenden von verbesserten Datums- und Uhrzeitfunktionen (OLE DB) | Microsoft Docs
+title: Verwenden von verbesserten Uhrzeitfunktionen zu Datum und (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 50f98cab-8c80-43c5-bc9a-5d2f95f67f17
@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a93ad561e1313da35a6b69f49bede54fd9f1ddce
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 866ec2c8ed56cee30a1e778376a03781a518e731
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700771"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426049"
 ---
-# <a name="use-enhanced-date-and-time-features-ole-db"></a>Verwenden von verbesserten Datums- und Uhrzeitfunktionen (OLE DB)
+# <a name="use-enhanced-date-and-time-features-ole-db"></a>Verwenden von verbesserten Uhrzeitfunktionen zu Datum und (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Dieses Beispiel zeigt, wie die Datum/Uhrzeit-Funktionen, die in eingeführt wurden [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Dieses Beispiel verwendet die vier neuen Datums- und Uhrzeittypen (**date**, **time**, **datetime2**und **datetimeoffset**) zum Ausführen von Befehlen mit Parametern und zum Abrufen von Rowset-Ergebnissen.  
+  Dieses Beispiel zeigt, wie die Datum/Uhrzeit-Funktionen verwenden, die in eingeführt wurden [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Dieses Beispiel verwendet die vier neuen Datums- und Uhrzeittypen (**date**, **time**, **datetime2**und **datetimeoffset**) zum Ausführen von Befehlen mit Parametern und zum Abrufen von Rowset-Ergebnissen.  
   
  Dieses Beispiel erfordert die AdventureWorks-Beispieldatenbank, die Sie von der Homepage [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) herunterladen können.  
   
@@ -36,9 +36,9 @@ ms.locfileid: "35700771"
 ## <a name="example"></a>Beispiel  
  Das erste Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) erstellt eine im Beispiel verwendete gespeicherte Prozedur.  
   
- Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das zweite Codelisting (C++) aus. Diese Anwendung stellt eine Verbindung des Computers her [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz ändern. Um eine Verbindung mit einer benannten Instanz herzustellen, ändern Sie die Verbindungszeichenfolge von l"(Local)" "zu l"(Local)"\\\name", wobei der Name der benannten Instanz ist. Standardmäßig [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
+ Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das zweite Codelisting (C++) aus. Diese Anwendung stellt eine Verbindung her, des Computers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz ändern. Um eine Verbindung mit einer benannten Instanz herzustellen, ändern Sie die Verbindungszeichenfolge von l"(Local)" "um l"(Local)"\\\name", wobei der Name der benannten Instanz ist. In der Standardeinstellung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
- Das dritte ([!INCLUDE[tsql](../../includes/tsql-md.md)]) Codelisting löscht die im Beispiel verwendete gespeicherte Prozedur.  
+ Das dritte ([!INCLUDE[tsql](../../includes/tsql-md.md)]) Codelisting löscht die gespeicherte Prozedur, die im Beispiel verwendet wird.  
   
 ```  
 CREATE PROCEDURE sp_datetimetypes  

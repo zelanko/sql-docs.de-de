@@ -1,5 +1,5 @@
 ---
-title: Erstellen von Zellenberechnungen in MDX (Multidimensional Expressions) | Microsoft Docs
+title: Erstellen von Zellenberechnungen in MDX (Multidimensional Expressions) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - calculated cells [MDX]
 - queries [MDX], cell calculations
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], cell calculations
 ms.assetid: 068aea63-d419-4791-a960-3d74e76f808e
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2d9d00541e51cb25c939f881a8b531892c1bf64d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9b0a689858d4012f360e7f3893cfa844f3ecbdcf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049317"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161351"
 ---
 # <a name="building-cell-calculations-in-mdx-mdx"></a>Erstellen von Zellenberechnungen in MDX (MDX)
   MDX (Multidimensional Expressions) stellt eine Reihe von Tools zum Generieren berechneter Werte bereit, wie z. B. berechnete Elemente, benutzerdefinierte Rollups und benutzerdefinierte Elemente. Allerdings ist es schwierig, mithilfe dieser Funktionen eine bestimmte Menge von Zellen oder eine einzelne Zelle zu beeinflussen.  
@@ -38,7 +38,7 @@ ms.locfileid: "36049317"
   
  In Bezug auf den Gültigkeitsbereich sind berechnete Zellen sowohl mit benannten Mengen als auch mit berechneten Elementen vergleichbar, da berechnete Zellen temporär für die Dauer einer Sitzung oder einer einzelnen Abfrage erstellt oder global als Teil eines Cubes zur Verfügung gestellt werden können.  
   
--   **Im Bereich einer Abfrage** Mit dem WITH-Schlüsselwort können Sie eine berechnete Zelle erstellen, die als Teil einer MDX-Abfrage definiert ist und deren Bereich somit auf die Abfrage beschränkt ist. Anschließend können Sie die berechnete Zelle in einer MDX-SELECT-Anweisung verwenden. Bei dieser Vorgehensweise kann die berechnete Zelle erstellt mithilfe der `WITH` Schlüsselwort geändert werden, ohne dass die SELECT-Anweisung davon beeinflusst.  
+-   **Im Bereich einer Abfrage** Mit dem WITH-Schlüsselwort können Sie eine berechnete Zelle erstellen, die als Teil einer MDX-Abfrage definiert ist und deren Bereich somit auf die Abfrage beschränkt ist. Anschließend können Sie die berechnete Zelle in einer MDX-SELECT-Anweisung verwenden. Bei diesem Ansatz ist die erstellte berechnete Zelle mithilfe der `WITH` Schlüsselwort kann ohne Beeinträchtigung der SELECT-Anweisung geändert werden.  
   
      Weitere Informationen zum Erstellen berechneter Elemente mithilfe des WITH-Schlüsselworts finden Sie unter [Creating Query-Scoped Cell Calculations &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md).  
   
@@ -48,8 +48,8 @@ ms.locfileid: "36049317"
   
 ## <a name="see-also"></a>Siehe auch  
  [ALTER CUBE-Anweisung &#40;MDX&#41;](/sql/mdx/mdx-data-definition-alter-cube)   
- [CELL CALCULATION-Anweisung erstellen &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)   
+ [Erstellen von CELL CALCULATION-Anweisung &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)   
  [Erstellen von Zellenberechnungen im Bereich einer Abfrage &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)   
- [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Grundlegendes zu MDX-Abfrage &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

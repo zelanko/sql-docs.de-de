@@ -1,5 +1,5 @@
 ---
-title: FontFlags-Element (ASSL) | Microsoft Docs
+title: FontFlags-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - FontFlags element
 ms.assetid: ea608da9-ab05-42ab-8872-c52cd9f3f546
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 93dfd53940270fb444dd797bfd4d085ab459d200
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1896d01c47f7c2e2fa4289f09c10ef859eff1d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060606"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156841"
 ---
 # <a name="fontflags-element-assl"></a>FontFlags-Element (ASSL)
   Beschreibt schriftartbezogene Anzeigeeigenschaften der [CalculationProperty](../objects/calculationproperty-element-assl.md) oder [Measure](../objects/measure-element-assl.md) übergeordneten Elements.  
@@ -62,9 +62,9 @@ ms.locfileid: "36060606"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `FontFlags` -Eigenschaft enthält einen Ausdruck (Multidimensional Expressions) und gilt für `CalculationProperty` Elemente mit einem [CalculationType](calculationtype-element-assl.md) von *Member* oder *Zellen* .  
+ Die `FontFlags` -Eigenschaft enthält einen Ausdruck für MDX (Multidimensional Expressions) und gilt für `CalculationProperty` Elemente mit einem [CalculationType](calculationtype-element-assl.md) von *Member* oder *Zellen* .  
   
- Die Elemente, die den übergeordneten Elementen von entsprechen `FontFlags` im Objektmodell von Analysis Management Objects (AMO) sind <xref:Microsoft.AnalysisServices.CalculationProperty> und <xref:Microsoft.AnalysisServices.Measure>.  
+ Die Elemente, die den übergeordneten Elementen von entsprechen `FontFlags` im Analysis Management Objects (AMO)-Objektmodell werden <xref:Microsoft.AnalysisServices.CalculationProperty> und <xref:Microsoft.AnalysisServices.Measure>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CalculationProperties-Element &#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

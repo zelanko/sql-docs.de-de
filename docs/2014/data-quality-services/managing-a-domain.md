@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 72b2400e8a953490d1650a8e435c6b353c660445
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb61470789fb7474216b1a4da1364305c4cd9f8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048815"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153001"
 ---
 # <a name="managing-a-domain"></a>Verwalten einer Domäne
   In diesem Thema wird die Verwendung von Domänen in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) beschrieben. Eine Domäne enthält eine semantische Darstellung der Daten in einem bestimmten Feld in der Datenquelle, die analysiert werden soll. Eine Domäne ist Teil einer Wissensdatenbank, die Sie für eine Datenquelle erstellen, und das Wissen, das Sie durch Analysieren einer Beispieldatenquelle oder dem Importieren von Daten erhalten, wird den in der Wissensdatenbank definierten Domänen hinzugefügt. Das Wissen in diesen Domänen wird später verwendet, um Bereinigungen und Abgleiche in einem Data Quality-Projekt auszuführen. Domänen sind der Kern aller Aktivitäten in Data Quality Services.  

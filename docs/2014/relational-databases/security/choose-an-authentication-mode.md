@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ins.instwizard.authenticationmode.f1
 helpviewer_keywords:
@@ -24,15 +23,15 @@ helpviewer_keywords:
 - SQL authentication mode
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 caps.latest.revision: 45
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1c2927e5d68ac41c9813dd623983e44b95b8ba53
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 513a28480fbcd3c664b090ddcd68ebc0aa9df308
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049650"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155921"
 ---
 # <a name="choose-an-authentication-mode"></a>Auswählen eines Authentifizierungsmodus
   Während des Setups müssen Sie einen Authentifizierungsmodus für [!INCLUDE[ssDE](../../includes/ssde-md.md)]auswählen. Es gibt zwei mögliche Modi: den Windows-Authentifizierungsmodus und den gemischten Modus. Der Windows-Authentifizierungsmodus aktiviert die Windows-Authentifizierung und deaktiviert die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung. Der gemischte Modus aktiviert sowohl die Windows-Authentifizierung als auch die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung. Die Windows-Authentifizierung ist immer verfügbar und kann nicht deaktiviert werden.  
@@ -71,7 +70,7 @@ ms.locfileid: "36049650"
   
 1.  Klicken Sie im Menü **Start** auf **Ausführen**.  
   
-2.  In der **ausführen** Geben Sie im Dialogfeld `secpol.msc`, und klicken Sie dann auf **OK**.  
+2.  In der **ausführen** (Dialogfeld), Typ `secpol.msc`, und klicken Sie dann auf **OK**.  
   
 3.  Erweitern Sie in der Anwendung **Lokale Sicherheitseinstellung** die **Sicherheitseinstellungen**, erweitern Sie **Kontorichtlinien**, und klicken Sie dann auf **Kennwortrichtlinie**.  
   

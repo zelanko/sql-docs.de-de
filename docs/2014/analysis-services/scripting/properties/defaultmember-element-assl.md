@@ -1,5 +1,5 @@
 ---
-title: DefaultMember-Element (ASSL) | Microsoft Docs
+title: DefaultMember-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DefaultMember element
 ms.assetid: db4eea9f-f7cf-40de-abd0-b62014e7ec2d
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 71b8b2ecd1d5cd46ea50cceebe2a0105d9b7311f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fd074ab38264bf45ad70a96c37a22bc3c3185d4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059234"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229680"
 ---
 # <a name="defaultmember-element-assl"></a>DefaultMember-Element (ASSL)
   Enthält einen MDX-Ausdruck (Multidimensional Expression), der das Standardelement des übergeordneten Elements definiert.  
@@ -62,13 +62,13 @@ ms.locfileid: "36059234"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `DefaultMember` -Element definiert das Standardelement für das übergeordnete Element. Wenn `DefaultMember` nicht angegeben oder auf eine leere Zeichenfolge festgelegt [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] wählt ein Element als Standardelement verwendet.  
+ Die `DefaultMember` -Element definiert das Standardelement für das übergeordnete Element. Wenn `DefaultMember` ist nicht angegeben oder auf eine leere Zeichenfolge festgelegt ist [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] wählt ein Element, das als Standardelement verwendet.  
   
- Für `ManyToManyMeasureGroupDimension` Elemente, die `DefaultMember` Element enthält einen MDX-Ausdruck, der angibt, ein Element in der Dimension identifiziert, der `CubeDimensionID` Element von der `ManyToManyMeasureGroupDimension`. Der MDX-Ausdruck ähnelt der [StrToMember](/sql/mdx/strtomember-mdx) MDX-Funktion mit dem Schlüsselwort CONSTRAINED, da sie MDX-Funktionen oder benutzerdefinierte Funktionen enthalten kann.  
+ Für `ManyToManyMeasureGroupDimension` Elemente, die `DefaultMember` Element enthält einen MDX-Ausdruck, der angibt, ein Element in der Dimension identifiziert, die der `CubeDimensionID` Element der `ManyToManyMeasureGroupDimension`. Der MDX-Ausdruck ähnelt der [StrToMember](/sql/mdx/strtomember-mdx) MDX-Funktion mit dem Schlüsselwort CONSTRAINED, da sie MDX oder benutzerdefinierten Funktionen enthalten kann.  
   
  Weitere Informationen zu Standardelementen finden Sie unter [Definieren eines Standardelements](../../multidimensional-models/attribute-properties-define-a-default-member.md).  
   
- Die Elemente, die den übergeordneten Elementen von entsprechen `DefaultMember` im Objektmodell von Analysis Management Objects (AMO) sind <xref:Microsoft.AnalysisServices.AttributePermission>, <xref:Microsoft.AnalysisServices.DimensionAttribute>, und <xref:Microsoft.AnalysisServices.PerspectiveAttribute>.  
+ Die Elemente, die den übergeordneten Elementen von entsprechen `DefaultMember` im Analysis Management Objects (AMO)-Objektmodell werden <xref:Microsoft.AnalysisServices.AttributePermission>, <xref:Microsoft.AnalysisServices.DimensionAttribute>, und <xref:Microsoft.AnalysisServices.PerspectiveAttribute>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

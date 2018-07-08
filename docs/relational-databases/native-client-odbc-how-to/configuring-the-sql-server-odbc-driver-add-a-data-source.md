@@ -1,12 +1,12 @@
 ---
-title: Hinzufügen einer Datenquelle (ODBC) | Microsoft Docs
+title: Hinzufügen einer Datenquelle (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,30 +16,30 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4bfc1030cba65196858d05e3c57230b4930b2b21
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: be2aceb1f0b4d868e45219e4705eb12d7aee37c1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694471"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421509"
 ---
-# <a name="configuring-the-sql-server-odbc-driver---add-a-data-source"></a>Konfigurieren des SQL Server-ODBC-Treibers - Hinzufügen einer Datenquelle
+# <a name="configuring-the-sql-server-odbc-driver---add-a-data-source"></a>Konfigurieren des SQL Server ODBC-Treibers: Hinzufügen einer Datenquelle
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Vor der Verwendung von ODBC-Anwendungen mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher müssen Sie wissen, wie so aktualisieren Sie die Version der gespeicherten Prozeduren für Kataloginformationen in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und hinzufügen, löschen und Testen von Datenquellen.  
+  Vor der Verwendung von ODBC-Anwendungen mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher, benötigen Sie das upgrade der Version von gespeicherten Prozeduren für Kataloginformationen in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und hinzufügen, löschen und Testen von Datenquellen.  
   
-  Hinzufügen einer Datenquelle können Sie mithilfe des ODBC-Administrators, programmgesteuert (mit [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md)), oder indem Sie eine Datei erstellen.  
+  Sie können eine Datenquelle hinzufügen, indem Sie mithilfe des ODBC-Administrators, programmgesteuert (mit [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md)), oder erstellen eine Datei.  
   
 ### <a name="to-add-a-data-source-by-using-odbc-administrator"></a>So fügen Sie eine Datenquelle mit dem ODBC-Administrator hinzu  
   
-1.  Aus der **Systemsteuerung**, Zugriff **Verwaltung** , und klicken Sie dann entweder **ODBC-Datenquellen (64-Bit)** oder **ODBC-Datenquellen (32-Bit)**. Alternativ können Sie odbcad32.exe aufrufen.  
+1.  Von der **Systemsteuerung**, Zugriff **Verwaltung** , und klicken Sie dann entweder **ODBC-Datenquellen (64-Bit)** oder **ODBC-Datenquellen (32-Bit)**. Alternativ können Sie odbcad32.exe aufrufen.  
   
 2.  Klicken Sie auf die Registerkarte **Benutzer-DSN**, **System-DSN**oder **Datei-DSN** , und klicken Sie dann auf **Hinzufügen**.  
   
 3.  Klicken Sie auf **SQL Server**und dann auf **Fertig stellen**.  
   
-4.  Führen Sie die Schritte in der **erstellen Sie eine neue Datenquelle mit SQL Server** Assistenten.  
+4.  Führen Sie die Schritte in der **erstellen Sie eine neue Datenquelle zu SQL Server** Assistenten.  
   
 ### <a name="to-add-a-data-source-programmatically"></a>So fügen Sie eine Datenquellen programmgesteuert hinzu  
   

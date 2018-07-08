@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ef6d05975ae639f467f793f61a3e367da44efd8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 690897612e73c1f1a9d9cfc8f4a2ed7d8ee84bd9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049240"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229270"
 ---
 # <a name="edit-a-model-deployment-package"></a>Bearbeiten eines Modellbereitstellungspakets
   In diesem Thema wird beschrieben, wie ausgewählte Teile eines Modells statt eines ganzen Modells in MDS bereitgestellt werden. Hierzu bearbeiten Sie mit dem Modellpaketeditor ein MDS-Modellpaket.  
@@ -37,7 +37,7 @@ ms.locfileid: "36049240"
   
 ### <a name="to-edit-a-model-deployment-package"></a>So bearbeiten Sie ein Modellbereitstellungspaket  
   
-1.  Verschieben Sie im Windows-Explorer auf dem MDS-Server auf *Laufwerk*: \Programme\Microsoft SQL Server\120\Master Data Services\Configuration.  
+1.  Wechseln Sie in der Windows-Explorer auf dem MDS-Server zu *Laufwerk*: \Programme\Microsoft SQL Server\120\Master Data Services\Configuration.  
   
 2.  Führen Sie ModelPackageEditor.exe aus.  
   

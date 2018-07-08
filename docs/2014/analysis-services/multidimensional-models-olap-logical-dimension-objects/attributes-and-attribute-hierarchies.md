@@ -1,5 +1,5 @@
 ---
-title: Attribute und Attributhierarchien | Microsoft Docs
+title: Attribute und Attributhierarchien | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - relationships [Analysis Services], attributes
 ms.assetid: 59de1ea2-e7a9-4a53-9ee0-14be52e95643
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 792174e9d5da395d2a385b3dde73de9a167f0643
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fb6653895a360f95bbca3bdc31fd320e2f1d2dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048856"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149371"
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>Attribute und Attributhierarchien
   Dimensionen sind Auflistungen von Attributen, die an eine oder mehrere Spalten in einer Tabelle oder Sicht in der Datenquellensicht gebunden sind.  
@@ -46,7 +46,7 @@ ms.locfileid: "36048856"
 ## <a name="attribute-hierarchies"></a>Attributhierarchien  
  Standardmäßig sind die Elemente eines Attributs in zwei Ebenenhierarchien gruppiert, eine Blattebene und eine Alle-Ebene. Die Alle-Ebene enthält den aggregierten Wert der Attributelemente in den Measures jeder Measuregruppe, der die Dimension, mit der das Attribut verknüpft ist, als Element angehört. Wenn die `IsAggregatable`-Eigenschaft aber auf False festgelegt ist, wird die Alle-Ebene nicht erstellt. Weitere Informationen finden Sie unter [Dimensionsattributeigenschaftenverweis](../multidimensional-models/dimension-attribute-properties-reference.md).  
   
- Attribute werden normalerweise in benutzerdefinierten Hierarchien angeordnet, die Drilldownpfade bereitstellen, über die Benutzer die Daten in den Measuregruppen durchsuchen können, mit denen das Attribut verknüpft ist. In Clientanwendungen können Attribute zur Bereitstellung von Gruppierungs- und Einschränkungsinformationen verwendet werden. Wenn Attribute in benutzerdefinierten Hierarchien angeordnet sind, definieren Sie Beziehungen zwischen Hierarchieebenen, wenn Ebenen in einer n: 1-verknüpft sind oder eine 1: 1-Beziehung (bezeichnet eine *natürlichen* Beziehung). So sollte z. B. in einer Calendar Time-Hierarchie eine Day-Ebene mit der Month-Ebene, die Month-Ebene mit der Quarter-Ebene usw. verknüpft sein. Durch das Definieren von Beziehungen zwischen Ebenen in einer benutzerdefinierten Hierarchie ist es Analysis Services möglich, zweckmäßigere Aggregationen zu definieren, um die Abfrageleistung zu erhöhen. Es kann darüber hinaus dazu beitragen, bei der Verarbeitung Arbeitsspeicher zu sparen, was bei größeren oder komplexeren Cubes wichtig sein kann. Weitere Informationen finden Sie unter [Benutzerhierarchien](user-hierarchies.md), [Situationen Hierarchien](../multidimensional-models/user-defined-hierarchies-create.md), und [definieren Attributbeziehungen](../multidimensional-models/attribute-relationships-define.md).  
+ Attribute werden normalerweise in benutzerdefinierten Hierarchien angeordnet, die Drilldownpfade bereitstellen, über die Benutzer die Daten in den Measuregruppen durchsuchen können, mit denen das Attribut verknüpft ist. In Clientanwendungen können Attribute zur Bereitstellung von Gruppierungs- und Einschränkungsinformationen verwendet werden. Wenn Attribute in benutzerdefinierten Hierarchien angeordnet werden, definieren Sie Beziehungen zwischen Hierarchieebenen, wenn Ebenen, in eine n: 1-verknüpft sind oder eine direkte Beziehung (wird aufgerufen, eine *natürliche* Beziehung). So sollte z. B. in einer Calendar Time-Hierarchie eine Day-Ebene mit der Month-Ebene, die Month-Ebene mit der Quarter-Ebene usw. verknüpft sein. Durch das Definieren von Beziehungen zwischen Ebenen in einer benutzerdefinierten Hierarchie ist es Analysis Services möglich, zweckmäßigere Aggregationen zu definieren, um die Abfrageleistung zu erhöhen. Es kann darüber hinaus dazu beitragen, bei der Verarbeitung Arbeitsspeicher zu sparen, was bei größeren oder komplexeren Cubes wichtig sein kann. Weitere Informationen finden Sie unter [Benutzerhierarchien](user-hierarchies.md), [benutzerdefinierter Hierarchien](../multidimensional-models/user-defined-hierarchies-create.md), und [Definieren von Attributbeziehungen](../multidimensional-models/attribute-relationships-define.md).  
   
 ## <a name="attribute-relationships-star-schemas-and-snowflake-schemas"></a>Attributbeziehungen, Sternschemas und Schneeflockenschemas  
  Standardmäßig werden in einem Sternschema alle Attribute direkt mit dem Schlüsselattribut verknüpft. Hierdurch können Benutzer die Fakten im Cube auf Basis einer beliebigen Attributhierarchie in der Dimension durchsuchen. In einem Schneeflockenschema ist ein Attribut entweder direkt mit dem Schlüsselattribut verknüpft, falls die zugrunde liegende Tabelle direkt mit der Faktentabelle verknüpft ist, oder es ist indirekt verknüpft, und zwar durch das Attribut, das an den Schlüssel in der zugrunde liegenden Tabelle gebunden ist, die wiederum die per Schneeflockenschema verknüpfte Tabelle mit der direkt verknüpften Tabelle verbindet.  

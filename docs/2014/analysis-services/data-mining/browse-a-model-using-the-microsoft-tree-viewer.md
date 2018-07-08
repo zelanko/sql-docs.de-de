@@ -1,5 +1,5 @@
 ---
-title: Durchsuchen eines Modells mit dem Microsoft Struktur-Viewer | Microsoft Docs
+title: Durchsuchen eines Modells mit dem Microsoft Struktur-Viewer | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Tree Viewer [Analysis Services]
 - predictions [Analysis Services], discrete attributes
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - continuous attributes
 ms.assetid: 0c96d518-ed20-40b7-8d62-b26ad6244287
 caps.latest.revision: 45
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 68675833943b33e49594d3613bd440699e8c244c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f66d8ed3ba6a545a3088f121c9564b6008ebfa9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056827"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278446"
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>Durchsuchen eines Modells mit dem Microsoft Struktur-Viewer
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Struktur-Viewer in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zeigt Entscheidungsbäume an, die mithilfe des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus erstellt werden. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus ist ein hybrider Entscheidungsstrukturalgorithmus, der sowohl Klassifizierung als auch Regression unterstützt. Deshalb können Sie auch diesen Viewer verwenden, um Modelle auf Grundlage des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus anzuzeigen. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus wird für vorhersagende Modellierung sowohl diskreter als auch fortlaufender Attribute verwendet. Weitere Informationen zu diesem Algorithmus finden Sie unter [Microsoft Decision Trees Algorithm](microsoft-decision-trees-algorithm.md).  

@@ -1,5 +1,5 @@
 ---
-title: Unterstützte Konstrukte in systemintern kompilierten gespeicherten Prozeduren | Microsoft Docs
+title: Unterstützte Konstrukte in systemintern kompilierten gespeicherten Prozeduren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 caps.latest.revision: 34
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: ab0ce49a3f135d59dba89abc756bf9ee4d7fa198
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 91434af003bdf783ee4f2bd2c946e4a871eac44d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046230"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240851"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Unterstützte Konstrukte in systemintern kompilierten gespeicherten Prozeduren
   Dieses Thema enthält eine Liste der unterstützten Funktionen für systemintern kompilierte gespeicherte Prozeduren ([CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
@@ -38,7 +38,7 @@ ms.locfileid: "36046230"
   
 -   [Einschränkungen bei der Sortierung](#los)  
   
- Informationen über unterstützte Datentypen in systemintern kompilierten gespeicherten Prozeduren, finden Sie unter [Supported Data Types](supported-data-types-for-in-memory-oltp.md).  
+ Informationen über unterstützte Datentypen in systemintern kompilierten gespeicherte Prozeduren, finden Sie unter [Supported Data Types](supported-data-types-for-in-memory-oltp.md).  
   
  Vollständige Informationen zu nicht unterstützten Konstrukten sowie Informationen zu umgehungslösungen zu einigen der nicht unterstützten Funktionen in systemintern kompilierten gespeicherten Prozeduren finden Sie unter [Migrationsprobleme bei systemintern kompilierten gespeicherten Prozeduren](migration-issues-for-natively-compiled-stored-procedures.md). Weitere Informationen zu nicht unterstützten Funktionen finden Sie unter [Von In-Memory-OLTP nicht unterstützte Transact-SQL-Konstrukte](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36046230"
 ##  <a name="so"></a> Unterstützte Operatoren  
  Die folgenden Operatoren werden unterstützt.  
   
--   [Vergleichsoperatoren &#40;Transact-SQL&#41; ](/sql/t-sql/language-elements/comparison-operators-transact-sql) (z. B. >, \<, > =, und < =) werden in Bedingungen unterstützt (IF, während).  
+-   [Vergleichsoperatoren &#40;Transact-SQL&#41; ](/sql/t-sql/language-elements/comparison-operators-transact-sql) (z. B. >, \<, > = und < =) werden in Bedingungen unterstützt (IF, während).  
   
 -   Unäre Operatoren (+, -)  
   
@@ -116,15 +116,15 @@ ms.locfileid: "36046230"
   
 -   Filterprädikat IS [NOT] NULL  
   
--   AUS \<Speicheroptimierte Tabelle >  
+-   VON \<Speicheroptimierte Tabelle >  
   
--   [GROUP BY &#40;Transact-SQL&#41; ](/sql/t-sql/queries/select-group-by-transact-sql) unterstützt wird, sowie die Aggregatfunktionen AVG, COUNT, COUNT_BIG, MIN, MAX und SUM. MIN und MAX werden für die Typen nvarchar, char, varchar, varchar, vabinary und binary nicht unterstützt. [ORDER BY-Klausel &#40;Transact-SQL&#41; ](/sql/t-sql/queries/select-order-by-clause-transact-sql) wird unterstützt, wobei [GROUP BY &#40;Transact-SQL&#41; ](/sql/t-sql/queries/select-group-by-transact-sql) , wenn ein Ausdruck in der ORDER BY-Liste wörtlich in der GROUP BY-Liste angezeigt wird. Beispielsweise wird GROUP BY a + b ORDER BY a + b unterstützt, aber GROUP BY a, b ORDER BY a + b nicht.  
+-   [GROUP BY &#40;Transact-SQL&#41; ](/sql/t-sql/queries/select-group-by-transact-sql) wird unterstützt, sowie die Aggregatfunktionen AVG, COUNT, COUNT_BIG, MIN, MAX und SUM. MIN und MAX werden für die Typen nvarchar, char, varchar, varchar, vabinary und binary nicht unterstützt. [ORDER BY-Klausel &#40;Transact-SQL&#41; ](/sql/t-sql/queries/select-order-by-clause-transact-sql) unterstützt, auf denen [GROUP BY &#40;Transact-SQL&#41; ](/sql/t-sql/queries/select-group-by-transact-sql) , wenn ein Ausdruck in der ORDER BY-Liste wörtlich in der GROUP BY-Liste angezeigt wird. Beispielsweise wird GROUP BY a + b ORDER BY a + b unterstützt, aber GROUP BY a, b ORDER BY a + b nicht.  
   
 -   HAVING unterliegt den gleichen Ausdruckseinschränkungen wie die WHERE-Klausel.  
   
 -   INSERT VALUES (eine Zeile pro Anweisung) und INSERT SELECT  
   
--   ORDER BY <sup>1</sup>  
+-   SORTIERT NACH DEM <sup>1</sup>  
   
 -   Prädikate, die nicht auf eine Spalte verweisen.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "36046230"
   
  <sup>1</sup> ORDER BY und TOP werden in systemintern kompilierten gespeicherten Prozeduren mit einigen Einschränkungen unterstützt:  
   
--   Es gibt keine Unterstützung für `DISTINCT` in der `SELECT` oder `ORDER BY` Klausel.  
+-   Es gibt keine Unterstützung für `DISTINCT` in die `SELECT` oder `ORDER BY` Klausel.  
   
 -   Die `WITH TIES`-Klausel bietet keine Unterstützung für `PERCENT` oder `TOP`.  
   

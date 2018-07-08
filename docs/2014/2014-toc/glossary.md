@@ -1,5 +1,5 @@
 ---
-title: Glossar | Microsoft Docs
+title: Glossar | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,22 +17,22 @@ ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - definitions [SQL Server]
 - glossary [SQL Server]
 - terminology [SQL Server]
 ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 caps.latest.revision: 1952
-author: HeidiSteen
+author: heidisteen
 ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: 34fce852a5a3a06342bf5e8f16f4e1cd379e6d16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 390fedf55957e0038d10579fe444bb843a057d47
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049518"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164331"
 ---
 # Glossar
   
@@ -109,7 +109,7 @@ ms.locfileid: "36049518"
 |Block|Eine Transact-SQL-Anweisung, die von "BEGIN" und "END" eingeschlossen ist.|  
 |Blockcursor|Ein Cursor mit einer Rowsetgröße, die über dem Wert "1" liegt.|  
 |Blockierende Transaktion|Eine Transaktion, die zum Fehlschlagen einer anderen Transaktion führt.|  
-|Boolescher Ausdruck|Ein Ausdruck, der einen booleschen Wert (true oder false) ergibt. Solche Ausdrücke können Vergleiche umfassen (Überprüfen von Werten auf Gleichheit oder – bei nicht booleschen Werten – die \< [kleiner als] oder > [größer als] Beziehung) und logische Kombinationen (unter Verwendung von booleschen Operatoren wie AND, OR und XOR) von booleschen Ausdrücken aus.|  
+|Boolescher Ausdruck|Ein Ausdruck, der einen booleschen Wert (true oder false) ergibt. Derartige Ausdrücke können Vergleiche umfassen (Überprüfen von Werten auf Gleichheit oder – bei nicht booleschen Werten, die \< [kleiner als] oder > [größer als] Beziehung) und logische Kombinationen (unter Verwendung von booleschen Operatoren wie AND, OR und XOR) von booleschen Ausdrücken.|  
 |Boolescher Operator|Ein Operator, der zur Verwendung von booleschen Werten konzipiert ist. Die vier bekanntesten booleschen Operatoren im Bereich der Programmierung sind "AND" (logische Konjunktion), "OR" (logische Inklusion), "XOR" (exklusives "OR") und "NOT" (logische Negation).|  
 |Gebundener Datenstrom|Ein Ereignisdatenstrom, der alle Informationen enthält, die benötigt werden, um Ereignisse zu erzeugen. Entweder entsprechen die Informationen einer bereits instanziierten Datenquelle, oder die Informationen sind ausreichend, damit der StreamInsight-Server die Datenquelle starten kann.|  
 |Begrenzungsrahmen|Der kleinste rechteckige Bereich, der einen Pfad, eine Form oder eine Gruppe von Objekten umgibt.|  
@@ -294,7 +294,7 @@ ms.locfileid: "36049518"
 |Parallelitätskonflikt|Ein Konflikt, der auftritt, wenn dasselbe Element oder dieselbe Änderungseinheit auf zwei verschiedenen Replikaten geändert wird, die später synchronisiert werden.|  
 |Parallelitätsmodell|Eine Methode, mit der sich eine Anwendung zur Berücksichtigung von parallelen Vorgängen konzipieren lässt, die dieselben zwischengespeicherten Daten verwenden. Windows Server AppFabric unterstützt Modelle für die vollständige und eingeschränkte Parallelität.|  
 |Paralleler Vorgang|Ein Computervorgang, bei dem mindestens zwei Prozesse (Programme) auf den Mikroprozessor zugreifen können und daher nahezu gleichzeitig ausgeführt werden. Da ein Mikroprozessor deutlich kleinere Zeiteinheiten unterstützt, die von Benutzern nicht wahrgenommen werden können, entsteht der Eindruck, dass sogenannte parallele Prozesse gleichzeitig ausgeführt werden. Dies ist in Wirklichkeit jedoch nicht der Fall.|  
-|Bedingter Ausdruck|Ein Ausdruck, der einen booleschen Wert (true oder false) ergibt. Solche Ausdrücke können Vergleiche umfassen (Überprüfen von Werten auf Gleichheit oder – bei nicht booleschen Werten – die \< [kleiner als] oder > [größer als] Beziehung) und logische Kombinationen (unter Verwendung von booleschen Operatoren wie AND, OR und XOR) von booleschen Ausdrücken aus.|  
+|Bedingter Ausdruck|Ein Ausdruck, der einen booleschen Wert (true oder false) ergibt. Derartige Ausdrücke können Vergleiche umfassen (Überprüfen von Werten auf Gleichheit oder – bei nicht booleschen Werten, die \< [kleiner als] oder > [größer als] Beziehung) und logische Kombinationen (unter Verwendung von booleschen Operatoren wie AND, OR und XOR) von booleschen Ausdrücken.|  
 |Bedingtes Teilen|Eine Wiederherstellung einer vollständigen Datenbanksicherung, der letzten differenziellen Datenbanksicherung (wenn vorhanden) und der Protokollsicherungen (wenn vorhanden), die seit der vollständigen Datenbanksicherung erstellt wurden.|  
 |CONFIG-Datei|Eine Datei, die computerlesbare Betriebsspezifikationen für eine Hardware- bzw. Softwarekomponente enthält oder Informationen zu einer anderen Datei bzw. zu einem bestimmten Benutzer enthält (z. B. die Anmelde-ID eines Benutzers).|  
 |Konfiguration|In Bezug auf einen einzelnen Mikrocomputer die Gesamtheit der internen und externen Komponenten eines Systems, einschließlich Speicher, Laufwerke, Tastatur, Grafikkarte und weniger wichtige zusätzliche Hardware wie Maus, Modem oder Drucker. Um zur Gewährleistung einer einwandfreien Funktionsweise die Konfiguration einzurichten, sind Software (Betriebssystem und verschiedene Gerätetreiber), über Konfigurationsdateien (z. B. AUTOEXEC.BAT und CONFIG.SYS auf IBM-PCs und entsprechenden Geräten) von Benutzern festgelegte Einstellungen und ggf. auch Hardware (Schalter und Jumper) erforderlich. Obwohl sich die Systemkonfiguration ändern lässt, beispielsweise durch das Erweitern des Arbeitsspeichers oder der Datenträgerkapazität, bleibt die Basisstruktur (Architektur) des Systems unverändert.|  
@@ -1338,7 +1338,7 @@ ms.locfileid: "36049518"
 |Repository-SQL-Schema|Ein Satz von Standardtabellen, anhand dessen die Repository-Engine alle Objekte, Beziehungen und Auflistungen im Repository verwaltet.|  
 |Repository Type Information Model|Ein Kernobjektmodell, das Repositorytypdefinitionen für Meta Data Services darstellt.|  
 |Neuverleger|Ein Abonnent, der Daten veröffentlicht, die er von einem Verleger erhalten hat.|  
-|Reserviertes Zeichen|Ein Tastaturzeichen, das für ein Programm eine besondere Bedeutung hat und folglich im Allgemeinen nicht für die Zuweisung von Namen zu Dateien, Dokumenten und anderen von Benutzern generierten Tools (z. B. Makros) verwendet werden kann. Zeichen häufig reserviert für bestimmte Zwecke das Sternchen (*) enthalten Schrägstrich (/), umgekehrter Schrägstrich (\\), Fragezeichen (?) und der senkrechte Strich (&#124;).|  
+|Reserviertes Zeichen|Ein Tastaturzeichen, das für ein Programm eine besondere Bedeutung hat und folglich im Allgemeinen nicht für die Zuweisung von Namen zu Dateien, Dokumenten und anderen von Benutzern generierten Tools (z. B. Makros) verwendet werden kann. Zeichen häufig für bestimmte Zwecke das Sternchen (*) enthalten reserviert Schrägstrich (/), umgekehrter Schrägstrich (\\), Fragezeichen (?) und senkrechter Strich (&#124;).|  
 |Auflösungsstrategie|Eine Reihe von Kriterien, die die Repository-Engine beim Auswählen eines Objekts sequenziell auswertet, wobei mehrere Versionen vorhanden sind und die Versionsinformationen im Programm, das den Aufruf gestartet hat, nicht angegeben sind.|  
 |resource|Eine spezielle Variable, die einen Verweis auf eine Datenbankverbindung oder eine Anweisung enthält.|  
 |resource|Ein beliebiges Element in einer Berichtsserver-Datenbank, bei dem es sich nicht um einen Bericht, einen Ordner oder ein freigegebenes Datenquellenelement handelt.|  

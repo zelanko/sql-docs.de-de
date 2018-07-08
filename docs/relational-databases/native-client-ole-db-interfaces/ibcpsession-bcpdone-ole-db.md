@@ -1,12 +1,12 @@
 ---
-title: IBCPSession::BCPDone (OLE DB) | Microsoft Docs
+title: IBCPSession::BCPDone (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: da9cd1408c12e055a10a208021de1e16dac9d9eb
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: d57e507beb03a28f9e0f7e0b676b8393ace4a125
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694551"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421499"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Kann kein weiterer Vorgang aufgerufen werden, auf die [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) Schnittstelle nach dem Aufruf der **BCPDone** Methode. Die einzige Möglichkeit besteht im Aufrufen der [ibcpsession:: BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) Methode, um einen neuen Massenkopiervorgang zu initiieren. Dies ist vergleichbar mit einem Aufruf der [IRowsetFastLoad:: Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) Methode.  
+ Kann kein weiterer Vorgang aufgerufen werden, auf die [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) Schnittstelle nach dem Aufruf der **Ibcpsession** Methode. Die einzige Möglichkeit besteht darin, zum Aufrufen der [ibcpsession:: BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) Methode, um einen neuen Massenkopiervorgang zu initiieren. Dies ist vergleichbar mit einem Aufruf der [IRowsetFastLoad:: Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) Methode.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  S_OK  
@@ -69,7 +69,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  Sie könnten BCP verwenden, um diese Daten mit dem folgenden Befehl wieder der Tabelle hinzuzufügen:  
   
- **Bcp-Master... Fltest in outfile.dat - n -T -S** *Server*  
+ **Bcp-Master... Fltest in outfile.dat - n -T ' -s'** *Server*  
   
  Sie müssen beim Kompilieren dieses Beispiels sqlncli11.lib angeben.  
   
@@ -469,7 +469,7 @@ void wmain() {
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession &#40;OLE-DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Durchführen von Massenkopiervorgängen](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   
   

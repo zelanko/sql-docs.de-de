@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfiledest.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 624815a71ccd642cda1ee11db39ca08994cb6dff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 60337914cab72631b4a6c647af15ce21bbbcfdcc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056986"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239200"
 ---
 # <a name="flat-file-destination"></a>Flatfileziel
   Das Flatfileziel schreibt Daten in eine Textdatei. Die Textdatei kann in verschiedenen Formaten vorliegen: mit Trennzeichen, mit fester Breite, mit fester Breite mit Zeilentrennzeichen oder mit rechtem Flatterrand.  
@@ -62,7 +62,7 @@ ms.locfileid: "36056986"
  Informationen zum Festlegen der Eigenschaften einer Datenflusskomponente finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Flatfilequelle](flat-file-source.md)   
+ [Flatfile-Datenquelle](flat-file-source.md)   
  [Datenfluss](data-flow.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - inline data validation [SQL Server replication]
 - administering replication, validating data
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - validating replicated data
 ms.assetid: f7500a2b-61cb-41b5-816d-27609a6c58e7
 caps.latest.revision: 45
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 678d5865b379ac1151f4cf85f63b77720ef4005a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0fad815b99f6daf9ba14e765f394cfe1e416aaa6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049428"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211220"
 ---
 # <a name="validate-replicated-data"></a>Überprüfen von replizierten Daten
   Bei der Transaktions- und der Mergereplikation können Sie überprüfen, ob die Daten auf dem Abonnenten mit denen auf dem Verleger übereinstimmen. Die Überprüfung kann für bestimmte Abonnements oder für alle Abonnements für eine Veröffentlichung ausgeführt werden. Geben Sie einen der folgenden Überprüfungstypen an. Bei der nächsten Ausführung des Verteilungs-Agents oder des Merge-Agents werden die Daten dann überprüft:  
@@ -48,7 +48,7 @@ ms.locfileid: "36049428"
   
  Bei negativem Überprüfungsergebnis sollten folgende Punkte bedacht werden:  
   
--   Konfigurieren Sie die Replikationswarnung **Replikation: Fehler bei der Datenüberprüfung auf dem Abonnenten** , damit Sie bei einem negativen Überprüfungsergebnis benachrichtigt werden. Weitere Informationen finden Sie unter [vordefinierte Replikationswarnungen konfigurieren &#40;SQL Server Management Studio & #41(administration/configure-predefined-replication-alerts-sql-server-management-studio.md).  
+-   Konfigurieren Sie die Replikationswarnung **Replikation: Fehler bei der Datenüberprüfung auf dem Abonnenten** , damit Sie bei einem negativen Überprüfungsergebnis benachrichtigt werden. Weitere Informationen finden Sie unter [Konfigurieren von vordefinierten Replikationswarnungen &#40;SQL Server Management Studio & #41(administration/configure-predefined-replication-alerts-sql-server-management-studio.md).  
   
 -   Ist ein negatives Überprüfungsergebnis ein Problem für Ihre Anwendung? Falls ja, aktualisieren Sie die Daten manuell, damit sie synchronisiert sind, oder initialisieren Sie das Abonnement erneut:  
   

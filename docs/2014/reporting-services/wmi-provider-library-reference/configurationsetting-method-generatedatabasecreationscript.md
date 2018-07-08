@@ -1,5 +1,5 @@
 ---
-title: 'GenerateDatabaseCreationScript-Methode (WMI: MSReportServer_ConfigurationSetting) | Microsoft Docs'
+title: 'GenerateDatabaseCreationScript-Methode (WMI: MSReportServer_ConfigurationSetting) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - GenerateDatabaseCreationScript (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - GenerateDatabaseCreationScript method
 ms.assetid: 25232dc7-00fe-4cd1-8a1c-7e36d552de00
 caps.latest.revision: 25
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 05560854358e95ce4beae1727e8c1aeb7be131d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 42898aba8f621688ba229fcf01d367b4da1a4f71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048662"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149031"
 ---
 # <a name="generatedatabasecreationscript-method-wmi-msreportserverconfigurationsetting"></a>GenerateDatabaseCreationScript-Methode (WMI: MSReportServer_ConfigurationSetting)
   Generiert ein SQL-Skript, mit dem eine Berichtsserver-Datenbank erstellt werden kann  
@@ -56,7 +56,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
  Gibt an, ob die Datenbank im einheitlichen Modus oder im SharePoint-Modus erstellt werden soll.  
   
 > [!IMPORTANT]  
->  Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], *IsSharePointMode* = `True` wird nicht unterstützt, da im SharePoint-Modus [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ist eine SharePoint gemeinsamer Dienst und nicht vom WMI-Anbieter kontrolliert wird. Legen Sie diesen Parameter immer auf `False`.  
+>  Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], *IsSharePointMode* = `True` wird nicht unterstützt werden, da im SharePoint-Modus [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ist eine SharePoint shared Service und nicht vom WMI-Anbieter kontrolliert wird. Legen Sie diesen Parameter immer auf `False`.  
   
  *Skript*  
  [out] Eine Zeichenfolge, die das generierte SQL-Skript enthält  

@@ -1,5 +1,5 @@
 ---
-title: Erstellen eines Finanzkontos des über-und untergeordneten Typs Dimension | Microsoft Docs
+title: Erstellen eines Finanzkontos des über-und untergeordneten Typs Dimension | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], account
 - account dimensions [Analysis Services]
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - account intelligence [Analysis Services]
 ms.assetid: 2ba74e81-5b4b-407e-acdf-deb2f6accf0a
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 209184ce52888c65dc24c044517ccaf95d1a1a24
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 39c5c676cd0a07c76a06fd559b7f40f8cee4cfcb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046289"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259596"
 ---
 # <a name="create-a-finance-account-of-parent-child-type-dimension"></a>Erstellen eines Finanzkontos des über- und untergeordneten Typs Dimension
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ist eine Dimension vom Typ "Konto" eine Dimension, deren Attribute ein Kontodiagramm für Finanzberichte darstellen.  
   
  Mit einer Kontodimension können Sie selektiv das Aggregationsverhalten für Konten im Lauf der Zeit verwalten. Eine Kontodimension ermöglicht auch das Verwenden eines Standardmechanismus, mit dem die meisten der vom Standard abweichenden Aggregationsprobleme behoben werden können, die in Business Intelligence-Projektmappen für den Umgang mit Finanzdaten typischerweise auftreten. Wenn Sie bisher nicht über einen solchen Standardmechanismus verfügt haben, waren zum Beheben dieser vom Standard abweichenden Aggregationsprobleme benutzerdefinierte Rollupformeln, berechnete Elemente oder MDX-Skripts (Multidimensional Expressions) erforderlich.  
   
- Um eine Dimension als eine Kontodimension zu identifizieren, legen die `Type` -Eigenschaft der Dimension auf `Accounts`.  
+ Um eine Dimension als eine Kontodimension zu identifizieren, legen die `Type` Eigenschaft der Dimension auf `Accounts`.  
   
 ## <a name="dimension-structure"></a>Dimensionsstruktur  
  Eine Kontodimension enthält mindestens zwei Attribute:  
@@ -40,7 +40,7 @@ ms.locfileid: "36046289"
   
 -   Ein Kontoattribut – ein übergeordnetes Attribut, das beschreibt, wie Konten innerhalb der Kontodimension hierarchisch angeordnet sind.  
   
-     Um ein Attribut als Kontoattribut zu identifizieren, legen Sie die `Type` Eigenschaft des Attributs auf `Account` und `Usage` Eigenschaft `Parent`.  
+     Um ein Attribut als Kontoattribut zu identifizieren, legen die `Type` -Eigenschaft des Attributs auf `Account` und `Usage` Eigenschaft `Parent`.  
   
  Kontodimensionen können optional die folgenden Attribute enthalten:  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36046289"
   
 -   Ein Kontonamenattribut – ein Attribut, das zu Berichtszwecken verwendet wird. Um ein Kontonamenattribut zu identifizieren, legen Sie die `Type`-Eigenschaft des Attributs auf `AccountName` fest.  
   
--   Ein Kontonummernattribut – ein Attribut, das zu Berichtszwecken verwendet wird. Bestimmen Sie ein kontonummernattribut durch Festlegen der `Type` Eigenschaft des Attributs auf `AccountNumber`.  
+-   Ein Kontonummernattribut – ein Attribut, das zu Berichtszwecken verwendet wird. Sie identifizieren ein kontonummernattribut durch Festlegen der `Type` -Eigenschaft des Attributs auf `AccountNumber`.  
   
  Weitere Informationen zu Attributtypen finden Sie unter [Konfigurieren von Attributtypen](attribute-properties-configure-attribute-types.md).  
   

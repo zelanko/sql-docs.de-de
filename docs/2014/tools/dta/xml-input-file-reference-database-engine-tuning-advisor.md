@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - XML input files [Database Engine Tuning Advisor]
 ms.assetid: 05e5e5f0-d6df-4336-b18e-e9bc2835a766
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7dd0170481a3894334dc01b2974a27ace6b736b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7ca9a22a2f6f4732a97387778484aae261fc0848
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049600"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183487"
 ---
 # <a name="xml-input-file-reference-database-engine-tuning-advisor"></a>XML-Eingabedateireferenz (Datenbankoptimierungsratgeber)
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber kann mithilfe einer XML-Eingabedatei eine Datenbank optimieren. Anhand dieser XML-Datei wird festgelegt, welche Datenbanken, Tabellen, Arbeitsauslastungsdateien oder -tabellen und Optimierungsoptionen für die Optimierungssitzung verwendet werden sollen. Außerdem können Sie mit dieser Datei eine vom Benutzer angegebene Konfiguration zum Ausführen von Was-wäre-wenn-Analysen festlegen.  
@@ -64,7 +64,7 @@ ms.locfileid: "36049600"
   
 ## <a name="workload-elements"></a>Arbeitsauslastungselemente  
   
--   [Datei Element &#40;DTA&#41;](file-element-dta.md)  
+-   [File Element &#40;DTA&#41;](file-element-dta.md)  
   
 -   [Database-Element für die Arbeitsauslastung &#40;DTA&#41;](database-element-for-workload-dta.md)  
   
@@ -112,7 +112,7 @@ ms.locfileid: "36049600"
   
 ## <a name="database-elements"></a>Datenbankelemente  
   
--   [Benennen Sie Element für Datenbank &#40;DTA&#41;](name-element-for-database-dta.md)  
+-   [Namen von Element für Datenbank &#40;DTA&#41;](name-element-for-database-dta.md)  
   
 -   [Schema-Element für Datenbank &#40;DTA&#41;](schema-element-for-database-dta.md)  
   

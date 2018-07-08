@@ -1,5 +1,5 @@
 ---
-title: Benutzerdefinierter Typ | Microsoft Docs
+title: Benutzerdefinierter Typ | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a9b75f36-d7f5-47f7-94d6-b4448c6a2191
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 55627b179f472c5501fb2a64bec9cc57f097d007
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f3a0bcae3a44553fdc6d2d337e9e54993bd7e769
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059439"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209950"
 ---
 # <a name="user-defined-type"></a>Benutzerdefinierter Typ
   Das Beispiel für benutzerdefinierte Datentypen veranschaulicht das Erstellen und Verwenden eines einfachen benutzerdefinierten Datentyps sowohl aus Transact-SQL als auch aus einer Clientanwendung, von der `System.Data.SqlClient` verwendet wird.  
@@ -53,7 +53,7 @@ ms.locfileid: "36059439"
      `GO`  
   
     > [!NOTE]  
-    >  Um CLR zu aktivieren, benötigen Sie `ALTER SETTINGS` Serverberechtigung, die implizit von Mitgliedern der erhalten die `sysadmin` und `serveradmin` festen Serverrollen.  
+    >  Um CLR zu aktivieren, benötigen Sie `ALTER SETTINGS` Serverberechtigung, die implizit Mitglieder erhalten die `sysadmin` und `serveradmin` festen Serverrollen.  
   
 -   Die AdventureWorks-Datenbank muss in der von Ihnen verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz installiert sein.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36059439"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-9. Kopie [!INCLUDE[tsql](../../includes/tsql-md.md)] -testbefehlsskript in eine Datei, und speichern Sie sie als `test.sql` im Beispielverzeichnis.  
+9. Kopie [!INCLUDE[tsql](../../includes/tsql-md.md)] -testbefehlsskript in eine Datei, und speichern Sie ihn `test.sql` im Beispielverzeichnis.  
   
 10. Führen Sie das Testskript mit dem folgenden Befehl aus:  
   

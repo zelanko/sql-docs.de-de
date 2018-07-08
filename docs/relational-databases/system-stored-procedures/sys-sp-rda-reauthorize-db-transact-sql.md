@@ -1,14 +1,11 @@
 ---
-title: Sys. sp_rda_reauthorize_db (Transact-SQL) | Microsoft Docs
+title: Sys. sp_rda_reauthorize_db (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-stretch
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -19,21 +16,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reauthorize_db stored procedure
 ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b387bbd432eb01df84661a61b1f9528857cd74c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9991ad7e43ffa367387392b40a22a1bea9aed37c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998537"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407509"
 ---
 # <a name="syssprdareauthorizedb-transact-sql"></a>Sys. sp_rda_reauthorize_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Stellt die authentifizierte Verbindung zwischen einer lokalen Datenbank für Stretch und der Remotedatenbank aktiviert.  
+  Stellt die authentifizierte Verbindung zwischen einer lokalen Datenbank für Stretch und die remote-Datenbank aktiviert.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,28 +42,28 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
   
 ## <a name="arguments"></a>Argumente  
  @credential = *@credential*  
- Ist die datenbankbezogenen Anmeldeinformationen der lokalen aktivierter Funktion Stretch-Datenbank zugeordnet.  
+ Ist die datenbankweit gültigen Anmeldeinformationen der lokalen Stretch-aktivierten Datenbank zugeordnet.  
   
  @with_copy = *@with_copy*  
- Gibt an, ob eine Kopie der Remotedaten und Herstellen einer Verbindung mit der Kopie (empfohlen). *@with_copy* ist vom Datentyp bit.  
+ Gibt an, ob eine Kopie der Remotedaten und eine Verbindung mit der Kopiervorgangs (empfohlen). *@with_copy* ist vom Datentyp bit.  
   
  @azure_servername = *@azure_servername*  
  Gibt den Namen des Azure-Servers, der die Remotedaten enthält. *@azure_servername* ist vom Datentyp Sysname.  
   
  @azure_databasename = *@azure_databasename*  
- Gibt den Namen der Azure-Datenbank, die die Remotedaten enthält. *@azure_databasename* ist vom Datentyp Sysname.  
+ Gibt den Namen der Azure-Datenbank, die die remote-Daten enthält. *@azure_databasename* ist vom Datentyp Sysname.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder >0 (Fehler)  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert Db_owner-Berechtigungen.  
+ Benötigen Sie Db_owner-Berechtigungen.  
   
 ## <a name="remarks"></a>Hinweise  
- Bei der Ausführung [sp_rda_reauthorize_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) um mit der Azure-Remotedatenbank erneut herstellen, dieser Vorgang automatisch den Abfragemodus auf zurückgesetzt LOCAL_AND_REMOTE, dies ist das Standardverhalten für Stretch-Datenbank. D. h. zurückgeben Abfragen Ergebnisse lokale und Remotedaten.  
+ Beim Ausführen von [Sys. sp_rda_reauthorize_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) um zum Azure-Remotedatenbank erneut eine Verbindung herstellen, dieser Vorgang automatisch den Abfragemodus auf zurückgesetzt LOCAL_AND_REMOTE, dies ist das Standardverhalten für Stretch Database. D.h., geben Abfragen Ergebnisse aus lokalen und Remotedaten zurück.  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird die authentifizierte Verbindung zwischen einer lokalen Datenbank für Stretch und der Remotedatenbank aktiviert wiederhergestellt. Es wird eine Kopie der Remotedaten (empfohlen) und stellt eine Verbindung her, auf die neue Kopie.  
+ Im folgenden Beispiel wird die authentifizierte Verbindung zwischen einer lokalen Datenbank für Stretch und die remote-Datenbank aktiviert. Es wird eine Kopie der Remotedaten (empfohlen) und stellt eine Verbindung her, auf die neue Kopie.  
   
 ```sql  
 DECLARE @credentialName nvarchar(128);   

@@ -1,12 +1,12 @@
 ---
-title: Ausführen eines Befehls | Microsoft Docs
+title: Ausführen eines Befehls | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: dfae23f1f7493172790b026e411c99b1dd63fcd1
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 266cf6733c2a73f64dc6561e0cb0b13c6929a8b8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694461"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423949"
 ---
 # <a name="executing-a-command"></a>Ausführen eines Befehls
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,11 +33,11 @@ ms.locfileid: "35694461"
 
   Nachdem die Verbindung mit einer Datenquelle hergestellt wurde, ruft der Consumer die **IDBCreateSession:: CreateSession** Methode, um eine Sitzung zu erstellen. Die Sitzung fungiert als Befehl, Rowset oder Transaktionsfactory.  
   
- Um direkt mit einzelnen Tabellen oder Indizes arbeiten fordert der Consumer die **IOpenRowset** Schnittstelle. Die **IOpenRowset:: OPENROWSET** -Methode öffnet und gibt ein Rowset, das alle Zeilen aus einer einzelnen Basistabelle oder einem Index enthält.  
+ Direkt mit einzelnen Tabellen oder Indizes arbeiten fordert der Consumer die **IOpenRowset** Schnittstelle. Die **IOpenRowset:: OPENROWSET** -Methode öffnet und gibt ein Rowset, das alle Zeilen aus einer einzelnen Basistabelle oder einem Index enthält.  
   
- Zum Ausführen eines Befehls (z. B. SELECT \* FROM Authors), fordert der Consumer die **IDBCreateCommand** Schnittstelle. Der Consumer kann führen Sie die **IDBCreateCommand:: CreateCommand** Methode, um ein Befehlsobjekt zu erstellen und eine Anforderung für die **ICommandText** Schnittstelle. Die **ICommandText:: SetCommandText** Methode wird verwendet, um den Befehl anzugeben, die ausgeführt werden soll.  
+ Zum Ausführen eines Befehls (z. B. SELECT \* FROM Authors), fordert der Consumer die **IDBCreateCommand** Schnittstelle. Der Consumer kann Ausführen der **IDBCreateCommand:: CreateCommand** Methode, um ein Befehlsobjekt zu erstellen, und fordern Sie für die **ICommandText** Schnittstelle. Die **ICommandText:: SetCommandText** Methode wird verwendet, um den Befehl anzugeben, die ausgeführt werden soll.  
   
- Die **Execute** -Befehl wird verwendet, um den Befehl auszuführen. Bei dem Befehl kann es sich um jede SQL-Anweisung oder jeden Prozedurnamen handeln. Nicht alle Befehle erzeugen ein Resultsetobjekt (Rowset). Befehle, wie z. B. SELECT * FROM Authors, erzeugen ein Resultset.  
+ Die **Execute** Befehl wird verwendet, um den Befehl auszuführen. Bei dem Befehl kann es sich um jede SQL-Anweisung oder jeden Prozedurnamen handeln. Nicht alle Befehle erzeugen ein Resultsetobjekt (Rowset). Befehle, wie z. B. SELECT * FROM Authors, erzeugen ein Resultset.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen einer SQL Server Native Client OLE DB-Anbieteranwendung](../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)  

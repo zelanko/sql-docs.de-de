@@ -1,5 +1,5 @@
 ---
-title: Rollen und Berechtigungen (Analysis Services) | Microsoft Docs
+title: Rollen und Berechtigungen (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Analysis Services], about security
 - security [Analysis Services - multidimensional data], about security
 ms.assetid: bb885447-868b-4686-853c-8241f63d4370
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 253cd429c1a5fc5ac231173c88e6ee91b852625a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 506babae85a4b1a04efa7f12b8b40c2527e2e094
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049314"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159401"
 ---
 # <a name="roles-and-permissions-analysis-services"></a>Rollen und Berechtigungen (Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet ein rollenbasiertes Autorisierungsmodell, mit dem der Zugriff auf Vorgänge, Objekte und Daten erteilt wird. Alle Benutzer, die auf eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz oder -Datenbank zugreifen, müssen den Vorgang im Kontext einer Rolle ausführen.  
@@ -46,7 +46,7 @@ ms.locfileid: "36049314"
   
 -   [Erteilen von Cube-oder modellberechtigungen &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)  
   
--   [Erteilen von Berechtigungen zum Verarbeiten &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
+-   [Erteilen von verarbeitungsberechtigungen &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
   
 -   [Erteilen von Berechtigungen von Definitionen für Objektmetadaten lesen &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   

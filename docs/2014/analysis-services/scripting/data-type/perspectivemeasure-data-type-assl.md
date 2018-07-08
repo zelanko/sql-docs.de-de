@@ -1,5 +1,5 @@
 ---
-title: PerspectiveMeasure-Datentyp (ASSL) | Microsoft Docs
+title: PerspectiveMeasure-Datentyp (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - PerspectiveMeasure data type
 ms.assetid: 8622ad67-3dcf-48e2-ad4a-c5f0a086eec3
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bc66a5fd1e0e8b553bc0b27a384f97a8c0c483e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 47d8578d2d41d5362b43a514dcb6d20df0999828
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048350"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210010"
 ---
 # <a name="perspectivemeasure-data-type-assl"></a>PerspectiveMeasure-Datentyp (ASSL)
-  Definiert einen Grunddatentyp, der Informationen über eine Measure in einem [PerspectiveMeasureGroup](perspectivemeasuregroup-data-type-assl.md) Element.  
+  Definiert einen Grunddatentyp, der die Informationen über eine Measure in einem [PerspectiveMeasureGroup](perspectivemeasuregroup-data-type-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36048350"
 |Abgeleitete Elemente|[Measure](../objects/measure-element-assl.md) ([Measures](../collections/measures-element-assl.md) Auflistung von [PerspectiveMeasureGroup](perspectivemeasuregroup-data-type-assl.md))|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.PerspectiveMeasure>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.PerspectiveMeasure>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services Scripting Language-XML-Datentypen &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

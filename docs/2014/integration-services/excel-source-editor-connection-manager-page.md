@@ -1,5 +1,5 @@
 ---
-title: Quellen-Editor für Excel (Seite Verbindungs-Manager) | Microsoft Docs
+title: Quellen-Editor für Excel (Seite Verbindungs-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.excelsourceadapter.connection.f1
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 428e04e0-ad98-45d0-8345-12ec1b67b2eb
 caps.latest.revision: 39
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: eeb3af2f65be818c41dd88dc89028cb0f27cb36e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb74698304e70e1125003e5b15cef991f8511ed4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059862"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161031"
 ---
 # <a name="excel-source-editor-connection-manager-page"></a>Quellen-Editor für Excel (Seite Verbindungs-Manager)
   Mithilfe des Knotens **Verbindungs-Manager** im Dialogfeld **Quellen-Editor für Excel** können Sie eine [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] -Arbeitsmappe für die Quelle auswählen. Die Excel-Quelle liest Daten aus einem Arbeitsblatt oder dem benannten Bereich einer vorhandenen Arbeitsmappe.  
   
 > [!NOTE]  
->  Die `CommandTimeout` Eigenschaft der Excel-Quelle ist nicht verfügbar in der **Quellen-Editor für Excel**, jedoch kann festgelegt werden, mithilfe der **Erweiterter Editor**. Weitere Informationen zu dieser Eigenschaft finden Sie im Abschnitt Excel-Quelle von [Excel Custom Properties](data-flow/excel-custom-properties.md).  
+>  Die `CommandTimeout` Eigenschaft der Excel-Quelle ist nicht verfügbar, in der **Quellen-Editor für Excel**, jedoch können festgelegt werden, mithilfe der **Erweiterter Editor**. Weitere Informationen zu dieser Eigenschaft finden Sie im Abschnitt Excel-Quelle von [Excel Custom Properties](data-flow/excel-custom-properties.md).  
   
  Weitere Informationen zur Excel-Quelle finden Sie unter [Excel Source](data-flow/excel-source.md).  
   

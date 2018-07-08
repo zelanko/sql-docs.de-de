@@ -1,5 +1,5 @@
 ---
-title: Angeben von booleschen Operatoren in XPath-Abfragen (SQLXML 4.0) | Microsoft Docs
+title: Angeben von booleschen Operatoren in XPath-Abfragen (SQLXML 4.0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,23 +18,23 @@ helpviewer_keywords:
 - operators [SQLXML]
 ms.assetid: 9928cff5-62ac-42aa-96bf-2e09a1df0bc3
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1e30c4e9ec48604cca89c5ee62dacfbf00f663ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 2abd38453d9b8ac124d1a06fe3aab4fd632e6972
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059778"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154101"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>Angeben von booleschen Operatoren in XPath-Abfragen (SQLXML 4.0)
-  Im folgenden Beispiel wird dargestellt, wie boolesche Operatoren in XPath-Abfragen angegeben werden. Die XPath-Abfragen in diesem Beispiel werden für das in SampleSchema1.xml enthaltene Zuordnungsschema angegeben. Informationen zu diesem Beispielschema finden Sie unter [Beispiel Annotated XSD-Schema für XPath-Beispiele &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  Im folgenden Beispiel wird dargestellt, wie boolesche Operatoren in XPath-Abfragen angegeben werden. Die XPath-Abfragen in diesem Beispiel werden für das in SampleSchema1.xml enthaltene Zuordnungsschema angegeben. Weitere Informationen zu diesem Beispielschema finden Sie unter [Annotated XSD-Beispielschema für XPath-Beispiele &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>A. Angeben des booleschen OR-Operators  
- Diese XPath-Abfrage gibt die  **\<Kunden >** untergeordneten-Elemente des Kontextknotens mit der **CustomerID** -Attributwert 13 "oder" 31:  
+ Diese XPath-Abfrage gibt die  **\<Kunden >** untergeordneten-Elemente des Kontextknotens mit der **"CustomerID"** -Attribut den Wert 13 "oder" 31:  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
@@ -46,7 +46,7 @@ ms.locfileid: "36059778"
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- Im Prädikat ist `attribute` ist die Achse und `CustomerID` ist der Knotentest (TRUE, wenn **CustomerID** ist ein  **\<Attribut >** Knoten, da die  **\<Attribut >** ist der primäre Knoten für die `attribute` Achse). Das Prädikat filtert die  **\<Kunden >** -Elemente und gibt nur solche, die die Bedingung im Prädikat angegebenen.  
+ Im Prädikat ist `attribute` ist die Achse und `CustomerID` ist der Knotentest (TRUE, wenn **"CustomerID"** ist ein  **\<Attribut >** Knoten, da die  **\<Attribut >** Knoten ist der primäre Knoten für die `attribute` Achse). Das Prädikat filtert die  **\<Kunden >** -Elemente und gibt nur solche, die die Bedingung erfüllen, im Prädikat angegebenen.  
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>So testen Sie die XPath-Abfragen mit dem Zuordnungsschema  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36059778"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Im Folgenden finden Sie das Resultset der Vorlagenausführung:  
   

@@ -1,5 +1,5 @@
 ---
-title: IncrementalProcessingNotifications-Element (ASSL) | Microsoft Docs
+title: IncrementalProcessingNotifications-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - IncrementalProcessingNotifications element
 ms.assetid: 46f3c9d0-46cc-4833-8f15-7831207f57ce
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c19cc7a3a0b4ade2dab73b3ef5d28bc33c2ac57c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 14d49b5e7a4d86aec5a2ac555cb67094b30b2fef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059449"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230000"
 ---
 # <a name="incrementalprocessingnotifications-element-assl"></a>IncrementalProcessingNotifications-Element (ASSL)
-  Enthält die Auflistung der [IncrementalProcessingNotification](../objects/incrementalprocessingnotification-element-assl.md) Elemente, die Informationen zum Bereitstellen der [ProactiveCaching](../objects/proactivecaching-element-assl.md) -Element zu Abfragen ausführen, um den Fortschritt zu bestimmen. inkrementelle Verarbeitung.  
+  Enthält die Auflistung der [IncrementalProcessingNotification](../objects/incrementalprocessingnotification-element-assl.md) Elemente, die Informationen zum Bereitstellen der [ProactiveCaching](../objects/proactivecaching-element-assl.md) -Element zu Abfragen ausgeführt werden, um den Fortschritt zu bestimmen. inkrementelle Verarbeitung.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36059449"
 |Untergeordnete Elemente|[IncrementalProcessingNotification](../objects/incrementalprocessingnotification-element-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.IncrementalProcessingNotificationCollection>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.IncrementalProcessingNotificationCollection>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sammlungen &#40;ASSL&#41;](collections-assl.md)  

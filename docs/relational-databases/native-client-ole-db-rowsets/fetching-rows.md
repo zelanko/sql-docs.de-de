@@ -1,12 +1,12 @@
 ---
-title: Abrufen von Zeilen | Microsoft Docs
+title: Abrufen von Zeilen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,22 +21,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: bc940296181c4a40ea0e8e2ec0f3118cf452f580
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: a52ef148fb3a3410d0a64197dc62ff97bc485f46
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697891"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407439"
 ---
 # <a name="fetching-rows"></a>Abrufen von Zeilen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Die **IRowset** Schnittstelle ist die grundlegende Rowset-Schnittstelle. Die **IRowset** Schnittstelle bietet Methoden zum sequenziellen Abrufen von Zeilen, die Daten aus diesen Zeilen abgerufen, und Verwalten von Zeilen. Consumer verwenden die Methoden in **IRowset** für alle grundlegenden rowsetvorgänge. Dazu gehört das Abrufen und erneute Freigeben von Zeilen und das Einlesen von Spaltenwerten.  
+  Die **IRowset** Schnittstelle ist die grundlegende Rowset-Schnittstelle. Die **IRowset** Schnittstelle stellt Methoden zum sequenziellen Abrufen von Zeilen, die Daten aus diesen Zeilen abrufen und zum Verwalten der Zeilen bereit. Consumer verwenden die Methoden in **IRowset** für alle grundlegenden rowsetvorgänge. Dazu gehört das Abrufen und erneute Freigeben von Zeilen und das Einlesen von Spaltenwerten.  
   
- Wenn ein Consumer einen Schnittstellenzeiger für ein Rowset erhält, ist der erste Schritt in der Regel um zu bestimmen, das die Funktionen des Rowsets mithilfe der **IRowsetInfo:: GetProperties** Methode. Auf diese Weise werden Informationen über die durch das Rowset verfügbar gemachten Schnittstellen zurückgegeben sowie über andere Möglichkeiten des Rowsets, die nicht als eigentliche Schnittstellen zu betrachten sind, wie beispielsweise die maximale Anzahl aktiver Zeilen und die Anzahl der Zeilen, die gleichzeitig ausstehende Updates aufweisen können.  
+ Wenn ein Consumer einen Schnittstellenzeiger für ein Rowset erhält, wird der erste Schritt normalerweise um zu bestimmen, das die Funktionen des Rowsets mithilfe der **IRowsetInfo:: GetProperties** Methode. Auf diese Weise werden Informationen über die durch das Rowset verfügbar gemachten Schnittstellen zurückgegeben sowie über andere Möglichkeiten des Rowsets, die nicht als eigentliche Schnittstellen zu betrachten sind, wie beispielsweise die maximale Anzahl aktiver Zeilen und die Anzahl der Zeilen, die gleichzeitig ausstehende Updates aufweisen können.  
   
- Der nächste, vom Consumer auszuführende Schritt besteht darin, die Charakteristika – oder Metadaten – der Spalten im Rowset zu ermitteln. Dafür verwenden sie die **IColumnsInfo** Methode für die einfache Spalteninformationen oder **IColumnsRowset** Methode für erweiterte Spalteninformationen. Die **GetColumnInfo** Methodenrückgabe die folgende Informationen:  
+ Der nächste, vom Consumer auszuführende Schritt besteht darin, die Charakteristika – oder Metadaten – der Spalten im Rowset zu ermitteln. Dafür verwendet er die **IColumnsInfo** Methode für die einfache Spalteninformationen oder **IColumnsRowset** Methode für die erweiterte Spalteninformationen. Die **GetColumnInfo** Methode die folgenden Informationen zurückgegeben:  
   
 -   Die Anzahl der Spalten im Resultset.  
   
@@ -46,26 +46,26 @@ ms.locfileid: "35697891"
   
 -   Den Zeiger auf einen Speicher für alle Zeichenfolgenwerte innerhalb eines einzelnen Zuordnungsblocks.  
   
- Der Consumer bestimmt, welche Spalten erforderlich sind, entweder auf der Grundlage der Metadaten oder basierend auf den Textbefehl, mit dem das Rowset generiert wurde. Die Ordnungszahlen der benötigten Spalten über die Reihenfolge der zurückgegebenen Spalteninformationen **IColumnsInfo** oder ausgehend von den Ordnungszahlen in dem vom zurückgegebenen spaltenmetadatenrowset **IColumnsRowset**.  
+ Der Consumer bestimmt, welche Spalten erforderlich sind, entweder auf der Grundlage der Metadaten oder basierend auf den Textbefehl, mit dem das Rowset generiert wurde. Die Ordnungszahlen der benötigten Spalten über die Reihenfolge der zurückgegebenen Spalteninformationen **IColumnsInfo** oder von den Ordnungszahlen in dem von zurückgegebenen spaltenmetadatenrowset **IColumnsRowset**.  
   
  Die **IColumnsInfo** und **IColumnsRowset** Schnittstellen werden verwendet, um Informationen zu den Spalten im Rowset zu extrahieren. Die **IColumnsInfo** Schnittstelle gibt eine begrenzte Anzahl von Informationen zurück, wohingegen **IColumnsRowset** alle Metadaten bereitstellt.  
   
 > [!NOTE]  
->  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7.0 und früher, die optionale Metadatenspalte DBCOLUMN_COMPUTEMODE zurückgegebenes **IColumnsInfo:: GetColumnsInfo** zurückgegeben wird, DBSTATUS_S_ISNULL (anstelle der Werte, die beschreibt, ob die Spalte berechnet), da nicht ermittelt werden kann, ob die zugrunde liegende Spalte berechnet ist.  
+>  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7.0 und früher die optionale Metadatenspalte DBCOLUMN_COMPUTEMODE zurückgegebenes **IColumnsInfo:: GetColumnsInfo** zurückgegeben wird, DBSTATUS_S_ISNULL (anstelle der Werte, die beschreibt, ob die Spalte berechnet), da nicht ermittelt werden kann, ob die zugrunde liegende Spalte berechnet ist.  
   
  Die Ordnungszahlen werden verwendet, um eine Bindung an eine Spalte anzugeben. Eine Bindung ist eine Struktur, die einer Spalte ein Element der Struktur des Consumers zuordnet. Die Bindung kann den Datenwert, die Länge und den Statuswert der Spalte binden.  
   
- Ein Satz von Bindungen wird zusammen in einem Accessor erfasst. Dies wird erstellt, indem Sie mit der **IAccessor:: CreateAccessor** Methode. Ein Accessor kann mehrere Bindungen enthalten, sodass die Daten für mehrere Spalten durch einen einzigen Aufruf abgerufen oder festgelegt werden können. Der Consumer kann mehrere Accessoren erstellen, um in verschiedenen Teilen der Anwendung auf verschiedene Verwendungsmuster zu antworten. Er kann Accessoren erstellen und freigeben, solange das Rowset besteht.  
+ Ein Satz von Bindungen wird zusammen in einem Accessor erfasst. Dieser wird erstellt, mit der **IAccessor:: CreateAccessor** Methode. Ein Accessor kann mehrere Bindungen enthalten, sodass die Daten für mehrere Spalten durch einen einzigen Aufruf abgerufen oder festgelegt werden können. Der Consumer kann mehrere Accessoren erstellen, um in verschiedenen Teilen der Anwendung auf verschiedene Verwendungsmuster zu antworten. Er kann Accessoren erstellen und freigeben, solange das Rowset besteht.  
   
- Um Zeilen aus der Datenbank abzurufen, ruft der Consumer eine Methode, z. B. **IRowset:: GetNextRows** oder **IRowsetLocate:: GetRowsAt**. Diese Abrufvorgänge platzieren Zeilendaten vom Server in den Zeilenpuffer des Anbieters. Der Consumer hat keinen Direktzugriff auf den Zeilenpuffer des Anbieters. Der Consumer verwendet **IRowset:: GetData** Daten aus dem Puffer des Anbieters in den Consumerpuffer zu kopieren und **IRowsetChange:: SetData** datenänderungen vom Consumerpuffer in den Anbieterpuffer zu kopieren.  
+ Um Zeilen aus der Datenbank abzurufen, ruft der Consumer eine Methode, wie z. B. **IRowset:: GetNextRows** oder **IRowsetLocate:: GetRowsAt**. Diese Abrufvorgänge platzieren Zeilendaten vom Server in den Zeilenpuffer des Anbieters. Der Consumer hat keinen Direktzugriff auf den Zeilenpuffer des Anbieters. Der Consumer verwendet **IRowset:: GetData** um Daten aus dem Puffer des Anbieters in den Consumerpuffer zu kopieren und **IRowsetChange:: SetData** datenänderungen vom Consumerpuffer in den Anbieterpuffer zu kopieren.  
   
- Der Consumer Ruft die **GetData** Methode und übergibt das Handle für eine Zeile, die das Handle für einen Accessor und einen Zeiger auf einen vom Consumer zugeordneten Puffer. **GetData** konvertiert die Daten und gibt die Spalten in der zum Erstellen des Accessors verwendeten Bindungen angegeben. Der Consumer kann Aufrufen **GetData** mehr als ein Mal für eine Zeile mit verschiedene Accessoren und Puffer und daher der Consumer mehrere Kopien derselben Daten abrufen kann.  
+ Der Consumer Ruft die **GetData** Methode und übergibt das Handle für eine Zeile, die das Handle für einen Accessor und einen Zeiger auf einen Consumer zugeordneten Puffer. **GetData** konvertiert die Daten und gibt die Spalten in die zum Erstellen des Accessors verwendeten Bindungen angegeben. Der Consumer kann Aufrufen **GetData** mehr als einmal für eine Zeile verwenden verschiedene Accessoren und Puffer und daher der Consumer mehrere Kopien derselben Daten erhalten kann.  
   
  Daten aus Spalten variabler Länge können auf mehrere Arten behandelt werden. Zunächst können solche Spalten an einen endlichen Abschnitt der Struktur des Consumers gebunden werden. Dies verursacht das Abschneiden von Daten, wenn die Länge der Daten die Länge des Puffers überschreitet. Der Consumer kann ermitteln, dass Daten abgeschnitten wurden, indem er den Status DBSTATUS_S_TRUNCATED überprüft. Die zurückgegebene Länge ist immer die wirkliche Länge in Byte, sodass der Consumer auch bestimmen kann, wie viele Daten abgeschnitten wurden.  
   
- Wenn der Consumer das Abrufen oder Aktualisieren von Zeilen beendet hat, diesen freigibt sie mit der **ReleaseRows** Methode. Auf diese Weise werden Ressourcen von der Kopie der Zeilen im Rowset frei, und es wird Platz für neue Zeilen geschaffen. Der Consumer kann den Zyklus des Abrufens oder Erstellens von Zeilen sowie des Zugreifens auf Daten in den Zeilen beliebig wiederholen.  
+ Wenn der Consumer das Abrufen oder Aktualisieren von Zeilen abgeschlossen ist, gibt er sie mit der **ReleaseRows** Methode. Auf diese Weise werden Ressourcen von der Kopie der Zeilen im Rowset frei, und es wird Platz für neue Zeilen geschaffen. Der Consumer kann den Zyklus des Abrufens oder Erstellens von Zeilen sowie des Zugreifens auf Daten in den Zeilen beliebig wiederholen.  
   
- Wenn der Consumer mit dem Rowset fertig ist, ruft er die **ReleaseAccessor** Methode, um Sie freizugeben. Ruft die **IUnknown:: Release** -Methode für alle Schnittstellen, die vom Rowset zum Freigeben des Rowsets verfügbar gemacht. Sobald das Rowset freigegeben ist, wird die Freigabe aller verbleibender Zeilen oder vom Consumer verwendeten Accessoren erzwungen.  
+ Wenn der Consumer mit dem Rowset fertig ist, ruft er die **ReleaseAccessor** Methode, um Accessoren freizugeben. Ruft die **IUnknown:: Release** Methode für alle Schnittstellen, die vom Rowset Freigeben des Rowsets verfügbar gemacht. Sobald das Rowset freigegeben ist, wird die Freigabe aller verbleibender Zeilen oder vom Consumer verwendeten Accessoren erzwungen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
