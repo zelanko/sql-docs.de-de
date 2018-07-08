@@ -1,5 +1,5 @@
 ---
-title: CrossProduct-Element (XMLA) | Microsoft Docs
+title: CrossProduct-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CrossProduct element
 ms.assetid: a9a1584e-d2dd-45db-a918-d694c20d8189
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1324a3c9449383301242ab6d0e76f94c636d9b5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a0d76cc463d39a3b33de41f1c342f5d9f8f800bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048841"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278226"
 ---
 # <a name="crossproduct-element-xmla"></a>CrossProduct-Element (XMLA)
-  Enthält ein Kreuzprodukt geordneten Mengen an Elementen aus jeder Hierarchie für eine [Achse](axis-element-xmla.md) Element, das verwendet die [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) von zurückgegebener Datentyp der [Execute](../xml-elements-methods-execute.md) Methode.  
+  Enthält ein Kreuzprodukt geordneten Mengen an Elementen aus jeder Hierarchie für eine [Achse](axis-element-xmla.md) -Element, das verwendet die [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) von zurückgegebener Datentyp die [Execute](../xml-elements-methods-execute.md) Methode.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -72,10 +72,10 @@ ms.locfileid: "36048841"
 |Größe|Erforderliche `Integer` Attribut. Gibt die Anzahl von Tupeln an, die im durch das `CrossProduct`-Element dargestellten Kreuzprodukt enthalten sind.|  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn eine Clientanwendung legt die `AxisFormat` Eigenschaft, um *' Clusterformat '*, die Elemente auf jeder Achse in Cluster in der jeder Cluster ein Kreuzprodukt geordneten Mengen an Elementen aus jeder Hierarchie darstellt unterteilt. Jeder Cluster wird durch ein `CrossProduct`-Element dargestellt. Jedes `CrossProduct`-Element enthält ein `Members`-Element für jede Hierarchie auf der Achse. Ein `CrossProduct`-Element kann Elemente einer einzelnen Hierarchie enthalten.  
+ Wenn eine Clientanwendung festlegt der `AxisFormat` Eigenschaft *' Clusterformat '*, die Elemente auf jeder Achse in Cluster, in dem jeder Cluster ein Kreuzprodukt geordneten Mengen an Elementen aus jeder Hierarchie darstellt, unterteilt. Jeder Cluster wird durch ein `CrossProduct`-Element dargestellt. Jedes `CrossProduct`-Element enthält ein `Members`-Element für jede Hierarchie auf der Achse. Ein `CrossProduct`-Element kann Elemente einer einzelnen Hierarchie enthalten.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel veranschaulicht die Struktur der `CrossProduct` -Element, wenn ein Client gibt *' Clusterformat '* für die `AxisFormat` XMLA-Eigenschaft, wobei die folgenden Elemente für die Achse:  
+ Das folgende Beispiel veranschaulicht die Struktur der `CrossProduct` -Element, wenn ein Client angibt, *' Clusterformat '* für die `AxisFormat` XMLA-Eigenschaft, wobei die folgenden Elemente für die Achse:  
   
 ||||||  
 |-|-|-|-|-|  

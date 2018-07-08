@@ -1,5 +1,5 @@
 ---
-title: Asynchroner Modus und SQLCancel | Microsoft Docs
+title: Asynchroner Modus und SQLCancel | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client|ODBC
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,14 +24,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3f6f0e96ff0344a084b84098339687374ba18335
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b81d9c0716a0bda54bdeab3c7d2b347a505e0ce2
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32949905"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409149"
 ---
-# <a name="creating-a-driver-application---asynchronous-mode-and-sqlcancel"></a>Erstellen einer Treiberanwendung - asynchroner Modus und SQLCancel
+# <a name="creating-a-driver-application---asynchronous-mode-and-sqlcancel"></a>Erstellen einer Treiberanwendung – asynchroner Modus und SQLCancel
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
@@ -54,9 +54,9 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ASYNC_ENABLE,
   
  Wenn die Anwendung überprüft, ob der Befehl ausgeführt wurde, führt sie den gleichen Funktionsaufruf mit den gleichen Parametern für den Treiber durch. Wenn der Treiber noch keine Antwort vom Server erhalten hat, gibt er erneut SQL_STILL_EXECUTING zurück. Die Anwendung muss den Befehl regelmäßig testen, bis der Rückgabecode einen anderen Wert als SQL_STILL_EXECUTING annimmt. Wenn die Anwendung einen anderen Rückgabecode erhält (auch SQL_ERROR), kann sie ermitteln, ob der Befehl abgeschlossen wurde.  
   
- Gelegentlich ist ein Befehl längere Zeit ausstehend. Wenn die Anwendung den Befehl abzubrechen, ohne eine Antwort abzuwarten muss, sie können dazu aufrufen **SQLCancel** mit der gleichen Anweisung zu behandeln, wie der ausstehende Befehl. Dies ist das einzige Mal **SQLCancel** verwendet werden soll. Einige Programmierer verwenden **SQLCancel** Wenn sie teilweise durch ein Resultset verarbeitet haben und das restliche Resultset abbrechen möchten. [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md) oder [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md) sollte verwendet werden, um die restlichen ausstehenden Resultsets nicht Abbrechen **SQLCancel**.  
+ Gelegentlich ist ein Befehl längere Zeit ausstehend. Wenn die Anwendung den Befehl abzubrechen, ohne eine Antwort warten muss, hierfür durch Aufrufen von **SQLCancel** mit derselben Anweisung zu verarbeiten, wie der ausstehende Befehl. Dies ist das einzige Mal **SQLCancel** verwendet werden soll. Einige Programmierer verwenden **SQLCancel** Wenn sie teilweise wie einen Resultset verarbeitet haben und die restliche Resultset abbrechen möchten. [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md) oder [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md) sollte verwendet werden, um die restlichen ausstehenden Resultsets, nicht Abbrechen **SQLCancel**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen eine SQL Server Native Client ODBC-Treiber-Anwendung](../../../relational-databases/native-client/odbc/creating-a-driver-application.md)  
+ [Erstellen einer SQL Server Native Client-ODBC-Treiberanwendung](../../../relational-databases/native-client/odbc/creating-a-driver-application.md)  
   
   

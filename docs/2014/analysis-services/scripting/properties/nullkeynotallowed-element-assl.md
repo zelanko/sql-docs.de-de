@@ -1,5 +1,5 @@
 ---
-title: NullKeyNotAllowed-Element (ASSL) | Microsoft Docs
+title: NullKeyNotAllowed-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - NullKeyNotAllowed element
 ms.assetid: 4ece99eb-954b-4da1-add4-dd9efd5fff0a
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 235c76fb2b8cad1682fab97f36cb1867d7c82c38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6e514e1258fc8a73be70195641525f400021a002
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047477"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165271"
 ---
 # <a name="nullkeynotallowed-element-assl"></a>NullKeyNotAllowed-Element (ASSL)
-  Bestimmt, wie die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Verarbeitungsmodul einen null-Schlüsselfehler während der Verarbeitung auftreten.  
+  Bestimmt, wie die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Verarbeitungs-Engine behandelt einen null-Schlüsselfehler während der Verarbeitung auftreten.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36047477"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- NULL-Schlüsselfehler treten auf, wenn ein NULL-Wert in einer Schlüsselspalte auftritt, in der NULL-Werte nicht zulässig sind, wodurch ein Verwerfen des Datensatzes während der Verarbeitung erzwungen wird. Dieser Fehler tritt jedoch nur, wenn die [NullProcessing](nullprocessing-element-assl.md) -Element für die `DataItem` Vorgänger des der `ErrorConfiguration` übergeordnetes Element festgelegt ist, um *Fehler*.  
+ NULL-Schlüsselfehler treten auf, wenn ein NULL-Wert in einer Schlüsselspalte auftritt, in der NULL-Werte nicht zulässig sind, wodurch ein Verwerfen des Datensatzes während der Verarbeitung erzwungen wird. Dieser Fehler tritt jedoch nur, wenn die [NullProcessing](nullprocessing-element-assl.md) -Element für die `DataItem` Vorgänger der `ErrorConfiguration` übergeordnetes Element festgelegt ist, um *Fehler*.  
   
  Der Wert dieses Elements ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  
   

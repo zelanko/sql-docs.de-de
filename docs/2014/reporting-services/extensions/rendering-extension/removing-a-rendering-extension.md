@@ -16,18 +16,18 @@ helpviewer_keywords:
 - rendering extensions [Reporting Services], removing
 ms.assetid: 2abfebfb-065f-45cc-a904-c914394cf900
 caps.latest.revision: 37
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c8ad34be5d818d70b8c46d82dbf348b9d0814824
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: dd559679afa7575f285737f289f66201fd06671e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047771"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153031"
 ---
 # <a name="removing-a-rendering-extension"></a>Entfernen von Renderingerweiterungen
-  So entfernen Sie eine [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Renderingerweiterung, entfernen Sie einfach die `Extension` -Element für Ihre Renderingerweiterung aus der Datei "rsreportserver.config" in **%ProgramFiles%\Microsoft SQL Server\MSRS10_50.\< Instanzname > \reporting** Ordner. Wenn Sie Einträge für einen Berichts-Designer als auch auf einem Berichtsserver vorgenommen haben, entfernen Sie die `Extension` Element aus der [RSReportDesigner-Konfigurationsdatei](../../report-server/rsreportdesigner-configuration-file.md) ebenfalls. Nachdem Sie die Konfigurationsdaten entfernt haben, steht die Renderingerweiterung nicht mehr für die Komponente zur Verfügung.  
+  So entfernen Sie eine [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Renderingerweiterung, entfernen Sie einfach die `Extension` -Element für Ihre Renderingerweiterung aus der Datei rsreportserver.config befindet sich in **%ProgramFiles%\Microsoft SQL Server\MSRS10_50.\< Instanzname > \reporting** Ordner. Wenn Sie Einträge für einen Berichts-Designer als auch für einen Berichtsserver vorgenommen haben, entfernen Sie die `Extension` Element aus der [RSReportDesigner-Konfigurationsdatei](../../report-server/rsreportdesigner-configuration-file.md) ebenfalls. Nachdem Sie die Konfigurationsdaten entfernt haben, steht die Renderingerweiterung nicht mehr für die Komponente zur Verfügung.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Reporting Services-Konfigurationsdateien](../../report-server/reporting-services-configuration-files.md)   

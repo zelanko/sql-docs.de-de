@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.editorxml.f1
 - sql12.swb.xmleditor.f1
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - XML Designer [SQL Server Management Studio]
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e204ee307da1b727485b969853ef879f81c32ed0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a4d6fedddf4b99d2f8ef068cc1212972b6a25fe2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046207"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160341"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML-Editor (SQL Server Management Studio)
   Stellt eine Anzahl visueller Tools zur Arbeit mit XML-Schemas, ADO.NET-Datasets und XML-Dokumenten bereit. Der XML-Designer unterstützt die vom World Wide Web Consortium (W3C) definierte XSD-Sprache (XML Schema Definition). DTDs (Document Type Definitions) oder andere XML-Schemasprachen, wie XDR (XML-Data Reduced), werden vom Designer nicht unterstützt.  
@@ -99,7 +99,7 @@ ms.locfileid: "36046207"
 -   Ein XML-Schema aus einem XML-Dokument generieren  
   
 ## <a name="xml-view"></a>XML-Ansicht  
- Die XML-Ansicht bietet einen Editor zum Bearbeiten von Roh-XML sowie darüber hinaus IntelliSense und Farbcodierung. Bei der Arbeit an XSD- und XML-Dateien mit zugehörigem Schema steht der Anweisungsabschluss zur Verfügung. Typ \< So initiieren Sie ein Tag, und Sie werden erhält eine Liste mit Elementen, die an dieser Stelle gültig sind. Nachdem Sie den Elementnamen eingegeben und die LEERTASTE gedrückt haben, wird Ihnen eine Liste mit Attributen vorgeschlagen, die von dem Element unterstützt werden.  
+ Die XML-Ansicht bietet einen Editor zum Bearbeiten von Roh-XML sowie darüber hinaus IntelliSense und Farbcodierung. Bei der Arbeit an XSD- und XML-Dateien mit zugehörigem Schema steht der Anweisungsabschluss zur Verfügung. Typ \< initiieren Sie ein Tag, und Sie wird mit einer Liste von Elementen, die an dieser Stelle gültig sind angezeigt werden. Nachdem Sie den Elementnamen eingegeben und die LEERTASTE gedrückt haben, wird Ihnen eine Liste mit Attributen vorgeschlagen, die von dem Element unterstützt werden.  
   
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense stehen auf der Symbolleiste nicht zur Verfügung. Wenn Sie im XML-Editor auf die Optionen zugreifen möchten, klicken Sie im Menü **Bearbeiten** auf **IntelliSense**.  

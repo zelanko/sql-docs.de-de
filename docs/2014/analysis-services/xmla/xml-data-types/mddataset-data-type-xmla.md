@@ -1,5 +1,5 @@
 ---
-title: MDDataSet-Datentyp (XMLA) | Microsoft Docs
+title: MDDataSet-Datentyp (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - MDDataSet data type
 ms.assetid: 1a7e0092-f9f0-4ae5-ba27-ad1d8ebe8cb9
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 098a123c28e4a449ad6425d1a74ff8355d074e08
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c1580365cc6c7949c552333728b5083b96f7ef9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048329"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165321"
 ---
 # <a name="mddataset-data-type-xmla"></a>MDDataSet-Datentyp (XMLA)
-  Definiert einen abgeleiteten Datentyp, der vom zurückgegebenen mehrdimensionale Daten darstellt, der die [Execute](../xml-elements-methods-execute.md) Methode.  
+  Definiert einen abgeleiteten Datentyp, der mehrdimensionale von zurückgegebene Daten darstellt, der die [Execute](../xml-elements-methods-execute.md) Methode.  
   
  **Namespace** urn:schemas-microsoft-com:xml-analysis:mddataset  
   
@@ -68,9 +68,9 @@ ms.locfileid: "36048329"
 |Abgeleitete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Der `MDDataSet`-Datentyp stellt das OLAP-orientierte Rowset (oder Dataset) bereit, das erforderlich ist, um OLAP-Daten in XML darzustellen. Die Inhalte dieses Rowsets können je nach den Werten der variieren die `Content` und `Format` Eigenschaften in der [Eigenschaften](../xml-elements-properties/properties-element-xmla.md) Auflistung von der `Execute` Methode. Weitere Informationen zu den `Content` und `Format` Eigenschaften finden Sie in [XMLA-Eigenschaften unterstützt &#40;XMLA&#41;](../xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
+ Der `MDDataSet`-Datentyp stellt das OLAP-orientierte Rowset (oder Dataset) bereit, das erforderlich ist, um OLAP-Daten in XML darzustellen. Die Inhalte dieses Rowsets können je nach den Werten der variieren die `Content` und `Format` -Eigenschaften in der [Eigenschaften](../xml-elements-properties/properties-element-xmla.md) Auflistung von der `Execute` Methode. Weitere Informationen zu den `Content` und `Format` Eigenschaften finden Sie [unterstützte XMLA-Eigenschaften &#40;XMLA&#41;](../xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
   
- Grundlegende Informationen zu OLE DB für OLAP-Datensatzstrukturen finden Sie unter "MDDataSet-Datentypzuordnung zu OLE DB" in der XML 1.1-Spezifikation (XML for Analysis). Für eine vollständige XML Schema Definition Language (XSD) Stichprobe von der `MDDataSet` -Datentyp, finden Sie unter "Appendix D: MDDataSet Example" in der XML for Analysis 1.1-Spezifikation.  
+ Grundlegende Informationen zu OLE DB für OLAP-Datensatzstrukturen finden Sie unter "MDDataSet-Datentypzuordnung zu OLE DB" in der XML 1.1-Spezifikation (XML for Analysis). Ein vollständiges XML-Schema Definition Language (XSD) Beispiel von der `MDDataSet` -Datentyp, "Appendix D: MDDataSet example" der XML for Analysis 1.1-Spezifikation finden Sie unter.  
   
 ## <a name="see-also"></a>Siehe auch  
  [XML-Datentypen &#40;XMLA&#41;](xml-data-types-xmla.md)  

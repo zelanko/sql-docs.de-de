@@ -1,5 +1,5 @@
 ---
-title: Expression-Element (ASSL) | Microsoft Docs
+title: Expression-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Expression element
 ms.assetid: a9491b21-5279-4531-b6a5-9e8022060dd8
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b56f4d09e59644b63d11c4becbb999f0536479d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d7ba9bbfeddef0d4d7466141cabb914f4289034
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047708"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155317"
 ---
 # <a name="expression-element-assl"></a>Expression-Element (ASSL)
   Enthält einen MDX-Ausdruck (Multidimensional Expression), der die Standardinhalte des übergeordneten Elements definiert.  
@@ -62,7 +62,7 @@ ms.locfileid: "36047708"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Für die `CellPermission` Element, die `Expression` Element enthält einen logischen MDX-Ausdruck, der auf den angegebenen Rechte anwendbar Zellen identifiziert die [Zugriff](access-element-assl.md) Element von der `CellPermission` Element. Wenn der Wert des ein `Expression` -Element für eine `CellPermission` -Element leer ist, die `CellPermission` Element wird ignoriert.  
+ Für die `CellPermission` Element der `Expression` Element enthält einen logischen MDX-Ausdruck, der Zellen, die auf die angegebenen Rechte anwendbar identifiziert die [Zugriff](access-element-assl.md) Element der `CellPermission` Element. Wenn der Wert des ein `Expression` -Element für eine `CellPermission` -Element leer ist, die `CellPermission` Element wird ignoriert.  
   
  Beim Element `StandardAction` enthält das `Expression`-Element einen MDX-Ausdruck, der für die Inhalte der Aktion steht. Wenn der Wert des ein `Expression` -Element für eine `StandardAction` -Element leer ist, die `StandardAction` Element wird ignoriert.  
   

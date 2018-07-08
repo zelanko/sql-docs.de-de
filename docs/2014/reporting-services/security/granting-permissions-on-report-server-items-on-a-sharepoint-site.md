@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
@@ -18,13 +18,13 @@ ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5142c52b2a6a698e379957113d9540537282d80f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c106d3d086366146c0ed32dca78533238e81ed2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047084"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183847"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] stellt integrierte Sicherheitsfunktionen bereit, mit denen Sie Zugriff von SharePoint-Websites und -Bibliotheken auf Berichtsserverelemente ermöglichen können. Wenn Sie Benutzern bereits Berechtigungen zugewiesen haben, verfügen diese Benutzer sofort, nachdem Sie die Integrationseinstellungen zwischen [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] und einem Berichtsserver konfiguriert haben, über Zugriff auf Berichtsserverelemente und -vorgänge. Mit den vorhandenen Berechtigungen können Sie Berichtsdefinitionen und andere Dokumente hochladen, Berichte anzeigen, Abonnements erstellen und Elemente verwalten.  
@@ -33,7 +33,7 @@ ms.locfileid: "36047084"
   
 1.  Informieren Sie sich in der Produktdokumentation zu [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]über die Standardsicherheitseinstellungen für die SharePoint-Standardgruppen, um Berechtigungen und Benutzerzugriff verwalten zu können.  
   
-2.  Überprüfen Sie die Liste der Berechtigungen, die sich speziell auf den Zugriff auf Berichtsserverelemente und -vorgänge auswirken. Weitere Informationen finden Sie unter [Verwenden integrierter Sicherheit in Windows SharePoint Services für Berichtsserverelemente](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md).  
+2.  Überprüfen Sie die Liste der Berechtigungen, die sich speziell auf den Zugriff auf Berichtsserverelemente und -vorgänge auswirken. Weitere Informationen finden Sie unter [verwenden der integrierten Sicherheit in Windows SharePoint Services für Berichtsserverelemente](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md).  
   
 3.  Weisen Sie Benutzer- und Gruppenkonten vordefinierten SharePoint-Gruppen zu.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36047084"
   
  Die SharePoint-Gruppen verfügen über Berechtigungsebenen, die unmittelbaren Zugriff auf viele Berichtsservervorgänge bieten. Wenn mit den integrierten Sicherheitseinstellungen nicht die von Ihnen benötigte Zugriffsebene gewährt wird, können Sie benutzerdefinierte Gruppen oder Berechtigungsebenen erstellen.  
   
- Weitere Informationen darüber, welcher Bericht Servervorgänge über die Standardsicherheitsfunktionen unterstützt werden, finden Sie unter [Verwenden integrierter Sicherheit in Windows SharePoint Services für Berichtsserverelemente](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md).  
+ Weitere Informationen zu den unterstützten über die Standard-Sicherheitsfeatures finden Sie unter [verwenden der integrierten Sicherheit in Windows SharePoint Services für Berichtsserverelemente](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md).  
   
  Die integrierten Sicherheitsfunktionen können von den SharePoint-Gruppen nur verwendet werden, wenn Sie diesen Windows-Benutzer- oder Gruppenkonten zugewiesen haben. Mit Ausnahme des Serveradministrators und des Besitzers der Portalwebsite, die beim Installieren der Software automatisch Zugriffsberechtigungen für [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] erhalten, müssen allen Benutzern Berichtigungen für den Serverzugriff gewährt werden.  
   
@@ -91,11 +91,11 @@ ms.locfileid: "36047084"
  [Vergleichen der Rollen und Aufgaben in Reporting Services mit SharePoint-Gruppen und -Berechtigungen](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
  Stellt eine kurze Zusammenfassung von SharePoint-Gruppen im Vergleich mit vordefinierten Rollendefinitionen in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]bereit.  
   
- [Festlegen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website &#40;integrierter Reporting Services im SharePoint-Modus&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
+ [Festlegen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website &#40;integrierten Reporting Services im SharePoint-Modus&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
  Enthält Anweisungen zum Erstellen neuer SharePoint-Gruppen, die über die Berechtigung verfügen, den Berichts-Generator zu starten und die Modellelementsicherheit festzulegen. Dieses Thema enthält zudem allgemeine Richtlinien zum Festlegen benutzerdefinierter Berechtigungen für beliebige Berichtsserverelemente oder -vorgänge.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Festlegen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website &#40;integrierter Reporting Services im SharePoint-Modus&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [Festlegen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website &#40;integrierten Reporting Services im SharePoint-Modus&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [Reporting Services-Sicherheit und Schutz](reporting-services-security-and-protection.md)  
   
   

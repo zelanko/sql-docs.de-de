@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - native data format [SQL Server]
 - default field lengths
@@ -17,18 +16,18 @@ helpviewer_keywords:
 - bcp utility [SQL Server], field length
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e566678b849bc8a837ad2eb411b85b989bd1417
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a3d4be0ba5a6b24174134fbef6f5dc2e87fa3af9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048050"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158571"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Angeben der Feldlänge mithilfe von bcp (SQL Server)
-  Die Feldlänge weist auf die maximale Anzahl von Zeichen hin, die zum Darstellen der Daten im Zeichenformat benötigt werden. Die Feldlänge ist bereits bekannt, wenn die Daten im systemeigenen Format gespeichert werden (z. B. der `int`-Datentyp, der 4 Bytes benötigt). Wenn Sie 0 für die Präfixlänge der **Bcp** Befehl fordert Sie Feldlänge, die Standardfeldlängen sowie die Auswirkung der Feldlänge auf die datenspeicherung in Datendateien mit `char` Daten.  
+  Die Feldlänge weist auf die maximale Anzahl von Zeichen hin, die zum Darstellen der Daten im Zeichenformat benötigt werden. Die Feldlänge ist bereits bekannt, wenn die Daten im systemeigenen Format gespeichert werden (z. B. der `int`-Datentyp, der 4 Bytes benötigt). Wenn Sie 0 für die Präfixlänge der **Bcp** Befehl werden Sie aufgefordert, für die Feldlänge, die Standardfeldlängen sowie die Auswirkung der Feldlänge auf die datenspeicherung in Datendateien mit `char` Daten.  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>Die bcp-Eingabeaufforderung für die Feldlänge  
  Wenn ein interaktiver **bcp**-Befehl die Option **in** oder **out**, jedoch keinen Formatdateischalter (**-f**) bzw. keinen Datenformatschalter (**-n**, **-c**, **-w** oder **-N**) enthält, fordert der Befehl wie folgt zur Eingabe der Feldlänge für jedes Datenfeld auf:  
@@ -51,10 +50,10 @@ ms.locfileid: "36048050"
 ## <a name="using-default-field-lengths"></a>Verwenden der Standardfeldlängen  
  Im Allgemeinen empfiehlt [!INCLUDE[msCoName](../../includes/msconame-md.md)] , dass Sie die von **bcp**für die Feldlänge vorgeschlagenen Standardwerte übernehmen. Wenn Sie beim Erstellen einer Datendatei im Zeichenmodus die Standardfeldlänge verwenden, können Sie sicherstellen, dass die Daten nicht abgeschnitten werden und auch keine numerischen Überlauffehler auftreten.  
   
- Die Angabe falscher Feldlängen kann zu Problemen führen. Wenn Sie beispielsweise numerische Daten kopieren und eine Feldlänge angeben, die für die Daten nicht ausreicht, druckt das Hilfsprogramm **bcp** eine Überlaufmeldung und kopiert die Daten nicht. Darüber hinaus beim Export `datetime` Daten, und geben Sie eine Feldlänge von weniger als 26 Bytes für die Zeichenfolge der **Bcp** Hilfsprogramm schneidet die Daten ohne eine Fehlermeldung angezeigt.  
+ Die Angabe falscher Feldlängen kann zu Problemen führen. Wenn Sie beispielsweise numerische Daten kopieren und eine Feldlänge angeben, die für die Daten nicht ausreicht, druckt das Hilfsprogramm **bcp** eine Überlaufmeldung und kopiert die Daten nicht. Auch wenn Sie exportieren `datetime` Daten, und geben Sie eine Feldlänge von weniger als 26 Bytes für die Zeichenfolge, die **Bcp** Hilfsprogramm schneidet die Daten ohne eine Fehlermeldung angezeigt.  
   
 > [!IMPORTANT]  
->  Bei Verwendung der Standardgrößenoption wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine vollständige Zeichenfolge erwartet. In bestimmten Situationen kann die Verwendung der Standardfeldlänge zu einem Fehler des Typs "unerwartetes Dateiende" führen. In der Regel wird dieser Fehler tritt auf, mit der `money` und `datetime` Datentypen tritt nur ein Teil des erwarteten Felds in der Datendatei; z. B., wenn ein `datetime` Wert *mm*/*TT*  / *Yy* ohne Zeitkomponente angegeben wird, und ist daher kürzer als die Zeichenlänge der erwarteten 24 von einer `datetime` Wert in `char` Format. Zur Vermeidung dieses Fehlertyps sollten Sie Feldabschlusszeichen oder Datenfelder mit fester Länge verwenden oder die Standardfeldlänge auf einen anderen Wert ändern.  
+>  Bei Verwendung der Standardgrößenoption wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine vollständige Zeichenfolge erwartet. In bestimmten Situationen kann die Verwendung der Standardfeldlänge zu einem Fehler des Typs "unerwartetes Dateiende" führen. In der Regel dieser Fehler tritt bei der `money` und `datetime` -Datentypen, wenn Sie nur einen Teil des erwarteten Felds in der Datendatei auftritt, z. B., wenn eine `datetime` Wert *mm*/*TT*  / *Yy* ohne Zeitkomponente angegeben wird, und ist daher kürzer als die Länge 24 Zeichen bestehende erwartete, der eine `datetime` Wert `char` Format. Zur Vermeidung dieses Fehlertyps sollten Sie Feldabschlusszeichen oder Datenfelder mit fester Länge verwenden oder die Standardfeldlänge auf einen anderen Wert ändern.  
   
 ### <a name="default-field-lengths-for-character-file-storage"></a>Standardfeldlänge zum Speichern von Dateien im Zeichenformat  
  In der folgenden Tabelle werden die Standardfeldlängen für Daten aufgeführt, die als Dateien im Zeichenformat gespeichert werden. Daten, die NULL zulassen, besitzen die gleiche Länge wie Daten ohne NULL-Werte.  
@@ -120,7 +119,7 @@ ms.locfileid: "36048050"
 |`uniqueidentifier`|16|  
 |`timestamp`|8|  
   
- <sup>1</sup> Weitere Informationen zu den `decimal` und `numeric` -Datentypen finden Sie unter [decimal und numeric &#40;Transact-SQL&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql).  
+ <sup>1</sup> für Weitere Informationen zu den `decimal` und `numeric` -Datentypen finden Sie unter [decimal und numeric &#40;Transact-SQL&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql).  
   
  Wenn Sie eine Datendatei erstellen, die später erneut in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladen werden soll, und dabei den Speicherplatz auf ein Minimum begrenzen möchten, sollten Sie ein Längenpräfix mit dem Standard-Dateispeichertyp und der Standardfeldlänge verwenden. Dies gilt für jeden der vorangegangenen Fälle.  
   

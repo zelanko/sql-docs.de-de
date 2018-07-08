@@ -1,5 +1,5 @@
 ---
-title: Dimension-Speicher | Microsoft Docs
+title: Dimension-Speicher | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - ROLAP
 ms.assetid: 8d74b932-2174-4e1f-8414-636455880b6a
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ce315f747a9b125052ead591f5c42cca3b811ca0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6462ebf90b7783260f7027d82b26be117ea0b5ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047938"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153111"
 ---
 # <a name="dimension-storage"></a>Speichern von Dimensionen
   Dimensionen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützen zwei Speichermodi:  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.deploydacwizard.updateconfiguration.f1
 - sql12.swb.deploydacwizard.selectdac.f1
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - wizard [DAC], deploy
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4ede9c252977dbd5044fe4c8a7c154d425341490
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7041a4e15314f7efa8ea626e41ed705b69faa18c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047425"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154531"
 ---
 # <a name="deploy-a-data-tier-application"></a>Bereitstellen einer Datenebenenanwendung
   Mithilfe eines Assistenten oder eines PowerShell-Skripts können Sie eine Datenebenenanwendung (DAC) von einem DAC-Paket für eine vorhandene [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz oder [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Instanz bereitstellen. Beim Bereitstellungsprozess wird eine DAC-Instanz registriert, indem die DAC-Definition in der **msdb** -Systemdatenbank (**master** in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]) gespeichert und eine Datenbank erstellt wird, die anschließend mit allen in der DAC definierten Datenbankobjekten aufgefüllt wird.  
@@ -67,7 +67,7 @@ ms.locfileid: "36047425"
 ####  <a name="Permissions"></a> Berechtigungen  
  Eine DAC kann nur von Mitgliedern der festen Serverrollen **sysadmin** oder **serveradmin** bereitgestellt werden bzw. unter Verwendung von Anmeldenamen aus der festen Serverrolle **dbcreator** , die über ALTER ANY-LOGIN-Berechtigungen verfügen. Außerdem kann das integrierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Systemadministratorkonto mit der Bezeichnung **sa** zum Bereitstellen einer DAC verwendet werden. Um eine DAC mit Anmeldungen bei [!INCLUDE[ssSDS](../../includes/sssds-md.md)] bereitstellen zu können, müssen Sie Mitglied der Rollen "loginmanager" oder "serveradmin" sein. Um eine DAC ohne Anmeldenamen in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] bereitstellen zu können, müssen Sie Mitglied der Rollen "dbmanager" oder "serveradmin" sein.  
   
-##  <a name="UsingDeployDACWizard"></a> Mithilfe der Data-Tier-Anwendung zum Assistenten zum Bereitstellen  
+##  <a name="UsingDeployDACWizard"></a> Mit dem Bereitstellen der Datenebenen-Anwendungs-Assistent  
  **Zur Bereitstellung einer DAC mithilfe eines Assistenten**  
   
 1.  Erweitern Sie im **Objekt-Explorer**den Knoten für die Instanz, für die Sie die DAC bereitstellen möchten.  
@@ -122,7 +122,7 @@ ms.locfileid: "36047425"
   
  **Der DAC-Inhalt wird überprüft**: Die Statusanzeige, die den aktuellen Status des Überprüfungsprozesses angibt.  
   
- **\< Vorherige** -gibt an den Ausgangszustand zurück die **Paket auswählen** Seite.  
+ **\< Vorherige** -zurückgibt, die in den ursprünglichen Zustand des der **Paket auswählen** Seite.  
   
  **Weiter >**: Geht zur abschließenden Version der Seite **Paket auswählen** über.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "36047425"
   
  **Richtlinienverletzungen ignorieren** : Verwenden Sie dieses Kontrollkästchen, um mit der Bereitstellung fortzufahren, wenn eine oder mehrere Richtlinienbedingungen nicht erfüllt wurden. Aktivieren Sie diese Option nur, wenn Sie sicher sind, dass keine der fehlgeschlagenen Bedingungen die erfolgreiche Ausführung der DAC verhindert.  
   
- **\< Vorherige** -gibt, die **Paket auswählen** Seite.  
+ **\< Vorherige** -zurückgibt die **Paket auswählen** Seite.  
   
  **Weiter >**: Geht zur Seite **Konfiguration aktualisieren** über.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "36047425"
   
  **Pfad und Name der Protokolldatei** : Geben Sie den vollständigen Pfad- und Dateinamen für die Protokolldatei an. Das Feld wird mit dem Standardpfad und -dateinamen aufgefüllt. Bearbeiten Sie die Zeichenfolge im Feld, um den Standardeintrag zu ändern, oder verwenden Sie die Schaltfläche **Durchsuchen** , um zum Ordner zu navigieren, in dem die Protokolldatei abgelegt werden soll.  
   
- **\< Vorherige** -gibt, die **DAC-Paket auswählen** Seite.  
+ **\< Vorherige** -zurückgibt die **DAC-Paket auswählen** Seite.  
   
  **Weiter >**: Geht zur Seite **Zusammenfassung** über.  
   
@@ -173,7 +173,7 @@ ms.locfileid: "36047425"
   
  **Die folgenden Einstellungen werden zur Bereitstellung der DAC verwendet.** – Überprüfen Sie die angezeigten Informationen darauf, ob die ergriffenen Maßnahmen richtig sind. Im Fenster werden das ausgewählte DAC-Paket und der für die bereitgestellte DAC-Instanz ausgewählte Name angezeigt. Im Fenster werden auch die Einstellungen angezeigt, die beim Erstellen der mit der DAC verbundenen Datenbank verwendet werden.  
   
- **\< Vorherige** -wird wieder die **Updatekonfiguration** Seite, um die Auswahl zu ändern.  
+ **\< Vorherige** -wird wieder die **Updatekonfiguration** Seite, um Ihre Auswahl zu ändern.  
   
  **Weiter >**: Stellt die DAC bereit und zeigt die Ergebnisse auf der Seite **DAC bereitstellen** an.  
   
@@ -193,7 +193,7 @@ ms.locfileid: "36047425"
   
 1.  Erstellen Sie ein SMO-Serverobjekt, und legen Sie es auf die Instanz fest, auf der Sie die DAC bereitstellen möchten.  
   
-2.  Öffnen einer `ServerConnection` -Objekt und das Herstellen einer Verbindung mit der gleichen Instanz.  
+2.  Öffnen einer `ServerConnection` Objekt und eine Verbindung mit der gleichen Instanz.  
   
 3.  Verwendung `System.IO.File` DAC-Paketdatei zu laden.  
   

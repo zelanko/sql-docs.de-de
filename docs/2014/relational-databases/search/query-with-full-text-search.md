@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [full-text search], about full-text queries
 - queries [full-text search], predicates
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - queries [full-text search], functions
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
 caps.latest.revision: 79
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2edf2a5fbafb99287503d4b7ebe5475bd5604985
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 78351b4f710d84d6d8cb7f29d1de89d05ee763b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050739"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229010"
 ---
 # <a name="query-with-full-text-search"></a>Abfragen mit Volltextsuche
   Zum Definieren von Volltextsuchen verwenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Volltextabfragen Volltextprädikate (CONTAINS und FREETEXT) und -funktionen (CONTAINSTABLE und FREETEXTTABLE). Diese unterstützen eine umfangreiche [!INCLUDE[tsql](../../includes/tsql-md.md)] -Syntax, die eine Vielzahl verschiedener Abfrageausdrücke gestattet. Zum Schreiben von Volltextabfragen müssen Sie wissen, wie diese Prädikate und Funktionen verwendet werden.  
@@ -134,7 +133,7 @@ GO
 ```  
   
 #### <a name="b-using-freetexttable"></a>B. Verwenden von FREETEXTTABLE  
- Das folgende Beispiel erweitert eine FREETEXTTABLE-Abfrage so, dass die Zeilen mit dem höchsten Rangfolgenwert zuerst zurückgegeben werden und die Rangfolge jeder Zeile zur Auswahlliste hinzugefügt wird. Um die Abfrage angeben zu können, müssen Sie wissen, die **ProductDescriptionID** wird die eindeutige Schlüsselspalte der `ProductDescription` Tabelle.  
+ Das folgende Beispiel erweitert eine FREETEXTTABLE-Abfrage so, dass die Zeilen mit dem höchsten Rangfolgenwert zuerst zurückgegeben werden und die Rangfolge jeder Zeile zur Auswahlliste hinzugefügt wird. Um die Abfrage angeben zu können, müssen Sie kennen, die **ProductDescriptionID** ist die eindeutige Schlüsselspalte der `ProductDescription` Tabelle.  
   
 ```  
 USE AdventureWorks2012  
@@ -193,7 +192,7 @@ GO
   
  
   
-##  <a name="Additional_Considerations"></a> Weitere Überlegungen bei Volltextabfragen  
+##  <a name="Additional_Considerations"></a> Zusätzliche Überlegungen zu Volltextabfragen  
  Berücksichtigen Sie beim Schreiben von Volltextabfragen auch Folgendes:  
   
 -   Die LANGUAGE-Option  
@@ -234,7 +233,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
  
   
 ### <a name="xml-data"></a>xml-Daten  
- Ein `xml` -Datentypspalte werden ausschließlich XML-Dokumente und-Fragmente gespeichert und für die Dokumente wird immer der XML-Filter verwendet. Ein Typspalte ist daher nicht erforderlich. Auf `xml` Spalten, die der Volltextindex den Inhalt der XML-Elemente indiziert, aber ignoriert die XML-Markups. Attributwerte werden volltextindiziert, sofern es sich nicht um numerische Werte handelt. Elementtags werden als Tokenbegrenzungen verwendet. Wohlgeformte XML- oder HTML-Dokumente und -Fragmente in mehreren Sprachen werden unterstützt.  
+ Ein `xml` -Datentypspalte werden ausschließlich XML-Dokumente und-Fragmente gespeichert. und nur der XML-Filter für die Dokumente verwendet wird. Ein Typspalte ist daher nicht erforderlich. Auf `xml` Spalten, die der Volltextindex den Inhalt der XML-Elemente indiziert, aber ignoriert die XML-Markups. Attributwerte werden volltextindiziert, sofern es sich nicht um numerische Werte handelt. Elementtags werden als Tokenbegrenzungen verwendet. Wohlgeformte XML- oder HTML-Dokumente und -Fragmente in mehreren Sprachen werden unterstützt.  
   
  Weitere Informationen zum Abfragen einer `xml` Spalte finden Sie unter [verwenden Volltextsuche mit XML-Spalten](../xml/use-full-text-search-with-xml-columns.md).  
   
@@ -257,8 +256,8 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
   
 
   
-###  <a name="Simple_Term"></a> Suchen nach einem bestimmten Wort oder Ausdruck (einfacher Begriff)  
- Sie können in eine Tabelle mithilfe von [CONTAINS](/sql/t-sql/queries/contains-transact-sql), [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql), [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)oder [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) nach einem bestimmten Ausdruck suchen. Angenommen, Sie suchen möchten die `ProductReview` -Tabelle in der [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] Datenbank nach allen Kommentaren zu einem Produkt mit dem Begriff "Learning Curve," können Sie das CONTAINS-Prädikat wie folgt:  
+###  <a name="Simple_Term"></a> Suche nach bestimmten Wort oder Ausdruck (einfacher Begriff)  
+ Sie können in eine Tabelle mithilfe von [CONTAINS](/sql/t-sql/queries/contains-transact-sql), [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql), [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)oder [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) nach einem bestimmten Ausdruck suchen. Angenommen, Sie suchen möchten die `ProductReview` -Tabelle in der [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] Datenbank nach allen Kommentaren zu einem Produkt mit dem Begriff "Learning Curve," können Sie das CONTAINS-Prädikat wie folgt verwenden:  
   
 ```  
 USE AdventureWorks2012  
@@ -274,7 +273,7 @@ GO
   
  
   
-###  <a name="Prefix_Term"></a> Ausführen von Präfixsuchen (Präfixbegriff)  
+###  <a name="Prefix_Term"></a> Durchführen von Präfixsuchen (Präfixbegriff)  
  Sie können [CONTAINS](/sql/t-sql/queries/contains-transact-sql) oder [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) verwenden, um nach Wörtern oder Ausdrücken mit einem angegebenen Präfix zu suchen. Alle Einträge in der Spalte, die Text enthalten und mit dem angegebenen Präfix beginnen, werden zurückgegeben. So suchen Sie beispielsweise nach allen Zeilen die das Präfix `top`enthalten, z. B. `top``ple`, `top``ping`und `top`. Die Abfrage lautet folgendermaßen:  
   
 ```  

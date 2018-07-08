@@ -1,5 +1,5 @@
 ---
-title: Modellieren Sie die Registerkarte "(Miningmodell-Viewer) | Microsoft Docs
+title: Modellieren Sie die Registerkarte "(Miningmodell-Viewer) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.timeseries.decisiontree.f1
 ms.assetid: 50570bb4-fcac-411e-b530-0398437efda7
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 932874065a56b98f8eb532f62206430152c794ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ffed64e129b7c3a94e337ab7a749b6950cdae4c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049063"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278466"
 ---
 # <a name="model-tab-mining-model-viewers"></a>Registerkarte "Modell" (Miningmodell-Viewer)
   Auf der Registerkarte **Modell** im Microsoft Time Series-Viewer wird eine Darstellung einer Zeitreihe als Knoten in einem Diagramm angezeigt, ähnlich wie in Entscheidungsstrukturmodellen.  
@@ -31,13 +31,13 @@ ms.locfileid: "36049063"
  **Weitere Informationen:** [Microsoft Time Series-Algorithmus](data-mining/microsoft-time-series-algorithm.md), [Durchsuchen eines Modells mit Microsoft Time Series-Viewer](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), [Microsoft Time Series-Algorithmus](data-mining/microsoft-time-series-algorithm.md)  
   
 ## <a name="options"></a>Tastatur  
- **Viewerinhalt**  
+ **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
  **Miningmodell**  
  Wählen Sie ein Miningmodell zur Ansicht aus. Das Miningmodell wird im dazugehörigen Viewer geöffnet.  
   
- **Ereignisanzeige**  
+ **Viewer**  
  Wählen Sie den Viewer aus, der zum Durchsuchen des ausgewählten Miningmodells verwendet werden soll. Sie können den benutzerdefinierten Viewer für diesen Modelltyp oder den **Microsoft Generic Content Tree Viewer** verwenden. Sie können auch Plug-In-Viewer verwenden, falls diese verfügbar sind.  
   
  **Vergrößern**  

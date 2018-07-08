@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 caps.latest.revision: 51
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 417c2a44536a4f7a1c9ed9ade7d789e20e024874
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 8599cb6c4390b0e204bde2b02a36729cf3b48dcc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048460"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148721"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Lektion 1: Erstellen eines Berichtsserverprojekts (Reporting Services)
-  Zum Erstellen eines Berichts in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], müssen Sie zuerst ein Berichtsserverprojekt, speichert die Berichtsdefinitionsdatei (.rdl) und alle anderen Ressourcendateien, die Sie für Ihren Bericht benötigen, erstellen. Anschließend erstellen Sie die tatsächliche Berichtsdefinitionsdatei, und Sie definieren eine Datenquelle für Ihren Bericht, ein Dataset sowie das Berichtslayout. Beim Ausführen des Berichts werden die tatsächlichen Daten abgerufen und mit dem Layout kombiniert. Anschließend werden die Daten auf dem Bildschirm gerendert. Dort können Sie sie exportieren, drucken und speichern.  
+  Zum Erstellen eines Berichts in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Sie müssen zuerst ein Berichtsserverprojekt, in dem Sie Ihre Berichtsdefinitionsdatei (.rdl) und Speichern jeder andere Ressourcendateien, die Sie für Ihren Bericht benötigen, erstellen. Anschließend erstellen Sie die tatsächliche Berichtsdefinitionsdatei, und Sie definieren eine Datenquelle für Ihren Bericht, ein Dataset sowie das Berichtslayout. Beim Ausführen des Berichts werden die tatsächlichen Daten abgerufen und mit dem Layout kombiniert. Anschließend werden die Daten auf dem Bildschirm gerendert. Dort können Sie sie exportieren, drucken und speichern.  
   
  In dieser Lektion wird erläutert, wie Sie ein Berichtsserverprojekt in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] erstellen. In einem Berichtsserverprojekt werden Berichte erstellt, die auf einem Berichtsserver ausgeführt werden.  
   
 ### <a name="to-create-a-report-server-project"></a>So erstellen Sie ein Berichtsserverprojekt  
   
-1.  Klicken Sie auf **starten**, zeigen Sie auf **Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], und klicken Sie dann auf **SQL Server Data Tools**. Wenn dies das erste Mal ist Sie haben geöffnet [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], klicken Sie auf **Business Intelligence-Einstellungen** für die standardumgebungseinstellungen.  
+1.  Klicken Sie auf **starten**, zeigen Sie auf **Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], und klicken Sie dann auf **SQL Server Data Tools**. Wenn dies zum ersten Mal wird Sie geöffnet haben [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], klicken Sie auf **Business Intelligence-Einstellungen** für die standardumgebungseinstellungen.  
   
 2.  Zeigen Sie im Menü **Datei** auf **Neu**, und klicken Sie dann auf **Projekt**.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36048460"
     > [!NOTE]  
     >  Wird das Fenster **Projektmappen-Explorer** nicht angezeigt, klicken Sie im Menü **Ansicht** auf **Projektmappen-Explorer**.  
   
-2.  In der **neues Element hinzufügen** Dialogfeld unter **Vorlagen**, klicken Sie auf **Bericht**.  
+2.  In der **neues Element hinzufügen** Dialogfeld **Vorlagen**, klicken Sie auf **Bericht**.  
   
 3.  Geben Sie in **Name** **Sales Orders.rdl** ein, und klicken Sie auf **Hinzufügen**.  
   
@@ -63,6 +63,6 @@ ms.locfileid: "36048460"
  Sie haben das Berichtsprojekt Tutorial erfolgreich erstellt und dem Berichtsprojekt eine Berichtsdefinitionsdatei (*.rdl) hinzugefügt. Als Nächstes geben Sie eine Datenquelle an, die für den Bericht verwendet werden soll. Weitere Informationen finden Sie unter [Lektion 2: Angeben von Verbindungsinformationen (Reporting Services)](lesson-2-specifying-connection-information-reporting-services.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen ein einfachen Tabellenberichts &#40;SSRS-Lernprogramm&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
+ [Erstellen ein einfachen Tabellenberichts &#40;SSRS-Tutorial&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
   
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 31c3d3bdcfc2a986fc62ba32e2df443d74d7a8fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c35cc475af0b083ce8f4a0f6afcb0c654b9bc266
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047450"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165001"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Einschließen einer Datenprofilerstellungs-Tasks in den Paket-Workflow
   Datenprofilerstellung und Cleanup sind in den Anfangsphasen keine Kandidaten für einen automatisierten Prozess. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]erfordert die Ausgabe des Datenprofilerstellungs-Tasks normalerweise eine visuelle Analyse und menschliches Urteilsvermögen, um zu bestimmen, ob gemeldete Verstöße von Bedeutung sind oder übertrieben. Auch nach Erkennen eines Datenqualitätsproblems ist nach wie vor ein sorgfältig durchdachter Plan erforderlich, der den besten Bereinigungsansatz beinhaltet.  
@@ -106,9 +106,9 @@ ms.locfileid: "36047450"
   
 -   Fügen Sie im Fenster **Variablen** die beiden folgenden Paketvariablen hinzu, und konfigurieren Sie sie:  
   
-    -   Geben Sie den Namen `ProfileConnectionName`, für eine der Variablen, und legen Sie den Typ dieser Variablen auf **Zeichenfolge**.  
+    -   Geben Sie den Namen, `ProfileConnectionName`, für eine der Variablen, und legen Sie den Typ dieser Variablen auf **Zeichenfolge**.  
   
-    -   Geben Sie den Namen `AddressLine2NullRatio`, für die andere Variable, und legen den Typ dieser Variablen auf **doppelte**.  
+    -   Geben Sie den Namen, `AddressLine2NullRatio`, für die andere Variable, und legen den Typ dieser Variablen auf **doppelte**.  
   
 ### <a name="configure-the-data-profiling-task"></a>Konfigurieren des Datenprofilerstellungs-Tasks  
  Der Datenprofilerstellungs-Task muss wie folgt konfiguriert werden:  
@@ -270,9 +270,9 @@ ms.locfileid: "36047450"
 #### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>Alternativer Code – Lesen der Profilausgabe aus einer Variablen  
  Das vorherige Verfahren zeigt, wie die Ausgabe des Datenprofilerstellungs-Tasks aus einer Datei geladen wird. Eine alternative Methode wäre allerdings, diese Ausgabe aus einer Paketvariablen zu laden. Um die Ausgabe aus einer Variablen zu laden, müssen Sie den Beispielcode wie folgt ändern:  
   
--   Rufen Sie die `LoadXml` Methode der `XmlDocument` -Klasse statt der `Load` Methode.  
+-   Rufen Sie die `LoadXml` -Methode der der `XmlDocument` -Klasse anstelle der `Load` Methode.  
   
--   In der Skripttask-Editor, fügen Sie den Namen der Paketvariablen, die die Profilausgabe an der Aufgabe enthält `ReadOnlyVariables` Liste.  
+-   In der Skripttask-Editor, fügen Sie den Namen der Paketvariablen, die die Profilausgabe des Tasks enthält `ReadOnlyVariables` Liste.  
   
 -   Übergeben Sie den Zeichenfolgenwert der Variablen, die die `LoadXML` Methode, wie im folgenden Codebeispiel gezeigt. (In diesem Beispiel wird "ProfileOutput" als Name der Paketvariable verwendet, die die Profilausgabe enthält.)  
   
@@ -332,7 +332,7 @@ ms.locfileid: "36047450"
 7.  Verwenden Sie in den Rangfolgeneinschränkungen, mit denen der Skripttask mit Downstream-Verzweigungen verbunden wird, Ausdrücke, die den Workflow anhand der Werte der Variablen steuern.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Einrichten des Datenprofilerstellungs-Tasks](data-profiling-task.md)   
+ [Einrichten von Datenprofilerstellungs-Tasks](data-profiling-task.md)   
  [Datenprofil-Viewer](data-profile-viewer.md)  
   
   

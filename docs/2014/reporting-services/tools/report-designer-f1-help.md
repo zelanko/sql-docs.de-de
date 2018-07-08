@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], dialog boxes
 ms.assetid: 7c1bc931-d1ec-47fc-8f82-55560ddaf776
 caps.latest.revision: 59
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5c5965ec47bb0b20e1cc28770be7a209e833cf18
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: db7f112105d5583c1ddbabddb594e096bacf2a91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046825"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163841"
 ---
 # <a name="report-designer-f1-help"></a>Berichts-Designer (F1-Hilfe)
-  Dieser Abschnitt enthält F1-Hilfe für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Assistenten, Ansichten und Dialogfelder von Berichts-Designer. Sie können die F1-Hilfe auch bei geöffnetem Dialogfeld durch Drücken der F1-Taste oder durch Klicken auf die im Dialogfeld angezeigte Schaltfläche Hilfe öffnen.  
+  Dieser Abschnitt enthält F1-Hilfe für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichts-Designer-Assistenten, Ansichten und Dialogfelder. Sie können die F1-Hilfe auch bei geöffnetem Dialogfeld durch Drücken der F1-Taste oder durch Klicken auf die im Dialogfeld angezeigte Schaltfläche Hilfe öffnen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Funktionsreferenz &#40;Reporting Services&#41;](../feature-reference-reporting-services.md)   

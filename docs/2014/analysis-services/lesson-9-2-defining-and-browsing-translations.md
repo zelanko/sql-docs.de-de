@@ -1,5 +1,5 @@
 ---
-title: Definieren und Durchsuchen von Übersetzungen | Microsoft Docs
+title: Definieren und Durchsuchen von Übersetzungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0e60be99-3768-499c-a22c-a4ec37e61887
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 8dcee3e98c81f02c0a2fe54d54fc7eaa91a6a752
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a31a3dfcd3b252e33af8e8748fbe31606318a0b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047941"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153441"
 ---
 # <a name="defining-and-browsing-translations"></a>Definieren und Durchsuchen von Übersetzungen
   Eine Übersetzung ist eine Darstellung der Namen von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Objekten in einer bestimmten Sprache. Objekte schließen Measuregruppen, Measures, Dimensionen, Attribute, Hierarchien, KPIs, Aktionen und berechnete Elemente ein. Übersetzungen bieten Serverunterstützung für Clientanwendungen, die mehrere Sprachen unterstützen können. Bei Verwendung eines solchen Clients übergibt der Client den Gebietsschemabezeichner (Locale Identifier, LCID) an die Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], die mithilfe des Gebietsschemabezeichners bestimmt, welche Übersetzungen beim Bereitstellen von Metadaten für [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekte verwendet werden sollen. Enthält ein [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekt keine Übersetzung für diese Sprache oder keine Übersetzung für ein angegebenes Objekt, wird die Standardsprache zur Rückgabe der Objektmetadaten an den Client verwendet. Wenn z. B. ein Anwender des Produkts im geschäftlichen Bereich in Frankreich von einer Arbeitsstation mit einer französischen Gebietsschemaeinstellung auf einen Cube zugreift, sieht er die Elementbeschriftungen und die Werte der Elementeigenschaften auf Französisch, sofern eine französische Übersetzung vorhanden ist. Wenn jedoch ein Anwender des Produkts im geschäftlichen Bereich in Deutschland von einer Arbeitsstation mit einer deutschen Gebietsschemaeinstellung auf denselben Cube zugreift, sieht er die Elementbeschriftungen und die Werte der Elementeigenschaften auf Deutsch. Weitere Informationen finden Sie unter [Dimensionsübersetzungen](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), [Cubeübersetzungen](multidimensional-models-olap-logical-cube-objects/cube-translations.md), [Übersetzungen &#40;Analysis Services&#41;](translations-analysis-services.md).  
@@ -44,9 +44,9 @@ ms.locfileid: "36047941"
   
      Es wird eine weitere Sprachspalte angezeigt, in der Sie französische Übersetzungen definieren können.  
   
-5.  In der Zeile für die **Beschriftung** -Objekt für die **Datum** -Dimension `Fecha` in der **Spanisch (Spanien)** übersetzungsspalte und `Temps` in der  **Französisch (Frankreich)** übersetzungsspalte.  
+5.  In der Zeile für die **Beschriftung** -Objekt für die **Datum** -Dimension `Fecha` in die **Spanisch (Spanien)** übersetzungsspalte und `Temps` in die  **Französisch (Frankreich)** übersetzungsspalte.  
   
-6.  In der Zeile für die **Beschriftung** -Objekt für die **Month Name** -Attributs `Mes del Año` in der **Spanisch (Spanien)** übersetzungsspalte und `Mois d'Année` in der **Französisch (Frankreich)** übersetzungsspalte.  
+6.  In der Zeile für die **Beschriftung** -Objekt für die **Month Name** Attribut, und geben `Mes del Año` in die **Spanisch (Spanien)** übersetzungsspalte und `Mois d'Année` in der **Französisch (Frankreich)** übersetzungsspalte.  
   
      Beachten Sie, dass beim Eingeben dieser Übersetzungen Auslassungspunkte (**…**) angezeigt werden. Durch Klicken auf dieses Auslassungszeichen können Sie eine Spalte in der zugrunde liegenden Tabelle angeben, die Übersetzungen für jedes Mitglied der Attributhierarchie bereitstellt.  
   
@@ -84,11 +84,11 @@ ms.locfileid: "36047941"
   
      Es wird eine weitere Sprachspalte angezeigt, in der Sie französische Übersetzungen definieren können.  
   
-5.  In der Zeile für die **Beschriftung** -Objekt für die **Datum** -Dimension `Fecha` in der **Spanisch (Spanien)** übersetzungsspalte und `Temps` in der  **Französisch (Frankreich)** übersetzungsspalte.  
+5.  In der Zeile für die **Beschriftung** -Objekt für die **Datum** -Dimension `Fecha` in die **Spanisch (Spanien)** übersetzungsspalte und `Temps` in die  **Französisch (Frankreich)** übersetzungsspalte.  
   
-6.  In der Zeile für die **Beschriftung** -Objekt für die **Internetverkäufe** Geben Sie die Measuregruppe `Ventas del lnternet` in der **Spanisch (Spanien)** übersetzungsspalte und `Ventes D'Internet` in die **Französisch (Frankreich)** übersetzungsspalte.  
+6.  In der Zeile für die **Beschriftung** -Objekt für die **Internetverkäufe** Measuregruppe aus, geben `Ventas del lnternet` in die **Spanisch (Spanien)** übersetzungsspalte und `Ventes D'Internet` in die **Französisch (Frankreich)** übersetzungsspalte.  
   
-7.  In der Zeile für die **Beschriftung** Objekt für die Internet Sales-Sales Amount-Measures `Cantidad de las Ventas del Internet` in der **Spanisch (Spanien)** übersetzungsspalte und `Quantité de Ventes d'Internet` in der **(Französisch Frankreich)** übersetzungsspalte.  
+7.  In der Zeile für die **Beschriftung** Objekt für das Internet Sales-Sales Amount-Measure, Typ `Cantidad de las Ventas del Internet` in der **Spanisch (Spanien)** übersetzungsspalte und `Quantité de Ventes d'Internet` in die **(Französisch Frankreich)** übersetzungsspalte.  
   
      Die Schritte in dieser Prozedur veranschaulichen den Prozess der Definition von Metadatenübersetzungen für Cubeobjekte.  
   
@@ -106,9 +106,9 @@ ms.locfileid: "36047941"
   
 5.  Wählen Sie auf der Symbolleiste in der Liste **Sprache** die Option **Spanisch (Spanien)** aus.  
   
-     Die Elemente im Metadatenbereich werden erneut aufgefüllt. Nach dem erneuten Auffüllen der Elemente im Metadatenbereich wird das Internet Sales-Sales Amount-Measure nicht mehr im Internet Sales-Anzeigeordner angezeigt. Stattdessen erscheint in Spanisch in einem neuen Anzeigeordner namens `Ventas del lnternet`, wie in der folgenden Abbildung dargestellt.  
+     Die Elemente im Metadatenbereich werden erneut aufgefüllt. Nach dem erneuten Auffüllen der Elemente im Metadatenbereich wird das Internet Sales-Sales Amount-Measure nicht mehr im Internet Sales-Anzeigeordner angezeigt. Stattdessen wird es angezeigt in Spanisch in einem neuen Anzeigeordner namens `Ventas del lnternet`, wie in der folgenden Abbildung dargestellt.  
   
-     ![Metadaten (Bereich) Repopulated](../../2014/tutorials/media/l9-translations-6.gif "Repopulated-Metadaten (Bereich)")  
+     ![Metadatenbereich Repopulated](../../2014/tutorials/media/l9-translations-6.gif "Repopulated Metadatenbereich")  
   
 6.  Im Metadatenbereich mit der Maustaste `Cantidad de las Ventas del Internet` und wählen Sie dann **Abfrage hinzufügen**.  
   

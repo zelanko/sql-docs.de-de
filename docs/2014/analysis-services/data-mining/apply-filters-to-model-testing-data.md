@@ -1,5 +1,5 @@
 ---
-title: Anwenden von Filtern zum Modellieren von Testdaten | Microsoft Docs
+title: Anwenden von Filtern zum Modellieren von Testdaten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - input row filtering [SQL Server]
 - filtering input rows [Analysis Services]
 - Mining Accuracy Chart [Analysis Services], filtering input rows
 ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: aa35fdc19ffca67cf82f2f4b2dfa468131dd97d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f81b15b5fa36913a54e6529602d903ede426addf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048370"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153281"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Anwenden von Filtern zum Modellieren von Testdaten
   Wenn Sie eine externe Datenquelle angeben, die beim Testen eines verwendet werden soll, können Sie optional einen Filter anwenden, um die Eingabedaten einzuschränken. Sie möchten das Modell zum Beispiel speziell für Vorhersagen zu Kunden in einem bestimmten Einkommensbereich testen.  
   
- Beispielsweise können Sie in der targeted mailing-Szenario von AdventureWorks, erstellen einen Filterausdruck wie den folgenden Ausdruck auf der ProspectiveBuyer, ist die Tabelle, die die Testdaten enthält, und Testfälle nach Einkommensbereich einschränken:  
+ Beispielsweise können Sie in der targeted mailing-Szenario von AdventureWorks, erstellen einen Filterausdruck wie den folgenden Ausdruck für ProspectiveBuyer, das in der Tabelle, die Testdaten enthält, und Testfälle nach Einkommensbereich einschränken:  
   
  `[YearlyIncome] = '50000'`  
   

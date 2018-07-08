@@ -1,5 +1,5 @@
 ---
-title: Scale-Out-Bereitstellung (Berichtsserver im einheitlichen Modus) | Microsoft Docs
+title: Horizontales Skalieren (Berichtsserver im einheitlichen Modus)-Bereitstellung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.scaleoutdeployment.F1
 ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: d995052fe279fcc354a3293d881714bb3ec4bcb4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8038c9cbbce2eeb68b6e23b91fba1d7b0a2e708e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046027"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151801"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>Bereitstellung für horizontales Skalieren (Berichtsserver im einheitlichen Modus)
-  Verwenden der **Bereitstellung für horizontales Skalieren** auf der Seite [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Konfigurations-Manager, um den Initialisierungsstatus für eine Bereitstellung für horizontales Skalieren anzuzeigen oder um einen Berichtsserver mit einer Bereitstellung für horizontales Skalieren zu verknüpfen. Eine *Bereitstellung für horizontales Skalieren* wird definiert als zwei oder mehr Berichtsserverinstanzen, die gemeinsam eine einzelne Berichtsserver-Datenbank nutzen.  
+  Verwenden der **Bereitstellung für horizontales Skalieren** auf der Seite [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Konfigurations-Manager, um den Initialisierungsstatus einer Bereitstellung für horizontales Skalieren anzuzeigen oder zu einer Bereitstellung für horizontales Skalieren einen Berichtsserver hinzuzufügen. Eine *Bereitstellung für horizontales Skalieren* wird definiert als zwei oder mehr Berichtsserverinstanzen, die gemeinsam eine einzelne Berichtsserver-Datenbank nutzen.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "36046027"
  **Database Name**  
  Gibt den Namen der Datenbank an, mit der die Berichtsserverinstanz momentan verbunden ist.  
   
- **Modus "Server"**  
+ **Servermodus**  
  Zeigt den Modus des Servers und der Datenbank an. Der Servermodus ist entweder systemeigen oder der integrierte SharePoint-Modus. Bereitstellungen für horizontales Skalieren werden für beide Modi unterstützt.  
   
  **Server**  
@@ -77,7 +77,7 @@ ms.locfileid: "36046027"
   
  Stellen Sie vorsichtshalber sicher, dass Sie eine Sicherungskopie des symmetrischen Schlüssels erstellen, bevor Sie ihn entfernen. Nachdem Sie die Verschlüsselungsschlüssel des letzten Berichtsservers in der Liste entfernt haben, führen Sie neue Anforderungen für sämtliche folgenden Berichtsserverinitialisierungen für die entsprechende Datenbank ein. Gemäß der neuen Anforderung müssen Sie, nachdem Sie einen Berichtsserver initialisiert haben, eine Sicherungskopie des symmetrischen Schlüssels erstellen. Das Wiederherstellen des symmetrischen Schlüssels ist notwendig, falls Sie auf die verschlüsselten Daten zugreifen möchten, die derzeit in der Berichtsserverdatenbank gespeichert sind.  
   
- Wenn Sie die verschlüsselten Daten nicht mehr benötigen oder falls Sie keine Sicherungskopie des Schlüssels besitzen, müssen Sie die verschlüsselten Daten löschen. Weitere Informationen finden Sie unter [Verschlüsselungsschlüssel &#40;SSRS im einheitlichen Modus&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md).  
+ Wenn Sie die verschlüsselten Daten nicht mehr benötigen oder falls Sie keine Sicherungskopie des Schlüssels besitzen, müssen Sie die verschlüsselten Daten löschen. Weitere Informationen finden Sie unter [Verschlüsselungsschlüssel &#40;einheitlicher SSRS-Modus&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Initialisieren eines Berichtsservers (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   

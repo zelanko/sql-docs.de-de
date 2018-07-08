@@ -5,31 +5,30 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Unicode [SQL Server], bulk importing and exporting
 - data formats [SQL Server], Unicode native
 ms.assetid: a6213308-f3d5-406e-9029-19d8bb3367f3
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 310234920939cfea19d6d17370bc3c427ff3fbcc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 631e857146b99ad9ae05b94b7a64adc0b27fff27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048496"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150851"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>Verwenden des systemeigenen Unicode-Formats zum Importieren oder Exportieren von Daten (SQL Server)
   Das native Unicode-Format ist hilfreich, wenn Informationen von einer Installation von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in eine andere kopiert werden müssen. Durch die Verwendung des systemeigenen Formats bei nicht auf Zeichen basierenden Daten kann Zeit eingespart werden, da die unnötige Konvertierung der Datentypen in und aus dem Zeichenformat entfällt. Die Verwendung des Unicode-Zeichenformats für alle Zeichendaten verhindert, dass es zum Verlust von erweiterten Zeichen beim Massenübertragen von Daten zwischen Servern mit unterschiedlichen Codepages kommt. Eine Datendatei im systemeigenen Unicode-Format kann von jeder Massenimportmethode gelesen werden.  
   
- Das systemeigene Unicode-Format wird für die Massenübertragung von Daten zwischen mehreren Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe einer Datendatei, die Sonderzeichen oder DBCS-Zeichen enthält, empfohlen. Für nicht auf Zeichen basierende Daten verwendet das systemeigene Unicode-Format systemeigene (Datenbank-)Datentypen. Bei Zeichendaten wie z. B. `char`, `nchar`, `varchar`, `nvarchar`, `text`, `varchar(max)`, `nvarchar(max)`, und `ntext`, das systemeigene Unicode-Format verwendet Unicode-Zeichendatenformat.  
+ Das systemeigene Unicode-Format wird für die Massenübertragung von Daten zwischen mehreren Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe einer Datendatei, die Sonderzeichen oder DBCS-Zeichen enthält, empfohlen. Für nicht auf Zeichen basierende Daten verwendet das systemeigene Unicode-Format systemeigene (Datenbank-)Datentypen. Für Zeichendaten wie z. B. `char`, `nchar`, `varchar`, `nvarchar`, `text`, `varchar(max)`, `nvarchar(max)`, und `ntext`, das systemeigene Unicode-Format verwendet Unicode-Zeichendatenformat.  
   
- Die `sql_variant`-Daten, die in einer Datendatei im systemeigenen Unicode-Format als SQLVARIANT gespeichert werden, funktionieren auf die gleiche Weise wie in einer Datendatei im systemeigenen Format, mit der Ausnahme, dass Werte der Typen `char` und `varchar` in `nchar` und `nvarchar` konvertiert werden. Hierdurch verdoppelt sich der für die entsprechenden Spalten benötigte Speicherplatz. Die ursprünglichen Metadaten bleiben erhalten, und die Werte werden zurück in die ursprünglichen konvertiert `char` und `varchar` -Datentyp, wenn Sie in eine Tabellenspalte massenimportiert.  
+ Die `sql_variant`-Daten, die in einer Datendatei im systemeigenen Unicode-Format als SQLVARIANT gespeichert werden, funktionieren auf die gleiche Weise wie in einer Datendatei im systemeigenen Format, mit der Ausnahme, dass Werte der Typen `char` und `varchar` in `nchar` und `nvarchar` konvertiert werden. Hierdurch verdoppelt sich der für die entsprechenden Spalten benötigte Speicherplatz. Die ursprüngliche Metadaten bleiben erhalten und die Werte werden zurück in die ursprünglichen konvertiert `char` und `varchar` -Datentyp, wenn Sie in eine Tabellenspalte massenimportiert.  
   
 ## <a name="command-options-for-unicode-native-format"></a>Befehlsoptionen für das systemeigene Unicode-Format  
  Sie können Daten im nativen Unicode-Format in eine Tabelle importieren, indem Sie folgende Anweisungen verwenden: **bcp**, BULK INSERT oder INSERT ... SELECT \* FROM OPENROWSET(BULK...). Für einen **bcp**-Befehl oder eine BULK INSERT-Anweisung können Sie das Datenformat in der Befehlszeile angeben. Für eine INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung müssen Sie das Datenformat in einer Formatdatei angeben.  
@@ -38,7 +37,7 @@ ms.locfileid: "36048496"
   
 |Befehl|Option|Description|  
 |-------------|------------|-----------------|  
-|**bcp**|**-N**|Bewirkt, dass die **Bcp** Hilfsprogramm, das systemeigene Unicode-Format verwenden, die systemeigene (Datenbank-) verwendet Datentypen, für alle nicht auf Zeichen basierende Daten und Unicode-Zeichendatenformat für alle Zeichendaten (`char`, `nchar`, `varchar`, `nvarchar`, `text`, und `ntext`) Daten.|  
+|**bcp**|**-N**|Bewirkt, dass die **Bcp** Hilfsprogramm, um das systemeigene Unicode-Format zu verwenden, das systemeigene (Datenbank-) über Typen, für alle nicht auf Zeichen basierende Daten und Unicode-Zeichendatenformat für alle Zeichendaten (`char`, `nchar`, `varchar`, `nvarchar`, `text`, und `ntext`) Daten.|  
 |BULK INSERT|DATAFILETYPE **='** widenative **'**|Gibt an, dass das systemeigene Unicode-Format beim Massenimportieren von Daten verwendet werden soll.|  
   
  Weitere Informationen finden Sie unter [bcp (Hilfsprogramm)](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) oder [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  

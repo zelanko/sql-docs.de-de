@@ -1,5 +1,6 @@
 ---
-title: Konsolidieren Bewertungsberichte (SQL Server Data Migration Assistant) | Microsoft Docs
+title: Importieren und Konsolidieren von Data Migration Assistant assessmentberichten (SQL Server) | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie Berichte zur Bewertung von Data Migration Assistant in eine SQL Server-Datenbank zu importieren und mehreren Berichten zu konsolidieren.
 ms.custom: ''
 ms.date: 04/16/2018
 ms.prod: sql
@@ -17,36 +18,35 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 7192c055b4b9bfb6155f0963c598f9dc4a760c0a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: be9fc224093f0d5ae14372d4674a52589a2d4801
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32869645"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37781771"
 ---
-# <a name="consolidate-assessment-reports-data-migration-assistant"></a>Konsolidieren Sie Bewertungsberichte (Data Migration Assistant)
+# <a name="import-and-consolidate-data-migration-assistant-assessment-reports"></a>Importieren und Konsolidieren von assessmentberichten Data Migration Assistant
 
-Die Befehlszeile können Sie die Migrations-Bewertungen im unbeaufsichtigten Modus ausführen Data Migration Assistant v2. 1 ab. Dieses Feature erleichtert die Bewertungen Größenordnungen ausführen. Die Bewertung von Ergebnissen in Form einer JSON- oder CSV-Datei.
+Sie können die Befehlszeile verwenden, Migration Bewertungen im unbeaufsichtigten Modus ausführen, beginnend mit den Data Migration Assistant v2. 1. Dieses Feature können Sie die Bewertungen ausgeführt und skaliert. Die der Bewertungsergebnisse in Form einer JSON- oder CSV-Datei.
 
-Mehrere Datenbanken in eine einzelne Instanziierung Data Migration Assistant Befehlszeilen-Hilfsprogramm zu bewerten können und alle Bewertungen Ergebnisse in einer einzelnen JSON-Datei exportieren. Alternativ können Sie bewerten Sie eine Datenbank zum Zeitpunkt und später die Ergebnisse aus diesen mehrere JSON-Dateien in einer SQL-Datenbank konsolidieren können.
+Sie können mehrere Datenbanken in eine einzelne Instanziierung des Data Migration Assistant-Befehlszeilen-Hilfsprogramms zu bewerten und alle Bewertungen Ergebnisse in eine einzelne JSON-Datei exportieren. Alternativ können Sie eine Datenbank zum Zeitpunkt bewerten und später die Ergebnisse aus diesen mehrere JSON-Dateien in einer SQL-Datenbank zu konsolidieren.
 
-Informationen zum Migrations-Assistenten Daten über die Befehlszeile ausführen, finden Sie unter [ausführen Data Migration Assistant über Befehlszeile](../dma/dma-commandline.md). 
+Informationen zum Data Migration Assistant von der Befehlszeile aus ausführen, finden Sie unter [ausführen Data Migration Assistant über Befehlszeile](../dma/dma-commandline.md). 
 
+## <a name="import-assessment-results-into-a-sql-server-database"></a>Importieren Sie Ergebnisse in einer SQL Server-Datenbank
 
-## <a name="import-assessment-results-into-a-sql-server-database"></a>Assessment-Ergebnisse in einer SQL Server-Datenbank importieren
-
-Verwenden Sie das PowerShell-Skript zur Verfügung, in diesem [Github-Repository](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/data-migration-assistant) die Bewertungsergebnisse aus JSON-Dateien in einer SQL Server-Datenbank zu importieren.
+Verwenden Sie das PowerShell-Skript finden Sie in diesem [Github-Repository](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/data-migration-assistant) um die Bewertungsergebnisse aus JSON-Dateien in SQL Server-Datenbank zu importieren.
 
 > [!NOTE]
-> PowerShell-v5 oder höher erforderlich.
+> PowerShell 5.x oder höher ist erforderlich.
 
-Wenn Sie das Skript ausführen, müssen Sie die folgenden Informationen bereitstellen: 
+Wenn Sie das Skript ausführen, müssen Sie die folgenden Informationen angeben: 
 
-- **ServerName**: SQL Server-Instanzname, dass Sie die Bewertung importieren möchten, die aus der JSON-Dateien resultiert.
+- **ServerName**: Name des SQL Server-Instanz, dass Sie die Bewertung importieren möchten aus JSON-Dateien führt.
 
-- **DatabaseName**: den Datenbanknamen, die die Ergebnisse in importiert abrufen.
+- **DatabaseName**: der Name der Datenbank, die die Ergebnisse in importiert zu erhalten.
 
-- **JsonDirectory**: der Ordner, der die Bewertungsergebnisse, in einer oder mehreren JSON-Dateien gespeichert.
+- **JsonDirectory**: der Ordner, die die Bewertungsergebnisse, in eine oder mehrere JSON-Dateien gespeichert.
 
 - **ProcessTo**: SQL Server
 
@@ -59,27 +59,27 @@ dmaProcessor -serverName localhost \`\
 -processTo SQLServer
 ```
 
-Das PowerShell-Skript erstellt die folgenden Objekte in der SQL-Instanz, die Sie angegeben haben, die Wenn die Objekte nicht bereits vorhanden sind:
+Das PowerShell-Skript wird in der SQL-Instanz, die Sie angegeben haben, die folgenden Objekte erstellt, wenn die Objekte nicht bereits vorhanden sind:
 
-- **Datenbank** – in der PowerShell-Parameter angegebene Name
+- **Datenbank** : dem Namen in die PowerShell-Parameter
 
   - Wichtigstes repository
 
 - **Tabelle** – ReportData
 
-  - Daten für die Berichterstattung
+  - Für die Berichterstattung
 
 - **Tabelle** -BreakingChangeWeighting
 
-  - Verweistabelle für alle Änderungen. Hier können Sie Ihre eigenen Werte Gewichtung, um zu beeinflussen, eine genauere Prozentsatz (%) Upgrade Erfolg Rangfolge definieren.
+  - Verweistabelle für alle Änderungen. Hier können Sie Ihre eigenen Werte Gewichtung, um zu beeinflussen, eine genauere Prozentsatz (%)-Upgrade erfolgreich Rangfolge definieren.
 
-- **Ansicht** – UpgradeSuccessRanking\_lokal
+- **Ansicht** – UpgradeSuccessRanking\_OnPrem
 
-  - Ansicht Anzeigen einer Erfolgsfaktor für jede Datenbank migrierte lokal sein.
+  - Die Ansicht ein Erfolgsfaktor für jede zu migrierte lokale Datenbank anzeigen.
 
 - **Ansicht** – UpgradeSuccessRanking\_Azure
 
-  - Ansicht Anzeigen einer Erfolgsfaktor für jede Datenbank migrierte lokal sein.
+  - Die Ansicht ein Erfolgsfaktor für jede zu migrierte lokale Datenbank anzeigen.
 
 - **Gespeicherte Prozedur** – JSONResults\_einfügen
 
@@ -87,19 +87,19 @@ Das PowerShell-Skript erstellt die folgenden Objekte in der SQL-Instanz, die Sie
 
 - **Gespeicherte Prozedur** – AzureFeatureParityResults\_einfügen
 
-  - Zum Importieren von Azure Feature Parität Ergebnisse aus einer JSON-Datei in SQL Server verwendet.
+  - Verwendet, um die Azure-Feature Parity Ergebnisse aus einer JSON-Datei in SQL Server zu importieren.
 
 - **Tabellentyp** – JSONResults
 
-  - Halten die JSON-Ergebnisse für lokalen Bewertungen und übergeben Sie an der JSONResults zum\_gespeicherte Prozedur Insert
+  - Zum Speichern der JSON-Ergebnisse für lokale Bewertungen, und übergeben Sie an der JSONResults\_gespeicherte Prozedur Insert
 
 - **Tabellentyp** – AzureFeatureParityResults
 
-  - Halten das Azure Feature Parität Ergebnisse für Azure-Bewertungen und übergeben Sie an der AzureFeatureParityResults zum\_gespeicherte Prozedur Insert
+  - Verwendet, um enthalten die das Azure Feature Parity Ergebnisse für Azure-Bewertungen und übergeben Sie an der AzureFeatureParityResults\_gespeicherte Prozedur Insert
 
-Das PowerShell-Skript erstellt eine **verarbeitete** Verzeichnis im angegebenen Verzeichnis, das JSON-Dateien enthält, die verarbeitet werden sollen.
+PowerShell-Skript erstellt eine **verarbeitete** Verzeichnis in das angegebene Verzeichnis, das die JSON-Dateien enthält, die verarbeitet werden sollen.
 
-Nach Abschluss des Skripts werden die Ergebnisse in der Tabelle ReportData importiert.
+Nachdem das Skript abgeschlossen ist, werden die Ergebnisse in die Tabelle ReportData importiert.
 
 ### <a name="viewing-the-results-in-sql-server"></a>Anzeigen der Ergebnisse in SQL Server
 
@@ -107,39 +107,39 @@ Nachdem die Daten geladen wurden, verbinden Sie sich mit Ihrer SQL Server-Instan
 
 ![Konsolidierte Berichte in SQL Server-Datenbank](../dma/media/DMAReportingDatabase.png)
 
-Das "Dbo". ReportData-Tabelle enthält den Inhalt des JSON-Datei in seiner Rohform an.
+Das "Dbo". ReportData-Tabelle enthält den Inhalt der JSON-Datei in unformatierter Form an.
 
-## <a name="on-premises-upgrade-success-ranking"></a>Lokaler upgrade Erfolg Rangfolge
+## <a name="on-premises-upgrade-success-ranking"></a>Lokales aktualisieren Erfolg Rangfolge
 
-Um eine Liste der Datenbanken und ihren Erfolg Rang (%) angezeigt wird, wählen Sie das "Dbo" ein. UpgradeSuccessRanking_OnPrem anzeigen:
+Um eine Liste der Datenbanken und der Rang Erfolg in Prozent (%) zu sehen, wählen Sie das "Dbo" ein. UpgradeSuccessRanking_OnPrem-Ansicht:
 
 ![Anzeige von Daten im UpgradeSuccessRaning_OnPrem](../dma/media/UpgradeSuccessRankingView.png)
 
-Hier können Sie für eine bestimmte Datenbank sehen, was das Upgrade erfolgreich Risiko für verschiedene Kompatibilitätsgraden funktionsfähig ist. Daher wurde beispielsweise Datenbank der Personalabteilung gegen Kompatibilitätsgraden 100, 110, 120 und 130 bewertet. Dieser Bewertung können Sie visuell zu sehen, wie viel Aufwand bei der Migration auf eine höhere Version von SQL Server aus der aktuellen Version, der die Datenbank derzeit auf ist beteiligt ist.
+Hier können Sie für eine bestimmte Datenbank finden Sie unter Was ist, dass das Upgrade erfolgreich Risiko für die verschiedenen Kompatibilitätsgraden funktionsfähig. Daher wurde beispielsweise die HR-Datenbank für den Kompatibilitätsgraden 100, 110, 120 und 130 bewertet. Dieser Bewertung können Sie visuell zu verfolgen, wie viel Aufwand bei der Migration auf eine neuere Version von SQL Server von der aktuellen Version, die die Datenbank derzeit auf beteiligt ist.
 
-In der Regel ist die Metrik, der Sie interessieren, wie viele Änderungen gibt es für eine bestimmte Datenbank sind. Im vorherigen Beispiel sehen Sie sich, dass die Datenbank der Personalabteilung ein 50 % Upgrade Erfolgsfaktor für Kompatibilitätsgraden 100, 110, 120 und 130 hat.
+In der Regel ist die Metrik, die, der Ihnen wichtig, sind wie viele Änderungen gibt es für eine bestimmte Datenbank. Im obigen Beispiel sehen Sie sich, dass die HR-Datenbank ein Upgrade Erfolgsfaktor von 50 % bei Kompatibilitätsgraden 100, 110, 120 und 130 verfügt.
 
 Diese Metrik kann beeinflusst werden, durch die Gewichtung-Werte in das "Dbo" ändern. BreakingChangeWeighting-Tabelle.
 
-Im folgenden Beispiel der erforderliche Aufwand in der Syntax-Problem behoben ist in der Datenbank der Personalabteilung ist als hoch eingestuft, sodass der Wert 3 zugewiesen wird **Aufwand**. Da es zur Behebung des Problems Syntax lange dauern würde nicht, wird der Wert 1 zugewiesen **FixTime**. Da einige Kosten der Änderung beteiligt sein würde, wird ein Wert von 2 zugewiesen **Kosten**. Verwendung dieses Werts wird die kombinierten Changerank auf 2 geändert.
+Im folgenden Beispiel der Aufwand zum Beheben des Syntax-Problems in der HR-Datenbank ist als hoch eingestuft, damit Sie der Wert 3 zugewiesen wird **Aufwand**. Da es zur Behebung des Problems Syntax lange dauern würde nicht, wird der Wert 1 zugewiesen **FixTime**. Da wäre Kosten beteiligt, die Sie die Änderung vorgenommen, wird der Wert 2 zugewiesen **Kosten**. Dieser Wert ändert sich der kombinierten Changerank auf 2.
 
 > [!NOTE]
-> Die Bewertung wird auf einer Skala von 1 bis 5.  1 niedrig und 5 hoch. Darüber hinaus ist die ChangeRank eine berechnete Spalte.
+> Die Bewertung wird auf einer Skala von 1 bis 5.  1 steht für niedrige und 5 werden hoch. Darüber hinaus ist die ChangeRank eine berechnete Spalte.
 
-![Aufwand, FixTime und Kosten für die Syntax Problem Werte](../dma/media/SyntaxIssueEffort.png)
+![Aufwand, Kosten und FixTime Werte für Syntaxproblem.](../dma/media/SyntaxIssueEffort.png)
 
-Jetzt in diesem Beispiel, wenn Sie das "Dbo" Abfragen. UpgradeSuccessRanking_OnPrem anzeigen, wurde das Upgrade Erfolgsfaktor für die Datenbank der Personalabteilung für wichtige Änderungen gelöscht.
+In diesem Beispiel, bei der Abfrage des "Dbo". UpgradeSuccessRanking_OnPrem Ansicht wurde das Upgrade Erfolgsfaktor für die HR-Datenbank Informationen zu grundlegenden Änderungen verworfen.
 
-![Aktualisieren von Erfolgsfaktor für Personaldatenbank](../dma/media/UpgradeSuccessFactor_HR.png)
+![Aktualisieren von Erfolgsfaktor für die HR-Datenbank](../dma/media/UpgradeSuccessFactor_HR.png)
 
-## <a name="azure-upgrade-success-ranking"></a>Rangfolge von Azure-Upgrade-Erfolg
+## <a name="azure-upgrade-success-ranking"></a>Rangfolge von Azure Upgrade erfolgreich
 
-Um eine Liste der Datenbanken zum Migrieren zu Azure SQL-Datenbank und ihren Erfolg QUANTILSRANG anzuzeigen, wählen Sie das "Dbo" ein. UpgradeSuccessRanking_Azure anzeigen.
+Um eine Liste der Datenbanken, um die Migration zu Azure SQL-Datenbank und ihren Erfolg QUANTILSRANG anzuzeigen, wählen Sie das "Dbo" ein. UpgradeSuccessRanking_Azure anzeigen.
 
 ![Anzeige von Daten im UpgradeSuccessRanking_Azure](../dma/media/UpgradeSuccessRankingView_Azure.png)
 
-Hier können Sie den Wert MigrationBlocker interessiert. 100,00 bedeutet, dass 100 % Erfolg Rang für das Verschieben einer Datenbank auf Azure SQL-Datenbank v12 vorhanden ist.
+Hier können Sie den Wert MigrationBlocker interessiert. 100,00 bedeutet, dass 100 % ige erfolgswahrscheinlichkeit Rang für das Verschieben einer Datenbank in Azure SQL-Datenbank v12 vorhanden ist.
 
 Der Unterschied in dieser Ansicht ist, dass derzeit keine Überschreibung für die Gewichtung für die Migration Blocker Regeln ändern.
 
-Informationen zur Meldung von auf diese Daten mithilfe von Power BI finden Sie unter [melden Ihre konsolidierten Bewertungen mit Power BI](../dma/dma-powerbiassesreport.md).
+Informationen für die berichterstellung für diese Daten mit Power BI finden Sie unter [erstatten Sie Bericht über die konsolidierte Assessments mit Power BI](../dma/dma-powerbiassesreport.md).

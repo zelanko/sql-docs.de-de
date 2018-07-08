@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - configuration options [Reporting Services]
 - DeviceInfo settings
@@ -20,13 +20,13 @@ ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
 caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 201a3af8cfd9acad20539327f4dc9afbfcb2a435
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1734710832b6c064aa2d2a76eec0a1dda7a9b6b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056430"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150241"
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>Anpassen der Parameter für Renderingerweiterungen in der Datei RSReportServer.config
   Sie können in der RSReportServer-Konfigurationsdatei Parameter für Renderingerweiterungen angeben, um das standardmäßige Rendern von Berichten zu überschreiben, die auf einem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichtsserver ausgeführt werden. Sie können die Parameter für Renderingerweiterungen ändern, um Folgendes zu bewirken:  
@@ -46,12 +46,12 @@ ms.locfileid: "36056430"
   
 -   Die `OverrideNames` -Element definiert den Anzeigenamen und die Sprache der Renderingerweiterung.  
   
--   Die `DeviceInfo` XML-Struktur definiert die Geräteinformationseinstellungen, die von einer Renderingerweiterung verwendet werden. Die meisten Parameter für Renderingerweiterungen werden als Geräteinformationseinstellungen angegeben.  
+-   Die `DeviceInfo` XML-Struktur definiert die Einstellungen der Geräteinformationen, die von einer Renderingerweiterung verwendet werden. Die meisten Parameter für Renderingerweiterungen werden als Geräteinformationseinstellungen angegeben.  
   
  Sie können die Datei mithilfe eines Text-Editors ändern. Die Datei RSReportServer.config befindet sich im Ordner \Reporting Services\Report Server\Bin. Weitere Informationen zum Ändern von Konfigurationsdateien finden Sie unter [Ändern einer Reporting Services-Konfigurationsdatei (RSreportserver.config)](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 ## <a name="changing-the-display-name"></a>Ändern des Anzeigenamens  
- Der Anzeigename für eine Renderingerweiterung wird in der Exportliste der Berichtssymbolleiste angezeigt. Zu den Standardanzeigenamen gehören unter anderem Webarchiv, TIFF-Datei und Acrobat-Datei (PDF-Datei). Sie können den Standardanzeigenamen durch einen benutzerdefinierten Wert ersetzen, durch Angeben der `OverrideNames` Element in den Konfigurationsdateien. Darüber hinaus können Sie das `OverrideNames`-Element verwenden, um die einzelnen Instanzen in der Exportliste voneinander zu unterscheiden, wenn Sie zwei Instanzen für eine einzelne Renderingerweiterung definieren.  
+ Der Anzeigename für eine Renderingerweiterung wird in der Exportliste der Berichtssymbolleiste angezeigt. Zu den Standardanzeigenamen gehören unter anderem Webarchiv, TIFF-Datei und Acrobat-Datei (PDF-Datei). Sie können den Standardanzeigenamen durch einen benutzerdefinierten Wert ersetzen, durch Angabe der `OverrideNames` Element in der Konfigurationsdatei. Darüber hinaus können Sie das `OverrideNames`-Element verwenden, um die einzelnen Instanzen in der Exportliste voneinander zu unterscheiden, wenn Sie zwei Instanzen für eine einzelne Renderingerweiterung definieren.  
   
  Da die Anzeigenamen lokalisiert werden, müssen Sie festlegen der `Language` Attribut, wenn Sie den Standardanzeigenamen durch einen benutzerdefinierten Wert ersetzen. Andernfalls werden die von Ihnen angegebenen Namen ignoriert. Der von Ihnen festgelegte Sprachwert muss für den Berichtsservercomputer gültig sein. Wenn der Berichtsserver beispielsweise mit einem französischen Betriebssystem ausgeführt wird, sollten Sie als Attributwert "fr-FR" angeben.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "36056430"
   
 -   Geben Sie einen eindeutigen Namen für die Erweiterung an.  
   
-     Jede Instanz benötigen einen eindeutigen Wert für die `Name` Attribut. Im folgenden Beispiel werden die Namen "IMAGE (EMF Landscape)" und "IMAGE (EMF Portrait)" verwendet, um die beiden Instanzen voneinander unterscheiden zu können.  
+     Jede Instanz müssen einen eindeutigen Wert für die `Name` Attribut. Im folgenden Beispiel werden die Namen "IMAGE (EMF Landscape)" und "IMAGE (EMF Portrait)" verwendet, um die beiden Instanzen voneinander unterscheiden zu können.  
   
      Gehen Sie beim Ändern des Namens für eine bereits bereitgestellte Renderingerweiterung mit Bedacht vor. Entwickler, die Renderingerweiterungen programmgesteuert angeben, verwenden den Erweiterungsnamen zur Identifizierung der für einen bestimmten Rendervorgang zu verwendenden Instanz. Stellen Sie sicher, dass der Entwickler informiert wird, sobald Sie einen vorhandenen Erweiterungsnamen ändern oder einen neuen hinzufügen, wenn Sie eine benutzerdefinierte [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Anwendung auf Ihrem Berichtsserver ausführen.  
   

@@ -1,5 +1,5 @@
 ---
-title: Auswählen einer geschachtelten Tabelle Schlüsselspalte (Dialogfeld) (Miningstruktur-Ansicht) | Microsoft Docs
+title: Auswählen einer geschachtelten Tabelle Schlüsselspalte (Dialogfeld) (Miningstruktur-Ansicht) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.structure.addnestedtable.f1
 helpviewer_keywords:
 - Select a Nested Table Key Column dialog box
 ms.assetid: f68b89a7-17df-45f8-ba7f-b458cd9b1ec3
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d197434bbff97fa3fab1f1e2031c0b37b69d9ce1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae03a58af3dd2781ca670137a77baccae3951482
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047276"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161111"
 ---
 # <a name="select-a-nested-table-key-column-dialog-box-mining-structure-view"></a>Schlüsselspalte für eine geschachtelte Tabelle auswählen (Dialogfeld) (Miningstruktur-Ansicht)
   Verwenden Sie das Dialogfeld **Schlüsselspalte für eine geschachtelte Tabelle auswählen** , um eine Spalte zu bestimmen, die als Schlüssel für die neue geschachtelte Tabelle fungieren soll. Sobald Sie das Dialogfeld schließen, wird der Miningstruktur eine neue Tabelle mit der designierten Schlüsselspalte hinzugefügt. Sie können der geschachtelten Tabelle zusätzliche Spalten hinzufügen, indem Sie mit der rechten Maustaste auf die Struktur klicken und dann auf **Spalte hinzufügen**klicken. Das Dialogfeld enthält unterschiedliche Optionen, abhängig davon, ob Sie mit einem OLAP-Miningmodell oder einem relationalen Miningmodell arbeiten.  
@@ -50,6 +50,6 @@ ms.locfileid: "36047276"
  Diese Option wird nur bei OLAP-Miningmodellen verwendet.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Mining-Struktur anzeigen &#40;Datamining-Modell-Designer&#41;](mining-structure-view-data-mining-model-designer.md)  
+ [Mining-Strukturansicht &#40;Datamining-Modell-Designer&#41;](mining-structure-view-data-mining-model-designer.md)  
   
   

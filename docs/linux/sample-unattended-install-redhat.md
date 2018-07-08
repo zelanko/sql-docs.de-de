@@ -1,8 +1,8 @@
 ---
-title: Unbeaufsichtigte Installation für SQL Server unter Red Hat Enterprise Linux | Microsoft Docs
-description: SQL Server-Skript-Beispiel - unbeaufsichtigte Installation unter Red Hat Enterprise Linux
-author: edmacauley
-ms.author: edmaca
+title: Unbeaufsichtigte Installation für SQL Server unter Red Hat Enterprise Linux | Microsoft-Dokumentation
+description: SQL Server-Skriptbeispiel – für die unbeaufsichtigte Installation unter Red Hat Enterprise Linux
+author: rothja
+ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
@@ -11,30 +11,30 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: f9eb7f2e8754a81650f167104d53150f0f0a4d90
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 9412c7ed24bd37d96c1519ea30b96c42a7b53e0c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34322911"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407940"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Beispiel: Für die unbeaufsichtigte SQL Server-Installationsskript für Red Hat Enterprise Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Dieses Beispielskript für die Bash installiert SQL Server 2017 auf Red Hat Enterprise Linux (RHEL) ohne interaktiver Eingabe. Er bietet Beispiele für die Installation des Datenbankmoduls, die SQL Server-Befehlszeilentools, SQL Server-Agent, und führt nach der Installation Schritte aus. Optional können Sie einen Administrator zu erstellen und Installieren der Volltextsuche.
+Dieses Bash-Beispielskript wird von SQL Server 2017 auf Red Hat Enterprise Linux (RHEL) installiert, ohne interaktive Eingabe. Bietet Beispiele für die Installation der Datenbank-Engine, die SQL Server-Befehlszeilentools, SQL Server-Agent und führt Schritte aus, nach der Installation. Sie können optional Volltext-Suchdienst installieren und erstellen einen Administrator.
 
 > [!TIP]
-> Wenn Sie ein Skript für die unbeaufsichtigte Installation nicht benötigen, ist die schnellste Möglichkeit zum Installieren von SQL Server, führen die [Schnellstart für Red Hat](quickstart-install-connect-red-hat.md). Weitere Informationen zum Setup finden Sie unter [-Installationsleitfaden für SQL Server on Linux](sql-server-linux-setup.md).
+> Wenn Sie ein Skript für die unbeaufsichtigte Installation nicht benötigen, ist die schnellste Möglichkeit zum Installieren von SQL Server, führen die [Schnellstart für Red Hat](quickstart-install-connect-red-hat.md). Weitere Informationen zum Setup finden Sie unter [zur Installation von SQL Server unter Linux](sql-server-linux-setup.md).
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
 - Sie benötigen mindestens 2 GB Arbeitsspeicher zum Ausführen von SQL Server unter Linux.
 - Das Dateisystem muss **XFS** oder **EXT4**. Andere Dateisysteme, z. B. **BTRFS**, werden nicht unterstützt.
-- Weitere Informationen zu Systemanforderungen, finden Sie unter [Systemanforderungen für SQL Server on Linux](sql-server-linux-setup.md#system).
+- Weitere Informationen zu den Systemanforderungen finden Sie unter [Systemanforderungen für SQL Server unter Linux](sql-server-linux-setup.md#system).
 
 ## <a name="sample-script"></a>Beispielskript
-Speichern Sie das Beispielskript in einer Datei und um ihn anzupassen, ersetzen Sie die Variablenwerte in das Skript. Sie können auch eine der Skriptvariablen als Umgebungsvariablen, festlegen solange Sie sie aus der Skriptdatei entfernen.
+Speichern Sie das Beispielskript in einer Datei und um es anzupassen, ersetzen Sie die Variablenwerte im Skript. Sie können auch die Skriptvariablen als Umgebungsvariablen festlegen solange Sie sie aus der Skriptdatei zu entfernen.
 
 ```bash
 #!/bin/bash -e
@@ -154,11 +154,11 @@ echo Done!
 
 So führen Sie das Skript aus
 
-1. Fügen Sie das Beispiel in Ihrem bevorzugten Text-Editor, und speichern Sie sie z. B. mit einem einprägsamen Namen `install_sql.sh`.
+1. Fügen Sie das Beispiel in Ihrem bevorzugten Text-Editor, und speichern Sie sie einen einprägsamen Namen, z. B. `install_sql.sh`.
 
-1. Anpassen `MSSQL_SA_PASSWORD`, `MSSQL_PID`, und die anderen Eigenschaften, die Sie ändern möchten.
+1. Anpassen von `MSSQL_SA_PASSWORD`, `MSSQL_PID`, und die anderen Variablen, die Sie ändern möchten.
 
-1. Markieren Sie das Skript als ausführbare Datei
+1. Markieren Sie das Skript als ausführbar
 
    ```bash
    chmod +x install_sql.sh
@@ -170,41 +170,41 @@ So führen Sie das Skript aus
    ./install_sql.sh
    ```
 
-## <a name="understanding-the-script"></a>Grundlegendes zum Skript
+## <a name="understanding-the-script"></a>Dem Skript vertraut
 
-Im ersten Schritt des Bash-Skripts, die einige Variablen festgelegt ist.  Dabei kann es sich um Umgebungsvariablen oder Skriptvariablen wie im Beispiel handeln.  Die Variable ``` MSSQL_SA_PASSWORD ``` ist **erforderlichen** von SQL Server-Installation, die die anderen sind benutzerdefinierte Variablen, die für das Skript erstellt.  Das Beispielskript führt die folgenden Schritte aus:
+Im ersten Schritt wird das Bash-Skript wird einige Variablen festgelegt.  Diese kann entweder "Skriptvariablen, wie im Beispiel" oder "Umgebungsvariablen.  Die Variable ``` MSSQL_SA_PASSWORD ``` ist **erforderlichen** von SQL Server-Installation, die die anderen sind benutzerdefinierte Variablen, die für das Skript erstellt wurde.  Das Beispielskript führt die folgenden Schritte aus:
 
-1. Importieren Sie die öffentlichen Microsoft-GPG-Schlüssel.
+1. Importieren Sie die öffentlichen Microsoft GPG-Schlüssel.
 
-1. Registrieren Sie den Microsoft-Repositorys für SQL Server und die Befehlszeilenprogramme.
+1. Registrieren Sie den Microsoft-Repositorys für SQL Server und die Befehlszeilentools.
 
-1. Aktualisieren Sie den lokalen Repositorys
+1. Aktualisieren Sie die lokalen Repositorys
 
 1. Installieren von SQL Server
 
-1. Konfigurieren von SQL Server mit der ```MSSQL_SA_PASSWORD``` und die automatische Annahme der Endbenutzer-Lizenzvertrag.
+1. Konfigurieren von SQL Server mit der ```MSSQL_SA_PASSWORD``` und das automatische Akzeptieren der Endbenutzer-Lizenzvertrag.
 
-1. Automatisch akzeptieren der Endbenutzer-Lizenzvertrag für die SQL Server-Befehlszeilentools, installieren Sie sie und installieren Sie das Unixodbc-Dev-Paket.
+1. Automatisch annehmen Sie des Endbenutzer-Lizenzvertrag für die SQL Server-Befehlszeilentools, installieren Sie sie und installieren Sie das Unixodbc-Dev-Paket.
 
-1. Der Pfad für die einfache Verwendung der SQL Server-Befehlszeilentools hinzugefügt.
+1. Fügen Sie die SQL Server-Befehlszeilentools, auf den Pfad zur einfacheren Verwendung.
 
 1. Installieren Sie SQL Server-Agent aus, wenn die Skriptvariable ```SQL_INSTALL_AGENT``` standardmäßig festgelegt ist, auf.
 
 1. Installieren Sie SQL Server-Volltextsuche, optional, wenn die Variable ```SQL_INSTALL_FULLTEXT``` festgelegt ist.
 
-1. Entsperren Sie Port 1433 für TCP auf dem System-Firewall von einem anderen System eine Verbindung mit SQL Server erforderlich.
+1. Sperre für Port 1433 für TCP in der System-Firewall, von einem anderen System eine Verbindung mit SQL Server erforderlich.
 
-1. Legen Sie optional Ablaufverfolgungsflags für die Ablaufverfolgung Deadlock fest. (erfordert die auskommentierung der Zeilen)
+1. Legen Sie optional die Ablaufverfolgungsflags des Typs für die Ablaufverfolgung von Deadlocks. (erfordert die auskommentierung der Zeilen aufgehoben)
 
-1. SQL Server ist jetzt installiert werden, um betriebsbereit zu machen, den Prozess erneut starten.
+1. SQL Server ist jetzt installiert werden, damit operative können, starten Sie den Prozess.
 
-1. Stellen Sie sicher, dass SQL Server ordnungsgemäß installiert ist, und gleichzeitig alle Fehlermeldungen.
+1. Stellen Sie sicher, dass SQL Server ordnungsgemäß installiert ist, und alle Fehlermeldungen ausblenden.
 
-1. Erstellen Sie einen neuen Benutzer des Server-Administrator, wenn ```SQL_INSTALL_USER``` und ```SQL_INSTALL_USER_PASSWORD``` sind beide festgelegt.
+1. Erstellen Sie einen neuen Server-Administrator-Benutzer aus, wenn ```SQL_INSTALL_USER``` und ```SQL_INSTALL_USER_PASSWORD``` festgelegt sind.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Mehrere unbeaufsichtigte Installationen zu vereinfachen, und Erstellen eines eigenständigen Bash-Skripts, durch die die entsprechenden Umgebungsvariablen festgelegt.  Sie können Variablen einen entfernen, die das Beispielskript verwendet, und fügen Sie sie in ihren eigenen Bash-Skripts.
+Vereinfachen Sie mehrere unbeaufsichtigte Installationen aus, und Erstellen eines eigenständigen Bash-Skripts, das die entsprechenden Umgebungsvariablen festlegt.  Sie können Variablen entfernen, die das Beispielskript, verwendet, und platzieren Sie sie in ihren eigenen Bash-Skript.
 
 ```bash
 #!/bin/bash
@@ -216,9 +216,9 @@ export SQL_INSTALL_USER_PASSWORD='<YourStrong!Passw0rd>'
 export SQL_INSTALL_AGENT='y'
 ```
 
-Führen Sie dann die Bash-Skripts wie folgt:
+Führen Sie das Bash-Skript dann wie folgt aus:
 ```bash
 . ./my_script_name.sh
 ```
 
-Weitere Informationen zu SQL Server unter Linux finden Sie unter [SQL Server on Linux – Übersicht](sql-server-linux-overview.md).
+Weitere Informationen zu SQL Server unter Linux finden Sie unter [SQL Server unter Linux – Übersicht](sql-server-linux-overview.md).

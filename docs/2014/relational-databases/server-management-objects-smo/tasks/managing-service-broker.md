@@ -1,5 +1,5 @@
 ---
-title: Verwalten von Service Broker | Microsoft Docs
+title: Verwalten von Service Broker | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,22 +14,22 @@ helpviewer_keywords:
 - Service Broker [SMO]
 ms.assetid: b29d7432-d1e5-4bb6-b544-57b3a9430f95
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e3817dd285accefacf9341567fd834c134a4e27f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5aac2ad5d164757a330bb5a5784bb6c99fb48fb1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056446"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210860"
 ---
 # <a name="managing-service-broker"></a>Verwalten von Service Broker
-  In SMO werden die [!INCLUDE[ssSB](../../../includes/sssb-md.md)] Objekte befinden sich in der `Microsoft.SqlServer.Management.Smo.Broker` -Namespace, der einen Verweis auf Microsoft.SqlServer.Smo.dll erforderlich ist. Ein Verweis auf Microsoft.SqlServer.ServiceBrokerEnum.dll ist auch für das Unterstützen von Klasseninformationen erforderlich.  
+  In SMO werden die [!INCLUDE[ssSB](../../../includes/sssb-md.md)] Objekte befinden sich die `Microsoft.SqlServer.Management.Smo.Broker` -Namespace, der einen Verweis auf Microsoft.SqlServer.Smo.dll erforderlich. Ein Verweis auf Microsoft.SqlServer.ServiceBrokerEnum.dll ist auch für das Unterstützen von Klasseninformationen erforderlich.  
   
- SMO stellt einen Satz von [!INCLUDE[ssSB](../../../includes/sssb-md.md)] Objekte, die programmgesteuerte Verwaltung (DDL) zulassen der [!INCLUDE[ssSB](../../../includes/sssb-md.md)] Implementierung. Hierzu gehört das Definieren der Nachrichtentypen, Verträge, Warteschlangen und Dienste. Da SMO ein Verwaltungstool ist, das nicht für die Bearbeitung von Daten konzipiert ist, wird das Senden und Empfangen von [!INCLUDE[ssSB](../../../includes/sssb-md.md)]-Nachrichten von SMO nicht unterstützt.  
+ SMO stellt einen Satz von [!INCLUDE[ssSB](../../../includes/sssb-md.md)] Objekte, die programmgesteuerte Verwaltung (DDL) der zulassen der [!INCLUDE[ssSB](../../../includes/sssb-md.md)] Implementierung. Hierzu gehört das Definieren der Nachrichtentypen, Verträge, Warteschlangen und Dienste. Da SMO ein Verwaltungstool ist, das nicht für die Bearbeitung von Daten konzipiert ist, wird das Senden und Empfangen von [!INCLUDE[ssSB](../../../includes/sssb-md.md)]-Nachrichten von SMO nicht unterstützt.  
   
- In SMO werden die <xref:Microsoft.SqlServer.Management.Smo.Database.ServiceBroker%2A> Objekt ist die Klasse der obersten Ebene unter dem sämtliche der [!INCLUDE[ssSB](../../../includes/sssb-md.md)] -Funktionalität befindet sich. Ein [!INCLUDE[ssSB](../../../includes/sssb-md.md)] Implementierung muss für jede Datenbank, die an der verteilten Messaginganwendung teilnimmt. Daher ist das <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceBroker>-Objekt ein untergeordnetes Objekt des <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekts.  
+ In SMO werden die <xref:Microsoft.SqlServer.Management.Smo.Database.ServiceBroker%2A> Objekt ist die Klasse der obersten Ebene mit dem alle der [!INCLUDE[ssSB](../../../includes/sssb-md.md)] Funktionalität befindet sich. Ein [!INCLUDE[ssSB](../../../includes/sssb-md.md)] Implementierung ist erforderlich für jede Datenbank, die in der verteilten Messaginganwendung teilnimmt. Daher ist das <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceBroker>-Objekt ein untergeordnetes Objekt des <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekts.  
   
  Das <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceBroker>-Objekt enthält Auflistungen der folgenden Objekte, die verwendet werden, um die [!INCLUDE[ssSB](../../../includes/sssb-md.md)]-Implementierung zu definieren:  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36056446"
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Broker.BrokerService>-Objekte stellen [!INCLUDE[ssSB](../../../includes/sssb-md.md)]-Dienste dar, die die adressierbaren Endpunkte für Konversationen bilden. [!INCLUDE[ssSB](../../../includes/sssb-md.md)] Nachrichten werden von einem Dienst an einen anderen Dienst gesendet. Ein Dienst gibt eine Warteschlange zum Aufbewahren von Nachrichten sowie Verträge an, für die der Dienst das Ziel sein kann.  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Broker.RemoteServiceBinding> -Objekte stellen die Einstellungen dar, die [!INCLUDE[ssSB](../../../includes/sssb-md.md)] für Sicherheit und Authentifizierung verwendet wird, bei der Kommunikation mit einem Remotedienst.  
+-   <xref:Microsoft.SqlServer.Management.Smo.Broker.RemoteServiceBinding> Objekte stellen die Einstellungen dar, die [!INCLUDE[ssSB](../../../includes/sssb-md.md)] für Sicherheit und Authentifizierung verwendet wird, bei der Kommunikation mit einem Remotedienst.  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceRoute> Stellt Objekte eine [!INCLUDE[ssSB](../../../includes/sssb-md.md)] Route enthält, die die Speicherortinformationen für den Dienst und die Datenbank auf dem es definiert ist. Eine Route ist für die Nachrichtenübermittlung erforderlich. Standardmäßig enthält jede Datenbank eine Route, die den Speicherort, wie die aktuelle Instanz von angibt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   

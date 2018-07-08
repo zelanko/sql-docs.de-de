@@ -1,12 +1,12 @@
 ---
-title: Bcp_sendrow | Microsoft Docs
+title: Bcp_sendrow | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d78aceec83230cc8772186d5360b80b2ff656053
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 04ff6702a46aeb5a28923dc39a5e6e5cfa7df294
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695741"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426009"
 ---
 # <a name="bcpsendrow"></a>'bcp_sendrow'
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,13 +53,13 @@ RETCODE bcp_sendrow (
 ## <a name="remarks"></a>Hinweise  
  Die **Bcp_sendrow** Funktion erstellt eine Zeile aus Programmvariablen und sendet sie an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Vor dem Aufruf **Bcp_sendrow**, müssen Aufrufe an [Bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) um die Programmvariablen mit den Zeilendaten anzugeben.  
+ Vor dem Aufruf **Bcp_sendrow**, es müssen Aufrufe [Bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) um die Programmvariablen mit den Zeilendaten anzugeben.  
   
- Wenn **Bcp_bind** aufgerufen wird, Angeben eines langen Daten variabler Länge-Typs, z. B. ein *eDataType* -Parameter von SQLTEXT und ein Wert ungleich NULL *pData* Parameter, **Bcp_sendrow** sendet den gesamten Datenwert, ebenso wie bei einem beliebigen anderen Datentyp dar. IF, allerdings **Bcp_bind** enthält eine NULL *pData* Parameter **Bcp_sendrow** Steuerelement an die Anwendung zurückgegeben werden, sofort, nachdem alle Spalten mit den angegebenen Daten an gesendet werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die Anwendung kann dann aufrufen [Bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) wiederholt, um die langen, variabler Länge, die Daten senden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ein Segment zu einem Zeitpunkt. Weitere Informationen finden Sie unter [Bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md).  
+ Wenn **Bcp_bind** heißt die Angabe eines langen Daten variabler Länge-Typs, z. B. eine *eDataType* -Parameter von SQLTEXT und ein Wert ungleich NULL *pData* -Parameter, **Bcp_sendrow** sendet den gesamten Datenwert, genau wie bei jedem anderen Datentyp. IF, allerdings **Bcp_bind** enthält eine NULL *pData* Parameter **Bcp_sendrow** übergibt die Steuerung an die Anwendung sofort, nachdem alle Spalten mit den angegebenen Daten an gesendet werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die Anwendung kann dann aufrufen [Bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) wiederholt, um die langen variabler Länge, die Daten zu senden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ein Segment zu einem Zeitpunkt. Weitere Informationen finden Sie unter [Bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md).  
   
- Wenn **Bcp_sendrow** wird verwendet, um Zeilen aus Programmvariablen in Massenimport [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabellen, Zeilen sind ein Commit ausgeführt wurde, nur, wenn der Benutzer ruft [Bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) oder [Bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) . Der Benutzer kann **bcp_batch** wahlweise einmal für alle *n* Zeilen aufrufen oder dann, wenn bei den eingehenden Daten eine Pause auftritt. Wird **bcp_batch** nie aufgerufen, wird ein Commit für die Zeilen ausgeführt, wenn **bcp_done** aufgerufen wird.  
+ Wenn **Bcp_sendrow** wird verwendet, um Zeilen aus Programmvariablen in massenkopiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabellen wird ein Commit Zeilen nur, wenn der Benutzer ruft [Bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) oder [Bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) . Der Benutzer kann **bcp_batch** wahlweise einmal für alle *n* Zeilen aufrufen oder dann, wenn bei den eingehenden Daten eine Pause auftritt. Wird **bcp_batch** nie aufgerufen, wird ein Commit für die Zeilen ausgeführt, wenn **bcp_done** aufgerufen wird.  
   
- Informationen über eine wichtige Änderung, in Massenkopieren ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], finden Sie unter [Durchführen von Massenkopiervorgängen &#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
+ Informationen über eine wichtige Änderung Massenkopieren ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], finden Sie unter [Durchführen von Massenkopiervorgängen &#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Massenkopierfunktionen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

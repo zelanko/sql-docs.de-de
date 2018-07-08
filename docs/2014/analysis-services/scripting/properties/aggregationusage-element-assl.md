@@ -1,5 +1,5 @@
 ---
-title: AggregationUsage-Element (ASSL) | Microsoft Docs
+title: AggregationUsage-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationUsage element
 ms.assetid: af0c2e7f-b659-4fbf-9b1a-66128db669a2
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0cc9d13ed663b92224584ab57f6f467e3a472d8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a073ca27168bec785d9098d9e6b3ad4974b7018
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048583"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259466"
 ---
 # <a name="aggregationusage-element-assl"></a>AggregationUsage-Element (ASSL)
   Steuerelemente wie der Aggregations-Designer in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Aggregationen entwirft.  
@@ -58,7 +58,7 @@ ms.locfileid: "36048583"
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnetes Element|[Cubeattribute-Objekt](../data-type/cubeattribute-data-type-assl.md)|  
+|Übergeordnetes Element|[DimensionAttribute-Objekt](../data-type/cubeattribute-data-type-assl.md)|  
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -68,7 +68,7 @@ ms.locfileid: "36048583"
 |-----------|-----------------|  
 |*Full*|Jede Aggregation für den Cube muss dieses Attribut enthalten.|  
 |*Keine*|Keine Aggregation für den Cube darf dieses Attribut enthalten.|  
-|*Nicht eingeschränkt*|Keine Einschränkungen für den Aggregations-Designer.|  
+|*Uneingeschränkte*|Keine Einschränkungen für den Aggregations-Designer.|  
 |*Standardwert*|Der Aggregations-Designer wendet eine Standardregel basierend auf dem Typ des Attributs an (*Full* für Schlüssel, *Unrestricted* für andere Attribute).|  
   
  Die Enumeration, die den zulässigen Werten für entspricht `AggregationUsage` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.AggregationUsage>.  

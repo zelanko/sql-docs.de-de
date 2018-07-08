@@ -1,5 +1,5 @@
 ---
-title: ReferenceMeasureGroupDimension-Datentyp (ASSL) | Microsoft Docs
+title: ReferenceMeasureGroupDimension-Datentyp (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ReferenceMeasureGroupDimension data type
 ms.assetid: 81f7b83e-71a3-4eab-b291-0500d05903dc
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9ca3299aa36df705a107fac63bc5ae726b606e15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e8e2134f14ad34f14cbf1b7f6a2858fe14485bbe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056100"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159308"
 ---
 # <a name="referencemeasuregroupdimension-data-type-assl"></a>ReferenceMeasureGroupDimension-Datentyp (ASSL)
   Definiert einen abgeleiteten Datentyp, der eine Dimension darstellt, die indirekt über eine Zwischendimension mit der Faktentabelle verbunden ist. (Eine Sales-Measuregruppe kann beispielsweise auf eine Geography-Dimension verweisen, die über die Customer-Dimension verbunden ist.)  
@@ -63,7 +63,7 @@ ms.locfileid: "36056100"
 |Abgeleitete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services Scripting Language-XML-Datentypen &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

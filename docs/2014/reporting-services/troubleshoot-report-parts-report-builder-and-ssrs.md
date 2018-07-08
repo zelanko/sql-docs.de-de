@@ -1,5 +1,5 @@
 ---
-title: Problembehandlung bei Berichtsteilen (Berichts-Generator und SSRS) | Microsoft Docs
+title: Problembehandlung bei Berichtsteilen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d9fe1932-46e7-421b-a8a9-4c54d9576e94
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d3f8e675ff62ec000b3b9dd3c7c692c63f7fc8b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce472be61a85aa1adfad529c38cd74c8dcd9d17a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056412"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148571"
 ---
 # <a name="troubleshoot-report-parts-report-builder-and-ssrs"></a>Problembehandlung bei Berichtsteilen (Berichts-Generator und SSRS)
   Die folgenden Tipps können beim Arbeiten mit Berichtsteilen hilfreich sein.  
@@ -30,7 +30,7 @@ ms.locfileid: "36056412"
  Fragen Sie Ihren Berichtsserveradministrator, wenn Sie nicht wissen, über welche Berechtigungen Sie und Ihr Kollege verfügen.  
   
 ## <a name="when-i-search-for-report-parts-that-i-uploaded-to-a-sharepoint-server-i-do-not-see-them-why-not"></a>Wenn ich nach Berichtsteilen suche, die ich auf einen SharePoint-Server hochgeladen habe, sehe ich sie nicht. Warum nicht?  
- Berichtsteile, die Sie manuell in eine SharePoint-Dokumentbibliothek hochgeladen haben, anstatt sie mit Berichts-Generator zu veröffentlichen, werden möglicherweise nicht im Berichtsteilkatalog angezeigt. Der Berichtsserver, der für die Katalogsuche verwendet wird, muss möglicherweise mit dem Inhalt der SharePoint-Dokumentbibliothek synchronisiert werden. Weitere Informationen finden Sie unter [aktivieren Bericht Server File Sync Feature in SharePoint Central Administration](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?LinkId=154888) auf "MSDN.Microsoft.com".  
+ Berichtsteile, die Sie manuell in eine SharePoint-Dokumentbibliothek hochgeladen haben, anstatt sie mit Berichts-Generator zu veröffentlichen, werden möglicherweise nicht im Berichtsteilkatalog angezeigt. Der Berichtsserver, der für die Katalogsuche verwendet wird, muss möglicherweise mit dem Inhalt der SharePoint-Dokumentbibliothek synchronisiert werden. Weitere Informationen finden Sie unter [Aktivieren der Synchronisierung Berichtsserverdateien in der SharePoint-Zentraladministration](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?LinkId=154888) auf "MSDN.Microsoft.com".  
   
 ## <a name="why-cant-others-see-the-image-in-their-reports"></a>Warum können andere kein Bild in ihren Berichten sehen?  
  Wenn Sie einen Berichtsteil veröffentlichen, der ein Link zu einer Bilddatei ist, ist der Berichtsteil wirklich nur ein Link. Wenn andere das Bild auch dann nicht sehen können, wenn sie ihren Berichten das Bildberichtsteil hinzufügen, haben sie möglicherweise keine Berechtigungen für das verknüpfte Bild.  

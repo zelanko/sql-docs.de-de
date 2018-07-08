@@ -1,12 +1,12 @@
 ---
-title: Parameter- und Ergebnismetadaten | Microsoft Docs
+title: Parameter- und Ergebnismetadaten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cb3dfe34259e73bddf1fae44fe831ea4cefdadec
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: de1c9e3a1f0969cfe3e17f08c3e5242f73e27909
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695921"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423419"
 ---
-# <a name="metadata---parameter-and-result"></a>Metadaten - Parameter und Resultsets
+# <a name="metadata---parameter-and-result"></a>Metadaten – Parameter und Ergebnis
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -51,11 +51,11 @@ ms.locfileid: "35695921"
   
  Manchmal treten in Wertbereichen Diskontinuitäten auf. Zum Beispiel fehlt 9 in der Angabe 8,10..16. Der Grund dafür ist das Hinzufügen eines Dezimaltrennzeichens, wenn die Genauigkeit von Bruchteilen größer als 0 (NULL) ist.  
   
- **datetime2** wird zurückgegeben, als Typname für **Smalldatetime** und **"DateTime"** , da der Treiber dies als einen gemeinsamen Typ verwendet für die Übermittlung aller **SQL_TYPE_TIMESTAMP** Werte an den Server.  
+ **datetime2** wird zurückgegeben, als Typname für **Smalldatetime** und **"DateTime"** da der Treiber dies als einen gemeinsamen Typ verwendet für die Übermittlung aller **SQL_TYPE_TIMESTAMP** Werte an den Server.  
   
- SQL_CA_SS_VARIANT_SQL_TYPE ist ein neues Deskriptorfeld. Dieses Feld wurde IRD und IPD So aktivieren Sie die Anwendungen an die zugeordnete Werttyp hinzugefügt **Sqlvariant** (sql_ssvariant verknüpften) Spalten und Parametern  
+ SQL_CA_SS_VARIANT_SQL_TYPE ist ein neues Deskriptorfeld. Dieses Feld wurde IRD und IPD zum Aktivieren von Anwendungen an den zugeordneten Werttyp hinzugefügt **Sqlvariant** (sql_ssvariant verknüpften) Spalten und Parametern  
   
- SQL_CA_SS_SERVER_TYPE ist ein neues IPD-Feld, mit dem Anwendungen steuern können, wie Werte für Parameter, die als SQL_TYPE_TYPETIMESTAMP (oder als SQL_SS_VARIANT mit dem C-Typ SQL_C_TYPE_TIMESTAMP) gebunden sind, an den Server gesendet werden. Wenn SQL_DESC_CONCISE_TYPE gleich SQL_TYPE_TIMESTAMP ist (oder gleich SQL_SS_VARIANT und der C-Typ ist SQL_C_TYPE_TIMESTAMP) Wenn SQLExecute oder SQLExecDirect aufgerufen wird, wird der Wert von SQL_CA_SS_SERVER_TYPE bestimmt, der tabular Data stream (TDS)-Typ des Parameterwerts , wie folgt:  
+ SQL_CA_SS_SERVER_TYPE ist ein neues IPD-Feld, mit dem Anwendungen steuern können, wie Werte für Parameter, die als SQL_TYPE_TYPETIMESTAMP (oder als SQL_SS_VARIANT mit dem C-Typ SQL_C_TYPE_TIMESTAMP) gebunden sind, an den Server gesendet werden. Wenn SQL_DESC_CONCISE_TYPE SQL_TYPE_TIMESTAMP ist (oder gleich SQL_SS_VARIANT und der C-Typ ist SQL_C_TYPE_TIMESTAMP) Wenn SQLExecute oder SQLExecDirect aufgerufen wird, wird der Wert von SQL_CA_SS_SERVER_TYPE bestimmt, der tabular Data stream (TDS)-Typ des Parameterwerts , wie folgt:  
   
 |Wert von SQL_CA_SS_SERVER_TYPE|Gültige Werte für SQL_DESC_PRECISION|Gültige Werte für SQL_DESC_LENGTH|TDS-Typ|  
 |----------------------------------------|-------------------------------------------|----------------------------------------|--------------|  
@@ -69,11 +69,11 @@ ms.locfileid: "35695921"
   
 -   Während der Vorbereitung oder Ausführung (wenn SQLExecute, SQLExecDirect, SQLSetPos oder SQLBulkOperations aufgerufen wird).  
   
--   Wenn Sie eine Anwendung erzwingt eine nicht verzögerte Vorbereitung durch den Aufruf von SQLPrepare mit verzögerte Vorbereitung deaktiviert oder SQLDescribeCol oder SQLDescribeParam für eine Anweisung, die jedoch nicht vorbereitet werden SQLNumResultCols aufgerufen wird, ausgeführt.  
+-   Wenn Sie eine Anwendung erzwingt, dass eine nicht verzögerte Vorbereitung durch den Aufruf von SQLPrepare mit verzögerte Vorbereitung deaktiviert oder durch Aufrufen von SQLNumResultCols, SQLDescribeCol oder SQLDescribeParam für eine Anweisung, die aber nicht vorbereitet wird ausgeführt.  
   
  Wenn SQL_CA_SS_SERVER_TYPE durch einen Aufruf von SQLSetDescField festgelegt ist, muss sein Wert SQL_SS_TYPE_DEFAULT, SQL_SS_TYPE_SMALLDATETIME oder sql_ss_type_datetime lauten. Ist dies nicht der Fall, wird SQL_ERROR zurückgegeben, und es wird ein Diagnosedatensatz mit SQLState HY092 und der Meldung "Ungültiger Attribut-/Optionsbezeichner" protokolliert.  
   
- Das SQL_CA_SS_SERVER_TYPE-Attribut kann verwendet werden, von Anwendungen, die abhängig von unterstützten Funktionen **"DateTime"** und **Smalldatetime**, aber nicht **datetime2**. Beispielsweise **datetime2** erfordert die Verwendung eines der **Dateadd** und **Datediif** Funktionen, während die **"DateTime"** und  **Smalldatetime** auch arithmetische Operatoren zulassen. Die meisten Anwendungen müssen dieses Attribut nicht verwenden, und seine Verwendung sollte vermieden werden.  
+ Das SQL_CA_SS_SERVER_TYPE-Attribut kann verwendet werden, von Anwendungen, die abhängig von unterstützten Funktionen **"DateTime"** und **Smalldatetime**, aber nicht **datetime2**. Z. B. **datetime2** erfordert die Verwendung der **Dateadd** und **Datediif** Funktionen, während die **"DateTime"** und  **Smalldatetime** auch arithmetische Operatoren zulassen. Die meisten Anwendungen müssen dieses Attribut nicht verwenden, und seine Verwendung sollte vermieden werden.  
   
 ## <a name="information-returned-in-ird-fields"></a>In IRD-Feldern zurückgegebene Informationen  
  Die folgenden Informationen werden in IRD-Feldern zurückgegeben:  

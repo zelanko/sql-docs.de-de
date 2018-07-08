@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.addcopyexistingpackage.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 89e8479e2bb1036f4a42cec80e12912a79c61a87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 22aad56f944bc0b9c605436d8d0ab5deba0a803d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047271"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156681"
 ---
 # <a name="add-copy-of-existing-package"></a>Kopie des vorhandenen Pakets hinzufügen
   Verwenden Sie das Dialogfeld **Kopie des vorhandenen Pakets hinzufügen** , um einem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Projekt eine Kopie eines Pakets hinzuzufügen, das in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , im Dateisystem oder im SSIS-Paketspeicher gespeichert ist.  
@@ -50,7 +50,7 @@ ms.locfileid: "36047271"
 ## <a name="see-also"></a>Siehe auch  
  [Kopie des Pakets speichern](../../2014/integration-services/save-copy-of-package.md)   
  [Referenz zur Benutzeroberfläche des Import-Paket Dialogfelds](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
- [Referenz zur Benutzeroberfläche des Paket Dialogfelds exportieren](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
+ [Referenz zur Benutzeroberfläche des Dialogfelds Paket exportieren](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [Speichern von Paketen](save-packages.md)   
  [Importieren und Exportieren von Paketen &#40;SSIS-Dienst&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   

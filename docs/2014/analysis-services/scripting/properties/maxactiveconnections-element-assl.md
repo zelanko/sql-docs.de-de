@@ -1,5 +1,5 @@
 ---
-title: MaxActiveConnections-Element (ASSL) | Microsoft Docs
+title: MaxActiveConnections-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - MaxActiveConnections element
 ms.assetid: 0dc5b64d-061d-409f-95c0-4c63f87f5ee4
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: df2dafc69a97d1beb954100413761c07878881d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71cc72a5b5b405a1548b08a331edbef10d0d3c60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049050"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259346"
 ---
 # <a name="maxactiveconnections-element-assl"></a>MaxActiveConnections-Element (ASSL)
   Enthält die maximale Anzahl gleichzeitiger Verbindungen zulässig, die von einem Element, das von abgeleitet ist die [DataSource](../data-type/datasource-data-type-assl.md) -Datentyp.  

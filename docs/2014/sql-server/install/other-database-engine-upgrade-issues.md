@@ -1,5 +1,5 @@
 ---
-title: Weitere Upgradeprobleme für die Datenbank-Engine | Microsoft Docs
+title: Weitere Upgradeprobleme für die Datenbank-Engine | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], upgrading
 ms.assetid: 78a1d8e8-fa97-476f-8777-84617d145340
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b1c74bf4ffd8cf0eba5cb853cccda80cc0b5d662
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1fda230ed04ddcac6d4c7c8bb52b73762c23b90f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046831"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150001"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>Weitere Probleme beim Upgrade der Datenbank-Engine
   Die folgenden Upgradeprobleme können von der aktuellen Version von Upgrade Advisor nicht erkannt werden. Überprüfen Sie die nachfolgend aufgeführten Probleme, um ihre potenziellen Auswirkungen auf Ihre Systeme zu ermitteln.  
@@ -76,9 +76,9 @@ ms.locfileid: "36046831"
  MERGE ist jetzt ein vollständig reserviertes Schlüsselwort. Anwendungen dürfen nicht länger Objekte (Tabellen, Spalten usw.) mit dem Namen MERGE enthalten.  
   
 ## <a name="rename-cdc-schema"></a>Umbenennen des CDC-Schemas  
- Es ist ein Schemaname mit dem Namen CDC vorhanden. Dieser Schemaname kann nicht im verwendet, wenn **Change Data Capture** für die Datenbank aktiviert ist.  
+ Es ist ein Schemaname mit dem Namen CDC vorhanden. Dieser Schemaname kann nicht in verwendet werden, wenn sein **Change Data Capture** für die Datenbank aktiviert ist.  
   
- Sie müssen das CDC-Schema löschen, bevor Sie aktivieren **Change Data Capture** für die Datenbank. Dieser Schritt kann vor oder nach dem Upgrade ausgeführt werden. Gehen Sie folgendermaßen vor, um das Schema zu löschen:  
+ Sie müssen das CDC-Schema löschen, bevor Sie die aktivieren **Change Data Capture** für die Datenbank. Dieser Schritt kann vor oder nach dem Upgrade ausgeführt werden. Gehen Sie folgendermaßen vor, um das Schema zu löschen:  
   
 1.  Übertragen Sie die Objekte mit ALTER SCHEMA vom CDC-Schema auf einen neuen Schemanamen.  
   
@@ -89,6 +89,6 @@ ms.locfileid: "36046831"
 4.  Löschen Sie das CDC-Schema mit DROP SCHEMA.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenbank-Engine-Upgradeprobleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
+ [Probleme beim Upgrade der Datenbank-Engine](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
   
   

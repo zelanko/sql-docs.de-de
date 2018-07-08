@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 3: Laden einer Berichtsdefinition vom Berichtsserver | Microsoft Docs'
+title: 'Lektion 3: Laden einer Berichtsdefinition vom Berichtsserver | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5ad8b31c-43b0-4481-a31b-090cbed4a438
 caps.latest.revision: 16
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 912a149542133a4c2bbdf4dfecde2ac0313defd5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2963895811f8567f5142ed9b49137123390ec8d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056831"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149431"
 ---
 # <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>Lektion 3: Laden einer Berichtsdefinition vom Berichtsserver
   Nachdem Sie Ihr Projekt erstellt und die Klassen aus dem RDL-Schema generiert haben, können Sie eine Berichtsdefinition vom Berichtsserver laden.  
   
 ### <a name="to-load-a-report-definition"></a>So laden Sie eine Berichtsdefinition  
   
-1.  Hinzufügen eines privates Felds am oberen Rand der `ReportUpdater` Klasse (Modul bei Verwendung von [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) für die `Report` Klasse. Mit diesem Feld wird für die Ausführungszeit der Anwendung ein Verweis auf den Bericht beibehalten, der vom Berichtsserver geladen wird.  
+1.  Fügen Sie ein privates Feld am oberen Rand der `ReportUpdater` Klasse (Modul bei Verwendung von [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) für die `Report` Klasse. Mit diesem Feld wird für die Ausführungszeit der Anwendung ein Verweis auf den Bericht beibehalten, der vom Berichtsserver geladen wird.  
   
     ```csharp  
     private Report _report;  
@@ -101,10 +101,10 @@ ms.locfileid: "36056831"
     ```  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- In der nächsten Lektion schreiben Sie Code zum Aktualisieren der Berichtsdefinition, die vom Berichtsserver geladen wurde. Finden Sie unter [Lektion 4: Programmgesteuertes Update der Berichtsdefinition](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md).  
+ In der nächsten Lektion schreiben Sie Code zum Aktualisieren der Berichtsdefinition, die vom Berichtsserver geladen wurde. Finden Sie unter [Lektion 4: Aktualisieren Sie die Berichtsdefinition programmgesteuert](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Aktualisieren von Berichten mithilfe von Klassen, die aus dem RDL-Schema generierten &#40;SSRS-Lernprogramm&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+ [Aktualisieren von Berichten mithilfe von Klassen, die aus dem RDL-Schema generiert &#40;SSRS-Tutorial&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [Berichtsdefinitionssprache (SSRS)](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

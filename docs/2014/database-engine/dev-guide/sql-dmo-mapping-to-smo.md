@@ -1,5 +1,5 @@
 ---
-title: SQL-DMO-Zuordnung zu SMO | Microsoft Docs
+title: SQL-DMO-Zuordnung zu SMO | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 590f5396-98d5-485e-9b41-728c6ed7cb9d
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d99a665366fc9b5df9ff975d47cfa60dccaf4b4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 54c66973a1cc0ca7f024a696902f694b45778a9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046972"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182817"
 ---
 # <a name="sql-dmo-mapping-to-smo"></a>SQL-DMO-Zuordnung zu SMO
   SQL Distributed Management Objects (SQL-DMO) ist in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] nicht mehr enthalten, SQL-DMO-Anwendungen sollten für die Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) konvertiert werden. Das SMO-Objektmodell ähnelt SQL-DMO. Daher sind die meisten SQL-DMO-Objekte einem Objekt mit dem gleichen Namen in SMO zugeordnet. Einige SQL-DMO-Objekte wurden beim Übergang zu SMO jedoch geändert oder ganz gestrichen. In dieser Tabelle werden die empfohlenen Aktionen für SQL-DMO-Objekte aufgeführt, die nicht direkt nach SMO konvertiert wurden.  
@@ -33,7 +33,7 @@ ms.locfileid: "36046972"
 |Backup-Objekt und Backup2-Objekt|<xref:Microsoft.SqlServer.Management.Smo.Backup> und <xref:Microsoft.SqlServer.Management.Smo.BackupRestoreBase> Objekte.|  
 |BackupDevice-Objekt|<xref:Microsoft.SqlServer.Management.Smo.BackupDevice> Objekte|  
 |BulkCopy-Objekt und BulkCopy2-Objekt|Entfernt und ersetzt durch <xref:Microsoft.SqlServer.Management.Smo.Transfer> Objekt.|  
-|Category-Objekt|Verschoben <xref:Microsoft.SqlServer.Management.Smo.Agent> Namespace. Ersetzen von <xref:Microsoft.SqlServer.Management.Smo.Agent.AlertCategory>, <xref:Microsoft.SqlServer.Management.Smo.Agent.OperatorCategory>, <xref:Microsoft.SqlServer.Management.Smo.Agent.JobCategory> Objekte.|  
+|Category-Objekt|Verschoben <xref:Microsoft.SqlServer.Management.Smo.Agent> Namespace. Ersetzen Sie dies durch <xref:Microsoft.SqlServer.Management.Smo.Agent.AlertCategory>, <xref:Microsoft.SqlServer.Management.Smo.Agent.OperatorCategory>, <xref:Microsoft.SqlServer.Management.Smo.Agent.JobCategory> Objekte.|  
 |Check-Objekt|<xref:Microsoft.SqlServer.Management.Smo.Check> Objekt|  
 |Column-Objekt und Column2-Objekt|<xref:Microsoft.SqlServer.Management.Smo.Column> -Objekt.|  
 |Configuration-Objekt|<xref:Microsoft.SqlServer.Management.Smo.Configuration> und <xref:Microsoft.SqlServer.Management.Smo.ConfigurationBase> Objekte.|  
@@ -47,7 +47,7 @@ ms.locfileid: "36046972"
 |DistributionDatabase-Objekt und DistributionDatabase2-Objekt|Verschoben <xref:Microsoft.SqlServer.Replication> Namespace.|  
 |DistributionPublication-Objekt und DistributionPublication2-Objekt|Verschoben <xref:Microsoft.SqlServer.Replication> Namespace.|  
 |DistributionSubscription-Objekt und DistributionSubscription2-Objekt|Verschoben <xref:Microsoft.SqlServer.Replication> Namespace.|  
-|Distributor-Objekt und Distributor2-Objekt|Verschoben, um die <xref:Microsoft.SqlServer.Replication> Namespace.|  
+|Distributor-Objekt und Distributor2-Objekt|Verschoben werden, um die <xref:Microsoft.SqlServer.Replication> Namespace.|  
 |DRIDefault-Objekt|Verschoben <xref:Microsoft.SqlServer.Management.Smo.ScriptingOptions> Objekt.|  
 |FileGroup-Objekt und FileGroup2-Objekt|<xref:Microsoft.SqlServer.Management.Smo.FileGroup> -Objekt.|  
 |FullTextCatalog-Objekt und FullTextCatalog2-Objekt|<xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> und <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex> Objekte.|  

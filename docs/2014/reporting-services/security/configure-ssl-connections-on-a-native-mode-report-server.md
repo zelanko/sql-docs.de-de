@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Secure Sockets Layer (SSL)
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 95056bd4c6902f8f727af2cd77958e461bdbcb75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd49900daf397575c90be86d0370f47824cc4d8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048454"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150521"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Konfigurieren von SSL-Verbindungen auf einem Berichtsserver im einheitlichen Modus
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Im einheitlichen Modus wird der HTTP-SSL-Dienst (Secure Sockets Layer, SSL) verwendet, um verschlüsselte Verbindungen mit einem Berichtsserver herzustellen. Wenn in einem lokalen Zertifikatspeicher auf dem Berichtsservercomputer eine Zertifikatsdatei (CER-Datei) installiert ist, können Sie das Zertifikat an eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -URL-Reservierung binden, um Berichtsserververbindungen über einen verschlüsselten Kanal zu unterstützen.  
@@ -81,7 +81,7 @@ ms.locfileid: "36048454"
 5.  Klicken Sie auf die URL, um zu überprüfen, ob sie funktioniert.  
   
 ## <a name="how-certificate-bindings-are-stored"></a>Speichern von Zertifikatsbindungen  
- Zertifikatsbindungen werden in HTTP.SYS gespeichert. Eine Darstellung der definierten Bindungen wird auch gespeichert werden, der `URLReservations` Abschnitt der Datei "rsreportserver.config". Die Einstellungen in der Konfigurationsdatei sind nur eine Darstellung der tatsächlichen, an anderer Stelle gespeicherten Werte. Ändern Sie die Werte in der Konfigurationsdatei nicht direkt. Die Konfigurationseinstellungen werden in der Datei erst angezeigt, wenn Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool oder den Berichtsserver-WMI-Anbieter (Windows Management Instrumentation) verwenden, um ein Zertifikat zu binden.  
+ Zertifikatsbindungen werden in HTTP.SYS gespeichert. Eine Darstellung der definierten Bindungen wird auch gespeichert werden, der `URLReservations` -Abschnitt der Datei "rsreportserver.config". Die Einstellungen in der Konfigurationsdatei sind nur eine Darstellung der tatsächlichen, an anderer Stelle gespeicherten Werte. Ändern Sie die Werte in der Konfigurationsdatei nicht direkt. Die Konfigurationseinstellungen werden in der Datei erst angezeigt, wenn Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool oder den Berichtsserver-WMI-Anbieter (Windows Management Instrumentation) verwenden, um ein Zertifikat zu binden.  
   
 > [!NOTE]  
 >  Wenn Sie eine Bindung mit einem SSL-Zertifikat in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] konfigurieren und das Zertifikat später von dem Computer entfernen möchten, müssen Sie sicherstellen, dass Sie die Bindung aus [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] entfernen, bevor Sie das Zertifikat vom Computer entfernen. Anderenfalls können Sie die Bindung mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool oder WMI nicht mehr entfernen, und die Fehlermeldung "Ungültiger Parameter" wird angezeigt. Wenn Sie das Zertifikat bereits vom Computer entfernt haben, können Sie das Tool Httpcfg.exe verwenden, um die Bindung aus HTTP.SYS zu entfernen. Weitere Informationen zu Httpcfg.exe finden Sie in der Windows-Produktdokumentation.  

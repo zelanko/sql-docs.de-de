@@ -5,26 +5,25 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
 caps.latest.revision: 17
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fefc4c7df12855615cba104bfb63d8547608c7f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd1bc616c3a897f0c7b3b3ea4fda256b240f75ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047324"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155421"
 ---
 # Handbuch zum SQL Server Indexentwurf
   Schlecht entworfene oder fehlende Indizes sind die Hauptquellen für Engpässe der Datenbankanwendung. Ein effizienter Indexentwurf ist zum Erzielen einer guten Datenbank- und Anwendungsleistung unabdinglich. Die in diesem Handbuch zum SQL Server Indexentwurf enthaltenen Informationen und Best Practices unterstützen Sie beim Entwerfen effizienter Indizes, die den Anforderungen Ihrer Anwendung entsprechen.  
   
-**Gilt für**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] über [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , sofern nichts anderes vermerkt ist.  
+**Gilt für**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] über [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , sofern nichts anderes angegeben ist.  
   
  In diesem Handbuch wird davon ausgegangen, dass der Leser grundsätzlich mit den in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verfügbaren Indextypen vertraut ist. Eine allgemeine Beschreibung zu Indextypen finden Sie unter [Indextypen](http://msdn.microsoft.com/library/ms175049.aspx).  
   
@@ -55,7 +54,7 @@ ms.locfileid: "36047324"
 ### Aufgaben beim Indexentwurf  
  Die folgenden Aufgaben fassen die empfohlene Strategie beim Entwerfen von Indizes zusammen:  
   
-1.  Verstehen der Merkmale der Datenbank selbst. Wird die Datenbank z. B. für die Onlinetransaktionsverarbeitung (OLTP) mit häufigen Datenänderungen oder als Entscheidungsunterstützungssystem (EUS) bzw. als Data Warehousing-Datenbank (OLAP-Datenbank) verwendet, die hauptsächlich schreibgeschützte Daten enthält und sehr große Datasets schnell verarbeiten muss? In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]ist der *speicheroptimierte xVelocity-columnstore* -Index besonders gut für typische Data Warehousing-Datasets geeignet. Columnstore-Indizes verbessern die Benutzererfahrung im Bereich Data Warehousing, da sie die schnellere Ausführung allgemeiner Data Warehousing-Abfragen, wie Filter-, Aggregierungs-, Gruppierungs- und Sternjoinabfragen ermöglichen. Weitere Informationen finden Sie unter [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md).  
+1.  Verstehen der Merkmale der Datenbank selbst. Wird die Datenbank z. B. für die Onlinetransaktionsverarbeitung (OLTP) mit häufigen Datenänderungen oder als Entscheidungsunterstützungssystem (EUS) bzw. als Data Warehousing-Datenbank (OLAP-Datenbank) verwendet, die hauptsächlich schreibgeschützte Daten enthält und sehr große Datasets schnell verarbeiten muss? In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]ist der *speicheroptimierte xVelocity-columnstore* -Index besonders gut für typische Data Warehousing-Datasets geeignet. Columnstore-Indizes verbessern die Benutzererfahrung im Bereich Data Warehousing, da sie die schnellere Ausführung allgemeiner Data Warehousing-Abfragen, wie Filter-, Aggregierungs-, Gruppierungs- und Sternjoinabfragen ermöglichen. Weitere Informationen finden Sie unter [Beschreibung von columnstore-Indizes](../relational-databases/indexes/columnstore-indexes-described.md).  
   
 2.  Verstehen der Merkmale der am häufigsten verwendeten Abfragen. Wenn Sie z. B. wissen, dass eine häufig verwendete Abfrage zwei oder mehr Tabellen verknüpft, unterstützt Sie dieses Wissen beim Ermitteln der zu verwendenden effizientesten Indextypen.  
   
@@ -172,7 +171,7 @@ ORDER BY RejectedQty DESC, ProductID ASC;
   
  Der folgende Ausführungsplan für diese Abfrage zeigt, dass der Abfrageoptimierer einen SORT-Operator verwendet hat, um das Resultset in der durch die ORDER BY-Klausel angegebenen Reihenfolge zurückzugeben.  
   
- ![Ausführungsplan zeigt einer SORTIERUNG, dass der Operator verwendet wird. ] (media/indexsort1.gif "Ausführungsplan zeigt einen SORT-Operator wird verwendet.")  
+ ![Ausführungsplan zeigt einer SORTIERUNG, dass der Operator verwendet wird. ] (media/indexsort1.gif "Ausführungsplan zeigt einer SORTIERUNG Operator wird verwendet.")  
   
  Falls ein Index mit Schlüsselspalten erstellt wird, die mit jenen in der ORDER BY-Klausel in der Abfrage übereinstimmen, kann der SORT-Operator im Abfrageplan gelöscht werden, wodurch der Abfrageplan effizienter wird.  
   
@@ -184,13 +183,13 @@ ON Purchasing.PurchaseOrderDetail
   
  Nachdem die Abfrage erneut ausgeführt wurde, zeigt folgender Ausführungsplan, dass der SORT-Operator gelöscht wurde und der neu erstellte nicht gruppierte Index verwendet wird.  
   
- ![Ausführungsplan zeigt einer SORTIERUNG Operator wird nicht verwendet,](media/insertsort2.gif "Ausführungsplan zeigt einer SORTIERUNG der Operator wird nicht verwendet.")  
+ ![Ausführungsplan zeigt einer SORTIERUNG Operator wird nicht verwendet.](media/insertsort2.gif "Ausführungsplan zeigt einer SORTIERUNG Operator wird nicht verwendet.")  
   
  [!INCLUDE[ssDE](../includes/ssde-md.md)] bewegt sich in beide Richtungen gleichermaßen effizient. Ein als `(RejectedQty DESC, ProductID ASC)` definierter Index kann nach wie vor für eine Abfrage verwendet werden, in der die Sortierreihenfolge der Spalten in der ORDER BY-Klausel reserviert sind. Eine Abfrage mit der ORDER BY-Klausel `ORDER BY RejectedQty ASC, ProductID DESC` kann den Index beispielsweise verwenden.  
   
  Die Sortierreihenfolge kann nur für Schlüsselspalten angegeben werden. Die Katalogsicht [sys.index_columns](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) und die INDEXKEY_PROPERTY-Funktion melden, ob eine Indexspalte in aufsteigender oder absteigender Reihenfolge gespeichert wird.  
   
- ![Pfeilsymbol mit Back Link zum Anfang verwendet](media/uparrow16x16.gif "Pfeilsymbol mit Back Link zum Anfang verwendet") [In diesem Handbuch](#Top)  
+ ![Pfeilsymbol mit Rückverweis auf den obersten](media/uparrow16x16.gif "Pfeilsymbol mit Rückverweis auf den obersten") [In dieser Anleitung](#Top)  
   
 ##  <a name="Clustered"></a> Richtlinien für den Entwurf gruppierter Indizes  
  Gruppierte Indizes sortieren und speichern die Datenzeilen in den Tabellen basierend auf ihren Schlüsselwerten. Pro Tabelle kann nur ein gruppierter Index vorhanden sein, da die Datenzeilen nur in einer Reihenfolge sortiert werden können. Mit wenigen Ausnahmen sollte für jede Tabelle ein gruppierter Index für die Spalte(n) definiert werden, auf die Folgendes zutrifft:  
@@ -261,7 +260,7 @@ ON Purchasing.PurchaseOrderDetail
   
      Ausführliche Schlüssel sind aus mehreren Spalten oder mehreren großen Spalten zusammengesetzt. Die Schlüsselwerte aus dem gruppierten Index werden von allen nicht gruppierten Indizes als Suchschlüssel verwendet. Alle nicht gruppierten Indizes, die für dieselbe Tabelle definiert werden, sind erheblich größer, da die Einträge des nicht gruppierten Indexes den Gruppierungsschlüssel sowie die Schlüsselspalten enthalten, die für diesen nicht gruppierten Index definiert wurden.  
   
- ![Pfeilsymbol mit Back Link zum Anfang verwendet](media/uparrow16x16.gif "Pfeilsymbol mit Back Link zum Anfang verwendet") [In diesem Handbuch](#Top)  
+ ![Pfeilsymbol mit Rückverweis auf den obersten](media/uparrow16x16.gif "Pfeilsymbol mit Rückverweis auf den obersten") [In dieser Anleitung](#Top)  
   
 ##  <a name="Nonclustered"></a> Entwurfsrichtlinien für einen nicht gruppierten Index  
  Ein nicht gruppierter Index enthält Indexschlüsselwerte sowie Zeilenlokatoren, die auf den Speicherort der Tabellendaten verweisen. Sie können mehrere nicht gruppierte Indizes für eine Tabelle oder eine indizierte Sicht erstellen. Im Allgemeinen sollten nicht gruppierte Indizes so entworfen werden, dass sich die Leistung häufig verwendeter Abfragen verbessert, die nicht vom gruppierten Index abgedeckt werden.  
@@ -430,7 +429,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  Sie müssen überprüfen, ob die Steigerungen der Abfrageleistung die negativen Auswirkungen auf die Leistung während der Datenänderung sowie hinsichtlich zusätzlicher Speicherplatzanforderungen aufwiegen.  
   
- ![Pfeilsymbol mit Back Link zum Anfang verwendet](media/uparrow16x16.gif "Pfeilsymbol mit Back Link zum Anfang verwendet") [In diesem Handbuch](#Top)  
+ ![Pfeilsymbol mit Rückverweis auf den obersten](media/uparrow16x16.gif "Pfeilsymbol mit Rückverweis auf den obersten") [In dieser Anleitung](#Top)  
   
 ##  <a name="Unique"></a> Richtlinien zum Entwerfen eindeutiger Indizes  
  Ein eindeutiger Index garantiert, dass der Indexschlüssel keine doppelten Werte enthält und dass deshalb jede Zeile in der Tabelle in gewisser Weise eindeutig ist. Das Angeben eines eindeutigen Indexes ist nur dann sinnvoll, wenn die Eindeutigkeit ein Merkmal der Daten ist. Wenn Sie z. B. sicherstellen möchten, dass die Werte in der `NationalIDNumber` -Spalte der `HumanResources.Employee` -Tabelle eindeutig sind, wenn der Primärschlüssel `EmployeeID`entspricht, erstellen Sie eine UNIQUE-Einschränkung für die `NationalIDNumber` -Spalte. Wenn der Benutzer versucht, denselben Wert für mehrere Mitarbeiter in diese Spalte einzugeben, wird eine Fehlermeldung angezeigt, und der doppelte Wert wird nicht eingegeben.  
@@ -455,7 +454,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   Ein eindeutiger, nicht gruppierter Index kann eingeschlossene Nichtschlüsselspalten enthalten. Weitere Informationen finden Sie unter [Index mit eingeschlossenen Spalten](#Included_Columns).  
   
- ![Pfeilsymbol mit Back Link zum Anfang verwendet](media/uparrow16x16.gif "Pfeilsymbol mit Back Link zum Anfang verwendet") [In diesem Handbuch](#Top)  
+ ![Pfeilsymbol mit Rückverweis auf den obersten](media/uparrow16x16.gif "Pfeilsymbol mit Rückverweis auf den obersten") [In dieser Anleitung](#Top)  
   
 ##  <a name="Filtered"></a> Richtlinien für den Entwurf gefilterter Indizes  
  Ein gefilterter Index ist ein optimierter nicht gruppierter Index, der sich besonders für Abfragen eignet, bei denen aus einer fest definierten Teilmenge von Daten ausgewählt wird. Dieser verwendet ein Filterprädikat, um einen Teil der Zeilen in der Tabelle zu indizieren. Mit einem sorgfältig entworfenen gefilterten Index können im Gegensatz zu Tabellenindizes die Abfrageleistung verbessert und der Aufwand für die Indexverwaltung und -speicherung reduziert werden.  
@@ -596,7 +595,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  Durch das Verschieben der Datenkonvertierung von der linken Seite auf die rechte Seite eines Vergleichsoperators wird möglicherweise die Bedeutung der Konvertierung geändert. Im obigen Beispiel wurde aus einem Integer-Vergleich ein `varbinary`-Vergleich, als der CONVERT-Operator der rechten Seite hinzugefügt wurde.  
   
- ![Pfeilsymbol mit Back Link zum Anfang verwendet](media/uparrow16x16.gif "Pfeilsymbol mit Back Link zum Anfang verwendet") [In diesem Handbuch](#Top)  
+ ![Pfeilsymbol mit Rückverweis auf den obersten](media/uparrow16x16.gif "Pfeilsymbol mit Rückverweis auf den obersten") [In dieser Anleitung](#Top)  
   
 ##  <a name="Additional_Reading"></a> Zusätzliches Lesematerial  
  [Verbessern der Leistung mit indizierten Sichten in SQL Server 2008](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  

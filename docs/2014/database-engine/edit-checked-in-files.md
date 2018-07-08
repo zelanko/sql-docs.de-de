@@ -1,5 +1,5 @@
 ---
-title: Bearbeiten von eingecheckten Dateien | Microsoft Docs
+title: Bearbeiten von eingecheckten Dateien | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying checked-in files
 - checking in files
 ms.assetid: 560cd19f-ab22-4273-b00c-149993a630e6
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fd91efe4bd802a64ced4e6f93ac65f16ed4e5a71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3e705b2b62631e0d6747c5112c0efc66f3bfddf6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047253"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165291"
 ---
 # <a name="edit-checked-in-files"></a>Bearbeiten eingecheckter Dateien
   In der Regel müssen Sie quellcodeverwaltete Dateien zunächst auschecken, bevor Sie sie bearbeiten können. Sie können jedoch [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] so konfigurieren, dass Sie Dateien ändern können ,die Sie nicht ausgecheckt haben. Dabei bleiben die Änderungen im Arbeitsspeicher, bis Sie die Dateien speichern. Sie werden dann aufgefordert, die Datei aus der Quellcodeverwaltung auszuchecken.  
@@ -35,7 +35,7 @@ ms.locfileid: "36047253"
   
 2.  In der **Optionen** Dialogfeld erweitern Sie die **Quellcodeverwaltung**l-Ordner, und klicken Sie dann auf **Umgebung**.  
   
-3.  Klicken Sie auf **eingecheckte Elemente bearbeitet werden, zulassen**, und klicken Sie dann auf **OK**.  
+3.  Klicken Sie auf **eingecheckter Elemente bearbeitet werden können**, und klicken Sie dann auf **OK**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwalten von Eincheckvorgängen](../../2014/database-engine/manage-checkins.md)   

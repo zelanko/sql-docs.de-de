@@ -1,5 +1,5 @@
 ---
-title: Sortierungen und Codepages | Microsoft Docs
+title: Sortierungen und Codepages | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c626dcac-0474-432d-acc0-cfa643345372
 caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: da33b883499f9119c7c23f3c203aca6add6c4d3c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0632bb70a18930e71319554bba99b0660e986483
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048150"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182894"
 ---
 # <a name="collations-and-code-pages"></a>Sortierungen und Codepages
   [!INCLUDE[hek_2](../includes/hek-2-md.md)] weist Einschränkungen bei unterstützten Codepages für (var)char-Spalten in speicheroptimierten Tabellen und unterstützten Sortierungen auf, die in Indizes und in systemintern kompilierten gespeicherten Prozeduren verwendet werden.  
@@ -86,7 +86,7 @@ GO
   
 -   Alle Ausdrücke und Sortiervorgänge in systemintern kompilierten gespeicherten Prozeduren müssen BIN2-Sortierungen verwenden. Es wird impliziert, dass alle Vergleiche und Sortiervorgänge auf den Unicode-Codepunkten der Zeichen (binäre Darstellung) basieren. Beispielsweise wird bei allen Sortierungen nach Groß-/Kleinschreibung unterschieden ("Z" kommt vor "a"). Bei Bedarf kann für Sortierungen und Vergleiche ohne Beachtung der Groß-/Kleinschreibung interpretiertes [!INCLUDE[tsql](../includes/tsql-md.md)] verwendet werden.  
   
--   Abschneiden von UTF-16-Daten wird in systemintern kompilierten gespeicherten Prozeduren nicht unterstützt. Dies bedeutet, dass diese n (Var) Char (*n*) Werte können nicht konvertiert werden, n (Var) Char-Typ (*ich*), wenn *ich* < *n*, wenn die Sortierung hat _SC-Eigenschaft. Beispielsweise wird Folgendes nicht unterstützt:  
+-   Abschneiden von UTF-16-Daten wird in systemintern kompilierten gespeicherten Prozeduren nicht unterstützt. Dies bedeutet, n (Var) Char (*n*) Werte können nicht konvertiert werden, n (Var) Char-Typ (*ich*), wenn *ich* < *n*, wenn die Sortierung hat _SC-Eigenschaft. Beispielsweise wird Folgendes nicht unterstützt:  
   
     ```tsql  
     -- column definition using an _SC collation  

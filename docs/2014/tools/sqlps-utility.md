@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sqlps utility
 - PowerShell [SQL Server], sqlps utility
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
 caps.latest.revision: 20
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: b49895ee08de2a9f08d263c92f5372c6b22ec604
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1082bd587d9c3455733d611a676d901b62741859
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050709"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161601"
 ---
 # <a name="sqlps-utility"></a>sqlps (Hilfsprogramm)
   Das Hilfsprogramm `sqlps` startet eine Windows PowerShell 2.0-Sitzung mit geladenem und registriertem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-PowerShell-Anbieter sowie geladenen und registrierten Cmdlets. Sie können PowerShell-Befehle oder -Skripts eingeben, die die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -PowerShell-Komponenten verwenden, sodass Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und ihre Objekte verwendet werden können.  
@@ -64,13 +64,13 @@ ms.locfileid: "36050709"
  Gibt an, die Eingabe in die `sqlps` Hilfsprogramm formatiert ist entweder als Textzeichenfolgen (**Text**) oder in einem serialisierten CLIXML-Format (**XML**).  
   
  **-Command**  
- Gibt den Befehl an, der vom Hilfsprogramm `sqlps` ausgeführt werden soll. Die `sqlps` Hilfsprogramm ausgeführt wird, den Befehl ein, und beendet, es sei denn, **- NoExit** ist ebenfalls angegeben. Geben Sie nach **-Command**keine anderen Schalter an, denn diese werden als Befehlsparameter gelesen.  
+ Gibt den Befehl an, der vom Hilfsprogramm `sqlps` ausgeführt werden soll. Die `sqlps` Hilfsprogramm ausgeführt wird, den Befehl und dann beendet, es sei denn, **- NoExit** ist ebenfalls angegeben. Geben Sie nach **-Command**keine anderen Schalter an, denn diese werden als Befehlsparameter gelesen.  
   
  **-**  
- **-Command-** gibt an, dass die `sqlps` Hilfsprogramm die Eingabe aus der Standardeingabe lesen.  
+ **-Command-** gibt an, dass die `sqlps` Hilfsprogramm, um die Eingabe aus der Standardeingabe lesen.  
   
  *script_block* [ **-args***argument_array* ]  
- Gibt einen Block von PowerShell-Befehlen an, die ausgeführt werden sollen. Der Block muss in geschweifte Klammern ({}) eingeschlossen werden. *Script_block* kann nur angegeben werden, wenn die `sqlps` Hilfsprogramm heißt entweder **PowerShell** oder ein anderes `sqlps` Sitzung des Hilfsprogramms. *Argument_array* ist ein Array von PowerShell-Variablen, das die Argumente für die PowerShell-Befehle in *script_block*enthält.  
+ Gibt einen Block von PowerShell-Befehlen an, die ausgeführt werden sollen. Der Block muss in geschweifte Klammern ({}) eingeschlossen werden. *Script_block* kann nur angegeben werden, wenn die `sqlps` Hilfsprogramm heißt entweder **PowerShell** oder einem anderen `sqlps` Sitzung des Hilfsprogramms. *Argument_array* ist ein Array von PowerShell-Variablen, das die Argumente für die PowerShell-Befehle in *script_block*enthält.  
   
  *string* [ *command_parameters* ]  
  Gibt eine Zeichenfolge an, die die auszuführenden PowerShell-Befehle enthält. Verwenden Sie das Format **"& {*`command`*}"**. Die Anführungszeichen geben eine Zeichenfolge an, und der Aufrufoperator (&) bewirkt, dass das Hilfsprogramm `sqlps` den Befehl ausführt.  
@@ -99,9 +99,9 @@ ms.locfileid: "36050709"
   
 -   Verwenden Sie die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anbieterpfade, um durch die Hierarchie der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Objekte zu navigieren.  
   
- Wird standardmäßig die `sqlps` Hilfsprogramm ausgeführt wird, mit der um festgelegter Skriptausführungsrichtlinie **Restricted**. Dadurch wird die Ausführung von PowerShell-Skripts verhindert. Mit dem Cmdlet **Set-ExecutionPolicy** können Sie die Ausführung signierter Skripts oder beliebiger anderer Skripts ermöglichen. Führen Sie nur Skripts aus vertrauenswürdigen Quellen aus, und sichern Sie alle Eingabe- und Ausgabedateien, indem Sie die geeigneten NTFS-Berechtigungen verwenden. Weitere Informationen zum Aktivieren von PowerShell-Skripts finden Sie unter [Ausführen der Windows PowerShell-Skripts](http://go.microsoft.com/fwlink/?LinkId=103166).  
+ In der Standardeinstellung die `sqlps` Hilfsprogramm ausgeführt wird, mit die Skriptausführungsrichtlinie auf **Restricted**. Dadurch wird die Ausführung von PowerShell-Skripts verhindert. Mit dem Cmdlet **Set-ExecutionPolicy** können Sie die Ausführung signierter Skripts oder beliebiger anderer Skripts ermöglichen. Führen Sie nur Skripts aus vertrauenswürdigen Quellen aus, und sichern Sie alle Eingabe- und Ausgabedateien, indem Sie die geeigneten NTFS-Berechtigungen verwenden. Weitere Informationen zum Aktivieren von PowerShell-Skripts finden Sie unter [Ausführen der Windows PowerShell-Skripts](http://go.microsoft.com/fwlink/?LinkId=103166).  
   
- Die Version der `sqlps` -Hilfsprogramm [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] wurde als ein Windows PowerShell 1.0-Mini-Shell implementiert. Mini-Shells weisen bestimmte Einschränkungen auf; Benutzer können beispielsweise keine anderen als die von der Mini-Shell geladenen Snap-Ins laden. Diese Einschränkungen gelten nicht für die [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]-Version und höhere Versionen des Hilfsprogramms, die dahingehend geändert wurden, dass sie das `sqlps`-Modul verwenden.  
+ Die Version der `sqlps` -Hilfsprogramm [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] wurde als eine Windows PowerShell 1.0-Mini-Shell implementiert. Mini-Shells weisen bestimmte Einschränkungen auf; Benutzer können beispielsweise keine anderen als die von der Mini-Shell geladenen Snap-Ins laden. Diese Einschränkungen gelten nicht für die [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]-Version und höhere Versionen des Hilfsprogramms, die dahingehend geändert wurden, dass sie das `sqlps`-Modul verwenden.  
   
 ## <a name="examples"></a>Beispiele  
  **A. Ausführen des sqlps-Hilfsprogramms im interaktiven Standardmodus ohne Copyrightinformationen**  

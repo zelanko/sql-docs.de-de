@@ -1,5 +1,5 @@
 ---
-title: StorageLocation-Element (ASSL) | Microsoft Docs
+title: StorageLocation-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - StorageLocation element
 ms.assetid: ecf8852f-56a1-4fcf-b0d8-d7eebb75e4ed
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b6f6d023731126cafaa76cf31598e0bae9fdf1cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fecb1a20c6c436749913ea9f8f83d284cf1000c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048137"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163531"
 ---
 # <a name="storagelocation-element-assl"></a>StorageLocation-Element (ASSL)
   Enthält den Speicherort des Dateisystems für den Inhalt des übergeordneten Elements.  
@@ -56,8 +56,8 @@ ms.locfileid: "36048137"
 |Vorgänger oder übergeordnetes Element|Standardwert|  
 |------------------------|-------------------|  
 |[Cube](../objects/cube-element-assl.md)|InclusionThresholdSetting|  
-|[MeasureGroup-Objekt](../objects/group-element-assl.md)|Wert des `StorageLocation` aus der `Cube` übergeordneten Elements.|  
-|[Partition](../objects/partition-element-assl.md)|Wert des `StorageLocation` aus der `MeasureGroup` übergeordneten Elements.|  
+|[MeasureGroup-Objekt](../objects/group-element-assl.md)|Wert von `StorageLocation` aus der `Cube` übergeordneten Elements.|  
+|[Partition](../objects/partition-element-assl.md)|Wert von `StorageLocation` aus der `MeasureGroup` übergeordneten Elements.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36048137"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Elemente, die den übergeordneten Elementen von entsprechen `StorageLocation` im Objektmodell von Analysis Management Objects (AMO) sind <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.MeasureGroup>, und <xref:Microsoft.AnalysisServices.Partition>.  
+ Die Elemente, die den übergeordneten Elementen von entsprechen `StorageLocation` im Analysis Management Objects (AMO)-Objektmodell werden <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.MeasureGroup>, und <xref:Microsoft.AnalysisServices.Partition>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

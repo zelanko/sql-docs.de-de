@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scripttask.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 267bbd228565337594039162d7f01ec90a38d303
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26b6d45a190a188f9091360583cf3f73c3097455
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048301"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156721"
 ---
 # <a name="script-task"></a>Skripttask
   Der Skripttask stellt Code zum Ausführen von Funktionen bereit, die in den integrierten Tasks und Transformationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nicht verfügbar sind. Der Skripttask kann auch Funktionen in einem einzigen Skript zusammenfassen, statt mehrere Tasks und Transformationen zu verwenden. Sie verwenden den Skripttask für einmalige Aktionen in einem Paket (einmalig pro aufgezähltem Objekt), anstatt diese einmalig pro Datenzeile auszuführen.  
@@ -68,7 +68,7 @@ ms.locfileid: "36048301"
  Diese Eigenschaften können Sie mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
 ### <a name="configuring-the-script-task-in-the-designer"></a>Konfigurieren des Skripttasks im Designer  
- In der folgenden Tabelle wird das `ScriptTaskLogEntry`-Ereignis beschrieben, das für den Skripttask protokolliert werden kann. Die `ScriptTaskLogEntry` Ereignis ausgewählt ist, für die Protokollierung auf der **Details** auf der Registerkarte die **SSIS-Protokolle konfigurieren** (Dialogfeld). Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../custom-messages-for-logging.md).  
+ In der folgenden Tabelle wird das `ScriptTaskLogEntry`-Ereignis beschrieben, das für den Skripttask protokolliert werden kann. Die `ScriptTaskLogEntry` Ereignis ausgewählt ist, für die Protokollierung auf der **Details** Registerkarte die **SSIS-Protokolle konfigurieren** Dialogfeld. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../custom-messages-for-logging.md).  
   
 |Protokolleintrag|Description|  
 |---------------|-----------------|  

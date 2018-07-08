@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren der Sammlung von Verwendungsdaten für (PowerPivot für SharePoint | Microsoft Docs
+title: Konfigurieren Sie für die Sammlung von Verwendungsdaten (PowerPivot für SharePoint | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de5ac4920baf8143a575e5697896542eae817c90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 06dfd95c82aab8e3fed336863c75112728150247
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048362"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149752"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>Konfigurieren der Sammlung von Verwendungsdaten für PowerPivot für SharePoint
   Die Sammlung von Verwendungsdaten ist eine SharePoint-Funktion auf Farmebene. Dieses System wird durch PowerPivot für SharePoint verwendet und ergänzt, indem Berichte im PowerPivot-Management-Dashboard bereitgestellt werden, die die Verwendung von PowerPivot-Daten und -Diensten aufzeigen. Abhängig davon, wie SharePoint installiert wird, kann die Sammlung von Verwendungsdaten für die Farm deaktiviert sein. Ein Farmadministrator muss die Verwendungsprotokollierung aktivieren, damit operative Verwendungsdaten für die Darstellung im PowerPivot-Management-Dashboard generiert werden.  
   
- Informationen zu den Verwendungsdaten im PowerPivot-Management-Dashboard finden Sie unter [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
+ Weitere Informationen zu den Verwendungsdaten im PowerPivot-Management-Dashboard finden Sie unter [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
  **In diesem Thema:**  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36048362"
     |**PowerPivot-Verbindungen**|Das PowerPivot-Verbindungsereignis wird zum Überwachen von PowerPivot-Serververbindungen verwendet, die im Namen eines Benutzers hergestellt werden.|  
     |**PowerPivot-Datenladevorgängen**|Die Funktion PowerPivot Load Data Usage wird zum Überwachen von Anforderungen verwendet, durch die PowerPivot-Daten in den Serverarbeitsspeicher geladen werden. Ein Ladeereignis wird für PowerPivot-Datendateien generiert, die aus einer Inhaltsdatenbank oder dem Cache geladen werden.|  
     |**Verwendung von PowerPivot-Datenentladevorgängen**|Die Funktion PowerPivot Unload Data Usages wird zur Überwachung von Anfragen zum Entladen einer PowerPivot-Datenquelle nach einem bestimmten Zeitraum der Inaktivität verwendet. Das Zwischenspeichern einer PowerPivot-Datenquelle auf einem Datenträger wird als Entladeereignis gemeldet.|  
-    |**Verwendung von PowerPivot-Abfragen**|Verwendung von PowerPivot-Abfragen wird verwendet, um abfrageverarbeitungszeiten für Daten zu überwachen, die in geladen ist ein [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] Instanz.|  
+    |**Verwendung von PowerPivot-Abfragen**|Verwendung von PowerPivot-Abfrage dient zur Überwachung von abfrageverarbeitungszeiten für Daten, die in geladen ist ein [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] Instanz.|  
   
     > [!NOTE]  
     >  Obwohl Serverzustands- und Datenaktualisierungsvorgänge auch Verwendungsdaten generieren, ist diesen Prozessen kein Ereignis zugeordnet.  
@@ -129,7 +129,7 @@ ms.locfileid: "36048362"
   
 3.  Klicken Sie auf **OK**.  
   
- Weitere Informationen dazu, wie Verwendungsdaten gesammelt und gespeichert werden, finden Sie unter [PowerPivot Usage Data Collection](power-pivot-usage-data-collection.md).  
+ Weitere Informationen wie Verwendungsdaten gesammelt und gespeichert werden, finden Sie unter [PowerPivot Usage Data Collection](power-pivot-usage-data-collection.md).  
   
 ##  <a name="qrh"></a> Definieren schneller, mittlerer und langsamer Abfrageantwortkategorien für die Berichterstellung  
  Die Leistung der Abfrageverarbeitung wird anhand vordefinierter Kategorien gemessen, in denen ein Anforderung/Antwort-Zyklus durch dessen Ausführungsdauer definiert wird. Die vordefinierten Kategorien lauten: Trivial, Schnell, Erwartet, Lange Ausführung und Überschritten. Jede an einen PowerPivot-Server übermittelte Anforderung wird abhängig von ihrer Ausführungsdauer in eine der Kategorien eingeteilt.  

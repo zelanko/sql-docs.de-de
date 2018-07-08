@@ -1,5 +1,5 @@
 ---
-title: DatabaseID-Element (ASSL) | Microsoft Docs
+title: DatabaseID-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - DatabaseID element
 ms.assetid: 6bcf2bd5-b037-4964-bc72-42e0c89f9716
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c74e39a1a5696576b77ff9a2eb74e062cb2f3475
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ec07be8832ef048ac6ddc2b6cc92a945ba9e2c2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046765"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161131"
 ---
 # <a name="databaseid-element-assl"></a>DatabaseID-Element (ASSL)
-  Identifiziert die [Datenbank](../objects/database-element-assl.md) Element gehört zu einem Out-of-Line [binden](../data-type/binding-data-type-assl.md) Element.  
+  Identifiziert die [Datenbank](../objects/database-element-assl.md) mit einem Out-of-Line-Element [Bindung](../data-type/binding-data-type-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36046765"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Weitere Informationen über Out-of-Line-Bindungen finden Sie unter [Datenquellen und-Bindungen &#40;mehrdimensionale SSAS-&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Weitere Informationen zur Out-of-Line-Bindungen finden Sie unter [Datenquellen und-Bindungen &#40;mehrdimensionale SSAS-&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

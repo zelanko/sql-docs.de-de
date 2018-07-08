@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - passwords [Integration Services]
 - packages [Integration Services], security
@@ -21,13 +21,13 @@ ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8cf68cbe7e1599bc34d891dfd010ba2d81c7a965
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8657428ef8a31829fffb77ccf9ceb997fa34e74a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049037"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277266"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Zugriffssteuerung für vertrauliche Daten in Paketen
   Sie können die Daten in einem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket schützen, indem Sie eine Schutzebene festlegen, mit der nur vertrauliche Daten oder alle Daten im Paket geschützt werden. Darüber hinaus können Sie diese Daten mit einem Kennwort oder Benutzerschlüssel verschlüsseln oder die Daten von der Datenbank verschlüsseln lassen. Die für ein Paket verwendete Schutzebene ist außerdem nicht unbedingt statisch, sondern ändert sich im Lebenszyklus eines Pakets. Häufig wird eine Schutzebene während der Entwicklung und eine andere Schutzebene beim Bereitstellen des Pakets festgelegt.  
@@ -59,16 +59,16 @@ ms.locfileid: "36049037"
 |Schutzebene|Description|  
 |----------------------|-----------------|  
 |Sensible Daten nicht speichern (`DontSaveSensitive`)|Unterdrückt die Werte vertraulicher Eigenschaften im Paket, wenn das Paket gespeichert wird. Diese Schutzebene verschlüsselt nicht, sondern verhindert stattdessen, dass als sensibel markierte Eigenschaften mit dem Paket gespeichert werden. Deshalb stehen die sensiblen Daten anderen Benutzern nicht zur Verfügung. Wenn das Paket von einem anderen Benutzer geöffnet wird, werden die sensiblen Daten durch Leerzeichen ersetzt und der Benutzer muss die sensiblen Daten angeben.<br /><br /> Bei der Verwendung mit dem **dtutil** -Hilfsprogramm (dtutil.exe) entspricht diese Schutzebene dem Wert 0.|  
-|Alle Daten mit einem Kennwort verschlüsseln (`EncryptAllWithPassword`)|Verwendet ein Kennwort zum Verschlüsseln des gesamten Pakets. Das Paket wird mit einem Kennwort verschlüsselt, das beim Erstellen oder Exportieren des Pakets vom Benutzer bereitgestellt wird. Um das Paket im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer zu öffnen oder mit dem **dtexec** -Eingabeaufforderungs-Hilfsprogramm auszuführen, muss der Benutzer das Paketkennwort angeben. Ohne Kennwort kann der Benutzer das Paket weder öffnen noch ausführen.<br /><br /> Bei der Verwendung mit dem **dtutil** -Hilfsprogramm entspricht diese Schutzebene dem Wert 3.|  
+|Alle mit einem Kennwort verschlüsseln (`EncryptAllWithPassword`)|Verwendet ein Kennwort zum Verschlüsseln des gesamten Pakets. Das Paket wird mit einem Kennwort verschlüsselt, das beim Erstellen oder Exportieren des Pakets vom Benutzer bereitgestellt wird. Um das Paket im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer zu öffnen oder mit dem **dtexec** -Eingabeaufforderungs-Hilfsprogramm auszuführen, muss der Benutzer das Paketkennwort angeben. Ohne Kennwort kann der Benutzer das Paket weder öffnen noch ausführen.<br /><br /> Bei der Verwendung mit dem **dtutil** -Hilfsprogramm entspricht diese Schutzebene dem Wert 3.|  
 |Alle mit einem Benutzerschlüssel verschlüsseln (`EncryptAllWithUserKey`)|Verwendet einen auf dem aktuellen Benutzerprofil basierenden Schlüssel zum Verschlüsseln des gesamten Pakets. Nur der Benutzer, der das Paket erstellte oder exportierte, kann das Paket im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer öffnen oder mit dem Eingabeaufforderungs-Hilfsprogramm **dtexec** ausführen.<br /><br /> Bei der Verwendung mit dem **dtutil** -Hilfsprogramm entspricht diese Schutzebene dem Wert 4.<br /><br /> Hinweis: Für Schutzebenen, für die ein Benutzerschlüssel verwendet wird, werden in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] DPAPI-Standards verwendet. Weitere Informationen zu DPAPI finden Sie in der MSDN Library unter [http://msdn.microsoft.com/library](http://go.microsoft.com/fwlink/?LinkId=15408).|  
 |Sensible Daten mit einem Kennwort verschlüsseln (`EncryptSensitiveWithPassword`)|Verwendet ein Kennwort zum ausschließlichen Verschlüsseln der Werte vertraulicher Eigenschaften im Paket. Für diese Verschlüsselung wird DPAPI verwendet. Die sensiblen Daten werden als Teil des Pakets gespeichert, aber diese Daten werden mit einem Kennwort verschlüsselt, das vom aktuellen Benutzer beim Erstellen oder Exportieren des Pakets bereitgestellt wird. Um das Paket im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer zu öffnen, muss der Benutzer das Paketkennwort angeben. Falls kein Kennwort angegeben wird, wird das Paket ohne die sensiblen Daten geöffnet und der Benutzer muss neue Werte für sensible Daten angeben. Falls der Benutzer versucht, das Paket auszuführen, ohne das Kennwort anzugeben, schlägt die Paketausführung fehl. Weitere Informationen zu Kennwörtern und zur Befehlszeilenausführung finden Sie unter [dtexec (Hilfsprogramm)](../packages/dtexec-utility.md).<br /><br /> Bei der Verwendung mit dem **dtutil** -Hilfsprogramm entspricht diese Schutzebene dem Wert 2.|  
 |Sensible Daten mit einem Benutzerschlüssel verschlüsseln (`EncryptSensitiveWithUserKey`)|Verwendet einen auf dem aktuellen Benutzerprofil basierenden Schlüssel zum ausschließlichen Verschlüsseln der Werte vertraulicher Eigenschaften im Paket. Das Paket kann nur von demselben Benutzer, der dasselbe Profil verwendet, geladen werden. Wenn das Paket von einem anderen Benutzer geöffnet wird, werden die sensiblen Daten durch Leerzeichen ersetzt und der aktuelle Benutzer muss neue Werte für die sensiblen Daten angeben. Wenn der Benutzer versucht, das Paket auszuführen, schlägt die Paketausführung fehl. Für diese Verschlüsselung wird DPAPI verwendet.<br /><br /> Bei der Verwendung mit dem **dtutil** -Hilfsprogramm entspricht diese Schutzebene dem Wert 1.<br /><br /> Hinweis: Für Schutzebenen, für die ein Benutzerschlüssel verwendet wird, werden in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] DPAPI-Standards verwendet. Weitere Informationen zu DPAPI finden Sie in der MSDN Library unter [http://msdn.microsoft.com/library](http://go.microsoft.com/fwlink/?LinkId=15408).|  
 |Serverspeicher für die Verschlüsselung (`ServerStorage`)|Schützt das gesamte Paket mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankrollen. Diese Option wird unterstützt, wenn ein Paket in der msdb-Datenbank von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert wird. Darüber hinaus der SSISDB-Katalog verwendet die `ServerStorage` Schutzebene<br /><br /> Diese Option wird nicht unterstützt, wenn ein Paket von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]im Dateisystem gespeichert wird.|  
   
 ## <a name="protection-level-setting-and-the-ssisdb-catalog"></a>Einstellung der Schutzebene und SSISDB-Katalog  
- Die SSISDB-Katalog verwendet die `ServerStorage` Schutzebene. Wenn Sie ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitstellen, werden die Paketdaten und sensible Werte automatisch vom Katalog verschlüsselt. Die Daten werden vom Katalog auch automatisch entschlüsselt, wenn Sie sie abrufen.  
+ Der SSISDB-Katalog verwendet die `ServerStorage` Schutzebene. Wenn Sie ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitstellen, werden die Paketdaten und sensible Werte automatisch vom Katalog verschlüsselt. Die Daten werden vom Katalog auch automatisch entschlüsselt, wenn Sie sie abrufen.  
   
- Wenn Sie das Projekt (ispac-Datei) exportieren, die sich aus der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Server im Dateisystem, ändert das System automatisch die Schutzebene auf `EncryptSensitiveWithUserKey`. Wenn Sie das Projekt, mithilfe Importieren der **Integration Services Import-Assistent** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], die **ProtectionLevel** Eigenschaft in der **Eigenschaften** Fenster Zeigt den Wert `EncryptSensitiveWithUserKey`.  
+ Wenn Sie aus das Projekt (ispac-Datei) Exportieren der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Server in das Dateisystem, ändert das System automatisch die Schutzebene auf `EncryptSensitiveWithUserKey`. Wenn Sie das Projekt mithilfe der **Integration Services Import-Assistent** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], **ProtectionLevel** -Eigenschaft in der **Eigenschaften** Fenster Zeigt den Wert `EncryptSensitiveWithUserKey`.  
   
 ## <a name="protection-level-setting-based-on-package-life-cycle"></a>Festlegen der Schutzebene auf Grundlage des Paketlebenszyklus  
  Die Schutzebene eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets wird bei dessen Entwicklung in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]festgelegt. Wenn das Paket dann zu einem späteren Zeitpunkt bereitgestellt, von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]importiert oder daraus exportiert wird oder von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in den [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher oder in das Dateisystem kopiert wird, können Sie die Paketschutzebene aktualisieren. Wenn Sie z. B. Pakete auf Ihrem Computer mit einer Benutzerschlüssel-Schutzebenenoption erstellen und speichern, möchten Sie eventuell die Schutzebene ändern, wenn Sie das Paket anderen Benutzern übergeben; anderenfalls können diese Benutzer das Paket nicht öffnen.  
@@ -87,7 +87,7 @@ ms.locfileid: "36049037"
   
 ## <a name="see-also"></a>Siehe auch  
  [Importieren und Exportieren von Paketen &#40;SSIS-Dienst&#41;](../import-and-export-packages-ssis-service.md)   
- [Integrationsservices &#40;SSIS&#41; Pakete](../integration-services-ssis-packages.md)   
- [Übersicht über die Sicherheit &#40;Integrationsservices&#41;](security-overview-integration-services.md)  
+ [Integrationsdienste &#40;SSIS&#41; Pakete](../integration-services-ssis-packages.md)   
+ [Übersicht über die Sicherheit &#40;Integrationsdienste&#41;](security-overview-integration-services.md)  
   
   
