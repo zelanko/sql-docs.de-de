@@ -1,5 +1,5 @@
 ---
-title: Entwerfen von Aggregationen (XMLA) | Microsoft Docs
+title: Entwerfen von Aggregationen (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,50 +20,50 @@ helpviewer_keywords:
 - iterative aggregation process [XMLA]
 ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e2e2d5be45ba679cfa0c0ea39928e5b43d30c3a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 773187385538a70ed145e330eb60c648cf8f0511
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048635"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161331"
 ---
 # <a name="designing-aggregations-xmla"></a>Entwerfen von Aggregationen (XMLA)
-  Aggregationsentwürfe werden den Partitionen einer bestimmten Measuregruppe zugeordnet, um sicherzustellen, dass die Partitionen beim Speichern von Aggregationen die gleiche Struktur verwenden. Verwenden einheitliche Speicherstruktur für Partitionen können Sie ganz einfach Partitionen definieren, die später zusammengeführt werden können mithilfe der [MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md) Befehl. Weitere Informationen zu Aggregationsentwürfen finden Sie unter [Aggregationen und Aggregationsentwürfe](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
+  Aggregationsentwürfe werden den Partitionen einer bestimmten Measuregruppe zugeordnet, um sicherzustellen, dass die Partitionen beim Speichern von Aggregationen die gleiche Struktur verwenden. Dieselbe Speicherstruktur für Partitionen mit können Sie ganz einfach Partitionen definieren, die später zusammengeführt werden können mithilfe der [MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md) Befehl. Weitere Informationen zu Aggregationsentwürfen finden Sie unter [Aggregationen und Aggregationsentwürfe](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
- Um Aggregationen für einen Aggregationsentwurf definieren möchten, können Sie die [DesignAggregations](../xmla/xml-elements-commands/designaggregations-element-xmla.md) -Befehl in XML for Analysis (XMLA). Der `DesignAggregations`-Befehl umfasst Eigenschaften, die angeben, welche Aggregationsentwürfe als Referenz verwendet sollen und wie der Entwurfsprozess basierend auf dieser Referenz gesteuert werden kann. Mit dem `DesignAggregations`-Befehl und den dazugehörigen Eigenschaften können Sie Aggregationen iterativ oder in einem Batch entwerfen und anschließend die resultierenden Entwurfsstatistiken anzeigen, um den Entwurfsprozess zu bewerten.  
+ Um Aggregationen für einen Aggregationsentwurf definieren möchten, können Sie die [DesignAggregations](../xmla/xml-elements-commands/designaggregations-element-xmla.md) -Befehl in XML for Analysis (XMLA) verwenden. Der `DesignAggregations`-Befehl umfasst Eigenschaften, die angeben, welche Aggregationsentwürfe als Referenz verwendet sollen und wie der Entwurfsprozess basierend auf dieser Referenz gesteuert werden kann. Mit dem `DesignAggregations`-Befehl und den dazugehörigen Eigenschaften können Sie Aggregationen iterativ oder in einem Batch entwerfen und anschließend die resultierenden Entwurfsstatistiken anzeigen, um den Entwurfsprozess zu bewerten.  
   
 ## <a name="specifying-an-aggregation-design"></a>Angeben eines Aggregationsentwurfs  
- Die [Objekt](../xmla/xml-elements-properties/object-element-xmla.md) Eigenschaft von der `DesignAggregations` -Befehls muss einen Objektverweis auf einen vorhandenen Aggregationsentwurf enthalten. Der Objektverweis enthält einen Datenbankbezeichner, Cubebezeichner, Measuregruppenbezeichner und Aggregationsentwurfsbezeichner. Wenn der Aggregationsentwurf noch nicht vorhanden ist, tritt ein Fehler auf.  
+ Die [Objekt](../xmla/xml-elements-properties/object-element-xmla.md) Eigenschaft der `DesignAggregations` -Befehls muss einen Objektverweis auf einen vorhandenen Aggregationsentwurf enthalten. Der Objektverweis enthält einen Datenbankbezeichner, Cubebezeichner, Measuregruppenbezeichner und Aggregationsentwurfsbezeichner. Wenn der Aggregationsentwurf noch nicht vorhanden ist, tritt ein Fehler auf.  
   
 ## <a name="controlling-the-design-process"></a>Steuern des Entwurfsprozesses  
  Sie können die folgenden Eigenschaften des `DesignAggregations`-Befehls verwenden, um den Algorithmus zu steuern, der zum Definieren von Aggregationen für den Aggregationsentwurf verwendet wird.  
   
--   Die [Schritte](../xmla/xml-elements-properties/steps-element-xmla.md) Eigenschaft bestimmt, wie viele Wiederholungen der `DesignAggregations` -Befehl abwartet, bevor er die Steuerung an die Clientanwendung zurückgibt.  
+-   Die [Schritte](../xmla/xml-elements-properties/steps-element-xmla.md) Eigenschaft bestimmt, wie viele Iterationen der `DesignAggregations` -Befehl abwartet, bevor er die Steuerung an die Clientanwendung zurückgibt.  
   
 -   Die [Zeit](../xmla/xml-elements-properties/time-element-xmla.md) Eigenschaft bestimmt, wie viele Millisekunden die `DesignAggregations` -Befehl abwartet, bevor er die Steuerung an die Clientanwendung zurückgibt.  
   
--   Die [Optimierung](../xmla/xml-elements-properties/optimization-element-xmla.md) Eigenschaft bestimmt den geschätzten Prozentsatz der leistungsverbesserung der `DesignAggregations` Befehl zu erreichen versuchen sollte. Wenn Sie Aggregationen iterativ entwerfen, müssen Sie diese Eigenschaft nur beim ersten Befehl senden.  
+-   Die [Optimierung](../xmla/xml-elements-properties/optimization-element-xmla.md) Eigenschaft bestimmt den geschätzten Prozentsatz der Verbesserung der Leistung der `DesignAggregations` Befehl zu erreichen versuchen sollte. Wenn Sie Aggregationen iterativ entwerfen, müssen Sie diese Eigenschaft nur beim ersten Befehl senden.  
   
--   Die [Speicher](../xmla/xml-elements-properties/storage-element-xmla.md) Eigenschaft bestimmt die geschätzte Menge an Festplattenspeicher, in Bytes, der verwendet wird, indem Sie die `DesignAggregations` Befehl. Wenn Sie Aggregationen iterativ entwerfen, müssen Sie diese Eigenschaft nur beim ersten Befehl senden.  
+-   Die [Storage](../xmla/xml-elements-properties/storage-element-xmla.md) Eigenschaft bestimmt die geschätzte Menge an Festplattenspeicher, in Bytes ein, die die `DesignAggregations` Befehl. Wenn Sie Aggregationen iterativ entwerfen, müssen Sie diese Eigenschaft nur beim ersten Befehl senden.  
   
--   Die [' materialisieren '](../xmla/xml-elements-properties/materialize-element-xmla.md) Eigenschaft bestimmt, ob die `DesignAggregations` Befehl sollte während des Entwurfsprozesses definierten Aggregationen zu erstellen. Wenn Sie Aggregationen iterativ entwerfen, sollte diese Eigenschaft auf den Wert FALSE gesetzt werden, bis Sie bereit sind, die entworfenen Aggregationen zu speichern. Wenn sie auf den Wert TRUE gesetzt wird, wird der aktuelle Entwurfsprozess beendet, und die definierten Aggregationen werden dem angegebenen Aggregationsentwurf hinzugefügt.  
+-   Die [materialisieren](../xmla/xml-elements-properties/materialize-element-xmla.md) Eigenschaft bestimmt, ob die `DesignAggregations` Befehl während des Entwurfsprozesses definierten Aggregationen erstellen soll. Wenn Sie Aggregationen iterativ entwerfen, sollte diese Eigenschaft auf den Wert FALSE gesetzt werden, bis Sie bereit sind, die entworfenen Aggregationen zu speichern. Wenn sie auf den Wert TRUE gesetzt wird, wird der aktuelle Entwurfsprozess beendet, und die definierten Aggregationen werden dem angegebenen Aggregationsentwurf hinzugefügt.  
   
 ## <a name="specifying-queries"></a>Angeben von Abfragen  
- Der DesignAggregations-Befehl unterstützt Verwendungsbasierte optimierungsbefehle durch die Einbindung mindestens `Query` Elemente in der [Abfragen](../xmla/xml-elements-properties/queries-element-xmla.md) Eigenschaft. Die `Queries` Eigenschaft enthalten kann, eine oder mehrere [Abfrage](../xmla/xml-elements-properties/query-element-xmla.md) Elemente. Wenn die `Queries`-Eigenschaft keine `Query`-Elemente enthält, verwendet der im `Object`-Element angegebene Aggregationsentwurf eine Standardstruktur, die einen allgemeinen Satz Aggregationen enthält. Dieser allgemeine Aggregationssatz wurde so entworfen, dass er die in der `Optimization`- und der `Storage`-Eigenschaft des `DesignAggregations`-Befehls angegebenen Kriterien erfüllt.  
+ Der DesignAggregations-Befehl unterstützt Verwendungsbasierte optimierungsbefehle durch die Einbindung ein oder mehrerer `Query` Elemente in der [Abfragen](../xmla/xml-elements-properties/queries-element-xmla.md) Eigenschaft. Die `Queries` Eigenschaft enthalten kann, eine oder mehrere [Abfrage](../xmla/xml-elements-properties/query-element-xmla.md) Elemente. Wenn die `Queries`-Eigenschaft keine `Query`-Elemente enthält, verwendet der im `Object`-Element angegebene Aggregationsentwurf eine Standardstruktur, die einen allgemeinen Satz Aggregationen enthält. Dieser allgemeine Aggregationssatz wurde so entworfen, dass er die in der `Optimization`- und der `Storage`-Eigenschaft des `DesignAggregations`-Befehls angegebenen Kriterien erfüllt.  
   
- Jede `Query` Element stellt eine Zielabfrage aus, die der Entwurfsprozess nutzt, um Aggregationen zu definieren, die am häufigsten verwendeten Abfragen abzielen. Sie können entweder Ihre eigenen zielabfragen festlegen oder können Sie die Informationen gespeichert, die von einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] im Abfrageprotokoll einbezogen, zum Abrufen von Informationen über die am häufigsten verwendeten Abfragen. Der Assistent für verwendungsbasierte Optimierung verwendet beim Senden eines `DesignAggregations`-Befehls das Abfrageprotokoll basierend auf Zeit, Verwendung oder einem bestimmten Benutzer. Weitere Informationen finden Sie unter [Verwendungsbasierte Optimierung-Assistent F1-Hilfe](../usage-based-optimization-wizard-f1-help.md).  
+ Jede `Query` -Element stellt dar, eine Zielabfrage, die der Entwurfsprozess nutzt, um Aggregationen zu definieren, die am häufigsten verwendeten Abfragen abzielen. Sie können entweder Ihre eigenen zielabfragen festlegen oder können Sie die Informationen gespeichert, die von einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] im Abfrageprotokoll einbezogen, die zum Abrufen von Informationen über die am häufigsten verwendeten Abfragen. Der Assistent für verwendungsbasierte Optimierung verwendet beim Senden eines `DesignAggregations`-Befehls das Abfrageprotokoll basierend auf Zeit, Verwendung oder einem bestimmten Benutzer. Weitere Informationen finden Sie unter [Verwendungsbasierte Optimierung-Assistent F1-Hilfe](../usage-based-optimization-wizard-f1-help.md).  
   
- Wenn Sie Aggregationen iterativ entwerfen, nur müssen Sie zielabfragen im ersten übergeben `DesignAggregations` Befehl, weil die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz diese zielabfragen speichert und verwendet diese Abfragen während der nachfolgenden `DesignAggregations` Befehle. Nachdem Sie Zielabfragen im ersten `DesignAggregations`-Befehl eines iterativen Prozesses weitergegeben haben, generiert jeder darauf folgende `DesignAggregations`-Befehl, der über Zielabfragen in der `Queries`-Eigenschaft verfügt, einen Fehler.  
+ Wenn Sie Aggregationen iterativ entwerfen, nur müssen Sie zielabfragen im ersten übergeben `DesignAggregations` Befehl, weil die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz diese zielabfragen speichert und verwendet Sie diese Abfragen, während der nachfolgenden `DesignAggregations` Befehle. Nachdem Sie Zielabfragen im ersten `DesignAggregations`-Befehl eines iterativen Prozesses weitergegeben haben, generiert jeder darauf folgende `DesignAggregations`-Befehl, der über Zielabfragen in der `Queries`-Eigenschaft verfügt, einen Fehler.  
   
  Das `Query`-Element enthält einen durch Trennzeichen getrennten Wert, der die folgenden Argumente beinhaltet:  
   
  *Frequency*,*Dataset*[,*Dataset*...]  
   
  *Häufigkeit*  
- Ein Gewichtungsfaktor, der der Anzahl der Male entspricht, die eine Abfrage zuvor ausgeführt wurde. Wenn die `Query` Element eine neue Abfrage darstellt, die *Häufigkeit* Wert stellt den Gewichtungsfaktor an, von der Entwurfsprozess für die Evaluierung der Abfrage verwendet. Bei steigendem Häufigkeitswert, steigt die Gewichtung auf die Abfrage während des Entwurfsprozesses.  
+ Ein Gewichtungsfaktor, der der Anzahl der Male entspricht, die eine Abfrage zuvor ausgeführt wurde. Wenn die `Query` -Element stellt dar, eine neue Abfrage, die *Häufigkeit* den Gewichtungsfaktor an, die der Entwurfsprozess für die Evaluierung der Abfrage darstellt. Bei steigendem Häufigkeitswert, steigt die Gewichtung auf die Abfrage während des Entwurfsprozesses.  
   
  *DataSet*  
  Eine numerische Zeichenfolge, die festlegt, welche Attribute einer Dimension in die Abfrage eingebunden werden. Diese Zeichenfolge muss die gleiche Anzahl an Zeichen wie die Anzahl an Attributen in der Dimension haben. null (0) zeigt an, dass das Attribut an der angegebenen Ordnungsposition für die angegebene Dimension nicht in der Abfrage enthalten ist. Eins (1) zeigt an, dass das Attribut an der angegebenen Ordnungsposition für die angegebene Dimension in der Abfrage enthalten ist.  
@@ -73,7 +73,7 @@ ms.locfileid: "36048635"
 > [!NOTE]  
 >  Einige Attribute sind von der Berücksichtigung im Dataset ausgenommen. Weitere Informationen über ausgenommene Attribute finden Sie unter [Abfrageelement &#40;XMLA&#41;](../xmla/xml-elements-properties/query-element-xmla.md).  
   
- Jede Dimension in der Measuregruppe, die den Aggregationsentwurf enthält wird dargestellt, indem eine *Dataset* Wert in der `Query` Element. Die Reihenfolge der *Dataset* -Werte muss der Reihenfolge der Dimensionen entsprechen, die in die Measuregruppe eingebunden sind.  
+ Jede Dimension in der Measuregruppe, die den Aggregationsentwurf enthält, wird durch dargestellt eine *Dataset* Wert in der `Query` Element. Die Reihenfolge der *Dataset* -Werte muss der Reihenfolge der Dimensionen entsprechen, die in die Measuregruppe eingebunden sind.  
   
 ## <a name="designing-aggregations-using-iterative-or-batch-processes"></a>Entwerfen von Aggregationen mithilfe von iterativen oder Batchprozessen  
  Sie können den `DesignAggregations`-Befehl als Teil eines iterativen oder eines Batchprozesses verwenden, je nach der für den Entwurfsprozess erforderlichen Interaktivität.  

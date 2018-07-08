@@ -8,33 +8,33 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.reviewissues.f1
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3f49bc9a31fcf2cf348f7616a337b51a9b7e5229
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cbfaab44f1b7c40a912eec0c6c6cef8a6b00c51f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046960"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158911"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Datentypzuordnung überprüfen (SQL Server-Import/Export-Assistent)
-  Verwenden der **Datentypzuordnung überprüfen** Seite, um ausführliche Informationen über datentypkonvertierungen zu prüfen, die der Assistent ausführen, damit die Quelldaten mit den Zieldaten kompatibel sind muss. Diese Informationen enthalten optische Hinweise, um Konvertierungen, die voraussichtlich fehlerfrei ablaufen, von Konvertierungen zu unterscheiden, die zu Fehlern oder Kürzungen führen könnten. Sie können für jede Konvertierung entscheiden, ob Sie die vom Assistenten vorgeschlagene Konvertierung übernehmen möchten. Außerdem können Sie angeben, wie mit Fehlern verfahren werden soll.  
+  Verwenden der **Datentypzuordnung** Seite, um ausführliche Informationen über datentypkonvertierungen zu überprüfen, die der Assistent ausführen, damit die Quelldaten mit den Zieldaten kompatibel sind muss. Diese Informationen enthalten optische Hinweise, um Konvertierungen, die voraussichtlich fehlerfrei ablaufen, von Konvertierungen zu unterscheiden, die zu Fehlern oder Kürzungen führen könnten. Sie können für jede Konvertierung entscheiden, ob Sie die vom Assistenten vorgeschlagene Konvertierung übernehmen möchten. Außerdem können Sie angeben, wie mit Fehlern verfahren werden soll.  
   
- Weitere Informationen zu diesem Assistenten finden Sie unter [SQL Server-Import / Export-Assistenten](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Weitere Informationen zu den Optionen zum Starten des Assistenten sowie zu den Berechtigungen erforderlich, um den Assistenten erfolgreich ausführen, finden Sie unter [führen Sie die SQL Server-Import / Export-Assistenten](start-the-sql-server-import-and-export-wizard.md).  
+ Weitere Informationen zu diesem Assistenten finden Sie unter [SQL Server-Import / Export-Assistenten](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Informationen zu den Optionen zum Starten des Assistenten sowie zu den Berechtigungen erforderlich, um den Assistenten erfolgreich ausführen, finden Sie unter [führen Sie die SQL Server-Import / Export-Assistenten](start-the-sql-server-import-and-export-wizard.md).  
   
- Der Zweck der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import / Export-Assistenten zum Kopieren von Daten aus einer Quelle in ein Ziel ist. Mit dem Assistenten können auch eine Zieldatenbank und Zieltabellen erstellt werden. Wenn Sie jedoch mehrere Datenbanken, Tabellen oder andere Datenbankobjekte kopieren müssen, verwenden Sie stattdessen den Assistenten zum Kopieren von Datenbanken. Weitere Informationen finden Sie unter [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
+ Der Zweck der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import / Export-Assistenten Daten aus einer Quelle in ein Ziel kopiert werden. Mit dem Assistenten können auch eine Zieldatenbank und Zieltabellen erstellt werden. Wenn Sie jedoch mehrere Datenbanken, Tabellen oder andere Datenbankobjekte kopieren müssen, verwenden Sie stattdessen den Assistenten zum Kopieren von Datenbanken. Weitere Informationen finden Sie unter [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="options"></a>Tastatur  
  Die Seite **Datentypzuordnung überprüfen** besteht aus der Liste **Tabelle** , der Liste **Datentypzuordnung** und Optionen zur Fehlerbehandlung.  
   
 ### <a name="table-list"></a>Liste 'Tabelle'  
- Der obere Teil der **Datentypenfehler** Seite ist eine **Tabelle** Liste die Tabellen aus der Quelldatenbank in die Zieldatenbank übertragen werden. In der folgenden Tabelle werden die Spalten dieser Liste beschrieben.  
+ Der obere Teil der **Datentypenfehler** Seite ist eine **Tabelle** Liste, die die Tabellen aus der Quelle zum Ziel übertragen werden aufgelistet. In der folgenden Tabelle werden die Spalten dieser Liste beschrieben.  
   
 |Spalte|Description|  
 |------------|-----------------|  
@@ -46,7 +46,7 @@ ms.locfileid: "36046960"
  Um Konvertierungsinformationen zu einer einzelnen Tabelle anzuzeigen, wählen Sie eine Tabelle in diesem **Tabelle** Raster. Die Konvertierungsinformationen für die ausgewählte Tabelle werden in den Spalten im Raster **Datentypzuordnung** unten auf der Seite angezeigt.  
   
 ### <a name="data-type-mapping-list"></a>Liste 'Datentypzuordnung'  
- Der untere Teil der **Datentypenfehler** Seite ist die **datentypzuordnung** Liste. Dieses Raster enthält detaillierte Konvertierungsinformationen über die Spalten in der Tabelle, die in der Liste **Tabelle** ausgewählt ist. In der folgenden Tabelle werden die Spalten dieser Liste beschrieben.  
+ Den unteren Teil der **Datentypenfehler** Seite ist die **datentypzuordnung** Liste. Dieses Raster enthält detaillierte Konvertierungsinformationen über die Spalten in der Tabelle, die in der Liste **Tabelle** ausgewählt ist. In der folgenden Tabelle werden die Spalten dieser Liste beschrieben.  
   
 |Spalte|Description|  
 |------------|-----------------|  
@@ -56,8 +56,8 @@ ms.locfileid: "36046960"
 |**Zielspalte**|Zeigt den Namen der Zielspalte an.|  
 |**Zieltyp**|Zeigt den Datentyp der Zielspalte an.|  
 |**Konvertieren**|Geben Sie an, ob die geplante Konvertierung fortgesetzt werden soll:<br /><br /> Aktivieren Sie das Kontrollkästchen, damit der Assistent mit der geplanten Konvertierung fortfährt.<br /><br /> Deaktivieren Sie das Kontrollkästchen, um die Datentypkonvertierung abzubrechen.|  
-|**On Error**|Geben Sie an, wie der Assistent Fehler behandelt:<br /><br /> Verwenden der **auf Fehler (global)** Einstellung.<br /><br /> Import- oder Exportprozess beim Auftreten eines Fehlers beenden.<br /><br /> Fehler ignorieren.|  
-|**Bei Kürzung**|Geben Sie an, wie der Assistent Kürzungen behandelt:<br /><br /> Verwenden der **bei Kürzung (global)** Einstellung.<br /><br /> Beim Auftreten eines Fehlers, und beenden Sie den Import oder Exportprozess<br /><br /> Kürzung ignorieren.|  
+|**On Error**|Geben Sie an, wie der Assistent Fehler behandelt:<br /><br /> Verwenden der **auf Fehler (global)** festlegen.<br /><br /> Import- oder Exportprozess beim Auftreten eines Fehlers beenden.<br /><br /> Fehler ignorieren.|  
+|**Bei Kürzung**|Geben Sie an, wie der Assistent Kürzungen behandelt:<br /><br /> Verwenden der **bei Kürzung (global)** festlegen.<br /><br /> Beim Auftreten eines Fehlers, und beenden Sie den Import oder Exportprozess<br /><br /> Kürzung ignorieren.|  
   
  Um detaillierte Informationen über die Konvertierung einer bestimmten Datenspalte anzuzeigen, doppelklicken Sie auf eine beliebige Zeile in der Liste. Das Dialogfeld **Spaltenkonvertierungsdetails** wird geöffnet und zeigt ausführlichere Konvertierungsinformationen für die Spalte an.  
   

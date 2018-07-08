@@ -1,12 +1,12 @@
 ---
-title: Rowsets und SQL Server-Cursor | Microsoft Docs
+title: Rowsets und SQL Server-Cursor | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,12 +21,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 64ac951a3df348910f368c5944196d45c11c95c4
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 248e8e523e5ad261c261c1eb47d6cc0f64ee58fa
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703311"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412168"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Rowsets und SQL Server-Cursor
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "35703311"
   
     -   Keine Unterstützung einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, die mehr als ein einzelnes Resultset zurückgibt  
   
- Consumer können andere Cursorverhaltensweisen in einem Rowset anfordern, indem sie bestimmte Rowseteigenschaften festlegen. Wenn der Consumer nicht eine Rowseteigenschaften festlegt oder alle auf ihre Standardwerte festgelegt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter implementiert das Rowset mit einem Standardresultset. Wenn eine dieser Eigenschaften auf einen anderen Wert als den Standardwert festgelegt ist die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter implementiert das Rowset mit einem Servercursor.  
+ Consumer können andere Cursorverhaltensweisen in einem Rowset anfordern, indem sie bestimmte Rowseteigenschaften festlegen. Wenn der Consumer nicht eines dieser Rowseteigenschaften festlegt oder sie alle auf ihre Standardwerte festgelegt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter implementiert das Rowset mit einem Standardresultset. Wenn eine dieser Eigenschaften auf einen anderen Wert als den Standardwert festgelegt ist die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter implementiert das Rowset mit einem Servercursor.  
   
  Die folgenden Rowseteigenschaften weisen den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter an, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Cursor zu verwenden. Einige Eigenschaften können mit anderen problemlos kombiniert werden. Ein Rowset mit den Eigenschaften DBPROP_IRowsetScroll und DBPROP_IRowsetChange entspricht beispielsweise einem Lesezeichenrowset mit sofortigem Updateverhalten. Andere Eigenschaften schließen sich hingegen gegenseitig aus. Zum Beispiel kann ein Rowset, das DBPROP_OTHERINSERT aufweist, keine Lesezeichen enthalten.  
   
@@ -75,13 +75,13 @@ ms.locfileid: "35703311"
 |DBPROP_BOOKMARKS oder DBPROP_LITERALBOOKMARKS|VARIANT_TRUE|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Daten können nicht über das Rowset aktualisiert werden. Das Rowset ist sequenziell und unterstützt nur den Bildlauf vorwärts und das Abrufen. Die relative Zeilenpositionierung wird unterstützt. Befehlstext kann eine ORDER BY-Klausel enthalten.|  
 |DBPROP_OWNUPDATEDELETE oder DBPROP_OWNINSERT oder DBPROP_OTHERUPDATEDELETE|VARIANT_TRUE|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Daten können nicht über das Rowset aktualisiert werden. Das Rowset unterstützt das Durchführen eines Bildlaufs und das Abrufen in beiden Richtungen. Die relative Zeilenpositionierung wird unterstützt. Befehlstext kann eine ORDER BY-Klausel enthalten.|  
 |DBPROP_OTHERINSERT|VARIANT_TRUE|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Daten können nicht über das Rowset aktualisiert werden. Das Rowset unterstützt das Durchführen eines Bildlaufs und das Abrufen in beiden Richtungen. Die relative Zeilenpositionierung wird unterstützt. Befehlstext kann eine ORDER BY-Klausel enthalten, wenn ein Index für die Spalten vorhanden ist, auf die verwiesen wird.<br /><br /> DBPROP_OTHERINSERT kann nicht VARIANT_TRUE sein, wenn das Rowset Lesezeichen enthält. Wenn Sie versuchen, ein Rowset mit dieser Visibility-Eigenschaft und Lesezeichen zu erstellen, wird ein Fehler ausgegeben.|  
-|DBPROP_IRowsetLocate oder DBPROP_IRowsetScroll|VARIANT_TRUE|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Daten können nicht über das Rowset aktualisiert werden. Das Rowset unterstützt das Durchführen eines Bildlaufs und das Abrufen in beiden Richtungen. Lesezeichen und absolute Positionierung durch die **IRowsetLocate** Schnittstelle in das Rowset unterstützt werden. Befehlstext kann eine ORDER BY-Klausel enthalten.<br /><br /> DBPROP_IRowsetLocate und DBPROP_IRowsetScroll erfordern Lesezeichen im Rowset. Wenn Sie versuchen, ein Rowset mit Lesezeichen und der DBPROP_OTHERINSERT-Eigenschaft zu erstellen, die auf VARIANT_TRUE festgelegt ist, tritt ein Fehler auf.|  
+|DBPROP_IRowsetLocate oder DBPROP_IRowsetScroll|VARIANT_TRUE|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Daten können nicht über das Rowset aktualisiert werden. Das Rowset unterstützt das Durchführen eines Bildlaufs und das Abrufen in beiden Richtungen. Lesezeichen und absolute Positionierung durch die **IRowsetLocate** Schnittstelle werden in das Rowset unterstützt. Befehlstext kann eine ORDER BY-Klausel enthalten.<br /><br /> DBPROP_IRowsetLocate und DBPROP_IRowsetScroll erfordern Lesezeichen im Rowset. Wenn Sie versuchen, ein Rowset mit Lesezeichen und der DBPROP_OTHERINSERT-Eigenschaft zu erstellen, die auf VARIANT_TRUE festgelegt ist, tritt ein Fehler auf.|  
 |DBPROP_IRowsetChange oder DBPROP_IRowsetUpdate|VARIANT_TRUE|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Daten können über das Rowset aktualisiert werden. Das Rowset ist sequenziell und unterstützt nur den Bildlauf vorwärts und das Abrufen. Die relative Zeilenpositionierung wird unterstützt. Alle Befehle, die für aktualisierbare Cursor verfügbar sind, können diese Schnittstellen unterstützen.|  
-|DBPROP_IRowsetLocate oder DBPROP_IRowsetScroll und DBPROP_IRowsetChange oder DBPROP_IRowsetUpdate|VARIANT_TRUE|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Daten können über das Rowset aktualisiert werden. Das Rowset unterstützt das Durchführen eines Bildlaufs und das Abrufen in beiden Richtungen. Lesezeichen und absolute Positionierung durch **IRowsetLocate** werden in das Rowset unterstützt. Befehlstext kann eine ORDER BY-Klausel enthalten.|  
+|DBPROP_IRowsetLocate oder DBPROP_IRowsetScroll und DBPROP_IRowsetChange oder DBPROP_IRowsetUpdate|VARIANT_TRUE|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Daten können über das Rowset aktualisiert werden. Das Rowset unterstützt das Durchführen eines Bildlaufs und das Abrufen in beiden Richtungen. Lesezeichen und absolute Positionierung durch **IRowsetLocate** im Rowset unterstützt werden. Befehlstext kann eine ORDER BY-Klausel enthalten.|  
 |DBPROP_IMMOBILEROWS|VARIANT_FALSE|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Daten können nicht über das Rowset aktualisiert werden. Das Rowset unterstützt nur den Bildlauf vorwärts. Die relative Zeilenpositionierung wird unterstützt. Befehlstext kann eine ORDER BY-Klausel enthalten, wenn ein Index für die Spalten vorhanden ist, auf die verwiesen wird.<br /><br /> DBPROP_IMMOBILEROWS ist nur in Rowsets verfügbar, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zeilen anzeigen können, die von Befehlen in anderen Sitzungen oder von anderen Benutzern eingefügt wurden. Wenn Sie versuchen, ein Rowset mit einer auf VARIANT_FALSE festgelegten Eigenschaft für ein Rowset zu öffnen, für das DBPROP_OTHERINSERT nicht VARIANT_TRUE sein kann, tritt ein Fehler auf.|  
 |DBPROP_REMOVEDELETED|VARIANT_TRUE|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Daten können nicht über das Rowset aktualisiert werden. Das Rowset unterstützt nur den Bildlauf vorwärts. Die relative Zeilenpositionierung wird unterstützt. Befehlstext kann eine ORDER BY-Klausel enthalten, sofern keine Beschränkung durch eine andere Eigenschaft vorliegt.|  
   
- Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von einem Servercursor unterstützt Native Client OLE DB-Anbieterrowset kann problemlos erstellt werden, auf eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Basistabelle oder Sicht mithilfe der **IOpenRowset:: OPENROWSET** Methode. Geben Sie die Tabelle oder Sicht anhand des Namens, übergeben das erforderliche Rowset Eigenschaft legt fest, der *RgPropertySets* Parameter.  
+ Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieterrowset unterstützt, die ein Servercursor kann problemlos erstellt werden, auf eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Basistabelle oder Sicht mithilfe der **IOpenRowset:: OPENROWSET** Methode. Geben Sie die Tabelle oder Sicht anhand des Namens, übergeben das erforderliche Rowset Eigenschaft legt fest, der *RgPropertySets* Parameter.  
   
  Befehlstext, der ein Rowset erstellt, ist eingeschränkt, wenn der Consumer erfordert, dass das Rowset von einem Servercursor unterstützt wird. Der Befehlstext ist insbesondere entweder auf eine einzelne SELECT-Anweisung, die ein einzelnes Rowsetergebnis zurückgibt, oder auf eine gespeicherte Prozedur beschränkt, die eine einzelne SELECT-Anweisung implementiert, mit der ein einzelnes Rowsetergebnis zurückgegeben wird.  
   
@@ -152,9 +152,9 @@ ms.locfileid: "35703311"
  Rufen Sie von der angegebenen Auflistung von Rowseteigenschaften eine Teilmenge von den in den vorherigen Tabellen aufgelisteten Eigenschaften ab. Teilen Sie diese Eigenschaften abhängig vom Flagwert – erforderlich (T, F) oder optional (-) – der jeweiligen Rowseteigenschaften in zwei Untergruppen auf. Beginnen Sie für jedes Cursormodell in der ersten Tabelle, und gehen Sie von links nach rechts vor. Vergleichen Sie die Werte der Eigenschaften in den beiden Untergruppen mit den Werten der entsprechenden Eigenschaften in dieser Spalte. Das Cursormodell, für das keine fehlende Übereinstimmung mit den erforderlichen Eigenschaften und die geringste Zahl fehlender Übereinstimmungen mit den optionalen Eigenschaften gefunden wird, wird ausgewählt. Wenn dies auf mehr als ein Cursormodell zutrifft, wird das am weitesten links stehende Modell ausgewählt.  
   
 ## <a name="sql-server-cursor-block-size"></a>Blockgröße des SQL Server-Cursors  
- Wenn eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cursor unterstützt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieterrowset, die Anzahl der Elemente in der Zeile Arrayparameter des Zeilenhandles der **IRowset:: GetNextRows** oder **IRowsetLocate:: GetRowsAt**  Methoden definiert, die Blockgröße des Cursors. Die von den Handles im Array angegebenen Zeilen sind die Elemente des Cursorblocks.  
+ Wenn eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cursor unterstützt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter-Rowset, die Anzahl der Elemente in der Zeile Arrayparameter des Zeilenhandles der **IRowset:: GetNextRows** oder **IRowsetLocate:: GetRowsAt**  Methoden definiert, die Blockgröße des Cursors. Die von den Handles im Array angegebenen Zeilen sind die Elemente des Cursorblocks.  
   
- Für Rowsets, die Lesezeichen unterstützen, die Zeilenhandles abgerufen, indem die **IRowsetLocate:: Getrowsbybookmark** Methode definieren, die Elemente des cursorblocks.  
+ Für Rowsets, die Lesezeichen unterstützen, die Zeilenhandles abgerufen, mit der **IRowsetLocate:: Getrowsbybookmark** Methode definieren, die Elemente des cursorblocks.  
   
  Der Cursorblock ist unabhängig von der Methode, die zum Auffüllen des Rowsets und zur Bildung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Cursorblocks verwendet wird, aktiv, bis die nächste Methode zum Abrufen von Zeilen für das Rowset ausgeführt wird.  
   

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bulk exporting [SQL Server], compatibility
 - bulk importing [SQL Server], compatibility
@@ -17,18 +16,18 @@ helpviewer_keywords:
 - bcp utility [SQL Server], compatibility
 ms.assetid: cd5fc8c8-eab1-4165-9468-384f31e53f0a
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ede5c38153c30e5b7c528d6b9cd415fa739b94a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 42266e1f4ab136045c16d1e0f41d6ae802c3f1c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046910"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154541"
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>Angeben von Datenformaten für die Kompatibilität bei Verwendung von bcp (SQL Server)
-  In diesem Thema wird beschrieben, die datenformatattribute, feldspezifischen eingabeaufforderungen und das Speichern von Feld-nach-Feld-Daten in einer nicht-XML-Formatdatei für das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `bcp` Befehl. Das Verständnis dieser Konzepte kann für Sie nützlich sein, wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Daten für den Massenimport in ein anderes Programm, z. B. ein anderes Datenbankprogramm, mit einem Massenexportvorgang exportieren. Die Standarddatenformate in (systemeigen, Zeichen oder Unicode) der Quelltabelle können mit dem vom anderen Programm erwarteten Datenlayout inkompatibel sein. Falls eine Inkompatibilität vorliegt, müssen Sie beim Exportieren von Daten das Datenlayout beschreiben.  
+  In diesem Thema wird beschrieben, die datenformatattribute, feldspezifischen eingabeaufforderungen und das Speichern von Feld-nach-Feld-Daten in einer nicht-XML-Formatdatei, der die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `bcp` Befehl. Das Verständnis dieser Konzepte kann für Sie nützlich sein, wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Daten für den Massenimport in ein anderes Programm, z. B. ein anderes Datenbankprogramm, mit einem Massenexportvorgang exportieren. Die Standarddatenformate in (systemeigen, Zeichen oder Unicode) der Quelltabelle können mit dem vom anderen Programm erwarteten Datenlayout inkompatibel sein. Falls eine Inkompatibilität vorliegt, müssen Sie beim Exportieren von Daten das Datenlayout beschreiben.  
   
 > [!NOTE]  
 >  Wenn Sie keine Erfahrung mit Datenformaten zum Importieren oder Exportieren von Daten haben, finden Sie Informationen unter [Datenformate für Massenimport oder Massenexport &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md).  
@@ -39,7 +38,7 @@ ms.locfileid: "36046910"
   
 -   [Übersicht über die feldspezifischen Eingabeaufforderungen](#FieldSpecificPrompts)  
   
--   [Das Speichern von feldspezifischen Daten in einer nicht-XML-Formatdatei](#FieldByFieldNonXmlFF)  
+-   [Das Speichern von Feld-nach-Feld-Daten in einer nicht-XML-Formatdatei](#FieldByFieldNonXmlFF)  
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
@@ -48,7 +47,7 @@ ms.locfileid: "36046910"
   
 -   Dateispeichertyp  
   
-     Der *Dateispeichertyp* beschreibt, wie Daten in der Datendatei gespeichert werden. Daten können in eine Datendatei als Typ der Datenbanktabelle (systemeigenes Format) exportiert werden, in die zeichendarstellung (Zeichenformat) oder als beliebiger Datentyp, in dem implizite Konvertierung unterstützt wird; Kopieren Sie z. B. eine `smallint` als ein `int`. Benutzerdefinierte Datentypen werden als Basistypen exportiert. Weitere Informationen finden Sie unter [Angeben des Dateispeichertyps mithilfe von bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md).  
+     Der *Dateispeichertyp* beschreibt, wie Daten in der Datendatei gespeichert werden. Daten können in eine Datendatei als Typ der Datenbanktabelle (systemeigenes Format) exportiert werden, als zeichendarstellung (Zeichenformat) oder als beliebiger Datentyp, in dem implizite Konvertierung unterstützt wird; Kopieren Sie z. B. eine `smallint` als ein `int`. Benutzerdefinierte Datentypen werden als Basistypen exportiert. Weitere Informationen finden Sie unter [Angeben des Dateispeichertyps mithilfe von bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md).  
   
 -   Präfixlänge  
   
@@ -63,12 +62,12 @@ ms.locfileid: "36046910"
      Für Zeichendatenfelder kann mit optionalen abschließenden Zeichen das Ende jedes Felds in einer Datendatei (mithilfe eines *Feldabschlusszeichens*) und das Ende jeder Zeile (mithilfe eines *Zeilenabschlusszeichens*) markiert werden. Abschließende Zeichen sind eine Möglichkeit, um Programme, die die Datendatei lesen, darauf hinzuweisen, an welcher Stelle ein Feld oder eine Zeile endet und ein anderes Feld bzw. eine andere Zeile beginnt. Weitere Informationen finden Sie unter [Specify Field and Row Terminators &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).  
   
 ##  <a name="FieldSpecificPrompts"></a> Übersicht über die feldspezifischen Eingabeaufforderungen  
- Wenn ein interaktiver `bcp` -Befehl enthält die **in** oder **out** option jedoch auch keine entweder den formatdateischalter (**-f**) oder ein Datenformat wechseln () **- n**, **- C**, **-w**, oder **-N**), jede Spalte in der Quelle oder Ziel-Tabelle, die eingabeaufforderungen für jede der vorangehenden Attribute in aktivieren. Jede Eingabeaufforderung die `bcp` Befehl stellt einen Standardwert basierend auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Datentyp der Spalte der Tabelle. Wenn Sie den Standardwert für alle Eingabeaufforderungen übernehmen, erhalten Sie dieselben Ergebnisse wie beim Angeben des systemeigenen Formats (**-n**) in der Befehlszeile. Für jede Eingabeaufforderung wird ein Standardwert in eckigen Klammern angezeigt: [*Standard*]. Durch Drücken der EINGABETASTE wird der angezeigte Standardwert übernommen. Wenn Sie einen Wert angeben möchten, der vom Standardwert abweicht, geben Sie den neuen Wert an der Eingabeaufforderung ein.  
+ Wenn ein interaktiver `bcp` -Befehl enthält die **in** oder **out** option enthält jedoch auch keine entweder den formatdateischalter (**-f**) oder ein Datenformat wechseln () **- n**, **- C**, **-w**, oder **-N**), jede Spalte in der Quelle oder Ziel-Tabelle, die eingabeaufforderungen für jedes der vorangehenden Attribute, wiederum. Jede Eingabeaufforderung die `bcp` Befehl stellt einen Standardwert, der auf der Grundlage der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Datentyp der Spalte der Tabelle. Wenn Sie den Standardwert für alle Eingabeaufforderungen übernehmen, erhalten Sie dieselben Ergebnisse wie beim Angeben des systemeigenen Formats (**-n**) in der Befehlszeile. Für jede Eingabeaufforderung wird ein Standardwert in eckigen Klammern angezeigt: [*Standard*]. Durch Drücken der EINGABETASTE wird der angezeigte Standardwert übernommen. Wenn Sie einen Wert angeben möchten, der vom Standardwert abweicht, geben Sie den neuen Wert an der Eingabeaufforderung ein.  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die `bcp` Befehl für das Exportieren von Daten aus der `HumanResources.myTeam` -Tabelle interaktiv in die `myTeam.txt` Datei. Bevor Sie das Beispiel ausführen können, müssen Sie diese Tabelle erstellen. Informationen zu dieser Tabelle und zum Erstellen der Tabelle finden Sie unter [HumanResources.myTeam-Beispieltabelle &#40;SQL Server&#41;](humanresources-myteam-sample-table-sql-server.md).  
   
- Der Befehl gibt weder eine Formatdatei noch einen Datentyp verursacht `bcp` Datenformat Informationen aufgefordert. Geben Sie an der Eingabeaufforderung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Folgendes ein:  
+ Der Befehl gibt weder eine Formatdatei noch einen Datentyp verursacht `bcp` zur Eingabe von Datenformatinformationen auffordert. Geben Sie an der Eingabeaufforderung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Folgendes ein:  
   
 ```  
 bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T  
@@ -97,7 +96,7 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
  Gleichwertige Eingabeaufforderungen (soweit erforderlich) werden für jede Tabellenspalte angezeigt.  
   
 ##  <a name="FieldByFieldNonXmlFF"></a> Speichern von feldspezifischen Daten in einer Nicht-XML-Formatdatei  
- Nachdem alle der Tabelle Spalten angegeben wurden, die `bcp` -Befehl gefragt, ob optional eine nicht-XML-Formatdatei generiert werden, in dem der Feld-nach-Feld Informationen gerade eingegebenen (siehe vorheriges Beispiel) gespeichert. Wenn Sie eine Formatdatei generieren, können Sie diese beim Exportieren von Daten aus dieser Tabelle oder Importieren identisch strukturierter Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwenden.  
+ Nachdem alle der Tabelle Spalten angegeben wurden, die `bcp` Befehl fordert Sie auf das optional eine nicht-XML-Formatdatei generiert werden soll, in dem die Feld-nach-Feld Informationen gerade eingegebenen (siehe vorheriges Beispiel) gespeichert. Wenn Sie eine Formatdatei generieren, können Sie diese beim Exportieren von Daten aus dieser Tabelle oder Importieren identisch strukturierter Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwenden.  
   
 > [!NOTE]  
 >  Mithilfe der Formatdatei können Sie Daten aus der Datendatei in eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] massenimportieren oder Daten aus der Tabelle massenexportieren, ohne das Format erneut angeben zu müssen. Weitere Informationen finden Sie unter [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md).  

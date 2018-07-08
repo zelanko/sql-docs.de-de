@@ -1,5 +1,5 @@
 ---
-title: Sequence Clustering-Cluster ", Registerkarte" Übergang "(Miningmodell-Viewer) | Microsoft Docs
+title: Sequence Clustering-Cluster-Übergang (Registerkarte) (Miningmodell-Viewer) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.transition.f1
 ms.assetid: 40aef457-d69f-4905-a2d3-924c37bd3d97
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d9895e00405c4ebe6bc684c3c2b3acc4e2704478
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 307f14f06354195147f32cbcf338d4b04e852b9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057630"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156881"
 ---
 # <a name="sequence-clustering-cluster-transition-tab-mining-model-viewer"></a>Registerkarte "Sequenzcluster/Clusterübergang" (Miningmodell-Viewer)
   Die Registerkarte **Statusübergänge** im **Microsoft Sequence Cluster-Viewer** bietet eine detailliertere Ansicht der Übergänge zwischen Attribut/Wert-Paaren oder Status im ausgewählten Cluster.  
@@ -31,13 +31,13 @@ ms.locfileid: "36057630"
  **Weitere Informationen:** [Microsoft Sequence Clustering-Algorithmus](data-mining/microsoft-sequence-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Sequence Cluster-Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>Tastatur  
- **Viewerinhalt**  
+ **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
  **Miningmodell**  
  Wählen Sie ein anzuzeigendes, in der aktuellen Miningstruktur enthaltenes Miningmodell aus. Das Miningmodell wird im dazugehörigen Viewer geöffnet.  
   
- **Ereignisanzeige**  
+ **Viewer**  
  Wählen Sie den Viewer aus, der zum Durchsuchen des ausgewählten Miningmodells verwendet werden soll. Sie können den benutzerdefinierten Viewer oder den **Microsoft Generic Content Tree Viewer**verwenden. Sie können auch Plug-In-Viewer verwenden, falls diese verfügbar sind.  
   
  **Vergrößern**  

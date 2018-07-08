@@ -1,5 +1,5 @@
 ---
-title: Der Assistent (Datamining-Assistent) | Microsoft Docs
+title: Der Assistent (Datamining-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.finish.f1
 ms.assetid: 6aef1548-35eb-42fd-ae87-63650a79eda1
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1d013993f9a8e99898b78cfa520c474c788ac294
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 729d594d2ab714770ec168a347e044aa968d9865
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049830"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278426"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>Abschließen des Assistenten (Data Mining-Assistent)
   Überprüfen Sie mithilfe der Seite **Assistenten abschließen** die Miningstruktur, die beim Beenden des Assistenten angelegt wird. Sie können auch den Namen der Miningstruktur festlegen.  
@@ -37,7 +37,7 @@ ms.locfileid: "36049830"
  **Miningstrukturname**  
  Geben Sie den Namen der Miningstruktur ein, der vom **Data Mining-Assistenten**definiert wurde.  
   
- **Name des Miningmodells**  
+ **Miningmodellname**  
  Geben Sie den Namen des Miningmodells ein, das vom **Data Mining-Assistenten**definiert wurde.  
   
  **Drillthrough zulassen**  
@@ -65,7 +65,7 @@ ms.locfileid: "36049830"
   
 ## <a name="see-also"></a>Siehe auch  
  [Data Mining-Assistent F1-Hilfe &#40;Analysis Services – Datamining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Wählen Sie die Datenquellensicht &#40;Datamining-Assistenten&#41;](select-data-source-view-data-mining-wizard.md)   
- [Geben Sie die Trainingsdaten &#40;Datamining-Assistenten&#41;](specify-the-training-data-data-mining-wizard.md)  
+ [Wählen Sie die Datenquellensicht &#40;Datamining-Assistent&#41;](select-data-source-view-data-mining-wizard.md)   
+ [Geben Sie die Trainingsdaten &#40;Datamining-Assistent&#41;](specify-the-training-data-data-mining-wizard.md)  
   
   

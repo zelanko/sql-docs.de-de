@@ -1,12 +1,12 @@
 ---
-title: Abrufen und Aktualisieren von Rowsets (ODBC) | Microsoft Docs
+title: Abrufen und Aktualisieren von Rowsets (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 21332634d99b44ba974f5f70fa77d0fafb1ab68e
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 364647bdd5fe1d5c28a2dce9d1a105d908470d76
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697181"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413099"
 ---
 # <a name="fetch-and-update-rowsets-odbc"></a>Abfragen und Aktualisieren von Rowsets (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "35697181"
   
      Bei der Verwendung von ungebundenen Spalten rufen Sie für jede Zeile [SQLSetPos](http://go.microsoft.com/fwlink/?LinkId=58407) mit SQL_POSITION auf, um die Cursorposition festzulegen. Gehen Sie anschließend bei jeder ungebundenen Spalte wie folgt vor:  
   
-    -   Rufen Sie [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) ein- oder mehrmals zum Abrufen der Daten für ungebundene Spalten nach der letzten Spalte des Rowsets gebundenen. Aufrufe von [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) sollte in der Reihenfolge der spaltenzahlfolge sein.  
+    -   Rufen Sie [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) einmal oder mehrmals zum Abrufen der Daten für ungebundene Spalten nach der letzten Spalte des Rowsets gebundenen. Aufrufe von [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) sollte in der Reihenfolge zunehmender spaltenzahlfolge sein.  
   
     -   Rufen Sie [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) mehrere Male auf, um Daten aus einer text- oder image-Spalte abzurufen.  
   
@@ -48,9 +48,9 @@ ms.locfileid: "35697181"
   
      Data-at-Execution-text- oder Data-at-Execution-image-Spalten, die zum Aktualisieren oder Hinzufügen verwendet werden, müssen verarbeitet werden.  
   
-6.  Führen Sie optional eine positionierte Update- oder DELETE-Anweisung, dabei den Cursornamen angeben (Nächten [SQLGetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md)) und ein anderes Anweisungshandle über dieselbe Verbindung verwenden.  
+6.  Führen Sie wahlweise eine positionierte Update- oder DELETE-Anweisung, dabei den Cursornamen angeben (verfügbar über [SQLGetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md)) und ein anderes Anweisungshandle für dieselbe Verbindung verwenden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Cursor Gewusst-wie-Themen zum Verwenden von &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
+ [Verwenden von Cursorn Gewusst-wie-Themen &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
   
   

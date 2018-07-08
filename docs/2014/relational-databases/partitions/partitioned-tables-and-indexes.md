@@ -5,26 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partitioned tables [SQL Server], about partitioned tables
 - partitioned indexes [SQL Server], architecture
 - partitioned tables [SQL Server], architecture
 - partitioned indexes [SQL Server], about partitioned indexes
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
-caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d3c7b474881c87f38211832eb5eb1e68f3b415b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 85627a122c87c3065fe0bbcd5bfc5cd246a77c9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046879"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154261"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die Tabellen- und Indexpartitionierung. Die Daten partitionierter Tabellen und Indizes werden in Einheiten aufgeteilt, die über mehrere Dateigruppen in einer Datenbank verteilt sein können. Die Daten werden horizontal partitioniert, sodass Gruppen von Zeilen einzelnen Partitionen zugeordnet werden. Alle Partitionen eines einzelnen Indexes oder einer Tabelle müssen sich in der gleichen Datenbank befinden. Die Tabelle oder der Index wird als einzelne logische Entität behandelt, wenn Abfragen oder Aktualisierungen für die Daten ausgeführt werden. Partitionierte Tabellen und Indizes sind nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar. Eine Liste der Funktionen, die von den Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt werden, finden Sie unter [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -49,13 +47,13 @@ ms.locfileid: "36046879"
  Die folgenden Begriffe beziehen sich auf die Tabellen- und Indexpartitionierung.  
   
  Partitionsfunktion  
- Ein Datenbankobjekt, das definiert, wie die Zeilen einer Tabelle oder eines Index basierend auf den Werten bestimmter Spalten, den sogenannten Partitionierungsspalten, einem Satz von Partitionen zugeordnet werden. Das heißt, die Partitionsfunktion definiert die Anzahl von Partitionen, über die die Tabelle verfügt, und wie die Begrenzungen der Partitionen definiert werden. Beispielsweise verfügen über eine Tabelle, die Verkaufsauftragsdaten enthält, Sie wollen Partitionieren der Tabelle in zwölf (monatliche) Partitionen auf Grundlage einer `datetime` Spalte z. B. Verkaufsdatum.  
+ Ein Datenbankobjekt, das definiert, wie die Zeilen einer Tabelle oder eines Index basierend auf den Werten bestimmter Spalten, den sogenannten Partitionierungsspalten, einem Satz von Partitionen zugeordnet werden. Das heißt, die Partitionsfunktion definiert die Anzahl von Partitionen, über die die Tabelle verfügt, und wie die Begrenzungen der Partitionen definiert werden. Beispielsweise verfügen über eine Tabelle, die Verkaufsauftragsdaten enthält, Sie sollten zum Partitionieren der Tabelle in zwölf (monatliche) Partitionen auf Grundlage einer `datetime` Spalte z. B. Verkaufsdatum.  
   
  Partitionsschema  
  Ein Datenbankobjekt, das die Partitionen einer Partitionsfunktion Dateigruppen zuordnet. Der wichtigste Grund dafür, dass Partitionen in separaten Dateigruppen platziert werden, besteht darin, sicherzustellen, dass Sie Sicherungsvorgänge unabhängig für Partitionen ausführen können. Dies liegt daran, dass Sie Sicherungen für einzelne Dateigruppen ausführen können.  
   
  Partitionierungsspalte  
- Die Spalte einer Tabelle oder eines Indexes, die von einer Partitionsfunktion zum Partitionieren der Tabelle oder des Indexes verwendet wird. Berechnete Spalten, die in eine Partitionsfunktion einbezogen werden, müssen explizit als PERSISTED gekennzeichnet sein. Alle Datentypen, die für gültig sind verwenden als Indexspalten als Partitionierungsspalte außer verwendet werden können `timestamp`. Die Datentypen `ntext`, `text`, `image`, `xml`, `varchar(max)`, `nvarchar(max)` oder `varbinary(max)` können nicht angegeben werden. Zudem können der benutzerdefinierte CLR-Typ (Common Language Runtime) von Microsoft .NET Framework und die Spalten mit dem Aliasdatentyp nicht angegeben werden.  
+ Die Spalte einer Tabelle oder eines Indexes, die von einer Partitionsfunktion zum Partitionieren der Tabelle oder des Indexes verwendet wird. Berechnete Spalten, die in eine Partitionsfunktion einbezogen werden, müssen explizit als PERSISTED gekennzeichnet sein. Alle Datentypen, die für ungültig zu verwenden, wie Sie Indexspalten außer als Partitionierungsspalte verwendet werden können `timestamp`. Die Datentypen `ntext`, `text`, `image`, `xml`, `varchar(max)`, `nvarchar(max)` oder `varbinary(max)` können nicht angegeben werden. Zudem können der benutzerdefinierte CLR-Typ (Common Language Runtime) von Microsoft .NET Framework und die Spalten mit dem Aliasdatentyp nicht angegeben werden.  
   
  Ausgerichteter Index  
  Ein Index, der auf dem gleichen Partitionsschema wie die zugehörige Tabelle aufbaut. Wenn eine Tabelle und ihre Indizes aneinander ausgerichtet sind, kann SQL Server schnell zwischen Partitionen wechseln und gleichzeitig die Partitionsstruktur sowohl der Tabelle als auch ihrer Indizes beibehalten. Ein Index muss nicht an derselben benannten Partitionsfunktion beteiligt sein, um an ihrer Basistabelle ausgerichtet zu sein. Allerdings muss die Partitionsfunktion des Indexes und der Basistabelle im Wesentlichen übereinstimmen, und zwar dahingehend, dass 1) die Argumente der Partitionsfunktionen denselben Datentyp haben, dass sie 2) dieselbe Anzahl von Partitionen definieren und dass sie 3) dieselben Begrenzungswerte für Partitionen definieren.  

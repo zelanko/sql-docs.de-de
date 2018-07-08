@@ -1,12 +1,12 @@
 ---
-title: Bcp_columns | Microsoft Docs
+title: Bcp_columns | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,18 +22,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 16fc9e7451f5b667e4418495cc615256b58eb5e5
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 6242de14538df8897cc7230d04afd9a81de68e65
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702711"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413719"
 ---
 # <a name="bcpcolumns"></a>bcp_columns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Legt die Gesamtanzahl der Spalten fest, die in der Benutzerdatei gefunden wurden und mit einem Massenkopiervorgang in oder aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden sollen. [Bcp_setbulkmode](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md) anstelle Bcp_columns verwendet werden können und [Bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md).  
+  Legt die Gesamtanzahl der Spalten fest, die in der Benutzerdatei gefunden wurden und mit einem Massenkopiervorgang in oder aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden sollen. [Bcp_setbulkmode](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md) anstelle von Bcp_columns verwendet werden können und [Bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,7 +49,7 @@ RETCODE bcp_columns (
  Das für den Massenkopiervorgang aktivierte ODBC-Verbindungshandle.  
   
  *nColumns*  
- Die Gesamtzahl der Spalten in der Benutzerdatei. Auch wenn Sie zum Massenkopieren von Daten aus der Benutzerdatei zum Vorbereiten einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle und nicht alle Spalten in der Benutzerdatei kopieren möchten, müssen Sie immer noch festlegen *nColumns* auf die Gesamtzahl der benutzerdateispalten.  
+ Die Gesamtzahl der Spalten in der Benutzerdatei. Auch wenn Sie zum Massenkopieren von Daten aus der Benutzerdatei zum Vorbereiten einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle und nicht alle Spalten in der Benutzerdatei kopieren möchten, müssen Sie immer noch festlegen *nColumns* die Gesamtzahl der benutzerdateispalten.  
   
 ## <a name="returns"></a>Rückgabewert  
  SUCCEED oder FAIL.  
@@ -57,7 +57,7 @@ RETCODE bcp_columns (
 ## <a name="remarks"></a>Hinweise  
  Diese Funktion kann aufgerufen werden, erst nach dem [Bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) mit einem gültigen Dateinamen aufgerufen wurde.  
   
- Sie sollten diese Funktion nur aufrufen, wenn Sie ein Benutzerdateiformat verwenden möchten, das sich vom Standardformat unterscheidet. Weitere Informationen über eine Beschreibung des Benutzer-Standardformats für finden Sie unter **Bcp_init**.  
+ Sie sollten diese Funktion nur aufrufen, wenn Sie ein Benutzerdateiformat verwenden möchten, das sich vom Standardformat unterscheidet. Weitere Informationen zu der eine Beschreibung des Benutzer-Standardformats für, finden Sie unter **Bcp_init**.  
   
  Nach dem Aufruf **Bcp_columns**, rufen Sie [Bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) für jede Spalte in der Benutzerdatei, um benutzerdefinierte Dateiformat vollständig zu definieren.  
   

@@ -1,5 +1,5 @@
 ---
-title: Data Mining-Abfrageschnittstellen | Microsoft Docs
+title: Data Mining Abfrageschnittstellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - predictions [Analysis Services], DMX prediction queries
 - predictions [DMX]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], DMX
 ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ee9db3934e1f9f89a4bbbb292a4dcea4bc7b7bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 07641be25c1e7828238ea4a6dd897240651735ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046802"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159651"
 ---
 # <a name="data-mining-query-interfaces"></a>Schnittstellen für Data Mining-Abfragen
   Data Mining-Abfragen basieren auf der DMX (Data Mining Extensions)-Programmiersprache. Sie verwenden DMX für alle Vorhersage- und Modellierungstasks, einschließlich Klassifizierung, Risikoanalyse, Generierung von Empfehlungen und linearer Regression. Sie können auch die Muster und die Statistiken abrufen, die beim Verarbeiten des Modells generiert wurden.  
@@ -62,7 +62,7 @@ ms.locfileid: "36046802"
 ###  <a name="bkmk_Builder"></a> Generator für Vorhersageabfragen  
  Der Generator für Vorhersageabfragen befindet sich auf der Registerkarte **Miningmodellvorhersage** des Data Mining-Designers, der sowohl in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]als auch in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]verfügbar ist.  
   
- Wenn Sie den Generator verwenden, können Sie mithilfe grafischer Tools ein Miningmodell auswählen und neue Falldaten sowie Vorhersagefunktionen hinzufügen. Der Generator für Vorhersageabfragen umfasst, einem Text-Editor, die Sie verwenden können, um die Abfrage manuell ändern und eine einfache **Ergebnisse** Bereich, um die Ergebnisse der Abfrage anzuzeigen.  
+ Wenn Sie den Generator verwenden, können Sie mithilfe grafischer Tools ein Miningmodell auswählen und neue Falldaten sowie Vorhersagefunktionen hinzufügen. Der Generator für Vorhersageabfragen umfasst einen Text-Editor, die Sie verwenden können, um die Abfrage manuell ändern und ein einfaches **Ergebnisse** Bereich, um die Ergebnisse der Abfrage anzuzeigen.  
   
 ###  <a name="bkmk_QueryEditor"></a> Abfrage-Editor  
  Im Abfrage-Editor [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] bietet Tools, die Sie zum Erstellen und Ausführen von DMX-Abfragen verwenden können. Sie können eine Verbindung mit einer Instanz von SQL Server Analysis Services herstellen und anschließend eine Datenbank, Miningstrukturspalten und ein Miningmodell auswählen. Der **Metadaten-Explorer** enthält eine durchsuchbare Liste mit Vorhersagefunktionen.  
@@ -97,8 +97,8 @@ ms.locfileid: "36046802"
 ## <a name="see-also"></a>Siehe auch  
  [Datamining-Erweiterungen &#40;DMX&#41; Verweis](/sql/dmx/data-mining-extensions-dmx-reference)   
  [Datamining-Lösungen](data-mining-solutions.md)   
- [Grundlegendes zur Select-Anweisung von DMX](/sql/dmx/understanding-the-dmx-select-statement)   
- [Struktur und die Verwendung von DMX-Vorhersageabfragen](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)   
+ [Verstehen die DMX Select-Anweisung](/sql/dmx/understanding-the-dmx-select-statement)   
+ [Struktur und Verwendung von DMX-Vorhersageabfragen](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)   
  [Erstellen einer Vorhersageabfrage mithilfe des Generators für Vorhersageabfragen](create-a-prediction-query-using-the-prediction-query-builder.md)   
  [Erstellen einer DMX-Abfrage in SQL Server Management Studio](create-a-dmx-query-in-sql-server-management-studio.md)  
   

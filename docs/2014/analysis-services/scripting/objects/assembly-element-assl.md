@@ -1,5 +1,5 @@
 ---
-title: Assembly-Element (ASSL) | Microsoft Docs
+title: Assembly-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Assembly element [ASSL]
 ms.assetid: 1910ccb0-7da0-4ee1-9548-ad6e0068d23d
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 02bc362fd633a7c3cf9fcd4936d2a0580753c01b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38c14744eaebba8e618c7c200341c447393ce773
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048839"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151441"
 ---
 # <a name="assembly-element-assl"></a>Assembly-Element (ASSL)
-  Stellt eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Assembly oder einer COM-dynamic Link Library (DLL) zugeordnet eine [Server](server-element-assl.md) Element oder ein [Datenbank](database-element-assl.md) Element.  
+  Stellt eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Assembly oder eine COM-dynamic Link Library (DLL) zugeordnet eine [Server](server-element-assl.md) Element oder ein [Datenbank](database-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36048839"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.Assembly>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.Assembly>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Server-Element &#40;ASSL&#41;](server-element-assl.md)   

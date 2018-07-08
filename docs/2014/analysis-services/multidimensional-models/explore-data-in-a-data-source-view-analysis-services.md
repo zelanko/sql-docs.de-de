@@ -1,5 +1,5 @@
 ---
-title: Durchsuchen von Daten in einer Datenquellensicht (Analysis Services) | Microsoft Docs
+title: Durchsuchen von Daten in einer Datenquellensicht (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - exploring data [Analysis Services]
 - data source views [Analysis Services], exploring data
 - viewing source data
 ms.assetid: 2c922c35-fbcb-45b2-96b1-c7a846d8b419
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e4fcb284eeb85b820ce0a194787337fa51e9e345
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 22d8f26a22f2cda64a6a9999ce4a2a730e4e5c06
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056587"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183459"
 ---
 # <a name="explore-data-in-a-data-source-view-analysis-services"></a>Durchsuchen von Daten in einer Datenquellensicht (Analysis Services)
   Sie können das Dialogfeld **Daten durchsuchen** im Datenquellensicht-Designer von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] verwenden, um Daten für eine Tabelle, eine Sicht oder eine benannte Abfrage in einer Datenquellensicht (data source view; DSV) zu durchsuchen. Wenn Sie die Daten im Datenquellensicht-Designer durchsuchen, können Sie den Inhalt jeder Datenspalte in einer ausgewählten Tabelle, Sicht oder benannten Abfrage anzeigen. Das Anzeigen des tatsächlichen Inhalts hilft Ihnen, zu bestimmen, ob alle Spalten benötigt werden, ob benannte Berechnungen erforderlich sind, um Benutzerfreundlichkeit und Zweckmäßigkeit zu erhöhen, und ob vorhandene benannte Berechnungen oder benannte Abfragen die erwarteten Werte zurückgeben.  
@@ -42,7 +42,7 @@ ms.locfileid: "36056587"
   
 3.  Klicken Sie mit der rechten Maustaste auf die Tabelle, Sicht oder benannte Abfrage, die die anzuzeigenden Daten enthält, und klicken Sie anschließend auf **Daten durchsuchen**.  
   
-     Die Datenquelle zugrunde liegenden der Tabelle, Sicht oder benannten Abfrage in der Datenquellensicht handelt es sich Abfragen und die Ergebnisse werden in der **Durchsuchen \<Objektname > Tabelle** Registerkarte.  
+     Die Datenquelle des zugrunde liegenden Tabelle, Ansicht oder benannten Abfrage in der Datenquellensicht sind Abfragen, und die Ergebnisse werden in der **Durchsuchen \<Objektname > Tabelle** Registerkarte.  
   
 4.  Auf der **Durchsuchen \<Objektname > Tabelle** -Symbolleiste klicken Sie auf die **Samplingoptionen** Symbol.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36056587"
   
 5.  Klicken Sie nach Bedarf auf **OK** oder **Abbrechen** .  
   
-6.  Um die Daten neu berechnen, klicken Sie auf **Resample Daten** auf die **Durchsuchen \<Objektname > Tabelle** Symbolleiste.  
+6.  Um die Daten erneut einlesen, klicken Sie auf **Resample Daten** auf die **Durchsuchen \<Objektname > Tabelle** Symbolleiste.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenquellsichten in mehrdimensionalen Modellen](data-source-views-in-multidimensional-models.md)  

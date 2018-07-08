@@ -1,5 +1,5 @@
 ---
-title: Spaltenaliase in ORDER BY-Klausel können nicht vom Tabellenalias als Präfix | Microsoft Docs
+title: Spaltenaliase in ORDER BY-Klausel können nicht vom Tabellenalias als Präfix | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - aliases [SQL Server], columns
 ms.assetid: fee7328f-6e8d-4005-930b-56fb6f17e0b2
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 18c65604efb2d1b0ff93d09b8d03f7ee6cb213cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bb0c12c4112383599b3f6ec67c7a097563a5944c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057526"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210710"
 ---
 # <a name="column-aliases-in-order-by-clause-cannot-be-prefixed-by-table-alias"></a>Spaltenaliase in ORDER BY-Klauseln können nicht vom Tabellenalias als Präfix verwendet werden
   In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher können Spaltenaliase in ORDER BY-Klauseln nicht vom Tabellenalias als Präfix verwendet werden.  
@@ -75,7 +75,7 @@ ORDER BY p.LastName
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenbank-Engine-Upgradeprobleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [Datenbank-Engine-Upgrade-Probleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

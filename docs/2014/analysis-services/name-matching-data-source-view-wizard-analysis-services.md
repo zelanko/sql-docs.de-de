@@ -1,5 +1,5 @@
 ---
-title: Benennen Sie übereinstimmende (Datenquellensicht-Assistenten) (Analysis Services) | Microsoft Docs
+title: Benennen Sie die entsprechenden (Datenquellensicht-Assistenten) (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.namematchingcriteria.f1
 ms.assetid: 7f811e02-0fe6-45c9-a7b7-29c61032d96b
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fcb6d01f55b450326efdea81d48135088d57fc3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 258b23cc260ea4d31296aa00964138df399da516
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058187"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155381"
 ---
 # <a name="name-matching-data-source-view-wizard-analysis-services"></a>Namensübereinstimmung (Datenquellensicht-Assistent) (Analysis Services)
   Mithilfe der Seite **Namensübereinstimmung** können Sie das Kriterium auswählen, das zum Ermitteln möglicher Beziehungen zwischen den für die Datenquellensicht ausgewählten Tabellen und den anderen Tabellen im Schema verwendet wird. Wenn keine physischen Fremdschlüsselbeziehungen zwischen den Tabellen vorhanden sind, hilft dieses Kriterium dabei, verwandte Tabellen zu kennzeichnen und der Datenquellensicht hinzuzufügen. Die logischen Beziehungen, die durch die Namensübereinstimmung identifiziert sind, werden ebenfalls der Datenquellensicht hinzugefügt.  

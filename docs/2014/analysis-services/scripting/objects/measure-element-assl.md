@@ -1,5 +1,5 @@
 ---
-title: Measure-Element (ASSL) | Microsoft Docs
+title: Measure-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Measure element
 ms.assetid: 4c2c2ed1-7f78-4564-982a-132f13bea36f
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: da78700e32c81dab11d6609ca4aa12efd2204bcb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 80d59a5356bf1c0b5712e729f230fff9383603cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046768"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159331"
 ---
 # <a name="measure-element-assl"></a>Measure-Element (ASSL)
   Definiert ein Measure.  
@@ -90,23 +90,23 @@ ms.locfileid: "36046768"
   
 |Vorgänger oder übergeordnetes Element|Untergeordnete Elemente|  
 |------------------------|--------------------|  
-|[MeasureGroup](../properties/aggregatefunction-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [BackColor](../properties/backcolor-element-assl.md), [DataType](../properties/datatype-element-assl.md), [Description](../properties/description-element-assl.md), [DisplayFolder](../properties/displayfolder-element-assl.md), [FontFlags](../properties/fontflags-element-assl.md), [FontName](../properties/name-element-assl.md), [FontSize](../properties/fontsize-element-assl.md), [ForeColor](../properties/forecolor-element-assl.md), [FormatString](../properties/formatstring-element-assl.md), [ID](../properties/id-element-assl.md), [MeasureExpression](../properties/expression-element-assl.md), [Name](../properties/name-element-assl.md), [Source](../properties/source-element-measure-assl.md), [Translations](../collections/translations-element-assl.md), [Visible](../properties/visible-element-assl.md)|  
+|[MeasureGroup](../properties/aggregatefunction-element-assl.md), [Anmerkungen](../collections/annotations-element-assl.md), [BackColor](../properties/backcolor-element-assl.md), [DataType](../properties/datatype-element-assl.md), [Beschreibung](../properties/description-element-assl.md), [DisplayFolder ](../properties/displayfolder-element-assl.md), [FontFlags](../properties/fontflags-element-assl.md), [FontName](../properties/name-element-assl.md), [FontSize](../properties/fontsize-element-assl.md), [ForeColor](../properties/forecolor-element-assl.md), [FormatString ](../properties/formatstring-element-assl.md), [ID](../properties/id-element-assl.md), [MeasureExpression](../properties/expression-element-assl.md), [Namen](../properties/name-element-assl.md), [Quelle](../properties/source-element-measure-assl.md), [Übersetzungen](../collections/translations-element-assl.md), [Sichtbar](../properties/visible-element-assl.md)|  
 |Alle sonstigen|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
  Bindungsdetails können für ein Measure bereitgestellt werden. Diese Details fungieren dann als Standard pro Partition.  
   
- In größeren Cubes gibt es möglicherweise Hunderte von Measures und Hierarchien. Die `DisplayFolder` Eigenschaft definiert die benutzerdarstellung auf dem Client. Der Wert, der die `DisplayFolder` Eigenschaft kann eine der folgenden Optionen enthalten:  
+ In größeren Cubes gibt es möglicherweise Hunderte von Measures und Hierarchien. Die `DisplayFolder` -Eigenschaft definiert die benutzerdarstellung auf dem Client. Der Wert des der `DisplayFolder` Eigenschaft kann eine der folgenden Optionen enthalten:  
   
 -   Kann leer sein, wobei angegeben wird, dass das Measure nicht zu einem Ordner gehört.  
   
 -   Kann einen einzelnen Ordnernamen enthalten, wobei angegeben wird, dass das Measure als zu einem Ordner mit diesem Namen gehörend gerendert werden sollte.  
   
--   Kann mehrere Ordnernamen getrennt durch einen umgekehrten Schrägstrich enthalten (\\), wobei eine eingebettete Ordnerhierarchie angegeben wird.  
+-   Kann mehrere Ordnernamen an, getrennt durch einen umgekehrten Schrägstrich enthalten (\\), die eine eingebettete Ordnerhierarchie angibt.  
   
  Die `DisplayFolder`-Eigenschaft gilt auch für berechnete Measures und Hierarchien.  
   
- Die entsprechenden Elemente im Objektmodell von Analysis Management Objects (AMO) sind <xref:Microsoft.AnalysisServices.Measure> und <xref:Microsoft.AnalysisServices.PerspectiveMeasure>.  
+ Die entsprechenden Elemente im Analysis Management Objects (AMO)-Objektmodell sind <xref:Microsoft.AnalysisServices.Measure> und <xref:Microsoft.AnalysisServices.PerspectiveMeasure>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Objekte &#40;ASSL&#41;](objects-assl.md)  

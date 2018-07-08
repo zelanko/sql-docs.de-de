@@ -1,5 +1,5 @@
 ---
-title: Data Mining-Schemarowsets | Microsoft Docs
+title: Data Mining-Schemarowsets | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - data mining [Analysis Services], schema rowsets
 ms.assetid: bd7d5df5-500b-4159-8467-880e141bc043
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9302e8dbafd31f4efb3b053ea5247f2b860dc8bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1a3b3e54f53eb93ea58a45c92e88503a186a441f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057292"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210050"
 ---
 # <a name="data-mining-schema-rowsets"></a>Data Mining Schema Rowsets
-  Ein Server mit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] unterstützt folgende Data mining-Schemarowsets. Verwenden Sie zum Überprüfen, ob ein bestimmter XML/A-Anbieter ein bestimmtes Rowset unterstützt die [DISCOVER_ENUMERATORS](../xml/discover-enumerators-rowset.md) Rowset mit der [Discover](../../xmla/xml-elements-methods-discover.md) Methode.  
+  Ein Server mit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] unterstützt folgende Data mining-Schemarowsets. Verwenden Sie zum Überprüfen, ob ein bestimmter XML/A-Anbieter ein bestimmtes Rowset unterstützt die [DISCOVER_ENUMERATORS](../xml/discover-enumerators-rowset.md) Rowset mit der [ermitteln](../../xmla/xml-elements-methods-discover.md) Methode.  
   
- In [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]werden die Data mining Schema Rowsets als Tabellen in der Transact-SQL-Sprache im Schema $SYSTEM verfügbar gemacht werden. Die folgende Abfrage einer Analysis Services-Instanz gibt eine Liste der Schemas zurück, die auf der aktuellen Instanz verfügbar sind.  
+ In [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]werden die Data mining Schema Rowsets als Tabellen in der Transact-SQL-Sprache, in dem Schema $SYSTEM verfügbar gemacht werden. Die folgende Abfrage einer Analysis Services-Instanz gibt eine Liste der Schemas zurück, die auf der aktuellen Instanz verfügbar sind.  
   
 ```  
 SELECT * FROM [$system].[DBSCHEMA_TABLES]  
@@ -54,11 +54,11 @@ SELECT * FROM [$system].[DBSCHEMA_TABLES]
 |[DMSCHEMA_MINING_STRUCTURE_COLUMNS-Rowset](dmschema-mining-structure-columns-rowset.md)|Beschreibt die einzelnen Spalten aller Data Mining-Strukturen, die auf dem Server verteilt werden.|  
 |[DMSCHEMA_MINING_STRUCTURES-Rowset](dmschema-mining-structures-rowset.md)|Listet Informationen zu Miningstrukturen auf.|  
   
- Alle hier aufgeführten Rowsets werden unterstützt, durch den Server mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ Alle hier aufgeführten Schemarowsets werden vom Server unterstützt, die ausgeführt wird [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services-Schemarowsets](../../schema-rowsets/analysis-services-schema-rowsets.md)   
- [Abfragen der SQL Server-Systemkatalogs](https://technet.microsoft.com/en-us/library/ms189082\(v=sql.110\).aspx)   
+ [Abfragen des SQL Server-Systemkatalogs](https://technet.microsoft.com/en-us/library/ms189082\(v=sql.110\).aspx)   
  [Abfragen der Data Mining-Schemarowsets &#40;Analysis Services – Datamining&#41;](../../data-mining/data-mining-schema-rowsets-ssas.md)  
   
   

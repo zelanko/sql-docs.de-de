@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10226"
 - "10264"
@@ -159,15 +159,15 @@ f1_keywords:
 - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8bf2cca5f2d87f6404555f170272cc18e244d2ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ae0eda9c82e610289c6fad858578aaac440bbb7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056880"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150281"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Messgeräte (Berichts-Generator und SSRS)
   Der Messgerätdatenbereich ist ein eindimensionaler Datenbereich, der einen einzelnen Wert im Dataset anzeigt. Einzelne Messgeräte werden stets in einem Messgerätbereich positioniert, dem untergeordnete oder benachbarte Messgeräte hinzugefügt werden können. Mithilfe des Messgerätbereichs können Sie mehrere Messgeräte in einem Messgerätbereich mit einheitlichen Funktionen wie Filtern, Gruppieren oder Sortieren erstellen.  
@@ -247,7 +247,7 @@ ms.locfileid: "36056880"
 -   Klicken Sie mit der rechten Maustaste auf den Messgerätzeiger, und wählen Sie **Zeigereigenschaften**aus. Für `Value`, ein Feld aus der Dropdownliste auswählen oder definieren Sie einen Feldausdruck, indem Sie auf die **Ausdruck** (*fx*) Schaltfläche.  
   
 ### <a name="aggregating-fields-into-a-single-value"></a>Aggregieren von Feldern in einen einzelnen Wert  
- Wenn einem Messgerät ein Feld hinzugefügt wird [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] standardmäßig ein Aggregat für das Feld berechnet. Numerische Datentypen werden mit der SUM-Funktion aggregiert. Nicht numerische Datentypen werden mit der COUNT-Funktion aggregiert, die die Anzahl der Instanzen für einen bestimmten Wert oder ein bestimmtes Feld im Dataset bzw. in der Gruppe zählt. Wenn der Datentyp des Wertefelds String lautet, kann das Messgerät keinen numerischen Wert anzeigen, selbst wenn sich in den Feldern Zahlen befinden. Stattdessen aggregiert das Messgerät Felder vom Typ String mithilfe der COUNT-Funktion. Zur Vermeidung dieses Verhaltens sollten Sie sicherstellen, dass die verwendeten Felder numerische Datentypen und keine Zeichenfolgen mit formatierten Zahlen aufweisen. Mit einem Visual Basic-Ausdruck können Sie Zeichenfolgenwerte mithilfe der CDbl-Konstante oder der CInt-Konstante in einen numerischen Datentyp konvertieren. Mit dem folgenden Ausdruck wird beispielsweise ein Zeichenfolgenfeld mit dem Namen MyField in numerische Werte konvertiert.  
+ Wenn einem Messgerät ein Feld hinzugefügt wird [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ein Aggregat für das Feld in der Standardeinstellung berechnet. Numerische Datentypen werden mit der SUM-Funktion aggregiert. Nicht numerische Datentypen werden mit der COUNT-Funktion aggregiert, die die Anzahl der Instanzen für einen bestimmten Wert oder ein bestimmtes Feld im Dataset bzw. in der Gruppe zählt. Wenn der Datentyp des Wertefelds String lautet, kann das Messgerät keinen numerischen Wert anzeigen, selbst wenn sich in den Feldern Zahlen befinden. Stattdessen aggregiert das Messgerät Felder vom Typ String mithilfe der COUNT-Funktion. Zur Vermeidung dieses Verhaltens sollten Sie sicherstellen, dass die verwendeten Felder numerische Datentypen und keine Zeichenfolgen mit formatierten Zahlen aufweisen. Mit einem Visual Basic-Ausdruck können Sie Zeichenfolgenwerte mithilfe der CDbl-Konstante oder der CInt-Konstante in einen numerischen Datentyp konvertieren. Mit dem folgenden Ausdruck wird beispielsweise ein Zeichenfolgenfeld mit dem Namen MyField in numerische Werte konvertiert.  
   
  `=Sum(CDbl(Fields!MyField.Value))`  
   
@@ -292,7 +292,7 @@ ms.locfileid: "36056880"
   
 -   [Hinzufügen eines Messgeräts zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](add-a-gauge-to-a-report-report-builder-and-ssrs.md)  
   
--   [Festlegen eines Mindestwerts oder maximal auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
+-   [Festlegen einer minimalen oder maximalen Wert auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
 -   [Festlegen ein Ausrichtungsintervalls auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](../set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs.md)  
   

@@ -1,14 +1,13 @@
 ---
-title: Verwenden des AlwaysOn-Dashboards (SQL Server Management Studio) | Microsoft Docs
+title: Verwenden des AlwaysOn-Dashboards (SQL Server Management Studio) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.agdashboard.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], dashboard
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 caps.latest.revision: 28
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 60d75f53c84d652b0d719ba73980cfbff6d08424
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 207f67602fd55e5186a64ba9b30df7230a35d1b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057337"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163521"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>Verwenden des AlwaysOn-Dashboards (SQL Server Management Studio)
   Datenbankadministratoren verwenden das AlwaysOn-Dashboard, um die Integrität einer AlwaysOn-Verfügbarkeitsgruppe und deren Verfügbarkeitsreplikaten und -datenbanken in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]in einer übersichtlichen Ansicht darzustellen. Einige der typischen Verwendungen für das AlwaysOn-Dashboard sind:  
@@ -65,7 +64,7 @@ ms.locfileid: "36057337"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert CONNECT-, VIEW SERVER STATE- und VIEW ANY DEFINITION-Berechtigungen.  
   
-##  <a name="SSMSProcedure"></a> So starten Sie die AlwaysOn-Dashboard  
+##  <a name="SSMSProcedure"></a> Um das AlwaysOn-Dashboard zu starten.  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] her, auf der das AlwaysOn-Dashboard ausgeführt werden soll.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Identifizieren von Schlüsselspalten mithilfe von SQL: Key-Feldern (SQLXML 4.0) | Microsoft Docs'
+title: 'Identifizieren von Schlüsselspalten mithilfe von SQL: Key-Feldern (SQLXML 4.0) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - key-fields annotation
 ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8ac5d70b4ab396fe8e2ed8e164a754197f6f8ec0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 7ea6dfe8fc312fe26803701838980e93d3bd7544
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056900"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184241"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Identifizieren von Schlüsselspalten mithilfe von sql:key-Feldern (SQLXML 4.0)
   Wenn eine XPath-Abfrage für ein XSD-Schema angegeben wird, ist die Schlüsselinformationen in den meisten Fällen erforderlich, um richtige Schachtelung im Ergebnis zu erhalten. Durch die Angabe der `sql:key-fields`-Anmerkung lässt sich sicherstellen, dass die entsprechende Hierarchie generiert wird.  
@@ -41,19 +41,19 @@ ms.locfileid: "36056900"
   
  Der Wert von `sql:key-fields` identifiziert die Spalte(n), welche die Zeilen in der Beziehung eindeutig identifiziert bzw. identifizieren. Wenn mehrere Spalten zur eindeutigen Identifizierung einer Zeile erforderlich sind, werden die Spaltenwerte jeweils durch ein Leerzeichen voneinander getrennt.  
   
- Verwenden Sie die `sql:key-fields` Anmerkung, wenn ein Element enthält eine  **\<SQL: Relationship >** , die zwischen dem Element und einem untergeordneten Element definiert ist, aber nicht den Primärschlüssel der Tabelle, die im angegebenen bereitstellt das übergeordnete Element.  
+ Verwenden Sie die `sql:key-fields` -Anmerkung verwenden, wenn ein Element enthält eine  **\<SQL: Relationship >** , die zwischen dem Element und einem untergeordneten Element definiert ist jedoch nicht den Primärschlüssel der Tabelle, die in angegeben ist das übergeordnete Element.  
   
 ## <a name="examples"></a>Beispiele  
  Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen für die Ausführung von SQLXML-Beispielen](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. Erzeugen der entsprechenden Schachtelung, wenn \<SQL: Relationship > keine ausreichenden Informationen bereitstellt  
+### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. Erzeugen der entsprechenden Schachtelung, wenn \<SQL: Relationship > nicht genügend Informationen bereitstellt  
  Dieses Beispiel zeigt, wo `sql:key-fields` angegeben werden muss.  
   
- Betrachten Sie folgendes Schema. Das Schema gibt eine hierarchische Beziehung zwischen der  **\<Reihenfolge >** und  **\<Kunden >** Elemente, in denen die  **\<Reihenfolge >** Element ist das übergeordnete Element und die  **\<Kunden >** -Element untergeordnet ist.  
+ Betrachten Sie folgendes Schema. Das Schema gibt eine hierarchische Beziehung zwischen der  **\<Reihenfolge >** und  **\<Kunden >** Elemente, in denen die  **\<Reihenfolge >** ist das übergeordnete Element und die  **\<Kunden >** -Element untergeordnet ist.  
   
- Die  **\<SQL: Relationship >** Tag wird verwendet, um die über-/ unterordnungsbeziehung geben. In diesem Tag wird CustomerID als übergeordneter Schlüssel identifiziert, der auf die untergeordnete CustomerID-Schlüsselspalte in der Sales.Customer-Tabelle verweist. Die Informationen im  **\<SQL: Relationship >** reicht nicht aus, um Zeilen in der übergeordneten Tabelle (Sales.SalesOrderHeader) eindeutig zu identifizieren. Ohne die `sql:key-fields`-Anmerkung wird daher eine ungenaue Hierarchie generiert.  
+ Die  **\<SQL: Relationship >** Tag wird verwendet, um die über-/ unterordnungsbeziehung geben. In diesem Tag wird CustomerID als übergeordneter Schlüssel identifiziert, der auf die untergeordnete CustomerID-Schlüsselspalte in der Sales.Customer-Tabelle verweist. Die Informationen in  **\<SQL: Relationship >** reicht nicht aus, um Zeilen in der übergeordneten Tabelle (Sales.SalesOrderHeader) eindeutig zu identifizieren. Ohne die `sql:key-fields`-Anmerkung wird daher eine ungenaue Hierarchie generiert.  
   
- Mit `sql:key-fields` auf angegebenen  **\<Reihenfolge >**, identifiziert die Anmerkung die Zeilen in der übergeordneten Tabelle (Sales.SalesOrderHeader-Tabelle) eindeutig und seine untergeordneten Elemente unter dem übergeordneten Element angezeigt.  
+ Mit `sql:key-fields` angegeben  **\<Reihenfolge >** eindeutig identifiziert die Anmerkung die Zeilen im übergeordneten Element (Sales.SalesOrderHeader-Tabelle) und die untergeordneten Elemente werden unter dem übergeordneten Element.  
   
  Das ist das Schema:  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36056900"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML-Abfragen](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML-Abfragen](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Im Folgenden wird ein Teil des Resultsets aufgeführt:  
   
@@ -130,7 +130,7 @@ ms.locfileid: "36056900"
 ```  
   
 ### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. Angeben der sql:key-Felder, um die richtige Schachtelung im Ergebnis zu erzeugen  
- Im folgenden Schema besteht keine durch festgelegte Hierarchie  **\<SQL: Relationship >**. Das Schema erfordert trotzdem die Angabe der `sql:key-fields`-Anmerkung, um Mitarbeiter in der HumanResources.Employee-Tabelle eindeutig zu identifizieren.  
+ Im folgenden Schema, es gibt keine durch festgelegte Hierarchie  **\<SQL: Relationship >**. Das Schema erfordert trotzdem die Angabe der `sql:key-fields`-Anmerkung, um Mitarbeiter in der HumanResources.Employee-Tabelle eindeutig zu identifizieren.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -175,7 +175,7 @@ ms.locfileid: "36056900"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML-Abfragen](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML-Abfragen](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Dies ist das Ergebnis:  
   

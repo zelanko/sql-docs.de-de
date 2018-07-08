@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.expressionbuilder.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
 caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9e42558c303f72a4834c37156a79bb1e3cfb1475
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: be402c290ef355f93147b7aa66d8055c054f52ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058098"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151131"
 ---
 # <a name="expression-builder"></a>Ausdrucks-Generator
   Verwenden Sie das Dialogfeld **Ausdrucks-Generator** , um mithilfe einer grafischen Benutzeroberfläche einen Eigenschaftsausdruck zu erstellen und zu bearbeiten oder den Ausdruck zu schreiben, der den Wert einer Variablen festlegt. Diese grafische Benutzeroberfläche bietet Listen von Variablen sowie integrierte Verweise auf Funktionen, Typumwandlungen und Operatoren der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Ausdruckssprache.  
@@ -53,7 +53,7 @@ ms.locfileid: "36058098"
 ## <a name="see-also"></a>Siehe auch  
  [Seite Ausdrücke](expressions-page.md)   
  [Eigenschaftsausdrucks-Editor](property-expressions-editor.md)   
- [Integrationsservices &#40;SSIS&#41; Variablen](../integration-services-ssis-variables.md)   
+ [Integrationsdienste &#40;SSIS&#41; Variablen](../integration-services-ssis-variables.md)   
  [Systemvariablen](../system-variables.md)  
   
   

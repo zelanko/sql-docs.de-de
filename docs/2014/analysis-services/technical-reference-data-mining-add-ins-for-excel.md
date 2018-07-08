@@ -1,5 +1,5 @@
 ---
-title: Technische Referenz (Data Mining-Add-ins für Excel) | Microsoft Docs
+title: Technische Referenz (Data Mining-Add-ins für Excel) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1a435875-cbee-49d1-914c-4aa15fad7628
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 08b615b3566a7144e25615bc1fbeb6b57857e439
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa3b2b235e654178e5d374f4fa427141478850bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057026"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165311"
 ---
 # <a name="technical-reference-data-mining-add-ins-for-excel"></a>Technische Referenz (Data Mining-Add-Ins für Excel)
   Die Data Mining-Add-Ins für Office verfügen über Funktionen, die nützlich für Programmierer und erweiterte Data Mining-Benutzer.  

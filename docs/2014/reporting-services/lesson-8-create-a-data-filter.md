@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9e3a0f9aac098f7bc9998cc657e937c04b438359
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: cdc62c2e2fa4b4a6bfd662c1b20de6287fc8ff86
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056879"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278836"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>Lektion 8: Erstellen eines Datenfilters
   Nachdem Sie im übergeordneten Bericht eine Drillthroughaktion hinzugefügt haben, erstellen Sie im nächsten Schritt einen Datenfilter für die Datentabelle, die Sie für den untergeordneten Bericht definiert haben.  
@@ -39,15 +39,15 @@ ms.locfileid: "36056879"
   
 1.  Öffnen Sie den untergeordneten Bericht.  
   
-2.  Wählen Sie in der Tablix eine Spaltenüberschrift rechten Maustaste auf die graue Zelle, die über den Spaltenüberschrift angezeigt wird, und klicken Sie dann auf **Tablix-Eigenschaften**.  
+2.  Wählen Sie in der Tablix eine Spaltenüberschrift aus, mit der rechten Maustaste in der grauen Zelle, die oberhalb der Spaltenüberschrift angezeigt wird, und klicken Sie dann auf **Tablix-Eigenschaften**.  
   
 3.  Klicken Sie auf die Seite **Filter** und dann auf **Hinzufügen**.  
   
-4.  In der **Ausdruck** abgelegt, klicken Sie auf `ProductID` aus der Dropdown-Liste. Dies ist die Spalte, auf die Sie den Filter anwenden.  
+4.  In der **Ausdruck** abgelegt wird, klicken Sie `ProductID` aus der Dropdown-Liste. Dies ist die Spalte, auf die Sie den Filter anwenden.  
   
 5.  Klicken Sie auf den Gleichheitsoperator (**=**)-Operator in der **Operator** Dropdown-Liste.  
   
-6.  Klicken Sie auf die Schaltfläche "Ausdruck" neben der **Wert** auf **Parameter** in der **Kategorie** Bereich, und doppelklicken Sie dann auf `productid` in der  **Werte** Bereich. Das Feld **Ausdruck festlegen für: Wert** sollte jetzt einen mit **=Parameters!productid.Value**vergleichbaren Ausdruck enthalten.  
+6.  Klicken Sie auf die Schaltfläche "Ausdruck" neben der **Wert** auf **Parameter** in die **Kategorie** Bereich, und doppelklicken Sie dann auf `productid` in die  **Werte** Bereich. Das Feld **Ausdruck festlegen für: Wert** sollte jetzt einen mit **=Parameters!productid.Value**vergleichbaren Ausdruck enthalten.  
   
 7.  Klicken Sie im Dialogfeld **Tablix-Eigenschaften** auf **OK** und ein zweites Mal auf **OK** .  
   
@@ -57,9 +57,9 @@ ms.locfileid: "36056879"
   
 1.  Erweitern Sie im Projektmappen-Explorer Default.aspx, und doppelklicken Sie dann auf Default.aspx.cs.  
   
-2.  Erstellen Sie eine neue Funktion, die einen Parameter akzeptiert `productid`, vom Typ Integer und gibt ein `datatable` Objekt, und werden die folgenden Schritte ausgeführt.  
+2.  Erstellen Sie eine neue Funktion, die einen Parameter akzeptiert `productid`, vom Typ Integer und gibt eine `datatable` Objekt aus, und werden die folgenden Schritte ausgeführt.  
   
-    1.  Erstellt eine Instanz des Datasets, `DataSet2`, der in Schritt2 erstellt wurde [Lektion 4: Definieren einer Datenverbindung und einer Datentabelle für den untergeordneten Bericht](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+    1.  Erstellt eine Instanz des Datasets `DataSet2`, in Schritt2 erstellte [Lektion 4: Definieren einer Datenverbindung und einer Datentabelle für den untergeordneten Bericht](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
     2.  Herstellen einer Verbindung mit der SQL Server-Datenbank, um die in **Lektion 4: Definieren einer Datenverbindung und einer Datentabelle für den untergeordneten Bericht**definierte Abfrage auszuführen.  
   
@@ -167,9 +167,9 @@ ms.locfileid: "36056879"
   
 1.  Erweitern Sie im Projektmappen-Explorer Default.aspx, und doppelklicken Sie dann auf Default.aspx.cs.  
   
-2.  Erstellen Sie eine neue Funktion, die einen Parameter akzeptiert `productid`, vom Typ Integer und gibt ein `datatable` Objekt, und werden die folgenden Schritte ausgeführt.  
+2.  Erstellen Sie eine neue Funktion, die einen Parameter akzeptiert `productid`, vom Typ Integer und gibt eine `datatable` Objekt und führt die folgenden.  
   
-    1.  Erstellt eine Instanz des Datasets, `DataSet2`, der in Schritt2 erstellt wurde [Lektion 4: Definieren einer Datenverbindung und einer Datentabelle für den untergeordneten Bericht](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+    1.  Erstellt eine Instanz des Datasets `DataSet2`, in Schritt2 erstellte [Lektion 4: Definieren einer Datenverbindung und einer Datentabelle für den untergeordneten Bericht](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
     2.  Herstellen einer Verbindung mit der SQL Server-Datenbank, um die in **Lektion 4: Definieren einer Datenverbindung und einer Datentabelle für den untergeordneten Bericht**definierte Abfrage auszuführen.  
   
@@ -220,7 +220,7 @@ ms.locfileid: "36056879"
   
 1.  Öffnen Sie Default.aspx.  
   
-2.  Mit der rechten Maustaste des ReportViewer-Steuerelements, und klicken Sie dann auf **Eigenschaften**.  
+2.  Klicken Sie auf der ReportViewer-Steuerelement, und klicken Sie dann auf **Eigenschaften**.  
   
 3.  Klicken Sie im Bereich **Eigenschaften** auf das Symbol **Ereignisse** .  
   
@@ -240,7 +240,7 @@ ms.locfileid: "36056879"
   
     2.  Abrufen der Parameterliste des untergeordneten Berichts aus dem abgerufenen untergeordneten Berichtsobjekt.  
   
-    3.  Die Parameters-Auflistung durchlaufen und Abrufen des Werts für den Parameter `ProductID`aus dem übergeordneten Bericht übergebenen.  
+    3.  Durchlaufen der Parameterauflistung und Abrufen des Werts für den Parameter `ProductID`aus dem übergeordneten Bericht übergebenen.  
   
     4.  Aufrufen der `GetPurchaseOrderDetail`-Funktion und Übergeben des Werts für den `ProductID`-Parameter.  
   

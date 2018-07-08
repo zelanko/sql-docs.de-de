@@ -1,36 +1,35 @@
 ---
-title: Überwachung von SQLServer Managed Backup für Windows Azure | Microsoft Docs
+title: Überwachung von SQLServer Managed Backup für Windows Azure | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cfb9e431-7d4c-457c-b090-6f2528b2f315
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 401b41399b7c62f7feeda6d83d2400dd4814d9d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ff97e8210c38bac14bd7bd88075c2dea16f77489
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058131"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149791"
 ---
 # <a name="monitor-sql-server-managed-backup-to-windows-azure"></a>Überwachen von SQL Server Managed Backup für Windows Azure
   [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] verfügt über integrierte Measures, um Fehler und Probleme während der Sicherungsvorgänge zu identifizieren und wenn möglich mit Korrekturmaßnahmen zu beheben.  In bestimmten Situationen ist jedoch ein Benutzereingriff erforderlich. In diesem Thema werden die Tools beschrieben, mit denen Sie den Gesamtintegritätsstatus von Sicherungen bestimmen und ggf. zu behebende Fehler ermitteln können.  
   
 ## <a name="overview-of-includesssmartbackupincludesss-smartbackup-mdmd-built-in-debugging"></a>Übersicht über das in [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] integrierte Debuggen  
- [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] überprüft geplante Sicherungen in regelmäßigen Abständen und versucht, fehlerhafte Sicherungen erneut zu planen. Er fragt das Speicherkonto in regelmäßigen Abständen, um Unterbrechungen im Protokollkette der Datenbank zu identifizieren und entsprechend neue Sicherungen. Außerdem werden die Windows Azure-Einschränkungsrichtlinien berücksichtigt, und es sind Mechanismen vorhanden, um mehrere Datenbanksicherungen zu verwalten. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] verwendet erweiterte Ereignisse, um alle Aktivitäten nachzuverfolgen. Die Kanäle für erweiterte Ereignisse, die vom [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Agent verwendet werden, umfassen Admin, Operational, Analytical und Debug. Ereignisse, die unter die Kategorie Admin fallen, stehen normalerweise im Zusammenhang mit Fehlern, erfordern einen Benutzereingriff und sind standardmäßig aktiviert. Analytical-Ereignisse sind ebenfalls standardmäßig aktiviert, beziehen sich aber normalerweise nicht auf Fehler, die einen Benutzereingriff erfordern. Operational-Ereignisse dienen typischerweise zu Informationszwecken. Operation-Ereignisse umfassen beispielsweise das Planen einer Sicherung, den erfolgreichen Abschluss einer Sicherung usw. Debug ist am ausführlichsten und wird intern von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] verwendet, um Probleme zu ermitteln und bei Bedarf zu beheben.  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] überprüft geplante Sicherungen in regelmäßigen Abständen und versucht, fehlerhafte Sicherungen erneut zu planen. Er fragt das Speicherkonto in regelmäßigen Abständen, um Unterbrechungen in der Protokollkette der Datenbank zu identifizieren und entsprechend neue Sicherungen. Außerdem werden die Windows Azure-Einschränkungsrichtlinien berücksichtigt, und es sind Mechanismen vorhanden, um mehrere Datenbanksicherungen zu verwalten. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] verwendet erweiterte Ereignisse, um alle Aktivitäten nachzuverfolgen. Die Kanäle für erweiterte Ereignisse, die vom [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Agent verwendet werden, umfassen Admin, Operational, Analytical und Debug. Ereignisse, die unter die Kategorie Admin fallen, stehen normalerweise im Zusammenhang mit Fehlern, erfordern einen Benutzereingriff und sind standardmäßig aktiviert. Analytical-Ereignisse sind ebenfalls standardmäßig aktiviert, beziehen sich aber normalerweise nicht auf Fehler, die einen Benutzereingriff erfordern. Operational-Ereignisse dienen typischerweise zu Informationszwecken. Operation-Ereignisse umfassen beispielsweise das Planen einer Sicherung, den erfolgreichen Abschluss einer Sicherung usw. Debug ist am ausführlichsten und wird intern von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] verwendet, um Probleme zu ermitteln und bei Bedarf zu beheben.  
   
 ### <a name="configure-monitoring-parameters-for-includesssmartbackupincludesss-smartbackup-mdmd"></a>Konfigurieren von Überwachungsparametern für [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
- Die **sp_set_parameter** gespeicherte Systemprozedur ermöglicht Ihnen, überwachungseinstellungen anzugeben. Die folgenden Abschnitte führen Sie durch den Vorgang zum Aktivieren erweiterter Ereignisse und zum Aktivieren von E-Mail-Benachrichtigungen bei Fehlern und Warnungen.  
+ Die **sp_set_parameter** im System gespeicherten Prozedur ermöglicht Ihnen, überwachungseinstellungen anzugeben. Die folgenden Abschnitte führen Sie durch den Vorgang zum Aktivieren erweiterter Ereignisse und zum Aktivieren von E-Mail-Benachrichtigungen bei Fehlern und Warnungen.  
   
- Die **smart_admin.fn_get_parameter** Funktion kann verwendet werden, um die aktuelle Einstellung für einen bestimmten Parameter oder alle konfigurierten Parameter abgerufen. Wenn die Parameter nicht konfiguriert wurden, gibt die Funktion keine Werte zurück.  
+ Die **smart_admin.fn_get_parameter** Funktion kann verwendet werden, um die aktuelle Einstellung für einen bestimmten Parameter oder für alle konfigurierten Parameter abgerufen. Wenn die Parameter nicht konfiguriert wurden, gibt die Funktion keine Werte zurück.  
   
 1.  Stellen Sie eine Verbindung mit dem [!INCLUDE[ssDE](../includes/ssde-md.md)]her.  
   
@@ -115,7 +114,7 @@ GO
     ```  
   
 ### <a name="aggregated-error-countshealth-status"></a>Aggregierte Fehleranzahl/Integritätsstatus  
- Die **smart_admin.fn_get_health_status** Funktion gibt eine Tabelle mit aggregierten Fehleranzahl für jede Kategorie, die verwendet werden kann, um die Überwachung des Integritätsstatus von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Die gleiche Funktion verwendet auch der vom System konfigurierte E-Mail-Benachrichtigungsmechanismus, der weiter unten in diesem Thema beschrieben ist.   
+ Die **smart_admin.fn_get_health_status** Funktionsergebnis ist eine Tabelle mit aggregierten Fehleranzahl für jede Kategorie, die verwendet werden können, zum Überwachen des Integritätsstatus von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Die gleiche Funktion verwendet auch der vom System konfigurierte E-Mail-Benachrichtigungsmechanismus, der weiter unten in diesem Thema beschrieben ist.   
 Anhand dieser aggregierten Anzahl kann die Systemintegrität überwacht werden. Wenn beispielsweise die Spalte number_ of_retention_loops 0 in 30 Minuten ist, benötigt die Beibehaltungsverwaltung viel Zeit oder funktioniert nicht korrekt. Spalten mit Werten ungleich 0 können auf Probleme hindeuten. Sie sollten die Protokolle der erweiterten Ereignisse prüfen, um das Problem zu bestimmen. Rufen Sie alternativ **smart_admin.sp_get_backup_diagnostics** gespeicherte Prozedur, um die Details des Fehlers zu finden.  
   
 ### <a name="using-agent-notification-for-assessing-backup-status-and-health"></a>Verwenden von Agent-Benachrichtigungen zum Bewerten von Sicherungsstatus und -integrität  
@@ -123,21 +122,21 @@ Anhand dieser aggregierten Anzahl kann die Systemintegrität überwacht werden. 
   
  **Voraussetzungen:**  
   
--   Datenbank-E-Mail ist erforderlich, um diese Funktionen verwenden zu können. Weitere Informationen zum Aktivieren der DB-Mail für die Instanz von SQL Server, finden Sie unter [Configure Database Mail](../relational-databases/database-mail/configure-database-mail.md).  
+-   Datenbank-E-Mail ist erforderlich, um diese Funktionen verwenden zu können. Weitere Informationen zum Aktivieren von Datenbank-e-Mails für die Instanz von SQL Server finden Sie unter [Konfigurieren von Datenbank-e-Mails](../relational-databases/database-mail/configure-database-mail.md).  
   
 -   Die Eigenschaften des SQL Server-Agent-Warnsystems sollten für die Verwendung der Datenbank-E-Mail festgelegt werden.  
   
  **Benachrichtigungsarchitektur:**  
   
--   **Richtlinienbasierte Verwaltung:** zwei Richtlinien werden zum Überwachen der Sicherungsintegrität festgelegt: **Smart Admin-System-Integritätsrichtlinie**, und die **Smart Admin Integritätsrichtlinie zur Benutzeraktion**. Die Smart Admin-Richtlinie für die Systemintegrität wertet kritische Fehler wie fehlende oder ungültige SQL-Anmeldeinformationen oder Verbindungsfehler aus und meldet die Integrität des Systems. Bei diesen ist normalerweise ein manueller Eingriff erforderlich, um das zugrunde liegende Problem zu beheben. Die Smart Admin-Richtlinie für die Integrität von Benutzeraktionen wertet Warnungen aus, z. B. beschädigte Sicherungen.  Bei diesen ist möglicherweise keine Aktion erforderlich, sondern stellen lediglich eine Warnung zu einem Ereignis dar. Es wird erwartet, dass solche Probleme automatisch vom [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Agent behandelt werden.  
+-   **Richtlinienbasierte Verwaltung:** zwei Richtlinien werden zum Überwachen der Sicherungsintegrität festgelegt: **Integritätsrichtlinie für Smart Admin**, und die **Smart Admin Integritätsrichtlinie zur Benutzeraktion**. Die Smart Admin-Richtlinie für die Systemintegrität wertet kritische Fehler wie fehlende oder ungültige SQL-Anmeldeinformationen oder Verbindungsfehler aus und meldet die Integrität des Systems. Bei diesen ist normalerweise ein manueller Eingriff erforderlich, um das zugrunde liegende Problem zu beheben. Die Smart Admin-Richtlinie für die Integrität von Benutzeraktionen wertet Warnungen aus, z. B. beschädigte Sicherungen.  Bei diesen ist möglicherweise keine Aktion erforderlich, sondern stellen lediglich eine Warnung zu einem Ereignis dar. Es wird erwartet, dass solche Probleme automatisch vom [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Agent behandelt werden.  
   
 -   **SQL Server-Agent** Auftrag: die Benachrichtigung erfolgt mithilfe eines SQL Server-Agent-Auftrags, der drei Auftragsschritte umfasst. Im ersten Auftragsschritt wird ermittelt, ob [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für eine Datenbank oder eine Instanz konfiguriert ist. Wenn [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] aktiviert und konfiguriert vorgefunden wird, wird der zweite Schritt ausgeführt: Es wird ein PowerShell-Cmdlet ausgeführt, das den Integritätsstatus bewertet, indem die Verwaltungsrichtlinien auf Grundlage von SQL Server-Richtlinien ausgewertet werden. Wenn ein Fehler oder eine Warnung gefunden wird, schlägt der Vorgang fehl, und es wird der dritte Schritt ausgelöst: Eine E-Mail-Benachrichtigung mit dem Fehler-/Warnbericht wird gesendet.  Dieser SQL Server-Agent-Auftrag ist jedoch nicht standardmäßig aktiviert. Um den e-Mail-benachrichtigungsauftrag zu aktivieren, verwenden die **smart_admin.sp_set_backup_parameter** gespeicherten Systemprozedur.  Das folgende Verfahren beschreibt diese Schritte ausführlicher:  
   
 ##### <a name="enabling-email-notification"></a>Aktivieren der E-Mail-Benachrichtigung  
   
-1.  Wenn Database Mail noch nicht konfiguriert ist, verwenden Sie die Schritte, die in beschriebenen [Configure Database Mail](../relational-databases/database-mail/configure-database-mail.md).  
+1.  Wenn die Datenbank-e-Mails nicht bereits konfiguriert ist, verwenden Sie die Schritte in [Konfigurieren von Datenbank-e-Mails](../relational-databases/database-mail/configure-database-mail.md).  
   
-2.  Set-Datenbank als Mailsystem für SQL Server-Warnungssystem: mit der rechten Maustaste auf **SQL Server-Agent**Option **Warnungssystem**, überprüfen Sie die **Mailprofil aktivieren** Feld wählen  **Database Mail** als die **Mailsystem**, und wählen Sie ein zuvor erstelltes e-Mail-Profil.  
+2.  Set-Datenbank als Mailsystem für SQL Server-Warnungssystem: der rechten Maustaste auf **SQL Server-Agent**Option **Warnungssystem**, überprüfen Sie die **Mailprofil aktivieren** Feld wählen  **Datenbank-e-Mails** als die **Mailsystem**, und wählen Sie ein zuvor erstelltes e-Mail-Profil.  
   
 3.  Führen Sie die folgende Abfrage in einem Abfragefenster aus, und geben Sie die E-Mail-Adresse an, an die die Benachrichtigung gesendet werden soll:  
   
@@ -203,7 +202,7 @@ EXEC msdb.smart_admin.sp_set_parameter
 ### <a name="using-powershell-to-setup-custom-health-monitoring"></a>Einrichten einer benutzerdefinierten Integritätsüberwachung mit PowerShell  
  Die **Test-SqlSmartAdmin** Cmdlet kann verwendet werden, um benutzerdefinierte Integritätsüberwachung erstellen. Beispielsweise kann die im vorhergehenden Abschnitt beschriebene Benachrichtigungsoption auf Instanzebene konfiguriert werden.  Wenn Sie mehrere SQL Server-Instanzen für die Verwendung von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] konfiguriert haben, können Sie mit dem PowerShell-Cmdlet Skripts erstellen, die den Status und die Integrität von Sicherungen für alle Instanzen erfassen.  
   
- Die **Test-SqlSmartAdmin** Cmdlet die Fehler und Warnungen zurückgegeben, durch die SQL Server-Verwaltung-Richtlinien bewertet und meldet einen Rollup des Status.  Dieses Cmdlet verwendet standardmäßig die Systemrichtlinien. Mit dem `–AllowUserPolicies`-Parameter können Sie beliebige benutzerdefinierte Richtlinien einschließen.  
+ Die **Test-SqlSmartAdmin** Cmdlet wertet die Fehler und Warnungen zurückgegeben, durch die Richtlinien von SQL Server-Verwaltung und meldet einen Rollup des Status.  Dieses Cmdlet verwendet standardmäßig die Systemrichtlinien. Mit dem `–AllowUserPolicies`-Parameter können Sie beliebige benutzerdefinierte Richtlinien einschließen.  
   
  Im Folgenden ist ein PowerShell-Beispielskript aufgeführt, das einen Bericht über Fehler und Warnungen auf Grundlage der Systemrichtlinien und ggf. von erstellten Benutzerrichtlinien zurückgibt:  
   
@@ -220,7 +219,7 @@ PS C:\>PS SQLSERVER:\SQL\COMPUTER\DEFAULT> (get-sqlsmartadmin ).EnumHealthStatus
 ```  
   
 ### <a name="objects-in-msdb-database"></a>Objekte in einer MSDB-Datenbank  
- Einige Objekte werden installiert, um die Funktionalität zu implementieren. Diese Objekte sind für die interne Verwendung reserviert. Eine Systemtabelle kann jedoch bei der Überwachung des Sicherungsstatus von Nutzen sein: smart_backup_files. Großteil der Informationen in dieser Tabelle, die für die Überwachung, z. B. den Typ der Sicherung der Datenbank gespeicherten Namen geben, zuerst und Lsn des letzten, Ablaufdatum der Sicherungen werden verfügbar gemacht, durch die Systemfunktion [smart_admin &#40;Transact-SQL &#41;](/sql/relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql). Die Statusspalte in der smart_backup_files-Tabelle, die den Status der Sicherungsdatei angibt, ist bei Verwendung der Funktion jedoch nicht verfügbar. Mithilfe der folgenden Beispielabfrage können verschiedene Informationen, u. a. auch der Status, aus der Systemtabelle abgerufen werden:  
+ Einige Objekte werden installiert, um die Funktionalität zu implementieren. Diese Objekte sind für die interne Verwendung reserviert. Eine Systemtabelle kann jedoch bei der Überwachung des Sicherungsstatus von Nutzen sein: smart_backup_files. Die meisten der in dieser Tabelle, die für die Überwachung wie des Typs der Sicherung der Datenbank gespeicherten Informationen, erste und letzte Lsn, Ablaufdaten für Sicherungen werden durch die Systemfunktion verfügbar gemacht [fn_available_backups &#40;Transact-SQL &#41;](/sql/relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql). Die Statusspalte in der smart_backup_files-Tabelle, die den Status der Sicherungsdatei angibt, ist bei Verwendung der Funktion jedoch nicht verfügbar. Mithilfe der folgenden Beispielabfrage können verschiedene Informationen, u. a. auch der Status, aus der Systemtabelle abgerufen werden:  
   
 ```  
 USE msdb  
@@ -256,14 +255,14 @@ smart_backup_files;
   
 -   **Verfügbar – A:** Dies ist eine normale Sicherungsdatei. Die Sicherung wurde abgeschlossen und auch daraufhin überprüft, ob sie im Windows Azure-Speicher verfügbar ist.  
   
--   **Kopieren in Bearbeitung – B:** dieser Status bezieht sich speziell auf Datenbanken der Verfügbarkeitsgruppe. Wenn [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] eine Unterbrechung in der Sicherungsprotokollkette feststellt, wird zunächst versucht, die Sicherung zu ermitteln, die die Unterbrechung in der Sicherungskette verursacht hat. Falls die Sicherungsdatei gefunden wird, wird sie in den Windows Azure-Speicher kopiert. Dieser Status wird angezeigt, wenn der Kopiervorgang gerade ausgeführt wird.  
+-   **Kopiert – B:** dieser Status ist speziell für die Datenbanken der Verfügbarkeitsgruppe. Wenn [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] eine Unterbrechung in der Sicherungsprotokollkette feststellt, wird zunächst versucht, die Sicherung zu ermitteln, die die Unterbrechung in der Sicherungskette verursacht hat. Falls die Sicherungsdatei gefunden wird, wird sie in den Windows Azure-Speicher kopiert. Dieser Status wird angezeigt, wenn der Kopiervorgang gerade ausgeführt wird.  
   
--   **Kopieren Sie Fehler – F:** ähnlich wie kopieren In Bearbeitung ist dies bestimmte t Availability Group-Datenbanken. Wenn der Kopiervorgang fehlschlägt, lautet der Status F.  
+-   **Kopieren Sie Fehler – F:** ähnlich wie kopieren In fortgesetzt werden, dies speziell Availability Group-Datenbanken ist. Wenn der Kopiervorgang fehlschlägt, lautet der Status F.  
   
--   **Beschädigt – "c:"** Wenn [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ist nicht möglich, überprüfen Sie, ob die Sicherungsdatei im Speicher durch Ausführen eines RESTORE HEADER_ONLY-Befehls selbst nach mehreren versuchen, ihm gekennzeichnete diese Datei als beschädigt. Damit die beschädigte Datei keine Unterbrechung in der Sicherungskette verursacht, wird von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] eine Sicherung geplant.  
+-   **Beschädigt – C:** Wenn [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] wird die Sicherungsdatei im Speicher zu überprüfen, indem Sie Ausführung eines RESTORE HEADER_ONLY-Befehls selbst nach mehreren Versuchen nicht, markiert diese Datei als beschädigt. Damit die beschädigte Datei keine Unterbrechung in der Sicherungskette verursacht, wird von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] eine Sicherung geplant.  
   
--   **Gelöscht – D:** die entsprechende Datei kann nicht in Windows Azure-Speicher nicht gefunden werden. Wenn die gelöschte Datei eine Unterbrechung in der Sicherungskette verursacht, wird von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] eine Sicherung geplant.  
+-   **Gelöscht: "d:"** die entsprechende Datei wurde in Windows Azure-Speicher nicht gefunden werden. Wenn die gelöschte Datei eine Unterbrechung in der Sicherungskette verursacht, wird von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] eine Sicherung geplant.  
   
--   **Unbekannt – U:** dieser Status gibt an, die [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] wurde noch nicht vorhanden und seine Eigenschaften im Windows Azure-Speicher zu überprüfen. Wenn der Prozess zum nächsten Mal ausgeführt wird, d. h. alle 15 Minuten, wird dieser Status aktualisiert.  
+-   **Unbekannt: U:** dieser Status gibt an, die [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] wurde noch nicht vorhanden und seine Eigenschaften im Windows Azure-Speicher zu überprüfen. Wenn der Prozess zum nächsten Mal ausgeführt wird, d. h. alle 15 Minuten, wird dieser Status aktualisiert.  
   
   

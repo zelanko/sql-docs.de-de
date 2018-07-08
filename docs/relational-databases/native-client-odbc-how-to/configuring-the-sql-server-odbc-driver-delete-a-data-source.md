@@ -1,12 +1,12 @@
 ---
-title: Löschen einer Datenquelle (ODBC) | Microsoft Docs
+title: Löschen einer Datenquelle (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,33 +17,33 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c914989c04226991f0df573b60bea0b69ff15802
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 02ca5ac7ea78f771e24fb13a97f125885bc0ce2a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703211"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417813"
 ---
-# <a name="configuring-the-sql-server-odbc-driver---delete-a-data-source"></a>Konfigurieren des SQL Server-ODBC-Treibers - Löschen einer Datenquelle
+# <a name="configuring-the-sql-server-odbc-driver---delete-a-data-source"></a>Konfigurieren die SQL Server-ODBC-Treibers: Löschen einer Datenquelle
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Vor der Verwendung von ODBC-Anwendungen mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher müssen Sie wissen, wie so aktualisieren Sie die Version der gespeicherten Prozeduren für Kataloginformationen in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und hinzufügen, löschen und Testen von Datenquellen.  
+  Vor der Verwendung von ODBC-Anwendungen mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher, benötigen Sie das upgrade der Version von gespeicherten Prozeduren für Kataloginformationen in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und hinzufügen, löschen und Testen von Datenquellen.  
   
-  Löschen einer Datenquelle können Sie mithilfe des ODBC-Administrators, programmgesteuert (mit [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md)), oder durch Löschen einer Datei (bei einem dateiquellennamen).  
+  Sie können eine Datenquelle löschen, indem Sie mithilfe des ODBC-Administrators, programmgesteuert (mit [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md)), oder Löschen einer Datei (bei einem dateiquellennamen).  
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>So löschen Sie eine Datenquelle mit dem ODBC-Administrator  
   
-1.  In **Systemsteuerung**öffnen **Verwaltung**, und doppelklicken Sie dann auf entweder **ODBC-Datenquellen (64-Bit)** oder **ODBC-Datenquellen (32-Bit)**. Stattdessen können Sie auch odbcad32.exe über die Eingabeaufforderung ausführen:  
+1.  In **Systemsteuerung**öffnen **Verwaltung**, und doppelklicken Sie dann entweder **ODBC-Datenquellen (64-Bit)** oder **ODBC-Datenquellen (32-Bit)**. Stattdessen können Sie auch odbcad32.exe über die Eingabeaufforderung ausführen:  
   
 2.  Klicken Sie auf die Registerkarte **Benutzer-DSN**, **System-DSN**oder **Datei-DSN** .  
   
-3.  Wählen Sie die zu löschende Datenquelle.  
+3.  Wählen Sie die Datenquelle zu löschen.  
   
 4.  Klicken Sie auf **Entfernen**, und bestätigen Sie dann das Löschen.  
   
 ## <a name="example"></a>Beispiel  
- Um eine Datenquelle programmgesteuert zu löschen, rufen [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md) entweder mit ODBC_REMOVE_DSN oder mit ODBC_REMOVE_SYS_DSN als zweiten Parameter.  
+ Um eine Datenquelle programmgesteuert zu löschen, rufen [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md) entweder mit ODBC_REMOVE_DSN oder mit ODBC_REMOVE_SYS_DSN als zweitem Parameter.  
   
  Im folgenden Beispiel wird gezeigt, wie Sie eine Datenquelle programmgesteuert löschen können.  
   

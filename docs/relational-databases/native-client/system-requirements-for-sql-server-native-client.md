@@ -1,10 +1,8 @@
 ---
-title: Systemanforderungen für SQL Server Native Client | Microsoft Docs
+title: Systemanforderungen für SQL Server Native Client | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - SQL Server Native Client, system requirements
 - SQLNCLI, system requirements
 ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
-caps.latest.revision: 60
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3480390a74154abb3414070ac1afe6d77ababbbb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 18d13f5d539d00818111d5854dc29a6785b13af1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32953676"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413919"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>Systemanforderungen für SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,21 +64,21 @@ ms.locfileid: "32953676"
 ## <a name="data-type-compatibility-for-client-versions"></a>Datentypkompatibilität für Clientversionen  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ordnen neue Datentypen alten Datentypen zu, die mit Downlevelclients kompatibel sind (siehe folgende Tabelle).  
   
- OLE DB und ADO-Anwendungen können die **DataTypeCompatibility** Schlüsselwort für Verbindungszeichenfolgen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client mit älteren Datentypen verwendet werden kann. Wenn **DataTypeCompatibility = 80**, OLE DB-Clients werden eine Verbindung herstellen mit der [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tabular Data stream (TDS)-Version, anstatt die TDS-Version. Dies bedeutet, dass für [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-Datentypen (und höher) eine Downlevelkonvertierung durch den Server vorgenommen wird anstatt von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Darüber hinaus bedeutet dies, dass die auf der Verbindung verfügbaren Funktionen auf den  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Funktionssatz beschränkt sein werden. Der Versuch, neue Datentypen oder Funktionen zu verwenden, wird auf API-Aufrufen so früh wie möglich entdeckt und zur aufrufenden Anwendung zurückgegeben, anstatt dass ein Versuch unternommen wird, ungültige Anforderungen an den Server zu übergeben.  
+ OLE DB und ADO-Anwendungen können die **DataTypeCompatibility** Verbindungszeichenfolgen-Schlüsselwort mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client mit älteren Datentypen verwendet werden. Wenn **DataTypeCompatibility = 80**, OLE DB-Clients werden Herstellen einer Verbindung mithilfe der [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tabular Data stream (TDS)-Version, anstatt die TDS-Version. Dies bedeutet, dass für [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-Datentypen (und höher) eine Downlevelkonvertierung durch den Server vorgenommen wird anstatt von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Darüber hinaus bedeutet dies, dass die auf der Verbindung verfügbaren Funktionen auf den  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Funktionssatz beschränkt sein werden. Der Versuch, neue Datentypen oder Funktionen zu verwenden, wird auf API-Aufrufen so früh wie möglich entdeckt und zur aufrufenden Anwendung zurückgegeben, anstatt dass ein Versuch unternommen wird, ungültige Anforderungen an den Server zu übergeben.  
   
- Es ist keine **DataTypeCompatibility** -Steuerung für ODBC.  
+ Es gibt keine **DataTypeCompatibility** -Steuerung für ODBC.  
   
- IDBInfo:: GetKeywords gibt stets eine Schlüsselwortliste, die die Serverversion für die Verbindung entspricht und ist nicht betroffen von **DataTypeCompatibility**.  
+ IDBInfo:: GetKeywords gibt stets eine Schlüsselwortliste, entspricht der Serverversion für die Verbindung und ist nicht betroffen von **DataTypeCompatibility**.  
   
 |Datentyp|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components, MDAC und<br /><br /> SQL Server Native Client OLE DB-Anwendungen mit DataTypeCompatibility=80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR-UDT (\<= 8 Kb)|udt|Udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|image|  
-|varchar(max)|varchar|varchar|Text|  
-|nvarchar(max)|nvarchar|nvarchar|Ntext|  
+|varchar(max)|varchar|varchar|Textmodus|  
+|nvarchar(max)|NVARCHAR|NVARCHAR|Ntext|  
 |xml|xml|xml|Ntext|  
 |CLR UDT (> 8Kb)|udt|varbinary|image|  
-|Datum|Datum|varchar|Varchar|  
+|date|date|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  
 |Uhrzeit|Uhrzeit|varchar|Varchar|  

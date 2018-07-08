@@ -1,13 +1,11 @@
 ---
-title: Komponenten von SQL Server Native Client | Microsoft Docs
+title: Komponenten von SQL Server Native Client | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|applications
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 31bd7b13b22fe5857f0832bee6f4c3d70ba27327
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 59a116cf1390786c208ce978348917d366a60d14
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32949615"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428459"
 ---
 # <a name="components-of-sql-server-native-client"></a>Komponenten von SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +37,7 @@ ms.locfileid: "32949615"
 |sqlncli11.dll|Die DLL-Datei (Dynamic-Link Library, DLL), die die gesamte Funktionalität von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client enthält. Dies umfasst auch den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter und den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber.|  
 |sqlnclir11.rll|Die begleitende Ressourcendatei für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Bibliothek.|   
 |sqlncli.h|Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Headerdatei, die alle neuen, zur Verwendung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client erforderlichen Definitionen enthält. Diese Headerdatei ersetzt die Headerdateien odbcss.h und sqloledb.h.<br /><br /> Hinweis: Sie können nicht auf sqlncli.h und odbcss.h im selben Programm verweisen, aber Sie können sqlncli.h und sqloledb.h im selben Programm verweisen, solange sqloledb.h zuerst definiert wird.|  
-|sqlncli11.lib|Die Bibliotheksdatei benötigt für den direkten Aufruf der **Bcp** Hilfsfunktionen, die Teil der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber.<br /><br /> Hinweis: Wenn Sie in Ihrem Programmcode die Datei sqlncli11.lib verweisen, müssen Sie sicherstellen, dass die Datei sqlncli11.dll in Ihrem Systempfad sowie im Systempfad der Benutzer, die Stellen der Anwendung verwenden.|  
+|sqlncli11.lib|Die Bibliotheksdatei, die für den direkten Aufruf erforderlich sind die **Bcp** Hilfsfunktionen, die Teil der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber.<br /><br /> Hinweis: Wenn Sie in Ihrem Programmcode die Datei sqlncli11.lib verweisen, müssen Sie sicherstellen, dass die Datei sqlncli11.dll ist in Ihrem Systempfad sowie im Systempfad der Benutzer, die Stellen der Anwendung verwenden.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen von Anwendungen mit SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  

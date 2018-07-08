@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 caps.latest.revision: 9
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b82d956905d55afb597a0dc4e31d299eebdc4309
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ce1a74a47839174705f6910b0e0366b4098ae767
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046221"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160241"
 ---
 # <a name="add-transact-sql-snippets"></a>Hinzufügen von Transact-SQL-Ausschnitten
   Sie können dem Satz von vordefinierten Ausschnitten, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]enthalten sind, eigene Transact-SQL-Codeausschnitte hinzufügen.  
@@ -55,7 +55,7 @@ ms.locfileid: "36046221"
 4.  Navigieren Sie zum Ordner, der den Ausschnitt enthält, klicken Sie auf die SNIPPET-Datei, und klicken Sie auf die Schaltfläche **Öffnen** .  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel erstellt eine `TRY-CATCH` umschließungsausschnitt und importiert sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ Das folgende Beispiel erstellt eine `TRY-CATCH` umschließungsausschnitt und importiert es [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 1.  Fügen Sie den folgenden Code in Editor ein, speichern Sie die Datei dann unter dem Namen "TryCatch.snippet".  
   

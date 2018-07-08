@@ -1,5 +1,5 @@
 ---
-title: Klicken Sie auf der Eigenschaftenseite Allgemein auf die Ressourcen (Berichts-Manager) | Microsoft Docs
+title: Eigenschaftenseite "Allgemein", "Ressourcen (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 23eed41b-283a-49df-a3aa-062dde8d6354
 caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: aff68336e0ca68a315d8b2cdab6bd783c87c5f7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 269cd82820bb8e07ec1ac66ccc8d3e8b8ceeb43a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048673"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164176"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>Allgemein (Eigenschaftenseite, Ressourcen) (Berichts-Manager)
   Mithilfe der Seite Allgemeine Eigenschaften für Ressourcen können Sie eine Ressource umbenennen, löschen, verschieben oder ersetzen. Informationen zum Benutzer, der die Ressource hinzugefügt oder ihre Eigenschaften geändert hat, werden oben auf der Seite angezeigt.  
@@ -63,7 +63,7 @@ ms.locfileid: "36048673"
  Klicken Sie auf diese Schaltfläche, um die Seite Ressource importieren zu öffnen, mit deren Hilfe Sie eine Ressourcendatei aus einer Dateifreigabe auswählen können.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Berichts-Manager &#40;SSRS im einheitlichen Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Anzeigen der Seite "Ressourcen" &#40;Berichts-Manager&#41;](../../2014/reporting-services/view-page-resources-report-manager.md)   
  [Berichts-Manager-F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
  [Sicherheit (Eigenschaftenseite), Elemente, (Berichts-Manager)](../../2014/reporting-services/security-properties-page-items-report-manager.md)  

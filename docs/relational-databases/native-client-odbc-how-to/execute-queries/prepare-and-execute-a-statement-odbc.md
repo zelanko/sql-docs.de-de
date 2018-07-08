@@ -1,12 +1,12 @@
 ---
-title: Vorbereiten und Ausführen eine Anweisung (ODBC) | Microsoft Docs
+title: Vorbereiten und Ausführen von Anweisungen (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a6d78ab8bbd48035795f8860cb02a20e83780289
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 86f4550aee7f9a5c7df7a600df32cb9d97c22897
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701421"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408139"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>Vorbereiten und Ausführen von Anweisungen (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,11 +33,11 @@ ms.locfileid: "35701421"
   
 1.  Rufen Sie [SQLPrepare-Funktion](http://go.microsoft.com/fwlink/?LinkId=59360) , die Anweisung vorzubereiten.  
   
-2.  Rufen Sie optional [SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404) bestimmt die Anzahl von Parametern in der vorbereiteten Anweisung.  
+2.  Rufen Sie optional [SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404) um zu bestimmen, die Anzahl von Parametern in der vorbereiteten Anweisung.  
   
 3.  Optional führen Sie für jeden Parameter in der vorbereiteten Anweisung Folgendes aus:  
   
-    -   Rufen Sie [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) um Parameterinformationen abzurufen.  
+    -   Rufen Sie [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) zum Abrufen von Informationen zu den Parametern.  
   
     -   Jeder Parameter an eine Programmvariable zu binden, indem [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md). Richten Sie alle Data-at-Execution-Parameter ein.  
   
@@ -45,13 +45,13 @@ ms.locfileid: "35701421"
   
     -   Wenn die Anweisung über Parametermarkierungen verfügt, fügen Sie die Datenwerte in den gebundenen Parameterpuffer ein.  
   
-    -   Rufen Sie [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) zum Ausführen der vorbereiteten Anweisung.  
+    -   Rufen Sie [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) zur Ausführung der vorbereiteten Anweisung.  
   
-    -   Wenn Data-at-Execution-Eingabeparameter verwendet werden, [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) wird SQL_NEED_DATA zurückgegeben. Senden Sie die Daten in Segmenten mit [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) und [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
+    -   Wenn Data-at-Execution-Eingabeparameter verwendet werden, [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) wird SQL_NEED_DATA zurückgegeben. Senden Sie die Daten in Blöcken mit [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) und [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
   
 ### <a name="to-prepare-a-statement-with-column-wise-parameter-binding"></a>So bereiten Sie eine Anweisung mit spaltenweiser Parameterbindung vor  
   
-1.  Rufen Sie [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) um die folgenden Attribute festzulegen:  
+1.  Rufen Sie [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) , die folgenden Attribute festzulegen:  
   
     -   Legen Sie SQL_ATTR_PARAMSET_SIZE auf die Anzahl von Sätzen (S) von Parametern fest.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "35701421"
   
 2.  Rufen Sie SQLPrepare, um die Anweisung vorzubereiten.  
   
-3.  Rufen Sie optional [SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404) bestimmt die Anzahl von Parametern in der vorbereiteten Anweisung.  
+3.  Rufen Sie optional [SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404) um zu bestimmen, die Anzahl von Parametern in der vorbereiteten Anweisung.  
   
 4.  Rufen Sie optional für jeden Parameter in der vorbereiteten Anweisung SQLDescribeParam auf, um Parameterinformationen abzurufen.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "35701421"
   
     -   Weisen Sie ein Array mit S-Parameterpuffern zu, um Datenlängen zu speichern.  
   
-    -   Rufen Sie SQLBindParameter, um die Parameter-die Wert und die datenlängenarrays an den Anweisungsparameter zu binden.  
+    -   Rufen Sie SQLBindParameter, um die Parameter Daten Wert und die datenlängenarrays an den Anweisungsparameter zu binden.  
   
     -   Falls der Parameter ein Data-at-Execution-Textparameter oder –Imageparameter ist, richten Sie ihn ein.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "35701421"
   
     -   Rufen Sie SQLExecute auf, um die vorbereitete Anweisung auszuführen.  
   
-    -   Wenn Data-at-Execution-Eingabeparameter verwendet werden, gibt SQLExecute SQL_NEED_DATA zurück. Mithilfe von SQLParamData und SQLPutData, senden Sie die Daten in Segmenten.  
+    -   Wenn Data-at-Execution-Eingabeparameter verwendet werden, wird die SQLExecute SQL_NEED_DATA zurückgegeben. Senden Sie die Daten in Segmenten mit der SQLParamData und SQLPutData.  
   
 ### <a name="to-prepare-a-statement-with-row-wise-bound-parameters"></a>So bereiten Sie eine Anweisung mit zeilenweiser Parameterbindung vor  
   
@@ -95,7 +95,7 @@ ms.locfileid: "35701421"
   
     -   Der zweite Teil ist eine SQLINTEGER-Variable zum Speichern des Statusindikators.  
   
-2.  Rufen Sie [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) um die folgenden Attribute festzulegen:  
+2.  Rufen Sie [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) , die folgenden Attribute festzulegen:  
   
     -   Legen Sie SQL_ATTR_PARAMSET_SIZE auf die Anzahl von Sätzen (S) von Parametern fest.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "35701421"
   
 3.  Rufen Sie SQLPrepare, um die Anweisung vorzubereiten.  
   
-4.  Rufen Sie für jeden Parametermarker SQLBindParameter, um die Parameter Daten Wert datenlängenzeiger zeigen Sie auf die Variablen im ersten Element des Arrays von Strukturen, die in Schritt 1 zugewiesen wurden. Falls der Parameter ein Data-at-Execution-Parameter ist, richten Sie ihn ein.  
+4.  Rufen Sie für jeden Parametermarker SQLBindParameter, um die Parameter Wert und den datenlängenzeigern zeigen Sie auf die Variablen im ersten Element des Arrays mit Strukturen, die in Schritt 1 zugewiesen wurden. Falls der Parameter ein Data-at-Execution-Parameter ist, richten Sie ihn ein.  
   
 5.  Für jede Ausführung einer vorbereiteten Anweisung gilt:  
   
@@ -115,7 +115,7 @@ ms.locfileid: "35701421"
   
     -   Rufen Sie SQLExecute auf, um die vorbereitete Anweisung auszuführen. Der Treiber führt die SQL-Anweisung S Mal aus, einmal für jeden Parametersatz.  
   
-    -   Wenn Data-at-Execution-Eingabeparameter verwendet werden, gibt SQLExecute SQL_NEED_DATA zurück. Mithilfe von SQLParamData und SQLPutData, senden Sie die Daten in Segmenten.  
+    -   Wenn Data-at-Execution-Eingabeparameter verwendet werden, wird die SQLExecute SQL_NEED_DATA zurückgegeben. Senden Sie die Daten in Segmenten mit der SQLParamData und SQLPutData.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausführen von Abfragen: Themen zur Vorgehensweise &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  

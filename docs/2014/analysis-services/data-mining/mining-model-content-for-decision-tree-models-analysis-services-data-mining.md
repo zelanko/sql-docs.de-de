@@ -1,5 +1,5 @@
 ---
-title: Miningmodellinhalt Entscheidungsstrukturmodellen (Analysis Services – Datamining) | Microsoft Docs
+title: Mingingmodellinhalt von Entscheidungsstrukturmodellen (Analysis Services – Datamining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, decision tree models
 - decision tree algorithms [Analysis Services]
 - decision trees [Analysis Services]
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7ced4dd7c81ab5c3851b180394d75d80d35c502f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae76bbfc4e85e0f01e384849bf6b67e52f4c574f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057074"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161661"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Miningmodellinhalt von Entscheidungsstrukturmodellen (Analysis Services – Data Mining)
   In diesem Thema wird der Miningmodellinhalt beschrieben, der Modellen eigen ist, die den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus verwenden. Eine allgemeine Erläuterung der Miningmodellinhalte für alle Modelltypen finden Sie unter [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md). Sie sollten stets bedenken, dass der Microsoft Decision Trees-Algorithmus ein hybrider Algorithmus ist, der Modelle mit sehr unterschiedlichen Funktionen erstellen kann: Eine Entscheidungsstruktur kann Zuordnungen, Regeln oder gar lineare Regression darstellen. Der Aufbau der Struktur ist grundsätzlich gleich. Allerdings hängt die Art und Weise, in der Sie die Informationen interpretieren, vom Zweck ab, für den Sie das Modell erstellen.  
@@ -193,7 +193,7 @@ ms.locfileid: "36057074"
   
 |||  
 |-|-|  
-|**NODE_CAPTION**|Zeigt das Attribut an, das diesen bestimmten Knoten relativ zum übergeordneten Knoten unterscheidet. Die Knotenbeschriftung definiert basierend auf der Teilungsbedingung ein Untersegment der Auffüllung. Z. B., wenn die Teilung auf [Age] dauerhaft gelöscht wurde und es wurde eine drei-Wege-Teilen, die knotenbeschriftungen für die drei untergeordneten Knoten möglicherweise "[Age] < 40", "40 < = [Age] \< 50" und "[Age] > = 50".|  
+|**NODE_CAPTION**|Zeigt das Attribut an, das diesen bestimmten Knoten relativ zum übergeordneten Knoten unterscheidet. Die Knotenbeschriftung definiert basierend auf der Teilungsbedingung ein Untersegment der Auffüllung. Wenn z. B. die Aufteilung auf [Age], und es wurde eine drei-Wege-Verteilung, die knotenbeschriftungen für die drei untergeordneten Knoten möglicherweise "[Age] < 40", "40 < = [Age] \< 50" und "[Age] > = 50".|  
 |**NODE_DESCRIPTION**|Enthält eine vollständige Liste der Attribute, die diesen Knoten von anderen unterscheiden, beginnend mit dem übergeordneten Knoten des Modells. Beispiel: Product name = Apple und Color = Red.|  
   
 ###  <a name="NodeRule"></a> Knotenregel und marginale Regel  
@@ -229,7 +229,7 @@ ms.locfileid: "36057074"
 |Age < 30|40|Age < 30 und Gender = Male|30|30/40 = .75|30/100 = .30|  
 |||Age < 30 und Gender = Female|10|10/40 = .25|10/100 = .10|  
   
- Um mögliche fehlende Werte zu berücksichtigen, wird in allen Modellen eine geringfügige Anpassung vorgenommen. Bei kontinuierlichen Attributen wird jeder Wert oder Wertebereich als Status dargestellt wird (z. B. Alter \<30, Age = 30, "und" Age > 30) und die Wahrscheinlichkeiten werden wie folgt berechnet: Status vorhanden (Wert = 1), anderer Status vorhanden (Wert = 0), Zustand ist `Missing`. Weitere Informationen über die Anpassung von Wahrscheinlichkeiten zur Darstellung fehlender Werte finden Sie unter [Fehlende Werte &#40;Analysis Services – Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
+ Um mögliche fehlende Werte zu berücksichtigen, wird in allen Modellen eine geringfügige Anpassung vorgenommen. Bei kontinuierlichen Attributen wird jeder Wert oder Wertebereich als Status dargestellt wird (beispielsweise Age \<30, Age = 30, und Age > 30) und die Wahrscheinlichkeiten werden wie folgt berechnet: Status vorhanden (Wert = 1), anderer Status vorhanden (Wert = 0), ist`Missing`. Weitere Informationen über die Anpassung von Wahrscheinlichkeiten zur Darstellung fehlender Werte finden Sie unter [Fehlende Werte &#40;Analysis Services – Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
   
  Die Wahrscheinlichkeiten für jeden Knoten werden fast direkt aus der Verteilung berechnet. Dies geschieht wie folgt:  
   
