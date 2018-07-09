@@ -1,12 +1,12 @@
 ---
-title: 'Ibcpsession:: BCPColumns (OLE DB) | Microsoft Docs'
+title: 'Ibcpsession:: BCPColumns (OLE DB) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fb68a61f5aca057eea4ec16334745e6e2e6e427b
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: e81e12fd880bdde5cbc28b932e340e9dbe1e6d33
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700731"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423889"
 ---
 # <a name="ibcpsessionbcpcolumns-ole-db"></a>IBCPSession::BCPColumns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ HRESULT BCPColumns(
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Ruft intern [ibcpsession:: BCPColFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) auf die Standardwerte für Felddaten festzulegen. Diese Standardwerte werden aus den SQL Server-Spalteninformationen, die der Anbieter intern abruft, wenn der Tabellenname, über angegeben wird abgerufen [Ibcpsession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md).  
+ Es ruft intern [ibcpsession:: BCPColFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) auf die Standardwerte für Felddaten festzulegen. Diese Standardwerte werden aus den SQL Server-Spalteninformationen, die der Anbieter intern abruft, wenn der Tabellenname, über angegeben wird abgerufen [ibcpsession:: BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md).  
   
 > [!NOTE]  
 >  Diese Methode kann erst nach dem Aufruf von **BCPInit** mit einem gültigen Dateinamen aufgerufen werden.  
@@ -60,7 +60,7 @@ HRESULT BCPColumns(
  Die Methode wurde erfolgreich ausgeführt.  
   
  E_FAIL  
- Ein anbieterspezifischer Fehler aufgetreten. Ausführliche Informationen erhalten Sie die [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) Schnittstelle.  
+ Ein anbieterspezifischer Fehler ist aufgetreten; Verwenden Sie ausführliche Informationen, die [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) Schnittstelle.  
   
  E_UNEXPECTED  
  Die Methode wurde unerwartet aufgerufen. Die **BCPInit** -Methode wurde beispielsweise erst nach dem Aufruf dieser Methode aufgerufen. Tritt auch auf, wenn diese Methode mehr als einmal für einen Massenkopiervorgang aufgerufen wird.  
@@ -69,7 +69,7 @@ HRESULT BCPColumns(
  Fehler aufgrund nicht genügenden Arbeitsspeichers  
   
 ## <a name="see-also"></a>Siehe auch  
- [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession &#40;OLE-DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Durchführen von Massenkopiervorgängen](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - non-SQL Server Subscribers, IBM DB2
 - data types [SQL Server replication], non-SQL Server Subscribers
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - heterogeneous Subscribers, IBM DB2
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 caps.latest.revision: 72
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1705586884d09aa847a6ba308ffb821faa1d6cac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6edc4c9ce7f19a6b9771966e9547d0bf1fd5bffc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050752"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230810"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt Pushabonnements für IBM DB2/AS 400, DB2/MVS und DB2/Universal Database über die OLE DB-Anbieter, die mit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration-Server bereitgestellt werden.  
@@ -35,11 +35,11 @@ ms.locfileid: "36050752"
   
 1.  Installieren Sie die neueste Version des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB-Anbieters für DB2 auf dem Verteiler:  
   
-    -   Bei Verwendung von [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)]auf die [SQL Server 2008 Downloads](http://go.microsoft.com/fwlink/?LinkId=149256) Webseite der **Related Downloads** auf den Link, um die neueste Version von Microsoft SQL Server 2008 Feature Pack. Suchen Sie auf der Webseite **Microsoft SQL Server 2008 Feature Pack** nach **Microsoft OLE DB Provider for DB2**(bzw. nach Microsoft OLE DB-Anbieter für DB2, falls eine deutsche Webseite vorhanden ist).  
+    -   Bei Verwendung von [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)]auf die [SQL Server 2008 Downloads](http://go.microsoft.com/fwlink/?LinkId=149256) Webseite, in der **Related Downloads** auf den Link, um die neueste Version von Microsoft SQL Server 2008 Feature Pack. Suchen Sie auf der Webseite **Microsoft SQL Server 2008 Feature Pack** nach **Microsoft OLE DB Provider for DB2**(bzw. nach Microsoft OLE DB-Anbieter für DB2, falls eine deutsche Webseite vorhanden ist).  
   
     -   Wenn Sie [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Standard verwenden, installieren Sie die aktuelle Version von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Server (HIS). Der Anbieter ist in diesem Produkt enthalten.  
   
-     Zusätzlich zu den Anbieter installieren, wird empfohlen, dass Sie das Data Access Tool installieren, die im nächsten Schritt verwendet wird (es wird standardmäßig installiert, mit dem Download für [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Enterprise). Weitere Informationen zum Installieren und Verwenden des Data Access Tools finden Sie in der Anbieter- oder der HIS-Dokumentation.  
+     Zusätzlich zur Installation des Anbieters, wird empfohlen, dass Sie das Data Access Tool installieren, die im nächsten Schritt verwendet wird (es wird standardmäßig installiert, mit dem Download für [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Enterprise). Weitere Informationen zum Installieren und Verwenden des Data Access Tools finden Sie in der Anbieter- oder der HIS-Dokumentation.  
   
 2.  Erstellen Sie eine Verbindungszeichenfolge für den Abonnenten. Die Verbindungszeichenfolge kann in einem beliebigen Text-Editor erstellt werden, Sie sollten jedoch das Data Access Tool verwenden. So erstellen Sie die Zeichenfolge im Data Access Tool  
   
@@ -165,9 +165,9 @@ ms.locfileid: "36050752"
   
      Wenn keine geeignete Zuordnung für eine LOB-Spalte vorhanden ist, verwenden Sie die Spaltenfilterung für die Artikel, sodass die Spalte nicht repliziert wird. Weitere Informationen finden Sie unter [Filtern von veröffentlichten Daten](../publish/filter-published-data.md).  
   
--   Beim Replizieren von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nchar` und `nvarchar` auf die DB2-Datentypen CHAR und VARCHAR Replikation verwendet die gleichen Länge-Spezifizierer für den DB2-Typ wie für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Typ. Die Datentyplänge ist jedoch möglicherweise zu gering für die generierte DB2-Tabelle  
+-   Bei der Replikation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nchar` und `nvarchar` auf die DB2-Datentypen CHAR und VARCHAR Replikation verwendet die gleiche Länge-Bezeichner für den DB2-Typ wie für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Typ. Die Datentyplänge ist jedoch möglicherweise zu gering für die generierte DB2-Tabelle  
   
-     In einigen DB2-Umgebungen eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char` Datenelement ist nicht auf Einzelbyte-Zeichen beschränkt; die Länge eines char- oder VARCHAR-Elements muss dies berücksichtigt. Sie müssen auch *Rückschaltungs* - und *Dauerumschaltungs* zeichen berücksichtigen, wenn diese benötigt werden. Wenn Sie Tabellen mit replizieren `nchar` und `nvarchar` Spalten, müssen Sie möglicherweise eine größere maximale Länge für den Datentyp in einem benutzerdefinierten Erstellungsskript angeben. Informationen zum Angeben eines benutzerdefinierten Erstellungsskripts finden Sie in Schritt 5 im Abschnitt zum Konfigurieren eines IBM DB2-Abonnenten in diesem Thema.  
+     In einigen DB2-Umgebungen ist ein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char` Datenelement ist nicht auf ein-Byte-Zeichen beschränkt; die Länge eines char- oder VARCHAR-Elements muss dies berücksichtigt. Sie müssen auch *Rückschaltungs* - und *Dauerumschaltungs* zeichen berücksichtigen, wenn diese benötigt werden. Wenn Sie Tabellen mit replizieren `nchar` und `nvarchar` Spalten müssen Sie möglicherweise eine größere maximale Länge für den Datentyp in einem benutzerdefinierten Erstellungsskript angeben. Informationen zum Angeben eines benutzerdefinierten Erstellungsskripts finden Sie in Schritt 5 im Abschnitt zum Konfigurieren eines IBM DB2-Abonnenten in diesem Thema.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   

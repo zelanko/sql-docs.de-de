@@ -1,5 +1,5 @@
 ---
-title: Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator | Microsoft Docs
+title: Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10421"
 ms.assetid: 7e103637-4371-43d7-821c-d269c2cc1b34
 caps.latest.revision: 13
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d8a958e8549d5c3204e18af02a19194de8904682
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f27dbcf0375f7acc1e478cce2cd148b5efc03ec9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057828"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183877"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-report-builder"></a>Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator
   Um Daten in einen Bericht einzuschließen, erstellen Sie Datenverbindungen und Datasets. Eine Datenverbindung schließt Informationen zum Zugreifen auf eine externe Datenquelle ein. Ein Dataset enthält einen Abfragebefehl, der angibt, welche Daten mit der Datenverbindung eingeschlossen werden sollen.  
@@ -40,7 +40,7 @@ ms.locfileid: "36057828"
   
  Weitere Informationen finden Sie unter [eingebettete und freigegebene Datenverbindungen oder Datenquellen &#40;Berichts-Generator und SSRS&#41; ](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) und [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
- Daten können auch mithilfe von vordefinierten freigegebenen Datenquellen, freigegebenen Datasets und Berichtsteilen in einen Bericht eingeschlossen werden. Diese Elemente verfügen bereits über die erforderlichen Informationen zur Datenverbindung. Weitere Informationen finden Sie unter [Daten zu einem Bericht hinzufügen &#40;Berichts-Generator und SSRS&#41;](report-data/report-datasets-ssrs.md).  
+ Daten können auch mithilfe von vordefinierten freigegebenen Datenquellen, freigegebenen Datasets und Berichtsteilen in einen Bericht eingeschlossen werden. Diese Elemente verfügen bereits über die erforderlichen Informationen zur Datenverbindung. Weitere Informationen finden Sie unter [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](report-data/report-datasets-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
@@ -62,7 +62,7 @@ ms.locfileid: "36057828"
 |Oracle-Server|`data source=myserver`|Legen Sie den Datenquellentyp auf `Oracle`. Auf dem Computer mit dem Berichts-Generator und auf dem Berichtsserver müssen die Oracle-Clienttools installiert sein.|  
 |SAP NetWeaver BI-Datenquelle|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Legen Sie den Datenquellentyp auf `SAP NetWeaver BI`.|  
 |Hyperion Essbase-Datenquelle|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Legen Sie den Datenquellentyp auf `Hyperion Essbase`.|  
-|Teradata-Datenquelle|`data source=` *\<NN &GT;. \<"NNN" &GT;. \<"NNN" &GT;. \<N &GT;* `;`|Legen Sie den Datenquellentyp auf `Teradata`. Die Verbindungszeichenfolge ist eine IP-Adresse (Internet Protocol) in Form von vier Feldern, wobei jedes Feld ein bis drei Ziffern aufweisen kann.|  
+|Teradata-Datenquelle|`data source=` *\<NN &GT;. \<NNN &GT;. \<NNN &GT;. \<N &GT;* `;`|Legen Sie den Datenquellentyp auf `Teradata`. Die Verbindungszeichenfolge ist eine IP-Adresse (Internet Protocol) in Form von vier Feldern, wobei jedes Feld ein bis drei Ziffern aufweisen kann.|  
 |Teradata-Datenquelle|`Database=` *\<Databankname>* `; data source=` *\<NN*N *>.\<NNN>.\<NNN>.\<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|Legen Sie den Datenquellentyp auf `Teradata` fest, ähnlich dem vorherigen Beispiel. Verwenden Sie nur die Standarddatenbank, die im Datenbank-Tag angegeben wird, und ermitteln Sie nicht automatisch Datenbeziehungen.|  
 |XML-Datenquelle, Webdienst|`data source=http://adventure-works.com/results.aspx`|Legen Sie den Datenquellentyp auf `XML`. Die Verbindungszeichenfolge ist eine URL für einen Webdienst, der Webdienste-Definitionssprache (WSDL) unterstützt.|  
 |XML-Datenquelle, XML-Dokument|`http://localhost/XML/Customers.xml`|Legen Sie den Datenquellentyp auf `XML`. Die Verbindungszeichenfolge besteht aus einer URL für das XML-Dokument.|  
@@ -78,7 +78,7 @@ ms.locfileid: "36057828"
 > [!NOTE]  
 >  Einige Anmeldeinformationstypen unterstützen möglicherweise nicht alle vom Berichts-Generator verwendeten Szenarien. Wenn Sie eine Abfrage im Abfrage-Designer ausführen möchten, zeigen Sie die Vorschau eines Berichts auf Ihrem Computer an, wenn keine Verbindung zum Berichtsserver hergestellt ist, und führen Sie den Bericht vom Berichtsserver aus. Sie sollten nach Möglichkeit immer freigegebene Datenquellen verwenden. Die Anmeldeinformationen für eine freigegebene Datenquelle auf dem Berichtsserver können Sie speichern. Weitere Informationen finden Sie unter [Angeben von Anmeldeinformationen im Berichts-Generator](../../2014/reporting-services/specify-credentials-in-report-builder.md).  
   
- Um eine freigegebene Datenquelle zu erstellen, müssen Sie Berichts-Manager verwenden, um die Datenquelle direkt auf dem Berichtsserver zu erstellen, oder eine erstellungsumgebung wie dem Berichts-Designer in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Weitere Informationen finden Sie unter [erstellen Sie eine eingebettete oder freigegebene Datenquelle &#40;SSRS&#41;](../../2014/reporting-services/create-an-embedded-or-shared-data-source-ssrs.md).  
+ Um eine freigegebene Datenquelle zu erstellen, müssen Sie Berichts-Manager verwenden, um die Datenquelle direkt auf dem Berichtsserver erstellen oder verwenden Sie eine erstellungsumgebung wie z. B. Berichts-Designer in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Weitere Informationen finden Sie unter [erstellen Sie eine eingebettete oder freigegebene Datenquelle &#40;SSRS&#41;](../../2014/reporting-services/create-an-embedded-or-shared-data-source-ssrs.md).  
   
 
   

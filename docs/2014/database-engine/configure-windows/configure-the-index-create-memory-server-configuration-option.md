@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - index create memory option
 ms.assetid: 3d722d9b-bada-4bf5-a9d7-bfc556bb4915
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 438d18c71f0fd36c391610c9e60b315628d290be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ae50e72b064b7c8b18fad148a365c869382c6914
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049961"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161071"
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Speicher für Indexerstellung
   In diesem Thema wird beschrieben, wie die Serverkonfigurationsoption **Speicher für Indexerstellung** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]konfiguriert wird. Mit der Option **Speicher für Indexerstellung** wird der maximale Umfang des für die Erstellung von Indizes zugeordneten Arbeitsspeichers gesteuert. Der Standardwert für diese Option beträgt 0 (Selbstkonfiguration). Wenn später für die Indexerstellung mehr Speicherplatz benötigt wird und noch Speicherplatz verfügbar ist, wird dieser vom Server verwendet, und der für die Option festgelegte Wert wird überschritten. Wenn kein Speicherplatz mehr verfügbar ist, wird die Indexerstellung so lange fortgesetzt, wie der bereits zugeordnete Speicherplatz gestattet.  

@@ -1,5 +1,5 @@
 ---
-title: Path-Element (ASSL) | Microsoft Docs
+title: Path-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Path element
 ms.assetid: 0edc59ac-1671-4fe1-9b7c-6c1548df5c63
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5ba53c4ee4399a39ebd8e4a1b14c9c062b3abaa7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc537a04723bb94dae76ab4bcb86e4d3d3e210f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050665"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161261"
 ---
 # <a name="path-element-assl"></a>Path-Element (ASSL)
-  Den Pfad enthält, wie eine Instanz von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], eines Berichts verwendet werden, indem Sie die [ReportAction](../data-type/action-data-type-assl.md) Element.  
+  Der Pfad enthält, gemäß Bereitstellung durch eine Instanz von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], eines Berichts ein, die die [ReportAction](../data-type/action-data-type-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36050665"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element, das das übergeordnete Element des entspricht `Path` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ReportAction>.  
+ Das Element, das dem übergeordneten entspricht `Path` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ReportAction>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

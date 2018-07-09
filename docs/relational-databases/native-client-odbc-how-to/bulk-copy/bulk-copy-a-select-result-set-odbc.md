@@ -1,12 +1,12 @@
 ---
-title: Massenkopieren eine SELECT-Resultsets (ODBC) | Microsoft Docs
+title: Massenkopieren eine SELECT-Resultsets (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a6cc6782023af6bb1916d153e172fe7c8c2dfc53
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 7be06db485057a16961d76ff3965ce862c104cdd
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702441"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427289"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>Massenkopieren eines SELECT-Resultsets (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "35702441"
   
 3.  Stellen Sie eine Verbindung mit SQL Server her.  
   
-4.  Rufen Sie [Bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) um die folgenden Informationen festzulegen:  
+4.  Rufen Sie [Bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) auf die folgenden Informationen festzulegen:  
   
     -   Geben Sie NULL für den *SzTable* Parameter.  
   
@@ -52,11 +52,11 @@ ms.locfileid: "35702441"
   
     -   Die Richtung des Kopiervorgangs: DB_OUT.  
   
-5.  Rufen Sie [Bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), legen Sie eOption auf BCPHINTS und platzieren Sie in iValue einen Zeiger auf ein SQLTCHAR-Array, das die SELECT-Anweisung enthält.  
+5.  Rufen Sie [Bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), legen Sie eOption auf BCPHINTS fest, und platzieren Sie in iValue einen Zeiger auf ein SQLTCHAR-Array, das mit der SELECT-Anweisung.  
   
 6.  Rufen Sie [Bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) um den Massenkopiervorgang auszuführen.  
   
- Wenn Sie diese Schritte ausführen, wird die Datei im systemeigenen Format erstellt. Sie können die Datenwerte in andere Datentypen konvertieren, mithilfe von [Bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). Weitere Informationen finden Sie unter [Erstellen einer Formatdatei für Massenkopieren &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/create-a-bulk-copy-format-file-odbc.md).  
+ Wenn Sie diese Schritte ausführen, wird die Datei im systemeigenen Format erstellt. Sie können die Datenwerte in andere Datentypen konvertieren, indem Sie mithilfe von [Bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). Weitere Informationen finden Sie unter [Erstellen einer Formatdatei für das Massenkopieren &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/create-a-bulk-copy-format-file-odbc.md).  
   
 ## <a name="example"></a>Beispiel  
  Sie benötigen eine ODBC-Datenquelle mit dem Namen AdventureWorks, deren Standarddatenbank die AdventureWorks-Beispieldatenbank ist. (Sie können die AdventureWorks-Beispieldatenbank von der Homepage [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) herunterladen.) Diese Datenquelle muss auf dem ODBC-Treiber basieren, der vom Betriebssystem bereitgestellt wird (der Treibername lautet "SQL Server"). Wenn Sie dieses Beispiel als 32-Bit-Anwendung entwickeln und unter einem 64-Bit-Betriebssystem ausführen, müssen Sie die ODBC-Datenquelle mit dem ODBC-Administrator in %windir%\SysWOW64\odbcad32.exe erstellen.  
@@ -170,6 +170,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Massenkopieren mit SQL Server-ODBC-Treiber – Themen &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
+ [Massenkopieren mit dem SQL Server-ODBC-Treiber – Themen &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
   

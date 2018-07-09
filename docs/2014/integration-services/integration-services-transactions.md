@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], transactions
 - transactions [Integration Services], about transactions in packages
@@ -18,13 +18,13 @@ ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
 caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 880fd7d655b572f264f5120849cb5a927cdaaa59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4002487af9dba5e4466b75e3fce19ce0c9b8d531
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050346"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165011"
 ---
 # <a name="integration-services-transactions"></a>Integration Services-Transaktionen
   Pakete verwenden Transaktionen, um die von Tasks ausgeführten Datenbankaktionen in unteilbare Einheiten einzubinden und somit die Integrität der Daten zu erhalten. Alle [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Containertypen – Pakete, For-Schleifen-Container, Foreach-Schleifen-Container und Sequenzcontainer sowie die Taskhosts, die die einzelnen Tasks kapseln – können so konfiguriert werden, dass sie Transaktionen verwenden. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt für das Konfigurieren von Transaktionen drei Optionen bereit: **NotSupported**, **Supported**und **Required**.  
@@ -38,7 +38,7 @@ ms.locfileid: "36050346"
  Sie konfigurieren Transaktionen, indem Sie für den Container die TransactionOption-Eigenschaft festlegen. Diese Eigenschaft können Sie mithilfe des Fensters **Eigenschaften** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]oder programmgesteuert festlegen.  
   
 > [!NOTE]  
->  Mit der `TransactionOption`-Eigenschaft wird festgelegt, ob der von einem Container angeforderte Wert der `IsolationLevel`-Eigenschaft angewendet wird. Weitere Informationen finden Sie unter der Beschreibung der `IsolationLevel` -Eigenschaft im Thema [Festlegen von Paketeigenschaften](set-package-properties.md).  
+>  Mit der `TransactionOption`-Eigenschaft wird festgelegt, ob der von einem Container angeforderte Wert der `IsolationLevel`-Eigenschaft angewendet wird. Weitere Informationen finden Sie unter der Beschreibung der `IsolationLevel` Eigenschaft im Thema [Festlegen von Paketeigenschaften](set-package-properties.md).  
   
 ### <a name="to-configure-a-package-to-use-transactions"></a>So konfigurieren Sie das Verwenden von Transaktionen für ein Paket  
   

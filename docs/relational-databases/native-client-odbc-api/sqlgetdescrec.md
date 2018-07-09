@@ -1,12 +1,12 @@
 ---
-title: SQLGetDescRec | Microsoft Docs
+title: SQLGetDescRec | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,25 +17,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2ab5c1cbc3265c5184d481f1e17c923b4d02fd6a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: ad1c10503b96ab4229be5d1cbc9552b1e6de000d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697371"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430289"
 ---
 # <a name="sqlgetdescrec"></a>SQLGetDescRec
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  In diesem Thema wird erläutert, SQLGetDescRec Funktionen, die spezifisch für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
+  SQLGetDescRec-Funktion, die spezifisch für ist in diesem Thema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="sqlgetdescrec-and-table-valued-parameters"></a>SQLGetDescRec und Tabellenwertparameter  
  SQLGetDescRec kann verwendet werden, um Werte für Attribute von Tabellenwertparametern und Tabellenwertparameter-Spalten zu erhalten. Die *RecNumber* Parameter des SQLGetDescRec entspricht der *ParameterNumber* -Parameter von SQLBindParameter.  
   
- Tabellenwertparameter-Spalten sind nur verfügbar, wenn das Deskriptorheaderfeld SQL_SOPT_SS_PARAM_FOCUS auf die Ordnungszahl eines Datensatzes festgelegt ist, für den SQL_DESC_TYPE auf SQL_SS_TABLE eingestellt ist. Weitere Informationen zu SQL_SOPT_SS_PARAM_FOCUS finden Sie unter [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
+ Tabellenwertparameter-Spalten sind nur verfügbar, wenn das Deskriptorheaderfeld SQL_SOPT_SS_PARAM_FOCUS auf die Ordnungszahl eines Datensatzes festgelegt ist, für den SQL_DESC_TYPE auf SQL_SS_TABLE eingestellt ist. Weitere Informationen zu SQL_SOPT_SS_PARAM_FOCUS zu finden Sie unter [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
   
- SQLGetDescRec gibt die folgenden Daten:  
+ SQLGetDescRec gibt die folgenden Daten zurück:  
   
 |Parameter|Tabellenwertparameter|Tabellenwertparameter-Spalten und andere Parameter|  
 |---------------|-----------------------------|----------------------------------------------------------|  
@@ -61,7 +61,7 @@ ms.locfileid: "35697371"
 |datetime2|SQL_DATETIME|SQL_CODE_TIMESTAMP|16|0..7|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|0|20|0..7|0..7|  
   
- Weitere Informationen finden Sie unter [Datum und Uhrzeit-Verbesserungen &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Weitere Informationen finden Sie unter [Datums- / Uhrzeitverbesserungen &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlgetdescrec-support-for-large-clr-udts"></a>SQLGetDescRec-Unterstützung für große CLR-UDTs  
  **SQLGetDescRec** unterstützt große CLR-benutzerdefinierte Typen (UDTs). Weitere Informationen finden Sie unter [Large CLR User-Defined Typen &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  

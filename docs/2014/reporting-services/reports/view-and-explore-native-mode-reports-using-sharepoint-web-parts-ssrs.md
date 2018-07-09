@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2073a7317ea012f2eb1dc1d4888778763cba1611
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: a4e6dcaedf09ca73691678cb21dd6066c23dbddf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056145"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278404"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>Anzeigen und Durchsuchen von Berichten im einheitlichen Modus mithilfe von SharePoint-Webparts (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden verschiedene Webparts bereitgestellt, die mit bestimmten Versionen eines Berichtsservers und in bestimmten Bereitstellungsmodi verwendet werden können.  
@@ -169,7 +169,7 @@ ms.locfileid: "36056145"
     3.  Klicken Sie auf **Berichts-Viewer**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Berichts-Manager &#40;SSRS im einheitlichen Modus&#41;](../report-manager-ssrs-native-mode.md)   
+ [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md)   
  [Reporting Services-Berichtsserver &#40;SharePoint-Modus&#41;](../reporting-services-report-server-sharepoint-mode.md)   
  [Reporting Services-Berichtsserver (einheitlicher Modus)](../report-server/reporting-services-report-server-native-mode.md)  
   

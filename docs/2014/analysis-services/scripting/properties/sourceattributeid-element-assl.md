@@ -1,5 +1,5 @@
 ---
-title: SourceAttributeID-Element (ASSL) | Microsoft Docs
+title: SourceAttributeID-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - SourceAttributeID element
 ms.assetid: 8973eb62-6142-4ce2-ad42-c8be2b43c04f
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 06da8df2a164ee903b59dc2a154bca926c1b82f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d30b6a54f90437baad822ba285bf0fc56a6a891d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058784"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157081"
 ---
 # <a name="sourceattributeid-element-assl"></a>SourceAttributeID-Element (ASSL)
   Enthält den Bezeichner (ID) des Quellattributs, auf denen die [Ebene](../objects/level-element-assl.md) -Element basiert.  
@@ -62,7 +62,7 @@ ms.locfileid: "36058784"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Das übergeordnete Element des entsprechende Element `SourceAttributeID` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Level>.  
+ Das Element, das dem übergeordneten entspricht `SourceAttributeID` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Level>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

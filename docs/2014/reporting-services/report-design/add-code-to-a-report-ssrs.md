@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - code [Reporting Services]
 - custom code [Reporting Services]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - reports [Reporting Services], code
 ms.assetid: 00ef8fc6-99fe-49b2-8a22-7eb475881dc4
 caps.latest.revision: 41
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3b4861234af092f5acd9dc500e52737a446d5dad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 75f7f2490adbf85d9d4796a8492d00b9685de423
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050472"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183947"
 ---
 # <a name="add-code-to-a-report-ssrs"></a>Hinzufügen von Code zu einem Bericht (SSRS)
   Sie können in jedem beliebigen Ausdruck einen eigenen benutzerdefinierten Code aufrufen. Sie können Code auf folgende zwei Arten bereitstellen:  
@@ -62,8 +62,8 @@ ms.locfileid: "36050472"
      Wenn Sie diesen Ausdruck einer Tabellenzelle hinzufügen, in der Kategoriewerte angezeigt werden, wird, wenn das Wort "Bike" im Datasetfeld für diese Zeile enthalten ist, stattdessen das Wort "Bicycle" als Tabellenzellenwert angezeigt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Dialogfeld "Bericht", Code](../report-properties-dialog-box-code.md)   
+ [Bericht im Dialogfeld Eigenschaften von Code](../report-properties-dialog-box-code.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [Verweise auf Parameters-Auflistung &#40;Berichts-Generator und SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)  
+ [Verweise auf Parameterauflistungen &#40;Berichts-Generator und SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)  
   
   

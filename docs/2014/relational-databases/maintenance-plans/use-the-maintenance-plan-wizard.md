@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.maintwiz.planprop.f1
 - sql12.ag.maintwiz.task.f1
@@ -35,18 +35,18 @@ helpviewer_keywords:
 - Database Maintenance Plan Wizard, starting
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 11706f4fb3761e20fea4c70feb431144efed0fc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 6ee9a3c08fc00b5e7c6b340d3963e2003cfb0343
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056273"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154491"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Verwenden des Wartungsplanungs-Assistenten
-  In diesem Thema wird beschrieben, wie So erstellen Sie einen Einzelserver- oder multiserver-Wartungsplan mithilfe des Wartungsplanungs-Assistenten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Der Wartungsplanungs-Assistent erstellt einen Wartungsplan, den der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent regelmäßig ausführen kann. Dies ermöglicht es Ihnen, verschiedene Aufgaben für die Datenbankverwaltung in bestimmten Intervallen auszuführen, z. B. Sicherungen, Datenbankintegritätsprüfungen oder Datenbankstatistikupdates.  
+  In diesem Thema wird beschrieben, wie erstellen Sie einen Einzelserver- oder multiserver-Wartungsplan mithilfe des Wartungsplanungs-Assistenten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Der Wartungsplanungs-Assistent erstellt einen Wartungsplan, den der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent regelmäßig ausführen kann. Dies ermöglicht es Ihnen, verschiedene Aufgaben für die Datenbankverwaltung in bestimmten Intervallen auszuführen, z. B. Sicherungen, Datenbankintegritätsprüfungen oder Datenbankstatistikupdates.  
   
  **In diesem Thema**  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36056273"
 ####  <a name="Permissions"></a> Berechtigungen  
  Sie müssen Mitglied der festen Serverrolle **sysadmin** sein, um Wartungspläne erstellen oder verwalten zu können. Im Objekt-Explorer wird der **Wartungspläne** -Knoten nur für Benutzer angezeigt, die Mitglied der festen Serverrolle **sysadmin** sind.  
   
-##  <a name="SSMSProcedure"></a> Mithilfe des Wartungsplanungs-Assistenten  
+##  <a name="SSMSProcedure"></a> Mithilfe des Wartungsplanungs-Assistent  
   
 #### <a name="to-start-the-maintenance-plan-wizard"></a>So starten Sie den Wartungsplanungs-Assistenten  
   
@@ -371,7 +371,7 @@ ms.locfileid: "36056273"
      Wählen Sie SQL-Anmeldeinformationen aus, die zur Authentifizierung beim Windows Azure-Speicher verwendet werden sollen. Wenn Sie über keine vorhandenen geeigneten SQL-Anmeldeinformationen verfügen, klicken Sie auf die Schaltfläche **Erstellen** , um neue SQL-Anmeldeinformationen zu erstellen.  
   
     > [!IMPORTANT]  
-    >  Das Dialogfeld, das beim Klicken auf **Erstellen** geöffnet wird, erfordert ein Verwaltungszertifikat oder das Veröffentlichungsprofil für das Abonnement. Wenn Sie keinen Zugriff auf das Verwaltungszertifikat oder Veröffentlichungsprofil haben, können Sie SQL-Anmeldeinformationen erstellen, indem Sie den Namen des Speicherkontos und die Informationen zum Zugriffsschlüssel mithilfe von Transact-SQL oder SQL Server Management Studio angeben. Der Beispielcode in die [zum Erstellen von Anmeldeinformationen](../security/authentication-access/create-a-credential.md#Credential) Thema zum Erstellen von Anmeldeinformationen mithilfe von Transact-SQL. Alternativ können Sie auf der Datenbank-Engine-Instanz in SQL Server Management Studio mit der rechten Maustaste auf **Sicherheit**klicken und **Neu**sowie **Anmeldeinformationen**auswählen. Geben Sie im Feld **Identität** den Namen des Speicherkontos und im Feld **Kennwort** den Zugriffsschlüssel an.  
+    >  Das Dialogfeld, das beim Klicken auf **Erstellen** geöffnet wird, erfordert ein Verwaltungszertifikat oder das Veröffentlichungsprofil für das Abonnement. Wenn Sie keinen Zugriff auf das Verwaltungszertifikat oder Veröffentlichungsprofil haben, können Sie SQL-Anmeldeinformationen erstellen, indem Sie den Namen des Speicherkontos und die Informationen zum Zugriffsschlüssel mithilfe von Transact-SQL oder SQL Server Management Studio angeben. Der Beispielcode in die [-Anmeldeinformationen erstellen](../security/authentication-access/create-a-credential.md#Credential) Thema zum Erstellen von Anmeldeinformationen mithilfe von Transact-SQL. Alternativ können Sie auf der Datenbank-Engine-Instanz in SQL Server Management Studio mit der rechten Maustaste auf **Sicherheit**klicken und **Neu**sowie **Anmeldeinformationen**auswählen. Geben Sie im Feld **Identität** den Namen des Speicherkontos und im Feld **Kennwort** den Zugriffsschlüssel an.  
   
      **Azure-Speichercontainer**  
      Geben Sie den Namen des Windows Azure-Speichercontainers an.  

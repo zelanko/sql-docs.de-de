@@ -1,5 +1,5 @@
 ---
-title: Aufbauen von Verbindungen in ADOMD.NET | Microsoft Docs
+title: Aufbauen von Verbindungen in ADOMD.NET | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - ADOMD.NET, connections
 ms.assetid: 7b9610f5-6641-42cc-af4e-bd35771913d1
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e9779ae9f6791443d06b97aaf9e56254ce1d7934
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d7bf4529df77545cf2d0acf69af5d0b570ef750
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050457"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165301"
 ---
 # <a name="establishing-connections-in-adomdnet"></a>Aufbauen von Verbindungen in ADOMD.NET
-  In ADOMD.NET verwenden Sie die <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> -Objekt, z. B. Öffnen von Verbindungen mit analytischen Datenquellen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbanken. Wenn die Verbindung nicht mehr benötigt wird, sollten Sie die Verbindung explizit schließen.  
+  In ADOMD.NET verwenden Sie die <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> Objekt, das Öffnen von Verbindungen mit analytischen Datenquellen, wie z. B. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbanken. Wenn die Verbindung nicht mehr benötigt wird, sollten Sie die Verbindung explizit schließen.  
   
 ## <a name="opening-a-connection"></a>Öffnen einer Verbindung  
  Um eine Verbindung in ADOMD.NET zu öffnen, müssen Sie zunächst eine Verbindungszeichenfolge zu einer gültigen analytischen Datenquelle und Datenbank angeben. Dann müssen Sie die Verbindung explizit für diese Datenquelle öffnen.  
@@ -49,12 +49,12 @@ System.Diagnostics.Debug.Writeline(advwrksConnection.ConnectionString);
 ```  
   
 ### <a name="opening-a-connection-to-the-data-source"></a>Öffnen einer Verbindung zur Datenquelle  
- Nachdem Sie die Verbindungszeichenfolge angegeben haben, müssen Sie die <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A>-Methode verwenden, um die Verbindung zu öffnen. Wenn Sie ein <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>-Objekt öffnen, können Sie verschiedene Sicherheitsstufen für die Verbindung festlegen. Die Sicherheitsstufe, die für die Verbindung verwendet wird, hängt vom Wert der Einstellung der `ProtectionLevel`-Verbindungszeichenfolge ab. Weitere Informationen zum Öffnen einer sicheren Verbindung in ADOMD.NET finden Sie unter [Establishing Secure Connections in ADOMD.NET](connections-in-adomd-net-establishing-secure-connections.md).  
+ Nachdem Sie die Verbindungszeichenfolge angegeben haben, müssen Sie die <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A>-Methode verwenden, um die Verbindung zu öffnen. Wenn Sie ein <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>-Objekt öffnen, können Sie verschiedene Sicherheitsstufen für die Verbindung festlegen. Die Sicherheitsstufe, die für die Verbindung verwendet wird, hängt vom Wert der Einstellung der `ProtectionLevel`-Verbindungszeichenfolge ab. Weitere Informationen über das Öffnen von sicherer Verbindungen in ADOMD.NET finden Sie unter [Establishing Secure Connections in ADOMD.NET](connections-in-adomd-net-establishing-secure-connections.md).  
   
 ## <a name="working-with-a-connection"></a>Arbeiten mit einer Verbindung  
  Jede geöffnete Verbindung besteht in einer Sitzung, die zustandsbehaftete Vorgänge unterstützt. Eine Sitzung kann für mehr als eine geöffnete Verbindung freigegeben werden. Durch die Freigabe einer Sitzung können mehrere Clients den gleichen Kontext nutzen. Weitere Informationen finden Sie unter [arbeiten mit Verbindungen und Sitzungen in ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net-working-with-connections-and-sessions.md).  
   
- Sie können eine geöffnete Verbindung verwenden, um Metadaten, Daten und Ausführungsbefehle abzurufen. Weitere Informationen finden Sie unter [Abrufen von Metadaten aus einer analytischen Datenquelle](retrieving-metadata-from-an-analytical-data-source.md), [Abrufen von Daten aus einer analytischen Datenquelle](retrieving-data-from-an-analytical-data-source.md), und [Ausführen von Befehlen für ein analytischen Daten Quelle](executing-commands-against-an-analytical-data-source.md).  
+ Sie können eine geöffnete Verbindung verwenden, um Metadaten, Daten und Ausführungsbefehle abzurufen. Weitere Informationen finden Sie unter [Abrufen von Metadaten aus einer analytischen Datenquelle](retrieving-metadata-from-an-analytical-data-source.md), [Abrufen von Daten aus einer analytischen Datenquelle](retrieving-data-from-an-analytical-data-source.md), und [Ausführen von Befehlen für eine analytische Daten Quelle](executing-commands-against-an-analytical-data-source.md).  
   
  Bei geöffneter Verbindung können Sie Daten und Metadaten abrufen und Befehle aus einer Transaktion ausführen, bei der ein Commit vor dem Lesevorgang ausgeführt werden muss, wobei während des Lesens der Daten eine Sperre aufrechterhalten wird, um Dirty Reads zu verhindern. Die Daten können auch vor dem Ende der Transaktion noch geändert werden, was zu nicht wiederholbaren Lesevorgängen oder Phantomdaten führt. Weitere Informationen finden Sie unter [Durchführen von Transaktionen in ADOMD.NET](../../relational-databases/native-client-ole-db-transactions/transactions.md).  
   

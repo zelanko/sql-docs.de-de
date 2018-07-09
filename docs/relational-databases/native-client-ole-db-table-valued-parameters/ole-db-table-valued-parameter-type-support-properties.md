@@ -1,12 +1,12 @@
 ---
-title: Unterstützung für den OLE DB-Tabellenwertparameter-Typ (Eigenschaften) | Microsoft Docs
+title: OLE DB-Tabellenwertparameter-Typ-Unterstützung (Eigenschaften) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c487e6d3853eeb430b686896af279283ecdad2c6
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 0a9fcc417d490838f322a884bb5c414d44625088
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695471"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431249"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB-Unterstützung von Tabellenwertparameter-Typen (Eigenschaften)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "35695471"
   Dieses Thema stellt Informationen zu OLE DB-Eigenschaften und -Eigenschaftensätzen bereit, die Tabellenwertparameter-Rowsetobjekten zugeordnet werden.  
   
 ## <a name="properties"></a>Eigenschaften  
- Im folgenden wird die Liste der Eigenschaften, die über die Methode IRowsetInfo::GetPropeties für Tabellenwertparameter-Rowsetobjekte verfügbar gemacht werden. Beachten Sie, dass alle Tabellenwertparameter-Rowseteigenschaften schreibgeschützt sind. Aus diesem Grund versucht, eine Festlegen der Eigenschaften über IOpenRowset:: OPENROWSET oder ITableDefinitionWithConstraints::CreateTableWithConstraints führt zu einem Fehler Methoden mit ihren Standardwerten und kein Objekt erstellt werden.  
+ Folgendes ist die Liste der Eigenschaften, die über die Methode IRowsetInfo::GetPropeties für Tabellenwertparameter-Rowsetobjekte verfügbar gemacht werden. Beachten Sie, dass alle Tabellenwertparameter-Rowseteigenschaften schreibgeschützt sind. Aus diesem Grund versucht, Festlegen der Eigenschaften über IOpenRowset:: OPENROWSET oder ITableDefinitionWithConstraints::CreateTableWithConstraints Methoden auf die Standardwerte, führt zu einem Fehler und kein Objekt erstellt werden.  
   
  Im Tabellenwertparameter-Rowsetobjekt nicht implementierte Eigenschaften werden hier nicht aufgelistet. Eine vollständige Liste von Eigenschaften finden Sie in der OLE DB-Dokumentation in den Windows Data Access Components.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "35695471"
 |DBPROP_DELAYSTORAGEOBJECTS|VARIANT_FALSE|  
 |DBPROP_IAccessor<br /><br /> DBPROP_IColumnsInfo<br /><br /> DBPROP_IConvertType<br /><br /> DBPROP_IRowset<br /><br /> DBPROP_IRowsetInfo,<br /><br /> DBPROP_IColumnsRowset|VARIANT_TRUE|  
 |DBPROP_IConnectionPointContainer<br /><br /> DBPROP_IMultipleResults<br /><br /> DBPROP_IRowsetUpdate<br /><br /> DBPROP_IRowsetIdentity<br /><br /> DBPROP_IRowsetLocate<br /><br /> DBPROP_IRowsetScroll<br /><br /> DBPROP_IRowsetResynch|VARIANT_FALSE|  
-|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> Hinweis: Das Tabellenwertparameter-Rowsetobjekt unterstützt die IRowsetChange-Schnittstellen.<br /><br /> Ein mit DBPROP_IRowsetChange gleich VARIANT_TRUE erstelltes Rowset zeigt Verhaltensweisen des Sofortupdatemodus.<br /><br /> Jedoch wenn BLOB-Spalten als ISequentialStream-Objekte gebunden werden, muss der Consumer diese für die Lebensdauer des Tabellenwertparameter-Rowsetobjekts aufbewahrt werden sollen.|  
+|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> Hinweis: Das Tabellenwertparameter-Rowsetobjekt unterstützt die IRowsetChange-Schnittstellen.<br /><br /> Ein mit DBPROP_IRowsetChange gleich VARIANT_TRUE erstelltes Rowset zeigt Verhaltensweisen des Sofortupdatemodus.<br /><br /> Wenn BLOB-Spalten als ISequentialStream-Objekte gebunden sind, wird jedoch der Consumer erwartet, für die Lebensdauer des Tabellenwertparameter-Rowsetobjekts behalten möchten.|  
 |DBPROP_ISupportErrorInfo|VARIANT_TRUE|  
 |DBPROP_ISequentialStream|VARIANT_TRUE|  
 |DBPROP_IMMOBILEROWS|VARIANT_TRUE|  
@@ -89,7 +89,7 @@ ms.locfileid: "35695471"
 |SSPROP_COL_COMPUTED|R/W: Lesen/Schreiben<br /><br /> Standard: VARIANT_FALSE<br /><br /> Typ: VT_BOOL<br /><br /> Beschreibung: Die Festlegung auf VARIANT_TRUE gibt an, dass die Spalte eine berechnete Spalte ist. VARIANT_FALSE gibt an, dass sie keine berechnete Spalte ist.|  
   
 ### <a name="dbpropsetsqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
- Diese Eigenschaften sind vom Consumer beim Erkennen der Tabellenwertparameter-Typinformationen in Aufrufen an ISSCommandWithParamters::GetParameterProperties gelesen und vom Consumer festlegen bestimmte Eigenschaften zu den Tabellenwertparameter festgelegt über isscommandwithparameters:: SetParameterProperties.  
+ Diese Eigenschaften sind vom Consumer beim Erkennen des Tabellenwertparameter-Typinformationen in Aufrufen von ISSCommandWithParamters::GetParameterProperties gelesen und vom Consumer festlegen bestimmte Eigenschaften zu den Tabellenwertparameter festgelegt über isscommandwithparameters:: SetParameterProperties.  
   
  In der folgenden Tabelle werden detaillierte Beschreibungen dieser Eigenschaften bereitgestellt.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "35695471"
 |SSPROP_PARAM_TABLE_COLUMN_ORDER|R/W: Lesen/Schreiben<br /><br /> Standard: VT_EMPTY<br /><br /> Typ: VT_UI2 &#124; VT_ARRAY<br /><br /> Beschreibung: Diese Eigenschaft wird vom Consumer verwendet, um dem Server einen Hinweis zur Sortierreihenfolge der Spaltendaten bereitzustellen. Der Provider führt keinerlei Überprüfung durch und nimmt an, dass der Consumer der bereitgestellten Spezifikation entspricht. Der Server verwendet diese Eigenschaft, um Optimierungen durchzuführen.<br /><br /> Spaltenreihenfolgeninformationen für jede Spalte werden durch ein Paar von Elementen im Array dargestellt. Das erste Element im Paar ist die Nummer der Spalte. Das zweite Element im Paar ist 1 für eine aufsteigende Reihenfolge oder 2 für eine absteigende Reihenfolge.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Unterstützung des OLE DB-Tabellenwertparameter-Typ](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
- [Verwenden von Tabellenwertparametern &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [OLE DB-Unterstützung für Tabellenwertparameter-Typen](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
+ [Verwenden von Tabellenwertparametern &#40;OLE-DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

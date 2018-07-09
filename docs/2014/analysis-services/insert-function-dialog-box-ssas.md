@@ -1,5 +1,5 @@
 ---
-title: Einfügen (Dialogfeld) für die Funktion (SSAS) | Microsoft Docs
+title: Einfügen (Dialogfeld) für die Funktion (SSAS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.BIDTOOLSET.INSERTFUNCTIONDB.F1
 ms.assetid: c4b36d8f-2328-45f7-8bd4-cc0111571e25
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf09d97be59c09e4ca727762c9be04d54fcd3cc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 77045c8ec5b542f8a01829adaa8074724a693092
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050218"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159671"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>Funktion einfügen (Dialogfeld) (SSAS)
   Im Dialogfeld **Funktion einfügen** können Sie Funktionen aus einer Liste auswählen, die beim Erstellen von Formeln verwendet werden können. Um das Dialogfeld über den Modell-Designer zu öffnen, klicken Sie auf der Bearbeitungsleiste über jeder Tabelle auf die Funktionsschaltfläche (**fx**). Weitere Informationen zum Auswählen von Funktionen für die Verwendung in Formeln finden Sie in der DAX-Einführung und im Thema zum Erstellen eine Formel.  

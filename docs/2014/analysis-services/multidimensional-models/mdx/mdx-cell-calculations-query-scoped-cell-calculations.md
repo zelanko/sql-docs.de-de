@@ -1,5 +1,5 @@
 ---
-title: Erstellen die Abfrage Zellberechnungen (MDX) | Microsoft Docs
+title: Erstellen im Bereich einer Abfrage Zellenberechnungen (MDX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - WITH keyword
 - query-scoped cell calculations [MDX]
 ms.assetid: 45987daa-4400-41e9-add7-2428fd75709b
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 34a26daaf3e1fc55eef72e9382cfe5586a00fb7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5431862cd1a446a045d910841adc4d78d62d42be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049997"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159391"
 ---
 # <a name="creating-query-scoped-cell-calculations-mdx"></a>Erstellen von Zellenberechnungen im Bereich einer Abfrage (MDX)
-  Sie verwenden in MDX (Multidimensional Expressions) das `WITH`-Schlüsselwort dazu, berechnete Zellen im Kontext einer Abfrage zu beschreiben. Die `WITH` -Schlüsselwort hat die folgende Syntax:  
+  Sie verwenden in MDX (Multidimensional Expressions) das `WITH`-Schlüsselwort dazu, berechnete Zellen im Kontext einer Abfrage zu beschreiben. Die `WITH` Schlüsselwort weist die folgende Syntax:  
   
 ```  
 WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression  
@@ -38,7 +38,7 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
 |Leere Menge|Ein MDX-Mengenausdruck, der zu einer leeren Menge aufgelöst wird. In diesem Fall ist der Gültigkeitsbereich der berechneten Zelle gleich dem gesamten Cube.|  
 |Menge mit einem einzelnen Element|Ein MDX-Mengenausdruck, der zu einem einzelnen Element aufgelöst wird.|  
 |Menge von Ebenenelementen|Ein MDX-Mengenausdruck, der zu den Elementen einer einzelnen Ebene aufgelöst wird. Ein Beispiel für einen solchen Mengenausdruck ist die *Level_Expression*.`Members` MDX-Funktion. Um berechnete Elemente einzuschließen, verwenden die *Level_Expression*.`AllMembers` MDX-Funktion. Weitere Informationen finden Sie unter [AllMembers &#40;MDX&#41;](/sql/mdx/allmembers-mdx).|  
-|Menge nachfolgender Werte|Ein MDX-Mengenausdruck, der zu den nachfolgenden Werten eines angegebenen Elements aufgelöst wird. Ein Beispiel für einen solchen Mengenausdruck ist die `Descendants`(*Member_Expression*, *Level_Expresion*, *Desc_Flag*) MDX-Funktion. Weitere Informationen finden Sie unter [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx).|  
+|Menge nachfolgender Werte|Ein MDX-Mengenausdruck, der zu den nachfolgenden Werten eines angegebenen Elements aufgelöst wird. Ein Beispiel für einen solchen Mengenausdruck ist die `Descendants`(*Member_Expression*, *Level_Expression*, *Desc_Flag*)-Funktion von MDX. Weitere Informationen finden Sie unter [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx).|  
   
  Wenn das `String_Expression` -Argument eine Dimension nicht beschreibt, nimmt MDX an, dass alle Elemente beim Erstellen des Berechnungsteilcubes eingeschlossen werden. Daher gilt die Definition berechneter Zellen für den gesamten Cube, wenn das `String_Expression` -Argument den Wert NULL hat.  
   
@@ -58,6 +58,6 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  Andererseits verarbeitet MDX die Berechnungsformel immer dann, wenn eine MDX-Abfrage für den Cube ausgegeben wird, bei der Zellen aus der Definition berechneter Zellen betroffen sind. Diese Verarbeitung erfolgt unabhängig vom Gültigkeitsbereich bei der Erstellung.  
   
 ## <a name="see-also"></a>Siehe auch  
- [CELL CALCULATION-Anweisung erstellen &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
+ [Erstellen von CELL CALCULATION-Anweisung &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
   
   

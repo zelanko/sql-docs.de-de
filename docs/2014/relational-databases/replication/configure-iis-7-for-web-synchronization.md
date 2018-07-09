@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IIS 7 server configuration [SQL Server replication]
 - Web synchronization, IIS 7 servers
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ecd40b90af7ecff8e3b249957cce6b90589acefd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b4766702bb0e9dd82c5e74bc1018894ab90b63a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050534"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158281"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Konfigurieren von IIS 7 für die Websynchronisierung
   Die Vorgehensweisen in diesem Thema führen Sie durch den Prozess zum manuellen Konfigurieren von [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Internetinformationsdiensten (IIS) Version 7 oder höher zur Verwendung mit der Websynchronisierung für die Mergereplikation. 
@@ -82,7 +82,7 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
     3.  Klicken Sie im Bereich **Aktionen** auf **Modulzuordnung hinzufügen**.  
   
-    4.  Für **anfordern** Pfad, geben Sie `replisapi.dll`.  
+    4.  Für **anfordern** Pfad ein, geben Sie `replisapi.dll`.  
   
     5.  Wählen Sie in der Dropdownliste **Modul** die Option **IsapiModule**aus.  
   

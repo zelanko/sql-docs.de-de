@@ -1,5 +1,5 @@
 ---
-title: Richtlinien und Einschränkungen von SQLXML 4.0 | Microsoft Docs
+title: Richtlinien und Einschränkungen von SQLXML 4.0 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SQLXML, about SQLXML
 ms.assetid: fe433d30-90a1-421e-85c6-af13294dc18d
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 10aa9e6c97afbd62e9608f394b38717a677edf0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 7d77565df3e3d7493a2394ccdab47763b9c69324
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058463"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164201"
 ---
 # <a name="guidelines-and-limitations-of-sqlxml-40"></a>Richtlinien und Einschränkungen von SQLXML 4.0
   Bei der Arbeit mit SQLXML 4.0 gilt Folgendes:  
@@ -33,6 +33,6 @@ ms.locfileid: "36058463"
   
      Sie führen eine Anwendung aus, die SQLXML 4.0 und versionsunabhängige Programm-IDs verwendet, und Sie installieren einige andere Softwareprogramme. Dabei könnte mit diesem Programm eine frühere Version von SQLXML installiert werden. Ihre Anwendung schlägt fehl, da die versionsunabhängigen Programm-IDs in der Anwendung nun auf die frühere Version von SQLXML verweisen, die nur bedingt über das SQLXML-Funktion verfügen, das Ihre Anwendung verwendet.  
   
--   Wenn aus irgendeinem Grund Sie nicht den SQLXMLOLEDB-Anbieter verwendet werden soll, und möchten stattdessen den SQLOLEDB-Anbieter für SQLXML-Funktionen, legen Sie die **SQLXML Version** -Eigenschaft auf "SQLXML.4.0".  
+-   Wenn aus irgendeinem Grund nicht Sie den SQLXMLOLEDB-Anbieter verwenden möchten, und möchten stattdessen den SQLOLEDB-Anbieter für SQLXML-Funktionen, Festlegen der **SQLXML Version** Eigenschaft auf "SQLXML.4.0".  
   
   

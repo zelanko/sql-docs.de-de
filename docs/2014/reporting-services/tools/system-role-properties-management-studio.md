@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.systemroleproperties.f1
 ms.assetid: 0210fc2a-74fb-41dd-8e39-4830047ec417
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 1dce716a55830afa2d7e3bc38d87d9ea407ce95c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bdd6160bb68497ae250057213cba31d195655adc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059512"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148701"
 ---
 # <a name="system-role-properties-management-studio"></a>Systemrolleneigenschaften (Management Studio)
   Mithilfe der Seite Systemrollen können Sie die Systemrollendefinitionen anzeigen, die aktuell für den Berichtsserver definiert sind. Eine Systemrollendefinition enthält eine benannte Auflistung von Aufgaben, die in Bezug auf die gesamte Site statt nur für ein einzelnes Element ausgeführt werden. Rollendefinitionen werden Benutzern oder Gruppen zugewiesen, um eine Rollenzuweisung zu erstellen. Die Aufgaben in der Rollendefinition geben die Aktionen an, die der Benutzer oder die Gruppe ausführen kann.  

@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 2: Hinzufügen von Miningmodellen zur Market Basket-Miningstruktur | Microsoft Docs'
+title: 'Lektion 2: Hinzufügen von Miningmodellen zur Market Basket-Miningstruktur | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d96a7a7d-35d7-4b34-abb5-f0822c256253
 caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 6f50095f8bd5c46be96c7132b961477792e1fdd7
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 8d758ef319c61d7868c2114372f353a374c38230
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313102"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159711"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>Lektion 2: Hinzufügen von Miningmodellen zur Market Basket-Miningstruktur
-  In dieser Lektion fügen Sie zwei Miningmodellen zur Market Basket-Miningstruktur, die Sie erstellt haben [Lektion 1: Erstellen der Market Basket-Miningstruktur](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md). Diese Miningmodelle ermöglichen es Ihnen, Vorhersagen zu erstellen.  
+  In dieser Lektion fügen Sie zwei Miningmodelle, die Market Basket-Miningstruktur, die Sie in erstellt [Lektion 1: Erstellen der Market Basket-Miningstruktur](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md). Diese Miningmodelle ermöglichen es Ihnen, Vorhersagen zu erstellen.  
   
- Arten von Produkten, die Kunden gleichzeitig kaufen tendenziell vorhersagen möchten, erstellen Sie zwei Miningmodelle, die mit der [Microsoft Association-Algorithmus](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md) und zwei verschiedene Werte für die *MINIMUM_PROBABILTY* Parameter.  
+ Um die Arten von Produkten vorherzusagen, die Kunden tendenziell gleichzeitig kaufen, erstellen Sie zwei Miningmodelle, die mit der [Microsoft Association-Algorithmus](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md) und zwei verschiedene Werte für die *MINIMUM_PROBABILTY* Parameter.  
   
- *MINIMUM_PROBABILTY* ist eine [!INCLUDE[msCoName](../includes/msconame-md.md)] Association-Algorithmus-Parameter, der trägt dazu bei, um die Anzahl der Regeln zu bestimmen, die ein Miningmodell enthalten soll, indem die mindestwahrscheinlichkeit, die eine Regel haben muss. Wenn Sie für diesen Wert beispielsweise 0,4 eingeben, wird festgelegt, dass eine Regel nur erzeugt werden kann, wenn die Kombination der von der Regel beschriebenen Produkte eine Auftrittswahrscheinlichkeit von mindestens vierzig Prozent aufweist.  
+ *MINIMUM_PROBABILTY* ist eine [!INCLUDE[msCoName](../includes/msconame-md.md)] Association-Algorithmus-Parameter, der hilft, um die Anzahl der Regeln zu bestimmen, die ein Miningmodell enthalten soll, durch die mindestwahrscheinlichkeit an, die eine Regel angeben. Wenn Sie für diesen Wert beispielsweise 0,4 eingeben, wird festgelegt, dass eine Regel nur erzeugt werden kann, wenn die Kombination der von der Regel beschriebenen Produkte eine Auftrittswahrscheinlichkeit von mindestens vierzig Prozent aufweist.  
   
- Zeigen Sie die Auswirkungen der Änderung der *MINIMUM_PROBABILTY* Parameter in einer späteren Lektion.  
+ Zeigen Sie an, die Auswirkungen der Änderung der *MINIMUM_PROBABILTY* Parameter in einer späteren Lektion.  
   
 ## <a name="alter-mining-structure-statement"></a>ALTER MINING STRUCTURE-Anweisung  
  Um ein Miningmodell hinzuzufügen, die einer Miningstruktur eine geschachtelte Tabelle enthält, verwenden Sie die [ALTER MINING STRUCTURE &#40;DMX&#41;] ((~/dmx/alter-mining-structure-dmx.md)-Anweisung. Der in der Anweisung enthaltene Code umfasst folgende Abschnitte:   
@@ -82,7 +82,7 @@ ADD MINING MODEL [<mining model name>]
   
  Sie können nur Spalten verwenden, die bereits in der Miningstruktur vorhanden sind.  
   
- Die erste Spalte in der Liste der Miningmodellspalten muss die Schlüsselspalte in der Miningstruktur sein. Sie ist jedoch nicht erforderlich, einzugeben `KEY` hinter der Schlüsselspalte Verwendung an. Dies liegt daran, dass Sie die Spalte bereits bei der Erstellung der Miningstruktur als Schlüsselspalte definiert haben.  
+ Die erste Spalte in der Liste der Miningmodellspalten muss die Schlüsselspalte in der Miningstruktur sein. Sie sind jedoch keine Eingabe `KEY` hinter der Schlüsselspalte Nutzung an. Dies liegt daran, dass Sie die Spalte bereits bei der Erstellung der Miningstruktur als Schlüsselspalte definiert haben.  
   
  Die übrigen Zeilen geben die Verwendung der Spalten im neuen Miningmodell an. Mithilfe der folgenden Syntax können Sie angeben, dass eine Spalte im Miningmodell zur Vorhersage verwendet werden soll:  
   
@@ -106,18 +106,18 @@ ADD MINING MODEL [<mining model name>]
 -   Hinzufügen eines Association-Miningmodells zur Struktur mithilfe einer geänderten Wahrscheinlichkeit  
   
 ## <a name="adding-an-association-mining-model-to-the-structure-using-the-default-minimumprobability"></a>Hinzufügen eines Association-Miningmodells zur Struktur mithilfe des MINIMUM_PROBABILITY-Standardwerts  
- Die erste Aufgabe wird zum Hinzufügen ein neuen Miningmodells zur Market Basket-Miningstruktur auf Grundlage der [!INCLUDE[msCoName](../includes/msconame-md.md)] Association-Algorithmus, die Verwendung des Standardwerts für *MINIMUM_PROBABILITY*.  
+ Die erste Aufgabe besteht darin, fügen Sie der Market Basket-Miningstruktur ein neues Miningmodell basierend auf den [!INCLUDE[msCoName](../includes/msconame-md.md)] Association-Algorithmus, mit dem Standardwert für *MINIMUM_PROBABILITY*.  
   
 #### <a name="to-add-an-association-mining-model"></a>So fügen Sie ein Association-Miningmodell hinzu  
   
-1.  In **Objektexplorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX**.  
+1.  In **Objekt-Explorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX**.  
   
      Der Abfrage-Editor wird mit einer neuen leeren Abfrage geöffnet.  
   
     > [!NOTE]  
     >  Um eine DMX-Abfrage für eine bestimmte [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenbank zu erstellen, klicken Sie mit der rechten Maustaste auf die Datenbank anstatt auf die Instanz.  
   
-2.  Kopieren Sie das allgemeine Beispiel der `ALTER MINING STRUCTURE` Anweisung in die leere Abfrage.  
+2.  Kopieren Sie das allgemeine Beispiel der `ALTER MINING STRUCTURE` -Anweisung in die leere Abfrage.  
   
 3.  Ersetzen Sie Folgendes:  
   
@@ -162,7 +162,7 @@ ADD MINING MODEL [<mining model name>]
         )  
     ```  
   
-     In diesem Fall die `[Products]` Tabelle als vorhersagbare Spalte festgelegt wurde`.` außerdem die `[Model]` Spalte ist in der Liste der Spalten der geschachtelten Tabelle enthalten, da es sich um die Schlüsselspalte der geschachtelten Tabelle handelt.  
+     In diesem Fall die `[Products]` Tabelle als vorhersagbare Spalte festgelegt wurde`.` darüber hinaus die `[Model]` Spalte ist in der Liste der Spalten der geschachtelten Tabelle enthalten, da es sich um die Schlüsselspalte der geschachtelten Tabelle ist.  
   
     > [!NOTE]  
     >  Beachten Sie, dass sich ein geschachtelter Schlüssel von einem Fallschlüssel unterscheidet. Ein Fallschlüssel ist ein eindeutiger Bezeichner des Falles, während ein geschachtelter Schlüssel ein Attribut ist, dass Sie modellieren möchten.  
@@ -195,20 +195,20 @@ ADD MINING MODEL [<mining model name>]
   
 7.  Auf der **Datei** Menü klicken Sie auf **Dmxquery1.DMX speichern**.  
   
-8.  In der **speichern unter** (Dialogfeld), suchen Sie den entsprechenden Ordner, und nennen Sie die Datei `Default_Association_Model.dmx`.  
+8.  In der **speichern** Dialogfeld, navigieren Sie zu den entsprechenden Ordner, und nennen Sie die Datei `Default_Association_Model.dmx`.  
   
 9. Klicken Sie auf der Symbolleiste auf die **Execute** Schaltfläche.  
   
 ## <a name="adding-an-association-mining-model-to-the-structure-changing-the-default-minimumprobability"></a>Hinzufügen eines Association-Miningmodells zur Struktur, indem der Standardwert für MINIMUM_PROBABILITY geändert wurde  
- Die nächste Aufgabe besteht, zum Hinzufügen ein neuen Miningmodells zur Market Basket-Miningstruktur auf Grundlage der [!INCLUDE[msCoName](../includes/msconame-md.md)] Association-Algorithmus, und ändern Sie den Standardwert für MINIMUM_PROBABILITY in 0,01. Durch das Ändern des Parameters der [!INCLUDE[msCoName](../includes/msconame-md.md)] Association-Algorithmus mehr Regeln erstellt.  
+ Die nächste Aufgabe besteht darin fügen der Market Basket-Miningstruktur ein neues Miningmodell auf der Grundlage der [!INCLUDE[msCoName](../includes/msconame-md.md)] Association-Algorithmus, und ändern Sie den Standardwert für MINIMUM_PROBABILITY auf 0,01. Ändern den Parameter bewirkt, dass die [!INCLUDE[msCoName](../includes/msconame-md.md)] Association-Algorithmus mehr Regeln erstellt.  
   
 #### <a name="to-add-an-association-mining-model"></a>So fügen Sie ein Association-Miningmodell hinzu  
   
-1.  In **Objektexplorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX**.  
+1.  In **Objekt-Explorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX**.  
   
      Der Abfrage-Editor wird mit einer neuen leeren Abfrage geöffnet.  
   
-2.  Kopieren Sie das allgemeine Beispiel der `ALTER MINING STRUCTURE` Anweisung in die leere Abfrage.  
+2.  Kopieren Sie das allgemeine Beispiel der `ALTER MINING STRUCTURE` -Anweisung in die leere Abfrage.  
   
 3.  Ersetzen Sie Folgendes:  
   
@@ -282,7 +282,7 @@ ADD MINING MODEL [<mining model name>]
   
 7.  Auf der **Datei** Menü klicken Sie auf **Dmxquery1.DMX speichern**.  
   
-8.  In der **speichern unter** (Dialogfeld), suchen Sie den entsprechenden Ordner, und nennen Sie die Datei `Modified Association_Model.dmx`.  
+8.  In der **speichern** Dialogfeld, navigieren Sie zu den entsprechenden Ordner, und nennen Sie die Datei `Modified Association_Model.dmx`.  
   
 9. Klicken Sie auf der Symbolleiste auf die **Execute** Schaltfläche.  
   

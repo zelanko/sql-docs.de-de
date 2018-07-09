@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - application domains [Reporting Services]
 - recycling application domains
@@ -16,13 +16,13 @@ ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
 caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 2be1ce358f1fade63586d24fa9761758f641f225
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68b99702f3b3832db9c3912626deb9442862f74d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058237"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153761"
 ---
 # <a name="application-domains-for-report-server-applications"></a>Anwendungsdomänen für Berichtsserveranwendungen
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]wird der Berichtsserver als einzelner Dienst implementiert, der den Report Server-Webdienst, den Berichts-Manager und eine Hintergrundverarbeitungsanwendung umfasst. Jede Anwendung wird in einer eigenen Anwendungsdomäne innerhalb des einzelnen Berichtsserverprozesses ausgeführt. Größtenteils werden Anwendungsdomänen intern erstellt, konfiguriert und verwaltet. Es ist jedoch nützlich zu wissen, wie Wiederverwendungsvorgänge für Berichtsserver-Anwendungsdomänen auftreten, wenn Sie Leistungs- oder Speicherprobleme untersuchen oder Dienstausfälle beheben müssen.  
@@ -44,7 +44,7 @@ ms.locfileid: "36058237"
   
 |Ereignis|Ereignisbeschreibung|Gilt für|Konfigurierbar|Beschreibung des Wiederverwendungsvorgangs|  
 |-----------|-----------------------|----------------|------------------|-----------------------------------|  
-|Geplante Wiederverwendungsvorgänge, die in vordefinierten Intervallen auftreten|Standardmäßig werden Anwendungsdomänen alle 12 Stunden wiederverwendet.<br /><br /> Geplante Wiederverwendungsvorgänge finden in [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] -Anwendungen, die dem Gesamtprozesszustand dienen, sehr häufig statt.|Report Server-Webdienst<br /><br /> Berichts-Manager<br /><br /> Hintergrundverarbeitungsanwendung|Ja. `RecycleTime` -Konfigurationseinstellung in der Datei "rsreportserver.config" legt das wiederverwendungsintervall fest.<br /><br /> `MaxAppDomainUnloadTime` Legt die Wartezeit während der die hintergrundverarbeitung Verarbeitung ist abgeschlossen.|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] verwaltet den Wiederverwendungsvorgang für den Webdienst und den Berichts-Manager.<br /><br /> Für die Hintergrundverarbeitungsanwendung erstellt der Berichtsserver eine neue Anwendungsdomäne für neue Aufträge, die durch Zeitpläne initialisiert werden. Bereits ausgeführte Aufträge können in der aktuellen Anwendungsdomäne zu Ende verarbeitet werden, bis die Wartezeit abläuft.|  
+|Geplante Wiederverwendungsvorgänge, die in vordefinierten Intervallen auftreten|Standardmäßig werden Anwendungsdomänen alle 12 Stunden wiederverwendet.<br /><br /> Geplante Wiederverwendungsvorgänge finden in [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] -Anwendungen, die dem Gesamtprozesszustand dienen, sehr häufig statt.|Report Server-Webdienst<br /><br /> Berichts-Manager<br /><br /> Hintergrundverarbeitungsanwendung|Ja. `RecycleTime` die Konfigurationseinstellung in der Datei RSReportServer.config legt das wiederverwendungsintervall fest.<br /><br /> `MaxAppDomainUnloadTime` Legt fest, die Wartezeit während der die hintergrundverarbeitung Verarbeitung ist abgeschlossen.|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] verwaltet den Wiederverwendungsvorgang für den Webdienst und den Berichts-Manager.<br /><br /> Für die Hintergrundverarbeitungsanwendung erstellt der Berichtsserver eine neue Anwendungsdomäne für neue Aufträge, die durch Zeitpläne initialisiert werden. Bereits ausgeführte Aufträge können in der aktuellen Anwendungsdomäne zu Ende verarbeitet werden, bis die Wartezeit abläuft.|  
 |Konfigurationsänderungen des Berichtsservers|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet Anwendungsdomänen als Reaktion auf Änderungen in der Datei RSReportServer.config wieder.|Report Server-Webdienst<br /><br /> Berichts-Manager<br /><br /> Hintergrundverarbeitungsanwendung|Nein.|Sie können das Auftreten von Wiederverwendungsvorgängen nicht verhindern. Wiederverwendungsvorgänge, die als Reaktion auf Änderungen der Konfigurationseinstellungen auftreten, werden jedoch auf die gleiche Weise behandelt wie geplante Wiederverwendungsvorgänge. Für neue Anforderungen werden neue Anwendungsdomänen erstellt, während aktuelle Anforderungen und Aufträge in der aktuellen Anwendungsdomäne abgeschlossen werden.|  
 |[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] -Konfigurationsänderungen|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] verwendet Anwendungsdomänen dann wieder, wenn Änderungen der überwachten Dateien auftreten (z.B. „machine.config“- und „Web.config“-Dateien sowie [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] -Programmdateien).|Report Server-Webdienst<br /><br /> Berichts-Manager|Nein.|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] verwaltet den Vorgang.<br /><br /> Wiederverwendungsvorgänge, die von [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] initiiert werden, beeinflussen die Hintergrundverarbeitungs-Anwendungsdomäne nicht.|  
 |Ungenügender Arbeitsspeicher und Fehler bei der Speicherbelegung|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR verwendet Anwendungsdomänen sofort wieder, wenn es zu Fehlern bei der Speicherbelegung kommt oder der Arbeitsspeicher des Servers extrem ausgelastet ist.|Report Server-Webdienst<br /><br /> Berichts-Manager<br /><br /> Hintergrundverarbeitungsanwendung|Nein.|Bei hoher Arbeitsspeicherauslastung akzeptiert der Berichtsserver keine neuen Anforderungen in der aktuellen Anwendungsdomäne. Während des Zeitraums, in dem der Server neue Anforderungen verweigert, treten HTTP 503-Fehler auf. Neue Anwendungsdomänen werden erst dann erstellt, wenn die alte Anwendungsdomäne entladen wird. Wenn Sie daher bei einer hohen Arbeitsspeicherauslastung des Servers Änderungen an Konfigurationsdateien vornehmen, werden ausgeführte Anforderungen und Aufträge möglicherweise nicht gestartet oder abgeschlossen.<br /><br /> Im Fall eines Fehlers bei der Speicherbelegung werden alle Anwendungsdomänen sofort neu gestartet. Gerade ausgeführte Aufträge und Anforderungen werden gelöscht. Sie müssen diese Aufträge und Anforderungen manuell neu starten.|  

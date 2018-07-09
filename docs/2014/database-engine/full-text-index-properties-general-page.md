@@ -1,30 +1,29 @@
 ---
-title: Volltextindex-Eigenschaften (Seite Allgemein) | Microsoft Docs
+title: Volltextindex-Eigenschaften (Seite Allgemein) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.fulltextindexproperties.general.f1
 ms.assetid: f4dff61c-8c2f-4ff9-abe4-70a34421448f
 caps.latest.revision: 27
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 67fd5637e190d58cdcab186643d5233bb89b1b5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 825b7e357d5904108b9dd4cbdec9533e89313c83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050658"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149931"
 ---
 # <a name="full-text-index-properties-general-page"></a>Volltextindex-Eigenschaften (Seite 'Allgemein')
-  **Zum Anzeigen oder ändern die veränderbaren Eigenschaften eines Volltextindex-**  
+  **Zum Anzeigen oder ändern die veränderbaren Eigenschaften einen Volltextindex**  
   
 -   [Verwalten von Volltextindizes](../relational-databases/indexes/indexes.md)  
   
@@ -38,10 +37,10 @@ ms.locfileid: "36050658"
  **Tabelle**  
  Zeigt den Namen der Tabelle an, für die der Volltextindex definiert wurde.  
   
- **Volltext-Indexschlüssel**  
+ **Volltextindex-Schlüssel**  
  Zeigt den Namen des Volltext-Indexschlüssels an, der einen eindeutigen Index für eine einzelne Spalte der Tabelle darstellt.  
   
- **Tabelle Volltext-Auffüllstatus**  
+ **Tabelle-Volltext-Auffüllstatus-**  
  Zeigt den Auffüllungsstatus der volltextindizierten Tabelle an.  
   
  Die folgenden Werte sind möglich:  
@@ -69,7 +68,7 @@ ms.locfileid: "36050658"
  Die Dateigruppe, zu der der Volltextindex gehört.  
   
  **Volltextindex-Stoppliste**  
- Die Stoppliste, die gegenwärtig dem Volltextindex zugeordnet ist. Eine Stoppliste ist eine Liste der [Stoppwörter](../relational-databases/search/full-text-search.md). Die ggf. einem Volltextindex zugeordnete Stoppliste wird auf Volltextabfragen für diesen Index angewendet. Sie können die Stoppliste aus dem Index entfernen, dazu  **\<OFF >** aus der Liste aus, oder Sie können eine andere Stoppliste; auswählen  **\<SYSTEM >** gibt die Systemstoppliste an.  
+ Die Stoppliste, die gegenwärtig dem Volltextindex zugeordnet ist. Eine Stoppliste ist eine Liste der [Stoppwörter](../relational-databases/search/full-text-search.md). Die ggf. einem Volltextindex zugeordnete Stoppliste wird auf Volltextabfragen für diesen Index angewendet. Sie können die Stoppliste aus dem Index entfernen, indem Sie auswählen  **\<OFF >** aus der Liste aus, oder Sie können eine andere Stoppliste; auswählen  **\<SYSTEM >** gibt die Systemstoppliste.  
   
  **So erstellen Sie eine Stoppliste**  
   
@@ -78,19 +77,19 @@ ms.locfileid: "36050658"
  **Sucheigenschaftenliste**  
  Die Sucheigenschaftenliste, die ggf. derzeit dem Volltextindex zugeordnet ist. Eine Sucheigenschaftenliste gibt einen Satz von Dokumenteigenschaften an, die im zugeordneten Volltextindex enthalten sind, wenn dieser aufgefüllt ist. Weitere Informationen finden Sie unter [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
- **\<Off >** gibt an, dass derzeit keine sucheigenschaftenliste dem Index zugeordnet. Sie können die aktuelle sucheigenschaftenliste aus dem Index entfernen, indem Sie auswählen  **\<deaktiviert >** aus der Liste aus, oder Sie können eine andere sucheigenschaftenliste auswählen, aus der Liste. An dieser Stelle werden nur Sucheigenschaftenlisten in der aktuellen Datenbank aufgeführt.  
+ **\<Aus >** gibt an, dass derzeit keine sucheigenschaftenliste dem Index zugeordnet. Sie können die aktuelle sucheigenschaftenliste aus dem Index entfernen, indem Sie die Auswahl  **\<aus >** aus der Liste aus, oder Sie können eine andere sucheigenschaftenliste auswählen, aus der Liste. An dieser Stelle werden nur Sucheigenschaftenlisten in der aktuellen Datenbank aufgeführt.  
   
 > [!NOTE]  
 >  Sie können eine Sucheigenschaftenliste mehr als einem Volltextindex in der gleichen Datenbank zuordnen.  
   
- **So erstellen eine sucheigenschaftenliste**  
+ **Um einer sucheigenschaftenliste eine Eigenschaft zu erstellen.**  
   
 -   [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
- **Tabelle Volltext-Elementanzahl**  
+ **Volltext-Elementanzahl-Tabelle**  
  Gibt die Anzahl der Zeilen an, die erfolgreich volltextindiziert wurden.  
   
- Diese Eigenschaft entspricht der `TableFulltextItemCount` von der OBJECTPROPERTYEX zurückgegebene Eigenschaft [!INCLUDE[tsql](../includes/tsql-md.md)] Funktion.  
+ Diese Eigenschaft entspricht der `TableFulltextItemCount` Eigenschaft zurückgegeben wird, von der OBJECTPROPERTYEX [!INCLUDE[tsql](../includes/tsql-md.md)] Funktion.  
   
  **Tabelle Volltextdokumente verarbeitet**  
  Zeigt die Anzahl der seit dem Start der Volltextindizierung verarbeiteten Zeilen an. In einer Tabelle, die für die Volltextsuche indiziert wird, werden alle Spalten einer Zeile als Teil eines zu indizierenden Dokuments betrachtet. Gelöschte Zeilen werden nicht gezählt.  
@@ -107,7 +106,7 @@ ms.locfileid: "36050658"
   
  NULL = Die Tabelle besitzt keinen Volltextindex.  
   
- **Tabelle Volltext-Fehlerzahl**  
+ **Volltext-Fehlerzahl-Tabelle**  
  Die Anzahl der Zeilen, die von der Volltextsuche nicht indiziert wurden.  
   
  0 = Die Auffüllung ist abgeschlossen.  

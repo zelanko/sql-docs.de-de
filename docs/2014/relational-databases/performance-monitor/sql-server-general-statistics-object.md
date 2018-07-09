@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:General Statistics
 - General Statistics object
 ms.assetid: c738e549-d7e7-4211-9ec3-064ac140af7c
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 91508b916d7ee04002ff8f2fc68190b347e32091
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: cc039c5e5c8c7aafbb1fb3b0405ad50413b24ca4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048038"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258456"
 ---
 # <a name="sql-server-general-statistics-object"></a>SQL Server, Allgemeine Statistik-Objekt
   Das **SQLServer:Allgemeine Statistiken** -Objekt in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt Leistungsindikatoren bereit, mit denen Sie die allgemeine serverweite Aktivität überwachen können, wie etwa die Anzahl von aktuellen Verbindungen und die Anzahl von Benutzern, die pro Sekunde eine Verbindung mit Computern, die eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausführen, herstellen oder trennen. Dies ist vor allem bei großen OLTP-Systemen (Online Transaction Processing, Onlinetransaktionsverarbeitung) sehr nützlich, wenn viele Clients eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]herstellen oder trennen.  

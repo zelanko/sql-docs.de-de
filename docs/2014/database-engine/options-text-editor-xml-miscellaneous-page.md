@@ -1,5 +1,5 @@
 ---
-title: Optionen (Text-Editor - XML - sonstige Seite) | Microsoft Docs
+title: Optionen (Seite "Text-Editor – XML – sonstige") | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.Miscellaneous
 ms.assetid: 1a9509f0-c663-4b31-b396-7f5dc4371651
 caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c11ecb4c3a46aa008600eee89ffb528fd66dcc68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa8fa16d849c7d0bac76953b0d3da8787eb78b58
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050371"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259156"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>Optionen (Text-Editor – XML – Seite „Sonstige“)
   Im Dialogfeld **Optionen** können Sie die Einstellungen für die automatische Vervollständigung sowie die Schemaeinstellungen für den XML-Editor ändern. Diese Einstellungen sind verfügbar, wenn Sie im Menü **Extras** auf **Optionen**klicken. Erweitern Sie den Ordner **Text-Editor** , klicken Sie auf **XML** , und klicken Sie anschließend auf **Verschiedenes** .  
@@ -40,11 +40,11 @@ ms.locfileid: "36050371"
  Kommentare, CDATA, DOCTYPE, Verarbeitungsanweisungen sowie sonstige Markupelemente werden automatisch vervollständigt. Dieses Kontrollkästchen ist standardmäßig aktiviert.  
   
 ## <a name="network"></a>Netzwerk  
- **DTDs und Schemata automatisch herunterzuladen**  
+ **DTDs und Schemas automatisch herunterladen**  
  Schemata und Dokumenttypdefinitionen (DTDs) werden automatisch von den HTTP-Adressen heruntergeladen. Diese Funktion verwendet System.Net mit aktivierter automatischer Proxyservererkennung. Dieses Kontrollkästchen ist standardmäßig aktiviert.  
   
 ## <a name="outlining"></a>Gliedern  
- **Gliederungsansicht Öffnen von Dateien**  
+ **Geben Sie Gliederungsmodus beim Öffnen von Dateien**  
  Aktiviert die Gliederungsfunktion beim Öffnen von Dateien. Dieses Kontrollkästchen ist standardmäßig aktiviert.  
   
 ## <a name="caching"></a>Caching  

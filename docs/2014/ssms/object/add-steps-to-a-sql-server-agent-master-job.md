@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9cc1e8ab-7ddc-427b-859e-203aa7e24642
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 11bdac71a79b345d6f1c922d79092d357302ae84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 283b8406a4ee5b962e015c66c7b87569db755401
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056134"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149311"
 ---
 # <a name="add-steps-to-a-sql-server-agent-master-job"></a>Add Steps to a SQL Server Agent Master Job
   In diesem Thema wird beschrieben, wie Sie einem Masterauftrag für den SQL Server-Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]Schritte hinzufügen.  
@@ -60,7 +60,7 @@ ms.locfileid: "36056134"
   
 4.  Klicken Sie mit der rechten Maustaste auf den Auftrag, dem Sie Schritte hinzufügen möchten, und wählen Sie **Eigenschaften**aus.  
   
-5.  Klicken Sie im Dialogfeld **Auftragseigenschaften >***Auftragsname* unter **Seite auswählen** auf die Option **Schritte**. Weitere Informationen zu den Optionen auf dieser Seite finden Sie unter [Auftragseigenschaften: Neuer Auftrag &#40;Schrittseite&#41;](../agent/job-properties-new-job-steps-page.md).  
+5.  Klicken Sie im Dialogfeld **Auftragseigenschaften >***Auftragsname* unter **Seite auswählen** auf die Option **Schritte**. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie unter [Auftragseigenschaften: Neuer Auftrag &#40;Schrittseite&#41;](../agent/job-properties-new-job-steps-page.md).  
   
 6.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Broker Login event class
 ms.assetid: af9b1153-2791-40ef-a95c-50923cd0cc97
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 540c16fa077178cc3c72a963c4cc4f167e9be384
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d341f0b04b73c3edfa636e1e059a375965f7481d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047623"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258726"
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker Login-Ereignisklasse
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt **Audit Broker Login** -Ereignisse, um Überwachungsmeldungen in Bezug auf die Transportsicherheit von Service Broker zu melden.  
@@ -52,7 +52,7 @@ ms.locfileid: "36047623"
 |**SPID**|**int**|Die Serverprozess-ID, die SQL Server dem Prozess zugewiesen hat, der diesem Client zugeordnet ist.|12|ja|  
 |**StartTime**|**datetime**|Der Zeitpunkt, zu dem das Ereignis begonnen hat, falls verfügbar.|14|ja|  
 |**Status**|**int**|Gibt den Speicherort im SQL Server-Quellcode an, von dem aus das Ereignis erstellt wurde. Jeder Ort, von dem aus dieses Ereignis ggf. erstellt werden kann, besitzt einen anderen Statuscode. Der Microsoft Software Service kann mithilfe dieses Statuscodes herausfinden, wo das Ereignis generiert wurde.|30|nein|  
-|**TargetUserName**|**nvarchar**|Anmeldestatus. Folgende Angaben sind möglich:<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> Fehler<br /><br /> **Hinweis** ISC = Sicherheitskontext initiieren. ASC = Sicherheitskontext akzeptieren.|39|nein|  
+|**TargetUserName**|**nvarchar**|Anmeldestatus. Folgende Angaben sind möglich:<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> Fehler<br /><br /> **Beachten Sie** ISC = Sicherheitskontext initiieren. ASC = Sicherheitskontext akzeptieren.|39|nein|  
 |**TransactionID**|**bigint**|Die vom System zugewiesene ID der Transaktion.|4|nein|  
   
  In der folgenden Tabelle sind die Unterklassenwerte für diese Ereignisklasse aufgelistet.  

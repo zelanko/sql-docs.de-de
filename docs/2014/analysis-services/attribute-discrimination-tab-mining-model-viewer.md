@@ -1,5 +1,5 @@
 ---
-title: Registerkarte "Clusterunterscheidung" (Miningmodell-Viewer)-Attribut | Microsoft Docs
+title: Registerkarte "Clusterunterscheidung" (Miningmodell-Viewer)-Attribut | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.naivebayse.discrimination.f1
 ms.assetid: 68323f23-121e-44fc-be85-6f9915d6d3c7
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 43ce0c215ac82eff64b688d6004dfd9c7af66266
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e661e6a993639d3eac86bd5fb45f607ba8d346f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058203"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161521"
 ---
 # <a name="attribute-discrimination-tab-mining-model-viewer"></a>Registerkarte "Attributunterscheidung" (Miningmodell-Viewer)
   Mithilfe der Registerkarte **Attributunterscheidung** können Sie die Status der Eingabeattribute vergleichen und anzeigen, in welcher Beziehung sie zum Ausgabeattribut stehen. Die Attributwerte, die für die größte Differenz zwischen den beiden ausgewählten vorhersagbaren Attributstatus sorgen, werden zuerst aufgeführt.  
@@ -29,19 +29,19 @@ ms.locfileid: "36058203"
  **Weitere Informationen:** [Microsoft Naive Bayes-Algorithmus](data-mining/microsoft-naive-bayes-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Naive Bayes-Viewer](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
 ## <a name="options"></a>Tastatur  
- **Viewerinhalt**  
+ **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
  **Miningmodell**  
  Wählen Sie ein Miningmodell aus der aktuellen Miningstruktur aus. Das Miningmodell wird automatisch im richtigen benutzerdefinierten Viewer geöffnet.  
   
- **Ereignisanzeige**  
+ **Viewer**  
  Wählen Sie den Viewer aus, der zum Durchsuchen des ausgewählten Miningmodells verwendet werden soll. Für jedes Modell können Sie entweder den benutzerdefinierten Viewer oder den [!INCLUDE[msCoName](../includes/msconame-md.md)] -Viewer für Mininginhalte auswählen. Sie können auch Plug-In-Viewer verwenden, falls diese verfügbar sind.  
   
  **Attribut**  
  Wählen Sie ein vorhersagbares Attribut aus.  
   
- **Wert 1**  
+ **Der Wert 1**  
  Wählen Sie einen Status des vorhersagbaren Attributs aus, der mit dem in **Wert 2**enthaltenen Wert verglichen wird.  
   
  **Der Wert 2**  

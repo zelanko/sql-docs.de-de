@@ -1,12 +1,12 @@
 ---
-title: Direktes Ausführen von Anweisungen (ODBC) | Microsoft Docs
+title: Direktes Ausführen von Anweisungen (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c5185d6bc1ce251da365107b198f0baf080683c2
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 89e6bf98dfe51f8287c37161b54eae4a0b6ba699
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697721"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429869"
 ---
 # <a name="execute-a-statement-directly-odbc"></a>Direktes Ausführen von Anweisungen (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "35697721"
   
 2.  Rufen Sie [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) zum Ausführen der Anweisung.  
   
-3.  Wenn Data-at-Execution-Eingabeparameter verwendet werden, [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) wird SQL_NEED_DATA zurückgegeben. Senden Sie die Daten in Segmenten mit [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) und [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
+3.  Wenn Data-at-Execution-Eingabeparameter verwendet werden, [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) wird SQL_NEED_DATA zurückgegeben. Senden Sie die Daten in Blöcken mit [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) und [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
   
 ### <a name="to-execute-a-statement-multiple-times-by-using-column-wise-parameter-binding"></a>So führen Sie mit der spaltenweisen Parameterbindung eine Anweisung mehrmals aus  
   
-1.  Rufen Sie [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) um die folgenden Attribute festzulegen:  
+1.  Rufen Sie [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) , die folgenden Attribute festzulegen:  
   
      Legen Sie SQL_ATTR_PARAMSET_SIZE auf die Anzahl von Sätzen (S) von Parametern fest.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "35697721"
   
      Weisen Sie ein Array mit S-Parameterpuffern zu, um Datenlängen zu speichern.  
   
-     Rufen Sie [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md) an den Parameter-die Wert und die datenlängenarrays an den Anweisungsparameter zu binden.  
+     Rufen Sie [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md) auf den Parameter Daten Wert und die datenlängenarrays an den Anweisungsparameter zu binden.  
   
      Richten Sie alle Data-at-Execution-Text- oder Imageparameter ein.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "35697721"
   
 3.  Rufen Sie [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) zum Ausführen der Anweisung. Der Treiber führt die Anweisung S-mal aus, einmal für jeden Parametersatz.  
   
-4.  Wenn Data-at-Execution-Eingabeparameter verwendet werden, [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) wird SQL_NEED_DATA zurückgegeben. Senden Sie die Daten in Segmenten mit [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) und [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
+4.  Wenn Data-at-Execution-Eingabeparameter verwendet werden, [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) wird SQL_NEED_DATA zurückgegeben. Senden Sie die Daten in Blöcken mit [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) und [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
   
 ### <a name="to-execute-a-statement-multiple-times-by-using-row-wise-parameter-binding"></a>So führen Sie mit der zeilenweisen Parameterbindung eine Anweisung mehrmals aus  
   
@@ -72,7 +72,7 @@ ms.locfileid: "35697721"
   
      Der zweite Teil ist eine SQLINTEGER-Variable zum Speichern des Statusindikators.  
   
-2.  Rufen Sie [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) um die folgenden Attribute festzulegen:  
+2.  Rufen Sie [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) , die folgenden Attribute festzulegen:  
   
      Legen Sie SQL_ATTR_PARAMSET_SIZE auf die Anzahl von Sätzen (S) von Parametern fest.  
   
@@ -82,15 +82,15 @@ ms.locfileid: "35697721"
   
      Legen Sie SQL_ATTR_PARAMS_STATUS_PTR fest, um auf ein Array [S] aus SQLUSSMALLINT-Variablen zu zeigen und die Parameterstatusindikatoren zu halten.  
   
-3.  Rufen Sie für jeden Parametermarker [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md) , zeigen Sie auf die Variablen im ersten Element des Arrays von Strukturen, die in Schritt 1 zugeordneten Datenwert und den datenlängenzeigern des Parameters. Falls der Parameter ein Data-at-Execution-Parameter ist, richten Sie ihn ein.  
+3.  Rufen Sie für jede parametermarkierung [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md) , zeigen Sie auf die Variablen im ersten Element des Arrays mit Strukturen, die in Schritt 1 zugeordneten Datenwert und den datenlängenzeigern des Parameters. Falls der Parameter ein Data-at-Execution-Parameter ist, richten Sie ihn ein.  
   
 4.  Füllen Sie das gebundene Parameterpufferarray mit Datenwerten.  
   
 5.  Rufen Sie [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) zum Ausführen der Anweisung. Der Treiber führt die Anweisung S-mal aus, einmal für jeden Parametersatz.  
   
-6.  Wenn Data-at-Execution-Eingabeparameter verwendet werden, [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) wird SQL_NEED_DATA zurückgegeben. Senden Sie die Daten in Segmenten mit [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) und [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
+6.  Wenn Data-at-Execution-Eingabeparameter verwendet werden, [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) wird SQL_NEED_DATA zurückgegeben. Senden Sie die Daten in Blöcken mit [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) und [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
   
- **Hinweis** spaltenweise und zeilenweise Bindung wird in der Regel in Verbindung mit [SQLPrepare-Funktion](http://go.microsoft.com/fwlink/?LinkId=59360) und [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) als mit [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399).  
+ **Beachten Sie** spaltenweise und zeilenweise Bindung wird in der Regel in Verbindung mit [SQLPrepare-Funktion](http://go.microsoft.com/fwlink/?LinkId=59360) und [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) als mit [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausführen von Abfragen: Themen zur Vorgehensweise &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  

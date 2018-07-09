@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XML validation
 - XML, validating
@@ -16,27 +16,27 @@ ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b66fe56d1309f3ebe0e16177ff1372ea0fa1692f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8ea74ad195b97541147c3d1b19dc01c5033b962c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058341"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182827"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
-  Validieren Sie XML-Dokumente und erhalten Sie umfangreiche Fehlerausgabe durch die Aktivierung der `ValidationDetails` Eigenschaft des Tasks "XML".  
+  Überprüfen Sie die XML-Dokumente und erhalten Sie umfangreiche Fehlerausgabe durch die Aktivierung der `ValidationDetails` Eigenschaft von der XML-Task.  
   
  Die folgende Abbildung zeigt den **XML-Task-Editor** eingestellt für die XML-Validierung mit umfassender Fehlerausgabe.  
   
  ![XML-Taskeigenschaften im XML-Task-Editor](../media/xmltaskproperties.jpg "XML-Taskeigenschaften im XML-Task-Editor")  
   
- Bevor Sie die `ValidationDetails` Eigenschaft verfügbar war, XML-Validierung durch den XML-Task nur "true" oder "false" hat ein Ergebnis zurückgegeben, ohne Informationen zu Fehlern oder wo diese auftraten. Jetzt bei Festlegung `ValidationDetails` auf "true", wird die Ausgabe-Datei enthält ausführliche Informationen zu jedem Fehler, einschließlich der Zeilennummer und die Position. Sie können diese Informationen verwenden, um Fehler in XML-Dokumenten zu verstehen, zu finden und zu beheben.  
+ Bevor Sie die `ValidationDetails` Eigenschaft wurde zur Verfügung, die XML-Validierung durch den XML-Task nur "true" oder "false" hat ein Ergebnis zurückgegeben, ohne Informationen zu Fehlern oder wo diese auftraten. Nun, wenn Sie festlegen, `ValidationDetails` auf "true", die Ausgabe-Datei enthält ausführliche Informationen zu jedem Fehler, einschließlich der Zeilennummer und der Position. Sie können diese Informationen verwenden, um Fehler in XML-Dokumenten zu verstehen, zu finden und zu beheben.  
   
  Die XML-Validierungsfunktion lässt sich problemlos auch für große XML-Dokumente und eine große Anzahl von Fehlern skalieren. Da die Ausgabedatei selbst im XML-Format ist, können Sie die Ausgabe abfragen und analysieren. Enthält die Ausgabe beispielsweise sehr viele Fehler, so können Sie diese, wie in diesem Thema beschrieben, mit einer [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Abfrage gruppieren.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) eingeführt wurden die `ValidationDetails` Eigenschaft im [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2. Die Eigenschaft ist auch verfügbar in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und in SQL Server 2016.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) eingeführt, die `ValidationDetails` -Eigenschaft in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2. Die Eigenschaft ist auch verfügbar im [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und in SQL Server 2016.  
   
 ## <a name="sample-output-for-xml-thats-valid"></a>Beispielausgabe für eine XML-Datei ohne Fehler  
  Hier ist eine Beispiel-Ausgabedatei mit Validierungsergebnissen für eine gültige XML-Datei.  

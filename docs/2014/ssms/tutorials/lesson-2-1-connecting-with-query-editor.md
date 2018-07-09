@@ -5,21 +5,19 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 48725f54-a7b6-4b79-948e-965c1fe4eef1
-caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5bc4f72d546e7785b1d57a6460f168e8babe7b6c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 666904837a211b0aa76214155c2d55024175c5c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049823"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149001"
 ---
 # <a name="connecting-with-query-editor"></a>Herstellen einer Verbindung mit dem Abfrage-Editor
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Sie auch dann Code schreiben oder bearbeiten, wenn Sie nicht mit dem Server verbunden sind. Dies kann nützlich sein, wenn der Server nicht verfügbar ist oder wenn die Ressourcen auf dem Server oder im Netzwerk knapp sind. Sie können auch den Abfrage-Editor mit einer neuen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verbinden, ohne ein neues Abfrage-Editorfenster zu öffnen und ohne den Code neu einzugeben.  

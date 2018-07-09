@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie einen Cube ohne Verwendung einer Datenquellensicht aus einer Vorlage | Microsoft Docs
+title: Erstellen Sie einen Cube ohne Verwendung einer Datenquellensicht aus einer Vorlage | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c834ce714cd4ad0de92f3638288146674d4bc1e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a03699873933bb98cf1657cc5fa0ae057eabf52e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058401"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161381"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Erstellen eines Cubes aus einer Vorlage, ohne eine Datenquellensicht zu verwenden
   Wählen Sie **Cube ohne eine Datenquelle erstellen** auf der ersten Seite des Cube-Assistenten aus, um einen Cube ohne Verwendung einer Datenquellensicht zu erstellen. Später können Sie das relationale Schema für die Datenquellensicht mit dem Schemagenerierungs-Assistenten auf der Grundlage der Cubestruktur und möglicherweise anderer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte generieren. Weitere Informationen zum Generieren eines Schemas finden Sie unter [Schemagenerierungs-Assistent &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md).  
@@ -45,10 +45,10 @@ ms.locfileid: "36058401"
   
 |Spalte|Description|  
 |------------|-----------------|  
-|**Measurename**|Durch einen Wert in dieser Spalte wird der Name eines im Cube enthaltenen Measures definiert. Klicken Sie auf einen Wert in dieser Spalte, um einen Namen einzugeben. Klicken Sie in dieser Spalte auf **Neues Measure hinzufügen** , um ein neues Measure zu erstellen. Diese Spalte wird die `Name` Eigenschaft für das measureobjekt.|  
+|**Measurename**|Durch einen Wert in dieser Spalte wird der Name eines im Cube enthaltenen Measures definiert. Klicken Sie auf einen Wert in dieser Spalte, um einen Namen einzugeben. Klicken Sie in dieser Spalte auf **Neues Measure hinzufügen** , um ein neues Measure zu erstellen. Diese Spalte wird die `Name` Eigenschaft des Measure-Objekts.|  
 |**Measuregruppe**|Der Name der Measuregruppe, in der das Measure enthalten ist. Klicken Sie auf diesen Wert, um einen Namen auszuwählen oder einzugeben. Wenn Sie alle Measures löschen, die zu einer bestimmten Measuregruppe gehören, wird die Measuregruppe ebenfalls entfernt. Diese Spalte wird die `Name` -Eigenschaft für das measuregruppenobjekt.|  
-|**Datentyp**|Der Datentyp des Measures. Klicken Sie auf diesen Wert, um den Datentyp zu ändern. Der Standardwert bei der Erstellung eines Measures ist `Single`. Diese Spalte wird die `DataType` Eigenschaft für das measureobjekt.|  
-|**Aggregation**|Die Standardaggregation des Measures. Klicken Sie auf diese Zelle, um eine der Standardaggregationen für das Measure (oder **keine**) anzugeben. Der Standardwert bei der Erstellung eines Measures ist `Sum`. Diese Spalte wird die `AggregationFunction` Eigenschaft für das measureobjekt.|  
+|**Datentyp**|Der Datentyp des Measures. Klicken Sie auf diesen Wert, um den Datentyp zu ändern. Die Standardeinstellung beim Erstellen eines Measures ist `Single`. Diese Spalte wird die `DataType` Eigenschaft des Measure-Objekts.|  
+|**Aggregation**|Die Standardaggregation des Measures. Klicken Sie auf diese Zelle, um eine der Standardaggregationen für das Measure (oder **keine**) anzugeben. Die Standardeinstellung beim Erstellen eines Measures ist `Sum`. Diese Spalte wird die `AggregationFunction` Eigenschaft des Measure-Objekts.|  
   
 ## <a name="defining-new-dimensions"></a>Definieren neuer Dimensionen  
  Verwenden Sie die Seite **Neue Dimensionen definieren** des Assistenten, um die Dimensionen im neuen Cube anzugeben.  
@@ -62,12 +62,12 @@ ms.locfileid: "36058401"
 |Spalte|Description|  
 |------------|-----------------|  
 |**Typ**|Zeigt den Dimensionstyp einer Vorlagendimension an. Klicken Sie auf diese Zelle, um den Dimensionstyp für eine Dimension zu ändern. In dieser Spalte wird die **Type** -Eigenschaft für das Dimensionsobjekt festgelegt.|  
-|`Name`|Zeigt den Namen der Dimension an. Klicken Sie auf diese Zelle, um einen anderen Namen einzugeben. Dieser Wert legt die `Name` -Eigenschaft für das Dimensionsobjekt.|  
+|`Name`|Zeigt den Namen der Dimension an. Klicken Sie auf diese Zelle, um einen anderen Namen einzugeben. Dieser Wert legt die `Name` -Eigenschaft für die Dimension-Objekt.|  
 |**SCD**|Gibt an, dass dies eine langsam veränderliche Dimension (Slowly Changing Dimension, SCD) ist. Wenn Sie dieses Kontrollkästchen aktivieren, werden der Dimension die Attribute SCD-Startdatum, Ursprüngliche ID des Enddatums und Status hinzugefügt. **SCD** wird standardmäßig ausgewählt, wenn Sie den Cube anhand einer Vorlage erstellen und der Assistent diese vier Attributtypen in einer Vorlagendimension erkennt.|  
 |**Attribute**|Zeigt die Attribute an, die für die Dimension erstellt werden sollen. Jedem Attributnamen in der Liste wird der Dimensionsname vorangestellt. Diese Liste ist schreibgeschützt. Nachdem Sie den Assistenten abgeschlossen haben, können Sie die Attribute mithilfe des Dimensions-Designers ändern.|  
   
 ## <a name="defining-time-periods"></a>Definieren von Zeiträumen  
- Geben Sie den Datumsbereich, der in der Dimension enthalten sein soll, mithilfe der Seite **Zeiträume definieren** des Assistenten an. Beispielsweise können Sie einen Bereich auswählen, der in Ihren Daten am 1. Januar des ersten Jahres beginnt, und die Jahreszahlen bis über die aktuelle Transaktion hinaus ausweiten. Transaktionen, die außerhalb dieses Bereichs werden nicht angezeigt werden, oder werden als unbekannte Elemente in der Dimension abhängig von der `UnknownMemberVisible` eigenschafteneinstellung für die Dimension. Die `UnknownMemberName` -Eigenschaft gibt die Beschriftung für das unbekannte Element. Sie können auch den in Ihren Daten verwendeten Wochenbeginn ändern. (Der Standard ist Sonntag.)  
+ Geben Sie den Datumsbereich, der in der Dimension enthalten sein soll, mithilfe der Seite **Zeiträume definieren** des Assistenten an. Beispielsweise können Sie einen Bereich auswählen, der in Ihren Daten am 1. Januar des ersten Jahres beginnt, und die Jahreszahlen bis über die aktuelle Transaktion hinaus ausweiten. Transaktionen, die außerhalb dieses Bereichs werden entweder nicht angezeigt werden oder werden als unbekannte Elemente in der Dimension, die je nach den `UnknownMemberVisible` eigenschafteneinstellung für die Dimension. Die `UnknownMemberName` -Eigenschaft gibt die Beschriftung für das unbekannte Element. Sie können auch den in Ihren Daten verwendeten Wochenbeginn ändern. (Der Standard ist Sonntag.)  
   
 > [!NOTE]  
 >  Die Seite **Zeiträume definieren** wird nur angezeigt, wenn Sie auf der Seite **Neue Dimensionen definieren** des Assistenten eine Zeitdimension in den Cube aufnehmen.  

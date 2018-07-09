@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, saving
 - packages [Integration Services], saving
@@ -19,13 +19,13 @@ ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f938400661c97c842149f958f9660fef20085a8b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 567efb17fb672be6a82fd0f47b52d8919ea81095
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050639"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259406"
 ---
 # <a name="save-packages"></a>Speichern von Paketen
   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] erstellen Sie Pakete mithilfe des [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designers und speichern diese als XML-Dateien (DTSX-Dateien) im Dateisystem. Sie können auch Kopien der Paket-XML-Datei in der msdb-Datenbank in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] oder im Paketspeicher speichern. Der Paketspeicher stellt die Ordner im Dateisystempfad dar, die von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] verwaltet werden.  

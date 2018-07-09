@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - search conditions [SQL Server], combining
 - precedence [SQL Server], Criteria pane
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - OR operator
 ms.assetid: b30f5ac9-25e7-4163-80ed-44e4bccb455d
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 580b0331e59aef1b4c33d75084490e0a8be65147
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c7d5b7e62e3bfc42870fb5c6a6c853dd43a04778
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058215"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183517"
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>Kombinieren von Bedingungen, wenn OR Vorrang hat (Visual Database Tools)
   Wenn die mit OR verbundene Bedingungen den Vorrang vor den mit AND verbundenen Bedingungen haben sollen, muss die AND-Bedingung für jede OR-Bedingung wiederholt werden.  

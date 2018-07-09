@@ -1,5 +1,5 @@
 ---
-title: Definieren von benutzerdefinierten Elementformeln | Microsoft Docs
+title: Definieren von benutzerdefinierten Elementformeln | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - members [Analysis Services], custom
 - custom rollup formulas [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - custom member formulas [Analysis Services]
 ms.assetid: 258304e2-d900-4013-97e3-871f51dfdce2
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2983c826b96f681971a6c1fc5be56084a8213453
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09f50cbfab0b4d5554d33e0a8526d14a22909381
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059018"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183437"
 ---
 # <a name="define-custom-member-formulas"></a>Definieren von benutzerdefinierten Elementformeln
   Sie können einen MDX-Ausdruck (Multidimensional Expressions), eine so genannte benutzerdefinierte Elementformel, erstellen, um die Werte für die Mitglieder eines angegebenen Attributs bereitzustellen. Eine Spalte in einer Tabelle einer Datenquellensicht stellt für jedes Mitglied in einem Attribut den Ausdruck bereit, der zur Bereitstellung des Wertes für dieses Element verwendet wird.  
@@ -33,7 +33,7 @@ ms.locfileid: "36059018"
   
  Die `CustomRollupColumn`-Eigenschaft für ein Attribut gibt die Spalte an, in der die benutzerdefinierten Elementformeln für Elemente des Attributs enthalten sind. Ist eine Zeile in der Spalte leer, wird der Zellwert für das Element normal zurückgegeben. Ist die Formel in der Spalte nicht gültig, gibt es einen Laufzeitfehler, sobald ein Zellwert abgerufen wird, der das Element verwendet.  
   
- Vor dem Angeben benutzerdefinierter Elementformeln für ein Attribut sollten Sie sicherstellen, dass die Dimensionstabelle, die das Attribut enthält, bzw. eine direkt verknüpfte Tabelle über eine Zeichenfolgenspalte zum Speichern der benutzerdefinierten Elementformeln verfügt. Wenn dies der Fall ist, können Sie entweder die `CustomRollupColumn` -Eigenschaft für ein Attribut manuell, oder verwenden Sie die Erweiterung zum Festlegen der benutzerdefinierten Elementformel des Business Intelligence-Assistenten, um eine benutzerdefinierte Elementformel für ein Attribut zu aktivieren. Weitere Informationen zum Verwenden dieser Erweiterung finden Sie unter [Festlegen benutzerdefinierter Elementformeln für Attribute in einer Dimension](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md).  
+ Vor dem Angeben benutzerdefinierter Elementformeln für ein Attribut sollten Sie sicherstellen, dass die Dimensionstabelle, die das Attribut enthält, bzw. eine direkt verknüpfte Tabelle über eine Zeichenfolgenspalte zum Speichern der benutzerdefinierten Elementformeln verfügt. Wenn dies der Fall ist, können Sie entweder die `CustomRollupColumn` -Eigenschaft für ein Attribut manuell, oder verwenden Sie den Festlegen benutzerdefinierter Elementformeln des Business Intelligence-Assistenten, um eine benutzerdefinierte Elementformel für ein Attribut zu aktivieren. Weitere Informationen zum Verwenden dieser Erweiterung finden Sie unter [Festlegen benutzerdefinierter Elementformeln für Attribute in einer Dimension](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md).  
   
 ## <a name="evaluating-custom-member-formulas"></a>Auswerten von benutzerdefinierten Elementformeln  
  Benutzerdefinierte Elementformeln unterscheiden sich von berechneten Elementen. Benutzerdefinierte Elementformeln gelten für Elemente in Dimensionstabellen und stellen lediglich den Wert des Elements bereit. Berechnete Elemente hingegen werden nicht in Dimensionstabellen gespeichert, und berechnete Elementausdrücke definieren sowohl Daten als auch Metadaten für zusätzliche Elemente in einer Dimension oder Hierarchie.  

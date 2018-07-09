@@ -1,5 +1,5 @@
 ---
-title: Geben Sie-Element (PerspectiveCalculation) (ASSL) | Microsoft Docs
+title: Type-Element (PerspectiveCalculation) (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: d7b87aea-3265-4f3c-a7ee-4f3e90f9a0b7
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 242d4d779da87c155371047fd2bb21128da51abf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7d95f248e6991b8386ce9f6b4a2c012057c42ef4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056787"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229570"
 ---
 # <a name="type-element-perspectivecalculation-assl"></a>Type-Element (PerspectiveCalculation) (ASSL)
   Gibt den Typ des der [PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md) Element.  
@@ -66,12 +66,12 @@ ms.locfileid: "36056787"
   
 |value|Description|  
 |-----------|-----------------|  
-|*Datenmember*|berechnetes Element|  
-|*Festlegen*|Benannte Menge|  
+|*Member*|berechnetes Element|  
+|*Legen Sie*|Benannte Menge|  
   
  Die Enumeration, die den zulässigen Werten für entspricht `Type` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.PerspectiveCalculationType>.  
   
- Das Element, das das übergeordnete Element des entspricht `Type` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.PerspectiveCalculation>.  
+ Das Element, das dem übergeordneten entspricht `Type` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.PerspectiveCalculation>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

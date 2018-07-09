@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 12: Erstellen von Rollen | Microsoft Docs'
+title: 'Lektion 12: Erstellen von Rollen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 984face4-00fc-46d3-8ae1-9755bf737bdf
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 7c3b98fbbcbedca2a8bcdbefcd8e41e5d3d5c60b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 598491865120b2d401b0ca2447701cbebc12ce8d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048174"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278506"
 ---
 # <a name="lesson-12-create-roles"></a>Lektion 12: Erstellen von Rollen
   In dieser Lektion erstellen Sie Rollen. Rollen stellen Modelldatenbankobjekt- und Datensicherheit bereit, indem sie den Zugriff auf die Windows-Benutzer einschränken, die Rollenmitglieder sind. Jede Rolle wird mit einer einzelnen Berechtigung definiert: Keine, Lesen, Lesen und verarbeiten, Verarbeiten oder Administrator. Rollen können in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]während der Modellerstellung im Dialogfeld Rollen-Manager definiert werden. Nachdem ein Modell bereitgestellt wurde, können Sie mit [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Rollen verwalten. Weitere Informationen finden Sie unter [Rollen &#40;SSAS – tabellarisch&#41;](tabular-models/roles-ssas-tabular.md).  
@@ -52,7 +52,7 @@ ms.locfileid: "36048174"
   
      Der Liste wird eine neue Rolle mit der Berechtigung Keine hinzugefügt.  
   
-3.  Klicken Sie auf die neue Rolle, und klicken Sie dann in der **Namen** Spalte, benennen Sie die Rolle auf `Internet Sales Manager`.  
+3.  Klicken Sie auf die neue Rolle, und klicken Sie dann in der **Namen** Spalte benennen Sie die Rolle zum `Internet Sales Manager`.  
   
 4.  Klicken Sie in der Spalte **Berechtigungen** auf die Dropdownliste, und wählen Sie anschließend die Berechtigung **Lesen** aus.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36048174"
   
      Der Liste wird eine neue Rolle mit der Berechtigung Keine hinzugefügt.  
   
-3.  Klicken Sie auf die neue Rolle, und klicken Sie dann in der **Namen** Spalte, benennen Sie die Rolle auf `Internet Sales US`.  
+3.  Klicken Sie auf die neue Rolle, und klicken Sie dann in der **Namen** Spalte benennen Sie die Rolle zum `Internet Sales US`.  
   
 4.  Klicken Sie in der Spalte **Berechtigungen** auf die Dropdownliste, und wählen Sie anschließend die Berechtigung **Lesen** aus.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36048174"
   
 1.  Klicken Sie im Dialogfeld **Rollen-Manager** auf **Neu**.  
   
-2.  Klicken Sie auf die neue Rolle, und klicken Sie dann in der **Namen** Spalte, benennen Sie die Rolle auf `Internet Sales Administrator`.  
+2.  Klicken Sie auf die neue Rolle, und klicken Sie dann in der **Namen** Spalte benennen Sie die Rolle zum `Internet Sales Administrator`.  
   
 3.  Klicken Sie in der Spalte **Berechtigungen** auf die Dropdownliste und wählen Sie anschließend die Berechtigung **Administrator** aus.  
   

@@ -1,5 +1,5 @@
 ---
-title: Ziele für erweiterte Ereignisse von SQLServer | Microsoft Docs
+title: Ziele für erweiterte Ereignisse von SQLServer | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - targets [SQL Server extended events]
 - extended events [SQL Server], targets
 ms.assetid: e281684c-40d1-4cf9-a0d4-7ea1ecffa384
 caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dbd3b218390cc1a49f7256a7f2cb79228ff8c3c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ba3ea863b35142c65b2e5f38789f888d603b6977
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049944"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160981"
 ---
 # <a name="sql-server-extended-events-targets"></a>SQL Server Extended Events Targets
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Ziele für erweiterte Ereignisse sind Ereignisconsumer. Ziele können in eine Datei schreiben, Ereignisdaten in einem Arbeitsspeicherpuffer speichern oder Ereignisdaten aggregieren. Ziele können Daten synchron oder asynchron verarbeiten.  
@@ -57,7 +57,7 @@ ms.locfileid: "36049944"
   
 ## <a name="see-also"></a>Siehe auch  
  [Erweiterte Ereignisse](../relational-databases/extended-events/extended-events.md)   
- [Pakete für erweiterte Ereignisse von SQLServer](../relational-databases/extended-events/sql-server-extended-events-packages.md)   
+ [SQLServer-Pakete für erweiterte Ereignisse](../relational-databases/extended-events/sql-server-extended-events-packages.md)   
  [SQL Server Extended Events Sessions](../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  
   [Engine für erweiterte Ereignisse von SQL Server](../relational-databases/extended-events/sql-server-extended-events-engine.md)  

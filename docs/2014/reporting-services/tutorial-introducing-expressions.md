@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 03157682c4b5a5dcaa89c46a64b094f8e321ec8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 44bb65b09d081ba43aef2de6991bb09b9f6ecf4f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058530"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228890"
 ---
 # <a name="tutorial-introducing-expressions"></a>Lernprogramm: Einführung in Ausdrücke
-  Mit Ausdrücken können Sie leistungsfähige und flexible Berichte erstellen. In diesem Lernprogramm erfahren Sie, wie Sie Ausdrücke mit allgemeinen Funktionen und Operatoren erstellen und implementieren. Verwenden Sie die **Ausdruck** (Dialogfeld), Ausdrücke zu schreiben, von denen Namenswerte, Suchen nach Werten in einem separaten Dataset verkettet anzuzeigen, verschiedene Bilder auf der Grundlage von Feldwerten und So weiter.  
+  Mit Ausdrücken können Sie leistungsfähige und flexible Berichte erstellen. In diesem Lernprogramm erfahren Sie, wie Sie Ausdrücke mit allgemeinen Funktionen und Operatoren erstellen und implementieren. Verwenden Sie die **Ausdruck** Ausdrücke schreiben, die Namen von Werten in einem separaten Dataset zu, suchen verketten im Dialogfeld angezeigt, verschiedene Bilder anhand von Feldwerten und So weiter.  
   
  Der Bericht ist ein Balkenbericht mit abwechselnden Zeilenfarben (Weiß und eine beliebige andere Farbe). Der Bericht enthält einen Parameter zur Auswahl der Farbe für alle Zeilen, die nicht weiß dargestellt werden sollen.  
   
@@ -39,15 +39,15 @@ ms.locfileid: "36058530"
   
 3.  [Anzeigename, Vorname, Vornamens und Nachname des](#Concatenate)  
   
-4.  [Verwenden von Bildern für die Anzeige des Geschlechts](#Gender)  
+4.  [Verwenden Sie Bilder, um die Anzeige des Geschlechts](#Gender)  
   
 5.  [Suchen des CountryRegion-namens](#Lookup)  
   
-6.  [Anzahl der Tage seit dem letzten Kauf](#Count)  
+6.  [Ermitteln der vergangenen Tage seit dem letzten Kauf](#Count)  
   
 7.  [Verwenden eines Indikators zur Anzeige des Umsatzvergleichs](#Indicator)  
   
-8.  [Stellen Sie den Bericht auf einen Balken"Grün" gemeldeter](#GreenBar)  
+8.  [Stellen Sie den Bericht aus, den eine "Grün-weißen Balken gemeldet.](#GreenBar)  
   
 ### <a name="other-optional-steps"></a>Weitere optionale Schritte  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36058530"
   
 -   [Hinzufügen eines Berichtstitels](#Title)  
   
--   [Speichern Sie den Bericht](#Save)  
+-   [Speichern des Berichts](#Save)  
   
  Geschätzte Zeit zum Bearbeiten dieses Lernprogramms: 30 Minuten  
   
@@ -78,10 +78,10 @@ ms.locfileid: "36058530"
      Das Dialogfeld **Erste Schritte** wird angezeigt.  
   
     > [!NOTE]  
-    >  Wenn die **Einstieg** Dialogfeld nicht angezeigt wird, aus der **Berichts-Generator** Schaltfläche, klicken Sie auf **neu**.  
+    >  Wenn die **Einstieg** Dialogfeld nicht angezeigt wird, aus der **Berichts-Generator** , zeigen Sie auf **neu**.  
   
     > [!NOTE]  
-    >  Wenn Sie die ClickOnce-Version von Berichts-Generator verwenden lieber, öffnen Sie den Berichts-Manager, und klicken Sie auf **Berichts-Generator**, oder wechseln Sie zu einer SharePoint-Website, die Inhaltstypen für die Reporting Services wie z. B. Berichte aktiviert sind, und klicken Sie auf  **Berichts-Generator-Bericht** auf die **neues Dokument** Menü auf die **Dokumente** Registerkarte eine freigegebene Dokumentbibliothek.  
+    >  Wenn Sie die ClickOnce-Version von Berichts-Generator lieber, Berichts-Manager öffnen, und klicken Sie auf **Berichts-Generator**, oder wechseln Sie zu einer SharePoint-Website, die Inhaltstypen für die Reporting Services wie z. B. Berichte aktiviert sind, und klicken Sie auf  **Berichts-Generator-Bericht** auf die **neues Dokument** Menü auf der **Dokumente** Registerkarte eine freigegebene Dokumentbibliothek.  
   
 2.  Vergewissern Sie sich, dass im linken Bereich **Neuer Bericht** ausgewählt ist.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "36058530"
     > [!NOTE]  
     >  Die Felder FirstName und LastName werden nicht eingeschlossen. Sie werden in einem späteren Schritt hinzugefügt.  
   
-13. In der **Werte** der rechten Maustaste auf `CountryRegionID` , und klicken Sie auf die **Summe** Option.  
+13. In der **Werte** auflisten, mit der rechten Maustaste `CountryRegionID` , und klicken Sie auf die **Summe** Option.  
   
      Sum wird nicht länger auf CountryRegionID angewendet.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "36058530"
   
 16. Klicken Sie auf der Seite **Layout auswählen** auf **Weiter**.  
   
-17. Auf der **Auswählen eines Formats** auf **Schiefer**, und klicken Sie dann auf **Fertig stellen**.  
+17. Auf der **Auswählen eines Formats** auf **Slate**, und klicken Sie dann auf **Fertig stellen**.  
   
 ##  <a name="UpdateNames"></a> 2. Aktualisieren der Standardnamen der Datenquelle und des Datensets  
   
@@ -517,7 +517,7 @@ ms.locfileid: "36058530"
   
 34. Klicken Sie auf die Schaltfläche **fx** rechts neben dem Textfeld für den **Ende** -Wert.  
   
-35. In der **Ausdruck** Dialogfeld Feld, das den Ausdruck zu erstellen: `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) >0`  
+35. In der **Ausdruck** Dialogfeld erstellen den Ausdruck: `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) >0`  
   
 36. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -676,7 +676,7 @@ ms.locfileid: "36058530"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Save"></a> (optional) Speichern Sie den Bericht  
+##  <a name="Save"></a> (optional) Speichern des Berichts  
  Sie können Berichte auf einem Berichtsserver, in einer SharePoint-Bibliothek oder auf dem Computer speichern. Weitere Informationen finden Sie unter [Speichern von Berichten &#40;Berichts-Generator&#41;](report-builder/saving-reports-report-builder.md).  
   
  Speichern Sie in diesem Lernprogramm den Bericht auf einem Berichtsserver. Wenn Sie keinen Zugriff auf einen Berichtsserver besitzen, speichern Sie den Bericht auf dem Computer.  

@@ -1,5 +1,5 @@
 ---
-title: Exportieren Sie die Spalte Transformations-Editor (Seite Fehlerausgabe) | Microsoft Docs
+title: Exportieren Sie die Spalte mit der Transformations-Editor (Seite Fehlerausgabe) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fileextractortransformation.errorhandling.f1
 helpviewer_keywords:
 - Export Column Transformation Editor
 ms.assetid: 260be463-01a9-460c-9c98-e5265cb2b1e9
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 954fd8f8ce86108299ca2b42d075f4fda5f7c3b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b695ac95c7c76d38fec01a4a38832fae1ed73c8a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240990"
 ---
 # <a name="export-column-transformation-editor-error-output-page"></a>Transformations-Editor für das Exportieren von Spalten (Seite Fehlerausgabe)
   Auf der Seite **Fehlerausgabe** des Dialogfelds **Transformations-Editor für das Exportieren von Spalten** geben Sie Optionen für die Fehlerbehandlung an.  
@@ -54,6 +54,6 @@ ms.locfileid: "36056304"
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Transformations-Editor für exportieren &#40;Seite "Spalten"&#41;](../../2014/integration-services/export-column-transformation-editor-columns-page.md)  
+ [Exportieren der Transformations-Editor Spalten &#40;Seite "Spalten"&#41;](../../2014/integration-services/export-column-transformation-editor-columns-page.md)  
   
   

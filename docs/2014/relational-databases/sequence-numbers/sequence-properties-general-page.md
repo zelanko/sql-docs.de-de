@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sequence.general.f1
 ms.assetid: 0187f413-cdf0-48a2-b2e6-9b3578cd5811
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c71b31282ac1ed242c6b8f35adeff24cbc9ddf9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9fc9a711c16c0c7e9b5ed3a66f93013b5f2031bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056199"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157981"
 ---
 # <a name="sequence-properties-general-page"></a>Sequenzeigenschaften (Seite "Allgemein")
   Erstellt ein Sequenzobjekt und gibt dessen Eigenschaften an. Als Sequenz wird ein benutzerdefiniertes schemagebundenes Objekt bezeichnet, das eine Sequenz numerischer Werte anhand der Spezifikation generiert, mit der die Sequenz erstellt wurde. Die Sequenz numerischer Werte wird in aufsteigender oder absteigender Reihenfolge in einem definierten Intervall generiert und kann so konfiguriert werden, dass sie beim Erreichen des Endes neu gestartet wird (Zyklus). Sequenzen werden anders als Identitätsspalten keinen bestimmten Tabellen zugeordnet. Anwendungen verweisen auf ein Sequenzobjekt, um dessen nächsten Wert abzurufen. Die Beziehung zwischen Sequenzen und Tabellen wird von der Anwendung gesteuert. Benutzeranwendungen können auf ein Sequenzobjekt verweisen und die Werte in mehreren Zeilen und Tabellen koordinieren.  

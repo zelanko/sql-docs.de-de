@@ -1,14 +1,11 @@
 ---
-title: sp_rda_reconcile_columns (Transact-SQL) | Microsoft Docs
+title: sp_rda_reconcile_columns (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-stretch
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -19,23 +16,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reconcile_columns stored procedure
 ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0ff66e1f9b9e78cd2eb4c4c68d4cdc3e931d58ca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5e53540b06850f380f6ea5cfe80ea7cc33455fd7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997697"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414209"
 ---
 # <a name="syssprdareconcilecolumns-transact-sql"></a>sp_rda_reconcile_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Gleicht die Spalten in der Azure-Remotetabelle den Spalten in der Stretch-aktivierten SQL Server-Tabelle.  
+  Gleicht im Azure-Remotetabelle Spalten den Spalten in der Stretch-aktivierten SQL Server-Tabelle.  
     
-  **Sp_rda_reconcile_columns** fügt Spalten hinzu, an die Remotetabelle, die in der Stretch-aktivierten SQL Server-Tabelle jedoch nicht in der Remotetabelle vorhanden sind. Diese Spalten sind möglicherweise Spalten, die Sie versehentlich aus der Remotetabelle gelöscht. Allerdings **Sp_rda_reconcile_columns** löscht keine Spalten aus der Remotetabelle, die in der Remotetabelle, aber nicht in der SQL Server-Tabelle vorhanden sind.
+  **Sp_rda_reconcile_columns** fügt Spalten hinzu, an die Remotetabelle, die in der Stretch-aktivierten SQL Server-Tabelle, aber nicht in der Remotetabelle vorhanden sind. Diese Spalten möglicherweise Spalten, die Sie versehentlich aus der Remotetabelle gelöscht. Allerdings **Sp_rda_reconcile_columns** löscht keine Spalten aus der Remotetabelle, die in der Remotetabelle, aber nicht in der SQL Server-Tabelle vorhanden sind.
   
   > [!IMPORTANT]
   > Wenn **sp_rda_reconcile_columns** Spalten neu erstellt, die Sie versehentlich aus der Remotetabelle gelöscht haben, dann werden nicht die zuvor in den gelöschten Spalten enthaltenen Daten wiederhergestellt.
@@ -52,19 +48,19 @@ sp_rda_reconcile_columns @objname = '@objname'
   
 ## <a name="arguments"></a>Argumente  
  @objname = '*@objname*'  
- Der Name der SQL Server Stretch-aktivierte Tabelle.  
+ Der Name des Stretch-aktivierten SQL Server-Tabelle.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder >0 (Fehler)  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert Db_owner-Berechtigungen.  
+ Benötigen Sie Db_owner-Berechtigungen.  
    
 ## <a name="remarks"></a>Hinweise  
  Wenn Spalten in der Azure-Remotetabelle enthalten sind, die in der Stretch-aktivierten SQL Server-Tabelle nicht mehr vorhanden sind, dann verhindern diese zusätzlichen Spalten nicht, dass Stretch Database ordnungsgemäß arbeitet. Sie können die zusätzlichen Spalten optional manuell entfernen.  
   
 ## <a name="example"></a>Beispiel  
- Abstimmen der Spalten in der Azure-Remotetabelle, führen Sie die folgende Anweisung.  
+ Abstimmen, die die Spalten in der Azure-Remotetabelle, die folgende Anweisung ausführen.  
   
 ```sql  
 EXEC sp_rda_reconcile_columns @objname = N'StretchEnabledTableName';  

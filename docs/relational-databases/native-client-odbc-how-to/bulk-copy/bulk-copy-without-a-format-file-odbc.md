@@ -1,12 +1,12 @@
 ---
-title: Massenkopieren ohne Formatdatei (ODBC) | Microsoft Docs
+title: Massenkopieren ohne Formatdatei (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 35bbdd3905166d3814e418149de7cc7c43237721
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: d718ca9e4bdc8e7ba9b04dc72653325985d9841b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697641"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424309"
 ---
 # <a name="bulk-copy-without-a-format-file-odbc"></a>Massenkopieren ohne Formatdatei (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "35697641"
   
 3.  Stellen Sie eine Verbindung mit SQL Server her.  
   
-4.  Rufen Sie [Bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) um die folgenden Informationen festzulegen:  
+4.  Rufen Sie [Bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) auf die folgenden Informationen festzulegen:  
   
     -   Name der Tabelle oder Sicht, aus der bzw. in die massenkopiert werden soll  
   
@@ -162,6 +162,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Massenkopieren mit SQL Server-ODBC-Treiber – Themen &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
+ [Massenkopieren mit dem SQL Server-ODBC-Treiber – Themen &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
   

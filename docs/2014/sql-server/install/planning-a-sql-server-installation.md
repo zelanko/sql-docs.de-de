@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, planning
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 30acad1bce8a94a1cb3eedd5867977ebddc6d015
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9e6b68b7cee6f530a8c5f24d54732654da4f89f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058838"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151781"
 ---
 # <a name="planning-a-sql-server-installation"></a>Planen einer SQL Server-Installation
   Um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu installieren, führen Sie folgende Schritte aus:  
@@ -79,7 +79,7 @@ ms.locfileid: "36058838"
   
 ## <a name="see-also"></a>Siehe auch  
  [Schnellstart-Installation von SQLServer 2014](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)   
- [Installieren von SQLServer 2014 von der Befehlszeile aus](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
+ [Installieren von SQLServer 2014 über die Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [Lösungen mit hoher Verfügbarkeit &#40;SQL Server&#41;](../failover-clusters/high-availability-solutions-sql-server.md)   
  [Vor dem Installieren des Failoverclusterings](../failover-clusters/install/before-installing-failover-clustering.md)   
  [Aktualisieren auf SQL Server 2014 mithilfe des Installations-Assistenten &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  

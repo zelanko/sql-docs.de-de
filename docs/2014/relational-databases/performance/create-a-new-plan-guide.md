@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-plan-guides
+ms.technology: performance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.designer.newplanguide.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - plan guides [SQL Server]. creating
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 29d7fb37e59b0440051f7115745d5dabc084567a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d43e9e75b58123b1009c247d1435c71e94698fae
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046648"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429879"
 ---
 # <a name="create-a-new-plan-guide"></a>Erstellen einer neuen Planhinweisliste
   Sie können in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]eine Planhinweisliste erstellen. Planhinweislisten beeinflussen die Abfrageoptimierung, indem Abfragehinweise oder ein fester Abfrageplan an die Abfragen angefügt werden. In der Planhinweisliste geben Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung an, die optimiert werden soll, sowie entweder eine OPTION-Klausel mit den zu verwendenden Abfragehinweisen oder einen spezifischen Abfrageplan, der für die Optimierung der Abfrage verwendet werden soll. Wenn die Abfrage ausgeführt wird, vergleicht der Abfrageoptimierer die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung mit der Planhinweisliste und fügt der Abfrage entweder zur Laufzeit die OPTION-Klausel hinzu oder verwendet den angegebenen Abfrageplan.  
@@ -47,7 +46,7 @@ ms.locfileid: "36046648"
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
--   Die Argumente für sp_create_plan_guide müssen in der angezeigten Reihenfolge bereitgestellt werden. Wenn Sie Werte für die Parameter bereitstellen `sp_create_plan_guide`, alle Parameternamen explizit angegeben werden müssen, oder überhaupt. Wird z. B. `@name =` angegeben, müssen auch `@stmt =` , `@type =` usw. angegeben werden. Ebenso, wenn `@name =` nicht angegeben und nur der Parameterwert bereitgestellt wird, die verbleibenden Parameternamen müssen ebenfalls angegeben werden und nur ihre Werte bereitgestellt. Argumentnamen dienen nur zu Beschreibungszwecken, zum besseren Verständnis der Syntax. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überprüft nicht, ob der angegebene Parametername mit dem Namen des Parameters an der Position übereinstimmt, an der der Name verwendet wird.  
+-   Die Argumente für sp_create_plan_guide müssen in der angezeigten Reihenfolge bereitgestellt werden. Wenn Sie geben Sie Werte für die Parameter der `sp_create_plan_guide`, alle Parameter, die Namen müssen explizit angegeben werden, oder überhaupt. Wird z. B. `@name =` angegeben, müssen auch `@stmt =` , `@type =` usw. angegeben werden. Auch wenn `@name =` nicht angegeben und nur der Parameterwert bereitgestellt wird, die verbleibenden Parameternamen müssen ebenfalls angegeben und nur ihre Werte bereitgestellt. Argumentnamen dienen nur zu Beschreibungszwecken, zum besseren Verständnis der Syntax. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überprüft nicht, ob der angegebene Parametername mit dem Namen des Parameters an der Position übereinstimmt, an der der Name verwendet wird.  
   
 -   Sie können mehr als eine Planhinweisliste des Typs OBJECT oder SQL für dieselbe Abfrage und den Batch oder das Modul erstellen. Es kann jedoch nur jeweils eine Planhinweisliste aktiviert sein.  
   

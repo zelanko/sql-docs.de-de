@@ -23,15 +23,15 @@ helpviewer_keywords:
 - referencing WSDL
 ms.assetid: 63bb870a-4dbf-46bd-8921-78f8ebe5fd75
 caps.latest.revision: 36
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 631247c0d9c12e3ed4caeb6f29c0408d2a5e9815
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: afce018e4e177d9ac7283b488b3222cbc3dae1e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050042"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230230"
 ---
 # <a name="accessing-the-soap-api"></a>Accessing the SOAP API
   Der Berichtsserver-Webdienst verwendet SOAP (Simple Object Access Protocol) über HTTP und agiert als Kommunikationsschnittstelle zwischen den Clientprogrammen und dem Berichtsserver. Der Webdienst verfügt über zwei Endpunkte (einen für die Berichtsausführung und einen für die Berichtsverwaltung) und besteht aus Methoden und einer Reihe komplexer Typenobjekte, anhand derer Sie auf die kompletten Funktionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] zugreifen können. Um den Dienst aufzurufen, müssen Sie auf die Reporting Services-WSDL (Web Services Description Language) verweisen.  

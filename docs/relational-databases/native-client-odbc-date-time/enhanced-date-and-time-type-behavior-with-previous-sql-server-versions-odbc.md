@@ -1,12 +1,12 @@
 ---
-title: Verbesserte Datums- und Uhrzeitangabe geben das Verhalten bei früheren Versionen von SQL-Server (ODBC) | Microsoft Docs
+title: Geben Sie Verhalten bei früheren Versionen von SQL-Server (ODBC), verbesserte Datums- und Uhrzeit | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f65388880319ade0eb7bbfead37224afce98c134
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: ee7aefcd01746b7af290746702ed94caab66837d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699771"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426269"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>Verbessertes Verhalten des Datums- und Uhrzeittyps bei früheren Versionen von SQL Server (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "35699771"
   
  Katalog-APIs geben Metadaten zurück, die mit dem an den Client zurückgegebenen Datentypcode früherer Versionen (z. B. nvarchar) und der zugeordneten Darstellung früherer Versionen (z. B. das entsprechende literale Format) übereinstimmt. Der zurückgegebene Datentypname ist jedoch der echte [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-Typname.  
   
- SQLDescribeCol, SQLDescribeParam SQGetDescField und SQLColAttribute zurückgegebene Anweisungsmetadaten gibt Metadaten zurück, die mit dem downleveltyp in jeder Hinsicht, einschließlich der Typname konsistent ist. Ist ein Beispiel eines solchen Typs früherer **Nvarchar**.  
+ SQLDescribeCol, SQLDescribeParam, SQGetDescField und SQLColAttribute zurückgegebene Anweisungsmetadaten gibt Metadaten zurück, die mit dem downleveltyp in jeder Hinsicht, einschließlich der Typname konsistent ist. Ein Beispiel eines solchen kompatiblen Typs ist **Nvarchar**.  
   
- Wenn eine kompatibler Client-Anwendung ausgeführt wird, anhand einer [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (oder höher) Server, an dem schemaänderungen an Datums-/Uhrzeittypen vorgenommen wurden, das erwartete Verhalten lautet wie folgt:  
+ Wenn eine kompatibler Client-Anwendung ausgeführt wird, für eine [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (oder höher) Server, an dem schemaänderungen an Datums-/Uhrzeittypen vorgenommen wurden, das erwartete Verhalten ist wie folgt:  
   
-|SQL Server 2005-Typ|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (oder höher) Datentyp|ODBC-Clienttyp|Ergebniskonvertierung (SQL zu C)|Parameterkonvertierung (C zu SQL)|  
+|SQL Server 2005-Typ|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (oder höher) Typ|ODBC-Clienttyp|Ergebniskonvertierung (SQL zu C)|Parameterkonvertierung (C zu SQL)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
 |DATETIME|date|SQL_C_TYPE_DATE|OK|OK (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Zeitfelder werden auf 0 (Null) festgelegt.|OK (2)<br /><br /> Fehler, wenn das Zeitfeld ungleich 0 (null) ist. Verwendet [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
@@ -116,6 +116,6 @@ ms.locfileid: "35699771"
  Wenn bei der Verbindung mit einer Serverinstanz einer früheren Version von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] die neuen Servertypen oder zugehörige Metadatencodes und Deskriptorfelder verwendet werden, wird ein SQL_ERROR zurückgegeben. Es wird ein Diagnosedatensatz mit SQLSTATE HY004 und der Meldung "Ungültiger SQL-Datentyp für Serverversion in Verbindung" oder mit 07006 und der Meldung "Attributverletzung beschränkter Datentypen" zurückgegeben.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datum und Uhrzeit-Verbesserungen &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [Datums- / Uhrzeitverbesserungen &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

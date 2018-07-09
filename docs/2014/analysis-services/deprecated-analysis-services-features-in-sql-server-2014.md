@@ -1,5 +1,5 @@
 ---
-title: Als veraltet markierte Analysis Services-Funktionen in SQLServer 2014 | Microsoft Docs
+title: Veraltete Analysis Services-Funktionen in SQLServer 2014 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, backward compatibility
 - SSAS, backward compatibility
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - deprecated features [Analysis Services]
 ms.assetid: 2c96ecfe-a170-41d0-bee3-74503f880197
 caps.latest.revision: 48
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 49a65a9ca1684a7bcec7b5f7f1d19d38b01f13d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e49169f4fd0264302feb35a7315fc527999c568
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056354"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259586"
 ---
 # <a name="deprecated-analysis-services-features-in-sql-server-2014"></a>Veraltete Analysis Services-Funktionen in SQL Server 2014
   In diesem Thema werden die als veraltet markierten Funktionen von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] beschrieben, die in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]noch verfügbar sind. Diese Funktionen werden voraussichtlich in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]entfernt. Als veraltet markierte Funktionen sollten in neuen Anwendungen nicht verwendet werden.  

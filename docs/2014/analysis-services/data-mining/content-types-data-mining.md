@@ -1,5 +1,5 @@
 ---
-title: Inhaltstypen (Datamining) | Microsoft Docs
+title: Inhaltstypen [Datamining] | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - columns [data mining], content types
 - KEY SEQUENCE column
@@ -27,15 +27,15 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2f283ff19a1947cfda208979b80482432ec6c597
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 817de3b9232a755d94fe2790a0ab2e08a835c9dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050684"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163511"
 ---
 # <a name="content-types-data-mining"></a>Inhaltstypen (Data Mining)
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie den physischen Datentyp für eine Spalte in einer Miningstruktur sowie einen logischen Inhaltstyp für die Spalte bei Verwendung in einem Modell definieren.  
@@ -72,21 +72,21 @@ ms.locfileid: "36050684"
  Der Inhaltstyp `Discretized` wird von den folgenden Datentypen unterstützt: `Date`, `Double`, `Long` und `Text`.  
   
 ## <a name="key"></a>Key  
- Der Inhaltstyp *Key* (Schlüssel) bedeutet, dass die Spalte eine Zeile eindeutig identifiziert. In einer Falltabelle enthält die Schlüsselspalte in der Regel numerische Bezeichner oder Textbezeichner. Sie den Inhaltstyp festlegen, um `key` um anzugeben, dass die Spalte nicht zu Analysezwecken, sondern nur zum Verfolgen der Datensätze dienen soll.  
+ Der Inhaltstyp *Key* (Schlüssel) bedeutet, dass die Spalte eine Zeile eindeutig identifiziert. In einer Falltabelle enthält die Schlüsselspalte in der Regel numerische Bezeichner oder Textbezeichner. Festlegen des Inhaltstyps zu `key` um anzugeben, dass die Spalte nicht zu Analysezwecken, sondern nur zum Verfolgen der Datensätze dienen soll.  
   
- Auch geschachtelte Tabellen verfügen über Schlüssel, die Schlüssel geschachtelter Tabellen werden jedoch etwas anders verwendet. Sie den Inhaltstyp festlegen, um `key` in einer geschachtelten Tabelle, wenn die Spalte das Attribut ist, die Sie analysieren möchten. Die Werte der Schlüsselspalte einer geschachtelten Tabelle müssen für die einzelnen Fälle eindeutig sein, in der Gesamtmenge der Fälle kann die Schlüsselspalte jedoch doppelte Werte enthalten.  
+ Auch geschachtelte Tabellen verfügen über Schlüssel, die Schlüssel geschachtelter Tabellen werden jedoch etwas anders verwendet. Festlegen des Inhaltstyps zu `key` in einer geschachtelten Tabelle, wenn die Spalte das Attribut ist, die Sie analysieren möchten. Die Werte der Schlüsselspalte einer geschachtelten Tabelle müssen für die einzelnen Fälle eindeutig sein, in der Gesamtmenge der Fälle kann die Schlüsselspalte jedoch doppelte Werte enthalten.  
   
  Wenn Sie beispielsweise analysieren, welche Produkte von den Kunden gekauft werden, könnten Sie in der Falltabelle für die Spalte **CustomerID** den Inhaltstyp  festlegen, und in der geschachtelten Tabelle könnten Sie für die Spalte **PurchasedProducts** noch einmal den Inhaltstyp  festlegen.  
   
 > [!NOTE]  
 >  Geschachtelte Tabellen sind nur dann verfügbar, wenn Daten von externen Datenquellen verwendet werden, die in Analysis Services als Datenquellensicht definiert wurden.  
   
- Dieser Inhaltstyp wird von den folgenden Datentypen unterstützt: `Date`, `Double`, `Long`, und `Text`.  
+ Dieser Inhaltstyp wird von folgenden Datentypen unterstützt: `Date`, `Double`, `Long`, und `Text`.  
   
 ## <a name="key-sequence"></a>Key Sequence  
  Der Inhaltstyp *Key Sequence* (Schlüsselsequenz) kann nur in Sequenzclustermodellen verwendet werden. Der Inhaltstyp `key sequence` zeigt an, dass die betreffende Spalte Werte enthält, die eine Folge von Ereignissen darstellen. Die Werte sind sortiert, aber die Abstände zwischen den Werte müssen nicht gleich groß sein.  
   
- Dieser Inhaltstyp wird von den folgenden Datentypen unterstützt: `Double`, `Long`, `Text`, und `Date`.  
+ Dieser Inhaltstyp wird von folgenden Datentypen unterstützt: `Double`, `Long`, `Text`, und `Date`.  
   
 ## <a name="key-time"></a>Key Time  
  Der Inhaltstyp *Key Time* (Schlüsselzeit) kann nur in Zeitreihenmodellen verwendet werden. Der Inhaltstyp `key time` gibt an, dass die Werte sortiert sind und eine Zeitskala darstellen.  

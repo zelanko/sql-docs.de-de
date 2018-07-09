@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
 - modifying operators
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - operators (users) [Database Engine], modifying with Management Studio
 ms.assetid: b2ba2168-ca0b-4b59-9007-4e1e4c30679e
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8aa1fbe6495aa7fc4ee81d6a8f93775f311b9e87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a6ec4ffcad8d88a14ee9fdaeed9fd286195a16a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059295"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149811"
 ---
 # <a name="edit-an-operator"></a>Bearbeiten eines Operators
   In diesem Thema wird beschrieben, wie Sie für Operatoren die Möglichkeit zum Empfangen von Benachrichtigungen und deren E-Mail-, Pager- und NET SEND-Adressen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]bearbeiten.  
@@ -74,7 +74,7 @@ ms.locfileid: "36059295"
   
     -   [Operatoreigenschaften "und" New-Operator &#40;Seite "Allgemein"&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [Operatoreigenschaften: New-Operator &#40;Benachrichtigungsseite&#41;](operator-properties-new-operator-notifications-page.md)  
+    -   [Operatoreigenschaften: New-Operator &#40;Seite "Benachrichtigungen"&#41;](operator-properties-new-operator-notifications-page.md)  
   
     -   [Operatoreigenschaften &#40;Seite „Verlauf“&#41;](operator-properties-history-page.md)  
   

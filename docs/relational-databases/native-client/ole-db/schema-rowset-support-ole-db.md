@@ -1,5 +1,5 @@
 ---
-title: Schemarowset-Unterstützung (OLE DB) | Microsoft Docs
+title: Schemarowset-Unterstützung (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client-ole-db
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a2ca9d0cb7c3b4a973b830d8f3287bd1fee92390
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ba5667f1e6b04c23feba38590c459f6656c5036
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951005"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414349"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Schemarowset-Unterstützung (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "32951005"
 > [!NOTE]  
 >  Obwohl [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Synonyme unterstützt, werden Metadaten für Synonyme nicht von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client zurückgegeben.  
   
- Die folgenden Tabellen Liste Schemarowsets und die Einschränkungsspalten von unterstützt die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter.  
+ Die folgenden Tabellen sind die Schemarowsets und die Einschränkungsspalten, die von unterstützt die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter.  
   
-|Schemarowset|Einschränkungsspalten|  
+|Schemarowsets|Einschränkungsspalten|  
 |-------------------|-------------------------|  
 |DBSCHEMA_CATALOGS|CATALOG_NAME|  
 |DBSCHEMA_COLUMN_PRIVILEGES|Alle Einschränkungen werden unterstützt.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME GRANTOR GRANTEE|  
@@ -59,12 +59,12 @@ ms.locfileid: "32951005"
 |DBSCHEMA_TABLES_INFO|Alle Einschränkungen werden unterstützt.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME TABLE_TYPE|  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Unterstützung für verteilte Abfragen in Schemarowsets](../../../relational-databases/native-client/ole-db/schema-rowsets-distributed-query-support.md)  
+ [Verteilte Abfrageunterstützung für Schemarowsets](../../../relational-databases/native-client/ole-db/schema-rowsets-distributed-query-support.md)  
   
- [LINKEDSERVERS-Rowset &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
+ [LINKEDSERVERS-Rowset &#40;OLE-DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server Native Client & #40; OLE DB & #41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
+ [SQL Server Native Client &#40;OLE-DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
  [Verwenden von benutzerdefinierten Typen](../../../relational-databases/native-client/features/using-user-defined-types.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: OLE DB-Schemarowsets | Microsoft Docs
+title: OLE DB-Schemarowsets | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - rowsets [Analysis Services], OLE DB
 ms.assetid: ca2ee87a-ba04-4501-9125-33934c58ab31
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 313efc520f63240d3e9fa19584fc7f3e620fdeee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a1d03d6fd8d527d48a9a4051f201368ff870882
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050670"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161191"
 ---
 # <a name="ole-db-schema-rowsets"></a>OLE DB-Schemarowsets
   Die folgenden OLE DB-Schemarowsets werden vom [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis-Anbieter (XMLA) unterstützt. Verwenden der `DISCOVER_ENUMERATORS` Rowset mit der [Discover](../../xmla/xml-elements-methods-discover.md) -Methode überprüft, ob ein bestimmter Datenquellenanbieter ein Rowset unterstützt.  
@@ -40,7 +40,7 @@ ms.locfileid: "36050670"
 |Rowset|Description|  
 |------------|-----------------|  
 |`DBSCHEMA_ASSERTIONS`|Gibt die im Katalog definierten Assertionen an, deren Eigentümer ein angegebener Benutzer ist.|  
-|[DBSCHEMA_CATALOGS-Rowset](dbschema-catalogs-rowset.md) <sup>1</sup>|Identifiziert die physischen Attribute zugeordneten Kataloge, die von der Datenbank-Managementsystem (DBMS) zugegriffen werden kann. Für einige Systeme, beispielsweise [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Access, ist möglicherweise nur ein Katalog verfügbar. Für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] listet dieses Rowset alle in der Systemdatenbank definierten Kataloge (Datenbanken) auf.|  
+|[DBSCHEMA_CATALOGS-Rowset](dbschema-catalogs-rowset.md) <sup>1</sup>|Gibt die physischen Attribute zugeordneten Kataloge, die von der Datenbank-Managementsystem (DBMS) zugegriffen werden kann. Für einige Systeme, beispielsweise [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Access, ist möglicherweise nur ein Katalog verfügbar. Für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] listet dieses Rowset alle in der Systemdatenbank definierten Kataloge (Datenbanken) auf.|  
 |`DBSCHEMA_CHARACTER_SETS`|Gibt die im Katalog definierten Zeichensätze an, auf die ein angegebener Benutzer zugreifen kann.|  
 |`DBSCHEMA_CHECK_CONSTRAINTS`|Gibt die CHECK-Einschränkungen an, die in dem Katalog definierten sind, dessen Eigentümer ein angegebener Benutzer ist.|  
 |`DBSCHEMA_CHECK_CONSTRAINTS_BY_TABLE`|Gibt die CHECK-Einschränkungen für eine bestimmte Tabelle an, die in einem Katalog definiert sind, dessen Eigentümer ein angegebener Benutzer ist.|  
@@ -65,7 +65,7 @@ ms.locfileid: "36050670"
 |`DBSCHEMA_TABLE_CONSTRAINTS`|Gibt die Tabelleneinschränkungen an, die in dem Katalog definiert sind, dessen Eigentümer ein angegebener Benutzer ist.|  
 |`DBSCHEMA_TABLE_PRIVILEGES`|Gibt die im Katalog definierten Berechtigungen für Tabellen an, die für einen angegebenen Benutzer verfügbar sind oder von diesem erteilt wurden.|  
 |`DBSCHEMA_TABLE_STATISTICS`|Beschreibt den beim Anbieter verfügbaren Satz von Statistiken für Tabellen.<br /><br /> Dieses Rowset gehört nicht zum `STATISTICS`-Rowset.|  
-|[DBSCHEMA_TABLES-Rowset](dbschema-tables-rowset.md) <sup>1</sup>|Gibt die Measuregruppen und Dimensionen, die in als Tabellen verfügbar gemacht [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[DBSCHEMA_TABLES-Rowset](dbschema-tables-rowset.md) <sup>1</sup>|Gibt die Measuregruppen und Dimensionen, die verfügbar gemacht werden, als Tabellen in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |`DBSCHEMA_TABLES_INFO` <sup>1</sup>|Gibt die im Katalog definierten Tabellen (einschließlich Sichten) an, auf die ein angegebener Benutzer zugreifen kann.|  
 |`DBSCHEMA_TRANSLATIONS`|Gibt die im Katalog definierten Übersetzungen an, auf die ein angegebener Benutzer zugreifen kann.|  
 |`DBSCHEMA_TRUSTEE`|Listet die Vertrauensnehmer einer Datenquelle auf.|  

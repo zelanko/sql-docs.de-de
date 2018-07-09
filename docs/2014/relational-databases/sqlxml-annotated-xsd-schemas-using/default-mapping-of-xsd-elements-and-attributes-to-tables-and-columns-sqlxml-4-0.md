@@ -1,5 +1,5 @@
 ---
-title: Standardzuordnung von XSD-Elementen und-Attributen zu Tabellen und Spalten (SQLXML 4.0) | Microsoft Docs
+title: Standardzuordnung von XSD-Elementen und-Attributen zu Tabellen und Spalten (SQLXML 4.0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - element/attribute mapping [SQLXML]
 ms.assetid: 9a18e92a-6cfb-4a14-993a-663a95aabb63
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cbed4eee82d0bd7d57b7e4073d1f78f9150f9e6c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 515cd325572904339bcb58d5fb5758cae70b0b75
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050727"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240610"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Standardzuordnung von XSD-Elementen und -Attributen zu Tabellen und Spalten (SQLXML 4.0)
   Standardmäßig wird ein Element des komplexen Typs in einem mit Anmerkungen versehenen XSD-Schema der Tabelle (Sicht) mit dem gleichen Namen in der angegebenen Datenbank zugeordnet, und ein Element oder Attribut des einfachen Typs wird der Spalte mit demselben Namen in der Tabelle zugeordnet.  
@@ -45,7 +45,7 @@ ms.locfileid: "36050727"
  Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen für die Ausführung von SQLXML-Beispielen](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-default-mapping"></a>A. Angeben der Standardzuordnung  
- In diesem Beispiel werden keine Anmerkungen im XSD-Schema angegeben. Die  **\<Person.Contact >** -Element komplexen Typs ist, und wird daher standardmäßig der Person.Contact-Tabelle in der AdventureWorks-Datenbank zugeordnet. Alle Attribute (ContactID, FirstName und LastName) des der  **\<Person.Contact >** -Elements sind von einem einfachen Typ und werden standardmäßig Spalten mit identischen Namen in der Person.Contact-Tabelle.  
+ In diesem Beispiel werden keine Anmerkungen im XSD-Schema angegeben. Die  **\<Person.Contact >** -Element komplexen Typs ist, und wird daher standardmäßig der Person.Contact-Tabelle in der Datenbank AdventureWorks zugeordnet. Alle Attribute (ContactID, FirstName und LastName) des der  **\<Person.Contact >** -Elements sind von einem einfachen Typ und werden standardmäßig Spalten mit den gleichen Namen in der Person.Contact-Tabelle.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -82,7 +82,7 @@ ms.locfileid: "36050727"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Im Folgenden wird ein Teil des Resultsets aufgeführt:  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36050727"
 ```  
   
 ### <a name="b-mapping-an-xml-element-to-a-database-column"></a>B. Zuordnen eines XML-Elements zu einer Datenbankspalte  
- In diesem Beispiel findet die Standardzuordnung auch statt, da keine Anmerkungen verwendet werden. Die  **\<Person.Contact >** -Element komplexen Typs ist, und der Tabelle mit dem gleichen Namen in der Datenbank zugeordnet. Die Elemente  **\<FirstName >** und  **\<LastName >** und **EmployeeID** Attribut sind vom einfachen Typ und werden daher die Spalten mit den gleichen Namen. Der einzige Unterschied zwischen diesem und dem vorherigen Beispiel besteht darin, dass für die Zuordnung der Felder FirstName und LastName Elemente verwendet werden.  
+ In diesem Beispiel findet die Standardzuordnung auch statt, da keine Anmerkungen verwendet werden. Die  **\<Person.Contact >** -Element komplexen Typs ist und wird in der Tabelle mit dem gleichen Namen in der Datenbank. Die Elemente  **\<FirstName >** und  **\<"LastName" >** und **EmployeeID** Attribut sind vom einfachen Typ und werden daher die Spalten mit den gleichen Namen. Der einzige Unterschied zwischen diesem und dem vorherigen Beispiel besteht darin, dass für die Zuordnung der Felder FirstName und LastName Elemente verwendet werden.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -135,7 +135,7 @@ ms.locfileid: "36050727"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Im Folgenden wird ein Teil des Resultsets aufgeführt:  
   
@@ -150,7 +150,7 @@ ms.locfileid: "36050727"
 ```  
   
 ### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>C. Zuordnen eines XML-Elements zu einer XML-Datentypspalte  
- In diesem Beispiel findet die Standardzuordnung auch statt, da keine Anmerkungen verwendet werden. Die  **\<Production.ProductModel >** -Element komplexen Typs ist, und der Tabelle mit dem gleichen Namen in der Datenbank zugeordnet. Die **ProductModelID** Attribut von einem einfachen Typ ist und daher auf die Spalten mit den gleichen Namen zugeordnet. Der einzige Unterschied zwischen diesem und den vorherigen Beispielen ist, die die  **\<Anweisungen >** -Element zugeordnet ist, auf eine Spalte, die verwendet die `xml` -Datentyp mithilfe der `xsd:anyType` Typ.  
+ In diesem Beispiel findet die Standardzuordnung auch statt, da keine Anmerkungen verwendet werden. Die  **\<Production.ProductModel >** -Element komplexen Typs ist und wird in der Tabelle mit dem gleichen Namen in der Datenbank. Die **ProductModelID** -Attribut von einem einfachen Typ ist, und daher auf die Spalten mit demselben Namen zugeordnet. Der einzige Unterschied zwischen diesem und den vorherigen Beispielen ist, die die  **\<Anweisungen >** -Element zugeordnet ist, auf eine Spalte, die verwendet die `xml` Datentyp mithilfe der `xsd:anyType` Typ.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -190,7 +190,7 @@ ms.locfileid: "36050727"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Im Folgenden wird ein Teil des Resultsets aufgeführt:  
   
@@ -209,7 +209,7 @@ ctions">
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Versehen Sie Sicherheitsaspekte Schema &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
+ [Überlegungen zur Sicherheit von Schemas versehen &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
  [XML-Daten &#40;SQL Server&#41;](../xml/xml-data-sql-server.md)   
  [XML-Datentypunterstützung für SQLXML 4.0](../sqlxml/xml-data-type-support-in-sqlxml-4-0.md)  
   

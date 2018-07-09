@@ -1,5 +1,5 @@
 ---
-title: Datei-Element (ASSL) | Microsoft Docs
+title: File-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - File element
 ms.assetid: 21c70707-d2f8-4040-9acb-cbce23076bcc
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 645882666ba82f965fddff9e1c886e97ff092a90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 03b78545b1df04192a69dffa1a49733509b99700
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050183"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155352"
 ---
 # <a name="file-element-assl"></a>File-Element (ASSL)
-  Definiert eine der Dateien, aus denen sich, ein [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] [ClrAssembly](../data-type/assembly-data-type-assl.md) Element.  
+  Definiert eine der Dateien, aus denen ein [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] [ClrAssembly](../data-type/assembly-data-type-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36050183"
   
 |Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|[ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md)|  
+|Datentyp und -länge|[Clrassemblyfile-Objekts](../data-type/clrassemblyfile-data-type-assl.md)|  
 |Standardwert|InclusionThresholdSetting|  
 |Cardinality|1-n: Erforderliches Element, das mehr als einmal auftreten kann.|  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36050183"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element, das das übergeordnete Element des entspricht `Files` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
+ Das Element, das dem übergeordneten entspricht `Files` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Server-Element &#40;ASSL&#41;](server-element-assl.md)   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], security
 - Subscribers [SQL Server replication], security
 - security [SQL Server replication], Subscribers
 ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f822331a379a2c1c919fcf82bd093acb6d58d2c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5cf7b8219c8a3810ce5222ef7ac2fca040dd1a08
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056467"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258326"
 ---
 # <a name="secure-the-subscriber"></a>Sichern des Abonnenten
   Merge-Agents und Verteilungs-Agents stellen Verbindungen mit dem Abonnenten her. Diese Verbindungen können im Kontext einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldung oder einer Windows-Anmeldung erfolgen. Es ist wichtig, eine geeignete Anmeldung für diese Agents bereitzustellen, ohne dass dabei der Grundsatz verletzt wird, dass nur so viele Rechte erteilt werden sollten, wie unbedingt erforderlich sind. Außerdem muss der Aufbewahrungsort für die Kennwörter geschützt sein. Informationen zu den für die einzelnen Agents erforderlichen Berechtigungen finden Sie unter [Replication Agent Security Model](replication-agent-security-model.md).  

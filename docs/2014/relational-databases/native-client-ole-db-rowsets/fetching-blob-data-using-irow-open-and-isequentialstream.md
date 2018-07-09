@@ -1,13 +1,11 @@
 ---
-title: 'Abrufen von Blobdaten, die mithilfe von IRow:: Open and ISequentialStream | Microsoft Docs'
+title: 'Abrufen von Blobdaten, die mithilfe von IRow:: Open and ISequentialStream | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - BLOBs, fetching
 ms.assetid: 439b3976-84e7-4d11-8dba-f668adbc9159
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 29a3e0d1512e3b663249510f57ea627a4eaf3a01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 7604022093a63dd536648fd43a3370ac21c05fcb
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046653"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37418589"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>Abrufen von BLOB-Daten mithilfe von 'IRow::Open' und 'ISequentialStream'
   **IRow:: Open** unterstützt nur Typs DBGUID_STREAM und DBGUID_NULL von Objekten, die geöffnet werden.  
@@ -81,7 +79,7 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 }  
 ```  
   
- Umfangreiche Daten können gebunden oder abgerufen, indem die **ISequentialStream** Schnittstelle. Bei gebundenen Spalten gibt das Statusflag DBSTATUS_S_TRUNCATED an, ob die Daten abgeschnitten werden.  
+ Umfangreiche Daten können gebunden oder abgerufen, über die **ISequentialStream** Schnittstelle. Bei gebundenen Spalten gibt das Statusflag DBSTATUS_S_TRUNCATED an, ob die Daten abgeschnitten werden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Abrufen von BLOB-Daten mit IRow](../../database-engine/dev-guide/fetching-blob-data-using-irow.md)  

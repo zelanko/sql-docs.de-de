@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 771ae5285f38b89336fa1f62b71ab033a54b3e8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b750ea3f8586b874a78251790bd0d46e18680a2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050144"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158971"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Generieren von Dumpdateien für die Paketausführung
   In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]können Sie Debugdumpdateien erstellen, die Informationen über die Ausführung eines Pakets enthalten. Die Informationen in diesen Dateien können Ihnen bei der Behebung von Problemen bei der Paketausführung helfen.  
@@ -37,7 +37,7 @@ ms.locfileid: "36050144"
   
      Rufen Sie diese gespeicherte Prozedur auf, um ein ausgeführtes Paket zu veranlassen, eine Dumpdatei anzuhalten und zu erstellen.  
   
- Wenn Sie Pakete mithilfe des Paketbereitstellungsmodells bereitstellen, erstellen Sie die Debugdumpdateien, indem Sie entweder mit dem Hilfsprogramm **dtexec** oder dem Hilfsprogramm **dtutil** in der Befehlszeile eine Debugdumpoption angeben. Weitere Informationen finden Sie unter [dtexec Utility](../packages/dtexec-utility.md) und [dtutil Utility](../dtutil-utility.md). Weitere Informationen zum paketbereitstellungsmodell finden Sie unter [Bereitstellung von Projekten und Paketen](../packages/deploy-integration-services-ssis-projects-and-packages.md) und [Paketbereitstellung &#40;SSIS&#41;](../packages/legacy-package-deployment-ssis.md).  
+ Wenn Sie Pakete mithilfe des Paketbereitstellungsmodells bereitstellen, erstellen Sie die Debugdumpdateien, indem Sie entweder mit dem Hilfsprogramm **dtexec** oder dem Hilfsprogramm **dtutil** in der Befehlszeile eine Debugdumpoption angeben. Weitere Informationen finden Sie unter [dtexec Utility](../packages/dtexec-utility.md) und [dtutil Utility](../dtutil-utility.md). Weitere Informationen zu paketbereitstellungsmodellen finden Sie unter [Bereitstellung von Projekten und Paketen](../packages/deploy-integration-services-ssis-projects-and-packages.md) und [Paketbereitstellung &#40;SSIS&#41;](../packages/legacy-package-deployment-ssis.md).  
   
 ## <a name="debug-dump-file-format"></a>Format der Debugdumpdateien  
  Wenn Sie eine Debugdumpoption angeben, erstellt [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] die folgenden Debugdumpdateien:  

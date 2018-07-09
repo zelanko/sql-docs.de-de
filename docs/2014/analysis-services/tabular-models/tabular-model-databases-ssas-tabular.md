@@ -1,5 +1,5 @@
 ---
-title: Tabellarische Modelldatenbanken (SSAS – tabellarisch) | Microsoft Docs
+title: Tabellarische Modelldatenbanken (SSAS – tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 539c6b5f-f4b6-42f9-af81-7c02f74d5efe
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0952d613290da279c5e044085ed79f415181bb9c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d1d74fe1e59121466acf3671e3ce036a6b3e4e89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047685"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259416"
 ---
 # <a name="tabular-model-databases-ssas-tabular"></a>Tabellarische Modelldatenbanken (SSAS – tabellarisch)
   Eine tabellarische Modelldatenbank ist eine Analysis Services-Datenbank, die Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] erstellen, der die tabellarische Analysis Services-Modell-Projektvorlage verwendet, wobei Tabellen und Beziehungen die primären Strukturen zum Darstellen von Daten sind.  
@@ -41,7 +41,7 @@ ms.locfileid: "36047685"
   
  [Konfigurieren von speicherinternem oder DirectQuery-Zugriff für eine tabellarische Modelldatenbank](enable-directquery-mode-in-ssms.md)  
   
- [Herstellen einer Verbindung mit einer tabellarischen Modelldatenbank &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
+ [Verbinden mit einer tabellarischen Modelldatenbank &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
   
  [Von PowerPivot wiederherstellen](restore-from-power-pivot.md)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36047685"
   
  [Synchronisieren von Analysis Services-Datenbanken](../multidimensional-models/synchronize-analysis-services-databases.md)  
   
- [Umschalten Sie in einer Analysis Services-Datenbank zwischen Schreib-und Lesemodus](../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [Umschalten einer Analysis Services-Datenbank zwischen Schreib-und Lesemodus](../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
  [Ändern oder Löschen einer Analysis Services-Datenbank](../multidimensional-models/modify-or-delete-an-analysis-services-database.md)  
   

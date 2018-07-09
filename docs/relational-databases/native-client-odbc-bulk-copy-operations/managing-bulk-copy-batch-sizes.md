@@ -1,5 +1,5 @@
 ---
-title: Verwalten von Batchgrößen für das Massenkopieren | Microsoft Docs
+title: Verwalten von Batchgrößen für das Massenkopieren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client-odbc-bulk-copy-operations
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,12 +21,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 816f5ec577e65b84e23ba538008d06542348f02c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4c944d5b43e70060baf7eb34cfcb2fc17e4ef666
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32945635"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422819"
 ---
 # <a name="managing-bulk-copy-batch-sizes"></a>Verwalten von Batchgrößen für das Massenkopieren
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,11 +44,11 @@ ms.locfileid: "32945635"
   
 -   Wenn TABLOCK nicht angegeben wird, beschränken Sie Batchgrößen auf unter 1.000 Zeilen.  
   
- Beim Massenkopieren aus einer Datendatei, die Batchgröße wird angegeben, indem **Bcp_control** mit der BCPBATCH-Option vor dem Aufruf [Bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md). Beim Massenkopieren aus Programmvariablen mit [Bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) und [Bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), wird die Batchgröße durch Aufrufen von gesteuert [Bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) nach dem Aufruf [Bcp_ Sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) *x* Zeiten, Where *x* ist die Anzahl der Zeilen in einem Batch.  
+ Beim Massenkopieren aus einer Datendatei, entspricht die Batchgröße durch Aufrufen von **Bcp_control** mit der BCPBATCH-Option vor dem Aufruf [Bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md). Beim Massenkopieren aus Programmvariablen mit [Bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) und [Bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), wird die Batchgröße durch Aufrufen von gesteuert [Bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) nach dem Aufruf [Bcp_ Sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) *x* -Mal ab, wobei *x* ist die Anzahl der Zeilen in einem Batch.  
   
- Batches sind nicht nur für das Festlegen der Größe einer Transaktion relevant, sondern wirken sich auch auf den Zeitpunkt aus, an dem Zeilen über das Netzwerk an den Server gesendet werden. Funktionen zum Massenkopieren normalerweise zwischengespeichert, die Zeilen aus **Bcp_sendrow** bis ein Netzwerkpaket gefüllt wird, und klicken Sie dann das volle Paket an den Server senden. Wenn eine Anwendung ruft **Bcp_batch**, allerdings wird das aktuelle Paket gesendet, mit dem Server unabhängig davon, ob es aufgefüllt wurde. Eine sehr niedrige Batchgröße kann die Leistung herabsetzen, wenn dadurch viele teilweise aufgefüllte Pakete an den Server gesendet werden. Beispielsweise Aufrufen **Bcp_batch** nach jedem **Bcp_sendrow** bewirkt, dass jede Zeile in einem einzelnen Paket gesendet werden und, es sei denn, der Zeilen sehr groß sind, verschwendet in jedem Paket Platz. Die Standardgröße von Netzwerkpaketen für SQL Server beträgt 4 KB, obwohl eine Anwendung durch Aufrufen der Größe geändert werden kann [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) angeben des SQL_ATTR_PACKET_SIZE-Attributs.  
+ Batches sind nicht nur für das Festlegen der Größe einer Transaktion relevant, sondern wirken sich auch auf den Zeitpunkt aus, an dem Zeilen über das Netzwerk an den Server gesendet werden. Funktionen zum Massenkopieren normalerweise zwischengespeichert, die Zeilen aus **Bcp_sendrow** bis ein Netzwerkpaket gefüllt ist, und klicken Sie dann das volle Paket an den Server gesendet. Wenn eine Anwendung ruft **Bcp_batch**, allerdings wird das aktuelle Paket an den Server unabhängig davon, ob es aufgefüllt wurde gesendet. Eine sehr niedrige Batchgröße kann die Leistung herabsetzen, wenn dadurch viele teilweise aufgefüllte Pakete an den Server gesendet werden. Zum Beispiel der Aufruf **Bcp_batch** nach jeder **Bcp_sendrow** bewirkt, dass jede Zeile in einem einzelnen Paket gesendet werden, und, es sei denn, die Zeilen sehr umfangreich sind, verschwendet in jedem Paket Platz. Die Standardgröße von Netzwerkpaketen für SQL Server beträgt 4 KB, obwohl eine Anwendung durch Aufrufen die Größe geändert werden kann [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) angeben des SQL_ATTR_PACKET_SIZE-Attributs.  
   
- Ein anderer Nebeneffekt von Batches ist, dass jeder Batch als ausstehendes Resultset bis zu ihrem Abschluss mit berücksichtigt wird **Bcp_batch**. Wenn keine anderen Vorgänge für ein Verbindungshandle ausgeführt werden, während ein Batch aussteht, ist die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber gibt einen Fehler mit SQLState = "HY000" und eine Zeichenfolge der Fehlermeldung:  
+ Ein anderer Nebeneffekt von Batches ist, dass jeder Batch als ausstehendes Resultset bis zum Abschluss mit berücksichtigt wird **Bcp_batch**. Wenn keine anderen Vorgänge für ein Verbindungshandle auszuführen versucht werden, während ein Batch aussteht, ist die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber gibt einen Fehler mit SQLState = "HY000" und der Zeichenfolge mit einer Fehlermeldung:  
   
 ```  
 "[Microsoft][SQL Server Native Client] Connection is busy with  

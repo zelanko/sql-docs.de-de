@@ -1,5 +1,5 @@
 ---
-title: Transformations-Editor für Überwachung | Microsoft Docs
+title: Transformations-Editor für die Überwachung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.audittransformation.f1
 helpviewer_keywords:
 - Audit Transformation Editor
 ms.assetid: 32786a34-5870-4fde-83c7-ec74d62404b8
 caps.latest.revision: 12
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1133edc1c46b1a0f3ee76f01f99c2f48ca36aa96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f0ec690b0c1b90ffc01c5bf275769658c72ffc99
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059201"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148351"
 ---
 # <a name="audit-transformation-editor"></a>Transformations-Editor für Überwachung
   Mithilfe der Überwachungstransformation werden in den Datenfluss eines Pakets Daten zur Umgebung, in der das Paket ausgeführt wird, eingeschlossen. Dem Datenfluss kann z. B. der Name des Pakets, Computers und Operators hinzugefügt werden. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] enthält Systemvariablen, die diese Informationen bereitstellen.  

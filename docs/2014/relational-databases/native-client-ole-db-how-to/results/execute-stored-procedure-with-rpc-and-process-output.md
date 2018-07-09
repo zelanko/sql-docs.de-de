@@ -1,13 +1,11 @@
 ---
-title: Führen Sie eine gespeicherte Prozedur (mithilfe von RPC-Syntax) und Verarbeiten von Rückgabecodes und Ausgabeparametern (OLE DB) | Microsoft Docs
+title: Ausführen einer gespeicherten Prozedur (mithilfe von RPC-Syntax) und Verarbeiten von Rückgabecodes und Ausgabeparametern (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,18 +13,18 @@ helpviewer_keywords:
 - stored procedures [SQL Server], RPC syntax
 ms.assetid: 1eb60087-da67-433f-9b45-4028595e68ab
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4c0419c0b3f0ceab2756e97c473a2d51c7ade5f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 3bffe276292dc64731e6114df52b6dd0317fb04a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048491"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408199"
 ---
 # <a name="execute-a-stored-procedure-using-rpc-syntax-and-process-return-codes-and-output-parameters-ole-db"></a>Ausführen einer gespeicherten Prozedur (mithilfe der RPC-Syntax) sowie Verarbeiten von Rückgabecodes und Ausgabeparametern (OLE DB)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gespeicherte Prozeduren können ganzzahlige Rückgabecodes und Ausgabeparameter aufweisen. Die Rückgabecodes und Ausgabeparameter werden im letzten Paket des Servers gesendet und stehen der Anwendung demnach erst zur Verfügung, wenn das Rowset vollständig freigegeben wurde. Wenn der Befehl mehrere Ergebnisse zurückgibt, ausgabeparameterdaten ist verfügbar, wenn `IMultipleResults::GetResult` DB_S_NORESULT, gibt oder wenn die `IMultipleResults` -Schnittstelle vollständig freigegeben wird, welcher Vorgang zuerst ausgeführt.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gespeicherte Prozeduren können ganzzahlige Rückgabecodes und Ausgabeparameter aufweisen. Die Rückgabecodes und Ausgabeparameter werden im letzten Paket des Servers gesendet und stehen der Anwendung demnach erst zur Verfügung, wenn das Rowset vollständig freigegeben wurde. Wenn der Befehl mehrere Ergebnisse zurückgibt, ausgabeparameterdaten ist verfügbar, wenn `IMultipleResults::GetResult` DB_S_NORESULT, gibt oder wenn die `IMultipleResults` -Schnittstelle vollständig freigegeben, welches Ereignis zuerst eintritt.  
   
 > [!IMPORTANT]  
 >  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen persistent speichern müssen, sollten Sie sie mit der [Win32 Crypto-API](http://go.microsoft.com/fwlink/?LinkId=64532)verschlüsseln.  
@@ -54,11 +52,11 @@ ms.locfileid: "36048491"
   
  Dieses Beispiel erfordert die AdventureWorks-Beispieldatenbank, die Sie von der Homepage [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) herunterladen können.  
   
- Führen Sie das erste ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) Codelisting, um die von der Anwendung verwendete gespeicherte Prozedur zu erstellen.  
+ Führen Sie das erste ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) code aus, um die von der Anwendung verwendete gespeicherte Prozedur zu erstellen.  
   
- Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das zweite Codelisting (C++) aus. Diese Anwendung stellt eine Verbindung des Computers her [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instanz. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz ändern. Um eine Verbindung mit einer benannten Instanz herzustellen, ändern Sie die Verbindungszeichenfolge von l"(Local)" "zu l"(Local)"\\\name", wobei der Name der benannten Instanz ist. Standardmäßig [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
+ Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das zweite Codelisting (C++) aus. Diese Anwendung stellt eine Verbindung her, des Computers [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instanz. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz ändern. Um eine Verbindung mit einer benannten Instanz herzustellen, ändern Sie die Verbindungszeichenfolge von l"(Local)" "um l"(Local)"\\\name", wobei der Name der benannten Instanz ist. In der Standardeinstellung [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
- Führen Sie das dritte ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) Codelisting, um die von der Anwendung verwendete gespeicherte Prozedur zu löschen.  
+ Führen Sie das dritte ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) code aus, um die von der Anwendung verwendete gespeicherte Prozedur zu löschen.  
   
 ```  
 USE AdventureWorks  
@@ -399,6 +397,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ergebnisse Vorgehensweisen zum Verarbeiten &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
+ [Verarbeiten von Ergebnissen: Themen zur Vorgehensweise &#40;OLE-DB&#41;](processing-results-how-to-topics-ole-db.md)  
   
   

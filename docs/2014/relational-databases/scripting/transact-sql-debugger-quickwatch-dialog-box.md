@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.quickwatch
 helpviewer_keywords:
 - QuickWatch Dialog [Transact-SQL]
 ms.assetid: d6bbb373-1452-41f2-bdc5-86ae689c3dc0
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b9809cd60703058c994af441145d0668cd7f76b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 7810c99c06ed78131a70135f48056c1eeb8b2a6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057161"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156021"
 ---
 # <a name="quickwatch-dialog-box"></a>Dialogfeld 'Schnellüberwachung'
   Mithilfe des Dialogfelds **Schnellüberwachung** können Sie beim Debuggen von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code schnell den Datentyp und den Wert eines [!INCLUDE[tsql](../../includes/tsql-md.md)] -Ausdrucks anzeigen, wie z. B. einer Variable oder eines Parameters. Um mehrere Ausdrücke zu beobachten, können Sie den Ausdruck auch einem **Überwachungsfenster** hinzufügen.  

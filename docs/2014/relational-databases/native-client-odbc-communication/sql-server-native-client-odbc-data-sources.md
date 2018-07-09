@@ -1,13 +1,11 @@
 ---
-title: SQL Server Native Client ODBC-Datenquellen | Microsoft Docs
+title: SQL Server Native Client ODBC-Datenquellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,20 +18,20 @@ helpviewer_keywords:
 - ODBC data sources
 ms.assetid: a6a50fd0-d439-43fd-b76f-16ec02f478c5
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3b74f989db617c2fcd86e0d823b9bb563c7dcda1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ee13a0180896316e10b20148b2a22a5b0cf4c149
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050751"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408469"
 ---
 # <a name="sql-server-native-client-odbc-data-sources"></a>SQL Server Native Client ODBC-Datenquellen
   Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenquellenname (DSN) identifiziert eine ODBC-Datenquelle, die alle Informationen enthält, die eine ODBC-Anwendung zur Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank auf einem bestimmten Server benötigt. Es gibt zwei Methoden, wie Sie einen ODBC-Datenquellennamen definieren können:  
   
--   Klicken Sie auf einem Clientcomputer Verwaltung in der Systemsteuerung öffnen, und doppelklicken Sie auf **Datenquellen (ODBC)**. Daraufhin wird der ODBC-Datenquellen-Administrator geöffnet, mit dem Sie einen DSN erstellen können.  
+-   Klicken Sie auf einem Clientcomputer Verwaltung in der Systemsteuerung zu öffnen, und doppelklicken Sie **Datenquellen (ODBC)**. Daraufhin wird der ODBC-Datenquellen-Administrator geöffnet, mit dem Sie einen DSN erstellen können.  
   
 -   Rufen Sie in einer ODBC-Anwendung [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md).  
   
@@ -50,6 +48,6 @@ ms.locfileid: "36050751"
  Eine ODBC-Anwendung muss nicht unbedingt über eine Datenquelle eine Verbindung herstellen. Die Anwendung muss jedoch dieselben Verbindungsinformationen an die ODBC-Verbindungsfunktion liefern, die der Treiber andernfalls im DSN finden würde.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Bei der Kommunikation mit SQLServer &#40;ODBC&#41;](communicating-with-sql-server-odbc.md)  
+ [Kommunikation mit SQLServer &#40;ODBC&#41;](communicating-with-sql-server-odbc.md)  
   
   

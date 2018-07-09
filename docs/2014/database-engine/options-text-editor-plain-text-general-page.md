@@ -1,5 +1,5 @@
 ---
-title: Optionen (Text-Editor - nur-Text - Registerkarte Allgemein) | Microsoft Docs
+title: Optionen (Text-Editor – unverschlüsselter Text – Allgemein) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Plain_Text.General
 ms.assetid: 53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc
 caps.latest.revision: 22
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e46857d3ea3078847e2c540999f37cef79d05091
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b66c8286d3ae062307175e689f222f33ea3be6a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058351"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150991"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>Optionen (Text-Editor – Unverschlüsselter Text – Seite „Allgemein“)
   In diesem Dialogfeld können Sie das allgemeine Bearbeitungsverhalten des Text-Editors ändern, der zum Bearbeiten von Dokumenten verwendet wird, die keiner bestimmten Entwicklungssprache zugeordnet sind. Zum Anzeigen dieser Einstellungen klicken Sie im Menü **Extras** auf **Optionen** , und erweitern Sie anschließend **Text-Editor**. Erweitern Sie als Nächstes **Nur Text** , und klicken Sie dann auf **Allgemein**.  
@@ -36,7 +36,7 @@ ms.locfileid: "36058351"
  **Erweiterte Member ausblenden**  
  Im Nur-Text-Editor wird diese Funktion nicht unterstützt.  
   
- **Parameterinformationen**  
+ **Informationen zu den Parametern**  
  Im Nur-Text-Editor wird diese Funktion nicht unterstützt.  
   
 ## <a name="settings"></a>Einstellungen  
@@ -52,7 +52,7 @@ ms.locfileid: "36058351"
 > [!NOTE]  
 >  Diese Markierungspfeile werden nicht in den Code eingefügt und auch nicht gedruckt. Sie dienen lediglich als Hinweis.  
   
- **Wenden Sie Ausschneiden/Kopieren Befehle auf leere Zeilen an, wenn keine Auswahl getroffen wurde**  
+ **Wenden Sie Befehle der Bearbeitungsschritte Ausschneiden/Kopieren auf leere Zeilen an, wenn keine Auswahl vorhanden ist**  
  Legt fest, wie sich der Editor verhalten soll, wenn Sie die Einfügemarke in eine Leerzeile setzen und auf **Kopieren** oder **Ausschneiden**klicken, ohne eine Auswahl zu treffen.  
   
  Bei aktiviertem Kontrollkästchen wird die Leerzeile kopiert bzw. ausgeschnitten. Wenn Sie anschließend auf **Einfügen**klicken, wird die Leerzeile eingefügt.  

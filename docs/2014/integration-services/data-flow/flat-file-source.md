@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfilesource.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1651289fc00fecceb5a1e5a6bdc2bfd992be166e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 040069e373761d6d3ad78ea26bea5f8e538c33ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050644"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229360"
 ---
 # <a name="flat-file-source"></a>Flatfilequelle
   Die Flatfilequelle liest Daten aus einer Textdatei. Die Textdatei kann in einem Format mit Trennzeichen, fester Breite oder einem gemischten Format vorliegen.  
@@ -48,7 +48,7 @@ ms.locfileid: "36050644"
   
  Die Ausgabespalte in der Ausgabe der Flatfilequelle schließt die FastParse-Eigenschaft ein. FastParse gibt an, ob die Spalte die schnelleren gebietsschemaneutralen Analyseroutinen von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] oder die gebietsschemabezogenen Standardanalyseroutinen verwendet. Weitere Informationen finden Sie unter [Fast Parse](../fast-parse.md) und [Standard Parse](../standard-parse.md).  
   
- Ausgabespalten schließen auch UseBinaryFormat-Eigenschaft ein. Sie verwenden diese Eigenschaft, um Unterstützung für binäre Daten in Dateien zu implementieren, wie für Daten mit dem gepackten Dezimalformat. Standardmäßig UseBinaryFormat festgelegt ist, um `false`. Wenn Sie ein Binärformat verwenden möchten, legen Sie UseBinaryFormat auf `true` und den Datentyp der Ausgabespalte auf `DT_BYTES`. Bei diesem Vorgang überspringt die Flatfilequelle die Datenkonvertierung und leitet die Daten durch die Ausgabespalte, wie sie ist. Sie können eine Transformation verwenden, wie Abgeleitete Spalte oder Datenkonvertierung um die `DT_BYTES`-Daten in einen anderen Datentyp umzuwandeln, oder Sie können ein benutzerdefiniertes Skript in eine Skripttransformation schreiben, um die Daten zu interpretieren. Sie können auch eine benutzerdefinierte Datenflusskomponente schreiben, um die Daten zu interpretieren. Für Weitere Informationen zu den Datentypen Sie umgewandelt kann `DT_BYTES` , finden Sie unter [Umwandlung &#40;SSIS-Ausdruck&#41;](../expressions/cast-ssis-expression.md).  
+ Ausgabespalten schließen auch UseBinaryFormat-Eigenschaft ein. Sie verwenden diese Eigenschaft, um Unterstützung für binäre Daten in Dateien zu implementieren, wie für Daten mit dem gepackten Dezimalformat. Standardmäßig ist UseBinaryFormat auf festgelegt `false`. Wenn Sie ein Binärformat verwenden möchten, legen Sie UseBinaryFormat auf `true` , und geben Sie die Daten in der Ausgabespalte auf `DT_BYTES`. Bei diesem Vorgang überspringt die Flatfilequelle die Datenkonvertierung und leitet die Daten durch die Ausgabespalte, wie sie ist. Sie können eine Transformation verwenden, wie Abgeleitete Spalte oder Datenkonvertierung um die `DT_BYTES`-Daten in einen anderen Datentyp umzuwandeln, oder Sie können ein benutzerdefiniertes Skript in eine Skripttransformation schreiben, um die Daten zu interpretieren. Sie können auch eine benutzerdefinierte Datenflusskomponente schreiben, um die Daten zu interpretieren. Weitere Informationen zu den Datentypen Sie umwandeln kann `DT_BYTES` finden Sie [Umwandlung &#40;SSIS-Ausdruck&#41;](../expressions/cast-ssis-expression.md).  
   
  Diese Quelle verwendet für den Zugriff auf die Textdatei einen Verbindungs-Manager für Flatfiles. Durch Festlegen von Eigenschaften im Verbindungs-Manager für Flatfiles können Sie Informationen zur Datei und zu jeder enthaltenen Spalte bereitstellen und angeben, wie die Flatfilequelle die Daten in der Textdatei behandeln soll. Beispielsweise können Sie die Zeichen angeben, mit denen Spalten und Zeilen in der Datei getrennt werden, sowie den Datentyp und die Länge jeder Spalte. Weitere Informationen finden Sie unter [Flat File Connection Manager](../connection-manager/file-connection-manager.md).  
   

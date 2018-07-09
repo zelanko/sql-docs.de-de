@@ -1,5 +1,5 @@
 ---
-title: Dialogfeld "Legende", Allgemein (Berichts-Generator und SSRS) | Microsoft Docs
+title: Dialogfeld "Legende", Allgemein (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.legendproperties.general.f1
 - "10184"
 ms.assetid: db718f8f-f185-422f-871c-96f0749e5893
 caps.latest.revision: 8
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8614201ccb9c4fa496602a1ea8f6ea5e984b4d39
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 172fc72cd09356281ddf10f2e048a2a81684c29a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047325"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230675"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>Legendeneigenschaften (Dialogfeld), Allgemein (Berichts-Generator und SSRS)
   Mithilfe des Dialogfelds **Legende** können Sie die Darstellung und das Layout der Legende im Diagramm definieren. Weitere Informationen finden Sie unter [Formatieren der Legende in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](report-design/chart-legend-formatting-report-builder.md).  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Query Builder [Integration Services]
 - queries [Integration Services]
@@ -18,13 +18,13 @@ ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4188992529956ca06b22389dc4aadf1cc6ff6b7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: de0a8c6ab744f668d65c3bc5b1a1775fedfef80c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047847"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239170"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services-Abfragen (SSIS)
   Der Task SQL ausführen, die OLE DB-Quelle, das OLE DB-Ziel und die Transformation für die Suche können SQL-Abfragen verwenden. In dem Task SQL ausführen können von SQL-Anweisungen Datenbankobjekte und Daten erstellt, aktualisiert und gelöscht sowie gespeicherte Prozeduren und SELECT-Anweisungen ausgeführt werden. In der OLE DB-Quelle und der Nachschlagetransformation sind die SQL-Anweisungen normalerweise SELECT- oder ECEC-Anweisungen. Von den letzteren werden am häufigsten gespeicherte Prozeduren ausgeführt, die Resultsets zurückgeben.  

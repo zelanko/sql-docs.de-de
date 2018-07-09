@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-data-compression
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Unicode data compression
 - compression [SQL Server], Unicode data
 ms.assetid: 44e69e60-9b35-43fe-b9c7-8cf34eaea62a
 caps.latest.revision: 7
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 53c1b66b26fe785fe932870f02ff67326c335e31
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 216e2278418747a713575c165f14390c7b785e71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059150"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156333"
 ---
 # <a name="unicode-compression-implementation"></a>Implementierung von Unicode-Komprimierung
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet eine Implementierung des Algorithmus „Standardkomprimierungsschema für Unicode (SCSU)“, um Unicode-Werte zu komprimieren, die in zeilen- oder seitenkomprimierten Objekten gespeichert werden. Für diese komprimierten Objekte erfolgt die Unicode-Komprimierung für `nchar(n)`- und `nvarchar(n)`-Spalten automatisch. [!INCLUDE[ssDE](../../includes/ssde-md.md)] speichert Unicode-Daten als 2 Bytes, unabhängig vom Gebietsschema. Dies wird UCS-2-Codierung genannt. Bei einigen Gebietsschemas kann durch die Implementierung der SCSU-Komprimierung in SQL Server bis zu 50 Prozent des Speicherplatzes eingespart werden.  
@@ -31,7 +30,7 @@ ms.locfileid: "36059150"
  Unicode-Komprimierung unterstützt den `nchar(n)`-Datentyp mit fester Länge und den `nvarchar(n)`-Datentyp. Datenwerte, die außerhalb von Zeilen oder in `nvarchar(max)`-Spalten gespeichert werden, werden nicht komprimiert.  
   
 > [!NOTE]  
->  Unicode-Komprimierung wird nicht unterstützt für `nvarchar(max)` Daten, auch wenn sie in der Zeile gespeichert wird. Dieser Datentyp kann immer noch jedoch von der Seitenkomprimierung profitieren.  
+>  Unicode-Komprimierung wird nicht unterstützt, für die `nvarchar(max)` Daten, auch wenn sie in Zeile gespeichert wird. Dieser Datentyp kann immer noch jedoch von der Seitenkomprimierung profitieren.  
   
 ## <a name="upgrading-from-earlier-versions-of-sql-server"></a>Aktualisieren von früheren Versionen von SQL Server  
  Wenn eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisiert wird, werden keine Änderungen im Zusammenhang mit Unicode-Komprimierung für die Datenbankobjekte durchgeführt – unabhängig davon, ob diese komprimiert oder unkomprimiert sind. Das Datenbankupgrade wirkt sich wie folgt auf Objekte aus:  

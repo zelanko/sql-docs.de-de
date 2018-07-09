@@ -1,5 +1,5 @@
 ---
-title: Dialogfeld "Analysis Services-Eigenschaften" (Analysis Services) | Microsoft Docs
+title: Dialogfeld "Analysis Services-Eigenschaften" (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.SSMSIMBI.SERVERPROPERTIES.F1
 - SQL12.ASVS.SQLSERVERSTUDIO.SERVERPROPERTIES.F1
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Analysis Server Properties dialog box
 ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 60183e1c37a7e94b4b3b88239b837530ef81826c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e3dfe081a2400c795b8c0bd08a5667eaa996268
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056365"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260014"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>Eigenschaften für Analysis-Server (Dialogfeld) (Analysis Services)
   Mithilfe des Dialogfelds **Eigenschaften für Analysis-Server** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] können Sie die allgemeinen, die Sprach- und Sortierungs- sowie die Sicherheitseinstellungen für eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Instanz festlegen. Zum Öffnen des Dialogfelds **Eigenschaften für Analysis-Server** klicken Sie mit der rechten Maustaste im **Objekt-Explorer** auf eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Instanz, und wählen Sie dann im Kontextmenü die Option **Eigenschaften** aus. Das Dialogfeld **Eigenschaften für Analysis-Server** enthält die folgenden Eigenschaften.  
@@ -32,7 +32,7 @@ ms.locfileid: "36056365"
 ## <a name="information-properties"></a>Informationseigenschaften  
  Verwenden Sie diese Seite, um Servermodus, Version und Kompatibilitätsgrad anzuzeigen. Jede Instanz wird entweder im tabellarischen oder mehrdimensionalen Servermodus installiert und bietet die Möglichkeit, tabellarische oder mehrdimensionale Modelle zu laden. Zur Unterstützung beider Modi müssen Sie zwei Instanzen installieren.  
   
- **Unterstützter Kompatibilitätsgrad** ist gleichbedeutend mit der `DefaultCompatibilityLevel` -Eigenschaft in AMO. Je nach dem Serverbereitstellungsmodus, der während der Installation angegeben wird, ist die Einstellung schreibgeschützt. Der Server überprüft diese Eigenschaft bei der Ausführung von Vorgängen, die je nach Servermodus oder -version variieren. Das kann z. B. die Wiederherstellung einer Sicherung einer tabellarischen Datenbank auf einer tabellarischen Serverinstanz betreffen. Verwechseln Sie die Eigenschaft nicht mit dem Datenbankkompatibilitätsmodus tabellarischer oder mehrdimensionaler Modelle, die ähnliche Namen und Werte aufweisen. Gültige Werte für diese Servereigenschaft sind:  
+ **Unterstützter Kompatibilitätsgrad** entspricht der `DefaultCompatibilityLevel` -Eigenschaft in AMO. Je nach dem Serverbereitstellungsmodus, der während der Installation angegeben wird, ist die Einstellung schreibgeschützt. Der Server überprüft diese Eigenschaft bei der Ausführung von Vorgängen, die je nach Servermodus oder -version variieren. Das kann z. B. die Wiederherstellung einer Sicherung einer tabellarischen Datenbank auf einer tabellarischen Serverinstanz betreffen. Verwechseln Sie die Eigenschaft nicht mit dem Datenbankkompatibilitätsmodus tabellarischer oder mehrdimensionaler Modelle, die ähnliche Namen und Werte aufweisen. Gültige Werte für diese Servereigenschaft sind:  
   
 -   **1100** ist der standardmäßige Kompatibilitätsgrad, wenn für den mehrdimensionalen und Data Mining-Modus der Bereitstellungsmodus 0 konfiguriert wurde.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36056365"
   
 -   **Unterscheidung nach Groß-/Kleinschreibung** wird verwendet, um Daten auf der Grundlage der Wörterbuchregeln zu sortieren und zu vergleichen, die für die zugeordnete Sprache oder das Alphabet bereitgestellt werden, und um zwischen Groß- und Kleinschreibung zu unterscheiden.  
   
-     Wenn diese Option nicht ausgewählt ist, betrachtet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] die Groß- und Kleinschreibungsversionen von Buchstaben als gleich. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] definiert, ob Kleinbuchstaben niedriger oder höher als Großbuchstaben einsortiert, wenn stehen keine **Groß-/Kleinschreibung** nicht ausgewählt ist.  
+     Wenn diese Option nicht ausgewählt ist, betrachtet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] die Groß- und Kleinschreibungsversionen von Buchstaben als gleich. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] definiert nicht, ob Kleinbuchstaben niedriger oder einsortiert höher als Großbuchstaben Wenn **Groß-/Kleinschreibung** nicht ausgewählt ist.  
   
 -   **Unterscheidung nach Akzent** wird verwendet, um Daten auf der Grundlage der Wörterbuchregeln zu sortieren und zu vergleichen, die für die zugeordnete Sprache oder das Alphabet bereitgestellt werden, und um zwischen Buchstaben mit und ohne Akzent zu unterscheiden. Beispielsweise ist 'a' nicht mit 'á' identisch.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36056365"
      Wenn diese Option nicht ausgewählt ist, unterscheidet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nicht zwischen der Darstellung eines Zeichens als Einzelbyte- oder Doppelbytezeichen.  
   
 ## <a name="security-properties"></a>Sicherheitseigenschaften  
- Mithilfe dieser Seite geben Sie die Benutzer- und Gruppenkonten von Windows an, die bei einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz zur Rolle des Serveradministrators gehören. Die Mitgliedschaft in dieser Rolle berechtigt zur Ausführung serverweiter Aufgaben, z. B. dem Erstellen oder Verarbeiten einer Datenbank, dem Ändern von Servereigenschaften bzw. dem Hinzufügen oder Entfernen weiterer Mitglieder dieser Rolle oder dem Starten einer Ablaufverfolgung. Finden Sie unter [Erteilen von Serveradministratorberechtigungen &#40;Analysis Services&#41; ](instances/grant-server-admin-rights-to-an-analysis-services-instance.md) für Details.  
+ Mithilfe dieser Seite geben Sie die Benutzer- und Gruppenkonten von Windows an, die bei einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz zur Rolle des Serveradministrators gehören. Die Mitgliedschaft in dieser Rolle berechtigt zur Ausführung serverweiter Aufgaben, z. B. dem Erstellen oder Verarbeiten einer Datenbank, dem Ändern von Servereigenschaften bzw. dem Hinzufügen oder Entfernen weiterer Mitglieder dieser Rolle oder dem Starten einer Ablaufverfolgung. Finden Sie unter [Erteilen von Serveradministratorberechtigungen &#40;Analysis Services&#41; ](instances/grant-server-admin-rights-to-an-analysis-services-instance.md) Details.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Bestimmen des Servermodus einer Analysis Services-Instanz](instances/determine-the-server-mode-of-an-analysis-services-instance.md)   

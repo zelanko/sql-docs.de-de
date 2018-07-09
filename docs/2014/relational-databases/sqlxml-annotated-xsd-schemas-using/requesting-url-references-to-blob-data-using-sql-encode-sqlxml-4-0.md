@@ -1,5 +1,5 @@
 ---
-title: 'Anfordern von URL-Verweise auf BLOB-Daten mithilfe von Sql: codieren (SQLXML 4.0) | Microsoft Docs'
+title: "Anfordern von URL-verweisen auf BLOB-Daten mithilfe von Sql: encode ' (SQLXML 4.0) | Microsoft-Dokumentation"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,26 +21,26 @@ helpviewer_keywords:
 - Base 64-encoded format
 ms.assetid: 2f8cd93b-c636-462b-8291-167197233ee0
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5f18f3fb5676270bf01f0598aa29536259f7250f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d9bbcd45a0984a0c34a5759d5ec9774c211354b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048021"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258256"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>Anfordern von URL-Verweisen auf BLOB-Daten mit 'sql:encode' (SQLXML 4.0)
   Wenn in einem XSD-Schema mit Anmerkungen ein Attribut (oder Element) einer BLOB-Spalte in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugeordnet ist, werden die Daten im codierten Base-64-Format innerhalb von XML zurückgegeben.  
   
  Wenn ein Verweis auf die Daten (ein URI) zurückgegeben werden soll, der später zum Abrufen der BLOB-Daten in einem binären Format verwendet werden kann, geben Sie die `sql:encode`-Anmerkung an. Sie können `sql:encode` für ein Attribut oder Element des einfachen Typs angeben.  
   
- Geben Sie die `sql:encode`-Anmerkung an, um anzugeben, dass anstatt des Feldwerts eine URL zum Feld zurückgegeben werden soll. `sql:encode` verwendet den Primärschlüssel, um eine Singleton-Auswahl in der URL zu generieren. Der Primärschlüssel kann angegeben werden, mithilfe der `sql:key-fields` Anmerkung.  
+ Geben Sie die `sql:encode`-Anmerkung an, um anzugeben, dass anstatt des Feldwerts eine URL zum Feld zurückgegeben werden soll. `sql:encode` verwendet den Primärschlüssel, um eine Singleton-Auswahl in der URL zu generieren. Der primäre Schlüssel kann angegeben werden, mithilfe der `sql:key-fields` Anmerkung.  
   
  Der `sql:encode`-Anmerkung kann der Wert "url" oder "default" zugewiesen werden. Mit dem Wert "default" werden die Daten im codierten Base-64-Format zurückgegeben.  
   
- Die `sql:encode`Anmerkung kann nicht mit `sql:use-cdata` oder für die Attributtypen ID, IDREF, IDREFS, NMTOKEN und NMTOKENS verwendet werden. Es kann auch nicht verwendet werden mit XSD **fester** Attribut.  
+ Die `sql:encode`Anmerkung kann nicht mit `sql:use-cdata` oder für die Attributtypen ID, IDREF, IDREFS, NMTOKEN und NMTOKENS verwendet werden. Es kann auch nicht verwendet werden mit XSD **festen** Attribut.  
   
 > [!NOTE]  
 >  BLOB-Spalten können nicht als Teil eines Schlüssels oder Fremdschlüssels verwendet werden.  
@@ -87,7 +87,7 @@ ms.locfileid: "36048021"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Dies ist das Ergebnis:  
   

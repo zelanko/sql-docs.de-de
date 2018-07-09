@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f769ede65a47bbe3500b67ec02247ac5e3dc6f96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4f5821043d7ea8c482c1aff13c52d5e12e023da9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050486"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183837"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Exportieren als PDF-Datei (Berichts-Generator und SSRS)
   Die PDF-Renderingerweiterung rendert Berichte in einem Dateiformat, das in Adobe Acrobat und anderen PDF-Viewern von Drittanbietern geöffnet werden kann, die das Format PDF 1.3 unterstützen. Obwohl PDF 1.3 mit Adobe Acrobat 4.0 oder höheren Versionen kompatibel ist, wird Adobe Acrobat von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] erst ab Version 6 unterstützt. Die Renderingerweiterung erfordert keine Adobe-Software, um Berichte zu rendern. Zum Anzeigen oder Drucken von Berichten im PDF-Format sind allerdings PDF-Viewer wie Adobe Acrobat erforderlich.  

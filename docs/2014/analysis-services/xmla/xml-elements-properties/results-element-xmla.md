@@ -1,5 +1,5 @@
 ---
-title: Element (XMLA) führt | Microsoft Docs
+title: Element (XMLA) führt | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - results element
 ms.assetid: 3249a17a-7bfa-4753-b605-8f611ba7ae2b
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 203ad5a79938c80e2bfccc798ff5f9551ac66d8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 1e42f6aa620b57630df690ee92bdbbd849ab100b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058368"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165231"
 ---
 # <a name="results-element-xmla"></a>results-Element (XMLA)
   Enthält eine Auflistung von [root](root-element-xmla.md) -Elementen, die von der [Execute](../xml-elements-methods-execute.md) -Methode mit dem Befehl [Batch](../xml-elements-commands/batch-element-xmla.md) zurückgegeben werden.  
@@ -62,8 +62,8 @@ ms.locfileid: "36058368"
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|[Rückgabewert](return-element-xmla.md)|  
-|Untergeordnete Elemente|[Stamm](root-element-xmla.md)|  
+|Übergeordnete Elemente|[zurück](return-element-xmla.md)|  
+|Untergeordnete Elemente|[Stammverzeichnis](root-element-xmla.md)|  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn ein `Batch`-Befehl von der `Execute`-Methode ausgeführt wird, enthält das `return`-Element statt eines einzelnen `results`-Elements ein einzelnes `root`-Element. Der Inhalt des `results`-Elements hängt von den Einstellungen ab, die verwendet werden, um den Befehl `Batch` auszuführen.  

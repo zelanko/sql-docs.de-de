@@ -1,5 +1,5 @@
 ---
-title: Partitions-Element (ASSL) | Microsoft Docs
+title: Partitions-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Partition element
 ms.assetid: 40020840-1bb7-478f-9017-1a30342ac4c6
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 371c6fbb2d77993a0d6113101c0f074b88009ede
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c298ec80f1bb1f17d97e36f2ce93b6efbf924508
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058582"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209970"
 ---
 # <a name="partition-element-assl"></a>Partition-Element (ASSL)
-  Definiert eine Partition eine [MeasureGroup](group-element-assl.md) Element oder eine partitionsbindung in einem Out-of-Line [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md) Element.  
+  Definiert eine Partition einer [MeasureGroup](group-element-assl.md) Element oder eine partitionsbindung in einem Out-of-Line [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -93,7 +93,7 @@ ms.locfileid: "36058582"
   
 |Vorgänger oder übergeordnetes Element|Untergeordnete Elemente|  
 |------------------------|--------------------|  
-|[MeasureGroup](../properties/id-element-assl.md), [AggregationInstances](../collections/aggregationinstances-element-assl.md), [AggregationInstanceSource](../properties/aggregationinstancesource-element-assl.md), [AggregationPrefix](../properties/aggregationprefix-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [CurrentStorageMode](../properties/storagemode-element-assl.md), [Description](../properties/description-element-assl.md), [ErrorConfiguration](errorconfiguration-element-assl.md), [EstimatedRows](../properties/estimatedrows-element-assl.md), [EstimatedSize](../properties/estimatedsize-element-assl.md), [ID](../properties/id-element-assl.md), [LastProcessed](../properties/lastprocessed-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [Name](../properties/name-element-assl.md), [ProactiveCaching](proactivecaching-element-assl.md), [ProcessingMode](../properties/processingmode-element-assl.md), [ProcessingPriority](../properties/processingpriority-element-assl.md), [RemoteDatasourceID](../properties/datasourceid-element-assl.md), [Slice](../properties/slice-element-assl.md), [Source](../properties/source-element-binding-assl.md), [State](../properties/state-element-assl.md), [StorageLocation](../properties/storagelocation-element-assl.md), [StorageMode](../properties/storagemode-element-assl.md), [Type](../properties/type-element-partition-assl.md)|  
+|[MeasureGroup](../properties/id-element-assl.md), [AggregationInstances](../collections/aggregationinstances-element-assl.md), [AggregationInstanceSource](../properties/aggregationinstancesource-element-assl.md), [AggregationPrefix](../properties/aggregationprefix-element-assl.md), [Anmerkungen](../collections/annotations-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [CurrentStorageMode](../properties/storagemode-element-assl.md), [Beschreibung](../properties/description-element-assl.md), [ErrorConfiguration](errorconfiguration-element-assl.md), [EstimatedRows](../properties/estimatedrows-element-assl.md), [EstimatedSize](../properties/estimatedsize-element-assl.md), [ID](../properties/id-element-assl.md), [LastProcessed](../properties/lastprocessed-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [Namen](../properties/name-element-assl.md), [ProactiveCaching](proactivecaching-element-assl.md), [ProcessingMode](../properties/processingmode-element-assl.md), [ProcessingPriority](../properties/processingpriority-element-assl.md), [ RemoteDatasourceID](../properties/datasourceid-element-assl.md), [Slice](../properties/slice-element-assl.md), [Quelle](../properties/source-element-binding-assl.md), [Zustand](../properties/state-element-assl.md), [StorageLocation](../properties/storagelocation-element-assl.md), [ StorageMode](../properties/storagemode-element-assl.md), [Typ](../properties/type-element-partition-assl.md)|  
 |[MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md)|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -133,7 +133,7 @@ ms.locfileid: "36058582"
   
 -   Die [Quelle](../properties/source-element-binding-assl.md) -Element akzeptiert nur **Abfrage** Bindung.  
   
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.Partition>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.Partition>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Objekte &#40;ASSL&#41;](objects-assl.md)  

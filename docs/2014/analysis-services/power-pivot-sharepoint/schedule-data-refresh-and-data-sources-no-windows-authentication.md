@@ -1,5 +1,5 @@
 ---
-title: Planen der Datenaktualisierung mit Datenquellen, die keine Windowsauthentifizierung (PowerPivot für SharePoint) unterstützen | Microsoft Docs
+title: Planen der Datenaktualisierung mit Datenquellen, die keine Windows-Authentifizierung (PowerPivot für SharePoint) unterstützen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28ab8ddcc8ef6a866992cdf7a2fabe75a5a30878
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 474308339c112899787a4b6344bbe53622f4fff7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049995"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230099"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>Planen der Datenaktualisierung mit Datenquellen, die die Windows-Authentifizierung nicht unterstützen (PowerPivot für SharePoint)
   In diesem Thema wird ein Workflow für eine planmäßige Datenaktualisierung in PowerPivot für SharePoint beschrieben. Dabei können Datenquellen verwendet werden, die die Windows-Authentifizierung **NICHT** unterstützen, z. B. Oracle- oder IDM DB2-Datenquellen. Obwohl sich die Abbildungen und Schritte in diesem Thema auf Oracle-Datenquellen beziehen, gilt der gleiche Workflow auch für andere Datenquellen.  
@@ -78,7 +78,7 @@ ms.locfileid: "36049995"
   
 9. Klicken Sie auf **OK**.  
   
-10. Die neue Zielanwendungs-ID wird der Liste hinzugefügt. Wählen Sie die Zielanwendungs-ID, und klicken Sie auf **Anmeldeinformationen festlegen**![As_powerpivot_refresh_sss_set_key](../media/as-powerpivot-refresh-sss-set-key.gif "As_powerpivot_refresh_sss_set_key").  
+10. Die neue Zielanwendungs-ID wird der Liste hinzugefügt. Wählen Sie die Zielanwendungs-ID, und klicken Sie auf **Festlegen von Anmeldeinformationen**![As_powerpivot_refresh_sss_set_key](../media/as-powerpivot-refresh-sss-set-key.gif "As_powerpivot_refresh_sss_set_key").  
   
 11. Geben Sie den Windows-Benutzernamen und das Windows-Kennwort ein, und klicken Sie auf **OK**.  
   
@@ -104,9 +104,9 @@ ms.locfileid: "36049995"
   
 5.  Klicken Sie auf **Weiter**.  
   
-6.  Auf der **Anmeldeinformationen** Seite, ändern Sie den ersten Feldnamen in `Oracle User ID` , und ändern Sie die **Feldtyp** auf `User Name`.  
+6.  Auf der **Anmeldeinformationen** Seite, ändern Sie den ersten Feldnamen in `Oracle User ID` , und ändern Sie die **Feldtyp** zu `User Name`.  
   
-     Ändern Sie den zweiten Feldnamen in `Oracle Password` und **Feldtyp** auf `Password`.  
+     Ändern Sie den zweiten Feldnamen in `Oracle Password` und **Feldtyp** zu `Password`.  
   
 7.  Klicken Sie auf **Weiter**.  
   
@@ -114,11 +114,11 @@ ms.locfileid: "36049995"
   
 9. Klicken Sie auf **OK**.  
   
-10. Die neue Zielanwendungs-ID wird der Liste hinzugefügt. Wählen Sie die Zielanwendungs-ID, und klicken Sie auf **Anmeldeinformationen festlegen**![As_powerpivot_refresh_sss_set_key](../media/as-powerpivot-refresh-sss-set-key.gif "As_powerpivot_refresh_sss_set_key").  
+10. Die neue Zielanwendungs-ID wird der Liste hinzugefügt. Wählen Sie die Zielanwendungs-ID, und klicken Sie auf **Festlegen von Anmeldeinformationen**![As_powerpivot_refresh_sss_set_key](../media/as-powerpivot-refresh-sss-set-key.gif "As_powerpivot_refresh_sss_set_key").  
   
 11. Geben Sie die Oracle-Benutzer-ID und das Oracle-Kennwort ein, und klicken Sie auf **OK**.  
   
- Weitere Informationen finden Sie im Abschnitt "So erstellen eine Zielanwendung für die SQL Server-Authentifizierung" im [Verwenden von Secure Store mit SQL Server-Authentifizierung (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx).  
+ Weitere Informationen finden Sie im Abschnitt "So erstellen eine Zielanwendung für SQL Server-Authentifizierung" im [verwendet Secure Store mit SQL Server-Authentifizierung (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx).  
   
 ## <a name="to-configure-the-powerpivot-service-application"></a>So konfigurieren Sie die PowerPivot-Dienstanwendung  
   
@@ -128,7 +128,7 @@ ms.locfileid: "36049995"
   
 3.  Klicken Sie im Abschnitt „Aktionen“ auf **Einstellungen für Dienstanwendung konfigurieren** .  
   
-4.  In der **Datenaktualisierung** Abschnitt, legen Sie die **PowerPivot-datenaktualisierungskonto**auf`PowerPivotDataRefresh` , und klicken Sie dann auf **OK**.  
+4.  In der **Datenaktualisierung** legen die **unbeaufsichtigte Datenaktualisierungskonto PowerPivot**zu`PowerPivotDataRefresh` , und klicken Sie dann auf **OK**.  
   
      ![as_powerpivot_refresh_new_refresh_acount](../media/as-powerpivot-refresh-new-refresh-acount.gif "as_powerpivot_refresh_new_refresh_acount")  
   

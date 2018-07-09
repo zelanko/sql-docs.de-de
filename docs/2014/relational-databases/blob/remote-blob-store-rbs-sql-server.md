@@ -3,26 +3,24 @@ title: Remote Blob Store (RBS) (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
+ms.technology: filestream
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Remote Blob Store (RBS) [SQL Server]
 - RBS (Remote Blob Store) [SQL Server]
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
-caps.latest.revision: 9
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 46c2117c40ceed9cedb5cf99b22f675d230058a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: fd459f9c8e1fa2a36a6eb8f3fadb3581cee87325
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046233"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425239"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Remote Blob Store (RBS) (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Remote BLOB-Speicher (RBS) ist eine optionale Add-On-Komponente, mit der Datenbankadministratoren Binary Large Objects in Speicherlösungen statt direkt auf dem Hauptdatenbankserver speichern können.  
@@ -57,7 +55,7 @@ ms.locfileid: "36046233"
  RBS beinhaltet einen FILESTREAM-Anbieter, mit dem Sie BLOBs mithilfe von RBS auf einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]speichern können. Wenn Sie BLOBs mithilfe von RBS in einer anderen Speicherlösung speichern möchten, müssen Sie einen für diese Speicherlösung entwickelten RSB-Anbieter eines Drittanbieters verwenden oder einen benutzerdefinierten RBS-Anbieter mithilfe der RBS-API entwickeln. Ein Beispielanbieter, der BLOBs im NTFS-Dateisystem speichert, steht als Lernressource auf [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190)zur Verfügung.  
   
 ## <a name="rbs-security"></a>RSB-Sicherheit  
- Wenn Sie einen benutzerdefinierten Anbieter verwenden, zum Speichern von BLOBs außerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sie sind möglicherweise für andere Prozesse, die umgehen verfügbar, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sicherheitssystem. Stellen Sie sicher, dass die gespeicherten BLOBs anhand von Berechtigungen und Verschlüsselungsoptionen geschützt sind, die für das vom benutzerdefinierten Anbieter verwendete Speichermedium geeignet sind.  
+ Wenn Sie einen benutzerdefinierten Anbieter verwenden, zum Speichern von BLOBs außerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], befinden sich diese möglicherweise für andere Prozesse, die die umgehen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sicherheitssystem. Stellen Sie sicher, dass die gespeicherten BLOBs anhand von Berechtigungen und Verschlüsselungsoptionen geschützt sind, die für das vom benutzerdefinierten Anbieter verwendete Speichermedium geeignet sind.  
   
 ##  <a name="rbsresources"></a> RSB-Ressourcen  
  **RBS-Dokumentation**  

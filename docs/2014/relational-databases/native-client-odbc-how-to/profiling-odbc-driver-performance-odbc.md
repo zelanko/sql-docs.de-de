@@ -1,26 +1,24 @@
 ---
-title: Profilerstellung von ODBC-Treiber Leistung Gewusst-wie-Themen (ODBC) | Microsoft Docs
+title: Profilerstellung von ODBC-Treiber Leistung Gewusst-wie-Themen (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 0e6d7aed-28d2-419e-be6a-f60d3729bfd0
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4fcd58b3c21b113a41c1e869fb1d22ed6c456c57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 951ffdf09a7ba8c048aef40b07a27127f51dacb8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047583"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420959"
 ---
 # <a name="profiling-odbc-driver-performance-how-to-topics-odbc"></a>Themen zur Vorgehensweise zur Profilerstellung für die Treiberleistung (ODBC)
   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC-Treiber verfügt über zwei treiberspezifische Optionen für die profilerstellung für die Leistung des Treibers.  
@@ -31,7 +29,7 @@ ms.locfileid: "36047583"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Stufen Sie Treiberleistungsdaten &#40;ODBC&#41;](profiling-odbc-driver-performance-data.md)  
+-   [Profilerstellung für Treiberleistungsdaten &#40;ODBC&#41;](profiling-odbc-driver-performance-data.md)  
   
 -   [Protokollieren von Abfragen mit langer &#40;ODBC&#41;](profiling-odbc-driver-performance-data-log-long-running-queries.md)  
   

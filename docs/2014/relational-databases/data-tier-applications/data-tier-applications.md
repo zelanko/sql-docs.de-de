@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - designing DACs
 - How to [DAC]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - wizard [DAC]
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c3fb074e97422942dfe9cac25a84c47ff65bac9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 74e9a61fb053a1d861a6be732ae9a0ac0eb3060a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058935"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152501"
 ---
 # <a name="data-tier-applications"></a>Datenebenenanwendungen
   Eine Datenebenenanwendung (DAC) ist eine logische Datenbankverwaltungsentität, die alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekte definiert, beispielsweise Tabellen, Sichten und Instanzobjekte, einschließlich Anmeldenamen, die mit der Datenbank eines Benutzers verknüpft sind. Eine DAC ist eine in sich geschlossene Einheit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankbereitstellung, mit der Datenebenenentwickler und Datenbankadministratoren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekte in ein portables Artefakt, das sog. "DAC-Paket", packen können. Selbiges ist auch als DACPAC bekannt.  
@@ -115,7 +115,7 @@ ms.locfileid: "36058935"
  Beide Funktionen werden von den Datenbankverwaltungstools unterstützt: Server Management Studio, das Verwaltungsportal für SQL Azure und die DACFx-API.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Sie müssen Mitglied der `dbmanager` Rolle oder zugewiesene `CREATE DATABASE` Berechtigungen zum Erstellen einer Datenbank, einschließlich des Erstellens einer Datenbank durch Bereitstellen eines DAC-Pakets. Sie müssen Mitglied der `dbmanager` Rolle oder zugewiesen wurden `DROP DATABASE` Berechtigungen zum Löschen einer Datenbank.  
+ Sie müssen Mitglied der `dbmanager` Rolle oder zugewiesene `CREATE DATABASE` Berechtigungen zum Erstellen einer Datenbank, z. B. zum Erstellen einer Datenbank durch Bereitstellen eines DAC-Pakets. Sie müssen Mitglied der `dbmanager` -Rolle oder zugewiesen wurden `DROP DATABASE` Berechtigungen für eine Datenbank zu löschen.  
   
 ## <a name="data-tier-application-tasks"></a>Tasks der Datenebenenanwendung  
   

@@ -1,13 +1,11 @@
 ---
-title: Unterstützen von verteilten Transaktionen | Microsoft Docs
+title: Unterstützen von verteilten Transaktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,22 +18,22 @@ helpviewer_keywords:
 - MS DTC, about distributed transaction support
 ms.assetid: d250b43b-9260-4ea4-90cc-57d9a2f67ea7
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bae96ffb9b49aead4282193c510a50098d0e0d54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: be4fa798483927e89f7154d371caaa1f59d73ee7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049198"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409589"
 ---
 # <a name="supporting-distributed-transactions"></a>Unterstützen von verteilten Transaktionen
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieters können die **ITransactionJoin:: JoinTransaction** Methode in einer verteilten Transaktion teilnehmen, die von Microsoft Distributed Transaction Coordinator (MS DTC) koordiniert.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieters können die **ITransactionJoin:: JoinTransaction** Methode, um in einer verteilten Transaktion teilnehmen, die von Microsoft Distributed Transaction Coordinator (MS DTC) koordiniert.  
   
- MS DTC macht COM-Objekte verfügbar, mit denen Clients koordinierte Transaktionen initiieren und an koordinierten Transaktionen teilnehmen können, die sich über mehrere Verbindungen zu verschiedenen Datenspeichern erstrecken. Zum Initiieren einer Transaktion die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Consumer der Native Client OLE DB-Anbieter verwendet die MS DTC **ITransactionDispenser** Schnittstelle. Die **BeginTransaction** Mitglied **ITransactionDispenser** gibt einen Verweis auf einem verteilten Transaktionsobjekt zurück. Dieser Verweis übergeben wird, um die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter mithilfe **JoinTransaction**.  
+ MS DTC macht COM-Objekte verfügbar, mit denen Clients koordinierte Transaktionen initiieren und an koordinierten Transaktionen teilnehmen können, die sich über mehrere Verbindungen zu verschiedenen Datenspeichern erstrecken. Zum Initiieren einer Transaktion, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter-Consumer verwendet, die MS DTC **ITransactionDispenser** Schnittstelle. Die **BeginTransaction** Mitglied **ITransactionDispenser** gibt einen Verweis auf einem verteilten Transaktionsobjekt zurück. Dieser Verweis übergeben wird, um die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter mithilfe **JoinTransaction**.  
   
- MS DTC unterstützt asynchrone „Commit“- und „Abort“-Funktionen bei verteilten Transaktionen. Für die Benachrichtigung für den asynchronen Transaktionsstatus implementiert der Consumer die **ITransactionOutcomeEvents** -Schnittstelle und verbindet die Schnittstelle mit einer MS DTC-Transaktionsobjekt.  
+ MS DTC unterstützt asynchrone „Commit“- und „Abort“-Funktionen bei verteilten Transaktionen. Für Benachrichtigungen über den asynchronen Transaktionsstatus, implementiert der Consumer die **ITransactionOutcomeEvents** -Schnittstelle und verbindet die Schnittstelle mit einer MS DTC-Transaktionsobjekt.  
   
  Für verteilte Transaktionen die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter implementiert **ITransactionJoin:: JoinTransaction** Parameter wie folgt.  
   
@@ -44,7 +42,7 @@ ms.locfileid: "36049198"
 |*punkTransactionCoord*|Ein Zeiger auf ein MS DTC-Transaktionsobjekt|  
 |*IsoLevel*|Ignoriert die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter. Die Isolationsstufe für MS DTC-koordinierte Transaktionen wird festgelegt, wenn der Consumer vom MS DTC ein Transaktionsobjekt abruft.|  
 |*IsoFlags*|Muss den Wert 0 (null) haben. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter gibt xact_e_noisoretain zurück, wenn vom Consumer ein anderer Wert angegeben ist.|  
-|*POtherOptions*|Falls ungleich NULL, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter das Optionsobjekt von der Schnittstelle. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter gibt xact_e_notimeout zurück, wenn die Options-Objekt *UlTimeout* Element ist nicht 0 (null). Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter ignoriert den Wert, der die *SzDescription* Member.|  
+|*POtherOptions*|Wenn nicht NULL ist, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter das Optionsobjekt anfordert, von der Schnittstelle. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter gibt xact_e_notimeout zurück, wenn des optionsobjekts *UlTimeout* Member ist nicht 0 (null). Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter ignoriert den Wert von der *SzDescription* Member.|  
   
  In diesem Beispiel wird eine Transaktion mit MS DTC koordiniert.  
   

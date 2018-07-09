@@ -1,5 +1,5 @@
 ---
-title: Verbinden Sie Tasks und Containern mithilfe einer Standardrangfolgeneinschränkung | Microsoft Docs
+title: Verbinden von Tasks und Containern mithilfe einer Standardrangfolgen-Einschränkung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
 - precedence constraints [Integration Services], connecting tasks
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - containers [Integration Services], precedence constraints
 ms.assetid: 8f31f15f-98ff-4c35-b41f-8b8cfd148d75
 caps.latest.revision: 32
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cf278d02e1c2eb523964ee07b039b46942c7e9de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: be0139638720b80428b820e5cb2083c5fbb1a450
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048094"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277116"
 ---
 # <a name="connect-tasks-and-containers-by-using-a-default-precedence-constraint"></a>Verbinden von Tasks und Containern mithilfe einer Standardrangfolgeneinschränkung
   Mit Rangfolgeneinschränkungen werden zwei ausführbare Dateien miteinander verbunden. Bei einer ausführbaren Datei kann es sich um einen Task oder einen For-Schleifencontainer, einen Foreach-Schleifencontainer oder einen Sequenzcontainer handeln. In diesem Verfahren wird beschrieben, wie Sie das Standardverhalten für Rangfolgeneinschränkungen festlegen, und wie Sie ausführbare Dateien mithilfe der Standardrangfolgeneinschränkungen verbinden.  

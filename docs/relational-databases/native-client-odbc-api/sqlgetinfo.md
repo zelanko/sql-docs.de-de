@@ -1,12 +1,12 @@
 ---
-title: SQLGetInfo | Microsoft Docs
+title: SQLGetInfo | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 09a31616669daab1ee54012164bf59d06e563692
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 10f47bc9d185835931afa8a80a7759f33cd79b55
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696471"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432769"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,15 +31,15 @@ ms.locfileid: "35696471"
 
   Die Tabelle zeigt die Rückgabewerte **SQLGetInfo**. Diese Werte können je nach Versionsnummer des verbundenen Servers unterschiedlich sein.  
   
- **SQLGetInfo** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client unterscheidet sich von **SQLGetInfo** in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC-Treiber (SQLSRV32. (DLL) beim **SQLGetInfo** mit SQL_KEYWORDS und einer Pufferlänge von 0 aufgerufen wird.  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Native Client-Treiber gibt SQL_SUCCESS zurück, aber der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-ODBC-Treiber gibt SQL_SUCCESS_WITH_INFO zurück.  Jedoch, wenn mit einer Pufferlänge ungleich NULL aufgerufen, der kleiner als die Ausgabezeichenfolge Schlüsselwort **SQLGetInfo** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client gibt SQL_SUCCESS_WITH_INFO und ein SQLState von 01004 zurückgegeben.  
+ **SQLGetInfo** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Native Client unterscheidet sich von **SQLGetInfo** in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC-Treiber (SQLSRV32. DLL) beim **SQLGetInfo** mit SQL_KEYWORDS und einer Pufferlänge von 0 aufgerufen wird.  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Native Client-Treiber gibt SQL_SUCCESS zurück, aber der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-ODBC-Treiber gibt SQL_SUCCESS_WITH_INFO zurück.  Jedoch, wenn mit einer Pufferlänge ungleich NULL-aufgerufen, die kleiner ist als die Schlüsselwort-Ausgabezeichenfolge **SQLGetInfo** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client gibt SQL_SUCCESS_WITH_INFO und ein SQLState von 01004 zurückgegeben.  
   
 |fInfoType|rgbInfoValue|  
 |---------------|------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"Y"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
-|SQL_ACTIVE_CONNECTIONS|Die Anzahl von Verbindungen wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beschränkt. Der Treiber gibt 0 zurück, für diesen **SQLGetInfo** Anforderung.|  
-|SQL_ACTIVE_ENVIRONMENTS|Die Anzahl an Umgebungen wird vom Treiber nicht beschränkt. Der Treiber gibt 0 zurück, für diesen **SQLGetInfo** Anforderung.|  
-|SQL_ACTIVE_STATEMENTS|Der Treiber gibt 1 zurück, für diesen **SQLGetInfo** Anforderung. Die Anzahl von verfügbaren Anweisungshandles für eine Anwendung wird nicht vom Treiber beschränkt, die Standardausführung auf einem Anweisungshandle blockiert jedoch die Ausführung auf einem anderen Handle.|  
+|SQL_ACTIVE_CONNECTIONS|Die Anzahl von Verbindungen wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beschränkt. Der Treiber gibt 0 zurück, für diese **SQLGetInfo** Anforderung.|  
+|SQL_ACTIVE_ENVIRONMENTS|Die Anzahl an Umgebungen wird vom Treiber nicht beschränkt. Der Treiber gibt 0 zurück, für diese **SQLGetInfo** Anforderung.|  
+|SQL_ACTIVE_STATEMENTS|Der Treiber gibt 1 zurück, für diese **SQLGetInfo** Anforderung. Die Anzahl von verfügbaren Anweisungshandles für eine Anwendung wird nicht vom Treiber beschränkt, die Standardausführung auf einem Anweisungshandle blockiert jedoch die Ausführung auf einem anderen Handle.|  
 |SQL_ALTER_DOMAIN|FALSE|  
 |SQL_ALTER_TABLE|SQL_AT_ADD_COLUMN SQL_AT_ADD_COLUMN_DEFAULT SQL_AT_ADD_COLUMN_SINGLE SQL_AT_ADD_CONSTRAINT SQL_AT_ADD_TABLE_CONSTRAINTSQL_AT_CONSTRAINT_NAME_DEFINITION SQL_AT_DROP_COLUMN_RESTRICT|  
 |SQL_SQL_CONFORMANCE|SQL_SC_SQL92_ENTRY|  
@@ -93,7 +93,7 @@ ms.locfileid: "35696471"
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_SENSITIVE|  
-|SQL_DATA_SOURCE_NAME|Name der aktuellen Datenquelle. Legt Wert verweist *StringLengthPtr* auf 0, wenn die Verbindung einen Datenquellennamen nicht angegeben.|  
+|SQL_DATA_SOURCE_NAME|Name der aktuellen Datenquelle. Wert verweist *StringLengthPtr* auf 0, wenn der Name der Datenquelle nicht in Verbindung angegeben haben.|  
 |SQL_DATA_SOURCE_READ_ONLY|Abhängig von der Einrichtung des Verbindungsattributs SQL_ATTR_ACCESS_MODE.|  
 |SQL_DATABASE_NAME|Die aktuelle Datenbank der Verbindung.|  
 |SQL_DBMS_NAME|"Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]"|  
@@ -120,11 +120,11 @@ ms.locfileid: "35696471"
 |SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2|SQL_CA2_LOCK_CONCURRENCY SQL_CA2_MAX_ROWS_CATALOG SQL_CA2_MAX_ROWS_DELETE SQL_CA2_MAX_ROWS_INSERT SQL_CA2_MAX_ROWS_SELECT SQL_CA2_MAX_ROWS_UPDATE SQL_CA2_OPT_ROWVER_CONCURRENCY SQL_CA2_OPT_VALUES_CONCURRENCY SQL_CA2_READ_ONLY_CONCURRENCY|  
 |SQL_GETDATA_EXTENSIONS|SQL_GD_BLOCK|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
-|SQL_IDENTIFIER_CASE|SQL_IC_MIXED, wenn eine Verbindung mit einem Server besteht, auf dem bei der Sortierreihenfolge zwischen Groß- und Kleinschreibung nicht unterschieden wird.<br /><br /> SQL_IC_SENSITIVE, wenn es sich bei einer Verbindung mit einem Server mit der Groß-/Kleinschreibung Sortierreihenfolge.|  
+|SQL_IDENTIFIER_CASE|SQL_IC_MIXED, wenn eine Verbindung mit einem Server besteht, auf dem bei der Sortierreihenfolge zwischen Groß- und Kleinschreibung nicht unterschieden wird.<br /><br /> SQL_IC_SENSITIVE, wenn auf einem Server mit der Groß-/Kleinschreibung Sortierreihenfolge verbunden.|  
 |SQL_IDENTIFIER_QUOTE_CHAR|" (doppeltes Anführungszeichen)|  
 |SQL_INDEX_KEYWORDS|SQL_IK_ASC SQL_IK_DESC|  
 |SQL_INFO_SCHEMA_VIEWS|Anforderung wird nicht vom Treiber unterstützt.|  
-|SQL_INFO_SS_NETLIB_NAME|Für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber spezifisches Attribut. Der Name der von der Verbindung verwendeten Netzwerkbibliothek.<br /><br /> Standardmäßig wird DBNETLIB zurückgegeben.  In diesem Fall DBNETLIB bezieht sich auf die Netzwerkbibliothek und ist nicht mit dbnetlib.dll verknüpft.|  
+|SQL_INFO_SS_NETLIB_NAME|Für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber spezifisches Attribut. Der Name der von der Verbindung verwendeten Netzwerkbibliothek.<br /><br /> Standardmäßig wird DBNETLIB zurückgegeben.  In diesem Fall wird DBNETLIB bezieht sich auf die Netzwerkbibliothek und nicht mit Dbnetlib.DLL verknüpft.|  
 |SQL_INTEGRITY|"Y"|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES1|SQL_CA1_ABSOLUTE SQL_CA1_BOOKMARK SQL_CA1_BULK_ADD SQL_CA1_BULK_DELETE_BY_BOOKMARK SQL_CA1_BULK_FETCH_BY_BOOKMARK SQL_CA1_BULK_UPDATE_BY_BOOKMARK SQL_CA1_LOCK_NO_CHANGE SQL_CA1_NEXT SQL_CA1_POS_DELETE SQL_CA1_POS_POSITION SQL_CA1_POS_REFRESH SQL_CA1_POS_UPDATE SQL_CA1_POSITIONED_DELETE SQL_CA1_POSITIONED_UPDATE SQL_CA1_RELATIVE SQL_CA1_SELECT_FOR_UPDATE|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES2|SQL_CA2_CRC_EXACT SQL_CA2_LOCK_CONCURRENCY SQL_CA2_MAX_ROWS_CATALOG SQL_CA2_MAX_ROWS_DELETE SQL_CA2_MAX_ROWS_INSERT SQL_CA2_MAX_ROWS_SELECT SQL_CA2_MAX_ROWS_UPDATE SQL_CA2_OPT_ROWVER_CONCURRENCY SQL_CA2_OPT_VALUES_CONCURRENCY SQL_CA2_READ_ONLY_CONCURRENCY SQL_CA2_SENSITIVITY_ADDITIONS SQL_CA2_SENSITIVITY_UPDATES SQL_CA2_SIMULATE_UNIQUE|  

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.removeprimarydb.f1
 helpviewer_keywords:
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
 caps.latest.revision: 26
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: fa4dd4773387b9d6890fe7a1c7ed78357e54e64a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 38f4e92c9fd8d7dd3c5c48437d3c1f95ef781316
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050650"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155221"
 ---
 # <a name="remove-a-primary-database-from-an-availability-group-sql-server"></a>Entfernen einer primären Datenbank aus einer Verfügbarkeitsgruppe (SQL Server)
   In diesem Thema wird erläutert, wie sowohl die primäre Datenbank als auch die entsprechenden sekundären Datenbanken aus einer AlwaysOn-Verfügbarkeitsgruppe mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]entfernt werden.  
@@ -109,7 +108,7 @@ ms.locfileid: "36050650"
     ```  
   
     > [!NOTE]  
-    >  Um die Syntax eines Cmdlets anzuzeigen, verwenden die `Get-Help` Cmdlet in der [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Um die Syntax eines Cmdlets anzuzeigen, verwenden die `Get-Help` -Cmdlet in der [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Einrichten und Verwenden des SQL Server PowerShell-Anbieters**  
   

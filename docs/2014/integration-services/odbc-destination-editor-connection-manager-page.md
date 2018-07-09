@@ -1,5 +1,5 @@
 ---
-title: ODBC-Ziel-Editor (Seite Verbindungs-Manager) | Microsoft Docs
+title: Ziel-Editor für ODBC (Seite Verbindungs-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.connection.f1
 ms.assetid: f6d9c6c2-e4c4-468b-9e0d-af7b9609614d
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ce1766615afb37976cc92c66c99de173ed3e9364
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5994e35479f73fb4bee3c062eb76858778a72d6d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058323"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158981"
 ---
 # <a name="odbc-destination-editor-connection-manager-page"></a>Ziel-Editor für ODBC (Verbindungs-Manager-Seite)
   Auf der Seite **Verbindungs-Manager** des Dialogfelds **Ziel-Editor für ODBC** können Sie den ODBC-Verbindungs-Manager für das Ziel auswählen. Außerdem können Sie auf dieser Seite eine Tabelle oder Sicht aus der Datenbank auswählen.  
@@ -60,7 +60,7 @@ ms.locfileid: "36058323"
  Klicken Sie auf **Vorschau** , um die ersten 200 Zeilen (max.) für die ausgewählte Tabelle anzuzeigen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Benutzerdefinierte Eigenschaften des ODBC-Ziels](data-flow/odbc-destination-custom-properties.md)   
+ [Benutzerdefinierte Eigenschaften der ODBC-Ziel](data-flow/odbc-destination-custom-properties.md)   
  [Ziel-Editor für ODBC &#40;Seite „Zuordnungen“&#41;](../../2014/integration-services/odbc-destination-editor-mappings-page.md)   
  [Ziel-Editor für ODBC &#40;Seite "Fehlerausgabe"&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
   

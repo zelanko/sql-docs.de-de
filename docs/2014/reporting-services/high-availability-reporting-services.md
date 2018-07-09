@@ -1,5 +1,5 @@
 ---
-title: Hohe Verfügbarkeit (Reporting Services) | Microsoft Docs
+title: Hohe Verfügbarkeit (Reporting Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - high availability [SQL Server], Reporting Services
 - high availability [Reporting Services]
@@ -17,16 +17,16 @@ ms.assetid: 50e0813f-f591-4688-9cd1-e6389a3808e5
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: e1d11b2b53499b12a6a8a7dca262bc26ae777825
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0884a284e6d9169ce978d3c47330a683e2bb6b52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056164"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150221"
 ---
 # <a name="high-availability-reporting-services"></a>Hohe Verfügbarkeit (Reporting Services)
-  Ein [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichtsserver ist ein statusloser Server, auf dem Anwendungsdaten, Inhalt, Eigenschaften und Sitzungsinformationen in zwei relationalen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbanken gespeichert werden. Daher die beste Möglichkeit, um sicherzustellen, dass die Verfügbarkeit von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Funktionalität ist für folgende Aufgaben:  
+  Ein [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichtsserver ist ein statusloser Server, auf dem Anwendungsdaten, Inhalt, Eigenschaften und Sitzungsinformationen in zwei relationalen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbanken gespeichert werden. Als solche, die beste Möglichkeit, um sicherzustellen, dass die Verfügbarkeit von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Funktionalität ist für folgende Aufgaben:  
   
 -   Verwenden Sie die Funktionen für hohe Verfügbarkeit von der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] zur Maximierung der Betriebszeit der Berichtsserver-Datenbanken. Wenn Sie konfigurieren eine [!INCLUDE[ssDE](../includes/ssde-md.md)] -Instanz für die Ausführung in einem Failovercluster, können Sie diese Instanz auswählen, wenn Sie eine Berichtsserver-Datenbank erstellen.  
   
@@ -42,6 +42,6 @@ ms.locfileid: "36056164"
   
 ## <a name="see-also"></a>Siehe auch  
  [Lösungen mit hoher Verfügbarkeit &#40;SQL Server&#41;](../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
- [Konfigurieren für eine Bereitstellung im einheitlichen Modus Bericht Server mit horizontaler Skalierung &#40;SSRS-Konfigurations-Manager&#41;](install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
+ [Konfigurieren der Bereitstellung im einheitlichen Modus Bericht Berichtsserver horizontaler &#40;SSRS-Konfigurations-Manager&#41;](install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
   
   

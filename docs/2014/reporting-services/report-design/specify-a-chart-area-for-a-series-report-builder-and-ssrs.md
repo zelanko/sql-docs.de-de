@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10157"
 - sql12.rtp.rptdesigner.chartareaproperties.alignment.f1
 ms.assetid: dc3c365b-c263-402a-bf6f-c2a7081db073
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b604e8a3378285553542e4b03f6ba7c419315941
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 53bf187b7a41ffdcb3dfc474daa4ce8dcf2bd4aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050324"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153711"
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>Angeben einer Diagrammfläche für eine Reihe (Berichts-Generator und SSRS)
   Das Diagramm stellt den Container der obersten Ebene dar, der den äußeren Rahmen, den Diagrammtitel und die Legende enthält. Standardmäßig wird im Diagramm eine Diagrammfläche angezeigt. Die Diagrammfläche ist auf der Diagrammoberfläche nicht sichtbar. Sie können sich diese jedoch als Container vorstellen, der lediglich die Achsenbezeichnungen, den Achsentitel und den Zeichnungsbereich einer oder mehrerer Reihen umfasst. In der folgenden Abbildung wird das Konzept der Diagrammflächen in einem einzelnen Diagramm veranschaulicht.  
