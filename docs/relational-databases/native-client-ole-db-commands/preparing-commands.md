@@ -1,12 +1,12 @@
 ---
-title: Vorbereiten von Befehlen | Microsoft Docs
+title: Vorbereiten von Befehlen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ca4dcd60cb419baafddbdb1b6f8ae211c01a7061
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 0bb783907259eeb5ba40ed90a71671887cab3a74
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703441"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37418319"
 ---
 # <a name="preparing-commands"></a>Vorbereiten von Befehlen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,13 +46,13 @@ ms.locfileid: "35703441"
   
  Die Erstellung temporär gespeicherter Prozeduren wird durch die Initialisierungseigenschaft SSPROP_INIT_USEPROCFORPREP gesteuert, die dem OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client eigen ist. Wenn der Eigenschaftswert SSPROPVAL_USEPROCFORPREP_ON oder SSPROPVAL_USEPROCFORPREP_ON_DROP lautet, versucht der OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client eine gespeicherte Prozedur zu erstellen, wenn ein Befehl vorbereitet wird. Die Erstellung der gespeicherten Prozedur ist erfolgreich, wenn der Anwendungsbenutzer über ausreichende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Berechtigungen verfügt.  
   
- Für Consumer, die selten die Verbindung trennen, kann die Erstellung temporär gespeicherter Prozeduren bedeutende Menge von Ressourcen erfordern **Tempdb**die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Systemdatenbank, in denen temporäre Objekte erstellt werden. Wenn SSPROP_INIT_USEPROCFORPREP den Wert SSPROPVAL_USEPROCFORPREP_ON hat, werden die vom OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client erstellten temporären gespeicherten Prozeduren nur dann gelöscht, wenn die Verbindung zwischen der Sitzung, in der der Befehl erstellt wurde, und der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] getrennt wird. Falls es sich bei dieser Verbindung um die Standardverbindung handelt, die bei der Initialisierung der Datenquelle erstellt wurde, dann wird die temporär gespeicherte Prozedur nur dann gelöscht, wenn die Initialisierung der Datenquelle aufgehoben wird.  
+ Für Kunden, die selten die Verbindung trennen, kann die Erstellung temporär gespeicherter Prozeduren bedeutende Menge von Ressourcen erfordern **Tempdb**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Systemdatenbank, in dem temporäre Objekte erstellt werden. Wenn SSPROP_INIT_USEPROCFORPREP den Wert SSPROPVAL_USEPROCFORPREP_ON hat, werden die vom OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client erstellten temporären gespeicherten Prozeduren nur dann gelöscht, wenn die Verbindung zwischen der Sitzung, in der der Befehl erstellt wurde, und der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] getrennt wird. Falls es sich bei dieser Verbindung um die Standardverbindung handelt, die bei der Initialisierung der Datenquelle erstellt wurde, dann wird die temporär gespeicherte Prozedur nur dann gelöscht, wenn die Initialisierung der Datenquelle aufgehoben wird.  
   
  Wenn SSPROP_INIT_USEPROCFORPREP den Wert SSPROPVAL_USEPROCFORPREP_ON_DROP hat, werden die vom OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client erstellten temporär gespeicherten Prozeduren gelöscht, wenn eine der folgenden Bedingungen zutrifft:  
   
 -   Der Consumer verwendet **ICommandText:: SetCommandText** um einen neuen Befehl anzugeben.  
   
--   Der Consumer verwendet **ICommandPrepare:: Unprepare** , um anzugeben, dass sie den Befehlstext nicht mehr erforderlich ist.  
+-   Der Consumer verwendet **ICommandPrepare:: Unprepare** , um anzugeben, dass sie nicht länger Befehlstext erfordert.  
   
 -   Der Consumer gibt alle Verweise auf das Befehlsobjekt, das die temporäre gespeicherte Prozedur verwendet, frei.  
   

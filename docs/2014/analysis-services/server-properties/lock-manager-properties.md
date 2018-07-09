@@ -1,5 +1,5 @@
 ---
-title: Eigenschaften des Sperren-Manager | Microsoft Docs
+title: Sperren-Manager-Eigenschaften | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - lock manager properties [Analysis Services]
 - LockWaitGranularityMS property
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - DeadlockDetectionGranularityMS property
 ms.assetid: 15fe9ead-825b-4ac3-9191-7a07caa2861b
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 39b1c209bb8993483628af89ac7e80b558862436
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd6e8627f6c7b7a5f9eed01fc9b8d0a6f4e9cad5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058151"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209930"
 ---
 # <a name="lock-manager-properties"></a>Eigenschaften des Sperren-Managers
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] werden die in der folgenden Tabelle aufgeführten Sperren-Manager-Servereigenschaften unterstützt. Weitere Informationen zu zusätzlichen Servereigenschaften und zum Festlegen dieser Eigenschaften finden Sie unter [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  

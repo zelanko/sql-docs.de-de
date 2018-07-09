@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - administering Reporting Services
 - administering [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9673fbd613b927a16b4d5a66ee49ac74c158ca87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3e2710dae03006cf5f2b762c09aab55bf6663261
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058444"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157781"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services-Berichtsserver (einheitlicher Modus)
   Ein für den einheitlichen Modus konfigurierter Berichtsserver läuft als Anwendungsserver, der alle Verarbeitungs- und Verwaltungsfunktionen ausschließlich über [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Komponenten bereitstellt.  

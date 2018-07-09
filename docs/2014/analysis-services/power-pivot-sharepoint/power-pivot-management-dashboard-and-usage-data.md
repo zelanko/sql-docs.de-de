@@ -1,5 +1,5 @@
 ---
-title: PowerPivot Managementdashboard and Usage Data | Microsoft Docs
+title: PowerPivot-Management-Dashboard und Verwendungsdaten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28d410f99884aa1d01a2a97201bd4da9fc2cd6c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 97bb7addcbbdf9a4e5a2b8b1151e081f48d0fea3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050674"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278346"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>PowerPivot-Management-Dashboard und Verwendungsdaten
   Das PowerPivot-Management-Dashboard ist eine Sammlung vordefinierter Berichte und Webparts in der SharePoint-Zentraladministration, die Sie bei der Verwaltung einer SQL Server PowerPivot für SharePoint-Bereitstellung unterstützen. Das Management-Dashboard bietet Informationen zum Serverstatus, zur Arbeitsmappenaktivität sowie zur Datenaktualisierung. Das Dashboard nutzt Daten aus der Sammlung von Verwendungsdaten in SharePoint.  
