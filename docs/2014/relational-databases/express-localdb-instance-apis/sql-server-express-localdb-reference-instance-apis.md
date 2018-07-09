@@ -1,5 +1,5 @@
 ---
-title: SQL Server Express LocalDB Instanz-API-Referenz | Microsoft Docs
+title: SQL Server Express LocalDB Instanz-API-Referenz | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ebafb4bf20d84d2a570af7225e26c09e9089825e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 211e7a076cae09b3fef7ef40a23cca9c60910e47
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049022"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154305"
 ---
 # <a name="sql-server-express-localdb-instance-api-reference"></a>SQL Server Express LocalDB-Instanz-API-Verweis
   In der herkömmlichen, dienstbasierten SQL Server-Welt sind einzelne auf einem einzelnen Computer installierte SQL Server-Instanzen physisch getrennt. Das heißt, jede Instanz muss separat installiert und entfernt werden, verfügt über einen separaten Satz Binärdateien und wird unter einem separaten Dienstprozess ausgeführt. Der SQL Server-Instanzname wird verwendet, um anzugeben, mit welcher SQL Server-Instanz der Benutzer eine Verbinden herstellen möchte.  
@@ -29,7 +29,7 @@ ms.locfileid: "36049022"
   
  Eine LocalDB-Instanz gehört immer einem einzelnen Benutzer und ist nur im Kontext dieses Benutzers sichtbar und aufrufbar, es sei denn, die Instanzfreigabe wird aktiviert.  
   
- Obwohl LocalDB-Instanzen den herkömmlichen SQL Server-Instanzen technisch nicht entsprechen, ist ihre vorgesehene Verwendung ähnlich. Sie werden aufgerufen, *Instanzen* um diese Ähnlichkeit hervorzuheben und zu SQL Server-Benutzern eine intuitivere werden machen.  
+ Obwohl LocalDB-Instanzen den herkömmlichen SQL Server-Instanzen technisch nicht entsprechen, ist ihre vorgesehene Verwendung ähnlich. Heißen sie *Instanzen* um diese Ähnlichkeit hervorzuheben und um sie zu SQL Server-Benutzer intuitiver zu machen.  
   
  LocalDB unterstützt zwei Arten von Instanzen: automatische Instanzen (AI) und benannte Instanzen (BI). Der Bezeichner für eine LocalDB-Instanz ist der Instanzname.  
   
@@ -69,14 +69,14 @@ ms.locfileid: "36049022"
 ### <a name="named-instance-naming-rules"></a>Benennungsregeln für benannte Instanzen  
  Ein LocalDB-Instanzname kann bis zu 128 Zeichen aufweisen (die Grenze wird vom `sysname`-Datentyp festgelegt). Dies ist ein bedeutender Unterschied im Vergleich zu herkömmlichen SQL Server-Instanznamen, die auf NetBIOS-Namen mit 16 ASCII-Zeichen beschränkt sind. Die Ursache für diesen Unterschied ist, dass LocalDB Datenbanken als Dateien behandelt und daher dateibasierte Semantik impliziert. Daher ist es für Benutzer intuitiv, mehr Freiheit beim Auswählen der Instanznamen zu besitzen.  
   
- Ein LocalDB-Instanzname kann alle Unicode-Zeichen enthalten, die innerhalb der Dateinamenkomponente gültig sind. Ungültige Zeichen in einer Dateinamenkomponente gehören in der Regel die folgenden Zeichen: ASCII/Unicode-Zeichen 1 bis 31 sowie Anführungszeichen ("), kleiner als (\<), größer als (>), senkrechten Strich (|), Rücktaste (\b), Tabstopp (\t), Doppelpunkt (:), Sternchen (*) Fragezeichen (?), umgekehrter Schrägstrich (\\), und Schrägstrich (/). Beachten Sie, dass das NULL-Zeichen (\0) zugelassen wird, da es zur Zeichenfolgenbeendigung verwendet wird. Alles nach dem ersten NULL-Zeichen wird ignoriert.  
+ Ein LocalDB-Instanzname kann alle Unicode-Zeichen enthalten, die innerhalb der Dateinamenkomponente gültig sind. Unzulässige Zeichen in einer Dateinamenkomponente gehören in der Regel die folgenden Zeichen: ASCII-/Unicode-Zeichen 1 bis 31 sowie Anführungszeichen ("), kleiner als (\<), größer als (>), senkrechter Strich (|), Rücktaste (\b), Tabstopp (\t), Doppelpunkt (:), Sternchen (*) Fragezeichen (?), umgekehrter Schrägstrich (\\), und Schrägstrich (/). Beachten Sie, dass das NULL-Zeichen (\0) zugelassen wird, da es zur Zeichenfolgenbeendigung verwendet wird. Alles nach dem ersten NULL-Zeichen wird ignoriert.  
   
 > [!NOTE]  
 >  Die Liste der ungültigen Zeichen hängt möglicherweise vom Betriebssystem ab und kann sich in zukünftigen Versionen ändern.  
   
  Voranstehende und nachfolgende Leerstellen in Instanznamen werden ignoriert und abgeschnitten.  
   
- Um Namenskonflikte mit dem Namen LocalDB zu vermeiden können nicht Instanzen verfügen über einen Namen, der das Benennungsmuster für automatische Instanzen folgt beschriebenen weiter oben in "Automatische Instanz Naming Regeln." Versuch, eine benannte Instanz mit einem Namen erstellen, die effektiv das Benennungsmuster für automatische Instanzen folgt wird eine Standardinstanz erstellt.  
+ Um zu vermeiden Namenskonflikte, mit dem Namen LocalDB Instanzen sind kein Name, der das Benennungsmuster für automatische Instanzen folgt siehe weiter oben in "Automatische Instanz-Naming Rules". Der Versuch, eine benannte Instanz mit einem Namen zu erstellen, der das Benennungsmuster für automatische Instanzen, effektiv folgt erstellt eine Standardinstanz.  
   
 ## <a name="sql-server-express-localdb-reference-topics"></a>SQL Server Express LocalDB-Referenzthemen  
  [SQL Server Express LocalDB-Header und -Versionsinformationen](sql-server-express-localdb-header-and-version-information.md)  

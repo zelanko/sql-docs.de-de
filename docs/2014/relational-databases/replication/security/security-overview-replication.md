@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - authorization [SQL Server replication]
 - cryptography [SQL Server replication]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - authentication [SQL Server replication]
 ms.assetid: 27828fe4-3b54-4c33-886e-08e8279e34b5
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a3ca129d5dd03d788f639a51322ceb999a25e76a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 62567dbbb53db61780f002779abb825e19287578
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049174"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148261"
 ---
 # <a name="security-overview-replication"></a>Sicherheitsübersicht (Replikation)
   Grundsätzlich basiert das Sichern der Replikationsumgebung auf den folgenden Faktoren: dem Verständnis der Authentifizierungs- und Autorisierungsoptionen, dem Verständnis der entsprechenden Verwendungsmöglichkeiten der Replikationsfilterfunktionen und dem Erlernen spezieller Maßnahmen zum Sichern der einzelnen Bestandteile einer Replikationsumgebung. Die Replikationsumgebung umfasst den Verteiler, den Verleger, Abonnenten und den Momentaufnahmeordner. Thema dieses Kapitels ist die Replikationssicherheit, die auf der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Sicherheit und Windows-Sicherheit aufbaut. Daher sind Kenntnisse dieser Grundlage und der Bedeutung der Replikationssicherheit unentbehrlich. Weitere Informationen zum Thema Sicherheit finden Sie unter [Überlegungen zur Sicherheit bei SQL Server-Installationen](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md). Weitere Informationen zu den Überlegungen zur Sicherheit bei der Veröffentlichung von Oracle-Daten finden Sie im Abschnitt zum Replikations-Sicherheitsmodell im Thema [Design Considerations and Limitations for Oracle Publishers](../non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  

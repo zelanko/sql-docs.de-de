@@ -1,5 +1,5 @@
 ---
-title: CommitTransaction-Element (XMLA) | Microsoft Docs
+title: CommitTransaction-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - CommitTransaction command
 ms.assetid: 1cd814dc-a0be-4305-b44d-faf15e843f7d
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 85db6f53386023acb32a9e853ad1d69f92f6860c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 96510ca95048945bca1b822a5dbc72b02af11fa8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049976"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152761"
 ---
 # <a name="committransaction-element-xmla"></a>CommitTransaction-Element (XMLA)
   Führt einen Commit für eine Transaktion für die aktuelle Sitzung mit einem [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz.  
@@ -62,7 +62,7 @@ ms.locfileid: "36049976"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Der `CommitTransaction`-Befehl führt für die aktuelle Sitzung einen Commit für eine aktive Transaktion aus, die explizit durch das `BeginTransaction`-Element definiert ist. Wenn keine aktive Transaktion vorhanden ist, tritt ein Fehler auf. Besteht bereits eine aktive Transaktion, reduziert die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Instanz den Verweiszähler der Transaktionen für die aktuelle Sitzung. Wenn der Verweiszähler explizit definierter aktiver Transaktionen den Wert Null erreicht die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Instanz einen Commit für die Transaktion.  
+ Der `CommitTransaction`-Befehl führt für die aktuelle Sitzung einen Commit für eine aktive Transaktion aus, die explizit durch das `BeginTransaction`-Element definiert ist. Wenn keine aktive Transaktion vorhanden ist, tritt ein Fehler auf. Besteht bereits eine aktive Transaktion, reduziert die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Instanz den Verweiszähler der Transaktionen für die aktuelle Sitzung. Wenn der Verweiszähler explizit definierter aktiver Transaktionen NULL ist, erreicht der [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz führt einen Commit der Transaktion.  
   
 ## <a name="see-also"></a>Siehe auch  
  [BeginTransaction-Element &#40;XMLA&#41;](begintransaction-element-xmla.md)   

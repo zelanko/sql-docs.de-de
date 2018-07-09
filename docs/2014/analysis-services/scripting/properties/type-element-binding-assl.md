@@ -1,5 +1,5 @@
 ---
-title: Geben Sie Element (Binding) (ASSL) | Microsoft Docs
+title: Type-Element (Bindung) (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: b5f5c485-dc83-4d66-a8d2-e96e96d068f9
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b07c1d781bfdade9228b6c5991b2eb56585cbe85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4bcf3e96c38dd4c2941d2d6256a62559ab3491eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049981"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148171"
 ---
 # <a name="type-element-binding-assl"></a>Type-Element (Bindung) (ASSL)
   Enthält den Typ der Attributbindung.  
@@ -76,7 +76,7 @@ ms.locfileid: "36049981"
 |*CustomRollup*|Benutzerdefinierte Rollupformeln|  
 |*CustomRollupProperties*|Benutzerdefinierte Rollupeigenschaften|  
   
- Die Elemente, die den übergeordneten Elementen von entsprechen `Type` im Objektmodell von Analysis Management Objects (AMO) sind <xref:Microsoft.AnalysisServices.AttributeBinding> und <xref:Microsoft.AnalysisServices.CubeAttributeBinding>.  
+ Die Elemente, die den übergeordneten Elementen von entsprechen `Type` im Analysis Management Objects (AMO)-Objektmodell werden <xref:Microsoft.AnalysisServices.AttributeBinding> und <xref:Microsoft.AnalysisServices.CubeAttributeBinding>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Binding-Datentyp &#40;ASSL&#41;](../data-type/binding-data-type-assl.md)   

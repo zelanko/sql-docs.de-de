@@ -1,12 +1,12 @@
 ---
-title: Cursorverhalten | Microsoft Docs
+title: Cursorverhalten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/24/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,18 +25,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 353fde7548431b354c6e101545b67a924e553b66
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: fe80b8d324ff47721a0fb41a60292a867df33cab
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700511"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424529"
 ---
-# <a name="cursor-behaviors"></a>Verhalten von Cursorn
+# <a name="cursor-behaviors"></a>Cursorverhalten
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  ODBC unterstützt die ISO-Optionen für die Definition des Verhaltens von Cursorn durch Angabe ihrer Bildlauffähigkeit und Sensitivität. Diese Verhaltensweisen werden angegeben, indem Sie die Optionen SQL_ATTR_CURSOR_SCROLLABLE und SQL_ATTR_CURSOR_SENSITIVITY bei einem Aufruf von [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md). Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber implementiert diese Optionen, indem er Servercursor mit den folgenden Eigenschaften anfordert.  
+  ODBC unterstützt die ISO-Optionen für die Definition des Verhaltens von Cursorn durch Angabe ihrer Bildlauffähigkeit und Sensitivität. Diese Verhaltensweisen werden angegeben, durch Festlegen der Optionen SQL_ATTR_CURSOR_SCROLLABLE und SQL_ATTR_CURSOR_SENSITIVITY bei einem Aufruf von [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md). Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber implementiert diese Optionen, indem er Servercursor mit den folgenden Eigenschaften anfordert.  
   
 |Einstellungen für das Cursorverhalten|Angeforderte Servercursoreigenschaften|  
 |------------------------------|---------------------------------------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "35700511"
 |SQL_NONSCROLLABLE und SQL_INSENSITIVE|Standardresultset (Vorwärts, schreibgeschützt)|  
 |SQL_NONSCROLLABLE und SQL_UNSPECIFIED|Standardresultset (Vorwärts, schreibgeschützt)|  
   
- Versionsbasierte vollständige Parallelität erfordert eine **Zeitstempel** Spalte in der zugrunde liegenden Tabelle. Wenn versionsbasierte vollständige parallelitätssteuerung für eine Tabelle angefordert wird, die keine **Zeitstempel** Spalte, die der Server verwendet Werten basierende vollständige Parallelität.  
+ Versionsbasierte vollständige Parallelität erfordert eine **Zeitstempel** Spalte in der zugrunde liegenden Tabelle. Wenn versionsbasierte vollständige Parallelität-Steuerelement für eine Tabelle angefordert wird, die keinem **Zeitstempel** Spalte, die der Server verwendet Werten basierende vollständige Parallelität.  
   
 ## <a name="scrollability"></a>Bildlauffähigkeit  
  Wenn SQL_ATTR_CURSOR_SCROLLABLE auf SQL_SCROLLABLE festgelegt ist, unterstützt der Cursor alle verschiedenen Werte für die *FetchOrientation* Parameter [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md). Wenn SQL_ATTR_CURSOR_SCROLLABLE auf SQL_NONSCROLLABLE festgelegt ist, unterstützt der Cursor nur eine *FetchOrientation* -Wert SQL_FETCH_NEXT.  

@@ -1,5 +1,5 @@
 ---
-title: CaptionIsMdx-Element (ASSL) | Microsoft Docs
+title: CaptionIsMdx-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CaptionIsMdx element
 ms.assetid: 7569a75e-b3e0-4332-97d3-585abc546ada
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 624998a5bc65b1cfa9e0f61f93ef5e860210d697
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 42e99bc43634d27526ed6d18012b904818f43cf5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048834"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165191"
 ---
 # <a name="captionismdx-element-assl"></a>CaptionIsMdx-Element (ASSL)
-  Definiert, ob die Beschriftung für die [Aktion](../objects/action-element-assl.md) Element ist ein Ausdruck (Multidimensional Expressions).  
+  Definiert, ob die Beschriftung für die [Aktion](../objects/action-element-assl.md) Element ist eine Multidimensional Expressions (MDX)-Ausdruck.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36048834"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element, das das übergeordnete Element des entspricht `CaptionIsMdx` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Action>.  
+ Das Element, das dem übergeordneten entspricht `CaptionIsMdx` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Action>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  
