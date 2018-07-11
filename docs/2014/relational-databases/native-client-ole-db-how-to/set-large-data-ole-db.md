@@ -1,28 +1,26 @@
 ---
-title: Festlegen von großen Daten (OLE DB) | Microsoft Docs
+title: Festlegen von großen Daten (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - large data
 ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 82e4a722f3abec281af12785a0b381f189ef4740
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: b7eca258cc315a839f9f46185bcded8d8fc99aae
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048724"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424339"
 ---
 # <a name="set-large-data-ole-db"></a>Festlegen von großen Daten (OLE DB)
   Dieses Beispiel zeigt, wie BLOB-Daten festgelegt werden, eine Tabelle erstellt, ein Beispieldatensatz hinzugefügt, dieser Datensatz im Rowset abgerufen und anschließend der Wert des BLOB-Felds festgelegt wird. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  
@@ -38,7 +36,7 @@ ms.locfileid: "36048724"
   
 #### <a name="to-set-blob-data"></a>So legen Sie BLOB-Daten fest  
   
-1.  Erstellen Sie eine DBOBJECT-Struktur, die beschreibt, wie auf die BLOB-Spalte zugegriffen werden soll. Legen Sie die **DwFlag** -Element der DBOBJECT-Struktur auf STGM_READ und legen Sie das Iid-Element auf `IID_ISequentialStream` (die Schnittstelle verfügbar gemacht werden sollen).  
+1.  Erstellen Sie eine DBOBJECT-Struktur, die beschreibt, wie auf die BLOB-Spalte zugegriffen werden soll. Legen Sie die **DwFlag** -Element der DBOBJECT-Struktur auf STGM_READ und legen Sie das Iid-Element, auf `IID_ISequentialStream` (die Schnittstelle verfügbar gemacht werden).  
   
 2.  Legen Sie die Eigenschaften in der DBPROPSET_ROWSET-Eigenschaftengruppe so fest, dass das Rowset aktualisiert werden kann.  
   
@@ -46,14 +44,14 @@ ms.locfileid: "36048724"
   
 4.  Erstellen Sie einen Accessor mithilfe der Bindungsinformationen im DBBINDINGS-Strukturarray.  
   
-5.  Rufen Sie `GetNextRows` zum nächsten Zeilen des Rowsets abzurufen. Rufen Sie `GetData` , die Daten aus dem Rowset zu lesen.  
+5.  Rufen Sie `GetNextRows` auf die nächste Zeilen für das Rowset abzurufen. Rufen Sie `GetData` zum Lesen der Daten aus dem Rowset.  
   
-6.  Um die Daten festzulegen, erstellen Sie ein Speicherobjekt, das die Daten (und auch den Längenindikator) enthält, und rufen dann `IRowsetChange::SetData` (oder `IRowsetChange::InsertRow`) mit dem Accessor auf, das die BLOB-Spalte bindet.  
+6.  Um die Daten festzulegen, erstellen Sie ein Speicherobjekt, die die Daten (und den Längenindikator) enthält, und rufen Sie dann `IRowsetChange::SetData` (oder `IRowsetChange::InsertRow`) mit dem Accessor auf, das die BLOB-Spalte bindet.  
   
 ## <a name="example"></a>Beispiel  
   
 ### <a name="description"></a>Description  
- Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das folgende C++-Codelisting aus. Diese Anwendung stellt eine Verbindung des Computers her [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz ändern. Um eine Verbindung mit einer benannten Instanz herzustellen, ändern Sie die Verbindungszeichenfolge von l"(Local)" "zu l"(Local)"\\\name", wobei der Name der benannten Instanz ist. Standardmäßig [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
+ Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das folgende C++-Codelisting aus. Diese Anwendung stellt eine Verbindung her, des Computers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz ändern. Um eine Verbindung mit einer benannten Instanz herzustellen, ändern Sie die Verbindungszeichenfolge von l"(Local)" "um l"(Local)"\\\name", wobei der Name der benannten Instanz ist. In der Standardeinstellung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
 ### <a name="code"></a>Code  
   

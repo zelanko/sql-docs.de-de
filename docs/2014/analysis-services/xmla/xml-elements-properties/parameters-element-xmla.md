@@ -1,5 +1,5 @@
 ---
-title: Parameters-Element (XMLA) | Microsoft Docs
+title: Parameters-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Parameters element
 ms.assetid: d46454a1-a1d1-4aa8-95ea-54be22a53e83
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 63d50c1b57691a9b4cdb76adb9edaa202388d15e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 87836c6ca9f33c100b3ba10ba91379370e787773
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061678"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158861"
 ---
 # <a name="parameters-element-xmla"></a>Parameters-Element (XMLA)
-  Enthält eine Auflistung von [Parameter](parameter-element-xmla.md) Elementen, die verwendet werden, indem die [Execute](../xml-elements-methods-execute.md) Methode.  
+  Enthält eine Auflistung von [Parameter](parameter-element-xmla.md) Elemente, die verwendet werden, indem die [Execute](../xml-elements-methods-execute.md) Methode.  
   
  **Namespace:** `urn:schemas-microsoft-com:xml-analysis`  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36061678"
 |Untergeordnete Elemente|[Parameter](parameter-element-xmla.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Einige XMLA-Befehle (XML for Analysis) wie der [Process](../xml-elements-commands/process-element-xmla.md) -Befehl können weitere Informationen erfordern. Die `Parameters` Element bietet einen Mechanismus zum Bereitstellen zusätzlicher Informationen, einschließlich segmentierter Informationen, XMLA-Befehl.  
+ Einige XMLA-Befehle (XML for Analysis) wie der [Process](../xml-elements-commands/process-element-xmla.md) -Befehl können weitere Informationen erfordern. Die `Parameters` -Element bietet einen Mechanismus zum Bereitstellen zusätzlicher Informationen, einschließlich segmentierter Informationen, XMLA-Befehl.  
   
  Wenn der XMLA-Befehl das `Parameters`-Element nicht verwendet, kann das Element beim Aufrufen der `Execute`-Methode weggelassen werden.  
   

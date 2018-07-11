@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 16fbcf4bc8182a1b8f1f66be5319357f9b498034
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: d62c290865ff0d65eb4dea17cc275c3326b7b871
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058243"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240270"
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Lektion 4: Definieren einer Datenverbindung und einer Datentabelle für den untergeordneten Bericht
   Nachdem Sie den übergeordneten Bericht entworfen haben, erstellen Sie im nächsten Schritt eine Datenverbindung und eine Datentabelle für den untergeordneten Bericht. In diesem Lernprogramm wird eine Datenverbindung mit der AdventureWorks2008-Datenbank hergestellt. Alternativ können Sie auch eine Verbindung mit der AdventureWorks2012-Datenbank herstellen.  
@@ -28,7 +28,7 @@ ms.locfileid: "36058243"
   
 1.  Klicken Sie im Menü **Website** auf **Neues Element hinzufügen**.  
   
-2.  Klicken Sie im Dialogfeld **Neues Element hinzufügen** auf **DataSet** und dann auf **Hinzufügen**. Wenn Sie aufgefordert werden, sollten Sie das Element, das Hinzufügen der **App_Code** Ordner durch Klicken auf **Ja**.  
+2.  Klicken Sie im Dialogfeld **Neues Element hinzufügen** auf **DataSet** und dann auf **Hinzufügen**. Wenn Sie aufgefordert werden, sollten Sie das Element, das Hinzufügen der **"App_Code"** Ordner durch Klicken auf **Ja**.  
   
      Dadurch wird dem Projekt die neue XSD-Datei **DataSet2.xsd** hinzugefügt und der DataSet-Designer geöffnet.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36058243"
   
     2.  Wählen Sie im Abschnitt **Am Server anmelden** die Option aus, die Ihnen den Zugriff auf die Daten ermöglicht. Die Standardeinstellung ist**Windows-Authentifizierung verwenden** .  
   
-    3.  Aus der **einen Datenbanknamen eingeben oder auswählen** Dropdown-Liste, klicken Sie auf **AdventureWorks2008**.  
+    3.  Von der **auswählen oder Eingeben eines Datenbanknamens** Dropdown-Liste, klicken Sie auf **AdventureWorks2008**.  
   
     4.  Klicken Sie auf **OK**, und klicken Sie dann auf **Weiter**.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36058243"
   
 8.  Wählen Sie auf der Seite **Wählen Sie einen Befehlstyp aus** die Option **SQL-Anweisungen verwenden**aus, und klicken Sie auf **Weiter**.  
   
-9. Auf der **Geben Sie eine SQL-Anweisung** Seite, geben Sie die folgende Transact-SQL-Abfrage zum Abrufen von Daten aus der **AdventureWorks2008** Datenbank, und klicken Sie dann auf **Weiter**.  
+9. Auf der **Geben Sie eine SQL-Anweisung** geben die folgende Transact-SQL-Abfrage zum Abrufen von Daten aus der **AdventureWorks2008** Datenbank, und klicken Sie dann auf **Weiter**.  
   
     ```  
     SELECT PurchaseOrderID, PurchaseOrderDetailID, OrderQty, ProductID, ReceivedQty, RejectedQty, StockedQty FROM Purchasing.PurchaseOrderDetail  
@@ -64,7 +64,7 @@ ms.locfileid: "36058243"
   
 10. Auf der **zu generierende** Seite aus, deaktivieren Sie **Methoden erstellen, um Updates direkt an die Datenbank (GenerateDBDirectMethods) senden**, und klicken Sie dann auf **Fertig stellen**.  
   
-     Sie haben jetzt die Konfiguration der ADO.NET abgeschlossen [DataTable](http://msdn.microsoft.com/library/system.data.datatable\(v=vs.100\).aspx) als Datenquelle für den Bericht. Auf der DataSet-Designer-Seite in Visual Studio sollte die hinzugefügte **DataTable** jetzt mit den in der Abfrage angegebenen Spalten aufgeführt werden. DataSet2 enthält die auf der Abfrage basierenden Daten aus der PurchaseOrderDetail-Tabelle.  
+     Sie haben nun die Konfiguration der ADO.NET abgeschlossen [DataTable](http://msdn.microsoft.com/library/system.data.datatable\(v=vs.100\).aspx) als Datenquelle für Ihren Bericht. Auf der DataSet-Designer-Seite in Visual Studio sollte die hinzugefügte **DataTable** jetzt mit den in der Abfrage angegebenen Spalten aufgeführt werden. DataSet2 enthält die auf der Abfrage basierenden Daten aus der PurchaseOrderDetail-Tabelle.  
   
 11. Speichern Sie die Datei.  
   

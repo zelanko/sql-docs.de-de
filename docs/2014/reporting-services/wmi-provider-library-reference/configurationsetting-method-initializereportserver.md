@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - InitializeReportServer (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - InitializeReportServer method
 ms.assetid: 0304acc2-1fd7-437b-94d9-1c1073dd3ca4
 caps.latest.revision: 20
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e5c3ace1e9e4cb25fde4d836bc15ad9f30eee3e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e534aea75ef51802db343765ad0ab00b98007336
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060652"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210680"
 ---
 # <a name="initializereportserver-method-wmi-msreportserverconfigurationsetting"></a>InitializeReportServer-Methode (WMI: MSReportServer_ConfigurationSetting)
   Initialisiert die angegebene Berichtsdienstinstanz  
@@ -64,7 +64,7 @@ public void InitializeReportServer(string InstallationID,
   
  Die *InitializeReportServer* -Methode muss für einen Berichtsserver aufgerufen werden, der bereits Zugriff auf die sicheren Informationen hat, damit der Verschlüsselungsschlüssel entschlüsselt werden kann. Der resultierende verschlüsselte Verschlüsselungsschlüssel wird dann in der Berichtsserver-Datenbank gespeichert.  
   
- Wenn der Berichtsserver [IsInitialized](configurationsetting-property-isinitialized.md) -Eigenschaftensatz auf `true` InitializeReportServer-Methode aufgerufen wird, gibt die Methode erfolgreich ohne zu versuchen, den Verschlüsselungsschlüssel zu verschlüsseln.  
+ Wenn der Berichtsserver [IsInitialized](configurationsetting-property-isinitialized.md) -Eigenschaftensatz auf `true` die InitializeReportServer-Methode aufgerufen wird, gibt die Methode erfolgreich ohne zu versuchen, den Verschlüsselungsschlüssel zu verschlüsseln.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

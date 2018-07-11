@@ -1,31 +1,29 @@
 ---
-title: Löschen einer Datenquelle (ODBC) | Microsoft Docs
+title: Löschen einer Datenquelle (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data sources [ODBC]
 ms.assetid: 910e3e16-7b91-49d8-80bb-b4243926afaa
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d3b18bfe882147e0c60033dac9efd9dc4e3a6057
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e870254043d9cc85d99203d76513816f67267560
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050096"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415189"
 ---
 # <a name="delete-a-data-source-odbc"></a>Löschen einer Datenquelle (ODBC)
-  Löschen einer Datenquelle können Sie mithilfe des ODBC-Administrators, programmgesteuert (mit [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)), oder durch Löschen einer Datei (bei einem dateiquellennamen).  
+  Sie können eine Datenquelle löschen, indem Sie mithilfe des ODBC-Administrators, programmgesteuert (mit [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)), oder Löschen einer Datei (bei einem dateiquellennamen).  
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>So löschen Sie eine Datenquelle mit dem ODBC-Administrator  
   
@@ -38,7 +36,7 @@ ms.locfileid: "36050096"
 4.  Klicken Sie auf **Entfernen**, und bestätigen Sie dann das Löschen.  
   
 ## <a name="example"></a>Beispiel  
- Um eine Datenquelle programmgesteuert zu löschen, rufen [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md) entweder mit ODBC_REMOVE_DSN oder mit ODBC_REMOVE_SYS_DSN als zweiten Parameter.  
+ Um eine Datenquelle programmgesteuert zu löschen, rufen [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md) entweder mit ODBC_REMOVE_DSN oder mit ODBC_REMOVE_SYS_DSN als zweitem Parameter.  
   
  Im folgenden Beispiel wird gezeigt, wie Sie eine Datenquelle programmgesteuert löschen können.  
   

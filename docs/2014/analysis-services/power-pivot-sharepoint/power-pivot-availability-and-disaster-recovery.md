@@ -1,5 +1,5 @@
 ---
-title: PowerPivot-Availability and Disaster Recovery (SQLServer 2014) | Microsoft Docs
+title: PowerPivot-Verfügbarkeit und Notfallwiederherstellung (SQLServer 2014) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4aaf008c-3bcb-4dbf-862c-65747d1a668c
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7c05bb8ca3e917d12fe1452dd598c30c698d3c4a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 15efd2e1265635fa2870013d580ea4ef929b4600
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060613"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159291"
 ---
 # <a name="powerpivot-availability-and-disaster-recovery-sql-server-2014"></a>Hohe Verfügbarkeit und Notfallwiederherstellung für PowerPivot (SQL Server 2014)
   Pläne für Notfallwiederherstellung und Verfügbarkeit sind bei [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] in erster Linie abhängig vom Entwurf der SharePoint-Farm, von der für verschiedene Komponenten akzeptablen Ausfallzeit und von den Tools und Best Practices, die Sie zur Gewährleistung der Verfügbarkeit von SharePoint implementieren. In diesem Thema finden Sie eine Übersicht der Technologien und Beispiele für Topologiediagramme, die beim Planen der Verfügbarkeit und der Notfallwiederherstellung für eine Bereitstellung von [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] hilfreich sein können.  
@@ -30,34 +30,34 @@ ms.locfileid: "36060613"
   
  **In diesem Thema:**  
   
--   [SharePoint 2013-Beispieltopologie für eine hohe Verfügbarkeit von PowerPivot](#bkmk_sharepoint2013)  
+-   [SharePoint 2013-Beispieltopologie für hochverfügbarkeit von PowerPivot](#bkmk_sharepoint2013)  
   
--   [SharePoint 2010-Beispieltopologie für eine hohe Verfügbarkeit von PowerPivot](#bkmk_sharepoint2010)  
+-   [SharePoint 2010-Beispieltopologie für hochverfügbarkeit von PowerPivot](#bkmk_sharepoint2010)  
   
 -   [PowerPivot Dienstanwendungsdatenbank und die Verfügbarkeits- und Wiederherstellungstechnologien in SQL Server](#bkmk_sql_server_technologies)  
   
 -   [Links zu weiteren Informationen](#bkmk_more_resources)  
   
-##  <a name="bkmk_sharepoint2013"></a> SharePoint 2013-Beispieltopologie für eine hohe Verfügbarkeit von PowerPivot  
+##  <a name="bkmk_sharepoint2013"></a> SharePoint 2013-Beispieltopologie für hochverfügbarkeit von PowerPivot  
  Eine Bereitstellung von [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 bietet mehr Flexibilität beim Planen der Verfügbarkeit für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . In SharePoint 2013 wird die im SharePoint-Modus bereitgestellte [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz, die auch als [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Server bezeichnet wird, außerhalb der SharePoint-Farm ausgeführt und kann auf separaten Servern installiert werden. Jede Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] im SharePoint-Modus wird in Excel Services registriert. Der gemeinsame [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienst und die Dienstanwendung werden auf SharePoint-Anwendungsservern ausgeführt.  
   
  Das folgende Diagramm zeigt ein Beispiel für eine Bereitstellung von [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013. Dieses Bereitstellungsbeispiel bietet eine gute Verfügbarkeit der [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Dienste und setzt voraus, dass die Datenbanken regelmäßig gesichert werden.  
   
  ![PowerPivot-Verfügbarkeit in 2013](../media/ssas-powerpivot-services-2013.png "Powerpivot-Verfügbarkeit in 2013")  
   
--   **(1)** Die Web-Front-End-Server. Verwenden Sie das [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013-Add-In, um die Datenanbieter auf jedem Server zu installieren. Weitere Informationen finden Sie unter [installieren oder Deinstallieren des PowerPivot für SharePoint-Add-Ins &#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+-   **(1)** Die Web-Front-End-Server. Verwenden Sie das [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013-Add-In, um die Datenanbieter auf jedem Server zu installieren. Weitere Informationen finden Sie unter [installieren oder Deinstallieren des PowerPivot für SharePoint-Add-in &#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 -   **(2)** Der gemeinsame [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienst wird **auf jedem** Anwendungsserver ausgeführt, sodass die Dienstanwendung **auf mehreren** Anwendungsservern ausgeführt werden kann. Wenn ein einzelner Anwendungsserver offline geschaltet wird, bleibt die [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Anwendung weiterhin verfügbar.  
   
 -   **(3)** Die Dienste für Excel-Berechnungen werden auf jedem Anwendungsserver ausgeführt, sodass die Dienstanwendung auf mehreren Anwendungsservern ausgeführt werden kann. Wenn ein einzelner Anwendungsserver offline geschaltet wird, bleiben die Dienste für Excel-Berechnungen weiterhin verfügbar.  
   
--   **(4)**  und **(6)** Instanzen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ins SharePoint-Modus auf Servern außerhalb der SharePoint-Farm ausgeführt wird, dazu gehören der Windows-Dienst **SQL Server Analysis Services (POWERPIVOT)**. Jede dieser Instanzen ist in Excel Services **(3)** registriert. Excel Services verwaltet den Lastenausgleich der Anforderungen an die [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Server. Die [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013-Architektur ermöglicht es Ihnen, mehrere Server für [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] einzurichten, sodass Sie bei Bedarf problemlos weitere Instanzen hinzufügen können. Weitere Informationen finden Sie unter [Verwalten von Excel Services-Datenmodelleinstellungen (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\).aspx).  
+-   **(4)**  und **(6)** Instanzen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ins SharePoint-Modus werden auf Servern außerhalb der SharePoint-Farm ausgeführt, einschließlich der Windows-Dienst **SQL Server Analysis Services (POWERPIVOT)**. Jede dieser Instanzen ist in Excel Services **(3)** registriert. Excel Services verwaltet den Lastenausgleich der Anforderungen an die [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Server. Die [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013-Architektur ermöglicht es Ihnen, mehrere Server für [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] einzurichten, sodass Sie bei Bedarf problemlos weitere Instanzen hinzufügen können. Weitere Informationen finden Sie unter [Verwalten von Excel Services-Datenmodelleinstellungen (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\).aspx).  
   
 -   **(5)** SQL Server-Datenbanken, die für Inhalts-, Konfigurations- und Anwendungsdatenbanken verwendet werden. Diese enthalten auch die Datenbank für die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung. In Ihrem Plan für die Notfallwiederherstellung muss auch die Datenbankebene berücksichtigt werden. In diesem Entwurf werden die Datenbanken auf demselben Server wie **(4)** eine der [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Instanzen ausgeführt. **(4)** und **(5)** können sich aber auch auf unterschiedlichen Servern befinden.  
   
 -   **(7)** Sicherung oder Redundanz für die SQL Server-Datenbank.  
   
-##  <a name="bkmk_sharepoint2010"></a> SharePoint 2010-Beispieltopologie für eine hohe Verfügbarkeit von PowerPivot  
+##  <a name="bkmk_sharepoint2010"></a> SharePoint 2010-Beispieltopologie für hochverfügbarkeit von PowerPivot  
  Die [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010-Architektur setzt voraus, dass alle [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Komponenten auf denselben SharePoint-Anwendungsservern ausgeführt werden. Dies umfasst auch die im SharePoint-Modus bereitgestellte [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz sowie zwei gemeinsame Dienste, im Vergleich zu einem gemeinsamen Dienst in einer SharePoint 2013-Bereitstellung.  
   
  Das folgende Diagramm zeigt ein Beispiel für eine Bereitstellung von [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010. Dieses Bereitstellungsbeispiel bietet eine gute Verfügbarkeit der [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Dienste und setzt voraus, dass die Datenbanken regelmäßig gesichert werden.  
@@ -66,7 +66,7 @@ ms.locfileid: "36060613"
   
 -   **(1)** Die Web-Front-End-Server. Installieren Sie die Datenanbieter auf jedem Server. Weitere Informationen finden Sie unter [Installieren des OLE DB-Anbieters für Analysis Services auf SharePoint-Servern](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
   
--   **(2)**  Die beiden [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] gemeinsamer Dienste und **(4)** der Windows-Dienst **SQL Server Analysis Services (POWERPIVOT)** auf den SharePoint-Anwendungsservern installiert sind.  
+-   **(2)**  Die beiden [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] gemeinsame Dienste und **(4)** der Windows-Dienst **SQL Server Analysis Services (POWERPIVOT)** auf den SharePoint-Anwendungsservern installiert sind.  
   
      Der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdienst wird **auf jedem** Anwendungsserver ausgeführt, sodass die Dienstanwendung **auf mehreren** Anwendungsservern ausgeführt werden kann. Wenn ein einzelner Anwendungsserver offline geschaltet wird, bleibt die [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Dienstanwendung weiterhin verfügbar.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36060613"
  Weitere Informationen zum Planen eines verzögerten Standbyszenarios für [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]finden Sie unter [PowerPivot-Notfallwiederherstellung](http://social.technet.microsoft.com/wiki/contents/articles/22137.sharepoint-powerpivot-disaster-recovery.aspx).  
   
 ## <a name="verification"></a>Überprüfung  
- Anweisungen und Skripts zur Überprüfung einer [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Bereitstellung vor und nach einer notfallwiederherstellung finden Sie unter [Prüfliste: Verwenden von PowerShell zum Überprüfen von PowerPivot für SharePoint](../instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md).  
+ Anweisungen und Skripts zur Überprüfung einer [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Bereitstellung vor und nach einer notfallwiederherstellung, finden Sie unter [Prüfliste: Verwenden von PowerShell zum Überprüfen von PowerPivot für SharePoint](../instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md).  
   
 ##  <a name="bkmk_more_resources"></a> Links zu weiteren Informationen  
   
@@ -111,6 +111,6 @@ ms.locfileid: "36060613"
   
 -   [Verwalten von Dienstinstanzen unter SharePoint 2013](http://www.petri.co.il/manage-service-instances-sharepoint-2013.htm)  
   
--   [Backup Database, SQL Server-Skript](http://megaupl0ad.net/free/backup%20database%20sql%20server%20script)  
+-   [Datenbank sichern, SQL Server-Skript](http://megaupl0ad.net/free/backup%20database%20sql%20server%20script)  
   
   

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-views
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - indexed views [SQL Server], creating
 - clustered indexes, views
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - views [SQL Server], indexed views
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 caps.latest.revision: 77
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5498cda83c3b33d0f6b3c6898954e1442e6e21cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d56783347d9c5aaf59a1b45b24e2003a35df96df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147645"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150421"
 ---
 # <a name="create-indexed-views"></a>Erstellen von indizierten Sichten
   In diesem Thema wird beschrieben, wie eine indizierte Sicht in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellt wird. Der erste Index, der für eine Sicht erstellt wird, muss ein eindeutiger gruppierter Index sein. Nachdem der eindeutige gruppierte Index erstellt wurde, können Sie weitere nicht gruppierte Indizes erstellen. Das Erstellen eines eindeutigen gruppierten Indexes für eine Sicht verbessert die Abfrageleistung, da die Sicht wie eine Tabelle mit einem gruppierten Index in der Datenbank gespeichert wird. Der Abfrageoptimierer kann indizierte Sichten verwenden, um die Abfrageausführung zu beschleunigen. Es ist nicht erforderlich, dass in der Abfrage auf die jeweilige Sicht verwiesen wird, damit der Optimierer diese Sicht als Ersatz berücksichtigt.  
@@ -49,7 +48,7 @@ ms.locfileid: "36147645"
 ###  <a name="Restrictions"></a> Erforderliche SET-Optionen für indizierte Sichten  
  Das Auswerten desselben Ausdrucks kann im [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu unterschiedlichen Ergebnissen führen, wenn bei der Ausführung der Abfrage unterschiedliche SET-Optionen aktiviert sind. Wenn die SET-Option CONCAT_NULL_YIELDS_NULL auf ON festgelegt ist, gibt beispielsweise der Ausdruck **'** abc **'** + NULL den Wert NULL zurück. Wenn die Option CONCAT_NULL_YIEDS_NULL allerdings auf OFF festgelegt ist, ergibt derselbe Ausdruck **'** abc **'**.  
   
- Um sicherzustellen, dass die Sichten ordnungsgemäß verwaltet werden können und konsistente Ergebnisse zurückgeben, sind für indizierte Sichten feste Werte für mehrere SET-Optionen erforderlich. Die SET-Optionen in der folgenden Tabelle müssen festgelegt werden, um die Werte in der **RequiredValue** Spalte, wenn die folgenden Bedingungen zutrifft:  
+ Um sicherzustellen, dass die Sichten ordnungsgemäß verwaltet werden können und konsistente Ergebnisse zurückgeben, sind für indizierte Sichten feste Werte für mehrere SET-Optionen erforderlich. Die SET-Optionen in der folgenden Tabelle müssen festgelegt werden, auf die Werte der **RequiredValue** Spalte, wenn die folgenden Bedingungen zutrifft:  
   
 -   Die Sicht und nachfolgende Indizes für die Sicht werden erstellt.  
   
@@ -128,14 +127,14 @@ ms.locfileid: "36147645"
     |Spaltensätze mit geringer Dichte|Tabellenwertfunktionen mit Inlinefunktionen oder Funktionen mit mehreren Anweisungen|OFFSET|  
     |CHECKSUM_AGG|||  
   
-     \*Die indizierte Sicht darf `float` Spalten; allerdings solche Spalten nicht im Schlüssel gruppierten Indexes enthalten sein.  
+     \*Die indizierte Sicht darf `float` Spalten jedoch solche Spalten nicht im Schlüssel gruppierten Indexes enthalten sein.  
   
 -   Wenn GROUP BY vorhanden ist, muss die VIEW-Definition COUNT_BIG(*) enthalten, während HAVING nicht enthalten sein darf. Diese GROUP BY-Einschränkungen gelten nur für die indizierte Sichtdefinition. Im Ausführungsplan einer Abfrage kann eine indizierte Sicht auch dann verwendet werden, wenn sie diese GROUP BY-Einschränkungen nicht erfüllt.  
   
 -   Wenn die Sichtdefinition eine GROUP BY-Klausel enthält, kann der Schlüssel des eindeutigen gruppierten Index nur auf die Spalten verweisen, die in der GROUP BY-Klausel angegeben sind.  
   
 ###  <a name="Recommendations"></a> Empfehlungen  
- Wenn Sie in indizierten Sichten auf `datetime`- und `smalldatetime`-Zeichenfolgenliterale verweisen, wird empfohlen, das Literal mithilfe eines deterministischen Datenformats explizit in den gewünschten Datentyp zu konvertieren. Eine Liste der deterministischen Datenformatstile finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql). Ausdrücke, die implizierte von Zeichenfolgen in Konvertierung `datetime` oder `smalldatetime` werden als nicht deterministisch angesehen. Der Grund hierfür ist, dass die Ergebnisse von den LANGUAGE- und DATEFORMAT-Einstellungen der Serversitzung abhängen. Die Ergebnisse des Ausdrucks `CONVERT (datetime, '30 listopad 1996', 113)` hängen beispielsweise von der LANGUAGE-Einstellung ab, da die Zeichenfolge '`listopad`' für verschiedene Monate in verschiedenen Sprachen steht. In ähnlicher Weise interpretiert `DATEADD(mm,3,'2000-12-01')`in dem Ausdruck [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Zeichenfolge `'2000-12-01'` basierend auf der DATEFORMAT-Einstellung.  
+ Wenn Sie in indizierten Sichten auf `datetime`- und `smalldatetime`-Zeichenfolgenliterale verweisen, wird empfohlen, das Literal mithilfe eines deterministischen Datenformats explizit in den gewünschten Datentyp zu konvertieren. Eine Liste der deterministischen Datenformatstile finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql). Ausdrücke, die implizierte von Zeichenfolgen in Konvertierung `datetime` oder `smalldatetime` als nicht deterministisch angesehen werden. Der Grund hierfür ist, dass die Ergebnisse von den LANGUAGE- und DATEFORMAT-Einstellungen der Serversitzung abhängen. Die Ergebnisse des Ausdrucks `CONVERT (datetime, '30 listopad 1996', 113)` hängen beispielsweise von der LANGUAGE-Einstellung ab, da die Zeichenfolge '`listopad`' für verschiedene Monate in verschiedenen Sprachen steht. In ähnlicher Weise interpretiert `DATEADD(mm,3,'2000-12-01')`in dem Ausdruck [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Zeichenfolge `'2000-12-01'` basierend auf der DATEFORMAT-Einstellung.  
   
  Die implizierte Konvertierung von Nicht-Unicode-Zeichendaten zwischen Sortierungen wird auch als nicht deterministisch angesehen.  
   

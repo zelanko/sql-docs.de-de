@@ -1,5 +1,5 @@
 ---
-title: Sperren-Element (XMLA) | Microsoft Docs
+title: -Element (XMLA) sperren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Lock command
 ms.assetid: a819e805-4793-43bb-8af3-16a19f8bdab3
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: d454cdcc6a87335670f483ccc06a7547e89dc7c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 44225f211ac013edd82de08c9ca82f22cb349f96
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060117"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209870"
 ---
 # <a name="lock-element-xmla"></a>Lock-Element (XMLA)
   Sperrt ein bestimmtes Objekt auf eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz.  
@@ -66,16 +66,16 @@ ms.locfileid: "36060117"
 |Untergeordnete Elemente|[ID](../xml-elements-properties/id-element-xmla.md), [Modus](../xml-elements-properties/mode-element-xmla.md), [Objekt](../xml-elements-properties/object-element-xmla.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `Lock` Befehl wird ein Objekt, das gemeinsame oder exklusive Nutzung innerhalb des Kontexts der gerade aktiven Transaktion gesperrt. Nur Datenbankadministratoren oder Serveradministratoren können explizit einen `Lock`-Befehl ausgeben. Eine Sperre in einem Objekt verhindert, dass ein Commit für Transaktionen ausgeführt wird, bevor die Sperre entfernt wurde. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] unterstützt zwei Arten von Sperren: gemeinsame Sperren und exklusive Sperren. Weitere Informationen zu den von unterstützten Typen von Sperren [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], finden Sie unter [Mode-Element &#40;XMLA&#41;](../xml-elements-properties/mode-element-xmla.md).  
+ Die `Lock` -Befehl sperrt die gemeinsame oder exklusive Nutzung innerhalb des Kontexts der gerade aktiven Transaktion ein Objekt. Nur Datenbankadministratoren oder Serveradministratoren können explizit einen `Lock`-Befehl ausgeben. Eine Sperre in einem Objekt verhindert, dass ein Commit für Transaktionen ausgeführt wird, bevor die Sperre entfernt wurde. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] unterstützt zwei Arten von Sperren: gemeinsame Sperren und exklusive Sperren. Weitere Informationen zu der von unterstützten Sperrentypen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], finden Sie unter [Mode-Element &#40;XMLA&#41;](../xml-elements-properties/mode-element-xmla.md).  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ermöglicht nur die Sperrung von Datenbanken. Die `Object` Element muss einen Objektverweis auf enthalten eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Datenbank. Wenn das `Object`-Element nicht angegeben ist oder wenn das `Object`-Element auf ein Objekt verweist, bei dem es sich nicht um eine Datenbank handelt, tritt ein Fehler auf.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ermöglicht nur die Sperrung von Datenbanken. Die `Object` -Element muss einen Objektverweis auf enthalten eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Datenbank. Wenn das `Object`-Element nicht angegeben ist oder wenn das `Object`-Element auf ein Objekt verweist, bei dem es sich nicht um eine Datenbank handelt, tritt ein Fehler auf.  
   
- Andere Befehle geben implizit eine `Lock` Befehl eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Datenbank. Jeder Vorgang, Daten oder Metadaten aus einer Datenbank, z. B. alle einliest `Discover` Methode oder ein `Execute` externen ausgeführte Methode ein `Statement` Befehl, gibt implizit eine gemeinsame Sperre für die Datenbank. Jede Transaktion, die Daten- oder Metadatenänderungen an ein Objekt auf einer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Datenbank übermittelt (z. B. eine `Execute`-Methode, die einen `Alter`-Befehl ausführt), gibt implizit eine exklusive Sperre der Datenbank aus.  
+ Andere Befehle geben implizit eine `Lock` Befehl eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Datenbank. Jeder Vorgang, der Daten oder Metadaten aus einer Datenbank, z. B. eine liest `Discover` Methode oder ein `Execute` ausgeführte Methode ein `Statement` Befehl, gibt implizit eine gemeinsame Sperre für die Datenbank. Jede Transaktion, die Daten- oder Metadatenänderungen an ein Objekt auf einer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Datenbank übermittelt (z. B. eine `Execute`-Methode, die einen `Alter`-Befehl ausführt), gibt implizit eine exklusive Sperre der Datenbank aus.  
   
  Alle Sperren werden im Kontext der aktuellen Transaktion abgehalten. Wenn die aktuelle Transaktion ausgeführt oder für diese ein Rollback durchgeführt wird, werden alle Sperren, die innerhalb der Transaktion definiert sind, automatisch aufgehoben.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Unlock-Element &#40;XMLA&#41;](lock-element-xmla.md)   
+ [Element Entsperren &#40;XMLA&#41;](lock-element-xmla.md)   
  [Befehle &#40;XMLA&#41;](xml-elements-commands.md)  
   
   

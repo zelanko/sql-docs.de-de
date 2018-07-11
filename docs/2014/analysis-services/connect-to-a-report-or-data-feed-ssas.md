@@ -1,5 +1,5 @@
 ---
-title: Herstellen einer Verbindung mit einem Bericht / Datenfeed (SSAS) | Microsoft Docs
+title: Verbinden mit einem Bericht oder Datenfeed (SSAS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connreportdatafeed.f1
 ms.assetid: e0ccfb0b-e646-4de8-b7da-f88c986c96e4
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 96e2ad7374493c375e85db4f9bff97a475174997
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 726007e635a41295c682ebc929e909fda8f0b0a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059707"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210290"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>Mit einem Bericht oder Datenfeed verbinden (SSAS)
   Auf dieser Seite des **Tabellenimport-Assistenten** können Sie eine Verbindung mit einem Datenfeed herstellen. Um im [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf den Assistenten zuzugreifen, klicken Sie im Menü **Modell** auf **Aus Datenquelle importieren**.  
@@ -48,7 +48,7 @@ ms.locfileid: "36059707"
  **Anzeigename der Verbindung**  
  Geben Sie einen Anzeigenamen für die Verbindung mit dem Datenfeed ein.  
   
- **Data Feed-URL**  
+ **Datenfeed-URL**  
  Geben Sie den vollständigen Pfad zu einem Atom-Dienstdokument (.atomsvc, .atom) oder die URL für einen einzelnen Datenfeed ein, oder klicken Sie auf **Durchsuchen** , um ein Atom-Dienstdokument auszuwählen.  
   
  **Durchsuchen**  
@@ -75,7 +75,7 @@ ms.locfileid: "36059707"
  **Anzeigename der Verbindung**  
  Geben Sie einen Anzeigenamen für die Verbindung mit dem Datenfeed ein.  
   
- **Data Feed-URL**  
+ **Datenfeed-URL**  
  Geben Sie den vollständigen Pfad zu einem Atom-Dienstdokument (.atomsvc, .atom) oder die URL für einen einzelnen Datenfeed ein, oder klicken Sie auf **Durchsuchen** , um ein Atom-Dienstdokument auszuwählen.  
   
  Klicken Sie auf **Alle Feedspalten einschließen** , um anzugeben, dass alle Datenfeedspalten importiert werden.  

@@ -1,5 +1,5 @@
 ---
-title: AcceptStop-Eigenschaft (SqlService-Klasse) | Microsoft Docs
+title: AcceptStop-Eigenschaft (SqlService-Klasse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - AcceptStop property
 ms.assetid: bf8ffe79-4f4c-4a2d-82e5-2ae8f5d466c5
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 19197db0e6d2679d0ad13bcb43472be4448fccb7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 7ee6991565a78ddf4b0b76d82d30ebd0da0892c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060655"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228770"
 ---
 # <a name="acceptstop-property-sqlservice-class"></a>AcceptStop-Eigenschaft (SqlService-Klasse)
   Ruft den booleschen Eigenschaftswert ab, der angibt, ob der Dienst beendet werden kann.  
@@ -46,7 +46,7 @@ object
  Ein [SqlService-Klassenobjekt](sqlservice-class.md) , das den Dienst darstellt.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
- Ein boolescher Wert, der angibt, ob der Dienst beendet werden kann: `true` , wenn der Dienst beendet werden kann, oder `false` , wenn der Dienst nicht beendet werden kann.  
+ Ein boolescher Wert, der angibt, ob der Dienst beendet werden kann: `true` , wenn der Dienst beendet werden kann, oder `false` , wenn der Dienst kann nicht beendet werden.  
   
 ## <a name="remarks"></a>Hinweise  
   

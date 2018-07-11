@@ -1,5 +1,5 @@
 ---
-title: Übergeben von Parametern an Updategrams (SQLXML 4.0) | Microsoft Docs
+title: Übergeben von Parametern an Updategramms (SQLXML 4.0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - null values [SQLXML]
 ms.assetid: 2354e6e7-1860-471f-8711-4e374c5a4ed2
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fc95715341b5e7bf0194b6167f399acca92238c5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 899dc3b4ae0de1b616e5d93d80d437c53e2d63da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061121"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148501"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Übergeben von Parametern an Updategrams (SQLXML 4.0)
-  Updategrams sind Vorlagen. Daher können Sie ihnen Parameter übergeben. Weitere Informationen zum Übergeben von Parametern an Vorlagen finden Sie unter [Sicherheitsüberlegungen zu Updategrams &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md).  
+  Updategrams sind Vorlagen. Daher können Sie ihnen Parameter übergeben. Weitere Informationen zum Übergeben von Parametern an Vorlagen finden Sie unter [Sicherheitsüberlegungen zu Updategramms &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md).  
   
  Mit Updategrams können Sie NULL als Parameterwert übergeben. Um den NULL-Parameterwert zu übergeben, geben Sie das `nullvalue`-Attribut an. Der Wert, der dem `nullvalue`-Attribut zugewiesen wird, wird dann als Parameterwert zur Verfügung gestellt. Updategrams behandeln diesen Wert als NULL.  
   
@@ -37,9 +37,9 @@ ms.locfileid: "36061121"
 >  In `<sql:header>` und `<updg:header>` geben Sie den `nullvalue`-Wert als nicht qualifiziert an, während Sie den `<updg:sync>`-Wert in `nullvalue` als qualifiziert angeben (z. B. `updg:nullvalue`).  
   
 ## <a name="examples"></a>Beispiele  
- Um funktionierende Beispiele, die über folgende Beispiele zu erstellen, müssen Sie in angegebenen Anforderungen erfüllen [Anforderungen für die Ausführung von SQLXML-Beispielen](../../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Um funktionierende Beispiele, die mit den folgenden Beispielen erstellen, müssen Sie die Anforderungen, die im angegebenen erfüllen [Anforderungen für die Ausführung von SQLXML-Beispielen](../../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
- Bevor Sie die updategrambeispiele verwenden, ist Folgendes zu beachten:  
+ Beachten Sie bevor Sie die updategrambeispiele verwenden Folgendes ein:  
   
 -   Die Beispiele verwenden die Standardzuordnung (d. h. es ist kein Zuordnungsschema im Updategram angegeben). Weitere Beispiele für Updategrams, die Zuordnungsschemas verwenden, finden Sie unter [ein Mapping-Schema mit Anmerkungen angeben, in einem Updategram &#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36061121"
   
 1.  Kopieren Sie das oben angegebene Updategram in Editor, und speichern Sie es als Datei unter UpdategramWithParameters.xml.  
   
-2.  Vorbereiten der SQLXML 4.0-Testskript (Sqlxml4test.vbs) in [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) das Updategram ausgeführt wird, durch die folgenden Zeilen nach dem Hinzufügen der `cmd.Properties("Output Stream").Value = outStream`:  
+2.  Bereiten Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs) in [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) das Updategram ausgeführt wird, indem Sie die folgenden Zeilen nach dem Hinzufügen der `cmd.Properties("Output Stream").Value = outStream`:  
   
     ```  
     cmd.NamedParameters = True  
@@ -102,7 +102,7 @@ ms.locfileid: "36061121"
   
 1.  Kopieren Sie das oben angegebene Updategram in Editor, und speichern Sie es als Datei unter UpdategramPassingNullvalues.xml.  
   
-2.  Vorbereiten der SQLXML 4.0-Testskript (Sqlxml4test.vbs) in [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) das Updategram ausgeführt wird, durch die folgenden Zeilen nach dem Hinzufügen der `cmd.Properties("Output Stream").Value = outStream`:  
+2.  Bereiten Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs) in [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) das Updategram ausgeführt wird, indem Sie die folgenden Zeilen nach dem Hinzufügen der `cmd.Properties("Output Stream").Value = outStream`:  
   
     ```  
     cmd.NamedParameters = True  
@@ -112,6 +112,6 @@ ms.locfileid: "36061121"
     ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sicherheitsüberlegungen zu Updategrams &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Sicherheitsüberlegungen zu Updategramms &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting attribute groups [Master Data Services]
 - attribute groups [Master Data Services], deleting
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ebf2b900457a7c358c86e3df2c0abe06c69b98c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: dcd85163a292cd6c8125619124d346ba876e6acc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147703"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152471"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>Löschen einer Attributgruppe (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie eine Attributgruppe löschen, wenn die Registerkarte nicht länger im Funktionsbereich **Explorer** von [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]angezeigt werden muss.  
@@ -46,7 +46,7 @@ ms.locfileid: "36147703"
   
 4.  Wählen Sie aus der Liste **Entität** eine Entität aus.  
   
-5.  Klicken Sie auf das Pluszeichen **Blattgruppen**, **konsolidierte Gruppen**, oder **Auflistungsgruppen**, abhängig von dem Typ der Gruppe, die Sie löschen möchten.  
+5.  Klicken Sie auf das Pluszeichen **Blattgruppen**, **konsolidierte Gruppen**, oder **Auflistungsgruppen**, je nach Typ der Gruppe, die Sie löschen möchten.  
   
 6.  Klicken Sie auf die Attributgruppe, die Sie löschen möchten.  
   

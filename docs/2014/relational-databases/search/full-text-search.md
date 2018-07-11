@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server]
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d419f7a018817656ba9bb5910a71e2c2f810ae87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5b923b9b27fd7b67d61b25956f3d44102f1a5f79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060915"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158021"
 ---
 # <a name="full-text-search"></a>Volltextsuche
   Mit der Volltextsuche in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] können Benutzer und Anwendungen Volltextabfragen für zeichenbasierte Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellen ausführen. Bevor Sie Volltextabfragen für eine bestimmte Tabelle ausführen können, muss der Datenbankadministrator einen Volltextindex für die Tabelle erstellen. Der Volltextindex umfasst eine oder mehrere zeichenbasierte Spalten der Tabelle. Diese Spalten können jeden der folgenden Datentypen aufweisen: `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, oder `varbinary(max)` und FILESTREAM. Jeder Volltextindex indiziert mindestens eine Spalte aus der Basistabelle. Für jede Spalte kann hierbei eine eigene Sprache verwendet werden.  
@@ -31,7 +30,7 @@ ms.locfileid: "36060915"
 > [!NOTE]  
 >  Die Volltextsuche ist eine optionale Komponente der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank-Engine. Weitere Informationen finden Sie unter [Installieren von SQL Server 2014](../../database-engine/install-windows/install-sql-server.md).  
   
-##  <a name="benefits"></a> Was kann ich mit Volltextsuche tun?  
+##  <a name="benefits"></a> Was kann ich mit der Volltextsuche tun?  
  Die Volltextsuche kann in einer breiten Palette von Geschäftsszenarios verwendet werden: z. B. im e-Business mit dem Suchen nach Elementen auf einer Website, in Anwaltskanzleien mit dem Suchen nach Fallverläufen in einem Rechtsdatenrepository oder in Personalabteilungen beim Vergleichen von Arbeitsplatzbeschreibungen mit gespeicherten Lebensläufen. Die grundlegenden Administrator- und Entwicklungsaufgaben der Volltextsuche bleiben unabhängig vom Geschäftsszenario unverändert. In einem bestimmten Geschäftsszenario können Volltextindex und Abfragen jedoch verfeinert werden, um die Geschäftsziele zu erreichen. In einem e-Business kann das Maximieren der Leistung beispielsweise wichtiger als das Ordnen von Ergebnissen, die Rückrufgenauigkeit (die Anzahl der tatsächlich von einer Volltextabfrage zurückgegebenen vorhandenen Übereinstimmungen) oder die Unterstützung mehrerer Sprachen sein. Für eine Anwaltskanzlei hingegen kann die Rückgabe jedes möglichen Treffers (der *Gesamtrückruf* von Informationen) der wichtigste Aspekt sein.  
   
  [In diesem Thema](#top)  
@@ -120,7 +119,7 @@ ms.locfileid: "36060915"
   
  [In diesem Thema](#top)  
   
-###  <a name="fdhostprocess"></a> Filterdaemon-Hostprozess  
+###  <a name="fdhostprocess"></a> Filterdaemon-Hostprozess zu filtern  
  Der Filterdaemonhost ist ein Prozess, der von der Volltextsuch-Engine gestartet wird. Er führt die folgenden Komponenten der Volltextsuche aus, die für den Zugriff auf, die Filterung von und die Wörtertrennung für Daten aus Tabellen sowie für die Wörtertrennung und Wortstammerkennung für Abfrageeingaben verantwortlich sind.  
   
  Der Filterdaemonhost umfasst die folgenden Komponenten:  
@@ -139,7 +138,7 @@ ms.locfileid: "36060915"
 ###  <a name="indexing"></a> Vorgang der Volltextindizierung  
  Wenn eine Volltextauffüllung (auch als „Durchforstung“ bezeichnet) initiiert wird, werden von der Volltext-Engine große Batches von Daten in den Arbeitsspeicher geladen, und der Filterdaemonhost wird benachrichtigt. Der Host führt Filterung und Wörtertrennung aus und konvertiert die Daten in invertierte Wortlisten. Die konvertierten Daten werden dann von der Volltextsuche aus den Wortlisten abgerufen, Stoppwörter werden entfernt, und die Wortlisten werden für einen Batch in einem oder mehreren invertierten Indizes gespeichert.  
   
- Beim Indizieren der Daten in einem `varbinary(max)` oder `image` Spalte, die der Filter, der implementiert die **IFilter** Schnittstelle extrahiert Text basierend auf dem angegebenen Dateiformat für diese Daten (z. B. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word). In einigen Fällen erfordern die Filterkomponenten der `varbinary(max)`, oder `image` Daten in den filterdatenordner, statt in den Speicher geschrieben werden.  
+ Beim Indizieren von Daten in einem `varbinary(max)` oder `image` Spalte, die der Filter, der implementiert die **IFilter** Schnittstelle extrahiert Text basierend auf den angegebenen Dateiformat für diese Daten (z. B. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word). In einigen Fällen erfordern die Filterkomponenten der `varbinary(max)`, oder `image` Daten in den filterdatenordner, statt in den Speicher geschrieben werden.  
   
  Im Rahmen der Verarbeitung durchlaufen die gesammelten Textdaten eine Wörtertrennung, die den Text in einzelne Token oder Schlüsselwörter zerlegt. Die Sprache für die Zerlegung in Token wird auf Spaltenebene angegeben oder kann in `varbinary(max)`-, `image`- oder `xml`-Daten durch die Filterkomponente identifiziert werden.  
   

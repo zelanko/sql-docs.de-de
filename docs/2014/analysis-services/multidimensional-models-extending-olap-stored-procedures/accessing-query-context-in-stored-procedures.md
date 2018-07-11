@@ -1,5 +1,5 @@
 ---
-title: Zugreifen auf den Abfragekontext in gespeicherten Prozeduren | Microsoft Docs
+title: Zugreifen auf den Abfragekontext in gespeicherten Prozeduren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - query context [Analysis Services]
 ms.assetid: bdc7dad8-2f22-4265-aba4-a3a451527840
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ef60683eb410f0db5ba9e8d38ac227ca22dd9159
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 28aafacda2e9880a79201fd07ca41fb15959e87b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057297"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239840"
 ---
 # <a name="accessing-query-context-in-stored-procedures"></a>Zugreifen auf den Abfragekontext in gespeicherten Prozeduren
   Der Ausführungskontext einer gespeicherten Prozedur steht innerhalb des Codes der gespeicherten Prozedur als `Context`-Objekt des ADOMD.NET-Serverobjektmodells zur Verfügung. Der Kontext ist schreibgeschützt und kann nicht von der gespeicherten Prozedur geändert werden. Für dieses Objekt stehen die folgenden Eigenschaften zur Verfügung.  
@@ -35,12 +35,12 @@ ms.locfileid: "36057297"
 |**CurrentCube**|Cube|Der Cube für den aktuellen Abfragekontext.|  
 |**CurrentDatabaseName**|Zeichenfolge|Der Bezeichner der aktuellen Datenbank.|  
 |**CurrentConnection**|Verbindung|Ein Verweis auf das Verbindungsobjekt im aktuellen Kontext.|  
-|**Übergeben Sie**|Integer|Die Durchlaufnummer für den aktuellen Kontext.|  
+|**Übergeben**|Integer|Die Durchlaufnummer für den aktuellen Kontext.|  
   
  Das `Context`-Objekt ist vorhanden, wenn das MDX-Objektmodell (Multidimensional Expressions) in einer gespeicherten Prozedur verwendet wird. Es ist nicht verfügbar, wenn das MDX-Objektmodell auf einem Client verwendet wird. Das `Context`-Objekt wird nicht explizit an die gespeicherte Prozedur übergeben bzw. von ihr zurückgegeben. Es ist während der Ausführung der gespeicherten Prozedur verfügbar.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Mehrdimensionales Modell Assemblys-Verwaltung](../multidimensional-models/multidimensional-model-assemblies-management.md)   
+ [Verwaltung von mehrdimensionalen Modellassemblys](../multidimensional-models/multidimensional-model-assemblies-management.md)   
  [Definieren gespeicherter Prozeduren](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   

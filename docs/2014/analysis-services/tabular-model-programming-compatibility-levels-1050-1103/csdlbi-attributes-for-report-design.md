@@ -1,5 +1,5 @@
 ---
-title: CSDLBI-Attribute für Berichtsentwurf | Microsoft Docs
+title: CSDLBI-Attribute für Berichtsentwurf | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
 caps.latest.revision: 8
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: e9d68293f4f71280c09d43a6b60dfa087830dc4d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 26454c7ed2c1daa5d4ce512066f0a0fcf0ec7479
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058790"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259386"
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>CSDLBI-Attribute für Berichtsentwurf
   In diesem Abschnitt werden die Attribute in den Erweiterungen für CSDL für Tabellenmodellierung beschrieben, die sich auf den [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]-Abfrageentwurf auswirken.  
@@ -43,10 +43,10 @@ ms.locfileid: "36058790"
 |`Documentation`|Textmodus|Beschreibender Text, der Geschäftskunden die Bedeutung der Daten erläutert.|  
 |`Hidden`|Boolean|Gibt an, ob die Entität angezeigt werden soll. Der Standardwert ist `false`.|  
 |`CollectionCaption`|Textmodus|Der Pluralname für den Verweis auf einen Satz von Instanzen der Entität. Wenn der Name nicht angegeben wird, wird das Caption-Attribut verwendet.|  
-|`DisplayKey`|MemberRef[]|Eine sortierte Felderliste, mit der einem Geschäftskunden eine Entitätsinstanz angezeigt wird. Die Verweise können Instanz- und Navigationseigenschaften einschließen. Wenn eine Navigationseigenschaft verwiesen wird, die `DisplayKey` der Entität angezeigt wird. Wenn die `DisplayKey` -Wert ausgelassen wird, wird das Schlüsselfeld verwendet.|  
+|`DisplayKey`|MemberRef[]|Eine sortierte Felderliste, mit der einem Geschäftskunden eine Entitätsinstanz angezeigt wird. Die Verweise können Instanz- und Navigationseigenschaften einschließen. Wenn eine Navigationseigenschaft verwiesen wird, die `DisplayKey` des Ziels Entität angezeigt wird. Wenn die `DisplayKey` -Wert ausgelassen wird, wird das Schlüsselfeld verwendet.|  
 |`DefaultImage`|MemberRef|Ein Verweis auf das Feld, das ein Bild enthält, mit dem einem Geschäftskunden visuell eine Entitätsinstanz angezeigt wird. Wenn der Verweis nicht angegeben wird, wird das erste Bildfeld in der Entität verwendet (sofern vorhanden).|  
 |`DefaultDetails`|MemberRef[]|Eine sortierte Liste von Feldern, die den Standardsatz der Detailinformationen darstellt, die einem Geschäftsbenutzer zu einer Entitätsinstanz angezeigt werden. Wenn die Liste nicht angegeben wird, werden die ersten fünf Felder in der Entität verwendet, wobei die Felder ausgeschlossen werden, auf die bereits von `Key`, `DisplayKey` oder `DefaultImage` verwiesen wird.|  
-|`SortProperties`|MemberRef[]|Eine sortierte Liste von Feldern, nach denen die Entitätsinstanzen normalerweise sortiert werden. Beim Sortieren in diesen Feldern ausführen, die `SortDirection` angegeben, die auf jedem Feld verwendet wird. Wenn nicht angegeben, die `DisplayKey` Felder werden verwendet.|  
+|`SortProperties`|MemberRef[]|Eine sortierte Liste von Feldern, nach denen die Entitätsinstanzen normalerweise sortiert werden. Beim Sortieren von in diesen Feldern ausführen, die `SortDirection` angegeben, die auf jedem Feld verwendet wird. Wenn nicht angegeben, die `DisplayKey` Felder werden verwendet.|  
 |`DefaultMeasure`|MemberRef|Ein Verweis auf ein im Modell definiertes Measure oder auf ein numerisches Feld mit einer standardmäßigen Aggregatfunktion, mit dem angegeben wird, dass das Measure oder Feld für mehrere Instanzen der Entität als Standarddarstellung verwendet werden soll. Wenn der Verweis nicht angegeben wird, wird eine Anzahl der Entitätsinstanzen verwendet.|  
 |`DefaultLocation`|MemberRef|Ein Verweis auf ein Feld, dessen Wert den einer Entitätsinstanz zugeordneten Standardort darstellt. Wenn der Verweis nicht angegeben wird, wird das erste Ortfeld in der Entität verwendet (sofern vorhanden).|  
   
@@ -56,9 +56,9 @@ ms.locfileid: "36058790"
 |Attributname|Datentyp|Description|  
 |--------------------|---------------|-----------------|  
 |`ReferenceName`|Textmodus|Der Bezeichner, der verwendet wird, um in einer DAX-Abfrage auf diese Entität zu verweisen. Wenn der Bezeichner nicht angegeben wird, wird der Feldname verwendet.|  
-|`Caption`|Textmodus|Der Anzeigename für die Entität. Wenn nicht angegeben, wird des Felds `ReferenceName` verwendet wird.|  
+|`Caption`|Textmodus|Der Anzeigename für die Entität. Wenn nicht angegeben ist, werden der Felds `ReferenceName` verwendet wird.|  
 |`Documentation`|Textmodus|Beschreibender Text, der Geschäftskunden die Bedeutung des Felds erläutert.|  
-|`Hidden`|Boolean|Gibt an, ob das Feld angezeigt werden soll. Die Standardeinstellung ist `false`, d. h. das Feld wird angezeigt.|  
+|`Hidden`|Boolean|Gibt an, ob das Feld angezeigt werden soll. Der Standardwert ist `false`, d. h. das Feld wird angezeigt.|  
 |`DisplayFolder`|Textmodus|Der Name (vollständiger Pfad) des Ordners, in dem das Feld angezeigt wird. Wenn der Name nicht angegeben wird, wird das Feld am Modellstamm angezeigt.|  
 |`ContextualNameRule`|Enum|Ein Wert, der angibt, ob und wie der Eigenschaftsname auf Grundlage des Kontexts geändert werden sollte, in dem er verwendet wird. Mögliche Werte sind: `None`, `Role`, `Merge`.|  
 |`Alignment`|Enum|Ein Wert, der angibt, wie die Feldwerte in einer Tabellenpräsentation ausgerichtet werden sollten. Mögliche Werte `Default`, `Center`, `Left`, `Right`. Wenn der Wert nicht angegeben wird, wird die Ausrichtung durch den Standardwert auf Grundlage des Datentyps des Felds bestimmt.|  

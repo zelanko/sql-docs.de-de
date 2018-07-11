@@ -1,26 +1,24 @@
 ---
-title: Zugreifen auf Diagnoseinformationen im Protokoll für erweiterte Ereignisse | Microsoft Docs
+title: Zugreifen auf Diagnoseinformationen im Protokoll für erweiterte Ereignisse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8151d4fa7d6ad1fd96b86b895d8e8b1ac91dc3f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: eab7a558054b423e3a18e54ad94bc91060082aad
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056696"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420909"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Zugreifen auf Diagnoseinformationen im Protokoll der erweiterten Ereignisse
   Ab [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]wurden der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client und die Datenzugriffs-Ablaufverfolgung ([Datenzugriffs-Ablaufverfolgung](http://go.microsoft.com/fwlink/?LinkId=125805)) aktualisiert, um das Abrufen von Diagnoseinformationen über Verbindungsfehler vom Verbindungsringpuffer sowie von Informationen zur Anwendungsleistung aus dem Protokoll für erweiterte Ereignisse zu erleichtern.  
@@ -31,11 +29,11 @@ ms.locfileid: "36056696"
 >  Diese Funktion ist nur für Problembehandlung und Diagnosezwecke vorgesehen und ist möglicherweise nicht geeignet zu Überwachungs oder Sicherheitszwecken.  
   
 ## <a name="remarks"></a>Hinweise  
- Für Verbindungsvorgänge sendet der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client eine Clientverbindungs-ID. Wenn die Verbindung fehlschlägt, können Sie dem konnektivitätsringpuffer zugreifen ([Connectivity troubleshooting in SQL Server 2008 with the Connectivity Ring Buffer](http://go.microsoft.com/fwlink/?LinkId=207752)) und suchen Sie nach der `ClientConnectionID` Feld und Abrufen von Diagnoseinformationen über die Verbindungsfehler. Clientverbindungs-IDs werden nur im Ringpuffer protokolliert, wenn ein Fehler auftritt. (Wenn vor dem Senden des prelogin-Pakets keine Verbindung hergestellt werden kann, wird keine Clientverbindungs-ID generiert.) Die Clientverbindungs-ID ist eine 16-Byte-GUID. Sie erhalten auch den Client Verbindungs-ID im erweiterten Ereignisse-Ausgabeziel, wenn die `client_connection_id` -Aktion Ereignissen in einer Sitzung für erweiterte Ereignisse hinzugefügt wird. Sie können die Datenzugriffs-Ablaufverfolgung aktivieren, den Verbindungsbefehl erneut ausführen und das `ClientConnectionID`-Feld in der Datenzugriffs-Ablaufverfolgung für einen fehlgeschlagenen Vorgang beobachten, wenn Sie weitere Hilfe bei der Diagnose benötigen.  
+ Für Verbindungsvorgänge sendet der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client eine Clientverbindungs-ID. Wenn die Verbindung fehlschlägt, können Sie auf den verbindungsringpuffer zugreifen ([Behandlung von Konnektivitätsproblemen in SQL Server 2008 mit dem Konnektivitätsringpuffer](http://go.microsoft.com/fwlink/?LinkId=207752)) und suchen Sie die `ClientConnectionID` Feld und Diagnoseinformationen zum Abrufen der Verbindungsfehler. Clientverbindungs-IDs werden nur im Ringpuffer protokolliert, wenn ein Fehler auftritt. (Wenn vor dem Senden des prelogin-Pakets keine Verbindung hergestellt werden kann, wird keine Clientverbindungs-ID generiert.) Die Clientverbindungs-ID ist eine 16-Byte-GUID. Finden Sie auch den Client ID im erweiterten Ereignisse-Ausgabeziel, wenn die `client_connection_id` -Aktion Ereignissen in einer erweiterten ereignissitzung hinzugefügt wird. Sie können die Datenzugriffs-Ablaufverfolgung aktivieren, den Verbindungsbefehl erneut ausführen und das `ClientConnectionID`-Feld in der Datenzugriffs-Ablaufverfolgung für einen fehlgeschlagenen Vorgang beobachten, wenn Sie weitere Hilfe bei der Diagnose benötigen.  
   
- Bei Verwendung von ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client und eine Verbindung erfolgreich ist, können Sie den Client Verbindungs-ID mithilfe der `SQL_COPT_SS_CLIENT_CONNECTION_ID` -Attribut mit [SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md).  
+ Bei Verwendung von ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client verwenden und eine Verbindung erfolgreich ist, können Sie den Client mithilfe von Verbindungs-ID der `SQL_COPT_SS_CLIENT_CONNECTION_ID` -Attribut mit [SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md).  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client sendet auch eine Thread-spezifische Aktivitäts-ID. Die Aktivitäts-ID wird in den Sitzungen für erweiterte Ereignisse aufgezeichnet, wenn die Sitzungen bei aktivierter TRACK_CAUSAILITY-Option gestartet werden. Sie können die Aktivitäts-ID aus der Datenzugriffs-Ablaufverfolgung des Clients abrufen, bei Leistungsproblemen mit einer aktiven Verbindung können (`ActivityID` Feld), und klicken Sie dann die Aktivitäts-ID in der Ausgabe der erweiterten Ereignisse suchen. Die Aktivitäts-ID in den erweiterten Ereignissen ist eine 16-Byte-GUID (nicht dieselbe wie die GUID für die Clientverbindungs-ID), der eine Vier-Byte-Sequenznummer angefügt wurde. Die Sequenznummer steht für die Reihenfolge einer Anforderung innerhalb eines Threads und gibt die relative Reihenfolge des Batches und der RPC-Anweisungen für den Thread an. Die `ActivityID` ist optional für SQL-Batchanweisungen und RPC-Anforderungen gesendet, wenn auf die Datenzugriffs-Ablaufverfolgung aktiviert ist und das 18. Bit im Datenzugriffs Ablaufverfolgungs eingeschaltet ist.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client sendet auch eine Thread-spezifische Aktivitäts-ID. Die Aktivitäts-ID wird in den Sitzungen für erweiterte Ereignisse aufgezeichnet, wenn die Sitzungen bei aktivierter TRACK_CAUSAILITY-Option gestartet werden. Bei Leistungsproblemen mit einer aktiven Verbindung können Sie die Aktivitäts-ID aus der Datenzugriffs-Ablaufverfolgung des Clients abrufen (`ActivityID` Feld) und dann die Aktivitäts-ID in die Ausgabe der erweiterten Ereignisse suchen. Die Aktivitäts-ID in den erweiterten Ereignissen ist eine 16-Byte-GUID (nicht dieselbe wie die GUID für die Clientverbindungs-ID), der eine Vier-Byte-Sequenznummer angefügt wurde. Die Sequenznummer steht für die Reihenfolge einer Anforderung innerhalb eines Threads und gibt die relative Reihenfolge des Batches und der RPC-Anweisungen für den Thread an. Die `ActivityID` wird optional für SQL-Batchanweisungen und RPC-Anforderungen gesendet, wenn für die Datenzugriffs-Ablaufverfolgung aktiviert ist und das 18. Bit im Datenzugriffs Ablaufverfolgungs eingeschaltet ist.  
   
  Im folgenden Beispiel wird [!INCLUDE[tsql](../../../includes/tsql-md.md)] zum Starten einer Sitzung für erweiterte Ereignisse verwendet, die in einem Ringpuffer gespeichert werden und die von einem Client in RPC- und Batch-Vorgängen gesendete Aktivitäts-ID aufzeichnen.  
   

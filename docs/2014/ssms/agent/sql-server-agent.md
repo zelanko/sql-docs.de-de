@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, about SQL Server Agent
 - automatic administration steps
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e90a916b586215b23f15e6d3237690352f9aedd1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4f3a29acfe387b4b4e80d9e9a0ee232476d6074d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058435"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230470"
 ---
 # <a name="sql-server-agent"></a>SQL Server-Agent
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent ist ein Microsoft Windows-Dienst, der geplante administrative Tasks ausführt, die in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] als *Jobs* bezeichnet werden.  
@@ -35,7 +35,7 @@ ms.locfileid: "36058435"
   
 -   [Sicherheit beim Verwalten des SQL Server-Agents](#Security)  
   
-##  <a name="Benefits"></a> Vorteile der SQL Server-Agent  
+##  <a name="Benefits"></a> Vorteile von SQL Server-Agent  
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Speichern von Auftragsinformationen. Aufträge enthalten mindestens einen Auftragsschritt. Jeder Schritt umfasst einen eigenen Task, z.B. das Sichern einer Datenbank.  
   
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent kann einen Auftrag anhand eines Zeitplans, als Reaktion auf ein bestimmtes Ereignis oder bei Bedarf ausführen. Wenn Sie z.B. am Ende jedes Arbeitstages alle Server des Unternehmens sichern möchten, können Sie diesen Task automatisieren. Planen Sie die Sicherung so, dass sie montags bis freitags nach 22:00 Uhr ausgeführt wird. Falls bei der Sicherung ein Problem auftritt, kann der SQL Server-Agent das Ereignis aufzeichnen und Sie benachrichtigen.  
@@ -118,7 +118,7 @@ ms.locfileid: "36058435"
  Ein Operator kann auch als Alias für eine Gruppe von Personen definiert werden. In diesem Fall werden alle Mitglieder dieses Alias zur selben Zeit benachrichtigt. Weitere Informationen finden Sie unter [Operatoren](operators.md).  
   
 ##  <a name="Security"></a> Sicherheit für SQL Server-Agent-Verwaltung  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent verwendet die **SQLAgentUserRole**, **SQLAgentReaderRole**, und **SQLAgentOperatorRole** Datenbankrollen in der **Msdb** Datenbank zum Steuern des Zugriffs auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent für Benutzer, die keine Mitglieder sind von der `sysadmin` festen Serverrolle "". Neben diesen festen Datenbankrollen können Datenbankadministratoren mithilfe von Subsystemen und Proxys sicherstellen, dass jeder Auftragsschritt mit den mindestens erforderlichen Berechtigungen ausgeführt wird.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent verwendet die **SQLAgentUserRole**, **SQLAgentReaderRole**, und **SQLAgentOperatorRole** Datenbankrollen in der **Msdb** Datenbank zum Steuern des Zugriffs auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent für Benutzer, die nicht Mitglied von der `sysadmin` -Serverrolle sein. Neben diesen festen Datenbankrollen können Datenbankadministratoren mithilfe von Subsystemen und Proxys sicherstellen, dass jeder Auftragsschritt mit den mindestens erforderlichen Berechtigungen ausgeführt wird.  
   
 ### <a name="roles"></a>Rollen  
  Mitglieder der **SQLAgentUserRole**, **SQLAgentReaderRole**, und **SQLAgentOperatorRole** Datenbankrollen in **Msdb**, und Mitglieder der `sysadmin` -Serverrolle haben Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Ein Benutzer, der keiner dieser Rollen angehört, kann den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent nicht verwenden. Weitere Informationen zu den Rollen, die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendet werden, finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
@@ -130,7 +130,7 @@ ms.locfileid: "36058435"
   
 |Name des Subsystems|Description|  
 |--------------------|-----------------|  
-|Microsoft ActiveX-Skript|Ausführen eines ActiveX-Skriptauftragsschritts.<br /><br /> **\*\* Wichtige \* \***  das ActiveX Scripting-Subsystem daraus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents in einer zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
+|Microsoft ActiveX-Skript|Ausführen eines ActiveX-Skriptauftragsschritts.<br /><br /> **\*\* Wichtige \* \***  das ActiveX-skriptsubsystem wird aufgehoben, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent in einer zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
 |Betriebssystem (**CmdExec**)|Ausführen eines ausführbaren Programms.|  
 |PowerShell|Ausführen eines PowerShell-Skripterstellungs-Auftragsschritts.|  
 |Replikationsverteiler|Ausführen eines Auftragsschritts, der den Replikationsverteilungs-Agent aktiviert.|  

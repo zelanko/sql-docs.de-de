@@ -1,5 +1,5 @@
 ---
-title: Microsoft Decision Trees Algorithm Technical Reference | Microsoft Docs
+title: Microsoft Decision Trees Algorithm Technical Reference | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_INPUT_ATTRIBUTES parameter
 - SPLIT_METHOD parameter
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SCORE_METHOD parameter
 ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: edb2b9790ac2294f53c26b65e9897064f4050083
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a73db73c49f50c49fdfd36d754f8d70ce651547
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060212"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183407"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Decision Trees-Algorithmus
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus ist ein hybrider Algorithmus, der verschiedene Methoden zum Erstellen einer Struktur integriert und mehrere analytische Tasks, wie Regression, Klassifikation und Zuordnung, unterstützt. Der Microsoft Decision Trees-Algorithmus unterstützt die Modellierung sowohl diskreter als auch fortlaufender Attribute.  
@@ -179,7 +179,7 @@ ms.locfileid: "36060212"
   
 |Modellierungsflag|Description|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|Dies bedeutet, dass die Spalte zwei mögliche Statuswerte haben behandelt: `Missing` und `Existing`. Ein NULL-Wert ist ein fehlender Wert.<br /><br /> Gilt für die Miningmodellspalten.|  
+|MODEL_EXISTENCE_ONLY|Bedeutet, dass die Spalte zwei mögliche Statuswerte haben behandelt: `Missing` und `Existing`. Ein NULL-Wert ist ein fehlender Wert.<br /><br /> Gilt für die Miningmodellspalten.|  
 |NOT NULL|Gibt an, dass die Spalte keinen NULL-Wert enthalten kann. Ein Fehler tritt auf, wenn Analysis Services während des Modelltrainings einen NULL-Wert erkennt.<br /><br /> Gilt für die Miningstrukturspalten.|  
   
 ### <a name="regressors-in-decision-tree-models"></a>Regressoren in Entscheidungsstrukturmodellen  
@@ -187,7 +187,7 @@ ms.locfileid: "36060212"
   
  Sie müssen nicht angeben, dass eine Spalte mit kontinuierlichen numerischen Daten einen Regressor darstellt. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus verwendet die Spalte automatisch als potenziellen Regressor und unterteilt das Dataset selbst dann in Bereiche mit sinnvollen Mustern, wenn Sie das REGRESSOR-Flag nicht für die Spalte festlegen.  
   
- Sie können durch Einsatz des FORCE_REGRESSOR-Parameters jedoch gewährleisten, dass der Algorithmus einen bestimmten Regressor verwendet. Dieser Parameter kann nur mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus und dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus verwendet werden. Wenn Sie das Modellierungsflag festlegen, versucht der Algorithmus regressionsgleichungen der Form finden eine * C1 + b\*C2 + … um die Muster in den Knoten der Struktur. Dann wird die Summe der Restwerte berechnet, und wenn die Abweichung zu groß ist, wird die Struktur unterteilt.  
+ Sie können durch Einsatz des FORCE_REGRESSOR-Parameters jedoch gewährleisten, dass der Algorithmus einen bestimmten Regressor verwendet. Dieser Parameter kann nur mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus und dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus verwendet werden. Wenn Sie das Modellierungsflag festlegen, versucht der Algorithmus regressionsgleichungen der Form finden eine * C1 + b\*C2 +..., die Muster den Knoten der Struktur zuzuordnen. Dann wird die Summe der Restwerte berechnet, und wenn die Abweichung zu groß ist, wird die Struktur unterteilt.  
   
  Wenn Sie beispielsweise das Kaufverhalten von Kunden mithilfe des Attributs **Einkommen** vorhersagen und das Modellierungsflag REGRESSOR für die Spalte festlegen, versucht der Algorithmus zuerst, die Werte der Spalte **Einkommen** mithilfe einer Standardregressionsformel zuzuordnen. Ist die Abweichung zu groß, dann wird die Regressionsformel ignoriert und die Struktur nach einem anderen Attribut unterteilt. Der Decision Tree-Algorithmus versucht nach der Unterteilung, jedem der Zweige einen Regressor für Einkommen zuzuordnen.  
   
@@ -207,7 +207,7 @@ ms.locfileid: "36060212"
   
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Decision Trees-Algorithmus](microsoft-decision-trees-algorithm.md)   
- [Decision Trees-Abfragebeispiele](decision-trees-model-query-examples.md)   
- [Miningmodellinhalt Entscheidungsstrukturmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Entscheidungsstruktur-Modellabfragen](decision-trees-model-query-examples.md)   
+ [Mingingmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

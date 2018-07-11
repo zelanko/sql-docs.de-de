@@ -1,5 +1,5 @@
 ---
-title: Definieren von verknüpften Dimensionen | Microsoft Docs
+title: Definieren von verknüpften Dimensionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], linked
 - linked dimensions [Analysis Services]
 ms.assetid: d5ad5eae-5dde-46a6-91c3-c8766d016dec
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b4ddd7a9c833346956e3c5ccdde93873028f663
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 263d51971081fec9570c1e6787169c1b9ec50b42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060151"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155361"
 ---
 # <a name="define-linked-dimensions"></a>Definieren von verknüpften Dimensionen
   Eine verknüpfte Dimension basiert auf einer Dimension, die in einer anderen Analysis Services-Datenbank mit derselben Version und demselben Kompatibilitätsgrad erstellt und gespeichert wurde. Mithilfe einer verknüpften Dimension können Sie eine Dimension in einer Datenbank erstellen, speichern und verwalten und gleichzeitig Benutzern mehrerer Datenbanken zur Verfügung stellen. Für Benutzer sieht eine verknüpfte Dimension genauso aus wie jede andere Dimension.  
@@ -35,7 +35,7 @@ ms.locfileid: "36060151"
 >  Da keine Aktualisierungsfunktion verfügbar ist, werden Dimensionen von den meisten Analysis Services-Entwicklern kopiert und nicht verknüpft. Sie können Dimensionen zwischen Projekten innerhalb derselben Projektmappe kopieren. Weitere Informationen finden Sie unter [Aktualisieren einer verknüpften Dimension in SSAS](http://sqlblog.com/blogs/marco_russo/archive/2006/09/12/refresh-of-a-linked-dimension-in-ssas.aspx).  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
- Die Quelldatenbank, die die Dimension enthält, und die aktuelle Datenbank, von der sie verwendet wird, müssen über die gleiche Version und den gleichen Kompatibilitätsgrad verfügen. Weitere Informationen finden Sie unter [legen Sie den Kompatibilitätsgrad einer mehrdimensionalen Datenbank &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md).  
+ Die Quelldatenbank, die die Dimension enthält, und die aktuelle Datenbank, von der sie verwendet wird, müssen über die gleiche Version und den gleichen Kompatibilitätsgrad verfügen. Weitere Informationen finden Sie unter [Festlegen des Kompatibilitätsgrads einer mehrdimensionalen Datenbank &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
  Die Quelldatenbank muss bereitgestellt und online geschaltet sein. Server, die verknüpfte Objekte veröffentlichen oder nutzen, müssen so konfiguriert werden, dass der Vorgang zulässig ist (siehe unten).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36060151"
   
 2.  Überprüfen Sie im Verbindungs-Manager, ob der Anbieter auf **OLE DB systemeigen\Microsoft OLE DB-Anbieter für Analysis Services 11.0**festgelegt ist.  
   
-3.  Geben Sie den Namen des Servers (verwenden Sie *Servername*\\*Instancename* für eine benannte Instanz)<sup>1</sup> oder Typ **"localhost"** an Verbinden Sie mit einem Analysis Services-Server, der auf demselben Computer ausgeführt wird.  
+3.  Geben Sie den Namen des Servers (verwenden Sie *Servername*\\*Instancename* für eine benannte Instanz)<sup>1</sup> oder **"localhost"** auf Verbinden Sie mit einem Analysis Services-Server, der auf dem gleichen Computer ausgeführt wird.  
   
 4.  Verwenden Sie die Windows-Authentifizierung für die Verbindung.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rawfiledest.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fc290b7be9c9b97d06432d677b2337cc855389a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8898d3932b809596bbbc0aa415c34bfdb4200c72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058753"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239280"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
   Das Rohdatendatei-Ziel schreibt Rohdaten in eine Datei. Die Daten liegen im systemeigenen Zielformat vor, sodass die Daten nicht übersetzt und kaum analysiert werden müssen. Dies bedeutet, dass das Rohdatendatei-Ziel Daten schneller als andere Ziele, wie z. B. Flatfile- und OLE DB-Ziele, schreiben kann.  
@@ -117,7 +117,7 @@ ms.locfileid: "36058753"
   
 1.  Legen Sie die „WriteOption“-Eigenschaft auf **CreateOnce** oder **CreateAlways**fest, und führen Sie dann eine Iteration der Schleife aus. Die Datei ist erstellt. Dadurch wird sichergestellt, dass die Metadaten der angefügten Daten mit der Datei übereinstimmen.  
   
-2.  Zurücksetzen auf die WriteOption-Eigenschaft **Append** und legen Sie die Eigenschaft ' ValidateExternalMetadata ' auf `False`.  
+2.  Zurücksetzen auf die "WriteOption"-Eigenschaft **Append** und legen Sie die ValidateExternalMetadata-Eigenschaft auf `False`.  
   
  Wenn Sie die Option **TruncateAppend** statt der Option **Append** verwenden, werden die Zeilen abgeschnitten, die in einer vorherigen Iteration hinzugefügt wurden, und dann neue Zeilen angefügt. Das Verwenden der Option **TruncateAppend** erfordert auch, dass die Daten im Dateiformat übereinstimmen.  
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.externaltools
 helpviewer_keywords:
 - External Tools dialog box
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ecaf04f54600f26489aa1b34ee1cbf69645752d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 42e289a8ec12b64841f190297be60cfee31e007f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147613"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157491"
 ---
 # <a name="external-tools"></a>Externe Tools
   Verwenden Sie dieses Dialogfeld, um dem Menü **Extras** externe Tools hinzuzufügen, z. B. SQL Server-Konfigurations-Manager oder Editor. Durch das Hinzufügen externer Tools erleichtern Sie das Starten anderer Anwendungen während der Arbeit mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Sie können beim Starten des Tools Argumente und ein Arbeitsverzeichnis angeben. Zusätzlich können die Ausgaben einiger Tools im Ausgabefenster angezeigt werden. Das Dialogfeld **Externe Tools** wird über das Menü **Extras** aufgerufen.  
@@ -76,7 +76,7 @@ ms.locfileid: "36147613"
   
 2.  Geben Sie in das Feld **Titel** den Titel **SQL Server-Konfigurations-Manager**ein.  
   
-3.  In der **Befehl** geben den Pfad zu der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Verwaltungskonsole, die ausführbare Datei, z. B. `C:\WINNT\system32\mmc.exe`  
+3.  In der **Befehl** geben den Pfad zu der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Verwaltungskonsole, die ausführbare Datei an, wie z. B. `C:\WINNT\system32\mmc.exe`  
   
 4.  In der **Argumente** geben den Pfad zur MSC-Datei, z. B. `"C:\WINNT\system32\SQLServerManager.msc"`  
   

@@ -1,5 +1,5 @@
 ---
-title: Zuordnen Meridian Eigenschaften (Dialogfeld), Bezeichnungen | Microsoft Docs
+title: Zuordnen Meridianeigenschaften Eigenschaften (Dialogfeld), Bezeichnungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapmeridianproperties.labels.f1
 - "10518"
 ms.assetid: 47650a82-3b0c-4e32-8565-e9332bdcf4d6
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: aba651eed623304f977a548a18537c6fdd5c14cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 05fe2f7cecbcc2f43e5013d5785f76e09feecf8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060244"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163881"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>Meridianeigenschaften von Karten (Dialogfeld), Bezeichnungen
-  Verwenden der **MapMeridian Eigenschaften** -Dialogfeld bezeichnungsoptionen für das vertikale Raster im kartenviewport zu ändern. Ein Meridian stellt den folgenden Wert abhängig vom angegebenen Koordinatensystem für den Viewport dar:  
+  Verwenden der **MapMeridian Eigenschaften** im Dialogfeld Optionen für Bezeichnungen für das vertikale Raster im kartenviewport zu ändern. Ein Meridian stellt den folgenden Wert abhängig vom angegebenen Koordinatensystem für den Viewport dar:  
   
 -   **Planar**. Die Y-Koordinate.  
   

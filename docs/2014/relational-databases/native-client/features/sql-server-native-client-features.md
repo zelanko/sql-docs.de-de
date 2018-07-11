@@ -1,13 +1,11 @@
 ---
-title: SQL Server Native Client-Funktionen | Microsoft Docs
+title: SQL Server Native Client-Funktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - data access [SQL Server Native Client], features
 ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dc73fcc6a4ecd188053e3ae8ac1064ecc84192e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 76e7798edc0d11555d0281ff6c026f63f7ea3426
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056921"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411309"
 ---
 # <a name="sql-server-native-client-features"></a>SQL Server Native Client-Funktionen
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client macht nicht nur Funktionen der Windows (früher Microsoft) Data Access Components (WDAC) verfügbar, sondern implementiert zudem viele weitere Funktionen, um die Funktionalität von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verfügbar zu machen.  
@@ -35,7 +33,7 @@ ms.locfileid: "36056921"
  Erläutert das geänderte Verhalten ab [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client.  
   
  [Verwenden der Datenbankspiegelung](using-database-mirroring.md)  
- Erläutert, wie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client unterstützt die Verwendung von gespiegelten Datenbanken, also die Möglichkeit, behalten Sie eine Kopie oder Spiegelserver, der eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datenbank auf einem Standbyserver.  
+ Erläutert, wie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client unterstützt die Verwendung von gespiegelten Datenbanken, die Möglichkeit, eine Kopie, oder auch Spiegelbild, der beibehalten wird eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datenbank auf einem Standbyserver.  
   
  [Ausführen asynchroner Vorgänge](performing-asynchronous-operations.md)  
  Erläutert, auf welche Weise [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client asynchrone Vorgänge unterstützt. Das ist die Fähigkeit, Rückgaben unverzüglich zu übermitteln, ohne den aufrufenden Thread zu blockieren.  
@@ -62,7 +60,7 @@ ms.locfileid: "36056921"
  Erläutert, auf welche Weise [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client die Benachrichtigung von Consumern bei Rowsetänderungen unterstützt.  
   
  [Durchführen von Massenkopiervorgängen](performing-bulk-copy-operations.md)  
- Erläutert, wie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client unterstützt Massenkopiervorgänge, die die Übertragung großer Datenmengen in bzw. aus der ermöglichen eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Tabelle oder Sicht.  
+ Erläutert, wie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client unterstützt Massenkopiervorgänge, die ermöglichen, die Übertragung großer Datenmengen in oder aus einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Tabelle oder Sicht.  
   
  [Verwenden von Verschlüsselung ohne Überprüfung](using-encryption-without-validation.md)  
  Erläutert, wie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client zur Verschlüsselung an den Server gesendeter Daten ohne Prüfung des Zertifikats verwendet wird.  
@@ -74,9 +72,9 @@ ms.locfileid: "36056921"
  Erläutert die Unterstützung für große CLR-benutzerdefinierte Typen (Common Language Runtime).  
   
  [FILESTREAM-Unterstützung](filestream-support.md)  
- Erläutert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Unterstützung für die verbesserte FILESTREAM-Funktion.  
+ Erläutert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Unterstützung für die verbesserte Funktion FILESTREAM.  
   
- [Dienstprinzipalnamen &#40;SPN&#41; -Unterstützung in Clientverbindungen](service-principal-name-spn-support-in-client-connections.md)  
+ [Dienstprinzipalname &#40;SPN&#41; Unterstützung in Clientverbindungen](service-principal-name-spn-support-in-client-connections.md)  
  Erläutert, auf welche Weise die Unterstützung für Dienstprinzipalnamen (Service Principal Names, SPN) erweitert wurde, damit die gegenseitige Authentifizierung über alle Protokolle hinweg möglich ist.  
   
  [Unterstützung für Spalten mit geringer Dichte in SQL Server Native Client](sparse-columns-support-in-sql-server-native-client.md)  
@@ -92,7 +90,7 @@ ms.locfileid: "36056921"
  Erläutert eine mit [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] eingeführte Verhaltensänderung. Ab [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client wird dem Puffer kein hoher Ersatzzeichencodepunkt hinzugefügt, wenn Sie beim Binden eines Spaltenergebnisses oder Ausgabeparameters einen Puffer fester Länge übergeben und das vor dem abschließenden Zeichen in den Puffer geschriebene `wchar`-Zeichen ein hoher Ersatzzeichencodepunkt eines Ersatzzeichenpaars und das nächste `wchar`-Zeichen ein niedriger Ersatzzeichencodepunkt ist.  
   
  [SQL Server Native Client-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung](sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
- Erläutert, wie die Anwendung konfiguriert werden kann, um die hohe Verfügbarkeit und notfallwiederherstellung nutzen Funktionen, in hinzugefügt [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
+ Erläutert, wie Ihre Anwendung konfiguriert werden kann, um die hohe Verfügbarkeit und notfallwiederherstellung nutzen Funktionen, in hinzugefügt [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
  [Zugreifen auf Diagnoseinformationen im Protokoll der erweiterten Ereignisse](accessing-diagnostic-information-in-the-extended-events-log.md)  
  Erläutert Erweiterungen zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client und -Datenablaufverfolgung, die Ihnen Zugriff auf Diagnoseinformationen im Ringpuffer und XEvents-Protokoll geben.  
@@ -103,7 +101,7 @@ ms.locfileid: "36056921"
 ## <a name="see-also"></a>Siehe auch  
  [Programmierung für SQL Server Native Client](../sql-server-native-client-programming.md)   
  [Vorgehensweisen zu ODBC](../../native-client-odbc-how-to/odbc-how-to-topics.md)   
- [OLE DB-Themen zur Vorgehensweise](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)   
+ [Vorgehensweisen für OLE DB](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)   
  [Installieren von SQL Server Native Client](../applications/installing-sql-server-native-client.md)  
   
   

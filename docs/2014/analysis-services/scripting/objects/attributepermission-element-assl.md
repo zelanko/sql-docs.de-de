@@ -1,5 +1,5 @@
 ---
-title: AttributePermission-Element (ASSL) | Microsoft Docs
+title: AttributePermission-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AttributePermission element
 ms.assetid: efc8aa63-3959-4b2e-98f8-2a9c424298c2
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5ee5d846cdf849959bc1a916dd82fd95de60e6e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0c39047b1f63f0abbab109e2d1e8f82ca2a4c863
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059244"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277876"
 ---
 # <a name="attributepermission-element-assl"></a>AttributePermission-Element (ASSL)
-  Definiert den Berechtigungen, die Elemente einer [Rolle](role-element-assl.md) Element verfügen, auf die Attribute einer individuellen Dimension in einem [Cube](cube-element-assl.md) Element.  
+  Definiert den Berechtigungen, die Elemente einer [Rolle](role-element-assl.md) Element verfügen, für die Attribute einer individuellen Dimension in einem [Cube](cube-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36059244"
 |Untergeordnete Elemente|[AllowedSet](../properties/allowedset-element-assl.md), [Anmerkungen](../collections/annotations-element-assl.md), [AttributeID](../properties/id-element-assl.md), [DefaultMember](member-element-assl.md), [DeniedSet](../properties/deniedset-element-assl.md), [Beschreibung ](../properties/description-element-assl.md), [VisualTotals](../properties/visualtotals-element-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.AttributePermission>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.AttributePermission>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CubeDimensionPermission-Datentyp &#40;ASSL&#41;](../data-type/permission-data-type-assl.md)   

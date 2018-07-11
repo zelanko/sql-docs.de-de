@@ -1,5 +1,5 @@
 ---
-title: Installieren von Analysis Services im tabellarischen Modus | Microsoft Docs
+title: Installieren von Analysis Services im tabellarischen Modus | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
 caps.latest.revision: 16
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: f6fabd9129e3f3e1e07e813935f36e7c70c48072
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b6ee555e975e89da584c0efab3fab8bb9f9429a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060614"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183447"
 ---
 # <a name="install-analysis-services-in-tabular-mode"></a>Installieren von Analysis Services im Tabellenmodus
   Wenn Sie Analysis Services installieren, um die neuen Tabellenmodellierungsfunktionen zu verwenden, müssen Sie Analysis Services in einem Servermodus installieren, der diesen Modelltyp unterstützt. Der Servermodus ist "Tabellarisch" und wird während der Installation konfiguriert.  
@@ -33,9 +33,9 @@ ms.locfileid: "36060614"
   
 1.  Wählen Sie in der Funktionsstruktur des Setups **Analysis Services** aus.  
   
-     ![Setup-Funktionsstruktur mit Funktionsstruktur Services](../../../sql-server/install/media/ssas-setupas.gif "Setup-Funktionsstruktur Funktionsstruktur Dienste anzeigen")  
+     ![Setup-Funktionsstruktur mit Funktionsstruktur Services](../../../sql-server/install/media/ssas-setupas.gif "Funktionsstruktur Dienste mit Setup-Funktionsstruktur")  
   
-2.  Auf der Seite Analysis Services-Konfiguration müssen Sie auswählen **Tabellenmodus**.  
+2.  Auf der Seite Analysis Services-Konfiguration müssen Sie auswählen **im tabellarischen Modus**.  
   
      ![Setupseite mit Analysis Services-Konfigurationsoptionen](../../../sql-server/install/media/ssas-setupasconfig.gif "Setupseite mit Analysis Services-Konfigurationsoptionen")  
   
@@ -53,7 +53,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
  Alle Platzhalterkontowerte müssen durch gültige Konten und Kennwörter ersetzt werden.  
   
- Mit der angegebenen Beispielbefehlszeilensyntax werden keine Tools, z. B. SQL Server Management Studio oder [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], installiert. Weitere Informationen zum Hinzufügen von Funktionen finden Sie unter [Installieren von SQL Server 2014 von der Befehlszeile aus](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
+ Mit der angegebenen Beispielbefehlszeilensyntax werden keine Tools, z. B. SQL Server Management Studio oder [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], installiert. Weitere Informationen zum Hinzufügen von Funktionen finden Sie unter [Installieren von SQL Server 2014 über die Eingabeaufforderung](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
  `ASSERVERMODE` ist Groß-/Kleinschreibung beachtet.  Alle Werte müssen in Großbuchstaben angegeben werden. In der folgenden Tabelle werden die gültigen Werte für `ASSERVERMODE` beschrieben.  
   
@@ -65,7 +65,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
 ## <a name="see-also"></a>Siehe auch  
  [Bestimmen des Servermodus einer Analysis Services-Instanz](../determine-the-server-mode-of-an-analysis-services-instance.md)   
- [Konfigurieren von Speicherinternem oder DirectQuery-Zugriff für eine tabellarische Modelldatenbank](../../tabular-models/enable-directquery-mode-in-ssms.md)   
- [Tabellenmodellierung &#40;SSAS – tabellarisch&#41;](../../tabular-models/tabular-models-ssas.md)  
+ [Konfigurieren von Speicherinternem oder DirectQuery-Zugriff für eine Datenbank für tabellarische Modelle](../../tabular-models/enable-directquery-mode-in-ssms.md)   
+ [Tabellarische Modellierung &#40;SSAS – tabellarisch&#41;](../../tabular-models/tabular-models-ssas.md)  
   
   

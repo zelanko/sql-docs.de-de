@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_PERFORMANCE_COUNTERS-Rowset | Microsoft Docs
+title: DISCOVER_PERFORMANCE_COUNTERS-Rowset | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 62b1e967-af67-4915-a305-727bffd61fe4
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9e3731ae505a755bd68410ee3228a1bd13579bc8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8a17c8f404d99d4b701eafb536aaa595a4039bc9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061254"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151211"
 ---
 # <a name="discoverperformancecounters-rowset"></a>DISCOVER_PERFORMANCE_COUNTERS-Rowset
   Gibt den Wert von mindestens einem Leistungsindikator zurück. Unterstützt keine Leistungsindikatoren, die Informationen zur Verwendung im Zeitverlauf (z. B. Lesevorgänge auf dem Datenträger pro Sekunde und Prozentsatz der CPU-Auslastung) zurückgeben.  

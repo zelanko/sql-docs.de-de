@@ -1,5 +1,5 @@
 ---
-title: Veröffentlichen von Daten (MDS-Add-in für Excel) | Microsoft Docs
+title: Veröffentlichen von Daten (MDS-Add-in für Excel) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 39acbad0925e8dfc250fcd4cc3913dbaf0ff0771
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f9fbee4ad70222c81f8f2fc40c460974f6f5ac05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060520"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155061"
 ---
 # <a name="publishing-data-mds-add-in-for-excel"></a>Veröffentlichen von Daten (MDS-Add-In für Excel)
   Veröffentlichen Sie in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]im MDS-Repository Daten, wenn Sie diese für andere Benutzer freigeben möchten. Sobald die Daten veröffentlicht werden, stehen sie anderen Benutzern des Add-Ins zum Herunterladen zur Verfügung.  
@@ -39,7 +39,7 @@ ms.locfileid: "36060520"
   
 -   Sie können keine Löschungen kommentieren, obwohl Löschungen als Transaktionen gespeichert werden, die von einem Administrator umgekehrt werden können.  
   
--   Wenn Sie ändern die **Code** Wert für ein Element, wird er nicht als Transaktion aufgezeichnet, und alle vorherige Transaktionen für das Element nicht verfügbar ist.  
+-   Wenn Sie ändern die **Code** Wert für ein Mitglied ist es nicht als Transaktion aufgezeichnet, und alle vorherige Transaktionen für das Element nicht verfügbar sind.  
   
 -   Sie können Transaktionen anzeigen, die von anderen Benutzern an einem Element vorgenommen wurden. Sie können auch alle Transaktionen anzeigen, die Sie an einem Element vorgenommen haben, auch wenn Sie nicht mehr über die Berechtigung für bestimmte Attribute verfügen.  
   

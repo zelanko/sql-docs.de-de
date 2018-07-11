@@ -1,5 +1,5 @@
 ---
-title: Attribute (Registerkarte Dimensionsstruktur, Dimensions-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Attribute (Registerkarte Dimensionsstruktur, Dimensions-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.attributespane.f1
 ms.assetid: 627eaa08-7638-4edd-bdfa-0d8175a7cde5
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 289127d0d4bb155045c530cc49b336048a80034c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 693eb878c4e16e2b25dc959ce54a1e908c0d50d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059477"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161621"
 ---
 # <a name="attributes-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Attribute (Registerkarte Dimensionsstruktur, Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
   Verwalten Sie mithilfe dieses Bereichs die mit der ausgewählten Dimension verknüpften Attribute. Attribute können aus diesem Bereich in den Bereich **Hierarchien** gezogen werden, um so Hierarchien und Ebenen zu erstellen. Weitere Informationen finden Sie unter [Hierarchies &#40;Dimension Structure Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md).  
