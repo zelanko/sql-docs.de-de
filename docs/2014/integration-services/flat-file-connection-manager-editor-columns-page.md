@@ -1,5 +1,5 @@
 ---
-title: Flatfile-Verbindungs-Manager-Editor (Spaltenseite) | Microsoft Docs
+title: Flatfile-Verbindungs-Manager-Editor (Spaltenseite) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ffileconnection.columns.f1
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 40ce7537-abd0-4973-97fd-6ccb90fddfa0
 caps.latest.revision: 20
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5592f71b5373c6bfab1f59e797b19363a344e929
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 166393522090c1d5c0455104c0d046319741f2b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058097"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240952"
 ---
 # <a name="flat-file-connection-manager-editor-columns-page"></a>Verbindungs-Manager-Editor für Flatfiles (Seite Spalten)
   Verwenden Sie die Seite **Spalten** im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** , um die Zeilen- und Spalteninformationen anzugeben und eine Vorschau der Datei anzuzeigen.  

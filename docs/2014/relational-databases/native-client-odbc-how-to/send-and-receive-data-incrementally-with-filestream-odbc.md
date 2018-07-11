@@ -1,26 +1,24 @@
 ---
-title: Senden und Empfangen von Daten inkrementell mit FILESTREAM (ODBC) | Microsoft Docs
+title: Senden und Empfangen von Daten mit FILESTREAM (ODBC) inkrementell | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8dd8da5f08825d9914e0018ffaa72b8f61eae95f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2dbe4128fb05732af795ff689c56c78a5066e862
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049893"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412259"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>Inkrementelles Senden und Empfangen von Daten mit FILESTREAM (ODBC)
   Dieses Beispiel zeigt die Verwendung der FILESTREAM-Funktion zum inkrementellen Senden und Empfangen von Daten mit SQLPutData und SQLGetData.  
@@ -28,7 +26,7 @@ ms.locfileid: "36049893"
  Weitere Informationen zur FILESTREAM-Funktion finden Sie unter [FILESTREAM-Unterstützung &#40;ODBC&#41;](../native-client/odbc/filestream-support-odbc.md).  
   
 ## <a name="example"></a>Beispiel  
- Bevor Sie kompilieren und dieses Beispiels ausführen, aktivieren Sie FILESTREAM-Unterstützung ([Enable and Configure FILESTREAM](../blob/enable-and-configure-filestream.md)).  
+ Bevor Sie kompilieren und dieses Beispiels ausführen, aktivieren Sie FILESTREAM-Unterstützung ([aktivieren und Konfigurieren von FILESTREAM](../blob/enable-and-configure-filestream.md)).  
   
  Das erste Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) erstellt eine im Beispiel verwendete Datenbank. Die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss Schreibzugriff zum Ausführen dieses Skripts haben (melden Sie sich z. B. als lokales Systemkonto an).  
   

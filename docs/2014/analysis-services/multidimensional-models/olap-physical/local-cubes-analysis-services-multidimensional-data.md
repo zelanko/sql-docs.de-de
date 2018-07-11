@@ -1,5 +1,5 @@
 ---
-title: Lokale Cubes (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Lokale Cubes (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], local
 ms.assetid: e52e1515-35a7-4dc3-9bbf-736d176ba0c7
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bfb1b14d4dc540f13a98314d8cf299b78adf1550
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3cc1e27115d898cc2ba839fb14d2f7edfa8c560f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060600"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149281"
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>Lokale Cubes (Analysis Services - Mehrdimensionale Daten)
   Zum Erstellen, Aktualisieren oder Löschen lokaler Cubes muss ein ASSL-Skript oder ein AMO-Programm erstellt und ausgeführt werden.  
@@ -39,11 +39,11 @@ ms.locfileid: "36060600"
 >  Die Verwendung von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] und [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] zum Verwalten lokaler Cubes wird nicht unterstützt.  
   
 ## <a name="local-cubes"></a>Lokale Cubes  
- Ein lokaler Cube erstellt und aufgefüllt, die aus einem vorhandenen Cube in einer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz oder aus einer relationalen Datenquelle.  
+ Ein lokaler Cube kann erstellt und gefüllt, die aus einem vorhandenen Cube in einer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz oder aus einer relationalen Datenquelle.  
   
 |Quelle für Daten für lokalen Cube|Erstellungsmethode|  
 |------------------------------------|---------------------|  
-|Serverbasierter Cube|Sie können entweder die CREATE GLOBAL CUBE-Anweisung oder eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Scripting Language (ASSL)-Skript zum Erstellen und Auffüllen eines Cubes aus einem serverbasierten Cube. Weitere Informationen finden Sie unter [GLOBAL CUBE-Anweisung CREATE &#40;MDX&#41; ](/sql/mdx/mdx-data-definition-create-global-cube) oder [Analysis Services Scripting Language &#40;ASSL&#41; Verweis](../../scripting/analysis-services-scripting-language-assl-for-xmla.md).|  
+|Serverbasierter Cube|Sie können entweder die CREATE GLOBAL CUBE-Anweisung oder ein [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Scripting Language (ASSL)-Skript zum Erstellen und Auffüllen eines Cubes aus einem serverbasierten Cube. Weitere Informationen finden Sie unter [globalen CUBE-Anweisung CREATE &#40;MDX&#41; ](/sql/mdx/mdx-data-definition-create-global-cube) oder [Analysis Services Scripting Language &#40;ASSL&#41; Verweis](../../scripting/analysis-services-scripting-language-assl-for-xmla.md).|  
 |Relationale Datenquelle|Mithilfe eines ASSL-Skripts können Sie einen Cube aus einer relationalen OLE DB-Datenbank erstellen und auffüllen. Wenn Sie einen lokalen Cube mithilfe von ASSL erstellen möchten, stellen Sie eine Verbindung mit einer lokalen Cubedatei (CUB) her und führen das ASSL-Skript auf dieselbe Weise aus, als wenn Sie ein ASSL-Skript für eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Instanz ausführen, um einen Servercube zu erstellen. Weitere Informationen finden Sie unter [Analysis Services Scripting Language &#40;ASSL&#41; Verweis](../../scripting/analysis-services-scripting-language-assl-for-xmla.md).|  
   
  Verwenden Sie die REFRESH CUBE-Anweisung, um einen lokalen Cube neu zu erstellen und seine Daten zu aktualisieren. Weitere Informationen finden Sie unter [REFRESH CUBE-Anweisung &#40;MDX&#41;](/sql/mdx/mdx-data-definition-refresh-cube).  
@@ -74,7 +74,7 @@ ms.locfileid: "36060600"
 -   Es werden nur die berechneten Elemente, benannten Mengen und Zuweisungen im lokalen Cube angezeigt, die auf Measures und Dimensionen beruhen, die dem lokalen Cube hinzugefügt wurden. Ungültige berechnete Elemente, benannte Mengen und Zuweisungen werden automatisch ausgeschlossen.  
   
 ### <a name="security"></a>Security  
- Im Auftrag eines Benutzers auf einen lokalen Cube von einem Servercube zu erstellen, müssen Sie dem Benutzer erteilt **Drillthrough und lokaler Cube** Berechtigungen für den Servercube. Weitere Informationen finden Sie unter [Erteilen von Cube-oder modellberechtigungen &#40;Analysis Services&#41;](../../multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
+ In der Reihenfolge für einen Benutzer für einen lokalen Cube von einem Servercube zu erstellen, muss der Benutzer gewährt werden **Drillthrough und lokaler Cube** Berechtigungen für den Servercube. Weitere Informationen finden Sie unter [Erteilen von Cube-oder modellberechtigungen &#40;Analysis Services&#41;](../../multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   
  Lokale Cubes werden nicht wie Servercubes mithilfe von Rollen gesichert. Alle Benutzer mit Zugriff auf Dateiebene auf eine lokale Cubedatei können die darin enthaltenen Cubes abfragen. Sie können die `Encryption Password`-Verbindungseigenschaft für eine lokale Cubedatei verwenden, um ein Kennwort für die lokale Cubedatei festzulegen. Zum Festlegen eines Kennworts für eine lokale Cubedatei ist es erforderlich, dass für alle zukünftigen Verbindungen mit der lokalen Cubedatei dieses Kennwort verwendet wird, damit die Datei abgefragt werden kann.  
   

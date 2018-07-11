@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-statistics
+ms.technology: performance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - statistical information [SQL Server], query optimization
 - query performance [SQL Server], statistics
@@ -23,16 +22,15 @@ helpviewer_keywords:
 - query optimizer [SQL Server], statistics
 - statistics [SQL Server]
 ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
-caps.latest.revision: 67
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: da931b48b7571cd7d109980ef6deb0a7e4bb5246
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 257abd70ea2b0f6345d40c7b6f009d50da5045c5
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047803"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428339"
 ---
 # <a name="statistics"></a>Statistik
   Der Abfrageoptimierer verwendet Statistiken zum Erstellen von Abfrageplänen, die die Abfrageleistung verbessern. Bei den meisten Abfragen generiert der Abfrageoptimierer automatisch die notwendigen Statistiken für einen hochwertigen Abfrageplan. In einigen Fällen müssen Sie weitere Statistiken erstellen oder den Abfrageentwurf ändern, um optimale Ergebnisse zu erzielen. Dieses Thema enthält eine Erläuterung von Statistikkonzepten sowie Richtlinien zur effektiven Verwendung von Abfrageoptimierungsstatistiken.  
@@ -191,7 +189,7 @@ GO
   
 -   Erstellen Sie die fehlende Statistik mithilfe der CREATE STATISTICS-Anweisung.  
   
- Wenn Statistiken für eine schreibgeschützte Datenbank oder schreibgeschützte Momentaufnahme fehlen oder veraltet sind die [!INCLUDE[ssDE](../../../includes/ssde-md.md)] erstellt und verwaltet Sie temporäre Statistiken in `tempdb`. Wenn das [!INCLUDE[ssDE](../../../includes/ssde-md.md)] temporäre Statistiken erstellt, wird dem Statistiknamen das _readonly_database_statistic-Suffix angefügt, um die temporären Statistiken von den dauerhaften Statistiken zu unterscheiden. Das _readonly_database_statistic-Suffix ist für von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]generierte Statistiken reserviert. Skripts für die temporären Statistiken können erstellt und auf einer Datenbank mit Lese-/Schreibzugriff reproduziert werden. Bei einer Skripterstellung ändert [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] das Suffix des Statistiknamens von _readonly_database_statistic zu _readonly_database_statistic_scripted.  
+ Wenn Statistiken zu eines schreibgeschützten Datenbank oder einer schreibgeschützten Momentaufnahme fehlen oder veraltet sind die [!INCLUDE[ssDE](../../../includes/ssde-md.md)] erstellt und verwaltet Sie temporäre Statistiken in `tempdb`. Wenn das [!INCLUDE[ssDE](../../../includes/ssde-md.md)] temporäre Statistiken erstellt, wird dem Statistiknamen das _readonly_database_statistic-Suffix angefügt, um die temporären Statistiken von den dauerhaften Statistiken zu unterscheiden. Das _readonly_database_statistic-Suffix ist für von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]generierte Statistiken reserviert. Skripts für die temporären Statistiken können erstellt und auf einer Datenbank mit Lese-/Schreibzugriff reproduziert werden. Bei einer Skripterstellung ändert [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] das Suffix des Statistiknamens von _readonly_database_statistic zu _readonly_database_statistic_scripted.  
   
  Nur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] kann temporäre Statistiken erstellen und aktualisieren. Sie können jedoch temporäre Statistiken löschen und Statistikeigenschaften mit den gleichen Tools überwachen, die Sie für dauerhafte Statistiken verwenden:  
   
