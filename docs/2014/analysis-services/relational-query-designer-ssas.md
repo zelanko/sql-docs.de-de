@@ -1,5 +1,5 @@
 ---
-title: Relationaler Abfrage-Designer (SSAS) | Microsoft Docs
+title: Relationaler Abfrage-Designer (SSAS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.relquerydesginer.f1
 ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 301653a9279cec3690ea0451fe96771342bec030
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 386ac327689aa74028d28dc688dee28257568cae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161913"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259656"
 ---
 # <a name="relational-query-designer-ssas"></a>Relationaler Abfrage-Designer (SSAS)
   Mithilfe des relationalen Abfrage-Designers können Sie Abfragen erstellen, die angeben, welche Daten aus den relationalen Datenbanken von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] und [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] abgerufen werden sollen. Verwenden Sie den grafischen Abfrage-Designer zum Durchsuchen von Metadaten, zum interaktiven Erstellen einer Abfrage sowie zum Anzeigen der Ergebnisse Ihrer Abfrage.  Verwenden Sie den textbasierten Abfrage-Designer, um die Abfrage anzuzeigen, die vom grafischen Abfrage-Designer erstellt wurde, oder um eine Abfrage zu ändern. Sie können auch eine vorhandene Abfrage aus einer Datei oder einem Bericht importieren.  
@@ -126,7 +126,7 @@ ms.locfileid: "36161913"
 -   **Automatische Erkennung** schaltet das Feature zur automatischen Erkennung um, die Beziehungen zwischen Tabellen automatisch erstellt. Wenn die automatische Erkennung aktiviert ist, erstellt der Abfrage-Designer Beziehungen aus Fremdschlüsseln in Tabellen; andernfalls müssen Sie die Beziehungen manuell erstellen. Wenn Sie Tabellen im Bereich **Datenbanksicht** auswählen, versucht die Funktion zur automatischen Erkennung automatisch, Beziehungen zu erstellen. Wenn Sie die Funktion zur automatischen Erkennung aktivieren, nachdem Sie manuell Joins erstellt haben, werden diese Joins verworfen.  
   
     > [!IMPORTANT]  
-    >  Bei Verwendung mit [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] die zum Erstellen von Joins benötigten Metadaten nicht bereitgestellt, und Beziehungen können nicht automatisch erkannt werden. Wenn die Abfrage Daten aus [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] abruft, müssen alle Tabellenjoins manuell erstellt werden.  
+    >  Bei Verwendung mit [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] die zum Erstellen von Joins benötigten Metadaten nicht bereitgestellt wird und Beziehungen können nicht automatisch erkannt werden. Wenn die Abfrage Daten aus [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] abruft, müssen alle Tabellenjoins manuell erstellt werden.  
   
 -   **Beziehung hinzufügen** Fügt der Liste **Beziehung** eine Beziehung hinzu.  
   
@@ -207,7 +207,7 @@ ms.locfileid: "36161913"
 |**Als Text bearbeiten**|Wechseln zwischen dem textbasierten Abfrage-Designer und dem grafischen Abfrage-Designer. Nicht alle Datenquellentypen unterstützen grafische Abfrage-Designer.|  
 |**Importieren**|Importiert eine vorhandene Abfrage aus einer Datei oder einem Bericht. Nur die Dateitypen SQL und RDL werden unterstützt.|  
 |![Führen Sie die Abfrage aus](media/rsqdicon-run.gif "Run the query")|Führen Sie die Abfrage aus, und zeigen Sie das Resultset im Ergebnisbereich an.|  
-|**Befehlstyp**|Wählen Sie **Text**, **StoredProcedure**oder **TableDirect**. Weist eine gespeicherte Prozedur Parameter auf, wird das Dialogfeld **Abfrageparameter definieren** angezeigt, wenn Sie auf der Symbolleiste auf **Ausführen** klicken. Sie können nach Bedarf Werte eingeben.<br /><br /> Beachten Sie, dass wenn eine gespeicherte Prozedur mehr als ein Resultset zurückgibt, nur das erste Resultset so verwendet wird, um das Dataset zu füllen. Beachten Sie auch Folgendes <br />                      **TableDirect** ist nur für den Datenquellentyp OLE DB verfügbar.|  
+|**Befehlstyp**|Wählen Sie **Text**, **StoredProcedure**oder **TableDirect**. Weist eine gespeicherte Prozedur Parameter auf, wird das Dialogfeld **Abfrageparameter definieren** angezeigt, wenn Sie auf der Symbolleiste auf **Ausführen** klicken. Sie können nach Bedarf Werte eingeben.<br /><br /> Beachten Sie, wenn eine gespeicherte Prozedur mehrere Resultsets zurückgibt, nur das erste Resultset verwenden, um das Dataset zu füllen. Beachten Sie außerdem <br />                      **TableDirect** ist nur für den Datenquellentyp OLE DB verfügbar.|  
   
 #### <a name="command-type-text"></a>Befehlstyp "Text"  
  Wenn Sie ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Dataset erstellen, wird vom Berichts-Designer standardmäßig der relationale Abfrage-Designer geöffnet. Wenn Sie zum textbasierten Abfrage-Designer wechseln möchten, klicken Sie auf der Symbolleiste auf die Umschaltfläche **Als Text bearbeiten** . Der textbasierte Abfrage-Designer hat zwei Bereiche: den Abfragebereich und den Ergebnisbereich. In der folgenden Abbildung werden die einzelnen Bereiche bezeichnet.  
@@ -251,7 +251,7 @@ SELECT Name FROM ContactType
 uspGetWhereUsedProductID  
 ```  
   
- Klicken Sie auf die Schaltfläche **Ausführen** (**!**). Die folgende Tabelle enthält ein Beispiel für `uspGetWhereUsedProductID` Parameter für die Geben Sie Werte in der **Abfrageparameter definieren** (Dialogfeld).  
+ Klicken Sie auf die Schaltfläche **Ausführen** (**!**). Die folgende Tabelle enthält ein Beispiel für `uspGetWhereUsedProductID` Parameter, die für die Sie Werte in der **Abfrageparameter definieren** Dialogfeld.  
   
 |||  
 |-|-|  

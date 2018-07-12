@@ -5,33 +5,32 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - errors [SQL Server Database Engine]
 - Database Engine [SQL Server], errors
 - events [SQL Server Database Engine]
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 13de14dc26eff84d7a25a827ca4928056644836f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: dfdd9b62c4ccdf782de88b24082306d8850e188a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161358"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410659"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Fehler- und Ereignisreferenz (Datenbank-Engine)
-  Die [Events and Errors Message Center](http://go.microsoft.com/fwlink/?LinkId=47660) auf TechNet ist der wesentliche Informationsquelle für Fehlermeldungen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. und verbessert die Benutzerfreundlichkeit bei der Suche nach Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlermeldungen sowie anderen Microsoft-Produkten. Hier sind Volltextsuchvorgänge möglich, und Ergebnisse können auf der Grundlage von Produkt, Version, Quelle und numerischen oder symbolischen Identifizierern gefiltert werden. Zusätzlich unterstützt die neue Schnittstelle mehrere Sprachen. Das Center wird fortlaufend mit neuen Informationen zur Problembehandlung häufig auftretender Fehler aktualisiert.  
+  Die [Events and Errors Message Center](http://go.microsoft.com/fwlink/?LinkId=47660) auf TechNet-Website ist die primäre Informationsquelle für Fehlermeldungen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. und verbessert die Benutzerfreundlichkeit bei der Suche nach Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlermeldungen sowie anderen Microsoft-Produkten. Hier sind Volltextsuchvorgänge möglich, und Ergebnisse können auf der Grundlage von Produkt, Version, Quelle und numerischen oder symbolischen Identifizierern gefiltert werden. Zusätzlich unterstützt die neue Schnittstelle mehrere Sprachen. Das Center wird fortlaufend mit neuen Informationen zur Problembehandlung häufig auftretender Fehler aktualisiert.  
   
  In zukünftigen Verbesserungen am Events and Errors Message Center werden Informationen zur Problembehandlung in herunterladbarer Form verfügbar sein. Damit stehen diese Informationen auch dann zur Verfügung, wenn der Computer nicht mit dem Internet verbunden ist.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Datenbank-Engine-Ereignisse und Fehler] (Datenbank-Engine-Ereignisse-und-errors.md0  
+ [Datenbank-Engine-Fehler und Ereignisse] (Datenbank-Engine-Ereignisse – und – errors.md0  
  Beschreibt das Format der Fehlermeldungen für [!INCLUDE[ssDE](../../includes/ssde-md.md)] und erläutert, wie Fehlermeldungen angezeigt und an Anwendungen zurückgegeben werden.  
   
  Erläutert die [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Fehlermeldungen sowie die möglichen Ursachen und die Maßnahmen, die Sie zur Problembehebung ergreifen können.  

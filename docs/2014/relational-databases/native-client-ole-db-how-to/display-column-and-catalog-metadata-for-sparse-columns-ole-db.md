@@ -1,26 +1,24 @@
 ---
-title: Anzeigen von Spalten- und Katalogmetadaten für Spalten mit geringer Dichte (OLE DB) | Microsoft Docs
+title: Anzeigen von Spalten- und Katalogmetadaten für Spalten mit geringer Dichte (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 3b8ccad5-411d-4b79-b95e-ee524714f7d6
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7145bc647411817996cbef9dffce406f37d4375d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 22b1e8512a1a6bd92416504ee48883715cef9a3b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163107"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411549"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>Anzeigen von Spalten- und Katalogmetadaten für Spalten mit geringer Dichte (OLE DB)
   Dieses Beispiel erstellt eine Tabelle mit drei Spalten: eine Sparsespalte, eine Nicht-Sparsespalte und eine Spaltensatz-Spalte. Anschließend zeigt das Beispiel OLE DB-Flags mit den Spalten- und Katalogmetadaten für die Nicht-Sparsespalte und die Spaltensatz-Spalte an.  

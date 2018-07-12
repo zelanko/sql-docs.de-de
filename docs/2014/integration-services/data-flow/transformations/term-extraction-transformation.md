@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termextractiontrans.f1
 helpviewer_keywords:
@@ -28,13 +28,13 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 783e0909ceaab1d3a9636a60bd0ce27d7682dc05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97f88d8b585eca518edf3aebe25e38a79e38bf3b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162295"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229390"
 ---
 # <a name="term-extraction-transformation"></a>Transformation für Ausdrucksextrahierung
   Die Transformation für Ausdrucksextrahierung extrahiert Ausdrücke aus Text in einer Transformationseingabespalte und schreibt die Ausdrücke dann in eine Transformationsausgabespalte. Diese Transformation ist nur mit englischem Text kompatibel und verwendet ein eigenes englisches Wörterbuch und linguistische Informationen für Englisch.  
@@ -177,11 +177,11 @@ ms.locfileid: "36162295"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Transformations-Editor für Ausdrucksextrahierung** festlegen können:  
   
--   [Transformations-Editor für den Begriff Extraktion &#40;Registerkarte Ausdrucksextrahierung&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
+-   [Transformations-Editor für Ausdrucksextrahierung Begriff &#40;Registerkarte Ausdrucksextrahierung&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
   
--   [Transformations-Editor für den Begriff Extraktion &#40;Registerkarte Ausschluss&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
+-   [Transformations-Editor für Ausdrucksextrahierung Begriff &#40;Registerkarte "Ausschluss"&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
   
--   [Transformations-Editor für den Begriff Extraktion &#40;Registerkarte "Erweitert"&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
+-   [Transformations-Editor für Ausdrucksextrahierung Begriff &#40;Registerkarte "Erweitert"&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   

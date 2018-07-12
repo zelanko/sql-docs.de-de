@@ -1,5 +1,5 @@
 ---
-title: Verarbeiten von Analysis Services-Objekte | Microsoft Docs
+title: Verarbeiten von Analysis Services-Objekten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - OLAP objects [Analysis Services], processing
 - OLAP objects [Analysis Services]
 ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 45fc3c5f6ba3effb69518987256b052f5225cd25
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 765db574f9db0a4e81dbdbfc4a154e1ccad01491
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162827"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210160"
 ---
 # <a name="processing-analysis-services-objects"></a>Verarbeiten von Analysis Services-Objekten
   Die Verarbeitung betrifft die folgenden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekttypen: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbanken, -Cubes, -Dimensionen, -Measuregruppen, -Partitionen, -Miningmodelle und -Miningstrukturen. Sie können für jedes der Objekte eine Verarbeitungsstufe angeben, oder Sie können die Option Standard verarbeiten angeben, um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die automatische Auswahl der optimalen Verarbeitungsstufe zu überlassen. Weitere Informationen zu den verschiedenen Ebenen zum Verarbeiten aller Objekte finden Sie unter [Verarbeitungsoptionen und -einstellungen &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md).  
@@ -97,7 +97,7 @@ ms.locfileid: "36162827"
  Weitere Informationen zum Verarbeiten von Miningstrukturen und -modellen finden Sie unter [Anforderungen und Überlegungen zur Verarbeitung &#40;Data Mining&#41;](../data-mining/processing-requirements-and-considerations-data-mining.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tools und Ansätze zum Verarbeiten &#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
+ [Tools und Ansätze für die Verarbeitung &#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
  [Batchverarbeitung &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
  [Verarbeitung von mehrdimensionalen Modellobjekten](processing-a-multidimensional-model-analysis-services.md)  
   

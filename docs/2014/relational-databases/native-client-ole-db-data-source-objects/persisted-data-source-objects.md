@@ -1,13 +1,11 @@
 ---
-title: Persistente Datenquellenobjekte | Microsoft Docs
+title: Persistente Datenquellenobjekte | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - persisted data source objects
 ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e99fbda459ba57838ba60b8fcf3f126b50b1cb1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a44176c06f105fd4a560718ee5b757f5c71ff1cf
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162022"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423549"
 ---
 # <a name="persisted-data-source-objects"></a>Persistente Datenquellenobjekte
   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt persistente Datenquellenobjekte mit der **IPersistFile** Schnittstelle.  
@@ -33,7 +31,7 @@ ms.locfileid: "36162022"
 ## <a name="examples"></a>Beispiele  
  **A. Beibehalten der datenquelleninitialisierung:**  
   
- Dieses Beispiel zeigt eine Funktion, die Eigenschaften zur Datenquelleninitialisierung, in denen ein Server, eine Datenbank und der Windows-Authentifizierungsmodus für die Verbindung definiert sind, persistent speichert. Der Servername und Datenbankname empfangen werden, der *pLocation* und *pDatasource* -Parameter der Funktion.  
+ Dieses Beispiel zeigt eine Funktion, die Eigenschaften zur Datenquelleninitialisierung, in denen ein Server, eine Datenbank und der Windows-Authentifizierungsmodus für die Verbindung definiert sind, persistent speichert. Der Servername und Datenbankname werden im empfangen der *pLocation* und *pDatasource* Parameter der Funktion.  
   
 ```  
 HRESULT SetAndSaveInitProps  
@@ -142,7 +140,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B. Verwenden Sie die persistenten datenquelleninitialisierung:**  
+ **B. Verwenden von persistenten datenquelleninitialisierung:**  
   
  Dieses Beispiel verwendet ein persistentes Datenquellenobjekt mit zusätzlichen Initialisierungseigenschaften für einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen und ein Kennwort.  
   
@@ -230,9 +228,9 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- Die **IPersistFile:: Save** Methode kann aufgerufen werden, vor oder nach dem Aufruf **IDBInitialize:: Initialize**. Aufrufen der Methode nach einer erfolgreichen Rückgabe von **IDBInitialize:: Initialize** wird sichergestellt, dass eine gültige datenquellenspezifikation persistent ist.  
+ Die **IPersistFile:: Save** Methode kann aufgerufen werden, vor oder nach dem Aufruf **IDBInitialize:: Initialize**. Aufrufen der Methode nach einer erfolgreichen Rückgabe von **IDBInitialize:: Initialize** wird sichergestellt, es ist eine gültige datenquellenspezifikation persistent.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenquellenobjekte &#40;OLE DB&#41;](data-source-objects-ole-db.md)  
+ [Datenquellenobjekte &#40;OLE-DB&#41;](data-source-objects-ole-db.md)  
   
   

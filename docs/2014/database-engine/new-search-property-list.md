@@ -1,27 +1,26 @@
 ---
-title: New Search Property List | Microsoft Docs
+title: Neue Sucheigenschaftenliste | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.spl.newsearchpropertylist.f1
 ms.assetid: ffca78e9-8608-4b15-bd38-b2d78da4247a
 caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b9d37bad141f61ceadafc03d883f36f422965996
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3019133dd0fa326a1595f2815698e10eb9586427
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162315"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159303"
 ---
 # <a name="new-search-property-list"></a>Neue Sucheigenschaftenliste
   In diesem Dialogfeld können Sie eine Sucheigenschaftenliste erstellen.  
@@ -52,7 +51,7 @@ ms.locfileid: "36162315"
  Finden Sie unter [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql).  
   
 ## <a name="to-use-sql-server-management-studio-to-manage-search-property-lists"></a>So verwalten Sie Sucheigenschaftenlisten in SQL Server Management Studio  
- Informationen zum Erstellen, anzeigen, ändern oder Löschen einer sucheigenschaftenliste und zum Konfigurieren einen Volltextindex für die Eigenschaftensuche finden Sie unter [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
+ Weitere Informationen über das Erstellen, anzeigen, ändern oder Löschen einer sucheigenschaftenliste und zum Konfigurieren einen Volltextindex für die Eigenschaftensuche finden Sie unter [Search Document Properties with Search Property Lists](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql)   

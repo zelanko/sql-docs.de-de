@@ -14,15 +14,15 @@ helpviewer_keywords:
 - custom report items, creating
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 caps.latest.revision: 37
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 14ff967c6b21fbf4438db3c44d28eb86e9738281
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 996e70b70e2cf253212baae972dd6caa6acdf7c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163082"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149271"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Erstellen einer Entwurfszeitkomponente für ein benutzerdefiniertes Berichtselement
   Die Entwurfszeitkomponente für ein benutzerdefiniertes Berichtselement ist eine Steuerung, die in der Berichts-Designer-Umgebung von Visual Studio verwendet werden kann. Diese Komponente bietet eine aktivierte Entwurfsoberfläche, die Drag und Drop-Vorgänge, Integration in den Eigenschaftenbrowser von [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] und die Möglichkeit zum Bereitstellen von Editoren für benutzerdefinierte Eigenschaften zulassen.  
@@ -189,7 +189,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### <a name="using-adornments"></a>Verwenden von Randsteuerelementen  
- Klassen für ein benutzerdefiniertes Berichtselement können auch eine `Microsoft.ReportDesigner.Design.Adornment`-Klasse implementieren. Ein Randsteuerelement ermöglicht es der Steuerung für ein benutzerdefiniertes Berichtselement, Bereiche außerhalb des Hauptrechtecks der Entwurfsoberfläche bereitzustellen. Diese Bereiche behandeln Benutzeroberflächenereignisse wie Mausklicks und Drag und Drop-Vorgänge. Die `Adornment` in definierten Klasse der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `Microsoft.ReportDesigner` Namespace ist ein Pass-Through-Implementierung von der <xref:System.Windows.Forms.Design.Behavior.Adorner> -Klasse, die in Windows Forms gefunden. Vollständige Dokumentation zu den `Adorner` Klasse, finden Sie unter [Verhaltensdienst – Übersicht](http://go.microsoft.com/fwlink/?LinkId=116673) in der MSDN Library. Beispielcode, der implementiert eine `Microsoft.ReportDesigner.Design.Adornment` Klasse, finden Sie unter [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Klassen für ein benutzerdefiniertes Berichtselement können auch eine `Microsoft.ReportDesigner.Design.Adornment`-Klasse implementieren. Ein Randsteuerelement ermöglicht es der Steuerung für ein benutzerdefiniertes Berichtselement, Bereiche außerhalb des Hauptrechtecks der Entwurfsoberfläche bereitzustellen. Diese Bereiche behandeln Benutzeroberflächenereignisse wie Mausklicks und Drag und Drop-Vorgänge. Die `Adornment` -Klasse, die in definiert ist die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `Microsoft.ReportDesigner` -Namespace ist eine Pass-Through-Implementierung der <xref:System.Windows.Forms.Design.Behavior.Adorner> Klasse finden Sie in Windows Forms. Vollständige Dokumentation für die `Adorner` Klasse, finden Sie unter [Verhaltensdienst – Übersicht](http://go.microsoft.com/fwlink/?LinkId=116673) in der MSDN Library. Beispielcode, der implementiert eine `Microsoft.ReportDesigner.Design.Adornment` Klasse, finden Sie unter [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
  Weitere Informationen zum Programmieren und Verwenden von Windows Forms in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] finden Sie in diesen Themen in der MSDN Library:  
   

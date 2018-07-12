@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - promoting properties [XML in SQL Server]
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6b9737311798edfe7f65ea74d03d7a941a145ef4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d7a43e9ff408c185abf91a4ef71e7ccc734a3cb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162890"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278816"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Heraufstufen häufig verwendeter XML-Werte mit berechneten Spalten
   Wenn Abfragen in erster Linie nur für eine geringe Anzahl von Element- und Attributwerten ausgeführt werden, kann es sinnvoll sein, diese Mengen in relationale Spalten heraufzustufen. Dies ist nützlich, wenn Abfragen für einen kleinen Teil der XML-Daten ausgegeben werden, während die gesamte XML-Instanz abgerufen wird. Das Erstellen eines XML-Indexes für die XML-Spalte ist nicht erforderlich. Stattdessen kann die heraufgestufte Spalte indiziert werden. Um die heraufgestufte Spalte zu verwenden, müssen Abfragen geschrieben werden. Das heißt, der Abfrageoptimierer richtet die Abfragen für die XML-Spalte nicht erneut an die heraufgestufte Spalte aus.  
@@ -30,7 +30,7 @@ ms.locfileid: "36162890"
  Die heraufgestufte Spalte kann entweder eine berechnete Spalte in derselben Tabelle oder eine getrennte, benutzerverwaltete Spalte in einer Tabelle sein. Dies ist ausreichend, wenn Singleton-Werte aus jeder XML-Instanz heraufgestuft werden. Allerdings müssen Sie für mehrwertige Eigenschaften eine getrennte Tabelle für die Eigenschaft erstellen, was im folgenden Abschnitt beschrieben wird.  
   
 ## <a name="computed-column-based-on-the-xml-data-type"></a>Berechnete Spalte auf der Basis des xml-Datentyps  
- Eine berechnete Spalte erstellt werden kann, mithilfe einer benutzerdefinierten Funktion, die aufruft `xml` -Datentypmethoden. Der Typ der berechneten Spalte kann jeder SQL-Typ sein, einschließlich XML. Dies wird im folgenden Beispiel veranschaulicht.  
+ Eine berechnete Spalte kann erstellt werden, mithilfe einer benutzerdefinierten Funktion, die aufruft `xml` -Datentypmethoden. Der Typ der berechneten Spalte kann jeder SQL-Typ sein, einschließlich XML. Dies wird im folgenden Beispiel veranschaulicht.  
   
 ### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>Beispiel: Berechnete Spalte auf der Basis der xml-Datentypmethode  
  Erstellen Sie die benutzerdefinierte Funktion für die ISBN-Nummer eines Buchs:  
@@ -71,7 +71,7 @@ FROM   T
 WHERE  ISBN = '0-7356-1588-2'  
 ```  
   
- Sie können eine benutzerdefinierte Funktion zurückzugebende erstellen die `xml` -Datentyp und eine berechnete Spalte mithilfe der benutzerdefinierten Funktion. Allerdings können Sie keinen XML-Index für die berechnete XML-Spalte erstellen.  
+ Sie können eine benutzerdefinierte Funktion zurückgibt erstellen die `xml` -Datentyp und eine berechnete Spalte mithilfe der benutzerdefinierten Funktion. Allerdings können Sie keinen XML-Index für die berechnete XML-Spalte erstellen.  
   
 ## <a name="creating-property-tables"></a>Erstellen von Eigenschaftentabellen  
  Wenn Sie einige der mehrwertigen Eigenschaften aus Ihren XML-Daten in eine oder mehrere Tabellen heraufstufen möchten, erstellen Sie Indizes für diese Tabellen und richten Sie Ihre Abfrage erneut so aus, dass sie diese Indizes verwenden. Ein typisches Szenario hierfür ist eine Situation, in der eine kleine Anzahl von Eigenschaften den Großteil Ihrer Abfragearbeitsauslastung abdeckt. Sie können folgendermaßen vorgehen:  
@@ -82,7 +82,7 @@ WHERE  ISBN = '0-7356-1588-2'
   
 -   Erstellen Sie Trigger für die XML-Spalte, um die Eigenschaftentabellen zu verwalten. Führen Sie innerhalb der Trigger einen der folgenden Schritte aus:  
   
-    -   Verwendung `xml` -Datentypmethoden, z. B. **nodes()** und **value()** einfügen und Löschen von Zeilen der Eigenschaftentabellen.  
+    -   Verwendung `xml` -Datentypmethoden, z. B. **nodes()** und **Value()-Methode**, um Zeilen der Eigenschaftentabellen eingefügt und gelöscht.  
   
     -   Erstellen Sie Streaming-Tabellenwertfunktionen in CLR (Common Language Runtime), um Zeilen der Eigenschaftentabellen einzufügen oder zu löschen.  
   

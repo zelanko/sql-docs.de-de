@@ -1,5 +1,5 @@
 ---
-title: Hierarchy-Datentyp (ASSL) | Microsoft Docs
+title: Hierarchy-Datentyp (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Hierarchy data type
 ms.assetid: 2e05917e-7e5d-4dd1-817b-4ff5647747ff
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 14354458e3441c6f8f2691350e9236f2aecb6cdd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b20bed156e97c33a1c9f9df02677ef403767e472
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162376"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230010"
 ---
 # <a name="hierarchy-data-type-assl"></a>Hierarchy-Datentyp (ASSL)
   Definiert einen Grunddatentyp, der eine Hierarchie in einer Dimension darstellt.  
@@ -74,7 +74,7 @@ ms.locfileid: "36162376"
   
  Das *AllowDuplicateNames* -Element wird unter DevelopmentMode 1 und 2 für den SharePoint- bzw. tabellarischen Servermodus nicht unterstützt.  
   
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.Hierarchy>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.Hierarchy>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services Scripting Language-XML-Datentypen &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

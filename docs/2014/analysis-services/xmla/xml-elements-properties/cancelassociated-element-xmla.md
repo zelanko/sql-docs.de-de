@@ -1,5 +1,5 @@
 ---
-title: CancelAssociated-Element (XMLA) | Microsoft Docs
+title: CancelAssociated-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - CancelAssociated element
 ms.assetid: fd890440-d1a7-4c05-9e81-c81e6b8c274c
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1e747815b30daf86edff4ad976d6fb5370bf9c3b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 66a866a9f00a745e24fe2c83a4fce31ac67b2f34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162547"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159231"
 ---
 # <a name="cancelassociated-element-xmla"></a>CancelAssociated-Element (XMLA)
   Gibt an, ob das übergeordnete [Cancel](../xml-elements-commands/cancel-element-xmla.md) -Element alle zugeordneten Befehle abbrechen soll.  
@@ -64,7 +64,7 @@ ms.locfileid: "36162547"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn dieses Element angegeben ist, und legen Sie auf `True`, alle zugehörigen Verbindungen, Session und im übergeordneten Element angegebenen Befehl `Cancel` -Befehl abgebrochen.  
+ Wenn dieses Element angegeben ist, und legen Sie auf `True`, alle zugehörigen Verbindungen, Sitzung und im übergeordneten Element angegebenen Befehl `Cancel` -Befehl abgebrochen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [ConnectionID-Element &#40;XMLA&#41;](id-element-xmla.md)   

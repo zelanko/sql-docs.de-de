@@ -1,14 +1,13 @@
 ---
-title: Beschreibung von columnstore-Indizes | Microsoft Docs
+title: Beschreibung von columnstore-Indizes | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - indexes creation, columnstore
 - indexes [SQL Server], columnstore
@@ -17,18 +16,18 @@ helpviewer_keywords:
 - xVelocity, columnstore indexes
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 caps.latest.revision: 50
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: 9dd9d25eaaa21361a050e8a80c32be8907cb4b9c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mikeraymsft
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9cd8b98b2e62dbc11d62e07b9b0d7e2ac3e05c6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163340"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211320"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
-  Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *in-Memory-columnstore-Index* speichert und verwaltet Daten mithilfe von spaltenbasiertem Datenspeicher und spaltenbasierten Abfragen verarbeiten. Columnstore-Indizes sind optimal für Data Warehousing-Arbeitsauslastungen geeignet, die hauptsächlich Massenladevorgänge und schreibgeschützte Abfragen ausführen. Verwenden Sie den Columnstore-Index, um eine bis zu **zehnfache Abfrageleistung** gegenüber der herkömmlichen zeilenorientierten Speicherung und eine bis zu **siebenfache Datenkomprimierung** im Vergleich zur unkomprimierten Datengröße zu erzielen.  
+  Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *in-Memory-Columnstore-Index* speichert und verwaltet Daten mithilfe von spaltenbasiertem Datenspeicher und spaltenbasierten Abfragen verarbeiten. Columnstore-Indizes sind optimal für Data Warehousing-Arbeitsauslastungen geeignet, die hauptsächlich Massenladevorgänge und schreibgeschützte Abfragen ausführen. Verwenden Sie den Columnstore-Index, um eine bis zu **zehnfache Abfrageleistung** gegenüber der herkömmlichen zeilenorientierten Speicherung und eine bis zu **siebenfache Datenkomprimierung** im Vergleich zur unkomprimierten Datengröße zu erzielen.  
   
 > [!NOTE]  
 >  Wir sehen den gruppierten Columnstore-Index als Standard für das Speichern von großen Data Warehousing-Faktentabellen an und erwarten, dass er in den meisten Data Warehousing-Szenarien verwendet wird. Da der gruppierte Columnstore-Index aktualisierbar ist, kann die Arbeitsauslastung eine große Anzahl von Einfüge-, Update- und Löschvorgängen ausführen.  
@@ -39,7 +38,7 @@ ms.locfileid: "36163340"
   
 -   [Laden von Daten](#dataload)  
   
--   [Tipps zur Leistung](#performance)  
+-   [Tipps zur Leistungssteigerung](#performance)  
   
 -   [Verwandte Aufgaben und Themen](#related)  
   
@@ -152,21 +151,21 @@ ms.locfileid: "36163340"
   
  Wenn der Deltastore die maximale Zeilenanzahl erreicht, wird er geschlossen. Ein Tupelverschiebungsvorgang überprüft auf geschlossene Zeilengruppen. Wenn die geschlossene Zeilengruppe gefunden wird, wird sie komprimiert und im Columnstore-Index gespeichert.  
   
-##  <a name="dataload"></a> Laden von Daten  
+##  <a name="dataload"></a> Beim Laden von Daten  
   
 ###  <a name="dataload_nci"></a> Laden von Daten in einen nicht gruppierten columnstore-Index  
- Um Daten in einen nicht gruppierten columnstore-Index zuladen, laden Sie zuerst Daten in eine herkömmliche Rowstore-Tabelle gespeichert, die als Heap oder gruppierten index, und erstellen Sie den nicht gruppierten columnstore-Index mit [CREATE COLUMNSTORE INDEX &#40;&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql).  
+ Um Daten in einen nicht gruppierten columnstore-Index zuladen, laden Sie zuerst Daten in eine herkömmliche Rowstore-Tabelle gespeichert, die als Heap oder gruppierten index und erstellen Sie dann auf den nicht gruppierten columnstore-Index mit [CREATE COLUMNSTORE INDEX &#40;&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql).  
   
  ![Laden von Daten in einen columnstore-Index](../../database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "Laden von Daten in einen columnstore-Index")  
   
  Eine Tabelle mit einem nicht gruppierten Columnstore-Index ist so lange schreibgeschützt, bis der Index gelöscht oder deaktiviert wird. Um die Tabelle und den nicht gruppierten Columnstore-Index zu aktualisieren, können Sie Partitionen wechseln. Sie können den Index auch deaktivieren, die Tabelle aktualisieren und den Index dann neu erstellen.  
   
- Weitere Informationen finden Sie unter [Using Nonclustered columnstore-Indexes](indexes.md)  
+ Weitere Informationen finden Sie unter [verwenden nicht gruppierter columnstore-Indizes](indexes.md)  
   
 ###  <a name="dataload_cci"></a> Laden von Daten in einen gruppierten columnstore-Index  
  ![Laden in einen geclusterten Columnstore-Index](../../database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "Loading into a clustered columnstore index")  
   
- Wie das Diagramm bereits vermuten lässt, um Daten in einem gruppierten Columnstore-Index zu laden, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+ Wie im Diagramm, die zum Laden von Daten in einem gruppierten columnstore-Index, schon sagt, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 1.  Zeilengruppen mit maximal zulässiger Größe werden direkt in den Columnstore eingefügt. Sobald die Daten geladen sind, weist [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die Datenzeilen nach der Reihenfolge ihres Eingangs einer OPEN-Zeilengruppe zu.  
   
@@ -188,7 +187,7 @@ ms.locfileid: "36163340"
   
  Weitere Informationen zu Deltastore-Aufgaben und-Vorgängen finden Sie unter [Using Clustered columnstore-Indexes](../../database-engine/using-clustered-columnstore-indexes.md)  
   
-##  <a name="performance"></a> Tipps zur Leistung  
+##  <a name="performance"></a> Tipps zur Leistungssteigerung  
   
 ### <a name="plan-for-enough-memory-to-create-columnstore-indexes-in-parallel"></a>Planen Sie ausreichend Arbeitsspeicher für eine parallele Erstellung von Columnstore-Indizes ein  
  Bei der Erstellung eines Columnstore-Indexes handelt es sich standardmäßig um einen parallel ausgeführten Vorgang, sofern der verfügbare Arbeitsspeicher nicht eingeschränkt ist. Die parallele Indexerstellung erfordert mehr Arbeitsspeicher als die serielle Erstellung des Index. Wenn ausreichend Arbeitsspeicher verfügbar ist, dauert das Erstellen eines Columnstore-Indexes 1,5-mal so lange wie das Erstellen einer B-Struktur für die gleichen Spalten.  

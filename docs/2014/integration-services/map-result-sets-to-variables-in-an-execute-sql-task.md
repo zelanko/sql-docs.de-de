@@ -1,5 +1,5 @@
 ---
-title: Zuordnen von Resultsets zu Variablen in einem Task SQL ausführen | Microsoft Docs
+title: Zuordnen von Resultsets zu Variablen in einem Task "SQL ausführen" | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [Integration Services]
 - mapping result sets to variables [Integration Services]
 - variables [Integration Services], mapping result sets to
 ms.assetid: f76738b6-dc75-4ff9-a3dd-8b083d8e410e
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 62dab9509a080e00edc4d990cd3f23fa67c93113
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cdd76b3f0b1665fa6336e82536ca474c0b5e1fab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162514"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277376"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>Zuordnen von Resultsets zu Variablen in einem Task „SQL ausführen“
   In diesem Thema wird das Erstellen einer Zuordnung zwischen einem Resultset und einer Variablen in einem Task "SQL ausführen" beschrieben. Indem Sie ein Resultset zu einer Variablen zuordnen, wird das Resultset für andere Elemente des Pakets zur Verfügung gestellt. Beispielsweise kann ein Skript eines Skripttasks die Variable lesen und dann die Werte des Resultsets verwenden, oder eine XML-Quelle kann das in einer Variable gespeicherte Resultset verwenden. Wenn das Resultset durch ein übergeordnetes Paket generiert wird, kann das Resultset für ein untergeordnetes Paket, das von einem Task Paket ausführen aufgerufen wird, zur Verfügung gestellt werden. Hierzu wird das Resultset im übergeordneten Paket einer Variablen zugeordnet. Anschließend wird im untergeordneten Paket eine übergeordnete Variablenkonfiguration erstellt, um den übergeordneten Variablenwert zu speichern.  
@@ -65,11 +65,11 @@ ms.locfileid: "36162514"
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL ausführen (Task)](control-flow/execute-sql-task.md)   
- [Resultsets den Tasks "SQL ausführen"](result-sets-in-the-execute-sql-task.md)   
- [Tasks "Paket ausführen"](control-flow/execute-package-task.md)   
+ [Resultsets den Task "SQL ausführen"](result-sets-in-the-execute-sql-task.md)   
+ [Task "Paket ausführen"](control-flow/execute-package-task.md)   
  [Paketkonfigurationen](../../2014/integration-services/package-configurations.md)   
  [Erstellen von Paketkonfigurationen](../../2014/integration-services/create-package-configurations.md)   
  [Verwenden Sie die Werte von Variablen und Parametern in einem untergeordneten Paket](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)   
- [Integrationsservices &#40;SSIS&#41; Variablen](integration-services-ssis-variables.md)  
+ [Integrationsdienste &#40;SSIS&#41; Variablen](integration-services-ssis-variables.md)  
   
   

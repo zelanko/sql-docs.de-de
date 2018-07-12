@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 3: Zugreifen auf den Webdienst | Microsoft Docs'
+title: 'Lektion 3: Zugreifen auf den Webdienst | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c3e4c198-ab35-4548-9471-1b4e6b6e5dfd
 caps.latest.revision: 43
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f9cff3b2bec832eec9dc6cf8462511db89454eba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e9e5decf2f1d6c702b3bc3483ffb89bff9a2cd9f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163248"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230130"
 ---
 # <a name="lesson-3-accessing-the-web-service"></a>Lektion 3: Zugreifen auf den Webdienst
-  Nachdem Sie dem Projekt einen Verweis auf den Berichtsserver-Webdienst hinzugefügt haben, besteht der nächste Schritt darin, eine Instanz der Proxyklasse des Webdiensts zu erstellen. Auf die Methoden des Webdiensts kann durch Aufrufen der Methoden in der Proxyklasse zugegriffen werden. Wenn Ihre Anwendung diese Methoden aufruft, Klasse Proxys vom generierten Code [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] proxyklassencode die Kommunikation zwischen der Anwendung und den Webdienst.  
+  Nachdem Sie dem Projekt einen Verweis auf den Berichtsserver-Webdienst hinzugefügt haben, besteht der nächste Schritt darin, eine Instanz der Proxyklasse des Webdiensts zu erstellen. Auf die Methoden des Webdiensts kann durch Aufrufen der Methoden in der Proxyklasse zugegriffen werden. Wenn Ihre Anwendung diese Methoden aufruft, wird der Proxy Klasse vom generierten Code [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] erfolgt die Kommunikation zwischen Ihrer Anwendung und dem Webdienst.  
   
- Zunächst erstellen Sie eine Instanz der Proxyklasse des Webdiensts <xref:ReportService2010.ReportingService2010>. Dann rufen Sie die <xref:ReportService2010.ReportingService2010.GetProperties%2A>-Methode des Webdiensts mithilfe der Proxyklasse auf. Sie verwenden diesen Aufruf zum Abrufen des Namens und der Beschreibung eines der Beispielsberichte, Company Sales.  
+ Erstellen Sie zunächst eine Instanz der Proxyklasse des Webdiensts <xref:ReportService2010.ReportingService2010>. Dann rufen Sie die <xref:ReportService2010.ReportingService2010.GetProperties%2A>-Methode des Webdiensts mithilfe der Proxyklasse auf. Sie verwenden diesen Aufruf zum Abrufen des Namens und der Beschreibung eines der Beispielsberichte, Company Sales.  
   
 > [!NOTE]  
 >  Beim Zugreifen auf einen Webdienst, der unter [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] mit Advanced Services ausgeführt wird, müssen Sie "$SQLExpress" an den "ReportServer"-Pfad anfügen. Zum Beispiel:  
@@ -117,17 +117,17 @@ ms.locfileid: "36163248"
   
 4.  Speichern Sie die Projektmappe.  
   
- Der Beispielcode für die exemplarische Vorgehensweise verwendet die <xref:ReportService2010.ReportingService2010.GetProperties%2A> Methode des Webdiensts, um Eigenschaften des Beispielberichts Company Sales 2012 abzurufen. Die <xref:ReportService2010.ReportingService2010.GetProperties%2A> Methode akzeptiert zwei Argumente: den Namen des Berichts für die abzurufenden Informationen und ein Array von **Property []** Objekte, die die Namen der Eigenschaften enthält, dessen Werte Sie abrufen möchten. Die Methode gibt auch ein Array von **Property[]** -Objekten zurück, die die Namen und Werte der Eigenschaften enthalten, die im Eigenschaftenargument angegeben sind.  
+ Der Beispielcode für die exemplarische Vorgehensweise verwendet die <xref:ReportService2010.ReportingService2010.GetProperties%2A> -Methode der Webdienst für die Eigenschaften des Beispielberichts Company Sales 2012 abzurufen. Die <xref:ReportService2010.ReportingService2010.GetProperties%2A> Methode akzeptiert zwei Argumente: den Namen des Berichts für die abzurufenden Informationen und ein Array von **Property []** Objekten, das die Namen der Eigenschaften enthält, dessen Werte Sie abrufen möchten. Die Methode gibt auch ein Array von **Property[]** -Objekten zurück, die die Namen und Werte der Eigenschaften enthalten, die im Eigenschaftenargument angegeben sind.  
   
 > [!NOTE]  
 >  Wenn Sie ein leeres **Property[]** -Array für das Eigenschaftenargument angeben, werden alle verfügbaren Eigenschaften zurückgegeben.  
   
  Im vorherigen Beispiel verwendet der Code die <xref:ReportService2010.ReportingService2010.GetProperties%2A>-Methode, um den Namen und die Beschreibung des Beispielberichts Company Sales 2012 zurückzugeben. Im Code wird dann eine `foreach`-Schleife verwendet, um die Eigenschaften und Werte auf die Konsole zu schreiben.  
   
- Weitere Informationen zum Erstellen und Verwenden einer Proxyklasse für den Report Server-Webdienst finden Sie unter [erstellen den Webdienstproxy](../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md).  
+ Weitere Informationen zum Erstellen und verwenden eine Proxyklasse für den Berichtsserver-Webdienst finden Sie unter [Erstellen des Webdienstproxys](../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Lektion 4: Ausführen der Anwendung &#40;VB-VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)   
- [Zugriff auf die Berichtsserver-Webdienst mit Visual Basic oder Visual C#&#35; &#40;SSRS-Lernprogramm&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
+ [Zugreifen auf die Berichtsserver-Webdienst mit Visual Basic oder Visual C#&#35; &#40;SSRS-Tutorial&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   
   

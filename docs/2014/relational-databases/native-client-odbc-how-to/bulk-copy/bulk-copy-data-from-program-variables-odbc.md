@@ -1,13 +1,11 @@
 ---
-title: Massenkopieren von Daten aus Programmvariablen (ODBC) | Microsoft Docs
+title: Massenkopieren von Daten aus Programmvariablen (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,18 +13,18 @@ helpviewer_keywords:
 - bulk copy [ODBC]
 ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9ef4b98997305cf1bd3232f51fd9d7ae0fb8a3b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 0e76a57da680d224989b013db5a5121fa3e7c224
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162535"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420589"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>Massenkopieren von Daten aus Programmvariablen (ODBC)
-  Dieses Beispiel zeigt, wie Funktionen zum Massenkopieren zum Massenkopieren von Daten aus Programmvariablen mit SQL Server über `bcp_bind` und `bcp_sendrow`. (Zur Vereinfachung dieses Beispiels wurde der Fehlerprüfcode entfernt.)  
+  In diesem Beispiel wird gezeigt, wie mit Massenkopierfunktionen Massenkopieren von Daten aus Programmvariablen mit SQL Server `bcp_bind` und `bcp_sendrow`. (Zur Vereinfachung dieses Beispiels wurde der Fehlerprüfcode entfernt.)  
   
  Dieses Beispiel wurde für ODBC, Version 3.0 oder höher, entwickelt.  
   
@@ -40,7 +38,7 @@ ms.locfileid: "36162535"
   
 3.  Stellen Sie eine Verbindung mit SQL Server her.  
   
-4.  Rufen Sie [Bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) um die folgenden Informationen festzulegen:  
+4.  Rufen Sie [Bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) auf die folgenden Informationen festzulegen:  
   
     -   Name der Tabelle oder Sicht, aus der bzw. in die massenkopiert werden soll  
   
@@ -50,15 +48,15 @@ ms.locfileid: "36162535"
   
     -   Die Kopierrichtung: DB_IN von der Anwendung in die Sicht oder Tabelle bzw. DB_OUT von der Tabelle oder Sicht in die Anwendung  
   
-5.  Rufen Sie [Bcp_bind](../../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) für jede Spalte in der Massenkopiervorgang in die Spalte an eine Programmvariable zu binden.  
+5.  Rufen Sie [Bcp_bind](../../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) für jede Spalte im Massenkopiervorgang auf, die die Spalte an eine Programmvariable zu binden.  
   
 6.  Füllen Sie die Programmvariablen mit Daten, und rufen [Bcp_sendrow](../../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) um eine Datenzeile zu senden.  
   
-7.  Nachdem mehrere Zeilen gesendet wurden, rufen Sie [Bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) Prüfpunkt, die bereits Zeilen gesendeten. Es wird empfohlen, die aufzurufende [Bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) mindestens einmal pro 1000 Zeilen.  
+7.  Nachdem mehrere Zeilen gesendet wurden, rufen [Bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) Prüfpunkt, die bereits Zeilen gesendeten. Es wird empfohlen, die aufzurufende [Bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) mindestens einmal nach jeweils 1000 Zeilen.  
   
-8.  Nachdem alle Zeilen gesendet wurden, rufen Sie [Bcp_done](../../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) um den Vorgang abzuschließen.  
+8.  Nachdem alle Zeilen gesendet wurden, rufen [Bcp_done](../../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) zum Abschließen des Vorgangs.  
   
- Sie können die Position und Länge der Programmvariablen während eines Massenkopiervorgangs variieren, durch den Aufruf [Bcp_colptr](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) und [Bcp_collen](../../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md). Verwendung [Bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) Festlegen verschiedener Massenkopieroptionen. Verwendung [Bcp_moretext](../../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) senden `text`, `ntext`, und `image` Daten in Segmenten an den Server.  
+ Sie können die Position und Länge der Programmvariablen während eines Massenkopiervorgangs variieren, durch den Aufruf [Bcp_colptr](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) und [Bcp_collen](../../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md). Verwendung [Bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) Festlegen verschiedener Massenkopieroptionen. Verwendung [Bcp_moretext](../../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) zum Senden von `text`, `ntext`, und `image` Daten in Segmenten an den Server.  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  
@@ -71,7 +69,7 @@ ms.locfileid: "36162535"
   
  Kompilieren Sie das zweite Codelisting (C++) mit odbc32.lib und odbcbcp.lib. Wenn Sie das Beispiel mit MSBuild.exe erstellt haben, kopieren Sie zuerst Bcpfmt.fmt und Bcpodbc.bcp aus dem Projektverzeichnis in das Verzeichnis mit der EXE-Datei, und rufen Sie dann die EXE-Datei auf.  
   
- Führen Sie das dritte ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) Codelisting zum Löschen der Tabellen, die im Beispiel verwendet.  
+ Führen Sie das dritte ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) aus, um die Tabellen zu löschen, die im Beispiel verwendete code.  
   
 ```  
 // compile with: odbc32.lib odbcbcp.lib  
@@ -306,7 +304,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Massenkopieren mit SQL Server-ODBC-Treiber – Themen &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+ [Massenkopieren mit dem SQL Server-ODBC-Treiber – Themen &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Massenkopieren aus Programmvariablen](../../native-client-odbc-bulk-copy-operations/bulk-copying-from-program-variables.md)  
   
   

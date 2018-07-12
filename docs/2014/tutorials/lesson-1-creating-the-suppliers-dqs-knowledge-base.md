@@ -1,5 +1,5 @@
 ---
-title: "Lektion 1: Erstellen der DQS-Wissensdatenbank ' Suppliers ' | Microsoft Docs"
+title: "Lektion 1: Erstellen der DQS-Wissensdatenbank ' Suppliers ' | Microsoft-Dokumentation"
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -10,25 +10,25 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 78825ccb-30fc-463c-8140-435532e2ecd2
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 58f787d1204cde60dee3a10fdaf587b52cf6dfa4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 744658b00253b96bf6110f4382a7a6a8a8d7abfc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162591"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151861"
 ---
 # <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>Lektion 1: Erstellen der DQS-Wissensdatenbank 'Suppliers'
   In dieser Lektion erstellen Sie eine DQS-Wissensdatenbank namens **Lieferanten** mit dem Wissen (Metadaten) über Lieferantendaten. Sie verwenden die Wissensdatenbank, um die Bereinigungs- und Abgleichsaktivitäten für Eingabelieferantendaten auszuführen. Die Bereinigungsaktivität identifiziert falsche/ungültige Daten, korrigiert falsche Daten, schlägt Korrekturen vor/macht Vorschläge, standardisiert die Daten und wertet die Daten durch weitere Informationen auf. Die Abgleichsaktivität vergleicht Daten und identifiziert ähnliche (aber leicht abweichende) Datensätze in den Daten, wodurch Sie Datenduplikate entfernen können.  
   
  Sie können sowohl interaktive als auch computerunterstützte Prozesse verwenden, um eine Wissensdatenbank zu erstellen, aufzubauen und zu verwalten. Wissen in einer Wissensdatenbank wird in Domänen verwaltet, die jeweils für ein Datenfeld in den Daten spezifisch sind, die Sie bereinigen und/oder abgleichen möchten.  
   
- In dieser Lektion führen Sie die folgenden Aufgaben zum Erstellen der **Lieferanten** Knowledge Base:  
+ In dieser Lektion führen Sie die folgenden Aufgaben zum Erstellen der **Lieferanten** Wissensdatenbank:  
   
 -   Erstellen Sie eine DQS-Wissensdatenbank namens **Lieferanten**. Sie können eine Wissensdatenbank auf verschiedene Arten erstellen. Sie können eine Wissensdatenbank wie folgt erstellen: von Grund auf, basierend auf einer vorhandenen Wissensdatenbank, durch den Import einer DQS-Datei (.dqs), die eine vordefinierte und exportierte Wissensdatenbank enthält, oder durch eine Wissensermittlungsaktivität für Beispieldaten. In diesem Lernprogramm erstellen Sie die Wissensdatenbank von Grund auf.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36162591"
   
 -   Legen Sie Regeln für eine Domäne fest. Eine Domänenregel ist eine Bedingung, mit der Domänenwerte von DQS überprüft, korrigiert und standardisiert werden.  
   
--   Legen Sie begriffsbasierte Beziehungen für eine Domäne fest. Mithilfe von begriffsbasierten Beziehungen können Sie eine Korrektur an einem Begriff vornehmen, der Teil eines Werts in einer Domäne ist. Beispielsweise ist in den Wert **Contoso Inc., Inc.** ist ein Begriff, der als Incorporated definiert werden kann. Dies ist bei der Standardisierung der Daten sowie der Identifizierung von Duplikaten hilfreich. Beispielsweise **Contoso Inc.** und **Contoso Incorporated** als Duplikate angesehen werden können.  
+-   Legen Sie begriffsbasierte Beziehungen für eine Domäne fest. Mithilfe von begriffsbasierten Beziehungen können Sie eine Korrektur an einem Begriff vornehmen, der Teil eines Werts in einer Domäne ist. In den Wert beispielsweise **Contoso Inc., Inc.** ist ein Ausdruck, der als Incorporated definiert werden kann. Dies ist bei der Standardisierung der Daten sowie der Identifizierung von Duplikaten hilfreich. Z. B. **Contoso Inc.** und **Contoso Incorporated** als Duplikate angesehen werden können.  
   
 -   Geben Sie Synonyme in Domänenwerten an. Sie können zwei oder mehr Werte als Synonyme und einen davon als führenden Wert festlegen, der die Synonymwerte während einer Bereinigungsaktivität ersetzt, um die Daten zu standardisieren.  
   

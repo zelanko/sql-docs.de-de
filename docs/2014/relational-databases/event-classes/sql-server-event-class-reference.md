@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SQL Server event classes
 ms.assetid: 0f0fe567-e115-4ace-b63c-73dc3428c0f6
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0afc75d01e181c4b91e19e38a446d925299b7651
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: aea5b9aaed8d44162fb9f63474751de47a81e2bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162540"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154591"
 ---
 # <a name="sql-server-event-class-reference"></a>Ereignisklassen in SQL Server – Referenz
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] Mithilfe von können Sie Ereignisse aufzeichnen, sobald diese in einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]auftreten. Die erfassten Ereignisse sind Instanzen der Ereignisklassen in der Ablaufverfolgungsdefinition. Ereignisklassen und die dazugehörigen Ereigniskategorien sind in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]im Dialogfeld **Eigenschaften der Ablaufverfolgungsdatei** auf der Registerkarte **Ereignisauswahl** verfügbar.  
@@ -41,7 +41,7 @@ ms.locfileid: "36162540"
 |Die [CLR-Ereigniskategorie](clr-event-category.md) enthält Ereignisklassen, die durch Ausführen von CLR-Objekten (Common Language Runtime) von .NET erstellt werden.|[Assembly Load-Ereignisklasse](../../database-engine/assembly-load-event-class.md)|  
 |Die [Database Event Category](database-event-category.md) enthält Ereignisklassen, die erstellt werden, wenn Daten- oder Protokolldateien automatisch vergrößert oder verkleinert werden.|[Data File Auto Grow-Ereignisklasse](data-file-auto-grow-event-class.md)<br /><br /> [Data File Auto Shrink-Ereignisklasse](data-file-auto-shrink-event-class.md)<br /><br /> [Database Mirroring State Change-Ereignisklasse](database-mirroring-state-change-event-class.md)<br /><br /> [Log File Auto Grow-Ereignisklasse](log-file-auto-grow-event-class.md)<br /><br /> [Log File Auto Shrink-Ereignisklasse](log-file-auto-shrink-event-class.md)|  
 |Die [Deprecation Event Category](deprecation-event-category.md) enthält Ereignisse, die sich auf veraltete Objekte beziehen.|[Deprecation Announcement-Ereignisklasse](deprecation-announcement-event-class.md)<br /><br /> [Deprecation Final Support (Ereignisklasse)](deprecation-final-support-event-class.md)|  
-|Die [Fehler und Warnungen-Ereigniskategorie &#40;Datenbankmodul&#41; ](errors-and-warnings-event-category-database-engine.md) Schließt Ereignisklassen ein, die erzeugt, wenn eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Attention-Ereignisklasse](attention-event-class.md)<br /><br /> [Background Job Error-Ereignisklasse](background-job-error-event-class.md)<br /><br /> [Blocked Process Report-Ereignisklasse](blocked-process-report-event-class.md)<br /><br /> [CPU Threshold Exceeded (Ereignisklasse)](cpu-threshold-exceeded-event-class.md)<br /><br /> [ErrorLog-Ereignisklasse](errorlog-event-class.md)<br /><br /> [EventLog-Ereignisklasse](eventlog-event-class.md)<br /><br /> [Exception-Ereignisklasse](exception-event-class.md)<br /><br /> [Exchange Spill (Ereignisklasse)](exchange-spill-event-class.md)<br /><br /> [Execution Warnings (Ereignisklasse)](execution-warnings-event-class.md)<br /><br /> [Hash Warning-Ereignisklasse](hash-warning-event-class.md)<br /><br /> [Missing Column Statistics-Ereignisklasse](missing-column-statistics-event-class.md)<br /><br /> [Missing Join Predicate (Ereignisklasse)](missing-join-predicate-event-class.md)<br /><br /> [Sort Warnings (Ereignisklasse)](sort-warnings-event-class.md)<br /><br /> [User Error Message-Ereignisklasse](user-error-message-event-class.md)|  
+|Die [Fehler und Warnungen-Ereigniskategorie &#40;Datenbank-Engine&#41; ](errors-and-warnings-event-category-database-engine.md) Schließt Ereignisklassen ein, die erstellt, wenn eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Attention-Ereignisklasse](attention-event-class.md)<br /><br /> [Background Job Error-Ereignisklasse](background-job-error-event-class.md)<br /><br /> [Blocked Process Report-Ereignisklasse](blocked-process-report-event-class.md)<br /><br /> [CPU Threshold Exceeded (Ereignisklasse)](cpu-threshold-exceeded-event-class.md)<br /><br /> [ErrorLog-Ereignisklasse](errorlog-event-class.md)<br /><br /> [EventLog-Ereignisklasse](eventlog-event-class.md)<br /><br /> [Exception-Ereignisklasse](exception-event-class.md)<br /><br /> [Exchange Spill (Ereignisklasse)](exchange-spill-event-class.md)<br /><br /> [Execution Warnings (Ereignisklasse)](execution-warnings-event-class.md)<br /><br /> [Hash Warning-Ereignisklasse](hash-warning-event-class.md)<br /><br /> [Missing Column Statistics-Ereignisklasse](missing-column-statistics-event-class.md)<br /><br /> [Missing Join Predicate (Ereignisklasse)](missing-join-predicate-event-class.md)<br /><br /> [Sort Warnings (Ereignisklasse)](sort-warnings-event-class.md)<br /><br /> [User Error Message-Ereignisklasse](user-error-message-event-class.md)|  
 |Die [Volltext (Ereigniskategorie)](full-text-event-category.md) enthält Ereignisklassen, die erstellt werden, wenn Volltextsuchvorgänge gestartet, unterbrochen oder beendet werden.|[FT:Crawl Aborted (Ereignisklasse)](ft-crawl-aborted-event-class.md)<br /><br /> [FT:Crawl Started (Ereignisklasse)](ft-crawl-started-event-class.md)<br /><br /> [FT:Crawl Stopped-Ereignisklasse](ft-crawl-stopped-event-class.md)|  
 |Die [Locks Event Category](locks-event-category.md) enthält Ereignisklassen, die erstellt werden, wenn eine Sperre eingerichtet, beendet, aufgehoben wird oder eine andere Aktion für die Sperre ausgeführt wird.|[Deadlock Graph (Ereignisklasse)](deadlock-graph-event-class.md)<br /><br /> [Lock:Acquired (Ereignisklasse)](lock-acquired-event-class.md)<br /><br /> [Lock:Cancel-Ereignisklasse](lock-cancel-event-class.md)<br /><br /> [Lock:Deadlock Chain (Ereignisklasse)](lock-deadlock-chain-event-class.md)<br /><br /> [Lock:Deadlock (Ereignisklasse)](lock-deadlock-event-class.md)<br /><br /> [Lock:Escalation-Ereignisklasse](lock-escalation-event-class.md)<br /><br /> [Lock:Released (Ereignisklasse)](lock-released-event-class.md)<br /><br /> [Lock:Timeout &#40;timeout &#62; 0&#41-Ereignisklasse](lock-timeout-timeout-0-event-class.md)<br /><br /> [Lock:Timeout (Ereignisklasse)](lock-timeout-event-class.md)|  
 |Die [Objects Event Category](objects-event-category.md) enthält Ereignisklassen, die erstellt werden, wenn Datenbankobjekte erstellt, geöffnet, geschlossen oder gelöscht werden.|[Auto Stats-Ereignisklasse](auto-stats-event-class.md)<br /><br /> [Object:Altered-Ereignisklasse](object-altered-event-class.md)<br /><br /> [Object:Created-Ereignisklasse](object-created-event-class.md)<br /><br /> [Object:Deleted-Ereignisklasse](object-deleted-event-class.md)|  

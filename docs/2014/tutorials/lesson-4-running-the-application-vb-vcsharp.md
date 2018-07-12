@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 4: Ausführen der Anwendung (VB-VC-) | Microsoft Docs'
+title: 'Lektion 4: Ausführen der Anwendung (VB-VC#) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 ms.assetid: b65c74b6-889b-4323-9240-90827a70ab0e
 caps.latest.revision: 33
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a92d624b12fdf9efd0c0479554ac7aa4946055ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 63dbefcdf84ee0245ec6adffb46d4d3d859c1dbe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162828"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183577"
 ---
-# <a name="lesson-4-running-the-application-vb-vc"></a>Lektion 4: Ausführen der Anwendung (VB-VC)
+# <a name="lesson-4-running-the-application-vb-vc"></a>Lektion 4: Ausführen der Anwendung (VB-VC#)
   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] bietet einige Methoden zum Erstellen und Ausführen einer Konsolenanwendung von der integrierten Entwicklungsumgebung (IDE, Integrated Development Environment) aus, beispielsweise:  
   
 -   Starten (mit Debuggen)  
@@ -32,7 +32,7 @@ ms.locfileid: "36162828"
   
 ### <a name="to-build-and-run-the-getpropertiessample"></a>So erstellen Sie den GetPropertiesSample-Code und führen ihn aus  
   
-1.  Aus der **Debuggen** Menü klicken Sie auf **Starten ohne Debugging**. Dadurch wird sichergestellt, dass das Konsolenfenster geöffnet bleibt, nachdem die Ausführung beendet wurde.  
+1.  Von der **Debuggen** Menü klicken Sie auf **Starten ohne Debugging**. Dadurch wird sichergestellt, dass das Konsolenfenster geöffnet bleibt, nachdem die Ausführung beendet wurde.  
   
      Die Anwendung erzeugt die folgende Ausgabe auf der Konsole:  
   
@@ -49,6 +49,6 @@ ms.locfileid: "36162828"
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.SqlServer.ReportingServices2005.ReportingService2005.GetProperties%2A>   
- [Zugriff auf die Berichtsserver-Webdienst mit Visual Basic oder Visual C#&#35; &#40;SSRS-Lernprogramm&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
+ [Zugreifen auf die Berichtsserver-Webdienst mit Visual Basic oder Visual C#&#35; &#40;SSRS-Tutorial&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   
   

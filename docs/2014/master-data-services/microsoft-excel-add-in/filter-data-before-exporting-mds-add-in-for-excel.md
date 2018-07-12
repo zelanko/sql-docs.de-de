@@ -1,5 +1,5 @@
 ---
-title: Filtern von Daten vor dem Laden (MDS-Add-in für Excel) | Microsoft Docs
+title: Filtern von Daten vor dem Laden (MDS-Add-in für Excel) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e30eae0-776b-4a09-aac3-0c0249d92ca5
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 98cb43795b68a35aeb4b57dc3a70ab001ffbaf8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 56cec33d57fc78122bdae7fd6d64a774919b18f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163365"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182908"
 ---
 # <a name="filter-data-before-loading-mds-add-in-for-excel"></a>Filtern von Daten vor dem Laden (MDS-Add-In für Excel)
-  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], Filtern Sie Daten aus, wenn Sie die Größe oder den Bereich der Daten, die Sie in Excel laden beschränken möchten.  
+  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], Filtern Sie Daten aus, wenn Sie beschränken der Größe oder den Bereich der Daten, die Sie in Excel laden möchten.  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  

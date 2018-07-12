@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Meine Abonnements | Microsoft Docs
+title: Verwenden von Meine Abonnements | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], My Subscriptions page
 - My Subscriptions page [Reporting Services]
@@ -16,16 +16,16 @@ ms.assetid: e96623ba-677e-4748-8787-f32bed3b5c12
 caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c1125792543e3a926ddb98e3d33e0f600328d232
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4d06913da04eebdaa249e424fa7b4d66c8e8aaa1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163053"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153791"
 ---
 # <a name="use-my-subscriptions"></a>Verwenden von "Meine Abonnements"
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Berichts-Manager enthält eine **Meine Abonnements** Seite, die alle Ihre Abonnements aufgelistet werden. Mithilfe von Meine Abonnements können Sie vorhandene Abonnements anzeigen, ändern und löschen. Abonnements können damit jedoch nicht erstellt werden.  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Berichts-Manager enthält eine **Meine Abonnements** Seite, die alle Ihre Abonnements zentral aufgelistet werden. Mithilfe von Meine Abonnements können Sie vorhandene Abonnements anzeigen, ändern und löschen. Abonnements können damit jedoch nicht erstellt werden.  
   
 ||  
 |-|  

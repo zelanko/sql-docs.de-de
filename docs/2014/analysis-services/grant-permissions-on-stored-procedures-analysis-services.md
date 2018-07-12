@@ -1,5 +1,5 @@
 ---
-title: Erteilen von Berechtigungen für gespeicherte Prozeduren (Analysis Services) | Microsoft Docs
+title: Erteilen von Berechtigungen für gespeicherte Prozeduren (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 01793166-a3e5-4856-8302-21b82d494e69
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c82a2df266f9e6dce2767ecceb3e2af9bd12fc1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b90318de4420df1776c01e5e881740d9d44ea20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162397"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278756"
 ---
 # <a name="grant-permissions-on-stored-procedures-analysis-services"></a>Erteilen von Berechtigungen für gespeicherte Prozeduren (Analysis Services)
   Gespeicherte Prozeduren oder Assemblys [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sind externe Routinen, geschrieben einer [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET-Programmiersprache erweitern, die die Funktionen der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Mit Assemblys können Entwickler die Vorteile der sprachübergreifenden Integration, der Ausnahmebehandlung, der Versionsunterstützung, der Verteilungs- und der Debugunterstützung nutzen.  
@@ -33,13 +33,13 @@ ms.locfileid: "36162397"
   
  Beim Ausführen gespeicherter Prozeduren werden die folgenden Berechtigungssätze verwendet:  
   
--   **Sichere** mit der sicheren Satz von Datenbankberechtigungen, die eine gespeicherte Prozedur kann nicht zugreifen der geschützten Ressourcen in der [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET Framework. Der Berechtigungssatz lässt nur Berechnungen zu. Dies ist der sicherste Berechtigungssatz. Es gelangen keine Informationen aus [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] heraus, die Berechtigungen können nicht erweitert werden, und das Risiko von Datenmanipulationsangriffen wird minimiert.  
+-   **Sichere** mit dem Safe-Berechtigungssatz, eine gespeicherte Prozedur kann nicht auf die geschützten Ressourcen in zugreifen der [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET Framework. Der Berechtigungssatz lässt nur Berechnungen zu. Dies ist der sicherste Berechtigungssatz. Es gelangen keine Informationen aus [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] heraus, die Berechtigungen können nicht erweitert werden, und das Risiko von Datenmanipulationsangriffen wird minimiert.  
   
--   **Externer Zugriff** mit der externen Access-Berechtigungssatz, eine gespeicherte Prozedur kann Zugriff auf externe Ressourcen mithilfe von verwaltetem Code. Wenn dieser Berechtigungssatz für eine gespeicherte Prozedur festgelegt wird, werden Programmierfehler ausgeschlossen, die zu einem instabilen Server führen können. Dieser Berechtigungssatz kann jedoch dazu führen, dass Informationen nach außen (außerhalb des Servers) gelangen, und es besteht die Möglichkeit, dass Berechtigungs- und Datenmanipulationsangriffe zunehmen.  
+-   **Externer Zugriff** Berechtigungssatz mit dem External Access, eine gespeicherte Prozedur kann Zugriff auf externe Ressourcen mithilfe von verwaltetem Code. Wenn dieser Berechtigungssatz für eine gespeicherte Prozedur festgelegt wird, werden Programmierfehler ausgeschlossen, die zu einem instabilen Server führen können. Dieser Berechtigungssatz kann jedoch dazu führen, dass Informationen nach außen (außerhalb des Servers) gelangen, und es besteht die Möglichkeit, dass Berechtigungs- und Datenmanipulationsangriffe zunehmen.  
   
--   **Unrestricted** mit der uneingeschränkten Berechtigungssatz, eine gespeicherte Prozedur kann Zugriff auf externe Ressourcen mithilfe von Code. Bei diesem Berechtigungssatz gibt es für gespeicherte Prozeduren keine Gewähr für die Sicherheit und Zuverlässigkeit.  
+-   **Unrestricted** mit der uneingeschränkten Berechtigungssatz eine gespeicherte Prozedur kann Zugriff auf externe Ressourcen mithilfe von Code. Bei diesem Berechtigungssatz gibt es für gespeicherte Prozeduren keine Gewähr für die Sicherheit und Zuverlässigkeit.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Mehrdimensionales Modell Assemblys-Verwaltung](multidimensional-models/multidimensional-model-assemblies-management.md)  
+ [Verwaltung von mehrdimensionalen Modellassemblys](multidimensional-models/multidimensional-model-assemblies-management.md)  
   
   

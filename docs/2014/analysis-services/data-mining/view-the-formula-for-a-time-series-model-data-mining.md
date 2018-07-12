@@ -1,5 +1,5 @@
 ---
-title: Anzeigen der Formel für ein Zeitreihenmodell Modells (Datamining) | Microsoft Docs
+title: Anzeigen der Formel für ein Zeitreihenmodell (Datamining)-Modell | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], how-to topics
 - ARTXP
@@ -18,24 +18,24 @@ helpviewer_keywords:
 - Time Series Viewer [Analysis Services]
 ms.assetid: 825ef719-2f44-4979-be01-5a81f54e1a53
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 11427eb72ea27bd93e8cb360afcf1221ab19b05a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dbdd4788ed35f38790c0e038acb15d0342c0bcc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162149"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163451"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>Anzeigen der Formel für ein Zeitreihenmodell (Data Mining)
   Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Viewer InData Mining-Designer bietet die einfachste Möglichkeit zum Anzeigen der Details in einem Zeitreihenmodell verwendeten Regressionsformel.  
   
- Sie können die Regressionsformel für ein Zeitreihenmodell extrahieren, indem Sie den Modellinhalt abfragen. Jedoch zur Anzeige der kompletten Formel für ARTXP oder ARIMA wir empfehlen die Verwendung der **Mininglegende** von der [Microsoft Time Series-Viewer](browse-a-model-using-the-microsoft-time-series-viewer.md), der alle Konstanten im lesbaren Format dargestellt.  
+ Sie können die Regressionsformel für ein Zeitreihenmodell extrahieren, indem Sie den Modellinhalt abfragen. Allerdings zum Anzeigen der Formel für ARTXP oder ARIMA wir empfehlen die Verwendung der **Mininglegende** von der [Microsoft Time Series-Viewer](browse-a-model-using-the-microsoft-time-series-viewer.md), der alle Konstanten im lesbaren Format dargestellt.  
   
  Wenn Sie ein gemischtes Modell erstellen, werden die ARIMA- und die ARTXP-Analyse in separaten Strukturen erstellt. Sie sind am Stammknoten miteinander verknüpft, der das Modell darstellt. Die Strukturen der ARIMA- und der ARTXP-Struktur unterscheiden sich stark. Zum Beispiel ist die ARTXP-Struktur tatsächlich eine Baumstruktur (wie eine Entscheidungsstruktur), wohingegen die ARIMA-Struktur eine Reihe von gleitenden Durchschnitten darstellt. Obwohl die beiden Darstellungen der Übersichtlichkeit halber in einem Modell gezeigt werden, müssen Sie sie dennoch als zwei unabhängige Modelle behandeln. Die Gleichungen sind auch völlig unterschiedlich und können nicht kombiniert oder verglichen werden.  
   
- Sie können zeitreihenmodelle auch anzeigen, indem Sie mit der [Microsoft Generic Content Tree Viewer](../microsoft-generic-content-tree-viewer-data-mining.md). Weitere Informationen über den Inhalt von einem Zeitreihenmodell finden Sie unter [Miningmodellinhalt Zeitreihenmodelle &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
+ Sie können zeitreihenmodelle auch anzeigen, mit der [Microsoft Generic Content Tree Viewer](../microsoft-generic-content-tree-viewer-data-mining.md). Weitere Informationen zum Inhalt von einem Zeitreihenmodell finden Sie unter [Miningmodellinhalt für Zeitreihenmodelle &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
   
 ### <a name="to-view-the-artxp-regression-formula-for-a-time-series-model"></a>So zeigen Sie die ARTXP-Regressionsformel für ein Zeitreihenmodell an  
   

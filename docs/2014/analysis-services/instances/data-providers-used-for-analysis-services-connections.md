@@ -1,5 +1,5 @@
 ---
-title: Für Analysis Services-Verbindungen verwendete Datenanbieter | Microsoft Docs
+title: Für Analysis Services-Verbindungen verwendete Datenanbieter | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7eb84d1a796268414c7f28e3c46e8a3de6cd295e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 357849f815fcdd8310d7056caa2f199d70675e64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163238"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157201"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>Für Analysis Services-Verbindungen verwendete Datenanbieter
   Analysis Services stellt drei Datenanbieter für den Server- und Datenzugriff bereit. Alle Anwendungen, die eine Verbindung mit Analysis Services herstellen, verwenden dazu einen dieser Anbieter. Die beiden Anbieter ADOMD.NET und AMO (Analysis Services Management Objects) sind verwaltete Datenanbieter. Der Analysis Services OLE DB-Anbieter (MSOLAP DLL) ist ein systemeigener Datenanbieter.  
   
- In Organisationen, in denen mehrere Analysis Services-Versionen ausgeführt werden, müssen auf Benutzerarbeitsstationen, die eine Verbindung mit Analysis Services-Daten herstellen, u. U. neuere Versionen der Datenanbieter installiert werden. Damit Verbindungen mit neueren Analysis Services-Versionen hergestellt werden können, sind Datenanbieter derselben Hauptversion erforderlich. Angenommen, für die Verbindung [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)], jeder Arbeitsstation muss einen Datenanbieter der Version 2014 verfügen. Obwohl die von Excel für Verbindungen benötigten Datenanbieter installiert werden, kann dieser Anbieter im Vergleich zu den verwendeten Analysis Services-Instanzen veraltet sein.  
+ In Organisationen, in denen mehrere Analysis Services-Versionen ausgeführt werden, müssen auf Benutzerarbeitsstationen, die eine Verbindung mit Analysis Services-Daten herstellen, u. U. neuere Versionen der Datenanbieter installiert werden. Damit Verbindungen mit neueren Analysis Services-Versionen hergestellt werden können, sind Datenanbieter derselben Hauptversion erforderlich. Für die Verbindung beispielsweise [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)], jeder Arbeitsstation muss einen Datenanbieter der Version 2014 verfügen. Obwohl die von Excel für Verbindungen benötigten Datenanbieter installiert werden, kann dieser Anbieter im Vergleich zu den verwendeten Analysis Services-Instanzen veraltet sein.  
   
  Dieses Thema enthält die folgenden Abschnitte:  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36163238"
   
  Die mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]gelieferte Version des Analysis Services OLE DB-Anbieters lautet MSOLAP130.dll. Einige der letzten Vorgängerversionen waren MSOLAP10.dll (für SQL Server 2008 und 2008 R2) und MSOLAP90.dll (für SQL Server 2005).  
   
- OLE DB-Anbieter werden häufig in Verbindungszeichenfolgen angegeben. Eine Analysis Services-Verbindungszeichenfolge eine andere Benennung zum Verweisen auf die OLE DB-Anbieter verwendet: MSOLAP. \<Version > .dll  
+ OLE DB-Anbieter werden häufig in Verbindungszeichenfolgen angegeben. Eine Analysis Services-Verbindungszeichenfolge wird eine andere Benennung auf den OLE DB-Anbieter verwiesen: MSOLAP. \<Version > .dll  
   
  MSOLAP.5.dll ist der aktuelle Analysis Services OLE DB-Anbieter, der mit Excel 2013 installiert wird. Auf Arbeitsstationen mit älteren Excel-Versionen sind häufig frühere Versionen wie MSOLAP.4.dll oder MSOLAP.3.dll zu finden. Einige Analysis Services-Funktionen, wie das PowerPivot-Add-In, erfordern bestimmte Versionen des OLE DB-Anbieters. Weitere Informationen finden Sie unter [Verbindungszeichenfolgen-Eigenschaften &#40;Analysis Services&#41;](connection-string-properties-analysis-services.md).  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36163238"
   
  AMO wird von SQL Server-Setup installiert und von SQL Server-Clientanwendungen für Verbindungen mit Analysis Services genutzt. Sie können es auch herunterladen und manuell installieren, wenn Sie AMO im benutzerdefinierten Code verwenden (Informationen hierzu finden Sie unter [Ermitteln der Version von Analysis Services-Datenanbietern](#bkmk_LibUpdate) in diesem Thema). AMO ist im globalen Assemblycache als `Microsoft.AnalysisServices`enthalten.  
   
- Eine Verbindung mit AMO ist normalerweise sehr einfach, bestehend aus "Data Source =\<Servername >". Nachdem eine Verbindung hergestellt wurde, verwenden Sie die API, um mit Datenbankauflistungen und Hauptobjekten zu arbeiten. Sowohl SSDT als auch SSMS verwenden AMO, um eine Verbindung mit einer Analysis Services-Instanz herzustellen.  
+ Eine Verbindung mit AMO ist normalerweise sehr einfach gehalten werden, bestehend aus "Data Source =\<Servername >". Nachdem eine Verbindung hergestellt wurde, verwenden Sie die API, um mit Datenbankauflistungen und Hauptobjekten zu arbeiten. Sowohl SSDT als auch SSMS verwenden AMO, um eine Verbindung mit einer Analysis Services-Instanz herzustellen.  
   
  Weitere Informationen zum programmgesteuerten Herstellen einer Verbindung finden Sie unter [Programming AMO Fundamental Objects](../multidimensional-models/analysis-management-objects/programming-amo-fundamental-objects.md).  
   

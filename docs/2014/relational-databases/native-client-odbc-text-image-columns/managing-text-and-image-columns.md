@@ -1,13 +1,11 @@
 ---
-title: Verwalten von Text- und Image-Spalten | Microsoft Docs
+title: Verwalten von Text- und Image-Spalten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,20 +20,20 @@ helpviewer_keywords:
 - image columns [ODBC]
 ms.assetid: 7b543556-ff36-4d35-ac08-de96223d92cd
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1316f093ac0d1f79c5155ae1be88df98f091bd8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f0989157eabe987ae8d1bdac22deb25ad2c6d028
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160904"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426989"
 ---
 # <a name="managing-text-and-image-columns"></a>Verwalten von Text und Imagespalten
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Text**, **Ntext**, und **Image** Daten (auch als long-Daten bezeichnet) sind Zeichen- oder binären Zeichenfolgen-Datentypen, die Datenwerte zu groß für aufnehmen können **Char**, **Varchar**, **binäre**, oder **Varbinary** Spalten. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Text** -Datentyp mit der ODBC SQL_LONGVARCHAR-Datentyp; **Ntext** ordnet SQL_WLONGVARCHAR und **Image** -Datentyp SQL_LONGVARBINARY. Einige Datenelemente, wie z. B. lange Dokumente oder große Bitmaps, sind möglicherweise zu groß, um im Speicher gespeichert zu werden. Zum Abrufen von long-Daten aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in teilsequenzen, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber ermöglicht einer Anwendung aufrufen [SQLGetData](../native-client-odbc-api/sqlgetdata.md). Um lange Daten in teilsequenzen zu senden, kann die Anwendung aufrufen [SQLPutData](../native-client-odbc-api/sqlputdata.md). Parameter, für die Daten zur Ausführungszeit gesendet werden, werden als Data-at-Execution-Parameter bezeichnet.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Text**, **Ntext**, und **Image** Daten (auch als long-Daten bezeichnet) sind Zeichen- oder binären Zeichenfolgen-Datentypen, Datenwerte zu groß für aufnehmen können **Char**, **Varchar**, **binäre**, oder **Varbinary** Spalten. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Text** -Datentyp zugeordnet, der Datentyp SQL_LONGVARCHAR für ODBC **Ntext** SQL_WLONGVARCHAR zugeordnet und **Image** -Datentyp SQL_LONGVARBINARY. Einige Datenelemente, wie z. B. lange Dokumente oder große Bitmaps, sind möglicherweise zu groß, um im Speicher gespeichert zu werden. Zum Abrufen von long-Daten aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in teilsequenzen, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber ermöglicht einer Anwendung aufrufen, [SQLGetData](../native-client-odbc-api/sqlgetdata.md). Um lange Daten in teilsequenzen zu senden, die Anwendung aufrufen kann [SQLPutData](../native-client-odbc-api/sqlputdata.md). Parameter, für die Daten zur Ausführungszeit gesendet werden, werden als Data-at-Execution-Parameter bezeichnet.  
   
- Tatsächlich eine Anwendung schreiben bzw. jeden Datentyp (nicht nur long-Daten) mit abrufen **SQLPutData** oder **SQLGetData**, obwohl nur **Zeichen** und  **binäre** Daten gesendet oder in Teilen abgerufen werden können. Wenn die Daten klein genug, um einen einzelnen Puffer zu groß ist, besteht jedoch im Allgemeinen kein Grund zur Verwendung **SQLPutData** oder **SQLGetData**. Es ist viel leichter, den einzelnen Puffer an den Parameter oder die Spalte zu binden.  
+ Eine Anwendung kann tatsächlich schreiben oder rufen Sie alle Arten von Daten (nicht nur long-Daten) mit **SQLPutData** oder **SQLGetData**, obwohl nur **Zeichen** und  **binäre** Daten gesendet oder in Teilen abgerufen werden können. Wenn die Daten klein genug, um in einen einzelnen Puffer zu passen, gibt es ist jedoch im Allgemeinen kein Grund für die Verwendung **SQLPutData** oder **SQLGetData**. Es ist viel leichter, den einzelnen Puffer an den Parameter oder die Spalte zu binden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   

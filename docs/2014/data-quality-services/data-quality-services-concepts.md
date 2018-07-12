@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b1f6eb37de996e8956468efb54fa74535e419f44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 16ca3b28e9b19c0f7935f2938d054939f0cc57a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162998"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155391"
 ---
 # <a name="data-quality-services-concepts"></a>Konzepte der Data Quality Services
   Dieses Thema enthält eine kurze Zusammenfassung der [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS)-Konzepte in Wissensverwaltung, Data Quality-Projekten und Datenqualitätsverwaltung.  
@@ -43,7 +43,7 @@ ms.locfileid: "36162998"
   
  Sie können Verweisdaten verwenden, um die Daten zu überprüfen, zu korrigieren und anzureichern und dabei die Dienste von Unternehmen nutzen, die die Qualität ihrer Verweisdaten garantieren. Sie können die Dienste von Windows Azure Marketplace verwenden, um eine Verbindung mit Verweisdatenanbietern herzustellen, oder Sie können eine direkte Verbindung zu einem Anbieter nutzen. Weitere Informationen finden Sie unter [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
   
- Weitere Informationen zur wissensverwaltung in DQS finden Sie unter [DQS-Wissensdatenbanken und Domänen](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
+ Weitere Informationen zur wissensverwaltung in DQS finden Sie unter [DQS-Wissensdatenbanken und-Domänen](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
 ##  <a name="Projects"></a> Konzepte des Data Quality-Projekts  
  Der Data Steward führt Data Quality-Vorgänge (Bereinigung und Abgleich) mithilfe eines Data Quality-Projekts in der Anwendung [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] aus.  
@@ -64,7 +64,7 @@ ms.locfileid: "36162998"
   
  **Profilerstellung und Benachrichtigungen**  
   
- Die Datenprofilerstellung stellt Data Stewards während der Ausführung eines Data Quality-Projekts Statistiken und Informationen zu den von DQS verarbeiteten Daten in Echtzeit bereit, die für Bereinigungs- und Abgleichsaktivitäten verwendet werden. Mithilfe der Datenprofilerstellung können Sie die Effektivität der Bereinigungs- und Abgleichsprozesse in einem Data Quality-Projekt bewerten. Außerdem unterstützen Benachrichtigungen den Benutzer bei Aktionen, die zur Verbesserung der Datenbereinigungs- und Datenabgleichsvorgänge ausgeführt werden können. Weitere Informationen finden Sie unter [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md).  
+ Die Datenprofilerstellung stellt Data Stewards während der Ausführung eines Data Quality-Projekts Statistiken und Informationen zu den von DQS verarbeiteten Daten in Echtzeit bereit, die für Bereinigungs- und Abgleichsaktivitäten verwendet werden. Mithilfe der Datenprofilerstellung können Sie die Effektivität der Bereinigungs- und Abgleichsprozesse in einem Data Quality-Projekt bewerten. Außerdem unterstützen Benachrichtigungen den Benutzer bei Aktionen, die zur Verbesserung der Datenbereinigungs- und Datenabgleichsvorgänge ausgeführt werden können. Weitere Informationen finden Sie unter [Datenprofilerstellung und Benachrichtigungen in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
  Weitere Informationen zu Data Quality-Projekten in DQS finden Sie unter [Data Quality-Projekte &#40;DQS&#41;](../../2014/data-quality-services/data-quality-projects-dqs.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Verwenden Sie eine Vorlage zum Erstellen einer Aktion | Microsoft Docs
+title: Verwenden Sie eine Vorlage zum Erstellen einer Aktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ad0917d6-349a-4923-97be-83c778424286
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0b608f3ffeb7836481adb23fc316d3dce63bd3bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4c1f322ee3d775605a0c9636c5da060044d35006
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162373"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259566"
 ---
 # <a name="use-a-template-to-create-an-action"></a>Verwenden einer Vorlage zum Erstellen einer Aktion
   Die Sicht **Aktionen** im Cube-Designer enthält eine Reihe von Vorlagen, mit denen Sie allgemeine Aktionen erstellen können. Der Zugriff auf den Cube-Designer ist über [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]möglich.  
   
 > [!NOTE]  
->  Nachdem Sie die Aktion erstellt haben, ist sie nach einer Aktualisierung oder erneuten Verarbeitung des Cubes für die Benutzer verfügbar. Weitere Informationen finden Sie unter [mehrdimensionalen Modell Objekt verarbeiten](processing-a-multidimensional-model-analysis-services.md).  
+>  Nachdem Sie die Aktion erstellt haben, ist sie nach einer Aktualisierung oder erneuten Verarbeitung des Cubes für die Benutzer verfügbar. Weitere Informationen finden Sie unter [mehrdimensionalen Modell Objekt verarbeitet](processing-a-multidimensional-model-analysis-services.md).  
   
 ### <a name="to-use-a-template-to-create-an-action"></a>So verwenden Sie eine Vorlage zum Erstellen einer Aktion  
   

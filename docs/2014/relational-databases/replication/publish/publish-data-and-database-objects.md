@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined types [SQL Server replication]
 - articles [SQL Server replication], dropping
@@ -42,15 +42,15 @@ helpviewer_keywords:
 - user-defined functions [SQL Server replication]
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 caps.latest.revision: 83
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: dfce55b3732c2e6715ad84e079c7c0707a243929
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0a7513569ed762aaad446b726ce1a6ac58ac5a59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163111"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154081"
 ---
 # <a name="publish-data-and-database-objects"></a>Veröffentlichen von Daten und Datenbankobjekten
   Wenn Sie eine Veröffentlichung erstellen möchten, können Sie die Tabellen und anderen Datenbankobjekte auswählen, die Sie veröffentlichen möchten. Mit einer Replikation können die folgenden Datenbankobjekte veröffentlicht werden:  
@@ -188,7 +188,7 @@ ms.locfileid: "36163111"
   
 -   Mit [sp_bindefault &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-bindefault-transact-sql) erstellte gebundene Standardwerte werden nicht repliziert (gebundene Standardwerte werden als veraltet markiert und stattdessen Standardwerte verwendet, die mit dem DEFAULT-Schlüsselwort von ALTER TABLE bzw. CREATE TABLE erstellt wurden).  
   
--   Funktionen, die den `NOEXPAND`-Hinweis für indizierte Sichten enthalten, können nicht in derselben Veröffentlichung wie die Tabellen, auf die verwiesen wird, und die indizierten Sichten veröffentlicht werden. Dies liegt an der Reihenfolge, in der sie vom Verteilungs-Agent übermittelt werden. Um dieses Problem zu umgehen, fügen Sie die Erstellung der Tabelle und indizierten Sichten in eine erste Veröffentlichung ein, während Sie Funktionen, die den `NOEXPAND`-Hinweis für die indizierten Sichten enthalten, einer zweiten Veröffentlichung hinzufügen, die Sie veröffentlichen, nachdem die erste Veröffentlichung abgeschlossen ist. Oder, erstellen Sie Skripts für diese Funktionen und übermitteln Sie das Skript mithilfe der *@post_snapshot_script* Parameter `sp_addpublication`.  
+-   Funktionen, die den `NOEXPAND`-Hinweis für indizierte Sichten enthalten, können nicht in derselben Veröffentlichung wie die Tabellen, auf die verwiesen wird, und die indizierten Sichten veröffentlicht werden. Dies liegt an der Reihenfolge, in der sie vom Verteilungs-Agent übermittelt werden. Um dieses Problem zu umgehen, fügen Sie die Erstellung der Tabelle und indizierten Sichten in eine erste Veröffentlichung ein, während Sie Funktionen, die den `NOEXPAND`-Hinweis für die indizierten Sichten enthalten, einer zweiten Veröffentlichung hinzufügen, die Sie veröffentlichen, nachdem die erste Veröffentlichung abgeschlossen ist. Oder, Skripts für diese Funktionen erstellen und übermitteln Sie das Skript mithilfe der *@post_snapshot_script* Parameter `sp_addpublication`.  
   
 ### <a name="schemas-and-object-ownership"></a>Schemas und Objektbesitz  
  Im Assistenten für neue Veröffentlichung weist die Replikation in Bezug auf Schemas und den Objektbesitz das folgende Standardverhalten auf:  

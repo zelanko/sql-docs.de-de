@@ -1,30 +1,28 @@
 ---
-title: Datum und Uhrzeit und Schemarowsets | Microsoft Docs
+title: Datums- und Uhrzeit- sowie Schemarowsets | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], schema rowsets
 ms.assetid: 8c35e86f-0597-4ef4-b2b8-f643e53ed4c2
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9faf2104ffb2f49281fe677d8e7ff4f23887338d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 8a87b2ecdcce3b50eaebcc73471b44f6db48f04b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160642"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431679"
 ---
-# <a name="date-and-time-and-schema-rowsets"></a>Datum und Uhrzeit und Schemarowsets
+# <a name="date-and-time-and-schema-rowsets"></a>Datums- und Uhrzeit- sowie Schemarowsets
   Dieses Thema enthält Informationen über das COLUMNS-Rowset und das PROCEDURE_PARAMETERS-Rowset. Diese Informationen beziehen sich auf die OLE DB-Verbesserungen in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] in Bezug auf Datum und Uhrzeit.  
   
 ## <a name="columns-rowset"></a>COLUMNS-Rowset  
@@ -59,7 +57,7 @@ ms.locfileid: "36160642"
   
  Das neue DBCOLUMNFLAGS_SS_ISVARIABLESCALE-Flag wird in COLUMN_FLAGS bereitgestellt, damit eine Anwendung den Servertyp der Spalten bestimmen kann, wobei DATA_TYPE = DBTYPE_DBTIMESTAMP ist. DATETIME_PRECISION muss ebenfalls verwendet werden, um den Servertyp zu identifizieren.  
   
- DBCOLUMNFLAGS_SS_ISVARIABLESCALE ist nur gültig, wenn es sich bei einer Verbindung mit einem [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Server oder höher. DBCOLUMNFLAGS_SS_ISFIXEDSCALE ist nicht definiert, wenn eine Verbindung mit einem Downlevelserver besteht.  
+ DBCOLUMNFLAGS_SS_ISVARIABLESCALE ist nur gültig, beim Verbinden mit einem [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher. DBCOLUMNFLAGS_SS_ISFIXEDSCALE ist nicht definiert, wenn eine Verbindung mit einem Downlevelserver besteht.  
   
 ## <a name="procedureparameters-rowset"></a>PROCEDURE_PARAMETERS-Rowset  
  DATA_TYPE enthält die gleichen Werte wie das COLUMNS-Schemarowset, und TYPE_NAME enthält den Servertyp.  
@@ -90,12 +88,12 @@ ms.locfileid: "36160642"
 |TYPELIB|NULL|NULL|NULL|NULL|NULL|NULL|  
 |VERSION|NULL|NULL|NULL|NULL|NULL|NULL|  
 |IS_LONG|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|BEST_MATCH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE, außer wenn eine der folgenden Aussagen zutrifft:<br /><br /> -Client mit einem downlevelserver verbunden ist.<br />-Kompatibilität Verbindung Datentypeigenschaft der gibt eines Kompatibilitätsgrad, der 80 entspricht.|VARIANT_TRUE, außer wenn eine der folgenden Aussagen zutrifft:<br /><br /> -Client mit einem downlevelserver verbunden ist.<br />-Kompatibilität Verbindung Datentypeigenschaft der gibt eines Kompatibilitätsgrad, der 80 entspricht.|VARIANT_TRUE|  
+|BEST_MATCH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE, außer wenn eine der folgenden Aussagen zutrifft:<br /><br /> -Client mit einem downlevelserver verbunden ist.<br />– Der Datentyp-Verbindung-Kompatibilitätseigenschaft gibt einen Kompatibilitätsgrad, der gleich 80.|VARIANT_TRUE, außer wenn eine der folgenden Aussagen zutrifft:<br /><br /> -Client mit einem downlevelserver verbunden ist.<br />– Der Datentyp-Verbindung-Kompatibilitätseigenschaft gibt einen Kompatibilitätsgrad, der gleich 80.|VARIANT_TRUE|  
 |IS_FIXEDLENGTH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
   
  OLE DB definiert lediglich MINIMUM_SCALE und MAXIMUM_SCALE für numerische und Dezimaltypen, weshalb die Verwendung dieser Spalten für time, datetime2 und datetimeoffset durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client nicht standardmäßig ist.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Metadaten &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
+ [Metadaten &#40;OLE-DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
   
   

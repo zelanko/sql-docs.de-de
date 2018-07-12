@@ -1,5 +1,5 @@
 ---
-title: Optionality-Element (ASSL) | Microsoft Docs
+title: Optionality-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Optionality element
 ms.assetid: 6cd2ef0a-6fbe-4462-ab27-4cdfeb33f8ab
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 971aaf70fe3cb2e239ace81d85f02d07374ce80f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fe204e2b8eed7b5629b9c6d6060295383371aa48
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161897"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159361"
 ---
 # <a name="optionality-element-assl"></a>Optionality-Element (ASSL)
-  Gibt die Optionalität der Elemente für eine [AttributeRelationship](../objects/attributerelationship-element-assl.md) Element.  
+  Gibt die Optionalität der Elemente für ein [AttributeRelationship](../objects/attributerelationship-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36161897"
   
 |value|Description|  
 |-----------|-----------------|  
-|*Obligatorisch*|Jedes Element im zugehörigen Attribut muss mindestens ein Element im Attribut zugeordnet werden, das über die `AttributeRelationship` Element.|  
+|*Obligatorisch*|Jedes Element im zugehörigen Attribut muss mindestens ein Element im Attribut zugeordnet werden, das die `AttributeRelationship` Element.|  
 |*Optional*|Jedes Element im zugehörigen Attribut muss nicht mindestens einem Element im Attribut zugeordnet werden, das über das `AttributeRelationship`-Element verfügt.|  
   
  Die Enumeration, die den zulässigen Werten für entspricht `Cardinality` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Optionality>.  

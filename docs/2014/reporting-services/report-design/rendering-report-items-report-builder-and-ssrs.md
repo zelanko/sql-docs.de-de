@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 66738f617a6b882e1b72c526fb66aad5f438f969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c4b2c799771c6ff5e87100e4906411b4a8a613bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162428"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240400"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>Rendern von Berichtselementen (Berichts-Generator und SSRS)
   Die Zahl, die Größe und der Ort der Berichtselemente beeinflussen, wie die Renderer den Text des Berichts paginieren. Unten finden Sie eine Beschreibung zum Rendering verschiedener Berichtselemente.  
@@ -81,7 +81,7 @@ ms.locfileid: "36162428"
   
 -   Wiederholte Spaltenkopfzeilen und Zeilenheader.  
   
-     Kopfzeilen haben Vorrang gegenüber Fußzeilen. Innere wiederholte Gruppen haben Priorität über äußere Gruppen. Elemente mit der `RepeatWith` Eigenschaft festgelegt ist, die näher an den Datenbereich Ziel haben Priorität über Elemente, die weiter vom Datenbereich entfernt liegen.  
+     Kopfzeilen haben Vorrang gegenüber Fußzeilen. Innere wiederholte Gruppen haben Priorität über äußere Gruppen. Elemente mit den `RepeatWith` festgelegt wird, die näher an die Zielregion für die Daten haben Priorität über Elemente, die weiter vom Datenbereich entfernt liegen.  
   
 -   Kleine Berichtselemente, z. B. Textfelder oder Rechtecke, mit einer expliziten KeepTogether-Eigenschaft auf festgelegt `true`.  
   

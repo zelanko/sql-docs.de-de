@@ -1,13 +1,11 @@
 ---
-title: Bcp_writefmt | Microsoft Docs
+title: Bcp_writefmt | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - bcp_writefmt function
 ms.assetid: cb4c1d37-667d-4bcd-b13c-eb638bcc9b69
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1fe386d49ea68e8b6f33048f246c3a3afd037b4f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4f82c05a8d605b056619e22f7f711762b1555ac7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161560"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427879"
 ---
 # <a name="bcpwritefmt"></a>bcp_writefmt
   Erstellt eine Formatdatei, die eine Beschreibung des Formats der aktuellen Datendatei für das Massenkopieren enthält.  
@@ -58,14 +56,14 @@ szFormatFile
  SUCCEED oder FAIL.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Formatdatei gibt das Datenformat einer durch Massenkopieren erstellten Datendatei an. Aufrufe von [Bcp_columns](bcp-columns.md) und [Bcp_colfmt](bcp-colfmt.md) definieren Sie das Format der Datendatei. **bcp_writefmt** speichert diese Definition in der Datei, auf die von *szFormatFile*verwiesen wird. Weitere Informationen finden Sie unter [Bcp_init](bcp-init.md).  
+ Die Formatdatei gibt das Datenformat einer durch Massenkopieren erstellten Datendatei an. Aufrufe von [Bcp_columns](bcp-columns.md) und [Bcp_colfmt](bcp-colfmt.md) definieren das Format der Datendatei. **bcp_writefmt** speichert diese Definition in der Datei, auf die von *szFormatFile*verwiesen wird. Weitere Informationen finden Sie unter [Bcp_init](bcp-init.md).  
   
  Weitere Informationen zur Struktur von **Bcp** -datenformatdateien finden Sie unter [importieren und Exportieren von Massendaten mithilfe des Hilfsprogramms Bcp &#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
   
  Um eine gespeicherte Formatdatei zu laden, verwenden [Bcp_readfmt](bcp-readfmt.md).  
   
 > [!NOTE]  
->  Die Formatdatei erstellt, durch **Bcp_writefmt** wird nur von Versionen von unterstützt die **Bcp** Hilfsprogramms [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7.0 und höher.  
+>  Die Formatdatei erzeugten **Bcp_writefmt** wird nur von Versionen von unterstützt die **Bcp** Hilfsprogramms [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7.0 und höher.  
   
 ## <a name="example"></a>Beispiel  
   

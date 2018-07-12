@@ -1,40 +1,38 @@
 ---
-title: Abrufen von Daten aus einer FILESTREAM-Spalte mithilfe von ISequentialStream (OLE DB) | Microsoft Docs
+title: Abrufen von Daten aus einer FILESTREAM-Spalte, die mithilfe von ISequentialStream (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 814cb31e-6fd1-4eb7-afe3-25b520638815
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9ed7b28aab8e9e9323d904791581485217557a0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: af1fdbad51d7d6ae1c6c2320a6ac05d103123324
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162238"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424859"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>Abrufen von Daten aus einer FILESTREAM-Spalte mithilfe von ISequentialStream (OLE DB)
   Dieses Beispiel veranschaulicht die Verwendung einer ISequentialStream-Schnittstelle in einer ICommandText-Schnittstelle, um einen einzigen Datensatz aus einer FILESTREAM-Spalte abzurufen.  
   
- Weitere Informationen zur Filestream-Funktion finden Sie unter [FILESTREAM-Unterstützung &#40;OLE DB-&#41;](../../native-client/ole-db/filestream-support-ole-db.md).  
+ Weitere Informationen zur Filestream-Funktion finden Sie unter [FILESTREAM-Unterstützung &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Beispiel  
  Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
  Erstellen Sie die Tabelle, aus der in diesem Beispiel gelesen wird, mithilfe eines der folgenden Beispiele:  
   
--   [Senden von Daten an eine FILESTREAM-Spalte, die mithilfe einer ISequentialStream-Schnittstelle, die an ICommandText Parameter gebunden &#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [Senden von Daten an eine FILESTREAM-Spalte mithilfe einer ISequentialStream-Schnittstelle, die an ICommandText Parameter gebunden &#40;OLE-DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [Senden von Daten an eine FILESTREAM-Spalte mithilfe von IRowsetFastUpload &#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [Senden von Daten an eine FILESTREAM-Spalte, die mithilfe von IRowsetFastUpload &#40;OLE-DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  Kopieren Sie das erste Codelisting, und fügen Sie es in eine Datei mit dem Namen ISSHelper.h ein.  
   

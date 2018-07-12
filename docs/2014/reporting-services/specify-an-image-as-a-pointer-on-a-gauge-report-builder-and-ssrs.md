@@ -1,5 +1,5 @@
 ---
-title: Festlegen eines Bilds als Zeiger auf einem Messgerät (Berichts-Generator und SSRS) | Microsoft Docs
+title: Festlegen eines Bilds als Zeiger auf einem Messgerät (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9d73b3c3-a068-4868-a2be-0cd261b6e92b
 caps.latest.revision: 7
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bce410684b433d8a444d36affa91f8134673432d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d96efa70219c841abae8d0129716810645d283d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162408"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230140"
 ---
 # <a name="specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs"></a>Festlegen eines Bilds als Zeiger auf einem Messgerät (Berichts-Generator und SSRS)
   Messgeräte enthalten drei integrierte Formate, mit denen Sie die Darstellung des Zeigers anpassen können. Für ein radiales Messgerät lauten die integrierten Stile: Nadel, Marker und Balken. Für ein lineares Messgerät lauten die integrierten Stile: Marker, Balken und Thermometer. Falls ein besonderer Zeiger benötigt wird, können Benutzer ein Bild erstellen und angeben, das dann als voll funktionsfähiger Zeiger verwendet wird.  
@@ -39,9 +39,9 @@ ms.locfileid: "36162408"
   
 1.  Klicken Sie in der Entwurfsansicht auf den Zeiger des Messgeräts.  
   
-2.  (Optional) Wenn auf dem Messgerät kein Zeiger vorhanden ist, rechtsklicken Sie auf das Messgerät, und wählen **Zeiger hinzufügen**. Es wird ein Zeiger zum Messgerät hinzugefügt.  
+2.  (Optional) Wenn auf dem Messgerät kein Zeiger vorhanden ist, mit der Maustaste auf das Messgerät, und wählen **Zeiger hinzufügen**. Es wird ein Zeiger zum Messgerät hinzugefügt.  
   
-3.  Klicken Sie auf die **einfügen** Menüband auf die Registerkarte, und doppelklicken Sie auf das Symbol "Bild". Das Dialogfeld **Bildeigenschaften** wird angezeigt.  
+3.  Klicken Sie auf die **einfügen** Menüband auf die Registerkarte, und doppelklicken Sie auf das Bildsymbol. Das Dialogfeld **Bildeigenschaften** wird angezeigt.  
   
 4.  Fügen Sie dem Bericht ein Bild hinzu. Weitere Informationen finden Sie unter [Einbetten eines Bilds in einem Bericht &#40;Berichts-Generator und SSRS&#41;](report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md).  
   
@@ -51,14 +51,14 @@ ms.locfileid: "36162408"
   
 7.  Erweitern Sie den PointerImage-Knoten.  
   
-8.  In **Quelle**Option **Embedded** aus der Dropdown-Liste.  
+8.  In **Quelle**Option **eingebettete** aus der Dropdown-Liste.  
   
     > [!NOTE]  
-    >  Falls das Bild in der Datenbank oder im Web gespeichert ist, wählen Sie die entsprechende Option für diese Eigenschaft aus. Weitere Informationen finden Sie unter [Bild Eigenschaften (Dialogfeld), Allgemein &#40;Berichts-Generator und SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md).  
+    >  Falls das Bild in der Datenbank oder im Web gespeichert ist, wählen Sie die entsprechende Option für diese Eigenschaft aus. Weitere Informationen finden Sie unter [im Dialogfeld "Eigenschaften" Image "," Allgemein &#40;Berichts-Generator und SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md).  
   
-9. In **Wert**, wählen Sie den Namen des Abbilds aus der Dropdown-Liste.  
+9. In **Wert**, wählen Sie den Namen des Images aus der Dropdown-Liste.  
   
-10. In **TransparentColor**, wählen Sie einen Farbwert aus, die Sie aus dem Abbild entfernen möchten. Dies führt zu einer gleichmäßigen Darstellung des Zeigers auf dem Messgerät.  
+10. In **TransparentColor**, wählen Sie einen Farbwert aus, die Sie aus dem Image entfernen möchten. Dies führt zu einer gleichmäßigen Darstellung des Zeigers auf dem Messgerät.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Formatieren von Zeigern auf einem Messgerät (Berichts-Generator und SSRS)](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   

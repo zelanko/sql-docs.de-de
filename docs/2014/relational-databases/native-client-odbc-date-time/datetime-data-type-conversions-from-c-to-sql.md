@@ -1,31 +1,29 @@
 ---
-title: Konvertierungen von C-in SQL | Microsoft Docs
+title: Konvertierungen von C-in SQL | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [ODBC], C to SQL
 ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2941f9d95c8513762e8f77f8a84fcd34f682eafe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 638f3acea8ba4d9925851a26bd84ab20f76c38c9
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161329"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410078"
 ---
 # <a name="conversions-from-c-to-sql"></a>Konvertierungen von C in SQL
-  In diesem Thema werden Probleme berücksichtigen bei der Konvertierung von C-Typen in aufgeführt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datum/Uhrzeit-Typen.  
+  In diesem Thema werden Probleme zu berücksichtigen, bei der Konvertierung von C-Typen in aufgelistet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datum/Uhrzeit-Typen.  
   
  Die in der folgenden Tabelle beschriebenen Konvertierungen gelten für auf dem Client ausgeführte Konvertierungen. In Fällen, in denen der Client Bruchsekundengenauigkeit für einen Parameter angibt, die von der auf dem Server definierten abweicht, ist die Clientkonvertierung möglicherweise erfolgreich, jedoch gibt der Server einen Fehler zurück, wenn `SQLExecute` oder `SQLExecuteDirect` aufgerufen wird. Das rührt daher, dass ODBC jedes Abschneiden von Sekundenbruchteilen als Fehler wertet, während [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rundet. Beispielsweise wird gerundet, wenn Sie von `datetime2(6)` zu `datetime2(2)` wechseln. Werte der Datetime-Spalte werden auf 1/300 einer Sekunde gerundet, und für smalldatetime -Spalten werden Sekunden vom Server auf null festgelegt.  
   
@@ -64,10 +62,10 @@ ms.locfileid: "36161329"
 |10|Wenn es zum Abschneiden von Daten kommt, wird ein Diagnosedatensatz mit SQLSTATE 22008 und der Meldung "Ungültiges Zeitformat" generiert. Dieser Fehler tritt auch dann auf, wenn der Wert außerhalb des Bereichs liegt, der vom UTC-Bereich, den der Server verwendet, dargestellt werden kann.|  
 |11|Wenn die Bytelänge der Daten nicht mit der Größe der Struktur übereinstimmt, die vom SQL-Typ benötigt wird, wird ein Diagnosedatensatz mit SQLSTATE 22003 und der Meldung "Numerischer Wert außerhalb des Gültigkeitsbereichs" generiert.|  
 |12|Wenn die Bytelänge der Daten 4 oder 8 beträgt, werden die Daten im TDS-Rohformat smalldatetime oder datetime an den Server gesendet. Wenn die Bytelänge der Daten exakt mit der Größe von SQL_TIMESTAMP_STRUCT übereinstimmt, werden die Daten in das TDS-Format für datetime2 konvertiert.|  
-|13|Wenn es zum Abschneiden von Daten kommt, wird ein Diagnosedatensatz mit SQLSTATE 22001 und der Meldung "Die Zeichenfolgedaten wurden rechts abgeschnitten" generiert.<br /><br /> Die Anzahl von Ziffern für Sekundenbruchteile (Dezimalstellen) wird von der Größe der Zielspalte gemäß der folgenden bestimmt:<br /><br /> **Typ:** SQL_C_TYPE_TIMESTAMP<br /><br /> Implizierte Dezimalstellen<br /><br /> 0<br /><br /> 19<br /><br /> Implizierte Dezimalstellen<br /><br /> 1..9<br /><br /> 21..29<br /><br /> Wenn die Sekundenbruchteile für SQL_C_TYPE_TIMESTAMP mit drei Ziffern ohne Datenverlust dargestellt werden können und die Spaltengröße 23 oder größer ist, werden genau drei Dezimalstellen für Sekundenbruchteile generiert. Dieses Verhalten stellt die Abwärtskompatibilität für Anwendungen sicher, die mit älteren ODBC-Treibern entwickelt wurden.<br /><br /> Für Spaltengrößen, die den Bereich in der Tabelle übersteigen, werden 9 Dezimalstellen impliziert. Diese Konvertierung sollte bis zu neun Dezimalstellen für Sekundenbruchteile ermöglichen, das von ODBC zugelassene Maximum.<br /><br /> Eine Spaltengröße von 0 (null) impliziert unendliche Größe für Zeichentypen mit variabler Länge in ODBC (9 Ziffern, sofern die 3-Ziffern-Regel für SQL_C_TYPE_TIMESTAMP nicht gilt). Die Angabe einer Spaltengröße von 0 (null) mit einem Zeichentyp fester Länge ist ein Fehler.|  
+|13|Wenn es zum Abschneiden von Daten kommt, wird ein Diagnosedatensatz mit SQLSTATE 22001 und der Meldung "Die Zeichenfolgedaten wurden rechts abgeschnitten" generiert.<br /><br /> Die Anzahl der Ziffern für Sekundenbruchteile (Dezimalstellen) wird von der Größe der Zielspalte gemäß dem folgenden bestimmt:<br /><br /> **Typ:** SQL_C_TYPE_TIMESTAMP<br /><br /> Implizierte Dezimalstellen<br /><br /> 0<br /><br /> 19<br /><br /> Implizierte Dezimalstellen<br /><br /> 1..9<br /><br /> 21..29<br /><br /> Wenn die Sekundenbruchteile für SQL_C_TYPE_TIMESTAMP mit drei Ziffern ohne Datenverlust dargestellt werden können und die Spaltengröße 23 oder größer ist, werden genau drei Dezimalstellen für Sekundenbruchteile generiert. Dieses Verhalten stellt die Abwärtskompatibilität für Anwendungen sicher, die mit älteren ODBC-Treibern entwickelt wurden.<br /><br /> Für Spaltengrößen, die den Bereich in der Tabelle übersteigen, werden 9 Dezimalstellen impliziert. Diese Konvertierung sollte bis zu neun Dezimalstellen für Sekundenbruchteile ermöglichen, das von ODBC zugelassene Maximum.<br /><br /> Eine Spaltengröße von 0 (null) impliziert unendliche Größe für Zeichentypen mit variabler Länge in ODBC (9 Ziffern, sofern die 3-Ziffern-Regel für SQL_C_TYPE_TIMESTAMP nicht gilt). Die Angabe einer Spaltengröße von 0 (null) mit einem Zeichentyp fester Länge ist ein Fehler.|  
 |–|Das Verhalten von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und früheren Versionen ist beibehalten worden.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datum und Uhrzeit-Verbesserungen &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+ [Datums- / Uhrzeitverbesserungen &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
   
   

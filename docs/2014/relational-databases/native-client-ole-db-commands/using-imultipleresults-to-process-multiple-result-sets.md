@@ -1,13 +1,11 @@
 ---
-title: Mit der Verarbeitung mehrerer Resultsets IMultipleResults | Microsoft Docs
+title: Mithilfe von ' IMultipleResults ' zur Verarbeitung mehrerer Resultsets | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,22 +15,22 @@ helpviewer_keywords:
 - multiple-rowset results
 ms.assetid: 754d3f30-7d94-4b67-8dac-baf2699ce9c6
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ff247ff9c17183f435d5acc312121e5ee36e100b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a9e60c1b2bbffb236c933f9b01a46d86ef371c2d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162919"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428309"
 ---
 # <a name="using-imultipleresults-to-process-multiple-result-sets"></a>Verwenden von 'IMultipleResults' zur Verarbeitung mehrerer Resultsets
   Consumer verwenden die **IMultipleResults** Schnittstelle zum Verarbeiten von zurückgegebenen Ergebnisse [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] befehlsausführung für Native Client OLE DB-Anbieter. Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter sendet einen Befehl zur Ausführung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] führt die Anweisungen aus und gibt die Ergebnisse zurück.  
   
- Ein Client muss alle Ergebnisse der Befehlsausführung verarbeiten. Da die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] befehlsausführung für Native Client OLE DB-Anbieters mehrere Rowsetobjekte als Ergebnis generieren können, verwenden Sie die **IMultipleResults** Schnittstelle, um sicherzustellen, dass Datenabruf für die Anwendung beendet wird, die Client initiierten Roundtrip.  
+ Ein Client muss alle Ergebnisse der Befehlsausführung verarbeiten. Da die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] befehlsausführung für Native Client OLE DB-Anbieter kann mehrere Rowsetobjekte als Ergebnisse generiert werden soll, verwenden Sie die **IMultipleResults** Schnittstelle, um sicherzustellen, dass die Anwendung den Datenabruf abgeschlossen ist. die vom Client initiierten Roundtrip.  
   
- Die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung generiert mehrere Rowsets, von denen einige Zeilendaten aus der **OrderDetails** Tabelle und einige enthaltenden Ergebnisse der COMPUTE BY-Klausel:  
+ Die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung generiert mehrere Rowsets, von denen einige Zeilendaten aus der **OrderDetails** Tabelle und einige Ergebnisse mit der COMPUTE BY-Klausel:  
   
 ```  
 SELECT OrderID, FullPrice = (UnitPrice * Quantity), Discount,  
@@ -44,13 +42,13 @@ COMPUTE
     BY OrderID  
 ```  
   
- Wenn ein Consumer einen Befehl ausführt, der diesen Text enthält, und ein Rowset als Schnittstelle für die zurückgegebenen Ergebnisse anfordert, wird nur der erste Satz Zeilen zurückgegeben. Der Consumer kann alle Zeilen im zurückgegebenen Rowset verarbeiten. Jedoch wenn DBPROP_MULTIPLECONNECTIONS-Datenquelleneigenschaft auf festgelegt ist VARIANT_FALSE und MARS nicht für die Verbindung aktiviert ist, können keine weiteren Befehle für das Sitzungsobjekt ausgeführt werden (die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter erstellt keine anderen Verbindung), bis der Befehl abgebrochen wird. Wenn MARS nicht für die Verbindung aktiviert ist die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter gibt DB_E_OBJECTOPEN-Fehler zurück, wenn DBPROP_MULTIPLECONNECTIONS VARIANT_FALSE lautet, und E_FAIL zurück, wenn eine aktive Transaktion vorhanden ist.  
+ Wenn ein Consumer einen Befehl ausführt, der diesen Text enthält, und ein Rowset als Schnittstelle für die zurückgegebenen Ergebnisse anfordert, wird nur der erste Satz Zeilen zurückgegeben. Der Consumer kann alle Zeilen im zurückgegebenen Rowset verarbeiten. Aber wenn die DBPROP_MULTIPLECONNECTIONS-Datenquelleneigenschaft auf festgelegt ist VARIANT_FALSE und MARS nicht für die Verbindung aktiviert ist, können keine anderen Befehle für das Sitzungsobjekt ausgeführt werden (die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter wird nicht erstellt, eine andere Verbindung), bis der Befehl abgebrochen wird. Wenn MARS nicht, für die Verbindung aktiviert ist der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter gibt DB_E_OBJECTOPEN-Fehler zurück, wenn DBPROP_MULTIPLECONNECTIONS VARIANT_FALSE lautet, und E_FAIL, wenn eine aktive Transaktion vorhanden ist.  
   
- Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter wird auch zurückgegeben, DB_E_OBJECTOPEN Verwendung gestreamt Output-Parameter und die Anwendung sind nicht alle zurückgegebenen Ausgabeparameterwerte vor dem Aufruf verbraucht **IMultipleResults:: GetResults**  auf das nächste Resultset abzurufen. Wenn MARS nicht aktiviert ist und die Verbindung ist ausgelastet Ausführen eines Befehls, der kein Rowset produziert wird, oder, erzeugt ein Rowset, das kein Servercursor ist, und die DBPROP_MULTIPLECONNECTIONS-Datenquelleneigenschaft auf VARIANT_TRUE festgelegt ist die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter erstellt zusätzliche Verbindungen um gleichzeitige Befehlsobjekte zu unterstützen, wenn eine Transaktion aktiv ist, in diesem Fall gibt einen Fehler. Transaktionen und Sperren werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf Verbindungsbasis verwaltet. Wenn eine zweite Verbindung hergestellt wird, nutzt der Befehl auf den anderen Verbindungen Sperren nicht gemeinsam. Es muss darauf geachtet werden, dass ein Befehl einen anderen nicht blockiert, indem er Zeilen gesperrt hält, die von einem anderen Befehl angefordert werden. Wenn MARS aktiviert ist, können mehrere Befehle für die Verbindungen aktiv sein, und bei der Verwendung expliziter Transaktionen nutzen die Befehle alle eine gemeinsame Transaktion.  
+ Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter gibt DB_E_OBJECTOPEN Verwendung gestreamt Output-Parameter, und die Anwendung alle zurückgegebenen Ausgabeparameterwerte vor dem Aufruf nicht verbraucht hat auch **IMultipleResults:: GetResults**  um das nächste Resultset abzurufen. Wenn MARS nicht aktiviert ist, und die Verbindung ist das Ausführen eines Befehls, der kein Rowset produziert wird, oder, erzeugt ein Rowset, das kein Servercursor ist, ausgelastet und die DBPROP_MULTIPLECONNECTIONS-Datenquelleneigenschaft auf VARIANT_TRUE festgelegt ist die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter erstellt zusätzliche Verbindungen um gleichzeitige Befehlsobjekte zu unterstützen, wenn eine Transaktion aktiv ist, in diesem Fall gibt einen Fehler. Transaktionen und Sperren werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf Verbindungsbasis verwaltet. Wenn eine zweite Verbindung hergestellt wird, nutzt der Befehl auf den anderen Verbindungen Sperren nicht gemeinsam. Es muss darauf geachtet werden, dass ein Befehl einen anderen nicht blockiert, indem er Zeilen gesperrt hält, die von einem anderen Befehl angefordert werden. Wenn MARS aktiviert ist, können mehrere Befehle für die Verbindungen aktiv sein, und bei der Verwendung expliziter Transaktionen nutzen die Befehle alle eine gemeinsame Transaktion.  
   
- Der Consumer kann den Befehl entweder mit Abbrechen [issabort:: Abort](../native-client-ole-db-interfaces/issabort-abort-ole-db.md) oder alle Verweise auf das Befehlsobjekt und das abgeleitete Rowset freigibt.  
+ Der Consumer kann den Befehl abbrechen, indem Sie entweder [issabort:: Abort](../native-client-ole-db-interfaces/issabort-abort-ole-db.md) oder durch die Freigabe alle Verweise auf das Befehlsobjekt und das abgeleitete Rowset.  
   
- Mit **IMultipleResults** in allen Instanzen ermöglicht es, alle Rowsets durch befehlsausführung zu erhalten, und ermöglicht es Consumern zu ermitteln, wann die befehlsausführung abgebrochen und ein Sitzungsobjekt für die Verwendung durch andere Befehle.  
+ Mithilfe von **IMultipleResults** in allen Instanzen ermöglicht es, alle Rowsets durch befehlsausführung zu erhalten, und ermöglicht es Consumern zu ermitteln, wann die befehlsausführung abgebrochen und ein Sitzungsobjekt für die Verwendung durch andere Befehle.  
   
 > [!NOTE]  
 >  Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Cursor verwenden, erstellt die Befehlsausführung den Cursor. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt den Erfolg oder Fehler der Cursorerstellung zurück. Der Roundtrip zur Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist damit nach der Rückkehr der Befehlsausführung abgeschlossen. Jede **GetNextRows** -Aufruf wird dann zum Roundtrip ausgeführt. Auf diese Weise können mehrere Befehlsobjekte vorhanden sein, und jedes verarbeitet ein Rowset, das das Ergebnis eines Abrufs vom Servercursor ist. Weitere Informationen finden Sie unter [Rowsets und SQL Server-Cursor](../native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md).  

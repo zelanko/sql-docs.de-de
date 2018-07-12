@@ -1,5 +1,5 @@
 ---
-title: Aktiviert-Element (ASSL) | Microsoft Docs
+title: Aktiviert-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Enabled element
 ms.assetid: dbe57903-75c0-4060-a2b3-eab241d7469f
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 917116f506c89ad5f0f0b2c2bee18a234f253665
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd8206bbf0dffe84a1012a0e47b4c261b15fb4ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162780"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211660"
 ---
 # <a name="enabled-element-assl"></a>Enabled-Element (ASSL)
   Gibt an, ob das übergeordnete Element aktiviert ist.  
@@ -62,7 +62,7 @@ ms.locfileid: "36162780"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Elemente, die den übergeordneten Elementen von entsprechen `Enabled` im Objektmodell von Analysis Management Objects (AMO) sind <xref:Microsoft.AnalysisServices.CubeHierarchy> und <xref:Microsoft.AnalysisServices.ProactiveCaching>.  
+ Die Elemente, die den übergeordneten Elementen von entsprechen `Enabled` im Analysis Management Objects (AMO)-Objektmodell werden <xref:Microsoft.AnalysisServices.CubeHierarchy> und <xref:Microsoft.AnalysisServices.ProactiveCaching>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

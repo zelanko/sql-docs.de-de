@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing server properties
 - server properties [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - servers [SQL Server], viewing
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 caps.latest.revision: 32
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 61db0b7975ba948e139eb8e78ef14baab11bd9a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 15463850f20ac660c6ef23f5df6c5c6ed14c267a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162099"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182917"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>Anzeigen oder Ändern von Servereigenschaften (SQL Server)
   In diesem Thema wird beschrieben, wie Sie die Eigenschaften einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder dem SQL Server-Konfigurations-Manager anzeigen oder ändern.  
@@ -63,7 +63,7 @@ ms.locfileid: "36162099"
 ####  <a name="Permissions"></a> Berechtigungen  
  Weitere Informationen finden Sie unter [Rollen auf Serverebene](../../relational-databases/security/authentication-access/server-level-roles.md).  
   
- EXECUTE-Berechtigungen für `sp_configure` ohne Parameter oder nur mit dem ersten Parameter werden standardmäßig allen Benutzern gewährt. Auszuführende `sp_configure` mit beiden Parametern zum Ändern einer Konfigurationsoption oder zum Ausführen der RECONFIGURE-Anweisung, muss ein Benutzer die ALTER SETTINGS-Berechtigung auf Serverebene erteilt. Die ALTER SETTINGS-Berechtigung ist in den festen Serverrollen **sysadmin** und **serveradmin** eingeschlossen.  
+ EXECUTE-Berechtigungen für `sp_configure` ohne Parameter oder nur mit dem ersten Parameter werden für alle Benutzer standardmäßig erteilt. Auszuführende `sp_configure` mit beiden Parametern zum Ändern einer Konfigurationsoption oder zum Ausführen der RECONFIGURE-Anweisung, muss ein Benutzer die ALTER SETTINGS-Berechtigung auf Serverebene gewährt. Die ALTER SETTINGS-Berechtigung ist in den festen Serverrollen **sysadmin** und **serveradmin** eingeschlossen.  
   
 ##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   

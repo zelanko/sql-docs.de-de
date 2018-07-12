@@ -1,13 +1,11 @@
 ---
-title: 'Issasynchstatus:: getStatus (OLE DB) | Microsoft Docs'
+title: 'Issasynchstatus:: getStatus (OLE DB) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - GetStatus method
 ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: baf7204719e865b93b7037e76f7b493e841644c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: c9b12653f05171514c3a311edd42b2a3af9f58da
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161324"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413129"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
   Gibt den Status eines asynchron ausgeführten Vorgangs zurück.  
@@ -112,7 +110,7 @@ HRESULT GetStatus(
  Es ist ein anbieterspezifischer Fehler aufgetreten.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **issasynchstatus:: GetStatus** Methode verhält sich genau wie die **idbasynchstatus:: GetStatus** Methode, außer dass, wenn die Initialisierung eines datenquellobjekts abgebrochen wird, E_UNEXPECTED zurück statt als db_e_canceled zurückgibt (obwohl [issasynchstatus:: Waitforasynchcompletion](issasynchstatus-waitforasynchcompletion-ole-db.md) DB_E_CANCELED zurück). Dies ist darauf zurückzuführen, dass das Datenquellobjekt nach einem Abbruchvorgang nicht mehr den gewöhnlichen Zombiestatus aufweist, sodass weitere Initialisierungsvorgänge durchgeführt werden können.  
+ Die **issasynchstatus:: GetStatus** Methode verhält sich genau wie die **idbasynchstatus:: GetStatus** Methode, außer dass, wenn die Initialisierung eines datenquellobjekts abgebrochen wird, E_UNEXPECTED wird zurückgegeben, sondern als db_e_canceled zurückgibt (obwohl [issasynchstatus:: Waitforasynchcompletion](issasynchstatus-waitforasynchcompletion-ole-db.md) gibt db_e_canceled zurückgibt). Dies ist darauf zurückzuführen, dass das Datenquellobjekt nach einem Abbruchvorgang nicht mehr den gewöhnlichen Zombiestatus aufweist, sodass weitere Initialisierungsvorgänge durchgeführt werden können.  
   
  Wenn das Rowset initialisiert oder asynchron aufgefüllt wird, muss es diese Methode unterstützen.  
   
@@ -128,6 +126,6 @@ HRESULT GetStatus(
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausführen von asynchronen Vorgängen](../native-client/features/performing-asynchronous-operations.md)   
- [ISSAsynchStatus &#40;OLE DB&#41;](issasynchstatus-ole-db.md)  
+ [ISSAsynchStatus &#40;OLE-DB&#41;](issasynchstatus-ole-db.md)  
   
   
