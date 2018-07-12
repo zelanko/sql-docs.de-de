@@ -1,5 +1,5 @@
 ---
-title: Erstellen ein Drillthroughberichts (RDLC) mit Parametern mithilfe von ReportViewer (SSRS-Lernprogramm) | Microsoft Docs
+title: Erstellen eines Drillthroughberichts (RDLC) mit Parametern mithilfe von ReportViewer (SSRS-Tutorial) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 628c8775-c62d-45ac-b349-23db86fa4e6c
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2124efb2b773f76b6d117d9163b159affb79ffac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: bb5bb2c0a02de9d4be433203996072bb218b8c0f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150083"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157821"
 ---
 # <a name="create-a-drillthrough-rdlc-report-with-parameters-using-reportviewer-ssrs-tutorial"></a>Erstellen eines Drillthroughberichts (RDLC) mit Parametern mithilfe von ReportViewer (SSRS-Lernprogramm)
   Ein [Drillthroughbericht](http://technet.microsoft.com/library/ff519554.aspx) ist ein Bericht, der geöffnet werden kann, indem der Benutzer auf einen Link in einem anderen Bericht klickt. Drillthroughberichte enthalten in der Regel Details zu einem Element im ursprünglichen Zusammenfassungsbericht. Dieses Tutorial führt Sie in den folgenden Lektionen durch die Schritte zum Erstellen eines Drillthroughberichts mit Parametern und einer Abfrage. Dabei wird die [Berichterstellung im lokalen Modus](http://msdn.microsoft.com/library/ff487969.aspx)verwendet.  
   
 ## <a name="requirements"></a>Anforderungen  
- Zur Verwendung dieser exemplarischen Vorgehensweise benötigen Sie Zugriff auf die Beispieldatenbank **AdventureWorks2008** . Die in dieser exemplarischen Vorgehensweise verwendete Abfrage kann auch mit der Datenbank **AdventureWorks2012** verwendet werden. Weitere Informationen zum Abrufen der **AdventureWorks2008** Datenbank zugreifen können, finden Sie unter [Exemplarische Vorgehensweise: Installieren der AdventureWorks-Datenbank](http://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx) für Microsoft Visual Studio 2010.  
+ Zur Verwendung dieser exemplarischen Vorgehensweise benötigen Sie Zugriff auf die Beispieldatenbank **AdventureWorks2008** . Die in dieser exemplarischen Vorgehensweise verwendete Abfrage kann auch mit der Datenbank **AdventureWorks2012** verwendet werden. Weitere Informationen zum Abrufen der **AdventureWorks2008** Beispieldatenbank, finden Sie unter [Exemplarische Vorgehensweise: Installieren der AdventureWorks-Datenbank](http://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx) für Microsoft Visual Studio 2010.  
   
- In dieser exemplarischen Vorgehensweise wird davon ausgegangen, dass Sie mit Transact-SQL-Abfragen und ADO.NET vertraut sind [DataSet](http://msdn.microsoft.com/library/system.data.dataset\(v=vs.100\).aspx) und [DataTable](http://msdn.microsoft.com/library/system.data.datatable\(v=vs.100\).aspx) Objekte.  
+ In dieser exemplarischen Vorgehensweise wird davon ausgegangen, dass Sie mit Transaction-SQL-Abfragen und den ADO.NET-Objekten vertraut sind [DataSet](http://msdn.microsoft.com/library/system.data.dataset\(v=vs.100\).aspx) und [DataTable](http://msdn.microsoft.com/library/system.data.datatable\(v=vs.100\).aspx) Objekte.  
   
  Verwenden Sie Visual Studio 2010 oder Visual Studio 2012 und die ASP.NET-Websitevorlage, um eine ASP.NET-Webseite mit einem ReportViewer-Steuerelement zu erstellen. Das Steuerelement wird für die Anzeige eines erstellten Berichts konfiguriert. Mithilfe dieser exemplarischen Vorgehensweise erstellen Sie die Anwendung in Microsoft Visual C#.  
   

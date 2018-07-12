@@ -1,5 +1,5 @@
 ---
-title: Problembehandlung von Verarbeitungsdaten (SSAS – tabellarisch) | Microsoft Docs
+title: Problembehandlung von Verarbeitungsdaten (SSAS – tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 678f523c-e181-4456-9a54-7b7bf044b8d2
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8ddebb4bb6a2e1c3e3d4bc53052ff207d7bb1d40
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d066eaa1702d096e7e1d0919c988e6ea6e6bdbc0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148458"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239500"
 ---
 # <a name="troubleshoot-process-data-ssas-tabular"></a>Problembehandlung von Verarbeitungsdaten (SSAS – tabellarisch)
   Dieses Thema enthält Informationen zur Verarbeitung (Aktualisierung) von Modelldaten, wenn ein Modell mit [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]erstellt wird. Das Thema enthält keine Informationen zur Verarbeitung von Daten in Modellen, die für eine Analysis Services-Serverinstanz bereitgestellt wurden. Weitere Informationen zur Verarbeitung von Daten in einem bereitgestellten Modell finden Sie unter [Skriptverwaltungsaufgaben in Analysis Services](script-administrative-tasks-in-analysis-services.md).  

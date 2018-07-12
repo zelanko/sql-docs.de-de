@@ -1,5 +1,5 @@
 ---
-title: Source-Element (ComAssembly) (ASSL) | Microsoft Docs
+title: Source-Element (ComAssembly) (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Source element
 ms.assetid: 5c9209e8-ace6-4688-a64d-4987a7648ab9
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ae014f12e15dd27957ab77eb03720457f3c99b28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 81076927595714ae4e0c98847d99f2d246660cf9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149504"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152971"
 ---
 # <a name="source-element-comassembly-assl"></a>Source-Element (ComAssembly) (ASSL)
   Enthält den Dateinamen oder den programmtechnischen Bezeichner (ProgID) für eine COM-Komponente (Component Object Model).  
@@ -62,7 +62,7 @@ ms.locfileid: "36149504"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element, das das übergeordnete Element des entspricht `Source` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ComAssembly>.  
+ Das Element, das dem übergeordneten entspricht `Source` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ComAssembly>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Assembly-Element &#40;ASSL&#41;](../objects/assembly-element-assl.md)   

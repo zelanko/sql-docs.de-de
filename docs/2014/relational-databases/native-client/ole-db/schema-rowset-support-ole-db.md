@@ -1,13 +1,11 @@
 ---
-title: Schemarowset-Unterstützung (OLE DB) | Microsoft Docs
+title: Schemarowset-Unterstützung (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - rowsets [OLE DB], schema
 ms.assetid: a75b4b69-b095-4690-9b31-a2b32a67489e
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d556174bdd307c09861a2e86a1df5bee9ea9ec45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f37a7e25bf720ffa20e29b005e6022115583ac7f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060704"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413315"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Schemarowset-Unterstützung (OLE DB)
   Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt auch zurückgegebene Schemainformationen von einem verknüpften Server, bei der Verarbeitung von [!INCLUDE[tsql](../../../includes/tsql-md.md)] verteilte Abfragen.  
@@ -34,13 +32,13 @@ ms.locfileid: "36060704"
 > [!NOTE]  
 >  Obwohl [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Synonyme unterstützt, werden Metadaten für Synonyme nicht von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client zurückgegeben.  
   
- Die folgenden Tabellen Liste Schemarowsets und die Einschränkungsspalten von unterstützt die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter.  
+ Die folgenden Tabellen sind die Schemarowsets und die Einschränkungsspalten, die von unterstützt die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter.  
   
-|Schemarowset|Einschränkungsspalten|  
+|Schemarowsets|Einschränkungsspalten|  
 |-------------------|-------------------------|  
 |DBSCHEMA_CATALOGS|CATALOG_NAME|  
 |DBSCHEMA_COLUMN_PRIVILEGES|Alle Einschränkungen werden unterstützt.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME GRANTOR GRANTEE|  
-|DBSCHEMA_COLUMNS|Alle Einschränkungen werden unterstützt.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME<br /><br /> Die folgenden zusätzlichen Spalten gelten für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:<br /><br /> -COLUMN_LCID, die Gebietsschema-ID der Sortierung ist. COLUMN_LCID ist der gleiche Wert wie eine Windows-LCID.<br />-COLUMN_COMPFLAGS definiert, welche Vergleiche für die Sortierung unterstützt werden. Das Datenformat ist das Gleiche wie DBPROB_FINDCOMPAREOPS.<br />-COLUMN_SORTID, das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Sortierungsformat für die Sortierung.<br />-COLUMN_TDSCOLLATION, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Sortierung für die Spalte.<br />-IS_COMPUTED, die auf VARIANT_TRUE festgelegt ist, wenn die Spalte eine berechnete Spalte, andernfalls VARIANT_FALSE handelt.|  
+|DBSCHEMA_COLUMNS|Alle Einschränkungen werden unterstützt.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME<br /><br /> Die folgenden zusätzlichen Spalten gelten für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:<br /><br /> -COLUMN_LCID, die Gebietsschema-ID der Sortierung ist. COLUMN_LCID ist der gleiche Wert wie eine Windows-LCID.<br />-COLUMN_COMPFLAGS definiert, welche Vergleiche für die Sortierung unterstützt werden. Das Datenformat ist das Gleiche wie DBPROB_FINDCOMPAREOPS.<br />-COLUMN_SORTID, das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Sortierungsformat für die Sortierung.<br />-COLUMN_TDSCOLLATION, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Sortierreihenfolge für die Spalte.<br />-IS_COMPUTED, dem Wert VARIANT_TRUE, wenn die Spalte eine berechnete Spalte und VARIANT_FALSE ist.|  
 |DBSCHEMA_FOREIGN_KEYS|Alle Einschränkungen werden unterstützt.<br /><br /> PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME FK_TABLE_CATALOG FK_TABLE_SCHEMA FK_TABLE_NAME|  
 |DBSCHEMA_INDEXES|Einschränkungen 1, 2, 3 und 5 werden unterstützt.<br /><br /> TABLE_CATALOG TABLE_SCHEMA INDEX_NAME TABLE_NAME|  
 |DBSCHEMA_PRIMARY_KEYS|Alle Einschränkungen werden unterstützt.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
@@ -57,10 +55,10 @@ ms.locfileid: "36060704"
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Verteilte Abfrageunterstützung für Schemarowsets](schema-rowsets-distributed-query-support.md)  
   
- [LINKEDSERVERS-Rowset &#40;OLE DB&#41;](schema-rowsets-linkedservers-rowset.md)  
+ [LINKEDSERVERS-Rowset &#40;OLE-DB&#41;](schema-rowsets-linkedservers-rowset.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server Native Client &#40;OLE DB&#41;](sql-server-native-client-ole-db.md)   
+ [SQL Server Native Client &#40;OLE-DB&#41;](sql-server-native-client-ole-db.md)   
  [Verwenden von benutzerdefinierten Typen](../features/using-user-defined-types.md)  
   
   

@@ -1,13 +1,11 @@
 ---
-title: SQLGetDiagField | Microsoft Docs
+title: SQLGetDiagField | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,24 +14,24 @@ helpviewer_keywords:
 - SQLGetDiagField function
 ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d10a9383294f02b26bd15113d17f6d6bd0e182c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 8fcb95ada7482f48f9316d02553bba9aab4867fc
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059353"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421889"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
-  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber gibt die folgenden zusätzlichen Diagnosefelder für `SQLGetDiagField`. Diese Felder unterstützen umfangreiche fehlerberichterstellung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anwendungen und sind in allen Diagnosedatensätzen generiert auf verbundene ODBC-Verbindungshandles und ODBC-Anweisungshandles. Die Felder werden in sqlncli.h definiert.  
+  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber gibt an, die folgenden zusätzlichen Diagnosefelder für `SQLGetDiagField`. Diese Felder unterstützen umfangreiche fehlerberichterstellung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verbundenen Anwendungen "und" zur Verfügung, in allen Diagnosedatensätzen generiert, ODBC-Verbindungshandles und ODBC-Anweisungshandles. Die Felder werden in sqlncli.h definiert.  
   
 |Diagnosedatensatzfeld|Description|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|Meldet die Zeilennummer einer gespeicherten Prozedur, die einen Fehler verursacht. Der Wert von SQL_DIAG_SS_LINE ist nur aussagekräftig, wenn SQL_DIAG_SS_PROCNAME einen Wert zurückgibt. Der Wert wird als 16-Bit-Ganzzahl ohne Vorzeichen zurückgegeben.|  
-|SQL_DIAG_SS_MSGSTATE|Der Status einer Fehlermeldung. Informationen über den Status der Fehlermeldung finden Sie unter [RAISERROR](/sql/t-sql/language-elements/raiserror-transact-sql). Der Wert wird als 32-Bit-Ganzzahl mit Vorzeichen zurückgegeben.|  
-|SQL_DIAG_SS_PROCNAME|Der Name der gespeicherten Prozedur, die einen Fehler generiert, falls zutreffend. Der Wert wird als Zeichenfolge zurückgegeben. Die Länge der Zeichenfolge (in Zeichen) hängt von der Version von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie kann bestimmt werden, durch den Aufruf [SQLGetInfo](sqlgetinfo.md) den Wert für SQL_MAX_PROCEDURE_NAME_LEN anfordert.|  
+|SQL_DIAG_SS_MSGSTATE|Der Status einer Fehlermeldung. Weitere Informationen über den Status der Fehlermeldung finden Sie unter [RAISERROR](/sql/t-sql/language-elements/raiserror-transact-sql). Der Wert wird als 32-Bit-Ganzzahl mit Vorzeichen zurückgegeben.|  
+|SQL_DIAG_SS_PROCNAME|Der Name der gespeicherten Prozedur, die einen Fehler generiert, falls zutreffend. Der Wert wird als Zeichenfolge zurückgegeben. Die Länge der Zeichenfolge (in Zeichen) hängt von der Version der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie kann bestimmt werden, durch den Aufruf [SQLGetInfo](sqlgetinfo.md) den Wert für SQL_MAX_PROCEDURE_NAME_LEN anfordert.|  
 |SQL_DIAG_SS_SEVERITY|Der Schweregrad der zugehörigen Fehlermeldung. Der Wert wird als 32-Bit-Ganzzahl mit Vorzeichen zurückgegeben.|  
 |SQL_DIAG_SS_SRVNAME|Der Name des Servers, auf dem der Fehler aufgetreten ist. Der Wert wird als Zeichenfolge zurückgegeben. Die Länge der Zeichenfolge (in Zeichen) wird in sqlncli.h durch das SQL_MAX_SQLSERVERNAME-Makro definiert.|  
   
@@ -65,7 +63,7 @@ ms.locfileid: "36059353"
 |SQL_DIAG_DFC_SS_DROP_TRIGGER|DROP TRIGGER-Anweisung|  
 |SQL_DIAG_DFC_SS_DUMP_DATABASE|BACKUP oder DUMP DATABASE-Anweisung|  
 |SQL_DIAG_DFC_SS_DUMP_TABLE|DUMP TABLE-Anweisung|  
-|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|BACKUP oder DUMP TRANSACTION-Anweisung Auch für eine CHECKPOINT-Anweisung zurückgegeben werden, wenn die **Trunc. Log auf Chkpt.** aktiviert ist.|  
+|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|BACKUP oder DUMP TRANSACTION-Anweisung Auch für eine CHECKPOINT-Anweisung zurückgegeben, wenn die **Trunc. Log auf Chkpt.** aktiviert ist.|  
 |SQL_DIAG_DFC_SS_GOTO|GOTO-Anweisung zur Ablaufsteuerung|  
 |SQL_DIAG_DFC_SS_INSERT_BULK|INSERT BULK-Anweisung|  
 |SQL_DIAG_DFC_SS_KILL|KILL-Anweisung|  

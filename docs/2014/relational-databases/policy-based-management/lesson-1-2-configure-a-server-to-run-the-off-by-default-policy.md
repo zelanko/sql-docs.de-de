@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 41c3022d-ab13-443e-ac64-ba1d64584f79
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 452514758526ae8d5183c614a16aa0a0c8ec3b14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 1aa6dfabe09541fd60809c337b296cb417ffd1b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148133"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211010"
 ---
 # <a name="configure-a-server-to-run-the-off-by-default-policy"></a>Konfigurieren eines Servers für das Ausführen der Richtlinie 'Standardmäßig aus'
   Nun verfügen Sie über eine Richtlinie mit dem Namen Standardmäßig aus. In dieser Aufgabe überprüfen Sie, ob Ihr Server die Anforderungen dieser Richtlinie einhält.  

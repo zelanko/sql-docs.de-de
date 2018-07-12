@@ -1,28 +1,26 @@
 ---
-title: Protokollieren von Abfragen mit langer (ODBC) | Microsoft Docs
+title: Protokollieren von lang andauernden Abfragen (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - queries [ODBC]
 ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d4a4867a657773f93c746ccf89a03089cb27ee69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 89e4e854233e0d5b34ea1e4547ae4ade24394619
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060268"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431139"
 ---
 # <a name="log-long-running-queries-odbc"></a>Protokollieren von Abfragen mit langer Ausführungszeit (ODBC)
   Dieses Beispiel zeigt die ODBC-treiberspezifischen Optionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Protokollieren von Abfragen mit langer Ausführungszeit. Bei der Ausführung des Beispiels wird die Datei Odbcqry.log erstellt, die eine Liste von Abfragen enthält, deren Ausführung ein von der Anwendung festgelegtes Intervall überschreitet. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt. Dieses Beispiel wurde für ODBC, Version 3.0 oder höher, entwickelt.  
@@ -48,7 +46,7 @@ ms.locfileid: "36060268"
   
 ### <a name="to-log-long-running-queries-data-programmatically"></a>So protokollieren Sie Abfragen mit langer Ausführungszeit programmgesteuert  
   
-1.  Rufen Sie [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) mit SQL_COPT_SS_PERF_QUERY_LOG und dem vollständigen Pfad und Dateinamen der Protokolldatei lang andauernde Abfrage. Zum Beispiel:  
+1.  Rufen Sie [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) mit SQL_COPT_SS_PERF_QUERY_LOG und dem vollständigen Pfad und Dateinamen der Protokolldatei Abfrage mit langer Ausführung. Zum Beispiel:  
   
     ```  
     C:\\Odbcqry.log  
@@ -56,9 +54,9 @@ ms.locfileid: "36060268"
   
 2.  Rufen Sie [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) mit SQL_COPT_SS_PERF_QUERY_INTERVAL und Festlegung auf das Timeoutintervall in Millisekunden.  
   
-3.  Rufen Sie [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) mit SQL_COPT_SS_PERF_QUERY und SQL_PERF_START Protokollieren von Abfragen mit langer zu starten.  
+3.  Rufen Sie [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) mit SQL_COPT_SS_PERF_QUERY und SQL_PERF_START auf, um Protokollieren von lang andauernden Abfragen zu starten.  
   
-4.  Rufen Sie [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) mit SQL_COPT_SS_PERF_QUERY und SQL_PERF_STOP Protokollieren von Abfragen mit langer zu beenden.  
+4.  Rufen Sie [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) mit SQL_COPT_SS_PERF_QUERY und SQL_PERF_STOP auf, um Protokollieren von lang andauernden Abfragen zu beenden.  
   
 ## <a name="example"></a>Beispiel  
  Sie benötigen eine ODBC-Datenquelle mit dem Namen AdventureWorks, deren Standarddatenbank die AdventureWorks-Beispieldatenbank ist. (Sie können die AdventureWorks-Beispieldatenbank von der Homepage [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) herunterladen.) Diese Datenquelle muss auf dem ODBC-Treiber basieren, der vom Betriebssystem bereitgestellt wird (der Treibername lautet "SQL Server"). Wenn Sie dieses Beispiel als 32-Bit-Anwendung entwickeln und unter einem 64-Bit-Betriebssystem ausführen, müssen Sie die ODBC-Datenquelle mit dem ODBC-Administrator in %windir%\SysWOW64\odbcad32.exe erstellen.  
@@ -221,6 +219,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Vorgehensweisen zu ODBC-Treiber Leistung profilerstellung &#40;ODBC&#41;](profiling-odbc-driver-performance-odbc.md)  
+ [Profilerstellung von ODBC-Treiber Abfrageleistung: Themen &#40;ODBC&#41;](profiling-odbc-driver-performance-odbc.md)  
   
   

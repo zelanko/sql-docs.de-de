@@ -1,5 +1,5 @@
 ---
-title: DMSCHEMA_MINING_MODEL_CONTENT-Rowset | Microsoft Docs
+title: DMSCHEMA_MINING_MODEL_CONTENT-Rowset | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_MODEL_CONTENT rowset
 ms.assetid: 1e85d9e7-3b74-42ac-b94e-f52f76d8a25d
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b6eb96e8a4a277ee5b7e198fca3d96062bd6d486
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 76724967936008e52cb43f7af02bbb7a833475d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148488"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165451"
 ---
 # <a name="dmschemaminingmodelcontent-rowset"></a>DMSCHEMA_MINING_MODEL_CONTENT-Rowset
   Ermöglicht es der Clientanwendung, den Inhalt eines Data Mining-Modells zu durchsuchen. Clientanwendungen können spezielle Strukturvorgangseinschränkungen verwenden, die am Ende dieses Themas erläutert werden, um zum Inhalt des Miningmodells zu navigieren.  
@@ -36,7 +36,7 @@ ms.locfileid: "36148488"
   
 |Spaltenname|Typindikator|Länge|Description|  
 |-----------------|--------------------|------------|-----------------|  
-|`MODEL_CATALOG`|`DBTYPE_WSTR`||Der Katalogname. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] füllt diese Spalte mit dem Namen der Datenbank, von der das Modell ein Element ist.|  
+|`MODEL_CATALOG`|`DBTYPE_WSTR`||Der Katalogname. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] füllt diese Spalte mit dem Namen der Datenbank, von denen das Modell ein Element.|  
 |`MODEL_SCHEMA`|`DBTYPE_WSTR`||Der nicht gekennzeichnete Schemaname. Die Spalte wird von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] nicht unterstützt, sie enthält immer `VT_NULL`.|  
 |`MODEL_NAME`|`DBTYPE_WSTR`||Der Name des Modells, dem der von dieser Zeile beschriebene Inhalt zugeordnet ist.|  
 |`ATTRIBUTE_NAME`|`DBTYPE_WSTR`||Die Namen der Attribute, die diesem Knoten entsprechen.|  

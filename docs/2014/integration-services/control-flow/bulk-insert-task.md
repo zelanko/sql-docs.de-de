@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.bulkinserttask.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 caps.latest.revision: 62
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 62cc927e4beb15666940f30cd063d5618fd2a038
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4c21569df7269e7037befbe8fe190c9c84079e51
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150943"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209850"
 ---
 # <a name="bulk-insert-task"></a>Masseneinfügungstask
   Der Masseneinfügungstask stellt eine effektive Möglichkeit zum Kopieren großer Datenmengen in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle oder -Sicht bereit. Angenommen, Ihr Unternehmen verwaltet eine Produktliste mit einer Million Zeilen auf einem Großrechner. Das E-Commerce-System des Unternehmens verwendet jedoch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Auffüllen von Webseiten. Sie müssen die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Produkttabelle jede Nacht mit der Hauptproduktliste vom Großrechner aktualisieren. Dazu speichern Sie die Produktliste in einem Format mit Tabstopp-Trennzeichen und kopieren mit dem Masseneinfügungstask die Daten direkt in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle.  
@@ -93,11 +93,11 @@ ms.locfileid: "36150943"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Massenimport von Task-Editor einfügen &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Massenimport von Insert-Task-Editor &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Massenimport von Task-Editor einfügen &#40;Seite "Verbindung"&#41;](../bulk-insert-task-editor-connection-page.md)  
+-   [Massenimport von Insert-Task-Editor &#40;Seite "Verbindung"&#41;](../bulk-insert-task-editor-connection-page.md)  
   
--   [Massenimport von Task-Editor einfügen &#40;Optionsseite&#41;](../bulk-insert-task-editor-options-page.md)  
+-   [Massenimport von Insert-Task-Editor &#40;Seite "Optionen"&#41;](../bulk-insert-task-editor-options-page.md)  
   
 -   [Seite Ausdrücke](../expressions/expressions-page.md)  
   

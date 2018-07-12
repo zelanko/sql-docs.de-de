@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - temporary tables [SQL Server], tempdb database
 - tempdb database [SQL Server], about tempdb
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - tempdb database [SQL Server]
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 caps.latest.revision: 52
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 048386695f2b3d3736ce2b399caa9fa286e0d80c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 251ca5f656425a3a77952b4bfdb6e0b79ee8367d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149379"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154331"
 ---
 # <a name="tempdb-database"></a>tempdb-Datenbank
   Die **tempdb** -Systemdatenbank ist eine globale Ressource, die für alle Benutzer verfügbar ist, die mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verbunden sind. In der Datenbank sind die folgenden Elemente enthalten:  
@@ -47,7 +47,7 @@ ms.locfileid: "36149379"
 |Primäre Daten|tempdev|tempdb.mdf|Automatische Vergrößerung um 10 Prozent, bis der Datenträger voll ist|  
 |Log|templog|templog.ldf|Automatische Vergrößerung um 10 Prozent bis maximal 2 TB|  
   
- Die Größe des **Tempdb** kann die Leistung eines Systems auswirken. Z. B. wenn die **Tempdb** Größe zu klein ist, ist möglicherweise die System-Verarbeitung zu mit anfallenden belegt die Datenbank, um Ihre arbeitsauslastung Anforderung jedes Mal zu unterstützen, die Sie starten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie können diesen zusätzlichen Aufwand vermeiden, indem Sie das Vergrößern eines **Tempdb**.  
+ Die Größe des **Tempdb** kann die Leistung eines Systems beeinträchtigen. Z. B. wenn die **Tempdb** ist zu klein, die systemverarbeitung ist möglicherweise zu systemverarbeitung mit anfallenden die Datenbank zur Unterstützung von den Anforderungen Ihrer Workload jedes Mal, den Sie starten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie können diesen zusätzlichen Aufwand vermeiden, durch Erhöhen der Größe der **Tempdb**.  
   
 ## <a name="performance-improvements-in-tempdb"></a>Leistungsverbesserungen in tempdb  
  Die Leistung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tempdb **wurde in** folgendermaßen verbessert:  
@@ -58,7 +58,7 @@ ms.locfileid: "36149379"
   
 -   Der Protokollierungsaufwand für **tempdb** wurde reduziert. Dadurch wird die für die **tempdb** -Protokolldatei verwendete Datenträger-E/A-Bandbreite reduziert.  
   
--   Der Algorithmus für die Zuordnung von gemischten Seiten in **Tempdb** verbessert wird.  
+-   Der Algorithmus für die Zuordnung von gemischten Seiten in **Tempdb** wurde verbessert.  
   
 ### <a name="moving-the-tempdb-data-and-log-files"></a>Verschieben der tempdb-Daten- und -Protokolldateien  
  Weitere Informationen zum Verschieben der **tempdb** -Daten- und -Protokolldateien finden Sie unter [Verschieben von Systemdatenbanken](system-databases.md).  

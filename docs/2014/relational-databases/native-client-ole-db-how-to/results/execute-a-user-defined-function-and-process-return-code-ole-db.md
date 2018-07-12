@@ -1,28 +1,26 @@
 ---
-title: Ausführen eine benutzerdefinierten Funktion und Verarbeiten des Rückgabecodes (OLE DB) | Microsoft Docs
+title: Ausführen eine benutzerdefinierte Funktion und Verarbeiten des Rückgabecodes (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - user-defined functions [OLE DB]
 ms.assetid: d96c33fd-ed17-4713-8921-bf2dc3347f78
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 69c030a4a22b87478a9fd0e5f046ca4f172068ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 33408db3d1db2ba06c9db871f8a4e785d9564e10
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148140"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409961"
 ---
 # <a name="execute-a-user-defined-function-and-process-return-code-ole-db"></a>Ausführen einer benutzerdefinierten Funktion und Verarbeiten des Rückgabecodes (OLE DB)
   In diesem Beispiel wird eine benutzerdefinierte Funktion ausgeführt, und der Rückgabecode wird ausgegeben. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  
@@ -33,11 +31,11 @@ ms.locfileid: "36148140"
 >  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](http://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="example"></a>Beispiel  
- Führen Sie das erste ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) Codelisting, um die von der Anwendung verwendete gespeicherte Prozedur zu erstellen.  
+ Führen Sie das erste ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) code aus, um die von der Anwendung verwendete gespeicherte Prozedur zu erstellen.  
   
- Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das zweite Codelisting (C++) aus. Diese Anwendung stellt eine Verbindung des Computers her [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instanz. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz ändern. Um eine Verbindung mit einer benannten Instanz herzustellen, ändern Sie die Verbindungszeichenfolge von l"(Local)" "zu l"(Local)"\\\name", wobei der Name der benannten Instanz ist. Standardmäßig [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
+ Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das zweite Codelisting (C++) aus. Diese Anwendung stellt eine Verbindung her, des Computers [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instanz. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz ändern. Um eine Verbindung mit einer benannten Instanz herzustellen, ändern Sie die Verbindungszeichenfolge von l"(Local)" "um l"(Local)"\\\name", wobei der Name der benannten Instanz ist. In der Standardeinstellung [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
- Führen Sie das dritte ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) Codelisting, um die von der Anwendung verwendete gespeicherte Prozedur zu löschen.  
+ Führen Sie das dritte ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) code aus, um die von der Anwendung verwendete gespeicherte Prozedur zu löschen.  
   
 ```  
 USE AdventureWorks  
@@ -369,6 +367,6 @@ go
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ergebnisse Vorgehensweisen zum Verarbeiten &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
+ [Verarbeiten von Ergebnissen: Themen zur Vorgehensweise &#40;OLE-DB&#41;](processing-results-how-to-topics-ole-db.md)  
   
   

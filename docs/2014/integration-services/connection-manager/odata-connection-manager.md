@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4c0c38e2aa12991ead24a0ba162462504d28e60d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0f1a262a52bdc610da81c5b42785fa555967e8bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147961"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239350"
 ---
 # <a name="odata-connection-manager"></a>OData-Verbindungs-Manager
   Mithilfe eines OData-Verbindungs-Managers kann ein Paket eine Verbindung mit einer OData-Quelle herstellen. Eine OData-Quellkomponente stellt über einen OData-Verbindungs-Manager eine Verbindung mit einer OData-Quelle her und verwendet die Daten des Diensts. Finden Sie unter [OData-Quelle](../data-flow/odata-source.md)Abschnitt, um ausführliche Informationen einschließlich installationsanweisungen für diese Komponenten.  
@@ -29,9 +29,9 @@ ms.locfileid: "36147961"
   
 -   Klicken Sie im **Quellen-Editor für OData** auf die Schaltfläche **Neu**  
   
--   Mit der rechten Maustaste **Verbindungs-Manager** Ordner in der **Projektmappen-Explorer** , und klicken Sie auf **neuen Verbindungs-Manager**. Wählen Sie unter **Typ des Verbindungs-Managers** die Option **ODATA**aus.  
+-   Mit der rechten Maustaste **Verbindungs-Manager** Ordner in der **Projektmappen-Explorer** , und klicken Sie auf **neuer Verbindungs-Manager**. Wählen Sie unter **Typ des Verbindungs-Managers** die Option **ODATA**aus.  
   
--   Mit der rechten Maustaste die **Verbindungs-Manager** Bereich am unteren Rand der Paket-Designer, und wählen Sie **neue Verbindung...** . Wählen Sie unter **Typ des Verbindungs-Managers** die Option **ODATA**aus.  
+-   Mit der rechten Maustaste den **Verbindungs-Manager** Bereich am unteren Rand des Pakets, und wählen **neue Verbindung...** . Wählen Sie unter **Typ des Verbindungs-Managers** die Option **ODATA**aus.  
   
 ## <a name="connection-manager-authentication"></a>Verbindungs-Manager-Authentifizierung  
  Der OData-Verbindungs-Manager unterstützt zwei Authentifizierungsmodi.  

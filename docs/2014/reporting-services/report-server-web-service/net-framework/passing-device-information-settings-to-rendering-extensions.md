@@ -23,15 +23,15 @@ helpviewer_keywords:
 - extensions [Reporting Services], device information settings
 ms.assetid: fe718939-7efe-4c7f-87cb-5f5b09caeff4
 caps.latest.revision: 46
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 71eb9ad4d6066b6dbf3b0c942ee9d7e6f521a590
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 9fc300712ecac2eeb4e13257515e1300e704d21c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149840"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240220"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>Übergeben von Geräteinformationseinstellungen an Renderingerweiterungen
   In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]werden Geräteinformationseinstellungen zum Übergeben von Renderingparametern an eine Renderingerweiterung verwendet. Einstellungen im Berichtsserver-Webdienst werden als **DeviceInfo** -XML-Element übergeben und vom Berichtsserver verarbeitet. Da Geräteinformationseinstellungen Standardwerte besitzen, werden sie als optionale Argumente für das Rendern angesehen. Sie können jedoch Geräteinformationseinstellungen verwenden, um das Rendern anzupassen und die vom Server angegebenen Standardwerte zu überschreiben.  
@@ -39,7 +39,7 @@ ms.locfileid: "36149840"
  Die Geräteinformationseinstellungen können auf verschiedene Weisen eingestellt werden. Für eine programmgesteuerte Einstellung können Sie die Render-Methode verwenden. Wenn Sie über die URL eines Berichts auf den Bericht zugreifen, können Sie Geräteinformationen als URL-Parameter festlegen. Sie können die Geräteinformationseinstellungen auch in der Konfigurationsdatei von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] bearbeiten, um Renderingparameter global festzulegen. Weitere Informationen zum globalen Angeben von Renderingparametern finden Sie unter [Anpassen der Parameter für Renderingerweiterungen in der Datei „RSReportServer.config“](../../customize-rendering-extension-parameters-in-rsreportserver-config.md).  
   
 ## <a name="passing-device-information-using-the-render-method"></a>Übergeben von Geräteinformationen mit der Render-Methode  
- Verwenden Sie zum Übergeben von Geräteinformationseinstellungen an eine Renderingerweiterung die <xref:ReportExecution2005.ReportExecutionService.Render%2A> Methode. Beispiel: Die folgende XML-Zeichenfolge kann an die <xref:ReportExecution2005.ReportExecutionService.Render%2A>-Methode übergeben werden, um beim Rendern in HTML ein HTML-Fragment zu erstellen.  
+ Um Einstellungen von Geräteinformationen an eine Renderingerweiterung übergeben, verwenden die <xref:ReportExecution2005.ReportExecutionService.Render%2A> Methode. Beispiel: Die folgende XML-Zeichenfolge kann an die <xref:ReportExecution2005.ReportExecutionService.Render%2A>-Methode übergeben werden, um beim Rendern in HTML ein HTML-Fragment zu erstellen.  
   
 ```  
 <DeviceInfo>  

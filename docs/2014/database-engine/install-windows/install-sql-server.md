@@ -1,5 +1,5 @@
 ---
-title: Installieren von SQLServer 2014 | Microsoft Docs
+title: Installieren von SQLServer 2014 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/09/2016
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, preparing to install
 - installation [SQL Server]
 ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bf415bef00710562247bcfd9fa310e2c0728497f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7f03f01be41395cea94acdc40acd582a6fb78772
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150234"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157011"
 ---
 # <a name="install-sql-server-2014"></a>Installieren von SQL Server 2014
 ## <a name="-download-sql-server-2014-express-httpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[ Herunterladen von SQL Server 2014 Express ](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
-  **Vielen Dank, [Scott Hanselman](http://www.hanselman.com/) für alle Verknüpfungen Installer-Paket an einem Ort gesammelt.**
+  **Vielen Dank an [Scott Hanselman](http://www.hanselman.com/) für das Sammeln aller Installer-paketlinks an einem Ort!**
   
- Dieses Thema bietet eine Übersicht über andere Installationsoptionen, die zur Installation von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] zur Verfügung stehen. Weitere Informationen zu den verschiedenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Komponenten, die installiert werden können, sowie zum Installationsvorgang finden Sie unter [Installation für SQL Server 2014](installation-for-sql-server.md).  
-> **Hinweis:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in 32-Bit und 64-Bit-Editionen verfügbar ist. Die 64-Bit- und 32-Bit-Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden entweder über den Installations-Assistenten oder von der Eingabeaufforderung aus installiert. Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Komponenten, finden Sie unter [Editionen und Komponenten von SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) und [von den Editionen von SQL Server 2014 unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Dieses Thema bietet eine Übersicht über andere Installationsoptionen, die zur Installation von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] zur Verfügung stehen. Weitere Informationen zu den verschiedenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Komponenten, die installiert werden können, und während des Installationsvorgangs finden Sie unter [Installation für SQL Server 2014](installation-for-sql-server.md).  
+> **Hinweis:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist als 32-Bit und 64-Bit-Edition verfügbar. Die 64-Bit- und 32-Bit-Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden entweder über den Installations-Assistenten oder von der Eingabeaufforderung aus installiert. Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten finden Sie unter [Editionen und Komponenten von SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) und [von den SQL Server 2014-Editionen unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Standardmäßig werden Beispieldatenbanken und Beispielcode nicht als Teil des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setups installiert. Informationen zum Installieren von Beispieldatenbanken und Beispielcode für andere als Editionen-Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie auf der [CodePlex-Website](http://go.microsoft.com/fwlink/?LinkId=87843). Supportinformationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Beispieldatenbanken und Beispielcode für [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] finden Sie unter [Databases and Samples Overview](http://go.microsoft.com/fwlink/?LinkId=110391) (Übersicht über Datenbanken und Beispiele).  
   
@@ -40,13 +40,13 @@ ms.locfileid: "36150234"
   
 |Thema|Description|  
 |-----------|-----------------|  
-|[Über das SQL Server-Datenbankmodul](../sql-server-database-engine-overview.md)|Beschreibt, wie Sie [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]installieren und konfigurieren.|  
+|[Informationen zur SQL Server-Datenbank-Engine](../sql-server-database-engine-overview.md)|Beschreibt, wie Sie [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]installieren und konfigurieren.|  
 |[Installieren der SQL Server-Replikation](install-sql-server-replication.md)|Beschreibt, wie Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikation installieren und konfigurieren.|  
 |[Installieren von Distributed Replay](../../tools/distributed-replay/install-distributed-replay-overview.md)|Enthält eine Auflistung der Themen zur Installation der Distributed Replay-Funktion.|  
 |[Installieren der SQL Server-Verwaltungstools](../../sql-server/install/install-sql-server-management-tools.md)|Beschreibt, wie Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verwaltungstools installieren und konfigurieren.|  
 |[Installieren von SQL Server PowerShell](install-sql-server-powershell.md)|Beschreibt die Überlegungen zum Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell-Komponenten.|  
   
-## <a name="how-to-install-includesscurrentincludessscurrent-mdmd"></a>Gewusst wie: Installieren [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="how-to-install-includesscurrentincludessscurrent-mdmd"></a>Vorgehensweise: Installation [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 |Titel|Description|  
 |-----------|-----------------|  
@@ -72,7 +72,7 @@ ms.locfileid: "36150234"
   
 ## <a name="see-also"></a>Siehe auch  
  [Planen einer SQL Server-Installation](../../sql-server/install/planning-a-sql-server-installation.md)   
- [Aktualisieren auf SQLServer 2014](upgrade-sql-server.md)   
+ [Upgrade auf SQLServer 2014](upgrade-sql-server.md)   
  [Deinstallieren von SQLServer 2014](../../sql-server/install/uninstall-sql-server.md)   
  [Lösungen mit hoher Verfügbarkeit &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  
   

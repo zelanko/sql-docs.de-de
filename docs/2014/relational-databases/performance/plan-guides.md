@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-plan-guides
+ms.technology: performance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - TEMPLATE plan guide
 - SQL plan guides
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - USE PLAN query hint
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 caps.latest.revision: 52
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cced80dda0c62b4c339fb058a05ef927c602e5d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 1741595891ebc04a70d70c006a3871c7f39ec07e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061137"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430399"
 ---
 # <a name="plan-guides"></a>Planhinweislisten
   Mit Planhinweislisten können Sie die Leistung von Abfragen optimieren, wenn Sie den Text der eigentlichen Abfrage in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]nicht direkt ändern möchten oder können. Planhinweislisten beeinflussen die Abfrageoptimierung, indem Abfragehinweise oder ein fester Abfrageplan an die Abfragen angefügt werden. Die Verwendung von Planhinweislisten bietet sich z. B. an, wenn eine kleine Teilmenge von Abfragen in der Datenbankanwendung eines Drittanbieters nicht erwartungsgemäß funktioniert. In der Planhinweisliste geben Sie die Transact-SQL-Anweisung an, die optimiert werden soll, sowie entweder eine OPTION-Klausel mit den zu verwendenden Abfragehinweisen oder einen spezifischen Abfrageplan, der für die Optimierung der Abfrage verwendet werden soll. Wenn die Abfrage ausgeführt wird, vergleicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Transact-SQL-Anweisung mit der Planhinweisliste und fügt der Abfrage entweder zur Laufzeit die OPTION-Klausel hinzu oder verwendet den angegebenen Abfrageplan.  

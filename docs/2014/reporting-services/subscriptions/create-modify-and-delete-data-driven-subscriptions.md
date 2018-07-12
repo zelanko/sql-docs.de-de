@@ -1,5 +1,5 @@
 ---
-title: Erstellen, ändern und Löschen eines datengesteuerten Abonnements | Microsoft Docs
+title: Erstellen, ändern und Löschen eines datengesteuerten Abonnements | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - query-based subscriptions [Reporting Services]
 - queries [Reporting Services], data-driven subscriptions
@@ -18,13 +18,13 @@ ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 811851675f317e6807f22035152a48b18a372eb5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 87116018f43f90fa78a8f7a6d4788b9fb0e660f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148314"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183917"
 ---
 # <a name="create-modify-and-delete-a-data-driven-subscription"></a>Erstellen, Ändern und Löschen eines datengesteuerten Abonnements
   Ein datengesteuertes Abonnement ist ein abfragebasiertes Abonnement, das die Datenwerte abfragt, die zum Verarbeiten des Abonnements zur Laufzeit verwendet werden. Wenn das Abonnement ausgelöst wird, wird eine Abfrage verarbeitet, die aktuelle Informationen über Empfänger, Berichtsübermittlungsoptionen, Renderingformate und Parametereinstellungen abruft. Die Abfrageergebnisse werden mit der Abonnementdefinition kombiniert. Dabei wird ein dynamisches Abonnement erstellt, das  Daten verwendet, die bereits in einer Mitarbeiterdatenbank, einer Kundendatenbank oder einer beliebigen Datenbank liegen und Informationen enthalten,  die als Abonnentendaten verwendbar sind.  
@@ -89,7 +89,7 @@ ms.locfileid: "36148314"
   
 -   **Datenanforderungen**. Es muss eine externe Datenquelle mit Abonnentendaten vorhanden sein, auf die zugegriffen werden kann.  
   
--   **Benutzeranforderungen**. Der Autor des Abonnements benötigt die Berechtigungen "Berichte verwalten" sowie "Alle Abonnements verwalten". Weitere Informationen über die Berechtigung für Aufgaben auf Elementebene finden Sie unter [Aufgaben und Berechtigungen](../security/tasks-and-permissions.md). Außerdem muss er über die notwendigen Anmeldeinformationen für den Zugriff auf die externe Datenquelle mit Abonnentendaten verfügen.  
+-   **Benutzeranforderungen**. Der Autor des Abonnements benötigt die Berechtigungen "Berichte verwalten" sowie "Alle Abonnements verwalten". Weitere Informationen zu Berechtigungen für die Elementebene finden Sie unter [Aufgaben und Berechtigungen](../security/tasks-and-permissions.md). Außerdem muss er über die notwendigen Anmeldeinformationen für den Zugriff auf die externe Datenquelle mit Abonnentendaten verfügen.  
   
 ##  <a name="bkmk_define_query"></a> Definieren Sie eine Abfrage, die Abonnementinformationen abruft.  
  Für ein datengesteuertes Abonnement muss eine Abfrage oder ein Befehl zum Abrufen von Abonnentendaten angegeben werden. Die Abfrage sollte pro Abonnent eine Zeile generieren. Falls Sie die E-Mail-Übermittlungserweiterung verwenden, sollte die Abfrage für jeden Abonnenten einen gültigen E-Mail-Alias zurückgeben. Die Anzahl von durchgeführten Übermittlungen basiert auf der Anzahl der von der Abfrage zurückgegebenen Zeilen. Besteht das Rowset aus 10.000 Zeilen, übermittelt das Abonnement 10.000 Berichte.  
@@ -101,7 +101,7 @@ ms.locfileid: "36148314"
 ##  <a name="bkmk_run_subscription"></a> Ein Abonnement auszuführen  
  Konfigurieren Sie die Bedingungen für die Abonnementausführung. Sie können einen Zeitplan konfigurieren, oder mit den Updates einer Momentaufnahme zur Berichtsausführung die Verarbeitung des Abonnements auslösen.  
   
- ![Hinweis](../media/rs-fyinote.png "Hinweis") zwar gibt es keine Funktion in der Benutzeroberfläche, die Sie zum sofortigen Ausführung eines Abonnements verwenden können, können Sie ein einfache Windows PowerShell-Skript zum Ausführen eines Abonnements auslösen. Weitere Informationen finden Sie unter der "Skript: ausführen (auslösen) eines einzelnen Abonnements" im Abschnitt [Verwenden von PowerShell und führen Sie ein Abonnement ändern und Liste Reporting Services Subscription Owners](manage-subscription-owners-and-run-subscription-powershell.md).  
+ ![Beachten Sie](../media/rs-fyinote.png "Hinweis") zwar gibt es kein Feature in der Benutzeroberfläche, die Sie zum sofortigen Ausführung eines Abonnements verwenden können, können Sie ein einfache Windows PowerShell-Skript zum Ausführen eines Abonnements auslösen. Weitere Informationen finden Sie unter dem "Skript: ausführen (auslösen) eines einzelnen Abonnements" im Abschnitt [mithilfe von PowerShell ändern "und" List Reporting Services Subscription Owners "und" Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md).  
   
  Zeitplan und Bedingungen für die Ausführung datengesteuerter Abonnements sind mit der Verarbeitung von Standardabonnements identisch.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "36148314"
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen, ändern und Löschen von Standardabonnements &#40;Reporting Services im einheitlichen Modus&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [Berichts-Manager &#40;SSRS im einheitlichen Modus&#41;](../report-manager-ssrs-native-mode.md)   
+ [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md)   
  [Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](../create-manage-subscriptions-native-mode-report-servers.md)   
  [Abonnements (Seite) (Berichts-Manager)](../subscriptions-page-report-manager.md)   
  [Meine Abonnements (Seite) (Berichts-Manager)](../my-subscriptions-page-report-manager.md)  

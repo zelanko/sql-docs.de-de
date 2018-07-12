@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tables [SQL Server], saving
 - Table Designer, saving work
 - saving tables
 ms.assetid: 676e4a9a-be75-44d2-b011-6e7fb921de4a
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b6abded31c6effcf12c9c3f4aeb3295c67d43506
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f663776ebfee8d03b9659ba21d607fca7b8a63a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150641"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182885"
 ---
 # <a name="save-your-work-in-table-designer-visual-database-tools"></a>Speichern Ihrer Arbeit im Tabellen-Designer (Visual Database Tools)
   Sie können Änderungen in Tabellen speichern, die im Tabellen-Designer geöffnet sind.  
@@ -32,7 +32,7 @@ ms.locfileid: "36150641"
   
 1.  Klicken Sie auf eine beliebige Stelle im Tabellen-Designer.  
   
-2.  Aus der **Datei** Menü wählen **speichern *** Tablename*.  
+2.  Von der **Datei** Menü wählen **speichern *** Tablename*.  
   
 3.  Klicken Sie im Dialogfeld **Speichern** auf **Ja** , um die Datenbank zu aktualisieren.  
   

@@ -1,35 +1,33 @@
 ---
-title: Sql_variant-Unterstützung für Datums- und Uhrzeittypen | Microsoft Docs
+title: Sql_variant-Unterstützung für Datums- und Uhrzeittypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - sql_variant data type
 ms.assetid: 12ff1ea6-e2cc-40e6-910c-3126974a90b3
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ba207a78704e8e8582bffdd4df2b2846673ff58c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e16fe8289ae2e92ee21a59c378b4093c0380e1ac
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147891"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409089"
 ---
 # <a name="sqlvariant-support-for-date-and-time-types"></a>Sql_variant-Unterstützung für Datums- und Uhrzeittypen
   In diesem Thema wird beschrieben, in welcher Weise der `sql_variant`-Datentyp die erweiterte Datums- und Uhrzeitfunktionalität unterstützt.  
   
- Das Spaltenattribut SQL_CA_SS_VARIANT_TYPE wird zur Rückgabe des C-Typs einer Variant-Ergebnisspalte verwendet. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] führt zusätzlich das Attribut sql_ca_ss_variant_sql_type eingeführt, mit dem der SQL-Typ einer variant-Ergebnisspalte in den Implementierungszeilendeskriptor (IRD) festgelegt. SQL_CA_SS_VARIANT_SQL_TYPE kann auch in Implementation Parameter Descriptor (Implementierungsparameterdeskriptor, Implementierungszeilendeskriptor) verwendet werden, an die SQL-Typ, der eine SQL_SS_TIME2 oder SQL_SS_TIMESTAMPOFFSET-Parameter, der C-Typ SQL_C_BINARY ist mit dem Typ SQL_SS_VARIANT gebunden.  
+ Das Spaltenattribut SQL_CA_SS_VARIANT_TYPE wird zur Rückgabe des C-Typs einer Variant-Ergebnisspalte verwendet. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] führt zusätzlich das Attribut sql_ca_ss_variant_sql_type eingeführt, mit dem den SQL-Typ einer variant-Ergebnisspalte im den Implementierungszeilendeskriptor (IRD) festgelegt. SQL_CA_SS_VARIANT_SQL_TYPE kann auch in Implementation Parameter Descriptor (Implementierungsparameterdeskriptor, Implementierungszeilendeskriptor) verwendet werden, um den SQL-Typ eines sql_ss_time2 anzugeben oder SQL_SS_TIMESTAMPOFFSET-Parameter, der vom C-Typ SQL_C_BINARY ist mit dem Typ SQL_SS_VARIANT gebunden.  
   
- Die neuen Typen SQL_SS_TIME2 und SQL_SS_TIMESTAMPOFFSET können vom SQLColAttribute festgelegt werden. SQL_CA_SS_VARIANT_SQL_TYPE kann von SQLGetDescField zurückgegeben werden.  
+ Die neuen Typen SQL_SS_TIME2 und SQL_SS_TIMESTAMPOFFSET können vom SQLColAttribute festgelegt werden. SQL_CA_SS_VARIANT_SQL_TYPE kann durch SQLGetDescField zurückgegeben werden.  
   
  Für Ergebnisspalten konvertiert der Treiber Daten von Variant- zu Datum-/Uhrzeit-Typen. Weitere Informationen finden Sie unter [Konvertierungen von SQL-in C](datetime-data-type-conversions-from-sql-to-c.md). Wenn Spalten an SQL_C_BINARY gebunden werden, muss die Pufferlänge so groß sein, dass der Puffer die dem SQL-Typ entsprechende Struktur aufnehmen kann.  
   
@@ -58,11 +56,11 @@ ms.locfileid: "36147891"
 |SQL_C_TYPE_DATE|date|SQL_CA_SS_VARIANT_SQL_TYPE wird ignoriert.|  
 |SQL_C_TYPE_TIME|time(0)|SQL_CA_SS_VARIANT_SQL_TYPE wird ignoriert.|  
 |SQL_C_TYPE_TIMESTAMP|datetime2|Skalierungsgruppe wird auf SQL_DESC_PRECISION (den *DecimalDigits* Parameter `SQLBindParameter`).|  
-|SQL_C_NUMERIC|Decimal|Genauigkeit ist festgelegt auf SQL_DESC_PRECISION (den *ColumnSize* Parameter `SQLBindParameter`).<br /><br /> Legen Sie die Skalierung auf SQL_DESC_SCALE (den *DecimalDigits* -Parameter von SQLBindParameter).|  
+|SQL_C_NUMERIC|Decimal|Precision wird auf SQL_DESC_PRECISION festgelegt (die *ColumnSize* Parameter `SQLBindParameter`).<br /><br /> Skalierungsgruppe auf SQL_DESC_SCALE (den *DecimalDigits* -Parameter von SQLBindParameter).|  
 |SQL_C_SS_TIME2|Uhrzeit|SQL_CA_SS_VARIANT_SQL_TYPE wird ignoriert.|  
 |SQL_C_SS_TIMESTAMPOFFSET|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE wird ignoriert.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datum und Uhrzeit-Verbesserungen &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+ [Datums- / Uhrzeitverbesserungen &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
   
   

@@ -1,13 +1,11 @@
 ---
-title: Verwenden von Multiple Active Resultsets (MARS) | Microsoft Docs
+title: Verwenden von Multiple Active Resultsets (MARS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,18 +18,18 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, MARS
 ms.assetid: ecfd9c6b-7d29-41d8-af2e-89d7fb9a1d83
 caps.latest.revision: 52
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9f647aefd74f57c0c703fadd6e6a4179750bbfc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: bec4dee54f3a65bce4060380510ad13341adf065
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060037"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430959"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>Verwenden von Multiple Active Result Sets (MARS)
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] führte die Unterstützung für mehrere aktive Resultsets (MARS) in Anwendungen, die Zugriff auf die [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. In früheren Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] konnten Datenbankanwendungen nicht mehrere aktive Anweisungen über eine Verbindung verwalten. Beim Verwenden von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Standardresultsets musste die Anwendung alle Resultsets aus einem Batch verarbeiten oder abbrechen, bevor ein anderer Batch auf dieser Verbindung ausgeführt werden konnte. In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] wurde ein neues Verbindungsattribut eingeführt, das es Anwendungen ermöglicht, mehr als eine ausstehende Anforderung pro Verbindung und mehr als ein aktives Standardresultset pro Verbindung anzugeben.  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Unterstützung für sets von mehreren aktiven Resultsets (MARS) in Anwendungen, die Zugriff auf die [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. In früheren Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] konnten Datenbankanwendungen nicht mehrere aktive Anweisungen über eine Verbindung verwalten. Beim Verwenden von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Standardresultsets musste die Anwendung alle Resultsets aus einem Batch verarbeiten oder abbrechen, bevor ein anderer Batch auf dieser Verbindung ausgeführt werden konnte. In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] wurde ein neues Verbindungsattribut eingeführt, das es Anwendungen ermöglicht, mehr als eine ausstehende Anforderung pro Verbindung und mehr als ein aktives Standardresultset pro Verbindung anzugeben.  
   
  MARS vereinfacht den Anwendungsentwurf mit den folgenden neuen Fähigkeiten:  
   
@@ -60,7 +58,7 @@ ms.locfileid: "36060037"
   
  MARS ermöglicht die verschachtelte Ausführung mehrerer Anforderungen innerhalb einer einzelnen Verbindung. Das bedeutet, dass innerhalb der Ausführung eines Batches eine weitere Anforderung ausgeführt werden kann. Beachten Sie jedoch, dass MARS mit Blick auf Interleaving, nicht die parallele Ausführung definiert ist.  
   
- Die MARS-Infrastruktur ermöglicht die verschachtelte Ausführung mehrerer Batches, die Ausführung kann jedoch nur an genau definierten Punkten gewechselt werden. Außerdem müssen die meisten Anweisungen innerhalb eines Batches atomar ausgeführt werden. Anweisungen, die Zeilen zurückgegeben, an den Client, die manchmal auch als bezeichnet werden *zwischenergebnispunkte*, um die Ausführung vor Abschluss verschachteln, während die Zeilen an den Client, z. B. gesendet werden dürfen:  
+ Die MARS-Infrastruktur ermöglicht die verschachtelte Ausführung mehrerer Batches, die Ausführung kann jedoch nur an genau definierten Punkten gewechselt werden. Außerdem müssen die meisten Anweisungen innerhalb eines Batches atomar ausgeführt werden. Anweisungen, die Rückgabe an den Client, der manchmal auch als bezeichnet *zwischenergebnispunkte*, um die Ausführung vor Abschluss verschachteln, während die Zeilen an den Client, z. B. gesendet werden dürfen:  
   
 -   SELECT  
   
@@ -75,19 +73,19 @@ ms.locfileid: "36060037"
  Sie vermeiden Probleme, indem Sie den Verbindungsstatus (SET, USE) und Transaktionen (BEGIN TRAN, COMMIT, ROLLBACK) an Stelle von [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisungen mit API-Aufrufen verwalten. Schließen Sie diese Anweisungen zudem nicht in Batches mit mehreren Anweisungen ein, die auch Zwischenergebnispunkte enthalten, und serialisieren Sie die Ausführung solcher Batches durch Verarbeitung oder Abbruch aller Ergebnisse.  
   
 > [!NOTE]  
->  Ein Batch oder eine gespeicherte Prozedur, die bei Aktivierung von MARS eine manuelle oder implizite Transaktion startet, muss diese Transaktion vor Ausführung des Batchs abschließen. Andernfalls führt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nach Abschluss des Batchs einen Rollback für alle von der Transaktion vorgenommenen Änderungen aus. Eine derartige Transaktion wird von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] als Transaktion im Bereich des Batchs verwaltet. Dieser Transaktionstyp wurde in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] neu eingeführt, um vorhandene, gut konzipierte gespeicherte Prozeduren verwenden zu können, wenn MARS aktiviert ist. Weitere Informationen über Transaktionen im batchbereich finden Sie unter [Transaktionsanweisungen &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transactions-transact-sql).  
+>  Ein Batch oder eine gespeicherte Prozedur, die bei Aktivierung von MARS eine manuelle oder implizite Transaktion startet, muss diese Transaktion vor Ausführung des Batchs abschließen. Andernfalls führt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nach Abschluss des Batchs einen Rollback für alle von der Transaktion vorgenommenen Änderungen aus. Eine derartige Transaktion wird von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] als Transaktion im Bereich des Batchs verwaltet. Dieser Transaktionstyp wurde in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] neu eingeführt, um vorhandene, gut konzipierte gespeicherte Prozeduren verwenden zu können, wenn MARS aktiviert ist. Weitere Informationen zu Transaktionen mit batchbereich, finden Sie unter [Transaction-Anweisungen &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transactions-transact-sql).  
   
  Ein Beispiel der Verwendung von MARS aus ADO finden Sie unter [mithilfe von ADO mit SQL Server Native Client](../applications/using-ado-with-sql-server-native-client.md).  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB-Anbieter  
  Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt MARS durch Hinzufügen der SSPROP_INIT_MARSCONNECTION Initialisierungseigenschaft-Datenquellen, die in der Eigenschaftengruppe DBPROPSET_SQLSERVERDBINIT implementiert wird. Außerdem wurde ein neues Verbindungszeichenfolgen-Schlüsselwort aufgenommen, `MarsConn`. Gültige Werte sind `true` oder `false`; der Standardwert ist `false`.  
   
- Die Datenquelleneigenschaft DBPROP_MULTIPLECONNECTIONS ist standardmäßig auf VARIANT_TRUE festgelegt. Das bedeutet, der Anbieter erzeugt mehrere Verbindungen, um mehrere gleichzeitige Befehls- und Rowsetobjekte zu unterstützen. Wenn MARS aktiviert ist, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client können mehrere Befehls- und Rowsetobjekte Objekte über eine einzelne Verbindung unterstützen, daher ist MULTIPLE_CONNECTIONS standardmäßig auf VARIANT_FALSE festgelegt ist.  
+ Die Datenquelleneigenschaft DBPROP_MULTIPLECONNECTIONS ist standardmäßig auf VARIANT_TRUE festgelegt. Das bedeutet, der Anbieter erzeugt mehrere Verbindungen, um mehrere gleichzeitige Befehls- und Rowsetobjekte zu unterstützen. Wenn MARS aktiviert ist, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client können mehrere Befehls- und Rowsetobjekte Objekte auf einer einzelnen Verbindung unterstützen, daher ist MULTIPLE_CONNECTIONS standardmäßig auf VARIANT_FALSE festgelegt ist.  
   
- Weitere Informationen zu Verbesserungen am DBPROPSET_SQLSERVERDBINIT-Eigenschaftensatz finden Sie unter [Initialisierungs- und Autorisierungseigenschaften](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Weitere Informationen zu Verbesserungen der DBPROPSET_SQLSERVERDBINIT-Eigenschaftensatz finden Sie unter [Initialisierungs- und Autorisierungseigenschaften](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ### <a name="sql-server-native-client-ole-db-provider-example"></a>OLE DB-Anbieter von SQL Server Native Client: Beispiel  
- In diesem Beispiel wird ein Datenquellenobjekt erstellt, mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native OLE DB-Anbieter und MARS ist aktiviert mithilfe der DBPROPSET_SQLSERVERDBINIT-Eigenschaftensatz, bevor das Sitzungsobjekt erstellt wird.  
+ In diesem Beispiel wird ein Datenquellenobjekt erstellt, mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native OLE DB-Anbieter und MARS wird mithilfe der DBPROPSET_SQLSERVERDBINIT-Eigenschaftensatz, bevor das Sitzungsobjekt erstellt wird aktiviert.  
   
 ```  
 #include <sqlncli.h>  
@@ -176,7 +174,7 @@ hr = pIOpenRowset->OpenRowset (NULL,
  Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt MARS durch Hinzufügungen zu den [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) und [SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md) Funktionen. SQL_COPT_SS_MARS_ENABLED wurde hinzugefügt, um entweder SQL_MARS_ENABLED_YES oder SQL_MARS_ENABLED_NO zu akzeptieren. Der Standardwert ist SQL_MARS_ENABLED_NO. Außerdem wurde ein neues Verbindungszeichenfolgen-Schlüsselwort aufgenommen, `Mars_Connection`. Gültige Werte sind "Ja" oder "Nein", wobei "Nein" die Standardeinstellung ist.  
   
 ### <a name="sql-server-native-client-odbc-driver-example"></a>SQL Server Native Client-ODBC-Treiber: Beispiel  
- In diesem Beispiel wird die **SQLSetConnectAttr** Funktion dient zum Aktivieren von MARS vor dem Aufruf der **SQLDriverConnect** Funktion zum Verbinden mit der Datenbank. Sobald die Verbindung hergestellt wird, zwei **SQLExecDirect** Funktionen zum Erstellen von zwei gesonderte Resultsets für dieselbe Verbindung aufgerufen werden.  
+ In diesem Beispiel die **SQLSetConnectAttr** Funktion dient zum Aktivieren von MARS vor dem Aufruf der **SQLDriverConnect** Funktion, um die Datenbank zu verbinden. Nachdem die Verbindung wird hergestellt, zwei **SQLExecDirect** Funktionen aufgerufen, um zwei gesonderte Resultsets für dieselbe Verbindung zu erstellen.  
   
 ```  
 #include <sqlncli.h>  

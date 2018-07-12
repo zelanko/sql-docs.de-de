@@ -1,33 +1,31 @@
 ---
-title: Einrichten der gegenseitigen Kerberos-Authentifizierung | Microsoft Docs
+title: Einrichten der gegenseitigen Kerberos-Authentifizierung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 64149fd4-239b-40e4-91e2-f9011f7d9f66
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4a6feeb04fcb807b6b32168b8ea285240d08ccfc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: c0622e1ebac261085b341056e6178e72d02d66d0
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061593"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426319"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>Einrichten der gegenseitigen Kerberos-Authentifizierung
   Dieses Beispiel zeigt, wie gegenseitige Kerberos-Authentifizierung mithilfe von ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client eingerichtet wird.  
   
  In einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Version vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]kann das Beispiel nicht ausgeführt werden.  
   
- Weitere Informationen finden Sie unter [Service Principal Name &#40;SPN&#41; -Unterstützung in Clientverbindungen](../native-client/features/service-principal-name-spn-support-in-client-connections.md).  
+ Weitere Informationen finden Sie unter [Service Principal Name &#40;SPN&#41; Unterstützung in Clientverbindungen](../native-client/features/service-principal-name-spn-support-in-client-connections.md).  
   
 ## <a name="example"></a>Beispiel  
  Wenn Sie dieses Beispiel als 32-Bit-Anwendung entwickeln und unter einem 64-Bit-Betriebssystem ausführen, müssen Sie die ODBC-Datenquelle mit dem ODBC-Administrator in %windir%\SysWOW64\odbcad32.exe erstellen.  

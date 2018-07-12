@@ -1,5 +1,5 @@
 ---
-title: DatabasePermission-Element (ASSL) | Microsoft Docs
+title: DatabasePermission-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DatabasePermission element
 ms.assetid: 6dcb9136-a40d-42e3-ad3b-b8ce8c7ca78c
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e47203616cc76fa09c0fd0658e7dad8a89c90a9b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0fbfd9544e5305169e0d25b1b0157197d39cc002
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061687"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259526"
 ---
 # <a name="databasepermission-element-assl"></a>DatabasePermission-Element (ASSL)
-  Definiert die Standardberechtigungen in einem [Datenbank](database-element-assl.md) -Element für ein bestimmtes [Rolle](role-element-assl.md) Element.  
+  Definiert die Standardberechtigungen in einem [Datenbank](database-element-assl.md) -Element für einen bestimmten [Rolle](role-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36061687"
   
 -   *Verwalten von* Standardwert des Attributs wird festgelegt, um `False`, außer wenn der Benutzer über Administratorrechte verfügt. Für Benutzer mit Administratorrechten wird der Attributwert auf `True` festgelegt.  
   
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.DatabasePermission>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.DatabasePermission>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Role-Element &#40;ASSL&#41;](role-element-assl.md)   

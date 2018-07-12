@@ -20,18 +20,18 @@ ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 47cfd1ceab750a105fb38ca4827b50f9ba727aca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c837c1cefbc05118bc3880122438e0be9f7b0cbb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151624"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150841"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>Erstellen einer Quelle mit der Skriptkomponente
   Quellkomponenten dienen im Datenfluss eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakets dazu, Daten aus einer Datenquelle zu laden, um sie an Downstreamtransformationen und -ziele zu übergeben. Gewöhnlich stellen Sie über einen vorhandenen Verbindungs-Manager eine Verbindung mit der Datenquelle her.  
   
- Einen Überblick über die Skriptkomponente finden Sie unter [Extending the Data Flow mit der Skriptkomponente] (.. / extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md.  
+ Eine Übersicht über die Skriptkomponente, finden Sie unter [Extending the Data Flow mit der Skriptkomponente] (.. / extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md.  
   
  Die Skriptkomponente und der Infrastrukturcode, den sie generieren, erleichtern Ihnen die Entwicklung benutzerdefinierter Datenflusskomponenten deutlich. Um die Funktionsweise der Skriptkomponente zu verstehen, kann es jedoch hilfreich sein, sich mit den Schritten, die bei der Entwicklung einer benutzerdefinierten Datenflusskomponente durchlaufen werden, vertraut zu machen. Weitere Informationen finden Sie im Abschnitt [Developing a Custom Data Flow Component (Entwickeln einer benutzerdefinierten Datenflusskomponente)](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md). Beachten Sie dabei insbesondere das Thema [Developing a Custom Source Component (Entwickeln einer benutzerdefinierten Quellkomponente)](../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md).  
   
@@ -74,9 +74,9 @@ ms.locfileid: "36151624"
  Weitere Informationen über die Seite **Eingaben und Ausgaben** im **Transformations-Editor für Skripterstellung** finden Sie unter [Script Transformation Editor (Inputs and Outputs Page) (Transformations-Editor für Skripterstellung (Seite „Eingaben und Ausgaben“))](../script-transformation-editor-inputs-and-outputs-page.md).  
   
 ### <a name="adding-variables"></a>Hinzufügen von Variablen  
- Treten vorhandenen Variablen, deren Werte, die Sie in Ihrem Skript verwenden möchten, können Sie diese im Hinzufügen der `ReadOnlyVariables` und `ReadWriteVariables` Eigenschaftsfeldern für die **Skript** auf der Seite der **Skript Transformations-Editor**.  
+ Treten von vorhandenen Variablen, deren Werte, die Sie in Ihrem Skript verwenden möchten, können Sie diese im Hinzufügen der `ReadOnlyVariables` und `ReadWriteVariables` Eigenschaftsfeldern für die **Skript** auf der Seite die **Transformations-Editor**.  
   
- Wenn Sie mehrere Variablen in die Eigenschaftenfelder eingeben, trennen Sie die Variablennamen durch Kommas. Sie können auch mehrere Variablen eingeben, indem Sie auf die Auslassungspunkte (**...** ) neben dem `ReadOnlyVariables` und `ReadWriteVariables` Eigenschaftenfelder und Auswählen von Variablen in der **Variablen auswählen** (Dialogfeld).  
+ Wenn Sie mehrere Variablen in die Eigenschaftenfelder eingeben, trennen Sie die Variablennamen durch Kommas. Sie können auch mehrere Variablen eingeben, indem Sie auf die Auslassungspunkte (**...** ) neben dem `ReadOnlyVariables` und `ReadWriteVariables` Eigenschaftenfelder und Auswählen von Variablen in der **Variablen auswählen** Dialogfeld.  
   
  Allgemeine Informationen über das Verwenden von Variablen mit der Skriptkomponente finden Sie unter [Using Variables in the Script Component (Verwenden von Variablen in der Skriptkomponente)](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36151624"
   
  Die `ScriptMain`-Klasse schließt einen Stub für die `CreateNewOutputRows`-Methode ein. `CreateNewOutputRows` ist die wichtigste Methode in einer Quellkomponente.  
   
- Wenn Sie öffnen die **Projektexplorer** Fenster in VSTA können Sie sehen, dass die Skriptkomponente auch schreibgeschützte generiert hat `BufferWrapper` und `ComponentWrapper` Projektelemente. Die `ScriptMain`-Klasse erbt von der `UserComponent`-Klasse im `ComponentWrapper`-Projektelement.  
+ Wenn Sie öffnen die **-Projekt-Explorer** Fenster in VSTA können Sie sehen, dass die Skriptkomponente auch schreibgeschützte generiert hat `BufferWrapper` und `ComponentWrapper` Projektelemente. Die `ScriptMain`-Klasse erbt von der `UserComponent`-Klasse im `ComponentWrapper`-Projektelement.  
   
  Zur Laufzeit ruft die Datenfluss-Engine die `PrimeOutput`-Methode in der `UserComponent`-Klasse auf, die die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A>-Methode der übergeordneten <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>-Klasse überschreibt. Die `PrimeOutput`-Methode ruft anschließend die folgenden Methoden auf:  
   
@@ -119,7 +119,7 @@ ms.locfileid: "36151624"
  In den folgenden Beispielen wird der benutzerdefinierte Code veranschaulicht, der in der `ScriptMain`-Klasse zur Erstellung einer Quellkomponente erforderlich ist.  
   
 > [!NOTE]  
->  Diese Beispiele verwenden die **Person.Address** -Tabelle in der `AdventureWorks` Beispieldatenbank aus, und übergeben Sie die erste und die vierte Spalte, die **IntAddressID** und **Nvarchar (30) City**Spalten, durch den Datenfluss. Die gleichen Daten werden in den Quellen-, Transformations- und Zielbeispielen in diesem Abschnitt verwendet. Zusätzliche Voraussetzungen und Annahmen werden für jedes Beispiel dokumentiert.  
+>  Diese Beispiele verwenden die **Person.Address** -Tabelle in der `AdventureWorks` -Beispieldatenbank erstellt und übergeben Sie die ersten und vierten-Spalten, die **IntAddressID** und **Nvarchar (30) City**Spalten, durch den Datenfluss. Die gleichen Daten werden in den Quellen-, Transformations- und Zielbeispielen in diesem Abschnitt verwendet. Zusätzliche Voraussetzungen und Annahmen werden für jedes Beispiel dokumentiert.  
   
 ### <a name="adonet-source-example"></a>ADO.NET-Quellenbeispiel  
  Dieses Beispiel zeigt eine Quellkomponente, die einen vorhandenen [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Verbindungs-Manager zum Laden von Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle in den Datenfluss verwendet.  
@@ -260,7 +260,7 @@ ms.locfileid: "36151624"
   
  Wenn Sie den Beispielcode ausführen möchten, müssen Sie das Paket und die Komponente folgendermaßen konfigurieren:  
   
-1.  Verwenden der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import / Export-Assistenten zum Exportieren der **Person.Address** Tabelle aus der `AdventureWorks` -Beispieldatenbank in eine kommagetrennte Flatfile. In diesem Beispiel wird der Dateiname ExportedAddresses.txt verwendet.  
+1.  Verwenden der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import / Export-Assistenten zum Exportieren der **Person.Address** Tabelle aus der `AdventureWorks` -Beispieldatenbank in eine durch Trennzeichen getrennte Flatfile. In diesem Beispiel wird der Dateiname ExportedAddresses.txt verwendet.  
   
 2.  Erstellen Sie einen Verbindungs-Manager für Flatfiles, der eine Verbindung mit der exportierten Datendatei herstellt.  
   
@@ -391,7 +391,7 @@ ms.locfileid: "36151624"
     }  
     ```  
   
-![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben Sie mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Creating a Destination with the Script Component (Erstellen eines Ziels mit der Skriptkomponente)](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)   

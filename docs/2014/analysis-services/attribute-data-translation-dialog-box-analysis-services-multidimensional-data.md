@@ -1,5 +1,5 @@
 ---
-title: -Attribut Daten Attributdatenübersetzung (Dialogfeld) (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: -Attribut Daten Attributdatenübersetzung (Dialogfeld) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.dimensionstoragesettings.f1
 helpviewer_keywords:
 - Attribute Data Translation dialog box
 ms.assetid: bed286de-1e9b-49de-b09e-3cd076aba152
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1b8d7f28696e04045ca5ac3f11bf38d4c67f60c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 9b17c7aba04bc832fd3554d82dd885e8add05214
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148503"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210360"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Attributdatenübersetzung' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Attributdatenübersetzung** können Sie die Spalte festlegen, in der die Übersetzungsbeschriftungsdaten enthalten sind, sowie die Sortierung und Sortierreihenfolge, die für die übersetzten Daten verwendet werden sollen. Das Dialogfeld **Attributdatenübersetzung** können Sie wie folgt aufrufen:  
@@ -56,22 +56,22 @@ ms.locfileid: "36148503"
 > [!NOTE]  
 >  Wenn diese Option ausgewählt ist, sind die Optionen **Unterscheidung nach Groß-/Kleinschreibung**, **Unterscheidung nach Akzent**, **Unterscheidung nach Kana**und **Unterscheidung nach Breite** deaktiviert.  
   
- **Groß-/Kleinschreibung unterschieden**  
+ **Groß-/Kleinschreibung beachten**  
  Wählen Sie diese Option aus, um Daten auf der Grundlage der Wörterbuchregeln zu sortieren und zu vergleichen, die für die zugeordnete Sprache oder das Alphabet bereitgestellt werden, und um zwischen Groß- und Kleinschreibung zu unterscheiden.  
   
- Wenn nicht ausgewählt, betrachtet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] die Groß- und Kleinschreibungsversionen von Buchstaben als gleich. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] definiert, ob Kleinbuchstaben niedriger oder höher als Großbuchstaben einsortiert, wenn stehen keine **Groß-/Kleinschreibung** nicht ausgewählt ist.  
+ Wenn nicht ausgewählt, betrachtet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] die Groß- und Kleinschreibungsversionen von Buchstaben als gleich. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] definiert nicht, ob Kleinbuchstaben niedriger oder einsortiert höher als Großbuchstaben Wenn **Groß-/Kleinschreibung** nicht ausgewählt ist.  
   
  **Unterscheidung nach Akzent**  
  Wählen Sie diese Option aus, um Daten auf der Grundlage der Wörterbuchregeln zu sortieren und zu vergleichen, die für die zugeordnete Sprache oder das Alphabet bereitgestellt werden, und um zwischen Buchstaben mit und ohne Akzent zu unterscheiden. Beispielsweise ist 'a' nicht mit 'á' identisch.  
   
  Wenn diese Option nicht ausgewählt ist, werden die Zeichen mit und ohne Akzent von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] als identisch betrachtet.  
   
- **Kana vertrauliche**  
+ **Unterscheidung nach Kana**  
  Wählen Sie diese Option aus, um Daten basierend auf den für die zugehörige Sprache oder das Alphabet bereitgestellten Wörterbuchregeln zu sortieren und zu vergleichen und zwischen den beiden japanischen Kanazeichentypen zu unterscheiden: Hiragana und Katakana.  
   
  Wenn diese Option nicht ausgewählt ist, werden Hiragana- und Katakanazeichen von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] als identisch betrachtet.  
   
- **Breite unterschieden**  
+ **Unterscheidung nach Breite**  
  Wählen Sie diese Option aus, um Daten auf der Grundlage der Wörterbuchregeln zu sortieren und zu vergleichen, die für die zugeordnete Sprache oder das Alphabet bereitgestellt werden, und um zwischen einem Einzelbytezeichen (halbe Breite) und demselben Zeichen als Doppelbytezeichen (ganze Breite) zu unterscheiden.  
   
  Wenn diese Option nicht ausgewählt ist, werden die Single-Byte- und die Double-Byte-Darstellung desselben Zeichens von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] als identisch betrachtet.  

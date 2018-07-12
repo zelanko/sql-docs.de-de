@@ -1,5 +1,5 @@
 ---
-title: DimensionID-Element (ASSL) | Microsoft Docs
+title: DimensionID-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DimensionID element
 ms.assetid: 00262781-4216-4a19-8bdc-d46647f42165
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 24b65d34bfd1e16e464c1469a6c90058f4c100ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c211ed3b218a89bf02e29793573fe0915191641
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060812"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259486"
 ---
 # <a name="dimensionid-element-assl"></a>DimensionID-Element (ASSL)
   Enthält den Bezeichner (ID) der Dimension.  
@@ -62,7 +62,7 @@ ms.locfileid: "36060812"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Elemente, die den übergeordneten Elementen von entsprechen `DimensionID` im Objektmodell von Analysis Management Objects (AMO) sind <xref:Microsoft.AnalysisServices.CubeDimension> und <xref:Microsoft.AnalysisServices.DimensionBinding>.  
+ Die Elemente, die den übergeordneten Elementen von entsprechen `DimensionID` im Analysis Management Objects (AMO)-Objektmodell werden <xref:Microsoft.AnalysisServices.CubeDimension> und <xref:Microsoft.AnalysisServices.DimensionBinding>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

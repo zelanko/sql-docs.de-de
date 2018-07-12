@@ -1,5 +1,5 @@
 ---
-title: Anzeigen von Datamining-Modellen in Visio (Data Mining-Add-ins) | Microsoft Docs
+title: Anzeigen von Datamining-Modellen in Visio (Data Mining-Add-ins) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - diagram, modifying
 - templates [Visio]
@@ -16,21 +16,21 @@ helpviewer_keywords:
 - diagram
 ms.assetid: 5841adea-6650-4fae-8526-26af33edbede
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 572bbd3b2c3bbcebbd1b5a829ac193ac0bb909a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9dbb4e78685982dc3b7cd981fc6df6db9bf40a13
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147983"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259356"
 ---
 # <a name="viewing-data-mining-models-in-visio-data-mining-add-ins"></a>Anzeigen von Data Mining-Modellen in Visio (Data Mining-Add-Ins)
   Mit Visio-Shapes für das Data Mining können Sie eine Verbindung mit einem Server herstellen und ein Diagramm erstellen, das ein vorhandenes Data Mining-Modell darstellt. Die Diagramme können anschließend mithilfe von Visio-Steuerelementen angepasst werden; Sie können jedoch auch einen Drilldown auf Daten ausführen, einige der zugrunde liegenden Statistiken verfügbar machen und mit dem zugrunde liegenden Modell arbeiten.  
   
 ## <a name="building-a-model-diagram"></a>Erstellen eines Modelldiagramms  
- Beim Öffnen der Datei, die für das Datamining-Shapes in Visio enthält die **Formen** Bereich die folgenden Shapes angezeigt.  
+ Wenn Sie die Datei mit der für das Datamining-Shapes in Visio öffnen die **Formen** Bereich die folgenden Shapes angezeigt.  
   
  Wenn die Data Mining-Shapes beim Öffnen von Visio nicht angezeigt werden, öffnen Sie die Vorlagendatei aus dem Installationsordner.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36147983"
   
  [Exemplarische Vorgehensweise für das Clusterdiagramm](cluster-diagram-walkthrough-data-mining-add-ins.md)  
   
- [Exemplarische Vorgehensweise Net Abhängigkeit](dependency-network-diagram-walkthrough-data-mining-add-ins.md)  
+ [Abhängigkeit Exemplarische Vorgehensweise](dependency-network-diagram-walkthrough-data-mining-add-ins.md)  
   
  [Exemplarische Vorgehensweise für das Entscheidungsstrukturdiagramm](decision-tree-diagram-walkthrough-data-mining-add-ins.md)  
   

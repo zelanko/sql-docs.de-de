@@ -1,5 +1,5 @@
 ---
-title: MeasureQualificaton-Element (ASSL) | Microsoft Docs
+title: MeasureQualificaton-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - MeasureQualification element
 ms.assetid: 754a037c-f20b-4717-a6e8-12f495e8e3b4
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 795e2b7b10f9d7e9988747025c322b25ffa0af47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb84c39d7d7a3b69ea3c13e43dfda0b331c548e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148921"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149501"
 ---
 # <a name="measurequalificaton-element-assl"></a>MeasureQualificaton-Element (ASSL)
   Bestimmt, ob ein Präfix auf Measures in der [MeasureGroup](../objects/group-element-assl.md).  
@@ -68,7 +68,7 @@ ms.locfileid: "36148921"
 |*PrefixMeasureGroup*|Der eindeutige Name und die Beschriftung für jede Measure in dieser Measuregruppe erhalten als Präfix den Namen der Measuregruppe und ein einzelnes Leerzeichen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element, das das übergeordnete Element des entspricht `MeasureQualification` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.MeasureGroup>.  
+ Das Element, das dem übergeordneten entspricht `MeasureQualification` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.MeasureGroup>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Cube-Element &#40;ASSL&#41;](../objects/cube-element-assl.md)   

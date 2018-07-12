@@ -1,5 +1,5 @@
 ---
-title: DeleteWithDescendants-Element (XMLA) | Microsoft Docs
+title: DeleteWithDescendants-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - DeleteWithDescendants element
 ms.assetid: adfc9437-aaa7-4364-bcdb-128fcc9a410d
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 0a51772adb2a571f99a5927fe8150d04ab5ef648
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 9aa39e4091c0d2fcde431a9f859c7a9b7a0e6e34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150881"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155251"
 ---
 # <a name="deletewithdescendants-element-xmla"></a>DeleteWithDescendants-Element (XMLA)
   Gibt an, ob auch die Nachfolger der Attributelemente auch vom übergeordneten [Drop](../xml-elements-commands/drop-element-xmla.md) -Befehl gelöscht werden.  
@@ -64,7 +64,7 @@ ms.locfileid: "36150881"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `DeleteWithDescendants` -Element bestimmt, ob die `Drop` Befehl sollte den identifizierten Attributelemente Löschen der [, in dem](where-element-xmla.md) -Element, sondern auch sind, dass die Nachfolger dieser Attributelemente ebenfalls gelöscht werden sollen.  
+ Die `DeleteWithDescendants` Element bestimmt, ob die `Drop` Befehl sollten die Attributelemente identifizierte Löschen der [, in denen](where-element-xmla.md) -Element, sondern auch sind, dass die Nachfolger dieser Attributelemente ebenfalls gelöscht werden sollen.  
   
 > [!NOTE]  
 >  Dieses Element gilt nur für Attributelemente in Über-/Unterordnungshierarchien.  

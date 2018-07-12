@@ -1,5 +1,5 @@
 ---
-title: Automatisches Gruppieren von Attributelementen | Microsoft Docs
+title: Automatisches Gruppieren von Attributelementen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: eef5ca79172be96af5ded2c01a8c3f01e633caa7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 10a6ae9dee61d211c178a42e38087ad104344343
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151473"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183427"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Automatisches Gruppieren von Attributelementen
   Beim Durchsuchen eines Cubes dimensionieren Sie in der Regel die Elemente einer Attributhierarchie nach den Elementen einer anderen Attributhierarchie. Sie können beispielsweise Kundenverkäufe nach der Stadt, dem erworbenen Produkt oder dem Geschlecht gruppieren. Bei bestimmten Attributtypen ist es allerdings sinnvoll, von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] automatisch Gruppierungen von Attributelementen erstellen zu lassen, die auf der Verteilung der Elemente innerhalb einer Attributhierarchie basieren. Sie können beispielsweise von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Gruppen der jährlichen Einkommenswerte für Kunden erstellen lassen. Es werden dann für Benutzer, die die Attributhierarchie durchsuchen, die Namen und Werte der Gruppen anstelle der Elemente selbst angezeigt. Dadurch wird die Anzahl der Ebenen beschränkt, die für Benutzer angezeigt werden, was für die Analyse sinnvoller sein kann.  
@@ -48,7 +48,7 @@ ms.locfileid: "36151473"
   
 4.  Wählen Sie im Bereich **Attribute** den Eintrag **Yearly Income**aus.  
   
-5.  Ändern Sie im Fenster Eigenschaften den Wert für die **DiscretizationMethod** Eigenschaft **automatische** und ändern Sie den Wert für die **DiscretizationBucketCount** Eigenschaft um `5`.  
+5.  Ändern Sie im Eigenschaftenfenster den Wert für die **DiscretizationMethod** Eigenschaft **automatische** und ändern Sie den Wert für die **DiscretizationBucketCount** Eigenschaft um `5`.  
   
      Die folgende Abbildung zeigt die geänderten Eigenschaften für **Yearly Income**.  
   
@@ -66,11 +66,11 @@ ms.locfileid: "36151473"
   
 4.  Wählen Sie im Bereich **Attribute** den Eintrag **Sick Leave Hours**aus.  
   
-5.  Ändern Sie im Fenster Eigenschaften den Wert für die **DiscretizationMethod** Eigenschaft, um **Cluster** und ändern Sie den Wert für die **DiscretizationBucketCount** Eigenschaft `5`.  
+5.  Ändern Sie im Eigenschaftenfenster den Wert für die **DiscretizationMethod** Eigenschaft **Cluster** und ändern Sie den Wert für die **DiscretizationBucketCount** Eigenschaft `5`.  
   
 6.  Wählen Sie im Bereich **Attribute** den Eintrag **Vacation Hours**aus.  
   
-7.  Ändern Sie im Fenster Eigenschaften den Wert für die **DiscretizationMethod** Eigenschaft **Equal Areas** und ändern Sie den Wert für die **DiscretizationBucketCount** Eigenschaft um `5`.  
+7.  Ändern Sie im Eigenschaftenfenster den Wert für die **DiscretizationMethod** Eigenschaft **Equal Areas** und ändern Sie den Wert für die **DiscretizationBucketCount** Eigenschaft um `5`.  
   
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>Durchsuchen der geänderten Attributhierarchien  
   
@@ -98,7 +98,7 @@ ms.locfileid: "36151473"
   
      Die folgende Abbildung zeigt Verkäufe dimensioniert nach krankheitsbedingten Ausfallstunden der Angestellten.  
   
-     ![Sales dimensioniert nach den Krankheitstagen des Angestellten lassen Stunden](../../2014/tutorials/media/l4-discretizationmethod-2.gif "Sales dimensioniert nach den Krankheitstagen des Angestellten lassen Stunden")  
+     ![Sales dimensioniert nach den Krankheitstagen lassen Stunden](../../2014/tutorials/media/l4-discretizationmethod-2.gif "Sales dimensioniert nach den Krankheitstagen lassen Stunden")  
   
 10. Entfernen Sie die **Sick Leave Hours** -Attributhierarchie aus dem Spaltenbereich des Bereichs **Daten** .  
   

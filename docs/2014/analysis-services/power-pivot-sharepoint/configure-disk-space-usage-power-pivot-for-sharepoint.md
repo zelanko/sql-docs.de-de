@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren der Speicherplatzverwendung (PowerPivot für SharePoint) | Microsoft Docs
+title: Konfigurieren der Speicherplatzverwendung (PowerPivot für SharePoint) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 76f4688acd348f8ee2bcbe87d8832f5f770ba4b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 538efc15ea53c9c7666589c71c039ce21fa21b2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149746"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151491"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>Konfigurieren der Speicherplatzverwendung (PowerPivot für SharePoint)
   Eine PowerPivot für SharePoint-Bereitstellung verwendet den verfügbaren Speicherplatz auf einem Hostcomputer, um PowerPivot-Datenbanken zum schnelleren Neuladen zwischenzuspeichern. Jede in den Arbeitsspeicher geladene PowerPivot-Datenbank wird zuerst auf Datenträger zwischengespeichert, damit sie später für neue Anforderungen schnell erneut geladen werden kann. PowerPivot für SharePoint nutzt standardmäßig den gesamten verfügbaren Speicherplatz zum Zwischenspeichern der zugehörigen Datenbanken. Sie können dieses Verhalten jedoch ändern, indem Sie Eigenschaften festlegen, durch die der verwendete Speicherplatz eingeschränkt wird.  
@@ -54,11 +54,11 @@ ms.locfileid: "36149746"
   
  Auf Systemebene können Sie E-Mail-Warnungen erstellen, die Sie benachrichtigen, wenn der Speicherplatz gering ist. Microsoft System Center enthält eine E-Mail-Benachrichtigungsfunktion. Sie können Warnungen auch mithilfe des Ressourcen-Managers für Dateiserver, des Taskplaners oder PowerShell-Skripts einrichten. Unter den folgenden Links erhalten Sie nützliche Informationen zum Einrichten von Benachrichtigungen zu niedrigem Speicherplatz:  
   
--   [Neues in File Server Resource Manager](http://technet.microsoft.com/library/hh831746.aspx) (http://technet.microsoft.com/library/hh831746.aspx).  
+-   [Neues im Ressourcen-Manager](http://technet.microsoft.com/library/hh831746.aspx) (http://technet.microsoft.com/library/hh831746.aspx).  
   
--   [File Server Resource Manager schrittweise Anleitung für Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=204875) (http://go.microsoft.com/fwlink/?LinkID=204875).  
+-   [Schrittweise Anleitung für Resource Manager für Dateiserver für Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=204875) (http://go.microsoft.com/fwlink/?LinkID=204875).  
   
--   [Festlegen von wenig Speicherplatz Warnungen unter Windows Server 2008](http://go.microsoft.com/fwlink/?LinkID=204870) ( http://go.microsoft.com/fwlink/?LinkID=204870).  
+-   [Festlegen von unzureichendem Speicherplatz Warnungen unter Windows Server 2008](http://go.microsoft.com/fwlink/?LinkID=204870) ( http://go.microsoft.com/fwlink/?LinkID=204870).  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>So schränken Sie den zum Speichern von zwischengespeicherten Dateien verwendeten Speicherplatz ein  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36149746"
   
 1.  Klicken Sie in der Zentraladministration unter „Anwendungsverwaltung“ auf **Dienstanwendungen verwalten**.  
   
-2.  Klicken Sie auf **PowerPivot-Standarddienstanwendung** Management-Dashboard zu öffnen.  
+2.  Klicken Sie auf **PowerPivot-Standarddienstanwendung** um das Management-Dashboard zu öffnen.  
   
 3.  Klicken Sie unter „Aktionen“auf **Einstellungen für Dienstanwendung konfigurieren**.  
   

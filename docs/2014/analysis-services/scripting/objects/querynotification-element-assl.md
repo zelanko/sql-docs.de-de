@@ -1,5 +1,5 @@
 ---
-title: QueryNotification-Element (ASSL) | Microsoft Docs
+title: QueryNotification-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - QueryNotification element
 ms.assetid: 0ee06730-81ff-4913-96e6-f39b6f181650
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3c9bc13772d549d6ade640af4c3f57ac52efbbec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7d31cef8ee52964bf9aeb0c7c489f2831f5cb80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151201"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153301"
 ---
 # <a name="querynotification-element-assl"></a>QueryNotification-Element (ASSL)
   Enthält Informationen für das [ProactiveCaching](proactivecaching-element-assl.md)-Element über die Abfrage, die ausgeführt werden muss, um zu bestimmen, ob eine Datenquelle geändert worden ist.  
@@ -60,7 +60,7 @@ ms.locfileid: "36151201"
 |Untergeordnete Elemente|[Dataseteigenschaften](../properties/query-element-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.QueryNotification>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.QueryNotification>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [ProactiveCachingQueryBinding-Datentyp &#40;ASSL&#41;](../data-type/binding-data-type-assl.md)   

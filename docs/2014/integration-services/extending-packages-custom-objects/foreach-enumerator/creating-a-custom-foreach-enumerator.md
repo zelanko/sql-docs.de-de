@@ -19,13 +19,13 @@ ms.assetid: 050e8455-2ed0-4b6d-b3ea-4e80e6c28487
 caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5c7cba14a14eca63e95abfb8da5a6784b7405bfa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a35526010fc49ac3703536a19f05729b9260d10
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149493"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149921"
 ---
 # <a name="creating-a-custom-foreach-enumerator"></a>Erstellen eines benutzerdefinierten Foreach-Enumerators
   Die Schritte zum Erstellen eines benutzerdefinierten Foreach-Enumerators ähneln denen jedes anderen benutzerdefinierten Objekts für [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]:  
@@ -50,7 +50,7 @@ ms.locfileid: "36149493"
  Konfigurieren Sie beide Projekte für das Signieren der Assemblys, die bei der Erstellung erzeugt werden, mit einer Schlüsseldatei mit starkem Namen.  
   
 ### <a name="applying-the-dtsforeachenumerator-attribute"></a>Anwenden des DtsForEachEnumerator-Attributs  
- Wenden Sie das <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute>-Attribut der Klasse zu, die Sie erstellt haben, um sie als Foreach-Enumerator zu kennzeichnen. Dieses Attribut stellt Entwurfszeitinformationen bereit, z. B. Name und Beschreibung des Foreach-Enumerators. Die `Name` Eigenschaft wird in der Dropdownliste der verfügbaren Enumeratoren auf der **Auflistung** auf der Registerkarte die **foreach-Schleifen-Editor** (Dialogfeld).  
+ Wenden Sie das <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute>-Attribut der Klasse zu, die Sie erstellt haben, um sie als Foreach-Enumerator zu kennzeichnen. Dieses Attribut stellt Entwurfszeitinformationen bereit, z. B. Name und Beschreibung des Foreach-Enumerators. Die `Name` Eigenschaft wird in der Dropdownliste der verfügbaren Enumeratoren auf der **Auflistung** Registerkarte die **Foreach-Schleifen-Editor** Dialogfeld.  
   
  Verwenden Sie die <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute.UITypeName%2A>-Eigenschaft, um den Foreach-Enumerator mit der individuellen Benutzeroberfläche zu verknüpfen. Um das für diese Eigenschaft erforderliche öffentliche Schlüsseltoken zu erhalten, können Sie **sn.exe -t** verwenden. Damit zeigen Sie das öffentliche Schlüsseltoken aus der Schlüsselpaardatei (.snk) an, die Sie für das Signieren der Benutzeroberflächenassembly verwenden möchten.  
   
@@ -82,7 +82,7 @@ namespace Microsoft.Samples.SqlServer.Dts
 ## <a name="building-deploying-and-debugging-a-custom-enumerator"></a>Erstellen, Bereitstellen und Debuggen eines benutzerdefinierten Enumerators  
  Die Schritte zum Erstellen, Bereitstellen und Debuggen eines benutzerdefinierten Foreach-Enumerators in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ähneln denen für andere Arten benutzerdefinierter Objekte stark. Weitere Informationen finden Sie unter [Building, Deploying, and Debugging Custom Objects](../building-deploying-and-debugging-custom-objects.md) (Erstellen, Bereitstellen und Debuggen von benutzerdefinierten Objekten).  
   
-![Integration Services (kleines Symbol)](../../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben Sie mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services (kleines Symbol)](../../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Codieren eines benutzerdefinierten Foreach-Enumerators](coding-a-custom-foreach-enumerator.md)   

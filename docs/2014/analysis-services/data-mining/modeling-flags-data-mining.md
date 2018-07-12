@@ -1,5 +1,5 @@
 ---
-title: Modellierungsflags (Datamining) | Microsoft Docs
+title: Modellierungsflags (Datamining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - data types [data mining]
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
 caps.latest.revision: 48
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b7d8ee5cc87c6d5a197240f59641095f8bc1c693
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85abe1acb2fa12208ebf83541bd030646c67ddbc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151239"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155411"
 ---
 # <a name="modeling-flags-data-mining"></a>Modellierungsflags (Data Mining)
   Sie können Modellierungsflags in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dazu verwenden, für einen Data Mining-Algorithmus zusätzliche Informationen zu den Daten bereitzustellen, die in einer Falltabelle definiert sind. Der Algorithmus kann diese Informationen verwenden, um ein genaueres Data Mining-Modell zu erstellen.  
@@ -48,11 +48,11 @@ ms.locfileid: "36151239"
  Gibt an, dass die Werte für die Attributspalte auf keinen Fall einen NULL-Wert enthalten dürfen. Es führt zu einem Fehler, wenn [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] während des Modelltrainings einen NULL-Wert für diese Attributspalte findet.  
   
  **MODEL_EXISTENCE_ONLY**  
- Gibt an, dass die Spalte zwei Statuswerte enthalten kann: `Missing` und `Existing`. Wenn der Wert `NULL`, wird dies als fehlend behandelt. Das MODEL_EXISTENCE_ONLY-Flag wird für das vorhersagbare Attribut übernommen und wird von den meisten Algorithmen unterstützt.  
+ Gibt an, dass die Spalte zwei Statuswerte enthalten kann: `Missing` und `Existing`. Wenn der Wert ist `NULL`, wird er als fehlend behandelt. Das MODEL_EXISTENCE_ONLY-Flag wird für das vorhersagbare Attribut übernommen und wird von den meisten Algorithmen unterstützt.  
   
- Tatsächlich wird durch das MODEL_EXISTENCE_ONLY-Flag zum Festlegen `True` die Darstellung der Werte so geändert, dass es nur zwei Zustände gibt: `Missing` und `Existing`. Alle nicht fehlenden Status werden in einer einzelnen kombiniert `Existing` Wert.  
+ Tatsächlich wird durch Festlegen des MODEL_EXISTENCE_ONLY-Flags zum `True` die Darstellung der Werte so geändert, dass es nur zwei Zustände: `Missing` und `Existing`. Alle nicht fehlenden Status werden in einem einzelnen kombiniert `Existing` Wert.  
   
- Dieses Modellierungsflag wird in der Regel in Attributen verwendet, bei denen der `NULL`-Status eine implizite Bedeutung hat und der explizite Wert des `NOT NULL`-Status nicht so wichtig ist wie die Tatsache, dass die Spalte überhaupt einen Wert enthält. Angenommen, eine Spalte [DateContractSigned] möglicherweise `NULL` , wenn ein Vertrag nie unterschrieben wurde und `NOT NULL` Wenn unterschrieben wurde. Aus diesem Grund ist der Zweck des Modells Vorhersagen, ob ein Vertrag unterschrieben wird, können das MODEL_EXISTENCE_ONLY-Flag, um den genauen Datumswert in ignorieren die `NOT NULL` Fällen und nur zwischen den Fällen, in denen ein Vertrag ist, unterscheiden `Missing` oder `Existing`.  
+ Dieses Modellierungsflag wird in der Regel in Attributen verwendet, bei denen der `NULL`-Status eine implizite Bedeutung hat und der explizite Wert des `NOT NULL`-Status nicht so wichtig ist wie die Tatsache, dass die Spalte überhaupt einen Wert enthält. Beispielsweise ist möglicherweise eine Spalte [DateContractSigned] `NULL` , wenn ein Vertrag nie unterschrieben wurde und `NOT NULL` , wenn der Vertrag unterschrieben wurde. Aus diesem Grund ist der Zweck des Modells zur Vorhersage, ob ein Vertrag unterschrieben wird, können das MODEL_EXISTENCE_ONLY-Flag, um den genauen Datumswert in ignorieren die `NOT NULL` Fällen und nur zwischen den Fällen, in denen ein Vertrag ist, unterscheiden `Missing` oder `Existing`.  
   
 > [!NOTE]  
 >  Missing ist ein spezieller vom Algorithmus verwendeter Statuswert, der nicht mit dem Textwert "Missing" bzw. "Fehlend" einer Spalte gleichbedeutend ist. Weitere Informationen finden Sie unter [Fehlende Werte &#40;Analysis Services – Data Mining&#41;](missing-values-analysis-services-data-mining.md).  

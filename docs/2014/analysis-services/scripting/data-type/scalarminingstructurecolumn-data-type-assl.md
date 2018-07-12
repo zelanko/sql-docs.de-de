@@ -1,5 +1,5 @@
 ---
-title: ScalarMiningStructureColumn-Datentyp (ASSL) | Microsoft Docs
+title: ScalarMiningStructureColumn-Datentyp (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ScalarMiningStructureColumn data type
 ms.assetid: 8f4afc15-601c-4189-bc45-f5a216aed879
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 15e88a5e82dc960e3428587b8d74a046781b90ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 90f855bf55292b310e32a167dc005ab2f2f81c14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150895"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211690"
 ---
 # <a name="scalarminingstructurecolumn-data-type-assl"></a>ScalarMiningStructureColumn-Datentyp (ASSL)
-  Definiert einen abgeleiteten Datentyp, der darstellt eine [MiningStructureColumn](miningstructurecolumn-data-type-assl.md) Element, das Skalare Werte als auch im Gegensatz zu den geschachtelten Tabellen zugeordneten enthält die [TableMiningStructureColumn](tableminingstructurecolumn-data-type-assl.md) Element geschachtelte Tabellen enthält.  
+  Definiert einen abgeleiteten Datentyp, der darstellt, der eine [MiningStructureColumn](miningstructurecolumn-data-type-assl.md) Element, das Skalare Werte als auch im Gegensatz zu den geschachtelten Tabellen zugeordneten enthält die [TableMiningStructureColumn](tableminingstructurecolumn-data-type-assl.md) Element geschachtelte Tabellen enthält.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36150895"
   
 |Merkmal|Description|  
 |--------------------|-----------------|  
-|Basisdatentypen|[Miningstructurecolumn-Objekt](miningstructurecolumn-data-type-assl.md)|  
+|Basisdatentypen|[MiningStructureColumn](miningstructurecolumn-data-type-assl.md)|  
 |Abgeleitete Datentypen|InclusionThresholdSetting|  
   
 ## <a name="data-type-relationships"></a>Datentypbeziehungen  
@@ -71,7 +71,7 @@ ms.locfileid: "36150895"
 |Abgeleitete Elemente|[Spalte](../objects/column-element-assl.md) ([Spalten](../collections/columns-element-assl.md) Auflistung von [MiningStructure](../objects/miningstructure-element-assl.md))|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services Scripting Language-XML-Datentypen &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

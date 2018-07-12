@@ -1,5 +1,5 @@
 ---
-title: UDT-Hilfsprogramme | Microsoft Docs
+title: UDT-Hilfsprogramme | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9e915268-9628-445b-81c2-b0ebd11e891e
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 655bfd340dd7ad45c4e4266461058e7a4908cf22
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bd4617a057a768522064546806dfd23e99366656
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150974"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211530"
 ---
 # <a name="udt-utilities"></a>UDT-Hilfsprogramme
   Das Beispiel "UDT-Hilfsprogramme" enthält eine Reihe von Hilfsprogrammfunktionen. Hierzu gehören u. a. Funktionen zum Verfügbarmachen von Assemblymetadaten für Transact-SQL, Beispiele für Streaming-Tabellenwertfunktionen, mit denen die Typen in einer Assembly als Tabelle zurückgegeben werden können, sowie Funktionen zum Zurückgeben von Feldern, Methoden und Eigenschaften in einem benutzerdefinierten Datentyp. Zu den veranschaulichten Technologien zählen Streaming-Tabellenwertfunktionen, .NET Framework-Reflektions-APIs und das Aufrufen von Tabellenwertfunktionen aus Transact-SQL.  
@@ -30,7 +30,7 @@ ms.locfileid: "36150974"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [Website](http://go.microsoft.com/fwlink/?LinkId=31046) mit der Dokumentation und den Beispielen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  
   
--   Die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Datenbank, die auf der Codeplex verfügbar ist [Website](http://go.microsoft.com/fwlink/?linkid=62796)  
+-   Die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Datenbank, die auf der Codeplex [Website](http://go.microsoft.com/fwlink/?linkid=62796)  
   
 -   .NET Framework SDK 2.0 oder höher oder Microsoft Visual Studio 2005 oder höher. Das .NET Framework SDK ist kostenlos erhältlich.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36150974"
      `GO`  
   
     > [!NOTE]  
-    >  Um CLR zu aktivieren, benötigen Sie `ALTER SETTINGS` Serverberechtigung, die implizit von Mitgliedern der erhalten die `sysadmin` und `serveradmin` festen Serverrollen.  
+    >  Um CLR zu aktivieren, benötigen Sie `ALTER SETTINGS` Serverberechtigung, die implizit Mitglieder erhalten die `sysadmin` und `serveradmin` festen Serverrollen.  
   
 -   Die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank muss in der von Ihnen verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz installiert sein.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36150974"
   
     -   `sqlcmd -E -I -i install.sql -v root = "C:\MySample\"`  
   
-7.  Kopie [!INCLUDE[tsql](../../includes/tsql-md.md)] -testbefehlsskript in eine Datei, und speichern Sie sie als `test.sql` im Beispielverzeichnis.  
+7.  Kopie [!INCLUDE[tsql](../../includes/tsql-md.md)] -testbefehlsskript in eine Datei, und speichern Sie ihn `test.sql` im Beispielverzeichnis.  
   
 8.  Führen Sie das Testskript mit dem folgenden Befehl aus:  
   

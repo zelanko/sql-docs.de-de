@@ -1,5 +1,5 @@
 ---
-title: RegularMeasureGroupDimension-Datentyp (ASSL) | Microsoft Docs
+title: RegularMeasureGroupDimension-Datentyp (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - RegularMeasureGroupDimension data type
 ms.assetid: 5c4ce400-6d7c-40fc-9bcb-392718b77182
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b035f52890dc31783c4093d834ee949e8c3806ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 20ac4c8ddf1d9acba769b0e6931d15b1c8a94647
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150450"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163481"
 ---
 # <a name="regularmeasuregroupdimension-data-type-assl"></a>RegularMeasureGroupDimension-Datentyp (ASSL)
   Definiert einen abgeleiteten Datentyp, der eine reguläre Beziehung zwischen einer Dimension und einer Measuregruppe darstellt.  
@@ -62,7 +62,7 @@ ms.locfileid: "36150450"
 |Abgeleitete Elemente|[Dimension](../objects/dimension-element-assl.md) ([Dimensionen](../collections/dimensions-element-assl.md) Auflistung)|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.RegularMeasureGroupDimension>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.RegularMeasureGroupDimension>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services Scripting Language-XML-Datentypen &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

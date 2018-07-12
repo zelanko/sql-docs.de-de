@@ -1,5 +1,5 @@
 ---
-title: Integration Services-Projekte (SSIS) | Microsoft Docs
+title: Integration Services-Projekte (SSIS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Integration Services], creating
 - folders [Integration Services], projects
@@ -19,18 +19,18 @@ ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c012e6802465df8db1060bebc47920e834620d40
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6777494c1d1c204fcef589eda42357fd0d50a9bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148881"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158961"
 ---
 # <a name="integration-services-ssis-projects"></a>Integration Services-Projekte (SSIS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stellt [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] für die Entwicklung von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paketen bereit.  
   
- Wenn Sie Pakete auf einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbank oder im [!INCLUDE[ssIS](../includes/ssis-md.md)]-Paketspeicher bereitstellen, verwenden Sie den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Dienst, um die Pakete zu verwalten. Der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst steht nur in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]zur Verfügung. Weitere Informationen über den Dienst finden Sie unter [Integration Services-Dienst &#40;SSIS-Dienst&#41;](service/integration-services-service-ssis-service.md). Weitere Informationen zur Bereitstellung von Paketen finden Sie unter [Paketbereitstellung &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
+ Wenn Sie Pakete auf einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbank oder im [!INCLUDE[ssIS](../includes/ssis-md.md)]-Paketspeicher bereitstellen, verwenden Sie den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Dienst, um die Pakete zu verwalten. Der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst steht nur in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]zur Verfügung. Weitere Informationen über den Dienst finden Sie unter [Integration Services-Dienst &#40;SSIS-Dienst&#41;](service/integration-services-service-ssis-service.md). Weitere Informationen zur paketbereitstellung finden Sie unter [Paketbereitstellung &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).  
   
  Wenn Sie [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekte auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Server bereitstellen, verwenden Sie Transact-SQL-Sichten und gespeicherte Prozeduren in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], um die Projekte zu verwalten. Weitere Informationen zur Projektbereitstellung finden Sie unter [Bereitstellung von Projekten und Paketen](packages/deploy-integration-services-ssis-projects-and-packages.md). Weitere Informationen über den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Server finden Sie unter [Integration Services-Dienst &#40;SSIS-Dienst&#41;](catalog/integration-services-ssis-server-and-catalog.md).  
   

@@ -5,24 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-ddl
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - EVENTDATA function
 - DDL triggers, EVENTDATA function
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
-caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 610822ec0eb896180ebfffa40d53198749df0428
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: e45ee2308f7f399c08053f8ff4cd6b862b3978df
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147636"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427599"
 ---
 # <a name="use-the-eventdata-function"></a>Verwenden der EVENTDATA-Funktion
   Informationen zu einem Ereignis, das einen DDL-Trigger auslöst, werden mit der EVENTDATA-Funktion erfasst. Diese Funktion gibt einen `xml`-Wert zurück. Das XML-Schema schließt Informationen zu folgenden Punkten ein:  
@@ -99,7 +97,7 @@ ALTER TABLE Person.Address ALTER COLUMN ModifiedDate date;
   
 -   Die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung, die das Ereignis enthalten hat.  
   
- Die beiden letzten Elemente werden wiederum erfasst, indem XQuery für die `xml` Daten, die von EVENTDATA generiert wird.  
+ Die beiden letzten Elemente werden wiederum erfasst, indem XQuery für die `xml` Daten, die von EVENTDATA generierten.  
   
 ```  
 USE AdventureWorks2012;  
@@ -129,7 +127,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Zur Rückgabe von Ereignisdaten sollten Sie die XQuery-`value()`-Methode anstelle der `query()`-Methode verwenden. Die `query()` Methodenrückgabe XML und Ampersand-Escape Carriage return, Wagenrücklauf und Zeilenvorschub (CRLF) Instanzen in der Ausgabe während der `value()` Methode rendert CRLF-Instanzen in der Ausgabe nicht sichtbar.  
+>  Zur Rückgabe von Ereignisdaten sollten Sie die XQuery-`value()`-Methode anstelle der `query()`-Methode verwenden. Die `query()` Methodenrückgabe XML- und kaufmännische und-Zeichen geschützte Carriage return, Wagenrücklauf und Zeilenvorschub (CR)-Instanzen in der Ausgabe, während die `value()` -Methode rendert ein CRLF-Instanzen in der Ausgabe nicht sichtbar sind.  
   
  Ein ähnliches Beispiel für einen DDL-Trigger wird mit der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank bereitgestellt. Auf das Beispiel können Sie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]im Ordner "Datenbanktrigger" zugreifen. Dieser Ordner befindet sich unter dem Ordner **Programmierbarkeit** der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank. Klicken Sie mit der rechten Maustaste auf **ddlDatabseTriggerLog** , und wählen Sie **Skript für Datenbanktrigger als**aus. Standardmäßig ist der DDL-Trigger **ddlDatabseTriggerLog** deaktiviert.  
   

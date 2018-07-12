@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_STORAGE_TABLE_COLUMNS-Rowset | Microsoft Docs
+title: DISCOVER_STORAGE_TABLE_COLUMNS-Rowset | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 24abb88e-33a9-4ae2-829d-cdef0ff22ec1
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b3fed7add23dda2242000dbad63bb6cc2def0fb7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e480f60aa857506a1d192452b299cede3f7161e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150996"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153151"
 ---
 # <a name="discoverstoragetablecolumns-rowset"></a>DISCOVER_STORAGE_TABLE_COLUMNS-Rowset
   Stellt Informationen zu Speichertabellen auf Spaltenebene bereit, die von einer im SharePoint- oder tabellarischen Modus ausgeführten Analysis Services-Datenbank verwendet werden.  
@@ -40,8 +40,8 @@ ms.locfileid: "36150996"
 |`TABLE_ID`|`DBTYPE_WSTR`||Die ID der Tabelle.|  
 |`COLUMN_ID`|`DBTYPE_ WSTR`||Die ID der Spalte. Die Spalten-ID ist für die xVelocity-Engine für Datenanalyse im Arbeitsspeicher (VertiPaq) intern und wird nur zu Informationszwecken verwendet.|  
 |`COLUMN_TYPE`|`DBTYPE_WSTR`||Der Typ der Spalte. Der Spaltentyp ist für die xVelocity-Engine für Datenanalyse im Arbeitsspeicher (VertiPaq) intern und wird nur zu Informationszwecken verwendet.<br /><br /> -BASIC_DATA<br />-HIERARCHY_DATAID_TO_POSITION<br />-HIERARCHY_POSITION_TO_DATAID<br />-DIE BEZIEHUNG|  
-|`COLUMN_ENCODING`|`DBTYPE_UI8`||Eine ganze Zahl, die den für Spaltendaten verwendeten Codierungstyp darstellt.<br /><br /> -   **0**verwendet mit `COLUMN_TYPE`: HIERARCHY_DATAID_TO_POSITION, HIERARCHY_POSITION_TO_DATAID,-Beziehung<br />-   **1**verwendet mit `COLUMN_TYPE`: BASIC_DATA<br />-   **2**verwendet mit `COLUMN_TYPE`: BASIC_DATA|  
-|`DATATYPE`|`DBTYPE_WSTR`||Der Datentyp der Spalte. Verfügt über folgende Werte möglich:<br /><br /> -DBTYPE_BOOL<br />-DBTYPE_CY<br />-DBTYPE_DATE<br />-DBTYPE_I4<br />-DBTYPE_I8<br />-DBTYPE_R8<br />-DBTYPE_WSTR<br />-NICHT ZUTREFFEND|  
+|`COLUMN_ENCODING`|`DBTYPE_UI8`||Eine ganze Zahl, die den für Spaltendaten verwendeten Codierungstyp darstellt.<br /><br /> -   **0**verwendet mit `COLUMN_TYPE`: HIERARCHY_DATAID_TO_POSITION, HIERARCHY_POSITION_TO_DATAID, Beziehung<br />-   **1**verwendet mit `COLUMN_TYPE`: BASIC_DATA<br />-   **2**verwendet mit `COLUMN_TYPE`: BASIC_DATA|  
+|`DATATYPE`|`DBTYPE_WSTR`||Der Datentyp der Spalte. Verfügt über folgende Werte möglich:<br /><br /> -DBTYPE_BOOL<br />-DBTYPE_CY<br />-DBTYPE_DATE<br />-DBTYPE_I4<br />-DBTYPE_I8<br />-DBTYPE_R8<br />-DBTYPE_WSTR<br />-N/V|  
 |`ISKEY`|`DBTYPE_BOOL`||`True`, falls die Spalte als Primär- oder Fremdschlüssel verwendet wird; andernfalls `false`.|  
 |`ISUNIQUE`|`DBTYPE_BOOL`||`True` Wenn die Werte in der Spalte eindeutig sind; andernfalls `false`.|  
 |`ISNULLABLE`|`DBTYPE_BOOL`||`True`, falls die Spalte auf NULL festgelegt werden kann; andernfalls `false`.|  

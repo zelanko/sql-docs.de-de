@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f54e95b0b9bee1e989d9d9ccf85f513210302367
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6f201b93b3469278d0335cbc60bcc00aa679e6b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149341"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228750"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)
   In einem Balkendiagramm werden Kategoriedaten horizontal angezeigt. Diese Darstellung bietet folgende Vorteile:  
@@ -39,13 +39,13 @@ ms.locfileid: "36149341"
   
 1.  [Erstellen eines Diagramms mithilfe des Diagramm-Assistenten](#Chart)  
   
-2.  [Wählen Sie den Diagrammtyp](#ChartType)  
+2.  [Auswählen des Diagrammtyps](#ChartType)  
   
 3.  [Zeigen Sie aller Kategoriewerte auf der Vertikalachse an](#AllValues)  
   
 4.  [Ändern der Darstellung von Namen auf der vertikalen Achse](#Sort)  
   
-5.  [Verschieben Sie die Legende](#Legend)  
+5.  [Verschieben der Legende](#Legend)  
   
 6.  [Verschieben des Diagrammtitels](#ChartTitle)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36149341"
   
 9. [Hinzufügen eines Berichtstitels](#Title)  
   
-10. [Speichern Sie den Bericht](#Save)  
+10. [Speichern des Berichts](#Save)  
   
 > [!NOTE]  
 >  In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Erstellen eines Datasets und zum Auswählen einer Datenquelle finden Sie im ersten Tutorial dieser Reihe unter [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
@@ -66,7 +66,7 @@ ms.locfileid: "36149341"
  Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="Chart"></a> 1. Erstellen eines Diagrammberichts mithilfe des Diagramm-Assistenten  
- Aus der **Einstieg** (Dialogfeld), ein eingebettetes Dataset zu erstellen, wählen Sie eine freigegebene Datenquelle, und erstellen Sie mithilfe des Diagramm-Assistenten ein Balkendiagramm.  
+ Von der **Einstieg** im Dialogfeld ein eingebettetes Dataset erstellen, wählen Sie eine freigegebene Datenquelle, und erstellen Sie mithilfe des Diagramm-Assistenten ein Balkendiagramm.  
   
 > [!NOTE]  
 >  In diesem Tutorial sind die Datenwerte in der Abfrage enthalten, sodass keine externe Datenquelle benötigt wird. Die Abfrage ist daher relativ lang. In einer Geschäftsumgebung wären die Daten nicht in der Abfrage enthalten. Dieses Szenario dient nur zu Lernzwecken.  
@@ -78,7 +78,7 @@ ms.locfileid: "36149341"
      Das Dialogfeld **Erste Schritte** wird angezeigt.  
   
     > [!NOTE]  
-    >  Wenn die **Einstieg** im Dialogfeld nicht angezeigt werden, klicken Sie auf die Schaltfläche Berichts-Generator, und klicken Sie dann auf **neu**.  
+    >  Wenn die **Einstieg** Dialogfeld nicht angezeigt werden, klicken Sie auf die Schaltfläche "Berichts-Generator", und klicken Sie dann auf **neu**.  
   
 2.  Vergewissern Sie sich, dass im linken Bereich **Neuer Bericht** ausgewählt ist.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "36149341"
   
 2.  Klicken Sie auf **Balken**und anschließend auf **Weiter**.  
   
-     Auf der **Diagrammfelder anordnen** Seite, gibt es vier Felder in der **verfügbare Felder** Bereich: FirstName, LastName "salesyear2009" und "salesyear2008".  
+     Auf der **Diagrammfelder** Seite, gibt es vier Felder in der **verfügbare Felder** Bereich: FirstName, LastName, "salesyear2009" und "salesyear2008".  
   
 3.  Ziehen Sie "LastName" in den Bereich "Kategorien".  
   
@@ -135,7 +135,7 @@ ms.locfileid: "36149341"
   
 6.  Klicken Sie auf **Weiter**.  
   
-7.  Auf der **Auswählen eines Formats** Seite Wählen Sie im Bereich Formate einen Stil.  
+7.  Auf der **Auswählen eines Formats** Seite Wählen Sie im Bereich "Formate", eine Art.  
   
      Ein Format dient zum Angeben eines Schriftschnitts, einer Farbpalette und einer Rahmenart. Wenn Sie ein Format auswählen, wird im Vorschaubereich ein Beispiel für das Diagramm mit diesem Format angezeigt.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "36149341"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  Mit der rechten Maustaste in des vertikalen **Achsentitel** , und deaktivieren Sie die **Achsentitel anzeigen** Kontrollkästchen.  
+5.  Mit der rechten Maustaste in der vertikales **Achsentitel** und deaktivieren Sie die **Achsentitel anzeigen** Kontrollkästchen.  
   
 6.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
@@ -216,13 +216,13 @@ ms.locfileid: "36149341"
   
 7.  Klicken Sie auf **OK**.  
   
-8.  Zurück auf den **Kategoriegruppeneigenschaften** Seite in der **Reihenfolge** Dropdown-Liste **Z bis A**. Dadurch wird die umgekehrte alphabetische Reihenfolge ausgewählt, damit die Namen von oben nach unten angezeigt werden.  
+8.  Auf der **Kategoriegruppeneigenschaften** auf der Seite die **Reihenfolge** Dropdown-Liste **Z bis A**. Dadurch wird die umgekehrte alphabetische Reihenfolge ausgewählt, damit die Namen von oben nach unten angezeigt werden.  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 10. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
- Die Namen auf der horizontalen Achse werden in umgekehrter Reihenfolge sortiert, mit **Alerca** am oberen und **Zeng** unten.  
+ Die Namen auf der horizontalen Achse werden in umgekehrter Reihenfolge sortiert, mit **Alerca** am Anfang und **Zeng** am unteren Rand.  
   
 ##  <a name="Legend"></a> 5. Verschieben der Legende  
  Um die Lesbarkeit der Diagrammwerte zu verbessern, können Sie gegebenenfalls die Diagrammlegende verschieben. So können Sie zum Beispiel in einem Balkendiagramm mit einer horizontalen Anordnung der Balken die Legende oberhalb oder unterhalb des Diagrammbereichs platzieren. Dann bleibt horizontal mehr Platz für die Balken.  
@@ -264,19 +264,19 @@ ms.locfileid: "36149341"
   
 2.  Klicken Sie unten im Diagramm auf die horizontale Achse, um sie auszuwählen.  
   
-     Auf dem Menüband auf die **Home** Registerkarte die **Anzahl** zu gruppieren, klicken Sie auf die **Währung** Schaltfläche. Die horizontalen Achsenbezeichnungen werden zu Währungsbezeichnungen geändert.  
+     Auf dem Menüband auf die **Startseite** Registerkarte die **Anzahl** gruppieren, klicken Sie auf die **Währung** Schaltfläche. Die horizontalen Achsenbezeichnungen werden zu Währungsbezeichnungen geändert.  
   
 3.  (Optional) Entfernen Sie die Dezimalstellen. Klicken Sie in der Nähe der Schaltfläche **Währung** zweimal auf die Schaltfläche **Dezimalstelle löschen** .  
   
 4.  Klicken Sie mit der rechten Maustaste auf die horizontale Achse, und klicken Sie anschließend auf **Eigenschaften für horizontale Achsen**.  
   
-5.  Auf der **Anzahl** Registerkarte **Werte in Tausenden anzeigen.**  
+5.  Auf der **Anzahl** Registerkarte **Werte in Schritten von Tausend anzeigen.**  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 7.  Mit der rechten Maustaste **Achsentitel** , und klicken Sie auf **Achsentiteleigenschaften**.  
   
-8.  In der **Titeltext** geben **Verkäufe in Tausenden** , und klicken Sie auf **OK**.  
+8.  In der **Titeltext** geben **Sales in Schritten von Tausend** , und klicken Sie auf **OK**.  
   
 9. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
@@ -319,7 +319,7 @@ ms.locfileid: "36149341"
   
 1.  Klicken Sie auf der Entwurfsoberfläche auf **Zum Hinzufügen eines Titels klicken**.  
   
-2.  Typ **Umsatz-Balkendiagramm**, drücken Sie die EINGABETASTE, und geben dann **Top Five-Verkaufsschlager 2009**, sodass er wie folgt aussieht:  
+2.  Typ **Umsatz-Balkendiagramm**, drücken Sie die EINGABETASTE, und geben dann **Top Five-Verkaufsschlager 2009**, sodass sie wie folgt aussieht:  
   
      **Umsatz-Balkendiagramm**  
   
@@ -327,7 +327,7 @@ ms.locfileid: "36149341"
   
 3.  Markieren Sie **Umsatz-Balkendiagramm**, und klicken Sie auf die Schaltfläche **Fett** .  
   
-4.  Wählen Sie **Top Five-Verkaufsschlager 2009**, und klicken Sie in der **Schriftart** Abschnitt der **Home** Registerkarte, legen Sie den Schriftgrad auf **10**.  
+4.  Wählen Sie **Top Five-Verkaufsschlager 2009**, und klicken Sie in der **Schriftart** im Abschnitt der **Startseite** Registerkarte, legen Sie den Schriftgrad auf **10**.  
   
 5.  (Optional) Das Textfeld "Titel" muss ggf. vergrößert werden, damit die beiden Textzeilen hineinpassen.  
   

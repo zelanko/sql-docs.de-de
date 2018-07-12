@@ -1,5 +1,5 @@
 ---
-title: Business Intelligence-Assistent F1-Hilfe | Microsoft Docs
+title: Business Intelligence-Assistent F1-Hilfe | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Wizard
 ms.assetid: 155ac80c-63ae-47aa-9e86-9396e3d920eb
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d1fbdaa3573d77306993a024513895426e91d1ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9fa73095aa52b5c5c5f1ec53dcce18884731b4b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150684"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163591"
 ---
 # <a name="business-intelligence-wizard-f1-help"></a>Business Intelligence-Assistent (F1-Hilfe)
   Mithilfe des Business Intelligence-Assistenten können Sie Business Intelligence-Funktionen definieren und erweiterte Optionen in Cubes und Dimensionen festlegen. Mit dem Assistenten werden Eigenschaften in vorhandenen Objekten festgelegt, neue Objekte erstellt und MDX-Skripts (Multidimensional Expressions) generiert, um Funktinen wie die Dimensionsintelligenz oder die Währungsumrechnung bereitzustellen.  
@@ -52,19 +52,19 @@ ms.locfileid: "36150684"
   
 -   [Wählen Sie die Erweiterung &#40;Business Intelligence-Assistent&#41;](choose-enhancement-business-intelligence-wizard.md)  
   
--   [Wählen Sie die Zeitberechnungen &#40;Business Intelligence-Assistent&#41;](choose-time-calculations-business-intelligence-wizard.md)  
+-   [Zielhierarchie und Berechnungen auswählen &#40;Business Intelligence-Assistent&#41;](choose-time-calculations-business-intelligence-wizard.md)  
   
 -   [Umfang der Berechnungen definieren &#40;Business Intelligence-Assistent&#41;](define-scope-of-calculations-business-intelligence-wizard.md)  
   
 -   [Definieren der Kontointelligenz &#40;Dimension&#41; &#40;Business Intelligence-Assistent&#41;](define-account-intelligence-dimension-business-intelligence-wizard.md)  
   
--   [Konfigurieren von Dimensionsattributen &#40;Business Intelligence-Assistent&#41;](configure-dimension-attributes-business-intelligence-wizard.md)  
+-   [Dimensionsattribute konfigurieren &#40;Business Intelligence-Assistent&#41;](configure-dimension-attributes-business-intelligence-wizard.md)  
   
 -   [Definieren der Kontointelligenz &#40;Business Intelligence-Assistent&#41;](define-account-intelligence-business-intelligence-wizard.md)  
   
 -   [Optionen für Dimensionsintelligenz festlegen &#40;Business Intelligence-Assistent&#41;](set-dimension-intelligence-options-business-intelligence-wizard.md)  
   
--   [Definieren der Dimensionsintelligenz &#40;Business Intelligence-Assistent&#41;](define-dimension-intelligence-business-intelligence-wizard.md)  
+-   [Dimensionsintelligenz definieren &#40;Business Intelligence-Assistent&#41;](define-dimension-intelligence-business-intelligence-wizard.md)  
   
 -   [Geben Sie einen Unären Operator &#40;Dimension&#41; &#40;Business Intelligence-Assistent&#41;](specify-a-unary-operator-dimension-business-intelligence-wizard.md)  
   
@@ -92,13 +92,13 @@ ms.locfileid: "36150684"
   
 -   [Verweis auf lokale Währung definieren &#40;Business Intelligence-Assistent&#41;](define-local-currency-reference-business-intelligence-wizard.md)  
   
--   [Geben Sie Währungen für die Berichterstellung &#40;Business Intelligence-Assistent&#41;](specify-reporting-currencies-business-intelligence-wizard.md)  
+-   [Angeben von Währungen für die Berichterstellung &#40;Business Intelligence-Assistent&#41;](specify-reporting-currencies-business-intelligence-wizard.md)  
   
--   [Definieren der Währungsumrechnung &#40;Business Intelligence-Assistent&#41;](define-currency-conversion-business-intelligence-wizard.md)  
+-   [Währungsumrechnung definieren &#40;Business Intelligence-Assistent&#41;](define-currency-conversion-business-intelligence-wizard.md)  
   
 -   [Wählen Sie im Dialogfeld Spalte &#40;Business Intelligence-Assistent&#41;](select-a-column-dialog-box-business-intelligence-wizard.md)  
   
--   [Fertigstellen des Assistenten &#40;Business Intelligence-Assistent&#41;](completing-the-wizard-business-intelligence-wizard.md)  
+-   [Der Assistent &#40;Business Intelligence-Assistent&#41;](completing-the-wizard-business-intelligence-wizard.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Cube-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](cube-designer-analysis-services-multidimensional-data.md)   

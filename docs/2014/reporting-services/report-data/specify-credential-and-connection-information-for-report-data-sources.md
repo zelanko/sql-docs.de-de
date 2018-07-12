@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
 - impersonation [Reporting Services]
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - Windows integrated security [Reporting Services]
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 caps.latest.revision: 59
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3e3dc577cf7b0db69fbcc8140996ce33a4802040
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: cb7ef033bc481772f0acbb524988fc8e85a2e91d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149342"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210740"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen
   Ein Berichtsserver verwendet Anmeldeinformationen zum Herstellen einer Verbindung zu externen Datenquellen, die Inhalt für Berichte oder Empfängerinformationen für ein datengesteuertes Abonnement bereitstellen. Sie können Anmeldeinformationen angeben, die die Windows-Authentifizierung, Datenbankauthentifizierung, keine Authentifizierung oder benutzerdefinierte Authentifizierung verwenden. Beim Senden einer Verbindungsanforderung über das Netzwerk nimmt der Berichtsserver entweder die Identität eines Benutzerkontos oder des Kontos für die unbeaufsichtigte Ausführung an. Weitere Informationen zum Sicherheitskontext, in dem eine Verbindungsanforderung gestellt wird, finden Sie unter [Datenquellenkonfiguration und Netzwerkverbindungen](#DataSourceConfigurationConnections) weiter unten in diesem Thema.  
@@ -45,7 +45,7 @@ ms.locfileid: "36149342"
 > [!NOTE]  
 >  Anmeldeinformationen werden ebenfalls zum Authentifizieren von Benutzern verwendet, die auf einen Berichtsserver zugreifen. Informationen zum Authentifizieren von Benutzern für einen Berichtsserver finden Sie in einem anderen Thema.  
   
- Die Verbindung mit einer externen Datenquelle wird beim Erstellen des Berichts definiert. Sie kann nach Veröffentlichen des Berichts getrennt verwaltet werden. Sie können eine statische Verbindungszeichenfolge angeben oder einen Ausdruck, über den Benutzer eine Datenquelle aus einer dynamische Liste auswählen können. Weitere Informationen dazu, wie eine Typ und Zeichenfolge an finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
+ Die Verbindung mit einer externen Datenquelle wird beim Erstellen des Berichts definiert. Sie kann nach Veröffentlichen des Berichts getrennt verwaltet werden. Sie können eine statische Verbindungszeichenfolge angeben oder einen Ausdruck, über den Benutzer eine Datenquelle aus einer dynamische Liste auswählen können. Weitere Informationen zum Data Source und der Verbindungszeichenfolge angeben, finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
 ## <a name="using-remote-data-sources"></a>Verwenden von Remotedatenquellen  
  Wenn der Bericht Daten von einem Remote-Datenbankserver abruft, überprüfen Sie Folgendes:  
@@ -114,7 +114,7 @@ ms.locfileid: "36149342"
     2.  Wenn das Konto aufgelistet ist, markieren Sie es, und klicken Sie dann auf **Entfernen**.  
   
 #### <a name="using-impersonation-with-stored-credentials"></a>Verwenden des Identitätswechsels mit gespeicherten Anmeldeinformationen  
- Sie können auch Anmeldeinformationen für den Identitätswechsel verwenden. Für SQL Server-Datenbanken, legt Optionen durch die identitätswechseloptionen die [SETUSER](/sql/t-sql/statements/setuser-transact-sql) Funktion.  
+ Sie können auch Anmeldeinformationen für den Identitätswechsel verwenden. Für SQL Server-Datenbanken durch die identitätswechseloptionen "Optionen" legt die [SETUSER](/sql/t-sql/statements/setuser-transact-sql) Funktion.  
   
 > [!IMPORTANT]  
 >  Verwenden Sie den Identitätswechsel nicht für Berichte, die Abonnements unterstützen oder die Zeitpläne zum Generieren des Berichtsverlaufs oder zum Aktualisieren einer Berichtsausführungs-Momentaufnahme verwenden.  
@@ -147,7 +147,7 @@ ms.locfileid: "36149342"
  [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Verwalten von Berichtsdatenquellen](../../integration-services/connection-manager/data-sources.md)   
- [Berichts-Manager &#40;SSRS im einheitlichen Modus&#41;](../report-manager-ssrs-native-mode.md)   
+ [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md)   
  [Erstellen, löschen oder Ändern einer freigegebenen Datenquelle &#40;Berichts-Manager&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Konfigurieren von Datenquelleneigenschaften für einen Bericht &#40;Berichts-Manager&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
   

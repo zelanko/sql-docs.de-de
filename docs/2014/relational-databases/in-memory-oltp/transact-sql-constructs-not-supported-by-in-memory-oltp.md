@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b0d852a4a0d104c815a76076661a3e3c56355d90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: fe4388cff478cf3d8f8fd773c8b0926793b0cc0b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149902"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258856"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Von In-Memory OLTP nicht unterstützte Transact-SQL-Konstrukte
   Speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren unterstützen nicht die vollständige [!INCLUDE[tsql](../../includes/tsql-md.md)]-Oberfläche, die von datenträgerbasierten Tabellen und interpretierten gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozeduren unterstützt wird. Wird versucht, eine der nicht unterstützten Funktionen zu verwenden, gibt der Server einen Fehler zurück.  
@@ -59,9 +59,9 @@ ms.locfileid: "36149902"
 |Funktion|FILESTREAM|Die FILESTREAM-Speicherung wird für Spalten von speicheroptimierten Tabellen nicht unterstützt. Entfernen Sie die `FILESTREAM` Schlüsselwort aus der Spaltendefinition.|  
 |Funktion|SPARSE|Spalten aus speicheroptimierten Tabellen können nicht als SPARSE definiert werden. Entfernen Sie die `SPARSE` Schlüsselwort aus der Spaltendefinition.|  
 |Funktion|ROWGUIDCOL|Die ROWGUIDCOL-Option wird für Spalten von speicheroptimierten Tabellen nicht unterstützt. Entfernen Sie die `ROWGUIDCOL` Schlüsselwort aus der Spaltendefinition.|  
-|Funktion|FOREIGN KEY|FOREIGN KEY-Einschränkungen werden für speicheroptimierte Tabellen nicht unterstützt. Entfernen Sie die Einschränkung aus der Tabellendefinition.<br /><br /> Weitere Informationen dazu, wie die fehlende Unterstützung für Einschränkungen gemindert werden kann, finden Sie unter [überprüfen Sie die Migration und Foreign Key-Einschränkungen](../../database-engine/migrating-check-and-foreign-key-constraints.md).|  
-|Funktion|CHECK|CHECK-Einschränkungen werden für speicheroptimierte Tabellen nicht unterstützt. Entfernen Sie die Einschränkung aus der Tabellendefinition.<br /><br /> Weitere Informationen dazu, wie die fehlende Unterstützung für Einschränkungen gemindert werden kann, finden Sie unter [überprüfen Sie die Migration und Foreign Key-Einschränkungen](../../database-engine/migrating-check-and-foreign-key-constraints.md).|  
-|Funktion|UNIQUE|UNIQUE-Einschränkungen werden für speicheroptimierte Tabellen nicht unterstützt. Entfernen Sie die Einschränkung aus der Tabellendefinition.<br /><br /> Weitere Informationen dazu, wie die fehlende Unterstützung für Einschränkungen gemindert werden kann, finden Sie unter [überprüfen Sie die Migration und Foreign Key-Einschränkungen](../../database-engine/migrating-check-and-foreign-key-constraints.md).|  
+|Funktion|FOREIGN KEY|FOREIGN KEY-Einschränkungen werden für speicheroptimierte Tabellen nicht unterstützt. Entfernen Sie die Einschränkung aus der Tabellendefinition.<br /><br /> Informationen dazu, wie die fehlende Unterstützung für Einschränkungen gemindert werden kann, finden Sie unter [überprüfen Sie die Migration und Foreign Key-Einschränkungen](../../database-engine/migrating-check-and-foreign-key-constraints.md).|  
+|Funktion|CHECK|CHECK-Einschränkungen werden für speicheroptimierte Tabellen nicht unterstützt. Entfernen Sie die Einschränkung aus der Tabellendefinition.<br /><br /> Informationen dazu, wie die fehlende Unterstützung für Einschränkungen gemindert werden kann, finden Sie unter [überprüfen Sie die Migration und Foreign Key-Einschränkungen](../../database-engine/migrating-check-and-foreign-key-constraints.md).|  
+|Funktion|UNIQUE|UNIQUE-Einschränkungen werden für speicheroptimierte Tabellen nicht unterstützt. Entfernen Sie die Einschränkung aus der Tabellendefinition.<br /><br /> Informationen dazu, wie die fehlende Unterstützung für Einschränkungen gemindert werden kann, finden Sie unter [überprüfen Sie die Migration und Foreign Key-Einschränkungen](../../database-engine/migrating-check-and-foreign-key-constraints.md).|  
 |Funktion|COLUMNSTORE|COLUMNSTORE-Indizes werden nicht mit speicheroptimierten Tabellen unterstützt. Geben Sie stattdessen einen NONCLUSTERED-Index oder NONCLUSTERED HASH-Index an.|  
 |Funktion|Gruppierter Index|Geben Sie einen nicht gruppierten Index an. Bei einem Primärschlüsselindex müssen Sie `PRIMARY KEY NONCLUSTERED [HASH]` angeben.|  
 |Funktion|Nicht-1252-Codepage|Spalten in speicheroptimierten Tabellen mit den Datentypen `char` und `varchar` müssen Codepage 1252 verwenden. Verwenden Sie n(var)char anstelle von (var)char, oder verwenden Sie eine Sortierung mit Codepage 1252 (z. B. Latin1_General_BIN2). Weitere Informationen finden Sie unter [Collations and Code Pages](../../database-engine/collations-and-code-pages.md).|  
@@ -79,7 +79,7 @@ ms.locfileid: "36149902"
 |Vorgang|ALTER AUTHORIZATION|Das Ändern des Besitzers einer vorhandenen speicheroptimierten Tabelle oder systemintern kompilierten gespeicherten Prozedur wird nicht unterstützt. Löschen Sie die Tabelle oder die Prozedur, und erstellen Sie sie neu, um den Besitzer zu ändern.|  
 |Vorgang|ALTER SCHEMA|Das Ändern des Schemas einer vorhandenen speicheroptimierten Tabelle oder systemintern kompilierten gespeicherten Prozedur wird nicht unterstützt. Löschen Sie die Tabelle oder die Prozedur, und erstellen Sie sie neu, um das Schema zu ändern.|  
 |Vorgang|DBCC CHECKTABLE|DBCC CHECKTABLE wird für speicheroptimierte Tabellen nicht unterstützt.|  
-|Funktion|ANSI_PADDING OFF|Die Sitzungsoption `ANSI_PADDING` muss auf ON festgelegt sein, beim Erstellen von speicheroptimierten Tabellen oder systemintern gespeicherte Prozeduren kompilierte. Führen Sie `SET ANSI_PADDING ON` aus, bevor Sie die CREATE-Anweisung ausführen.|  
+|Funktion|ANSI_PADDING OFF|Die Sitzungsoption `ANSI_PADDING` muss beim Erstellen einer speicheroptimierten Tabellen oder systemintern gespeicherte Prozeduren kompilierte auf. Führen Sie `SET ANSI_PADDING ON` aus, bevor Sie die CREATE-Anweisung ausführen.|  
 |Option|DATA_COMPRESSION|Die Datenkomprimierung wird für speicheroptimierte Tabellen nicht unterstützt. Entfernen Sie die Option aus der Tabellendefinition.|  
 |Funktion|DTC|Auf speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren kann nicht aus verteilten Transaktionen zugegriffen werden. Verwenden Sie stattdessen SQL-Transaktionen.|  
 |Funktion|Multiple Active Result Sets (MARS)|Multiple Active Result Sets (MARS) werden für speicheroptimierte Tabellen nicht unterstützt. Dieser Fehler kann auch auf die Verwendung eines Verbindungsservers hinweisen. Ein Verbindungsserver kann MARS verwenden. Verbindungsserver werden für speicheroptimierte Tabellen nicht unterstützt. Stattdessen müssen Sie eine direkte Verbindung mit dem Server und der Datenbank herstellen, die die speicheroptimierten Tabellen hostet.|  
@@ -111,8 +111,8 @@ ms.locfileid: "36149902"
   
 |Typ|Funktion|Lösung|  
 |----------|-------------|----------------|  
-|Funktion|Inline-Tabellenvariablen|Tabellentypen können nicht inline mit Variablendeklarationen deklariert werden. Tabellentypen müssen explizit mit deklariert eine `CREATE TYPE` Anweisung.|  
-|Funktion|Cursor|Cursor werden nicht von oder in systemintern kompilierten gespeicherten Prozeduren unterstützt.<br /><br /> – Wenn die Prozedur aus dem Client ausführen, verwenden Sie RPC anstelle der Cursor-API. Vermeiden Sie bei ODBC die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung `EXECUTE`, und geben Sie stattdessen den Namen der Prozedur direkt an.<br /><br /> -Beim Ausführen der Prozedur aus einem [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch oder einer anderen gespeicherten Prozedur, die zu vermeiden, einen Cursor mit der systemintern kompilierten gespeicherten Prozedur verwenden.<br /><br /> – Wenn Sie eine systemintern kompilierte gespeicherte Prozedur erstellen, anstatt keinen Cursor verwenden, verwenden Sie setbasierte Logik oder eine `WHILE` Schleife.|  
+|Funktion|Inline-Tabellenvariablen|Tabellentypen können nicht inline mit Variablendeklarationen deklariert werden. Tabellentypen müssen explizit deklariert eine `CREATE TYPE` Anweisung.|  
+|Funktion|Cursor|Cursor werden nicht von oder in systemintern kompilierten gespeicherten Prozeduren unterstützt.<br /><br /> – Wenn die Prozedur auf dem Client ausführen möchten, verwenden Sie RPC anstelle der Cursor-API. Vermeiden Sie bei ODBC die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung `EXECUTE`, und geben Sie stattdessen den Namen der Prozedur direkt an.<br /><br /> – Wenn die Prozedur aus einem [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch oder einer anderen gespeicherten Prozedur, einen Cursor mit der systemintern kompilierten gespeicherten Prozedur verwenden.<br /><br /> – Wenn Sie eine systemintern kompilierte gespeicherte Prozedur erstellen, anstatt einen Cursor, verwenden Sie setbasierte Logik oder eine `WHILE` Schleife.|  
 |Funktion|Nicht konstante Parameterstandardwerte|Beim Angeben von Standardwerten für Parameter für systemintern kompilierte gespeicherte Prozeduren müssen die Werte Konstanten sein. Entfernen Sie alle Platzhalter aus den Parameterdeklarationen.|  
 |Funktion|EXTERNAL|CLR-gespeicherte Prozeduren können nicht systemintern kompiliert werden. Entfernen Sie entweder die Klausel AS EXTERNAL oder die Option NATIVE_COMPILATIONS aus der Anweisung CREATE PROCEDURE.|  
 |Funktion|numbered_stored_procedures|Systemintern kompilierte gespeicherte Prozeduren dürfen nicht nummeriert sein. Entfernen Sie die `;` *Anzahl* aus der `CREATE PROCEDURE` Anweisung.|  
@@ -128,7 +128,7 @@ ms.locfileid: "36149902"
 |Funktion|benutzerdefinierte Funktionen|Benutzerdefinierte Funktionen können nicht in systemintern kompilierten gespeicherten Prozeduren verwendet werden. Entfernen Sie den Verweis auf die Funktion aus der Prozedurdefinition.|  
 |Funktion|Benutzerdefinierte Aggregate|Benutzerdefinierte Aggregatfunktionen können nicht in systemintern kompilierten gespeicherten Prozeduren verwendet werden. Entfernen Sie den Verweis auf die Funktion aus der Prozedur.|  
 |Funktion|Metadaten des Durchsuchenmodus|Systemintern kompilierte gespeicherte Prozeduren unterstützen keine Metadaten des Durchsuchenmodus. Stellen Sie sicher, dass die `NO_BROWSETABLE`-Sitzungsoption auf OFF festgelegt ist.|  
-|Funktion|DELETE mit FROM-Klausel|Die `FROM`-Klausel wird für `DELETE`-Anweisungen mit einer Tabellenquelle in systemintern kompilierten gespeicherten Prozeduren nicht unterstützt.<br /><br /> `DELETE` mit der `FROM` -Klausel wird unterstützt, wenn er verwendet wird, um die Tabelle aus löschen anzugeben.|  
+|Funktion|DELETE mit FROM-Klausel|Die `FROM`-Klausel wird für `DELETE`-Anweisungen mit einer Tabellenquelle in systemintern kompilierten gespeicherten Prozeduren nicht unterstützt.<br /><br /> `DELETE` mit der `FROM` -Klausel unterstützt, wenn sie mit dem Löschen aus die Tabelle angegeben.|  
 |Funktion|UPDATE mit FROM-Klausel|Die `FROM`-Klausel wird nicht für `UPDATE`-Anweisungen in systemintern kompilierten gespeicherten Prozeduren unterstützt.|  
 |Funktion|Temporäre Prozeduren|Temporäre gespeicherte Prozeduren können nicht systemintern kompiliert werden. Erstellen Sie entweder eine dauerhafte systemintern kompilierte gespeicherte Prozedur oder eine als temporär interpretierte gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur.|  
 |Isolationsstufe|READ UNCOMMITTED|Die Isolationsstufe READ UNCOMMITTED wird für systemintern kompilierte gespeicherte Prozeduren nicht unterstützt. Verwenden Sie eine unterstützte Isolationsstufe, beispielsweise SNAPSHOT.|  
@@ -158,7 +158,7 @@ ms.locfileid: "36149902"
 |Operator|UNION|Dieser Operator wird nicht unterstützt. Entfernen Sie `UNION` aus der systemintern kompilierten gespeicherten Prozedur. Mehrere Resultsets können mithilfe einer Tabellenvariablen in einem einzigen Resultset kombiniert werden.|  
 |Operator|INTERSECT|Dieser Operator wird nicht unterstützt. Entfernen Sie `INTERSECT` aus der systemintern kompilierten gespeicherten Prozedur. In einigen Fällen kann ein INNER JOIN verwendet werden, um dasselbe Ergebnis zu erhalten.|  
 |Operator|EXCEPT|Dieser Operator wird nicht unterstützt. Entfernen Sie `EXCEPT` aus der systemintern kompilierten gespeicherten Prozedur.|  
-|Operator|OUTER JOIN|Dieser Operator wird nicht unterstützt. Entfernen Sie `OUTER JOIN` aus der systemintern kompilierten gespeicherten Prozedur. Weitere Informationen finden Sie unter [implementieren Outer Join](implementing-an-outer-join.md).|  
+|Operator|OUTER JOIN|Dieser Operator wird nicht unterstützt. Entfernen Sie `OUTER JOIN` aus der systemintern kompilierten gespeicherten Prozedur. Weitere Informationen finden Sie unter [Implementieren eines äußeren Join](implementing-an-outer-join.md).|  
 |Operator|APPLY|Dieser Operator wird nicht unterstützt. Entfernen Sie `APPLY` aus der systemintern kompilierten gespeicherten Prozedur.|  
 |Operator|PIVOT|Dieser Operator wird nicht unterstützt. Entfernen Sie `PIVOT` aus der systemintern kompilierten gespeicherten Prozedur.|  
 |Operator|UNPIVOT|Dieser Operator wird nicht unterstützt. Entfernen Sie `UNPIVOT` aus der systemintern kompilierten gespeicherten Prozedur.|  

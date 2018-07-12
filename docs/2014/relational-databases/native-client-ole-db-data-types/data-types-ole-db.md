@@ -1,13 +1,11 @@
 ---
-title: Datentypen (OLE DB) | Microsoft Docs
+title: Datentypen (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,18 +15,18 @@ helpviewer_keywords:
 - OLE DB, data types
 ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6b24b5425fb89794e7af3129039219d699769427
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 31083fe39332d15afa357045103a39114f1b4f6d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149051"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412769"
 ---
 # <a name="data-types-ole-db"></a>Datentypen (OLE DB)
-  Zum Ausführen [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen und verarbeiten die Ergebnisse mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter, die Sie kennen müssen wie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter Maps [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentypen in OLE DB-Datentypen beim Binden Parameter oder Spalten in einem Rowset oder wann mit dem **ITableDefinition** Schnittstelle zum Erstellen einer Tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Zum Ausführen [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen und verarbeiten die Ergebnisse mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter, Sie müssen wissen, wie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter Zuordnungen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen zu OLE DB-Datentypen beim Binden Parameter oder Spalten in einem Rowset, und wenn es verwendet die **ITableDefinition** Schnittstelle zum Erstellen einer Tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   

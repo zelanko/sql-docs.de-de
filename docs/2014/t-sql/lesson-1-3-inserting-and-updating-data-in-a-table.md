@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - inserting and updating data
 ms.assetid: 514dc87a-b829-43b5-8fc8-1a400a260284
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fbc9a3fb254e417b0d29a50a28e2897d5ecda3b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: d9dc8bbbc16ef6ed827e5d5ce2bdd95979b67068
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149777"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157477"
 ---
 # <a name="inserting-and-updating-data-in-a-table-tutorial"></a>Einfügen und Aktualisieren von Daten in einer Tabelle (Lernprogramm)
   Nachdem Sie nun die **Products**-Tabelle erstellt haben, können Sie Daten mithilfe der INSERT-Anweisung in die Tabelle einfügen. Nach dem Einfügen der Daten ändern Sie den Inhalt einer Zeile mithilfe einer UPDATE-Anweisung. Mithilfe der WHERE-Klausel der UPDATE-Anweisung schränken Sie das Update auf eine einzelne Zeile ein. Durch die vier Anweisungen werden die folgenden Daten eingegeben.  
@@ -88,7 +88,7 @@ ms.locfileid: "36149777"
     ```  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Lesen der Daten in einer Tabelle &#40;Lernprogramm&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
+ [Lesen der Daten in einer Tabelle &#40;Tutorial&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   

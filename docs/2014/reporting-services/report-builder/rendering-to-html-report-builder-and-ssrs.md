@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1457c44ed95f09891bb8e8617968d2f9b9cbfbc9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2776ccbb78346ad6243e5b6a4ed1e7c5827d31bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159721"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157831"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Rendern in das HTML-Format (Berichts-Generator und SSRS)
   Die HTML-Renderingerweiterung rendert einen Bericht im HTML-Format. Die Renderingerweiterung kann außerdem vollständige HTML-Seiten oder HTML-Fragmente zum Einbetten in andere HTML-Seiten erstellen. HTML wird stets mit UTF-8-Codierung erstellt.  
   
  Die HTML-Renderingerweiterung ist die Standardrenderingerweiterung für Berichte, die mit einem Browser angezeigt werden (auch bei der Ausführung im Berichts-Manager).  
   
- Die HTML-Renderingerweiterung ist die Standardrenderingerweiterung für Berichte, die mit einem Browser angezeigt werden (auch bei der Ausführung im Berichts-Manager). Die HTML-Renderingerweiterung kann HTML als Fragment oder als vollständiges HTML-Dokument rendern. Falls HTML ein Fragment ist die `HEAD`, `HTML`, und `BODY` Tags des HTML-Dokuments werden entfernt. Nur der Inhalt des `BODY`-Tags wird gerendert. Dies ist hilfreich beim Einbetten des HTML-Codes in den von einer anderen Anwendung erstellten HTML-Code.  
+ Die HTML-Renderingerweiterung ist die Standardrenderingerweiterung für Berichte, die mit einem Browser angezeigt werden (auch bei der Ausführung im Berichts-Manager). Die HTML-Renderingerweiterung kann HTML als Fragment oder als vollständiges HTML-Dokument rendern. Falls HTML ein Fragment ist die `HEAD`, `HTML`, und `BODY` -Tag des HTML-Dokuments entfernt. Nur der Inhalt des `BODY`-Tags wird gerendert. Dies ist hilfreich beim Einbetten des HTML-Codes in den von einer anderen Anwendung erstellten HTML-Code.  
   
  In einigen Szenarien können mit Berichtsparametern Script-Injection-Angriffe gestartet werden, wenn Berichte in HTML gerendert werden. Weitere Informationen zum Sichern von Berichten finden Sie unter [Sichere Berichte und Ressourcen](../security/secure-reports-and-resources.md).  
   

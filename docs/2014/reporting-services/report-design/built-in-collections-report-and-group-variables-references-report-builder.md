@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10404"
 - sql12.rtp.rptdesigner.categorygroupproperties.variables.f1
@@ -20,15 +20,15 @@ f1_keywords:
 - "10412"
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a4a03cad2b19cc853c48a1614daea34cb2fb43ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5385940ba528d0bdd9acf7f784d78832f1fdaa6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148783"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148491"
 ---
 # <a name="report-and-group-variables-collections-references-report-builder-and-ssrs"></a>Verweise auf Berichts- und Gruppenvariablenauflistungen (Berichts-Generator und SSRS)
   Bei komplexen Berechnungen, die in Ausdrücken eines Berichts mehrfach verwendet werden, empfiehlt sich das Erstellen einer Variable. Sie können eine Berichtsvariable oder eine Gruppenvariable erstellen. Variablennamen müssen im Bericht eindeutig sein.  
@@ -51,12 +51,12 @@ ms.locfileid: "36148783"
   
 -   **Lese-/Schreibzugriff** Legen Sie einmalig einen Wert fest, und serialisieren Sie diesen innerhalb einer Berichtssitzung. Die Lese-/Schreiboption für Variablen bietet eine bessere Alternative als die Verwendung einer statischen Variable im Codeblock der Berichtsdefinition.  
   
-     Wenn Sie deaktivieren die **schreibgeschützte** option für eine Variable, die beschreibbaren Eigenschaft für den Wert der Variablen `true`. Verwenden Sie die SetValue-Methode, z.B. `=Variables!MyVariable.SetValue("123")`, um den Wert mit einem Ausdruck zu aktualisieren.  
+     Wenn Sie das Kontrollkästchen der **Read-Only** option für eine Variable, die Writable-Eigenschaft für den Wert der Variablen `true`. Verwenden Sie die SetValue-Methode, z.B. `=Variables!MyVariable.SetValue("123")`, um den Wert mit einem Ausdruck zu aktualisieren.  
   
     > [!NOTE]  
     >  Sie können nicht steuern, wann der Berichtsprozessor eine Variable initialisiert oder einen Ausdruck auswertet, der eine Variable aktualisiert. Der Reihenfolge der Ausführung für die Variableninitialisierung ist nicht definiert.  
   
- Weitere Informationen zu Sitzungen finden Sie unter [Previewing Reports in Report Builder](../report-builder/previewing-reports-in-report-builder.md).  
+ Weitere Informationen zu Sitzungen finden Sie unter [Berichtsvorschau in Berichts-Generator](../report-builder/previewing-reports-in-report-builder.md).  
   
 ## <a name="group-variables"></a>Gruppenvariablen  
  Verwenden Sie eine Gruppenvariable, um einen komplexen Ausdruck im Bereich einer Gruppe einmal zu berechnen. Eine Gruppenvariable ist nur im Bereich der Gruppe und der untergeordneten Gruppen gültig.  

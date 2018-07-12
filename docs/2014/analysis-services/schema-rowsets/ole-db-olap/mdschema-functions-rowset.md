@@ -1,5 +1,5 @@
 ---
-title: MDSCHEMA_FUNCTIONS-Rowset | Microsoft Docs
+title: MDSCHEMA_FUNCTIONS-Rowset | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_FUNCTIONS rowset
 ms.assetid: 5253fa8c-b1ce-4504-aff6-a246b5e675c7
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8e3086730ad66a0f21d9cc458d34d96a6d0eacc3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 587d361eef197378fcc8b0347b9289ae2b81e99a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148712"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159281"
 ---
 # <a name="mdschemafunctions-rowset"></a>MDSCHEMA_FUNCTIONS-Rowset
   Beschreibt die Funktionen, die Clientanwendungen zur Verfügung stehen, die mit der Datenbank verbunden sind.  

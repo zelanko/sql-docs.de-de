@@ -1,5 +1,5 @@
 ---
-title: ForeignKeyColumns-Element (ASSL) | Microsoft Docs
+title: ForeignKeyColumns-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ForeignKeyColumns element
 ms.assetid: 0a673c1a-73dd-4217-aa41-56b340b5e1ab
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: da17077a4a75efc53de65b2168a5332db137bfd1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2aef4df8f107c081b0c19ad32816ba5ef50b45e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061024"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259686"
 ---
 # <a name="foreignkeycolumns-element-assl"></a>ForeignKeyColumns-Element (ASSL)
   Enthält die Sammlung der Spalten, die den Join mit der übergeordneten Tabelle für eine relationale Datenquelle identifizieren.  

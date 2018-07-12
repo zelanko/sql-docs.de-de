@@ -5,24 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-udf
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], components
 - user-defined functions [SQL Server], about user-defined functions
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
-caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 27830819baa6b5381b8e9b9c41a62067e66f65e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 1d8b8569a35a67d2700c0ce48c9c1cd4b29da7e1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148327"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427469"
 ---
 # <a name="user-defined-functions"></a>Benutzerdefinierte Funktionen
   Ebenso wie Funktionen in Programmiersprachen sind auch benutzerdefinierte Funktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Routinen, die Parameter annehmen, eine Aktion ausführen (z. B. eine komplexe Berechnung) und das Ergebnis dieser Aktion als Wert zurückgeben können. Der Rückgabewert kann ein einzelner Skalarwert oder ein Resultset sein.  
@@ -31,7 +29,7 @@ ms.locfileid: "36148327"
   
  [Vorteile von benutzerdefinierten Funktionen](#Benefits)  
   
- [Funktionstypen](#FunctionTypes)  
+ [Arten von Funktionen](#FunctionTypes)  
   
  [Richtlinien](#Guidelines)  
   
@@ -63,12 +61,12 @@ ms.locfileid: "36148327"
 > [!NOTE]  
 >  Benutzerdefinierte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen in Abfragen können nur auf einem einzelnen Thread (serieller Ausführungsplan) ausgeführt werden.  
   
-##  <a name="FunctionTypes"></a> Funktionstypen  
+##  <a name="FunctionTypes"></a> Arten von Funktionen  
  Skalarfunktion  
- Benutzerdefinierte Skalarfunktionen geben einen einzelnen Datenwert des definierten Datentyps in einer RETURNS-Klausel zurück. Bei einer Inlineskalarfunktion gibt es keinen Funktionshauptteil; der Skalarwert ist das Ergebnis einer einzelnen SELECT-Anweisung. Bei einer aus mehreren Anweisungen bestehenden Skalarfunktion enthält der in einem BEGIN…END-Block definierte Hauptteil der Funktion eine Reihe von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die den einzelnen Wert zurückgeben. Der Rückgabetyp kann ein beliebiger Datentypen mit Ausnahme `text`, `ntext`, `image`, `cursor`, und `timestamp`.  
+ Benutzerdefinierte Skalarfunktionen geben einen einzelnen Datenwert des definierten Datentyps in einer RETURNS-Klausel zurück. Bei einer Inlineskalarfunktion gibt es keinen Funktionshauptteil; der Skalarwert ist das Ergebnis einer einzelnen SELECT-Anweisung. Bei einer aus mehreren Anweisungen bestehenden Skalarfunktion enthält der in einem BEGIN…END-Block definierte Hauptteil der Funktion eine Reihe von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die den einzelnen Wert zurückgeben. Der Rückgabetyp kann ein beliebiger Datentypen mit Ausnahme sein `text`, `ntext`, `image`, `cursor`, und `timestamp`.  
   
  Tabellenwertfunktionen  
- Zurückgeben von benutzerdefinierten Tabellenwertfunktionen eine `table` -Datentyp. Bei einer Inlinefunktion mit Tabellenrückgabe gibt es keinen Funktionshauptteil; die Tabelle ist das Resultset einer einzelnen SELECT-Anweisung.  
+ Benutzerdefinierte Tabellenwertfunktionen Zurückgeben einer `table` -Datentyp. Bei einer Inlinefunktion mit Tabellenrückgabe gibt es keinen Funktionshauptteil; die Tabelle ist das Resultset einer einzelnen SELECT-Anweisung.  
   
  Systemfunktionen  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt viele Systemfunktionen bereit, mit denen Sie eine Vielzahl von Vorgängen ausführen können. Sie können nicht geändert werden. Weitere Informationen finden Sie unter [Integrierte Funktionen &#40;Transact-SQL&#41;](/sql/t-sql/functions/functions), [Systemgespeicherte Funktionen &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/system-functions-for-transact-sql) und [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views).  

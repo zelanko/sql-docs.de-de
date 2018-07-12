@@ -1,39 +1,37 @@
 ---
-title: Senden von Daten als einen Tabellenwertparameter mit Data-At-Execution (ODBC) | Microsoft Docs
+title: Senden von Daten als ein Tabellenwertparameter mit Data-At-Execution (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), sending data to a stored procedure one row at a time
 ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e829a25e61976d21dd015c683b7639b7e94e4240
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 08c0a7a6193404d7ea05322bd4bc4d6e24cb5f1b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147662"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411129"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Senden von Daten als Tabellenwertparameter mit Data-at-Execution (ODBC)
-  Dies ist vergleichbar mit der [alle im Arbeitsspeicher](sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) Prozedur, verwendet jedoch Data-at-Execution für den Tabellenwertparameter.  
+  Dies ist vergleichbar mit der [alle im Arbeitsspeicher](sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) Verfahren verwendet jedoch Data-at-Execution für den Tabellenwertparameter.  
   
- Ein weiteres Beispiel veranschaulicht Tabellenwertparameter finden Sie unter [Tabellenwertparametern &#40;ODBC&#41;](table-valued-parameters-odbc.md).  
+ Ein weiteres Beispiel, die Tabellenwertparameter veranschaulicht werden, finden Sie unter [Tabellenwertparametern &#40;ODBC&#41;](table-valued-parameters-odbc.md).  
   
- Wenn SQLExecute oder SQLExecDirect aufgerufen wird, gibt der Treiber in diesem Beispiel SQL_NEED_DATA zurück. Klicken Sie dann die Anwendung ruft SQLParamData wiederholt, bis der Treiber einen anderen Wert als SQL_NEED_DATA zurückgibt. Der Treiber gibt *ParameterValuePtr* an die Anwendung darüber zu informieren, welche Parameter sie Daten anfordert. Die Anwendung ruft SQLPutData Parameterdaten vor dem nächsten Aufruf von SQLParamData angeben. Für einen Tabellenwertparameter gibt der Aufruf von SQLPutData wie viele Zeilen sie für den Treiber (in diesem Beispiel immer 1) vorbereitet wurde. Wenn alle Zeilen des Tabellenwerts an den Treiber übergeben wurden, wird SQLPutData aufgerufen, um anzugeben, dass 0 Zeilen verfügbar sind.  
+ Wenn SQLExecute oder SQLExecDirect aufgerufen wird, wird der Treiber in diesem Beispiel SQL_NEED_DATA zurückgegeben. Klicken Sie dann die Anwendung ruft SQLParamData wiederholt, bis der Treiber einen anderen Wert als SQL_NEED_DATA zurückgibt. Gibt der Treiber *ParameterValuePtr* um die Anwendung zu informieren, welchen Parameter Daten für angefordert. Die Anwendung ruft SQLPutData Parameterdaten vor dem nächsten Aufruf von der SQLParamData angeben. Für einen Tabellenwertparameter gibt der Aufruf von SQLPutData an wie viele Zeilen, die sie für den Treiber (in diesem Beispiel immer 1) vorbereitet wurde. Wenn alle Zeilen des Tabellenwerts an den Treiber übergeben wurden, wird die SQLPutData aufgerufen, um anzugeben, dass 0 Zeilen verfügbar sind.  
   
- Es ist möglich, Data-at-Execution-Werte innerhalb von Zeilen eines Tabellenwerts zu verwenden. Der Rückgabewert von SQLParamData informiert die Anwendung an, welcher Wert der Treiber erforderlich ist. Wie bei regulären Parameterwerten kann SQLPutData einmal oder mehrmals für einen Tabellenwert Zeichen- oder Binärzeichenfolgen Spaltenwert aufgerufen werden. Dies ermöglicht es einer Anwendung, große Werte schrittweise zu übergeben.  
+ Es ist möglich, Data-at-Execution-Werte innerhalb von Zeilen eines Tabellenwerts zu verwenden. Der von der SQLParamData zurückgegebene Wert informiert die Anwendung an, welcher Wert der Treiber erfordert. Wie bei regulären Parameterwerten kann kann SQLPutData einmal oder mehrmals für einen Tabellenwert Zeichen- oder Binärdatentyp Spaltenwert aufgerufen werden. Dies ermöglicht es einer Anwendung, große Werte schrittweise zu übergeben.  
   
- Wenn SQLPutData für einen Tabellenwert aufgerufen wird *DataPtr* wird verwendet, für die Anzahl von Zeilen (in diesem Beispiel immer 1) zur Verfügung stehen. *StrLen_or_IndPtr* muss immer 0 sein. Wenn alle Zeilen des Tabellenwerts übergeben wurden, heißt SQLPutData mit einem *DataPtr* Wert 0.  
+ Wenn SQLPutData für einen Tabellenwert aufgerufen wird *DataPtr* wird verwendet, für die Anzahl von Zeilen (in diesem Beispiel immer 1). *StrLen_or_IndPtr* muss immer 0 sein. Wenn alle Zeilen des Tabellenwerts übergeben wurden, heißt SQLPutData mit einem *DataPtr* Wert 0.  
   
 ## <a name="prerequisite"></a>Voraussetzung  
  In dieser Prozedur wird davon ausgegangen, dass der folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Befehl auf dem Server ausgeführt wurde:  
@@ -72,7 +70,7 @@ from @Items
     SQLPOINTER ParamId;  
     ```  
   
-2.  Binden Sie die Parameter. *ColumnSize* beträgt 1, was bedeutet, dass höchstens eine Zeile zu einem Zeitpunkt übergeben wird.  
+2.  Binden Sie die Parameter. *ColumnSize* ist 1. Dies bedeutet, dass höchstens eine Zeile übergeben wird.  
   
     ```  
     // Bind parameters for call to TVPOrderEntryByRow.  
@@ -134,7 +132,7 @@ from @Items
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  
   
-6.  Geben Sie Data-at-Execution-Parameterdaten an. Wenn SQLParamData gibt die *ParameterValuePtr* für einen Tabellenwertparameter muss die Anwendung die Spalten für die nächste Zeile bzw. Zeilen des Tabellenwerts vorbereiten. Die Anwendung ruft dann SQLPutData mit *DataPtr* auf die Anzahl der Zeilen (in diesem Beispiel 1) festgelegt und *StrLen_or_IndPtr* auf 0 festgelegt.  
+6.  Geben Sie Data-at-Execution-Parameterdaten an. Bei Rückgabe der SQLParamData der *ParameterValuePtr* für einen Tabellenwertparameter muss die Anwendung die Spalten für die nächste Zeile bzw. Zeilen des Tabellenwerts vorbereiten. Klicken Sie dann die Anwendung ruft SQLPutData mit *DataPtr* legen Sie auf die Anzahl der Zeilen (in diesem Beispiel 1) und *StrLen_or_IndPtr* auf 0 festgelegt.  
   
     ```  
     // Check if parameter data is required, and get the first parameter ID token  
@@ -189,7 +187,7 @@ from @Items
 ## <a name="example"></a>Beispiel  
   
 ### <a name="description"></a>Description  
- Dieses Beispiel zeigt, dass Sie zeilenstreaming, eine Zeile pro Aufruf von SQLPutData, mit ODBC TVP auf ähnliche zur Verwendung von BCP.exe zum Laden von Daten in einer Datenbank werden ggf. verwenden können.  
+ Dieses Beispiel zeigt, dass Sie zeilenstreaming, eine Zeile pro Aufruf von SQLPutData, mit ODBC TVP auf ähnliche, wie Sie BCP.exe zum Laden von Daten in einer Datenbank verwenden ggf. verwenden können.  
   
  Ändern Sie den Servernamen in der Verbindungszeichenfolge, bevor Sie das Beispiel erstellen.  
   
@@ -377,7 +375,7 @@ EXIT:
 ## <a name="example"></a>Beispiel  
   
 ### <a name="description"></a>Description  
- Dieses Beispiel zeigt, dass Sie zeilenstreaming, mehrere Zeilen pro Aufruf von SQLPutData, mit ODBC TVP auf ähnliche zur Verwendung von BCP.exe zum Laden von Daten in einer Datenbank werden ggf. verwenden können.  
+ Dieses Beispiel zeigt, dass Sie zeilenstreaming, mehrere Zeilen pro Aufruf von SQLPutData, mit ODBC TVP auf ähnliche, wie Sie BCP.exe zum Laden von Daten in einer Datenbank verwenden ggf. verwenden können.  
   
  Ändern Sie den Servernamen in der Verbindungszeichenfolge, bevor Sie das Beispiel erstellen.  
   

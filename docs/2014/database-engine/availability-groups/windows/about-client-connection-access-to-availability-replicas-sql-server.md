@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], readable secondary replicas
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 caps.latest.revision: 14
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: ec36639f591beaa3094855d8f42d2bcca3d3073e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f0582293082f6c1ec5b2333575431d2887929afe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151211"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228510"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>Informationen zum Clientverbindungszugriff auf Verfügbarkeitsreplikate (SQL Server)
   In einer AlwaysOn-Verfügbarkeitsgruppe können Sie mindestens ein Verfügbarkeitsreplikat konfigurieren, um schreibgeschützte Verbindungen zuzulassen, wenn es unter der sekundären Rolle ausgeführt wird (d. h. bei Ausführung als sekundäres Replikat). Sie können auch jedes Verfügbarkeitsreplikat konfigurieren, um schreibgeschützte Verbindungen bei der Ausführung unter der primären Rolle zuzulassen oder auszuschließen (d. h. bei Ausführung als das primäre Replikat).  
@@ -57,7 +56,7 @@ ms.locfileid: "36151211"
  Es werden keine Benutzerverbindungen zugelassen. Sekundäre Datenbanken sind nicht für Lesezugriff verfügbar. Dies ist das Standardverhalten in der sekundären Rolle.  
   
  Nur Verbindungen für beabsichtigte Lesevorgänge  
- Die sekundären Datenbanken stehen nur für die Verbindung für die die `Application Intent` Connection-Eigenschaft wird festgelegt, um `ReadOnly` (*Verbindungen für beabsichtigte Lesevorgänge*).  
+ Die sekundären Datenbanken stehen nur für die Verbindung, für die die `Application Intent` Connection-Eigenschaft wird festgelegt, um `ReadOnly` (*Verbindungen für beabsichtigte Lesevorgänge*).  
   
  Weitere Informationen zu dieser Verbindungseigenschaft finden Sie unter [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
@@ -73,7 +72,7 @@ ms.locfileid: "36151211"
  Sowohl Verbindungen mit Lese-/Schreibzugriff als auch schreibgeschützte Verbindungen sind für primäre Datenbanken zugelassen. Dies ist das Standardverhalten für die primäre Rolle.  
   
  Nur Verbindungen mit Lese-/Schreibzugriff zulassen  
- Wenn die `Application Intent` Connection-Eigenschaft wird festgelegt, um **ReadWrite** oder ist nicht festgelegt ist, wird die Verbindung zugelassen. Verbindungen, für die die `Application Intent` Verbindungszeichenfolgen-Schlüsselwort wird festgelegt, um `ReadOnly` sind nicht zulässig. Durch das Zulassen nur von Verbindungen mit Lese-/Schreibzugriff kann verhindert werden, dass die Kunden mit dem primären Replikat versehentlich eine leseintensive Arbeitsauslastung verbinden.  
+ Wenn die `Application Intent` Connection-Eigenschaft wird festgelegt, um **"ReadWrite"** oder ist nicht festgelegt ist, wird die Verbindung zugelassen. Verbindungen, für die die `Application Intent` Schlüsselwort für Verbindungszeichenfolgen nastaven NA hodnotu `ReadOnly` sind nicht zulässig. Durch das Zulassen nur von Verbindungen mit Lese-/Schreibzugriff kann verhindert werden, dass die Kunden mit dem primären Replikat versehentlich eine leseintensive Arbeitsauslastung verbinden.  
   
  Weitere Informationen zu dieser Verbindungseigenschaft finden Sie unter [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
@@ -122,7 +121,7 @@ ms.locfileid: "36151211"
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Wiederherstellung im Notfall](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Notfallwiederherstellung](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [SQL Server AlwaysOn-Teamblog: Der offizielle SQL Server AlwaysOn-Teamblog](http://blogs.msdn.com/b/sqlalwayson/)  
   

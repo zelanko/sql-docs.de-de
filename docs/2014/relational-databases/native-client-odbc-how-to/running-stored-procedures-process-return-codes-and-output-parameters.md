@@ -1,13 +1,11 @@
 ---
-title: Verarbeiten von Rückgabecodes und Ausgabeparametern (ODBC) | Microsoft Docs
+title: Verarbeiten von Rückgabecodes und Ausgabeparametern (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,18 +13,18 @@ helpviewer_keywords:
 - output parameters [ODBC]
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1303c15f94dc32e69378c38e5353f8e82bf1214a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d8f5eab232d9651375ea9cd2857a8b8bb9129e88
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057839"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422529"
 ---
 # <a name="process-return-codes-and-output-parameters-odbc"></a>Verarbeiten von Rückgabecodes und Ausgabeparametern (ODBC)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeicherte Prozeduren können ganzzahlige Rückgabecodes und Ausgabeparameter aufweisen. Die Rückgabecodes und Ausgabeparameter werden im letzten Paket vom Server gesendet und stehen nicht für die Anwendung bis [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) gibt SQL_NO_DATA zurück. Wenn ein Fehler von einer gespeicherten Prozedur zurückgegeben wird, rufen Sie SQLMoreResults, zum nächsten Ergebnis zu gelangen, bis SQL_NO_DATA zurückgegeben wird.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeicherte Prozeduren können ganzzahlige Rückgabecodes und Ausgabeparameter aufweisen. Die Rückgabecodes und Ausgabeparameter werden im letzten Paket vom Server gesendet und stehen nicht für die Anwendung bis [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) SQL_NO_DATA zurückgibt. Wenn ein Fehler von einer gespeicherten Prozedur zurückgegeben wird, rufen Sie SQLMoreResults, um zum nächsten Ergebnis fortzufahren, bis SQL_NO_DATA zurückgegeben wird.  
   
 > [!IMPORTANT]  
 >  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](http://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -35,7 +33,7 @@ ms.locfileid: "36057839"
   
 1.  Erstellen Sie eine SQL-Anweisung, die die ODBC CALL-Escapesequenz verwendet. Die Anweisung sollte Parametermarkierungen für jeden Eingabe-, Eingabe/Ausgabe- und Ausgabeparameter sowie für den Prozedurrückgabewert (sofern vorhanden) verwenden.  
   
-2.  Rufen Sie [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) für jeden Eingabe-, Eingabe/Ausgabe- und Ausgabeparameter sowie für die Prozedur Rückgabewert (sofern vorhanden).  
+2.  Rufen Sie [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) für jeden Eingabe-, Eingabe/Ausgabe- und Ausgabeparameter und für die Prozedur Rückgabewert (sofern vorhanden).  
   
 3.  Führen Sie die Anweisung mit `SQLExecDirect`.  
   
@@ -48,11 +46,11 @@ ms.locfileid: "36057839"
   
  In diesem Beispiel wird eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Standardinstanz des Computers hergestellt. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Definition der ODBC-Datenquelle, um die Instanz im folgenden Format anzugeben: Server\benannteInstanz. Standardmäßig wird [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] in einer benannten Instanz installiert.  
   
- Die erste ([!INCLUDE[tsql](../../includes/tsql-md.md)]) Codelisting erstellt eine gespeicherte Prozedur, die von diesem Beispiel verwendet.  
+ Die erste ([!INCLUDE[tsql](../../includes/tsql-md.md)]) Codebeispiel erstellt eine gespeicherte Prozedur, die von diesem Beispiel verwendet.  
   
  Kompilieren Sie das zweite Codelisting (C++) mit odbc32.lib. Führen Sie dann das Programm aus.  
   
- Das dritte ([!INCLUDE[tsql](../../includes/tsql-md.md)]) Codelisting löscht die in diesem Beispiel verwendete gespeicherte Prozedur.  
+ Das dritte ([!INCLUDE[tsql](../../includes/tsql-md.md)]) Codelisting löscht die gespeicherte Prozedur, die von diesem Beispiel verwendet.  
   
 ```  
 use AdventureWorks  

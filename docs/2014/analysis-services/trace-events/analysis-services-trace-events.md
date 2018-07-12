@@ -1,5 +1,5 @@
 ---
-title: Analysis Services-Ablaufverfolgungsereignisse | Microsoft Docs
+title: Analysis Services-Ablaufverfolgungsereignisse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, Analysis Services
 - monitoring Analysis Services [SQL Server]
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - event classes [Analysis Services]
 ms.assetid: 6fb219cc-f37e-437a-a544-01cec0953571
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c400772f757dcd852ddfd2cf696a966261c60c30
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a4c4631e20227cb1d3aeba34337d7b36c8a84c62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149723"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163441"
 ---
 # <a name="analysis-services-trace-events"></a>Analysis Services-Ablaufverfolgungsereignisse
   Sie können der Aktivität einer Microsoft SQL Server Analysis Services (SSAS)-Instanz verfolgen, indem Sie die von der Instanz generierten Ablaufverfolgungsereignisse erfassen und anschließend analysieren.  Ablaufverfolgungsereignisse werden so gruppiert, dass verwandte Ablaufverfolgungsereignisse einfacher gefunden werden können.  Jedes Ablaufverfolgungsereignis enthält einen Satz von Daten, der für das Ereignis relevant ist. Nicht alle Datenelemente sind für sämtliche Ereignisse von Bedeutung.  
   
- Ablaufverfolgungsereignisse können gestartet werden und mit aufgezeichnet **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**, finden Sie unter [Verwenden von SQL Server Profiler to Monitor Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md), oder gestartet werden kann, von einem XMLA-Befehl als **SQL Server Erweiterte Ereignisse** und später analysiert, finden Sie unter [verwendet SQL Server Extended Events &#40;XEvents&#41; to Monitor Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md).  
+ Ablaufverfolgungsereignisse können gestartet und aufgezeichnet werden mithilfe von **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**, finden Sie unter [verwenden SQL Server Profiler zum Überwachen von Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md), oder gestartet werden kann, ein XMLA-Befehl als **SQL Server Erweiterte Ereignisse** und später analysiert, finden Sie [verwenden SQL Server Extended Events &#40;XEvents&#41; zum Überwachen von Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md).  
     
  In den folgenden Tabellen werden jede Ereigniskategorie und die Ereignisse in dieser Kategorie beschrieben.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36149723"
 |36|Discover Begin|Start der Ermittlungsanforderung.|  
 |38|Discover End|Ende der Ermittlungsanforderung.|  
   
- **[Discover Server State-Ereigniskategorie](discover-server-state-event-category.md)**  
+ **[Ermitteln von (Ereigniskategorie)](discover-server-state-event-category.md)**  
   
  Sammeln von Ereignissen für Serverstatus-Ermittlungen.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "36149723"
 |7|Progress Report Current|Der Statusbericht wird ausgeführt.|  
 |8|Progress Report Error|Es ist ein Statusberichtfehler aufgetreten.|  
   
- **[Abfrageereigniskategorie](queries-events-category.md)**  
+ **[Abfrageereignisse – Kategorie](queries-events-category.md)**  
   
  Sammeln von Ereignissen für Abfragen.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "36149723"
 |9|Query Begin|Beginn der Abfrage.|  
 |10|Abfrageende|Ende der Abfrage.|  
   
- **[Abfrage Verarbeitung Events-Ereigniskategorie](query-processing-events-category.md)**  
+ **[Abfrageverarbeitungsereignisse – Kategorie](query-processing-events-category.md)**  
   
  Sammeln von wichtigen Ereignissen während einer Abfrageausführung.  
   

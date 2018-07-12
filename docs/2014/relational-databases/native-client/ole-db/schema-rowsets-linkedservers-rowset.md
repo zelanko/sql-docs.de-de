@@ -1,13 +1,11 @@
 ---
-title: LINKEDSERVERS-Rowset (OLE DB) | Microsoft Docs
+title: LINKEDSERVERS-Rowset (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,18 +13,18 @@ helpviewer_keywords:
 - enumerating data sources [OLE DB]
 ms.assetid: 2633fd8a-65e7-498d-9aed-8e4b1cca2381
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0901178fa2d99e4faf19c749026e2e1b1c17da7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 60930ce7a43066c9041dfdaa92e0c4be254d78ae
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148351"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422399"
 ---
 # <a name="linkedservers-rowset-ole-db"></a>LINKEDSERVERS-Rowset (OLE DB)
-  Die **LINKEDSERVERS** Rowset listet organisationsdatenquellen beteiligt sein können, die auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verteilte Abfragen.  
+  Die **LINKEDSERVERS** Rowset listet organisationsdatenquellen teilnehmen können, die auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verteilte Abfragen.  
   
  Das **LINKEDSERVERS** -Rowset enthält die folgenden Spalten.  
   
@@ -42,6 +40,6 @@ ms.locfileid: "36148351"
  Das Rowset wird nach SRV_NAME sortiert, und eine einzelne Einschränkung wird für SRV_NAME unterstützt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Schemarowset-Unterstützung &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)  
+ [Schemarowset-Unterstützung &#40;OLE-DB&#41;](schema-rowset-support-ole-db.md)  
   
   

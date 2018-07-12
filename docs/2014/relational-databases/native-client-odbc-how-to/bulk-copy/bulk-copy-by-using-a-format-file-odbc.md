@@ -1,13 +1,11 @@
 ---
-title: Massenkopieren mithilfe einer Formatdatei (ODBC) | Microsoft Docs
+title: Massenkopieren mithilfe einer Formatdatei (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 ms.assetid: 970fd3af-f918-4fc3-a5b1-92596515d4de
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e84914caf6b86b12db3f58beadd05ed3b75593e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 5994c0904e688817fdbdcb58cd4d03e9a3338e16
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061162"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417579"
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>Massenkopieren mithilfe einer Formatdatei (ODBC)
   Dieses Beispiel zeigt, wie die ODBC-Funktion bcp_init mit einer Formatdatei verwendet wird.  
@@ -36,7 +34,7 @@ ms.locfileid: "36061162"
   
 3.  Stellen Sie eine Verbindung zu Microsoft® SQL Server™ her.  
   
-4.  Rufen Sie [Bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) um die folgenden Informationen festzulegen:  
+4.  Rufen Sie [Bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) auf die folgenden Informationen festzulegen:  
   
     -   Name der Tabelle oder Sicht, aus der bzw. in die massenkopiert werden soll  
   
@@ -46,7 +44,7 @@ ms.locfileid: "36061162"
   
     -   Kopierrichtung: DB_IN, wenn Daten aus der Datei in die Tabelle oder Sicht kopiert werden sollen  
   
-5.  Rufen Sie [Bcp_readfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) zum Lesen der Formatdatei beschreiben die Datendatei, die von der Massenkopiervorgang verwendet werden.  
+5.  Rufen Sie [Bcp_readfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) zum Lesen der Formatdatei beschreibt die Datendatei, die von der Massenkopiervorgang verwendet werden.  
   
 6.  Rufen Sie [Bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) um den Massenkopiervorgang auszuführen.  
   
@@ -57,7 +55,7 @@ ms.locfileid: "36061162"
   
  In diesem Beispiel wird eine Verbindung mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Standardinstanz des Computers hergestellt. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Definition der ODBC-Datenquelle, um die Instanz im folgenden Format anzugeben: Server\benannteInstanz. Standardmäßig wird [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] in einer benannten Instanz installiert.  
   
- Führen Sie das erste ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) zum Erstellen der Tabelle, die im Beispiel verwendete Codelisting.  
+ Führen Sie das erste ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) aus, um die Tabelle zu erstellen, die im Beispiel verwendete code.  
   
  Kopieren Sie das zweite Codelisting, und fügen Sie es in eine Datei mit dem Namen Bcpfmt.fmt ein. Jede Spalte in der Tabelle wird durch ein Tabstoppzeichen getrennt.  
   
@@ -190,7 +188,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Massenkopieren mit SQL Server-ODBC-Treiber – Themen &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+ [Massenkopieren mit dem SQL Server-ODBC-Treiber – Themen &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Verwenden von Datendateien und Formatdateien](../../native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

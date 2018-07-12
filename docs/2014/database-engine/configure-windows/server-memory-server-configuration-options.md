@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Virtual Memory Manager
 - max server memory option
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - memory [SQL Server], servers
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 caps.latest.revision: 76
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5ddbf4ccd432a7ba7ff9f4d946572dfcc6500dbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 4ae726d4a8706b5fbb04c8d10c8a14c3aeeb0790
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149124"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160961"
 ---
 # <a name="server-memory-server-configuration-options"></a>Serverkonfigurationsoptionen für den Serverarbeitsspeicher
   Mit den beiden Arbeitsspeicheroptionen für den Server, **Min. Serverarbeitsspeicher** und **Max. Serverarbeitsspeicher**, können Sie die Größe des Arbeitsspeichers (in Megabytes) umkonfigurieren, der vom SQL Server-Speicher-Manager für einen von einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendeten SQL Server-Prozess verwaltet wird.  
@@ -56,7 +56,7 @@ ms.locfileid: "36149124"
 > [!NOTE]  
 >  Allerdings kann nicht sichergestellt werden, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die in **min server memory** angegebene Arbeitsspeichermenge zuordnet. Wenn die in **min server memory**angegebene Arbeitsspeichermenge aufgrund der Serverlast zu keinem Zeitpunkt zugeordnet werden muss, wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit weniger Arbeitsspeicher ausgeführt.  
   
-|Betriebssystemtyp|Minimal zulässige Arbeitsspeichermengen für **Max. Serverarbeitsspeicher**|  
+|Betriebssystemtyp|Minimale Arbeitsspeichermengen für **Max. Serverarbeitsspeicher**|  
 |-------------|----------------------------------------------------------------|  
 |32-Bit|64 MB|  
 |64-Bit|128 MB|  
@@ -65,7 +65,7 @@ ms.locfileid: "36149124"
  Mit den beiden Arbeitsspeicheroptionen für den Server, **Min. Serverarbeitsspeicher** und **Max. Serverarbeitsspeicher**, können Sie den vom SQL Server-Speicher-Manager für eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwalteten Umfang des Arbeitsspeichers (in MB) umkonfigurieren. Standardmäßig können die Arbeitsspeicheranforderungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anhand der verfügbaren Systemressourcen dynamisch geändert werden.  
   
 ### <a name="procedure-for-configuring-a-fixed-amount-of-memory"></a>Vorgehensweise beim Konfigurieren eines festen Arbeitsspeichers  
- **So legen Sie eine feste Menge an Arbeitsspeicher fest**  
+ **So legen Sie eine feste Menge an Arbeitsspeicher fest:**  
   
 1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf einen Server, und wählen Sie **Eigenschaften** aus.  
   
@@ -87,12 +87,12 @@ ms.locfileid: "36149124"
 3.  Wenn die Option **Datendurchsatz für Netzwerkanwendungen maximieren** ausgewählt ist, wählen Sie ggf. weitere Optionen aus. Klicken Sie auf **OK**, und schließen Sie alle noch geöffneten Dialogfelder.  
   
 ## <a name="lock-pages-in-memory"></a>Sperren von Seiten im Speicher  
- Mit dieser Windows-Richtlinie werden die Konten bestimmt, die einen Prozess zum Speichern von Daten im physischen Speicher verwenden können, um das systemgesteuerte Auslagern der Daten in den virtuellen Arbeitsspeicher zu vermeiden. Durch Sperren von Seiten im Arbeitsspeicher können Sie die Reaktionsfähigkeit des Servers möglicherweise auch nach Auslagerung von Arbeitsspeicherdaten auf die Festplatte aufrechterhalten. SQL Server **Lock Pages in Memory** Option auf ON festgelegt ist, im 32-Bit und 64-Bit-Instanzen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard Edition und höher, wenn das Konto mit Privilegien zum Ausführen von sqlservr.exe Windows erteilt wurde "gesperrt Seiten im Memory"(LPIM) Benutzerrecht. In früheren Versionen von SQL Server ist beim Festlegen der Option zum Sperren von Seiten für eine 32-Bit-Instanz von SQL Server erforderlich, dass das Konto mit den Privilegien zum Ausführen von "sqlservr.exe" das LPIM-Benutzerrecht besitzt und die awe_enabled-Konfigurationsoption auf ON festgelegt wird.  
+ Mit dieser Windows-Richtlinie werden die Konten bestimmt, die einen Prozess zum Speichern von Daten im physischen Speicher verwenden können, um das systemgesteuerte Auslagern der Daten in den virtuellen Arbeitsspeicher zu vermeiden. Durch Sperren von Seiten im Arbeitsspeicher können Sie die Reaktionsfähigkeit des Servers möglicherweise auch nach Auslagerung von Arbeitsspeicherdaten auf die Festplatte aufrechterhalten. Die SQL Server **Lock Pages in Memory** Option auf ON festgelegt ist, im 32-Bit- und 64-Bit-Instanzen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard Edition und höher, wenn das Konto mit Privilegien zum Ausführen von sqlservr.exe der Windows erteilt wurde "Locked Pages in Memory"(LPIM) Benutzerrecht. In früheren Versionen von SQL Server ist beim Festlegen der Option zum Sperren von Seiten für eine 32-Bit-Instanz von SQL Server erforderlich, dass das Konto mit den Privilegien zum Ausführen von "sqlservr.exe" das LPIM-Benutzerrecht besitzt und die awe_enabled-Konfigurationsoption auf ON festgelegt wird.  
   
  Entfernen Sie zum Deaktivieren der Option **Sperren von Seiten im Speicher** für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]das Benutzerrecht "Lock Pages in Memory" für das SQL Server-Startkonto.  
   
 ### <a name="to-disable-lock-pages-in-memory"></a>So deaktivieren Sie die Option "Sperren von Seiten im Speicher"  
- **So deaktivieren Sie das Sperren von Seiten im Speicher (Option)**  
+ **So deaktivieren Sie die Sperren von Seiten im Speicheroption:**  
   
 1.  Klicken Sie im Menü **Start** auf **Ausführen**. In der **öffnen** geben `gpedit.msc`.  
   

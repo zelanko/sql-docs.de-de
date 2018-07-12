@@ -1,5 +1,5 @@
 ---
-title: DatabaseName-Element (XMLA) | Microsoft Docs
+title: DatabaseName-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - DatabaseName element
 ms.assetid: 5cfd9a1f-da53-497a-b677-c51be4641bd0
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: fbfff4e4389406496cf5df467ad044b6fa847727
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: fc7969194f91afa5dcf4d795ce33fae39d00c398
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149721"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183207"
 ---
 # <a name="databasename-element-xmla"></a>DatabaseName-Element (XMLA)
   Identifiziert die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] vom übergeordneten Element wiederhergestellt werden [wiederherstellen](../xml-elements-commands/restore-element-xmla.md) Befehl.  
@@ -66,7 +66,7 @@ ms.locfileid: "36149721"
 ## <a name="remarks"></a>Hinweise  
  Die `DatabaseName` -Element identifiziert die Datenbank, in dem die `Restore` -Befehl eine Sicherungsdatei wiederherstellt. Wenn dieses Element nicht angegeben ist oder eine leere Zeichenfolge enthält, wird der Name der Datenbank verwendet, die in der Sicherungsdatei enthalten ist.  
   
- Wenn die Datenbank bereits auf der Zielinstanz vorhanden ist, wird ein Fehler auftritt, es sei denn, die `AllowOverwrite` für das übergeordnete Element `Restore` Befehlssatz `True`.  
+ Wenn die Datenbank bereits auf der Zielinstanz vorhanden ist, wird ein Fehler auftritt, es sei denn, die `AllowOverwrite` -Element für das übergeordnete Element `Restore` Befehl nastaven NA hodnotu `True`.  
   
 ## <a name="see-also"></a>Siehe auch  
  [AllowOverwrite-Element &#40;XMLA&#41;](allowoverwrite-element-xmla.md)   

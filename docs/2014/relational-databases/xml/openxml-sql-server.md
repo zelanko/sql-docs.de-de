@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ColPattern [XML in SQL Server]
 - OPENXML statement, about OPENXML statement
@@ -24,22 +24,22 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 166680207dba3a8cb0172d5af59e462d6ac4ab24
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a41c723b75d2170c0e991536bda48157c9915425
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150749"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228850"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
   OPENXML ist ein [!INCLUDE[tsql](../../includes/tsql-md.md)] -Schlüsselwort, das für arbeitsspeicherinterne XML-Dokumente ein Rowset bereitstellt, das mit einer Tabelle oder einer Sicht vergleichbar ist. OPENXML ermöglicht es, auf XML-Daten so zuzugreifen, wie auf ein relationales Rowset. Dies geschieht, indem eine Rowsetsicht der internen Darstellung eines XML-Dokuments bereitgestellt wird. Die Datensätze im Rowset können in Datenbanktabellen gespeichert werden.  
   
  OPENXML kann immer dann in SELECT- und SELECT INTO-Anweisungen verwendet werden, wenn Rowsetanbieter, eine Sicht oder OPENROWSET als Quelle verwendet werden können. Informationen zur Syntax von OPENXML finden Sie unter [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql).  
   
- Um Abfragen für ein XML-Dokument mithilfe von OPENXML zu schreiben, müssen Sie zuerst Aufrufen `sp_xml_preparedocument`. Dies analysiert das XML-Dokument und gibt ein Handle auf das analysierte Dokument zurück, das zur Verwendung bereit ist. Das analysierte Dokument ist eine strukturierte Dokumentobjektdarstellung (DOM - Document Object Model) der verschiedenen Knoten des XML-Dokuments. Das Dokumenthandle wird an OPENXML übergeben. OPENXML erstellt dann auf der Grundlage der übergebenen Parameter eine Rowsetsicht des Dokuments.  
+ Sie müssen zuerst aufrufen, um Abfragen für XML-Dokumente mithilfe von OPENXML zu schreiben, `sp_xml_preparedocument`. Dies analysiert das XML-Dokument und gibt ein Handle auf das analysierte Dokument zurück, das zur Verwendung bereit ist. Das analysierte Dokument ist eine strukturierte Dokumentobjektdarstellung (DOM - Document Object Model) der verschiedenen Knoten des XML-Dokuments. Das Dokumenthandle wird an OPENXML übergeben. OPENXML erstellt dann auf der Grundlage der übergebenen Parameter eine Rowsetsicht des Dokuments.  
   
 > [!NOTE]  
 >  `sp_xml_preparedocument` verwendet eine SQL-aktualisierte Version von der MSXML-Parsers (Msxmlsql.dll). Diese Version des MSXML-Parsers wurde für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entwickelt und ist abwärtskompatibel zu MSXML Version 2.6.  

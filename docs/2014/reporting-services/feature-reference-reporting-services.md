@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Builder 2.0, F1 help
 - Reporting Services, getting assistance
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - F1 Help [Reporting Services]
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 caps.latest.revision: 27
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c23e964eaee08730416daa0d52350eb72138d5f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: c1a0b1b5105c5dc5be5edcd9c43028d4bca8ae2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148998"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258246"
 ---
 # <a name="feature-reference-reporting-services"></a>Funktionsreferenz (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] enthält zahlreiche Tools und Anwendungen, die Sie zum Erstellen, Verwalten und Anzeigen von Berichten verwenden können. Dieser Abschnitt enthält Themen zu den einzelnen Dialogfeldern, Webseiten und Assistenten dieser Tools und Anwendungen.  
@@ -38,7 +38,7 @@ ms.locfileid: "36148998"
  [Berichts-Manager (F1-Hilfe)](../../2014/reporting-services/report-manager-f1-help.md)  
  Stellt die Hilfe für den Berichts-Manager bereit, eine Webanwendung, mit der eine einzelne Berichtsserverinstanz verwaltet werden kann.  
   
- [Reporting Services-Konfigurationsmanager-F1-Hilfethemen &#40;SSRS im einheitlichen Modus&#41;](../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
+ [Reporting Services-Konfigurations-Manager-F1-Hilfethemen &#40;einheitlicher SSRS-Modus&#41;](../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
  Stellt die Hilfe für das [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Konfigurationstool bereit, das für die Bereitstellung und die Verwaltung von Berichtsserverinstanzen verwendet wird.  
   
  [Berichtsserver im Management Studio (F1-Hilfe)](tools/report-server-in-management-studio-f1-help.md)  

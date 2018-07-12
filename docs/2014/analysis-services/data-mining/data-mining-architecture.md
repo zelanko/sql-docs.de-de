@@ -1,5 +1,5 @@
 ---
-title: Datamining-Architektur | Microsoft Docs
+title: Datamining-Architektur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 105f52e1-ad3b-4cd0-b67b-06dbb451c304
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9fd364f897299bdee36f931f999bdd623a1878c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb84b8ffc9f3dfbb5b1e89a50b0d57b2dafa9111
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148510"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239950"
 ---
 # <a name="data-mining-architecture"></a>Data Mining-Architektur
   In diesem Abschnitt wird die Architektur von Data Mining-Lösungen beschrieben, die in einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]gehostet werden. In den Themen dieses Abschnitts werden die logische und physische Architektur einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz beschrieben, die Data Mining unterstützt. Darüber hinaus enthalten sie Informationen zu den Clients, Anbietern und Protokollen, die für die Kommunikation mit Data Mining-Servern und die lokale oder Remote-Bearbeitung von Data Mining-Objekten verwendet werden können.  
@@ -32,7 +32,7 @@ ms.locfileid: "36148510"
   
  [Datenbankspeicherort](../multidimensional-models/database-storage-location.md)  
   
- [Umschalten Sie in einer Analysis Services-Datenbank zwischen Schreib-und Lesemodus](../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [Umschalten einer Analysis Services-Datenbank zwischen Schreib-und Lesemodus](../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
  Weitere Informationen darüber, wie Sie Data Mining in Ihrer Business Intelligence-Lösung implementieren, finden Sie im Abschnitt zu Lösungshandbüchern der MSDN-Bibliothek.  
   

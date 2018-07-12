@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.deploymentwizard.deploymentsettings.f1
 - sql12.swb.deploymentwizard.progress.f1
@@ -43,15 +43,15 @@ helpviewer_keywords:
 - Azure VM
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 976bd24095536f6ae13cf40fab8129154b14864b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: dc5399a395a53f2e37103b5516b0e707eb8c0335
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150828"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158511"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Bereitstellen einer SQL Server-Datenbank auf einem virtuellen Microsoft Azure-Computer
   Verwenden Sie den Assistenten **SQL Server-Datenbank auf Microsoft Azure-VM bereitstellen**, um eine Datenbank von einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem virtuellen Microsoft Azure-Computer (VM) bereitzustellen. Der Assistent führt eine vollständige Datenbanksicherung durch und kopiert somit immer das vollständige Datenbankschema und alle Daten einer SQL Server-Benutzerdatenbank. Der Assistent übernimmt außerdem die gesamte Azure-VM-Konfiguration, sodass keine Vorkonfiguration der VM erforderlich ist.  
@@ -88,7 +88,7 @@ ms.locfileid: "36150828"
   
 -   Anmeldeinformationen mit Sicherungsoperatorprivilegien für die bereitzustellende Datenbank, aus der Zielinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Weitere Informationen zum Ausführen von SQL Server in Microsoft Azure Virtual Machines finden Sie unter [Vorbereitung auf die Migration zu SQL Server in Windows Azure Virtual Machines](http://msdn.microsoft.com/library/dn133142.aspx).  
+ Weitere Informationen zu SQL Server auf Windows Azure-Computern ausgeführt wird, finden Sie unter [bereit für die Migration zu SQL Server in Windows Azure Virtual Machines](http://msdn.microsoft.com/library/dn133142.aspx).  
   
  Auf Computern, auf denen ein Windows Server-Betriebssystem ausgeführt wird, müssen Sie zur Ausführung dieses Assistenten die folgenden Konfigurationseinstellungen vornehmen:  
   

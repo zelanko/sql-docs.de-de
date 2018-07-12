@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10245"
 - "10252"
@@ -16,15 +16,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.seriesproperties.borders.f1
 ms.assetid: fe541501-cac5-47b1-b95f-c410db789190
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f3760096e00a6c418af3a0d8203f822b65c00508
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 22be979236bd7c42ba231cea42d98c7a47c15ab8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149836"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278516"
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>Formatieren von Reihenfarben in einem Diagramm (Berichts-Generator und SSRS)
   Reporting Services stellt mehrere integrierte Paletten für Diagramme bereit. Außerdem können Sie eine benutzerdefinierte Palette definieren. Diagramme verwenden standardmäßig die integrierte **"leuchtendes Pastell"** Farbpalette, um die einzelnen Reihen auszufüllen. Diese Farben werden auch in der Legende angezeigt. Beim Hinzufügen mehrerer Reihen zum Diagramm erfolgt das Zuweisen von Farben zu einer Reihe durch das Diagramm anhand der Reihenfolge, in der die Farben in der Palette definiert wurden.  
@@ -49,7 +49,7 @@ ms.locfileid: "36149836"
 ## <a name="using-a-color-fill-on-each-series"></a>Verwenden von Farbfülleffekten für Einzelreihen  
  Sie können auch eigene Farben für das Diagramm definieren, indem Sie eine Farbe für jede Reihe im Diagramm angeben. Öffnen Sie dazu das Dialogfeld **Reiheneigenschaften** , und legen Sie für **Ausfüllen** die Eigenschaft **Farbe**fest. Dadurch werden alle definierten Paletten überschrieben. Benutzerdefinierte Farbpaletten sind im Allgemeinen gegenüber dem Definieren eigener Farben zu bevorzugen, da die Anzahl der Reihen im Dataset möglicherweise erst zum Zeitpunkt der Berichtsverarbeitung feststeht.  
   
- Dieser Ansatz eignet sich am besten, wenn Sie die Farbe der Reihe basierend auf einem Ausdruck bedingt festlegen möchten.  Weitere Informationen finden Sie unter [Formatierung von Datenpunkten in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
+ Dieser Ansatz eignet sich am besten, wenn Sie die Farbe der Reihe basierend auf einem Ausdruck bedingt festlegen möchten.  Weitere Informationen finden Sie unter [Formatieren von Datenpunkten in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Angeben von Farben, die für mehrere Formdiagramme konsistent sind &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md)  

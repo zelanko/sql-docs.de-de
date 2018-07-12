@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.msxwiz.complete.f1
 - sql12.ag.msxwiz.target.f1
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Master Server Wizard
 ms.assetid: 05739a73-1fdf-4d9d-92a6-70f328380322
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e157f2554d8add51cba02b7428a08a7e47c94d1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7f609af3e4cef804d74772283fc1bb519d3dd89f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151256"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163791"
 ---
 # <a name="make-a-master-server"></a>Einrichten eines Masterservers
   In diesem Thema wird beschrieben, wie Sie mithilfe von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] einen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Masterserver einrichten.  
@@ -52,7 +52,7 @@ ms.locfileid: "36151256"
 ###  <a name="Security"></a> Sicherheit  
  Verteilte Aufträge mit Schritten, die einem Proxy zugeordnet sind, werden im Kontext des Proxykontos auf dem Zielserver ausgeführt. Stellen Sie sicher, dass die folgenden Bedingungen erfüllt sind, da andernfalls einem Proxy zugeordnete Auftragsschritte nicht vom Masterserver auf den Zielserver heruntergeladen werden:  
   
--   Der Registrierungsunterschlüssel des Masterservers **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<*Instance_name*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName**  (REG_DWORD) wird auf 1 (True) festgelegt. Dieser Unterschlüssel ist standardmäßig auf 0 (false) festgelegt.  
+-   Der Registrierungsunterschlüssel des Masterservers **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<*Instance_name*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName**  (REG_DWORD) auf 1 (True) festgelegt ist. Dieser Unterschlüssel ist standardmäßig auf 0 (false) festgelegt.  
   
 -   Auf dem Zielserver ist ein Proxykonto vorhanden, das den gleichen Namen wie das Proxykonto des Masterservers hat, unter dem der Auftragsschritt ausgeführt wird.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36151256"
      Um diesen Fehler zu beheben, stellen Sie sicher, dass auf dem Zielserver ein Proxykonto vorhanden ist, das den gleichen Namen wie das Proxykonto des Masterservers hat, unter dem der Auftragsschritt ausgeführt wird.  
   
 ####  <a name="Permissions"></a> Berechtigungen  
- Berechtigungen zum Ausführen dieser Prozedur erhalten standardmäßig Mitglieder der `sysadmin` festen Serverrolle "".  
+ Berechtigungen zum Ausführen dieser Prozedur erhalten standardmäßig Mitglieder der `sysadmin` -Serverrolle sein.  
   
 ##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   

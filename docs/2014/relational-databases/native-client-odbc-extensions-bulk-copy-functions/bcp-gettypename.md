@@ -1,13 +1,11 @@
 ---
-title: Bcp_gettypename | Microsoft Docs
+title: Bcp_gettypename | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: afea684549765bac4c24679cc65d74bb4dfa47df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 489980d88e5f49d2c350fa3a3784d3603deab5e0
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059136"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411729"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
   Gibt den SQL-Typnamen für ein angegebenes BCP-Typtoken zurück.  
@@ -81,10 +79,10 @@ fIsMaxType
 |`SQLTEXT`|Sowohl als auch|**text**|  
 |`SQLBIGBINARY`|nein|**binary**|  
 |`SQLBINARY`|nein|**Binär (Binary)**|  
-|`SQLBIGVARBINARY`|nein|**varbinary**|  
-|`SQLVARBINARY`|nein|**varbinary**|  
+|`SQLBIGVARBINARY`|nein|**Varbinary**|  
+|`SQLVARBINARY`|nein|**Varbinary**|  
 |`SQLIMAGE`|Sowohl als auch|**Bild**|  
-|`SQLINTN`|Sowohl als auch|**Int-null**|  
+|`SQLINTN`|Sowohl als auch|**Int null**|  
 |`SQLDATETIMN`|Sowohl als auch|**datetime-null**|  
 |`SQLMONEYN`|Sowohl als auch|**Money-null**|  
 |`SQLFLTN`|Sowohl als auch|**float-null**|  
@@ -95,7 +93,7 @@ fIsMaxType
 |`SQLAOPMAX`|Sowohl als auch|**Max**|  
 |`SQLDATETIM4`|Sowohl als auch|**smalldatetime**|  
 |`SQLMONEY4`|Sowohl als auch|**Smallmoney**|  
-|`SQLFLT4`|Sowohl als auch|**echte**|  
+|`SQLFLT4`|Sowohl als auch|**Real**|  
 |`SQLUNIQUEID`|Sowohl als auch|**uniqueidentifier**|  
 |`SQLNCHAR`|nein|**NCHAR**|  
 |`SQLNVARCHAR`|nein|**Nvarchar**|  
@@ -116,9 +114,9 @@ fIsMaxType
 |`SQLUDT`|Sowohl als auch|**UDT**|  
   
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>bcp_gettypename-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit  
- Die tokenparameterwerte für Datums-/Uhrzeittypen werden in der Spalte "Typ in sqlncli.h" der Tabelle in beschrieben [Massenkopieränderungen für erweiterte Datums- und Uhrzeittypen &#40;OLE DB- und ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). Der zurückgegebene Wert ist in der entsprechenden Zeile der Spalte "Dateispeichertyp" angegeben.  
+ Die tokenparameterwerte für Datums-/Uhrzeittypen werden in der Spalte "Typ in sqlncli.h" der Tabelle im beschrieben [Massenkopieränderungen für verbesserte Datums- und Uhrzeittypen &#40;OLEDB- und ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). Der zurückgegebene Wert ist in der entsprechenden Zeile der Spalte "Dateispeichertyp" angegeben.  
   
- Weitere Informationen finden Sie unter [Datum und Uhrzeit-Verbesserungen &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Weitere Informationen finden Sie unter [Datums- / Uhrzeitverbesserungen &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Massenkopierfunktionen](sql-server-driver-extensions-bulk-copy-functions.md)  

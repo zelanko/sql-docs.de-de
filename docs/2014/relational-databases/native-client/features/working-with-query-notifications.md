@@ -1,13 +1,11 @@
 ---
-title: Arbeiten mit Abfragebenachrichtigungen | Microsoft Docs
+title: Arbeiten mit Abfragebenachrichtigungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,22 +21,22 @@ helpviewer_keywords:
 - consumer notification for rowset changes [SQL Server Native Client]
 ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a82f441540faa72129807563445b5759179bfcf4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a0f71aec8196f4815d8bc39ec9dd9dc0be443a01
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058551"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417929"
 ---
 # <a name="working-with-query-notifications"></a>Arbeiten mit Abfragebenachrichtigungen
   Abfragebenachrichtigungen wurden in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client eingeführt. Mit Abfragebenachrichtigungen, die auf der in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] eingeführten Service Broker-Infrastruktur aufsetzen, können Anwendungen benachrichtigt werden, wenn sich Daten geändert haben. Diese Funktion ist besonders nützlich für Anwendungen, die einen Informationscache aus einer Datenbank zur Verfügung stellen, z. B. eine Webanwendung, und die benachrichtigt werden müssen, wenn die Quelldaten geändert wurden.  
   
  Mit Abfragebenachrichtigungen können Sie eine Benachrichtigung innerhalb eines festgelegten Timeoutzeitraums anfordern, wenn sich die einer Abfrage zugrunde liegenden Daten ändern. Die Anforderung für die Benachrichtigung gibt die Benachrichtigungsoptionen an. Dazu gehören der Dienstname, der Meldungstext und der Timeoutwert für den Server. Benachrichtigungen werden durch eine Service Broker-Warteschlange übermittelt, von der Anwendungen verfügbare Benachrichtigungen abrufen können.  
   
- Die Syntax der Benachrichtigungen Optionen Abfragezeichenfolge lautet:  
+ Die Syntax der Abfragezeichenfolge Benachrichtigungen Optionen lautet:  
   
  `service=<service-name>[;(local database=<database> | broker instance=<broker instance>)]`  
   
@@ -50,7 +48,7 @@ ms.locfileid: "36058551"
   
  Benachrichtigungen werden nur einmal gesendet. Für die kontinuierliche Benachrichtigung bei Datenänderungen müssen Sie ein neues Abonnement erstellen, indem Sie die Abfrage nach der Verarbeitung jeder Benachrichtigung erneut ausführen.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Anwendungen erhalten normalerweise Benachrichtigungen mit den [!INCLUDE[tsql](../../../includes/tsql-md.md)] [RECEIVE](/sql/t-sql/statements/receive-transact-sql) Befehl zum Lesen von Benachrichtigungen aus der Warteschlange, die in den Benachrichtigungsoptionen angegebenen Dienst zugeordnet.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Anwendungen erhalten normalerweise Benachrichtigungen mithilfe der [!INCLUDE[tsql](../../../includes/tsql-md.md)] [RECEIVE](/sql/t-sql/statements/receive-transact-sql) Befehl aus, um das Lesen von Benachrichtigungen aus der Warteschlange, die in den Benachrichtigungsoptionen angegebenen Dienst zugeordnet.  
   
 > [!NOTE]  
 >  Tabellennamen müssen in Abfragen qualifiziert werden, für die Benachrichtigungen erforderlich sind, z. B. `dbo.myTable`. Tabellennamen müssen mit zwei Teilnamen qualifiziert werden. Das Abonnement ist ungültig, wenn drei oder vier Teilnamen verwendet werden.  
@@ -92,7 +90,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 WAITFOR (RECEIVE * FROM MyQueue);   // Where MyQueue is the queue name.   
 ```  
   
- Beachten Sie, die auswählen * nicht den Eintrag aus der Warteschlange zu löschen, erhalten jedoch \* aus verfügt. Dadurch wird ein Serverthread blockiert, wenn die Warteschlange leer ist. Wenn zum Zeitpunkt des Aufrufs Warteschlangeneinträge vorhanden sind, werden sie unmittelbar zurückgegeben. Andernfalls wartet der Aufruf, bis ein Warteschlangeneintrag vorgenommen wird.  
+ Beachten Sie, die ausgewählt * nicht den Eintrag aus der Warteschlange zu löschen, erhalten jedoch \* aus unterstützt. Dadurch wird ein Serverthread blockiert, wenn die Warteschlange leer ist. Wenn zum Zeitpunkt des Aufrufs Warteschlangeneinträge vorhanden sind, werden sie unmittelbar zurückgegeben. Andernfalls wartet der Aufruf, bis ein Warteschlangeneintrag vorgenommen wird.  
   
 ```  
 RECEIVE * FROM MyQueue  
@@ -100,7 +98,7 @@ RECEIVE * FROM MyQueue
   
  Diese Anweisung gibt unverzüglich ein leeres Resultset zurück, wenn die Warteschlange leer ist. Andernfalls gibt sie alle Warteschlangenbenachrichtigungen zurück.  
   
- Wenn SSPROP_QP_NOTIFICATION_MSGTEXT und SSPROP_QP_NOTIFICATION_OPTIONS nicht NULL und nicht leer sind, wird der TDS-Abfragebenachrichtigungsheader mit den drei oben definierten Eigenschaften bei jeder Ausführung des Befehls an den Server gesendet. Wenn einer der Werte NULL (oder leer) ist, wird der Header nicht gesendet und DB_E_ERRORSOCCURRED ausgelöst (oder DB_S_ERRORSOCCURRED, wenn die Eigenschaften beide als optional gekennzeichnet sind). Der Statuswert wird auf DBPROPSTATUS_BADVALUE festgelegt. Die Überprüfung wird bei Ausführen/Vorbereiten vorgenommen. Entsprechend wird DB_S_ERRORSOCCURED ausgelöst, wenn die abfragebenachrichtigungseigenschaften für Verbindungen mit switchrichtlinien [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Versionen vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. In diesem Fall ist der Statuswert DBPROPSTATUS_NOTSUPPORTED.  
+ Wenn SSPROP_QP_NOTIFICATION_MSGTEXT und SSPROP_QP_NOTIFICATION_OPTIONS nicht NULL und nicht leer sind, wird der TDS-Abfragebenachrichtigungsheader mit den drei oben definierten Eigenschaften bei jeder Ausführung des Befehls an den Server gesendet. Wenn einer der Werte NULL (oder leer) ist, wird der Header nicht gesendet und DB_E_ERRORSOCCURRED ausgelöst (oder DB_S_ERRORSOCCURRED, wenn die Eigenschaften beide als optional gekennzeichnet sind). Der Statuswert wird auf DBPROPSTATUS_BADVALUE festgelegt. Die Überprüfung wird bei Ausführen/Vorbereiten vorgenommen. Entsprechend wird DB_S_ERRORSOCCURED ausgelöst, wenn die abfragebenachrichtigungseigenschaften für Verbindungen mit festgelegt sind [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Versionen vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. In diesem Fall ist der Statuswert DBPROPSTATUS_NOTSUPPORTED.  
   
  Ein Abonnement zu initiieren gewährleistet nicht, dass nachfolgende Meldungen erfolgreich übermittelt werden. Außerdem wird keine Prüfung im Hinblick auf die Gültigkeit des angegebenen Dienstnamens durchgeführt.  
   
@@ -110,7 +108,7 @@ RECEIVE * FROM MyQueue
  Weitere Informationen zur DBPROPSET_SQLSERVERROWSET-Eigenschaftsgruppe finden Sie unter [Rowset-Eigenschaften und Verhaltensweisen](../../native-client-ole-db-rowsets/rowset-properties-and-behaviors.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>ODBC-Treiber für SQL Server Native Client  
- Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt abfragebenachrichtigungen, die durch das Hinzufügen von drei neue Attribute der [SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md) und [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) Funktionen:  
+ Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt abfragebenachrichtigungen durch Hinzufügen von drei neue Attribute auf die [SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md) und [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) Funktionen:  
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT  
   
@@ -118,7 +116,7 @@ RECEIVE * FROM MyQueue
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT  
   
- Wenn SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT und SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS nicht NULL sind, wird der TDS-Abfragebenachrichtigungsheader mit den drei oben definierten Attributen bei jeder Ausführung des Befehls an den Server gesendet. Wenn eine der Eigenschaften NULL ist, wird der Header nicht gesendet und SQL_SUCCESS_WITH_INFO zurückgegeben. Die Überprüfung wird für [SQLPrepare-Funktion](http://go.microsoft.com/fwlink/?LinkId=59360), **SqlExecDirect**, und **SqlExecute**, dass alle Überprüfungen schlagen fehl, wenn die Attribute nicht zulässig sind. Entsprechend schlägt die Ausführung mit SQL_SUCCESS_WITH_INFO fehl, wenn diese Abfragebenachrichtigungsattribute für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Versionen vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] festgelegt werden.  
+ Wenn SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT und SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS nicht NULL sind, wird der TDS-Abfragebenachrichtigungsheader mit den drei oben definierten Attributen bei jeder Ausführung des Befehls an den Server gesendet. Wenn eine der Eigenschaften NULL ist, wird der Header nicht gesendet und SQL_SUCCESS_WITH_INFO zurückgegeben. Die Überprüfung wird für [SQLPrepare-Funktion](http://go.microsoft.com/fwlink/?LinkId=59360), **SqlExecDirect**, und **SqlExecute**, dass alle Überprüfungen schlagen fehl, wenn die Attribute nicht gültig sind. Entsprechend schlägt die Ausführung mit SQL_SUCCESS_WITH_INFO fehl, wenn diese Abfragebenachrichtigungsattribute für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Versionen vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] festgelegt werden.  
   
 > [!NOTE]  
 >  Durch Vorbereiten der Anweisungen wird nie eine Initiierung des Abonnements ausgelöst. Das Abonnement kann nur durch die Anweisungsausführung initiiert werden.  

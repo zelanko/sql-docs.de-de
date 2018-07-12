@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - dynamic management views [SQL Server], AlwaysOn Availability Groups
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - catalog views [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 caps.latest.revision: 48
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 7ad2fed0ddfe6b06b66567dd86d0c343e6cdbff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 666b6487673c5a64ccdf955a4344e61717d9038b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149970"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239490"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Überwachen von Verfügbarkeitsgruppen (Transact-SQL)
   Zum Überwachen von Verfügbarkeitsgruppen und -replikaten und den zugeordneten Datenbanken mit [!INCLUDE[tsql](../../../includes/tsql-md.md)]stellt [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] einen Satz von Katalogsichten und dynamischen Verwaltungssichten sowie Servereigenschaften bereit. Mit [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT-Anweisungen können Sie mithilfe der Sichten Verfügbarkeitsgruppen und ihre Replikate und Datenbanken überwachen. Die für eine bestimmte Verfügbarkeitsgruppe zurückgegebenen Informationen hängen davon ab, ob Sie mit der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verbunden sind, die das primäre Replikat oder ein sekundäres Replikat hostet.  
@@ -84,7 +83,7 @@ ms.locfileid: "36149970"
 > [!NOTE]  
 >  Siehe auch **sys.dm_hadr_availability_replica_cluster_nodes** und **sys.dm_hadr_availability_replica_cluster_states** im Abschnitt [Überwachen von Verfügbarkeitsreplikaten](#AvReplicas) sowie **sys.availability_databases_cluster** und **sys.dm_hadr_database_replica_cluster_states** im Abschnitt [Überwachen von Verfügbarkeitsdatenbanken](#AvDbs) weiter unten in diesem Thema.  
   
- Für Informationen zu wsfc-Cluster und [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], finden Sie unter [Windows Server Failover Clustering &#40;WSFC&#41; mit SQL Server] ((.. /.. /.. / sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) und [Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md).  
+ Informationen zu WSFC-Cluster und [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], finden Sie unter [Windows Server Failover Clustering &#40;WSFC&#41; mit SQL Server] ((.. /.. /.. / sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) und [Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md).  
   
 ##  <a name="AvGroups"></a> Überwachen von Verfügbarkeitsgruppen  
  Verwenden Sie zum Überwachen der Verfügbarkeitsgruppen, für die die Serverinstanz ein Verfügbarkeitsreplikat hostet, die folgenden Sichten:  
@@ -270,7 +269,7 @@ ms.locfileid: "36149970"
   
 -   [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)  
   
- **Richtlinienbasierte Verwaltung für AlwaysOn-Verfügbarkeitsgruppen**  
+ **Richtlinie der richtlinienbasierten Verwaltung für AlwaysOn-Verfügbarkeitsgruppen**  
   
 -   [Verwenden von AlwaysOn-Richtlinien zum Anzeigen des Zustands einer verfügbarkeitsgruppe &#40;SQLServer&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   

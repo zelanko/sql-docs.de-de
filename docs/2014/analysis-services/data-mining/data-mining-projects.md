@@ -1,5 +1,5 @@
 ---
-title: Datamining-Projekte | Microsoft Docs
+title: Datamining-Projekte | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 035a8a822ffa49502ec93978b2ce8b619fff9630
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3e0c9df62ccc0c76dead70001e4ae253ff51cc9b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149323"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259716"
 ---
 # <a name="data-mining-projects"></a>Data Mining-Projekte
   Ein Data Mining-Projekt ist Teil einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Lösung. Während des Entwurfsprozesses sind die Objekte, die Sie in diesem Projekt erstellen, für Tests und Abfragen im Rahmen einer Arbeitsbereichsdatenbank verfügbar. Wenn Benutzer in der Lage sein sollen, die Objekte im Projekt abzufragen oder zu durchsuchen, müssen Sie das Projekt auf einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitstellen, die im mehrdimensionalen Modus ausgeführt wird.  
@@ -33,7 +33,7 @@ ms.locfileid: "36149323"
  Wenn Sie innerhalb einer vorhandenen Lösung ein Data Mining-Projekt erstellen, werden die Data Mining-Objekte standardmäßig in einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank mit dem gleichen Namen wie die Projektmappendatei bereitgestellt. Sie können diesen Namen und den Zielserver über das Dialogfeld **Projekteigenschaften** ändern. Weitere Informationen finden Sie unter [Konfigurieren von Analysis Services-Projekteigenschaften &#40;SSDT&#41;](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
 > [!WARNING]  
->  Um das Projekt erfolgreich zu erstellen und bereitzustellen, müssen Sie Zugriff auf eine Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] haben, die im OLAP-/Data Mining-Modus ausführt wird. Sie können nicht zu entwickeln oder Bereitstellen von Datamining-Lösungen auf einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , die tabellarische Modelle unterstützt, noch können Sie Daten direkt aus einer PowerPivot-Arbeitsmappe oder eines tabellarischen Modells, das den speicherinternen Datenspeicher verwendet. Um zu ermitteln, ob Ihre Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Data Mining unterstützt, lesen Sie den Artikel [Bestimmen des Servermodus einer Analysis Services-Instanz](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
+>  Um das Projekt erfolgreich zu erstellen und bereitzustellen, müssen Sie Zugriff auf eine Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] haben, die im OLAP-/Data Mining-Modus ausführt wird. Sie entwickeln oder Bereitstellen von Datamining-Lösungen auf einer Instanz können nicht [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , die tabellarische Modelle unterstützt, noch können Sie Daten direkt aus einer PowerPivot-Arbeitsmappe oder eines tabellarischen Modells, das den speicherinternen Datenspeicher verwendet. Um zu ermitteln, ob Ihre Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Data Mining unterstützt, lesen Sie den Artikel [Bestimmen des Servermodus einer Analysis Services-Instanz](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
  Innerhalb jedes einzelnen Data Mining-Projekts, das Sie erstellen, müssen Sie die folgenden Schritte ausführen:  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36149323"
   
  Ein einzelnes Data Mining-Projekt kann z. B. einen Verweis auf mehrere Datenquellen enthalten. Hierbei kann jede einzelne Datenquelle mehrere Datenquellensichten unterstützen. Andererseits kann auch jede Datenquellensicht mehrere Miningstrukturen unterstützen, die alle eine Vielzahl zugehöriger Miningmodelle aufweisen können.  
   
- Darüber hinaus kann das Projekt Plug-In-Algorithmen, benutzerdefinierte Assemblys oder benutzerdefinierte gespeicherte Prozeduren umfassen. Diese Objekte werden hier jedoch nicht beschrieben. Weitere Informationen finden Sie unter [Developer's Guide &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md).  
+ Darüber hinaus kann das Projekt Plug-In-Algorithmen, benutzerdefinierte Assemblys oder benutzerdefinierte gespeicherte Prozeduren umfassen. Diese Objekte werden hier jedoch nicht beschrieben. Weitere Informationen finden Sie unter [Entwicklerhandbuch &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md).  
  
   
 ###  <a name="bkmk_DataSources"></a> Data Sources  
@@ -210,7 +210,7 @@ ms.locfileid: "36149323"
   
 ## <a name="see-also"></a>Siehe auch  
  [Datamining-Designer](data-mining-designer.md)   
- [Erstellen mehrdimensionaler Modelle mithilfe von SQL Server Datatools &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [Erstellen mehrdimensionaler Modelle mit SQL Server-Datentools &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [Arbeitsbereichsdatenbank &#40;SSAS – tabellarisch&#41;](../tabular-models/workspace-database-ssas-tabular.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SetDisable-Methode (ServerNetworkProtocol-Klasse) | Microsoft Docs
+title: SetDisable-Methode (ServerNetworkProtocol-Klasse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetDisable method
 ms.assetid: 0ebbe0c5-07ad-4a76-a918-e379930adf71
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 486157219bfea29653ff3ba1af0a8c69287ef27c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 805051bb26ddba0191144856192a7073175e4175
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061559"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240510"
 ---
 # <a name="setdisable-method-servernetworkprotocol-class"></a>SetDisable-Methode (ServerNetworkProtocol-Klasse)
   Deaktiviert das Server-Netzwerkprotokoll.  

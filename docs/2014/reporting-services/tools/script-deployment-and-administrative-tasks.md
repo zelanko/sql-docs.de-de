@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Reporting Services]
 - moving reports
@@ -25,13 +25,13 @@ ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
 caps.latest.revision: 63
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 8cec5b29e78115e606951e0bd58516a029840580
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8bd4072925cf5cd48785b0c476aa4ea637f096c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148317"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159861"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>Skripts für Bereitstellungs- und Verwaltungsaufgaben
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] unterstützt die Verwendung von Skripts, um routinemäßige Installations-, Bereitstellungs- und Verwaltungsaufgaben zu automatisieren. Die Bereitstellung eines Berichtsservers stellt einen aus mehreren Schritten bestehenden Vorgang dar. Sie müssen mehrere Tools und Prozesse verwenden, um eine Bereitstellung zu konfigurieren. Es gibt kein einzelnes Programm oder Verfahren, das zum Automatisieren aller zugehörigen Aufgaben verwendet werden kann.  
@@ -100,7 +100,7 @@ ms.locfileid: "36148317"
  Weitere Informationen zum Formatieren und Ausführen einer Skriptdatei finden Sie unter [mit einem Skript mit dem rs.exe-Hilfsprogramm und dem Webdienst](script-with-the-rs-exe-utility-and-the-web-service.md).  
   
 ## <a name="using-scripts-to-set-server-properties"></a>Festlegen von Servereigenschaften mithilfe von Skripts  
- Sie können Skripts schreiben, um Systemeigenschaften auf dem Berichtsserver festzulegen. Das folgende [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET-Skript zeigt eine Möglichkeit, Eigenschaften festzulegen. In diesem Beispiel wird das RSClientPrint ActiveX-Steuerelement deaktiviert, aber Sie können `EnableClientPrinting` und `False` durch einen beliebigen gültigen Eigenschaftennamen und Wert. Eine vollständige Liste der Servereigenschaften finden Sie unter [Systemeigenschaften des Berichtsservers](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).  
+ Sie können Skripts schreiben, um Systemeigenschaften auf dem Berichtsserver festzulegen. Das folgende [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET-Skript zeigt eine Möglichkeit, Eigenschaften festzulegen. In diesem Beispiel wird das RSClientPrint ActiveX-Steuerelement deaktiviert, aber Sie können ersetzen `EnableClientPrinting` und `False` mit allen gültigen Eigenschaftennamen und Wert. Eine vollständige Liste der Servereigenschaften finden Sie unter [Berichtsserver-Systemeigenschaften](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).  
   
  Um dieses Skript zu verwenden, speichern Sie es in einer Datei mit der Erweiterung RSS und verwenden anschließend das Eingabeaufforderungs-Hilfsprogramm rs.exe, um die Datei auf dem Berichtsserver auszuführen. Das Skript wird nicht kompiliert, daher wird keine Installation von [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]benötigt. In diesem Beispiel wird davon ausgegangen, dass Sie über die entsprechenden Berechtigungen für den lokalen Computer verfügen, der den Berichtsserver hostet. Wenn Sie mit einem Konto angemeldet sind, das nicht über die erforderlichen Berechtigungen verfügt, müssen Sie Kontoinformationen über zusätzliche Befehlzeilenargumente angeben. Weitere Informationen finden Sie unter [Hilfsprogramm RS.exe (SSRS)](rs-exe-utility-ssrs.md).  
   
@@ -128,11 +128,11 @@ End Sub
  [GenerateDatabaseCreationScript-Methode &#40;WMI: MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)   
  [GenerateDatabaseRightsScript-Methode &#40;WMI: MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)   
  [GenerateDatabaseUpgradeScript-Methode &#40;WMI: MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)   
- [Installieren von SQLServer 2014 von der Befehlszeile aus](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
+ [Installieren von SQLServer 2014 über die Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [Installieren von Reporting Services-Berichtsserver im einheitlichen Modus](../install-windows/install-reporting-services-native-mode-report-server.md)   
  [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../report-server/reporting-services-report-server-native-mode.md)   
- [Eingabeaufforderungs-Hilfsprogramme Bericht &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
- [Planung für Reporting Services und Power View-Browserunterstützung &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
+ [Eingabeaufforderung-Hilfsprogramme für Berichtsserver &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
+ [Browserunterstützung für Reporting Services und Power View-Browserunterstützung &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
  [Reporting Services-Tools](reporting-services-tools.md)  
   
   

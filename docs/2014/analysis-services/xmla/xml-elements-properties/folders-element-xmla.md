@@ -1,5 +1,5 @@
 ---
-title: Folders-Element (XMLA) | Microsoft Docs
+title: Folders-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Folders element
 ms.assetid: fefb0469-22ea-4804-8dc3-9c49825b32f1
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: c9042b2960a6efcce592779f5f17fd58fd98d693
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 00d90fd45456a0b672c12cdd44706e63011cbb28
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150639"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148531"
 ---
 # <a name="folders-element-xmla"></a>Folders-Element (XMLA)
   Enthält eine Auflistung von [Folder](folder-element-xmla.md) -Elementen, die vom übergeordneten [Location](location-element-xmla.md) -Element während eines [Restore](../xml-elements-commands/restore-element-xmla.md) - oder [Synchronize](../xml-elements-commands/synchronize-element-xmla.md) -Befehls verwendet werden.  

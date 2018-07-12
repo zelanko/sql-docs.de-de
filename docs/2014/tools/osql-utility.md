@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
 - QUIT command
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - CTRL+C command
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 caps.latest.revision: 48
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2ebfb7cbe8a000a751243d1117d904056295d294
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bd66af98effae023f2a1436b6eb88e76c78a2e44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150284"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240000"
 ---
 # <a name="osql-utility"></a>osql (Hilfsprogramm)
   Das Hilfsprogramm **osql** ermöglicht es Ihnen, [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen, Systemprozeduren und Skriptdateien einzugeben. Dieses Hilfsprogramm verwendet ODBC, um Daten mit dem Server auszutauschen.  
@@ -116,7 +116,7 @@ C:\>osql
  Gibt die Anzahl der Zeilen an, die zwischen den Spaltenüberschriften gedruckt werden. Standardmäßig werden die Überschriften für jedes Resultset der Abfrage einmal gedruckt. Mit -1 können Sie angeben, dass keine Überschriften gedruckt werden sollen. Falls -1 verwendet wird, darf zwischen dem Parameter und der Einstellung kein Leerzeichen stehen (**-h-1**und nicht **-h -1**).  
   
  **-s** *col_separator*  
- Gibt das Spaltentrennzeichen an. Standardmäßig wird ein Leerzeichen verwendet. Verwendung von Zeichen, die für das Betriebssystem eine besondere Bedeutung haben (z. B. |; & \< >), müssen Sie die Zeichen in doppelte Anführungszeichen (") setzen.  
+ Gibt das Spaltentrennzeichen an. Standardmäßig wird ein Leerzeichen verwendet. Um Zeichen zu verwenden, die für das Betriebssystem eine besondere Bedeutung haben (z. B. |; & \< >), schließen Sie das Zeichen in doppelte Anführungszeichen (").  
   
  **-w** *column_width*  
  Ermöglicht dem Benutzer, die Bildschirmbreite für die Ausgabe festzulegen. Die Standardeinstellung ist 80 Zeichen. Wenn eine Ausgabezeile die maximale Bildschirmbreite erreicht hat, wird die Zeile umbrochen.  
@@ -198,7 +198,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="remarks"></a>Hinweise  
  Das Hilfsprogramm **osql** wird direkt vom Betriebssystem aus mit den hier aufgelisteten Optionen gestartet, wobei bei den Optionen zwischen Groß- und Kleinschreibung unterschieden wird. Nachdem **osql**gestartet wurde, akzeptiert das Hilfsprogramm SQL-Anweisungen und sendet diese interaktiv an [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Die Ergebnisse werden formatiert und auf dem Bildschirm angezeigt (**stdout**). Verwenden Sie QUIT oder EXIT zum Beenden von **osql**.  
   
- Wenn Sie einen Benutzernamen nicht angeben, wenn Sie starten **Osql**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] überprüft, ob die Umgebungsvariablen und verwendet diese, z. B. **Osqluser = (*`user`*)** oder **Osqlserver = (*`server`*)**. Wenn keine Umgebungsvariablen festgelegt sind, wird der Benutzername der Arbeitsstation verwendet. Wenn Sie keinen Server angeben, wird der Name der Arbeitsstation verwendet.  
+ Wenn Sie einen Benutzernamen nicht angeben, zu Beginn **Osql**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] überprüft, ob die Umgebungsvariablen und verwendet diese, z. B. **Osqluser = (*`user`*)** oder **Osqlserver = (*`server`*)**. Wenn keine Umgebungsvariablen festgelegt sind, wird der Benutzername der Arbeitsstation verwendet. Wenn Sie keinen Server angeben, wird der Name der Arbeitsstation verwendet.  
   
  Falls weder die Option **-U** noch die Option **-P** verwendet wird, versucht [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , die Verbindung mithilfe des [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows-Authentifizierungsmodus herzustellen. Die Authentifizierung basiert auf dem [!INCLUDE[msCoName](../includes/msconame-md.md)] -Windows-Konto des Benutzers, der **osql**ausführt.  
   

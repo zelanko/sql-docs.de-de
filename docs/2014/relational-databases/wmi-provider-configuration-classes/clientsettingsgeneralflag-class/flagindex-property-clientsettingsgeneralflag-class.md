@@ -1,5 +1,5 @@
 ---
-title: FlagIndex-Eigenschaft (ClientSettingsGeneralFlag-Klasse) | Microsoft Docs
+title: FlagIndex-Eigenschaft (ClientSettingsGeneralFlag-Klasse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - FlagIndex property
 ms.assetid: 1bf59a55-f4c4-491c-8385-17276c3fe14b
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8dd3a540bac68014f2ad0121f1803a2f7e69af87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 0172b1a2caf3d39ef5a17512a2a2334ada4ed353
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147852"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160081"
 ---
 # <a name="flagindex-property-clientsettingsgeneralflag-class"></a>FlagIndex-Eigenschaft (ClientSettingsGeneralFlag-Klasse)
   Ruft den Indexwert des Flags ab.  
@@ -46,7 +46,7 @@ object
  Ein Objekt der [ClientSettingsGeneralFlag-Klasse](clientsettingsgeneralflag-class.md) , das ein allgemeines Flag für die Servereinstellungen darstellt.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
- Ein u`int32` Wert, der den Indexwert des Flags angibt.  
+ Ein u`int32` -Wert, der den Indexwert des Flags angibt.  
   
 ## <a name="remarks"></a>Hinweise  
   

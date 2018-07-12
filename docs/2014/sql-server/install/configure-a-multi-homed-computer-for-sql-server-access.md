@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], multi-homed computer
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 72ea93688420a150d0193c9f91feb26dad91cffe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: aa768aea67d95a107380600fee663f2f0ffa5ee8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147819"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183897"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Konfigurieren eines mehrfach vernetzten Computers für SQL Server-Zugriff
   In einem Szenario, in dem ein Server eine Verbindung zu mindestens zwei Netzwerken oder Netzwerksubnetzen bereitstellen muss, wird normalerweise ein mehrfach vernetzter Computer verwendet. Häufig befindet sich dieser Computer in einem Umkreisnetzwerk (auch als DMZ, Demilitarized Zone oder überwachtes Subnetz bezeichnet). In diesem Thema wird beschrieben, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Windows-Firewall mit erweiterter Sicherheit konfiguriert werden, um Netzwerkverbindungen zu einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einer mehrfach vernetzten Umgebung bereitzustellen.  
@@ -61,7 +61,7 @@ ms.locfileid: "36147819"
   
 1.  Auf dem Computer, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist installiert, klicken Sie auf **starten**, klicken Sie auf **ausführen**, Typ `cmd` und dann [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
   
-2.  Geben Sie im Eingabeaufforderungsfenster `ipconfig,` und drücken Sie dann die EINGABETASTE, um die auf diesem Computer verfügbaren IP-Adressen aufzulisten.  
+2.  Geben Sie im Eingabeaufforderungsfenster Befehl `ipconfig,` und drücken Sie dann die EINGABETASTE, um die IP-Adressen auf diesem Computer verfügbaren aufzulisten.  
   
     > [!NOTE]  
     >  Durch den **ipconfig** -Befehl werden manchmal zahlreiche mögliche Verbindungen aufgelistet, einschließlich getrennter Verbindungen. Der **ipconfig** -Befehl kann sowohl IPv4- als auch IPv6-Adressen auflisten.  

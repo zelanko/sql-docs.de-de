@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], defaults
 - default security
@@ -17,13 +17,13 @@ ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f241a4df7cdf90fa1fb05f99ba932877bdce7d05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ec8661b0a5c5362c83a767975e8c01a61779df1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148996"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149941"
 ---
 # <a name="predefined-roles"></a>Vordefinierte Rollen
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wird mit vordefinierten Rollen installiert, mit denen Sie den Zugriff auf Berichtsservervorgänge gewähren können. Jede vordefinierte Rolle beschreibt eine Auflistung verwandter Aufgaben. Sie können Gruppen und Benutzerkonten vordefinierten Rollen zuweisen, um den unmittelbaren Zugriff auf Berichtsservervorgänge bereitzustellen.  
@@ -192,7 +192,7 @@ ms.locfileid: "36148996"
 |Task|Description|  
 |----------|-----------------|  
 |Berichtsdefinitionen ausführen|Ausführung der Berichtsdefinition, ohne die Veröffentlichung auf einem Berichtsserver zu starten.|  
-|Aufträge verwalten|Aufträge, die ausgeführt werden, anzeigen und abbrechen. Weitere Informationen finden Sie unter [Verwalten eines Prozesses ausführen](../subscriptions/manage-a-running-process.md).|  
+|Aufträge verwalten|Aufträge, die ausgeführt werden, anzeigen und abbrechen. Weitere Informationen finden Sie unter [Verwalten eines ausgeführten Prozesses](../subscriptions/manage-a-running-process.md).|  
 |Berichtsservereigenschaften verwalten|Eigenschaften für den Berichtsserver und für vom Berichtsserver verwaltete Elemente anzeigen und ändern.<br /><br /> Mit dieser Aufgabe können Sie den Berichts-Manager umbenennen, Meine Berichte aktivieren und Standardwerte für den Berichtsverlauf festlegen.|  
 |Rollen verwalten|Rollendefinitionen erstellen, anzeigen, ändern und löschen.<br /><br /> Mitglieder der **Systemadministrator** -Rolle können mithilfe der Seite Siteeinstellungen Rollen verwalten.|  
 |Freigegebene Zeitpläne verwalten|Freigegebene Zeitpläne, mit denen Berichte ausgeführt oder aktualisiert werden, erstellen, anzeigen, ändern und löschen.|  

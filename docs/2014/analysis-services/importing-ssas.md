@@ -1,5 +1,5 @@
 ---
-title: Importieren (SSAS) | Microsoft Docs
+title: Importieren (SSAS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.importing.f1
 ms.assetid: f1681be4-c543-4e77-875d-b13eeb75cf77
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 72faf98eb62b72c18243bb190951f630bbe85218
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e41bc4470ec16fdeecbca2e978d77e6c7dc7ef09
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149743"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259576"
 ---
 # <a name="importing-ssas"></a>Importieren (SSAS)
   Auf dieser Seite des **Tabellenimport-Assistenten** können Sie den Status des Importvorgangs anzeigen. Um im [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf den Assistenten zuzugreifen, klicken Sie im Menü **Modell** auf **Aus Datenquelle importieren**.  
@@ -32,7 +32,7 @@ ms.locfileid: "36149743"
   
 |Spalte|Description|  
 |------------|-----------------|  
-|**Arbeitsaufgabe**|Zeigt den Namen der Tabelle oder der Sicht an, die importiert wird.|  
+|**Arbeitselement**|Zeigt den Namen der Tabelle oder der Sicht an, die importiert wird.|  
 |**Status**|Zeigt an, ob die Tabelle oder die Sicht erfolgreich importiert wurde, und gibt die Anzahl der importierten Zeilen an.|  
 |**MessageBox**|Wenn der Tabellen- oder Sichtimport fehlerhaft war, wird hier ein Link zu weiteren Informationen angezeigt. Diese Informationen werden im Fenster Details angezeigt.<br /><br /> Wenn Sie die Tabelle oder die Sicht erneut importieren möchten, beenden Sie den Assistenten und führen ihn erneut aus.|  
   

@@ -1,5 +1,5 @@
 ---
-title: Actions-Element (ASSL) | Microsoft Docs
+title: Actions-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Actions element
 ms.assetid: 100a4209-2c22-4902-a8ca-f2bd99bf8fbb
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 109a6ea97218a75d64a0b9e84371e8e3667134ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 583f265b0fb45b22cd0f6b3d20b577276d70ae92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149518"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183227"
 ---
 # <a name="actions-element-assl"></a>Actions-Element (ASSL)
   Enthält die Auflistung der Aktionen für eine [Cube](../objects/cube-element-assl.md) oder [Perspektive](../objects/perspective-element-assl.md) Element.  
@@ -72,7 +72,7 @@ ms.locfileid: "36149518"
 |[Perspektive](../data-type/perspectiveaction-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Die entsprechenden Elemente im Objektmodell von Analysis Management Objects (AMO) sind <xref:Microsoft.AnalysisServices.ActionCollection> und <xref:Microsoft.AnalysisServices.PerspectiveActionCollection>.  
+ Die entsprechenden Elemente im Analysis Management Objects (AMO)-Objektmodell sind <xref:Microsoft.AnalysisServices.ActionCollection> und <xref:Microsoft.AnalysisServices.PerspectiveActionCollection>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sammlungen &#40;ASSL&#41;](collections-assl.md)  

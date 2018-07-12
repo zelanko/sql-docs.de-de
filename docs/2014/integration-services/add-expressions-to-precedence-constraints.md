@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen von Ausdrücken zu Rangfolgeneinschränkungen | Microsoft Docs
+title: Hinzufügen von Ausdrücken zu Rangfolgeneinschränkungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - precedence executables [Integration Services]
 - precedence constraints [Integration Services], adding expressions
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - expressions [Integration Services], constraints
 ms.assetid: 5574d89a-a68e-4b84-80ea-da93305e5ca1
 caps.latest.revision: 43
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4066b5b5c6ebd18d6dbbf02f6a150770d5e3b51f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc4a614af4bd20a4209d323902c17db1c0a61ece
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147962"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161041"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>Hinzufügen von Ausdrücken zu Rangfolgeneinschränkungen
   Eine Rangfolgeneinschränkung kann mithilfe eines Ausdrucks die Einschränkung zwischen zwei ausführbaren Dateien definieren, nämlich der ausführbaren Datei der Rangfolge und der eingeschränkten ausführbaren Datei. Bei den ausführbaren Dateien kann es sich um Tasks oder Container handeln. Der Ausdruck kann separat oder in Kombination mit dem Ausführungsergebnis der ausführbaren Datei der Rangfolge verwendet werden. Das Ausführungsergebnis einer ausführbaren Datei ist Erfolg oder Fehler. Wenn Sie das Ausführungsergebnis einer Rangfolgeneinschränkung konfigurieren, können Sie das Ausführungsergebnis auf `Success`, `Failure` oder `Completion` festlegen. Für `Success` muss die ausführbare Datei der Rangfolge erfolgreich ausgeführt werden, für `Failure` muss die ausführbare Datei der Rangfolge mit einem Fehler ausgeführt werden. `Completion` zeigt an, dass die eingeschränkte ausführbare Datei unabhängig von einer erfolgreichen Ausführung des Rangfolgentasks ausgeführt werden sollte. Weitere Informationen finden Sie unter [Precedence Constraints](control-flow/precedence-constraints.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "36147962"
   
  ![Rangfolgeneinschränkung zwischen zwei Tasks](media/mw-dts-03.gif "Rangfolgeneinschränkung zwischen zwei Tasks")  
   
- Ausführbare Dateien können auch mithilfe mehrerer Rangfolgeneinschränkungen miteinander verlinkt werden, die unterschiedliche Ausdrücke enthalten. Beispielsweise sind in der folgenden Abbildung Task B und Task C mit Task A durch Rangfolgeneinschränkungen verlinkt, die Ausführungsergebnisse und Ausdrücke verwenden. Beide Einschränkungswerte sind festgelegt `Success.` eine rangfolgeneinschränkung enthält den Ausdruck `@X >== @Z`, und die andere rangfolgeneinschränkung des Ausdrucks `@X < @Z`. In Abhängigkeit von den Werten der `X`-Variablen und der `Z`-Variablen wird Task C oder Task B ausgeführt.  
+ Ausführbare Dateien können auch mithilfe mehrerer Rangfolgeneinschränkungen miteinander verlinkt werden, die unterschiedliche Ausdrücke enthalten. Beispielsweise sind in der folgenden Abbildung Task B und Task C mit Task A durch Rangfolgeneinschränkungen verlinkt, die Ausführungsergebnisse und Ausdrücke verwenden. Beide Einschränkungswerte sind festgelegt, um `Success.` eine rangfolgeneinschränkung enthält den Ausdruck `@X >== @Z`, und die andere rangfolgeneinschränkung des Ausdrucks `@X < @Z`. In Abhängigkeit von den Werten der `X`-Variablen und der `Z`-Variablen wird Task C oder Task B ausgeführt.  
   
  ![Ausdrücke für Rangfolgeneinschränkungen](media/mw-dts-04.gif "Ausdrücke für Rangfolgeneinschränkungen")  
   

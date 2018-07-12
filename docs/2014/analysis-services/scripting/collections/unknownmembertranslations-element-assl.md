@@ -1,5 +1,5 @@
 ---
-title: UnknownMemberTranslations-Element (ASSL) | Microsoft Docs
+title: UnknownMemberTranslations-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - UnknownMemberTranslations element
 ms.assetid: 72920843-2d43-4ff4-b38e-19c9a7451cb2
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: acd95365eef8c2655748dffac5f75ce71e40258f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 331f61e1e0cea88ee8dfb58b5d69333f99961be4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149164"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159341"
 ---
 # <a name="unknownmembertranslations-element-assl"></a>UnknownMemberTranslations-Element (ASSL)
   Enthält die Auflistung der Übersetzungen für die Beschriftung des der [UnknownMember](../objects/member-element-assl.md) -Elements einer Dimension.  
@@ -64,7 +64,7 @@ ms.locfileid: "36149164"
 |Untergeordnete Elemente|[UnknownMemberTranslation](../objects/translation-element-assl.md) des Typs [Übersetzung](../data-type/translation-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element, das das übergeordnete Element des entspricht `UnknownMemberTranslations` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Dimension>.  
+ Das Element, das dem übergeordneten entspricht `UnknownMemberTranslations` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Translation-Datentyp &#40;ASSL&#41;](../data-type/translation-data-type-assl.md)   

@@ -1,5 +1,5 @@
 ---
-title: WMI-Anbieter für Ereignisse Serverkonzepte | Microsoft Docs
+title: WMI-Anbieter für Ereignisse Serverkonzepte | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - events [WMI]
 ms.assetid: 80767fe0-32ac-406a-81a0-8212cd6ce7e4
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5ac66540e137a0b199280dfe86aeb204ff68b31c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 68ec2984b3b80b1ef0aa4065d6aa067aa8cea784
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149343"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211170"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>Konzepte des WMI-Anbieters für Serverereignisse
   Mit dem WMI-Anbieter für Serverereignisse können Sie Ereignisse in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz mithilfe von WMI (Windows Management Instrumentation) überwachen.  

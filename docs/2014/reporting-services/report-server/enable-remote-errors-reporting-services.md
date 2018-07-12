@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - remote data source [Reporting Services]
 - EnableRemoteError server property
@@ -16,16 +16,16 @@ ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 14586062cadbdf08646ff7a6080b2849d2900d7d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78a1d77440242eb96ca3ced08518829b2913a3a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149803"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159871"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>Aktivieren von Remotefehlern (Reporting Services)
-  Sie können Servereigenschaften auf einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] festlegen, um zusätzliche Informationen zu auf Remoteservern aufgetretenen Fehlerbedingungen zurückzugeben. Wenn in einer Fehlermeldung der Text "Um weitere Informationen zu diesem Fehler zu erhalten, navigieren Sie zum Berichtsserver auf dem lokalen Servercomputer, oder aktivieren Sie Remotefehler." angezeigt wird, können Sie die `EnableRemoteErrors`-Eigenschaft festlegen, um zusätzliche Informationen zum Behandeln des Problems zu erhalten. Weitere Informationen finden Sie unter [Systemeigenschaften des Berichtsservers](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+  Sie können Servereigenschaften auf einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] festlegen, um zusätzliche Informationen zu auf Remoteservern aufgetretenen Fehlerbedingungen zurückzugeben. Wenn in einer Fehlermeldung der Text "Um weitere Informationen zu diesem Fehler zu erhalten, navigieren Sie zum Berichtsserver auf dem lokalen Servercomputer, oder aktivieren Sie Remotefehler." angezeigt wird, können Sie die `EnableRemoteErrors`-Eigenschaft festlegen, um zusätzliche Informationen zum Behandeln des Problems zu erhalten. Weitere Informationen finden Sie unter [Berichtsserver-Systemeigenschaften](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
  **In diesem Thema:**  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36149803"
   
 ##  <a name="bkmk_mgtStudio"></a> Aktivieren von Remotefehlern durch SQL Server Management Studio (Einheitlicher Modus)  
   
-1.  Starten Sie Management Studio, und stellen Sie eine Verbindung mit einer Berichtsserverinstanz her. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../tools/connect-to-a-report-server-in-management-studio.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+1.  Starten Sie Management Studio, und stellen Sie eine Verbindung mit einer Berichtsserverinstanz her. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../tools/connect-to-a-report-server-in-management-studio.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
 2.  Klicken Sie mit der rechten Maustaste auf den Berichtsserverknoten, und wählen Sie **Eigenschaften**aus.  
   
@@ -115,6 +115,6 @@ ms.locfileid: "36149803"
 ##  <a name="bkmk_ConfigurationInfo"></a> Ändern der ConfigurationInfo-Tabelle (Einheitlicher Modus)  
   
 1.  > [!NOTE]  
-    >  Können Sie bearbeiten die **ConfigurationInfo** -Tabelle in der Berichtsserver-Datenbank festlegen `EnableRemoteErrors` auf `True`, aber wenn der Berichtsserver aktiv verwendet wird, verwenden Sie SQL Server Management Studio oder ein Skript zum Ändern der Einstellungen. Wenn Sie die Einstellung in der Datenbank ändern, müssen Sie den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienst neu starten, bevor die Änderungen wirksam werden.  
+    >  Können Sie bearbeiten die **ConfigurationInfo** -Tabelle in der Berichtsserver-Datenbank festlegen `EnableRemoteErrors` zu `True`, aber wenn der Berichtsserver aktiv verwendet wird, verwenden Sie SQL Server Management Studio oder ein Skript zum Ändern der Einstellungen. Wenn Sie die Einstellung in der Datenbank ändern, müssen Sie den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienst neu starten, bevor die Änderungen wirksam werden.  
   
   

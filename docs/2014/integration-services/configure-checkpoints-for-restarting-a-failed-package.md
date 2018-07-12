@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren von Prüfpunkten zum erneuten Starten eines fehlerhaften Pakets | Microsoft Docs
+title: Konfigurieren von Prüfpunkten zum erneuten Starten eines fehlerhaften Pakets | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - checkpoints [Integration Services]
 - restarting packages
 - starting packages
 ms.assetid: 9afffa5a-d803-4653-8afc-386453fc163f
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3c2ae5affa24087bbb0511bc29559bba88f86cdb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 254e444658ca179319f2af93a414620e7dfa9ead
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150948"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148741"
 ---
 # <a name="configure-checkpoints-for-restarting-a-failed-package"></a>Konfigurieren von Prüfpunkten zum erneuten Starten eines fehlerhaften Pakets
   Sie können ein [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket so konfigurieren, dass nicht das gesamte Paket erneut ausgeführt wird, sondern ab dem Punkt, an dem ein Fehler auftrat. Hierzu legen Sie die Eigenschaften fest, die für Prüfpunkte gelten.  
@@ -49,13 +49,13 @@ ms.locfileid: "36150948"
         > [!IMPORTANT]  
         >  Falls die Prüfpunktdatei nicht verfügbar ist, tritt ein Fehler auf.  
   
-    -   Wählen Sie `IfExists` das Paket neu starten, nur dann, wenn die Prüfpunktdatei verfügbar ist.  
+    -   Wählen Sie `IfExists` auf das Paket nur neu, wenn die Prüfpunktdatei verfügbar ist.  
   
 8.  Konfigurieren Sie die Tasks und Container, von denen das Paket neu gestartet werden kann.  
   
     -   Klicken Sie mit der rechten Maustaste auf einen Task oder Container, und klicken Sie anschließend auf **Eigenschaften**.  
   
-    -   Legen Sie die Eigenschaft "FailPackageOnFailure" auf `True` für jeden ausgewählten Tasks und Container.  
+    -   Legen Sie die FailPackageOnFailure-Eigenschaft auf `True` für alle ausgewählten Tasks und Container.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Neustarten von Paketen mit Prüfpunkten](packages/restart-packages-by-using-checkpoints.md)  

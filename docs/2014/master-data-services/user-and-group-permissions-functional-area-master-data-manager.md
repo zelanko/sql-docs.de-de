@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a48d3a18632f54367d1cac4983939735a5c73dad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 76002bcb850104bfaaafa86f4264fed91231a711
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151382"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156351"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>Funktionsbereich "Benutzer- und Gruppenberechtigungen" (Master Data Manager)
   Im Funktionsbereich "Benutzer- und Gruppenberechtigungen" können Administratoren die Berechtigung für Funktionsbereiche, Attribute (auf der Registerkarte "Modelle") und Elemente (auf der Registerkarte "Hierarchieelemente") gewähren. Überlappende Berechtigungen werden aufgelöst, um die Berechtigung eines Benutzers für jeden einzelnen Attributwert zu bestimmen.  
@@ -36,7 +36,7 @@ ms.locfileid: "36151382"
   
  [Zuweisen von Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../../2014/master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
- [Modellobjektberechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)  
+ [Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)  
   
  [Zuweisen von Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36151382"
   
  [Sofortiges Anwenden von Elementberechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/immediately-apply-member-permissions-master-data-services.md)  
   
- [Wie Berechtigungen bestimmt &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
+ [Wie Berechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
   
  [Problembehandlung für die Master Data Manager-Sicherheit](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-master-data-manager-security-master-data-services.aspx)  
   

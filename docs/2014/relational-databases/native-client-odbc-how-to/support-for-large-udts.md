@@ -1,26 +1,24 @@
 ---
-title: Unterstützung für große UDTs | Microsoft Docs
+title: Unterstützung für große UDTs | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 621b6d13-10f1-47d0-b63c-7adb6ab904e0
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 672da57ed995d872bf952bc7126b56282ad12312
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2626ba94c971f3d31b592e692da3d9fef7227f05
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149886"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409989"
 ---
 # <a name="support-for-large-udts"></a>Unterstützung für große UDTs
   Diese Beispielprojektmappe umfasst zwei Projekte. Ein Projekt erstellt eine Assembly (DLL) aus C#-Quellcode. Diese Assembly enthält den CLR-Typ. Der Datenbank wird eine Tabelle hinzugefügt. Eine Spalte in der Tabelle ist von einem in der Assembly definierten Typ. Standardmäßig wird in diesem Beispiel die master-Datenbank verwendet. Das zweite Projekt ist eine systemeigene C-Anwendung, die Daten aus der Tabelle liest.  
@@ -32,7 +30,7 @@ ms.locfileid: "36149886"
 ## <a name="example"></a>Beispiel  
  Das erste Codelisting ist der C#-Quellcode. Fügen Sie den Code in eine Datei mit dem Namen LargeStringUDT.cs ein, und kompilieren Sie ihn zu einer DLL. Kopieren Sie LargeStringUDT.dll in das Stammverzeichnis des Laufwerks C.  
   
- Die zweite ([!INCLUDE[tsql](../../includes/tsql-md.md)]) Codelisting erstellt die Assembly in der master-Datenbank.  
+ Die zweite ([!INCLUDE[tsql](../../includes/tsql-md.md)]) Codebeispiel erstellt die Assembly in der master-Datenbank.  
   
  Kompilieren Sie das zweite Codelisting (C++) mit odbc32.lib und user32.lib. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   

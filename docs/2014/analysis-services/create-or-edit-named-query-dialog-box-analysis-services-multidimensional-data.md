@@ -1,5 +1,5 @@
 ---
-title: Erstellen oder bearbeiten (Dialogfeld) für die benannte Abfrage (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Erstellen oder bearbeiten (Dialogfeld) für die benannte Abfrage (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.createnamedquery.f1
 helpviewer_keywords:
 - Create Named Query dialog box
 ms.assetid: 8e192ad6-a0b1-4e21-bb3f-087c93e62941
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f97b06c3fb67080e7ebc3adc3c1e4d84d3fdea61
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fe4ebd6e0ecaff7d6aed1aecef906bb1a8519e98
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149320"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149621"
 ---
 # <a name="create-or-edit-named-query-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld "Benannte Abfrage erstellen oder bearbeiten" (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Benannte Abfrage erstellen/bearbeiten** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie eine benannte Abfrage im **Datenquellensicht-Designer** erstellen bzw. bearbeiten. Eine benannte Abfrage kann als Tabelle behandelt werden, auf der andere [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekte basieren können. Zum Anzeigen des Dialogfelds **Benannte Abfrage erstellen/bearbeiten** führen Sie einen der folgenden Schritte aus:  

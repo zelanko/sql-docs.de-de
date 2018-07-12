@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text indexes [SQL Server], backing up
 - full-text search [SQL Server], back up and restore
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - restore operations [full-text search]
 ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
 caps.latest.revision: 61
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7ef9e88b0ca7be951f4c8c3a4fa3e2b2560c5110
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 9b2797c4b9001d05b953a33aff2c03e9add18c38
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149867"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155871"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>Sichern und Wiederherstellen von Volltextkatalogen und Indizes
   In diesem Thema wird erläutert, wie Sie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erstellte Volltextindizes sichern und wiederherstellen. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist der Volltextkatalog ein logisches Konzept und befindet sich nicht in einer Dateigruppe. Um in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]einen Volltextkatalog zu sichern, müssen Sie daher jede Dateigruppe identifizieren, die einen Volltextindex enthält, der zum Katalog gehört. Dann müssen Sie diese Dateigruppen einzeln sichern.  

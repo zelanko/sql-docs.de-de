@@ -1,40 +1,38 @@
 ---
-title: Lesen einer FILESTREAM-Spalte in eine Datei mithilfe von IBCPSession (OLE DB) | Microsoft Docs
+title: Lesen einer FILESTREAM-Spalte in die Datei mithilfe von IBCPSession (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ab3ce02a-549d-4e01-87b9-d15281fba349
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 872a6abbb963338b75e77ff2656416da1af8d0e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2298503d85090cebc234fcaedc39bb9fee61cf4b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059633"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412869"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>Lesen einer FILESTREAM-Spalte in eine Datei mithilfe von IBCPSession (OLE DB)
   Dieses Beispiel liest mithilfe der IBCPSession-Schnittstelle eine FILESTREAM-Spalte in eine Datei und schreibt eine Formatdatei.  
   
- Weitere Informationen zur Filestream-Funktion finden Sie unter [FILESTREAM-Unterstützung &#40;OLE DB-&#41;](../../native-client/ole-db/filestream-support-ole-db.md).  
+ Weitere Informationen zur Filestream-Funktion finden Sie unter [FILESTREAM-Unterstützung &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Beispiel  
  Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
  Erstellen Sie die Tabelle, aus der in diesem Beispiel gelesen wird, mithilfe eines der folgenden Beispiele:  
   
--   [Senden von Daten an eine FILESTREAM-Spalte, die mithilfe einer ISequentialStream-Schnittstelle, die an ICommandText Parameter gebunden &#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [Senden von Daten an eine FILESTREAM-Spalte mithilfe einer ISequentialStream-Schnittstelle, die an ICommandText Parameter gebunden &#40;OLE-DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [Senden von Daten an eine FILESTREAM-Spalte mithilfe von IRowsetFastUpload &#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [Senden von Daten an eine FILESTREAM-Spalte, die mithilfe von IRowsetFastUpload &#40;OLE-DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  Kopieren Sie das erste Codelisting, und fügen Sie es in eine Datei mit dem Namen ISSHelper.h ein.  
   
