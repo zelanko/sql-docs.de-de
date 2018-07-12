@@ -1,5 +1,5 @@
 ---
-title: Datenquellen-Assistent F1-Hilfe (Analysis Services) | Microsoft Docs
+title: Datenquellen-Assistent F1-Hilfe (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Source Wizard
 ms.assetid: 0ed3caf1-249d-4307-b588-d8a0ef315faa
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cd67b92ce5a7444e8805aada9428b838526690a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a23004d60ecaa7b2961b99d6c489b9b21376e7aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161009"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278436"
 ---
 # <a name="data-source-wizard-f1-help-analysis-services"></a>Datenquellen-Assistent (F1-Hilfe) (Analysis Services)
   Erstellen Sie mithilfe des Datenquellen-Assistenten eine Datenquelle zur Verwendung in den folgenden Business Intelligence-Projekten in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]:  
@@ -40,7 +40,7 @@ ms.locfileid: "36161009"
   
 -   [Datenquellen von vorhandenen Objekten &#40;Datenquellen-Assistenten&#41; &#40;Analysis Services&#41;](data-sources-from-existing-objects-data-source-wizard-analysis-services.md)  
   
--   [Fertigstellen des Assistenten &#40;Datenquellen-Assistenten&#41; &#40;Analysis Services&#41;](completing-the-wizard-data-source-wizard-analysis-services.md)  
+-   [Der Assistent &#40;Datenquellen-Assistenten&#41; &#40;Analysis Services&#41;](completing-the-wizard-data-source-wizard-analysis-services.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenquellen in mehrdimensionalen Modellen](multidimensional-models/data-sources-in-multidimensional-models.md)   

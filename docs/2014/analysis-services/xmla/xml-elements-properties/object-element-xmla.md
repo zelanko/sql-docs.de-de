@@ -1,5 +1,5 @@
 ---
-title: Objekt-Element (XMLA) | Microsoft Docs
+title: Objekt-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Object element
 ms.assetid: 99470537-2c4a-4072-9613-940c41c12487
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 02d27280ab74e907558c07ece457d114f8dcbd1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 678838cd084fb8d3c7905f3e7363059fea28f541
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161412"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229580"
 ---
 # <a name="object-element-xmla"></a>Object-Element (XMLA)
   Enthält einen vom übergeordneten Element verwendeten Objektverweis.  
@@ -68,7 +68,7 @@ ms.locfileid: "36161412"
 ## <a name="remarks"></a>Hinweise  
  Die Reihenfolge, in der Bezeichner angezeigt werden, ist nicht wichtig.  
   
- Für `Alter` Elemente, die Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] wird als Standardobjekt verwendet, wenn die `Object` -Element nicht angegeben.  
+ Für `Alter` Elementen wird die Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] wird als Standardobjekt verwendet, wenn die `Object` -Element nicht angegeben ist.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;XMLA&#41;](xml-elements-properties.md)  
