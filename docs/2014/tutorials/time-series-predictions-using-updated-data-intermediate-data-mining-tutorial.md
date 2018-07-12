@@ -1,5 +1,5 @@
 ---
-title: Zeitreihenvorhersagen mit aktualisierten Daten (Data Mining-Lernprogramm für fortgeschrittene) | Microsoft Docs
+title: Zeitreihenvorhersagen mit aktualisierten Daten (fortgeschrittene Data Mining-Tutorial) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,40 +8,40 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: af73681d-ce1c-4b6e-b195-6df3d2fb5275
 caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 3478a52657e26fa8e376e88bc83a5c4d9813cdc8
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 8739f9be1ad015471017d17947ece1586663959b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312358"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278313"
 ---
 # <a name="time-series-predictions-using-updated-data-intermediate-data-mining-tutorial"></a>Erstellen von Zeitreihenvorhersagen mit aktualisierten Daten (Data Mining-Lernprogramm für Fortgeschrittene)
     
 ## <a name="creating-predictions-using-the-extended-sales-data"></a>Erstellen von Vorhersagen aus erweiterten Verkaufsdaten  
  In dieser Lektion erstellen Sie eine Vorhersageabfrage, durch die dem Modell die neuen Umsatzdaten hinzugefügt werden. Indem Sie das Modell mit neuen Daten erweitern, erhalten Sie aktuelle Vorhersagen, in denen die neuesten Datenpunkte enthalten sind.  
   
- Erstellen von zeitreihenvorhersagen, die neue Daten zu verwenden, ist einfach: Sie fügen Sie einfach den Parameter EXTEND_MODEL_CASES auf die [PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx) funktionieren, geben Sie die Quelle der neuen Daten und wie viele Vorhersagen, die Sie abrufen möchten.  
+ Erstellen von zeitreihenvorhersagen, die neue Daten zu verwenden ist einfach: Fügen Sie einfach den Parameter EXTEND_MODEL_CASES auf die [PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx) funktionieren, geben Sie die Quelle für die neuen Daten und wie viele Vorhersagen, die Sie abrufen möchten.  
   
 > [!WARNING]  
 >  Der Parameter EXTEND_MODEL_CASES ist optional; standardmäßig wird das Modell immer dann erweitert, wenn Sie eine Vorhersageabfrage für eine Zeitreihe erstellen, indem neue Daten als Eingaben verknüpft werden.  
   
 #### <a name="to-build-the-prediction-query-and-add-new-data"></a>So erstellen Sie die Vorhersageabfrage und fügen neue Daten hinzu  
   
-1.  Wenn das Modell nicht bereits geöffnet ist, doppelklicken Sie auf die Forecasting-Struktur und im Data Mining-Designer, klicken Sie auf die **Miningmodellvorhersage** Registerkarte.  
+1.  Wenn das Modell nicht bereits geöffnet ist, doppelklicken Sie auf die Forecasting-Struktur, und klicken Sie im Data Mining-Designer auf die **Miningmodellvorhersage** Registerkarte.  
   
-2.  In der **Miningmodell** Bereich, der das Modell Forecasting bereits ausgewählt sein sollte. Wenn es nicht aktiviert ist, klicken Sie auf **Modell auswählen**, und wählen Sie dann das Modell Forecasting.  
+2.  In der **Miningmodell** Bereich, der das Modell Vorhersagen bereits ausgewählt sein sollte. Wenn sie nicht ausgewählt ist, klicken Sie auf **Modell auswählen**, und wählen Sie dann das Modell Vorhersagen.  
   
 3.  In der **Eingabetabelle(n)** Bereich, klicken Sie auf **Falltabelle auswählen**.  
   
 4.  In der **Tabelle auswählen** Dialogfeld wählen die Datenquelle [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)].  
   
-     Aus der Liste der Datenquellensichten, wählen Sie NewSalesData, und klicken Sie dann auf **OK**.  
+     In der Liste mit Datenquellensichten NewSalesData auswählen, und klicken Sie dann auf **OK**.  
   
 5.  Mit der rechten Maustaste in der Oberfläche des Entwurfsbereichs, und wählen Sie **Verbindungen ändern**.  
   
@@ -49,17 +49,17 @@ ms.locfileid: "36312358"
   
     -   Ordnen Sie die ReportingDate-Spalte im Miningmodell der NewDate-Spalte in den Eingabedaten an.  
   
-    -   Ordnen Sie die Menge-Spalte im Miningmodell der NewAmount-Spalte in den Eingabedaten an.  
+    -   Ordnen Sie die Menge-Spalte im Miningmodell der Spalte NewAmount in den Eingabedaten an.  
   
-    -   Ordnen Sie die Menge-Spalte im Miningmodell der NewQty-Spalte in den Eingabedaten an.  
+    -   Ordnen Sie die Menge-Spalte im Miningmodell der Spalte NewQty in den Eingabedaten an.  
   
-    -   Der reihenspalte in den Eingabedaten die ModelRegion-Spalte im Miningmodell zuordnen.  
+    -   Ordnen Sie die ModelRegion-Spalte im Miningmodell der Spalte "Reihe" in den Eingabedaten an.  
   
 7.  Nun erstellen Sie die Vorhersageabfrage.  
   
      Fügen Sie der Vorhersageabfrage zuerst eine Spalte für die Ausgabe der Reihe hinzu, für die Vorhersage gültig ist.  
   
-    1.  Klicken Sie im Raster auf der ersten leeren Zeile unter **Quelle**, und wählen Sie dann Forecasting.  
+    1.  Klicken Sie im Raster auf der ersten leeren Zeile unter **Quelle**, und wählen Sie dann Vorhersagen.  
   
     2.  In der **Feld** Spalte wählen Model Region und für **Alias**, Typ `Model Region`.  
   
@@ -71,13 +71,13 @@ ms.locfileid: "36312358"
   
     3.  Für **Alias**, Typ **Predicted Values**.  
   
-    4.  Ziehen Sie das Feld Menge aus der **Miningmodell** -Bereich in die **Kriterium/Argument** Spalte.  
+    4.  Ziehen Sie das Feld Menge aus dem **Miningmodell** -Bereich in die **Kriterium/Argument** Spalte.  
   
-    5.  In der **Kriterium/Argument** Spalte Geben Sie hinter dem Feldnamen, den folgenden Text: **5, EXTEND_MODEL_CASES**  
+    5.  In der **Kriterium/Argument** Spalte, nach dem Namen des Felds geben Sie den folgenden Text: **5, EXTEND_MODEL_CASES**  
   
-         Der vollständige Text des der **Kriterium/Argument** Textfeld sollte wie folgt lauten: `[Forecasting].[Quantity],5,EXTEND_MODEL_CASES`  
+         Den vollständigen Text der der **Kriterium/Argument** Textfeld sollte wie folgt lauten: `[Forecasting].[Quantity],5,EXTEND_MODEL_CASES`  
   
-9. Klicken Sie auf **Ergebnisse** und überprüfen Sie die Ergebnisse.  
+9. Klicken Sie auf **Ergebnisse** und die Ergebnisse überprüfen.  
   
      Die Vorhersagen beginnen im Juli (erste Zeitscheibe nach dem Ende der ursprünglichen Daten) und enden im November (fünfte Zeitscheibe nach dem Ende der ursprünglichen Daten).  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36312358"
   
      `PredictTimeSeries([Forecasting 12].[Quantity],4,6,EXTEND_MODEL_CASES)`  
   
-3.  Klicken Sie auf **Ergebnisse** und überprüfen Sie die Ergebnisse.  
+3.  Klicken Sie auf **Ergebnisse** und die Ergebnisse überprüfen.  
   
      Nun beginnen die Vorhersagen im Oktober (vierte Zeitscheibe bei Zählung vom Ende der ursprünglichen Daten) und endet im Dezember (sechste Zeitscheibe bei Zählung vom Ende der ursprünglichen Daten).  
   
@@ -106,6 +106,6 @@ ms.locfileid: "36312358"
   
 ## <a name="see-also"></a>Siehe auch  
  [Technische Referenz für Microsoft Time Series-Algorithmus](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [Miningmodellinhalt für Zeitreihenmodelle &#40;Analysis Services – Datamining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Mingingmodellinhalt von Zeitreihenmodellen &#40;Analysis Services – Datamining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

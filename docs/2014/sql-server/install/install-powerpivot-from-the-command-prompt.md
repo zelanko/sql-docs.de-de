@@ -1,5 +1,5 @@
 ---
-title: Installieren von PowerPivot über die Eingabeaufforderung | Microsoft Docs
+title: Installieren von PowerPivot über die Eingabeaufforderung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 7adf6dfa581d10626c6513ecb2ee30d58c3bb6d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 60949c1ff0431daf988e2fd5d4a1d2b8ad41b524
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161732"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210790"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>Installieren von PowerPivot über die Eingabeaufforderung
   Sie können Setup in der Befehlszeile ausführen, um SQL Server PowerPivot für SharePoint zu installieren. Sie müssen den `/ROLE`-Parameter in den Befehl einschließen und den `/FEATURES`-Parameter ausschließen.  
@@ -42,7 +42,7 @@ ms.locfileid: "36161732"
   
  Die vorhandene Farmoption geht davon aus, dass eine SharePoint-Farm bereits vorhanden ist. Die neue Farmoption geht davon aus, dass Sie eine neue Farm erstellen; sie unterstützt die Hinzufügung einer Datenbank-Engine-Instanz in der Befehlszeilensyntax, damit Sie die Datenbank-Engine-Instanz als den Datenbankserver der Farm verwenden können.  
   
- Im Gegensatz zu den vorherigen Versionen werden alle Serverkonfigurationstasks nach der Installation ausgeführt. Wenn Sie Installations- und Konfigurationsschritte automatisieren, können Sie den Server mithilfe von PowerShell konfigurieren. Weitere Informationen finden Sie unter [PowerPivot-Konfiguration mit Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md).  
+ Im Gegensatz zu den vorherigen Versionen werden alle Serverkonfigurationstasks nach der Installation ausgeführt. Wenn Sie Installations- und Konfigurationsschritte automatisieren, können Sie den Server mithilfe von PowerShell konfigurieren. Weitere Informationen finden Sie unter [PowerPivot-Konfiguration, die mithilfe von Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md).  
   
 ## <a name="example-commands"></a>Beispielbefehle  
  Die folgenden Beispiele veranschaulichen die Verwendung jeder Option. Beispiel 1 `SPI_AS_ExistingFarm`.  
@@ -86,21 +86,21 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
     ```  
   
-3.  Ersetzen Sie die Platzhalter für \<"Domäne\Benutzername" > und \<StrongPassword > durch gültige Benutzerkonten und Kennwörter.  
+3.  Ersetzen Sie die Platzhalter für \<Domain\username > und \<StrongPassword > durch gültige Benutzerkonten und Kennwörter.  
   
-     Die `/assvaccount` und **/assvcpassword** Parameter werden zum Konfigurieren der [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] Instanz auf dem Anwendungsserver. Ersetzen Sie diese Platzhalter durch gültige Kontoinformationen.  
+     Die `/assvaccount` und **/assvcpassword** Parameter dienen zum Konfigurieren der [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] Instanz auf dem Anwendungsserver. Ersetzen Sie diese Platzhalter durch gültige Kontoinformationen.  
   
      Die **/assysadminaccounts** -Parameter muss festgelegt werden, um die Identität des Benutzers, der SQL Server-Setup ausgeführt wird. Sie müssen wenigstens einen Systemadministrator angeben. Beachten Sie, dass SQL Server-Setup keine automatischen sysadmin-Berechtigungen für Mitglieder der integrierten Gruppe "Administratoren" gewährt.  
   
 4.  Entfernen Sie Zeilenumbrüche.  
   
-5.  Wählen Sie den gesamten Befehl, und klicken Sie dann auf **Kopie** im Menü Bearbeiten.  
+5.  Wählen Sie den gesamten Befehl aus, und klicken Sie dann auf **Kopie** auf das Menü "Bearbeiten".  
   
-6.  Öffnen Sie eine Administrator-Eingabeaufforderung. Klicken Sie hierzu auf **starten**mit der rechten Maustaste auf die Eingabeaufforderung, und wählen Sie **als Administrator ausführen**.  
+6.  Öffnen Sie eine Administrator-Eingabeaufforderung. Zu diesem Zweck klicken Sie auf **starten**mit der rechten Maustaste auf die Eingabeaufforderung, und wählen Sie **als Administrator ausführen**.  
   
 7.  Navigieren Sie zum Laufwerk oder dem freigegebenem Ordner, der die SQL Server-Installationsmedien enthält.  
   
-8.  Fügen Sie den überarbeiteten Befehl in die Befehlszeile ein. Zu diesem Zweck klicken Sie auf das Symbol in der oberen linken Ecke des Eingabeaufforderungsfenster aus, zeigen Sie auf **bearbeiten**, und klicken Sie dann auf **einfügen**.  
+8.  Fügen Sie den überarbeiteten Befehl in die Befehlszeile ein. Zu diesem Zweck klicken Sie auf das Symbol in der oberen linken Ecke des Eingabeaufforderungsfenster den Befehl aus, zeigen Sie auf **bearbeiten**, und klicken Sie dann auf **einfügen**.  
   
 9. Drücken Sie **EINGABETASTE** zum Ausführen des Befehls. Warten Sie, bis Setup abgeschlossen ist. Sie können den Status von Setup im Eingabeaufforderungsfenster überwachen.  
   

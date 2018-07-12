@@ -1,5 +1,5 @@
 ---
-title: Erstellen ein vertrauenswürdiges Speicherorts für PowerPivot-Websites in der Zentraladministration | Microsoft Docs
+title: Erstellen ein vertrauenswürdiges Speicherorts für PowerPivot-Websites in der Zentraladministration | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/28/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 56bc807ef54538a0d72bab8f3136df9304b6615e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5661842742c4f0f80b56186704a6b9ac967e8db8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161430"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153331"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>Erstellen eines vertrauenswürdigen Speicherorts für PowerPivot-Websites in der Zentraladministration
   In Excel Services können Sie angeben, welche Speicherorte gültige Repositorys für Arbeitsmappen sind, die Sie auf einem SharePoint-Server öffnen. Diese Speicherorte werden als 'vertrauenswürdige Speicherorte' bezeichnet, und Sie können unterschiedliche Konfigurationseinstellungen für jeden vertrauenswürdigen Speicherort verwenden, den Sie erstellen. Bei einer Bereitstellung von PowerPivot für SharePoint sollten Sie erwägen, einen vertrauenswürdigen Speicherort für Sites zu erstellen, die PowerPivot-Arbeitsmappen enthalten, sodass Sie die Einstellungen anwenden können, die optimal für den PowerPivot-Datenzugriff geeignet sind, aber gleichzeitig die Standardeinstellungen für den Rest der Farm beibehalten können.  
@@ -29,7 +29,7 @@ ms.locfileid: "36161430"
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Sie müssen Farm- oder Dienstadministrator sein, um eine URL als vertrauenswürdigen Speicherort festzulegen.  
   
- Sie müssen die URL-Adresse der SharePoint-Website kennen, die den PowerPivot-Katalog oder eine andere Bibliothek enthält, in der die Arbeitsmappen gespeichert sind. Um die Adresse zu erhalten, öffnen Sie die Website, die die Bibliothek enthält, mit der rechten Maustaste **PowerPivot-Katalog**Option **Eigenschaften**, und klicken Sie dann den ersten Teil der Adresse (URL), die den Servernamen und die Website enthält kopieren Pfad.  
+ Sie müssen die URL-Adresse der SharePoint-Website kennen, die den PowerPivot-Katalog oder eine andere Bibliothek enthält, in der die Arbeitsmappen gespeichert sind. Um die Adresse zu erhalten, öffnen Sie die Website, die die Bibliothek enthält, mit der rechten Maustaste **PowerPivot-Katalog**Option **Eigenschaften**, und kopieren Sie im ersten Teil der Adresse (URL), die den Servernamen und die Website enthält der Pfad.  
   
 ##  <a name="overview"></a> Übersicht  
  Erste Installationen von Excel Services geben 'http://' als vertrauenswürdigen Speicherort an, was bedeutet, dass Arbeitsmappen von jeder beliebigen Website in der Farm auf dem Server geöffnet werden können. Wenn Sie eine bessere Kontrolle darüber benötigen, welche Speicherorte als vertrauenswürdig angesehen werden, können Sie neue, vertrauenswürdige Speicherorte erstellen, die bestimmten Websites in der Farm zugeordnet sind, und dann die Einstellungen und Berechtigungen für jede einzelne variieren.  
@@ -57,7 +57,7 @@ ms.locfileid: "36161430"
   
 7.  Akzeptieren Sie die Standardeinstellungen für sämtliche Eigenschaften unter Sitzungsverwaltung, Arbeitsmappeneigenschaften und Berechnungsverhalten.  
   
-8.  Legen Sie in Arbeitsmappeneigenschaften die Option **Maximale Arbeitsmappengröße** auf **50**fest. Dadurch wird die Obergrenze der Arbeitsmappendateigröße auf die Obergrenze für Dateiuploads in die übergeordnete Webanwendung eingestellt. Wenn die Arbeitsmappen größer als 50 MB sind, müssen Sie die maximale Dateigröße weiter erhöhen. Weitere Informationen finden Sie unter [konfigurieren Datei hochladen Maximalgröße &#40;PowerPivot für SharePoint&#41;](configure-maximum-file-upload-size-power-pivot-for-sharepoint.md).  
+8.  Legen Sie in Arbeitsmappeneigenschaften die Option **Maximale Arbeitsmappengröße** auf **50**fest. Dadurch wird die Obergrenze der Arbeitsmappendateigröße auf die Obergrenze für Dateiuploads in die übergeordnete Webanwendung eingestellt. Wenn die Arbeitsmappen größer als 50 MB sind, müssen Sie die maximale Dateigröße weiter erhöhen. Weitere Informationen finden Sie unter [konfigurieren maximale Dateiuploadgröße &#40;PowerPivot für SharePoint&#41;](configure-maximum-file-upload-size-power-pivot-for-sharepoint.md).  
   
 9. Überprüfen Sie in „Externe Daten“, ob „Externe Daten zulassen“ auf **Vertrauenswürdige Datenverbindungsbibliotheken und eingebettete Verbindungen**festgelegt ist. Diese Einstellung ist für den PowerPivot-Datenzugriff in einer Arbeitsmappe erforderlich.  
   

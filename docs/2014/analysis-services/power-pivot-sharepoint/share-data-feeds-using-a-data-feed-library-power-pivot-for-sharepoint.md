@@ -1,5 +1,5 @@
 ---
-title: Freigeben von Datenfeeds mithilfe einer Datenfeedbibliothek (PowerPivot für SharePoint) | Microsoft Docs
+title: Freigeben von Datenfeeds mithilfe einer Datenfeedbibliothek (PowerPivot für SharePoint) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data feeds [Analysis Services with SharePoint]
 ms.assetid: 4ec98dec-0cd2-4727-bb79-5bf6f8a865d6
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8e082281ad3aa9ca592ab19d8087fde8e2239880
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1ac02a4f06eb66528d68ba42b3036d0837f308d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161234"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161391"
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-powerpivot-for-sharepoint"></a>Datenfeeds mithilfe einer Datenfeedbibliothek verwenden (PowerPivot für SharePoint)
   Ein Datenfeed ist ein XML-Datenstrom, der von einem Dienst oder einer Anwendung generiert wird, der bzw. die Daten im Atom-Übertragungsformat verfügbar macht. Datenfeeds werden zunehmend verwendet, um Daten zwischen Anwendungen und zu clientseitigen Viewern zu transportieren. In einer PowerPivot für SharePoint-Bereitstellung werden Datenfeeds verwendet, zum Auffüllen einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenquelle mit Daten aus Atom-fähigen Anwendungen oder Diensten.  
@@ -44,7 +44,7 @@ ms.locfileid: "36161234"
 >  Obwohl Datenfeeds zum Hinzufügen von Webdaten zu einer in einem [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] erstellten [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]-Datenquelle verwendet werden, kann jede Clientanwendung, die Atom-Feeds lesen kann, Datendienstdokumente verarbeiten.  
   
 ##  <a name="prereq"></a> Erforderliche Komponenten  
- Benötigen Sie eine Bereitstellung von [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] PowerPivot für SharePoint, die fügt [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] abfrageverarbeitung zu einer Sharepointfarm. Datenfeedunterstützung wird durch das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Lösungspaket bereitgestellt.  
+ Benötigen Sie eine Bereitstellung von [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] PowerPivot für SharePoint, die fügt [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] abfrageverarbeitung, die auf einer SharePoint-Farm. Datenfeedunterstützung wird durch das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Lösungspaket bereitgestellt.  
   
  Sie müssen über eine SharePoint-Bibliothek verfügen, die den Inhaltstyp von Datendienstdokumenten unterstützt. Zu diesem Zweck wird zwar eine Standard-Datenfeedbibliothek empfohlen, Sie können den Inhaltstyp jeder Bibliothek jedoch auch manuell hinzufügen. Weitere Informationen finden Sie unter [erstellen oder Anpassen einer Datenfeedbibliothek &#40;PowerPivot für SharePoint&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md).  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36161234"
   
 6.  Speichern Sie das Dokument. Das Datendienstdokument wird als physische Datei (.atomsvc) in einer Inhaltsbibliothek gespeichert, die für diesen Inhaltstyp konfiguriert wurde.  
   
- Zur Verwendung des Datendienstdokuments können Sie in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] eine [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] -Arbeitsmappe öffnen und im Datenimport-Assistenten die Option **Aus Datenfeed** auswählen. Wenn er dazu aufgefordert wird, gibt ein Benutzer die SharePoint-URL des Datendienstdokuments an, um einen Datenimportvorgang zu starten. Weitere Informationen finden Sie unter [Datenfeeds verwenden &#40;PowerPivot für SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md).  
+ Zur Verwendung des Datendienstdokuments können Sie in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] eine [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] -Arbeitsmappe öffnen und im Datenimport-Assistenten die Option **Aus Datenfeed** auswählen. Wenn er dazu aufgefordert wird, gibt ein Benutzer die SharePoint-URL des Datendienstdokuments an, um einen Datenimportvorgang zu starten. Weitere Informationen finden Sie unter [Verwenden von Datenfeeds &#40;PowerPivot für SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md).  
   
 ##  <a name="securedsdoc"></a> Sichern eines Datendienstdokuments  
  Ein Datendienstdokument erbt die Berechtigungen der Bibliothek, in der es enthalten ist. Von den für das Element festgelegten Berechtigungen wird bestimmt, ob ein Datendienstdokument von einem Benutzer geöffnet, geändert oder gelöscht werden kann.  
@@ -114,7 +114,7 @@ ms.locfileid: "36161234"
 >  Obwohl das Datendienstdokument lediglich einmal gelesen wird, kann auf Datendienste, die die tatsächlichen Daten bereitstellen, zum Abrufen neuerer Feeds regelmäßig zugegriffen werden. Weitere Informationen zum Aktualisieren von Daten finden Sie unter [PowerPivot-Datenaktualisierung](power-pivot-data-refresh.md).  
   
 ##  <a name="usedsdoc"></a> Nächster Schritt: Verwenden eines Datendienstdokuments  
- Um ein datendienstdokument zu verwenden, die Sie in einer SharePoint-Bibliothek erstellt haben, verwenden Sie die **aus Datenfeeds** Importoption in einer PowerPivot-Datenquelle. Anweisungen hierzu finden Sie unter [Datenfeeds verwenden &#40;PowerPivot für SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md).  
+ Um ein datendienstdokument zu verwenden, die Sie in einer SharePoint-Bibliothek erstellt haben, verwenden Sie die **aus Datenfeeds** -Option in einer PowerPivot-Datenquelle zu importieren. Anweisungen hierzu finden Sie unter [Verwenden von Datenfeeds &#40;PowerPivot für SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [PowerPivot-Datenfeeds](power-pivot-data-feeds.md)  

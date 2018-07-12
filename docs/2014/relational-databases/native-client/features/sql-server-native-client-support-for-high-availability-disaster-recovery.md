@@ -1,26 +1,24 @@
 ---
-title: SQL Server Native Client-Unterstützung für hohe Verfügbarkeit, Wiederherstellung im Notfall | Microsoft Docs
+title: SQL Server Native Client-Unterstützung für hohe Verfügbarkeit, Wiederherstellung im Notfall | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 2016-08-31
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0fc26bfb2fc61cebd781c04b200f5e285b25666f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 72fb6497563e4f1d15e9470eb6d60743d67f83a5
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159994"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427489"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>SQL Server Native Client-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung
   In diesem Thema wird die (in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eingeführte) [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client-Unterstützung für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] erläutert. Weitere Informationen zu [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] finden Sie unter [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../../database-engine/listeners-client-connectivity-application-failover.md), [Erstellung und Konfiguration von Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) und [Aktive sekundäre Replikate: Lesbare sekundäre Replikate (AlwaysOn-Verfügbarkeitsgruppen)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
@@ -35,11 +33,11 @@ ms.locfileid: "36159994"
 ## <a name="connecting-with-multisubnetfailover"></a>Verbinden mit MultiSubnetFailover  
  Geben Sie immer `MultiSubnetFailover=Yes` an, wenn Sie eine Verbindung mit einem SQL Server 2012-Verfügbarkeitsgruppenlistener oder einer SQL Server 2012-Failoverclusterinstanz herstellen. `MultiSubnetFailover` aktiviert schnelleres Failover für alle Verfügbarkeitsgruppen und die Failoverclusterinstanz in SQL Server 2012 und reduziert die Failoverzeit für einzelne und Multisubnetz-AlwaysOn-Topologien erheblich. Während eines Multisubnetzfailovers versucht der Client Verbindungen parallel. Während eines Subnetzfailovers wird der TCP-Verbindungsversuch vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Native Client aggressiv wiederholt.  
   
- Die `MultiSubnetFailover` -Verbindungseigenschaft gibt an, dass in einer verfügbarkeitsgruppe oder Failoverclusterinstanz, und dass die Anwendung bereitgestellt wird [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client versucht, mit der Datenbank auf dem primären Replikat herstellen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instanz die IP-Adressen eine Verbindung herstellen möchten. Wenn `MultiSubnetFailover=Yes` ist für eine Verbindung angegeben, der Client TCP-Verbindungsversuche schneller als das Betriebssystem standardmäßig TCP-neuübertragungsintervallen wiederholt. Auf diese Weise kann die Verbindung nach einem Failover einer AlwaysOn-Verfügbarkeitsgruppe oder einer AlwaysOn-Failoverclusterinstanz schneller wiederhergestellt werden. Diese Einstellung gilt sowohl für Einzelsubnetz- als auch Multisubnetz-Verfügbarkeitsgruppen und -Failoverclusterinstanzen.  
+ Die `MultiSubnetFailover` -Verbindungseigenschaft gibt an, dass die Anwendung in einer verfügbarkeitsgruppe oder Failoverclusterinstanz, die bereitgestellt wird, ist [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client versucht, mit der Datenbank auf dem primären Replikat herstellen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instanz für alle IP-Adressen eine Verbindung herstellen möchten. Wenn `MultiSubnetFailover=Yes` ist für eine Verbindung angegeben, wiederholt der Client TCP-Verbindungsversuche schneller als die standardmäßige TCP-neuübertragungsintervallen des Betriebssystems. Auf diese Weise kann die Verbindung nach einem Failover einer AlwaysOn-Verfügbarkeitsgruppe oder einer AlwaysOn-Failoverclusterinstanz schneller wiederhergestellt werden. Diese Einstellung gilt sowohl für Einzelsubnetz- als auch Multisubnetz-Verfügbarkeitsgruppen und -Failoverclusterinstanzen.  
   
  Weitere Informationen zu Verbindungszeichenfolgeschlüsselwörtern finden Sie unter [Using Connection String Keywords with SQL Server Native Client](../applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- Angeben von `MultiSubnetFailover=Yes` beim Herstellen einer Verbindung auf einen anderen Wert als einem verfügbarkeitsgruppenlistener oder einer Failover-Clusterinstanz möglicherweise verminderter Leistung und wird nicht unterstützt.  
+ Angeben von `MultiSubnetFailover=Yes` beim Herstellen einer Verbindung auf einen anderen Wert als einen verfügbarkeitsgruppenlistener oder einer Failover-Clusterinstanz möglicherweise negativ auf die Leistung beeinträchtigen und wird nicht unterstützt.  
   
  Befolgen Sie beim Herstellen einer Verbindung mit einem Server in einer Verfügbarkeitsgruppe oder einer Failoverclusterinstanz die folgenden Richtlinien:  
   
@@ -51,7 +49,7 @@ ms.locfileid: "36159994"
   
 -   Das Verhalten einer Anwendung, die die `MultiSubnetFailover`-Verbindungseigenschaft verwendet, wird nicht vom Authentifizierungstyp beeinflusst: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Authentifizierung, Kerberos-Authentifizierung oder Windows-Authentifizierung.  
   
--   Sie können den Wert der erhöhen `loginTimeout` für Failoverzeit zu berücksichtigen und Wiederholungsversuche für anwendungsverbindungen zu reduzieren.  
+-   Sie können den Wert der erhöhen `loginTimeout` für die Failoverzeit zu berücksichtigen und anwendungsverbindungswiederholungsversuche reduzieren.  
   
 -   Verteilte Transaktionen werden nicht unterstützt.  
   
@@ -64,20 +62,20 @@ ms.locfileid: "36159994"
  Eine Verbindung schlägt fehl, wenn ein primäres Replikat so konfiguriert ist, dass schreibgeschützte Arbeitslasten abgelehnt, und die Verbindungszeichenfolge enthält `ApplicationIntent=ReadOnly`.  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>Aktualisieren zur Verwendung von Multisubnetzclustern aus Datenbankspiegelung  
- Es wird ein Verbindungsfehler auftreten, wenn die `MultiSubnetFailover` und `Failover_Partner` Schlüsselwörter in der Verbindungszeichenfolge vorhanden sind. Es tritt auch ein Fehler auf, wenn `MultiSubnetFailover` verwendet wird und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eine Failoverpartnerantwort zurückgibt, die angibt, dass es Teil eines Datenbankspiegelungspaars ist.  
+ Es wird ein Verbindungsfehler auftreten, wenn die `MultiSubnetFailover` und `Failover_Partner` Verbindungsschlüsselwörter in der Verbindungszeichenfolge vorhanden sind. Es tritt auch ein Fehler auf, wenn `MultiSubnetFailover` verwendet wird und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eine Failoverpartnerantwort zurückgibt, die angibt, dass es Teil eines Datenbankspiegelungspaars ist.  
   
- Wenn Sie ein upgrade einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Anwendung, die derzeit die datenbankspiegelung in einer multisubnetz-Szenario verwendet, sollten Sie entfernen die `Failover_Partner` Verbindungseigenschaft und ersetzen es durch `MultiSubnetFailover` festgelegt `Yes` , und Ersetzen Sie die der Servername in der Verbindungszeichenfolge mit einem Verfügbarkeitsgruppen-Listener. Wenn eine Verbindungszeichenfolge verwendet `Failover_Partner` und `MultiSubnetFailover=Yes`, generiert der Treiber einen Fehler. Jedoch, wenn eine Verbindungszeichenfolge verwendet `Failover_Partner` und `MultiSubnetFailover=No` (oder `ApplicationIntent=ReadWrite`), die Anwendung die datenbankspiegelung verwenden.  
+ Wenn Sie ein upgrade einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Anwendung, die derzeit datenbankspiegelung in einem multisubnetz-Szenario verwendet, sollten Sie entfernen die `Failover_Partner` Connection-Eigenschaft und Ersetzen Sie ihn mit `MultiSubnetFailover` legen Sie auf `Yes` , und Ersetzen Sie die der Servername in der Verbindungszeichenfolge mit einem Verfügbarkeitsgruppen-Listener. Wenn eine Verbindungszeichenfolge verwendet `Failover_Partner` und `MultiSubnetFailover=Yes`, generiert der Treiber einen Fehler. Aber wenn eine Verbindungszeichenfolge verwendet `Failover_Partner` und `MultiSubnetFailover=No` (oder `ApplicationIntent=ReadWrite`), die Anwendung die datenbankspiegelung verwenden.  
   
- Der Treiber einen Fehler zurück, wenn die datenbankspiegelung auf der primären Datenbank in der verfügbarkeitsgruppe verwendet wird, und wenn `MultiSubnetFailover=Yes` wird verwendet, in der Verbindungszeichenfolge, die mit einer primären Datenbank statt mit einem Verfügbarkeitsgruppen-Listener verbindet.  
+ Der Treiber gibt einen Fehler zurück, wenn die datenbankspiegelung in der primären Datenbank in der verfügbarkeitsgruppe verwendet wird und `MultiSubnetFailover=Yes` wird in der Verbindungszeichenfolge die Verbindung mit einer primären Datenbank nicht mit einem Verfügbarkeitsgruppen-Listener verwendet.  
   
 ## <a name="specifying-application-intent"></a>Angeben des Anwendungszwecks  
- Wenn `ApplicationIntent=ReadOnly`, fordert der Client eine lesearbeitslast aus, wenn eine Verbindung mit einer AlwaysOn-Datenbank herstellen. Der Server erzwingt den Versuch zur Verbindungszeit und während einer USE-Datenbankanweisung, aber nur für eine AlwaysOn-aktivierte Datenbank.  
+ Wenn `ApplicationIntent=ReadOnly`, fordert der Client eine lesearbeitslast aus, wenn es sich bei Verbindung mit einer AlwaysOn-aktivierten Datenbank. Der Server erzwingt den Versuch zur Verbindungszeit und während einer USE-Datenbankanweisung, aber nur für eine AlwaysOn-aktivierte Datenbank.  
   
- Die `ApplicationIntent` -Schlüsselwort funktioniert nicht mit älteren und schreibgeschützte Datenbanken.  
+ Die `ApplicationIntent` -Schlüsselwort funktioniert nicht mit älteren, schreibgeschützten Datenbanken.  
   
  Eine Datenbank kann Lesearbeitslasten auf der AlwaysOn-Zieldatenbank zulassen bzw. nicht zulassen. (Dies erfolgt mit der `ALLOW_CONNECTIONS` -Klausel der `PRIMARY_ROLE` und `SECONDARY_ROLE` [!INCLUDE[tsql](../../../includes/tsql-md.md)] Anweisungen.)  
   
- Die `ApplicationIntent` Schlüsselwort wird verwendet, um schreibgeschütztes routing zu aktivieren.  
+ Die `ApplicationIntent` -Schlüsselwort wird verwendet, um schreibgeschütztes routing zu aktivieren.  
   
 ## <a name="read-only-routing"></a>Schreibgeschütztes Routing  
  Schreibgeschütztes Routing ist eine Funktion, die die Verfügbarkeit eines schreibgeschützten Replikats einer Datenbank sicherstellen kann. So aktivieren Sie schreibgeschütztes Routing:  
@@ -109,13 +107,13 @@ ms.locfileid: "36159994"
   
  Weitere Informationen zu den ODBC-Verbindungseigenschaften in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client finden Sie unter [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md).  
   
- Die Funktionalität der `ApplicationIntent` und `MultiSubnetFailover` Schlüsselwörter gestellt werden in der ODBC-Datenquellen-Administrator für DSNs, mit denen die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Treiber ab [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
+ Die Funktionalität der `ApplicationIntent` und `MultiSubnetFailover` Schlüsselwörter werden werden in der ODBC-Datenquellen-Administrator für DSNs verfügbar gemacht, mit denen die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Treiber ab [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
  Eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Anwendung kann eine von drei Funktionen verwenden, um die Verbindung herzustellen:  
   
 |Funktion|Description|  
 |--------------|-----------------|  
-|[SQLBrowseConnect](../../native-client-odbc-api/sqlbrowseconnect.md)|Die Liste der Server, die von `SQLBrowseConnect` zurückgegeben wird, schließt keine VNNs ein. Sie sehen nur eine Liste von Servern ohne Angabe, ob es sich bei dem Server um einen eigenständigen Server oder einen primären oder sekundären Server in einem WSFC-Cluster (Windows Server-Failoverclustering) handelt. der zwei oder mehr [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanzen enthält, die für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] aktiviert wurden. Wenn Sie eine Verbindung mit einem Server herstellen und ein Fehler, möglicherweise daran, dass Sie eine Verbindung mit einem Server hergestellt haben und die `ApplicationIntent` Einstellung ist nicht kompatibel mit der Serverkonfiguration.<br /><br /> Da `SQLBrowseConnect` keine Server in einem WSFC-Cluster (Windows Server-Failoverclustering) erkennt, der zwei oder mehr [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanzen enthält, die für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] aktiviert wurden, ignoriert `SQLBrowseConnect` das Schlüsselwort für die `MultiSubnetFailover`-Verbindungszeichenfolge.|  
+|[SQLBrowseConnect](../../native-client-odbc-api/sqlbrowseconnect.md)|Die Liste der Server, die von `SQLBrowseConnect` zurückgegeben wird, schließt keine VNNs ein. Sie sehen nur eine Liste von Servern ohne Angabe, ob es sich bei dem Server um einen eigenständigen Server oder einen primären oder sekundären Server in einem WSFC-Cluster (Windows Server-Failoverclustering) handelt. der zwei oder mehr [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanzen enthält, die für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] aktiviert wurden. Wenn Sie eine Verbindung mit einem Server herstellen und ein Fehler, möglicherweise daran, dass Sie eine Verbindung mit einem Server hergestellt haben und die `ApplicationIntent` Einstellung ist nicht mit der Serverkonfiguration kompatibel.<br /><br /> Da `SQLBrowseConnect` keine Server in einem WSFC-Cluster (Windows Server-Failoverclustering) erkennt, der zwei oder mehr [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanzen enthält, die für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] aktiviert wurden, ignoriert `SQLBrowseConnect` das Schlüsselwort für die `MultiSubnetFailover`-Verbindungszeichenfolge.|  
 |[SQLConnect](../../native-client-odbc-api/sqlconnect.md)|`SQLConnect` unterstützt sowohl `ApplicationIntent` als auch `MultiSubnetFailover` über einen Datenquellennamen (DSN) oder Verbindungseigenschaften.|  
 |[SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md)|`SQLDriverConnect` unterstützt `ApplicationIntent` und `MultiSubnetFailover` über Schlüsselwörter für Verbindungszeichenfolgen, Verbindungseigenschaften oder DSN.|  
   
@@ -148,7 +146,7 @@ ms.locfileid: "36159994"
  `IDBProperties::GetProperties` ruft den Wert der Eigenschaft ab, die derzeit in der Datenquelle festgelegt wird.  Sie können den `Application Intent`-Wert über die DBPROP_INIT_PROVIDERSTRING-Eigenschaft und die SSPROP_INIT_APPLICATIONINTENT-Eigenschaft abrufen.  
   
  `IDBProperties::SetProperties`  
- Festlegen der `ApplicationIntent` Eigenschaftswert, rufen `IDBProperties::SetProperties` übergibt die `SSPROP_INIT_APPLICATIONINTENT` Eigenschaft mit dem Wert "`ReadWrite`"oder"`ReadOnly`" oder `DBPROP_INIT_PROVIDERSTRING` Eigenschaft mit dem Wert mit "`ApplicationIntent=ReadOnly`"oder"`ApplicationIntent=ReadWrite`".  
+ Festlegen der `ApplicationIntent` -Eigenschaftswert, rufen `IDBProperties::SetProperties` übergebe die `SSPROP_INIT_APPLICATIONINTENT` Eigenschaft mit dem Wert "`ReadWrite`"oder"`ReadOnly`" oder `DBPROP_INIT_PROVIDERSTRING` Eigenschaft mit dem Wert mit "`ApplicationIntent=ReadOnly`"oder"`ApplicationIntent=ReadWrite`".  
   
  Sie können die Anwendungsabsicht im Feld für die Eigenschaften der Anwendungsabsicht auf der Registerkarte Alle im Dialogfeld **Datenverknüpfungseigenschaften** angeben.  
   

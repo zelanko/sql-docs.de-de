@@ -1,37 +1,35 @@
 ---
-title: 'Abrufen von Spalten mithilfe von IRow:: GetColumns (OLE DB) | Microsoft Docs'
+title: 'Abrufen von Spalten mithilfe von IRow:: GetColumns (OLE DB) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IRow interface
 ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5f6dcbe54bc1e6942f6d07be861668bea3f63d22
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f71c5ace41744221c740fc9c024124d2387ba527
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160200"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425909"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Abrufen von Spalten mithilfe von IRow::GetColumns (OLE DB)
   Die `IRow` -Schnittstelle ermöglicht den direkten Zugriff auf Spalten aus einer einzelnen Zeile im Resultset. Daher ist `IRow` eine effiziente Möglichkeit, Spalten aus einem Resultset mit einer Zeile abzurufen.  
   
- Ein Codebeispiel ist verfügbar, das zeigt, die eine einzelne Zeile mit fetch durch den wie `IRow`. In diesem Beispiel wird jeweils eine Spalte aus der Zeile abgerufen. Das Beispiel zeigt Folgendes:  
+ Ein Codebeispiel ist verfügbar, das zeigt, die eine einzelne Zeile mit abrufen durch den wie `IRow`. In diesem Beispiel wird jeweils eine Spalte aus der Zeile abgerufen. Das Beispiel zeigt Folgendes:  
   
 -   Wie eine Gruppe von Spalten abgerufen wird (nacheinander).  
   
--   Wie zweimal auf eine Spalte zugegriffen wird. Das erste Mal wird die Spaltenbreite erfasst, und später wird auf die eigentlichen Daten zugegriffen. In der DBCOLUMNACCESS-Struktur Wenn **pData** ist NULL und **CbMaxLen** ist 0, der Aufruf von `IRow` - `>GetColumns()` nur die Spaltenlänge zurückgegeben. In diesem Fall `IRow->GetColumns()` kann erneut aufgerufen werden, für die gleiche Spalte auf die eigentlichen Daten abzurufen.  
+-   Wie zweimal auf eine Spalte zugegriffen wird. Das erste Mal wird die Spaltenbreite erfasst, und später wird auf die eigentlichen Daten zugegriffen. In der DBCOLUMNACCESS-Struktur Wenn **pData** ist NULL und **CbMaxLen** 0 ist, den Aufruf von `IRow` - `>GetColumns()` nur die Spaltenlänge zurückgegeben. In diesem Fall `IRow->GetColumns()` erneut aufgerufen werden können, in der gleichen Spalte aus, um die eigentlichen Daten abzurufen.  
   
 > [!IMPORTANT]  
 >  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](http://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -57,9 +55,9 @@ ms.locfileid: "36160200"
   
  Dieses Beispiel erfordert die AdventureWorks-Beispieldatenbank, die Sie von der Homepage [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) herunterladen können.  
   
- Die erste ([!INCLUDE[tsql](../../includes/tsql-md.md)]) Codelisting erstellt eine im Beispiel verwendete Tabelle.  
+ Die erste ([!INCLUDE[tsql](../../includes/tsql-md.md)]) Codebeispiel erstellt eine Tabelle, die im Beispiel verwendet wird.  
   
- Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das zweite Codelisting (C++) aus. Diese Anwendung stellt eine Verbindung des Computers her [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz ändern. Um eine Verbindung mit einer benannten Instanz herzustellen, ändern Sie die Verbindungszeichenfolge von l"(Local)" "zu l"(Local)"\\\name", wobei der Name der benannten Instanz ist. Standardmäßig [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
+ Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das zweite Codelisting (C++) aus. Diese Anwendung stellt eine Verbindung her, des Computers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz ändern. Um eine Verbindung mit einer benannten Instanz herzustellen, ändern Sie die Verbindungszeichenfolge von l"(Local)" "um l"(Local)"\\\name", wobei der Name der benannten Instanz ist. In der Standardeinstellung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
  Das dritte ([!INCLUDE[tsql](../../includes/tsql-md.md)]) Codelisting löscht die im Beispiel verwendete Tabelle.  
   

@@ -1,13 +1,11 @@
 ---
-title: Tabellenwertparameter (ODBC) | Microsoft Docs
+title: Tabellenwertparameter (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,24 +13,24 @@ helpviewer_keywords:
 - ODBC, table-valued parameters
 ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 955ae0daa3a2c15a5b1e6146c269c8d4095fb146
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ce0cd9e87d4bd594fb2c2be4a01e9f2cf8ef4a27
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159149"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421789"
 ---
 # <a name="table-valued-parameters-odbc"></a>Tabellenwertparameter (ODBC)
   Die ODBC-Unterstützung für Tabellenwertparameter ermöglicht einer Clientanwendung die effizientere Versendung von parametrisierten Daten an einen Server, indem mehrere Zeilen über einen Aufruf an den Server gesendet werden.  
   
- Informationen zu Tabellenwertparametern auf dem Server finden Sie unter [Tabellenwertparametern &#40;Datenbankmodul&#41;](../tables/use-table-valued-parameters-database-engine.md).  
+ Weitere Informationen zu Tabellenwertparametern auf dem Server, finden Sie unter [Tabellenwertparametern &#40;Datenbank-Engine&#41;](../tables/use-table-valued-parameters-database-engine.md).  
   
  In ODBC gibt es zwei Methoden zum Versenden von Tabellenwertparametern an den Server:  
   
--   Alle Tabellenwertparameter-Daten kann im Speicher zum Zeitpunkt SQLExecDirect oder SQLExecute aufgerufen wird. Wenn es mehrere Zeilen im Tabellenwert gibt, werden diese Daten in Arrays gespeichert.  
+-   Alle Tabellenwertparameter-Daten können im Speicher zum Zeitpunkt verwendet, die SQLExecDirect oder SQLExecute aufgerufen wird. Wenn es mehrere Zeilen im Tabellenwert gibt, werden diese Daten in Arrays gespeichert.  
   
 -   Eine Anwendung kann Data-at-Execution für einen Tabellenwertparameter angeben, wenn SQLExecDirect oder SQLExecute aufgerufen wird. In diesem Fall können Datenzeilen für den Tabellenwertparameter in Batches oder einzeln bereitgestellt werden, um die Speicheranforderungen zu reduzieren.  
   

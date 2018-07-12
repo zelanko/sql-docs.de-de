@@ -1,13 +1,11 @@
 ---
-title: Festlegen großer Datenmengen | Microsoft Docs
+title: Festlegen großer Datenmengen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,18 +16,18 @@ helpviewer_keywords:
 - large data, OLE objects
 ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6fd64ccaa9d5b4abb87123bc6cb1d9977c6ef03b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: fa1b0857b155f077920f60eee85cbcebb2ef4250
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151348"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423019"
 ---
 # <a name="setting-large-data"></a>Festlegen großer Datenmengen
-  Mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter können Sie BLOB-Daten festlegen, indem ein Zeiger auf ein consumerspeicherobjekt übergeben.  
+  Mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter, können Sie die BLOB-Daten festlegen, indem ein Zeiger auf ein consumerspeicherobjekt übergeben.  
   
  Der Consumer erstellt ein Speicherobjekt, das die Daten enthält, und übergibt einen Zeiger auf dieses Speicherobjekt an den Anbieter. Anschließend liest der Anbieter Daten vom Consumerspeicherobjekt und schreibt diese in die BLOB-Spalte.  
   
@@ -46,17 +44,17 @@ ms.locfileid: "36151348"
 ## <a name="how-to-set-large-data"></a>So legen Sie große Datenmengen fest  
  Zum Übergeben eines Zeigers an das eigene Speicherobjekt erstellt der Consumer einen Accessor, der den Wert der BLOB-Spalte bindet, und ruft anschließend die **IRowsetChange::SetData** -Methode oder die **IRowsetChange::InsertRow** -Methode auf. So legen Sie BLOB-Daten fest:  
   
-1.  Erstellen Sie eine DBOBJECT-Struktur, die beschreibt, wie auf die BLOB-Spalte zugegriffen werden soll. Legen Sie die *DwFlag* -Element der DBOBJECT-Struktur auf STGM_READ und das *Iid* -Element auf IID_ISequentialStream (die Schnittstelle verfügbar gemacht werden sollen).  
+1.  Erstellen Sie eine DBOBJECT-Struktur, die beschreibt, wie auf die BLOB-Spalte zugegriffen werden soll. Legen Sie die *DwFlag* -Element der DBOBJECT-Struktur auf STGM_READ und das *Iid* -Element auf IID_ISequentialStream (die Schnittstelle verfügbar gemacht werden).  
   
 2.  Legen Sie die Eigenschaften in der DBPROPSET_ROWSET-Eigenschaftengruppe so fest, dass das Rowset aktualisiert werden kann.  
   
-3.  Erstellen Sie mithilfe eines DBBINDING-Strukturarrays einen Satz von Bindungen (eine pro Spalte). Legen Sie die *wType* Element in der DBBINDING-Struktur auf DBTYPE_IUNKNOWN fest, und die *pObject* -Element der DBOBJECT-Struktur verweisen Sie erstellt haben.  
+3.  Erstellen Sie mithilfe eines DBBINDING-Strukturarrays einen Satz von Bindungen (eine pro Spalte). Legen Sie die *wType* Element in der DBBINDING-Struktur auf DBTYPE_IUNKNOWN fest, und die *pObject* -Element der DBOBJECT-Struktur zeigen Sie Sie erstellt haben.  
   
 4.  Erstellen Sie einen Accessor mithilfe der Bindungsinformationen im DBBINDINGS-Strukturarray.  
   
 5.  Rufen Sie **GetNextRows** auf, um die nächsten Zeilen für das Rowset abzurufen. Rufen Sie **GetData** auf, um die Daten aus dem Rowset zu lesen.  
   
-6.  Erstellen Sie ein Speicherobjekt, das die Daten (und auch den Längenindikator) enthält, und klicken Sie dann rufen **IRowsetChange:: SetData** (oder **IRowsetChange:: InsertRow**) mit dem Accessor auf, die zum Festlegen der BLOB-Spalte bindet die Daten.  
+6.  Erstellen Sie ein Speicherobjekt, die die Daten (und den Längenindikator) enthält, und klicken Sie dann rufen **IRowsetChange:: SetData** (oder **IRowsetChange:: InsertRow**) mit dem Accessor auf, die zum Festlegen der BLOB-Spalte bindet die Daten.  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird gezeigt, wie BLOB-Daten festgelegt werden. Im Beispiel wird eine Tabelle erstellt, ein Beispieldatensatz hinzugefügt, dieser Datensatz im Rowset abgerufen und anschließend der Wert des BLOB-Felds festgelegt.  

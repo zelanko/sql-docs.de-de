@@ -1,35 +1,33 @@
 ---
-title: Auflisten von OLE DB-Datenquellen (OLE DB) | Microsoft Docs
+title: Auflisten von OLE DB-Datenquellen (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data sources [OLE DB]
 ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1c989dbd2dd929fc8e971b6cd182a379950a2b2e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 8a694707cb44c9cf26da6a1a747ad3096fbb9bec
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151112"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420899"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>Auflisten von OLE DB-Datenquellen (OLE DB)
   Dieses Beispiel zeigt, wie das Enumeratorobjekt zum Auflisten der verfügbaren Datenquellen verwendet wird.  
   
  Um die Datenquellen aufzulisten, die für den SQLOLEDB-Enumerator sichtbar sind, ruft der Consumer die [ISourcesRowset::GetSourcesRowset](http://go.microsoft.com/fwlink/?LinkId=120312) -Methode auf. Diese Methode gibt ein Rowset der Informationen zu den gerade sichtbaren Datenquellen zurück.  
   
- Je nach verwendeter Netzwerkbibliothek wird in der entsprechenden Domäne nach den Datenquellen gesucht. Für Named Pipes ist dies die Domäne, an der der Client angemeldet ist. Für AppleTalk ist dies die Standardzone. Für SPX/IPX ist es ist die Liste der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installationen in der Bindery gefunden. Für Banyan VINES sind, ist die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installationen auf dem lokalen Netzwerk gefunden. Multiprotokoll und TCP/IP-Sockets werden nicht unterstützt.  
+ Je nach verwendeter Netzwerkbibliothek wird in der entsprechenden Domäne nach den Datenquellen gesucht. Für Named Pipes ist dies die Domäne, an der der Client angemeldet ist. Für AppleTalk ist dies die Standardzone. Für SPX/IPX ist, ist es die Liste der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installationen, die in der Bindery gefunden. Für Banyan VINES, ist die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installationen finden Sie im lokalen Netzwerk. Multiprotokoll und TCP/IP-Sockets werden nicht unterstützt.  
   
  Wenn der Server ein- oder ausgeschaltet wird, kann es einige Minuten dauern, die Informationen in diesen Domänen zu aktualisieren.  
   
@@ -40,7 +38,7 @@ ms.locfileid: "36151112"
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>So listen Sie OLE DB-Datenquellen auf  
   
-1.  Rufen Sie das Quellrowset durch Aufrufen von `ISourceRowset::GetSourcesRowset`.  
+1.  Rufen Sie das Quellrowset durch den Aufruf `ISourceRowset::GetSourcesRowset`.  
   
 2.  Suchen Sie die Beschreibung des Enumeratorenrowsets, indem Sie `GetColumnInfo::IColumnInfo` aufrufen.  
   
@@ -50,10 +48,10 @@ ms.locfileid: "36151112"
   
 5.  Rufen Sie die Zeilen ab, indem Sie `IRowset::GetNextRows` aufrufen.  
   
-6.  Abrufen von Daten aus dem Rowset Kopie der Zeile durch Aufrufen von `IRowset::GetData`, und zu verarbeiten.  
+6.  Abrufen von Daten aus der Zeilenkopie der Zeile durch Aufrufen von `IRowset::GetData`, und zu verarbeiten.  
   
 ## <a name="example"></a>Beispiel  
- Kompilieren Sie mit ole32.lib, und führen Sie das folgende C++-Codelisting aus. Diese Anwendung stellt eine Verbindung des Computers her [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz ändern. Um eine Verbindung mit einer benannten Instanz herzustellen, ändern Sie die Verbindungszeichenfolge von l"(Local)" "zu l"(Local)"\\\name", wobei der Name der benannten Instanz ist. Standardmäßig [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
+ Kompilieren Sie mit ole32.lib, und führen Sie das folgende C++-Codelisting aus. Diese Anwendung stellt eine Verbindung her, des Computers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz ändern. Um eine Verbindung mit einer benannten Instanz herzustellen, ändern Sie die Verbindungszeichenfolge von l"(Local)" "um l"(Local)"\\\name", wobei der Name der benannten Instanz ist. In der Standardeinstellung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
 ```  
 // compile with: ole32.lib  

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bulk importing [SQL Server], null values
 - bulk importing [SQL Server], default values
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - data formats [SQL Server], default values
 ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7840877066f5f941050d96c3274ab7bf6698326c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f99b040dc2a2caa0b7df7847760e978fef010fc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160430"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258776"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Beibehalten von NULL-Werten oder Verwenden von Standardwerten während des Massenimports (SQL Server)
   Wenn Daten in eine Tabelle importiert werden, werden standardmäßig alle für die Spalten in der Tabelle definierten Standardwerte durch den Befehl **bcp** und die BULK INSERT-Anweisung überwacht. Wenn beispielsweise ein NULL-Feld in einem Datenfeld vorkommt, wird stattdessen der Standardwert für die Spalte geladen. Sowohl mit dem Befehl **bcp** als auch mit der BULK INSERT-Anweisung können Sie angeben, dass NULL-Werte beibehalten werden sollen.  
@@ -37,13 +36,13 @@ ms.locfileid: "36160430"
  Eine reguläre INSERT-Anweisung hingegen behält den NULL-Wert bei, statt einen Standardwert einzufügen. Die INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung zeigt dasselbe grundlegende Verhalten wie eine reguläre INSERT-Anweisung, unterstützt jedoch zusätzlich einen Tabellenhinweis zum Einfügen der Standardwerte.  
   
 > [!NOTE]  
->  Beispiele für Formatdateien, die eine Tabellenspalte überspringen, finden Sie unter [überspringen einer Tabellenspalte mithilfe einer Formatdatei &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md).  
+>  Beispiele für Formatdateien, die eine Tabellenspalte auslassen, finden Sie unter [mithilfe einer Formatdatei zum Überspringen einer Tabellenspalte &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md).  
   
 ## <a name="sample-table-and-data-file"></a>Beispieltabelle und Datendatei  
  Zum Ausführen der Beispiele in diesem Thema müssen Sie eine Beispieltabelle und -datendatei erstellen.  
   
 ### <a name="sample-table"></a>Beispieltabelle  
- Die Beispiele erfordern, dass eine Tabelle mit dem Namen **MyTestDefaultCol2** in der **AdventureWorks**-Beispieldatenbank unter dem Schema **dbo** erstellt wird. Zum Erstellen dieser Tabelle in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] führen Sie Abfrage-Editor:  
+ Die Beispiele erfordern, dass eine Tabelle mit dem Namen **MyTestDefaultCol2** in der **AdventureWorks**-Beispieldatenbank unter dem Schema **dbo** erstellt wird. Zum Erstellen dieser Tabelle in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Abfrage-Editor ausführen:  
   
 ```  
 USE AdventureWorks;  
@@ -86,12 +85,12 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 |**bcp**|`-k`|Schalter|  
 |BULK INSERT|KEEPNULLS<sup>1</sup>|Argument|  
   
- <sup>1</sup> für BULK INSERT, wenn Standardwerte nicht verfügbar ist, sind die Tabellenspalte definiert werden, damit null-Werte zulassen.  
+ <sup>1</sup> für BULK INSERT, wenn Standardwerte nicht verfügbar ist, sind die Tabellenspalte definiert werden, um null-Werte zulassen.  
   
 > [!NOTE]  
 >  Diese Qualifizierer deaktivieren das Prüfen von DEFAULT-Definitionen in einer Tabelle durch diese Massenimportbefehle. Für gleichzeitige INSERT-Anweisungen werden jedoch DEFAULT-Definitionen erwartet.  
   
- Weitere Informationen finden Sie unter [Bcp (Hilfsprogramm)](../../tools/bcp-utility.md) und [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
+ Weitere Informationen finden Sie unter [Hilfsprogramm "Bcp"](../../tools/bcp-utility.md) und [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
 ### <a name="examples"></a>Beispiele  
  In den Beispielen dieses Abschnitts werden Massenimporte mithilfe von **bcp** oder BULK INSERT ausgeführt und NULL-Werte beibehalten.  
@@ -103,7 +102,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 |`1`|`Default value of Col2`|`DataField3`|  
 |`2`|`Default value of Col2`|`DataField3`|  
   
- Einzufügende "`NULL`"anstelle von"`Default value of Col2`", müssen Sie die `-k` Switch oder die Option KEEPNULL, wie in der folgenden **Bcp** und Beispiele zu BULK INSERT.  
+ Zum Einfügen "`NULL`"anstelle von"`Default value of Col2`", müssen Sie die `-k` Switch oder die Option keepnull verwenden, wie im folgenden **Bcp** und BULK INSERT-Beispielen gezeigt.  
   
 #### <a name="using-bcp-and-keeping-null-values"></a>Verwenden von "bcp" und Beibehalten von NULL-Werten  
  Das folgende Beispiel zeigt, wie NULL-Werte in einem **bcp**-Befehl beibehalten werden. Der Befehl **bcp** verfügt über folgende Schalter:  
@@ -122,7 +121,7 @@ bcp AdventureWorks..MyTestDefaultCol2 in C:\MyTestEmptyField2-c.Dat -f C:\MyTest
 ```  
   
 #### <a name="using-bulk-insert-and-keeping-null-values"></a>Verwenden von BULK INSERT und Beibehalten von NULL-Werten  
- Das folgende Beispiel zeigt, wie die Option KEEPNULLS in einer BULK INSERT-Anweisung verwendet wird. Von einem Abfragetool z. B. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] führen Sie Abfrage-Editor:  
+ Das folgende Beispiel zeigt, wie die Option KEEPNULLS in einer BULK INSERT-Anweisung verwendet wird. Von einem Abfragetool z. B. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Abfrage-Editor ausführen:  
   
 ```  
 USE AdventureWorks;  
@@ -160,7 +159,7 @@ GO
 |`1`|`NULL`|`DataField3`|  
 |`2`|`NULL`|`DataField3`|  
   
- Um den Standardwert "`Default value of Col2`" anstelle von "`NULL`" einzufügen, müssen Sie den Tabellenhinweis KEEPDEFAULTS verwenden, wie im folgenden Beispiel gezeigt. Von einem Abfragetool z. B. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] führen Sie Abfrage-Editor:  
+ Um den Standardwert "`Default value of Col2`" anstelle von "`NULL`" einzufügen, müssen Sie den Tabellenhinweis KEEPDEFAULTS verwenden, wie im folgenden Beispiel gezeigt. Von einem Abfragetool z. B. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Abfrage-Editor ausführen:  
   
 ```  
 USE AdventureWorks;  

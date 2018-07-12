@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], changing name
 ms.assetid: 79510fcf-4c83-4426-bdd4-15b4170ecfbd
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 94112254829868dbdf10972390359b7156dc1e45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: a9160e39403d314a5b01e012e6c238400a2854d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161836"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164923"
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>Ändern des Namens einer Attributgruppe (Master Data Services)
   Sie können in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]den Namen einer Attributgruppe ändern.  
@@ -43,13 +43,13 @@ ms.locfileid: "36161836"
   
 4.  Wählen Sie aus der Liste **Entität** eine Entität aus.  
   
-5.  Klicken Sie auf das Pluszeichen **Blattgruppen**, **konsolidierte Gruppen**, oder **Auflistungsgruppen**, abhängig von dem Typ der Gruppe, die Sie aktualisieren möchten.  
+5.  Klicken Sie auf das Pluszeichen **Blattgruppen**, **konsolidierte Gruppen**, oder **Auflistungsgruppen**, je nach Typ der Gruppe, die Sie aktualisieren möchten.  
   
 6.  Klicken Sie auf den Namen der Attributgruppe, die Sie umbenennen möchten.  
   
 7.  Klicken Sie auf **ausgewähltes Element bearbeiten**.  
   
-8.  In der **Name der Blattgruppe** Feld **Name der konsolidierten Gruppe** Feld oder **Auflistungsgruppe** geben den neuen Namen der Attributgruppe.  
+8.  In der **Name der Blattgruppe** Feld **Name der konsolidierten Gruppe** Feld oder **Name der Auflistungsgruppe** geben den neuen Namen der Attributgruppe.  
   
 9. Klicken Sie auf **Gruppe speichern**.  
   

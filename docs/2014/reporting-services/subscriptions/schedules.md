@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - schedules [Reporting Services]
 - schedules [Reporting Services], about schedules
@@ -20,34 +20,34 @@ ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 800dce34cebf45e3962b5226929267afe1fc727f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5b673c1dfe86caab3feeeae6bdbdfda853bd2a5f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149340"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278408"
 ---
 # <a name="schedules"></a>Zeitpläne
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bietet freigegebene und berichtsspezifische Zeitpläne können Sie Steuerelement-Verarbeitung und Verteilung von Berichten. Der Unterschied zwischen den beiden Typen von Zeitplänen liegt in ihrer Definition, Speicherung und Verwaltung. Die interne Konstruktion der beiden Typen von Zeitplänen ist die gleiche. Alle Zeitpläne geben einen Wiederholungstyp an: monatlich, wöchentlich oder täglich. Innerhalb des Wiederholungstyps legen Sie die Intervalle und den Zeitraum der Häufigkeit eines Ereignisses fest. Die Wiederholungsoption und die Art und Weise, wie diese festgelegt ist, sind dieselbe, unabhängig davon, ob Sie einen freigegebenen oder einen berichtsspezifischen Zeitplan erstellen.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Stellt freigegebene und berichtsspezifische Zeitpläne, die Ihnen helfen, Verarbeitung und Verteilung von Berichten steuern. Der Unterschied zwischen den beiden Typen von Zeitplänen liegt in ihrer Definition, Speicherung und Verwaltung. Die interne Konstruktion der beiden Typen von Zeitplänen ist die gleiche. Alle Zeitpläne geben einen Wiederholungstyp an: monatlich, wöchentlich oder täglich. Innerhalb des Wiederholungstyps legen Sie die Intervalle und den Zeitraum der Häufigkeit eines Ereignisses fest. Die Wiederholungsoption und die Art und Weise, wie diese festgelegt ist, sind dieselbe, unabhängig davon, ob Sie einen freigegebenen oder einen berichtsspezifischen Zeitplan erstellen.  
   
  In diesem Thema:  
   
--   [Was können Sie Zeitpläne tun.](#bkmk_whatyoucando)  
+-   [Was können Sie mit Zeitplänen tun.](#bkmk_whatyoucando)  
   
 -   [Vergleichen von freigegebenen und Berichtsspezifischen Zeitplänen](#bkmk_compare)  
   
 -   [Konfigurieren von Datenquellen](#bkmk_configuredatasources)  
   
--   [Speichern von Anmeldeinformationen und Verarbeitungskonten](#bkmk_credentials)  
+-   [Store-Anmeldeinformationen und Verarbeitungskonten](#bkmk_credentials)  
   
--   [Wie zeitplanung und Übermittlung verarbeitet Works](#bkmk_how_scheduling_works)  
+-   [Wie zeitplanung und Übermittlung verarbeiten kann](#bkmk_how_scheduling_works)  
   
 -   [Serverabhängigkeiten](#bkmk_serverdependencies)  
   
--   [Auswirkungen beim Beenden des SQL Server-Agents](#bkmk_stoppingagent)  
+-   [Auswirkungen beim Beenden von SQL Server-Agent](#bkmk_stoppingagent)  
   
--   [Auswirkungen beim Beenden des Berichtsserver-Diensts](#bkmk_stoppingservice)  
+-   [Auswirkungen beim Beenden des Berichtsserverdiensts](#bkmk_stoppingservice)  
   
   
 ##  <a name="bkmk_whatyoucando"></a> Verwenden von Zeitplänen  
@@ -132,7 +132,7 @@ ms.locfileid: "36149340"
  Reporting Services verwaltet eine Ereigniswarteschlange für alle geplanten Vorgänge. Die Warteschlange wird in regelmäßigen Abständen nach neuen Ereignissen abgefragt. Standardmäßig wird die Warteschlange alle 10 Sekunden überprüft. Sie können das Intervall ändern, indem Sie ändern die `PollingInterval`, `IsNotificationService`, und `IsEventService` Konfigurationseinstellungen in der Datei "rsreportserver.config". Im SharePoint-Modus wird ebenfalls die Datei „RSreporserver.config“ für diese Einstellungen verwendet, und die Werte gelten für alle [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendungen. Weitere Informationen finden Sie unter [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md).  
   
 ##  <a name="bkmk_serverdependencies"></a> Serverabhängigkeiten  
- Für den Prozessor für Zeitplanung und Übermittlung müssen der Berichtsserverdienst und der SQL Server-Agent gestartet sein. Die Verarbeitung von zeitplanung und Übermittlung-Funktion muss aktiviert sein, über die `ScheduleEventsAndReportDeliveryEnabled` Eigenschaft von der **Oberflächenkonfiguration für Reporting Services** Facet in der Richtlinie der richtlinienbasierten Verwaltung. Sowohl der SQL Server-Agent als auch der Berichtsserverdienst müssen ausgeführt werden, damit geplante Vorgänge auftreten.  
+ Für den Prozessor für Zeitplanung und Übermittlung müssen der Berichtsserverdienst und der SQL Server-Agent gestartet sein. Die Verarbeitung von zeitplanung und Übermittlung-Funktion muss aktiviert sein, über die `ScheduleEventsAndReportDeliveryEnabled` Eigenschaft der **Oberflächenkonfiguration für Reporting Services** Facet in der Richtlinie der richtlinienbasierten Verwaltung. Sowohl der SQL Server-Agent als auch der Berichtsserverdienst müssen ausgeführt werden, damit geplante Vorgänge auftreten.  
   
 > [!NOTE]  
 >  Mit dem Facet **Oberflächenkonfiguration für Reporting Services** können geplante Vorgänge vorübergehend oder dauerhaft beendet werden. Obwohl Sie benutzerdefinierte Übermittlungserweiterungen erstellen und bereitstellen können, ist der Prozessor für Zeitplanung und Übermittlung an sich nicht erweiterbar. Sie können die Weise, wie er Ereignisse und Benachrichtigungen verwaltet, nicht ändern. Weitere Informationen zu Deaktivieren von Funktionen finden Sie in die im Abschnitt **Geplante Ereignisse und Übermittlung** von [Turn Reporting Services Features On or Off](../report-server/turn-reporting-services-features-on-or-off.md).  
@@ -151,7 +151,7 @@ ms.locfileid: "36149340"
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Datengesteuerte Abonnements](data-driven-subscriptions.md)   
  [Zwischenspeichern von Berichten (SSRS)](../report-server/caching-reports-ssrs.md)   
- [Melden von Berichtsserverinhalten &#40;SSRS im einheitlichen Modus&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Verwalten von Berichtsserverinhalten &#40;einheitlicher SSRS-Modus&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [Zwischenspeichern von freigegebenen Datasets &#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)  
   
   

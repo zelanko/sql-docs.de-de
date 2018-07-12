@@ -1,13 +1,11 @@
 ---
-title: Erstellen eine Formatdatei für Massenkopieren (ODBC) | Microsoft Docs
+title: Erstellen eine Formatdatei für Massenkopieren (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], data files
 ms.assetid: 0572fef3-daf5-409e-b557-c2a632f9a06d
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 03ab22f08f4364bf3cd4852f960d861c9dcdad7d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 9ccdf90bedcafb36676c8e727f2ee98b818e2f1a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060041"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414179"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>Erstellen einer Formatdatei für das Massenkopieren (ODBC)
   In diesem Beispiel wird gezeigt, wie mit Funktionen zum Massenkopieren sowohl eine Datendatei als auch eine Formatdatei erstellt werden können. Dieses Beispiel wurde für ODBC, Version 3.0 oder höher, entwickelt.  
@@ -39,7 +37,7 @@ ms.locfileid: "36060041"
   
 3.  Stellen Sie eine Verbindung mit SQL Server her.  
   
-4.  Rufen Sie [Bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) um die folgenden Informationen festzulegen:  
+4.  Rufen Sie [Bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) auf die folgenden Informationen festzulegen:  
   
     -   Name der Tabelle oder Sicht, aus der bzw. in die massenkopiert werden soll  
   
@@ -49,9 +47,9 @@ ms.locfileid: "36060041"
   
     -   Kopierrichtung: DB_OUT, wenn Daten aus der Tabelle oder Sicht in die Datei kopiert werden sollen  
   
-5.  Rufen Sie [Bcp_columns](../../native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) , die Anzahl der Spalten festzulegen.  
+5.  Rufen Sie [Bcp_columns](../../native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) um die Anzahl der Spalten festzulegen.  
   
-6.  Rufen Sie [Bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) für jede Spalte, deren Eigenschaften in der Datendatei zu definieren.  
+6.  Rufen Sie [Bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) für jede Spalte, um seine Eigenschaften in der Datendatei zu definieren.  
   
 7.  Rufen Sie [Bcp_writefmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) zum Erstellen einer Formatdatei beschreiben die Datendatei des Massenkopiervorgangs erstellt werden.  
   
@@ -64,7 +62,7 @@ ms.locfileid: "36060041"
   
  In diesem Beispiel wird eine Verbindung mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Standardinstanz des Computers hergestellt. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Definition der ODBC-Datenquelle, um die Instanz im folgenden Format anzugeben: Server\benannteInstanz. Standardmäßig wird [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] in einer benannten Instanz installiert.  
   
- Führen Sie das erste ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) zum Erstellen der Tabelle, die im Beispiel verwendete Codelisting.  
+ Führen Sie das erste ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) aus, um die Tabelle zu erstellen, die im Beispiel verwendete code.  
   
  Kompilieren Sie das zweite Codelisting (C++) mit odbc32.lib und odbcbcp.lib.  
   
@@ -217,7 +215,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Massenkopieren mit SQL Server-ODBC-Treiber – Themen &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+ [Massenkopieren mit dem SQL Server-ODBC-Treiber – Themen &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Verwenden von Datendateien und Formatdateien](../../native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

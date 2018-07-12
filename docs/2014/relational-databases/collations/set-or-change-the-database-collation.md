@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - collations [SQL Server], database
 - database collations [SQL Server]
 ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 769adcde56f3e77cee0a2458b1d32b9e763792f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1284c5ea161942ab96d974549147f24cd72ae8ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161817"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158551"
 ---
 # <a name="set-or-change-the-database-collation"></a>Festlegen oder Ändern der Datenbanksortierung
   In diesem Thema wird beschrieben, wie die Datenbanksortierung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]festgelegt und geändert werden kann. Wenn keine Sortierung angegeben wird, wird die Sortierung des Servers verwendet.  
@@ -61,7 +61,7 @@ ms.locfileid: "36161817"
   
     -   Sämtliche vorhandene `char`-, `varchar`-, `text`-, `nchar`-, `nvarchar`- und `ntext`-Parameter und skalare Rückgabewerte für gespeicherte Prozeduren und benutzerdefinierte Funktionen erhalten die neue Sortierung.  
   
-    -   Die `char`, `varchar`, `text`, `nchar`, `nvarchar`, oder `ntext` Systemdatentypen und alle benutzerdefinierten Datentypen auf Basis dieser Systemdatentypen werden geändert, um die neue Sortierung.  
+    -   Die `char`, `varchar`, `text`, `nchar`, `nvarchar`, oder `ntext` -Systemdatentypen sowie alle benutzerdefinierten Datentypen auf Basis dieser Systemdatentypen, um die neue Sortierung geändert werden.  
   
 -   Sie können die Sortierung von neuen Objekten, die in einer Benutzerdatenbank erstellt werden, mithilfe der COLLATE-Klausel der [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) -Anweisung ändern. Diese Anweisung ändert jedoch nicht die Sortierung der Spalten in vorhandenen benutzerdefinierten Tabellen. Letztere können mithilfe der COLLATE-Klausel der [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)-Anweisung geändert werden.  
   

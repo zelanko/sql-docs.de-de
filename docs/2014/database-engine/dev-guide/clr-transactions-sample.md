@@ -1,5 +1,5 @@
 ---
-title: Beispiel für CLR-Transaktionen | Microsoft Docs
+title: Beispiel für CLR-Transaktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b09161af-6ac1-406c-9d62-e40be3b4cf8d
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e1bf79778ca7c4376545570a538e41c5fa8db17f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 581510c786e31ab83399bb1ca0d21dd8391ff547
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160967"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154981"
 ---
 # <a name="clr-transactions-sample"></a>Beispiel für CLR-Transaktionen
   Dieses Beispiel veranschaulicht das Steuern von Transaktionen mithilfe der im `System.Transactions`-Namespace vorhandenen verwalteten APIs. Dabei wird mithilfe der `System.Transactions.TransactionScope`-Klasse eine Transaktionsgrenze festgelegt, um sicherzustellen, dass keine Lagerbestandsdaten angepasst werden, solange kein genügend großer Lagerbestand zur Deckung der Anforderung vorhanden ist, und dass bei einem ausreichenden Lagerbestand der Transfer von Beständen zwischen den Standorten auf atomare Weise erfolgt. Zur Demonstration der automatischen Registrierung in einer verteilten Transaktion werden Bestandsänderungen in einer Überwachungsdatenbank protokolliert, die in einer eigenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert ist.  
@@ -53,11 +53,11 @@ ms.locfileid: "36160967"
      `GO`  
   
     > [!NOTE]  
-    >  Um CLR zu aktivieren, benötigen Sie `ALTER SETTINGS` Serverberechtigung, die implizit von Mitgliedern der erhalten die `sysadmin` und `serveradmin` festen Serverrollen.  
+    >  Um CLR zu aktivieren, benötigen Sie `ALTER SETTINGS` Serverberechtigung, die implizit Mitglieder erhalten die `sysadmin` und `serveradmin` festen Serverrollen.  
   
 -   Die AdventureWorks-Datenbank muss in der von Ihnen verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz installiert sein.  
   
--   Wenn Sie kein Administrator für sind die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz, die Sie verwenden, benötigen Sie einen Administrator erteilen Sie **CreateAssembly** Berechtigung, um die Installation abzuschließen.  
+-   Wenn Sie nicht-Administrator sind die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz, die Sie verwenden, benötigen Sie einen Administrator, die Sie gewähren **CreateAssembly** Berechtigung, um die Installation abzuschließen.  
   
 ## <a name="building-the-sample"></a>Erstellen des Beispiels  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36160967"
   
     -   `sqlcmd -E -I -i install.sql -v root = "C:\MySample\"`  
   
-7.  Kopieren der [!INCLUDE[tsql](../../includes/tsql-md.md)] Datenbank Installationscode in eine Datei, und speichern Sie sie als `installDB.sql` im Beispielverzeichnis.  
+7.  Kopieren der [!INCLUDE[tsql](../../includes/tsql-md.md)] Installationscode für die Datenbank in eine Datei, und speichern Sie ihn `installDB.sql` im Beispielverzeichnis.  
   
 8.  Installieren Sie die Überwachungsdatenbank, indem Sie  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36160967"
   
      sowie entsprechenden Werten der Instanz und des Servers aus.  
   
-9. Kopie [!INCLUDE[tsql](../../includes/tsql-md.md)] -testbefehlsskript in eine Datei, und speichern Sie sie als `test.sql` im Beispielverzeichnis.  
+9. Kopie [!INCLUDE[tsql](../../includes/tsql-md.md)] -testbefehlsskript in eine Datei, und speichern Sie ihn `test.sql` im Beispielverzeichnis.  
   
 10. Führen Sie das Testskript mit dem folgenden Befehl aus:  
   

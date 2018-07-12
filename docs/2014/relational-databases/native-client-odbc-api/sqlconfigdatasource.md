@@ -1,13 +1,11 @@
 ---
-title: SQLConfigDataSource | Microsoft Docs
+title: SQLConfigDataSource | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,20 +14,20 @@ helpviewer_keywords:
 - SQLConfigDataSource function
 ms.assetid: 003e75b1-54e5-4b36-a6f7-11e1f14cf98f
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a3608900d780614131c6d811ea3923fe89b1007f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 7aacc73c006813ab2a9890d5743a82b53e26eedd
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159762"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412879"
 ---
 # <a name="sqlconfigdatasource"></a>SQLConfigDataSource
-  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt verschiedene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]– bestimmtes Schlüsselwort-Wert-Paare für Data source Attributzeichenfolgen.  
+  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt verschiedene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifische Schlüsselwort-Wert-Paare für Data source Attributzeichenfolgen.  
   
- Eine Liste der verfügbaren in Schlüsselwörter der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber finden Sie unter [Using Connection String Keywords with SQL Server Native Client](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Eine Liste der verfügbaren in Schlüsselwörter der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber finden Sie unter [Schlüsselwörtern für Verbindungszeichenfolgen mit SQL Server Native Client](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQLConfigDataSource-Funktion](http://go.microsoft.com/fwlink/?LinkId=59337)   

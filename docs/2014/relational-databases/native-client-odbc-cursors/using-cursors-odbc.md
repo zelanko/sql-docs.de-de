@@ -1,13 +1,11 @@
 ---
-title: Verwenden von Cursorn (ODBC) | Microsoft Docs
+title: Verwenden von Cursorn (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - ODBC cursors
 ms.assetid: 51322f92-0d76-44c9-9c33-9223676cf1d3
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 240910c0c6be92537a15a0560ebde1236a3a6593
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ee00b752236032b7123eb557e82bed12de8ecb00
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158969"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416349"
 ---
 # <a name="using-cursors-odbc"></a>Verwenden von Cursorn (ODBC)
   ODBC unterstützt ein Cursormodell, das Folgendes zulässt:  
@@ -39,14 +37,14 @@ ms.locfileid: "36158969"
   
 -   Positionierte Updates.  
   
- ODBC-Anwendungen deklarieren und öffnen Cursor oder verwenden cursorspezifische [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen nur selten. ODBC öffnet automatisch einen Cursor für jedes Resultset, das von einer SQL-Anweisung zurückgegeben wird. Die Charakteristika der Cursor werden von Anweisungsattribute festlegen mit gesteuert [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) vor der SQL-Anweisung ausgeführt wird. Die ODBC-API-Funktionen zum Verarbeiten der Resultsets unterstützen sämtliche Cursorfunktionalitäten einschließlich Abrufen, Durchführen eines Bildlaufs und positionierte Updates.  
+ ODBC-Anwendungen deklarieren und öffnen Cursor oder verwenden cursorspezifische [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen nur selten. ODBC öffnet automatisch einen Cursor für jedes Resultset, das von einer SQL-Anweisung zurückgegeben wird. Die Charakteristika der Cursor werden von Anweisungsattribute festgelegt gesteuert [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) vor der SQL-Anweisung ausgeführt wird. Die ODBC-API-Funktionen zum Verarbeiten der Resultsets unterstützen sämtliche Cursorfunktionalitäten einschließlich Abrufen, Durchführen eines Bildlaufs und positionierte Updates.  
   
  Dies ist ein Vergleich der Funktionsweise von Cursorn in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skripts und ODBC-Anwendungen.  
   
 |Aktion|[!INCLUDE[tsql](../../includes/tsql-md.md)]|ODBC|  
 |------------|------------------------|----------|  
-|Definieren des Cursorverhaltens|Angeben durch DECLARE CURSOR-Parameter|Festlegen der Cursorattribute mithilfe [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)|  
-|Öffnen eines Cursors|DECLARE CURSOR OPEN *Cursorname*|**SQLExecDirect** oder **SQLExecute**|  
+|Definieren des Cursorverhaltens|Angeben durch DECLARE CURSOR-Parameter|Festlegen der Cursorattribute mithilfe von [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)|  
+|Öffnen eines Cursors|DECLARE CURSOR OPEN *Cursor_name*|**SQLExecDirect** oder **SQLExecute**|  
 |Abrufen von Zeilen|FETCH|**SQLFetch** oder [SQLFetchScroll](../native-client-odbc-api/sqlfetchscroll.md)|  
 |Positioniertes Update|WHERE CURRENT OF-Klausel mit UPDATE oder DELETE|**SQLSetPos**|  
 |Schließen eines Cursors|Schließen *Cursor_name* DEALLOCATE|[SQLCloseCursor](../native-client-odbc-api/sqlclosecursor.md)|  
@@ -63,7 +61,7 @@ ms.locfileid: "36158969"
   
 -   [Cursoreigenschaften](properties/cursor-properties.md)  
   
--   [Details zum Programmieren von Cursorn &#40;ODBC&#41;](programming/cursor-programming-details-odbc.md)  
+-   [Informationen zur Programmierung von Cursor &#40;ODBC&#41;](programming/cursor-programming-details-odbc.md)  
   
 -   [Scrollen und Fetchen von Zeilen](../native-client-ole-db-rowsets/fetching-rows.md)  
   

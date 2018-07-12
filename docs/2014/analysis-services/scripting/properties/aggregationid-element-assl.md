@@ -1,5 +1,5 @@
 ---
-title: AggregationID-Element (ASSL) | Microsoft Docs
+title: AggregationID-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - AggregationID element
 ms.assetid: 6056da1d-b6b4-4074-84db-45be719df49a
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5cc757076c638075466cd0d49ad4340c983a8294
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fadf9884d769402e962c64ec00d86338a71328a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159855"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277816"
 ---
 # <a name="aggregationid-element-assl"></a>AggregationID-Element (ASSL)
-  Identifiziert die aggregationsdefinition vom der [AggregationDesign](../objects/aggregationdesign-element-assl.md) Element verwendet, um die Aggregationsinstanz zu erstellen.  
+  Identifiziert die aggregationsdefinition vom die [AggregationDesign](../objects/aggregationdesign-element-assl.md) Element verwendet, um die Aggregationsinstanz zu erstellen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36159855"
 ## <a name="remarks"></a>Hinweise  
  Wenn dieses Element fehlt oder auf eine leere Zeichenfolge festgelegt ist, stellt `AggregationInstance` eine benutzerdefinierte Aggregation dar.  
   
- Das Element, das das übergeordnete Element des entspricht `AggregationID` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.AggregationInstance>.  
+ Das Element, das dem übergeordneten entspricht `AggregationID` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.AggregationInstance>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

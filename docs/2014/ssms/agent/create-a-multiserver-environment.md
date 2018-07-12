@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, multiserver environments
 - master servers [SQL Server], about master servers
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - multiserver environments [SQL Server]
 ms.assetid: edc2b60d-15da-40a1-8ba3-f1d473366ee6
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: accad064c75c799af6e871e517975352949f9526
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8cecfa64f8aa6656cf055a9e488cfe30d68d5160
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161273"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183597"
 ---
 # <a name="create-a-multiserver-environment"></a>Erstellen einer Multiserverumgebung
   Die Multiserververwaltung erfordert, dass Sie einen Masterserver (MSX) und einen oder mehrere Zielserver (TSX) einrichten. Aufträge, die auf allen Zielservern verarbeitet werden, müssen zuerst auf dem Masterserver definiert werden, und dann zu den Zielservern heruntergeladen werden.  
@@ -39,14 +39,14 @@ ms.locfileid: "36161273"
 ## <a name="considerations-for-multiserver-environments"></a>Überlegungen zu Multiserverumgebungen  
  Details zu den unterstützten MSX-/TSX-Konfigurationen finden Sie in der folgenden Tabelle.  
   
-||**TSX = 7.0**|**TSX = 8.0 &LT; SP3**|**TSX = 8.0 SP3 oder höher**|**TSX = 9.0**|**TSX = 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
+||**TSX = 7.0**|**TSX = 8.0 &LT; SP3**|**TSX = 8.0 SP3 oder höher**|**TSX = 9.0**|**TSX = 10.0**|**TSX = 10,5**|**TSX = 11.0**|  
 |-|--------------------|---------------------------|----------------------------------|--------------------|--------------------|---------------------|---------------------|  
 |**MSX = 7.0**|ja|ja|nein|nein|nein|nein|nein|  
 |**MSX = 8.0 &LT; SP3**|ja|ja|nein|nein|nein|nein|nein|  
 |**MSX = 8.0 SP3 oder höher**|nein|nein|ja|ja|ja|ja|ja|  
 |**MSX = 9.0**|nein|nein|nein|ja|ja|ja|ja|  
 |**MSX = 10.0**|nein|nein|nein|nein|ja|ja|ja|  
-|**MSX = 10.5**|nein|nein|nein|nein|nein|ja|ja|  
+|**MSX = 10,5**|nein|nein|nein|nein|nein|ja|ja|  
 |**MSX = 11.0**|nein|nein|nein|nein|nein|nein|ja|  
   
  Beachten Sie die folgenden Punkte, wenn Sie eine Multiserverumgebung erstellen:  

@@ -1,5 +1,5 @@
 ---
-title: Erstellen, ändern und Löschen von Standardabonnements (Reporting Services im einheitlichen Modus) | Microsoft Docs
+title: Erstellen, ändern und Löschen von Standardabonnements (Reporting Services im einheitlichen Modus) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - standard subscriptions [Reporting Services]
 - subscriptions [Reporting Services], standard
@@ -16,13 +16,13 @@ ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 508ffaa05c0f5d30204832b49dcdf2b3b791c567
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a8c38acc8b25853db76bf89008189928c4cef578
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160169"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230390"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>Erstellen, Ändern und Löschen von Standardabonnements (Reporting Services im einheitlichen Modus)
   Ein Standardabonnement wird von einzelnen Benutzern erstellt, die einen Bericht per E-Mail oder an einen freigegebenen Ordner übermitteln möchten. Ein Standardabonnement wird stets über den Bericht definiert, auf dem es basiert.  
@@ -61,7 +61,7 @@ ms.locfileid: "36160169"
   
 -   Zum Verwenden der Dateifreigabeübermittlung müssen bereits Zielordner definiert sein. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers für die e-Mail-Übermittlung &#40;SSRS-Konfigurations-Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
- Bevor Sie einen Bericht abonnieren können, muss die Berichtsdatenquelle so konfiguriert sein, dass gespeicherte oder keine Anmeldeinformationen verwendet werden. Weitere Informationen finden Sie unter [Anmeldeinformationen in einer Reporting Services-Datenquelle für den Datenspeicher](../report-data/store-credentials-in-a-reporting-services-data-source.md). Wenn dies nicht der Fall ist, ist die Schaltfläche **Neues Abonnement** nicht verfügbar.  
+ Bevor Sie einen Bericht abonnieren können, muss die Berichtsdatenquelle so konfiguriert sein, dass gespeicherte oder keine Anmeldeinformationen verwendet werden. Weitere Informationen finden Sie unter [Store-Anmeldeinformationen in einer Reporting Services-Datenquelle](../report-data/store-credentials-in-a-reporting-services-data-source.md). Wenn dies nicht der Fall ist, ist die Schaltfläche **Neues Abonnement** nicht verfügbar.  
   
  In diesem Thema wird nicht erläutert, wie ein datengesteuertes Abonnement erstellt wird. Informationen zum Erstellen eines datengesteuerten Abonnements finden Sie unter [Erstellen eines datengesteuerten Abonnements &#40;SSRS-Tutorial&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md) oder in der Onlinehilfe zur Seite „Erstellen eines datengesteuerten Abonnements im Berichts-Manager“.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36160169"
   
 6.  Wählen Sie **Beim Erstellen der Datei eine Dateinamenerweiterung hinzufügen**aus. Mit dieser Option wird dem Dateinamen eine aus drei Zeichen bestehende Dateierweiterung hinzugefügt. Die Dateierweiterung wird vom Berichtsausgabeformat bestimmt, das Sie auswählen.  
   
-7.  In der **Pfad** Text geben einen Pfad (UNC = Universal Naming Convention) zu einem vorhandenen Ordner, in dem Sie die Berichte zu übermitteln möchten (z. B. \\ \\< Servername\>\\< MyReports\>). Beginnen Sie die Pfadangabe mit zwei umgekehrten Schrägstrichen (\\). Geben Sie keinen umgekehrten Schrägstrich am Ende an.  
+7.  In der **Pfad** Text geben einen Universal Naming Convention (UNC)-Pfad zu einem vorhandenen Ordner, in dem Sie die Berichte senden möchten (z. B. \\ \\< Servername\>\\< Meine Berichte\>). Beginnen Sie die Pfadangabe mit zwei umgekehrten Schrägstrichen (\\). Geben Sie keinen umgekehrten Schrägstrich am Ende an.  
   
 8.  Wählen Sie unter Renderformat zur Dateiübermittlung ein Berichtsausgabeformat aus. Wählen Sie ein Format aus, das der Desktopanwendung entspricht, die Sie verwenden, um den Bericht zu öffnen. Vermeiden Sie Formate, die einen Bericht nicht in einem einzigen Datenstrom rendern oder die Interaktivität einführen, die in einer statischen Datei (beispielsweise HTML 4.0) nicht unterstützt wird.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36160169"
   
 3.  Wählen Sie unter **Übermittelt von**die Option **E-Mail**aus. Wenn dieser Übermittlungstyp nicht verfügbar ist, wurde der Berichtsserver nicht für E-Mail-Abonnements konfiguriert.  
   
-4.  Im Feld **An** ist der Empfängername bereits als Ihr Domänenbenutzerkonto angegeben. Berichtsserver-Konfigurationseinstellungen legen fest, ob das Feld **An** bereits mit Ihrem Benutzerkonto ausgefüllt wird. Weitere Informationen zum Ändern der Konfiguration für e-Mail-Adressen finden Sie unter [Konfigurieren eines Berichtsservers für die e-Mail-Übermittlung &#40;SSRS-Konfigurations-Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
+4.  Im Feld **An** ist der Empfängername bereits als Ihr Domänenbenutzerkonto angegeben. Berichtsserver-Konfigurationseinstellungen legen fest, ob das Feld **An** bereits mit Ihrem Benutzerkonto ausgefüllt wird. Weitere Informationen zum Ändern der Einstellungen für e-Mail-Adressen finden Sie unter [Konfigurieren eines Berichtsservers für die e-Mail-Übermittlung &#40;SSRS-Konfigurations-Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
     > [!NOTE]  
     >  Abhängig von Ihren Berechtigungen können Sie auch die E-Mail-Adresse eingeben, an die der Bericht geliefert werden soll. Mehrere E-Mail-Adressen müssen durch ein Semikolon (;) getrennt werden. Sie können weitere E-Mail-Adressen in die Textfelder **Cc**, **Bcc**und **Antwort an** eingeben. Für dieses Verfahren müssen Sie über die Berechtigung zum Verwalten von Abonnements verfügen.  
@@ -168,7 +168,7 @@ ms.locfileid: "36160169"
   
     2.  Aktivieren Sie zum Löschen eines Abonnements das Kontrollkästchen neben dem Abonnement, und klicken Sie dann auf **Löschen**.  
   
- In diesem Thema wird nicht beschrieben, wie ein Abonnement beendet wird, das zurzeit auf dem Berichtsserver ausgeführt wird. Weitere Informationen zum Kündigen von Abonnements finden Sie unter [Verwalten eines Prozesses ausführen](manage-a-running-process.md)  
+ In diesem Thema wird nicht beschrieben, wie ein Abonnement beendet wird, das zurzeit auf dem Berichtsserver ausgeführt wird. Weitere Informationen zum Kündigen von Abonnements finden Sie unter [Verwalten eines ausgeführten Prozesses](manage-a-running-process.md)  
   
  Wenn Sie ein Abonnement beenden möchten und es nicht finden können, notieren Sie sich den Bericht, den Sie erhalten, und suchen Sie anhand des Namens nach diesem Bericht. Wenn Sie auf den Bericht zugegriffen haben, können Sie sich aus dem Abonnement entfernen. Falls Sie das Abonnement nicht finden können, handelt es sich möglicherweise um ein datengesteuertes Abonnement. Weitere Informationen erhalten Sie von Ihrem Berichtsserveradministrator.  
   
@@ -180,7 +180,7 @@ ms.locfileid: "36160169"
  [Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](../create-manage-subscriptions-native-mode-report-servers.md)   
  [Datengesteuerte Abonnements](data-driven-subscriptions.md)   
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [Berichts-Manager &#40;SSRS im einheitlichen Modus&#41;](../report-manager-ssrs-native-mode.md)   
+ [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md)   
  [Verwenden von „Meine Abonnements“](use-my-subscriptions-native-mode-report-server.md)  
   
   

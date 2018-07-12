@@ -1,5 +1,5 @@
 ---
-title: Partitionen (SSAS – tabellarisch) | Microsoft Docs
+title: Partitionen (SSAS – tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 09af0cce9aa8058ea02b597236b48fc0fd58b190
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d0797d22b66a40c0cf13fcd9c394d0072827b8e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160068"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239700"
 ---
 # <a name="partitions-ssas-tabular"></a>Partitionen (SSAS – tabellarisch)
   Durch Partitionen wird eine Tabelle logisch unterteilt. Jede Partition kann unabhängig von anderen Partitionen verarbeitet (aktualisiert) werden. Partitionen, die während der Modellerstellung mit dem Dialogfeld Partitionen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] erstellt werden, beziehen sich auf die Arbeitsbereichsdatenbank des Modells. Beim Bereitstellen des Modells werden die für die Arbeitsbereichsdatenbank des Modells definierten Partitionen in der bereitgestellten Modelldatenbank dupliziert. Mithilfe des Dialogfelds Partitionen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]können Sie weitere Partitionen für eine bereitgestellte Modelldatenbank erstellen und verwalten.  In diesem Thema werden Partitionen beschrieben, die während der Modellerstellung unter Verwendung des Dialogfelds Partitions-Manager in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erstellt wurden. Informationen zum Erstellen und Verwalten von Partitionen für ein bereitgestelltes Modell finden Sie unter [Erstellen und Verwalten von Tabellenmodellpartitionen &#40;SSAS – tabellarisch&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md).  
@@ -57,6 +57,6 @@ ms.locfileid: "36160068"
   
 ## <a name="see-also"></a>Siehe auch  
  [DirectQuery-Modus &#40;SSAS – tabellarisch&#41;](directquery-mode-ssas-tabular.md)   
- [Daten verarbeiten &#40;SSAS – tabellarisch&#41;](../process-data-ssas-tabular.md)  
+ [Verarbeiten von Daten &#40;SSAS – tabellarisch&#41;](../process-data-ssas-tabular.md)  
   
   

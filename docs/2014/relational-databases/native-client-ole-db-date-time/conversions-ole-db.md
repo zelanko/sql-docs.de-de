@@ -1,13 +1,11 @@
 ---
-title: Bindungen und Konvertierungen (OLE DB) | Microsoft Docs
+title: Bindungen und Konvertierungen (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - OLE DB, bindings and conversions
 ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 086ea20b3ebf2f83d7ef139ec261298e895d591b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 709fb4abec2e8de8aa845aaddb1418f5c9d957e3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161104"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407990"
 ---
 # <a name="bindings-and-conversions-ole-db"></a>Bindungen und Konvertierungen (OLE DB)
   In diesem Abschnitt wird erläutert, wie zwischen `datetime`- und `datetimeoffset`-Werten konvertiert wird. Die in diesem Abschnitt beschriebenen Konvertierungen werden entweder von OLE DB bereitgestellt oder sind eine konsistente Erweiterung von OLE DB.  
@@ -33,15 +31,15 @@ ms.locfileid: "36161104"
   
 -   Das Format von `datetime`- und `datetimeoffset`-Zeichenfolgen ist:  
   
-     *JJJJ*-*mm*-*Dd*[ *"hh"*:*mm*:*ss*[. *9999999*] [± *"hh"*:*mm*]]  
+     *Yyyy*-*mm*-*TT*[ *Hh*:*mm*:*ss*[. *9999999*] [± *Hh*:*mm*]]  
   
 -   Das Format von `time`-Zeichenfolgen ist:  
   
-     *"hh"*:*mm*:*ss*[. *9999999*]  
+     *Hh*:*mm*:*ss*[. *9999999*]  
   
 -   Das Format von `date`-Zeichenfolgen ist:  
   
-     *JJJJ*-*mm*-*TT*  
+     *Yyyy*-*mm*-*TT*  
   
 > [!NOTE]  
 >  Frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client und SQLOLEDB haben OLE-Konvertierungen implementiert, falls Standardkonvertierungen fehlgeschlagen sind. Als Ergebnis unterscheiden sich einige von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 sowie höheren Versionen ausgeführte Konvertierungen von der OLE DB-Spezifikation.  
@@ -74,6 +72,6 @@ ms.locfileid: "36161104"
  Beschreibt date/time-Konvertierungen, die zwischen [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (oder höher) und einer Clientanwendung durchgeführt werden, die mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB geschrieben wurde.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datum und Uhrzeit-Verbesserungen &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+ [Datums- / Uhrzeitverbesserungen &#40;OLE-DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

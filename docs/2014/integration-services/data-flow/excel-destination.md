@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.exceldest.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d88fa949954272942c8eca4c9f62ac470dd717cc
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: d093981287236aafa91b6ec4aa4ffeb2e75a05c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324634"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156771"
 ---
 # <a name="excel-destination"></a>Excel-Ziel
   Das Excel-Ziel lädt Daten in Arbeitsblätter oder Bereiche in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel-Arbeitsmappen.  
@@ -117,7 +117,7 @@ ms.locfileid: "36324634"
   
 ## <a name="see-also"></a>Siehe auch  
  [Excel-Quelle](excel-source.md)   
- [Integrationsservices &#40;SSIS&#41; Variablen](../integration-services-ssis-variables.md)   
+ [Integrationsdienste &#40;SSIS&#41; Variablen](../integration-services-ssis-variables.md)   
  [Datenfluss](data-flow.md)   
  [Arbeiten mit Excel-Dateien mit dem Skripttask](../extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   

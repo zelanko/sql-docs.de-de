@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 helpviewer_keywords:
@@ -53,15 +53,15 @@ helpviewer_keywords:
 - accounts [SQL Server], user
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 caps.latest.revision: 182
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b2b624caf289f0f6962d5dbdd9e72b1bf95cc7c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 4029c7a9b0296b3320342b90f064d0e8f3b3feb3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160816"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239882"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Konfigurieren von Windows-Dienstkonten und -Berechtigungen
   Jeder Dienst in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt einen Prozess oder eine Gruppe von Prozessen zum Verwalten der Authentifizierung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Vorgängen mit Windows dar. In diesem Thema werden die Standardkonfiguration von Diensten in dieser Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]und die Konfigurationsoptionen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste beschrieben, die Sie während und nach der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation festlegen können.  
@@ -69,7 +69,7 @@ ms.locfileid: "36160816"
 ##  <a name="Top"></a> Inhalt  
  Dieses Thema ist in folgende Abschnitte unterteilt:  
   
--   [Durch SQLServer installierte Dienste](#Service_Details)  
+-   [Dienste, die von SQLServer installiert](#Service_Details)  
   
 -   [Diensteigenschaften und-Konfiguration](#Serv_Prop)  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36160816"
   
         -   [Ändern von Kontoeigenschaften](#Changing_Accounts)  
   
-    -   [In Windows 7 und Windows Server 2008 R2 verfügbare neue Kontotypen](#New_Accounts)  
+    -   [Mit Windows 7 und Windows Server 2008 R2 verfügbare neue Kontotypen](#New_Accounts)  
   
     -   [Automatischer Start](#Auto_Start)  
   
@@ -91,9 +91,9 @@ ms.locfileid: "36160816"
   
     -   [Windows-Berechtigungen und Rechte](#Windows)  
   
-    -   [Gewährte Dateisystemberechtigungen Sie zum SQL Server-pro-Dienst-SIDs oder lokalen Windows-Gruppen](#Reviewing_ACLs)  
+    -   [Gewährte Dateisystemberechtigungen Sie für SQL Server-pro-Dienst-SIDs oder lokalen Windows-Gruppen](#Reviewing_ACLs)  
   
-    -   [Gewährte Dateisystemberechtigung in andere Windows-Benutzerkonten oder-Gruppen](#File_System_Other)  
+    -   [Gewährte Dateisystemberechtigung an andere Windows-Benutzerkonten oder-Gruppen](#File_System_Other)  
   
     -   [Auf ungewöhnliche Speicherorte auf einem Datenträger bezogene Dateisystemberechtigungen](#Unusual_Locations)  
   
@@ -192,7 +192,7 @@ ms.locfileid: "36160816"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser|[LOKALER DIENST](#Local_Service)|[LOKALER DIENST](#Local_Service)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer|[LOKALES SYSTEM](#Local_System)|[LOKALES SYSTEM](#Local_System)|  
   
- <sup>*</sup> Wenn externe Ressourcen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Computer benötigt werden, [!INCLUDE[msCoName](../../includes/msconame-md.md)] empfiehlt die Verwendung von einem verwalteten Dienstkonto (MSA), mit den erforderlichen Mindestberechtigungen konfiguriert wurde.  
+ <sup>*</sup> Wenn externe Ressourcen die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Computer benötigt werden, [!INCLUDE[msCoName](../../includes/msconame-md.md)] empfiehlt die Verwendung eines verwalteten Dienst Konto (MSA), mit den erforderlichen Mindestberechtigungen konfiguriert wurde.  
   
  **SQL Server-Failoverclusterinstanz**  
   
@@ -214,7 +214,7 @@ ms.locfileid: "36160816"
 > -   Verwenden Sie für in einer SharePoint-Farm bereitgestellte [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanzen immer die SharePoint-Zentraladministration, um die Serverkonten für [!INCLUDE[ssGeminiMTS](../../includes/ssgeminimts-md.md)] -Anwendungen und [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]zu ändern. Bei Verwendung der Zentraladministration werden zugehörige Einstellungen und Berechtigungen für die Verwendung der neuen Kontoinformationen aktualisiert.  
 > -   Verwenden Sie zum Ändern der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Optionen das Reporting Services-Konfigurationstool.  
   
-###  <a name="New_Accounts"></a> In Windows 7 und Windows Server 2008 R2 verfügbare neue Kontotypen  
+###  <a name="New_Accounts"></a> Mit Windows 7 und Windows Server 2008 R2 verfügbare neue Kontotypen  
  In Windows 7 und Windows Server 2008 R2 sind zwei neue Dienstkontotypen verfügbar: verwaltete Dienstkonten (MSA) und virtuelle Konten. Verwaltete Dienstkonten und virtuelle Konten sollen für wichtige Anwendungen wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ihre eigenen Konten zur Verfügung stellen, sodass ein Administrator den Dienstprinzipalnamen (Service Principal Name, SPN) und die Anmeldedaten für diese Konten nicht mehr manuell verwalten muss. Diese Konten vereinfachen erheblich die langfristige Verwaltung von Dienstkontobenutzern, Kennwörtern und SPNs.  
   
 -   <a name="MSA"></a> **Managed Service Accounts**  
@@ -272,16 +272,16 @@ ms.locfileid: "36160816"
 |Name des SQL Server-Diensts|Schalter für unbeaufsichtigte Installationen<sup>1</sup>|  
 |-----------------------------|-------------------------------------------------------|  
 |MSSQLSERVER|SQLSVCACCOUNT, SQLSVCPASSWORD, SQLSVCSTARTUPTYPE|  
-|SQLServerAgent<sup>2</sup>|AGTSVCACCOUNT, AGTSVCPASSWORD, AGTSVCSTARTUPTYPE|  
+|' SQLServerAgent '<sup>2</sup>|AGTSVCACCOUNT, AGTSVCPASSWORD, AGTSVCSTARTUPTYPE|  
 |MSSQLServerOLAPService|ASSVCACCOUNT, ASSVCPASSWORD, ASSVCSTARTUPTYPE|  
 |ReportServer|RSSVCACCOUNT, RSSVCPASSWORD, RSSVCSTARTUPTYPE|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|ISSVCACCOUNT, ISSVCPASSWORD, ISSVCSTARTUPTYPE|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|DRU_CTLR, CTLRSVCACCOUNT, CTLRSVCPASSWORD, CTLRSTARTUPTYPE, CTLRUSERS|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|DRU_CLT, CLTSVCACCOUNT, CLTSVCPASSWORD, CLTSTARTUPTYPE, CLTCTLRNAME, CLTWORKINGDIR, CLTRESULTDIR|  
   
- <sup>1</sup>für Weitere Informationen und eine Beispielsyntax zu unbeaufsichtigten Installationen finden Sie unter [Installieren von SQL Server 2014 von der Befehlszeile aus](../install-windows/install-sql-server-from-the-command-prompt.md).  
+ <sup>1</sup>finden Sie weitere Informationen und eine Beispielsyntax zu unbeaufsichtigten Installationen [Installieren von SQL Server 2014 über die Eingabeaufforderung](../install-windows/install-sql-server-from-the-command-prompt.md).  
   
- <sup>2</sup>der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst ist auf Instanzen von deaktiviert [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] und [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services.  
+ <sup>2</sup>der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst ist deaktiviert, auf Instanzen von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] und [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] mit Advanced Services.  
   
 ###  <a name="Firewall"></a> Firewallport  
  Bei der Erstinstallation kann in den meisten Fällen mithilfe von Tools wie [!INCLUDE[ssDE](../../includes/ssde-md.md)] , die auf demselben Computer wie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] installiert sind, eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt werden. Vom[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup werden keine Ports in der Windows-Firewall geöffnet. Verbindungen von anderen Computern sind möglicherweise nicht möglich, bis [!INCLUDE[ssDE](../../includes/ssde-md.md)] für das Warten auf einen TCP-Port konfiguriert und der entsprechende Port in der Windows-Firewall für Verbindungen geöffnet wird. Weitere Informationen finden Sie unter [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
@@ -339,7 +339,7 @@ ms.locfileid: "36160816"
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller:**|**Als Dienst anmelden** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client:**|**Als Dienst anmelden** (SeServiceLogonRight)|  
   
- <sup>1</sup>der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst ist auf Instanzen von deaktiviert [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
+ <sup>1</sup>der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst ist deaktiviert, auf Instanzen von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   
 ###  <a name="Reviewing_ACLs"></a> Pro-Dienst-SIDs für SQL Server oder lokalen Windows-Gruppen gewährte Dateisystemberechtigungen  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonten müssen über einen Zugriff auf Ressourcen verfügen. Zugriffssteuerungslisten (Access Control Lists, ACLs) werden für die Pro-Dienst-SID oder die lokale Windows-Gruppe festgelegt.  
@@ -360,7 +360,7 @@ ms.locfileid: "36160816"
 ||Instid\MSSQL\Repldata|Vollzugriff|  
 ||120\shared|Lesen, Ausführen|  
 ||Instid\MSSQL\Template-Daten (nur[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] )|Leseberechtigung|  
-|SQLServerAgent<sup>1</sup>|Instid\MSSQL\binn|Vollzugriff|  
+|' SQLServerAgent '<sup>1</sup>|Instid\MSSQL\binn|Vollzugriff|  
 ||Instid\MSSQL\binn|Vollzugriff|  
 ||Instid\MSSQL\Log|Lesen, Schreiben, Löschen, Ausführen|  
 ||120\com|Lesen, Ausführen|  
@@ -424,7 +424,7 @@ ms.locfileid: "36160816"
 ||\<ToolsDir>\DReplayClient\IRTemplate.tdf|Lesen, Ausführen, Ordnerinhalt auflisten|  
 ||\<ToolsDir>\DReplayClient\IRDefinition.xml|Lesen, Ausführen, Ordnerinhalt auflisten|  
   
- <sup>1</sup>der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst ist auf Instanzen von deaktiviert [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] und [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services.  
+ <sup>1</sup>der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst ist deaktiviert, auf Instanzen von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] und [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] mit Advanced Services.  
   
  Wenn Datenbankdateien an einem benutzerdefinierten Ort gespeichert werden, muss Pro-Dienst-SID-Zugriff auf diesen Ort gewährt sein. Weitere Informationen zum Gewähren von Dateisystemberechtigungen an einen pro-Dienst-SID finden Sie unter [Konfigurieren von Dateisystemberechtigungen für den Datenbank-Engine-Zugriff](configure-file-system-permissions-for-database-engine-access.md).  
   
@@ -663,7 +663,7 @@ ms.locfileid: "36160816"
   
 -   SQL Writer  
   
- <sup>1</sup>Analysis Services im integrierten SharePoint-Modus ausgeführt wird als 'PowerPivot' als einzelne, benannte Instanz. Der Instanzname ist unveränderlich. Sie können keinen anderen Namen angeben. Sie können nur eine Instanz von Analysis Services installieren, die auf jedem physischen Server als 'PowerPivot' ausgeführt wird.  
+ <sup>1</sup>Analysis Services im integrierten SharePoint-Modus als 'PowerPivot' als einzelne, benannte Instanz ausgeführt. Der Instanzname ist unveränderlich. Sie können keinen anderen Namen angeben. Sie können nur eine Instanz von Analysis Services installieren, die auf jedem physischen Server als 'PowerPivot' ausgeführt wird.  
   
 ###  <a name="Localized_service_names"></a> Lokalisierte Dienstnamen  
  In der folgenden Tabelle werden Dienstnamen aufgeführt, die in lokalisierten Versionen von Windows angezeigt werden.  

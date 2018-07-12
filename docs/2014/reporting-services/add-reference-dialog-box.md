@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen des Dialogfelds "Verweis" | Microsoft Docs
+title: Hinzufügen des Dialogfelds "Verweis" | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.addreference.f1
 helpviewer_keywords:
 - Edit References dialog box
 ms.assetid: 7bdd2eee-195a-4a2f-a0aa-56f7e90c1fb4
 caps.latest.revision: 27
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ecf67f3b8c82ba63ee24aca05238e311f3ed36bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f549130cc2781fddc7480a523ee895400e4155e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161283"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150511"
 ---
 # <a name="add-reference-dialog-box"></a>Verweis hinzufügen (Dialogfeld)
   Verwenden Sie das Dialogfeld **Verweis hinzufügen** , um Verweise auf eine benutzerdefinierte Assembly oder [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] -Komponente zum Bericht hinzuzufügen. Nach dem Hinzufügen eines Assemblyverweises können Sie Ausdrücke oder eingebetteten benutzerdefinierten Code schreiben, der vollqualifizierte Verweise auf Klassen oder Methoden in der Assembly oder Komponente enthält. Weitere Informationen finden Sie unter [Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md) und [Hinzufügen eines Assemblyverweises zu einem Bericht &#40;SSRS&#41;](report-design/add-an-assembly-reference-to-a-report-ssrs.md).  
@@ -42,7 +42,7 @@ ms.locfileid: "36161283"
  Verwenden Sie die Option, um den Namen einer kürzlich verwendeten Assembly auszuwählen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwenden von benutzerdefinierten Assemblys mit Berichten](custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [Verwenden benutzerdefinierter Assemblys mit Berichten](custom-assemblies/using-custom-assemblies-with-reports.md)   
  [Hinzufügen von Code zu einem Bericht (SSRS)](report-design/add-code-to-a-report-ssrs.md)  
   
   

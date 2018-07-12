@@ -1,5 +1,5 @@
 ---
-title: OnlineMode-Element (ASSL) | Microsoft Docs
+title: OnlineMode-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - OnlineMode element
 ms.assetid: 0bbac4e2-002f-4be4-8dd6-ccd7034f5f93
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3efda242b0563f4b6b853d3bf87b831da1ea8e00
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a00e12eaa54724921195727fe16f6bd98f3f44a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161666"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154851"
 ---
 # <a name="onlinemode-element-assl"></a>OnlineMode-Element (ASSL)
   Gibt an, ob die Datenbank sofort nach dem Initiieren der Cache-Neuerstellung oder erst nach Abschluss der Cache-Neuerstellung wieder online geschaltet wird.  

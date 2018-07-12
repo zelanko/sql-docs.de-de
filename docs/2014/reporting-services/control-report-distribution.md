@@ -1,5 +1,5 @@
 ---
-title: Steuern der Berichtsverteilung | Microsoft Docs
+title: Steuern der Berichtsverteilung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], report distribution
 - subscriptions [Reporting Services], e-mail
@@ -21,19 +21,19 @@ ms.assetid: 8f15e2c6-a647-4b05-a519-1743b5d8654c
 caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0b184eadeefa4b9f1177597172476b743094de8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d73a5e483219df7a8b7c06a3c4719850aaf7a3f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160864"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160181"
 ---
 # <a name="control-report-distribution"></a>Steuerelement Berichtsverteilung
   Sie können einen Berichtsserver so konfigurieren, dass die Sicherheitsrisiken im Zusammenhang mit der Verteilung per E-Mail und Dateifreigabe minimiert werden.  
   
 ## <a name="securing-reports"></a>Sichern von Berichten  
- Der erste Schritt beim Steuern der Berichtsverteilung besteht im Sichern des Berichts vor unbefugtem Zugriff. Wenn ein Bericht in einem Abonnement verwendet werden soll, muss er gespeicherte Anmeldeinformationen verwenden, die für alle Übermittlungen identisch sind. Jeder Benutzer mit Zugriff auf den Bericht im Berichtsserver kann diesen ausführen und möglicherweise verteilen. Um dies zu verhindern, müssen Sie den Zugriff auf den Bericht auf die erforderlichen Benutzer beschränken. Weitere Informationen finden Sie unter [Sichern von Berichten und Ressourcen](security/secure-reports-and-resources.md) und [sichere Ordner](security/secure-folders.md).  
+ Der erste Schritt beim Steuern der Berichtsverteilung besteht im Sichern des Berichts vor unbefugtem Zugriff. Wenn ein Bericht in einem Abonnement verwendet werden soll, muss er gespeicherte Anmeldeinformationen verwenden, die für alle Übermittlungen identisch sind. Jeder Benutzer mit Zugriff auf den Bericht im Berichtsserver kann diesen ausführen und möglicherweise verteilen. Um dies zu verhindern, müssen Sie den Zugriff auf den Bericht auf die erforderlichen Benutzer beschränken. Weitere Informationen finden Sie unter [sichere Berichte und Ressourcen](security/secure-reports-and-resources.md) und [sichere Ordner](security/secure-folders.md).  
   
  Streng vertrauliche Berichte, die den Zugriff mithilfe der Datenbanksicherheit autorisieren, können nicht mit einem Abonnement verteilt werden.  
   

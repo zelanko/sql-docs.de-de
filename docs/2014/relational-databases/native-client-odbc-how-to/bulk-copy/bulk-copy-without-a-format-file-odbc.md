@@ -1,13 +1,11 @@
 ---
-title: Massenkopieren ohne Formatdatei (ODBC) | Microsoft Docs
+title: Massenkopieren ohne Formatdatei (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 4ee969a7-44ba-40d0-b9ab-8306f1a2b19d
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 85bb42550829c875324c10de358312cdf3d05295
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 6896cc412a01aaa6ce73c80250b15709f78771ae
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151564"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425679"
 ---
 # <a name="bulk-copy-without-a-format-file-odbc"></a>Massenkopieren ohne Formatdatei (ODBC)
   In diesem Beispiel wird gezeigt, wie mit Funktionen zum Massenkopieren eine Datendatei im systemeigenen Modus erstellt werden kann, ohne eine Formatdatei zu verwenden. Dieses Beispiel wurde für ODBC, Version 3.0 oder höher, entwickelt.  
@@ -41,7 +39,7 @@ ms.locfileid: "36151564"
   
 3.  Stellen Sie eine Verbindung mit SQL Server her.  
   
-4.  Rufen Sie [Bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) um die folgenden Informationen festzulegen:  
+4.  Rufen Sie [Bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) auf die folgenden Informationen festzulegen:  
   
     -   Name der Tabelle oder Sicht, aus der bzw. in die massenkopiert werden soll  
   
@@ -160,6 +158,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Massenkopieren mit SQL Server-ODBC-Treiber – Themen &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
+ [Massenkopieren mit dem SQL Server-ODBC-Treiber – Themen &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
   

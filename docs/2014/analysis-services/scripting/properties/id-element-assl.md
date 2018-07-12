@@ -1,5 +1,5 @@
 ---
-title: ID-Element (ASSL) | Microsoft Docs
+title: ID-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ID element
 ms.assetid: ea3ce0f4-9084-45d0-8150-73afb7005af2
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0a1ad98b6b9609cf50d16816c8ae5328083a63ec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c323bd71865d0dd09bf724373ece03d83e7608ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160997"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209940"
 ---
 # <a name="id-element-assl"></a>ID-Element (ASSL)
   Enthält den eindeutigen Bezeichner (ID) des übergeordneten Elements.  
@@ -58,11 +58,11 @@ ms.locfileid: "36160997"
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|[Action](../objects/action-element-assl.md), [Aggregation](../objects/aggregation-element-assl.md), [AggregationDesign](../objects/aggregationdesign-element-assl.md), [Assembly](../objects/assembly-element-assl.md), [Cube](../objects/cube-element-assl.md), [CubeBinding](../data-type/cubebinding-data-type-out-of-line-assl.md), [CubeDimension](../data-type/dimension-data-type-assl.md), [Database](../objects/database-element-assl.md), [DataSource](../objects/datasource-element-assl.md), [DataSourceView](../objects/datasourceview-element-assl.md), [Dimension](../objects/dimension-element-assl.md), [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md), [Hierarchy](../objects/hierarchy-element-assl.md), [Kpi](../objects/kpi-element-assl.md), [Level](../objects/level-element-assl.md), [MdxScript](../objects/mdxscript-element-assl.md), [Measure](../objects/measure-element-assl.md), [MeasureGroup](../objects/group-element-assl.md), [MeasureGroupBinding](../data-type/binding-data-type-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md), [MiningStructure](../objects/miningstructure-element-assl.md), [MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md), [Partition](../objects/partition-element-assl.md), [Permission](../data-type/permission-data-type-assl.md), [Perspective](../objects/perspective-element-assl.md), [Role](../objects/role-element-assl.md), [Server](../objects/server-element-assl.md), [Trace](../objects/trace-element-assl.md)|  
+|Übergeordnete Elemente|[Aktion](../objects/action-element-assl.md), [Aggregation](../objects/aggregation-element-assl.md), [AggregationDesign](../objects/aggregationdesign-element-assl.md), [Assembly](../objects/assembly-element-assl.md), [Cube](../objects/cube-element-assl.md), [CubeBinding](../data-type/cubebinding-data-type-out-of-line-assl.md), [CubeDimension](../data-type/dimension-data-type-assl.md), [Datenbank](../objects/database-element-assl.md), [DataSource](../objects/datasource-element-assl.md), [DataSourceView](../objects/datasourceview-element-assl.md), [Dimension ](../objects/dimension-element-assl.md), [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md), [Hierarchie](../objects/hierarchy-element-assl.md), [Kpi](../objects/kpi-element-assl.md), [Ebene](../objects/level-element-assl.md), [MdxScript](../objects/mdxscript-element-assl.md), [Measure](../objects/measure-element-assl.md), [MeasureGroup](../objects/group-element-assl.md), [MeasureGroupBinding](../data-type/binding-data-type-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [ MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md), [MiningStructure](../objects/miningstructure-element-assl.md), [MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md), [Partition](../objects/partition-element-assl.md), [Berechtigung](../data-type/permission-data-type-assl.md), [Perspektive](../objects/perspective-element-assl.md), [Rolle](../objects/role-element-assl.md), [Server](../objects/server-element-assl.md), [Ablaufverfolgung](../objects/trace-element-assl.md)|  
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Jedes Hauptobjekt in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] verfügt über eine `ID` -Element als Eigenschaft. Der Wert, der eine `ID` -Elements hat die folgenden Einschränkungen:  
+ Jedes Hauptobjekt in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] verfügt über eine `ID` -Element als Eigenschaft. Der Wert des einem `ID` -Elements hat die folgenden Einschränkungen:  
   
 -   Der Wert darf keine führenden oder nachgestellten Leerzeichen enthalten. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] entfernt implizit führende oder nachfolgende Leerzeichen aus dem Wert eines `ID`-Elements.  
   
@@ -84,14 +84,14 @@ ms.locfileid: "36160997"
   
     -   PRN  
   
- Die folgende Tabelle enthält zusätzliche Zeichen, die im Wert verwendet werden können ein `ID` -Element, abhängig vom übergeordneten Element.  
+ Die folgende Tabelle führt zusätzliche Zeichen, die im Wert verwendet werden, können keinem `ID` -Element, abhängig vom übergeordneten Element.  
   
 |Übergeordnetes Element|Zeichen|  
 |--------------------|----------------|  
 |[Server](../objects/server-element-assl.md)|Der Wert muss den Regeln für [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Computernamen entsprechen. (IP-Adressen sind nicht gültig.)|  
 |[DataSource](../objects/datasource-element-assl.md)|:/\\*&#124;?" () []{}<>|  
-|[Ebene](../objects/level-element-assl.md), [-Attribut-Element](../objects/attribute-element-assl.md)|.,;' `:/\\*&#124;?" & % $! += []{}<>|  
-|Alle anderen übergeordneten Elemente|.,;' `:/\\*&#124;?" & % $!:: Operator += () []{}<>|  
+|[Ebene](../objects/level-element-assl.md), [Attribut-Element](../objects/attribute-element-assl.md)|.,;' `:/\\*&#124;?" & % $! += []{}<>|  
+|Alle anderen übergeordneten Elemente|.,;' `:/\\*&#124;?" & % $! += () []{}<>|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Namen von Element &#40;ASSL&#41;](name-element-assl.md)   

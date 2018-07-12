@@ -1,13 +1,11 @@
 ---
-title: Datentypunterstützung für OLE DB-Datum und Uhrzeit-Verbesserungen | Microsoft Docs
+title: Datentypunterstützung für OLE DB-Datum und Uhrzeit-Verbesserungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - OLE DB, date/time improvements
 ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3c543de3b8062dba9090b405156d492f7b4ab3e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 915a86b1170809bf1508f0214060fea9e0cf8a79
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159023"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427045"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Datentypunterstützung für OLE DB-Datum und Uhrzeit-Verbesserungen
   Dieses Thema liefert Informationen über OLE DB ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client)-Typen, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datums- und Uhrzeitdatentypen unterstützen.  
@@ -114,7 +112,7 @@ typedef struct tagDBTIMESTAMPOFFSET {
     } DBTIMESTAMPOFFSET;  
 ```  
   
- Wenn `timezone_hour` negativ ist, `timezone_minute` muss negativ oder 0 (null). Wenn `timezone_hour` positiv ist, `timezone minute` muss positiv sein oder 0 (null). Wenn `timezone_hour` 0 (null) ist, kann `timezone minute` einen Wert zwischen -59 und +59 haben.  
+ Wenn `timezone_hour` ist negativ, `timezone_minute` darf negativ sein oder 0 (null). Wenn `timezone_hour` positiv ist, werden `timezone minute` muss positiv sein oder 0 (null). Wenn `timezone_hour` 0 (null) ist, kann `timezone minute` einen Wert zwischen -59 und +59 haben.  
   
 ### <a name="ssvariant"></a>SSVARIANT  
  Dieses struct enthält jetzt die neuen Strukturen DBTYPE_DBTIME2 und DBTYPE_DBTIMESTAMPOFFSET und fügt Sekundenbruchteile für entsprechende Typen hinzu.  
@@ -173,18 +171,18 @@ enum SQLVARENUM {
 ```  
   
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>Datentypzuordnung zu ITableDefinition::CreateTable  
- Die folgende Typzuordnung wird mit DBCOLUMNDESC-Strukturen, die von itabledefinition:: CreateTable verwendeten verwendet:  
+ Die folgende Typzuordnung wird mit DBCOLUMNDESC-Strukturen, die von itabledefinition:: CreateTable verwendet verwendet:  
   
 |OLE DB-Datentyp (*wType*)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp|Hinweise|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|date||  
-|DBTYPE_DBTIMESTAMP|`datetime2`(p)|Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter überprüft das DBCOLUMDESC *bScale* Member, um die Genauigkeit in Sekundenbruchteilen zu bestimmen.|  
-|DBTYPE_DBTIME2|`time`(p)|Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter überprüft das DBCOLUMDESC *bScale* Member, um die Genauigkeit in Sekundenbruchteilen zu bestimmen.|  
-|DBTYPE_DBTIMESTAMPOFFSET|`datetimeoffset`(p)|Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter überprüft das DBCOLUMDESC *bScale* Member, um die Genauigkeit in Sekundenbruchteilen zu bestimmen.|  
+|DBTYPE_DBTIMESTAMP|`datetime2`(p)|Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter überprüft das DBCOLUMDESC *bScale* Member, um die Genauigkeit der Bruchteile von Sekunden zu ermitteln.|  
+|DBTYPE_DBTIME2|`time`(p)|Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter überprüft das DBCOLUMDESC *bScale* Member, um die Genauigkeit der Bruchteile von Sekunden zu ermitteln.|  
+|DBTYPE_DBTIMESTAMPOFFSET|`datetimeoffset`(p)|Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter überprüft das DBCOLUMDESC *bScale* Member, um die Genauigkeit der Bruchteile von Sekunden zu ermitteln.|  
   
- Wenn eine Anwendung DBTYPE_DBTIMESTAMP in legt *wType*, kann die Zuordnung zu überschreiben `datetime2` durch Angabe eines Typs in *PwszTypeName*. Wenn `datetime` angegeben wird, *bScale* muss 3 sein. Wenn `smalldatetime` angegeben wird, *bScale* muss 0 sein. Wenn *bScale* ist nicht konsistent mit *wType* und *PwszTypeName*, wird DB_E_BADSCALE zurückgegeben.  
+ Wenn eine Anwendung DBTYPE_DBTIMESTAMP in legt *wType*, kann die Zuordnung zu überschreiben `datetime2` durch Angabe ein Typname im *PwszTypeName*. Wenn `datetime` angegeben wird, *bScale* muss 3 sein. Wenn `smalldatetime` angegeben wird, *bScale* muss 0 sein. Wenn *bScale* ist nicht konsistent mit *wType* und *PwszTypeName*, wird DB_E_BADSCALE zurückgegeben.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datum und Uhrzeit-Verbesserungen &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+ [Datums- / Uhrzeitverbesserungen &#40;OLE-DB&#41;](date-and-time-improvements-ole-db.md)  
   
   
