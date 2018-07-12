@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 136335f0e56433a9478ddee37d0b8f585564776e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc37afd9e91b23ebef0e7f53fc5690f845f49d28
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159484"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152131"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
   In dieser Lektion verwenden Sie die datengesteuerten Abonnementseiten für folgende Zwecke: um eine Verbindung mit einer Abonnementdatenquelle herzustellen, um eine Abfrage zu erstellen, die Abonnementdaten abruft, und um das Resultset den Berichts- und Übermittlungsoptionen zuzuordnen.  
@@ -35,15 +35,15 @@ ms.locfileid: "36159484"
   
 -   [Schritt 1 - Beschreibung definieren](#bkmk_definesubscription)  
   
--   [Schritt 2: Definieren einer Verbindungs zur Datenquelle für Abonnentendaten](#bkmk_defineconnectiontosubscriber)  
+-   [Schritt 2: eine Verbindung mit der Abonnentendatenquelle definieren](#bkmk_defineconnectiontosubscriber)  
   
 -   [Schritt 3: Definieren Sie eine Abfrage zum Abrufen von Abonnentendaten](#bkmk_definequery)  
   
--   [Schritt 4 - Übermittlungsoptionen festlegen](#bkmk_set_deliveryoptions)  
+-   [Schritt 4: Festlegen von Übermittlungsoptionen](#bkmk_set_deliveryoptions)  
   
--   [Schritt 5 - Parameterwert zum variieren der Berichtsausgabe konfigurieren](#bkmk_configure_parameter)  
+-   [Schritt 5: Konfigurieren Sie einen Parameterwert zum variieren der Berichtsausgabe](#bkmk_configure_parameter)  
   
--   [Schritt 6 - Abonnement planen](#bkmk_schedule_subscription)  
+-   [Schritt 6: die Planung eines Abonnements](#bkmk_schedule_subscription)  
   
 ##  <a name="bkmk_startwizard"></a> Starten Sie den Assistenten für datengesteuertes Abonnement  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36159484"
   
 3.  Wählen Sie **Nur für dieses Abonnement angeben**und klicken Sie dann auf **Weiter**.  
   
-##  <a name="bkmk_defineconnectiontosubscriber"></a> Schritt 2: Definieren einer Verbindungs zur Datenquelle für Abonnentendaten  
+##  <a name="bkmk_defineconnectiontosubscriber"></a> Schritt 2: eine Verbindung mit der Abonnentendatenquelle definieren  
   
 1.  Wählen Sie **Microsoft SQL Server** als Quelldatentyp aus.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36159484"
   
 3.  Klicken Sie auf **Überprüfen**, und klicken Sie dann auf **Weiter**.  
   
-##  <a name="bkmk_set_deliveryoptions"></a> Schritt 4 - Übermittlungsoptionen festlegen  
+##  <a name="bkmk_set_deliveryoptions"></a> Schritt 4: Festlegen von Übermittlungsoptionen  
   
 1.  Wählen Sie für **Dateiname**die Option **Rufen Sie den Wert aus der Datenbank ab**aus. Wählen Sie das Feld **Reihenfolge**aus.  
   
@@ -113,11 +113,11 @@ ms.locfileid: "36159484"
   
 8.  Klicken Sie auf **Weiter.**  
   
-##  <a name="bkmk_configure_parameter"></a> Schritt 5 - Parameterwert zum variieren der Berichtsausgabe konfigurieren  
+##  <a name="bkmk_configure_parameter"></a> Schritt 5: Konfigurieren Sie einen Parameterwert zum variieren der Berichtsausgabe  
   
 1.  Wählen Sie für **OrderNumber**die Option **Rufen Sie den Wert aus der Datenbank ab**aus. Wählen Sie in "Wert" die Option **Reihenfolge**aus. Klicken Sie auf **Weiter.**  
   
-##  <a name="bkmk_schedule_subscription"></a> Schritt 6 - Abonnement planen  
+##  <a name="bkmk_schedule_subscription"></a> Schritt 6: die Planung eines Abonnements  
   
 1.  Klicken Sie auf **Nach einem Zeitplan, der für dieses Abonnement erstellt wurde**und dann auf **Weiter**.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "36159484"
   
  ![Abonnementergebnisse im Berichts-Manager](../../2014/tutorials/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.gif "Subscription results in Report Manager")  
   
- Dies ist der letzte Schritt im Lernprogramm "Definieren eines datengesteuerten Abonnements". Weitere Informationen zu anderen [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Lernprogramme finden Sie unter [Tutorials zu Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md).  
+ Dies ist der letzte Schritt im Lernprogramm "Definieren eines datengesteuerten Abonnements". Weitere Informationen zu anderen [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Tutorials finden Sie unter [Reporting Services-Tutorials &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen eines datengesteuerten Abonnements &#40;SSRS-Tutorial&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   

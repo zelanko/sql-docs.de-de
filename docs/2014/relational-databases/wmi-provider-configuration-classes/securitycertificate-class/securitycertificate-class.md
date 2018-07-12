@@ -1,5 +1,5 @@
 ---
-title: SecurityCertificate-Klasse | Microsoft Docs
+title: SecurityCertificate-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SecurityCertificate class
 ms.assetid: d772da67-e04e-4499-9f80-7a5e94829b5c
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d7415e610eddb5b16f827a9f430e214936e8cd69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 0954783d3f9a7d7e3b97ce4faf9f82f4fa381d49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149348"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258486"
 ---
 # <a name="securitycertificate-class"></a>SecurityCertificate-Klasse
   [SecurityCertificate-Klasse] Securitycertificate-class.md) stellt ein Sicherheitszertifikat dar. Ein Zertifikat ist eine digital signierte Anweisung, die den Wert eines öffentlichen Schlüssels an die Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]bindet, wo der entsprechende private Schlüssel gespeichert ist. Das Zertifikat wird von einer Zertifizierungsstelle ausgestellt.  

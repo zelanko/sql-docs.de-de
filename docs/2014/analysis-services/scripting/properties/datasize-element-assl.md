@@ -1,5 +1,5 @@
 ---
-title: DataSize-Element (ASSL) | Microsoft Docs
+title: DataSize-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DataSize element
 ms.assetid: 4be79dbb-304e-4a65-9198-89fad407f775
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4a79084349dfda487a4675d6963665980cc22e2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a34a8e8740e57bdcafbdd9ff1f3dce188e7d5e5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160069"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157151"
 ---
 # <a name="datasize-element-assl"></a>DataSize-Element (ASSL)
-  Enthält die Größe in Bytes, der eine [DataItem](../data-type/dataitem-data-type-assl.md) Element.  
+  Enthält die Größe in Bytes ein [DataItem](../data-type/dataitem-data-type-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -58,11 +58,11 @@ ms.locfileid: "36160069"
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnetes Element|[DataItem](../data-type/dataitem-data-type-assl.md)|  
+|Übergeordnetes Element|[DataItem-Objekt](../data-type/dataitem-data-type-assl.md)|  
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element, das das übergeordnete Element des entspricht `DataSize` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.DataItem>.  
+ Das Element, das dem übergeordneten entspricht `DataSize` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.DataItem>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

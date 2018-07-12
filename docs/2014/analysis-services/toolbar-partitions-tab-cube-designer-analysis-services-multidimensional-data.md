@@ -1,5 +1,5 @@
 ---
-title: Symbolleiste (Registerkarte ' Partitionen ', Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Symbolleiste (Registerkarte ' Partitionen ', Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7225064a-4f6c-40d3-a026-34e757a966da
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fa8396682b1c28f19af3a9d8b382aa8a6a4a8c07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0703723f99cf859bafe3c849df536fff41c805cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160777"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152841"
 ---
 # <a name="toolbar-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>Symbolleiste (Registerkarte 'Partitionen', Cube-Designer, Analysis Services – Mehrdimensionale Daten)
   Mit den Schaltflächen im Bereich **Symbolleiste** können Sie Aktionen ausführen, die auf der Registerkarte **Partitionen** des Cube-Designers häufig verwendet werden.  

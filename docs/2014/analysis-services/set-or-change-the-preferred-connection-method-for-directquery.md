@@ -1,5 +1,5 @@
 ---
-title: Festlegen oder ändern Sie die bevorzugte Verbindungsmethode für DirectQuery | Microsoft Docs
+title: Festlegen oder ändern Sie die bevorzugte Verbindungsmethode für DirectQuery | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f10d5678-d678-4251-8cce-4e30cfe15751
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf6abf3e4576fb28155529ee1bdfd24520176010
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c5c9ad99aad3ae46b3e97c3d3b6dfbec03dcff27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160302"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149521"
 ---
 # <a name="set-or-change-the-preferred-connection-method-for-directquery"></a>Festlegen oder Ändern der bevorzugten Verbindungsmethode für DirectQuery
   Wenn Sie ein Modell für die Verwendung im DirectQuery-Modus erstellen, müssen Sie zuerst die Entwurfsumgebung konfigurieren, um die Verwendung von DirectQuery zu unterstützen. Zu diesem Zweck finden Sie unter [DirectQuery-Entwurfsmodus aktivieren &#40;SSAS – tabellarisch&#41;](tabular-models/enable-directquery-mode-in-ssdt.md).  
@@ -32,7 +32,7 @@ ms.locfileid: "36160302"
   
 -   Sie müssen Identitätswechseloptionen für Benutzer festlegen, die auf die SQL Server-Datenquelle zugreifen.  
   
- In dieser Prozedur wird beschrieben, wie die bevorzugte Verbindungsmethode für ein DirectQuery-Modell im Designer festgelegt wird. Er erläutert außerdem, wie Sie diese Eigenschaft im ändern können [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] nachdem das Modell bereitgestellt wurde.  
+ In dieser Prozedur wird beschrieben, wie die bevorzugte Verbindungsmethode für ein DirectQuery-Modell im Designer festgelegt wird. Außerdem wird beschrieben, wie Sie diese Eigenschaft in ändern können [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] nachdem das Modell bereitgestellt wurde.  
   
 ### <a name="to-set-the-preferred-connection-method-for-a-directquery-model"></a>So legen Sie die bevorzugte Verbindungsmethode für ein DirectQuery-Modell fest  
   
@@ -68,6 +68,6 @@ ms.locfileid: "36160302"
   
 ## <a name="see-also"></a>Siehe auch  
  [DirectQuery-Modus &#40;SSAS – tabellarisch&#41;](tabular-models/directquery-mode-ssas-tabular.md)   
- [Aktivieren von DirectQuery-Entwurfsmodus &#40;SSAS – tabellarisch&#41;](tabular-models/enable-directquery-mode-in-ssdt.md)  
+ [Aktivieren des DirectQuery-Entwurfsmodus &#40;SSAS – tabellarisch&#41;](tabular-models/enable-directquery-mode-in-ssdt.md)  
   
   

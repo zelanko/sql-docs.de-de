@@ -1,5 +1,5 @@
 ---
-title: KeyUniquenessGuarantee-Element (ASSL) | Microsoft Docs
+title: KeyUniquenessGuarantee-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - KeyUniquenessGuarantee element
 ms.assetid: 6e0cf107-dd02-4bbd-94f5-c26d96438d4b
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1d95c6c4479a0ce6b496dec934206ad893df6ed0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3038ab6fe49f3791d62ae171171783e46207365
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151204"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153271"
 ---
 # <a name="keyuniquenessguarantee-element-assl"></a>KeyUniquenessGuarantee-Element (ASSL)
   Gibt an, ob die Beziehung zwischen dem Attributschlüssel und seinem Namen und die Beziehung zu verknüpften Attributen garantiert gültig ist.  
@@ -58,13 +58,13 @@ ms.locfileid: "36151204"
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnetes Element|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
+|Übergeordnetes Element|[DimensionAttribute-Objekt](../data-type/dimensionattribute-data-type-assl.md)|  
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] nutzt das `KeyUniquenessGuarantee`-Element, um Abfragen zu optimieren, wenn Elemente aus der zugrunde liegenden Datenquelle für dieses Attribut empfangen werden.  
   
- Das Element, das das übergeordnete Element des entspricht `KeyUniquenessGuarantee` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ Das Element, das dem übergeordneten entspricht `KeyUniquenessGuarantee` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

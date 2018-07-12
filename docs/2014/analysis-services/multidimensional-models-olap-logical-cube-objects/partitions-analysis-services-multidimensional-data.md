@@ -1,5 +1,5 @@
 ---
-title: Partitionen (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Partitionen (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - measure groups [Analysis Services], partitions
 ms.assetid: cd10ad00-468c-4d49-9f8d-873494d04b4f
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8ffcdd2f4dc92b832d94448ac14e39ae41f4ba94
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b9affca8de4e6b0cbd50e25eaaca6447ada4b0b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159444"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183327"
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>Partitionen (Analysis Services – Mehrdimensionale Daten)
   Eine Partition ist ein Container für einen Teil der Measuregruppendaten. Partitionen sind in einer MDX-Abfrage nicht sichtbar, da alle Abfragen den gesamten Inhalt der Measuregruppe wiedergeben, unabhängig davon, wie viele Partitionen für die Measuregruppe defniert wurden. Der Dateninhalt einer Partition wird durch die Abfragebindungen der Partition und die Slicingausdrücke definiert.  

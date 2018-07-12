@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database attaching [SQL Server]
 - moving databases [SQL Server]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - attaching databases [SQL Server]
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: efd99fbc8c1b9b477ac778c3d71fbab19a413fbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a0f6c25060fa70c1b269f884a3c33ba86b3b115f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160230"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160521"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Verschieben einer Datenbank durch Trennen und Anfügen (Transact-SQL)
   In diesem Thema wird beschrieben, wie eine getrennte Datenbank an einen anderen Speicherort verschoben und in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]an die gleiche oder eine andere Serverinstanz angefügt wird. Es wird jedoch empfohlen, Datenbanken mit der ALTER DATABASE-Prozedur für geplante Verschiebungen zu verschieben, anstatt die Optionen zum Trennen und Anfügen zu verwenden. Weitere Informationen finden Sie unter [Move User Databases](move-user-databases.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "36160230"
 3.  Fügen Sie die kopierten Dateien an. Weitere Informationen finden Sie unter [Attach a Database](attach-a-database.md).  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel erstellt eine Kopie der [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] Anweisungen werden ausgeführt, geben Sie im Abfrage-Editor, die mit der Serverinstanz angefügt ist.  
+ Das folgende Beispiel erstellt eine Kopie der [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] -Anweisungen werden ausgeführt, in einem Abfrage-Editor-Fenster, die mit verbunden ist die Server-Instanz, der angefügt ist.  
   
 1.  Trennen Sie die [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] Anweisungen:  
   

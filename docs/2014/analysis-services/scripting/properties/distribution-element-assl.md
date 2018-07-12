@@ -1,5 +1,5 @@
 ---
-title: Distribution-Element (ASSL) | Microsoft Docs
+title: Distribution-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Distribution element
 ms.assetid: a1309b90-8ad8-431b-a918-67f0cdd4fd20
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a556b4dc3745ecf45eab71339f2db3a0f9174f06
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ea3422fead59b45957ebdb15735736fba89ddff2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159433"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163541"
 ---
 # <a name="distribution-element-assl"></a>Distribution-Element (ASSL)
-  Enthält einen anbieterspezifischen Wert, der beschreibt, wie Skalare Werte innerhalb einer Spalte verteilt werden eine [MiningStructure](../objects/miningstructure-element-assl.md) Element.  
+  Enthält einen anbieterspezifischen Wert, der beschreibt, wie Skalare Werte innerhalb einer Spalte verteilt eine [MiningStructure](../objects/miningstructure-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36159433"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Werte für die `Distribution` Element, z. B. *Normal* oder *Uniform,* sind spezifisch für jeden Mining-Algorithmusanbieter. Weitere Informationen über gültige `Distribution`-Werte finden Sie in der Mining-Algorithmusanbieter-Dokumentation.  
+ Die Werte für die `Distribution` -Element, z. B. *Normal* oder *einheitliche* sind spezifisch für jeden Mining-Algorithmusanbieter. Weitere Informationen über gültige `Distribution`-Werte finden Sie in der Mining-Algorithmusanbieter-Dokumentation.  
   
- Das übergeordnete Element des entsprechende Element `Distribution` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  
+ Das Element, das dem übergeordneten entspricht `Distribution` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

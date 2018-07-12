@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 92395b7b91d94187dc790978baa084c418224686
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 3022c5d802da527dc1c1bfb062f8a5dca267f50e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160582"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157741"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Multilookup-Funktion (Berichts-Generator und SSRS)
   Gibt den Satz der ersten übereinstimmenden Werte für den angegebenen Satz von Namen aus einem Dataset mit Name-Wert-Paaren zurück.  
@@ -36,13 +36,13 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 #### <a name="parameters"></a>Parameter  
  *source_expression*  
- (`VariantArray`) Ein Ausdruck, der im aktuellen Bereich ausgewertet wird und die Menge von Namen oder Schlüssel für die Suche nach angibt. Beispiel für einen mehrwertigen Parameter: `=Parameters!IDs.value`.  
+ (`VariantArray`) Ein Ausdruck, der im aktuellen Bereich ausgewertet wird und den Satz der zu suchenden Namen oder Schlüssel angibt. Beispiel für einen mehrwertigen Parameter: `=Parameters!IDs.value`.  
   
  *destination_expression*  
  (`Variant`) Ein Ausdruck, der für jede Zeile in einem Dataset ausgewertet wird und der den Namen oder den Schlüssel für die Übereinstimmung angibt. Beispiel: `=Fields!ID.Value`.  
   
  *result_expression*  
- (`Variant`) Ein Ausdruck, der für die Zeile im Dataset ausgewertet wird, in denen *Source_expression* = *destination_expression gilt*, und die abzurufenden Wert angibt. Beispiel: `=Fields!Name.Value`.  
+ (`Variant`) Ein Ausdruck, der für die Zeile im Dataset ausgewertet wird, in denen *Source_expression* = *Destination_expression*, und den abzurufenden Wert angibt. Beispiel: `=Fields!Name.Value`.  
   
  *Dataset (dataset)*  
  Eine Konstante, die den Namen eines Datasets im Bericht angibt. Beispiel: "Colors".  
@@ -51,7 +51,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  Gibt eine `VariantArray`, oder `Nothing` , wenn keine Übereinstimmung vorhanden ist.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwendung `Multilookup` auf einen Satz von Werten aus einem Dataset für Name-Wert-Paare abzurufen, in dem jedes Paar eine 1: 1-Beziehung besitzt. `MultiLookup` ist das Äquivalent eines Aufrufs `Lookup` für einen Satz von Namen oder Schlüsseln. Z. B. für einen mehrwertigen Parameter, der auf primärschlüsselbezeichnern basiert, können Sie `Multilookup` in einem Ausdruck in einem Textfeld in einer Tabelle, um zugeordnete Werte aus einem Dataset abzurufen, die nicht an den Parameter oder die Tabelle gebunden ist.  
+ Verwendung `Multilookup` auf einen Satz von Werten aus einem Dataset für Name-Wert-Paare abzurufen, in dem jedes Paar über eine 1: 1 Beziehung verfügt. `MultiLookup` ist das Äquivalent eines Aufrufs `Lookup` für einen Satz von Namen oder Schlüsseln. Z. B. für einen mehrwertigen Parameter, der auf primärschlüsselbezeichnern basiert, können Sie `Multilookup` in einem Ausdruck in einem Textfeld in einer Tabelle, um zugeordnete Werte aus einem Dataset abzurufen, die nicht an den Parameter oder die Tabelle gebunden ist.  
   
  `Multilookup` führt Folgendes aus:  
   
@@ -101,7 +101,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 |3|Clothing|  
 |4|Components|  
   
- Verwenden Sie für die Suche der Namen, die der Liste der Bezeichner entsprechen, `Multilookup`. Sie müssen zuerst die Liste in ein Zeichenfolgenarray Aufruf aufteilen `Multilookup` die Kategorienamen abzurufen, und die Ergebnisse zu einer Zeichenfolge verketten.  
+ Verwenden Sie für die Suche der Namen, die der Liste der Bezeichner entsprechen, `Multilookup`. Sie müssen zuerst die Liste in ein Zeichenfolgenarray, Aufruf aufteilen `Multilookup` die Kategorienamen abzurufen, und die Ergebnisse in einer Zeichenfolge verkettet.  
   
  Wenn der folgende Ausdruck in ein Textfeld in einem Datenbereich platziert wird, der an das Dataset "Category" gebunden ist, wird "Bikes, Components, Bikes, Accessories" angezeigt:  
   
@@ -127,7 +127,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ausdruck verwendet wird, in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](expressions-report-builder-and-ssrs.md)   
  [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  

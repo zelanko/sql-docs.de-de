@@ -1,28 +1,26 @@
 ---
-title: Parameter- und Ergebnismetadaten | Microsoft Docs
+title: Parameter- und Ergebnismetadaten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [ODBC]
 ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6a898b9aa7a816b93afea875c8d304b520864f40
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f07127b8ae80ff212f671d94f55a311584552c58
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149389"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420185"
 ---
 # <a name="parameter-and-result-metadata"></a>Parameter- und Ergebnismetadaten
   In diesem Thema wird beschrieben, was in den IPD- und IRD-Feldern (Implementierungsparameterdeskriptor, Implementierungszeilendeskriptor) für Datums- und Uhrzeitdatentypen zurückgegeben wird.  
@@ -53,7 +51,7 @@ ms.locfileid: "36149389"
   
  SQL_CA_SS_VARIANT_SQL_TYPE ist ein neues Deskriptorfeld. Dieses Feld wurde IRD und IPD hinzugefügt, um es Anwendungen zu ermöglichen, den mit Spalten und Parametern des Typs `sqlvariant` (SQL_SSVARIANT) verknüpften Werttyp anzugeben.  
   
- SQL_CA_SS_SERVER_TYPE ist ein neues IPD-Feld, mit dem Anwendungen steuern können, wie Werte für Parameter, die als SQL_TYPE_TYPETIMESTAMP (oder als SQL_SS_VARIANT mit dem C-Typ SQL_C_TYPE_TIMESTAMP) gebunden sind, an den Server gesendet werden. Wenn SQL_DESC_CONCISE_TYPE gleich SQL_TYPE_TIMESTAMP ist (oder gleich SQL_SS_VARIANT und der C-Typ ist SQL_C_TYPE_TIMESTAMP) Wenn SQLExecute oder SQLExecDirect aufgerufen wird, wird der Wert von SQL_CA_SS_SERVER_TYPE bestimmt, der tabular Data stream (TDS)-Typ des Parameterwerts , wie folgt:  
+ SQL_CA_SS_SERVER_TYPE ist ein neues IPD-Feld, mit dem Anwendungen steuern können, wie Werte für Parameter, die als SQL_TYPE_TYPETIMESTAMP (oder als SQL_SS_VARIANT mit dem C-Typ SQL_C_TYPE_TIMESTAMP) gebunden sind, an den Server gesendet werden. Wenn SQL_DESC_CONCISE_TYPE SQL_TYPE_TIMESTAMP ist (oder gleich SQL_SS_VARIANT und der C-Typ ist SQL_C_TYPE_TIMESTAMP) Wenn SQLExecute oder SQLExecDirect aufgerufen wird, wird der Wert von SQL_CA_SS_SERVER_TYPE bestimmt, der tabular Data stream (TDS)-Typ des Parameterwerts , wie folgt:  
   
 |Wert von SQL_CA_SS_SERVER_TYPE|Gültige Werte für SQL_DESC_PRECISION|Gültige Werte für SQL_DESC_LENGTH|TDS-Typ|  
 |----------------------------------------|-------------------------------------------|----------------------------------------|--------------|  
@@ -67,11 +65,11 @@ ms.locfileid: "36149389"
   
 -   Während der Vorbereitung oder Ausführung (wenn SQLExecute, SQLExecDirect, SQLSetPos oder SQLBulkOperations aufgerufen wird).  
   
--   Wenn Sie eine Anwendung erzwingt eine nicht verzögerte Vorbereitung durch den Aufruf von SQLPrepare mit verzögerte Vorbereitung deaktiviert oder SQLDescribeCol oder SQLDescribeParam für eine Anweisung, die jedoch nicht vorbereitet werden SQLNumResultCols aufgerufen wird, ausgeführt.  
+-   Wenn Sie eine Anwendung erzwingt, dass eine nicht verzögerte Vorbereitung durch den Aufruf von SQLPrepare mit verzögerte Vorbereitung deaktiviert oder durch Aufrufen von SQLNumResultCols, SQLDescribeCol oder SQLDescribeParam für eine Anweisung, die aber nicht vorbereitet wird ausgeführt.  
   
  Wenn SQL_CA_SS_SERVER_TYPE durch einen Aufruf von SQLSetDescField festgelegt ist, muss sein Wert SQL_SS_TYPE_DEFAULT, SQL_SS_TYPE_SMALLDATETIME oder sql_ss_type_datetime lauten. Ist dies nicht der Fall, wird SQL_ERROR zurückgegeben, und es wird ein Diagnosedatensatz mit SQLState HY092 und der Meldung "Ungültiger Attribut-/Optionsbezeichner" protokolliert.  
   
- Das SQL_CA_SS_SERVER_TYPE-Attribut kann in Anwendungen verwendet werden, die von Funktionen abhängen, die von `datetime` und `smalldatetime`, nicht jedoch von `datetime2` unterstützt werden. Beispielsweise `datetime2` erfordert die Verwendung eines der `dateadd` und **Datediif** Funktionen, während die `datetime` und `smalldatetime` auch arithmetische Operatoren zulassen. Die meisten Anwendungen müssen dieses Attribut nicht verwenden, und seine Verwendung sollte vermieden werden.  
+ Das SQL_CA_SS_SERVER_TYPE-Attribut kann in Anwendungen verwendet werden, die von Funktionen abhängen, die von `datetime` und `smalldatetime`, nicht jedoch von `datetime2` unterstützt werden. Z. B. `datetime2` erfordert die Verwendung der `dateadd` und **Datediif** Funktionen, während die `datetime` und `smalldatetime` auch arithmetische Operatoren zulassen. Die meisten Anwendungen müssen dieses Attribut nicht verwenden, und seine Verwendung sollte vermieden werden.  
   
 ## <a name="information-returned-in-ird-fields"></a>In IRD-Feldern zurückgegebene Informationen  
  Die folgenden Informationen werden in IRD-Feldern zurückgegeben:  

@@ -1,5 +1,5 @@
 ---
-title: Leistungsindikatoren für den MSRS 2014 Webdienst und den MSRS 2014 Windows-Dienst, Leistungsobjekte (einheitlicher Modus) | Microsoft Docs
+title: Leistungsindikatoren für den MSRS 2014 Webdienst und den MSRS 2014 Windows-Dienst, Leistungsobjekte (einheitlicher Modus) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Reporting Services]
 - Report Server Web service, performance counters
@@ -20,16 +20,16 @@ ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 2606c760b03225a5cbb9d82db0aecd18ef4753ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99e19d3cf5ead97dca19e982b6d9255b296c8d93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159931"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150121"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-and-msrs-2014-windows-service-performance-objects-native-mode"></a>Leistungsindikatoren für den MSRS 2014-Webdienst und den MSRS 2014-Windows-Dienst, Leistungsobjekte (einheitlicher Modus)
-  Dieses Thema beschreibt Leistungsindikatoren für die `MSRS 2014 Web Service` und `MSRS 2014 Windows Service` Leistungsobjekte für ""  
+  Dieses Thema beschreibt Leistungsindikatoren für die `MSRS 2014 Web Service` und `MSRS 2014 Windows Service` Leistungsobjekte  
   
 > [!NOTE]  
 >  Mit diesen Leistungsobjekten werden Ereignisse auf dem lokalen Berichtsserver überwacht. Wenn Sie einen Berichtsserver in einer Bereitstellung für horizontales Skalieren ausführen, beziehen sich die Zahlen auf den aktuellen Server, nicht auf die Bereitstellung für horizontales Skalieren.  
@@ -38,25 +38,25 @@ ms.locfileid: "36159931"
   
  Die Leistungsobjekte sind im Windows-Systemmonitor (**Perfmon.exe**) verfügbar. Weitere Informationen finden Sie in der Windows-Dokumentation, [Erstellung von Laufzeitprofilen](http://msdn.microsoft.com/library/w4bz2147.aspx) (http://msdn.microsoft.com/library/w4bz2147.aspx).  
   
- Informationen im Zusammenhang mit Leistungsindikatoren für die SharePoint-Modus finden Sie unter [Leistungsindikatoren für den MSRS 2014 Web Service SharePoint Mode und den MSRS 2014 Windows Service SharePoint-Modus, Leistungsobjekte &#40;SharePoint-Modus&#41; ](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md).  
+ Weitere Informationen im Zusammenhang mit den Leistungsindikatoren im SharePoint-Modus finden Sie unter [Leistungsindikatoren für den MSRS 2014 Web Service SharePoint Mode und den MSRS 2014 Windows Service SharePoint-Modus, Leistungsobjekte &#40;SharePoint-Modus&#41; ](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md).  
   
  **In diesem Thema:**  
   
--   [Leistungsindikatoren für den MSRS 2014 Webdienst](#bkmk_webservice)  
+-   [Leistungsindikatoren für MSRS 2014 Webdienst](#bkmk_webservice)  
   
 -   [Leistungsindikatoren für den MSRS 2014 Windows-Dienst](#bkmk_windowsservice)  
   
 -   [Zurückgeben von Listen mithilfe von PowerShell-Cmdlets](#bkmk_powershell)  
   
-##  <a name="bkmk_webservice"></a> Leistungsindikatoren für den MSRS 2014 Webdienst  
- Mit dem `MSRS 2014 Web Service`-Leistungsobjekt wird die Berichtsserverleistung überwacht. Dieses Leistungsobjekt enthält eine Reihe von Leistungsindikatoren zum Nachverfolgen der Verarbeitung auf einem Berichtsserver, die in der Regel über interaktive Vorgänge zum Anzeigen von Berichten gestartet wird. Wenn Sie diesen Leistungsindikator einrichten, können Sie den Zähler auf alle Instanzen von anwenden [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] oder spezifische Instanzen auswählen. Diese Leistungsindikatoren werden zurückgesetzt, wenn [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] den Berichtsserver-Webdienst beendet.  
+##  <a name="bkmk_webservice"></a> Leistungsindikatoren für MSRS 2014 Webdienst  
+ Mit dem `MSRS 2014 Web Service`-Leistungsobjekt wird die Berichtsserverleistung überwacht. Dieses Leistungsobjekt enthält eine Reihe von Leistungsindikatoren zum Nachverfolgen der Verarbeitung auf einem Berichtsserver, die in der Regel über interaktive Vorgänge zum Anzeigen von Berichten gestartet wird. Wenn Sie diesen Leistungsindikator einrichten, können Sie den Zähler übernehmen, für alle Instanzen der [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] oder bestimmte Instanzen auswählen. Diese Leistungsindikatoren werden zurückgesetzt, wenn [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] den Berichtsserver-Webdienst beendet.  
   
- Die folgende Tabelle enthält die Indikatoren, die in enthaltenen der `MSRS 2014 Web Service` Leistungsobjekt "".  
+ Die folgende Tabelle enthält die Indikatoren, die enthalten sind die `MSRS 2014 Web Service` Leistungsobjekt.  
   
 |Leistungsindikator|Description|  
 |-------------|-----------------|  
 |`Active Sessions`|Die Anzahl der aktiven Sitzungen. Dieser Leistungsindikator stellt eine kumulierte Anzahl aller durch Berichtsausführungen generierten Browsersitzungen bereit, unabhängig davon, ob sie noch aktiv sind.<br /><br /> Der Leistungsindikator wird verringert, wenn Sitzungsdatensätze entfernt werden. Standardmäßig werden Sitzungen nach einer Inaktivität von zehn Minuten entfernt.|  
-|`Cache Hits/Sec`|Die Anzahl der Anforderungen pro Sekunde nach zwischengespeicherten Berichten. Die Anforderungen gelten für erneut gerenderte Berichte und nicht für Anforderungen für direkt aus dem Cache verarbeitete Berichte. (Siehe `Total Cache Hits` weiter unten in diesem Thema.)|  
+|`Cache Hits/Sec`|Die Anzahl der Anforderungen pro Sekunde nach zwischengespeicherten Berichten. Die Anforderungen gelten für erneut gerenderte Berichte und nicht für Anforderungen für direkt aus dem Cache verarbeitete Berichte. (Finden Sie unter `Total Cache Hits` weiter unten in diesem Thema.)|  
 |`Cache Hits/Sec (Semantic Models)`|Die Anzahl der Anforderungen für ein zwischengespeichertes Modell pro Sekunde. Die Anforderungen gelten für erneut gerenderte Berichte und nicht für Anforderungen für direkt aus dem Cache verarbeitete Berichte.|  
 |`Cache Misses/Sec`|Die Anzahl der Anforderungen pro Sekunde, bei denen kein Bericht aus dem Cache zurückgegeben werden konnte. Stellen Sie mithilfe dieses Leistungsindikators fest, ob die für die Zwischenspeicherung (Datenträger oder Arbeitsspeicherung) verwendeten Ressourcen ausreichend sind.|  
 |`Cache Misses/Sec (Semantic Models)`|Die Anzahl der Anforderungen pro Sekunde, bei denen kein Modell aus dem Cache zurückgegeben werden konnte. Stellen Sie mithilfe dieses Leistungsindikators fest, ob die für die Zwischenspeicherung (Datenträger oder Arbeitsspeicherung) verwendeten Ressourcen ausreichend sind.|  
@@ -79,15 +79,15 @@ ms.locfileid: "36159931"
 |`Total Requests`|Die Gesamtzahl der Anforderungen an den Berichtsserver, seit der Dienst gestartet wurde. Dieser Leistungsindikator wird zurückgesetzt, sobald der Berichtsserver-Webdienst von [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] beendet wird.|  
   
 ##  <a name="bkmk_windowsservice"></a> Leistungsindikatoren für den MSRS 2014 Windows-Dienst  
- Die `MSRS 2014 Windows Service` -Leistungsobjekt wird der Berichtsserver-Windows-Dienst überwacht. Das Leistungsobjekt enthält eine Reihe von Leistungsindikatoren zum Nachverfolgen der Berichtsverarbeitung, die über geplante Vorgänge gestartet wird. Zu geplanten Vorgängen zählen Abonnierung und Übermittlung, Momentaufnahmen zur Berichtsausführung und der Berichtsverlauf. Wenn Sie diesen Leistungsindikator einrichten, können Sie den Zähler auf alle Instanzen von anwenden [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] oder spezifische Instanzen auswählen.  
+ Die `MSRS 2014 Windows Service` -Leistungsobjekt wird der Berichtsserver-Windows-Dienst überwacht. Das Leistungsobjekt enthält eine Reihe von Leistungsindikatoren zum Nachverfolgen der Berichtsverarbeitung, die über geplante Vorgänge gestartet wird. Zu geplanten Vorgängen zählen Abonnierung und Übermittlung, Momentaufnahmen zur Berichtsausführung und der Berichtsverlauf. Wenn Sie diesen Leistungsindikator einrichten, können Sie den Zähler übernehmen, für alle Instanzen der [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] oder bestimmte Instanzen auswählen.  
   
- Die folgende Tabelle enthält die Leistungsindikatoren, die in enthalten sind die `MSRS 2014 Windows Service` Leistungsobjekt "".  
+ Die folgende Tabelle enthält die Leistungsindikatoren, die in enthalten sind die `MSRS 2014 Windows Service` Leistungsobjekt.  
   
 |Leistungsindikator|Description|  
 |-------------|-----------------|  
 |`Active Sessions`|Die Anzahl der aktiven Sitzungen, die in der Berichtsserver-Datenbank gespeichert sind. Dieser Leistungsindikator liefert die Gesamtanzahl aller verfügbaren Browsersitzungen, die aus Berichtsabonnements generiert wurden, unabhängig davon, ob sie noch aktiv sind oder nicht.|  
 |`Cache Flushes/Sec`|Die Anzahl der Cacheleerungen pro Sekunde.|  
-|`Cache Hits/Sec`|Die Anzahl der Anforderungen pro Sekunde nach zwischengespeicherten Berichten. Die Anforderungen gelten für erneut gerenderte Berichte und nicht für Anforderungen für direkt aus dem Cache verarbeitete Berichte. (Siehe `Total Cache Hits` weiter unten in diesem Thema.)|  
+|`Cache Hits/Sec`|Die Anzahl der Anforderungen pro Sekunde nach zwischengespeicherten Berichten. Die Anforderungen gelten für erneut gerenderte Berichte und nicht für Anforderungen für direkt aus dem Cache verarbeitete Berichte. (Finden Sie unter `Total Cache Hits` weiter unten in diesem Thema.)|  
 |`Cache Hits/Sec (Semantic Models)`|Die Anzahl der Anforderungen für zwischengespeicherte Modelle pro Sekunde.|  
 |`Cache Misses/Sec`|Die Anzahl der Anforderungen pro Sekunde, bei denen kein Bericht aus dem Cache zurückgegeben werden konnte. Stellen Sie mithilfe dieses Leistungsindikators fest, ob die für die Zwischenspeicherung (Datenträger oder Arbeitsspeicherung) verwendeten Ressourcen ausreichend sind.|  
 |`Cache Misses/Sec (Semantic Models)`|Die Anzahl der Anforderungen pro Sekunde, bei denen kein Modell aus dem Cache zurückgegeben werden konnte. Stellen Sie mithilfe dieses Leistungsindikators fest, ob die für die Zwischenspeicherung (Datenträger oder Arbeitsspeicherung) verwendeten Ressourcen ausreichend sind.|  

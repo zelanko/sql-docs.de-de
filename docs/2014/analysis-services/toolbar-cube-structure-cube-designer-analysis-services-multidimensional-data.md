@@ -1,5 +1,5 @@
 ---
-title: Symbolleiste (Registerkarte Cubestruktur, Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Symbolleiste (Registerkarte Cubestruktur, Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7bb13932-350d-4c6c-96f7-893d6cbdf449
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 22857975aee349abdb1a258f9aa013ffe2adf1d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 28f8711f832d4dd06b5ea66e4e2a587db1c57cec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149975"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209900"
 ---
 # <a name="toolbar-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Symbolleiste (Registerkarte 'Cubestruktur', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Bereichs **Symbolleiste** können Sie auf der Registerkarte **Cubestruktur** im Cube-Designer allgemeine Aktionen ausführen, z. B. neue Measuregruppen verarbeiten oder erstellen.  
@@ -42,6 +42,6 @@ ms.locfileid: "36149975"
 |**Tabelle ausblenden**|Klicken Sie auf diese Option, um die ausgewählte Tabelle im Bereich **Datenquellensicht** auszublenden.<br /><br /> Hinweis: Diese Option ist deaktiviert, wenn keine Tabelle im Bereich **Datenquellensicht** ausgewählt ist.|  
 |**Tabelle suchen**|Klicken Sie auf diese Option, um das Dialogfeld **Tabelle suchen** anzuzeigen und eine Tabelle im Bereich **Datenquellensicht** zu suchen.|  
 |**Zoom**|Klicken Sie auf diese Option, um die Prozentwerte für die Zoomoption zu durchlaufen, oder wählen Sie einen verfügbaren Prozentwert der Zoomoption für den Bereich **Datenquellensicht** aus.|  
-|**Anzeigen**|Wählen Sie diese Option aus, um die folgenden Optionen der Reihe nach anzuzeigen oder eine der folgenden Optionen auszuwählen, um die Ansicht des Bereichs **Datenquellensicht** zu ändern:<br /><br /> **Strukturansicht**: Tabellen, benannte Abfragen, Spalten, benannte Berechnungen und Beziehungen in einer Strukturansicht angezeigt.<br /><br /> **Diagrammansicht**: Zeigen Sie Tabellen, benannte Abfragen, Spalten, benannte Berechnungen und Beziehungen in einem Datenbankdiagramm.|  
+|**Anzeigen**|Wählen Sie diese Option aus, um die folgenden Optionen der Reihe nach anzuzeigen oder eine der folgenden Optionen auszuwählen, um die Ansicht des Bereichs **Datenquellensicht** zu ändern:<br /><br /> **Strukturansicht**: Tabellen, benannte Abfragen, Spalten, benannte Berechnungen und Beziehungen in einer Strukturansicht anzuzeigen.<br /><br /> **Diagrammansicht**: Zeigen Sie Tabellen, benannte Abfragen, Spalten, benannte Berechnungen und Beziehungen in einem Datenbankdiagramm.|  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Neu bezeichnen (SQL Server Data Mining-Add-ins) | Microsoft Docs
+title: Neu bezeichnen (SQL Server Data Mining-Add-ins) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data preparation
 - relabel
 - data cleaning
 ms.assetid: af041b39-fdd1-4cb5-a5ef-2f3ddab84614
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 50dd1a2c4cd425243c55ef9181387a08c5d935ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 46a05e8f54a6c307dba5b82572ad8158b305f4bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151450"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157171"
 ---
 # <a name="relabel-sql-server-data-mining-add-ins"></a>Neu bezeichnen (SQL Server Data Mining-Add-Ins)
   ![Office 13-Symbol für das Tool neu bezeichnen](media/dm13-relabel.gif "Office 13-Symbol für Tool neu bezeichnen")  
@@ -44,21 +44,21 @@ ms.locfileid: "36151450"
   
 2.  Wählen Sie die Tabelle oder den Datenbereich mit den zu bereinigenden Daten aus.  
   
-3.  In der **neu bezeichnen** Seite des Assistenten wählen Sie eine einzelne Spalte, durch die Spalte aus der Dropdownliste auswählen oder indem Sie auf die Spalte in der **Datenstichproben** Bereich.  
+3.  In der **neu bezeichnen** Seite des Assistenten wählen Sie eine einzelne Spalte auswählen die Spalte aus der Dropdownliste aus, oder indem Sie auf die Spalte in der **Datenstichproben** Bereich.  
   
-     Die **Datenstichproben** Bereich zeigt nur etwa 50 Datenzeilen, aber um sicherzustellen, dass Sie sehen, dass eine hinreichenden Spannweite von Werten als Stichprobe verwendet.  
+     Die **Datenstichproben** Bereich zeigt nur etwa 50 Datenzeilen, aber sie werden Stichproben erstellt, um sicherzustellen, dass Sie eine gute von Werten Spannweite.  
   
-     Klicken Sie auf die Spaltenüberschrift für **Anzahl** um nach der Anzahl der einzelnen Werte zu sortieren.  
+     Klicken Sie auf die Spaltenüberschrift für **Anzahl** durch die Anzahl der einzelnen Werte zu sortieren.  
   
      Sie können auch sortieren, indem **ursprüngliche Bezeichnungen**, dies ist hilfreich, wenn Sie zunächst alle höchsten oder niedrigsten Werte neu bezeichnen möchten.  
   
-4.  In der **neu bezeichnen** Datenseite des Assistenten, überprüfen Sie die Werte in der **ursprüngliche Bezeichnungen** Spalte, und entscheiden, wie die gruppiert oder bearbeitet werden sollen.  
+4.  In der **neu bezeichnen** Datenseite des Assistenten, überprüfen Sie die Werte in der **ursprüngliche Bezeichnungen** Spalte, und entscheiden Sie, wie Sie möchten die gruppiert oder bearbeitet werden.  
   
 5.  Geben Sie einen neuen Wert in der Zeile unter **neue Bezeichnungen**. Sie können auch einen Wert aus der Liste der vorhandenen Werte auswählen. Bei der Eingabe neuer Werte werden diese sofort für die Wiederverwendung verfügbar.  
   
 6.  Wenn Sie genügend Zeilen eingegeben haben, klicken Sie auf **Weiter**, und klicken Sie auf die **Ziel auswählen** Seite, und wählen Sie in dem Sie die neu bezeichneten Daten speichern müssen.  
   
-    -   **Dem aktuellen Arbeitsblatt als neue Spalte hinzuzufügen**  
+    -   **Das aktuelle Arbeitsblatt als neue Spalte hinzugefügt**  
   
          Klicken Sie auf diese Option, um der Tabelle eine neue Spalte mit den neuen Werten hinzuzufügen.  
   

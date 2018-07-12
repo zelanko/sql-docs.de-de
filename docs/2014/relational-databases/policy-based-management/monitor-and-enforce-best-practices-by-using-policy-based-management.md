@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 540b7ec825fa8cacb5fe3852e4ad3e8ea8e096f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 0bc95e67c4fc29beb61dc518d2f33b203dcae3fc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149044"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240570"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Überwachen und Erzwingen von Best Practices mit der richtlinienbasierten Verwaltung
-  Richtlinie der richtlinienbasierten Verwaltung können Sie bewährte Methoden für die Überwachung der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Stellt einer Reihe von Richtliniendateien bereit, dass Sie als best Practice-Richtlinien importieren können, und Auswertung der Richtlinien für einen Zielsatz, der Instanzen, Instanzobjekte, Datenbanken oder Datenbankobjekte enthält. Sie können Richtlinien manuell auswerten, Richtlinien zum Auswerten eines Zielsatzes entsprechend einem Zeitplan festlegen oder Richtlinien zum Auswerten eines Zielsatzes entsprechend einem Ereignis angeben. Weitere Informationen finden Sie unter [Verwalten von Servern mit der richtlinienbasierten Verwaltung](administer-servers-by-using-policy-based-management.md).  
+  Richtlinie der richtlinienbasierten Verwaltung können Sie bewährte Methoden für die Überwachung der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Stellt einer Reihe von Richtliniendateien bereit, importieren Sie als best Practice-Richtlinien, und Auswertung der Richtlinien für einen Zielsatz, der Instanzen, Instanzobjekte, Datenbanken oder Datenbankobjekte enthält. Sie können Richtlinien manuell auswerten, Richtlinien zum Auswerten eines Zielsatzes entsprechend einem Zeitplan festlegen oder Richtlinien zum Auswerten eines Zielsatzes entsprechend einem Ereignis angeben. Weitere Informationen finden Sie unter [Verwalten von Servern mit der richtlinienbasierten Verwaltung](administer-servers-by-using-policy-based-management.md).  
   
 ## <a name="policy-and-rules-for-database-engine"></a>Richtlinie und Regeln für Datenbank-Engine  
- Die folgende Tabelle enthält die Richtlinien, die mit der Installation von enthaltenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält Informationen zu den Regeln für besten Practices, die einzelnen Richtlinien ausgewertet. Die Richtlinien werden als XML-Dateien gespeichert und werden in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]importiert. Weitere Informationen über das Importieren von Richtlinien finden Sie unter [Importieren einer Richtlinie der richtlinienbasierten Verwaltung](import-a-policy-based-management-policy.md).  
+ Die folgende Tabelle enthält die Richtlinien, die mit der Installation von enthaltenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und enthält Informationen über die Regeln zu bewährten Methoden, die einzelnen Richtlinien ausgewertet. Die Richtlinien werden als XML-Dateien gespeichert und werden in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]importiert. Weitere Informationen über das Importieren von Richtlinien finden Sie unter [Importieren einer Richtlinie der richtlinienbasierten Verwaltung](import-a-policy-based-management-policy.md).  
   
 |Richtlinienname|Regel für Best Practice|  
 |-----------------|------------------------|  
@@ -42,8 +42,8 @@ ms.locfileid: "36149044"
 |Gastberechtigungen|[Gastberechtigungen für Benutzerdatenbanken](guest-permissions-on-user-databases.md)|  
 |Datum der letzten erfolgreichen Sicherung|[Obsolete Sicherung](outdated-backup.md)|  
 |Öffentlich – Keine Serverberechtigungen|[Serverberechtigungen für 'public'](server-public-permissions.md)|  
-|Überlappung der SQL Server-32-Bit-Affinitätsmaske|[Richtige Affinity Mask und Überlappung der Input-Output-Affinitätsmaske](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
-|Überlappung der SQL Server-64-Bit-Affinitätsmaske|[Richtige Affinity Mask und Überlappung der Input-Output-Affinitätsmaske](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|Überlappung der SQL Server-32-Bit-Affinitätsmaske|[Richtige Affinity Mask und Affinity Input-Output Überlappung](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|Überlappung der SQL Server-64-Bit-Affinitätsmaske|[Richtige Affinity Mask und Affinity Input-Output Überlappung](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
 |SQL Server-Affinitätsmaske|[Beibehalten des Standardwerts für die Affinitätsmaske](keep-the-affinity-mask-default-value.md)|  
 |Schwellenwert für blockierte SQL Server-Prozesse|[Erhöhen oder Deaktivieren des Schwellenwerts für blockierte Prozesse](increase-or-disable-blocked-process-threshold.md)|  
 |SQL Server-Standardablaufverfolgung|[Protokolldateien für Standardablaufverfolgung deaktiviert](default-trace-log-files-disabled.md)|  
@@ -64,7 +64,7 @@ ms.locfileid: "36149044"
 |Fehler aufgrund einer Beschädigung einer Cluster-Datenträgerressource im Windows-Ereignisprotokoll|[Erkennen von SCSI-Hostadapterproblemen](detect-scsi-host-adapter-issues.md)|  
 |Gerätetreiber-Steuerungsfehler im Windows-Ereignisprotokoll|[Gerätetreiber-Steuerungsfehler](device-driver-control-error.md)|  
 |Fehler "Gerät nicht bereit" im Windows-Ereignisprotokoll|[Fehler 'Gerät nicht bereit'](device-not-ready-error.md)|  
-|Fehler aufgrund fehlerhafter E/A-Anforderung im Windows-Ereignisprotokoll|[Erkennen von fehlerhaften Input-Output-Anforderung](detect-failed-input-and-output-requests.md)|  
+|Fehler aufgrund fehlerhafter E/A-Anforderung im Windows-Ereignisprotokoll|[Fehlerhafte Eingabe Ausgabeanforderung erkennen](detect-failed-input-and-output-requests.md)|  
 |E/A-Verzögerungswarnung im Windows-Ereignisprotokoll|[Check Disk Input and Output Subsystem for IO Delay Problems (Überprüfen des Datenträger-E/A-Subsystems auf E/A-Verzögerungen)](check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
 |E/A-Fehler im Windows-Ereignisprotokoll während eines Hardwareseitenfehlers|[Input and Output Error During Hard Page Fault (Eingabe- und Ausgabefehler während eines Hardwareseitenfehlers)](input-and-output-error-during-hard-page-fault.md)|  
 |Fehler beim erneuten Leseversuch im Windows-Ereignisprotokoll|[Überprüfen des Datenträger-E/A-Subsystems auf Lesewiederholungsprobleme](check-disk-input-output-subsystem-for-read-retry-problems.md)|  

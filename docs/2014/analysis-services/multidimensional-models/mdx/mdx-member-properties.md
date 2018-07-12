@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Elementeigenschaften (MDX) | Microsoft Docs
+title: Verwenden von Elementeigenschaften (MDX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DIMENSION PROPERTIES keyword
 - Properties function
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - members [MDX], properties
 ms.assetid: 26b5ad08-3799-4a5e-89f3-dca25e637d45
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6a7328de0b6711acdc89ca708aab5c7af5f1cf54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2918188146fd84761bd23340ec5b76b48685eab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149157"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259536"
 ---
 # <a name="using-member-properties-mdx"></a>Verwenden von Elementeigenschaften (MDX)
   Elementeigenschaften enthalten die grundlegenden Informationen zu jedem Element in jedem Tupel. Zu den grundlegenden Informationen gehören der Elementname, die übergeordnete Ebene, die Anzahl der untergeordneten Elemente usw. Elementeigenschaften sind für alle Elemente auf der jeweiligen Ebene verfügbar. Organisatorisch werden Elementeigenschaften als in Dimensionen organisierte Daten behandelt, die in einer einzigen Dimension gespeichert werden.  
@@ -44,10 +44,10 @@ ms.locfileid: "36149157"
   
  Weitere Informationen finden Sie unter [Benutzerdefinierte Elementeigenschaften &#40;MDX&#41;](mdx-member-properties-user-defined-member-properties.md).  
   
- Sowohl systeminterne und benutzerdefinierte Elementeigenschaften können mithilfe des abgerufen werden die `PROPERTIES` Schlüsselwort oder der [Eigenschaften](/sql/mdx/properties-mdx) Funktion.  
+ Sowohl systeminterne und benutzerdefinierte Elementeigenschaften können mithilfe des abgerufen werden die `PROPERTIES` Schlüsselwort oder [Eigenschaften](/sql/mdx/properties-mdx) Funktion.  
   
 ## <a name="using-the-properties-keyword"></a>Verwenden des PROPERTIES-Schlüsselworts  
- Die `PROPERTIES` Schlüsselwort Gibt die Elementeigenschaften, die für eine bestimmte Achsendimension verwendet werden sollen. Die `PROPERTIES` Schlüsselwort ist verborgen, innerhalb der `<axis specification>` -Klausel der MDX- [wählen](/sql/mdx/mdx-data-manipulation-select) Anweisung:  
+ Die `PROPERTIES` -Schlüsselwort Gibt an, die Elementeigenschaften, die für eine bestimmte Achsendimension verwendet werden sollen. Die `PROPERTIES` Schlüsselwort ist verborgen, innerhalb der `<axis specification>` -Klausel der MDX- [wählen](/sql/mdx/mdx-data-manipulation-select) Anweisung:  
   
 ```  
 SELECT [<axis_specification>  
@@ -65,7 +65,7 @@ SELECT [<axis_specification>
 > [!NOTE]  
 >  Weitere Informationen zu den Werten `<set>` und `<axis_name>` finden Sie unter [Angeben des Inhalts einer Abfrageachse &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md).  
   
- Die `<dim_props>` -Klausel können Sie die Abfrage Dimensions-, Ebenen- und Elementeigenschaften mithilfe der `PROPERTIES` Schlüsselwort. Nachstehend ist die Syntax der `<dim_props>` -Klausel definiert:  
+ Die `<dim_props>` -Klausel können Sie die Abfrage Dimensions-, Ebenen- und Elementeigenschaften, die mit der `PROPERTIES` Schlüsselwort. Nachstehend ist die Syntax der `<dim_props>` -Klausel definiert:  
   
 ```  
 <dim_props> ::= [DIMENSION] PROPERTIES <property> [,<property>...]  
@@ -73,7 +73,7 @@ SELECT [<axis_specification>
   
  Die Aufteilung der Syntax von `<property>` variiert abhängig davon, welche Eigenschaft abgefragt wird:  
   
--   Bei einer kontextabhängigen systeminternen Elementeigenschaft muss der Name der Dimension oder der Ebene vor der Eigenschaft stehen. Nicht kontextabhängige systeminterne Elementeigenschaften können dagegen nicht durch den Dimensions- oder Ebenennamen qualifiziert werden. Weitere Informationen zur Verwendung der `PROPERTIES` -Schlüsselworts mit systeminternen Elementeigenschaften finden Sie unter [systeminterne Elementeigenschaften &#40;MDX&#41;](mdx-member-properties-intrinsic-member-properties.md).  
+-   Bei einer kontextabhängigen systeminternen Elementeigenschaft muss der Name der Dimension oder der Ebene vor der Eigenschaft stehen. Nicht kontextabhängige systeminterne Elementeigenschaften können dagegen nicht durch den Dimensions- oder Ebenennamen qualifiziert werden. Weitere Informationen zur Verwendung der `PROPERTIES` -Schlüsselworts mit systeminternen Elementeigenschaften finden Sie unter [integrierte Elementeigenschaften &#40;MDX&#41;](mdx-member-properties-intrinsic-member-properties.md).  
   
 -   Bei einer benutzerdefinierten Elementeigenschaft sollte der Name der Ebene vorangestellt werden, in der sie sich befindet. Weitere Informationen zur Verwendung der `PROPERTIES` -Schlüsselworts mit benutzerdefinierten Elementeigenschaften finden Sie unter [benutzerdefinierte Elementeigenschaften &#40;MDX&#41;](mdx-member-properties-user-defined-member-properties.md).  
   

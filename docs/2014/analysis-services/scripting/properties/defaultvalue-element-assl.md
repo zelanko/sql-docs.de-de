@@ -1,5 +1,5 @@
 ---
-title: DefaultValue-Element (ASSL) | Microsoft Docs
+title: DefaultValue-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DefaultValue element
 ms.assetid: 87e964a3-f317-46c3-98c7-b3621765c77b
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a319f22dc353f860ca3b0fa3a8e4b0cf60f421ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f4137e73097630d62358ea874a38afda6d90eb87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150994"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277846"
 ---
 # <a name="defaultvalue-element-assl"></a>DefaultValue-Element (ASSL)
   Enthält den schreibgeschützten Standardwert des zugeordneten [ServerProperty](../objects/serverproperty-element-assl.md) Element.  
@@ -62,9 +62,9 @@ ms.locfileid: "36150994"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Dieses Element enthält den schreibgeschützten installationsstandardwert der der `ServerProperty` für die aktuelle Instanz des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Der Standardwert wird von der Instanz angegeben und kann i. d. R. nicht geändert werden.  
+ Dieses Element enthält den schreibgeschützten installationsstandardwert der `ServerProperty` für die aktuelle Instanz des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Der Standardwert wird von der Instanz angegeben und kann i. d. R. nicht geändert werden.  
   
- Das Element, das das übergeordnete Element des entspricht `DefaultValue` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ServerProperty>.  
+ Das Element, das dem übergeordneten entspricht `DefaultValue` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ServerProperty>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [ServerProperties-Element &#40;ASSL&#41;](../collections/serverproperties-element-assl.md)   

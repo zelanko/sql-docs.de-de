@@ -1,13 +1,11 @@
 ---
-title: Arbeiten mit Snapshot-Isolation | Microsoft Docs
+title: Arbeiten mit Momentaufnahmeisolation | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,15 +23,15 @@ helpviewer_keywords:
 - SQLSetConnectAttr function
 ms.assetid: 39e87eb1-677e-45dd-bc61-83a4025a7756
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d5c2c3e77e352db45d728e1936fcb1973d5fe332
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 5ae5580b817a6719973eb297819440ee87facd60
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060939"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423529"
 ---
 # <a name="working-with-snapshot-isolation"></a>Arbeiten mit Momentaufnahmeisolation
   In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] wurde eine neue Momentaufnahmenisolationsstufe eingeführt, die die Parallelität für OLTP-Anwendungen (Online Transaction Processing, Onlinetransaktionsverarbeitung) verbessern soll. In früheren Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] basierte die Parallelität ausschließlich auf dem Sperren, was zu Blockierungs- und Deadlockproblemen bei einigen Anwendungen führen konnte. Die Momentaufnahmenisolation hängt von Verbesserungen der Zeilenversionsverwaltung ab und soll die Leistung durch Vermeidung von Leser-/Schreiberblockierungsszenarien erhöhen.  
@@ -60,10 +58,10 @@ ms.locfileid: "36060939"
 > [!NOTE]  
 >  Der Fehler DB_S_ERRORSOCCURRED oder DB_E_ERRORSOCCURRED tritt auf, wenn DBPROPVAL_TI_SNAPSHOT in Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] festgelegt wird.  
   
- Informationen, wie die Snapshot-Isolation in Transaktionen unterstützt wird, finden Sie unter [unterstützen lokale Transaktionen](../../native-client-ole-db-transactions/transactions.md).  
+ Informationen darüber, wie die Snapshot-Isolation in Transaktionen unterstützt wird, finden Sie unter [unterstützen lokale Transaktionen](../../native-client-ole-db-transactions/transactions.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>ODBC-Treiber für SQL Server Native Client  
- Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber bietet Unterstützung für Snapshot-Isolation über Erweiterungen der [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) und [SQLGetInfo](../../native-client-odbc-api/sqlgetinfo.md) Funktionen.  
+ Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber bietet Unterstützung für die Snapshot-Isolation jedoch Verbesserungen der [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) und [SQLGetInfo](../../native-client-odbc-api/sqlgetinfo.md) Funktionen.  
   
 ### <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
  Die **SQLSetConnectAttr** -Funktion unterstützt jetzt die Verwendung des SQL_COPT_SS_TXN_ISOLATION-Attributs. Durch Festlegen von SQL_COPT_SS_TXN_ISOLATION auf SQL_TXN_SS_SNAPSHOT wird angegeben, dass die Transaktion unter der Momentaufnahmeisolationsstufe ausgeführt wird.  
@@ -71,7 +69,7 @@ ms.locfileid: "36060939"
 ### <a name="sqlgetinfo"></a>SQLGetInfo  
  Die [SQLGetInfo](../../native-client-odbc-api/sqlgetinfo.md) -Funktion unterstützt jetzt den SQL_TXN_SS_SNAPSHOT-Wert, der SQL_TXN_ISOLATION_OPTION-Infotyp hinzugefügt wurde.  
   
- Informationen, wie die Snapshot-Isolation in Transaktionen unterstützt wird, finden Sie unter [Cursor Transaction Isolation Level](../../native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md).  
+ Informationen darüber, wie die Snapshot-Isolation in Transaktionen unterstützt wird, finden Sie unter [Cursor Transaction Isolation Level](../../native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server Native Client-Funktionen](sql-server-native-client-features.md)   

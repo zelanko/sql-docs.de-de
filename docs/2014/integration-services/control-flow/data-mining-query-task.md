@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingquerytask.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2cda01c434fda1a17be4b26352629dc2bc0abb5b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a075f3ed6dde5bccb648318c11bf8a456c5a1123
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150426"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277146"
 ---
 # <a name="data-mining-query-task"></a>Data Mining-Abfragetask
   Der Data Mining-Abfragetask führt Vorhersageabfragen basierend auf in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellten Data Mining-Modellen aus. Die Vorhersageabfrage erstellt mithilfe von Miningmodellen eine Vorhersage für neue Daten. Beispielsweise kann eine Vorhersageabfrage vorhersagen, wie viele Segelboote in den Sommermonaten voraussichtlich verkauft werden, oder sie kann eine Liste potenzieller Kunden generieren, die mit hoher Wahrscheinlichkeit ein Segelboot kaufen werden.  
@@ -57,7 +57,7 @@ ms.locfileid: "36150426"
   
 -   [Editor für Data Mining-Abfragetasks &#40;Mining-Registerkarte "Modell"&#41;](../data-mining-query-task-editor-mining-model-tab.md)  
   
--   [Editor für Data Mining-Abfragetasks &#40;Fragen Sie die Registerkarte "&#41;](../data-mining-query-task-editor-query-tab.md)  
+-   [Editor für Data Mining-Abfragetasks &#40;Abfrage (Registerkarte)&#41;](../data-mining-query-task-editor-query-tab.md)  
   
 -   [Editor für Data Mining-Abfragetasks &#40;Registerkarte Ausgabe&#41;](../data-mining-query-task-editor-output-tab.md)  
   

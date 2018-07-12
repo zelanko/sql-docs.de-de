@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4db31968d249659890924917be5c40533c0e19af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ea0a37304bbde2ac84e5092e67744226a03b0db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150854"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239400"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Arbeiten mit dem Oracle CDC Service
   In diesem Abschnitt werden einige wichtige Begriffe des Oracle CDC Service beschrieben. Es werden die folgenden Begriffe behandelt:  
@@ -32,7 +32,7 @@ ms.locfileid: "36150854"
   
      Dieser Abschnitt enthält eine kurze Beschreibung der CDC-Datenbanken. Diese Datenbanken werden mit der Oracle CDC Designer Console erstellt. Weitere Informationen zu CDC-Datenbanken finden Sie in der Dokumentation, die im Installationsumfang der CDC Designer Console enthalten ist.  
   
--   [Mithilfe der Befehlszeile zum Konfigurieren des CDC-Diensts](#BKMK_CommandConfigCDC)  
+-   [Verwenden der Befehlszeile zum Konfigurieren des CDC Service](#BKMK_CommandConfigCDC)  
   
      In diesem Abschnitt werden die Befehlszeilenbefehle beschrieben, die zum Konfigurieren des Oracle CDC Service verwendet werden.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36150854"
   
 -   [dbo. xdbcdc_trace](#BKMK_dboxdbcdc_trace)  
   
--   [xdbcdc_databases](#BKMK_dboxdbcdc_databases)  
+-   [dbo. xdbcdc_databases](#BKMK_dboxdbcdc_databases)  
   
 -   [dbo.xdbcdc_services](#BKMK_dboxdbcdc_services)  
   
@@ -112,7 +112,7 @@ ms.locfileid: "36150854"
 |ref_count|Dieses Element zählt die Anzahl von Computern, auf denen der gleiche Oracle CDC Service installiert ist. Es wird mit jeder Hinzufügung des gleichnamigen Oracle CDC Service inkrementiert. Es wird entsprechend dekrementiert, wenn ein Dienst entfernt wird. Wenn der Indikator 0 (null) erreicht, wird diese Zeile gelöscht.|  
 |active_service_node|Der Name des Windows-Knotens, der den CDC-Dienst momentan behandelt. Wenn der Dienst ordnungsgemäß beendet wird, wird diese Spalte auf NULL festgelegt, um anzugeben, dass kein aktiver Dienst mehr vorhanden ist.|  
 |active_service_heartbeat|Dieses Element verfolgt den aktuellen CDC-Dienst, um zu ermitteln, ob er noch aktiv ist.<br /><br /> Dieses Element wird in regelmäßigen Abständen mit dem aktuellen Datenbankzeitstempel (UTC) für den aktiven CDC-Dienst aktualisiert. Das Standardintervall beträgt 30 Sekunden, aber Sie können diesen Wert anpassen.<br /><br /> Wenn ein ausstehender CDC-Dienst erkennt, dass der Takt nicht aktualisiert wurde, nachdem das konfigurierte Intervall verstrichen ist, versucht der ausstehende Dienst, die aktive CDC-Dienst-Rolle zu übernehmen.|  
-|options|Dieses Element gibt die sekundären Optionen an, z. B. Ablaufverfolgung oder Optimierung. Es hat die Form **name[=Wert][; ]**. Für die Zeichenfolge options wird die gleiche Semantik wie für die ODBC-Verbindungszeichenfolge verwendet. Wenn die Option ein boolescher Wert ist (ja/nein), kann der Wert nur den Namen enthalten.<br /><br /> Trace verfügt über folgende Werte möglich:<br /><br /> true<br /><br /> on<br /><br /> false<br /><br /> off<br /><br /> \<Klassenname > [, Klassenname >]<br /><br /> Der Standardwert ist **false**.<br /><br /> <br /><br /> **service_heartbeat_interval** ist das Zeitintervall (in Sekunden), nach dem der Dienst die Spalte „active_service_heartbeat“ aktualisiert. Der Standardwert ist **30**. Der Maximalwert ist **3600**.<br /><br /> **service_config_polling_interval** ist das Abrufintervall (in Sekunden), nach dem der CDC-Dienst eine Überprüfung auf Konfigurationsänderungen durchführt. Der Standardwert ist **30**. Der Maximalwert ist **3600**.<br /><br /> **sql_command_timeout** ist das Befehlstimeout für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Der Standardwert ist **1**. Der Maximalwert ist **3600**.|  
+|options|Dieses Element gibt die sekundären Optionen an, z. B. Ablaufverfolgung oder Optimierung. Es hat die Form **name[=Wert][; ]**. Für die Zeichenfolge options wird die gleiche Semantik wie für die ODBC-Verbindungszeichenfolge verwendet. Wenn die Option ein boolescher Wert ist (ja/nein), kann der Wert nur den Namen enthalten.<br /><br /> mit der Ablaufverfolgung ist die folgenden möglichen Werten:<br /><br /> true<br /><br /> on<br /><br /> false<br /><br /> off<br /><br /> \<Klassenname > [, Klassenname >]<br /><br /> Der Standardwert ist **false**.<br /><br /> <br /><br /> **service_heartbeat_interval** ist das Zeitintervall (in Sekunden), nach dem der Dienst die Spalte „active_service_heartbeat“ aktualisiert. Der Standardwert ist **30**. Der Maximalwert ist **3600**.<br /><br /> **service_config_polling_interval** ist das Abrufintervall (in Sekunden), nach dem der CDC-Dienst eine Überprüfung auf Konfigurationsänderungen durchführt. Der Standardwert ist **30**. Der Maximalwert ist **3600**.<br /><br /> **sql_command_timeout** ist das Befehlstimeout für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Der Standardwert ist **1**. Der Maximalwert ist **3600**.|  
 ||  
   
 ### <a name="the-msxdbcdc-database-stored-procedures"></a>Gespeicherte Prozeduren der MSXDBCDC-Datenbank  
@@ -190,7 +190,7 @@ ms.locfileid: "36150854"
 ### <a name="service-program-commands"></a>Dienstprogrammbefehle  
  Im folgenden Abschnitt werden die folgenden Befehle beschrieben, die zum Konfigurieren des CDC-Diensts verwendet werden.  
   
--   [Config](#BKMK_config)  
+-   [Konfigurationsdatei](#BKMK_config)  
   
 -   [Erstellen](#BKMK_create)  
   
