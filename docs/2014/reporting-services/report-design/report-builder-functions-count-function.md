@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e623374290e9620d048d651683a58bfcd3ddf573
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 3fc2b74413f2ecb7f0a1f72684494f85ecf82ca9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148331"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152171"
 ---
 # <a name="count-function-report-builder-and-ssrs"></a>Count-Funktion (Berichts-Generator und SSRS)
   Gibt die Anzahl der Werte ungleich NULL aus dem angegebenen Ausdruck im Kontext des festgelegten Bereichs ausgewertet zurück.  
@@ -36,10 +36,10 @@ Count(expression, scope, recursive)
   
 #### <a name="parameters"></a>Parameter  
  *expression*  
- (`Variant` oder `Binary`) der Ausdruck für den die Aggregation auszuführen `=Fields!FieldName.Value`.  
+ (`Variant` oder `Binary`) der Ausdruck für den die Aggregation, z. B. ausgeführt `=Fields!FieldName.Value`.  
   
  *Bereich*  
- (`String`) Der Namen eines Datasets, Gruppe oder eines Datenbereichs mit dem Bericht Berichtselementen, auf die die Aggregatfunktion anzuwenden. Wenn *scope* nicht angegeben ist, wird der aktuelle Bereich verwendet.  
+ (`String`) Der Name eines Datasets, einer Gruppe oder eines Bereichs mit den Berichtselementen, auf die die Aggregatfunktion anzuwenden. Wenn *scope* nicht angegeben ist, wird der aktuelle Bereich verwendet.  
   
  *Rekursiv*  
  (**Enumerationstyp**) Optional. `Simple` (Standard) oder `RdlRecursive`. Gibt an, ob die Aggregation rekursiv auszuführen ist.  
@@ -80,7 +80,7 @@ Count(expression, scope, recursive)
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ausdruck verwendet wird, in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](expressions-report-builder-and-ssrs.md)   
  [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  

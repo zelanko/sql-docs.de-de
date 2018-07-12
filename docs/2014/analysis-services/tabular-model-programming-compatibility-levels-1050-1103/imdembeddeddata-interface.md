@@ -1,5 +1,5 @@
 ---
-title: IMDEmbedded-Schnittstelle | Microsoft Docs
+title: IMDEmbedded-Schnittstelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3973640b4a4efca789ec107c1c1f086801cac234
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc1f1032a644277cab9645a11f8b3bedbb65c13d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147984"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157141"
 ---
 # <a name="imdembedded-interface"></a>IMDEmbedded-Schnittstelle
   Die IMDEmbedded-Schnittstelle ist eine öffentliche Schnittstelle, die verwendet wurde, um eine eingebettete PowerPivot-Datenbank oder eine tabellarische Modelldatenbank zu verwalten. Die Schnittstelle erbt von der `IPersistStream`-Schnittstelle. Die Schnittstelle lässt folgende Vorgänge zu:  
@@ -35,16 +35,16 @@ ms.locfileid: "36147984"
   
 -   Bricht den aktuellen Einbettungsvorgang ab.  
   
--   Abgerufen Sie die geschätzte Größe (in Bytes) des Streams, der zum Speichern des eingebetteten Objekts werden. Wird von `IPersistStream` geerbt.  
+-   Rufen Sie die geschätzte Größe (in Byte) des Datenstroms um das eingebettete Objekt zu speichern. Wird von `IPersistStream` geerbt.  
   
--   Überprüfen Sie, ob die eingebettete Datenbank seit der letzten Speicherung geändert wurde. Wird von `IPersistStream` geerbt.  
+-   Überprüfen Sie, wenn die eingebettete Datenbank seit der letzten Speicherung geändert hat. Wird von `IPersistStream` geerbt.  
   
--   Laden Sie die eingebettete Datenbank in das lokale oder prozessinterne Modul. Wird von `IPersistStream` geerbt.  
+-   Laden Sie die eingebettete Datenbank in die lokale oder prozessinterne Engine. Wird von `IPersistStream` geerbt.  
   
 -   Speichert die lokale oder prozessinterne Datenbank im eingebetteten Datenstrom im Containerdokument. Wird von `IPersistStream` geerbt.  
   
 ## <a name="reference"></a>Verweis  
- Die folgenden verweisen auf Dokumente, die `IMDEmbedded` Schnittstelle in dargestellt **msmd.h** Headerdatei.  
+ Die folgenden verweisen auf Dokumente, die `IMDEmbedded` Schnittstelle wie in **msmd.h** Headerdatei.  
   
 ### <a name="source-file-pxoembeddeddataidl"></a>Quelldatei: PXOEmbeddedData.idl  
   
@@ -112,7 +112,7 @@ HRESULT GetStreamIdentifier (
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|Es ist keine eingebettete Datenbank verfügbar.|  
 |DBPROPVAL_EMBED_EMBEDDED|0x01|Die aktuelle Anwendung enthält die eingebettete Datenbank.|  
-|DBPROPVAL_EMBED_LINKED|0x02|Die eingebettete Datenbank wird in einer Remoteanwendung (d. h. SharePoint Server) gehostet.|  
+|DBPROPVAL_EMBED_LINKED|0x02|Die eingebettete Datenbank wird in einer remote-Anwendung (z. B. SharePoint-Server) gehostet.|  
   
 #### <a name="source"></a>Quelle  
   
@@ -320,7 +320,7 @@ HRESULT Save (
 ```  
   
 #### <a name="description"></a>Description  
- Speichert die lokale oder prozessinterne Datenbank im eingebetteten Datenstrom im Containerdokument. Wird von `IPersistStream` geerbt.  
+ Speichert die lokale oder prozessinterne Datenbank in den eingebetteten Datenstrom im Containerdokument an. Wird von `IPersistStream` geerbt.  
   
 #### <a name="parameters"></a>Parameter  
  *in_pStm*  

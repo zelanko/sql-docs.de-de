@@ -1,5 +1,5 @@
 ---
-title: Abfrage-Generator | Microsoft Docs
+title: Abfrage-Generator | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.querybuilder.f1
 helpviewer_keywords:
 - Query Builder dialog box
 ms.assetid: 780752c9-6e3c-4f44-aaff-4f4d5e5a45c5
 caps.latest.revision: 37
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d8ae61c3f17ba0ad85e6f32aa9ae1f5389114e3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fc765cfceb8e52d3fbb578e3c3b6f212f28a3291
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148668"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156321"
 ---
 # <a name="query-builder"></a>Abfrage-Generator
   Verwenden Sie das Dialogfeld **Abfrage-Generator** , um Abfragen zum Verwenden mit dem Task 'SQL ausführen', der OLE DB-Quelle, dem OLE DB-Ziel und der Transformation für die Suche zu erstellen.  
@@ -79,7 +79,7 @@ ms.locfileid: "36148668"
  [OLE DB-Quelle](data-flow/ole-db-source.md)   
  [OLE DB-Ziel](data-flow/ole-db-destination.md)   
  [Transformation für Suche](data-flow/transformations/lookup-transformation.md)   
- [Integrationsservices &#40;SSIS&#41; Abfragen](integration-services-ssis-queries.md)   
+ [Integrationsdienste &#40;SSIS&#41; Abfragen](integration-services-ssis-queries.md)   
  [MERGE in Integration Services-Paketen](control-flow/merge-in-integration-services-packages.md)  
   
   

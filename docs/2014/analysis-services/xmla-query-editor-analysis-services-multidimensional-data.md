@@ -1,5 +1,5 @@
 ---
-title: XMLA-Abfrage-Editor (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: XMLA-Abfrage-Editor (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.editor.xmla.f1
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Query Editor [XMLA]
 ms.assetid: 14623019-7839-4038-9d12-2f8953d2ec04
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b11ee4322f25377f3307c0767e839b6e69e09bef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 221ea55990b98a9723928f52cd5432f13760cc91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061469"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211430"
 ---
 # <a name="xmla-query-editor-analysis-services---multidimensional-data"></a>XMLA-Abfrage-Editor (Analysis Services – Mehrdimensionale Daten)
   Mithilfe von XMLA-Abfrage-Editor können Sie in XMLA-Sprache verfasste Anweisungen und Skripts erstellen und ausführen.  
@@ -60,8 +60,8 @@ ms.locfileid: "36061469"
   
 |Begriff|Definition|  
 |----------|----------------|  
-|**Abfrage-Editor-Fenster**|Hier können Sie XMLA-Anweisungen und -Skripts eingeben, die vom XMLA-Abfrage-Editor ausgeführt werden sollen.<br /><br /> Das Kontextmenü des Abfrage-Editorfensters enthält die folgenden Optionen:<br /><br /> **Ausschneiden**: kopiert die aktuelle Auswahl in die Zwischenablage und entfernt die Auswahl aus der Abfrage-Editor-Fenster.<br />**Kopieren:** Kopiert die aktuelle Auswahl in die Zwischenablage.<br />**Fügen Sie**: Fügt den Inhalt der Zwischenablage in die aktuelle Auswahl.<br />**Verbinden:** Öffnet das Dialogfeld **Verbindung mit Server herstellen**, in dem eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] hergestellt werden kann.<br />**Trennen Sie**: trennt die aktuelle Abfrage-Editor aus einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Instanz.<br />**Alle Abfragen trennen**: trennt die Verbindung aller geöffneten Abfrage-Editoren.<br />**Verbindung ändern**: Öffnet die **Verbindung mit Server herstellen** (Dialogfeld), zum Herstellen einer Verbindung mit einer anderen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Instanz.<br />**Öffnen Sie im Objekt-Explorer den Server**: Öffnet die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Instanz mit der aktuellen Abfrage-Editor, in verbunden ist **Objekt-Explorer**.<br />**Führen Sie**: führt den ausgewählten Code aus, oder wenn kein Code ausgewählt ist, der gesamte Code in der aktuellen Abfrage-Editor ausgeführt.<br />**Fenster "Eigenschaften"**: Zeigt die **Eigenschaften** Fenster in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] für das aktuelle Abfragefenster.<br />**Abfrageoptionen**: Zeigt die **Abfrageoptionen** (Dialogfeld).|  
-|**Ergebnisfenster**|Zeigt die Ergebnisse einer XMLA-Anweisung bzw. eines MDX-Skripts als Text an.|  
+|**Abfrage-Editor-Fenster**|Hier können Sie XMLA-Anweisungen und -Skripts eingeben, die vom XMLA-Abfrage-Editor ausgeführt werden sollen.<br /><br /> Das Kontextmenü des Abfrage-Editorfensters enthält die folgenden Optionen:<br /><br /> **Ausschneiden**: kopiert die aktuelle Auswahl in die Zwischenablage und entfernt Sie aus dem Abfrage-Editorfenster.<br />**Kopieren:** Kopiert die aktuelle Auswahl in die Zwischenablage.<br />**Fügen Sie**: Fügt den Inhalt der Zwischenablage in die aktuelle Auswahl.<br />**Verbinden:** Öffnet das Dialogfeld **Verbindung mit Server herstellen**, in dem eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] hergestellt werden kann.<br />**Trennen Sie**: trennt die Verbindung der aktuellen Abfrage-Editor aus einem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Instanz.<br />**Alle Abfragen trennen**: trennt die Verbindung aller geöffneten Abfrage-Editoren.<br />**Verbindung ändern**: Öffnet die **Herstellen einer Verbindung mit Server** im Dialogfeld zum Herstellen einer Verbindung zu einer anderen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Instanz.<br />**Öffnen Sie im Objekt-Explorer den Server**: Öffnet die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Instanz, die mit der aktuellen Abfrage-Editor, in verbunden ist **Objekt-Explorer**.<br />**Führen Sie**: führt den ausgewählten Code aus, oder wenn kein Code ausgewählt ist, der gesamte Code in der aktuellen Abfrage-Editor ausgeführt.<br />**Fenster "Eigenschaften"**: Zeigt die **Eigenschaften** -Fensters im [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] für das aktuelle Abfragefenster.<br />**Abfrageoptionen**: Zeigt die **Abfrageoptionen** Dialogfeld.|  
+|**Fenster "Ergebnisse"**|Zeigt die Ergebnisse einer XMLA-Anweisung bzw. eines MDX-Skripts als Text an.|  
 |**Meldungsfenster**|Zeigt Informationen zum Ausführen einer XMLA-Anweisung bzw. eines MDX-Skripts an. In diesem Fenster werden beispielsweise während der Ausführung alle auftretenden Fehler bzw. wird nach der Ausführung die Anzahl der abgerufenen Zellen angezeigt.|  
   
 ## <a name="see-also"></a>Siehe auch  

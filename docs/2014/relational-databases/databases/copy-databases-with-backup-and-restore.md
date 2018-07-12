@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], back up and restore
 - restoring databases [SQL Server], previous SQL Server versions
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - database backups [SQL Server], copying databases
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5901a8fcdd3a2d24b84fe43d5af1fb2b46d56b39
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 551677d78685c5e491d5f1c2dd347bc77f37a437
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061405"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164891"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Kopieren von Datenbanken durch Sichern und Wiederherstellen
   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]können Sie eine neue Datenbank erstellen, indem Sie die Sicherung einer Benutzerdatenbank wiederherstellen, die mithilfe von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder einer höheren Version erstellt wurde. Sicherungen der **master**-, **model** - und **msdb** -Datenbank, die mit einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt wurden, können von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]nicht wiederhergestellt werden. Außerdem können [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Sicherungen nicht mit einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wiederhergestellt werden.  
@@ -42,7 +42,7 @@ ms.locfileid: "36061405"
   
 1.  Sichern Sie die Quelldatenbank, die in einer Instanz von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher vorhanden sein kann. Der Computer, auf dem diese Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, ist der *Quellcomputer*.  
   
-2.  Auf dem Computer, auf dem Sie die Datenbank kopieren möchten (die *Zielcomputer*), eine Verbindung mit der Instanz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem Sie die Datenbank wiederherstellen möchten. Erstellen Sie bei Bedarf in der Zielserverinstanz dieselben Sicherungsmedien, die zum Sichern der Quelldatenbanken verwendet wurden.  
+2.  Auf dem Computer, der Sie die Datenbank kopieren möchten (die *Zielcomputer*), eine Verbindung mit der Instanz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem Sie die Datenbank wiederherstellen möchten. Erstellen Sie bei Bedarf in der Zielserverinstanz dieselben Sicherungsmedien, die zum Sichern der Quelldatenbanken verwendet wurden.  
   
 3.  Stellen Sie die Sicherung der Quelldatenbank auf dem Zielserver wieder her. Durch das Wiederherstellen der Datenbank werden automatisch alle Datenbankdateien erstellt.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36061405"
   
     -   Wenn die vorhandene Datei nicht überschrieben werden kann, würde ein Wiederherstellungsfehler auftreten.  
   
- Zur Vermeidung von Fehlern und unbeabsichtigte Folgen, vor dem Wiederherstellungsvorgang können Sie die [Backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) Verlaufstabelle so ermitteln Sie die Datenbank und-Protokolldateien in der Sicherung wiederhergestellt werden sollen.  
+ Um Fehler und unbeabsichtigte Folgen, vor dem Wiederherstellungsvorgang, zu vermeiden können Sie anhand der [Backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) Verlaufstabelle die Datenbank und-Protokolldateien in der Sicherung finden Sie wiederherstellen möchten.  
   
 ## <a name="moving-the-database-files"></a>Verschieben der Datenbankdateien  
  Wenn die Dateien in der Datenbanksicherung aus den oben genannten Gründen nicht auf dem Zielcomputer wiederhergestellt werden können, ist es notwendig, die Dateien während des Wiederherstellens an einen neuen Standort zu verschieben. Zum Beispiel:  
@@ -124,7 +124,7 @@ ms.locfileid: "36061405"
   
 -   [sp_changedbowner &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changedbowner-transact-sql)  
   
- **Zum Kopieren einer Datenbank mithilfe von SQL Server Management Objects (SMO)**  
+ **Kopieren eine Datenbank mithilfe von SQL Server Management Objects (SMO)**  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ReadFileList%2A>  
   

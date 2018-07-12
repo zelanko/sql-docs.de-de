@@ -1,13 +1,11 @@
 ---
-title: Fehler | Microsoft Docs
+title: Fehler | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,26 +16,26 @@ helpviewer_keywords:
 - OLE DB error handling
 ms.assetid: bd0612f4-96ef-4919-b0f9-b5447210fe93
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a3210cb1cd48a375e428cc6cf8a40e6f76f48b21
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ac616813b3437c57a8e071ea876874880874f039
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057176"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424669"
 ---
 # <a name="errors"></a>Fehler
   OLE/COM-Objekte melden Fehler durch den HRESULT-Rückgabecode von Objektelementfunktionen. Ein OLE/COM HRESULT ist eine Bitgepackte Struktur. OLE stellt Makros bereit, die Strukturmember dereferenzieren.  
   
- OLE/COM gibt die **IErrorInfo** Schnittstelle. Die Schnittstelle macht Methoden verfügbar, z. B. **GetDescription**. Dies ermöglicht es Clients, Fehlerdetails aus OLE/COM-Servern zu extrahieren. OLE DB erweitert **IErrorInfo** um die Rückgabe von mehreren fehlerinformationspaketen auf die Ausführung einer einzelmemberfunktion zu unterstützen.  
+ OLE/COM gibt die **IErrorInfo** Schnittstelle. Die Schnittstelle macht Methoden verfügbar, z. B. **GetDescription**. Dies ermöglicht es Clients, Fehlerdetails aus OLE/COM-Servern zu extrahieren. OLE DB erweitert **IErrorInfo** um die Rückgabe von mehreren fehlerinformationspaketen für die Ausführung einer einzelmemberfunktion zu unterstützen.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann mehrere Fehler zurückgeben. Eine Anwendung kann Serverfehler zu einem Zeitpunkt abrufen, durch den Aufruf [IMultipleResults:: GetResult](http://go.microsoft.com/fwlink/?LinkId=129630) mit ISQLErrorInfo und IErrorRecords kombiniert.  
   
- Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter stellt der OLE DB-Datensätze erweiterte **IErrorInfo**, die benutzerdefinierte `ISQLErrorInfo`, und die anbieterspezifische [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) Error-Objekt Schnittstellen.  
+ Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter stellt der OLE DB-Datensätze erweiterte **IErrorInfo**, die benutzerdefinierte `ISQLErrorInfo`, und die anbieterspezifische [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) -Fehlerobjekt. Schnittstellen.  
   
- Informationen zur Ablaufverfolgung von Fehlern finden Sie unter [Datenzugriffsablaufverfolgung](http://go.microsoft.com/fwlink/?LinkId=125805). Informationen zu Verbesserungen hinzugefügten fehlerablaufverfolgung [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], finden Sie unter [Zugriff auf Diagnoseinformationen im Protokoll für erweiterte Ereignisse](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
+ Informationen zur Ablaufverfolgung von Fehlern, finden Sie unter [Datenzugriffs-Ablaufverfolgung](http://go.microsoft.com/fwlink/?LinkId=125805). Informationen zu Verbesserungen hinzugefügten fehlerablaufverfolgung [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], finden Sie unter [den Zugriff auf Diagnoseinformationen im Protokoll für erweiterte Ereignisse](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   

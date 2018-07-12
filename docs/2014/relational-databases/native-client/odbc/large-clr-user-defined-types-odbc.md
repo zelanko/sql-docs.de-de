@@ -1,13 +1,11 @@
 ---
-title: Große benutzerdefinierte CLR-Typen (ODBC) | Microsoft Docs
+title: Große benutzerdefinierte CLR-Typen (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,20 +13,20 @@ helpviewer_keywords:
 - large user-defined types [ODBC]
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 98cb3dadf5b0009d4c1ce8cddb3a6cb21d1c4c2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e7e17bf897c91021a06ebb5605b072f27aa624d3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057177"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422359"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Große benutzerdefinierte CLR-Typen (ODBC)
   In diesem Abschnitt werden Änderungen an ODBC in SQL Server Native Client erläutert, durch die große benutzerdefinierte Common Language Runtime-Typen (CLR-UDTs) unterstützt werden.  
   
- Ein Beispiel, das ODBC-Unterstützung für große CLR-UDTs, finden Sie unter [Unterstützung für große UDTs](../../native-client-odbc-how-to/support-for-large-udts.md).  
+ Ein Beispiel, das dem ODBC-Unterstützung für große CLR-UDTs, finden Sie unter [Unterstützung für große UDTs](../../native-client-odbc-how-to/support-for-large-udts.md).  
   
  Weitere Informationen zur Unterstützung großer CLR-UDTs in SQL Server Native Client finden Sie unter [Large CLR User-Defined Typen](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
@@ -125,9 +123,9 @@ ms.locfileid: "36057177"
 |SS_UDT_SCHEMA_NAME|Der Name des Schemas, das den UDT enthält.|Der Name des Schemas, das den UDT enthält.|  
 |SS_UDT_ASSEMBLY_TYPE_NAME|Der vollqualifizierte Name des UDT.|Der vollqualifizierte Name des UDT.|  
   
- Die letzten drei Spalten sind treiberspezifische Spalten. Sie werden nach ODBC-definierten Spalten, jedoch vor dem vorhandenen treiberspezifischen Spalten des Resultsets von SQLColumns oder SQLProcedureColumns hinzugefügt.  
+ Die letzten drei Spalten sind treiberspezifische Spalten. Sie werden nach ODBC-definierten Spalten, aber vor der vorhandenen treiberspezifischen Spalten des Resultsets von SQLColumns oder SQLProcedureColumns hinzugefügt.  
   
- Für einzelne UDTs oder für den generischen Typ "Udt" werden keine Zeilen von ' SQLGetTypeInfo ', zurückgegeben.  
+ Keine Zeilen von ' SQLGetTypeInfo ', für einzelne UDTs oder für den generischen Typ "Udt" zurückgegeben.  
   
 ## <a name="bindings-and-conversions"></a>Bindungen und Konvertierungen  
  Die unterstützten Konvertierungen von SQL- zu C-Datentypen sind wie folgt:  
@@ -182,7 +180,7 @@ ms.locfileid: "36057177"
  Die für UDTs zurückgegebenen Werte sind im Abschnitt "Deskriptorfelder für Ergebnisse" oben erläutert.  
   
 ### <a name="sqlcolumns"></a>SQLColumns  
- Für UDTs zurückgegebenen Werte werden wie im Abschnitt "Spalte Metadaten Zurückgeben von SQLColumns und SQLProcedureColumns (Katalogmetadaten)" weiter oben in diesem Thema beschrieben.  
+ Für UDTs zurückgegebenen Werte sind wie im Abschnitt "Spalte Metadaten Zurückgeben von SQLColumns und SQLProcedureColumns (Katalogmetadaten)" weiter oben in diesem Thema beschrieben.  
   
 ### <a name="sqldescribecol"></a>SQLDescribeCol  
  Für UDTs werden folgende Werte zurückgegeben:  
@@ -230,7 +228,7 @@ ms.locfileid: "36057177"
  UDT-Parameterwerte werden von C- in SQL-Datentypen konvertiert, wie im Abschnitt "Bindungen und Konvertierungen" oben erläutert.  
   
 ### <a name="sqlsetdescfield"></a>SQLSetDescField  
- Die neuen Datentypen verfügbaren Deskriptorfeld werden in der "Deskriptorfelder für Parameter" und den Abschnitten "Deskriptorfelder für Ergebnisse" oben in diesem Thema beschrieben.  
+ Deskriptorfeld zur Verfügung, mit den neuen Typen werden in der "Deskriptorfelder für Parameter" und den Abschnitten "Deskriptorfelder für Ergebnisse" oben in diesem Thema beschrieben.  
   
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  Die zulässigen Werte für UDTs lauten wie folgt:  

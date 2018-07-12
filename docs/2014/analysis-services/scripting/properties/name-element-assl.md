@@ -1,5 +1,5 @@
 ---
-title: Name-Element (ASSL) | Microsoft Docs
+title: Benennen Sie-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Name element
 ms.assetid: caf2af86-5f9c-4e14-8168-f3a79248b4fe
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cb2185d9d2a87a2abc3ebb96ad8186fe288e6190
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7dde1de33d7ff2219bf2f73696c8a83236b46eb6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061248"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211590"
 ---
 # <a name="name-element-assl"></a>Name-Element (ASSL)
   Enthält den Namen des übergeordneten Elements.  
@@ -58,7 +58,7 @@ ms.locfileid: "36061248"
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|[Action](../objects/action-element-assl.md), [Aggregation](../objects/aggregation-element-assl.md), [AggregationDesign](../objects/aggregationdesign-element-assl.md), [AlgorithmParameter](../objects/algorithmparameter-element-assl.md), [Annotation](../objects/annotation-element-assl.md), [Assembly](../objects/assembly-element-assl.md), [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md), [Cube](../objects/cube-element-assl.md), [CubeDimension](../data-type/dimension-data-type-assl.md), [CubeHierarchy](../data-type/hierarchy-data-type-assl.md), [Database](../objects/database-element-assl.md), [DataSource](../objects/datasource-element-assl.md), [DataSourceView](../objects/datasourceview-element-assl.md), [Dimension](../objects/dimension-element-assl.md), [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md), [Group](../objects/group-element-assl.md), [Hierarchy](../objects/hierarchy-element-assl.md), [Kpi](../objects/kpi-element-assl.md), [Level](../objects/level-element-assl.md), [MdxScript](../objects/mdxscript-element-assl.md), [Measure](../objects/measure-element-assl.md), [MeasureGroup](../objects/measuregroup-element-assl.md), [MemberProperty](../objects/attributerelationship-element-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md), [MiningStructure](../objects/miningstructure-element-assl.md), [MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md), [Partition](../objects/partition-element-assl.md), [Permission](../data-type/permission-data-type-assl.md), [Perspective](../objects/perspective-element-assl.md), [PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md), [ReportFormatParameter](../objects/reportformatparameter-element-asl.md), [ReportParameter](../objects/reportparameter-element-assl.md), [Role](../objects/role-element-assl.md), [Server](../objects/server-element-assl.md), [ServerProperty](../objects/serverproperty-element-assl.md), [Trace](../objects/trace-element-assl.md)|  
+|Übergeordnete Elemente|[Aktion](../objects/action-element-assl.md), [Aggregation](../objects/aggregation-element-assl.md), [AggregationDesign](../objects/aggregationdesign-element-assl.md), [AlgorithmParameter](../objects/algorithmparameter-element-assl.md), [Anmerkung](../objects/annotation-element-assl.md), [ Assembly](../objects/assembly-element-assl.md), [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md), [Cube](../objects/cube-element-assl.md), [CubeDimension](../data-type/dimension-data-type-assl.md), [CubeHierarchy](../data-type/hierarchy-data-type-assl.md), [Datenbank](../objects/database-element-assl.md), [DataSource](../objects/datasource-element-assl.md), [DataSourceView](../objects/datasourceview-element-assl.md), [Dimension](../objects/dimension-element-assl.md), [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md), [Gruppe](../objects/group-element-assl.md), [Hierarchie](../objects/hierarchy-element-assl.md), [Kpi](../objects/kpi-element-assl.md), [Ebene](../objects/level-element-assl.md), [MdxScript](../objects/mdxscript-element-assl.md), [ Measure](../objects/measure-element-assl.md), [MeasureGroup](../objects/measuregroup-element-assl.md), [MemberProperty](../objects/attributerelationship-element-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md), [ MiningStructure](../objects/miningstructure-element-assl.md), [MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md), [Partition](../objects/partition-element-assl.md), [Berechtigung](../data-type/permission-data-type-assl.md), [ Perspektive](../objects/perspective-element-assl.md), [PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md), [ReportFormatParameter](../objects/reportformatparameter-element-asl.md), [ReportParameter](../objects/reportparameter-element-assl.md), [ Rolle](../objects/role-element-assl.md), [Server](../objects/server-element-assl.md), [ServerProperty](../objects/serverproperty-element-assl.md), [Ablaufverfolgung](../objects/trace-element-assl.md)|  
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -68,11 +68,11 @@ ms.locfileid: "36061248"
   
 -   Der Wert sollte keine Steuerzeichen enthalten. Es wird dringend von Steuerzeichen in einem Namen abgeraten, da dies in einigen Fällen zu XML-Überprüfungsfehlern führen kann.  
   
-     Für Objekte erstellt, mit der `GetNewName` Methode in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], AMO sucht und entfernt diese anschließend alle Steuerzeichen sowie führende oder nachfolgende Leerzeichen im Namen. Für diesen Grund mit `GetNewName` ist die empfohlene Vorgehensweise zum Festlegen von Objektnamen.  
+     Für Objekte erstellt, mit der `GetNewName` -Methode in der [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], AMO überprüft, und entfernt diese anschließend alle Steuerzeichen sowie führende oder nachfolgende Leerzeichen im Namen. Für diese Grund mit `GetNewName` ist die empfohlene Vorgehensweise zum Festlegen von Objektnamen.  
   
      Beim direkten Festlegen der `Name`-Eigenschaft werden jedoch nicht die gleichen Überprüfungen ausgeführt, was zu XML-Überprüfungsfehlern führen kann. Ob ein Fehler tatsächlich auftritt, hängt davon ab, welches Steuerzeichen im Namen vorkommt.  
   
-     Obwohl in Objektnamen grundsätzlich auf Steuerzeichen verzichtet werden sollte, wird deren Verwendung von Analysis Services nicht ausdrücklich untersagt. Von früheren Analysis Services-Versionen wurden manchmal Steuerzeichen in Objektnamen akzeptiert. Aus diesem Grund [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] Steuerzeichen in Objektnamen, um zu vermeiden, dass ältere Lösungen werden ignoriert.  
+     Obwohl in Objektnamen grundsätzlich auf Steuerzeichen verzichtet werden sollte, wird deren Verwendung von Analysis Services nicht ausdrücklich untersagt. Von früheren Analysis Services-Versionen wurden manchmal Steuerzeichen in Objektnamen akzeptiert. Aus diesem Grund [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] Steuerzeichen in Objektnamen, um zu vermeiden, dass ältere Lösungen ignoriert.  
   
 -   Die folgenden reservierten Werte können nicht verwendet werden:  
   
@@ -90,14 +90,14 @@ ms.locfileid: "36061248"
   
     -   PRN  
   
- Die folgende Tabelle enthält zusätzliche Zeichen, die im Wert verwendet werden können ein `Name` -Element, abhängig vom übergeordneten Element.  
+ Die folgende Tabelle führt zusätzliche Zeichen, die im Wert verwendet werden, können keinem `Name` -Element, abhängig vom übergeordneten Element.  
   
 |Übergeordnetes Element|Ungültige Zeichen|  
 |--------------------|------------------------|  
-|[Server](../objects/server-element-assl.md)|Der Name muss den Regeln für [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Computernamen. IP-Adressen sind nicht gültig.|  
+|[Server](../objects/server-element-assl.md)|Der Name muss die Regeln für [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Computernamen. IP-Adressen sind nicht gültig.|  
 |[DataSource](../objects/datasource-element-assl.md)|:/\\*&#124;?" () []{}<>|  
-|[Ebene](../objects/level-element-assl.md), [-Attribut-Element](../objects/attribute-element-assl.md)|.,;' `:/\\*&#124;?" & % $! += []{}<>|  
-|Alle anderen übergeordneten Elemente|.,;' `:/\\*&#124;?" & % $!:: Operator += () []{}<>|  
+|[Ebene](../objects/level-element-assl.md), [Attribut-Element](../objects/attribute-element-assl.md)|.,;' `:/\\*&#124;?" & % $! += []{}<>|  
+|Alle anderen übergeordneten Elemente|.,;' `:/\\*&#124;?" & % $! += () []{}<>|  
   
 ## <a name="see-also"></a>Siehe auch  
  [ID-Element &#40;ASSL&#41;](id-element-assl.md)   

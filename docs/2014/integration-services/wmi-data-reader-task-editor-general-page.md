@@ -1,5 +1,5 @@
 ---
-title: WMI Data Reader Task-Editor (Seite Allgemein) | Microsoft Docs
+title: Editor für die WMI-Datenleser-Task (Seite Allgemein) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmidatareadertask.general.f1
 helpviewer_keywords:
 - WMI Data Reader Task Editor
 ms.assetid: 1ee4fd97-defc-4a63-adfe-5f2df548e62a
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 393a0c0d919856734799b41c6e08b5e8c66ffb51
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 70d3e2aa852acd34d28c2f2501d17117c6cf8640
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148394"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154571"
 ---
 # <a name="wmi-data-reader-task-editor-general-page"></a>Editor für den Task 'WMI-Datenleser' (Seite Allgemein)
   Auf der Seite **Allgemein** des Dialogfelds **Editor für den Task 'WMI-Datenleser'** können Sie einen Namen und eine Beschreibung für den Task 'WMI-Datenleser' angeben.  
@@ -42,7 +42,7 @@ ms.locfileid: "36148394"
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Task-Editor für WMI-Datenleser &#40;WMI-Optionsseite&#41;](../../2014/integration-services/wmi-data-reader-task-editor-wmi-options-page.md)   
+ [Task-Editor für WMI-Datenleser &#40;WMI, Seite "Optionen"&#41;](../../2014/integration-services/wmi-data-reader-task-editor-wmi-options-page.md)   
  [Seite Ausdrücke](expressions/expressions-page.md)   
  [WMI-Ereignisüberwachung (Task)](control-flow/wmi-event-watcher-task.md)  
   

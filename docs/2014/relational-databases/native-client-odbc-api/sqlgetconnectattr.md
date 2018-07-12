@@ -1,13 +1,11 @@
 ---
-title: SQLGetConnectAttr | Microsoft Docs
+title: SQLGetConnectAttr | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,18 +14,18 @@ helpviewer_keywords:
 - SQLGetConnectAttr function
 ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
 caps.latest.revision: 60
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7db4e37d5fa06373bdb60ea9c2288ff7808ec70d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: b31b14603777a98a623dbd80144d400a069a2136
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057184"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415669"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
-  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber definiert treiberspezifische Verbindungsattribute. Einige der Attribute stehen `SQLGetConnectAttr`, und die Funktion wird verwendet, um ihren aktuellen Einstellungen zu melden. Die Werte, die für diese Attribute erst garantiert sind, nachdem eine Verbindung hergestellt wurde, oder das Attribut wurde festgelegt mit gemeldet [SQLSetConnectAttr](sqlsetconnectattr.md).  
+  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber definiert treiberspezifische Verbindungsattribute. Einige der Attribute stehen `SQLGetConnectAttr`, und die Funktion wird verwendet, um ihre aktuellen Einstellungen zu melden. Die Werte gemeldete für diese Attribute erst garantiert sind, nachdem eine Verbindung hergestellt wurde, oder das Attribut wurde festgelegt mit [SQLSetConnectAttr](sqlsetconnectattr.md).  
   
  In diesem Thema sind die schreibgeschützten Attribute aufgeführt. Weitere Informationen zu den anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber spezifische Verbindungsattribute, finden Sie unter [SQLSetConnectAttr](sqlsetconnectattr.md).  
   
@@ -51,7 +49,7 @@ ms.locfileid: "36057184"
   
 -   Diagnoseinformationen in den Datenzugriff-Ablaufverfolgungsprotokollen, wenn aktiviert.  
   
- Weitere Informationen finden Sie unter [Zugriff auf Diagnoseinformationen im Protokoll für erweiterte Ereignisse](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
+ Weitere Informationen finden Sie unter [den Zugriff auf Diagnoseinformationen im Protokoll für erweiterte Ereignisse](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
 |value|Description|  
 |-----------|-----------------|  
@@ -70,7 +68,7 @@ ms.locfileid: "36057184"
  Das SQL_COPT_SS_PERF_QUERY-Attribut gibt TRUE zurück, wenn die Protokollierung von Abfragen mit langer Ausführungszeit aktiviert ist. Die Anforderung gibt FALSE zurück, wenn die Abfrageprotokollierung nicht aktiv ist.  
   
 ## <a name="sqlcoptssuserdata"></a>SQL_COPT_SS_USER_DATA  
- Das SQL_COPT_SS_USER_DATA-Attribut ruft den Benutzerdatenzeiger ab. Benutzerdaten im clienteigenen Arbeitsspeicher gespeichert und pro Verbindung aufgezeichnet. Wenn der Benutzerdatenzeiger nicht festgelegt wurde, wird SQL_UD_NOTSET, ein NULL-Zeiger, zurückgegeben.  
+ Das SQL_COPT_SS_USER_DATA-Attribut ruft den Benutzerdatenzeiger ab. Benutzerdaten werden im clienteigenen Arbeitsspeicher gespeichert und pro Verbindung aufgezeichnet. Wenn der Benutzerdatenzeiger nicht festgelegt wurde, wird SQL_UD_NOTSET, ein NULL-Zeiger, zurückgegeben.  
   
 |value|Description|  
 |-----------|-----------------|  
@@ -80,7 +78,7 @@ ms.locfileid: "36057184"
 ## <a name="sqlgetconnectattr-support-for-service-principal-names-spns"></a>SQLGetConnectAttr-Unterstützung für Dienstprinzipalnamen (SPNs)  
  SQLGetConnectAttr kann verwendet werden, um den Wert der neuen Verbindungsattribute SQL_COPT_SS_SERVER_SPN, SQL_COPT_SS_FAILOVER_PARTNER_SPN, SQL_COPT_SS_MUTUALLY_AUTHENTICATED und SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD abzufragen. (SQLGetConnectOption kann auch verwendet werden, diese Werte abgefragt wird.)  
   
- SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD ist nur verfügbar für Verbindungen, die die Windows-Authentifizierung verwenden.  
+ SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD ist nur verfügbar, für die Verbindungen, die die Windows-Authentifizierung verwenden.  
   
  Wenn SQL_COPT_SS_SERVER_SPN oder SQL_COPT_SS_FAILOVER_PARTNER nicht festgelegt wurde, wird der Standardwert (eine leere Zeichenfolge) zurückgegeben.  
   

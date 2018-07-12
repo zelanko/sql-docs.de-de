@@ -1,5 +1,5 @@
 ---
-title: Aggregation-Element (ASSL) | Microsoft Docs
+title: Aggregation-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Aggregation element
 ms.assetid: f37af388-b2b3-4234-a1d6-936ee9b7f2ae
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 59f33b45653f614702b1472e57fe4464cf172b73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 51e28a8435b2891cf623ea851824809606d83620
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147764"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157191"
 ---
 # <a name="aggregation-element-assl"></a>Aggregation-Element (ASSL)
-  Definiert eine einzelne Aggregation für ein [Partition](partition-element-assl.md) Element.  
+  Definiert eine einzelne Aggregation für eine [Partition](partition-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36147764"
 |Untergeordnete Elemente|[Anmerkungen](../collections/annotations-element-assl.md), [Beschreibung](../properties/description-element-assl.md), [Dimensionen](../collections/dimensions-element-assl.md), [ID](../properties/id-element-assl.md), [Name](../properties/name-element-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.Aggregation>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.Aggregation>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Partitions-Element &#40;ASSL&#41;](partition-element-assl.md)   

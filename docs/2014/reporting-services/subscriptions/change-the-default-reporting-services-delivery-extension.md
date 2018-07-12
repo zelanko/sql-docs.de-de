@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], default delivery extension
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
 caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b2fa8916d222694c26e4a3bef50cb447eeafbeec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1b232859f61efbfb6de2a0c27fb34af8cb99252c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061307"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183857"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Ändern der Standardübermittlungserweiterung für Reporting Services
   Sie können [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Konfigurationseinstellungen ändern, um die Standardübermittlungserweiterung in der Liste **Übermittelt von** einer Abonnementdefinitionsseite zu ändern. Sie können die Konfiguration z. B. so ändern, dass beim Erstellen eines neuen Abonnements durch den Benutzer standardmäßig eine Dateifreigabeübermittlung statt einer E-Mail-Übermittlung ausgewählt wird. Sie können auch die Reihenfolge der in der Benutzeroberfläche aufgeführten Übermittlungserweiterungen ändern.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] | SharePoint-Modus von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]   
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enthält die e-Mail- und Windows-Dateifreigabe-Übermittlung sind Erweiterungen. Ihr Berichtsserver verfügt möglicherweise über zusätzliche Übermittlungserweiterungen, wenn Sie benutzerdefinierte Erweiterungen oder Drittanbietererweiterungen zur Unterstützung der benutzerdefinierten Übermittlung bereitgestellt haben. Die Verfügbarkeit einer Übermittlungserweiterung hängt davon ab, ob sie auf einem Berichtsserver bereitgestellt wurde.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enthält e-Mail- und Windows-Dateifreigabe-übermittlungserweiterungen sind Erweiterungen. Ihr Berichtsserver verfügt möglicherweise über zusätzliche Übermittlungserweiterungen, wenn Sie benutzerdefinierte Erweiterungen oder Drittanbietererweiterungen zur Unterstützung der benutzerdefinierten Übermittlung bereitgestellt haben. Die Verfügbarkeit einer Übermittlungserweiterung hängt davon ab, ob sie auf einem Berichtsserver bereitgestellt wurde.  
   
 ## <a name="default-native-mode-report-server-configuration"></a>Standardkonfiguration für einen Berichtsserver im einheitlichen Modus  
  Die Reihenfolge der Übermittlungserweiterungen im Berichts-Manager in der Liste **Übermittelt von** basiert auf der Reihenfolge der Übermittlungserweiterungseinträge in der Datei **RSReportServer.config** . Im folgenden Bild wird E-Mail zuerst in der Liste angezeigt und ist standardmäßig ausgewählt.  
@@ -102,13 +102,13 @@ ms.locfileid: "36061307"
   
 1.  Öffnen Sie die **SharePoint-Verwaltungsshell**.  
   
-2.  Sie können diesen Schritt überspringen, wenn Sie bereits den Namen des wissen Ihre [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -dienstanwendung. Verwenden Sie das folgende PowerShell zur Liste der [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -dienstanwendungen in der SharePoint-Farm.  
+2.  Sie können diesen Schritt überspringen, wenn Sie bereits den Namen des kennen Ihre [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -dienstanwendung. Verwenden Sie den folgenden PowerShell zur Liste der [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -dienstanwendungen in der SharePoint-Farm.  
   
     ```  
     get-sprsserviceapplication | format-list *  
     ```  
   
-3.  Führen Sie den folgenden PowerShell zum Überprüfen der aktuellen standardübermittlungserweiterung für die [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -dienstanwendung "Ssrsapp".  
+3.  Führen Sie den folgenden PowerShell zum Überprüfen der aktuellen standardübermittlungserweiterung für den [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -dienstanwendung "Ssrsapp".  
   
     ```  
     $app=get-sprsserviceapplication | where {$_.name -like "ssrsapp*"};Get-SPRSExtension -identity $app | where{$_.ServerDirectivesXML -like "<DefaultDelivery*"} | format-list *  
@@ -118,7 +118,7 @@ ms.locfileid: "36061307"
 ## <a name="see-also"></a>Siehe auch  
  [RSReportServer-Konfigurationsdatei](../report-server/rsreportserver-config-configuration-file.md)   
  [RSReportServer-Konfigurationsdatei](../report-server/rsreportserver-config-configuration-file.md)   
- [File Share Delivery in Reporting Services](file-share-delivery-in-reporting-services.md)   
+ [Verwenden der Dateifreigabeübermittlung in Reporting Services](file-share-delivery-in-reporting-services.md)   
  [E-Mail Delivery in Reporting Services (E-Mail-Übermittlung in Reporting Services)](e-mail-delivery-in-reporting-services.md)   
  [Konfigurieren eines Berichtsservers für die e-Mail-Übermittlung &#40;SSRS-Konfigurations-Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
   

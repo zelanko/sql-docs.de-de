@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sparse columns, column sets
 - column sets
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ec3a9c752a3ba03f61b21e6280afe47361435784
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6c6807bbb743b39177e282f965916e5d5d78e4bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060687"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258216"
 ---
 # <a name="use-column-sets"></a>Verwenden von Spaltensätzen
   Für Tabellen, die Sparsespalten aufweisen, können Sie einen Spaltensatz festlegen, der alle Sparsespalten in der Tabelle zurückgibt. Bei einem Spaltensatz handelt es sich um eine nicht typisierte XML-Darstellung, die alle Sparsespalten einer Tabelle in einer strukturierten Ausgabe kombiniert. Wie auch berechnete Spalten werden Spaltensätze nicht physisch in der Tabelle gespeichert. Der Unterschied zwischen einem Spaltensatz und einer berechneten Spalte besteht darin, dass der Spaltensatz direkt aktualisiert werden kann.  
@@ -97,7 +97,7 @@ ms.locfileid: "36060687"
 ## <a name="inserting-or-modifying-data-in-a-column-set"></a>Einfügen und Ändern von Daten in einem Spaltensatz  
  Zur Änderung von Daten in einem Spaltensatz verwenden Sie die Namen der einzelnen Spalten. Sie können auch auf den Namen des Spaltensatzes verweisen und die Werte des Spaltensatzes angeben, indem Sie das XML-Format des Spaltensatzes verwenden. Spalten mit geringer Dichte können in der XML-Spalte in beliebiger Reihenfolge angezeigt werden.  
   
- Wenn Sie Spalten mit geringer Dichte einfügen bzw. mithilfe der XML-Spaltensatz aktualisiert, werden die Werte, die in der zugrunde liegenden Spalten mit geringer Dichte eingefügt werden implizit aus konvertiert die `xml` -Datentyp. Bei numerischen Spalten werden leere Werte im XML-Format in leere Zeichenfolgen konvertiert. Hierdurch wird der Wert 0 in die numerische Spalte eingefügt, wie im folgenden Beispiel gezeigt.  
+ Wenn Spalten mit geringer Dichte Werte eingefügt oder aktualisiert werden, mit dem XML-Spaltensatz, werden die Werte, die die zugrunde liegenden sparsespalten eingefügt werden, implizit aus konvertiert die `xml` -Datentyp. Bei numerischen Spalten werden leere Werte im XML-Format in leere Zeichenfolgen konvertiert. Hierdurch wird der Wert 0 in die numerische Spalte eingefügt, wie im folgenden Beispiel gezeigt.  
   
 ```  
 CREATE TABLE t (i int SPARSE, cs xml column_set FOR ALL_SPARSE_COLUMNS);  

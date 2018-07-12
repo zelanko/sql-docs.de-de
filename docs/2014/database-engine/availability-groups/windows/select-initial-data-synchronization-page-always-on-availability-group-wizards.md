@@ -1,29 +1,28 @@
 ---
-title: Wählen Sie die anfängliche Datensynchonisierung (AlwaysOn-Verfügbarkeitsgruppen-Assistenten) | Microsoft Docs
+title: Wählen Sie die Seite "anfängliche Datensynchronisierung" (AlwaysOn-Verfügbarkeitsgruppen-Assistenten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.addreplicawizard.selectinitialdatasync.f1
 - sql12.swb.adddatabasewizard.selectinitialdatasync.f1
 - sql12.swb.newagwizard.selectinitialdatasync.f1
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 caps.latest.revision: 36
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 2c949bd5ec421ac41d602b28af2d087153b0358c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f9a3f04a5d6ea060cd905d2bf81d628c27d99eb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061235"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211770"
 ---
 # <a name="select-initial-data-synchronization-page-alwayson-availability-group-wizards"></a>Seite 'Anfängliche Datensynchronisierung auswählen' (AlwaysOn-Verfügbarkeitsgruppen-Assistenten)
   Verwenden Sie die AlwaysOn-Seite **Anfängliche Datensynchronisierung auswählen** , um die Einstellung für die anfängliche Datensynchronisierung neuer sekundärer Datenbanken anzugeben. Diese Seite wird von drei Assistenten gemeinsam genutzt – dem [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], dem [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]und dem [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)].  

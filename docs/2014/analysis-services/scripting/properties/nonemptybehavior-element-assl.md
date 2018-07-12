@@ -1,5 +1,5 @@
 ---
-title: NonEmptyBehavior-Element (ASSL) | Microsoft Docs
+title: NonEmptyBehavior-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - NonEmptyBehavior element
 ms.assetid: b4c78af4-b049-4189-a35b-206e3938d1db
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d328b41ee8c40497019fe918d40925b3ce2a1436
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eda18e3ed67884e964439e80e0ae0103f522e116
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147759"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183297"
 ---
 # <a name="nonemptybehavior-element-assl"></a>NonEmptyBehavior-Element (ASSL)
   Bestimmt das Verhalten für nicht leere mit dem übergeordneten Element von der [CalculationProperty](../objects/calculationproperty-element-assl.md) Element.  
@@ -58,13 +58,13 @@ ms.locfileid: "36147759"
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnetes Element|[CalculationProperty](../objects/calculationproperty-element-assl.md)|  
+|Übergeordnetes Element|[Calculationproperty-Objekt](../objects/calculationproperty-element-assl.md)|  
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
  Die `NonEmptyBehavior` Eigenschaft gilt für `CalculationProperty` Elemente mit einem [CalculationType](calculationtype-element-assl.md) festgelegt *Member*.  
   
- Das Element, das das übergeordnete Element des entspricht `NonEmptyBehavior` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.CalculationProperty>.  
+ Das Element, das dem übergeordneten entspricht `NonEmptyBehavior` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.CalculationProperty>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CalculationProperties-Element &#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

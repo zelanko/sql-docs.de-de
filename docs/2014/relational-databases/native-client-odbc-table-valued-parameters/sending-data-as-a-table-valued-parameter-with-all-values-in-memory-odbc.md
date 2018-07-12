@@ -1,31 +1,29 @@
 ---
-title: Senden von Daten als Tabellenwertparameter mit allen Werten im Arbeitsspeicher (ODBC) | Microsoft Docs
+title: Senden von Daten als Tabellenwertparameter mit allen Werten im Arbeitsspeicher (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), sending data to a stored procedure with all values in memory
 ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1d60ed42fd1c568c9efe9fc693ce408929525608
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f2e154cbbba13ac1eb017a90fbb6abd7b0532b50
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057559"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422239"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>Senden von Daten als Tabellenwertparameter mit allen Werten im Arbeitsspeicher (ODBC)
-  In diesem Thema wird beschrieben, wie Daten als Tabellenwertparameter an eine gespeicherte Prozedur gesendet werden, wenn alle Werte im Speicher abgelegt sind. Ein weiteres Beispiel veranschaulicht Tabellenwertparameter finden Sie unter [Tabellenwertparametern &#40;ODBC&#41;](table-valued-parameters-odbc.md).  
+  In diesem Thema wird beschrieben, wie Daten als Tabellenwertparameter an eine gespeicherte Prozedur gesendet werden, wenn alle Werte im Speicher abgelegt sind. Ein weiteres Beispiel, die Tabellenwertparameter veranschaulicht werden, finden Sie unter [Tabellenwertparametern &#40;ODBC&#41;](table-valued-parameters-odbc.md).  
   
 ## <a name="prerequisite"></a>Voraussetzung  
  In dieser Prozedur wird davon ausgegangen, dass der folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Befehl auf dem Server ausgeführt wurde:  
@@ -91,7 +89,7 @@ from @Items
        sizeof(OrdDate), &cbOrdDate);  
     ```  
   
-3.  In der zweiten Phase der Parameterbindung erfolgt das Binden der Spalten für den Tabellenwertparameter. Der Parameterfokus wird zunächst auf die Ordnungszahl des Tabellenwertparameters festgelegt. Dann werden Spalten des Tabellenwerts mit SQLBindParameter auf die gleiche Weise, wie sie wäre, wären sie Parameter der gespeicherten Prozedur, jedoch mit Spaltenordnungszahlen für ParameterNumber gebunden. Wenn es weitere Tabellenwertparameter gäbe, würden wir den Fokus abwechselnd auf jeden einzelnen festlegen und die jeweiligen Spalten binden. Schließlich wird der Parameterfokus auf 0 (null) zurückgesetzt.  
+3.  In der zweiten Phase der Parameterbindung erfolgt das Binden der Spalten für den Tabellenwertparameter. Der Parameterfokus wird zunächst auf die Ordnungszahl des Tabellenwertparameters festgelegt. Klicken Sie dann sind die Spalten des Tabellenwerts mit SQLBindParameter auf die gleiche Weise, wie dies der Fall wäre, wären sie Parameter der gespeicherten Prozedur, jedoch mit Spaltenordnungszahlen für ParameterNumber gebunden. Wenn es weitere Tabellenwertparameter gäbe, würden wir den Fokus abwechselnd auf jeden einzelnen festlegen und die jeweiligen Spalten binden. Schließlich wird der Parameterfokus auf 0 (null) zurückgesetzt.  
   
     ```  
     // Bind columns for the table-valued parameter (param 2).  

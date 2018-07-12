@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 21879 (Database Engine error)
 ms.assetid: fcfab735-05ca-423a-89f1-fdee7e2ed8c0
 caps.latest.revision: 8
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 067373cb329185e42b6fee2b506570fccfcd4f90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9cf6402984022284ca75505a924a3a0f270fc5e6
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057217"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413819"
 ---
 # <a name="mssqlserver21879"></a>MSSQLSERVER_21879
     
@@ -58,8 +57,8 @@ ms.locfileid: "36057217"
   
 -   Konfigurieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Kerberos-Authentifizierung Weitere Informationen finden Sie unter **Kerberos-Authentifizierung und SQL Server** in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
--   Verwenden Sie `sp_changedistpublisher` zum Ändern des Sicherheitsmodus, der dem ursprünglichen Verleger in MSdistpublishers zugeordnet, als auch einen Benutzernamen und das Kennwort für die Verbindung angeben.  
+-   Verwenden Sie `sp_changedistpublisher` , die dem ursprünglichen Verleger in MSdistpublishers zugeordneten Sicherheitsmodus zu ändern, sowie einen Benutzernamen und das Kennwort für die Verbindung angeben.  
   
--   Geben Sie den Befehlszeilenparameter *BypassPublisherValidation* für den Merge-Agent-Befehlszeile Überprüfung umgehen beim `sp_get_redirected_publisher` auf dem Verteiler aufgerufen wird.  
+-   Geben Sie den Befehlszeilenparameter *BypassPublisherValidation* auf der Merge-Agent-Befehlszeile umgeht beim `sp_get_redirected_publisher` auf dem Verteiler aufgerufen wird.  
   
   

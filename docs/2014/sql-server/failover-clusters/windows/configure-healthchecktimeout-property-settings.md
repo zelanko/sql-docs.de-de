@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 caps.latest.revision: 30
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 6cd514ae1b9581a52e7dfdb382bc8fded757fb47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d975ed562e5343ceeb921358160309c20ff0bb4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059291"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260076"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>Konfigurieren der HealthCheckTimeout-Eigenschafteneinstellungen
   Die HealthCheckTimeout-Einstellung wird verwendet, um die Zeitdauer in Millisekunden angegeben, die die SQL Server-Ressourcen-DLL für die zurückgegebenen Informationen warten soll die [Sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) gespeicherte Prozedur, bevor gemeldet wird, die AlwaysOn-Failoverclusterinstanz (FCI) nicht reagiert. Änderungen am Timeoutwert werden unmittelbar wirksam; ein Neustart der SQL Server-Ressource ist nicht erforderlich.  
@@ -46,7 +45,7 @@ ms.locfileid: "36059291"
   
 2.  Importieren Sie das `FailoverClusters`-Modul, um die Cluster-Cmdlets zu aktivieren.  
   
-3.  Verwenden der `Get-ClusterResource` -Cmdlet zum Ermitteln der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Ressource, verwenden Sie dann `Set-ClusterParameter` Cmdlet, um die **HealthCheckTimeout** -Eigenschaft für die Failoverclusterinstanz.  
+3.  Verwenden der `Get-ClusterResource` -Cmdlet zum Ermitteln der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Ressource verwenden Sie dann `Set-ClusterParameter` Cmdlet, um die **HealthCheckTimeout** -Eigenschaft für die Failoverclusterinstanz.  
   
 > [!TIP]  
 >  Jedes Mal, wenn Sie ein neues PowerShell-Fenster öffnen, müssen Sie importieren die `FailoverClusters` Modul.  
