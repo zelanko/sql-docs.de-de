@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzylookuptrans.f1
 helpviewer_keywords:
@@ -33,13 +33,13 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 47afae752c8e9f82e5904346de21613509499673
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f73bbc60cfcc59cc53252239da9acc4ecf05919d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150851"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185187"
 ---
 # <a name="fuzzy-lookup-transformation"></a>Transformation für Fuzzysuche
   Die Transformation für Fuzzysuche führt Aufgaben zum Datencleanup durch, wie das Standardisieren von Daten, das Korrigieren von Daten und das Bereitstellen fehlender Werte.  
@@ -55,7 +55,7 @@ ms.locfileid: "36150851"
   
  Diese Transformation weist je eine Eingabe und eine Ausgabe auf.  
   
- Zur Fuzzyübereinstimmung können nur Eingabespalten mit den Datentypen `DT_WSTR` und `DT_STR` verwendet werden. Für genaue Übereinstimmungen kann jeder beliebige DTS-Datentyp mit Ausnahme von `DT_TEXT`, `DT_NTEXT` und `DT_IMAGE` verwendet werden. Weitere Informationen finden Sie unter [Integration Services Datentypen](../integration-services-data-types.md). Spalten, die einen Join zwischen der Eingabe- und der Verweistabelle aufweisen, müssen kompatible Datentypen enthalten. Angenommen, es ist zulässig, eine Spalte mit dem DTS verknüpft `DT_WSTR` Datentyp einer Spalte mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nvarchar` Datentyp jedoch ungültig, verknüpfen Sie eine Spalte mit der `DT_WSTR` Datentyp einer Spalte mit der `int` -Datentyp.  
+ Zur Fuzzyübereinstimmung können nur Eingabespalten mit den Datentypen `DT_WSTR` und `DT_STR` verwendet werden. Für genaue Übereinstimmungen kann jeder beliebige DTS-Datentyp mit Ausnahme von `DT_TEXT`, `DT_NTEXT` und `DT_IMAGE` verwendet werden. Weitere Informationen finden Sie unter [Integration Services Datentypen](../integration-services-data-types.md). Spalten, die einen Join zwischen der Eingabe- und der Verweistabelle aufweisen, müssen kompatible Datentypen enthalten. Es ist z. B. zulässig, Verknüpfen einer Spalte mit dem DTS `DT_WSTR` -Datentyp, um eine Spalte mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nvarchar` -Datentyp ist jedoch ungültig, verknüpfen eine Spalte mit der `DT_WSTR` -Datentyp, um eine Spalte mit der `int` -Datentyp.  
   
  Sie können diese Transformation anpassen, indem Sie den maximalen Umfang des Arbeitsspeichers, den Zeilenvergleichsalgorithmus sowie den Zwischenspeicher für Indizes und Verweistabellen, die von der Transformation verwendet werden, angeben.  
   
@@ -113,12 +113,12 @@ ms.locfileid: "36150851"
 >  Da die Option **Gespeicherten Index beibehalten** die CLR-Integration erfordert, kann diese Funktion nur verwendet werden, wenn Sie in einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eine Verweistabelle auswählen, für die die CLR-Integration aktiviert ist.  
   
 ## <a name="row-comparison"></a>Zeilenvergleich  
- Wenn Sie die Transformation für Fuzzysuche konfigurieren, können Sie den Vergleichsalgorithmus angeben, den die Transformation für die Suche von übereinstimmenden Datensätzen in der Verweistabelle verwendet. Wenn Sie Exhaustive-Eigenschaft auf `True`, vergleicht die Transformation jede Zeile in der Eingabe mit jeder Zeile in der Verweistabelle. Dieser Vergleichsalgorithmus kann zwar präzisere Ergebnisse produzieren, führt jedoch wahrscheinlich zu einer Einschränkung der Transformationsleistung, sofern die Anzahl der Zeilen in der Verweistabelle nicht gering ist. Wenn Exhaustive-Eigenschaft, um festgelegt wird `True`, die gesamte Verweistabelle in den Arbeitsspeicher geladen wird. Um Leistungsprobleme zu vermeiden, ist es ratsam, Exhaustive-Eigenschaft auf festgelegt `True` während der Paketentwicklung nur.  
+ Wenn Sie die Transformation für Fuzzysuche konfigurieren, können Sie den Vergleichsalgorithmus angeben, den die Transformation für die Suche von übereinstimmenden Datensätzen in der Verweistabelle verwendet. Wenn Sie die Exhaustive-Eigenschaft auf `True`, vergleicht die Transformation jede Zeile in der Eingabe mit jeder Zeile in der Verweistabelle enthalten sind. Dieser Vergleichsalgorithmus kann zwar präzisere Ergebnisse produzieren, führt jedoch wahrscheinlich zu einer Einschränkung der Transformationsleistung, sofern die Anzahl der Zeilen in der Verweistabelle nicht gering ist. Wenn die Exhaustive-Eigenschaft, um festgelegt ist `True`, die gesamte Verweistabelle in den Arbeitsspeicher geladen wird. Um Leistungsprobleme zu vermeiden, ist es ratsam, die Exhaustive-Eigenschaft auf festgelegt `True` nur während der Paketentwicklung.  
   
- Wenn Exhaustive-Eigenschaft, um festgelegt wird `False`, die Transformation für Fuzzysuche gibt nur Übereinstimmungen, die über mindestens ein indiziertes Token bzw. eine Teilzeichenfolge zurück (die Teilzeichenfolge wird aufgerufen, eine *Q-Gram*) mit dem Eingabedatensatz. Zum Maximieren der Sucheffizienz wird in jeder Zeile der Tabelle nur eine Teilmenge der Token in der invertierten Indexstruktur indiziert, die die Transformation für Fuzzysuche zum Suchen von übereinstimmenden Werten verwendet. Wenn das Eingabedataset klein ist, können Sie Exhaustive festlegen, um `True` zu vermeiden, fehlende Übereinstimmungen, die für die keine allgemeinen Token in der Indextabelle vorhanden sind.  
+ Wenn die Exhaustive-Eigenschaft, um festgelegt ist `False`, die Transformation für Fuzzysuche gibt nur Übereinstimmungen, die mindestens ein indiziertes Token bzw. eine Teilzeichenfolge zurück. (die Teilzeichenfolge wird aufgerufen, eine *Q-Gram*) enthält, die auch den Eingabedatensatz. Zum Maximieren der Sucheffizienz wird in jeder Zeile der Tabelle nur eine Teilmenge der Token in der invertierten Indexstruktur indiziert, die die Transformation für Fuzzysuche zum Suchen von übereinstimmenden Werten verwendet. Wenn das Eingabedataset klein ist, können Sie Exhaustive festlegen, um `True` um zu vermeiden, fehlende Übereinstimmungen, die für die keine allgemeinen Token in der Indextabelle vorhanden sind.  
   
 ## <a name="caching-of-indexes-and-reference-tables"></a>Zwischenspeichern von Indizes und Verweistabellen  
- Bei der Konfiguration der Transformation für Fuzzysuche können Sie angeben, ob die Transformation den Index und die Verweistabelle teilweise im Arbeitsspeicher zwischenspeichern soll, bevor die Transformation mit der Verarbeitung beginnt. Wenn Sie die Eigenschaft WarmCaches auf `True`, die Tabelle Index und die Verweistabelle in den Arbeitsspeicher geladen werden. Wenn die Eingabe lautet vielen Zeilen besteht, wird die Eigenschaft WarmCaches auf `True` kann die Leistung der Transformation verbessert. Wenn die Anzahl der Eingabezeilen gering ist, Festlegen der WarmCaches-Eigenschaft auf `False` können die Wiederverwendung eines großen Indexes schneller vornehmen.  
+ Bei der Konfiguration der Transformation für Fuzzysuche können Sie angeben, ob die Transformation den Index und die Verweistabelle teilweise im Arbeitsspeicher zwischenspeichern soll, bevor die Transformation mit der Verarbeitung beginnt. Wenn Sie die WarmCaches-Eigenschaft auf `True`, in der Tabelle Index und die Verweistabelle in den Arbeitsspeicher geladen. Die Eingabe hat bei vielen Zeilen besteht, Festlegen der WarmCaches-Eigenschaft auf `True` kann die Leistung der Transformation für das verbessern. Wenn die Anzahl der Eingabezeilen gering ist, Festlegen der WarmCaches-Eigenschaft, auf `False` können die Wiederverwendung eines großen Indexes schneller machen.  
   
 ## <a name="temporary-tables-and-indexes"></a>Temporäre Tabellen und Indizes  
  Zur Laufzeit erstellt die Transformation für Fuzzysuche temporäre Objekte, z. B. Tabellen und Indizes, in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank, mit der die Transformation eine Verbindung herstellt. Die Größe dieser temporären Tabellen und Indizes ist proportional zur Anzahl der Zeilen und Token in der Verweistabelle und zur Anzahl der Token, die von der Transformation für Fuzzysuche erstellt werden; deshalb können sie möglicherweise einen großen Teil des Speicherplatzes belegen. Die Transformation fragt auch diese temporären Tabellen ab. Deshalb sollten Sie in Erwägung ziehen, die Transformation für Fuzzysuche eine Verbindung mit einer Nichtproduktionsinstanz einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank herstellen zu lassen, insbesondere wenn auf dem Produktionsserver nur eingeschränkt Speicherplatz verfügbar ist.  

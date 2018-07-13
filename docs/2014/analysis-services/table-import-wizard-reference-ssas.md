@@ -1,5 +1,5 @@
 ---
-title: Import-Assistent-Referenz (SSAS) Tabelle | Microsoft Docs
+title: Verweis auf das Import-Assistenten (SSAS) Tabelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.tableimportwizard.f1
 ms.assetid: 2ac05e89-c002-4adc-86c7-438df70e9ed5
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cbd2caf29b53fe6bdb8313dc11645068ff65c64f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 348e92e73e4ca03e995fa17546691dc032f03ad3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060589"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267246"
 ---
 # <a name="table-import-wizard-reference-ssas"></a>Tabellenimport-Assistent (Referenz) (SSAS)
   Dieser Abschnitt enthält Hilfe zum **Tabellenimport-Assistenten**. Mit diesem Assistenten können Sie Daten aus einer Vielzahl von Datenquellen importieren. Um mit dem Modell-Designer auf den Assistenten zuzugreifen, klicken Sie im Menü **Modell** auf **Aus Datenquelle importieren**.  
@@ -32,43 +32,43 @@ ms.locfileid: "36060589"
   
 -   [Analysis Services-MDX-Abfrage-Designer &#40;SSAS&#41;](analysis-services-mdx-query-designer-ssas.md)  
   
--   [Auswählen der Methode zum Importieren der Daten &#40;SSAS&#41;](choose-how-to-import-the-data-ssas.md)  
+-   [Wählen Sie, wie zum Importieren der Daten &#40;SSAS&#41;](choose-how-to-import-the-data-ssas.md)  
   
--   [Herstellen einer Verbindung mit einem Bericht / Datenfeed &#40;SSAS&#41;](connect-to-a-report-or-data-feed-ssas.md)  
+-   [Verbinden mit einem Bericht oder Datenfeed &#40;SSAS&#41;](connect-to-a-report-or-data-feed-ssas.md)  
   
--   [Herstellen einer Verbindung mit einer Datenquelle &#40;SSAS&#41;](connect-to-a-data-source-ssas.md)  
+-   [Verbinden mit einer Datenquelle &#40;SSAS&#41;](connect-to-a-data-source-ssas.md)  
   
--   [Herstellen einer Verbindung mit einer DB2-Datenbank &#40;SSAS&#41;](connect-to-a-db2-database-ssas.md)  
+-   [Verbinden mit einer DB2-Datenbank &#40;SSAS&#41;](connect-to-a-db2-database-ssas.md)  
   
--   [Herstellen einer Verbindung mit einer Flatfile &#40;SSAS&#41;](connect-to-a-flat-file-ssas.md)  
+-   [Herstellen einer Verbindung eine Flatfile mit &#40;SSAS&#41;](connect-to-a-flat-file-ssas.md)  
   
--   [Herstellen einer Verbindung mit einer Microsoft Access-Datenbank &#40;SSAS&#41;](connect-to-a-microsoft-access-database-ssas.md)  
+-   [Verbinden mit einer Microsoft Access-Datenbank &#40;SSAS&#41;](connect-to-a-microsoft-access-database-ssas.md)  
   
--   [Herstellen einer Verbindung mit einer Microsoft Excel-Datei &#40;SSAS&#41;](connect-to-a-microsoft-excel-file-ssas.md)  
+-   [Herstellen einer Verbindung von Microsoft Excel-Datei mit &#40;SSAS&#41;](connect-to-a-microsoft-excel-file-ssas.md)  
   
--   [Herstellen einer Verbindung mit einer Azure SQL-Datenbank &#40;SSAS&#41;](connect-to-an-azure-sql-database-ssas.md)  
+-   [Herstellen einer Verbindung einer Azure SQL-Datenbank mit &#40;SSAS&#41;](connect-to-an-azure-sql-database-ssas.md)  
   
--   [Herstellen einer Verbindung mit einer Microsoft SQL Server-Datenbank &#40;SSAS&#41;](connect-to-a-microsoft-sql-server-database-ssas.md)  
+-   [Herstellen einer Verbindung einer Microsoft SQL Server-Datenbank mit &#40;SSAS&#41;](connect-to-a-microsoft-sql-server-database-ssas.md)  
   
--   [Herstellen einer Verbindung mit Microsoft SQL Server Parallel Datawarehouse &#40;SSAS&#41;](connect-to-a-microsoft-sql-server-parallel-data-warehouse-ssas.md)  
+-   [Verbinden mit einem Microsoft SQL Server Parallel Datawarehouse &#40;SSAS&#41;](connect-to-a-microsoft-sql-server-parallel-data-warehouse-ssas.md)  
   
--   [Herstellen einer Verbindung mit Microsoft SQL Server Analysis Services &#40;SSAS&#41;](connect-to-microsoft-sql-server-analysis-services-ssas.md)  
+-   [Verbinden von Microsoft SQL Server Analysis Services &#40;SSAS&#41;](connect-to-microsoft-sql-server-analysis-services-ssas.md)  
   
--   [Herstellen einer Verbindung mit einer Informix-Datenbank &#40;SSAS&#41;](connect-to-an-informix-database-ssas.md)  
+-   [Herstellen einer Verbindung einer Informix-Datenbank mit &#40;SSAS&#41;](connect-to-an-informix-database-ssas.md)  
   
--   [Herstellen einer Verbindung mit einer Oracle-Datenbank &#40;SSAS&#41;](connect-to-an-oracle-database-ssas.md)  
+-   [Verbinden mit einer Oracle-Datenbank &#40;SSAS&#41;](connect-to-an-oracle-database-ssas.md)  
   
--   [Herstellen einer Verbindung mit einer Sybase-Datenbank &#40;SSAS&#41;](connect-to-a-sybase-database-ssas.md)  
+-   [Verbinden mit einer Sybase-Datenbank &#40;SSAS&#41;](connect-to-a-sybase-database-ssas.md)  
   
--   [Herstellen einer Verbindung mit einer Teradata-Datenbank &#40;SSAS&#41;](connect-to-a-teradata-database-ssas.md)  
+-   [Verbinden mit einer Teradata-Datenbank &#40;SSAS&#41;](connect-to-a-teradata-database-ssas.md)  
   
--   [Datenquellen-Anmeldeinformationen &#40;SSAS&#41;](data-source-credentials-ssas.md)  
+-   [Anmeldeinformationen für die Datenquelle &#40;SSAS&#41;](data-source-credentials-ssas.md)  
   
 -   [Details &#40;SSAS&#41;](details-ssas.md)  
   
 -   [Filterdetails &#40;SSAS&#41;](filter-details-ssas.md)  
   
--   [Identitätswechselinformationen Dialogfeld &#40;Tabelle Import-Assistenten&#41;](impersonation-information-dialog-box-table-import-wizard.md)  
+-   [Das Dialogfeld Identitätswechsel &#40;Tabelle Tabellenimport-Assistenten&#41;](impersonation-information-dialog-box-table-import-wizard.md)  
   
 -   [Importieren von &#40;SSAS&#41;](importing-ssas.md)  
   

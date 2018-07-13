@@ -1,5 +1,5 @@
 ---
-title: Zielsucheszenario (Tabellenanalysetools für Excel) | Microsoft Docs
+title: Zielsucheszenario (Tabellenanalysetools für Excel) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
 - scenario analysis
 - goal seek scenario
 ms.assetid: efe50306-cf7c-46b3-9cc4-e7f0b6968b0c
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ecf3d569cdee1bf2e0ea58e8d582f6b2d3829fca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f17c85c7296daaead3b24b4d4002ad9c1be7221
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148719"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187297"
 ---
 # <a name="goal-seek-scenario-table-analysis-tools-for-excel"></a>Zielsucheszenario (Tabellenanalysetools für Excel)
-  ![Ziel-Schaltfläche "Seek" auf der Leiste "Tabellenanalysetools"](media/tat-goalseek.gif "Schaltfläche \"Zielsuche\" auf der Leiste \"Tabellenanalysetools\"")  
+  ![Ziel suchen-Schaltfläche in Tabellenanalysetools](media/tat-goalseek.gif "Zielsuche-Schaltfläche in Tabellenanalysetools")  
   
- Die **Zielsuche** Szenario Tool ist eine Ergänzung zu den [was geschieht, wenn](what-if-scenario-table-analysis-tools-for-excel.md) Szenario-Tool. Die **What-If** Tool informiert Sie die Auswirkungen einer Änderung während der **Zielsuche** Tool weist die zugrunde liegenden Faktoren, die geändert werden müssen, um ein gewünschtes Ergebnis zu erzielen.  
+ Die **Zielsuche** Szenario ist eine Ergänzung zu den [was geschieht, wenn](what-if-scenario-table-analysis-tools-for-excel.md) Szenario. Die **What-If** Tool informiert Sie die Auswirkungen einer Änderung, während die **Zielsuche** Tool informiert Sie die zugrunde liegenden Faktoren, die geändert werden müssen, um ein gewünschtes Ergebnis zu erzielen.  
   
- Angenommen, Sie möchten die Kundenzufriedenheit erhöhen. Sie können **Zielsuche** Analysis, um zu bestimmen, welche Faktoren wäre höchstwahrscheinlich Kundenzufriedenheit erhöhen, und entscheiden Sie, ob diese Änderungen kosteneffizient sind.  
+ Angenommen, Sie möchten die Kundenzufriedenheit erhöhen. Sie können **Zielsuche** Analysen, um zu bestimmen, welche Faktoren die Kundenzufriedenheit zu erhöhen, und entscheiden, ob diese Änderungen kosteneffizient sind am wahrscheinlichsten werden würde.  
   
  Nach Abschluss der Analyse durch das Tool werden zwei neue Spalten in der Quelldatentabelle erstellt. Diese Spalten zeigen die *Wahrscheinlichkeit* , die das gewünschte Ergebnis erreicht werden kann, und ggf. die empfohlene Änderung.  
   
@@ -46,20 +46,20 @@ ms.locfileid: "36148719"
   
 4.  Geben Sie den Wert an, den Sie erzielen möchten.  
   
-     Wenn das Spaltenziel fortlaufende numerische Werte enthält, können Sie auch eine gewünschte Zunahme oder Abnahme des Werts angeben. Beispielsweise empfiehlt sich **Sales** wie die Spalte und festlegen, dass das Ziel eine Zunahme von 120 % ist.  
+     Wenn das Spaltenziel fortlaufende numerische Werte enthält, können Sie auch eine gewünschte Zunahme oder Abnahme des Werts angeben. Beispielsweise empfiehlt sich **Sales** wie die Spalte und gibt an, dass das Ziel eine Steigerung von 120 % ist.  
   
      Sie können das Ziel auch als Wertebereich angeben, indem Sie eine Unter- und Obergrenze angeben.  
   
 5.  Geben Sie die Spalte an, die die Werte enthält, die Sie ändern möchten. Wählen Sie mit anderen Worten die Spalte aus, die bearbeitet werden muss, um das gewünschte Ergebnis zu erzielen.  
   
-6.  Klicken Sie optional auf **wählen Sie Spalten aus, die für die Analyse**, und wählen Sie Spalten, die nützliche Informationen enthalten. Heben Sie die Auswahl der Spalten auf, die nicht zur Analyse beitragen.  
+6.  Klicken Sie optional auf **Spalten für die Analyse auswählen**, und wählen Sie Spalten, die nützliche Informationen enthalten. Heben Sie die Auswahl der Spalten auf, die nicht zur Analyse beitragen.  
   
     > [!NOTE]  
     >  Heben Sie die Auswahl nicht für Spalten auf, die Sie entweder für das Ziel oder die Änderung verwenden. Diese Spalten sind erforderlich.  
   
 7.  Geben Sie an, ob Sie Vorhersagen für die gesamte Tabelle oder nur für die ausgewählten Ziele erstellen möchten.  
   
-8.  Bei Auswahl der **ganze Tabelle** Option, das Tool fügt die Vorhersagen auf die Quelltabelle in zwei neue Spalten.  
+8.  Bei Auswahl der **ganze Tabelle** können das Tool wird die Vorhersagen auf die Quelltabelle in zwei neuen Spalten hinzugefügt.  
   
 9. Wenn Sie die Option **in dieser Zeile**, die Ergebnisse der Analyse werden ausgegeben, um das Dialogfeld zur Überprüfung. Das Dialogfeld bleibt geöffnet, damit Sie damit fortfahren können, andere Werte und Ziele auszuprobieren.  
   
@@ -81,19 +81,19 @@ ms.locfileid: "36148719"
   
 -   Es wird eine Vorhersage für jeden Wert erstellt, den Sie angeben.  
   
- Wenn Sie Zielsucheszenarios einzeln testen, können Sie die Ergebnisse interaktiv anzeigen. Dies entspricht dem Erstellen einer *Singleton-Vorhersageabfrage*.  
+ Wenn Sie Zielsucheszenarios einzeln testen, können Sie die Ergebnisse interaktiv anzeigen. Dies ist dasselbe wie das Erstellen einer *Singleton-Vorhersageabfrage*.  
   
- Das Tool meldet, der **Ergebnisse** Bereich des Dialogfelds Feld, ob es erfolgreich beim Suchen eines Szenarios, die das gewünschte Ergebnis erzielt. Wenn eine erfolgreiche Lösung gefunden wurde, generiert das Tool auch eine Empfehlung mit der erforderlichen Änderung. Z. B. die **Zielsuche** Tool möglicherweise geben Aufschluss darüber, dass der Arbeitsweg weniger als 5 Meilen werden soll.  
+ Das Tool meldet, der **Ergebnisse** Bereich des Dialogfelds Feld, ob es erfolgreich beim Suchen eines Szenarios, die das gewünschte Ergebnis erzielt. Wenn eine erfolgreiche Lösung gefunden wurde, generiert das Tool auch eine Empfehlung mit der erforderlichen Änderung. Z. B. die **Zielsuche** Tool kann zeigen, dass der Arbeitsweg auf weniger als 5 Meilen werden soll.  
   
  Beispielergebnisse:  
   
- **Zielsuche für Interesse am Kauf wurde eine Lösung gefunden.**  
+ **Bei der Zielsuche für Interesse am Kauf wurde eine Lösung gefunden.**  
   
- **Nächster Treffer erreicht durch Ändern von 'Entfernung zur Arbeit', ' 2-5 Miles'.**  
+ **Nächster Treffer erreicht durch Ändern von 'Entfernung zur Arbeit' in ' 2-5 Miles.**  
   
  Da dieses Ergebnis auf einer vorhandenen Zeile in der Datentabelle beruht, bedeutet dies Folgendes: Wenn alle Werte dieses Kunden unverändert bleiben, aber sich der Arbeitsweg auf 2 – 5 km reduziert, ist es wahrscheinlich, dass der Kunde ein Fahrrad kauft.  
   
- Wenn Sie zielsuchevorhersagen für alle Zeilen in der Excel-Tabelle, indem Sie die Angabe erstellen **ganze Tabelle**, theTool gespeichert erstellt zwei neue Spalten in der ursprünglichen Datentabelle. Die erste der Tabelle hinzugefügte Spalte enthält entweder ein Häkchen in einem grünen Kreis, was bedeutet, dass das Ziel erreicht werden kann, oder ein X in einem roten Kreis, was bedeutet, dass das Ziel durch keine Änderung erreicht werden kann.  
+ Wenn Sie zielsuchevorhersagen für alle Zeilen in der Excel-Tabelle, durch Angabe erstellen **ganze Tabelle**, theTool gespeichert erstellt zwei neue Spalten in der ursprünglichen Datentabelle. Die erste der Tabelle hinzugefügte Spalte enthält entweder ein Häkchen in einem grünen Kreis, was bedeutet, dass das Ziel erreicht werden kann, oder ein X in einem roten Kreis, was bedeutet, dass das Ziel durch keine Änderung erreicht werden kann.  
   
  Die zweite Spalte enthält die empfohlene Änderung.  
   
@@ -101,9 +101,9 @@ ms.locfileid: "36148719"
 >  Der Vertrauensgrad der Empfehlung und ihr Erfolg sind durch den Algorithmus vorbestimmt und können nicht geändert werden.  
   
 ## <a name="related-tools"></a>Verwandte Tools  
- Der Data Mining-Client für Excel, bei dem es sich um ein separates Add-In mit erweiterter Data Mining-Funktionalität handelt, enthält Assistenten zum Erstellen von Data Mining-Modellen, die Verhalten vorhersagen. Weitere Informationen finden Sie unter [erstellen ein Data Mining-Modell](creating-a-data-mining-model.md).  
+ Der Data Mining-Client für Excel, bei dem es sich um ein separates Add-In mit erweiterter Data Mining-Funktionalität handelt, enthält Assistenten zum Erstellen von Data Mining-Modellen, die Verhalten vorhersagen. Weitere Informationen finden Sie unter [Erstellen eines Data Mining-Modells](creating-a-data-mining-model.md).  
   
- Weitere Informationen zu den vom verwendeten Algorithmus die **Zielsuche** Szenario tool, finden Sie im Thema "Microsoft Logistic Regression-Algorithmus" in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online.  
+ Weitere Informationen zu den vom verwendeten Algorithmus die **Zielsuche** Szenario finden Sie unter dem Thema "Microsoft Logistic Regression-Algorithmus" in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Tabellenanalysetools für Excel](table-analysis-tools-for-excel.md)  

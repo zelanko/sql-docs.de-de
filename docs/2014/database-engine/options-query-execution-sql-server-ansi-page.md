@@ -1,5 +1,5 @@
 ---
-title: Optionen (Abfrageausführung-SQL Server-ANSI-Seite) | Microsoft Docs
+title: Optionen (Abfrageausführung – SQL Server-ANSI-Seite) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAnsi
 ms.assetid: 0f4c6887-0562-417e-806c-b5cffb1e7c5c
 caps.latest.revision: 24
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4d2e08a89e68c15d2d665fd0468610d2324fd800
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f8c5e7e322358a12db2bfa8aebb0983951053502
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173361"
 ---
-# <a name="options-query-execution-sql-server-ansi-page"></a>Optionen (Abfrageausführung-SQL Server-ANSI-Seite)
+# <a name="options-query-execution-sql-server-ansi-page"></a>Optionen (Abfrageausführung – SQL Server-ANSI-Seite)
   Diese SET-Optionen nach ANSI (ISO)-Standard definieren zusammen die Abfrageverarbeitungsumgebung für die Dauer der Abfrage des Benutzers bzw. der Ausführung eines Triggers oder einer gespeicherten Prozedur. Die aufgeführten SET-Optionen schließen jedoch nicht alle Optionen ein, die erforderlich wären, um dem ISO-Standard vollständig zu entsprechen. Mithilfe dieser Seite können Sie festlegen, dass [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Abfragen mithilfe aller oder eines Teils der im ISO-Standard angegebenen Einstellungen ausführt. Die an diesen Optionen vorgenommenen Änderungen werden nur für neue Abfragen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet. Wenn Sie diese Optionen für die aktuellen Abfragen ändern möchten, klicken Sie entweder im Menü **Abfrage** auf **Abfrageoptionen**, oder klicken Sie mit der rechten Maustaste in das Abfragefenster von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], und wählen Sie **Abfrageoptionen**. Klicken Sie im Dialogfeld **Abfrageoptionen** unter **Ausführung** auf **ANSI**.  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
@@ -57,7 +57,7 @@ ms.locfileid: "36150957"
  **SET ANSI_NULLS**  
  -   Gibt an, dass sich die Vergleichsoperatoren gleich (=) und ungleich (<>) bei Verwendung mit NULL-Werten ISO-konform verhalten müssen. Wenn SET ANSI_NULLS ausgewählt ist, werden alle Vergleiche mit null in Übereinstimmung mit dem Verhalten nach ISO als UNKNOWN ausgewertet. Wenn SET ANSI_NULLS nicht ausgewählt ist, werden Vergleiche aller Daten mit einem NULL-Wert als TRUE ausgewertet. Dieses Kontrollkästchen ist standardmäßig aktiviert.  
   
- **Standard wiederherstellen**  
+ **Auf Standard zurücksetzen**  
  Setzt alle auf dieser Seite verfügbaren Werte auf die ursprünglichen Standardwerte zurück.  
   
   

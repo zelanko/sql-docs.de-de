@@ -1,5 +1,5 @@
 ---
-title: Sichern und Wiederherstellen von Reporting Services SharePoint-Dienstanwendungen | Microsoft Docs
+title: Sichern und Wiederherstellen von Reporting Services SharePoint-Dienstanwendungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 504afebfbe59ef6717bb60e8220600256419f785
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 0ad72399371d662ee8842dd7f9bf72ce5a72b6b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061561"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212570"
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>Sichern und Wiederherstellen von Reporting Services-SharePoint-Dienstanwendungen
   In diesem Thema wird das Sichern und Wiederherstellen einer [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienstanwendung mit der SharePoint-Zentraladministration oder PowerShell beschrieben. Das Thema enthält:  
@@ -41,7 +41,7 @@ ms.locfileid: "36061561"
   
 -   Sichern Sie die Verschlüsselungsschlüssel vor dem Starten der SharePoint-Sicherung. Wenn Sie die Verschlüsselungsschlüssel nicht sichern, ist der Zugriff auf die verschlüsselten Daten nach der Wiederherstellung der Dienstanwendung nicht möglich. Sie müssen die verschlüsselten Daten löschen.  
   
--   Überprüfen Sie, ob Ihre [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -dienstanwendung verwendeten Konto mit unbeaufsichtigter Ausführung oder Windows-Authentifizierung für den Datenbankzugriff. Bei Verwendung einer dieser Kontotypen sind die entsprechenden Anmeldeinformationen zu ermitteln, damit Sie die Dienstanwendung nach der Wiederherstellung richtig konfigurieren können.  
+-   Überprüfen Sie, ob Ihre [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dienstanwendung Konto mit unbeaufsichtigter Ausführung oder Windows-Authentifizierung für den Datenbankzugriff verwendet. Bei Verwendung einer dieser Kontotypen sind die entsprechenden Anmeldeinformationen zu ermitteln, damit Sie die Dienstanwendung nach der Wiederherstellung richtig konfigurieren können.  
   
 -   Stellen Sie sicher, dass das SharePoint-Sicherungsprotokoll im gleichen Ordner wie die Sicherungsdatei erstellt wird. Die Datei wird in der Regel **spbackup.log**genannt.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "36061561"
   
 3.  Wählen Sie die Dienstanwendungssicherung aus der Liste **Komponente der höchsten Ebene** aus, und klicken Sie dann auf **Weiter**.  
   
-4.  Wählen Sie Ihre [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Anwendung, und klicken Sie dann auf **Weiter**.  
+4.  Wählen Sie Ihre [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Anwendung, und klicken Sie dann auf **Weiter**.  
   
 5.  Geben Sie im Abschnitt **Anmeldenamen und Kennwörter** das Kennwort für den Anmeldenamen ein. Das Feld für den Anmeldenamen muss mit der Anmeldung ausgefüllt werden, die von der Dienstanwendung vor der Sicherung verwendet wurde.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36061561"
  [Wiederherstellen einer Dienstanwendung (SharePoint Server 2010)](ttp://technet.microsoft.com/library/ee428305.aspx)  
   
 ### <a name="restore-the-encryption-keys-using-central-administration"></a>Wiederherstellen der Verschlüsselungsschlüssel mit der Zentraladministration  
- Anleitung zur Wiederherstellung der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Verschlüsselungsschlüssel finden Sie im Abschnitt "Verschlüsselungsschlüssel" [Verwalten einer Reporting Services SharePoint-Dienstanwendung](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md).  
+ Informationen zum Wiederherstellen der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Verschlüsselungsschlüssel verwendet, finden Sie im Abschnitt "Verschlüsselungsschlüssel" [Verwalten einer Reporting Services SharePoint-Dienstanwendung](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md).  
   
 ### <a name="configure-the-execution-account-and-database-authentication"></a>Konfigurieren des Ausführungskontos und der Datenbankauthentifizierung  
  **Ausführungskonto** : Wurde für die Dienstanwendung ein Ausführungskonto verwendet, gehen Sie zum Konfigurieren des Kontos wie folgt vor:  

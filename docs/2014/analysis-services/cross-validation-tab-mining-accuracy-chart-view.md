@@ -1,5 +1,5 @@
 ---
-title: Registerkarte "übergreifende Überprüfung" (Mininggenauigkeitsdiagrammsicht) | Microsoft Docs
+title: Registerkarte ' Kreuzvalidierung ' (Mininggenauigkeitsdiagrammsicht) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.crossvalidation.f1
 ms.assetid: bd215a68-1ad7-4046-9c44-ec8e2be13a64
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d5b39187ddfc3e4ce0fa8ef0fc7e0402ef54b129
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: a30cf9ce920f7e0416e46dd87044ef7e3d52318c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151026"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169821"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>Übergreifende Überprüfung (Registerkarte, Mininggenauigkeitsdiagramm-Sicht)
   Mithilfe der übergreifenden Überprüfung können Sie eine Miningstruktur in Querschnitte partitionieren und Modelle anhand der einzelnen Querschnitte iterativ trainieren und testen. Sie geben eine Anzahl von Aufteilungen für die Daten an. Die einzelnen Aufteilungen werden der Reihe nach als Testdaten verwendet, während mit den jeweils verbleibenden Daten ein neues Modell trainiert wird. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] generiert dann eine Gruppe vorgegebener genauigkeitsmetriken für jedes Modell. Durch den Vergleich der Metriken für die für die einzelnen Querschnitte generierten Modelle erhalten Sie Aufschluss über die Zuverlässigkeit des Miningmodells für das ganze Dataset.  
@@ -100,7 +100,7 @@ ms.locfileid: "36151026"
   
  Angenommen, es werden drei Vorhersagen für einen bestimmten Zielstatus erstellt, und die Wahrscheinlichkeiten für die einzelnen Vorhersagen liegen bei 0,05, 0,15 und 0,8. Wenn Sie den Schwellenwert auf 0,5 festgelegt haben, wird nur eine Vorhersage als richtig gewertet. Wenn Sie den **Ziel****schwellenwert** auf 0,10 festgelegt haben, werden zwei der Vorhersagen als richtig gewertet.  
   
- Wenn **Ziel** **Schwellenwert** festgelegt ist, um `null`, Hierbei handelt es sich um den Standardwert, für jeden Fall die wahrscheinlichste Vorhersage als richtig gewertet. In dem gerade genannten Beispiel sind 0,05, 0,15 und 0,8 die Wahrscheinlichkeiten für Vorhersagen in drei verschiedenen Fällen. Obwohl die Wahrscheinlichkeiten sehr unterschiedlich sind, würde jede Vorhersage als richtig gewertet, da jeder Fall nur eine Vorhersage generiert und es sich dabei um die besten Vorhersagen für diese Fälle handelt.  
+ Wenn **Ziel** **Schwellenwert** nastaven NA hodnotu `null`, dies ist der Standardwert, wird die wahrscheinlichste Vorhersage für jeden Fall als richtig gewertet. In dem gerade genannten Beispiel sind 0,05, 0,15 und 0,8 die Wahrscheinlichkeiten für Vorhersagen in drei verschiedenen Fällen. Obwohl die Wahrscheinlichkeiten sehr unterschiedlich sind, würde jede Vorhersage als richtig gewertet, da jeder Fall nur eine Vorhersage generiert und es sich dabei um die besten Vorhersagen für diese Fälle handelt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Tests und Überprüfung &#40;Datamining&#41;](data-mining/testing-and-validation-data-mining.md)   

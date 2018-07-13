@@ -1,5 +1,5 @@
 ---
-title: Allgemein (Eigenschaftenseite, Berichte) (Berichts-Manager) | Microsoft Docs
+title: Allgemeine Eigenschaftenseite, Berichte (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 66c99d28-ab41-45f0-bf02-ed560293595d
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 21ffa295452a4f025eb15600e48f0e99906ac2fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 607d50e68cef49fef5940b2729bea8156d7bf2f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151067"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189897"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>Allgemeine Eigenschaften (Seite) (Berichte, Berichts-Manager)
   Mithilfe der Seite Allgemeine Eigenschaften für Berichte können Sie eine Berichtsdefinition umbenennen, löschen, verschieben oder ersetzen. Zudem ist mit dieser Seite das Erstellen eines verknüpften Berichts möglich. Details zum Benutzer, der den Bericht erstellt oder geändert hat, und zum Zeitpunkt der Änderungen sind oben auf der Seite aufgeführt.  
@@ -54,7 +54,7 @@ ms.locfileid: "36151067"
  Klicken Sie auf diese Schaltfläche, um den Bericht aus der Berichtsserver-Datenbank zu löschen. Durch das Löschen eines Berichts werden der gesamte Berichtsverlauf und alle berichtsspezifischen Zeitpläne und Abonnements gelöscht. Falls der Bericht mit verknüpften Berichten verbunden ist, werden die verknüpften Berichte ungültig.  
   
  **Verschieben**  
- Klicken Sie auf diese Schaltfläche, um einen Bericht in der Ordnerhierarchie des Berichtsservers zu verschieben. Durch Klicken auf diese Schaltfläche wird die Seite Elemente verschieben geöffnet, auf der Sie Ordner nach einem neuen Speicherort durchsuchen können. Weitere Informationen finden Sie unter [Elementseite verschieben &#40;Berichts-Manager&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
+ Klicken Sie auf diese Schaltfläche, um einen Bericht in der Ordnerhierarchie des Berichtsservers zu verschieben. Durch Klicken auf diese Schaltfläche wird die Seite Elemente verschieben geöffnet, auf der Sie Ordner nach einem neuen Speicherort durchsuchen können. Weitere Informationen finden Sie unter [Seite "Elemente" verschieben &#40;Berichts-Manager&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
   
  **Verknüpften Bericht erstellen**  
  Klicken Sie auf diese Schaltfläche, um die Seite Neuer verknüpfter Bericht zu öffnen. Weitere Informationen zu dieser Seite und verknüpfte Berichte finden Sie unter [neue verknüpfte Berichtsseite &#40;Berichts-Manager&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md).  
@@ -64,16 +64,16 @@ ms.locfileid: "36151067"
   
  Die von Ihnen geöffnete Kopie ist mit der ursprünglichen Berichtsdefinition identisch, die auf dem Berichtsserver veröffentlicht wurde. Alle Eigenschaften, die für den Bericht nach dessen Veröffentlichung festgelegt wurden (wie Parameter und Datenquelleneigenschaften) sind nicht in der von Ihnen geöffneten Datei enthalten.  
   
- Die können die Berichtsdefinition ändern und als neue Datei in einem freigegebenen Ordner speichern. Dann können Sie die Berichtsdefinition als neues Element auf dem Berichtsserver hochladen. Änderungen, die Sie an der Berichtsdefinition vornehmen, während er im geöffnet ist [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (oder einer anderen Anwendung) nicht direkt auf dem Berichtsserver gespeichert sind. Sie müssen die Datei hochladen, um den veränderten Bericht auf dem Berichtsserver zu veröffentlichen.  
+ Die können die Berichtsdefinition ändern und als neue Datei in einem freigegebenen Ordner speichern. Dann können Sie die Berichtsdefinition als neues Element auf dem Berichtsserver hochladen. Änderungen, die Sie in der Berichtsdefinition vornehmen, während er im geöffnet ist [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (oder einer anderen Anwendung) nicht direkt auf dem Berichtsserver gespeichert sind. Sie müssen die Datei hochladen, um den veränderten Bericht auf dem Berichtsserver zu veröffentlichen.  
   
  **Ersetzen**  
  Klicken Sie auf diese Schaltfläche, um die im aktuellen Bericht verwendete Berichtsdefinition durch eine andere aus einer RDL-Datei im Dateisystem zu ersetzen. Wenn Sie eine Berichtsdefinition aktualisieren, müssen Sie die Einstellungen zur Datenquelle nach Abschluss des Updates zurücksetzen.  
   
- **Link "ändern"**  
+ **Link ändern**  
  Klicken Sie auf diese Schaltfläche, um eine andere Berichtsdefinition für den verknüpften Bericht auszuwählen. Diese Option wird angezeigt, wenn es sich um einen verknüpften Bericht handelt. Bei einem verknüpften Bericht kann durch Festlegen dieser Eigenschaft die Berichtsdefinition ersetzt werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Berichts-Manager &#40;SSRS im einheitlichen Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Berichts-Manager (F1-Hilfe)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

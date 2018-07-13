@@ -1,5 +1,5 @@
 ---
-title: LogFileAppend-Element (ASSL) | Microsoft Docs
+title: LogFileAppend-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - LogFileAppend element
 ms.assetid: f85e94a9-e5c5-478a-a5a0-fc99ed19b582
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2d337d4110afc07d8aa211bc17685bc0fc2e8d81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b4cd2f873b3d7394dac45a1a40b9b98483118f44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149144"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190910"
 ---
 # <a name="logfileappend-element-assl"></a>LogFileAppend-Element (ASSL)
-  Bestimmt, ob die [Trace](../objects/trace-element-assl.md) -Element seine Protokollierungsausgabe an die vorhandene Protokolldatei anfügt oder Sie überschreibt.  
+  Bestimmt, ob die [Ablaufverfolgung](../objects/trace-element-assl.md) -Element seine Protokollierungsausgabe an die vorhandene Protokolldatei anfügt, oder Sie überschreibt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,10 +62,10 @@ ms.locfileid: "36149144"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element, das das übergeordnete Element des entspricht `LogFileAppend` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Trace>.  
+ Das Element, das dem übergeordneten entspricht `LogFileAppend` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Trace>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verfolgt Element &#40;ASSL&#41;](../collections/traces-element-assl.md)   
+ [Führt eine Ablaufverfolgung für Element &#40;ASSL&#41;](../collections/traces-element-assl.md)   
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  
   
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
 caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 655064d54334aa58d8e997c06c08e04a525f350b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bfca955a9c6e2f27835cff6ae6af2531a4e743c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060452"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242670"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>Migrieren einer Installation von Reporting Services (SharePoint-Modus)
   Dieses Thema bietet eine Übersicht über die Schritte, die erforderlich sind, um eine Bereitstellung von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus zwischen SharePoint-Umgebungen zu migrieren. Die jeweiligen Schritte können sich abhängig von der Version unterscheiden, von der aus Sie migrieren. Weitere Informationen zu Upgrade- und Migrationsszenarien für den SharePoint-Modus finden Sie unter [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md). Wenn Sie nur die Berichtselemente von einem Server auf einen anderen kopieren möchten, finden Sie unter [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
@@ -50,7 +50,7 @@ ms.locfileid: "36060452"
 ###  <a name="bkmk_content_only_migration"></a> Reine Inhaltsmigration  
  **Nur Reporting Services-Inhalt migrieren:** Wenn Sie den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Inhalt in eine neue Farm kopieren möchten, benötigen Sie Tools wie **rs.exe** , um den Inhalt in die neue SharePoint-Installation zu kopieren. Weitere Informationen zur reinen Migration von Inhalten finden Sie unter:  
   
--   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS-Skripts:** Die Skripts können Inhalte und Ressourcen zwischen Berichtsservern im einheitlichen Modus und im SharePoint-Modus migrieren. Weitere Informationen finden Sie unter [Sample Reporting Services rs.exe Script to Migrieren von Inhalten zwischen Berichtsservern](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md) und [Reporting Services RS.exe-Skript, das Inhalt von einem Berichtsserver zu einem anderenmigriert](http://azuresql.codeplex.com/releases/view/115207).  
+-   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS-Skripts:** Die Skripts können Inhalte und Ressourcen zwischen Berichtsservern im einheitlichen Modus und im SharePoint-Modus migrieren. Weitere Informationen finden Sie unter [Sample Reporting Services-Beispielskript rs.exe zum Migrieren von Inhalten zwischen Berichtsservern](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md) und [Reporting Services RS.exe-Skript, das Inhalt von einem Berichtsserver zu einem anderenmigriert](http://azuresql.codeplex.com/releases/view/115207).  
   
 -   **Reporting Services-Migrationstool:** Das Tool kann Ihre Berichtselemente von einem Server im einheitlichen Modus zu einem Server im SharePoint-Modus kopieren. Weitere Informationen finden Sie unter [Reporting Services-Migrationstool](http://www.microsoft.com/download/details.aspx?id=29560).  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36060452"
 |-|-------------|------------|-----------|  
 |**1**|Stellen Sie SharePoint-Inhaltsdatenbanken in der neuen Farm wieder her.|SharePoint-Upgrade mit Anfügen der Datenbanken.|Grundlegende Schritte:<br /><br /> 1) Stellen Sie die Datenbank auf dem neuen Server wieder her.<br /><br /> 2) Fügen Sie die Inhaltsdatenbank an eine Webanwendung an, indem Sie die URL angeben.<br /><br /> 3) "Get-SPWebapplication" listet alle Webanwendungen und die URLs auf.<br /><br /> Informationen finden Sie im Abschnitt „Upgrade mit Anfügen der Datenbanken“ in [Bestimmen der Upgrademethode (SharePoint Server 2010) (http://technet.microsoft.com/library/cc263447.aspx)](http://technet.microsoft.com/library/cc263447.aspx) und [Anfügen von Datenbanken und .Upgrade auf SharePoint Server 2010 (http://technet.microsoft.com/library/cc263299.aspx)](http://technet.microsoft.com/library/cc263299.aspx).|  
 |**2**|Wiederherstellen der SQL-Datenbank, die die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Katalogdatenbank (ReportServer).|Sichern und Wiederherstellen von SQL-Datenbanken<br /><br /> **oder**<br /><br /> Anfügen und Trennen von SQL Server-Datenbanken|Wenn die Datenbank erstmalig verwendet wird, aktualisiert [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] das Datenbankschema nach Bedarf, damit es in der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Umgebung funktioniert.|  
-|**3**|Erstellen Sie eine neue [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung.|SharePoint-Zentraladministration|Wenn Sie die neue Dienstanwendung erstellen, konfigurieren Sie sie für die Verwendung der kopierten Berichtsserver-Datenbank.<br /><br /> Weitere Informationen zur Verwendung von SharePoint-Zentraladministration finden Sie im Abschnitt "Schritt 3: Erstellen eines Reporting Services-Dienstanwendung" in [Install Reporting Services SharePoint Mode for SharePoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md).<br /><br /> Beispiele für die Verwendung von PowerShell finden Sie im Abschnitt "Erstellen einer Reporting Services-Dienstanwendung mit PowerShell" unter [Reporting Services SharePoint Service and Service Applications](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md).|  
+|**3**|Erstellen Sie eine neue [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung.|SharePoint-Zentraladministration|Wenn Sie die neue Dienstanwendung erstellen, konfigurieren Sie sie für die Verwendung der kopierten Berichtsserver-Datenbank.<br /><br /> Weitere Informationen zur Verwendung von SharePoint-Zentraladministration finden Sie im Abschnitt "Schritt 3: Erstellen einer Reporting Services-Dienstanwendung" in [installieren Sie Reporting Services SharePoint Mode for SharePoint 2013](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md).<br /><br /> Beispiele für die Verwendung von PowerShell finden Sie im Abschnitt "Erstellen einer Reporting Services-Dienstanwendung mit PowerShell" unter [Reporting Services SharePoint Service and Service Applications](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md).|  
 |**4**|Stellen Sie die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationsdateien wieder her.|Einfacher Dateikopiervorgang|Beispiel für den Standardspeicherort von Dateien: C:\Programme\Gemeinsame Dateien\Microsoft Shared\Web-Server Extensions\15\WebServices\Reporting|  
 |**5**|Wiederherstellen der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Verschlüsselungsschlüssel.|Stellen Sie die Hauptsicherungsdatei mithilfe der Seite "SystemSettings" der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung wieder her.<br /><br /> **oder**<br /><br /> PowerShell|Weitere Informationen finden Sie im Abschnitt „Schlüsselverwaltung“ des Themas [Verwalten einer Reporting Services-SharePoint-Dienstanwendung](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)|  
   
@@ -98,14 +98,14 @@ ms.locfileid: "36060452"
   
 1.  Konfigurieren Sie die NTLM-Authentifizierung für eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienstanwendung. Weitere Informationen finden Sie unter [Konfigurieren von E-Mail für eine Reporting Services-Dienstanwendung &#40;SharePoint 2010 und SharePoint 2013&#41;](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md).  
   
-##  <a name="bkmk_migrate_from_ctp"></a> Migrieren Sie aus einer SQL Server 2012-Bereitstellung  
+##  <a name="bkmk_migrate_from_ctp"></a> Migrieren von einer SQL Server 2012-Bereitstellung  
  In einer aus mehreren Servern bestehenden Farm befinden sich die Inhalts- und die Katalogdatenbank wahrscheinlich auf unterschiedlichen Computern. In diesem Fall müssen Sie der SharePoint-Farm nur einen neuen Server mit installiertem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienst hinzufügen und den alten Server entfernen. Das Kopieren der Datenbanken ist nicht erforderlich.  
   
 ### <a name="backup-operations"></a>Sicherungsvorgänge  
   
 1.  Sichern Sie die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Verschlüsselungsschlüssel.  
   
-2.  Sichern Sie die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung in der SharePoint-Zentraladministration (oder verwenden Sie PowerShell). Auf diese Weise sichern Sie auch die Datenbanken der Dienstanwendung in SharePoint. Siehe Thema [Backup- und Restore Reporting Services SharePoint-Dienstanwendungen](../../../2014/reporting-services/backup-and-restore-reporting-services-sharepoint-service-applications.md)  
+2.  Sichern Sie die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung in der SharePoint-Zentraladministration (oder verwenden Sie PowerShell). Auf diese Weise sichern Sie auch die Datenbanken der Dienstanwendung in SharePoint. Finden Sie unter [Backup- und Restore Reporting Services SharePoint-Dienstanwendungen](../../../2014/reporting-services/backup-and-restore-reporting-services-sharepoint-service-applications.md)  
   
 3.  Wenn Sie über ein Konto für die unbeaufsichtigte Ausführung (Unattended Execution Account, UEA) verfügen und die Windows-Authentifizierung verwenden, sollten Sie sich die Anmeldeinformationen für den Wiederherstellungsvorgang notieren.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "36060452"
   
 2.  Stellen Sie die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Verschlüsselungsschlüssel wieder her.  
   
-     Finden Sie im Abschnitt "Schlüsselverwaltung" im Thema [Verwalten einer Reporting Services SharePoint-Dienstanwendung](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)  
+     Finden Sie im Abschnitt "Schlüsselverwaltung" des Themas [Verwalten einer Reporting Services SharePoint-Dienstanwendung](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)  
   
 3.  Konfigurieren Sie die Anmeldeinformationen für UEA und Windows in der Dienstanwendung.  
   

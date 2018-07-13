@@ -1,5 +1,5 @@
 ---
-title: Geschachtelte Tabellen (Analysis Services – Datamining) | Microsoft Docs
+title: Geschachtelte Tabellen (Analysis Services – Datamining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], nested tables
 - tables [Analysis Services], nested
 - nested tables
 ms.assetid: cb192aa2-597e-4d4f-ac34-3556d037fed4
 caps.latest.revision: 51
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: acb00a14c6fb59a223727c8f551e74fb636a7ee6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b072c134c047f9833f3b5297688bf30d68a6050
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150243"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167731"
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Geschachtelte Tabellen (Analysis Services - Data Mining)
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]müssen einem Data Mining-Algorithmus Daten in Form einer Reihe von Fällen zugeführt werden, die in einer Falltabelle enthalten sind. Nicht alle Fälle lassen sich jedoch durch eine einzelne Datenzeile beschreiben. So kann sich ein Fall z.&nbsp;B. aus zwei Tabellen ableiten: einer Tabelle mit Kundeninformationen und einer anderen Tabelle mit den von Kunden getätigten Käufen. Ein einzelner Kunde in der Kundeninformationstabelle könnte über mehrere Elemente in der Kundenkäufe-Tabelle verfügen, weshalb es schwierig ist, die Daten in einer einzelnen Zeile zu beschreiben. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt eine eindeutige Methode zum Verarbeiten dieser Fälle bereit, indem *geschachtelte Tabellen*verwendet werden. Das Konzept von geschachtelten Tabellen wird in der folgenden Abbildung veranschaulicht.  
   
- ![Zwei Tabellen mit einer geschachtelten Tabelle kombiniert](../media/nested-tables.gif "zwei Tabellen mit einer geschachtelten Tabelle kombiniert")  
+ ![Zwei Tabellen mit einer geschachtelten Tabelle kombiniert](../media/nested-tables.gif "zwei Tabellen mit einer geschachtelten Tabelle kombinieren")  
   
  In diesem Diagramm enthält die erste Tabelle, bei der es sich um die übergeordnete Tabelle handelt, Kundeninformationen und ordnet jedem Kunden einen eindeutigen Bezeichner zu. Die zweite (untergeordnete) Tabelle enthält die von jedem Kunden getätigten Käufe. Die Käufe in der untergeordneten Tabelle werden durch den eindeutigen Bezeichner, die **CustomerKey** -Spalte, mit der übergeordneten Tabelle verknüpft. Die dritte Tabelle zeigt, wie die beiden Tabellen kombiniert werden.  
   

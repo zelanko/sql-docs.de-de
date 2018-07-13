@@ -1,5 +1,5 @@
 ---
-title: Installieren von Reporting Services und Internet Informationen Services-Seite-an-Seite (einheitlicher SSRS-Modus) | Microsoft Docs
+title: Installieren Sie Reporting Services und Internet Informationen Services Seite-an-Seite (einheitlicher SSRS-Modus) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Reporting Services], IIS
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 2111d9ceda6e38f4abc079b94d678d981b075a91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3db5a0da0050541b0adec9b726184a959ac59001
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148787"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274656"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>Gleichzeitiges Installieren von Reporting Services und Internetinformationsdiensten (einheitlicher SSRS-Modus)
   Sie können [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) und die Internetinformationsdienste (IIS) auf dem gleichen Computer installieren und ausführen. Je nach IIS-Version treten bestimmte Interoperabilitätsprobleme auf.  
@@ -47,7 +47,7 @@ ms.locfileid: "36148787"
   
 |Beispiel|Anforderung|  
 |-------------|-------------|  
-|http://123.234.345.456:80/reports|Empfängt alle Anforderungen, die an gesendet werden http://123.234.345.456/reports oder http://\<Computername > / reports, wenn ein Domain Name Service die IP-Adresse in diesen Hostnamen auflösen kann.|  
+|http://123.234.345.456:80/reports|Empfängt alle Anforderungen, die an gesendeten http://123.234.345.456/reports oder http://\<Computername > / reports, wenn ein Domain Name Service die IP-Adresse in diesen Hostnamen auflösen kann.|  
 |http://+:80/reports|Empfängt alle Anforderungen, die an eine IP-Adresse oder einen Hostnamen gesendet werden, die bzw. der gültig für diesen Computer ist, sofern die URL den Namen des virtuellen Verzeichnisses "reports" enthält.|  
 |http://123.234.345.456:80|Empfängt alle Anforderungen, http://123.234.345.456 oder http://\<Computername > Wenn ein Domain Name Service die IP-Adresse in diesen Hostnamen auflösen kann.|  
 |http://+:80|Empfängt für alle Anwendungsendpunkte, die **Alle zugewiesenen**zugeordnet sind, Anforderungen, die nicht bereits von anderen Anwendungen empfangen wurden.|  
@@ -69,9 +69,9 @@ ms.locfileid: "36148787"
   
 -   Eine Website in IIS, die Port 80 und einem virtuellen Verzeichnis mit dem Namen "Reports" zugewiesen ist.  
   
--   Ein [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Berichtsserverinstanz installiert, die in der Standardkonfiguration, wobei die URL-Reservierung auch Port 80 angibt und Berichts-Manager auch "Reports" als Namen des virtuellen Verzeichnisses verwendet.  
+-   Ein [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Berichtsserverinstanz installiert wird, in der Standardkonfiguration, wobei die URL-Reservierung auch Port 80 angibt und die Berichts-Manager-Anwendung wird auch "Reports" als Namen des virtuellen Verzeichnisses verwendet.  
   
- Im vorliegenden Fall eine an http:// gesendete Anforderung erhält\<Computername >: 80/Reports wird vom Berichts-Manager empfangen werden. Die Anwendung, auf die über das virtuelle Verzeichnis „Reports“ in IIS zugegriffen wird, empfängt nach der Installation der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Berichtsserverinstanz keine Anforderungen mehr.  
+ Im vorliegenden Fall eine an http:// gesendete Anforderung erhält\<Computername >: 80/Reports wird vom Berichts-Manager empfangen. Die Anwendung, auf die über das virtuelle Verzeichnis „Reports“ in IIS zugegriffen wird, empfängt nach der Installation der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Berichtsserverinstanz keine Anforderungen mehr.  
   
  Wenn Sie die Bereitstellungen älterer und neuerer Versionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]gleichzeitig ausführen, tritt unter Umständen das gerade beschriebene Routingproblem auf. Dies liegt daran, dass alle [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Versionen "ReportServer" und "Reports" als Namen der virtuellen Verzeichnisse für den Berichtsserver und den Berichts-Manager verwenden und damit die Wahrscheinlichkeit erhöht wird, dass in IIS die virtuellen Verzeichnisse "reports" und "reportserver" vorhanden sind.  
   

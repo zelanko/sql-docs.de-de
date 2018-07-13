@@ -1,5 +1,5 @@
 ---
-title: Fuzzy Lookup Transformations-Editor (Registerkarte Verweistabelle) | Microsoft Docs
+title: Fuzzy Lookup Transformations-Editor (Registerkarte Verweistabelle) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzylookuptransformation.referencetable.f1
 helpviewer_keywords:
 - Fuzzy Lookup Transformation Editor
 ms.assetid: 451f4e7d-1c8e-4784-b540-df0806509bf1
 caps.latest.revision: 35
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e1ee024a1237916346e6a64dbd21aba208e34deb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78b04c27986224f1974dc35c3a60e02adcbe5483
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150649"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217620"
 ---
 # <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>Transformations-Editor für Fuzzysuche (Registerkarte Verweistabelle)
   Auf der Registerkarte **Verweistabelle** des Dialogfelds **Transformations-Editor für Fuzzysuche** können Sie die Quelltabelle und den Index für die Suche angeben. Bei der Verweisdatenquelle muss es sich um eine Tabelle in einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank handeln.  
@@ -32,7 +32,7 @@ ms.locfileid: "36150649"
 >  Durch die Transformation für die Fuzzysuche wird eine Arbeitskopie der Verweistabelle erstellt. Die nachfolgend beschriebenen Indizes werden für diese Arbeitstabelle mithilfe einer Spezialtabelle erstellt, und nicht mit einem normalen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Index. Durch die Transformation werden die vorhandenen Quelltabellen nicht verändert, sofern Sie nicht **Gespeicherten Index beibehalten**auswählen. In diesem Fall wird ein Trigger für die Verweistabelle erstellt, der die Arbeitstabelle und die Suchindextabelle auf der Grundlage von Änderungen an der Verweistabelle aktualisiert.  
   
 > [!NOTE]  
->  Die `Exhaustive` und die `MaxMemoryUsage` Eigenschaften der Transformation für Fuzzysuche sind nicht verfügbar in der **Fuzzy Lookup Transformations-Editor**, jedoch kann festgelegt werden, mithilfe der **Erweiterter Editor**. Darüber hinaus kann ein Wert größer als 100 für `MaxOutputMatchesPerInput` kann angegeben werden, nur in der **Erweiterter Editor**. Weitere Informationen zu diesen Eigenschaften finden Sie im Abschnitt Transformation für Fuzzysuche von [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
+>  Die `Exhaustive` und die `MaxMemoryUsage` Eigenschaften der Transformation für Fuzzysuche sind nicht verfügbar, in der **Fuzzy Lookup Transformations-Editor**, aber kann festgelegt werden, mithilfe der **Erweiterter Editor**. Darüber hinaus kann ein Wert größer als 100 für `MaxOutputMatchesPerInput` kann angegeben werden, nur in der **Erweiterter Editor**. Weitere Informationen zu diesen Eigenschaften finden Sie im Abschnitt Transformation für Fuzzysuche von [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
   
  Weitere Informationen zur Transformation für Fuzzysuche finden Sie unter [Fuzzy Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   

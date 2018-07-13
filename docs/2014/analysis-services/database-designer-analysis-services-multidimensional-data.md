@@ -1,5 +1,5 @@
 ---
-title: Datenbank-Designer (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Datenbank-Designer (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c30016f0-7e50-44de-b45d-df11b8b34320
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a493991430d2777929e6b997b9f9697056658b41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9580e678aba6c8b556f84583af538df277c386a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061266"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263676"
 ---
 # <a name="database-designer-analysis-services---multidimensional-data"></a>Datenbank-Designer (Analysis Services - Mehrdimensionale Daten)
   Verwenden Sie den Datenbank-Designer von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , um die Eigenschaften einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank zu ändern und die von der Datenbank erzeugten Warnungen zu überprüfen.  

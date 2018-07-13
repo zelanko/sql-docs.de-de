@@ -1,5 +1,5 @@
 ---
-title: StorageBoundInMB-Element (DTA) | Microsoft Docs
+title: StorageBoundInMB-Element (DTA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - StorageBoundInMB element
 ms.assetid: a8374910-bf68-4edb-b464-53a3a705e7f4
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3c2a7b28ef7f6c5f6853d8b5fad0fb4a5706face
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 20e289a5920dba9ab2567a07841010ceaeaa2666
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148952"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218380"
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB-Element (DTA)
   Gibt die maximale Größe des Speicherplatzes in Megabyte an, der von der Optimierungsempfehlung des Datenbankoptimierungsratgebers (Index und Partitionierung) beansprucht werden kann.  
@@ -62,7 +62,7 @@ ms.locfileid: "36148952"
   
  Nicht im Standardspeicherplatz enthalten sind nicht gruppierte Indizes und indizierte Sichten.  
   
- Wenn der angegebene Wert für die `StorageBoundInMB` Element den tatsächlichen Speicherplatz überschreitet, Database Engine Tuning Advisor gibt einen Fehler, sondern setzt die Optimierung fort. Nach der Optimierung können Sie Speicherplatz hinzufügen, wenn Sie die Empfehlung implementieren möchten.  
+ Wenn der angegebene Wert für die `StorageBoundInMB` Element den tatsächlichen Speicherplatz überschreitet, gibt der Datenbankoptimierungsratgeber einen Fehler, sondern setzt die Optimierung fort. Nach der Optimierung können Sie Speicherplatz hinzufügen, wenn Sie die Empfehlung implementieren möchten.  
   
 ## <a name="example"></a>Beispiel  
   

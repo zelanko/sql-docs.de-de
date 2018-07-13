@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzygroupingtrans.f1
 helpviewer_keywords:
@@ -28,13 +28,13 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4a50b92570ad8cf28c537ce5fe657223058ac7d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4d5c49bcf93c7b80ab60341136dbcae4e16c94a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147955"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209380"
 ---
 # <a name="fuzzy-grouping-transformation"></a>Transformation für Fuzzygruppierung
   Die Transformation für Fuzzygruppierung führt Datenbereinigungsaufgaben durch, indem Datenzeilen identifiziert werden, die wahrscheinlich Duplikate sind, und eine kanonische Datenzeile ausgewählt wird, die zum Standardisieren der Daten verwendet wird.  
@@ -73,7 +73,7 @@ ms.locfileid: "36147955"
  Diese Transformation weist je eine Eingabe und eine Ausgabe auf. Eine Fehlerausgabe wird nicht unterstützt.  
   
 ## <a name="row-comparison"></a>Zeilenvergleich  
- Wenn Sie die Transformation für Fuzzygruppierung konfigurieren, können Sie den Vergleichsalgorithmus angeben, den die Transformation zum Vergleichen der Zeilen in der Transformationseingabe verwendet. Wenn Sie Exhaustive-Eigenschaft auf `true`, vergleicht die Transformation jede Zeile in der Eingabe mit jeder anderen Zeile in der Eingabe. Dieser Vergleichsalgorithmus kann zwar präzisere Ergebnisse produzieren, führt jedoch wahrscheinlich zu einer Einschränkung der Transformationsleistung, sofern die Anzahl der Zeilen in der Eingabe nicht gering ist. Um Leistungsprobleme zu vermeiden, ist es ratsam, Exhaustive-Eigenschaft auf festgelegt `true` nur während der Paketentwicklung.  
+ Wenn Sie die Transformation für Fuzzygruppierung konfigurieren, können Sie den Vergleichsalgorithmus angeben, den die Transformation zum Vergleichen der Zeilen in der Transformationseingabe verwendet. Wenn Sie die Exhaustive-Eigenschaft auf `true`, vergleicht die Transformation jede Zeile in der Eingabe mit jeder anderen Zeile in der Eingabe. Dieser Vergleichsalgorithmus kann zwar präzisere Ergebnisse produzieren, führt jedoch wahrscheinlich zu einer Einschränkung der Transformationsleistung, sofern die Anzahl der Zeilen in der Eingabe nicht gering ist. Um Leistungsprobleme zu vermeiden, ist es ratsam, die Exhaustive-Eigenschaft auf festgelegt `true` nur während der Paketentwicklung.  
   
 ## <a name="temporary-tables-and-indexes"></a>Temporäre Tabellen und Indizes  
  Zur Laufzeit erstellt die Transformation für Fuzzygruppierung temporäre Objekte wie z. B. Tabellen und Indizes mit potenziell erheblicher Größe in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank, zu der die Transformation eine Verbindung herstellt. Die Größe der Tabellen und Indizes ist proportional zur Anzahl der Zeilen in der Transformationseingabe und zur Anzahl der von der Transformation für Fuzzygruppierung erstellten Token.  
@@ -87,11 +87,11 @@ ms.locfileid: "36147955"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Transformations-Editor für Fuzzygruppierung** festlegen können:  
   
--   [Transformations-Editor für Fuzzysuche Gruppierung &#40;Registerkarte "Verbindungs-Manager"&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
+-   [Editor für Fuzzygruppierung Transformation &#40;Registerkarte Verbindungs-Manager&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
   
--   [Transformations-Editor für Fuzzysuche Gruppierung &#40;Registerkarte "Spalten"&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
+-   [Editor für Fuzzygruppierung Transformation &#40;Registerkarte "Spalten"&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
   
--   [Transformations-Editor für Fuzzysuche Gruppierung &#40;Registerkarte "Erweitert"&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
+-   [Editor für Fuzzygruppierung Transformation &#40;Registerkarte "Erweitert"&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   

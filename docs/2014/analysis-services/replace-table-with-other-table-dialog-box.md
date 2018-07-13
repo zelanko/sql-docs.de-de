@@ -1,5 +1,5 @@
 ---
-title: Ersetzen Sie die Tabelle mit anderen (Dialogfeld) | Microsoft Docs
+title: Tabelle mit der Sie im Dialogfeld andere Tabelle ersetzen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.replacetable.f1
 helpviewer_keywords:
 - Replace Table with Other Table dialog box
 ms.assetid: 7ca304bf-a01f-43db-bbbc-0572976425b2
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7a2738bec003a9b94ef90554a5c21b605436d72b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e442c06763be7c357835a1f82148cbbb61095725
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147997"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214030"
 ---
 # <a name="replace-table-with-other-table-dialog-box"></a>Tabelle durch eine andere Tabelle ersetzen (Dialogfeld)
   In **können Sie im Dialogfeld** Tabelle durch eine andere Tabelle ersetzen [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] eine vorhandene Tabelle in einer Datenquellensicht durch eine Tabelle in der zugrunde liegenden Datenquelle ersetzen, die noch nicht in der Datenquellensicht enthalten ist. Um das Dialogfeld **Tabelle durch eine andere Tabelle ersetzen** anzuzeigen, klicken Sie im **Datenquellensicht-Designer** mit der rechten Maustaste im Bereich **Diagramm** oder **Tabellen** auf den Namen einer Tabelle, und wählen Sie dann unter **Tabelle ersetzen** die Option **Durch andere Tabelle**aus.  

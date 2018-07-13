@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - indexes [SQL Server], creating
 - spatial indexes [SQL Server], dropping
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 188c001672c31b4fdf4b72490553b7f65ccf0cb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 595a45a89413359861dc9298068622a076c693e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151094"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181629"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Erstellen, Ändern und Löschen von räumlichen Indizes
-  Ein räumlicher Index kann effizienter ausführen bestimmte Vorgänge für eine Spalte mit der `geometry` oder `geography` -Datentyp (eine *räumliche Spalte*). Für eine räumliche Spalte können mehrere räumliche Indizes angegeben werden. Dies ist beispielsweise hilfreich, wenn verschiedene Mosaikparameter in einer Spalte indiziert werden sollen.  
+  Ein räumlicher Index kann effizienter ausführen bestimmter Vorgänge für eine Spalte mit dem `geometry` oder `geography` -Datentyp (eine *räumliche Spalte*). Für eine räumliche Spalte können mehrere räumliche Indizes angegeben werden. Dies ist beispielsweise hilfreich, wenn verschiedene Mosaikparameter in einer Spalte indiziert werden sollen.  
   
  Die Erstellung von räumlichen Indizes unterliegt einigen Einschränkungen. Weitere Informationen zu den Beschränkungen von räumlichen Indizes finden Sie unter [Erstellen, Ändern und Löschen von räumlichen Indizes](#restrictions) in diesem Thema.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36151094"
   
 11. Geben Sie auf der Seite **räumlich** die Werte ein, die Sie für die räumlichen Eigenschaften des Index verwenden möchten.  
   
-     Beim Erstellen eines Index für eine `geometry` Typspalte, geben Sie die **(*`X-min`*,*`Y-min`*)** und **(*`X-max`*,*`Y-max`*)** Koordinaten des umgebenden Felds. Bei einem Index für eine `geography` Typspalte, die umgebenden Felder schreibgeschützt nach dem Angeben der **Geografieraster** Mosaikschema, weil im geografierastermosaik kein umgebendes Feld verwendet wird.  
+     Beim Erstellen eines Index für eine `geometry` Typspalte, Sie müssen angeben, die **(*`X-min`*,*`Y-min`*)** und **(*`X-max`*,*`Y-max`*)** Koordinaten des umgebenden Felds. Bei einem Index für eine `geography` Typspalte, die umgebenden Felder schreibgeschützt nach dem Angeben der **Geografieraster** Mosaikschema, da geografierastermosaik kein umgebendes Feld verwendet wird.  
   
      Optional können Sie benutzerdefinierte Werte für das Feld **Zellen pro Objekt** und für die Rasterdichte auf jeder Ebene des Mosaikschemas angeben. Die Standardanzahl von Zellen pro Objekt ist 16 für [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] oder 8 für [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] oder höher, und die Standardrasterdichte ist **Mittel** für [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
   

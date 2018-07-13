@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - SetServiceState (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SetServiceState method
 ms.assetid: 9e1ee42d-b388-4929-89c7-8741b956c3be
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7fdcc309eca07c8fc29fa80934e6929054a59b44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f154e0eb7666fd4c8534e701f42a521b4fb70ff8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148527"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222530"
 ---
 # <a name="setservicestate-method-wmi-msreportserverconfigurationsetting"></a>SetServiceState-Methode (WMI: MSReportServer_ConfigurationSetting)
   Aktiviert und deaktiviert den Berichtsserver-Windows-Dienst und den Berichtsserver-Webdienst.  
@@ -47,13 +47,13 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
   
 ## <a name="parameters"></a>Parameter  
  *EnableWindowsService*  
- Ein `Boolean` Wert, der angibt, des Status des Windows-Diensts. Der Wert `true` startet den Berichtsserver-Windows-Dienst, der Wert `false` beendet den Windows-Dienst.  
+ Ein `Boolean` Wert, der angibt, des Status des Windows-Diensts. Der Wert `true` startet den Report Server-Windows-Dienst, der Wert `false` beendet den Windows-Dienst.  
   
  *EnableWebService*  
  Ein `Boolean`-Wert, der den Status des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Webdiensts angibt. Bei dem Wert `true` wird der Webdienst des Berichtsservers gestartet. Bei dem Wert `false` wird der Webdienst beendet.  
   
  *EnableReportManager*  
- Ein `Boolean` Wert, der angibt, des gewünschten Zustands des Berichts-Managers.  
+ Ein `Boolean` Wert, der den gewünschten Status des Berichts-Managers.  
   
  *HRESULT*  
  [out] Wert, der angibt, ob der Aufruf erfolgreich war oder zu einem Fehler geführt hat.  

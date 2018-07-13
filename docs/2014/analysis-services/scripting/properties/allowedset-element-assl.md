@@ -1,5 +1,5 @@
 ---
-title: AllowedSet-Element (ASSL) | Microsoft Docs
+title: AllowedSet-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AllowedSet element
 ms.assetid: 4aff2e03-6e1f-4f1a-b99d-d86bba25ab9b
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 03ea2fddea92bfbac7152338a17f9c547ddbbf3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57282fc21a17c8b83c91712598781399617d3979
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061684"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323060"
 ---
 # <a name="allowedset-element-assl"></a>AllowedSet-Element (ASSL)
   Enthält einen Mengenausdruck, der definiert, die Menge zulässiger Berechtigungen für eine [Rolle](../objects/role-element-assl.md) Element auf ein Attribut.  
@@ -62,7 +62,7 @@ ms.locfileid: "36061684"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element, das das übergeordnete Element des entspricht `AllowedSet` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.AttributePermission>.  
+ Das Element, das dem übergeordneten entspricht `AllowedSet` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.AttributePermission>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

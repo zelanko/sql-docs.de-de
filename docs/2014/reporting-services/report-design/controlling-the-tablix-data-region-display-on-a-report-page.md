@@ -1,5 +1,5 @@
 ---
-title: Steuern der Tablix-Datenbereichsanzeige auf einer Berichtsseite (Berichts-Generator und SSRS) | Microsoft Docs
+title: Steuern der Tablix-Datenbereichsanzeige auf einer Berichtsseite (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0e0221f8e610b7924c482492f0bc60b86bf8704e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6484cf1a0ed924c740f4235873169c03daacc71e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149547"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179237"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page-report-builder-and-ssrs"></a>Steuern der Tablix-Datenbereichsanzeige auf einer Berichtsseite (Berichts-Generator und SSRS)
   In diesem Thema werden die Eigenschaften für einen Tablix-Datenbereich beschrieben, die Sie modifizieren können, um die Darstellung eines Tablix-Datenbereichs bei der Anzeige des Datenbereichs in einem Bericht zu ändern.  
@@ -38,7 +38,7 @@ ms.locfileid: "36149547"
   
 -   **Anzeigen einer Meldung, wenn keine Daten vorhanden sind**. Wenn zur Laufzeit keine Daten für ein Berichtsdataset vorhanden sind, können Sie eine eigene Meldung schreiben, die statt des Datenbereichs angezeigt werden soll. Weitere Informationen finden Sie unter [Festlegen einer Meldung über fehlende Daten für einen Datenbereich &#40;Berichts-Generator und SSRS&#41;](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md).  
   
--   **Bedingtes Ausblenden von Daten**. Sie können die Hidden-Eigenschaft auf festlegen, um bedingt zu steuern, ob ein- oder Ausblenden eines Datenbereichs oder Teile eines Datenbereichs, `True` oder auf einen Ausdruck. Ausdrücke können Verweise auf Berichtsparameter enthalten. Sie können auch ein Element zum Ein-/Ausschalten angeben, sodass die Benutzer entscheiden können, ob Detaildaten angezeigt werden sollen. Weitere Informationen finden Sie unter [Drilldownaktion &#40;Berichts-Generator und SSRS&#41;](drilldown-action-report-builder-and-ssrs.md).  
+-   **Bedingtes Ausblenden von Daten**. Sie können die Hidden-Eigenschaft auf festgelegt, um bedingt zu steuern, ob ein Datenbereich oder Teile eines Datenbereichs angezeigt oder ausgeblendet, `True` oder auf einen Ausdruck. Ausdrücke können Verweise auf Berichtsparameter enthalten. Sie können auch ein Element zum Ein-/Ausschalten angeben, sodass die Benutzer entscheiden können, ob Detaildaten angezeigt werden sollen. Weitere Informationen finden Sie unter [Drilldownaktion &#40;Berichts-Generator und SSRS&#41;](drilldown-action-report-builder-and-ssrs.md).  
   
 -   **Zusammenführen von Zellen.** Mehrere zusammenhängende Zellen in einer Tabelle können zu einer einzelnen Zelle kombiniert werden. Dies wird als mehrere Spalten überspannende Zellen oder Zusammenführung von Zellen bezeichnet. Zellen können nur horizontal oder vertikal kombiniert werden. Wenn Sie Zellen zusammenführen, bleiben nur die Daten in der ersten Zelle erhalten. Daten in anderen Zellen werden entfernt. Zusammengeführte Zellen können in ihre ursprünglichen Spalten aufgeteilt werden. Weitere Informationen finden Sie unter [Zusammenführen von Zellen in einem Datenbereich (Berichts-Generator und SSRS)](merge-cells-in-a-data-region-report-builder-and-ssrs.md).  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36149547"
  [Verknüpfen mehrerer Datenbereiche mit einem Dataset &#40;Berichts-Generator und SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [Geschachtelte Datenbereiche &#40;Berichts-Generator und SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
  [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
- [Steuern der Seite unterbrochen wird, Überschriften, Spalten und Zeilen &#40;Berichts-Generator und SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [Steuern von Seitenumbrüchen, Überschriften, Spalten und Zeilen &#40;Berichts-Generator und SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
  [Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Tabellen (Berichts-Generator und SSRS)](tables-report-builder-and-ssrs.md)   
  [Matrizen (Berichts-Generator und SSRS)](create-a-matrix-report-builder-and-ssrs.md)   

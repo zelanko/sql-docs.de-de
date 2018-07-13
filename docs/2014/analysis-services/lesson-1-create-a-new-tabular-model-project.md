@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 1: Erstellen ein neuen Tabellenmodellprojekts | Microsoft Docs'
+title: 'Lektion 1: Erstellen ein neuen tabellarischen Modellprojekts | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 6a5f5c938289963373d09891f20c3a87495a33a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ffb0804ab6edd3afbbf3a3e618ca7c417744b21
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148495"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226630"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Lektion 1: Erstellen eines neuen Tabellenmodellprojekts
   In dieser Lektion erstellen Sie ein neues leeres Tabellenmodellprojekt in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Sobald das neue Projekt erstellt wird, können Sie mithilfe des Tabellenimport-Assistenten Daten hinzufügen. Zusätzlich zum Erstellen eines neuen Projekts bietet diese Lektion auch eine kurze Einführung in die Umgebung zur Tabellenmodellerstellung in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
- Weitere Informationen zu den verschiedenen Typen von Tabellenmodellprojekten finden Sie unter [Tabellenmodellprojekte &#40;SSAS – tabellarisch&#41;](tabular-models/tabular-model-projects-ssas-tabular.md). Weitere Informationen zu der Umgebung zur tabellenmodellerstellung finden Sie unter [Tabellenmodelldesigners &#40;SSAS – tabellarisch&#41;](tabular-model-designer-ssas-tabular.md).  
+ Weitere Informationen zu den verschiedenen Typen von Tabellenmodellprojekten finden Sie unter [Tabellenmodellprojekte &#40;SSAS – tabellarisch&#41;](tabular-models/tabular-model-projects-ssas-tabular.md). Weitere Informationen zu der Umgebung für die tabellenmodellerstellung finden Sie unter [Designer für tabellarische Modelle &#40;SSAS – tabellarisch&#41;](tabular-model-designer-ssas-tabular.md).  
   
  Geschätzte Zeit zum Bearbeiten dieser Lektion: **10 Minuten**  
   
@@ -37,7 +37,7 @@ ms.locfileid: "36148495"
   
 1.  Klicken Sie in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf das Menü **Datei** , auf **Neu**und dann auf **Projekt**.  
   
-2.  In der **neues Projekt** Dialogfeld unter **installierte Vorlagen**, klicken Sie auf **Business Intelligence**, klicken Sie dann auf **Analysis Services**, und Klicken Sie dann auf **tabellarischen Analysis Services-Projekts**.  
+2.  In der **neues Projekt** Dialogfeld **installierte Vorlagen**, klicken Sie auf **Business Intelligence**, klicken Sie dann auf **Analysis Services**, und Klicken Sie dann auf **tabellarischen Analysis Services-Projekts**.  
   
 3.  In **Namen**, Typ `AW Internet Sales Tabular Model`, und geben einen Speicherort für die Projektdateien.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36148495"
 ## <a name="understanding-the-sql-server-data-tools-tabular-model-authoring-environment"></a>Einblick in die SQL Server Data Tools-Umgebung zur Tabellenmodellerstellung  
  Nachdem Sie ein neues Projekt für tabellarische Modelle erstellt haben, soll nun die Umgebung zur Erstellung tabellarischer Modelle in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] (Visual Studio 2010 oder höher) erkundet werden.  
   
- Nach der Erstellung des Projekts wird es in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] geöffnet. Ein leeres Modell wird im Modell-Designer angezeigt, und die Datei **Model.bim** wird im Fenster des **Projektmappen-Explorers** ausgewählt. Wenn Sie Daten hinzufügen, werden Tabellen und Spalten im Designer angezeigt. Wenn Sie den Designer (das leere Fenster mit der Registerkarte "Model.bim") in sehen **Projektmappen-Explorer**unter `AW Internet Sales Tabular Model`, doppelklicken klicken Sie auf die **Model.bim** Datei.  
+ Nach der Erstellung des Projekts wird es in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] geöffnet. Ein leeres Modell wird im Modell-Designer angezeigt, und die Datei **Model.bim** wird im Fenster des **Projektmappen-Explorers** ausgewählt. Wenn Sie Daten hinzufügen, werden Tabellen und Spalten im Designer angezeigt. Wenn Sie nicht in den Designer (das leere Fenster mit der Registerkarte Model.bim), sehen **Projektmappen-Explorer**unter `AW Internet Sales Tabular Model`, klicken Sie mit der Doppelklicken auf die **Model.bim** Datei.  
   
  Sie können die grundlegenden Eigenschaften für das Projekt im Fenster **Eigenschaften** anzeigen. In **Projektmappen-Explorer**, klicken Sie auf `AW Internet Sales Tabular Model`. Im Fenster **Eigenschaften** unter **Projektdatei**wird **AW Internet Sales Tabular Model.smproj**angezeigt. Dies ist der Projektdateiname, und unter **Projektordner**wird der Projektdateispeicherort angegeben.  
   

@@ -1,5 +1,5 @@
 ---
-title: Abrufen (Dialogfeld) (Quellcodeverwaltung) | Microsoft Docs
+title: Abrufen (Dialogfeld) (Quellcodeverwaltung) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VisualStudio.SourceControl.GetVersionDialog
 helpviewer_keywords:
 - Get dialog box
 ms.assetid: 048564d3-6c58-405b-8b57-b690fbfdbe9e
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: de0c8be0ee4c5aa37e8ce72d2b1499c10ab5adbd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 54f349916d429c7872b479077043608d53a16bde
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148675"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193950"
 ---
 # <a name="get-dialog-box-source-control"></a>Abrufen (Dialogfeld der Quellcodeverwaltung)
   Ruft eine schreibgeschützte Kopie des ausgewählten Elements aus der Quellcode-Verwaltungsdatenbank in den aktuell verwendeten oder einen anderen angegebenen Ordner ab.  
   
 ## <a name="dialog-box-access"></a>Zugriff auf das Dialogfeld  
- Wählen Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ein Element im Projektmappen-Explorer aus. Auf der **Datei** Menü klicken Sie auf **Quellcodeverwaltung** klicken Sie dann auf **abrufen**.  
+ Wählen Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ein Element im Projektmappen-Explorer aus. Auf der **Datei** Menü klicken Sie auf **Quellcodeverwaltung** klicken Sie dann auf **erhalten**.  
   
 > [!NOTE]  
 >  Als Alternative können Sie auch im Projektmappen-Explorer mit der rechten Maustaste auf das entsprechende Element klicken, um das Dialogfeld aufzurufen.  
@@ -44,7 +44,7 @@ ms.locfileid: "36148675"
  **Flache Ansicht**  
  Zeigt die Dateien, die abgerufen werden, als flache Listen unter der entsprechenden Verbindung mit der Quellcodeverwaltung an.  
   
- **Änderungsdatum**  
+ **Änderungszeit**  
  Zeigt den Zeitpunkt an, zu dem ein Element zuletzt geändert wurde.  
   
  **Name**  

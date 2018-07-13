@@ -1,5 +1,5 @@
 ---
-title: Details zu verwalteten Instanzen (SQL Server-Hilfsprogramm) | Microsoft Docs
+title: Details zu verwalteten Instanzen (SQL Server-Hilfsprogramm) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e51b7bb-a733-4852-8c33-7f4dbdf931c2
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 46dfa6e715e1c1b14fcd37d90bbf90a5a50a125e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 042a6c0cb83b0bba4cbf80608dbfa52496e95394
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148677"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178471"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>Details zu verwalteten Instanzen (SQL Server-Hilfsprogramm)
   Die Informationen in der Listenansicht Verwaltete Instanzen des Hilfsprogramm-Explorers enthalten Auslastungsdaten für einzelne Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Verlaufsdaten zur CPU-Auslastung sowie Details zur Speicherplatzauslastung auf Dateiebene. Zudem können Sie hier Richtlinienschwellenwerte anzeigen und aktualisieren. Richtlinienschwellenwerte können auf der Ebene von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanzen, per Computer, für Datenbank- und Protokolldateien sowie auf der Ebene von Speichervolumes gesteuert werden. Darüber hinaus können Sie Eigenschaftendetails für einzelne verwaltete Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]anzeigen.  

@@ -1,5 +1,5 @@
 ---
-title: Löschen der Analysis Services Caches | Microsoft Docs
+title: Löschen der Analysis Services Caches | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 02a7a6620927472b0019cb4d23a3695f02dd7138
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6393e9d52bbe026adcda7db0c451e64a364ecbc1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061504"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211850"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Löschen des Zwischenspeichers von Analysis Services
   Zur Verbesserung der Abfrageleistung werden Daten von Analysis Services zwischengespeichert. In diesem Thema sind Empfehlungen für die Verwendung des XMLA ClearCache-Befehls enthalten. Der Befehl dient dazu, Zwischenspeicher zu leeren, die als Antwort auf eine MDX-Abfrage erstellt wurden. Die Auswirkungen der Ausführung von ClearCache sind abhängig davon, ob Sie ein tabellarisches oder ein mehrdimensionales Modell verwenden.  
@@ -36,7 +36,7 @@ ms.locfileid: "36061504"
   
  Durch das Ausführen von ClearCache wird auch der speicherinterne Cache in der xVelocity-Engine für Datenanalyse im Arbeitsspeicher (VertiPaq) gelöscht. Die xVelocity-Engine behält einen kleinen Satz zwischengespeicherter Ergebnisse bei. Durch das Ausführen von ClearCache werden diese Zwischenspeicher in der xVelocity-Engine ungültig.  
   
- Schließlich das Ausführen von ClearCache auch restliche Daten entfernt sind, die verbleibt im Arbeitsspeicher, wenn ein tabellarisches Modell neu, für konfiguriert wird `DirectQuery` Modus. Dies ist besonders wichtig, wenn das Modell sensible Daten enthält, die engen Kontrollen unterliegen. In diesem Fall ist das Ausführen von ClearCache eine vorbeugende Aktion, die Sie ergreifen können, um sicherzustellen, dass sensible Daten nur dort vorhanden sind, wo Sie sie erwarten. Das manuelle Löschen des Zwischenspeichers ist notwendig, wenn Sie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] verwenden, um das Modell bereitzustellen und den Abfragemodus zu ändern. Demgegenüber wird durch die Verwendung von [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] zur Bestimmung von `DirectQuery` auf dem Modell der Zwischenspeicher durch die Partitionen automatisch gelöscht, wenn Sie das Modell umschalten, um diesen Abfragemodus zu verwenden.  
+ Zum Schluss das Ausführen von ClearCache auch restliche Daten entfernt sind, die verbleibt im Arbeitsspeicher, wenn ein tabellarisches Modell für neu konfiguriert wird `DirectQuery` Modus. Dies ist besonders wichtig, wenn das Modell sensible Daten enthält, die engen Kontrollen unterliegen. In diesem Fall ist das Ausführen von ClearCache eine vorbeugende Aktion, die Sie ergreifen können, um sicherzustellen, dass sensible Daten nur dort vorhanden sind, wo Sie sie erwarten. Das manuelle Löschen des Zwischenspeichers ist notwendig, wenn Sie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] verwenden, um das Modell bereitzustellen und den Abfragemodus zu ändern. Demgegenüber wird durch die Verwendung von [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] zur Bestimmung von `DirectQuery` auf dem Modell der Zwischenspeicher durch die Partitionen automatisch gelöscht, wenn Sie das Modell umschalten, um diesen Abfragemodus zu verwenden.  
   
  Verglichen mit den Empfehlungen zum Löschen von mehrdimensionalen Modellzwischenspeichern während der Leistungstests gibt es keine umfassende Empfehlung zum Löschen von tabellarische Modellzwischenspeichern. Wenn Sie die Bereitstellung eines tabellarischen Modells nicht verwalten, das sensible Daten enthält, gibt es keine bestimmte administrative Aufgabe, die erfordert, den Zwischenspeicher zu löschen.  
   

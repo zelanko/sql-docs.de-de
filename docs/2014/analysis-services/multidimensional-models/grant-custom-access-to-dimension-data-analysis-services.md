@@ -1,5 +1,5 @@
 ---
-title: Erteilen von benutzerdefiniertem Zugriff auf dimensiondaten (Analysis Services) | Microsoft Docs
+title: Erteilen von benutzerdefiniertem Zugriff auf dimensiondaten (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.dimensiondata.f1
 helpviewer_keywords:
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - ApplyDenied property
 ms.assetid: b028720d-3785-4381-9572-157d13ec4291
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 509cc6dc34ce5c62bcf56f38fe3f229d2a081731
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae4c816ae333edf892b836d25161b70fc81e58e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148942"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215970"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Erteilen eines benutzerdefinierten Zugriffs auf Dimensiondaten (Analysis Services)
   Nach der Aktivierung des Lesezugriffs auf einen Cube können Sie zusätzliche Berechtigungen festlegen, die den Zugriff auf Dimensionselemente ausdrücklich zulassen oder verweigern (einschließlich der Measures, die in der Measuredimension enthalten sind, die alle in einem Cube verwendeten Measures enthält). Wenn Sie beispielsweise mehrere Kategorien von Resellern haben, möchten Sie möglicherweise Berechtigungen festlegen, um Daten für einen bestimmten Unternehmenstyp auszuschließen. In der folgenden Abbildung ist die Vorher-und-Nachher-Auswirkung des Verweigerns des Zugriffs auf den Unternehmenstyp "Warehouse" in der Dimension "Reseller" dargestellt.  
@@ -75,7 +75,7 @@ ms.locfileid: "36148942"
 5.  Klicken Sie optional auf **erweitert** aktivieren `Visual Totals` für diese Attributhierarchie. Mit dieser Option werden Aggregation auf der Basis der durch die Rolle verfügbaren Elemente neu berechnet.  
   
     > [!NOTE]  
-    >  Beim Zuweisen von Berechtigungen, die Dimensionselemente entfernen, werden aggregierte Gesamtwerte nicht automatisch neu berechnet. Nehmen Sie an der `All` Element einer Attributhierarchie gibt die Anzahl 200 zurück, bevor Berechtigungen angewendet werden. Nach dem Anwenden von Berechtigungen, die Zugriff auf einige Elemente Verweigern `All` immer noch 200 zurück, auch wenn die für den Benutzer sichtbaren Elementwerte viel weniger sind. Um Missverständnisse bei den Consumern Ihres Cubes vermeiden, können Sie konfigurieren die `All` angehören, das Aggregat der nur für die Elemente, zu denen Rollenmitglieder gehören, statt als Aggregat für alle Elemente der Attributhierarchie. Um dieses Verhalten zu aktivieren, aktivieren Sie `Visual Totals` auf die **erweitert** Registerkarte beim dimensionssicherheit konfigurieren. Nach der Aktivierung wird das Aggregat zum Abfragezeitpunkt berechnet, statt von vorab berechneten Aggregationen abgerufen zu werden. Dies kann eine spürbare Auswirkung auf die Abfrageleistung und sollte nur verwendet werden, wenn es notwendig ist.  
+    >  Beim Zuweisen von Berechtigungen, die Dimensionselemente entfernen, werden aggregierte Gesamtwerte nicht automatisch neu berechnet. Nehmen Sie an der `All` Element einer Attributhierarchie gibt die Anzahl 200 zurück, bevor Berechtigungen angewendet werden. Nach dem Anwenden von Berechtigungen, die Zugriff auf einige Elemente Verweigern `All` immer noch 200 zurück, auch wenn die für den Benutzer sichtbaren Elementwerte viel weniger sind. Um Missverständnisse bei den Consumern Ihres Cubes zu vermeiden, können Sie konfigurieren die `All` angehören, das Aggregat nur für die Elemente, zu denen Rollenmitglieder gehören, und nicht als Aggregat für alle Elemente der Attributhierarchie. Zum Aufrufen dieses Verhaltens können `Visual Totals` auf die **erweitert** Registerkarte Wenn dimensionssicherheit konfigurieren. Nach der Aktivierung wird das Aggregat zum Abfragezeitpunkt berechnet, statt von vorab berechneten Aggregationen abgerufen zu werden. Dies kann eine spürbare Auswirkung auf die Abfrageleistung und sollte nur verwendet werden, wenn es notwendig ist.  
   
 ## <a name="hiding-measures"></a>Ausblenden von Measures  
  Stellen Sie in [Grant custom access to cell data &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)wurde erläutert, dass zum vollständigen Ausblenden aller visuellen Aspekte eines Measures – nicht nur seiner Zellendaten – Berechtigungen für Dimensionselemente erforderlich sind. In diesem Abschnitt wird erklärt, wie Sie den Zugriff auf die Objektmetadaten eines Measures verweigern.  
@@ -115,16 +115,16 @@ ms.locfileid: "36148942"
   
 -   Wenn die Datenbankrolle kein Standardelement für das Attribut definiert, verwendet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dieses Standardmitglied, das für das Attribut selbst definiert wurde. Das Standardelement für ein Attribut ist – vorausgesetzt, Sie machen keine anderen Angaben – das `All`-Element (es sei denn, das Attribut ist als nicht aggregierbar definiert).  
   
- Nehmen wir beispielsweise an, eine Datenbankrolle gibt `Male` als Standardelement für das `Gender` Attribut. Wenn eine Abfrage nicht ausdrücklich sowohl das `Gender`-Attribut einschließt als auch ein anderes Element für dieses Attribut angibt, gibt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ein Dataset zurück, das lediglich männliche (male) Kunden einschließt. Weitere Informationen zum Festlegen des Standardelements finden Sie unter [Definieren eines Standardelements](attribute-properties-define-a-default-member.md).  
+ Nehmen wir beispielsweise an, die eine Datenbankrolle gibt `Male` als Standardelement für die `Gender` Attribut. Wenn eine Abfrage nicht ausdrücklich sowohl das `Gender`-Attribut einschließt als auch ein anderes Element für dieses Attribut angibt, gibt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ein Dataset zurück, das lediglich männliche (male) Kunden einschließt. Weitere Informationen zum Festlegen des Standardelements finden Sie unter [Definieren eines Standardelements](attribute-properties-define-a-default-member.md).  
   
  **Sichtbarer Gesamtwert aktivieren**  
  Die VisualTotals-Eigenschaft gibt an, ob die angezeigten aggregierten Zellenwerte gemäß allen Zellenwerten oder nur gemäß den Zellenwerten berechnet werden, die für die Datenbankrolle sichtbar sind.  
   
- Die VisualTotals-Eigenschaft ist standardmäßig deaktiviert (festgelegt auf `False`). Diese Standardeinstellung maximiert die Leistung, da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] das Gesamtergebnis aller Zellenwerte schnell berechnen kann, ohne Zeit für das Auswählen der zu berechnenden Zellenwerte aufwenden zu müssen.  
+ Die VisualTotals-Eigenschaft ist standardmäßig deaktiviert (Legen Sie auf `False`). Diese Standardeinstellung maximiert die Leistung, da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] das Gesamtergebnis aller Zellenwerte schnell berechnen kann, ohne Zeit für das Auswählen der zu berechnenden Zellenwerte aufwenden zu müssen.  
   
  Das Deaktivieren der VisualTotals-Eigenschaft kann jedoch zum Sicherheitsproblem werden, wenn ein Benutzer die aggregierten Zellenwerte verwenden kann, um Werte für Attributelemente abzuleiten, auf die die Datenbankrolle des Benutzers keinen Zugriff hat. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet beispielsweise die Werte für drei Attributelemente, um einen aggregierten Zellenwert zu berechnen. Die Datenbankrolle verfügt über die Zugriffsrechte zum Anzeigen zwei dieser drei Attributelemente. Mithilfe des aggregierten Zellenwertes wäre ein Mitglied dieser Datenbankrolle in der Lage, den Wert für das dritte Attributelement abzuleiten.  
   
- VisualTotals-Eigenschaft festlegen, um `True` können dieses Risiko vermeiden. Wenn Sie die VisualTotals-Eigenschaft aktivieren, kann eine Datenbankrolle aggregierte Gesamtergebnisse nur für Dimensionselemente anzeigen, für die die Rolle die entsprechende Berechtigung aufweist.  
+ Festlegen der VisualTotals-Eigenschaft auf `True` können dieses Risiko vermeiden. Wenn Sie die VisualTotals-Eigenschaft aktivieren, kann eine Datenbankrolle aggregierte Gesamtergebnisse nur für Dimensionselemente anzeigen, für die die Rolle die entsprechende Berechtigung aufweist.  
   
  **Check**  
  Klicken Sie, um die auf dieser Seite definierte MDX-Syntax zu testen.  

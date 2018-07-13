@@ -1,5 +1,5 @@
 ---
-title: Identitätswechsel (Dialogfeld) (Tabellenimport-Assistent) | Microsoft Docs
+title: Identitätswechsel (Dialogfeld) (Tabellenimport-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.impersonationinfo.f1
 ms.assetid: bee7eee5-0650-41f1-a372-5076ae97a58c
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c53b71a06904bd3f898efa3dd2d9946670193845
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a5c9d9b49d41d8f9320ff414925bb4532145d16f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148496"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245680"
 ---
 # <a name="impersonation-information-dialog-box-table-import-wizard"></a>Identitätswechselinformationen (Dialogfeld, Tabellenimport-Assistent)
   Verwenden Sie die Seite **Identitätswechselinformationen** , um die Anmeldeinformationen anzugeben, mit denen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] eine Verbindung mit der Datenquelle herstellt. Weitere Informationen zum Identitätswechsel mit Anmeldeinformationen finden Sie unter [Impersonation &#40;SSAS Tabular&#41;](tabular-models/impersonation-ssas-tabular.md).  
@@ -33,7 +33,7 @@ ms.locfileid: "36148496"
  **Benutzername**  
  Geben Sie die Domäne und den Name des zu verwendenden Benutzerkontos ein. Verwenden Sie folgendes Format:  
   
- *\<Domänenname >* **\\**  *\<Benutzerkontoname >*  
+ *\<Domänenname >* **\\**  *\<Benutzerkontonamen >*  
   
  Die Option ist nur verfügbar, wenn die Option **Bestimmten Benutzernamen und bestimmtes Kennwort verwenden** ausgewählt ist.  
   

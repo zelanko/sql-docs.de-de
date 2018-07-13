@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, application code usage
 - XML [SQL Server], FOR XML clause
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 73ca2ee9220b73e329ab829f3533274416b1855b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a8cb0fb56cd1715331c5c3f0e09c4319e0b82335
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061344"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254112"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Verwenden von FOR XML-Ergebnissen in Anwendungscode
   Mithilfe von FOR XML-Klauseln in SWL-Abfragen können Sie Abfrageergebnisse abrufen und sogar in XML-Daten umwandeln. Diese Funktionalität bietet Ihnen die folgenden Möglichkeiten, wenn FOR XML-Abfrageergebnisse in XML-Anwendungscode verwendet werden können:  
@@ -39,7 +39,7 @@ ms.locfileid: "36061344"
  Dieses Thema enthält Beispiele und veranschaulicht diese Vorgehensweisen.  
   
 ## <a name="retrieving-for-xml-data-with-ado-and-xml-data-islands"></a>Abrufen von FOR XML-Daten mit ADO und XML-Dateninseln  
- Das ADO `Stream` Objekt oder anderen Objekten, die die COM unterstützt `IStream` -Schnittstelle, wie z. B. Active Server Pages (ASP) `Request` und `Response` Objekte zum Aufnehmen der Ergebnisse bei der Arbeit mit FOR XML-Abfragen verwendet werden können.  
+ Das ADO `Stream` Objekt oder andere Objekte, die die COM unterstützt `IStream` -Schnittstelle, wie z. B. der Active Server Pages (ASP) `Request` und `Response` können Objekte, um die Ergebnisse enthalten, bei der Arbeit mit FOR XML-Abfragen verwendet werden.  
   
  Der folgende ASP-Code zeigt z. B. die Ergebnisse der Abfrage eine `xml` -Datentypspalte Demographics in der Sales.Store-Tabelle der AdventureWorks-Beispieldatenbank. Insbesondere sucht die Abfrage nach dem Instanzwert dieser Spalte für die Zeile, in der die CustomerID gleich 3 ist.  
   
@@ -209,9 +209,9 @@ ms.locfileid: "36061344"
   
 2.  `SqlDataAdapter` wird dann als Datenadapter verwendet, und es verwendet die SQL-Verbindung und eine angegebene SQL-Abfragezeichenfolge, um die FOR XML-Abfrage auszuführen.  
   
-3.  Nach dem Ausführen der Abfrage der `SqlDataAdapter.Fill` -Methode wird aufgerufen, und übergeben Sie eine Instanz von einem `DataSet,` myDataSet übergeben, um das Dataset mit der Ausgabe der FOR XML-Abfrage zu füllen.  
+3.  Nach dem Ausführen der Abfrage, die `SqlDataAdapter.Fill` Methode wird aufgerufen und an eine Instanz von einem `DataSet,` myDataSet übergeben, um das Dataset mit der Ausgabe der FOR XML-Abfrage zu füllen.  
   
-4.  Die `DataSet.GetXml` Methode wird aufgerufen, um die Ergebnisse der Abfrage als Zeichenfolge zurückzugeben, in der Server generierten HTML-Seite angezeigt werden können.  
+4.  Die `DataSet.GetXml` Methode wird aufgerufen, um die Ergebnisse der Abfrage als Zeichenfolge zurück, die in der Server generierten HTML-Seite angezeigt werden kann.  
   
     ```  
     <%@ Page Language="VB" %>  
@@ -294,7 +294,7 @@ SqlConnection closed.
 ```  
   
 > [!NOTE]  
->  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` Datentyp-Unterstützung, können Sie fordern, dass das Ergebnis einer FOR XML-Abfrage zurückgegeben werden, als `xml` -Datentyp, statt als Zeichenfolgen- oder imagedaten typisierte durch Angabe der [TYPE-Direktive](type-directive-in-for-xml-queries.md). Wenn die TYPE-Direktive in FOR XML-Abfragen verwendet wird, ermöglicht sie den programmgesteuerten Zugriff auf die FOR XML-Ergebnisse, wie das auch in [Verwenden von XML-Daten in Anwendungen](use-xml-data-in-applications.md)gezeigt wird.  
+>  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` -Datentyp-Unterstützung können Sie anfordern, dass das Ergebnis einer FOR XML-Abfrage als zurückgegeben werden `xml` -Datentyp, statt als Zeichenfolgen- oder imagedaten typisierte durch Angabe der [TYPE-Direktive](type-directive-in-for-xml-queries.md). Wenn die TYPE-Direktive in FOR XML-Abfragen verwendet wird, ermöglicht sie den programmgesteuerten Zugriff auf die FOR XML-Ergebnisse, wie das auch in [Verwenden von XML-Daten in Anwendungen](use-xml-data-in-applications.md)gezeigt wird.  
   
 ## <a name="see-also"></a>Siehe auch  
  [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)  

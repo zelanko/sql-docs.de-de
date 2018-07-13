@@ -1,5 +1,5 @@
 ---
-title: Ausführen von Vorlagendateien mit der ' CommandStream '-Eigenschaft | Microsoft Docs
+title: Ausführen von Vorlagendateien mit der ' CommandStream '-Eigenschaft | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - CommandStream property
 ms.assetid: 55c564e3-56d1-4d85-bcaa-703e2905dd57
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fd2f29f14d4af758581e368986398720dd3b5a0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d149b40acdc7fc81c79f8800787d093636753d39
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061567"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331290"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>Ausführen von Vorlagendateien mit der 'CommandStream'-Eigenschaft
-  In diesem Beispiel wird veranschaulicht, wie Vorlagendateien, die aus SQL- oder XPath-Abfragen bestehende Vorlagendateien mithilfe der CommandStream-Eigenschaft des SqlXmlCommand-Objekt angegeben werden können. In dieser Anwendung eine FileStreamobject für eine Befehlsdatei geöffnet wird, und der Dateidatenstrom wird zugewiesen, als die CommandStream, die ausgeführt wird.  
+  In diesem Beispiel wird veranschaulicht, wie Vorlagendateien, die aus SQL- oder XPath-Abfragen bestehende Vorlagendateien mithilfe der ' CommandStream '-Eigenschaft des SqlXmlCommand-Objekt angegeben werden können. In dieser Anwendung eine FileStreamobject für eine Befehlsdatei geöffnet wird, und der Dateidatenstrom wird zugewiesen, als der ' CommandStream ', der ausgeführt wird.  
   
- Im folgenden Beispiel wird die CommandType-Eigenschaft als SqlXmlCommandType.Template (nicht als TemplateFile) angegeben.  
+ Im folgenden Beispiel wird die CommandType-Eigenschaft als SqlXmlCommandType.Template (also nicht als TemplateFile) angegeben.  
   
  Es folgt die Beispiel-XML-Vorlage:  
   
@@ -87,7 +87,7 @@ class Test
   
 1.  Speichern Sie die in diesem Beispiel bereitgestellte XML-Vorlage in einem Ordner.  
   
-2.  Speichern Sie den C#-Code (DocSample.cs, der bereitgestellt wird), in diesem Beispiel im selben Ordner, in dem das Schema gespeichert ist. (Wenn Sie die Dateien in einem anderen Ordner speichern, müssen Sie den Code bearbeiten und den entsprechenden Verzeichnispfad für das Zuordnungsschema angeben.)  
+2.  Speichern Sie die c#-Code (DocSample.cs), der bereitgestellt wird, in diesem Beispiel im selben Ordner, in dem das Schema gespeichert ist. (Wenn Sie die Dateien in einem anderen Ordner speichern, müssen Sie den Code bearbeiten und den entsprechenden Verzeichnispfad für das Zuordnungsschema angeben.)  
   
 3.  Kompilieren Sie den Code. Verwenden Sie zur Kompilierung des Codes an der Eingabeaufforderung die folgende Zeichenfolge:  
   

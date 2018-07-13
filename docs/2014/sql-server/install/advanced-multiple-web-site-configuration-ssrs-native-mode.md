@@ -1,5 +1,5 @@
 ---
-title: Erweiterte Konfiguration für mehrere Websites (einheitlicher SSRS-Modus) | Microsoft Docs
+title: Erweiterte Konfiguration für mehrere Websites (einheitlicher SSRS-Modus) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.advancedmultiplewebsiteconfig.F1
 ms.assetid: af4ede43-2225-45b5-ae7e-9202411551ba
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 880a5a496df597e929be8063323fa833696eabc3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eafcc3b69916ba253b430a61fb5b510eb3480d91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150275"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220730"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>Erweiterte Konfiguration mehrerer Websites (einheitlicher SSRS-Modus)
   In diesem Dialogfeld können Sie die URLs erstellen und verwalten, mit denen Sie einen Berichtsserver oder den Berichts-Manager aufrufen. Im Dialogfeld **Erweiterte Konfiguration mehrerer Websites** können Sie weitere URLs erstellen, benutzerdefinierte URLs, die einen Hostheadernamen enthalten oder in denen eine IP-Adresse im Format IPv4 oder IPv6 angegeben ist.  
@@ -30,7 +30,7 @@ ms.locfileid: "36150275"
   
  Die Erstellung mehrerer URLs ist nützlich, wenn Sie verschiedene Möglichkeiten konfigurieren möchten, um auf einen Berichtsserver zugreifen zu können. Beispielsweise erfordert der Zugriff auf einen Berichtsserver über eine Intranet- und Extranet-Verbindung normalerweise für jede Art der Verbindung andere URLs.  
   
- So öffnen die **erweiterte Konfiguration für mehrere Websites** (Dialogfeld), klicken Sie auf **erweitert** auf der **Webdienst-URL** oder die **Report Manager URL**auf der Seite der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. Wenn das Dialogfeld **Erweiterte Konfiguration mehrerer Websites** offen ist, können Sie auf **Hinzufügen** oder **Bearbeiten** klicken, um neue URLs zu definieren oder vorhandene URLs zu ändern.  
+ Öffnen der **erweiterte Konfiguration für mehrere Websites** im Dialogfeld klicken Sie auf **erweitert** auf die **Webdienst-URL** oder die **Report Manager URL**auf der Seite die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Konfigurations-Manager. Wenn das Dialogfeld **Erweiterte Konfiguration mehrerer Websites** offen ist, können Sie auf **Hinzufügen** oder **Bearbeiten** klicken, um neue URLs zu definieren oder vorhandene URLs zu ändern.  
   
  Klicken Sie auf **OK** , um die Änderungen zu speichern. Wenn Sie URLs hinzufügen oder entfernen, jedoch dann das Dialogfeld ohne Klicken auf **OK**schließen, werden die Änderungen nicht gespeichert.  
   
@@ -44,12 +44,12 @@ ms.locfileid: "36150275"
   
 -   Mit**127.0.0.1** wird auf localhost zugegriffen. Dieser Wert unterstützt die lokale Verwaltung auf dem Berichtsservercomputer. Wenn Sie nur diesen Wert auswählen, können nur Benutzer, die lokal auf dem Berichtsservercomputer angemeldet sind, auf die Anwendung zugreifen.  
   
--   *Nnn.nnn.nnn.nnn* ist die IPv4-Adresse einer Netzwerkkarte auf Ihrem Computer. Wenn Ihr Netzwerk IPv6-Adressen verwendet, werden die IP-Adresse einen 128-Bit-Wert von 8 4-Byte-Feldern, die ähnlich wie das folgende Format: \<Header >:*Nnnn:nnnn:nnnn:nnnn*.  
+-   *Nnn.nnn.nnn.nnn* ist die IPv4-Adresse einer Netzwerkkarte auf Ihrem Computer. Wenn Ihr Netzwerk IPv6-Adressen verwendet, werden die IP-Adresse einem 128-Bit-Wert, der 8 4-Byte-Feldern, die ähnlich wie das folgende Format: \<Header >:*Nnnn:nnnn:nnnn:nnnn*.  
   
      Wenn Sie mehrere Karten haben, wird für jede Karte eine IP-Adresse angezeigt. Wenn Sie nur diesen Wert auswählen, wird der Anwendungszugriff auf genau diese IP-Adresse (und jeden Hostname, den ein Domänennamenserver dieser Adresse zuordnet) beschränkt. Sie können mit localhost nicht auf einen Berichtsserver zugreifen, und Sie können nicht die IP-Adressen der anderen Netzwerkkarten verwenden, die auf dem Berichtsservercomputer installiert sind.  
   
  **Port**  
- Gibt den Port an, den dieser Berichtsserver auf Anforderungen prüft. Port 80 ist der Standardport. Wenn Sie Port 80 verwenden, ist es ist nicht notwendig, diesen in die URL zu übernehmen. Wenn Sie eine andere Portnummer verwenden, Sie müssen immer es einschließen in die URL (z. B. http://localhost:8181/reports).  
+ Gibt den Port an, den dieser Berichtsserver auf Anforderungen prüft. Port 80 ist der Standardport. Wenn Sie Port 80 verwenden, ist es ist nicht notwendig, diesen in die URL zu übernehmen. Wenn Sie eine andere Portnummer verwenden, Sie müssen immer enthalten sie in der URL (z. B. http://localhost:8181/reports).  
   
  **Hostheader**  
  Wenn Sie bereits einen Hostheader in einem Domänennamenserver definiert haben, der auf Ihrem Computer aufgelöst wird, können Sie diesen Hostheader in einer URL angeben, die Sie für den Zugriff auf den Berichtsserver konfigurieren.  

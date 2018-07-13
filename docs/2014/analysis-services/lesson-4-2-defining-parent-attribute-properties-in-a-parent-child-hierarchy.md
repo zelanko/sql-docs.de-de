@@ -1,5 +1,5 @@
 ---
-title: Definieren von Eigenschaften des übergeordneten Attributs in einer über-/ Unterordnungshierarchie | Microsoft Docs
+title: Definieren von Eigenschaften des übergeordneten Attributs in einer über-/ Unterordnungshierarchie | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: a167d70ba2041a3b40da242e51b6fb99aa14e900
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 34e32c84044b1ba709ef893949ef83a612d7e4df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061506"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328580"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Definieren der Eigenschaften des übergeordneten Attributs in einer Über-/Unterordnungshierarchie
   Eine Hierarchie mit über- und untergeordneten Elementen ist eine Hierarchie in einer Dimension, die auf zwei Tabellenspalten basiert. Zusammen definieren diese Spalten die hierarchischen Beziehungen zwischen den Elementen der Dimension. Die erste Spalte, die so genannte *Elementschlüsselspalte*, identifiziert jedes Dimensionselement. Die zweite Spalte, die so genannte *übergeordnete Spalte*, identifiziert das übergeordnete Element der einzelnen Dimensionselemente. Die **NamingTemplate** -Eigenschaft eines übergeordneten Attributs bestimmt den Namen jeder Ebene in der Über-/Unterordnungshierarchie, und die **MembersWithData** -Eigenschaft bestimmt, ob Daten für übergeordnete Elemente angezeigt werden sollen.  
@@ -83,7 +83,7 @@ ms.locfileid: "36061506"
   
      Die folgende Abbildung zeigt die Änderungen im Dialogfeld **Vorlage zur Ebenenbenennung** .  
   
-     ![Ebene Vorlage zur Ebenenbenennung (Dialogfeld)](../../2014/tutorials/media/l4-namingtemplate.gif "Vorlage zur Ebenenbenennung (Dialogfeld)")  
+     ![Dialogfeld für Ebene Vorlage zur Ebenenbenennung](../../2014/tutorials/media/l4-namingtemplate.gif "Vorlage zur Ebenenbenennung (Dialogfeld)")  
   
 5.  Klicken Sie auf **OK**.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "36061506"
   
      Die folgende Abbildung zeigt die Änderungen, die Sie an der Employees-Hierarchie vorgenommen haben. Beachten Sie, dass Stephen Y. Jiang nicht mehr als sein eigener Mitarbeiter angezeigt wird.  
   
-     ![Geändert von Employees-Hierarchie](../../2014/tutorials/media/l4-employee-2.png "geändert Employees-Hierarchie")  
+     ![Änderung der Employees-Hierarchie](../../2014/tutorials/media/l4-employee-2.png "geändert Employees-Hierarchie")  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
  [Automatisches Gruppieren von Attributelementen](../analysis-services/lesson-4-3-automatically-grouping-attribute-members.md)  

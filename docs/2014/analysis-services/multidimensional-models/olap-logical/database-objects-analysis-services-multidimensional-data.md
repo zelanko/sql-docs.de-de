@@ -1,5 +1,5 @@
 ---
-title: Datenbankobjekte (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Datenbankobjekte (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,24 +19,24 @@ helpviewer_keywords:
 - objects [Analysis Services]
 ms.assetid: f76d869b-fc1d-4807-9f28-da09c7be382d
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4f92a99eef0513a03d4158c4a30c8cc20210a516
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab12847fc040121bd1af8013f809e925e99f5eee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149513"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192360"
 ---
 # <a name="database-objects-analysis-services---multidimensional-data"></a>Datenbankobjekte (Analysis Services - Mehrdimensionale Daten)
-  Ein [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz enthält Datenbankobjekte und Assemblys für die Verwendung mit online analytical Processing (OLAP) und Datamining.  
+  Ein [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz enthält, Datenbankobjekte und Assemblys für die Verwendung mit der analytischen onlineverarbeitung (OLAP) und Datamining.  
   
 -   Datenbanken enthalten OLAP- und Data Mining-Objekte, z.&#160;B. Datenquellen, Datenquellensichten, Cubes, Measures, Measuregruppen, Dimensionen, Attribute, Hierarchien, Miningstrukturen, Miningmodelle und Rollen.  
   
 -   Assemblys enthalten benutzerdefinierte Funktionen, die die Funktionalität der mit den Sprachen Multidimensional Expressions (MDX) und Data Mining Extensions (DMX) bereitgestellten systeminternen Funktionen erweitern.  
   
- Die <xref:Microsoft.AnalysisServices.Database> Objekt ist der Container für alle Datenobjekte, die für ein Business Intelligence-Projekt (z. B. OLAP-Cubes, Dimensionen und Datamining-Strukturen) erforderlich sind, sowie deren Unterstützungsobjekte (z. B. <xref:Microsoft.AnalysisServices.DataSource>, <xref:Microsoft.AnalysisServices.Account>, und <xref:Microsoft.AnalysisServices.Role>).  
+ Die <xref:Microsoft.AnalysisServices.Database> Objekt ist der Container für alle Datenobjekte, die für ein Business Intelligence-Projekt (z. B. ein OLAP-Cubes, Dimensionen und Datamining-Strukturen) erforderlich sind, sowie deren Unterstützungsobjekte (z. B. <xref:Microsoft.AnalysisServices.DataSource>, <xref:Microsoft.AnalysisServices.Account>, und <xref:Microsoft.AnalysisServices.Role>).  
   
  Ein <xref:Microsoft.AnalysisServices.Database>-Objekt bietet u. a. Zugriff auf folgende Objekte und Attribute:  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36149513"
 |[Dimensionen &#40;Analysis Services – mehrdimensionale Daten&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)|Beschreibt Dimensionen und Dimensionsobjekte, einschließlich Attribute, Attributbeziehungen, Hierarchien, Ebenen und Elemente.|  
 |[Miningstrukturen &#40;Analysis Services – Datamining&#41;](../../data-mining/mining-structures-analysis-services-data-mining.md)|Beschreibt Miningstrukturen und Miningobjekte, einschließlich Miningmodellen.|  
 |[Sicherheitsrollen &#40;Analysis Services – mehrdimensionale Daten&#41;](security-roles-analysis-services-multidimensional-data.md)|Beschreibt eine Rolle, den Sicherheitsmechanismus, der zum Steuern des Zugriffs auf Objekte in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
-|[Mehrdimensionales Modell Assemblys-Verwaltung](../multidimensional-model-assemblies-management.md)|Beschreibt eine Assembly, eine Auflistung von benutzerdefinierten Funktionen, die zum Erweitern der Sprachen MDX und DMX in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] verwendet werden.|  
+|[Verwaltung von mehrdimensionalen Modellassemblys](../multidimensional-model-assemblies-management.md)|Beschreibt eine Assembly, eine Auflistung von benutzerdefinierten Funktionen, die zum Erweitern der Sprachen MDX und DMX in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] verwendet werden.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Unterstützte Datenquellen &#40;SSAS – mehrdimensional&#41;](../supported-data-sources-ssas-multidimensional.md)   

@@ -1,5 +1,5 @@
 ---
-title: Programmieren von AMO-Sicherheitsobjekten | Microsoft Docs
+title: Programmieren von AMO-Sicherheitsobjekten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,25 +16,25 @@ helpviewer_keywords:
 - AMO, security
 ms.assetid: 5d963721-6e6e-46eb-bc9b-18724dd0b751
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 660afdf9a8c6c51c1dc97b8ee8de22ba6853708d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e110e71630a43d30f29be89cd56197ab8f18fd7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151014"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197950"
 ---
 # <a name="programming-amo-security-objects"></a>Programmieren von AMO-Sicherheitsobjekten
-  In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], Programmieren von Sicherheitsobjekten und das Ausführen von Anwendungen, die AMO-Sicherheitsobjekte verwenden, Mitglied der Gruppe der Serveradministratoren oder Datenbankadministratoren voraus. Serveradministrator und Datenbankadministrator sind von angegebene Zugriffsebenen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], Programmieren von Sicherheitsobjekten und das Ausführen von Anwendungen, die AMO-Sicherheitsobjekte verwenden, Mitglied der Gruppe der Serveradministratoren oder Datenbankadministratoren voraus. Serveradministrator und Datenbankadministrator sind Ebenen von bereitgestellten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
  In [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] wird der Benutzerzugriff auf beliebige Objekte durch eine Kombination aus Rollen und Berechtigungen gewährt, die dem jeweiligen Objekt zugewiesen werden. Weitere Informationen finden Sie unter [AMO-Sicherheitsklassen](amo-security-classes.md).  
   
 ## <a name="role-and-permission-objects"></a>Role- und Berechtigungsobjekte  
  Serverrollen enthalten nur eine Rolle in der Auflistung: die des Administrators. Neue Rollen können der Serverrollenauflistung nicht hinzugefügt werden. Die Rolle eines Administrators ermöglicht den vollständigen Zugriff auf jedes Objekt auf dem Server.  
   
- <xref:Microsoft.AnalysisServices.Role>-Objekte werden auf Datenbankebene erstellt. Die Rollenverwaltung erfordert lediglich das Hinzufügen oder Entfernen von Mitgliedern zu oder aus einer Rolle sowie das Hinzufügen oder Löschen von Rollen zum oder aus dem <xref:Microsoft.AnalysisServices.Database>-Objekt. Eine Rolle kann nicht gelöscht werden, wenn keine <xref:Microsoft.AnalysisServices.Permission> Objekt, das der Rolle zugeordnet. Zum Löschen einer Rolle alle <xref:Microsoft.AnalysisServices.Permission> Objekte in der <xref:Microsoft.AnalysisServices.Database> Objekte durchsucht werden müssen, und die <xref:Microsoft.AnalysisServices.Role> entfernt von Berechtigungen, bevor die <xref:Microsoft.AnalysisServices.Role> kann gelöscht werden, aus der <xref:Microsoft.AnalysisServices.Database>.  
+ <xref:Microsoft.AnalysisServices.Role>-Objekte werden auf Datenbankebene erstellt. Die Rollenverwaltung erfordert lediglich das Hinzufügen oder Entfernen von Mitgliedern zu oder aus einer Rolle sowie das Hinzufügen oder Löschen von Rollen zum oder aus dem <xref:Microsoft.AnalysisServices.Database>-Objekt. Eine Rolle kann nicht gelöscht werden, wird eine etwaige <xref:Microsoft.AnalysisServices.Permission> Objekt, das der Rolle zugeordnet. Um eine Rolle zu löschen alle <xref:Microsoft.AnalysisServices.Permission> Objekte in der <xref:Microsoft.AnalysisServices.Database> Objekte durchsucht werden müssen, und die <xref:Microsoft.AnalysisServices.Role> Berechtigungen, bevor daraus die <xref:Microsoft.AnalysisServices.Role> können gelöscht werden, aus der <xref:Microsoft.AnalysisServices.Database>.  
   
  Berechtigungen definieren die aktivierten Aktionen des Objekts, für das die Berechtigung erteilt wird. Berechtigungen für die folgenden Objekte angegeben werden: <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>, <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.MiningStructure>, und <xref:Microsoft.AnalysisServices.MiningModel>. Die Berechtigungsverwaltung schließt das Gewähren oder Widerrufen von aktiviertem Zugriff durch die entsprechende Zugriffseigenschaft ein. Für jeden aktivierten Zugriff gibt es eine Eigenschaft, die auf die gewünschte Zugriffsstufe festgelegt werden kann. Der Zugriff kann für die folgenden Vorgänge definiert werden: Verarbeiten, ReadDefinition, Lesen, Schreiben und Verwalten. Verwalten der Zugriff wird nur definiert, auf die <xref:Microsoft.AnalysisServices.Database> Objekt. Die Datenbankadministratorsicherheitsstufe wird erteilt, wenn die Rollenmitgliedschaft gemeinsam mit der Datenbankberechtigung für die Verwaltung gewährt wird.  
   
@@ -146,7 +146,7 @@ static public void CreateRolesAndPermissions(Database db, Cube cube)
 ## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.AnalysisServices>   
  [Einführung in AMO-Klassen](amo-classes-introduction.md)   
- [Programmieren AMO-Sicherheitsobjekten](programming-amo-security-objects.md)   
+ [Programmieren von AMO-Sicherheitsobjekten](programming-amo-security-objects.md)   
  [Berechtigungen und Zugriffsrechte &#40;Analysis Services – mehrdimensionale Daten&#41;](https://msdn.microsoft.com/library/ms174786(v=sql.120).aspx)   
  [Sichern von Analysis Services-Instanz](https://technet.microsoft.com/library/ms175663\(v=sql.110\).aspx)   
  [Logische Architektur &#40;Analysis Services – mehrdimensionale Daten&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   

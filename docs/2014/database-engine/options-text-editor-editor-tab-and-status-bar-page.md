@@ -1,5 +1,5 @@
 ---
-title: 'Optionen (Text-Editor: Registerkarte "Editor" und Statusleiste) | Microsoft Docs'
+title: "Optionen (Text-Editor: Registerkarte ' Editor ' und Statusleiste) | Microsoft-Dokumentation"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqleditors.editorcontextsettings
 - VS.ToolsOptionsPages.Text_Editor.EditorTabAndStatusBar
@@ -16,13 +16,13 @@ ms.assetid: e4815678-7885-4631-878f-c6a2b857ee05
 caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bfaef2b11c331416134eba0e7325875f47a014b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1fdef7c6b3a72b4c6556ec5d8e6354c837d6be04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060563"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267266"
 ---
 # <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Optionen (Text-Editor: Registerkarte "Editor" und Statusleiste)
   Auf der Seite **Registerkarte "Editor" und Statusleiste** können Sie die von den [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Abfrage-Editoren angezeigten Informationen anpassen. Sie können die Ebene der Informationen angeben, die auf der Registerkarte und der Statusleiste des Abfrage-Editor-Fensters angezeigt werden, sowie festlegen, ob die Statusleiste im Editor-Fenster oben oder unten angezeigt wird.  
@@ -44,7 +44,7 @@ ms.locfileid: "36060563"
  **Ende**  
  Auf der Statusleiste wird während der Skriptausführung die aktuelle Uhrzeit angezeigt. Bei Abschluss des Skripts wird die Uhrzeit angezeigt, zu der das Skript abgeschlossen wurde.  
   
- **Verstrichene**  
+ **Verstrichen**  
  Auf der Statusleiste wird die Zeit angezeigt, die das Skript bereits ausgeführt wurde. Bei Abschluss des Skripts wird die Zeit angezeigt, die zum Ausführen des Skripts benötigt wurde.  
   
  **Datenbanknamen einschließen**  
@@ -74,7 +74,7 @@ ms.locfileid: "36060563"
  **Top**  
  Die Statusleiste wird am oberen Rand des Abfrage-Editor-Fensters angezeigt.  
   
- **Unten**  
+ **Nach unten**  
  Die Statusleiste wird am unteren Rand des Abfrage-Editor-Fensters angezeigt.  
   
 ## <a name="tab-text"></a>Registerkartentext  
@@ -96,7 +96,7 @@ ms.locfileid: "36060563"
  Schließt den Servernamen ein. Bei lokalen Verbindungen ist dies der Instanzname. Bei Remoteverbindungen ist dies der Remotecomputername und Instanzname.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Optionen &#40;Umgebung: Schriftarten und Farben Seite&#41;](../ssms/menu-help/options-environment-fonts-and-colors-page.md)   
+ [Optionen &#40;Umgebung: Schriftarten und Farben-Seite&#41;](../ssms/menu-help/options-environment-fonts-and-colors-page.md)   
  [Farbcodierung im Abfrage-Editor](../relational-databases/scripting/color-coding-in-query-editors.md)  
   
   

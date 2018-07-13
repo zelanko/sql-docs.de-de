@@ -1,5 +1,5 @@
 ---
-title: ReportingWeekToMonthPattern-Element (ASSL) | Microsoft Docs
+title: ReportingWeekToMonthPattern-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ReportingWeekToMonthPattern element
 ms.assetid: 8d7c694d-d5c5-4faa-af78-155779e84fe9
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b90c07018747c7ad04bbd2324bb0bd697f7d774c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fcbbf8a7783d152c66ec4f222ba79b00181b60f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147986"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324820"
 ---
 # <a name="reportingweektomonthpattern-element-assl"></a>ReportingWeekToMonthPattern-Element (ASSL)
   Definiert das Woche-auf-Monats-berichtsmuster für das [TimeBinding](../data-type/binding-data-type-assl.md) Element.  
@@ -66,7 +66,7 @@ ms.locfileid: "36147986"
   
 |value|Description|  
 |-----------|-----------------|  
-|*445*|4 Wochen im ersten Monat des Quartals, 4 Wochen im zweiten Monat und 5 Wochen im dritten Monat.|  
+|*445*|4 Wochen im ersten Monat des Quartals, 4 Wochen im zweiten Monat sowie 5 Wochen im dritten Monat.|  
 |*454*|4 Wochen im ersten Monat im Quartal fünf Wochen im zweiten Monat und 4 Wochen im dritten Monat.|  
 |*544*|5 Wochen im ersten Monat des Quartals, 4 Wochen im zweiten Monat und 4 Wochen im dritten Monat.|  
   

@@ -1,5 +1,5 @@
 ---
-title: Miningmodellinhalt Naive Bayes-Modellen (Analysis Services – Datamining) | Microsoft Docs
+title: Mingingmodellinhalt von Naive Bayes-Modellen (Analysis Services – Datamining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - naive bayes model [Analysis Services]
 - Bayesian classifiers
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - mining model content, naive bayes models
 ms.assetid: 63fa15b0-e00c-4aa3-aa49-335f5572ff7e
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5b6c53452892eb928267b3f04078633274905633
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 14aa876539bafb265ddac5514d25519b003e646d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148297"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216120"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Miningmodellinhalt von Naive Bayes-Modellen (Analysis Services - Data Mining)
   In diesem Thema wird der Miningmodellinhalt beschrieben, der Modellen eigen ist, die den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Algorithmus verwenden. Eine Erklärung zur Interpretation von Statistiken und Strukturen, die allen Modelltypen gemein sind, und die allgemeinen Definitionen von Begriffen in Bezug auf den Miningmodellinhalt finden Sie unter [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "36148297"
 > [!NOTE]  
 >  Da ein Naive Bayes-Modell keine kontinuierlichen Datentypen zulässt, werden alle Werte der Eingabespalten diskret oder diskretisiert behandelt. Sie können festlegen, wie ein Wert diskretisiert wird. Weitere Informationen finden Sie unter [Ändern der Diskretisierung von Spalten in Miningmodellen](change-the-discretization-of-a-column-in-a-mining-model.md).  
   
- ![Struktur des Modellinhalts für Naive Bayes-](../media/modelcontentstructure-nb.gif "Struktur des Modellinhalts für naive Bayes")  
+ ![Struktur des Modellinhalts für naive Bayes](../media/modelcontentstructure-nb.gif "Struktur des Modellinhalts für naive Bayes")  
   
 ## <a name="model-content-for-a-naive-bayes-model"></a>Modellinhalt eines Naive Bayes-Modells  
  In diesem Abschnitt werden nur diejenigen Spalten des Miningmodellinhalts detaillierter und anhand von Beispielen erläutert, die für Naive Bayes-Modelle relevant sind.  
@@ -289,7 +289,7 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  In einem Naive Bayes-Modell kann es keine kontinuierlichen Attribute geben. Daher werden alle numerischen Daten entweder als diskret (VALUE_TYPE = 4) oder diskretisiert (VALUE_TYPE = 5) dargestellt.  
   
- Ein `Missing` Wert (VALUE_TYPE = 1) hinzugefügt wird jedes Attribut Eingabe- und Ausgabespalten, um potenzielle Werte darzustellen, die nicht in den Trainingsdaten vorhanden waren. Sie müssen darauf achten, zur Unterscheidung zwischen "missing" eine Zeichenfolge und dem Standardwert `Missing` Wert. Weitere Informationen finden Sie unter [Fehlende Werte &#40;Analysis Services – Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
+ Ein `Missing` Wert (VALUE_TYPE = 1) wird jedem hinzugefügt Eingabe- und um potenzielle Werte darzustellen, die nicht in den Trainingsdaten vorhanden waren. Achten Sie zur Unterscheidung zwischen "missing" eine Zeichenfolge und dem Standardwert `Missing` Wert. Weitere Informationen finden Sie unter [Fehlende Werte &#40;Analysis Services – Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Miningmodellinhalt &#40;Analysis Services – Datamining&#41;](mining-model-content-analysis-services-data-mining.md)   

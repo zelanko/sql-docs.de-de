@@ -1,5 +1,5 @@
 ---
-title: Entfernen Sie UDTs, die nach den reservierten Datentypen GEOMETRY und GEOGRAPHY benannt | Microsoft Docs
+title: Entfernen Sie UDTs, die nach den reservierten Datentypen GEOMETRY und GEOGRAPHY benannt | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - geometry data type [SQL Server], UDTs
 - geography data type [SQL Server], UDTs
 ms.assetid: a167ce3a-50b4-4e77-a884-adb23b586c72
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d772f880e1ad88c6423d0a34f71d1a75205169f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e557c8c41596045390127ad066681a2f5c872875
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061541"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208520"
 ---
 # <a name="remove-udts-named-after-the-reserved-geometry-and-geography-data-types"></a>Entfernen von UDTs, die nach den reservierten Datentypen GEOMETRY und GEOGRAPHY benannt sind
   Der Upgrade Advisor hat einen benutzerdefinierten Typ (UDT, User-Defined Type) erkannt, der nach einem Ausdruck benannt ist, der entweder für den `geometry`-Datentyp oder den `geography`-Datentyp reserviert ist. Die Datentypen `geometry` und `geography` sind Teil der Funktion für räumliche Daten.  

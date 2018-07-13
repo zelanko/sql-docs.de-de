@@ -1,29 +1,28 @@
 ---
-title: Übersicht über PowerShell-Cmdlets für AlwaysOn-Verfügbarkeitsgruppen (SQLServer) | Microsoft Docs
+title: Übersicht über die PowerShell-Cmdlets für AlwaysOn-Verfügbarkeitsgruppen (SQLServer) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], PowerShell cmdlets
 - Availability Groups [SQL Server], about
 - PowerShell [SQL Server], cmdlets
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 caps.latest.revision: 35
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 3d3b1715a61ed7711217148a3a42bbcd5340308a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 09fbe31747ef722775a0156939f02fb49103fd22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060794"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231970"
 ---
 # <a name="overview-of-powershell-cmdlets-for-alwayson-availability-groups-sql-server"></a>Übersicht über PowerShell-Cmdlets für AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] PowerShell ist eine speziell für die Systemverwaltung entwickelte taskbasierte Befehlszeilenshell und Skriptsprache. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] stellt in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] einen Satz von PowerShell-Cmdlets bereit, mit denen Sie Verfügbarkeitsgruppen, Verfügbarkeitsreplikate und Verfügbarkeitsdatenbanken bereitstellen, verwalten und überwachen können.  
@@ -48,7 +47,7 @@ ms.locfileid: "36060794"
 -   [Überwachen der Integrität von Verfügbarkeitsgruppen](#MonitorTblshtAGs)  
   
 > [!NOTE]  
->  Eine Liste der Themen in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] -Onlinedokumentation, die beschreiben, wie Sie Cmdlets ausführen [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] Aufgaben finden Sie im Abschnitt "Verwandte Aufgaben" [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
+>  Eine Liste der Themen in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] -Onlinedokumentation, die beschreiben, wie Sie Cmdlets verwenden, um ausführen [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] Aufgaben finden Sie im Abschnitt "Verwandte Aufgaben" [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
   
 ##  <a name="ConfiguringServerInstance"></a> Konfigurieren einer Serverinstanz für AlwaysOn-Verfügbarkeitsgruppen  
   
@@ -64,7 +63,7 @@ ms.locfileid: "36060794"
 |Cmdlets|Description|Unterstützt auf|  
 |-------------|-----------------|------------------|  
 |`Backup-SqlDatabase`|Erstellt eine Daten- oder Protokollsicherung.|Eine beliebige Onlinedatenbank (für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]eine Datenbank auf der Serverinstanz, die das primäre Replikat hostet)|  
-|`Restore-SqlDatabase`|Stellt eine Sicherung wieder her.|Eine beliebige Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]eine Serverinstanz, die ein sekundäres Replikat hostet)<br /><br /> **\*\* Wichtige \* \***  beim Vorbereiten einer sekundären Datenbank müssen Sie verwenden die `-NoRecovery` Parameter in jedem `Restore-SqlDatabase` Befehl.|  
+|`Restore-SqlDatabase`|Stellt eine Sicherung wieder her.|Eine beliebige Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]eine Serverinstanz, die ein sekundäres Replikat hostet)<br /><br /> **\*\* Wichtige \* \***  beim Vorbereiten einer sekundären Datenbank müssen Sie verwenden die `-NoRecovery` Parameter in jeder `Restore-SqlDatabase` Befehl.|  
   
  Informationen zur Verwendung dieser Cmdlets zum Vorbereiten einer sekundären Datenbank finden Sie unter [Manuelles Vorbereiten einer sekundären Datenbank auf eine Verfügbarkeitsgruppe &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   

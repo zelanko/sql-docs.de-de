@@ -16,13 +16,13 @@ ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ffa9196260b00e5418286ec23ed52cbaff6b1e57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 341540de4e81423f673db4708ab24172d18e0a19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148401"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227790"
 ---
 # <a name="persisting-custom-objects"></a>Beibehalten von benutzerdefinierten Objekten
   Sie müssen keine benutzerdefinierte Persistenz für die von Ihnen erstellten benutzerdefinierten Objekte einfügen, solange ihre Eigenschaften nur einfache Datentypen wie `integer` und `string` verwenden. Die Standardimplementierung der Persistenz speichert die Metadaten Ihres Objekts zusammen mit den Werten aller Eigenschaften.  
@@ -33,7 +33,7 @@ ms.locfileid: "36148401"
 >  Beim Implementieren von benutzerdefinierter Persistenz müssen Sie alle Eigenschaften des Objekts dauerhaft machen, einschließlich der beiden übernommenen Eigenschaften und der hinzugefügten benutzerdefinierten Eigenschaften.  
   
 ## <a name="example"></a>Beispiel  
- Obwohl das Sql Server Custom Connection Manager-Beispiel keine benutzerdefinierten Persistenz für die drei Eigenschaften des Typs erfordert `string`, der folgende Code zeigt ein Beispiel für den benutzerdefinierten Code, der die Verbindung beibehalten erforderlich wäre Manager und die zugehörige Eigenschaften. Die Klasse, die diesen Code enthält, muss die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist>-Schnittstelle implementieren.  
+ Obwohl das Sql Server Custom Connection Manager-Beispiel keine benutzerdefinierten Persistenz für die drei Eigenschaften des Typs erfordert `string`, der folgende Code zeigt ein Beispiel des benutzerdefinierten Codes, die erforderlich, um die Verbindung beibehalten Manager und die zugehörige Eigenschaften. Die Klasse, die diesen Code enthält, muss die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist>-Schnittstelle implementieren.  
   
 ```vb  
 Private Const PERSIST_ELEMENT As String = "SqlConnectionManager"  
@@ -157,7 +157,7 @@ public void SaveToXML(System.Xml.XmlDocument doc,
 }  
 ```  
   
-![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben Sie mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Entwickeln benutzerdefinierter Objekte für Integration Services](developing-custom-objects-for-integration-services.md)   

@@ -1,5 +1,5 @@
 ---
-title: Datenflussabzweigungen | Microsoft Docs
+title: Datenflussabzweigungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2d847adf-4b3d-4949-a195-ef43de275077
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e51ba64f0c9793b4d3cb0b0485c636de1acee3b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bbf61a735450551573d0c3b2f2a6f5542bb7dc97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060992"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271476"
 ---
 # <a name="data-flow-taps"></a>Datenflussabzweigungen
-  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] führt ein neues Feature, mit dem Sie eine datenabzweigung im Datenflusspfad eines Pakets zur Laufzeit hinzufügen und die Ausgabe von der datenabzweigung an eine externe Datei weiterleiten. Um diese Funktion verwenden zu können, müssen Sie das SSIS-Projekt mithilfe des Projektbereitstellungsmodells auf einem SSIS-Server bereitstellen. Nachdem Sie das Paket auf dem Server bereitgestellt haben, müssen Sie T-SQL-Skripts für die SSISDB-Datenbank ausführen, um vor der Paketausführung Datenabzweigungen hinzuzufügen. Beispielszenario:  
+  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] führt eine neue Funktion, mit dem Sie eine datenabzweigung im Datenflusspfad eines Pakets zur Laufzeit hinzufügen und die Ausgabe von der datenabzweigung an eine externe Datei weiterleiten. Um diese Funktion verwenden zu können, müssen Sie das SSIS-Projekt mithilfe des Projektbereitstellungsmodells auf einem SSIS-Server bereitstellen. Nachdem Sie das Paket auf dem Server bereitgestellt haben, müssen Sie T-SQL-Skripts für die SSISDB-Datenbank ausführen, um vor der Paketausführung Datenabzweigungen hinzuzufügen. Beispielszenario:  
   
 1.  Erstellen Sie mithilfe der gespeicherten Prozedur [catalog.create_execution &#40;SSISDB-Datenbank&#41;](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database) eine Paketausführungsinstanz.  
   

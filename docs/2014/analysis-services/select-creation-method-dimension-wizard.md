@@ -1,5 +1,5 @@
 ---
-title: Erstellungsmethode auswählen (Dimensions-Assistent) | Microsoft Docs
+title: Erstellungsmethode auswählen (Dimensions-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.dimensiondefinition.f1
 ms.assetid: 291b0b2d-a03a-4df6-82f7-90ad92d4d1cf
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 10d52966956d39f7a495e353bdf6acd595cc51ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d10005b2b689078eb7677547ebfc905fbdcc996
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060392"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267156"
 ---
 # <a name="select-creation-method-dimension-wizard"></a>Erstellungsmethode auswählen (Dimensions-Assistent)
   Auf der Seite **Erstellungsmethode auswählen** können Sie auswählen, wie die Dimension erstellt wird.  
@@ -36,7 +36,7 @@ ms.locfileid: "36060392"
   
  Weitere Informationen finden Sie unter [Erstellen einer Dimension anhand einer vorhandenen Tabelle](multidimensional-models/create-a-dimension-by-using-an-existing-table.md).  
   
- **Zeittabelle in der Datenquelle**  
+ **Generieren einer Zeittabelle in der Datenquelle**  
  Erstellen Sie eine Zeittabelle in der zugrunde liegenden Datenquelle, und verwenden Sie diese Tabelle dann zum Erstellen einer Zeitdimension. Verwenden Sie diese Option, wenn keine solche Tabelle vorhanden ist und Sie sie nicht mithilfe eines Skripts erstellen möchten. Die neue Zeittabelle enthält Daten für den Datumsbereich, die Attribute und Kalender, die Sie im Assistenten angeben.  
   
 > [!NOTE]  
@@ -44,7 +44,7 @@ ms.locfileid: "36060392"
   
  Weitere Informationen finden Sie unter [Erstellen einer Zeitdimension durch Generieren einer Zeittabelle](multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md).  
   
- **Zeittabelle auf dem server**  
+ **Generieren einer Zeittabelle auf dem server**  
  Erstellen Sie direkt auf dem Server eine Zeittabelle, und verwenden Sie diese Tabelle dann zum Erstellen einer Zeitdimension. Verwenden Sie diese Option, wenn Sie nicht über die Berechtigung zum Erstellen von Objekten in der zugrunde liegenden Datenquelle verfügen. Die neue Zeitdimension enthält Daten für den Datumsbereich, die Attribute und Kalender, die Sie im Assistenten angeben.  
   
  Weitere Informationen finden Sie unter [Erstellen einer Zeitdimension durch Generieren einer Zeittabelle](multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md).  

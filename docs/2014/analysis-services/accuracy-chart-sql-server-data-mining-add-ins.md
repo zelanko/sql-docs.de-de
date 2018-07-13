@@ -1,5 +1,5 @@
 ---
-title: Genauigkeitsdiagramm (SQL Server Data Mining-Add-ins) | Microsoft Docs
+title: Genauigkeitsdiagramm (SQL Server Data Mining-Add-ins) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - accuracy chart
 - mining models, validating
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - lift [data mining]
 ms.assetid: 303973b4-71c0-4cfc-b7bc-92218b52509d
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 16d669001ae0842c91853e28aae587dd5f4ebb51
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d331c1acb84b67a19eba2c6aacebfe68b947b217
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148501"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222320"
 ---
 # <a name="accuracy-chart-sql-server-data-mining-add-ins"></a>Genauigkeitsdiagramm (SQL Server Data Mining-Add-Ins)
-  ![Genauigkeit Schaltfläche auf Data Mining-Menüband](media/dmc-accchart.gif "Genauigkeitsdiagramm-Schaltfläche auf Data Mining-Menüband")  
+  ![Genauigkeit diagrammschaltfläche im Data Mining-Menüband](media/dmc-accchart.gif "Schaltfläche \"Genauigkeitsdiagramm\" im Data Mining-Menüband")  
   
- Mit einem Genauigkeitsdiagramm können Sie ein Modell auf ein neues Dataset anwenden und anschließend bewerten, wie leistungsfähig das Modell ist. Von diesem Assistenten erstellte Genauigkeitsdiagramm ist ein *prognosegütediagramm*, d. h. einen Typ von Diagramm, das häufig verwendet wird, um die Genauigkeit eines Datamining-Modells messen. Bei diesem Genauigkeitsdiagrammtyp handelt es sich um eine grafische Darstellung der Verbesserung, die Sie durch das Verwenden des angegebenen Data Mining-Modells im Vergleich zu Vorhersagen nach dem Zufallsprinzip und dem Idealfall erhalten, dass 100 Prozent der Vorhersagen genau sind. Sie können mehrere Modelle in einem Diagramm vergleichen.  
+ Mit einem Genauigkeitsdiagramm können Sie ein Modell auf ein neues Dataset anwenden und anschließend bewerten, wie leistungsfähig das Modell ist. Vom Assistenten erstellte Genauigkeitsdiagramm ist ein *prognosegütediagramm*, d.h. eine Art von Diagramm, das häufig verwendet wird, um die Genauigkeit von Datamining-Modells messen. Bei diesem Genauigkeitsdiagrammtyp handelt es sich um eine grafische Darstellung der Verbesserung, die Sie durch das Verwenden des angegebenen Data Mining-Modells im Vergleich zu Vorhersagen nach dem Zufallsprinzip und dem Idealfall erhalten, dass 100 Prozent der Vorhersagen genau sind. Sie können mehrere Modelle in einem Diagramm vergleichen.  
   
 ## <a name="example"></a>Beispiel  
  Angenommen, die Marketingabteilung von Adventure Works Cycles möchte eine zielgerichtete Mailingkampagne starten. Aus vergangenen Kampagnen weiß man, dass typischerweise mit einer Antwortquote von 10 Prozent zu rechnen ist. Eine Liste mit 10.000 potenziellen Kunden ist in einer Tabelle in der Datenbank gespeichert. Ausgehend von der typischen Antwortquote ist zu erwarten, dass 1.000 Kunden antworten.  
@@ -51,23 +51,23 @@ ms.locfileid: "36148501"
   
 1.  Klicken Sie auf die **Data Mining-Client** Menüband.  
   
-2.  In der **Genauigkeit und Überprüfung** zu gruppieren, klicken Sie auf **Genauigkeitsdiagramm**.  
+2.  In der **Genauigkeit und Überprüfung** auf **Genauigkeitsdiagramm**.  
   
 3.  In der **Struktur oder Modell auswählen** Dialogfeld Wählen Sie das Modell, das Sie auswerten möchten. Klicken Sie auf **Weiter**.  
   
     > [!NOTE]  
     >  Sie müssen ein Modell auswählen, das weitgehend mit den Daten übereinstimmt, die Sie überprüfen möchten.  
   
-4.  In der **geben vorherzusagende Spalte und vorherzusagenden Wert** Dialogfeld Wählen Sie die Spalte, die Sie vorhersagen möchten, und einem Zielwert, falls zutreffend. Klicken Sie auf **Weiter**.  
+4.  In der **geben vorherzusagende Spalte und vorherzusagenden Wert** Dialogfeld auf die Spalte, die Sie vorhersagen möchten, und einem Zielwert, falls zutreffend. Klicken Sie auf **Weiter**.  
   
      Im Beispiel oben könnten Sie beispielsweise die Spalte auswählen, die die Kundenreaktion wiedergibt, und den Zielwert als "Wird wahrscheinlich kaufen" festlegen.  
   
     > [!NOTE]  
     >  Für kontinuierliche Werte können Sie keine Vorhersage erstellen. Sie können jedoch die Spalte diskretisieren, indem Sie die Werte in diskrete Wertebereiche aufteilen. Dies müssen Sie tun, bevor Sie das Data Mining-Modell erstellen.  
   
-5.  In der **Quelldaten auswählen** Dialogfeld geben die Quelle der Daten, die Sie durch das Modell übergeben werden, um eine Vorhersage zu erstellen.  
+5.  In der **Quelldaten auswählen** Dialogfeld geben die Quelle der Daten, die Sie über das Modell übergeben werden, um eine Vorhersage zu erstellen.  
   
-6.  Bei Verwendung eine externe Quelle von Daten und nicht die Testdaten, die mit dem Modell gespeichert ist, in der **Beziehung angeben** , ordnen Sie im Dialogfeld werden die Spalten in der neuen Datenquelle den Spalten in Datamining-Modell verwendet.  
+6.  Bei Verwendung eine externe Quelle von Daten und nicht die Testdaten, die mit dem Modell gespeichert sind, in der **Beziehung angeben** Dialogfeld Zuordnung die Spalten in der neuen Datenquelle den Spalten ein, die im Datamining-Modell.  
   
      Wenn sich die Spaltennamen ähneln, werden sie automatisch vom Assistenten zugeordnet. Manche Spalten der Eingabedaten sind möglicherweise irrelevant für die Analyse und können deshalb ignoriert werden. Bestimmte Spalten sind jedoch erforderlich, damit die Eingabe vom Data Mining-Modell verarbeitet werden kann. Bei diesen Spalten handelt es sich möglicherweise um eine Transaktions-ID, den Zielwert oder Spalten, die für die Vorhersage verwendet werden. Wenn Sie eine erforderliche Spalte nicht zuordnen, gibt der Assistent eine Warnmeldung aus.  
   
@@ -88,6 +88,6 @@ ms.locfileid: "36148501"
  Weitere Informationen zur Funktionsweise eines Prognosegütediagramms und zur Berechnung der Genauigkeit anhand der zufälligen und idealen Vorhersagezeilen finden Sie im Thema "Prognosegütediagramm" in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Überprüfen von Modellen und Verwenden von Modellen für Vorhersagen &#40;Data Mining-Add-ins für Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
+ [Validieren von Modellen und Verwenden von Modellen für Vorhersagen &#40;Data Mining-Add-ins für Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
   

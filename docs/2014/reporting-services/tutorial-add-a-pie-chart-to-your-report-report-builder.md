@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 39633ecaa8c0fbb73e712d1d227c4fe39c8f00dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 70d23d19f2719aaa86ba81617bfb33544279bd2b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060437"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236240"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)
-  Kreis- und Ringdiagramme zeigen Daten als Teile des Ganzen an. Kreisdiagramme werden häufig verwendet, um Vergleiche zwischen Gruppen zu erstellen. Zusammen mit Pyramiden- und Trichterdiagrammen, Ring- und Kreisdiagrammen bilden eine Gruppe von Diagrammen als Formdiagrammen bezeichnet. Formdiagramme haben keine Achsen. Wenn ein numerisches Feld auf einem Formdiagramm abgelegt wird, berechnet das Diagramm den prozentualen Anteil jedes einzelnen Werts der Gesamtsumme.  
+  Kreis- und Ringdiagramme zeigen Daten als Teile des Ganzen an. Kreisdiagramme werden häufig verwendet, um Vergleiche zwischen Gruppen zu erstellen. Kreis- und Ringdiagramme Diagramme, zusammen mit Pyramiden-und Trichterdiagrammen, bilden eine Gruppe von Diagrammen als Formdiagrammen bezeichnet. Formdiagramme haben keine Achsen. Wenn ein numerisches Feld auf einem Formdiagramm abgelegt wird, berechnet das Diagramm den prozentualen Anteil jedes einzelnen Werts der Gesamtsumme.  
   
  Wenn in einem Kreisdiagramm zu viele Datenpunkte vorhanden sind, können die Datenpunktbezeichnungen zu überfüllt sein, um sie zu lesen. In diesem Fall sollten Sie die Verwendung eines Liniendiagramms erwägen. Verwenden Sie Kreisdiagramme möglichst nur, nachdem Sie die Daten bereits zu einer kleineren Anzahl von Datenpunkten aggregiert haben.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "36060437"
   
 1.  [Erstellen eines Kreisdiagramms im Diagramm-Assistenten](#Chart)  
   
-2.  [Wählen Sie den Diagrammtyp](#ChartType)  
+2.  [Auswählen des Diagrammtyps](#ChartType)  
   
 3.  [Anzeigen von Prozentsätzen in jedem Slice](#Percentages)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36060437"
   
 6.  [Hinzufügen eines Berichtstitels](#Title)  
   
-7.  [Speichern Sie den Bericht](#Save)  
+7.  [Speichern des Berichts](#Save)  
   
 > [!NOTE]  
 >  In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst. Im ersten Tutorial dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, Hinzufügen einer Datenquelle und Hinzufügen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
@@ -68,7 +68,7 @@ ms.locfileid: "36060437"
      Das Dialogfeld Erste Schritte wird angezeigt.  
   
     > [!NOTE]  
-    >  Wenn das Dialogfeld erste Schritte nicht, auf die Schaltfläche Berichts-Generator und angezeigt wird Klicken Sie auf **neu**.  
+    >  Wenn das Dialogfeld "Erste Schritte" nicht, über die Schaltfläche Berichts-Generator angezeigt wird Klicken Sie auf **neu**.  
   
 2.  Vergewissern Sie sich, dass im linken Bereich **Neuer Bericht** ausgewählt ist.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "36060437"
   
 3.  Klicken Sie auf **Weiter**.  
   
-4.  Auf der **Auswählen eines Formats** Seite Wählen Sie im Bereich Formate einen Stil.  
+4.  Auf der **Auswählen eines Formats** Seite Wählen Sie im Bereich "Formate", eine Art.  
   
      Ein Format dient zum Angeben eines Schriftschnitts, einer Farbpalette und einer Rahmenart. Wenn Sie ein Format auswählen, wird im Vorschaubereich ein Beispiel für das Diagramm mit diesem Format angezeigt.  
   
@@ -138,11 +138,11 @@ ms.locfileid: "36060437"
   
 3.  Mit der rechten Maustaste einer Bezeichnung, und klicken Sie dann auf **Reihenbezeichnungseigenschaften**.  
   
-4.  Wählen Sie in bezeichnungsdaten aus dem Dropdown-Feld **#PERCENT**.  
+4.  Wählen Sie in bezeichnungsdaten, aus dem Dropdown-Feld **#PERCENT**.  
   
      Die UseValueAsLabel-Eigenschaft muss zum Anzeigen von Werten als Prozentsätze auf "False" festgelegt werden. Klicken Sie auf **Ja** , wenn Sie im Dialogfeld **Aktion bestätigen**zum Festlegen dieses Werts aufgefordert werden.  
   
-5.  (Optional) Geben Sie an, wie viele Dezimalstellen die Bezeichnung zeigt, indem `#PERCENT{Pn}` , in denen *n* ist die Anzahl der anzuzeigenden Dezimalstellen. Um keine Dezimalstellen anzuzeigen, geben Sie z. B. `#PERCENT{P0}`.  
+5.  (Optional) Um anzugeben, wie viele Dezimalstellen die Bezeichnung zeigt, und geben `#PERCENT{Pn}` , in denen *n* ist die Anzahl der anzuzeigenden Dezimalstellen. Um keine Dezimalstellen anzuzeigen, geben Sie z. B. `#PERCENT{P0}`.  
   
     > [!NOTE]  
     >  Die Option**Zahlenformat** im Dialogfeld **Reihenbezeichnungseigenschaften** hat beim Formatieren von Prozentwerten keinen Einfluss auf das Format. Hierdurch werden die Bezeichnungen als Prozentwerte formatiert, die eigentlichen Prozentwerte der einzelnen Slices eines Kreisdiagramms werden jedoch nicht berechnet.  
@@ -172,7 +172,7 @@ ms.locfileid: "36060437"
   
 7.  Vergewissern Sie sich, dass die **CollectedThresholdUsePercent** -Eigenschaft auf **TRUE**festgelegt ist.  
   
-8.  Auf dem Menüband auf die **Home** auf **ausführen** zum Anzeigen der Berichtsvorschau.  
+8.  Auf dem Menüband auf die **Startseite** auf **ausführen** auf die Vorschau des Berichts anzuzeigen.  
   
  In der Legende ist die Kategorie "Other" jetzt vorhanden. Im neuen Kreisslice werden alle Slices, die kleiner als 5 % waren, zu einem Slice kombiniert, das 6 % des gesamten Kreises darstellt.  
   
@@ -189,10 +189,10 @@ ms.locfileid: "36060437"
   
 4.  Erweitern Sie im Bereich Eigenschaften den Knoten **CustomAttributes** .  
   
-5.  Legen Sie die **PieDrawingStyle** auf **SoftEdge**.  
+5.  Legen Sie die **PieDrawingStyle** zu **SoftEdge**.  
   
     > [!NOTE]  
-    >  Zeichnungseffekte und 3D-Effekte sind exklusive Optionen. Wenn ein Diagramm 3D-Effekte angewendet wird, ist **PieDrawingStyle** ist in den Bereich "Eigenschaften" nicht verfügbar.  
+    >  Zeichnungseffekte und 3D-Effekte sind exklusive Optionen. Wenn ein Diagramm dreidimensionale Effekte angewendet wird, ist **PieDrawingStyle** ist auf den Bereich "Eigenschaften" nicht verfügbar.  
   
 6.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
@@ -212,9 +212,9 @@ ms.locfileid: "36060437"
   
      **Als Prozentsatz des Gesamtumsatzes**  
   
-3.  Wählen Sie **Kamera- und Camcorderumsatz**, und klicken Sie auf die **fett** Schaltfläche aus der **Schriftart** Teil der **Startseite** Registerkarte des Menübands.  
+3.  Wählen Sie **Kamera- und Camcorderumsatz**, und klicken Sie auf die **fett** Schaltfläche der **Schriftart** Teil der **Startseite** Registerkarte des Menübands.  
   
-4.  Wählen Sie **als Prozentsatz des Gesamtumsatzes**, und klicken Sie in der **Schriftart** Abschnitt der **Home** Registerkarte, legen Sie den Schriftgrad auf **10**.  
+4.  Wählen Sie **als Prozentsatz des Gesamtumsatzes**, und klicken Sie in der **Schriftart** im Abschnitt der **Startseite** Registerkarte, legen Sie den Schriftgrad auf **10**.  
   
 5.  (Optional) Das Textfeld "Titel" muss ggf. vergrößert werden, damit die beiden Textzeilen hineinpassen.  
   
