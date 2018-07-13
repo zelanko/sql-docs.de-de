@@ -18,13 +18,13 @@ ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c9dfad0b1ed2daa45a967b074982ba80653e84bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: df53d355babd082cba4b67404c91b7d4c33bec28
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057589"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186687"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Programmgesteuertes Laden und Ausführen eines Remotepakets
   Um Remotepakete auf einem lokalen Computer auszuführen, auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nicht installiert ist, starten Sie die Pakete, sodass sie auf dem Remotecomputer ausgeführt werden, auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installiert ist. Hierzu muss auf dem lokalen Computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent, ein Webdienst oder eine Remotekomponente zum Starten der Pakete auf dem Remotecomputer verwendet werden. Wenn Sie versuchen, die Remotepakete direkt auf dem lokalen Computer zu starten, werden die Pakete geladen, und es wird versucht, die Pakete auf dem lokalen Computer auszuführen. Wenn [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nicht auf dem lokalen Computer installiert ist, werden die Pakete nicht ausgeführt.  
@@ -41,7 +41,7 @@ ms.locfileid: "36057589"
   
 -   [Verwenden eines Webdiensts oder einer Remotekomponente zum programmgesteuerten Auszuführen eines Remotepakets](#service)  
   
- Nahezu alle in diesem Thema erläuterten Methoden zum Laden und Speichern von Paketen erfordern einen Verweis auf die `Microsoft.SqlServer.ManagedDTS`-Assembly. Die Ausnahme ist die ADO.NET-Ansatz in diesem Thema für das Ausführen der **Sp_start_job** gespeicherte Prozedur, wofür nur einen Verweis auf `System.Data`. Nachdem Sie den Verweis in einem neuen Projekt zur `Microsoft.SqlServer.ManagedDTS`-Assembly hinzugefügt haben, importieren Sie den <xref:Microsoft.SqlServer.Dts.Runtime>-Namespace mit der Anweisung `using` oder `Imports`.  
+ Nahezu alle in diesem Thema erläuterten Methoden zum Laden und Speichern von Paketen erfordern einen Verweis auf die `Microsoft.SqlServer.ManagedDTS`-Assembly. Die Ausnahme ist die ADO.NET-Ansatz in diesem Thema für die Ausführung der **Sp_start_job** gespeicherte Prozedur erfordert lediglich einen Verweis auf `System.Data`. Nachdem Sie den Verweis in einem neuen Projekt zur `Microsoft.SqlServer.ManagedDTS`-Assembly hinzugefügt haben, importieren Sie den <xref:Microsoft.SqlServer.Dts.Runtime>-Namespace mit der Anweisung `using` oder `Imports`.  
   
 ###  <a name="agent"></a> Verwenden von SQL Server-Agent zum programmgesteuerten Ausführen eines Remotepakets auf dem Server  
  Im folgenden Beispielcode wird die programmgesteuerte Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent zum Ausführen eines Remotepakets auf dem Server veranschaulicht. Im Codebeispiel wird die gespeicherte Systemprozedur **sp_start_job** aufgerufen, die einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Auftrag startet. Der Auftrag, den die Prozedur startet, hat den Namen `RunSSISPackage` und befindet sich auf dem Remotecomputer. Der `RunSSISPackage`-Auftrag führt das Paket auf dem Remotecomputer aus.  
@@ -427,7 +427,7 @@ namespace LaunchSSISPackageSvcTestCS
   
 -   Video [Vorgehensweise: Automatisieren der SSIS-Paketausführung mit dem SQL Server-Agent (SQL Server-Video)](http://technet.microsoft.com/sqlserver/ff686764.aspx) auf technet.microsoft.com  
   
-![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben Sie mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Grundlegendes zu den Unterschieden zwischen der lokalen und der Remoteausführung](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   

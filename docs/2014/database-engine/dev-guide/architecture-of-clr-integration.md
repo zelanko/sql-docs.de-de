@@ -1,5 +1,5 @@
 ---
-title: Architektur der CLR-Integration | Microsoft Docs
+title: Architektur der CLR-Integration | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - architecture [CLR integration]
 ms.assetid: 05e4b872-3d21-46de-b4d5-739b5f2a0cf9
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b408bcb655329c85bc39dea2c4ccfde68ac753db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c4ecea20b8ec2cb42d6945e14ea0777166a37d9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058560"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196050"
 ---
 # <a name="architecture-of-clr-integration"></a>Architektur der CLR-Integration
   Die Integration von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in die .NET Framework-CLR (Common Language Runtime) ermöglicht Datenbankprogrammierern die Verwendung von Sprachen wie Visual C#, Visual Basic .NET und Visual C++. Funktionen, gespeicherte Prozeduren, Trigger, Datentypen und Aggregate gehören zu den Arten von Geschäftslogik, die Programmierer in diesen Sprachen schreiben können.  

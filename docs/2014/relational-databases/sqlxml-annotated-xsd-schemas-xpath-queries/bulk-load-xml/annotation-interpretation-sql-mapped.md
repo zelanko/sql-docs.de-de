@@ -1,5 +1,5 @@
 ---
-title: 'SQL: zugeordnet (SQLXML 4.0) | Microsoft Docs'
+title: 'SQL: zugeordnet (SQLXML 4.0) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - column mapping [SQLXML]
 ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 820e30a4ac82cb54bd76d29dd689f5ddb86a58b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: dfac8ddb86223ea64bcc812323170e9a02339ee5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058246"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177857"
 ---
 # <a name="sqlmapped-sqlxml-40"></a>sql:mapped (SQLXML 4.0)
-  XML-Massenladen verarbeitet die `sql:mapped` -Anmerkung im XSD-Schema erwartungsgemäß – d. h. wenn das Zuordnungsschema gibt `sql:mapped="false"` für ein Element oder Attribut, XML-Massenladen wird nicht versucht, die zugehörigen Daten in der entsprechenden Spalte zu speichern.  
+  XML-Massenladen verarbeitet die `sql:mapped` -Anmerkung im XSD-Schema wie erwartet – d. h. wenn das Zuordnungsschema `sql:mapped="false"` für ein Element oder Attribut, XML-Massenladen wird nicht versucht, die zugehörigen Daten in der entsprechenden Spalte zu speichern.  
   
  Das XML-Massenladen ignoriert Elemente und Attribute, die nicht zugeordnet sind (weil sie entweder nicht im Schema beschrieben sind oder im XSD-Schema die Anmerkung `sql:mapped="false"` aufweisen). Alle nicht zugeordneten Daten werden in die Überlaufspalte übertragen, sofern eine solche Spalte mit `sql:overflow-field` angegeben wurde.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36058246"
 </xsd:schema>  
 ```  
   
- Da die **"HomePhone"** -Attribut gibt `sql:mapped="false"`, XML-Massenladen dieses Attribut nicht auf die entsprechende Spalte zugeordnet. Das XSD-Schema identifiziert eine Überlaufspalte (**OverflowColumn**) in der XML-Massenladen diese nicht verbrauchten Daten speichert.  
+ Da die **"HomePhone"** -Attribut gibt an, `sql:mapped="false"`, XML-Massenladen dieses Attribut nicht in die entsprechende Spalte zugeordnet. Das XSD-Schema identifiziert eine Überlaufspalte (**OverflowColumn**) in der XML-Massenladen diese nicht verbrauchten Daten speichert.  
   
 ### <a name="to-test-a-working-sample"></a>So testen Sie ein funktionstüchtiges Beispiel  
   

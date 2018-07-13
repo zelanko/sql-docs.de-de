@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - creating file attributes [Master Data Services]
 - attributes [Master Data Services], creating file attributes
 ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 65a0bdab9722e8751700d90a7685d06979d17f98
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 806de83ca98234134cbd2d23a9cc6e9a94c115e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050631"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180307"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>Erstellen eines Dateiattributs (Master Data Services)
   Erstellen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]ein Dateiattribut, um Attributwerte mit Dateien aufzufüllen.  
@@ -56,13 +56,13 @@ ms.locfileid: "36050631"
   
     -   Wenn das Attribut für Auflistungen bestimmt ist, klicken Sie im Bereich **Auflistungsattribute** auf **Auflistungsattribut hinzufügen**.  
   
-7.  Auf der **Attribut hinzufügen** Seite der **Datei** Option.  
+7.  Auf der **Attribut hinzufügen** Seite die **Datei** Option.  
   
 8.  Geben Sie im Feld **Name** einen Namen für das Attribut ein. Eine Liste von Wörtern, die nicht als Attributnamen verwendet werden sollten, finden Sie unter [Reservierte Wörter &#40;Master Data Services&#41;](../../2014/master-data-services/reserved-words-master-data-services.md).  
   
 9. Geben Sie im Feld **Pixelbreite anzeigen** die Breite der Attributspalte ein, die im **Explorerraster** angezeigt werden soll.  
   
-10. Aus der **Dateierweiterung** ein, wählen Sie eine oder mehrere Dateitypen aus, dass ein Benutzer hochladen kann, oder übernehmen Sie den Standardwert (*.\*) um alle Dateitypen zuzulassen.  
+10. Von der **Dateierweiterung** ein, wählen Sie eine oder mehrere Dateitypen aus, dass ein Benutzer hochladen kann, oder übernehmen Sie den Standardwert (*.\*) um alle Dateitypen zuzulassen.  
   
 11. Optional können Sie **Änderungsnachverfolgung aktivieren** auswählen, um Änderungen an Gruppen von Attributen nachzuverfolgen. Weitere Informationen finden Sie unter [Hinzufügen von Attributen zu einer Änderungsnachverfolgungsgruppe &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).  
   

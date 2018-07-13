@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10010"
 helpviewer_keywords:
 - query designers, text-based
 ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2996f7cfb6f7c873e57619c60f49511a62f8d533
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 1c596018bcef960d176cf41a49221972d5652f20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050715"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162121"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>Benutzeroberfläche des textbasierten Abfrage-Designers (Berichts-Generator)
   Verwenden Sie den textbasierten Abfrage-Designer, um eine Abfrage mithilfe der Abfragesprache zu verwenden, die von der Datenquelle unterstützt wird, führen Sie die Abfrage aus, und zeigen Sie die Ergebnisse zur Entwurfszeit an. Sie können mehrere [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisungen, Abfrage- oder Befehlssyntaxen für benutzerdefinierte Datenverarbeitungserweiterungen und Abfragen angeben, die als Ausdrücke angegeben sind. Da der textbasierte Abfrage-Designer die Abfrage nicht zuvor verarbeitet und eine beliebige Abfragesyntax aufnehmen kann, handelt es sich hierbei um das standardmäßige Abfrage-Designer-Tool für viele Datenquellentypen.  
@@ -60,7 +60,7 @@ ms.locfileid: "36050715"
 |Ergebnis|Zeigt die Ergebnisse der Abfrage an. Klicken Sie zum Ausführen der Abfrage mit der rechten Maustaste in einen beliebigen Bereich, und klicken Sie auf **Ausführen**, oder klicken Sie auf der Symbolleiste auf **Ausführen** .|  
   
 #### <a name="example"></a>Beispiel  
- Die folgende Abfrage gibt die Liste der Nachnamen aus der [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** Datenbank `ContactType` Tabelle für die `Person` Schema.  
+ Die folgende Abfrage gibt die Liste der Nachnamen aus der [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** Datenbank `ContactType` Tabelle aus, für die `Person` Schema.  
   
 ```  
 SELECT Name FROM Person.ContactType  

@@ -1,5 +1,5 @@
 ---
-title: Erstellen von Teilcubes in MDX (Multidimensional Expressions) | Microsoft Docs
+title: Erstellen von Teilcubes in MDX (Multidimensional Expressions) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [MDX], subcubes
 - subcubes [MDX]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - CREATE SUBCUBE statement
 ms.assetid: 5403a62b-99ac-4d83-b02a-89bf78bf0f46
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8369d07c18f6f79359a12423c4668642d66727db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f63c776a1b5d095a7ae17c9e568c827bd660db88
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057715"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178937"
 ---
 # <a name="building-subcubes-in-mdx-mdx"></a>Erstellen von Teilcubes in MDX (MDX)
   Ein Teilcube ist eine Teilmenge eines Cubes, die einer gefilterten Sicht der zugrunde liegenden Daten entspricht. Durch Begrenzen des Cubes auf einen Teilcube können Sie die Abfrageleistung verbessern.  
@@ -53,7 +53,7 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
 -   Wenn Sie jedes Element einer Ebene einfügen, fügen Sie alle Elemente aus der Hierarchie ein. Elemente aus anderen Hierarchien werden ausgeschlossen, wenn diese Elemente keine Elemente auf der Ebene haben (beispielsweise eine unausgeglichene Hierarchie: etwa eine Stadt, für die es keine Kunden gibt).  
   
--   Ein Teilcube enthält immer jedes `(All)` Member aus dem Cube.  
+-   Ein Teilcube enthält immer jedes `(All)` -Element aus dem Cube.  
   
  Aggregatwerte im Teilcube werden visuell summiert. Ein Teilcube enthält beispielsweise `USA`, `WA`und `OR`. Der Aggregatwert für `USA` ist die Summe aus `{WA,OR}` , weil `WA` und `OR` die einzigen Staaten sind, die durch den Teilcube definiert sind. Alle anderen Staaten werden ignoriert.  
   
@@ -72,6 +72,6 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
 ## <a name="see-also"></a>Siehe auch  
  [Des Cubekontexts in einer Abfrage &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
- [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Grundlegendes zu MDX-Abfrage &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

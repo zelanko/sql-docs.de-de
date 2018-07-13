@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], about
 - change data capture [SQL Server]
 - 22832 (Database Engine error)
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 656a66a9c0567c7d65a66983a2f459ee802ef523
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 279e47c38c5339f74545cd0b13a175a4a9a604b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056182"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170252"
 ---
 # <a name="about-change-data-capture-sql-server"></a>Über Change Data Capture (SQL Server)
   Change Data Capture zeichnet Einfüge-, Aktualisierungs- und Löschaktivitäten auf, die an einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle vorgenommen werden. Hierdurch werden die Details zu diesen Änderungen in einem leicht verwendbaren relationalen Format bereitgestellt. Für die geänderten Zeilen werden die Spaltendaten sowie die Metadaten, die zur Übernahme der Änderungen in einer Zielumgebung erforderlich sind, aufgezeichnet und in Änderungstabellen gespeichert, die die Spaltenstruktur der nachverfolgten Quelltabellen widerspiegeln. Für den systematischen Zugriff auf die Änderungsdaten durch den Consumer werden Tabellenwertfunktionen bereitgestellt.  
@@ -38,9 +38,9 @@ ms.locfileid: "36056182"
  Die Quelle der Änderungsdaten ist für Change Data Capture das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Transaktionsprotokoll. Bei Einfügungen, Aktualisierungen und Löschungen in den nachverfolgten Quelltabellen werden diesem Protokoll entsprechende Einträge hinzugefügt, die diese Änderungen beschreiben. Das Protokoll dient als Eingabe für den Erfassungsvorgang. Der Prozess liest das Protokoll und fügt der Änderungstabelle, die mit der nachverfolgten Tabelle verknüpft ist, Informationen über die Änderungen hinzu. Zur Aufzählung der Änderungen in den Änderungstabellen innerhalb eines angegebenen Bereichs werden Funktionen bereitgestellt, und die Informationen werden in Form eines gefilterten Resultsets zurückgegeben. Das gefilterte Resultset wird typischerweise von einem Anwendungsprozess verwendet, um die Darstellung der Quelle in einer externen Umgebung zu aktualisieren.  
   
 ## <a name="understanding-change-data-capture-and-the-capture-instance"></a>Change Data Capture und die Aufzeichnungsinstanz  
- Damit Änderungen an einzelnen Tabellen innerhalb einer Datenbank nachverfolgt werden können, muss Change Data Capture explizit für die Datenbank aktiviert werden. Dazu wird die gespeicherte Prozedur [sys.sp_cdc_enable_db](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql)verwendet. Wenn die Datenbank für Change Data Capture aktiviert ist, können Quelltabellen mit der gespeicherten Prozedur [sys.sp_cdc_enable_table](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql)als nachverfolgte Tabellen identifiziert werden. Wenn eine Tabelle für Change Data Capture aktiviert ist, wird eine Aufzeichnungsinstanz erstellt und zugeordnet, die die Verteilung der Änderungsdaten in der Quelltabelle unterstützt. Die Aufzeichnungsinstanz besteht aus einer Änderungstabelle und bis zu zwei Abfragefunktionen. Metadaten, die die Konfigurationsdetails der Aufzeichnungsinstanz beschrieben bleiben in der Change Data Capture-Metadatentabellen `cdc.change_tables`, `cdc.index_columns`, und `cdc.captured_columns`. Diese Informationen können mit der gespeicherten Prozedur [sys.sp_cdc_help_change_data_capture](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql)abgerufen werden.  
+ Damit Änderungen an einzelnen Tabellen innerhalb einer Datenbank nachverfolgt werden können, muss Change Data Capture explizit für die Datenbank aktiviert werden. Dazu wird die gespeicherte Prozedur [sys.sp_cdc_enable_db](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql)verwendet. Wenn die Datenbank für Change Data Capture aktiviert ist, können Quelltabellen mit der gespeicherten Prozedur [sys.sp_cdc_enable_table](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql)als nachverfolgte Tabellen identifiziert werden. Wenn eine Tabelle für Change Data Capture aktiviert ist, wird eine Aufzeichnungsinstanz erstellt und zugeordnet, die die Verteilung der Änderungsdaten in der Quelltabelle unterstützt. Die Aufzeichnungsinstanz besteht aus einer Änderungstabelle und bis zu zwei Abfragefunktionen. Metadaten, die die Konfigurationsdetails der Aufzeichnungsinstanz beschrieben verbleiben in den Change Data Capture-Metadatentabellen `cdc.change_tables`, `cdc.index_columns`, und `cdc.captured_columns`. Diese Informationen können mit der gespeicherten Prozedur [sys.sp_cdc_help_change_data_capture](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql)abgerufen werden.  
   
- Alle einer Aufzeichnungsinstanz zugeordneten Objekte werden im Change Data Capture-Schema der aktivierten Datenbank erstellt. Der Name der Aufzeichnungsinstanz muss ein gültiger Objektname sein, der innerhalb aller Aufzeichnungsinstanzen der Datenbank eindeutig ist. Standardmäßig lautet der Name \<*Schemaname*_*Tabellenname*> der Quelltabelle. Der zugeordneten Änderungstabelle wird dem Namen Anfügen `_CT` , der Name der Aufzeichnungsinstanz. Die Funktion, die zur Abfrage aller Änderungen wird dem Namen vorangestellt `fn_cdc_get_all_changes_` , der Name der Aufzeichnungsinstanz. Wenn die Aufzeichnungsinstanz für die Unterstützung konfiguriert ist `net changes`, `net_changes` Abfrage Funktion ebenfalls erstellt und mit dem Namen vorangestellt **Fn_cdc_get_net_changes\_**  , der Name der Aufzeichnungsinstanz.  
+ Alle einer Aufzeichnungsinstanz zugeordneten Objekte werden im Change Data Capture-Schema der aktivierten Datenbank erstellt. Der Name der Aufzeichnungsinstanz muss ein gültiger Objektname sein, der innerhalb aller Aufzeichnungsinstanzen der Datenbank eindeutig ist. Standardmäßig lautet der Name \<*Schemaname*_*Tabellenname*> der Quelltabelle. Der zugeordneten Änderungstabelle wird dem Namen Anfügen `_CT` , der Name der Aufzeichnungsinstanz. Die Funktion, die zum Abfragen aller Änderungen wird dem Namen voranstellen `fn_cdc_get_all_changes_` , der Name der Aufzeichnungsinstanz. Wenn die Aufzeichnungsinstanz für die Unterstützung konfiguriert ist `net changes`, `net_changes` Abfrage, die Funktion wird auch erstellt und mit dem Namen vorangestellt **Fn_cdc_get_net_changes\_**  , der Name der Aufzeichnungsinstanz.  
   
 ## <a name="change-table"></a>Änderungstabelle  
  Die ersten fünf Spalten einer Change Data Capture-Änderungstabelle sind Metadatenspalten. Diese enthalten zusätzliche Informationen zu den aufgezeichneten Änderungen. Die Namen und in der Regel auch der Typ der restlichen Spalten entsprechen den identifizierten nachverfolgten Spalten aus der Quelltabelle. Diese Spalten enthalten die aus der Quelltabelle erfassten Spaltendaten.  
@@ -54,7 +54,7 @@ ms.locfileid: "36056182"
   
  Damit die Datenmenge in Änderungstabellen nicht auf eine unüberschaubare Größe anwächst, müssen die Daten regelmäßig und systematisch gekürzt werden. Der Change Data Capture-Cleanupprozess dient zur Erzwingung der beibehaltungsbasierten Cleanuprichtlinie. Zunächst wird der untere Endpunkt des Gültigkeitsintervalls verschoben, um die Zeitbeschränkung festzulegen. Anschließend werden die abgelaufenen Einträge aus der Änderungstabelle entfernt. Standardmäßig werden die Daten drei Tage beibehalten.  
   
- High-End den Aufzeichnungsprozess jedem Commit neuer Änderungsdaten, neue Einträge hinzugefügt werden `cdc.lsn_time_mapping` für jede Transaktion, die änderungstabelleneinträge beinhaltet. In der Zuordnungstabelle werden sowohl die Commit-Protokollfolgenummern als auch die Commitzeitpunkte der Transaktion (Spalten start_lsn und tran_end_time) beibehalten. Die maximale LSN-Wert in `cdc.lsn_time_mapping` entspricht der obergrenzenmarkierung des Datenbank-gültigkeitsfensters. Die entsprechende Commitzeit wird als Basis für die Berechnung einer neuen Untergrenzenmarkierung durch die beibehaltungsbasierte Cleanuprichtlinie verwendet.  
+ Am oberen Endpunkt, den Aufzeichnungsprozess jedem Commit neuer Änderungsdaten, neue Einträge hinzugefügt `cdc.lsn_time_mapping` für jede Transaktion, die änderungstabelleneinträge beinhaltet. In der Zuordnungstabelle werden sowohl die Commit-Protokollfolgenummern als auch die Commitzeitpunkte der Transaktion (Spalten start_lsn und tran_end_time) beibehalten. Der maximale LSN-Wert in `cdc.lsn_time_mapping` entspricht der obergrenzenmarkierung des Datenbank-gültigkeitsfensters. Die entsprechende Commitzeit wird als Basis für die Berechnung einer neuen Untergrenzenmarkierung durch die beibehaltungsbasierte Cleanuprichtlinie verwendet.  
   
  Da der Aufzeichnungsprozess Änderungsdaten aus dem Transaktionsprotokoll extrahiert, entsteht eine Latenzzeit zwischen dem Commitzeitpunkt einer Änderung in einer Quelltabelle und dem Zeitpunkt, an dem die Änderung in der zugeordneten Änderungstabelle angezeigt wird. Diese Latenzzeit ist in der Regel sehr kurz, vergessen Sie jedoch nicht, dass die Änderungsdaten erst verfügbar sind, nachdem der Aufzeichnungsprozess die verbundenen Protokolleinträge verarbeitet hat.  
   

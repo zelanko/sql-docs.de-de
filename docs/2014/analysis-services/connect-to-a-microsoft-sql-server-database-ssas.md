@@ -1,5 +1,5 @@
 ---
-title: Herstellen einer Verbindung mit einer Microsoft SQL Server-Datenbank (SSAS) | Microsoft Docs
+title: Herstellen einer Verbindung einer Microsoft SQL Server-Datenbank (SSAS) mit | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connsqlserverdb.f1
 ms.assetid: 6ebfe029-dbba-4f0d-a556-328e79ef629f
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 30c7c942e2df39ceb1bf1bd7f4afd91c54f6f238
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 50dcb1cfa930a6fd09ff1f25d91b4ad4e5b42acb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050679"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189457"
 ---
 # <a name="connect-to-a-microsoft-sql-server-database-ssas"></a>Mit einer Microsoft SQL Server-Datenbank verbinden (SSAS)
   Auf dieser Seite des **Tabellenimport-Assistenten** können Sie Einstellungen angeben, um eine Verbindung mit einer Microsoft SQL Server-Datenbank herzustellen. Um im [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf den Assistenten zuzugreifen, klicken Sie im Menü **Modell** auf **Aus Datenquelle importieren**.  

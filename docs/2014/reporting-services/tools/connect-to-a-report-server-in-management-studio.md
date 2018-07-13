@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], connections
 - connections [Reporting Services], report server
@@ -18,13 +18,13 @@ ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 34145968707e6ccc2a531fdddead84ba805aadb5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49c367adde71d1d42a0052e6029ab2fa6d015d9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049401"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172153"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] stellt einen Objekt-Explorer bereit, mit dem Sie eine Verbindung zu einem beliebigen Server der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Familie herstellen und seinen Inhalt grafisch darstellen können. Für Reporting Services können Sie den Objekt-Explorer verwenden, um Folgendes durchzuführen:  
@@ -63,7 +63,7 @@ ms.locfileid: "36049401"
   
 2.  Klicken Sie auf Verbinden, um die Liste der Servertypen anzuzeigen, und wählen Sie dann **Reporting Services**.  
   
-3.  Geben Sie im Dialogfeld **Verbindung mit Server herstellen** eine URL zu einer SharePoint-Website ein. Das folgende Beispiel veranschaulicht die Syntax: http://\<Webserver >/Sites /\<Website >.  
+3.  Geben Sie im Dialogfeld **Verbindung mit Server herstellen** eine URL zu einer SharePoint-Website ein. Im folgende Beispiel wird die Syntax veranschaulicht: http://\<Webserver >/Sites /\<Website >.  
   
 4.  Wählen Sie den Authentifizierungstyp aus. Wenn Sie die Windows-Authentifizierung verwenden, müssen Sie die Verbindung mit Ihren Anmeldeinformationen herstellen. Wenn Sie die Standardauthentifizierung oder die Formularauthentifizierung auswählen, geben Sie das Konto und das Kennwort ein.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "36049401"
 |Berichtsserver im integrierten SharePoint-Modus, verbunden über den Namen der Berichtsserverinstanz:<br /><br /> \<servername>\<_instanz>|Servereigenschaften und -standardeinstellungen anzeigen und festlegen.<br /><br /> Aufträge anzeigen und abbrechen.|Berechtigungs-Vollzugriffsebene für die SharePoint-Website, die in den Berichtsserver integriert ist.<br /><br /> Beachten Sie, dass bei der Verbindung mit dem Berichtsserver statt mit der SharePoint-Website die Anzahl der Tasks, die Sie durchführen können, erheblich reduziert ist. Dies ist darauf zurückzuführen, dass der Berichtsserver nur Anwendungsdaten zurückgeben kann, die in der Berichtsserver-Datenbank gespeichert oder verwaltet werden, jedoch nicht auf die in den SharePoint-Konfigurations- und -Inhaltsdatenbanken.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurieren Sie eine Verbindung mit der Berichtsserver-Datenbank &#40;SSRS-Konfigurations-Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Konfigurieren eine Berichtsserver-Datenbankverbindung &#40;SSRS-Konfigurations-Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Reporting Services in SQL Server Management Studio (SSRS)](reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

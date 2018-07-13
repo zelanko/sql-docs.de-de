@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
 - report server database
@@ -17,13 +17,13 @@ ms.assetid: 8a3a6ffe-4001-46be-8548-94532550f6a5
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 5cd23aaa93b60a2af7212ca8c98025a51f92d4c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 913ec99d330f1eb62cbc1a27572296856c28f48b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056406"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172211"
 ---
 # <a name="create-a-report-server-database--ssrs-configuration-manager"></a>Erstellen einer Berichtsserver-Datenbank (SSRS-Konfigurations-Manager)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **von** verwendet zwei relationale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken, um Berichtsserver-Metadaten und -Objekte zu speichern. Eine Datenbank, die als primärer Speicher dient, und eine zweite Datenbank zum Speichern temporärer Daten. Die Datenbanken werden gemeinsam erstellt und sind durch ihre Namen aneinander gebunden. Bei einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Standardinstanz erhalten die Datenbanken die Namen `reportserver` und `reportservertempdb`. Zusammen werden die beiden Datenbanken als "Berichtsserver-Datenbank" oder "Berichtsserver-Katalog" bezeichnet.  
@@ -73,7 +73,7 @@ ms.locfileid: "36056406"
 >  Der Berichtsserver und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, die die Berichtsserver-Datenbank hostet, können sich in verschiedenen Domänen befinden. Bei einer Internetbereitstellung ist es üblich, einen Server zu verwenden, der sich hinter einer Firewall befindet. Wenn Sie einen Berichtsserver für den Internetzugriff konfigurieren, sollten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen verwenden, um die Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz hinter der Firewall herzustellen, und IPSec zum Schützen dieser Verbindung.  
   
 ## <a name="database-server-edition-requirements"></a>Anforderungen für die Datenbankserver-Edition  
- Wenn Sie eine Berichtsserver-Datenbank erstellen, sollten Sie beachten, dass nicht alle Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Hosten der Datenbank verwendet werden können. Weitere Informationen finden Sie im Abschnitt "Report Server Database Server Editionsanforderungen" [von den Editionen von SQL Server 2014 unterstützte Funktionen](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Wenn Sie eine Berichtsserver-Datenbank erstellen, sollten Sie beachten, dass nicht alle Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Hosten der Datenbank verwendet werden können. Weitere Informationen finden Sie im Abschnitt "Report Serveranforderungen Datenbankserver-Edition" [von den SQL Server 2014-Editionen unterstützte Funktionen](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Reporting Services-Konfigurations-Manager &#40;del&#41;](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode)  

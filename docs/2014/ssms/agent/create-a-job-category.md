@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, categories
 - jobs [SQL Server Agent], categories
 - categories [SQL Server Agent jobs]
 ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d4ab1a7fdd56bf4586d3009c9c45bb29ecac0497
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4a855a78a6c37fa2327a88e0a052adbbc4ce85b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058218"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179107"
 ---
 # <a name="create-a-job-category"></a>Erstellen einer Auftragskategorie
   In diesem Thema wird beschrieben, wie Sie eine Auftragskategorie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects erstellen können.  
@@ -62,7 +62,7 @@ ms.locfileid: "36058218"
   
 8.  Klicken Sie im Dialogfeld **Auftragskategorien verwalten >***Servername* auf **Aktualisieren**, um sicherzustellen, dass die neue Auftragskategorie aktiv ist. Schließen Sie das Dialogfeld, wenn alles normal aussieht.  
   
- Weitere Informationen zu diesen Dialogfeldern finden Sie unter [Auftragskategorien: Auftragskategorien verwalten](job-categories-manage-job-categories.md) und [Kategorien Auftragseigenschaften und neue Auftragskategorie](job-categories-properties-new-job-category.md).  
+ Weitere Informationen zu diesen Dialogfeldern finden Sie unter [Auftragskategorien: Auftragskategorien verwalten](job-categories-manage-job-categories.md) und [Eigenschaften und eine neue Auftragskategorie](job-categories-properties-new-job-category.md).  
   
  
   
@@ -94,7 +94,7 @@ ms.locfileid: "36058218"
 ##  <a name="SMO"></a> Verwendung von SQL Server Management Objects  
  **So erstellen Sie eine Auftragskategorie**  
   
- Rufen Sie die `JobCategory` Klasse, indem Sie eine Programmiersprache, die Sie, z. B. Visual Basic, Visual c# oder PowerShell auswählen. Beispielcode hierzu finden Sie unter [Planen von automatischen, administrativen Tasks im SQL Server-Agent](sql-server-agent.md).  
+ Rufen Sie die `JobCategory` Klasse, indem Sie eine Programmiersprache, die Sie, wie z. B. Visual Basic, Visual c# oder PowerShell auswählen. Beispielcode hierzu finden Sie unter [Planen von automatischen, administrativen Tasks im SQL Server-Agent](sql-server-agent.md).  
   
  
   

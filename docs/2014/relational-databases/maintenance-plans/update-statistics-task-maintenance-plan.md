@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.statistics.f1
 helpviewer_keywords:
 - Updates Statistics Task dialog box
 ms.assetid: 22902fd0-eb39-4f18-af94-3fcb69d2a3a4
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b0fcc2dec17d6be2028092a6c2df1418806531c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5302eb8b7ac81a7ad12ca063b8c34d3168fabeb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050542"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197180"
 ---
 # <a name="update-statistics-task-maintenance-plan"></a>Task 'Statistiken aktualisieren' (Wartungsplan)
   Verwenden Sie das Dialogfeld **Task 'Statistiken aktualisieren'** , um die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Informationen zu den Daten in den Tabellen und Indizes zu aktualisieren. Dieser Task erstellt erneut die Verteilungsstatistik jedes für Benutzertabellen in der Datenbank erstellten Index mithilfe einer neuen Stichprobe. Die Verteilungsstatistiken werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, um die Navigation durch die Tabellen während der Verarbeitung von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen zu optimieren. Um die Verteilungsstatistiken automatisch zu erstellen, nimmt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für jeden Index in regelmäßigen Abständen Daten in der entsprechenden Tabelle als Stichprobe. Die Größe der Stichprobe basiert auf der Anzahl der Zeilen in der Tabelle und der Häufigkeit der an den Daten vorgenommenen Änderungen. Verwenden Sie diese Option, um mithilfe des angegebenen Prozentsatzes der Tabellendaten eine zusätzliche Stichprobe auszuführen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt mithilfe dieser Informationen bessere Abfragepläne.  

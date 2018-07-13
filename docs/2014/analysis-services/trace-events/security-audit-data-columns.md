@@ -1,5 +1,5 @@
 ---
-title: Security Audit Data Columns | Microsoft Docs
+title: Sicherheitsüberwachung-Datenspalten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Security Audit event category [SQL Server]
 ms.assetid: fac1a7f9-5961-4f4b-bb04-847616b505d7
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cf737330922500f8e9b33c7645fdd5e6b8b6b244
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e0decf6588f44b6026608254fa1a196a310e37ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050468"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171561"
 ---
 # <a name="security-audit-data-columns"></a>Sicherheitsüberwachung-Datenspalten
   Die Sicherheitsüberwachungs-Ereigniskategorie verfügt über die folgenden Ereignisklassen:  
@@ -118,7 +118,7 @@ ms.locfileid: "36050468"
   
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
-|EventSubclass|1|1|Die Ereignisunterklasse enthält zusätzliche Informationen zu jeder Ereignisklasse.<br /><br /> 1: Sicherung<br /><br /> 2: Stellen Sie wieder her<br /><br /> 3: Synchronisieren<br /><br /> 4: Trennen<br /><br /> 5: Anfügen<br /><br /> 6: ImageLoad<br /><br /> 7: ImageSave|  
+|EventSubclass|1|1|Die Ereignisunterklasse enthält zusätzliche Informationen zu jeder Ereignisklasse.<br /><br /> 1: Sicherung<br /><br /> 2: Wiederherstellen<br /><br /> 3: Synchronisieren<br /><br /> 4: Trennen<br /><br /> 5: Anfügen<br /><br /> 6: ImageLoad<br /><br /> 7: ImageSave|  
 |Schweregrad|22|1|Schweregrad einer Ausnahme.|  
 |Success|23|1|1 = Erfolg 0 = Fehler (z. B. gibt 1 den Erfolg einer Berechtigungsüberprüfung und 0 einen Fehler bei dieser Überprüfung an).|  
 |Fehler|24|1|Fehlernummer eines bestimmten Ereignisses.|  

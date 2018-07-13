@@ -1,5 +1,5 @@
 ---
-title: Technische Referenz zu Microsoft Linear Regression-Algorithmus | Microsoft Docs
+title: Technische Referenz zu Microsoft Linear Regression-Algorithmus | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - AUTO_DETECT_PERIODICITY parameter
 - linear regression algorithms [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f9655abda58057343b67ef16dd62fcb7a0faa048
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 201242a7347ea564444449071342aa9a3952d7f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050680"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181067"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Linear Regression-Algorithmus
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus ist eine spezielle Version des Microsoft Decision Trees-Algorithmus, der für die Modellierung kontinuierlicher Attributpaare optimiert ist. In diesem Thema wird die Implementierung des Algorithmus erläutert und beschrieben, wie das Verhalten des Algorithmus angepasst wird. Ferner werden Links zu weiteren Informationen über das Abfragen von Modellen zur Verfügung gestellt.  
@@ -68,7 +68,7 @@ ms.locfileid: "36050680"
 ### <a name="regressors-in-linear-regression-models"></a>Regressoren in linearen Regressionsmodellen  
  Lineare Regressionsmodelle basieren auf dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus. Auch wenn Sie den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus nicht verwenden, kann jedes Entscheidungsstrukturmodell eine Struktur oder Knoten enthalten, die eine Regression für ein kontinuierliches Attribut darstellen.  
   
- Sie müssen nicht angeben, dass eine kontinuierliche Spalte einen Regressor darstellt. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus unterteilt das Dataset selbst dann in Bereiche mit sinnvollen Mustern, wenn Sie das REGRESSOR-Flag nicht für die Spalte festlegen. Der Unterschied ist, wenn Sie das Modellierungsflag festgelegt, wird der Algorithmus regressionsgleichungen der Form finden versucht eine * C1 + b\*C2 + … um die Muster in den Knoten der Struktur. Dann wird die Summe der Restwerte berechnet, und wenn die Abweichung zu groß ist, wird die Struktur unterteilt.  
+ Sie müssen nicht angeben, dass eine kontinuierliche Spalte einen Regressor darstellt. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus unterteilt das Dataset selbst dann in Bereiche mit sinnvollen Mustern, wenn Sie das REGRESSOR-Flag nicht für die Spalte festlegen. Der Unterschied ist, wenn Sie das Modellierungsflag festlegen, versucht der Algorithmus regressionsgleichungen der Form finden eine * C1 + b\*C2 +..., die Muster den Knoten der Struktur zuzuordnen. Dann wird die Summe der Restwerte berechnet, und wenn die Abweichung zu groß ist, wird die Struktur unterteilt.  
   
  Wenn Sie beispielsweise das Kaufverhalten von Kunden mithilfe des Attributs **Income** vorhersagen und das Modellierungsflag REGRESSOR für die Spalte festlegen, versucht der Algorithmus zuerst, die Werte der Spalte **Income** mithilfe einer Standardregressionsformel zuzuordnen. Ist die Abweichung zu groß, dann wird die Regressionsformel ignoriert und die Struktur nach einem anderen Attribut unterteilt. Der Decision Tree-Algorithmus versucht nach der Unterteilung, jedem der Zweige einen Regressor für Income zuzuordnen.  
   
@@ -86,11 +86,11 @@ ms.locfileid: "36050680"
 |Vorhersagbares Attribut|Continuous, Cyclical und Ordered|  
   
 > [!NOTE]  
->  `Cyclical` und `Ordered` Inhaltstypen werden unterstützt, aber der Algorithmus behandelt sie als diskrete Werte und führt keine spezielle Verarbeitung.  
+>  `Cyclical` und `Ordered` Inhaltstypen werden unterstützt, aber der Algorithmus behandelt sie als diskrete Werte und führt keine spezielle Verarbeitung durch.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Linear Regression-Algorithmus](microsoft-linear-regression-algorithm.md)   
- [Lineare Regressionsmodell-Abfragebeispiele](linear-regression-model-query-examples.md)   
- [Miningmodellinhalt für lineare Regressionsmodelle &#40;Analysis Services – Datamining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Lineares Regressionsmodell-Abfragebeispiele](linear-regression-model-query-examples.md)   
+ [Mingingmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

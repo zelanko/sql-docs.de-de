@@ -1,5 +1,5 @@
 ---
-title: Vergleichen von tabellarischen und mehrdimensionalen Lösungen (SSAS) | Microsoft Docs
+title: Vergleichen von tabellarischen und mehrdimensionalen Lösungen (SSAS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
 caps.latest.revision: 45
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b5cfb7c473e16dde04a87a05e3d727d161c62583
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fbd022ac0771fd862909761b1d4f1abd6e0acf90
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057080"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181057"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>Vergleichen von tabellarischen und mehrdimensionalen Lösungen (SSAS)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bietet zwei unterschiedliche Ansätze für die datenmodellierung: tabellarischer und mehrdimensionaler. Zwar gibt es erhebliche Überschneidungen, aber auch wichtige Unterschiede, die Ihre Entscheidung zur weiteren Vorgehensweise beeinflussen. In diesem Thema werden verschiedene Funktionen verglichen und erklärt, wie jeder Ansatz allgemeine Projektanforderungen erfüllt. Spielt beispielsweise die Unterstützung einer bestimmten Datenquelle eine wichtige Rolle, kann der Abschnitt zu Datenquellen bei der Entscheidung über den geeigneten Modellierungsansatz hilfreich sein.  
@@ -32,7 +32,7 @@ ms.locfileid: "36057080"
   
 -   [Modellfunktionen](#bkmk_models)  
   
--   [Modellgröße](#bkmk_modelsize)  
+-   [Größe des Datenbankmodells](#bkmk_modelsize)  
   
 -   [Programmierbarkeit und Möglichkeiten für Entwickler](#bkmk_ext)  
   
@@ -48,19 +48,19 @@ ms.locfileid: "36057080"
   
 -   [Serverbereitstellungsmodi für mehrdimensionale und tabellarische Lösungen](#bkmk_deploymentmode)  
   
--   [Nächster Schritt: Erstellen einer Lösung](#bkmk_Next)  
+-   [Nächster Schritt: Erstellen einer Lösungs](#bkmk_Next)  
   
  Weitere Informationen finden Sie im folgenden Fachartikel auf MSDN: [Auswählen einer tabellarischen oder mehrdimensionalen Modellierungserfahrung in SQL Server 2012 Analysis Service](http://go.microsoft.com/fwlink/?LinkId=251588).  
   
 ##  <a name="bkmk_overview"></a> Übersicht über die Modellierung in Analysis Services  
  Analysis Services bietet sowohl eine Modellentwicklungsumgebung als auch die Modellbereitstellung über Datenbankhosting auf einer Analysis Services-Instanz. Es gibt tabellarische und mehrdimensionale Modelltypen. Wie zu erwarten, unterstützt Datenbankhosting die tabellarischen und mehrdimensionalen Lösungen, die Sie erstellen, aber es enthält auch PowerPivot für SharePoint.  
   
- PowerPivot für SharePoint ist *Analysis Services im SharePoint-Modus*. Dabei fungiert Analysis Services als zusätzlicher Dienst für SharePoint, der zum Hosten und Verwalten von Excel-Datenmodellen beiträgt, die zuvor in Excel erstellt und anschließend in SharePoint gespeichert wurden. Die Rolle von Analysis Services in diesem Kontext besteht darin, das Datenmodell in den Arbeitsspeicher zu laden, Daten aus externen Datenquellen zu aktualisieren und Abfragen für das Modell auszuführen. In dieser Konfiguration arbeitet Analysis Services im Hintergrund. Alle Verbindungen und Anforderungen für Analysis Services werden von SharePoint ausgeführt und zwar nur, wenn eine Excel-Arbeitsmappe ein Datenmodell enthält (Datenmodelle sind in Excel-Arbeitsmappen optional). Wenn das Erstellen eines Datenmodells in Excel und dessen hosting in SharePoint, Anforderungen Ihres Projekts entspricht, finden Sie unter [Power Pivot: leistungsstarke Datenanalyse und datenmodellierung in Excel](https://support.office.com/en-ie/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-d7b119ed-1b3b-4f23-b634-445ab141b59b) und [PowerPivot für SharePoint &#40;SSAS &#41; ](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md) für Weitere Informationen.  
+ PowerPivot für SharePoint ist *Analysis Services im SharePoint-Modus*. Dabei fungiert Analysis Services als zusätzlicher Dienst für SharePoint, der zum Hosten und Verwalten von Excel-Datenmodellen beiträgt, die zuvor in Excel erstellt und anschließend in SharePoint gespeichert wurden. Die Rolle von Analysis Services in diesem Kontext besteht darin, das Datenmodell in den Arbeitsspeicher zu laden, Daten aus externen Datenquellen zu aktualisieren und Abfragen für das Modell auszuführen. In dieser Konfiguration arbeitet Analysis Services im Hintergrund. Alle Verbindungen und Anforderungen für Analysis Services werden von SharePoint ausgeführt und zwar nur, wenn eine Excel-Arbeitsmappe ein Datenmodell enthält (Datenmodelle sind in Excel-Arbeitsmappen optional). Erstellen eines Datenmodells in Excel und dessen hosting in SharePoint Ihren projektanforderungen entspricht, finden Sie unter [Power Pivot: leistungsstarke Datenanalyse und datenmodellierung in Excel](https://support.office.com/en-ie/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-d7b119ed-1b3b-4f23-b634-445ab141b59b) und [PowerPivot für SharePoint &#40;SSAS &#41; ](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md) für Weitere Informationen.  
   
 > [!NOTE]  
 >  Excel-Datenmodelle und tabellarische Modelle sind architektonisch ähnlich. Sie können ein Excel-Datenmodell in ein tabellarisches Modell importieren, wenn Sie größere Datenmengen unterstützen oder andere Modellfunktionen verwenden müssen, die in Excel nicht zur Verfügung stehen.  
   
- Tabellarische und mehrdimensionale Lösungen Ausgabeabfrage-Befehlsstrukturen beruhen [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] und dienen der für Unternehmens-BI-, die auf einem eigenständigen ausgeführt Projekte [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Instanz. Beide Lösungen stellen hochleistungsfähige analytische Datenbanken bereit, die einfach mit Excel, Reporting Services-Berichten und andere BI-Anwendungen von Microsoft und Drittanbietern integriert werden können. Beide Lösungen führen zu eigenständigen Datenbanken, die von allen Clientanwendungen verwendet werden können, die Analysis Services unterstützen.  
+ Tabellarische und mehrdimensionale Lösungen werden mithilfe von erstellt [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] und sind vorgesehen für Unternehmens-BI-, die ausgeführt werden, auf einem eigenständigen Projekte [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Instanz. Beide Lösungen stellen hochleistungsfähige analytische Datenbanken bereit, die einfach mit Excel, Reporting Services-Berichten und andere BI-Anwendungen von Microsoft und Drittanbietern integriert werden können. Beide Lösungen führen zu eigenständigen Datenbanken, die von allen Clientanwendungen verwendet werden können, die Analysis Services unterstützen.  
   
  Die Unterschiede zwischen tabellarischen und mehrdimensionalen Modellen können auf allgemeiner Ebene wie folgt beschrieben werden:  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36057080"
   
  Wenn Ihre Lösung das Speichern von Modelldaten außerhalb des Modells in der relationalen Datenbank erfordert (diese Methode wird verwendet, wenn sehr umfangreiche Daten erforderlich sind), muss es sich bei der Datenquelle um eine relationale SQL Server-Datenbank handeln. Sowohl die ROLAP-Speicherung für mehrdimensionale Modelle als auch DirectQuery für tabellarische Modelle haben diese Anforderung.  
   
- **Datengröße**  
+ **Größe der Daten**  
   
  Sowohl tabellarische als auch mehrdimensionale Lösungen verwenden die Datenkomprimierung, durch die die Größe der Analysis Services-Datenbank relativ zum Data Warehouse verringert wird, aus dem Sie Daten importieren. Da sich der tatsächliche Komprimierungsgrad nach den Eigenschaften der zugrunde liegenden Daten richtet, lässt sich nicht genau vorhersagen, wie viel Datenträger- und Arbeitsspeicherkapazität von einer Lösung benötigt wird, nachdem die Daten verarbeitet und in Abfragen verwendet wurden. Eine Faustregel, die von vielen Analysis Services-Entwicklern angewendet wird, besagt, dass der primäre Speicher einer mehrdimensionalen Datenbank ein Drittel der ursprünglichen Daten ausmachen sollte.  
   
@@ -120,9 +120,9 @@ ms.locfileid: "36057080"
 |Benutzerdefinierte Hierarchien|[ja](multidimensional-models/user-defined-hierarchies-create.md)|ja|  
 |Rückschreiben|[ja](multidimensional-models/set-partition-writeback.md)|nein|  
   
- * Wenn Ihre Lösung eine sehr große Anzahl von distinct Counts (z. B. viele Millionen von Kunden-IDs) unterstützen muss, erwägen Sie zuerst tabellarisch. Sie ist in diesem Szenario voraussichtlich leistungsfähiger. Weitere Informationen finden Sie im Abschnitt über Distinct Counts im Whitepaper [Analysis Services-Fallstudie: Verwenden von tabellarischen Modellen in umfangreichen kommerziellen Lösungen](http://msdn.microsoft.com/library/dn751533.aspx).  
+ * Wenn es sich bei Ihrer Lösung eine sehr große Anzahl von distinct Counts (z. B. viele Millionen von Kunden-IDs) unterstützen muss, tabellarischer Modus zuerst denken. Sie ist in diesem Szenario voraussichtlich leistungsfähiger. Weitere Informationen finden Sie im Abschnitt über Distinct Counts im Whitepaper [Analysis Services-Fallstudie: Verwenden von tabellarischen Modellen in umfangreichen kommerziellen Lösungen](http://msdn.microsoft.com/library/dn751533.aspx).  
   
-##  <a name="bkmk_modelsize"></a> Modellgröße  
+##  <a name="bkmk_modelsize"></a> Größe des Datenbankmodells  
  Die Gesamtanzahl der Objekte wirkt sich bei den verschiedenen Lösungstypen nicht auf die Modellgröße aus. Allerdings sind die Entwurfstools, die zum Erstellen der einzelnen Lösungen eingesetzt werden, unterschiedlich gut zum Umgang mit einer großen Anzahl von Objekten geeignet. Ein umfangreicheres Modell ist in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] etwas einfacher zu erstellen, da diese Umgebung mehr Möglichkeiten für die Abbildung und Auflistung nach Objekttypen im Objekt-Explorer und Projektmappen-Explorer bietet.  
   
  Sehr große Modelle, die aus vielen Hunderten Tabellen oder Dimensionen bestehen, werden häufig programmgesteuert in Visual Studio erstellt und nicht mithilfe von Entwurfstools. Weitere Informationen zur maximalen Anzahl von Objekten in einem Modell finden Sie unter [Maximum Capacity Specifications &#40;Analysis Services&#41;](multidimensional-models/olap-physical/maximum-capacity-specifications-analysis-services.md).  
@@ -159,8 +159,8 @@ ms.locfileid: "36057080"
   
 |**Modellierungstool**|**Verwendung**|  
 |-----------------------|------------------|  
-|[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|Verwenden Sie diese, um tabellarische, mehrdimensionale und Data Mining-Projektmappen zu erstellen. Diese Erstellungsumgebung stellt Arbeitsbereiche, Eigenschaftenbereiche und Objektnavigation mithilfe von Visual Studio Shell bereit. Technisch versierte Benutzer, die bereits Visual Studio verwenden, ziehen höchstwahrscheinlich dieses Tool zum Erstellen von Business Intelligence-Anwendungen vor. Finden Sie unter [Tools und Anwendungen, die in Analysis Services verwendete](tools-and-applications-used-in-analysis-services.md) für Details.|  
-|Excel 2013 und höher, mit dem Add-In PowerPivot für Excel|PowerPivot für Excel ist ein Tool zum Bearbeiten und Erweitern eines Excel-Datenmodells. Es verfügt über einen separaten Anwendungsarbeitsbereich, der über Excel geöffnet wird, aber die gleichen visuellen Metaphern (Seiten im Registerkartenformat, Rasterlayout und Bearbeitungsleiste) wie Excel verwendet. Benutzer, die in der Regel in Excel versiert sind, ziehen dieses Tool [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Weitere Informationen finden Sie unter [Power Pivot: Leistungsstarke Datenanalyse und Datenmodellierung in Excel](https://support.office.com/en-ie/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-d7b119ed-1b3b-4f23-b634-445ab141b59b).|  
+|[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|Verwenden Sie diese, um tabellarische, mehrdimensionale und Data Mining-Projektmappen zu erstellen. Diese Erstellungsumgebung stellt Arbeitsbereiche, Eigenschaftenbereiche und Objektnavigation mithilfe von Visual Studio Shell bereit. Technisch versierte Benutzer, die bereits Visual Studio verwenden, ziehen höchstwahrscheinlich dieses Tool zum Erstellen von Business Intelligence-Anwendungen vor. Finden Sie unter [in Analysis Services verwendete Tools und Anwendungen](tools-and-applications-used-in-analysis-services.md) Details.|  
+|Excel 2013 und höher, mit dem Add-In PowerPivot für Excel|PowerPivot für Excel ist ein Tool zum Bearbeiten und Erweitern eines Excel-Datenmodells. Es verfügt über einen separaten Anwendungsarbeitsbereich, der über Excel geöffnet wird, aber die gleichen visuellen Metaphern (Seiten im Registerkartenformat, Rasterlayout und Bearbeitungsleiste) wie Excel verwendet. Benutzer, die in der Regel in Excel versiert sind, ziehen dieses Tool über [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Weitere Informationen finden Sie unter [Power Pivot: Leistungsstarke Datenanalyse und Datenmodellierung in Excel](https://support.office.com/en-ie/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-d7b119ed-1b3b-4f23-b634-445ab141b59b).|  
   
 ##  <a name="bkmk_client"></a> Client- und Berichterstellungsanwendungen  
  In früheren Versionen wirkte sich die Auswahl des Modelltyps auf die verfügbaren Clientanwendungen aus. Der Unterschied hat sich jedoch im Lauf der Zeit verringert. Tabellarische und mehrdimensionale Modelle unterstützen größtenteils die gleichen Clientanwendungen zur Herstellung einer Verbindung mit Analysis Services-Daten. Die folgende Tabelle enthält eine Liste der Microsoft-Clientanwendungen, die mit Analysis Services-Datenmodellen verwendet werden können.  
@@ -170,7 +170,7 @@ ms.locfileid: "36057080"
 |Excel PivotTable-Berichte|Die Excel-Funktionalität ist für tabellarische und mehrdimensionale Modelle identisch, obwohl Rückschreiben (eine Analysis Services-Funktion, die von Excel implementiert wird) nur für mehrdimensionale unterstützt wird.|  
 |Reporting Services-RDL-Berichte|Im Berichts-Generator oder Berichts-Designer erstellte RDL-Berichte können beliebige Analysis Services-Modelle sowie Excel-Datenmodelle, die in PowerPivot für SharePoint gehostet werden, verwenden.|  
 |PerformancePoint-Dashboards|In SharePoint können PerformancePoint-Dashboards mit allen Analysis Services-Datenbanken, einschließlich Excel-Datenmodellen, eine Verbindung herstellen. Weitere Informationen finden Sie unter [Erstellen von Datenverbindungen (PerformancePoint Services)](http://go.microsoft.com/fwlink/?linkdID=218155).|  
-|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] in Office 365 oder Power BI-Websites|Nur tabellarische Modelle.|  
+|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] in Office 365 und Power BI-Websites|Nur tabellarische Modelle.|  
 |[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] in lokalem SharePoint|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], eine ClickOnce-Anwendung von SharePoint, kann entweder einen Analysis Services-Cube oder ein Tabellenmodell verwenden.|  
   
 ##  <a name="bkmk_deploymentmode"></a> Serverbereitstellungsmodi für mehrdimensionale und tabellarische Lösungen  
@@ -209,9 +209,9 @@ ms.locfileid: "36057080"
  [Analysis Services-Instanzverwaltung](instances/analysis-services-instance-management.md)   
  [Neuigkeiten in Analysis Services und Business Intelligence](what-s-new-in-analysis-services.md)   
  [Neues &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md)   
- [Neuigkeiten in PowerPivot](http://go.microsoft.com/fwlink/?LinkId=238141)   
+ [Neues in PowerPivot](http://go.microsoft.com/fwlink/?LinkId=238141)   
  [PowerPivot-Hilfe für SQLServer 2012](http://go.microsoft.com/fwlink/?LinkID=220946)   
- [PowerPivot-BI-Semantikmodell-Verbindung &#40;bism-Datei&#41;](power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
+ [PowerPivot BI-Semantikmodellverbindung &#40;bism-Datei&#41;](power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
  [Erstellen und Verwalten von freigegebenen Datenquellen &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../../2014/reporting-services/create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)  
   
   

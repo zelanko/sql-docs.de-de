@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 2: Hinzufügen von Daten | Microsoft Docs'
+title: 'Lektion 2: Hinzufügen von Daten | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 697c483d784f4d15682c9690c0c392268ad5b356
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e16182c535fe22a1efe631a42b68c038db365ad3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056820"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165511"
 ---
 # <a name="lesson-2-add-data"></a>Lektion 2: Hinzufügen von Daten
   In dieser Lektion verwenden Sie den Tabellenimport-Assistenten in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], um eine Verbindung mit der AdventureWorksDW-Datenbank herzustellen, Daten auszuwählen und die Daten zu filtern und sie anschließend in den Modellarbeitsbereich zu importieren.  
@@ -43,7 +43,7 @@ ms.locfileid: "36056820"
   
 2.  Klicken Sie im **Tabellenimport-Assistenten**unter **Relationale Datenbanken**auf **Microsoft SQL Server**und anschließend auf **Weiter**.  
   
-3.  In der **Herstellen einer Verbindung mit einer Microsoft SQL Server-Datenbank** Seite **Anzeigename der Verbindung**, Typ `Adventure Works DB from SQL`.  
+3.  In der **Herstellen einer Verbindung mit einer Microsoft SQL Server-Datenbank** auf der Seite **Anzeigename der Verbindung**, Typ `Adventure Works DB from SQL`.  
   
 4.  Geben Sie in **Servername**den Namen des Servers ein, auf dem Sie die AdventureWorksDW-Datenbank installiert haben.  
   

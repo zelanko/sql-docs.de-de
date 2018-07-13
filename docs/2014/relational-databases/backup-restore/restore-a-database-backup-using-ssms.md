@@ -1,14 +1,13 @@
 ---
-title: Wiederherstellen einer Datenbanksicherung (SQL Server Management Studio) | Microsoft Docs
+title: Wiederherstellen einer Datenbanksicherung (SQL Server Management Studio) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.locatebackupfileazure.f1
 - sql12.swb.specifybackup.f1
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - restoring databases [SQL Server], full backups
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 caps.latest.revision: 73
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fa6388416e41fac400d6b77ad603a305fad50e21
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d765859981e2390c408a33b1a77965804519a587
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056970"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184747"
 ---
 # <a name="restore-a-database-backup-sql-server-management-studio"></a>Wiederherstellen einer Datenbanksicherung (SQL Server Management Studio)
   In diesem Thema wird erläutert, wie eine vollständige Datenbanksicherung wiederhergestellt wird.  
@@ -67,7 +66,7 @@ ms.locfileid: "36056970"
         >  Diese Liste steht nur zur Verfügung, wenn **Sicherungsmedium** ausgewählt ist. Nur Datenbanken mit Sicherungen auf dem ausgewählten Medium stehen zur Verfügung.  
   
          **Sicherungsmedien**  
-         Wählen Sie das Medium für die Wiederherstellung: **Datei**, **Band**, **URL**oder **Sicherungsmedium**. Die Option **Band** ist nur verfügbar, wenn ein Bandlaufwerk auf dem Computer bereitgestellt ist. Die Option **Sicherungsmedium** wird nur angezeigt, wenn mindestens ein Sicherungsmedium vorhanden ist.  
+         Wählen Sie das Medium für den Wiederherstellungsvorgang: **Datei**, **Band**, **URL**oder **Sicherungsmedium**. Die Option **Band** ist nur verfügbar, wenn ein Bandlaufwerk auf dem Computer bereitgestellt ist. Die Option **Sicherungsmedium** wird nur angezeigt, wenn mindestens ein Sicherungsmedium vorhanden ist.  
   
          **Sicherungsspeicherort**  
          Hier können Sie Medien für die Wiederherstellung anzeigen, hinzufügen oder entfernen. Die Liste kann bis zu 64 Dateien, Bänder oder Sicherungsmedien enthalten.  
@@ -80,7 +79,7 @@ ms.locfileid: "36056970"
         |**File**|**Sicherungsdatei suchen**|In diesem Dialogfeld können Sie eine lokale Datei aus der Struktur auswählen oder eine Remotedatei mithilfe des vollqualifizierten UNC-Namens (Universal Naming Convention) angeben. Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](backup-devices-sql-server.md)aufgezeichnet wurde.|  
         |**Sicherungsmedium**|**Sicherungsmedium auswählen**|In diesem Dialogfeld können Sie aus einer Liste logischer Sicherungsmedien auswählen, die auf der Serverinstanz definiert sind.|  
         |**Band**|**Sicherungsband auswählen**|In diesem Dialogfeld können Sie aus einer Liste der Bandlaufwerke auswählen, die physisch mit dem Computer verbunden sind, auf dem die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt wird.|  
-        |**URL**|Die folgenden beiden Dialogfelder werden angezeigt:<br /><br /> 1) **Herstellen einer Verbindung mit Windows Azure-Speicher**<br /><br /> 2) **Sicherungsdatei in Windows Azure suchen**|Wählen Sie im Dialogfeld **Mit Windows Azure-Speicher verbinden**  vorhandene SQL-Anmeldeinformationen aus, die den Namen des Windows Azure-Speicherkontos und den Zugriffsschlüssel enthalten, oder erstellen Sie neue SQL-Anmeldeinformationen, indem Sie den Namen des Speicherkontos und den Zugriffsschlüssel angeben. Weitere Informationen finden Sie unter [mit Windows Azure-Speicher verbinden &#40;wiederherstellen&#41;](connect-to-microsoft-azure-storage-restore.md).<br /><br /> Im Dialogfeld **Sicherungsdatei suchen** können Sie im linken Bereich aus der Liste der Container eine Datei auswählen.|  
+        |**URL**|Die folgenden beiden Dialogfelder werden angezeigt:<br /><br /> 1) **Verbinden mit Windows Azure-Speicher**<br /><br /> 2) **Sicherungsdatei in Windows Azure suchen**|Wählen Sie im Dialogfeld **Mit Windows Azure-Speicher verbinden**  vorhandene SQL-Anmeldeinformationen aus, die den Namen des Windows Azure-Speicherkontos und den Zugriffsschlüssel enthalten, oder erstellen Sie neue SQL-Anmeldeinformationen, indem Sie den Namen des Speicherkontos und den Zugriffsschlüssel angeben. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit Windows Azure-Speicher &#40;wiederherstellen&#41;](connect-to-microsoft-azure-storage-restore.md).<br /><br /> Im Dialogfeld **Sicherungsdatei suchen** können Sie im linken Bereich aus der Liste der Container eine Datei auswählen.|  
   
          Wenn die Liste voll ist, ist die Schaltfläche **Hinzufügen** nicht verfügbar.  
   

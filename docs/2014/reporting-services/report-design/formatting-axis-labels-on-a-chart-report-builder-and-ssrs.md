@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10148"
 - sql12.rtp.rptdesigner.calculatedseriesproperties.axeschartareas.f1
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - "10140"
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8e33900e5dbc81d65d6304e82ba87f56cbcdcc89
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 66ea4ea030bc3c80d9155a25737ec1828c97982c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057547"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181697"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Formatieren von Achsenbezeichnungen in einem Diagramm (Berichts-Generator und SSRS)
   Koordinatenbasierte Diagrammtypen (Säulen-, Balken-, Flächen-, Punkt-, Linien- und Bereichsdiagramme) verfügen über zwei Achsen, die zur Kategorisierung und Anzeige von Datenbeziehungen verwendet werden. Auf jede Achse werden unterschiedliche Formatierungstypen angewendet.  
@@ -55,7 +55,7 @@ ms.locfileid: "36057547"
   
  Wenn Sie ein Feld aus Ihrem Dataset auf die Entwurfsoberfläche ziehen, bestimmt das Diagramm, ob dieses Feld zur Kategorie- oder zur Wertachse gehört.  
   
- Die Wertachse ist normalerweise die vertikale Achse oder y-Achse des Diagramms. Sie wird verwendet, um numerische Datenwerte anzuzeigen, aus denen ein Diagramm erstellt wird. Ein Feld, das in den Datenfeldbereich gezogen wird, wird auf der Wertachse dargestellt. Die Kategorieachse ist normalerweise die horizontale Achse oder x-Achse des Diagramms. Bei Balkendiagrammen sind diese Achsen umgekehrt. Bei Balkendiagrammtypen ist die Kategorieachse die vertikale Achse, und die Wertachse ist die horizontale Achse. Weitere Informationen finden Sie unter [Balkendiagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md).  
+ Die Wertachse ist normalerweise die vertikale Achse oder y-Achse des Diagramms. Sie wird verwendet, um numerische Datenwerte anzuzeigen, aus denen ein Diagramm erstellt wird. Ein Feld, das in den Datenfeldbereich gezogen wird, wird auf der Wertachse dargestellt. Die Kategorieachse ist normalerweise die horizontale Achse oder x-Achse des Diagramms. Bei Balkendiagrammen sind diese Achsen umgekehrt. Bei Balkendiagrammtypen ist die Kategorieachse die vertikale Achse, und die Wertachse ist die horizontale Achse. Weitere Informationen finden Sie unter [Balkendiagrammen &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
 ## <a name="how-the-chart-calculates-axis-label-intervals"></a>Wie das Diagramm Achsenbezeichnungsintervalle berechnet  
  Bevor Sie Achsenbezeichnungen formatieren, sollten Sie verstehen, wie das Diagramm Achsenbezeichnungsintervalle berechnet. Dies ermöglicht es Ihnen, die Eigenschaften festzulegen, die für das gewünschte Achsenbezeichnungsverhalten erforderlich sind.  

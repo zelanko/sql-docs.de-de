@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 caps.latest.revision: 12
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 7832b3440ae08597a84f5f0e5f6c3a8d851c3ee3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 2468e7debaa34b08d40ffedef0a7f078f44343a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050545"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182307"
 ---
 # <a name="atomic-blocks"></a>ATOMIC-Blöcke
   `BEGIN ATOMIC` ist Teil des ANSI SQL-Standards. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt ATOMIC-Blöcke nur auf der obersten Ebene systemintern kompilierter gespeicherter Prozeduren.  
@@ -33,9 +33,9 @@ ms.locfileid: "36050545"
 ## <a name="transactions-and-error-handling"></a>Transaktionen und Fehlerbehandlung  
  Wenn in einer Sitzung bereits eine Transaktion vorhanden ist (da von einem Batch eine `BEGIN TRANSACTION`-Anweisung ausgeführt wurde und die Transaktion aktiv bleibt), wird durch das Starten eines ATOMIC-Blocks in der Transaktion ein Sicherungspunkt erstellt. Wenn der Block ohne Ausnahme beendet wird, wird der erstellte Sicherungspunkt für den Block festgeschrieben. Für die Transaktion wird jedoch erst ein Commit ausgeführt, wenn für die Transaktion auf Sitzungsebene ein Commit erfolgt. Wenn der Block eine Ausnahme auslöst, wird für den ausgeführten Teil des Blocks ein Rollback ausgeführt, die Transaktion auf Sitzungsebene wird jedoch weiterhin ausgeführt, sofern die Ausnahme nicht zum Fehlschlagen der Transaktion führt. Beispielsweise kann ein Schreibkonflikt zum Fehlschlagen einer Transaktion führen, ein Typumwandlungsfehler jedoch nicht.  
   
- Wenn eine Sitzung keine aktive Transaktion enthält, wird durch `BEGIN ATOMIC` eine neue Transaktion gestartet. Wenn außerhalb des Blockbereichs keine Ausnahme ausgelöst wird, wird für die Transaktion am Ende des Blocks ein Commit ausgeführt. Wenn der Block eine Ausnahme auslöst (d. h., die Ausnahme wird nicht innerhalb des Blocks abgefangen und behandelt), wird ein Rollback für die Transaktion ausgeführt. Bei Transaktionen, die einen einzelnen atomic-Block enthalten (eine einzelne systemintern kompilierte gespeicherte Prozedur), ist es nicht notwendig, Schreiben explizite `BEGIN TRANSACTION` und `COMMIT` oder `ROLLBACK` Anweisungen.  
+ Wenn eine Sitzung keine aktive Transaktion enthält, wird durch `BEGIN ATOMIC` eine neue Transaktion gestartet. Wenn außerhalb des Blockbereichs keine Ausnahme ausgelöst wird, wird für die Transaktion am Ende des Blocks ein Commit ausgeführt. Wenn der Block eine Ausnahme auslöst (d. h., die Ausnahme wird nicht innerhalb des Blocks abgefangen und behandelt), wird ein Rollback für die Transaktion ausgeführt. Für Transaktionen, die einen einzelnen atomic-Block umfassen (eine einzelne systemintern kompilierte gespeicherte Prozedur), Sie müssen nicht schreiben explizite `BEGIN TRANSACTION` und `COMMIT` oder `ROLLBACK` Anweisungen.  
   
- Systemintern kompilierte gespeicherte Prozeduren unterstützen die `TRY`, `CATCH`, und `THROW` Konstrukte zur Fehlerbehandlung. `RAISERROR` Wird nicht unterstützt.  
+ Systemintern kompilierte gespeicherte Prozeduren unterstützen die `TRY`, `CATCH`, und `THROW` Konstrukte zur Fehlerbehandlung. `RAISERROR` wird nicht unterstützt.  
   
  Das folgende Beispiel veranschaulicht das Fehlerbehandlungsverhalten bei ATOMIC-Blöcken und systemintern kompilierten gespeicherten Prozeduren:  
   
@@ -130,7 +130,7 @@ GO
  Bei folgenden, für speicheroptimierte Tabellen spezifischen Fehlern schlägt eine Transaktion fehl. Wenn sie im Bereich eines ATOMIC-Blocks auftreten, wird die Transaktion abgebrochen: 10772, 41301, 41302, 41305, 41325, 41332 und 41333.  
   
 ## <a name="session-settings"></a>Sitzungseinstellungen  
- Die Sitzungseinstellungen in ATOMIC-Blöcken werden bei der Kompilierung der gespeicherte Prozedur fest definiert. Einige Einstellungen können angegeben werden, mit `BEGIN ATOMIC` , während andere Einstellungen auf den gleichen Wert immer behoben wurden.  
+ Die Sitzungseinstellungen in ATOMIC-Blöcken werden bei der Kompilierung der gespeicherte Prozedur fest definiert. Einige Einstellungen können angegeben werden, mit `BEGIN ATOMIC` während andere immer denselben festen sind.  
   
  Die folgenden Optionen sind für `BEGIN ATOMIC` erforderlich:  
   

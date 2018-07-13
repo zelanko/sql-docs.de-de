@@ -25,13 +25,13 @@ ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 caps.latest.revision: 80
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6552bc54d8da9475adaa35b86b697c1dbdf3f437
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f651eee3c926db0f808a673d7555d02f3fe07d83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057598"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184717"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Codieren und Debuggen des Skripttasks
   Nach dem Konfigurieren des Skripttasks im **Skripttask-Editor** schreiben Sie den benutzerdefinierten Code in der Skripttask-Entwicklungsumgebung.  
@@ -56,7 +56,7 @@ ms.locfileid: "36057598"
   
 -   Wenn der Skripttask für die Programmiersprache [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] konfiguriert ist, enthält die `ScriptMain`-Klasse eine öffentliche Unterroutine namens `Main`. Die `ScriptMain.Main`-Unterroutine ist die Methode, die die Laufzeit beim Ausführen des Skripttasks aufruft.  
   
-     Standardmäßig enthält die `Main`-Unterroutine eines neuen Skripts als einzigen Code die Zeile `Dts.TaskResult = ScriptResults.Success`. Diese Zeile informiert die Laufzeit, dass der Task erfolgreich durchgeführt wurde. Die `Dts.TaskResult` Eigenschaft wird im erläutert [Returning Results from the Script Task](../../extending-packages-scripting/task/returning-results-from-the-script-task.md).  
+     Standardmäßig enthält die `Main`-Unterroutine eines neuen Skripts als einzigen Code die Zeile `Dts.TaskResult = ScriptResults.Success`. Diese Zeile informiert die Laufzeit, dass der Task erfolgreich durchgeführt wurde. Die `Dts.TaskResult` Eigenschaft ausführlicher [Zurückgeben von Ergebnissen aus dem Skripttask](../../extending-packages-scripting/task/returning-results-from-the-script-task.md).  
   
 -   Wenn der Skripttask für die Programmiersprache Visual C# konfiguriert ist, enthält die `ScriptMain`-Klasse die öffentliche Methode `Main`. Die Methode wird aufgerufen, wenn der Skripttask ausgeführt wird.  
   
@@ -250,7 +250,7 @@ To open Help, press F1.
   
 -   Blogeintrag: [VSTA setup and configuration troubles for SSIS 2008 and R2 installations (Probleme mit der VSTA-Einrichtung und -Konfiguration bei SSIS 2008- und R2-Installationen)](http://go.microsoft.com/fwlink/?LinkId=215661) (auf blogs.msdn.com).  
   
-![Integration Services (kleines Symbol)](../../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben Sie mit Integration Services** <br /> Für die neuesten Downloads, Artikel, Beispiele und Videos von [!INCLUDE[msCoName](../../../includes/msconame-md.md)]sowie ausgewählte Lösungen aus der Community finden Sie auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite auf MSDN:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services (kleines Symbol)](../../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services** <br /> Für die neuesten Downloads, Artikel, Beispiele und Videos von [!INCLUDE[msCoName](../../../includes/msconame-md.md)]sowie ausgewählte Lösungen aus der Community finden Sie auf die [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite auf MSDN:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verweisen auf andere Assemblys in Skriptlösungen](../referencing-other-assemblies-in-scripting-solutions.md)   

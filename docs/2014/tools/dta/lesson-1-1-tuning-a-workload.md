@@ -1,5 +1,5 @@
 ---
-title: Optimieren einer Arbeitsauslastung | Microsoft Docs
+title: Optimieren einer Arbeitsauslastung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - workloads [SQL Server], tuning
 ms.assetid: 6229bf3f-1182-4bc6-8451-cedc37f4b62e
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5a414a8fac51b52549982ef08456288981b1c9b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 02c10662607423a5dba423977572876f18394e22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050222"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172091"
 ---
 # <a name="tuning-a-workload"></a>Optimieren einer Arbeitsauslastung
   Der Datenbankoptimierungsratgeber dient dazu, den optimalen Entwurf für eine physische Datenbank hinsichtlich der Abfrageleistung für die Datenbanken zu ermitteln, die Sie für die Optimierung auswählen.  
@@ -30,7 +30,7 @@ ms.locfileid: "36050222"
   
 ### <a name="tune-a-workload-transact-sql-script-file"></a>Optimieren der Arbeitsauslastung für eine Transact-SQL-Skriptdatei  
   
-1.  Kopieren einer Beispiel-SELECT-Anweisung oder von Anweisungen von "A. Das Verwenden von SELECT, um Zeilen und Spalten" in [SELECT-Beispiele &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-examples-transact-sql) abzurufen und die Anweisungen in den Abfrage-Editor von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] einzufügen. Speichern Sie die Datei **MyScript.sql** in einem Verzeichnis, in dem Sie können problemlos ihn finden.  
+1.  Kopieren einer Beispiel-SELECT-Anweisung oder von Anweisungen von "A. Das Verwenden von SELECT, um Zeilen und Spalten" in [SELECT-Beispiele &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-examples-transact-sql) abzurufen und die Anweisungen in den Abfrage-Editor von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] einzufügen. Speichern Sie die Datei **MyScript.sql** in einem Verzeichnis, in denen finden Sie es.  
   
 2.  Starten Sie den Datenbankoptimierungsratgeber. Weitere Informationen finden Sie unter [Starten des Datenbankoptimierungsratgebers](../../relational-databases/performance/database-engine-tuning-advisor.md).  
   

@@ -1,25 +1,24 @@
 ---
-title: Remote Blob-Speicher (RBS) und AlwaysOn-Verfügbarkeitsgruppen (SQLServer) | Microsoft Docs
+title: Remote Blob Store (RBS) und AlwaysOn-Verfügbarkeitsgruppen (SQLServer) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 01a70258-d4fd-40bc-bc44-c490b5d6c420
 caps.latest.revision: 13
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: bbcbdcc96831a27b24fc47ba8ec9c20b16f6f1c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 55f604d9c85cd93baa564a0bd5a99a483f310fdb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056314"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169328"
 ---
 # <a name="remote-blob-store-rbs-and-alwayson-availability-groups-sql-server"></a>Remote Blob Store (RBS) und AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] kann eine Lösung für hohe Verfügbarkeit und Notfallwiederherstellung für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][Remote Blob Store (RBS)](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md) -BLOB-Objekte (BLOBs) bereitstellen. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] schützt alle in einer Verfügbarkeitsdatenbank gespeicherten RBS-Metadaten und -Schemas, indem sie an die sekundären Replikate repliziert werden. Dabei handelt es sich um die SharePoint-Inhaltsdatenbank. Im Allgemeinen speichert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] diese RBS-Metadaten unabhängig vom BLOB.  

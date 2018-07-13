@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [XML in SQL Server], nested AUTO mode
 - nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 93626d4db9c82360369e0f94bd91574e77274c4d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d0248cb60068c86c641046b4d80deda1b78f95da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049147"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168221"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>Generieren von gleichgeordneten Elementen mit einer geschachtelten AUTO-Modusabfrage
   Im folgenden Beispiel wird das Generieren von gleichgeordneten Elementen durch Verwenden einer geschachtelten Abfrage im AUTO-Modus dargestellt. Die einzige Möglichkeit zum Generieren von derartigem XML-Code besteht im Verwenden des EXPLICIT-Modus. Dies kann jedoch sehr aufwändig sein.  
@@ -70,7 +70,7 @@ FOR XML AUTO, TYPE
   
 -   Sie fragt das Rowset `SalesOrder` ab, das in der `FROM`-Klausel angegeben ist. Das Ergebnis ist ein XML-Code mit einem oder mehreren <`SalesOrder`>-Elementen.  
   
--   Gibt den `AUTO` -Modus und die `TYPE` -Direktive an. `AUTO` -Modus wird das Abfrageergebnis in XML Umgewandelt, und die `TYPE` -Direktive gibt das Ergebnis als `xml` Typ.  
+-   Gibt den `AUTO` -Modus und die `TYPE` -Direktive an. `AUTO` -Modus wandelt das Abfrageergebnis in XML, und die `TYPE` -Direktive wird das Ergebnis als `xml` Typ.  
   
 -   Sie schließt zwei geschachtelte `SELECT` -Anweisungen ein, die durch ein Komma voneinander getrennt sind. Die erste geschachtelte `SELECT` -Anweisung ruft die Bestellinformationen (Kopfzeile und Details) ab, und die zweite geschachtelte `SELECT` -Anweisung ruft die Informationen zum Vertriebsmitarbeiter ab.  
   
@@ -148,7 +148,7 @@ FOR XML AUTO, TYPE
   
 -   Die vorherige Abfrage wird in der `FROM` -Klausel hinzugefügt. Das Abfrageergebnis wird als Tabelle zurückgegeben. Beachten Sie den hinzugefügten `XmlCol` -Alias.  
   
--   Die `SELECT` -Klausel gibt eine XQuery-Abfrage für `XmlCol` an, das in der `FROM` -Klausel zurückgegeben wird. Die `query()` Methode der `xml` -Datentyp angeben der XQuery verwendet wird. Weitere Informationen finden Sie unter [query&#40;&#41;-Methode &#40;xml-Datentyp&#41;](/sql/t-sql/xml/query-method-xml-data-type).  
+-   Die `SELECT` -Klausel gibt eine XQuery-Abfrage für `XmlCol` an, das in der `FROM` -Klausel zurückgegeben wird. Die `query()` Methode der `xml` -Datentyp angeben der XQuery verwendet. Weitere Informationen finden Sie unter [query&#40;&#41;-Methode &#40;xml-Datentyp&#41;](/sql/t-sql/xml/query-method-xml-data-type).  
   
     ```  
     SELECT XmlCol.query('<Root> { /* } </Root>')  

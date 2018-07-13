@@ -1,5 +1,5 @@
 ---
-title: Erstellen von Analysis Services-Projekten (SSDT) | Microsoft Docs
+title: Erstellen von Analysis Services-Projekten (SSDT) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Analysis Services], building
 - Business Intelligence Development Studio, project building [Analysis Services]
 ms.assetid: caac03cb-b2b4-4652-8913-3dd39c4b0127
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 697a550dccaf5e89414825efaa137ce146d52cf0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85e3b552234ff34333b8566bdb741b28f2e56d47
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057898"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196170"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Erstellen von Analysis Services-Projekten (SSDT)
   Sie können in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt auf ähnliche Weise wie ein beliebiges Programmierungsprojekt in Visual Studio erstellen. Beim Erstellen eines Projekts wird eine Gruppe von XML-Dateien im Ausgabeverzeichnis erstellt. Diese XML-Dateien verwenden ASSL (Analysis Services Scripting Language). Hierbei handelt es sich um den XML-Dialekt, den die Clientanwendungen, einschließlich [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , zum Kommunizieren mit einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz verwenden, um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte zu erstellen oder zu ändern. Diese XML-Dateien werden zum Bereitstellen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objektdefinitionen in einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt auf einer angegebenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz verwendet.  
@@ -57,7 +57,7 @@ ms.locfileid: "36057898"
 |-----------------------------|-----------------|  
 |\<Konfigurationsname > \LastBuilt.xml|Enthält den Zeitstempel und den Hashcode, der den Zeitpunkt identifiziert, als das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt zum letzten Mal erstellt wurde.|  
   
- Diese XML-Dateien enthalten keine \<erstellen > und \<Alter >-Tags, die während der Bereitstellung erstellt werden.  
+ Diese XML-Dateien enthalten keine \<erstellen > und \<Alter > Tags, die während der Bereitstellung erstellt werden.  
   
  Assemblys, auf die verwiesen wird (hiervon ausgeschlossen sind Assemblys des Standardsystems und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Assemblys), werden ebenfalls in das Ausgabeverzeichnis kopiert. Wenn Verweise auf andere Projekte einer Projektmappe vorhanden sind, werden diese Projekte als Erstes erstellt, jeweils mit der entsprechenden Projektkonfiguration und den über die Projektverweise erstellten Erstellungsabhängigkeiten. Anschließend werden sie in den Projektausgabeordner kopiert.  
   

@@ -1,5 +1,5 @@
 ---
-title: Element (ASSL)-Dateien | Microsoft Docs
+title: -Element (ASSL)-Dateien | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Files element
 ms.assetid: 8a1327cb-1f60-42a7-b8ef-213d45a63e55
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5f7556009881e1d4155e47a368bcff4b49aa7988
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d4ed9199f5b715c00e70da39e1742a2638cf67a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050668"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196040"
 ---
 # <a name="files-element-assl"></a>Files-Element (ASSL)
-  Enthält die Auflistung der [Datei](../objects/file-element-assl.md) Elemente, aus denen eine [ClrAssembly](../data-type/assembly-data-type-assl.md) Element.  
+  Enthält die Auflistung der [Datei](../objects/file-element-assl.md) Elemente, aus denen ein [ClrAssembly](../data-type/assembly-data-type-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -61,10 +61,10 @@ ms.locfileid: "36050668"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Assembly](../objects/assembly-element-assl.md) des Typs [ClrAssembly](../data-type/assembly-data-type-assl.md)|  
-|Untergeordnete Elemente|[Datei](../objects/file-element-assl.md) des Typs [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md)|  
+|Untergeordnete Elemente|[Datei](../objects/file-element-assl.md) des Typs [clrassemblyfile-Objekts](../data-type/clrassemblyfile-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.ClrAssemblyFileCollection>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.ClrAssemblyFileCollection>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Server-Element &#40;ASSL&#41;](../objects/server-element-assl.md)   

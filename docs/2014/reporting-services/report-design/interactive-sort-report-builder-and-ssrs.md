@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e9d85e66cd3ccbfb4c3695f6d7485dbb1a8a9de2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 42d4a6aa9601c7b49cc69a2406550c76134ed6dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048671"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162031"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>Interaktive Sortierung (Berichts-Generator und SSRS)
   Sie können Schaltflächen für die interaktive Sortierung hinzufügen, um Benutzern das Umschalten zwischen der auf- und absteigenden Reihenfolge für Zeilen in einer Tabelle oder für Zeilen und Spalten in einer Matrix zu ermöglichen. Die häufigste Verwendung der interaktiven Sortierung besteht im Hinzufügen einer Sortierungsschaltfläche für die einzelnen Spaltenkopfzeilen. Benutzer können dann die Spalte auswählen, anhand derer die Sortierung erfolgen soll.  
@@ -41,7 +41,7 @@ ms.locfileid: "36048671"
   
 -   **Synchronisierung der Sortierung mehrerer Datenbereiche:** Sie können einen Bericht so gestalten, dass beim Umschalten der Sortierreihenfolge andere Datenbereiche mit dem gleichen Vorgänger ebenfalls neu sortiert werden.  
   
- Schrittweise Anweisungen finden Sie unter [interaktive Sortierung hinzufügen, um eine Tabelle oder Matrix &#40;Berichts-Generator und SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
+ Schrittweise Anweisungen finden Sie unter [Hinzufügen einer interaktiven Sortierung zu einer Tabelle oder Matrix &#40;Berichts-Generator und SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
   
  In der folgenden Tabelle werden die Funktionen von interaktiven Sortierschaltflächen zusammengefasst.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36048671"
 ## <a name="adding-interactive-sort-for-multiple-groups"></a>Hinzufügen der interaktiven Sortierung für mehrere Gruppen  
  Sie können einer Tabelle mit geschachtelten Zeilengruppen, die jeweils auf einem Datasetfeld basieren, eine Schaltfläche für die interaktive Sortierung hinzufügen, um übergeordnete Gruppenwerte, untergeordnete Gruppenwerte oder Detailzeilen zu sortieren. Dabei können Sie Benutzern auch die Möglichkeit geben, die Tabelle sowohl nach übergeordneten als auch nach untergeordneten Werten zu sortieren, ohne mehrfach auf die Schaltfläche klicken zu müssen.  
   
- Hierzu müssen Sie die Tabelle umgestalten, um nach einem Ausdruck zu gruppieren, der mehrere Felder kombiniert. Wenn die Werte in der ursprünglichen Tabelle für ein Dataset mit Lagerbeständen beispielsweise erst nach der Größe und anschließend nach der Farbe sortiert werden, können Sie die beiden Kriterien mithilfe eines Gruppierungsausdrucks in einer Gruppe zusammenfassen. Weitere Informationen finden Sie unter [interaktive Sortierung hinzufügen, um eine Tabelle oder Matrix &#40;Berichts-Generator und SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
+ Hierzu müssen Sie die Tabelle umgestalten, um nach einem Ausdruck zu gruppieren, der mehrere Felder kombiniert. Wenn die Werte in der ursprünglichen Tabelle für ein Dataset mit Lagerbeständen beispielsweise erst nach der Größe und anschließend nach der Farbe sortiert werden, können Sie die beiden Kriterien mithilfe eines Gruppierungsausdrucks in einer Gruppe zusammenfassen. Weitere Informationen finden Sie unter [Hinzufügen einer interaktiven Sortierung zu einer Tabelle oder Matrix &#40;Berichts-Generator und SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sortieren von Daten in einem Datenbereich &#40;Berichts-Generator und SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   

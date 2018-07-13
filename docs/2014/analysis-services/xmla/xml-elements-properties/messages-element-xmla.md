@@ -1,5 +1,5 @@
 ---
-title: Nachrichten-Element (XMLA) | Microsoft Docs
+title: Nachrichten-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Messages element
 ms.assetid: 719d15ff-f18b-4c56-80ba-a9114c0b7d8a
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 64895171a352fd981eb811c39be84b4268d5ed19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a0fbaba30716831ef34a40dd94c6c9b2ab507641
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056552"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176777"
 ---
 # <a name="messages-element-xmla"></a>Messages-Element (XMLA)
   Enthält eine Auflistung von [Message](message-element-xmla.md) -Elementen, die von einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] durch einen Aufruf der Methoden [Discover](../xml-elements-methods-discover.md) oder [Execute](../xml-elements-methods-execute.md) zurückgegeben werden.  
@@ -64,7 +64,7 @@ ms.locfileid: "36056552"
 |Untergeordnete Elemente|[MessageBox](message-element-xmla.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Dieses Element wird verwendet, wenn ein `Discover`-Methodenaufruf oder ein einzelner XMLA-Befehl innerhalb eines `Execute`-Methodenaufrufs erfolgreich, jedoch mit Fehlern oder Warnungen, abgeschlossen wird. In solchen Fällen eine `Messages` Element wird hinzugefügt, um die [Root](root-element-xmla.md) Element nach allen anderen Elementen, die wiederum einen oder mehrere enthält `Message` Elemente. Jede `Message` -Element stellt eine einzelne Meldung, einen Fehler oder eine Warnung zurückgegeben wird, durch die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz.  
+ Dieses Element wird verwendet, wenn ein `Discover`-Methodenaufruf oder ein einzelner XMLA-Befehl innerhalb eines `Execute`-Methodenaufrufs erfolgreich, jedoch mit Fehlern oder Warnungen, abgeschlossen wird. In solchen Fällen eine `Messages` Element wird hinzugefügt, um die [Stamm](root-element-xmla.md) Element nach allen anderen Elementen, die wiederum eine oder mehrere enthält `Message` Elemente. Jede `Message` -Element stellt dar, eine einzelne Nachricht, die entweder eine Fehler- oder eine Warnung aus, von zurückgegebenen der [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;XMLA&#41;](xml-elements-properties.md)  

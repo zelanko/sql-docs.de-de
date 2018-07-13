@@ -1,5 +1,5 @@
 ---
-title: ImpersonationInfoSecurity-Element (ASSL) | Microsoft Docs
+title: ImpersonationInfoSecurity-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - ImpersonationInfoSecurity element
 ms.assetid: 583fec36-90ef-4d6a-9888-ece6ae865c53
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 331ee3440a3cab5959f83880a08a4ef0d589cddd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6ed6386f862e6fb9d1cababe870cbcca105e7be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058174"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189187"
 ---
 # <a name="impersonationinfosecurity-element-assl"></a>ImpersonationInfoSecurity-Element (ASSL)
-  Enthält einen schreibgeschützten Wert, der angibt, ob die Anmeldeinformationen geändert wurden, die in bereitgestellt werden die [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) -Datentyp.  
+  Enthält einen schreibgeschützten Wert, der angibt, ob die Sicherheitsanmeldeinformationen, die im bereitgestellt werden, Änderungen vorgenommen wurden die [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) -Datentyp.  
   
 ## <a name="syntax"></a>Syntax  
   

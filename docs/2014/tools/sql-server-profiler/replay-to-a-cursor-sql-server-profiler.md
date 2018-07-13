@@ -1,5 +1,5 @@
 ---
-title: Die Wiedergabe bis zu einer Cursorposition (SQL Server Profiler) | Microsoft Docs
+title: Wiedergabe bis zu einer Cursorposition (SQL Server Profiler) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replaying cursors
 - traces [SQL Server], replaying
 - replaying traces
 ms.assetid: 89eadc41-4424-4a1c-ba61-0b52c851cdb1
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 90dd5a922aa0f4363dc73bf88989daec05568944
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 41ea37154bc03428b0e16a2101ca8f71e3852251
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058410"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196690"
 ---
 # <a name="replay-to-a-cursor-sql-server-profiler"></a>Wiedergeben bis zu einer Cursorposition (SQL Server Profiler)
   In diesem Thema wird beschrieben, wie Ablaufverfolgungsdateien oder -tabellen mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]so wiedergegeben werden können, dass sie anhalten, wenn sie eine Cursorposition erreichen. Durch das Anhalten von Ablaufverfolgungen an Cursorpositionen wird das Debugging erleichtert, da lange Ablaufverfolgungsskripts in kürzere Segmente unterteilt und inkrementell analysiert werden können.  
@@ -47,7 +47,7 @@ ms.locfileid: "36058410"
 6.  Wiederholen Sie Schritt 5 bis zum Ende der Ablaufverfolgung.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Wiedergeben bis zu einem Breakpoint &#40;SQL Server Profiler&#41;](replay-to-a-breakpoint-sql-server-profiler.md)   
+ [Wiedergeben bis zu einem Haltepunkt &#40;SQL Server Profiler&#41;](replay-to-a-breakpoint-sql-server-profiler.md)   
  [Wiedergeben von Ablaufverfolgungen](replay-traces.md)   
  [SQL Server Profiler](sql-server-profiler.md)  
   

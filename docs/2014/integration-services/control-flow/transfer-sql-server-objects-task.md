@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfersqlserverobjectstask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2fcff2e593b3b1eb5f235f56b398294b0bf2edf7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7122dbdf0f99e7bf490487cd98abb3f4d4e7c81a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057872"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184737"
 ---
 # <a name="transfer-sql-server-objects-task"></a>SQL Server-Objekte kopieren (Task)
   Mit dem Task „ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekte übertragen“ wird mindestens ein Typ von Objekten in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank zwischen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]übertragen. Der Task kann z. B. Tabellen und gespeicherte Prozeduren kopieren. Je nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Version, die als Quelle verwendet wird, stehen verschiedene Objekttypen zum Kopieren zur Verfügung. Nur eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank enthält z.B. Schemas und benutzerdefinierte Aggregate.  
@@ -92,7 +92,7 @@ ms.locfileid: "36057872"
   
 -   TransferSqlServerObjectsTaskFinishedTransferringObjects: Dieser Protokolleintrag meldet, dass die Übertragung abgeschlossen ist. Der Protokolleintrag enthält die Beendigungszeit.  
   
- Außerdem meldet ein Protokolleintrag für ein `OnInformation`-Ereignis die Anzahl der Objekttypen, die für die Übertragung ausgewählt wurden, die Anzahl der Objekte, die übertragen wurden sowie Aktionen, wie die Kürzung von Tabellen bei der Übertragung von Daten mit Tabellen. Ein Protokolleintrag für das `OnWarning` Ereignis für jedes Objekt auf dem Ziel überschriebenen wird geschrieben.  
+ Außerdem meldet ein Protokolleintrag für ein `OnInformation`-Ereignis die Anzahl der Objekttypen, die für die Übertragung ausgewählt wurden, die Anzahl der Objekte, die übertragen wurden sowie Aktionen, wie die Kürzung von Tabellen bei der Übertragung von Daten mit Tabellen. Ein Protokolleintrag für das `OnWarning` Ereignis wird für jedes Objekt auf dem Ziel, die überschrieben wird geschrieben.  
   
 ## <a name="security-and-permissions"></a>Sicherheit und Berechtigungen  
  Der Benutzer muss über die Berechtigung zum Durchsuchen von Objekten auf dem Quellserver verfügen sowie über die Berechtigung zum Löschen und Erstellen von Objekten auf dem Zielserver. Außerdem muss der Benutzer Zugriff auf die angegebene Datenbank und die Datenbankobjekte haben.  

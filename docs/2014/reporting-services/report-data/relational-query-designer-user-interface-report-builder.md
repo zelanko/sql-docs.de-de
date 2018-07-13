@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10012"
 helpviewer_keywords:
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - relational query designer
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 caps.latest.revision: 22
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cee2e73f65f0b6a70829ac91ce3c86be9ed5b6ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: cbcbb6c64ef5a11db341d1a49c5d966991661a84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057126"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181867"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Benutzeroberfläche des relationalen Abfrage-Designers (Berichts-Generator)
-  Berichts-Generator enthält sowohl einen grafischen Abfrage-Designer und einen textbasierten Abfrage-Designer können Sie eine Abfrage erstellen, der angibt, die Daten zum Abrufen von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relationalen Datenbanken und [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] für ein Berichtsdataset. Verwenden Sie den grafischen Abfrage-Designer zum Durchsuchen von Metadaten, interaktiven Erstellen einer Abfrage sowie zum Anzeigen der Ergebnisse der Abfrage. Verwenden Sie den textbasierten Abfrage-Designer, um die Abfrage anzuzeigen, die vom grafischen Abfrage-Designer erstellt wurde, oder um eine Abfrage zu ändern. Sie können auch eine vorhandene Abfrage aus einer Datei oder einem Bericht importieren.  
+  Berichts-Generator enthält sowohl einen grafischen Abfrage-Designer als auch einen textbasierten Abfrage-Designer können Sie eine Abfrage erstellen, der angibt, die Daten zum Abrufen von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relationalen Datenbanken und [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] für ein Berichtsdataset. Verwenden Sie den grafischen Abfrage-Designer zum Durchsuchen von Metadaten, interaktiven Erstellen einer Abfrage sowie zum Anzeigen der Ergebnisse der Abfrage. Verwenden Sie den textbasierten Abfrage-Designer, um die Abfrage anzuzeigen, die vom grafischen Abfrage-Designer erstellt wurde, oder um eine Abfrage zu ändern. Sie können auch eine vorhandene Abfrage aus einer Datei oder einem Bericht importieren.  
   
 > [!NOTE]  
 >  In Berichts-Generator müssen Sie den textbasierten Abfrage-Designer verwenden, um eine Abfrage für die Oracle-, OLE DB-, ODBC- und Teradata-Datenquellentypen zu erstellen. Weitere Informationen finden Sie unter [Benutzeroberfläche des textbasierten Abfrage-Designers (Berichts-Generator)](text-based-query-designer-user-interface-report-builder.md).  
@@ -135,7 +135,7 @@ ms.locfileid: "36057126"
 -   **Automatische Erkennung** schaltet das Feature zur automatischen Erkennung um, die Beziehungen zwischen Tabellen automatisch erstellt. Wenn die automatische Erkennung aktiviert ist, erstellt der Abfrage-Designer Beziehungen aus Fremdschlüsseln in Tabellen; andernfalls müssen Sie die Beziehungen manuell erstellen. Wenn Sie Tabellen im Bereich **Datenbanksicht** auswählen, versucht die Funktion zur automatischen Erkennung automatisch, Beziehungen zu erstellen. Wenn Sie die Funktion zur automatischen Erkennung aktivieren, nachdem Sie manuell Joins erstellt haben, werden diese Joins verworfen.  
   
     > [!IMPORTANT]  
-    >  Bei Verwendung mit [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] die zum Erstellen von Joins benötigten Metadaten nicht bereitgestellt, und Beziehungen können nicht automatisch erkannt werden. Wenn die Abfrage Daten aus [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] abruft, müssen alle Tabellenjoins manuell erstellt werden.  
+    >  Bei Verwendung mit [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] die zum Erstellen von Joins benötigten Metadaten nicht bereitgestellt wird und Beziehungen können nicht automatisch erkannt werden. Wenn die Abfrage Daten aus [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] abruft, müssen alle Tabellenjoins manuell erstellt werden.  
   
 -   **Beziehung hinzufügen** Fügt der Liste **Beziehung** eine Beziehung hinzu.  
   

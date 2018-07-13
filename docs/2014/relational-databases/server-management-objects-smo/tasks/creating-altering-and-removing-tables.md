@@ -1,5 +1,5 @@
 ---
-title: Erstellen, ändern und Löschen von Tabellen | Microsoft Docs
+title: Erstellen, ändern und Löschen von Tabellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,21 +16,21 @@ helpviewer_keywords:
 - tables [SMO]
 ms.assetid: ff0bcfff-812f-4999-b0c7-736a97804c2b
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b1498ac39d8ebf69a406fc37d8aa41319386e8fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bb1760bb19f6f32b93e8ee1b62546d7c615ae9f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050512"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177867"
 ---
 # <a name="creating-altering-and-removing-tables"></a>Erstellen, Ändern und Löschen von Tabellen
   In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO) werden Tabellen durch dargestellt die <xref:Microsoft.SqlServer.Management.Smo.Table> Objekt. In der SMO-Objekthierarchie befindet sich das <xref:Microsoft.SqlServer.Management.Smo.Table>-Objekt unter dem <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekt.  
   
 ## <a name="example"></a>Beispiel  
- Um die bereitgestellten Codebeispiele verwenden zu können, müssen Sie die Programmierumgebung, die Vorlage und die Programmiersprache wählen, in denen die Anwendung erstellt werden soll. Weitere Informationen finden Sie unter [Erstellen eines Visual Basic SMO-Projekts in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oder [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Um die bereitgestellten Codebeispiele verwenden zu können, müssen Sie die Programmierumgebung, die Vorlage und die Programmiersprache wählen, in denen die Anwendung erstellt werden soll. Weitere Informationen finden Sie unter [erstellen Sie eine Visual Basic-SMO-Projekts in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oder [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-table-in-visual-basic"></a>Erstellen, Ändern und Löschen einer Tabelle in Visual Basic  
  In diesem Codebeispiel wird eine Tabelle erstellt, die über mehrere Spalten mit unterschiedlichen Typen und Zwecken verfügt. Der Code bietet darüber hinaus Beispiele dafür, wie ein Identitätsfeld und ein Primärschlüssel erstellt und wie Tabelleneigenschaften geändert werden.  

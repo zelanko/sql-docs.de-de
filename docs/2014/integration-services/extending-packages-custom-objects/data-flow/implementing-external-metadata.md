@@ -27,13 +27,13 @@ ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
 caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 18a4e657b4b4e0b434656f6a03538ec4a8f89957
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f8e43702349bae9dd5f3eb89bb6454fb62b05816
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050832"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169208"
 ---
 # <a name="implementing-external-metadata"></a>Implementieren externer Metadaten
   Wenn die Verbindung einer Komponente mit einer Datenquelle getrennt ist, können Sie mithilfe der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100>-Schnittstelle die Spalten in den Eingabe- und Ausgabespaltenauflistungen anhand der Spalten der externen Datenquelle überprüfen. Mit dieser Schnittstelle können Sie eine Momentaufnahme der Spalten der externen Datenquelle verwalten und diese Spalten den Eingabe- und Ausgabespaltenauflistungen der Komponente zuordnen.  
@@ -82,7 +82,7 @@ End Sub
 ### <a name="connected-validation"></a>Verbundene Überprüfung  
  Besteht eine Verbindung einer Komponente mit einer externen Datenquelle, werden die Spalten in den Eingabe- oder Ausgabeauflistungen direkt anhand der externen Datenquelle überprüft. Darüber hinaus müssen die Spalten in der externen Metadatensammlung überprüft werden. Dies ist erforderlich, da die externe Metadatensammlung unter **Erweiterter Editor** in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] verändert werden kann, und Änderungen, die an der Sammlung vorgenommen werden, nicht erkennbar sind. Daher müssen die Komponenten, wenn eine Verbindung besteht, sicherstellen, dass die Spalten in der externen Metadatensammlung weiterhin den Spalten der externen Datenquelle entsprechen.  
   
- Sie können auch in die externen Metadatensammlung Ausblenden der **Erweiterter Editor** durch Festlegen der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100.IsUsed%2A> Eigenschaft der Auflistung in `false`. Dadurch wird jedoch auch die Registerkarte **Spaltenzuordnung** des Editors ausgeblendet, über die Benutzer Spalten der Eingabe- und Ausgabeauflistungen den Spalten in der externen Metadatenspaltenauflistung zuordnen können. Ein Festlegen dieser Eigenschaft auf den Wert `false` verhindert nicht, dass Entwickler die Auflistung programmgesteuert verändern, bietet jedoch Schutz für die externe Metadatenspaltenauflistung einer Komponente, die ausschließlich in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] verwendet wird.  
+ Sie können auch die externe Metadatensammlung Ausblenden der **Erweiterter Editor** durch Festlegen der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100.IsUsed%2A> -Eigenschaft der Auflistung zu `false`. Dadurch wird jedoch auch die Registerkarte **Spaltenzuordnung** des Editors ausgeblendet, über die Benutzer Spalten der Eingabe- und Ausgabeauflistungen den Spalten in der externen Metadatenspaltenauflistung zuordnen können. Ein Festlegen dieser Eigenschaft auf den Wert `false` verhindert nicht, dass Entwickler die Auflistung programmgesteuert verändern, bietet jedoch Schutz für die externe Metadatenspaltenauflistung einer Komponente, die ausschließlich in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] verwendet wird.  
   
 ### <a name="disconnected-validation"></a>Getrennte Überprüfung  
  Ist die Verbindung einer Komponente mit einer externen Datenquelle getrennt, ist die Überprüfung einfacher, da die Spalten in der Eingabe- oder Ausgabeauflistung direkt anhand der Spalten der externen Metadatensammlung und nicht anhand der externen Datenquelle überprüft werden. Eine Komponente sollte eine getrennte Überprüfung ausführen, wenn keine Verbindung mit der externen Datenquelle besteht oder die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A>-Eigenschaft den Wert `false` aufweist.  
@@ -113,7 +113,7 @@ Public  Overrides Function Validate() As DTSValidationStatus
 End Function  
 ```  
   
-![Integration Services (kleines Symbol)](../../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben Sie mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services (kleines Symbol)](../../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenfluss](../../data-flow/data-flow.md)  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], non-SQL Server Subscribers
 - Subscribers [SQL Server replication], non-SQL Server Subscribers
 - non-SQL Server Subscribers, subscriptions
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 65bbe363e6b8148d9a9f3a7f4391eb6bbc5b97ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 40332e5894e444ad8818d04bd738a2a52670c557
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057175"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177837"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Erstellen eines Abonnements für einen Nicht-SQL Server-Abonnenten
   In diesem Thema wird beschrieben, wie ein Abonnement für einen Nicht-SQL Server-Abonnenten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellt wird. Von der Transaktionsreplikation und der Momentaufnahmereplikation wird das Veröffentlichen von Daten auf Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten unterstützt. Informationen zu den unterstützten Abonnentenplattformen finden Sie unter [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)erstellt wird.  
@@ -157,12 +157,12 @@ ms.locfileid: "36057175"
   
 2.  Überprüfen Sie für die Veröffentlichungsdatenbank auf dem Verleger, ob die Veröffentlichung Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten unterstützt, indem Sie [sp_helppublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql) ausführen.  
   
-    -   Wenn der Wert der `enabled_for_het_sub` beträgt 1, nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten unterstützt werden.  
+    -   Wenn der Wert des `enabled_for_het_sub` 1 ist, nicht[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten unterstützt werden.  
   
-    -   Wenn der Wert der `enabled_for_het_sub` 0 ist, führen Sie [Sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)unter Angabe `enabled_for_het_sub` für **@property** und `true` für  **@value**.  
+    -   Wenn der Wert des `enabled_for_het_sub` 0 ist, führen Sie [Sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)unter Angabe `enabled_for_het_sub` für **@property** und `true` für  **@value**.  
   
         > [!NOTE]  
-        >  Vor dem Ändern `enabled_for_het_sub` zu `true`, müssen Sie alle vorhandenen Abonnements für die Publikation löschen. Sie können `enabled_for_het_sub` nicht auf `true` festlegen, wenn die Veröffentlichung auch Abonnements mit Update unterstützt. Die Änderung von `enabled_for_het_sub` beeinflusst andere Veröffentlichungseigenschaften. Weitere Informationen finden Sie unter [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
+        >  Vor dem Ändern der `enabled_for_het_sub` zu `true`, müssen Sie alle vorhandenen Abonnements für die Veröffentlichung löschen. Sie können `enabled_for_het_sub` nicht auf `true` festlegen, wenn die Veröffentlichung auch Abonnements mit Update unterstützt. Die Änderung von `enabled_for_het_sub` beeinflusst andere Veröffentlichungseigenschaften. Weitere Informationen finden Sie unter [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
   
 3.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) aus. Geben Sie **@publication**, **@subscriber**, den Wert **(Standardziel)** für **@destination_db**, den Wert **push** für **@subscription_type**und den Wert 3 für **@subscriber_type** (den OLE DB-Anbieter) an.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 5: Erweitern des Zeitreihenmodells Modell | Microsoft Docs'
+title: 'Lektion 5: Erweitern des Zeitreihenmodells modellieren | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7aad4946-c903-4e25-88b9-b087c20cb67d
 caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: fe6a783cef802e9b68a063cf80016e7f31011cfa
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: aab77b225eeef6844dc74deb272430b0434de71e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313018"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194390"
 ---
 # <a name="lesson-5-extending-the-time-series-model"></a>Lektion 5: Erweitern des Zeitreihenmodells
   In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise können Sie einem Zeitreihenmodell neue Daten hinzufügen und die neuen Daten automatisch in das Modell einbeziehen. Es gibt zwei Möglichkeiten, einem Zeitreihen-Miningmodell neue Daten hinzuzufügen:  
@@ -53,7 +53,7 @@ PREDICTION JOIN <source query>
   
 #### <a name="to-create-a-singleton-prediction-query-on-a-time-series-model"></a>So erstellen Sie eine SINGLETON-Vorhersageabfrage für ein Zeitreihenmodell  
   
-1.  In **Objektexplorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX**.  
+1.  In **Objekt-Explorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX**.  
   
      Der Abfrage-Editor wird mit einer neuen leeren Abfrage geöffnet.  
   
@@ -144,7 +144,7 @@ PREDICTION JOIN <source query>
   
 7.  Auf der **Datei** Menü klicken Sie auf **Dmxquery1.DMX speichern**.  
   
-8.  In der **speichern unter** (Dialogfeld), suchen Sie den entsprechenden Ordner, und nennen Sie die Datei `Singleton_TimeSeries_Query.dmx`.  
+8.  In der **speichern** Dialogfeld, navigieren Sie zu den entsprechenden Ordner, und nennen Sie die Datei `Singleton_TimeSeries_Query.dmx`.  
   
 9. Klicken Sie auf der Symbolleiste auf die **Execute** Schaltfläche.  
   
@@ -196,7 +196,7 @@ PREDICTION JOIN <source query>
   
 -   Fordern Sie Vorhersagen für vier Zeitscheiben an, wobei der Startpunkt Zeitscheibe 3 und der Endpunkt Zeitscheibe 6 ist.  
   
- Das heißt, wenn die neuen Daten enthält, n Zeitscheiben an, und Sie Vorhersagen für die Zeitschritte 1 bis n anfordern, die Vorhersagen mit dem gleichen Zeitraum wie die neuen Daten stimmen überein. Wenn Sie neue Vorhersagen für Zeiträume benötigen, die nicht von den Daten abgedeckt werden, müssen die Vorhersagen bei Zeitscheibe n+1 nach der neuen Datenreihe beginnen, oder Sie müssen sicherstellen, dass Sie zusätzliche Zeitscheiben anfordern.  
+ Das heißt, wenn die neuen Daten, n Zeitscheiben enthält, und Sie Vorhersagen für die Zeitschritte 1 bis n anfordern, die Vorhersagen mit dem gleichen Zeitraum wie die neuen Daten stimmen überein. Wenn Sie neue Vorhersagen für Zeiträume benötigen, die nicht von den Daten abgedeckt werden, müssen die Vorhersagen bei Zeitscheibe n+1 nach der neuen Datenreihe beginnen, oder Sie müssen sicherstellen, dass Sie zusätzliche Zeitscheiben anfordern.  
   
 > [!NOTE]  
 >  Wenn Sie neue Daten hinzufügen, sind keine Vergangenheitsvorhersagen möglich.  
@@ -234,7 +234,7 @@ WHERE [ModelRegion] = 'M200 Europe'
 |M200 Europe|12/25/2008 12:00:00 AM|89|  
   
 ## <a name="making-predictions-with-replacemodelcases"></a>Treffen von Vorhersagen mit REPLACE_MODEL_CASES  
- Das Ersetzen der Modellfälle ist sinnvoll, wenn Sie ein Modell mit einem Satz von Fällen trainieren und dieses Modell auf eine andere Datenreihe anwenden möchten. Eine ausführliche exemplarische Vorgehensweise dieses Szenarios werden im [Lektion 2: erstellen eine Forecasting-Szenarios &#40;Mining-Lernprogramm für fortgeschrittene Data&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
+ Das Ersetzen der Modellfälle ist sinnvoll, wenn Sie ein Modell mit einem Satz von Fällen trainieren und dieses Modell auf eine andere Datenreihe anwenden möchten. Eine ausführliche exemplarische Vorgehensweise dieses Szenarios werden im [Lektion 2: erstellen eine Forecasting-Szenarios &#40;Data Mining Tutorial für fortgeschrittene&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Time Series Model Query Examples](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   

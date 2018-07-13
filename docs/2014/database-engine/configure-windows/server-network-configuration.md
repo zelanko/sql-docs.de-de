@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Named Pipes [SQL Server], configuring
 - connections [SQL Server], server network configuration
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - server configuration [SQL Server]
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 619f8faae3d57cc7ec28a427d7f29bacab4b62ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 798ba8646da29796e11f6391a3132afc22c99732
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048806"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167231"
 ---
 # <a name="server-network-configuration"></a>Server-Netzwerkkonfiguration
   Zu den Aufgaben, die im Rahmen der Server-Netzwerkkonfiguration durchgeführt werden müssen, gehören das Aktivieren von Protokollen, das Ändern des Anschlusses oder der Pipe, der bzw. die von einem Protokoll verwendet wird, das Konfigurieren der Verschlüsselung, das Konfigurieren des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser-Diensts, das Offenlegen oder Verbergen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] im Netzwerk sowie das Registrieren des Serverprinzipalnamens (SPN). In den meisten Fällen ist es nicht erforderlich, die Server-Netzwerkkonfiguration zu ändern. Konfigurieren Sie die Server-Netzwerkprotokolle nur dann neu, wenn spezielle Netzwerkanforderungen erfüllt werden müssen.  
@@ -68,7 +68,6 @@ ms.locfileid: "36048806"
 ## <a name="related-content"></a>Verwandte Inhalte  
  [Client-Netzwerkkonfiguration](client-network-configuration.md)  
   
- 
-  [Verwalten der Datenbank-Engine-Dienste](manage-the-database-engine-services.md)  
+ [Verwalten der Datenbank-Engine-Dienste](manage-the-database-engine-services.md)  
   
   

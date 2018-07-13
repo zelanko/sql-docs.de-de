@@ -1,5 +1,5 @@
 ---
-title: Angeben von XPath-Variablen in XPath-Abfragen (SQLXML 4.0) | Microsoft Docs
+title: Angeben von XPath-Variablen in XPath-Abfragen (SQLXML 4.0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,23 +15,23 @@ helpviewer_keywords:
 - XPath variables [SQLXML]
 ms.assetid: c11ab816-11b8-4131-8b77-c03fe500fa10
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1e356f60fea2c60bd7f6452a558c24a08dd88734
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: c778b7697ce627e8aaf493cb6a089502c667e524
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048685"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168232"
 ---
 # <a name="specifying-xpath-variables-in-xpath-queries-sqlxml-40"></a>Angeben von XPath-Variablen in XPath-Abfragen (SQLXML 4.0)
-  In den folgenden Beispielen wird gezeigt, wie XPath-Variablen in XPath-Abfragen übergeben werden. Die XPath-Abfragen in diesen Beispielen werden für das in SampleSchema1.xml enthaltene Zuordnungsschema angegeben. Informationen zu diesem Beispielschema finden Sie unter [Beispiel Annotated XSD-Schema für XPath-Beispiele &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  In den folgenden Beispielen wird gezeigt, wie XPath-Variablen in XPath-Abfragen übergeben werden. Die XPath-Abfragen in diesen Beispielen werden für das in SampleSchema1.xml enthaltene Zuordnungsschema angegeben. Weitere Informationen zu diesem Beispielschema finden Sie unter [Annotated XSD-Beispielschema für XPath-Beispiele &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-use-the-xpath-variables"></a>A. Verwenden der XPath-Variablen  
- Eine Beispielvorlage besteht aus zwei XPath-Abfragen. Jede der XPath-Abfragen verwendet einen Parameter. Die Vorlage gibt außerdem Standardwerte für diese Parameter an. Die Standardwerte werden verwendet, wenn keine Parameterwerte angegeben werden. Zwei Parameter mit Standardwerten werden in angegebenen  **\<SQL: Header >**.  
+ Eine Beispielvorlage besteht aus zwei XPath-Abfragen. Jede der XPath-Abfragen verwendet einen Parameter. Die Vorlage gibt außerdem Standardwerte für diese Parameter an. Die Standardwerte werden verwendet, wenn keine Parameterwerte angegeben werden. Zwei Parameter mit Standardwerten werden in angegeben  **\<SQL: Header >**.  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -75,7 +75,7 @@ ms.locfileid: "36048685"
     mapping-schema="C:\MyDir\SampleSchema1.xml"  
     ```  
   
-3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen. Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen. Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 > [!NOTE]  
 >  In diesem Beispiel werden keine Parameter übergeben. Stattdessen werden die Standardparameterwerte verwendet.  

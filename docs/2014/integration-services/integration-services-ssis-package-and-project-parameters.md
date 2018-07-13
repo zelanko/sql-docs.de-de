@@ -1,5 +1,5 @@
 ---
-title: SQL Server Integration Services (SSIS)-Parameter | Microsoft Docs
+title: Integration Services-Parameter (SSIS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d477f12cdce1063f765c9b6be2f39ba1fe30a505
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2cd87c7c7b64b9adda2a49bf892004502d951665
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056729"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172947"
 ---
 # <a name="integration-services-ssis-parameters"></a>Integration Services (SSIS)-Parameter
   Mit[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -(SSIS-)Parametern können Sie Eigenschaften in Paketen zur Zeit der Paketausführung Werte zuweisen. Sie können *Projektparameter* auf Projektebene und *Paketparameter* auf Paketebene erstellen. Projektparameter werden verwendet, um jegliche externen Eingaben bereitzustellen, die das Projekt für ein oder mehrere Pakete im Projekt empfängt. Mit Paketparametern können Sie die Paketausführung ändern, ohne das Paket bearbeiten und erneut bereitstellen zu müssen.  
   
- In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] können Sie im Fenster **Project.params** Projektparameter erstellen, ändern oder löschen. Sie erstellen, ändern und löschen Paketparameter mit der Registerkarte **Parameter** im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer. Im Dialogfeld **Parametrisieren** können Sie einen neuen oder vorhandenen Parameter einer Taskeigenschaft zuordnen. Weitere Informationen zum Verwenden der **Project.params** Fenster und die **Parameter** finden Sie unter [Erstellen von Parametern](create-parameters.md). Weitere Informationen zu den **parametrisieren** (Dialogfeld), finden Sie unter [Parameterize Dialog Box](parameterize-dialog-box.md).  
+ In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] können Sie im Fenster **Project.params** Projektparameter erstellen, ändern oder löschen. Sie erstellen, ändern und löschen Paketparameter mit der Registerkarte **Parameter** im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer. Im Dialogfeld **Parametrisieren** können Sie einen neuen oder vorhandenen Parameter einer Taskeigenschaft zuordnen. Weitere Informationen zum Verwenden der **Project.params** Fenster und die **Parameter** finden Sie unter [Create Parameters](create-parameters.md). Weitere Informationen zu den **parametrisieren** im Dialogfeld finden Sie unter [Parameterize Dialog Box](parameterize-dialog-box.md).  
   
 ## <a name="parameters-and-package-deployment-model"></a>Parameter und Paketbereitstellungsmodell  
  Im Allgemeinen sollten Sie beim Bereitstellen eines Pakets mit dem Paketbereitstellungsmodell Konfigurationen anstelle von Parametern verwenden.  
@@ -86,7 +86,7 @@ ms.locfileid: "36056729"
   
  Sie können den Parameterwert auch im Dialogfeld **Paket ausführen** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ändern. Weitere Informationen finden Sie unter [Execute Package Dialog Box](../../2014/integration-services/execute-package-dialog-box.md).  
   
- Sie können auch die Dtexec `/Parameter` Option aus, um einen Parameterwert zu ändern. Weitere Informationen finden Sie unter [dtexec Utility](packages/dtexec-utility.md).  
+ Sie können auch die Dtexec `/Parameter` Option aus, um Parameterwerte zu ändern. Weitere Informationen finden Sie unter [dtexec Utility](packages/dtexec-utility.md).  
   
 ### <a name="parameter-validation"></a>Parameterüberprüfung  
  Wenn Parameterwerte nicht aufgelöst werden können, schlägt die entsprechende Paketausführung fehl. Zur Fehlervermeidung können Sie Projekte und Pakete im Dialogfeld **Überprüfen** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]überprüfen. Mit der Überprüfung stellen Sie sicher, dass alle Parameter über die notwendigen Werte verfügen oder die notwendigen Werte mit bestimmten Umgebungsverweisen auflösen können. Mit der Überprüfung können auch andere häufig auftretende Paketprobleme überprüft werden.  

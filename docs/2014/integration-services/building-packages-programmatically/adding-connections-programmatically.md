@@ -28,13 +28,13 @@ ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
 caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f626c98f5942feb6495e8369868fa4a120c5cb03
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 030ba6850c05f6fd81d106833205566576474faa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050370"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167061"
 ---
 # <a name="adding-connections-programmatically"></a>Programmgesteuertes Hinzufügen von Verbindungen
   Die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Klasse stellt physische Verbindungen zu externen Datenquellen dar. Durch die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Klassen werden die Implementierungsdetails der Verbindung von der Laufzeit isoliert. Daher kann die Laufzeit mit den einzelnen Verbindungs-Managern auf eine konsistente, vorhersehbare Weise interagieren. Verbindungs-Manager enthalten eine Reihe von Basiseigenschaften, die alle Verbindungen gemeinsam haben, z. B. die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>-, die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>- <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A> und die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>-Eigenschaft. Die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>-Eigenschaft und die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>-Eigenschaft sind jedoch in der Regel die einzigen Eigenschaften, die zur Konfiguration eines Verbindungs-Managers erforderlich sind. Im Gegensatz zu anderen Programmierungsmodellen, bei denen Verbindungsklassen Methoden wie die `Open`- oder die `Connect`-Methode verfügbar machen, um eine physische Verbindung mit der Datenquelle herzustellen, verwaltet die Runtime-Engine alle Verbindungen für das Paket während der Ausführung.  
@@ -214,7 +214,7 @@ End Class
 ## <a name="external-resources"></a>Externe Ressourcen  
  Technischer Artikel, [Verbindungszeichenfolgen](http://go.microsoft.com/fwlink/?LinkId=220743), unter carlprothman.net.  
   
-![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben Sie mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Integration Services (SSIS) Connections (Integration Services-Verbindungen (SSIS))](../connection-manager/integration-services-ssis-connections.md)   

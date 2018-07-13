@@ -1,5 +1,5 @@
 ---
-title: Verwenden eine Office Data Connection (.odc) mit Berichten (Reporting Services im integrierten SharePoint-Modus) | Microsoft Docs
+title: Verwenden eine Office Data Connection (.odc) mit Berichten (Reporting Services im integrierten SharePoint-Modus) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Office Data Connection (.odc) files
 - SharePoint integration [Reporting Services], shared data sources
 - .odc files
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2b6f4f52d1ada7d279a5de935359022947fcf087
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 63f220c5201931169546305a0b4115677aedf0e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056877"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177207"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports-reporting-services-in-sharepoint-integrated-mode"></a>Verwenden einer Office Data Connection (.odc) für Berichte (Reporting Services im integrierten SharePoint-Modus)
   Bei beschränkten Szenarien können Sie eine vorhandene Office Data Connection (.odc)-Datei verwenden, um Verbindungsinformationen für einen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Bericht bereitzustellen. Sie können beim Erstellen einer freigegebenen Datenquelle eine ODC-Datei statt einer RSDS-Datei verwenden. Eine ODC-Datei wird vom Berichtsserver auf dieselbe Weise verwendet wie eine RSDS-Datei. Die Datei wird gelesen, um den Datenquellentyp, eine Verbindungszeichenfolge und Anmeldeinformationen abzurufen.  
@@ -38,7 +38,7 @@ ms.locfileid: "36056877"
   
 -   In der ODC-Datei muss eine Verbindungszeichenfolge angegeben sein.  
   
--   Anmeldeinformationen festgelegt werden können, um `None`, `Stored`, oder `Integrated`. Wenn die Methode auf `Stored`, der Berichtsserver wird der Benutzer zum Eingeben von Anmeldeinformationen nicht die gespeicherten Anmeldeinformationen aufgefordert. Vom Berichtsserver können wie in einer ODC-Datei definiert keine gespeicherten Anmeldeinformationen verwendet werden.  
+-   Anmeldeinformationen können festgelegt werden, um `None`, `Stored`, oder `Integrated`. Wenn die Anmeldeinformationen-Methode, um festgelegt wird `Stored`, der Berichtsserver fordert den Benutzer zur Eingabe von Anmeldeinformationen nicht die gespeicherten Anmeldeinformationen. Vom Berichtsserver können wie in einer ODC-Datei definiert keine gespeicherten Anmeldeinformationen verwendet werden.  
   
 -   Die Datenquelle muss über ein Schema verfügen, das mit dem zum Erstellen des Berichts verwendeten Schema identisch ist. Wenn die Datenstrukturen unterschiedlich sind, wird der Bericht nicht ausgeführt.  
   

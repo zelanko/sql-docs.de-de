@@ -1,5 +1,5 @@
 ---
-title: Bereitstellung von Data-Tier-Anwendungsdetails (SQL Server-Hilfsprogramm) | Microsoft Docs
+title: Bereitgestellt von Details zu datenebenenanwendungen (SQL Server-Hilfsprogramm) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.UE.dac.details.F1
 helpviewer_keywords:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Multi-server management [SQL Server]
 ms.assetid: 79c41dd9-abcb-434e-9326-00a341d5c867
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c76314d835c13a63f4dfcd22f9ed54b819953a49
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4761049c87ee75e4b0bc6dc4511200f0b607d287
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058128"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178437"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>Details zu bereitgestellten Datenebenenanwendungen (SQL Server-Hilfsprogramm)
   Die Informationen in der Listenansicht Bereitgestellte Datenebenenanwendungen des Hilfsprogramm-Explorers enthalten Auslastungsdaten für einzelne Datenebenenanwendungen, Verlaufsdaten zur CPU-Auslastung und Details zur Speicherplatzauslastung auf Dateiebene sowie die Möglichkeit, Richtlinienschwellenwerte anzuzeigen und zu aktualisieren. Richtlinienschwellenwerte können auf der Ebene der Datenebenenanwendung für die CPU-Auslastung sowie Datenbankdateien und Protokolldateien gesteuert werden. Sie können auch Eigenschaftendetails für einzelne Datenebenenanwendungen anzeigen.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.iscreatefolder.f1
 - sql12.ssis.ssms.isfolderprop.general.f1
@@ -17,13 +17,13 @@ ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
 caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6542bb9cb3c087fe8f110db84831bf1af37f2ef4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3915196e1517492c04a77c36c9d32a22de91584
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058348"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176537"
 ---
 # <a name="folder-properties-dialog-box"></a>Ordnereigenschaften (Dialogfeld)
   Ein Ordner enthält Projekte und Umgebungen im `SSISDB`-Katalog. Jeder Ordner definiert Berechtigungen, die für den Inhalt des Ordners gelten. Weitere Informationen zu [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Berechtigungen finden Sie unter [catalog.grant_permission &#40;SSISDB-Datenbank&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database).  

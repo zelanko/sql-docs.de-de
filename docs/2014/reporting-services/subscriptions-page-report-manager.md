@@ -1,5 +1,5 @@
 ---
-title: Abonnements (Seite) (Berichts-Manager) | Microsoft Docs
+title: Seite "Abonnements" (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cf3a6bd0-e0b2-4875-a532-63ef34cfa860
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6b6a3befb6794327af0fd5fa2ef92a48b67529a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4dce7384470251bf9334e8cd1ed218142161b6b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058436"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181577"
 ---
 # <a name="subscriptions-page-report-manager"></a>Abonnements (Seite) (Berichts-Manager)
   Mithilfe der Seite Abonnements können Sie alle Abonnements für den aktuellen Bericht oder die aktuelle freigegebene Datenquelle anzeigen. Wenn Sie über ausreichende Berechtigungen verfügen (wie sie durch den Task "Alle Abonnements verwalten" übertragen werden), können Sie die Abonnements aller Benutzer anzeigen. Ansonsten sind auf dieser Seite nur Ihre Abonnements aufgeführt.  
   
 > [!NOTE]  
->  Auch andere Seiten enthalten Abonnementinformationen. Weitere Informationen finden Sie unter [Seite "Meine Abonnements" &#40;Berichts-Manager&#41; ](../../2014/reporting-services/my-subscriptions-page-report-manager.md) auf Ihre eigenen Abonnements zentral zugreifen oder die [neues Abonnement oder Abonnement-Seite bearbeiten &#40;Berichts-Manager&#41; ](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md) erstellen oder Bearbeiten eines Abonnements.  
+>  Auch andere Seiten enthalten Abonnementinformationen. Weitere Informationen finden Sie unter [Seite "Meine Abonnements" &#40;Berichts-Manager&#41; ](../../2014/reporting-services/my-subscriptions-page-report-manager.md) auf all Ihren Abonnements zentral oder [neues Abonnement oder Abonnement-Seite bearbeiten &#40;Berichts-Manager&#41; ](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md) erstellen oder Bearbeiten eines Abonnements.  
   
  Einige Optionen werden nur angezeigt, wenn entsprechende Abonnements vorhanden sind. Falls keine Abonnements definiert sind und Sie von einem Bericht aus auf diese Seite zugreifen, werden auf dieser Seite nur die Optionen **Neues Abonnement** und **Neues datengesteuertes Abonnement** angezeigt.  
   
- Bevor Sie ein neues Abonnement erstellen können, müssen Sie sicherstellen, dass die Berichtsdatenquelle gespeicherte Anmeldeinformationen verwendet. Zum Speichern von Anmeldeinformationen verwenden Sie die Eigenschaftenseite Datenquelle. Weitere Informationen finden Sie unter [Data Sources Eigenschaftenseite &#40;Berichts-Manager&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md).  
+ Bevor Sie ein neues Abonnement erstellen können, müssen Sie sicherstellen, dass die Berichtsdatenquelle gespeicherte Anmeldeinformationen verwendet. Zum Speichern von Anmeldeinformationen verwenden Sie die Eigenschaftenseite Datenquelle. Weitere Informationen finden Sie unter [Data Sources – Seite "Eigenschaften" &#40;Berichts-Manager&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md).  
   
 > [!NOTE]  
 >  Diese Funktion ist nicht in jeder Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den Editionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]unterstützt werden, finden Sie unter [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -83,7 +83,7 @@ ms.locfileid: "36058436"
  Wenn ein Abonnement deaktiviert wurde, kann es nicht verarbeitet werden. Um ein Abonnement zu aktualisieren und wieder funktionsfähig zu machen, müssen Sie es öffnen und speichern.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Berichts-Manager &#40;SSRS im einheitlichen Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Erstellen, ändern und Löschen von Standardabonnements &#40;Reporting Services im einheitlichen Modus&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Erstellen, Ändern oder Löschen von Zeitplänen](subscriptions/create-modify-and-delete-schedules.md)   
  [Berichts-Manager (F1-Hilfe)](../../2014/reporting-services/report-manager-f1-help.md)  

@@ -1,5 +1,5 @@
 ---
-title: Verbindungsdarstellung (tabellarisch) | Microsoft Docs
+title: Verbindungsdarstellung (tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 4b410b16-d36e-4185-bb20-922e66e5e2b7
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3969d727e4e93bf80de0c195895a6b5c19bcf799
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 136c23698e9fe9aff170a66d6a959f57e8cf304a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057616"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196000"
 ---
 # <a name="connection-representation-tabular"></a>Verbindungsdarstellung (tabellarisch)
   Das Verbindungsobjekt definiert die Quelle der Daten, die das tabellarische Modell auffüllen.  
@@ -73,6 +73,6 @@ newDatasource.Update();
 ```  
   
 ## <a name="tabular-amo-2012-sample"></a>Tabular AMO 2012-Beispiel  
- Um ein besseres Verständnis für die Verwendung von AMO zur Erstellung und Bearbeitung von verbindungsdarstellungen, finden Sie in der Quellcode in der Stichprobe Tabular AMO 2012; Prüfen Sie insbesondere die Quelldatei: Database.cs. Das Beispiel ist auf Codeplex verfügbar. Beispielcode wird nur zur Verdeutlichung der hier erläuterten logischen Konzepte bereitgestellt und sollte nicht in einer Produktionsumgebung verwendet werden.  
+ Um ein besseres Verständnis für die Verwendung von AMO zur Erstellung und Bearbeitung von verbindungsdarstellungen, können Sie Quellcode im Tabular AMO 2012-Beispiel; Prüfen Sie insbesondere die Quelldatei: Database.cs. Das Beispiel ist auf Codeplex verfügbar. Beispielcode wird nur zur Verdeutlichung der hier erläuterten logischen Konzepte bereitgestellt und sollte nicht in einer Produktionsumgebung verwendet werden.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Optionen (Text-Editor - alle Sprachen - Registerkarte Allgemein) | Microsoft Docs
+title: Optionen (Text-Editor – alle Sprachen – Allgemein) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.All_Languages.General
 ms.assetid: bf18907c-94e2-4c09-9b2b-0925ac04c627
 caps.latest.revision: 28
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4f04e097b7dec9d502848c9dc095c40ba8daa1ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 39394ea71a428d634bcee27adc2b76a3fca4af02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058762"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189077"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>Optionen (Text-Editor – Alle Sprachen – Seite „Allgemein“)
   Mit diesem Dialogfeld können Sie die allgemeinen Bearbeitungsoptionen für alle fünf Editoren von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]festlegen. Zum Anzeigen dieser Optionen klicken Sie im Menü **Extras** auf **Optionen** . Wählen Sie den Ordner **Text-Editor** aus, erweitern Sie den Ordner **Alle Sprachen** , und klicken Sie dann auf **Allgemein**.  
@@ -41,7 +41,7 @@ ms.locfileid: "36058762"
  **Erweiterte Member ausblenden**  
  Popuplisten für die Anweisungsvervollständigung kürzen, indem nur die am häufigsten verwendeten Member angezeigt werden. Die anderen Elemente werden aus der Liste gefiltert. Diese Option ist nicht verfügbar, wenn keine Member als erweiterte Member gekennzeichnet sind.  
   
- **Parameterinformationen**  
+ **Informationen zu den Parametern**  
  Im Editor an allen verfügbaren Parametern links von der Einfügemarke die vollständige Syntax für die aktuelle Deklaration bzw. Prozedur anzeigen. Der nächste zuweisbare Parameter ist fett hervorgehoben.  
   
 ## <a name="settings"></a>Einstellungen  
@@ -57,7 +57,7 @@ ms.locfileid: "36058762"
 > [!NOTE]  
 >  Diese Markierungspfeile werden nicht in den Code eingefügt und auch nicht gedruckt. Sie dienen lediglich als Hinweis. Diese Funktion ist nicht in allen Typen von Abfrage-Editoren verfügbar.  
   
- **Wenden Sie Ausschneiden/Kopieren Befehle auf leere Zeilen an, wenn keine Auswahl getroffen wurde**  
+ **Wenden Sie Befehle der Bearbeitungsschritte Ausschneiden/Kopieren auf leere Zeilen an, wenn keine Auswahl vorhanden ist**  
  Legt fest, wie sich der Editor verhalten soll, wenn Sie die Einfügemarke in eine Leerzeile setzen und auf **Kopieren** oder **Ausschneiden**klicken, ohne eine Auswahl zu treffen.  
   
  Bei aktiviertem Kontrollkästchen wird die Leerzeile kopiert bzw. ausgeschnitten. Wenn Sie anschließend auf **Einfügen**klicken, wird die Leerzeile eingefügt.  

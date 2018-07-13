@@ -1,5 +1,5 @@
 ---
-title: Microsoft Naive Bayes-Algorithmus | Microsoft Docs
+title: Microsoft Naive Bayes-Algorithmus | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Bayesian classifiers
 - algorithms [data mining]
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - naive bayes algorithms [Analysis Services]
 ms.assetid: 3b53e011-3b1a-4cd1-bdc2-456768ba31b5
 caps.latest.revision: 55
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 43d3851c5a3acd6a33d051eb743797220d06cb7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9abc422430a70a8a4386b55ca0d8d4eb4fb3017b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058403"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196610"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes Algorithm
-  Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Algorithmus ist ein klassifizierungsalgorithmus basierend auf Bayes theoremen und gebotenen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für die Verwendung bei der vorhersagemodellierung. Die Angabe "naiv" im Namen "Naïve Bayes" rührt daher, dass der Algorithmus Bayes Techniken verwendet, aber keine Abhängigkeiten berücksichtigt, die möglicherweise vorhanden sind.  
+  Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Algorithmus ist ein klassifikationsalgorithmus, basierend auf Bayes theoremen und gebotenen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für die Verwendung bei der vorhersagemodellierung. Die Angabe "naiv" im Namen "Naïve Bayes" rührt daher, dass der Algorithmus Bayes Techniken verwendet, aber keine Abhängigkeiten berücksichtigt, die möglicherweise vorhanden sind.  
   
  Der Rechenaufwand für diesen Algorithmus ist geringer als der der anderen [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Algorithmen und ist daher hilfreich für das schnelle Generieren von Miningmodellen, um Beziehungen zwischen Eingabespalten und vorhersagbaren Spalten zu ermitteln. Sie können diesen Algorithmus für eine erste Untersuchung der Daten verwenden. Später können Sie dann die Ergebnisse anwenden, um zusätzliche Miningmodelle mit anderen Algorithmen zu erstellen, deren Rechenaufwand größer ist und die präziser sind.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36058403"
   
  Um die Arbeitsweise besser zu verstehen, verwenden Sie den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Viewer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] (siehe folgende Abbildung), um eine visuelle Darstellung der Statusverteilung durch den Algorithmus zu erhalten.  
   
- ![Naive Bayes-Verteilung der Zustände](../media/naive-bayes.gif "Naive Bayes-Verteilung der Zustände")  
+ ![Naive Bayes-Verteilung von Status](../media/naive-bayes.gif "Naive Bayes-Verteilung von Status")  
   
  Hier werden im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Viewer alle Eingabespalten im Dataset aufgelistet und die Verteilung der Status der einzelnen Spalten für jeden Status der vorhersagbaren Spalte angezeigt.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36058403"
   
 -   **Nur eine Schlüsselspalte:** Jedes Modell muss eine numerische Spalte oder Textspalte enthalten, die jeden Datensatz eindeutig identifiziert. Verbundschlüssel sind nicht zulässig.  
   
--   **Eingabespalten** In einem Naive Bayes-Modell, alle Spalten müssen sein, entweder diskrete oder diskretisierte Spalten. Informationen zur Diskretisierung von Spalten finden Sie unter [Diskretisierungsmethoden &#40;Data Mining&#41;](discretization-methods-data-mining.md).  
+-   **Eingabespalten** In einem Naive Bayes-Modell, alle Spalten müssen sein, entweder diskrete oder diskretisierte Spalten. Weitere Informationen zur Diskretisierung von Spalten finden Sie unter [Diskretisierungsmethoden &#40;Data Mining&#41;](discretization-methods-data-mining.md).  
   
      Bei einem Naive Bayes-Modell ist es außerdem wichtig sicherzustellen, dass die Eingabeattribute unabhängig voneinander sind. Dies ist besonders wichtig, wenn Sie das Modell für Vorhersagen verwenden.  
   
@@ -98,8 +98,8 @@ ms.locfileid: "36058403"
 ## <a name="see-also"></a>Siehe auch  
  [Datamining-Algorithmen &#40;Analysis Services – Datamining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Funktionsauswahl &#40;Datamining&#41;](feature-selection-data-mining.md)   
- [Beispiele für Naive Bayes-Modell](naive-bayes-model-query-examples.md)   
- [Miningmodellinhalt für Naive Bayes-Modelle &#40;Analysis Services – Datamining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
+ [Beispiele für Naive Bayes-Modells](naive-bayes-model-query-examples.md)   
+ [Mingingmodellinhalt von Naive Bayes-Modellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
  [Technische Referenz für den Microsoft Naive Bayes-Algorithmus](microsoft-naive-bayes-algorithm-technical-reference.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen oder Entfernen von Tabellen oder Sichten in einer Datenquellensicht (Analysis Services) | Microsoft Docs
+title: Hinzufügen oder Entfernen von Tabellen oder Sichten in einer Datenquellensicht (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.tablespane.f1
 helpviewer_keywords:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - tables [Analysis Services], data source views
 ms.assetid: 98307d04-6548-4d7d-9244-2371dd165249
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f5bd0cf48e266149a0666b5e8d21d4d44efe41e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ac190f75b626cf2007dee5c885c45672276ee35
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050208"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179067"
 ---
 # <a name="adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services"></a>Hinzufügen oder Entfernen von Tabellen oder Sichten in einer Datenquellensicht (Analysis Services)
   Nachdem Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]eine Datenquellensicht (Data Source View, DSV) erstellt haben, können Sie sie im Datenquellensicht-Designer ändern, indem Sie Tabellen und Spalten hinzufügen oder entfernen. Dies schließt auch Tabellen und Spalten aus einer anderen Datenquelle ein.  
@@ -39,17 +39,17 @@ ms.locfileid: "36050208"
 >  Gehen Sie beim Entfernen einer Tabelle mit Bedacht vor. Beim Entfernen einer Tabelle werden alle zugeordneten Spalten und Beziehungen aus der DSV gelöscht und alle an die Tabelle gebundenen Objekte ungültig.  
   
 ## <a name="selecting-tables-or-views-to-add-or-remove"></a>Auswählen von Tabellen oder Sichten für das Hinzufügen oder Entfernen  
- Im Dialogfeld **Tabellen hinzufügen/entfernen** können Sie Tabellen oder Sichten zwischen den Listen **Verfügbare Objekte** und **Eingeschlossene Objekte** verschieben. Die Liste **Verfügbare Objekte** enthält zunächst alle Tabellen oder Sichten der Primärdatenquelle, die nicht bereits in der Datenquellensicht enthalten sind. Wenn die primäre unterstützt Datenquelle die `OPENROWSET` -Funktion, Sie können auch Tabellen oder Sichten aus anderen Datenquellen im Projekt oder in der Datenbank hinzufügen.  
+ Im Dialogfeld **Tabellen hinzufügen/entfernen** können Sie Tabellen oder Sichten zwischen den Listen **Verfügbare Objekte** und **Eingeschlossene Objekte** verschieben. Die Liste **Verfügbare Objekte** enthält zunächst alle Tabellen oder Sichten der Primärdatenquelle, die nicht bereits in der Datenquellensicht enthalten sind. Wenn die primäre unterstützt Datenquelle die `OPENROWSET` -Funktion, Sie können auch Tabellen oder Sichten aus anderen Datenquellen im Projekt oder der Datenbank hinzufügen.  
   
  Wenn in einer DSV eine Tabelle hinzugefügt oder entfernt wird, wird die Tabelle ebenfalls im aktuell ausgewählten Diagramm in der DSV hinzugefügt bzw. entfernt. Weitere Informationen finden Sie unter [Work with Diagrams in Data Source View Designer &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md).  
   
- Nach dem Verschieben einer Tabelle in die Liste **Eingeschlossene Objekte** des Dialogfelds **Tabellen hinzufügen/entfernen** können Sie alle verknüpften Tabellen hinzufügen. Durch diesen Vorgang werden der Datenquelle Tabellen nach Maßgabe von Fremdschlüsseleinschränkungen (soweit vorhanden) hinzugefügt. Wenn die foreign Key-Einschränkungen nicht vorhanden sind, können Sie die `NameMatchingCriteria` Eigenschaft der Datenquellensicht Beziehungen festlegen, indem Sie ein Kriterium für die Zuordnung von Spaltennamen in Tabellen zur Generierung möglicher Beziehungen angeben. Wenn die `NameMatchingCriteria`Eigenschaft für die Datenquellensicht angegeben ist, klicken Sie auf **verknüpfte Tabellen hinzufügen** zum Hinzufügen von Tabellen aus der Datenquelle, die übereinstimmende Spaltennamen aufweisen. Weitere Informationen zum Einrichten der `NameMatchingCriteria` Eigenschaft finden Sie unter [Datenquellsichten in mehrdimensionalen Modellen](data-source-views-in-multidimensional-models.md).  
+ Nach dem Verschieben einer Tabelle in die Liste **Eingeschlossene Objekte** des Dialogfelds **Tabellen hinzufügen/entfernen** können Sie alle verknüpften Tabellen hinzufügen. Durch diesen Vorgang werden der Datenquelle Tabellen nach Maßgabe von Fremdschlüsseleinschränkungen (soweit vorhanden) hinzugefügt. Wenn die foreign Key-Einschränkungen nicht vorhanden sind, können Sie mithilfe der `NameMatchingCriteria` Eigenschaft der Datenquellensicht Beziehungen festlegen, indem Sie ein Kriterium für die Zuordnung von Spaltennamen in Tabellen zur Generierung möglicher Beziehungen angeben. Wenn die `NameMatchingCriteria`für die Datenquellensicht angegeben wird, klicken Sie auf **verknüpfte Tabellen hinzufügen** zum Hinzufügen von Tabellen aus der Datenquelle, die Zuordnung von Spaltennamen. Weitere Informationen zum Einrichten der `NameMatchingCriteria` -Eigenschaft finden Sie unter [Datenquellensichten in mehrdimensionalen Modellen](data-source-views-in-multidimensional-models.md).  
   
 > [!NOTE]  
 >  Das Hinzufügen oder Entfernen von Objekten in einer Datenquellensicht hat keine Auswirkungen auf die zugrunde liegende Datenquelle.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenquellsichten in mehrdimensionalen Modellen](data-source-views-in-multidimensional-models.md)   
- [Verwenden von Diagrammen im Datenquellensicht-Designers &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [Verwenden von Diagrammen im Datenquellensicht-Designer &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

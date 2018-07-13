@@ -1,5 +1,5 @@
 ---
-title: Verwenden von SQL Server Profiler zum Überwachen von Analysis Services | Microsoft Docs
+title: Verwenden von SQL Server Profiler zum Überwachen von Analysis Services | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, Analysis Services
 - monitoring Analysis Services [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], Analysis Services
 ms.assetid: 8b77dafc-4584-4e93-8ad7-299304391bfd
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 90752fda77529ba73cd7059748c1480769e20939
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c44bae03e34e5482a589507880e6f76268b060ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050676"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194310"
 ---
 # <a name="use-sql-server-profiler-to-monitor-analysis-services"></a>Verwenden von SQL Server Profiler zum Überwachen von Analysis Services
   
@@ -37,7 +37,7 @@ ms.locfileid: "36050676"
 |Thema|Description|  
 |-----------|-----------------|  
 |[Einführung in die Überwachung von Analysis Services mit SQL Server Profiler](introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)|Beschreibt das Verwenden von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zum Überwachen einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz.|  
-|[Erstellen von Profilerablaufverfolgungen für Replay &#40;Analysis Services&#41;](create-profiler-traces-for-replay-analysis-services.md)|Beschreibt die Anforderungen für das Erstellen einer Ablaufverfolgung zur Wiedergabe mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
+|[Erstellen von Profiler-Ablaufverfolgungen für die Wiedergabe &#40;Analysis Services&#41;](create-profiler-traces-for-replay-analysis-services.md)|Beschreibt die Anforderungen für das Erstellen einer Ablaufverfolgung zur Wiedergabe mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
 |[Analysis Services-Ablaufverfolgungsereignisse](../trace-events/analysis-services-trace-events.md)|Beschreibt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Ereignisklassen. Diese Ereignisklassen sind Aktionen zugeordnet, die von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] generiert werden, und werden zum Wiedergeben von Ablaufverfolgungen verwendet.|  
   
 ## <a name="see-also"></a>Siehe auch  

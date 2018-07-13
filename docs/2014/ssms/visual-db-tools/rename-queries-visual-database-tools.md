@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - renaming queries
 - queries [SQL Server], names
 ms.assetid: a263483e-87ba-49c4-b154-3e7bdf33063b
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0c05adbacf540cdbf45862aa10ea131f4754ed8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e8447240b1abb74a63244f37535a7a3e7dc47987
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056841"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177077"
 ---
 # <a name="rename-queries-visual-database-tools"></a>Umbenennen von Abfragen (Visual Database Tools)
   Sie können jede Abfrage umbenennen, die aktuell nicht zur Bearbeitung geöffnet ist. In der folgenden Anweisung wird davon ausgegangen, dass die Abfrage, die Sie umbenennen möchten, geschlossen ist.  
@@ -36,7 +36,7 @@ ms.locfileid: "36056841"
 3.  Geben Sie einen neuen Namen für die Abfrage ein, und drücken Sie dann die EINGABETASTE.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Entwerfen von Abfragen und Sichten Gewusst-wie-Themen &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Entwerfen von Abfragen und Ansichten: Themen zur Vorgehensweise &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Ausführen grundlegender Vorgänge mit Abfragen &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: af1a270524d91621cdeb15b56ace7c07ad4a4df7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 91b6e5492566c2ada0857c8708ddc786560ee387
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050482"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177187"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>Zusammenfassen von kleinen Slices in einem Kreisdiagramm (Berichts-Generator und SSRS)
   Wenn Kreisdiagramme zu viele Datenpunkte enthalten, werden sie unübersichtlich. Zur Vermeidung dieses Problems können Sie alle Daten, die unter einen bestimmten Wert fallen, im Kreisdiagramm als einen gemeinsamen Slice anzeigen.  
@@ -51,7 +51,7 @@ ms.locfileid: "36050482"
          Legen Sie die Eigenschaft CollectedThreshold auf **10**fest.  
   
         > [!NOTE]  
-        >  Wenn Sie CollectedStyle auf **SingleSlice**, CollectedThreshold auf einen Wert größer als **100**, und CollectedThresholdUsePercent `True`, das Diagramm löst eine Ausnahme aus, da dies nicht möglich Prozentsatz zu berechnen. Zur Behebung dieses Problems legen Sie CollectedThreshold auf einen Wert kleiner als **100** fest.  
+        >  Wenn Sie CollectedStyle auf **SingleSlice**, CollectedThreshold auf einen Wert größer als **100**, und CollectedThresholdUsePercent `True`, das Diagramm wird eine Ausnahme ausgelöst, da dies nicht möglich Berechnen Sie einen Prozentsatz an. Zur Behebung dieses Problems legen Sie CollectedThreshold auf einen Wert kleiner als **100** fest.  
   
     -   **Nach Datenwert.** So fassen Sie beispielsweise in einem Kreisdiagramm Slices zusammen, die weniger als 5000 darstellen:  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36050482"
   
 2.  Legen Sie die Eigenschaft CollectedStyle auf **CollectedPie**fest.  
   
-3.  Legen Sie die Eigenschaft CollectedThresholdproperty auf den Wert fest, der als Schwellenwert für die Zusammenfassung kleinerer Segmente zu einem einzelnen Segment verwendet werden soll. Wenn die CollectedStyle-Eigenschaft auf festgelegt ist **CollectedPie**, die CollectedThresholdUsePercentproperty ist immer auf festgelegt `True`, und der Schwellenwert für ist stets in Prozent gemessen.  
+3.  Legen Sie die Eigenschaft CollectedThresholdproperty auf den Wert fest, der als Schwellenwert für die Zusammenfassung kleinerer Segmente zu einem einzelnen Segment verwendet werden soll. Wenn die Eigenschaft CollectedStyle auf festgelegt ist **CollectedPie**, die CollectedThresholdUsePercentproperty immer auf festgelegt `True`, und der Schwellenwert für ist stets in Prozent gemessen.  
   
 4.  (Optional) Legen Sie die Eigenschaften CollectedColor, CollectedLabel, CollectedLegendText und CollectedToolTip fest. Alle anderen Eigenschaften mit der Bezeichnung "Collected" gelten nicht für den zusammengefassten Slice in einem Kreisdiagramm.  
   

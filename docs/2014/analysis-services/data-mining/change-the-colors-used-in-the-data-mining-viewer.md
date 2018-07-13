@@ -1,5 +1,5 @@
 ---
-title: Ändern der im Datamining-Viewer verwendeten Farben | Microsoft Docs
+title: Ändern der im Datamining-Viewer verwendeten Farben | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.DATA_MINING_VIEWERS
 ms.assetid: 9de2fc2a-fca5-456b-b2bd-13586e7951e6
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4909ee57e27caeda0835f366337695300c163ad5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 000f5b89eb918654f740e2c34eb60be484d3073c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056826"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194430"
 ---
 # <a name="change-the-colors-used-in-the-data-mining-viewer"></a>Ändern der im Data Mining-Viewer verwendeten Farben
   Sie können Sie die Farben ändern, die in Data Mining-Viewern zum Anzeigen von Datenreihen, Knoten oder Clustern verwendet werden. Dazu können Sie die entsprechenden Optionen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]festlegen. Änderungen der Farbeinstellungen wirken sich auf alle Modelle aus, die Sie mit [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]anzeigen. Damit Ihre Änderungen wirksam werden, müssen Sie jedoch zunächst [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] schließen und das Modell im Viewer erneut öffnen.  

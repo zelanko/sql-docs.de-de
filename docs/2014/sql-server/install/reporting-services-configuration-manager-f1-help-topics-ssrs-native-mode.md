@@ -1,5 +1,5 @@
 ---
-title: Reporting Services-Konfigurationsmanager-F1-Hilfethemen (einheitlicher SSRS-Modus) | Microsoft Docs
+title: Reporting Services-Konfigurations-Manager-F1-Hilfethemen (einheitlicher SSRS-Modus) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
 ms.assetid: 7b6fb18e-ec39-4661-88e3-977ed64e2c82
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: e38b7d703fb91c0f03f2db55b3f8a82fa4c5b4cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 874c69dcef4dd0704fa0c6fe59e96edfbffe9743
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056843"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177247"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>F1-Hilfethemen für Reporting Services-Konfigurations-Manager (einheitlicher SSRS-Modus)
   Dieser Abschnitt stellt F1-Hilfe für den Reporting Services-Konfigurations-Manager bereit.  
@@ -30,7 +30,7 @@ ms.locfileid: "36056843"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Herstellen einer Verbindung mit einem Berichtsserver](../../../2014/sql-server/install/connect-to-a-native-mode-report-server.md)  
+-   [Eine Verbindung mit einem Berichtsserver herstellen](../../../2014/sql-server/install/connect-to-a-native-mode-report-server.md)  
   
 -   [Berichtsserverstatus](../../../2014/sql-server/install/report-server-status-ssrs-native-mode.md)  
   

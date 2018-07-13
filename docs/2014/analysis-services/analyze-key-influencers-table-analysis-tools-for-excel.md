@@ -1,5 +1,5 @@
 ---
-title: Analysieren Sie die wichtige Einflussfaktoren (Tabellenanalysetools für Excel) | Microsoft Docs
+title: Analysieren Sie die wichtige Einflussfaktoren (Tabellenanalysetools für Excel) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
 - key influencers
 - factor analysis
 ms.assetid: 54d7b4ce-7b79-407a-985c-aa655ad19280
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 41b30eb0f3f0dc68c5666581a2682470fac7f978
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0e280644cbd3d5fd78ba6f1b29f8a989948094a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050698"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187637"
 ---
 # <a name="analyze-key-influencers-table-analysis-tools-for-excel"></a>Wichtige Einflussfaktoren analysieren (Tabellenanalysetools für Excel)
-  ![Wichtige Einflussfaktoren-Schaltfläche im Menüband analysieren](media/tat-aki.gif "wichtige Einflussfaktoren analysieren-Schaltfläche im Menüband")  
+  ![Schaltfläche "Analysieren wichtige Einflussfaktoren" im Menüband](media/tat-aki.gif "wichtige Einflussfaktoren analysieren-Schaltfläche im Menüband")  
   
- Mit der **wichtige Einflussfaktoren analysieren** Tool, wählen Sie eine Spalte, die ein zielergebnis enthält, und der Algorithmus bestimmt, welche Faktoren den stärksten Einfluss auf das Ergebnis hatten.  
+ Mit der **wichtige Einflussfaktoren analysieren** -Tool, wählen Sie eine Spalte, die ein zielergebnis enthält, und der Algorithmus bestimmt, welche Faktoren den stärksten Einfluss auf das Ergebnis hatten.  
   
  Im Tool werden neue Datentabellen erstellt, in denen die zu jedem Ergebnis gehörenden Faktoren aufgeführt und die Beziehungswahrscheinlichkeit grafisch dargestellt wird. Sie können die Tabellen nach verschiedenen Faktoren und Ergebnissen filtern, um die Resultate ausführlicher zu prüfen.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36050698"
   
 3.  Öffnen Sie die Spalte, die das Ziel der Analyse darstellt.  
   
-4.  Klicken Sie optional auf **wählen Sie Spalten aus, die für die Analyse zu verwendende**. In der **erweiterte Spaltenauswahl** Dialogfeld Wählen Sie die Spalten, die am wahrscheinlichsten relevanten Daten enthalten sind. Um Leistung und Genauigkeit zu verbessern, heben Sie die Auswahl von Spalten wie ID oder Name auf, die für die Musteranalyse irrelevant sind. Klicken Sie auf **OK** schließen die **erweiterte Spaltenauswahl** (Dialogfeld).  
+4.  Klicken Sie optional auf **Spalten für die Analyse auswählen**. In der **erweiterte Spaltenauswahl** Dialogfeld Wählen Sie die Spalten, die am wahrscheinlichsten relevanten Daten enthalten sind. Um Leistung und Genauigkeit zu verbessern, heben Sie die Auswahl von Spalten wie ID oder Name auf, die für die Musteranalyse irrelevant sind. Klicken Sie auf **OK** schließen die **erweiterte Spaltenauswahl** Dialogfeld.  
   
 5.  Klicken Sie auf **Ausführen**.  
   
@@ -81,9 +81,9 @@ ms.locfileid: "36050698"
  **Begünstigt**  
  Im zweiten Bericht werden die Zielwerte, die Sie vergleichen, in zwei Spalten aufgeführt. Die zugehörigen Faktoren werden in absteigender Reihenfolge (in Bezug auf die Zuverlässigkeit) aufgeführt.  
   
--   Die **blauen** Balken zeigt die Attribute, die verwendet werden sollen das Ergebnis "No" (= kein Einkauf).  
+-   Die **blaue** Balken zeigt die Attribute, die auf das Ergebnis beitragen, "Nein" (= kein Einkauf).  
   
--   Die **roten** Balken zeigt die Attribute zum Ergebnis beitragen, "Yes" (= Fahrrad gekauft).  
+-   Die **roten** Balken zeigt die Attribute zum Ergebnis beitragen, "Yes" (= ein Fahrrad gekauft haben).  
   
  Die Farben in der schattierten Leiste sind beliebig wählbar. Sie können diese Farben ändern, indem Sie die Optionen für Tabellenentwurf in Excel festlegen.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36050698"
  Da alle Diagramme auf Excel-Tabellen basieren, können Sie die Tabellen filtern und sortieren, um sich auf bestimmte Faktoren oder Ergebnisse zu konzentrieren.  
   
 ## <a name="more-about-the-analyze-key-influencers-tool"></a>Weitere Informationen zum Tool "Wichtige Einflussfaktoren analysieren"  
- Wenn die **wichtige Einflussfaktoren analysieren** Tool analysiert Ihre Daten, wird Folgendes:  
+ Wenn die **wichtige Einflussfaktoren analysieren** Tool analysiert die Daten, die bewirkt Folgendes:  
   
 -   Es wird eine Datenstruktur erstellt, in der wichtige Informationen zur Verteilung von Daten gespeichert werden.  
   
@@ -105,19 +105,19 @@ ms.locfileid: "36050698"
 -   Erstellt einen Bericht, der die wichtigen Einflussfaktoren beschreibt, die nach dem Vertrauensergebnis sortiert sind.  
   
 ### <a name="requirements"></a>Anforderungen  
- Wenn die Zielspalte kontinuierliche numerische Werte enthält, werden die numerischen Werte vom Tool automatisch in Gruppen unterteilt. Diese Gruppierungen stellen Cluster von Fällen mit ähnlichen Merkmalen dar. Numerische Werte können jedoch nicht in benutzerfreundliche Gruppen aufgeteilt werden. Beispielsweise kann der Bericht enthält eine Gruppierung wie z. B. "\<12.85701", während die Benutzer des Berichts in der Regel Gruppierungen angezeigt, die ganze Zahlen, z. B. 10-19, 20-29 usw. verwenden möchten.  
+ Wenn die Zielspalte kontinuierliche numerische Werte enthält, werden die numerischen Werte vom Tool automatisch in Gruppen unterteilt. Diese Gruppierungen stellen Cluster von Fällen mit ähnlichen Merkmalen dar. Numerische Werte können jedoch nicht in benutzerfreundliche Gruppen aufgeteilt werden. Beispielsweise kann der Bericht enthält eine Gruppierung wie z. B. "\<12.85701", während die Benutzer des Berichts in der Regel Gruppierungen angezeigt, die ganze Zahlen, wie z. B. 10-19, 20-29 und So weiter verwenden möchten.  
   
- Wenn Sie numerische Daten anders gruppieren möchten, müssen Sie die Daten vor der Analyse entsprechend segmentieren. Beispielsweise können Sie die [neu bezeichnen](relabel-sql-server-data-mining-add-ins.md) Tool in Data Mining-Client für Excel verwenden, um eine neue gruppenbezeichnung in einer separaten Spalte erstellen, und klicken Sie dann nur diese neue Spalte in der Analyse verwenden.  
+ Wenn Sie numerische Daten anders gruppieren möchten, müssen Sie die Daten vor der Analyse entsprechend segmentieren. Beispielsweise können Sie die [neu bezeichnen](relabel-sql-server-data-mining-add-ins.md) Tool im Data Mining-Client für Excel verwenden, um eine neue gruppenbezeichnung in einer separaten Spalte erstellen, und klicken Sie dann nur die neue Spalte in der Analyse verwenden.  
   
 ### <a name="related-tools"></a>Verwandte Tools  
- Die **Data Mining** Menüband enthält erweiterte Tools, einschließlich der Möglichkeit zum Anpassen des Datamining-Modellen  
+ Die **Data Mining** Menüband bietet erweiterte Tools, einschließlich der Möglichkeit, Datamining-Modelle anpassen.  
   
- Wenn Sie Ihr Modell, mithilfe Speichern der **wichtige Einflussfaktoren analysieren** -Tool können Sie Data Mining-Client das Modell zu durchsuchen und Beziehungen ausführlicher untersuchen. Informationen finden Sie unter [Durchsuchen von Modellen in Excel &#40;SQL Server Data Mining-Add-ins&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md). Sie können mithilfe von Microsoft Office Visio Diagramme erstellen, die Beziehungen als Cluster oder Abhängigkeitsnetzwerke anzeigen. Weitere Informationen finden Sie unter [Problembehandlung Visio Data Mining-Diagramme, &#40;SQL Server Data Mining-Add-ins&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md).  
+ Wenn Sie Ihr Modell mithilfe von speichern die **wichtige Einflussfaktoren analysieren** -Tool können Sie Data Mining-Client das Modell durchsuchen und Beziehungen ausführlicher untersuchen. Weitere Informationen finden Sie unter [Durchsuchen von Modellen in Excel &#40;SQL Server Data Mining-Add-ins&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md). Sie können mithilfe von Microsoft Office Visio Diagramme erstellen, die Beziehungen als Cluster oder Abhängigkeitsnetzwerke anzeigen. Weitere Informationen finden Sie unter [Problembehandlung Visio Data Mining-Diagramme in &#40;SQL Server Data Mining-Add-ins&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md).  
   
 > [!NOTE]  
 >  Die mit den Tabellenanalysetools erstellten Modelle werden gelöscht, wenn Sie das Arbeitsblatt schließen oder die Verbindung mit dem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Server beenden. Daher können Sie die Modelle nur durchsuchen, solange die Verbindung bestehen bleibt. Sie können die Modelle nicht in Visio rendern, wenn Sie die Verbindung beenden oder das Arbeitsblatt schließen.  
   
- Weitere Informationen zu den vom verwendeten Algorithmus die **wichtige Einflussfaktoren analysieren** -tool, finden Sie unter "Microsoft Naive Bayes-Algorithmus" in SQL Server-Onlinedokumentation.  
+ Weitere Informationen zu den vom verwendeten Algorithmus die **wichtige Einflussfaktoren analysieren** finden Sie unter "Microsoft Naive Bayes-Algorithmus" in SQL Server-Onlinedokumentation.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Tabellenanalysetools für Excel](table-analysis-tools-for-excel.md)   

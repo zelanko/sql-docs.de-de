@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server]
 - exporting data
@@ -28,18 +28,18 @@ helpviewer_keywords:
 - column exporting [SQL Server]
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 caps.latest.revision: 198
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 16db4c61fb00746265744a1a91d9d1aaee3d90a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6ed04d5f47515fd38657434c9e35056a79cff891
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049386"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170311"
 ---
 # <a name="bcp-utility"></a>Hilfsprogramms bcp
-  Die **Bcp** Hilfsprogramm werden Daten zwischen einer Instanz von massenkopiert [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und einer Datendatei in eine vom Benutzer angegebenes Format. Das Hilfsprogramm **bcp** kann verwendet werden, um große Mengen neuer Zeilen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Tabellen zu importieren oder um Daten aus Tabellen in Datendateien zu exportieren. Außer in Verbindung mit der Option **queryout** sind für das Hilfsprogramm keine Kenntnisse von [!INCLUDE[tsql](../includes/tsql-md.md)] erforderlich. Um Daten in eine Tabelle zu importieren, müssen Sie entweder eine für diese Tabelle erstellte Formatdatei verwenden oder die Struktur der Tabelle und die Art der Daten kennen, die in den Tabellenspalten zulässig sind.  
+  Die **Bcp** Utility Bulk kopiert Daten zwischen einer Instanz von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und einer Datendatei in eine vom Benutzer angegebenes Format. Das Hilfsprogramm **bcp** kann verwendet werden, um große Mengen neuer Zeilen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Tabellen zu importieren oder um Daten aus Tabellen in Datendateien zu exportieren. Außer in Verbindung mit der Option **queryout** sind für das Hilfsprogramm keine Kenntnisse von [!INCLUDE[tsql](../includes/tsql-md.md)] erforderlich. Um Daten in eine Tabelle zu importieren, müssen Sie entweder eine für diese Tabelle erstellte Formatdatei verwenden oder die Struktur der Tabelle und die Art der Daten kennen, die in den Tabellenspalten zulässig sind.  
   
  ![Artikellinksymbol](../../2014/database-engine/media/topic-link.gif "Topic link icon") Informationen zu den **bcp**-Syntaxkonventionen finden Sie unter [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql).  
   
@@ -145,10 +145,10 @@ ms.locfileid: "36049386"
 |ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252).|  
 |OEM|Standardcodepage, die vom Client verwendet wird. Die Standardcodepage, die verwendet wird, wenn **-C** nicht angegeben wird.|  
 |RAW|Es erfolgt keine Konvertierung von einer Codepage zu einer anderen. Dies ist die schnellste Option, da keine Konvertierung vorgenommen wird.|  
-|*Codepage*|Bestimmte Codepagenummer, z. B. 850.<br /><br /> **\*\* Wichtige \* \***  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Codepage 65001 (UTF-8-Codierung) nicht unterstützt.|  
+|*Codepage*|Bestimmte Codepagenummer, z. B. 850.<br /><br /> **\*\* Wichtige \* \***  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt nicht Codepage 65001 (UTF-8-Codierung).|  
   
  `-d` *Datenbankname*  
- Gibt die Datenbank an, mit der eine Verbindung hergestellt werden soll. bcp.exe stellt standardmäßig eine Verbindung mit der Standarddatenbank des Benutzers her. Wenn `-d` *Database_name* und ein dreiteiliger Name (*database_name.schema.table*, als erster Parameter an bcp.exe übergeben) angegeben wird, wird eine Fehlermeldung angezeigt, da Sie nicht festlegen können die Datenbankname zweimal. Wenn *Database_name* beginnt mit einem Bindestrich (-) oder einem Schrägstrich (/), fügen Sie keine Leerzeichen zwischen `-d` und den Datenbanknamen an.  
+ Gibt die Datenbank an, mit der eine Verbindung hergestellt werden soll. bcp.exe stellt standardmäßig eine Verbindung mit der Standarddatenbank des Benutzers her. Wenn `-d` *Database_name* und ein dreiteiliger Name (*database_name.schema.table*, als der erste Parameter an bcp.exe übergeben) angegeben ist, wird ein Fehler tritt auf, da Sie nicht angeben können die der Datenbankname zweimal. Wenn *Database_name* beginnt mit einem Bindestrich (-) oder einem Schrägstrich (/), fügen Sie keine Leerzeichen zwischen `-d` und den Datenbanknamen an.  
   
  **-e** *Fehlerdatei*  
  Gibt den vollständigen Pfad einer Fehlerdatei an, in der alle Zeilen gespeichert werden, die das **bcp**-Hilfsprogramm nicht von der Datei in die Datenbank übertragen kann. Die durch den **bcp** -Befehl generierten Fehlermeldungen werden an die Arbeitsstation des Benutzers gesendet. Wenn diese Option nicht verwendet wird, wird keine Fehlerdatei erstellt.  
@@ -170,14 +170,14 @@ ms.locfileid: "36049386"
 -   Wird **-f** mit der Option **in** oder **out** verwendet, ist eine bereits vorhandene Formatdatei erforderlich.  
   
     > [!NOTE]  
-    >  Die Verwendung einer Formatdatei mit der Option **in** oder **out** ist optional. In Ermangelung der **-f** option **- n**, `-c`, `-w`, oder **-N** nicht angegeben wird, mit dem Befehl fordert Formatinformationen und ermöglicht Ihnen das Speichern Ihre Antworten in einer Formatdatei (mit dem Standardnamen Bcp.fmt ist).  
+    >  Die Verwendung einer Formatdatei mit der Option **in** oder **out** ist optional. In Ermangelung der **-f** option **- n**, `-c`, `-w`, oder **-N** nicht angegeben ist, mit dem Befehl werden die Formatinformationen aufgefordert und können Sie speichern Ihre Antworten in einer Formatdatei (Standardnamen Bcp.fmt ist).  
   
  Wenn *Fehlerdatei* mit einem Bindestrich (-) oder einem Schrägstrich (/) beginnt, darf kein Leerzeichen zwischen **-f** und dem *Fehlerdatei* -Wert enthalten sein.  
   
  **-F** *erste_Zeile*  
  Gibt die Nummer der ersten Zeile an, die aus einer Tabelle exportiert oder von einer Datendatei importiert werden soll. Dieser Parameter muss ein Wert größer als (>) 0 jedoch kleiner als (\<) oder gleich (=) die gesamte Anzahl der Zeilen. Fehlt dieser Parameter, wird standardmäßig die erste Zeile der Datei angenommen.  
   
- *erste_Zeile* kann eine positive ganze Zahl mit einem Wert bis zu 2^63-1 sein. **-F *** erste_zeile* ist 1-basiert.  
+ *erste_Zeile* kann eine positive ganze Zahl mit einem Wert bis zu 2^63-1 sein. **-F *** First_row* ist 1-basiert.  
   
  **-h"** *Hinweis*[ **,**... *n*] **"**  
  Gibt den oder die Hinweise an, die beim Massenimportieren von Daten in eine Tabelle oder Sicht verwendet werden sollen.  
@@ -214,7 +214,7 @@ ms.locfileid: "36049386"
  Wird mit dem **in**-Argument angegeben und bewirkt, dass jeder INSERT-Trigger, der für die Zieltabelle definiert ist, während des Massenkopiervorgangs ausgeführt wird. Wenn FIRE_TRIGGERS nicht angegeben wird, werden keine INSERT-Trigger ausgeführt. FIRE_TRIGGERS wird für die Argumente **out**, **queryout** und **format** ignoriert.  
   
  **-i** *input_file*  
- Gibt den Namen einer Antwortdatei enthält, die Antworten auf die Fragen der Eingabeaufforderung für jedes Datenfeld die während ein Massenkopiervorgangs im interaktiven Modus ausgeführt wird (**- n**, `-c`, `-w`, oder **- N** nicht angegeben).  
+ Gibt den Namen einer Antwortdatei, die Antworten auf die Fragen der Eingabeaufforderung für jedes Datenfeld enthält, wenn ein Massenkopiervorgang im interaktiven Modus ausgeführt wird (**- n**, `-c`, `-w`, oder **- N** nicht angegeben).  
   
  Wenn *Eingabedatei* mit einem Bindestrich (-) oder einem Schrägstrich (/) beginnt, darf kein Leerzeichen zwischen **-i** und dem *Eingabedatei* -Wert enthalten sein.  
   
@@ -247,7 +247,7 @@ ms.locfileid: "36049386"
   
  Weitere Informationen finden Sie unter [Verwenden des nativen Unicode-Formats zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md).  
   
- Wenn Sie exportieren und importieren Sie Daten für das gleiche Tabellenschema unter Verwendung von bcp.exe mit **-N**, möglicherweise eine Warnung ist ein fester Länge, die Spalte mit nicht-Unicode-Zeichen (z. B. `char(10)`).  
+ Wenn Sie exportieren und importieren Sie dann die Daten, die demselben Tabellenschema unter Verwendung von bcp.exe mit **-N**, möglicherweise eine Warnung angezeigt, wenn es sich bei vorhanden ist, eine feste Länge, die Spalte mit nicht-Unicode-Zeichen (z. B. `char(10)`).  
   
  Die Warnung kann ignoriert werden. Eine Möglichkeit zum Auflösen dieser Warnung besteht darin, **-n** anstelle von **-N** zu verwenden.  
   
@@ -328,10 +328,10 @@ ms.locfileid: "36049386"
  Weitere Informationen finden Sie unter [Verwenden des Unicode-Zeichenformats zum Importieren und Exportieren von Daten &#40;SQL Server&#41;](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).  
   
  **-x**  
- Verwendet die **Format** und **-f *** Formatdatei* Optionen, die anstelle der standardmäßigen nicht-XML-Formatdatei eine XML-basierte Formatdatei generiert. Beim Importieren oder Exportieren von Daten hat **-x** keine Funktion. Es wird ein Fehler generiert, wenn weder verwendet **Format** und **-f *** Formatdatei*.  
+ Verwendung der **Format** und **-f *** Formatdatei* "Optionen", die anstelle der standardmäßigen nicht-XML-Formatdatei eine XML-basierte Formatdatei generiert. Beim Importieren oder Exportieren von Daten hat **-x** keine Funktion. Wird ein Fehler generiert, verwendet **Format** und **-f *** Formatdatei*.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **Bcp** 12.0-Client installiert wird, bei der Installation [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Tools. Wenn sowohl für [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] als auch für eine frühere Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Tools installiert werden, verwenden Sie möglicherweise anstatt des **bcp** 12.0-Clients die frühere Version des **bcp**-Clients. Dies wird durch den Wert der PATH-Umgebungsvariablen bestimmt. Diese Umgebungsvariable definiert die Verzeichnisse, in denen von Windows nach ausführbaren Dateien gesucht wird. Führen Sie an der Windows-Befehlszeile den Befehl **bcp /v** aus, um zu ermitteln, welche Version Sie verwenden. Informationen zum Festlegen des Befehlspfads in der PATH-Umgebungsvariablen finden Sie in der Windows-Hilfe.  
+ Die **Bcp** 12.0-Client ist installiert, bei der Installation [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Tools. Wenn sowohl für [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] als auch für eine frühere Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Tools installiert werden, verwenden Sie möglicherweise anstatt des **bcp** 12.0-Clients die frühere Version des **bcp**-Clients. Dies wird durch den Wert der PATH-Umgebungsvariablen bestimmt. Diese Umgebungsvariable definiert die Verzeichnisse, in denen von Windows nach ausführbaren Dateien gesucht wird. Führen Sie an der Windows-Befehlszeile den Befehl **bcp /v** aus, um zu ermitteln, welche Version Sie verwenden. Informationen zum Festlegen des Befehlspfads in der PATH-Umgebungsvariablen finden Sie in der Windows-Hilfe.  
   
  XML-Formatdateien werden nur unterstützt, wenn die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Tools zusammen mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client installiert werden.  
   
@@ -347,7 +347,7 @@ ms.locfileid: "36049386"
 ## <a name="computed-columns-and-timestamp-columns"></a>Berechnete Spalten und Zeitstempel-Spalten  
  In der zu importierenden Datendatei enthaltene Werte für berechnete oder `timestamp`-Spalten werden ignoriert. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] weist Werte automatisch zu. Wenn die Datendatei keine Werte für die berechneten oder `timestamp`-Spalten der Tabelle enthält, geben Sie mithilfe einer Formatdatei an, dass die berechneten oder `timestamp`-Spalten beim Importieren von Daten ausgelassen werden sollen. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] weist diesen Spalten automatisch Werte zu.  
   
- Berechnet und `timestamp` Spalten sind beim Massenkopieren aus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] an eine Datei wie gewohnt.  
+ Berechnet und `timestamp` Spalten sind beim Massenkopieren aus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wie gewohnt in eine Datendatei.  
   
 ## <a name="specifying-identifiers-that-contain-spaces-or-quotation-marks"></a>Angeben von Bezeichnern mit Leerzeichen oder Anführungszeichen  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Bezeichner können Zeichen wie z.B. eingebettete Leerzeichen und Anführungszeichen enthalten. Diese Bezeichner müssen folgendermaßen behandelt werden:  
@@ -371,7 +371,7 @@ ms.locfileid: "36049386"
 ## <a name="data-validation"></a>Datenüberprüfung  
  **bcp** erzwingt nun Datenüberprüfungen, die dazu führen können, dass Skripts einen Fehler erzeugen, wenn sie für ungültige Daten in einer Datendatei ausgeführt werden. So wird durch **bcp** jetzt Folgendes überprüft:  
   
--   Die systemeigene Darstellung von `float` oder `real` Datentypen sind gültig.  
+-   Die native Darstellung der `float` oder `real` Datentypen sind gültig.  
   
 -   Unicode-Daten besitzen eine gerade Bytelänge.  
   

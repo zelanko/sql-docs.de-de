@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - firewall systems [SQL Server]
 - server message blocks [SQL Server]
@@ -27,15 +27,15 @@ helpviewer_keywords:
 - installing SQL Server, security
 ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
 caps.latest.revision: 48
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 849fdd75ab2ad73c673ef0c4c0e70ec3ba25b8f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f8d17d471020a4b6960307c6718caf4624579da8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048397"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166101"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>Überlegungen zur Sicherheit bei SQL Server-Installationen
   Sicherheit ist für jedes Produkt und jedes Geschäft wichtig. Indem Sie einige einfache bewährte Methoden verwenden, können Sie viele Sicherheitsrisiken vermeiden. In diesem Thema werden einige bewährte Sicherheitsmethoden behandelt, die Sie vor dem Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und nach dem Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]berücksichtigen sollten. Sicherheitshinweise für bestimmte Funktionen sind in den Referenzthemen für diese Funktionen enthalten.  
@@ -157,7 +157,7 @@ ms.locfileid: "36048397"
 >  Während des Setups von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] wird eine Anmeldung für die Gruppe BUILTIN\Users hinzugefügt. Dies ermöglicht allen authentifizierten Benutzern des Computers den Zugriff auf die Instanz von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] als Element der öffentlichen Rolle. Die BUILTIN\Users-Anmeldung kann sicher entfernt werden, um den [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Zugriff auf Computerbenutzer zu beschränken, die eigene Logins besitzen oder Mitglieder anderer Windows-Gruppen mit Logins sind.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Hardware and Software Requirements for Installing SQLServer 2014](hardware-and-software-requirements-for-installing-sql-server.md)   
+ [Hardware- und Softwareanforderungen zum Installieren von SQLServer 2014](hardware-and-software-requirements-for-installing-sql-server.md)   
  [Netzwerkprotokolle und Netzwerkbibliotheken](../../../2014/sql-server/install/network-protocols-and-network-libraries.md)   
  [Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
   

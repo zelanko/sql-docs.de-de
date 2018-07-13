@@ -1,5 +1,5 @@
 ---
-title: Herstellen einer Verbindung mit einer tabellarischen Modelldatenbank (SSAS) | Microsoft Docs
+title: Herstellen einer Verbindung einer tabellarischen Modelldatenbank (SSAS) mit | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 71bfa13950656ea662ba91532abf765bd1b126c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8add1b36631df0706c6463112ed47fcf7f792bb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057364"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190920"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>Herstellen einer Verbindung mit einer tabellarischen Modelldatenbank (SSAS)
   Nachdem Sie ein tabellarisches Modell erstellt und auf einem Analysis Services-Tabellenmodus-Server bereitgestellt haben, müssen Sie Berechtigungen festlegen, die es für Clientanwendungen verfügbar machen. Dieses Thema erläutert die Vorgehensweise bei Berechtigungen und beim Verbindungsaufbau mit einer Datenbank ausgehend von Clientanwendungen.  
@@ -96,7 +96,7 @@ ms.locfileid: "36057364"
  Nachdem die Verbindung hergestellt wurde, können Sie mithilfe der Daten eine PivotTable oder ein PivotChart erstellen. Weitere Informationen finden Sie unter [Analysieren in Excel &#40;SSAS – tabellarisch&#41;](analyze-in-excel-ssas-tabular.md).  
   
 ##  <a name="bkmk_sharepoint"></a> Herstellen einer Verbindung von SharePoint aus  
- Wenn Sie PowerPivot für SharePoint verwenden, können Sie eine BI-Semantikmodell-Verbindungsdatei in SharePoint erstellen, die die Umleitung zu einer Datenbank ermöglicht, die auf einem Analysis Services-Server im tabellarischen Modus ausgeführt wird. Eine BI-Semantikmodell-Verbindung stellt einen HTTP-Endpunkt für eine Datenbank bereit. Sie vereinfacht auch den Tabellenmodell-Zugriff für Wissensarbeiter, die routinemäßig Dokumente auf einer SharePoint-Website verwenden. Wissensarbeiter müssen nur den Speicherort der BI-Semantikmodell-Verbindungsdatei oder die URL kennen, um auf Tabellenmodell-Datenbanken zuzugreifen. Details zum Serverspeicherort oder Datenbanknamen werden in der BI-Semantikmodell-Verbindung gekapselt. Weitere Informationen zum Erstellen und Verwenden von BI-Semantikmodell-Verbindungsdateien finden Sie unter [PowerPivot BI Semantic Model Connection &#40;bism&#41; ](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md) und [eine BI-Semantikmodellverbindung mit einem tabellarischen Modell erstellen Datenbank](../power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
+ Wenn Sie PowerPivot für SharePoint verwenden, können Sie eine BI-Semantikmodell-Verbindungsdatei in SharePoint erstellen, die die Umleitung zu einer Datenbank ermöglicht, die auf einem Analysis Services-Server im tabellarischen Modus ausgeführt wird. Eine BI-Semantikmodell-Verbindung stellt einen HTTP-Endpunkt für eine Datenbank bereit. Sie vereinfacht auch den Tabellenmodell-Zugriff für Wissensarbeiter, die routinemäßig Dokumente auf einer SharePoint-Website verwenden. Wissensarbeiter müssen nur den Speicherort der BI-Semantikmodell-Verbindungsdatei oder die URL kennen, um auf Tabellenmodell-Datenbanken zuzugreifen. Details zum Serverspeicherort oder Datenbanknamen werden in der BI-Semantikmodell-Verbindung gekapselt. Weitere Informationen zum Erstellen und Verwenden von BI-Semantikmodell-Verbindungsdateien finden Sie unter [PowerPivot BI-Semantikmodellverbindung &#40;bism&#41; ](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md) und [eine BI-Semantikmodell-Verbindung mit einem tabellarischen Modell erstellen Datenbank](../power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
 ##  <a name="bkmk_Tshoot"></a> Beheben von Verbindungsproblemen  
  Dieser Abschnitt enthält Ursachen und Lösungsschritte für Probleme, die beim Herstellen einer Verbindung mit einer Tabellenmodell-Datenbank auftreten.  
@@ -109,7 +109,7 @@ ms.locfileid: "36057364"
   
  In SharePoint tritt dieser Microsoft Excel-Fehler auf, wenn Sie eine Dateninteraktion, z. B. das Filtern von Daten, in einer PivotTable durchführen, die Modelldaten verwendet. Der Fehler tritt auf, da Sie nicht über ausreichende Berechtigungen für den Analysis Services-Remoteserver verfügen. Um diesen Fehler zu beheben, müssen Sie über Benutzerzugriffsrechte für die Datenbank verfügen. Weitere Informationen finden Sie weiter oben in diesem Thema in den Anweisungen zum Gewähren von Benutzerzugriff auf Daten.  
   
- **Fehler beim Ausführen dieses Vorgangs. Laden Sie die Arbeitsmappe erneut, und wiederholen Sie dann zum Ausführen dieses Vorgangs erneut.**  
+ **Fehler beim Ausführen dieses Vorgangs. Laden Sie die Arbeitsmappe erneut, und wiederholen Sie dann, um diesen Vorgang erneut auszuführen.**  
   
  In SharePoint tritt dieser Microsoft Excel-Fehler auf, wenn Sie eine Dateninteraktion, z. B. das Filtern von Daten, in einer PivotTable durchführen, die Modelldaten verwendet. Der Fehler tritt auf, da Excel Services nicht von der Analysis Services-Instanz vertraut wird, in der die Modelldaten bereitgestellt werden. Um diesen Fehler zu beheben, gewähren Sie Excel Services Administratorberechtigung für die Analysis Services-Instanz. Weitere Informationen finden Sie weiter oben in diesem Thema in den Anweisungen zum Gewähren von Administratorberechtigungen. Wenn der Fehler weiterhin auftritt, verwenden Sie wieder den Excel Services-Anwendungspool.  
   
@@ -118,6 +118,6 @@ ms.locfileid: "36057364"
  In SharePoint tritt dieser Microsoft Excel-Fehler auf, wenn Sie eine Dateninteraktion, z. B. das Filtern von Daten, in einer PivotTable durchführen, die Modelldaten verwendet. Der Fehler tritt auf, da der Benutzer nicht über ausreichende SharePoint-Berechtigungen für die Arbeitsmappe verfügt. Der Benutzer muss mindestens über **Leseberechtigungen** verfügen. **Nur anzeigen** -Berechtigungen sind für den Datenzugriff nicht ausreichend.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tabellenmodelllösungsbereitstellung &#40;SSAS – tabellarisch&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
+ [Bereitstellung von Tabellenmodelllösungen &#40;SSAS – tabellarisch&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

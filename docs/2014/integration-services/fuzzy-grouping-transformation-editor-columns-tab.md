@@ -1,5 +1,5 @@
 ---
-title: Für die Fuzzysuche Transformations-Editor (Registerkarte "Spalten") | Microsoft Docs
+title: Editor für Fuzzygruppierung Transformation (Registerkarte Spalten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzygroupingtransformation.columns.f1
 helpviewer_keywords:
 - Fuzzy Grouping Transformation Editor
 ms.assetid: 24f4539f-2a9f-4acd-acc7-06228a07f7df
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b9557b9e2b4da35540fad923152532c506513f69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b393e0a2807a002f1805b5c2664f9ae2b3e527a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056977"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172991"
 ---
 # <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>Transformations-Editor für Fuzzygruppierung (Registerkarte Spalten)
   Mithilfe der Registerkarte **Spalten** des Dialogfelds **Transformations-Editor für Fuzzygruppierung** können Sie die Spalten angeben, die zum Gruppieren von Zeilen mit doppelten Werten verwendet werden sollen.  
