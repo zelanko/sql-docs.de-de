@@ -1,5 +1,5 @@
 ---
-title: Angeben der Datentyp und des Inhaltstyps (Lernprogramm zu Datamining-Lernprogramm) | Microsoft Docs
+title: Angeben von den Daten- und Inhaltstyp (Lernprogramm zu Datamining-Grundlagen) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 72484d27-3ef1-4f16-813c-2f43231fc2da
 caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 8ea7d719e4341ded35a874c1bdc6c9c9ea0892f9
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 578d47783f22e857bb2fb84949e9d22dd6ad0e85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313208"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37174952"
 ---
 # <a name="specifying-the-data-type-and-content-type-basic-data-mining-tutorial"></a>Angeben des Datentyps und des Inhaltstyps (Lernprogramm zu Data Mining-Grundlagen)
   Nachdem Sie die Spalten zum Erstellen der Struktur und zum Trainieren der Modelle ausgewählt haben, können Sie erforderliche Änderungen an den Standarddaten und Inhaltstypen vornehmen, die vom Assistenten festgelegt wurden.  
@@ -34,7 +34,7 @@ ms.locfileid: "36313208"
   
     |Spalte|Inhaltstyp|Datentyp|  
     |------------|------------------|---------------|  
-    |**Adresse Zeile 1**|**Diskrete**|**Text**|  
+    |**– Adresszeile 1**|**Diskrete**|**Text**|  
     |**Zeile 2**|**Diskrete**|**Text**|  
     |**ALTER**|**Fortlaufende**|**Long**|  
     |**Bike Buyer**|**Diskrete**|**Long**|  
@@ -46,7 +46,7 @@ ms.locfileid: "36313208"
     |**English Occupation**|**Diskrete**|**Text**|  
     |**Vorname**|**Diskrete**|**Text**|  
     |**Geschlecht**|**Diskrete**|**Text**|  
-    |**Geography Key**|**Diskrete**|**Text**|  
+    |**Geografieschlüssel**|**Diskrete**|**Text**|  
     |**House Owner Flag**|**Diskrete**|**Text**|  
     |**Last Name**|**Diskrete**|**Text**|  
     |**Marital Status**|**Diskrete**|**Text**|  
@@ -59,10 +59,10 @@ ms.locfileid: "36313208"
 3.  Klicken Sie auf **Weiter**.  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Angeben eines Testdatasets für die Struktur &#40;Lernprogramm zu Datamining-Lernprogramm&#41;](../../2014/tutorials/specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial.md)  
+ [Angeben eines Testdatasets für die Struktur &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="previous-task-in-lesson"></a>Vorherige Aufgabe in der Lektion  
- [Erstellen der Miningmodellstruktur Targeted Mailing &#40;Lernprogramm zu Datamining-Lernprogramm&#41;](../../2014/tutorials/creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial.md)  
+ [Erstellen der Miningmodellstruktur Targeted Mailing &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Inhaltstypen &#40;Datamining&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)   

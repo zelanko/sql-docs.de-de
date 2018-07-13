@@ -1,5 +1,5 @@
 ---
-title: Send DataSet-Beispiel | Microsoft Docs
+title: Send DataSet-Beispiel | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: d10dacbc-1b0f-4a4b-b53b-83eae2a6d809
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ffe7f23a8f20a325f84fe68df90778ec321e0885
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 03552b94c8a50bea83d1d5e69f589379baf81697
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060777"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171361"
 ---
 # <a name="send-dataset-sample"></a>Beispiel für das Senden eines Datensatzes
   Das Beispiel für das Senden eines `DataSet` zeigt, wie ein ADO.NET-basiertes `DataSet` in einer serverseitigen CLR (Common Language Runtime)-basierten gespeicherten Prozedur als Resultset an den Client zurückgegeben wird. Dies ist z. B. hilfreich, wenn eine solche gespeicherte Prozedur ein `DataSet` mit den Ergebnissen einer Abfrage füllt und dann die in diesem `DataSet` enthaltenen Daten bearbeitet. Dies ist ebenfalls hilfreich, wenn die gespeicherte Prozedur ein `DataSet` von Grund auf neu erstellt und füllt. Das Beispiel besteht aus zwei Klassen, `DataSetUtilities` und `TestSendDataSet`. Mit der `SendDataSet`-Methode für die `DataSetUtilities`-Klasse wird ein allgemeines Verfahren für die Übertragung des Inhalts einer `DataSet`-Instanz an den Client implementiert. Die für die `DoTest`-Klasse definierte `TestSendDataSet`-Methode überprüft die Funktionsfähigkeit der `SendDataSet`-Methode, indem sie ein `DataSet` erstellt und mit Daten aus der gespeicherten Transact-SQL-Prozedur `uspGetTwoBOMTestData` füllt. `uspGetTwoBOMTestData` führt die gespeicherte Transact-SQL-Prozedur `uspGetBillOfMaterials` zweimal aus, um rekursiv die Stückliste für zwei Produkte abzufragen, die als Parameter für die gespeicherte Prozedur `usp_GetTwoBOMTestData` angegeben wurden. Nach dem Füllen des Datasets werden die Daten normalerweise vor dem Aufrufen von `SendDataSet` geändert, um die Daten im Dataset als Resultset an den Client zu übermitteln. Aus Gründen der Vereinfachung gibt dieses Beispiel die Daten ungeändert zurück.  
@@ -53,7 +53,7 @@ ms.locfileid: "36060777"
      `GO`  
   
     > [!NOTE]  
-    >  Um CLR zu aktivieren, benötigen Sie `ALTER SETTINGS` Serverberechtigung, die implizit von Mitgliedern der erhalten die `sysadmin` und `serveradmin` festen Serverrollen.  
+    >  Um CLR zu aktivieren, benötigen Sie `ALTER SETTINGS` Serverberechtigung, die implizit Mitglieder erhalten die `sysadmin` und `serveradmin` festen Serverrollen.  
   
 -   Die AdventureWorks-Datenbank muss in der von Ihnen verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz installiert sein.  
   

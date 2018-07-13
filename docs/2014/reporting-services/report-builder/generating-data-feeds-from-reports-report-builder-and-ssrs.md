@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7bdab22ae7d649e1915cb31c221bf0f546727513
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9594eca6b955081be5689862d96d1c9d09a6a664
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060889"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202660"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Generieren von Datenfeeds aus Berichten (Berichts-Generator und SSRS)
-  Die [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Atom-Renderingerweiterung generiert ein Atom-dienstdokument, das die aus einem Bericht verfügbaren Datenfeeds aufgeführt sind und die Datenfeeds aus den Daten Datenbereichen in einem Bericht. Mit dieser Erweiterung generieren Sie Atom-kompatible Datenfeeds, die von Anwendungen gelesen bzw. zwischen Anwendungen ausgetauscht werden können, die aus Berichten generierte Datenfeeds nutzen können. Sie können z. B. die Atom-Renderingerweiterung zum Generierten von Datenfeeds verwenden, die dann im [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Client verwendet werden können.  
+  Die [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Atom-Renderingerweiterung generiert ein Atom-dienstdokument, das die aus einem Bericht verfügbaren Datenfeeds aufgeführt sind, und die Datenfeeds aus den Daten Datenbereichen in einem Bericht. Mit dieser Erweiterung generieren Sie Atom-kompatible Datenfeeds, die von Anwendungen gelesen bzw. zwischen Anwendungen ausgetauscht werden können, die aus Berichten generierte Datenfeeds nutzen können. Sie können z. B. die Atom-Renderingerweiterung zum Generierten von Datenfeeds verwenden, die dann im [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Client verwendet werden können.  
   
- Im Atom-Dienstdokument ist mindestens ein Datenfeed für jeden Datenbereich in einem Bericht aufgeführt. Je nach Typ des Datenbereichs und die Daten, die der Datenbereich angezeigt wird, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] möglicherweise mehrere Datenfeeds aus einem Datenbereich generieren. Eine Matrix oder ein Diagramm kann beispielsweise mehrere Datenfeeds bereitstellen. Wenn die Atom-Renderingerweiterung das Atom-Dienstdokument erstellt, wird für jeden Datenfeed ein eindeutiger Bezeichner erstellt. Sie verwenden den Bezeichner in der URL, um auf den Inhalt des Datenfeeds zuzugreifen.  
+ Im Atom-Dienstdokument ist mindestens ein Datenfeed für jeden Datenbereich in einem Bericht aufgeführt. Je nach Typ des Datenbereichs und die Daten, die der Datenbereich angezeigt wird, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] kann mehrere Datenfeeds aus einem Datenbereich generieren. Eine Matrix oder ein Diagramm kann beispielsweise mehrere Datenfeeds bereitstellen. Wenn die Atom-Renderingerweiterung das Atom-Dienstdokument erstellt, wird für jeden Datenfeed ein eindeutiger Bezeichner erstellt. Sie verwenden den Bezeichner in der URL, um auf den Inhalt des Datenfeeds zuzugreifen.  
   
  Die Atom-Renderingerweiterung generiert Daten für einen Datenfeed auf ähnliche Weise, wie die CSV-(Comma-Separated Value-)Renderingerweiterung Daten in eine CSV-Datei rendert. Wie eine CSV-Datei entspricht ein Datenfeed einer vereinfachten Darstellung der Berichtsdaten. Beispiel: In einer Tabelle mit einer Zeilengruppe, in der die Verkäufe innerhalb einer Gruppe addiert werden, wird die Summe in jeder Datenzeile wiederholt, und es gibt keine separate Zeile, die nur die Summe enthält.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36060889"
   
  ![RS_Atom_ProductSalesSummaryCircledValues](../media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
- Das folgende XML zeigt ein <`entry`>-Element aus diesem Bericht in einem Datenfeed. Beachten Sie, dass die <`entry`>-Element enthält, die Summen der Verkäufe und Bestellungen für die Gruppe sowie die Gesamtsummen der Verkäufe und Bestellungen aller Gruppen. Das <`entry`>-Element enthält alle Werte im Bericht.  
+ Das folgende XML zeigt ein <`entry`>-Element aus diesem Bericht in einem Datenfeed. Beachten Sie, dass die <`entry`>-Element enthält, die Gesamtsummen der Verkäufe und Bestellungen der Gruppe sowie die Gesamtsummen der Verkäufe und Bestellungen aller Gruppen. Das <`entry`>-Element enthält alle Werte im Bericht.  
   
  `<entry><id>uuid:1795992c-a6f3-40ec-9243-fbfd0b1a5be3;id=166322</id><title type="text"></title><updated>2009-05-08T23:09:58Z</updated><author /><content type="application/xml"><m:properties>`  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36060889"
   
  Die Namen der Berichtselemente entsprechen den in der Berichtsdefinitionssprache (Report Definition Language, RDL) verwendeten Standardnamen, die häufig weder intuitiv noch einfach zu erinnern sind. Der Standardname der ersten in einen Bericht eingefügten Matrix lautet beispielsweise "Tablix 1". Die Datenfeeds verwenden diese Namen.  
   
- Sie können mithilfe der DataElementName-Eigenschaft des Datenbereichs Anzeigenamen bereitstellen, um die Arbeit mit Datenfeeds zu vereinfachen. Wenn Sie einen Wert für DataElementName bereitstellen-Datenelement <`d`> wird verwenden sie statt des Standardnamens Daten Region ist. Angenommen, wenn der Standardname eines Datenbereichs Tablix1 und DataElementName SalesByTerritoryYear festgelegt und dann die <`d`> in den Daten Feed SalesByTerritoryYear verwendet. Wenn der Datenbereich, wie der oben beschriebene Matrixbericht, zwei Datenfeeds aufweist, lauten die in den Datenfeeds verwendeten Namen SalesByTerritoryYear _Territory und SalesByTerritoryYear _Year.  
+ Sie können mithilfe der DataElementName-Eigenschaft des Datenbereichs Anzeigenamen bereitstellen, um die Arbeit mit Datenfeeds zu vereinfachen. Wenn Sie einen Wert für DataElementName angeben der Datenfeed Unterelement <`d`> wird mit ist es den Standard-datenbereichsnamen. Z. B., wenn der Standardname einer Datenbereiche Tablix1 und DataElementName SalesByTerritoryYear festgelegt wurde und dann die <`d`> in den Daten Feed SalesByTerritoryYear verwendet. Wenn der Datenbereich, wie der oben beschriebene Matrixbericht, zwei Datenfeeds aufweist, lauten die in den Datenfeeds verwendeten Namen SalesByTerritoryYear _Territory und SalesByTerritoryYear _Year.  
   
  Wenn Sie die im Bericht und die im Datenfeed angezeigten Daten vergleichen, werden Sie möglicherweise einige Unterschiede feststellen. In Berichten werden häufig formatierte numerische und Datums-/Uhrzeitangaben angezeigt, wohingegen der Datenfeed unformatierte Daten enthält.  
   
@@ -197,7 +197,7 @@ ms.locfileid: "36060889"
 
   
 ## <a name="see-also"></a>Siehe auch  
- [Exportieren als CSV-Datei &#40;Berichts-Generator und SSRS&#41;](exporting-to-a-csv-file-report-builder-and-ssrs.md)   
+ [Exportieren in eine CSV-Datei &#40;Berichts-Generator und SSRS&#41;](exporting-to-a-csv-file-report-builder-and-ssrs.md)   
  [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](export-reports-report-builder-and-ssrs.md)  
   
   

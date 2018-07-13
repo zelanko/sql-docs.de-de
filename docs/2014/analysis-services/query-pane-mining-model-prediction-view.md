@@ -1,5 +1,5 @@
 ---
-title: Abfragen im Bereich (Miningmodell-Vorhersageansicht) | Microsoft Docs
+title: Abfragebereich (Miningmodell-Vorhersageansicht) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.query.f1
 ms.assetid: fdeec72e-d0bd-4453-9eaa-46436e4d6edc
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a0f0105796bd4a4903a12dbad0b87b76919ce8b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ede17228e9dc21a170815ecc46900fd38ab7d978
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061255"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211780"
 ---
 # <a name="query-pane-mining-model-prediction-view"></a>Abfragebereich (Miningmodell-Vorhersageansicht)
   Im Bereich **Abfrage** werden die vom Generator für Vorhersageabfragen erstellten DMX-Abfragen (Data Mining-Erweiterungen) angezeigt. Sie können diese Anweisungen ändern und anschließend auf die Schaltfläche **Zur Abfrageergebnissicht wechseln** klicken, um die Ergebnisse zurückgeben zu lassen. Wenn Sie zurück zur Ansicht **Design** wechseln, gehen alle an der Anweisung vorgenommenen Änderungen verloren.  

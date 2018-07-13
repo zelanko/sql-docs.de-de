@@ -1,5 +1,5 @@
 ---
-title: AllowDrillThrough-Element (ASSL) | Microsoft Docs
+title: AllowDrillThrough-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AllowDrillThrough element
 ms.assetid: 53c9e4a3-a376-447d-a13f-80d845cc9789
 caps.latest.revision: 51
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e5ee132903b98c616ce756b423455302ca6e65f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f98b16569c3a7f4ab136be291d7bfd45698b5b11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059240"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178867"
 ---
 # <a name="allowdrillthrough-element-assl"></a>AllowDrillThrough-Element (ASSL)
   Bestimmt, ob Drillthrough auf dem übergeordneten Element erlaubt wird.  
@@ -58,11 +58,11 @@ ms.locfileid: "36059240"
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|[MiningModel-Element](../objects/miningmodel-element-assl.md), [MiningModelPermission](../objects/miningmodelpermission-element-assl.md), [miningstructurepermission-Objekte](../objects/miningstructurepermission-element-assl.md)|  
+|Übergeordnete Elemente|[MiningModel-Element](../objects/miningmodel-element-assl.md), [MiningModelPermission](../objects/miningmodelpermission-element-assl.md), [MiningStructurePermission](../objects/miningstructurepermission-element-assl.md)|  
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Elemente, die den übergeordneten Elementen von entsprechen `AllowDrillThrough` im Objektmodell von Analysis Management Objects (AMO) sind <xref:Microsoft.AnalysisServices.MiningModel>, <xref:Microsoft.AnalysisServices.MiningModelPermission>, und <xref:Microsoft.AnalysisServices.MiningStructurePermission>.  
+ Die Elemente, die den übergeordneten Elementen von entsprechen `AllowDrillThrough` im Analysis Management Objects (AMO)-Objektmodell werden <xref:Microsoft.AnalysisServices.MiningModel>, <xref:Microsoft.AnalysisServices.MiningModelPermission>, und <xref:Microsoft.AnalysisServices.MiningStructurePermission>.  
   
 ## <a name="drillthrough-on-mining-structures"></a>Drillthrough in Miningstrukturen  
  In [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], können Sie definieren `AllowDrillthrough` Berechtigungen für Miningstrukturen sowie Miningmodelle. Wenn Sie diese Berechtigung einer Rolle zuordnen, kann jedes Mitglied dieser Rolle das Data Mining-Modell abfragen und Strukturspalten zurückgeben, die nicht im Modell enthalten waren. Zum Beispiel erstellen Sie nur mit folgenden Spalten ein Modell: Kundenschlüssel, Kundeneinkommen und Kundenkäufe. Wenn Sie Drillthrough im Modell aktivieren, können Benutzer Informationen in anderen Spalten der Miningstruktur, z.&nbsp;B. E-Mail-Adressen oder Namen von Kunden, zurückgeben.  

@@ -1,5 +1,5 @@
 ---
-title: Grundlegendes zu Durchlauf- und Lösungsreihenfolge (MDX) | Microsoft Docs
+title: Grundlegendes zu Durchlauf- und Lösungsreihenfolge (MDX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - evaluation order [MDX]
 - calculation order [MDX]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - expressions [MDX], solve orders
 ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6275971580e7885d0ccdd92aa128811c07f297bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e62af2057276bf6533753d5c1543e686ddb5e92c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059020"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196530"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>Grundlegendes zu Durchlauf- und Lösungsreihenfolge (MDX)
   Wird ein Cube als Ergebnis eines MDX-Skripts berechnet, durchläuft er, abhängig von der Verwendung verschiedener Berechnungsfunktionen, möglicherweise viele Berechnungsphasen. Jede Phase bezeichnet man als Berechnungsdurchlauf.  
@@ -127,9 +127,9 @@ FROM [Adventure Works]
  Der Grund für die unterschiedlichen Resultsets aus der ersten und der zweiten Abfrage ist eine andere Platzierung des berechneten Elements. In der ersten Abfrage ist das berechnete Element Teil der ROWS-Achse und nicht der COLUMNS-Achse, wie in der zweiten Abfrage. Diese unterschiedliche Platzierung gewinnt in der nächsten Abfrage an Bedeutung, wenn die beiden berechneten Elemente in einer einzigen MDX-Abfrage kombiniert werden.  
   
 ### <a name="query-3combined-year-difference-and-net-income-calculations"></a>Abfrage 3 – Kombinierte Berechnungen für Year Difference und Net Income  
- In dieser letzten Abfrage, in der die beiden vorherigen Beispiele in einer MDX-Abfrage kombiniert werden, ist die Lösungsreihenfolge von Bedeutung, da Berechnungen sowohl für Spalten als auch für Zeilen ausgeführt werden. Um sicherzustellen, dass die Berechnungen in der richtigen Reihenfolge vorliegen, definieren Sie die Reihenfolge, die in der die Berechnungen, mithilfe auftreten der `SOLVE_ORDER` Schlüsselwort.  
+ In dieser letzten Abfrage, in der die beiden vorherigen Beispiele in einer MDX-Abfrage kombiniert werden, ist die Lösungsreihenfolge von Bedeutung, da Berechnungen sowohl für Spalten als auch für Zeilen ausgeführt werden. Um sicherzustellen, dass die Berechnungen in der richtigen Reihenfolge vorgenommen, definieren Sie die Reihenfolge, in dem die Berechnungen erfolgen, mit, der `SOLVE_ORDER` Schlüsselwort.  
   
- Das `SOLVE_ORDER`-Schlüsselwort gibt die Lösungsreihenfolge der berechneten Elemente in einer MDX-Abfrage oder einem `CREATE MEMBER`-Befehl an. Die ganzzahligen Werte verwendet, mit dem `SOLVE_ORDER` Schlüsselwort sind relativ, müssen beginnen bei 0 (null), jedoch nicht müssen nicht aufeinander folgen. Der Wert weist MDX lediglich an, ein Element auf der Grundlage von Werten zu berechnen, die aus der Berechnung von Elementen mit einem höheren Wert abgeleitet sind. Wenn ein berechnetes Element, ohne definiert ist die `SOLVE_ORDER` -Schlüsselwort, der Standardwert dieses berechnet Member ist 0 (null).  
+ Das `SOLVE_ORDER`-Schlüsselwort gibt die Lösungsreihenfolge der berechneten Elemente in einer MDX-Abfrage oder einem `CREATE MEMBER`-Befehl an. Die ganzzahligen Werte verwendet, mit der `SOLVE_ORDER` Schlüsselwort sind relativ, beginnen bei 0 (null), und müssen nicht aufeinander folgen. Der Wert weist MDX lediglich an, ein Element auf der Grundlage von Werten zu berechnen, die aus der Berechnung von Elementen mit einem höheren Wert abgeleitet sind. Wenn ein berechnetes Element, ohne definiert ist die `SOLVE_ORDER` -Schlüsselwort, der Standardwert, der 0 (null).  
   
  Wenn Sie beispielsweise die in den ersten beiden Beispielabfragen verwendeten Berechnungen kombinieren, überschneiden sich die beiden berechneten Elemente `Year Difference` und `Profit Margin`in einer einzelnen Zelle im Resultdataset der MDX-Beispielabfrage. Nur anhand der Lösungsreihenfolge lässt sich bestimmen, wie [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] diese Zelle auswertet. Die Formeln, mit denen diese Zelle erstellt wird, erzeugen je nach Lösungsreihenfolge der beiden berechneten Elemente unterschiedliche Ergebnisse.  
   

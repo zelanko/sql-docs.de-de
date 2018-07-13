@@ -1,5 +1,5 @@
 ---
-title: SetCurrentCertificate-Methode (SecurityCertificate-Klasse) | Microsoft Docs
+title: SetCurrentCertificate-Methode (SecurityCertificate-Klasse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetCurrentCertificate method
 ms.assetid: 04b1a76a-932d-4824-8506-e346afe7554e
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6dbc39c89311681026b190eb3032ce6a1ecc5981
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: b406ecc02bcdf0466903beb71de9e633cc2d985c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060442"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191770"
 ---
 # <a name="setcurrentcertificate-method-securitycertificate-class"></a>SetCurrentCertificate-Methode (SecurityCertificate-Klasse)
   Legt das aktuelle Sicherheitszertifikat fest.  
@@ -53,7 +53,7 @@ SHA , SQLInstance
 |Parameter|Description|  
 |---------------|-----------------|  
 |*SHA*|Ein Zeichenfolgenwert, der den Secure Hash Algorithm (SHA)-Fingerabdruck für das erforderliche Sicherheitszertifikat angibt.|  
-|*%SQLInstance*|Ein Zeichenfolgenwert, der die Instanz angibt, für die das Zertifikat erforderlich ist.|  
+|*SQLInstance*|Ein Zeichenfolgenwert, der die Instanz angibt, für die das Zertifikat erforderlich ist.|  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein uint32-Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert wurde. Der Wert beträgt 1, wenn die Anforderung nicht unterstützt wird; jede andere Zahl gibt einen Fehler an.  

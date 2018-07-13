@@ -1,5 +1,5 @@
 ---
-title: Vergleichen von Vorhersagen für Forecasting-Modellen (Datamining-Lernprogramm für fortgeschrittene) | Microsoft Docs
+title: Vergleichen von Vorhersagen für Forecasting-Modellen (mittleres Datamining Tutorial) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ead8a1fe-60d8-4017-8fb8-6fe32168e46d
 caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: de7605f1dbb65987e147069e32e19e36b99956a6
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: a8ff27b38e2268ead42a1238250902b6ebf9cf18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313088"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165772"
 ---
 # <a name="comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial"></a>Vergleichen von Vorhersagen für Modelle zur Planungserstellung (Data Mining-Lernprogramm für Fortgeschrittene)
   In den vorherigen Schritten dieses Lernprogramms haben Sie mehrere Zeitreihenmodelle erstellt:  
@@ -38,7 +38,7 @@ ms.locfileid: "36313088"
   
  [REPLACE_MODEL_CASES](#bkmk_REPLACE)  
   
-##  <a name="bkmk_EXTEND"></a> Vergleichen von ursprünglichen Ergebnisse und Ergebnissen nach dem Hinzufügen von Daten  
+##  <a name="bkmk_EXTEND"></a> Vergleichen die ursprünglichen Ergebnisse und Ergebnissen nach dem Hinzufügen von Daten  
  Werfen wir einen Blick nur auf die Daten der M200-Produktlinie in der Pazifikregion. Hier können wir sehen, wie eine Aktualisierung des Modells mit neuen Daten sich auf die Ergebnisse auswirkt. Erinnern Sie sich, dass die ursprüngliche Datenreihe im Juni 2004 endete und wir neue Daten für Juli, August und September abgerufen haben.  
   
 -   Die erste Spalte zeigt die neu hinzugefügten Daten an.  

@@ -1,5 +1,5 @@
 ---
-title: Unterstützten Datenquellen (SSAS – tabellarisch) | Microsoft Docs
+title: Unterstützten Datenquellen (SSAS – tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 360a0d7d556589947d312deab1f2ff485afb85d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1b8aac369dd82f75f251df1195ac29c8ccf3b983
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061026"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185297"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>Data Sources Supported (SSAS Tabular)
   In diesem Thema werden die Datenquellentypen beschrieben, die mit tabellarischen Modellen verwendet werden können.  
@@ -56,11 +56,11 @@ ms.locfileid: "36061026"
   
  <sup>1</sup> Sie können auch den OLE DB-Anbieter für ODBC verwenden.  
   
- <sup>2</sup> Weitere Informationen zu SQL Azure finden Sie in der Website [SQL Azure](http://go.microsoft.com/fwlink/?LinkID=157856).  
+ <sup>2</sup> finden Sie weitere Informationen zu SQL Azure, die Website [SQL Azure](http://go.microsoft.com/fwlink/?LinkID=157856).  
   
- <sup>3</sup> Weitere Informationen zu SQL Server PDW finden Sie in der Website [SQL Server 2008 R2 Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895).  
+ <sup>3</sup> Weitere Informationen zu SQL Server PDW finden Sie unter der Website [SQL Server 2008 R2 Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895).  
   
- <sup>4</sup> in einigen Fällen mithilfe des MSDAORA-OLE DB-Anbieters Verbindungsfehlern, insbesondere bei neueren Versionen von Oracle führen kann. Treten Fehler auf, empfiehlt es sich, einen der anderen für Oracle aufgeführten Anbieter zu verwenden.  
+ <sup>4</sup> in einigen Fällen die Verwendung des MSDAORA-OLE DB-Anbieters kann zu Verbindungsfehlern, insbesondere bei neueren Versionen von Oracle. Treten Fehler auf, empfiehlt es sich, einen der anderen für Oracle aufgeführten Anbieter zu verwenden.  
   
 ##  <a name="bkmk_unsupported_ds"></a> Nicht unterstützte Quellen  
  Die folgende Datenquelle wird derzeit nicht unterstützt:  

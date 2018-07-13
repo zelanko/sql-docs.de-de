@@ -1,5 +1,5 @@
 ---
-title: Warenkorbanalyse (Tabellenanalysetools für Excel) | Microsoft Docs
+title: Warenkorbanalyse (Tabellenanalysetools für Excel) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - shopping basket analysis
 - mining model, association
@@ -17,30 +17,30 @@ helpviewer_keywords:
 - market basket analysis
 ms.assetid: ba40cf43-f286-49ad-8316-70f5b11f1dae
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 593a854d689268b753b8ebeab544bbf51d2d0455
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 975e989be25dce3e51a3563c91fe43beac745a3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061486"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163385"
 ---
 # <a name="shopping-basket-analysis-table-analysistools-for-excel"></a>Warenkorbanalyse (Tabellenanalysetools für Excel)
   ![Einkaufswagentool](media/tat-shopbskt.gif "Einkaufswagentool")  
   
- Die **Warenkorbanalyse** Tool unterstützt Sie dabei `associations` in Ihren Daten. Eine Zuordnung weist u. U. darauf hin, welche Elemente häufig gleichzeitig gekauft werden. Beim Datamining diese Technik ist eine bekannte Methode, die als bekannte *Warenkorbanalyse*, die zur Analyse des Kaufverhaltens von Kunden in sehr großen Datasets verwendet. Marktforscher können anhand dieser Informationen Kunden Empfehlungen zu ähnlichen Produkten geben und verbundene Produkte besser vermarkten, indem Sie sie auf Webseiten, in Katalogen oder im Ladenregal in unmittelbarer Nähe zueinander anbieten.  
+ Die **Warenkorbanalyse** -Tool hilft Ihnen das Suchen `associations` in Ihren Daten. Eine Zuordnung weist u. U. darauf hin, welche Elemente häufig gleichzeitig gekauft werden. Beim Datamining diese Technik ist eine bekannte Methode genannt *Market Basket-Analysen*verwendet, um das Kaufverhalten von Kunden in sehr großen Datasets zu analysieren. Marktforscher können anhand dieser Informationen Kunden Empfehlungen zu ähnlichen Produkten geben und verbundene Produkte besser vermarkten, indem Sie sie auf Webseiten, in Katalogen oder im Ladenregal in unmittelbarer Nähe zueinander anbieten.  
   
  Um die Warenkorbanalyse zu verwenden, müssen die Elemente, die Sie analysieren möchten, durch eine Transaktions-ID zueinander in Beziehung stehen. Wenn Sie beispielsweise alle Bestellungen, die über eine Website eingehen, analysieren möchten, erhält jede Bestellung eine Bestell- oder Transaktions-ID, die einem oder mehreren gekauften Produkten zugeordnet ist.  
   
- Nach Abschluss des Assistenten durch Analysieren der Daten erstellt zwei neue Arbeitsblätter **Warenkorb-Elementpakete** und **Warenkorbempfehlungen**.  
+ Wenn der Assistent abgeschlossen ist, die Daten analysieren, erstellt es zwei neue Arbeitsblätter, **Warenkorb-Elementpakete** und **Warenkorbempfehlungen**.  
   
- Die **Warenkorb-Elementpakete** Arbeitsblatt enthält eine Liste der Elemente, die in Transaktionen häufig zusammen angezeigt werden. Diese allgemeinen Gruppierungen heißen *Itemsets*. Das Arbeitsblatt enthält auch Statistiken, wie z. B. *unterstützen* und *lift*, können Sie die Bedeutung der Itemsets besser verstehen. Wenn Preisinformationen verfügbar sind, kann auf dem Arbeitsblatt auch eine Summe aller verbundenen Elemente erstellt werden, um eine Vorstellung vom Gesamtwert der Transaktionen zu bekommen.  
+ Die **Warenkorb-Elementpakete** Arbeitsblatt enthält eine Liste der Elemente, die häufig in Transaktionen zusammen vorkommen. Diese allgemeinen Gruppierungen heißen *Itemsets*. Das Arbeitsblatt enthält auch Statistiken, wie z. B. *unterstützen* und *lift*, um Ihnen ein Verständnis der Bedeutung der Itemsets. Wenn Preisinformationen verfügbar sind, kann auf dem Arbeitsblatt auch eine Summe aller verbundenen Elemente erstellt werden, um eine Vorstellung vom Gesamtwert der Transaktionen zu bekommen.  
   
- Sie können im Bericht nach Spalten filtern und sortieren. Angenommen, Sie möchten nur die Itemsets mit 2 oder mehr Produkte anzeigen oder die Itemsets nach Reihenfolge **Durchschnittlicher Korbwert**.  
+ Sie können im Bericht nach Spalten filtern und sortieren. Angenommen, Sie möchten nur die Itemsets mit 2 oder mehr Produkte anzeigen, oder bestellen die Itemsets nach **Durchschnittlicher Korbwert**.  
   
- Die **Warenkorbempfehlungen** Arbeitsblatt verwendet die aus der Analyse abgeleiteten Statistiken zum Erstellen von Regeln zur wie Elemente miteinander verbunden sind. Beispielsweise kann eine Regel sein, wenn Kunden Produkt A kaufen, sehr wahrscheinlich auch Produkt b kaufen sind Die Regeln können verwendet werden, um Empfehlungen zu erstellen. Jeder Regel liegen Statistiken zugrunde, mit denen Sie die Aussagekraft der Regel bewerten können, sodass Sie nur dann eine Empfehlung ausgeben, wenn die Regel einen bestimmten Wahrscheinlichkeitsschwellenwert überschreitet.  
+ Die **Warenkorbempfehlungen** Arbeitsblatt verwendet die aus der Analyse abgeleiteten Statistiken zum Erstellen von Regeln zur wie Elemente miteinander verbunden sind. Kann z. B., eine Regel, wenn Kunden Produkt A kaufen, sehr wahrscheinlich auch Produkt b kaufen werden Die Regeln können verwendet werden, um Empfehlungen zu erstellen. Jeder Regel liegen Statistiken zugrunde, mit denen Sie die Aussagekraft der Regel bewerten können, sodass Sie nur dann eine Empfehlung ausgeben, wenn die Regel einen bestimmten Wahrscheinlichkeitsschwellenwert überschreitet.  
   
 ## <a name="using-the-shopping-basket-analysis-tool"></a>Verwenden des Tools Warenkorbanalyse  
   
@@ -48,14 +48,14 @@ ms.locfileid: "36061486"
   
 2.  Klicken Sie auf **Warenkorbanalyse**.  
   
-3.  In der **Warenkorbanalyse** (Dialogfeld), wählen Sie die Spalte, die die Transaktions-ID enthält, und wählen Sie dann die Spalte, enthält die Elemente oder Produkte, die Sie analysieren möchten.  
+3.  In der **Warenkorbanalyse** Dialogfeld Wählen Sie die Spalte, die die Transaktions-ID enthält, und wählen Sie dann die Spalte, enthält die Elemente oder Produkte, die Sie analysieren möchten.  
   
 4.  Optional können Sie auch eine Spalte hinzufügen, die Produktwerte enthält.  
   
-5.  Klicken Sie auf**erweitert**So öffnen die **erweiterte Parametereinstellung** (Dialogfeld). Erhöhen Sie den Wert für **minimaler Unterstützungswert** zum Reduzieren der Anzahl von Produkten, die als Itemsets gruppiert werden. Erhöhen der **minimale regelwahrscheinlichkeit** um sehr allgemeine Itemsets herauszufiltern.  
+5.  Klicken Sie auf**erweitert**zum Öffnen der **erweiterte Parametereinstellung** Dialogfeld. Erhöhen Sie den Wert für **minimaler Unterstützungswert** um die Anzahl der Produkte zu reduzieren, die als Itemsets gruppiert werden. Erhöhen Sie die **minimale regelwahrscheinlichkeit** um sehr allgemeine Itemsets herauszufiltern.  
   
 ### <a name="requirements"></a>Anforderungen  
- Verwenden der **Warenkorbanalyse** Tool, Ihre Daten müssen in einer Excel-Tabelle gespeichert werden und darf die folgenden Spalten:  
+ Verwenden der **Warenkorbanalyse** -Tool, Ihre Daten müssen in einer Excel-Tabelle gespeichert werden und darf die folgenden Spalten:  
   
 -   Spalte mit einer eindeutigen ID für die Transaktion. Bei der ID kann es sich um eine Zahl oder um Text handeln, solange der Wert in jeder Zeile eindeutig ist.  
   
@@ -74,14 +74,14 @@ ms.locfileid: "36061486"
  Die Unterstützung für jedes Itemset wird als Anzahl von Kunden berechnet, die ein Itemset kaufen. Wenn in dem gerade genannten Beispiel ein Kunde 3 Elemente mit 7 möglichen Itemsets kauft, hat jedes der 7 Itemsets einen Unterstützungswert von 1. Mit steigender Anzahl von Kunden und steigender Anzahl möglicher Kombinationen dauert auch die Verarbeitung des Berichts wesentlich länger. Einige Itemsets weisen jedoch unter Umständen einen sehr niedrigen Unterstützungswert auf. Sie könnten daher die zum Erstellen des Berichts benötigte Zeit reduzieren, indem Sie die Anzahl der Elemente in jedem Itemset auf 3 oder weniger beschränken. Im Allgemeinen haben größere Itemsets eine wesentlich geringere Unterstützung. Daher ist dieser Kompromiss akzeptabel.  
   
 ## <a name="specifying-minimum-support-and-rule-probability"></a>Festlegen der minimalen Unterstützung und Regelwahrscheinlichkeit  
- Mit zunehmender Größe des Datasets nimmt auch die Anzahl möglicher Elementgruppierungen und -regeln zu, bis sie schließlich unüberschaubar wird. Sie können jedoch den Umfang an Ergebnissen, die vom Tool ausgegeben werden, steuern, um letztendlich nur die wichtigsten Itemsets und Regeln zu berücksichtigen. Legen Sie diese Optionen der **Warenkorb Warenkorb erweiterte Parameter (Dialogfeld)**.  
+ Mit zunehmender Größe des Datasets nimmt auch die Anzahl möglicher Elementgruppierungen und -regeln zu, bis sie schließlich unüberschaubar wird. Sie können jedoch den Umfang an Ergebnissen, die vom Tool ausgegeben werden, steuern, um letztendlich nur die wichtigsten Itemsets und Regeln zu berücksichtigen. Sie legen diese Optionen der **Warenkorb Warenkorb erweiterte Parameter (Dialogfeld)**.  
   
 ### <a name="minimum-support"></a>Minimale Unterstützung  
- *Minimaler Unterstützungswert* bedeutet, dass die Anzahl der Transaktionen, die für das Itemset als signifikant eingestuft ein bestimmtes Itemset enthalten muss. Sie sind möglicherweise nicht an einem Itemset interessiert, es sei denn es wurde in mindestens 10 unterschiedlichen Transaktionen gekauft. Es gibt zwei Möglichkeiten, den Schwellenwert für die Itemset-Bedeutung steuern, und beide verwenden den **minimaler Unterstützungswert** Parameter.  
+ *Minimaler Unterstützungswert* bedeutet, dass die Anzahl der Transaktionen, die für das Itemset als signifikant angesehen zu werden ein bestimmtes Itemset enthalten muss. Sie sind möglicherweise nicht an einem Itemset interessiert, es sei denn es wurde in mindestens 10 unterschiedlichen Transaktionen gekauft. Es gibt zwei Möglichkeiten, den Schwellenwert für die Itemset-Bedeutung steuern, und beide verwenden die **minimaler Unterstützungswert** Parameter.  
   
  **Als absoluter Wert:** Geben Sie eine Zahl, die Anzahl der Transaktionen darstellt, die die Zielelemente enthalten. Wenn Sie beispielsweise 10 eingeben, wird jeder Satz an Elementen eingeschlossen, die in mindestens 10 Warenkörben enthalten sind.  
   
- **Als Prozentsatz:** Geben Sie eine Zahl, die einen Prozentsatz von der ganzen Itemset-Auflistung darstellt. Wenn Sie z. B. 10 eingeben, werden alle Itemsets berücksichtigt, und das Ziel-Itemset muss mindestens 10 % der Gesamtanzahl an Itemsets ausmachen. Bei sehr großen Datasets sind Prozentangaben u. U. besser geeignet als Wertangaben, da Sie sich so auf die wichtigsten Elementgruppierungen konzentrieren können.  
+ **Als Prozentsatz:** Geben Sie eine Zahl, die einen Prozentsatz der ganzen Itemset-Auflistung darstellt. Wenn Sie z. B. 10 eingeben, werden alle Itemsets berücksichtigt, und das Ziel-Itemset muss mindestens 10 % der Gesamtanzahl an Itemsets ausmachen. Bei sehr großen Datasets sind Prozentangaben u. U. besser geeignet als Wertangaben, da Sie sich so auf die wichtigsten Elementgruppierungen konzentrieren können.  
   
 > [!NOTE]  
 >  Beachten Sie, dass die Anzahl der Itemsets sich von der Anzahl der Transaktionen in den Daten unterscheidet. Jede Transaktion kann mehrere Itemsets enthalten. Die meisten Itemsets werden jedoch mehrmals im Dataset wiederholt.  
@@ -94,12 +94,12 @@ ms.locfileid: "36061486"
  Sie sollten mit diesen Einstellungen experimentieren, um andere Ergebnisse zu erhalten und zu ermitteln, welche Einstellung die besten Regeln ergibt.  
   
 ## <a name="understanding-the-reports"></a>Grundlegendes zu Berichten  
- Die **Warenkorbanalyse** Tool erstellt zwei komplementäre Berichte. Der erste Bericht, der mit dem Titel **signifikanten Gruppen von während der Analyse identifiziert Elemente**, enthält eine Liste aller Itemsets, die gefunden wurden. Sie können die neuen Tabellentools in Microsoft Excel verwenden, um die Daten zu sortieren, zu filtern und zu durchsuchen.  
+ Die **Warenkorbanalyse** Tool erstellt zwei komplementäre Berichte. Der erste Bericht, der mit dem Titel **signifikanten Gruppen von während der Analyse bestimmt Elemente**, enthält eine Liste aller Itemsets, die gefunden wurden. Sie können die neuen Tabellentools in Microsoft Excel verwenden, um die Daten zu sortieren, zu filtern und zu durchsuchen.  
   
- Der zweite Bericht, der mit dem Titel **Warenkorbempfehlungen**, Aufschluss darüber, welche Art von Rückschlüsse basierend auf den im ersten Bericht aufgeführten Itemsets vorgenommen werden kann. Die Liste der Itemsets ist nützlicher, um die Daten zu durchsuchen und zu verstehen, anhand der Regelliste können Sie jedoch Vorhersagen und Empfehlungen treffen.  
+ Der zweite Bericht, der mit dem Titel **Warenkorbempfehlungen**, erfahren Sie, welche Art von Rückschlüsse basierend auf den im ersten Bericht aufgeführten Itemsets vorgenommen werden kann. Die Liste der Itemsets ist nützlicher, um die Daten zu durchsuchen und zu verstehen, anhand der Regelliste können Sie jedoch Vorhersagen und Empfehlungen treffen.  
   
 ### <a name="shopping-basket-item-groups-report"></a>Bericht Warenkorb-Elementpakete  
- Dieser Bericht enthält eine Liste aller möglichen Kombinationen von Elementen, die im Dataset gefunden wurden. Wenn Ihre Transaktionsdaten Bestellungen für jeden Auftrag enthält beispielsweise die **Warenkorbanalyse** Tool berechnet, wie oft das einzelne Element bestellt wurde, und klicken Sie dann alle Kombinationen von diesem Element mit anderen Elementen berechnet.  
+ Dieser Bericht enthält eine Liste aller möglichen Kombinationen von Elementen, die im Dataset gefunden wurden. Wenn Ihre Transaktionsdaten Bestellungen für jeden Auftrag enthält z. B. die **Warenkorbanalyse** Tool berechnet, wie oft das einzelne Element bestellt wurde, und alle Kombinationen für dieses Element mit anderen Elementen berechnet.  
   
  Der Bericht listet die gefundenen Itemsets in der Reihenfolge der Prognosegüte auf. Die Prognosegüte ist eine Bewertung, die die Wichtigkeit des Itemsets kennzeichnet.  
   
@@ -121,8 +121,8 @@ ms.locfileid: "36061486"
   
 |Spalte im Bericht|Ihre Auswertung|  
 |----------------------|-----------------------|  
-|Vorhandene Elemente|Listet die Elemente auf, die für eine Empfehlung erforderlich sind.<br /><br /> Beim Datamining diese Elemente als bezeichnet werden, auf die *linke Seite* der Zuordnungsregel.|  
-|Vorhergesagtes Element|Listet das zu empfehlende Element auf.<br /><br /> Beim Datamining diese Elemente als bezeichnet werden, auf die *rechts* der Zuordnungsregel.|  
+|Vorhandene Elemente|Listet die Elemente auf, die für eine Empfehlung erforderlich sind.<br /><br /> Beim Datamining, diese Elemente sind meist auf die *Links* der der Zuordnungsregel.|  
+|Vorhergesagtes Element|Listet das zu empfehlende Element auf.<br /><br /> Beim Datamining, diese Elemente sind meist auf die *rechts* der der Zuordnungsregel.|  
 |Probability|Zeigt die Wahrscheinlichkeit an, mit der diese Regel richtig ist.|  
 |Support|Gibt die Anzahl von Fällen in vorhandenen Daten an, die diese Regel bestätigen.|  
 |Durchschnittlicher Empfehlungswert|Wenn Sie einen Wert für die Elemente im Warenkorb angeben, wird in dieser Spalte der Wert der Vorhersage anhand der Kosten der Elemente berechnet.|  

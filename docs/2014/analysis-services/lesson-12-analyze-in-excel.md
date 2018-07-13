@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 13: In Excel analysieren | Microsoft Docs'
+title: 'Lektion 13: Analysieren in Excel | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ce717071-193b-4c99-9654-c7a613e16327
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: b1dea62cbd78ca375a52adb7f1e6fd2285ff35e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9b9e50bda2a6168d54be78fd178d3d1d9161eff2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059031"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200360"
 ---
 # <a name="lesson-13-analyze-in-excel"></a>Lektion 13: Analysieren in Excel
   In dieser Lektion verwenden Sie die Funktion In Excel analysieren in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], um Microsoft Excel zu öffnen, automatisch eine Datenquellenverbindung mit der Datenbank für Modellarbeitsbereiche herzustellen und dem Arbeitsblatt automatisch eine PivotTable hinzuzufügen. Die Funktion In Excel analysieren stellt eine schnelle und einfache Methode dar, um die Wirksamkeit Ihres Modellentwurfs vor der Modellbereitstellung zu testen. Sie führen in dieser Lektion keine Datenanalyse aus. Der Zweck dieser Lektion ist es, Sie, den Modellautor, mit den Tools vertraut zu machen, die Sie zum Testen des Modellentwurfs verwenden können. Die Funktion In Excel analysieren ist für Modellentwickler vorgesehen, während Endbenutzer zum Herstellen einer Verbindung mit bereitgestellten Modelldaten und zum Durchsuchen dieser Daten Clientberichtsanwendungen, z. B. Excel oder [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], verwenden.  
@@ -42,7 +42,7 @@ ms.locfileid: "36059031"
   
      Excel wird mit einer neuen Arbeitsmappe geöffnet. Es wird eine Datenquellenverbindung mit dem aktuellen Benutzerkonto erstellt, und zum Definieren von Anzeigefeldern wird die Standardperspektive verwendet. Dem Arbeitsblatt wird automatisch eine PivotTable hinzugefügt.  
   
-3.  In Excel in der **Feldliste "PivotTable"**, beachten Sie die **Datum** und **Internetverkäufe** Measures angezeigt werden, als auch die **Kunden**,  **Datum**, **Geography**, **Produkt**, **Produktkategorie**, **Produktunterkategorie**, und **Internetverkäufe** Tabellen mit allen entsprechenden Spalten angezeigt werden.  
+3.  In Excel in der **Feldliste "PivotTable"**, beachten Sie, dass die **Datum** und **Internetverkäufe** Measures angezeigt werden, als auch die **Kunden**,  **Datum**, **Geography**, **Produkt**, **Produktkategorie**, **Produktunterkategorie**, und **Internetverkäufe** Tabellen mit der entsprechenden Spalten angezeigt werden.  
   
 4.  Schließen Sie Excel, ohne die Arbeitsmappe zu speichern.  
   

@@ -1,5 +1,5 @@
 ---
-title: Definieren Sie die Beziehung (Dialogfeld) (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Definieren Beziehung (Dialogfeld) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.dimensionusage.definerelationship.f1
 helpviewer_keywords:
 - Define Relationship dialog box
 ms.assetid: 0fcee7f1-f138-4c2e-ae8c-245395ee0fe8
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5cb46c19a45b85e90a0484a5f0ac33eff0077298
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 93c76ad9d504e9ec6fc1ba417407a16bd93e8adf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059927"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165501"
 ---
 # <a name="define-relationship-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Beziehung definieren' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Beziehung definieren** können Sie im Cube-Designer eine Beziehung zwischen einer Cubedimension und einer Measuregruppe definieren. Sie können das Dialogfeld **Beziehung definieren** anzeigen, indem Sie auf die Schaltfläche mit den Auslassungspunkten ( **...** ) in einer Zelle im Bereich **Raster** der Registerkarte **Dimensionsverwendung** im Cube-Designer klicken.  
@@ -56,7 +56,7 @@ ms.locfileid: "36059927"
 |||**Bezugsdimensionsattribut**: <br />                      Wählen Sie das Attribut in der Bezugsdimension aus, das mit dem unter **Zwischendimensionsattribut**angegebenen Zwischendimensionsattribut verbunden ist.|  
 |||**Zwischendimensionsattribut**: <br />                      Wählen Sie das Attribut in der Zwischendimension aus, das mit dem Attribut in der unter **Bezugsdimension**angegebenen Bezugsdimension verbunden ist.|  
 |||**Materialisieren**: <br />                      Aktivieren Sie dieses Kontrollkästchen, damit das Attributelement in der Zwischendimension gespeichert wird, die das Attribut in der Bezugsdimension mit der Faktentabelle in der MOLAP-Struktur verknüpft. Das Materialisieren der Beziehung ist das Standardverhalten zum Maximieren der Abfrageleistung, bringt jedoch eine Erhöhung der Verarbeitungszeit und des erforderlichen Speicherplatzes mit sich.|  
-|**Viele-zu-viele**|Gibt eine m:n-Dimensionsbeziehung an Die folgenden Optionen werden im Bereich **Detail** angezeigt:|**Dimension** : Zeigt die ausgewählte Dimension an.|  
+|**M: N**|Gibt eine m:n-Dimensionsbeziehung an Die folgenden Optionen werden im Bereich **Detail** angezeigt:|**Dimension** : Zeigt die ausgewählte Dimension an.|  
 |||**Zwischenmeasuregruppe** : <br />                      Wählen Sie die verknüpfte Zwischenmeasuregruppe aus.<br /><br /> Hinweis: Die Zwischenmeasuregruppe muss mindestens eine Dimension mit der ausgewählten Measuregruppe gemein haben. Außerdem muss die Granularität der Beziehung zwischen der Zwischenmeasuregruppe und der gemeinsamen Dimension größer oder gleich der Granularität zwischen der gemeinsamen Dimension und der ausgewählten Measuregruppe sein.|  
 |**Data Mining**|Gibt eine Data Mining-Dimensionsbeziehung an. Die folgenden Optionen werden im Bereich **Detail** angezeigt:|**Zieldimension**: Zeigt die ausgewählte Data Mining-Dimension an.<br /><br /> Hinweis: Sie müssen eine Data Mining-Dimension auswählen, um eine Data Mining-Dimensionsbeziehung zu erstellen.|  
 |||**Quelldimension**: Wählen Sie die Dimension aus, für die die Data Mining-Dimension Vorhersageanalysen bereitstellt.|  

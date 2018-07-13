@@ -1,5 +1,5 @@
 ---
-title: CellInfo-Element (XMLA) | Microsoft Docs
+title: CellInfo-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - CellInfo element
 ms.assetid: 8b6420f1-e9a7-4975-b580-1439fa11f5ca
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 803640fe83ccc3137b4597b8c1b78850abeb55c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: fda3576bb50314c28dd01474e576ff2b5b333cb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061676"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176387"
 ---
 # <a name="cellinfo-element-xmla"></a>CellInfo-Element (XMLA)
   Stellt die Zellmetadaten dar, die das übergeordnete [OlapInfo](olapinfo-element-xmla.md) -Element enthält.  
@@ -66,7 +66,7 @@ ms.locfileid: "36061676"
 |Untergeordnete Elemente|Eine oder mehrere Definitionen der Zelleneigenschaften|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `CellInfo` Element enthält eine Auflistung der Zelleneigenschaften der Zellen, die in dem multidimensionalen Datensatz zurückgegeben wird, indem Sie aus einer `root` Element mit der `MDDataSet` -Datentyp. Jede Zelleneigenschaft in dem `CellInfo`-Element wird durch ein einzelnes XML-Element definiert, das jeweils ein `name`-Attribut und ein `type`-Attribut enthält. Das `name`-Attribut der Zelleneigenschaft entspricht dem Namen der OLE DB für die OLAP-Zelleneigenschaft, die durch das XML-Element dargestellt wird; das `type`-Attribut stellt den XML-Datentyp der Zelleneigenschaft dar. Der Name des XML-Elements wird verwendet, um den Wert der Zelleneigenschaft der Zellen zu identifizieren, die in dem `CellData`-Element des `root`-Elements enthalten sind.  
+ Die `CellInfo` Element enthält eine Auflistung der Zelleneigenschaften der Zellen enthalten, in dem multidimensionalen Datensatz zurückgegeben werden, indem eine `root` Element mit der `MDDataSet` -Datentyp. Jede Zelleneigenschaft in dem `CellInfo`-Element wird durch ein einzelnes XML-Element definiert, das jeweils ein `name`-Attribut und ein `type`-Attribut enthält. Das `name`-Attribut der Zelleneigenschaft entspricht dem Namen der OLE DB für die OLAP-Zelleneigenschaft, die durch das XML-Element dargestellt wird; das `type`-Attribut stellt den XML-Datentyp der Zelleneigenschaft dar. Der Name des XML-Elements wird verwendet, um den Wert der Zelleneigenschaft der Zellen zu identifizieren, die in dem `CellData`-Element des `root`-Elements enthalten sind.  
   
  Die folgende Syntax beschreibt die Definition einer Zelleneigenschaft:  
   
@@ -74,12 +74,12 @@ ms.locfileid: "36061676"
 <CellPropertyDefinition name="string" type"string" />  
 ```  
   
- Die verfügbaren Eigenschaften und ihre Werte können mithilfe des Anforderungstyps DISCOVER_PROPERTIES mit abgerufen werden die `Discover` Methode. Es gibt keine erforderliche Reihenfolge für die im `PropertyList`-Element aufgelisteten Eigenschaften.  
+ Die verfügbaren Eigenschaften und deren Werte erhalten Sie mithilfe des Anforderungstyps DISCOVER_PROPERTIES mit der `Discover` Methode. Es gibt keine erforderliche Reihenfolge für die im `PropertyList`-Element aufgelisteten Eigenschaften.  
   
- Ein Anbieter kann optional angeben von Standardwerten für einzelne Elemente oder Zelleneigenschaften im die `AxisInfo` oder `CellInfo` Abschnitt. Die Standardwerte können für eine kleinere Ergebnismenge sorgen, wenn die Eigenschaft immer oder fast immer den gleichen Wert hat. Um einen Standardwert für eine Eigenschaft anzugeben, die`Default` Element kann optional als untergeordnetes Element von einem der Zelleneigenschaften-Definitionselemente angegeben werden. Das Fehlen eines Elements oder einer Zelleneigenschaft im Ergebnis deutet daher darauf hin, dass der angegebene Standardwert der Wert der Zelleneigenschaft ist.  
+ Ein Anbieter kann optional angeben von Standardwerten für einzelne Elemente oder Zelleneigenschaften im der `AxisInfo` oder `CellInfo` Abschnitt. Die Standardwerte können für eine kleinere Ergebnismenge sorgen, wenn die Eigenschaft immer oder fast immer den gleichen Wert hat. An einen Standardwert für eine Eigenschaft, die`Default` -Element optional als untergeordnetes Element eines der Zelleneigenschaften-Definitionselemente angegeben werden. Das Fehlen eines Elements oder einer Zelleneigenschaft im Ergebnis deutet daher darauf hin, dass der angegebene Standardwert der Wert der Zelleneigenschaft ist.  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird veranschaulicht, wie die Zelleneigenschaften VALUE, FORMATTED_VALUE und FORMAT_STRING dargestellt werden, in dem `CellInfo` Element.  
+ Im folgende Beispiel wird veranschaulicht, wie die Zelleneigenschaften VALUE, FORMATTED_VALUE und FORMAT_STRING im dargestellt werden die `CellInfo` Element.  
   
 ```  
 <OlapInfo>  

@@ -1,5 +1,5 @@
 ---
-title: Discover-Methode (XMLA) | Microsoft Docs
+title: Discover-Methode (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,18 +26,18 @@ helpviewer_keywords:
 - Discover method
 ms.assetid: 0eb52d88-c081-416e-a229-610e4373b0b3
 caps.latest.revision: 36
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: ead875bbe88ea71c8741450f8a3127efcf4b313d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: cec0774478c0eb34e9094bd9b6b1663e55339c1a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148465"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196020"
 ---
 # <a name="discover-method-xmla"></a>Discover-Methode (XMLA)
-  Ruft Informationen wie die Liste der verfügbaren Datenbanken oder die Details zu einem bestimmten Objekt von einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Die Daten abgerufen werden, mit der `Discover` Methode hängt von den Werten der Parameter übergeben wird.  
+  Ruft Informationen wie die Liste der verfügbaren Datenbanken oder die Details zu einem bestimmten Objekt von einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Die Daten abgerufen werden, mit der `Discover` Methode hängt von der Werte der Parameter übergeben.  
   
  **Namespace** urn:schemas-microsoft-com:xml-analysis  
   

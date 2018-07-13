@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.registerdacwizard.registerdac.f1
 - sql12.swb.registerdacwizard.summary.f1
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - data-tier application [SQL Server], register
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f7b197a130a1caa9ec467d529b36373b8aa648b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 76cea4cf690481d4253b582f681b29b577d71877
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060742"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197200"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrieren einer Datenbank als eine DAC
-  Verwenden Sie entweder die **registrieren Sie die Datenebenen-Anwendungs-Assistent** oder ein Windows PowerShell-Skript, um die Definition für eine Data-Tier Application (DAC) zu erstellen, die die Objekte in einer vorhandenen Datenbank beschreibt, und Registrieren der DAC-Definition in der `msdb` Systemdatenbank (**master** in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
+  Verwenden Sie entweder die **Datenebenen-Assistenten zum Registrieren von** oder ein Windows PowerShell-Skript, um eine Definition der von datenebenenanwendungen (DACs) zu erstellen, die die Objekte in einer vorhandenen Datenbank beschreibt, und registrieren die DAC-Definition in der `msdb` -Systemdatenbank (**master** in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
@@ -82,9 +82,9 @@ ms.locfileid: "36060742"
   
  **Anwendungsname** – Eine Zeichenfolge mit dem Namen, der die DAC-Definition identifiziert. Das Feld enthält den Namen der Datenbank.  
   
- **Version** – Ein numerischer Wert, der die Version der DAC identifiziert. Die DAC-Version wird in Visual Studio verwendet, um die Version der DAC zu identifizieren, an der die Entwickler arbeiten. Bei der Bereitstellung einer DAC wird die Version gespeichert, der `msdb` Datenbank und können später unter angezeigt werden die **Data-Tier Applications** Knoten in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ **Version** – Ein numerischer Wert, der die Version der DAC identifiziert. Die DAC-Version wird in Visual Studio verwendet, um die Version der DAC zu identifizieren, an der die Entwickler arbeiten. Wenn Sie eine DAC bereitstellen möchten, befindet sich die Version in der `msdb` Datenbank und kann später unter angezeigt werden die **Data-Tier-Anwendungen** Knoten im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- **Beschreibung** – Optional. Ein Text, der den Zweck der DAC erläutert. Bei der Bereitstellung einer DAC wird die Beschreibung gespeichert, der `msdb` Datenbank und können später unter angezeigt werden die **Data-Tier Applications** Knoten im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+ **Beschreibung** – Optional. Ein Text, der den Zweck der DAC erläutert. Wenn Sie eine DAC bereitstellen möchten, befindet sich die Beschreibung in der `msdb` Datenbank und kann später unter angezeigt werden die **Data-Tier-Anwendungen** Knoten im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  **\< Vorherige** -wird wieder die **Einführung** Seite.  
   

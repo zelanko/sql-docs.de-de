@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SQLSERVEROBJECTEXPLORER.DHELP
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - OE Help
 ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b3384ccf29fcf49d8d2a06263e3dcbc7f02a7111
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 87c8cb0351fba08f588f37bc7ae882a0da28eb95
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148739"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165741"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>Verwalten von Objekten mittels Objekt-Explorer
   Mit dem Objekt-Explorer können Sie Objekte, z. B. Datenbanken, Tabellen und gespeicherte Prozeduren, verwalten.  
@@ -60,8 +60,8 @@ ms.locfileid: "36148739"
 ## <a name="see-also"></a>Siehe auch  
  [Objekt-Explorer](object-explorer.md)   
  [Öffnen Sie und konfigurieren Sie Objekt-Explorer](open-and-configure-object-explorer.md)   
- [Verbinden Sie mit einer Instanz von Objekt-Explorer](connect-to-an-instance-from-object-explorer.md)   
- [Detailbereich des Objekt-Explorer](object-explorer-details-pane.md)   
+ [Verbinden Sie mit einer Instanz im Objekt-Explorer](connect-to-an-instance-from-object-explorer.md)   
+ [Bereich für die Details des Objekt-Explorer](object-explorer-details-pane.md)   
  [Benutzerdefinierte Berichte in Management Studio](custom-reports-in-management-studio.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Verwalten von Verbindungen und Sitzungen (XMLA) | Microsoft Docs
+title: Verwalten von Verbindungen und Sitzungen (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - sessions [XML for Analysis]
 ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 39051880aa27e6f81cce4ca3a41e1af203c1b257
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 16efaf9be9db55935cc7b6a3df0349f81d170b2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060413"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192510"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>Verwalten von Verbindungen und Sitzungen (XMLA)
-  *Statusbehaftung* ist eine Bedingung, die während der Server die Identität und den Kontext eines Clients zwischen Methodenaufrufen behält. *Zustandsfreiheit* ist eine Bedingung, die während der Server nicht merkt sich die Identität und den Kontext eines Clients nach der Beendigung eines Methodenaufrufs.  
+  *Statusbehaftung* ist eine Bedingung, die während der die der Server beibehalten, die Identität und den Kontext eines Clients zwischen Methodenaufrufen werden. *Zustandsfreiheit* ist eine Bedingung, die während der der Server nicht mehr weiß hat der Identität und den Kontext eines Clients nach der Beendigung eines Methodenaufrufs.  
   
  Um statusfreiheit unterstützt XML for Analysis (XMLA) *Sitzungen* , mit denen eine Reihe von Anweisungen, die zusammen ausgeführt werden. Ein Beispiel einer solchen Reihe von Anweisungen ist die Erstellung eines berechneten Elements, das in nachfolgenden Abfragen verwendet wird.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "36060413"
   
 -   Mehrere Befehle können im Kontext einer einzelnen Sitzung ausgeführt werden.  
   
--   Unterstützung für Transaktionen im XMLA-Kontext wird durch anbieterspezifische Befehle gesendet, mit der [Execute](../xmla/xml-elements-methods-execute.md) Methode.  
+-   Unterstützung für Transaktionen im XMLA-Kontext wird durch anbieterspezifische Befehle, die gesendet werden, mit der [Execute](../xmla/xml-elements-methods-execute.md) Methode.  
   
  XMLA definiert eine Möglichkeit zur Unterstützung von Sitzungen in einer Webumgebung, deren Modus Ähnlichkeit hat mit dem Zugang, der von dem DAV-Protokoll (Distributed Authoring and Versioning) für die Implementierung von Sperrungen in einer lose verbundenen Umgebung verwendet wird. Diese Implementierung entspricht DAV insofern, als der Anbieter die Möglichkeit hat, Sitzungen aus mehreren Gründen ablaufen zu lassen (beispielsweise bei Timeout oder Verbindungsfehlern). Wenn Sitzungen unterstützt werden, müssen Webdienste in der Lage sein, unterbrochene Befehlssätze, die neu gestartet werden müssen, zu verarbeiten.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36060413"
     </SOAP-ENV:Envelope>  
     ```  
   
-2.  Die SOAP-Antwortnachricht vom Anbieter enthält die Sitzungs-ID in den Bereich des Rückgabeheaders mit XMLA-Headertag \<SessionId >.  
+2.  Die SOAP-Antwortnachricht vom Anbieter enthält die Sitzungs-ID in den Bereich des Rückgabeheaders mit der XMLA-Headertag \<SessionId >.  
   
     ```  
     <SOAP-ENV:Header>  

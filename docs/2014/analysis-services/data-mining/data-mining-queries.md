@@ -1,5 +1,5 @@
 ---
-title: Datamining-Abfragen | Microsoft Docs
+title: Datamining-Abfragen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - prediction queries [Analysis Services]
 - queries [DMX], creating
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], querying
 ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c7d67cd0b51a8bd2a7219558d1488afebf50651b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e735d73e8bad733c330d0d5134f13905c1ef8e15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060635"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170201"
 ---
 # <a name="data-mining-queries"></a>Data Mining-Abfragen
   Data Mining-Abfragen eignen sich für viele Zwecke. Folgende Aktionen sind möglich:  
@@ -99,14 +99,14 @@ ms.locfileid: "36060635"
   
  Die folgende Liste bietet eine Zusammenfassung der Funktionen, die Sie in Abfragen verwenden können:  
   
--   **Allgemeine Vorhersagefunktionen:** der `Predict` -Funktion ist polymorph, d. h., es kann mit allen Modelltypen verwendet. Diese Funktion erkennt automatisch den Modelltyp, mit dem Sie arbeiten, und fordert Sie zur Eingabe zusätzlicher Parameter auf. Weitere Informationen finden Sie unter [Predict &#40;DMX&#41;](/sql/dmx/predict-dmx).  
+-   **Allgemeine Vorhersagefunktionen:** der `Predict` -Funktion ist polymorph, d. h., es funktioniert mit allen Modelltypen verwendet. Diese Funktion erkennt automatisch den Modelltyp, mit dem Sie arbeiten, und fordert Sie zur Eingabe zusätzlicher Parameter auf. Weitere Informationen finden Sie unter [Predict &#40;DMX&#41;](/sql/dmx/predict-dmx).  
   
     > [!WARNING]  
     >  Nicht alle Modelle werden verwendet, um Vorhersagen zu treffen. Beispielsweise können Sie ein Clusteringmodell erstellen, das über kein vorhersagbares Attribut verfügt. Aber selbst wenn ein Modell nicht über ein vorhersagbares Attribut verfügt, können Sie Vorhersageabfragen erstellen, die andere Typen nützlicher Informationen aus dem Modell zurückgeben.  
   
 -   **Benutzerdefinierte Vorhersagefunktionen:** Jeder Modelltyp stellt einen Satz von Vorhersagefunktionen bereit, die zum Arbeiten mit den von diesem Algorithmus erstellten Mustern entworfen wurden.  
   
-     Für Zeitreihenmodelle wird z. B. die `Lag`-Funktion bereitgestellt, mit der Sie die Vergangenheitsdaten anzeigen können, die für das Modell verwendet wurden. Für Clusteringmodelle, Funktionen wie `ClusterDistance` sinnvollere.  
+     Für Zeitreihenmodelle wird z. B. die `Lag`-Funktion bereitgestellt, mit der Sie die Vergangenheitsdaten anzeigen können, die für das Modell verwendet wurden. Bei clusteringmodellen Funktionen wie `ClusterDistance` sinnvoller.  
   
      Weitere Informationen zu den Funktionen, die für jeden Modelltyp unterstützt werden, finden Sie unter den folgenden Links:  
   
@@ -122,13 +122,13 @@ ms.locfileid: "36060635"
   
 -   **Allgemeine Statistiken:** Es gibt eine Reihe von Funktionen, die mit nahezu jedem Modelltyp verwendet werden können, der einen Standardsatz von beschreibenden Statistiken zurückgibt (z. B. die Standardabweichung).  
   
-     Z. B. die `PredictHistogram` Funktion gibt eine Tabelle, die alle Status der angegebenen Spalte aufgeführt sind.  
+     Z. B. die `PredictHistogram` Funktionsergebnis ist eine Tabelle, die alle Status der angegebenen Spalte aufgeführt sind.  
   
      Weitere Informationen finden Sie unter [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx).  
   
 -   **Benutzerdefinierte Statistiken:** Für jeden Modelltyp werden zusätzliche unterstützende Funktionen bereitgestellt, um Statistiken zu generieren, die für die spezifische analytische Aufgabe relevant sind.  
   
-     Beispielsweise, wenn Sie mit einem Clusteringmodell arbeiten, können Sie die Funktion `PredictCaseLikelihood`, um die einem bestimmten Fall und Cluster zugeordnete wahrscheinlichkeitsergebnis zurückzugeben. Wenn Sie hingegen ein lineares Regressionsmodell erstellen, ist das Abrufen und Abfangen des Koeffizienten von größerer Bedeutung. In diesem Fall können Sie eine Inhaltsabfrage verwenden.  
+     Z. B. Wenn Sie mit einem Clusteringmodell arbeiten, können Sie die Funktion `PredictCaseLikelihood`, um die einem bestimmten Fall und Cluster zugeordnete wahrscheinlichkeitsergebnis zurückzugeben. Wenn Sie hingegen ein lineares Regressionsmodell erstellen, ist das Abrufen und Abfangen des Koeffizienten von größerer Bedeutung. In diesem Fall können Sie eine Inhaltsabfrage verwenden.  
   
 -   **Funktionen für den Modellinhalt:** Der *Inhalt* aller Modelle wird in einem standardisierten Format dargestellt, aus dem Sie mit einer einfachen Abfrage Informationen abrufen können. Zum Erstellen von Abfragen für den Modellinhalt verwenden Sie DMX. Einige Modellinhaltstypen können Sie auch mithilfe der Data Mining-Schemarowsets abfragen.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "36060635"
   
 |Aufgaben|Links|  
 |-----------|-----------|  
-|Lernprogramme und exemplarische Vorgehensweisen zu Data Mining-Abfragen|[Lektion 6: Erstellen und Verwenden von Vorhersagen &#40;Lernprogramm zu Datamining-Lernprogramm&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)<br /><br /> [DMX-Tutorial für Zeitreihenvorhersagen](../../tutorials/time-series-prediction-dmx-tutorial.md)|  
+|Lernprogramme und exemplarische Vorgehensweisen zu Data Mining-Abfragen|[Lektion 6: Erstellen und Verwenden von Vorhersagen &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)<br /><br /> [DMX-Tutorial für Zeitreihenvorhersagen](../../tutorials/time-series-prediction-dmx-tutorial.md)|  
 |Verwenden von Data Mining-Abfragetools in SQL Server Management Studio und [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[Erstellen einer DMX-Abfrage in SQL Server Management Studio](create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [Erstellen von Vorhersageabfragen mithilfe des Generators für Vorhersageabfragen](create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [Anwenden von Vorhersagefunktionen auf ein Modell](apply-prediction-functions-to-a-model.md)<br /><br /> [Manuelles Bearbeiten einer Vorhersageabfrage](manually-edit-a-prediction-query.md)|  
 |Arbeiten mit externen, in Vorhersageabfragen verwendeten Daten|[Auswählen und Zuordnen von Eingabedaten für eine Vorhersageabfrage](choose-and-map-input-data-for-a-prediction-query.md)<br /><br /> [Auswählen und Zuordnen von Eingabedaten für eine Vorhersageabfrage](choose-and-map-input-data-for-a-prediction-query.md)|  
 |Arbeiten mit Abfrageergebnissen|[Anzeigen und Speichern der Ergebnisse einer Vorhersageabfrage](view-and-save-the-results-of-a-prediction-query.md)|  

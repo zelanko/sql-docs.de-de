@@ -1,5 +1,5 @@
 ---
-title: Geben Sie-Element (XMLA) | Microsoft Docs
+title: Type-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 5d898123-a635-402a-be86-8249d7304fa4
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 38b4442afe95f06d9a6f437e906c01b7386d91ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 336266b8290f1a4eb10d200d8c1c31bf00f96879
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058990"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193780"
 ---
 # <a name="type-element-xmla"></a>Type-Element (XMLA)
   Bestimmt den Typ des von auszuführenden Verarbeitung der [Prozess](../xml-elements-commands/process-element-xmla.md) Element.  
@@ -64,14 +64,14 @@ ms.locfileid: "36058990"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Weitere Informationen zur Verarbeitung verfügbaren Optionen auf Objekte in einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], finden Sie unter [mehrdimensionalen Modell Objekt verarbeiten](../../multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ Weitere Informationen zum Verarbeiten von Optionen, die auf einer Instanz von Objekten zur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], finden Sie unter [mehrdimensionalen Modell Objekt verarbeitet](../../multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
- Der Wert, der die `Type` -Elements ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  
+ Der Wert des der `Type` -Elements ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  
   
 |value|Description|  
 |-----------|-----------------|  
-|*"ProcessFull"*|Löscht alle Daten im betroffenen Objekt und verarbeitet dann das betroffene Objekt.|  
-|*"Processadd"*|Fügt dem betroffenen Objekt neue Daten hinzu.|  
+|*ProcessFull*|Löscht alle Daten im betroffenen Objekt und verarbeitet dann das betroffene Objekt.|  
+|*ProcessAdd*|Fügt dem betroffenen Objekt neue Daten hinzu.|  
 |*ProcessUpdate*|Aktualisiert die Daten im betroffenen Objekt.|  
 |*ProcessIndexes*|Erstellt Indizes und Aggregationen im betroffenen Objekt oder erstellt diese neu.|  
 |*ProcessScriptCache*|Wenn der Cube verarbeitet wird, erstellt der Server den MDX-Skriptcache neu. Wenn nicht, wird ein Fehler ausgelöst.<br /><br /> **Hinweis** Gilt nur für Cube.|  

@@ -1,5 +1,5 @@
 ---
-title: ErrorConfiguration-Element (XMLA) | Microsoft Docs
+title: ErrorConfiguration-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - ErrorConfiguration element
 ms.assetid: 5e350f5f-3a14-49b4-80c0-208c61f336d5
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1ce9cf2dc862f187c1a9f9cb9e3403e01ade0cfa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a93464ed9f6d2708246e8d04c833b9261b7c71fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060116"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169281"
 ---
 # <a name="errorconfiguration-element-xmla"></a>ErrorConfiguration-Element (XMLA)
-  Gibt die Einstellungen für die Behandlung von Fehlern ab, während eine [Batch](../xml-elements-commands/batch-element-xmla.md) oder [Prozess](../xml-elements-commands/process-element-xmla.md) Vorgang.  
+  Gibt die Einstellungen zur Behandlung von Fehlern, die während der auftreten können eine [Batch](../xml-elements-commands/batch-element-xmla.md) oder [Prozess](../xml-elements-commands/process-element-xmla.md) Vorgang.  
   
 ## <a name="syntax"></a>Syntax  
   

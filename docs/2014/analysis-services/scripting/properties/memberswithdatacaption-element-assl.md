@@ -1,5 +1,5 @@
 ---
-title: MembersWithDataCaption-Element (ASSL) | Microsoft Docs
+title: MembersWithDataCaption-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MembersWithDataCaption element
 ms.assetid: a5d59efd-5d67-485b-a360-67d54a1fe394
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ef845a4c77a66ad1c59a0bdad527856a86849de9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd8884d67717267e44751841203ce2f73d07ecfb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058999"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202300"
 ---
 # <a name="memberswithdatacaption-element-assl"></a>MembersWithDataCaption-Element (ASSL)
   Stellt eine Vorlagenzeichenfolge bereit, die zum Erstellen von Beschriftungen für die vom System generierten Datenelemente verwendet wird.  
@@ -58,13 +58,13 @@ ms.locfileid: "36058999"
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|[AttributeTranslation](../data-type/translation-data-type-assl.md), [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
+|Übergeordnete Elemente|[AttributeTranslation](../data-type/translation-data-type-assl.md), [DimensionAttribute-Objekt](../data-type/dimensionattribute-data-type-assl.md)|  
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Den Wert des der `MembersWithDataCaption` Element wird nur von übergeordneten Attributen verwendet (in anderen Worten: der Wert der die [Verwendung](usage-element-dimensionattribute-assl.md) Element des der `DimensionAttribute` übergeordnetes Element festgelegt ist, um *übergeordneten*) um zu bestimmen, die die Beschriftung der Datenelemente im übergeordneten Attribut. Weitere Informationen zu Datenelementen finden Sie unter [Attribute in über- und untergeordneten Hierarchien](../../multidimensional-models/parent-child-dimension-attributes.md).  
+ Den Wert des der `MembersWithDataCaption` Element wird nur von übergeordneten Attributen verwendet (in anderen Worten: der Wert der die [Nutzung](usage-element-dimensionattribute-assl.md) Element der `DimensionAttribute` übergeordnetes Element festgelegt ist, um *übergeordneten*) um zu bestimmen, die die Beschriftung der Datenelemente im übergeordneten Attribut. Weitere Informationen zu Datenelementen finden Sie unter [Attribute in über- und untergeordneten Hierarchien](../../multidimensional-models/parent-child-dimension-attributes.md).  
   
- Die Elemente, die den übergeordneten Elementen von entsprechen `MembersWithDataCaption` im Objektmodell von Analysis Management Objects (AMO) sind <xref:Microsoft.AnalysisServices.AttributeTranslation> und <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ Die Elemente, die den übergeordneten Elementen von entsprechen `MembersWithDataCaption` im Analysis Management Objects (AMO)-Objektmodell werden <xref:Microsoft.AnalysisServices.AttributeTranslation> und <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [MembersWithData-Element &#40;ASSL&#41;](../objects/data-element-assl.md)   

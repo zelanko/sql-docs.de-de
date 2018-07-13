@@ -1,5 +1,5 @@
 ---
-title: Definieren und Durchsuchen von Perspektiven | Microsoft Docs
+title: Definieren und Durchsuchen von Perspektiven | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 461c093bb3b946316cfee37cd531d1492176db9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 642d9a0f80f0efb0bc9d26b9a08ab7a6dbd521e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060632"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208190"
 ---
 # <a name="defining-and-browsing-perspectives"></a>Definieren und Durchsuchen von Perspektiven
   Mithilfe von Perspektiven kann die Ansicht eines Cubes für bestimmte Zwecke vereinfacht werden. Standardmäßig können Benutzer alle Elemente in einem Cube sehen, für den sie die entsprechenden Berechtigungen besitzen. Wenn Benutzer einen ganzen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Cube anzeigen, wird ihnen die Standardperspektive des Cubes angezeigt. Die Ansicht des gesamten Cubes kann auf Benutzer äußerst komplex wirken, vor allem dann, wenn sie nur mit einem kleinen Teil des Cubes arbeiten, um ihre Anforderungen hinsichtlich Business Intelligence und Berichterstellung zu erfüllen.  
@@ -37,13 +37,13 @@ ms.locfileid: "36060632"
   
      Alle Objekte und ihre Objekttypen werden im Bereich **Perspektiven** angezeigt, wie in der folgenden Abbildung dargestellt.  
   
-     ![Perspektivenbereich des Cube-Designers](../../2014/tutorials/media/l9-perspectives-1.gif "perspektivenbereich des Cube-Designer")  
+     ![Perspektivenbereich des Cube-Designer](../../2014/tutorials/media/l9-perspectives-1.gif "perspektivenbereich des Cube-Designer")  
   
 2.  Klicken Sie auf der Symbolleiste der Registerkarte **Perspektiven** auf die Schaltfläche **Neue Perspektive** .  
   
      In der **Perspektivenname** -Spalte wird eine neue Perspektive mit dem Standardnamen **Perspektive**angezeigt, wie in der folgenden Abbildung dargestellt. Die Kontrollkästchen aller Objekte sind so lange aktiviert, bis Sie eines der Kontrollkästchen für ein Objekt deaktivieren. Diese Perspektive entspricht der Standardperspektive dieses Cubes.  
   
-     ![Neue Perspektive in der Spalte "Name der Perspektive"](../../2014/tutorials/media/l9-perspectives-2.gif "neue Perspektive in der Spalte \"Name der Perspektive\"")  
+     ![Neue Perspektive in der Spalte "Perspektivenname"](../../2014/tutorials/media/l9-perspectives-2.gif "neue Perspektive in der Spalte \"Perspektivenname\"")  
   
 3.  Ändern Sie den Perspektivennamen zu `Internet Sales`.  
   
@@ -178,9 +178,9 @@ ms.locfileid: "36060632"
   
 5.  Alternativ können Sie Excel vom Windows-Startmenü aus starten, eine Verbindung mit der Analysis Services Tutorial-Datenbank auf localhost definieren und eine Perspektive im Datenverbindungs-Assistenten auswählen, wie in der folgenden Abbildung dargestellt.  
   
-     ![Datenverbindungs-Assistenten in Excel](../../2014/tutorials/media/l9-perspectives-3b.gif "Datenverbindungs-Assistenten in Excel")  
+     ![Datenverbindungs-Assistent in Excel](../../2014/tutorials/media/l9-perspectives-3b.gif "Datenverbindungs-Assistenten in Excel")  
   
-6.  Wählen Sie `Internet Sales` in der **Perspektive** aus, und überprüfen Sie dann die Measures und Dimensionen im Metadatenbereich.  
+6.  Wählen Sie `Internet Sales` in die **Perspektive** aus, und überprüfen Sie dann die Measures und Dimensionen im Metadatenbereich.  
   
      Es werden nur die Objekte angezeigt, die für die Internet Sales-Perspektive angegeben wurden.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - functions [Integration Services]
 - expressions [Integration Services], functions
@@ -19,13 +19,13 @@ ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
 caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 65c272c738877eef0d8f931c7ed3a9262eeeae72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5b67a495d92d0bfc59288533d5f7c21e0f86d645
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059658"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171031"
 ---
 # <a name="functions-ssis-expression"></a>Funktionen (SSIS-Ausdruck)
   Die Ausdruckssprache schließt Funktionen für die Verwendung in Ausdrücken ein. In einem Ausdruck kann eine einzelne Funktion verwendet werden. Normalerweise werden in einem Ausdruck Funktionen mit Operatoren kombiniert und mehrere Funktionen verwendet.  
@@ -45,16 +45,16 @@ ms.locfileid: "36059658"
 |Funktion|Description|  
 |--------------|-----------------|  
 |[ABS &#40;SSIS-Ausdruck&#41;](abs-ssis-expression.md)|Gibt den absoluten, positiven Wert eines numerischen Ausdrucks zurück.|  
-|[EXP &#40;SSIS-Ausdruck&#41;](exp-ssis-expression.md)|Gibt den Exponenten für die Basis e des angegebenen Ausdrucks zurück.|  
+|["Exp" &#40;SSIS-Ausdruck&#41;](exp-ssis-expression.md)|Gibt den Exponenten für die Basis e des angegebenen Ausdrucks zurück.|  
 |[CEILING- &#40;SSIS-Ausdruck&#41;](ceiling-ssis-expression.md)|Gibt die kleinste ganze Zahl zurück, die größer oder gleich einem numerischen Ausdruck ist.|  
 |[FLOOR &#40;SSIS-Ausdruck&#41;](floor-ssis-expression.md)|Gibt die größte ganze Zahl zurück, die kleiner oder gleich einem numerischen Ausdruck ist.|  
 |[LN &#40;SSIS-Ausdruck&#41;](ln-ssis-expression.md)|Gibt den natürlichen Logarithmus eines numerischen Ausdrucks zurück.|  
-|[Protokoll &#40;SSIS-Ausdruck&#41;](log-ssis-expression.md)|Gibt den Logarithmus eines numerischen Ausdrucks zur Basis 10 zurück.|  
+|[LOG &#40;SSIS-Ausdruck&#41;](log-ssis-expression.md)|Gibt den Logarithmus eines numerischen Ausdrucks zur Basis 10 zurück.|  
 |[POWER &#40;SSIS-Ausdruck&#41;](power-ssis-expression.md)|Gibt das Ergebnis eines in eine Potenz erhobenen numerischen Ausdrucks zurück.|  
 |[ROUND &#40;SSIS-Ausdruck&#41;](round-ssis-expression.md)|Gibt einen numerischen Ausdruck zurück, der auf die angegebene Länge oder Genauigkeit gerundet wurde. zugreifen.|  
 |[Anmeldung &#40;SSIS-Ausdruck&#41;](sign-ssis-expression.md)|Gibt das positive (+) oder negative (-) Vorzeichen oder Null (0) für einen numerischen Ausdruck zurück.|  
 |[QUADRAT &#40;SSIS-Ausdruck&#41;](square-ssis-expression.md)|Gibt das Quadrat eines numerischen Ausdrucks zurück.|  
-|[SQRT &#40;SSIS-Ausdruck&#41;](sqrt-ssis-expression.md)|Gibt die Quadratwurzel eines numerischen Ausdrucks zurück.|  
+|["SQRT" &#40;SSIS-Ausdruck&#41;](sqrt-ssis-expression.md)|Gibt die Quadratwurzel eines numerischen Ausdrucks zurück.|  
   
  Die Ausdrucksauswertung stellt die folgenden Zeichenfolgenfunktionen bereit.  
   
@@ -67,8 +67,8 @@ ms.locfileid: "36059658"
 |[Links &#40;SSIS-Ausdruck&#41;](left-ssis-expression.md)|Gibt die angegebene Anzahl von Zeichen ab der äußersten linken Position des angegebenen Zeichenausdrucks zurück.|  
 |[NIEDRIGERE &#40;SSIS-Ausdruck&#41;](lower-ssis-expression.md)|Gibt einen Zeichenausdruck zurück, nachdem Großbuchstaben in Kleinbuchstaben konvertiert wurden.|  
 |[LTRIM &#40;SSIS-Ausdruck&#41;](trim-ssis-expression.md)|Gibt einen Zeichenausdruck zurück, nachdem führende Leerzeichen entfernt wurden.|  
-|[Ersetzen Sie &#40;SSIS-Ausdruck&#41;](replace-ssis-expression.md)|Gibt einen Zeichenausdruck zurück, nachdem eine Zeichenfolge im Ausdruck durch eine andere Zeichenfolge oder durch eine leere Zeichenfolge ersetzt wurde.|  
-|[Replizieren &#40;SSIS-Ausdruck&#41;](replicate-ssis-expression.md)|Gibt einen Zeichenausdruck zurück, der mehrfach repliziert wurde.|  
+|[Ersetzen Sie dies &#40;SSIS-Ausdruck&#41;](replace-ssis-expression.md)|Gibt einen Zeichenausdruck zurück, nachdem eine Zeichenfolge im Ausdruck durch eine andere Zeichenfolge oder durch eine leere Zeichenfolge ersetzt wurde.|  
+|[Replizieren von &#40;SSIS-Ausdruck&#41;](replicate-ssis-expression.md)|Gibt einen Zeichenausdruck zurück, der mehrfach repliziert wurde.|  
 |[REVERSE- &#40;SSIS-Ausdruck&#41;](reverse-ssis-expression.md)|Gibt einen Zeichenausdruck in umgekehrter Reihenfolge zurück.|  
 |[RECHTS &#40;SSIS-Ausdruck&#41;](right-ssis-expression.md)|Gibt die angegebene Anzahl von Zeichen ab der äußersten rechten Position des angegebenen Zeichenausdrucks zurück.|  
 |[RTRIM &#40;SSIS-Ausdruck&#41;](rtrim-ssis-expression.md)|Gibt einen Zeichenausdruck zurück, nachdem nachfolgende Leerzeichen entfernt wurden.|  

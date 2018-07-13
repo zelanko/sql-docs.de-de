@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: de90c81c-9e7f-4997-bf96-e22b97b2862c
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 11903306315023c5de25212cc7c8196210fa0f3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 8396e4509f77310f785dc221b0eebed8979872b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061639"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197540"
 ---
 # <a name="view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel"></a>Anzeigen aller Anmerkungen oder Transaktionen für ein Element (MDS-Add-In für Excel)
   Zeigen Sie in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]Anmerkungen (Kommentare) und Transaktionen für Datenzeilen (Elemente) an, wenn Sie die Updates der Daten im Zeitverlauf anzeigen möchten.  
@@ -33,7 +33,7 @@ ms.locfileid: "36061639"
   
 1.  Klicken Sie in die Zeile, die Transaktionen enthält, die Sie anzeigen möchten.  
   
-2.  Mit der rechten Maustaste, und klicken Sie auf das Menü, das angezeigt wird, auf **Transaktionen anzeigen**.  
+2.  Mit der rechten Maustaste, und klicken Sie im Menü, das angezeigt wird, klicken Sie auf **Transaktionen anzeigen**.  
   
 3.  Im Dialogfeld **Transaktionen anzeigen** wird die Liste der Transaktionen angezeigt. Um alle einer Transaktion zugeordneten Anmerkungen anzuzeigen, klicken Sie im Raster auf eine Zeile.  
   

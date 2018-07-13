@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Reporting Services]
 - Reporting Services, scripting
@@ -17,13 +17,13 @@ ms.assetid: 1ac2646d-ed5a-4436-b18f-2150c33f3d87
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0d76693f37506cd78a7d198520344cb55f9d142f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2b69a9713d015db66945a1c096f8896998459406
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059953"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212540"
 ---
 # <a name="scripting-and-powershell-with-reporting-services"></a>Skripterstellung und PowerShell mit Reporting Services
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] unterstützt eine Vielzahl von Entwicklungs- und Verwaltungsszenarien über Skripts, beispielsweise das Befehlszeilenprogramm rs.exe, PowerShell-Cmdlets für Berichtsserver im SharePoint-Modus und die Nutzung der [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Objektmodells in PowerShell für sowohl bei systemeigenen und SharePoint-Modus.  
@@ -32,7 +32,7 @@ ms.locfileid: "36059953"
   
 -   Entwickler können benutzerdefinierte Anwendungen erstellen, die Skripts enthalten. Sie können Skripts ausführen, mit denen den Report Server-Webdienst aufgerufen wird. Fast jeder Vorgang, den Sie in verwaltetem Code schreiben können, kann auch als Skript geschrieben werden.  
   
--   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] unterstützt [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET Skript als Skriptsprache, die vom Hilfsprogramm RS.exe, einem Skripthost verarbeitet werden kann, die auf dem Berichtsserver ausgeführt wird.  
+-   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] unterstützt [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET Skript für Objekttyp als Skriptsprache, die vom Hilfsprogramm RS.exe, einem verarbeitet werden kann, die auf dem Berichtsserver ausgeführt wird.  
   
 ## <a name="reporting-services-sharepoint-mode-powershell-cmdlets-and-samples"></a>PowerShell-Cmdlets für Reporting Services im SharePoint-Modus und Beispiele  
  ![PowerShell-Inhalt](../media/rs-powershellicon.jpg "PowerShell related content")  
@@ -54,7 +54,7 @@ ms.locfileid: "36059953"
   
  PowerShell-Aufruf des Kern-Objektmodells und zum größten Teil gültig für SharePoint- und einheitlichen Modus, z. B. die Migrationsarbeit, Abonnementarbeit und weitere Beispiele für Abonnementarbeit in SQL15.  
   
--   [Use PowerShell to Change und Auflisten von Reporting Services-Abonnementbesitzern aus, und führen Sie ein Abonnement](../subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
+-   [Use PowerShell to Change und Auflisten von Reporting Services-Abonnementbesitzern und Ausführen ein Abonnements](../subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
   
 -   [Verwenden von PowerShell zum Erstellen einer Azure-VM mit einem Berichtsserver im einheitlichen Modus](http://msdn.microsoft.com/library/azure/dn449661.aspx).  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36059953"
   
 ## <a name="rsexe-scripting-samples"></a>Skriptbeispiele für RS.exe  
   
--   [Beispiel zu Reporting Services-Beispielskript rs.exe zum Migrieren von Inhalten zwischen Berichtsservern](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+-   [Sample Reporting Services-Beispielskript rs.exe zum Migrieren von Inhalten zwischen Berichtsservern](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
 -   Zusätzliche Skripts, Anwendungs- und Erweiterungsbeispiele finden Sie unter [SQL Server Reporting Services-Produktbeispiele](http://go.microsoft.com/fwlink/?LinkId=177889).  
   

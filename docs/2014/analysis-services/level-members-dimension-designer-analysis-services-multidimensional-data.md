@@ -1,5 +1,5 @@
 ---
-title: Ebenen und Elemente (Registerkarte ' Browser ', Dimensions-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Ebenen und Elemente (Registerkarte ' Browser ', Dimensions-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.browsertab.levelsandmembers.f1
 ms.assetid: 3f61e384-5b4e-4480-a7ed-b408de2fdea7
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bb9a6361159c67c24b8254939f3353a2a0063c04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 2e30aae23fda8e929b3348ef09d20265ae1d9784
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059255"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193970"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Ebenen und Elemente (Registerkarte 'Browser', Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
   In diesem Bereich können Sie die Elemente der aktuell ausgewählten Hierarchie und Sprache durchsuchen. Verwenden Sie die Optionen **Hierarchie** und **Sprache** im Bereich **Symbolleiste** , um eine zu durchsuchende Hierarchie oder Sprache auszuwählen. Weitere Informationen zum Symbolleistenbereich finden Sie unter [Toolbar &#40;Browser Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md).  
   
 ## <a name="writeback-mode"></a>Rückschreibemodus  
- Die Funktionalität dieses Bereichs ändert sich, wenn der Rückschreibemodus aktiviert wird. Die ausgewählte Dimension muss mit aktiviertem Schreibzugriff werden (also die `WriteEnabled` -Eigenschaft der Dimension muss festgelegt werden auf "true") und die Dimension muss bereitgestellt werden, um eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Instanz, um den rückschreibemodus zu aktivieren.  
+ Die Funktionalität dieses Bereichs ändert sich, wenn der Rückschreibemodus aktiviert wird. Die ausgewählte Dimension muss mit aktiviertem Schreibzugriff (das heißt, die `WriteEnabled` Eigenschaft der Dimension muss festgelegt werden auf "true") und die Dimension muss bereitgestellt werden, um eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Instanz, um den rückschreibemodus zu aktivieren.  
   
  Sie können entweder die Option **Rückschreiben** aus dem Bereich **Symbolleiste** auswählen oder mit der rechten Maustaste auf den Bereich **Ebene und Elemente** klicken und aus dem Kontextmenü die Option **Rückschreiben** auswählen, um den Rückschreibemodus zu aktivieren.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36059255"
 > [!NOTE]  
 >  Diese Option wird nur angezeigt, wenn der Rückschreibemodus aktiviert ist.  
   
- **Ausgeschnitten werden.**  
+ **Ausschneiden**  
  Kopiert die ausgewählten Elemente in die Zwischenablage und entfernt sie aus der Hierarchie.  
   
 > [!NOTE]  

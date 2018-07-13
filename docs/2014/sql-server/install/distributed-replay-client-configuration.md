@@ -1,5 +1,5 @@
 ---
-title: Distributed Replay Client-Konfiguration | Microsoft Docs
+title: Distributed Replay Client-Konfiguration | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ccf03e32-6bd9-43c0-b9b6-9fe0d9163339
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 330334330fd27459f19d3746187150e20900bd93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 83863c8bc5547ec0839eed7e0883de4d22c4f693
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058837"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168141"
 ---
 # <a name="distributed-replay-client-configuration"></a>Distributed Replay Client-Konfiguration
   Verwenden Sie die Seite für die **Distributed Replay Client-Konfiguration** des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installations-Assistenten, um die Benutzer anzugeben, denen Sie Administratorberechtigungen für den Distributed Replay Client-Dienst gewähren möchten.  
@@ -27,7 +27,7 @@ ms.locfileid: "36058837"
  Benutzer, die über Administratorberechtigungen verfügen, besitzen unbeschränkten Zugriff auf den Distributed Replay Client-Dienst.  
   
 ## <a name="options"></a>Tastatur  
- **Controllername**  
+ **Name des Domänencontrollers**  
  Dies ist ein optionaler Parameter, und der Standardwert ist \< *leere*>.  
   
  Geben Sie den Namen des Controllers ein, mit dem der Clientcomputer für den Distributed Replay Client-Dienst kommuniziert. Beachten Sie Folgendes:  

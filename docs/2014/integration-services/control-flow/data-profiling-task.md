@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ee64eeed2e6508fc31cac544e6ba4f2617b8a24b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 48075a70eba052e6996fa096cde9f8f3b5f946e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060326"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213540"
 ---
 # <a name="data-profiling-task"></a>Datenprofilerstellungs-Task
   Der Datenprofilerstellungs-Task berechnet verschiedene Profile, mit deren Hilfe Sie sich mit einer Datenquelle vertraut machen und Probleme bei den Daten identifizieren können, die behoben werden müssen.  
@@ -86,17 +86,17 @@ ms.locfileid: "36060326"
 |Funktionales Abhängigkeitsprofil|Spalten des `integer` Typ `char` Typ und `datetime` Typ|  
 |Inklusionsprofil|Spalten des `integer` Typ `char` Typ und `datetime` Typ|  
   
- \* In der vorherigen Tabelle gültiger Datentypen die `integer`, `char`, `datetime`, und `numeric` Typen gehören die folgenden spezifischen Datentypen:  
+ \* In der vorherigen Tabelle gültiger Datentypen die `integer`, `char`, `datetime`, und `numeric` Typen umfassen die folgenden spezifischen Datentypen:  
   
  Ganzzahltypen umfassen `bit`, `tinyint`, `smallint`, `int`, und `bigint`.  
   
- Zeichentypen schließen `char`, `nchar`, `varchar`, und `nvarchar,` jedoch keinesfalls `varchar(max)` und `nvarchar(max)`.  
+ Typen mit Zeichen umfassen `char`, `nchar`, `varchar`, und `nvarchar,` aber nicht für `varchar(max)` und `nvarchar(max)`.  
   
  Datums- und Zeittypen schließen `datetime`, `smalldatetime`, und `timestamp`.  
   
  Numerischen Typen gehören `integer` Typen (außer `bit`), `money`, `smallmoney`, `decimal`, `float`, `real`, und `numeric`.  
   
- \*\* `image`, `text`, `XML`, `udt`, und `variant` Typen werden nicht unterstützt, für andere Profile als Profil Spalte Null-Verhältnis.  
+ \*\* `image`, `text`, `XML`, `udt`, und `variant` Typen werden nicht unterstützt, für andere Profile als das Profil der Spalte Null-Verhältnis.  
   
 ### <a name="valid-tables-and-columns"></a>Gültige Tabellen und Spalten  
  Wenn die Tabelle oder die Spalte leer ist, führt die Datenprofilerstellung die folgenden Aktionen aus:  
@@ -142,20 +142,20 @@ ms.locfileid: "36060326"
  [Seite Profilanforderungen](data-profiling-task-editor-profile-requests-page.md)  
  Auf der Seite **Profilanforderungen** geben Sie die Datenquelle an und wählen und konfigurieren die Datenprofile, die Sie berechnen möchten. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den verschiedenen Profilen zu erhalten, die Sie konfigurieren können:  
   
--   [Kandidat Key Profil Anforderungsoptionen &#40;Datenprofilerstellungs-Task&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [Optionen für Anforderung kandidatenschlüsselprofil &#40;Datenprofilerstellungs-Task&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [Spalte Länge Profil Anforderung Verteilungsoptionen &#40;Datenprofilerstellungs-Task&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [Spaltenoptionen Verteilungsprofil für Spaltenlänge Anforderung &#40;Datenprofilerstellungs-Task&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Spalte Null-Verhältnis Anforderung Profiloptionen &#40;Datenprofilerstellungs-Task&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [Optionen für die Spalte Null-Verhältnis Anforderung &#40;Datenprofilerstellungs-Task&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [Muster Profil Anforderung Spaltenoptionen &#40;Datenprofilerstellungs-Task&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
+-   [Optionen für Anforderung für Spaltenmusterprofil &#40;Datenprofilerstellungs-Task&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [Spalte Statistics Profile-Anforderungsoptionen &#40;Datenprofilerstellungs-Task&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [Optionen für die Anforderung für Spaltenstatistikprofil &#40;Datenprofilerstellungs-Task&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [Spalte Wert Profil Anforderung Verteilungsoptionen &#40;Datenprofilerstellungs-Task&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [Optionen Verteilungsprofil für Spaltenwert Profil Anforderung &#40;Datenprofilerstellungs-Task&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Funktionale Abhängigkeit Anforderung Profiloptionen &#40;Datenprofilerstellungs-Task&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [Optionen für Anforderung für funktionales Abhängigkeitsprofil &#40;Datenprofilerstellungs-Task&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [Aufnahme Anforderung Profiloptionen Wert &#40;Datenprofilerstellungs-Task&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [Optionen für Anforderung für Wertinklusionsprofil Wert &#40;Datenprofilerstellungs-Task&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
   
   

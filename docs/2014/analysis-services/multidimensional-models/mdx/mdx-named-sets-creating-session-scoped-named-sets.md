@@ -1,5 +1,5 @@
 ---
-title: Erstellen im Bereich einer Sitzung benannter Mengen (MDX) | Microsoft Docs
+title: Erstellen im Bereich einer Sitzung, benannte Mengen (MDX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - CREATE SET statement
 - session-scoped named sets [MDX]
 ms.assetid: b751e1e4-6d4c-4d36-a28d-ffdaaee0f1c7
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 101109dce04d6a31c4b78a47573ccb54f2c80f0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5a3d6a1fd35c91733b32ecc3244f0fd3bafe6a07
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061030"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167691"
 ---
 # <a name="creating-session-scoped-named-sets-mdx"></a>Erstellen benannter Mengen im Bereich einer Sitzung (MDX)
   Zum Erstellen einer benannten Menge, die während einer gesamten MDX-Sitzung (Multidimensional Expressions) verfügbar ist, verwenden Sie die [CREATE SET](/sql/mdx/mdx-data-definition-create-set)-Anweisung. Eine benannte Menge, die mit der CREATE SET-Anweisung erstellt wurde, wird erst entfernt, nachdem die MDX-Sitzung geschlossen wurde.  
@@ -57,6 +57,6 @@ select SetCities_2_3 on 0 from [Store]
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Bereich einer Abfrage erstellen benannter Mengen &#40;MDX&#41;](mdx-named-sets-creating-query-scoped-named-sets.md)  
+ [Erstellen im Bereich einer Abfrage benannter Mengen &#40;MDX&#41;](mdx-named-sets-creating-query-scoped-named-sets.md)  
   
   

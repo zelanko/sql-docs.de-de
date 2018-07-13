@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], managing
 ms.assetid: 7f46cbdb-5102-4941-bca2-5e0ff9012c6b
 caps.latest.revision: 37
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 779b22bfbd8a99b5aef05d33725c1cce8364271a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 56fb4e61fe7e442247fb9977afc440f13e5276e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060449"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186177"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus
   In diesem Abschnitt werden Themen zum Verarbeiten, Überwachen und Steuern von Abonnements behandelt. Die Abonnementverwaltung unterscheidet sich für Standardabonnements und datengesteuerte Abonnements. Standardabonnements befinden sich in der Regel im Besitz des Benutzers und werden von diesem verwaltet. Im Gegensatz dazu werden datengesteuerte Abonnements normalerweise von einem Berichtsserveradministrator erstellt und verwaltet.  
@@ -38,9 +38,9 @@ ms.locfileid: "36060449"
 ## <a name="disabling-subscriptions"></a>Deaktivieren von Abonnements  
  Entfernen Sie den Task "Einzelne Abonnements verwalten" aus der Rolle, um zu verhindern, dass Benutzer Abonnements erstellen. Wenn Sie diesen Task entfernen, sind die Abonnementseiten nicht verfügbar. Im Berichts-Manager scheint die Seite Meine Abonnements leer zu sein (kann nicht gelöscht werden), selbst wenn zuvor Abonnements enthalten waren. Das Entfernen von Tasks im Zusammenhang mit Abonnements verhindert, dass Benutzer Abonnements erstellen und ändern. Vorhandene Abonnements werden dadurch jedoch nicht gelöscht. Vorhandene Abonnements werden so lange weiter ausgeführt, bis Sie sie löschen. Weitere Informationen zum Löschen von Abonnements finden Sie unter [erstellen, ändern und Löschen von Standardabonnements &#40;Reporting Services im einheitlichen Modus&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md).  
   
- Um die abonnementverarbeitung auf einem Berichtsserver zu deaktivieren, legen Sie die `ScheduleEventsAndReportDeliveryEnabled` Eigenschaft `False` in der **Oberflächenkonfiguration für Reporting Services** Facet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Richtlinie der richtlinienbasierten Verwaltung. Dadurch wird die Ausführung aller geplanten Vorgänge verhindert. Sie können nicht nur die Abonnementverarbeitung auf dem Berichtsserver deaktivieren.  
+ Um die abonnementverarbeitung auf einem Berichtsserver zu deaktivieren, Sie können festlegen, die `ScheduleEventsAndReportDeliveryEnabled` Eigenschaft `False` in die **Oberflächenkonfiguration für Reporting Services** Facet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Richtlinie der richtlinienbasierten Verwaltung. Dadurch wird die Ausführung aller geplanten Vorgänge verhindert. Sie können nicht nur die Abonnementverarbeitung auf dem Berichtsserver deaktivieren.  
   
- Anweisungen zum Abonnement beendet wird, auf dem Berichtsserver ausgeführt wird, finden Sie unter [Verwalten eines Prozesses ausführen](subscriptions/manage-a-running-process.md).  
+ Anweisungen zum Abbrechen von Abonnements, die auf dem Berichtsserver verarbeitet wird, finden Sie unter [Verwalten eines ausgeführten Prozesses](subscriptions/manage-a-running-process.md).  
   
 ## <a name="disabling-delivery-extensions"></a>Deaktivieren von Übermittlungserweiterungen  
  Alle auf einem Berichtsserver installierten Übermittlungserweiterungen sind für jeden Benutzer verfügbar, der Berechtigungen zum Erstellen eines Abonnements für einen vorhandenen Bericht hat. Die folgenden Übermittlungserweiterungen sind verfügbar und werden automatisch konfiguriert:  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 caps.latest.revision: 12
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7c197e6f13497b82655f8c20872637d8bc8e7ed0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5a3831372791023edb9f83064aa77878dcf41dfd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061321"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186057"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Lernprogramm: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)
   In diesem Lernprogramm erfahren Sie, wie Sie auf Grundlage von Beispielumsatzdaten einen einfachen Tabellenbericht erstellen. Die folgende Abbildung zeigt den Bericht, den Sie erstellen.  
@@ -29,17 +29,17 @@ ms.locfileid: "36061321"
 ##  <a name="BackToTop"></a> Lernziele  
  In diesem Lernprogramm lernen Sie Folgendes:  
   
-1.  [Erstellen eines neuen Berichts aus erste Schritte](#CreateTable)  
+1.  [Erstellen eines neuen Berichts von den ersten Schritten](#CreateTable)  
   
     1.  [Angeben einer Datenverbindung im Tabellen-Assistenten](#DataConnection)  
   
     2.  [Erstellen Sie eine Abfrage im Tabellen-Assistenten](#Query)  
   
-    3.  [Gruppieren von Daten im Tabellen-Assistenten](#Groups)  
+    3.  [Organisieren Sie Daten in Gruppen, die im Tabellen-Assistenten](#Groups)  
   
     4.  [Hinzufügen von Teilergebnis-und Ergebniszeilen im Tabellen-Assistenten](#Subtotals)  
   
-    5.  [Auswählen eines Formats im Tabellen-Assistent](#Style)  
+    5.  [Auswählen eines Formats im Tabellen-Assistenten](#Style)  
   
 2.  [Formatieren von Daten als Währung](#FormatCurrency)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36061321"
   
 5.  [Hinzufügen eines Berichtstitels](#Title)  
   
-6.  [Speichern Sie den Bericht](#Save)  
+6.  [Speichern des Berichts](#Save)  
   
 7.  [Exportieren des Berichts](#Export)  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36061321"
  Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="CreateTable"></a> 1. Erstellen eines neuen Berichts im Dialogfeld "Erste Schritte"  
- Erstellen eines Tabellenberichts aus der **Einstieg** (Dialogfeld). Zwei Modi stehen zur Auswahl: Berichtsentwurf und Entwurf von freigegebenen Datasets. Im Berichtsentwurfsmodus legen Sie im Berichtsdatenbereich Daten und auf der Entwurfsoberfläche das Berichtslayout fest. Im Entwurfsmodus für freigegebene Datasets erstellen Sie Datasetabfragen, die für andere Benutzer freigegeben werden. In diesem Lernprogramm verwenden Sie den Berichtsentwurfsmodus.  
+ Erstellen eines Tabellenberichts aus der **Einstieg** Dialogfeld. Zwei Modi stehen zur Auswahl: Berichtsentwurf und Entwurf von freigegebenen Datasets. Im Berichtsentwurfsmodus legen Sie im Berichtsdatenbereich Daten und auf der Entwurfsoberfläche das Berichtslayout fest. Im Entwurfsmodus für freigegebene Datasets erstellen Sie Datasetabfragen, die für andere Benutzer freigegeben werden. In diesem Lernprogramm verwenden Sie den Berichtsentwurfsmodus.  
   
 #### <a name="to-create-a-new-report"></a>So erstellen Sie einen neuen Bericht  
   
@@ -68,13 +68,13 @@ ms.locfileid: "36061321"
      Die **Einstieg** Dialogfeld wird geöffnet.  
   
     > [!NOTE]  
-    >  Wenn die **Einstieg** Dialogfeld nicht angezeigt wird, aus der **Berichts-Generator** Schaltfläche, klicken Sie auf **neu**.  
+    >  Wenn die **Einstieg** Dialogfeld nicht angezeigt wird, aus der **Berichts-Generator** , zeigen Sie auf **neu**.  
   
 2.  Vergewissern Sie sich, dass im linken Bereich **Neuer Bericht** ausgewählt ist.  
   
 3.  Vergewissern Sie sich, dass im rechten Bereich **Tabellen- oder Matrix-Assistent** ausgewählt ist.  
   
-##  <a name="DataConnection"></a> 1a. Angeben einer Datenverbindung im Tabellen-Assistenten  
+##  <a name="DataConnection"></a> 1a: Angeben einer Datenverbindung im Tabellen-Assistenten  
  Eine Datenverbindung enthält die Informationen zum Herstellen einer Verbindung mit einer externen Datenquelle, z. B. einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank. Normalerweise erhalten Sie die Verbindungsinformationen und den zu verwendenden Anmeldeinformationstyp vom Datenquellenbesitzer. Sie können zum Angeben einer Datenverbindung eine freigegebene Datenquelle vom Berichtsserver verwenden oder eine eingebettete Datenquelle erstellen, die nur in diesem Bericht verwendet wird.  
   
  In diesem Lernprogramm verwenden Sie eine eingebettete Datenquelle. Weitere Informationen zur Verwendung von freigegebenen Datenquellen finden Sie unter [Alternative Verfahren zum Herstellen einer Datenverbindung (Berichts-Generator)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
@@ -89,7 +89,7 @@ ms.locfileid: "36061321"
   
 4.  Vergewissern Sie sich, dass unter **Verbindungstyp auswählen**die Option **Microsoft SQL Server** ausgewählt ist.  
   
-5.  In **Verbindungszeichenfolge**, geben Sie den folgenden Text, in dem  *\<Servername >* ist der Name einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
+5.  In **Verbindungszeichenfolge**, geben Sie den folgenden Text ein, wobei  *\<Servername >* ist der Name einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
     ```  
     Data Source=<servername>  
@@ -194,7 +194,7 @@ ms.locfileid: "36061321"
   
 6.  Klicken Sie auf **Weiter**.  
   
-##  <a name="Subtotals"></a> 1-d. Hinzufügen von Teilergebnis- und Ergebniszeilen im Tabellen-Assistenten  
+##  <a name="Subtotals"></a> 1D. Hinzufügen von Teilergebnis- und Ergebniszeilen im Tabellen-Assistenten  
  Nachdem Sie Gruppen erstellt haben, können Sie Zeilen hinzufügen und formatieren, in denen Aggregatwerte für die Felder angezeigt werden. Sie können auswählen, ob alle Daten angezeigt werden oder der Benutzer gruppierte Daten interaktiv erweitern und reduzieren kann.  
   
 #### <a name="to-add-subtotals-and-totals"></a>So fügen Sie Teilergebnisse und Summen hinzu  
@@ -224,7 +224,7 @@ ms.locfileid: "36061321"
   
 #### <a name="to-specify-a-table-style"></a>So geben Sie ein Tabellenformat an  
   
-1.  Auf der **Auswählen eines Formats** Seite klicken Sie im Bereich "Formatvorlagen" Option "Ozean".  
+1.  Auf der **Auswählen eines Formats** Seite Wählen Sie im Bereich "Formate", "Ozean".  
   
      Im Vorschaubereich wird ein Beispiel für die Tabelle mit diesem Format angezeigt.  
   
@@ -245,7 +245,7 @@ ms.locfileid: "36061321"
   
 3.  Klicken Sie auf der Registerkarte **Stamm** in der Gruppe **Zahl** auf die Schaltfläche **Währung** . Die Zellen ändern sich, um die formatierte Währung anzuzeigen.  
   
-     Wenn Sie das Gebietsschema „Deutsch (Deutschland)“ verwenden, lautet der Standardbeispieltext [**12,345.00€**]. Wenn Sie kein beispielwährungswert sehen, klicken Sie auf **Platzhalterformate** in der **Zahlen** Gruppe, und klicken Sie dann auf **Beispielwerte**.  
+     Wenn Sie das Gebietsschema „Deutsch (Deutschland)“ verwenden, lautet der Standardbeispieltext [**12,345.00€**]. Wenn Sie kein beispielwährungswert angezeigt werden, klicken Sie auf **Platzhalterformate** in die **Zahlen** gruppieren, und klicken Sie dann auf **Beispielwerte**.  
   
 4.  Klicken Sie auf **Ausführen** , um den Bericht in der Vorschau anzuzeigen.  
   
@@ -260,7 +260,7 @@ ms.locfileid: "36061321"
   
 2.  Klicken Sie auf die Zelle, die `[SalesDate]`enthält.  
   
-3.  Auf dem Menüband auf die **Home** Registerkarte die **Anzahl** Gruppe, aus der Dropdown-Liste, wählen **Datum**.  
+3.  Auf dem Menüband auf die **Startseite** Registerkarte die **Anzahl** Gruppe wählen Sie in der Dropdown-Liste **Datum**.  
   
      In der Zelle wird das Beispieldatum **[31.01.2000]** angezeigt. Falls kein Beispieldatum angezeigt wird, klicken Sie in der Gruppe **Zahlen** auf **Platzhalterformate** und anschließend auf **Beispielwerte**.  
   
@@ -274,7 +274,7 @@ ms.locfileid: "36061321"
   
 2.  Klicken Sie auf die Zelle, die `[SalesDate]`enthält.  
   
-3.  Auf der **Home** Registerkarte die **Anzahl** gruppieren, klicken Sie auf das Dialogfeldstartprogramm.  
+3.  Auf der **Startseite** Registerkarte die **Anzahl** gruppieren, klicken Sie auf das Dialogfeldstartprogramm.  
   
      Das Startprogramm ist der kleine Pfeil in der rechten Ecke der Gruppe. Das Dialogfeld **Textfeldeigenschaften** wird geöffnet.  
   
@@ -370,10 +370,10 @@ ms.locfileid: "36061321"
   
 2.  Klicken Sie an einer beliebigen Stelle außerhalb des Berichts.  
   
-3.  . Klicken Sie im Bereich "Eigenschaften" zu suchen, die InitialPageName-Eigenschaft, und geben **Product Sales Excel**.  
+3.  . Suchen Sie im Bereich Eigenschaften die InitialPageName-Eigenschaft und den Typ **Product Sales Excel**.  
   
     > [!NOTE]  
-    >  Wenn der Eigenschaftenbereich nicht angezeigt wird, klicken Sie auf der Registerkarte Ansicht auf dem Menüband, und klicken Sie dann auf **Eigenschaften**.  
+    >  Wenn der Eigenschaftenbereich nicht angezeigt wird, klicken Sie auf der Registerkarte "Ansicht" auf dem Menüband, und klicken Sie dann auf **Eigenschaften**.  
   
 #### <a name="to-export-a-report-to-excel"></a>So exportieren Sie einen Bericht nach Excel  
   

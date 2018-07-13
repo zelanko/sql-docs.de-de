@@ -1,5 +1,5 @@
 ---
-title: Konfigurationseinstellungsverweis (PowerPivot für SharePoint) | Microsoft Docs
+title: Konfigurationseinstellungsverweis (PowerPivot für SharePoint) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 340800620360ed34ab8bcc2aaee7d71118e451df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c819c7bfee1d028d9eb2795620ec9aa4bdf02150
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148000"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173561"
 ---
 # <a name="configuration-setting-reference-powerpivot-for-sharepoint"></a>Konfigurationseinstellungsverweis (PowerPivot für SharePoint)
   Dieses Thema enthält Referenzdokumentation zu den von PowerPivot-Dienstanwendungen in einer SharePoint-Farm verwendeten Konfigurationseinstellungen. Wenn Sie einen Server mithilfe von PowerShell-Skripts konfigurieren oder Informationen zu einer bestimmten Einstellung suchen möchten, finden Sie in den Informationen in diesem Thema ausführliche Beschreibungen.  
@@ -40,7 +40,7 @@ ms.locfileid: "36148000"
   
  [Sammlung von Verwendungsdaten](#UsageData)  
   
- Anleitungen zum Erstellen einer PowerPivot-dienstanwendung finden Sie unter [erstellen und Konfigurieren einer PowerPivot-Dienstanwendung in der Zentraladministration](create-and-configure-power-pivot-service-application-in-ca.md).  
+ Anweisungen dazu, wie Sie eine PowerPivot-dienstanwendung zu erstellen, finden Sie unter [erstellen und konfigurieren Sie eine PowerPivot-Dienstanwendung in der Zentraladministration](create-and-configure-power-pivot-service-application-in-ca.md).  
   
 ##  <a name="LoadingData"></a> Data Load Timeout  
  PowerPivot-Daten werden durch Analysis Services-Serverinstanzen in die Farm abgerufen und geladen. Je nachdem, wie und wann zuletzt auf die Daten zugegriffen wurde, werden sie entweder aus einer Inhaltsbibliothek oder aus einem lokalen Dateicache geladen. Daten werden immer dann in den Arbeitsspeicher geladen, wenn eine Abfrage- oder Verarbeitungsanforderung empfangen wird. Um die Gesamtverfügbarkeit des Servers zu maximieren, können Sie einen Timeoutwert festlegen, der den Server anweist, eine Anforderung zum Laden von Daten zu beenden, wenn sie nicht innerhalb der vorgesehenen Zeit abgeschlossen werden kann.  
@@ -67,7 +67,7 @@ ms.locfileid: "36148000"
 |Maximale Größe für den Verwaltungsverbindungspool|200|-1, 0 oder 1 bis 10000.<br /><br /> -1 gibt eine unbegrenzte Anzahl von Verbindungen im Leerlauf an.|Die maximale Anzahl von Serververbindungen im Leerlauf in allen Verwaltungsverbindungspools, die für PowerPivot-Dienstanwendungsverbindungen mit einer Analysis Services-Serverinstanz erstellt wurden. Für Anforderungen zum Laden von Datenbanken und Zurückspeichern von Änderungen in der SharePoint-Datenbank werden Serververbindungen verwendet.|  
   
 ##  <a name="AllocationScheme"></a> Lastenausgleich  
- Zu den Funktionen des PowerPivot-Diensts gehört die Bestimmung der verfügbaren PowerPivot-Dienstinstanz, in der Analysis Services-Daten geladen werden. Die `AllocationMethod` Einstellung gibt an, die Kriterien für die eine Dienstinstanz ausgewählt ist.  
+ Zu den Funktionen des PowerPivot-Diensts gehört die Bestimmung der verfügbaren PowerPivot-Dienstinstanz, in der Analysis Services-Daten geladen werden. Die `AllocationMethod` Einstellung gibt an, die Kriterien für die eine Dienstinstanz ausgewählt wird.  
   
 |Name|Default|Gültige Werte|Description|  
 |----------|-------------|------------------|-----------------|  
@@ -80,7 +80,7 @@ ms.locfileid: "36148000"
 |----------|-------------|------------------|-----------------|  
 |Startzeit|04:00 Uhr|1 bis 12 Stunden, wobei der Wert einer gültigen ganzen Zahl innerhalb dieses Bereichs entspricht.<br /><br /> Der Typ lautet Zeit.|Legt die Untergrenze eines Geschäftstags fest.|  
 |Beendigungszeit|20:00 Uhr|1 bis 12 Stunden, wobei der Wert einer gültigen ganzen Zahl innerhalb dieses Bereichs entspricht.<br /><br /> Der Typ lautet Zeit.|Legt die Obergrenze eines Geschäftstags fest.|  
-|Konto der unbeaufsichtigten PowerPivot-Datenaktualisierung|InclusionThresholdSetting|Eine Zielanwendungs-ID|Dieses Konto wird verwendet, um Datenaktualisierungsaufträge für einen Zeitplanbesitzer auszuführen.<br /><br /> Das unbeaufsichtigte Datenaktualisierungskonto muss im Voraus definiert werden, bevor auf der Dienstanwendungskonfigurationsseite darauf verwiesen werden kann. Weitere Informationen finden Sie unter [Konfigurieren der PowerPivot-datenaktualisierungskonto &#40;PowerPivot für SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md).|  
+|Konto der unbeaufsichtigten PowerPivot-Datenaktualisierung|InclusionThresholdSetting|Eine Zielanwendungs-ID|Dieses Konto wird verwendet, um Datenaktualisierungsaufträge für einen Zeitplanbesitzer auszuführen.<br /><br /> Das unbeaufsichtigte Datenaktualisierungskonto muss im Voraus definiert werden, bevor auf der Dienstanwendungskonfigurationsseite darauf verwiesen werden kann. Weitere Informationen finden Sie unter [konfigurieren Sie die PowerPivot-datenaktualisierungskonto &#40;PowerPivot für SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md).|  
 |Ermöglichen Sie Benutzern, benutzerdefinierte Windows-Anmeldeinformationen einzugeben|Aktiviert|Boolean|Legt fest, ob die Seite für die Konfiguration geplanter Datenaktualisierungen eine Option anzeigt, die einem Zeitplanbesitzer ermöglicht, Windows-Benutzerkonto und Kennwort anzugeben, um einen Datenaktualisierungsauftrag auszuführen.<br /><br /> Secure Store Service muss aktiviert werden, damit diese Option funktioniert. Weitere Informationen finden Sie unter [konfigurieren gespeicherter Anmeldeinformationen für die PowerPivot-Datenaktualisierung &#40;PowerPivot für SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).|  
 |Maximale Verarbeitungsverlaufslänge|365|1 bis 5000 Tage|Bestimmt, wie lange der Datenaktualisierungsverlauf in der PowerPivot-Dienstanwendungsdatenbank beibehalten wird. Weitere Informationen finden Sie unter [PowerPivot Usage Data Collection](power-pivot-usage-data-collection.md).|  
   

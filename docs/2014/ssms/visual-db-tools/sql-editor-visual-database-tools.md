@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.sqleditor
 helpviewer_keywords:
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - View Designer, SQL Editor
 ms.assetid: 029abf7d-6414-47ca-a3a7-b3a057efb6c2
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b0da49516f788d560f8e742ef90d2dc5fd4e7d93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 79542dec3dc8429396cad44ae14be3ce926824c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147804"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181077"
 ---
 # <a name="sql-editor-visual-database-tools"></a>SQL-Editor (Visual Database Tools)
   Verwenden Sie den SQL-Editor, um vorhandene gespeicherte Prozeduren, Funktionen, Trigger und SQL-Skripts zu bearbeiten. Dieses Fenster wird geöffnet, wenn Sie eines dieser Objekte öffnen. Wenn Sie eine neue SQL-Anweisung erstellen möchten, um sie auf Ihre Datenquelle anzuwenden, verwenden Sie den [SQL-Bereich](visual-database-tools.md) des Abfrage-Designers.  

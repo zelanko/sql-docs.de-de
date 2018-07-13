@@ -1,5 +1,5 @@
 ---
-title: DimensionPermission-Datentyp (ASSL) | Microsoft Docs
+title: DimensionPermission-Datentyp (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - DimensionPermission data type
 ms.assetid: 066405ff-903f-467a-b0d5-e58653952c52
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1c614d2fd30f7bd3b831c571cc4d3de0cf26e365
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 740479b334195b36ac7f8d04446575917da04d02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059002"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178837"
 ---
 # <a name="dimensionpermission-data-type-assl"></a>DimensionPermission-Datentyp (ASSL)
   Definiert einen abgeleiteten Datentyp, der die einer Datenbankdimension zugewiesenen Berechtigungen darstellt.  
@@ -68,7 +68,7 @@ ms.locfileid: "36059002"
   
 -   Das*AllowedRowsExpression* -Attribut muss leer sein, andernfalls tritt ein Fehler auf.  
   
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.DimensionPermission>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.DimensionPermission>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services Scripting Language-XML-Datentypen &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

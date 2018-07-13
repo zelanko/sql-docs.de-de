@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cb02d483de02ba4c9cc65a3e9597f5c04e3bb284
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2d857f5c04318c88050f9aa63706f75902c8b445
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061111"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200830"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Lernprogramm: Erstellen von Drillthrough- und Hauptberichten (Berichts-Generator)
   In diesem Lernprogramm erfahren Sie, wie Sie zwei Berichtsarten erstellen: einen Drillthroughbericht und einen Hauptbericht. Die in diesen Berichten verwendeten Beispielvertriebsdaten werden aus einem Analysis Services-Cube abgerufen. Die folgende Abbildung zeigt die Berichte, die Sie erstellen.  
@@ -31,7 +31,7 @@ ms.locfileid: "36061111"
  ![Rs_DrillthroughCubeTutorialParmExpr](../../2014/tutorials/media/rs-drillthroughcubetutorialparmexpr.gif "Rs_DrillthroughCubeTutorialParmExpr")  
   
 ## <a name="what-you-will-learn"></a>Lernziele  
- **Im Drillthroughbericht erfahren Sie, wie Sie:**  
+ **In den Drillthroughbericht lernen Sie, wie Sie:**  
   
 1.  [Erstellen eines Drillthrough-Matrixberichts und eines Datasets mit dem Tabellen- oder Matrix-Assistenten](#DMatrixAndDataset)  
   
@@ -39,39 +39,39 @@ ms.locfileid: "36061111"
   
     2.  [Erstellen Sie eine MDX-Abfrage](#DMDXQuery)  
   
-    3.  [Organisieren von Daten in Gruppen-Stil](#DLayout)  
+    3.  [Organisieren Sie Daten in Gruppen Style](#DLayout)  
   
     4.  [Fügen Sie Teilergebnisse und Summen hinzu](#DTotals)  
   
-    5.  [Auswählen eines Stils](#DStyle)  
+    5.  [Wählen Sie einen Stil](#DStyle)  
   
 2.  [Formatieren von Daten als Währung](#DFormat)  
   
-3.  [Hinzufügen von Spalten zu Sales-Werte anzeigen in Sparklines](#DSparkline)  
+3.  [Hinzufügen von Spalten zum Anzeigen von Umsatzwerten in Sparklines](#DSparkline)  
   
-4.  [Hinzufügen des Berichtstitels mit Product Category Name](#DReportTitle)  
+4.  [Hinzufügen des Berichtstitels mit dem Namen der Produktkategorie](#DReportTitle)  
   
 5.  [Aktualisieren von Parametereigenschaften](#DParameter)  
   
-6.  [Speichern Sie den Bericht in einer SharePoint-Bibliothek](#DSave)  
+6.  [Speichern des Berichts in einer SharePoint-Bibliothek](#DSave)  
   
  **Im Hauptbericht erfahren Sie, wie Sie:**  
   
-1.  [Erstellen Sie die Hauptmatrixberichts und das Dataset mit dem Tabellen- oder Matrix-Assistenten](#MMatrixAndDataset)  
+1.  [Erstellen Sie die Hauptmatrixberichts und eines Datasets mit dem Tabellen- oder Matrix-Assistenten](#MMatrixAndDataset)  
   
     1.  [Angeben einer Datenverbindung](#MConnection)  
   
     2.  [Erstellen Sie eine MDX-Abfrage](#MMDXQuery)  
   
-    3.  [Gruppieren von Daten](#MLayout)  
+    3.  [Daten in Gruppen organisieren](#MLayout)  
   
     4.  [Fügen Sie Teilergebnisse und Summen hinzu](#MTotals)  
   
-    5.  [Auswählen eines Stils](#MStyle)  
+    5.  [Wählen Sie einen Stil](#MStyle)  
   
 2.  [Entfernen der Gesamtergebniszeile](#MGrandTotal)  
   
-3.  [Konfigurieren der Textfeldaktion für Drillthrough](#MDrillthrough)  
+3.  [Konfigurieren der Textfeldaktion für den Drillthrough](#MDrillthrough)  
   
 4.  [Ersetzen von numerischen Werten durch Indikatoren](#MIndicators)  
   
@@ -79,9 +79,9 @@ ms.locfileid: "36061111"
   
 6.  [Hinzufügen eines Berichtstitels](#MTitle)  
   
-7.  [Speichern Sie den Bericht in einer SharePoint-Bibliothek](#MSave)  
+7.  [Speichern des Berichts in einer SharePoint-Bibliothek](#MSave)  
   
-8.  [Ausführen des Haupt- und Drillthroughberichten](#MRunReports)  
+8.  [Führen Sie die Haupt- und Drillthroughberichts](#MRunReports)  
   
  Geschätzte Zeit zum Bearbeiten dieses Lernprogramms: 30 Minuten  
   
@@ -95,13 +95,13 @@ ms.locfileid: "36061111"
   
 1.  Klicken Sie auf **starten**, zeigen Sie auf **Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Berichts-Generator**, und klicken Sie dann auf **Berichts-Generator**.  
   
-     Die **Einstieg** Dialogfeld wird geöffnet. Wenn dies nicht angezeigt wird, aus der **Berichts-Generator** Schaltfläche, klicken Sie auf **neu**.  
+     Die **Einstieg** Dialogfeld wird geöffnet. Wenn es nicht angezeigt wird, aus der **Berichts-Generator** , zeigen Sie auf **neu**.  
   
 2.  Vergewissern Sie sich, dass im linken Bereich **Neuer Bericht** ausgewählt ist.  
   
 3.  Vergewissern Sie sich, dass im rechten Bereich **Tabellen- oder Matrix-Assistent** ausgewählt ist.  
   
-##  <a name="DConnection"></a> 1a. Angeben einer Datenverbindung  
+##  <a name="DConnection"></a> 1a: Angeben einer Datenverbindung  
  Eine Datenverbindung enthält die erforderlichen Informationen zum Herstellen einer Verbindung mit einer externen Datenquelle, z. B. einem Analysis Services-Cube oder einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank. Sie können zum Angeben einer Datenverbindung eine freigegebene Datenquelle vom Berichtsserver verwenden oder eine eingebettete Datenquelle erstellen, die nur in diesem Bericht verwendet wird. In diesem Lernprogramm verwenden Sie eine eingebettete Datenquelle. Weitere Informationen zur Verwendung von freigegebenen Datenquellen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung (Berichts-Generator)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 #### <a name="to-create-an-embedded-data-source"></a>So erstellen Sie eine eingebettete Datenquelle  
@@ -200,7 +200,7 @@ ms.locfileid: "36061111"
     > [!NOTE]  
     >  Der Parameter enthält die Namen von Produktkategorien. Wenn Sie im Hauptbericht auf den Namen einer Produktkategorie klicken, wird dieser Name durch Verwendung dieses Parameters an den Drillthroughbericht übergeben.  
   
-###  <a name="DSkip"></a> So erstellen Sie das dataset  
+###  <a name="DSkip"></a> Zum Erstellen des Datasets  
   
 1.  Ziehen Sie „Channel Name“ aus der Dimension „Channel“ in den Datenbereich.  
   
@@ -242,7 +242,7 @@ ms.locfileid: "36061111"
   
 6.  Klicken Sie auf **Weiter**.  
   
-##  <a name="DTotals"></a> 1-d. Hinzufügen von Teilergebnissen und Summen  
+##  <a name="DTotals"></a> 1D. Hinzufügen von Teilergebnissen und Summen  
  Nachdem Sie Gruppen erstellt haben, können Sie Zeilen hinzufügen und formatieren, in denen Aggregatwerte für die Felder angezeigt werden. Sie können auch auswählen, ob alle Daten angezeigt werden oder der Benutzer gruppierte Daten interaktiv erweitern und reduzieren kann.  
   
 #### <a name="to-add-subtotals-and-totals"></a>So fügen Sie Teilergebnisse und Summen hinzu  
@@ -258,7 +258,7 @@ ms.locfileid: "36061111"
   
 #### <a name="to-specify-a-style"></a>So geben Sie ein Format an  
   
-1.  Auf der **Auswählen eines Formats** Seite im Bereich Formate die Option Schiefer.  
+1.  Auf der **Auswählen eines Formats** Seite Wählen Sie im Bereich Formate Slate-Objekt.  
   
 2.  Klicken Sie auf **Fertig stellen**.  
   
@@ -402,7 +402,7 @@ ms.locfileid: "36061111"
   
 2.  Überprüfen Sie im Dialogfeld **Erste Schritte** , dass **Neuer Bericht** ausgewählt ist, und klicken Sie anschließend auf **Tabellen- oder Matrix-Assistent**.  
   
-##  <a name="MConnection"></a> 1a. Angeben einer Datenverbindung  
+##  <a name="MConnection"></a> 1a: Angeben einer Datenverbindung  
  Sie werden dem Hauptbericht eine eingebettete Datenquelle hinzufügen.  
   
 #### <a name="to-create-an-embedded-data-source"></a>So erstellen Sie eine eingebettete Datenquelle  
@@ -523,7 +523,7 @@ ms.locfileid: "36061111"
   
 8.  Geben Sie im Feld **Name** den Text  **Net Sales**ein, und klicken Sie anschließend auf **OK**. Im Bereich Berechnete Elemente wird das berechnete Element **Net Sales** aufgeführt.  
   
-###  <a name="MSkip"></a> So erstellen Sie das dataset  
+###  <a name="MSkip"></a> Zum Erstellen des Datasets  
   
 1.  Ziehen Sie „Channel Name“ aus der Dimension „Channel“ in den Datenbereich.  
   
@@ -558,7 +558,7 @@ ms.locfileid: "36061111"
   
      In Schritt 3 und 4 werden die Daten angegeben, die in der Matrix angezeigt werden sollen.  
   
-##  <a name="MTotals"></a> 1-d. Hinzufügen von Teilergebnissen und Summen  
+##  <a name="MTotals"></a> 1D. Hinzufügen von Teilergebnissen und Summen  
  Sie können in Berichten Teil- und Gesamtergebnisse anzeigen. Die Daten im Hauptbericht zeigen einen Indikator an; Sie werden die Gesamtsumme nach Abschluss des Assistenten entfernen.  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>So fügen Sie Teilergebnisse und Gesamtsummen hinzu  
@@ -574,7 +574,7 @@ ms.locfileid: "36061111"
   
 #### <a name="to-specify-a-style"></a>So geben Sie ein Format an  
   
-1.  Auf der **Auswählen eines Formats** Seite im Bereich Formate die Option Schiefer.  
+1.  Auf der **Auswählen eines Formats** Seite Wählen Sie im Bereich Formate Slate-Objekt.  
   
 2.  Klicken Sie auf **Fertig stellen**.  
   

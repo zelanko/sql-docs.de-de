@@ -1,5 +1,5 @@
 ---
-title: Plant die Seite (Berichts-Manager) | Microsoft Docs
+title: Plant die Seite (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ef19d96e-9f00-4434-950e-152dda9c1ced
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 8d460ad3e85f1884a101ad1ad52adc1cd04fe43a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bf66402ba021949bce1eb2810d634177ddf1916d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060443"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198510"
 ---
 # <a name="schedules-page-report-manager"></a>Zeitpläne (Seite) (Berichts-Manager)
   Auf der Seite Zeitpläne können Sie freigegebene Zeitpläne erstellen, ändern, löschen, anhalten oder fortsetzen. Ein freigegebener Zeitplan ist ein von Ihnen erstellter benannter Zeitplan, den Sie getrennt von Berichten, Abonnements und anderen Prozessen verwalten, die Zeitplaninformationen verwenden. Benutzer können die von Ihnen bereitgestellten Zeitpläne auswählen.  
@@ -41,7 +41,7 @@ ms.locfileid: "36060443"
 3.  Wählen Sie die Registerkarte **Zeitpläne** aus.  
   
 ## <a name="options"></a>Tastatur  
- **Neuen Zeitplan**  
+ **Neuer Zeitplan**  
  Klicken Sie auf diese Schaltfläche, um die Seite Zeitplanung zu öffnen. Auf dieser Seite können Sie Angaben zur Häufigkeit machen.  
   
  **Delete**  

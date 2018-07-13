@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, managing
 - packages [Integration Services], managing
@@ -27,13 +27,13 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e792b995e73ba4a964bd5076134af8c9817642ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e41b4df0064343cadf6a7da042c243191c0561d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060983"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172961"
 ---
 # <a name="package-management-ssis-service"></a>Paketverwaltung (SSIS-Dienst)
   Die Verwaltung von Paketen beinhaltet u. a. die folgenden Tasks:  
@@ -48,7 +48,7 @@ ms.locfileid: "36060983"
 >  In diesem Thema wird der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst beschrieben, ein Windows-Dienst zur Verwaltung von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] unterstützt den Dienst für die Abwärtskompatibilität mit früheren Versionen von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]können Sie Objekte, z. B. Pakete, auf dem Integration Services-Server verwalten.  
   
 ## <a name="package-store"></a>-Paketspeicher  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält zwei Ordner der obersten Ebene für den Zugriff auf [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Pakete: **ausgeführte Pakete** und **gespeicherte Pakete**. Der Ordner **Ausgeführte Pakete** enthält eine Auflistung der Pakete, die derzeit auf dem Server ausgeführt werden. Im Ordner **Gespeicherte Pakete** sind die im Paketspeicher gespeicherten Pakete aufgelistet. Hierbei handelt es sich um die einzigen vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst verwalteten Pakete. Der Paketspeicher kann aus den msdb-Datenbank- und/oder den Dateisystemordnern bestehen, die in der Konfigurationsdatei des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Diensts aufgelistet sind. In der Konfigurationsdatei sind die zu verwaltenden msdb- und Dateisystemordner angegeben. Sie können Pakete auch an anderen Stellen des Dateisystems speichern, die nicht vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst verwaltet werden.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält zwei Ordner mit der obersten Ebene für den Zugriff auf [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Pakete: **ausgeführte Pakete** und **gespeicherte Pakete**. Der Ordner **Ausgeführte Pakete** enthält eine Auflistung der Pakete, die derzeit auf dem Server ausgeführt werden. Im Ordner **Gespeicherte Pakete** sind die im Paketspeicher gespeicherten Pakete aufgelistet. Hierbei handelt es sich um die einzigen vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst verwalteten Pakete. Der Paketspeicher kann aus den msdb-Datenbank- und/oder den Dateisystemordnern bestehen, die in der Konfigurationsdatei des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Diensts aufgelistet sind. In der Konfigurationsdatei sind die zu verwaltenden msdb- und Dateisystemordner angegeben. Sie können Pakete auch an anderen Stellen des Dateisystems speichern, die nicht vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst verwaltet werden.  
   
  Pakete, die Sie in der msdb-Datenbank speichern, werden in einer Tabelle mit dem Namen „sysssispackages“ gespeichert. Beim Speichern von Paketen in der msdb-Datenbank können Sie die Pakete in logischen Ordnern gruppieren. Die Verwendung von logischen Ordnern ermöglicht Ihnen, die Pakete nach dem Einsatzzweck zu sortieren oder sie in der „sysssispackages“-Tabelle zu filtern. Neue logische Ordner können Sie mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]erstellen. Standardmäßig werden alle logischen Ordner, die Sie der msdb-Datenbank hinzufügen, automatisch in den Paketspeicher übernommen.  
   

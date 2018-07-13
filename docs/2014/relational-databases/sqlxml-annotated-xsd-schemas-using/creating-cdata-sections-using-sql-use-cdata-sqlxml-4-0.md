@@ -1,5 +1,5 @@
 ---
-title: 'Erstellen von CDATA-Abschnitten mithilfe von SQL: use-Cdata (SQLXML 4.0) | Microsoft Docs'
+title: 'Erstellen von CDATA-Abschnitten mithilfe von SQL: use-Cdata (SQLXML 4.0) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - sql:use-cdata
 ms.assetid: 26d2b9dc-f857-44ff-bcd4-aaf64ff809d0
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b8855ec04b30f7e92176f19ee8ed816e2870fe50
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: eb7e3e0acc985dce3d3783de63bea95f9de6877f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060897"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175424"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>Erstellen von CDATA-Abschnitten mit sql:use-cdata (SQLXML 4.0)
   In XML werden Textblöcke, die Zeichen enthalten, die andernfalls als Markup erkannt würden, mit CDATA-Abschnitten in Escapezeichen umgewandelt.  
   
- Eine Datenbank in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann manchmal Zeichen enthalten, die vom XML-Parser als Markupzeichen behandelt; zum Beispiel werden spitze Klammern (\< und >), das kleiner-als-oder-gleich-Symbol (< =), und das kaufmännische und-Zeichen (&) sind als Markupzeichen behandelt. Sie können diese Sonderzeichen in einem CDATA-Abschnitt jedoch umschließen, um zu verhindern, dass sie als Markupzeichen behandelt werden. Der Text innerhalb des CDATA-Abschnitts wird vom XML-Parser als Nur-Text behandelt.  
+ In einer Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann manchmal Zeichen enthalten, die von der XML-Parser als Markupzeichen behandelt werden, zum Beispiel werden spitze Klammern (\< und >), das kleiner-als-oder-gleich-Symbol (< =), und das kaufmännische und-Zeichen (&) sind als Markupzeichen behandelt. Sie können diese Sonderzeichen in einem CDATA-Abschnitt jedoch umschließen, um zu verhindern, dass sie als Markupzeichen behandelt werden. Der Text innerhalb des CDATA-Abschnitts wird vom XML-Parser als Nur-Text behandelt.  
   
  Mit der `sql:use-cdata`-Anmerkung wird angegeben, dass die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegebenen Daten in einem CDATA-Abschnitt umschlossen werden (d. h., sie gibt an, ob der Wert aus einer Spalte, die von `sql:field` angegeben wird, in einem CDATA-Abschnitt eingeschlossen werden soll). Die `sql:use-cdata`-Anmerkung kann nur für Elemente angegeben werden, die einer Datenbankspalte zugeordnet werden.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36060897"
  Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen für die Ausführung von SQLXML-Beispielen](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqluse-cdata-on-an-element"></a>A. Angeben von sql:use-cdata für ein Element  
- Im folgenden Schema `sql:use-cdata` auf 1 (True) festgelegt ist, für die  **\<AddressLine1 >** innerhalb der  **\<Adresse >** Element. Daraufhin werden die Daten in einem CDATA-Abschnitt zurückgegeben.  
+ Im folgenden Schema `sql:use-cdata` auf 1 (True) festgelegt ist, die für die  **\<AddressLine1 >** innerhalb der  **\<Adresse >** Element. Daraufhin werden die Daten in einem CDATA-Abschnitt zurückgegeben.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -87,7 +87,7 @@ ms.locfileid: "36060897"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Im Folgenden wird ein Teil des Resultsets aufgeführt:  
   

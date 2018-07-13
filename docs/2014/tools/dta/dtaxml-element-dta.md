@@ -1,5 +1,5 @@
 ---
-title: DTAXML-Element (DTA) | Microsoft Docs
+title: DTAXML-Element (DTA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - DTAXML element
 ms.assetid: 3d9942ed-8a27-40db-a7c9-808984d914a2
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c521ec45d5b9227d53fcc9f39b59301ba18b7e69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d460721fd138c0629322687b1160b8c75cdd0cfa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059054"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177137"
 ---
 # <a name="dtaxml-element-dta"></a>DTAXML-Element (DTA)
   Das Stammelement einer XML-Eingabe- oder -Ausgabedatei des Datenbankoptimierungsratgebers. **DTAXML** enthält alle Elemente, die die vom Datenbankoptimierungsratgeber generierte Optimierungseingabe und -ausgabe beschreiben.  
@@ -59,7 +59,7 @@ ms.locfileid: "36059054"
 |Beziehung|Elemente|  
 |------------------|--------------|  
 |**Übergeordnetes Element**|InclusionThresholdSetting|  
-|**Untergeordnete Elemente**|[DTAInput-Element &#40;DTA&#41;](dtainput-element-dta.md)<br /><br /> `DTAOutput` Element (finden Sie unter [Datenbank-Engine Tuning Advisor XML-Schema](http://schemas.microsoft.com/sqlserver/) Informationen)|  
+|**Untergeordnete Elemente**|[DTAInput-Element &#40;DTA&#41;](dtainput-element-dta.md)<br /><br /> `DTAOutput` -Element (finden Sie unter [-Datenbank-Engine Tuning Advisor XML-Schema](http://schemas.microsoft.com/sqlserver/) Informationen)|  
   
 ## <a name="remarks"></a>Hinweise  
  Weitere Informationen zu XML-Namespaces finden Sie unter [Namespaces in an XML Document](http://go.microsoft.com/fwlink/?LinkId=7341) (in Englisch) in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN Library.  
@@ -68,7 +68,7 @@ ms.locfileid: "36059054"
  Beispiele für typische **DTAXML**-Elemente finden Sie unter [Beispiele für XML-Eingabedateien &#40;DTA&#41;](xml-input-file-samples-dta.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [XML-Eingabe Dateiverweis &#40;Datenbankmodul-Optimierungsratgeber&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)   
+ [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)   
  [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)  
   
   

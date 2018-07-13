@@ -1,5 +1,5 @@
 ---
-title: CubeHierarchy-Datentyp (ASSL) | Microsoft Docs
+title: CubeHierarchy-Datentyp (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CubeHierarchy data type
 ms.assetid: cd633409-0c14-4dd9-97cc-3d30e25df24f
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 48176b4096b7fa7ba8e1847750410be0f65da552
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d719b6c841b27df473599514dc12c4e90644610
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147769"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176197"
 ---
 # <a name="cubehierarchy-data-type-assl"></a>CubeHierarchy-Datentyp (ASSL)
-  Definiert einen Grunddatentyp, der Informationen darstellt, zu einer [Hierarchie](../objects/hierarchy-element-assl.md) Element in eine [Cube](../objects/cube-element-assl.md) Element.  
+  Definiert einen Grunddatentyp ab, die Informationen über eine [Hierarchie](../objects/hierarchy-element-assl.md) Element in einer [Cube](../objects/cube-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -59,9 +59,9 @@ ms.locfileid: "36147769"
 ## <a name="remarks"></a>Hinweise  
  Dieser Datentyp unterliegt in keinem Bereitstellungsmodus Einschränkungen und kann in jedem dieser Modi verwendet werden: 0 - Mehrdimensional und Data Mining, 1 - SharePoint und 2 - Tabellarisch.  
   
- In [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)], *aktiviert* Eigenschaft kann nicht festgelegt werden, um `False` für *CubeHierarchy*.  
+ In [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)], *aktiviert* Eigenschaft nicht festgelegt werden, um `False` für *CubeHierarchy*.  
   
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.CubeHierarchy>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.CubeHierarchy>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Discover-Methode &#40;XMLA&#41;](../../xmla/xml-elements-methods-discover.md)   

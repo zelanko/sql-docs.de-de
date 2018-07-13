@@ -1,5 +1,5 @@
 ---
-title: Schema-Element (ASSL) | Microsoft Docs
+title: Schema-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Schema element
 ms.assetid: 4b6375fb-7ad8-4d5f-88b1-abd3da2654db
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 130d1363a007fb51db3bc7b39efcae4d9140c368
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3bcf275eafb8a982fa2ddf9d5ecb82d45e435fa5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061491"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200040"
 ---
 # <a name="schema-element-assl"></a>Schema-Element (ASSL)
   Enthält das Schema der Datenquellensicht.  
@@ -64,7 +64,7 @@ ms.locfileid: "36061491"
 ## <a name="remarks"></a>Hinweise  
  `Schema` wird durch das XSD-Sprachformat (XML Schema Definition) der DataSets im [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework dargestellt, wobei einige Erweiterungen für die DataSets und andere spezifisch für die Verwendung innerhalb der Datendefinitionssprache (DDL; Data Definition Language) sind. DataSets definieren eine flexible Zuordnung von XSD zu einem relationalen Schema, aber geben XSD in einer kanonischeren Form zurück. Nur diese kanonische Form ist innerhalb der Datenquellen gültig.  
   
- Das Element, das das übergeordnete Element des entspricht `Schema` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.DataSourceView>.  
+ Das Element, das dem übergeordneten entspricht `Schema` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.DataSourceView>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

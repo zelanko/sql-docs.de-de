@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSRS, upgrading
 - Reporting Services, upgrades
@@ -18,13 +18,13 @@ ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 caps.latest.revision: 97
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 2f140a9c83562ff86dc1a890f2d5a7e0ce7a272c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 626e7c922eb2b6126bdec0b2f9e53b3ab4f1d22d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147639"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204950"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
   Dieses Thema enthält eine Übersicht der Upgrade- und Migrationsoptionen für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Es gibt zwei allgemeine Vorgehensweisen beim Upgrade einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung:  
@@ -49,7 +49,7 @@ ms.locfileid: "36147639"
   
 -   [Upgrade im einheitlichen Modus und Migrationsszenarien](#bkmk_native_scenarios)  
   
--   [Aktualisieren einer Reporting Services im einheitlichen Modus Dezentrales Skalieren](#bkmk_native_scaleout)  
+-   [Aktualisieren einer Reporting Services im einheitlichen Modus Horizontal skalierte Bereitstellung](#bkmk_native_scaleout)  
   
 -   [Upgrade des SharePoint-Modus und Migrationsszenarien](#bkmk_sharePoint_scenarios)  
   
@@ -65,16 +65,16 @@ ms.locfileid: "36147639"
 >   
 >  -   [Versionsanmerkungen zu SQL Server 2014](http://go.microsoft.com/fwlink/?LinkID=296445).  
 > -   [SQL Server 2014 Reporting Services – Tipps, Tricks und Problembehandlung](http://go.microsoft.com/fwlink/?LinkID=391254).  
-> -   Verwendung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor. Weitere Informationen finden Sie unter [Reporting Services Probleme beim Upgrade &#40;Upgrade Advisor&#41; ](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md) und [Vorgehensweise: Installieren von Upgrade Advisor](../../../2014/sql-server/install/how-to-install-upgrade-advisor.md).  
+> -   Verwendung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor. Weitere Informationen finden Sie unter [Reporting Services Probleme beim Upgrade &#40;Upgrade Advisor&#41; ](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md) und [Vorgehensweise: Installieren Sie Upgrade Advisor](../../../2014/sql-server/install/how-to-install-upgrade-advisor.md).  
   
- ![Pfeilsymbol mit Back Link zum Anfang verwendet](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Back Link zum Anfang verwendet") [In diesem Thema:](#bkmk_top)  
+ ![Pfeilsymbol mit Rückverweis auf den obersten](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Rückverweis auf den obersten") [In diesem Thema:](#bkmk_top)  
   
 ##  <a name="bkmk_side_by_side"></a> Parallele Installationen  
  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] im einheitlichen Modus kann parallel mit einer Bereitstellung von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] im einheitlichen Modus installiert werden.  
   
  Parallele Bereitstellungen von Komponenten mit [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] im SharePoint-Modus und allen Vorgängerversionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus werden nicht unterstützt.  
   
- ![Pfeilsymbol mit Back Link zum Anfang verwendet](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Back Link zum Anfang verwendet") [In diesem Thema:](#bkmk_top)  
+ ![Pfeilsymbol mit Rückverweis auf den obersten](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Rückverweis auf den obersten") [In diesem Thema:](#bkmk_top)  
   
 ##  <a name="bkmk_inplace_upgrade"></a> Direktes upgrade  
  Das Upgrade wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup ausgeführt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup kann verwendet werden, um ein Upgrade von einer oder allen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten, einschließlich [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], durchzuführen. Setup erkennt die vorhandenen Instanzen und fordert Sie auf, das Upgrade durchzuführen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup stellt Upgradeoptionen bereit, die Sie als Befehlszeilenargument oder im Setup-Assistenten angeben können.  
@@ -97,7 +97,7 @@ ms.locfileid: "36147639"
 |[Aktualisieren auf SQL Server 2014 mithilfe des Installations-Assistenten &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)|  
 |[Installieren von SQL Server 2014 von der Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)|  
   
- ![Pfeilsymbol mit Back Link zum Anfang verwendet](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Back Link zum Anfang verwendet") [In diesem Thema:](#bkmk_top)  
+ ![Pfeilsymbol mit Rückverweis auf den obersten](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Rückverweis auf den obersten") [In diesem Thema:](#bkmk_top)  
   
 ##  <a name="bkmk_upgrade_checklist"></a> Prüfliste vor dem Upgrade  
  Lesen Sie vor dem Upgrade auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]die folgenden Themen:  
@@ -108,7 +108,7 @@ ms.locfileid: "36147639"
   
 -   Lesen Sie bewährte Methoden und Anleitungen hinsichtlich der Sicherheit für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [Security Considerations for a SQL Server Installation](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
--   Führen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor auf dem Berichtsservercomputer zum Ermitteln von Problemen, die erfolgreiches Upgrade verhindern könnten. Weitere Informationen finden Sie unter [Use Upgrade Advisor to Prepare for Upgrades](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
+-   Führen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor auf dem Berichtsservercomputer zum Ermitteln von Problemen, die erfolgreich ein Upgrade verhindern könnten. Weitere Informationen finden Sie unter [Use Upgrade Advisor to Prepare for Upgrades](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
   
 -   Sichern Sie den symmetrischen Schlüssel. Weitere Informationen finden Sie unter [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   
@@ -120,7 +120,7 @@ ms.locfileid: "36147639"
   
  Bevor Sie eine Produktionsumgebung aktualisieren, führen Sie immer ein Testupgrade in einer Vorproduktionsumgebung aus, die die gleiche Konfiguration wie Ihre Produktionsumgebung aufweist.  
   
- ![Pfeilsymbol mit Back Link zum Anfang verwendet](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Back Link zum Anfang verwendet") [In diesem Thema:](#bkmk_top)  
+ ![Pfeilsymbol mit Rückverweis auf den obersten](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Rückverweis auf den obersten") [In diesem Thema:](#bkmk_top)  
   
 ## <a name="overview-of-migration-scenarios"></a>Übersicht über Migrationsszenarien  
  Wenn Sie von einer unterstützten Version von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aktualisieren, können Sie normalerweise den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup-Assistenten ausführen, um ein Upgrade der Berichtsserver-Programmdateien, der Datenbank und alle zugehörigen Anwendungsdaten durchzuführen.  
@@ -135,7 +135,7 @@ ms.locfileid: "36147639"
   
 -   Sie möchten eine SharePoint 2010-Bereitstellung von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] zu SharePoint 2013 migrieren. SharePoint 2013 unterstützt keine direkten Upgrades aus SharePoint 2010. Weitere Informationen finden Sie unter [Migrieren einer Installation von Reporting Services &#40;SharePoint Modus&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
   
- ![Pfeilsymbol mit Back Link zum Anfang verwendet](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Back Link zum Anfang verwendet") [In diesem Thema:](#bkmk_top)  
+ ![Pfeilsymbol mit Rückverweis auf den obersten](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Rückverweis auf den obersten") [In diesem Thema:](#bkmk_top)  
   
 ##  <a name="bkmk_native_scenarios"></a> Upgrade im einheitlichen Modus und Migrationsszenarien  
  **Upgrade:** Direkte Upgrades für den einheitlichen Modus werden für jede der unterstützten Versionen, die oben in diesem Thema aufgeführt sind, gleich ausgeführt. Führen Sie den SQL Server-Installations-Assistenten oder eine Befehlszeileninstallation aus. Nach der Installation wird die Berichtsserver-Datenbank automatisch auf das neue Berichtsserver-Datenbankschema aktualisiert. Weitere Informationen finden Sie im Abschnitt [In-place upgrade](#bkmk_inplace_upgrade) in diesem Thema.  
@@ -164,13 +164,13 @@ ms.locfileid: "36147639"
   
 7.  Setup reserviert neue URLs auf der Grundlage von vorhandenen virtuellen Verzeichniseinstellungen in IIS. Setup entfernt möglicherweise keine virtuellen Verzeichnisse in IIS, vergessen Sie also nicht, diese nach Abschluss des Upgrades manuell zu entfernen.  
   
-8.  Das Setup aktualisiert die Berichtsserverdatenbanken auf das neue Schema und ändert `RSExecRole` durch Hinzufügen der Berechtigungen des Datenbankbesitzers zu der Rolle. Dieser Schritt erfolgt nur, wenn Sie eine von Aktualisierung [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vor SP1.  
+8.  Das Setup aktualisiert die Berichtsserverdatenbanken auf das neue Schema und ändert `RSExecRole` durch Hinzufügen der Berechtigungen des Datenbankbesitzers zu der Rolle. Dieser Schritt erfolgt nur, wenn Sie ein Upgrade [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vor SP1.  
   
 9. Beim Setup werden die Einstellungen in den Konfigurationsdateien zusammengeführt. Auf der Grundlage der Konfigurationsdateien aus der aktuellen Installation werden neue Einträge hinzugefügt. Veraltete Einträge werden nicht entfernt; sie werden jedoch nach Abschluss des Upgrades nicht mehr vom Berichtsserver gelesen. Beim Upgrade werden alte Protokolldateien, die veraltete Datei RSWebApplication.config oder Einstellungen für virtuelle Verzeichnisse in IIS nicht gelöscht. Beim Upgrade werden SQL Server 2005-Berichts-Designer, Management Studio und andere Clienttools nicht entfernt. Wenn Sie diese Dateien und Tools nicht mehr benötigen, müssen Sie sie nach Abschluss des Upgrades entfernen.  
   
- **Migration:** Migrieren von einer früheren Version einer Installation im einheitlichen Modus zu [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ist die gleichen Schritte für alle unterstützten Versionen, die weiter oben in diesem Thema aufgeführt sind. Weitere Informationen finden Sie unter [Migrieren einer Installation von Reporting Services &#40;Einheitlicher Modus&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
+ **Migration:** Migration von einer früheren Version einer Installation im einheitlichen Modus zu [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ist die gleichen Schritte für alle unterstützten Versionen, die weiter oben in diesem Thema aufgeführt sind. Weitere Informationen finden Sie unter [Migrieren einer Installation von Reporting Services &#40;Einheitlicher Modus&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
   
- ![Pfeilsymbol mit Back Link zum Anfang verwendet](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Back Link zum Anfang verwendet") [In diesem Thema:](#bkmk_top)  
+ ![Pfeilsymbol mit Rückverweis auf den obersten](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Rückverweis auf den obersten") [In diesem Thema:](#bkmk_top)  
   
 ##  <a name="bkmk_native_scaleout"></a> Aktualisieren einer Bereitstellung für horizontales Skalieren mit Reporting Services im einheitlichen Modus  
  Im Folgenden erhalten Sie eine Übersicht darüber, wie Sie eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung im einheitlichen Modus aktualisieren, die horizontal auf mehr als einen Berichtsserver skaliert ist. Bei diesem Vorgang muss die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung außer Betrieb gesetzt werden:  
@@ -228,9 +228,9 @@ ms.locfileid: "36147639"
   
      Wenn in der Endumgebung außerdem SharePoint 2013 ausgeführt werden soll, müssen Sie beim Aktualisieren von SharePoint 2010 auf SharePoint 2013 ein Upgrade mit Anfügen der Datenbanken ausführen.  
   
- ![Pfeilsymbol mit Back Link zum Anfang verwendet](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Back Link zum Anfang verwendet") [In diesem Thema:](#bkmk_top)  
+ ![Pfeilsymbol mit Rückverweis auf den obersten](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Rückverweis auf den obersten") [In diesem Thema:](#bkmk_top)  
   
-### <a name="includesskatmaiincludessskatmai-mdmd-sp2-to-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2 bis [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+### <a name="includesskatmaiincludessskatmai-mdmd-sp2-to-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2 auf [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  **Startumgebung:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2, SharePoint 2007.  
   
  **Endumgebung:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SharePoint 2010.  
@@ -248,7 +248,7 @@ ms.locfileid: "36147639"
   
 -   Aktualisieren Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Wenn Sie den SQL Server-Installations-Assistenten ausführen, sehen Sie ein Dialogfeld zur**Authentifizierung von SQL Server Reporting Services im SharePoint-Modus**. Der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienst wird installiert, und anhand der Anmeldeinformationen von der Authentifizierungsseite wird ein neuer SharePoint-Anwendungspool erstellt.  
   
- ![Pfeilsymbol mit Back Link zum Anfang verwendet](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Back Link zum Anfang verwendet") [In diesem Thema:](#bkmk_top)  
+ ![Pfeilsymbol mit Rückverweis auf den obersten](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Rückverweis auf den obersten") [In diesem Thema:](#bkmk_top)  
   
 ### <a name="sql-server-2005-sp2-to-includesssql14includessssql14-mdmd"></a>SQL Server 2005 SP2 bis [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  **Startumgebung:** SQL Server 2005 SP2, SharePoint 2007.  
@@ -268,7 +268,7 @@ ms.locfileid: "36147639"
   
 -   Aktualisieren Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Wenn Sie den SQL Server-Installations-Assistenten ausführen, sehen Sie ein Dialogfeld zur Authentifizierung von SQL Server Reporting Services im SharePoint-Modus. Der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienst wird installiert, und anhand der Anmeldeinformationen von der Authentifizierungsseite wird ein neuer SharePoint-Anwendungspool erstellt.  
   
- ![Pfeilsymbol mit Back Link zum Anfang verwendet](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Back Link zum Anfang verwendet") [In diesem Thema:](#bkmk_top)  
+ ![Pfeilsymbol mit Rückverweis auf den obersten](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Rückverweis auf den obersten") [In diesem Thema:](#bkmk_top)  
   
 ##  <a name="bkmk_migration_considerations"></a> Migrationsüberlegungen  
  Beim Verschieben von Anwendungsdaten sind folgende Aspekte und Einschränkungen zu beachten:  
@@ -284,11 +284,11 @@ ms.locfileid: "36147639"
   
  Sie müssen den zuvor gesicherten Schlüssel wiederherstellen, um auf dem neuen Computer wieder eine umkehrbare Verschlüsselung einzurichten. Der komplette in der Berichtsserver-Datenbank gespeicherte Schlüsselsatz besteht aus einem symmetrischen Schlüsselwert sowie Informationen zur Dienstidentität, mit denen der Zugriff auf den Schlüssel so beschränkt wird, dass diese nur von der Berichtsserverinstanz verwendet werden können, auf denen sie gespeichert wurden. Während der Schlüsselwiederherstellung ersetzt der Berichtsserver vorhandene Kopien des Schlüssels durch neue Versionen. Die neue Version umfasst Werte für die Computer- und Dienstidentität, die auf dem aktuellen Computer definiert wurden. Weitere Informationen finden Sie in folgenden Themen:  
   
--   SharePoint-Modus: finden Sie im Abschnitt "Schlüsselverwaltung" von [Verwalten einer Reporting Services SharePoint-Dienstanwendung](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)  
+-   SharePoint-Modus: finden Sie im Abschnitt "Schlüsselverwaltung" [Verwalten einer Reporting Services SharePoint-Dienstanwendung](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)  
   
 -   Einheitlicher Modus: [Sichern und Wiederherstellen von Reporting Services-Verschlüsselungsschlüsseln](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
- ![Pfeilsymbol mit Back Link zum Anfang verwendet](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Back Link zum Anfang verwendet") [In diesem Thema:](#bkmk_top)  
+ ![Pfeilsymbol mit Rückverweis auf den obersten](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Rückverweis auf den obersten") [In diesem Thema:](#bkmk_top)  
   
 ### <a name="fixed-database-name"></a>Fester Datenbankname  
  Sie können die Berichtsserver-Datenbank nicht umbenennen. Die Identität der Datenbank wird bei der Datenbankerstellung in auf dem Berichtsserver gespeicherten Prozeduren aufgezeichnet. Wenn die primären oder temporären Berichtsserver-Datenbanken umbenannt werden, treten während der Ausführung der Prozeduren Fehler auf, sodass die Berichtsserver-Installation ungültig wird.  
@@ -301,7 +301,7 @@ ms.locfileid: "36147639"
   
 -   Wenn nur wenige Elemente vorliegen, können Sie die Berichte, Berichtsmodelle und freigegebenen Datenquellen vom Berichts-Designer, Modell-Designer und Berichts-Generator aus erneut auf dem neuen Berichtsserver veröffentlichen. Sie müssen Rollenzuweisungen, Abonnements, freigegebene Zeitpläne, Zeitpläne für Berichtmomentaufnahmen, benutzerdefinierte Eigenschaften, die Sie für Berichte und andere Elemente festlegen, Modellelementsicherheit und Eigenschaften, die Sie auf dem Berichtsserver festlegen, erneut erstellen. Die Protokolldaten über Berichtsverlauf und Berichtsausführung gehen verloren.  
   
- ![Pfeilsymbol mit Back Link zum Anfang verwendet](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Back Link zum Anfang verwendet") [In diesem Thema:](#bkmk_top)  
+ ![Pfeilsymbol mit Rückverweis auf den obersten](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Rückverweis auf den obersten") [In diesem Thema:](#bkmk_top)  
   
 ##  <a name="bkmk_additional_resources"></a> Zusätzliche Ressourcen  
   
@@ -314,7 +314,7 @@ ms.locfileid: "36147639"
   
 -   [Aktualisieren von Datenbanken von SharePoint 2010 auf SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690).  
   
- ![Pfeilsymbol mit Back Link zum Anfang verwendet](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Back Link zum Anfang verwendet") [In diesem Thema:](#bkmk_top)  
+ ![Pfeilsymbol mit Rückverweis auf den obersten](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Rückverweis auf den obersten") [In diesem Thema:](#bkmk_top)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Aktualisieren von Berichten](../../reporting-services/install-windows/upgrade-reports.md)   

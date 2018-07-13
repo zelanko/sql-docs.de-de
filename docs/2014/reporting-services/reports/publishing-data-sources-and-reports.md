@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publishing data sources [Reporting Services]
 - publishing reports [Reporting Services]
 - data sources [Reporting Services], managing
 ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cc6610ad05fceb4ccfa51e7e383f9bb286e9a6b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 147892370a3cb93831ae2d99cf77906eca67ca5e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061314"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214510"
 ---
 # <a name="publishing-data-sources-and-reports"></a>Veröffentlichen von Datenquellen und Berichten
   Vor dem Veröffentlichen Ihres Berichts sollten Sie ihn in der Vorschau anzeigen. Sie können die Gestaltung weiter optimieren, bis Sie mit den Ergebnissen zufrieden sind.  
@@ -39,7 +39,7 @@ ms.locfileid: "36061314"
  [Veröffentlichen von Berichten auf einem Berichtsserver](publishing-reports-to-a-report-server.md)  
  Beschreibt das Veröffentlichen eines Berichts auf einem Berichtsserver.  
   
- [Beispiele für URLs für veröffentlichte Berichtselemente auf einem Berichtsserver im SharePoint-Modus &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
+ [Beispiele URLs von veröffentlichten Berichtselementen auf einem Berichtsserver im SharePoint-Modus &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
  Beschreibt das Veröffentlichen eines Berichts auf einer SharePoint-Website.  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - walkthroughs [Reporting Services]
 - tutorials [Reporting Services]
 - reports [Reporting Services], creating
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
 caps.latest.revision: 61
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4f8b3f60d82a94fa7289054d0028ab539abade64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a5c3560a7aafd3fcf53f9b10d606e1f999bbf063
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061337"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196810"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Erstellen eines einfachen Tabellenberichts (SSRS-Lernprogramm)
-  Dieses Lernprogramm wurde entwickelt, helfen Ihnen beim Erstellen eines einfachen Tabellenberichts basierend auf der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] -Datenbank mithilfe von Berichts-Designer. Sie können die Berichte auch mithilfe des Berichts-Generators oder des Berichts-Assistenten erstellen. In diesem Lernprogramm erstellen Sie ein Berichtsprojekt, richten Verbindungsinformationen ein, definieren eine Abfrage, fügen einen Tabellendatenbereich hinzu und zeigen den Bericht in der Vorschau an.  
+  In diesem Tutorial wurde entwickelt, unterstützt Sie beim Erstellen eines einfachen Tabellenberichts basierend auf den [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] -Datenbank mithilfe von Berichts-Designer. Sie können die Berichte auch mithilfe des Berichts-Generators oder des Berichts-Assistenten erstellen. In diesem Lernprogramm erstellen Sie ein Berichtsprojekt, richten Verbindungsinformationen ein, definieren eine Abfrage, fügen einen Tabellendatenbereich hinzu und zeigen den Bericht in der Vorschau an.  
   
 > [!NOTE]  
 >  Zum Durcharbeiten dieses Lernprogramms müssen Sie [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im einheitlichen Modus ausführen. Wenn Sie [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im integrierten SharePoint-Modus verwenden, können die Schritte nicht ausgeführt werden, in denen Berichtsserver-URLs enthalten sind. Weitere Informationen zu [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Modi finden Sie unter [Reporting Services-Berichtsserver](reporting-services-report-server.md).  
@@ -45,7 +45,7 @@ ms.locfileid: "36061337"
     > [!NOTE]  
     >  [!INCLUDE[ssNote64Samp](../includes/ssnote64samp-md.md)]  
   
- Sie benötigen auch nur-Lese Zugriff zum Abrufen von Daten aus der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] Datenbank.  
+ Außerdem benötigen Sie schreibgeschützte Berechtigungen zum Abrufen von Daten aus der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] Datenbank.  
   
 ## <a name="tasks"></a>Aufgaben  
  [Lektion 1: Erstellen eines Berichtsserverprojekts &#40;Reporting Services&#41;](lesson-1-creating-a-report-server-project-reporting-services.md)  
@@ -54,14 +54,14 @@ ms.locfileid: "36061337"
   
  [Lektion 3: Definieren eines Datasets für den Tabellenbericht &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)  
   
- [Lektion 4: Hinzufügen einer Tabellenstatus zum Bericht &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)  
+ [Lektion 4: Hinzufügen einer Tabelle zum Bericht &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)  
   
  [Lektion 5: Formatieren eines Berichts &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md)  
   
  [Lektion 6: Hinzufügen von Gruppierungen und Gesamtwerten &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)  
   
 > [!NOTE]  
->  Anzeige der Lernprogramme empfehlen wir, hinzuzufügen, **Weiter** und **vorherige** der Dokumentanzeige die Schaltflächen. Weitere Informationen finden Sie weiter oben unter  
+>  Anzeige der Lernprogramme empfehlen wir, hinzuzufügen, **Weiter** und **zurück** in der Symbolleiste der Dokumentanzeige die Schaltflächen. Weitere Informationen finden Sie weiter oben unter  
   
 ## <a name="see-also"></a>Siehe auch  
  [Reporting Services-Tutorials &#40;SSRS&#41;](reporting-services-tutorials-ssrs.md)  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d2698cc6ce0bd17b7d9cb079fdc4f4c7c1e70c20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 4d131860981e30c6a45d4b7fddbb6d7133d10d6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058289"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209170"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lektion 2: Herstellen einer Verbindung von einem anderen Computer
   Zum Erhöhen der Sicherheit ist der Zugriff auf [!INCLUDE[ssDE](../includes/ssde-md.md)] der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer, Express und Evaluation Edition von einem anderen Computer aus nach der Erstinstallation nicht möglich. In dieser Lektion erfahren Sie, wie Sie die Protokolle aktivieren, die Ports konfigurieren und die Windows-Firewall für das Herstellen von Verbindungen von anderen Computern konfigurieren.  
@@ -49,7 +49,7 @@ ms.locfileid: "36058289"
     > [!NOTE]  
     >  Möglicherweise steht sowohl die 32-Bit- als auch die 64-Bit-Option zur Verfügung.  
   
-2.  In **SQL Server-Konfigurations-Manager**, erweitern Sie **SQL Server-Netzwerkkonfiguration**, und klicken Sie dann auf **Protokolle für**  *\<InstanceName >*.  
+2.  In **SQL Server-Konfigurations-Manager**, erweitern Sie **SQL Server-Netzwerkkonfiguration**, und klicken Sie dann auf **Protokolle für**  *\<Instanzname >*.  
   
      Die Standardinstanz (eine unbenannte Instanz) wird als **MSSQLSERVER**aufgelistet. Wenn Sie eine benannte Instanz installiert haben, wird der von Ihnen angegebene Name aufgeführt. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] wird als **SQLEXPRESS**installiert, es sei denn, der Name wurde während des Setups geändert.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36058289"
     > [!NOTE]  
     >  Wenn Sie Änderungen an Netzwerkprotokollen vorgenommen haben, müssen Sie den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Dienst neu starten. Dieser Schritt wird in der nächsten Aufgabe ausgeführt.  
   
-##  <a name="port"></a> Die Konfiguration eines festen Ports  
+##  <a name="port"></a> Konfigurieren eines festen Ports  
  Zum Erhöhen der Sicherheit wird die Windows-Firewall von Windows Server 2008, [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]und Windows 7 aktiviert. Um von einem anderen Computer eine Verbindung mit dieser Instanz herzustellen, müssen Sie einen Kommunikationsport in der Firewall öffnen. Die Standardinstanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] lauscht an Port 1433; aus diesem Grund ist es nicht erforderlich, einen festen Port zu konfigurieren. Benannte Instanzen, einschließlich [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , lauschen jedoch an dynamischen Ports. Bevor Sie einen Port in der Firewall öffnen können, müssen Sie [!INCLUDE[ssDE](../includes/ssde-md.md)] so konfigurieren, dass an einem bestimmten Port gelauscht wird, der als fester oder statischer Port bezeichnet wird. Andernfalls wird von [!INCLUDE[ssDE](../includes/ssde-md.md)] bei jedem Start möglicherweise ein anderer Port überwacht. Weitere Informationen zu Firewalls, den Standardeinstellungen der Windows-Firewall und eine Beschreibung der TCP-Ports, die sich auf Datenbank-Engine, Analysis Services, Reporting Services und Integration Services auswirken, finden Sie unter [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 > [!NOTE]  
@@ -72,7 +72,7 @@ ms.locfileid: "36058289"
   
 3.  Klicken Sie im Dialogfeld **TCP/IP-Eigenschaften** auf die Registerkarte **IP-Adressen** .  
   
-4.  Geben Sie im Feld **TCP-Port** des Abschnitts **IPAll** eine verfügbare Portnummer ein. Für dieses Lernprogramm verwenden wir `49172`.  
+4.  Geben Sie im Feld **TCP-Port** des Abschnitts **IPAll** eine verfügbare Portnummer ein. In diesem Tutorial verwenden wir `49172`.  
   
 5.  Klicken Sie auf **OK** , um das Dialogfeld zu schließen, und klicken Sie auf **OK** , um die Warnung zu bestätigen, dass der Dienst neu gestartet werden muss.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36058289"
   
 3.  Wählen Sie im Dialogfeld **Regeltyp** die Option **Port**aus, und klicken Sie anschließend auf **Weiter**.  
   
-4.  Wählen Sie im Dialogfeld **Protokoll und Ports** die Option **TCP**aus. Wählen Sie **Bestimmte lokale Ports**aus, und geben Sie anschließend die Portnummer der Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)]ein. Geben Sie 1433 für die Standardinstanz ein. Typ `49172` Wenn Sie eine benannte Instanz konfigurieren und in der vorherigen Aufgabe einen festen Port konfiguriert. Klicken Sie auf **Weiter**.  
+4.  Wählen Sie im Dialogfeld **Protokoll und Ports** die Option **TCP**aus. Wählen Sie **Bestimmte lokale Ports**aus, und geben Sie anschließend die Portnummer der Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)]ein. Geben Sie 1433 für die Standardinstanz ein. Typ `49172` , wenn Sie eine benannte Instanz konfigurieren und einen festen Port konfiguriert, in der vorherigen Aufgabe haben. Klicken Sie auf **Weiter**.  
   
 5.  Wählen Sie im Dialogfeld **Aktion** die Option **Verbindung zulassen**aus, und klicken Sie anschließend auf **Weiter**.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "36058289"
   
  Weitere Informationen zur Konfiguration der Firewall, einschließlich Anweisungen für [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]finden Sie unter [Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff](../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md). Weitere Informationen zu den Standardeinstellungen der Windows-Firewall und eine Beschreibung der TCP-Ports, die sich auf Datenbank-Engine, Analysis Services, Reporting Services und Integration Services auswirken, finden Sie unter [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
-##  <a name="otherComp"></a> Herstellen einer Verbindung mit dem Datenbankmodul von einem anderen Computer  
+##  <a name="otherComp"></a> Herstellen einer Verbindung mit der Datenbank-Engine von einem anderen Computer  
  Nachdem Sie [!INCLUDE[ssDE](../includes/ssde-md.md)] für das Lauschen an einem festen Port konfiguriert und diesen Port in der Firewall geöffnet haben, können Sie jetzt von einem anderen Computer eine Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] herstellen.  
   
  Wenn der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Browser-Dienst auf dem Servercomputer ausgeführt wird und die Firewall den UDP-Port 1434 geöffnet hat, kann die Verbindung mithilfe des Computer- und des Instanznamens hergestellt werden. Aus Sicherheitsgründen wird in unserem Beispiel der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Browser-Dienst nicht verwendet.  
@@ -122,7 +122,7 @@ ms.locfileid: "36058289"
     > [!NOTE]  
     >  Wenn Sie **tcp:** nicht im Feld **Servername** eingeben, testet der Client alle aktivierten Protokolle in der Reihenfolge, die in der Clientkonfiguration festgelegt ist.  
   
-4.  In der **Authentifizierung** überprüfen Sie, ob **Windows-Authentifizierung**, und klicken Sie dann auf **verbinden**.  
+4.  In der **Authentifizierung** bestätigen **Windows-Authentifizierung**, und klicken Sie dann auf **Connect**.  
   
 ##  <a name="browser"></a> Herstellen einer Verbindung mit der SQL Server-Browser-Dienst  
  Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Browser-Dienst lauscht auf eingehende Anforderungen für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Ressourcen und stellt Informationen zu den auf dem Computer installierten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanzen bereit. Wenn der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Browser-Dienst ausgeführt wird, können Benutzer Verbindungen mit benannten Instanzen herstellen, indem sie den Computer- und Instanznamen angeben, anstatt den Computernamen und die Portnummer. Da der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Browser nicht authentifizierte UDP-Anforderungen empfängt, ist er während der Installation nicht immer eingeschaltet. Eine Beschreibung des Diensts und eine Erklärung dazu, wann er eingeschaltet ist, finden Sie unter [SQL Server-Browserdienst &amp;#40;Datenbank-Engine und SSAS&amp;#41;](../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md).  
@@ -132,7 +132,6 @@ ms.locfileid: "36058289"
  Diese Ausführungen beenden das kurze Lernprogramm zur Konnektivität.  
   
 ## <a name="return-to-tutorials-portal"></a>Zurück zum Portal für die Lernprogramme  
- 
-  [Lernprogramm: Erste Schritte mit der Datenbank-Engine](tutorial-getting-started-with-the-database-engine.md)  
+ [Lernprogramm: Erste Schritte mit der Datenbank-Engine](tutorial-getting-started-with-the-database-engine.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: ReadSourceData-Element (ASSL) | Microsoft Docs
+title: ReadSourceData-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - ReadSourceData element
 ms.assetid: 7da4665a-fba3-4aae-8dee-678dc14d3b05
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dcbb6ce5b9cda3b17b69558cd60f6030f9e097b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38e24d324a6f29b55cfb8bf0b55289e2139bfb85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148701"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194190"
 ---
 # <a name="readsourcedata-element-assl"></a>ReadSourceData-Element (ASSL)
-  Bestimmt, wie eindeutige Namen für die enthaltenen Hierarchien generiert werden, die [CubePermission](../objects/cubepermission-element-assl.md).  
+  Bestimmt, wie eindeutige Namen für Hierarchien, die in enthaltenen generiert werden, die [CubePermission](../objects/cubepermission-element-assl.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36148701"
 |*Zulässig*|Der Zugriff auf Daten, die auf Berechnungsdurchlauf 0 verfügbar sind, ist erlaubt.|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element, das das übergeordnete Element des entspricht `ReadSourceData` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.CubePermission>.  
+ Das Element, das dem übergeordneten entspricht `ReadSourceData` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.CubePermission>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Cube-Element &#40;ASSL&#41;](../objects/cube-element-assl.md)   

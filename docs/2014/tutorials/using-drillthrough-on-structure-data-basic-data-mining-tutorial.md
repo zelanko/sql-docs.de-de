@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Drillthrough für Strukturdaten (Lernprogramm zu Datamining-Lernprogramm) | Microsoft Docs
+title: Verwenden von Drillthrough für Strukturdaten (Lernprogramm zu Datamining-Grundlagen) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a693979c-0564-4d6d-b35d-cbbc8f350469
 caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 71a8fa3ac449c8d9427ea138206fbd0c1ea8f1ef
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: ec32e6f46f63c6de342b6b4cab63bb8e6556bfb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312458"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198350"
 ---
 # <a name="using-drillthrough-on-structure-data-basic-data-mining-tutorial"></a>Verwenden von Drillthrough für Strukturdaten (Lernprogramm zu Data Mining-Grundlagen)
-  Im Rahmen einer Werbekampagne [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] sendet einen Prospekt potenziellen Kunden in das Alter von 34 bis 40 demografische. Die marketingabteilung hat beschlossen, dass sie auch Prospekt an den Kunden senden, die von Bikes gekauft haben möchten [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] vor mehr als fünf Jahren. In dieser Lektion identifizieren Sie Kunden mit älteren Fahrrädern und rufen ihre Kontaktinformationen ab. Diese Informationen sind nicht im Modell, sondern in der Struktur enthalten. Stellen Sie zunächst sicher, dass die Drillthroughfunktion für die Struktur aktiviert ist, um die Kontaktinformationen abzurufen. Rufen Sie dann die Namen und Adressen der Kundenzielgruppe ab, indem Sie einen Drillthrough ausführen.  
+  Als Teil des Werbekampagne [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] sendet einen Prospekt an potenziellen Kunden im Alter von 34 bis 40 Jahren demografische. Die marketingabteilung hat beschlossen, dass sie auch das Adressfeld für den Kunden zu senden, die Fahrräder von gekauft haben möchten [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] vor mehr als fünf Jahren. In dieser Lektion identifizieren Sie Kunden mit älteren Fahrrädern und rufen ihre Kontaktinformationen ab. Diese Informationen sind nicht im Modell, sondern in der Struktur enthalten. Stellen Sie zunächst sicher, dass die Drillthroughfunktion für die Struktur aktiviert ist, um die Kontaktinformationen abzurufen. Rufen Sie dann die Namen und Adressen der Kundenzielgruppe ab, indem Sie einen Drillthrough ausführen.  
   
 ### <a name="to-enable-drillthrough-on-a-mining-model"></a>So aktivieren Sie Drillthrough für ein Miningmodell  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]auf die **Miningmodelle** Registerkarte Data Mining-Designer, Maustaste die **TM_Decision_Tree** Modell, und wählen **Eigenschaften**.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]auf die **Miningmodelle** Registerkarte Data Mining-Designer, Informationen zu diesem mit der rechten Maustaste die **TM_Decision_Tree** Modell, und wählen **Eigenschaften**.  
   
 2.  Klicken Sie im Eigenschaftenfenster auf **AllowDrillthrough**, und wählen Sie **True**aus.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36312458"
  Gratulation – Sie haben das Lernprogramm zu Data Mining-Grundlagen abgeschlossen. Nachdem Sie sich mit der Verwendung der Data Mining-Tools vertraut gemacht haben, wird empfohlen, das Data Mining-Lernprogramm für Fortgeschrittene zu absolvieren. Darin wird das Erstellen von Modellen für Vorhersagen, Market Basket-Analysen und Sequenzcluster veranschaulicht.  
   
 ## <a name="previous-task-in-lesson"></a>Vorherige Aufgabe in der Lektion  
- [Erstellen von Vorhersagen &#40;Lernprogramm zu Datamining-Lernprogramm&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Erstellen von Vorhersagen &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen von Vorhersageabfragen mithilfe des Generators für Vorhersageabfragen](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  

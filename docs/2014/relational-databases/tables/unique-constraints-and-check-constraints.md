@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - constraints [SQL Server], Visual Database Tools
 - Visual Database Tools [SQL Server], constraints
 ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f00d765861a86543109754ccd9500d17b2189bac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 980915c6b35295674e24fd603dca5f0a720a87a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147646"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179607"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>UNIQUE- und CHECK-Einschränkungen
   UNIQUE-Einschränkungen und CHECK-Einschränkungen sind zwei Typen von Einschränkungen, mit denen die Datenintegrität in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellen erzwungen werden kann. Diese sind wichtige Datenbankobjekte.  
@@ -55,7 +55,7 @@ ms.locfileid: "36147646"
 >  Einschränkungen, die implizite oder explizite Datentypkonvertierungen einschließen, können bei bestimmten Vorgängen einen Fehler erzeugen. So können z. B. Einschränkungen, die für Tabellen definiert werden, die ihrerseits die Quellen von Partitionswechseln sind, bei einer ALTER TABLE...SWITCH-Operation zu einem Fehler führen. Vermeiden Sie deshalb die Datentypkonvertierung in Einschränkungsdefinitionen.  
   
 ### <a name="limitations-of-check-constraints"></a>Beschränkungen bei CHECK-Einschränkungen  
- CHECK-Einschränkungen weisen Werte zurück, die als FALSE ausgewertet werden. Da NULL-Werte als UNKNOWN ausgewertet werden, kann deren Vorhandensein in Ausdrücken zum Überschreiben einer Einschränkung führen. Nehmen wir beispielsweise an, Sie fügen Sie eine Einschränkung auf ein `int` Spalte **MyColumn** angeben, dass **MyColumn** nur den Wert 10 enthalten darf (**MyColumn = 10**). Wenn Sie dann den Wert NULL in **MyColumn**einfügen, wird von [!INCLUDE[ssDE](../../includes/ssde-md.md)] der Wert NULL eingefügt, und es wird kein Fehler zurückgegeben.  
+ CHECK-Einschränkungen weisen Werte zurück, die als FALSE ausgewertet werden. Da NULL-Werte als UNKNOWN ausgewertet werden, kann deren Vorhandensein in Ausdrücken zum Überschreiben einer Einschränkung führen. Nehmen wir beispielsweise an, Sie platzieren Sie eine Einschränkung auf ein `int` Spalte **MyColumn** angeben, dass **MyColumn** nur den Wert 10 enthalten (**MyColumn = 10**). Wenn Sie dann den Wert NULL in **MyColumn**einfügen, wird von [!INCLUDE[ssDE](../../includes/ssde-md.md)] der Wert NULL eingefügt, und es wird kein Fehler zurückgegeben.  
   
  Eine CHECK-Einschränkung gibt TRUE zurück, wenn die von ihr überprüfte Bedingung für alle Zeilen in der Tabelle nicht FALSE ist. CHECK-Einschränkungen werden auf Zeilenebene verwendet. Wenn eine gerade erstellte Tabelle über keinerlei Zeilen verfügt, wird jede CHECK-Einschränkung für diese Tabelle als gültig betrachtet. Dieser Umstand kann zu unerwarteten Ergebnissen führen, wie das im folgenden Beispiel gezeigt wird.  
   

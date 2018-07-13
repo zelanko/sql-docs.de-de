@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report processing [Reporting Services], status information
 - jobs [Reporting Services]
@@ -30,13 +30,13 @@ ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 caps.latest.revision: 53
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: e1c1ff34dde99394f39a9636c6deac3d6c1fbc64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9f4571c7e76057339658220075276f7b5a791f4c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147832"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187717"
 ---
 # <a name="manage-a-running-process"></a>Verwalten eines ausgeführten Prozesses
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] überwacht den Status von Aufträgen, die auf dem Berichtsserver ausgeführt werden. Die in Bearbeitung befindlichen Aufträge werden in regelmäßigen Abständen vom Berichtsserver gescannt und die Statusinformationen in die Berichtsserver-Datenbank bzw. bei Verwendung des SharePoint-Modus in die Dienstanwendungs-Datenbanken geschrieben. Ein Auftrag wird verarbeitet, wenn alle folgenden Prozesse ausgeführt werden: Abfrageausführung auf einem Remote- oder auf einem lokalen Datenbankserver, Berichtsverarbeitung und Berichtsrendering.  
@@ -91,13 +91,13 @@ ms.locfileid: "36147832"
   
 2.  Suchen `IsNotificationService`.  
   
-3.  Legen Sie es auf `False`.  
+3.  Legen Sie ihn auf `False`.  
   
 4.  Speichern Sie die Datei.  
   
 5.  Löschen Sie im Berichts-Manager das datengesteuerte Abonnement aus der Registerkarte Abonnements des Berichts oder aus **Meine Abonnements**.  
   
-6.  Suchen Sie nach dem Löschen des Abonnements in der Datei "rsreportserver.config" `IsNotificationService` und legen Sie dafür `True`.  
+6.  Suchen Sie nach dem Löschen des Abonnements, in der Datei "rsreportserver.config" `IsNotificationService` und legen ihn auf `True`.  
   
 7.  Speichern Sie die Datei.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "36147832"
  [Auftragseigenschaften (Management Studio)](../tools/job-properties-management-studio.md)   
  [Ändern einer Reporting Services-Konfigurationsdatei &#40;RSreportserver.config&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [RSReportServer-Konfigurationsdatei](../report-server/rsreportserver-config-configuration-file.md)   
- [Berichts-Manager &#40;SSRS im einheitlichen Modus&#41;](../report-manager-ssrs-native-mode.md)   
+ [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md)   
  [Monitoring Report Server Performance (Überwachen der Leistung des Berichtsservers)](../report-server/monitoring-report-server-performance.md)  
   
   

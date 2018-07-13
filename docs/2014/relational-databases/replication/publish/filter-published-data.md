@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server replication]
 - filters [SQL Server replication], about filtering
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - column filters [SQL Server replication]
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 caps.latest.revision: 49
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 03f3d439b4ef4c8d5ea4eb18d634a608ba1ecab6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d1f99411e4cdfceebab0d612f45aa8256719281e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148863"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193368"
 ---
 # <a name="filter-published-data"></a>Filtern von veröffentlichten Daten
   Das Filtern von Tabellenartikeln ermöglicht es Ihnen, Datenpartitionen zu erstellen, die veröffentlicht werden können. Das Filtern von veröffentlichten Daten bietet folgende Möglichkeiten:  
@@ -97,14 +97,14 @@ ms.locfileid: "36148863"
 |-----------------|-------------------------------------|  
 |Primärschlüsselspalte|Primärschlüsselspalten sind in Transaktionsveröffentlichungen für alle Tabellen erforderlich. Für Tabellen in Mergeveröffentlichungen sind keine Primärschlüssel erforderlich. Wenn jedoch eine Primärschlüsselspalte vorhanden ist, kann sie nicht gefiltert werden.|  
 |Fremdschlüsselspalte|Alle Veröffentlichungen, die mit dem Assistenten für neue Veröffentlichung erstellt wurden. Sie können Fremdschlüsselspalten mithilfe gespeicherter Transact-SQL-Prozeduren filtern. Weitere Informationen finden Sie unter [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).|  
-|Die **rowguid** -Spalte|Mergeveröffentlichungen<sup>1</sup>|  
+|Die **rowguid** -Spalte|Für mergeveröffentlichungen<sup>1</sup>|  
 |Die **msrepl_tran_version** -Spalte|Momentaufnahme- oder Transaktionsveröffentlichungen, die aktualisierbare Abonnements zulassen|  
 |Spalten, die NULL nicht zulassen und keine Standardwerte aufweisen oder für die die IDENTITY-Eigenschaft nicht festgelegt ist.|Momentaufnahme- oder Transaktionsveröffentlichungen, die aktualisierbare Abonnements zulassen|  
 |Spalten mit UNIQUE-Einschränkungen oder -Indizes|Momentaufnahme- oder Transaktionsveröffentlichungen, die aktualisierbare Abonnements zulassen|  
 |Alle Spalten in einer Mergeveröffentlichung von SQL Server 7.0|Spalten können in Mergeveröffentlichungen von SQL Server 7.0 nicht gefiltert werden.|  
 |Timestamp|Momentaufnahme- oder Transaktionsveröffentlichungen von SQL Server 7.0, die aktualisierbare Abonnements zulassen|  
   
- <sup>1</sup> Wenn Sie eine Tabelle in einer Mergeveröffentlichung veröffentlichen und diese Tabelle bereits eine Spalte des Datentyps enthält `uniqueidentifier` mit der `ROWGUIDCOL` Eigenschaftensatz, Replikation können in dieser Spalte statt eine zusätzliche Spalte namens **Rowguid**. In diesem Fall muss die vorhandene Spalte veröffentlicht werden.  
+ <sup>1</sup> Wenn Sie eine Tabelle in einer Mergeveröffentlichung veröffentlichen und diese Tabelle bereits eine Spalte des Datentyps enthält `uniqueidentifier` mit der `ROWGUIDCOL` Eigenschaftensatz, Replikation können in dieser Spalte statt eine weitere Spalte namens **Rowguid**. In diesem Fall muss die vorhandene Spalte veröffentlicht werden.  
   
  Informationen zum Definieren oder Ändern eines Spaltenfilters finden Sie unter [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
@@ -133,7 +133,7 @@ ms.locfileid: "36148863"
   
 -   Bei der Transaktionsreplikation können Sie eine indizierte Sicht als Sicht oder als Tabelle replizieren. Wenn Sie die Sicht als Tabelle replizieren, können Sie keine Spalten aus der Tabelle filtern.  
   
- Zeilenfilter sind nicht für den datenbankübergreifenden Einsatz konzipiert. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] absichtlich beschränkt die Ausführung von `sp_replcmds` (für Filter) dem Datenbankbesitzer (`dbo`). Die `dbo` besitzt keine datenbankübergreifenden Berechtigungen. Aufgrund der CDC (Change Data Capture)-Erweiterung in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] füllt die `sp_replcmds`-Logik die Änderungsnachverfolgungtabellen mit Informationen auf, auf die der Benutzer zu Abfragezwecken zurückgreifen kann. Aus Gründen der Sicherheit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] beschränkt die Ausführung dieser Logik so, dass ein böswilliger `dbo` missbräuchlich dieser Ausführungspfad kann nicht verwendet werden kann. Beispielsweise könnte ein böswilliger `dbo` Trigger für CDC-Tabellen einschleusen, die dann ausgeführt werden, wenn der Benutzer `sp_replcmds` aufruft (in diesem Fall der logreader-Agent).  Wenn das Konto, unter dem der Agent ausgeführt wird, über höhere Berechtigungen verfügt, könnte der böswillige `dbo` seine Berechtigungen ausweiten.  
+ Zeilenfilter sind nicht für den datenbankübergreifenden Einsatz konzipiert. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] absichtlich beschränkt die Ausführung von `sp_replcmds` (für Filter) auf den Datenbankbesitzer (`dbo`). Die `dbo` besitzt keine datenbankübergreifenden Berechtigungen. Aufgrund der CDC (Change Data Capture)-Erweiterung in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] füllt die `sp_replcmds`-Logik die Änderungsnachverfolgungtabellen mit Informationen auf, auf die der Benutzer zu Abfragezwecken zurückgreifen kann. Aus Sicherheitsgründen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] beschränkt die Ausführung dieser Logik, damit ein böswilliger `dbo` missbräuchlich dieser Ausführungspfad kann nicht verwendet werden kann. Beispielsweise könnte ein böswilliger `dbo` Trigger für CDC-Tabellen einschleusen, die dann ausgeführt werden, wenn der Benutzer `sp_replcmds` aufruft (in diesem Fall der logreader-Agent).  Wenn das Konto, unter dem der Agent ausgeführt wird, über höhere Berechtigungen verfügt, könnte der böswillige `dbo` seine Berechtigungen ausweiten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Veröffentlichen von Daten und Datenbankobjekten](publish-data-and-database-objects.md)  

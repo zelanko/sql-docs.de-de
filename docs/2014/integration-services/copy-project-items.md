@@ -1,5 +1,5 @@
 ---
-title: Kopieren von Projektelementen | Microsoft Docs
+title: Kopieren von Projektelementen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Integration Services], copying
 - packages [Integration Services], copying
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data source views [Integration Services], copying
 ms.assetid: 1606c54d-20f9-49f3-a4ef-caad83a772aa
 caps.latest.revision: 14
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 57c3263617b89bfa9ca39f81fb0890b45532a744
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 02ddf2965e6bd97d4859cae2ce40a0c96333a74d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061651"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193580"
 ---
 # <a name="copy-project-items"></a>Kopieren von Projektelementen
   In diesem Thema wird beschrieben, wie Sie Objekte in einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt oder zwischen [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekten kopieren können. Sie können Objekte auch zwischen anderen Typen von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] -Projekten, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] und [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]kopieren. Für den Kopiervorgang zwischen den Projekten müssen die Projekte Teil derselben [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] -Projektmappe sein. Weitere Informationen finden Sie unter [Integration Services-Projekte &#40;SSIS&#41;](integration-services-ssis-projects-and-solutions.md).  
@@ -44,7 +44,7 @@ ms.locfileid: "36061651"
      Die Elemente werden automatisch in den richtigen Ordner kopiert. Wenn Sie in das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt Elemente kopieren, die keine Pakete darstellen, werden die Elemente in den Ordner **Sonstiges** kopiert.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Integrationsservices &#40;SSIS&#41; Pakete](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Integrationsdienste &#40;SSIS&#41; Pakete](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Kopieren von Paketobjekten](../../2014/integration-services/copy-package-objects.md)  
   
   

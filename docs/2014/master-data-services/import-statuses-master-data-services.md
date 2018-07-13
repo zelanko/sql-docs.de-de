@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 306577c5-e7d7-4cff-aff4-efb5c6354036
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6a5bf66d379db8e459f63d5e0595b007cef2dccb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: d2d9255978078af9b23c4b00e4e3fec2a8f57c4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058310"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209360"
 ---
 # <a name="import-statuses-master-data-services"></a>Importstatus (Master Data Services)
   Auf der Seite **Stagingbatches** im Funktionsbereich **Integrationsmanagement** sind die folgenden Status möglich.  
@@ -34,6 +34,6 @@ ms.locfileid: "36058310"
   
 ## <a name="see-also"></a>Siehe auch  
  [Laden oder Aktualisieren von Elementen in Master Data Services mithilfe des Stagingprozesses](add-update-and-delete-data-master-data-services.md)   
- [Datenimport &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
+ [Importieren von Daten &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
   

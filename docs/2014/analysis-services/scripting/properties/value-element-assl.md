@@ -1,5 +1,5 @@
 ---
-title: Value-Element (ASSL) | Microsoft Docs
+title: Wert-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Value element
 ms.assetid: a2fad411-73fd-42df-b4e1-df2cb8454182
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f350c559e78613df5e0a357b8f87dca073e1d248
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5bdf16f2f9ce7415d396cf5f4110fd3127e04774
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061249"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201990"
 ---
 # <a name="value-element-assl"></a>Value-Element (ASSL)
   Enthält den Wert des übergeordneten Elements.  
@@ -75,7 +75,7 @@ ms.locfileid: "36061249"
 |[Anmerkung](../objects/annotation-element-assl.md)|Der Wert der Anmerkung.|  
 |[KPI](../objects/kpi-element-assl.md)|Ein Multidimensional Expressions (MDX)-Ausdruck, der verwendet wird, um den Wert des Key Performance Indicator (KPI) zu berechnen.|  
 |[ReportFormatParameter](../objects/reportformatparameter-element-asl.md)|Der Wert des Berichtsformatparameters.|  
-|[ReportParameter](../objects/reportparameter-element-assl.md)|Ein MDX-Ausdruck, der verwendet wird, um den Wert des Berichtsparameters zu berechnen.|  
+|[ReportParameter-Objekt](../objects/reportparameter-element-assl.md)|Ein MDX-Ausdruck, der verwendet wird, um den Wert des Berichtsparameters zu berechnen.|  
 |[ServerProperty](../objects/serverproperty-element-assl.md)|Der Wert der Servereigenschaft für die gerade ausgeführte Instanz.|  
   
  Die Elemente, die den übergeordneten Elementen von `Value` im AMO-Objektmodell (Analysis Management Objects) entsprechen, sind <xref:Microsoft.AnalysisServices.AlgorithmParameter>, <xref:Microsoft.AnalysisServices.Annotation>, <xref:Microsoft.AnalysisServices.Kpi>, <xref:Microsoft.AnalysisServices.ReportParameter> und <xref:Microsoft.AnalysisServices.ServerProperty>.  

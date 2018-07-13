@@ -1,5 +1,5 @@
 ---
-title: AttributeAllMemberName-Element (ASSL) | Microsoft Docs
+title: AttributeAllMemberName-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeAllMemberName element
 ms.assetid: 5ede46a7-d8b0-40be-98d7-b01047b27d2e
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9014fb486a11dc5b35f8fcab394032f26408b338
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 425e9c092dff8cc3c303672b6bfb1e2b3a8096ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059687"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208050"
 ---
 # <a name="attributeallmembername-element-assl"></a>AttributeAllMemberName-Element (ASSL)
   Enthält die Beschriftung in der Standardsprache für alle Elemente der Dimension.  
@@ -62,7 +62,7 @@ ms.locfileid: "36059687"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element, das das übergeordnete Element des entspricht `AttributeAllMemberName` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Dimension>.  
+ Das Element, das dem übergeordneten entspricht `AttributeAllMemberName` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren der &#40;alle&#41; Ebene für Attributhierarchien](../../multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)   

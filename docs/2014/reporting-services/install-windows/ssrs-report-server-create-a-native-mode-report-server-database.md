@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
 - databases [Reporting Services], creating
@@ -16,13 +16,13 @@ ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 2690d8684bd244ecc671168d9648832a5a2ca9eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8ff6878b05138bb1ad4c23e57699dd896ab7b441
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148109"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198822"
 ---
 # <a name="create-a-native-mode-report-server-database--ssrs-configuration-manager"></a>Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus (SSRS-Konfigurations-Manager)
   Der einheitliche Modus für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank für den Zentralspeicher. Die Datenbank ist erforderlich und wird zum Speichern von veröffentlichten Berichten, Modellen, freigegebenen Datenquellen, Sitzungsdaten, Ressourcen und Servermetadaten verwendet.  
@@ -36,7 +36,7 @@ ms.locfileid: "36148109"
 ## <a name="when-to-create-or-configure-the-report-server-databases"></a>Der richtige Zeitpunkt zum Erstellen bzw. Konfigurieren von Berichtsserver-Datenbanken  
  Sie müssen die Berichtsserver-Datenbank erstellen und konfigurieren, wenn Sie den Berichtsserver im Modus für die ausschließliche Installation von Dateien installiert haben.  
   
- Wenn Sie installiert [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] entweder in der Standardkonfiguration für den einheitlichen Modus, die Berichtsserver-Datenbank wurde erstellt und automatisch konfiguriert, wenn die Berichtsserver-Instanz installiert wurde. Mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager können Sie die von Setup automatisch konfigurierten Einstellungen anzeigen bzw. ändern.  
+ Wenn Sie installiert [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] entweder in der Standardkonfiguration für den einheitlichen Modus, der Berichtsserver-Datenbank wurde erstellt und automatisch konfiguriert wird, wenn die Berichtsserver-Instanz installiert wurde. Mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager können Sie die von Setup automatisch konfigurierten Einstellungen anzeigen bzw. ändern.  
   
 ##  <a name="rsdbrequirements"></a> Vorbereitungen  
  Das Erstellen bzw. die Konfiguration einer Berichtsserver-Datenbank erfolgt in mehreren Schritten. Bevor Sie die Berichtsserver-Datenbank erstellen, sollten Sie sich überlegen, wie Sie die folgenden Elemente angeben möchten:  
@@ -119,12 +119,12 @@ ms.locfileid: "36148109"
   
 7.  Überprüfen Sie die Informationen über die Zusammenfassungsseite, um zu überprüfen, ob die Einstellungen korrekt sind, und klicken Sie dann auf **Weiter**.  
   
-8.  Überprüfen Sie die Verbindung durch Klicken auf eine URL auf der Seite Berichtsserver-URL bzw. auf der Seite Berichts-Manager-URL. Die URLs müssen definiert werden, damit dieser Test funktioniert. Wenn die Verbindung zur Berichtsserverdatenbank gültig ist, werden entweder die Berichtsserver-Ordnerhierarchie oder der Berichts-Manager in einem Browser-Fenster angezeigt. Weitere Informationen finden Sie unter [Verify a Reporting Services-Installation](verify-a-reporting-services-installation.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+8.  Überprüfen Sie die Verbindung durch Klicken auf eine URL auf der Seite Berichtsserver-URL bzw. auf der Seite Berichts-Manager-URL. Die URLs müssen definiert werden, damit dieser Test funktioniert. Wenn die Verbindung zur Berichtsserverdatenbank gültig ist, werden entweder die Berichtsserver-Ordnerhierarchie oder der Berichts-Manager in einem Browser-Fenster angezeigt. Weitere Informationen finden Sie unter [Überprüfen einer Installation von Reporting Services](verify-a-reporting-services-installation.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurieren Sie eine Verbindung mit der Berichtsserver-Datenbank &#40;SSRS-Konfigurations-Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Datenbank &#40;SSRS im einheitlichen Modus&#41;](../../sql-server/install/database-ssrs-native-mode.md)   
- [Verwalten eines Berichtsservers der Reporting Services im einheitlichen Modus](../report-server/manage-a-reporting-services-native-mode-report-server.md)   
+ [Konfigurieren eine Berichtsserver-Datenbankverbindung &#40;SSRS-Konfigurations-Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Datenbank &#40;einheitlicher SSRS-Modus&#41;](../../sql-server/install/database-ssrs-native-mode.md)   
+ [Verwalten eines Reporting Services im einheitlichen Modus-Berichtsservers](../report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

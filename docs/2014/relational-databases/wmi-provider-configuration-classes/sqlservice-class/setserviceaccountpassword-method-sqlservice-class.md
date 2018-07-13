@@ -1,5 +1,5 @@
 ---
-title: SetServiceAccountPassword-Methode (SqlService-Klasse) | Microsoft Docs
+title: SetServiceAccountPassword-Methode (SqlService-Klasse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetServiceAccountPassword method
 ms.assetid: e577a1ac-985c-4799-bb38-9393efc3def2
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8f03fc65f6df92bb6e0c728314b74bbd5dbb7a99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: e9664e72427f743d8615f3eede030e0ce6e9c5ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061115"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208680"
 ---
 # <a name="setserviceaccountpassword-method-sqlservice-class"></a>SetServiceAccountPassword-Methode (SqlService-Klasse)
   Ändert das Kennwort für das Konto, unter dem der referenzierte Dienst ausgeführt wird.  
@@ -56,7 +56,7 @@ AccountOldPassword , ServiceStartPassword
  Ein Zeichenfolgenwert, der das neue Kennwort für das Konto angibt.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
- Ein `uint32` Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert 1, wenn die Anforderung nicht unterstützt wird, wurde, und jede andere Zahl gibt einen Fehler an.  
+ Ein `uint32` -Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert 1, wenn die Anforderung nicht unterstützt wird, wurde, und jede andere Zahl gibt einen Fehler an.  
   
 ## <a name="remarks"></a>Hinweise  
   

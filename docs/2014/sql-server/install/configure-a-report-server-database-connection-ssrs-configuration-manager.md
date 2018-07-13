@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
 - connections [Reporting Services]
@@ -20,13 +20,13 @@ ms.assetid: 9759a9fb-35e9-4215-969b-a9f1fea18487
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 8eb2cc1bcfa9528eccd2764af954fb165b74daa4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 43cf572cca1062471e73ab47be5e687fee40c1db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058226"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208546"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank (SSRS-Konfigurations-Manager)
   Für jede Berichtsserverinstanz ist eine Verbindung mit der Berichtsserver-Datenbank erforderlich, in der die vom Server verwalteten Berichte, Berichtsmodelle, freigegebenen Datenquellen, Ressourcen und Metadaten gespeichert sind. Die Anfangsverbindung kann während einer Berichtsserverinstallation erstellt werden, wenn Sie die Standardkonfiguration installieren. In den meisten Fällen empfiehlt sich, die Verbindung mithilfe des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstools zu konfigurieren, wenn das Setup abgeschlossen ist. Sie können die Verbindung jederzeit bearbeiten, um den Kontotyp zu ändern oder Anmeldeinformationen neu festzulegen. Ausführliche Anweisungen zum Erstellen der Datenbank und Konfigurieren der Verbindung finden Sie unter [Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
@@ -46,7 +46,7 @@ ms.locfileid: "36058226"
   
  Die Berichtsserver-Datenbank ist eine interne Komponente, auf die nur der Berichtsserver zugreift. Die Verbindungs- und Anmeldeinformationen, die Sie für die Berichtsserver-Datenbank angeben, werden ausschließlich vom Berichtsserver verwendet. Benutzer, die Berichte anfordern, benötigen für die Berichtsserver-Datenbank keine Datenbankberechtigungen und keinen Datenbank-Anmeldenamen.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet `System.Data.SqlClient` für die Verbindung der [!INCLUDE[ssDE](../../includes/ssde-md.md)] , die die Berichtsserver-Datenbank hostet. Wenn Sie eine lokale Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]verwenden, stellt der Berichtsserver die Verbindung mithilfe des gemeinsamen Arbeitsspeichers her. Wenn Sie einen Remote-Datenbankserver für die Berichtsserver-Datenbank verwenden, müssen Sie möglicherweise &ndash; je nach verwendeter Edition &ndash; Remoteverbindungen aktivieren. Wenn Sie die Enterprise Edition verwenden, sind Remoteverbindungen standardmäßig für TCP/IP aktiviert.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet `System.Data.SqlClient` zum Herstellen einer Verbindung mit der [!INCLUDE[ssDE](../../includes/ssde-md.md)] , die die Berichtsserver-Datenbank hostet. Wenn Sie eine lokale Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]verwenden, stellt der Berichtsserver die Verbindung mithilfe des gemeinsamen Arbeitsspeichers her. Wenn Sie einen Remote-Datenbankserver für die Berichtsserver-Datenbank verwenden, müssen Sie möglicherweise &ndash; je nach verwendeter Edition &ndash; Remoteverbindungen aktivieren. Wenn Sie die Enterprise Edition verwenden, sind Remoteverbindungen standardmäßig für TCP/IP aktiviert.  
   
  Um zu prüfen, ob die Instanz Remoteverbindungen akzeptiert, klicken Sie im Menü **Start**nacheinander **Alle Programme**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Konfigurationstools**und **SQL Server-Konfigurations-Manager**, und prüfen Sie dann, ob das TCP/IP-Protokoll für jeden Dienst aktiviert ist.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36058226"
 ### <a name="storing-database-connection-information"></a>Speichern von Verbindungsinformationen für eine Datenbank  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] speichert und verschlüsselt die Verbindungsinformationen in den folgenden RSreportserver.config-Einstellungen. Verschlüsselte Werte für diese Einstellungen müssen Sie mithilfe des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstools oder des RSCONFIG-Hilfsprogramms erstellen.  
   
- Nicht alle Werte sind für jeden Verbindungstyp festgelegt. Wenn Sie die Verbindung mit den Standardwerten (die die Dienstkonten zum Herstellen die Verbindung verwendet wird,), konfigurieren <`LogonUser`>, <`LogonDomain`>, und <`LogonCred`> wird kann leer sein, wie folgt:  
+ Nicht alle Werte sind für jeden Verbindungstyp festgelegt. Wenn Sie die Verbindung unter Verwendung der Standardwerte (die die Dienstkonten verwendet, um die Verbindung herzustellen), konfigurieren <`LogonUser`>, <`LogonDomain`>, und <`LogonCred`> wird leer sein, wie folgt:  
   
 ```  
 <Dsn></Dsn>  

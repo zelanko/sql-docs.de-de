@@ -1,5 +1,5 @@
 ---
-title: XPath-Datentypen (SQLXML 4.0) | Microsoft Docs
+title: XPath-Datentypen (SQLXML 4.0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -29,29 +29,29 @@ helpviewer_keywords:
 - operators [SQLXML]
 ms.assetid: a90374bf-406f-4384-ba81-59478017db68
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f38c8e12137ea2a906269b6cba7b86fefff5c508
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 0bd591ecb5c0e37acc4ffea7d7b22bf85636c585
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060458"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167141"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath-Datentypen (SQLXML 4.0)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-, XPath- und XML-Schemas (XSD) verfügen über sehr unterschiedliche Datentypen. Zum Beispiel verfügt XPath nicht über Ganzzahl- oder Datumsdatentypen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und XSD hingegen über mehrere. XSD gibt Zeitwerte auf die Nanosekunde genau an, während die Genauigkeit von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] höchstens 1/300 Sekunde beträgt. Einen Datentyp einem anderen zuzuordnen ist deshalb nicht immer möglich. Weitere Informationen zur Zuordnung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen und XSD-Datentypen, finden Sie unter [Datentypumwandlungen und die SQL: DataType-Anmerkung &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-, XPath- und XML-Schemas (XSD) verfügen über sehr unterschiedliche Datentypen. Zum Beispiel verfügt XPath nicht über Ganzzahl- oder Datumsdatentypen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und XSD hingegen über mehrere. XSD gibt Zeitwerte auf die Nanosekunde genau an, während die Genauigkeit von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] höchstens 1/300 Sekunde beträgt. Einen Datentyp einem anderen zuzuordnen ist deshalb nicht immer möglich. Weitere Informationen zum Zuordnen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen zu XSD-Datentypen finden Sie unter [Datentypumwandlungen und die SQL: DataType-Anmerkung &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
   
- XPath verfügt über drei Datentypen: `string`, `number` und `boolean`. Beim `number`-Datentyp handelt es sich stets um einen IEEE 754-Gleitkommawert mit doppelter Genauigkeit. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `float(53)` -Datentyp kommt XPath `number`. Allerdings entspricht `float(53)` IEEE 754 nicht genau. Zum Beispiel wird weder NaN (Not-a-Number) noch Unendlichkeit verwendet. Wenn man versucht, eine nicht numerische Zeichenfolge in `number` zu konvertieren und eine Division durch Null durchzuführen, tritt ein Fehler auf.  
+ XPath verfügt über drei Datentypen: `string`, `number` und `boolean`. Beim `number`-Datentyp handelt es sich stets um einen IEEE 754-Gleitkommawert mit doppelter Genauigkeit. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `float(53)` -Datentyp entspricht am ehesten dem XPath `number`. Allerdings entspricht `float(53)` IEEE 754 nicht genau. Zum Beispiel wird weder NaN (Not-a-Number) noch Unendlichkeit verwendet. Wenn man versucht, eine nicht numerische Zeichenfolge in `number` zu konvertieren und eine Division durch Null durchzuführen, tritt ein Fehler auf.  
   
 ## <a name="xpath-conversions"></a>XPath-Konvertierungen  
- Wenn Sie eine XPath-Abfrage wie `OrderDetail[@UnitPrice > "10.0"]` verwenden, können implizite und explizite Datentypkonvertierungen den Sinn der Abfrage leicht verändern. Deshalb sollte nachvollzogen werden können, wie XPath-Datentypen implementiert werden. Der XPath-Sprachspezifikation, XML Path Language (XPath) Version 1.0 W3C vorgeschlagenen Empfehlung 8. Oktober 1999, finden Sie unter der W3C-Website unter http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
+ Wenn Sie eine XPath-Abfrage wie `OrderDetail[@UnitPrice > "10.0"]` verwenden, können implizite und explizite Datentypkonvertierungen den Sinn der Abfrage leicht verändern. Deshalb sollte nachvollzogen werden können, wie XPath-Datentypen implementiert werden. Spezifikation der XPath-Sprache, der XML Path Language (XPath) Version 1.0, W3C vorgeschlagenen Empfehlung 8. Oktober 1999, finden Sie unter der W3C-Website unter http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
   
  XPath-Operatoren werden in vier Kategorien unterteilt:  
   
 -   Boolesche Operatoren (AND, OR)  
   
--   Relationale Operatoren (\<, >, \<=, > =)  
+-   Operatoren (relational) (\<, >, \<=, > =)  
   
 -   Gleichheitsoperatoren (=, !=)  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36060458"
  Konvertierungen von Knotensätzen sind nicht immer intuitiv. Die Konvertierung eines Knotensatzes in den Typ `string` erfolgt anhand des Zeichenkettenwerts des ersten Knotens des Satzes. Bei der Konvertierung eines Knotensatzes in den Typ `number` wird dieser zunächst in den Typ `string` und anschließend der Typ `string` in den Typ `number` konvertiert. Ein Knotensatz wird in den Typ `boolean` konvertiert, indem sein Vorhandensein überprüft wird.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] führt bei Knotensätzen keine Positionalauswahl durch: Die XPath-Abfrage `Customer[3]` beispielsweise bezieht sich auf den dritten Kunden; eine solche Positionalauswahl wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht unterstützt. Aus diesem Grund wurden die Konvertierungen, bei denen gemäß XPath-Spezifikation ein Knotensatz in den Typ `string` oder in den Typ `number` konvertiert wird, nicht implementiert. Die Semantik von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bezieht sich auf "ein" Vorkommnis, während die XPath-Spezifikation "das erste" Vorkommnis bezeichnet. Zum Beispiel basiert auf der W3C-XPath-Spezifikation die XPath-Abfrage `Order[OrderDetail/@UnitPrice > 10.0]` wählt diese Aufträge mit dem ersten **OrderDetail** , besitzt eine **UnitPrice** größer als 10.0. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], diese XPath-Abfrage wählt diese Aufträge mit **OrderDetail** , besitzt eine **UnitPrice** größer als 10.0.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] führt bei Knotensätzen keine Positionalauswahl durch: Die XPath-Abfrage `Customer[3]` beispielsweise bezieht sich auf den dritten Kunden; eine solche Positionalauswahl wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht unterstützt. Aus diesem Grund wurden die Konvertierungen, bei denen gemäß XPath-Spezifikation ein Knotensatz in den Typ `string` oder in den Typ `number` konvertiert wird, nicht implementiert. Die Semantik von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bezieht sich auf "ein" Vorkommnis, während die XPath-Spezifikation "das erste" Vorkommnis bezeichnet. Beispielsweise basierend auf der W3C-XPath-Spezifikation die XPath-Abfrage `Order[OrderDetail/@UnitPrice > 10.0]` wählt die Bestellungen mit dem ersten **OrderDetail** , bei dem ein **UnitPrice** größer als 10.0. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], diese XPath-Abfrage wählt die Bestellungen mit einem **OrderDetail** , bei dem ein **UnitPrice** größer als 10.0.  
   
  Bei Konvertierungen in den Typ `boolean` wird das Vorhandensein überprüft; aus diesem Grund entspricht die XPath-Abfrage `Products[@Discontinued=true()]` dem SQL-Ausdruck "Products.Discontinued is not null", nicht dem SQL-Ausdruck "Products.Discontinued = 1". Damit die Abfrage dem letztgenannten SQL-Ausdruck entspricht, konvertierten Sie den Knotensatz zunächst in einen anderen Typ als `boolean`, etwa `number`. Beispiel: `Products[number(@Discontinued) = true()]`.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36060458"
 |date|Zeichenfolge|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
 |Uhrzeit<br /><br /> time.tz|Zeichenfolge|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   
- Das Datum und Uhrzeit-Konvertierungen sind für die Verwendung konzipiert, ob der Wert in der Datenbank gespeichert ist die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` -Datentyp oder einen `string`. Beachten Sie, dass die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` -Datentyp verwendet keine `timezone` und eine geringere Genauigkeit als der XML-Code hat `time` -Datentyp. Um den `timezone`-Datentyp aufzunehmen oder eine höhere Genauigkeit zu gewährleisten, speichern Sie die Daten mithilfe eines `string`-Typs in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Die Datums- / zeitkonvertierungen funktionieren, ob der Wert, in der Datenbank mithilfe gespeichert wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` -Datentyp oder ein `string`. Beachten Sie, dass die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` -Datentyp verwendet keine `timezone` und verfügt über eine geringere Genauigkeit als den XML-Code `time` -Datentyp. Um den `timezone`-Datentyp aufzunehmen oder eine höhere Genauigkeit zu gewährleisten, speichern Sie die Daten mithilfe eines `string`-Typs in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Wenn ein Knoten vom XDR-Datentyp in den XPath-Datentyp konvertiert wird, müssen mitunter weitere Konvertierungen vorgenommen werden (von einem XPath-Datentyp in einen anderen XPath-Datentyp). Ein Beispiel ist die folgende XPath-Abfrage:  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36060458"
 (@m + 3) = 4  
 ```  
   
- Wenn @m wird von der `fixed14.4` XDR-Datentyp, die Konvertierung von XDR-Datentyp in XPath-Datentyp erfolgt über:  
+ Wenn @m weist die `fixed14.4` XDR-Datentyp, die Konvertierung von XDR-Datentyp in XPath-Datentyp ist durch:  
   
 ```  
 CONVERT(money, m)  
@@ -138,7 +138,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-convert-a-data-type-in-an-xpath-query"></a>A. Konvertieren Sie einen Datentyp in einer XPath-Abfrage  
- In der folgenden XPath-Abfrage für ein mit Anmerkungen versehene XSD-Schema angegeben, die Abfrage wählt alle **Mitarbeiter** Knoten mit der **EmployeeID** -Attributwert E-1, wobei "E-" das Präfix angegeben ist, mit der `sql:id-prefix` Anmerkung.  
+ In der folgenden XPath-Abfrage für ein mit Anmerkungen versehene XSD-Schema angegeben, die Abfrage wählt alle **Mitarbeiter** Knoten mit der **EmployeeID** -Attributwert E-1, "E-" das Präfix angegeben ist, mit der `sql:id-prefix` Anmerkung.  
   
  `Employee[@EmployeeID="E-1"]`  
   
@@ -146,7 +146,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
  `N'E-' + CONVERT(nvarchar(4000), Employees.EmployeeID, 126) = N'E-1'`  
   
- Da **EmployeeID** ist eine von der `id` (`idref`, `idrefs`, `nmtoken`, `nmtokens`usw.) Datentyp der Werte in der XSD-Schema **EmployeeID** ist Konvertiert die `string` XPath-Datentyp mithilfe der zuvor beschriebenen Konvertierungsregeln.  
+ Da **EmployeeID** ist eines der der `id` (`idref`, `idrefs`, `nmtoken`, `nmtokens`usw.)-Datentyp der Werte in der XSD-Schema **EmployeeID** ist Konvertiert die `string` XPath-Datentyp mithilfe der zuvor beschriebenen Konvertierungsregeln.  
   
  `CONVERT(nvarchar(4000), Employees.EmployeeID, 126)`  
   
@@ -155,11 +155,11 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
 ### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>B. Führen Sie mehrere Datentypkonvertierungen in einer XPath-Abfrage aus  
  Betrachten Sie die folgende, für ein mit Anmerkungen versehenes XSD-Schema angegebene XPath-Abfrage: `OrderDetail[@UnitPrice * @OrderQty > 98]`  
   
- Diese XPath-Abfrage gibt alle dem  **\<OrderDetail >** Elemente das Prädikat erfüllen `@UnitPrice * @OrderQty > 98`. Wenn die **UnitPrice** mit versehen ist eine `fixed14.4` -Datentyp, in dem Schema mit Anmerkungen dieses Prädikat ist gleichbedeutend mit der SQL-Ausdruck:  
+ Diese XPath-Abfrage gibt alle dem  **\<OrderDetail >** Elemente das Prädikat erfüllen `@UnitPrice * @OrderQty > 98`. Wenn die **UnitPrice** mit versehen ist eine `fixed14.4` Datentyp im Schema mit Anmerkungen versehene dieses Prädikat ist gleichbedeutend mit der SQL-Ausdruck:  
   
  `CONVERT(float(53), CONVERT(money, OrderDetail.UnitPrice)) * CONVERT(float(53), OrderDetail.OrderQty) > CONVERT(float(53), 98)`  
   
- Beim Konvertieren der Werte in der XPath-Abfrage wird zunächst der XDR-Datentyp in den XPath-Datentyp konvertiert. Da der XSD-Datentyp **UnitPrice** ist `fixed14.4`, wie in der obigen Tabelle beschrieben wird, ist dies die erste Konvertierung, die verwendet wird:  
+ Beim Konvertieren der Werte in der XPath-Abfrage wird zunächst der XDR-Datentyp in den XPath-Datentyp konvertiert. Da die XSD-Datentyp **UnitPrice** ist `fixed14.4`, wie in der vorherigen Tabelle beschrieben wird, ist dies die erste Konvertierung, die verwendet wird:  
   
 ```  
 CONVERT(money, OrderDetail.UnitPrice))   
@@ -171,7 +171,7 @@ CONVERT(money, OrderDetail.UnitPrice))
 CONVERT(float(53), CONVERT(money, OrderDetail.UnitPrice))   
 ```  
   
- Vorausgesetzt, die **OrderQty** Attribut hat keine XSD-Datentyp **OrderQty** konvertiert eine `number` XPath-Datentyp in einer einzelkonvertierung:  
+ Angenommen die **OrderQty** Attribut hat kein XSD-Datentyp, **OrderQty** konvertiert wird eine `number` XPath-Datentyp in einer einzelkonvertierung:  
   
 ```  
 CONVERT(float(53), OrderDetail.OrderQty)  
@@ -184,6 +184,6 @@ CONVERT(float(53), 98)
 ```  
   
 > [!NOTE]  
->  Wenn der im Schema verwendete XSD-Datentyp mit dem in der Datenbank zugrunde gelegten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp inkompatibel ist oder eine nicht mögliche XPath-Datentypkonvertierung durchgeführt werden soll, sollte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler melden. Z. B. wenn die **EmployeeID** mit dem Attribut versehen ist `id-prefix` Anmerkung XPath `Employee[@EmployeeID=1]` generiert einen Fehler, da **EmployeeID** hat die `id-prefix` Anmerkung und kann nicht konvertiert werden, um `number`.  
+>  Wenn der im Schema verwendete XSD-Datentyp mit dem in der Datenbank zugrunde gelegten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp inkompatibel ist oder eine nicht mögliche XPath-Datentypkonvertierung durchgeführt werden soll, sollte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler melden. Z. B. wenn die **EmployeeID** mit dem Attribut versehen ist `id-prefix` Anmerkung wird der XPath-Ausdruck `Employee[@EmployeeID=1]` generiert einen Fehler, da **EmployeeID** hat die `id-prefix` Anmerkung und kann nicht konvertiert werden, um `number`.  
   
   
