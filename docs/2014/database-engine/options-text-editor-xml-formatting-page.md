@@ -1,5 +1,5 @@
 ---
-title: Optionen (Seite Text-Editor - XML - Formatierung) | Microsoft Docs
+title: Optionen (Text-Editor – XML - Formatierung Seite) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.Formatting
 ms.assetid: 97373178-d288-4127-af37-d9f5fe1b8607
 caps.latest.revision: 12
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5d77f7351d712f63e9cfc92c3ff03b131cb6d5d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 667b01cbdaa1e5107dcbac8a68879a94d6efc06e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048119"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209590"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>Optionen (Text-Editor – XML – Seite „Formatierung“)
   In diesem Dialogfeld können Sie die Formatierungseinstellungen für den XML-Editor festlegen. Sie können über das Menü **Extras** auf das Dialogfeld **Optionen** zugreifen.  
@@ -50,11 +50,11 @@ ms.locfileid: "36048119"
  **Bei einfügen aus der Zwischenablage.**  
  Formatiert den aus der Zwischenablage eingefügten XML-Text neu.  
   
- **Bei Komplettierung des Endtags**  
+ **Nach Abschluss des Endtags**  
  Formatiert das Element nach Abschluss des Endtags neu.  
   
 ## <a name="mixed-content"></a>Gemischter Inhalt  
- **Standardformat: gemischten Inhalt.**  
+ **Standardformat: gemischter Inhalt in der Standardeinstellung.**  
  Versucht, gemischten Inhalt neu zu formatieren. Der Inhalt von `xml:space="preserve"`-Bereichen wird dabei jedoch nicht berücksichtigt. Dies ist die Standardeinstellung.  
   
  Wenn ein Element sowohl Text als auch Markup enthält, wird sein Inhalt wie gemischter Inhalt behandelt. Das folgende Beispiel zeigt ein Element mit gemischtem Inhalt.  

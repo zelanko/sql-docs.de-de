@@ -1,5 +1,5 @@
 ---
-title: Festlegen von Verarbeitungsoptionen (Reporting Services im integrierten SharePoint-Modus) | Microsoft Docs
+title: Festlegen von Verarbeitungsoptionen (Reporting Services im integrierten SharePoint-Modus) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
 - snapshots [Reporting Services], creating
@@ -16,13 +16,13 @@ ms.assetid: 453b19a1-739a-4b67-aeea-2069b52204e1
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0b1d308718d1bfd1b9215cfe9595439f5657b95e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b04adc1d53fd4c41732a753cca5d7be1a3919c06
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047544"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255652"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>Festlegen von Verarbeitungsoptionen (Reporting Services im integrierten SharePoint-Modus)
   Sie können Verarbeitungsoptionen für einen [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Bericht festlegen, um den Zeitpunkt der Datenverarbeitung zu bestimmen. Sie können auch einen Timeoutwert für die Berichtsverarbeitung und Optionen festlegen, mit denen bestimmt wird, ob der Berichtsverlauf für den aktuellen Bericht aktiviert ist.  
@@ -106,7 +106,7 @@ ms.locfileid: "36047544"
   
 ##  <a name="bkmk_set_database_timeout"></a> Datenbank-Timeout festlegen  
   
-1.  Verwenden Sie Windows PowerShell, um das Datenbank-Timeout eines SharePoint-Berichtsservers festzulegen. Weitere Informationen finden Sie unter der "Get- und legen Sie Eigenschaften der Reporting-Dienstanwendungsdatenbank" im Abschnitt [PowerShell-Cmdlets für Reporting Services SharePoint Mode](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+1.  Verwenden Sie Windows PowerShell, um das Datenbank-Timeout eines SharePoint-Berichtsservers festzulegen. Weitere Informationen finden Sie unter "abrufen und Festlegen von Eigenschaften der Reporting-Dienstanwendungsdatenbank" im Abschnitt [PowerShell-Cmdlets für Reporting Services SharePoint Mode](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Festlegen von Berichtsverarbeitungseigenschaften](report-server/set-report-processing-properties.md)   

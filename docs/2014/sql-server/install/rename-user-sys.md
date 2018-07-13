@@ -1,5 +1,5 @@
 ---
-title: Umbenennen von Benutzer ' sys ' | Microsoft Docs
+title: Umbenennen von Benutzer ' sys ' | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sys user names [SQL Server]
 ms.assetid: d622d646-83e4-4b6f-9a21-77b301af04b5
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 959eb9877fa4b73ff9bd307019976a05514b8f8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8cfb55c4199935d7d859cdc9144f5a29dc34eff9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049390"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202560"
 ---
 # <a name="rename-user-sys"></a>Benennen Sie den Benutzer 'sys' um
   Upgrade Advisor hat erkannt, der Benutzername **Sys** in einer Datenbank. Dieser Name ist reserviert. Benennen Sie den Benutzer um, bevor Sie ein Upgrade durchführen. Wenn der Benutzer nicht umbenannt wird, ist die Datenbank nach dem Upgradevorgang fehlerverdächtig und nicht verfügbar, bis die Datenbank online geschaltet wird.  
@@ -52,7 +52,7 @@ ms.locfileid: "36049390"
   
 4.  Löschen Sie den Benutzer **Sys**.  
   
-5.  Um die in Schritt 2 aufgezeichneten ursprünglichen Berechtigungen wiederherzustellen, verwenden Sie die AS *neues* -Klausel der GRANT-Anweisung.  
+5.  Um in Schritt 2 aufgezeichneten ursprünglichen Berechtigungen wiederherzustellen, verwenden Sie die AS *neues* -Klausel der GRANT-Anweisung.  
   
 6.  Ändern Sie die Skripts so, dass sie auf den neuen Benutzer verweisen. So müssen z. B. Skripts, die Anweisungen wie `SELECT * FROM sys.my`_`table` enthalten, in `SELECT * FROM new_user.my_table` geändert werden.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36049390"
 3.  Führen Sie die Anweisung `ALTER DATABASE db_name SET MULTI_USER` aus.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenbank-Engine-Upgradeprobleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [Datenbank-Engine-Upgrade-Probleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

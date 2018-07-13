@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 7: Erstellen von Measures | Microsoft Docs'
+title: 'Lektion 7: Erstellen von Measures | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 01bd2ad7-09b7-49ae-ad80-83f25da301aa
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: e96525c0e50e560e255156f7dd1bb731398df679
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f5c6b18e88a4fbff18c06c9a10a06fe5d2f1e803
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048863"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222850"
 ---
 # <a name="lesson-7-create-measures"></a>Lektion 7: Erstellen von Measures
   In dieser Lektion erstellen Sie in das Modell einzufügende Measures. Ähnlich wie die berechneten Spalten, die Sie in der vorherigen Lektion erstellt haben, ist ein Measure im Wesentlichen eine mit einer DAX-Formel erstellte Berechnung. Im Gegensatz zu berechneten Spalten werden Measures jedoch auf Basis eines vom Benutzer ausgewählten *Filters* ausgewertet; z.B. eine bestimmte Spalte oder ein Slicer, die bzw. der dem Feld für Zeilenbezeichnungen in einer PivotTable hinzugefügt wurde.   Ein Wert für jede Zelle im Filter wird dann vom übernommenen Measure berechnet. Measures sind leistungsstarke, flexible Berechnungen, die Sie in fast alle Tabellenmodelle einbinden können, um dynamische Berechnungen für numerische Daten auszuführen. Weitere Informationen finden Sie unter [Measures &#40;SSAS – tabellarisch&#41;](tabular-models/measures-ssas-tabular.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "36048863"
   
      Drücken Sie nach dem Erstellen der Formel die EINGABETASTE.  
   
-     Beachten Sie, dass die linke obere Zelle jetzt einen Measurenamen enthält **Measure 1**, gefolgt von dem Ergebnis **30**. Der Measurename geht auch der Formel in der Bearbeitungsleiste voraus.  
+     Beachten Sie, dass die linke obere Zelle jetzt einen Measurenamen enthält, **Measure 1**, gefolgt von dem Ergebnis **30**. Der Measurename geht auch der Formel in der Bearbeitungsleiste voraus.  
   
 5.  Um das Measure in der Bearbeitungsleiste umzubenennen, markieren Sie den Namen **Measure 1**, geben Sie dann `Days Current Quarter to Date`, und drücken Sie dann die EINGABETASTE.  
   

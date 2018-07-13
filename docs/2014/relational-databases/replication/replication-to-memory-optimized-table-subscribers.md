@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 569e88c7fbf844494276948690c583f69737ff14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bf93e552732ea0a5659211fbc11c2d3751a326a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049884"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188487"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replikation mit Abonnenten von speicheroptimierten Tabellen
   Die Tabellen, die als Transaktionsreplikationsabonnenten fungieren, können (mit Ausnahme der Peer-zu-Peer-Transaktionsreplikation) als speicheroptimierte Tabellen konfiguriert werden. Andere Replikationskonfigurationen sind mit speicheroptimierten Tabellen nicht kompatibel.  
@@ -63,9 +63,9 @@ ms.locfileid: "36049884"
     EXEC sp_startpublication_snapshot @publication = N'Publication1';  
     ```  
   
-2.  Navigieren Sie zum Ordner für Momentaufnahmen. Der Standardspeicherort ist "c:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSSQL12. \<Instanz > \MSSQL\repldata\unc\XXX\YYYYMMDDHHMMSS\\".  
+2.  Navigieren Sie zum Ordner für Momentaufnahmen. Der Standardspeicherort lautet "c:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSSQL12. \<Instanz > \MSSQL\repldata\unc\XXX\YYYYMMDDHHMMSS\\".  
   
-3.  Suchen Sie die **. SCH** -Datei für die Tabelle, und öffnen Sie sie in Management Studio. Ändern Sie das Tabellenschema, und aktualisieren Sie die gespeicherte Prozedur, wie im Folgenden beschrieben.  
+3.  Suchen Sie die **. SCH** -Datei für die Tabelle, und klicken Sie in Management Studio zu öffnen. Ändern Sie das Tabellenschema, und aktualisieren Sie die gespeicherte Prozedur, wie im Folgenden beschrieben.  
   
      Werten Sie die in der IDX-Datei definierten Indizes aus. Ändern Sie `CREATE TABLE`, um die erforderlichen Indizes, die Einschränkungen, den Primärschlüssel und die speicheroptimierte Syntax anzugeben. Für speicheroptimierte Tabellen dürfen Indexspalten NICHT NULL sein, und Indexspalten von Zeichentypen müssen Unicode sein und eine BIN2-Sortierung aufweisen. Siehe das unten stehende Beispiel:  
   
@@ -230,7 +230,7 @@ ms.locfileid: "36049884"
     go  
     ```  
   
-5.  Erstellen der Abonnentendatenbank mithilfe der **elevate_to_snapshot_isolation** aus, und legen Sie die standardsortierung auf Latin1_General_CS_AS_KS_WS, wenn Sie nicht-Unicode-Zeichendatentypen verwenden.  
+5.  Erstellen der Abonnentendatenbank mithilfe der **elevate_to_snapshot_isolation** aus, und legen Sie die standardsortierung auf Latin1_General_CS_AS_KS_WS, wenn die Nichtunicode-Zeichendatentypen verwenden.  
   
     ```  
     CREATE DATABASE [Sub]   
@@ -305,7 +305,7 @@ GO
   
 -   Es gelten Einschränkungen für das Aktualisieren des Primärschlüssels von Tabellen, die mit einer speicheroptimierten Tabelle auf einem Abonnenten repliziert werden. Weitere Informationen finden Sie unter [Replizieren von Änderungen mit einem Primärschlüssel](#PrimaryKey).  
   
--   Fremdschlüssel, UNIQUE-Einschränkung, Trigger, Schemaänderungen, ROWGUIDCOL, berechnete Spalten, die Datenkomprimierung, Aliasdatentypen, Versionsverwaltung und Sperren werden in speicheroptimierte Tabellen nicht unterstützt. Finden Sie unter [Transact-SQL von In-Memory OLTP nicht unterstützte Konstrukte](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) Informationen.  
+-   Fremdschlüssel, UNIQUE-Einschränkung, Trigger, Schemaänderungen, ROWGUIDCOL, berechnete Spalten, die Datenkomprimierung, Aliasdatentypen, Versionsverwaltung und Sperren werden in speicheroptimierte Tabellen nicht unterstützt. Finden Sie unter [Transact-SQL durch In-Memory OLTP nicht unterstützte Konstrukte](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) Informationen.  
   
 ##  <a name="Schema"></a> Ändern einer Schemadatei  
   

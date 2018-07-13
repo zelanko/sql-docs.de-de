@@ -1,5 +1,5 @@
 ---
-title: "Lektion 2: Bereinigung von Lieferantendaten mithilfe der Wissensdatenbank ' Suppliers ' | Microsoft Docs"
+title: "Lektion 2: Bereinigung von Lieferantendaten, die die Wissensdatenbank ' Suppliers ' mit | Microsoft-Dokumentation"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,29 +10,29 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 215c14de-fc3f-46de-a022-bf69b9ea2a96
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1b4c227ff846649e29b7efc0ad50e4b13416c48c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5708dfe72d3eaa745d1ffefd88147b3e72b7c46c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048645"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191220"
 ---
 # <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>Aufgabe 2: Bereinigung von Lieferantendaten mithilfe der Wissensdatenbank 'Suppliers'
-  In dieser Lektion bereinigen Sie die Lieferantendaten in einer Excel-Datei mithilfe der **Lieferanten** Wissensdatenbank, die Sie in der ersten Lektion erstellt haben. DatenBereinigung in DQS umfasst einen **computergestützten Prozess** , der analysiert, wie Daten mit den Informationen in einer Wissensdatenbank übereinstimmen und eine **interaktiver Prozess** mit der Sie zum Überprüfen und ändern die Ergebnisse des computergestützten Prozesses. Die Datenbereinigungsfunktion identifiziert falsche Daten in der Datenquelle und korrigiert diese anschließend oder schlägt Korrekturen für die falschen Daten vor. Darüber hinaus standardisiert und erweitert sie Kundendaten unter Verwendung von Domänenwerten, führenden Werten für Synonyme, Domänenregeln, begriffsbasierten Beziehungen und Verweisdaten. Sie können die vom computergestützten Prozess vorgeschlagenen Änderungen interaktiv genehmigen oder ablehnen. Finden Sie unter [DatenBereinigung](http://msdn.microsoft.com/library/gg524800.aspx) Weitere Details.  
+  In dieser Lektion bereinigen Sie die Lieferantendaten in einer Excel-Datei mithilfe der **Lieferanten** Wissensdatenbank, die Sie in der ersten Lektion erstellt haben. DatenBereinigung in DQS umfasst einen **computergestützten Prozess** , der analysiert, wie Daten mit den Informationen in einer Wissensdatenbank übereinstimmen und eine **interaktiver Prozess** , mit der Sie zum Überprüfen und ändern die Ergebnisse des computergestützten Prozesses. Die Datenbereinigungsfunktion identifiziert falsche Daten in der Datenquelle und korrigiert diese anschließend oder schlägt Korrekturen für die falschen Daten vor. Darüber hinaus standardisiert und erweitert sie Kundendaten unter Verwendung von Domänenwerten, führenden Werten für Synonyme, Domänenregeln, begriffsbasierten Beziehungen und Verweisdaten. Sie können die vom computergestützten Prozess vorgeschlagenen Änderungen interaktiv genehmigen oder ablehnen. Finden Sie unter [DatenBereinigung](http://msdn.microsoft.com/library/gg524800.aspx) Weitere Details.  
   
  Der computergestützte Prozess verwendet die folgenden Schwellenwerte, die Sie mithilfe der Konfigurationsoption auf der DQS-Client-Hauptseite konfigurieren können.  
   
--   **Mindestergebnis für Vorschläge:** das Mindestergebnis bzw. der Vertrauensgrad, der von DQS zum Vorschlagen eines ersatzwertes für einen Wert verwendet wird.  
+-   **Mindestergebnis für Vorschläge:** das minimale Ergebnis oder der Vertrauensgrad, der von DQS zum Vorschlagen eines ersatzwertes für einen Wert verwendet wird.  
   
--   **Mindestergebnis für automatische Korrekturen:** das Mindestergebnis bzw. der Vertrauensgrad, der von DQS zum automatischen Korrigieren eines Werts verwendet wird.  
+-   **Mindestergebnis für automatische Korrekturen:** das minimale Ergebnis oder der Vertrauensgrad, der von DQS zum automatischen Korrigieren eines Werts verwendet wird.  
   
- Finden Sie unter [Configure Threshold Values for Cleansing and Matching](http://msdn.microsoft.com/library/hh510415.aspx) ausführliche Informationen zum Konfigurieren dieser Einstellungen.  
+ Finden Sie unter [Konfigurieren der Schwellenwerte für Bereinigung und Abgleich](http://msdn.microsoft.com/library/hh510415.aspx) ausführliche Anleitungen zum Konfigurieren dieser Einstellungen.  
   
  In dieser Lektion führen Sie die folgenden Aufgaben für die Wissensdatenbank "Suppliers" aus, um die Eingabedaten zu bereinigen.  
   

@@ -1,5 +1,5 @@
 ---
-title: SetProtocolsOrder-Methode (ClientNetworkProtocol-Klasse) | Microsoft Docs
+title: SetProtocolsOrder-Methode (ClientNetworkProtocol-Klasse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetProtocolsOrder method
 ms.assetid: b86d98b9-aae4-4e74-b4da-1ec984d5c8b4
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bd3281ff6bcd92d53b76a25c1f7b5a127dc9cd7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 0befa20fdc25df354bbfe60cfb9e3313a65ddf48
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048469"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262266"
 ---
 # <a name="setprotocolsorder-method-clientnetworkprotocol-class"></a>SetProtocolsOrder-Methode (ClientNetworkProtocol-Klasse)
   Ändert die Reihenfolge der Protokollliste.  
@@ -55,7 +55,7 @@ ProtocolOrderList
 |*ProtocolOrderList*|Eine Zeichenfolgenarray, das die Clientnetzwerkprotokolle in der neuen Reihenfolge auflistet.|  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
- Ein `uint32` Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert 1, wenn die Anforderung nicht unterstützt wird, wurde, und jede andere Zahl gibt einen Fehler an.  
+ Ein `uint32` -Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert 1, wenn die Anforderung nicht unterstützt wird, wurde, und jede andere Zahl gibt einen Fehler an.  
   
 ## <a name="remarks"></a>Hinweise  
   

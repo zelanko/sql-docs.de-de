@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren einer Fehlerausgabe in einer Datenflusskomponente | Microsoft Docs
+title: Konfigurieren einer Fehlerausgabe in einer Datenflusskomponente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - errors [Integration Services], data flow components
 - components [Integration Services], data flow
 - error outputs [Integration Services]
 ms.assetid: 53d7eeea-927d-4b45-8ea9-084e65ad5390
 caps.latest.revision: 31
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 03e93be67cdaba636edf9be0c0a33abc12e3700b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e61c6583a58ffb2ae84af9a4050ca077fb11b80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047451"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329871"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>Konfigurieren einer Fehlerausgabe in einer Datenflusskomponente
   Viele Datenflusskomponenten unterstützen Fehlerausgaben, und [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer bietet je nach Komponente unterschiedliche Möglichkeiten für die Konfiguration einer Fehlerausgabe. Sie können nicht nur eine Fehlerausgabe, sondern auch die Spalten einer Fehlerausgabe konfigurieren. Dies schließt das Konfigurieren der von der Komponente hinzugefügten Spalten **ErrorCode** und **ErrorColumn** ein.  

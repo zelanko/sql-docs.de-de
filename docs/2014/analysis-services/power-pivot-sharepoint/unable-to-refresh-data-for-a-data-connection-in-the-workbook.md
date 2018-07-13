@@ -1,5 +1,5 @@
 ---
-title: 'Daten können nicht für eine Datenverbindung in der Arbeitsmappe aktualisiert werden. Versuchen Sie es erneut, oder wenden Sie sich an den Systemadministrator. Die folgenden Verbindungen wurden nicht aktualisiert: PowerPivot-Daten | Microsoft Docs'
+title: 'Daten können nicht für eine Datenverbindung in der Arbeitsmappe aktualisiert werden. Versuchen Sie es erneut, oder wenden Sie sich an den Systemadministrator. Die folgenden Verbindungen wurden nicht aktualisiert: PowerPivot-Daten | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 705aa014770346e7554a41d01a75235b3e2a0451
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 396b4b32d2af95b8c7d49beab0fde988d2bee903
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049077"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220270"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>Daten können nicht für eine Datenverbindung in der Arbeitsmappe aktualisiert werden. Versuchen Sie es erneut, oder wenden Sie sich an den Systemadministrator. Die folgenden Verbindungen wurden nicht aktualisiert: PowerPivot-Daten
   Excel Services gibt diesen Fehler für Excel-Arbeitsmappen zurück, die PowerPivot-Daten enthalten, wenn es eine Verbindungsanforderung an einen PowerPivot-Server sendet und die Anforderung fehlschlägt.  
@@ -44,7 +44,7 @@ ms.locfileid: "36049077"
   
  Die Arbeitsmappe, die Sie zu öffnen versuchen, könnte in der SQL Server 2008 R2-Version von PowerPivot für Excel erstellt worden sein. Höchstwahrscheinlich ist der in der Datenverbindungszeichenfolge angegebene Analysis Service-Datenanbieter nicht auf dem Computer vorhanden, auf dem die Abfrage verarbeitet wird.  
   
- Wenn dies der Fall ist, finden Sie diese Meldung im ULS-Protokoll: "Fehler bei der Aktualisierung für PowerPivot-Daten" in der Arbeitsmappe '\<URL zur Arbeitsmappe >'", gefolgt von"Kann keine Verbindung hergestellt".  
+ Wenn dies der Fall ist, finden Sie diese Meldung in das ULS-Protokoll: "Fehler bei der Aktualisierung für PowerPivot-Daten" in der Arbeitsmappe '\<URL zu der Arbeitsmappe >'", gefolgt von"Es kann keine Verbindung hergestellt werden".  
   
  Um die Version der Arbeitsmappe zu bestimmen, öffnen Sie sie in Excel, und überprüfen Sie, welcher Datenanbieter in der Verbindungszeichenfolge angegeben ist. Eine SQL Server 2008 R2-Arbeitsmappe verwendet MSOLAP.4 als Datenanbieter.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36049077"
   
  Um dieses Problem zu umgehen, fügen Sie den Computer der gleichen Domäne wie der des PowerPivot-Servers hinzu, oder installieren Sie auf dem lokalen Computer einen Domänencontroller. Für die zweite Lösung, die Installation des Domänencontrollers, müssen Sie lokale Domänenkonten für alle Dienste und Benutzer erstellen. Sie müssen Dienstkonten und SharePoint-Berechtigungen für die Konten konfigurieren, die Sie definieren.  
   
- Die Installation eines Domänencontrollers auf Ihrem Computer ist nützlich, wenn die Zielsetzung darin besteht, PowerPivot für SharePoint in einem Offlinestatus zu verwenden. Ausführliche Anweisungen zur Verwendung von PowerPivot offline, finden Sie im Blogeintrag "Taking your PowerPivot Server off the Network" auf [ http://www.powerpivotgeek.com ](http://go.microsoft.com/fwlink/?LinkId=184241).  
+ Die Installation eines Domänencontrollers auf Ihrem Computer ist nützlich, wenn die Zielsetzung darin besteht, PowerPivot für SharePoint in einem Offlinestatus zu verwenden. Ausführliche Anweisungen zur Verwendung von PowerPivot offline finden Sie im Blogeintrag "Taking your PowerPivot-Server, aus dem Netzwerk" auf [ http://www.powerpivotgeek.com ](http://go.microsoft.com/fwlink/?LinkId=184241).  
   
  **Szenario 4: Instabiler Server**  
   

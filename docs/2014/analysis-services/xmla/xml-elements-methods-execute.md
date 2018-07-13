@@ -1,5 +1,5 @@
 ---
-title: Execute-Methode (XMLA) | Microsoft Docs
+title: Execute-Methode (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,18 +26,18 @@ helpviewer_keywords:
 - Execute method
 ms.assetid: 0fff5221-7164-4bbc-ab58-49cf04c52664
 caps.latest.revision: 34
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5c32261e06788f366a6c5ce5af24c508b87a6882
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: ec3fa458148638af5431b4a519acf8556d29b122
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049261"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235560"
 ---
 # <a name="execute-method-xmla"></a>Execute-Methode (XMLA)
-  Sendet XML für Analysis (XMLA) Befehle mit einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Dies schließt Anforderungen im Zusammenhang mit Datenübertragung ein, z. B. das Abrufen oder Aktualisieren von Daten auf dem Server.  
+  Sendet XML für Analysis (XMLA) Befehle an einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Dies schließt Anforderungen im Zusammenhang mit Datenübertragung ein, z. B. das Abrufen oder Aktualisieren von Daten auf dem Server.  
   
  **Namespace** urn:schemas-microsoft-com:xml-analysis  
   
@@ -70,10 +70,10 @@ ms.locfileid: "36049261"
 |Untergeordnete Elemente|[Befehl](xml-elements-properties/command-element-xmla.md), [Parameter](xml-elements-properties/parameters-element-xmla.md), [Eigenschaften](xml-elements-properties/properties-element-xmla.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `Execute` -Methode führt XMLA-Befehle, die gemäß der `Command` Element und gibt resultierenden Daten entweder mithilfe die XMLA [Rowset](xml-data-types/rowset-data-type-xmla.md) -Datentyp (für tabellarische Resultsets) oder des XMLA- [MDDataSet](xml-data-types/mddataset-data-type-xmla.md) -Datentyps (für mehrdimensionale Resultsets.)  
+ Die `Execute` -Methode führt XMLA-Befehle, die bereitgestellt werden, der `Command` Element und gibt resultierenden Daten mithilfe die XMLA [Rowset](xml-data-types/rowset-data-type-xmla.md) -Datentyps (für tabellarische Resultsets) oder des XMLA- [MDDataSet](xml-data-types/mddataset-data-type-xmla.md) -Datentyps (für mehrdimensionale Resultsets.)  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel wird ein Beispiel für eine `Execute` -Methodenaufruf, der eine SELECT-Anweisung von MDX (Multidimensional Expressions) enthält.  
+ Im folgenden Codebeispiel wird ein Beispiel für eine `Execute` Methodenaufruf, der eine SELECT-Anweisung von MDX (Multidimensional Expressions) enthält.  
   
 ```  
 <Execute xmlns="urn:schemas-microsoft-com:xml-analysis">  

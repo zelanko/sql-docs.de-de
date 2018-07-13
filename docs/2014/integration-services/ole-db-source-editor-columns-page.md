@@ -1,5 +1,5 @@
 ---
-title: Quellen-Editor für OLE DB (Spaltenseite) | Microsoft Docs
+title: Quellen-Editor für OLE DB (Spaltenseite) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbsourceadapter.columns.f1
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: bfbb0ae1-7759-4d45-8865-31df36ae5b34
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9d4795853fd0b7018eac474e23177a7a89047c84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 27e6acc421b173cb80b388f7db306ebf18bdb07c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049248"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271276"
 ---
 # <a name="ole-db-source-editor-columns-page"></a>Quellen-Editor für OLE DB (Seite Spalten)
   Auf der Seite **Spalten** des Dialogfelds **Quellen-Editor für OLE DB** können Sie jeder externen (Quell-)Spalte eine Ausgabespalte zuordnen.  

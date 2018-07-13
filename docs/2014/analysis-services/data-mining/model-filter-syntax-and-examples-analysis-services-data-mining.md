@@ -1,5 +1,5 @@
 ---
-title: Modellfiltersyntax und Beispiele (Analysis Services – Datamining) | Microsoft Docs
+title: Modellfiltersyntax und Beispiele (Analysis Services – Datamining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - model filter [data mining]
 - filter syntax [data mining]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - filters [Analysis Services]
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 881b62a2e013d9e01a21272d3adeaf6819b2abb6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 252af15e8afcf42d407176c4ff72f0076053b52e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047027"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236340"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>Modellfiltersyntax und Beispiele (Analysis Services - Data Mining)
   Dieser Abschnitt enthält ausführliche Informationen zur Syntax von Modellfiltern sowie Beispielausdrücke.  
@@ -242,9 +242,9 @@ FILTER (EXISTS (Products))
 
   
 ###  <a name="bkmk_Ex7"></a> Beispiel 7: Komplexe Filterkombinationen  
- Das Szenario für dieses Modell ähnelt dem von Beispiel 4, ist jedoch wesentlich komplexer. Die geschachtelte Tabelle **ProductsOnSale**, besitzt die filterbedingung `(OnSale)` bedeutet, dass den Wert der **OnSale** muss `true` für das Produkt in aufgeführten **ProductName**. Hier ist **OnSale** eine Strukturspalte.  
+ Das Szenario für dieses Modell ähnelt dem von Beispiel 4, ist jedoch wesentlich komplexer. Die geschachtelte Tabelle **ProductsOnSale**, besitzt die filterbedingung `(OnSale)` bedeutet, dass des Werts des **OnSale** muss `true` für das Produkt in aufgeführten **ProductName**. Hier ist **OnSale** eine Strukturspalte.  
   
- Der zweite Teil des Filters für **ProductsNotOnSale**, wiederholt diese Syntax, filtert jedoch nach Produkten, bei denen der Wert der **OnSale** ist `not true``(!OnSale)`.  
+ Der zweite Teil des Filters für **ProductsNotOnSale**wiederholt diese Syntax, filtert jedoch nach Produkten, bei denen der Wert des **OnSale** ist `not true``(!OnSale)`.  
   
  Schließlich werden die Bedingungen kombiniert und der Falltabelle wird eine weitere Einschränkung hinzugefügt. Das Ergebnis ist die Vorhersage von Käufen der Produkte in der Liste **ProductsNotOnSale** auf der Grundlage der Fälle in der Liste **ProductsOnSale** für alle Kunden mit einem Alter von über 25.  
   
@@ -296,9 +296,9 @@ FILTER (EXISTS (Products))
  `=[DateCopy] > '12:31:2003:00:00:00'`  
   
 > [!NOTE]  
->  Beachten Sie, dass sich alle zusätzlichen Spalten, die Sie dem Modell hinzufügen, auf die Ergebnisse auswirken können. Wenn Sie nicht möchten, dass die Spalte zur Berechnung der Reihe verwendet wird, sollten Sie die Spalte daher nur der Miningstruktur und nicht dem Modell hinzufügen. Sie können auch das Modellflag für die Spalte auf festlegen `PredictOnly` oder `Ignore`. Weitere Informationen finden Sie unter [Modellierungsflags &#40;Data Mining&#41;](modeling-flags-data-mining.md).  
+>  Beachten Sie, dass sich alle zusätzlichen Spalten, die Sie dem Modell hinzufügen, auf die Ergebnisse auswirken können. Wenn Sie nicht möchten, dass die Spalte zur Berechnung der Reihe verwendet wird, sollten Sie die Spalte daher nur der Miningstruktur und nicht dem Modell hinzufügen. Sie können auch das Modellflag festlegen, für die Spalte auf `PredictOnly` oder `Ignore`. Weitere Informationen finden Sie unter [Modellierungsflags &#40;Data Mining&#41;](modeling-flags-data-mining.md).  
   
- Für andere Modelltypen können Sie Datumsangaben ebenso wie jede andere Spalte als Eingabekriterien oder Filterkriterien verwenden. Jedoch wenn müssen Sie einen bestimmten Grad an Granularität, die von nicht unterstützt wird, verwenden eine `Continuous` -Datentyp, können einen abgeleiteten Wert in der Datenquelle mithilfe von Ausdrücken zum Extrahieren der Einheit, Filterung und Analyse verwendet.  
+ Für andere Modelltypen können Sie Datumsangaben ebenso wie jede andere Spalte als Eingabekriterien oder Filterkriterien verwenden. Jedoch wenn müssen Sie einen bestimmten Grad an Granularität, die von nicht unterstützt wird, verwenden eine `Continuous` -Datentyp, Sie können einen abgeleiteten Wert erstellen in der Datenquelle mithilfe von Ausdrücken die Einheit Filterung und Analyse zu extrahieren.  
   
 > [!WARNING]  
 >  Wenn Sie Datumsangaben als Filterkriterien angeben, müssen Sie unabhängig vom Datumsformat für das aktuelle Betriebssystem das folgende Format verwenden: `mm/dd/yyyy`. Jedes andere Format führt zu einem Fehler.  

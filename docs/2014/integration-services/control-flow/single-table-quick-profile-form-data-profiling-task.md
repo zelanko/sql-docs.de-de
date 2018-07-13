@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.quickprofile.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8d6997088baf41278a13d89082d1b3da202916c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d805c9378ee720557091c2734d06cccf2fec8ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047246"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167211"
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>Schnellprofilformular für eine einzelne Tabelle (Datenprofilerstellungs-Task)
   Verwenden Sie das **Schnellprofilformular für eine einzelne Tabelle** , um den Datenprofilerstellungs-Task schnell mithilfe der Standardeinstellungen so zu konfigurieren, dass er ein Profil für eine einzelne Tabelle oder Sicht erstellt.  
@@ -56,7 +56,7 @@ ms.locfileid: "36047246"
 >  Der Typ „Wertinklusionsprofil“ ist im **Schnellprofilformular für eine einzelne Tabelle**nicht verfügbar.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenprofilerstellungs-Task-Editor &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Der Datenprofilerstellungs-Task-Editor &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)   
  [Editor für den Datenprofilerstellungs-Task &#40;Seite „Profilanforderungen“&#41;](data-profiling-task-editor-profile-requests-page.md)  
   
   

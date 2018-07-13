@@ -1,5 +1,5 @@
 ---
-title: Führen Sie die Referenz zur Benutzeroberfläche des Paket-Hilfsprogramms (DtExecUI) | Microsoft Docs
+title: Führen Sie die Referenz zur Benutzeroberfläche von Paket-Hilfsprogramms (DtExecUI) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dtexecui.general.f1
 - sql12.dts.dtexecui.executionoptions.f1
@@ -26,13 +26,13 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6213873f823c8b4cb89a7db03c612971845b75a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 215634d6a42c25870c4cac476905f19386df69ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047891"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256846"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>Referenz zur Benutzeroberfläche des Paketausführungs-Hilfsprogramms (DtExecUI)
   Verwenden Sie das **Paketausführungshilfsprogramm**, um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete auszuführen. Das Hilfsprogramm führt Pakete aus, die an einem von drei Speicherorten gespeichert wurden: in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank, im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher und im Dateisystem. Diese Benutzeroberfläche, die aus geöffnet werden kann [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder durch Eingabe `dtexecui` an einer Eingabeaufforderung ist eine Alternative zum Ausführen von Paketen mithilfe der **DTExec** eingabeaufforderungs-Hilfsprogramm.  
@@ -55,7 +55,7 @@ ms.locfileid: "36047891"
   
 ### <a name="to-open-the-execute-package-utility-at-the-command-prompt"></a>So öffnen Sie das Paketausführungsprogramm an der Eingabeaufforderung  
   
--   Führen Sie ein Eingabeaufforderungsfenster `dtexecui`.  
+-   Führen Sie in einem Eingabeaufforderungsfenster `dtexecui`.  
   
  In den folgenden Abschnitten werden Seiten des Dialogfelds **Paketausführungshilfsprogramm** beschrieben.  
   

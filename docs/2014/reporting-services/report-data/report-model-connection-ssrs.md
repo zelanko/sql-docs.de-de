@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: da880fb8-13cc-4d5f-b992-91ed0ec3ca7d
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b320adc42b3ff13f2fe7621eb07f7529a1f96e4d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 40ef90cde297a3d7cb0ba2e51b078d22a6d05163
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048913"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224890"
 ---
 # <a name="report-model-connection-ssrs"></a>Berichtsmodellverbindung (SSRS)
   Wenn Sie Daten aus einem Berichtsmodell einschließen möchten, benötigen Sie ein Dataset mit einem Berichtsmodell als Datenquelle. Anders als bei anderen Berichtsdatenquellen ist für ein Berichtsmodell keine Datenerweiterung verfügbar. Im Berichts-Generator wählen SIe das Modell direkt auf dem Berichtsserver aus. In Berichts-Designer geben Sie die URL zum Berichtsmodell an.  

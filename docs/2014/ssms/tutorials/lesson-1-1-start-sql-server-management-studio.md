@@ -5,21 +5,19 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
-caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2f928645fb89757b2284628d0400847cf5f3a1f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 97aae9bc9e495694868c2f8dec8570cdb1742fc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047518"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270226"
 ---
 # <a name="start-sql-server-management-studio"></a>Starten von SQL Server Management Studio
   Zu Beginn dieses Lernprogramms geht es hauptsächlich um [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -28,12 +26,12 @@ ms.locfileid: "36047518"
   
 #### <a name="to-open-sql-server-management-studio"></a>So öffnen Sie SQL Server Management Studio  
   
-1.  Auf der **starten** Sie im Menü **Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], und klicken Sie dann auf **SQL Server Management Studio**.  
+1.  Auf der **starten** Startmenü **Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], und klicken Sie dann auf **SQL Server Management Studio**.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ist nicht standardmäßig installiert. Wenn [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] nicht verfügbar ist, installieren Sie es, indem Sie Setup ausführen. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ist nicht verfügbar, mit [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express kann kostenlos von der [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=37075&clcid=0x409), weist jedoch eine andere Benutzeroberfläche als in diesem Lernprogramm beschrieben ist.  
+    >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ist nicht standardmäßig installiert. Wenn [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] nicht verfügbar ist, installieren Sie es, indem Sie Setup ausführen. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ist nicht verfügbar, mit [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express kann kostenlos von der [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=37075&clcid=0x409), weist jedoch eine andere Benutzeroberfläche als in diesem Tutorial beschrieben wird.  
   
-2.  Überprüfen Sie im Dialogfeld **Verbindung mit dem Server herstellen** die Standardeinstellungen, und klicken Sie dann auf **Verbinden**. Um eine Verbindung herstellen, die **Servernamen** muss den Namen des Computers enthalten, in denen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist. Wenn die [!INCLUDE[ssDE](../../includes/ssde-md.md)] ist eine benannte Instanz den **Servernamen** Feld sollte auch den Instanznamen im Format enthalten \< *Computer_name* > \\ < *Instance_name*>.  
+2.  Überprüfen Sie im Dialogfeld **Verbindung mit dem Server herstellen** die Standardeinstellungen, und klicken Sie dann auf **Verbinden**. Um eine Verbindung herzustellen, die **Servernamen** Feld muss den Namen des Computers enthalten, in denen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist. Wenn die [!INCLUDE[ssDE](../../includes/ssde-md.md)] eine benannte Instanz, die **Servernamen** Feld sollten auch den Instanznamen im Format enthalten \< *Computer_name* > \\ < *Instance_name*>.  
   
 ## <a name="management-studio-components"></a>Management Studio-Komponenten  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] stellt seine Informationen in Fenstern bereit, die für die jeweils spezielle Art von Informationen vorgesehen sind. Datenbankinformationen werden im Fenster Objekt-Explorer sowie im Fenster für Dokumente angezeigt.  
@@ -50,7 +48,7 @@ ms.locfileid: "36047518"
   
      Das Fenster Registrierte Server wird über dem Objekt-Explorer angezeigt. In der Liste "Registrierte Server" werden die Server aufgelistet, die Sie häufig verwalten. In dieser Liste können Sie Server hinzufügen und entfernen. Als einzige Server werden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen auf dem Computer aufgelistet, auf dem [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]ausgeführt wird.  
   
-2.  Wenn Ihr Server nicht, im Fenster registrierte Server angezeigt wird mit der rechten Maustaste **Datenbankmodul**, und klicken Sie dann auf **lokale Serverregistrierung aktualisieren**.  
+2.  Wenn Ihr Server nicht, in der Liste der registrierten Server angezeigt wird mit der rechten Maustaste **Datenbank-Engine**, und klicken Sie dann auf **lokale Serverregistrierung aktualisieren**.  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
  [Herstellen einer Verbindung mit registrierten Servern und dem Objekt-Explorer](../object/object-explorer.md)  

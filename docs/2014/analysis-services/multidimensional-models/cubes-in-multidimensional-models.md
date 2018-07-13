@@ -1,5 +1,5 @@
 ---
-title: Cubes in mehrdimensionalen Modellen | Microsoft Docs
+title: Cubes in mehrdimensionalen Modellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - OLAP objects [Analysis Services], cubes
 - cubes [Analysis Services], about cubes
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - OLAP [Analysis Services], cubes
 ms.assetid: e0f7acf3-4b07-41fc-a5fc-ac30b4a56c54
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4c32903245da975c9a62d6b7600abbe074b19bc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ca5da5ea8dfb22adc6e038f9dc54740e5102aad0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048170"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237730"
 ---
 # <a name="cubes-in-multidimensional-models"></a>Cubes in mehrdimensionalen Modellen
   Ein Cube ist eine mehrdimensionale Struktur, die Informationen für analytische Zwecke enthält. Die Hauptbestandteile eines Cubes sind Dimensionen und Measures. Dimensionen definieren die Struktur des Cubes, den Sie für Aufteilungen verwenden, während Measures dem Endbenutzer numerische Werte zur Verfügung stellen, die für ihn von Interesse sind. Als logische Struktur ermöglicht ein Cube einer Clientanwendung das Abrufen von Werten von Measures, so als ob sie in Zellen im Cube enthalten wären. Zellen werden für jeden möglichen zusammengefassten Wert definiert. Eine Zelle im Cube wird von der Schnittmenge von Dimensionselementen definiert und enthält die aggregierten Werte der Measures an dieser speziellen Schnittmenge.  

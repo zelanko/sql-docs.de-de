@@ -1,5 +1,5 @@
 ---
-title: Transformations-Editor für abgeleitete | Microsoft Docs
+title: Abgeleitete Spalte Transformations-Editor | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.derivedcolumntransformation.f1
 helpviewer_keywords:
 - Derived Column Transformation Editor
 ms.assetid: ff73923e-d245-43d8-bf24-af3bdc942e51
 caps.latest.revision: 32
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 55260f465c69c69f3cdebca0f9e9eae048530376
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 22d05a24cda6ac608fd747b325dc8038cfea6089
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047854"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193890"
 ---
 # <a name="derived-column-transformation-editor"></a>Transformations-Editor für abgeleitete Spalte
   Mithilfe des Dialogfelds **Transformations-Editor für abgeleitete Spalte** können Sie Ausdrücke erstellen, die neue Spalten oder Ersatzspalten auffüllen.  

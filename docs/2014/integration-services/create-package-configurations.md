@@ -1,5 +1,5 @@
 ---
-title: Erstellen von Paketkonfigurationen | Microsoft Docs
+title: Erstellen von Paketkonfigurationen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, configurations
 - Package Configurations Organizer dialog box
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - deploying packages [Integration Services], configurations
 ms.assetid: 91ac0347-f908-44f5-bd3d-115790223af4
 caps.latest.revision: 71
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: be150c6e13e1e677539e19fd96398eaa659bc26d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ec353414e9b910285152ed3f391ca4dc1970ed45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049258"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266786"
 ---
 # <a name="create-package-configurations"></a>Erstellen von Paketkonfigurationen
   Im Dialogfeld **Paketkonfigurationsplaner** und im Paketkonfigurationsassistenten erstellen Sie Paketkonfigurationen. Um auf diese Tools zuzugreifen, klicken Sie in **im Menü** SSIS **auf** Paketkonfigurationen [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -122,7 +122,7 @@ ms.locfileid: "36049258"
   
 ## <a name="see-also"></a>Siehe auch  
  [Paketkonfigurationen](../../2014/integration-services/package-configurations.md)   
- [Packen Sie die Bereitstellung &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)   
+ [Paketbereitstellung &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)   
  [Programmgesteuertes Arbeiten mit Variablen](building-packages-programmatically/working-with-variables-programmatically.md)  
   
   

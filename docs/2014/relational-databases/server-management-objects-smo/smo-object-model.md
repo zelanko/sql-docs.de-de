@@ -1,5 +1,5 @@
 ---
-title: SMO-Objektmodell | Microsoft Docs
+title: SMO-Objektmodell | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Management Objects, object model
 ms.assetid: bd6e59b6-ca46-42c0-adb2-c9d64cf6e00b
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bbaf5430252c296313723509b0195cdf5573ced5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e31e4efa6ee0655d50567a7da73e85cc811c6692
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049413"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175867"
 ---
 # <a name="smo-object-model"></a>SMO-Objektmodell
   Das SMO-Objektmodell besteht aus einer Hierarchie von Objekten. Das <xref:Microsoft.SqlServer.Management.Smo.Server>-Objekt ist das Objekt oberster Ebene, und alle Instanzklassenobjekte befinden sich unter dem <xref:Microsoft.SqlServer.Management.Smo.Server>-Objekt.  

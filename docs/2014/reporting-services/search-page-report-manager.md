@@ -1,5 +1,5 @@
 ---
-title: Suchen (Seite) (Berichts-Manager) | Microsoft Docs
+title: Suchen (Seite) (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 51ffdc07-e1b9-4ed7-acb3-dd98d7cce273
 caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4bc093b32a6fe3b5311bba109a7f4e672dc1fc9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e8fbd4956e5e836def836acf1693fe9f548dc081
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048209"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192990"
 ---
 # <a name="search-page-report-manager"></a>Suchen (Seite) (Berichts-Manager)
   Mithilfe der Seite Suchergebnisse können Sie die Ergebnisse eines Suchvorgangs für einen Bericht, einen verknüpften Bericht, ein Berichtsmodell, eine freigegebene Datenquelle, einen Ordner oder eine Ressource anzeigen. Suchergebnisse sind in alphabetischer Reihenfolge aufgeführt. Sie können die Ergebnisse nach Typ, Name oder Beschreibung sortieren.  
@@ -68,7 +68,7 @@ ms.locfileid: "36048209"
  Zeigen Sie auf ein Element, und klicken Sie auf den Dropdownpfeil, um das Dropdownmenü zu öffnen, über das Sie Eigenschaften des ausgewählten Elements aufrufen und konfigurieren können.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Berichts-Manager &#40;SSRS im einheitlichen Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Berichts-Manager (F1-Hilfe)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

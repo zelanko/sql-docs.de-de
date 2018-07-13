@@ -1,5 +1,5 @@
 ---
-title: Analysis Services | Microsoft Docs
+title: Analysis Services | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, about Analysis Services - Multidimensional Data
 - SSAS
@@ -19,21 +19,21 @@ helpviewer_keywords:
 - SSAS, about Analysis Services - Multidimensional Data
 ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b2cfc01ba3942ff431ca9bef78ea7bb16a5d56d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e4c20d17212de682466947bf86ddd415420b0576
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049810"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185447"
 ---
 # <a name="analysis-services"></a>Analysis Services
   
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ist eine analytische Online-Daten-Engine, die in Lösungen für Decision Support und Business Intelligence (BI) zur Anwendung kommt und analytische Daten für Geschäftsberichte und Clientanwendungen wie Excel, Reporting Services-Berichte und andere BI-Tools von Drittanbietern bereitstellt. Ein typischer Workflow für [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] beinhaltet die Erstellung eines OLAP- oder eines tabellarischen Datenmodells, die Bereitstellung des Modells als Datenbank in einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Instanz und die Bearbeitung der Datenbank, um Daten in diese zu laden, und dann Berechtigungen zum Datenzugriff zuzuweisen. Wenn dieser abgeschlossen ist, kann jede Anwendung, die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] als Datenquelle unterstützt, auf dieses Mehrzweckdatenmodell zugreifen.  
   
- Um ein Modell zu erstellen, verwenden Sie SQL Server Data Tools (siehe [Tools und Anwendungen, die in Analysis Services verwendete](tools-and-applications-used-in-analysis-services.md)), Auswählen einer tabellarischen oder mehrdimensionalen und Data Mining-Projekt-Vorlage. Die Projektvorlage enthält Ordner für alle in einem Modell erforderlichen Objekte. Sie können Assistenten verwenden, um alle grundlegenden Elemente, wie z. B. Datenquellen, Datenquellensichten, Dimensionen, Cubes und Rollen, zu erstellen.  
+ Um ein Modell zu erstellen, verwenden Sie SQL Server Data Tools (siehe [in Analysis Services verwendete Tools und Anwendungen](tools-and-applications-used-in-analysis-services.md)), Auswählen einer tabellarischen oder mehrdimensionalen und Data Mining-Projekt-Vorlage. Die Projektvorlage enthält Ordner für alle in einem Modell erforderlichen Objekte. Sie können Assistenten verwenden, um alle grundlegenden Elemente, wie z. B. Datenquellen, Datenquellensichten, Dimensionen, Cubes und Rollen, zu erstellen.  
   
  Die Modelle werden mit Daten aus externen Datensystemen gefüllt. Dies sind normalerweise Data Warehouses, die von einer relationalen SQL Server- oder Oracle-Datenbank-Engine gehostet werden. (Tabellarische Modelle unterstützen zusätzliche Datenquellentypen.) Modelle geben Abfrageobjekte wie z. B. Cubes an, aber auch Dimensionen, die in mehreren Cubes verwendet werden können, Berechnungen und KPIs, die Geschäftslogik kapseln, sowie Interaktionen wie Navigations- und Drillthroughverhalten.  
   
@@ -52,17 +52,17 @@ ms.locfileid: "36049810"
  Die Grunddokumentation für Analysis Services ist in Abschnitten organisiert, die dem Typ des Projekts entsprechen, die Sie erstellen. Wählen Sie in den folgenden Links, um mehr über jeden Modus oder die einzelnen Funktionsbereiche zu erfahren.  
   
  **Durchsuchen von Inhalt nach Bereich**  
- ![Kleines Dateiordnersymbol](../../2014/integration-services/media/filefolder-small.gif "kleines Dateiordnersymbol") [Vergleichen von tabellarischen und mehrdimensionalen Lösungen &#40;SSAS&#41;](comparing-tabular-and-multidimensional-solutions-ssas.md)  
+ ![Kleines Dateiordnersymbol](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Vergleichen von tabellarischen und mehrdimensionalen Lösungen &#40;SSAS&#41;](comparing-tabular-and-multidimensional-solutions-ssas.md)  
   
- ![Kleines Dateiordnersymbol](../../2014/integration-services/media/filefolder-small.gif "kleines Dateiordnersymbol") [Management für Analysis Services-Instanz](instances/analysis-services-instance-management.md)  
+ ![Kleines Dateiordnersymbol](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Analysis Services-Instanzverwaltung](instances/analysis-services-instance-management.md)  
   
- ![Kleines Dateiordnersymbol](../../2014/integration-services/media/filefolder-small.gif "kleines Dateiordnersymbol") [Tabellenmodellierung &#40;SSAS – tabellarisch&#41;](tabular-models/tabular-models-ssas.md)  
+ ![Kleines Dateiordnersymbol](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Tabellenmodellierung &#40;SSAS – tabellarisch&#41;](tabular-models/tabular-models-ssas.md)  
   
- ![Kleines Dateiordnersymbol](../../2014/integration-services/media/filefolder-small.gif "kleines Dateiordnersymbol") [mehrdimensionale Modellierung &#40;SSAS&#41;](multidimensional-models/multidimensional-models-ssas.md)  
+ ![Kleines Dateiordnersymbol](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [mehrdimensionale Modellierung &#40;SSAS&#41;](multidimensional-models/multidimensional-models-ssas.md)  
   
- ![Kleines Dateiordnersymbol](../../2014/integration-services/media/filefolder-small.gif "kleines Dateiordnersymbol") [Datamining &#40;SSAS&#41;](data-mining/data-mining-ssas.md)  
+ ![Kleines Dateiordnersymbol](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Datamining- &#40;SSAS&#41;](data-mining/data-mining-ssas.md)  
   
- ![Kleines Dateiordnersymbol](../../2014/integration-services/media/filefolder-small.gif "kleines Dateiordnersymbol") [PowerPivot für SharePoint &#40;SSAS&#41;](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
+ ![Kleines Dateiordnersymbol](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [PowerPivot für SharePoint &#40;SSAS&#41;](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Funktionen variieren je nach Edition. Mehrdimensionale und Data Mining-Modelle sind in der Standard Edition verfügbar, bieten aber weniger Funktionen als in den höheren Editionen. Tabellarische Modelle und PowerPivot für SharePoint sind Premium-Funktionen, die in der Standard Edition-Lizenz nicht verfügbar sind. Weitere Informationen finden Sie unter [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -70,7 +70,7 @@ ms.locfileid: "36049810"
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services-Lernprogramme &#40;SSAS&#41;](analysis-services-tutorials-ssas.md)   
  [Installation für SQLServer 2014](../database-engine/install-windows/installation-for-sql-server.md)   
- [Entwicklerhandbuch &#40;Analysis Services&#41;](analysis-services-developer-documentation.md)   
+ [Entwicklerhandbuch für &#40;Analysis Services&#41;](analysis-services-developer-documentation.md)   
  [SQL Server-Ressourcencenter](http://go.microsoft.com/fwlink/?linkID=219676)   
  [SQLCat.com](http://go.microsoft.com/fwlink/?linkID=220963)  
   

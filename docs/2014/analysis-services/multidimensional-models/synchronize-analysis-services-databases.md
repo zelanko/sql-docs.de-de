@@ -1,5 +1,5 @@
 ---
-title: Synchronisieren von Analysis Services-Datenbanken | Microsoft Docs
+title: Synchronisieren von Analysis Services-Datenbanken | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services deployments, Synchronize Database Wizard
 - deploying [Analysis Services], Synchronize Database Wizard
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - synchronization [Analysis Services]
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 193368b32f32941c5da99b134ce02b00b0b4c7b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b7bf8e598c6f9db0d2c0db12b63c84dad20daf2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049066"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216200"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Synchronisieren von Analysis Services-Datenbanken
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] umfasst eine Funktion für die Datenbanksynchronisierung, mit der zwei [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbanken auf den gleichen Stand gebracht werden, indem die Daten und Metadaten aus einer Datenbank auf einem Quellserver in eine Datenbank auf einem Zielserver kopiert werden. Die Funktion für die Datenbanksynchronisierung kann für folgende Aufgaben verwendet werden:  
@@ -51,7 +51,7 @@ ms.locfileid: "36049066"
   
  TCP-Port 2383 muss auf beiden Servern geöffnet sein, damit Remoteverbindungen zwischen den Standardinstanzen unterstützt werden. Weitere Informationen zum Erstellen einer Ausnahme in der Windows-Firewall finden Sie unter [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
- Sowohl die Quell-und Zielservern muss die gleiche Version und Servicepack. Da die darin enthaltenen Modellmetadaten auch synchronisiert wird, sollte um Kompatibilität sicherzustellen, dass den Build Anzahl für beide Server identisch sein. Die Editionen der einzelnen Installationen müssen die Datenbanksynchronisierung unterstützen. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]wird die Datenbanksynchronisierung in der Enterprise, Developer und Business Intelligence Edition unterstützt. Weitere Informationen zu Funktionen in den einzelnen Editionen finden Sie unter [von den Editionen von SQL Server 2014 unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Sowohl die Quell-und Zielservern muss die gleiche Version und Servicepack. Da Metadaten des Modells auch synchronisiert wird, sollte zum Sicherstellen der Kompatibilität des Builds-Nummer für die beiden Servern identisch sein. Die Editionen der einzelnen Installationen müssen die Datenbanksynchronisierung unterstützen. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]wird die Datenbanksynchronisierung in der Enterprise, Developer und Business Intelligence Edition unterstützt. Weitere Informationen zu Funktionen in den einzelnen Editionen finden Sie unter [von den SQL Server 2014-Editionen unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Der Serverbereitstellungsmodus muss auf beiden Servern identisch sein. Wenn die synchronisierte Datenbank mehrdimensional ist, müssen sowohl der Quell- als auch der Zielserver für den mehrdimensionalen Servermodus konfiguriert sein. Weitere Informationen zu Bereitstellungsmodi finden Sie unter [Determine the Server Mode of an Analysis Services Instance](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   

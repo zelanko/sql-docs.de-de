@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], report creation
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 caps.latest.revision: 74
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 811f80385261b9e688c76c6d7b472db210b7cb13
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 109ba047a24211c5a41aebf96ccb373a546c26c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048007"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218950"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>Entwerfen von Berichten mithilfe des Berichts-Designers (SSRS)
   Mit dem Berichts-Designer können Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichte und -Berichtslösungen mit vollem Funktionsumfang erstellen. Die grafische Benutzeroberfläche des Berichts-Designers ermöglicht Ihnen, Datenquellen, Datasets und Abfragen, Berichtslayoutpositionen für Datenbereiche und Felder sowie interaktive Funktionen. z. B. Parameter und zusammenwirkende Berichtssätze, zu definieren.  
@@ -42,7 +42,7 @@ ms.locfileid: "36048007"
 ##  <a name="bkmk_SharedDataSources"></a> Freigegebene Datenquellen  
  Verwenden Sie [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] , um freigegebene Datenquellen für eine Berichtslösung zu definieren und bereitzustellen. Freigegebene Datenquellen können mit den Eigenschaften **OverwriteDataSources** und **TargetDataSourceFolder** unabhängig von anderen Elementen in einem Projekt bereitgestellt werden. Weitere Informationen finden Sie unter [Festlegen von Bereitstellungseigenschaften &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md).  
   
- Im Berichts-Designer nutzen Sie sowohl den Berichtsdatenbereich als auch den Projektmappen-Explorer, um die in einem Bericht verwendeten Datenquellen zu definieren. Weitere Informationen finden Sie unter [Report Data Pane](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane). Sie können Datenquellen, die auf einem Berichtsserver oder einer SharePoint-Website veröffentlicht, aber nicht in die [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] -Projektmappe eingeschlossen wurden, nicht mit [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] öffnen. Verwenden Sie für die jeweilige Funktion [Berichts-Generator &#40;SSRS&#41;](report-builder-authoring-environment-ssrs.md).  
+ Im Berichts-Designer nutzen Sie sowohl den Berichtsdatenbereich als auch den Projektmappen-Explorer, um die in einem Bericht verwendeten Datenquellen zu definieren. Weitere Informationen finden Sie unter [Report Data Pane](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane). Sie können Datenquellen, die auf einem Berichtsserver oder einer SharePoint-Website veröffentlicht, aber nicht in die [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] -Projektmappe eingeschlossen wurden, nicht mit [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] öffnen. Verwenden Sie für diese Funktion [Berichts-Generator &#40;SSRS&#41;](report-builder-authoring-environment-ssrs.md).  
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ist ein Clienttool. Sie können die Berichtslösung lokal auf dem Computer testen, zum Testen der Serverlösung in einer Testumgebung bereitstellen und dann in einer Produktionsumgebung bereitstellen. Überprüfen Sie nach der Bereitstellung, dass die Verarbeitungserweiterungen und Anmeldeinformationen der Datenquelle für die Berichtsserverumgebung konfiguriert wurden. Der Konfigurations-Manager unterstützt Sie beim Verwalten der Eigenschaften für verschiedene Bereitstellungen. Weitere Informationen finden Sie unter [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md).  
   
@@ -52,9 +52,9 @@ ms.locfileid: "36048007"
 ##  <a name="bkmk_SharedDatasets"></a> Freigegebene Datasets  
  Verwenden Sie [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] , um freigegebene Datasets für eine Berichtslösung zu definieren und bereitzustellen. Freigegebene Datasets können mit den Eigenschaften **OverwriteDatasets** und **TargetDatasetFolder** unabhängig von anderen Elementen in einem Projekt bereitgestellt werden. Weitere Informationen finden Sie unter [Festlegen von Bereitstellungseigenschaften &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md).  
   
- Im Berichts-Designer nutzen Sie sowohl den Berichtsdatenbereich als auch den Projektmappen-Explorer, um die in einem Bericht verwendeten freigegebenen Datasets zu definieren. Weitere Informationen finden Sie unter [Report Data Pane](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane). Sie können veröffentlichte Datasets mithilfe von [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] nicht direkt von einem Berichtsserver oder einer SharePoint-Website aus öffnen. Verwenden Sie für die jeweilige Funktion [Berichts-Generator &#40;SSRS&#41; ](report-builder-authoring-environment-ssrs.md) im freigegebenen datasetmodus.  
+ Im Berichts-Designer nutzen Sie sowohl den Berichtsdatenbereich als auch den Projektmappen-Explorer, um die in einem Bericht verwendeten freigegebenen Datasets zu definieren. Weitere Informationen finden Sie unter [Report Data Pane](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane). Sie können veröffentlichte Datasets mithilfe von [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] nicht direkt von einem Berichtsserver oder einer SharePoint-Website aus öffnen. Verwenden Sie für diese Funktion [Berichts-Generator &#40;SSRS&#41; ](report-builder-authoring-environment-ssrs.md) im Modus für freigegebene Datasets.  
   
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ist ein Clienttool. Abfrage-Designern unterstützen Sie beim Erstellen und Testen von Abfrageergebnissen lokale in der Vorschau. Nach der Bereitstellung können Sie freigegebene Datasets unabhängig von den freigegebenen Datenquellen und Berichten verwalten, von denen sie abhängen. Weitere Informationen finden Sie unter [Bericht eingebettete Datasets und freigegebene Datasets &#40;Berichts-Generator und SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md), [Abfrageentwurfstools im Berichts-Designer SQL Server Data Tools &#40;SSRS&#41; ](../report-data/query-design-tools-ssrs.md), und [Verwalten von freigegebenen Datasets](../report-data/manage-shared-datasets.md).  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ist ein Clienttool. Abfrage-Designern unterstützen Sie beim Erstellen und Testen von Abfrageergebnissen lokale in der Vorschau. Nach der Bereitstellung können Sie freigegebene Datasets unabhängig von den freigegebenen Datenquellen und Berichten verwalten, von denen sie abhängen. Weitere Informationen finden Sie unter [eingebettete und freigegebene Datasets &#40;Berichts-Generator und SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md), [Abfrageentwurfstools im Berichts-Designer SQL Server Data Tools &#40;SSRS&#41; ](../report-data/query-design-tools-ssrs.md), und [Verwalten von freigegebenen Datasets](../report-data/manage-shared-datasets.md).  
   
   
 ##  <a name="bkmk_Reports"></a> Berichte  
@@ -121,10 +121,10 @@ ms.locfileid: "36048007"
   
     -   Drücken Sie F5.  
   
-     Bei Verwendung einer Projektkonfiguration, die den Bericht erstellt, aber nicht bereitstellt, wird der Bericht, der im angegebenen die `StartItem` Eigenschaft der aktuellen Konfiguration wird in einem separaten Vorschaufenster geöffnet.  
+     Bei Verwendung einer Projektkonfiguration, die den Bericht erstellt, aber wird nicht bereitgestellt, wird der Bericht, der im angegebenen die `StartItem` -Eigenschaft der aktuellen Konfiguration wird in einem separaten Vorschaufenster geöffnet.  
   
     > [!NOTE]  
-    >  Um den Debugmodus verwenden zu können, müssen Sie ein Startelement festlegen. Im Projektmappen-Explorer mit der Maustaste des Berichtsprojekts, klicken Sie auf **Eigenschaften**, und klicken Sie in `StartItem`, wählen Sie den Namen des Berichts angezeigt.  
+    >  Um den Debugmodus verwenden zu können, müssen Sie ein Startelement festlegen. Im Projektmappen-Explorer das Berichtsprojekt, klicken Sie auf **Eigenschaften**, und klicken Sie in `StartItem`, wählen Sie den Namen des Berichts angezeigt.  
   
      Wenn Sie einen bestimmten Bericht in der Vorschau anzeigen möchten, der nicht als Startelement für das Projekt festgelegt ist, wählen Sie eine Konfiguration aus, die den Bericht zwar erstellt, jedoch nicht bereitstellt (z.B. die DebugLocal-Konfiguration). Klicken Sie dann mit der rechten Maustaste auf den Bericht, und klicken Sie anschließend auf **Ausführen**. Sie müssen eine Konfiguration auswählen, die den Bericht nicht bereitstellt. Andernfalls wird der Bericht auf dem Berichtsserver veröffentlicht und nicht lokal in einem Vorschaufenster angezeigt.  
   
@@ -186,12 +186,12 @@ ms.locfileid: "36048007"
 |3|Kleinere Erstellungsprobleme, die das Berichtslayout auf geringfügigere Weise ändern, die möglicherweise nicht auffällt.|  
 |4|Wird nur für Veröffentlichungswarnungen verwendet.|  
   
- Wenn Sie versuchen, in der Vorschau anzeigen oder einen Bericht, der neue Berichtselemente in enthält [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], z. B. Karten und Datenbalken können diese Berichtselemente aus dem Bericht entfernt werden. Standardmäßig wird die ErrorLevel-Eigenschaft der Konfiguration auf 2 festgelegt. Dies würde dazu führen, dass der Bericht nicht erstellt wird, sobald die Struktur entfernt wurde. Wenn Sie den Wert der ErrorLevel-Eigenschaft in 0 oder 1 ändern, wird die Struktur jedoch gelöscht, eine Warnung ausgegeben und der Erstellungsvorgang fortgesetzt.  
+ Wenn Sie versuchen, eine Vorschau anzeigen, oder stellen Sie einen Bericht, der neue Berichtselemente in enthält [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], z. B. Karten und Datenbalken, können diese Berichtselemente aus dem Bericht entfernt werden. Standardmäßig wird die ErrorLevel-Eigenschaft der Konfiguration auf 2 festgelegt. Dies würde dazu führen, dass der Bericht nicht erstellt wird, sobald die Struktur entfernt wurde. Wenn Sie den Wert der ErrorLevel-Eigenschaft in 0 oder 1 ändern, wird die Struktur jedoch gelöscht, eine Warnung ausgegeben und der Erstellungsvorgang fortgesetzt.  
   
   
 ## <a name="see-also"></a>Siehe auch  
  [Reporting Services in SQL Server-Datentools &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md)   
- [Abfragen von Entwurfstools in Berichts-Designers von SQL Server Datatools &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)   
+ [Abfrageentwurfstools im Berichts-Designer SQL-Server-Datatools &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)   
  [Bereitstellung und Versionsunterstützung in SQL Server Data Tools &#40;SSRS&#41;](deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
   

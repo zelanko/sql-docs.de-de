@@ -5,10 +5,9 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], installing
 - migrating full-text indexes [SQL Server]
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], upgrading
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
 caps.latest.revision: 103
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2ab9109e79d845416d89fe44282fe2b2f70629ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 192893274803d5c753fa6bd7acd90c7789d7f8b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049427"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264327"
 ---
 # <a name="upgrade-full-text-search"></a>Upgrade der Volltextsuche
   Das Aktualisieren der Volltextsuche auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] erfolgt während des Setups und beim Anfügen, Wiederherstellen und Kopieren von Datenbankdateien und Volltextkatalogen aus einer älteren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des Assistenten zum Kopieren von Datenbanken.  
@@ -36,7 +35,7 @@ ms.locfileid: "36049427"
   
 -   [Volltextupgrade Optionen](#FT_Upgrade_Options)  
   
--   [Überlegungen beim Auswählen einer Volltextupgrade-Upgrade-Option](#Choosing_Upgade_Option)  
+-   [Überlegungen beim Auswählen einer Volltext-Aktualisierungsoption](#Choosing_Upgade_Option)  
   
 -   [Migrieren von Volltextindizes beim Aktualisieren einer Datenbank auf SQLServer 2014](#Upgrade_Db)  
   
@@ -80,7 +79,7 @@ ms.locfileid: "36049427"
  Zurücksetzen  
  Volltextkataloge werden zurückgesetzt. Beim Aktualisieren von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]werden Volltextkatalogdateien entfernt. Die Metadaten für die Volltextkataloge und die Volltextindizes bleiben jedoch erhalten. Nach der Upgrade wird die Änderungsnachverfolgung für alle Volltextindizes deaktiviert, und Durchforstungen werden nicht automatisch gestartet. Der Katalog bleibt leer, bis Sie ihn nach Beendigung des Upgrades manuell vollständig auffüllen.  
   
-##  <a name="Choosing_Upgade_Option"></a> Überlegungen beim Auswählen einer Volltextupgrade-Upgrade-Option  
+##  <a name="Choosing_Upgade_Option"></a> Überlegungen beim Auswählen einer Volltext-Aktualisierungsoption  
  Beachten Sie beim Auswählen der Aktualisierungsoption Folgendes:  
   
 -   Ist die Konsistenz in Abfrageergebnissen erforderlich?  

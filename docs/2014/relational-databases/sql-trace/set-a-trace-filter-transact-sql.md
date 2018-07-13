@@ -1,5 +1,5 @@
 ---
-title: SetBoolValue-Methode (SqlServiceAdvancedProperty-Klasse) | Microsoft Docs
+title: SetBoolValue-Methode (SqlServiceAdvancedProperty-Klasse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetBoolValue method
 ms.assetid: 5252b439-fce5-446a-8e57-99e3054bee69
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a26fae3ba51f68dbcd2e519ea6a711b2fd471c43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 508a9c7f0423da077519fe8c6a046638e88f946a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049879"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208580"
 ---
 # <a name="setboolvalue-method-sqlserviceadvancedproperty-class"></a>SetBoolValue-Methode (SqlServiceAdvancedProperty-Klasse)
   Legt den booleschen Wert einer Eigenschaft fest.  
@@ -52,7 +52,7 @@ object
 |*BoolValue*|Ein boleescher Wert, der den Wert der erweiterten Eigenschaft angibt.|  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
- Ein `uint32` Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert 1, wenn die Anforderung nicht unterstützt wird, wurde, und jede andere Zahl gibt einen Fehler an.  
+ Ein `uint32` -Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert 1, wenn die Anforderung nicht unterstützt wird, wurde, und jede andere Zahl gibt einen Fehler an.  
   
 ## <a name="remarks"></a>Hinweise  
  Der Eingenschaftswert muss ein boolescher Wert sein, damit die Eigenschaft auf einen boleeschen Wert festgelegt werden kann.  

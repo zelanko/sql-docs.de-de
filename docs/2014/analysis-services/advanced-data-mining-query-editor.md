@@ -1,5 +1,5 @@
 ---
-title: Erweiterte Data Mining-Abfrage-Editor | Microsoft Docs
+title: Erweiterte Data Mining-Abfrage-Editor | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 27e7fc46-689d-43a4-9647-1c27d182bdd6
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 430a9263b15b385dd6e5f8f7aa24be15a54edffd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 75347810fafa87828dd09653059e9a403a1892ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048394"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167671"
 ---
-# <a name="advanced-data-mining-query-editor"></a>Editor für erweiterte Data Mining
-  Die **Data Mining erweiterten Abfrage-Editor** ist ein Tool, das Sie Erstellen benutzerdefinierter Modelle und Abfragen können.  
+# <a name="advanced-data-mining-query-editor"></a>Erweiterte Data Mining-Abfrage-Editor
+  Die **erweiterten Data Mining Query Editor** ist ein Tool zum Erstellen benutzerdefinierter Modelle und Abfragen können.  
   
  Der Editor enthält eine Reihe von Vorlagen mit klickbaren Links. Klicken Sie einfach auf die einzelnen Links, und verwenden Sie die Dialogfelder, um Objekte oder Werte auszuwählen und komplexe DMX-Anweisungen (Data Mining Extensions) zu erstellen. Sie können zur Textbearbeitungsmodell-Ansicht wechseln, um die DMX-Anweisung manuell zu ändern.  
   
- Um auf die **Data Mining erweiterten Abfrage-Editor**, klicken Sie auf **Abfrage** , und klicken Sie dann auf **erweitert**.  
+ Zum Abrufen der **erweiterten Data Mining Query Editor**, klicken Sie auf **Abfrage** , und klicken Sie dann auf **erweitert**.  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
  **DMX-Abfrage**  
@@ -34,13 +34,13 @@ ms.locfileid: "36048394"
   
  Klicken Sie mit der rechten Maustaste in den Bereich, um die aktuelle DMX-Anweisung zu kopieren.  
   
- Sie können auf einen hervorgehobenen Teil der Anweisung klicken, um spezielle Optionen für die jeweilige Klausel aufzurufen. Z. B. hinzufügen, löschen oder bearbeiten eine Ausgabe mit der rechten Maustaste die  **\<Ausgabe >** Link.  
+ Sie können auf einen hervorgehobenen Teil der Anweisung klicken, um spezielle Optionen für die jeweilige Klausel aufzurufen. Um beispielsweise zu löschen, hinzufügen oder bearbeiten die Ausgabe mit der rechten Maustaste die  **\<Ausgabe >** Link.  
   
  **Query-Abfrage-Generator bearbeiten**  
- Verwenden Sie diese Schaltfläche, um Editor zwischen einem Text-Editor zu wechseln, in dem Sie DMX-Anweisungen direkt schreiben können; und die **Abfragegenerator**, dessen Hilfe Sie eine DMX-Anweisung erstellen.  
+ Verwenden Sie diese Schaltfläche, um den Editor zwischen einem Text-Editor, zu wechseln, in dem Sie DMX-Anweisungen direkt schreiben können; und die **Abfragegenerator**, dessen Hilfe Sie eine DMX-Anweisung erstellen.  
   
 > [!NOTE]  
->  **Warnung:** , wenn Sie die Ansichten wechseln, bevor die Abfrage ausgeführt wurde, eine Meldung angezeigt, die besagt, dass Sie einige Änderungen verloren gehen können. Wenn die DMX-Anweisung gültig ist, in vielen Fällen ist die **Abfragegenerator** diese Änderungen erfolgreich konvertiert. Wenn Sie jedoch eine besonders komplexe DMX-Anweisung erstellt haben, sollten Sie Ihre Arbeit unbedingt speichern, bevor Sie die Ansicht wechseln.  
+>  **Warnung:** , wenn Sie die zwischen Sichten wechseln, bevor die Abfrage ausgeführt wurde, wird eine Meldung angezeigt, die besagt, dass Sie einige Änderungen verloren gehen können. Wenn die DMX-Anweisung gültig ist, in vielen Fällen ist die **Abfragegenerator** diese Änderungen erfolgreich konvertiert. Wenn Sie jedoch eine besonders komplexe DMX-Anweisung erstellt haben, sollten Sie Ihre Arbeit unbedingt speichern, bevor Sie die Ansicht wechseln.  
   
  **DMX-Vorlagen**  
  Klicken Sie auf diese Option, und wählen Sie aus einer Liste von Vorlagen aus, die DMX-Beispiele enthalten. Die Vorlagen stellen praktisch alle Modell- oder Vorhersageabfragetypen bereit, die Sie benötigen, einschließlich Abfragen, die geschachtelte Tabellen verwenden, und DMX-Anweisungen zur Verwaltung von Modellen. Auch wenn Sie mit der Verwendung von DMX vertraut sind, können Sie mit den Vorlagen u. U. Zeit sparen, weil Sie direkt die richtige Syntax erhalten.  
@@ -48,26 +48,26 @@ ms.locfileid: "36048394"
  **Modell auswählen**  
  Klicken Sie auf diese Option, um eine Liste der über die aktuelle Verbindung verfügbaren Data Mining-Modelle anzuzeigen.  
   
- Sie können auch eine Liste der verfügbaren Modelle anzeigen, indem Sie auf den Modellnamen in der DMX-Anweisung in der **DMX-Abfrage** Bereich. Der Modellname ist in der Regel rot hervorgehoben.  
+ Sie können auch eine Liste der verfügbaren Modelle anzeigen, indem Sie auf den Modellnamen in der DMX-Anweisung im der **DMX-Abfrage** Bereich. Der Modellname ist in der Regel rot hervorgehoben.  
   
  **Eingabe auswählen**  
- Klicken Sie auf diese Option, um die Daten auszuwählen, die als Eingabe für das Miningmodell verwendet werden sollen. Wenn keine Datenquelle angegeben wurde, Sie können auch klicken Sie auf die  **\<Eingabe >** verknüpfen, die in rot hervorgehoben ist die **DMX-Abfrage** Bereich.  
+ Klicken Sie auf diese Option, um die Daten auszuwählen, die als Eingabe für das Miningmodell verwendet werden sollen. Wenn keine Datenquelle angegeben wurde, können Sie auch klicken die  **\<Eingabe >** Link, der in rot hervorgehoben ist die **DMX-Abfrage** Bereich.  
   
- Wählen Sie **@InputRowset** aus der Dropdownliste aus, öffnen Sie die **ersetzen** Dialogfeld Feld und eine vorhandene Eingabe zu ändern.  
+ Wählen Sie **@InputRowset** aus der Dropdownliste aus, öffnen Sie die **Inputrowset1 ersetzen** Dialogfeld ein, und eine vorhandene Eingabe zu ändern.  
   
- Wählen Sie **Eingabe hinzufügen** So öffnen die **Eingabe hinzufügen** Dialogfeld Feld, und geben Sie eine neue Datenquelle.  
+ Wählen Sie **Eingabe hinzufügen** zum Öffnen der **Eingabe hinzufügen** Dialogfeld Geben Sie eine neue Datenquelle.  
   
- Sie können auch eine vorhandene Eingabe ändern, indem Sie auf die **@InputRowset** verknüpfen, die in DMX-Abfragebereich rot hervorgehoben ist.  
+ Sie können auch eine vorhandene Eingabe ändern, indem Sie auf die **@InputRowset** Link, der im DMX-Abfragebereich rot hervorgehoben ist.  
   
- **Ordnen Sie Spalten**  
+ **Zuordnen von Spalten**  
  Wählen Sie Spalten aus dem Miningmodell aus, und ordnen Sie sie dann Spalten in der externen Datenquelle zu.  
   
- Sie können auch klicken Sie auf den hervorgehobenen  **\<zuordnen >** Link im Bereich DMX-Abfrage.  
+ Sie können auch die hervorgehobene klicken  **\<Zuordnung >** Link im Bereich DMX-Abfrage.  
   
  **Ausgabe hinzufügen**  
  Klicken Sie auf diese Option, um die Spalten auszuwählen, die als Bestandteil einer Vorhersageabfrage ausgegeben werden sollen.  
   
- Sie können auch klicken Sie auf den hervorgehobenen  **\<Ausgabe hinzufügen >** Link im Bereich DMX-Abfrage.  
+ Sie können auch die hervorgehobene klicken  **\<Ausgabe hinzufügen >** Link im Bereich DMX-Abfrage.  
   
  **Modellspalten**  
  Listet die Spalten im ausgewählten Miningmodell auf. Mit einem Rautenzeichen neben dem Spaltennamen wird angegeben, dass die Spalte vorhersagbar ist.  

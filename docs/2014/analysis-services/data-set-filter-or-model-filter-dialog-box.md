@@ -1,5 +1,5 @@
 ---
-title: Datasetfilter oder Modell Filterdialogfeld | Microsoft Docs
+title: Datasetfilter oder Modell Modellfilter (Dialogfeld) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a9602174-b7e2-4e16-8ded-dfd8eb9264d7
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 85986f7f73a96ce0fc2286ad8f9377df1d53845c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 34cb8f45c8380cffdfd58c99078f05fd5c8bd2e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048859"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187317"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>Datasetfilter oder Modellfilter (Dialogfeld)
   In diesem Dialogfeld können Sie die Filter erstellen, die Sie auf ein Dataset anwenden können.  Bei dem Dataset kann es sich um ein zum Testen verwendetes externes Dataset oder um die Falldaten für ein Miningmodell handeln. Der Name des Dialogfelds ändert sich je nachdem, ob der Filter für ein externes Dataset oder für ein Miningmodell gilt.  
@@ -61,7 +61,7 @@ ms.locfileid: "36048859"
  Stellt den vorherigen Zustand des Rasters wieder her und verwirft alle am Filterausdruck vorgenommenen Änderungen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tests und Überprüfung miningmodelltasks und &#40;Datamining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [Tests und Überprüfung miningmodelltasks und Anweisungen &#40;Datamining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [Mining-Genauigkeitsdiagramm-Designer &#40;Datamining&#41;](mining-accuracy-chart-designer-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Berichte mit durchklicken (Seite) (Berichts-Manager) | Microsoft Docs
+title: Berichte mit durchklicken (Seite) (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.drilthroughreports.f1
 ms.assetid: e96cdeba-452b-45a8-9bcf-b75d76261e31
 caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0e9deeb0187814b89a4445ae13edaf9e1e5a5a16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 20c212e7829a04e1c6261a8818cebf7534d2529a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046619"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244350"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>Berichte mit Durchklicken (Seite) (Berichts-Manager)
   Ein Bericht mit Durchklicken zeigt eine Tabelle verknüpfter Daten an, wenn Sie auf die interaktiven Daten klicken, die in Ihrem Bericht enthalten sind. Diese Berichte werden vom Berichtsserver anhand der Informationen generiert, die in dem Modell enthalten sind, den Sie zum Erstellen des Berichts verwendet haben. Wenn Sie die Berichte mit Durchklicken, die der Berichtsserver generiert, nicht verwenden möchten, können Sie benutzerdefinierte Berichte erstellen und auf einem Berichtsserver veröffentlichen. Ordnen Sie dann diese Berichte den interaktiven Datenpunkten zu, die im Modell definiert sind. Die benutzerdefinierten Berichte müssen im Berichts-Generator aus dem gleichen Modell erstellt und dann auf einem Berichtsserver veröffentlicht werden. Verwenden Sie die Seite Berichte mit Durchklicken im Berichts-Manager, um die benutzerdefinierte Berichte Elementen im Modell zuzuordnen.  
@@ -54,7 +54,7 @@ ms.locfileid: "36046619"
  **Modellelementhierarchie**  
  Zeigt die im Modellnamespace enthaltenen Entitäten, Ordner und Elemente an, für die Sie einen benutzerdefinierten Bericht bereitstellen können.  
   
- **Einzelinstanzbericht**  
+ **Einzelinstanz-Bericht**  
  Gibt an, welcher benutzerdefinierte Bericht verwendet wird, wenn die Benutzernavigation eine Sicht von Einzelinstanzdaten erforderlich macht. Klicken Sie auf die Schaltfläche zum Durchsuchen, um den gewünschten Bericht auszuwählen.  
   
  **Bericht mit mehreren Instanzen**  

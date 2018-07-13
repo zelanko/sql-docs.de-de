@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SoapException class
 ms.assetid: a4489103-a874-44c2-8f75-95cb238928ed
 caps.latest.revision: 30
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aec03e032cdd0af46666ca76f49bb2034c5312d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: ff6f2e619f0e4b7c447ee53b31e1a52c3ed9e9b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049634"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224810"
 ---
 # <a name="helplink-element"></a>HelpLink-Element
   Das **HelpLink** -Element der **Detail** -Eigenschaft ist eine URL-Zeichenfolge, die vom Berichtsserver generiert wird. Die URL steuert eine Webseite an, die von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Hilfe und Support verwaltet wird. Sie liefert zusätzliche Hilfestellungen und Artikel der Kowledge Base zu bestimmten Fehlern, die in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] auftreten. Die URL hat folgende Syntax:  

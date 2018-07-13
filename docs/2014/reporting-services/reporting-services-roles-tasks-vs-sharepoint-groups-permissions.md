@@ -1,5 +1,5 @@
 ---
-title: Vergleich zwischen Rollen und Aufgaben in Reporting Services to SharePoint Groups and Permissions | Microsoft Docs
+title: Vergleichen der Rollen und Aufgaben in Reporting Services mit SharePoint-Gruppen und Berechtigungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - security [Reporting Services], tasks
@@ -21,13 +21,13 @@ ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 181985b908c1ab5f2556d8fb58b7d54efa6bcb27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 01e24a3aaa994a5e186634221fc4b64f396a8a2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047774"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204896"
 ---
 # <a name="compare-roles-and-tasks-in-reporting-services-to-sharepoint-groups-and-permissions"></a>Vergleichen der Rollen und Aufgaben in Reporting Services mit SharePoint-Gruppen und -Berechtigungen
   In diesem Thema werden rollen- und taskbasierte Autorisierungsfunktionen im einheitlichen Modus von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] mit den Sicherheitsfunktionen in SharePoint-Produkten verglichen. In diesem Thema werden die Terminologie und Merkmale von Rollen, Tasks, SharePoint-Gruppen, Berechtigungsstufen und Berechtigungen verglichen.  
@@ -47,7 +47,7 @@ ms.locfileid: "36047774"
 ##  <a name="bkmk_compare_tools_terms"></a> Vergleich zwischen Berechtigungstools und zugehöriger Terminologie  
  **Einheitlicher Modus:** Die Berechtigungsobjekte von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im einheitlichen Modus (Rollen und Tasks) werden in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] erstellt und im Berichts-Manager für einzelne Benutzer konfiguriert.  
   
- **SharePoint-Modus:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint-Modus nutzt die Funktionen der SharePoint-Berechtigung. SharePoint-Gruppen und -Berechtigungen werden auf der folgenden Seite für **Siteeinstellungen** verwaltet.  
+ **SharePoint-Modus:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint-Modus nutzt die SharePoint-berechtigungsfunktionen. SharePoint-Gruppen und -Berechtigungen werden auf der folgenden Seite für **Siteeinstellungen** verwaltet.  
   
  In der folgenden Tabelle werden die Objekte und Konzepte von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im einheitlichen Modus und SharePoint im Hinblick auf Berechtigungen verglichen.  
   
@@ -64,14 +64,14 @@ ms.locfileid: "36047774"
   
  **Hinweis**: Die verfügbaren SharePoint-Standardgruppen hängen von der Websitevorlage ab, die verwendet wird, um die SharePoint-Website zu erstellen.  
   
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Rolle ""|SharePoint-Gruppen|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Rolle|SharePoint-Gruppen|  
 |--------------------------------------|-----------------------|  
 |**Browser**<br /><br /> Anzeigen|Verwenden Sie die Gruppe **Besucher** , um Berechtigungen zum Anzeigen von Berichten zu erteilen. Die Gruppe **Besucher** verfügt über die Berechtigungsstufe Lesen, mit der Gruppenmitglieder Seiten, Listenelemente und Dokumente anzeigen können.|  
 |**Inhalts-Manager**<br /><br /> Volle Berechtigungen für alle Elemente und Vorgänge auf Elementebene, einschließlich Berechtigungen zum Festlegen der Sicherheit.|Mit der Gruppe **Besitzer** gewähren Sie volle Kontrolle über die Verwaltung von Berichtsserverelementen auf einer SharePoint-Website. Die Gruppe **Besitzer** verfügt über die Berechtigungen Vollzugriff, mit denen Gruppenmitglieder Änderungen am Websiteinhalt, einzelnen Webseiten oder der Funktionalität vornehmen können. Der Vollzugriff sollte nur Websiteadministratoren gewährt werden.|  
 |**Meine Berichte**|Es ist keine entsprechende Gruppe vorhanden. **Meine Berichte** wird auf einem Berichtsserver, der im SharePoint-Modus ausgeführt wird, nicht unterstützt. Wenn Sie eine entsprechende Funktionalität wünschen, können Sie die Funktionen für Meine Website [!INCLUDE[winSPServ](../includes/winspserv-md.md)] in  verwenden.|  
 |**Verleger**<br /><br /> Berichte, Berichtsmodelle, freigegebene Datenquellen und Ressourcen hinzufügen, aktualisieren, anzeigen und löschen.|Mit der Gruppe **Mitglieder** erteilen Sie Berechtigungen zum Hinzufügen von Elementen, Bearbeiten von Elementen und Aktualisieren von Verweisen auf abhängige Elemente auf einer SharePoint-Website. Die Gruppe **Mitglieder** verfügt über die Berechtigungsebene Teilnehmen, mit der Gruppenmitglieder Seiten anzeigen, Elemente hinzufügen und aktualisieren sowie Änderungen zur Genehmigung übermitteln können.|  
 |**Berichts-Generator**<br /><br /> Berichte anzeigen, einzelne Abonnements selbst verwalten und Berichte im Berichts-Generator öffnen.|Der Berichtsdefinition Berichts-Generator entspricht keine vordefinierte Berechtigungsebene oder SharePoint-Gruppe. In der Standardeinstellung verfügen Benutzer, die der Gruppe **Mitglieder** oder **Besitzer** angehören, über die Berechtigung zum Verwenden des Berichts-Generators. Wenn Sie den Berichts-Generator anderen Benutzern zur Verfügung stellen möchten, sollten Sie benutzerdefinierte Sicherheitseinstellungen erstellen, um eine Berechtigungsebene bereitzustellen, die den Funktionen der Berichts-Generator-Rolle ähnelt. Weitere Informationen finden Sie unter [Festlegen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website &#40;Reporting Services im integrierten SharePoint-Modus&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md).|  
-|-|Verwenden Sie die Gruppe **Anzeigende Benutzer** , um Berechtigungen zum Anzeigen gerenderter Berichte zu erteilen. Mitglieder der Gruppe **Anzeigende Benutzer** sind nicht in der Lage, den Inhalt von Berichtselementen herunterzuladen oder anzuzeigen.<br /><br /> **Hinweis:** ab SQL Server 2012 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], **Viewer** Gruppe verfügt nicht über die Berechtigungen zum Erstellen von Abonnements.|  
+|-|Verwenden Sie die Gruppe **Anzeigende Benutzer** , um Berechtigungen zum Anzeigen gerenderter Berichte zu erteilen. Mitglieder der Gruppe **Anzeigende Benutzer** sind nicht in der Lage, den Inhalt von Berichtselementen herunterzuladen oder anzuzeigen.<br /><br /> **Hinweis:** ab SQL Server 2012 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], **Viewer** Gruppe keine Berechtigungen zum Erstellen von Abonnements.|  
 |**Systembenutzer** und **Systemadministrator**|Diese Rollen sind für einen Berichtsserver, der im SharePoint-Modus ausgeführt wird, nicht erforderlich. **Systembenutzer** und **Systemadministrator** entsprechen den SharePoint-Berechtigungen auf Farm- oder Webanwendungsebene. Der Berichtsserver stellt keine Funktionalität bereit, die eine Autorisierung auf dieser Ebene erfordert.|  
   
 ##  <a name="bkmk_compare_tasks_permissions"></a> Vergleich zwischen Tasks im einheitlichen Modus und SharePoint-Berechtigungen  
@@ -107,7 +107,7 @@ ms.locfileid: "36047774"
 |Freigegebene Zeitpläne anzeigen|System|Elemente öffnen|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Festlegen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website &#40;integrierter Reporting Services im SharePoint-Modus&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [Festlegen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website &#40;integrierten Reporting Services im SharePoint-Modus&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [Festlegen von Berechtigungen für Berichtsservervorgänge in einer SharePoint-Webanwendung](security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Rollendefinitionen](security/role-definitions.md)   

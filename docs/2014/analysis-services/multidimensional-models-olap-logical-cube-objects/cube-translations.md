@@ -1,5 +1,5 @@
 ---
-title: Übersetzungen Cube | Microsoft Docs
+title: Cube-Übersetzungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - translations [Analysis Services], cubes
 ms.assetid: 4e4fd6a4-d324-4508-b75a-2a57de9ab8ff
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7bc7d1a6b35b093e9f5fabab41138dc90b9c10ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f894d45dffbf1c6eb746e3674127c75c4e59a81e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047009"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163311"
 ---
 # <a name="cube-translations"></a>Cubeübersetzungen
   Eine Übersetzung ist ein einfaches Verfahren, um die angezeigten Bezeichnungen und Beschriftungen von einer Sprache in eine andere zu ändern. Jede Übersetzung ist als Wertepaar definiert: eine Zeichenfolge mit dem übersetzten Text und eine Zahl mit der Sprach-ID. Übersetzungen sind für alle Objekte in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verfügbar. In Dimensionen können auch die Attributwerte übersetzt werden. Die Clientanwendung ist verantwortlich dafür, dass die vom Benutzer definierte Spracheinstellung gefunden wird und alle Bezeichnungen und Beschriftungen in der entsprechenden Sprache angezeigt werden. Ein Objekt kann so viele Übersetzungen haben, wie Sie möchten.  
@@ -43,6 +43,6 @@ ms.locfileid: "36047009"
 ## <a name="see-also"></a>Siehe auch  
  [Dimensionsübersetzungen](../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
  [Übersetzungen &#40;Analysis Services&#41;](../translations-analysis-services.md)   
- [Globalisierung Tipps und Best Practices &#40;Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
+ [Globalisierung, Tipps und Best Practices &#40;Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
   
   

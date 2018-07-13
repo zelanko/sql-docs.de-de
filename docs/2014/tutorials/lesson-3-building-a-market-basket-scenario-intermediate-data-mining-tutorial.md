@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 3: Erstellen eines Warenkorbszenarios (Datamining-Lernprogramm für fortgeschrittene) | Microsoft Docs'
+title: 'Lektion 3: Erstellen eines Warenkorbszenarios (Datamining-Lernprogramm für fortgeschrittene) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], tutorials
 - association algorithms [Analysis Services]
@@ -18,20 +18,20 @@ ms.assetid: 651eef38-772e-4d97-af51-075b1b27fc5a
 caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 009449b753c96e59612654203c06f5c4ee1742a1
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 0c03f8b54859a960479d78f1d0de7a0a30836347
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312038"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255122"
 ---
 # <a name="lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial"></a>Lektion 3: Erstellen eines Warenkorbszenarios (Data Mining-Lernprogramm für Fortgeschrittene)
-  Die marketingabteilung von [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] möchte die Unternehmenswebsite zum Höherstufen von Cross-Selling von nutzen zu verbessern. Als Teil des Websiteupdates soll die Möglichkeit bestehen, anhand von Produkten, die sich bereits im Onlinewarenkorb eines Kunden befinden, Produkte vorherzusagen, die der Kunde möglicherweise noch kaufen möchte. Die Marketingabteilung möchte außerdem das Kaufverhalten von Kunden besser verstehen, um die Website so zu gestalten, dass Artikel, die tendenziell zusammen gekauft werden, auch zusammen angezeigt werden. Die Marketingabteilung hat erfahren, dass Data Mining besonders nützlich für diese Art von *Warenkorbanalyse* ist, und bittet Sie, ein Data Mining-Modell zu entwickeln.  
+  Die marketingabteilung von [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] verbessern die Unternehmensportal-Website zum Heraufstufen Cross-Selling von nutzen möchte. Als Teil des Websiteupdates soll die Möglichkeit bestehen, anhand von Produkten, die sich bereits im Onlinewarenkorb eines Kunden befinden, Produkte vorherzusagen, die der Kunde möglicherweise noch kaufen möchte. Die Marketingabteilung möchte außerdem das Kaufverhalten von Kunden besser verstehen, um die Website so zu gestalten, dass Artikel, die tendenziell zusammen gekauft werden, auch zusammen angezeigt werden. Die Marketingabteilung hat erfahren, dass Data Mining besonders nützlich für diese Art von *Warenkorbanalyse* ist, und bittet Sie, ein Data Mining-Modell zu entwickeln.  
   
  Nach Abschluss der Aufgaben in dieser Lektion verfügen Sie über ein Miningmodell, das Gruppen von Artikeln aus vergangenen Kundentransaktionen anzeigt. Außerdem können Sie das Miningmodell verwenden, um weitere Artikel vorherzusagen, die ein Kunde möglicherweise kaufen möchte.  
   
- Zum Ausführen der Aufgaben in dieser Lektion verwenden Sie die Lösung und Datenquelle, die Sie in der ersten Lektion des erstellt die [Mining-Lernprogramm für fortgeschrittene Data &#40;Analysis Services – Data Mining&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md). Sie ändern diese Lösung, indem Sie eine Datenquellensicht hinzufügen, die Tabellen über den Kunden enthält, einschließlich einer geschachtelten Tabelle von Kundenbestellungen.  Anschließend erstellen Sie ein Miningmodell, dass den Microsoft Association Rules-Algorithmus verwendet, der für Warenkorbszenarien geeignet ist.  
+ Zum Ausführen der Aufgaben in dieser Lektion verwenden Sie die Lösung und Datenquelle, die Sie in der ersten Lektion erstellt die [Data Mining Tutorial für fortgeschrittene &#40;Analysis Services – Data Mining&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md). Sie ändern diese Lösung, indem Sie eine Datenquellensicht hinzufügen, die Tabellen über den Kunden enthält, einschließlich einer geschachtelten Tabelle von Kundenbestellungen.  Anschließend erstellen Sie ein Miningmodell, dass den Microsoft Association Rules-Algorithmus verwendet, der für Warenkorbszenarien geeignet ist.  
   
  Diese Lektion enthält die folgenden Themen:  
   
@@ -39,7 +39,7 @@ ms.locfileid: "36312038"
   
 -   [Erstellen einer Warenkorbstruktur und eines Modells &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial.md)  
   
--   [Ändern und Verarbeiten des Market Basket-Modells &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/modify-process-market-basket-model-intermediate-data-mining-tutorial.md)  
+-   [Ändern und Verarbeiten der Market Basket-Modells &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/modify-process-market-basket-model-intermediate-data-mining-tutorial.md)  
   
 -   [Durchsuchen der Market Basket-Modellen &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/exploring-the-market-basket-models-intermediate-data-mining-tutorial.md)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36312038"
  [Lektion 5: Erstellen von neuronalen Netzwerk- und logistischen Regressionsmodellen &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Lernprogramm zu Datamining-Lernprogramm](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [Lernprogramm zu Datamining-Grundlagen](../../2014/tutorials/basic-data-mining-tutorial.md)   
  [Lektion 2: Erstellen eines Planungserstellungsszenarios &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)   
  [Lektion 4: Erstellen eines Sequenzclusterszenarios &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
   

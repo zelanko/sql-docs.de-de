@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
 caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ee10aa434e25dd2243133ceaea09921ddf32b000
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d3685d6827f8ed57394f6440b018935662fb9e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047659"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266966"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Optionen für die Anforderung für Kandidatenschlüsselprofil (Datenprofilerstellungs-Task)
   Verwenden Sie den Bereich **Anforderungseigenschaften** im Fenster **Profilanforderungen** , um die Optionen für die im Anforderungsbereich ausgewählte **Anforderung für Kandidatenschlüsselprofil** festzulegen. Ein Kandidatenschlüsselprofil meldet, ob eine Spalte oder eine Gruppe von Spalten ein Schlüssel oder ein ungefährer Schlüssel für die ausgewählte Tabelle ist. Dieses Profil hilft Ihnen auch, Probleme bei den Daten zu identifizieren, z. B. doppelte Werte in einer potenziellen Schlüsselspalte.  
@@ -132,7 +132,7 @@ ms.locfileid: "36047659"
  Geben Sie die maximale Anzahl von Kandidatenschlüsselverstößen an, die in der Ausgabe dokumentiert werden sollen. Der Standardwert dieser Eigenschaft ist 100. Diese Option ist deaktiviert, wenn **Exact** als **KeyStrengthThresholdSetting**ausgewählt wird.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenprofilerstellungs-Task-Editor &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Der Datenprofilerstellungs-Task-Editor &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)   
  [Schnellprofilformular für eine einzelne Tabelle &#40;Datenprofilerstellungs-Task&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

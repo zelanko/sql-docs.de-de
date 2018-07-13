@@ -1,14 +1,13 @@
 ---
-title: Geben Sie die Endpunkt-URL beim Hinzufügen oder Ändern eines Verfügbarkeitsreplikats (SQLServer) | Microsoft Docs
+title: Geben Sie die Endpunkt-URL beim Hinzufügen oder Ändern eines Verfügbarkeitsreplikats (SQLServer) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - endpoints [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], configuring
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Endpoint URLs (HADR)
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 caps.latest.revision: 19
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 8abbac1803bfb558ee3802776d00bd181f6c713d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 571ffb7537474343cd595445af77a4ecae48d3e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049770"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222620"
 ---
 # <a name="specify-the-endpoint-url-when-adding-or-modifying-an-availability-replica-sql-server"></a>Angeben der Endpunkt-URL beim Hinzufügen oder Ändern eines Verfügbarkeitsreplikats (SQL Server)
   Um ein Verfügbarkeitsreplikat für eine Verfügbarkeitsgruppe zu hosten, muss eine Serverinstanz einen Datenbankspiegelungs-Endpunkt besitzen. Die Serverinstanz überwacht [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Meldungen von Verfügbarkeitsreplikaten, die von anderen Serverinstanzen gehostet wurden, mithilfe dieses Endpunkts. Um ein Verfügbarkeitsreplikat für eine Verfügbarkeitsgruppe zu definieren, müssen Sie die Endpunkt-URL der Serverinstanz angeben, die das Replikat hostet. Die *Endpunkt-URL* identifiziert das Transportprotokoll des Datenbankspiegelungs-Endpunkts - TCP, die Systemadresse der Serverinstanz, und die dem Endpunkt zugeordnete Portnummer.  
@@ -126,7 +125,7 @@ ms.locfileid: "36049770"
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So konfigurieren Sie einen Datenbankspiegelungs-Endpunkt**  
   
--   [Erstellen eines Datenbankspiegelungs-Endpunkts für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Erstellen Sie eine Datenbank mit dem Datenbankspiegelungs-Endpunkts für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung &#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
@@ -152,7 +151,7 @@ ms.locfileid: "36049770"
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Wiederherstellung im Notfall](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Notfallwiederherstellung](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellung und Konfiguration von Verfügbarkeitsgruppen &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   

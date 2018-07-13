@@ -1,5 +1,5 @@
 ---
-title: Zuordnungsmodellabfragen | Microsoft Docs
+title: Zuordnungsmodellabfragen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - itemsets [Analysis Services]
 - association algorithms [Analysis Services]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: 68b39f5c-c439-44ac-8046-6f2d36649059
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1b0c7f81123188af9b929dcdcc33f6cf44ed4aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ccd88cf081949cfad9c3d032598af9b96707fd0f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047039"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173611"
 ---
 # <a name="association-model-query-examples"></a>Beispiele für Zuordnungsmodellabfragen
   Beim Erstellen einer Abfrage für ein Data Mining-Modell können Sie entweder eine Inhaltsabfrage oder eine Vorhersageabfrage auswählen. Die Inhaltsabfrage liefert Details über die während der Analyse ermittelten Regeln und Itemsets. Die Vorhersageabfrage nimmt hingegen Vorhersagen anhand der in den Daten gefundenen Zuordnungen vor. Für ein Zuordnungsmodell basieren Vorhersagen üblicherweise auf Regeln und können für Empfehlungen verwendet werden. Bei Abfragen des Inhalts wird hingegen die Beziehung zwischen Itemsets analysiert. Sie können auch Metadaten über das Modell abrufen.  
@@ -233,7 +233,7 @@ ORDER BY NODE_SUPPORT DESC
 |[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|Zeigt an, ob der angegebene Knoten den aktuellen Fall enthält.|  
 |[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|Gibt die gewichtete Wahrscheinlichkeit zurück.|  
 |[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|Sagt eine Mitgliedschaft in einem assoziativen Dataset voraus.|  
-|["PredictHistogram" &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|Gibt eine Tabelle mit Werten zurück, die sich auf den aktuellen vorhergesagten Wert beziehen.|  
+|[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|Gibt eine Tabelle mit Werten zurück, die sich auf den aktuellen vorhergesagten Wert beziehen.|  
 |[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|Gibt "Node_ID" für jeden Fall zurück.|  
 |[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|Gibt die Wahrscheinlichkeit für den vorhergesagten Wert zurück.|  
 |[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|Gibt den Unterstützungswert für einen bestimmten Status zurück.|  
@@ -242,6 +242,6 @@ ORDER BY NODE_SUPPORT DESC
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Association-Algorithmus](microsoft-association-algorithm.md)   
  [Technische Referenz für die Microsoft Association-Algorithmus](microsoft-association-algorithm-technical-reference.md)   
- [Miningmodellinhalt für Zuordnungsmodelle &#40;Analysis Services – Datamining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Mingingmodellinhalt von Clustermodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

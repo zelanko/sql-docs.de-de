@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_JOBS-Rowset | Microsoft Docs
+title: DISCOVER_JOBS-Rowset | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - DISCOVER_JOBS rowset
 ms.assetid: b4d83bb6-aed3-4513-b516-cefadf95dad2
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6bc9574f76d1e14ad887efdd2b5654b4439c69df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6a23a3e3dae0a03bf31a7b73b8cb505e834cff27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049055"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246060"
 ---
 # <a name="discoverjobs-rowset"></a>DISCOVER_JOBS-Rowset
   Stellt Informationen über die aktiven Aufträge bereit, die auf dem Server ausgeführt werden. Ein Auftrag ist ein Teil eines Befehls, der für den Befehl einen bestimmten Task ausführt.  

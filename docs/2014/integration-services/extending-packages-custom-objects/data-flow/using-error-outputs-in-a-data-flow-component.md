@@ -27,13 +27,13 @@ ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
 caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4531bc740b72fd0fc7c5376ad7931c4394330435
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 86fa4cf15230423809acb2afdeaa88ee12c1d60b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047855"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225910"
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>Verwenden von Fehlerausgaben in einer Datenflusskomponente
   Spezielle <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>-Objekte, die als Fehlerausgaben bezeichnet werden, können zu Komponenten hinzugefügt werden, sodass die Komponente Zeilen, die bei der Ausführung nicht verarbeitet werden können, umleiten kann. Die Probleme, die bei einer Komponente auftreten können, lassen sich meist in Fehler oder abgeschnittene Daten einteilen und sind komponentenspezifisch. Komponenten, die Fehlerausgaben bereitstellen, bieten den Benutzern der Komponente die Flexibilität, Fehlerbedingungen durch Herausfiltern von Fehlerzeilen aus dem Resultset, durch Behandeln der Komponente als fehlerhaft, wenn ein Problem auftritt, oder durch Ignorieren von Fehlern und Fortsetzen des Vorgangs zu behandeln.  
@@ -435,7 +435,7 @@ Public  Overrides Sub PrimeOutput(ByVal outputs As Integer, ByVal outputIDs As I
 End Sub  
 ```  
   
-![Integration Services (kleines Symbol)](../../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben Sie mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services (kleines Symbol)](../../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Fehlerbehandlung in Daten](../../data-flow/error-handling-in-data.md)   

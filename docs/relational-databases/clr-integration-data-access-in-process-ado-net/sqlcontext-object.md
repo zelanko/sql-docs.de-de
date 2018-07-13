@@ -1,12 +1,12 @@
 ---
-title: SqlContext-Objekt | Microsoft Docs
+title: SqlContext-Objekt | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,18 +18,18 @@ caps.latest.revision: 54
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1aa4e7dce28a9bf0b15c40843db13d7d75d5327a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: fd8bcd270794394bcb576c42657c2d9cd831fc98
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697771"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359542"
 ---
 # <a name="sqlcontext-object"></a>SqlContext-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Beim Aufrufen einer Prozedur oder Funktion, wenn Sie eine Methode in einer common Language Runtime (CLR) den benutzerdefinierten Typ aufrufen, oder wenn Ihre Aktion einen in einer der definierten Trigger auslöst, rufen Sie verwalteten Code auf dem Server die [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework-Sprachen. Da die Ausführung dieses Codes im Rahmen einer Benutzerverbindung erforderlich ist, wird ein Zugriff auf den Kontext des aufrufenden Codes vonseiten des auf dem Server ausgeführten Code benötigt. Zusätzlich dazu sind bestimmte Datenzugriffsvorgänge unter Umständen nur gültig, wenn sie im Kontext des aufrufenden Programms ausgeführt werden. Beispielsweise ist der Zugriff auf in Triggervorgängen verwendete eingefügte und gelöschte Pseudotabellen nur im Kontext des aufrufenden Codes gültig.  
+  Beim Aufrufen einer Prozedur oder Funktion, wenn Sie eine Methode für einen Typ common Language Runtime (CLR) eine benutzerdefinierte aufrufen oder wenn Ihre Aktion einen in einer der definierten Trigger ausgelöst wird, rufen Sie verwalteten Code auf dem Server die [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework-Sprachen. Da die Ausführung dieses Codes im Rahmen einer Benutzerverbindung erforderlich ist, wird ein Zugriff auf den Kontext des aufrufenden Codes vonseiten des auf dem Server ausgeführten Code benötigt. Zusätzlich dazu sind bestimmte Datenzugriffsvorgänge unter Umständen nur gültig, wenn sie im Kontext des aufrufenden Programms ausgeführt werden. Beispielsweise ist der Zugriff auf in Triggervorgängen verwendete eingefügte und gelöschte Pseudotabellen nur im Kontext des aufrufenden Codes gültig.  
   
- Der Kontext des aufrufenden Codes wird in einem **SqlContext** -Objekt abstrahiert. Weitere Informationen zu den **SqlTriggerContext** Methoden und Eigenschaften finden Sie unter der **Microsoft.SqlServer.Server.SqlTriggerContext** -Klasse Referenzdokumentation finden Sie in der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  
+ Der Kontext des aufrufenden Codes wird in einem **SqlContext** -Objekt abstrahiert. Weitere Informationen zu den **SqlTriggerContext** Methoden und Eigenschaften finden Sie unter den **Microsoft.SqlServer.Server.SqlTriggerContext** Klasse Referenzdokumentation finden Sie in der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  
   
  **SqlContext** stellt den Zugriff auf folgende Komponenten bereit:  
   
@@ -45,11 +45,11 @@ ms.locfileid: "35697771"
  Fragen Sie die **SqlContext** -Klasse ab, um zu ermitteln, ob der gerade ausgeführte Code prozessintern ausgeführt wird. Überprüfen Sie dazu die **IsAvailable** -Eigenschaft des **SqlContext** -Objekts. Die **IsAvailable** Eigenschaft ist schreibgeschützt und gibt **"true"** , wenn der aufrufende Code, in ausgeführt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und auf andere **SqlContext** Member zugegriffen werden kann. Wenn die **IsAvailable** -Eigenschaft **False**zurückgibt, lösen alle anderen **SqlContext** -Elemente eine **InvalidOperationException**-Ausnahme aus, falls sie verwendet werden. Wenn **IsAvailable** **False**zurückgibt, schlagen alle Versuche, ein Verbindungsobjekt zu öffnen, bei denen "context connection=true" festgelegt ist, fehl.  
   
 ## <a name="retrieving-windows-identity"></a>Abrufen der Windows-Identität  
- CLR-codeausführung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird immer im Kontext des Prozesskontos aufgerufen. Wenn der Code bestimmte Aktionen mit der Identität des aufrufenden Benutzers anstelle von ausführen, sollten die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Identitätstoken abgerufen werden sollen, über-Prozessidentität der **WindowsIdentity** Eigenschaft von der  **SqlContext** Objekt. Die **WindowsIdentity** -Eigenschaft gibt eine **WindowsIdentity** Instanz darstellt. die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Identität des Aufrufers oder Null, wenn der Client authentifiziert wurde mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. Nur mit der **EXTERNAL_ACCESS** -Berechtigung oder **UNSAFE** -Berechtigung markierte Assemblys können auf diese Eigenschaft zugreifen.  
+ CLR-codeausführung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird immer im Kontext des Prozesskontos aufgerufen. Wenn der Code bestimmte Aktionen mit die Identität des aufrufenden Benutzers anstelle von ausführen sollte die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Prozessidentität, und klicken Sie dann über ein Identitätswechseltoken abgerufen werden sollen die **WindowsIdentity** Eigenschaft der  **SqlContext** Objekt. Der **WindowsIdentity** -Eigenschaft gibt eine **WindowsIdentity** Instanz darstellt. die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Identität des Aufrufers oder Null, wenn der Client authentifiziert wurde mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Die Authentifizierung. Nur mit der **EXTERNAL_ACCESS** -Berechtigung oder **UNSAFE** -Berechtigung markierte Assemblys können auf diese Eigenschaft zugreifen.  
   
  Nach dem Erhalt des **WindowsIdentity** -Objekts können aufrufende Benutzer einen Identitätswechsel für das Clientkonto durchführen und Aktionen mit der neuen Identität ausführen.  
   
- Die Identität des aufrufenden Benutzers ist nur über **SqlContext.WindowsIdentity** verfügbar, wenn der Client, der die Ausführung der gespeicherten Prozedur oder der Funktion initiiert hat, mithilfe der Windows-Authentifizierung eine Verbindung mit dem Server hergestellt hat. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung stattdessen verwendet wurde, diese Eigenschaft ist null, und der Code des Aufrufers annehmen kann.  
+ Die Identität des aufrufenden Benutzers ist nur über **SqlContext.WindowsIdentity** verfügbar, wenn der Client, der die Ausführung der gespeicherten Prozedur oder der Funktion initiiert hat, mithilfe der Windows-Authentifizierung eine Verbindung mit dem Server hergestellt hat. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung stattdessen verwendet wurde, diese Eigenschaft ist null und der Code ist nicht die Identität des Aufrufers.  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird das Abrufen der Windows-Identität des aufrufenden Clients und der Identitätswechsel des Clients veranschaulicht.  

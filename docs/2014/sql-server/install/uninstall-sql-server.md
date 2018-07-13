@@ -1,5 +1,5 @@
 ---
-title: Deinstallieren von SQLServer 2014 | Microsoft Docs
+title: Deinstallieren von SQLServer 2014 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e6255f8e-a25e-4b3d-9310-c5da2f9c9333
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b2a1248c785833038dbb6fd5f455c7b6d8f387ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 24bd96137bc8edf7a64f777fc65c66a3a9d2e5f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049111"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194350"
 ---
 # <a name="uninstall-sql-server-2014"></a>Deinstallieren von SQL Server 2014
   Wenn Sie eine vorhandene Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vollständig deinstallieren und das System für die Neuinstallation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vorbereiten möchten, informieren Sie sich in den folgenden Themen.  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bf60290c4946ef6f45bccba32632ed81dfaf650b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a90dfbac3006f7dfbf27b38a8ab584ebb9e5d710
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049127"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249630"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>Importieren von HTML in einen Bericht (Berichts-Generator und SSRS)
   Sie können ein Textfeld verwenden, um aus einem Feld im Dataset abgerufenen HTML-Text in den Bericht einzufügen. Der Text kann aus einem einfachen oder komplexen Ausdruck stammen, der zum ordnungsgemäß formatierten HTML evaluiert wird. Formatierter Text kann in allen unterstützten Ausgabeformaten einschließlich PDF gerendert werden.  
@@ -81,6 +81,6 @@ ms.locfileid: "36049127"
 -   Wenn eine Eigenschaft bei Attributen oder CSS-Formaten mehrfach angegeben wurde, wird nur die letzte Instanz der Eigenschaft verwendet. Lautet der Text z.B. **\<p align="left" align="right">**, wird der Text rechtsbündig ausgerichtet.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Rendern in HTML &#40;Berichts-Generator und SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)  
+ [Rendern von HTML &#40;Berichts-Generator und SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)  
   
   

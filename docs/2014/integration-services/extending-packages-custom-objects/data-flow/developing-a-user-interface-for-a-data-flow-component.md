@@ -26,13 +26,13 @@ ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 32d8ad6f22324c43c9955c01f9551eb4634d7bba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7d2933552418cf299933217d6b5e4365e6534e2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048085"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166951"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>Entwickeln einer Benutzeroberfläche für eine Datenflusskomponente
   Komponentenentwickler können für eine Komponente eine benutzerdefinierte Benutzeroberfläche bereitstellen, die in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] angezeigt wird, wenn die Komponente bearbeitet wird. Bei der Implementierung einer benutzerdefinierten Benutzeroberfläche werden Ihnen Benachrichtigungen bereitgestellt, wenn die Komponente zur Datenflusstask hinzugefügt oder aus diesem gelöscht wird und wenn für die Komponente Hilfe angefordert wird.  
@@ -286,7 +286,7 @@ Namespace Microsoft.Samples.SqlServer.Dts
 End Namespace  
 ```  
   
-![Integration Services (kleines Symbol)](../../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben Sie mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services (kleines Symbol)](../../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen einer benutzerdefinierten Datenflusskomponente](creating-a-custom-data-flow-component.md)  

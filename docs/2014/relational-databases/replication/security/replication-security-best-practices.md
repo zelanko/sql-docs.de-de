@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [SQL Server replication], best practices
 - security [SQL Server replication], between domains
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Internet [SQL Server replication], security
 ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6a4834396b072ddfb422ecc8f4cc6caec9ad6b20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4a50f2e9e643db23f3d26059625f69c34a392e65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048477"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194949"
 ---
 # <a name="replication-security-best-practices"></a>Bewährte Methoden für die Replikationssicherheit
   Bei der Replikation werden Daten in verteilten Umgebungen verschoben, diese reichen von Intranets auf einer einzelnen Domäne bis hin zu Anwendungen, die auf Daten zwischen nicht vertrauenswürdigen Domänen und über das Internet zugreifen. Es ist wichtig, die beste Methode für die Sicherung der Replikationsverbindungen unter diesen verschiedenen Voraussetzungen zu kennen und zu verstehen.  

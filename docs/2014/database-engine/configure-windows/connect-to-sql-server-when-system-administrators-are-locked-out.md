@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sa account
 - connecting when locked out [SQL Server]
 - locked out [SQL Server]
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e4a6f1d769833a451f7360c747249cb28d0d0c12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 40950fec562e5f313f6a16302ea714aaef522fa0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046973"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267176"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Herstellen einer Verbindung mit SQL Server, wenn Systemadministratoren gesperrt sind
   In diesem Thema wird beschrieben, wie Sie als Systemadministrator den Zugriff auf [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] wiedererlangen können. Ein Systemadministrator kann aufgrund einer der folgenden Ursachen Zugriff auf eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verlieren:  
@@ -65,9 +65,9 @@ ms.locfileid: "36046973"
 5.  Auf der **Startparameter** Registerkarte die **Startparameter angeben** geben `-m` , und klicken Sie dann auf `Add`. (Der Parameter entspricht einem Bindestrich und dem Kleinbuchstaben m.)  
   
     > [!NOTE]  
-    >  Bei einigen früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen gibt es keine Registerkarte **Startparameter** . Doppelklicken Sie in diesem Fall auf der Registerkarte **Erweitert** auf **Startparameter**. Die Parameter werden in einem sehr kleinen Fenster geöffnet. Achten Sie darauf, die vorhandenen Parameter nicht zu ändern. Fügen Sie ganz unten den neuen Parameter `;-m` , und klicken Sie dann auf `OK`. (Der Parameter entspricht einem Semikolon, einem Bindestrich und dem Kleinbuchstaben m.)  
+    >  Bei einigen früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen gibt es keine Registerkarte **Startparameter** . Doppelklicken Sie in diesem Fall auf der Registerkarte **Erweitert** auf **Startparameter**. Die Parameter werden in einem sehr kleinen Fenster geöffnet. Achten Sie darauf, die vorhandenen Parameter nicht zu ändern. Fügen Sie ganz am Ende einen neuen Parameter `;-m` , und klicken Sie dann auf `OK`. (Der Parameter entspricht einem Semikolon, einem Bindestrich und dem Kleinbuchstaben m.)  
   
-6.  Klicken Sie auf `OK`, und klicken Sie nach der Meldung, neu zu starten, mit der rechten Maustaste des Servernamen, und klicken Sie dann auf **Neustart**.  
+6.  Klicken Sie auf `OK`, und klicken Sie nach der Meldung, neu zu starten, mit der rechten Maustaste des Servernamens, und klicken Sie dann auf **Neustart**.  
   
 7.  Nachdem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet wurde, befindet sich Ihr Server im Einzelbenutzermodus. Stellen Sie sicher, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent nicht ausgeführt wird. da er andernfalls Ihre einzige Verbindung belegt.  
   
@@ -80,14 +80,14 @@ ms.locfileid: "36046973"
   
     1.  Stellen Sie über den Objekt-Explorer unter Verwendung der Windows-Authentifizierung (die Ihre Administratoranmeldeinformationen enthält) eine Verbindung her. Erweitern Sie **Sicherheit**sowie **Anmeldungen**, und doppelklicken Sie auf Ihre eigene Anmeldung. Auf der **Serverrollen** Seite `sysadmin`, und klicken Sie dann auf `OK`.  
   
-    2.  Anstatt über den Objekt-Explorer stellen Sie in einem Abfragefenster unter Verwendung der Windows-Authentifizierung (die Ihre Administratoranmeldeinformationen enthält) eine Verbindung her. (Diese Art der Verbindung wird nur unterstützt, wenn sie nicht über den Objekt-Explorer hergestellt wurde.) Führen Sie Code wie beispielsweise eine neue Windows-authentifizierte Anmeldung hinzuzufügen, die ein Mitglied der `sysadmin` festen Serverrolle "". Im folgenden Beispiel wird ein Domänenbenutzer mit dem Namen `CONTOSO\PatK` hinzugefügt.  
+    2.  Anstatt über den Objekt-Explorer stellen Sie in einem Abfragefenster unter Verwendung der Windows-Authentifizierung (die Ihre Administratoranmeldeinformationen enthält) eine Verbindung her. (Diese Art der Verbindung wird nur unterstützt, wenn sie nicht über den Objekt-Explorer hergestellt wurde.) Führen Sie Code wie z. B. Folgendes, um eine neue Anmeldung mit Windows-Authentifizierung hinzufügen, die ein Mitglied der `sysadmin` -Serverrolle sein. Im folgenden Beispiel wird ein Domänenbenutzer mit dem Namen `CONTOSO\PatK` hinzugefügt.  
   
         ```  
         CREATE LOGIN [CONTOSO\PatK] FROM WINDOWS;  
         ALTER SERVER ROLE sysadmin ADD MEMBER [CONTOSO\PatK];  
         ```  
   
-    3.  Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im gemischten Authentifizierungsmodus ausgeführt wird, stellen Sie eine Verbindung in einem Abfragefenster unter Verwendung der Windows-Authentifizierung her (die Ihre Administratoranmeldeinformationen enthält). Führen Sie Code wie den folgenden zum Erstellen eines neuen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -authentifizierungsanmeldung, die ein Mitglied der `sysadmin` festen Serverrolle "".  
+    3.  Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im gemischten Authentifizierungsmodus ausgeführt wird, stellen Sie eine Verbindung in einem Abfragefenster unter Verwendung der Windows-Authentifizierung her (die Ihre Administratoranmeldeinformationen enthält). Führen Sie Code wie den folgenden zum Erstellen eines neuen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -authentifizierungsanmeldung, die ein Mitglied der `sysadmin` -Serverrolle sein.  
   
         ```  
         CREATE LOGIN TempLogin WITH PASSWORD = '************';  
@@ -97,7 +97,7 @@ ms.locfileid: "36046973"
         > [!WARNING]  
         >  Ersetzen Sie ************ durch ein sicheres Kennwort.  
   
-    4.  Wenn Ihre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, im gemischten Authentifizierungsmodus wird und Sie das Kennwort zurücksetzen möchten die `sa` Konto, das Herstellen einer Verbindung mit einem Abfragefenster unter Verwendung der Windows-Authentifizierung (die Ihre Administratoranmeldeinformationen enthält). Ändern des Kennworts für die `sa` Konto mit der folgenden Syntax.  
+    4.  Wenn Ihre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführen im gemischten Authentifizierungsmodus wird und Sie das Kennwort zurücksetzen möchten die `sa` -Konto, das Herstellen einer Verbindung mit einem Abfragefenster unter Verwendung der Windows-Authentifizierung (die Ihre Administratoranmeldeinformationen enthält). Ändern des Kennworts für die `sa` Konto mit der folgenden Syntax.  
   
         ```  
         ALTER LOGIN sa WITH PASSWORD = '************';  
@@ -110,18 +110,17 @@ ms.locfileid: "36046973"
   
 10. Wählen Sie im linken Bereich des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Managers die Option **SQL Server-Dienste**aus. Klicken Sie im rechten Bereich mit der rechten Maustaste auf die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und klicken Sie dann auf **Eigenschaften**.  
   
-11. Auf der **Startparameter** Registerkarte die **vorhandene Parameter** wählen Sie im `-m` , und klicken Sie dann auf `Remove`.  
+11. Auf der **Startparameter** Registerkarte die **vorhandene Parameter** Kontrollkästchen `-m` , und klicken Sie dann auf `Remove`.  
   
     > [!NOTE]  
-    >  Bei einigen früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen gibt es keine Registerkarte **Startparameter** . Doppelklicken Sie in diesem Fall auf der Registerkarte **Erweitert** auf **Startparameter**. Die Parameter werden in einem sehr kleinen Fenster geöffnet. Entfernen Sie die `;-m` die Sie zuvor hinzugefügt haben, und klicken Sie dann auf `OK`.  
+    >  Bei einigen früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen gibt es keine Registerkarte **Startparameter** . Doppelklicken Sie in diesem Fall auf der Registerkarte **Erweitert** auf **Startparameter**. Die Parameter werden in einem sehr kleinen Fenster geöffnet. Entfernen Sie die `;-m` , die Sie zuvor hinzugefügt haben, und klicken Sie dann auf `OK`.  
   
 12. Klicken Sie mit der rechten Maustaste auf den Servernamen, und klicken Sie dann auf **Neu starten**.  
   
- Nun Sie sein sollten herstellen können normalerweise mit einem der Konten, das jetzt Mitglied ist eines der `sysadmin` festen Serverrolle "".  
+ Sie sollten jetzt eine Verbindung mit einem der Konten, das jetzt Mitglied ist normalerweise herstellen von der `sysadmin` -Serverrolle sein.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Starten von SQL Server im Einzelbenutzermodus](start-sql-server-in-single-user-mode.md)   
- 
-  [Startoptionen für den Datenbank-Engine-Dienst](database-engine-service-startup-options.md)  
+ [Startoptionen für den Datenbank-Engine-Dienst](database-engine-service-startup-options.md)  
   
   

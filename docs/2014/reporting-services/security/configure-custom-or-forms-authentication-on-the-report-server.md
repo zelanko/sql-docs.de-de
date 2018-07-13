@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Forms authentication, configuring
 - custom authentication [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
 caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b9c600939f5f3fb0a6febd76371d95e3ab91b4fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6308b2b3da495518fb2c377e7a0994a27f14dbcf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049860"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206510"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>Konfiguration der benutzerdefinierten oder Formularauthentifizierung auf dem Berichtsserver
   Reporting Services stellt eine erweiterbare Architektur zur Verfügung, mit der Sie benutzerdefinierte oder formularbasierte Authentifizierungsmodule integrieren können. Möglicherweise ist es ratsam, eine benutzerdefinierte Authentifizierungserweiterung zu implementieren, wenn die Bereitstellungsanforderungen keine Windows-integrierte Sicherheit oder grundlegende Authentifizierung umfassen. Das häufigste Szenario für die Verwendung der benutzerdefinierten Authentifizierung ist eine Unterstützung des Internet- oder Extranetzugriffs auf eine Webanwendung. Durch das Ersetzen der standardmäßigen Windows-Authentifizierungserweiterung durch eine benutzerdefinierte Erweiterung können Sie besser steuern, wie externen Benutzern Zugriff auf den Berichtsserver gewährt wird.  
@@ -38,7 +38,7 @@ ms.locfileid: "36049860"
   
 1.  Öffnen Sie RSReportServer.config in einem Text-Editor.  
   
-2.  Suchen <`Authentication`>.  
+2.  Finden Sie <`Authentication`>.  
   
 3.  Kopieren Sie die folgende XML-Struktur:  
   
@@ -59,13 +59,13 @@ ms.locfileid: "36049860"
   
 6.  Öffnen Sie die Datei Web.config für den Berichtsserver. Standardmäßig befindet sich diese Datei unter "Programme\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\ReportServer".  
   
-7.  Suchen `authentication mode` und legen Sie es `Forms`.  
+7.  Suchen `authentication mode` und legen Sie ihn `Forms`.  
   
     ```  
     <authentication mode = "Forms" />  
     ```  
   
-8.  Suchen `identity impersonate` und legen Sie dafür `False`.  
+8.  Suchen `identity impersonate` und legen ihn auf `False`.  
   
     ```  
     <identity impersonate = "false" />  
@@ -73,19 +73,19 @@ ms.locfileid: "36049860"
   
 9. Öffnen Sie die Datei Web.config für den Berichts-Manager. Standardmäßig befindet sich diese Datei unter \Programme\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\ReportManager.  
   
-10. Suchen `authentication mode` und legen Sie es `Forms`.  
+10. Suchen `authentication mode` und legen Sie ihn `Forms`.  
   
     ```  
     <authentication mode = "Forms" />  
     ```  
   
-11. Suchen `identity impersonate` und legen Sie dafür `False`.  
+11. Suchen `identity impersonate` und legen ihn auf `False`.  
   
     ```  
     <identity impersonate = "false" />  
     ```  
   
-12. Hinzufügen der `PassThroughCookies` der Konfigurationsdatei die Elementstruktur. Weitere Informationen finden Sie unter [Konfigurieren des Berichts-Managers für die Übergabe von benutzerdefinierten Authentifizierungscookies](configure-the-web-portal-to-pass-custom-authentication-cookies.md).  
+12. Hinzufügen der `PassThroughCookies` Elementstruktur der Konfigurationsdatei hinzu. Weitere Informationen finden Sie unter [Konfigurieren des Berichts-Managers für die Übergabe von benutzerdefinierten Authentifizierungscookies](configure-the-web-portal-to-pass-custom-authentication-cookies.md).  
   
 13. Speichern Sie die Datei.  
   

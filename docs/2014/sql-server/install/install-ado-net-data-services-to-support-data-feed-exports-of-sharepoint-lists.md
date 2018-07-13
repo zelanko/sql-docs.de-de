@@ -1,5 +1,5 @@
 ---
-title: Installieren von ADO.NET Data Services um Daten zu unterstützen datenfeedexporte von SharePoint-Listen | Microsoft Docs
+title: Installieren von ADO.NET Data Services zur Unterstützung von datenfeedexporte von SharePoint-Listen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f32527ae-f623-4e08-adfb-6d3262f5c2ac
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: d4241d56aa3257bd0ec2cddf4b439a4939f8ab9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 888e3bcf01f3cbb33ae11a3961a6d492040afb1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056125"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187727"
 ---
 # <a name="install-adonet-data-services-to-support-data-feed-exports-of-sharepoint-lists"></a>Installieren von ADO.NET Data Services, um Datenfeedexporte von SharePoint-Listen zu unterstützen
   ADO.NET Data Services sind für einen Datenfeedexport von SharePoint-Listen erforderlich. Da diese Komponente nicht im SharePoint-Programm PrerequisiteInstaller von SharePoint 2010 enthalten ist, müssen Sie sie manuell installieren.  
@@ -32,7 +32,7 @@ ms.locfileid: "36056125"
   
 1.  Wechseln Sie zu den Hardware- und softwareanforderungen für SharePoint 2010 [Hardware- und Softwareanforderungen (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734)  
   
-2.  In **Zugriff auf geeignete Software**, suchen Sie den Link für ADO.NET Data Services 3.5, für das Betriebssystem entspricht (Windows Server 2008 SP2 oder Windows Server 2008 R2) verwenden.  
+2.  In **Zugriff auf geeignete Software**, suchen Sie den Link für ADO.NET Data Services 3.5, für das Betriebssystem entspricht (entweder Windows Server 2008 SP2 oder Windows Server 2008 R2) verwenden.  
   
 3.  Klicken Sie auf den Link, und führen Sie das Setupprogramm aus, durch das der Dienst installiert wird.  
   

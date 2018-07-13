@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
 - connections [Reporting Services], accounts
@@ -19,19 +19,19 @@ ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6ee89d1d6b01fe39f3798eef9f39c1ca460cc799
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71382e58d8709c2a0015e40819b74638413441e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048664"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266086"
 ---
 # <a name="authentication-with-the-report-server"></a>Authentifizierung mit dem Berichtsserver
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) bietet mehrere konfigurierbare Optionen zum Authentifizieren von Benutzern und Clientanwendungen am Berichtsserver. Standardmäßig verwendet der Berichtsserver die integrierte Windows-Authentifizierung und geht von vertrauenswürdigen Beziehungen aus, wenn sich Client- und Netzwerkressourcen in der gleichen Domäne oder einer vertrauenswürdigen Domäne befinden. Abhängig von der Netzwerktopologie und den Anforderungen der Organisation können Sie das für die integrierte Windows-Authentifizierung verwendete Authentifizierungsprotokoll anpassen, die Standardauthentifizierung verwenden oder eine selbst bereitgestellte und auf einem benutzerdefinierten Formular basierende Authentifizierungserweiterung nutzen. Jeder dieser Authentifizierungstypen kann individuell aktiviert oder deaktiviert werden. Sie können mehrere Authentifizierungstypen aktivieren, wenn der Berichtsserver mehrere Arten von Anforderungen akzeptieren soll.  
   
 > [!NOTE]  
->  In vorherigen Versionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]wurde die gesamte Authentifizierungsunterstützung von IIS bereitgestellt. Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] wird IIS nicht mehr verwendet. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verarbeitet alle Authentifizierungsanfragen intern an.  
+>  In vorherigen Versionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]wurde die gesamte Authentifizierungsunterstützung von IIS bereitgestellt. Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] wird IIS nicht mehr verwendet. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verarbeitet alle authentifizierungsanforderungen intern aus.  
   
  Alle Benutzer oder Anwendungen, die Zugriff auf Berichtsserverinhalte oder -vorgänge anfordern, müssen vor Gewähren des Zugriffs authentifiziert werden.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36048664"
 |Digest|Wird in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]nicht unterstützt.|  
   
 ## <a name="configuration-of-authentication-settings"></a>Konfigurieren von Authentifizierungseinstellungen  
- Authentifizierungseinstellungen werden für die Standardsicherheit konfiguriert, wenn die Berichtsserver-URL reserviert ist. Wenn Sie diese Einstellungen inkorrekt bearbeiten, gibt der Berichtsserver für Anforderungen, die nicht authentifiziert werden können, die Fehler ' HTTP 401 Access Denied' zurück. Beim Auswählen eines Authentifizierungstyps müssen Sie bereits wissen, wie die Windows-Authentifizierung in Ihrem Netzwerk unterstützt wird. Sie müssen mindestens einen Authentifizierungstyp angeben. Für RSWindows können mehrere Authentifizierungstypen angegeben werden. RSWindows-Authentifizierungstypen (d. h. `RSWindowsBasic`, `RSWindowsNTLM`, `RSWindowsKerberos`, und **RSWindowsNegotiate**) mit benutzerdefinierten gegenseitig.  
+ Authentifizierungseinstellungen werden für die Standardsicherheit konfiguriert, wenn die Berichtsserver-URL reserviert ist. Wenn Sie diese Einstellungen inkorrekt bearbeiten, gibt der Berichtsserver für Anforderungen, die nicht authentifiziert werden können, die Fehler ' HTTP 401 Access Denied' zurück. Beim Auswählen eines Authentifizierungstyps müssen Sie bereits wissen, wie die Windows-Authentifizierung in Ihrem Netzwerk unterstützt wird. Sie müssen mindestens einen Authentifizierungstyp angeben. Für RSWindows können mehrere Authentifizierungstypen angegeben werden. RSWindows-Authentifizierungstypen (d.h. `RSWindowsBasic`, `RSWindowsNTLM`, `RSWindowsKerberos`, und **RSWindowsNegotiate**) mit benutzerdefinierten gegenseitig.  
   
 > [!IMPORTANT]  
 >  Reporting Services überprüft nicht, ob die von Ihnen angegebenen Einstellungen für die Computerumgebung korrekt sind. Es ist möglich, dass die Standardsicherheit für Ihre Installation nicht geeignet ist oder die von Ihnen angegebenen Konfigurationseinstellungen für Ihre Sicherheitsinfrastruktur nicht geeignet sind. Aus diesem Grund sollten Sie Ihre Berichtsserverbereitstellung in einer kontrollierten Testumgebung sorgfältig prüfen, bevor Sie sie Ihrer Organisation zur Verfügung stellen.  

@@ -1,5 +1,5 @@
 ---
-title: CubePermission-Element (ASSL) | Microsoft Docs
+title: CubePermission-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CubePermission element
 ms.assetid: b144b623-ff20-4ead-91ad-4c718f3b140b
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 557fd858a02ed3e0d05679dca56740d2d8eb2128
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 15009d244d0c110d15f1c7dc62e66dec76ce859b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049053"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253162"
 ---
 # <a name="cubepermission-element-assl"></a>CubePermission-Element (ASSL)
   Definiert die Berechtigungen der Elemente eines bestimmten [Rolle](role-element-assl.md) Element in einer bestimmten [Cube](cube-element-assl.md) Element.  
@@ -65,7 +65,7 @@ ms.locfileid: "36049053"
 |Untergeordnete Elemente|[CellPermissions](../collections/cellpermissions-element-assl.md), [DimensionPermissions](../collections/dimensionpermissions-element-assl.md), [ReadSourceData](data-element-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.CubePermission>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.CubePermission>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Cube-Element &#40;ASSL&#41;](cube-element-assl.md)   

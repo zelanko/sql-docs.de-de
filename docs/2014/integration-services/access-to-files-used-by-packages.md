@@ -1,5 +1,5 @@
 ---
-title: Zugriff auf Dateien mit Paketen belegt | Microsoft Docs
+title: Zugriff auf Dateien, die von Paketen verwendet werden. | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, security
 - packages [Integration Services], security
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, security
 ms.assetid: 2e3ddea9-5289-4289-a70e-11c018f34977
 caps.latest.revision: 24
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0125f75dc0a62886cabedd0f7752b43c426e5f69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3f4c1efc392020f943759d7698c837316f4fdf4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050161"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178417"
 ---
 # <a name="access-to-files-used-by-packages"></a>Zugriff auf Dateien, die von Paketen verwendet werden
   Die Paketschutzebene bietet für Dateien, die außerhalb des Pakets gespeichert wurden, keinen Schutz. Hierzu gehören die folgenden Dateien:  

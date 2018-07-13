@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - starting SQL Server, single-user mode
 - single-user mode [SQL Server]
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 14d2bc7030f6cadf86bb7fa582a35a280508fc25
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5ba40d074b8782d4a0a34bd3e8e91cc27609a02b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049263"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185267"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>Starten von SQL Server im Einzelbenutzermodus
   Unter bestimmten Umständen müssen Sie möglicherweise eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe der Startoption **-m**im Einzelbenutzermodus starten. Dies ist z. B. der Fall, wenn Sie Serverkonfigurationsoptionen ändern oder eine beschädigte master-Datenbank oder andere Systemdatenbanken wiederherstellen möchten. Beide Aktionen erfordern das Starten einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Einzelbenutzermodus.  
@@ -69,7 +69,6 @@ ms.locfileid: "36049263"
  [sqlcmd (Hilfsprogramm)](../../tools/sqlcmd-utility.md)   
  [CHECKPOINT &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/checkpoint-transact-sql)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
- 
-  [Startoptionen für den Datenbank-Engine-Dienst](database-engine-service-startup-options.md)  
+ [Startoptionen für den Datenbank-Engine-Dienst](database-engine-service-startup-options.md)  
   
   

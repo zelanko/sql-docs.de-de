@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tables [SQL Server], updating
 - queries [SQL Server], types
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - updating tables
 ms.assetid: 178b7b75-8078-4e61-b2a8-4719b9d8033d
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 666c467a44692db34e5996435efd7eb61b8b62bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 34948672400c119a4ebaee4b39308e186bfbb1f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049088"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179157"
 ---
 # <a name="create-update-queries-visual-database-tools"></a>Erstellen von Updateabfragen (Visual Database Tools)
   Mit einer Aktualisierungsabfrage können Sie in einem Vorgang den Inhalt mehrerer Zeilen ändern. Sie können beispielsweise in der Tabelle `titles` eine Updateabfrage verwenden, um den Preis aller Bücher eines bestimmten Herausgebers um 10 % zu erhöhen.  
@@ -77,7 +77,7 @@ WHERE (pub_id = '0766')
   
 ## <a name="see-also"></a>Siehe auch  
  [Unterstützte Abfragetypen &#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
- [Entwerfen von Abfragen und Sichten Gewusst-wie-Themen &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Entwerfen von Abfragen und Ansichten: Themen zur Vorgehensweise &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [Ausführen grundlegender Vorgänge mit Abfragen &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Bedingung-Element (ASSL) | Microsoft Docs
+title: Condition-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Condition element
 ms.assetid: 9c3cb31c-4aa1-49e4-aeb2-6cab54db0be3
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2edc8a241e92987c4cde54c58576c60abb257c3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e0b4b15f7b354b858ba1dfd91fff18963b288615
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047894"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212330"
 ---
 # <a name="condition-element-assl"></a>Condition-Element (ASSL)
   Enthält einen Multidimensional Expressions (MDX)-Ausdruck, der bestimmt, ob die [Aktion](../objects/action-element-assl.md) übergeordnetes Element für das Ziel gilt.  
@@ -62,9 +62,9 @@ ms.locfileid: "36047894"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Das `Condition`-Element enthält einen MDX-Ausdruck, der einen booleschen Wert ergibt. Wenn der Ausdruck zurückgibt `True`, und klicken Sie dann die `Action` gilt für das Ziel angegeben, der [Ziel](target-element-assl.md) Element. Andernfalls die `Action` ist nicht anwendbar.  
+ Das `Condition`-Element enthält einen MDX-Ausdruck, der einen booleschen Wert ergibt. Wenn der Ausdruck zurückgibt `True`, und klicken Sie dann die `Action` gilt für die im angegebenen Ziel die [Ziel](target-element-assl.md) Element. Andernfalls die `Action` ist nicht anwendbar.  
   
- Das Element, das das übergeordnete Element des entspricht `Condition` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Action>.  
+ Das Element, das dem übergeordneten entspricht `Condition` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Action>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

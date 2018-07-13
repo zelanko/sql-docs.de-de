@@ -28,13 +28,13 @@ ms.assetid: 9b655bcd-19f6-43d8-9f89-1b4d299c6380
 caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 616cf63a80e78449b730f7d9036a3d07afd47115
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7bfcdd2bf1fd1efe17a0fba93fca3f10b04381e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047442"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162981"
 ---
 # <a name="referencing-other-assemblies-in-scripting-solutions"></a>Verweisen auf andere Assemblys in Skriptlösungen
   Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Klassenbibliothek bietet Skriptentwicklern leistungsfähige Tools zur Implementierung von benutzerdefinierten Funktionen in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen. In Skripttasks und Skriptkomponenten können ebenfalls benutzerdefinierte verwaltete Assemblys verwendet werden.  
@@ -69,17 +69,17 @@ ms.locfileid: "36047442"
   
 -   `System.Data` Enthält die ADO.NET-Architektur.  
   
--   `System.IO` Stellt eine Schnittstelle mit dem Dateisystem und Streams.  
+-   `System.IO` Stellt eine Schnittstelle zum Dateisystem und den Datenströmen bereit.  
   
 -   `System.Windows.Forms` Ermöglicht die formularerstellung.  
   
 -   `System.Text.RegularExpressions` Stellt Klassen zum Arbeiten mit regulären Ausdrücken bereit.  
   
--   `System.Environment` Gibt Informationen über den lokalen Computer, den aktuellen Benutzer und die Computer- und benutzereinstellungen zurück.  
+-   `System.Environment` Gibt Informationen zu den lokalen Computer, den aktuellen Benutzer und Computer- und benutzereinstellungen zurück.  
   
 -   `System.Net` Ermöglicht die Netzwerkkommunikation.  
   
--   `System.DirectoryServices` Stellt Active Directory bereit.  
+-   `System.DirectoryServices` Stellt Active Directory.  
   
 -   `System.Drawing` Stellt umfangreiche bildbearbeitungsbibliotheken bereit.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36047442"
   
  Weitere Informationen über [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] finden Sie in der MSDN Library.  
   
-![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben Sie mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erweitern von Paketen mit Skripts](extending-packages-with-scripting.md)  

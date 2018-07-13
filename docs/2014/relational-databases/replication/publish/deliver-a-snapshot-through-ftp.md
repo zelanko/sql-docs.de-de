@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], FTP snapshots
 - FTP snapshots [SQL Server replication]
 - snapshot replication [SQL Server], FTP
 ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 caps.latest.revision: 46
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 76f70c85774a84a1d6b7be8de3348c2f6162431b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4396b84840deb4a0973e3aae73183a551d54fce3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048706"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331530"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>Übermitteln einer Momentaufnahme über FTP
   In diesem Thema wird beschrieben, wie in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]eine Momentaufnahme über FTP bereitgestellt wird.  
@@ -93,7 +93,7 @@ ms.locfileid: "36048706"
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-snapshot-or-transactional-publication"></a>So aktivieren Sie die FTP-Momentaufnahmeübermittlung für eine Momentaufnahme- oder Transaktionsveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Geben Sie **@publication**, einen Wert von `true` für **@enabled_for_internet**, und die entsprechenden Werte für die folgenden Parameter:  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Geben Sie **@publication**, einen Wert von `true` für **@enabled_for_internet**, und entsprechende Werte für die folgenden Parameter:  
   
     -   **@ftp_address** &ndash; die Adresse des FTP-Servers, der für die Übermittlung der Momentaufnahme verwendet wird.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "36048706"
   
 1.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql)aus. Geben Sie **@publisher** und **@publication**eine Momentaufnahme über FTP bereitgestellt wird.  
   
-    -   Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)aus. Geben Sie **@publisher**, **@publisher_db**, **@publication**, die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Anmeldeinformationen, unter denen der Verteilungs-Agent auf dem Abonnenten ausgeführt wird, für **@job_login** und **@job_password**, und der Wert `true` für **@use_ftp**.  
+    -   Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)aus. Geben Sie **@publisher**, **@publisher_db**, **@publication**, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Anmeldeinformationen, unter denen Verteilungs-Agent auf dem Abonnenten ausgeführt wird, für **@job_login** und **@job_password**, und den Wert `true` für **@use_ftp**.  
   
 2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) aus, um das Pullabonnement zu registrieren. Weitere Informationen finden Sie unter [Create a Pull Subscription](../create-a-pull-subscription.md).  
   
@@ -135,7 +135,7 @@ ms.locfileid: "36048706"
   
 1.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)aus. Geben Sie **@publisher** und **@publication**eine Momentaufnahme über FTP bereitgestellt wird.  
   
-2.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)aus. Geben Sie **@publisher**, **@publisher_db**, **@publication**, unter dem der Verteilungs-Agent auf dem Abonnenten ausgeführt, für wird, die Windows-Anmeldeinformationen **@job_login** und **@job_password**, und der Wert `true` für **@use_ftp**.  
+2.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)aus. Geben Sie **@publisher**, **@publisher_db**, **@publication**, die unter dem der Verteilungs-Agent auf dem Abonnenten ausgeführt, für die wird Windows-Anmeldeinformationen **@job_login** und **@job_password**, und den Wert `true` für **@use_ftp**.  
   
 3.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql) aus, um das Pullabonnement zu registrieren. Weitere Informationen finden Sie unter [Create a Pull Subscription](../create-a-pull-subscription.md).  
   
@@ -145,9 +145,9 @@ ms.locfileid: "36048706"
   
     -   `ftp_address` -die Adresse des FTP-Servers verwendet, um die Übermittlung der Momentaufnahme.  
   
-    -   `ftp_port` -der von dem FTP-Server verwendete Port.  
+    -   `ftp_port` -der vom FTP-Server verwendete Port.  
   
-    -   `ftp_subdirectory` -Unterverzeichnis des FTP-Standardverzeichnis für die FTP-Momentaufnahme verwendet.  
+    -   `ftp_subdirectory` -das Unterverzeichnis des standardmäßigen FTP-Verzeichnisses für die FTP-Momentaufnahme verwendet.  
   
     -   `ftp_login` &ndash; der Anmeldenamen, der zum Herstellen einer Verbindung mit dem FTP-Server verwendet wird.  
   
@@ -163,9 +163,9 @@ ms.locfileid: "36048706"
   
     -   `ftp_address` -die Adresse des FTP-Servers verwendet, um die Übermittlung der Momentaufnahme.  
   
-    -   `ftp_port` -der von dem FTP-Server verwendete Port.  
+    -   `ftp_port` -der vom FTP-Server verwendete Port.  
   
-    -   `ftp_subdirectory` -Unterverzeichnis des FTP-Standardverzeichnis für die FTP-Momentaufnahme verwendet.  
+    -   `ftp_subdirectory` -das Unterverzeichnis des standardmäßigen FTP-Verzeichnisses für die FTP-Momentaufnahme verwendet.  
   
     -   `ftp_login` &ndash; der Anmeldenamen, der zum Herstellen einer Verbindung mit dem FTP-Server verwendet wird.  
   

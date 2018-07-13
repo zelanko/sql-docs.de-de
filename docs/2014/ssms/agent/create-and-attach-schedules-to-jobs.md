@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server]
 - scheduling jobs [SQL Server]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - idle time [SQL Server]
 ms.assetid: 079c2984-0052-4a37-a2b8-4ece56e6b6b5
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 77f1f09ddb3d978d1308d4c7ec70bf5d8d177812
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f85e651f67b6553f597fab920bde7cc05ca37167
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047987"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192870"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>Anlegen und Zuweisen von Zeitplänen zu Aufträgen
   Zeitpläne für Aufträge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents zu erstellen bedeutet, die Bedingung(en) zu definieren, durch die die Ausführung des Auftrags ohne Benutzerinteraktion gestartet wird. Sie können einen Auftrag so planen, dass er automatisch ausgeführt wird, indem Sie einen neuen Zeitplan für den Auftrag erstellen oder indem Sie dem Auftrag einen vorhandenen Zeitplan zuweisen.  
@@ -83,7 +83,7 @@ ms.locfileid: "36047987"
   
  Bevor Sie Aufträge definieren, die während der CPU-Leerlaufzeit ausgeführt werden sollen, müssen Sie die CPU-Auslastung während der normalen Verarbeitung ermitteln. Dazu können Sie mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] oder mit dem Systemmonitor den Serververkehr überwachen und Statistiken erfassen. Anschließend können Sie die zusammengestellten Informationen zum Festlegen des Prozentwertes und der Dauer der CPU-Leerlaufzeit verwenden.  
   
- Definieren Sie die CPU-Leerlaufbedingung als Prozentwert, unter den die CPU-Nutzung für eine bestimmte Dauer absinken muss. Legen Sie dann die Zeitdauer fest. Wenn die CPU-Nutzung für die angegebene Zeitdauer unter den angegebenen Prozentwert abfällt, startet der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent alle Aufträge mit CPU-Leerlaufzeitplänen. Weitere Informationen zur Verwendung von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] oder Leistungsmonitor zum Überwachen der CPU-Nutzung, finden Sie unter [Überwachen der CPU-Nutzung](../../relational-databases/performance-monitor/monitor-cpu-usage.md).  
+ Definieren Sie die CPU-Leerlaufbedingung als Prozentwert, unter den die CPU-Nutzung für eine bestimmte Dauer absinken muss. Legen Sie dann die Zeitdauer fest. Wenn die CPU-Nutzung für die angegebene Zeitdauer unter den angegebenen Prozentwert abfällt, startet der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent alle Aufträge mit CPU-Leerlaufzeitplänen. Weitere Informationen zur Verwendung von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] oder Leistungsmonitor zum Überwachen der CPU-Nutzung finden Sie unter [Überwachen der CPU-Nutzung](../../relational-databases/performance-monitor/monitor-cpu-usage.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

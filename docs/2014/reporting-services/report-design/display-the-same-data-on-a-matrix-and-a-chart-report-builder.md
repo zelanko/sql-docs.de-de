@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 09afff6c9464261193283267b33fe5c5533aba63
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: bd78c18acc34c9549c574d3f82cfce6c0e5612a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047103"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325620"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>Anzeigen derselben Daten in einer Matrix und einem Diagramm (Berichts-Generator)
   Wenn sie dieselben Daten in einer Matrix und einem Diagramm anzeigen möchten, müssen Sie für beide Datenbereiche Eigenschaften festlegen, um dasselbe Dataset anzugeben, und außerdem identische Ausdrücke für Filter, Gruppen, Sortierungen und Daten.  
   
- Da beide Datenbereiche denselben Vorgänger für die Daten aufweisen (das Berichtsdataset), können Sie der Matrix eine interaktive Sortierschaltfläche hinzufügen, auf die Benutzer klicken können, um die Sortierreihenfolge in der Matrix und im Diagramm zu ändern. Weitere Informationen finden Sie unter [interaktive Sortierung hinzufügen, um eine Tabelle oder Matrix &#40;Berichts-Generator und SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
+ Da beide Datenbereiche denselben Vorgänger für die Daten aufweisen (das Berichtsdataset), können Sie der Matrix eine interaktive Sortierschaltfläche hinzufügen, auf die Benutzer klicken können, um die Sortierreihenfolge in der Matrix und im Diagramm zu ändern. Weitere Informationen finden Sie unter [Hinzufügen einer interaktiven Sortierung zu einer Tabelle oder Matrix &#40;Berichts-Generator und SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
   
  Wenn die Spaltengruppenwerte der Matrix als Legende für das Diagramm verwendet werden sollen, müssen Sie die Farben für die Reihendaten im Diagramm angeben und anschließend dieselben Farben als Füllfarben für den Hintergrund der Textfelder in der Matrixzelle verwenden, in der die Gruppenwerte angezeigt werden. Weitere Informationen finden Sie unter [Angeben von Farben, die für mehrere Formdiagramme konsistent sind &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Migrieren von Check- und Foreign Key-Einschränkungen | Microsoft Docs
+title: Migrieren von Check- und Foreign Key-Einschränkungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,41 +8,41 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e0a1a1e4-0062-4872-93c3-cd91b7a43c23
 caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: fdb1b87e74c93cbacca1f1d18fe4e5c25bc65256
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fe1353a72ac4780356835fec88ff0d05f3d74e66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048791"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263362"
 ---
 # <a name="migrating-check-and-foreign-key-constraints"></a>Migrieren von Check- und Foreign Key-Einschränkungen
-  Check- und foreign Key-Einschränkungen werden nicht unterstützt, [!INCLUDE[hek_2](../includes/hek-2-md.md)] in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Diese Konstrukte werden in der Regel zum Erzwingen der logischen Datenintegrität im Schema verwendet und können die Wartung von funktionalen Anwendungen auf Richtigkeit wichtig sein.  
+  Check- und foreign Key-Einschränkungen werden nicht unterstützt, [!INCLUDE[hek_2](../includes/hek-2-md.md)] in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Diese Konstrukte werden in der Regel verwendet werden, um die Integrität der logischen Daten in das Schema zu erzwingen und können für die Verwaltung des ordnungsgemäße Funktionieren von Anwendungen wichtig sein.  
   
- Logische Integrität überprüft wird, für eine Tabelle z. B. Check und foreign Key-Einschränkungen erfordern zusätzliche Verarbeitung auf Transaktionen und sollte im Allgemeinen für leistungsabhängigen Anwendungen vermieden werden. Allerdings bestehen solchen Überprüfungen aus für Ihre Anwendung von entscheidender Bedeutung, es zwei problemumgehungen.  
+ Logische integritätsprüfungen für eine Tabelle z. B. Check und foreign Key-Einschränkungen erfordern zusätzliche Verarbeitung, zu Transaktionen und sollte im Allgemeinen für leistungsabhängigen Anwendungen vermieden werden. Wenn solchen Überprüfungen aus Ihrer Anwendung von entscheidender Bedeutung sind, gibt es jedoch zwei problemumgehungen.  
   
-## <a name="checking-constraints-after-an-insert-update-or-delete-operation"></a>Überprüfen von Einschränkungen nach einem INSERT-, Update- oder Delete-Vorgang  
- Diese problemumgehung optimistischen, basiert auf der Annahme, dass die meisten Änderungen nicht die Einschränkungen verletzen. In dieser problemumgehung werden Daten zuerst geändert, bevor die Einschränkungen ausgewertet werden. Wenn eine Einschränkung verletzt wird, wäre es erkannt werden, jedoch wird die Änderung nicht rückgängig gemacht werden.  
+## <a name="checking-constraints-after-an-insert-update-or-delete-operation"></a>Überprüfen von Einschränkungen nach einer Insert, Update oder Delete-Vorgang  
+ Diese problemumgehung optimistischen, basiert auf der Annahme, dass die meisten Änderungen nicht gegen die Einschränkungen. In dieser problemumgehung werden die Daten zuerst geändert, bevor die Einschränkungen ausgewertet werden. Wenn eine Einschränkung verletzt wird, würde es erkannt werden, jedoch wird die Änderung nicht rückgängig gemacht werden.  
   
- Diese problemumgehung hat den Vorteil, dass minimale Auswirkungen auf die Leistung, da Daten vorgenommenen Änderungen nicht von einschränkungsüberprüfungen blockiert wird. Wenn eine Änderung, die eine oder mehrere Einschränkungen verletzt auftritt, konnte der Prozess zum Rollback für diese Änderung sehr lange dauern.  
+ Diese Lösung hat den Vorteil, dass minimale Auswirkungen auf die Leistung, weil der Datenänderung von einschränkungsüberprüfungen nicht blockiert wird. Wenn eine Änderung, die eine oder mehrere Einschränkungen verletzt ausgeführt werden, kann der Prozess zum Rollback dieser Änderung allerdings eine lange dauern.  
   
-## <a name="enforcing-constraints-before-an-insert-update-or-delete-operation"></a>Erzwingen von Einschränkungen vor einer INSERT-, Update- oder Delete-Vorgang  
- Diese problemumgehung emuliert das Verhalten der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Einschränkungen. Die Einschränkungen überprüft werden, bevor der Datenänderung tritt auf, und die Transaktion beendet wird, wenn es sich bei einem Überprüfungsfehler. Diese Methode einem Leistungsverlust für datenänderungen, aber es wird sichergestellt, dass die Daten in einer Tabelle immer die Einschränkungen erfüllen.  
+## <a name="enforcing-constraints-before-an-insert-update-or-delete-operation"></a>Einschränkungen zu erzwingen, bevor Sie eine Insert, Update oder Delete-Vorgang  
+ Diese problemumgehung emuliert das Verhalten der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Einschränkungen. Vor der Änderung von Daten tritt auf, und die Transaktion wird beendet, wenn eine Überprüfung fehlschlägt, werden die Einschränkungen überprüft. Diese Methode einem Leistungsverlust für datenänderungen, sondern es wird sichergestellt, dass die Daten in eine Tabelle immer die Einschränkungen erfüllt.  
   
- Verwenden Sie dieses Problem zu umgehen, wenn logische Datenintegrität entscheidend, um die Richtigkeit ist und voraussichtlich Änderungen, die eine Einschränkung verletzen. Allerdings müssen zur Integrität zu gewährleisten, alle datenänderungen mithilfe von gespeicherten Prozeduren auftreten, die diese Erzwingungen enthalten. Änderungen durch Ad-hoc-Abfragen und andere gespeicherte Prozeduren erzwingt keine dieser Einschränkungen und daher verstößt gegen diese ohne Warnung.  
+ Verwenden Sie diese problemumgehung, wenn logische Datenintegrität entscheidend, um die Richtigkeit ist und Änderungen, die eine Einschränkung verletzen würden wahrscheinlich sind. Allerdings müssen um die Integrität zu gewährleisten, alle datenänderungen mithilfe von gespeicherten Prozeduren auftreten, die diesen Gebieten enthalten. Änderungen durch Ad-hoc-Abfragen und andere gespeicherte Prozeduren diese Einschränkungen werden nicht erzwungen, und daher verstoßen gegen diese ohne Warnung.  
   
 ## <a name="sample-code"></a>Beispielcode  
- Die folgenden Beispiele basieren auf der AdventureWorks2012-Datenbank. Insbesondere in diesen Beispielen basiert auf der [Sales]. [SalesOrderDetail]-Tabelle und die zugehörigen Kontrollkästchen und foreign Key-Einschränkungen, zusätzlich zu den eindeutigen Index.  
+ Die folgenden Beispiele basieren auf der AdventureWorks2012-Datenbank. Insbesondere diese Beispiele basiert auf der [Sales]. [SalesOrderDetail]-Tabelle und die zugeordneten Check und foreign Key-Einschränkungen, zusätzlich zu den eindeutigen Index.  
   
- Die gespeicherten Prozeduren, die hier angegebene sind nur Inset Vorgänge. Gespeicherte Prozeduren für Update- und Löschvorgänge sollten haben ähnliche Strukturen.  
+ Die gespeicherten Prozeduren, die hier angegebene werden Inset nur für Vorgänge. Gespeicherte Prozeduren für Update- und Löschvorgänge sollten haben ähnliche Strukturen.  
   
 ## <a name="table-definition-for-the-workarounds"></a>Tabelle (Definition) für die Problemumgehungen  
- Vor dem Konvertieren in eine Speicheroptimierte Tabelle, die Definition für [Sales]. [SalesOrderDetail] lautet wie folgt:  
+ Vor dem Konvertieren in eine Speicheroptimierte Tabelle, die Definition für [Sales]. [SalesOrderDetail] lautet wie folgt aus:  
   
 ```tsql  
 USE [AdventureWorks2012]  
@@ -101,9 +101,9 @@ ALTER TABLE [Sales].[SalesOrderDetail] CHECK CONSTRAINT [CK_SalesOrderDetail_Uni
 GO  
 ```  
   
- Nach dem Konvertieren in eine Speicheroptimierte Tabelle, die Definition für [Sales]. [SalesOrderDetail] lautet wie folgt:  
+ Nach dem Konvertieren in eine Speicheroptimierte Tabelle, die Definition für [Sales]. [SalesOrderDetail] lautet wie folgt aus:  
   
- Beachten Sie, Rowguid ist eine ROWGUIDCOL-Spalte nicht mehr, als in nicht unterstützt wird [!INCLUDE[hek_2](../includes/hek-2-md.md)]. Die Spalte wurde entfernt. Darüber hinaus "LineTotal" ist eine berechnete Spalte und außerhalb des gültigen Bereichs für diesen Artikel, sodass es auch entfernt wurde.  
+ Beachten Sie, Rowguid ist nicht mehr eine ROWGUIDCOL-Eigenschaft, da er nicht, im unterstützt wird [!INCLUDE[hek_2](../includes/hek-2-md.md)]. Die Spalte wurde entfernt. Darüber hinaus "LineTotal" ist eine berechnete Spalte, und außerhalb des gültigen Bereichs für diesen Artikel, sodass es auch wurde entfernt.  
   
 ```tsql  
 USE [AdventureWorks2012]  
@@ -129,7 +129,7 @@ CREATE TABLE [Sales].[SalesOrderDetail]([SalesOrderID] [int] NOT NULL,
 GO  
 ```  
   
-## <a name="checking-constraints-after-an-insert-update-or-delete-operation"></a>Überprüfen von Einschränkungen nach einem INSERT-, Update- oder Delete-Vorgang  
+## <a name="checking-constraints-after-an-insert-update-or-delete-operation"></a>Überprüfen von Einschränkungen nach einer Insert, Update oder Delete-Vorgang  
   
 ```tsql  
 USE AdventureWorks2012  
@@ -187,7 +187,7 @@ BEGIN TRANSACTION
 END  
 ```  
   
-## <a name="enforcing-constraints-before-an-insert-update-or-delete-operation"></a>Durchsetzen Einschränkungen vor einer Einfügung, Update oder Löschvorgang  
+## <a name="enforcing-constraints-before-an-insert-update-or-delete-operation"></a>Erzwingen Einschränkungen vor einer Einfügung, aktualisieren oder löschen  
   
 ```tsql  
 USE AdventureWorks2012  

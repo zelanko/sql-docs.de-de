@@ -1,5 +1,5 @@
 ---
-title: UName-Element (XMLA) | Microsoft Docs
+title: UName-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - UName element
 ms.assetid: b4916d44-cf77-4d4c-b4e5-a0a98192d057
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 042c7a9c5dd7ea33126b7aebeba4217a28c300e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: fa8df2d964db3c8131b9566e04b05c106638d62e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056319"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185127"
 ---
 # <a name="uname-element-xmla"></a>UName-Element (XMLA)
   Enthält den eindeutigen Namen für das übergeordnete [HierarchyInfo](hierarchyinfo-element-xmla.md) - oder [Member](member-element-xmla.md) -Element.  

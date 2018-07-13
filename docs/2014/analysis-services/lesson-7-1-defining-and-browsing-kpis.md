@@ -1,5 +1,5 @@
 ---
-title: Definieren und Durchsuchen von KPIs | Microsoft Docs
+title: Definieren und Durchsuchen von KPIs | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 1a8612cf9e325aaa59f4b79ca74a5aa49f51aaab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f60530d85de673e3cb3bb7e6f19f2c8484cc68bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047515"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243730"
 ---
 # <a name="defining-and-browsing-kpis"></a>Definieren und Durchsuchen von KPIs
   Zum Definieren von KPIs (Key Performance Indicators) müssen Sie zuerst einen KPI-Namen und die Measuregruppe definieren, der der KPI zugeordnet wird. Ein KPI kann entweder allen Measuregruppen oder einer einzelnen Measuregruppe zugeordnet werden. Anschließend definieren Sie die folgenden Elemente des KPIs:  
@@ -63,7 +63,7 @@ ms.locfileid: "36047515"
   
      In der folgenden Abbildung ist die Registerkarte **KPIs** des Cube-Designers dargestellt.  
   
-     ![Registerkarte ' KPIs ', Cube-Designer](../../2014/tutorials/media/l7-kpi-1.gif "Registerkarte ' KPIs ', Cube-Designer")  
+     ![Registerkarte "KPIs", Cube-Designer](../../2014/tutorials/media/l7-kpi-1.gif "Registerkarte ' KPIs ', Cube-Designer")  
   
 2.  Klicken Sie auf der Symbolleiste der Registerkarte **KPIs** auf **Neuer KPI** .  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36047515"
   
      ![Leere KPI-Vorlage im Anzeigebereich](../../2014/tutorials/media/l7-kpi-2.gif "leere KPI-Vorlage im Anzeigebereich")  
   
-3.  In der **Namen** geben `Reseller Revenue`, und wählen Sie dann **Verkäufe des Wiederverkäufers** in der **zugeordnete Measuregruppe** Liste.  
+3.  In der **Namen** geben `Reseller Revenue`, und wählen Sie dann **Verkäufe des Wiederverkäufers** in die **zugeordnete Measuregruppe** Liste.  
   
 4.  Erweitern Sie auf der Registerkarte **Metadaten** im Bereich **Berechnungstools** die Optionen **Measures**und **Reseller Sales**, und ziehen Sie anschließend das Measure **Reseller Sales-Sales Amount** in das Feld **Wertausdruck** .  
   
@@ -156,7 +156,7 @@ ms.locfileid: "36047515"
   
 1.  Klicken Sie auf der Symbolleiste der Registerkarte **KPIs** auf **Formularansicht** und anschließend auf die Schaltfläche **Neuer KPI** .  
   
-2.  In der **Namen** geben `Product Gross Profit Margin`, und überprüfen Sie, ob  **\<alle >** wird angezeigt, der **zugeordnete Measuregruppe** Liste.  
+2.  In der **Namen** geben `Product Gross Profit Margin`, und überprüfen Sie, ob  **\<alle >** wird in der **zugeordnete Measuregruppe** Liste.  
   
 3.  Ziehen Sie auf der Registerkarte **Metadaten** im Bereich **Berechnungstools** das **Total GPM** -Measure in das Feld **Wertausdruck** .  
   
@@ -265,7 +265,7 @@ ms.locfileid: "36047515"
   
 2.  Klicken Sie nach der erfolgreichen Bereitstellung auf der Symbolleiste der Registerkarte **KPIs** auf **Verbindung wiederherstellen** und anschließend auf **Browseransicht**.  
   
-     Die `Product Gross Profit Margin` KPI wird angezeigt und zeigt den KPI-Wert für **Q3 CY 2007** und **North America** Vertriebsgebiet.  
+     Die `Product Gross Profit Margin` KPI angezeigt wird, und zeigt den KPI-Wert für **Q3 CY 2007** und **Nordamerika** Vertriebsgebiet.  
   
 3.  Wählen Sie im Bereich **Filter** in der Liste **Dimension** die Option **Product** , in der Liste **Hierarchy** die Option **Category** , in der Liste **Operator** die Option **Gleich** und in der Liste **Filterausdruck** die Option **Bikes** aus. Klicken Sie anschließend auf **OK**.  
   

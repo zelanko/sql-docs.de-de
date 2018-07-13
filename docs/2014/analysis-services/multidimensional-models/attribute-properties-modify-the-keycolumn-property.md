@@ -1,5 +1,5 @@
 ---
-title: Ändern der KeyColumns-Eigenschaft eines Attributs | Microsoft Docs
+title: Ändern der KeyColumn-Eigenschaft eines Attributs | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - binding attributes [Analysis Services]
 - attributes [Analysis Services], binding
 - key columns [Analysis Services]
 ms.assetid: a2643be4-8123-4cc3-baf9-e5ec54a1669d
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 68a1759aa5a527037c87efc6763ac81e40958d2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 10b3735131b85bd071b8f8333bc663f1ed4e109a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048847"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185348"
 ---
 # <a name="modify-the-keycolumn-property-of-an-attribute"></a>Ändern der KeyColumns-Eigenschaft eines Attributs
   Sie können die **KeyColumns** -Eigenschaft eines Attributs ändern. Nehmen wir beispielsweise an, Sie möchten einen zusammengesetzten Schlüssel statt eines einzelnen Schlüssels für das Attribut verwenden.  
@@ -38,7 +38,7 @@ ms.locfileid: "36048847"
   
          – oder –  
   
-    -   Im Cube-Designer auf die **Cubestruktur** Registerkarte, erweitern Sie die Cubedimension in der **Dimensionen** Bereich, und klicken Sie auf **bearbeiten \<Dimension >**.  
+    -   Im Cube-Designer auf die **Cubestruktur** Registerkarte, erweitern Sie dann die Cubedimension in der **Dimensionen** Bereich, und klicken Sie auf **bearbeiten \<Dimension >**.  
   
 3.  Klicken Sie im Bereich **Attribute** der Registerkarte **Dimensionsstruktur** auf das Attribut, dessen **KeyColumns** -Eigenschaft Sie ändern möchten.  
   

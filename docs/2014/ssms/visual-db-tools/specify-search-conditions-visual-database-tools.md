@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - choosing search criteria
 - search conditions [SQL Server], specifying
 - search criteria [SQL Server], specifying conditions
 ms.assetid: 18e2c759-68ec-4efe-b208-2f73418cd9bd
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f912c7998bf2922ad2967376ba51b752d012bfb9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 13936176974b38e9a69da0bf6a38c95b81700bc3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048392"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202070"
 ---
 # <a name="specify-search-conditions-visual-database-tools"></a>Angeben von Suchbedingungen (Visual Database Tools)
   Sie können die Datenzeilen festlegen, die in die Abfrage aufgenommen werden sollen, indem Sie Suchbedingungen angeben. Wenn Sie beispielsweise die Tabelle `employee` abfragen, können Sie angeben, dass Sie nur diejenigen Mitarbeiter suchen, die in einem bestimmten Gebiet arbeiten.  
@@ -51,7 +51,7 @@ ms.locfileid: "36048392"
  Der Abfrage- und Sicht-Designer aktualisiert die SQL-Anweisung im [SQL-Bereich](sql-pane-visual-database-tools.md) durch Hinzufügen oder Ändern der WHERE-Klausel.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Regeln für die Eingabe suchen Werte &#40;Visual Database Tools&#41;](rules-for-entering-search-values-visual-database-tools.md)   
+ [Regeln für das Eingeben von Suchwerten &#40;Visual Database Tools&#41;](rules-for-entering-search-values-visual-database-tools.md)   
  [Angeben von Suchkriterien &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   
   

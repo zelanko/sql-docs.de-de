@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change tracking groups [Master Data Services]
 - attributes [Master Data Services], change tracking groups
 - change tracking groups [Master Data Services], adding attributes
 ms.assetid: e153eb5f-70ca-4c6f-89d8-1f937ed3917d
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 77a151fe4238c7ed99282436a9668a94d85e2b35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1ae8616c44e6ba58c254989c718eb53ea53a197f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047840"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235180"
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>Hinzufügen von Attributen zu einer Änderungsnachverfolgungsgruppe (Master Data Services)
   Fügen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]einer Änderungsnachverfolgungsgruppe Attribute hinzu, wenn Sie Änderungen an den Werten des Attributs nachverfolgen möchten.  
@@ -54,11 +54,11 @@ ms.locfileid: "36047840"
   
 6.  Auf der Seite **Entität bearbeiten** .  
   
-    -   Wenn das Attribut für Blattelemente vorgesehen, in der **Blattelemente Attribute** Bereich, wählen Sie das Attribut, und klicken Sie auf **blattattribut bearbeiten**.  
+    -   Wenn das Attribut für Blattelemente in der **Blattelemente Attribute** Bereich, wählen Sie das Attribut, und klicken Sie auf **blattattribut bearbeiten**.  
   
-    -   Wenn das Attribut für konsolidierte Elemente in der **konsolidierte Attribute** Bereich, wählen Sie das Attribut, und klicken Sie auf **konsolidiertes Attribut bearbeiten**.  
+    -   Wenn das Attribut für konsolidierte Elemente bestimmt, in ist der **konsolidierte Attribute** Bereich, wählen Sie das Attribut, und klicken Sie auf **konsolidiertes Attribut bearbeiten**.  
   
-    -   Wenn das Attribut für Auflistungen, in der **Auflistungsattribute** Bereich, wählen Sie das Attribut, und klicken Sie auf **auflistungsattribut bearbeiten**.  
+    -   Wenn das Attribut für Sammlungen, in der **Auflistungsattribute** Bereich, wählen Sie das Attribut, und klicken Sie auf **auflistungsattribut bearbeiten**.  
   
 7.  Aktivieren Sie das Kontrollkästchen **Änderungsverfolgung aktivieren** .  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [SQL Server], queries
 - results [SQL Server], query
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - clearing query results
 ms.assetid: 4ed9692e-5170-47d4-8b0b-028c967d47ff
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d5b81951dd4a85798952517d7f34d1d9bf33188b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3ce0eaf8e2e0ab319ea040a2c04789fcbc521f68
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048653"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268116"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>Löschen von Abfrageergebnissen (Visual Database Tools)
   Nachdem Sie im **Abfrage- und Sicht-Designer**eine Abfrage ausgeführt haben, können Sie den Inhalt des Ergebnisbereichs löschen. Diese Vorgehensweise gilt für Abfragen, die mithilfe der Optionen **Sicht öffnen** oder **Tabelle öffnen** im Objekt-Explorer erstellt wurden. In[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]kann nach dem Ausführen einer Abfrage im Abfrage-Editor der Inhalt des Ergebnisbereichs nur durch Schließen des Abfrage-Editorfensters oder durch Ausführen einer weiteren Abfrage gelöscht werden.  

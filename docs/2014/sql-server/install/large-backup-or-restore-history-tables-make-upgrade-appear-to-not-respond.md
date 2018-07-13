@@ -1,5 +1,5 @@
 ---
-title: Verlaufstabellen für große Backup- oder Restore lassen das Upgrade scheinbar nicht reagieren | Microsoft Docs
+title: Verlaufstabellen für große sicherungs- oder Wiederherstellungsvorgang lassen das Upgrade scheinbar nicht reagieren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backup history tables
 - history tables
 ms.assetid: f88d86ec-324b-4518-b6d7-1af7e7265812
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1b7d3f6c5734f743d83a712cea745c3816bcdbc0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d01d73f9456d56a8f12698b954213289ab4921d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049858"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208500"
 ---
 # <a name="large-backup-or-restore-history-tables-make-upgrade-appear-to-not-respond"></a>Das Upgrade reagiert bei Verlaufstabellen für große Sicherungen oder Wiederherstellungen anscheinend nicht mehr
   In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] wurden einigen Verlaufstabellen für Sicherungen und Wiederherstellungen neue Spalten hinzugefügt. Zum Aktualisieren dieser Tabellen müssen die neuen Spalten hinzugefügt werden. Wenn mindestens eine dieser Tabellen viele Zeilen enthält, steht das Upgrade bei der ALTER TABLE-Anweisung, die der Tabelle Spalten hinzufügt, über einen langen Zeitraum still.  
@@ -56,7 +56,7 @@ ms.locfileid: "36049858"
 >  Sie können eine Datenbank aktualisieren, deren Verlaufstabellen für Sicherungen und Wiederherstellungen mehr als 10.000 Zeilen besitzen. Beim Ändern großer Tabellen entsteht jedoch der Eindruck, dass das Upgrade still steht. Je größer die Tabellen sind, um so länger dauert das Setup.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenbank-Engine-Upgradeprobleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [Datenbank-Engine-Upgrade-Probleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

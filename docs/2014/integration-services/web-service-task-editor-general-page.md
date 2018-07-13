@@ -1,5 +1,5 @@
 ---
-title: Web Service Task-Editor (Seite Allgemein) | Microsoft Docs
+title: Web Service Task-Editor (Seite Allgemein) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.webservicestask.general.f1
 helpviewer_keywords:
 - Web Service Task Editor
 ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
 caps.latest.revision: 34
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d23c975b44a9d61bb9e9b1b61ebf04285842ba01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d68fdf156caf460ee6130df7ab746fcbd13fec0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047188"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331860"
 ---
 # <a name="web-service-task-editor-general-page"></a>Editor für den Task 'Webdienst' (Seite Allgemein)
   Auf der Seite **Allgemein** des Dialogfelds **Editor für den Task 'Webdienst'** können Sie einen HTTP-Verbindungs-Manager und den Speicherort der WSDL-Datei (Web Services Description Language) angeben, die der Task „Webdienst“ verwendet, den Task „Webdienst“ beschreiben und die WSDL-Datei herunterladen.  
@@ -48,7 +48,7 @@ ms.locfileid: "36047188"
   
 -   Wählen Sie diese leere Datei für die Option **WSDLFile** aus.  
   
--   Legen Sie den Wert der **OverwriteWSDLFile** auf `True` auf die leere Datei mit der tatsächlichen WSDL-Datei überschrieben werden kann.  
+-   Legen Sie den Wert der **OverwriteWSDLFile** zu `True` auf die leere Datei mit der tatsächlichen WSDL-Datei überschrieben werden kann.  
   
 -   Klicken Sie auf **WSDL herunterladen** , um die tatsächliche WSDL-Datei herunterzuladen und die leere Datei zu überschreiben.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
 - databases [SQL Server], detaching
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - databases [SQL Server], moving
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 caps.latest.revision: 96
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 421c743456b6a0a2303b2ec0407af566c77ab39e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 11f01f4fe44284d94aa0cfb4d3c008c758a930a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047143"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227740"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Anfügen und Trennen von Datenbanken (SQL Server)
   Die Daten- und Transaktionsprotokolldateien einer Datenbank können getrennt und anschließend an dieselbe oder eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]angefügt werden. Das Trennen und Anfügen einer Datenbank ist hilfreich, wenn Sie die Datenbank in eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf demselben Computer ändern oder wenn Sie die Datenbank verschieben möchten.  
@@ -89,14 +89,14 @@ ms.locfileid: "36047143"
 3.  Trennen Sie die Datenbank erneut.  
   
 ##  <a name="AttachDb"></a> Anfügen einer Datenbank  
- Eine kopierte oder getrennte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank kann angefügt werden. Wenn Sie Anfügen einer [!INCLUDE[ssVersion2005](../../includes/sscurrent-md.md)] Server-Instanz, werden die Katalogdateien von ihrem vorherigen Speicherort aus zusammen mit den anderen Datenbankdateien, entspricht der Vorgehensweise in angefügt [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Weitere Informationen finden Sie unter [Upgrade der Volltextsuche](../search/upgrade-full-text-search.md).  
+ Eine kopierte oder getrennte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank kann angefügt werden. Wenn Sie Anfügen einer [!INCLUDE[ssVersion2005](../../includes/sscurrent-md.md)] Server-Instanz, die Katalogdateien von ihrem vorherigen Speicherort aus zusammen mit den anderen Datenbankdateien, entspricht der Vorgehensweise in angefügt werden [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Weitere Informationen finden Sie unter [Upgrade der Volltextsuche](../search/upgrade-full-text-search.md).  
   
  Wenn Sie eine Datenbank anfügen, müssen alle Datendateien (MDF- und NDF-Dateien) verfügbar sein. Wenn eine Datendatei einen anderen Pfad als beim Erstellen oder beim letzten Anfügen der Datenbank aufweist, müssen Sie den aktuellen Pfad der Datei angeben.  
   
 > [!NOTE]  
 >  Wenn die angefügte primäre Datendatei schreibgeschützt ist, geht [!INCLUDE[ssDE](../../includes/ssde-md.md)] davon aus, dass auch die Datenbank schreibgeschützt ist.  
   
- Wenn eine verschlüsselte Datenbank angefügt wird mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], der Datenbankbesitzer muss der Hauptschlüssel der Datenbank öffnen, indem Sie die folgende Anweisung ausführen: OPEN MASTER KEY DECRYPTION BY PASSWORD = **" *`password`*'**. Es empfiehlt sich, die automatische Entschlüsselung des Masterschlüssels zu aktivieren, indem folgende Anweisung ausgeführt wird: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Weitere Informationen finden Sie unter [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) und [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
+ Wenn eine verschlüsselte Datenbank angefügt wird mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], der Besitzer der Datenbank muss der Hauptschlüssel der Datenbank öffnen, indem Sie die folgende Anweisung ausführen: OPEN MASTER KEY DECRYPTION BY PASSWORD = **" *`password`*'**. Es empfiehlt sich, die automatische Entschlüsselung des Masterschlüssels zu aktivieren, indem folgende Anweisung ausgeführt wird: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Weitere Informationen finden Sie unter [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) und [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
   
  Die Anforderungen für das Anfügen von Protokolldateien hängen wie im Folgenden beschrieben teilweise davon ab, ob die Datenbank Lese-/Schreibzugriff aufweist oder schreibgeschützt ist:  
   
@@ -104,7 +104,7 @@ ms.locfileid: "36047143"
   
      Wenn eine Datenbank mit Lese-/Schreibzugriff eine einzige Protokolldatei aufweist und Sie keinen neuen Speicherort für die Protokolldatei angeben, wird beim Anfügen im alten Speicherort nach der Datei gesucht. Wenn sie gefunden wird, wird die alte Protokolldatei verwendet, unabhängig davon, ob die Datenbank ordnungsgemäß heruntergefahren wurde. Wenn allerdings die alte Protokolldatei nicht gefunden wird und die Datenbank ordnungsgemäß heruntergefahren wurde und keine aktive Protokollkette aufweist, wird beim Anfügen versucht, eine neue Protokolldatei für die Datenbank zu erstellen.  
   
--   Wenn die angefügte primäre Datendatei schreibgeschützt ist, ist die [!INCLUDE[ssDE](../../includes/ssnoversion-md.md)] der in der primären Datei gespeicherten Protokollspeicherort nicht aktualisieren.  
+-   Wenn die primäre Datendatei angefügt wird schreibgeschützt ist, ist die [!INCLUDE[ssDE](../../includes/ssnoversion-md.md)] der in der primären Datei gespeicherten Protokollspeicherort kann nicht aktualisiert werden.  
   
   
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - deploying [Reporting Services], extensions
 ms.assetid: 4436ce48-397d-42c7-9b5d-2a267e2a1b2c
 caps.latest.revision: 43
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 94b299f3bc3de16469034683df95976cfcf5510e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 653369ef20b2febbf90c34e059c9105cdfeaafbf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048926"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194880"
 ---
 # <a name="deploying-a-delivery-extension"></a>Bereitstellen von Übermittlungserweiterungen
   Übermittlungserweiterungen geben ihre Konfigurationsinformationen in Form einer XML-Konfigurationsdatei an. Die XML-Datei entspricht dem für Übermittlungserweiterungen definierten XML-Schema. Übermittlungserweiterungen verfügen über eine Infrastruktur zum Einstellen und Ändern der Konfigurationsdatei.  
@@ -40,7 +40,7 @@ ms.locfileid: "36048926"
   
 |attribute|Description|  
 |---------------|-----------------|  
-|`Name`|Ein eindeutiger Name für die Erweiterung (z. B. "Berichtsserver-E-Mail" für eine E-Mail-Übermittlungserweiterung oder "Berichtsserver-Dateifreigabe" für eine Dateifreigabe-Übermittlungserweiterung). Die maximale Länge für das `Name`-Attribut beträgt 255 Zeichen. Der Name muss eindeutig für sämtliche Einträge im die `Extension` Element einer Konfigurationsdatei. Wenn ein Name doppelt vorhanden ist, gibt der Berichtsserver einen Fehler zurück.|  
+|`Name`|Ein eindeutiger Name für die Erweiterung (z. B. "Berichtsserver-E-Mail" für eine E-Mail-Übermittlungserweiterung oder "Berichtsserver-Dateifreigabe" für eine Dateifreigabe-Übermittlungserweiterung). Die maximale Länge für das `Name`-Attribut beträgt 255 Zeichen. Der Name muss eindeutig für sämtliche Einträge im sein der `Extension` -Element einer Konfigurationsdatei. Wenn ein Name doppelt vorhanden ist, gibt der Berichtsserver einen Fehler zurück.|  
 |`Type`|Eine durch Trennzeichen getrennte Liste, die den vollqualifizierten Namespace und den Namen der Assembly enthält|  
 |`Visible`|Der Wert `false` gibt an, dass die Übermittlungserweiterung auf Benutzeroberflächen nicht sichtbar sein soll. Wenn das Attribut nicht enthalten ist, wird der Standardwert ist `true`.|  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36048926"
   
 #### <a name="to-deploy-a-deliver-extension-assembly-to-a-report-server"></a>So stellen Sie eine Assembly für Übermittlungserweiterungen auf einem Berichtsserver bereit  
   
-1.  Kopieren Sie die Assembly aus dem Bereitstellungsverzeichnis in das BIN-Verzeichnis des Berichtsservers, auf dem Sie die Übermittlungserweiterung verwenden möchten. Der Standardspeicherort des Bin-Verzeichnis des Berichtsservers ist %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<InstanceName > \Reporting Services\ReportServer\bin.  
+1.  Kopieren Sie die Assembly aus dem Bereitstellungsverzeichnis in das BIN-Verzeichnis des Berichtsservers, auf dem Sie die Übermittlungserweiterung verwenden möchten. Der Standardspeicherort des Bin-Verzeichnis des Berichtsservers ist %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<InstanceName > \reporting.  
   
     > [!IMPORTANT]  
     >  Wenn Sie versuchen, eine vorhandene Assembly für Übermittlungserweiterungen zu überschreiben, müssen Sie zuerst den Berichtsserverdienst anhalten, bevor Sie die aktualisierte Assembly kopieren können. Starten Sie den Dienst neu, nachdem die Assembly kopiert wurde.  
@@ -76,7 +76,7 @@ ms.locfileid: "36048926"
   
      Der Wert für `Name` ist der eindeutige Name der Übermittlungserweiterung. Der Wert für `Type` ist eine durch Trennzeichen getrennte Liste, die einen Eintrag für den vollqualifizierten Namespace der Klasse enthält, die die Schnittstelle <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> implementiert, gefolgt vom Namen der Assembly (ohne die Dateierweiterung .dll). Übermittlungserweiterungen sind standardmäßig sichtbar. Um eine Erweiterung in Benutzeroberflächen wie dem Berichts-Manager auszublenden, fügen Sie das `Visible`-Attribut zum `Extension`-Element hinzu und setzen es auf `false`.  
   
-5.  Zum Schluss müssen Sie eine Codegruppe für die benutzerdefinierte Assembly hinzufügen, die die Berechtigung `FullTrust` für die Übermittlungserweiterung erteilt. Dazu fügen Sie die Codegruppe zur Datei "rssrvpolicy.config" befindet sich standardmäßig in %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<InstanceName > \reporting. Die Codegruppe kann folgendermaßen aussehen:  
+5.  Zum Schluss müssen Sie eine Codegruppe für die benutzerdefinierte Assembly hinzufügen, die die Berechtigung `FullTrust` für die Übermittlungserweiterung erteilt. Hierzu fügen Sie die Codegruppe zur Datei "rssrvpolicy.config" befindet sich standardmäßig in %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<InstanceName > \reporting. Die Codegruppe kann folgendermaßen aussehen:  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  
@@ -100,7 +100,7 @@ ms.locfileid: "36048926"
   
 1.  Kopieren Sie die Assembly aus dem Bereitstellungsverzeichnis in das BIN-Verzeichnis des Berichts-Managers. Der Standardspeicherort des Berichts-Manager-Bin-Verzeichnisses ist %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<InstanceName > \Reporting Services\ReportManager\bin.  
   
-2.  Nachdem die Assemblydatei kopiert wurde, öffnen Sie die Datei RSReportServer.config. Die Datei "rsreportserver.config" befindet sich in %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<InstanceName > \reporting-Verzeichnis. Sie müssen einen Eintrag in der Konfigurationsdatei für die Assemblydatei der Übermittlungserweiterung vornehmen. Sie können die Konfigurationsdatei mit Visual Studio .NET oder einem einfachen Text-Editor wie Editor öffnen.  
+2.  Nachdem die Assemblydatei kopiert wurde, öffnen Sie die Datei RSReportServer.config. Die Datei "rsreportserver.config" befindet sich in %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<InstanceName > \reporting-Verzeichnis. Sie müssen einen Eintrag in der Konfigurationsdatei für die Assemblydatei der Übermittlungserweiterung vornehmen. Sie können die Konfigurationsdatei mit Visual Studio .NET oder einem einfachen Texteditor wie Editor öffnen.  
   
 3.  Suchen Sie die `DeliveryUI` Element in der Datei "rsreportserver.config". In folgendem Verzeichnis muss ein Eintrag für die neu erstellte Übermittlungserweiterung erstellt werden:  
   
@@ -112,7 +112,7 @@ ms.locfileid: "36048926"
     </Extensions>  
     ```  
   
-4.  Fügen Sie einen Eintrag für die Übermittlungserweiterung hinzu. Der Eintrag sollte enthalten eine `Extension` Element mit Werten für `Name` und `Type` und kann wie folgt aussehen:  
+4.  Fügen Sie einen Eintrag für die Übermittlungserweiterung hinzu. Der Eintrag sollte enthalten eine `Extension` -Element mit den Werten `Name` und `Type` und kann wie folgt aussehen:  
   
     ```  
     <Extension Name="My Delivery Extension Name" Type="CompanyName.ExtensionName.MyDeliveryUIExtensionClass, AssemblyName" />  
@@ -123,7 +123,7 @@ ms.locfileid: "36048926"
     > [!IMPORTANT]  
     >  Der Wert des `Name`-Attributs muss für die Einträge in den beiden Konfigurationsdateien des Berichtsservers und des Berichts-Managers identisch sein. Wenn sie nicht identisch sind, ist die Serverkonfiguration nicht gültig.  
   
-     Zum Schluss müssen Sie eine Codegruppe für die benutzerdefinierte Assembly hinzufügen, die die Berechtigung `FullTrust` für die Übermittlungserweiterung erteilt. Dazu fügen Sie die Codegruppe zur Datei RSmgrpolicy.config befindet sich standardmäßig in c:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSRS10_50. \<InstanceName > \Reporting Services\ReportManager. Die Codegruppe kann folgendermaßen aussehen:  
+     Zum Schluss müssen Sie eine Codegruppe für die benutzerdefinierte Assembly hinzufügen, die die Berechtigung `FullTrust` für die Übermittlungserweiterung erteilt. Hierzu fügen Sie die Codegruppe zur Datei RSmgrpolicy.config befindet sich standardmäßig in c:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSRS10_50. \<InstanceName > \Reporting Services\ReportManager. Die Codegruppe kann folgendermaßen aussehen:  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  
@@ -141,7 +141,7 @@ ms.locfileid: "36048926"
      Die URL-Mitgliedschaft ist eine der vielen Mitgliedschaftsbedingungen, die Sie für die Übermittlungserweiterung auswählen können. Weitere Informationen zur Codezugriffssicherheit in [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] finden Sie unter [Sichere Entwicklung (Reporting Services)](../secure-development/secure-development-reporting-services.md).  
   
 ## <a name="verifying-the-deployment"></a>Überprüfen der Bereitstellung  
- Sie können prüfen, ob die Übermittlungserweiterung erfolgreich auf dem Berichtsserver bereitgestellt wurde, indem Sie die Webdienstmethode <xref:ReportService2010.ReportingService2010.ListExtensions%2A> verwenden. Sie können auch den Berichts-Manager öffnen und prüfen, ob die Erweiterung in der Liste der für ein Abonnement verfügbaren Übermittlungserweiterungen enthalten ist. Weitere Informationen zum Berichts-Manager und Abonnements finden Sie unter [Abonnements und Übermittlung &#40;Reporting Services&#41;](../../subscriptions/subscriptions-and-delivery-reporting-services.md).  
+ Sie können prüfen, ob die Übermittlungserweiterung erfolgreich auf dem Berichtsserver bereitgestellt wurde, indem Sie die Webdienstmethode <xref:ReportService2010.ReportingService2010.ListExtensions%2A> verwenden. Sie können auch den Berichts-Manager öffnen und prüfen, ob die Erweiterung in der Liste der für ein Abonnement verfügbaren Übermittlungserweiterungen enthalten ist. Weitere Informationen zu Berichts-Manager und Abonnements finden Sie unter [Abonnements und Übermittlung &#40;Reporting Services&#41;](../../subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Implementieren von Übermittlungserweiterungen](implementing-a-delivery-extension.md)   

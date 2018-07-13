@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - notifications [Master Data Services]
 - notifications [Master Data Services], about notifications
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - e-mail [Master Data Services], about e-mail notifications
 ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8213976a69f360fe13fa9d085919992e3daadf4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f7ff9bcb9009c28a400c92c75a8dbed34ceec727
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047638"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248900"
 ---
 # <a name="notifications-master-data-services"></a>Benachrichtigungen (Master Data Services)
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] kann konfiguriert werden, um eine e-Mail-Benachrichtigung, wenn die geschäftsregelüberprüfung fehlschlägt oder der Status einer Modellversion ändert zu senden.  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] kann konfiguriert werden, um das Senden einer e-Mail-Benachrichtigung, wenn die Überprüfung der Geschäftsregel fehlschlägt oder den Status einer Modellversion ändert.  
   
 ## <a name="how-notifications-are-sent"></a>Senden von Benachrichtigungen  
  Benachrichtigungen werden in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]konfiguriert. Die Benachrichtigungsfunktion sendet auf der Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] that hosts the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database. Weitere Informationen zu Datenbank-E-Mails finden Sie unter [Konfigurationsobjekte für Datenbank-E-Mail](../relational-databases/database-mail/database-mail-configuration-objects.md) in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation.  

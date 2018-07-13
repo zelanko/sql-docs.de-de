@@ -1,5 +1,5 @@
 ---
-title: FirstDayOfWeek-Element (ASSL) | Microsoft Docs
+title: FirstDayOfWeek-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - FirstDayOfWeek element
 ms.assetid: d3c92fa3-b293-43b5-806e-cd1c146a3a7c
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4c17e6e589e10cb27316f60e92b2dc17ab292f60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0b24ce90da622a95543df5213e62aeacb2368598
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047478"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224016"
 ---
 # <a name="firstdayofweek-element-assl"></a>FirstDayOfWeek-Element (ASSL)
-  Definiert den ersten Tag der Woche für eine [TimeBinding](../data-type/binding-data-type-assl.md) Element.  
+  Definiert den ersten Tag der Woche für ein [TimeBinding](../data-type/binding-data-type-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36047478"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element, das das übergeordnete Element des entspricht `FirstDayOfWeek` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.TimeBinding>.  
+ Das Element, das dem übergeordneten entspricht `FirstDayOfWeek` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.TimeBinding>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

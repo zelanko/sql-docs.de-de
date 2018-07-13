@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen einer Standardaktion | Microsoft Docs
+title: Hinzufügen einer Standardaktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5d0540fc8cee3dff44cd7e2baf9115cf817e3ad5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 47b13520762bd1ffc23f9bc466b82090fa60d8ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049084"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165531"
 ---
 # <a name="add-a-standard-action"></a>Hinzufügen einer Standardaktion
   Mithilfe der Aktionsansicht im Cube-Designer fügen Sie einer Datenbank eine Aktion hinzu. Auf diese Sicht kann von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]zugegriffen werden. Nachdem Sie eine Aktion erstellt haben, wird sie für Benutzer verfügbar, sobald der betreffende Cube erneut verarbeitet wurde. Weitere Informationen finden Sie unter [Processing Analysis Services Objects](processing-analysis-services-objects.md).  
@@ -76,7 +76,7 @@ ms.locfileid: "36049084"
         > [!NOTE]  
         >  Proprietäre Aktionen werden erst an den Server zurückgegeben, wenn das Schemarowset von der Clientanwendung explizit so beschränkt wird, dass nur Aktionen zurückgegeben werden, die mit dem in **Anwendung**angegebenen Namen übereinstimmen.  
   
-    -   In **Aktionsinhalt**, wenn Sie die URL-Typ verwenden, schließen Sie die Internetadresse in Anführungszeichen, z. B. "http://www.adventure-works.com".  
+    -   In **Aktionsinhalt**, wenn Sie die URL-Typ verwenden, schließen Sie die Internetadresse in Anführungszeichen ein, z. B. "http://www.adventure-works.com".  
   
     -   Geben Sie in **Beschreibung**eine Beschreibung für die Aktion ein.  
   

@@ -1,5 +1,5 @@
 ---
-title: KeyErrorLimit-Element (ASSL) | Microsoft Docs
+title: KeyErrorLimit-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - KeyErrorLimit element
 ms.assetid: c91d3bd8-2ad7-416f-a860-2599e4a4dbee
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: aec9b2f81fcfede30831ca5f152fe11bbcc9064d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4c63d9ccd4383abec58fbb2df453d599d114c3c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056116"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178847"
 ---
 # <a name="keyerrorlimit-element-assl"></a>KeyErrorLimit-Element (ASSL)
   Enthält die Anzahl der Fehler, die während der Verarbeitung zulässig sind.  
@@ -62,7 +62,7 @@ ms.locfileid: "36056116"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element, das das übergeordnete Element des entspricht `KeyErrorLimit` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ErrorConfiguration>.  
+ Das Element, das dem übergeordneten entspricht `KeyErrorLimit` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ErrorConfiguration>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

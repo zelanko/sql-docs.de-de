@@ -1,5 +1,5 @@
 ---
-title: Registerkarte "Clusterdiagramm" (Miningmodell-Viewer) Cluster | Microsoft Docs
+title: Registerkarte "Clusterdiagramm" (Miningmodell-Viewer)-Cluster | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.clustering.diagram.f1
 ms.assetid: 180e6f48-5c4d-4160-b84d-608b98f7b840
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1080183439eac579bbbbd6ec8a716d0fbe12dca2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: abab1915e4a17ddd4e9c3ea3a6f524dcb5493150
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049080"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173591"
 ---
 # <a name="cluster-diagram-tab-mining-model-viewer"></a>Registerkarte "Clusterdiagramm" (Miningmodell-Viewer)
   Die Registerkarte **Clusterdiagramm** bietet eine grafische Sicht aller im Clustering-Modell enthaltenen Cluster.  
@@ -29,13 +29,13 @@ ms.locfileid: "36049080"
  **Weitere Informationen:** [Microsoft Clustering-Algorithmus](data-mining/microsoft-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Cluster-Viewer](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>Tastatur  
- **Viewerinhalt**  
+ **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
  **Miningmodell**  
  Wählen Sie ein Miningmodell aus der aktuellen Miningstruktur aus. Das Miningmodell wird im dazugehörigen Viewer geöffnet.  
   
- **Ereignisanzeige**  
+ **Viewer**  
  Wählen Sie einen Viewer zum Durchsuchen des ausgewählten Miningmodells aus. Sie können einen der benutzerdefinierten Clustering-Viewer verwenden, oder Sie verwenden den [!INCLUDE[msCoName](../includes/msconame-md.md)] -Viewer für Mininginhalte. Sie können auch einen Plug-In-Viewer verwenden, falls dieser verfügbar ist.  
   
  **Vergrößern**  

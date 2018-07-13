@@ -1,5 +1,5 @@
 ---
-title: ProcessingPriority-Element (ASSL) | Microsoft Docs
+title: ProcessingPriority-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProcessingPriority element
 ms.assetid: 95d07f1c-ef8d-4e38-9682-ebb7719dbe52
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0718c0b85502a7277572a9e9ce42d8c94a244b1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5dcbf28ff2dd0fbcbbc64aba7785e41caab3905c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047291"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169661"
 ---
 # <a name="processingpriority-element-assl"></a>ProcessingPriority-Element (ASSL)
   Bestimmt die Verarbeitungspriorität des übergeordneten Objekts während Hintergrundvorgängen wie verzögerter Aggregation, Indizierung oder Clustererstellung.  
@@ -60,7 +60,7 @@ ms.locfileid: "36047291"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Elemente, die den übergeordneten Elementen von entsprechen `ProcessingPriority` im Objektmodell von Analysis Management Objects (AMO) sind <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.MeasureGroup>, und <xref:Microsoft.AnalysisServices.Partition>.  
+ Die Elemente, die den übergeordneten Elementen von entsprechen `ProcessingPriority` im Analysis Management Objects (AMO)-Objektmodell werden <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.MeasureGroup>, und <xref:Microsoft.AnalysisServices.Partition>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

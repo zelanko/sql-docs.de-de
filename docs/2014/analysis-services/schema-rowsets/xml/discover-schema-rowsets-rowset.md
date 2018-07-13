@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_SCHEMA_ROWSETS-Rowsets | Microsoft Docs
+title: DISCOVER_SCHEMA_ROWSETS-Rowsets | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - DISCOVER_SCHEMA_ROWSETS rowset
 ms.assetid: e5012aa0-6ef8-497f-96c1-2772e2394f62
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e8071da248e9c7d69a76a22f7c339fad0a217295
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa16f7ff677efd8e39367b9e618bdc95d778b405
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048345"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220240"
 ---
 # <a name="discoverschemarowsets-rowset"></a>DISCOVER_SCHEMA_ROWSETS-Rowsets
   Gibt die Namen, Einschränkungen, Beschreibungen und anderen Informationen für alle Enumerationswerte und zusätzlichen anbieterspezifischen Enumerationswerte zurück, die vom [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis-Anbieter (XMLA) unterstützt werden.  
   
- Beim Aufrufen der [Discover](../../xmla/xml-elements-methods-discover.md) Methode mit der `DISCOVER_SCHEMA_ROWSETS` Enumerationswert in der [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) Element, den `Discover` Methode gibt die `DISCOVER_SCHEMA_ROWSETS` Rowset.  
+ Aufrufen der [ermitteln](../../xmla/xml-elements-methods-discover.md) -Methode mit der `DISCOVER_SCHEMA_ROWSETS` Enumerationswert in der [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) -Element, die `Discover` Methode gibt die `DISCOVER_SCHEMA_ROWSETS` Rowset.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Das DISCOVER_SCHEMA_ROWSETS-Rowset enthält die folgenden Spalten.  
@@ -46,7 +46,7 @@ ms.locfileid: "36048345"
   
  Dieses Schemarowset ist nicht sortiert.  
   
- Für einen Anbieter, der drei Einschränkungen für das DBSCHEMA_MEMBERS-Schemarowset unterstützt die `Restrictions` Array das folgende Ergebnis zurückgeben kann. Die Elemente im Ergebnis verweisen auf Spaltennamen im Schema.  
+ Für einen Anbieter, der drei Einschränkungen für das DBSCHEMA_MEMBERS-Schemarowset unterstützt die `Restrictions` Array das folgende Ergebnis zurückgeben. Die Elemente im Ergebnis verweisen auf Spaltennamen im Schema.  
   
 ```  
 <Restrictions>  

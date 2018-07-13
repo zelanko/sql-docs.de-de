@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.newproject
 - vs.addnewproject
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], creating
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7d1e3ae0c46b8ad7f56ebb71ee0a416670aa56fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8ee87fea9b2586b8da9c54b2d074228b93a97e11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048189"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191200"
 ---
 # <a name="create-a-project"></a>Erstellen eines Projekts
   Sie können innerhalb einer vorhandenen Projektmappe ein oder mehrere Projekte erstellen.  
@@ -104,7 +104,7 @@ ms.locfileid: "36048189"
  [Projektmappen-Explorer](solution-explorer.md)   
  [Hinzufügen eines vorhandenen Projekts zu einer Projektmappe](add-an-existing-project-to-a-solution.md)   
  [Fügen Sie neuer Elemente zu einem Projekt hinzu](add-new-items-to-a-project.md)   
- [Hinzufügen von vorhandenen Elementen zu einem Projekt](add-existing-items-to-a-project.md)   
+ [Fügen Sie vorhandener Elemente zu einem Projekt hinzu](add-existing-items-to-a-project.md)   
  [Ändern des Standardspeicherorts für Projekte](change-the-default-location-for-projects.md)   
  [Entfernen Sie oder löschen Sie eines Elements oder Projekts](remove-or-delete-an-item-or-project.md)   
  [Löschen einer Projektmappe](delete-a-solution.md)  

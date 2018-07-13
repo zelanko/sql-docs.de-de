@@ -1,5 +1,5 @@
 ---
-title: Target-Element (ASSL) | Microsoft Docs
+title: Target-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Target element
 ms.assetid: 08ce0441-94b6-4f1d-acba-f31c8212cb79
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 65150d66769a2ebdb67609989efbc1a7f81e9f89
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ec2f4a43b8b03e2f28d4bd8c61a9c6e4a9d20eb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048340"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180767"
 ---
 # <a name="target-element-assl"></a>Target-Element (ASSL)
   Identifiziert das Ziel der [Aktion](../objects/action-element-assl.md) Element.  
@@ -62,19 +62,19 @@ ms.locfileid: "36048340"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Der erwartete Wert dieses Elements hängt vom Wert von der [TargetType](targettype-element-assl.md) für das übergeordnete Element `Action`. Die folgende Tabelle beschreibt die erwarteten Werte für `Target` basierend auf den Wert des `TargetType`.  
+ Der erwartete Wert dieses Elements hängt der Wert, der die [TargetType](targettype-element-assl.md) -Element für das übergeordnete Element `Action`. Die folgende Tabelle beschreibt die erwarteten Werte für `Target` basierend auf den Wert der `TargetType`.  
   
 |TargetType-Wert|Erwarteter Wert|  
 |----------------------|--------------------|  
 |*Cube*|Der Name eines Cubes.|  
 |*Zellen*|Ein Teilcubeausdruck.|  
-|*Festlegen*|Ein Mengenausdruck oder der Name einer benannten Menge. **Hinweis:** eine SELECT-Anweisung kann nicht verwendet werden.|  
+|*Legen Sie*|Ein Mengenausdruck oder der Name einer benannten Menge. **Hinweis:** eine SELECT-Anweisung kann nicht verwendet werden.|  
 |*HierarchyMembers-Hierarchie*|Der Name einer Hierarchie.|  
 |*DimensionMembers-Dimension*|Der Name einer Dimension.|  
-|*Ebene LevelMembers*|Der Name einer Ebene.|  
+|*LevelMembers-Ebene*|Der Name einer Ebene.|  
 |*AttributeMembers-Attribut*|Der Name eines Attributs.|  
   
- Das Element, das das übergeordnete Element des entspricht `Target` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Action>.  
+ Das Element, das dem übergeordneten entspricht `Target` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Action>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

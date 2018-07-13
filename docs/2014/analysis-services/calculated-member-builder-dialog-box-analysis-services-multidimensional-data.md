@@ -1,5 +1,5 @@
 ---
-title: Berechnet die Element-Generator (Dialogfeld) (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Dialogfeld für Element-Generator (Analysis Services – mehrdimensionale Daten) berechnet | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.calculatedmemberbuilderdialog.f1
 ms.assetid: 73b89a9f-f403-4ab8-99f7-e3ceb870c260
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 471f90f9caf9fbe3c6b8bf8463ab458e24a938ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b2df3f9bdb11a344d332a50580a992680118afa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047501"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220500"
 ---
 # <a name="calculated-member-builder-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Generator für berechnete Elemente' (Analysis Services – Mehrdimensionale Daten)
   Verwenden Sie das Dialogfeld **Generator für berechnete Elemente** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , um ein berechnetes Element zu erstellen.  
@@ -32,7 +32,7 @@ ms.locfileid: "36047501"
 |----------|----------------|  
 |**Name**|Geben Sie den Namen des berechneten Elements ein.|  
 |**Übergeordnete Hierarchie**|Wählen Sie die übergeordnete Hierarchie aus, in der das berechnete Element erstellt werden soll.|  
-|**Übergeordnetes Element**|Diese Option ist aktiviert, wenn Sie eine übergeordnete Hierarchie auswählen (außer der `Measures` Dimension), die mehr als eine Ebene ist. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**…**), um ein übergeordnetes Element auszuwählen. Das übergeordnete Element bestimmt den Speicherort des berechneten Elements in der Dimensionsstruktur.|  
+|**Übergeordnetes Element**|Diese Option aktiviert ist, bei der Auswahl einer übergeordneten Hierarchie (außer der `Measures` Dimension), bei dem mehr als einer Ebene. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**…**), um ein übergeordnetes Element auszuwählen. Das übergeordnete Element bestimmt den Speicherort des berechneten Elements in der Dimensionsstruktur.|  
 |**Ausdruck**|Geben Sie den MDX-Ausdruck ein, der verwendet wird.|  
 |**Check**|Klicken Sie auf **Überprüfen** , um den in **Ausdruck**definierten MDX-Ausdruck zu testen.|  
 |**Metadaten**|Zeigt die Metadaten für das aktuelle [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekt an, das in den in **Ausdruck**definierten MDX-Ausdruck eingeschlossen werden kann.<br /><br /> Sie können die MDX-Syntax für das ausgewählte Element kopieren, indem Sie mit der rechten Maustaste auf das Element klicken und die Option **Kopieren**auswählen oder indem Sie das ausgewählte Element auf **Ausdruck**ziehen.|  

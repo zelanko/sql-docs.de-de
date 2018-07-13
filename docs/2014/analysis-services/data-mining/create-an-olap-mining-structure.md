@@ -1,5 +1,5 @@
 ---
-title: Erstellen eine OLAP-Miningstruktur | Microsoft Docs
+title: Erstellen einer OLAP-Miningstruktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 71efb42dd17c6b959fedab50841d09625f62f458
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 060b2fc3a8cfcb54470d21dace787cd1ccbc025c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046788"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232430"
 ---
 # <a name="create-an-olap-mining-structure"></a>Erstellen einer OLAP-Miningstruktur
   Die Erstellung eines Data Mining-Modells auf Grundlage eines OLAP-Cubes oder eines anderen mehrdimensionalen Datenspeichers bietet zahlreiche Vorteile. Eine OLAP-Lösung enthält bereits umfangreiche Datenmengen, die gut organisiert, bereinigt und ordnungsgemäß formatiert sind. Die Komplexität der Daten ist jedoch so hoch, dass Benutzer wahrscheinlich kaum sinnvolle Muster mittels Ad-hoc-Untersuchungen erkennen können. Data Mining bietet die Möglichkeit, neue Korrelationen zu ermitteln und wertvolle Einblicke bereitzustellen.  
@@ -117,7 +117,7 @@ ms.locfileid: "36046788"
 |Finden Sie interessante oder ungewöhnliche Zellen|Identifizieren Sie Umsätze in Läden, die nicht den allgemeinen Trends im Verlauf der Zeit entsprechen.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus|  
 |Suchen von Korrelationen|Identifizieren Sie Faktoren im Zusammenhang mit Serverausfallzeiten, einschließlich Bereich, Computertyp, Betriebssystem oder Kaufdatum.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Algorithmus|  
   
-##  <a name="bkmk_Filters"></a> Aufteilen eines Cubes Vs an. Filtern von Modellen  
+##  <a name="bkmk_Filters"></a> Segmentieren einen Cube im Vergleich. Filtern von Modellen  
  Das Aufteilen des Cubes in Slices, während Sie ein Modell erstellen, entspricht dem Erstellen eines Filters für ein relationales Miningmodell. In einem relationalen Modell wird der Filter für die Datenquelle als WHERE-Klausel in einer SQL-Anweisung definiert. In einem Cube verwenden Sie den Editor, um Filteranweisungen mit MDX zu erstellen.  
   
  Ein Cube kann beispielsweise Informationen zu Produktkäufen weltweit enthalten. Für eine Marketingkampagne möchten Sie jedoch ein Modell auf Grundlage der Analyse weiblicher Kunden über 30 erstellen, die in Großbritannien leben.  

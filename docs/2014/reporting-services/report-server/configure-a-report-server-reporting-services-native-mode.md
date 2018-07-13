@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report server configuration
 - report servers [Reporting Services], configuring
@@ -16,13 +16,13 @@ ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
 caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0ec1501c32505b760fba2ec88e21140de1cf0211
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7f7e1231111f795383748438730f2652ac8d9056
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047557"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200790"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>Konfigurieren eines Berichtsservers (einheitlicher Reporting Services-Modus)
   Je nach den bei der Installation ausgewählten Optionen muss der Berichtsserver zusätzlich konfiguriert werden, bevor Sie ihn verwenden können. Mindestkonfigurationsvoraussetzungen für den Berichtsserver:  
@@ -37,7 +37,7 @@ ms.locfileid: "36047557"
   
  Der Berichts-Manager ist eine optionale Funktion für einen Berichtsserver im einheitlichen Modus. Es wird jedoch empfohlen, den Berichts-Manager so zu konfigurieren, dass Sie den Benutzerzugriff auf den Berichtsserver gewähren und den Berichtsserverinhalt verwalten können. Wenn Sie einen Berichtsserver im integrierten SharePoint-Modus bereitstellen, verwenden Sie das Web-Front-End eines SharePoint-Servers, um Zugriff zu gewähren.  
   
- Zusätzliche Funktionen, z. B. Berichtsserver-E-Mail und das unbeaufsichtigte Ausführungskonto, können nach Bedarf konfiguriert werden. Weitere Informationen finden Sie unter [Verwalten einer Reporting Services Report Server im einheitlichen Modus](manage-a-reporting-services-native-mode-report-server.md).  
+ Zusätzliche Funktionen, z. B. Berichtsserver-E-Mail und das unbeaufsichtigte Ausführungskonto, können nach Bedarf konfiguriert werden. Weitere Informationen finden Sie unter [Verwalten einer Reporting Services Native Mode Report Server](manage-a-reporting-services-native-mode-report-server.md).  
   
  Verwenden Sie das Reporting Services-Konfigurationstool, um den Berichtsserver zu konfigurieren.  
   
@@ -60,10 +60,10 @@ ms.locfileid: "36047557"
   
  Wenn Sie Windows Vista oder Windows Server 2008 verwenden, sind zusätzliche Schritte nötig, bevor Sie den Berichts-Manager lokal verwalten können. Anweisungen finden Sie unter [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
- Überprüfen Sie die Installation durch das Erstellen von Ordnern, das Hochladen von Elementen und das Ausführen von Berichten. Befolgen Sie die Anweisungen in [Verify a Reporting Services-Installation](../install-windows/verify-a-reporting-services-installation.md) So überprüfen Ihre Installation.  
+ Überprüfen Sie die Installation durch das Erstellen von Ordnern, das Hochladen von Elementen und das Ausführen von Berichten. Befolgen Sie die Anweisungen in [Überprüfen einer Installation von Reporting Services](../install-windows/verify-a-reporting-services-installation.md) auf Ihre Installation zu überprüfen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwalten eines Berichtsservers der Reporting Services im einheitlichen Modus](manage-a-reporting-services-native-mode-report-server.md)   
+ [Verwalten eines Reporting Services im einheitlichen Modus-Berichtsservers](manage-a-reporting-services-native-mode-report-server.md)   
  [Konfigurieren einer Firewall für den Zugriff auf den Berichtsserver](configure-a-firewall-for-report-server-access.md)   
  [Konfigurieren eines Berichtsservers im einheitlichen Modus für die lokale Verwaltung (SSRS)](configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
  [Konfigurieren eines Berichtsservers für die Remoteverwaltung](configure-a-report-server-for-remote-administration.md)   

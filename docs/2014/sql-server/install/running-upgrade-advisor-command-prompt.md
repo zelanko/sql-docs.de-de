@@ -1,5 +1,5 @@
 ---
-title: Ausführen von Upgrade Advisor (Befehlszeile) | Microsoft Docs
+title: Ausführen des Upgrade Advisors (Eingabeaufforderung) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server], running
 - command prompt [Upgrade Advisor]
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - XML formats [Upgrade Advisor]
 ms.assetid: 7c83049b-9227-4723-9b7f-66288bc6bd1d
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 525cb2237795e778bef2aa33ad43cff7c2e5ad6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f30f9169e352b7ac7b889d0ca066eadf6c1778db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046391"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330950"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>Ausführen des Upgrade Advisors (Eingabeaufforderung)
-  Verwenden der **UpgradeAdvisorWizardCmd** -Hilfsprogramm Upgrade Advisor von der Befehlszeile aus ausführen. Sie können wählen, ob die Ergebnisse im XML-Format oder als Datei mit durch Trennzeichen getrennten Werten ausgegeben werden sollen.  
+  Verwenden der **UpgradeAdvisorWizardCmd** Hilfsprogramm, um den Upgrade Advisor von der Befehlszeile aus ausführen. Sie können wählen, ob die Ergebnisse im XML-Format oder als Datei mit durch Trennzeichen getrennten Werten ausgegeben werden sollen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,7 +46,7 @@ where <server_info> is any combination of the following:
  **-?**  
  Zeigt die Befehlssyntax an.  
   
- **-"ConfigFile" hinzu** *Dateiname*  
+ **-ConfigFile** *Dateiname*  
  Ist der Pfad und Dateiname einer XML-Datei, die enthält Einstellungen zur Verwendung beim Ausführen der **UpgradeAdvisorWizardCmd** Hilfsprogramm.  
   
  *< Server_info >*  
@@ -66,14 +66,14 @@ where <server_info> is any combination of the following:
  **-RSInstance***rs_instanzname*   
  Gibt den Namen der zu analysierenden [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Instanz an. Es gibt keinen Standardwert. Wenn Sie diesen Wert nicht angeben, wird [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nicht gescannt. Der Wert für eine Standardinstanz von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ist ReportServer. Verwenden Sie für eine benannte Instanz den Namen der Instanz.  
   
- **-SqlUser** *Anmelde-ID*  
+ **-SqlUser** *Login_id*  
  Wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwenden, ist dieser Wert die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung, die der Upgrade Advisor dazu verwendet, die Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herzustellen. Wenn Sie keine Anmeldung angeben, wird die Windows-Authentifizierung verwendet, um eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz herzustellen.  
   
  **SqlPassword -** *Kennwort*  
- Bei Verwendung der **- SqlUser** Argument, verwenden Sie dieses Argument an das Kennwort für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung.  
+ Bei Verwendung der **- SqlUser** -Argument, verwenden Sie dieses Argument an das Kennwort für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung.  
   
- **CSV-**  
- Gibt an, dass die Ergebnisse zusätzlich zu den XML-Standardergebnissen als durch Trennzeichen getrennte Werte in einer CSV-Datei ausgegeben werden. Die Ergebnisse werden an die eigene geschrieben\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor\110\Reports-Ordner.  
+ **-CSV**  
+ Gibt an, dass die Ergebnisse zusätzlich zu den XML-Standardergebnissen als durch Trennzeichen getrennte Werte in einer CSV-Datei ausgegeben werden. Die Ergebnisse werden geschrieben, auf die Dokumente\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ordner "Upgrade Advisor\110\Reports".  
   
 ## <a name="return-values"></a>Rückgabewerte  
  Die folgende Tabelle zeigt die Werte, die **UpgradeAdvisorWizardCmd** zurückgibt.  
@@ -146,7 +146,7 @@ where <server_info> is any combination of the following:
 |`ReportingServices`|Gibt an, dass eine Analyse für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ausgeführt wird.|Optional einmal pro Konfigurationsdatei. Wenn dieses Element nicht angegeben ist, wird [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nicht analysiert.|  
 |`RSInstance`|Gibt den Namen einer Instanz von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Erforderlich einmal pro `ReportingServices` Element. Es gibt keinen Standardwert.|  
 |`IntegrationServices`|Enthält analyseeinstellungen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|Optional einmal pro Konfigurationsdatei. Wenn dieses Element nicht angegeben ist, wird [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nicht analysiert.|  
-|`PackagePath`|Gibt den Pfad eines Satzes von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen an.|Optional einmal pro `IntegrationServices` Element. Wenn dieses Element nicht vorhanden ist, tritt die Analyse auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz und keine extern gespeicherte Pakete werden analysiert. Es gibt keinen Standardwert.|  
+|`PackagePath`|Gibt den Pfad eines Satzes von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen an.|Optional einmal pro `IntegrationServices` Element. Wenn dieses Element nicht vorhanden ist, erfolgt die Analyse auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz und kein extern gespeicherte Pakete werden analysiert. Es gibt keinen Standardwert.|  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -165,7 +165,7 @@ UpgradeAdvisorWizardCmd -Server MyServer -Instance MyInst
 ```  
   
 ### <a name="c-run-upgrade-advisor-using-includessnoversionincludesssnoversion-mdmd-authentication"></a>C. Ausführen des Upgrade Advisors mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung  
- Im folgende Beispiel wird das Upgrade Advisor von der Befehlszeile aus ausgeführt wird, wird mithilfe einer Konfigurationsdatei veranschaulicht. In diesem Beispiel werden ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Benutzername und ein Kennwort angegeben, um eine Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herzustellen.  
+ Das folgende Beispiel zeigt, wie Sie Upgrade Advisor von der Befehlszeile aus ausgeführt wird, wird die Verwendung einer Konfigurationsdatei. In diesem Beispiel werden ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Benutzername und ein Kennwort angegeben, um eine Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herzustellen.  
   
 ```  
 UpgradeAdvisorWizardCmd -ConfigFile "C:\My Documents\UpgradeConfig1.xml"   

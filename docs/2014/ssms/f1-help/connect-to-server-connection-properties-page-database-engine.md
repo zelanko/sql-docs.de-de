@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttosqlserver.connectionproperties.f1
 ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f79ba89862334e19c3e50b347588de4e4183afaa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 738bae73382d71a3cd0458a35002068c56817d70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047984"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198600"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Verbinden mit SQL Server-Datenbank-Engine (Eigenschaftenseite Verbindung)
   Auf dieser Registerkarte können Optionen für Verbindungen mit einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] angezeigt oder angegeben werden, oder Sie können mit dieser Registerkarte [!INCLUDE[ssDE](../../includes/ssde-md.md)] in **Registrierte Server**registrieren. Die Felder**Verbinden** und **Optionen** werden nur beim Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]in diesem Dialogfeld angezeigt. Die Felder**Testen** und **Speichern** werden nur beim Registrieren von [!INCLUDE[ssDE](../../includes/ssde-md.md)]in diesem Dialogfeld angezeigt.  
   
 ## <a name="options"></a>Tastatur  
  **Verbindung mit Datenbank herstellen**  
- Wählen Sie eine Datenbank aus der Liste aus, zu der eine Verbindung hergestellt werden soll. Bei Auswahl des  **\<Standardwert >**, Sie werden auf die Standarddatenbank für den Server verbunden sein. Bei Auswahl des  **\<Server Durchsuchen >**, können Sie den Server für die Datenbank für die Verbindung durchsuchen.  
+ Wählen Sie eine Datenbank aus der Liste aus, zu der eine Verbindung hergestellt werden soll. Bei Auswahl von  **\<standardmäßig >**, Sie werden auf die Standarddatenbank für den Server verbunden. Bei Auswahl von  **\<Suchserver >**, können Sie den Server für die Datenbank für die Verbindung durchsuchen.  
   
  Wenn Sie über die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Verbindung mit einer Instanz der [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Datenbank-Engine herstellen, müssen Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden und im Dialogfeld **Verbindung mit Server herstellen** auf der Registerkarte **Verbindungseigenschaften** eine Datenbank angeben. Das Kontrollkästchen **Verbindung verschlüsseln** muss aktiviert sein.  
   

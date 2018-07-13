@@ -1,5 +1,5 @@
 ---
-title: Partition Ziel-Editor (Seite Verbindungs-Manager) | Microsoft Docs
+title: Partition Ziel-Editor (Seite Verbindungs-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.partprocessingtransformation.connection.f1
 helpviewer_keywords:
 - Partition Processing Destination Editor
 ms.assetid: 7add6f82-eed1-47fc-a5d7-7b91f3f24d34
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cf99c71785b362f185b5ce4b6b317fb7369a3666
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 383b28d86ca87457d26446e1bc881ddcda1084f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162971"
 ---
 # <a name="partition-processing-destination-editor-connection-manager-page"></a>Ziel-Editor für Partitionsverarbeitung (Seite Verbindungs-Manager)
   Geben Sie auf der Seite **Verbindungs-Manager** des Dialogfelds **Ziel-Editor für Partitionsverarbeitung** eine Verbindung mit einem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt oder einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]an.  

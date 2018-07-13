@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - DatabaseLogonType
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - DatabaseLogonType property
 ms.assetid: 6b592582-4c35-4029-ab86-982fff47d8d6
 caps.latest.revision: 24
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 30c6961f915789c358ba8d38ad0d18e164e072cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 001eee372f6c35a6938f3e5c99b9e82524285d25
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046601"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166131"
 ---
 # <a name="databaselogontype-property-wmi-msreportserverconfigurationsetting"></a>DatabaseLogonType-Eigenschaft (WMI: MSReportServer_ConfigurationSetting)
   Gibt an, ob der Berichtsserver für den Zugriff auf die Berichtsserver-Datenbank ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Dienstkonto, ein Windows-Benutzerkonto oder eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung verwendet. Schreibgeschützt.  
@@ -57,9 +57,9 @@ public int DatabaseLogonType;
   
 -   2 für Anmeldung als Dienst  
   
- Wenn Sie 0 (Windows) angeben, müssen Sie den Wert festlegen, der [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) Eigenschaft in ein entsprechendes ein gültiges Windows-Benutzerkonto.  
+ Wenn Sie 0 (Windows) angegeben wird, müssen Sie den Wert festlegen, der [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) Eigenschaft in ein entsprechendes gültiges Windows-Benutzerkonto.  
   
- Bei Angabe von 1 (SQL Server) muss der Wert von der [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) entspricht einem gültigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung.  
+ Wenn Sie 1 (SQL Server) angeben, muss der Wert von der [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) einer gültigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung.  
   
  Wenn 2 (Windows-Dienst) angegeben wird, verwendet der Berichtsserver ein [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] -Konto und das Windows-Dienstkonto für den Zugriff auf die Berichtsserver-Datenbank. Die DatabaseLogonAccount-Eigenschaft wird ignoriert.  
   

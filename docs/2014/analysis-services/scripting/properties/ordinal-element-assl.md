@@ -1,5 +1,5 @@
 ---
-title: Ordinal-Element (ASSL) | Microsoft Docs
+title: Ordinal-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Ordinal element
 ms.assetid: 64e68ad5-439c-4c1d-9df4-ee90c56761b4
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9c9328a33db828af8bb7b0b129574d8ba855433e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 91119d5eb5107dd691141c03a24cef7140999094
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048571"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195940"
 ---
 # <a name="ordinal-element-assl"></a>Ordinal-Element (ASSL)
   Gibt die Ordinalzahl an, an die in Auflistungen wie Schlüsseln und Übersetzungen gebunden wird.  
@@ -62,9 +62,9 @@ ms.locfileid: "36048571"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- `AttributeBinding` und `CubeAttributeBinding` Elemente, in denen die [Typ](type-element-binding-assl.md) festgelegt wird entweder *Schlüssel* oder *Übersetzung* gebunden werden kann, um ein Attribut, das wiederum an eine Auflistung von gebunden ist Spalten in den Daten die Datenquellensicht an. Der Wert des `Ordinal`-Elements bestimmt, auf welche Spalte sich `AttributeBinding` oder `CubeAttributeBinding` in der Auflistung beziehen.  
+ `AttributeBinding` und `CubeAttributeBinding` Elemente, in denen die [Typ](type-element-binding-assl.md) -Eigenschaftensatz entweder *Schlüssel* oder *Übersetzung* gebunden werden kann, um ein Attribut, das wiederum auf eine Auflistung von gebunden ist Spalten in den Daten die Datenquellensicht an. Der Wert des `Ordinal`-Elements bestimmt, auf welche Spalte sich `AttributeBinding` oder `CubeAttributeBinding` in der Auflistung beziehen.  
   
- Die Elemente, die den übergeordneten Elementen von entsprechen `Ordinal` im Objektmodell von Analysis Management Objects (AMO) sind <xref:Microsoft.AnalysisServices.AttributeBinding> und <xref:Microsoft.AnalysisServices.CubeAttributeBinding>.  
+ Die Elemente, die den übergeordneten Elementen von entsprechen `Ordinal` im Analysis Management Objects (AMO)-Objektmodell werden <xref:Microsoft.AnalysisServices.AttributeBinding> und <xref:Microsoft.AnalysisServices.CubeAttributeBinding>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

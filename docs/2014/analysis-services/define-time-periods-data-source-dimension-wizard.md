@@ -1,5 +1,5 @@
 ---
-title: Zeiträume (Datenquelle) definieren (Dimensions-Assistent) | Microsoft Docs
+title: Zeiträume (Datenquelle) definieren (Dimensions-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.timeperioddefinition.f1
 ms.assetid: a5e6b9ff-69fa-4896-a840-de2b3e063ca9
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2c20dc34617590c5e4d1ab7134378afb2b7cfb93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b62c3da0e8a92eda40d883a596e862a6c679364
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048631"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328860"
 ---
 # <a name="define-time-periods-data-source-dimension-wizard"></a>Zeiträume definieren (Datenquelle) (Dimensions-Assistent)
   Auf der Seite **Zeiträume definieren** definieren Sie Attribute, durch die die Zeiträume in der Zeitdimension in den Spalten der Tabelle dargestellt werden, die auf der Seite **Dimensionstyp auswählen** angegeben wurden.  

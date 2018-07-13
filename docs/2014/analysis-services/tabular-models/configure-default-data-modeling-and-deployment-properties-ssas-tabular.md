@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren von Standarddatenmodellierung und Bereitstellungseigenschaften (SSAS – tabellarisch) | Microsoft Docs
+title: Konfigurieren von Standarddatenmodellierung und Bereitstellungseigenschaften (SSAS – tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.deployment.f1
 - VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DATA_MODELING
@@ -16,15 +16,15 @@ f1_keywords:
 - VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DEPLOYMENT
 ms.assetid: 140d0c4e-943c-4387-a8d2-6e066c7e4e75
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8a38556f1c6b9d93f844441327a5ea8fe5f9ae9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 13c674a47f074adaad3e4dbeff41797018bb0dbd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049056"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171471"
 ---
 # <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>Konfigurieren von Standarddatenmodellierung und Bereitstellungseigenschaften (SSAS – tabellarisch)
   In diesem Thema wird die Konfiguration der Einstellungen für die Eigenschaften Standardkompatibilitätsgrad, Bereitstellung und Arbeitsbereichsdatenbank beschrieben, die für jedes neue Projekt für tabellarische Modelle, das Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erstellen, vorab definiert werden können. Auch nachdem ein neues Projekt erstellt wurde, können diese Eigenschaften abhängig von Ihren speziellen Anforderungen geändert werden.  

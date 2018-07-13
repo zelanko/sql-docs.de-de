@@ -1,5 +1,5 @@
 ---
-title: BackColor-Element (ASSL) | Microsoft Docs
+title: BackColor-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - BackColor element
 ms.assetid: 9024d131-74cc-4815-833a-f8cae57b7453
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe0ab54477b22f1e6ea1bdc55156ea8318dd87a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed491d6307e6e5776843c3f5e490d9369235143b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049300"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274116"
 ---
 # <a name="backcolor-element-assl"></a>BackColor-Element (ASSL)
   Beschreibt farbbezogene Anzeigeeigenschaften des übergeordneten Elements.  
@@ -62,9 +62,9 @@ ms.locfileid: "36049300"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `BackColor` -Eigenschaft enthält einen Ausdruck Sprache MDX (Multidimensional Expressions) und gilt für `CalculationProperty` Elemente mit einem [CalculationType](calculationtype-element-assl.md) von *Member* oder  *Zellen*.  
+ Die `BackColor` -Eigenschaft enthält einen Multidimensional Expressions (MDX)-Sprachausdruck und gilt für `CalculationProperty` Elemente mit einem [CalculationType](calculationtype-element-assl.md) von *Member* oder  *Zellen*.  
   
- Das Element, das das übergeordnete Element des entspricht `BackColor` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.CalculationProperty>.  
+ Das Element, das dem übergeordneten entspricht `BackColor` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.CalculationProperty>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CalculationProperties-Element &#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

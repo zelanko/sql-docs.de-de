@@ -1,5 +1,5 @@
 ---
-title: XML for Analysis (XMLA)-Referenz | Microsoft Docs
+title: XML for Analysis (XMLA)-Referenz | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,20 +15,20 @@ helpviewer_keywords:
 - XMLA, reference
 ms.assetid: 88045e05-ce47-4e28-999b-7f9c74af9faf
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32093211db376a156c456d4f769f78bcc1135ceb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ec0d843ac46cbcf5d032d1f93190869fd5a37cb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046969"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241280"
 ---
 # <a name="xml-for-analysis--xmla-reference"></a>XML for Analysis (XMLA)-Referenz
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet die XML for Analysis (XMLA)-Protokoll zum Verarbeiten aller Kommunikation zwischen Clientanwendungen und einer Analysis Services-Instanz an. Die Erstellung von Anforderungen und Decodierung von Antworten in anderen Clientbibliotheken, z. B. ADOMD.NET und AMO, erfolgt auf elementarster Ebene in XMLA und dient als Zwischenstufe für eine Analysis Services-Instanz, die ausschließlich XMLA verwendet.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet das Protokoll XML for Analysis (XMLA) für die gesamte Kommunikation zwischen Clientanwendungen und einer Analysis Services-Instanz. Die Erstellung von Anforderungen und Decodierung von Antworten in anderen Clientbibliotheken, z. B. ADOMD.NET und AMO, erfolgt auf elementarster Ebene in XMLA und dient als Zwischenstufe für eine Analysis Services-Instanz, die ausschließlich XMLA verwendet.  
   
- Um die Ermittlung und Bearbeitung von Daten in multidimensionalen und tabellarischen Format zu unterstützen, die XMLA-Spezifikation definiert zwei allgemein verfügbare Methoden [Discover](xml-elements-methods-discover.md) und [Execute](xml-elements-methods-execute.md), und ein die Auflistung von XML-Elemente und Datentypen. Da XML eine lose verbundene Client- und Server-Architektur ermöglicht, wickeln beide Methoden eingehende und ausgehende Informationen im XML-Format ab. Analysis Services ist mit der XMLA 1.1-Spezifikation kompatibel, erweitert diese jedoch um Datendefinitions- und Bearbeitungsfunktionen, die als Anmerkungen in der `Discover`-Methode und `Execute`-Methode implementiert wurden. Die erweiterte XML-Syntax wird als Analysis Services Scripting Language (ASSL) bezeichnet. ASSL baut auf der XMLA-Spezifikation auf, ohne diese zu verletzen. Die XMLA-Interoperabilität ist unabhängig davon gewährleistet, ob lediglich XMLA verwendet oder ob XMLA und ASSL kombiniert werden.  
+ Um die Ermittlung und Bearbeitung von Daten im mehrdimensionalen und tabellarischen Format zu unterstützen, die XMLA-Spezifikation definiert zwei allgemein verfügbare Methoden [Discover](xml-elements-methods-discover.md) und [Execute](xml-elements-methods-execute.md), und ein die Auflistung von XML-Elemente und Datentypen. Da XML eine lose verbundene Client- und Server-Architektur ermöglicht, wickeln beide Methoden eingehende und ausgehende Informationen im XML-Format ab. Analysis Services ist mit der XMLA 1.1-Spezifikation kompatibel, erweitert diese jedoch um Datendefinitions- und Bearbeitungsfunktionen, die als Anmerkungen in der `Discover`-Methode und `Execute`-Methode implementiert wurden. Die erweiterte XML-Syntax wird als Analysis Services Scripting Language (ASSL) bezeichnet. ASSL baut auf der XMLA-Spezifikation auf, ohne diese zu verletzen. Die XMLA-Interoperabilität ist unabhängig davon gewährleistet, ob lediglich XMLA verwendet oder ob XMLA und ASSL kombiniert werden.  
   
  Als Programmierer können Sie XMLA als befehlsorientierte Benutzerschnittstelle verwenden, wenn für eine Lösung Standardprotokolle, wie XML, SOAP und HTTP, erforderlich sein sollten. Programmierer und Administratoren können XMLA auch auf einer Ad-hoc-Basis verwenden, um Informationen vom Server abzurufen oder Befehle auszuführen.  
   

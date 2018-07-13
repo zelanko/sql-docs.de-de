@@ -1,5 +1,5 @@
 ---
-title: Benutzeroberfläche des textbasierten Abfrage-Designers | Microsoft Docs
+title: Benutzeroberfläche des textbasierten Abfrage-Designers | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10010"
 - sql12.rtp.rptdesigner.dataview.genericquerydesigner.f1
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - query designers [Reporting Services], text-based
 ms.assetid: 44b7c664-03aa-494e-a484-052b318e810c
 caps.latest.revision: 25
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9e7fa6d6f2d3ae55d6a01ffdfcaa541e1d29e34c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e24396a7b851bf3e210bd31318f52b757f15a46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049397"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177087"
 ---
 # <a name="text-based-query-designer-user-interface"></a>Benutzeroberfläche des textbasierten Abfrage-Designers
   Verwenden Sie den textbasierten Abfrage-Designer, um eine Abfrage mithilfe der Abfragesprache zu verwenden, die von der Datenquelle unterstützt wird, führen Sie die Abfrage aus, und zeigen Sie die Ergebnisse zur Entwurfszeit an. Sie können mehrere [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen, Abfrage- oder Befehlssyntaxen für benutzerdefinierte Datenverarbeitungserweiterungen und Abfragen angeben, die als Ausdrücke angegeben sind. Da der textbasierte Abfrage-Designer die Abfrage nicht zuvor verarbeitet und eine beliebige Abfragesyntax aufnehmen kann, handelt es sich hierbei um das standardmäßige Abfrage-Designer-Tool für viele Datenquellentypen.  
@@ -44,7 +44,7 @@ ms.locfileid: "36049397"
 |**Als Text bearbeiten**|Wechseln zwischen dem textbasierten Abfrage-Designer und dem grafischen Abfrage-Designer. Nicht alle Datenquellentypen unterstützen grafische Abfrage-Designer.|  
 |**Importieren**|Importiert eine vorhandene Abfrage aus einer Datei oder einem Bericht. Nur die Dateitypen SQL und RDL werden unterstützt. Weitere Informationen finden Sie unter [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Führen Sie die Abfrage aus](../analysis-services/media/rsqdicon-run.gif "Run the query")|Führen Sie die Abfrage aus, und zeigen Sie das Resultset im Ergebnisbereich an.|  
-|**Befehlstyp**|Wählen Sie **Text**, **StoredProcedure**oder **TableDirect**. Weist eine gespeicherte Prozedur Parameter auf, wird das Dialogfeld **Abfrageparameter definieren** angezeigt, wenn Sie auf der Symbolleiste auf **Ausführen** klicken. Sie können nach Bedarf Werte eingeben. Beachten Sie, dass wenn eine gespeicherte Prozedur mehr als ein Resultset zurückgibt, nur das erste Resultset so verwendet wird, um das Dataset zu füllen.<br /><br /> Unterstützung für den Befehlstyp ändert sich jeweils nach dem Datenquellentyp. Nur OLE DB und ODBC unterstützen z.B. **TableDirect**.|  
+|**Befehlstyp**|Wählen Sie **Text**, **StoredProcedure**oder **TableDirect**. Weist eine gespeicherte Prozedur Parameter auf, wird das Dialogfeld **Abfrageparameter definieren** angezeigt, wenn Sie auf der Symbolleiste auf **Ausführen** klicken. Sie können nach Bedarf Werte eingeben. Beachten Sie, wenn eine gespeicherte Prozedur mehrere Resultsets zurückgibt, nur das erste Resultset verwenden, um das Dataset zu füllen.<br /><br /> Unterstützung für den Befehlstyp ändert sich jeweils nach dem Datenquellentyp. Nur OLE DB und ODBC unterstützen z.B. **TableDirect**.|  
   
 ### <a name="command-type-text"></a>Befehlstyp "Text"  
  Wenn Sie ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Dataset erstellen, wird vom Berichts-Designer standardmäßig der grafische Abfrage-Designer angezeigt. Wenn Sie zum textbasierten Abfrage-Designer wechseln möchten, klicken Sie auf der Symbolleiste auf die Umschaltfläche **Als Text bearbeiten** . Der textbasierte Abfrage-Designer hat zwei Bereiche: den Abfragebereich und den Ergebnisbereich. In der folgenden Abbildung werden die einzelnen Bereiche bezeichnet.  
@@ -91,14 +91,14 @@ uspGetEmployeeManagers;
   
  `Sales.Customer`  
   
- Wenn Sie den Namen der Tabelle Sales.Customer eingeben, dies entspricht der Erstellung der [!INCLUDE[tsql](../includes/tsql-md.md)] Anweisung `SELECT * FROM Sales.Customer;`.  
+ Wenn Sie den Namen der Tabelle Sales.Customer eingeben, entspricht der Erstellung der [!INCLUDE[tsql](../includes/tsql-md.md)] Anweisung `SELECT * FROM Sales.Customer;`.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Abfragen von Entwurfstools in Berichts-Designers von SQL Server Datatools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
+ [Abfrageentwurfstools im Berichts-Designer SQL-Server-Datatools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
  [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [SQL Server-Verbindungstyp &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
  [OLE DB-Verbindungstyp (SSRS)](report-data/ole-db-connection-type-ssrs.md)   
- [OBDC-Verbindungstyp &#40;SSRS&#41;](report-data/odbc-connection-type-ssrs.md)   
+ [ODBC-Verbindungstyp &#40;SSRS&#41;](report-data/odbc-connection-type-ssrs.md)   
  [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [RSReportDesigner Configuration File (RSReportDesigner-Konfigurationsdatei)](report-server/rsreportdesigner-configuration-file.md)  
   

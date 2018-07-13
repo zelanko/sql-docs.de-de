@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5d1fb09edce06159c748be8393f8cbd46e0397b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c48f38fdb03f7fdb2c6e17214187d5d415c06e9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049541"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187137"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>Installieren von Updates an der Eingabeaufforderung
   Testen und ändern Sie die Installationsskripts, um die Anforderungen Ihrer Organisation zu erfüllen.  
@@ -54,14 +54,14 @@ ms.locfileid: "36049541"
 |**/?**|Zeigt Hilfe zur unbeaufsichtigten Installation an der Eingabeaufforderung an.|  
 |**/action=Patch oder /action=RemovePatch**|Gibt die Installationsaktion an: Patch oder RemovePatch.|  
 |**/allinstances**|Wendet das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Update auf alle Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und auf alle freigegebenen, nicht instanzabhängigen Komponenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an.|  
-|**/ InstanceName = Instanzname** <sup>1</sup>|Wendet das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Update auf eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit dem Namen InstanceName und auf alle freigegebenen, nicht instanzabhängigen Komponenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an.|  
+|**/ InstanceName = InstanceName** <sup>1</sup>|Wendet das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Update auf eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit dem Namen InstanceName und auf alle freigegebenen, nicht instanzabhängigen Komponenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an.|  
 |**/InstanceID=Inst1**|Wendet das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Update auf eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inst1 und auf alle freigegebenen, nicht instanzabhängigen Komponenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an.|  
 |**/quiet**|Führt Setup für das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Update im unbeaufsichtigten Modus aus.|  
 |**/qs**|Zeigt nur das Statusdialogfeld in der Benutzeroberfläche an.|  
 |**/UpdateEnabled**|Gibt an, ob Produktupdates von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup ermittelt und eingeschlossen werden sollen. Gültige Werte sind True und False oder 1 und 0. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup schließt standardmäßig alle gefundenen Updates ein.|  
 |**/IAcceptSQLServerLicenseTerms**|Nur erforderlich, wenn der /Q-Parameter oder der /QS-Parameter für die unbeaufsichtigte Installation angegeben wird.|  
   
- <sup>1</sup> nicht möglich, geben Sie diesen Parameter zum Anwenden eines Updates auf eine vorbereitete Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie müssen stattdessen den /instanceID-Parameter angeben.  
+ <sup>1</sup> Sie diesen Parameter zum Anwenden eines Updates auf eine vorbereitete Instanz von nicht angeben, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie müssen stattdessen den /instanceID-Parameter angeben.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Übersicht über die SQL Server-Wartungsinstallation](../../sql-server/install/overview-of-sql-server-servicing-installation.md)  

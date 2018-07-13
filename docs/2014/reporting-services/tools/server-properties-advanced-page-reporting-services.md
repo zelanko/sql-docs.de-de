@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.advanced.f1
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
 caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: erikre
-ms.openlocfilehash: 81c0e6a2bce527404e7c4f59c10a914e3ac938b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b8459ccb49c2e8d2d681cada3646d7d9aa447b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047535"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258126"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Servereigenschaften (Seite Erweitert) – Reporting Services
   Verwenden Sie diese Seite, um Systemeigenschaften auf dem Berichtsserver festzulegen. Es gibt eine Anzahl von Möglichkeiten, Systemeigenschaften festzulegen. Dieses Tool stellt eine grafische Benutzeroberfläche bereit, so dass Sie Eigenschaften festlegen können, ohne Code schreiben zu müssen.  
@@ -30,7 +30,7 @@ ms.locfileid: "36047535"
   
 ## <a name="options"></a>Tastatur  
  **EnableMyReports**  
- Gibt an, ob die Funktion <legacyBold>Meine Berichte</legacyBold> aktiviert ist. Der Wert `true` gibt an, dass die Funktion aktiviert ist.  
+ Gibt an, ob die Funktion <legacyBold>Meine Berichte</legacyBold> aktiviert ist. Der Wert `true` gibt an, dass das Feature aktiviert ist.  
   
  **MyReportsRole**  
  Der Name der Rolle, die beim Erstellen von Sicherheitsrichtlinien für die Ordner <legacyBold>Meine Berichte</legacyBold> des Benutzers verwendet wird. Der Standardwert lautet `My Reports Role`.  
@@ -39,7 +39,7 @@ ms.locfileid: "36047535"
  Bestimmt, ob das RSClientPrint-ActiveX-Steuerelement zum Herunterladen vom Berichtsserver verfügbar ist. Gültige Werte sind `true` und `false`. Der Standardwert lautet `true`. Weitere Informationen zu zusätzlichen Einstellungen, die für dieses Steuerelement erforderlich sind, finden Sie unter [Aktivieren und Deaktivieren des clientseitigen Drucks für Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
  **EnableExecutionLogging**  
- Gibt an, ob die Protokollierung der Berichtsausführung aktiviert ist. Der Standardwert lautet `true`. Weitere Informationen über das Berichtsserver-Ausführungsprotokoll finden Sie unter [Berichtsserver-Ausführungsprotokoll und die ExecutionLog3-Ansicht](../report-server/report-server-executionlog-and-the-executionlog3-view.md).  
+ Gibt an, ob die Protokollierung der Berichtsausführung aktiviert ist. Der Standardwert lautet `true`. Weitere Informationen zu den Berichtsserver-Ausführungsprotokoll finden Sie unter [Berichtsserver-Ausführungsprotokoll und die ExecutionLog3-Ansicht](../report-server/report-server-executionlog-and-the-executionlog3-view.md).  
   
  **ExecutionLogDaysKept**  
  Die Anzahl von Tagen, in denen die Berichtsausführungsdaten im Ausführungsprotokoll verbleiben. Gültige Werte für diese Eigenschaft sind `-1` über `2`,`147`,`483`,`647`. Wenn der Wert `-1` ist, werden Einträge nicht aus der Ausführungsprotokolltabelle gelöscht. Der Standardwert lautet `60`.  
@@ -78,7 +78,7 @@ ms.locfileid: "36047535"
  Der Standard-Timeoutwert für die Berichtsverarbeitung in Sekunden für alle im Berichtsserver-Namespace verwalteten Berichte. Dieser Wert kann auf Berichtsebene überschrieben werden. Ist diese Eigenschaft festgelegt, versucht der Berichtsserver, die Verarbeitung eines Berichts zu beenden, sobald der angegebene Zeitraum überschritten wird. Gültige Werte sind `-1` über `2`,`147`,`483`,`647`. Wenn der Wert `-1` ist, tritt bei Berichten im Namespace während der Verarbeitung kein Timeout auf. Der Standardwert lautet `1800`.  
   
  **SystemSnapshotLimit**  
- Die maximale Anzahl an Momentaufnahmen, die für einen Bericht gespeichert werden. Gültige Werte sind `-1` über `2`,`147`,`483`,`647`. Wenn der Wert `-1`, es ist keine momentaufnahmegrenze.  
+ Die maximale Anzahl an Momentaufnahmen, die für einen Bericht gespeichert werden. Gültige Werte sind `-1` über `2`,`147`,`483`,`647`. Wenn der Wert ist `-1`, es gibt keine Beschränkung für die Momentaufnahme.  
   
  **EnableIntegratedSecurity**  
  Bestimmt, ob die integrierte Sicherheit von Windows für Berichtsdatenquellen-Verbindungen unterstützt wird. Der Standardwert ist `True`. Die folgenden Werte sind gültig:  
@@ -107,7 +107,7 @@ ms.locfileid: "36047535"
  Gibt die Anzahl der Sekunden bis zum Timeout einer Berichtsbearbeitungssitzung an. Der Standardwert ist 7.200 Sekunden (2 Stunden).  
   
  **EnableTestConnectionDetailedErrors**  
- Gibt an, ob ausführliche Fehlermeldungen an den Clientcomputer gesendet werden, wenn Benutzer Datenquellverbindungen mit dem Berichtsserver testen. Der Standardwert lautet `true`. Wenn die Option, um festgelegt ist `false`, werden nur generische Fehlermeldungen gesendet.  
+ Gibt an, ob ausführliche Fehlermeldungen an den Clientcomputer gesendet werden, wenn Benutzer Datenquellverbindungen mit dem Berichtsserver testen. Der Standardwert lautet `true`. Wenn die Option, um festgelegt ist `false`, es werden nur generische Fehlermeldungen gesendet.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Festlegen von Berichtsservereigenschaften &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   

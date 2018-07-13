@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data-tier application [SQL Server], supported objects
 - objects [SQL Server], data-tier applications
 ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a7b77ccd5d7fdae2ef81b3a19ae557ef6e662d85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c7af236b8e48b76787e77baa0e0720153ee8489f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047641"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244990"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>DAC-Unterstützung für SQL Server-Objekte und -Versionen
   Eine Datenebenenanwendung (DAC) unterstützt die am häufigsten verwendeten [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Objekte.  
@@ -111,7 +111,7 @@ ms.locfileid: "36047641"
 ##  <a name="Considerations"></a> Zusätzliche Überlegungen zu Bereitstellungsaktionen  
  Beachten Sie Folgendes bei DAC-Framework-Datenbereitstellungsaktionen:  
   
--   **Extrahieren/Exportieren** : Für Aktionen, bei denen mithilfe des DAC-Frameworks ein Paket auf Grundlage einer Datenbank erstellt wird – z.B. Extrahieren einer DACPAC-Datei und Exportieren einer BACPAC-Datei –, gelten diese Beschränkungen nicht. Die im Paket enthaltenen Daten zeichnen sich durch vollständige Datentreue mit den Daten in der Quelldatenbank aus. Falls eine dieser Bedingungen im Paket vorliegt, enthält das Extrahierungs-/Exportprotokoll eine Zusammenfassung der Probleme anhand der oben beschriebenen Meldungen. Das soll den Benutzer vor möglichen Problemen mit der Datenbereitstellung warnen, die beim erstellten Paket auftreten können. Darüber hinaus sieht der Benutzer die folgende Zusammenfassungsmeldung im Protokoll: **Die Genauigkeit der Datentypen und Werte, die in dem von DAC-Framework erstellten DAC-Paket gespeichert sind, wird durch diese Beschränkungen nicht beeinträchtigt; die Beschränkungen gelten nur für die Datentypen und Werte, die sich aus der Bereitstellung eines DAC-Pakets auf einer Datenbank ergeben. Weitere Informationen zu den davon betroffenen Daten und wie diese Einschränkung umgehen, finden Sie unter** [in diesem Thema](http://go.microsoft.com/fwlink/?LinkId=267086).  
+-   **Extrahieren/Exportieren** : Für Aktionen, bei denen mithilfe des DAC-Frameworks ein Paket auf Grundlage einer Datenbank erstellt wird – z.B. Extrahieren einer DACPAC-Datei und Exportieren einer BACPAC-Datei –, gelten diese Beschränkungen nicht. Die im Paket enthaltenen Daten zeichnen sich durch vollständige Datentreue mit den Daten in der Quelldatenbank aus. Falls eine dieser Bedingungen im Paket vorliegt, enthält das Extrahierungs-/Exportprotokoll eine Zusammenfassung der Probleme anhand der oben beschriebenen Meldungen. Das soll den Benutzer vor möglichen Problemen mit der Datenbereitstellung warnen, die beim erstellten Paket auftreten können. Darüber hinaus sieht der Benutzer die folgende Zusammenfassungsmeldung im Protokoll: **Die Genauigkeit der Datentypen und Werte, die in dem von DAC-Framework erstellten DAC-Paket gespeichert sind, wird durch diese Beschränkungen nicht beeinträchtigt; die Beschränkungen gelten nur für die Datentypen und Werte, die sich aus der Bereitstellung eines DAC-Pakets auf einer Datenbank ergeben. Weitere Informationen zu den davon betroffenen Daten und zur Umgehung dieser Beschränkung finden Sie unter** [in diesem Thema](http://go.microsoft.com/fwlink/?LinkId=267086).  
   
 -   **Bereitstellen/Veröffentlichen/Importieren** : Für Aktionen, bei denen mithilfe des DAC-Frameworks ein Paket in einer Datenbank bereitgestellt wird – z.B. Bereitstellen oder Veröffentlichen einer DACPAC-Datei und Importieren einer BACPAC-Datei – sind diese Beschränkungen gültig. Die Daten in der Zieldatenbank entsprechen möglicherweise keiner vollständig datentreuen Ausgabe der im Paket enthaltenen Daten. Das Bereitstellungs-/Importprotokoll enthält für jede Instanz, auf der das Problem auftritt, die oben angegebene Meldung. Der Vorgang wird durch Fehler zwar blockiert (siehe Kategorie 3 oben), anschließend jedoch mit den übrigen Warnungen fortgesetzt.  
   

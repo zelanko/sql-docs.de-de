@@ -1,5 +1,5 @@
 ---
-title: Erstellen eines Modells mithilfe des Berichts-Manager | Microsoft Docs
+title: Erstellen eines Modells mithilfe des Berichts-Manager | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report models [Reporting Services], creating
 - Report Manager [Reporting Services], model creation
@@ -16,13 +16,13 @@ ms.assetid: 8e5d2bd3-48ec-45f3-afee-6d86797c8f28
 caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9f4de8368cadbc56819cd22c65892cbf143ae02c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3a4f951a901361e47e1582146d306955da0e9bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048470"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175089"
 ---
 # <a name="create-a-model-using-report-manager"></a>Erstellen eines Modells mithilfe des Berichts-Managers
   Mithilfe des Berichts-Managers können Sie Modelle auf der Grundlage eines [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Cubes, einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank oder einer Oracle-Datenbank generieren. Berichtsmodelle werden aus freigegebenen Datenquellen generiert, die auf dem Berichtsserver veröffentlicht werden. Wenn Sie noch nicht über eine freigegebene Datenquelle verfügen, müssen Sie sie erstellen.  
@@ -30,7 +30,7 @@ ms.locfileid: "36048470"
  Das von Ihnen generierte Berichtsmodell basiert vollständig auf dem Schema der freigegebenen Datenquelle. Sie können weder auswählen, welche Teile der Datenquelle im Modell enthalten sind, noch können Sie die Regeln oder Metadaten eines generierten Modells bearbeiten. Sie können jedoch Eigenschaften für das Modell festlegen, nachdem es generiert wurde, und Rollenzuweisungen definieren, die den Zugriff auf das gesamte Modell oder auf Teile desselben einschränken.  
   
 > [!NOTE]  
->  Ein Oracle-basiertes Modell generiert, mit dem Berichts-Manager oder [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007 [!INCLUDE[SPS2010](../includes/sps2010-md.md)] enthält Datenbankobjekte, die einen Teil des Schemas für das Benutzerkonto für die Verbindung mit der Oracle-Datenquelle verwendet werden. Der Name des Benutzerkontos wird in den Anmeldeinformationen für die Datenquelleneigenschaften angegeben.  
+>  Ein Oracle-basiertes Modell generiert, mit dem Berichts-Manager oder [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007 [!INCLUDE[SPS2010](../includes/sps2010-md.md)] enthält Datenbankobjekte, die Teil des Schemas für das Benutzerkonto an, die zur Verbindung mit der Oracle-Datenquelle sind. Der Name des Benutzerkontos wird in den Anmeldeinformationen für die Datenquelleneigenschaften angegeben.  
   
 ### <a name="to-create-a-new-data-source-for-a-report-model-using-report-manager"></a>So erstellen Sie mithilfe des Berichts-Managers eine neue Datenquelle für ein Berichtsmodell  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36048470"
   
     -   Windows-Authentifizierung: Wählen Sie diese Option aus, wenn [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Benutzer vom Betriebssystem authentifiziert werden sollen. Diese Option ermöglicht es [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , Sicherheitsfunktionen von Windows, z. B. die Kennwortverschlüsselung, für die Authentifizierung von Benutzern zu verwenden. Es wird nachdrücklich empfohlen, diese Option auszuwählen.  
   
-    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentifizierung: Wählen Sie diese Option, wenn Sie möchten, dass Benutzer verwenden ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Anmeldekonto, die Sie erstellt haben. Die Benutzer müssen einen gültigen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anmeldenamen und ein Kennwort angeben.  
+    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentifizierung: Wählen Sie diese Option, wenn die Benutzer verwenden sollen eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Anmeldekonto, das Sie erstellt haben. Die Benutzer müssen einen gültigen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anmeldenamen und ein Kennwort angeben.  
   
         > [!CAUTION]  
         >  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung.  

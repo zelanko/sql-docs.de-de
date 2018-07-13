@@ -1,5 +1,5 @@
 ---
-title: NULL-Behandlung von (SQLXML 4.0) | Microsoft Docs
+title: NULL (SQLXML 4.0) behandeln | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - null values [SQLXML]
 ms.assetid: 5e11eebb-d94e-4ce6-a6d0-870225706bc1
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 01367b6031ebce709fc80294d0a4ce131193c578
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: fb61234696e419bc203822985f8966a81975e476
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047344"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172114"
 ---
 # <a name="null-handling-sqlxml-40"></a>Behandlung von NULL (SQLXML 4.0)
   XML-Syntax deutet NULL als eine Abwesenheit. Wenn ein Attribut- oder Elementwert beispielsweise NULL ist, ist das Attribut bzw. Element nicht in dem XML-Dokument vorhanden. In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML aktiviert das `updg:nullvalue`-Attribut die Möglichkeit, NULL für einen Attribut- oder Elementwert anzugeben.  
   
- Das folgende Updategram stellt z. B. sicher, dass die **Titel** -Wert eines Kontakts mit **ContactID** von 64 NULL ist, und aktualisiert dann die **Titel** Wert auf "Mr." auf "Mr.".  
+ Z. B. das folgende Updategram stellt sicher, dass die **Titel** -Wert eines Kontakts mit **ContactID** von 64 NULL ist, und aktualisiert dann die **Titel** Wert auf "Mr." auf "Mr.".  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -48,6 +48,6 @@ ms.locfileid: "36047344"
  Wenn Parameter an ein Updategram übergeben werden, kann NULL als Parameterwert übergeben werden. Dies wird erreicht, indem das `nullvalue`-Attribut im `<updg:header>`-Block angegeben wird. Ein Beispiel finden Sie unter [übergeben von Parametern an Updategrams &#40;SQLXML 4.0&#41;](passing-parameters-to-updategrams-sqlxml-4-0.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sicherheitsüberlegungen zu Updategrams &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Sicherheitsüberlegungen zu Updategramms &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

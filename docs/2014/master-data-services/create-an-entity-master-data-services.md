@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], creating
 - creating entities [Master Data Services]
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 23e267d78091895e5d0ec899835ce7aa09e8c9d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 9e5c53e76330c00dde7b6d14fb0c6592546582bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047845"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329840"
 ---
 # <a name="create-an-entity-master-data-services"></a>Erstellen einer Entität (Master Data Services)
   Erstellen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]eine Entität, die Elemente und ihre Attribute enthält.  
@@ -48,18 +48,18 @@ ms.locfileid: "36047845"
   
 5.  In der **Entitätsname** geben den Namen der Entität.  
   
-6.  In der **Namen für das staging-Tabellen** geben einen Namen für die Stagingtabelle.  
+6.  In der **Name für Stagingtabellen** geben einen Namen für die Stagingtabelle.  
   
     > [!TIP]  
     >  Verwenden Sie den Modellnamen als einen Teil des Stagingtabellennamens, z.B. *Modelname_Entityname*. Dies erleichtert die Suche nach den Tabellen in der Datenbank. Weitere Informationen zu den Stagingtabellen finden Sie unter [Datenimport &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
   
 7.  Optional. Aktivieren Sie das Kontrollkästchen **Codewerte automatisch erstellen** . Weitere Informationen finden Sie unter [Automatische Codeerstellung &#40;Master Data Services&#41;](../../2014/master-data-services/automatic-code-creation-master-data-services.md).  
   
-8.  Aus der **explizite Hierarchien und Auflistungen aktivieren** Liste, wählen Sie eine der folgenden Optionen:  
+8.  Von der **explizite Hierarchien und Auflistungen aktivieren** Liste, wählen Sie eine der folgenden Optionen:  
   
-    -   **Nicht**. Wählen Sie diese Option aus, wenn Sie die Entität für explizite Hierarchien und Auflistungen nicht aktivieren müssen. Sie können dies später nach Bedarf ändern.  
+    -   **Keine**. Wählen Sie diese Option aus, wenn Sie die Entität für explizite Hierarchien und Auflistungen nicht aktivieren müssen. Sie können dies später nach Bedarf ändern.  
   
-    -   **Ja**. Wählen Sie diese Option aus, wenn Sie die Entität für explizite Hierarchien und Auflistungen aktivieren möchten. In der **Name der expliziten Hierarchie** geben einen Namen. Wählen Sie optional **erforderliche Hierarchie (alle blattmember werden eingeschlossen** der expliziten Hierarchie eine verbindliche Hierarchie vornehmen.  
+    -   **Ja**. Wählen Sie diese Option aus, wenn Sie die Entität für explizite Hierarchien und Auflistungen aktivieren möchten. In der **Name der expliziten Hierarchie** geben einen Namen. Wählen Sie optional **erforderliche Hierarchie (alle Blattelemente werden eingeschlossen** um der expliziten Hierarchie als erforderliche Hierarchie zu machen.  
   
 9. Klicken Sie auf **Entität speichern**.  
   

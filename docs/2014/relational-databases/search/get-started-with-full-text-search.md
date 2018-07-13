@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text indexes [SQL Server], creating
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], setting up
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
 caps.latest.revision: 70
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a4bdb94c371342a94c74e72a1cb1f33886fc0963
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e9745635b277a53f724b61ff4143e41af47775a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046846"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324010"
 ---
 # <a name="get-started-with-full-text-search"></a>Erste Schritte mit der Volltextsuche
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind die Datenbanken standardmäßig volltextfähig. Wenn Sie jedoch einen Volltextindex für eine Tabelle verwenden möchten, müssen Sie die Volltextindizierungsfunktion für die Spalten der Tabellen einrichten, auf die Sie mit der Volltext-Engine zugreifen möchten.  
@@ -46,7 +45,7 @@ ms.locfileid: "36046846"
   
  Die Volltextsuche unterstützt mehrere Sprachen durch die Verwendung der folgenden *linguistischen Komponenten*: Wörtertrennungen und Wortstammerkennungen, Stopplisten mit Stoppwörtern (auch als Füllwörter bezeichnet) und Thesaurusdateien. Für Thesaurusdateien (und in einigen Fällen auch für Stopplisten) ist die Konfiguration durch den Datenbankadministrator erforderlich. Eine bestimmte Thesaurusdatei unterstützt alle Volltextindizes, die die entsprechende Sprache verwenden, und eine bestimmte Stopliste kann einer beliebigen Anzahl von Volltextindizes zugeordnet werden.  
   
-##  <a name="setup"></a> Einrichten eines Volltextkatalogs oder Index  
+##  <a name="setup"></a> Einrichten einer Volltextkatalog und Index  
  Führen Sie dazu die folgenden grundlegenden Schritte aus:  
   
 1.  Erstellen eines Volltextkatalogs zum Speichern der Volltextindizes.  
@@ -55,7 +54,7 @@ ms.locfileid: "36046846"
   
 2.  Erstellen eines Volltextindex für eine Tabelle oder eine indizierte Sicht.  
   
-     Ein Volltextindex ist ein besonderer Typ eines tokenbasierten funktionellen Index, der durch die Volltext-Engine erstellt und verwaltet wird. Um eine Volltextsuche für eine Tabelle oder Sicht erstellen zu können, muss ein eindeutiger, einspaltiger Index vorhanden sein, der keine NULL-Werte zulässt. Die Volltext-Engine benötigt diesen eindeutigen Index, um jeder Zeile in der Tabelle einen eindeutigen, komprimierbaren Schlüssel zuzuordnen. Ein Volltextindex zählen `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, `varbinary`, und `varbinary(max)` Spalten. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Volltextindizes](create-and-manage-full-text-indexes.md).  
+     Ein Volltextindex ist ein besonderer Typ eines tokenbasierten funktionellen Index, der durch die Volltext-Engine erstellt und verwaltet wird. Um eine Volltextsuche für eine Tabelle oder Sicht erstellen zu können, muss ein eindeutiger, einspaltiger Index vorhanden sein, der keine NULL-Werte zulässt. Die Volltext-Engine benötigt diesen eindeutigen Index, um jeder Zeile in der Tabelle einen eindeutigen, komprimierbaren Schlüssel zuzuordnen. Ein Volltextindex kann enthalten `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, `varbinary`, und `varbinary(max)` Spalten. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Volltextindizes](create-and-manage-full-text-indexes.md).  
   
  Bevor Sie mehr über das Erstellen von Volltextindizes erfahren, sollten Sie die Unterschiede zu regulären [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Indizes kennen. In der folgenden Tabelle sind die Unterschiede aufgelistet.  
   
@@ -66,7 +65,7 @@ ms.locfileid: "36046846"
 |Gruppiert innerhalb derselben Datenbank zu einem oder mehreren Volltextkatalogen.|Nicht gruppiert.|  
   
   
-##  <a name="options"></a> Wählen von Optionen für einen Volltextindex  
+##  <a name="options"></a> Die Auswahl der Option für einen Volltextindex  
  In diesem Abschnitt werden die folgenden Themen behandelt:  
   
 -   Wählen der Spaltensprache  
@@ -105,14 +104,14 @@ ms.locfileid: "36046846"
 ### <a name="associating-a-stoplist-with-the-full-text-index"></a>Zuordnen einer Stopliste zum Volltextindex  
  Mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] werden Stoplisten eingeführt. Eine *Stoppliste* ist eine Liste von Stoppwörtern. Stoppwörter werden auch als Füllwörter bezeichnet. Jedem Volltextindex ist eine Stoppliste zugeordnet, und die Wörter der Stoppliste werden auf Volltextabfragen des Indexes angewendet. Standardmäßig ist der Systemstoppliste ein neuer Volltextindex zugeordnet. Sie können stattdessen jedoch auch eine eigene Stoppliste erstellen und verwenden. Weitere Informationen finden sie unter [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
- Beispielsweise die folgenden [CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung erstellt eine neue Volltext-Stoppliste mit dem Namen "mystoplist3" aus der Systemstoppliste kopieren:  
+ Beispielsweise die folgenden [CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung erstellt eine neue Volltext-Stoppliste mit dem Namen myStoplist3 durch Kopieren der Systemstoppliste:  
   
 ```  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
- Die folgenden [ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung ändert eine Stoppliste mit dem Namen "mystoplist", indem das Wort "En", zuerst für Spanisch und dann für Französisch hinzugefügt:  
+ Die folgenden [ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung ändert eine stopliste mit dem Namen "mystoplist", das Wort "En" hinzugefügt, zuerst für Spanisch und dann für Französisch hinzugefügt:  
   
 ```  
 ALTER FULLTEXT STOPLIST MyStoplist ADD 'en' LANGUAGE 'Spanish';  

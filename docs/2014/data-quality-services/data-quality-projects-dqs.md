@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
 caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 635632db245b37e068b7d9f16a1b352be1cc1d4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0e83826d17c1e7ac7ad5840626d3d61aa5224a60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049772"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192610"
 ---
 # <a name="data-quality-projects-dqs"></a>Data Quality-Projekte (DQS)
   Ein Data Quality-Projekt in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ist ein Mittel, die Qualität von den Quelldaten mithilfe einer Wissensdatenbank zu verbessern durch das Ausführen von *Datenbereinigung* und *Datenabgleichsaktivitäten* und das Exportieren der resultierenden Daten dann in eine SQL Server-Datenbank oder eine CSV-Datei. Sie können ein Data Quality-Projekt als Bereinigungsprojekt oder Abgleichsprojekt erstellen, um jeweilige Aktivitäten auszuführen. Bereinigung und Abgleichsprojekte können mit der gleichen Wissensdatenbank ausgeführt werden, da Wissen für Datenbereinigung und das Abgleichen in die gleiche Wissensdatenbank integriert werden können.  
@@ -60,7 +60,7 @@ ms.locfileid: "36049772"
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
 |Beschreibt, wie ein Data Quality-Projekt erstellt wird.|[Erstellen eines Data Quality-Projekts](../../2014/data-quality-services/create-a-data-quality-project.md)|  
-|Beschreibt, wie ein Data Quality-Projekt verwaltet wird (öffnen, entsperren, umbenennen und löschen).|[Verwalten von &#40;öffnen, entsperren, umbenennen, und löschen&#41; Data Quality-Projekts](../../2014/data-quality-services/manage-open-unlock-rename-and-delete-a-data-quality-project.md)|  
+|Beschreibt, wie ein Data Quality-Projekt verwaltet wird (öffnen, entsperren, umbenennen und löschen).|[Verwalten von &#40;öffnen, entsperren, umbenennen und Löschen von&#41; Data Quality-Projekten](../../2014/data-quality-services/manage-open-unlock-rename-and-delete-a-data-quality-project.md)|  
 |Beschreibt, wie ein Integration Services-Projekt in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]geöffnet wird.|[Öffnen von Integration Services-Projekten im Data Quality-Client](../../2014/data-quality-services/open-integration-services-projects-in-data-quality-client.md)|  
   
 ## <a name="see-also"></a>Siehe auch  

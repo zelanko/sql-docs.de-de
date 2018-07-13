@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - fill factor option [SQL Server]
 ms.assetid: b920ec34-ba8b-4bb8-af53-a3ffd06bafa6
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 33d6ac01a9aea6b752948e26d0e42d23b1d4b753
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 0aca71264624f9f4c874c334f4d3558de6e97ee0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048555"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243510"
 ---
 # <a name="configure-the-fill-factor-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Füllfaktor
   In diesem Thema wird beschrieben, wie die Serverkonfigurationsoption **Füllfaktor** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]konfiguriert wird. Der Füllfaktor wird zur erweiterten Leistungsoptimierung beim Speichern von Indexdaten bereitgestellt. Wenn ein Index erstellt oder neu erstellt wird, bestimmt der Füllfaktorwert den prozentualen Speicherplatz, der auf jeder Blattebenenseite mit Daten gefüllt werden soll; der übrige freie Speicherplatz wird für zukünftige Erweiterungen reserviert. Weitere Informationen finden Sie unter [Angeben des Füllfaktors für einen Index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Builder 1.0, locating and starting tool
 - Reporting Services, tutorials
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Report Manager [Reporting Services]
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 caps.latest.revision: 54
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 980a68939fa6b2970df820f6dd202865966ad9c5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6f76df07880af743623692ffcff924093e0ce9ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046610"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276938"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Lernprogramm: So suchen und starten Sie Reporting Services-Tools (SSRS)
-  In diesem Lernprogramm werden die Tools vorgestellt, mit denen Berichtsserver konfiguriert, Berichtsserverinhalte und -vorgänge verwaltet und Berichte erstellt und veröffentlicht werden. Der Zweck dieses Lernprogramms besteht darin, dass neue Benutzer verstehen, wie sie die einzelnen Tools finden und öffnen können. Wenn Sie bereits mit den Tools vertraut sind, können Sie wechseln auf zu anderen Lernprogrammen, die helfen erfahren Sie wichtige Funktionen für die Verwendung von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Weitere Informationen zu weiteren Lernprogrammen finden Sie unter [Tutorials zu Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  
+  In diesem Lernprogramm werden die Tools vorgestellt, mit denen Berichtsserver konfiguriert, Berichtsserverinhalte und -vorgänge verwaltet und Berichte erstellt und veröffentlicht werden. Der Zweck dieses Lernprogramms besteht darin, dass neue Benutzer verstehen, wie sie die einzelnen Tools finden und öffnen können. Wenn Sie bereits mit den Tools vertraut sind, können Sie verschieben auf zu anderen Tutorials, mit deren Hilfe können erfahren Sie, wichtige Fähigkeiten für die Verwendung von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Weitere Informationen zu weiteren Lernprogrammen finden Sie unter [Reporting Services-Tutorials &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  
   
  In diesem Thema:  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36046610"
   
 #### <a name="to-start-the-reporting-services-configuration-manager"></a>So starten Sie den Reporting Services-Konfigurations-Manager  
   
-1.  Geben Sie auf der Windows-Startbildschirm `reporting` und klicken Sie in der **Apps** Suchergebnisse, klicken Sie auf **Konfigurations-Manager für Reporting Services**.  
+1.  Geben Sie auf dem Windows-Startbildschirm `reporting` und klicken Sie in der **Apps** Suchergebnisse, klicken Sie auf **Konfigurations-Manager für Reporting Services**.  
   
      ![Reporting Services-Konfigurations-Manager beim Start](../media/bi-ssrs-configmanager-win8-startscreen.gif "reporting services configuration manager on start")  
   
@@ -91,21 +91,21 @@ ms.locfileid: "36046610"
  **Nächste Schritte:** [Konfigurieren und Verwalten eines Berichtsservers &#40;einheitlicher SSRS-Modus&#41;](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) und [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ##  <a name="bkmk_report_manager"></a> Berichts-Manager (einheitlicher Modus)  
- Verwendung [Berichts-Manager &#40;SSRS im einheitlichen Modus&#41; ](../report-manager-ssrs-native-mode.md) um Berechtigungen festzulegen, Abonnements und Zeitpläne zu verwalten und Arbeiten mit Berichten. Sie können den Berichts-Manager auch zum Anzeigen von Berichten verwenden.  
+ Verwendung [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41; ](../report-manager-ssrs-native-mode.md) um Berechtigungen festzulegen, Abonnements und Zeitpläne zu verwalten und mit Berichten zu arbeiten. Sie können den Berichts-Manager auch zum Anzeigen von Berichten verwenden.  
   
- **Installation:** Berichts-Manager wird installiert, bei der Installation [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] im einheitlichen Modus: [installieren Sie Reporting Services Report Server im einheitlichen Modus](../install-windows/install-reporting-services-native-mode-report-server.md)  
+ **Installation:** Berichts-Manager wird installiert, bei der Installation [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] im einheitlichen Modus: [installieren Sie Reporting Services Native Mode Report Server](../install-windows/install-reporting-services-native-mode-report-server.md)  
   
  Damit Sie den Berichts-Manager öffnen können, müssen Sie über ausreichende Berechtigungen verfügen (anfangs besitzen nur Mitglieder der lokalen Gruppe Administratoren Berechtigungen, mit denen der Zugriff auf Berichts-Manager-Funktionen möglich ist). Der Berichts-Manager enthält verschiedene Seiten und Optionen, die sich je nach den Rollenzuweisungen des aktuellen Benutzers unterscheiden. Für Benutzer ohne Berechtigungen wird eine leere Seite angezeigt. Für Benutzer mit Berechtigungen zum Anzeigen von Berichten werden Links angezeigt, auf die sie klicken können, um die Berichte zu öffnen. Weitere Informationen zu Berechtigungen finden Sie unter [Rollen und Berechtigungen (Reporting Services)](../security/roles-and-permissions-reporting-services.md).  
   
 #### <a name="to-start-report-manager"></a>So starten Sie den Berichts-Manager  
   
-1.  Öffnen Sie Ihren Browser. Informationen zu unterstützten Browsern und Browserversionen finden Sie unter [Planung für Reporting Services und Power View-Browserunterstützung &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md).  
+1.  Öffnen Sie Ihren Browser. Weitere Informationen zu unterstützten Browsern und Browserversionen finden Sie unter [Planung für Reporting Services und Power View-Browserunterstützung &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md).  
   
 2.  Geben Sie die URL des Berichts-Managers in die Adressleiste des Webbrowsers ein. Standardmäßig ist die URL **http://\<ServerName > / reports**. Zur Bestätigung des Servernamens und der URL können Sie das Reporting Services-Konfigurationstool verwenden. Weitere Informationen zu URLs in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] finden Sie unter [Konfigurieren von Berichtsserver-URLs (SSRS-Konfigurations-Manager)](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
   
 3.  Der Berichts-Manager wird im Browserfenster geöffnet. Die Startseite entspricht dem Basisordner. In Abhängigkeit von den Berechtigungen werden möglicherweise zusätzliche Ordner, Links zu Berichten sowie Ressourcendateien auf der Startseite angezeigt. Möglicherweise werden auf der Symbolleiste auch zusätzliche Schaltflächen und Befehle angezeigt.  
   
-4.  Wenn Sie Berichts-Manager auf dem lokalen Berichtsserver ausführen, finden Sie unter [konfigurieren einen Berichtsserver im einheitlichen Modus für die lokale Verwaltung &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+4.  Wenn Sie Berichts-Manager auf dem lokalen Berichtsserver ausführen, finden Sie unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für die lokale Verwaltung &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
  **Nächste Schritte:** [Berichts-Manager konfigurieren &#40;im einheitlichen Modus&#41;](../report-server/configure-web-portal.md).  
   
@@ -153,12 +153,12 @@ ms.locfileid: "36046610"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] wird mit der [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] -Startseite geöffnet. Der Projektmappen-Explorer umfasst Kategorien zum Erstellen von Berichten und Datenquellen. Mit diesen Kategorien können Sie neue Berichte und Datenquellen erstellen. Wenn Sie eine Berichtsdefinition erstellen, werden Fenster im Registerformat angezeigt. Die Fenster im Registerformat lauten Daten, Layout und Vorschau.  
   
- Informationen zum Erstellen Ihrer ersten Berichte finden Sie unter [Erstellen eines einfachen Tabellenberichts (SSRS-Tutorial)](../create-a-basic-table-report-ssrs-tutorial.md). Weitere Informationen zum Abfrage-Designer Sie in Berichts-Designer können finden Sie unter [Abfrageentwurfstools im Berichts-Designer SQL Server Data Tools &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md).  
+ Informationen zum Erstellen Ihrer ersten Berichte finden Sie unter [Erstellen eines einfachen Tabellenberichts (SSRS-Tutorial)](../create-a-basic-table-report-ssrs-tutorial.md). Weitere Informationen zum Abfrage-Designer Sie im Berichts-Designer können finden Sie unter [Abfrageentwurfstools im Berichts-Designer SQL Server Data Tools &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md).  
   
 ##  <a name="bkmk_report_builder"></a> Berichts-Generator  
  Verwendung [Berichts-Generator &#40;SSRS&#41; ](report-builder-authoring-environment-ssrs.md) zum Erstellen von Berichten in einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office-ähnlichen erstellungsumgebung. Sie haben die Möglichkeit, alle vorhandenen Berichte anzupassen und zu aktualisieren. Dabei spielt es keine Rolle, ob sie im Berichts-Designer oder in früheren Versionen des Berichts-Generators erstellt wurden. Informationen über den Speicherort der Datei ReportBuilder3.msi zur Installation des Berichts-Generators auf dem lokalen Computer erhalten Sie von Ihrem Administrator.  
   
- **Installation:** auf – nach der Installation von Version von Report Builder entweder durch [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] im einheitlichen Modus oder SharePoint-Modus. Die eigenständige Version des Berichts-Generators muss separat heruntergeladen werden.  Finden Sie unter [Installieren der eigenständigen Version des Berichts-Generators &#40;Berichts-Generator&#41;](../install-windows/install-report-builder.md)  
+ **Installation:** klicken Sie auf – nach der Installation der Version von Berichts-Generator entweder [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] im einheitlichen Modus oder SharePoint-Modus. Die eigenständige Version des Berichts-Generators muss separat heruntergeladen werden.  Finden Sie unter [Installieren der eigenständigen Version des Berichts-Generators &#40;Berichts-Generator&#41;](../install-windows/install-report-builder.md)  
   
 #### <a name="to-start-report-builder-clickonce-from-report-manager-native-mode"></a>So starten Sie die ClickOnce-Version des Berichts-Generators aus dem Berichts-Manager (einheitlicher Modus)  
   
@@ -203,10 +203,10 @@ ms.locfileid: "36046610"
 3.  Klicken Sie auf **Hilfe zum Berichts-Generator** , um die Dokumentation für den Berichts-Generator zu öffnen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Installieren, deinstallieren und Berichts-Generator-Unterstützung](../install-uninstall-and-report-builder-support.md)   
- [SharePoint-Modus-Installation von Reporting Services &#40;SharePoint 2010 und SharePoint 2013&#41;](../install-windows/install-reporting-services-sharepoint-mode.md)   
+ [Installieren und Deinstallieren von Berichts-Generator-Unterstützung](../install-uninstall-and-report-builder-support.md)   
+ [Installation von SharePoint-Modus von Reporting Services &#40;SharePoint 2010 und SharePoint 2013&#41;](../install-windows/install-reporting-services-sharepoint-mode.md)   
  [Reporting Services-Berichtsserver](../reporting-services-report-server.md)   
- [Abfragen von Entwurfstools in Berichts-Designers von SQL Server Datatools &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)   
+ [Abfrageentwurfstools im Berichts-Designer SQL-Server-Datatools &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)   
  [Reporting Services-Tutorials &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)  
   
   

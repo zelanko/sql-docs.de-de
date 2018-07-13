@@ -1,5 +1,5 @@
 ---
-title: Löschen von Beziehungen (SSAS – tabellarisch) | Microsoft Docs
+title: Löschen von Beziehungen (SSAS – tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d40e3f05-54e8-4c4b-807a-0b06f446079b
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e39f2f74824550940fbe206ee2185212abf7dd9b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 530e00790a649ad7ccaebfddfc3582d23ee1b1e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046998"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249170"
 ---
 # <a name="delete-relationships-ssas-tabular"></a>Löschen von Beziehungen (SSAS – tabellarisch)
   Sie können vorhandene Beziehungen in der Diagrammsicht des Modell-Designers oder über das Dialogfeld Beziehungen verwalten löschen. Weitere Informationen darüber, wie Beziehungen in tabellarischen Modellen verwendet werden, finden Sie unter [Relationships &#40;SSAS Tabular&#41;](relationships-ssas-tabular.md).  
@@ -57,6 +57,6 @@ ms.locfileid: "36046998"
   
 ## <a name="see-also"></a>Siehe auch  
  [Beziehungen &#40;SSAS – tabellarisch&#41;](relationships-ssas-tabular.md)   
- [Erstellen Sie eine Beziehung zwischen zwei Tabellen &#40;SSAS – tabellarisch&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)  
+ [Erstellen einer Beziehung zwischen zwei Tabellen &#40;SSAS – tabellarisch&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)  
   
   

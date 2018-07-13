@@ -1,5 +1,5 @@
 ---
-title: Database-Element (XMLA) | Microsoft Docs
+title: Database-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Database element
 ms.assetid: 2ded06c4-4eaf-4ccb-a416-41ee51ced8bc
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: f1b643a12ab1dbf2dc151fe91a8663b138e581ec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 22e385380b2757427b5fa3a33725f6c25e8dde36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046761"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249430"
 ---
 # <a name="database-element-xmla"></a>Database-Element (XMLA)
-  Identifiziert die Datenbank, die die vom übergeordneten dargestellte Dimension enthält [Objekt](object-element-dimension-xmla.md) Element.  
+  Identifiziert die Datenbank aus die Dimension dargestellt, die vom übergeordneten Element enthaltenen [Objekt](object-element-dimension-xmla.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36046761"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `Database` Element ist ein Objektbezeichner, der den Namen der Analysis Services-Datenbank enthält, das die dargestellte Dimension enthält die `Object` Element.  
+ Die `Database` Element ist ein Objektbezeichner, der den Namen der Analysis Services-Datenbank, die Dimension enthält, dargestellt durch die `Object` Element.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Cube-Element &#40;XMLA&#41;](cube-element-xmla.md)   

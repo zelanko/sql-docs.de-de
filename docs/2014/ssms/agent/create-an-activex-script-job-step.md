@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ActiveX scripting jobs [SQL Server]
 - job steps [Analysis Services]
 ms.assetid: e6c46c6b-2d61-4571-bc8e-a831cd6e6302
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d8e5ecaa2472dab26cc6be661bea7220748a6a39
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6a1bc47870dea8093e91d033c8248e1eb216f5ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050038"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175214"
 ---
 # <a name="create-an-activex-script-job-step"></a>Create an ActiveX Script Job Step
   In diesem Thema wird beschrieben, wie Sie einen Auftragsschritt des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents, der ein ActiveX-Skript in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder SQL Server Management Objects ausführt, erstellen und definieren können.  
@@ -108,6 +108,6 @@ ms.locfileid: "36050038"
 ##  <a name="SMO"></a> Verwendung von SQL Server Management Objects  
  **So erstellen Sie einen ActiveX-Skript-Auftragsschritt**  
   
- Verwenden der `JobStep` Klasse, indem Sie eine Programmiersprache, die Sie, z. B. Visual Basic, Visual c# oder PowerShell auswählen.  
+ Verwenden der `JobStep` Klasse, indem Sie eine Programmiersprache, die Sie, wie z. B. Visual Basic, Visual c# oder PowerShell auswählen.  
   
   

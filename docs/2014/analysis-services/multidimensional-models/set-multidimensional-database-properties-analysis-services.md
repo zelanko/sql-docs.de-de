@@ -1,5 +1,5 @@
 ---
-title: Festlegen von Eigenschaften für mehrdimensionale Datenbanken (Analysis Services) | Microsoft Docs
+title: Legen Sie Eigenschaften für mehrdimensionale Datenbanken (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - properties [Analysis Services], databases
 ms.assetid: a8be5b3f-3148-448a-976c-7222705155d9
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2ec653606418e1c3dea32b04cb1e923b54c98e45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b1de79fd7eb257364069dfaa15146036dd617bdc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048169"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200230"
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>Festlegen von Eigenschaften für mehrdimensionale Datenbanken (Analysis Services)
   Es gibt eine Reihe von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbankeigenschaften, die Sie im Datenbank-Designer von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] konfigurieren können.  
@@ -49,7 +49,7 @@ ms.locfileid: "36048169"
 |MasterDataSourceID|Wird zusammen mit Remotepartitionen verwendet. Weitere Informationen finden Sie unter [Remote Partitions](../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md).|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenbank-Eigenschaftendialogfeld &#40;SSAS – mehrdimensional&#41;](../database-properties-dialog-box-ssas-multidimensional.md)   
+ [Datenbank im Dialogfeld Eigenschaften von &#40;SSAS – mehrdimensional&#41;](../database-properties-dialog-box-ssas-multidimensional.md)   
  [Konfigurieren von Analysis Services-Projekteigenschaften &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)  
   
   

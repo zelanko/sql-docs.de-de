@@ -1,14 +1,13 @@
 ---
-title: Replikation, Änderungsnachverfolgung, Change Data Capture und AlwaysOn-Verfügbarkeitsgruppen (SQLServer) | Microsoft Docs
+title: Replikation, Änderungsnachverfolgung, Change Data Capture und AlwaysOn-Verfügbarkeitsgruppen (SQLServer) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change tracking [SQL Server], AlwaysOn Availability Groups
 - change data capture [SQL Server], AlwaysOn Availability Groups
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 caps.latest.revision: 31
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 0afd1136c2426b749beaff5c713f6c5e77671940
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1519ac814a1f8a55333af5050eab8f5fcbc1b022
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049292"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204030"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Replikation, Änderungsnachverfolgung, Change Data Capture und AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikation, Change Data Capture (CDC) und Änderungsnachverfolgung (CT) werden unter [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]unterstützt. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] bietet Hochverfügbarkeit und zusätzliche Funktionen zur Datenbankwiederherstellung.  
@@ -115,7 +114,7 @@ ms.locfileid: "36049292"
     > [!NOTE]  
     >  Sie sollten die Aufträge im Vorfeld für alle möglichen Failoverziele erstellen und sie als deaktiviert kennzeichnen, bis das Verfügbarkeitsreplikat auf einem Host zum neuen primären Replikat wird. Die CDC-Aufträge, die auf der alten primären Datenbank ausgeführt werden, sollten auch deaktiviert werden, wenn die lokale Datenbank zur sekundären Datenbank wird. Verwenden Sie zum Deaktivieren und Aktivieren von Aufträgen die *@enabled*-Option von [sp_update_job (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql). Weitere Informationen zum Erstellen von CDC-Aufträgen finden Sie unter [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql)unterstützt.  
   
--   **Hinzufügen von CDC-Rollen zu einem primären AlwaysOn-Datenbankreplikat**  
+-   **Hinzufügen von CDC-Rollen zu einer primären AlwaysOn-Datenbankreplikat**  
   
      Wenn eine Tabelle für CDC aktiviert wird, ist es möglich, der Aufzeichnungsinstanz eine Datenbankrolle zuzuordnen. Wenn eine Rolle angegeben wird, muss der Benutzer, der die CDC-Tabellenwertfunktionen verwenden möchte, um auf Änderungen für die Tabelle zuzugreifen, nicht nur über einen SELECT-Zugriff auf die nachverfolgten Tabellenspalten verfügen. Er muss auch ein Mitglied der benannten Rolle sein. Wenn die angegebene Rolle nicht bereits vorhanden ist, wird die Rolle erstellt. Wenn einer primären AlwaysOn-Datenbank automatisch Datenbankrollen hinzugefügt werden, werden die Rollen auch an die sekundären Datenbanken der Verfügbarkeitsgruppe weitergegeben.  
   

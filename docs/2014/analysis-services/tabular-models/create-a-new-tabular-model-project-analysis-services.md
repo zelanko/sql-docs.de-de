@@ -1,5 +1,5 @@
 ---
-title: Erstellen eines NewTabular Modellprojekts (SSAS – tabellarisch) | Microsoft Docs
+title: Erstellen ein NewTabular Modellprojekts (SSAS – tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 001bed84-f50f-4961-bc25-9906728d99ec
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d889e25351e3a944409e62a682072a8845a2c13f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 402d53f58e1d23667e181849dc5e23276bb663b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049046"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178457"
 ---
 # <a name="create-a-newtabular-model-project-ssas-tabular"></a>Erstellen eines NewTabular Modellprojekts (SSAS – tabellarisch)
   In diesem Thema wird beschrieben, wie ein neues, leeres Projekt für tabellarische Modelle in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erstellt wird. Nach der Erstellung eines neuen Modellprojekts können Sie das Modellprojekt erstellen, indem Sie Daten aus Datenquellen importieren.  

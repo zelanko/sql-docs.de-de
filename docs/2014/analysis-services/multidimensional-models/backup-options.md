@@ -1,5 +1,5 @@
 ---
-title: Sicherungsoptionen | Microsoft Docs
+title: Sichern Sie die Optionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up databases [Analysis Services]
 - databases [Analysis Services], backing up
 ms.assetid: 02d33fc9-f3f4-4b85-8b90-449b68625cf7
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3d7c4d99153f3bf47589edeecebf7b6444968573
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce7ca784325be140ffbd62880be2fb717ce058f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048614"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257286"
 ---
 # <a name="backup-options"></a>Sicherungsoptionen
   Es gibt viele Möglichkeiten, um Ihre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbanken zu sichern, und für all diese Sicherungsmöglichkeiten benötigen Sie Administratorberechtigungen für den Server und für die Datenbank. Sie können das **Sichern** -Dialogfeld in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]öffnen, die geeignete Optionskonfiguration auswählen und dann die Sicherung aus dem Dialogfeld starten. Sie können aber auch ein Skript erstellen, wobei die bereits in der Datei angegebenen Einstellungen verwendet werden. Dieses Skript kann dann gespeichert und beliebig häufig ausgeführt werden.  
@@ -34,7 +34,7 @@ ms.locfileid: "36048614"
 >  Das Analysis Services-Dienstkonto muss über die Berechtigung zum Schreiben von Daten in den für jede Datei angegebenen Sicherungsspeicherort verfügen. Dem Benutzer muss zudem eine der folgenden Rollen zugewiesen worden sein: Administratorrolle für die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz oder Mitglied einer Datenbankrolle mit der Berechtigung Vollzugriff (Administrator) für die wiederherzustellende Datenbank.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Das Dialogfeld Datenbank sichern &#40;Analysis Services – mehrdimensionale Daten&#41;](../backup-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Im Dialogfeld Datenbank sichern &#40;Analysis Services – mehrdimensionale Daten&#41;](../backup-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Sichern und Wiederherstellen von Analysis Services-Datenbanken](backup-and-restore-of-analysis-services-databases.md)   
  [Sichern des Elements &#40;XMLA&#41;](../xmla/xml-elements-commands/backup-element-xmla.md)   
  [Sichern, wiederherstellen und Synchronisieren von Datenbanken &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  

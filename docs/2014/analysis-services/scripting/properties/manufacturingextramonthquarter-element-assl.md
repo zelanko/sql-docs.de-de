@@ -1,5 +1,5 @@
 ---
-title: ManufacturingExtraMonthQuarter-Element (ASSL) | Microsoft Docs
+title: ManufacturingExtraMonthQuarter-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ManufacturingExtraMonthQuarter element
 ms.assetid: 6e97d92c-dd1e-48f6-a379-c1036c975f9f
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d4bc2e36bb67e64aabb5bfdaee67ea945f4bb077
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e57e3e7dbaa07ce86eaa5c0b29749fdc6c974cd4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046766"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243630"
 ---
 # <a name="manufacturingextramonthquarter-element-assl"></a>ManufacturingExtraMonthQuarter-Element (ASSL)
-  Definiert den Monat des Produktionszeitraums, dem ein zusätzlicher Monat für zugewiesen ist, ein [TimeBinding](../data-type/binding-data-type-assl.md) Element.  
+  Definiert den Monat des Produktionszeitraums, dem ein zusätzlicher Monat für zugewiesen ist, eine [TimeBinding](../data-type/binding-data-type-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36046766"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element, das das übergeordnete Element des entspricht `ManufacturingExtraMonthQuarter` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.TimeBinding>.  
+ Das Element, das dem übergeordneten entspricht `ManufacturingExtraMonthQuarter` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.TimeBinding>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  
