@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1b7c6dbb-b40e-4822-9caa-608e1056af8e
 caps.latest.revision: 12
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 813066b3754ac1105ac5989ea64eb8f9fc2c7cbe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 053c0ca015bc3531a96ea1a08c3261918925f0da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048661"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194788"
 ---
 # <a name="remove-data-quality-server-objects"></a>Entfernen von Data Quality Server-Objekten
   Durch Deinstallieren von [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] von einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]oder durch das vollständige Entfernen einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] aufweist, werden einige [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] -Objekte nicht gelöscht, einschließlich der DQS-Datenbanken. Dies bedeutet, dass Sie die DQS-Daten nicht verlieren, wenn Sie [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] mithilfe des SQL Server-Setups deinstallieren. Sie müssen diese [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] -Objekte manuell löschen, nachdem der Deinstallationsvorgang abgeschlossen wurde.  

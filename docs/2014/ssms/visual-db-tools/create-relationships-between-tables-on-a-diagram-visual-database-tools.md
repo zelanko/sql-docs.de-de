@@ -1,5 +1,5 @@
 ---
-title: Erstellen von Beziehungen zwischen Tabellen in einem Diagramm (Visual Database Tools) | Microsoft Docs
+title: Erstellen von Beziehungen zwischen Tabellen in einem Diagramm (Visual Database Tools) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - diagrams [SQL Server], designing
 ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 80aff8b6f574b21bf5287e8388201e959f65765d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 14d6a6334c4d618cf48b73e1bfa84f7dac517983
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047983"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168044"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>Erstellen von Beziehungen zwischen Tabellen in einem Diagramm (Visual Database Tools)
   Sie können im Datenbank-Designer Beziehungen zwischen den Spalten in verschiedenen Tabellen erstellen, indem Sie Spalten zwischen Tabellen ziehen.  
@@ -51,7 +51,7 @@ ms.locfileid: "36047983"
      Im Datenbank-Designer wird eine Beziehung zwischen von Ihnen ausgewählten Spalten gezeigt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tabellen und Spalten (Dialogfeld) &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Tabellen und Spalten Dialogfeld &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Unique- und Check-Einschränkungen](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
  [Verwenden von Tabellen in Datenbankdiagrammen &#40;Visual Database Tools&#41;](work-with-tables-in-database-diagram-visual-database-tools.md)  
   

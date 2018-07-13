@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9e83b4a29d1fae74c5b20f3290be8431045f1f38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3aef5a22131fd26d72ccbe569a2adb73d045dfa3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048127"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200030"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>Installieren von SQL Server mit SMB-Dateifreigabe als Speicheroption
-  Starten von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], Systemdatenbanken (Master, Model, MSDB und TempDB) und [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Benutzerdatenbanken können mit Server Message Block (SMB)--Dateiserver als Speicheroption installiert werden. Dies gilt sowohl für eigenständige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - als auch für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusterinstallationen (FCI).  
+  Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], Systemdatenbanken (Master, Model, MSDB und TempDB), und [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Benutzerdatenbanken können mit dem Server Message Block (SMB)-Dateiserver als Speicheroption installiert werden. Dies gilt sowohl für eigenständige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - als auch für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusterinstallationen (FCI).  
   
 > [!NOTE]  
 >  Filestream auf einer SMB-Dateifreigabe wird derzeit nicht unterstützt.  
@@ -83,7 +83,7 @@ ms.locfileid: "36048127"
     setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEPROGRESS /ASSYSADMINACCOUNTS="<DomainName\UserName>" /ASDATADIR=<Drive>:\OLAP\Data /ASLOGDIR=<Drive>:\OLAP\Log /ASBACKUPDIR=<Drive>:\OLAP\Backup /ASCONFIGDIR=<Drive>:\OLAP\Config /ASTEMPDIR=<Drive>:\OLAP\Temp /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'" /FAILOVERCLUSTERNETWORKNAME="<Insert Network Name>" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;Cluster Network;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="MSSQLSERVER" /Features=AS,SQL /ASSVCACCOUNT="<DomainName\UserName>" /ASSVCPASSWORD="xxxxxxxxxxx" /AGTSVCACCOUNT="<DomainName\UserName>" /AGTSVCPASSWORD="xxxxxxxxxxx" /INSTALLSQLDATADIR="\\FileServer\Share1\" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx" /SQLSYSADMINACCOUNTS="<DomainName\UserName> /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
-     Weitere Informationen zur Verwendung der verschiedenen Optionen für Befehlszeilenparameter in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], finden Sie unter [Installieren von SQL Server 2014 von der Befehlszeile aus](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
+     Weitere Informationen zur Verwendung der verschiedenen Optionen für Befehlszeilenparameter in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], finden Sie unter [Installieren von SQL Server 2014 über die Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
 ## <a name="operating-system-considerations-smb-protocol-vs-includessnoversionincludesssnoversion-mdmd"></a>Überlegungen zum Betriebssystem (SMB-Protokoll oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
  Jedes Windows-Betriebssystem verfügt über eine eigene SMB-Protokollversion, die gegenüber [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]transparent ist. Sie können die Vorteile der verschiedenen SMB-Protokollversionen in Bezug auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]vergleichen.  
@@ -102,7 +102,7 @@ ms.locfileid: "36048127"
     > [!NOTE]  
     >  Die FULL CONTROL-Freigabeberechtigungen und die NTFS-Berechtigungen in den SMB-Freigabeordnern sollten wie folgt beschränkt werden: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Dienstkonto und Windows-Benutzer mit admin-Serverrollen.  
   
-     Es wird empfohlen, das Domänenkonto als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienstkonto zu verwenden. Wenn das Systemkonto als Dienstkonto verwendet wird, gewähren Sie die Berechtigungen für das Computerkonto im Format: * < Domänenname >***\\***< Computer_name > ***$**.  
+     Es wird empfohlen, das Domänenkonto als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienstkonto zu verwenden. Wenn das Systemkonto als Dienstkonto verwendet wird, gewähren der Berechtigungen für das Computerkonto im Format: * < Domänenname >***\\***< Computername > ***$**.  
   
     > [!NOTE]  
     >  -   Beim [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup ist es erforderlich, das Domänenkonto als Dienstkonto anzugeben, wenn die SMB-Dateifreigabe als Speicheroption festgelegt wird. Bei der SMB-Dateifreigabe kann das Systemkonto erst nach der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation als Dienstkonto angegeben werden.  
@@ -135,7 +135,7 @@ ms.locfileid: "36048127"
   
 ## <a name="see-also"></a>Siehe auch  
  [Planen einer SQL Server-Installation](../../../2014/sql-server/install/planning-a-sql-server-installation.md)   
- [Vorgehensweisen zum Installieren](../../../2014/sql-server/install/installation-how-to-topics.md)   
+ [Gewusst-wie-Themen für die Installation](../../../2014/sql-server/install/installation-how-to-topics.md)   
  [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../configure-windows/configure-windows-service-accounts-and-permissions.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Definieren eines Cubes | Microsoft Docs
+title: Definieren eines Cubes | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8aa4ac2d-857f-4048-baa0-0f314e207cf6
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: ee7de0dd605b8a6083a6541daf7942cf93ab5916
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9de74db589624ecbf16785ca108dbdd6c5f9ca87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049808"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323290"
 ---
 # <a name="defining-a-cube"></a>Definieren eines Cubes
   Der Cube-Assistent unterstützt Sie beim Definieren der Measuregruppen und Dimensionen für einen Cube. In der folgenden Aufgabe verwenden Sie den Cube-Assistenten, um einen Cube zu erstellen.  
@@ -60,7 +60,7 @@ ms.locfileid: "36049808"
   
 11. Klicken Sie auf **Weiter**.  
   
-12. Auf der **Abschließen des Assistenten** Seite, ändern Sie den Namen des Cubes, um `Analysis Services Tutorial`. Im Vorschaubereich können Sie die Measuregruppe **InternetSales** und ihre Measures sehen. Ihnen werden auch die Dimensionen **Date**, **Customer** und **Product** angezeigt.  
+12. Auf der **Abschließen des Assistenten** Seite, ändern Sie den Namen des Cubes in `Analysis Services Tutorial`. Im Vorschaubereich können Sie die Measuregruppe **InternetSales** und ihre Measures sehen. Ihnen werden auch die Dimensionen **Date**, **Customer** und **Product** angezeigt.  
   
 13. Klicken Sie auf **Fertig stellen** , um den Assistenten abzuschließen.  
   

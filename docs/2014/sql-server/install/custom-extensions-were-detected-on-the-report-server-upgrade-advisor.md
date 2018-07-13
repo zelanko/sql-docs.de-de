@@ -1,5 +1,5 @@
 ---
-title: Benutzerdefinierte Erweiterungen erkannt wurden, auf dem Berichtsserver (Upgrade Advisor) | Microsoft Docs
+title: (Upgrade Advisor) auf dem Berichtsserver wurden benutzerdefinierte Erweiterungen erkannt. | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - rendering extensions [Reporting Services], custom extensions
 - security extensions [Reporting Services]
@@ -19,13 +19,13 @@ ms.assetid: fa184bd7-11d6-4ea3-9249-bc1b13db49e5
 caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 4ae9dbac7395e44bf67731bd0e7a714c73fac296
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 213113dedeed3e5401081ff8ff7345b5d2fb09f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048452"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220840"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>Auf dem Berichtsserver wurden benutzerdefinierte Erweiterungen erkannt (Upgrade Advisor)
   Upgrade Advisor hat in den Konfigurationsdateien Einstellungen für benutzerdefinierte Erweiterungen gefunden. Dies ist ein Hinweis darauf, dass die Installation mindestens eine benutzerdefinierte Erweiterung zur Datenverarbeitung, Übermittlung, Sicherheit, Authentifizierung oder zum Rendering enthält. Beim Upgrade werden die Erweiterungskonfigurationseinstellungen zusammen mit dem aktualisierten Berichtsserver verschoben. Wenn die benutzerdefinierten Erweiterungen jedoch im vorhandenen Berichtsserver-Installationsordner installiert sind, werden ihre Assemblydateien beim Upgradevorgang nicht in den neuen Installationsordner verschoben. Nach Abschluss des Upgrades müssen Sie die Assemblydateien in den neuen Installationsordner von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verschieben.  
@@ -38,7 +38,7 @@ ms.locfileid: "36048452"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>Description  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Stellt eine erweiterbare Architektur, die Entwicklern ermöglicht, benutzerdefinierte Erweiterungen für Datenverarbeitung, Übermittlung, Rendering, Sicherheit und Authentifizierung zu erstellen.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bietet eine erweiterbare Architektur, die Entwicklern ermöglicht, benutzerdefinierte Erweiterungen für Datenverarbeitung, Übermittlung, Rendering, Sicherheit und Authentifizierung zu erstellen.  
   
  Wenn benutzerdefinierte Erweiterungen oder Assemblys in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Installation verwendet werden, können Sie mit Setup ein Upgrade durchführen. Allerdings müssen Sie möglicherweise nach Abschluss des Upgrades Erweiterungen an den neuen Installationsort verschieben, oder Sie müssen vor dem Upgrade bestimmte Schritte ausführen.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36048452"
   
  [Benutzerdefinierte Renderingerweiterungen](#render)  
   
- [Benutzerdefinierte Sicherheits- oder authentifizierungserweiterungen auf einem Berichtsserver von SQL Server 2000](#secauth2000)  
+ [Benutzerdefinierte Sicherheits- oder authentifizierungserweiterungen auf einem SQL Server 2000-Berichtsserver](#secauth2000)  
   
  [Benutzerdefinierte Sicherheits- oder authentifizierungserweiterungen auf einem SQL Server 2005-Berichtsserver](#secauth2005)  
   
@@ -68,14 +68,14 @@ ms.locfileid: "36048452"
   
 3.  Erstellen Sie die Lösung neu, um die Erweiterung zu binden.  
   
- Wenn Sie entscheiden, nicht mit dem Upgrade fortzufahren, können Sie entscheiden, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stattdessen zu migrieren. Schritte zum Migrieren benutzerdefinierter Erweiterungen finden Sie unter [migrieren benutzerdefinierter Erweiterungen](#migrcustext) in diesem Thema.  
+ Wenn Sie entscheiden, nicht mit dem Upgrade fortzufahren, können Sie entscheiden, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stattdessen zu migrieren. Die Schritte zum Migrieren benutzerdefinierter Erweiterungen finden Sie [migrieren benutzerdefinierter Erweiterungen](#migrcustext) in diesem Thema.  
   
 ###  <a name="dataprocdeliver"></a> Benutzerdefinierte datenverarbeitungs- oder übermittlungserweiterungen  
  Wenn der Upgrade Advisor benutzerdefinierte Datenverarbeitungs- oder Übermittlungserweiterungen erkennt, wird der Upgradevorgang nicht blockiert. Nach Abschluss des Upgrades müssen Sie jedoch möglicherweise weitere Schritte ausführen, damit die von diesen Erweiterungen bereitgestellte benutzerdefinierte Funktionalität verwendet werden kann. Beispielsweise müssen Sie weitere Schritte ausführen, wenn die Dateien für die benutzerdefinierten Erweiterungen im Installationsordner von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installiert sind.  
   
 ##### <a name="post-upgrade-steps-for-custom-data-processing-or-delivery-extensions"></a>Nach dem Upgrade auszuführende Schritte für benutzerdefinierte Datenverarbeitungs- oder Übermittlungserweiterungen  
   
-1.  Verschieben Sie die Erweiterungsdatei(en) in den neuen Programmordner für den Berichtsserver. Standardmäßig ist der Berichtsserverordner-Programm unter \Programme\Microsoft SQL Server\MSRS10_50. \< *Instance_name*> \report-Server.  
+1.  Verschieben Sie die Erweiterungsdatei(en) in den neuen Programmordner für den Berichtsserver. Standardmäßig ist der Berichtsserverordner-Programm unter \Programme\Microsoft SQL Server\MSRS10_50. \< *Instance_name*> \report Server.  
   
  Weitere Informationen finden Sie unter "Bereitstellen einer Datenverarbeitungserweiterung" und "Implementieren von Übermittlungserweiterungen" in der SQL Server-Onlinedokumentation.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36048452"
   
  Weitere Informationen finden Sie unter "Implementieren von Renderingerweiterungen" in der SQL Server-Onlinedokumentation.  
   
-###  <a name="secauth2000"></a> Benutzerdefinierte Sicherheits- oder authentifizierungserweiterungen auf einem Berichtsserver von SQL Server 2000  
+###  <a name="secauth2000"></a> Benutzerdefinierte Sicherheits- oder authentifizierungserweiterungen auf einem SQL Server 2000-Berichtsserver  
  Wenn der Upgrade Advisor benutzerdefinierte Sicherheits- oder Authentifizierungserweiterungen auf einem Berichtsserver von [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] erkennt, wird der Upgradevorgang blockiert. Sie müssen Schritte ausführen, um ein Upgrade zu aktivieren, oder Sie können stattdessen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] migrieren. In jedem der beiden Fälle müssen Sie die Erweiterungen anhand der aktuellen Schnittstellen in Microsoft.ReportingServices.Interfaces.dll aktualisieren und neu kompilieren, da die Schnittstellen beim Übergang von [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] zu [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] geändert wurden.  
   
 > [!IMPORTANT]  
@@ -107,7 +107,7 @@ ms.locfileid: "36048452"
   
  Wenn Sie eine benutzerdefinierte Authentifizierungserweiterung verwenden, die Sie für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] erstellt haben, müssen Sie den Quellcode so ändern, dass er die neuen Klassen und Elemente unterstützt, die für die modellgesteuerte Berichterstellung eingeführt wurden.  
   
-##### <a name="to-upgrade-custom-security-or-authentication-extensions-from-a-sql-server-2000-report-server"></a>So aktualisieren Sie benutzerdefinierte Sicherheits- oder authentifizierungserweiterungen von einem SQL Server 2000-Berichtsserver  
+##### <a name="to-upgrade-custom-security-or-authentication-extensions-from-a-sql-server-2000-report-server"></a>So aktualisieren Sie die benutzerdefinierte Sicherheits- oder authentifizierungserweiterungen von einem SQL Server 2000-Berichtsserver  
   
 1.  Aktualisieren Sie alle Sicherheits- oder Authentifizierungserweiterungen anhand der aktuellen Schnittstellen, und kompilieren Sie sie neu.  
   

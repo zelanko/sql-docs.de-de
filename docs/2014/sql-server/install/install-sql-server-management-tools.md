@@ -1,5 +1,5 @@
 ---
-title: Installieren von SQL Server-Verwaltungstools | Microsoft Docs
+title: Installieren von SQL Server-Verwaltungstools | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Tools
 ms.assetid: af68d59a-a04d-4f23-9967-ad4ee2e63381
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 27ec5095c487df430534596a3610cf1420240380
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f7bc2bac998a7624bcf010d5ade7a03a3ed778c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047542"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206570"
 ---
 # <a name="install-sql-server-management-tools"></a>Installieren der SQL Server-Verwaltungstools
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verwaltungstools gehören die folgenden Komponenten:  
@@ -40,7 +40,7 @@ ms.locfileid: "36047542"
   
  Unabhängig von der auf einem Computer installierten Anzahl von Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oder [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wird nur eine Kopie der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Verwaltungstools installiert.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Verwaltungstools können Seite-an-Seite ausführen, auf dem gleichen Computer mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verwaltungstools.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Verwaltungstools können Seite-an-Seite ausführen auf dem gleichen Computer mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verwaltungstools.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Von den Editionen von SQLServer 2014 unterstützte Funktionen](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   

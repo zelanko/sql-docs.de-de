@@ -1,5 +1,5 @@
 ---
-title: Datamining-Lernprogramme (Analysis Services) | Microsoft Docs
+title: Datamining-Lernprogramme (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], designing
 ms.assetid: 96eea930-4a4f-42d8-bf72-6c5daf1a5f09
 caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: a7a5038ce93a9f0cb6a725a9fc3833a786c3880e
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 497e3ce3b374a40c26238758cab7b03cb9835c77
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313268"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165701"
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>Data Mining-Lernprogramme (Analysis Services)
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] vereinfacht die anspruchsvolle Datamining-Lösungen zu erstellen. Die Tools in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützen Sie dabei, Data Mining-Modelle zu entwerfen, erstellen und verwalten, die entweder mit relationalen oder Cubedaten arbeiten. Sie können den Clientzugriff auf Data Mining-Modelle verwalten und Vorhersageabfragen aus mehreren Clients erstellen.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erleichtert die hochentwickelten Datamining-Lösungen zu erstellen. Die Tools in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützen Sie dabei, Data Mining-Modelle zu entwerfen, erstellen und verwalten, die entweder mit relationalen oder Cubedaten arbeiten. Sie können den Clientzugriff auf Data Mining-Modelle verwalten und Vorhersageabfragen aus mehreren Clients erstellen.  
   
  Die schrittweisen Lernprogramme in der folgenden Liste geben eine Anleitung, wie Sie [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] optimal nutzen und erweiterte Analysen ausführen können, um so Geschäftsprobleme zu lösen, für die herkömmliche Business Intelligence-Methoden nicht ausreichen.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36313268"
   
     -   Neuronale Netzwerke und logistische Regression  
   
-    -   Sequenzclustering  
+    -   Sequence clustering-  
   
      Die Lektionen sind unabhängig voneinander und können in beliebiger Reihenfolge ausgeführt werden. Grundkenntnisse im Erstellen von Datenquellen sollten vorhanden sein.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36313268"
   
 ## <a name="see-also"></a>Siehe auch  
  [Datamining-Lösungen](data-mining/data-mining-solutions.md)   
- [Microsoft SQL Server Data Mining-Ressourcen](http://go.microsoft.com/fwlink/?LinkId=97965)   
+ [Microsoft SQL Server Data Mining – Ressourcen](http://go.microsoft.com/fwlink/?LinkId=97965)   
  [Erstellen und Abfragen von Datamining-Modellen mit DMX: Lernprogramme &#40;Analysis Services – Datamining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
   

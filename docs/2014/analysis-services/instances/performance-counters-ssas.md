@@ -1,5 +1,5 @@
 ---
-title: Leistungsindikatoren (SSAS) | Microsoft Docs
+title: Leistungsindikatoren (SSAS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3e342f3b64994065f4bff728c69c6b9d43b71dbd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4061f96d79faebb2f9c61af62f1c171cb328be4e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046795"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167631"
 ---
 # <a name="performance-counters-ssas"></a>Leistungsindikatoren (SSAS)
   Mit dem Systemmonitor können Sie die Leistung einer Microsoft SQL Server Analysis Services (SSAS)-Instanz mithilfe von Leistungsindikatoren überwachen.  
@@ -185,7 +185,7 @@ ms.locfileid: "36046795"
 |Dateispeicher-Lesevorgänge/s|Dateispeicher-Seitenlesevorgänge/s|  
 |Dateispeicher-Lesevorgänge in KB/s|Dateispeicher-Lesevorgänge in KB/s|  
 |Dateispeicher-Schreibvorgänge/s|Im Dateispeicher geschriebene Seiten pro Sekunde.  Die Schreibvorgänge sind asynchron.|  
-|Dateispeicher-Schreibvorgänge in KB/s|Dateispeicher in KB/s.  Die Schreibvorgänge sind asynchron.|  
+|Dateispeicher-Schreibvorgänge in KB/s|Dateispeicher KB geschrieben/s  Die Schreibvorgänge sind asynchron.|  
 |Dateispeicher-E/A-Fehler/s|Rate der Dateispeicher-E/A-Fehler.|  
 |Dateispeicher-E/A-Fehler|Dateispeicher-E/A-Fehler gesamt.|  
 |Dateispeicher-Clockpages überprüft/s|Rate, mit der der Hintergrundbereinigungsprozess Seiten daraufhin überprüft, ob sie entfernt werden können.|  

@@ -1,5 +1,5 @@
 ---
-title: AMO anderen Klassen und Methoden | Microsoft Docs
+title: AMO andere Klassen und Methoden | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - backups [AMO]
 ms.assetid: 60ed5cfa-3a03-4161-8271-0a71a3ae363b
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 15c90d9b5c11f22af27332467d3501030a9ce7d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ff888c133491bfca9569daf08dc76e54e14d6d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049329"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180877"
 ---
 # <a name="amo-other-classes-and-methods"></a>Andere AMO-Klassen und Methoden
-  Dieser Abschnitt enthält gängige Klassen, die nicht spezifisch auf OLAP oder Datamining sind und, sind hilfreich bei der Verwaltung Verwalten von Objekten in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Diese Klassen decken Funktionen wie gespeicherte Prozeduren, Ablaufverfolgung, Ausnahmen sowie Sicherung und Wiederherstellung ab.  
+  Dieser Abschnitt enthält gängige Klassen, die nicht OLAP-oder Datamining spezifisch sind und, sind hilfreich bei der Verwaltung Verwalten von Objekten in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Diese Klassen decken Funktionen wie gespeicherte Prozeduren, Ablaufverfolgung, Ausnahmen sowie Sicherung und Wiederherstellung ab.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -40,7 +40,7 @@ ms.locfileid: "36049329"
   
 -   [Backup- und Restore-Methoden](#Backup)  
   
--   [Trace-Objekten](#Traces)  
+-   [Trace-Objekte](#Traces)  
   
 -   [CaptureLog-Klasse und CaptureXML-Attribut](#CaptureLog)  
   
@@ -53,9 +53,9 @@ ms.locfileid: "36049329"
 ##  <a name="Assembly"></a> Assemblyobjekte  
  Ein <xref:Microsoft.AnalysisServices.Assembly>-Objekt wird erstellt, indem es der Auflistung der Assemblys auf dem Server hinzugefügt und anschließend das <xref:Microsoft.AnalysisServices.Assembly>-Objekt auf dem Server mithilfe der Update-Methode aktualisiert wird.  
   
- So entfernen Sie ein <xref:Microsoft.AnalysisServices.Assembly> Objekt muss gelöscht werden, indem Sie mit der Drop-Methode, der die <xref:Microsoft.AnalysisServices.Assembly> Objekt. Durch das Entfernen eines <xref:Microsoft.AnalysisServices.Assembly>-Objekts aus der Auflistung der Assemblys der Datenbank wird die Assembly nicht gelöscht. Allerdings können Sie die Assembly erst wieder in Ihrer Anwendung anzeigen, wenn Sie diese das nächste Mal ausführen.  
+ So entfernen Sie eine <xref:Microsoft.AnalysisServices.Assembly> Objekt muss gelöscht werden, indem Sie mit der Drop-Methode, der die <xref:Microsoft.AnalysisServices.Assembly> Objekt. Durch das Entfernen eines <xref:Microsoft.AnalysisServices.Assembly>-Objekts aus der Auflistung der Assemblys der Datenbank wird die Assembly nicht gelöscht. Allerdings können Sie die Assembly erst wieder in Ihrer Anwendung anzeigen, wenn Sie diese das nächste Mal ausführen.  
   
- Weitere Informationen zu verfügbaren Methoden und Eigenschaften finden Sie unter <xref:Microsoft.AnalysisServices.Assembly> in <xref:Microsoft.AnalysisServices> .  
+ Weitere Informationen zu den Methoden und Eigenschaften zur Verfügung stehen, finden Sie unter <xref:Microsoft.AnalysisServices.Assembly> in <xref:Microsoft.AnalysisServices> .  
   
 > [!IMPORTANT]  
 >  COM-Assemblys können ein Sicherheitsrisiko darstellen. Aufgrund dieses Risikos und anderer Überlegungen wurden COM-Assemblys in [!INCLUDE[ssASversion10](../../../includes/ssasversion10-md.md)]als veraltet markiert. COM-Assemblys werden in zukünftigen Versionen möglicherweise nicht mehr unterstützt.  
@@ -113,14 +113,14 @@ ms.locfileid: "36049329"
   
 -   `Password` gibt an, dass der Server die Sicherungsdatei verschlüsselt (sofern ein bestimmter Wert festgelegt ist).  
   
-##  <a name="Traces"></a> Trace-Objekten  
+##  <a name="Traces"></a> Trace-Objekte  
  Die Ablaufverfolgung ist ein für die Überwachung, Wiedergabe und Verwaltung einer Instanz von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] verwendetes Framework. Eine Clientanwendung wie [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] abonniert eine Ablaufverfolgung, und der Server sendet Ablaufverfolgungsereignisse gemäß Ablaufverfolgungsdefinition zurück.  
   
  Jedes Ereignis wird von einer Ereignisklasse beschrieben. Die Ereignisklasse beschreibt den Typ des generierten Ereignisses. Innerhalb einer Ereignisklasse beschreiben Ereignisunterklassen eine stärker differenzierte Kategorisierung. Jedes Ereignis wird von einer Anzahl an Spalten beschrieben. Die Spalten, die ein Ablaufverfolgungsereignis beschreiben, sind für alle Ereignisse konsistent und entsprechen der SQL-Ablaufverfolgungsstruktur. Die in den einzelnen Spalten enthaltenen Informationen können je nach Ereignisklasse variieren. Ein vordefinierter Satz Spalten ist also für jede Ablaufverfolgung definiert, die Bedeutung der Spalten kann sich jedoch abhängig von der Ereignisklasse ändern. Beispielsweise wird die TextData-Spalte dazu verwendet, die ursprüngliche ASSL für alle Anweisungsereignisse aufzuzeichnen.  
   
  Eine Ablaufverfolgungsdefinition kann eine oder mehrere Ereignisklassen enthalten, die gleichzeitig verfolgt werden sollen. Für jede Ereignisklasse kann mindestens eine Datenspalte zur Ablaufverfolgungsdefinition hinzugefügt werden. Jedoch müssen nicht alle Ablaufverfolgungsspalten verwendet werden. Der Datenbankadministrator kann entscheiden, welche der verfügbaren Spalten in eine Ablaufverfolgung einbezogen werden soll. Weiterhin können Ereignisklassen auf Grundlage von Filterkriterien in einer beliebigen Spalte in der Ablaufverfolgung selektiv verfolgt werden.  
   
- Ablaufverfolgungen können gestartet und gelöscht werden. Mehrere Ablaufverfolgungen können gleichzeitig ausgeführt werden. Ablaufverfolgungsereignisse können live aufgezeichnet oder an eine Datei weitergeleitet und später analysiert und wiedergegeben werden. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]-Ablaufverfolgungsereignisse werden mit dem Tool [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] analysiert und wiedergegeben. Mehrere Verbindungen können Ereignisse aus derselben Ablaufverfolgung erhalten.  
+ Ablaufverfolgungen können gestartet und gelöscht werden. Mehrere Ablaufverfolgungen können gleichzeitig ausgeführt werden. Ablaufverfolgungsereignisse können live aufgezeichnet oder an eine Datei weitergeleitet und später analysiert und wiedergegeben werden. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]-Ablaufverfolgungsereignisse werden mit dem Tool [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] analysiert und wiedergegeben. Mehrere Verbindungen sind zulässig, um Ereignisse aus derselben Ablaufverfolgung erhalten.  
   
  Ablaufverfolgungen können in zwei Gruppen unterteilt werden: Serverablaufverfolgungen und Sitzungsablaufverfolgungen. Serverablaufverfolgungen bieten Informationen zu allen Ereignissen auf dem Server; Sitzungsablaufverfolgungen bieten nur Informationen zu Ereignissen in der aktuellen Sitzung.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "36049329"
   
  Damit Sie mit dem Aufzeichnen der XML-Elemente beginnen können, muss die CaptureXML-Serverobjekteigenschaft auf `true` festgelegt werden. Anschließend werden alle Aktionen, die an den Server gesendet werden sollen, in der CaptureLog-Klasse aufgezeichnet, ohne dass die Aktionen an den Server gesendet werden. CaptureLog kann als Klasse betrachtet werden, da es eine Methode (Clear) aufweist, die zum Löschen des Aufzeichnungsprotokolls dient.  
   
- Um das Protokoll zu lesen, rufen Sie die Zeichenfolgenauflistung ab, und beginnen Sie mit dem Durchlaufen der Zeichenfolgen. Sie können auch alle Protokolle in einer Zeichenfolge verketten, indem Sie die Serverobjektmethode ConcatenateCaptureLog verwenden. ConcatenateCaptureLog weist drei Parameter auf, von denen zwei erforderlich sind. Die erforderlichen Parameter *transaktionale*, einen Boolean-Typ und *parallele*, einen Boolean-Typ. Wenn *transaktionale* festgelegt ist, um `true`, bedeutet dies, dass die XML-Batchdatei erstellt wird, wie eine einzelne Transaktion nicht jeder Befehl als separate Transaktion behandelt. Wenn *parallele* festgelegt ist, um `true`, bedeutet dies, dass alle Befehle in der Batchdatei für die gleichzeitige Ausführung nicht sequenziell aufgezeichnet werden werden, wie sie aufgezeichnet wurden.  
+ Um das Protokoll zu lesen, rufen Sie die Zeichenfolgenauflistung ab, und beginnen Sie mit dem Durchlaufen der Zeichenfolgen. Sie können auch alle Protokolle in einer Zeichenfolge verketten, indem Sie die Serverobjektmethode ConcatenateCaptureLog verwenden. ConcatenateCaptureLog weist drei Parameter auf, von denen zwei erforderlich sind. Die erforderlichen Parameter *transaktionale*, des booleschen Typs und *parallele*, des booleschen Typs. Wenn *transaktionale* nastaven NA hodnotu `true`, bedeutet dies, dass die XML-Batchdatei erstellt wird, wie eine einzelne Transaktion nicht jeder Befehl als separate Transaktion behandelt. Wenn *parallele* nastaven NA hodnotu `true`, bedeutet dies, dass alle Befehle in der Batchdatei für die gleichzeitige Ausführung nicht sequenziell aufgezeichnet werden werden, wie sie aufgezeichnet wurden.  
   
 ##  <a name="AMO"></a> AMOException-Ausnahmeklasse  
  Sie können die AMOException-Ausnahmeklasse verwenden, um Ausnahmen in Ihrer Anwendung, die von AMO ausgegeben werden, einfach abzufangen.  

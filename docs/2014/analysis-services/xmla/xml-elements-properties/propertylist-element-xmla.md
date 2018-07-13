@@ -1,5 +1,5 @@
 ---
-title: PropertyList-Element (XMLA) | Microsoft Docs
+title: PropertyList-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - PropertyList element
 ms.assetid: 58e63bd9-8aac-438d-adba-1868b4d123f5
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 4b49ad0cf03ce331a00a7eefc9f1302176d89e74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 6b3fdd7f6d59ef6a2523bada292dfb2b8f17a4a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047263"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323040"
 ---
 # <a name="propertylist-element-xmla"></a>PropertyList-Element (XMLA)
-  Enthält eine Auflistung von XML für Analysis (XMLA)-Eigenschaften, die verwendet werden, indem Sie die [Discover](../xml-elements-methods-discover.md) und [Execute](../xml-elements-methods-execute.md) Methoden.  
+  Enthält eine Auflistung von XML für Analysis (XMLA) Eigenschaften ein, die die [Discover](../xml-elements-methods-discover.md) und [Execute](../xml-elements-methods-execute.md) Methoden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -66,9 +66,9 @@ ms.locfileid: "36047263"
 ## <a name="remarks"></a>Hinweise  
  Die `PropertyList` Element enthält eine Auflistung von XMLA-Eigenschaften. Jede Eigenschaft ermöglicht dem Benutzer, einige Aspekte der `Discover`-Methode und der `Execute`-Methode zu steuern. Dazu gehört das Definieren von Informationen, die für die Verbindung mit der Datenquelle erforderlich sind, das Angeben des Rückgabeformats des Resultsets oder das Angeben des Gebietsschemas, für das die Daten formatiert werden sollen. Jede XMLA-Eigenschaft in der `PropertyList` -Element wird durch ein separates XML-Element definiert. Beim Wert der XMLA-Eigenschaft handelt es sich um die Daten, die im XML-Element enthalten sind. Der Name der XMLA-Eigenschaft entspricht dem Namen des XML-Elements.  
   
- Die verfügbaren Eigenschaften und ihre Werte können mithilfe des Anforderungstyps DISCOVER_PROPERTIES mit abgerufen werden die `Discover` Methode. Es gibt keine erforderliche Reihenfolge für die im `PropertyList`-Element aufgelisteten Eigenschaften.  
+ Die verfügbaren Eigenschaften und deren Werte erhalten Sie mithilfe des Anforderungstyps DISCOVER_PROPERTIES mit der `Discover` Methode. Es gibt keine erforderliche Reihenfolge für die im `PropertyList`-Element aufgelisteten Eigenschaften.  
   
- Weitere Informationen zu den XMLA-Eigenschaften, die von unterstützt [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], finden Sie unter [XMLA-Eigenschaften unterstützt &#40;XMLA&#41;](propertylist-element-supported-xmla-properties.md).  
+ Weitere Informationen zu den XMLA-Eigenschaften, die von unterstützt [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], finden Sie unter [unterstützte XMLA-Eigenschaften &#40;XMLA&#41;](propertylist-element-supported-xmla-properties.md).  
   
 ## <a name="example"></a>Beispiel  
   

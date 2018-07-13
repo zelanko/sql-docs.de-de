@@ -1,5 +1,5 @@
 ---
-title: Properties-Element (XMLA) | Microsoft Docs
+title: Properties-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -25,18 +25,18 @@ helpviewer_keywords:
 - Properties element
 ms.assetid: 0b5468e5-bf23-4d22-862f-72e27a9fff2f
 caps.latest.revision: 30
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 66accb9aab2c970c1fd09b1e14408b5585269d7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 99cb1b43ad7629fd87759d5ea724e068319152b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048139"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237230"
 ---
 # <a name="properties-element-xmla"></a>Properties-Element (XMLA)
-  Enthält XML für Analysis (XMAL)-Eigenschaften, die verwendet werden, indem Sie die [Discover](../xml-elements-methods-discover.md) und [Execute](../xml-elements-methods-execute.md) Methoden.  
+  Enthält XML-Code für die Eigenschaften des Analysis (XMAL) ein, die die [Discover](../xml-elements-methods-discover.md) und [Execute](../xml-elements-methods-execute.md) Methoden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -63,13 +63,13 @@ ms.locfileid: "36048139"
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|[Ermitteln](../xml-elements-methods-discover.md), [ausführen](../xml-elements-methods-execute.md)|  
+|Übergeordnete Elemente|[Entdecken Sie](../xml-elements-methods-discover.md), [ausführen](../xml-elements-methods-execute.md)|  
 |Untergeordnete Elemente|[PropertyList](propertylist-element-xmla.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `Properties` -Element repräsentiert XMLA-Eigenschaften, die zur Steuerung der Aspekte der `Discover` und `Execute` Methoden, wie z. B. das Definieren von Informationen, die für die Verbindung zum Angeben des rückgabeformats des Resultsets oder das Angeben der Datenquelle erforderlich sind das Gebietsschema, in dem die Daten formatiert werden soll.  
+ Die `Properties` -Element stellt dar, XMLA-Eigenschaften, um Aspekte der steuern die `Discover` und `Execute` Methoden, z. B. das Definieren von Informationen, die für die Verbindung zum Angeben des rückgabeformats des Resultsets oder das Angeben der Datenquelle erforderlich sind das Gebietsschema, in dem die Daten formatiert werden soll.  
   
- Die verfügbaren Eigenschaften und ihre Werte können mithilfe des Anforderungstyps DISCOVER_PROPERTIES mit abgerufen werden die `Discover` Methode.  
+ Die verfügbaren Eigenschaften und deren Werte erhalten Sie mithilfe des Anforderungstyps DISCOVER_PROPERTIES mit der `Discover` Methode.  
   
 ## <a name="example"></a>Beispiel  
   

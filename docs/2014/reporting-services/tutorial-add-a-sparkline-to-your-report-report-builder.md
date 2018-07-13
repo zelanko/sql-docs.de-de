@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7051dfeda3af9e4bc8de42eaee7f1b52c92589d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: f4e61e4ce1c3db29354657f4eb6e3e6c746d7f3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050048"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214500"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator)
   In diesem Lernprogramm erstellen Sie auf Grundlage der Beispielumsatzdaten einen einfachen Tabellenbericht und fügen anschließend einer Zelle in der Tabelle ein Sparklinediagramm hinzu.  
@@ -33,13 +33,13 @@ ms.locfileid: "36050048"
 ##  <a name="BackToTop"></a> Lernziele  
  In diesem Lernprogramm lernen Sie Folgendes:  
   
- 1. [Erstellen eines Berichts mit einer Tabelle](#CreateTable)  
+ 1. [Erstellen Sie einen Bericht mit einer Tabelle](#CreateTable)  
   
  2. [Erstellen Sie eine Abfrage in der Tabelle oder Matrix-Assistenten](#Query)  
   
  3. [Hinzufügen einer Sparklines zur Tabelle](#Sparkline)  
   
- 4. [Vertikal und horizontal ausrichten der Sparklines](#AlignSparklines)  
+ 4. [Vertikales und Horizontales Ausrichten der Sparklines](#AlignSparklines)  
   
 ### <a name="other-optional-steps"></a>Weitere optionale Schritte  
  5. [Formatieren von Daten als Währung](#FormatCurrency)  
@@ -50,7 +50,7 @@ ms.locfileid: "36050048"
   
  8. [Hinzufügen eines Berichtstitels](#Title)  
   
- 9. [Speichern Sie den Bericht](#Save)  
+ 9. [Speichern des Berichts](#Save)  
   
  Geschätzte Zeit zum Bearbeiten dieses Lernprogramms: 30 Minuten  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36050048"
      Die **Einstieg** Dialogfeld wird geöffnet.  
   
     > [!NOTE]  
-    >  Wenn die **Einstieg** Dialogfeld nicht angezeigt wird, aus der **Berichts-Generator** Schaltfläche, klicken Sie auf **neu**.  
+    >  Wenn die **Einstieg** Dialogfeld nicht angezeigt wird, aus der **Berichts-Generator** , zeigen Sie auf **neu**.  
   
 2.  Vergewissern Sie sich, dass im linken Bereich **Neuer Bericht** ausgewählt ist.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36050048"
   
      **Datenquelle =\<Servername >**  
   
-     Der Ausdruck \<Servername > für Beispiel Report001, bezeichnet einen Computer, die auf dem eine Instanz des SQL Server-Datenbankmoduls installiert ist. Da die Berichtsdaten nicht aus einer SQL Server-Datenbank extrahiert werden, muss der Name einer Datenbank nicht eingeschlossen werden. Die Standarddatenbank auf dem angegebenen Server wird verwendet, um die Abfrage zu analysieren.  
+     Der Ausdruck \<Servername >, z.B. Report001, bezeichnet einen Computer, auf dem eine Instanz von SQL Server-Datenbankmoduls installiert ist. Da die Berichtsdaten nicht aus einer SQL Server-Datenbank extrahiert werden, muss der Name einer Datenbank nicht eingeschlossen werden. Die Standarddatenbank auf dem angegebenen Server wird verwendet, um die Abfrage zu analysieren.  
   
 9. Klicken Sie auf **Anmeldeinformationen**. Geben Sie die für den Zugriff auf die externe Datenquelle benötigten Anmeldeinformationen ein.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "36050048"
   
      Die Werte im Feld **Sales** sind nun die Werte für die Sparkline.  
   
-8.  Klicken Sie auf das Pluszeichen (+) kategoriegruppenfeld anzumelden, und klicken Sie dann auf **"salesdate"**.  
+8.  Klicken Sie auf das Pluszeichen (+), melden Sie sich kategoriegruppenfeld, und klicken Sie dann auf **"salesdate"**.  
   
 9. Klicken Sie auf **Ausführen** , um den Bericht in der Vorschau anzuzeigen.  
   
@@ -254,11 +254,11 @@ ms.locfileid: "36050048"
   
 1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zu wechseln.  
   
-2.  Klicken Sie auf die Zelle in der zweiten Zeile (unter der Zeile der Spaltenüberschriften) in der **"salesdate"** Spalte, und ziehen Sie, um alle Zellen auszuwählen, die enthalten `[Sum(Sales)]`.  
+2.  Klicken Sie auf die Zelle in der zweiten Zeile (unter der Zeile mit den Spaltenüberschriften) in der **"salesdate"** Spalte, und ziehen Sie, um alle Zellen auszuwählen, die enthalten `[Sum(Sales)]`.  
   
 3.  Klicken Sie auf der Registerkarte **Stamm** in der Gruppe **Zahl** auf die Schaltfläche **Währung** . Die Zellen ändern sich, um die formatierte Währung anzuzeigen.  
   
-     Wenn Sie das Gebietsschema „Deutsch (Deutschland)“ verwenden, lautet der Standardbeispieltext [**12,345.00€**]. Wenn Sie kein beispielwährungswert sehen, klicken Sie auf **Platzhalterformate** in der **Zahlen** Gruppe, und klicken Sie dann auf **Beispielwerte**.  
+     Wenn Sie das Gebietsschema „Deutsch (Deutschland)“ verwenden, lautet der Standardbeispieltext [**12,345.00€**]. Wenn Sie kein beispielwährungswert angezeigt werden, klicken Sie auf **Platzhalterformate** in die **Zahlen** gruppieren, und klicken Sie dann auf **Beispielwerte**.  
   
 4.  Klicken Sie auf **Ausführen** , um den Bericht in der Vorschau anzuzeigen.  
   
@@ -273,13 +273,13 @@ ms.locfileid: "36050048"
   
 2.  Klicken Sie auf die Zelle, die `[SalesDate]`enthält.  
   
-3.  Auf dem Menüband auf die **Home** Registerkarte die **Anzahl** Gruppe, aus der Dropdown-Liste, wählen **Datum**.  
+3.  Auf dem Menüband auf die **Startseite** Registerkarte die **Anzahl** Gruppe wählen Sie in der Dropdown-Liste **Datum**.  
   
      In der Zelle wird das Beispieldatum **[31.01.2000]** angezeigt. Falls kein Beispieldatum angezeigt wird, klicken Sie in der Gruppe **Zahlen** auf **Platzhalterformate** und anschließend auf **Beispielwerte**.  
   
 4.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
- Die **"salesdate"** Werte werden im Standarddatumsformat angezeigt.  
+ Die **"salesdate"** -Werte werden im Standarddatumsformat angezeigt.  
   
 ##  <a name="Width"></a> 7. Ändern der Spaltenbreite (optional)  
  Standardmäßig enthält jede Zelle in einer Tabelle ein Textfeld. Textfelder werden beim Rendern der Seite entsprechend dem anzuzeigenden Text vertikal erweitert. Im gerenderten Bericht werden alle Zeilen auf die Höhe des größten gerenderten Textfelds in der Zeile vergrößert. Die Höhe der Zeile auf der Entwurfsoberfläche hat keinen Einfluss auf die Höhe der Zeile im gerenderten Bericht.  

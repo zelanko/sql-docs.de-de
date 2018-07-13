@@ -1,5 +1,5 @@
 ---
-title: Zugriff auf die Berichtsserver-Webdienst mit Visual Basic oder Visual c# (SSRS-Lernprogramm) | Microsoft Docs
+title: Zugreifen auf die Berichtsserver-Webdienst mit Visual Basic oder Visual c# (SSRS-Tutorial) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -17,23 +17,23 @@ helpviewer_keywords:
 - Web service [Reporting Services], tutorials
 ms.assetid: cf688163-4ac0-475b-b6dd-6f2f05b553c6
 caps.latest.revision: 45
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7fc7e1ab0e855bd9ddd208b295cf3a10d44dfce7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a4e8ca9dc1a2213a4f95617dcd54951cfc4b9041
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047735"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220525"
 ---
 # <a name="accessing-the-report-server-web-service-using-visual-basic-or-visual-c-ssrs-tutorial"></a>Zugreifen auf den Berichtsserver-Webdienst mithilfe von Visual Basic oder Visual C# (SSRS-Lernprogramm)
-  Im folgenden Lernprogramm erfahren Sie, wie eine Anwendung erstellt, mit der Berichtsserver-Webdienst zuzugreifen [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] oder [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)].  
+  Im folgende Tutorial erfahren Sie, wie Sie eine Anwendung erstellt, mit der Berichtsserver-Webdienst zugreifen [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] oder [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)].  
   
 ## <a name="what-you-will-learn"></a>Lernziele  
  Im Rahmen dieses Lernprogramms führen Sie die folgenden Aufgaben aus:  
   
--   Erstellen Sie eine Client-Anwendung mit der [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] Konsolenanwendung-Projektvorlage.  
+-   Erstellen einer Clientanwendung, von der [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] Konsolenanwendung-Projektvorlage.  
   
 -   Hinzufügen eines Webverweises für den Berichtsserver-Webdienst.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36047735"
 > [!NOTE]  
 >  Die Beispiele werden nicht automatisch beim Setup installiert. Sie können sie jedoch jederzeit installieren. Weitere Informationen zu Beispielen finden Sie unter [SQL Server Product Samples](http://go.microsoft.com/fwlink/?LinkId=182887).  
   
- **Ungefähre Dauer dieses Lernprogramms:** 60 Minuten  
+ **Ungefähre Dauer dieses Tutorials:** 60 Minuten  
   
 ## <a name="tasks"></a>Aufgaben  
  [Lektion 1: Erstellen des Webdienst-Clientprojekts](../../2014/tutorials/lesson-1-creating-the-web-service-client-project.md)  

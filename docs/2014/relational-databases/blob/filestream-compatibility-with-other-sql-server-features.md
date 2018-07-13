@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], other SQL Server features and
 - FILESTREAM [SQL Server], limitations
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: be0912f1da8e17d5fbd1723595e845393e94cf41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1fce4632ddcee1ed29ce8a06ee5efc631f8ce1f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049026"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175779"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM-Kompatibilität mit anderen SQL Server-Funktionen
   Da sich die FILESTREAM-Daten im Dateisystem befinden, werden in diesem Thema Informationen, Richtlinien und Einschränkungen in Bezug auf die Verwendung von FILESTREAM mit den folgenden Funktionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]beschrieben.  
@@ -55,7 +54,7 @@ ms.locfileid: "36049026"
  Sie können die Transformation für das Importieren von Spalten verwenden, um Dateien aus dem Dateisystem in eine FILESTREAM-Spalte zu laden. Sie können auch die Transformation für das Exportieren von Spalten verwenden, um Dateien aus einer FILESTREAM-Spalte in einen anderen Speicherplatz im Dateisystem zu extrahieren.  
   
 ##  <a name="distqueries"></a> Verteilte Abfragen und Verbindungsserver  
- Sie können mit FILESTREAM-Daten durch verteilte Abfragen und Verbindungsservern arbeiten, Konzept, indem er als `varbinary(max)` Daten. Sie können die FILESTREAM-Funktion **PathName()** nicht in verteilten Abfragen nutzen, bei denen ein vierteiliger Name verwendet wird. Dies gilt auch, wenn der Name auf einen lokalen Server verweist. Sie können **PathName()** jedoch in der inneren Abfrage einer Pass-Through-Abfrage nutzen, bei der **OPENQUERY()** verwendet wird.  
+ Sie können mit FILESTREAM-Daten über verteilte Abfragen und Verbindungsservern arbeiten, indem es als behandelt `varbinary(max)` Daten. Sie können die FILESTREAM-Funktion **PathName()** nicht in verteilten Abfragen nutzen, bei denen ein vierteiliger Name verwendet wird. Dies gilt auch, wenn der Name auf einen lokalen Server verweist. Sie können **PathName()** jedoch in der inneren Abfrage einer Pass-Through-Abfrage nutzen, bei der **OPENQUERY()** verwendet wird.  
   
 ##  <a name="encryption"></a> Verschlüsselung  
  FILESTREAM-Daten werden nicht verschlüsselt, auch dann nicht, wenn die transparente Datenverschlüsselung aktiviert ist.  
@@ -70,7 +69,7 @@ ms.locfileid: "36049026"
  `Could not continue scan with NOLOCK due to data movement.`  
   
 ##  <a name="Replication"></a> Replication  
- Eine `varbinary(max)`-Spalte, für die das FILESTREAM-Attribut auf dem Verleger aktiviert ist, kann für einen Abonnenten mit oder ohne FILESTREAM-Attribut repliziert werden. Verwenden Sie das Dialogfeld **Artikeleigenschaften - \<Artikel>** oder den @schema_option-Parameter von [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) oder [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), um die Methode für die Replikation der Spalte anzugeben. Daten, die in einer `varbinary(max)`-Spalte ohne FILESTREAM-Attribute repliziert werden, dürfen den 2 GB-Grenzwert für diesen Datentyp nicht überschreiten, da anderenfalls ein Laufzeitfehler ausgelöst wird. Es wird empfohlen, dass Sie das FILESTREAM-Attribut replizieren, wenn Sie Daten zu replizieren [!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)] -Abonnenten wird unabhängig von der Schemaoption, die angegeben wird, wird nicht unterstützt.  
+ Eine `varbinary(max)`-Spalte, für die das FILESTREAM-Attribut auf dem Verleger aktiviert ist, kann für einen Abonnenten mit oder ohne FILESTREAM-Attribut repliziert werden. Verwenden Sie das Dialogfeld **Artikeleigenschaften - \<Artikel>** oder den @schema_option-Parameter von [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) oder [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), um die Methode für die Replikation der Spalte anzugeben. Daten, die in einer `varbinary(max)`-Spalte ohne FILESTREAM-Attribute repliziert werden, dürfen den 2 GB-Grenzwert für diesen Datentyp nicht überschreiten, da anderenfalls ein Laufzeitfehler ausgelöst wird. Es wird empfohlen, dass Sie das FILESTREAM-Attribut replizieren, wenn Sie Daten replizieren [!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)] Abonnenten nicht unterstützt wird, unabhängig von der Schemaoption, die angegeben wird.  
   
 > [!NOTE]  
 >  Das Replizieren von großen Datenwerten von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nach [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] -Abonnenten ist auf maximal 256 MB beschränkt. Weitere Informationen finden Sie unter [Maximum Capacity Specifications](http://go.microsoft.com/fwlink/?LinkId=103810).  
@@ -82,7 +81,7 @@ ms.locfileid: "36049026"
   
 -   Die max text repl size-Option gibt die maximale Datenmenge an, die in eine Spalte eingefügt werden kann, die zur Replikation veröffentlicht wird. Diese Option kann verwendet werden, um die Größe von FILESTREAM-Daten zu kontrollieren, die repliziert werden.  
   
--   Wenn Sie angeben, dass die Schemaoption auf die FILESTREAM-Attribut replizieren, aber Sie herausfiltern, die `uniqueidentifier` Spalte, die FILESTREAM erfordert oder Sie angeben, dass die UNIQUE-Einschränkung für die Spalte zu replizieren, die FILESTREAM wird von der Replikation nicht repliziert Das Attribut. Die Spalte wird nur als `varbinary(max)`-Spalte repliziert.  
+-   Wenn Sie angeben, dass die Schemaoption auf die FILESTREAM-Attribut replizieren, aber Sie herausfiltern der `uniqueidentifier` Spalte, die FILESTREAM erfordert oder Sie angeben, dass die UNIQUE-Einschränkung für die Spalte zu replizieren, die FILESTREAM wird von der Replikation nicht repliziert -Attribut. Die Spalte wird nur als `varbinary(max)`-Spalte repliziert.  
   
 ### <a name="considerations-for-merge-replication"></a>Überlegungen hinsichtlich der Mergereplikation  
  Wenn Sie FILESTREAM-Spalten in Tabellen verwenden, die zur Mergereplikation veröffentlicht werden, beachten Sie Folgendes:  
@@ -93,7 +92,7 @@ ms.locfileid: "36049026"
   
          Wenn Sie eine UNIQUE-Einschränkung manuell wie beschrieben hinzufügen und die Mergereplikation entfernen möchten, müssen Sie zuerst die UNIQUE-Einschränkung entfernen, da die Replikation ansonsten nicht entfernt wird.  
   
-    -   Standardmäßig verwendet die Mergereplikation NEWSEQUENTIALID(), da ihre Leistungsfähigkeit gegenüber NEWID() höher ist. Wenn Sie beim Hinzufügen einer `uniqueidentifier` -Spalte einer Tabelle, die für die Mergereplikation veröffentlicht werden soll, geben Sie NEWSEQUENTIALID() als Standardwert.  
+    -   Standardmäßig verwendet die Mergereplikation NEWSEQUENTIALID(), da ihre Leistungsfähigkeit gegenüber NEWID() höher ist. Wenn Sie beim Hinzufügen einer `uniqueidentifier` Spalte einer Tabelle, die für die Mergereplikation veröffentlicht wird, geben Sie NEWSEQUENTIALID() als Standardwert.  
   
 -   Die Mergereplikation schließt eine Optimierung zum Replizieren von Typen großer Objekte ein. Diese Optimierung wird durch den @stream_blob_columns-Parameter von [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) gesteuert. Wenn Sie die Schemaoption auf die Replikation des FILESTREAM-Attributs festlegen, wird der Wert des @stream_blob_columns-Parameters auf `true` festgelegt. Diese Optimierung kann mit [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)überschrieben werden. Mit dieser gespeicherten Prozedur können Sie @stream_blob_columns auf `false` festlegen. Wenn Sie eine FILESTREAM-Spalte einer Tabelle hinzufügen, die bereits für die Mergereplikation veröffentlicht wurde, sollten Sie die Option mit sp_changemergearticle auf `true` festlegen.  
   
@@ -108,7 +107,7 @@ ms.locfileid: "36049026"
  FILESTREAM wird von der Datenbankspiegelung nicht unterstützt. Eine FILESTREAM-Dateigruppe kann nicht auf dem Prinzipalserver erstellt werden. Die Datenbankspiegelung kann nicht für eine Datenbank konfiguriert werden, die FILESTREAM-Dateigruppen enthält.  
   
 ##  <a name="FullText"></a> Volltextindizierung  
- [Volltextindizierung](../indexes/indexes.md) arbeitet mit einer FILESTREAM-Spalte, auf die gleiche Weise, die bei einem `varbinary(max)` Spalte. Die FILESTREAM-Tabelle muss eine Spalte aufweisen, die die Dateinamenerweiterung für jeden FILESTREAM BLOB enthält. Weitere Informationen finden Sie unter [Abfragen mit Volltextsuche](../search/query-with-full-text-search.md),[Konfigurieren und Verwalten von Filtern für die Suche](../search/configure-and-manage-filters-for-search.md) und [sys.fulltext_document_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql).  
+ [Volltextindizierung](../indexes/indexes.md) arbeitet mit einer FILESTREAM-Spalte, auf die gleiche Weise, die mit einem `varbinary(max)` Spalte. Die FILESTREAM-Tabelle muss eine Spalte aufweisen, die die Dateinamenerweiterung für jeden FILESTREAM BLOB enthält. Weitere Informationen finden Sie unter [Abfragen mit Volltextsuche](../search/query-with-full-text-search.md),[Konfigurieren und Verwalten von Filtern für die Suche](../search/configure-and-manage-filters-for-search.md) und [sys.fulltext_document_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql).  
   
  Die Volltext-Engine indiziert den Inhalt der FILESTREAM-BLOBs. Dateien wie beispielsweise Images zu indizieren, ist möglicherweise nicht nützlich. Wenn ein FILESTREAM BLOB aktualisiert wird, wird er neu indiziert.  
   

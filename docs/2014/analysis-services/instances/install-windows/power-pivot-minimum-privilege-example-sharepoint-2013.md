@@ -1,5 +1,5 @@
 ---
-title: Beispiel einer Mindestberechtigungen Konfiguration für PowerPivot für SharePoint 2013 | Microsoft Docs
+title: Beispiel für eine Konfiguration mit Mindestberechtigungen für PowerPivot für SharePoint 2013 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c1e09e6c-52d3-48ab-8c70-818d5d775087
 caps.latest.revision: 7
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 2bc19d704534c36aebcef3618a2c6fc8dfe7ab04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: ec782dab7b86b17f06a22bebf2e8549a08a55085
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048632"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200340"
 ---
-# <a name="example-of-a-minimum-privilege-configuration-for-powerpivot-for-sharepoint-2013"></a>Beispiel einer Mindestberechtigungen Konfiguration für PowerPivot für SharePoint 2013
+# <a name="example-of-a-minimum-privilege-configuration-for-powerpivot-for-sharepoint-2013"></a>Beispiel für eine Konfiguration mit Mindestberechtigungen für PowerPivot für SharePoint 2013
   In diesem Thema wird eine PowerPivot für SharePoint 2013-Konfiguration mit Mindestberechtigungen anhand eines Beispiels veranschaulicht. Bei der Konfiguration wird für jede der drei Komponenten ein anderes Konto verwendet, von denen jedes über Mindestberechtigungen verfügt.  
   
 ## <a name="summary-of-accounts"></a>Übersicht der Konten  
- PowerPivot für SharePoint 2013 unterstützt die Verwendung des Netzwerkdienstkontos für das Analysis Services-Dienstkonto. Das Netzwerkdienstkonto ist kein unterstütztes Szenario unter SharePoint 2010. Weitere Informationen zu Dienstkonten finden Sie unter [Konfigurieren von Windows-Dienstkonten und-Berechtigungen](http://msdn.microsoft.com/library/ms143504.aspx) (http://msdn.microsoft.com/library/ms143504.aspx).  
+ PowerPivot für SharePoint 2013 unterstützt die Verwendung des Netzwerkdienstkontos für das Analysis Services-Dienstkonto. Das Netzwerkdienstkonto ist kein unterstütztes Szenario unter SharePoint 2010. Weitere Informationen zu Dienstkonten finden Sie unter [konfigurieren Windows-Dienstkonten und-Berechtigungen](http://msdn.microsoft.com/library/ms143504.aspx) (http://msdn.microsoft.com/library/ms143504.aspx).  
   
  In der folgenden Tabelle werden die Eigenschaften der drei Konten zusammengefasst, die in diesem Beispiel für eine Konfiguration mit Mindestberechtigungen verwendet werden.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "36048632"
 |Analysis Services-Dienstkonto|**SPsvc**|  
   
 ### <a name="the-sharepoint-administrator-account-spadmin"></a>Das SharePoint-Administratorkonto (SpAdmin)  
- **SPAdmin** ist ein Domänenkonto, das Sie zum Installieren und Konfigurieren der Farm verwenden. Wird für das Konto zum Ausführen der SharePoint-Konfigurations-Assistenten und das PowerPivot-Konfigurationstool für SharePoint 2013 **SPAdmin** Konto ist das einzige Konto, das lokale Administratorrechte erforderlich sind. Bevor Sie das PowerPivot-Konfigurationstool ausführen, gewähren Sie dem **SPAdmin** -Konto Berechtigungen für die SQL Server-Datenbankinstanz, in dem SharePoint Inhalts- und Konfigurationsdatenbanken einrichtet erstellt. Damit Sie das SPAdmin-Konto in einem Szenario mit Mindestberechtigungen konfigurieren können, muss es Mitglied in den Rollen **securityadmin** und **dbcreator**sein.  
+ **SPAdmin** ist ein Domänenkonto, das Sie zum Installieren und Konfigurieren der Farm verwenden. Konto zum Ausführen von den SharePoint-Konfigurations-Assistenten und das PowerPivot-Konfigurationstool für SharePoint 2013 **SPAdmin** Konto ist das einzige Konto, das lokale Administratorrechte erforderlich sind. Vor dem Ausführen des PowerPivot-Konfigurationstools, die **SPAdmin** -Konto Berechtigungen für die SQL Server-Datenbankinstanz, auf SharePoint Inhalts- und Konfigurationsdatenbanken einrichtet. Damit Sie das SPAdmin-Konto in einem Szenario mit Mindestberechtigungen konfigurieren können, muss es Mitglied in den Rollen **securityadmin** und **dbcreator**sein.  
   
 ### <a name="the-farm-account-spfarm"></a>Das Farmkonto (SPFarm)  
  **SPFarm** ist ein Domänenkonto, das der SharePoint-Timerdienst und die Webanwendung der Zentraladministration für den Zugriff auf die SharePoint-Inhaltsdatenbank verwenden. Dieses Konto muss nicht als lokaler Administrator eingerichtet sein. Der SharePoint-Konfigurations-Assistent gewährt die entsprechenden Mindestberechtigungen in der SQL Server-Back-End-Datenbank. Die Mindestberechtigung für die SQL Server-Konfiguration ist die Mitgliedschaft in den Rollen **securityadmin** und **dbcreator**.  

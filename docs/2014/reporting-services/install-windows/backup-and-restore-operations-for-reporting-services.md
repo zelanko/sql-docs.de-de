@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - databases [Reporting Services], backing up
 - databases [Reporting Services], restoring
@@ -22,13 +22,13 @@ ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: f1aeefdec4f85e106c503174f9143757f41cae36
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4a9dab1a33be25bc730409c356f44f7cb191749d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048003"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206720"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Sicherungs- und Wiederherstellungsvorgänge für Reporting Services
   Dieses Thema bietet eine Übersicht über alle Datendateien, die in einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Installation verwendet werden. Zudem wird beschrieben, wann und auf welche Weise Sicherungskopien für die Dateien erstellt werden sollten. Das Entwickeln eines Sicherungs- und Wiederherstellungsplans für die Berichtsserver-Datenbankdateien stellt den wichtigsten Teil einer Wiederherstellungsstrategie dar. Eine umfassendere Wiederherstellungsstrategie würde jedoch Sicherungen der Verschlüsselungsschlüssel, der benutzerdefinierten Assemblys oder Erweiterungen, der Konfigurationsdateien und der Quelldateien für Berichte und Modelle einschließen.  
@@ -62,7 +62,7 @@ ms.locfileid: "36048003"
 >  Wenn sich der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Berichtsserver im SharePoint-Modus befindet, muss er mit zusätzlichen Datenbanken verbunden werden, u. a. den SharePoint-Konfigurationsdatenbanken und der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Warnungsdatenbank. Im SharePoint-Modus werden drei Datenbanken für jede [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung erstellt: **reportserver**, **reportservertempdb**und **dataalerting** . Weitere Informationen finden Sie unter [Backup- und Restore Reporting Services SharePoint-Dienstanwendungen](../backup-and-restore-reporting-services-sharepoint-service-applications.md)  
   
 ## <a name="backing-up-the-encryption-keys"></a>Sichern der Verschlüsselungsschlüssel  
- Sie sollten die Verschlüsselungsschlüssel sichern, wenn Sie eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Installation zum ersten Mal konfigurieren. Sie sollen die Schlüssel zudem jedes Mal sichern, wenn Sie die Identität der Dienstkonten ändern oder den Computer umbenennen. Weitere Informationen finden Sie unter [Back Up and Restore Reporting Services Encryption Keys](ssrs-encryption-keys-back-up-and-restore-encryption-keys.md). Für Berichtsserver im SharePoint-Modus finden Sie im Abschnitt "Schlüsselverwaltung" von [Verwalten einer Reporting Services SharePoint-Dienstanwendung](../manage-a-reporting-services-sharepoint-service-application.md).  
+ Sie sollten die Verschlüsselungsschlüssel sichern, wenn Sie eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Installation zum ersten Mal konfigurieren. Sie sollen die Schlüssel zudem jedes Mal sichern, wenn Sie die Identität der Dienstkonten ändern oder den Computer umbenennen. Weitere Informationen finden Sie unter [Back Up and Restore Reporting Services Encryption Keys](ssrs-encryption-keys-back-up-and-restore-encryption-keys.md). Für Berichtsserver im SharePoint-Modus finden Sie im Abschnitt "Schlüsselverwaltung" [Verwalten einer Reporting Services SharePoint-Dienstanwendung](../manage-a-reporting-services-sharepoint-service-application.md).  
   
 ## <a name="backing-up-the-configuration-files"></a>Sichern der Konfigurationsdateien  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden Anwendungseinstellungen in Konfigurationsdateien gespeichert. Sie sollten die Dateien sichern, wenn Sie den Server erstmalig konfigurieren und nachdem Sie benutzerdefinierte Erweiterungen bereitgestellt haben. Folgende Dateien müssen gesichert werden:  
@@ -87,7 +87,7 @@ ms.locfileid: "36048003"
  Stellen Sie sicher, dass Sie eine Sicherungskopie aller verwendeten benutzerdefinierten Erweiterungen und benutzerdefinierten Assemblys haben.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Berichtsserver-Datenbank &#40;SSRS im einheitlichen Modus&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
+ [Berichtsserver-Datenbank &#40;einheitlicher SSRS-Modus&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
  [Reporting Services-Konfigurationsdateien](../report-server/reporting-services-configuration-files.md)   
  [RSKEYMGMT-Hilfsprogramm &#40;SSRS&#41;](../tools/rskeymgmt-utility-ssrs.md)   
  [Kopieren von Datenbanken durch Sichern und Wiederherstellen](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   

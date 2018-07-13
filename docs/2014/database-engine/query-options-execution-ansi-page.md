@@ -1,5 +1,5 @@
 ---
-title: Abfrageoptionen, Ausführung (Seite ANSI) | Microsoft Docs
+title: Abfrageoptionen Ausführung (Seite "ANSI") | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.ansi.f1
 ms.assetid: c90d7cdf-3309-46f4-b900-220521bb9552
 caps.latest.revision: 23
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 41c8957ebd2dfb77b13803945c210d6a09f1e874
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7e3c070c8054378aeae2e3be8e6a2a237c4c3b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047254"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252652"
 ---
 # <a name="query-options-execution-ansi-page"></a>Abfrageausführung (Seite ANSI)
   Mithilfe dieser Seite können Sie festlegen, dass [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Abfragen mithilfe aller oder eines Teils der im ISO-Standard (ANSI) angegebenen Einstellungen ausführt.  
@@ -57,7 +57,7 @@ ms.locfileid: "36047254"
  **SET ANSI_NULLS**  
  Gibt an, dass sich der Gleichheitsoperator (`=`) und der Ungleichheitsoperator (`<>`) bei Verwendung mit NULL-Werten ISO-konform verhalten müssen. Wenn **SET ANSI_NULLS** ausgewählt ist, werden alle Vergleiche mit einem NULL-Wert in Übereinstimmung mit dem Verhalten nach ISO als UNKNOWN ausgewertet. Wenn **SET ANSI_NULLS** nicht ausgewählt ist, werden alle Datenvergleiche mit einem NULL-Wert als TRUE ausgewertet, falls der Datenwert NULL ist. Diese Option ist standardmäßig aktiviert.  
   
- **Standard wiederherstellen**  
+ **Auf Standard zurücksetzen**  
  Setzt alle auf dieser Seite verfügbaren Werte auf die ursprünglichen Standardwerte zurück.  
   
   

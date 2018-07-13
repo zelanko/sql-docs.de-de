@@ -1,5 +1,5 @@
 ---
-title: Market Basket DMX-Lernprogramm | Microsoft Docs
+title: Market Basket DMX-Lernprogramm | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DMX [Analysis Services], tutorials
 - data mining [Analysis Services], tutorials
@@ -21,23 +21,23 @@ ms.assetid: 6e262a1d-c89e-4033-8368-46cf25168ef5
 caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: a8806eceb5c16354d6581c8fcdd4e664619d2d2a
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: b73a618c5318d88ec6ee09751e09327687d865f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312928"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220580"
 ---
 # <a name="market-basket-dmx-tutorial"></a>Market Basket DMX-Lernprogramm
   In diesem Lernprogramm erfahren Sie, wie Miningmodelle mithilfe der Abfragesprache Data Mining-Erweiterungen (Data Mining Extensions, DMX) erstellt, trainiert und analysiert werden. Anschließend verwenden Sie diese Miningmodelle zum Erstellen von Vorhersagen, die beschreiben, welche Produkte tendenziell als Kombinationskäufe erworben werden.  
   
- Die Miningmodelle erstellt werden aus den Daten der [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] Beispieldatenbank, die Daten für das fiktive Unternehmen speichert [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ist ein großes, multinationales Produktionsunternehmen. Das Unternehmen fertigt und verkauft Fahrräder aus Metall und Verbundwerkstoffen auf dem nordamerikanischen, europäischen und asiatischen Markt. Der Hauptsitz befindet sich mit 290 Mitarbeitern in Bothell, Washington. Darüber hinaus sind mehrere regionale Vertriebsteams über die internationalen Zielmärkte des Unternehmens verteilt.  
+ Die Miningmodelle erstellt werden aus den Daten die [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] Beispieldatenbank, die Daten für das fiktive Unternehmen speichert [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ist ein großes, multinationales Produktionsunternehmen. Das Unternehmen fertigt und verkauft Fahrräder aus Metall und Verbundwerkstoffen auf dem nordamerikanischen, europäischen und asiatischen Markt. Der Hauptsitz befindet sich mit 290 Mitarbeitern in Bothell, Washington. Darüber hinaus sind mehrere regionale Vertriebsteams über die internationalen Zielmärkte des Unternehmens verteilt.  
   
 ## <a name="tutorial-scenario"></a>Lernprogrammszenario  
  Das Unternehmen [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] hat entschieden, eine benutzerdefinierte Anwendung zu erstellen, die mithilfe von Data Mining-Funktionen vorhersagt, welche Produkte die Kunden tendenziell als Kombinationskauf erwerben. Das Ziel für die benutzerdefinierte Anwendung besteht darin, eine Reihe von Produkten anzugeben und vorherzusagen, welche zusätzlichen Produkte mit den angegebenen Produkten gekauft werden. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] verwendet diese Informationen für eine Vorschlagsfunktion auf der entsprechenden Website sowie zur verbesserten Darstellung von Informationen für den Kunden.  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bietet mehrere Tools, die zur Ausführung dieser Aufgabe verwendet werden können:  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bietet mehrere Tools, die zum Ausführen dieser Aufgabe verwendet werden können:  
   
 -   Die DMX-Abfragesprache  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36312928"
  **Weitere Informationen:** [Data Mining-Lösungen](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
 ## <a name="mining-structure-and-mining-models"></a>Miningstruktur und Miningmodelle  
- Bevor Sie mit dem Erstellen von DMX-Anweisungen beginnen, sollten Sie sich mit dem wichtigsten Objekten vertraut machen, die von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] zum Erstellen von Miningmodellen verwendet werden. Die *Miningstruktur* ist eine Datenstruktur, die die Datendomäne definiert, aus denen Miningmodelle erstellt werden. Eine einzelne Miningstruktur kann mehrere enthalten *Miningmodelle* , die die gleiche Domäne gemeinsam nutzen. Ein Miningmodell wendet einen Miningmodellalgorithmus für die Daten an, welcher durch eine Miningstruktur dargestellt wird.  
+ Bevor Sie mit dem Erstellen von DMX-Anweisungen beginnen, sollten Sie sich mit dem wichtigsten Objekten vertraut machen, die von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] zum Erstellen von Miningmodellen verwendet werden. Die *Miningstruktur* ist eine Datenstruktur, die die Datendomäne definiert, aus der die Miningmodelle erstellt werden. Eine einzelne Miningstruktur kann mehrere enthalten *Miningmodelle* , die die gleiche Domäne gemeinsam nutzen. Ein Miningmodell wendet einen Miningmodellalgorithmus für die Daten an, welcher durch eine Miningstruktur dargestellt wird.  
   
  Die Grundbausteine der Miningstruktur sind die Miningstrukturspalten, die die in der Datenquelle enthaltenen Daten beschreiben. Diese Spalten enthalten Informationen, z. B. über den Datentyp, den Inhaltstyp und die Verteilung der Daten.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36312928"
   
  **Weitere Informationen**  
   
- [Datamining-Erweiterungen &#40;DMX&#41; Verweis](/sql/dmx/data-mining-extensions-dmx-reference), [Verständnis der DMX Select-Anweisung](/sql/dmx/understanding-the-dmx-select-statement), [Struktur und die Verwendung von DMX-Vorhersageabfragen](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
+ [Datamining-Erweiterungen &#40;DMX&#41; Verweis](/sql/dmx/data-mining-extensions-dmx-reference), [verstehen die DMX Select-Anweisung](/sql/dmx/understanding-the-dmx-select-statement), [Struktur und Verwendung von DMX-Vorhersageabfragen](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
   
 ## <a name="what-you-will-learn"></a>Lernziele  
  Dieses Lernprogramm ist in die folgenden Lektionen aufgeteilt:  
@@ -118,7 +118,7 @@ ms.locfileid: "36312928"
   
 ## <a name="see-also"></a>Siehe auch  
  [Bike Buyer DMX Tutorial](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
- [Lernprogramm zu Datamining-Lernprogramm](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [Lernprogramm zu Datamining-Grundlagen](../../2014/tutorials/basic-data-mining-tutorial.md)   
  [Lektion 3: Erstellen eines Warenkorbszenarios &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - inserting columns
 - columns [SQL Server], adding
 - adding columns
 ms.assetid: abeb8d52-d562-4e29-9e1e-2923ae874859
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 08e262af1a2e424f497aa39e7b136c62cb5ac09c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3f71832822b93dfaf514ef13c1efed641a626333
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048468"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264266"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>Hinzufügen von Spalten zu einer Tabelle (Datenbank-Engine)
   In diesem Thema wird beschrieben, wie mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Tabellenspalten in [!INCLUDE[tsql](../../includes/tsql-md.md)]hinzugefügt werden können.  
@@ -36,7 +36,7 @@ ms.locfileid: "36048468"
   
      [Security](#Security)  
   
--   **So fügen Sie Spalten mit:**  
+-   **So fügen Sie Spalten, die mithilfe von:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36048468"
     > [!NOTE]  
     >  Die Standardwerte für die Spalteneigenschaften werden hinzugefügt, wenn Sie eine neue Spalte erstellen. Sie können die Werte jedoch auf der Registerkarte **Spalteneigenschaften** ändern.  
   
-6.  Sie abschließend das Hinzufügen von Spalten, aus der **Datei** Menü wählen **speichern *** Tabellenname*.  
+6.  Sie abschließend das Hinzufügen von Spalten aus der **Datei** Menü wählen **speichern *** Tabellenname*.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   

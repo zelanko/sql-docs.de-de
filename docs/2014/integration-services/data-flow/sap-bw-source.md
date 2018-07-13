@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 922df55ae21fe9eda3fa3fc5b040696a2ce1424d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c3f039dcac25d3fab4c42f1f412f202f19c37d14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046470"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324650"
 ---
 # <a name="sap-bw-source"></a>SAP BW-Quelle
   Die SAP BW-Quelle ist die Quellkomponente von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Daher extrahiert die SAP BW-Quelle Daten aus einem SAP NetWeaver BW-System, Version 7, und macht diese Daten im Datenfluss in einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket verfügbar.  
@@ -110,7 +110,7 @@ ms.locfileid: "36046470"
   
     -   Geben Sie für die Option **E – Nur extrahieren** die Anforderungs-ID an.  
   
--   Geben Sie Regeln für die Zeichenfolgenkonvertierung an. (Z. B. konvertieren Sie alle Zeichenfolgen abhängig davon, ob das SAP Netweaver BW-System Unicode ist, oder konvertieren Sie alle Zeichenfolgen in `varchar` oder `nvarchar`).  
+-   Geben Sie Regeln für die Zeichenfolgenkonvertierung an. (Z. B. konvertieren Sie alle Zeichenfolgen abhängig davon, ob das SAP Netweaver BW-System Unicode oder nicht, oder konvertieren Sie alle Zeichenfolgen in `varchar` oder `nvarchar`).  
   
 -   Verwenden Sie die ausgewählten Optionen, um die zu extrahierenden Daten in der Vorschau anzuzeigen.  
   

@@ -1,5 +1,5 @@
 ---
-title: Objekt-Element (Dimension) (XMLA) | Microsoft Docs
+title: Objekt-Element (Dimension) (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Object element
 ms.assetid: db7feb39-7cc1-4b54-8979-77ce402ef71f
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2f0a80bcd26e5a54a0c45adff7667b4cfebdc467
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 652e5b2b42df856c7668e690b6595ecd41f8d8a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049275"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228150"
 ---
 # <a name="object-element-dimension-xmla"></a>Object-Element (Dimension) (XMLA)
   Enthält einen Objektverweis für die Dimension, auf der der übergeordnete [Insert](../xml-elements-commands/insert-element-xmla.md)-, [Update](../xml-elements-commands/update-element-xmla.md)- oder [Drop](../xml-elements-commands/drop-element-xmla.md) -Befehl ausgeführt wird.  

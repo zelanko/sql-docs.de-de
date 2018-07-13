@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 8: Erstellen von Key Performance Indicators | Microsoft Docs'
+title: 'Lektion 8: Erstellen von Key Performance Indicators | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a6c8ac2b-64ba-456f-b418-7bf0afe145d1
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: fd135a37a4fe2721ca6aaa70d25e869b9a83733e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0895fe1e699dc7ae53cb278087d43643cbdbf84c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049323"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187247"
 ---
 # <a name="lesson-8-create-key-performance-indicators"></a>Lektion 8: Erstellen von Leistungskennzahlen
   In dieser Lektion erstellen Sie Leistungskennzahlen (Key Performance Indicators, KPIs). KPIs dienen zum Messen der Leistung eines Werts, der durch ein *Basismeasure* definiert wird, anhand eines *Zielwerts* , der ebenfalls durch ein Measure oder durch einen absoluten Wert definiert wird. In Clientanwendungen zur Berichtserstellung erhalten Geschäftsleute mit KPIs einen schnellen und einfachen Einblick in den insgesamten Geschäftserfolg bzw. können Trends leichter identifizieren. Weitere Informationen finden Sie unter [KPIs &#40;SSAS – tabellarisch&#41;](tabular-models/kpis-ssas-tabular.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "36049323"
   
 6.  In der **Absolutwert** Feld `1.1`, und drücken Sie dann die EINGABETASTE.  
   
-7.  In **Statusschwellenwerte definieren**, geben Sie im Feld linken (unteren) Schieberegler `1`, und klicken Sie dann im rechten (oberen) schiebereglerfeld `1.07`.  
+7.  In **Statusschwellenwerte definieren**, geben Sie im Feld für die linken (unteren) Schieberegler `1`, und klicken Sie dann im rechten (oberen) schiebereglerfeld `1.07`.  
   
 8.  Wählen Sie unter **Symbolart auswählen**den Symboltyp Diamant (rot), Dreieck (gelb) oder Kreis (grün) aus.  
   

@@ -1,5 +1,5 @@
 ---
-title: Erstellen und Anpassen von PowerPivot-Katalog | Microsoft Docs
+title: Erstellen und Anpassen von PowerPivot-Katalog | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/01/2015
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 039c5b834287d17480c9031f17ab2fed25c641fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4d2e5434ae7f306b3f4a8de1d1c7356beb989b82
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049319"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181001"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>Erstellen und Anpassen von PowerPivot-Katalogen
   Der PowerPivot-Katalog ist eine spezielle SharePoint-Dokumentbibliothek, die umfangreiche Vorschau- und Dokumentverwaltungsfunktionen für veröffentlichte Excel-Arbeitsmappen und Reporting Services-Berichte bereitstellt, die PowerPivot-Daten enthalten.  
@@ -54,12 +54,12 @@ ms.locfileid: "36049319"
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog darf sich nicht in einer eingeschränkten Website befinden. Die übergeordnete Site, die den [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog enthält, muss der Zone „Vertrauenswürdige Site“ oder „Lokales Intranet“ hinzugefügt werden.  
   
--   Die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Webanwendungslösung muss für die Anwendung bereitgestellt sein, und die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Funktion muss für die Websitesammlung aktiviert sein. Weitere Informationen finden Sie unter [Bereitstellen von PowerPivot-Lösungen in SharePoint](deploy-power-pivot-solutions-to-sharepoint.md) und[PowerPivot-Funktionsintegration für Websitesammlungen in der Zentraladministration aktivieren](activate-power-pivot-integration-for-site-collections-in-ca.md).  
+-   Die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Webanwendungslösung muss für die Anwendung bereitgestellt sein, und die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Funktion muss für die Websitesammlung aktiviert sein. Weitere Informationen finden Sie unter [Bereitstellen der PowerPivot-Lösungen in SharePoint](deploy-power-pivot-solutions-to-sharepoint.md) und[PowerPivot-Funktionsintegration für Websitesammlungen in der Zentraladministration aktivieren](activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
 -   Zum Anzeigen oder Erstellen eines Reporting Services-Berichts, der auf einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe basiert, müssen sowohl die Arbeitsmappe als auch der Bericht im gleichen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog enthalten sein. Der Bericht muss entweder eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe verwenden, die eingebettete Daten enthält, oder die Arbeitsmappe muss eine externe Datenquelle enthalten, die eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe ist.  
   
 ##  <a name="overview"></a> Übersicht  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog ist eine Bibliotheksvorlage, die verfügbar ist, wenn Sie [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] auf einem SharePoint-Server installieren. Der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog kombiniert eine exakte Vorschau des Dateiinhalts mit Fakten zum Dokumentursprung. Sie können sofort sehen, wer das Dokument erstellt hat und wann es zuletzt geändert wurde. Um die Erstellung von Vorschaubildern [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Katalog mithilfe eines momentaufnahmediensts, die gelesen wird, kann [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Arbeitsmappen und Reporting Services-Berichte, die PowerPivot-Daten enthalten. Wenn Sie eine Datei veröffentlichen, die der Momentaufnahmedienst nicht lesen kann, ist kein Vorschaubild für diese Datei verfügbar.  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog ist eine Bibliotheksvorlage, die verfügbar ist, wenn Sie [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] auf einem SharePoint-Server installieren. Der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog kombiniert eine exakte Vorschau des Dateiinhalts mit Fakten zum Dokumentursprung. Sie können sofort sehen, wer das Dokument erstellt hat und wann es zuletzt geändert wurde. Um die Erstellung von Vorschaubildern [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog verwendet einen momentaufnahmedienst, der gelesen wird, kann [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Arbeitsmappen und Reporting Services-Berichte, die PowerPivot-Daten enthalten. Wenn Sie eine Datei veröffentlichen, die der Momentaufnahmedienst nicht lesen kann, ist kein Vorschaubild für diese Datei verfügbar.  
   
  Die Vorschaubilder beruhen auf dem Rendering der Arbeitsmappe in Excel Services. Die Darstellung im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog sollte mit der Anzeige einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe in einem Browser übereinstimmen. Die Vorschauoberfläche ist jedoch begrenzt. Teile einer Arbeitsmappe oder eines Berichts werden u. U. in Anpassung an den verfügbaren Platz gekürzt. Sie müssen unter Umständen eine Arbeitsmappe oder einen Bericht öffnen, um das gesamte Dokument anzuzeigen.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36049319"
   
     3.  Klicken Sie unter Bibliotheken auf **PowerPivot-Katalog**.  
   
-    1.  **SharePoint 2013**: Klicken Sie auf das Symbol "Einstellungen" ![SharePoint Einstellungen](../media/as-sharepoint2013-settings-gear.gif "SharePoint Einstellungen"). Klicken Sie auf **Websiteinhalt**.  
+    1.  **SharePoint 2013**: Klicken Sie auf das Symbol "Einstellungen" ![SharePoint Settings](../media/as-sharepoint2013-settings-gear.gif "SharePoint Settings"). Klicken Sie auf **Websiteinhalt**.  
   
     2.  Klicken Sie auf **App hinzufügen**.  
   

@@ -1,5 +1,5 @@
 ---
-title: Durchsuchen eines Modells mit dem Microsoft Generic Content Tree Viewer | Microsoft Docs
+title: Durchsuchen eines Modells mit dem Microsoft Generic Content Tree Viewer | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, viewing
 ms.assetid: 4a5f7c51-c704-4214-b05d-21cf735e6d96
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 11c4eedca05eac85572bd30eddbc4d23b835fa33
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b5919fc4d600c8c4172edd4d067efbd37708dc87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047022"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273566"
 ---
 # <a name="browse-a-model-using-the-microsoft-generic-content-tree-viewer"></a>Durchsuchen eines Modells mit dem Microsoft Generic Content Tree Viewer
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Viewer für generische Miningmodellinhalte enthält ausführliche Informationen über die vom Miningalgorithmus erfassten Muster und bietet zudem Zugang zu verschiedenen Statistiken, die während des Analysevorgangs generiert werden. Die Menge und Art der Informationen hängen von dem verwendeten Algorithmus ab und können folgende Kategorien umfassen:  
@@ -53,7 +53,7 @@ SELECT * FROM [<mining model name>].CONTENT
  Weitere Informationen finden Sie unter [Data Mining-Abfragen](data-mining-queries.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Microsoft Generic Content Tree Viewer &#40;Datamining&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
+ [Microsoft Generic Content Tree-Viewer &#40;Datamining&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
  [Datamining-Algorithmen &#40;Analysis Services – Datamining&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
   

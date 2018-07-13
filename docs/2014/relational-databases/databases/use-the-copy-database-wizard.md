@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.cdw.transfermethod.f1
 - sql12.swb.cdw.welcome.f1
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - starting Copy Database Wizard
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 caps.latest.revision: 61
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e22f3ae3949c47c21423e855e5d4d35cbbe914fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 27352ec11f14042266d17babefda47055a57a9ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047633"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199550"
 ---
 # <a name="use-the-copy-database-wizard"></a>Verwenden des Assistenten zum Kopieren von Datenbanken
   Mit dem Assistenten zum Kopieren von Datenbanken können Sie Datenbanken und zugehörige Objekte von einem Server auf einen anderen ohne Serverausfallzeiten verschieben oder kopieren. Sie können auch Datenbanken von einer früheren aktualisieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Mit diesem Assistenten können Sie folgende Aktionen ausführen:  
@@ -65,7 +65,7 @@ ms.locfileid: "36047633"
   
      [Security](#Security)  
   
--   **Mithilfe des Assistenten zum Kopieren einer Datenbank an:**  
+-   **Verwenden des Assistenten zum Kopieren einer Datenbank an:**  
   
      [Kopieren, verschieben oder Aktualisieren von Datenbanken](#Copy_Move)  
   
@@ -111,7 +111,7 @@ ms.locfileid: "36047633"
   
 ##  <a name="Copy_Move"></a> Kopieren, verschieben oder Aktualisieren von Datenbanken  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]im Objekt-Explorer, erweitern Sie dann **Datenbanken**mit der rechten Maustaste auf eine Datenbank, zeigen Sie auf **Aufgaben**, und klicken Sie dann auf **Kopie der Datenbank**.  
+1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]im Objekt-Explorer, erweitern Sie **Datenbanken**mit der rechten Maustaste auf eine Datenbank, zeigen Sie auf **Aufgaben**, und klicken Sie dann auf **Datenbankkopie**.  
   
 2.  Geben Sie auf der Seite **Quellserver auswählen** den Server an, auf dem sich die zu verschiebende oder zu kopierende Datenbank befindet, und geben Sie die Anmeldeinformationen ein. Nach der Auswahl der Authentifizierungsmethode und der Eingabe der Anmeldeinformationen, klicken Sie auf **Weiter** , um die Verbindung zum Quellserver herzustellen. Diese Verbindung bleibt während der ganzen Sitzung bestehen.  
   
@@ -253,7 +253,7 @@ ms.locfileid: "36047633"
      **Fehlerprotokollpfad**  
      Stellen Sie einen Pfad für den Speicherort der Protokolldatei bereit. Diese Option ist nur bei ausgewählter Option zum Protokollieren der Textdatei verfügbar.  
   
-10. Geben Sie auf der Seite **Zeitplan für Paket** an, wann der Verschiebe- oder Kopiervorgang beginnen soll. Wenn Sie kein Systemadministrator angemeldet sind, müssen Sie angeben einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxykonto an, das Zugriff auf hat die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) paketausführungs-Subsystem.  
+10. Geben Sie auf der Seite **Zeitplan für Paket** an, wann der Verschiebe- oder Kopiervorgang beginnen soll. Wenn Sie kein Systemadministrator angemeldet sind, müssen Sie angeben einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxy Konto mit Zugriff auf die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS)-paketausführungs-Subsystem.  
   
      **Run immediately**  
      Starten Sie den Verschiebe- bzw. Kopiervorgang, nachdem Sie auf **Weiter**geklickt haben.  
@@ -261,13 +261,13 @@ ms.locfileid: "36047633"
      **Zeitplan**  
      Startet den Verschiebe- bzw. Kopiervorgang später. Die aktuellen Einstellungen des Zeitplans werden im Feld Beschreibung angezeigt. Klicken Sie auf **Ändern**, um den Zeitplan zu ändern.  
   
-     **Ändern**  
+     **Änderung**  
      Öffnet das Dialogfeld **Neuer Auftragszeitplan** .  
   
      **Integration Services-Proxykonto**  
      Wählen Sie ein verfügbares Proxykonto aus. Wenn Sie die Übertragung planen möchten, muss für den Benutzer mindestens ein Proxykonto verfügbar sein, das mit der Berechtigung für das Subsystem **SQL Server Integration Services-Paketausführung** konfiguriert ist.  
   
-     So erstellen ein Proxykonto für [!INCLUDE[ssIS](../../includes/ssis-md.md)] paketausführung im Objekt-Explorer, erweitern Sie **SQL Server-Agent**, erweitern Sie **Proxys**, mit der rechten Maustaste **SSIS-Paketausführung**, und klicken Sie dann auf **neuer Proxy**.  
+     Erstellen Sie ein Proxykonto für [!INCLUDE[ssIS](../../includes/ssis-md.md)] paketausführung im Objekt-Explorer, erweitern Sie **SQL Server-Agent**, erweitern Sie **Proxys**, mit der rechten Maustaste **SSIS-Paketausführung**, und klicken Sie dann auf **neuer Proxy**.  
   
      Mitglieder der festen Serverrolle **sysadmin** können das **SQL Server-Agent-Dienstkonto**auswählen, das über die erforderlichen Berechtigungen verfügt.  
   

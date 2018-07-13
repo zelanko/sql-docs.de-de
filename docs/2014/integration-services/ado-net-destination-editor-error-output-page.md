@@ -1,5 +1,5 @@
 ---
-title: ADO.NET-Ziel-Editor (Seite Fehlerausgabe) | Microsoft Docs
+title: ADO.NET-Ziel-Editor (Seite Fehlerausgabe) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.erroroutput.f1
 ms.assetid: 1a56c3cf-fb6a-416d-a62c-bb19fe441ae5
 caps.latest.revision: 16
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9b94239429682cae67540b028b3a170ca4ef377c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ee5dfecc61bcc7717052417efaeb3120a7432c67
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049504"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227830"
 ---
 # <a name="ado-net-destination-editor-error-output-page"></a>ADO.NET-Ziel-Editor (Seite 'Fehlerausgabe')
   Auf der Seite **Fehlerausgabe** des Dialogfelds **ADO.NET-Ziel-Editor** geben Sie Optionen für die Fehlerbehandlung an.  

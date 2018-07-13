@@ -1,5 +1,5 @@
 ---
-title: Zugreifen auf systemeigenen Code aus einem CLR-UDF | Microsoft Docs
+title: Zugreifen auf systemeigenen Code von einer CLR-UDF | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 161afa9d-74a1-40f5-af17-162e355e7a46
 caps.latest.revision: 4
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 82c2444f0d90876058bb7f062dd441f632741d0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 91e1f906e3014f4d4f702bdb2013c121a162de73
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047904"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237420"
 ---
 # <a name="accessing-native-code-from-a-clr-udf"></a>Zugreifen auf systemeigenen Code von einer CLR-UDF
   Dieses Beispiel zeigt, wie eine Funktion in systemeigenem (nicht verwaltetem) C++-Code in der Datenbank von einer benutzerdefinierten Funktion in einer Assembly aufgerufen wird.  

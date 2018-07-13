@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie eine Kopie eines Miningmodells | Microsoft Docs
+title: Erstellen Sie eine Kopie eines Miningmodells | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], copying
 - mining models [Analysis Services], creating
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - copying mining models
 ms.assetid: 7975bb02-f188-49a0-b7de-5b9b216254ad
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: da23bba72674c1f9ca4dd80bab01dd9d8e8e35cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 456150a7d7ba6759de20557a273875d95540f77f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057300"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187777"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>Erstellen einer Kopie eines Miningmodells
   Die Erstellung einer Kopie eines Miningmodells ist hilfreich, wenn Sie schnell mehrere Miningmodelle erstellen möchten, die auf den gleichen Daten basieren. Nach dem Kopieren des Modells können Sie die neue Kopie bearbeiten, indem Sie Parameter ändern oder einen Filter hinzufügen.  
@@ -57,7 +57,7 @@ ms.locfileid: "36057300"
   
      Weitere Informationen zur Verwendung der Dialogfelder des Filter-Editors finden Sie unter [Anwenden eines Filters auf ein Miningmodell](apply-a-filter-to-a-mining-model.md).  
   
-4.  In der **Eigenschaften** Fenster in der `AlgorithmParameters` Textfeld, klicken Sie auf **Setalgorithm Parameter**, und ändern Sie die Algorithmusparameter, bei Bedarf.  
+4.  In der **Eigenschaften** Fenster in der `AlgorithmParameters` Textfeld klicken Sie auf **Algorithmusparameter**, und ändern Sie bei Bedarf Algorithmusparameter.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

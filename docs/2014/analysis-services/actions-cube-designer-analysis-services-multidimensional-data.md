@@ -1,5 +1,5 @@
 ---
-title: Aktionen (Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Aktionen (Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.actionsview.f1
 ms.assetid: 50e3afbc-7789-46b1-bcd3-50497f5b493f
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ded2ebea0129c7402e805b9c4b35ee9d9138ae5b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c338840ee08404d9d8ed797bb8468bcd9f06ed67
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048180"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165751"
 ---
 # <a name="actions-cube-designer-analysis-services---multidimensional-data"></a>Aktionen (Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe der Registerkarte **Aktionen** des Cube-Designers können Sie Aktionen für den ausgewählten Cube anzeigen und bearbeiten, einschließlich Drillthrough- und Berichtsaktionen.  
@@ -39,10 +39,10 @@ ms.locfileid: "36048180"
  **Aktionsformular-Editor**  
  Mithilfe des Bereichs **Aktionsformular-Editor** in der Formularansicht können Sie im Cube enthaltene Standardaktionen bearbeiten. Weitere Informationen zu diesem Bereich finden Sie unter [Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
- **Drillthrough Aktionsformular-Editor**  
+ **Drillthroughaktionsformular-Editor**  
  Mithilfe des Bereichs **Drillthroughaktionsformular-Editor** können Sie im Cube enthaltene Drillthroughaktionen bearbeiten. Weitere Informationen zu diesem Bereich finden Sie unter [Drillthrough Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
- **Bericht Aktionsformular-Editor**  
+ **Berichtsaktionsformular-Editors**  
  Mithilfe des Bereichs **Berichtsaktionsformular-Editor** können Sie im Cube enthaltene Berichtsaktionen bearbeiten. Weitere Informationen zu diesem Bereich finden Sie unter [Report Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
 ## <a name="see-also"></a>Siehe auch  
@@ -52,8 +52,8 @@ ms.locfileid: "36048180"
  [Aktionsplaner &#40;Registerkarte ' Aktionen ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
  [Berechnungstools &#40;Registerkarte ' Aktionen ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
  [Aktionsformular-Editor &#40;Registerkarte ' Aktionen ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Drillthrough Aktionsformular-Editor &#40;Registerkarte ' Aktionen ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Bericht Aktionsformular-Editor &#40;Registerkarte ' Aktionen ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Drillthroughaktionsformular-Editors &#40;Registerkarte ' Aktionen ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Berichtsaktionsformular-Editors &#40;Registerkarte ' Aktionen ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
  [Cube-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](cube-designer-analysis-services-multidimensional-data.md)  
   
   

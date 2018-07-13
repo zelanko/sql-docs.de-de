@@ -1,5 +1,5 @@
 ---
-title: Overflow-Feld (SQLXML 4.0) | Microsoft Docs
+title: 'SQL: Overflow-Feld (SQLXML 4.0) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,24 +17,24 @@ helpviewer_keywords:
 - sql:overflow-field
 ms.assetid: f005182b-6151-432d-ab22-3bc025742cd3
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3a1ea697a212058218be295a49c3ad2ecc7c644c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3b78db405442ea15fe3d62db4688eb82440dfb2c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047347"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246245"
 ---
 # <a name="sqloverflow-field-sqlxml-40"></a>sql:overflow-field (SQLXML 4.0)
   In einem Schema können Sie eine Spalte als Überlaufspalte festlegen, die alle nicht verbrauchten Daten aus dem XML-Dokument aufnimmt. Diese Spalte im Schema angegeben ist, mithilfe der `sql:overflow-field` Anmerkung. Sie können mit mehreren Überlaufspalten arbeiten.  
   
- Wenn ein XML-Knoten (Element oder Attribut), für die besteht, eine `sql:overflow-field` Anmerkung, die definiert, die in den Bereich gelangt, wird die Überlaufspalte aktiviert und empfängt nicht verbrauchte Daten. Wenn der Knoten den Bereich verlässt, ist die Überlaufspalte nicht mehr aktiv und das vorherige Überlauffeld (sofern vorhanden) wird durch das XML-Massenladen aktiviert.  
+ Immer, wenn ein XML-Knoten (Element oder Attribut) für die ein `sql:overflow-field` -Anmerkung definiert, die in den Bereich gelangt, wird die Überlaufspalte aktiviert und empfängt nicht verbrauchte Daten. Wenn der Knoten den Bereich verlässt, ist die Überlaufspalte nicht mehr aktiv und das vorherige Überlauffeld (sofern vorhanden) wird durch das XML-Massenladen aktiviert.  
   
  Bei der Speicherung der Daten in der Überlaufspalte speichert der XML-Massenladevorgang ebenfalls die Start- und Endtags des übergeordneten Elements, für das `sql:overflow-field` definiert ist.  
   
- Das folgende Schema beschreibt z. B. die  **\<Kunden >** und  **\<CustOrder >** Elemente. Beide Elemente geben eine Überlaufspalte an:  
+ Das folgende Schema beschreibt zum Beispiel die  **\<Kunden >** und  **\<CustOrder >** Elemente. Beide Elemente geben eine Überlaufspalte an:  
   
 ```  
 <?xml version="1.0" ?>  
@@ -78,9 +78,9 @@ ms.locfileid: "36047347"
 </xsd:schema>  
 ```  
   
- Im Schema der  **\<Kunden >** -Element ordnet die Cust-Tabelle und die  **\<Reihenfolge >** Element wird in die CustOrder-Tabelle zugeordnet.  
+ Im Schema die  **\<Kunden >** -Element ordnet die Cust-Tabelle und die  **\<Reihenfolge >** -Element der CustOrder-Tabelle zugeordnet.  
   
- Sowohl die  **\<Kunden >** und  **\<Reihenfolge >** Elemente geben eine Überlaufspalte. Daher speichert XML-Massenladen alle nicht verbrauchten untergeordneten Elemente und Attribute der  **\<Kunden >** Element in der Überlaufspalte der Cust-Tabelle und alle nicht verbrauchten untergeordneten Elemente und Attribute der  **\<Reihenfolge >** Element in der Überlaufspalte der CustOrder-Tabelle.  
+ Sowohl die  **\<Kunden >** und  **\<Reihenfolge >** Elemente geben eine Überlaufspalte. Daher speichert XML-Massenladen alle nicht verbrauchten untergeordneten Elemente und Attribute der  **\<Kunden >** -Element in der Überlaufspalte der Cust-Tabelle, und alle nicht verbrauchten untergeordneten Elemente und Attribute der  **\<Reihenfolge >** Element in der Überlaufspalte der CustOrder-Tabelle.  
   
 ### <a name="to-test-a-working-sample"></a>So testen Sie ein funktionstüchtiges Beispiel  
   

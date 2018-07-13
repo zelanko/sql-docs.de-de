@@ -1,5 +1,5 @@
 ---
-title: Registerkarte Ereignishandler | Microsoft Docs
+title: Registerkarte Ereignishandler | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.eventhandlerwindow.f1
 ms.assetid: 94fc8916-8032-490c-b9d5-ded8b6217e49
 caps.latest.revision: 21
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 49b6145f29fac5088d44e6e82f6dcd3eb491556a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 83fb3a3e736e91b1c47fa3dffff5bbe9bfa4a940
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048526"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203890"
 ---
 # <a name="event-handlers-tab"></a>Registerkarte Ereignishandler
   Verwenden Sie die Registerkarte **Ereignishandler** von [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer zum Erstellen eines Steuerungsflusses in einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket. Ein Ereignishandler wird als Reaktion auf ein Ereignis ausgeführt, das von einem Paket, Task oder Container ausgelöst wird.  
@@ -47,6 +47,6 @@ ms.locfileid: "36048526"
  [Integration Services-Ereignishandler &#40;SSIS&#41;](integration-services-ssis-event-handlers.md)   
  [Ablaufsteuerung](control-flow/control-flow.md)   
  [SSIS-Designer](ssis-designer.md)   
- [Integrationsservices &#40;SSIS&#41; -Ereignishandler](integration-services-ssis-event-handlers.md)  
+ [Integrationsdienste &#40;SSIS&#41; -Ereignishandler](integration-services-ssis-event-handlers.md)  
   
   

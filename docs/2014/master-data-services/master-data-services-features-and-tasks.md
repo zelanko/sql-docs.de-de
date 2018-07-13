@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 68e220c2f80260359234fb80869844c531744bfd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f26531b3b4e783c70e1a3b060e803908cbf275b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047867"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191930"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Master Data Services - Features und Tasks
   Erfahren Sie, wie [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] verwendet wird, um die Masterdaten Ihrer Organisation zu verwalten. Erfahren Sie, wie Modellobjekte zu erstellen und zu bearbeiten sind, die als Container für Daten dienen. Erfahren Sie, wie die Masterdaten an sich organisiert und verwaltet werden. Erfahren Sie, wie Masterdaten zu importieren und exportieren sind und wie sich Modelle zwischen Test- und Produktionsumgebungen freigeben lassen. Abschließend erfahren Sie, wie sich benutzerdefinierte Anwendungen, die auf den [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Webdienst zugreifen, entwickeln lassen.  
@@ -64,7 +64,7 @@ ms.locfileid: "36047867"
   
 ## <a name="move-data"></a>Verschieben von Daten  
   
--   [Datenimport &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
+-   [Importieren von Daten &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
 -   [Exportieren von Daten &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36047867"
   
 ## <a name="develop-a-custom-application"></a>Entwickeln einer benutzerdefinierten Anwendung  
   
--   [Entwicklerhandbuch &#40;Master Data Services&#41;](develop/master-data-services-developer-documentation.md)  
+-   [Entwicklerhandbuch für &#40;Master Data Services&#41;](develop/master-data-services-developer-documentation.md)  
   
 -   <xref:Microsoft.MasterDataServices>  
   

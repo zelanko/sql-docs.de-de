@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [SQL Server], tables to support
 - hierarchyid [Database Engine], concepts
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - hierarchical queries [SQL Server], using hierarchyid data type
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7294a3d1db75d8ef2596bf7796fa706a9a9bc269
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: f188b3824492ca28fdf37d4e26d2387fbd8e923a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047148"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322390"
 ---
 # <a name="hierarchical-data-sql-server"></a>Hierarchische Daten (SQL Server)
-  Die integrierte `hierarchyid` Datentyp erleichtert das Speichern und Abfragen hierarchischer Daten. `hierarchyid` wird zum Darstellen von Strukturen, dem verbreitetsten Typ hierarchischer Daten optimiert.  
+  Die integrierte `hierarchyid` -Datentyp vereinfacht das Speichern und Abfragen hierarchischer Daten. `hierarchyid` ist für das Darstellen von Strukturen, die die häufigsten hierarchischer Daten Typ optimiert.  
   
  Hierarchische Daten sind definiert als Satz von Datenelementen, die durch hierarchische Beziehungen miteinander verbunden sind. Hierarchische Beziehungen sind vorhanden, wenn ein Datenelement einem anderen Element übergeordnet ist. Beispiele für die hierarchischen Daten, die im Allgemeinen in Datenbanken gespeichert werden:  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36047148"
   
 -   Vergleiche erfolgen in Tiefensuchreihenfolge  
   
-     Bei den beiden `hierarchyid` Werte **eine** und **b**, **ein < b** bedeutet, dass eine kommt vor b in eine Postorder-der Struktur. Indizes für `hierarchyid`-Datentypen verwenden die Tiefensuchreihenfolge, und einander benachbarte Knoten werden bei der Tiefensuchreihenfolge nahe beieinander gespeichert. Einem Datensatz untergeordnete Datensätze werden zum Beispiel angrenzend an diesen Datensatz gespeichert.  
+     Bei den beiden `hierarchyid` Werte **eine** und **b**, **eine < b** bedeutet, dass eine in der Struktur einer Tiefensuche vor b kommt. Indizes für `hierarchyid`-Datentypen verwenden die Tiefensuchreihenfolge, und einander benachbarte Knoten werden bei der Tiefensuchreihenfolge nahe beieinander gespeichert. Einem Datensatz untergeordnete Datensätze werden zum Beispiel angrenzend an diesen Datensatz gespeichert.  
   
 -   Unterstützung willkürlicher Einfüge- und Löschvorgänge  
   
@@ -62,13 +62,13 @@ ms.locfileid: "36047148"
   
   
 ##  <a name="limits"></a> Einschränkungen von hierarchyid  
- Die `hierarchyid` Datentyp gelten folgende Einschränkungen:  
+ Die `hierarchyid` Datentyp gelten die folgenden Einschränkungen:  
   
 -   Eine Spalte vom Typ `hierarchyid` nicht automatisch eine Baumstruktur dar. Es ist Aufgabe der Anwendung, `hierarchyid`-Werte so zu erstellen und zuzuweisen, dass die gewünschte Beziehung zwischen Zeilen anhand der Werte zu erkennen ist. Einige Anwendungen können eine Spalte vom Typ `hierarchyid` aufweisen, der den Speicherort in einer Hierarchie angibt, die in einer anderen Tabelle definiert ist.  
   
 -   Es ist Aufgabe der Anwendung zum Verwalten der Parallelität generiert und zuweist `hierarchyid` Werte. Es gibt keine Garantie dafür, dass die `hierarchyid`-Werte einer Spalte eindeutig sind, sofern die Anwendung keine Einschränkung für einen eindeutigen Schlüssel verwendet oder selbst dafür sorgt, dass eindeutige Werte erzeugt werden.  
   
--   Hierarchische Beziehungen dargestellte `hierarchyid` Werte werden nicht wie fremdschlüsselbeziehungen durchgesetzt. Es ist möglich und manchmal auch angemessen, eine hierarchische Beziehung herzustellen, in der das Element B dem Element A untergeordnet ist, um dann A zu löschen, wodurch B mit einer Beziehung zu einem nicht mehr vorhandenen Datensatz verbleibt. Wenn dieses Verhalten unannehmbar ist, muss die Anwendung vor dem Löschen von Elementen prüfen, ob untergeordnete Elemente vorhanden sind.  
+-   Hierarchische Beziehungen, die durch dargestellt `hierarchyid` Werte werden nicht wie fremdschlüsselbeziehungen durchgesetzt. Es ist möglich und manchmal auch angemessen, eine hierarchische Beziehung herzustellen, in der das Element B dem Element A untergeordnet ist, um dann A zu löschen, wodurch B mit einer Beziehung zu einem nicht mehr vorhandenen Datensatz verbleibt. Wenn dieses Verhalten unannehmbar ist, muss die Anwendung vor dem Löschen von Elementen prüfen, ob untergeordnete Elemente vorhanden sind.  
   
   
 ##  <a name="alternatives"></a> Wann Alternativen zu hierarchyid zu verwenden sind  
@@ -98,21 +98,21 @@ GO
   
  Vergleich von über- und untergeordneten Elementen mit `hierarchyid` bei allgemeinen Vorgängen  
   
--   Teilstrukturabfragen sind mit bedeutend schneller `hierarchyid`.  
+-   Teilstrukturabfragen sind mit deutlich schneller `hierarchyid`.  
   
 -   Abfragen für direkt untergeordnete Elemente sind bei `hierarchyid` etwas langsamer.  
   
--   Verschieben innerer Knoten erfolgt langsamer mit `hierarchyid`.  
+-   Das Verschieben innerer Knoten ist ein langsamer bei `hierarchyid`.  
   
 -   Das Einfügen innerer Knoten und das Einfügen oder Verschieben von Blattknoten weisen bei `hierarchyid` die gleiche Komplexität auf.  
   
  Über- und untergeordnete Elemente könnten überlegen sein, wenn die folgenden Bedingungen vorliegen:  
   
--   Die Größe des Schlüssels ist wichtig. Für die gleiche Anzahl von Knoten ein `hierarchyid` Wert ist gleich oder größer als ein ganzzahliger (`smallint`, `int`, `bigint`) Wert. Dies ist nur ein Grund, über-und untergeordneten Elementen in seltenen Fällen zu verwenden, da `hierarchyid` erheblich besseren e/A- und CPU-bezüglich weitaus effizienter als die allgemeinen Tabellenausdrücke, die bei Verwendung eine über-/unterordnungsstruktur erforderlich ist.  
+-   Die Größe des Schlüssels ist wichtig. Für die gleiche Anzahl von Knoten eine `hierarchyid` Wert ist gleich oder größer als ein ganzzahliger (`smallint`, `int`, `bigint`) Wert. Dies ist nur ein Grund, über-und untergeordnete Elemente in seltenen Fällen zu verwenden, da `hierarchyid` wurde deutlich bessere Positionierung von e/a und CPU-Auslastung als die allgemeinen Tabellenausdrücke, die erforderlich sind, wenn Sie eine über-/unterordnungsstruktur verwenden.  
   
 -   Abfragen erstrecken sich selten über Abschnitte der Hierarchie. Eine Abfrage bezieht sich mit anderen Worten in der Regel auf einen bestimmten Punkt in der Hierarchie. In diesen Fällen ist die benachbarte Speicherung der Elemente nicht wichtig. Eine Struktur über- und untergeordneter Elemente ist beispielsweise dann überlegen, wenn die Organisationstabelle nur für die Verarbeitung von Gehaltsdaten einzelner Angestellter verwendet wird.  
   
--   Innere Knotenteilstrukturen verschieben sich häufig, und dabei ist die Leistung sehr wichtig. Wird in einer Über-/Unterordnungsstruktur die Position einer Zeile in der Hierarchie geändert, ist davon nur eine einzelne Zeile betroffen. Ändern des Speicherorts einer Zeile in einer `hierarchyid` -Struktur betrifft *n* Zeilen, in denen *n* Zahl von Knoten in der Teilstruktur verschoben werden.  
+-   Innere Knotenteilstrukturen verschieben sich häufig, und dabei ist die Leistung sehr wichtig. Wird in einer Über-/Unterordnungsstruktur die Position einer Zeile in der Hierarchie geändert, ist davon nur eine einzelne Zeile betroffen. Ändern des Speicherorts für eine Zeile in einer `hierarchyid` -Struktur betrifft *n* Zeilen, in denen *n* Zahl von Knoten in der Teilstruktur verschoben werden.  
   
      Wenn sich innere Knotenteilstrukturen häufig verschieben und die Leistung wichtig ist, jedoch die meisten Verschiebeoperationen auf einer wohldefinierten Ebene der Hierarchie stattfinden, sollten Sie erwägen, die höheren und niedrigeren Ebenen in zwei Hierarchien aufzuteilen. Dadurch beschränken sich alle Verschiebungen auf Blattebenen der höheren Hierarchie. Betrachten Sie beispielsweise eine Hierarchie der von einem Dienst gehosteten Websites. Websites enthalten viele auf hierarchische Weise angeordnete Seiten. Gehostete Sites können an einen anderen Ort innerhalb der Site-Hierarchie verschoben werden, jedoch werden die untergeordneten Seiten nur selten neu angeordnet. Dies könnte wie folgt dargestellt werden:  
   
@@ -269,11 +269,11 @@ VALUES ('/', 'Earth', 'Planet');
 ##  <a name="tasks"></a> Verwandte Aufgaben  
   
 ###  <a name="migrating"></a> Migrieren von über- und untergeordneten Elementen zu hierarchyid  
- Die meisten Strukturen werden mit über- und untergeordneten Elementen dargestellt. Die einfachste Möglichkeit, eine über-/unterordnungsstruktur in eine Tabelle migrieren `hierarchyid` eine temporäre Spalte oder eine temporäre Tabelle zum Nachverfolgen die Anzahl der Knoten auf jeder Ebene der Hierarchie verwendet wird. Ein Beispiel für die Migration einer über- und untergeordneten Tabelle finden Sie in Lektion 1 von [Tutorial: Verwenden des hierarchyid-Datentyps](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ Die meisten Strukturen werden mit über- und untergeordneten Elementen dargestellt. Die einfachste Möglichkeit zum Migrieren von einer über-/unterordnungsstruktur in eine Tabelle `hierarchyid` besteht darin, eine temporäre Spalte oder eine temporäre Tabelle zu verwenden, um zu verfolgen die Anzahl der Knoten auf jeder Ebene der Hierarchie. Ein Beispiel für die Migration einer über- und untergeordneten Tabelle finden Sie in Lektion 1 von [Tutorial: Verwenden des hierarchyid-Datentyps](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ###  <a name="BKMK_ManagingTrees"></a> Verwalten einer Struktur mit hierarchyid  
- Obwohl eine `hierarchyid` Spalte stellt nicht notwendigerweise eine Struktur dar, die eine Anwendung kann einfache Weise sicherstellen, dass dies der Fall ist.  
+ Obwohl eine `hierarchyid` Spalte ist nicht notwendigerweise eine Struktur darstellen, kann eine Anwendung einfach sicherstellen, dass dies der Fall ist.  
   
 -   Führen Sie eine der folgenden Maßnahmen durch, wenn Sie neue Werte erstellen:  
   
@@ -393,7 +393,7 @@ GO
   
   
 ###  <a name="findclr"></a> Suchen von Vorgängern mit CLR  
- Ein allgemeiner Vorgang, der zwei Knoten einer Hierarchie betrifft, ist die Ermittlung des kleinsten gemeinsamen Vorgängers. Dies kann entweder in formuliert werden [!INCLUDE[tsql](../includes/tsql-md.md)] oder CLR, da die `hierarchyid` Typ in beiden verfügbar ist. CLR wird empfohlen, da die Leistung höher ist.  
+ Ein allgemeiner Vorgang, der zwei Knoten einer Hierarchie betrifft, ist die Ermittlung des kleinsten gemeinsamen Vorgängers. Dies kann entweder in geschrieben werden [!INCLUDE[tsql](../includes/tsql-md.md)] oder CLR, da die `hierarchyid` Typ in beiden verfügbar ist. CLR wird empfohlen, da die Leistung höher ist.  
   
  Verwenden Sie den folgenden CLR-Code, um die Vorgänger aufzulisten und den kleinsten gemeinsamen Vorgänger zu ermitteln:  
   

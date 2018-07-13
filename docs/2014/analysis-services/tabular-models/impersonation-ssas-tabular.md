@@ -1,5 +1,5 @@
 ---
-title: Identitätswechsel (SSAS – tabellarisch) | Microsoft Docs
+title: Identitätswechsel (SSAS – tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 16323d7df2fa3620bbdd6fb541f028ebaf582cc7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3c60f64bc76967fb6d4191aee4f1de7c7bbbb537
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049545"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176487"
 ---
 # <a name="impersonation-ssas-tabular"></a>Identitätswechsel (SSAS – tabellarisch)
   Dieses Thema vermittelt Autoren von tabellarischen Modellen Grundlegendes zur Verwendung von Anmeldedaten durch Analysis Services beim Herstellen einer Verbindung mit einer Datenquelle zum Importieren und Verarbeiten (Aktualisieren) von Daten.  
@@ -76,7 +76,7 @@ ms.locfileid: "36049545"
   
  <sup>1</sup>ImpersonationMode gibt den Wert für die [DataSourceImpersonationInfo-Element &#40;ASSL&#41; ](../scripting/properties/impersonationinfo-element-assl.md) Eigenschaft für die Datenquelle.  
   
- <sup>2</sup>bei dieser Option, wenn die arbeitsbereichsdatenbank aus dem Arbeitsspeicher, entweder aufgrund von einem Neustart entfernt wird oder die **Arbeitsbereichsbeibehaltung** -Eigenschaftensatz auf **aus dem Arbeitsspeicher entladen** oder  **Arbeitsbereich löschen**, und das Modellprojekt geschlossen sein können, in der nachfolgenden Sitzung, wenn Sie versuchen, die Tabellendaten verarbeiten werden Sie aufgefordert, die Anmeldeinformationen für jede Datenquelle einzugeben. Analog dazu werden Sie aufgefordert, die Anmeldeinformationen für jede Datenquelle einzugeben, wenn eine bereitgestellte Modelldatenbank aus dem Arbeitsspeicher entfernt wird.  
+ <sup>2</sup>bei Verwendung dieser Option, wenn die arbeitsbereichsdatenbank aus dem Arbeitsspeicher, da ein Neustart durchgeführt entfernt wird oder die **Arbeitsbereichsbeibehaltung** -Eigenschaftensatz auf **aus dem Arbeitsspeicher entladen** oder  **Aus dem Arbeitsbereich löschen**, und das Modellprojekt geschlossen sein können, in der nachfolgenden Sitzung, wenn Sie versuchen, die Tabellendaten verarbeiten werden Sie aufgefordert, die Anmeldeinformationen für jede Datenquelle einzugeben. Analog dazu werden Sie aufgefordert, die Anmeldeinformationen für jede Datenquelle einzugeben, wenn eine bereitgestellte Modelldatenbank aus dem Arbeitsspeicher entfernt wird.  
   
 ##  <a name="bkmk_impers_sec"></a> Security  
  Die für den Identitätswechsel verwendeten Informationen werden von der xVelocity-Engine für Datenanalyse im Arbeitsspeicher (VertiPaq)™ dauerhaft im Arbeitsspeicher gespeichert, das dem Analysis Services-Server zugeordnet ist, der die Arbeitsbereichsdatenbank oder eine bereitgestellte Modelldatenbank verwaltet.  Anmeldeinformationen werden zu keinem Zeitpunkt auf den Datenträger geschrieben. Wenn sich die Datenbank des Arbeitsbereichs bei der Bereitstellung des Modells nicht im Arbeitsspeicher befindet, wird der Benutzer aufgefordert, die Anmeldeinformationen einzugeben, die zum Herstellen einer Verbindung mit der Datenquelle und Abrufen der Daten verwendet werden.  
@@ -94,11 +94,11 @@ ms.locfileid: "36049545"
 ##  <a name="bkmk_conf_imp_info"></a> Konfigurieren des Identitätswechsels  
  Der Speicherort und der Kontext, an dem bzw. in dem sich das Modell befindet, bestimmen die Konfiguration der Identitätswechselinformationen. Für Modelle, die in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]erstellt werden, können Sie Identitätswechselinformationen im Tabellenimport-Assistenten auf der Seite **Identitätswechselinformationen** konfigurieren, oder indem Sie die Datenquellenverbindung im Dialogfeld **Vorhandene Verbindungen** bearbeiten. Um vorhandene Verbindungen anzuzeigen, klicken Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]im Menü **Modell** auf **Vorhandene Verbindungen**.  
   
- Für Modelle, die auf einem Analysis Services-Server bereitgestellt werden, Identitätswechselinformationen konfiguriert werden kann, indem Sie auf die Auslassungspunkte (...) neben dem **Identitätswechselinformationen der Datenquelle** Eigenschaft in der **Datenbankeigenschaften** Dialogfeld [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ Für Modelle, die auf einem Analysis Services-Server bereitgestellt werden, Identitätswechselinformationen konfiguriert werden kann, indem Sie auf die Auslassungspunkte (...) neben dem **Identitätswechselinformationen der Datenquelle** -Eigenschaft in der **Datenbankeigenschaften** Dialogfeld [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Siehe auch  
  [DirectQuery-Modus &#40;SSAS – tabellarisch&#41;](directquery-mode-ssas-tabular.md)   
  [Datenquellen &#40;SSAS – tabellarisch&#41;](../data-sources-ssas-tabular.md)   
- [Tabellenmodelllösungsbereitstellung &#40;SSAS – tabellarisch&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
+ [Bereitstellung von Tabellenmodelllösungen &#40;SSAS – tabellarisch&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

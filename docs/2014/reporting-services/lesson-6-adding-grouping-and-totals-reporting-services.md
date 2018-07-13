@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 caps.latest.revision: 50
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c71c785f6d5cd5130223335830f53cc0fa8bf6f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c411b3780f1e3f5b91d00d08093f281a5daa286f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047538"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218880"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
   Fügen Sie dem Bericht Gruppierungen und Gesamtwerte hinzu, um Daten zu gruppieren und zusammenzufassen.  
@@ -30,11 +30,11 @@ ms.locfileid: "36047538"
   
 -   [Zum Gruppieren von Daten in einem Bericht](#bkmk_groupdata)  
   
--   [So fügen Sie Summen zu einem Bericht hinzu](#bkmk_addtotals)  
+-   [Zum Hinzufügen von Gesamtwerten zu einem Bericht](#bkmk_addtotals)  
   
 -   [Ein Bericht einen tagesgesamtwert hinzu](#bkmk_adddailytotal)  
   
--   [Einen Bericht ein Gesamtergebnis hinzu](#bkmk_addgrandtotal)  
+-   [Ein Bericht ein Gesamtergebnis hinzu](#bkmk_addgrandtotal)  
   
 -   [So veröffentlichen Sie den Bericht auf dem Berichtsserver (Optional)](#bkmk_publishreport)  
   
@@ -44,13 +44,13 @@ ms.locfileid: "36047538"
   
 2.  Wenn Sie den Bereich **Zeilengruppen** nicht sehen, klicken Sie mit der rechten Maustaste auf die Entwurfsoberfläche. Klicken Sie auf **Sicht** und dann auf **Gruppierung**.  
   
-3.  Aus der **Berichtsdaten** ziehen Sie die `Date` -Feld der **Zeilengruppen** Bereich. Platzieren Sie das Feld über der Zeile **(Details)**.  
+3.  Von der **Berichtsdaten** ziehen Sie die `Date` Feld der **Zeilengruppen** Bereich. Platzieren Sie das Feld über der Zeile **(Details)**.  
   
      Beachten Sie, dass das Zeilenhandle nun Klammern zum Anzeigen einer Gruppe aufweist. Außerdem verfügt die Tabelle nun auf jeder Seite der vertikalen gepunkteten Linie einmal über die Spalte Date.  
   
      ![](../../2014/tutorials/media/rs-basictablegroups1design.gif "rs_BasicTableGroups1Design")  
   
-4.  Aus der **Berichtsdaten** ziehen Sie die `Order` -Feld der **Zeilengruppen** Bereich. Platzieren das Feld unter Date und über **Details**.  
+4.  Von der **Berichtsdaten** ziehen Sie die `Order` Feld der **Zeilengruppen** Bereich. Platzieren das Feld unter Date und über **Details**.  
   
      Beachten Sie, dass das Zeilenhandle nun zweimal Klammern zum Anzeigen von zwei Gruppen aufweist. Die Tabelle verfügt jetzt über zwei `Order` Spalten zu.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36047538"
   
      ![Nach „Date“ (Datum) und dann nach „Order“ (Auftrag) gruppierte Tabelle](../../2014/tutorials/media/rs-basictablegroupspreview.gif "Table grouped by date and then order")  
   
-##  <a name="bkmk_addtotals"></a> So fügen Sie Summen zu einem Bericht hinzu  
+##  <a name="bkmk_addtotals"></a> Zum Hinzufügen von Gesamtwerten zu einem Bericht  
   
 1.  Wechseln Sie in die Entwurfsansicht.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36047538"
   
 1.  Mit der rechten Maustaste in der Zelle Order, zeigen Sie auf **Gesamtergebnis hinzufügen**, und klicken Sie auf **nach**.  
   
-     Dadurch wird eine neue Zeile mit der Menge und dem Gesamtbetrag in Dollar für jeden Tag und die Bezeichnung "**insgesamt**" in der Spalte Order.  
+     Dadurch werden eine neue Zeile mit der Menge und dem Gesamtbetrag in Dollar für jeden Tag und die Bezeichnung "**insgesamt**" in der Spalte Order.  
   
 2.  Geben Sie in der gleichen Zelle zuerst das Wort **Daily** und anschließend das Wort **Total** ein, um **Daily Total**zu erhalten.  
   
@@ -98,11 +98,11 @@ ms.locfileid: "36047538"
   
      ![](../../2014/tutorials/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
   
-##  <a name="bkmk_addgrandtotal"></a> Einen Bericht ein Gesamtergebnis hinzu  
+##  <a name="bkmk_addgrandtotal"></a> Ein Bericht ein Gesamtergebnis hinzu  
   
 1.  Klicken Sie mit der rechten Maustaste auf die Zelle Date, zeigen Sie auf **Gesamtergebnis hinzufügen**, und klicken Sie auf **Danach**.  
   
-     Dadurch wird eine neue Zeile mit der Menge und dem Gesamtbetrag in Dollar für den gesamten Bericht hinzugefügt und die **insgesamt** -Bezeichnung in der `Date` Spalte.  
+     Dadurch wird eine neue Zeile, die mit der Menge und dem Gesamtbetrag in Dollar für den gesamten Bericht hinzugefügt und die **insgesamt** -Bezeichnung in den `Date` Spalte.  
   
 2.  Geben Sie in der gleichen Zelle zuerst das Wort **Grand** und anschließend das Wort **Total** ein, um **Grand Total**zu erhalten.  
   
@@ -132,11 +132,11 @@ ms.locfileid: "36047538"
   
      Wenn Sie im Ausgabefenster eine Meldung wie die Folgende sehen, war die Bereitstellung erfolgreich:  
   
-    > ------ Build started: Project: tutorial, Configuration: Debug ------Skipping 'Sales Orders.rdl'. Element ist auf dem neuesten Stand. Erstellung abgeschlossen--0 Fehler, 0 Warnungen---bereitstellen, die gestartet: Projekt: Lernprogramm Konfiguration: Debug---zu http:// Bereitstellen\<Servername > / ReportserverDeploying melden "/ Tutorial/Sales Orders". Bereitstellen abgeschlossen--0 Fehler, 0 Warnungen ==== Build: 1 erfolgreich oder aktuell, 0 fehlgeschlagen, 0 übersprungen ==== bereitstellen: 1 erfolgreich, 0 fehlgeschlagen, 0 übersprungen ====  
+    > ------ Build started: Project: tutorial, Configuration: Debug ------Skipping 'Sales Orders.rdl'. Element ist auf dem neuesten Stand. Erstellung abgeschlossen--0 Fehler, 0 Warnungen---bereitstellen, die gestartet: Projekt: Tutorial Konfiguration: Debug---bereitstellen auf http://\<Servername > / ReportserverDeploying melden "/ Tutorials/Sales Orders". Bereitstellung abgeschlossen--0 Fehler, 0 Warnungen ==== erstellen: 1 erfolgreich oder aktuell, 0 fehlgeschlagen, 0 übersprungen ==== bereitstellen: 1 erfolgreich, 0 fehlgeschlagen, 0 übersprungen ====  
   
      Wenn Sie eine Fehlermeldung wie die Folgende sehen, überprüfen Sie, ob Sie über Berechtigungen für den Berichtsserver verfügen und ob Sie [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] mit Administratorrechten gestartet haben.  
   
-    > "Die Berechtigungen für Benutzer" XXXXXXXX\\< Ihr Benutzername\>"zum Ausführen des Vorgangs unzureichend sind"  
+    > "Die Berechtigungen für Benutzer ' XXXXXXXX\\< Ihr Benutzername\>' sind nicht ausreichend zum Ausführen des Vorgangs"  
   
 6.  Starten Sie Berichts-Manager mit Administratorrechten, indem Sie z. B. mit der rechten Maustaste auf das Symbol für Internet Explorer und dann auf **Als Administrator ausführen**klicken.  
   

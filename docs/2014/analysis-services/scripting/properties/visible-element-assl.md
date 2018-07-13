@@ -1,5 +1,5 @@
 ---
-title: Visible-Element (ASSL) | Microsoft Docs
+title: Visible-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Visible element
 ms.assetid: 3e9baf1b-351f-4ebf-b57d-13d561f72d6f
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 90a6ddadf0bc6654fb0c30c02f22b78a88655daa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c025ca22c56d0f7c61f1626b2c861961da432ae9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048574"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213850"
 ---
 # <a name="visible-element-assl"></a>Visible-Element (ASSL)
   Bestimmt die Sichtbarkeit des übergeordneten Elements.  
@@ -64,7 +64,7 @@ ms.locfileid: "36048574"
 ## <a name="remarks"></a>Hinweise  
  Das `Visible`-Element bestimmt, ob Benutzeroberflächenkomponenten das übergeordnete Element anzeigen sollten.  
   
- Die Elemente, die den übergeordneten Elementen von entsprechen `Visible` im Objektmodell von Analysis Management Objects (AMO) sind <xref:Microsoft.AnalysisServices.CalculationProperty>, <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.CubeDimension>, <xref:Microsoft.AnalysisServices.CubeHierarchy>, <xref:Microsoft.AnalysisServices.Database>, und <xref:Microsoft.AnalysisServices.Measure>.  
+ Die Elemente, die den übergeordneten Elementen von entsprechen `Visible` im Analysis Management Objects (AMO)-Objektmodell werden <xref:Microsoft.AnalysisServices.CalculationProperty>, <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.CubeDimension>, <xref:Microsoft.AnalysisServices.CubeHierarchy>, <xref:Microsoft.AnalysisServices.Database>, und <xref:Microsoft.AnalysisServices.Measure>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

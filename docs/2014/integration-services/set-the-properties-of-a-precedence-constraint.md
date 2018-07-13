@@ -1,5 +1,5 @@
 ---
-title: Legen Sie die Eigenschaften von Rangfolgeneinschränkungen | Microsoft Docs
+title: Legen Sie die Eigenschaften von Rangfolgeneinschränkungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Precedence Constraint Editor dialog box
 - precedence constraints [Integration Services], properties
 ms.assetid: d990f600-5c09-4cd5-8528-0a58d79dc9f2
 caps.latest.revision: 47
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 344dbadc0aeabbce3b2a554d4ff15370eeadd1fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38e20290eb9499191307c7afb146e9242603c3ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047204"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271346"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>Festlegen der Eigenschaften von Rangfolgeneinschränkungen
   Um Eigenschaften für Rangfolgeneinschränkungen festzulegen, verwenden Sie eines der folgenden Tools:  
@@ -54,7 +54,7 @@ ms.locfileid: "36047204"
     > [!NOTE]  
     >  Bei Variablennamen wird nach Groß-/Kleinschreibung unterschieden.  
   
-8.  Wenn mehrere Tasks oder Container mit der eingeschränkten ausführbaren Datei verbunden sind, wählen Sie **logische und** um anzugeben, dass die Ausführungsergebnisse aller vorherigen ausführbaren Dateien ergeben müssen `true`. Wählen Sie **logischen Operator OR** um anzugeben, dass nur ein Ausführungsergebnis ergeben muss `true`.  
+8.  Wenn mehrere Tasks oder Container mit der eingeschränkten ausführbaren Datei verbunden sind, wählen Sie **logische und** um anzugeben, dass die Ausführungsergebnisse aller vorherigen ausführbaren Dateien ergeben müssen `true`. Wählen Sie **logisches oder** um anzugeben, dass nur ein Ausführungsergebnis ergeben muss `true`.  
   
 9. Klicken Sie auf **OK** , um das Dialogfeld **Rangfolgeneinschränkungs-Editor**zu schließen.  
   

@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, generating XML from rowsets
 ms.assetid: d061c0f1-3de9-4ad1-bbca-ce45d064b6c8
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 163b33618f6d303d3ab08e078ee2b06096dc2ad8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 75446ba8c61f03c46c4000793d7ca75f1dc8cb85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048679"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201110"
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>Generieren von XML aus Rowsets mit FOR XML
   Sie können generieren eine `xml` -Datentypinstanz aus einem Rowset mithilfe von FOR XML mit dem neuen **Typ** Richtlinie.  
   
- Das Ergebnis kann zugewiesen werden, um eine `xml` Datentyp Spalte, Variable oder Parameter. Außerdem kann FOR XML geschachtelt werden, um jede beliebige hierarchische Struktur zu generieren. Damit kann geschachteltes FOR XML viel bequemer geschrieben werden als FOR XML EXPLICIT, es zeigt aber möglicherweise eine weniger gute Leistung bei tiefen Hierarchien. FOR XML führt auch einen neuen PATH-Modus ein. Dieser neue Modus gibt den Pfad im XML-Baum an, in dem der Wert einer Spalte erscheint.  
+ Das Ergebnis kann zugewiesen werden, um eine `xml` Datentyp-Spalte, Variable oder Parameter. Außerdem kann FOR XML geschachtelt werden, um jede beliebige hierarchische Struktur zu generieren. Damit kann geschachteltes FOR XML viel bequemer geschrieben werden als FOR XML EXPLICIT, es zeigt aber möglicherweise eine weniger gute Leistung bei tiefen Hierarchien. FOR XML führt auch einen neuen PATH-Modus ein. Dieser neue Modus gibt den Pfad im XML-Baum an, in dem der Wert einer Spalte erscheint.  
   
  Die neue **FOR XML TYPE** -Direktive kann verwendet werden, um schreibgeschützte XML-Sichten für relationale Daten mit SQL-Syntax zu definieren. Die Sicht kann mit SQL-Anweisungen und eingebettetem XQuery abgefragt werden, wie das im folgenden Beispiel gezeigt wird. Sie können auf diese SQL-Sichten auch in gespeicherten Prozeduren verweisen.  
   
@@ -40,7 +40,7 @@ FROM   T
 FOR XML AUTO, TYPE  
 ```  
   
- Die V-Sicht enthält eine einzelne Zeile mit einem einzelnen ColumnxmlVal des XML-Typs`.` können abgefragt werden, wie eine reguläre `xml` Datentypinstanz. Beispielsweise gibt die folgende Abfrage den Autor zurück, dessen Vorname "David" ist:  
+ Die V-Sicht enthält eine einzelne Zeile mit einem einzelnen ColumnxmlVal des XML-Typs`.` kann abgefragt werden, wie eine reguläre `xml` Datentypinstanz. Beispielsweise gibt die folgende Abfrage den Autor zurück, dessen Vorname "David" ist:  
   
 ```  
 SELECT xmlVal.query('//author[first-name = "David"]')  

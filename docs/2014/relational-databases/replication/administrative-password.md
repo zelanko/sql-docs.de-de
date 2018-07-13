@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.replicationutilities.administrativepassword.f1
 ms.assetid: d43bebc8-e83a-457a-b7f4-a61a735f1904
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ce072951db7d254fd9b8a8e923c6646915b30aee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7f9a2406425ee0bf3673f4f3e21e01b977fcf39d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047357"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212800"
 ---
 # <a name="administrative-password"></a>Administratorkennwort
   Wenn Sie auf der Seite **Verteiler** dieses Assistenten einen Remoteverteiler für diesen Verleger ausgewählt haben, müssen Sie ein Kennwort für die Verbindung eingeben, die die Replikation mithilfe des Anmeldenamens **distributor_admin** zwischen dem Verleger und dem Verteiler herstellt. Das Kennwort muss dem Kennwort entsprechen, das auf der Seite **Verteilerkennwort** des Verteilungskonfigurations-Assistenten oder auf der Seite **Verleger** des Dialogfelds **Verteilereigenschaften** angegeben wurde.  

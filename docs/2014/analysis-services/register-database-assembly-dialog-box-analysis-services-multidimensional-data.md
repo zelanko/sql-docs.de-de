@@ -1,5 +1,5 @@
 ---
-title: Datenbank (Dialogfeld) (Analysis Services – mehrdimensionale Daten) zu registrieren | Microsoft Docs
+title: Datenbank-Assembly (Dialogfeld) (Analysis Services – mehrdimensionale Daten) zu registrieren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidevstudio.assembly.registerassembly.f1
 ms.assetid: 0c07cc87-fc94-456f-b878-7b23e39772b9
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 02db0dc301a1836f3b66cc488c5e690839c6eea4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bf8c949083c15216f0655c7753f426de77f289e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056569"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196870"
 ---
 # <a name="register-database-assembly-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Datenbankassembly registrieren' (Analysis Services – mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Serverassembly registrieren** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] können Sie die Eigenschaften eines Assemblyverweises in einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenbank festlegen. Sie können das Dialogfeld **Serverassembly registrieren** anzeigen, indem Sie in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Objekt-Explorer **mit der rechten Maustaste auf den Ordner Assemblys einer** -Instanz oder -Datenbank klicken und **Neue Assembly**auswählen.  
@@ -39,10 +39,10 @@ ms.locfileid: "36056569"
 |**Letztes Schemaupdate**|Zeigt das Datum und die Uhrzeit des letzten Updates der Metadaten für den Assemblyverweis an.|  
 |**Quelle**|Zeigt die Quelle des Assemblyverweises an. Diese Eigenschaft enthält in der Regel den vollständigen Pfad und den Dateinamen der Assembly, auf die der Assemblyverweis verweist.|  
 |**Safe**|Wählen Sie diese Option aus, um diesen Berechtigungssatz für den Assemblyverweis zu verwenden. Wenn diese Option ausgewählt ist, hat die Assembly nur Zugriff auf die lokalen Daten und kann nur interne Berechnungen durchführen. Code, der von einer Assembly ausgeführt wird, für die diese Option festgelegt ist, kann nicht auf externe Systemressourcen zugreifen, z. B. Dateien, das Netzwerk, Umgebungsvariablen oder die Registrierung.<br /><br /> **\*\* Sicherheitshinweis \* \***  diese Option ist die empfohlene berechtigungseinstellung für Assemblys, die berechnungs- und Verwaltungsaufgaben ausführen, ohne den Zugriff auf Ressourcen außerhalb [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Diese Option ist der restriktivste Berechtigungssatz.|  
-|**Externer Zugriff**|Wählen Sie diese Option aus, um diesen Berechtigungssatz für den Assemblyverweis zu verwenden. Wenn diese Option ausgewählt ist, hat die Assembly nur Zugriff auf die lokalen Daten und kann nur interne Berechnungen durchführen. Code, der von einer Assembly mit diesem Berechtigungssatz ausgeführt wird, kann auf externe Systemressourcen zugreifen, z. B. Dateien, Netzwerke, Umgebungsvariablen oder die Registrierung.<br /><br /> **\*\* Sicherheitshinweis \* \***  diese Option wird empfohlen, für Assemblys, die Zugriff auf Ressourcen außerhalb [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Assemblys, für die diese Option festgelegt ist, verwenden bei der Ausführung standardmäßig die Anmeldeinformationen des Dienstkontos. Code innerhalb dieser Assembly kann explizit die Identität des Aufrufers in Bezug auf den Sicherheitskontext der [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows-Authentifizierung annehmen. Aufgrund der standardmäßigen Ausführung als Dienstkonto sollte die Berechtigung zur Ausführung von Assemblys mit dieser Option nur vertrauenswürdigen Rollen erteilt werden. Die Option stellt einen weniger restriktiven Berechtigungssatz als **Sicher**dar, ist jedoch restriktiver als **Uneingeschränkt**.|  
-|**Nicht eingeschränkt**|Wählen Sie diese Option aus, um diesen Berechtigungssatz für den Assemblyverweis zu verwenden. Wenn diese Option ausgewählt ist, hat die Assembly uneingeschränkten Zugriff auf interne wie externe Ressourcen. Code, der in einer Assembly mit dieser Option ausgeführt wird, kann nicht verwalteten Code aufrufen.<br /><br /> **\*\* Sicherheitshinweis \* \***  diese Option wird nicht empfohlen, es sei denn, die Assembly uneingeschränkten Zugriff benötigt. Vom Standpunkt der Sicherheit aus betrachtet, ist diese Option mit **Externer Zugriff**identisch. Assemblys, die die Option **Externer Zugriff** verwenden, bieten gegenüber Assemblys mit dieser Optionen ein Mehr an Zuverlässigkeit und Stabilität. Das Festlegen dieser Option ermöglicht es Code in der Assembly, nicht zulässige Vorgänge im Prozessbereich auszuführen. Dies hat eine potenzielle Gefährdung der Stabilität und Skalierbarkeit von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]zur Folge. Die Option stellt den am wenigsten restriktiven Berechtigungssatz dar und sollte mit Vorsicht verwendet werden.|  
+|**Externer Zugriff**|Wählen Sie diese Option aus, um diesen Berechtigungssatz für den Assemblyverweis zu verwenden. Wenn diese Option ausgewählt ist, hat die Assembly nur Zugriff auf die lokalen Daten und kann nur interne Berechnungen durchführen. Code, der von einer Assembly mit diesem Berechtigungssatz ausgeführt wird, kann auf externe Systemressourcen zugreifen, z. B. Dateien, Netzwerke, Umgebungsvariablen oder die Registrierung.<br /><br /> **\*\* Sicherheitshinweis \* \***  diese Option wird empfohlen, für Assemblys, die Zugriff auf Ressourcen außerhalb von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Assemblys, für die diese Option festgelegt ist, verwenden bei der Ausführung standardmäßig die Anmeldeinformationen des Dienstkontos. Code innerhalb dieser Assembly kann explizit die Identität des Aufrufers in Bezug auf den Sicherheitskontext der [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows-Authentifizierung annehmen. Aufgrund der standardmäßigen Ausführung als Dienstkonto sollte die Berechtigung zur Ausführung von Assemblys mit dieser Option nur vertrauenswürdigen Rollen erteilt werden. Die Option stellt einen weniger restriktiven Berechtigungssatz als **Sicher**dar, ist jedoch restriktiver als **Uneingeschränkt**.|  
+|**Uneingeschränkte**|Wählen Sie diese Option aus, um diesen Berechtigungssatz für den Assemblyverweis zu verwenden. Wenn diese Option ausgewählt ist, hat die Assembly uneingeschränkten Zugriff auf interne wie externe Ressourcen. Code, der in einer Assembly mit dieser Option ausgeführt wird, kann nicht verwalteten Code aufrufen.<br /><br /> **\*\* Sicherheitshinweis \* \***  diese Option wird nicht empfohlen, es sei denn, die Assembly uneingeschränkten Zugriff benötigt. Vom Standpunkt der Sicherheit aus betrachtet, ist diese Option mit **Externer Zugriff**identisch. Assemblys, die die Option **Externer Zugriff** verwenden, bieten gegenüber Assemblys mit dieser Optionen ein Mehr an Zuverlässigkeit und Stabilität. Das Festlegen dieser Option ermöglicht es Code in der Assembly, nicht zulässige Vorgänge im Prozessbereich auszuführen. Dies hat eine potenzielle Gefährdung der Stabilität und Skalierbarkeit von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]zur Folge. Die Option stellt den am wenigsten restriktiven Berechtigungssatz dar und sollte mit Vorsicht verwendet werden.|  
 |**Bestimmten Benutzernamen und bestimmtes Kennwort verwenden**|Wählen Sie diese Option aus, damit das [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekt die Sicherheitsanmeldeinformationen eines angegebenen Benutzerkontos verwendet.|  
-|**Benutzername**|Geben Sie die Domäne und den Namen des Benutzerkontos ein, die von dem ausgewählten [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekt verwendet werden sollen. Die Domäne und der Name des Benutzerkontos folgen dem folgenden Format:<br /><br /> *\<Domänenname >* **\\**  *\<Benutzerkontoname >*<br /><br /> Hinweis: Die Option ist nur verfügbar, wenn die Option **Bestimmten Benutzernamen und bestimmtes Kennwort verwenden** ausgewählt ist.|  
+|**Benutzername**|Geben Sie die Domäne und den Namen des Benutzerkontos ein, die von dem ausgewählten [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekt verwendet werden sollen. Die Domäne und der Name des Benutzerkontos folgen dem folgenden Format:<br /><br /> *\<Domänenname >* **\\**  *\<Benutzerkontonamen >*<br /><br /> Hinweis: Die Option ist nur verfügbar, wenn die Option **Bestimmten Benutzernamen und bestimmtes Kennwort verwenden** ausgewählt ist.|  
 |**Kennwort**|Geben Sie die Domäne und den Namen des Benutzerkontos ein, die von dem ausgewählten [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekt verwendet werden sollen.|  
 |**Dienstkonto verwenden**|Wählen Sie diese Option aus, damit das [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekt die Anmeldeinformationen mit dem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Dienst verwendet, der das Objekt verwaltet.|  
 |**Anmeldeinformationen des aktuellen Benutzers verwenden**|Wählen Sie diese Option aus, damit das [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekt die Anmeldeinformationen des aktuellen Benutzers verwendet.|  
@@ -51,6 +51,6 @@ ms.locfileid: "36056569"
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services-Designer und-Dialogfelder &#40;mehrdimensionale Daten&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Mehrdimensionales Modell Assemblys-Verwaltung](multidimensional-models/multidimensional-model-assemblies-management.md)  
+ [Verwaltung von mehrdimensionalen Modellassemblys](multidimensional-models/multidimensional-model-assemblies-management.md)  
   
   

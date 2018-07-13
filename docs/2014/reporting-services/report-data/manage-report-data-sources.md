@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], data
 - published reports [Reporting Services], data source connections
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data sources [Reporting Services], managing
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
 caps.latest.revision: 51
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8be62bb127d6d3fed0f3156f1dc58fc276e51431
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 0c49a666894fd4811de2405f22da111298b019b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047788"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244310"
 ---
 # <a name="manage-report-data-sources"></a>Verwalten von Berichtsdatenquellen
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]rufen Berichte, Berichtsmodelle und datengesteuerte Abonnements Daten von externen Datenquellen ab. Zum Herstellen einer Verbindung mit einer externen Datenquelle verwendet ein Berichtsserver Verbindungsinformationen für die Datenquelle, die im Bericht, Modell oder Abonnement definiert werden oder auf die dort verwiesen wird. Verbindungseigenschaften der Datenquellen werden bei Erstellung des Berichts oder Modells definiert. Sie können jedoch unabhängig verwaltet werden, nachdem der Bericht oder das Modell auf einem Berichtsserver veröffentlicht wurde.  
@@ -56,9 +56,9 @@ ms.locfileid: "36047788"
  Wenn Sie einen Bericht veröffentlichen, in den Datenquelleneigenschaften eingebettet sind, können Sie zu freigegebenen Datenquelleneigenschaften wechseln. Freigegebene Datenquellen lassen sich einfacher verwalten, da Sie Anmeldeinformationen und Verbindungszeichenfolgen auf einer Seite aktualisieren können. Alle Berichte, Modelle und datengesteuerten Abonnements, die auf die Datenquelle zugreifen, übernehmen die Änderungen sofort. Sie können freigegebene Datenquellen auch offline stellen. Auf diese Weise können Sie den Bericht oder das Abonnement effektiv unterbrechen, wenn Sie aufgetretene Probleme prüfen oder behandeln müssen.  
   
 ## <a name="controlling-access-data-source-properties"></a>Steuern des Zugriffs auf Datenquelleneigenschaften  
- Standardmäßig können alle Benutzer, die berechtigt sind Berichte zu verwalten, Eigenschaften für den Bericht festlegen. Dazu gehören Eigenschaften, die den Datenquelltyp, die Verbindungszeichenfolge, Anmeldeinformationen und die Datenquelle für Verbindungsinformationen (eingebettete oder freigegebene Datenquelle) definieren. Weitere Informationen darüber, welche Aufgaben und Berechtigungen den Zugriff auf datenquelleigenschaften auf einem Berichtsserver im einheitlichen Modus steuern finden Sie unter [Sichern freigegebener Datenquellenelemente](../security/secure-shared-data-source-items.md) und [Sichern von Berichten und Ressourcen](../security/secure-reports-and-resources.md).  
+ Standardmäßig können alle Benutzer, die berechtigt sind Berichte zu verwalten, Eigenschaften für den Bericht festlegen. Dazu gehören Eigenschaften, die den Datenquelltyp, die Verbindungszeichenfolge, Anmeldeinformationen und die Datenquelle für Verbindungsinformationen (eingebettete oder freigegebene Datenquelle) definieren. Weitere Informationen darüber, welche Aufgaben und Berechtigungen den Zugriff auf datenquelleigenschaften auf einem Berichtsserver im einheitlichen Modus steuern finden Sie unter [Sichern freigegebener Datenquellenelemente](../security/secure-shared-data-source-items.md) und [sichere Berichte und Ressourcen](../security/secure-reports-and-resources.md).  
   
- Berechtigungen zum Anzeigen und Bearbeiten von Eigenschaften für Elemente in einer SharePoint-Bibliothek werden vom Websiteadministrator zugeteilt. Weitere Informationen darüber, welche Berechtigungen den Zugriff auf Datenquellen-Verbindungseigenschaften steuern finden Sie unter [SharePoint-Website und List Permission Reference for Report Server Items](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
+ Berechtigungen zum Anzeigen und Bearbeiten von Eigenschaften für Elemente in einer SharePoint-Bibliothek werden vom Websiteadministrator zugeteilt. Weitere Informationen darüber, welche Berechtigungen steuern den Zugriff auf Datenquellen-Verbindungseigenschaften finden Sie unter [SharePoint-Website und List Permission Reference for Report Server Items](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
   
 ## <a name="how-to-work-with-data-source-properties-on-a-report-server"></a>Arbeiten mit Datenquelleneigenschaften auf Berichtsservern  
  Sie können eine Vielzahl von Tools verwenden, um Datenquelleneigenschaften zu erstellen und zu ändern. In der folgenden Tabelle sind die verschiedenen Methoden und Tools zusammengefasst. Ein Link führt zu weiteren Anweisungen.  
@@ -67,14 +67,14 @@ ms.locfileid: "36047788"
 |----------|----------|----------|  
 |Anzeigen von Beispielen für Verbindungszeichenfolgen||[Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  
 |Wählen Sie eine Methode zum Abrufen von Anmeldeinformationen, um eine Verbindung mit einer Datenquelle herzustellen.||[Specify Credential and Connection Information for Report Data Sources (Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen)](specify-credential-and-connection-information-for-report-data-sources.md)|  
-|Hinzufügen von Eigenschaften für die Datenquellenverbindung zu einer Berichtsdefinitionsdatei (.rdl)|Berichts-Designer|[Erstellen einer eingebettete oder freigegebene Datenquelle &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)|  
+|Hinzufügen von Eigenschaften für die Datenquellenverbindung zu einer Berichtsdefinitionsdatei (.rdl)|Berichts-Designer|[Erstellen einer eingebetteten oder freigegebenen Datenquelle &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)|  
 |Hinzufügen und Verknüpfen mit einer freigegebenen Datenquellendatei (.rds) im Berichtsprojekt|Berichts-Designer|[Erstellen, ändern und Löschen von freigegebenen Datenquellen &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)|  
 |Erstellen einer vordefinierten Liste von Datenquellen, die Benutzer zur Laufzeit auswählen können. Wenn Benutzer Berichte anfordern, stellt der Bericht eine Liste von Datenquellen bereit. Benutzer müssen auswählen, welche Datenquelle vor dem Ausführen des Berichts verwendet werden soll. Um einem Bericht eine Liste der auszuwählenden Datenquellen hinzuzufügen, verwenden Sie einen Ausdruck.<br /><br /> Dies wird als dynamische Datenquellenverbindung bezeichnet.|Berichts-Designer|[Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  
 |Erstellen eines freigegebenen Datenquellenelements auf einem Berichtsserver|Berichts-Manager|[Erstellen, löschen oder Ändern einer freigegebenen Datenquelle &#40;Berichts-Manager&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)|  
 |Speichern von Anmeldeinformationen als Voraussetzung für das Erstellen von Abonnements oder Berichtsmomentaufnahmen|Berichts-Manager|[Store Credentials in a Reporting Services Data Source (Speichern von Anmeldeinformationen in einer Reporting Services-Datenquelle)](store-credentials-in-a-reporting-services-data-source.md)|  
 |Bearbeiten von Eigenschaften für die Datenquellenverbindung in einem veröffentlichten Bericht|Berichts-Manager|[Konfigurieren von Datenquelleneigenschaften für einen Bericht &#40;Berichts-Manager&#41;](configure-data-source-properties-for-a-report-report-manager.md)|  
 |Erstellen eines freigegebenen Datenquellenelements auf einem Berichtsserver|SharePoint-Site|[Erstellen und Verwalten von freigegebenen Datenquellen &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)|  
-|Verwenden vorhandener ODC-Verbindungsinformationen mit einem Bericht|SharePoint-Site|[Verwenden einer Office Data Connection &#40;ODC&#41; mit Berichten &#40;integrierter Reporting Services im SharePoint-Modus&#41;](use-an-office-data-connection-odc-with-reports.md)|  
+|Verwenden vorhandener ODC-Verbindungsinformationen mit einem Bericht|SharePoint-Site|[Verwenden einer Office Data Connection &#40;ODC&#41; mit Berichten &#40;integrierten Reporting Services im SharePoint-Modus&#41;](use-an-office-data-connection-odc-with-reports.md)|  
   
 > [!NOTE]  
 >  Das Verwalten von Datenquellenverbindungen mit Berichtsdatenquellen ist nicht identisch mit dem Verwalten der Berichtsserververbindung mit der Berichtsserver-Datenbank. Weitere Informationen zur Verbindung eines Berichtsservers mit seinem internen Datenspeicher finden Sie unter [Konfigurieren einer Berichtsserver-Datenbankverbindung (SSRS-Konfigurations-Manager)](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  

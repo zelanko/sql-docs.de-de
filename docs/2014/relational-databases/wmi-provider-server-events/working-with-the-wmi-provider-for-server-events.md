@@ -1,5 +1,5 @@
 ---
-title: Arbeiten mit WMI-Anbieter für Serverereignisse | Microsoft Docs
+title: Arbeiten mit WMI-Anbieter für Serverereignisse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - WMI Provider for Server Events, security
 ms.assetid: cd974b3b-2309-4a20-b9be-7cfc93fc4389
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3ec2d4c6fa276c3938de0dc15062d026fe91dc80
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f6a9b7733ba7413ded8580648d0d13911fd2ef5a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049646"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189947"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>Verwenden des WMI-Anbieters für Serverereignisse
   Dieses Thema enthält Richtlinien, die Sie vor dem Programmieren mit dem WMI-Anbieter für Serverereignisse lesen sollten.  
@@ -51,7 +51,7 @@ SELECT name, is_broker_enabled, service_broker_guid FROM sys.databases;
  So aktivieren Sie [!INCLUDE[ssSB](../../includes/sssb-md.md)] verwenden Sie in einer Datenbank die ENABLE_BROKER SET-Option von der [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) Anweisung.  
   
 ## <a name="specifying-a-connection-string"></a>Angeben einer Verbindungszeichenfolge  
- Anwendungen leiten den WMI-Anbieter für Serverereignisse an eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weiter, indem sie eine Verbindung mit einem vom Anbieter definierten WMI-Namespace herstellen. Der WMI-Dienst ordnet der Anbieter-DLL Sqlwep.dll diesen Namespace zu und lädt sie in den Arbeitsspeicher. Jede Instanz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügt über einen eigenen WMI-Namespace, dessen Standard: \\ \\.\\ *Root*\Microsoft\SqlServer\ServerEvents\\*Instance_name*. *Instanzname* in einer Standardinstallation von standardmäßig MSSQLSERVER [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Anwendungen leiten den WMI-Anbieter für Serverereignisse an eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weiter, indem sie eine Verbindung mit einem vom Anbieter definierten WMI-Namespace herstellen. Der WMI-Dienst ordnet der Anbieter-DLL Sqlwep.dll diesen Namespace zu und lädt sie in den Arbeitsspeicher. Jede Instanz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügt über einen eigenen WMI-Namespace, dessen Standard: \\ \\.\\ *Stamm*\Microsoft\SqlServer\ServerEvents\\*Instance_name*. *Instanzname* lautet standardmäßig MSSQLSERVER in einer Standardinstallation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="permissions-and-server-authentication"></a>Berechtigungen und Serverauthentifizierung  
  Um auf den WMI-Anbieter für Serverereignisse zugreifen zu können, muss der Client, von dem eine WMI-Verwaltungsanwendung stammt, dem Windows-authentifizierten Benutzer- oder Gruppennamen in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entsprechen, die in der Verbindungszeichenfolge der Anwendung angegeben ist.  
@@ -114,7 +114,7 @@ WHERE DatabaseName = "AdventureWorks2012"
     -   DENY oder REVOKE (Gilt nur für die Berechtigungen ALTER DATABASE, ALTER ANY DATABASE EVENT NOTIFICATION, CREATE DATABASE DDL EVENT NOTIFICATION, CONTROL SERVER, ALTER ANY EVENT NOTIFICATION, CREATE DDL EVENT NOTIFICATION oder CREATE TRACE EVENT NOTIFICATION.)  
   
 ## <a name="working-with-event-data-on-the-client-side"></a>Verwenden von Ereignisdaten auf der Clientseite  
- Nachdem der WMI-Anbieter für Serverereignisse die erforderliche ereignisbenachrichtigung in der Zieldatenbank erstellt sendet die ereignisbenachrichtigung Ereignisdaten an den Zieldienst in ' msdb ' mit dem Namen **SQL/Notifications/ProcessWMIEventProviderNotification /V1.0**. Der Zieldienst stellt das Ereignis in eine Warteschlange in `msdb` mit der Bezeichnung **WMIEventProviderNotificationQueue**. (Der Dienst und die Warteschlange werden dynamisch erstellt vom Anbieter zunächst zum Verbindungsaufbau mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) Der Anbieter liest die XML-Ereignisdaten aus dieser Warteschlange, wandelt sie in MOF-Daten (Managed Object Format) um und gibt sie dann an die Clientanwendung zurück. Die MOF-Daten bestehen aus den Eigenschaften des Ereignisses, das von der WQL-Abfrage als CIM-Classendefinition (Common Information Model) angefordert wird. Jede Eigenschaft verfügt über einen entsprechenden CIM-Typ. Die `SPID`-Eigenschaft wird beispielsweise als CIM-Typ `Sint32` zurückgegeben. Für jede Eigenschaft der CIM-Typen sind aufgeführt, unter jede Ereignisklasse in [WMI-Anbieter für Server Events-Ereignisklassen und Eigenschaften](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
+ Nachdem der WMI-Anbieter für Serverereignisse die erforderliche ereignisbenachrichtigung in der Zieldatenbank erstellt sendet die ereignisbenachrichtigung Ereignisdaten an den Zieldienst in ' msdb ' mit dem Namen **SQL/Notifications/ProcessWMIEventProviderNotification /V1.0**. Der Zieldienst fügt das Ereignis in einer Warteschlange in `msdb` mit dem Namen **WMIEventProviderNotificationQueue**. (Sowohl für den Dienst als auch für die Warteschlange werden dynamisch erstellt vom Anbieter beim ersten Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) Der Anbieter liest die XML-Ereignisdaten aus dieser Warteschlange, wandelt sie in MOF-Daten (Managed Object Format) um und gibt sie dann an die Clientanwendung zurück. Die MOF-Daten bestehen aus den Eigenschaften des Ereignisses, das von der WQL-Abfrage als CIM-Classendefinition (Common Information Model) angefordert wird. Jede Eigenschaft verfügt über einen entsprechenden CIM-Typ. Die `SPID`-Eigenschaft wird beispielsweise als CIM-Typ `Sint32` zurückgegeben. Die CIM-Typen für die einzelnen Eigenschaften finden Sie unter jede Ereignisklasse in [WMI-Anbieter für Server Ereignisklassen und Eigenschaften](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konzepte des WMI-Anbieters für Serverereignisse](http://technet.microsoft.com/library/ms180560.aspx)  

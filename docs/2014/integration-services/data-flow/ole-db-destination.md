@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdest.f1
 helpviewer_keywords:
@@ -23,13 +23,13 @@ ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 caps.latest.revision: 77
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f6b3cbdff4e837facc8a6cd2c2b0498ae6bf92a7
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: eee342244a6a057a98d5ab6252c6ab970b515118
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324704"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243090"
 ---
 # <a name="ole-db-destination"></a>OLE DB-Ziel
   Das OLE DB-Ziel lädt Daten mithilfe einer Datenbanktabelle, einer Sicht oder eines SQL-Befehls in eine Reihe von OLE DB-kompatible Datenbanken. Beispielsweise können aus der OLE DB-Quelle Daten in Tabellen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access- und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken geladen werden.  
@@ -49,7 +49,7 @@ ms.locfileid: "36324704"
 > [!NOTE]  
 >  Vom OLE DB-Ziel werden keine Parameter unterstützt. Wenn Sie eine parametrisierte INSERT-Anweisung ausführen müssen, ziehen Sie die Transformation für den OLE DB-Befehl in Betracht. Weitere Informationen finden Sie unter [OLE DB Command Transformation](transformations/ole-db-command-transformation.md).  
   
- Wenn das OLE DB-Ziel Daten lädt, die einen Doppelbyte-Zeichensatz (Double-Byte Character Set, DBCS) verwenden, werden die Daten möglicherweise beschädigt, falls der Datenzugriffsmodus nicht die Option für schnelles Laden verwendet und falls der OLE DB-Verbindungs-Manager den [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB) verwendet. Um die Integrität von Doppelbyte-Zeichensatzdaten sicherzustellen, sollten Sie für den OLE DB-Verbindungs-Manager die Verwendung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client konfigurieren oder einen der Zugriffsmodi für das schnelle Laden verwenden: **Tabelle oder Sicht – schnelles Laden** oder **Variable für Tabellenname oder Sichtname – schnelles Laden**. Beide Optionen sind im Dialogfeld **Ziel-Editor für OLE DB** verfügbar. Bei der Programmierung der [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Objektmodell, sollten Sie die AccessMode-Eigenschaft auf festgelegt `OpenRowset Using FastLoad`, oder `OpenRowset Using FastLoad From Variable`.  
+ Wenn das OLE DB-Ziel Daten lädt, die einen Doppelbyte-Zeichensatz (Double-Byte Character Set, DBCS) verwenden, werden die Daten möglicherweise beschädigt, falls der Datenzugriffsmodus nicht die Option für schnelles Laden verwendet und falls der OLE DB-Verbindungs-Manager den [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB) verwendet. Um die Integrität von Doppelbyte-Zeichensatzdaten sicherzustellen, sollten Sie für den OLE DB-Verbindungs-Manager die Verwendung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client konfigurieren oder einen der Zugriffsmodi für das schnelle Laden verwenden: **Tabelle oder Sicht – schnelles Laden** oder **Variable für Tabellenname oder Sichtname – schnelles Laden**. Beide Optionen sind im Dialogfeld **Ziel-Editor für OLE DB** verfügbar. Bei der Programmierung der [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Objektmodell, sollten Sie die AccessMode-Eigenschaft festlegen, um `OpenRowset Using FastLoad`, oder `OpenRowset Using FastLoad From Variable`.  
   
 > [!NOTE]  
 >  Wenn Sie mithilfe des Dialogfelds **Ziel-Editor für OLE DB** im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer die Zieltabelle erstellen, in die das OLE DB-Ziel Daten einfügt, müssen Sie möglicherweise die neu erstellte Tabelle manuell auswählen. Die manuelle Auswahl ist erforderlich, wenn ein OLE DB-Anbieter, wie z. B. der OLE DB-Anbieter für DB2, dem Tabellennamen automatisch Schemabezeichner hinzufügt.  
@@ -80,7 +80,7 @@ ms.locfileid: "36324704"
   
 -   Die Zeilenanzahl im Batch und die Commitgröße angeben.  
   
- Einige Optionen für schnelles Laden werden in bestimmten Eigenschaften des OLE DB-Ziels gespeichert. FastLoadKeepIdentity gibt beispielsweise an, ob Werte weiterhin identifiziert werden sollen, während mit FastLoadKeepNulls angegeben wird, ob NULL-Werte beibehalten werden sollen. FastLoadMaxInsertCommitSize gibt wiederum die in einen Batch zu übernehmende Zeilenanzahl an. Andere Optionen für schnelles Laden werden in der FastLoadOptions-Eigenschaft in einer durch Trennzeichen getrennten Liste gespeichert. Wenn der OLE DB-Ziel alle Optionen für schnelles Laden verwendet, die in FastLoadOptions gespeichert und in aufgeführt sind die **Ziel-Editor für OLE DB** (Dialogfeld), wird der Wert der Eigenschaft auf festgelegt `TABLOCK, CHECK_CONSTRAINTS, ROWS_PER_BATCH=1000`. Der Wert 1000 gibt an, dass das Ziel zum Verwenden von Batches mit 1000 Zeilen konfiguriert wurde.  
+ Einige Optionen für schnelles Laden werden in bestimmten Eigenschaften des OLE DB-Ziels gespeichert. FastLoadKeepIdentity gibt beispielsweise an, ob Werte weiterhin identifiziert werden sollen, während mit FastLoadKeepNulls angegeben wird, ob NULL-Werte beibehalten werden sollen. FastLoadMaxInsertCommitSize gibt wiederum die in einen Batch zu übernehmende Zeilenanzahl an. Andere Optionen für schnelles Laden werden in der FastLoadOptions-Eigenschaft in einer durch Trennzeichen getrennten Liste gespeichert. Wenn das OLE DB-Ziel alle Optionen für schnelles Laden verwendet, die in FastLoadOptions gespeicherten und im aufgeführt sind die **Ziel-Editor für OLE DB** im Dialogfeld der Wert der Eigenschaft wird festgelegt, um `TABLOCK, CHECK_CONSTRAINTS, ROWS_PER_BATCH=1000`. Der Wert 1000 gibt an, dass das Ziel zum Verwenden von Batches mit 1000 Zeilen konfiguriert wurde.  
   
 > [!NOTE]  
 >  Einschränkungsfehler am Ziel bewirken, dass der gesamte Batch mit Zeilen, die durch FastLoadMaxInsertCommitSize definiert sind, fehlschlägt.  
@@ -89,7 +89,7 @@ ms.locfileid: "36324704"
   
 |Option für schnelles Laden|Description|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|Gibt die einzufügende Größe in Kilobyte an. Die Option hat die Form `KILOBYTES_PER_BATCH`  =  \<positive Ganzzahl**>**.|  
+|KILOBYTES_PER_BATCH|Gibt die einzufügende Größe in Kilobyte an. Die Option hat die Form `KILOBYTES_PER_BATCH`  =  \<positive ganze Zahl**>**.|  
 |FIRE_TRIGGERS|Gibt an, ob in der Einfügetabelle Trigger ausgelöst werden. Die Option hat die Form **FIRE_TRIGGERS**. Das Vorhandensein der Option gibt an, dass Trigger ausgelöst werden.|  
 |ORDER|Gibt die Sortierung der Eingabedaten an. Die Option hat die folgende Form: ORDER \<Spaltenname> ASC&#124;DESC. Es kann eine beliebige Anzahl an Spalten aufgelistet werden. Optional kann die Sortierreihenfolge eingeschlossen werden. Wird die Sortierreihenfolge ausgelassen, geht der Einfügevorgang davon aus, dass die Daten nicht sortiert sind.<br /><br /> Hinweis: Die Leistung wird verbessert, wenn die Eingabedaten entsprechend dem gruppierten Index der Tabelle mit der ORDER-Option sortiert werden.|  
   
@@ -126,7 +126,7 @@ ms.locfileid: "36324704"
 ## <a name="related-content"></a>Verwandte Inhalte  
  [OLE DB-Quelle](ole-db-source.md)  
   
- [Integrationsservices &#40;SSIS&#41; Variablen](../integration-services-ssis-variables.md)  
+ [Integrationsdienste &#40;SSIS&#41; Variablen](../integration-services-ssis-variables.md)  
   
  [Datenfluss](data-flow.md)  
   

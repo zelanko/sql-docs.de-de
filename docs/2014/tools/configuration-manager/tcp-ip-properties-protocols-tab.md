@@ -1,5 +1,5 @@
 ---
-title: TCP - IP-Eigenschaften (Registerkarte "Protokolle") | Microsoft Docs
+title: TCP - IP-Eigenschaften (Registerkarte Protokoll) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - TCP/IP [SQL Server], configuration options
 ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
 caps.latest.revision: 36
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 57b3bd32574aadbd42b25b626756cc20369d9b8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 169e1c0d19cecf50f7c995ff4b4d46f4badb32eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049596"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249540"
 ---
-# <a name="tcp---ip-properties-protocols-tab"></a>TCP - IP-Eigenschaften (Registerkarte "Protokolle")
+# <a name="tcp---ip-properties-protocols-tab"></a>TCP - IP-Eigenschaften (Registerkarte Protokoll)
   Verwenden Sie das Dialogfeld **TCP/IP-Eigenschaften** zum Konfigurieren der Optionen für das TCP/IP-Protokoll. Klicken Sie im linken Bereich auf **TCP/IP**, um die einzelnen IP-Adresskonfigurationen im Detailbereich anzuzeigen.  
   
  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss neu gestartet werden, damit die Änderungen in Kraft treten.  

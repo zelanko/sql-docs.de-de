@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - languages [full-text search]
 - full-text indexes [SQL Server], languages
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - word breakers [full-text search]
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
 caps.latest.revision: 48
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7d6f87d5916bcda7db3ff52fcca222d2c3f21816
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3ce5d56ec84c1dcf33e3a915a8fa8bf94b1cdced
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047628"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268676"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Auswählen einer Sprache beim Erstellen eines Volltextindex
   Wenn Sie einen Volltextindex erstellen, müssen Sie für die indizierte Spalte eine Spaltensprache angeben. Die [Wörtertrennung und Wortstammerkennung](configure-and-manage-word-breakers-and-stemmers-for-search.md) der angegebenen Sprache wird von Volltextabfragen für die Spalte verwendet. Bei der Wahl der Spaltensprache für die Erstellung eines Volltextindex sind mehrere Dinge zu bedenken. Diese beziehen sich darauf, wie der Text von der Volltext-Engine in Token zerlegt und anschließend indiziert wird.  
@@ -40,7 +39,7 @@ ms.locfileid: "36047628"
  Dieser Abschnitt enthält eine Einführung in die Wörtertrennung und Wortstammerkennung und beschreibt, wie die Volltextsuche die LCID der Spaltensprache verwendet.  
   
 ### <a name="introduction-to-word-breakers-and-stemmers"></a>Einführung in Wörtertrennung und Wortstammerkennung  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höhere Versionen enthalten eine vollständige neue Familie von wörtertrennungen und wortstammerkennungen, die wesentlich besser als die zuvor in verfügbar sind [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höhere Versionen enthalten eine vollständige neue Familie von wörtertrennungen und wortstammerkennungen, die wesentlich besser geeignet als die zuvor in verfügbar sind [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  Die Microsoft Natural Language Group (MS NLG) hat diese neuen linguistischen Komponenten implementiert und bietet dazu Unterstützung an.  
@@ -53,7 +52,7 @@ ms.locfileid: "36047628"
   
 -   Security  
   
-     Die neuen wörtertrennungen sind standardmäßig aktiviert, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sicherheitsverbesserungen der linguistischen Komponenten. Es ist sehr zu empfehlen, dass Sie signierte externe Komponenten wie Wörtertrennungen und Filter verwenden, um die Gesamtsicherheit und Stabilität von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zu verbessern. Sie können Volltext wie folgt konfigurieren, um zu überprüfen, ob diese Komponenten signiert sind:  
+     Die neuen wörtertrennungen sind standardmäßig aktiviert, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aufgrund von sicherheitsverbesserungen der linguistischen Komponenten. Es ist sehr zu empfehlen, dass Sie signierte externe Komponenten wie Wörtertrennungen und Filter verwenden, um die Gesamtsicherheit und Stabilität von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zu verbessern. Sie können Volltext wie folgt konfigurieren, um zu überprüfen, ob diese Komponenten signiert sind:  
   
     ```  
     EXEC sp_fulltext_service 'verify_signature';  
@@ -63,9 +62,9 @@ ms.locfileid: "36047628"
   
      Die Wörtertrennungen wurden neu ausgearbeitet, und Tests haben gezeigt, dass die neuen Wörtertrennungen eine bessere semantische Qualität als ihre Vorgänger aufweisen. Auf diese Weise wird die Genauigkeit von Rückrufen erhöht.  
   
--   Codeabdeckung für eine Vielzahl von Sprachen, wörtertrennungen sind in enthalten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] des Felds ab, und standardmäßig aktiviert.  
+-   Coverage für eine Vielzahl von Sprachen, wörtertrennungen sind in enthalten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] der und in der Standardeinstellung aktiviert.  
   
- Eine Liste der Sprachen, für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enthält eine wörtertrennung und wortstammerkennungen, finden Sie unter [Sys. fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  
+ Eine Liste der Sprachen, für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] umfasst eine wörtertrennung und wortstammerkennung, finden Sie unter [Sys. fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  
   
 
   
@@ -100,7 +99,7 @@ ms.locfileid: "36047628"
   
 -   Nur-Text-Inhalt  
   
-     Wenn Ihre Inhalte nur-Text ist, können Sie es zum Konvertieren der `xml` -Datentyp und Sprachtags, die angeben, das Dokument oder einen Dokumentabschnitt jeweils die entsprechende Sprache hinzufügen. Dazu müssen Sie vor der Volltextindizierung jedoch die Sprache kennen.  
+     Wenn Ihr Inhalt nur-Text ist, können Sie diese zum Konvertieren der `xml` -Datentyp und Hinzufügen von Sprachtags, die die Dokument oder einen Dokumentabschnitt jeweils die entsprechende Sprache angeben. Dazu müssen Sie vor der Volltextindizierung jedoch die Sprache kennen.  
   
 
   

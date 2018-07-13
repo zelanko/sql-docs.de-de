@@ -1,5 +1,5 @@
 ---
-title: Datenimport (Master Data Services) | Microsoft Docs
+title: Importieren von Daten (Master Data Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], about staging process
 - importing data [Master Data Services]
 - staging process [Master Data Services]
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 caps.latest.revision: 14
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d386070df790164e11763d0dfc459cb7de2c1a95
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: d1d0810c58b2dd0a899c95a358ddccac601b8380
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048077"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162831"
 ---
 # <a name="data-import-master-data-services"></a>Datenimport (Master Data Services)
-  Wenn Sie ein Modell, für Ihre Daten im erstellt haben [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], können Sie beginnen, Daten hinzufügen und Änderungen an Daten in der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Datenbank.   Sie verwenden [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Stagingtabellen, gespeicherte Prozeduren und Master Data Manager.  
+  Nach der Erstellung eines Modells für Ihre Daten in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], können Sie beginnen, Daten hinzufügen, und nehmen Sie Änderungen an Daten in die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Datenbank.   Sie verwenden [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Stagingtabellen, gespeicherte Prozeduren und Master Data Manager.  
   
- Sie können auch die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], zum Hinzufügen von Daten im MDS-Repository ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Datenbank). Weitere Informationen finden Sie unter [Veröffentlichen von Daten &#40;MDS-Add-in für Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).  
+ Sie können auch die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], zum Hinzufügen von Daten im MDS-Repository ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Datenbank). Weitere Informationen finden Sie unter [Veröffentlichungsdaten &#40;MDS-Add-in für Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).  
   
  Beim Hinzufügen und Aktualisieren von Daten können Sie Folgendes tun.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36048077"
   
  Für jede Entität im Modell gibt es drei gespeicherte Prozeduren, die dem Blattelement, dem konsolidierten Element und der Stagingtabelle für Beziehungen entsprechen.  In der folgenden Abbildung sind die gespeicherten Stagingprozeduren für die Entitäten „Währung“, „Kunde“ und „Produkt“ dargestellt.  
   
- ![Staging gespeicherte Prozeduren in MDS-Datenbank](../../2014/master-data-services/media/mds-stagingstoredprocedures.png "Staging gespeicherte Prozeduren in MDS-Datenbank")  
+ ![Staging Stored Procedures in MDS-Datenbank](../../2014/master-data-services/media/mds-stagingstoredprocedures.png "Staging Stored Procedures in MDS-Datenbank")  
   
  Weitere Informationen zu den gespeicherten Prozeduren finden Sie unter [Gespeicherte Stagingprozedur &#40;Master Data Services&#41;](../../2014/master-data-services/staging-stored-procedure-master-data-services.md).  
   

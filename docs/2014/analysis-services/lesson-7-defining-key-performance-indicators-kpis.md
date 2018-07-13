@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 7: Definieren von Key Performance Indicators (KPIs) | Microsoft Docs'
+title: 'Lektion 7: Definieren von Key Performance Indicators (KPIs) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 36d53770-294f-43ab-8850-15d5351ff60c
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: bcd70da10c33ed7296e07ac2f0aade0832bf9f43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 23f76cbefd4bd9c944928e2875dc59fe6f177955
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049601"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185367"
 ---
 # <a name="lesson-7-defining-key-performance-indicators-kpis"></a>Lektion 7: Definieren von KPIs (Key Performance Indicator)
   In dieser Lektion erfahren Sie, wie Sie KPIs (Key Performance Indicator) in Ihrem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt definieren können. KPIs stellen ein Gerüst für die Definition serverseitiger Berechnungen bereit, die Measures für Ihr Unternehmen bereitstellen und die Darstellung der resultierenden Informationen in Standardform wiedergeben. KPIs können in Berichten, Portalen und Dashboards mithilfe von Datenzugriffs-APIs sowie [!INCLUDE[msCoName](../includes/msconame-md.md)] -Tools und Drittanbietertools angezeigt werden. KPIs sind Metadatenwrapper um reguläre Measures und andere MDX-Ausdrücke (Multidimensional Expressions). Weitere Informationen finden Sie unter [Leistungskennzahlen &#40;Key Performance Indicators, KPIs&#41; in mehrdimensionalen Modellen](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "36049601"
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services-Lernprogrammszenario](analysis-services-tutorial-scenario.md)   
- [Mehrdimensionale Modellierung &#40;Adventure Works-Lernprogramm&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+ [Mehrdimensionale Modellierung &#40;Adventure Works-Tutorial&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Key Performance Indicators &#40;KPIs&#41; in mehrdimensionalen Modellen](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)  
   
   

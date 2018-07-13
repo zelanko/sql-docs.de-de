@@ -1,5 +1,5 @@
 ---
-title: Zulassen von teilweise vertrauenswürdigen Aufrufern | Microsoft Docs
+title: Zulassen von teilweise vertrauenswürdigen Aufrufern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - partially trusted callers [CLR integration]
 ms.assetid: 20b0248f-36da-4fc3-97d2-3789fcf6e084
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3ef6354d8dee0373af005d7da782bffc3a90eb5b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: deb561ec43fda2e831f115b1c1a7f8eb21974e92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047670"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265315"
 ---
 # <a name="allowing-partially-trusted-callers"></a>Zulassen von teilweise vertrauenswürdigen Aufrufern
   Die gemeinsame Nutzung von Codebibliotheken ist bei der CLR-Integration gängige Praxis. Hierbei greift eine Assembly oder Anwendung häufig auf eine andere Assembly zu, die einen benutzerdefinierten Typ, eine gespeicherte Prozedur, eine benutzerdefinierte Funktion, ein benutzerdefiniertes Aggregat, einen Trigger oder eine Hilfsprogrammklasse enthält. Codebibliotheken, die von mehreren Anwendungen genutzt werden sollen, müssen mit einem starken Namen signiert werden.  
   
- Nur Anwendungen, die vom Sicherheitssystem für den Laufzeitcodezugriff als voll vertrauenswürdig angesehen werden, erhalten Zugriff auf eine freigegebene Assembly mit verwaltetem Code, die nicht explizit mit dem `System.Security.AllowPartiallyTrustedCallers`-Attribut markiert ist. Wenn eine teilweise vertrauenswürdige Assembly (eine Assembly, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit der Berechtigung `SAFE` oder `EXTERNAL_ACCESS` registriert ist) versucht, auf eine mit einem starken Namen signierte Assembly ohne dieses Attribut zuzugreifen, dann wird eine Ausnahme des Typs `System.Security.SecurityException` ausgelöst. Die Fehlermeldung, die angezeigt wird ähnlich der folgenden:  
+ Nur Anwendungen, die vom Sicherheitssystem für den Laufzeitcodezugriff als voll vertrauenswürdig angesehen werden, erhalten Zugriff auf eine freigegebene Assembly mit verwaltetem Code, die nicht explizit mit dem `System.Security.AllowPartiallyTrustedCallers`-Attribut markiert ist. Wenn eine teilweise vertrauenswürdige Assembly (eine Assembly, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit der Berechtigung `SAFE` oder `EXTERNAL_ACCESS` registriert ist) versucht, auf eine mit einem starken Namen signierte Assembly ohne dieses Attribut zuzugreifen, dann wird eine Ausnahme des Typs `System.Security.SecurityException` ausgelöst. Die Fehlermeldung, die Sie sehen, ist ähnlich der folgenden:  
   
 ```  
 Msg 6522, Level 16, State 1, Procedure usp_RSTest, Line 0  
@@ -65,7 +65,7 @@ Microsoft.Samples.SqlServer.TestResultSet.Test()
   
  In diesem Beispiel wird veranschaulicht, wie mithilfe des Attributs "Allow partially trusted callers" angegeben wird, dass es sich bei der Resultset-Assembly um eine Bibliothek handelt, die von anderen Assemblys auf sichere Weise aufgerufen werden kann. Diese Vorgehensweise ist etwas komplexer, jedoch sicherer als das Registrieren der aufrufenden Assembly mithilfe der UNSAFE-Berechtigung. Sie ist sicherer, weil durch das Registrieren der aufrufenden Assembly als SAFE die aufrufende Assembly lediglich auf für den Server externe Ressourcen zugreift und Beschädigungen der Integrität des Servers verhindert werden.  
   
- In den Erstellungsanweisungen für dieses Beispiel wird davon ausgegangen, dass die Quellcodedateien in einem Verzeichnis mit dem Namen c:\samples enthalten sind.  Wenn Sie ein anderes Verzeichnis verwenden, müssen Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skripts ändern. Die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts erfordern außerdem die AdventureWorks-Datenbank. Sie können die AdventureWorks-Beispieldatenbank von der [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) Startseite.  
+ In den Erstellungsanweisungen für dieses Beispiel wird davon ausgegangen, dass die Quellcodedateien in einem Verzeichnis mit dem Namen c:\samples enthalten sind.  Wenn Sie ein anderes Verzeichnis verwenden, müssen Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skripts ändern. Die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts erfordern außerdem die AdventureWorks-Datenbank. Sie können die AdventureWorks-Beispieldatenbank von der [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) auf der Startseite.  
   
  Um das Beispiel zu erstellen und auszuführen, fügen Sie das erste Codelisting in eine Datei mit dem Namen ResultSet.cs ein, und kompilieren Sie mit csc /target:library ResultSet.cs.  
   

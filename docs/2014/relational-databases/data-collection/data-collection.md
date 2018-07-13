@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data collection [SQL Server]
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a6669b33697e573ef0cff9de86adf39aa98301ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2cb2709d0296ce83a842086329f64d5cf0812560
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048072"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171051"
 ---
 # <a name="data-collection"></a>Datensammlung
   Der Datensammler ist eine Komponente von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , die verschiedene Datensätze sammelt. Die Datensammlung erfolgt entweder durchgängig oder nach einem benutzerdefinierten Zeitplan. Der Datensammler speichert die gesammelten Daten dann in einer relationalen Datenbank, die als Verwaltungs-Data Warehouse bezeichnet wird.  
@@ -64,7 +64,7 @@ ms.locfileid: "36048072"
   
 ## <a name="data-collector-terminology"></a>Terminologie zum Datensammler  
  target  
- Eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] in einer Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit Unterstützung für Datensammlung. Weitere Informationen zu unterstützten Versionen finden Sie im Abschnitt "Verwaltbarkeit" [von den Editionen von SQL Server 2014 unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] in einer Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit Unterstützung für Datensammlung. Weitere Informationen zu unterstützten Editionen finden Sie im Abschnitt "Verwaltbarkeit" [von den SQL Server 2014-Editionen unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Ein *Zielstamm* definiert eine Teilstruktur in der Zielhierarchie. Ein *Zielsatz* ist die Gruppe von Zielen, die aus dem Anwenden eines Filters auf eine von einem Zielstamm definierte Unterstruktur resultiert. Ein Zielstamm kann eine Datenbank, eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]oder eine Computerinstanz sein.  
   

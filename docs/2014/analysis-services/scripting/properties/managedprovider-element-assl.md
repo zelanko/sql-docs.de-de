@@ -1,5 +1,5 @@
 ---
-title: ManagedProvider-Element (ASSL) | Microsoft Docs
+title: ManagedProvider-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - ManagedProvider element
 ms.assetid: ed5a1077-20a4-40b9-b62d-0db0d53b9624
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe2bb53abd8a528fa9ca5e1b685591bc57f162e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b5a4b2d94d0d3abb681be2b288ce3a5ca3b371e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056792"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180847"
 ---
 # <a name="managedprovider-element-assl"></a>ManagedProvider-Element (ASSL)
-  Enthält den Namen des verwalteten Anbieters, die von einem Element, das von abgeleitet ist verwendet die [DataSource](../data-type/datasource-data-type-assl.md) -Datentyp.  
+  Enthält den Namen des verwalteten Anbieters von einem Element, das von abgeleitet ist, verwendet der [DataSource](../data-type/datasource-data-type-assl.md) -Datentyp.  
   
 ## <a name="syntax"></a>Syntax  
   

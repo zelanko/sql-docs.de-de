@@ -1,5 +1,5 @@
 ---
-title: Reporting Services-Abfrage-Designer | Microsoft Docs
+title: Abfragedesigner in Reporting Services | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - query designers [Reporting Services]
 ms.assetid: 07efd3f1-804f-45f7-b62a-3e727a3d9835
 caps.latest.revision: 16
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ca805856f4cd09d6d1172b5602a7a9e54b4cc16c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aed7304b4e7e48eff1691970da5ff68b03fd0962
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048451"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222940"
 ---
 # <a name="reporting-services-query-designers"></a>Abfrage-Designer in Reporting Services
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Stellt grafische und textbasierte Abfrage-Designer, um Ihnen das Erstellen von Abfragen für jeden Datenquellentyp in Ihrem Bericht zu erleichtern.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Stellt grafische und textbasierte Abfrage-Designer Sie Abfragen für jeden Datenquellentyp in Ihrem Bericht erstellen können.  
   
  Einige Datenquellen unterstützen grafische Designer, mit denen Sie eine Abfrage interaktiv erstellen können. Andere Datenquellen verwenden einen textbasierten Abfrage-Designer. Bei einem grafischen Abfrage-Designer können Sie Metadatenelemente, die die zugrunde liegenden Daten einer Datenquelle darstellen, auf die Entwurfsoberfläche der Abfrage ziehen. Bei einem textbasierten Abfrage-Designer können Sie den Befehlstext in einen Abfragebereich eingeben. Sie können von einem grafischen Abfrage-Designer zu einem textbasierten Abfrage-Designer wechseln, indem Sie auf der Symbolleiste auf das Symbol für den textbasierten Abfrage-Designer klicken.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36048451"
   
 -   **Hinsichtlich der Unterstützung für den Schemateil des Namens eines Datenbankobjekts.** Wenn in einer Datenquelle Schemas als Teil des Datenbankobjektbezeichners verwendet werden, muss der Schemaname als Teil der Abfrage für Namen angegeben werden, für die das Standardschema nicht verwendet wird. Beispiel: `SELECT FirstName, LastName FROM [Person].[Person]`.  
   
--   **Hinsichtlich der Unterstützung für Abfrageparameter.** Datenanbieter unterscheiden sich in der Unterstützung für Parameter. Einige Datenanbieter unterstützen benannte Parameter, beispielsweise `SELECT Col1, Col2 FROM Table WHERE <parameter identifier><parameter name> = <value>`. Einige Datenanbieter unterstützen unbenannte Parameter, beispielsweise `SELECT Col1, Col2 FROM Table WHERE <column name> = ?`. Der Parameterbezeichner kann vom Datenanbieter unterschiedlich sein. beispielsweise [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet die "at" (@) Symbol Oracle verwendet den Doppelpunkt (:). Einige Datenanbieter unterstützen keine Parameter.  
+-   **Hinsichtlich der Unterstützung für Abfrageparameter.** Datenanbieter unterscheiden sich in der Unterstützung für Parameter. Einige Datenanbieter unterstützen benannte Parameter, beispielsweise `SELECT Col1, Col2 FROM Table WHERE <parameter identifier><parameter name> = <value>`. Einige Datenanbieter unterstützen unbenannte Parameter, beispielsweise `SELECT Col1, Col2 FROM Table WHERE <column name> = ?`. Der Parameterbezeichner kann vom Datenanbieter unterscheiden sich. z. B. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet die "at" (@) Symbol "," Oracle verwendet den Doppelpunkt (:)). Einige Datenanbieter unterstützen keine Parameter.  
   
 -   **Hinsichtlich der Fähigkeit zum Importieren von Abfragen.** Sie können z. B. für eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenquelle eine Abfrage aus einer Berichtsdefinitionsdatei (.rdl) oder aus einer SQL-Datei importieren.  
   

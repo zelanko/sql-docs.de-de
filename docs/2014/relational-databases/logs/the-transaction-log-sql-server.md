@@ -5,25 +5,24 @@ ms.date: 01/04/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-transaction-log
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], about
 - databases [SQL Server], transaction logs
 - logs [SQL Server], transaction logs
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 caps.latest.revision: 58
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: da8d7d3b5a6cbe5864d7628ef58c61189fec6c7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cdaae11d21d1018e0c855036c4c82221c57a905d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048489"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223328"
 ---
 # <a name="the-transaction-log-sql-server"></a>Das Transaktionsprotokoll [SQL Server]
   Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank verfügt über ein Transaktionsprotokoll, in dem alle Transaktionen sowie die Datenbankänderungen erfasst werden, die von den einzelnen Transaktionen vorgenommen werden. Um das Überlaufen des Transaktionsprotokolls zu verhindern, muss es in regelmäßigen Abständen gekürzt werden. Einige Faktoren können die Protokollkürzung jedoch verzögern, sodass die Überwachung der Protokollgröße wichtig ist. Einige Vorgänge lassen sich minimal protokollieren, um deren Auswirkung auf die Größe des Transaktionsprotokolls zu reduzieren.  
@@ -35,7 +34,7 @@ ms.locfileid: "36048489"
   
  **In diesem Thema:**  
   
--   [Vorteile: Vom Transaktionsprotokoll unterstützte Vorgänge](#Benefits)  
+-   [Vorteile:-Vorgänge, die durch das Transaktionsprotokoll unterstützt](#Benefits)  
   
 -   [Kürzung des Transaktionsprotokolls](#Truncation)  
   
@@ -45,7 +44,7 @@ ms.locfileid: "36048489"
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="Benefits"></a> Vorteile: Vom Transaktionsprotokoll unterstützte Vorgänge  
+##  <a name="Benefits"></a> Vorteile:-Vorgänge, die durch das Transaktionsprotokoll unterstützt  
  Das Transaktionsprotokoll unterstützt die folgenden Vorgänge:  
   
 -   Wiederherstellen einzelner Transaktionen.  
@@ -86,7 +85,7 @@ ms.locfileid: "36048489"
 |1|CHECKPOINT|Seit der letzten Protokollkürzung ist kein Prüfpunkt aufgetreten, oder der Kopf des Protokolls wurde noch nicht über eine virtuelle Protokolldatei hinaus verschoben. (Alle Wiederherstellungsmodelle)<br /><br /> Dies ist ein häufiger Grund für das verzögerte Kürzen von Protokollen. Weitere Informationen finden Sie unter [Datenbankprüfpunkte &#40;SQL Server&#41;](database-checkpoints-sql-server.md).|  
 |2|LOG_BACKUP|Eine Protokollsicherung ist erforderlich, bevor das Transaktionsprotokoll gekürzt werden kann. (nur vollständiges bzw. massenprotokolliertes Wiederherstellungsmodell)<br /><br /> Bei Abschluss der nächsten Protokollsicherung wird möglicherweise ein Teil des Protokollspeicherplatzes zur Wiederverwendung freigegeben.|  
 |3|ACTIVE_BACKUP_OR_RESTORE|Es findet gerade eine Datensicherung oder eine Wiederherstellung statt (alle Wiederherstellungsmodelle).<br /><br /> Verhindert eine Datensicherung die Protokollkürzung, kann das unmittelbare Problem u. U. durch Abbrechen des Sicherungsvorgangs behoben werden.|  
-|4|ACTIVE_TRANSACTION|Eine Transaktion ist aktiv (alle Wiederherstellungsmodelle).<br /><br /> Möglicherweise ist beim Starten der Protokollsicherung eine Transaktion mit langer Ausführungszeit vorhanden. In diesem Fall ist zum Freigeben von Speicherplatz möglicherweise eine weitere Protokollsicherung erforderlich. Beachten Sie, dass eine lang andauernde Transaktionen verhindern die protokollkürzung unter allen Wiederherstellungsmodellen, einschließlich des einfachen Wiederherstellungsmodells, unter dem im Allgemeinen das Transaktionsprotokoll an jedem automatischen Prüfpunkt gekürzt wird.<br /><br /> Eine Transaktion wird verzögert. Eine *verzögerte Transaktion* ist tatsächlich eine aktive Transaktion, deren Rollback aufgrund einer nicht verfügbaren Ressource blockiert ist. Weitere Informationen zu den Ursachen für verzögerte Transaktionen und zum Auflösen ihres verzögerten Zustands finden Sie unter [Verzögerte Transaktionen &#40;SQL Server&#41;](../backup-restore/deferred-transactions-sql-server.md). <br /><br />Lang andauernde Transaktionen können auch das Transaktionsprotokoll von „tempdb“ füllen. „tempdb“ wird implizit von Benutzertransaktionen für interne Objekte wie z.B. Arbeitstabellen zum Sortieren, Arbeitsdateien für Hashverfahren, Cursorarbeitstabellen und Zeilenversionsverwaltung verwendet. Selbst wenn die Benutzertransaktion enthält nur Lesen von Daten (SELECT-Abfragen), können interne Objekte erstellt und unter Benutzertransaktionen verwendet werden. Anschließend kann das tempdb-Transaktionsprotokoll gefüllt werden.|  
+|4|ACTIVE_TRANSACTION|Eine Transaktion ist aktiv (alle Wiederherstellungsmodelle).<br /><br /> Möglicherweise ist beim Starten der Protokollsicherung eine Transaktion mit langer Ausführungszeit vorhanden. In diesem Fall ist zum Freigeben von Speicherplatz möglicherweise eine weitere Protokollsicherung erforderlich. Beachten Sie, dass eine lang andauernde Transaktionen verhindern die protokollkürzung unter allen Wiederherstellungsmodellen, einschließlich des einfachen Wiederherstellungsmodells, unter dem im Allgemeinen das Transaktionsprotokoll an jedem automatischen Prüfpunkt gekürzt wird.<br /><br /> Eine Transaktion wird verzögert. Eine *verzögerte Transaktion* ist tatsächlich eine aktive Transaktion, deren Rollback aufgrund einer nicht verfügbaren Ressource blockiert ist. Weitere Informationen zu den Ursachen für verzögerte Transaktionen und zum Auflösen ihres verzögerten Zustands finden Sie unter [Verzögerte Transaktionen &#40;SQL Server&#41;](../backup-restore/deferred-transactions-sql-server.md). <br /><br />Lang andauernde Transaktionen können auch das Transaktionsprotokoll von „tempdb“ füllen. „tempdb“ wird implizit von Benutzertransaktionen für interne Objekte wie z.B. Arbeitstabellen zum Sortieren, Arbeitsdateien für Hashverfahren, Cursorarbeitstabellen und Zeilenversionsverwaltung verwendet. Auch wenn die Benutzertransaktion enthält nur Lesen von Daten (SELECT-Abfragen), möglicherweise interne Objekte erstellt und unter Benutzertransaktionen verwendet werden. Anschließend kann das tempdb-Transaktionsprotokoll gefüllt werden.|  
 |5|DATABASE_MIRRORING|Die Datenbankspiegelung wurde angehalten, oder im Modus für hohe Leistung befindet sich die Spiegeldatenbank deutlich hinter der Prinzipaldatenbank. (nur vollständiges Wiederherstellungsmodell)<br /><br /> Weitere Informationen finden Sie unter [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).|  
 |6|REPLICATION|Während der Transaktionsreplikationen wurden für die Veröffentlichungen relevante Transaktionen noch immer nicht für die Verteilungsdatenbank bereitgestellt. (nur vollständiges Wiederherstellungsmodell)<br /><br /> Weitere Informationen zur Transaktionsreplikation finden Sie unter [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md).|  
 |7|DATABASE_SNAPSHOT_CREATION|Eine Datenbank-Momentaufnahme wird erstellt. (Alle Wiederherstellungsmodelle)<br /><br /> Dies ist ein häufiger, im Allgemeinen jedoch nur kurz andauernder Grund für ein verzögertes Kürzen eines Protokolls.|  
@@ -97,7 +96,7 @@ ms.locfileid: "36048489"
 |12|—|Nur interne Verwendung|  
 |13|OLDEST_PAGE|Ist eine Datenbank zur Verwendung von indirekten Prüfpunkten konfiguriert, ist die älteste Seite in der Datenbank u. U. älter als die Prüfpunkt-LSN. In diesem Fall kann die älteste Seite die Protokollkürzung verzögern. (Alle Wiederherstellungsmodelle)<br /><br /> Weitere Informationen zu indirekten Prüfpunkten finden Sie unter [Database Checkpoints &#40;SQL Server&#41;](database-checkpoints-sql-server.md).|  
 |14|OTHER_TRANSIENT|Dieser Wert wird derzeit nicht verwendet.|  
-|16|XTP_CHECKPOINT|Wenn eine Datenbank eine Speicheroptimierte Dateigruppe aufweist, kann das Transaktionsprotokoll nicht bis automatisch abgeschnitten [!INCLUDE[hek_2](../../includes/hek-2-md.md)] Prüfpunkt wird (dies bei jeder 512 MB anwachsen des Protokolls geschieht) ausgelöst.<br /><br /> Hinweis: Lösen Sie aus, um das Transaktionsprotokoll vor dem 512 MB-Größe zu kürzen, Checkpoint-Befehl für die fragliche Datenbank manuell.|  
+|16|XTP_CHECKPOINT|Wenn eine Datenbank eine Speicheroptimierte Dateigruppe aufweist, das Transaktionsprotokoll möglicherweise nicht abgeschnitten werden, bis die automatische [!INCLUDE[hek_2](../../includes/hek-2-md.md)] Prüfpunkt wird (die bei jeder 512 MB anwachsen des Protokolls der Fall.) ausgelöst.<br /><br /> Hinweis: Um Transaktionsprotokolls, bevor die Größe von 512 MB abzuschneiden, lösen Sie den Checkpoint-Befehl für die fragliche Datenbank manuell.|  
   
 ##  <a name="MinimallyLogged"></a> Vorgänge, die minimal protokolliert werden können  
  Bei der*minimalen Protokollierung* werden nur die Informationen protokolliert, die zum Wiederherstellen der Transaktion ohne Unterstützung der Zeitpunktwiederherstellung erforderlich sind. In diesem Thema werden die Vorgänge aufgeführt, die unter dem massenprotokollierten Wiederherstellungsmodell minimal protokolliert werden (sowie unter dem einfachen Wiederherstellungsmodell, es sei denn, es wird eine Sicherung ausgeführt).  
@@ -122,7 +121,7 @@ ms.locfileid: "36048489"
   
 -   Teilupdates von Datentypen für hohe Werte mithilfe der .WRITE-Klausel in der [UPDATE](/sql/t-sql/queries/update-transact-sql) -Anweisung beim Einfügen oder Anfügen neuer Daten. Beachten Sie, dass die minimale Protokollierung nicht verwendet wird, wenn vorhandene Werte aktualisiert werden. Weitere Informationen zu Datentypen für hohe Werte finden Sie unter [Datentypen &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql).  
   
--   [WRITETEXT](/sql/t-sql/queries/writetext-transact-sql) und [UPDATETEXT](/sql/t-sql/queries/updatetext-transact-sql) -Anweisung beim Einfügen oder Anfügen neuer Daten in der `text`, `ntext`, und `image` Daten Spalten vom Typ. Beachten Sie, dass die minimale Protokollierung nicht verwendet wird, wenn vorhandene Werte aktualisiert werden.  
+-   [WRITETEXT](/sql/t-sql/queries/writetext-transact-sql) und [UPDATETEXT](/sql/t-sql/queries/updatetext-transact-sql) -Anweisung beim Einfügen oder Anfügen neuer Daten an die `text`, `ntext`, und `image` Spalten vom Typ. Beachten Sie, dass die minimale Protokollierung nicht verwendet wird, wenn vorhandene Werte aktualisiert werden.  
   
     > [!NOTE]  
     >  Die WRITETEXT-Anweisung und UPDATETEXT-Anweisung sind als veraltet markiert, sollten also in neuen Anwendungen nicht mehr verwendet werden.  
@@ -154,7 +153,7 @@ ms.locfileid: "36048489"
   
  **Wiederherstellen des Transaktionsprotokolls (vollständiges Wiederherstellungsmodell)**  
   
--  [Stellen Sie eine Sicherung des Transaktionsprotokolls wieder her.](../backup-restore/restore-a-transaction-log-backup-sql-server.md)   
+-  [Wiederherstellen einer Transaktionsprotokollsicherung](../backup-restore/restore-a-transaction-log-backup-sql-server.md)   
   
 ## <a name="see-also"></a>Siehe auch  
  [Steuern der Transaktionsdauerhaftigkeit](control-transaction-durability.md)   

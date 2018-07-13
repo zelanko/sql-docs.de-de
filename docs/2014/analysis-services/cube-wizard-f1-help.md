@@ -1,5 +1,5 @@
 ---
-title: Cube-Assistent F1-Hilfe | Microsoft Docs
+title: Cube-Assistent F1-Hilfe | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Cube Wizard
 ms.assetid: 2a500f75-6cb7-42bc-8d98-019841fa924b
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cb555a9db8130b7c02e12e89ba40cdf8b79a0d19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c9389b01e0304a84ed3b103ef415d4f046bfc843
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047948"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321290"
 ---
 # <a name="cube-wizard-f1-help"></a>Cube-Assistent (F1-Hilfe)
   Erstellen Sie mithilfe des Cube-Assistenten einen Cube für ein [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -48,7 +48,7 @@ ms.locfileid: "36047948"
   
 -   [Fehlende Dimensionsschlüssel auswählen &#40;Cube-Assistenten&#41;](select-missing-dimension-keys-cube-wizard.md)  
   
--   [Fertigstellen des Assistenten &#40;Cube-Assistenten&#41;](completing-the-wizard-cube-wizard.md)  
+-   [Der Assistent &#40;Cube-Assistenten&#41;](completing-the-wizard-cube-wizard.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Cubeobjekte &#40;Analysis Services – mehrdimensionale Daten&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   

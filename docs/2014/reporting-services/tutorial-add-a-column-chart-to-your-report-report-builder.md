@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ae6c6adad91625ba5d5e898b7da36dc9e818d893
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: cc295fcd58d3e7609989f35a382e780614e9d7a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048221"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161901"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator)
   Ein Säulendiagramm zeigt eine Reihe als Satz vertikaler Balken an, die nach Kategorie gruppiert sind. Ein Säulendiagramm kann für folgende Zwecke verwendet werden:  
@@ -39,11 +39,11 @@ ms.locfileid: "36048221"
   
 1.  [Erstellen eines Diagramms mithilfe des Diagramm-Assistenten](#Chart)  
   
-2.  [Wählen Sie den Diagrammtyp](#ChartType)  
+2.  [Auswählen des Diagrammtyps](#ChartType)  
   
 3.  [Formatieren und Beschriften der horizontalen Achse](#Horizontal)  
   
-4.  [Verschieben Sie die Legende](#Legend)  
+4.  [Verschieben der Legende](#Legend)  
   
 5.  [Benennen des Diagramms](#ChartTitle)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36048221"
   
 8.  [Hinzufügen eines Berichtstitels](#Title)  
   
-9. [Speichern Sie den Bericht](#Save)  
+9. [Speichern des Berichts](#Save)  
   
 > [!NOTE]  
 >  In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Im ersten Tutorial dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Auswählen einer Datenquelle sowie zum Erstellen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
@@ -64,7 +64,7 @@ ms.locfileid: "36048221"
  Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="Chart"></a> 1. Erstellen eines Diagrammberichts mithilfe des Diagramm-Assistenten  
- Aus der **Einstieg** (Dialogfeld), Verwenden des Diagramm-Assistenten, um ein eingebettetes Dataset zu erstellen. Wählen Sie eine freigegebene Datenquelle, und erstellen Sie ein Säulendiagramm.  
+ Von der **Einstieg** Dialogfeld verwenden des Diagramm-Assistenten erstellen Sie ein eingebettetes Dataset, wählen Sie eine freigegebene Datenquelle und erstellen Sie ein Säulendiagramm.  
   
 > [!NOTE]  
 >  In diesem Lernprogramm sind die Datenwerte in der Abfrage enthalten, sodass keine externe Datenquelle benötigt wird. Die Abfrage ist daher relativ lang. In einer Geschäftsumgebung wären die Daten nicht in der Abfrage enthalten. Dieses Szenario dient nur zu Lernzwecken.  
@@ -76,7 +76,7 @@ ms.locfileid: "36048221"
      Das Dialogfeld **Erste Schritte** wird angezeigt.  
   
     > [!NOTE]  
-    >  Wenn die **Einstieg** Dialogfeld nicht angezeigt wird, aus der **Berichts-Generator** Schaltfläche, klicken Sie auf **neu**.  
+    >  Wenn die **Einstieg** Dialogfeld nicht angezeigt wird, aus der **Berichts-Generator** , zeigen Sie auf **neu**.  
   
 2.  Vergewissern Sie sich, dass im linken Bereich **Neuer Bericht** ausgewählt ist.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36048221"
   
 4.  Klicken Sie auf **Weiter**.  
   
-5.  Auf der **Auswählen eines Formats** Seite Wählen Sie im Feld Formatvorlagen einen Stil.  
+5.  Auf der **Auswählen eines Formats** Seite Wählen Sie im Feld "Stile", eine Art.  
   
      Ein Format dient zum Angeben eines Schriftschnitts, einer Farbpalette und einer Rahmenart. Wenn Sie ein Format auswählen, wird im Vorschaubereich ein Beispiel für das Diagramm mit diesem Format angezeigt.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "36048221"
   
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
   
-2.  Maustaste auf den Titel der horizontalen Achse, und klicken Sie dann auf **Achsentitel anzeigen** auf den Titel zu entfernen. Da auf der horizontalen Achse Datumsangaben angezeigt werden, wird der Titel nicht benötigt.  
+2.  Mit der rechten Maustaste in den Titel der horizontalen Achse, und klicken Sie dann auf **Achsentitel anzeigen** auf den Titel zu entfernen. Da auf der horizontalen Achse Datumsangaben angezeigt werden, wird der Titel nicht benötigt.  
   
 3.  Mit der rechten Maustaste in der horizontalen Achse, und klicken Sie dann auf **Eigenschaften für horizontale Achsen**.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "36048221"
   
 5.  Klicken Sie auf **Bezeichnungen**.  
   
-6.  In **ändern Sie Optionen für automatische Anpassung von achsenbezeichnungen**Option **deaktivieren Sie automatische Anpassung**.  
+6.  In **Optionen für automatische Anpassung von achsenbezeichnungen ändern**Option **automatische Anpassung deaktivieren**.  
   
 7.  Wählen Sie in **Drehwinkel für Bezeichnungen**den Wert **-90**aus.  
   
@@ -197,7 +197,7 @@ ms.locfileid: "36048221"
   
 2.  Mit der rechten Maustaste in der Legende des Diagramms, und klicken Sie dann auf **Legendeneigenschaften**.  
   
-3.  Für **Layout- und Positionsoptionen**, wählen Sie eine andere Position. Legen Sie z. B. eine Position unten in der Mitte fest.  
+3.  Für **Layout und Position**, wählen Sie eine andere Position. Legen Sie z. B. eine Position unten in der Mitte fest.  
   
      Wenn Sie die Legende über oder unter einem Diagramm platzieren, ändert sich das Layout der Legende von vertikal zu horizontal. In der Dropdownliste **Layout** können Sie ein anderes Layout auswählen.  
   
@@ -226,21 +226,21 @@ ms.locfileid: "36048221"
   
 2.  Doppelklicken Sie neben dem Diagramm auf die Bezeichnungen der vertikalen Achse, um sie auszuwählen.  
   
-3.  Auf dem Menüband auf die **Home** Registerkarte die **Anzahl** zu gruppieren, klicken Sie auf die **Währung** Schaltfläche. Die Achsenbezeichnungen werden nun im Währungsformat dargestellt.  
+3.  Auf dem Menüband auf die **Startseite** Registerkarte die **Anzahl** gruppieren, klicken Sie auf die **Währung** Schaltfläche. Die Achsenbezeichnungen werden nun im Währungsformat dargestellt.  
   
-4.  Auf dem Menüband auf die **Home** Registerkarte die **Anzahl** zu gruppieren, klicken Sie auf die **Dezimalstelle löschen** Schaltfläche zweimal, damit die Zahl, die einen vollständigen Dollarbetrag gerundet wird.  
+4.  Auf dem Menüband auf die **Startseite** Registerkarte die **Anzahl** gruppieren, klicken Sie auf die **Dezimalstelle löschen** Schaltfläche zweimal, damit die Zahl, die vollständigen Dollarbetrag gerundet wird.  
   
 5.  Mit der rechten Maustaste in der vertikalen Achse, und klicken Sie auf **Eigenschaften für vertikale Achsen**.  
   
-6.  Klicken Sie auf **Anzahl**. Beachten Sie, dass **Währung** bereits ausgewählt ist, der **Kategorie** Feld und **Dezimalstellen** ist bereits **0** (null).  
+6.  Klicken Sie auf **Anzahl**. Beachten Sie, dass **Währung** bereits ausgewählt ist, der **Kategorie** Feld und **Dezimalstellen** bereits **0** (null).  
   
 7.  In der **Werte anzeigen in** auf **Tausende**.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-9. Mit der rechten Maustaste den Titel der vertikalen Achse auf der Seite des Diagramms, und klicken Sie auf **Achsentiteleigenschaften**.  
+9. Mit der rechten Maustaste in den Titel der vertikalen Achse auf der Seite des Diagramms, und klicken Sie auf **Achsentiteleigenschaften**.  
   
-10. Ersetzen Sie den Text in der **Titeltext** Feld mit dem folgenden Text: **Sales Total (in Tausend)**. Darüber hinaus können Sie das gewünschte Format für den Titel festlegen.  
+10. Ersetzen Sie den Text in die **Titeltext** Feld mit dem folgenden Text: **Sales Total (in Tausend)**. Darüber hinaus können Sie das gewünschte Format für den Titel festlegen.  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -254,7 +254,7 @@ ms.locfileid: "36048221"
   
 2.  Doppelklicken Sie auf das Diagramm, um den Bereich **Diagrammdaten** anzuzeigen.  
   
-3.  Mit der rechten Maustaste die **[Sum(Sales)]** Feld, das in der **Werte** Bereich, und klicken Sie dann auf **berechnete Reihe hinzufügen**.  
+3.  Mit der rechten Maustaste die **[SUM(Sales)"angezeigt]** Feld, das in der **Werte** Bereich, und klicken Sie dann auf **berechnete Reihe hinzufügen**.  
   
 4.  Überprüfen Sie in **Formel**, ob **Gleitender Durchschnitt** ausgewählt ist.  
   
@@ -262,7 +262,7 @@ ms.locfileid: "36048221"
   
 6.  Klicken Sie auf **Rahmen**.  
   
-7.  In **Linienbreite**Option **3pt**.  
+7.  In **Linienstärke**Option **3 pt**.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -278,17 +278,17 @@ ms.locfileid: "36048221"
   
 2.  Klicken Sie auf der Entwurfsoberfläche auf **Zum Hinzufügen eines Titels klicken**.  
   
-3.  Typ **Umsatzdiagramm**, drücken Sie die EINGABETASTE, und geben dann **Januar bis Dezember 2009**, sodass er wie folgt aussieht:  
+3.  Typ **Umsatzdiagramm**, drücken Sie die EINGABETASTE, und geben dann **Januar bis Dezember 2009**, sodass sie wie folgt aussieht:  
   
      **Umsatzdiagramm**  
   
      **Januar bis Dezember 2009**  
   
-4.  Wählen Sie **Umsatzdiagramm**, und klicken Sie auf die **fett** Schaltfläche der **Schriftart** Abschnitt der **Home** Registerkarte des Menübands.  
+4.  Wählen Sie **Umsatzdiagramm**, und klicken Sie auf die **fett** Schaltfläche der **Schriftart** im Abschnitt der **Startseite** Registerkarte des Menübands.  
   
-5.  Wählen Sie **Januar bis Dezember 2009**, und klicken Sie in der **Schriftart** Abschnitt der **Home** Registerkarte, legen Sie den Schriftgrad auf **10**.  
+5.  Wählen Sie **Januar bis Dezember 2009**, und klicken Sie in der **Schriftart** im Abschnitt der **Startseite** Registerkarte, legen Sie den Schriftgrad auf **10**.  
   
-6.  (Optional) Möglicherweise müssen Sie die **Titel** Textfeld vergrößern, um die beiden Textzeilen eingehen, indem Sie unten auf den Doppelpfeil ziehen, wenn Sie in der Mitte am unteren Rand auf.  
+6.  (Optional) Möglicherweise müssen Sie die **Titel** Textfeld vergrößern, um die beiden Textzeilen eingehen, indem Sie auf die Pfeile mit zwei Spitzen nach unten ziehen, wenn Sie in der Mitte am unteren Rand klicken.  
   
      Dieser Titel wird am Anfang des Berichts angezeigt. Ist keine Kopfzeile definiert, erfüllen die Elemente über dem Berichtshauptteil die Funktion einer Berichtskopfzeile.  
   

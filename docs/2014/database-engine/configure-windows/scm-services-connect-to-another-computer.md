@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], other computers
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 147e23e4b2c717d36bf2774f0e3e1d049a46f9fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c0878b7cfa2ca6d77d5d43f6d0642d5ecaf42586
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050381"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167221"
 ---
 # <a name="connect-to-another-computer-sql-server-configuration-manager"></a>Herstellen einer Verbindung mit einem anderen Computer (SQL Server-Konfigurations-Manager)
   In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] eine Verbindung mit einem anderen Computer herstellen können. Befolgen Sie die erste Prozedur, um die Computerverwaltung von Windows, MMC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console) zu öffnen, stellen Sie eine Verbindung zu dem Computer her, und erweitern die Struktur "Dienste und Anwendungen". Führen Sie das zweite Verfahren zum Erstellen einer Datei mit einem Link zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager auf einem Remotecomputer aus.  
@@ -49,7 +49,7 @@ ms.locfileid: "36050381"
   
 1.  Klicken Sie im Menü **Start** auf **Ausführen**.  
   
-2.  In der **öffnen** geben `mmc -a` So öffnen die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console im Autorenmodus.  
+2.  In der **öffnen** geben `mmc -a` zum Öffnen der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console im Autorenmodus.  
   
 3.  Klicken Sie im Menü **Datei** auf **Snap-In hinzufügen/entfernen**.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36050381"
   
 11. Klicken Sie im Menü **Fenster** auf **Konsolenstamm**, um zum ersten Fenster zurückzuwechseln, und löschen Sie das Fenster.  
   
-12. Auf der **Datei** Menü klicken Sie auf **speichern unter**, und speichern Sie die Datei im gewünschten Ordner, dabei einen passenden Namen mit den `.msc` Dateierweiterung. Schließen Sie das Fenster [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.  
+12. Auf der **Datei** Menü klicken Sie auf **speichern**, und speichern Sie die Datei im gewünschten Ordner, und einen passenden Namen mit den `.msc` Dateierweiterung. Schließen Sie das Fenster [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.  
   
 13. Doppelklicken Sie auf die Datei, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager auf dem Zielcomputer zu öffnen. Speichern Sie gegebenenfalls einen Link zu der Datei auf dem Desktop oder im Menü **Start** .  
   

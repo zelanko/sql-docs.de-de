@@ -1,11 +1,11 @@
 ---
-title: CLR-Tabellenwertfunktionen | Microsoft Docs
+title: CLR-Tabellenwertfunktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -21,26 +21,26 @@ caps.latest.revision: 88
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8f6d19c3647cb38c7174f87c685fb3abb1d4f709
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: c60817f8bb736eef6cdbbb6c15636b19876d4421
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696101"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37360222"
 ---
 # <a name="clr-table-valued-functions"></a>CLR-Tabellenwertfunktionen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Eine Tabellenwertfunktion ist eine benutzerdefinierte Funktion, die eine Tabelle zurückgibt.  
   
- Beginnend mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erweitert die Funktionalität von Tabellenwertfunktionen können Sie eine Tabellenwertfunktion in jeder verwalteten Sprache definieren. Daten werden von einer Tabellenwertfunktion durch ein **IEnumerable** -Objekt oder **IEnumerator** -Objekt zurückgegeben.  
+ Beginnend mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erweitert die Funktionen der Table-valued Functions, von dem Sie eine Tabellenwertfunktion in jeder verwalteten Sprache definieren. Daten werden von einer Tabellenwertfunktion durch ein **IEnumerable** -Objekt oder **IEnumerator** -Objekt zurückgegeben.  
   
 > [!NOTE]  
 >  Bei Tabellenwertfunktionen können die Spalten des zurückgegebenen Tabellentyps keine timestamp-Spalten oder Spalten mit Nicht-Unicode-Zeichenfolgendatentypen enthalten (z. B. **char**, **varchar**und **text**). Die NOT NULL-Einschränkung wird nicht unterstützt  
   
- Weitere Informationen zu CLR-Tabellenwertfunktionen, sehen Sie sich MSSQLTips [Einführung in SQL Server-CLR-Tabellenwertfunktionen!](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/)  
+ Weitere Informationen zu CLR-Tabellenwertfunktionen, finden Sie in MSSQLTips [Einführung in SQL Server-CLR-Tabellenwertfunktionen.](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/)  
   
 ## <a name="differences-between-transact-sql-and-clr-table-valued-functions"></a>Unterschiede zwischen Transact-SQL- und CLR-Tabellenwertfunktionen  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] Funktionen mit Tabellenrückgabe materialisieren die Ergebnisse des Aufrufs der Funktion in einer Zwischentabelle. Da sie eine Zwischentabelle verwenden, können sie Einschränkungen und eindeutige Indizes der Ergebnisse unterstützen. Diese Funktionen können äußerst nützlich sein, wenn umfassende Ergebnisse zurückgegeben werden.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] Table-valued Functions, materialisieren die Ergebnisse des Funktionsaufrufs in einer Zwischentabelle. Da sie eine Zwischentabelle verwenden, können sie Einschränkungen und eindeutige Indizes der Ergebnisse unterstützen. Diese Funktionen können äußerst nützlich sein, wenn umfassende Ergebnisse zurückgegeben werden.  
   
  Im Gegensatz dazu stellen CLR-Tabellenwertfunktionen eine Streamingalternative dar. Es ist nicht erforderlich, das gesamte Resultset in einer einzigen Tabelle darzustellen. Das von der verwalteten Funktion zurückgegebene **IEnumerable** -Objekt wird direkt vom Ausführungsplan der Abfrage aufgerufen, die die Tabellenwertfunktion aufruft, und die Ergebnisse werden inkrementell verarbeitet. Beim Streamingmodell werden Ergebnisse sofort verarbeitet, sobald die erste Zeile verfügbar ist, und nicht erst, wenn die gesamte Tabelle aufgefüllt wurde. Dieses Modell ist auch eine gute Alternative, wenn eine sehr große Anzahl an Zeilen zurückgegeben wird, da diese nicht alle auf einmal im Speicher materialisiert werden müssen. Beispielsweise könnte eine verwaltete Tabellenwertfunktion verwendet werden, um eine Textdatei zu analysieren und jede Zeile als Tabellenzeile zurückzugeben.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "35696101"
  Tabellenwertparameter sind benutzerdefinierte Tabellentypen, die an eine Prozedur oder Funktion übergeben werden, und bieten eine effiziente Methode zum Übergeben mehrerer Datenzeilen an den Server. Tabellenwertparameter verfügen über eine ähnliche Funktionalität wie Parameterarrays, bieten jedoch größere Flexibilität und engere Integration mit [!INCLUDE[tsql](../../includes/tsql-md.md)]. Außerdem verfügen sie auch über ein besseres Leistungspotenzial. Außerdem tragen Tabellenwertparameter dazu bei, die Anzahl von Roundtrips zum Server zu reduzieren. Anstatt mehrere Anforderungen an den Server zu senden, wie beispielsweise bei einer Liste von skalaren Parametern, können Daten als Tabellenwertparameter an den Server gesendet werden. Ein benutzerdefinierter Tabellentyp kann nicht als Tabellenwertparameter an eine verwaltete gespeicherte Prozedur oder Funktion übergeben werden, die im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozess ausgeführt wird, oder von einer solchen Prozedur oder Funktion zurückgegeben werden. Weitere Informationen zu Tabellenwertparametern finden Sie unter [Use Table-Valued Parameters &#40;Database Engine&#41; (Verwenden von Tabellenwertparametern &#40;Datenbank-Engine&#41;)](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
 ## <a name="output-parameters-and-table-valued-functions"></a>Ausgabeparameter und Tabellenwertfunktionen  
- Informationen können aus Tabellenwertfunktionen möglicherweise mit Ausgabeparametern zurückgegeben werden. Der entsprechende Parameter im Implementierungscode der Tabellenwertfunktion sollte einen als Verweis zu übergebenden Parameter als Argument verwenden. Beachten Sie, dass Visual Basic Ausgabeparameter nicht auf die gleiche Weise unterstützt wie Visual C#. Müssen Sie den Parameter als Verweis und Anwenden der \<Out() >-Attribut ein Output-Parameter, wie im folgenden dargestellt:  
+ Informationen können aus Tabellenwertfunktionen möglicherweise mit Ausgabeparametern zurückgegeben werden. Der entsprechende Parameter im Implementierungscode der Tabellenwertfunktion sollte einen als Verweis zu übergebenden Parameter als Argument verwenden. Beachten Sie, dass Visual Basic Ausgabeparameter nicht auf die gleiche Weise unterstützt wie Visual C#. Sie müssen den Parameter als Verweis und Anwenden der \<Out() > Attribut aus, einen Output-Parameter, wie im folgenden dargestellt:  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -60,7 +60,7 @@ Public Shared Sub FillRow ( <Out()> ByRef value As SqlInt32)
 ```  
   
 ### <a name="defining-a-table-valued-function-in-transact-sql"></a>Definieren einer Tabellenwertfunktion in Transact-SQL  
- Die Syntax zum Definieren einer CLR-Tabellenwertfunktion ähnelt dem von einem [!INCLUDE[tsql](../../includes/tsql-md.md)] Tabellenwert-Funktion, durch das Hinzufügen von der **EXTERNAL NAME** Klausel. Zum Beispiel:  
+ Die Syntax zum Definieren einer CLR-Tabellenwertfunktion ähnelt der einer [!INCLUDE[tsql](../../includes/tsql-md.md)] Tabellenwert-Funktion, durch das Hinzufügen der **EXTERNAL NAME** Klausel. Zum Beispiel:  
   
 ```  
 CREATE FUNCTION GetEmpFirstLastNames()  
@@ -82,7 +82,7 @@ select * from table t cross apply function(t.column);
   
 -   Wenn sie aus externen Daten erstellt wurde. Beispielsweise eine Tabellenwertfunktion, die das Ereignisprotokoll liest und es als Tabelle bereitstellt.  
   
- **Hinweis** eine Tabellenwertfunktion kann nur des Datenzugriffs durch Ausführen einer [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfragen der **InitMethod** -Methode, und nicht in der **FillRow** Methode. Die **InitMethod** markiert werden soll, mit der **SqlFunction.DataAccess.Read** -Attributeigenschaft, wenn eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage wird ausgeführt.  
+ **Hinweis** eine Tabellenwertfunktion kann nur einen Datenzugriff über Ausführen einer [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfragen in der **InitMethod** -Methode, und nicht in der **FillRow** Methode. Die **InitMethod** markiert werden soll, mit der **SqlFunction.DataAccess.Read** Attributeigenschaft, wenn eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage wird ausgeführt.  
   
 ## <a name="a-sample-table-valued-function"></a>Beispiel für eine Tabellenwertfunktion  
  Die folgende Tabellenwertfunktion gibt Informationen aus dem Systemereignisprotokoll zurück. Die Funktion liest ein einzelnes Zeichenfolgenargument, das den Namen des Ereignisprotokolls enthält.  
@@ -141,7 +141,7 @@ End Class
 ```  
   
 ###### <a name="declaring-and-using-the-sample-table-valued-function"></a>Deklarieren und Verwenden des Beispiels für eine Tabellenwertfunktion  
- Nachdem die Beispiel-Tabellenwertfunktion kompiliert wurde, können sie deklariert [!INCLUDE[tsql](../../includes/tsql-md.md)] wie folgt:  
+ Nachdem Sie die Beispiel-Tabellenwertfunktion kompiliert wurde, kann es in deklariert werden [!INCLUDE[tsql](../../includes/tsql-md.md)] wie folgt aus:  
   
 ```  
 use master;  
@@ -165,7 +165,7 @@ GO
   
  Visual C++-Datenbankobjekte, die mit /clr:pure kompiliert wurden, können nicht in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ausgeführt werden. Zu solchen Datenbankobjekten gehören beispielsweise Tabellenwertfunktionen.  
   
- Um das Beispiel zu testen, führen Sie den folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] Code:  
+ Um das Beispiel zu testen, führen Sie eine der folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] Code:  
   
 ```  
 -- Select the top 100 events,  
@@ -181,7 +181,7 @@ go
 ```  
   
 ## <a name="sample-returning-the-results-of-a-sql-server-query"></a>Beispiel: Zurückgeben der Ergebnisse einer SQL Server-Abfrage  
- Das folgende Beispiel zeigt einer Funktion mit Tabellenrückgabe zum Abfragen einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank. Dieses Beispiel verwendet die AdventureWorks Datenbank Light aus [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Finden Sie unter [ http://www.codeplex.com/sqlserversamples ](http://go.microsoft.com/fwlink/?LinkId=87843) für Weitere Informationen zum Herunterladen von AdventureWorks.  
+ Das folgende Beispiel zeigt einer Tabellenwert-Funktion zum Abfragen einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank. Dieses Beispiel verwendet die AdventureWorks Datenbank Light aus [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Finden Sie unter [ http://www.codeplex.com/sqlserversamples ](http://go.microsoft.com/fwlink/?LinkId=87843) für Weitere Informationen zum Herunterladen von AdventureWorks.  
   
  Nennen Sie die Quellcodedatei FindInvalidEmails.cs bzw. FindInvalidEmails.vb.  
   

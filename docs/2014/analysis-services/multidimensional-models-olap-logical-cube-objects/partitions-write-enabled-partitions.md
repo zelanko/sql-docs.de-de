@@ -1,5 +1,5 @@
 ---
-title: Mit aktiviertem Schreibzugriff Partitionen | Microsoft Docs
+title: Mit aktiviertem Schreibzugriff Partitionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - storing data [Analysis Services], partitions
 ms.assetid: 46e7683f-03ce-4af2-bd99-a5203733d723
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9098219cccf4559fbb2a9b9e7e03da0004f1b570
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 24fd38410e5719dd72e5a55b2914c22fc153ea98
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049824"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326570"
 ---
 # <a name="write-enabled-partitions"></a>Partitionen mit aktiviertem Schreibzugriff
   Die Daten in einem Cube sind im Allgemeinen schreibgeschützt. In bestimmten Szenarien kann es jedoch erwünscht sein, den Schreibzugriff für eine Partition zu aktivieren. Partitionen mit aktiviertem Schreibzugriff werden verwendet, um Benutzern im geschäftlichen Bereich das Untersuchen von Szenarien zu ermöglichen, indem sie Zellenwerte ändern und die Auswirkungen der Änderungen auf die Cubedaten analysieren. Wenn Sie den Schreibzugriff für eine Partition aktivieren, können Clientanwendungen Änderungen an den Daten in der Partition aufzeichnen. Diese Änderungen, so genannte Rückschreibedaten, werden in einer separaten Tabelle gespeichert und überschreiben keine vorhandenen Daten in einer Measuregruppe. Sie werden jedoch als Teil der Cubedaten in Abfrageergebnisse einbezogen.  
@@ -35,7 +35,7 @@ ms.locfileid: "36049824"
  Sie können den Schreibzugriff für einen gesamten Cube oder nur für bestimmte Partitionen im Cube aktivieren. Dimensionen mit aktiviertem Schreibzugriff unterscheiden sich von diesen Partitionen, aber auf ergänzende Weise. Eine Partition mit aktiviertem Schreibzugriff ermöglicht den Benutzern das Update von Partitionszellen, während eine Dimension mit aktiviertem Schreibzugriff den Benutzern das Update von Dimensionselementen ermöglicht. Sie können diese zwei Funktionen auch zusammen verwenden. So muss ein Cube oder eine Partition mit aktiviertem Schreibzugriff keine Dimensionen mit aktiviertem Schreibzugriff enthalten. **Verwandtes Thema:**[Dimensionen mit aktiviertem Schreibzugriff](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
   
 > [!NOTE]  
->  Wenn Sie den Schreibzugriff für einen Cube aktivieren möchten, der eine Microsoft Access-Datenbank als Datenquelle verwendet, sollten Sie in den Datenquellendefinitionen des Cubes, seinen Partitionen oder seinen Dimensionen nicht Microsoft OLE DB-Anbieter für ODBC-Treiber verwenden. Stattdessen können Sie Microsoft Jet 4.0 OLE DB-Anbieter oder eine beliebige Version des Jet Service Pack, die Jet 4.0 OLE beinhaltet, verwenden. Weitere Informationen finden Sie im Microsoft Knowledge Base-Artikel [so erhalten Sie das neueste Servicepack für Microsoft Jet 4.0-Datenbankmodul](http://support.microsoft.com/?kbid=239114).  
+>  Wenn Sie den Schreibzugriff für einen Cube aktivieren möchten, der eine Microsoft Access-Datenbank als Datenquelle verwendet, sollten Sie in den Datenquellendefinitionen des Cubes, seinen Partitionen oder seinen Dimensionen nicht Microsoft OLE DB-Anbieter für ODBC-Treiber verwenden. Stattdessen können Sie Microsoft Jet 4.0 OLE DB-Anbieter oder eine beliebige Version des Jet Service Pack, die Jet 4.0 OLE beinhaltet, verwenden. Weitere Informationen finden Sie im Microsoft Knowledge Base-Artikel [so erhalten Sie das neueste Servicepack für Microsoft Jet 4.0-Datenbank-Engine](http://support.microsoft.com/?kbid=239114).  
   
  Für einen Cube kann nur dann der Schreibzugriff aktiviert werden, wenn alle zugehörigen Measures die `Sum`-Aggregatfunktion verwenden. Für verknüpfte Measuregruppen und lokale Cubes kann der Schreibzugriff nicht aktiviert werden.  
   

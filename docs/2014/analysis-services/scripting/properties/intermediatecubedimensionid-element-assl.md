@@ -1,5 +1,5 @@
 ---
-title: IntermediateCubeDimensionID-Element (ASSL) | Microsoft Docs
+title: IntermediateCubeDimensionID-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - IntermediateCubeDimensionID element
 ms.assetid: 305c0a91-7bc2-4268-ba94-8f19d8c22ca3
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 46b57b224d4c9e69b285491b2df316f84e0f38d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8945791ccb2b09faf3d42821a847b2a822bceda6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048835"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204020"
 ---
 # <a name="intermediatecubedimensionid-element-assl"></a>IntermediateCubeDimensionID-Element (ASSL)
   Enthält den Bezeichner (ID) der Dimension, die eine Bezugsdimension mit einer Measuregruppe verknüpft.  
@@ -62,7 +62,7 @@ ms.locfileid: "36048835"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element, das das übergeordnete Element des entspricht `IntermediateCubeDimensionID` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>.  
+ Das Element, das dem übergeordneten entspricht `IntermediateCubeDimensionID` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

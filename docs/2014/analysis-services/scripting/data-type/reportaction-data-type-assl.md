@@ -1,5 +1,5 @@
 ---
-title: ReportAction-Datentyp (ASSL) | Microsoft Docs
+title: ReportAction-Datentyp (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ReportAction data type
 ms.assetid: b22f0d52-ed3a-4239-840e-0eaf172d7276
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7c2c5140f3d2723f0456b007bc9228c5f87bbaa6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bacb34e6a57126048253a5292fe19627838d21e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057273"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176397"
 ---
 # <a name="reportaction-data-type-assl"></a>ReportAction-Datentyp (ASSL)
-  Definiert einen abgeleiteten Datentyp, der eine Aktion darstellt, generiert eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Bericht.  
+  Definiert einen abgeleiteten Datentyp, der eine Aktion darstellt, die generiert eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Bericht.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36057273"
 ## <a name="remarks"></a>Hinweise  
  Der Berichtsserver antwortet auf URL-basierte Anforderungen nach Berichten. Die Berichtsaktion wird über einen Typen- *Report*definiert. Die Ressourcen und Parameter werden als Bestandteil der URL-Zeichenfolge an den Server gesendet, wenn die Aktion erstellt wird. Der Server macht die Aktion als Aktion des Typrowsets verfügbar.  
   
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.ReportAction>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.ReportAction>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services Scripting Language-XML-Datentypen &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

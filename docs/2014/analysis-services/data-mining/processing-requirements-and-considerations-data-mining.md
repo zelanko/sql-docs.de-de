@@ -1,5 +1,5 @@
 ---
-title: Verarbeiten von Anforderungen und Überlegungen (Datamining) | Microsoft Docs
+title: Verarbeiten von Anforderungen und Überlegungen (Datamining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], objects
 - mining structures [Analysis Services], processing
 - mining models [Analysis Services], processing
 ms.assetid: f7331261-6f1c-4986-b2c7-740f4b92ca44
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cbb38b12357b90b8ee2e4183af2d44724e7ce969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 982349548e300e17f97c61f4679c085ed98b3208
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232390"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>Anforderungen und Überlegungen zur Verarbeitung (Data Mining)
   In diesem Thema werden in einige technische Überlegungen behandelt, die beim Verarbeiten von Data Mining-Objekten berücksichtigt werden sollten. Eine allgemeine Erklärung der Verarbeitung und deren Anwendung auf Data Mining finden Sie unter [Verarbeiten von Data Mining-Objekten](processing-data-mining-objects.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "36046793"
   
  Der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server gibt Abfragen an die Datenbank aus, die die Rohdaten bereitstellt. Bei dieser Datenbank kann es sich um eine Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder einer früheren Version der SQL Server-Datenbank-Engine handeln. Beim Verarbeiten einer Data Mining-Struktur werden die Daten der Quelle an die Miningstruktur übertragen und in einem neuen komprimierten Format auf dem Datenträger gespeichert. Es werden nicht alle Spalten der Datenquelle verarbeitet: Es werden nur die Spalten verarbeitet, die gemäß der Definition durch die Bindungen in der Miningstruktur enthalten sind.  
   
- Mit den Rohdaten baut [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] einen Index aller Daten und diskretisierten Spalten auf und erstellt einen separaten Index für fortlaufende Spalten. Für jede geschachtelte Tabelle wird zum Erstellen des Index eine Abfrage ausgegeben. Eine weitere Abfrage wird für jede geschachtelte Tabelle generiert, um die Beziehungen zwischen den einzelnen Paaren einer geschachtelten Tabelle und Falltabelle zu verarbeiten. Es werden mehrere Abfragen erstellt, um einen besonderen internen mehrdimensionalen Datenspeicher zu verarbeiten. Sie können die Anzahl der Abfragen, die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] an den relationalen Speicher gesendet werden, durch die Einstellung der Servereigenschaft `DatabaseConnectionPoolMax`. Weitere Informationen finden Sie unter [OLAP Properties](../server-properties/olap-properties.md).  
+ Mit den Rohdaten baut [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] einen Index aller Daten und diskretisierten Spalten auf und erstellt einen separaten Index für fortlaufende Spalten. Für jede geschachtelte Tabelle wird zum Erstellen des Index eine Abfrage ausgegeben. Eine weitere Abfrage wird für jede geschachtelte Tabelle generiert, um die Beziehungen zwischen den einzelnen Paaren einer geschachtelten Tabelle und Falltabelle zu verarbeiten. Es werden mehrere Abfragen erstellt, um einen besonderen internen mehrdimensionalen Datenspeicher zu verarbeiten. Sie können die Anzahl der Abfragen, die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] an den relationalen Speicher gesendet, indem Sie die Einstellung der Servereigenschaft `DatabaseConnectionPoolMax`. Weitere Informationen finden Sie unter [OLAP Properties](../server-properties/olap-properties.md).  
   
  Beim Verarbeiten des Modells liest das Modell die Daten nicht erneut von der Datenquelle, sondern ruft stattdessen die Zusammenfassung der Daten aus der Miningstruktur ab. Mit dem erstellten Cube und den zwischengespeicherten Index- und Falldaten erstellt der Server unabhängige Threads zum Trainieren der Modelle.  
   

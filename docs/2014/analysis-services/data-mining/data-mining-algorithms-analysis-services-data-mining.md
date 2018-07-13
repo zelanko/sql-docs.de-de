@@ -1,5 +1,5 @@
 ---
-title: Datamining-Algorithmen (Analysis Services – Datamining) | Microsoft Docs
+title: Datamining-Algorithmen (Analysis Services – Datamining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - segmentation algorithms [Analysis Services]
 - clustering [Data Mining]
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - machine learning algorithms [Analysis Services]
 ms.assetid: ed1fc83b-b98c-437e-bf53-4ff001b92d64
 caps.latest.revision: 72
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f0c797ed300d90416e92f3dd85f575db3a08aa8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bba1521f808be45dabb89f1fe025ae1b9aa461bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046580"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243750"
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>Data Mining-Algorithmen (Analysis Services - Data Mining)
-  Ein *Datamining-Algorithmus* eine Reihe von Heuristiken und Berechnungen, die Datamining-Modells aus Daten erstellt wird. Um ein Modell zu erstellen, werden vom Algorithmus zuerst die von Ihnen bereitgestellten Daten analysiert und bestimmte Muster oder Trends gesucht. Mithilfe der Ergebnisse dieser Analyse definiert der Algorithmus die optimalen Parameter zum Erstellen des Miningmodells. Diese Parameter werden dann für das gesamte Dataset übernommen, um aussagefähige Muster und ausführliche Statistiken zu extrahieren.  
+  Ein *Datamining-Algorithmus* ist ein Satz von Heuristiken und Berechnungen, die Datamining-Modells aus Daten erstellt. Um ein Modell zu erstellen, werden vom Algorithmus zuerst die von Ihnen bereitgestellten Daten analysiert und bestimmte Muster oder Trends gesucht. Mithilfe der Ergebnisse dieser Analyse definiert der Algorithmus die optimalen Parameter zum Erstellen des Miningmodells. Diese Parameter werden dann für das gesamte Dataset übernommen, um aussagefähige Muster und ausführliche Statistiken zu extrahieren.  
   
  Das von einem Algorithmus aus Ihren Daten erstellte Miningmodell kann verschiedene Formen annehmen, einschließlich der folgenden:  
   
@@ -45,9 +45,9 @@ ms.locfileid: "36046580"
   
 -   Eine Gruppe von Regeln, die beschreiben, wie Produkte in einer Transaktion gruppiert werden, und die Wahrscheinlichkeiten, dass Produkte zusammen gekauft werden.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt mehrere Algorithmen für die Verwendung in den Datamining-Projektmappen. Diese Algorithmen stellen Implementierungen der bekanntesten im Data Mining verwendeten Methoden dar. Alle Data Mining-Algorithmen von Microsoft können angepasst und unter Verwendung der bereitgestellten APIs oder Data Mining-Komponenten in SQL Server Integration Services vollständig programmiert werden.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet mehrere Algorithmen für die Verwendung in den Datamining-Projektmappen. Diese Algorithmen stellen Implementierungen der bekanntesten im Data Mining verwendeten Methoden dar. Alle Data Mining-Algorithmen von Microsoft können angepasst und unter Verwendung der bereitgestellten APIs oder Data Mining-Komponenten in SQL Server Integration Services vollständig programmiert werden.  
   
- Sie können auch Drittanbieter-Algorithmen verwenden, entsprechen der OLE DB-Spezifikation für Data Mining oder entwickeln benutzerdefinierte Algorithmen, die als Dienste registriert und dann innerhalb des SQL Server Data Mining-Frameworks verwendet werden können.  
+ Sie können auch Drittanbieter-Algorithmen verwenden, die mit OLE DB-Spezifikation für Data Mining oder benutzerdefinierte Algorithmen entwickeln, die als Dienste registriert und dann innerhalb des SQL Server Data Mining-Frameworks verwendet werden können.  
   
 ## <a name="choosing-the-right-algorithm"></a>Auswählen des richtigen Algorithmus  
  Es kann schwierig sein, den besten Algorithmus für einen bestimmten analytischen Task auszuwählen. Während verschiedene Algorithmen zum Ausführen derselben Geschäftsaufgabe verwendet werden können, liefert jeder Algorithmus ein anderes Ergebnis, und einige Algorithmen können mehr als eine Ergebnisart ergeben. Sie können z. B. den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus nicht nur für Vorhersagen verwenden, sondern auch als Möglichkeit, die Anzahl der Spalten in einem Dataset zu reduzieren, weil die Entscheidungsstruktur Spalten identifizieren kann, die sich nicht auf das endgültige Miningmodell auswirken.  
@@ -57,13 +57,13 @@ ms.locfileid: "36046580"
   
 -   **Klassifikationsalgorithmen** sagen basierend auf den anderen Attributen im Dataset mindestens eine diskrete Variable voraus.  
   
--   **Regressionsalgorithmen** Vorhersagen mindestens eine kontinuierliche Variable Gewinn oder Verlust basierend auf anderen Attributen im Dataset.  
+-   **Regressionsalgorithmen** Vorhersagen einer oder mehrerer kontinuierliche Variablen, wie z. B. den Gewinn oder Verlust basierend auf anderen Attributen im Dataset.  
   
 -   **Segmentierungsalgorithmen** teilen Daten in Gruppen oder Cluster aus Elementen auf, die ähnliche Eigenschaften haben.  
   
 -   **Zuordnungsalgorithmen** suchen nach Korrelationen zwischen verschiedenen Attributen in einem Dataset. Die häufigste Anwendung dieser Algorithmusart besteht im Erstellen von Zuordnungsregeln, die für eine Warenkorbanalyse verwendet werden können.  
   
--   **Sequenzanalysealgorithmen** fassen häufige datensequenzen, z. B. einen webpfadfluss oder.  
+-   **Sequenzanalysealgorithmen** fassen häufige datensequenzen oder -periodizitäten zusammen, wie z. B. einen webpfadfluss.  
   
  Es gibt jedoch keinen Grund, sich in Projektmappen auf einen Algorithmus zu beschränken. Erfahrene Analytiker verwenden manchmal einen Algorithmus, um die effizientesten Eingaben (d. h. Variablen) zu bestimmen, und wenden dann einen anderen Algorithmus an, um ein bestimmtes Ergebnis auf Grundlage dieser Daten vorherzusagen. Mithilfe von SQL Server Data Mining können Sie mehrere Modelle für eine einzelne Miningstruktur erstellen. Daher können innerhalb einer einzelnen Data Mining-Projektmappe ein Clustering-Algorithmus, ein Entscheidungsstrukturmodell und ein Naïve Bayes-Modell verwendet werden, um unterschiedliche Sichten der Daten zu erhalten. Sie können mithilfe mehrerer Algorithmen in einer einzelnen Projektmappe auch separate Tasks ausführen: Beispielsweise können Sie mit dem Regressionsalgorithmus eine finanzielle Vorhersage generieren und mit dem Neural Network-Algorithmus die Faktoren analysieren, durch die der Umsatz beeinflusst wird.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36046580"
 |**Technische Referenz**|Stellt technische Details zur Implementierung des Algorithmus ggf. mit Verweisen auf wissenschaftliche Artikel bereit. Listet die Parameter auf, die Sie festlegen können, um das Verhalten des Algorithmus zu steuern und die Ergebnisse im Modell anzupassen. Beschreibt Datenanforderungen sowie Leistungstipps, falls möglich.|  
 ||[Technische Referenz für den Microsoft Association-Algorithmus](microsoft-association-algorithm-technical-reference.md)<br /><br /> [Technische Referenz für den Microsoft Clustering-Algorithmus](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Technische Referenz für den Microsoft Decision Trees-Algorithmus](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Technische Referenz für den Microsoft Linear Regression-Algorithmus](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Technische Referenz für den Microsoft Logistic Regression-Algorithmus](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Technische Referenz für den Microsoft Naive Bayes-Algorithmus](microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Technische Referenz für den Microsoft Neural Network-Algorithmus](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> [Technische Referenz für den Microsoft Sequence Clustering-Algorithmus](microsoft-sequence-clustering-algorithm-technical-reference.md)<br /><br /> [Technische Referenz für den Microsoft Time Series-Algorithmus](microsoft-time-series-algorithm-technical-reference.md)|  
 |**Modellinhalt**|Beschreibt die Strukturierung der Informationen innerhalb der einzelnen Data Mining-Modelltypen und erläutert, wie die in den einzelnen Knoten gespeicherten Informationen interpretiert werden.|  
-||[Miningmodellinhalt für Zuordnungsmodelle &#40;Analysis Services – Datamining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)<br /><br /> [Miningmodellinhalt für Clusteringmodelle &#40;Analysis Services – Datamining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)<br /><br /> [Miningmodellinhalt Entscheidungsstrukturmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)<br /><br /> [Miningmodellinhalt für lineare Regressionsmodelle &#40;Analysis Services – Datamining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)<br /><br /> [Miningmodellinhalt für logistische Regressionsmodelle &#40;Analysis Services – Datamining&#41;](mining-model-content-for-logistic-regression-models.md)<br /><br /> [Miningmodellinhalt für Naive Bayes-Modelle &#40;Analysis Services – Datamining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)<br /><br /> [Miningmodellinhalt für neuronale Netzwerkmodelle &#40;Analysis Services – Datamining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)<br /><br /> [Miningmodellinhalt Sequence Clustering-Modellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-sequence-clustering-models.md)<br /><br /> [Miningmodellinhalt für Zeitreihenmodelle &#40;Analysis Services – Datamining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|  
+||[Mingingmodellinhalt von Clustermodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)<br /><br /> [Mingingmodellinhalt von Clustermodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)<br /><br /> [Mingingmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)<br /><br /> [Mingingmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)<br /><br /> [Mingingmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-logistic-regression-models.md)<br /><br /> [Mingingmodellinhalt von Naive Bayes-Modellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)<br /><br /> [Mingingmodellinhalt von neuronalen Netzwerkmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)<br /><br /> [Mingingmodellinhalt von Sequence Clustering-Modellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-sequence-clustering-models.md)<br /><br /> [Mingingmodellinhalt von Zeitreihenmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|  
 |**Data Mining-Abfragen**|Stellt mehrere Abfragen bereit, die mit jedem Modelltyp verwendet werden können. Zu den Beispielen gehören Inhaltsabfragen, die Aufschluss über die im Modell enthaltenen Muster geben, und Vorhersageabfragen, die Sie beim Generieren von Vorhersagen auf Grundlage dieser Muster unterstützen.|  
 ||[Beispiele für Zuordnungsmodellabfragen](association-model-query-examples.md)<br /><br /> [Beispiele für Clusteringmodellabfragen](clustering-model-query-examples.md)<br /><br /> [Beispiele für Entscheidungsstruktur-Modellabfragen](decision-trees-model-query-examples.md)<br /><br /> [Beispiele für lineare Regressionsmodellabfragen](linear-regression-model-query-examples.md)<br /><br /> [Beispiele für logistische Regressionsmodellabfragen](logistic-regression-model-query-examples.md)<br /><br /> [Beispiele für Naive Bayes-Modellabfragen](naive-bayes-model-query-examples.md)<br /><br /> [Beispiele für Abfragen von neuronalen Netzwerkmodellen](neural-network-model-query-examples.md)<br /><br /> [Beispiele für Abfragen von Sequenzclustermodellen](sequence-clustering-model-query-examples.md)<br /><br /> [Beispiele für Abfragen von Zeitreihenmodellen](time-series-model-query-examples.md)|  
   

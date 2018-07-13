@@ -1,5 +1,5 @@
 ---
-title: Freigegebene Datasets Auswahl (Seite) (Berichts-Manager) | Microsoft Docs
+title: Freigegebene Datasets Auswahl (Seite) (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a67dc03e-f838-4ec2-9ef6-f04895bab3c7
 caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 24535c8bbc232852dd4706d32ac8b3910447a97b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c364c6d7d72860f031f81d33fe5bca39305f9f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046602"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330820"
 ---
 # <a name="shared-dataset-selection-page-report-manager"></a>Auswahl freigegebener Datasets (Seite), (Berichts-Manager)
   Verwenden Sie die Seite Auswahl freigegebener Datasets, um die freigegebenen Datasets zu überprüfen und zu ändern, die derzeit einem Bericht zugeordnet sind.  
@@ -53,7 +53,7 @@ ms.locfileid: "36046602"
  Speichern Sie die Änderungen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Berichts-Manager &#40;SSRS im einheitlichen Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Inhalt der Seite &#40;Berichts-Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Verwalten von freigegebenen Datasets](report-data/manage-shared-datasets.md)   
  [Berichts-Manager-F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   

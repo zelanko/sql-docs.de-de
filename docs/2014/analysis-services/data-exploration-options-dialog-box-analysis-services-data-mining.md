@@ -1,5 +1,5 @@
 ---
-title: Durchsuchen von Daten im Dialogfeld ' Optionen ' (Analysis Services – Datamining) | Microsoft Docs
+title: Durchsuchen von Daten, Optionen (Dialogfeld) (Analysis Services – Datamining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dataexplorationoptionsdialog.f1
 helpviewer_keywords:
 - Data Exploration Options dialog box
 ms.assetid: 876920c8-9d6f-4d09-abb2-53d78161a289
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cb1785ea312e588c9c2246af6f33c8cebc7905b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 956c8ad82cc1675dd2e5838327a8300c3ffb22b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047495"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254972"
 ---
 # <a name="data-exploration-options-dialog-box-analysis-services---data-mining"></a>Dialogfeld 'Optionen zum Durchsuchen von Daten' (Analysis Services – Data Mining)
   Mithilfe des Dialogfelds **Optionen zum Durchsuchen von Daten** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie die Stichproben- und Diagrammoptionen für das Dialogfeld **Daten durchsuchen** festlegen. Sie können das Dialogfeld **Optionen zum Durchsuchen von Daten** anzeigen, indem Sie im Dialogfeld **Daten durchsuchen** auf **Stichprobenoptionen** klicken.  

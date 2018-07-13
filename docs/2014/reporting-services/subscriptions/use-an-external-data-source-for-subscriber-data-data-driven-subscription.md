@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriber data sources [Reporting Services]
 - subscriptions [Reporting Services], external data sources
@@ -20,13 +20,13 @@ ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 15d1bfd8489a8150fb0773708fa7f62b6a659cbe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b81ef71db369b8ede4b85043c860edc73763252
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048210"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255532"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Verwenden einer externen Datenquelle für Abonnentendaten (datengesteuertes Abonnement)
   In einem datengesteuerten Abonnement werden dynamische Abonnementdaten von einer Abfrage oder einem Befehl bereitgestellt, die bzw. der Daten aus einer externen Datenquelle abruft. Abonnementdaten können aus allen unterstützten Datenquellen abgerufen werden, die die Anforderungen der datengesteuerten Abonnementverarbeitung erfüllen. Die Abfrage- oder Befehlssyntax muss für eine Datenverarbeitungserweiterung gültig sein, die mit dem Berichtsserver installiert wurde.  
@@ -64,7 +64,7 @@ ms.locfileid: "36048210"
 -   Vom Berichtsserver wird eine Berichtsübermittlung für jede Zeile im Resultset erstellt. Wenn das Resultset aus dreihundert Zeilen besteht, versucht der Berichtsserver, dreihundert Berichte zu übermitteln.  
   
 ## <a name="setting-delivery-options-using-variable-data-from-a-subscriber-database"></a>Festlegen von Übermittlungsoptionen mithilfe von Variablendaten aus einer Abonnentendatenbank  
- Sie können Daten in der Abonnentendatenbank verwenden, um die Übermittlungsoptionen für die einzelnen Empfänger anzupassen. Mit der von Ihnen verwendeten Art der Übermittlungserweiterung wird bestimmt, welche Optionen verfügbar sind. Falls Sie die E-Mail-Übermittlungserweiterung des Berichtsservers verwenden, sollte die Abfrage für jeden Abonnenten einen E-Mail-Alias enthalten. Wenn Sie die Dateifreigabeübermittung verwenden, sollten die Abonnentendaten Werte enthalten, die zum Erstellen abonnentenspezifischer Berichtsdateien oder zum Bereitstellen eines Ziels für die Übermittlung verwendet werden können. Weitere Informationen finden Sie unter [File Share Delivery in Reporting Services](file-share-delivery-in-reporting-services.md) und [e-Mail-Übermittlung in Reporting Services](e-mail-delivery-in-reporting-services.md).  
+ Sie können Daten in der Abonnentendatenbank verwenden, um die Übermittlungsoptionen für die einzelnen Empfänger anzupassen. Mit der von Ihnen verwendeten Art der Übermittlungserweiterung wird bestimmt, welche Optionen verfügbar sind. Falls Sie die E-Mail-Übermittlungserweiterung des Berichtsservers verwenden, sollte die Abfrage für jeden Abonnenten einen E-Mail-Alias enthalten. Wenn Sie die Dateifreigabeübermittung verwenden, sollten die Abonnentendaten Werte enthalten, die zum Erstellen abonnentenspezifischer Berichtsdateien oder zum Bereitstellen eines Ziels für die Übermittlung verwendet werden können. Weitere Informationen finden Sie unter [Dateifreigabeübermittlung in Reporting Services](file-share-delivery-in-reporting-services.md) und [e-Mail-Übermittlung in Reporting Services](e-mail-delivery-in-reporting-services.md).  
   
 ## <a name="passing-parameter-values-from-the-subscriber-database-to-the-report"></a>Übergeben von Parameterwerten aus der Abonnentendatenbank an den Bericht  
  Wenn Sie ein datengesteuertes Abonnement für einen parametrisierten Bericht erstellen, können Sie Variablenparameterwerte verwenden, um die Ausgabe der einzelnen Berichte anzupassen. Beispielsweise könnte die Abonnentendatenbank Mitarbeiteridentifikationsnummern, Einstellungsdaten, Tätigkeitsbezeichnungen und Informationen zum Bürostandort enthalten, mit denen Berichtsdaten gefiltert werden können. Falls der Bericht Parameter akzeptiert, die auf diesen oder anderen verfügbaren Spaltendaten basieren, können Sie den Parameter der entsprechenden Spalte zuordnen.  

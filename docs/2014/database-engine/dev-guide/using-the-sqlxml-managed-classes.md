@@ -1,5 +1,5 @@
 ---
-title: Verwaltete SQLXML-Klassen | Microsoft Docs
+title: Verwenden der verwalteten SQLXML Klassen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Managed Classes [SQLXML], samples
 ms.assetid: 3f021290-00ee-44e1-af4b-33d3ba8c6302
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 14207fb3d60876194da2946f6d65fb44a60a9dc8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 045ec75b87e8239043de4b4b90fbb8f82b8a8de7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050366"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207580"
 ---
 # <a name="using-the-sqlxml-managed-classes"></a>Verwenden der verwalteten SQLXML-Klassen
   Dieser Abschnitt stellt Beispielanwendungen zur Verfügung, die veranschaulichen, wie die verwalteten [!INCLUDE[msCoName](../../includes/msconame-md.md)]-SQLXML-Klassen verwendet werden.  
@@ -38,7 +38,7 @@ ms.locfileid: "36050366"
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Ausführen von SQL-Abfragen &#40;verwaltete SQLXML-Klassen&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)  
   [Ausführen von SQL-Abfragen mithilfe der „ExecuteXMLReader“-Methode](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md)  
-  [Verarbeiten von XML auf der Clientseite &#40;verwaltete SQLXML-Klassen&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/processing-xml-on-the-client-side-sqlxml-managed-classes.md)  
+  [Verarbeitung von XML auf der Clientseite &#40;verwaltete SQLXML-Klassen&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/processing-xml-on-the-client-side-sqlxml-managed-classes.md)  
   [Ausführen von XPath-Abfragen &#40;verwaltete SQLXML-Klassen&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-xpath-queries-sqlxml-managed-classes.md)  
   [Ausführen von XPath-Abfragen mit Namespaces &#40;verwaltete SQLXML-Klassen&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-xpath-queries-with-namespaces-sqlxml-managed-classes.md)  
   [Ausführen von Vorlagendateien mit der „CommandText“-Eigenschaft](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandtext-property.md)  

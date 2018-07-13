@@ -1,5 +1,5 @@
 ---
-title: Für die Themenbereichsdatenbank Schemaoptionen (Schemagenerierungs-Assistent) (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Für die Themenbereichsdatenbank Schemaoptionen (Schemagenerierungs-Assistent) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.schemagenwizard.subjectareaschemaopts.f1
 ms.assetid: 4c109bb8-e19d-412b-908f-bfdd7f872439
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ce756687e73e628d1b66a797e19711a3d6889eec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eb617bca3a906162f372ce482269d3fca386acec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046986"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235590"
 ---
 # <a name="subject-area-database-schema-options-schema-generation-wizard-analysis-services---multidimensional-data"></a>Schemaoptionen für die Themenbereichsdatenbank (Schemagenerierungs-Assistent) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe der Seite **Schemaoptionen für die Themenbereichsdatenbank** können Sie die Generierung des Schemas steuern und definieren, wie Daten erhalten bleiben.  
@@ -39,7 +39,7 @@ ms.locfileid: "36046986"
  **Erstellen von Indizes**  
  Erstellt Indizes für Fremdschlüsselspalten im generierten Schema.  
   
- **Die referenzielle Integrität erzwingen**  
+ **Referenzielle Integrität erzwingen**  
  Erzwingt die referenzielle Integrität innerhalb des generierten Schemas. Wenn Sie diese Option nicht auswählen, werden Beziehungen erstellt, aber nicht erzwungen.  
   
  **Daten bei erneuter Generierung beibehalten**  

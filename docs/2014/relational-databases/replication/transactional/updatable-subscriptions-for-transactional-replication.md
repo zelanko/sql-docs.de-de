@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, updatable subscriptions
 - updatable subscriptions, about updatable subscriptions
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - updatable subscriptions
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 caps.latest.revision: 57
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3a7af7b2b8da4c51b72e05a7225a4a18224b377a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 38e7b5970295bec4170c8658c254214f40d250ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047351"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268666"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "36047351"
   
  Informationen zum Aktivieren aktualisierbarer Abonnements für Transaktionsveröffentlichungen finden Sie unter [Enable Updating Subscriptions for Transactional Publications](../publish/enable-updating-subscriptions-for-transactional-publications.md).  
   
- Zum Erstellen aktualisierbarer Abonnements für transaktionsveröffentlichungen finden Sie unter [Erstellen von aktualisierbaren Abonnements für eine Transaktionsveröffentlichung](../create-updatable-subscription-transactional-publication-transact-sql.md)  
+ Zum Erstellen aktualisierbarer Abonnements für transaktionsveröffentlichungen finden Sie unter [Erstellen eines aktualisierbaren Abonnements für eine Transaktionsveröffentlichung](../create-updatable-subscription-transactional-publication-transact-sql.md)  
   
 ## <a name="switching-between-update-modes"></a>Wechseln des Updatemodus  
  Bei der Verwendung aktualisierbarer Abonnements können Sie den Updatemodus für ein Abonnement angeben und dann bei Bedarf in den anderen Modus wechseln. Sie können z. B. angeben, dass das sofortige Aktualisieren für ein Abonnement verwendet wird. Wenn dann jedoch die Netzwerkverbindung aufgrund eines Systemfehlers unterbrochen wird, können Sie auf das verzögerte Aktualisieren über eine Warteschlange wechseln.  
@@ -68,7 +68,7 @@ ms.locfileid: "36047351"
   
 -   Das erneute Veröffentlichen von Daten wird nicht unterstützt.  
   
--   Bei der Replikation wird die **msrepl_tran_version** -Spalte veröffentlichten Tabellen für das Nachverfolgen hinzugefügt. Wegen dieser zusätzlichen Spalte alle `INSERT` Anweisungen eine Spaltenliste enthalten soll.  
+-   Bei der Replikation wird die **msrepl_tran_version** -Spalte veröffentlichten Tabellen für das Nachverfolgen hinzugefügt. Aufgrund dieser zusätzlichen Spalte alle `INSERT` Anweisungen sollten eine Spaltenliste enthalten.  
   
 -   Wenn Sie das Schema einer Tabelle in einer Veröffentlichung ändern möchten, die das Aktualisieren von Abonnements unterstützt, müssen alle Aktivitäten an der Tabelle auf dem Verleger und dem Abonnenten angehalten werden. Außerdem müssen ausstehende Datenänderungen vor einer Schemaänderung an alle Knoten weitergegeben werden. Dadurch wird sichergestellt, dass unbeendete Transaktionen keinen Konflikt mit der ausstehenden Schemaänderung auslösen. Nach der Weitergabe der Schemaänderungen an alle Knoten können die Aktivitäten an den veröffentlichten Tabellen fortgesetzt werden. Weitere Informationen finden Sie unter [Versetzen einer Replikationstopologie in einen inaktiven Status &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
@@ -80,13 +80,13 @@ ms.locfileid: "36047351"
   
 -   Updates auf dem Abonnenten werden auch dann an den Verleger weitergegeben, wenn ein Abonnement abgelaufen oder inaktiv ist. Stellen Sie sicher, dass Abonnements dieser Art gelöscht oder erneut initialisiert werden.  
   
--   Wenn `TIMESTAMP` oder `IDENTITY` Spalten verwendet werden, und als Basisdatentypen repliziert werden, Werte in diesen Spalten sollten nicht auf dem Abonnenten aktualisiert werden.  
+-   Wenn `TIMESTAMP` oder `IDENTITY` Spalten verwendet werden und als Basisdatentypen repliziert werden, Werte in diesen Spalten sollten nicht auf dem Abonnenten aktualisiert werden.  
   
--   Abonnenten können nicht aktualisiert oder eingefügt `text`, `ntext` oder `image` Werte, da er nicht gelesen werden, die eingefügten oder gelöschten Tabellen innerhalb der Änderungsprotokollierungstrigger Replikation möglich ist. Abonnenten können nicht auf ähnliche Weise aktualisieren oder Einfügen von `text` oder `image` Werte mit `WRITETEXT` oder `UPDATETEXT` , da die Daten vom Verleger überschrieben werden. Partitionieren Sie stattdessen die `text` und `image` Spalten in eine Separate Tabelle und die beiden Tabellen innerhalb einer Transaktion ändern.  
+-   Abonnenten können nicht aktualisiert oder eingefügt `text`, `ntext` oder `image` Werte, da es nicht möglich, aus den eingefügten oder gelöschten Tabellen innerhalb der Replikationstrigger für die änderungsnachverfolgung zu lesen ist. Abonnenten können nicht auf ähnliche Weise aktualisieren oder Einfügen von `text` oder `image` Werte mithilfe von `WRITETEXT` oder `UPDATETEXT` , da die Daten vom Verleger überschrieben werden. Partitionieren Sie stattdessen die `text` und `image` -Spalten in eine Separate Tabelle und die beiden Tabellen innerhalb einer Transaktion ändern.  
   
      Verwenden Sie zum Aktualisieren großer Objekte auf einem Abonnenten die Datentypen `varchar(max)`, `nvarchar(max)`, `varbinary(max)` anstelle von `text`, `ntext`, und `image` Datentypen.  
   
--   Updates an eindeutigen Schlüsseln (einschließlich Primärschlüssel), die Duplikate generieren (z. B. ein Update der Form `UPDATE <column> SET <column> =<column>+1` ), sind nicht zulässig und werden aufgrund eines Verstoßes gegen die Eindeutigkeit abgelehnt. Dies ist, da durch die Replikation als einzelne Gruppe Updates auf dem Abonnenten vorgenommene weitergegeben werden `UPDATE` Anweisungen für jede betroffene Zeile.  
+-   Updates an eindeutigen Schlüsseln (einschließlich Primärschlüssel), die Duplikate generieren (z. B. ein Update der Form `UPDATE <column> SET <column> =<column>+1` ), sind nicht zulässig und werden aufgrund eines Verstoßes gegen die Eindeutigkeit abgelehnt. Dies ist, da der Satz von Aktualisierungen auf dem Abonnenten weitergegeben werden, von der Replikation als einzelne `UPDATE` Anweisungen für jede betroffene Zeile.  
   
 -   Ist die Abonnentendatenbank horizontal partitioniert und die Partition enthält Zeilen, die auf dem Abonnenten, aber nicht auf dem Verleger vorhanden sind, kann der Abonnent die bereits vorhandenen Zeilen nicht aktualisieren. Bei dem Versuch, diese Zeilen zu aktualisieren, wird ein Fehler zurückgegeben. Die Zeilen sollten aus der Tabelle gelöscht und erneut eingefügt werden.  
   
@@ -110,11 +110,11 @@ ms.locfileid: "36047351"
   
 -   Updates an Primärschlüsselspalten werden beim Verwenden des verzögerten Aktualisierens über eine Warteschlange nicht empfohlen, da der Primärschlüssel verwendet wird, um Datensätze für alle Abfragen zu suchen. Wenn die Vorgehensweise zur Konfliktlösung so festgelegt ist, dass der Abonnent gewinnt, sollten Updates an Primärschlüsseln mit Vorsicht vorgenommen werden. Wenn Updates am Primärschlüssel auf dem Verleger und dem Abonnenten vorgenommen werden, handelt es sich beim Ergebnis um zwei Zeilen mit unterschiedlichen Primärschlüsseln.  
   
--   Für Spalten des Datentyps `SQL_VARIANT`: Daten eingefügt oder auf dem Abonnenten aktualisiert, es ist zugeordnet, wie folgt durch den Warteschlangenlese-Agent Wenn sie vom Abonnenten in die Warteschlange kopiert wird:  
+-   Für Spalten des Datentyps `SQL_VARIANT`: Daten eingefügt oder auf dem Abonnenten aktualisiert, es wird zugeordnet, wie folgt durch den Warteschlangenlese-Agent Wenn sie vom Abonnenten in die Warteschlange kopiert werden:  
   
     -   `BIGINT`, `DECIMAL`, `NUMERIC`, `MONEY`, und `SMALLMONEY` zugeordnet sind `NUMERIC`.  
   
-    -   `BINARY` und `VARBINARY` zugeordnet werden `VARBINARY` Daten.  
+    -   `BINARY` und `VARBINARY` zugeordnet sind `VARBINARY` Daten.  
   
 ### <a name="conflict-detection-and-resolution"></a>Konflikterkennung und -lösung  
   
