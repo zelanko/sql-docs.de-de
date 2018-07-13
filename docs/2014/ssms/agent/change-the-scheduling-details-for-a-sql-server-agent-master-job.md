@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f5414451-4d8e-464b-bd9e-f2b70c6899b3
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8dc41b403419ee3b1eb6734e5fa658dc7950fd6e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7d5654908f9decdf0ead70a2b4182fe43129511a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057525"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262066"
 ---
 # <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Ändern der Zeitplandetails für einen Masterauftrag für den SQL Server-Agent
   In diesem Thema wird beschrieben, wie Sie Zeitplandetails mithilfe von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [!INCLUDE[tsql](../../includes/tsql-md.md)]ändern.  
@@ -60,7 +60,7 @@ ms.locfileid: "36057525"
   
 4.  Klicken Sie mit der rechten Maustaste auf den Auftrag, dessen Zeitplan Sie bearbeiten möchten, und wählen Sie **Eigenschaften**aus.  
   
-5.  Klicken Sie im Dialogfeld **Auftragseigenschaften >***Auftragsname* unter **Seite auswählen** auf die Option **Zeitpläne**. Weitere Informationen zu den Optionen auf dieser Seite finden Sie unter [Auftragseigenschaften: Neuer Auftrag &#40;Seite "Zeitpläne"&#41;](job-properties-new-job-schedules-page.md).  
+5.  Klicken Sie im Dialogfeld **Auftragseigenschaften >***Auftragsname* unter **Seite auswählen** auf die Option **Zeitpläne**. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie unter [Auftragseigenschaften: Neuer Auftrag &#40;Seite "Zeitpläne"&#41;](job-properties-new-job-schedules-page.md).  
   
 6.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   

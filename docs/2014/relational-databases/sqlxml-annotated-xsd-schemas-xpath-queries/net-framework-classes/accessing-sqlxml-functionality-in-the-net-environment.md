@@ -1,5 +1,5 @@
 ---
-title: Zugreifen auf SQLXML-Funktionalität in der .NET-Umgebung | Microsoft Docs
+title: Zugreifen auf SQLXML-Funktionalität in der .NET-Umgebung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,24 +17,24 @@ helpviewer_keywords:
 - .NET Framework [SQLXML], accessing SQLXML functionality
 ms.assetid: 74744535-2945-414d-9a5b-7e8cc363953a
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e6546aee11353579f5f7096be72aac491478f03e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 53a61e858eef876716c07ab54186178c4e4e202b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057131"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323806"
 ---
 # <a name="accessing-sqlxml-functionality-in-the-net-environment"></a>Zugreifen auf die SQLXML-Funktionalität in der .NET-Umgebung
   In diesem Beispiel wird dargestellt:  
   
--   Gewusst wie: Verwenden Sie [!INCLUDE[msCoName](../../../includes/msconame-md.md)] verwalteten SQLXML-Klassen (Microsoft.Data.SqlXml) auf Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework-Umgebung.  
+-   Gewusst wie: Verwenden Sie [!INCLUDE[msCoName](../../../includes/msconame-md.md)] verwaltete SQLXML-Klassen (Microsoft.Data.SqlXml) auf Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework-Umgebung.  
   
 -   wie DiffGram-Objekte, die in der .NET Framework-Umgebung generiert werden, Datenupdates auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Tabellen anwenden können.  
   
- In dieser Anwendung wird eine XPath-Abfrage für ein XSD-Schema ausgeführt. Die Ausführung der XPath-Abfrage gibt ein XML-Dokument, das aus Kontaktdaten besteht (**FirstName**, **LastName**). Die Anwendung lädt das XML-Dokument in das Dataset der .NET Framework-Umgebung. Die Daten im Dataset werden bearbeitet: Der Vorname des ersten Kontakts im Dataset wird in "Susan" geändert. Das DiffGram-Objekt wird aus dem Dataset erstellt, und das im DiffGram-Objekt angegebene Update (die Änderung des Vornamens der Mitarbeiterin) auf die Person.Contact-Tabelle angewendet.  
+ In dieser Anwendung wird eine XPath-Abfrage für ein XSD-Schema ausgeführt. Die Ausführung der XPath-Abfrage gibt ein XML-Dokument, das aus Kontaktdaten besteht (**FirstName**, **"LastName"**). Die Anwendung lädt das XML-Dokument in das Dataset der .NET Framework-Umgebung. Die Daten im Dataset werden bearbeitet: Der Vorname des ersten Kontakts im Dataset wird in "Susan" geändert. Das DiffGram-Objekt wird aus dem Dataset erstellt, und das im DiffGram-Objekt angegebene Update (die Änderung des Vornamens der Mitarbeiterin) auf die Person.Contact-Tabelle angewendet.  
   
 > [!NOTE]  
 >  Im Code müssen Sie den Namen der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der Verbindungszeichenfolge bereitstellen.  

@@ -1,5 +1,5 @@
 ---
-title: SQL Server Data Mining-Add-Ins für Office | Microsoft Docs
+title: SQL Server Data Mining-Add-Ins für Office | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 66865664b7713f869ef1f007ba5b35f04218e8f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 7d8897cdb41d1d72806bf93335b13bf8c683cc31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058200"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273896"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>SQL Server Data Mining-Add-Ins für Office
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Bei den Data Mining-Add-Ins für Office handelt es sich um ein kompaktes Set von Tools für Vorhersageanalysen, mit denen Sie auf der Grundlage von Daten in Excel analytische Modelle für Vorhersagezwecke, Empfehlungen oder Untersuchungen erstellen können.  
@@ -85,8 +85,8 @@ ms.locfileid: "36058200"
   
 -   Standard  
   
- Je nach der Edition der SQL Server Analysis Services, mit denen Sie eine Verbindung herstellen, sind einige erweiterte Algorithmen u. U. nicht verfügbar. Informationen finden Sie unter [von den Editionen von SQL Server 2014 unterstützte Funktionen](https://msdn.microsoft.com/en-us/library/cc645993.aspx).  
+ Je nach der Edition der SQL Server Analysis Services, mit denen Sie eine Verbindung herstellen, sind einige erweiterte Algorithmen u. U. nicht verfügbar. Weitere Informationen finden Sie unter [von den SQL Server 2014-Editionen unterstützte Funktionen](https://msdn.microsoft.com/en-us/library/cc645993.aspx).  
   
- Weiterführende Hilfe zur Installation finden Sie auf dieser Seite im Download Center: [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
+ Weitere Hilfe zur Installation finden Sie unter dieser Seite im Download Center: [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
   
   

@@ -1,25 +1,25 @@
 ---
-title: Informationsquellen (SQLServer 2014) | Microsoft Docs
+title: Informationsquellen (SQLServer 2014) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - finding Help topics [SQL Server]
 ms.assetid: 2d43a79f-8f4e-4c98-b921-16035129a15b
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5697ee9de8311c591bd71a87e8f3361a28b2de04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 44dfb789b8caa90413106655aefb635d0ba7c3db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148165"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223660"
 ---
 # <a name="getting-assistance-sql-server-2014"></a>Informationsquellen (SQL Server 2014)
   Es gibt drei Hauptquellen für Informationen von [!INCLUDE[msCoName](../includes/msconame-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
@@ -30,7 +30,7 @@ ms.locfileid: "36148165"
   
 -   Informationen zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf anderen [!INCLUDE[msCoName](../includes/msconame-md.md)]-Websites.  
   
- Wenn Sie die Informationen, gewünschten in diesen Quellen Fragen in entweder bereitstellen können, nicht finden die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Community-Foren und Newsgroups, oder Sie können eine Supportanfrage öffnen [!INCLUDE[msCoName](../includes/msconame-md.md)] unterstützen.  
+ Wenn Sie die Informationen nicht finden können Sie suchen nach in diese Datenquellen können Sie Fragen können die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Community-Foren und Newsgroups, oder Sie können eine Supportanfrage mit [!INCLUDE[msCoName](../includes/msconame-md.md)] unterstützen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Informationsquellen für SQL Server](../../2014/getting-started/getting-sql-server-assistance.md)  

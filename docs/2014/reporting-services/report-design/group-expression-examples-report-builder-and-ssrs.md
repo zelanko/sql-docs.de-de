@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data [Reporting Services], grouping
 - grouping data
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - groups [Reporting Services], expressions
 ms.assetid: 34cd0249-fc74-4cf2-ba11-7b072992bfd2
 caps.latest.revision: 23
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e44374937e0b6fdc73eee3414e263e196095efd5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: e1f8a5b296c51a5123013e8f961cf518684f27e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057532"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323799"
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>Beispiele für Gruppierungsausdrücke (Berichts-Generator und SSRS)
   In einem Datenbereich können Sie Daten nach einem einzelnen Feld gruppieren oder komplexe Ausdrücke erstellen, mit denen die Daten identifiziert werden, nach denen gruppiert wird. Komplexe Ausdrücke schließen Verweise auf mehrere Felder oder Parameter, Bedingungsanweisungen oder benutzerdefinierten Code ein. Wenn Sie für einen Datenbereich eine Gruppe definieren, fügen Sie diese Ausdrücke den **Gruppeneigenschaften** hinzu. Weitere Informationen finden Sie unter [Hinzufügen oder Löschen einer Gruppe in einem Datenbereich &#40;Berichts-Generator und SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  

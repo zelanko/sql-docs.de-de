@@ -1,5 +1,5 @@
 ---
-title: Berichts-Generator-Optionen (Dialogfeld), Einstellungen (Berichts-Generator) | Microsoft Docs
+title: Berichts-Generator-Optionen im Dialogfeld Einstellungen (Berichts-Generator) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7ae2490cf5dcdc241120c683994e7f46bcf0b6c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 49449391408701c16b7b6da9106913a24d084d66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058238"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218840"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>Berichts-Generator-Optionen (Dialogfeld), Einstellungen (Berichts-Generator)
   Klicken Sie auf die **Berichts-Generator** Schaltfläche, und klicken Sie dann auf **Optionen** Festlegen von Optionen für die Anzeige der zuletzt verwendeten Dateien und Verbindungen. Sie können auch den Standardberichtsserver ändern oder gegebenenfalls einen Standardberichtsserver hinzufügen.  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 126b4c4c-2a1c-4701-a0ad-8de23fbd7306
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d6387825abc2b2eb3426bbbd19f05674615f9e7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8a564533f26faea5330da3c45cd8e00cd7e2c12d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059346"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253952"
 ---
 # <a name="subscribe-to-and-check-the-finance-name-policy"></a>Abonnieren und Überprüfen der Richtlinie 'Finanz_Name'
   In dieser Aufgabe konfigurieren Sie die Datenbank Finanzen, um die Richtlinienkategorie Finanzen zu abonnieren. Anschließend testen Sie die Richtlinie Finanz_Name.  
@@ -74,7 +74,7 @@ ms.locfileid: "36059346"
 ## <a name="next"></a>Weiter  
  Dieses Lernprogramm ist beendet. Um zum Anfang des Tutorials zurückzukehren, klicken Sie auf [Tutorial: Verwalten von Servern mit der richtlinienbasierten Verwaltung](tutorial-administering-servers-by-using-policy-based-management.md).  
   
- Eine Liste der Lernprogramme, finden Sie unter [Lernprogramme für SQL Server 2014](../../tutorials/tutorials-for-sql-server-2014.md).  
+ Eine Liste der Tutorials finden Sie unter [Lernprogramme für SQL Server 2014](../../tutorials/tutorials-for-sql-server-2014.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwalten von Servern mit der richtlinienbasierten Verwaltung](administer-servers-by-using-policy-based-management.md)  

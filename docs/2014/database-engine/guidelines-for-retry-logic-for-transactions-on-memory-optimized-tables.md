@@ -1,5 +1,5 @@
 ---
-title: Richtlinien für die Wiederholungslogik für Transaktionen in speicheroptimierten Tabellen | Microsoft Docs
+title: Richtlinien zur Wiederholungslogik für Transaktionen in speicheroptimierten Tabellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f2a35c37-4449-49ee-8bba-928028f1de66
 caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 3949860a76801061a8ff01f73a417c32c5056dc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0b7d4a0799a70a91c99297c3c077100235852cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057876"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243140"
 ---
 # <a name="guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables"></a>Richtlinien zur Wiederholungslogik für Transaktionen auf speicheroptimierten Tabellen
   Es gibt Fehlerbedingungen, die bei Transaktionen auftreten, die auf speicheroptimierte Tabellen zugreifen.  

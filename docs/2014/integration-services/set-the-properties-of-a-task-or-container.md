@@ -1,5 +1,5 @@
 ---
-title: Legen Sie die Eigenschaften eines Tasks oder Container | Microsoft Docs
+title: Festlegen der Eigenschaften eines Tasks oder Containers | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tasks [Integration Services], properties
 ms.assetid: 52d47ca4-fb8c-493d-8b2b-48bb269f859b
 caps.latest.revision: 48
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 08133206f867492f52c5d89d67819d8f928eb8ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4aa8b85c3b5c92b38f50bbfac850d4a69ed2d4c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057856"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264896"
 ---
 # <a name="set-the-properties-of-a-task-or-container"></a>Festlegen der Eigenschaften eines Tasks oder Containers
   Sie können die meisten Eigenschaften von Tasks und Containern im Fenster **Eigenschaften** festlegen. Eine Ausnahme sind Eigenschaften von Taskauflistungen und Eigenschaften, die zu komplex sind, als dass sie im Fenster **Eigenschaften** festgelegt werden könnten. Beispielsweise können Sie nicht den Enumerator konfigurieren, der vom Foreach-Schleifencontainer im Fenster **Eigenschaften** verwendet wird. Sie müssen einen Task- oder Container-Editor verwenden, um diese komplexen Eigenschaften festzulegen. Die meisten Task- und Container-Editoren weisen mehrere Knoten auf, und jeder Knoten enthält zugehörige Eigenschaften. Der Name des Knotens weist auf die Art der Eigenschaften hin, die der Knoten enthält.  

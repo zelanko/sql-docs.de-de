@@ -1,5 +1,5 @@
 ---
-title: Korrelieren einer Ablaufverfolgung mit Windows-Leistungsprotokolldaten (SQL Server Profiler) | Microsoft Docs
+title: Korrelieren einer Ablaufverfolgung mit Windows-Leistungsprotokolldaten (SQL Server Profiler) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], logs
 ms.assetid: e1b3072c-8daf-49a7-9895-c8cccd2adb95
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 34e9b8543ea566f9f984b2cb19a602329d1c0d1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d5517f2962bef05e560697c55348a5372a80aa62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060335"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245350"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data-sql-server-profiler"></a>Korrelieren einer Ablaufverfolgung mit Windows-Leistungsprotokolldaten (SQL Server Profiler)
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] Microsoft Windows-Systemmonitor-Leistungsindikatoren mit korrelieren können [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Ereignisse. Der Windows-Systemmonitor protokolliert die Systemaktivität für angegebene Leistungsindikatoren in Leistungsprotokollen.  
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] kann Microsoft Windows Leistungsindikat-oderen mit korrelieren [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Ereignisse. Der Windows-Systemmonitor protokolliert die Systemaktivität für angegebene Leistungsindikatoren in Leistungsprotokollen.  
   
 > [!NOTE]  
 >  Informationen zur gemeinsamen Nutzung von Protokollen in verschiedenen Windows-Versionen finden Sie am Ende dieses Themas.  

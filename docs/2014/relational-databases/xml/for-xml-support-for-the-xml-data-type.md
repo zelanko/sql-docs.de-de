@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], XML
 - xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f33b889cb9bc409815c6fe8a0501de3bc1388e68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 14010ca375afdf5166f737a27e33f8ed3fc42c49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061558"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327340"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>FOR XML-Unterstützung für den xml-Datentyp
-  Wenn eine FOR XML-Abfrage gibt an, eine Spalte mit `xml` Typ in der SELECT-Klausel Spaltenwerte zugeordnet sind, als Elemente im zurückgegebenen XML, unabhängig davon, ob die ELEMENTS-Direktive angegeben. XML-Deklarationen in einer Spalte des `xml`-Typs werden nicht serialisiert.  
+  Wenn eine FOR XML-Abfrage gibt an, eine Spalte mit `xml` Typ in der SELECT-Klausel werden die Spaltenwerte als Elemente im zurückgegebenen XML, unabhängig davon, ob die ELEMENTS-Direktive angegeben zugeordnet. XML-Deklarationen in einer Spalte des `xml`-Typs werden nicht serialisiert.  
   
  Z. B. die folgende Abfrage ruft Informationen zu Kundenkontakten wie z. B. die `BusinessEntityID`, `FirstName`, und `LastName` Spalten und die Rufnummern aus der `AdditionalContactInfo` Spalte `xml` Typ.  
   
@@ -44,7 +44,7 @@ declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-
 FOR XML AUTO, TYPE;  
 ```  
   
- Da die Abfrage nicht die ELEMENTS-Direktive angegeben ist, werden die Spaltenwerte als Attribute beibehalten, außer aus abgerufenen Werte für die zusätzlichen Kontaktinformationen zurückgegeben der `xml` Typspalte. Diese werden als Elemente zurückgegeben.  
+ Da die Abfrage nicht die ELEMENTS-Direktive angegeben ist, werden die Werte der Spalte zurückgegeben, als Attribute mit Ausnahme der zusätzlichen Kontaktinformationen Werte aus der `xml` Type-Spalte. Diese werden als Elemente zurückgegeben.  
   
  Dies ist das Teilergebnis:  
   
@@ -121,7 +121,7 @@ FOR XML AUTO, TYPE;
   
  Wenn Sie die ELEMENTS-Direktive in der Abfrage angeben, werden BusinessEntityID, LastName und FirstName als Elemente im sich ergebenden XML zurückgegeben.  
   
- Das folgende Beispiel veranschaulicht, dass die FOR XML-Verarbeitungslogik XML-Deklarationen in den XML-Daten nicht serialisiert eine `xml` Spalte vom Typ:  
+ Das folgende Beispiel zeigt, dass die FOR XML-Verarbeitungslogik XML-Deklarationen in den XML-Daten nicht serialisiert eine `xml` Spalte vom Typ:  
   
 ```  
 create table t(i int, x xml)  
@@ -152,7 +152,7 @@ for xml auto;
   
 -   Eine Instanz von der `xml` Typ  
   
- Die folgende benutzerdefinierte Funktion gibt z. B. eine Tabelle mit einer einzelnen Spalte des `xm`l-Typ:  
+ Die folgende benutzerdefinierte Funktion gibt z. B. eine Tabelle mit einer einzelnen Spalte des `xm`-Typs:  
   
 ```  
 USE AdventureWorks2012;  
@@ -174,7 +174,7 @@ declare namespace PD="http://www.adventure-works.com/schemas/products/descriptio
 END;  
 ```  
   
- Sie können die benutzerdefinierte Funktion ausführen und die von dieser zurückgegebene Tabelle abfragen. In diesem Beispiel durch Abfragen der Tabelle zurückgegebene XML zugewiesen ist ein `xml` Typvariablen.  
+ Sie können die benutzerdefinierte Funktion ausführen und die von dieser zurückgegebene Tabelle abfragen. In diesem Beispiel erhält das durch Abfragen der Tabelle zurückgegebene XML auf eine `xml` Variablen vom Typ.  
   
 ```  
 declare @x xml;  

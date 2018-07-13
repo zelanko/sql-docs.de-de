@@ -1,5 +1,5 @@
 ---
-title: Editor für Data Mining-Abfrage-Abfragetasks (Registerkarte Miningmodell) | Microsoft Docs
+title: Editor für Data Mining-Abfrage-Abfragetasks (Registerkarte Miningmodell) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmquerytask.miningmodel.f1
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 0ede9b86-be27-471e-b012-22a65adce579
 caps.latest.revision: 24
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 78d1021d5ac6aa2c4d8452394cd69d298b76cdaa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9069acf132c048f07f8e27cb956032100f53a9eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057865"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261496"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>Editor für Data Mining-Abfragetasks (Registerkarte Miningmodell)
   Mithilfe der Registerkarte **Miningmodell** des Dialogfelds **Editor für Data Mining-Abfragetasks** können Sie die zu verwendende Miningstruktur sowie das Miningmodell angeben.  
@@ -59,7 +59,7 @@ ms.locfileid: "36057865"
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor für Data Mining-Abfragetasks &#40;Fragen Sie die Registerkarte "&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
+ [Editor für Data Mining-Abfragetasks &#40;Abfrage (Registerkarte)&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
  [Editor für Data Mining-Abfragetasks &#40;Registerkarte Ausgabe&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
  [Data Mining-Designer](../analysis-services/data-mining/data-mining-designer.md)  
   

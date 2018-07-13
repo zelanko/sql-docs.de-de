@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SessionHeader SOAP header
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
 caps.latest.revision: 45
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 826e6feb86dec026d22bdfb255361bbbbcd93480
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 252ec37bb94881a04cfe1137c829274cac6ad893
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060882"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330866"
 ---
 # <a name="identifying-execution-state"></a>Identifizieren des Ausführungsstatus
   HTTP (Hypertext Transfer Protocol) ist ein verbindungs- und statusfreies Protokoll, d. h. es gibt nicht automatisch an, ob unterschiedliche Anforderungen vom selben Client stammen oder ob eine einzelne Browserinstanz eine Webseite immer noch aktiv anzeigt. In Sitzungen wird eine logische Verbindung erstellt, um den Status zwischen Server und Client über HTTP beizubehalten. Die benutzerspezifischen Informationen einer bestimmten Sitzung werden als Sitzungsstatus bezeichnet.  

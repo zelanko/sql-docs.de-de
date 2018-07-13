@@ -1,5 +1,5 @@
 ---
-title: EstimatedPerformanceGain-Element (ASSL) | Microsoft Docs
+title: EstimatedPerformanceGain-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - EstimatedPerformanceGain element
 ms.assetid: d7487977-73c3-4244-ad5d-3c357b219db4
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c4e2c8ffa997c46b6d4587a971de436c25792694
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b4b9c2c80bbeadf716313756470d1f8d7994152
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059004"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267406"
 ---
 # <a name="estimatedperformancegain-element-assl"></a>EstimatedPerformanceGain-Element (ASSL)
   Enthält den schreibgeschützten Prozentwert des geschätzten Leistungsgewinns für die Partition.  
@@ -58,11 +58,11 @@ ms.locfileid: "36059004"
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnetes Element|[AggregationDesign](../objects/aggregationdesign-element-assl.md)|  
+|Übergeordnetes Element|[Aggregationdesign-Objekts](../objects/aggregationdesign-element-assl.md)|  
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Das übergeordnete Element des entsprechende Element `EstimatedPerformanceGain` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.AggregationDesign>.  
+ Das Element, das dem übergeordneten entspricht `EstimatedPerformanceGain` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.AggregationDesign>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

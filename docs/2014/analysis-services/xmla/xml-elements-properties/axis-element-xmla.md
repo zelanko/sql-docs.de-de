@@ -1,5 +1,5 @@
 ---
-title: Axis-Element (XMLA) | Microsoft Docs
+title: Axis-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,18 +23,18 @@ helpviewer_keywords:
 - Axis element
 ms.assetid: 336895e1-4a57-4b43-9a53-e31569866e6c
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: e30ff03b6e1a58a079d35f8e846ed176c42a3a31
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e3e68903dc828f4b14ac60892d1b6fc2baed2f30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060554"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263226"
 ---
 # <a name="axis-element-xmla"></a>Axis-Element (XMLA)
-  Enthält eine Menge von Tupeln, die zur Darstellung einer einzelnen Achse in einer enthaltenen mehrdimensionalen Datasets ein [Achsen](axes-element-xmla.md) Element, das verwendet die [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) von zurückgegebener Datentyp die [Execute](../xml-elements-methods-execute.md) Methode.  
+  Enthält eine Menge von Tupeln verwendet, um eine einzelne Achse in einem enthaltenen mehrdimensionalen Datasets darstellen einer [Achsen](axes-element-xmla.md) -Element, das verwendet die [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) von zurückgegebener Datentyp die [Execute](../xml-elements-methods-execute.md) Methode.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -71,18 +71,18 @@ ms.locfileid: "36060554"
  Der Inhalt des `Axis`-Elements variiert je nach dem Wert der `AxisFormat`-XMLA-Eigenschaft, die von der `Execute`-Methode verwendet wird.  
   
 ## <a name="tupleformat"></a>TupleFormat  
- Wenn eine Clientanwendung legt die `AxisFormat` Eigenschaft *' TupleFormat '*, eine Achse wird als eine Menge von Tupeln dargestellt. Jedes `Axis`-Element enthält ein `Tuples`-Element, das die Tupelmenge auf dieser Achse darstellt. Jedes Tupel wird mithilfe eines `Tuple`-Elements dargestellt, das `Member`-Elemente aus jeder Hierarchie auf der Achse enthält.  
+ Wenn eine Client-Anwendung legt die `AxisFormat` Eigenschaft *TupleFormat*, wird eine Achse als Menge von Tupeln dargestellt. Jedes `Axis`-Element enthält ein `Tuples`-Element, das die Tupelmenge auf dieser Achse darstellt. Jedes Tupel wird mithilfe eines `Tuple`-Elements dargestellt, das `Member`-Elemente aus jeder Hierarchie auf der Achse enthält.  
   
 ## <a name="clusterformat"></a>ClusterFormat  
- Wenn eine Clientanwendung legt die `AxisFormat` Eigenschaft, um *' Clusterformat '*, die Elemente auf jeder Achse in Cluster in der jeder Cluster ein Kreuzprodukt geordneten Mengen an Elementen aus jeder Hierarchie darstellt unterteilt. Jedes `Axis`-Element besteht aus einem oder mehreren `CrossProduct`-Elementen. Jedes `CrossProduct`-Element enthält ein `Members`-Element für jede Hierarchie auf der Achse.  
+ Wenn eine Clientanwendung festlegt der `AxisFormat` Eigenschaft *' Clusterformat '*, die Elemente auf jeder Achse in Cluster, in dem jeder Cluster ein Kreuzprodukt geordneten Mengen an Elementen aus jeder Hierarchie darstellt, unterteilt. Jedes `Axis`-Element besteht aus einem oder mehreren `CrossProduct`-Elementen. Jedes `CrossProduct`-Element enthält ein `Members`-Element für jede Hierarchie auf der Achse.  
   
 ## <a name="customformat"></a>CustomFormat  
- Wenn eine Clientanwendung festlegt der `AxisFormat` Eigenschaft *CustomFormat*, wird der Wert behandelt identisch mit der *' TupleFormat '* Wert von einer Analysis Services-Instanz.  
+ Wenn eine Clientanwendung festlegt der `AxisFormat` Eigenschaft *CustomFormat*, ist der Wert behandelt. identisch mit der *TupleFormat* Wert von Analysis Services-Instanz.  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="description"></a>Description  
- Das folgende Beispiel veranschaulicht die Struktur der `Axis` Elemente angezeigt, wenn ein Client gibt *' TupleFormat '* oder *CustomFormat* für die `AxisFormat` XMLA-Eigenschaft, die bei Angabe der folgenden Mitglieder für die Achse:  
+ Das folgende Beispiel veranschaulicht die Struktur der `Axis` Elemente, wenn ein Client *TupleFormat* oder *CustomFormat* für die `AxisFormat` XMLA-Eigenschaft, die gemäß der folgenden Mitglieder für die Achse:  
   
 |||||  
 |-|-|-|-|  
@@ -132,7 +132,7 @@ ms.locfileid: "36060554"
 ```  
   
 ### <a name="description"></a>Description  
- Das folgende Beispiel veranschaulicht die Struktur der `Axis` Elemente angezeigt, wenn ein Client gibt *' Clusterformat '* für die `AxisFormat` XMLA-Eigenschaft, wobei die folgenden Elemente für die Achse:  
+ Das folgende Beispiel veranschaulicht die Struktur der `Axis` Elemente, wenn ein Client *' Clusterformat '* für die `AxisFormat` XMLA-Eigenschaft, wobei die folgenden Elemente für die Achse:  
   
 ||||||  
 |-|-|-|-|-|  

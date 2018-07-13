@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - copy-only backups [SQL Server]
 - COPY_ONLY option [BACKUP statement]
 - backups [SQL Server], copy-only backups
 ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 caps.latest.revision: 46
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e382d3b0bad1a5c43d6fc745280e302c9422ef0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8d5ef086b610402e2c696196b2baae7705c5f920
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060065"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248880"
 ---
 # <a name="copy-only-backups-sql-server"></a>Kopiesicherungen [SQL Server]
   Eine *Kopiesicherung* ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherung, die unabhängig von der Sequenz herkömmlicher [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherungen erstellt wird. Normalerweise wird beim Erstellen einer Sicherung die Datenbank geändert, und außerdem beeinflusst dies die Art und Weise, wie spätere Sicherungen wiederhergestellt werden. Manchmal kann es sich jedoch als nützlich erweisen, eine Datensicherung für einen bestimmten Zweck vorzunehmen, ohne die allgemeinen Sicherungs- und Wiederherstellungsprozeduren für die Datenbank zu beeinflussen. Kopiesicherungen eignen sich für diesen Zweck.  
@@ -56,7 +55,7 @@ ms.locfileid: "36060065"
   
 -   Für eine vollständige Kopiesicherung:  
   
-     BACKUP DATABASE *Database_name* TO \<Backup_device*>* ... WITH COPY_ONLY …  
+     BACKUP DATABASE *Database_name* für \<Backup_device*>* ... WITH COPY_ONLY …  
   
     > [!NOTE]  
     >  COPY_ONLY ist wirkungslos, wenn gleichzeitig die Option DIFFERENTIAL angegeben wird.  

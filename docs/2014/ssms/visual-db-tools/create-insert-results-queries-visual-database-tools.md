@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], types
 - result sets [SQL Server], queries
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - queries [SQL Server], results
 ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 033e1e1f49a8d08b782e1a349ea43e388b9073b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 34e1fb7b3744cd07f58f47dd68b8055908bdeb3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147612"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216490"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>Erstellen von Abfragen zum Einfügen von Ergebnissen (Visual Database Tools)
   Mit einer Abfrage zum Einfügen von Ergebnissen können Sie Zeilen aus einer Tabelle in eine andere oder innerhalb einer Tabelle kopieren. Aus der Tabelle `titles` können Sie beispielsweise mit einer Abfrage zum Einfügen von Ergebnissen Informationen über alle Titel eines Herausgebers in eine zweite Tabelle kopieren, die dem betreffenden Herausgeber zur Verfügung gestellt werden kann. Das Erstellen einer Abfrage zum Einfügen von Ergebnissen ähnelt dem Erstellen von Abfragen zum Erstellen von Tabellen. Im Unterschied dazu werden jedoch Zeilen in eine vorhandene Tabelle kopiert.  
@@ -80,7 +80,7 @@ WHERE (pub_id = '0766')
     > [!NOTE]  
     >  Der Abfrage- und Sicht-Designer kann nicht im Voraus bestimmen, welche Tabellen und Sichten aktualisiert werden können. Daher werden im Dialogfeld **Zieltabelle für Anfügeabfrage auswählen** in der Liste **Tabellenname** alle in der abgefragten Datenverbindung verfügbaren Tabellen und Sichten angezeigt, d. h. auch diejenigen, in die möglicherweise keine Zeilen kopiert werden können.  
   
-4.  Wählen Sie in dem Rechteck, das die Tabelle oder das Tabellenwertobjekt darstellt, die Namen der Spalten aus, deren Inhalt kopiert werden soll. Um vollständige Zeilen zu kopieren, wählen Sie  **\* (alle Spalten)**.  
+4.  Wählen Sie in dem Rechteck, das die Tabelle oder das Tabellenwertobjekt darstellt, die Namen der Spalten aus, deren Inhalt kopiert werden soll. Um vollständige Zeilen kopieren möchten, wählen  **\* (alle Spalten)**.  
   
      Der Abfrage- und Sicht-Designer fügt die ausgewählten Spalten zur Spalte **Spalte** im Kriterienbereich hinzu.  
   

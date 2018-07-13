@@ -1,5 +1,5 @@
 ---
-title: Schlüsselkonzepte in MDX (Analysis Services) | Microsoft Docs
+title: Grundlegende Konzepte in MDX (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], about MDX
 - dimensional modeling [MDX]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - MDX [Analysis Services], dimensional modeling
 ms.assetid: 4797ddc8-6423-497a-9a43-81a1af7eb36c
 caps.latest.revision: 52
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 060ad452001605ee0df4d0c84381044cb38e6493
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d5d6e59827b0b816b898322adf729d2299540e38
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056812"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272016"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>Schlüsselkonzepte in MDX (Analysis Services)
   Bevor Sie mehrdimensionale Daten mit MDX (Multidimensional Expressions) abfragen können oder MDX-Ausdrücke zur Verwendung in einem Cubes zu erstellen, sollten Sie sich mit Konzepten und Begriffen der Mehrdimensionalität vertraut machen.  
@@ -50,7 +50,7 @@ ms.locfileid: "36056812"
   
  Modell-Metadaten werden in Excel in der Feldliste der PivotTable angezeigt.  Vergleichen Sie die obige PivotTable mit der folgenden Feldliste. Beachten Sie, dass die Feldliste Vertriebsgebiet, Gruppe, Land, Region (Metadaten) enthält, und die PivotTable dagegen nur die Elemente (Datenwerte). Wenn Sie die Symbole kennen, können Sie die Teile von mehrdimensionalen Modellen schnell und einfach einer PivotTable in Excel zuordnen.  
   
- ![Feldliste "PivotTable"](../media/ssas-keyconcepts-ptfieldlist.png "Feldliste \"PivotTable\"")  
+ ![PivotTable-Feldliste](../media/ssas-keyconcepts-ptfieldlist.png "PivotTable-Feldliste")  
   
 ## <a name="attribute-hierarchies"></a>Attributhierarchien  
  Sie wissen beinahe intuitiv, welche Werte in einer PivotTable steigen oder fallen, wenn Sie die Werte auf den Achsen erweitern und reduzieren. Warum ist dies so? Die Antwort liegt in den Attributhierarchien.  
@@ -69,7 +69,7 @@ ms.locfileid: "36056812"
   
  Erweitern Sie die Hierarchie, um bis zur niedrigsten Ebene vorzudringen. Dieses Element wird als **Blattelement**bezeichnet. Ein Blattelement ist ein Element einer Hierarchie, das keine untergeordneten Elemente besitzt. In diesem Beispiel ist Australien das Blattelement.  
   
- ![PivotTable mit Blattelement als Legende](../media/ssas-keyconcepts-pivot3-leafparent.PNG "PivotTable mit Blattelement als Legende")  
+ ![PivotTable mit untergeordneten Element als Legende](../media/ssas-keyconcepts-pivot3-leafparent.PNG "PivotTable mit untergeordneten Element als Legende")  
   
  Alle übergeordneten Elemente nennt man einfach **übergeordnetes Element**. Pazifik ist das übergeordnete Element von Australien.  
   
@@ -95,13 +95,13 @@ ms.locfileid: "36056812"
   
 |||  
 |-|-|  
-|![PivotTable mit ausgeglichener Hierarchie als Legende](../media/ssas-keyconcepts-pivot4-balancedhierarchy.PNG "PivotTable mit ausgeglichener Hierarchie als Legende")|Eine **ausgeglichene Hierarchie** ist eine Hierarchie, in der zwischen der obersten Ebene und jedem Blattelement die gleiche Anzahl von Ebenen liegen.<br /><br /> Eine **natürliche Hierarchie** entsteht natürlich aus den zugrunde liegenden Daten. Typische Beispiele sind Land-Region-Stadt, Jahr-Monat-Tag oder Kategorie-Unterkategorie-Modell. In diesen Fällen wird jede untergeordnete Ebene auf absehbare Weise von der vorherigen Ebene abgeleitet.<br /><br /> Mehrdimensionale Modelle enthalten hauptsächlich ausgeglichene Hierarchien, von denen viele außerdem auch natürliche Hierarchien sind.<br /><br /> Eine weitere verwandte Modellierungsbegriff ist eine `user-defined hierarchy`, oft als Kontrast zu Attributhierarchien verwendet. Dies bezeichnet alle vom BI-Entwickler erstellten Hierarchien im Gegensatz zu den automatisch von Analysis Services bei der Defintion von Attributen erstellten Attributhierarchien.|  
+|![PivotTable mit ausgeglichener Hierarchie als Legende](../media/ssas-keyconcepts-pivot4-balancedhierarchy.PNG "PivotTable mit ausgeglichener Hierarchie als Legende")|Eine **ausgeglichene Hierarchie** ist eine Hierarchie, in der zwischen der obersten Ebene und jedem Blattelement die gleiche Anzahl von Ebenen liegen.<br /><br /> Eine **natürliche Hierarchie** entsteht natürlich aus den zugrunde liegenden Daten. Typische Beispiele sind Land-Region-Stadt, Jahr-Monat-Tag oder Kategorie-Unterkategorie-Modell. In diesen Fällen wird jede untergeordnete Ebene auf absehbare Weise von der vorherigen Ebene abgeleitet.<br /><br /> Mehrdimensionale Modelle enthalten hauptsächlich ausgeglichene Hierarchien, von denen viele außerdem auch natürliche Hierarchien sind.<br /><br /> Eine weitere verwandte Modellierungsbegriff ist eine `user-defined hierarchy`, der oft als Kontrast zu Attributhierarchien verwendet. Dies bezeichnet alle vom BI-Entwickler erstellten Hierarchien im Gegensatz zu den automatisch von Analysis Services bei der Defintion von Attributen erstellten Attributhierarchien.|  
   
  **Unausgeglichene Hierarchien**  
   
 |||  
 |-|-|  
-|![PivotTable mit unregelmäßiger Hierarchie als Legende](../media/ssas-keyconcepts-pivot15-raggedhierarchy.PNG "PivotTable mit unregelmäßiger Hierarchie als Legende")|Eine **unregelmäßige Hierarchie** oder **unausgeglichene Hierarchie** ist eine Hierarchie, in der zwischen der obersten Ebene und den Blattelementen unterschiedlich viele Ebenen liegen. Diese Hierarchien werden ebenfalls vom BI-Entwickler erstellt, in diesem Fall jedoch mit Lücken zwischen den Daten.<br /><br /> Im AdventureWorks-Beispielmodell enthält das Vertriebsgebiet eine unregelmäßige Hierarchie, da in den USA eine zusätzliche Ebene existiert (Regionen), die für die anderen Länder in diesem Beispiel nicht gilt.<br /><br /> Unregelmäßige Hierarchien sind eine Herausforderung für BI-Entwickler, wenn die Clientanwendung diese nicht auf elegante Art verarbeiten kann. Im Analysis Services-Modell können Sie eine **Über-/Unterordnungshierarchie** erstellen, die eine Beziehung zwischen mehreren Datenebenen explizit definiert und somit Mehrdeutigkeiten bzgl. der Abfolge der Ebenen ausräumt. Finden Sie unter [über-/ Unterordnungshierarchie](parent-child-dimension.md) für Details.|  
+|![PivotTable mit unregelmäßiger Hierarchie als Legende](../media/ssas-keyconcepts-pivot15-raggedhierarchy.PNG "PivotTable mit unregelmäßiger Hierarchie als Legende")|Eine **unregelmäßige Hierarchie** oder **unausgeglichene Hierarchie** ist eine Hierarchie, in der zwischen der obersten Ebene und den Blattelementen unterschiedlich viele Ebenen liegen. Diese Hierarchien werden ebenfalls vom BI-Entwickler erstellt, in diesem Fall jedoch mit Lücken zwischen den Daten.<br /><br /> Im AdventureWorks-Beispielmodell enthält das Vertriebsgebiet eine unregelmäßige Hierarchie, da in den USA eine zusätzliche Ebene existiert (Regionen), die für die anderen Länder in diesem Beispiel nicht gilt.<br /><br /> Unregelmäßige Hierarchien sind eine Herausforderung für BI-Entwickler, wenn die Clientanwendung diese nicht auf elegante Art verarbeiten kann. Im Analysis Services-Modell können Sie eine **Über-/Unterordnungshierarchie** erstellen, die eine Beziehung zwischen mehreren Datenebenen explizit definiert und somit Mehrdeutigkeiten bzgl. der Abfolge der Ebenen ausräumt. Finden Sie unter [über-/ Unterordnungshierarchie](parent-child-dimension.md) Details.|  
   
 ## <a name="key-attributes"></a>Schlüsselattribute  
  Modelle sind Sammlungen miteinander verwandter Objekte, deren Zuordnungen mit Schlüsseln und Indizes verwaltet werden. Analysis Services-Modelle funktionieren auf dieselbe Weise. Für jede Dimension (Äquivalent zu Tabellen im relationalen Modell) existiert ein Schlüsselattribut. Das **Schlüsselattribut** wird in Fremdschlüssel-Beziehungen zur Faktentabelle (Measuregruppe) verwendet. Alle nicht-Schlüsselattribute in der Dimension werden (direkt oder indirekt) mit dem Schlüsselattribut verknüpft.  
@@ -142,11 +142,11 @@ ms.locfileid: "36056812"
 ## <a name="next-steps"></a>Nächste Schritte  
  Sie kennen nun die wichtigsten Konzepte und Begriffe und können mit diesen zusätzlichen Themen fortfahren, in denen grundlegende Konzepte von Analysis Services weiter erläutert werden:  
   
--   [Grundlegende MDX-Abfrage &#40;MDX&#41;](mdx/mdx-query-the-basic-query.md)  
+-   [Die grundlegende MDX-Abfrage &#40;MDX&#41;](mdx/mdx-query-the-basic-query.md)  
   
 -   [Grundlegendes MDX-Skript &#40;MDX&#41;](mdx/the-basic-mdx-script-mdx.md)  
   
--   [Mehrdimensionale Modellierung &#40;Adventure Works-Lernprogramm&#41;](../multidimensional-modeling-adventure-works-tutorial.md)  
+-   [Mehrdimensionale Modellierung &#40;Adventure Works-Tutorial&#41;](../multidimensional-modeling-adventure-works-tutorial.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Cuberaum](mdx/cube-space.md)   
@@ -154,7 +154,7 @@ ms.locfileid: "36056812"
  [Autoexists](mdx/autoexists.md)   
  [Arbeiten mit Elementen, Tupeln und Mengen &#40;MDX&#41;](mdx/working-with-members-tuples-and-sets-mdx.md)   
  [Sichtbare Gesamtwerte und nicht sichtbare Gesamtwerte](mdx/visual-totals-and-non-visual-totals.md)   
- [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](mdx/mdx-query-fundamentals-analysis-services.md)   
+ [Grundlegendes zu MDX-Abfrage &#40;Analysis Services&#41;](mdx/mdx-query-fundamentals-analysis-services.md)   
  [MDX-Skripts Grundlagen &#40;Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [MDX-Sprachreferenz &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
  [Mehrdimensionale Ausdrücke &#40;MDX&#41; Verweis](/sql/mdx/multidimensional-expressions-mdx-reference)  

@@ -1,5 +1,5 @@
 ---
-title: KPIs (SSAS – tabellarisch) | Microsoft Docs
+title: KPIs (SSAS – tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3415f10896313e14b531489eb9c15ddf20ca1b04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2082afaf4928ffd563b064ac7aba84c973edb2c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060388"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233790"
 ---
 # <a name="kpis-ssas-tabular"></a>KPIs (SSAS – tabellarisch)
   Ein *KPI* (Key Performance Indicator) wird in einem Tabellenmodell verwendet, um die Leistung eines durch ein *Basismeasure* definierten Werts im Vergleich zu einem *Zielwert* zu messen, der ebenfalls durch ein Measure oder einen absoluten Wert definiert wird. Dieses Thema bietet Entwicklern von tabellarischen Modellen einen grundlegenden Überblick der in einem Tabellenmodell verwendeten KPIs.  

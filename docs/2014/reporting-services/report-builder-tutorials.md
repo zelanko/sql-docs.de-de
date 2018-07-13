@@ -1,5 +1,5 @@
 ---
-title: Lernprogramme (Berichts-Generator) | Microsoft Docs
+title: Lernprogramme (Berichts-Generator) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 92d54d4e6f0db25605bf3d59ac7de59953d43d71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: d5c422eded8ac3ffb54306790c88a80b0f841736
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057115"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266156"
 ---
 # <a name="tutorials-report-builder"></a>Lernprogramme (Berichts-Generator)
   In den folgenden Lernprogrammen zum Berichts-Generator können Sie sich mit dem Erstellen einfacher Berichte vertraut machen.  
@@ -35,7 +35,7 @@ ms.locfileid: "36057115"
  [Lernprogramm: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](tutorial-creating-a-basic-table-report-report-builder.md)  
  Führen Sie dieses Lernprogramm aus, um sich mit dem Erstellen von Berichten vertraut zu machen. Sie erfahren, wie Sie mit dem Berichts-Generator eine Datenquellenverbindung herstellen, eine einfache Abfrage definieren, ein Layout für Ihre Daten erstellen, den Bericht formatieren sowie Gruppierungen und Summen hinzufügen.  
   
- [Lernprogramm: Erstellen eines Matrixberichts &#40;Berichts-Generator&#41;](tutorial-creating-a-matrix-report-report-builder.md)  
+ [Tutorial: Erstellen eines Matrixberichts &#40;Berichts-Generator&#41;](tutorial-creating-a-matrix-report-report-builder.md)  
  Führen Sie die Schritte in diesem Lernprogramm aus, um eine Matrix hinzuzufügen und zu konfigurieren. Berichtsdatenquelle, Dataset und Layout werden mithilfe des Tabellen- oder Matrix-Assistenten erstellt. Anschließend wird die Matrix innerhalb der **Entwurfsansicht** des Berichts-Generators erweitert.  
   
  [Lernprogramm: Erstellen eines Freiformberichts &#40;Berichts-Generator&#41;](tutorial-creating-a-free-form-report-report-builder.md)  
@@ -44,10 +44,10 @@ ms.locfileid: "36057115"
  [Tutorial: Formatieren von Text (Berichts-Generator)](tutorial-format-text-report-builder.md)  
  Führen Sie die Schritte in diesem Lernprogramm aus, um einige der zahlreichen Methoden zur Formatierung von Text in Berichten kennenzulernen.  
   
- [Lernprogramm: Hinzufügen eines Säulendiagramms zu einem Bericht &#40;Berichts-Generator&#41;](tutorial-add-a-column-chart-to-your-report-report-builder.md)  
+ [Tutorial: Hinzufügen eines Säulendiagramms zu einem Bericht &#40;Berichts-Generator&#41;](tutorial-add-a-column-chart-to-your-report-report-builder.md)  
  Führen Sie dieses Lernprogramm aus, um zu erfahren, wie Sie einem Bericht ein Säulendiagramm mit einem gleitenden Durchschnitt hinzufügen.  
   
- [Lernprogramm: Hinzufügen eines Kreisdiagramms zu einem Bericht &#40;Berichts-Generator&#41;](tutorial-add-a-pie-chart-to-your-report-report-builder.md)  
+ [Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht &#40;Berichts-Generator&#41;](tutorial-add-a-pie-chart-to-your-report-report-builder.md)  
  Führen Sie dieses Lernprogramm aus, um zu erfahren, wie Sie einem Bericht ein Kreisdiagramm hinzufügen.  
   
  [Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)](tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
@@ -56,16 +56,16 @@ ms.locfileid: "36057115"
  [Tutorial: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator)](tutorial-add-a-sparkline-to-your-report-report-builder.md)  
  Führen Sie die Schritte in diesem Lernprogramm aus, um zu erfahren, wie eine Matrix erstellt und dieser anschließend ein Satz von Sparklinediagrammen hinzugefügt wird.  
   
- [Lernprogramm: Hinzufügen eines KPIS zu einem Bericht &#40;Berichts-Generator&#41;](tutorial-adding-a-kpi-to-your-report-report-builder.md)  
+ [Tutorial: Hinzufügen eines KPIS zu einem Bericht &#40;Berichts-Generator&#41;](tutorial-adding-a-kpi-to-your-report-report-builder.md)  
  Führen Sie dieses Lernprogramm aus, um zu erfahren, wie Sie einem Bericht einen KPI (Key Performance Indicator) hinzufügen.  
   
- [Lernprogramm: Kartenbericht &#40;Berichts-Generator&#41;](tutorial-map-report-report-builder.md)  
+ [Tutorial: Kartenbericht &#40;Berichts-Generator&#41;](tutorial-map-report-report-builder.md)  
  Führen Sie dieses Lernprogramm aus, um zu erfahren, wie Sie einem Bericht eine Karte hinzufügen.  
   
- [Lernprogramm: Hinzufügen eines Parameters zum Bericht &#40;Berichts-Generator&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [Tutorial: Hinzufügen eines Parameters zum Bericht &#40;Berichts-Generator&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)  
  Führen Sie dieses Lernprogramm aus, um zu erfahren, wie Sie die Darstellung und den Inhalt eines Berichts mit Parametern anpassen.  
   
- [Lernprogramm: Erstellen von Drillthrough- und Hauptberichten &#40;Berichts-Generator&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md)  
+ [Tutorial: Erstellen von Drillthrough- und Hauptberichten &#40;Berichts-Generator&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md)  
  Führen Sie die Schritte in diesem Lernprogramm aus, um sich mit dem Erstellen von Berichten für ein Drillthroughszenario auf Grundlage eines Analysis Services-Cubes vertraut zu machen. Sie erstellen den Hauptbericht und aktivieren diesen sowie den Bericht, der Ziel der Drillthroughaktion ist, für den Drillthrough.  
   
  [Tutorial: Introducing Expressions (Tutorial: Einführung in Ausdrücke)](tutorial-introducing-expressions.md)  
@@ -74,6 +74,6 @@ ms.locfileid: "36057115"
 ## <a name="see-also"></a>Siehe auch  
  [Berichtsentwurfsansicht &#40;Berichts-Generator&#41;](report-builder/report-design-view-report-builder.md)   
  [Berichts-Generator in SQLServer 2014](report-builder/report-builder-in-sql-server-2016.md)   
- [Lernprogramm: Erstellen ein Quick-Diagrammberichts Offline &#40;Berichts-Generator&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+ [Tutorial: Erstellen ein Quick-Diagrammberichts Offline &#40;Berichts-Generator&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
   
   

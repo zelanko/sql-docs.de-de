@@ -17,15 +17,15 @@ helpviewer_keywords:
 - custom authentication [Reporting Services]
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
 caps.latest.revision: 23
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: df847dc70d13d61a43b6ba3554280cece774b49a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 18ea77b885dd7aed809eb1ebda04bbfddad11137
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059990"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235020"
 ---
 # <a name="authentication-in-reporting-services"></a>Authentifizierung in Reporting Services
   Unter Authentifizierung versteht man den Prozess, Benutzerrechte für eine bestimmte Identität einzurichten. Es gibt viele Techniken, die Sie verwenden können, um einen Benutzer zu authentifizieren. Die gängigste Methode ist die Verwendung von Kennwörtern. Wenn Sie beispielsweise die Formularauthentifizierung implementieren, benötigen Sie eine Implementierung, bei der die Benutzer nach den Anmeldeinformationen durchsucht werden (normalerweise über eine Oberfläche, in der Anmeldename und Kennwort angefordert werden) und bei der die Benutzer mit einem Datenspeicher, z. B. einer Datenbanktabelle oder einer Konfigurationsdatei, abgeglichen werden. Wenn die Anmeldeinformationen nicht validiert werden können, schlägt der Authentifizierungsprozess fehl, und der Benutzer nimmt eine anonyme Identität an.  
@@ -113,7 +113,7 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 1.  Eine Clientanwendung ruft die Webdienstmethode <xref:ReportService2010.ReportingService2010.LogonUser%2A> auf, um einen Benutzer zu authentifizieren.  
   
-2.  Der Webdienst Ruft die <xref:ReportService2010.ReportingService2010.LogonUser%2A> Methode Ihrer sicherheitserweiterung insbesondere die implementierende Klasse **IAuthenticationExtension**.  
+2.  Der Webdienst Ruft die <xref:ReportService2010.ReportingService2010.LogonUser%2A> Methode Ihrer sicherheitserweiterung auf, genauer gesagt die Klasse, die implementiert **IAuthenticationExtension**.  
   
 3.  Die Implementierung von <xref:ReportService2010.ReportingService2010.LogonUser%2A> überprüft den Benutzernamen und das Kennwort im Benutzerspeicher oder in der Sicherheitsinstanz.  
   

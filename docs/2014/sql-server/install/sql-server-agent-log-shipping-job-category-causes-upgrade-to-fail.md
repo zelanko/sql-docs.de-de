@@ -1,5 +1,5 @@
 ---
-title: SQL Server-Agent-Protokollversand Auftragskategorie verursacht Fehler beim Upgrade | Microsoft Docs
+title: SQL Server-Agent-Protokollversand Auftragskategorie bewirkt, dass beim Upgrade zur Folge | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server Agent]
 - job categories [SQL Server Agent]
 ms.assetid: ef05ce53-c6ce-42ec-9df8-46c951626424
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 47d7d5024d234478b8b54e3c05b3c22335758782
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a0e235b33ae24ff823e8492690e6775951dc4ef8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059288"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242230"
 ---
 # <a name="sql-server-agent-log-shipping-job-category-causes-upgrade-to-fail"></a>Fehler beim Upgrade der Auftragskategorie für den SQL Server-Agent-Protokollversand
   Der Upgradevorgang schlägt fehl, wenn eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agentauftragskategorie mit dem Namen Protokollversand vorhanden ist.  
@@ -34,8 +34,8 @@ ms.locfileid: "36059288"
  Es ist eine Systemauftragskategorie mit dem Namen Protokollversand vorhanden. Wenn eine zu aktualisierende Installation bereits eine von einem Benutzer erstellte Auftragskategorie mit dem Namen Protokollversand enthält, müssen Sie die Auftragskategorie vor dem Upgrade umbenennen. Andernfalls schlägt der Upgradevorgang fehl.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Protokollversand wird nach dem Upgrade nicht ausgeführt.](../../../2014/sql-server/install/log-shipping-will-not-run-after-upgrading.md)   
- [Beim Upgrade wird das Benutzerproxykonto von SQL Server-Agents in das temporäre ' UpgradedProxyAccount ' geändert.](../../../2014/sql-server/install/upgrading-changes-sql-server-agent-user-proxy-account-to-temporary-account.md)   
- [SQL Server-Agent-Upgradeprobleme](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  
+ [Der Protokollversand wird nach dem Upgrade nicht ausgeführt.](../../../2014/sql-server/install/log-shipping-will-not-run-after-upgrading.md)   
+ [Beim Upgrade wird das Benutzerproxykonto von SQL Server-Agent in das temporäre ' UpgradedProxyAccount ' geändert.](../../../2014/sql-server/install/upgrading-changes-sql-server-agent-user-proxy-account-to-temporary-account.md)   
+ [Probleme beim Upgrade des SQL Server-Agents](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  
   
   

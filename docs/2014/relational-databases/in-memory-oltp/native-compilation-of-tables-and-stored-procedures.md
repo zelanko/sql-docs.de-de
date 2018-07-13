@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
 caps.latest.revision: 22
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: d0e96880f661a05f150785c53c24afbfbf66d2ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4130e24dc67fd174130ed0e45e145242e79b86d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058923"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217350"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Systeminterne Kompilierung von Tabellen und gespeicherten Prozeduren
   Mit In-Memory OLTP wird das Konzept der systeminternen Kompilierung eingeführt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann gespeicherte Prozeduren, die auf speicheroptimierte Tabellen zugreifen, nativ kompilieren. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann außerdem speicheroptimierte Tabellen nativ kompilieren. Die systeminterne Kompilierung ermöglicht einen schnelleren Datenzugriff und eine effizientere Abfrageausführung als interpretiertes (herkömmliches) [!INCLUDE[tsql](../../includes/tsql-md.md)]. Beim systeminternen Kompilieren von Tabellen und gespeicherten Prozeduren werden DLLs erzeugt.  
   
- Die systeminterne Kompilierung von speicheroptimierten Tabellentypen wird ebenfalls unterstützt. Weitere Informationen finden Sie unter [speicheroptimierten Tabellenvariablen](../../database-engine/memory-optimized-table-variables.md).  
+ Die systeminterne Kompilierung von speicheroptimierten Tabellentypen wird ebenfalls unterstützt. Weitere Informationen finden Sie unter [Speicheroptimierte Tabellenvariablen](../../database-engine/memory-optimized-table-variables.md).  
   
  Systeminterne Kompilierung bezieht sich auf den Prozess der Konvertierung von Programmkonstrukten in systemeigenen Code, der aus Prozessoranweisungen besteht, die keine weitere Kompilierung oder Interpretation erfordern.  
   

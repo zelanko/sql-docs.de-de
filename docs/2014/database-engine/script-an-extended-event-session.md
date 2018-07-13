@@ -1,5 +1,5 @@
 ---
-title: Schreiben einer Sitzung für erweiterte Ereignisse | Microsoft Docs
+title: Schreiben einer Sitzung für erweiterte Ereignisse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 80f9fdde-1f13-4292-a4fc-55da826be3b4
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 71b9918e2f05efcc5a8720dcedeef023392f99ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c199c5e222457deef83a876974d6856ec1a2f047
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060779"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233741"
 ---
 # <a name="script-an-extended-event-session"></a>Schreiben einer Sitzung für erweiterte Ereignisse
   In diesem Thema wird beschrieben, wie ein Skript für eine Ereignissitzung geschrieben wird. Sie können die Ereignissitzung exportieren, ändern oder löschen, oder Sie können die Ereignissitzung wie folgt löschen und erstellen:  
@@ -30,7 +30,7 @@ ms.locfileid: "36060779"
   
 -   **Zwischenablage**  
   
--   **-Agent-Auftrag**  
+-   **Agent-Auftrag**  
   
 ### <a name="to-script-an-existing-event-session"></a>So schreiben Sie ein Skript für eine vorhandene Ereignissitzung  
   

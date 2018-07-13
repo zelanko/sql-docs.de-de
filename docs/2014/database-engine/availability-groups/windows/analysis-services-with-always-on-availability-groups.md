@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 caps.latest.revision: 13
-author: HeidiSteen
-ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: 12a3b3cb6bc31060857a86481a7a952cc19679b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fa5c34ec3c794cf87b96feefbf15c323fbc43e27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060586"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261369"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services mit Always On-Verfügbarkeitsgruppen
   Eine AlwaysOn-Verfügbarkeitsgruppe ist eine vordefinierte Auflistung relationaler SQL Server-Datenbanken, für die gemeinsam ein Failover erfolgt, wenn Bedingungen in einer der Datenbanken ein Failover auslösen. Dabei werden Anforderungen an eine gespiegelte Datenbank in einer anderen Instanz in der gleichen Verfügbarkeitsgruppe umgeleitet. Wenn Sie als Hochverfügbarkeitslösung Verfügbarkeitsgruppen verwenden, können Sie in einer tabellarischen oder mehrdimensionalen Analysis Services-Lösung eine Datenbank in dieser Gruppe als Datenquelle verwenden. Alle folgenden Analysis Services-Vorgänge werden bei Verwendung einer Verfügbarkeitsdatenbank wie erwartet ausgeführt: das Verarbeiten oder Importieren von Daten, das direkte Abfragen von relationalen Daten (im ROLAP-Speichermodus oder DirectQuery-Modus) und das Rückschreiben.  
@@ -119,7 +118,7 @@ ms.locfileid: "36060586"
   
      Erstellen Sie anschließend eine Datenquelle in einem Analysis Services-Modell, die eine Datenbank aus der soeben von Ihnen konfigurierten Gruppe verwendet.  
   
-##  <a name="bkmk_ssasAODB"></a> Erstellen einer Analysis Services-Datenquelle mithilfe einer AlwaysOn-verfügbarkeitsdatenbank  
+##  <a name="bkmk_ssasAODB"></a> Erstellen einer Analysis Services-Datenquelle mithilfe einer Always On-verfügbarkeitsdatenbank  
  In diesem Abschnitt wird das Erstellen einer Analysis Services-Datenquelle beschrieben, die eine Verbindung mit einer Datenbank in einer Verfügbarkeitsgruppe herstellt. Sie können mithilfe dieser Anweisungen eine Verbindung mit einem primären Replikat (Standard) oder einem lesbaren sekundären Replikat konfigurieren, das Sie mit Schritten in einem vorherigen Abschnitt konfiguriert haben. AlwaysOn-Konfigurationseinstellungen sowie die im Client festgelegten Verbindungseigenschaften bestimmen, ob ein primäres oder sekundäres Replikat verwendet wird.  
   
 1.  Klicken Sie in [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] in einem Analysis Services-Projekt für mehrdimensionale und Data Mining-Modelle mit der rechten Maustaste auf **Datenquellen**, und wählen Sie **Neue Datenquelle** aus. Klicken Sie auf **Neu** , um eine neue Datenquelle zu erstellen.  
@@ -159,7 +158,7 @@ ms.locfileid: "36060586"
   
 1.  Starten Sie SQL Server Profiler, und stellen Sie eine Verbindung mit der SQL Server-Instanz her, die das sekundäre Replikat hostet.  
   
-     Während die Ablaufverfolgung ausgeführt wird, wird die `SQL:BatchStarting` und `SQL:BatchCompleting` Ereignisse von Analysis Services, die auf der Instanz des Datenbankmoduls ausgeführt werden ausgegebenen Abfragen angezeigt. Diese Ereignisse sind standardmäßig ausgewählt, daher müssen Sie lediglich die Ablaufverfolgung starten.  
+     Während die Ablaufverfolgung ausgeführt wird, wird die `SQL:BatchStarting` und `SQL:BatchCompleting` Ereignisse von Analysis Services, die in der Datenbank-Engine-Instanz ausgeführt werden ausgegebenen Abfragen angezeigt. Diese Ereignisse sind standardmäßig ausgewählt, daher müssen Sie lediglich die Ablaufverfolgung starten.  
   
 2.  Öffnen Sie in [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]das Analysis Services-Projekt oder die Analysis Services-Lösung, das bzw. die eine Datenquellenverbindung enthält, die Sie testen möchten. Stellen Sie sicher, dass die Datenquelle den Verfügbarkeitsgruppenlistener und nicht eine Instanz in der Gruppe angibt.  
   
@@ -169,7 +168,7 @@ ms.locfileid: "36060586"
   
 4.  Stellen Sie die Lösung bereit, und beenden Sie nach Abschluss der Bereitstellung die Ablaufverfolgung.  
   
-     Im Ablaufverfolgungsfenster sollten Ereignisse aus der Anwendung **Microsoft SQL Server Analysis Services**angezeigt werden. Daraufhin sollte `SELECT` -Anweisungen, die Daten aus einer Datenbank auf der Serverinstanz abgerufen, die das sekundäre Replikat hostet, dies bedeutet, dass die Verbindung mit dem sekundären Replikat über den Listener hergestellt wurde.  
+     Im Ablaufverfolgungsfenster sollten Ereignisse aus der Anwendung **Microsoft SQL Server Analysis Services**angezeigt werden. Daraufhin sollte `SELECT` -Anweisungen, die Abrufen von Daten aus einer Datenbank auf der Serverinstanz, die das sekundäre Replikat hostet, dies bedeutet, dass die Verbindung mit dem sekundären Replikat über den Listener hergestellt wurde.  
   
 #### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>Schritt 2: Ausführen eines geplanten Failovers zum Testen der Konfiguration  
   
@@ -211,7 +210,7 @@ ms.locfileid: "36060586"
   
  Persistente Fehler treten wahrscheinlich aufgrund eines Konfigurationsproblems auf. Sie können versuchen, das T-SQL-Skript erneut auszuführen, um Probleme mit der Routingliste, mit URLs für das schreibgeschützte Routing und mit beabsichtigten Lesevorgängen auf dem sekundären Replikat zu beheben. Sie sollten außerdem überprüfen, ob das primäre Replikat alle Verbindungen zulässt.  
   
-##  <a name="bkmk_writeback"></a> Rückschreiben mithilfe einer AlwaysOn-verfügbarkeitsdatenbank  
+##  <a name="bkmk_writeback"></a> Rückschreiben mithilfe einer Always On-verfügbarkeitsdatenbank  
  Rückschreiben ist eine Analysis Services-Funktion, die Was-wäre-wenn-Analysen in Excel unterstützt. Sie wird auch häufig für Budgetierungs- und Prognosetasks in benutzerdefinierten Anwendungen verwendet.  
   
  Die Unterstützung für Rückschreiben erfordert eine READWRITE-Clientverbindung. Wenn Sie in Excel versuchen, in eine schreibgeschützte Verbindung zurückzuschreiben, tritt der folgende Fehler auf: „Daten konnten nicht aus der externen Datenquelle abgerufen werden“. „Daten konnten nicht aus der externen Datenquelle abgerufen werden.“  

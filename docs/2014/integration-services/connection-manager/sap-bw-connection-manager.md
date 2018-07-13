@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 06b166a1-a9df-48ea-a0e8-9b8d6979c0a1
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 61106ce6c6eca051f6ad762577d0b4ea72d021a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a541988192c0233426a8f08a79743b822d3f3709
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061442"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223758"
 ---
 # <a name="sap-bw-connection-manager"></a>SAP BW-Verbindungs-Manager
   Der SAP BW-Verbindungs-Manager ist die Verbindungs-Manager-Komponente von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Daher stellt der SAP BW-Verbindungs-Manager die Konnektivität mit einem SAP NetWeaver BW-System, Version 7, bereit, das für die Quell- und Zielkomponenten von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW erforderlich ist. (SAP BW-Quelle und -Ziel, die Teil des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW-Pakets sind, sind die einzigen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Komponenten, die den SAP BW-Verbindungs-Manager verwenden.)  
@@ -27,7 +27,7 @@ ms.locfileid: "36061442"
 > [!IMPORTANT]  
 >  Die Dokumentation für Microsoft Connector 1.1 for SAP BW setzt Kenntnisse der SAP NetWeaver BW-Umgebung voraus. Weitere Informationen zu SAP NetWeaver BW oder Informationen zur Konfiguration von SAP NetWeaver BW-Objekten und -Prozessen finden Sie in der SAP-Dokumentation.  
   
- Wenn Sie ein Paket einen SAP BW-Verbindungs-Manager Hinzufügen der `ConnectionManagerType` des Verbindungs-Managers ist-Eigenschaftensatz auf `SAPBI`.  
+ Wenn Sie einem Paket einen SAP BW-Verbindungs-Manager Hinzufügen der `ConnectionManagerType` Eigenschaft des Verbindungs-Managers nastaven NA hodnotu `SAPBI`.  
   
 ## <a name="configuring-the-sap-bw-connection-manager"></a>Konfigurieren des SAP BW-Verbindungs-Managers  
  Es gibt folgende Möglichkeiten, um den SAP BW-Verbindungs-Manager zu konfigurieren:  

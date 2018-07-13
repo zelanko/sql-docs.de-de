@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], log shipping and
 - log shipping [SQL Server], replication and
 ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3ad675990c9cd2db400a9be293dde45160f67d27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2ff05cc362f5be17df9b5ae0b282d55db4d030ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060780"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217840"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>Protokollversand und Replikation (SQL Server)
   Beim Protokollversand werden zwei Kopien einer einzigen Datenbank verwendet, die normalerweise auf verschiedenen Computern gespeichert sind. Für die Clients ist immer nur eine Kopie der Datenbank verfügbar. Diese Kopie wird als primäre Datenbank bezeichnet. Updates, die von Clients an der primären Datenbank vorgenommen werden, werden durch den Protokollversand auf die andere Kopie der Datenbank übertragen, die als sekundäre Datenbank bezeichnet wird. Beim Protokollversand wird das Transaktionsprotokoll von jedem Einfüge-, Update- oder Löschvorgang, der an der primären Datenbank vorgenommen wird, auf die sekundäre Datenbank angewandt.  

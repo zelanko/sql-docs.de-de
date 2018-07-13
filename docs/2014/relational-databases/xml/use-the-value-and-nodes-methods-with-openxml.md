@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - OpenXML method [XML in SQL Server]
 - value method [XML in SQL Server]
 - nodes method [XML in SQL Server]
 ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1fbb67b5bd0f1f891e35dd638cb6e1938e396ae7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d55a482435673d69b82cca0f95f4a31656a21a96
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060445"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219080"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>Verwenden der value()-Methode und der nodes()-Methode mit OPENXML
-  Können Sie mehrere **value()** Methoden auf `xml` -Datentyp in einen **wählen** -Klausel generieren Sie ein Rowset aus extrahierten Werten zu. Die **nodes()** -Methode ergibt einen internen Verweis für jeden ausgewählten Knoten, der für zusätzliche Abfragen verwendet werden kann. Die Kombination der Methoden **nodes()** und **value()** kann beim Generieren des Rowsets effizienter sein, wenn es über mehrere Spalten verfügt und möglicherweise auch, wenn die zu seiner Generierung verwendeten Pfadausdrücke komplex sind.  
+  Können Sie mehrere **Value()-Methode** Methoden `xml` -Datentyp in einen **wählen** -Klausel generieren Sie ein Rowset aus extrahierten Werten zu. Die **nodes()** -Methode ergibt einen internen Verweis für jeden ausgewählten Knoten, der für zusätzliche Abfragen verwendet werden kann. Die Kombination der Methoden **nodes()** und **value()** kann beim Generieren des Rowsets effizienter sein, wenn es über mehrere Spalten verfügt und möglicherweise auch, wenn die zu seiner Generierung verwendeten Pfadausdrücke komplex sind.  
   
  Die **nodes()** -Methode ergibt Instanzen eines speziellen `xml` -Datentyps, wobei bei jedem der Kontext auf einen unterschiedlichen ausgewählten Knoten festgelegt. Diese Art der XML-Instanz unterstützt **query()**-, **value()**-, **nodes()**- und **exist()**-Methoden und kann in **count(\*)**-Aggregationen verwendet werden. Alle anderen Verwendungen verursachen einen Fehler.  
   

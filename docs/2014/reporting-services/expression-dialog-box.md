@@ -1,5 +1,5 @@
 ---
-title: Das Dialogfeld Ausdruck | Microsoft Docs
+title: Ausdruck (Dialogfeld) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10040"
 - sql12.rtp.rptdesigner.expression.f1
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - Expression dialog box [Reporting Services]
 ms.assetid: e6c74ccb-4594-4d4f-b958-618d710e34eb
 caps.latest.revision: 63
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4b7607427c8e47705b51ef9139c4f28d7b73b489
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 747943591907b1025250e3554270e9dda14d3e51
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061338"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325640"
 ---
 # <a name="expression-dialog-box"></a>Ausdruck (Dialogfeld)
-  Verwenden der **Ausdruck** Dialogfeld schreiben [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] -Ausdrücke für berichtselementeigenschaften Elementeigenschaften. Mit Ausdrücken können Sie zahlreiche Eigenschaften wie Farbe, Schriftart und Rahmen festlegen. Zur Laufzeit werden die Ausdrücke vom Berichtsprozessor ausgewertet, und das Ergebnis wird durch den Wert der Eigenschaft ersetzt.  
+  Verwenden der **Ausdruck** Dialogfeld schreiben [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] -Ausdrücke für berichtselementeigenschaften-Elementeigenschaften. Mit Ausdrücken können Sie zahlreiche Eigenschaften wie Farbe, Schriftart und Rahmen festlegen. Zur Laufzeit werden die Ausdrücke vom Berichtsprozessor ausgewertet, und das Ergebnis wird durch den Wert der Eigenschaft ersetzt.  
   
- Ein Ausdruck kann einfach oder komplex sein. Sie können einfache Ausdrücke direkt in einem Textfeld auf der Entwurfsoberfläche oder in einem Dialogfeld eingeben. Verwenden Sie zum Erstellen komplexer Ausdrücke das **Ausdruck** (Dialogfeld). Sie können jeweils einen Ausdruck erstellen. Weitere Informationen finden Sie unter [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md).  
+ Ein Ausdruck kann einfach oder komplex sein. Sie können einfache Ausdrücke direkt in einem Textfeld auf der Entwurfsoberfläche oder in einem Dialogfeld eingeben. Verwenden Sie zum Erstellen komplexer Ausdrücke das **Ausdruck** Dialogfeld. Sie können jeweils einen Ausdruck erstellen. Weitere Informationen finden Sie unter [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md).  
   
- Zum Öffnen des Dialogfelds **Ausdruck** klicken Sie in Dialogfeldern auf die Ausdrucksschaltfläche (**fx**), oder wählen Sie die Option **Ausdruck** über das Kontextmenü oder die Dropdownlisten im Bereich „Eigenschaften“ aus. Weitere Informationen finden Sie unter [Ausdruck verwendet wird, in Berichten &#40;Berichts-Generator und SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md).  
+ Zum Öffnen des Dialogfelds **Ausdruck** klicken Sie in Dialogfeldern auf die Ausdrucksschaltfläche (**fx**), oder wählen Sie die Option **Ausdruck** über das Kontextmenü oder die Dropdownlisten im Bereich „Eigenschaften“ aus. Weitere Informationen finden Sie unter [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md).  
   
  Das Dialogfeld **Ausdruck** enthält ein Codefenster, eine Kategoriestruktur, Kategorieelemente, einen Beschreibungsbereich sowie einen Beispielbereich.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36061338"
  **Parameter**  
  Bietet eine Liste von Berichtsparametern.  
   
- **Felder (**  *\<ausgewählte Dataset >* **)**  
+ **Felder (**  *\<Ausgewähltes Dataset >* **)**  
  Zeigt die Liste von Feldern für das in der Datasets-Kategorie ausgewählte Dataset an. Doppelklicken Sie auf ein Feld, um es in das Feld **Ausdruck** zu kopieren.  
   
  **Datasets**  
@@ -82,7 +82,7 @@ ms.locfileid: "36061338"
  Wenn Sie einen Funktionsnamen, gefolgt von einer linken Klammer, eingeben, wird eine QuickInfo mit Informationen zu den Parametern und Rückgabewerten der Funktion angezeigt.  
   
  **Kategorie**  
- Zeigt Kategorien von Ausdrücken an. Durch Auswahl einer Kategorie wird ein Kontext für die Erstellung eines Ausdrucks bereitgestellt und die Liste der gültigen Werte im Bereich Element geändert. Z. B. für einen Ausdruck für einen Textfeldwert erweitern Sie allgemeine Funktionen, und wählen Sie Aggregatfunktionen anzeigen `Avg`, `Count`, und andere Funktionen in der **Element** Bereich.  
+ Zeigt Kategorien von Ausdrücken an. Durch Auswahl einer Kategorie wird ein Kontext für die Erstellung eines Ausdrucks bereitgestellt und die Liste der gültigen Werte im Bereich Element geändert. Z. B. für einen Ausdruck für einen Textfeldwert erweitern Sie allgemeine Funktionen, und wählen Sie Aggregatfunktionen anzuzeigende `Avg`, `Count`, und andere Funktionen in der **Element** Bereich.  
   
  **Element**  
  Zeigt die Liste der gültigen Felder für die ausgewählte Kategorie an. Doppelklicken Sie auf ein Element, um den Ausdruckstext für dieses Element an der Einfügemarke im Codefenster hinzuzufügen.  
@@ -93,7 +93,7 @@ ms.locfileid: "36061338"
 ## <a name="see-also"></a>Siehe auch  
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [Ausdruck verwendet wird, in Berichten &#40;Berichts-Generator und SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Formatieren von Zahlen und Datumsangaben &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Parameters Collection References (Report Builder and SSRS) (Verweise auf Parameterauflistungen (Berichts-Generator und SSRS))](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
  [Beispiele für Gruppierungsausdrücke (Berichts-Generator und SSRS)](report-design/group-expression-examples-report-builder-and-ssrs.md)   

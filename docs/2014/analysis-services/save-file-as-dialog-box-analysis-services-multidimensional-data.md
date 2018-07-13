@@ -1,5 +1,5 @@
 ---
-title: Speichern Sie die Datei unter (Dialogfeld) (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Speichern Sie die Datei unter (Dialogfeld) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.savefileasdialog.f1
 ms.assetid: 8e2099ba-c5b0-4940-8e48-7d696485fa4c
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dcd986ca7b24c2b6ca2f86036a94d7b8093347a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 80e9eea367b1203d75fe5c55034ea1fedc317a70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058795"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271736"
 ---
 # <a name="save-file-as-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Datei speichern unter' (Analysis Services – Mehrdimensionale Daten)
   Im Dialogfeld **Datei speichern unter** wird eine Liste der verfügbaren Dateien angezeigt, die in Protokoll- und Datenordnern für eine Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] definiert sind. Wählen Sie entweder eine der aufgeführten Dateien aus, oder geben Sie bei Bedarf einen anderen Ordner und eine andere Datei an. Das Dialogfeld **Datei speichern unter** kann durch folgende Vorgehensweisen angezeigt werden:  
@@ -42,6 +42,6 @@ ms.locfileid: "36058795"
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services-Designer und-Dialogfelder &#40;mehrdimensionale Daten&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Das Dialogfeld Datenbank sichern &#40;Analysis Services – mehrdimensionale Daten&#41;](backup-database-dialog-box-analysis-services-multidimensional-data.md)  
+ [Im Dialogfeld Datenbank sichern &#40;Analysis Services – mehrdimensionale Daten&#41;](backup-database-dialog-box-analysis-services-multidimensional-data.md)  
   
   

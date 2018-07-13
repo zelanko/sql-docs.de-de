@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
 caps.latest.revision: 8
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: d444739180c4326dd68af08be0a382c0e0ff6cb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f7ec9327a35e9ba110dd9d93db53c50b5c130f6c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059646"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227810"
 ---
 # <a name="manage-authentication-in-database-engine-powershell"></a>Verwalten der Authentifizierung in PowerShell der Datenbank-Engine
   Standardmäßig wird von den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell-Komponenten beim Herstellen einer Verbindung mit einer [!INCLUDE[ssDE](../includes/ssde-md.md)]-Instanz die Windows-Authentifizierung verwendet. Sie können SQL Server-Authentifizierung verwenden, indem Sie entweder ein virtuelles PowerShell-Laufwerk definieren oder durch Angabe der `–Username` und `–Password` Parameter für `Invoke-Sqlcmd`.  
@@ -31,7 +31,7 @@ ms.locfileid: "36059646"
 ##  <a name="Permissions"></a> Berechtigungen  
  Alle Aktionen, die Sie in einer [!INCLUDE[ssDE](../includes/ssde-md.md)] -Instanz ausführen können, werden über die Berechtigungen gesteuert, die den beim Verbinden mit der Instanz verwendeten Authentifizierungsinformationen erteilt wurden. Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anbieter und Cmdlets verwenden standardmäßig das Windows-Konto, unter dem sie ausgeführt werden, um eine Windows-Authentifizierungsverbindung mit [!INCLUDE[ssDE](../includes/ssde-md.md)]herzustellen.  
   
- Zum Herstellen einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierungsverbindung müssen Sie eine Anmelde-ID und ein Kennwort für die SQL Server-Authentifizierung angeben. Bei Verwendung der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Anbieter, Sie müssen das Zuordnen der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Anmeldeinformationen mit einem virtuellen Laufwerk und anschließend mithilfe des Befehls zum Ändern (`cd`) für die Verbindung mit diesem Laufwerk. In Windows PowerShell können Sicherheitsanmeldeinformationen nur virtuellen Laufwerken zugeordnet werden.  
+ Zum Herstellen einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierungsverbindung müssen Sie eine Anmelde-ID und ein Kennwort für die SQL Server-Authentifizierung angeben. Bei Verwendung der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anbieter, die Sie zuordnen müssen die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Anmeldeinformationen mit einem virtuellen Laufwerk, und klicken Sie dann mithilfe des Befehls zum Ändern (`cd`) eine Verbindung zu diesem Laufwerk herstellen. In Windows PowerShell können Sicherheitsanmeldeinformationen nur virtuellen Laufwerken zugeordnet werden.  
   
 ##  <a name="SQLAuthVirtDrv"></a> SQL Server-Authentifizierung mit einem virtuellen Laufwerk  
  **So erstellen Sie ein virtuelles Laufwerk mit Zuordnung zu einer SQL Server-Authentifizierungsanmeldung**  
@@ -44,14 +44,14 @@ ms.locfileid: "36059646"
   
     3.  Sie verwendet `new-object`, um ein Anmeldeinformationenobjekt zu erstellen.  
   
-    4.  Verwendet `new-psdrive` an ein virtuelles Laufwerk mit den bereitgestellten Anmeldeinformationen zu erstellen.  
+    4.  Verwendet `new-psdrive` auf ein virtuelles Laufwerk mit den angegebenen Anmeldeinformationen zu erstellen.  
   
 2.  Rufen Sie die Funktion auf, um ein virtuelles Laufwerk mit den angegebenen Anmeldeinformationen zu erstellen.  
   
 ### <a name="example-virtual-drive"></a>Beispiel (virtuelles Laufwerk)  
  In diesem Beispiel wird eine Funktion mit dem Namen **sqldrive** erstellt, mit der Sie ein virtuelles Laufwerk erstellen können, das mit dem angegebenen Anmeldenamen für die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung und der angegebenen Instanz verknüpft ist.  
   
- Sie werden von der Funktion **sqldrive** zur Eingabe des Kennworts für Ihren Anmeldenamen aufgefordert. Das Kennwort wird bei der Eingabe maskiert. Klicken Sie dann jedes Mal, wenn Sie den Befehl zum Ändern (`cd`) zur Verbindung mit eines Pfads mit den Namen des virtuellen Laufwerks alle Vorgänge ausgeführt werden, mithilfe der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentifizierung-Anmeldeinformationen, die Sie beim Erstellen des Laufwerks angegeben.  
+ Sie werden von der Funktion **sqldrive** zur Eingabe des Kennworts für Ihren Anmeldenamen aufgefordert. Das Kennwort wird bei der Eingabe maskiert. Klicken Sie dann, wenn Sie den Befehl zum Ändern von Verzeichnis verwenden (`cd`) zur Verbindung mit eines Pfads mit den Namen des virtuellen Laufwerks alle Vorgänge ausgeführt werden, mithilfe der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentifizierung-Anmeldeinformationen, die Sie beim Erstellen des Laufwerks angegeben haben.  
   
 ```  
 ## Create a function that specifies the login and prompts for the password.  

@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen einer Iteration zu einer Ablaufsteuerung | Microsoft Docs
+title: Hinzufügen einer Iteration zu einer Ablaufsteuerung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - repeating workflows
 - adding iterations
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - For Loop containers
 ms.assetid: eb3a7494-88ae-4165-9d0f-58715eb1734a
 caps.latest.revision: 42
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7727dafeee728347511e91723ae9674fe9fd089e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fb691bb954b463e584cf56527b8b87b0662c6f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057248"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273416"
 ---
 # <a name="add-iteration-to-a-control-flow"></a>Hinzufügen einer Iteration zu einer Ablaufsteuerung
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] schließt den For-Schleifencontainer ein. Dabei handelt es sich um ein Ablaufsteuerungselement, mit dem Sie auf einfache Weise Schleifen einschließen können, mit denen eine Ablaufsteuerung in einem Paket wiederholt wird. Weitere Informationen finden Sie unter [For Loop Container](control-flow/for-loop-container.md).  
@@ -42,7 +42,7 @@ ms.locfileid: "36057248"
   
  Die Ausdrücke können Variablen einschließen. Die Verwendung von Variablen bietet den Vorteil, dass sie zur Laufzeit aktualisiert werden können, wodurch die Pakete flexibler und einfacher zu verwalten sind. Die maximale Länge eines Ausdrucks beträgt 4000 Zeichen.  
   
- Wenn Sie eine Variable in einem Ausdruck angeben, müssen Sie dem Variablennamen ein @-Zeichen voranstellen. Z. B. für eine Variable namens `Counter`, geben Sie @Counter im Ausdruck, der For-Schleifencontainer verwendet. Falls Sie die Namespaceeigenschaft für die Variable angeben, müssen Sie die Variable und den Namespace in eckige Klammern einschließen. Z. B. für eine `Counter` -Variable in der `MyNamespace` Namespace-, Typ-[@MyNamespace::Counter].  
+ Wenn Sie eine Variable in einem Ausdruck angeben, müssen Sie dem Variablennamen ein @-Zeichen voranstellen. Beispielsweise für eine Variable namens `Counter`, geben Sie @Counter im Ausdruck, der For-Schleifencontainer verwendet. Falls Sie die Namespaceeigenschaft für die Variable angeben, müssen Sie die Variable und den Namespace in eckige Klammern einschließen. Z. B. für eine `Counter` -Variable in der `MyNamespace` Namespace-, Typ-[@MyNamespace::Counter].  
   
  Die Variablen, die der For-Schleifencontainer verwendet, müssen im Bereich des For-Schleifencontainers oder im Bereich eines beliebigen Containers, der in der Paketcontainerhierarchie höher angeordnet ist, definiert sein. Beispielsweise kann ein For-Schleifencontainer Variablen verwenden, die in seinem Bereich definiert sind, sowie Variablen, die im Paketbereich definiert sind. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md) und [Verwenden von Variablen in Paketen](../../2014/integration-services/use-variables-in-packages.md).  
   

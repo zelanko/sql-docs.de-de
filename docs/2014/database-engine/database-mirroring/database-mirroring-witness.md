@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - witness [SQL Server], about witness
 - witness [SQL Server]
 - database mirroring [SQL Server], witness
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 caps.latest.revision: 71
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c415d1bea0b901025762bec04114ec4ba8ef558f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: e8d91cd6ff4cd5b96ec95218686101e4427e75c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061218"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218120"
 ---
 # <a name="database-mirroring-witness"></a>Database Mirroring Witness
   Zur Unterstützung eines automatischen Failovers muss eine Datenbank-Spiegelungssitzung im Modus für hohe Sicherheit konfiguriert sein und außerdem eine dritte Serverinstanz besitzen, die als *Zeuge*bezeichnet wird. Der Zeuge ist eine optionale Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die es dem Spiegelserver in einer Sitzung mit dem Modus für hohe Sicherheit ermöglicht, zu erkennen, ob ein automatisches Failover initiiert werden soll. Im Gegensatz zu den beiden Partnern stellt der Zeuge die Datenbank nicht bereit. Die Unterstützung des automatischen Failovers ist die einzige Aufgabe des Zeugen.  
@@ -55,7 +54,7 @@ ms.locfileid: "36061218"
 ##  <a name="SwHwRecommendations"></a> Software- und Hardwareempfehlungen  
  Sie sollten den Zeugen unbedingt auf einem von den Partnern separaten Computer platzieren. Datenbank-Spiegelungspartner werden nur von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition und von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition unterstützt. Zeugen hingegen werden auch von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Workgroup und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express unterstützt. Außer während eines Upgrades von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]muss in einer Spiegelungssitzung auf allen Serverinstanzen dieselbe Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt werden. Ein [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] -Zeuge wird beispielsweise unterstützt, wenn Sie von einer Spiegelungskonfiguration der Version [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] aktualisieren, er kann jedoch nicht einer vorhandenen oder neuen Spiegelungskonfiguration der Version [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder höher hinzugefügt werden.  
   
- Ein Zeuge kann auf jedem zuverlässigen Computersystem ausgeführt werden kann, das eine der Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt. Es wird jedoch empfohlen, dass jede als Zeuge verwendete Serverinstanz der Mindestkonfiguration entspricht, die für die ausgeführte Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition erforderlich ist. Weitere Informationen zu diesen Anforderungen finden Sie unter [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+ Ein Zeuge kann auf jedem zuverlässigen Computersystem ausgeführt werden kann, das eine der Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt. Es wird jedoch empfohlen, dass jede als Zeuge verwendete Serverinstanz der Mindestkonfiguration entspricht, die für die ausgeführte Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition erforderlich ist. Weitere Informationen zu diesen Anforderungen finden Sie unter [Hardware- und Softwareanforderungen für die Installation von SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 ##  <a name="InAutoFo"></a> Rolle des Zeugen beim automatischen Failover  
  Während der gesamten Dauer einer Datenbank-Spiegelungssitzung überwachen alle Serverinstanzen ihren Verbindungsstatus. Werden die Partner voneinander getrennt, können Sie nur anhand des Zeugen sicherstellen, dass nur einer von ihnen aktuell die Datenbank bedient. Wenn ein synchronisierter Spiegelserver seine Verbindung mit dem Prinzipalserver verliert, jedoch weiterhin mit dem Zeugen verbunden bleibt, kontaktiert der Spiegelserver den Zeugen, um zu ermitteln, ob der Zeuge seine Verbindung mit dem Prinzipalserver verloren hat:  

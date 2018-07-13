@@ -1,5 +1,5 @@
 ---
-title: Kopieren und Einfügen von Daten (SSAS – tabellarisch) | Microsoft Docs
+title: Kopieren und Einfügen von Daten (SSAS – tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.pastepreviewdb.f1
 ms.assetid: 2f8d8b3d-810b-4c31-98f2-341015e13da8
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 02f2675214908685964e22f216e3f40ac91d5a85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 83b7c0c4b3861ff18008580e60d0b508c1526fd0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147792"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224660"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>Kopieren und Einfügen von Daten (SSAS – tabellarisch)
   Sie können Tabellendaten aus externen Anwendungen kopieren und sie in eine neue oder vorhandene Tabelle im Modell-Designer einfügen. Die Daten, die Sie aus der Zwischenablage einfügen, müssen im HTML-Format vorliegen, z. B. Daten, die aus Excel oder Word kopiert werden. Der Modell-Designer erkennt automatisch Datentypen und wenden sie auf die eingefügten Daten an. Sie können den Datentyp auch manuell ändern oder die Formatierung einer Spalte anzeigen.  

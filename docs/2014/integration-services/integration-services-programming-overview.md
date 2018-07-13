@@ -24,13 +24,13 @@ ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 246ee644377bf1e0da6e368e9bbb943d333dc992
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5434546f2a6d392cb8eed82704d8164c31620e91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058547"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271646"
 ---
 # <a name="integration-services-programming-overview"></a>Übersicht über die Programmierung von 'Integration Services'
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] verfügt über eine Architektur, die die Datenverschiebung und -transformation von der Paketablaufsteuerung und Verwaltung trennt. Diese Architektur wird durch zwei unterschiedliche Engines definiert, die bei der Programmierung von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] automatisiert und erweitert werden können. Die Runtime-Engine implementiert die Infrastruktur der Ablaufsteuerung und Paketverwaltung, mit deren Hilfe Entwickler den Ausführungsprozess steuern und Optionen für die Protokollierung, Ereignishandler und Variablen festlegen können. Die Datenfluss-Engine ist eine spezialisierte Hochleistungs-Engine, die ausschließlich dem Extrahieren, Transformieren und Laden von Daten dient. Beim Programmieren von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] programmieren Sie mit diesen beiden Engines.  
@@ -47,7 +47,7 @@ ms.locfileid: "36058547"
 ## <a name="integration-services-data-flow-engine"></a>Integration Services-Datenfluss-Engine  
  Die Datenfluss-Engine verwaltet den Datenflusstask. Dies ist ein spezialisierter Hochleistungstask, der dem Verschieben und Transformieren von Daten verschiedener Quellen dient. Im Gegensatz zu anderen Tasks enthält der Datenflusstask zusätzliche Objekte, die sogenannten Datenflusskomponenten, bei denen es sich um Quellen, Transformationen oder Ziele handeln kann. Diese Komponenten sind die wichtigsten verschiebbaren Teile des Tasks. Sie definieren die Bewegung und die Transformation von Daten. Durch die Programmierung der Runtime-Engine können Entwickler die Erstellung und Konfiguration der Komponenten in einem Datenflusstask automatisieren sowie benutzerdefinierte Komponenten erstellen.  
   
- Weitere Informationen finden Sie unter [Erweitern des Datenflusses mit der Skriptkomponente] (extending-packages-scripting/data-flow-script-component/extending-die-Daten-flow-with-die-script-component.md, [Entwickeln einer benutzerdefinierten Datenflusskomponente ](extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md), und [Programmgesteuertes Erstellen von Paketen](building-packages-programmatically/building-packages-programmatically.md).  
+ Weitere Informationen finden Sie unter [Erweitern des Datenflusses mit der Skriptkomponente] (extending-packages-scripting/data-flow-Skript-component/extending-die-Daten-flow-with-die-Skript-component.md, [Entwickeln einer benutzerdefinierten Datenflusskomponente ](extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md), und [Programmgesteuertes Erstellen von Paketen](building-packages-programmatically/building-packages-programmatically.md).  
   
 ## <a name="supported-languages"></a>Unterstützte Sprachen  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] unterstützt vollständig [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. Dadurch können Entwickler [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in ihren bevorzugten .NET-kompatiblen Sprachen programmieren. Obwohl die Runtime-Engine und die Datenfluss-Engine in einem systemeigenen Code geschrieben wurden, sind sie beide über ein vollständig verwaltetes Objektmodell verfügbar.  
@@ -79,6 +79,6 @@ ms.locfileid: "36058547"
   
 ||  
 |-|  
-![Integration Services (kleines Symbol)](media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben Sie mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services (kleines Symbol)](media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
   

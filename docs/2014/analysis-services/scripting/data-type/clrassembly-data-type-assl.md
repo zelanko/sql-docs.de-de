@@ -1,5 +1,5 @@
 ---
-title: ClrAssembly-Datentyp (ASSL) | Microsoft Docs
+title: ClrAssembly-Datentyp (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ClrAssembly data type
 ms.assetid: 3f5dc5a1-ebd6-41b8-ac04-91d4de137eb4
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e17992a5d15113ec0de5dd75978f932cb83d11c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 63809f3dd903878baf5eabf1642430fbe0d9aa8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057287"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235580"
 ---
 # <a name="clrassembly-data-type-assl"></a>ClrAssembly-Datentyp (ASSL)
-  Definiert einen abgeleiteten Datentyp, der darstellt, der eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Assembly zugeordnet eine [Datenbank](../objects/database-element-assl.md) oder [Server](../objects/server-element-assl.md) Element  
+  Definiert einen abgeleiteten Datentyp, der darstellt, der eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zugeordnete Assembly einen [Datenbank](../objects/database-element-assl.md) oder [Server](../objects/server-element-assl.md) Element  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,12 +62,12 @@ ms.locfileid: "36057287"
 |Abgeleitete Elemente|Finden Sie unter [Assembly](../objects/assembly-element-assl.md) ([Assemblys](../collections/assemblies-element-assl.md) Auflistung von [Datenbank](../objects/database-element-assl.md) oder [Server](../objects/server-element-assl.md))|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ClrAssembly` Element enthält die Dateien, die erforderlich sind, neu erstellen einer [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Assembly verknüpft sind, entweder mit einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] oder mit einer bestimmten Datenbank auf einer Instanz von [!INCLUDE[ssAS](../../../includes/ssas-md.md)], als auch die Berechtigungen zum Ausführen der Assembly erforderlich.  
+ Die `ClrAssembly` Element enthält die erforderlichen Dateien für Sie neu erstellen eine [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Assembly verknüpft ist, entweder mit einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] oder mit einer bestimmten Datenbank auf einer Instanz von [!INCLUDE[ssAS](../../../includes/ssas-md.md)], als auch die Berechtigungen zum Ausführen der Assembly erforderlich sind.  
   
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.ClrAssembly>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.ClrAssembly>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datei Element &#40;ASSL&#41;](../objects/file-element-assl.md)   
+ [File Element &#40;ASSL&#41;](../objects/file-element-assl.md)   
  [ClrAssemblyFile-Datentyp &#40;ASSL&#41;](clrassemblyfile-data-type-assl.md)   
  [Datenelement &#40;ASSL&#41;](../objects/data-element-assl.md)   
  [DataBlock-Datentyp &#40;ASSL&#41;](datablock-data-type-assl.md)   

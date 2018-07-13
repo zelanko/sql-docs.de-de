@@ -1,5 +1,5 @@
 ---
-title: DbStorageLocation-Element | Microsoft Docs
+title: DbStorageLocation-Element | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - DbStorageLocation element
 ms.assetid: 1f448249-103a-479f-ae86-b0017acd0436
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 651dc0424c492efefa7828ae327f9bdcf837ed77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 055780c9c91817a44dce6dfdaeb6ea3b541c05a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058770"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224000"
 ---
 # <a name="dbstoragelocation-element"></a>DbStorageLocation-Element
   Gibt den Ordner an, in dem [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] alle Datenbankdaten- und Metadatendateien erstellt und verwaltet.  

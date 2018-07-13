@@ -1,5 +1,5 @@
 ---
-title: Erstellen eines Alias für eine Modellspalte | Microsoft Docs
+title: Erstellen eines Alias für eine Modellspalte | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], how-to topics
 - mining models [Analysis Services], columns
 - column names [Analysis Services]
 ms.assetid: c80ebe66-a8f8-4f24-9fe8-8288de9d13bc
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cf049cdd7fabbc50fdacf5ab72ca3ce1845482f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: db477052fb30a9759ad61df1ff42652fe9ed594a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059482"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228260"
 ---
 # <a name="create-an-alias-for-a-model-column"></a>Erstellen eines Alias für eine Modellspalte
   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]können Sie einen Alias für eine Modellspalte erstellen. Dies kann hilfreich sein, wenn der Miningstrukturname zu lang ist, um mühelos damit zu arbeiten, oder wenn Sie der Spalte einen aussagekräftigeren Namen im Hinblick auf Inhalt oder Verwendung im Modell geben möchten. Beispiel: wenn Sie eine Kopie einer Strukturspalte erstellen und die Spalte dann für ein bestimmtes Modell unterschiedlich diskretisieren, können Sie die Spalte umbenennen, um den Inhalt genauer anzugeben.  

@@ -1,5 +1,5 @@
 ---
-title: Rollen (SSAS – tabellarisch) | Microsoft Docs
+title: Rollen (SSAS – tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3748f99899990bd46379928b3d524e43e48d277a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ac88882120b588599af625852675e9be95031ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059928"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235690"
 ---
 # <a name="roles-ssas-tabular"></a>Rollen (SSAS – tabellarisch)
   Mit Rollen werden in tabellarischen Modellen Elementberechtigungen für ein Modell definiert. Jede Rolle enthält Mitglieder in Form von Windows-Benutzernamen oder Windows-Gruppen sowie Berechtigungen (Lese-, Verarbeitungs- und Administratorberechtigungen). Rollenmitglieder können die durch die Rollenberechtigung definierten Aktionen für das Modell ausführen. Rollen, die mit Leseberechtigungen definiert wurden, können zusätzliche Sicherheit auf Zeilenebene bieten, indem Filter auf Zeilenebene verwendet werden.  

@@ -1,5 +1,5 @@
 ---
-title: Error-Element (XMLA) | Microsoft Docs
+title: Error-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Error element
 ms.assetid: add670cb-cab2-42be-91a3-d0c385f29d16
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 35c3b1ea4ee852365933d5a95d1f7ca822eff0fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 55b63c016f9f2c61cc83563e697a49a0c4970cae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059225"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273736"
 ---
 # <a name="error-element-xmla"></a>Error-Element (XMLA)
   Enthält Informationen zu einem Fehler zurückgegeben, die von einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -88,11 +88,11 @@ ms.locfileid: "36059225"
   
 |attribute|Description|  
 |---------------|-----------------|  
-|ErrorCode|Erforderliche `UnsignedInt` Attribut (nur wenn `Message` ist das übergeordnete Element.) Enthält den numerischen Rückgabecode des Fehlers.|  
-|Schweregrad|Optionale `String` Attribut (nur wenn `Message` ist das übergeordnete Element.) Enthält das Ausmaß des Fehlers.|  
-|Description|Optionale `String` Attribut (nur wenn `Message` ist das übergeordnete Element.) Enthält den beschreibenden Text des Fehlers.|  
-|Quelle|Optionale `String` Attribut (nur wenn `Message` ist das übergeordnete Element.) Enthält den Namen der Komponente, die den Fehler generiert hat.|  
-|HelpFile|Optionale `String` Attribut (nur wenn `Message` ist das übergeordnete Element.) Enthält den Pfad oder die URL zur Hilfedatei oder dem Thema, das den Fehler beschreibt.|  
+|ErrorCode|Erforderliche `UnsignedInt` Attribut (nur, wenn `Message` ist das übergeordnete Element.) Enthält den numerischen Rückgabecode des Fehlers.|  
+|Schweregrad|Optionale `String` Attribut (nur, wenn `Message` ist das übergeordnete Element.) Enthält das Ausmaß des Fehlers.|  
+|Description|Optionale `String` Attribut (nur, wenn `Message` ist das übergeordnete Element.) Enthält den beschreibenden Text des Fehlers.|  
+|Quelle|Optionale `String` Attribut (nur, wenn `Message` ist das übergeordnete Element.) Enthält den Namen der Komponente, die den Fehler generiert hat.|  
+|HelpFile|Optionale `String` Attribut (nur, wenn `Message` ist das übergeordnete Element.) Enthält den Pfad oder die URL zur Hilfedatei oder dem Thema, das den Fehler beschreibt.|  
   
 ## <a name="remarks"></a>Hinweise  
   

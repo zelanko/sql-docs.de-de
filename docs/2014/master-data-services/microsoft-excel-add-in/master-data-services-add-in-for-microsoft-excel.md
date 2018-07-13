@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 caps.latest.revision: 17
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 06f20a19801b43a25f3622424aa8ce76d2c34df2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: a5d6efd6aa45886aa87fdd5db5f51ae3682e45ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058731"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273086"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Master Data Services-Add-In für Microsoft Excel
-  Mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], masterlisten mit Verweisdaten an alle Benutzer in Ihrer Organisation, die Excel verwenden verteilt werden können. Mit Sicherheit wird festgelegt, welche Daten die Benutzer anzeigen und aktualisieren können.  
+  Mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], für alle Benutzer in Ihrer Organisation, die Excel verwenden können masterlisten mit Verweisdaten verteilt werden. Mit Sicherheit wird festgelegt, welche Daten die Benutzer anzeigen und aktualisieren können.  
   
  Sie können gefilterte Listen der Daten von MDS in Excel laden, wo Sie damit so arbeiten können, wie Sie dies mit beliebigen anderen Daten tun würden. Wenn Sie fertig sind, können Sie die Daten in MDS veröffentlichen, wo sie zentral gespeichert werden.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "36058731"
  In [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]können Sie mithilfe von Data Quality Services (DQS) Daten vor dem Laden in MDS zuordnen. Dadurch werden doppelte Daten in MDS verhindert.  
   
 > [!IMPORTANT]  
->  Sie können weiterhin verwenden die [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1-Version des Master Data Services Add-Ins für Excel nach dem Upgrade Master Data Services und Data Quality Services auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Frühere Versionen des Master Data Services-Add-Ins für Excel sind nach einem Upgrade auf SQL Server 2014 CTP2 jedoch nicht funktionsfähig. Sie können die [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1-Version des Master Data Services Add-Ins für Excel aus [hier](http://go.microsoft.com/fwlink/?LinkId=328664).  
+>  Sie können weiterhin die [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1-Version des Master Data Services Add-Ins für Excel nach dem Aktualisieren von Master Data Services- und Data Quality Services [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Frühere Versionen des Master Data Services-Add-Ins für Excel sind nach einem Upgrade auf SQL Server 2014 CTP2 jedoch nicht funktionsfähig. Sie können die [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1-Version des Master Data Services Add-Ins für Excel aus [hier](http://go.microsoft.com/fwlink/?LinkId=328664).  
   
 ## <a name="terms"></a>Begriffe  
  Wenn Sie mit dem Add-In arbeiten, stoßen Sie möglicherweise auf die folgenden Begriffe.  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 166808e1-ada7-48d2-bda8-8f7c017fb3aa
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9598249ac124362b76492e60af5531b7d5b3d418
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f46c3f16f0adc630e246b1ee6634a523a295ae2c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059536"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220752"
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>Gewähren von Berechtigungen an Benutzer und Warnungsadministratoren
   Bevor Benutzer und Warnungsadministratoren Datenwarnungen erstellen, bearbeiten, löschen und anzeigen können, muss ihnen SharePoint-Berechtigungen gewährt werden. Es gibt keine speziellen Berechtigungen für die Verwendung mit der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Datenwarnungsfunktion. Verwenden Sie die integrierten SharePoint-Berechtigungen.  
@@ -51,7 +51,7 @@ ms.locfileid: "36059536"
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Festlegen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website &#40;integrierter Reporting Services im SharePoint-Modus&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [Festlegen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website &#40;integrierten Reporting Services im SharePoint-Modus&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [Reporting Services-Datenwarnungen](../ssms/agent/alerts.md)  
   
   

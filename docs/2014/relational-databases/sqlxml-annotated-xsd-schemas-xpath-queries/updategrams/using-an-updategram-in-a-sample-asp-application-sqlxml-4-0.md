@@ -1,5 +1,5 @@
 ---
-title: Verwenden eines Updategrams in einem Beispiel-ASP-Anwendung (SQLXML 4.0) | Microsoft Docs
+title: Verwenden eines Updategramms in einer Beispiel-ASP-Anwendung (SQLXML 4.0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - updategrams [SQLXML], ASP applications
 ms.assetid: 10eff799-4c39-4b52-8b38-7ea6f68454a8
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 851d82413ec1959487132ec277d50e3f0a771b4f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 037b7fc64a53bdba26154933a19b3f147b8c1b3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058247"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260416"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>Verwenden eines Updategrams in einer Beispiel-ASP-Anwendung (SQLXML 4.0)
   Diese ASP (Active Server Pages)-Anwendung ermöglicht es Ihnen, Kundendaten in der Tabelle Person.Contact der Beispieldatenbank AdventureWorks in Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zu aktualisieren. Die Anwendung führt Folgendes aus:  
@@ -164,6 +164,6 @@ You may update customer information below.<br><br>
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sicherheitsüberlegungen zu Updategrams &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Sicherheitsüberlegungen zu Updategramms &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

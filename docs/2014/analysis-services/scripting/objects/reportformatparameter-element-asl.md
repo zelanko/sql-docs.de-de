@@ -1,5 +1,5 @@
 ---
-title: ReportFormatParameter-Element (ASSL) | Microsoft Docs
+title: ReportFormatParameter-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ReportFormatParameter element
 ms.assetid: 064a8683-c44b-4261-be4d-32226d3d3119
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9df481067c68796c1b1ab1d029dbd08fbda13c9b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dfcc98e3abe60296e7ee28b57bc54fe89f5c2abe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060587"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245580"
 ---
 # <a name="reportformatparameter-element-assl"></a>ReportFormatParameter-Element (ASSL)
   Enthält den Namen und Wert eines Parameters, der angibt, wie eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Bericht bei der Ausführung formatiert ist.  
@@ -63,7 +63,7 @@ ms.locfileid: "36060587"
 |Untergeordnete Elemente|[Name](../properties/name-element-assl.md), [Value](../properties/value-element-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element, das das übergeordnete Element des entspricht `ReportFormatParameter` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ReportAction>.  
+ Das Element, das dem übergeordneten entspricht `ReportFormatParameter` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ReportAction>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [ReportAction-Datentyp &#40;ASSL&#41;](../data-type/action-data-type-assl.md)   

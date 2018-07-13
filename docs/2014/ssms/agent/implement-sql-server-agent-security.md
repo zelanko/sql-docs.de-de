@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, security
 - security [SQL Server Agent], about security
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - security [SQL Server], SQL Server Agent
 ms.assetid: d770d35c-c8de-4e00-9a85-7d03f45a0f0d
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a291112a8c6113d479ef46632cafa374340fd0c5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b0a965834f326c3d29f2f3e1b03f91227aa08798
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059057"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249720"
 ---
 # <a name="implement-sql-server-agent-security"></a>Implementieren der SQL Server-Agent-Sicherheit
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ermöglicht dem Datenbankadministrator, jeden Auftragsschritt in einem Sicherheitskontext auszuführen, dem lediglich die Berechtigungen erteilt wurden, die zum Durchführen dieses Auftragsschritts erforderlich sind, wie von einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxy festgelegt. Um Berechtigungen für einen bestimmten Auftragsschritt festzulegen, erstellen Sie einen Proxy mit den erforderlichen Berechtigungen und weisen dann diesen Proxy dem Auftragsschritt zu. Ein Proxy kann für mehrere Auftragsschritte angegeben werden. Für Auftragsschritte, für die dieselben Berechtigungen erforderlich sind, verwenden Sie denselben Proxy.  
@@ -81,7 +81,6 @@ ms.locfileid: "36059057"
  [Vordefinierte Rollen](../../reporting-services/security/role-definitions-predefined-roles.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)   
  [Sp_droprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)   
- 
-  [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

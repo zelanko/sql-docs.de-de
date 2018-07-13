@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backup headers [SQL Server]
 - history tables [SQL Server]
@@ -34,15 +33,15 @@ helpviewer_keywords:
 - listing backed up files
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 caps.latest.revision: 53
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7ffd1686996c7fdc004c7418e3247232f3fb26ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: cebe5c66a12602ef4b4e3f881a34db547aa7c4d8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058730"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260916"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Sicherungsverlauf und Headerinformationen (SQL Server)
   Ein vollständiger Verlauf aller [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungs- und -Wiederherstellungsvorgänge auf einer Serverinstanz wird in der **msdb** -Datenbank gespeichert. Dieses Thema stellt die Sicherungs- und Wiederherstellungsverlaufstabellen vor sowie die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die zum Zugreifen auf den Sicherungsverlauf verwendet werden. In diesem Thema wird auch erläutert, wann die Auflistung von Datenbank- und Transaktionsprotokolldateien sinnvoll ist und wann Medienheaderinformationen bzw. Sicherungsheaderinformationen verwendet werden sollten.  

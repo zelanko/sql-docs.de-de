@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - disaster recovery [SQL Server], moving database files
 - files [SQL Server], moving
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - databases [SQL Server], moving
 ms.assetid: 89f01b10-5fae-4ed8-b0fb-a4b9f540fd28
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fc0f4981ea6a1dab4d1cc687547738abc0d9a038
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9e283055864a824d2a575fb77e0d64fcd1f2a990
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058065"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276816"
 ---
 # <a name="move-database-files"></a>Verschieben von Datenbankdateien
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]können Sie System- und Benutzerdatenbanken durch Angeben des neuen Dateispeicherorts in der FILENAME-Klausel der [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) -Anweisung verschieben. Auf diese Weise können Daten-, Protokoll- und Volltextkatalogdateien verschoben werden. Dies kann in folgenden Situationen nützlich sein:  

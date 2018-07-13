@@ -1,5 +1,5 @@
 ---
-title: Parameter (Eigenschaftenseite) (Berichts-Manager) | Microsoft Docs
+title: Parameter (Eigenschaftenseite) (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ebb53598-2378-46ae-8935-d5192f8ea49a
 caps.latest.revision: 24
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: dae546d2c07e21c8c930c889f8931b683828b055
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a0f3b3bf5c8d672be964dcd77453f16e7ac9cbc0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061326"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327560"
 ---
 # <a name="parameters-properties-page-report-manager"></a>Parameter (Eigenschaftenseite) (Berichts-Manager)
   Verwenden Sie die Eigenschaftenseite Parameter, um Parametereinstellungen für einen parametrisierten Bericht anzuzeigen oder zu ändern.  
@@ -64,7 +64,7 @@ ms.locfileid: "36061326"
   
  Deaktivieren Sie dieses Kontrollkästchen, wenn Sie möchten, dass der Parameter im Bericht sichtbar ist.  
   
- **Benutzer auffordern**  
+ **Eingabeaufforderung für Benutzer**  
  Aktivieren Sie dieses Kontrollkästchen, um ein Textfeld mit einer Eingabeaufforderung für einen Parameterwert anzuzeigen.  
   
  Deaktivieren Sie dieses Kontrollkästchen, wenn Sie den Bericht im unbeaufsichtigten Modus ausführen möchten (z. B., um Momentaufnahmen vom Berichtsverlauf oder der Berichtsausführung zu generieren), wenn Sie denselben Parameterwert für alle Benutzer verwenden möchten oder wenn keine Benutzereingabe für den Wert erforderlich ist.  

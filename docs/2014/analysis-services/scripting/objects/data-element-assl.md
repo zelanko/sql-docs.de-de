@@ -1,5 +1,5 @@
 ---
-title: Data-Element (ASSL) | Microsoft Docs
+title: Data-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Data element
 ms.assetid: e52b1961-7e11-4029-8ab1-84d275845067
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5a3ff1b93efe374b9ddc8b080de143550aae8388
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b31922593446e7d8aafd88cdb5667bef8b109ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061032"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218280"
 ---
 # <a name="data-element-assl"></a>Data-Element (ASSL)
-  Enthält (in der Auflistung der untergeordneten [Blockelement &#40;ASSL&#41; ](block-element-assl.md) Elemente) des binären Inhalts eine [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md) Element.  
+  Enthält (in der Auflistung der untergeordneten [Blockelement &#40;ASSL&#41; ](block-element-assl.md) Elemente) den binären Inhalt eine [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -58,11 +58,11 @@ ms.locfileid: "36061032"
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|[Datei](file-element-assl.md) des Typs [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md)|  
+|Übergeordnete Elemente|[Datei](file-element-assl.md) des Typs [clrassemblyfile-Objekts](../data-type/clrassemblyfile-data-type-assl.md)|  
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element, das das übergeordnete Element des entspricht `Data` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
+ Das Element, das dem übergeordneten entspricht `Data` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Assembly-Element &#40;ASSL&#41;](assembly-element-assl.md)   

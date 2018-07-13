@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.exportregisteredservers.f1
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - transferring registered server information
 ms.assetid: b65e168f-b6bf-489c-b8ad-3b8644acf0b6
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 84fd48359d493642d0c9351a6c947a74b48ff9cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 371440369fa4b315f4a66e09e6c26e9e0a2cab92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060427"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275906"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>Exportieren von Informationen zum registrierten Server (SQL Server Management Studio)
   In diesem Thema wird beschrieben, wie Sie Informationen zum registrierten Server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]speichern und exportieren und an andere Mitarbeiter oder Server verteilen. Diese Exportfunktion ermöglicht eine konsistente Benutzeroberfläche auf mehreren Computern.  
@@ -61,6 +61,6 @@ ms.locfileid: "36060427"
     >  Die Exportdateien sind zwar verschlüsselt, der Zugriff auf die Datei sollte dennoch sorgfältig kontrolliert werden, wenn diese Benutzernamen und SQL Server-Authentifizierungskennwörter enthält. Benutzernamen und Kennwörter werden deshalb standardmäßig von der Exportdatei ausgeschlossen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Importieren von Informationen zum registrierten Server &#40;SQL Server Management Studio&#41; ](import-registered-server-information-sql-server-management-studio.md) [Erstellen eines neues registrierten Servers &#40;SQL Server Management Studio&#41;](create-a-new-registered-server-sql-server-management-studio.md)  
+ [Importieren Sie Informationen zum registrierten Server &#40;SQL Server Management Studio&#41; ](import-registered-server-information-sql-server-management-studio.md) [erstellen ein neues registriertes Servers &#40;SQL Server Management Studio&#41;](create-a-new-registered-server-sql-server-management-studio.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmltask.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8278f24e51e6288eb31f2f8ac4ec941a7f23e3aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8dc356cd9401b28a102124d81af3a6f8dda7a64b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060759"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331930"
 ---
 # <a name="xml-task"></a>XML-Task
   Der XML-Task wird für XML-Daten verwendet. Mit diesem Task kann ein Paket XML-Dokumente abrufen, mithilfe von XSLT-Stylesheets (Extensible Stylesheet Language Transformations) und XPath-Ausdrücken Vorgänge auf die Dokumente anwenden, mehrere Dokumente zusammenführen oder die aktualisierten Dokumente mit Dateien und Variablen überprüfen, vergleichen und speichern.  
@@ -97,7 +97,7 @@ ms.locfileid: "36060759"
 ### <a name="validation-operation"></a>Validation-Vorgang  
  Für den Validation-Vorgang kann die Verwendung einer Dokumenttypdefinition (DTD) oder einer XML-Schemadefinition (XSD) konfiguriert werden.  
   
- Aktivieren Sie `ValidationDetails` auf ausführliche Fehlerausgabe zu erhalten. Weitere Informationen finden Sie unter [Validate XML with the XML Task](xml-task.md).  
+ Aktivieren Sie `ValidationDetails` , ausführliche Fehlerausgabe zu erhalten. Weitere Informationen finden Sie unter [Validate XML with the XML Task](xml-task.md).  
   
 ## <a name="xml-document-encoding"></a>XML-Dokumentcodierung  
  Der XML-Task unterstützt nur das Zusammenführen von Unicode-Dokumenten. Dies bedeutet, der Task kann den Merge-Vorgang nur auf Dokumente mit einer Unicode-Codierung anwenden. Wenn Sie andere Codierungen verwenden, tritt beim XML-Task ein Fehler auf.  

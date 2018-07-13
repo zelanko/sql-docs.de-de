@@ -5,23 +5,22 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
 caps.latest.revision: 39
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 9d02bd4202848c0c22033b00d818c2f0d2554bc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 65663e51d915b86a796bb98126c9efeebf74bf14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059692"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273506"
 ---
 # <a name="create-an-availability-group-sql-server-powershell"></a>Erstellen einer Verfügbarkeitsgruppe (SQL Server PowerShell)
   In diesem Thema wird beschrieben, wie PowerShell-Cmdlets zum Erstellen und Konfigurieren einer AlwaysOn-Verfügbarkeitsgruppe mithilfe von PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]verwendet werden. Eine *Verfügbarkeitsgruppe* definiert einen Satz von Benutzerdatenbanken, für die als eine einzelne Einheit ein Failover ausgeführt wird, sowie einen Satz von Failoverpartnern, die als *Verfügbarkeitsreplikate*bezeichnet werden und das Failover unterstützen.  
@@ -52,12 +51,12 @@ ms.locfileid: "36059692"
 |Task|PowerShell-Cmdlets (falls verfügbar) oder Transact-SQL-Anweisung|Wo der Task auszuführen.**<sup>*</sup>**|  
 |----------|--------------------------------------------------------------------|-------------------------------------------|  
 |Erstellen eines Datenbankspiegelungs-Endpunkts (einmal pro [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz)|`New-SqlHadrEndPoint`|Führen Sie diesen Task auf jeder Serverinstanz aus, auf der der Datenbankspiegelungs-Endpunkt fehlt.<br /><br /> Hinweis: Um einen vorhandenen datenbankspiegelungs-Endpunkt zu ändern, verwenden Sie `Set-SqlHadrEndpoint`.|  
-|Erstellen der Verfügbarkeitsgruppe|Verwenden Sie zuerst das `New-SqlAvailabilityReplica`-Cmdlet mit dem `-AsTemplate`-Parameter, um ein Verfügbarkeitsreplikatobjekt im Arbeitsspeicher für jedes der beiden Verfügbarkeitsreplikate zu erstellen, die Sie in die Verfügbarkeitsgruppe einschließen möchten.<br /><br /> Erstellen Sie dann die verfügbarkeitsgruppe mithilfe der `New-SqlAvailabilityGroup` Cmdlet und auf Ihre verfügbarkeitsreplikatobjekte verweisen.|Führen Sie diesen Task auf der Serverinstanz aus, auf der das anfängliche primäre Replikat gehostet werden soll.|  
+|Erstellen der Verfügbarkeitsgruppe|Verwenden Sie zuerst das `New-SqlAvailabilityReplica`-Cmdlet mit dem `-AsTemplate`-Parameter, um ein Verfügbarkeitsreplikatobjekt im Arbeitsspeicher für jedes der beiden Verfügbarkeitsreplikate zu erstellen, die Sie in die Verfügbarkeitsgruppe einschließen möchten.<br /><br /> Erstellen Sie dann die verfügbarkeitsgruppe mithilfe der `New-SqlAvailabilityGroup` Cmdlet und Ihre verfügbarkeitsreplikatobjekte verweisen.|Führen Sie diesen Task auf der Serverinstanz aus, auf der das anfängliche primäre Replikat gehostet werden soll.|  
 |Verknüpfen eines sekundären Replikats mit einer Verfügbarkeitsgruppe|`Join-SqlAvailabilityGroup`|Führen Sie diesen Task auf jeder Serverinstanz aus, auf der ein sekundäres Replikat gehostet wird.|  
 |Vorbereiten der sekundären Datenbank|`Backup-SqlDatabase` und `Restore-SqlDatabase`|Erstellen Sie Sicherungen auf der Serverinstanz, auf der das primäre Replikat gehostet wird.<br /><br /> Stellen Sie mit dem Wiederherstellungsparameter `NoRecovery` Sicherungen auf jeder Serverinstanz wieder her, auf der ein sekundäres Replikat gehostet wird. Wenn sich die Dateipfade zwischen den Computern unterscheiden, die das primäre Replikat und das sekundäre Zielreplikat hosten, verwenden Sie ebenfalls den Wiederherstellungsparameter `RelocateFile`.|  
 |Starten der Datensynchronisierung durch Hinzufügen der einzelnen sekundären Datenbanken zur Verfügbarkeitsgruppe|`Add-SqlAvailabilityDatabase`|Führen Sie diesen Task auf jeder Serverinstanz aus, auf der ein sekundäres Replikat gehostet wird.|  
   
- **<sup>*</sup>**  Um die Ausführung eines bestimmten Tasks wechseln (`cd`) auf der angegebenen Serverinstanz(en).  
+ **<sup>*</sup>**  Wechseln Sie zum Ausführen eines bestimmten Tasks (`cd`) auf der angegebenen Serverinstanz(en).  
   
 ###  <a name="PsProviderLinks"></a> So richten Sie den SQL Server PowerShell-Anbieter ein und verwenden ihn  
   
@@ -68,9 +67,9 @@ ms.locfileid: "36059692"
 ##  <a name="PowerShellProcedure"></a> Verwenden von PowerShell zum Erstellen und Konfigurieren einer Verfügbarkeitsgruppe  
   
 > [!NOTE]  
->  Um die Syntax und ein Beispiel für ein bestimmtes Cmdlet anzuzeigen, verwenden die `Get-Help` Cmdlet in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+>  Um die Syntax und ein Beispiel für ein bestimmtes Cmdlet anzuzeigen, verwenden die `Get-Help` -Cmdlet in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
-1.  Ändern Sie das Verzeichnis (`cd`) mit der Serverinstanz her, die das primäre Replikat hosten.  
+1.  Ändern Sie das Verzeichnis (`cd`) mit der Serverinstanz her, die das primäre Replikat hostet.  
   
 2.  Erstellen Sie für das primäre Replikat ein Verfügbarkeitsreplikatobjekt im Arbeitsspeicher.  
   
@@ -87,7 +86,7 @@ ms.locfileid: "36059692"
   
 7.  Verknüpfen Sie alle neuen sekundären Datenbanken mit der Verfügbarkeitsgruppe. Weitere Informationen finden Sie unter [Verknüpfen eines sekundären Replikats mit einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)mit einer Always On-Verfügbarkeitsgruppe verknüpft wird.  
   
-8.  Verwenden Sie optional den Windows `dir` Befehl aus, um den Inhalt der neuen verfügbarkeitsgruppe zu überprüfen.  
+8.  Verwenden Sie optional die Windows `dir` Befehl aus, um den Inhalt der neuen verfügbarkeitsgruppe zu überprüfen.  
   
 > [!NOTE]  
 >  Wenn die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkonten der Serverinstanzen unter unterschiedlichen Domänenbenutzerkonten ausgeführt werden, erstellen Sie auf jeder Serverinstanz eine Anmeldung für die andere Serverinstanz, und gewähren Sie dieser Anmeldung eine CONNECT-Berechtigung zum Zugreifen auf den lokalen Datenbankspiegelungs-Endpunkt.  
@@ -173,7 +172,7 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   [Aktivieren und Deaktivieren von Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)  
   
--   [Erstellen eines Datenbankspiegelungs-Endpunkts für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Erstellen Sie eine Datenbank mit dem Datenbankspiegelungs-Endpunkts für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
  **So konfigurieren Sie Verfügbarkeitsgruppen- und Replikateigenschaften**  
   
@@ -213,11 +212,11 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   [Erstellen einer Verfügbarkeitsgruppe &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md)  
   
- **Problembehandlung von AlwaysOn-verfügbarkeitsgruppenkonfiguration**  
+ **Behandeln von AlwaysOn-verfügbarkeitsgruppenkonfiguration**  
   
 -   [Problembehandlung bei AlwaysOn-Verfügbarkeitsgruppenkonfiguration (SQL Server) gelöscht](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
--   [Problembehandlung bei einem fehlerhaften Dateien Vorgang &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+-   [Problembehandlung bei einem fehlerhaften Dateihinzufügungsvorgängen Vorgang &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
@@ -234,13 +233,13 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   **Videos:**  
   
-     [Microsoft SQL Server Codename "Denali" AlwaysOn-Reihe, Teil 1: Einführung in die nächste Generation High Availability Solution](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Codename "Denali" AlwaysOn-Reihe, Teil 1: Einführung in die nächste Generation von Lösungen mit Hochverfügbarkeit](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server Codename "Denali" AlwaysOn-Reihe, Teil 2: Erstellen einer Mission-Critical High Availability-Lösung, die mit AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server Codename "Denali" AlwaysOn-Reihe, Teil 2: Erstellen einer Lösung für unternehmenskritische hohe Verfügbarkeit mit AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **Whitepaper:**  
   
-     [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Wiederherstellung im Notfall](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Notfallwiederherstellung](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
      [Microsoft-Whitepapers für SQL Server 2012](http://msdn.microsoft.com/library/hh403491.aspx)  
   

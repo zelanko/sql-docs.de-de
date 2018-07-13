@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d0e6fb59-ca4e-4d70-97cb-0ad183da21d3
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4537b00b59bec4459f7740e49c93a19da0ab08dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2da5ccaf0fe846a26959970bd9bf3e939b5a2558
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059074"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256259"
 ---
 # <a name="start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs"></a>Beginnen der Kreisdiagrammwerte an der Kreisoberseite (Berichts-Generator und SSRS)
   Standardmäßig beginnt bei Kreisdiagrammen der erste Wert im Dataset bei 90 Grad zur Oberseite des Kreises versetzt. Möglicherweise ziehen Sie es vor, dass der erste Wert oben beginnt.  

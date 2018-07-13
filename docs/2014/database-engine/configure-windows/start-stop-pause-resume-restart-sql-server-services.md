@@ -1,5 +1,5 @@
 ---
-title: Starten, beenden, anhalten, fortsetzen, Datenbank-Engine, SQL Server-Agent oder SQL Server-Browser-Dienst neu starten | Microsoft Docs
+title: Starten, beenden, anhalten, fortsetzen und starten Sie die Datenbank-Engine, SQL Server-Agent oder SQL Server-Browser-Dienst neu. | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Configuration Manager, start and stop services
 - stopping SQL Server Agent
@@ -41,15 +41,15 @@ helpviewer_keywords:
 - Management Studio [SQL Server], starting or stopping services
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 22a7d3321cfdcbcbd07e5771fd908f409002999a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 760ad35b8212ab8b38e441a3f5db332bce9f2bec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058774"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326280"
 ---
 # <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers
   In diesem Thema wird beschrieben- und wie [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]- und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent oder der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browserdienst mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager- und der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]- und **net** commands from a command prompt- und [!INCLUDE[tsql](../../includes/tsql-md.md)]- und or PowerShell.  
@@ -121,7 +121,7 @@ ms.locfileid: "36058774"
 ####  <a name="Permissions"></a> Berechtigungen  
  Standardmäßig können nur Mitglieder der lokalen Administratorgruppe einen Dienst starten, beenden, anhalten, fortsetzen oder neu starten. Informationen dazu, wie Sie es Nichtadministratoren ermöglichen, Dienste zu verwalten, finden Sie unter [How to grant users rights to manage services in Windows Server 2003](http://support.microsoft.com/kb/325349)(So erteilen Sie Benutzern die Berechtigung zum Verwalten von Diensten in Windows Server 2003). (Dieser Vorgang ist bei anderen Versionen von Windows ähnlich.)  
   
- Beenden der [!INCLUDE[ssDE](../../includes/ssde-md.md)] mithilfe der [!INCLUDE[tsql](../../includes/tsql-md.md)] `SHUTDOWN` -Befehls erfordert die Mitgliedschaft in der **Sysadmin** oder **Serveradmin** festen Serverrollen und ist nicht übertragbar.  
+ Beenden der [!INCLUDE[ssDE](../../includes/ssde-md.md)] mithilfe der [!INCLUDE[tsql](../../includes/tsql-md.md)] `SHUTDOWN` Befehl erfordert die Mitgliedschaft in der **Sysadmin** oder **Serveradmin** festen Serverrollen und ist nicht übertragbar.  
   
 ##  <a name="SSCMProcedure"></a> Verwenden des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Managers  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 caps.latest.revision: 39
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dd88de02a035e041c887d7505cc8b2f35805e577
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 380676537e0035077e0fd37afda058a98c75c741
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060523"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274846"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>Schritt 2: Aktivieren und Konfigurieren von Paketkonfigurationen
   In dieser Aufgabe konvertieren Sie das Projekt in das Paketbereitstellungsmodell und aktivieren Paketkonfigurationen mithilfe des Paketkonfigurations-Assistenten. Sie verwenden diesen Assistenten zum Generieren einer XML-Konfigurationsdatei, die Konfigurationseinstellungen für die `Directory`-Eigenschaft des Foreach-Schleifencontainers enthält. Der Wert der Directory-Eigenschaft wird durch eine neue Variable auf Paketebene bereitgestellt, die Sie zur Laufzeit aktualisieren können. Zusätzlich füllen Sie einen neuen Beispieldatenordner auf, der während des Testens verwendet wird.  
@@ -96,17 +96,17 @@ ms.locfileid: "36060523"
     > [!NOTE]  
     >  Eine Konfigurationsdatei enthält typischerweise komplexe Informationen zu den Paketeigenschaften. In diesem Lernprogramm sollte die einzige Konfigurationsinformation allerdings Folgende sein:  
     > <Configuration ConfiguredType="Property"  
-    > Path="\package.Variables[User::varFolderName]. Eigenschaften [Value]"ValueType ="String"\>  
+    > Path="\package.Variables[User::varFolderName]. Eigenschaften [Wert]"ValueType ="String"\>  
     >  \<ConfiguredValue >\</ConfiguredValue >  
     > \</ Configuration >.  
   
 ### <a name="to-create-and-populate-a-new-sample-data-folder"></a>So erstellen und füllen Sie einen neuen Beispieldatenordner  
   
-1.  In Windows-Explorer auf der Stammebene des Laufwerks (z. B. "c:"\\), erstellen Sie einen neuen Ordner namens `New Sample Data`.  
+1.  Im Windows-Explorer auf der Stammebene des Laufwerks (z. B. "c:"\\), erstellen Sie einen neuen Ordner namens `New Sample Data`.  
   
 2.  Suchen Sie die Beispieldateien auf dem Computer, und kopieren Sie drei der Dateien aus dem Ordner.  
   
-3.  In der `New Sample Data` Ordner, die kopierten Dateien einfügen.  
+3.  In der `New Sample Data` Ordner die kopierten Dateien einfügen.  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
  [Schritt 3: Ändern des Konfigurationswerts der Directory-Eigenschaft](lesson-5-3-modifying-the-directory-property-configuration-value.md)  

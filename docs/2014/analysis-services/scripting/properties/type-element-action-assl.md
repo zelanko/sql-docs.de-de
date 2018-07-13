@@ -1,5 +1,5 @@
 ---
-title: Geben Sie-Element (Action) (ASSL) | Microsoft Docs
+title: Type-Element (Action) (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 534cdf99-1edf-4490-9eaa-61f189a19434
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d71abdd26cea5fa03c8e70f882f893878a70969a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99147acb4b2a1b467913087f4e4df14469de9a03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058991"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249081"
 ---
 # <a name="type-element-action-assl"></a>Type-Element (Action) (ASSL)
   Enthält den Typ des der [Aktion](../objects/action-element-assl.md) Element.  
@@ -69,14 +69,14 @@ ms.locfileid: "36058991"
 |*URL*|Zeigt eine veränderliche Seite in einem Internetbrowser an.|  
 |*HTML*|Führt ein HTML-Skript in einem Internetbrowser aus.|  
 |*Anweisung*|Führt einen OLE DB-Befehl aus.|  
-|*DrillThrough*|Ruft ein Rowset für Drillthrough ab.<br /><br /> Dieser Wert ist mit *Rowset* identisch und identifiziert Drillthroughaktionen. Er kann nur bei Aktionen verwendet, deren [TargetType](targettype-element-assl.md) Wert wird festgelegt, um *Zellen*.|  
+|*DrillThrough*|Ruft ein Rowset für Drillthrough ab.<br /><br /> Dieser Wert ist mit *Rowset* identisch und identifiziert Drillthroughaktionen. Es kann nur werden bei Aktionen verwendet, deren [TargetType](targettype-element-assl.md) Wert wird festgelegt, um *Zellen*.|  
 |*DataSet*|Ruft ein Dataset ab.|  
 |*Rowset*|Ruft ein Rowset ab.|  
 |*Befehlszeile*|Führt einen Befehl an einer Eingabeaufforderung aus.|  
 |*Proprietäre*|Führt eine Operation aus, wobei eine andere Schnittstelle als die in der Tabelle zuvor aufgeführten verwendet wird.|  
 |*Bericht*|Zeigt eine veränderliche Seite in einem Internetbrowser an.<br /><br /> Dieser Wert ist mit *Url* identisch und identifiziert Berichtsaktionen.|  
   
- Das Element, das das übergeordnete Element des entspricht `Type` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Action>.  
+ Das Element, das dem übergeordneten entspricht `Type` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Action>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [DrillThroughAction-Datentyp &#40;ASSL&#41;](../data-type/action-data-type-assl.md)   

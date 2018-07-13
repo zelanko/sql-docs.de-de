@@ -1,5 +1,5 @@
 ---
-title: 'Neuer Zeitplan: Zeitplan bearbeiten (Seite (Berichts-Manager) | Microsoft Docs'
+title: 'Neuen Zeitplan: Zeitplan bearbeiten (Seite (Berichts-Manager) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 52a4d250-e185-4116-a29c-d809940a00fb
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 019cb1a12e25ac3c347d1dbdb72296c2f2a888f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2772db639b664724ee6d594d061f6c9ccdc847cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057533"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262006"
 ---
-# <a name="new-schedule-edit-schedule-page-report-manager"></a>Neuer Zeitplan: Bearbeiten der Seite "Zeitplan" (Berichts-Manager)
+# <a name="new-schedule-edit-schedule-page-report-manager"></a>Neuen Zeitplan: Bearbeiten der Zeitplanseite (Berichts-Manager)
   Verwenden Sie die Seite Neuer Zeitplan oder Zeitplan bearbeiten zum Erstellen eines Zeitplans für einen Bericht. Zeitpläne werden im Zusammenhang mit Abonnements, zum Aktualisieren zwischengespeicherter Berichte und zum Erstellen von Momentaufnahmen als eigenständige Elemente oder im Berichtsverlauf verwendet.  
   
 > [!NOTE]  
 >  Diese Funktion ist nicht in jeder Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den Editionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]unterstützt werden, finden Sie unter [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
- Zeitpläne können nur für Berichte erstellt werden, die unbeaufsichtigt ausgeführt werden können. Für das Ausführen eines Berichts im unbeaufsichtigten Modus müssen Anmeldeinformationen für Berichtsdatenquellen in der Berichtsserver-Datenbank gespeichert sein. Weitere Informationen finden Sie unter [Data Sources Eigenschaftenseite &#40;Berichts-Manager&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md).  
+ Zeitpläne können nur für Berichte erstellt werden, die unbeaufsichtigt ausgeführt werden können. Für das Ausführen eines Berichts im unbeaufsichtigten Modus müssen Anmeldeinformationen für Berichtsdatenquellen in der Berichtsserver-Datenbank gespeichert sein. Weitere Informationen finden Sie unter [Data Sources – Seite "Eigenschaften" &#40;Berichts-Manager&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md).  
   
  Nicht alle Kombinationen der Häufigkeit können in einem einzelnen Zeitplan unterstützt werden. Wenn ein Bericht z. B. um 00:00 Uhr und um 16:00 Uhr an jedem Freitag ausgeführt werden soll, müssen Sie zwei Tageszeitpläne erstellen, in denen der Freitag als Ausführungstag angegeben ist. Der erste Zeitplan hat eine Startzeit von 00:00 Uhr, und für den zweiten ist eine Startzeit von 16:00 Uhr festgelegt.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36057533"
   
 -   Durch**Stunde** definieren Sie einen Zeitplan mit stündlicher Ausführung. Im Abschnitt **Anfangs- und Enddatum** können Sie den Tag angeben, an dem der Zeitplan ausgeführt werden soll.  
   
--   Durch**Tag** definieren Sie einen Zeitplan, der an den von Ihnen angegebenen Tagen zu einer bestimmten Uhrzeit (Stunde und Minute) ausgeführt wird. Sie können Tage auf folgenden Arten angeben: jede \< *Tag*>, an jedem Arbeitstag und alle \< *Anzahl*> Tag. Wenn eine Option ausgewählt ist, stehen die anderen nicht zur Verfügung, auch wenn es so aussieht, als seien die anderen Tage ebenfalls ausgewählt.  
+-   Durch**Tag** definieren Sie einen Zeitplan, der an den von Ihnen angegebenen Tagen zu einer bestimmten Uhrzeit (Stunde und Minute) ausgeführt wird. Auf folgende Weise die Tage anzugeben: alle \< *Tag*>, an jedem Arbeitstag und alle \< *Anzahl*> Tag. Wenn eine Option ausgewählt ist, stehen die anderen nicht zur Verfügung, auch wenn es so aussieht, als seien die anderen Tage ebenfalls ausgewählt.  
   
 -   Durch**Woche** definieren Sie einen Zeitplan, der zu der von Ihnen angegebenen Uhrzeit (Stunde und Minute) wöchentlich ausgeführt wird. Der Zeitabstand kann vollständige Wochen betragen (z. B. alle zwei Wochen) oder Tage innerhalb einer Woche.  
   
@@ -90,13 +90,13 @@ ms.locfileid: "36057533"
   
 -   Durch**Einmal** definieren Sie einen Zeitplan mit einmaliger Ausführung. Im Abschnitt **Anfangs- und Enddatum** können Sie den Tag angeben, an dem der Zeitplan ausgeführt werden soll. Dieser Zeitplan läuft unmittelbar nach seiner Verarbeitung ab.  
   
- **Anfangs-und Enddatum**  
+ **Start- und Enddatum**  
  Geben Sie das Anfangsdatum für den Beginn der Gültigkeit des Zeitplans und das Enddatum für den Ablauf des Zeitplans an.  
   
  Zeitpläne laufen ohne Benachrichtigung ab. Nach dem Enddatum können sie nicht mehr ausgeführt werden. Abgelaufene Zeitpläne werden nicht gelöscht. Zeitpläne können nur manuell gelöscht werden. Daher können Sie das Enddatum entsprechend ändern, wenn Sie den Zeitplan fortsetzen möchten.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Berichts-Manager &#40;SSRS im einheitlichen Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Erstellen, Ändern oder Löschen von Zeitplänen](subscriptions/create-modify-and-delete-schedules.md)   
  [Berichts-Manager (F1-Hilfe)](../../2014/reporting-services/report-manager-f1-help.md)  
   

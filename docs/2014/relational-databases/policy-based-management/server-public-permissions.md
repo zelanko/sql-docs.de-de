@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 9a276caa-ea38-473d-92bc-26302bfcf660
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a0b125841e2d3c9f03b7ba46519f80af9293a1cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 13efadee3de21493d979f800f40a279581cadd03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059122"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246380"
 ---
 # <a name="server-public-permissions"></a>Serverberechtigungen für 'public'
   Diese Regel bestimmt, ob die Serverrolle public Serverberechtigung besitzt. Jede Anmeldung, die auf dem Server erstellt wird, ist ein Element der Serverrolle public. Wenn diese Bedingung erfüllt ist, besitzt jede Anmeldung am Server Serverberechtigung.  
@@ -30,7 +30,7 @@ ms.locfileid: "36059122"
  Gewähren Sie der Serverrolle public keine Serverberechtigung.  
   
 > [!IMPORTANT]  
->  Nach Abschluss des Setups die **öffentlichen** Rolle verfügt über `CONNECT` -Berechtigung für alle Endpunkte außer der **dedizierte Administratorverbindung**. Dies ist normal und sollte üblicherweise nicht geändert werden. (Der Zugriff wird gesteuert, mithilfe der `CONNECT SQL` Berechtigung für die beim Erstellen neuer Anmeldungen automatisch erteilt wird.)  
+>  Nach Abschluss des Setups die **öffentliche** Rolle verfügt über `CONNECT` -Berechtigung für alle Endpunkte außer der **dedizierte Administratorverbindung**. Dies ist normal und sollte üblicherweise nicht geändert werden. (Der Zugriff wird gesteuert, mit der `CONNECT SQL` Berechtigung für die beim Erstellen neuer Anmeldungen automatisch erteilt wird.)  
   
 ### <a name="for-more-information"></a>Weitere Informationen finden Sie unter  
  [Sichern von SQL Server](../security/securing-sql-server.md)  

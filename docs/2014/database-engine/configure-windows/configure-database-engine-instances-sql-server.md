@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 84e36fcb-2c78-48e8-8e4b-bf784a3ee557
 caps.latest.revision: 5
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d72adcfae0854807191e8cfa4faeac401f8bf52e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 1ab5c7785fed8f22a12e265426d485fd65ed9a66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058363"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325090"
 ---
 # <a name="configure-database-engine-instances-sql-server"></a>Konfigurieren von Datenbank-Engine-Instanzen (SQL Server)
   Jede Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] muss so konfiguriert werden, dass sie die für die Datenbanken, die von der Instanz gehostet werden, definierten Anforderungen in Bezug auf Leistung und Verfügbarkeit erfüllen. [!INCLUDE[ssDE](../../includes/ssde-md.md)] enthält Konfigurationsoptionen, die Verhaltensweisen wie Ressourcenauslastung und Verfügbarkeit von Funktionen, z. B. Überwachung oder Triggerrekursion, steuern.  

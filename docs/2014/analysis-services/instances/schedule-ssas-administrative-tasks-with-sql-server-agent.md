@@ -1,5 +1,5 @@
 ---
-title: Planen von administrativen Tasks in SSAS mit SQL Server-Agent | Microsoft Docs
+title: Planen von administrativen Tasks in SSAS mithilfe von SQL Server-Agent | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b94fa6a5c38b08d9756581063c497e4440105c62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e02a5f91994d0002873984a6e77db53169d024e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059273"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243680"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Planen von administrativen Tasks in SSAS mithilfe von SQL Server-Agent
   Mithilfe des SQL Server-Agent-Diensts können Sie die gewünschte Reihenfolge und die erforderlichen Zeitpunkte für die Ausführung von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Verwaltungsaufgaben planen. Mit geplanten Tasks können Sie Vorgänge automatisieren, die in regelmäßigen oder vorhersagbaren Abständen ausgeführt werden müssen. Dabei können Sie administrative Tasks wie z. B. die Cubeverarbeitung so planen, dass sie zu Zeiten ausgeführt werden, in denen die geschäftliche Auslastung des Servers niedrig ist. Sie können auch die Reihenfolge bestimmen, in der die Tasks ausgeführt werden sollen, indem Sie innerhalb eines SQL Server-Agent-Auftrags Auftragsschritte erstellen. Beispielsweise können Sie einen Cube verarbeiten und dann eine Sicherung des Cubes durchführen lassen.  
@@ -31,7 +31,7 @@ ms.locfileid: "36059273"
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Der SQL Server-Agent-Dienst muss installiert sein.  
   
- Standardmäßig werden Aufträge unter demselben Dienstkonto ausgeführt. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], SQL Server-Agent das Standardkonto ist NT Service\SQLAgent$\<Instanzname >. Um einen Sicherungs- oder Verarbeitungstask auszuführen, muss dieses Konto Systemadministrator auf der Analysis Services-Instanz sein. Weitere Informationen finden Sie unter [Erteilen von Serveradministratorberechtigungen &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md).  
+ Standardmäßig werden Aufträge unter demselben Dienstkonto ausgeführt. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], das Standardkonto für den SQL Server-Agent ist NT Service\SQLAgent$\<Instanzname >. Um einen Sicherungs- oder Verarbeitungstask auszuführen, muss dieses Konto Systemadministrator auf der Analysis Services-Instanz sein. Weitere Informationen finden Sie unter [Erteilen von Serveradministratorberechtigungen &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
  Sie sollten außerdem eine Testdatenbank haben, um damit zu arbeiten. Sie können die mehrdimensionale AdventureWorks-Beispieldatenbank oder ein Projekt aus dem mehrdimensionalen Analysis Services-Lernprogramm bereitstellen, um es in dieser exemplarischen Vorgehensweise zu verwenden. Weitere Informationen finden Sie unter [Installieren von Beispieldaten und -projekten für das Analysis Services-Tutorial zur mehrdimensionalen Modellierung](../install-sample-data-and-projects.md).  
   

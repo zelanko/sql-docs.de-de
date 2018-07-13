@@ -1,5 +1,5 @@
 ---
-title: Erstellen von berechneten Elementen | Microsoft Docs
+title: Erstellen von berechneten Elementen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - calculated members [Analysis Services]
 - custom measures [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - calculations [Analysis Services], calculated members
 ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d12f7ef55272960d8e120fd46dec4039ca036cbd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b55ab5f489ce9a8b24f6ad39dde643f30c3712f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058192"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228360"
 ---
 # <a name="create-calculated-members"></a>Erstellen von berechneten Elementen
   Sie können benutzerdefinierte Measures oder Dimensionselemente (so genannte berechnete Elemente) erstellen, indem Sie Cubedaten, arithmetische Operatoren, Zahlen und Funktionen kombinieren. Sie können z. B. ein berechnetes Element mit dem Namen Euros erstellen, das Dollar in Euro konvertiert, indem ein vorhandenes Dollar-Measure mit einem Umrechnungskurs multipliziert wird. Euros kann Endbenutzern dann in einer eigenen Zeile oder Spalte angezeigt werden.  

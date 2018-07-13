@@ -1,5 +1,5 @@
 ---
-title: ProactiveCachingIncrementalProcessingBinding-Datentyp (ASSL) | Microsoft Docs
+title: ProactiveCachingIncrementalProcessingBinding-Datentyp (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - ProactiveCachingIncrementalProcessingBinding data type
 ms.assetid: f49c0c96-4277-417b-9660-d77a4faebd00
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 128d118c5f1a6dd05a8bab5434b1dba1f9f22ce1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ad1107d1ad2e135e65b2ef4f05fd2e85d799123c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060125"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247720"
 ---
 # <a name="proactivecachingincrementalprocessingbinding-data-type-assl"></a>ProactiveCachingIncrementalProcessingBinding-Datentyp (ASSL)
-  Definiert einen abgeleiteten Datentyp, der eine Bindung an die [ProactiveCaching](../objects/proactivecaching-element-assl.md) Element über den Status des Neuerstellungsprozesses des Caches.  
+  Definiert einen abgeleiteten Datentyp, der eine Bindung an darstellt, der die [ProactiveCaching](../objects/proactivecaching-element-assl.md) Element über den Status des Neuerstellungsprozesses des Caches.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -60,13 +60,13 @@ ms.locfileid: "36060125"
 |Abgeleitete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Weitere Informationen zu den `ProactiveCachingBinding` Typ, einschließlich einer Tabelle der Vererbungshierarchie der `ProactiveCachingBinding` , finden Sie unter [ProactiveCachingBinding-Datentyp &#40;ASSL&#41;](binding-data-type-assl.md).  
+ Weitere Informationen zu den `ProactiveCachingBinding` Typ, einschließlich einer Tabelle der Vererbungshierarchie der `ProactiveCachingBinding` Datentypen, finden Sie unter [ProactiveCachingBinding-Datentyp &#40;ASSL&#41;](binding-data-type-assl.md).  
   
- Weitere Informationen zu der `Binding` Typ, einschließlich Tabellen, die von Analysis Services Scripting Language (ASSL)-Objekten, von der `Binding` Typ und der Vererbungshierarchie der `Binding` , finden Sie unter [Binding-Datentyp &#40;ASSL &#41;](binding-data-type-assl.md).  
+ Weitere Informationen zu den `Binding` -Typ und zu Tabellen von Analysis Services Scripting Language (ASSL)-Objekten, von der `Binding` Typ und der Vererbungshierarchie des `Binding` Datentypen, finden Sie unter [Binding-Datentyp &#40;ASSL &#41;](binding-data-type-assl.md).  
   
  Einen Überblick über datenbindungen in ASSL finden Sie unter [Datenquellen und-Bindungen &#40;mehrdimensionale SSAS-&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.ProactiveCachingIncrementalProcessingBinding>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.ProactiveCachingIncrementalProcessingBinding>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services Scripting Language-XML-Datentypen &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

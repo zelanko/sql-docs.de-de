@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - media sets [SQL Server], about media sets
 - backup media [SQL Server], about backup media
@@ -24,21 +23,21 @@ helpviewer_keywords:
 - backup sets [SQL Server]
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 caps.latest.revision: 58
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 06ebab2fa2db5be88f30b228d209318469788ff4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b787ab534cc5c38413a7415e8333911590e7647f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059657"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231420"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Mediensätze, Medienfamilien und Sicherungssätze (SQL Server)
   Dieses Thema bietet eine Einführung zur grundlegenden Terminologie bezüglich der Sicherungsmedien für Sicherungen und Wiederherstellungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und ist für Leser gedacht, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] noch nicht kennen. Dieses Thema beschreibt das von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendete Format für Sicherungsmedien, die Entsprechung zwischen Sicherungsmedien und Sicherungsgeräten und die Organisation von Sicherungen auf Sicherungsmedien sowie verschiedene Aspekte im Zusammenhang mit Mediensätzen und Medienfamilien. Im Thema werden außerdem die Schritte zum Initialisieren oder Formatieren von Sicherungsmedien vor der ersten Verwendung oder das Ersetzen eines alten Mediensatzes durch einen neuen Mediensatz beschrieben. Es enthält zudem Informationen dazu, wie alte Sicherungssätze in einem Mediensatz überschrieben und neue Sicherungssätze an einen Mediensatz angefügt werden.  
   
 > [!NOTE]  
->  Weitere Informationen zur SQL Server-Sicherung im Windows Azure-Blob-Speicherdienst finden Sie unter [SQL Server-Sicherung und-Wiederherstellung mit dem Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+>  Weitere Informationen zur SQL Server-Sicherung im Windows Azure-Blob-Speicherdienst finden Sie unter, [SQL Server-Sicherung und-Wiederherstellung mit dem Windows Azure-Blob-Speicherdienst](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
   
 ##  <a name="TermsAndDefinitions"></a> Begriffe und Definitionen  
@@ -93,7 +92,7 @@ ms.locfileid: "36059657"
 -   Angabe, ob die Medienbeschreibung eine MTF-Medienbezeichnung oder eine Medienbeschreibung enthält.  
   
     > [!NOTE]  
-    >  Alle Medien, die für Backup- oder Restore-Vorgang verwendet werden, verwenden eine backup-Standardformat aufgerufen [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] behält MTF-medienbezeichnung geschrieben, die von einer anderen Anwendung jedoch keine MTF-medienbezeichnungen.  
+    >  Alle Medien, die für eine Backup- oder Restore-Vorgang verwendet wird, verwenden ein Standardformat der Sicherung wird aufgerufen, [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] werden alle von anderen Anwendungen geschriebenen MTF-medienbezeichnung werden jedoch keine MTF-medienbezeichnungen geschrieben.  
   
 -   Medienbezeichnung von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Tape Format oder die Medienbeschreibung (als Text).  
   
@@ -110,7 +109,7 @@ ms.locfileid: "36059657"
 ### <a name="backup-sets"></a>Sicherungssätze  
  Durch einen erfolgreichen Sicherungsvorgang wird dem Mediensatz ein einzelner *Sicherungssatz* hinzugefügt. Der Sicherungssatz wird anhand des Mediensatzes beschrieben, zu dem die Sicherung gehört. Wenn das Sicherungsmedium nur aus einer Medienfamilie besteht, enthält diese Familie den gesamten Sicherungssatz. Wenn das Sicherungsmedium aus mehreren Medienfamilien besteht, wird der Sicherungssatz auf die Familien verteilt. Auf jedem Medium enthält der Sicherungssatz einen Header für die Beschreibung des Sicherungssatzes.  
   
- Das folgende Beispiel zeigt eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung, die ein Mediensatz aufgerufene erstellt `MyAdvWorks_MediaSet_1` für die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Hierbei werden drei Bandlaufwerke als Sicherungsmedien-Datenbank:  
+ Das folgende Beispiel zeigt eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung, die ein Mediensatz, der aufgerufen wird `MyAdvWorks_MediaSet_1` für die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Datenbank mithilfe von drei Bandlaufwerke als Sicherungsmedien beschrieben wurden:  
   
 ```  
 BACKUP DATABASE AdventureWorks2012  
@@ -283,7 +282,7 @@ GO
   
 -   [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql) (Option INIT)  
   
- **Das Ablaufdatum fest**  
+ **Das Ablaufdatum festlegen**  
   
 -   [Festlegen des Ablaufdatums für eine Sicherung &#40;SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
   
@@ -293,7 +292,7 @@ GO
   
 -   [backupmediafamily &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupmediafamily-transact-sql) (**family_sequence_number**-Spalte)  
   
- **So zeigen Sie die Sicherungssätze auf einem bestimmten Sicherungsmedium an**  
+ **Die Sicherungssätze auf einem bestimmten Sicherungsmedium anzeigen**  
   
 -   [Anzeigen der Daten und Protokolldateien in einem Sicherungssatz &#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   
@@ -301,7 +300,7 @@ GO
   
 -   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)  
   
- **Lesen Sie den Medienheader des Mediums auf einem Sicherungsmedium**  
+ **Zum Lesen des Medienheaders des Mediums auf einem Sicherungsmedium**  
   
 -   [RESTORE LABELONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)  
   

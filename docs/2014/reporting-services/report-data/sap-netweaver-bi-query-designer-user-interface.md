@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10014"
 - sql12.rtp.rptdesigner.dataview.sapbwquerydesigner.f1
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - query designers [Reporting Services]
 ms.assetid: 102da66e-ca31-41aa-ab4b-c9b5ab752a72
 caps.latest.revision: 36
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 58b6e6d5f005e4a121afe0151b965a6e04896386
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 94cc3da0372bfbeb88aa41aadab7df03cdabcc43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058648"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250030"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface"></a>Benutzeroberfläche des Abfrage-Designers für SAP NetWeaver BI
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stellt einen grafischen Abfrage-Designer zum Erstellen von MDX-Abfragen (Multidimensional Expression) für eine SAP NetWeaver® Business Intelligence-Datenquelle bereit. Der grafische MDX-Abfrage-Designer verfügt über zwei Modi: Entwurfsmodus und Abfragemodus. Jeder Modus bietet einen Metadatenbereich, aus dem Sie Elemente aus einem InfoCube, einem MultiProvider oder einer für die Datenquelle definierten, webfähigen Abfrage ziehen können, um eine MDX-Abfrage zu erstellen, die bei der Berichtsverarbeitung Daten abruft.  

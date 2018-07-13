@@ -20,13 +20,13 @@ ms.assetid: dd2b1eef-b04f-4946-87ab-7bc56bb525ce
 caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 298de53535be79f452d3f1a70cd399cb66595abb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f2b4f1f659bd118827a13c774a8727ea6541d59b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059861"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236970"
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>Senden einer HTML-E-Mail mit dem Skripttask
   Der Task „Mail senden“ in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterstützt nur E-Mails im Nur-Text-Format. Sie können jedoch problemlos HTML-E-Mails mithilfe des Skripttasks und den E-Mail-Funktionen des .NET Framework senden.  
@@ -155,7 +155,7 @@ public void Main()
         }  
 ```  
   
-![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben Sie mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Mail senden (Task)](../control-flow/send-mail-task.md)  

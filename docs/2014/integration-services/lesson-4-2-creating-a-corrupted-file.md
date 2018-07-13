@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 caps.latest.revision: 23
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 80961e5899162575ae832d5d6a8dd35824b43a49
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd40a67ecd13dde8c78b38ba0f37d4928b86dd0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060296"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324550"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>Schritt 2: Erstellen einer beschädigten Datei
   Um die Konfiguration und die Behandlung von Transformationsfehlern zu demonstrieren, müssen Sie eine Beispielflatfile erstellen, die beim Verarbeiten für eine Komponente einen Fehler erzeugt.  
@@ -38,12 +38,12 @@ ms.locfileid: "36060296"
   
     3.  Klicken Sie auf die Datei SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   
-2.  Verwenden Sie den Texteditor suchen und Ersetzen Sie Funktion so, dass alle Instanzen von `VEB` und Ersetzen Sie sie durch `BAD`.  
+2.  Der Text-Editor suchen und ersetzen alle Instanzen von `VEB` und Ersetzen Sie sie durch `BAD`.  
   
 3.  Speichern Sie im gleichen Ordner wie die anderen Beispieldatendateien die geänderte Datei als `Currency_BAD.txt`.  
   
     > [!IMPORTANT]  
-    >  Stellen Sie sicher, dass `Currency_BAD.txt` den gleichen Ordner wie die anderen Beispieldatendateien gespeichert wird.  
+    >  Stellen Sie sicher, dass `Currency_BAD.txt` als die anderen Beispieldatendateien die gleichen Ordner gespeichert.  
   
 4.  Schließen Sie den Texteditor.  
   

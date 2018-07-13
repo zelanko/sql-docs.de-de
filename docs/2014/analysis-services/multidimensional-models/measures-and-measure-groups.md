@@ -1,5 +1,5 @@
 ---
-title: Measures und Measuregruppen | Microsoft Docs
+title: Measures und Measuregruppen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - measure groups [Analysis Services]
 - measures [Analysis Services], about measures
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - fact tables [Analysis Services]
 ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 74904af589aee642d0c83524f3a6dd71b3390371
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ba5a5c5b9ebf6bf7dcbf3b5340db941c7f662cf7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058799"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255632"
 ---
 # <a name="measures-and-measure-groups"></a>Measures und Measuregruppen
   Ein Cube enthält *Measures* in *Measuregruppen*, Geschäftslogik sowie eine Sammlung von Dimensionen, die Kontext für die Auswertung der numerischen Daten eines Measures bereitstellen. Measures und Measuregruppen sind wesentliche Bestandteile eines Cubes. Ein Cube kann ohne mindestens eines dieser Elemente nicht bestehen.  
@@ -50,7 +50,7 @@ ms.locfileid: "36058799"
   
  Jeder Cube muss über mindestens ein Measure verfügen, die meisten besitzen jedoch mehrere, einige sogar Hunderte. Strukturell gesehen ist ein Measure häufig einer Quellspalte in einer Faktentabelle zugeordnet, wobei die Spalte die Werte enthält, die zum Laden des Measures verwendet werden. Alternativ können Sie ein Measure auch mithilfe von MDX definieren.  
   
- Measures sind kontextbezogen und gelten für numerische Daten in einem Kontext, der durch die Dimensionselemente bestimmt wird, die in der Abfrage enthalten sind. Beispielsweise ein Measure zur **Reseller Sales** gesichert durch eine `Sum` -Operator, und es wird die Beträge der Verkäufe für jedes in der Abfrage enthaltene Dimensionselement hinzufügen. Unabhängig davon, ob die Abfrage einzelne Produkte angibt, sich auf eine Kategorie bezieht oder nach Zeit oder Geografie segmentiert ist, sollte das Measure einen Vorgang erzeugen, der für die in der Abfrage enthaltenen Dimensionen gültig ist.  
+ Measures sind kontextbezogen und gelten für numerische Daten in einem Kontext, der durch die Dimensionselemente bestimmt wird, die in der Abfrage enthalten sind. Beispielsweise ein Measure, berechnet **Verkäufe des Wiederverkäufers** gesichert durch eine `Sum` -Operator, und es wird die Beträge der Verkäufe für jedes in der Abfrage enthaltene Dimensionselement hinzufügen. Unabhängig davon, ob die Abfrage einzelne Produkte angibt, sich auf eine Kategorie bezieht oder nach Zeit oder Geografie segmentiert ist, sollte das Measure einen Vorgang erzeugen, der für die in der Abfrage enthaltenen Dimensionen gültig ist.  
   
  In diesem Beispiel werden die **Verkäufe des Wiederverkäufers** zu verschiedenen Ebenen der **Vertriebsgebietshierarchie** aggregiert.  
   

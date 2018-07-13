@@ -1,5 +1,5 @@
 ---
-title: Migrieren von Abfrageplänen | Microsoft Docs
+title: Migrieren von Abfrageplänen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - query plans [SQL Server], migrating
 - upgrading SQL Server, migrating query plans
 - plan guides [SQL Server], migrating query plans
 ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 66b481ab27af87a20f1a509cb10749c9f2ca1c15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 86396a835b68e9a6028bce45a68110e337ce9131
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059879"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324970"
 ---
 # <a name="migrate-query-plans"></a>Migrieren von Abfrageplänen
   Im Allgemeinen führt das Upgrade einer Datenbank auf die aktuellste Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu einer besseren Abfrageleistung. Bei unternehmenswichtigen Abfragen, deren Leistung sorgfältig optimiert wurde, möchten Sie jedoch möglicherweise vor dem Upgrade die entsprechenden Abfragepläne aufzeichnen. Zu diesem Zweck können Sie für jede Abfrage eine Planhinweisliste erstellen. Falls der Abfrageoptimierer nach der Aktualisierung für immer mehr Abfragen einen weniger effizienten Plan wählt, können Sie die Planhinweislisten aktivieren und den Abfrageoptimierer zwingen, die alten Pläne zu verwenden.  
   
  Führen Sie die folgenden Schritte durch, um vor der Aktualisierung Planhinweislisten zu erstellen:  
   
-1.  Zeichnen Sie den aktuellen Plan für jede unternehmenswichtige Abfrage mithilfe der [Sp_create_plan_guide](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql) gespeicherte Prozedur und der Abfrageplan im USE PLAN-Abfragehinweis angeben.  
+1.  Notieren Sie den aktuellen Plan für jede unternehmenswichtige Abfrage mithilfe der [Sp_create_plan_guide](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql) gespeicherte Prozedur und der Abfrageplan im USE PLAN-Abfragehinweis angeben.  
   
 2.  Vergewissern Sie sich, dass die Planhinweisliste auf die Abfrage angewendet wird.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36059879"
   
 -   [SET STATISTICS XML](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
   
--   Abfragen der Spalte Query_plan, der die [dm_exec_query_plan](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql) dynamische Verwaltungsfunktion.  
+-   Abfragen der Spalte Query_plan, der die [Sys. dm_exec_query_plan](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql) dynamische Verwaltungsfunktion.  
   
 -   Die [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [Showplan XML](../../relational-databases/event-classes/showplan-xml-event-class.md), [Showplan XML Statistics Profile](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md), und [Showplan XML For Query Compile](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md) -Ereignisklassen.  
   

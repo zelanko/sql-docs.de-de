@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Multiple Flat Files connection manager
 - connections [Integration Services], flat files
@@ -20,20 +20,20 @@ ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 68b9fcf9965a3245b869006d1177104702f8079d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 88409baa25d3e54319dc5b824494ff6a51d159aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057246"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322740"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>Verbindungs-Manager für mehrere Flatfiles
   Mit einem Verbindungs-Manager für mehrere Flatfiles kann ein Paket auf Daten in mehreren Flatfiles zugreifen. Eine Flatfilequelle kann beispielsweise einen Verbindungs-Manager für mehrere Flatfiles verwenden, wenn sich der Datenflusstask in einem Schleifencontainer wie dem For-Schleifencontainer befindet. In jeder Schleife des Containers werden von der Flatfilequelle Daten vom nächsten Dateinamen geladen, der vom Verbindungs-Manager für mehrere Flatfiles bereitgestellt wird.  
   
  Wenn Sie einem Paket einen Verbindungs-Manager für mehrere Flatfiles hinzufügen, erstellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] einen Verbindungs-Manager, der zur Laufzeit in eine Verbindung für mehrere Flatfiles aufgelöst wird, die Eigenschaften im Verbindungs-Manager für mehrere Flatfiles festlegt und der `Connections`-Auflistung des Pakets die Verbindung für mehrere Flatfiles hinzufügt.  
   
- Die `ConnectionManagerType` des Verbindungs-Managers ist-Eigenschaftensatz auf `MULTIFLATFILE`.  
+ Die `ConnectionManagerType` Eigenschaft des Verbindungs-Managers nastaven NA hodnotu `MULTIFLATFILE`.  
   
  Es gibt folgende Möglichkeiten, um einen Verbindungs-Manager für mehrere Flatfiles zu konfigurieren:  
   
@@ -53,11 +53,11 @@ ms.locfileid: "36057246"
   
  \<*Pfad*>|\<*Pfad*>  
   
- Mehrere Dateien können Sie auch mithilfe von Platzhalterzeichen angeben. Um z. B. auf alle Textdateien auf dem C-Laufwerk, den Wert der Verweis der `ConnectionString` Eigenschaft kann festgelegt werden, um "c:"\\*.txt.  
+ Mehrere Dateien können Sie auch mithilfe von Platzhalterzeichen angeben. Z. B. auf alle Textdateien auf die C-Laufwerk, den Wert der verwiesen die `ConnectionString` Eigenschaft kann festgelegt werden, um "c:"\\*.txt.  
   
  Falls ein Verbindungs-Manager für Flatfiles auf mehrere Dateien verweist, müssen alle Dateien das gleiche Format aufweisen.  
   
- Der Verbindungs-Manager für mehrere Flatfiles legt die Länge von Zeichenfolgenspalten standardmäßig auf 50 Zeichen fest. Sie können im Dialogfenster **Verbindungs-Manager-Editor für mehrere Flatfiles** Beispieldaten auswerten und automatisch die Länge dieser Spalten ändern, um zu vermeiden, dass Daten abgeschnitten werden oder die Spaltenbreite überschritten wird. Es sei denn, Sie ändern die Spaltenlänge in einer Flatfilequelle oder in einer Transformation. Dann bleibt die Spaltenlänge der Zeichenfolgenspalte im gesamten Datenfluss gleich. Wenn diese Spalten Zielspalten zugeordnet sind, die schmaler sind, werden in der Benutzeroberfläche Warnungen angezeigt. Darüber hinaus können aufgrund der abgeschnittenen Daten zur Laufzeit Fehler angezeigt werden. Sie können im Verbindungs-Manager für Flatfiles, in der Flatfilequelle oder in einer Transformation die Größe der Spalten auf die Größe der Zielspalten ändern. Um die Länge von Ausgabespalten zu ändern, legen Sie die `Length` Eigenschaft der Ausgabespalte auf die **Eingabe- und Ausgabeeigenschaften** Registerkarte der **Erweiterter Editor** (Dialogfeld).  
+ Der Verbindungs-Manager für mehrere Flatfiles legt die Länge von Zeichenfolgenspalten standardmäßig auf 50 Zeichen fest. Sie können im Dialogfenster **Verbindungs-Manager-Editor für mehrere Flatfiles** Beispieldaten auswerten und automatisch die Länge dieser Spalten ändern, um zu vermeiden, dass Daten abgeschnitten werden oder die Spaltenbreite überschritten wird. Es sei denn, Sie ändern die Spaltenlänge in einer Flatfilequelle oder in einer Transformation. Dann bleibt die Spaltenlänge der Zeichenfolgenspalte im gesamten Datenfluss gleich. Wenn diese Spalten Zielspalten zugeordnet sind, die schmaler sind, werden in der Benutzeroberfläche Warnungen angezeigt. Darüber hinaus können aufgrund der abgeschnittenen Daten zur Laufzeit Fehler angezeigt werden. Sie können im Verbindungs-Manager für Flatfiles, in der Flatfilequelle oder in einer Transformation die Größe der Spalten auf die Größe der Zielspalten ändern. Um die Länge von Ausgabespalten zu ändern, legen Sie die `Length` Eigenschaft der Ausgabespalte auf die **Eingabe- und Ausgabeeigenschaften** Registerkarte die **Erweiterter Editor** Dialogfeld.  
   
  Wenn Sie die Spaltenlängen im Verbindungs-Manager für mehrere Flatfiles aktualisieren, nachdem Sie die Flatfilequelle, die den Verbindungs-Manager verwendet, hinzugefügt und geändert haben, ist das manuelle Ändern der Ausgabespaltengröße in der Flatfilequelle nicht erforderlich. Wenn Sie das Dialogfeld **Flatfilequelle** öffnen, stellt die Flatfilequelle eine Option zum Synchronisieren der Spaltenmetadaten bereit.  
   
@@ -72,13 +72,13 @@ ms.locfileid: "36057246"
   
 -   [Verbindungs-Manager-Editor für mehrere Flatfiles &#40;Seite "Erweitert"&#41;](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
   
--   [Verbindungs-Manager-Editor für mehrere Flatfiles &#40;Seite in der Vorschau anzeigen&#41;](../multiple-flat-files-connection-manager-editor-preview-page.md)  
+-   [Verbindungs-Manager-Editor für mehrere Flatfiles &#40;für Preview&#41;](../multiple-flat-files-connection-manager-editor-preview-page.md)  
   
- Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und [Verbindungen programmgesteuert hinzufügen](../building-packages-programmatically/adding-connections-programmatically.md).  
+ Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und [Programmgesteuertes Hinzufügen von Verbindungen](../building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Flatfilequelle](../data-flow/flat-file-source.md)   
+ [Flatfile-Datenquelle](../data-flow/flat-file-source.md)   
  [Flatfileziel](../data-flow/flat-file-destination.md)   
- [Integrationsservices &#40;SSIS&#41; Verbindungen](integration-services-ssis-connections.md)  
+ [Integrationsdienste &#40;SSIS&#41; Verbindungen](integration-services-ssis-connections.md)  
   
   

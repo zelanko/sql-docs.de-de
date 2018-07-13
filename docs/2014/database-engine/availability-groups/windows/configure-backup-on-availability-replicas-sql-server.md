@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backup priority
 - backup on secondary replicas
@@ -19,21 +18,21 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 caps.latest.revision: 30
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: fdaebbfc823445594e32f18ba1ec858b2350f108
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b3b35cb41610f490b4a12f8deba77e9d34cc7185
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059904"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328440"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>Konfigurieren der Sicherung auf Verfügbarkeitsreplikaten (SQL Server)
   In diesem Thema wird beschrieben, wie die Sicherung auf sekundären Replikaten für eine AlwaysOn-Verfügbarkeitsgruppe mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]konfiguriert wird.  
   
 > [!NOTE]  
->  Eine Einführung zur Sicherung auf sekundären Replikaten finden Sie unter [ aktive sekundäre Replikate: Sicherung auf sekundären Replikaten (AlwaysOn-Verfügbarkeitsgruppen)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+>  Eine Einführung in die Sicherung auf sekundären Replikaten, finden Sie unter [ aktive sekundäre Replikate: Sicherung auf sekundären Replikaten (AlwaysOn-Verfügbarkeitsgruppen)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
  
   
@@ -119,9 +118,9 @@ ms.locfileid: "36059904"
   
 2.  Konfigurieren Sie optional die Sicherungspriorität jedes Verfügbarkeitsreplikats, das Sie hinzufügen oder ändern. Diese Priorität wird von der Serverinstanz verwendet, von der das primäre Replikat gehostet wird, um zu entscheiden, welches Replikat eine Anforderung für die automatisierte Sicherung in einer Datenbank in der Verfügbarkeitsgruppe verarbeiten soll (das Replikat mit höchster Priorität wird ausgewählt). Die Priorität kann einer beliebigen Zahl zwischen 0 und einschließlich 100 entsprechen. Die Priorität 0 gibt an, dass das Replikat nicht für die Verarbeitung von Sicherungsanforderungen in Betracht gezogen wird.  Die Standardeinstellung ist 50.  
   
-     Wenn Sie einer Verfügbarkeitsgruppe ein Verfügbarkeitsreplikat hinzufügen, verwenden Sie das `New-SqlAvailabilityReplica`-Cmdlet. Wenn Sie ein vorhandenes Verfügbarkeitsreplikat ändern, verwenden Sie das `Set-SqlAvailabilityReplica`-Cmdlet. In beiden Fällen geben die `BackupPriority` *n* Parameter, wobei *n* ist ein Wert zwischen 0 und 100.  
+     Wenn Sie einer Verfügbarkeitsgruppe ein Verfügbarkeitsreplikat hinzufügen, verwenden Sie das `New-SqlAvailabilityReplica`-Cmdlet. Wenn Sie ein vorhandenes Verfügbarkeitsreplikat ändern, verwenden Sie das `Set-SqlAvailabilityReplica`-Cmdlet. In beiden Fällen geben die `BackupPriority` *n* -Parameter, in denen *n* ist ein Wert zwischen 0 und 100.  
   
-     Beispielsweise legt der folgende Befehl die sicherungspriorität des verfügbarkeitsreplikats `MyReplica` auf `60`.  
+     Der folgende Befehl legt z. B. die sicherungspriorität des verfügbarkeitsreplikats `MyReplica` zu `60`.  
   
     ```  
     Set-SqlAvailabilityReplica -BackupPriority 60 `  
@@ -161,7 +160,7 @@ ms.locfileid: "36059904"
     ```  
   
 > [!NOTE]  
->  Um die Syntax eines Cmdlets anzuzeigen, verwenden die `Get-Help` Cmdlet in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+>  Um die Syntax eines Cmdlets anzuzeigen, verwenden die `Get-Help` -Cmdlet in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Einrichten und Verwenden des SQL Server PowerShell-Anbieters**  
   
@@ -199,7 +198,7 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Wiederherstellung im Notfall](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Notfallwiederherstellung](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [SQL Server AlwaysOn-Teamblog: Der offizielle SQL Server AlwaysOn-Teamblog](http://blogs.msdn.com/b/sqlalwayson/)  
   

@@ -1,5 +1,5 @@
 ---
-title: MoveWithDescendants-Element (XMLA) | Microsoft Docs
+title: MoveWithDescendants-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - MoveWithDescendants element
 ms.assetid: d02285b6-1801-4da9-8e2b-9ab008e25558
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 975044359f2855f8cced46ca2045c2c397e4234b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b75fffd4d923b7593f403ae2268b980a5ab6de6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060558"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332570"
 ---
 # <a name="movewithdescendants-element-xmla"></a>MoveWithDescendants-Element (XMLA)
   Gibt an, ob die Nachfolger der Attributelemente auch vom übergeordneten Element aktualisiert [Update](../xml-elements-commands/update-element-xmla.md) Befehl.  
@@ -64,7 +64,7 @@ ms.locfileid: "36060558"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `MoveWithDescendants` Element bestimmt, ob der `Update` Befehl sollte nicht nur die identifizierten Attributelemente Aktualisieren der [Attribute](attributes-element-xmla.md) -Element, sondern auch die Nachfolger dieser Attributelemente sein werden ebenfalls aktualisiert.  
+ Die `MoveWithDescendants` Element bestimmt, ob die `Update` Befehl sollte nicht nur die identifizierten Attributelemente aktualisieren die [Attribute](attributes-element-xmla.md) -Element, sondern auch die Nachfolger dieser Attributelemente werden sollen ebenfalls aktualisiert.  
   
 > [!NOTE]  
 >  Dieses Element gilt nur für Attributelemente in Über-/Unterordnungshierarchien.  

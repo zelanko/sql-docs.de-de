@@ -1,5 +1,5 @@
 ---
-title: Editor für SQL Server Objects Task (Seite Objekte) übertragen | Microsoft Docs
+title: Editor für SQL Server Objects Task (Seite Objekte) übertragen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfersqlserverobjects.objects.f1
 helpviewer_keywords:
 - Transfer SQL Server Objects Task Editor
 ms.assetid: 8cc09118-70ac-4013-8308-d87f8411ca0c
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bbab3d5615a725d18f1d074969144a08abb6ce52
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 189da98d8c0fd6f9a114ea6213185db363539117
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148161"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219630"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>Editor für den Task 'SQL Server-Objekte übertragen' (Seite Objekte)
   Verwenden Sie die Seite **Objekte** des Dialogfelds **Editor für den Task 'SQL Server-Objekte übertragen'** , um die Eigenschaften für das Kopieren eines oder mehrerer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Objekte von einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in eine andere anzugeben. Tabellen, Sichten, gespeicherte Prozeduren und benutzerdefinierte Funktionen sind beispielsweise [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Objekte, die Sie kopieren können. Weitere Informationen zu diesem Task finden Sie unter [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md).  

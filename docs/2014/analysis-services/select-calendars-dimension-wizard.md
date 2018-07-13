@@ -1,5 +1,5 @@
 ---
-title: Kalender auswählen (Dimensions-Assistent) | Microsoft Docs
+title: Wählen Sie die Kalender (Dimensions-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.serverSpecialCalendars.f1
 ms.assetid: 6e28a020-2586-4b13-9333-b499fb1b33af
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6796c7c3064adc65982b1d5aaec005249e224cae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7166b39dd5cc9d8a2a4cbb6da1c8f44d49181d46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057887"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245590"
 ---
 # <a name="select-calendars-dimension-wizard"></a>Kalender auswählen (Dimensions-Assistent)
   Auf der Seite **Kalender auswählen** können Sie für eine gegebene Zeitdimension zusätzliche Hierarchien zur Darstellung von Geschäfts-, Berichts-, Produktions- oder ISO 8601-Kalendern (International Organization for Standardization, Internationale Organisation für Normung) erstellen.  
@@ -54,7 +54,7 @@ ms.locfileid: "36057887"
 > [!NOTE]  
 >  Diese Option ist nur bei Auswahl von **Berichtskalender (oder Marketingkalender)** verfügbar.  
   
- **: Woche nach Monat-Muster**  
+ **Woche nach Monat-Muster**  
  Wählen Sie das Muster Woche nach Monat für den Berichtskalender aus.  
   
 > [!NOTE]  

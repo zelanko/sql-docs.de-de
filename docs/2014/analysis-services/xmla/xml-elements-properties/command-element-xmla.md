@@ -1,5 +1,5 @@
 ---
-title: Command-Element (XMLA) | Microsoft Docs
+title: Befehls-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - Command element
 ms.assetid: 9abc14df-7cbe-46bc-ba0f-f0691c19afad
 caps.latest.revision: 31
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: b054c940ae68c8bc7b252349a538777757283da4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: f9b461e0ec565776ead270902cf6c01ebe7409d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059440"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332240"
 ---
 # <a name="command-element-xmla"></a>Command-Element (XMLA)
   Enthält den Befehl ausgeführt werden soll die [Execute](../xml-elements-methods-execute.md) Methode.  
@@ -112,10 +112,10 @@ ms.locfileid: "36059440"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Ausführen](../xml-elements-methods-execute.md)|  
-|Untergeordnete Elemente|[Alter](../xml-elements-commands/alter-element-xmla.md), [Backup](../xml-elements-commands/backup-element-xmla.md), [Batch](../xml-elements-commands/batch-element-xmla.md), [BeginTransaction](../xml-elements-commands/begintransaction-element-xmla.md), [Cancel](../xml-elements-commands/cancel-element-xmla.md), [ClearCache](../xml-elements-commands/clearcache-element-xmla.md), [CommitTransaction](../xml-elements-commands/committransaction-element-xmla.md), [Create](../xml-elements-commands/create-element-xmla.md), [Delete](../xml-elements-commands/delete-element-xmla.md), [DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md), [Drop](../xml-elements-commands/drop-element-xmla.md), [Insert](../xml-elements-commands/insert-element-xmla.md), [Lock](../xml-elements-commands/lock-element-xmla.md), [MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md), [NotifyTableChange](../xml-elements-commands/notifytablechange-element-xmla.md), [Process](../xml-elements-commands/process-element-xmla.md), [Restore](../xml-elements-commands/restore-element-xmla.md), [RollbackTransaction](../xml-elements-commands/rollbacktransaction-element-xmla.md), [SetPasswordEncryptionKey](http://msdn.microsoft.com/en-us/fb262737-f0f4-4441-985e-3b2a94d00a9e), [Statement](../xml-elements-commands/statement-element-xmla.md), [Subscribe](../xml-elements-commands/subscribe-element-xmla.md), [Synchronize](../xml-elements-commands/synchronize-element-xmla.md), [Unlock](../xml-elements-commands/unlock-element-xmla.md), [Update](../xml-elements-commands/update-element-xmla.md), [UpdateCells](../xml-elements-commands/drop-element-xmla.md)|  
+|Untergeordnete Elemente|[Alter](../xml-elements-commands/alter-element-xmla.md), [Sicherung](../xml-elements-commands/backup-element-xmla.md), [Batch](../xml-elements-commands/batch-element-xmla.md), [BeginTransaction](../xml-elements-commands/begintransaction-element-xmla.md), [Abbrechen](../xml-elements-commands/cancel-element-xmla.md), [ClearCache](../xml-elements-commands/clearcache-element-xmla.md) , [CommitTransaction](../xml-elements-commands/committransaction-element-xmla.md), [erstellen](../xml-elements-commands/create-element-xmla.md), [löschen](../xml-elements-commands/delete-element-xmla.md), [DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md), [löschen](../xml-elements-commands/drop-element-xmla.md), [Einfügen](../xml-elements-commands/insert-element-xmla.md), [Sperre](../xml-elements-commands/lock-element-xmla.md), [MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md), [NotifyTableChange](../xml-elements-commands/notifytablechange-element-xmla.md), [Prozess](../xml-elements-commands/process-element-xmla.md), [Wiederherstellen](../xml-elements-commands/restore-element-xmla.md), [RollbackTransaction](../xml-elements-commands/rollbacktransaction-element-xmla.md), [SetPasswordEncryptionKey](http://msdn.microsoft.com/en-us/fb262737-f0f4-4441-985e-3b2a94d00a9e), [Anweisung](../xml-elements-commands/statement-element-xmla.md), [ Abonnieren](../xml-elements-commands/subscribe-element-xmla.md), [synchronisieren](../xml-elements-commands/synchronize-element-xmla.md), [nicht entsperren](../xml-elements-commands/unlock-element-xmla.md), [Update](../xml-elements-commands/update-element-xmla.md), [UpdateCells](../xml-elements-commands/drop-element-xmla.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `Command` Element wird verwendet, durch die `Execute` Methode, um Befehle zu einer Datenquelle weiterzuleiten. Während die XML for Analysis (XMLA) 1.1-Spezifikation nur unterstützt die `Statement` Befehl [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] unterstützt viele neue XMLA-Befehle. Weitere Informationen zu den von unterstützten XMLA-Befehl [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], finden Sie unter [Befehle &#40;XMLA&#41;](../xml-elements-commands/xml-elements-commands.md).  
+ Die `Command` Element dient der `Execute` Methode, um Befehle zu einer Datenquelle weiterzuleiten. Während die XML for Analysis (XMLA) 1.1-Spezifikation nur unterstützt die `Statement` Befehl [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] unterstützt viele neue XMLA-Befehle. Weitere Informationen zu den XMLA-Befehl, der von unterstützten [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], finden Sie unter [Befehle &#40;XMLA&#41;](../xml-elements-commands/xml-elements-commands.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [XML-Datentypen &#40;XMLA&#41;](../xml-data-types/xml-data-types-xmla.md)   

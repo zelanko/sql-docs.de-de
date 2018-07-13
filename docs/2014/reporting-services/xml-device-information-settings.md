@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XML [Reporting Services], rendering
 - device information settings [Reporting Services], PDF rendering
 ms.assetid: a32e83fe-c10e-4ebd-8975-5be7dcc422e7
 caps.latest.revision: 44
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b60e0abfbd6a0487fbc264a824c80ae8a5db60b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 27fce37572bdfcc8afce8c88c80baa8e8065dc1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058228"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268126"
 ---
 # <a name="xml-device-information-settings"></a>XML-Geräteinformationseinstellungen
   In der folgenden Tabelle werden die Geräteinformationseinstellungen zum Rendern in das XML-Format aufgeführt.  

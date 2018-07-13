@@ -1,5 +1,5 @@
 ---
-title: Semiadditives Verhalten definieren | Microsoft Docs
+title: Semiadditives Verhalten definieren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semiadditive
 - Business Intelligence enhancements [Analysis Services], semiadditive behavior
 - measures [Analysis Services], semiadditive
 ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8aa76cf01672dec4edde7ded1049efbd2035839f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5a96921b37affe35fcb4344a66ef36aaf26cadeb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061037"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265416"
 ---
 # <a name="define-semiadditive-behavior"></a>Semiadditives Verhalten definieren
   Semiadditive Measures, die nicht in allen Dimensionen einheitlich aggregiert werden, kommen in vielen Geschäftsszenarien sehr häufig vor. Jeder Cube, der auf Momentaufnahmen von Bilanzen über einen Zeitraum basiert, weist dieses Problem auf. Sie finden diese Momentaufnahmen in Anwendungen, die mit Wertpapiere, Kontostände, Budgetierung, Humanressourcen, Versicherungspolicen, Schadensansprüchen und viele andere Geschäftsfelder behandeln.  
@@ -38,7 +38,7 @@ ms.locfileid: "36061037"
  Auf der Seite **Semiadditives Verhalten definieren** des Assistenten können Sie durch Auswählen einer der folgenden Optionen auswählen, wie semiadditiv definiert werden soll:  
   
  **Semiadditives Verhalten deaktivieren**  
- Deaktiviert das semiadditive Verhalten für einen Cube, für den vorher semiadditives Verhalten definiert war. Diese Auswahl setzt ein Measure zum `SUM` , wenn es auf einen der folgenden aggregationsfunktionstypen festgelegt ist:  
+ Deaktiviert das semiadditive Verhalten für einen Cube, für den vorher semiadditives Verhalten definiert war. Diese Option setzt ein Measure zum `SUM` , wenn sie auf eines der folgenden aggregationsfunktionstypen festgelegt ist:  
   
 -   By Account  
   

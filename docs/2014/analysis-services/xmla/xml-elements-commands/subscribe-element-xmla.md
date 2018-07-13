@@ -1,5 +1,5 @@
 ---
-title: Subscribe-Element (XMLA) | Microsoft Docs
+title: Subscribe-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Subscribe command
 ms.assetid: aad50dd7-44d4-4d83-a973-187f9aed35ec
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 94caa1327febf0c7fd5a489c7558ea793977d027
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 97b473820ee809f5a606e8bb9f30be6e315a2801
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058568"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247260"
 ---
 # <a name="subscribe-element-xmla"></a>Subscribe-Element (XMLA)
   Abonniert eine Ablaufverfolgung und gibt ein Rowset, das die Ablaufverfolgungsereignisse einer [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz.  
@@ -64,11 +64,11 @@ ms.locfileid: "36058568"
 |Untergeordnete Elemente|[Objekt](../xml-elements-properties/object-element-xmla.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `Subscribe` Befehl abonniert und Streams Sichern eines Rowsets aus einer angegebenen Ablaufverfolgung für eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz. Wenn ein Objekt als die Ablaufverfolgung, in angegeben ist der `Object` -Element, ein Fehler auftritt.  
+ Die `Subscribe` -Befehl abonniert und wiedergibt ein Rowset einer bestimmten Ablaufverfolgung auf einer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz. Wenn ein anderes Objekt als eine Ablaufverfolgung, in angegeben ist der `Object` -Element, ein Fehler auftritt.  
   
  Wenn das `Object`-Element nicht angegeben wird, wird eine Sitzungsablaufverfolgung definiert und auf der [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Instanz abonniert. Die Sitzungsablaufverfolgung gibt einen festen Satz von Ablaufverfolgungsereignissen der aktuellen Sitzung zurück.  
   
- Der Rowset-Datenstrom zurückgegeben, die mit diesem Befehl wird beendet, wenn die Clientanwendung die Verbindung geschlossen wird die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz, oder, wenn die Sitzung auf dem die `Subscribe` Befehl wird ausgeführt, wird beendet.  
+ Der Rowset-Datenstrom, der von diesem Befehl zurückgegeben wird beendet, wenn die Clientanwendung die Verbindung mit schließt die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Instanz oder, wenn die Sitzung auf dem die `Subscribe` Befehl ausgeführt wird wird beendet.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Befehle &#40;XMLA&#41;](xml-elements-commands.md)  

@@ -1,5 +1,5 @@
 ---
-title: Problembehandlung bei SQL Server-Hilfsprogramm | Microsoft Docs
+title: Problembehandlung bei SQL Server-Hilfsprogramm | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f5f47c2a-38ea-40f8-9767-9bc138d14453
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0bc94d8644d1a0015829b730d5556b967c6b8c93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 81b35d1af874c97bf2e61e9c1234d7ad7876e229
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059882"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328140"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>Problembehandlung beim SQL Server-Hilfsprogramm
-  Die Behebung von Problemen mit dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Hilfsprogramm kann das Auflösen eines fehlgeschlagenen Vorgangs zur Registrierung einer Instanz von SQL Server mit einem UCP, die Behebung von Fehlern bei Datensammlungen, die zu grauen Symbolen in der Listenansicht der verwalteten Instanzen auf einem UCP führen, die Abhilfe für Leistungsengpässe oder das Beheben von Problemen mit der Ressourcenintegrität umfassen. Weitere Informationen zum Eindämmen von identifizierten Problemen mit der ressourcenintegrität eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP, finden Sie unter [Problembehandlung für SQL Server-Ressourcenintegrität &#40;SQL Server-Hilfsprogramm&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
+  Die Behebung von Problemen mit dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Hilfsprogramm kann das Auflösen eines fehlgeschlagenen Vorgangs zur Registrierung einer Instanz von SQL Server mit einem UCP, die Behebung von Fehlern bei Datensammlungen, die zu grauen Symbolen in der Listenansicht der verwalteten Instanzen auf einem UCP führen, die Abhilfe für Leistungsengpässe oder das Beheben von Problemen mit der Ressourcenintegrität umfassen. Weitere Informationen zum Beheben von Problemen mit der ressourcenintegrität identifizierte eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ucp stammen, finden Sie unter [Problembehandlung bei SQL Server-Ressourcenintegrität &#40;SQL Server-Hilfsprogramm&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
   
 ## <a name="failed-operation-to-enroll-an-instance-of-sql-server-into-a-sql-server-utility"></a>Fehlgeschlagener Vorgang, eine Instanz von SQL Server in ein SQL Server-Hilfsprogramm zu registrieren  
- Wenn Sie eine Verbindung mit der Instanz von herstellen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Registrierung über [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentifizierung, und Sie ein Proxykonto angeben, die zu einer anderen Active Directory-Domäne als die Domäne gehört, in dem der UCP befindet, ist die instanzüberprüfung erfolgreich, aber die Registrierungsvorgang schlägt mit der folgenden Fehlermeldung fehl:  
+ Wenn Sie eine Verbindung mit der Instanz von herstellen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Registrierung über [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentifizierung, und Sie ein Proxykonto angeben, die zu einer anderen Active Directory-Domäne als der Domäne gehört, in dem der UCP befindet, instanzüberprüfung erfolgreich, aber die Registrierungsvorgang schlägt mit der folgenden Fehlermeldung fehl:  
   
  Beim Ausführen einer Transact-SQL-Anweisung oder eines Batches ist eine Ausnahme aufgetreten. (Microsoft.SqlServer.ConnectionInfo)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36059882"
  Die Umgehung für dieses Problem besteht darin, eine Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] herzustellen, um sich in das [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Hilfsprogramm mit "sa" zu registrieren und ein Proxykonto bei "Domain_1" bereitzustellen.  
   
 ## <a name="failed-wmi-validation"></a>Fehlgeschlagene WMI-Überprüfung  
- Wenn WMI nicht ordnungsgemäß auf einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] konfiguriert wird, zeigen die Vorgänge für das Erstellen des UCPs und die Registrierung verwalteter Instanzen eine Warnung an, der Vorgang wird jedoch nicht blockiert. Darüber hinaus, wenn Sie ändern die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agent-Kontokonfiguration, damit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent ist nicht berechtigt, die erforderlichen WMI-Klassen, die Datensammlung auf der betroffenen verwalteten Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nicht zum UCP hoch. Dies führt im UCP zu grauen Symbolen.  
+ Wenn WMI nicht ordnungsgemäß auf einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] konfiguriert wird, zeigen die Vorgänge für das Erstellen des UCPs und die Registrierung verwalteter Instanzen eine Warnung an, der Vorgang wird jedoch nicht blockiert. Darüber hinaus, wenn Sie ändern die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent-Kontokonfiguration, damit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent ist nicht berechtigt, die erforderlichen WMI-Klassen, die Datensammlung in der betroffenen verwalteten Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nicht an den UCP hochgeladen werden. Dies führt im UCP zu grauen Symbolen.  
   
  Die fehlgeschlagene Datensammlung führt in der UCP-Listenansicht für betroffene verwaltete Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu grauen Statussymbolen. Der Auftragsverlauf auf der verwalteten Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zeigt an, dass sysutility_mi_collect_and_upload bei Schritt 2 (Phasendaten haben sich von PowerShell-Skript gesammelt) fehlschlägt.  
   
@@ -54,11 +54,11 @@ ms.locfileid: "36059882"
   
  Die Befehlsausführung wurde beendet, da die Shellvariable "ErrorActionPreference" auf Beenden festgelegt wurde: Zugriff verweigert.  
   
- Fehler: \<Datum / Uhrzeit (MM/TT/JJJJ hh: mm:) >: Ausnahme beim Sammeln von CPU-Eigenschaften.  Eine WMI-Abfrage könnte fehlgeschlagen sein.  WARNUNG:  
+ Fehler: \<Datum / Uhrzeit (MM/TT/JJJJ hh: mm:) >: hat Ausnahme beim Sammeln von CPU-Eigenschaften abgefangen.  Eine WMI-Abfrage könnte fehlgeschlagen sein.  WARNUNG:  
   
  Um dieses Problem zu beheben, überprüfen Sie die folgenden Konfigurationseinstellungen:  
   
--   Der SQL Server-Agent-Dienst muss unter Windows Server 2003, Teil der Gruppe "Systemmonitorbenutzer" auf der verwalteten Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+-   Unter Windows Server 2003, SQL Server-Agent-Diensts muss Mitglied der Windows-Leistungsüberwachung-Gruppe auf die verwaltete Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 -   Der WMI-Dienst muss auf der verwalteten Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] aktiviert und konfiguriert sein.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36059882"
   
 -   Win32_LogicalDisk  
   
- Sie können das Get-WmiObject PowerShell Cmdlet auf jede der Klassen anwenden, um zu überprüfen, dass auf jede Klasse zugegriffen werden kann. Führen Sie die folgenden Cmdlets auf der verwalteten Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
+ Sie können das Get-WmiObject PowerShell Cmdlet auf jede der Klassen anwenden, um zu überprüfen, dass auf jede Klasse zugegriffen werden kann. Führen die folgenden Cmdlets für die verwaltete Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
 ```  
 Get-WmiObject Win32_MountPoint -ErrorAction Stop | Out-Null  
@@ -94,15 +94,15 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
  Weitere Informationen zum Durchführen einer Problembehandlung für WMI finden Sie unter [Problembehandlung bei WMI](http://go.microsoft.com/fwlink/?LinkId=178250). Beachten Sie, dass Abfragen an diese SQL Server-Hilfsprogrammvorgänge lokal ausgeführt werden, so dass DCOM und Remoteproblembehandlungsinhalte nicht gültig sind.  
   
 ## <a name="failed-data-collection"></a>Fehlerhafte Datensammlung  
- Wenn [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Hilfsprogramm datensammlungsereignissen ein Fehler auftritt, sollten Sie folgenden Möglichkeiten:  
+ Wenn [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Datensammlungsereignisse mehr Dienstprogramm ein Fehler auftreten, sollten Sie die folgenden Möglichkeiten:  
   
 -   Ändern Sie keine Eigenschaften des Sammlungssatzes "Hilfsprogramminformationen" in einer verwalteten Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], und aktivieren/deaktivieren Sie die Datensammlung nicht manuell, da die Datensammlung von einem Hilfsprogramm-Agentauftrag gesteuert wird.  
   
 -   Fehlgeschlagene oder nicht unterstützte WMI-Überprüfung. Weitere Informationen finden Sie im Abschnitt "Fehlgeschlagene WMI-Überprüfung" weiter oben in diesem Thema.  
   
--   Aktualisieren von Daten in der Listenansicht verwalteter Instanzen als Daten in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Blickpunkte des Hilfsprogramm nicht automatisch aktualisiert werden. Um Daten zu aktualisieren, Maustaste die **verwaltete Instanzen** Knoten in der **Hilfsprogramm-Explorer-Navigationsbereich** Bereich Wählen Sie dann **aktualisieren**, oder mit der rechten Maustaste auf die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in der Listenansicht Instanznamen, und wählen Sie dann **aktualisieren**. Nachdem eine Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bei einem UCP registriert wurde, kann es bis zu 30 Minuten dauern, bis die ersten Daten im Inhaltsbereich des Hilfsprogramm-Explorers im Dashboard und in den Blickpunkten angezeigt werden.  
+-   Aktualisieren von Daten in die Listenansicht verwalteter Instanzen angezeigt, wenn sich Daten in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Hilfsprogramm Standpunkte wird nicht automatisch aktualisiert. Um Daten zu aktualisieren, Informationen zu diesem mit der rechten Maustaste die **verwaltete Instanzen** Knoten in der **Hilfsprogramm-Explorer-Navigationsbereich** Bereich, wählen Sie dann **aktualisieren**, oder mit der rechten Maustaste auf die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Instanzname in der Liste angezeigt, und wählen Sie dann **aktualisieren**. Nachdem eine Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bei einem UCP registriert wurde, kann es bis zu 30 Minuten dauern, bis die ersten Daten im Inhaltsbereich des Hilfsprogramm-Explorers im Dashboard und in den Blickpunkten angezeigt werden.  
   
--   SQL Server-Konfigurations-Manager verwenden, um zu überprüfen, ob die Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgeführt wird.  
+-   Verwenden Sie SQL Server-Konfigurations-Manager, um zu überprüfen, ob die Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgeführt wird.  
   
 -   Wenn die Datensammlung oder das Hochladen von Daten aufgrund von Timeoutproblemen scheitern, aktualisieren Sie die Funktion dbo.fn_sysutility_mi_get_collect_script() in der MSDB-Datenbank. Fügen Sie insbesondere in der Funktion "Invoke-BulkCopyCommand()" die folgende Zeile hinzu:  
   
@@ -128,7 +128,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   Der SQL Server-Browserdienst auf dem UCP sollte gestartet werden und für den automatischen Start konfiguriert sein. Wenn die Verwendung des SQL Server-Browserdiensts in Ihrer Organisation verhindert wird, führen Sie die folgenden Schritte aus, damit eine verwaltete Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eine Verbindung mit dem UCP herstellen kann:  
   
-    1.  In der Windows-Taskleiste auf die verwaltete Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], klicken Sie auf **starten**, klicken Sie dann auf **ausführen...** .  
+    1.  Klicken Sie auf der Windows-Taskleiste der verwalteten Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], klicken Sie auf **starten**, klicken Sie dann auf **ausführen...** .  
   
     2.  Geben Sie im dafür vorgesehenen Feld **cliconfg.exe**ein, und klicken Sie auf OK.  
   
@@ -150,13 +150,13 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     11. Klicken Sie auf **OK** , um die Änderungen zu speichern.  
   
-    12. Wiederholen Sie diese Schritte für jede verwaltete Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , verbindet sich mit einem UCP, in dem der SQL Server-Browser-Dienst ist nicht aktiviert.  
+    12. Wiederholen Sie diese Schritte für jede verwaltete Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , verbindet sich mit einem UCP, in dem die SQL Server-Browser-Dienst ist nicht aktiviert.  
   
 -   Stellen Sie sicher, dass verwaltete Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mit dem Netzwerk verbunden sind.  
   
 -   Wenn Datenbanken mit dem gleichen Namen, aber unterschiedlichen Einstellungen im Hinblick auf die Berücksichtigung von Groß- und Kleinschreibung für eine verwaltete Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vorhanden sind, kann die Datenauflistung fehlschlagen. Eine Datenbank mit dem Namen "MYDATABASE" könnte z. B. Integritätszustände für eine Datenbank mit dem Namen "MYDATABASE" anzeigen. Bei diesem Szenario wird kein Fehler generiert. Die fehlgeschlagene Datensammlung kann auch für andere im UCP angezeigte Objekte aus Konflikten bei der Groß- und Kleinschreibung im UCP stammen, wie Datenbankdatei- und Dateigruppennamen.  
   
--   Wenn eine verwaltete Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf einem Windows Server 2003-Computer gehostet wird, muss das [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Agent-Dienstkonto der Sicherheitsgruppe Systemmonitorbenutzer oder der lokalen Gruppe Administratoren angehören. Andernfalls meldet die Datensammlung den Fehler, dass der Zugriff verweigert wurde. Hinzufügen einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agent-Dienstkonto der Sicherheitsgruppe Systemmonitorbenutzer gehen Sie folgendermaßen vor:  
+-   Wenn eine verwaltete Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf einem Windows Server 2003-Computer gehostet wird, muss das [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Agent-Dienstkonto der Sicherheitsgruppe Systemmonitorbenutzer oder der lokalen Gruppe Administratoren angehören. Andernfalls meldet die Datensammlung den Fehler, dass der Zugriff verweigert wurde. Hinzufügen einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent-Dienstkonto der Sicherheitsgruppe Systemmonitorbenutzer, gehen Sie folgendermaßen vor:  
   
     1.  Erweitern Sie unter **Computerverwaltung**den Eintrag **Lokale Benutzer und Gruppen**, und klicken Sie dann auf **Gruppen**.  
   

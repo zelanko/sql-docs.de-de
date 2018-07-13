@@ -1,5 +1,5 @@
 ---
-title: Optionen (Text-Editor - XML - Registerkarte Allgemein) | Microsoft Docs
+title: Optionen (Text-Editor – XML – Allgemein) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.General
 ms.assetid: 46a9f913-d0b9-40ff-b382-9bbdec7461a6
 caps.latest.revision: 20
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e5d686db29cd4fe7db3c76be22c67a2aacbec3d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7a6a5f53bbccbd0d30aaada30366d01af23a3a5f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060332"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322780"
 ---
 # <a name="options-text-editor---xml---general-page"></a>Optionen (Text-Editor – XML – Seite „Allgemein“)
   Verwenden Sie dieses Dialogfeld, um das allgemeine Bearbeitungsverhalten des XML-Editors ändern, der für die Bearbeitung von XML-Dokumenten verwendet wird. Zum Anzeigen dieser Einstellungen klicken Sie im Menü **Extras** auf **Optionen** , erweitern Sie dann den Unterordner **XML** , und klicken Sie auf **Allgemein**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Festlegen der Optionen an mehreren Stellen  
- Optionen für die XML-Editor auch kann, in festgelegt werden dem die **alle Sprachen/Allgemein** Dialogfeld. Wenn Sie die Dialogfelder **Alle Sprachen** verwenden, um unterschiedliche Optionen für die anderen [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Editoren, z. B. den DMX- oder den MDX-Editor, festzulegen, müssen Sie die Optionen des XML-Editors mithilfe dieses Dialogs zurücksetzen.  
+ Optionen für den XML-Editor auch kann, in festgelegt werden dem die **alle Sprachen/Allgemein** Dialogfeld. Wenn Sie die Dialogfelder **Alle Sprachen** verwenden, um unterschiedliche Optionen für die anderen [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Editoren, z. B. den DMX- oder den MDX-Editor, festzulegen, müssen Sie die Optionen des XML-Editors mithilfe dieses Dialogs zurücksetzen.  
   
 ## <a name="statement-completion"></a>Anweisungsabschluss  
  **Member automatisch auflisten**  
@@ -36,7 +36,7 @@ ms.locfileid: "36060332"
  **Erweiterte Member ausblenden**  
  Dieses Kontrollkästchen ist nicht verfügbar.  
   
- **Parameterinformationen**  
+ **Informationen zu den Parametern**  
  Wenn dieses Kontrollkästchen aktiviert ist, wird im Editor an allen verfügbaren Parametern links von der Einfügemarke die vollständige Syntax für die aktuelle Deklaration bzw. Prozedur angezeigt. Der nächste zuweisbare Parameter ist fett hervorgehoben.  
   
 ## <a name="settings"></a>Einstellungen  
@@ -52,7 +52,7 @@ ms.locfileid: "36060332"
 > [!NOTE]  
 >  Diese Markierungspfeile werden nicht in den Code eingefügt und auch nicht gedruckt. Sie dienen lediglich als Hinweis.  
   
- **Wenden Sie Ausschneiden/Kopieren Befehle auf leere Zeilen an, wenn keine Auswahl getroffen wurde**  
+ **Wenden Sie Befehle der Bearbeitungsschritte Ausschneiden/Kopieren auf leere Zeilen an, wenn keine Auswahl vorhanden ist**  
  Legt fest, wie sich der Editor verhalten soll, wenn Sie die Einfügemarke in eine Leerzeile setzen und auf **Kopieren** oder **Ausschneiden**klicken, ohne eine Auswahl zu treffen.  
   
  Bei aktiviertem Kontrollkästchen wird die Leerzeile kopiert bzw. ausgeschnitten. Wenn Sie anschließend auf **Einfügen**klicken, wird die Leerzeile eingefügt.  

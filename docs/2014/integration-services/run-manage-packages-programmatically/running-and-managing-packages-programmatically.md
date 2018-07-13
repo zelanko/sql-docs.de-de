@@ -14,13 +14,13 @@ ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
 caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e3e7721296c0d436ad484a1d4bad96caeef83e39
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 659952d44fa2c530a313a4f6bd29cfbfddf9d236
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060138"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239150"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>Programmgesteuerte Ausführung und Verwaltung von Paketen
   Wenn Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete außerhalb der Entwicklungsumgebung verwalten und ausführen müssen, können Sie Pakete programmgesteuert ändern. Dieser Ansatz bietet Ihnen eine Reihe von Optionen:  
@@ -81,7 +81,7 @@ ms.locfileid: "36060138"
  [Programmgesteuertes Erstellen von Paketen](../building-packages-programmatically/building-packages-programmatically.md)  
  Erläutert, wie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete programmgesteuert erstellt, konfiguriert und gespeichert werden können.  
   
-![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben Sie mit Integration Services** <br /> Für die neuesten Downloads, Artikel, Beispiele und Videos von [!INCLUDE[msCoName](../../includes/msconame-md.md)]sowie ausgewählte Lösungen aus der Community finden Sie auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite auf MSDN:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services** <br /> Für die neuesten Downloads, Artikel, Beispiele und Videos von [!INCLUDE[msCoName](../../includes/msconame-md.md)]sowie ausgewählte Lösungen aus der Community finden Sie auf die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite auf MSDN:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server Integration Services](../sql-server-integration-services.md)  

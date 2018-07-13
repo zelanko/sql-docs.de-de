@@ -1,14 +1,13 @@
 ---
-title: Verhaltensänderungen der Volltextsuche | Microsoft Docs
+title: Verhaltensänderungen der Volltextsuche | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], breaking changes
 - behavior changes [full-text search]
@@ -17,25 +16,25 @@ ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
 caps.latest.revision: 39
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 52bfa898e60fc41f436928fd7636c6479a7106d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f136a7016e1b17248a3b547da0561cc3d4b30c68
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058983"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233800"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>Verhaltensänderungen der Volltextsuche
   In diesem Thema werden Verhaltensänderungen der Volltextsuche beschrieben. Ein verändertes Programmverhalten wirkt sich darauf aus, wie Funktionen in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] im Vergleich zu früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]funktionieren oder zusammenwirken.  
   
-## <a name="behavior-changes-in-full-text-search-in-includesssql14includessssql14-mdmd"></a>Verhaltensänderungen der Volltextsuche in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="behavior-changes-in-full-text-search-in-includesssql14includessssql14-mdmd"></a>Verändertes Programmverhalten in der Volltextsuche in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  Informationen werden später bereitgestellt.  
   
-## <a name="behavior-changes-in-full-text-search-in-includesssql11includessssql11-mdmd"></a>Verhaltensänderungen der Volltextsuche in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="behavior-changes-in-full-text-search-in-includesssql11includessssql11-mdmd"></a>Verändertes Programmverhalten in der Volltextsuche in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  Von [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] wird eine neue Version der Wörtertrennungen und der Wortstammerkennungen für amerikanisches Englisch (LCID 1033) und britisches Englisch (LCID 2057) installiert. Sie können jedoch zur früheren Version dieser Komponenten wechseln, wenn Sie das vorherige Verhalten beibehalten möchten. Weitere Informationen finden Sie unter [Ändern der für Englisch (USA) und Englisch (Vereinigtes Königreich) verwendeten Wörtertrennung](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
 ### <a name="new-word-breakers-and-stemmers-installed"></a>Neue Wörtertrennungen und Wortstammerkennungen wurden installiert  
- [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] aktualisiert alle wörtertrennungen und wortstammerkennungen, die von der Volltextsuche und semantische Suche verwendet. Aus Gründen der Konsistenz zwischen dem Inhalt von Indizes und den Ergebnissen von Abfragen empfiehlt es sich, dass Sie vorhandene Volltextindizes wieder auffüllen.  
+ [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] aktualisiert alle wörtertrennungen und wortstammerkennungen, die von der Volltextsuche und semantische Suche verwendet werden. Aus Gründen der Konsistenz zwischen dem Inhalt von Indizes und den Ergebnissen von Abfragen empfiehlt es sich, dass Sie vorhandene Volltextindizes wieder auffüllen.  
   
 1.  Es gibt neue Wörtertrennungen für Englisch. Informationen zum Beibehalten des vorherigen Verhaltens finden Sie unter [Change the Word Breaker Used for US English and UK English](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
@@ -54,7 +53,7 @@ ms.locfileid: "36058983"
   
  In einigen Fällen geben die neuen Komponenten *mehr* Ergebnisse zurück:  
   
-|**Begriff**|**Ergebnisse aus vorheriger wörtertrennung und wortstammerkennung**|**Ergebnisse aus neuer wörtertrennung und wortstammerkennung**|  
+|**Begriff**|**Ergebnisse mit der vorherigen wörtertrennung und wortstammerkennung**|**Ergebnisse mit neuen wörtertrennung und wortstammerkennung**|  
 |--------------|--------------------------------------------------------|---------------------------------------------------|  
 |Katze-Hund|cat<br /><br /> Hund|cat<br /><br /> Katze-Hund<br /><br /> Hund|  
 |cat@dog.com|cat<br /><br /> de<br /><br /> Hund|cat<br /><br /> cat@dog.com<br /><br /> de<br /><br /> Hund|  
@@ -62,7 +61,7 @@ ms.locfileid: "36058983"
   
  In einigen Fällen geben die neuen Komponenten *ebenso viele* Ergebnisse zurück:  
   
-|**Begriff**|**Ergebnisse aus vorheriger wörtertrennung und wortstammerkennung**|**Ergebnisse aus neuer wörtertrennung und wortstammerkennung**|  
+|**Begriff**|**Ergebnisse mit der vorherigen wörtertrennung und wortstammerkennung**|**Ergebnisse mit neuen wörtertrennung und wortstammerkennung**|  
 |--------------|--------------------------------------------------------|---------------------------------------------------|  
 |100$|100$<br /><br /> nn100$|100$<br /><br /> nn100usd|  
 |022|022<br /><br /> nn022|022<br /><br /> nn22|  
@@ -70,9 +69,9 @@ ms.locfileid: "36058983"
   
  In einigen Fällen geben die neuen Komponenten *weniger* Ergebnisse oder Ergebnisse zurück, die möglicherweise nicht von den Anwendungen erwartet werden:  
   
-|**Begriff**|**Ergebnisse aus vorheriger wörtertrennung und wortstammerkennung**|**Ergebnisse aus neuer wörtertrennung und wortstammerkennung**|  
+|**Begriff**|**Ergebnisse mit der vorherigen wörtertrennung und wortstammerkennung**|**Ergebnisse mit neuen wörtertrennung und wortstammerkennung**|  
 |--------------|--------------------------------------------------------|---------------------------------------------------|  
-|jěˊÿqℭžl<br /><br /> *(wenn die Begriffe keine gültigen englischen Zeichen sind)*|‘jěˊÿｑℭžl’|je yq zl|  
+|jěˊÿqℭžl<br /><br /> *(wobei die Begriffe keine gültigen englischen Zeichen sind)*|‘jěˊÿｑℭžl’|je yq zl|  
 |Tabelle|Tabelle<br /><br /> -Tabelle|Tabelle|  
 |Katze-|cat<br /><br /> Katze-|cat|  
 |v-z *(wobei v und z Füllwörter sind)*|*(keine Ergebnisse)*|v-z|  
@@ -102,7 +101,7 @@ ms.locfileid: "36058983"
   
 -   Es wurde ein neuer FDHOST-Startprogrammdienst (MSSQLFDLauncher) hinzugefügt. Weitere Informationen finden Sie unter [Erste Schritte mit der Volltextsuche](../relational-databases/search/get-started-with-full-text-search.md).  
   
--   Volltextindizierung funktioniert mit einer [FILESTREAM](../relational-databases/blob/filestream-sql-server.md) Spalte auf die gleiche Weise, die bei einem `varbinary(max)` Spalte. Die FILESTREAM-Tabelle muss eine Spalte aufweisen, die die Dateinamenerweiterung für jeden FILESTREAM BLOB enthält. Weitere Informationen finden Sie unter [Abfragen mit Volltextsuche](../relational-databases/search/query-with-full-text-search.md),[Konfigurieren und Verwalten von Filtern für die Suche](../relational-databases/search/configure-and-manage-filters-for-search.md) und [sys.fulltext_document_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql).  
+-   Volltextindizierung funktioniert mit einer [FILESTREAM](../relational-databases/blob/filestream-sql-server.md) Spalte auf die gleiche Weise, die mit einem `varbinary(max)` Spalte. Die FILESTREAM-Tabelle muss eine Spalte aufweisen, die die Dateinamenerweiterung für jeden FILESTREAM BLOB enthält. Weitere Informationen finden Sie unter [Abfragen mit Volltextsuche](../relational-databases/search/query-with-full-text-search.md),[Konfigurieren und Verwalten von Filtern für die Suche](../relational-databases/search/configure-and-manage-filters-for-search.md) und [sys.fulltext_document_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql).  
   
      Die Volltext-Engine indiziert den Inhalt der FILESTREAM-BLOBs. Dateien wie beispielsweise Images zu indizieren, ist möglicherweise nicht nützlich. Wenn ein FILESTREAM BLOB aktualisiert wird, wird er neu indiziert.  
   

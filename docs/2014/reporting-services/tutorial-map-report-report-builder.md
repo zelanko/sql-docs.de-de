@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d95395b74de40bcc6f8a93a246deae9c9d799198
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 76795367b5f03e65673468d4af8e7f7c7222e73b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060453"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249740"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Lernprogramm: Kartenbericht (Berichts-Generator)
   In diesem Lernprogramm erfahren Sie mehr über die Kartenfunktionen, mit denen Sie Berichtsdaten vor einem geografischen Hintergrund anzeigen können.  
@@ -35,15 +35,15 @@ ms.locfileid: "36060453"
   
 1.  [Erstellen einer Karte mit einer Polygonebene im Karten-Assistenten](#Map)  
   
-2.  [Hinzufügen einer Kartenpunktebene Geschäftsstandorte anzeigen](#PointLayer)  
+2.  [Hinzufügen einer Kartenpunktebene an anzeigen Store Speicherorte](#PointLayer)  
   
 3.  [Hinzufügen einer Kartenlinienebene, um eine Route anzuzeigen](#LineLayer)  
   
 4.  [Fügen Sie einen Bing Maps-Kachelhintergrund hinzu](#TileLayer)  
   
-5.  [Stellen Sie eine Ebene Transparent](#Transparent)  
+5.  [Transparente Darstellung einer Ebene](#Transparent)  
   
-6.  [Verändern der Countyfarbe basierend auf Nettoumsatz](#Vary)  
+6.  [Verändern der Countyfarbe basierend auf Umsätzen](#Vary)  
   
     1.  [Erstellen Sie eine Beziehung zwischen räumlichen und analytischen Daten](#Relationship)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36060453"
   
     3.  [Formatieren Sie die Daten in der Farbskala als Währung](#ColorScale)  
   
-    4.  [Erstellen Sie eine neue Legende](#NewLegend)  
+    4.  [Erstellen einer neuen Legende](#NewLegend)  
   
     5.  [Zuordnen der Legende und Farbregeln](#Associate)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36060453"
   
 9. [Hinzufügen eines Berichtstitels](#Title)  
   
-10. [Speichern Sie den Bericht](#Save)  
+10. [Speichern des Berichts](#Save)  
   
 > [!NOTE]  
 >  In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst: ein Verfahren zum Erstellen des Datasets und ein Verfahren zum Erstellen einer Tabelle. Im ersten Tutorial dieser Reihe erhalten Sie ausführliche Anweisungen zum Navigieren zu einem Berichtsserver, Auswählen einer Datenquelle, Erstellen eines Datasets und Ausführen des Assistenten: [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
@@ -83,7 +83,7 @@ ms.locfileid: "36060453"
      Das Dialogfeld Erste Schritte wird angezeigt.  
   
     > [!NOTE]  
-    >  Wenn das Dialogfeld erste Schritte nicht, auf die Schaltfläche Berichts-Generator und angezeigt wird Klicken Sie auf **neu**.  
+    >  Wenn das Dialogfeld "Erste Schritte" nicht, über die Schaltfläche Berichts-Generator angezeigt wird Klicken Sie auf **neu**.  
   
 2.  Überprüfen Sie im linken Bereich, ob **Bericht** ausgewählt ist.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36060453"
   
 4.  Klicken Sie auf **Erstellen**.  
   
-5.  **Wählen Sie eine Quelle räumlicher Daten** Seite, überprüfen Sie, ob **kartenkatalog** ausgewählt ist.  
+5.  **Wählen Sie eine Quelle räumlicher Daten** überprüfen Sie, ob Seite **kartenkatalog** ausgewählt ist.  
   
 6.  Erweitern Sie im Kartenkatalog **States by County** unter **USA**, und klicken Sie auf **in New York**.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "36060453"
   
 12. Falls aktiviert, deaktivieren Sie die Option **Einfarbige Karte** .  
   
-13. Aus der **Feld "Daten"** Dropdown-Liste, klicken Sie auf #COUNTYNAME. Im Kartenvorschaubereich im Assistenten werden die folgenden Elemente angezeigt:  
+13. Von der **Datenfeld** Dropdown-Liste, der #COUNTYNAME klicken. Im Kartenvorschaubereich im Assistenten werden die folgenden Elemente angezeigt:  
   
     -   Ein Titel mit dem Text **Kartentitel**  
   
@@ -125,14 +125,14 @@ ms.locfileid: "36060453"
   
      Die Karte wird der Entwurfsoberfläche hinzugefügt.  
   
-15. Klicken Sie auf der Karte, um Sie auszuwählen und Anzeigen der **Kartenebenen**. Die **Kartenebenen** zeigt eine polygonebene vom Ebenentyp **Embedded**. Jedes County ist ein eingebettetes Kartenelement auf dieser Ebene.  
+15. Klicken Sie auf der Karte, um Sie auszuwählen, und zeigen die **Kartenebenen**. Die **Kartenebenen** wird eine polygonebene vom Ebenentyp **eingebettete**. Jedes County ist ein eingebettetes Kartenelement auf dieser Ebene.  
   
     > [!NOTE]  
-    >  Wenn Sie nicht sehen die **Kartenebenen** Bereich er möglicherweise außerhalb der aktuellen Ansicht angezeigt. Verwenden Sie die Bildlaufleiste am unteren Rand des Entwurfsansichtsfensters, um die Ansicht zu ändern. Alternativ können Sie in der **Ansicht** Registerkarte Deaktivieren der **Eigenschaften** oder **Berichtsdaten** Option aus, um weitere entwurfsoberflächenbereich bereitstellen.  
+    >  Wenn Sie nicht sehen die **Kartenebenen** Bereich er möglicherweise außerhalb der aktuellen Ansicht angezeigt. Verwenden Sie die Bildlaufleiste am unteren Rand des Entwurfsansichtsfensters, um die Ansicht zu ändern. Alternativ können Sie in der **Ansicht** Registerkarte die **Eigenschaften** oder **Berichtsdaten** angeben, ob weitere entwurfsoberflächenbereich zu erhalten.  
   
 16. Mit der rechten Maustaste des kartentitels, und klicken Sie dann auf **Titeleigenschaften**.  
   
-17. Ersetzen Sie den Titeltext durch **Umsätze nach Geschäft**.  
+17. Ersetzen Sie den Titeltext durch **Umsätze nach Store**.  
   
 18. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -156,13 +156,13 @@ ms.locfileid: "36060453"
   
 3.  Wählen Sie auf der Seite **Quelle räumlicher Daten auswählen** den Eintrag **SQL Server-Abfrage nach räumlichen Daten**aus, und klicken Sie auf **Weiter**.  
   
-4.  Auf der **wählen Sie ein Dataset mit räumlichen SQL Server-Daten** auf **hinzufügen ein neues Dataset mit räumlichen SQL Server-Daten**, und klicken Sie dann auf **Weiter**.  
+4.  Auf der **wählen Sie ein Dataset mit räumlichen SQL Server-Daten** auf **fügen ein neues Dataset mit räumlichen SQL Server-Daten**, und klicken Sie dann auf **Weiter**.  
   
 5.  Wählen Sie auf der Seite **Verbindung mit einer SQL Server-Datenquelle für räumliche Daten auswählen** eine vorhandene Datenquelle aus, oder navigieren Sie zum Berichtsserver, und wählen Sie eine Datenquelle aus.  
   
 6.  Klicken Sie auf **Weiter**.  
   
-7.  Klicken Sie auf den Entwurf einer Abfrageseite auf **als Text bearbeiten**.  
+7.  Klicken Sie auf den Entwurf einer Abfrageseite **als Text bearbeiten**.  
   
 8.  Fügen Sie den folgenden Text in den Abfragebereich ein:  
   
@@ -203,21 +203,21 @@ ms.locfileid: "36060453"
   
      Das Berichtsdataset mit dem Namen "DataSet1" wird für Sie erstellt. Nachdem Sie den Assistenten abgeschlossen haben, können Sie die zugehörige Feldauflistung in den Berichtsdaten anzeigen.  
   
-11. Auf der **wählen Sie einen räumlichen Daten und Kartenansicht auswählen** Seite, überprüfen Sie, ob die **räumliches Feld** ist `SpatialLocation` und dass die **Ebenentyp** ist **Punkt**. Übernehmen Sie die anderen Standardwerte auf dieser Seite.  
+11. Auf der **räumliche Daten und Kartenansicht auswählen** Seite, überprüfen Sie, ob die **räumliches Feld** ist `SpatialLocation` und die **Ebenentyp** ist **Punkt**. Übernehmen Sie die anderen Standardwerte auf dieser Seite.  
   
      In der Kartensicht werden Kreise angezeigt, die den Standort jedes Geschäfts markieren.  
   
 12. Klicken Sie auf **Weiter**.  
   
-13. Geben Sie einen Kartentyp an, in dem nach analytischen Daten variierende Marker angezeigt werden. Klicken Sie auf der Seite kartenvisualisierung auswählen, auf **analytische Markerkarte**, und klicken Sie dann auf **Weiter**.  
+13. Geben Sie einen Kartentyp an, in dem nach analytischen Daten variierende Marker angezeigt werden. Klicken Sie auf der Seite zuordnen Visualisierung auswählen auf **analytische Markerkarte**, und klicken Sie dann auf **Weiter**.  
   
-14. Auf der **analytisches Dataset auswählen** auf DataSet1. Dieses Dataset enthält sowohl analytische Daten als auch räumliche Daten, die auf der neuen Punktebene angezeigt werden.  
+14. Auf der **analytisches Dataset auswählen** klicken Sie auf "DataSet1". Dieses Dataset enthält sowohl analytische Daten als auch räumliche Daten, die auf der neuen Punktebene angezeigt werden.  
   
 15. Klicken Sie auf **Weiter**.  
   
-16. Auf der **Farbdesign und datenvisualisierung auswählen** Seite löschen der **markerfarben zum Anzeigen von Daten verwenden** aus, und wählen Sie die Option **Markertypen zum Anzeigen von Datenverwenden**.  
+16. Auf der **Farbdesign und datenvisualisierung auswählen** Deaktivieren der **markerfarben zum Anzeigen von Daten verwenden** aus, und wählen Sie die Option **verwenden Markertypen zum Anzeigen von Daten**.  
   
-17. In **Feld "Daten"** Option `[Sum(SellingArea)]` Markertypen variiert ausstellfläche für die Produkte, durch die Größe des Bereichs.  
+17. In **Datenfeld**Option `[Sum(SellingArea)]` Markertypen variieren ausstellfläche für die Produkte, durch die Größe des Bereichs.  
   
 18. Klicken Sie auf **Fertig stellen**.  
   
@@ -225,7 +225,7 @@ ms.locfileid: "36060453"
   
      Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Im Bereich **Kartenebenen** wird eine neue Ebene PointLayer1 mit dem räumlichen Datenquellentyp **DataRegion**angezeigt.  
   
-19. Fügen Sie einen Legendentitel hinzu. Mit der rechten Maustaste des Legendentitels, und klicken Sie dann auf **Legendentiteleigenschaften**.  
+19. Fügen Sie einen Legendentitel hinzu. Mit der rechten Maustaste des Legendentitels und klicken Sie dann auf **Eigenschaften des Kartenlegendentitels**.  
   
 20. Löschen Sie den Titel, und geben **Display Area (Square Feet)**.  
   
@@ -233,7 +233,7 @@ ms.locfileid: "36060453"
   
 22. Zeigen Sie die vom Assistenten festgelegten Standardwerte an. In der **Kartenebenen**mit der rechten Maustaste auf die punktebene, und klicken Sie dann auf **Regel für den Markertyp**.  
   
-     Auf der **allgemeine** Registerkarte Marker sind aufgeführt, in der Reihenfolge, in dem sie in der Legende angezeigt werden. Auf der **Verteilung** Registerkarte, die Anzahl der Unterbereiche ist 5. Auf der **Legende** Registerkarte der Legendentext wird festgelegt, um die Anfangs- und Enddatum in jedem Bereich anzuzeigen.  
+     Auf der **allgemeine** Registerkarte Marker finden Sie in der Reihenfolge, in dem sie in der Legende angezeigt werden. Auf der **Verteilung** Registerkarte, die Anzahl der Unterbereiche ist 5. Auf der **Legende** Registerkarte der Legendentext wird festgelegt, um den Start- und End-Wert in jedem Bereich anzuzeigen.  
   
 23. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -285,7 +285,7 @@ ms.locfileid: "36060453"
   
 14. Klicken Sie auf **Fertig stellen**.  
   
- Die Karte zeigt eine neue linienebene mit räumlichem Datenquellentyp **DataSet**. In diesem Beispiel stammen die räumlichen Daten aus einem Dataset, aber der Linie sind keine analytischen Daten zugeordnet.  
+ Der Karte wird eine neue linienebene mit räumlichem Datenquellentyp **DataSet**. In diesem Beispiel stammen die räumlichen Daten aus einem Dataset, aber der Linie sind keine analytischen Daten zugeordnet.  
   
 ##  <a name="TileLayer"></a> 4. Hinzufügen eines Bing Maps-Kachelhintergrunds  
  Fügen Sie eine Kartenebene hinzu, die einen Bing Maps-Kachelhintergrund anzeigt.  
@@ -294,7 +294,7 @@ ms.locfileid: "36060453"
   
 1.  Wechseln Sie in die Entwurfsansicht.  
   
-2.  Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Klicken Sie auf der Symbolleiste auf **Ebene hinzufügen**![Rs_IconMapAddLayer](../../2014/tutorials/media/rs-iconmapaddlayer.gif "Rs_IconMapAddLayer").  
+2.  Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Klicken Sie auf der Symbolleiste auf **fügen Layer**![Rs_IconMapAddLayer](../../2014/tutorials/media/rs-iconmapaddlayer.gif "Rs_IconMapAddLayer").  
   
 3.  Klicken Sie in der Dropdownliste auf **Kachelebene**.  
   
@@ -352,7 +352,7 @@ ms.locfileid: "36060453"
   
 7.  In **aus räumlichem Dataset**, klicken Sie in der Dropdownliste auf COUNTYNAME.  
   
-8.  In **aus analytischem Dataset**, klicken Sie in der Dropdownliste auf [County].  
+8.  In **aus analytischem Dataset**, aus der Dropdown-Liste, klicken Sie auf [County].  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -362,7 +362,7 @@ ms.locfileid: "36060453"
   
  Jedem County mit einem Geschäft ist eine Farbe zugeordnet, die auf der Farbpalette für das im Assistenten ausgewählte Format basiert.  
   
-###  <a name="ColorRules"></a> 6. Festlegen von Farbregeln für Polygone  
+###  <a name="ColorRules"></a> 6 b. Festlegen von Farbregeln für Polygone  
  Zum Erstellen einer Regel, die die Farbe jedes Countys basierend auf dem Geschäftsumsatz verändert, müssen Sie die Bereichswerte, die Anzahl anzuzeigender Einteilungen innerhalb dieses Bereichs und die zu verwendenden Farben angeben.  
   
 ##### <a name="to-specify-color-rules-for-all-polygons-that-have-associated-data"></a>So geben Sie Farbregeln für alle Polygone mit zugeordneten Daten an  
@@ -404,7 +404,7 @@ ms.locfileid: "36060453"
   
 ##### <a name="to-set-the-format-for-the-color-scale"></a>So legen Sie das Format für die Farbskala fest  
   
-1.  Maustaste auf die Farbskala, und klicken Sie dann auf **Farbskalaeigenschaften**.  
+1.  Mit der rechten Maustaste in der Farbskala, und klicken Sie dann auf **Farbskalaeigenschaften**.  
   
 2.  Klicken Sie auf **Anzahl**.  
   
@@ -427,17 +427,17 @@ ms.locfileid: "36060453"
   
 1.  Wechseln Sie in die Entwurfsansicht.  
   
-2.  Maustaste auf die Karte außerhalb des Viewports aus, und klicken Sie dann auf **Legende hinzufügen**. Der Karte wird eine neue Legende an einer Standardposition hinzugefügt.  
+2.  Mit der rechten Maustaste außerhalb des Viewports, und klicken Sie dann auf **Legende hinzufügen**. Der Karte wird eine neue Legende an einer Standardposition hinzugefügt.  
   
 3.  Mit der rechten Maustaste in der Legende, und klicken Sie dann auf **Legendeneigenschaften**.  
   
-4.  In **Positionsoptionen**, klicken Sie auf den Speicherort, der angibt, wo die Legende relativ zum Viewport angezeigt werden soll. Die Karte auf der Entwurfsoberfläche wird so geändert, dass sie den Effekt der Auswahl anzeigt.  
+4.  In **Positionsoptionen**, klicken Sie auf den Speicherort, der angibt, wo Sie die Legende relativ zum Viewport angezeigt werden soll. Die Karte auf der Entwurfsoberfläche wird so geändert, dass sie den Effekt der Auswahl anzeigt.  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  Klicken Sie auf **Titel** auf die Legende, um den Legendentitel auszuwählen.  
+6.  Klicken Sie auf **Titel** auf die Legende aus, um den Legendentitel auszuwählen.  
   
-7.  Klicken Sie auf **Titel** erneut aus, um Einfügemodus für den Text zu wechseln. Ersetzen Sie **Titel** von **Umsätze (Tausender)**, und klicken Sie dann außerhalb des Texts auf.  
+7.  Klicken Sie auf **Titel** erneut aus, um den Einfügemodus für den Text eingeben. Ersetzen Sie dies **Titel** von **Umsätze (Tausender)**, und klicken Sie dann außerhalb des Texts auf.  
   
  Die Legende wird erweitert, um den Titel anzuzeigen.  
   
@@ -479,7 +479,7 @@ ms.locfileid: "36060453"
   
 4.  Klicken Sie auf **füllen**.  
   
-5.  Stellen Sie sicher, dass der Füllstil **einfarbig.** festgelegt ist. Farbverläufe und Muster gelten für alle Farben.  
+5.  Stellen Sie sicher, dass der Füllstil **Solid.** festgelegt ist. Farbverläufe und Muster gelten für alle Farben.  
   
 6.  In **Farbe**, klicken Sie auf den Pfeil nach unten, und klicken Sie dann auf **Helles Stahlblau**.  
   
@@ -487,16 +487,16 @@ ms.locfileid: "36060453"
   
 8.  Zeigen Sie eine Vorschau des Berichts an.  
   
- Countys ohne zugeordnete Daten werden blau dargestellt. Nur Countys, denen analytische Daten zugeordnet sind, werden in der **Rot** über **Grün** Farben aus der Farbe-Regeln, die Sie angegeben haben.  
+ Countys ohne zugeordnete Daten werden blau dargestellt. Nur Countys, denen analytische Daten zugeordnet sind, werden in der **Red** über **Grün** Farben aus der farbregeln, die Sie angegeben haben.  
   
 ##  <a name="CustomPoint"></a> 7. Hinzufügen eines benutzerdefinierten Punkts  
- Um einen neuen Speicher darzustellen, die noch nicht erstellt wurde, geben Sie einen Punkt, und verwenden Sie die **PIN** Markertyp.  
+ Um einen neuen Speicher darstellen, die noch nicht erstellt wurden, geben Sie einen an, und Verwenden der **PIN** Markertyp.  
   
 #### <a name="to-add-a-custom-point"></a>So fügen Sie einen benutzerdefinierten Punkt hinzu  
   
 1.  Wechseln Sie in die Entwurfsansicht.  
   
-2.  Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Klicken Sie auf der Symbolleiste auf **Ebene hinzufügen**, und klicken Sie dann auf **Punktebene**.  
+2.  Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Klicken Sie auf der Symbolleiste auf **fügen Layer**, und klicken Sie dann auf **Punktebene**.  
   
      Der Karte wird eine neue Punktebene hinzugefügt. Standardmäßig verfügt die Punktebene über den räumlichen Datentyp **Eingebettet**.  
   
@@ -528,7 +528,7 @@ ms.locfileid: "36060453"
   
 3.  Klicken Sie auf **Bezeichnungen**.  
   
-4.  In **Bezeichnungstext**, Typ **neuer laden**.  
+4.  In **Bezeichnungstext**, Typ **neu Store**.  
   
 5.  Klicken Sie unter **Platzierung**auf **Oben**.  
   
@@ -543,7 +543,7 @@ ms.locfileid: "36060453"
   
 #### <a name="to-change-the-viewport"></a>So ändern Sie den Viewport  
   
-1.  Maustaste auf den kartenviewport, und klicken Sie dann auf **Viewporteigenschaften**.  
+1.  Mit der rechten Maustaste des kartenviewports, und klicken Sie dann auf **Eigenschaften des Kartenviewports**.  
   
 2.  Klicken Sie auf **zentrieren und Zoomen**.  
   
@@ -569,7 +569,7 @@ ms.locfileid: "36060453"
   
  Dieser Titel wird am Anfang des Berichts angezeigt. Elemente über dem Berichtshauptteil entsprechen einer Berichtskopfzeile, wenn keine Seitenkopfzeile definiert ist.  
   
-##  <a name="Save"></a> Speichern Sie den Bericht  
+##  <a name="Save"></a> Speichern des Berichts  
   
 #### <a name="to-save-the-report"></a>So speichern Sie den Bericht  
   
@@ -584,9 +584,9 @@ ms.locfileid: "36060453"
 ## <a name="next-steps"></a>Nächste Schritte  
  Damit ist die exemplarische Vorgehensweise für das Hinzufügen einer Karte zum Bericht abgeschlossen.  
   
- Weitere Informationen finden Sie unter [Maps &#40;Berichts-Generator und SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md) und im Blogeintrag [kartographischen Anpassung räumlicher Daten für SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=152771) auf blogs.msdn.com.  
+ Weitere Informationen finden Sie unter [Maps &#40;Berichts-Generator und SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md) und im Blogeintrag [kartografischen Anpassung räumlicher Daten für SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=152771) auf blogs.msdn.com.  
   
- Weitere Lernprogramme finden Sie unter [Lernprogramme &#40;Berichts-Generator&#41;](report-builder-tutorials.md).  
+ Weitere Lernprogramme finden Sie unter [Tutorials &#40;Berichts-Generator&#41;](report-builder-tutorials.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Lernprogramme &#40;Berichts-Generator&#41;](report-builder-tutorials.md)   

@@ -1,5 +1,5 @@
 ---
-title: ProcessingQuery-Element (ASSL) | Microsoft Docs
+title: ProcessingQuery-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProcessingQuery element
 ms.assetid: d18e6f4b-c24c-4f73-8b85-4b6e8a82a695
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a4ade6950de95029d3eea4105bd34f636fd3632a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 01d9ccc0e5e5c376e0d5e7ee08aa42eb0e062b97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057885"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250890"
 ---
 # <a name="processingquery-element-assl"></a>ProcessingQuery-Element (ASSL)
   Enthält den parametrisierten Text der Abfrage, die für eine Benachrichtigung über den inkrementellen Verarbeitungsstatus ausgeführt werden muss.  
@@ -60,9 +60,9 @@ ms.locfileid: "36057885"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Tabelle in der [DataSourceView](../objects/datasourceview-element-assl.md) , verweist der `ProcessingQuery` wird durch das gleichgeordnete Element identifiziert [TableID](id-element-assl.md).  
+ Die Tabelle in der [DataSourceView](../objects/datasourceview-element-assl.md) auf den verwiesen wird durch die `ProcessingQuery` wird durch das gleichgeordnete Element identifiziert [TableID](id-element-assl.md).  
   
- Das Element, das das übergeordnete Element des entspricht `ProcessingQuery` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.IncrementalProcessingNotification>.  
+ Das Element, das dem übergeordneten entspricht `ProcessingQuery` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.IncrementalProcessingNotification>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

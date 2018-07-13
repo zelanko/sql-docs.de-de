@@ -24,13 +24,13 @@ ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 544f0e2a231c2f98e848f2450f1d04f16342083d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: db35f89f79f6dcd5aeb4416dde78fa6308ceef7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059653"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264926"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>Ausführungsplan und Pufferzuordnung
   Vor der Ausführung überprüft der Datenflusstask seine Komponenten und erstellt einen Ausführungsplan für jede Komponentensequenz. Dieser Abschnitt enthält Einzelheiten zum Ausführungsplan, zur Anzeige des Plans und zur Zuweisung von Eingabe- und Ausgabepuffern anhand des Plans.  
@@ -89,6 +89,6 @@ End WorkThread1
   
  Da der Puffer, der einer Komponente bereitgestellt wird, meist über mehr Spalten verfügt als die Komponente in ihren Eingabe- oder Ausgabespaltenauflistungen, können Komponentenentwickler die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSBufferManager100.FindColumnByLineageID%2A>-Methode aufrufen, um eine Spalte im Puffer durch Angabe ihrer `LineageID` zu suchen.  
   
-![Integration Services (kleines Symbol)](../../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben Sie mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services (kleines Symbol)](../../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 534bbcada8b7db3d6a96d57b4f2d4be867676469
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8c3763ac1fa89ae69d905510944e75ec2a10116d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060134"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217990"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>Öffnen von Integration Services-Projekten im Data Quality-Client
-  Die [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] ermöglicht es Ihnen, im Batchmodus ein bereinigungsprojekt auszuführen. Manchmal möchten Sie allerdings die Bereinigungsergebnisse vielleicht in einem Integration Services-Paket überprüfen, wie Sie auch die Bereinigungsergebnisse auf der Registerkarte **Ergebnisse verwalten und anzeigen** einer Bereinigungsaktivität in einem Data Quality-Projekt in DQS überprüfen können. DQS ermöglicht es Ihnen, Integration Services-Projekte nur in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] wie ein beliebiges anderes Data Quality-Projekt im Bildschirm **Projekt öffnen** zu öffnen und eine interaktive Bereinigung der Bereinigungsergebnisse in einem Integration Services-Projekt durchzuführen.  
+  Die [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] ermöglicht es Ihnen, im Batchmodus ein bereinigungsprojekt ausgeführt. Manchmal möchten Sie allerdings die Bereinigungsergebnisse vielleicht in einem Integration Services-Paket überprüfen, wie Sie auch die Bereinigungsergebnisse auf der Registerkarte **Ergebnisse verwalten und anzeigen** einer Bereinigungsaktivität in einem Data Quality-Projekt in DQS überprüfen können. DQS ermöglicht es Ihnen, Integration Services-Projekte nur in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] wie ein beliebiges anderes Data Quality-Projekt im Bildschirm **Projekt öffnen** zu öffnen und eine interaktive Bereinigung der Bereinigungsergebnisse in einem Integration Services-Projekt durchzuführen.  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36060134"
 ####  <a name="Permissions"></a> Berechtigungen  
  Sie müssen die Rolle „dqs_kb_editor“ oder „dqs_kb_operator“ in der Datenbank DQS_MAIN haben, um ein Integration Services-Projekt zu öffnen.  
   
- ![Pfeilsymbol mit Back Link zum Anfang verwendet](../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Back Link zum Anfang verwendet") [In diesem Thema](#Intro)  
+ ![Pfeilsymbol mit Rückverweis auf den obersten](../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Rückverweis auf den obersten") [In diesem Thema](#Intro)  
   
 ##  <a name="Open"></a> Öffnen eines Integration Services-Projekts  
   
@@ -64,10 +64,10 @@ ms.locfileid: "36060134"
   
 6.  Klicken Sie nach dem Exportieren der Daten auf **Fertig stellen** , um das Integration Services-Projekt zu schließen.  
   
- ![Pfeilsymbol mit Back Link zum Anfang verwendet](../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Back Link zum Anfang verwendet") [In diesem Thema](#Intro)  
+ ![Pfeilsymbol mit Rückverweis auf den obersten](../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit Rückverweis auf den obersten") [In diesem Thema](#Intro)  
   
 ## <a name="see-also"></a>Siehe auch  
  [DQS-Bereinigungstransformation](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   
- [Integrationsservices &#40;SSIS&#41; Projekte](../integration-services/integration-services-ssis-projects-and-solutions.md)  
+ [Integrationsdienste &#40;SSIS&#41; Projekte](../integration-services/integration-services-ssis-projects-and-solutions.md)  
   
   

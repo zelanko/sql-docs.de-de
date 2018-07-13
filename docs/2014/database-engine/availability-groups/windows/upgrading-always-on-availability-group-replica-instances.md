@@ -1,30 +1,29 @@
 ---
-title: Upgrade und Update von Verfügbarkeitsgruppenservern bei minimaler Downtime und minimalem Datenverlust | Microsoft Docs
+title: Upgrade und Update von Verfügbarkeitsgruppenservern bei minimaler Downtime und minimalem Datenverlust | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 caps.latest.revision: 7
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: a0e2c87919337ebfec117e4696185b4fe8705218
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: db74916aa24c1dcd3f94fa163ae0ef87697a8fa3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059693"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247026"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>Upgrade und Update von Verfügbarkeitsgruppenservern bei minimaler Downtime und minimalem Datenverlust
   Wenn Sie für SQL Server 2012-Serverinstanzen ein Update oder Upgrade auf ein Service Pack oder eine neuere Version ausführen, können Sie die Downtime einer Verfügbarkeitsgruppe auf nur einen manuellen Failover begrenzen, indem Sie ein sequenzielles Update oder Upgrade ausführen. Beim Upgrade von SQL Server-Versionen wird dieser Vorgang als paralleles Upgrade und beim Update aktueller SQL Server-Versionen anhand von Hotfixes oder Service Packs als paralleles Update bezeichnet.  
   
- Dieses Thema beschränkt sich auf Upgrades/Updates von SQL Server. Verbindung mit dem Betriebssystem Upgrades/Updates, die die hoch verfügbare SQL Server-Instanzen ausgeführt werden, finden Sie unter [clusterübergreifende Migration von AlwaysOn-Verfügbarkeitsgruppen für Upgrades beim Betriebssystem](http://msdn.microsoft.com/library/jj873730.aspx)  
+ Dieses Thema beschränkt sich auf Upgrades/Updates von SQL Server. Betriebssystembezogene Upgrades/Updates, die hoch verfügbare SQL Server-Instanzen ausgeführt werden, finden Sie unter [clusterübergreifende Migration von AlwaysOn-Verfügbarkeitsgruppen für Betriebssystemupgrade](http://msdn.microsoft.com/library/jj873730.aspx)  
   
 ## <a name="rolling-upgradeupdate-best-practices-for-alwayson-availability-groups"></a>Bewährte Verfahren für parallele Upgrades/Updates von AlwaysOn-Verfügbarkeitsgruppen  
  Beachten Sie beim Ausführen von Serverupgrades/-updates die folgenden bewährten Verfahren, um die Downtime und Datenverluste für Verfügbarkeitsgruppen zu minimieren:  

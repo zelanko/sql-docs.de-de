@@ -1,5 +1,5 @@
 ---
-title: Anzeigen einer Reihe mit mehreren Datenbereichen in einem Diagramm (Berichts-Generator und SSRS) | Microsoft Docs
+title: Anzeigen einer Reihe mit mehreren Datenbereichen in einem Diagramm (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: deba57aaef05f5859f7a241fee0a3ca17c8362c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 647aef9c4cc3f06e9482d507791ff4c4fcc23a38
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058236"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251292"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart-report-builder-and-ssrs"></a>Anzeigen einer Reihe mit mehreren Datenbereichen in einem Diagramm (Berichts-Generator und SSRS)
   Ein Diagramm verwendet die niedrigsten und die höchsten Werte einer Reihe, um die Achsenskalierung zu berechnen. Wenn eine Reihe im Diagramm mehr als einen Datenbereich enthält, sind ggf. nicht mehr alle Datenpunkte sichtbar, und es werden nur einige Datenpunkte im Diagramm deutlich angezeigt. Angenommen, ein Bericht zeigt die täglichen Umsatzgesamtbeträge für einen Zeitraum von 30 Tagen an.  

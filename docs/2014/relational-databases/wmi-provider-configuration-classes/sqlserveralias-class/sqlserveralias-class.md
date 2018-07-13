@@ -1,5 +1,5 @@
 ---
-title: SqlServerAlias-Klasse | Microsoft Docs
+title: SqlServerAlias-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SqlServerAlias class
 ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 01e66c9362a8e1c91bd43e4d6821e12f93d23152
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 68976bc9c8683554ac58a0744196ecfa5bc7e689
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057816"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274276"
 ---
 # <a name="sqlserveralias-class"></a>SqlServerAlias-Klasse
   Die [SqlServerAlias Class](sqlserveralias-class.md) -Klasse stellt einen Serververbindungsalias dar.  
@@ -39,7 +39,7 @@ ms.locfileid: "36057816"
   
 -   Die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , mit der der Client verbunden ist, überwacht einen anderen Named Pipe.  
   
- **Hinweis:** der [SqlServerAlias-Klasse](sqlserveralias-class.md) erbt die `Put` Methode von der Provider-Klasse. Allerdings es ist keine Ergebnisse wie angegeben durch die `Provider::Put` Methode. Weitere Informationen finden Sie in der WMI-Dokumentation.  
+ **Hinweis:** der [SqlServerAlias-Klasse](sqlserveralias-class.md) erbt die `Put` Methode aus der Provider-Klasse. Allerdings es ist keine Ergebnisse zurück wie durch die `Provider::Put` Methode. Weitere Informationen finden Sie in der WMI-Dokumentation.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren von Clientprotokollen](http://technet.microsoft.com/library/ms181035.aspx)  

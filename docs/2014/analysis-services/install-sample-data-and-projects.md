@@ -1,5 +1,5 @@
 ---
-title: Installieren Sie für die Analysis Services-mehrdimensionale Modellierung Lernprogramm Sample Data and Projects | Microsoft Docs
+title: Installieren von Beispieldaten und-Projekten für das Analysis Services-Lernprogramm zur mehrdimensionalen Modellierung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 2d1aca34ac45c88452b83444c7287595c22bb453
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4a015f7827b711bf1eb638638a504fd92d886589
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059472"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218270"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Installieren von Beispieldaten und -projekten für das Analysis Services-Lernprogramm zur mehrdimensionalen Modellierung
   Verwenden Sie die Anweisungen und Links in diesem Thema, um alle Daten- und Projektdateien zu installieren, die in den Analysis Services-Lernprogrammen verwendet werden.  
@@ -154,7 +154,7 @@ ms.locfileid: "36059472"
   
 ## <a name="see-also"></a>Siehe auch  
  [Installieren von SQLServer 2014 vom Installations-Assistenten &#40;Setup&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
- [Konfigurieren der Windows-Firewall für den Analysis Services-Zugriff](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
+ [Konfigurieren der Windows-Firewall, damit der Analysis Services-Zugriff](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
  [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
   
   

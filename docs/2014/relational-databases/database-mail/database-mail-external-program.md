@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - external programs [Database Mail]
 - DatabaseMail90.exe
 - Database Mail [SQL Server], external programs
 ms.assetid: bc124164-eb6e-4b7f-bf66-98a3113d02f7
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c94c26e72788478a0e498a782f9ed3117fbb21a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cc14bf4c5128cff5e836c894dbcd74aa8e7a5cc0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060057"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233350"
 ---
 # <a name="database-mail-external-program"></a>Externes Datenbank-E-Mail-Programm
   Die ausführbare Datei für das externe Datenbank-E-Mail-Programm ist **DatabaseMail.exe**und ist im Verzeichnis **MSSQL\Binn** der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation gespeichert. Datenbank-E-Mail verwendet die Service Broker-Aktivierung, um das externe Programm zu starten, wenn E-Mail-Nachrichten zur Verarbeitung vorhanden sind. Datenbank-E-Mail startet eine Instanz des externen Programms. Das externe Programm wird im Sicherheitskontext des Dienstkontos für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt.  

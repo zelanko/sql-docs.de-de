@@ -1,5 +1,5 @@
 ---
-title: Nicht mehr unterstützte Datenbankmodul-Funktionalität in SQLServer 2014 | Microsoft Docs
+title: Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQLServer 2014 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - VIA protocol
 - unsupported features [SQL Server]
@@ -34,15 +34,15 @@ helpviewer_keywords:
 - SET DISABLE_DEF_CNST_CHK
 ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 caps.latest.revision: 93
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 81ceffcd3009906b41316a7a9778a0b38ded7b29
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 648ff85c3061bc7d20408eaae7a14748650e5886
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060561"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218040"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2014
   In diesem Thema werden die [!INCLUDE[ssDE](../includes/ssde-md.md)] -Funktionen beschrieben, die in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]nicht mehr verfügbar sind.  
@@ -59,7 +59,7 @@ ms.locfileid: "36060561"
   
 |Kategorie|Nicht mehr unterstützte Funktion|Ersatz|  
 |--------------|--------------------------|-----------------|  
-|Sichern und Wiederherstellen|**BACKUP {Datenbank &#124; LOG} WITH PASSWORD** und **Sicherung {Datenbank &#124; LOG} WITH MEDIAPASSWORD** werden eingestellt. **RESTORE {DATABASE &#124; LOG} mit [MEDIA] PASSWORD**bleibt als veraltet markiert.|InclusionThresholdSetting|  
+|Sichern und Wiederherstellen|**BACKUP {DATABASE &#124; LOG} WITH PASSWORD** und **Sicherung {Datenbank &#124; LOG} WITH MEDIAPASSWORD** werden eingestellt. **RESTORE {DATABASE &#124; LOG} mit [MEDIA] PASSWORD**bleibt als veraltet markiert werden.|InclusionThresholdSetting|  
 |Sichern und Wiederherstellen|**RESTORE {DATABASE &AMP;#124; LOG}... WITH DBO_ONLY**|**RESTORE {DATABASE &AMP;#124; LOG}...... MIT RESTRICTED_USER**|  
 |Kompatibilitätsgrad|Kompatibilitätsgrad 80|Der Kompatibilitätsgrad der Datenbanken muss mindestens auf 90 festgelegt sein.|  
 |Konfigurationsoptionen|`sp_configure 'user instance timeout'` und `'user instances enabled'`|Verwenden Sie die Funktion Lokale Datenbank. Weitere Informationen finden Sie unter [SqlLocalDB-Hilfsprogramm](../tools/sqllocaldb-utility.md)|  
@@ -77,10 +77,10 @@ ms.locfileid: "36060561"
 |Service Broker-Programmierbarkeit in SMO|Die **Microsoft.SqlServer.Management.Smo.Broker.BrokerPriority** -Klasse implementiert nicht mehr die **Microsoft.SqlServer.Management.Smo.IObjectPermission** Schnittstelle.||  
 |SET-Optionen|`SET DISABLE_DEF_CNST_CHK`|Keine.|  
 |Systemtabellen|sys.database_principal_aliases|Verwenden Sie anstelle von Aliasen Rollen.|  
-|Transact-SQL|`RAISERROR` im Format `RAISERROR integer 'string'` wird eingestellt.|Schreiben Sie Anweisung unter Verwendung der aktuellen **RAISERROR(…)**  Syntax.|  
+|Transact-SQL|`RAISERROR` im Format `RAISERROR integer 'string'` wird eingestellt.|Schreiben Sie die Anweisung unter Verwendung der aktuellen **RAISERROR(…)**  Syntax.|  
 |Transact-SQL-Syntax|`COMPUTE / COMPUTE BY`|Verwendung von `ROLLUP`|  
-|Transact-SQL-Syntax|Verwenden von **\* =** und **=\***|Verwenden Sie die ANSI-Joinsyntax. Weitere Informationen finden Sie unter [aus (Transact-SQL).](http://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
-|XEvents|Databases_data_file_size_changed databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|Ersetzt durch Database_file_size_change Database_file_size_change-Ereignis<br /><br /> database_file_size_change-Ereignis<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
+|Transact-SQL-Syntax|Verwenden von **\* =** und **=\***|Verwenden Sie die ANSI-Joinsyntax. Weitere Informationen finden Sie unter [FROM (Transact-SQL).](http://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
+|XEvents|Databases_data_file_size_changed, databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|Database_file_size_change-Ereignis, Database_file_size_change ersetzt<br /><br /> database_file_size_change-Ereignis<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
   
  **Zusätzliche XEvent-Änderungen**  
   

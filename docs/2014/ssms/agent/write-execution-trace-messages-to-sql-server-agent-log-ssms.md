@@ -1,5 +1,5 @@
 ---
-title: Schreiben Sie Meldungen zur Ablaufverfolgung in der SQL Server-Agent-Fehlerprotokoll (SQL Server Management Studio) | Microsoft Docs
+title: Schreiben Sie Meldungen zur Ablaufverfolgung in der SQL Server-Agent-Fehlerprotokoll (SQL Server Management Studio) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], SQL Server Agent
 - writing trace messages
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - errors [SQL Server Agent]
 ms.assetid: 90e3731e-6fae-43db-833e-9accecdd1c03
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 30eb7385ccfb3f72d302a921a22e9d119f9d355f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c81c12dfd9797d822e5c7b4ec6e560432c8e7170
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057737"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254142"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Write Execution Trace Messages to the SQL Server Agent Error Log (SQL Server Management Studio)
   In diesem Thema wird die Vorgehensweise zum Konfigurieren des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents zum Einschließen von Meldungen zur Ablaufverfolgung in das Fehlerprotokoll in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]beschrieben.  
@@ -38,7 +38,7 @@ ms.locfileid: "36057737"
   
      [Security](#Security)  
   
--   [So schreiben Sie Meldungen auf der SQL Server-Agent-Fehlerprotokoll mit SQL Server Management Studio](#SSMSProcedure)  
+-   [So schreiben Sie Meldungen zur Ablaufverfolgung, die SQL Server-Agent-Fehlerprotokoll mithilfe von SQL Server Management Studio](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36057737"
   
 -   Anpassen des Arbeitsspeicherkontingents für einen Prozess (SeIncreaseQuotaPrivilege)  
   
- Weitere Informationen zu den Windows-Berechtigungen erforderlich sind, für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienstkonto, finden Sie unter [wählen Sie ein Konto für den SQL Server-Agent-Dienst](select-an-account-for-the-sql-server-agent-service.md) und [Konfigurieren von Windows-Dienstkonten und Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ Weitere Informationen zu den Windows-Berechtigungen, die für die die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Dienstkonto finden Sie unter [Auswählen eines Kontos für den SQL Server-Agent-Dienst](select-an-account-for-the-sql-server-agent-service.md) und [Konfigurieren von Windows-Dienstkonten und Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ##  <a name="SSMSProcedure"></a>   
 #### <a name="to-write-execution-trace-messages-to-the-sql-server-agent-error-log"></a>So schreiben Sie Meldungen zur Ablaufverfolgung in das SQL Server-Agent-Fehlerprotokoll  

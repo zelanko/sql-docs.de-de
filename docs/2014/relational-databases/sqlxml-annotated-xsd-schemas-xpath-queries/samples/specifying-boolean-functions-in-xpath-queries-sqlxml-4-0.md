@@ -1,5 +1,5 @@
 ---
-title: Angeben von booleschen Funktionen in XPath-Abfragen (SQLXML 4.0) | Microsoft Docs
+title: Angeben von booleschen Funktionen in XPath-Abfragen (SQLXML 4.0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,23 +18,23 @@ helpviewer_keywords:
 - Boolean functions
 ms.assetid: c72cd333-9294-4d41-84f2-1748bf20e3eb
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 06b35c5a8e2e7e6e03c0fd943572b25b30bf017e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 86a05a23577eefa1231a4a5f4bdf8447e4f6b285
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057821"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233000"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>Angeben von booleschen Funktionen in XPath-Abfragen (SQLXML 4.0)
-  In den folgenden Beispielen wird gezeigt, wie boolesche Funktionen in XPath-Abfragen angegeben werden. Die XPath-Abfragen in diesen Beispielen werden für das in SampleSchema1.xml enthaltene Zuordnungsschema angegeben. Informationen zu diesem Beispielschema finden Sie unter [Beispiel Annotated XSD-Schema für XPath-Beispiele &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  In den folgenden Beispielen wird gezeigt, wie boolesche Funktionen in XPath-Abfragen angegeben werden. Die XPath-Abfragen in diesen Beispielen werden für das in SampleSchema1.xml enthaltene Zuordnungsschema angegeben. Weitere Informationen zu diesem Beispielschema finden Sie unter [Annotated XSD-Beispielschema für XPath-Beispiele &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Beispiele  
   
 ## <a name="a-specify-the-not-boolean-function"></a>A. Angeben der booleschen Funktion "not()"  
- Diese Abfrage gibt alle dem  **\<Kunden >** untergeordnete Elemente des Kontextknotens, auf denen kein  **\<Reihenfolge >** Unterelemente:  
+ Diese Abfrage gibt alle dem  **\<Kunden >** untergeordnete Elemente des Kontextknotens aus, denen keine  **\<Reihenfolge >** untergeordnete Elemente:  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -68,7 +68,7 @@ ms.locfileid: "36057821"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Im Folgenden finden Sie einen Auszug aus dem Resultset der Vorlagenausführung:  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36057821"
 ```  
   
 ## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. Angeben der booleschen Funktionen "true()" und "false()"  
- Diese Abfrage gibt alle  **\<Kunden >** -Elemente des Kontextknotens, auf denen kein  **\<Reihenfolge >** untergeordnete Elemente. In relationalem Sinn gibt diese Abfrage alle Kunden zurück, die keine Bestellungen aufgegeben haben.  
+ Diese Abfrage gibt alle  **\<Kunden >** -Elemente des Kontextknotens aus, denen keine  **\<Reihenfolge >** untergeordnete Elemente. In relationalem Sinn gibt diese Abfrage alle Kunden zurück, die keine Bestellungen aufgegeben haben.  
   
 ```  
 /child::Customer[child::Order=false()]  
@@ -134,7 +134,7 @@ ms.locfileid: "36057821"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Im Folgenden finden Sie einen Auszug aus dem Resultset der Vorlagenausführung:  
   

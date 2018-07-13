@@ -1,5 +1,5 @@
 ---
-title: Herstellen einer Verbindung mit Analysis Services | Microsoft Docs
+title: Verbinden von Analysis Services | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - instances of Analysis Services, connections
 ms.assetid: 73ee8171-3379-4384-bfc8-071b3eebbc8f
 caps.latest.revision: 45
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 564ca915bf24dbdb04829eb6815dbd7fc23135be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5daf8d36d648298343d8989db01aa5fabcf3168d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059926"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255732"
 ---
 # <a name="connect-to-analysis-services"></a>Verbindung mit Analysis Services herstellen
   In diesem Abschnitt erfahren Sie etwas über Eigenschaften von Verbindungszeichenfolgen, Clientbibliotheken für Verbindungen, die von Analysis Services unterstützten Authentifizierungsmethoden sowie das Einrichten oder Löschen von Verbindungen, bevor ein Server offline geschaltet wird.  
@@ -40,7 +40,7 @@ ms.locfileid: "36059926"
 |[Von Analysis Services Unterstützte Authentifizierungsmethoden](authentication-methodologies-supported-by-analysis-services.md)|Dieses Thema gibt eine kurze Einführung in die Authentifizierungsmethoden, die von Analysis Services verwendet werden.|  
 |[Konfigurieren von Analysis Services für die eingeschränkte Kerberos-Delegierung](configure-analysis-services-for-kerberos-constrained-delegation.md)|Viele Business Intelligence-Lösungen setzen den Identitätswechsel voraus, um sicherzustellen, dass nur berechtigte Daten an die einzelnen Benutzer zurückgegeben werden. In diesem Thema werden die Voraussetzungen für die Verwendung des Identitätswechsels beschrieben. In diesem Thema werden außerdem die Schritte zum Konfigurieren von Analysis Services für die eingeschränkte Kerberos-Delegierung beschrieben.|  
 |[SPN-Registrierung für Analysis Services-Instanz](spn-registration-for-an-analysis-services-instance.md)|Die Kerberos-Authentifizierung setzt einen gültigen Dienstprinzipalnamen (Service Principal Name, SPN) für Dienste voraus, durch die die Identität eines Benutzers in einer Multiserverlösung angenommen oder delegiert wird. Verwenden Sie die Informationen in diesem Thema, um mehr darüber zu erfahren, wie Sie die SPN-Registrierung für Analysis Services erstellen und ausführen.|  
-|[Konfigurieren von HTTP-Zugriff auf Analysis Services auf Internetinformationsdienste (IIS) &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md)|Standardauthentifizierung oder domänenübergreifende Nutzung sind zwei wichtige Gründe, um Analysis Services für den HTTP-Zugriff zu konfigurieren.|  
+|[Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md)|Standardauthentifizierung oder domänenübergreifende Nutzung sind zwei wichtige Gründe, um Analysis Services für den HTTP-Zugriff zu konfigurieren.|  
 |[Für Analysis Services-Verbindungen verwendete Datenanbieter](data-providers-used-for-analysis-services-connections.md)|Analysis Services stellt drei Clientbibliotheken für den Zugriff auf Servervorgänge oder Analysis Services-Daten bereit. Dieses Thema enthält eine kurze Einführung zu ADOMD.NET, AMOs (Analysis Services Management Objects) und dem OLE DB-Anbieter für Analysis Services (MSOLAP).|  
 |[Trennen von Benutzern und Sitzungen auf Analysis Services-Server](disconnect-users-and-sessions-on-analysis-services-server.md)|Löschen Sie vorhandene Verbindungen und Sitzungen, bevor Sie einen Server offline schalten oder Baseline-Leistungstests durchführen.|  
   

@@ -1,5 +1,5 @@
 ---
-title: Abhängigkeit Netzwerk Exemplarische Vorgehensweise (Data Mining-Add-ins) | Microsoft Docs
+title: Abhängigkeit Exemplarische Vorgehensweise (Data Mining-Add-ins) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visio shapes, dependency network
 - shapes, data mining
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - dependency network
 ms.assetid: aac732a8-5262-4649-b7d7-3ccf6f9cfa8b
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 855c66124c5084e58432f605d38a4cbb53832c74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3efc5633a31af6d26fa7ae4abc5ce5b97f8542b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060627"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218460"
 ---
 # <a name="dependency-network-diagram-walkthrough-data-mining-add-ins"></a>Exemplarische Vorgehensweise für das Abhängigkeitsnetzwerkdiagramm (Data Mining-Add-Ins)
-  Mehrere verschiedene Data Mining-Modelltypen verwenden ein Netzwerkdiagramm, um Beziehungen in den Daten zu untersuchen. Sie können diese Modelle importieren, in Visio mithilfe der **Abhängigkeitsnetzwerk** strukturieren und anschließend weiter anpassen und das Layout zu verbessern. Die **Data Mining-Shapes für Visio** umfassen die folgenden benutzerdefinierten Steuerelemente zum Arbeiten mit abhängigkeitsnetzwerkdiagrammen:  
+  Mehrere verschiedene Data Mining-Modelltypen verwenden ein Netzwerkdiagramm, um Beziehungen in den Daten zu untersuchen. Sie können diese Modelle importieren, in Visio mithilfe der **Abhängigkeitsnetzwerk** strukturieren und anpassen und erweitern das Layout anschließend weiter. Die **Data Mining-Shapes für Visio** enthalten die folgenden benutzerdefinierten Steuerelemente zum Arbeiten mit abhängigkeitsnetzwerkdiagrammen:  
   
 -   Rendern von Steuerelementen für das Netzwerkdiagramm  
   
@@ -41,42 +41,42 @@ ms.locfileid: "36060627"
      Diese Optionen werden dem Visio-Arbeitsbereich hinzugefügt, um Ihnen die Interaktion mit dem Abhängigkeitsnetzwerkdiagramm zu erleichtern.  
   
 ## <a name="build-a-dependency-network-graph"></a>Erstellen eines Abhängigkeitsnetzwerkdiagramms  
- Sie legen ein Shape auf der Visio-Seite zum Starten der **Abhängigkeit Net Visio-Shape-Assistent** und Diagrammoptionen festzulegen.  
+ Sie löschen ein Shape auf der Visio-Seite zum Starten der **Abhängigkeitsnetzwerk Visio-Shape-Assistent** und Diagrammoptionen festzulegen.  
   
 #### <a name="use-the-dependency-net-visio-shape-wizard"></a>Verwenden des "Assistenten für das Abhängigkeitsnetzwerk-Shape in Visio"  
   
-1.  Wenn Sie nicht angezeigt werden **Microsoft Data Mining-Shapes** in der **Formen** Liste, klicken Sie auf **weitere Shapes**, wählen **Schablone öffnen**, und öffnen Sie die die Vorlage über den Standardinstallationspfad.  
+1.  Wenn Sie nicht angezeigt werden **Microsoft Data Mining-Shapes** in der **Formen** auf **weitere Shapes**Option **Schablone öffnen**, und öffnen Sie die die Vorlage aus den standardmäßigen Installationsspeicherort.  
   
-     \<Laufwerk >: \Program Files (x85) \Microsoft SQL Server 2012 DM-Add-Ins  
+     \<Laufwerk >: \Programme (x85) \Microsoft SQL Server 2012 DM-Add-Ins  
   
-2.  Ziehen Sie die **Abhängigkeitsnetzwerk** Form auf der Seite, um den Assistenten zu starten. Klicken Sie auf **Weiter**.  
+2.  Ziehen Sie die **Abhängigkeitsnetzwerk** Form auf der Seite aus, um den Assistenten zu starten. Klicken Sie auf **Weiter**.  
   
-3.  Auf der Seite Willkommen des der **Abhängigkeit Assistenten Shape in Visio**, klicken Sie auf **Weiter**.  
+3.  Klicken Sie auf der Seite Willkommen des der **Abhängigkeit Assistenten Shape in Visio**, klicken Sie auf **Weiter**.  
   
-4.  Auf der **wählen Sie eine Datenquelle** auf der Seite der **Abhängigkeit Assistenten Shape in Visio**, wählen Sie eine Verbindung mit einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Server mit dem Modell, das Sie visuell darstellen möchten.  
+4.  Auf der **Vybrat Zdroj DAT** auf der Seite die **Abhängigkeit Assistenten Shape in Visio**, wählen Sie eine Verbindung mit einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Server mit dem Modell, das Sie visuell darstellen möchten.  
   
 5.  Wählen Sie ein geeignetes Miningmodell aus, und klicken Sie auf **Weiter**.  
   
-     Zum Auswählen des geeigneten Modells können Sie überprüfen, Name, Beschreibung, Spalten und die Art der Daten in der **Eigenschaften** Bereich.  
+     Zum Auswählen des geeigneten Modells können Sie überprüfen, der Name, Beschreibung, Spalten und Datentypen in der **Eigenschaften** Bereich.  
   
      Dieses Shape unterstützt Modelle, die anhand der folgenden Algorithmen erstellt wurden:  
   
-    -   Naïve Bayes-Verfahren  
+    -   Naive Bayes  
   
     -   Entscheidungsstrukturen  
   
     -   Zuordnungsregeln  
   
-6.  Auf der Seite **zu rendernde Knoten auswählen**, die Größe des Diagramms anpassen und optional auch filtern, um nur bestimmte Knoten einzuschließen.  
+6.  Auf der Seite **zu rendernde Knoten auswählen**, die Größe des Diagramms anpassen und optional filtern, um nur bestimmte Knoten einzuschließen.  
   
      Mit einem großen Dataset kann ein Abhängigkeitsdiagramm kann umfangreich und enthalten viele verbundene Objekte, dargestellt als *Knoten*. Mithilfe dieses Dialogfelds können Sie ein benutzerdefiniertes Netzwerkdiagramm erstellen, das nur die interessanten Knoten enthält.  
   
-     [Placeholder Art]  
+     [Art Plathalter]  
   
      **Anzahl der abzurufenden Knoten**  
      Falls das Modell weniger Knoten als die angegebene Knotenanzahl enthält, wirkt sich diese Einstellung nicht aus. Falls das Modell mehr Knoten als die angegebene Anzahl enthält, werden nur die wichtigsten Knoten angezeigt.  
   
-     **Der Name enthält**  
+     **Name enthält**  
      Lassen Sie dieses Feld leer, und klicken Sie auf den grünen Pfeil, um alle Knoten im Modell abzurufen.  
   
      Alternativ geben Sie eine Zeichenfolge ein und klicken auf den grünen Pfeil, um nur die Knoten zurückzugeben, die die angegebene Zeichenfolge enthalten.  
@@ -92,13 +92,13 @@ ms.locfileid: "36060627"
   
  Die folgende Abbildung zeigt das Standardlayout eines Abhängigkeitsnetzwerkdiagramms.  
   
- [Placeholder Art]  
+ [Art Plathalter]  
   
-1.  Verwenden der **Schwenken und Zoomen** steuern, in der **Aufgabenbereich** des Visio **Ansicht** Menüband darauf konzentrieren, einen Abschnitt des Diagramms, und das Diagramm verschieben.  
+1.  Verwenden der **Schwenken und Zoomen** zu steuern, in der **Aufgabenbereich** des Visio **Ansicht** Multifunktionsleiste, um auf einen Abschnitt des Diagramms zu konzentrieren und das Diagramm verschieben.  
   
-2.  Experimentieren Sie mit dem Visio gebotenen verschiedene Diagrammlayouts **neues Seitenlayout** Option.  
+2.  Experimentieren Sie mit der verschiedene Diagrammlayouts, die von Visio bereitgestellten **neues Seitenlayout** Option.  
   
-3.  Klicken Sie auf die **-Add-Ins** Menüband, und zeigen Sie anschließend eine der benutzerdefinierten Symbolleisten, die zum Arbeiten mit Datamining-Diagramme verwendet:  
+3.  Klicken Sie auf die **-Add-Ins** zuerst das Menüband, und zeigen Sie anschließend eine der benutzerdefinierten Symbolleisten zur Bearbeitung von Datamining-Diagramme:  
   
      **Layout**  
      Optimiert das Layout von Knoten auf dem Zeichenblatt und ändert die Anzeige so, dass alle Knoten sichtbar sind.  
@@ -117,7 +117,7 @@ ms.locfileid: "36060627"
      Zum Erhöhen der Anzahl von Knoten im Diagramm bewegen Sie die Schiebereglerleiste nach unten.  
   
      **Hinzufügen von Elementen**  
-     Öffnet die **zu rendernde Knoten auswählen** Dialogfeld, sodass Sie neue Knoten zu dem Diagramm hinzuzufügende auswählen können.  
+     Öffnet die **zu rendernde Knoten auswählen** Dialogfeld, sodass Sie neue Knoten im Diagramm hinzuzufügende auswählen können.  
   
 4.  Sie können Diagramme so einfach oder komplex gestalten, wie Sie möchten, und Anmerkungen hinzufügen, während Sie mit dem Modell verbunden sind.  
   

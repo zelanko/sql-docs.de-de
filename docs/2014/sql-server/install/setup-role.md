@@ -1,5 +1,5 @@
 ---
-title: Setuprolle | Microsoft Docs
+title: Setuprolle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c7e9db15-89f2-4d4d-8860-1e64c5821c4d
 caps.latest.revision: 14
-author: HeidiSteen
+author: heidisteen
 ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: b734e817739d887c6e342aa841e3701f770175a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6b37c8749ee82894ee7c28acf6b0fa94bf4ee58f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057086"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330980"
 ---
 # <a name="setup-role"></a>Setuprolle
   Geben Sie auf dieser Seite an, ob einzelne Funktionen über die Seite Funktionsauswahl ausgewählt werden sollen oder ob die Installation unter Verwendung einer Setuprolle ausgeführt werden soll.  
@@ -49,6 +49,6 @@ ms.locfileid: "36057086"
 ## <a name="see-also"></a>Siehe auch  
  [Installieren von PowerPivot für SharePoint](http://go.microsoft.com/fwlink/?LinkId=206906)   
  [Hardware- und Softwareanforderungen (PowerPivot für SharePoint](http://go.microsoft.com/fwlink/?LinkId=216823)   
- [Funktionsauswahl](../../../2014/sql-server/install/feature-selection.md)  
+ [Featureauswahl](../../../2014/sql-server/install/feature-selection.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Ändern und Verarbeiten des Market Basket-Modells (mittleres Datamining-Lernprogramm) | Microsoft Docs
+title: Ändern und Verarbeiten der Market Basket-Modells (mittleres Datamining Tutorial) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b6019413-aebd-4ff7-831a-644572ad88b1
 caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 96eb44713cd34fdcea81a7e5e4daf26739afdec1
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: f1f0fe6899be3f9828a8ba9d91f2c9abf7ba48b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36311908"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246120"
 ---
 # <a name="modifying-and-processing-the-market-basket-model-intermediate-data-mining-tutorial"></a>Ändern und Verarbeiten des Market Basket-Modells (Data Mining-Lernprogramm für Fortgeschrittene)
   Bevor Sie das von Ihnen erstellte Association-Miningmodell verarbeiten, müssen Sie die Standardwerte von zwei der Parameter ändern: *Support* und *Probability*.  

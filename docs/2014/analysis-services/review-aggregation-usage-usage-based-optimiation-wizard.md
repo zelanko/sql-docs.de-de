@@ -1,5 +1,5 @@
 ---
-title: Aggregationsverwendung überprüfen (Assistent für Verwendungsbasierte für Verwendungsbasierte Optimierung) | Microsoft Docs
+title: Aggregationsverwendung überprüfen (Verwendungsbasierte für Verwendungsbasierte Optimierung-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.reviewaggregationusage.f1
 ms.assetid: 49ce2094-c4dc-4e46-8cef-c17c5db084ca
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 21618aabe9c7e429c7d78a68c7fcfb9d61a0754c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 76140fbc19eaa8beae41c1196143a326dc5c6414
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060130"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235680"
 ---
 # <a name="review-aggregation-usage-usage-based-optimiation-wizard"></a>Aggregationsverwendung überprüfen (Assistent für verwendungsbasierte Optimierung)
   Mithilfe der Seite **Aggregationsverwendung überprüfen** können Sie die Einstellungen für die Aggregationsverwendung konfigurieren.  
@@ -36,14 +36,14 @@ ms.locfileid: "36060130"
  **Keine**  
  Wählen Sie diese Option aus, um keine Aggregationsverwendung für das Attribut festzulegen. Wird diese Einstellung verwendet, kann keine Aggregation für den Cube dieses Attribut enthalten.  
   
- **Nicht eingeschränkt**  
+ **Uneingeschränkte**  
  Wählen Sie diese Option aus, um eine uneingeschränkte Aggregationsverwendung für das Attribut festzulegen. Wird diese Einstellung verwendet, werden keine Einschränkungen auf den Aggregations-Designer angwendet. Das Attribut muss aber dennoch ausgewertet werden, um festzustellen, ob es sich um einen wertvollen Aggregationskandidaten handelt.  
   
  **Festlegen Sie alle als Standard**  
  Wählen Sie diese Option aus, um die Einstellungen der Aggregationsverwendung für alle Attribute auf den Standard festzulegen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Aggregationsentwurfs-Assistent F1 Hilfe](aggregation-design-wizard-f1-help.md)   
+ [Aggregation Design-Assistent F1-Hilfe](aggregation-design-wizard-f1-help.md)   
  [Analysis Services-Assistenten &#40;mehrdimensionale Daten&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

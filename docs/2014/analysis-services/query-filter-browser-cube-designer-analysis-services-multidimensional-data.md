@@ -1,5 +1,5 @@
 ---
-title: Abfrage und Filter (Registerkarte ' Browser ', Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Abfrage und Filter (Registerkarte ' Browser ', Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.filterpane.f1
 ms.assetid: f5cf0bb1-3afb-4856-a2ef-614deb4e7e49
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 93055c2220f4dfa7b32293ee88178defbf1d0f6e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85570891b1af0b102067f9153fe17e7a7b5b21a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058186"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250972"
 ---
 # <a name="query-and-filter-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Abfrage und Filter (Registerkarte 'Browser', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Dieser Bereich der Registerkarte **Browser** im Cube-Designer enthält einen Abfrage- und Filterbereich, der Sie bei der Auswahl der Daten aus dem Cube unterstützt, die beim Durchsuchen oder Abfragen verwendet werden. Sie können beliebig viele Cubeobjekte hinzufügen und dann die Ergebnisse im Datenbereich anzeigen oder die Ergebnisse in einen Bericht exportieren und In Excel analysieren verwenden, um visuell darzustellen, wie die Daten von Endbenutzern angezeigt werden.  
@@ -44,7 +44,7 @@ ms.locfileid: "36058186"
 |value|Description|  
 |-----------|-----------------|  
 |**Gleich**|Die Ergebnisse sind auf die in **Filterausdruck**definierte Menge beschränkt.|  
-|**Ist ungleich**|Die Ergebnisse sind auf die Elemente beschränkt, die durch die in **Filterausdruck**definierte Menge ausgeschlossen werden.|  
+|**Ungleich**|Die Ergebnisse sind auf die Elemente beschränkt, die durch die in **Filterausdruck**definierte Menge ausgeschlossen werden.|  
 |**In**|Die Ergebnisse sind auf die in **Filterausdruck**gewählte benannte Menge beschränkt.|  
 |**Nicht In**|Die Ergebnisse sind auf die Elemente beschränkt, die durch die in **Filterausdruck**gewählte benannte Menge ausgeschlossen werden.|  
 |**Enthält**|Die Ergebnisse sind auf die Elemente beschränkt, deren Elementnamen die in **Filterausdruck**angegebene Zeichenfolge enthalten.|  

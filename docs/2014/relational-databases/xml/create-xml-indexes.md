@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - indexes [XML in SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 18858eb2c692be3bfe4c987dd365ae267d097d43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 91dd0d2aefa6128dfdac0a948efe61f0a9334fb4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059994"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236360"
 ---
 # <a name="create-xml-indexes"></a>Erstellen von XML-Indizes
   In diesem Thema wird beschrieben, wie primäre und sekundäre XML-Indizes erstellt werden.  
@@ -48,9 +48,9 @@ ms.locfileid: "36059994"
   
 -   Für die Namen primärer XML-Indizes gelten die gleichen Einschränkungen wie für Sichtnamen.  
   
- Einen XML-Index kann nicht erstellt werden, auf ein `xml` Geben Sie die Spalte in einer Sicht auf eine **Tabelle** wertvariable mit `xml` Spalten vom Typ oder `xml` Variablen vom Typ.  
+ Sie können für ein XML-Index erstellen eine `xml` Geben Sie die Spalte in einer Sicht, auf eine **Tabelle** wertvariable mit `xml` Spalten vom Typ oder `xml` Variablen des Typs.  
   
--   So ändern Sie eine `xml` Typspalte aus nicht typisiertem in typisiertes XML oder umgekehrt, mithilfe der ALTER TABLE ALTER COLUMN-Option keine XML-Index für die Spalte sollte vorhanden sein. Wenn ein XML-Index vorhanden ist, muss dieser gelöscht werden, bevor der Änderungsversuch des Spaltentyps unternommen wird.  
+-   So ändern Sie eine `xml` Typspalte aus nicht typisiertem in typisiertes XML oder umgekehrt, durch die Verwendung der ALTER TABLE ALTER COLUMN-Option keine XML-Index für die Spalte muss vorhanden sein. Wenn ein XML-Index vorhanden ist, muss dieser gelöscht werden, bevor der Änderungsversuch des Spaltentyps unternommen wird.  
   
 -   Die Option ARITHABORT muss auf ON festgelegt werden, wenn ein XML-Index erstellt wird. Zum Abfragen, Einfügen, Löschen oder Aktualisieren von Werten in der XML-Spalte mithilfe der Methoden des XML-Datentyps muss die gleiche Option für die Verbindung festgelegt werden. Wenn dies nicht der Fall ist, schlagen die Methoden des XML-Datentyps fehl.  
   

@@ -1,5 +1,5 @@
 ---
-title: ServerProperties-Element (ASSL) | Microsoft Docs
+title: ServerProperties-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ServerProperties element
 ms.assetid: 8ccbef3f-1388-4fa3-b0a4-c89b89f09056
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0c0d24c6e74aa88e2ea27582214345ac40671d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 495577822a86549841bcae022164d5669c1e5b22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061253"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323090"
 ---
 # <a name="serverproperties-element-assl"></a>ServerProperties-Element (ASSL)
   Enthält die Auflistung der [ServerProperty](../objects/serverproperty-element-assl.md) Elemente, die zu einem [Server](../objects/server-element-assl.md) Element.  
@@ -64,7 +64,7 @@ ms.locfileid: "36061253"
 |Untergeordnete Elemente|[ServerProperty](../objects/serverproperty-element-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.ServerPropertyCollection>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.ServerPropertyCollection>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sammlungen &#40;ASSL&#41;](collections-assl.md)  

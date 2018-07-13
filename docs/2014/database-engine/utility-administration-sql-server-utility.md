@@ -1,5 +1,5 @@
 ---
-title: Hilfsprogrammverwaltung (SQL Server-Hilfsprogramm) | Microsoft Docs
+title: Hilfsprogrammverwaltung (SQL Server-Hilfsprogramm) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3e5a00c3-8905-40f0-9ddc-d924df9c2f0d
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5c1b1d2b54681616d3952e3a700fe9ef8bc2915e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3dcd50c691d4ca9373010c5e26ef97771c49e7a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058754"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271606"
 ---
 # <a name="utility-administration-sql-server-utility"></a>Hilfsprogrammverwaltung (SQL Server-Hilfsprogramm)
   Verwenden Sie die Registerkarten der Hilfsprogrammverwaltung zum Verwalten von Richtlinien-, Sicherheits- und Data Warehouse-Einstellungen für ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Hilfsprogramm. Weitere Informationen zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Hilfsprogrammkonzepten finden Sie unter [Funktionen und Tasks im SQL Server-Hilfsprogramm](../relational-databases/manage/sql-server-utility-features-and-tasks.md).  

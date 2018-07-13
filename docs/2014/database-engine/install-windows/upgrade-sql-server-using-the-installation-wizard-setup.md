@@ -1,5 +1,5 @@
 ---
-title: Aktualisieren auf SQL Server 2014 mithilfe des Installationsassistenten (Setup) | Microsoft Docs
+title: Aktualisieren auf SQL Server 2014 mithilfe des Installations-Assistenten (Setup) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading Database Engine
 - Database Engine [SQL Server], upgrading
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 caps.latest.revision: 62
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2b56fc3323fcd29b19f43d63c054a9cd844944bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 71f2683e42e6a1af7c971b3e192ad534847896ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060572"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219790"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>Aktualisieren auf SQL Server 2014 mithilfe des Installations-Assistenten (Setup)
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installations-Assistent enthält eine Funktionsstruktur zum Upgrade von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten: Sie können [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auch parallel zu einer früheren Version installieren oder vorhandene Datenbanken und Konfigurationseinstellungen aus einer früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version migrieren und auf eine Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] anwenden.  
@@ -40,7 +40,7 @@ ms.locfileid: "36060572"
 -   [Verwenden des Assistenten zum Kopieren von Datenbanken](../../relational-databases/databases/use-the-copy-database-wizard.md)  
   
 > [!NOTE]  
->  Das Upgrade einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] wird auf Computern mit [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1 nicht unterstützt. Weitere Informationen unter Server Core-Installationen finden Sie unter [Installieren von SQL Server 2014 unter Server Core](install-sql-server-on-server-core.md).  
+>  Das Upgrade einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] wird auf Computern mit [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1 nicht unterstützt. Weitere Informationen zu Server Core-Installationen, finden Sie unter [Installieren von SQL Server 2014 unter Server Core](install-sql-server-on-server-core.md).  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Sie müssen Setup als Administrator ausführen. Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von einer Remotefreigabe installieren, müssen Sie ein Domänenkonto verwenden, das Lese- und Ausführungsberechtigungen auf der Remotefreigabe hat und ein lokaler Administrator ist.  
@@ -58,7 +58,7 @@ ms.locfileid: "36060572"
 -   [Abwärtskompatibilität der SQL Server-Datenbank-Engine](../sql-server-database-engine-backward-compatibility.md)  
   
 > [!WARNING]  
->  Sie können die zu aktualisierenden Funktionen nicht ändern und während des Aktualisierungsvorgangs keine Funktionen hinzufügen. Weitere Informationen zum Hinzufügen von Funktionen zu einer aktualisierten Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , nachdem der Upgradevorgang abgeschlossen ist, finden Sie unter [Hinzufügen von Funktionen zu einer Instanz von SQL Server 2014 &#40;Setup&#41;](add-features-to-an-instance-of-sql-server-setup.md).  
+>  Sie können die zu aktualisierenden Funktionen nicht ändern und während des Aktualisierungsvorgangs keine Funktionen hinzufügen. Weitere Informationen zur Vorgehensweise beim Hinzufügen von Funktionen zu einer aktualisierten Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nachdem der Upgradevorgang abgeschlossen ist, finden Sie unter [Hinzufügen von Funktionen zu einer Instanz von SQL Server 2014 &#40;Setup&#41;](add-features-to-an-instance-of-sql-server-setup.md).  
   
 ## <a name="procedure"></a>Verfahren  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36060572"
   
 2.  Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installationscenter wird vom Installations-Assistenten ausgeführt. Um eine vorhandene Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu aktualisieren, klicken Sie im linken Navigationsbereich auf **Installation** und dann auf **Von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] aktualisieren**.  
   
-3.  Aktivieren Sie auf der Seite für den Product Key eine Option, um anzugeben, ob Sie auf eine kostenlose Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aktualisieren oder ob Sie über einen PID-Schlüssel für eine Produktionsversion des Produkts verfügen. Weitere Informationen finden Sie unter [Editionen und Komponenten von SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) und [Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md).  
+3.  Aktivieren Sie auf der Seite für den Product Key eine Option, um anzugeben, ob Sie auf eine kostenlose Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aktualisieren oder ob Sie über einen PID-Schlüssel für eine Produktionsversion des Produkts verfügen. Weitere Informationen finden Sie unter [Editionen und Komponenten von SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) und [unterstützte Versions- und Editionsupgrades](supported-version-and-edition-upgrades.md).  
   
 4.  Lesen Sie auf der Seite Lizenzbedingungen den Lizenzvertrag, und aktivieren Sie das Kontrollkästchen **Ich akzeptiere die Lizenzbedingungen** , wenn Sie diesen zustimmen. Klicken Sie anschließend auf **Weiter**. Falls Sie zur Verbesserung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]beitragen möchten, können Sie auch die Option zur Funktionsverwendung aktivieren und Berichte an [!INCLUDE[msCoName](../../includes/msconame-md.md)]senden.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "36060572"
 -   **Konfigurieren Sie die neue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installation**: Um die Angriffsfläche eines Systems zu verringern, werden zentrale Dienste und Funktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selektiv installiert und aktiviert. Weitere Informationen zur Oberflächenkonfiguration finden Sie in der Infodatei für diese Version.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Aktualisieren auf SQLServer 2014](upgrade-sql-server.md)   
+ [Upgrade auf SQLServer 2014](upgrade-sql-server.md)   
  [Abwärtskompatibilität](../../getting-started/backward-compatibility.md)  
   
   

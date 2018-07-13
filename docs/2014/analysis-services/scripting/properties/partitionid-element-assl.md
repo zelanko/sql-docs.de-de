@@ -1,5 +1,5 @@
 ---
-title: PartitionID-Element (ASSL) | Microsoft Docs
+title: PartitionID-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - PartitionID element
 ms.assetid: 95e59c73-5ca4-478e-898d-50ffa4bbe794
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6d75bc87e5c6546e57c9cf3e3d67053117edffd0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6acc27bd3d60a5768a331a117e18ebc7cde2abe3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059889"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233760"
 ---
 # <a name="partitionid-element-assl"></a>PartitionID-Element (ASSL)
-  Ordnet eine [Partition](../objects/partition-element-assl.md) Element mit einem übergeordneten Element, Bindung oder Out-of-Line-Bindung.  
+  Ordnet eine [Partition](../objects/partition-element-assl.md) -Element mit einem übergeordneten Element, Bindung oder Out-of-Line-Bindung.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36059889"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Weitere Informationen zu Bindungen und Out-of-Line-Bindungen, finden Sie unter [Datenquellen und-Bindungen &#40;mehrdimensionale SSAS-&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Weitere Informationen zu Bindungen und Out-of-Line-Bindungen finden Sie unter [Datenquellen und-Bindungen &#40;mehrdimensionale SSAS-&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: Verwalten von Rollen mit SSMS (SSAS – tabellarisch) | Microsoft Docs
+title: Verwalten von Rollen mit SSMS (SSAS – tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 652faac0-1cfc-438b-8119-2f4b090a2381
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 907b1ea2b655c9da1b9754441be5a933ac8380af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a5c1aa9fc419c80bed7ca38e6d0174fb723ca648
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060359"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226420"
 ---
 # <a name="manage-roles-by-using-ssms-ssas-tabular"></a>Verwalten von Rollen mit SSMS (SSAS – tabellarisch)
   Sie können Rollen für ein bereitgestelltes tabellarisches Modell mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]erstellen, bearbeiten und verwalten.  
@@ -62,12 +62,12 @@ ms.locfileid: "36060359"
   
 6.  Klicken Sie im Mitgliedschaftseinstellungen-Fenster auf **Hinzufügen**, und fügen Sie dann im Dialogfeld **Benutzer oder Gruppen auswählen** die Windows-Benutzer oder die Gruppen hinzu, die Sie als Elemente hinzufügen möchten.  
   
-7.  Wenn die Rolle, die Sie erstellen, Leseberechtigungen aufweist, können Sie Zeilenfilter für jede beliebige Tabelle hinzufügen, in der eine DAX-Formel verwendet wird. Hinzuzufügende Zeilenfilter, in der **Rolleneigenschaften - \<Rolename >** Dialogfeld **Seite auswählen**, klicken Sie auf **Zeilenfilter**.  
+7.  Wenn die Rolle, die Sie erstellen, Leseberechtigungen aufweist, können Sie Zeilenfilter für jede beliebige Tabelle hinzufügen, in der eine DAX-Formel verwendet wird. Um Zeilenfilter hinzuzufügen der **Rolleneigenschaften - \<Rolename >** Dialogfeld **wählen Sie eine Seite**, klicken Sie auf **Zeilenfilter**.  
   
-8.  Der Zeilenfilter-Fenster, wählen Sie eine Tabelle, und klicken Sie auf der **DAX-Filter** Feld, und klicken Sie dann in der **DAX-Filter - \<Tablename >** geben eine DAX-Formel.  
+8.  Im Zeilenfilter-Fenster, wählen Sie eine Tabelle, klicken Sie anschließend auf die **DAX-Filter** Feld, und klicken Sie dann in der **DAX-Filter – \<Tablename >** geben eine DAX-Formel.  
   
     > [!NOTE]  
-    >  DAX-Filter - \<Tablename > Feld nicht enthalten einen AutoVervollständigen-Abfrage-Editor oder insert-Funktion. Um beim Schreiben einer DAX-Formel die Funktion zum AutoVervollständigen verwenden zu können, müssen Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]einen DAX-Formel-Editor verwenden.  
+    >  DAX-Filter – \<Tablename > Feld nicht enthalten einen AutoVervollständigen-Abfrage-Editor oder Einfügen einer Funktion. Um beim Schreiben einer DAX-Formel die Funktion zum AutoVervollständigen verwenden zu können, müssen Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]einen DAX-Formel-Editor verwenden.  
   
 9. Klicken Sie auf **OK** , um die Rolle zu speichern.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36060359"
   
 -   Erweitern Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]die tabellarische Modelldatenbank, die die Rolle enthält, die Sie bearbeiten möchten, und erweitern Sie dann **Rollen**. Klicken Sie mit der rechten Maustaste auf die Rolle, und klicken Sie dann auf **Eigenschaften**.  
   
-     In der **Rolleneigenschaften** \<Rolename > Klicken Sie im Dialogfeld Berechtigungen ändern, hinzufügen oder Entfernen von Mitgliedern und Hinzufügen/Bearbeiten von Zeilenfilter.  
+     In der **Rolleneigenschaften** \<Rolename > Klicken Sie im Dialogfeld können Sie Berechtigungen ändern, hinzufügen oder Entfernen von Mitgliedern und Zeilenfilter hinzufügen oder bearbeiten.  
   
 ###  <a name="bkmk_deletet_role"></a> So löschen Sie eine Rolle  
   

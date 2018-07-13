@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 caps.latest.revision: 12
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: e68b94ce70e24d16ac1cc94274b9dac05974dbe7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 6b18989012a733d39dca843f475ec23e99893d0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060497"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246905"
 ---
 # <a name="the-memory-optimized-filegroup"></a>Die speicheroptimierte Dateigruppe
   Um speicheroptimierte Tabellen zu erstellen, müssen Sie zuerst eine speicheroptimierte Dateigruppe erstellen. Die speicheroptimierte Dateigruppe enthält mindestens einen Container. Jeder Container enthält Datendateien oder Änderungsdateien oder sowohl als auch.  
@@ -61,7 +61,7 @@ ms.locfileid: "36060497"
   
  In einem Szenario mit mehreren Containern und mehreren Laufwerken werden Daten- und Änderungsdateien im Round-Robin-Verfahren den Containern zugewiesen. Die erste Datendatei wird aus dem ersten Container zugewiesen, und die Änderungsdatei wird aus dem nächsten Container zugewiesen. Dieses Zuordnungsmuster wird wiederholt. Bei diesem Zuordnungsschema werden Daten- und Änderungsdateien gleichmäßig auf Container verteilt, wenn Sie über eine ungerade Zahl von Laufwerken verfügen, die jeweils einem Container zugeordnet sind. Wenn Sie jedoch über eine gerade Anzahl von Laufwerken verfügen, die jeweils einem Container zugeordnet sind, kann dies zu einer unausgeglichenen Speicherung führen, bei der Datendateien ungeraden Laufwerken und Änderungsdateien geraden Laufwerken zugeordnet werden. Um bei der Wiederherstellung einen ausgeglichenen E/A-Datenstrom zu erzielen, sollten Sie Paare von Daten- und Änderungsdateien auf den gleichen Spindeln bzw. im gleichen Speicher platzieren, wie im folgenden Beispiel beschrieben.  
   
- **Beispiel:** sollten Sie eine Speicheroptimierte Dateigruppe mit zwei Container: Container 1 auf Laufwerk X und Container 2 auf Laufwerk Y. Da die Zuordnung von Daten-und Änderungsdateien im Round-Robin-Verfahren erfolgt, kann Container 1 nur Datendateien müssen zudem Container 2 nur Änderungsdateien, dies führt zu einer unausgeglichenen Persistenz für Speicher als auch e/a-Vorgänge pro Sekunde, als Datendateien sind erheblich größer als die Änderungsdateien. Um Daten-und Änderungsdateien gleichmäßig auf die Laufwerke X und Y zu verteilen, erstellen Sie statt zwei vier Container, und ordnen Sie die ersten beiden Container Laufwerk X und die beiden folgenden Container Laufwerk Y. Mit Round-Robin-Zuordnung werden die erste Datendatei und die erste Änderungsdatei aus Container-1 und Container 2 zugeordnet, die jeweils die Laufwerk X zugeordnet sind. Auf ähnliche Weise wird die nächste Datei für Daten- und Änderungsdateien aus Container-3 und Container-4 die Laufwerk Y zugeordnet sind zugeordnet. Dadurch werden Daten-und Änderungsdateien gleichmäßig auf zwei Laufwerken verteilt.  
+ **Beispiel:** sollten Sie eine Speicheroptimierte Dateigruppe mit zwei Containern: Container 1 auf Laufwerk X und Container 2 auf Laufwerk Y. Da die Zuordnung von Daten-und Änderungsdateien im Round-Robin erfolgt, muss Container 1 nur Datendateien und Container 2 haben nur Änderungsdateien, dies führt zu einer unausgeglichenen Persistenz für Speicher als auch e/a-Vorgänge pro Sekunde, Datendateien im sind erheblich größer als Änderungsdateien. Um die Daten-und Änderungsdateien gleichmäßig auf die Laufwerke X und Y zu verteilen, erstellen Sie vier Container anstelle von zwei aus, und ordnen Sie die ersten beiden Container Laufwerk X und die beiden folgenden Container Laufwerk Y. Mit Round-Robin-Zuordnung werden die erste Datendatei und die erste Änderungsdatei aus Container-1 und Container-2 bzw. zugewiesen werden die Laufwerk X zugeordnet sind. Auf ähnliche Weise wird die nächste Datei von Daten- und Änderungsdateien aus Container-3 und Container-4 die Laufwerk Y zugeordnet sind zugeordnet. Dies ermöglicht die Verteilung von Daten-und Änderungsdateien gleichmäßig über zwei Laufwerken.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen und Verwalten von Speicher für speicheroptimierte Objekte](creating-and-managing-storage-for-memory-optimized-objects.md)  

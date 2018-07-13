@@ -5,21 +5,20 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f3c46becd5ae766627e96ad935900f063c4389bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 491cde35ec200cdacc9c12794d5692d657ad22f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058508"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256686"
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>Löschen von BLOB-Sicherungsdateien mit aktiver Lease
   Wenn Sicherungs- oder Wiederherstellungsvorgänge im Windows Azure-Speicher ausgeführt werden, reserviert SQL Server eine Lease für eine unbegrenzte Dauer, um den exklusiven Zugriff auf das BLOB zu gewährleisten. Nachdem die Sicherung oder Wiederherstellung erfolgreich abgeschlossen wurde, wird die Lease wieder freigegeben. Wenn eine Sicherung oder Wiederherstellung fehlschlägt, wird im Rahmen des Sicherungsvorgangs versucht, ungültige BLOBs zu bereinigen. Kann die Sicherung jedoch aufgrund eines längeren bzw. dauerhaften Netzwerkverbindungsfehlers nicht ausgeführt werden, ist der Sicherungsvorgang u. U. nicht in der Lage, auf das BLOB zuzugreifen, sodass das BLOB verwaist ist. Dies bedeutet, dass das BLOB erst wieder beschreibbar ist bzw. gelöscht werden kann, nachdem die Lease freigegeben wurde. In diesem Thema wird beschrieben, wie die Lease freigegeben und das BLOB gelöscht wird.  
@@ -43,7 +42,7 @@ ms.locfileid: "36058508"
 3.  **Löschen des BLOBs:** Um ein BLOB zu löschen, das über eine aktive Lease verfügt, müssen Sie zunächst die Lease unterbrechen.  
   
 ###  <a name="Code_Example"></a> Beispiel für ein PowerShell-Skript  
- **\*\* Wichtige \* \***  Wenn Sie PowerShell 2.0 ausgeführt werden, möglicherweise ein Problem beim Laden der Assembly WindowsAzure.Storage.dll. Es wird empfohlen, ein Upgrade auf PowerShell 3.0 auszuführen, um das Problem zu beheben. Sie können auch die folgende Problemumgehung für PowerShell 2.0 verwenden:  
+ **\*\* Wichtige \* \***  , wenn Sie PowerShell 2.0 ausführen, können Sie Probleme beim Laden der Assembly WindowsAzure.Storage.dll haben. Es wird empfohlen, ein Upgrade auf PowerShell 3.0 auszuführen, um das Problem zu beheben. Sie können auch die folgende Problemumgehung für PowerShell 2.0 verwenden:  
   
 -   Lassen Sie die .NET 2.0- und .NET 4.0-Assemblys zur Laufzeit laden. Dazu erstellen Sie eine Datei powershell.exe.config bzw. ändern eine bereits vorhandene Datei mit folgendem Code:  
   

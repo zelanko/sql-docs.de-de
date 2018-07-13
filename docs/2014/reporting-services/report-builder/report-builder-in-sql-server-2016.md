@@ -1,5 +1,5 @@
 ---
-title: Berichts-Generator in SQLServer 2014 | Microsoft Docs
+title: Berichts-Generator in SQLServer 2014 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10428"
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 caps.latest.revision: 29
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ab3d87e730ee8788f010f776899d3d494887ed96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 911b88bc7b707e837bbd042814a2f8e84a61daa0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059761"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261926"
 ---
 # <a name="report-builder-in-sql-server-2014"></a>Berichts-Generator in SQL Server 2014
   Berichts-Generator ist eine Berichterstellungsumgebung für Geschäftsbenutzer, die lieber in der vertrauten [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office-Umgebung arbeiten. Beim Entwurf eines Berichts geben Sie an, wo die Daten abgerufen werden sollen, welche Daten abgerufen werden sollen und wie die Daten angezeigt werden sollen. Bei der Ausführung des Berichts übernimmt der Berichtsprozessor alle angegebenen Informationen, ruft die Daten ab und kombiniert sie mit dem Berichtslayout, um den Bericht zu generieren. Sie können Berichte im Berichts-Generator in der Vorschau anzeigen oder auf einem Berichtsserver oder einem Berichtsserver im integrierten SharePoint-Modus veröffentlichen, damit auch andere Benutzer den Bericht ausführen können.  
@@ -41,19 +41,19 @@ ms.locfileid: "36059761"
   
 -   **Beginnen Sie mit dem Tabellen-, Matrix- oder Diagramm-Assistenten**. Wählen Sie eine Datenquellenverbindung aus, verschieben Sie Felder per Drag &amp; Drop, um eine Datasetabfrage zu erstellen, wählen Sie das Layout und Format aus, und passen Sie den Bericht an.  
   
--   **Beginnen Sie mit dem Karten-Assistenten** , um Berichte zu erstellen, die aggregierte Daten vor einem geografischen oder geometrischen Hintergrund anzeigen. Kartendaten können räumliche Daten aus einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage oder einer ESRI-Shape-Datei (Environmental Systems Research Institute, Inc.) sein. Sie können auch Hinzufügen einer [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Bing-kartenkachelhintergrund.  
+-   **Beginnen Sie mit dem Karten-Assistenten** , um Berichte zu erstellen, die aggregierte Daten vor einem geografischen oder geometrischen Hintergrund anzeigen. Kartendaten können räumliche Daten aus einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage oder einer ESRI-Shape-Datei (Environmental Systems Research Institute, Inc.) sein. Sie können auch Hinzufügen einer [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Bing Maps-kachelhintergrund.  
   
 
   
 ##  <a name="DesignRept"></a> Entwerfen des Berichts  
   
--   **Erstellen Sie Berichte mit Tabelle, Matrix, Diagramm und Freiform-Berichtslayouts.** Erstellen Sie Tabellenberichte für spaltenbasierte Daten, Matrixberichte für zusammengefasste Daten (wie Kreuztabellenberichten oder PivotTable-Berichten), Diagrammberichte für grafische Daten und Freiformberichte für alle anderen Daten. In Berichte können andere Berichte und Diagramme sowie Listen, Grafiken und Steuerelemente für dynamische webbasierte Anwendungen eingebettet werden.  
+-   **Erstellen Sie Berichte mit Tabelle, Matrix, Diagramm und Freiform-Reporting Services-Berichts an.** Erstellen Sie Tabellenberichte für spaltenbasierte Daten, Matrixberichte für zusammengefasste Daten (wie Kreuztabellenberichten oder PivotTable-Berichten), Diagrammberichte für grafische Daten und Freiformberichte für alle anderen Daten. In Berichte können andere Berichte und Diagramme sowie Listen, Grafiken und Steuerelemente für dynamische webbasierte Anwendungen eingebettet werden.  
   
 -   **Erstellen Sie Berichte aus unterschiedlichen Datenquellen.** Erstellen Sie Berichte mit Daten aus beliebigen Datenquellentypen mit einem verwalteten [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Datenanbieter, einem OLE DB-Anbieter oder einer ODBC-Datenquelle. Sie können Berichte erstellen, die relationale und mehrdimensionale Daten aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbanken, Oracle-Hyperion- sowie anderen Datenbanken enthalten. Sie können eine XML-Datenverarbeitungserweiterung verwenden, um Daten von jeder XML-Datenquelle abzurufen. Mit Tabellenwertfunktionen können Sie benutzerdefinierte Datenquellen entwerfen.  
   
--   **Ändern Sie vorhandene Berichte.** Mithilfe von Berichts-Generator können Sie anpassen und aktualisieren in erstellte Berichte [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Berichts-Designer.  
+-   **Ändern Sie vorhandene Berichte.** Mit Berichts-Generator können Sie anpassen und Aktualisieren von Berichten, die erstellt wurden [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]-Berichts-Designer.  
   
--   **Ändern Sie die Daten** durch Filtern, gruppieren und Sortieren von Daten oder durch Hinzufügen von Formeln oder Ausdrücken.  
+-   **Ändern Sie die Daten** durch Filtern, gruppieren und Sortieren von Daten oder Hinzufügen von Formeln oder Ausdrücken.  
   
 -   **Fügen Sie Diagramme, Messgeräte, Sparklines und Indikatoren hinzu** , um Daten in einem visuellen Format zusammenzufassen und große Mengen aggregierter Informationen auf einen Blick darzustellen.  
   
@@ -88,10 +88,10 @@ ms.locfileid: "36059761"
  [Planen eines Berichts &#40;Berichts-Generator&#41;](../report-design/planning-a-report-report-builder.md)  
  Enthält Informationen zu den Punkten, die Sie vor dem Erstellen des Berichts beachten sollten.  
   
- [Konzepte zum Erstellen von Berichten &#40;Berichts-Generator und SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Berichtserstellungskonzepte &#40;Berichts-Generator und SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
  Enthält Definitionen der Schlüsselkonzepte, die in der Dokumentation zum Berichts-Generator verwendet werden.  
   
- [Berichtsentwurfsansicht: &#40;Berichts-Generator&#41;](report-design-view-report-builder.md)  
+ [Berichtsentwurfsansicht &#40;Berichts-Generator&#41;](report-design-view-report-builder.md)  
  Erläutert die unterschiedlichen Bereiche und Abschnitte der Berichtsentwurfsansicht.  
   
  [Freigegebene Datasetentwurfsansicht &#40;Berichts-Generator&#41;](shared-dataset-design-view-report-builder.md)  
@@ -100,7 +100,7 @@ ms.locfileid: "36059761"
  [Tastenkombinationen &#40;Berichts-Generator&#41;](keyboard-shortcuts-report-builder.md)  
  Bietet einen Überblick über die verfügbaren Tastenkombinationen für die Navigation und das Entwerfen von Berichten im Berichts-Generator.  
   
- [Starten des Berichts-Generators &#40;Berichts-Generator&#41;](start-report-builder.md)  
+ [Starten Sie Berichts-Generator &#40;Berichts-Generator&#41;](start-report-builder.md)  
  Erläutert, wie die beiden Versionen von Berichts-Generator gestartet werden: eigenständige Version und [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]-Version.  
   
   

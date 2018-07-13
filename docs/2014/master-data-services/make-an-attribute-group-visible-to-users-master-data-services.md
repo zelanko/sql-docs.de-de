@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b2f6cc27-dbc9-4f3f-961e-e81e76375248
 caps.latest.revision: 3
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 70dcc1e8f35f288b4693bd87308d7f2abcff0136
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 94507eb6cae0db3206a02b43062871140d5f21c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147705"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223642"
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>Sichtbarmachen einer Attributgruppe für Benutzer (Master Data Services)
   Machen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]eine Attributgruppe für Benutzer oder Gruppen sichtbar, wenn Sie möchten, dass Benutzer im Funktionsbereich **Explorer** oberhalb des Rasters Registerkarten verwenden können.  
@@ -45,15 +45,15 @@ ms.locfileid: "36147705"
   
 4.  Wählen Sie aus der Liste **Entität** eine Entität aus.  
   
-5.  Klicken Sie auf das Pluszeichen **Blattgruppen**, **konsolidierte Gruppen**, oder **Auflistungsgruppen**, abhängig von dem Typ der Gruppe, die Sie sichtbar machen möchten.  
+5.  Klicken Sie auf das Pluszeichen **Blattgruppen**, **konsolidierte Gruppen**, oder **Auflistungsgruppen**, je nach Typ der Gruppe, die Sie sichtbar machen möchten.  
   
 6.  Klicken Sie auf das Pluszeichen, um die Gruppe zu erweitern, die Sie sichtbar machen möchten.  
   
-7.  Klicken Sie auf **Benutzer** oder **Gruppen**, je nachdem, ob Sie die Gruppe für einen Benutzer oder eine Gruppe sichtbar sind.  
+7.  Klicken Sie auf **Benutzer** oder **Gruppen**, abhängig davon, ob Sie die Gruppe für einen Benutzer oder eine Gruppe sichtbar machen.  
   
 8.  Klicken Sie auf **ausgewähltes Element bearbeiten**.  
   
-9. Klicken Sie auf Benutzer oder Gruppen in der **verfügbar** Feld, und klicken Sie auf die **hinzufügen** Pfeil. Klicken Sie auf den Pfeil für **Alle hinzufügen** , um alles hinzuzufügen.  
+9. Klicken Sie auf Benutzer oder Gruppen in der **verfügbar** ein, und klicken Sie auf die **hinzufügen** Pfeil. Klicken Sie auf den Pfeil für **Alle hinzufügen** , um alles hinzuzufügen.  
   
 10. Klicken Sie auf **Speichern**.  
   

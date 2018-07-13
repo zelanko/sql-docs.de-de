@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], about database diagrams
 - database diagrams [SQL Server], designing
 - database diagrams [SQL Server], creating
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8f49bf89391a0863a54cc57858cd5fb9c05fba90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9d3ac48037a5a61bd70179927b3c6de0eba90c9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059730"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244021"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Exemplarische Vorgehensweise: Hinzufügen und Ändern von Datenbankdiagrammen
   In dieser exemplarischen Vorgehensweise wird das Erstellen und Ändern eines Datenbankdiagramms und das Ausführen von Änderungen an der Datenbank mithilfe der Datenbankdiagrammkomponente erläutert. Es wird in Einzelschritten erklärt, wie Diagrammen Tabellen hinzugefügt werden, wie Beziehungen zwischen Tabellen erstellt werden, wie Einschränkungen und Indizes für Spalten erstellt werden und wie die Ebene der Informationen geändert wird, die für die einzelnen Tabellen angezeigt werden.  
@@ -74,11 +74,11 @@ ms.locfileid: "36059730"
   
 1.  Klicken Sie mit der rechten Maustaste auf den Datenbank-Designer außerhalb der vorhandenen Tabellen, und wählen Sie **Neue Tabelle**aus.  
   
-2.  In der **Namen auswählen** (Dialogfeld), klicken Sie auf **OK** , akzeptieren den Standardnamen `Table1`.  
+2.  In der **Namen auswählen** Dialogfeld klicken Sie auf **OK** um die Standardnamen `Table1`.  
   
      Ein neues Tabellenraster mit drei Spalten wird angezeigt: **Spaltenname**, **Datentyp**und **NULL-Werte zulassen**.  
   
-3.  Fügen Sie die folgende Informationen, um `Table1`:  
+3.  Fügen Sie die folgende Informationen zur `Table1`:  
   
     |**Spaltenname**|**Datentyp**|**NULL-Werte zulassen**|  
     |---------------------|-------------------|---------------------|  
@@ -92,7 +92,7 @@ ms.locfileid: "36059730"
   
 5.  Klicken Sie im Menü **Datei** auf **Diagramm1 speichern**.  
   
-6.  In der **Namen auswählen** (Dialogfeld), klicken Sie auf **OK** , akzeptieren den Standardnamen `Diagram1`.  
+6.  In der **Namen auswählen** Dialogfeld klicken Sie auf **OK** um die Standardnamen `Diagram1`.  
   
 7.  Das Dialogfeld **Speichern** wird angezeigt, und in einer Meldung wird darüber informiert, dass `Table1` in der Datenbank gespeichert wird. Klicken Sie auf **Ja**.  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], adding
 - adding tasks
@@ -18,13 +18,13 @@ ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 91fc3a76f7c4c4b09af9a470f5a8ae3f48b72bd6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1546a8bf4d0da741d63cb8bd8d4b2f849cf921d2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058953"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256936"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>Hinzufügen oder Löschen eines Tasks oder Containers in einer Ablaufsteuerung
   Wenn Sie im Ablaufsteuerungs-Designer arbeiten, werden in der Toolbox im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer die Tasks aufgeführt, die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] zum Erstellen einer Ablaufsteuerung in einem Paket bereitstellt. Weitere Informationen über die Toolbox finden Sie unter [SSIS Toolbox](../ssis-toolbox.md).  

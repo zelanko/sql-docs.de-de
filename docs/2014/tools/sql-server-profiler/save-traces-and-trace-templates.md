@@ -1,5 +1,5 @@
 ---
-title: Speichern von Ablaufverfolgungen und Ablaufverfolgungsvorlagen | Microsoft Docs
+title: Speichern von Ablaufverfolgungen und Ablaufverfolgungsvorlagen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - saving traces
 - traces [SQL Server], saving
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SQL Server Profiler, templates
 ms.assetid: 957e6bf8-e7a3-4a59-a1cd-0a41538a8158
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dacc7508addfd5486e4c242a936c172e64f66bde
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 46806b60627ad5f7631bb23d565dc1e36d0ef3b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057067"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255832"
 ---
 # <a name="save-traces-and-trace-templates"></a>Speichern von Ablaufverfolgungen und Ablaufverfolgungsvorlagen
   Es ist wichtig, zwischen dem Speichern von Ablaufverfolgungsdateien und dem Speichern von Ablaufverfolgungsvorlagen zu unterscheiden. Beim Speichern einer Ablaufverfolgungsdatei werden die aufgezeichneten Ereignisdaten an einem angegebenen Speicherort gespeichert. Beim Speichern einer Ablaufverfolgungsvorlage wird die Ablaufverfolgungsdefinition gespeichert, wie z. B. angegebene Datenspalten, Ereignisklassen oder Filter.  

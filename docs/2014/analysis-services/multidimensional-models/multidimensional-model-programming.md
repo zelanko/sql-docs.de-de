@@ -1,5 +1,5 @@
 ---
-title: Mehrdimensionale Modellprogrammierung | Microsoft Docs
+title: Mehrdimensionale Modellprogrammierung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 871a6d98-85bf-4200-8343-137543029512
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 16372428210bd140dab65c73d62d823fb5b53bb9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a31015e4103f480899bfb423d506b38ef5b7f140
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057894"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245626"
 ---
 # <a name="multidimensional-model-programming"></a>Mehrdimensionale Modellprogrammierung
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet mehrere APIs Sie verwenden können, um die Programmierung für eine Analysis Services-Instanz und die mehrdimensionalen Datenbanken, die sie verfügbar macht. In diesem Abschnitt werden Ansätze für Entwickler beschrieben, die benutzerdefinierte Anwendungen unter Verwendung mehrdimensionaler Analysis Services-Projektmappen erstellen möchten. Anhand dieser Informationen können Sie eine Programmierschnittstelle auswählen, die den Anforderungen eines bestimmten Projekts am besten entspricht. Analysis Services-Entwicklungsprojekte können auf verwaltetem oder nicht verwaltetem Code basieren, der auf einer Windows-Plattform oder anderen Plattformen ausgeführt wird, die den HTTP-Zugriff unterstützen.  

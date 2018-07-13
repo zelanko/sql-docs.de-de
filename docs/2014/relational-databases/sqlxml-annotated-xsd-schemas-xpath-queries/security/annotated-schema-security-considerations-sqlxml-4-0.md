@@ -1,5 +1,5 @@
 ---
-title: Schema-Sicherheitsüberlegungen (SQLXML 4.0) versehen | Microsoft Docs
+title: Schema-Sicherheitsüberlegungen (SQLXML 4.0) versehen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], security
 ms.assetid: 7d7e44dc-b6d3-4e0f-95c7-8f99930c94f2
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7a53645c4b6115a7859b6c07a78c300f902e9111
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 4834255ba7f6024c484c8142ccfb4d18a9e6f44c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058029"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325670"
 ---
 # <a name="annotated-schema-security-considerations-sqlxml-40"></a>Überlegungen zur Sicherheit von Schemas mit Anmerkungen (SQLXML 4.0)
   Im Folgenden werden Sicherheitsrichtlinien zur Verwendung von Schemas mit Anmerkungen gegeben:  
@@ -39,7 +39,7 @@ ms.locfileid: "36058029"
   
 -   Die mithilfe von Anmerkungen angegebene explizite Zuordnung macht die Datenbankinformationen (wie Tabellennamen und Spaltennamen) verfügbar. Daher werden Sie es möglicherweise vorziehen, diese Schemas nicht öffentlich verfügbar zu machen.  
   
--   Bestimmte Abfragen wie solche, die für ein Zuordnungsschema mit Rekursion angegeben werden (mit auf einen höheren Wert festgelegter `max-depth`-Anmerkung), benötigen eventuell mehr Zeit zur Ausführung. Sie können optional eine Timeoutgrenze angeben, durch den Befehlstimeout-Eigenschaft (in Sekunden) festlegen. Zum Beispiel:  
+-   Bestimmte Abfragen wie solche, die für ein Zuordnungsschema mit Rekursion angegeben werden (mit auf einen höheren Wert festgelegter `max-depth`-Anmerkung), benötigen eventuell mehr Zeit zur Ausführung. Sie können optional eine Timeoutgrenze angeben, indem Sie die Befehlstimeout-Eigenschaft (in Sekunden). Zum Beispiel:  
   
     ```  
     cn.Open "Provider=SQLOLEDB;Server=localhost;Database=tempdb;Integrated Security=SSPI;Command Properties='Command Time Out=50';"  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c9367e4715022afcff7c988cbe877a1565f41cab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c8eec2498cace997c8f67493772c9ac23d374bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059667"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217830"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Erstellen der Funktion zum Abrufen der Änderungsdaten
   Nach Abschluss der Ablaufsteuerung für ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket, das ein inkrementelles Laden von Änderungsdaten ausführt, ist der nächste Task die Erstellung einer Tabellenwertfunktion, mit der die Änderungsdaten abgerufen werden. Sie müssen diese Funktion nur einmal vor dem ersten inkrementellen Laden erstellen.  
@@ -145,7 +145,7 @@ deallocate #hfunctions
 ## <a name="writing-your-own-table-value-function"></a>Schreiben einer eigenen Tabellenwert-Funktion  
  Sie können [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] auch verwenden, um eine eigene Tabellenwert-Wrapperfunktion zu schreiben, die die Change Data Capture-Abfragefunktion aufruft, und die Tabellenwert-Wrapperfunktion in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] speichern. Weitere Informationen zum Erstellen einer Transact-SQL-Funktion finden Sie unter [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql).  
   
- Das folgende Beispiel definiert eine Tabellenwertfunktion, mit der für das angegebene Änderungsintervall Änderungen von einer Customer-Tabelle abgerufen werden. Diese Funktion verwendet Change Data Capture-Funktionen zum Zuordnen der `datetime` Werte im binären Protokoll Sequenz (Number, LSN)-Werte, die die Änderungstabellen intern verwenden. Diese Funktion behandelt auch mehrere besondere Bedingungen:  
+ Das folgende Beispiel definiert eine Tabellenwertfunktion, mit der für das angegebene Änderungsintervall Änderungen von einer Customer-Tabelle abgerufen werden. Diese Funktion verwendet Change Data Capture-Funktionen zum Zuordnen der `datetime` -Werte in das binäre Protokoll sequence (Number, LSN)-Werte, die die Änderungstabellen intern verwenden. Diese Funktion behandelt auch mehrere besondere Bedingungen:  
   
 -   Wenn für die Startzeit ein NULL-Wert übergeben wird, verwendet diese Funktion den frühesten verfügbaren Wert.  
   

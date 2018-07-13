@@ -1,5 +1,5 @@
 ---
-title: Zuordnungs-Assistent (Datamining-Client für Excel) | Microsoft Docs
+title: Zuordnungs-Assistent (Datamining-Client für Excel) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - nested tables, in association models
 - association [data mining]
 ms.assetid: 4db6462f-93c7-443f-8ff7-39474dc7029e
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fbb7f91279b1f3e6ae642e3acbf2548b7205b563
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed09d260a7db66561af6cf80136c801ea46cc5a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061513"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216610"
 ---
 # <a name="associate-wizard-data-mining-client-for-excel"></a>Zuordnungs-Assistent (Data Mining-Client für Excel)
-  ![Zuordnungs-Assistenten im Data Mining-Menüband](media/dmc-associate.gif "Zuordnungs-Assistent in Data Mining-Menüband")  
+  ![Zuordnungs-Assistenten im Data Mining-Menüband](media/dmc-associate.gif "Zuordnungs-Assistent im Data Mining-Menüband")  
   
  Der Zuordnungs-Assistent unterstützt Sie beim Erstellen eines Data Mining-Modells mithilfe des [!INCLUDE[msCoName](../includes/msconame-md.md)] Association Rules-Algorithmus. Solche Miningmodelle sind besonders nützlich zum Erstellen von *empfehlungssysteme*.  
   
@@ -41,13 +41,13 @@ ms.locfileid: "36061513"
   
      Die Beispieldatenarbeitsmappe enthält auf der Registerkarte Zuordnen ein Beispiel, wie Transaktionsdaten in der Regel angeordnet sind, wenn Sie beispielsweise in jeder Transaktion mehrere Produkte oder mehrere Einkaufsdatensätze pro Kunde analysieren möchten.  
   
-     Wenn Sie externe Daten verwenden, um ein Zuordnungsmodell mit dem Zuordnungs-Assistenten erstellen möchten, Sie müssen die Daten in Excel hinzufügen zuerst und *vereinfachen* Daten. Weitere Informationen zur Vorbereitung der Daten für zuordnungsmodelle finden Sie unter [geschachtelte Tabellen &#40;Analysis Services – Data Mining&#41;](data-mining/nested-tables-analysis-services-data-mining.md), in der SQL Server-Onlinedokumentation.  
+     Wenn Sie externe Daten verwenden, um ein Zuordnungsmodell mit dem Zuordnungs-Assistenten erstellen möchten, müssen Sie hinzufügen die Daten nach Excel zuerst und *vereinfachen* Daten. Weitere Informationen zur Vorbereitung der Daten für zuordnungsmodelle finden Sie unter [geschachtelte Tabellen &#40;Analysis Services – Data Mining&#41;](data-mining/nested-tables-analysis-services-data-mining.md), in der SQL Server-Onlinedokumentation.  
   
 3.  Auf der **Zuordnung** Seite, wählen Sie die Spalte, die die Transaktion identifiziert.  
   
      Bei Warenkorbmodellen stellt dieser Bezeichner die Einheit dar, die modelliert werden soll. Möchten Sie Artikel analysieren, die einzelne Kunden in einem bestimmten Zeitraum gekauft haben, oder möchten Sie viele Transaktionen mit mehreren Kunden analysieren? Im ersten Fall würden Sie die Kunden-ID auswählen, im letzten Fall würden Sie die Bestellung oder eine andere Transaktions-ID auswählen.  
   
-4.  Für **Element**, wählen Sie die Spalte, die die Artikel enthält, zwischen denen Sie Zuordnungen suchen müssen.  
+4.  Für **Element**, wählen Sie die Spalte, die die Punkte enthält, für die Sie Zuordnungen suchen möchten.  
   
      Bei einem Warenkorbmodell würden Sie zum Beispiel ein Produktfeld auswählen, um zu analysieren, welche Produkte oft zusammen gekauft werden. Wenn zu viele einzelne Produkte für eine effiziente Korrelation vorhanden sind, könnten Sie ein Feld mit der Produktkategorie oder Unterkategorie auswählen.  
   
@@ -65,11 +65,11 @@ ms.locfileid: "36061513"
   
     -   Wenn Sie die Wahrscheinlichkeit einer Regel verringern, verringern Sie die Anforderungen, die eine Kombination erreichen muss, um im Kontext des gesamten Datasets als signifikant angesehen zu werden.  
   
-     **Tipp:** ist eine gute Idee, die mehrere Miningmodelle mit anderen Kombinationen von Unterstützung und Wahrscheinlichkeit erstellen. Um die Einstellungen zu verfolgen Sie für jedes Modell verwendet haben, können Sie die **Dokumentmodell** Assistenten im Data Mining-Client für Excel, und verwenden Sie die **Detailed** Berichtsoption. Weitere Informationen finden Sie unter [Miningmodelle dokumentieren &#40;Data Mining-Add-ins für Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md).  
+     **Tipp:** es ist eine gute Idee, die mehrere Miningmodelle mit anderen Kombinationen von Unterstützung und Wahrscheinlichkeit erstellen. Zum Nachverfolgen von welche Einstellungen Sie für jedes Modell verwendet haben, können Sie die **Dokumentmodell** Assistenten im Data Mining-Client für Excel, und Verwenden der **detailliert** Berichtsoption. Weitere Informationen finden Sie unter [Miningmodelle dokumentieren &#40;Data Mining-Add-ins für Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md).  
   
 6.  Klicken Sie optional auf **Parameter** die Algorithmusparameter ändern und das Verhalten des Miningmodells anzupassen.  
   
-     Das Dialogfeld Algorithmusparameter enthält alle Parameter, die Sie im Assistenten festgelegt haben, und zusätzlich einige Parameter, die weniger häufig verwendet werden, z. B. MAXIMUM_SUPPORT. Weitere Informationen dazu, wie diese Parameter verwendet, finden Sie unter [Microsoft Association Algorithm Technical Reference](data-mining/microsoft-association-algorithm-technical-reference.md).  
+     Das Dialogfeld Algorithmusparameter enthält alle Parameter, die Sie im Assistenten festgelegt haben, und zusätzlich einige Parameter, die weniger häufig verwendet werden, z. B. MAXIMUM_SUPPORT. Informationen dazu, wie Sie diese Parameter verwenden, finden Sie unter [Microsoft Association Algorithm Technical Reference](data-mining/microsoft-association-algorithm-technical-reference.md).  
   
 7.  Auf der **Fertig stellen** Seite, und geben Sie einen eindeutigen Namen für das DataSet und das Modell.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36061513"
   
     -   **Navigieren Sie**.  Wenn das Modell fertig ist, öffnet der Assistent ein Fenster, in dem die Regeln, die Itemsets sowie ein Abhängigkeitsnetzwerkdiagramm angezeigt werden, das die Zuordnungen darstellt.  
   
-         Weitere Informationen zum Interpretieren der Daten im Zuordnungsmodell-Viewer finden Sie unter [Modells für Zuordnungsregeln Durchsuchen](browsing-an-association-rules-model.md).  
+         Weitere Informationen zum Interpretieren der Daten im Zuordnungsmodell-Viewer finden Sie unter [Durchsuchen eines Modells für Zuordnungsregeln](browsing-an-association-rules-model.md).  
   
     -   **Aktivieren von Drillthrough**. Wählen Sie diese Option aus, um über das Modell Zugriff auf die zugrunde liegenden Daten zu erhalten.  
   
@@ -103,8 +103,8 @@ ms.locfileid: "36061513"
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen von Datamining-Modells](creating-a-data-mining-model.md)   
- [Ein Modell für Zuordnungsregeln durchsuchen](browsing-an-association-rules-model.md)   
+ [Durchsuchen eines Modells für Zuordnungsregeln](browsing-an-association-rules-model.md)   
  [Warenkorbanalyse &#40;Tabelle AnalysisTools für Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md)   
- [Exemplarische Vorgehensweise für das Abhängigkeit Netzwerk &#40;Data Mining-Add-ins&#41;](dependency-network-diagram-walkthrough-data-mining-add-ins.md)  
+ [Exemplarische Vorgehensweise für Abhängigkeit &#40;Data Mining-Add-ins&#41;](dependency-network-diagram-walkthrough-data-mining-add-ins.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - automatic report server tasks
 - rs utility
@@ -21,13 +21,13 @@ ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 26e1dccb1d72ac0a743a545e29b175f5e8bb79fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9889c2a14d48a7c2bccd7087c96567e92e1e4112
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058849"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255462"
 ---
 # <a name="rsexe-utility-ssrs"></a>Hilfsprogramm 'RS.exe' (SSRS)
   Das Dienstprogramm rs.exe verarbeitet Skripts, die von Ihnen in einer Eingabedatei bereitgestellt werden. Verwenden Sie dieses Hilfsprogramm, um die Berichtsserverbereitstellung und Verwaltungsaufgaben zu automatisieren.  
@@ -71,13 +71,13 @@ ms.locfileid: "36058849"
  `-i` *Eingabedatei*  
  (Erforderlich) Gibt die auszuführende RSS-Datei an. Dieser Wert kann einen relativen oder einen vollqualifizierten Pfad zur RSS-Datei enthalten.  
   
- `-s` *serverURL*  
+ `-s` *Server-URL*  
  (Erforderlich) Gibt den Namen des Webservers und den Namen des virtuellen Verzeichnisses auf dem Berichtsserver an, in dem die Datei ausgeführt werden soll. Ein Beispiel für eine Berichtsserver-URL ist `http://examplewebserver/reportserver`. Das Präfix http:// oder https:// zu Beginn des Servernamens ist optional. Wenn Sie kein Präfix angeben, verwendet der Berichtsserver-Skripthost zunächst https:// und dann http://, falls https:// nicht verfügbar ist.  
   
  `-u` [*Domäne*\\]*Benutzername*  
  (Optional) Gibt ein Benutzerkonto an, das für die Herstellung einer Verbindung mit dem Berichtsserver verwendet wird. Wenn `-u` und `-p` nicht angegeben werden, wird das aktuelle Windows-Benutzerkonto verwendet.  
   
- `-p` *Kennwort*  
+ `-p` *Das Kennwort*  
  (Erforderlich, wenn `-u` angegeben ist) gibt das Kennwort für die Verwendung mit der `-u` Argument. Bei diesem Wert wird die Groß-/Kleinschreibung beachtet.  
   
  `-e`  
@@ -91,13 +91,13 @@ ms.locfileid: "36058849"
   
 -   Exec2005  
   
- Wird kein Wert angegeben, wird der Endpunkt Mgmt2005 verwendet. Weitere Informationen zu den SOAP-Endpunkten finden Sie unter [Report Server Web Service Endpoints](../report-server-web-service/methods/report-server-web-service-endpoints.md).  
+ Wird kein Wert angegeben, wird der Endpunkt Mgmt2005 verwendet. Weitere Informationen zu den SOAP-Endpunkten, finden Sie unter [Report Server Web Service Endpoints](../report-server-web-service/methods/report-server-web-service-endpoints.md).  
   
- `-l` *time_out*  
+ `-l` *Timeout*  
  (Optional) Gibt die Anzahl von Sekunden an, die verstreichen, ehe sich für die Verbindung mit dem Server ein Timeout ergibt. Der Standardwert ist 60 Sekunden. Wenn Sie keinen Timeoutwert angeben, wird der Standardwert verwendet. Ein Wert von `0` gibt an, dass sich für die Verbindung kein Timeout ergibt.  
   
  **-b**  
- (Optional) Gibt an, dass die Befehle in der Skriptdatei als Batch ausgeführt werden. Falls ein Befehl fehlschlägt, wird ein Rollback für den Batch ausgeführt. Einige Befehle können nicht als Batch ausgeführt werden. Diese Befehle werden wie gewohnt ausgeführt. Nur Ausnahmen, die ausgegeben werden und nicht innerhalb des Skripts behandelt werden, führen zu einem Rollback. Wenn das Skript eine Ausnahme behandelt und normalerweise zurückgibt `Main`, der Batch wird übergeben. Wenn Sie diesen Parameter nicht angeben, werden die Befehle ausgeführt, ohne dass ein Batch erstellt wird. Weitere Informationen finden Sie unter [Batching Methods](../report-server-web-service-net-framework-soap-headers/batching-methods.md).  
+ (Optional) Gibt an, dass die Befehle in der Skriptdatei als Batch ausgeführt werden. Falls ein Befehl fehlschlägt, wird ein Rollback für den Batch ausgeführt. Einige Befehle können nicht als Batch ausgeführt werden. Diese Befehle werden wie gewohnt ausgeführt. Nur Ausnahmen, die ausgegeben werden und nicht innerhalb des Skripts behandelt werden, führen zu einem Rollback. Wenn das Skript eine Ausnahme behandelt und normalerweise von zurückgegeben `Main`, wird für den Batch ein Commit ausgeführt. Wenn Sie diesen Parameter nicht angeben, werden die Befehle ausgeführt, ohne dass ein Batch erstellt wird. Weitere Informationen finden Sie unter [Batching Methods](../report-server-web-service-net-framework-soap-headers/batching-methods.md).  
   
  `-v` *GlobalVar*  
  (Optional) Gibt globale Variablen an, die in dem Skript verwendet werden. Wenn das Skript globale Variablen verwendet, müssen Sie dieses Argument angeben. Der angegebene Wert muss für die in der RSS-Datei definierten globalen Variablen gültig sein. Sie müssen eine globale Variable für jedes **-v** -Argument angeben.  
@@ -106,7 +106,7 @@ ms.locfileid: "36058849"
   
  `rs.exe -i myScriptFile.rss -s http://myServer/reportserver -v parentFolder="Financial Reports"`  
   
- Globale Variablen werden mit den vorliegenden Namen erstellt und auf die bereitgestellten Werte festgelegt. Beispielsweise **- V eine =**"`1`" **- V-b =**"`2`" führt zu einer Variablen namens `a` mit einem Wert von "`1`" und eine Variable **b**mit einem Wert von "`2`".  
+ Globale Variablen werden mit den vorliegenden Namen erstellt und auf die bereitgestellten Werte festgelegt. Z. B. **- V eine =**"`1`" **--v b =**"`2`" führt zu einer Variablen namens `a` mit einem Wert von "`1`" und eine Variable **b**mit einem Wert von "`2`".  
   
  Globale Variablen stehen für alle Funktionen im Skript zur Verfügung. Eine Kombination von umgekehrtem Schrägstrich und einem Anführungszeichen (**\\"**) wird als Anführungszeichen interpretiert. Anführungszeichen sind nur erforderlich, wenn die Zeichenfolge ein Leerzeichen enthält. Namen von Variablen müssen für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]gültig sein. Sie müssen mit einem Buchstaben oder Unterstrich beginnen und dürfen ausschließlich Buchstaben, Ziffern oder Unterstriche enthalten. Reservierte Wörter können nicht als Variablennamen verwendet werden. Weitere Informationen zur Verwendung globaler Variablen finden Sie unter [Integrierte Sammlungen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
@@ -128,7 +128,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
  Weitere Beispiele finden Sie unter [Ausführen einer Reporting Services-Skriptdatei](run-a-reporting-services-script-file.md)  
   
 ## <a name="remarks"></a>Hinweise  
- Sie können Skripts so definieren, dass sie Systemeigenschaften festlegen, Berichte veröffentlichen usw. Die Skripts, die Sie erstellen, können jede Methode der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -API einschließen. Weitere Informationen zu den Methoden und Eigenschaften, die Ihnen zur Verfügung, finden Sie unter [Berichtsserver-Webdienst](../report-server-web-service/report-server-web-service.md).  
+ Sie können Skripts so definieren, dass sie Systemeigenschaften festlegen, Berichte veröffentlichen usw. Die Skripts, die Sie erstellen, können jede Methode der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -API einschließen. Weitere Informationen zu den Methoden und Eigenschaften, die Ihnen zur Verfügung, finden Sie unter [Report Server Web Service](../report-server-web-service/report-server-web-service.md).  
   
  Das Skript muss in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET-Code geschrieben und in einer Unicode- oder UTF-8-Textdatei mit der Dateinamenerweiterung „.rss“ gespeichert sein. Das Hilfsprogramm **rs** kann nicht zum Debuggen von Skripts verwendet werden. Führen Sie zum Debuggen eines Skripts den Code in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]aus.  
   
@@ -139,6 +139,6 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
  [Ausführen einer Reporting Services-Skriptdatei](run-a-reporting-services-script-file.md)   
  [Skripts für Bereitstellungs- und Verwaltungsaufgaben](script-deployment-and-administrative-tasks.md)   
  [Skript mit dem Hilfsprogramm rs.exe und dem Webdienst](script-with-the-rs-exe-utility-and-the-web-service.md)   
- [Eingabeaufforderungs-Hilfsprogramme Bericht &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)  
+ [Eingabeaufforderung-Hilfsprogramme für Berichtsserver &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)  
   
   

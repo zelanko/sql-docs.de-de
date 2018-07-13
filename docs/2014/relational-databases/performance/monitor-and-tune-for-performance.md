@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - instances of SQL Server, monitoring performance
 - monitoring server performance [SQL Server]
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - monitoring server performance [SQL Server], about monitoring server performance
 ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b9865d2c8c4427e72e26212417d1d11f73fc3291
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: cf401890d55cd26240523b141f3ba52272060b2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058689"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276786"
 ---
 # <a name="monitor-and-tune-for-performance"></a>Überwachen und Optimieren der Leistung
   Ziel der Überwachung von Datenbanken ist es, die Leistung eines Servers zu bewerten. Eine effektive Überwachung umfasst die regelmäßige Erstellung von Momentaufnahmen der aktuellen Leistung, um problematische Prozesse zu isolieren, und die kontinuierliche Sammlung von Daten, um Leistungstrends über längere Zeit zu verfolgen.  
@@ -45,7 +45,7 @@ ms.locfileid: "36058689"
  Durch die fortlaufende Auswertung der Datenbankleistung können Sie die Antwortzeiten minimieren und den Durchsatz maximieren, um so die optimale Leistung zu erzielen. Die effiziente Netzwerklast, Datenträger-E/A und CPU-Nutzung sind der Schlüssel zu Höchstleistungen. Hierzu müssen Sie die Anwendungsanforderungen gründlich analysieren, die logische und physische Struktur der Daten kennen, die Datenbanknutzung bewerten und Kompromisse zwischen gegensätzlichen Nutzungen, wie etwa OLTP (Online Transaction Processing) im Gegensatz zur Entscheidungsunterstützung, aushandeln.  
   
 ## <a name="benefits-of-monitoring-and-tuning-databases-for-performance"></a>Vorteile der Überwachung und Optimierung von Datenbanken für die Leistung  
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Microsoft Windows-Betriebssystem stellen Hilfsprogramme, mit denen Sie den aktuellen Zustand der Datenbank anzeigen und die Leistung unter veränderten Bedingungen nachverfolgen bereit. Es gibt eine Vielzahl von Tools und Methoden, die verwendet werden können, um zu überwachen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn Sie wissen, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überwacht werden kann, können Sie folgende Vorgänge ausführen:  
+ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und der Microsoft Windows stellen Hilfsprogramme bereit, mit denen Sie den aktuellen Zustand der Datenbank anzeigen und die Leistung unter veränderten Bedingungen nachverfolgen können. Es gibt eine Vielzahl von Tools und Techniken, die verwendet werden können, um zu überwachen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn Sie wissen, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überwacht werden kann, können Sie folgende Vorgänge ausführen:  
   
 -   Ermitteln, ob die Leistung verbessert werden kann. Indem Sie beispielsweise die Antwortzeiten für häufig verwendete Abfragen überwachen, können Sie ermitteln, ob Änderungen an der Abfrage oder den Indizes in den Tabellen erforderlich sind.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36058689"
 -   Beheben möglicher Probleme oder Debuggen von Anwendungskomponenten, wie z. B. den gespeicherten Prozeduren.  
   
 ### <a name="monitoring-in-a-dynamic-environment"></a>Überwachen in einer dynamischen Umgebung  
- Die Überwachung ist wichtig, da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Dienst in einer dynamischen Umgebung bereitstellt. Geänderte Bedingungen bedeuten eine andere Leistung. In Ihren Auswertungen sehen Sie Leistungsänderungen, wenn die Anzahl der Benutzer steigt, wenn die Benutzer andere Zugriffs- und Verbindungsmethoden verwenden, wenn die Datenbank wächst, wenn andere Clientanwendungen genutzt werden, wenn sich die Daten in den Anwendungen ändern, wenn die Abfragen komplexer werden und wenn die Netzwerkbelastung ansteigt. Mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tools zum Überwachen der Leistung zu erzielen, können Sie einige Änderungen bei der Leistung mit geänderten Bedingungen und komplexen Abfragen zuordnen. Die folgenden Szenarien stellen Beispiele bereit:  
+ Die Überwachung ist wichtig, da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Dienst in einer dynamischen Umgebung bereitstellt. Geänderte Bedingungen bedeuten eine andere Leistung. In Ihren Auswertungen sehen Sie Leistungsänderungen, wenn die Anzahl der Benutzer steigt, wenn die Benutzer andere Zugriffs- und Verbindungsmethoden verwenden, wenn die Datenbank wächst, wenn andere Clientanwendungen genutzt werden, wenn sich die Daten in den Anwendungen ändern, wenn die Abfragen komplexer werden und wenn die Netzwerkbelastung ansteigt. Mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tools zur Überwachung der Leistung zu erzielen, können Sie einige Änderungen in Bezug auf Leistung mit geänderten Bedingungen und komplexen Abfragen zuordnen. Die folgenden Szenarien stellen Beispiele bereit:  
   
 -   Wenn Sie die Antwortzeiten für häufig verwendete Abfragen überwachen, können Sie ermitteln, ob Änderungen an der Abfrage oder den Indizes in den Tabellen, in denen die Abfragen ausgeführt werden, notwendig sind.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36058689"
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|[Überwachen von SQL Server-Komponenten](monitor-sql-server-components.md)|Bietet die notwendigen Schritte erforderlich, um Sie effektiv eine beliebige Komponente von Überwachen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Überwachen von SQL Server-Komponenten](monitor-sql-server-components.md)|Enthält die notwendigen Schritte erforderlich, um die Überwachung der Komponenten von effektiv [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Tools für die Leistungsüberwachung und -optimierung](performance-monitoring-and-tuning-tools.md)|Listet die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überwachungs- und Optimierungstools.|  
 |[Festlegen einer Leistungsbasislinie](establish-a-performance-baseline.md)|Stellt Informationen zum Festlegen einer Leistungsbasislinie bereit.|  
 |[Isolieren von Leistungsproblemen](isolate-performance-problems.md)|Beschreibt, wie Datenbankleistungsprobleme isoliert werden.|  

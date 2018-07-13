@@ -1,5 +1,5 @@
 ---
-title: Einfache XML-Eingabe File-Beispiel (DTA) | Microsoft Docs
+title: Beispiel (DTA) eine einfache XML-Eingabedatei | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - sample applications [DTA]
 ms.assetid: 5b00e4eb-1742-43ec-98d8-d84216b6b840
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a95a5c086d5c9c941407e6e3a92e2ea4f8cdcd72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 77aac926ba5963fbef68a1b5db83687ddf5f77c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057727"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321380"
 ---
 # <a name="simple-xml-input-file-sample-dta"></a>Beispiel für eine einfache XML-Eingabedatei (DTA)
   Kopieren Sie dieses Beispiel einer einfachen XML-Eingabedatei, und fügen Sie sie in Ihren XML-Editor oder Text-Editor ein, um sie für die Optimierung der Arbeitsauslastungen zu verwenden. Ersetzen Sie anschließend die Werte für die **Server**-, **Database**-, **Schema**-, **Table**-, **Workload**- und **TuningOptions** -Elemente durch die Werte für Ihre bestimmte Optimierungssitzung. Weitere Informationen zu den Attributen und untergeordneten Elementen, die Sie zusammen mit diesen Elementen verwenden können, finden Sie unter [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md). Im folgenden Beispiel wird nur eine Teilmenge der verfügbaren Optionen für Attribute und untergeordnete Elemente verwendet.  

@@ -1,5 +1,5 @@
 ---
-title: Columns-Element (ASSL) | Microsoft Docs
+title: Columns-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Columns element
 ms.assetid: 14011eed-6f10-4120-b256-d599d59bde80
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e635738dddc7eabda62f0c35df860db3d9a10b60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ad5104e3b0fc0b6b34c7b0a4aa3eed9b18336aab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059003"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231910"
 ---
 # <a name="columns-element-assl"></a>Columns-Element (ASSL)
   Enthält die Auflistung der Spalten, die mit dem übergeordneten Element verknüpft sind.  
@@ -77,12 +77,12 @@ ms.locfileid: "36059003"
 |[DrillThroughAction](../data-type/binding-data-type-assl.md) oder [MeasureBinding](../data-type/measurebinding-data-type-assl.md)|  
 |[Ereignis](../data-type/eventcolumn-data-type-assl.md)|  
 |[MiningModel](../objects/miningmodel-element-assl.md), [MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md)|[MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md)|  
-|[MiningStructure](../objects/miningstructure-element-assl.md), [TableMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|[Miningstructurecolumn-Objekt](../data-type/miningstructurecolumn-data-type-assl.md)|  
+|[MiningStructure](../objects/miningstructure-element-assl.md), [TableMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|[MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Für `DrillThroughAction` Elemente, die `Columns` Auflistung identifiziert die Spalten, enthalten Daten zurückgegeben, wenn die Aktion ausgeführt wird.  
+ Für `DrillThroughAction` Elemente, die `Columns` identifiziert die Spalten, enthalten die Daten zurückgegeben werden, wenn die Aktion ausgeführt wird.  
   
- Für `TableMiningStructureColumn` Elemente, die `Columns` Sammlung kann Sie nur eine Ebene der Rekursion. Mit anderen Worten, jedes `TableMiningStructureColumn` -Element in dieser Auflistung darf nicht enthalten `TableMiningStructureColumn` Elemente in seiner `Columns` Auflistung.  
+ Für `TableMiningStructureColumn` Elemente, die `Columns` Auflistung können nur eine Ebene der Rekursion. In anderen Worten, jedes `TableMiningStructureColumn` -Element in dieser Auflistung darf nicht enthalten `TableMiningStructureColumn` Elemente in der `Columns` Auflistung.  
   
  Einige der entsprechenden Elemente im AMO-Objektmodell (Analysis Management Objects) sind <xref:Microsoft.AnalysisServices.TraceColumnCollection>, <xref:Microsoft.AnalysisServices.MiningModelColumnCollection> und <xref:Microsoft.AnalysisServices.MiningStructureColumnCollection>.  
   

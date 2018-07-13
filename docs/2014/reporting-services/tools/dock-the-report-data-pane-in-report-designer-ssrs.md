@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Data pane, docking
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0792825135920bff993088c00bf5eec1694a342d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e3d682f7018261e967729a26db201bef5a3b6e41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059293"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220720"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Andocken des Berichtsdatenbereichs im Berichts-Designer (SSRS)
-  Im Berichts-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], berichtsdatenbereich zeigt eine hierarchische Sicht von Datenobjekten, die Sie verwenden können, in einen Bericht, einschließlich Datenquellen, Datasets, Felder, Parameter und Bilder. Datenquellen können in dieser Sicht eingebettet oder Verweise auf freigegebene Datenquellen sein, die im Projektmappen-Explorer angezeigt werden.  
+  Im Berichts-Designer [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], berichtsdatenbereich zeigt eine hierarchische Ansicht der Objekte, die Sie verwenden können, der in einem Bericht, einschließlich Datenquellen, Datasets, Feldern, Parametern und Bilder. Datenquellen können in dieser Sicht eingebettet oder Verweise auf freigegebene Datenquellen sein, die im Projektmappen-Explorer angezeigt werden.  
   
 ### <a name="to-display-the-report-data-pane"></a>So zeigen Sie den Berichtsdatenbereich an  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36059293"
   
 ### <a name="to-change-the-report-data-pane-from-a-docked-window-to-a-tabbed-window"></a>So ändern Sie den Berichtsdatenbereich von einem angedockten Fenster in ein Fenster im Registerkartenformat  
   
--   Klicken Sie auf der Titelleiste des Bereichs "Berichtsdaten", und klicken Sie dann auf **Dokument im Registerkartenformat**.  
+-   Mit der rechten Maustaste in die Titelleiste im berichtsdatenbereich, und klicken Sie dann auf **Dokument im Registerkartenformat**.  
   
 ### <a name="to-change-the-report-data-pane-from-a-tabbed-window-to-a-docked-window"></a>So ändern Sie den Berichtsdatenbereich von einem Fenster im Registerkartenformat in ein angedocktes Fenster  
   

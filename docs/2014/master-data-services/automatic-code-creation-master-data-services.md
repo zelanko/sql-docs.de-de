@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9adbd5e1-f28c-4fb5-afa7-082de2831f3e
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7159085aacfe569af079c9f7c457a460df960189
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: fb55b8db046e3d4fd76143f37f883b458e8bab64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058085"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245000"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>Automatische Codeerstellung (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können numerische Werte für das Codeattribut oder andere numerische Attributwerte automatisch generiert werden. Wenn Codes automatisch generiert werden, können Sie trotzdem andere Werte für Codes eingeben; es wird nur ein Anfangswert automatisch festgelegt.  
@@ -45,8 +45,8 @@ ms.locfileid: "36058085"
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Automatisches Generieren von Werten für das Codeattribut.|[Automatisches Generieren von Codeattributwerten &#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
-|Generieren Sie automatisch Werte für andere Attribute.|[Automatisches Generieren von anderen Attributwerten als Code &#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
+|Automatisches Generieren von Werten für das Codeattribut.|[Automatisch generieren von Codeattributwerten &#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
+|Generieren Sie automatisch Werte für andere Attribute.|[Generieren von anderen Attributwerten als Code automatisch &#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   

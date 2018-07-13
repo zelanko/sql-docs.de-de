@@ -1,5 +1,5 @@
 ---
-title: Aktion im Dialogfeld Eigenschaften (Berichts-Generator und SSRS) | Microsoft Docs
+title: Aktion im Dialogfeld Eigenschaften (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shared.action.f1
 - "10413"
@@ -34,15 +34,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.seriesproperties.action.f1
 ms.assetid: 2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9
 caps.latest.revision: 13
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4cae7e5c0de408c4a2ed9636e3c941f8e0a32b0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e245d03b32dc48a96b0f1d967cc7c83b684654ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058242"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323760"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>Aktionseigenschaften (Dialogfeld) (Berichts-Generator und SSRS)
   Das Dialogfeld **Aktion** kann verwendet werden, um Linkoptionen für Diagramme, Messgeräte und Kartenelemente zu aktivieren, die Links unterstützen. Definieren Sie eine Aktion, damit ein Benutzer auf den Bereicht klicken und einen Link mit einer URL, einem anderen Bericht auf demselben Berichtsserver oder auf einer SharePoint-Site, die in einen Berichtsserver integriert ist, oder mit einer anderen Stelle in demselben Bericht herstellen kann.  
@@ -62,7 +62,7 @@ ms.locfileid: "36058242"
   
  Verwenden Sie für einen Bericht, der auf einem für den einheitlichen Modus konfigurierten Berichtsserver veröffentlicht wurde, einen vollständigen oder relativen Pfad ohne die Dateinamenerweiterung. Falls sich der Bericht in demselben Ordner befindet wie der aktuelle Bericht, verwenden Sie nur den Namen des Berichts. Falls sich der Bericht in einem anderen Ordner auf demselben Berichtsserver befindet, verwenden Sie einen relativen oder vollständigen Pfad. Ein relativer Pfad beginnt mit dem aktuellen Ordner und enthält dann weitere übergeordnete Ordner in der Ordnerhierarchie, beispielsweise ../Ordner2/Bericht1. Ein vollständiger Pfad beginnt mit /, dem Basisordner. Beispiel: /Berichte/Bericht1.  
   
- Verwenden Sie für einen Bericht, der auf einem im integrierten SharePoint-Modus konfigurierten Berichtsserver veröffentlicht wurde, eine vollqualifizierte URL einschließlich der Dateinamenerweiterung (.rdl). Z. B. http://*\<SharePointservername > /\<Website >*/Dokumente/Bericht1.RDL. Relative Pfade werden nicht unterstützt.  
+ Verwenden Sie für einen Bericht, der auf einem im integrierten SharePoint-Modus konfigurierten Berichtsserver veröffentlicht wurde, eine vollqualifizierte URL einschließlich der Dateinamenerweiterung (.rdl). Beispielsweise http://*\<SharePointservername > /\<Site >*/Dokumente/Bericht1.RDL. Relative Pfade werden nicht unterstützt.  
   
  Weitere Informationen finden Sie unter [Angeben von Pfaden zu externen Elementen &#40;Berichts-Generator und SSRS&#41;](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md) in der [Dokumentation zu Report Builder](http://go.microsoft.com/fwlink/?LinkId=154494) auf msdn.microsoft.com.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36058242"
  Wählen Sie diese Option aus, um einen Link zu einer Webseite zu definieren. Sie können die URL einer Webseite oder einen Ausdruck, der zur URL einer Webseite ausgewertet wird, eingeben oder auswählen. Klicken Sie auf die Schaltfläche **Ausdruck** (*fx*), um den Ausdruck zu ändern. Der Ausdruck kann ein Feld mit einer URL enthalten. Bei Auswahl von **Gehe zu URL**wird die folgende zusätzliche Option angezeigt.  
   
  **URL auswählen**  
- Geben Sie die URL des Elements ein. Verwenden Sie für ein Element, das auf einem für den einheitlichen Modus konfigurierten Berichtsserver veröffentlicht wurde, einen vollständigen oder relativen Pfad. Z. B. http://*\<Servername >*/images/image1.jpg. Verwenden Sie für ein Element in einem im integrierten SharePoint-Modus konfigurierten Berichtsserver veröffentlicht wird, eine vollqualifizierte URL (z. B. http://*\<SharePointservername > /\<Website >*  /Dokumente/Images / Image1.jpg).  
+ Geben Sie die URL des Elements ein. Verwenden Sie für ein Element, das auf einem für den einheitlichen Modus konfigurierten Berichtsserver veröffentlicht wurde, einen vollständigen oder relativen Pfad. Beispielsweise http://*\<Servername >*/images/image1.jpg. Verwenden Sie für ein Element in einem im integrierten SharePoint-Modus konfigurierten Berichtsserver veröffentlicht wird, eine vollqualifizierte URL (z. B. http://*\<SharePointservername > /\<Site >*  /Dokumente/Images / Image1.jpg).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - explicit hierarchies, changing name
 ms.assetid: 12991603-474e-4042-b160-b1f7979694b1
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4b9ae4e9db2e2d48def332b337ff9788e26464e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: e56e52948282d49db948b76fd1b3837f656fd8de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056964"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267076"
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>Ändern des Namens einer expliziten Hierarchie (Master Data Services)
   Sie können in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]den Namen einer expliziten Hierarchie ändern.  
@@ -45,11 +45,11 @@ ms.locfileid: "36056964"
   
 5.  Klicken Sie auf **Ausgewählte Entität bearbeiten**.  
   
-6.  Auf der **Entität bearbeiten** Seite, klicken Sie auf die explizite Hierarchie, die Sie umbenennen möchten.  
+6.  Auf der **Entität bearbeiten** klicken Sie auf die explizite Hierarchie, die Sie umbenennen möchten.  
   
 7.  Klicken Sie auf **ausgewählte Hierarchie bearbeiten**.  
   
-8.  In der **Name der expliziten Hierarchie** Feld Geben Sie den aktualisierten Namen der Hierarchie.  
+8.  In der **Name der expliziten Hierarchie** geben den neuen Namen für die Hierarchie.  
   
 9. Klicken Sie auf **Hierarchie speichern**.  
   

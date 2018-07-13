@@ -1,5 +1,5 @@
 ---
-title: Analysis Services-Task DDL-Task-Editor (Seite DDL) | Microsoft Docs
+title: Analysis Services-Task DDL-Task-Editor (Seite DDL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.asexecuteddltask.ddl.f1
 helpviewer_keywords:
 - Analysis Services Execute DDL Task Editor
 ms.assetid: f21bf8d0-ec5f-4c18-9de0-8875addb927b
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9499537bdb59778ab4dc5d511c16e3fb4cb9be08
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8693bb66bb848301a739a16f6989537d203eca25
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059421"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269428"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Editor für den Analysis Services-Task 'DDL ausführen' (Seite DDL)
   Auf der Seite **DDL** des Dialogfelds **Editor für den Analysis Services-Task „DDL ausführen“** können Sie eine Verbindung mit einem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Projekt oder einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenbank angeben sowie Informationen zur Quelle der DDL-Anweisungen (Data Definition Language) angeben.  

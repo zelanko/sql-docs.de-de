@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - OpenSqlFilestream
 api_location:
@@ -17,20 +16,20 @@ helpviewer_keywords:
 - OpenSqlFilestream
 ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 81dab09c293fff8ad4d47df63a7069e48f63d638
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: ee7c3745466565a5baf8262fe6cc20dc80c0a3d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058546"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250340"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>ZUgreifen auf FILESTREAM-Daten mit OpenSqlFilestream
   Die OpenSqlFilestream-API ruft ein Win32-kompatibles Dateihandle für ein FILESTREAM binary large Object (BLOB), die im Dateisystem gespeichert sind. Das Handle kann an eine der folgenden Windows32-APIs übergeben werden: [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)oder [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427). Wenn Sie dieses Handle an eine andere Win32-API übergeben, wird der Fehler ERROR_ACCESS_DENIED zurückgegeben. Sie müssen das Handle schließen, indem Sie es an die Win32- [CloseHandle](http://go.microsoft.com/fwlink/?LinkId=86428) -API übergeben, bevor für die Transaktion ein Commit oder ein Rollback ausgeführt wird. Wenn das Handle nicht geschlossen wird, treten serverseitige Ressourcenverluste auf.  
   
- Alle Zugriffe auf FILESTREAM-Datencontainer muss ausgeführt werden, eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Transaktion. [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen können ebenfalls in der gleichen Transaktion ausgeführt werden. Damit wird die Konsistenz zwischen SQL-Daten und FILESTREAM-BLOB gewahrt.  
+ Alle Zugriffe auf FILESTREAM-Datencontainer muss ausgeführt werden, einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Transaktion. [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen können ebenfalls in der gleichen Transaktion ausgeführt werden. Damit wird die Konsistenz zwischen SQL-Daten und FILESTREAM-BLOB gewahrt.  
   
  Um mit Win32 auf FILESTREAM BLOB-Daten zuzugreifen, muss die [Windows-Autorisierung](../security/choose-an-authentication-mode.md) aktiviert sein.  
   
@@ -52,7 +51,7 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
   
 #### <a name="parameters"></a>Parameter  
  *FilestreamPath*  
- [in] Ist die `nvarchar(max)` Pfad von zurückgegeben wird, die [PathName](/sql/relational-databases/system-functions/pathname-transact-sql) Funktion. Der Aufruf von PathName muss von einem Konto erfolgen, das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT- oder UPDATE-Berechtigungen für die FILESTREAM-Tabelle und -Spalte hat.  
+ [in] Ist die `nvarchar(max)` Pfad, der von zurückgegeben wird das [Pfadnamen](/sql/relational-databases/system-functions/pathname-transact-sql) Funktion. Der Aufruf von PathName muss von einem Konto erfolgen, das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT- oder UPDATE-Berechtigungen für die FILESTREAM-Tabelle und -Spalte hat.  
   
  *DesiredAccess*  
  [in] Legt den verwenden Modus so fest, dass ein Zugriff auf FILESTREAM-BLOB-Daten erfolgt. Dieser Wert wird an die Funktion [DeviceIoControl](http://go.microsoft.com/fwlink/?LinkId=105527)übergeben.  
@@ -82,7 +81,7 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
  [in] Der Wert, der von der Funktion [GET_FILESTREAM_TRANSACTION_CONTEXT](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql) zurückgegeben wird.  
   
  *FilestreamTransactionContextLength*  
- [in] Anzahl der Bytes in den `varbinary(max)` Daten, die von der Funktion GET_FILESTREAM_TRANSACTION_CONTEXT zurückgegeben werden. Die Funktion gibt ein Array von n Bytes zurück. n wird von der Funktion bestimmt und ist eine Eigenschaft des Bytearrays, das zurückgegeben wird.  
+ [in] Anzahl der Bytes in den `varbinary(max)` Daten, die von der Funktion GET_FILESTREAM_TRANSACTION_CONTEXT zurückgegeben wird. Die Funktion gibt ein Array von n Bytes zurück. n wird von der Funktion bestimmt und ist eine Eigenschaft des Bytearrays, das zurückgegeben wird.  
   
  *AllocationSize*  
  [in] Bestimmt die anfängliche Zuweisungsgröße der Datendatei in Bytes. Wird im Lesemodus ignoriert. Dieser Parameter kann NULL sein; in diesem Fall wird das Standarddateisystemverhalten verwendet.  

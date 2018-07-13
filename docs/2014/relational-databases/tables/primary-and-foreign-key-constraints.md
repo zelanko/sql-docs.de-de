@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - foreign keys [SQL Server], cascading referential integrity
 - FOREIGN KEY constraints
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - foreign keys [SQL Server], about foreign key constraints
 ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 30a0d2f23c814c9ff1c963c1a5d430cb6d711cbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 95825200426f9fc2f5989a2667b5504f6c4d6f3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057552"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268816"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Primärschlüssel- und Fremdschlüsseleinschränkungen
   Primärschlüssel und Fremdschlüssel sind zwei Typen von Einschränkungen, die zum Erzwingen der Datenintegrität in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellen verwendet werden können. Diese sind wichtige Datenbankobjekte.  
@@ -82,7 +82,7 @@ ms.locfileid: "36057552"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] löst einen Fehler aus, und für die Aktion zum Löschen oder Aktualisieren der Zeile in der übergeordneten Tabelle wird ein Rollback ausgeführt.  
   
  CASCADE  
- Wenn diese Zeile in der übergeordneten Tabelle aktualisiert oder gelöscht wird, werden die entsprechenden Zeilen in der verweisenden Tabelle aktualisiert oder gelöscht. CASCADE kann nicht angegeben werden, wenn eine `timestamp` Spalte ist Teil des Fremdschlüssels oder des Schlüssels auf die verwiesen wird. ON DELETE CASCADE kann nicht für eine Tabelle angegeben werden, die einen INSTEAD OF-Trigger aufweist. ON UPDATE CASCADE kann nicht für Tabellen angegeben werden, die INSTEAD OF UPDATE-Trigger aufweisen.  
+ Wenn diese Zeile in der übergeordneten Tabelle aktualisiert oder gelöscht wird, werden die entsprechenden Zeilen in der verweisenden Tabelle aktualisiert oder gelöscht. CASCADE kann nicht angegeben werden, wenn eine `timestamp` Spalte ist Teil der Fremdschlüssel oder den Schlüssel auf die verwiesen wird. ON DELETE CASCADE kann nicht für eine Tabelle angegeben werden, die einen INSTEAD OF-Trigger aufweist. ON UPDATE CASCADE kann nicht für Tabellen angegeben werden, die INSTEAD OF UPDATE-Trigger aufweisen.  
   
  SET NULL  
  Alle Werte, aus denen sich der Fremdschlüssel zusammensetzt, werden auf NULL festgelegt, wenn die entsprechende Zeile in der übergeordneten Tabelle aktualisiert oder gelöscht wird. Die Fremdschlüsselspalten müssen NULL-Werte zulassen, um diese Einschränkung auszuführen. Diese Option kann nicht für Tabellen angegeben werden, die INSTEAD OF UPDATE-Trigger aufweisen.  

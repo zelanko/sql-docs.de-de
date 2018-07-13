@@ -1,5 +1,5 @@
 ---
-title: PendingValue-Element (ASSL) | Microsoft Docs
+title: PendingValue-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PendingValue element
 ms.assetid: 386b2ec6-3d83-42d2-b83a-83e375fbdcbd
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 120c98d128698331a054a89be97ffa1513bb0191
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef24ae229f879adc15fa9f2ecfd8cb10a19d09ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058168"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263396"
 ---
 # <a name="pendingvalue-element-assl"></a>PendingValue-Element (ASSL)
   Enthält den schreibgeschützten ausstehenden Wert des zugeordneten [ServerProperty](../objects/serverproperty-element-assl.md) Element.  
@@ -62,9 +62,9 @@ ms.locfileid: "36058168"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Dieses Element enthält den Wert des der `ServerProperty` , der verwendet wird das nächste Mal von der aktuellen Instanz der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] gestartet wird. Dieser Wert wird in der Regel vom Speicherort der Wert der Servereigenschaft abgerufen: aus einer Initialisierungsdatei, der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Registrierung oder einem anderen Speichermechanismus.  
+ Dieses Element enthält den Wert des der `ServerProperty` wird, wird der nächsten Ausführung die aktuelle Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] gestartet wird. Dieser Wert wird in der Regel aus, ganz egal, wo der Wert für die Server-Eigenschaft gespeichert wird abgerufen, in einer Initialisierungsdatei, der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Registrierung oder einem anderen Speichermechanismus.  
   
- Das Element, das das übergeordnete Element des entspricht `PendingValue` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ServerProperty>.  
+ Das Element, das dem übergeordneten entspricht `PendingValue` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ServerProperty>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [ServerProperties-Element &#40;ASSL&#41;](../collections/serverproperties-element-assl.md)   

@@ -1,5 +1,5 @@
 ---
-title: Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen (Berichts-Generator und SSRS) | Microsoft Docs
+title: Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7d5121675cb7448ae939b0442752b33af19dde5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b3347d17fd115e0d9eb8b8d71e672a63f4c0fa5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059094"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253512"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections-report-builder-and-ssrs"></a>Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen (Berichts-Generator und SSRS)
   Wenn Sie Ausdrücke schreiben, stellen Sie fest, dass der Begriff *Bereich* in mehreren Zusammenhängen verwendet wird. Ein Bereich kann die Daten angeben, die zum Auswerten eines Ausdrucks verwendet werden, oder den Satz von Textfeldern auf einer gerenderten Seite bzw. den Satz von Berichtselementen, die mithilfe einer Umschaltfläche ein- oder ausgeblendet werden können, bezeichnen. Sie finden den Begriff *Bereich* in Themen, die sich auf die Auswertung von Ausdrücken, Aggregatfunktionssyntax, und bedingte Sichtbarkeit beziehen, sowie in Fehlermeldungen im Zusammenhang mit diesen Bereichen. Mit den folgenden Beschreibungen können Sie feststellen, welche Bedeutung von *Bereich* zutrifft:  

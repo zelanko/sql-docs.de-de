@@ -1,5 +1,5 @@
 ---
-title: CalculationReference-Element (ASSL) | Microsoft Docs
+title: CalculationReference-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CalculationReference element
 ms.assetid: 4dd18b1f-55c3-4673-afbe-736d1bce8331
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 19d96e9f589a9a83d4d31c5b7b1dfb9c37f29633
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aace0256c454505e07b4226efc63da0d5d3581c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061025"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224060"
 ---
 # <a name="calculationreference-element-assl"></a>CalculationReference-Element (ASSL)
-  Enthält den Namen der benannten Menge oder berechneten Zelle, auf die [CalculationProperty](../objects/calculationproperty-element-assl.md).  
+  Enthält den Namen der benannten Menge oder berechneten Zelle, die auf die verwiesen wird durch die [CalculationProperty](../objects/calculationproperty-element-assl.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -58,13 +58,13 @@ ms.locfileid: "36061025"
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnetes Element|[CalculationProperty](../objects/calculationproperty-element-assl.md)|  
+|Übergeordnetes Element|[Calculationproperty-Objekt](../objects/calculationproperty-element-assl.md)|  
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn der Wert von `CalculationReference` nicht mit dem Namen einer bestehenden benannten Menge oder einer berechneten Zelldefinition übereinstimmt, wird `CalculationReference` ignoriert.  
   
- Das Element, das das übergeordnete Element des entspricht `CalculationReference` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.CalculationProperty>.  
+ Das Element, das dem übergeordneten entspricht `CalculationReference` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.CalculationProperty>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CalculationProperties-Element &#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

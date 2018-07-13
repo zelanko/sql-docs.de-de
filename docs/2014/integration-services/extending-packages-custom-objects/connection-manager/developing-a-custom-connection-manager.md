@@ -22,13 +22,13 @@ ms.assetid: bda0b29e-57f5-4879-b04d-1396dc56daa8
 caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f0d1f1c94415556f3d9930f3ef878ae8d0a9498b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 391940609b928d42fc8900902dc897e5d96e0dcb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147949"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217810"
 ---
 # <a name="developing-a-custom-connection-manager"></a>Entwickeln eines benutzerdefinierten Verbindungs-Managers
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] verwendet Verbindungs-Manager, um die erforderlichen Informationen für das Herstellen einer Verbindung mit einer externen Datenquelle zu kapseln. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] beinhaltet verschiedene Verbindungs-Manager, die Verbindungen mit den gebräuchlichsten Datenquellen unterstützen, von Unternehmensdatenbanken bis hin zu Textdateien und Excel-Arbeitsblättern. Wenn die Verbindungs-Manager und von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] unterstützten externen Datenquellen Ihre Anforderungen nicht vollständig erfüllen, können Sie einen benutzerdefinierten Verbindungs-Manager erstellen.  
@@ -79,6 +79,6 @@ ms.locfileid: "36147949"
  [Entwickeln einer benutzerdefinierten Datenflusskomponente](../data-flow/developing-a-custom-data-flow-component.md)  
  Erläutert die Programmierung benutzerdefinierter Datenflussquellen, Transformationen und Ziele.  
   
-![Integration Services (kleines Symbol)](../../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben Sie mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services (kleines Symbol)](../../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
   

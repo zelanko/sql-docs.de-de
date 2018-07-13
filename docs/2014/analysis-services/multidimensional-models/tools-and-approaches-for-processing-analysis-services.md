@@ -1,5 +1,5 @@
 ---
-title: Tools und Ansätze zum Verarbeiten (Analysis Services) | Microsoft Docs
+title: Tools und Ansätze zum Verarbeiten (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - process [Analysis Services]
 - processing [Analysis Services]
 ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8c191732dd66214c19c949d28e3dcd0efe01f7fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: f00c1a31869bdfb9375d1e97822c98a0e4f9f914
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058395"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261403"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Tools und Ansätze zum Verarbeiten (Analysis Services)
   Die Verarbeitung ist ein Vorgang, bei dem Analysis Services Daten aus einer relationalen Datenquelle abfragt und Analysis Services-Objekte mit diesen Daten auffüllt.  
@@ -50,7 +50,7 @@ ms.locfileid: "36058395"
  Die Verarbeitung ist ein stark konfigurierbarer Vorgang. Selbiger wird von einem Satz von Verarbeitungsoptionen gesteuert, die bestimmen, ob vollständige oder inkrementelle Verarbeitung auf Objektebene auftritt. Weitere Informationen zu Verarbeitungsoptionen und -objekten finden Sie unter [Verarbeiten von Optionen und Einstellungen &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md) und [Verarbeiten von Analysis Services-Objekten](processing-analysis-services-objects.md).  
   
 > [!NOTE]  
->  In diesem Thema werden die Tools und die Ansätze zum Verarbeiten von mehrdimensionalen Modellen beschrieben. Weitere Informationen zur Verarbeitung von tabellarischer Models finden Sie unter [Datenbank verarbeiten, Tabelle oder Partition](../tabular-models/process-database-table-or-partition-analysis-services.md) und [Verarbeitungsdaten &#40;SSAS – tabellarisch&#41;](../process-data-ssas-tabular.md).  
+>  In diesem Thema werden die Tools und die Ansätze zum Verarbeiten von mehrdimensionalen Modellen beschrieben. Weitere Informationen zur Verarbeitung von tabellarischer Models finden Sie unter [Verarbeiten von Datenbank, Tabelle oder Partition](../tabular-models/process-database-table-or-partition-analysis-services.md) und [Verarbeitungsdaten &#40;SSAS – tabellarisch&#41;](../process-data-ssas-tabular.md).  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>Verarbeiten von Objekten in SQL Server Management Studio  
   

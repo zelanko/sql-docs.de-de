@@ -1,5 +1,5 @@
 ---
-title: Zuordnen, Viewports Eigenschaften (Dialogfeld), zentrieren und Zoomen | Microsoft Docs
+title: Im Dialogfeld "Eigenschaften" Viewport, zentrieren und Zoomen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.centerandzoom.f1
 - "10506"
 ms.assetid: 642a06f5-293f-48e0-97a6-1489dbefa719
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c3c75a22ee1a367f752cd310a19aebdb241c90eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 33fb01fb1383edd45200f6d803960ff72c981a1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058025"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255782"
 ---
 # <a name="map-viewport-properties-dialog-box-center-and-zoom"></a>Eigenschaften des Kartenviewports (Dialogfeld), Zentrieren und zoomen
   Wählen Sie **Zentrieren und zoomen** aus, um im Dialogfeld **Viewporteigenschaften der Karte** die Mittelpunktsicht und den Zoomfaktor für eine Karte festzulegen. Nachdem Sie eine Kartendatenquelle und die Begrenzungen der Karte angegeben haben, die Sie in den Bericht einschließen möchten, können Sie den Ansichtmittelpunkt und den Zoomfaktor angeben, um die Kartenanzeige weiter zu steuern. Die Optionen hängen von der Methode ab, die Sie verwenden, um Werte für Mittelpunkt und Zoom anzugeben. Klicken Sie auf die Schaltfläche **Ausdruck** (*fx*), um einen Ausdruck zu bearbeiten, der den Wert der Option festlegt.  
@@ -56,10 +56,10 @@ ms.locfileid: "36058025"
  **Zoomstufe (%)**  
  Der Zoomfaktor. Der Standardwert ist 100 %. Er gibt keine Vergrößerung an.  
   
- **Ansicht auf diese Ebene zentrieren**  
+ **Ansicht auf dieser Ebene zentrieren**  
  Gibt den Namen der Ebene an.  
   
- **Ansicht zentrieren, auf dem kartenelement, das dieser Bedingung entspricht**  
+ **Ansicht zentrieren, auf das kartenelement, das diese Bedingung entspricht**  
  Das schreibgeschützte Feld, das angezeigt wird, wird verwendet, um Kartendaten und analytische Daten abzugleichen. Geben Sie den Wert an, der für den Abgleich verwendet werden soll. Die Ansicht wird automatisch auf dieses Kartenelement zentriert. Beispiel: NAME = TEXAS. Standardmäßig ist der Datentyp für die Bedingung "String", und bei der Übereinstimmung wird die Groß-/Kleinschreibung beachtet.  
   
  Für den Abgleich mit einem Feld, das einen anderen Datentyp aufweist, müssen Sie einen Ausdruck schreiben, der diesen Datentyp ergibt. Wenn das Übereinstimmungsfeld z. B. eine fünfstellige Postleitzahl ist, die als ganze Zahl gespeichert wird, müssen Sie zum Angeben der Postleitzahl 98053 den Ausdruck "=98053" verwenden.  

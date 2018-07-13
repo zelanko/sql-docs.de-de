@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - granting permissions [SQL Server], XML schema collections
 - ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
 caps.latest.revision: 32
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0375361f4fa794045ab51d65cadada49b73a39dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f8c467de25ce8b8aac74c659b6109c3969f9f0d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047110"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276116"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>Erteilen von Berechtigungen für eine XML-Schemaauflistung
   Sie können Berechtigungen zum Erstellen von XML-Schemaauflistungen sowie Berechtigungen für ein XML-Schemaauflistungsobjekt erteilen.  
@@ -65,7 +65,7 @@ ms.locfileid: "36047110"
   
 -   Die VIEW DEFINITION-Berechtigung ermöglicht dem Prinzipal das Abfragen des Inhalts einer XML-Schemaauflistung mithilfe von XML_SCHEMA_NAMESPACE oder Katalogsichten, wenn dieser Prinzipal auch eine der ALTER-, REFERENCES- oder CONTROL-Berechtigungen für die Auflistung besitzt.  
   
--   Die EXECUTE-Berechtigung ist erforderlich, zum Überprüfen von Werten eingefügt oder aktualisiert, die vom Prinzipal für die XML-schemaauflistung, die typisiert oder einschränkt der `xml` typisieren von Spalten, Variablen und Parameter. Sie benötigen diese Berechtigung auch, wenn Sie das in diesen Spalten und Variablen gespeicherte XML abfragen.  
+-   Die EXECUTE-Berechtigung ist erforderlich, um das Überprüfen von Werten, einfügen oder Aktualisieren der Prinzipal für die XML-schemaauflistung, die typisiert oder einschränkt der `xml` typisieren von Spalten, Variablen und Parameter. Sie benötigen diese Berechtigung auch, wenn Sie das in diesen Spalten und Variablen gespeicherte XML abfragen.  
   
 ## <a name="examples"></a>Beispiele  
  Die Szenarien in den folgenden Beispielen veranschaulichen, wie XML-Schemaberechtigungen funktionieren. Jedes dieser Beispiele erstellt die erforderliche Testdatenbank, die relationalen Schemas und Anmeldungen. Diesen Anmeldenamen werden die erforderlichen Berechtigungen für XML-Schemaauflistungen erteilt. Jedes der Beispiele führt am Ende den erforderlichen Cleanup aus.  

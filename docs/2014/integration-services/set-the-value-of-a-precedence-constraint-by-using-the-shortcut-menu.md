@@ -1,5 +1,5 @@
 ---
-title: Legen Sie den Wert einer rangfolgeneinschränkung mithilfe der Kontextmenüs | Microsoft Docs
+title: Legen Sie den Wert einer rangfolgeneinschränkung mithilfe der Kontextmenüs | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - precedence constraints [Integration Services], values
 ms.assetid: ab9d8e8e-b7da-44b2-b89f-b215d799f032
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bc0775d701309c1a04753be37f36378b9b3e65ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2d053263e5e3c2f534f171d0fc110ce0585a3dbb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059649"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262986"
 ---
 # <a name="set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu"></a>Festlegen des Werts einer Rangfolgeneinschränkung mithilfe des Kontextmenüs
   In diesem Verfahren wird das Festlegen eines Werts für eine Rangfolgeneinschränkung mithilfe des Kontextmenüs beschrieben.  

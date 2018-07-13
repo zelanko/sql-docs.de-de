@@ -1,5 +1,5 @@
 ---
-title: SetNumValue-Methode (ClientNetworkProtocolProperty-Klasse) | Microsoft Docs
+title: SetNumValue-Methode (ClientNetworkProtocolProperty-Klasse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetNumValue method
 ms.assetid: c292e2ae-6d0a-44ad-ba54-5b0bd705ef37
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5da8048b8b3be8fb230db9891b72be224965d736
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 6e7be5744930e75fe74f1adcc4c72b584ee83c96
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059995"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225250"
 ---
 # <a name="setnumvalue-method-clientnetworkprotocolproperty-class"></a>SetNumValue-Methode (ClientNetworkProtocolProperty-Klasse)
   Legt den numerischen Wert der aktuellen Eigenschaft fest, auf die durch den [PropertyIdx-Eigenschaftswert (ClientNetworkProtocolProperty-Klasse)](clientnetworkprotocolproperty-class.md) verwiesen wird.  
@@ -49,10 +49,10 @@ object
   
 |Parameter|Description|  
 |---------------|-----------------|  
-|*value*|Ein `uint32` Wert, der angibt, den numerischen Wert der Eigenschaft verwiesen wird.|  
+|*value*|Ein `uint32` -Wert, der den numerischen Wert der referenzierten Eigenschaft angibt.|  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
- Ein `uint32` Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert 1, wenn die Anforderung nicht unterstützt wird, wurde, und jede andere Zahl gibt einen Fehler an.  
+ Ein `uint32` -Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert 1, wenn die Anforderung nicht unterstützt wird, wurde, und jede andere Zahl gibt einen Fehler an.  
   
 ## <a name="remarks"></a>Hinweise  
   

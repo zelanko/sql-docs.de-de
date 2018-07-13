@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Broker:Message Classify event class
 ms.assetid: e51f3351-1239-4c41-b87c-1dd86968e027
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5cfb54eb1ce98b899b4745009725b8301fdc2921
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6097a06f1a239dc6e3af181ba983c5575567cbbc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058543"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225612"
 ---
 # <a name="brokermessage-classify-event-class"></a>Broker:Message Classify-Ereignisklasse
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert ein **Broker:Message Classify** -Ereignis, wenn Service Broker das Routing für eine Nachricht bestimmt.  
@@ -37,7 +37,7 @@ ms.locfileid: "36058543"
 |**DatabaseID**|**int**|Die ID der Datenbank, die durch die USE *database* -Anweisung angegeben wurde, bzw. die ID der Standarddatenbank, wenn für eine bestimmte Instanz keine USE *database* -Anweisung ausgegeben wurde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt den Namen der Datenbank an, wenn die **ServerName** -Datenspalte in der Ablaufverfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|ja|  
 |**EventClass**|**int**|Der Typ der aufgezeichneten Ereignisklasse. Für **Broker:Message Classify** lautet der Typ immer **141**.|27|nein|  
 |**EventSequence**|**int**|Die Sequenznummer für dieses Ereignis.|51|nein|  
-|**EventSubClass**|**nvarchar**|Der Typ der Ereignisunterklasse, der weitere Informationen zu jeder Ereignisklasse liefert. Diese Spalte kann die folgenden Werte enthalten:<br /><br /> **Lokal**: Die ausgewählte Route hat die Adresse LOCAL.<br /><br /> **Remote**: die ausgewählte Route hat eine andere Adresse als LOCAL.<br /><br /> **Verzögert**: die Nachricht wird verzögert, weil die Weiterleitung deaktiviert ist oder keine entsprechende Route vorhanden ist.|21|ja|  
+|**EventSubClass**|**nvarchar**|Der Typ der Ereignisunterklasse, der weitere Informationen zu jeder Ereignisklasse liefert. Diese Spalte kann die folgenden Werte enthalten:<br /><br /> **Lokal**: Die ausgewählte Route hat die Adresse LOCAL.<br /><br /> **Remote**: die ausgewählte Route hat eine andere Adresse als LOCAL.<br /><br /> **Verzögert**: die Nachricht wird verzögert, weil die Weiterleitung deaktiviert ist oder weil keine entsprechende Route vorhanden ist.|21|ja|  
 |**FileName**|**nvarchar**|Der Dienstname, an den die Nachricht weitergeleitet wird.|36|nein|  
 |**GUID**|**uniqueidentifier**|Die Konversations-ID des Dialogs. Dieser Bezeichner wird als Teil der Nachricht übertragen und von beiden Seiten der Konversation gemeinsam verwendet.|54|nein|  
 |**HostName**|**nvarchar**|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname durch den Client bereitgestellt wird. Der Hostname kann mithilfe der HOST_NAME-Funktion bestimmt werden.|8|ja|  

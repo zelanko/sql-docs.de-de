@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10420"
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 caps.latest.revision: 16
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 78da740dfbdaa9976b2a518cbb5b12146e1371f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 7ba4bd70c21072d77f4972870fbbee7e27b18b18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060682"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218930"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Erstellen von Berichten zu eingebetteten und freigegebenen Datasets (Berichts-Generator und SSRS)
   Ein Dataset gibt die Daten aus einer Datenverbindung an, die Sie verwenden möchten. Ein Dataset basiert auf einer Datenverbindung, die im Bericht als eine eingebettete Datenquelle oder ein Verweis auf eine freigegebene Datenquelle auf einem Berichtsserver gespeichert wurde. Das Dataset enthält eine Abfrage, die einen Satz von Feldern angibt. Wie Sie diese Felder in die Entwurfsoberfläche ziehen, erstellen Sie Ausdrücke, die die tatsächlichen Daten ergeben, wenn der Bericht ausgeführt wird.  
@@ -50,7 +50,7 @@ ms.locfileid: "36060682"
   
 7.  **Metadaten aus einem Schema:** Der Datenanbieter führt getrennt von der Abfrage einen Schemaabfragebefehl aus, um Metadaten für die Datasetfeldauflistung abzurufen. Eine [!INCLUDE[tsql](../../../includes/tsql-md.md)]-`SELECT`-Anweisung gibt z. B. die Spaltennamen für eine Datenbanktabelle zurück. Erweitern Sie das Dataset im Berichtsdatenbereich, um die Datasetfeldauflistung anzuzeigen.  
   
- Daten können auch mithilfe von vordefinierten freigegebenen Datasets und Berichtsteilen in einen Bericht eingeschlossen werden. Diese Elemente verfügen bereits über die erforderlichen Informationen zur Datenverbindung. Weitere Informationen finden Sie unter [Daten zu einem Bericht hinzufügen &#40;Berichts-Generator und SSRS&#41; ](report-datasets-ssrs.md) und [Berichtsteile &#40;Berichts-Generator und SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
+ Daten können auch mithilfe von vordefinierten freigegebenen Datasets und Berichtsteilen in einen Bericht eingeschlossen werden. Diese Elemente verfügen bereits über die erforderlichen Informationen zur Datenverbindung. Weitere Informationen finden Sie unter [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41; ](report-datasets-ssrs.md) und [Berichtsteile &#40;Berichts-Generator und SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
   
  Weitere Informationen zu integrierten Datenquellentypen und Datenerweiterungen finden Sie unter [Hinzufügen von Daten aus externen Datenquellen &#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md).  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36060682"
 ##  <a name="Overview"></a> Grundlegendes zu Berichtsdatasets und Abfragen  
  Ein Berichtsdataset enthält einen Abfragebefehl, der für die externe Datenquelle ausführt wird und angibt, welche Daten abgerufen werden sollen. Zum Erstellen des Abfragebefehls verwenden Sie den Abfrage-Designer, der mit der Datenerweiterung für die externe Datenquelle verknüpft ist. Im Abfrage-Designer können Sie den Abfragebefehl ausführen und ein Resultset anzeigen. Das Resultset ist ein rechteckiges Rowset, das Spaltennamen und Zeilen mit der gleichen Anzahl von Werten in jeder Zeile hat. Hierarchische Daten, die auch als *unregelmäßige Hierarchien*bezeichnet werden, werden nicht unterstützt. Die Spaltennamen werden als eine Liste von Datasetfeldern in der Berichtsdefinition gespeichert.  
   
- Nachdem Sie dem Bericht Datasets hinzugefügt haben, ziehen Sie Felder aus den entsprechenden Feldauflistungen im Berichtsdatenbereich in Tabellen, Diagramme und andere Berichtselemente, die Sie zum Entwerfen des Berichtslayouts verwenden. Weitere Informationen zum Arbeiten mit Feldern finden Sie unter [Dataset-Feldauflistung &#40;Berichts-Generator und SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
+ Nachdem Sie dem Bericht Datasets hinzugefügt haben, ziehen Sie Felder aus den entsprechenden Feldauflistungen im Berichtsdatenbereich in Tabellen, Diagramme und andere Berichtselemente, die Sie zum Entwerfen des Berichtslayouts verwenden. Weitere Informationen zum Arbeiten mit Feldern finden Sie unter [Datasetfeld-Sammlung &#40;Berichts-Generator und SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
   
 ### <a name="understanding-data-from-a-report-dataset"></a>Grundlegendes zu Daten aus Berichtsdatasets  
  Je nach Datenerweiterung kann ein Berichtsdataset die folgenden Datentypen umfassen:  
@@ -81,9 +81,9 @@ ms.locfileid: "36060682"
   
 -   Daten aus einem Berichtsmodell, das für eine bestimmte Datenquelle entworfen wurde, mit vordefinierten Entitäten, Entitätenbeziehungen und Feldern. Weitere Informationen finden Sie unter "**Verwenden von Berichtsmodellen** als Datenquellen" in der [Reporting Services-Dokumentation](http://go.microsoft.com/fwlink/?linkid=121312) in der SQL Server-Onlinedokumentation.  
   
- Wenn der Bericht zur Laufzeit verarbeitet wird, kann das tatsächlich für eine Abfrage zurückgegebene Resultset null oder mehr Zeilen enthalten. Zudem ist es möglich, dass die in der Abfrage definierten Spalten in der Datenquelle fehlen. NULL-Werte aus der Datenquelle zugeordnet werden die [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Wert `System.DBNull.Value`.  
+ Wenn der Bericht zur Laufzeit verarbeitet wird, kann das tatsächlich für eine Abfrage zurückgegebene Resultset null oder mehr Zeilen enthalten. Zudem ist es möglich, dass die in der Abfrage definierten Spalten in der Datenquelle fehlen. NULL-Werte aus der Datenquelle zugeordnet sind die [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Wert `System.DBNull.Value`.  
   
- Weitere Informationen über Datasetfelder finden Sie unter [Dataset-Feldauflistung &#40;Berichts-Generator und SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
+ Weitere Informationen über Datasetfelder finden Sie unter [Datasetfeld-Sammlung &#40;Berichts-Generator und SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
   
 ### <a name="dataset-query"></a>Datasetabfrage  
  Wenn Sie zur Entwurfszeit eine Datasetabfrage in einem Abfrage-Designer ausführen, wird ein Rowset mit den Beispieldaten angezeigt, das aus der Datenquelle stammt. Wenn ein Benutzer zur Laufzeit den Bericht angezeigt, führt die Datasetabfrage möglicherweise zu anderen Werten, da die Daten in der Datenquelle geändert wurden. Bei jeder Berichtsverarbeitung werden möglicherweise neue Daten angezeigt.  
@@ -110,7 +110,7 @@ ms.locfileid: "36060682"
   
 -   Erstellen Sie auf Grundlage eines Datenbankfelds ein neues benutzerdefiniertes Feld, und stellen Sie ein benutzerdefiniertes Format bereit.  
   
- Weitere Informationen finden Sie unter [Dataset-Feldauflistung &#40;Berichts-Generator und SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
+ Weitere Informationen finden Sie unter [Datasetfeld-Sammlung &#40;Berichts-Generator und SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md).  
   
 ### <a name="importing-existing-queries-for-a-dataset"></a>Importieren vorhandener Abfragen für ein Dataset  
  Wenn Sie ein Dataset erstellen, können Sie eine neue Abfrage erstellen oder eine vorhandene Abfrage aus einer Datei oder aus einem anderen Bericht importieren. Wenn Sie eine Abfrage aus einem anderen Bericht importieren, können Sie die zu importierende Abfrage in der Liste der Datasets im Bericht auswählen.  

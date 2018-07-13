@@ -14,15 +14,15 @@ helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
 caps.latest.revision: 23
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 907ee3eb093f4b240aef2199b0928dab602341ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 21d48953edad8d454f75fa919f9e0facdfb5280b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060249"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251322"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>Verwenden des ReportViewer-Steuerelements in WebForms
   Zum Anzeigen von Berichten, die auf einem Berichtsserver bereitgestellt werden oder sich im lokalen Dateisystem befinden, können Sie das ReportViewer-Steuerelement in WebForms verwenden, um die Berichte in einer Webanwendung zu rendern.  
@@ -47,7 +47,7 @@ ms.locfileid: "36060249"
   
  Wenn Sie einen Bericht im lokalen Modus anzeigen möchten, aktivieren Sie entweder die Option **Neuen Bericht entwerfen**, um den Berichts-Designer zu starten, oder wählen Sie einen Bericht aus, der bereits Teil des vorhandenen Projekts ist. Nachdem Sie einen Bericht ausgewählt haben, müssen Sie den Namen der RDLC-Berichtsdatei in die **ReportPath**-Eigenschaft des ReportViewer-Steuerelements eingeben. Diese Eigenschaft wird im Bereich **Eigenschaften** unter dem Knoten **LocalReport** angezeigt.  
   
- Beim Rendern des Berichts können Sie eines oder mehrere Elemente auf der ReportViewer-Symbolleiste ausblenden. Beispielsweise können Sie die Druckschaltfläche ausblenden. Um Symbolleistenelemente auszublenden, legen Sie die folgenden ReportViewer-Eigenschaften auf `False` in der **Eigenschaften** Bereich.  
+ Beim Rendern des Berichts können Sie eines oder mehrere Elemente auf der ReportViewer-Symbolleiste ausblenden. Beispielsweise können Sie die Druckschaltfläche ausblenden. Um Symbolleistenelemente auszublenden, legen Sie die folgenden ReportViewer-Eigenschaften auf `False` in die **Eigenschaften** Bereich.  
   
 -   `ShowBackButton`  
   

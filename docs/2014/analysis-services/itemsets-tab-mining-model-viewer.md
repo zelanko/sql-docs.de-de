@@ -1,5 +1,5 @@
 ---
-title: Registerkarte "Itemsets" (Miningmodell-Viewer) | Microsoft Docs
+title: Registerkarte "Itemsets" (Miningmodell-Viewer) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.associationrules.itemsets.f1
 ms.assetid: 95b2b805-b142-4064-9c80-4b1b3fe2fe63
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4fb7491a8c9fd4a3ee4656bac9c45f0f8a365b74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2069f5355629c1ac82889e56b11a9a35023edfb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059918"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247620"
 ---
 # <a name="itemsets-tab-mining-model-viewer"></a>Registerkarte "Itemsets" (Miningmodell-Viewer)
   Im Bereich **Itemsets** werden die häufig in einem Miningmodell für Zuordnungsregeln enthaltenen Itemsets angezeigt. Da ein Zuordnungsmodell viele Itemsets enthalten kann, werden im Viewer Steuerelemente bereitgestellt, mit denen Sie die im Viewer angezeigten Itemsets filtern können.  
@@ -29,16 +29,16 @@ ms.locfileid: "36059918"
  **Weitere Informationen:** [Microsoft Association-Algorithmus](data-mining/microsoft-association-algorithm.md), [Modell mit dem Microsoft-Viewer für Zuordnungsregeln durchsuchen](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## <a name="options"></a>Tastatur  
- **Viewerinhalt**  
+ **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
  **Miningmodell**  
  Wählen Sie ein anzuzeigendes, in der aktuellen Miningstruktur enthaltenes Miningmodell aus. Das Miningmodell wird im dazugehörigen Viewer geöffnet.  
   
- **Ereignisanzeige**  
+ **Viewer**  
  Wählen Sie einen Viewer aus, mit dem das ausgewählte Miningmodell angezeigt werden soll. Sie können entweder den benutzerdefinierten Viewer für Zuordnungsmodelle oder den [!INCLUDE[msCoName](../includes/msconame-md.md)] Generic Content Tree Viewer verwenden. Sie können auch Plug-In-Viewer verwenden, falls diese verfügbar sind.  
   
- **Minimale Unterstützung**  
+ **Minimaler Unterstützungswert**  
  Ändern Sie diesen Wert, um den Unterstützungswert festzulegen, den ein Itemset enthalten muss, um im Viewer angezeigt zu werden. Der Standardwert, der beim ersten Öffnen des Modells angezeigt wird, wird vom Modell berechnet, Sie können ihn jedoch ändern, um mehr oder weniger Itemsets anzuzeigen.  
   
  **Mindestgröße des Itemsets**  
@@ -78,7 +78,7 @@ ms.locfileid: "36059918"
  **Größe**  
  Zeigt an, wie viele Elemente in jedem Itemset vorhanden sind.  
   
- **Itemset**  
+ **Itemsets**  
  Zeigt die Beschreibung für jedes Itemset an. Standardmäßig werden Itemsets als durch Trennzeichen getrennte Liste von Attributen und ihren Werten dargestellt. Mit der Option **Anzeigen** können Sie ändern, wie sie angezeigt werden.  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -1,5 +1,5 @@
 ---
-title: Resultsets den Tasks "SQL ausführen" | Microsoft Docs
+title: Resultsets den Task "SQL ausführen" | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0be727ad9370a56de710c0528949398c12050299
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d1ff4dd56ea104d32a2821bc826ad8919712aea1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061198"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217560"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>Resultsets im Task „SQL ausführen“
   In einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket ist es vom Typ des von dem Task verwendeten SQL-Befehls abhängig, ob an den Task „SQL ausführen“ ein Resultset zurückgegeben wird. Beispielsweise gibt eine SELECT-Anweisung in der Regel ein Resultset zurück, eine INSERT-Anweisung jedoch nicht.  
@@ -35,9 +35,9 @@ ms.locfileid: "36061198"
   
 -   [Auffüllen einer Variablen mit einem Resultset](#Populate_variable_with_result_set)  
   
--   [Konfigurieren von Resultsets in SQL Task Editor für den Task legt](#Configure_result_sets)  
+-   [Konfigurieren von Resultsets legt in der Execute SQL Task Editor fest.](#Configure_result_sets)  
   
-##  <a name="Result_set_type"></a> Angeben einer Resultsettyps  
+##  <a name="Result_set_type"></a> Legen Sie Typ angeben eines Resultsettyps  
  Der Task SQL ausführen unterstützt die folgenden Resultsettypen:  
   
 -   Das Resultset **Keine** wird verwendet, wenn die Abfrage keine Ergebnisse zurückgibt. Beispielsweise wird dieses Resultset für Abfragen verwendet, die Datensätze in einer Tabelle hinzufügen, ändern und löschen.  
@@ -59,9 +59,9 @@ ms.locfileid: "36061198"
   
  Für den Resultsettyp **Vollständiges Resultset** oder **XML**müssen Sie 0 als Resultsetnamen verwenden.  
   
- Wenn Sie eine Variable einem Resultset mit dem Resultsettyp **Einzelne Zeile** zuordnen, muss die Variable einen Datentyp haben, der mit dem Datentyp der Spalte im Resultset kompatibel ist. So kann beispielsweise ein Resultset, das eine Spalte mit einem `String`-Datentyp enthält, keiner Variable mit einem numerischen Datentyp zugeordnet werden. Beim Festlegen der **TypeConversionMode** Eigenschaft `Allowed`, the Execute SQL Task versucht, Ausgabeparameter konvertieren und Abfrageergebnisse in den Datentyp der Variablen, die Ergebnisse zugewiesen sind.  
+ Wenn Sie eine Variable einem Resultset mit dem Resultsettyp **Einzelne Zeile** zuordnen, muss die Variable einen Datentyp haben, der mit dem Datentyp der Spalte im Resultset kompatibel ist. So kann beispielsweise ein Resultset, das eine Spalte mit einem `String`-Datentyp enthält, keiner Variable mit einem numerischen Datentyp zugeordnet werden. Beim Festlegen der **TypeConversionMode** Eigenschaft `Allowed`, versucht der Task SQL ausführen, die Output-Parameter zu konvertieren und Abfrageergebnisse in den Datentyp der Variablen, die Ergebnisse zugewiesen sind.  
   
- Ein XML-Resultset kann nur einer Variable mit dem Datentyp `String` oder `Object` zugeordnet werden. Hat die Variable den `String` -Datentyp, der Task SQL ausführen gibt eine Zeichenfolge und die XML-Quelle können die XML-Daten verwenden. Hat die Variable den `Object` -Datentyp ist, gibt der Task SQL ausführen ein (DOKUMENTOBJEKTMODELL)-Objekt zurück.  
+ Ein XML-Resultset kann nur einer Variable mit dem Datentyp `String` oder `Object` zugeordnet werden. Hat die Variable der `String` -Datentyp, der Task SQL ausführen gibt eine Zeichenfolge und die XML-Quelle können die XML-Daten verwenden. Hat die Variable der `Object` -Datentyp ist, gibt der Task SQL ausführen ein (DOM = Document Object Model)-Objekt zurück.  
   
  Ein **vollständiges Resultset** müssen zu einer Variablen zuordnen der `Object` -Datentyp. Als Ergebnis wird ein Rowsetobjekt zurückgegeben. Sie können einen Foreach-Schleifen-Container verwenden, um die Tabellenzeilenwerte, die in der Objektvariable gespeichert sind, in Paketvariablen zu extrahieren. Verwenden Sie dann ein Skripttask, um die Daten, die in Paketvariablen gespeichert sind, in eine Datei zu schreiben. Eine Demonstration zur Durchführung dieses Vorgangs unter Verwendung eines Foreach-Schleifen-Containers und eines Skripttasks finden Sie im CodePlex-Beispiel [Execute SQL Parameters and Result Sets](http://go.microsoft.com/fwlink/?LinkId=157863)(Ausführen von SQL-Parametern und Resultsets, in englischer Sprache), auf msftisprodsamples.codeplex.com.  
   
@@ -70,9 +70,9 @@ ms.locfileid: "36061198"
 |Typ des Resultsets|Datentyp der Variablen|Typ des Objekts|  
 |---------------------|---------------------------|--------------------|  
 |Einzelne Zeile|Jeder mit der Typspalte im Resultset kompatible Typ|Nicht verfügbar|  
-|Vollständiges Resultset|`Object`|Wenn der Task einen systemeigenen Verbindungs-Manager, einschließlich der ADO, OLE DB, Excel und ODBC-Verbindungs-Manager, verwendet das zurückgegebene Objekt ist ein ADO `Recordset`.<br /><br /> Wenn der Task einen verwalteten Verbindungs-Manager, wie z. B. verwendet die [!INCLUDE[vstecado](../includes/vstecado-md.md)] Verbindungs-Manager, und klicken Sie dann auf das zurückgegebene Objekt ist ein `System.Data.DataSet`.<br /><br /> Sie können einen Skripttask verwenden, den Zugriff auf die `System.Data.DataSet` -Objekts, wie im folgenden Beispiel gezeigt.<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
+|Vollständiges Resultset|`Object`|Wenn der Task einen systemeigenen Verbindungs-Manager, einschließlich der ADO, OLE DB, Excel und ODBC-Verbindungs-Manager, verwendet das zurückgegebene Objekt ist ein ADO `Recordset`.<br /><br /> Wenn der Task einen verwalteten Verbindungs-Manager, wie z. B. verwendet die [!INCLUDE[vstecado](../includes/vstecado-md.md)] Verbindungs-Manager, und klicken Sie dann auf das zurückgegebene Objekt ist ein `System.Data.DataSet`.<br /><br /> Sie können einen Skripttask verwenden, den Zugriff auf die `System.Data.DataSet` Objekt, wie im folgenden Beispiel gezeigt.<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
 |XML|`String`|`String`|  
-|XML|`Object`|Wenn der Task einen systemeigenen Verbindungs-Manager, einschließlich der ADO, OLE DB, Excel und ODBC-Verbindungs-Manager, verwendet das zurückgegebene Objekt ist ein `MSXML6.IXMLDOMDocument`.<br /><br /> Wenn der Task einen verwalteten Verbindungs-Manager, wie z. B. verwendet die [!INCLUDE[vstecado](../includes/vstecado-md.md)] Verbindungs-Manager, um das zurückgegebene Objekt ist ein `System.Xml.XmlDocument`.|  
+|XML|`Object`|Wenn der Task einen systemeigenen Verbindungs-Manager, einschließlich der ADO, OLE DB, Excel und ODBC-Verbindungs-Manager, verwendet das zurückgegebene Objekt ist ein `MSXML6.IXMLDOMDocument`.<br /><br /> Wenn der Task einen verwalteten Verbindungs-Manager, wie z. B. verwendet die [!INCLUDE[vstecado](../includes/vstecado-md.md)] Verbindungs-Manager das zurückgegebene Objekt ist ein `System.Xml.XmlDocument`.|  
   
  Die Variable kann im Bereich des Tasks SQL ausführen oder des Pakets definiert werden. Falls die Variable einen Paketbereich aufweist, ist das Resultset für andere Tasks und Container innerhalb des Pakets verfügbar sowie für alle Pakete, die von den Tasks "Paket ausführen" oder "DTS 2000-Paket ausführen" ausgeführt werden.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36061198"
   
  Informationen zum Laden eines Resultsets in eine Variable finden Sie unter [Zuordnen von Resultsets zu Variablen in einem Task „SQL ausführen“](control-flow/execute-sql-task.md).  
   
-##  <a name="Configure_result_sets"></a> Konfigurieren von Resultsets legt fest, der Tasks "SQL ausführen"  
+##  <a name="Configure_result_sets"></a> Konfigurieren von Resultsets legt der Task "SQL ausführen"  
  Klicken Sie auf das folgende Thema, um weitere Informationen zu den Eigenschaften von Resultsets zu erhalten, die Sie im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer festlegen können:  
   
 -   [Editor für den Task SQL ausführen &#40;Seite Resultset&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  

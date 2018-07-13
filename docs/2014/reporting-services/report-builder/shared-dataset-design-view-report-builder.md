@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 387db446f8fc0f3c5ac90ab31466ae8c8597ce1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 874137b75fbade0468a284f28397b30334936bd7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059540"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249750"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Freigegebene Datasetentwurfsansicht (Report Builder)
   Das Entwurfsfenster für freigegebene Datasets dient zum Erstellen von Datasetabfragen, die Sie für andere Benutzer freigeben können. Im Fenster können Sie eine freigegebene Datenquelle auswählen, Eigenschaften für das freigegebene Dataset angeben und im Abfrage-Designer eine Abfrage erstellen.  
   
  ![rs_FreigegebenesDatasetEntwurfsmodus](../media/rs-shareddatasetdesignmode.gif "rs_SharedDatasetDesignMode")  
   
- Weitere Informationen zum Arbeiten mit Daten in einem Bericht finden Sie unter [Daten zu einem Bericht hinzufügen &#40;Berichts-Generator und SSRS&#41;](../report-data/report-datasets-ssrs.md).  
+ Weitere Informationen zum Arbeiten mit Daten in einem Bericht finden Sie unter [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](../report-data/report-datasets-ssrs.md).  
   
 ##  <a name="Ribbon"></a> Menüband  
  Das Menüband bietet schnellen Zugriff auf die Befehle, die Sie zur Ausführung einer Aufgabe benötigen. Die Befehle sind in den folgenden logischen Gruppen organisiert: Verbindung, Dataset und Abfrage-Designer.  
@@ -56,7 +56,7 @@ ms.locfileid: "36059540"
   
  Weitere Informationen finden Sie unter [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
- Weitere Informationen zu cacheaktualisierungsplänen finden Sie unter [Cache freigegebene Datasets &#40;SSRS&#41; ](../report-server/cache-shared-datasets-ssrs.md) in der Reporting Services-Dokumentation in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+ Weitere Informationen zu cacheaktualisierungsplänen finden Sie unter [Zwischenspeichern von freigegebenen Datasets &#40;SSRS&#41; ](../report-server/cache-shared-datasets-ssrs.md) in der Reporting Services-Dokumentation in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
 ### <a name="query-designer"></a>Abfrage-Designer  
  Erstellen Sie mithilfe der Abfrage-Designer-Symbolleiste eine Abfrage, um die Daten anzugeben, die über die Datenverbindung abgerufen werden sollen. Die angezeigte Symbolleiste hängt vom Abfrage-Designer ab, der dem Datenquellentyp der Datenverbindung zugeordnet ist.  

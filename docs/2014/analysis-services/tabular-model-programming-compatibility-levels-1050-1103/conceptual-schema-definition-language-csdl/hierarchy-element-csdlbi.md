@@ -1,5 +1,5 @@
 ---
-title: Hierarchy-Element (CSDLBI) | Microsoft Docs
+title: Hierarchy-Element (CSDLBI) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9debb638-1b28-401b-9499-8f63943863e9
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: f2846424fdf7104c95cb4a56ac836b57583bf0cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: be67c3059f09beefae68d0264fd0316579344d64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057880"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250790"
 ---
 # <a name="hierarchy-element-csdlbi"></a>Hierarchy-Element (CSDLBI)
   Das Hierarchy-Element ist ein logischer Container für Felder in einer Tabelle, die miteinander verknüpft werden können, um eine Hierarchie zu bilden. Das Hierarchy-Element wird vom CSDL-Member-Element abgeleitet und wurde zur Unterstützung der in Business Intelligence-Datenmodellen erstellten Hierarchien erweitert.  

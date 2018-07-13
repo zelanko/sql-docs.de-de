@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - audit
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - audits [SQL Server], SQL Server Audit
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 caps.latest.revision: 55
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7b56892d08db64ee49dd31eeb46359d523d1fca2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: d684a808a2bb6c8c9aa23c6dce969acb933c44db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060263"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238780"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Datenbank-Engine)
   Die*Überwachung* einer Instanz von [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] oder einer einzelnen Datenbank umfasst die Nachverfolgung und Protokollierung von Ereignissen, die in [!INCLUDE[ssDE](../../../includes/ssde-md.md)]auftreten. Mithilfe von[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit können Serverüberwachungen erstellt werden, die Serverüberwachungsspezifikationen für Ereignisse auf Serverebene sowie Datenbank-Überwachungsspezifikationen für Ereignisse auf Datenbankebene beinhalten können. Überwachte Ereignisse können in die Ereignisprotokolle oder Überwachungsdateien geschrieben werden.  
@@ -66,7 +65,7 @@ ms.locfileid: "36060263"
 > [!IMPORTANT]  
 >  Jeder authentifizierte Benutzer kann das Windows-Anwendungsereignisprotokoll lesen und Datensätze darin schreiben. Für das Anwendungsereignisprotokoll sind niedrigere Berechtigungen als für das Windows-Sicherheitsereignisprotokoll erforderlich, daher ist es jedoch auch weniger sicher als das Windows-Sicherheitsereignisprotokoll.  
   
- Wenn Sie einen Datensatz im Windows-Sicherheitsprotokoll schreiben möchten, muss das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkonto der Richtlinie **Generieren von Sicherheitsüberwachungen** hinzugefügt werden. Standardmäßig sind das lokale System, der lokale Dienst und der Netzwerkdienst ein Teil dieser Richtlinie. Diese Einstellung kann mit dem Sicherheitsrichtlinien-Snap-In (secpol.msc) konfiguriert werden. Darüber hinaus muss die Sicherheitsrichtlinie **Objektzugriffsversuche überwachen** sowohl für **Erfolg** als auch für **Fehler**aktiviert sein. Diese Einstellung kann mit dem Sicherheitsrichtlinien-Snap-In (secpol.msc) konfiguriert werden. In [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] oder Windows Server 2008, festlegen, die eine detailliertere **generierte Anwendung** Richtlinie über die Befehlszeile mit dem überwachungsrichtlinienprogramm (`AuditPol.exe)`. Weitere Informationen zu den Schritten zum Aktivieren des Schreibens in das Windows-Sicherheitsprotokoll finden Sie unter [Schreiben von SQL-Serverüberwachungsereignissen in das Sicherheitsprotokoll](write-sql-server-audit-events-to-the-security-log.md). Weitere Informationen über das Programm Auditpol.exe finden Sie im Knowledge Base-Artikel 921469, [How to use Group Policy to configure detailed security auditing](http://support.microsoft.com/kb/921469/)(in englischer Sprache). Die Windows-Ereignisprotokolle gelten global für das Windows-Betriebssystem. Weitere Informationen zu den Windows-Ereignisprotokollen finden Sie unter [Ereignisanzeige (Übersicht)](http://go.microsoft.com/fwlink/?LinkId=101455). Wenn Sie präzisere Berechtigungen für die Überwachung benötigen, verwenden Sie das Binärdateiziel.  
+ Wenn Sie einen Datensatz im Windows-Sicherheitsprotokoll schreiben möchten, muss das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkonto der Richtlinie **Generieren von Sicherheitsüberwachungen** hinzugefügt werden. Standardmäßig sind das lokale System, der lokale Dienst und der Netzwerkdienst ein Teil dieser Richtlinie. Diese Einstellung kann mit dem Sicherheitsrichtlinien-Snap-In (secpol.msc) konfiguriert werden. Darüber hinaus muss die Sicherheitsrichtlinie **Objektzugriffsversuche überwachen** sowohl für **Erfolg** als auch für **Fehler**aktiviert sein. Diese Einstellung kann mit dem Sicherheitsrichtlinien-Snap-In (secpol.msc) konfiguriert werden. In [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] oder Windows Server 2008, Sie können festlegen, die eine feiner abgestimmte **generierte Anwendung** Richtlinie über die Befehlszeile mit dem überwachungsrichtlinienprogramm (`AuditPol.exe)`. Weitere Informationen zu den Schritten zum Aktivieren des Schreibens in das Windows-Sicherheitsprotokoll finden Sie unter [Schreiben von SQL-Serverüberwachungsereignissen in das Sicherheitsprotokoll](write-sql-server-audit-events-to-the-security-log.md). Weitere Informationen über das Programm Auditpol.exe finden Sie im Knowledge Base-Artikel 921469, [How to use Group Policy to configure detailed security auditing](http://support.microsoft.com/kb/921469/)(in englischer Sprache). Die Windows-Ereignisprotokolle gelten global für das Windows-Betriebssystem. Weitere Informationen zu den Windows-Ereignisprotokollen finden Sie unter [Ereignisanzeige (Übersicht)](http://go.microsoft.com/fwlink/?LinkId=101455). Wenn Sie präzisere Berechtigungen für die Überwachung benötigen, verwenden Sie das Binärdateiziel.  
   
  Um beim Speichern von Überwachungsinformationen in eine Datei Manipulationen zu verhindern, können Sie den Zugriff auf deren Speicherort auf folgende Weise einschränken:  
   
@@ -131,7 +130,7 @@ ms.locfileid: "36060263"
 -   Bei Windows-Ereignisprotokollzielen muss die Sicherheitsrichtlinie für den Computer, auf dem sich der Spiegelserver befindet, den Dienstkontozugriff auf das Sicherheits- oder Anwendungsereignisprotokoll zulassen.  
   
 ### <a name="auditing-administrators"></a>Überwachen von Administratoren  
- Mitglieder der `sysadmin` festen Serverrolle "" werden identifiziert, als die **Dbo** Benutzer in jeder Datenbank. Um die Aktionen der Administratoren zu überwachen, verfolgen Sie also die Aktionen des **dbo** -Benutzers.  
+ Mitglied der `sysadmin` Serverrolle werden als identifiziert die **Dbo** Benutzer in jeder Datenbank. Um die Aktionen der Administratoren zu überwachen, verfolgen Sie also die Aktionen des **dbo** -Benutzers.  
   
 ## <a name="creating-and-managing-audits-with-transact-sql"></a>Erstellen und Verwalten von Überwachungen mit Transact-SQL  
  Sie können DDL-Anweisungen, dynamische Verwaltungssichten und -funktionen sowie Katalogsichten verwenden, um alle Aspekte von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit zu implementieren.  
@@ -184,7 +183,7 @@ ms.locfileid: "36060263"
   
 -   Die ALTER ANY AUDIT-Berechtigung  
   
--   Die VIEW AUDIT STATE-Berechtigung (bietet nur den Prinzipal Zugriff auf die Katalogsicht sys. server_audits).  
+-   Die VIEW AUDIT STATE-Berechtigung (erhalten nur den Prinzipal Zugriff auf die Katalogsicht sys. server_audits ein).  
   
  Ein Prinzipal muss über die Berechtigung VIEW SERVER STATE oder ALTER ANY AUDIT verfügen, um die dynamischen Verwaltungssichten zu verwenden.  
   

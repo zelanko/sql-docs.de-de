@@ -1,5 +1,5 @@
 ---
-title: Sqlmaint (Hilfsprogramm) | Microsoft Docs
+title: sqlmaint (Hilfsprogramm) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database maintenance plans [SQL Server]
 - sqlmaint utility
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - backing up [SQL Server], sqlmaint utility
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ba7788006e5b44ac7ad6c4adf1bf9f9bc43542ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 94181b7b45ee1e1258678bbc4bc3357ebecb0bc5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059946"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236124"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint (Hilfsprogramm)
   Das **sqlmaint**-Hilfsprogramm führt eine Reihe angegebener Wartungsvorgänge für eine oder mehrere Datenbanken aus. Verwenden Sie **sqlmaint** , um DBCC-Überprüfungen auszuführen, eine Datenbank und das zugehörige Transaktionsprotokoll zu sichern, Statistiken zu aktualisieren und Indizes neu zu erstellen. Bei allen Datenbankwartungsaktivitäten wird ein Bericht generiert, der an eine festgelegte Textdatei, HTML-Datei oder ein festgelegtes E-Mail-Konto gesendet werden kann. **sqlmaint** führt Datenbankwartungspläne aus, die in früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]erstellt wurden. Verwenden Sie das Hilfsprogramm [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dtexec [, um Wartungspläne von](../integration-services/packages/dtexec-utility.md)über die Eingabeaufforderung auszuführen.  
@@ -267,7 +267,7 @@ sqlmaint -S MyServer -PlanName MyUserDBPlan -UpdOptiStats 15 -RmUnusedSpace 110 
 sqlmaint -S MyServer -PlanName MyUserDBPlan -BkUpDB -BkUpMedia DISK -UseDefDir -CrBkSubDir -DelBkUps 2weeks  
 ```  
   
-### <a name="d-backing-up-a-database-to-the-default-xprogram-filesmicrosoft-sql-servermssql12mssqlservermssqlbackup-directory"></a>D. Sichern eine Datenbank aus, in der Standardeinstellung x:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSSQL12. MSSQLSERVER\MSSQL\Backup Verzeichnis. \  
+### <a name="d-backing-up-a-database-to-the-default-xprogram-filesmicrosoft-sql-servermssql12mssqlservermssqlbackup-directory"></a>D. Sichern einer Datenbank aus, um die Standard-x:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSSQL12. MSSQLSERVER\MSSQL\Backup-Verzeichnis. \  
   
 ```  
 sqlmaint -S MyServer -BkUpDB -BkUpMedia DISK -UseDefDir  

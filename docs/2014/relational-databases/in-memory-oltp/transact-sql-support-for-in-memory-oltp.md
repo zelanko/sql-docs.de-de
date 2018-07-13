@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b1cc7c30-1747-4c21-88ac-e95a5e58baac
 caps.latest.revision: 52
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: f5c7dd02a31a466e5e6e96a815ed27795f62f978
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2900d6cd155faf29dbd3ecb398320c0e5311d747
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058711"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242550"
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>Transact-SQL-Unterstützung für In-Memory OLTP
   Der Zugriff auf speicheroptimierte Tabellen ist über beliebige Transact-SQL-Abfragen oder DML-Anweisungen (SELECT, INSERT, UPDATE oder DELETE), Ad-hoc-Anweisungen sowie über SQL-Module wie gespeicherte Prozeduren, Tabellenwertfunktionen, Skalarfunktionen, Trigger und Sichten möglich. Weitere Informationen finden Sie unter [zugreifen auf Speicheroptimierte Tabellen mit interpretiertem Transact-SQL](accessing-memory-optimized-tables-using-interpreted-transact-sql.md).  
@@ -28,17 +28,17 @@ ms.locfileid: "36058711"
   
  Beim Erstellen oder Ändern von Datenbankobjekten (DDL-Anweisungen) wurden die folgenden Anweisungen geändert:  
   
--   [ALTER DATABASE-Datei und Dateigruppe Optionen &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options) (siehe `MEMORY_OPTIMIZED_DATA`)  
+-   [ALTER DATABASE File und Filegroup-Optionen &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options) (finden Sie unter `MEMORY_OPTIMIZED_DATA`)  
   
--   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41; ](/sql/t-sql/statements/create-database-sql-server-transact-sql) (siehe `MEMORY_OPTIMIZED_DATA`)  
+-   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41; ](/sql/t-sql/statements/create-database-sql-server-transact-sql) (finden Sie unter `MEMORY_OPTIMIZED_DATA`)  
   
--   [CREATE PROCEDURE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-procedure-transact-sql) (siehe `NATIVE_COMPILATION`, `SCHEMABINDING`, `EXECUTE AS`, und `BEGIN ATOMIC`)  
+-   [CREATE PROCEDURE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-procedure-transact-sql) (finden Sie unter `NATIVE_COMPILATION`, `SCHEMABINDING`, `EXECUTE AS`, und `BEGIN ATOMIC`)  
   
--   [CREATE TABLE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql) (siehe `MEMORY_OPTIMIZED`, `DURABILITY`, `BUCKET_COUNT`, `INDEX`, und `HASH`)  
+-   [CREATE TABLE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql) (finden Sie unter `MEMORY_OPTIMIZED`, `DURABILITY`, `BUCKET_COUNT`, `INDEX`, und `HASH`)  
   
--   [CREATE TYPE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql) (siehe `MEMORY_OPTIMIZED`, `BUCKET_COUNT`, `INDEX`, und `HASH`)  
+-   [CREATE TYPE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql) (finden Sie unter `MEMORY_OPTIMIZED`, `BUCKET_COUNT`, `INDEX`, und `HASH`)  
   
--   [Deklarieren Sie @local_variable &#40;Transact-SQL&#41; ](/sql/t-sql/language-elements/declare-local-variable-transact-sql) (siehe `NULL`  |  `NOT NULL`)  
+-   [Deklarieren Sie @local_variable &#40;Transact-SQL&#41; ](/sql/t-sql/language-elements/declare-local-variable-transact-sql) (finden Sie unter `NULL`  |  `NOT NULL`)  
   
  Speicheroptimierte Tabelle unterstützen `PRIMARY KEY`- und `NOT NULL`-Einschränkungen. Informationen zum Implementieren von nicht unterstützter Einschränkungen finden Sie unter [überprüfen Sie die Migration und Foreign Key-Einschränkungen](../../database-engine/migrating-check-and-foreign-key-constraints.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: KeyErrorLimitAction-Element (ASSL) | Microsoft Docs
+title: KeyErrorLimitAction-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - KeyErrorLimitAction element
 ms.assetid: a2a01aae-0571-499f-9025-b61c741f3ddb
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 73c903190a0cc982a75227be6ff1adeb5081c0c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6001901e7613099eff2856905b88452870f7f2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059888"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247270"
 ---
 # <a name="keyerrorlimitaction-element-assl"></a>KeyErrorLimitAction-Element (ASSL)
-  Gibt die Aktion an [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] durchführt, wenn die schlüsselfehlerzahl, wird angegeben, der [KeyErrorLimit](keyerrorlimit-element-assl.md) Element erreicht.  
+  Gibt die Aktion an [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ausführt, wenn die schlüsselfehlerzahl, wird angegeben, der [KeyErrorLimit](keyerrorlimit-element-assl.md) -Element erreicht wird.  
   
 ## <a name="syntax"></a>Syntax  
   

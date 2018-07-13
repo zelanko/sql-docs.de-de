@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Master Data Services], determining permissions
 ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 49929fedf5b7d1e44a300919f2c9d903efca5bc9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: cd396e077ba63369d256c39ba104427f595f4df4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057582"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324400"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>Vorgehensweise: Festlegen von Berechtigungen (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]ist die einfachste Methode zum Konfigurieren der Sicherheit, Modellobjektberechtigungen einer Gruppe zuzuweisen, deren Mitglied der Benutzer ist.  
@@ -50,7 +50,7 @@ ms.locfileid: "36057582"
   
 -   Objekten auf einer höheren Ebene wird Navigationszugriff gewährt. Weitere Informationen zum Navigationszugriff finden Sie unter [Navigationszugriff &#40;Master Data Services&#41;](navigational-access-master-data-services.md).  
   
- In diesem Beispiel **schreibgeschützte** Berechtigung einer Entität zugewiesen ist und diese Berechtigung wird von dessen Attribut, das auf einer niedrigeren Ebene in der Modellstruktur geerbt. Das Modell bietet Navigationszugriff auf diese Entität und ihr Attribut. Der anderen Entität im Modell wurde keine explizite Berechtigung zugewiesen, und von ihr werden keine Berechtigungen geerbt. Sie wird daher implizit verweigert.  
+ In diesem Beispiel **schreibgeschützte** Berechtigung zu einer Entität zugewiesen wird, und diese Berechtigung wird von dessen Attribut, das auf einer niedrigeren Ebene in der Modellstruktur geerbt. Das Modell bietet Navigationszugriff auf diese Entität und ihr Attribut. Der anderen Entität im Modell wurde keine explizite Berechtigung zugewiesen, und von ihr werden keine Berechtigungen geerbt. Sie wird daher implizit verweigert.  
   
  ![mds_conc_inheritance_model](../../2014/master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36057582"
   
 -   Alle Knoten auf höheren Ebenen, denen keine Berechtigungen zugewiesen wurden, werden implizit verweigert.  
   
- In diesem Beispiel **schreibgeschützte** Berechtigung einem Knoten der Hierarchie zugewiesen wird und diese Berechtigung wird von einem Knoten auf einer niedrigeren Ebene in der Hierarchiestruktur geerbt. Dem Stamm wurde keine Berechtigung zugewiesen, er wird daher implizit verweigert. Dem anderen Knoten in der Hierarchiestruktur wurde keine explizite Berechtigung zugewiesen, und von ihm werden keine Berechtigungen geerbt. Er wird daher implizit verweigert.  
+ In diesem Beispiel **schreibgeschützte** Berechtigung einem Knoten der Hierarchie zugewiesen wird, und diese Berechtigung wird von einem Knoten auf einer niedrigeren Ebene in der Hierarchiestruktur geerbt. Dem Stamm wurde keine Berechtigung zugewiesen, er wird daher implizit verweigert. Dem anderen Knoten in der Hierarchiestruktur wurde keine explizite Berechtigung zugewiesen, und von ihm werden keine Berechtigungen geerbt. Er wird daher implizit verweigert.  
   
  ![mds_conc_inheritance_hierarchy](../../2014/master-data-services/media/mds-conc-inheritance-hierarchy.gif "mds_conc_inheritance_hierarchy")  
   

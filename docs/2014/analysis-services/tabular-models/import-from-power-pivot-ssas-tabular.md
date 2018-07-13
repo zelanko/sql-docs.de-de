@@ -1,5 +1,5 @@
 ---
-title: Importieren aus PowerPivot (SSAS – tabellarisch) | Microsoft Docs
+title: Importieren aus PowerPivot (SSAS – tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.importfromppt.f1
 ms.assetid: ac1a6a79-bda3-4122-a717-8b1e2f77da02
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4636578c435ac158f92ef4968072e374af7fb4f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3f6480cf0b577a0faa48691a85248efb77a84531
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059448"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245740"
 ---
 # <a name="import-from-powerpivot-ssas-tabular"></a>Importieren aus PowerPivot (SSAS – tabellarisch)
-  In diesem Thema wird beschrieben, wie ein neues tabellarisches Modellprojekt erstellt, durch das Importieren von Metadaten und Daten aus einer PowerPivot-Arbeitsmappe mithilfe der importieren aus PowerPivot-Projektvorlage in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  In diesem Thema wird beschrieben, wie So erstellen Sie ein neues tabellarisches Modellprojekt Importieren von Metadaten und Daten aus einer PowerPivot-Arbeitsmappe mit dem Import aus PowerPivot-Projektvorlage in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="create-a-new-tabular-model-from-a-powerpivot-for-excel-file"></a>Erstellen eines neuen tabellarischen Modells aus einer PowerPivot für Excel-Datei  
  Wenn Sie ein neues Projekt für tabellarische Modelle erstellen, indem Sie Daten aus einer PowerPivot-Arbeitsmappe importieren, werden die Metadaten zur Definition der Arbeitsmappenstruktur verwendet, um die Struktur des tabellarischen Modellprojekts in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] zu erstellen und zu definieren. Objekte, wie Tabellen, Spalten, Measures und Beziehungen werden beibehalten und im tabellarischen Modellprojekt genauso dargestellt wie in der PowerPivot-Arbeitsmappe. An der XLSX-Arbeitsmappendatei werden keine Änderungen vorgenommen.  
@@ -40,11 +40,11 @@ ms.locfileid: "36059448"
   
  Wenn die Arbeitsbereichsdatenbank auf einer Analysis Services-Remoteinstanz gespeichert ist, können Sie keine Daten aus einer PowerPivot für Excel-Arbeitsmappe importieren. Sie können jedoch die Metadaten der Arbeitsmappe importieren. Zu diesem Zweck wird ein Skript auf der Analysis Services-Remoteinstanz ausgeführt. Sie sollten nur Metadaten aus einer vertrauenswürdigen PowerPivot-Arbeitsmappe importieren. Die Daten müssen aus den in den Datenquellenverbindungen definierten Quellen importiert werden. Kopierte/eingefügte Daten und Daten aus verknüpften Tabellen in der PowerPivot-Arbeitsmappe müssen kopiert und in das tabellarische Modellprojekt eingefügt werden.  
   
-#### <a name="to-create-a-new-tabular-model-project-from-a-powerpivot-for-excel-file"></a>So erstellen Sie ein neues tabellarisches Modellprojekt aus einer PowerPivot für Excel-Datei  
+#### <a name="to-create-a-new-tabular-model-project-from-a-powerpivot-for-excel-file"></a>Um ein neues tabellarisches Modellprojekt aus einer PowerPivot für Excel-Datei zu erstellen.  
   
 1.  Klicken Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]auf das Menü **Datei** , auf **Neu**und dann auf **Projekt**.  
   
-2.  In der **neues Projekt** Dialogfeld unter **installierte Vorlagen**, klicken Sie auf **Business Intelligence**, und klicken Sie dann auf **importieren aus PowerPivot**.  
+2.  In der **neues Projekt** Dialogfeld **installierte Vorlagen**, klicken Sie auf **Business Intelligence**, und klicken Sie dann auf **importieren aus PowerPivot**.  
   
 3.  Geben Sie unter  **Name**einen Namen für das Projekt ein. Geben Sie dann einen Speicherort und einen Projektmappennamen an, und klicken Sie auf **OK**.  
   

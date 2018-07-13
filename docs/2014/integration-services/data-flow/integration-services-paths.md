@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - paths [Integration Services], about paths
 - data flow [Integration Services], paths
@@ -19,13 +19,13 @@ ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 33ce96096c0675b16d58532a351c20d897afb46a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2775a35efd26f8132ef2b103ad546a92872d915a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058338"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248590"
 ---
 # <a name="integration-services-paths"></a>SQL Server Integration Services-Pfade
   Ein Pfad verbindet zwei Komponenten in einem Datenfluss, indem die Ausgabe einer Datenflusskomponente mit der Eingabe einer anderen Komponente verbunden wird. Ein Pfad weist eine Quelle und ein Ziel auf. Wenn z. B. ein Pfad eine Verbindung mit einer OLE DB-Quelle und einer Transformation zum Sortieren herstellt, ist die OLE DB-Quelle die Quelle des Pfads, und die Transformation zum Sortieren ist das Ziel des Pfads. Die Quelle ist die Komponente, wo der Pfad beginnt, und das Ziel ist die Komponente, wo der Pfad endet.  

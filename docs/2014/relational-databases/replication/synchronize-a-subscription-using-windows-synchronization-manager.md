@@ -1,5 +1,5 @@
 ---
-title: Synchronisieren eines Abonnements mithilfe der Synchronisierungsverwaltung von Windows (Synchronisierungsverwaltung) | Microsoft Docs
+title: Synchronisieren eines Abonnements mithilfe der Synchronisierungsverwaltung von Windows (Windows Synchronization Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - synchronization [SQL Server replication], Windows Synchronization Manager
 - Windows Synchronization Manager
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2a51020379a56f56465bb7b252a65de5323e39ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 774399103f4ea92e0415c5a5222c7a74644c9d8a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058469"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276266"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>Synchronisieren eines Abonnements mithilfe der Synchronisierungsverwaltung von Windows (Synchronisierungsverwaltung von Windows)
   Die Synchronisierungsverwaltung von Windows[!INCLUDE[msCoName](../../includes/msconame-md.md)] kann nur zum Synchronisieren von Abonnements für Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Veröffentlichungen verwendet werden, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf demselben Computer ausgeführt wird wie die Synchronisierungsverwaltung. (Die Synchronisierungsverwaltung kann auch zum Synchronisieren von Offlinedateien und Webseiten verwendet werden.) So verwenden Sie die Synchronisierungsverwaltung:  
@@ -50,7 +50,7 @@ ms.locfileid: "36058469"
   
     -   Klicken Sie auf **Start**, zeigen Sie auf **Programme** oder **Alle Programme**, zeigen Sie auf **Zubehör**, und klicken Sie dann auf **Synchronisieren**.  
   
-    -   Klicken Sie auf **Start**und anschließend auf **Ausführen** In der **ausführen** Geben Sie im Dialogfeld `mobsync.exe` in der **öffnen** Felds, und klicken Sie dann auf **OK**.  
+    -   Klicken Sie auf **Start**und anschließend auf **Ausführen** In der **ausführen** (Dialogfeld), Typ `mobsync.exe` in die **öffnen** ein, und klicken Sie dann auf **OK**.  
   
 2.  Wählen Sie im Dialogfeld **Zu synchronisierende Objekte** die Abonnements aus, die Sie synchronisieren möchten. Die Abonnements werden unter den auf dem Computer installierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen aufgeführt.  
   

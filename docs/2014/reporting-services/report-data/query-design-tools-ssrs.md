@@ -1,5 +1,5 @@
 ---
-title: Abfragen von Entwurfstools in Berichts-Designer SQL Server Data Tools (SSRS) | Microsoft Docs
+title: Abfrageentwurfstools im Berichts-Designer SQL Server Data Tools (SSRS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - graphical query designer [Reporting Services]
 - MDX query designer [Reporting Services]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Report Model Query Designer
 ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
 caps.latest.revision: 35
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ad3b9109d78523f8a273ce44e32ceab163bdf869
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 4721d0df4f1c6d8f5a0dda8c70d90b0134c62fbc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057813"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264216"
 ---
 # <a name="query-design-tools-in-report-designer-sql-server-data-tools-ssrs"></a>Abfrageentwurfstools in SQL Server-Datentools (SSRS) des Berichts-Designers
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stellt eine Reihe von Abfrageentwurfstools bereit, mit denen Sie im Berichts-Designer Datasetabfragen erstellen können. Ob ein bestimmter Abfrage-Designer verfügbar ist, hängt von dem Typ der Datenquelle ab, mit der Sie arbeiten. Darüber hinaus stellen einige Abfrage-Designer alternative Modi bereit, sodass Sie entscheiden können, ob Sie im visuellen Modus oder direkt in der Abfragesprache arbeiten möchten. In diesem Thema werden die einzelnen Tools sowie die von ihnen unterstützten Datenquellen beschrieben. Folgende Tools werden in diesem Thema vorgestellt:  
@@ -86,7 +86,7 @@ ms.locfileid: "36057813"
  Wenn Sie den DMX-Abfrage-Designer verwenden möchten, müssen Sie eine Datenquelle definieren, die ein gültiges, verfügbares Data Mining-Modell aufweist. Wenn Sie ein Dataset für die Datenquelle definieren, können Sie die Abfrage im DMX-Abfrage-Designer öffnen. Falls erforderlich, können Sie die MDX- und DMX-Schaltfläche auf der Symbolleiste verwenden, um zwischen MDX- und DMX-Modus zu wechseln. Nachdem Sie das Modell ausgewählt haben, können Sie Data Mining-Vorhersageabfragen erstellen, die Daten für einen Bericht bereitstellen. Weitere Informationen finden Sie unter [Analysis Services DMX Query Designer User Interface](analysis-services-dmx-query-designer-user-interface.md).  
   
 ##  <a name="SAPBW"></a> SapNetWeaver BI Abfrage-Designer  
- Der [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] -Abfrage-Designer dient zum Abrufen von Daten aus einer [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] -Datenbank. Um diese Abfrage-Designer zu verwenden, benötigen Sie ein [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] -Datenquelle, die über mindestens ein InfoCube, MultiProvider oder webfähige Abfrage definiert wurde. In der folgenden Grafik wird der [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] -Abfrage-Designer veranschaulicht.  
+ Der [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] -Abfrage-Designer dient zum Abrufen von Daten aus einer [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] -Datenbank. Um diesen Abfrage-Designer verwenden zu können, benötigen Sie ein [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] -Datenquelle, mindestens eine Infocube-, Multiprovider- oder webfähige Abfrage definiert ist. In der folgenden Grafik wird der [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] -Abfrage-Designer veranschaulicht.  
   
  ![Abfrage-Designer mit MDX im Entwurfsmodus](../media/rsqd-dssapbw-mdx-designmode.gif "Query Designer using MDX in Design Mode")  
   
@@ -103,6 +103,6 @@ ms.locfileid: "36057813"
  [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Reporting Services-Tutorials (SSRS)](../reporting-services-tutorials-ssrs.md)   
  [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [Erstellen einer eingebettete oder freigegebene Datenquelle &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)  
+ [Erstellen einer eingebetteten oder freigegebenen Datenquelle &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)  
   
   

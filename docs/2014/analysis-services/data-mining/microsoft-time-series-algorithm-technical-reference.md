@@ -1,5 +1,5 @@
 ---
-title: Microsoft Time Series Algorithm Technical Reference | Microsoft Docs
+title: Microsoft Time Series Algorithm Technical Reference | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ARTXP
 - HISTORICAL_MODEL_GAP parameter
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - PREDICTION_SMOOTHING parameter
 ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ab83d1cefec896835d8ecb0c9baa49d4ea44b68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78a54bc173a3d3b780e57752d86aebc33249066a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061512"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323620"
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft Time Series Algorithm Technical Reference
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus umfasst zwei separate Algorithmen zum Analysieren einer Zeitreihe:  
@@ -71,7 +71,7 @@ ms.locfileid: "36061512"
   
  Die Funktionsweise des Microsoft Time Series-Algorithmus sieht folgendermaßen aus: Es werden Werte in einer Datenreihe herangezogen, und anschließend wird versucht, die Daten an ein Muster anzupassen. Wenn die Datenreihe nicht bereits stationär ist, wendet der Algorithmus eine Differenzreihenfolge an. Durch jede Zunahme in der Differenzreihenfolge verstärkt sich in der Regel der stationäre Charakter von Zeitreihen.  
   
- Wenn Sie die Zeitreihe (z1, z2,..., Zn) und Berechnungen mithilfe einer Unterschied, Sie erhalten beispielsweise eine neue Reihe (y1, y2,..., Yn-1), in dem *"Yi" = Zi + 1-Zi*. Wenn die differenzreihenfolge 2 ist, generiert der Algorithmus eine andere Reihe (X1, X2,..., Xn-2), basierend auf der y-Reihe, die von der ersten reihenfolgengleichung abgeleitet wurde. Die korrekte Höhe der Differenzierung ist von den Daten abhängig. Eine einzelne Differenzierungsreihenfolge ist am häufigsten in Modellen anzutreffen, die einen konstanten Trend widerspiegeln, wohingegen eine zweite Differenzierungsreihenfolge einen sich im Laufe der Zeit ändernden Trend anzeigen kann.  
+ Z. B. Wenn Sie die Zeitreihe (z1, z2, …, Zn) und Berechnungen mithilfe einer differenzreihenfolge, erhalten Sie eine neue Reihe (y1, y2,..., Yn-1), in denen *Yi = Zi + 1-Zi*. Wenn die differenzreihenfolge 2 ist, generiert der Algorithmus eine weitere Reihe (X1, X2, …, Xn-2), die basierend auf der y-Reihe, die von der ersten reihenfolgengleichung abgeleitet wurde. Die korrekte Höhe der Differenzierung ist von den Daten abhängig. Eine einzelne Differenzierungsreihenfolge ist am häufigsten in Modellen anzutreffen, die einen konstanten Trend widerspiegeln, wohingegen eine zweite Differenzierungsreihenfolge einen sich im Laufe der Zeit ändernden Trend anzeigen kann.  
   
  Standardmäßig ist die im Microsoft Time Series-Algorithmus verwendete Differenzreihenfolge -1, d. h., dass der Algorithmus automatisch den besten Wert für die Differenzreihenfolge erkennt. Normalerweise ist der beste Wert 1 (wenn eine Differenzierung erforderlich ist), doch unter bestimmten Umständen erhöht der Algorithmus diesen Wert auf maximal 2.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36061512"
   
  Wenn der Wert von ARIMA_AR_ORDER größer als 1 ist, multipliziert der Algorithmus die Zeitreihe mit einem Polynomterm. Wenn ein Term der Polynomformel in einen Stamm von 1 oder einen Wert aufgelöst wird, der nahe bei 1 liegt, versucht der Algorithmus, die Stabilität des Modells durch Entfernen des Terms und Vergrößern der Differenzreihenfolge um 1 beizubehalten. Wenn die Differenzreihenfolge bereits ihren Höchstwert erreicht hat, wird der Term entfernt, und die Differenzreihenfolge ändert sich nicht.  
   
- Z. B. wenn der Wert von AR = 2, die daraus resultierende AR-polynomterm kann wie folgt aussehen: 1 – 1.4 b + .45B ^ 2 (1-.9B) = (1 - 0.5B). Beachten Sie den Begriff (1-.9B) besitzt einen Stammwert von etwa 0,9. Der Algorithmus entfernt diesen Term aus der Polynomformel, kann jedoch die Differenzreihenfolge nicht um eins erhöhen, da bereits der zulässige Höchstwert von 2 erreicht wurde.  
+ Z. B. wenn der Wert von AR = 2, der daraus resultierende AR polynomterm könnte wie folgt aussehen: 1 – 1.4 b + .45B ^ 2 = (1-.9B) (1 – 0.5B). Beachten Sie den Begriff (1-.9B) mit einem Stammwert von etwa 0,9. Der Algorithmus entfernt diesen Term aus der Polynomformel, kann jedoch die Differenzreihenfolge nicht um eins erhöhen, da bereits der zulässige Höchstwert von 2 erreicht wurde.  
   
  Wichtiger Hinweis: Die einzige Möglichkeit, eine Änderung der Differenzreihenfolge zu **erzwingen** , besteht in der Verwendung des nicht unterstützten Parameters ARIMA_DIFFERENCE_ORDER. Dieser ausgeblendete Parameter steuert, wie oft der Algorithmus eine Differenzierung der Zeitreihe ausführt. Er kann durch Eingabe eines benutzerdefinierten Algorithmusparameters festgelegt werden. Allerdings wird eine Änderung dieses Werts nicht empfohlen, sofern Sie nicht experimentieren möchten und mit den entsprechenden Berechnungen nicht vertraut sind. Zudem steht derzeit kein Mechanismus zur Verfügung, einschließlich ausgeblendeter Parameter, mit dem der Schwellenwert gesteuert werden kann, ab dem die Erhöhung der Differenzreihenfolge ausgelöst wird.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36061512"
 >  Sowohl der ARTXP- als auch der ARIMA-Algorithmus sind sehr empfindlich gegenüber Saisonabhängigkeitshinweisen. Die Bereitstellung des falschen Hinweises kann die Ergebnisse negativ beeinflussen.  
   
 ### <a name="choosing-an-algorithm-and-specifying-the-blend-of-algorithms"></a>Auswählen eines Algorithmus und Festlegen der Mischung von Algorithmen  
- In der Standardeinstellung, oder wenn Sie die MIXED-Option auswählen, kombiniert [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Algorithmen und weist ihnen die gleiche Gewichtung zu. Allerdings in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)], können Sie einen bestimmten Algorithmus angeben, oder Sie können den Anteil von jedem Algorithmus in den Ergebnissen anpassen, indem Sie einen Parameter, die die Ergebnisse für die kurz- oder langfristige Vorhersage gewichtet festlegen. Standardmäßig ist der *FORECAST_METHOD* -Parameter auf MIXED festgelegt, und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet beide Algorithmen und gewichtet dann ihre Werte, um die Stärken der einzelnen Algorithmen zu maximieren.  
+ In der Standardeinstellung, oder wenn Sie die MIXED-Option auswählen, kombiniert [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Algorithmen und weist ihnen die gleiche Gewichtung zu. Allerdings [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)], können Sie einen bestimmten Algorithmus angeben, oder Sie können den Anteil von jedem Algorithmus in den Ergebnissen anpassen, indem Sie einen Parameter, die die Ergebnisse für die kurz- oder langfristige Vorhersage gewichtet festlegen. Standardmäßig ist der *FORECAST_METHOD* -Parameter auf MIXED festgelegt, und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet beide Algorithmen und gewichtet dann ihre Werte, um die Stärken der einzelnen Algorithmen zu maximieren.  
   
 -   Um die Auswahl der Algorithmen zu steuern, müssen Sie den *FORECAST_METHOD* -Parameter festlegen.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "36061512"
   
 -   Legen Sie *FORECAST_METHOD* auf ARIMA fest, wenn Sie die langfristige Vorhersage verbessern möchten.  
   
- In [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)], Sie können auch anpassen, wie [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] kombiniert den Algorithmen ARIMA und ARTXP. Sie können sowohl den Anfangspunkt der Mischung als auch die Änderungsrate steuern, indem Sie den *PREDICTION_SMOOTHING* -Parameter festlegen:  
+ In [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)], Sie können auch anpassen, wie [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die ARIMA- und ARTXP-Algorithmen kombiniert. Sie können sowohl den Anfangspunkt der Mischung als auch die Änderungsrate steuern, indem Sie den *PREDICTION_SMOOTHING* -Parameter festlegen:  
   
 -   Wenn Sie *PREDICTION_SMOOTHING* auf 0 festlegen, verwendet das Modell nur ARTXP.  
   
@@ -144,9 +144,9 @@ ms.locfileid: "36061512"
 |*MAXIMUM_SERIES_VALUE*|Gibt den maximalen Wert an, der für Vorhersagen verwendet werden soll. Dieser Parameter wird zusammen mit *MINIMUM_SERIES_VALUE*verwendet, um die Vorhersagen auf einen bestimmten Bereich einzuschränken. Sie können beispielsweise festlegen, dass die vorhergesagte Verkaufsmenge an einem Tag niemals die Anzahl der Produkte im Lager überschreiten darf.<br /><br /> Hinweis: Dieser Parameter ist nur in einigen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar.|  
 |*MINIMUM_SERIES_VALUE*|Gibt den minimalen Wert an, der vorhergesagt werden kann. Dieser Parameter wird zusammen mit *MAXIMUM_SERIES_VALUE*verwendet, um die Vorhersagen auf einen bestimmten Bereich einzuschränken. Zum Beispiel können Sie angeben, dass die vorhergesagte Verkaufsmenge nie eine negative Zahl sein darf.<br /><br /> Hinweis: Dieser Parameter ist nur in einigen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar.|  
 |*MINIMUM_SUPPORT*|Gibt die Mindestanzahl von Zeitscheiben an, die erforderlich sind, um eine Teilung in jeder Zeitreihenstruktur zu generieren. Der Standardwert ist 10.|  
-|*MISSING_VALUE_SUBSTITUTION*|Gibt an, wie Lücken in Vergangenheitsdaten gefüllt werden. Standardmäßig sind Lücken in Daten nicht zulässig. Wenn die Daten mehrere Reihen enthalten, können die Reihen auch keine unregelmäßigen Ränder haben. Das heißt, alle Reihen sollten die gleichen Anfangs- und Endpunkte haben. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet ebenfalls den Wert dieses Parameters, um die Lücken in den neuen Daten zu füllen, wenn Sie `PREDICTION JOIN` für ein Zeitreihenmodell ausführen. Die folgende Tabelle enthält die möglichen Werte für diesen Parameter:<br /><br /> None: Default. Ersetzt fehlende Werte mit Werten, die entlang der Kurve des trainierten Modells grafisch dargestellt werden.<br /><br /> Vorherige: Wiederholt den Wert aus der vorherigen Zeitscheibe.<br /><br /> Mittelwert: Verwendet einen gleitenden Durchschnitt von im Training verwendeten Zeitscheiben.<br /><br /> Numeric constant: Verwendet die festgelegte Anzahl, um alle fehlenden Werte zu ersetzen.|  
-|*PERIODICITY_HINT*|Stellt für den Algorithmus einen Periodizitätshinweis der Daten bereit. Beispiel: Wenn die Verkaufszahlen jahresabhängig variieren und als Maßeinheit für die Reihe Monate gewählt wurden, ist die Periodizität 12. Dieser Parameter weist das Format {n [, n]} auf, wobei n eine beliebige positive Zahl ist.<br /><br /> Das n innerhalb der eckigen Klammern [] ist optional und kann so oft wie nötig wiederholt werden. Um beispielsweise mehrere Periodizitätshinweise für monatlich bereitgestellte Daten anzugeben, könnten Sie {12, 3, 1} eingeben, um für das Jahr, Quartal und den Monat Muster zu ermitteln. Die Periodizität hat jedoch starke Auswirkungen auf die Modellqualität. Wenn der von Ihnen gegebene Hinweis von der tatsächlichen Periodizität abweicht, können die Ergebnisse beeinträchtigt werden.<br /><br /> Der Standardwert ist {1}.<br /><br /> Hinweis: Die Klammern sind erforderlich. Dieser Parameter verfügt zudem über einen String-Datentyp. Wenn Sie daher diesen Parameter als Teil einer Data Mining Extensions (DMX)-Anweisung eingeben, müssen Sie die Nummer und Klammern in Anführungszeichen einschließen.|  
-|*PREDICTION_SMOOTHING*|Gibt an, wie das Modell kombiniert werden sollte, um die Vorhersage zu optimieren. Dieser Parameter ist nur in einigen Editionen von verfügbar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie können einen beliebigen Wert zwischen [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] und 1 eingeben oder die folgenden Werte verwenden:<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]: Gibt an, dass die Vorhersage nur ARTXP verwendet. Das Forecasting ist für weniger Vorhersagen optimiert.<br /><br /> 0,5: (Standard) gibt an, dass für die Vorhersage beide Algorithmen verwendet werden soll, und die Ergebnisse gemischt.<br /><br /> 1: Gibt an, dass diese Vorhersage nur ARIMA verwendet. Das Forecasting ist für viele Vorhersagen optimiert.<br /><br /> <br /><br /> Hinweis: Verwenden der *FORECAST_METHOD* Parameter, um das Steuerelement Training zu.|  
+|*MISSING_VALUE_SUBSTITUTION*|Gibt an, wie Lücken in Vergangenheitsdaten gefüllt werden. Standardmäßig sind Lücken in Daten nicht zulässig. Wenn die Daten mehrere Reihen enthalten, können die Reihen auch keine unregelmäßigen Ränder haben. Das heißt, alle Reihen sollten die gleichen Anfangs- und Endpunkte haben. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet ebenfalls den Wert dieses Parameters, um die Lücken in den neuen Daten zu füllen, wenn Sie `PREDICTION JOIN` für ein Zeitreihenmodell ausführen. Die folgende Tabelle enthält die möglichen Werte für diesen Parameter:<br /><br /> None: Standardwert. Ersetzt fehlende Werte mit Werten, die entlang der Kurve des trainierten Modells grafisch dargestellt werden.<br /><br /> Zurück: Wiederholt den Wert aus der vorherigen Zeitscheibe.<br /><br /> Mittel: Verwendet einen gleitenden Durchschnitt von im Training verwendeten Zeitscheiben.<br /><br /> Numeric constant: Verwendet die festgelegte Anzahl, um alle fehlenden Werte zu ersetzen.|  
+|*PERIODICITY_HINT*|Stellt für den Algorithmus einen Periodizitätshinweis der Daten bereit. Beispiel: Wenn die Verkaufszahlen jahresabhängig variieren und als Maßeinheit für die Reihe Monate gewählt wurden, ist die Periodizität 12. Dieser Parameter weist das Format {n [, n]} auf, wobei n eine beliebige positive Zahl ist.<br /><br /> Das n innerhalb der eckigen Klammern [] ist optional und kann so oft wie nötig wiederholt werden. Um beispielsweise mehrere Periodizitätshinweise für monatlich bereitgestellte Daten anzugeben, könnten Sie {12, 3, 1} eingeben, um für das Jahr, Quartal und den Monat Muster zu ermitteln. Die Periodizität hat jedoch starke Auswirkungen auf die Modellqualität. Wenn der von Ihnen gegebene Hinweis von der tatsächlichen Periodizität abweicht, können die Ergebnisse beeinträchtigt werden.<br /><br /> Der Standardwert ist {1}.<br /><br /> Hinweis: Die geschweiften Klammern sind erforderlich. Dieser Parameter verfügt zudem über einen String-Datentyp. Wenn Sie daher diesen Parameter als Teil einer Data Mining Extensions (DMX)-Anweisung eingeben, müssen Sie die Nummer und Klammern in Anführungszeichen einschließen.|  
+|*PREDICTION_SMOOTHING*|Gibt an, wie das Modell kombiniert werden sollte, um die Vorhersage zu optimieren. Dieser Parameter ist nur verfügbar, in einigen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie können einen beliebigen Wert zwischen [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] und 1 eingeben oder die folgenden Werte verwenden:<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]: Gibt an, dass die Vorhersage nur ARTXP verwendet. Das Forecasting ist für weniger Vorhersagen optimiert.<br /><br /> 0,5: (Standard) gibt an, dass für die Vorhersage beide Algorithmen verwendet werden soll, und die Ergebnisse gemischt.<br /><br /> 1: Gibt an, dass diese Vorhersage nur ARIMA verwendet. Das Forecasting ist für viele Vorhersagen optimiert.<br /><br /> <br /><br /> Hinweis: Verwenden Sie die *FORECAST_METHOD* Parameter, um die Steuerelement-Schulung.|  
   
 ### <a name="modeling-flags"></a>Modellierungsflags  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus unterstützt folgende Modellierungsflags. Wenn Sie die Miningstruktur oder das Miningmodell erstellen, definieren Sie Modellierungsflags, die angeben, wie die Werte in den einzelnen Spalten während der Analyse behandelt werden. Weitere Informationen finden Sie unter [Modellierungsflags &#40;Data Mining&#41;](modeling-flags-data-mining.md).  
@@ -173,6 +173,6 @@ ms.locfileid: "36061512"
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Time Series-Algorithmus](microsoft-time-series-algorithm.md)   
  [Time Series Model Query Examples](time-series-model-query-examples.md)   
- [Miningmodellinhalt für Zeitreihenmodelle &#40;Analysis Services – Datamining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Mingingmodellinhalt von Zeitreihenmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

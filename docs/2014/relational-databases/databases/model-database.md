@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - template databases [SQL Server]
 - model database [SQL Server], about model databases
 - model database [SQL Server]
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3f8fd67f968701440b06274bbd40600be94c00b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 729c2d4ea6f89a8b97917d6b22ca885342618018
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059151"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242880"
 ---
 # <a name="model-database"></a>model-Datenbank
   Die **model** -Datenbank wird als Vorlage für alle Datenbanken verwendet, die auf einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz erstellt werden. Da **tempdb** bei jedem Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt wird, muss die **model** -Datenbank zu jedem Zeitpunkt auf einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -System vorhanden sein. Der gesamte Inhalt der **model** -Datenbank, einschließlich Datenbankoptionen, wird in die neue Datenbank kopiert. Einige Einstellungen der **model** -Datenbank werden auch zum Erstellen einer neuen **tempdb** -Datenbank während des Startvorgangs verwendet; deshalb muss die **model** -Datenbank immer in einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -System vorhanden sein.  
@@ -39,7 +39,7 @@ ms.locfileid: "36059151"
  Wenn Sie Änderungen an der **model** -Datenbank vornehmen, werden diese Änderungen an alle anschließend erstellten Datenbanken vererbt. Sie könnten z. B. Berechtigungen oder Datenbankoptionen festlegen oder Objekte wie Tabellen, Funktionen oder gespeicherte Prozeduren hinzufügen. Die Dateieigenschaften der **model** -Datenbank stellen eine Ausnahme dar und werden bis auf die Anfangsgröße der Datendatei ignoriert.  
   
 ## <a name="physical-properties-of-model"></a>Physische Eigenschaften der model-Datenbank  
- Die folgende Tabelle zeigt die Anfangskonfigurationswerte der **model** -Daten und -Protokolldateien. Die Größen dieser Dateien können für verschiedene Editionen von geringfügig [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Die folgende Tabelle zeigt die Anfangskonfigurationswerte der **model** -Daten und -Protokolldateien. Die Größen dieser Dateien können für verschiedene Editionen von variiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |File|Logischer Name (logical name)|Physischer Name (physical name)|Dateivergrößerung (file growth)|  
 |----------|------------------|-------------------|-----------------|  
@@ -77,7 +77,7 @@ ms.locfileid: "36059151"
 |PARAMETERIZATION|SIMPLE|ja|  
 |QUOTED_IDENTIFIER|OFF|ja|  
 |READ_COMMITTED_SNAPSHOT|OFF|ja|  
-|RECOVERY|Richtet sich nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Edition<sup>1</sup>|ja|  
+|RECOVERY|Hängt von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Edition<sup>1</sup>|ja|  
 |RECURSIVE_TRIGGERS|OFF|ja|  
 |Service Broker-Optionen|DISABLE_BROKER|nein|  
 |TRUSTWORTHY|OFF|nein|  

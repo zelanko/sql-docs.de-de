@@ -1,5 +1,5 @@
 ---
-title: Wiedergabeoptionen (SQL Server Profiler) | Microsoft Docs
+title: Wiedergabeoptionen (SQL Server Profiler) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], replaying
 - replaying traces
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Replay Configuration dialog box
 ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ffceaa31c30aec5a0d0911017a45fde592c427c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ce23580af011e536ed33a5612952b7bc2177480c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058881"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251192"
 ---
 # <a name="replay-options-sql-server-profiler"></a>Wiedergabeoptionen (SQL Server Profiler)
   Vor der Wiedergabe einer aufgezeichneten Ablaufverfolgung mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]können Sie im Dialogfeld **Wiedergabekonfiguration** Wiedergabeoptionen festlegen. Um dieses Dialogfeld zu starten, öffnen Sie die Datei oder Tabelle für die Ablaufverfolgungswiedergabe in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], und klicken Sie im Menü **Wiedergeben** auf **Starten**. Informationen zu den Berechtigungen, die zum Wiedergeben einer Ablaufverfolgung erforderlich sind, finden Sie unter [Permissions Required to Run SQL Server Profiler](sql-server-profiler.md).  

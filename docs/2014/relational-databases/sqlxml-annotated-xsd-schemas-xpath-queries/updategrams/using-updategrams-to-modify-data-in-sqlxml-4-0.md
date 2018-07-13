@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Updategrams zum Ändern von Daten in SQLXML 4.0 | Microsoft Docs
+title: Verwenden von Updategrams zum Ändern von Daten in SQLXML 4.0 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - inserting data
 ms.assetid: b8b3b892-cb73-41d0-b945-bce148d81d9b
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d085fdb34388071019001dd2fbf445903052bdf2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f838dd23a17e2fc4555b8f9dc69e185fc8caefeb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36058244"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221060"
 ---
 # <a name="using-updategrams-to-modify-data-in-sqlxml-40"></a>Verwenden von Updategrams zum Ändern von Daten in SQLXML 4.0
   Sie können ändern (einfügen, aktualisieren oder löschen) eine Datenbank in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aus einem vorhandenen XML-Dokument mithilfe eines Updategrams oder der OPENXML- [!INCLUDE[tsql](../../../includes/tsql-md.md)] Funktion.  
@@ -63,7 +63,7 @@ ms.locfileid: "36058244"
  [Übergeben von Parametern an Updategrams &#40;SQLXML 4.0&#41;](passing-parameters-to-updategrams-sqlxml-4-0.md)  
  Beschreibt anhand von Beispielen das Weitergeben von Parametern an Updategrams.  
   
- [Behandeln von Parallelitätsproblemen in Updategrams Datenbank &#40;SQLXML 4.0&#41;](handling-database-concurrency-issues-in-updategrams-sqlxml-4-0.md)  
+ [Behandeln von Problemen mit der Datenbankparallelität in Updategramms &#40;SQLXML 4.0&#41;](handling-database-concurrency-issues-in-updategrams-sqlxml-4-0.md)  
  Beschreibt die verschiedenen Ebenen des möglichen Schutzes für das Behandeln von Parallelitätsproblemen in Updategrams und stellt Beispiele bereit.  
   
  [Updategram-Beispielanwendungen &#40;SQLXML 4.0&#41;](../../../database-engine/dev-guide/updategram-sample-applications-sqlxml-4-0.md)  

@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports, creating
 - tutorials, getting started
 - creating reports
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 caps.latest.revision: 25
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 03ec9b9f8f953f0c4947e3f39cd125e54d6d7272
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a5298705230f13aca363cd266a274c807e4e09a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060252"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216810"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Lernprogramm: Erstellen eines Quick-Diagrammberichts offline (Berichts-Generator)
   In diesem Lernprogramm erstellen Sie ein Kreisdiagramm mithilfe eines Assistenten. Danach nehmen Sie eine kleine Änderung an diesem Diagramm vor, damit Sie eine Vorstellung von den Bearbeitungsmöglichkeiten erhalten. Dieses Lernprogramm kann auf zwei unterschiedliche Arten absolviert werden. Beide Methoden liefern das gleiche Ergebnis – ein Kreisdiagramm entsprechend der folgenden Abbildung:  
   
- ! ["Mein erstes Kreisdiagramm" in-Ausführung anzeigen] (.. /Media/RS-my1stpierunview.gif "anzeigen" Mein erstes Kreisdiagramm "ausführen")  
+ ! ["Mein erstes Kreisdiagramm" in Testlauf anzeigen] (.. /Media/RS-my1stpierunview.gif "view" Mein erstes Kreisdiagramm "in Testlauf")  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Sowohl bei Verwendung von XML-Daten als auch bei einer [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Abfrage benötigen Sie Zugriff auf [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Berichts-Generator. Sie können die eigenständige Version oder die ClickOnce-Version ausführen, die im Berichts-Manager oder auf einer SharePoint-Website verfügbar ist. Bei der ClickOnce-Version ist lediglich der erste Schritt anders, also das Öffnen des Berichts-Generators. Weitere Informationen finden Sie unter [Installation, Deinstallation und Unterstützung von Berichts-Generator](../install-uninstall-and-report-builder-support.md).  
@@ -49,7 +49,7 @@ ms.locfileid: "36060252"
   
  Der Vorteil der Verwendung der [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Abfrage besteht darin, dass in allen anderen Lernprogrammen für Berichts-Generator die gleiche Methode verwendet wird und Sie beim Ausführen der anderen Lernprogramme bereits mit der Vorgehensweise vertraut sind.  
   
- Die [!INCLUDE[tsql](../../../includes/tsql-md.md)] Abfrage sind einigen andere Voraussetzungen erforderlich. Weitere Informationen finden Sie unter [Voraussetzungen für Lernprogramme &#40;Berichts-Generator&#41;](../report-builder-tutorials.md).  
+ Die [!INCLUDE[tsql](../../../includes/tsql-md.md)] Abfrage ist ein noch einige andere Voraussetzungen erforderlich. Weitere Informationen finden Sie unter [Voraussetzungen für Lernprogramme &#40;Berichts-Generator&#41;](../report-builder-tutorials.md).  
   
  [Erstellen des Kreisdiagramms mit einer Transact-SQL-Abfrage, die Daten enthält](#CreatePieQueryData)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36060252"
      Das Dialogfeld **Erste Schritte** wird angezeigt.  
   
     > [!NOTE]  
-    >  Wenn die **Einstieg** Dialogfeld nicht angezeigt wird, aus der **Berichts-Generator** Schaltfläche, klicken Sie auf **neu**.  
+    >  Wenn die **Einstieg** Dialogfeld nicht angezeigt wird, aus der **Berichts-Generator** , zeigen Sie auf **neu**.  
   
 2.  Überprüfen Sie im linken Bereich, ob **Bericht** ausgewählt ist.  
   
@@ -83,11 +83,11 @@ ms.locfileid: "36060252"
   
 7.  In der **Verbindungstyp auswählen** auf **XML.**  
   
-8.  Klicken Sie zunächst auf die Registerkarte **Anmeldeinformationen** und anschließend auf **Aktuellen Windows-Benutzer verwenden. Möglicherweise ist Kerberos-Delegierung erforderlich**, und klicken Sie dann auf **OK**.  
+8.  Klicken Sie zunächst auf die Registerkarte **Anmeldeinformationen** und anschließend auf **Aktuellen Windows-Benutzer verwenden. Möglicherweise ist die Kerberos-Delegierung erforderlich**, und klicken Sie dann auf **OK**.  
   
 9. Klicken Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** auf **MyPieChart**und anschließend auf **Weiter**.  
   
-10. Kopieren Sie den folgenden Text ein, und fügen Sie ihn in das große Feld in der Mitte der der **entwerfen Sie eine Abfrage** Seite.  
+10. Kopieren Sie den folgenden Text ein, und fügen Sie ihn in das große Feld in der Mitte des der **entwerfen Sie eine Abfrage** Seite.  
   
     ```  
     <Query>  
@@ -142,7 +142,7 @@ ms.locfileid: "36060252"
   
 1.  Klicken Sie auf **Start**, zeigen Sie auf **Programme**, zeigen Sie auf **Microsoft SQL Server 2012 Berichts-Generator**, und klicken Sie dann auf **Berichts-Generator**.  
   
-2.  In der **neuer Bericht oder neues Dataset** Dialogfeld Feld, überprüfen Sie, ob **Bericht** im linken Bereich ausgewählt ist.  
+2.  In der **neuer Bericht oder neues Dataset** Dialogfeld überprüfen Sie, ob **Bericht** im linken Bereich ausgewählt ist.  
   
 3.  Klicken Sie im rechten Bereich auf **Diagramm-Assistent**und anschließend auf **Erstellen**.  
   
@@ -204,18 +204,18 @@ ms.locfileid: "36060252"
   
 2.  Mit der rechten Maustaste auf die Bezeichnungen, und wählen Sie **Reihenbezeichnungseigenschaften**. Das Dialogfeld **Reihenbezeichnungseigenschaften** wird angezeigt.  
   
-3.  Typ `#PERCENT{P0}` für die **bezeichnen können** Option.  
+3.  Typ `#PERCENT{P0}` für die **Bezeichnungsdaten** Option.  
   
-     Die `{P0}` erhalten Sie den Prozentsatz ohne Dezimalstellen an. Wenn Sie gerade eingeben `#PERCENT`, haben die Zahlen zwei Dezimalstellen an. `#PERCENT` ist ein Schlüsselwort, das eine Berechnung oder eine Funktion für Sie ausführt. Es gibt noch viele andere.  
+     Die `{P0}` erhalten Sie den Prozentsatz ohne Dezimalstellen. Wenn Sie gerade eingeben `#PERCENT`, müssen Ihre Zahlen zwei Dezimalstellen an. `#PERCENT` ist ein Schlüsselwort, das eine Berechnung oder eine Funktion für Sie ausführt. Es gibt noch viele andere.  
   
  Weitere Informationen zum Anpassen von Diagrammbezeichnungen und -legenden finden Sie unter [Anzeigen von Prozentwerten in einem Kreisdiagramm &#40;Berichts-Generator und SSRS&#41;](../report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) sowie unter [Ändern des Texts eines Legendenelements &#40;Berichts-Generator und SSRS&#41;](../report-design/chart-legend-change-item-text-report-builder.md).  
   
  ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#TwoWays)  
   
 ##  <a name="WhatsNext"></a> Wie geht es weiter?  
- Nachdem Sie nun Ihren ersten Bericht im Berichts-Generator erstellt haben, können Sie die anderen Lernprogramme ausführen und die ersten Berichte mit Ihren eigenen Daten erstellen. Zum Ausführen von Report Builder, die Sie benötigen die Berechtigung zum Zugriff auf Ihre Datenquellen, z. B. Datenbanken, mit einem *Verbindungszeichenfolge*, die verbindet Sie mit der Datenquelle. Der Systemadministrator hat diese Informationen und kann Ihnen bei der Einrichtung helfen.  
+ Nachdem Sie nun Ihren ersten Bericht im Berichts-Generator erstellt haben, können Sie die anderen Lernprogramme ausführen und die ersten Berichte mit Ihren eigenen Daten erstellen. Führen Sie Berichts-Generator, die Sie benötigen die Berechtigung zum Zugriff auf Ihre Datenquellen, z. B. Datenbanken, mit einem *Verbindungszeichenfolge*, die tatsächlich verbindet Sie mit der Datenquelle. Der Systemadministrator hat diese Informationen und kann Ihnen bei der Einrichtung helfen.  
   
- Um die anderen Lernprogramme zu arbeiten, benötigen Sie den Namen einer Instanz von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] und Anmeldeinformationen für den schreibgeschützten Zugriff auf eine beliebige Datenbank. Auch dabei können Sie sich an den Systemadministrator wenden.  
+ Um die anderen Tutorials durcharbeiten, benötigen Sie den Namen einer Instanz von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] und Anmeldeinformationen für den schreibgeschützten Zugriff auf eine beliebige Datenbank. Auch dabei können Sie sich an den Systemadministrator wenden.  
   
  Schließlich benötigen Sie die URL und die Berechtigungen, um die Berichte auf einem Berichtsserver oder einer SharePoint-Website zu speichern, die mit einem Berichtsserver integriert ist. Sie können jeden Bericht, den Sie erstellen, direkt auf Ihrem Computer ausführen. Berichte haben jedoch mehr Funktionalität, wenn sie vom Berichtsserver oder von einer SharePoint-Website aus ausgeführt werden. Sie benötigen Berechtigungen zum Ausführen Ihrer Berichte oder anderer Berichte auf dem Berichtsserver oder einer SharePoint-Website, auf der sie veröffentlicht werden. Wenden Sie sich an den Systemadministrator, um Zugriff zu erhalten.  
   

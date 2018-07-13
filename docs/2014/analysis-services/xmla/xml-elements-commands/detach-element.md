@@ -1,5 +1,5 @@
 ---
-title: Detach-Element | Microsoft Docs
+title: Detach-Element | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Detach command
 ms.assetid: adbc7920-2a4a-4842-9e6f-37006fa19ff8
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: e63bad3a6bbedc847307530cfa7a7afcd4138263
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 4da654dd7b6af196f8ca2ac9c3efeb6e0b23ed45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148178"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217950"
 ---
 # <a name="detach-element"></a>Detach-Element
   Trennt eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Datenbank von der aktuellen Serverinstanz.  
@@ -61,6 +61,6 @@ ms.locfileid: "36148178"
  [Anfügen und Trennen von Analysis Services-Datenbanken](../../multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [Verschieben einer Analysis Services-Datenbank](../../multidimensional-models/move-an-analysis-services-database.md)   
  [Datenbank-ReadWriteModes](../../multidimensional-models/database-readwritemodes.md)   
- [Umschalten Sie in einer Analysis Services-Datenbank zwischen Schreib-und Lesemodus](../../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [Umschalten einer Analysis Services-Datenbank zwischen Schreib-und Lesemodus](../../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
   

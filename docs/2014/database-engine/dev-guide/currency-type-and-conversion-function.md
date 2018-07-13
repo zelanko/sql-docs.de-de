@@ -1,5 +1,5 @@
 ---
-title: Currency-Typ und Konvertierungsfunktion | Microsoft Docs
+title: Currency-Typ und Konvertierungsfunktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: df516567-8689-45c2-b418-16473f8d43e4
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e0c0adda9b9c1e39e599d33fd0d6462fd675cc9a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5f4c3aae27950cdaa6ff2244abdc2de501c0b1f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36060336"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332480"
 ---
 # <a name="currency-type-and-conversion-function"></a>Currency-Typ und Konvertierungsfunktion
   In diesem Beispiel wird ein benutzerdefinierter Currency-Datentyp mithilfe von C# definiert. Dieser benutzerdefinierte Datentyp kapselt sowohl einen Betrag als auch ein Gebietsschema ein, um die richtige Wiedergabe des Betrags als Währungswert in diesem Gebietsschema zu bestimmen. Dieses Beispiel stellt außerdem eine Währungsumrechnungsfunktion bereit, die eine Instanz des benutzerdefinierten Currency-Typs zurückgibt. Wenn die AdventureWorks-Datenbank über einen Umrechnungskurs von US-Dollar (USD) in die Währung der angegebenen Kultur verfügt, gibt die Umrechnungsfunktion einen benutzerdefinierten Currency-Datentyp mit dem konvertierten Kurs und einer Kultur zurück, die der angeforderten Kultur entspricht. Andernfalls wird ein benutzerdefinierter Currency-Datentyp mit dem ursprünglichen Betrag zurückgegeben, d. h. ein USD-Betrag mit der Kultur `en-us`. Das Beispiel veranschaulicht auch, wie Sie mithilfe von Transact-SQL CLR (Common Language Runtime)-Methoden und Assemblys registrieren und die Registrierung von CLR-Methoden und Assemblys aufheben können.  
@@ -56,11 +56,11 @@ ms.locfileid: "36060336"
      `GO`  
   
     > [!NOTE]  
-    >  Um CLR zu aktivieren, benötigen Sie `ALTER SETTINGS` Serverberechtigung, die implizit von Mitgliedern der erhalten die `sysadmin` und `serveradmin` festen Serverrollen.  
+    >  Um CLR zu aktivieren, benötigen Sie `ALTER SETTINGS` Serverberechtigung, die implizit Mitglieder erhalten die `sysadmin` und `serveradmin` festen Serverrollen.  
   
 -   Die AdventureWorks-Datenbank muss in der von Ihnen verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz installiert sein.  
   
--   Wenn Sie kein Administrator für sind die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz, die Sie verwenden, benötigen Sie einen Administrator erteilen Sie **CreateAssembly** Berechtigung, um die Installation abzuschließen.  
+-   Wenn Sie nicht-Administrator sind die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz, die Sie verwenden, benötigen Sie einen Administrator, die Sie gewähren **CreateAssembly** Berechtigung, um die Installation abzuschließen.  
   
 ## <a name="building-the-sample"></a>Erstellen des Beispiels  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36060336"
   
 3.  Erstellen Sie in c:\MySample die Datei `Currency.cs`, und kopieren Sie den C#-Beispielcode (unten) in die Datei.  
   
-4.  Kompilieren Sie an der Eingabeaufforderung den Beispielcode, durch das ausführen:  
+4.  Kompilieren Sie an der Eingabeaufforderung den Beispielcode durch ausführen:  
   
     -   `Csc /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll  /target:library Currency.cs`  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36060336"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-8.  Kopie [!INCLUDE[tsql](../../includes/tsql-md.md)] -testbefehlsskript in eine Datei, und speichern Sie sie als `test.sql` im Beispielverzeichnis.  
+8.  Kopie [!INCLUDE[tsql](../../includes/tsql-md.md)] -testbefehlsskript in eine Datei, und speichern Sie ihn `test.sql` im Beispielverzeichnis.  
   
 9. Führen Sie das Testskript mit dem folgenden Befehl aus:  
   

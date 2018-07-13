@@ -1,5 +1,5 @@
 ---
-title: Registerkarte "(Miningmodell-Viewer) die Entscheidung | Microsoft Docs
+title: Decision Tree-Registerkarte (Miningmodell-Viewer) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.decisiontree.f1
 ms.assetid: dc88606f-ba7c-4f8d-af65-bfa17ec16e2b
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8ac997463e15b862dafbb5e561e9ab5dd29601b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 86c229c4adc57200a2d1867c167aa3d998498765
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36059703"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276336"
 ---
 # <a name="decision-tree-tab-mining-model-viewer"></a>Registerkarte "Entscheidungsstruktur" (Miningmodell-Viewer)
   Im Bereich **Entscheidungsstruktur** wird eine visuelle Darstellung der Entscheidungsregeln angezeigt, die in einem Entscheidungsstrukturmodell erstellt werden. Entscheidungsregeln beschreiben Pfade zu einem bestimmten Ergebnis.  
@@ -29,13 +29,13 @@ ms.locfileid: "36059703"
  **Weitere Informationen:** [Microsoft Decision Trees-Algorithmus](data-mining/microsoft-decision-trees-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Struktur-Viewer](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
 ## <a name="options"></a>Tastatur  
- **Viewerinhalt**  
+ **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
  **Miningmodell**  
  Wählen Sie ein Miningmodell aus der aktuellen Miningstruktur aus. Das Miningmodell wird im dazugehörigen Viewer geöffnet.  
   
- **Ereignisanzeige**  
+ **Viewer**  
  Wählen Sie den Viewer aus, der zum Durchsuchen des ausgewählten Miningmodells verwendet werden soll. Sie können den benutzerdefinierten Viewer oder den [!INCLUDE[msCoName](../includes/msconame-md.md)] -Viewer für Mininginhalte verwenden. Sie können auch Plug-In-Viewer verwenden, falls diese verfügbar sind.  
   
  **Vergrößern**  
