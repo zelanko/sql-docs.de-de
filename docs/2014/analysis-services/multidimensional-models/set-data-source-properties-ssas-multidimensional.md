@@ -1,5 +1,5 @@
 ---
-title: Festlegen von Datenquelleneigenschaften (SSAS – mehrdimensional) | Microsoft Docs
+title: Festlegen von Datenquelleneigenschaften (SSAS – mehrdimensional) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.datasourceproperties.f1
 helpviewer_keywords:
 - Data Source Properties dialog box
 ms.assetid: bf8b600f-5b99-4f7d-908b-8a391721e9dd
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fdd8eca5f49e79c3f6d284a404f23121a1182a0f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb4fcd1e2945e01b5e81d38542b0b8c7950c1fcc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050673"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208290"
 ---
 # <a name="set-data-source-properties-ssas-multidimensional"></a>Festlegen von Datenquelleneigenschaften (SSAS – mehrdimensional)
   In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]gibt ein Datenquellenobjekt eine Verbindung mit einem externen Data Warehouse oder einer relationalen Datenbank an, das oder die für ein mehrdimensionales Modell Daten bereitstellt. Durch Eigenschaften in der Datenquelle werden die Verbindungszeichenfolge, ein Timeoutintervall, die maximale Anzahl der Verbindungen sowie die Transaktionsisolationsstufe bestimmt.  
@@ -47,8 +47,8 @@ ms.locfileid: "36050673"
 |**Name, ID, Beschreibung**|Name, ID und Beschreibung werden verwendet, um das Datenquellenobjekt im mehrdimensionalen Modell zu identifizieren und zu beschreiben.<br /><br /> Name und Beschreibung können in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] oder in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] angegeben werden, nachdem Sie die Lösung bereitgestellt oder verarbeitet haben.<br /><br /> ID wird beim Erstellen des Objekts generiert. Zwar können Sie den Namen und die Beschreibung leicht ändern, doch sind die IDs schreibgeschützt und dürfen nicht geändert werden. Durch die feste Objekt-ID werden Objektabhängigkeiten und Verweise im gesamten Modell beibehalten.|  
 |**Timestamp erstellen**|Diese schreibgeschützte Eigenschaft wird in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]angezeigt. Sie zeigt das Datum und die Uhrzeit der Erstellung der Datenquelle an.|  
 |**Letztes Schemaupdate**|Diese schreibgeschützte Eigenschaft wird in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]angezeigt. Sie zeigt das Datum und die Uhrzeit des letzten Updates der Metadaten für die Datenquelle an. Dieser Wert wird beim Bereitstellen der Lösung aktualisiert.|  
-|**Abfragetimeout**|Gibt an, wie lang versucht wird, eine Verbindungsanforderung auszuführen, bevor aufgegeben wird.<br /><br /> Geben Sie den Abfragetimeout in folgendem Format ein:<br /><br /> *\<Stunden >*:*\<Minuten >*:*\<Sekunden >*<br /><br /> Diese Eigenschaft kann überschrieben werden, indem die `DatabaseConnectionPoolTimeoutConnection` Servereigenschaft. Wenn die Servereigenschaft kleiner ist, wird sie anstelle des **Abfragetimeouts**verwendet.<br /><br /> Weitere Informationen zur **Abfragetimeout** -Eigenschaft finden Sie unter <xref:Microsoft.AnalysisServices.DataSource.Timeout%2A>. Weitere Informationen zur Servereigenschaft finden Sie unter [OLAP Properties](../server-properties/olap-properties.md).|  
-|**Verbindungszeichenfolge**|Gibt den physischen Speicherort einer Datenbank, die Daten für ein mehrdimensionales Modell bereitstellt, sowie den für die Verbindung verwendeten Datenanbieter an. Diese Informationen werden für eine Clientbibliothek bereitgestellt, die die Verbindungsanforderung auslöst. Der Anbieter bestimmt, welche Eigenschaften für die Verbindungszeichenfolge festgelegt werden können.<br /><br /> Die Verbindungszeichenfolge wird mit den Informationen erstellt, die Sie im Dialogfeld **Verbindungs-Manager** angeben. Sie können die Verbindungszeichenfolge auch in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] auf der Eigenschaftenseite der Datenquelle anzeigen und bearbeiten.<br /><br /> Für eine SQL Server-Datenbank, eine Verbindungszeichenfolge, die enthält `user ID` gibt Datenbankauthentifizierung an, eine Verbindung mit `Integrated Security=SSPI` gibt die Windows-Authentifizierung an.<br /><br /> Sie können den Server- oder Datenbanknamen ändern, wenn die Datenbank an einen neuen Speicherort verschoben wurde. Überprüfen Sie, ob die eben für die Verbindung angegebenen Anmeldeinformationen einer Datenbankanmeldung zugeordnet sind.|  
+|**Abfragetimeout**|Gibt an, wie lang versucht wird, eine Verbindungsanforderung auszuführen, bevor aufgegeben wird.<br /><br /> Geben Sie den Abfragetimeout in folgendem Format ein:<br /><br /> *\<Stunden >*:*\<Minuten >*:*\<Sekunden >*<br /><br /> Diese Eigenschaft kann-Servereigenschaft überschrieben werden, indem die `DatabaseConnectionPoolTimeoutConnection` Servereigenschaft. Wenn die Servereigenschaft kleiner ist, wird sie anstelle des **Abfragetimeouts**verwendet.<br /><br /> Weitere Informationen zur **Abfragetimeout** -Eigenschaft finden Sie unter <xref:Microsoft.AnalysisServices.DataSource.Timeout%2A>. Weitere Informationen zur Servereigenschaft finden Sie unter [OLAP Properties](../server-properties/olap-properties.md).|  
+|**Verbindungszeichenfolge**|Gibt den physischen Speicherort einer Datenbank, die Daten für ein mehrdimensionales Modell bereitstellt, sowie den für die Verbindung verwendeten Datenanbieter an. Diese Informationen werden für eine Clientbibliothek bereitgestellt, die die Verbindungsanforderung auslöst. Der Anbieter bestimmt, welche Eigenschaften für die Verbindungszeichenfolge festgelegt werden können.<br /><br /> Die Verbindungszeichenfolge wird mit den Informationen erstellt, die Sie im Dialogfeld **Verbindungs-Manager** angeben. Sie können die Verbindungszeichenfolge auch in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] auf der Eigenschaftenseite der Datenquelle anzeigen und bearbeiten.<br /><br /> Für SQL Server-Datenbank, eine Verbindungszeichenfolge, die enthält `user ID` gibt Datenbankauthentifizierung an, eine Verbindung mit `Integrated Security=SSPI` gibt die Windows-Authentifizierung.<br /><br /> Sie können den Server- oder Datenbanknamen ändern, wenn die Datenbank an einen neuen Speicherort verschoben wurde. Überprüfen Sie, ob die eben für die Verbindung angegebenen Anmeldeinformationen einer Datenbankanmeldung zugeordnet sind.|  
 |**Maximale Anzahl von Verbindungen**|Gibt Sie die maximale Anzahl an Verbindungen an, die von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für die Verbindung mit der Datenquelle zugelassen werden. Wenn mehr Verbindungen benötigt werden, wartet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , bis eine Verbindung verfügbar wird. Der Standardwert ist 10. Durch Begrenzung der Verbindungszahl wird sichergestellt, dass die externe Datenquelle nicht mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Anforderungen überlastet wird.|  
 |**Isolation**|Gibt das Sperr- und Zeilenversionsverwaltungsverhalten von SQL-Befehlen an, die von einer Verbindung mit einer relationalen Datenbank ausgegeben werden. Gültige Werte sind ReadCommitted oder Snapshot. Der Standard ist ReadCommitted, der angibt, dass für Daten ein Commit ausgeführt werden muss, bevor sie gelesen werden. Dadurch werden Dirty Reads verhindert. Momentaufnahme gibt an, dass Lesevorgänge aus einer Momentaufnahme von Daten mit zuvor ausgeführtem Commit stammen. Weitere Informationen zur Isolationsstufe in SQL Server finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).|  
 |**Verwalteter Anbieter**|Zeigt den Namen des verwalteten Anbieters an, z. B. System.Data.SqlClient oder System.Data.OracleClient, wenn die Datenquelle einen verwalteten Anbieter verwendet.<br /><br /> Wenn die Datenquelle keinen verwalteten Anbieter verwendet, zeigt diese Eigenschaft eine leere Zeichenfolge an.<br /><br /> Diese Eigenschaft ist in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]schreibgeschützt. Um den für die Verbindung verwendeten Anbieter zu ändern, bearbeiten Sie die Verbindungszeichenfolge.|  

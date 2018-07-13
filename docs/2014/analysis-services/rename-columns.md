@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 3: Umbenennen von Spalten | Microsoft Docs'
+title: 'Lektion 3: Umbenennen von Spalten | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5fc8ba1a-2b30-4775-9b3b-c09dee711b3e
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ed2f495f4300abca78b3a1b7597bd0d09fd15292
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 6d4f9d156889bd3a761cff2a18a908df42e8aade
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048630"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246102"
 ---
 # <a name="lesson-3-rename-columns"></a>Lektion 3: Umbenennen von Spalten
   In dieser Lektion benennen Sie viele der Spalten in jeder importierten Tabelle um. Durch das Umbenennen von Spalten sind diese leichter identifizierbar und navigierbar sowohl im Modell-Designer als auch in einer Clientanwendung bei der Auswahl von Feldern durch Benutzer. Weitere Informationen finden Sie unter [Umbenennen einer Tabelle oder Spalte &#40;SSAS – tabellarisch&#41;](tabular-models/rename-a-table-or-column-ssas-tabular.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "36048630"
   
      Wenn Sie auf eine Registerkarte klicken, wird diese Tabelle im Modell-Designer-Fenster aktiv.  
   
-2.  Klicken Sie mit der Doppelklicken auf die **CustomerKey** Spalte, geben Sie `Customer  Id`, und drücken Sie dann die EINGABETASTE.  
+2.  Doppelklicken dem **CustomerKey** Spalte benennen, und geben Sie `Customer  Id`, und drücken Sie dann die EINGABETASTE.  
   
     > [!TIP]  
     >  Sie können auch in der Eigenschaft **Spaltenname** im Fenster **Eigenschaften** oder in der Diagrammsicht eine Spalte umbenennen.  
@@ -138,7 +138,7 @@ ms.locfileid: "36048630"
     |ProductCategoryAlternateKey|Product Category Alternate Id|  
     |EnglishProductCategoryName|Product Category Name|  
   
-     **Product Subcategory**  
+     **Produktunterkategorie**  
   
     |Quellname|Anzeigename|  
     |-----------------|-------------------|  

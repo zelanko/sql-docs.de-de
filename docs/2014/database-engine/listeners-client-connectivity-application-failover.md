@@ -1,14 +1,13 @@
 ---
-title: Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover (SQLServer) | Microsoft Docs
+title: Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover (SQLServer) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - read-only routing
@@ -20,13 +19,13 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 caps.latest.revision: 46
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 90dc94aeebdaa99fe2884dc0874f0c01ec8212cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd5187ffce3a34c038471681a5b730b5b92313ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057340"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197870"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover (SQL Server)
   Dieses Thema enthält Informationen zu Überlegungen hinsichtlich [!INCLUDE[ssHADR](../includes/sshadr-md.md)] -Clientkonnektivität und Anwendungsfailoverfunktionalität.  
@@ -122,13 +121,13 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- In diesem Beispiel für eine Verbindungszeichenfolge versucht der Client, eine Verbindung mit dem Verfügbarkeitsgruppenlistener `AGListener` an Port 1433 herzustellen. Sie können den Port auch weglassen, wenn der Verfügbarkeitsgruppenlistener Port 1433 überwacht.  Die Verbindungszeichenfolge ist die `ApplicationIntent` -Eigenschaftensatz auf `ReadOnly`, was diese eine *Verbindungszeichenfolge beabsichtigte Lesevorgänge*.  Ohne diese Einstellung hätte der Server kein schreibgeschütztes Routing der Verbindung versucht.  
+ In diesem Beispiel für eine Verbindungszeichenfolge versucht der Client, eine Verbindung mit dem Verfügbarkeitsgruppenlistener `AGListener` an Port 1433 herzustellen. Sie können den Port auch weglassen, wenn der Verfügbarkeitsgruppenlistener Port 1433 überwacht.  Die Verbindungszeichenfolge enthält die `ApplicationIntent` -Eigenschaftensatz auf `ReadOnly`, dadurch eine *Verbindungszeichenfolge für beabsichtige Lesevorgänge*.  Ohne diese Einstellung hätte der Server kein schreibgeschütztes Routing der Verbindung versucht.  
   
  Die primäre Datenbank der Verfügbarkeitsgruppe verarbeitet die eingehende Anforderung für schreibgeschütztes Routing und versucht, ein schreibgeschütztes Online-Replikat zu suchen, das mit dem primären Replikat verknüpft und für schreibgeschütztes Routing konfiguriert ist.  Der Client empfängt Verbindungsinformationen vom primären Replikatserver und stellt eine Verbindung mit dem ermittelten schreibgeschützten Replikat her.  
   
  Hinweis: Die Anwendungsabsicht kann von einem Clienttreiber an eine Downlevelinstanz von SQL Server gesendet werden.  In diesem Fall wird die schreibgeschützte Anwendungsabsicht ignoriert, und die Verbindung bleibt normal bestehen.  
   
- Können Sie umgehen, schreibgeschütztes routing, indem die Verbindungseigenschaft der anwendungsabsicht nicht auf `ReadOnly` (wenn nicht festgelegt ist, wird standardmäßig `ReadWrite` während der Anmeldung) oder durch direktes Verbinden mit der primären Replikatinstanz von SQL Server statt der verfügbarkeitsgruppenlistener-Namen.  Schreibgeschütztes Routing erfolgt auch dann nicht, wenn Sie eine direkte Verbindung mit einem schreibgeschützten Replikat herstellen.  
+ Sie können Sie umgehen, schreibgeschütztes routing, indem Verbindungseigenschaft der anwendungsabsicht nicht auf `ReadOnly` (bei keiner Angabe, wird der Standardwert ist `ReadWrite` während der Anmeldung) oder eine Verbindung direkt mit der primären Replikatinstanz von SQL Server herstellen, statt der verfügbarkeitsgruppenlistener-Namen.  Schreibgeschütztes Routing erfolgt auch dann nicht, wenn Sie eine direkte Verbindung mit einem schreibgeschützten Replikat herstellen.  
   
 ####  <a name="RelatedTasksApps"></a> Verwandte Aufgaben  
   
@@ -161,7 +160,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 > [!NOTE]  
 >  Diese Einstellung wird für Verbindungen mit einem Subnetz und mehreren Subnetzen mit den Namen von Verfügbarkeitslistenern und SQL Server-Failoverclusterinstanzen empfohlen.  Wenn Sie diese Option aktivieren, stehen auch für Szenarien mit einem Subnetz weitere Optimierungen zur Verfügung.  
   
- Die `MultiSubnetFailover` -Verbindungsoption funktioniert nur mit dem TCP-Netzwerkprotokoll und wird nur unterstützt, wenn mit einem verfügbarkeitsgruppenlistener und für alle virtuellen Netzwerknamen zum Herstellen einer Verbindung [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+ Die `MultiSubnetFailover` -Verbindungsoption funktioniert nur mit dem TCP-Netzwerkprotokoll und wird nur unterstützt, wenn Sie einen verfügbarkeitsgruppenlistener und für alle virtuellen Netzwerknamen zum Herstellen einer Verbindung [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
  Beispiel für eine Verbindungszeichenfolge für den ADO.NET-Anbieter (System.Data.SqlClient) mit aktiviertem Multisubnetzfailover:  
   
@@ -169,7 +168,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; MultiSubnetFailover=True  
 ```  
   
- Die `MultiSubnetFailover` -Verbindungsoption sollte festgelegt werden, um `True` , selbst wenn die verfügbarkeitsgruppe nur ein einzelnes Subnetz umfasst.  Dies ermöglicht es Ihnen, neue Clients vorzukonfigurieren, um künftig weitere Subnetze zu unterstützen, ohne dass die Clientverbindungszeichenfolgen geändert werden müssen. Darüber hinaus wird die Failoverleistung für Failover in einem Subnetz optimiert.  Während der `MultiSubnetFailover` Connection-Option ist nicht erforderlich, bietet jedoch den Vorteil eines schnelleren subnetzfailovers.  Das liegt daran, dass der Clienttreiber versucht, parallel ein TCP-Socket für alle der Verfügbarkeitsgruppe zugeordneten IP-Adressen zu öffnen.  Der Clienttreiber wartet, bis die erste IP erfolgreich antwortet, und verwendet diese dann für die Verbindung.  
+ Die `MultiSubnetFailover` -Verbindungsoption sollte festgelegt werden, um `True` , auch wenn die verfügbarkeitsgruppe nur ein einzelnes Subnetz umfasst.  Dies ermöglicht es Ihnen, neue Clients vorzukonfigurieren, um künftig weitere Subnetze zu unterstützen, ohne dass die Clientverbindungszeichenfolgen geändert werden müssen. Darüber hinaus wird die Failoverleistung für Failover in einem Subnetz optimiert.  Während der `MultiSubnetFailover` -Verbindungsoption ist nicht erforderlich, bietet jedoch den Vorteil eines schnelleren subnetzfailovers.  Das liegt daran, dass der Clienttreiber versucht, parallel ein TCP-Socket für alle der Verfügbarkeitsgruppe zugeordneten IP-Adressen zu öffnen.  Der Clienttreiber wartet, bis die erste IP erfolgreich antwortet, und verwendet diese dann für die Verbindung.  
   
 ##  <a name="SSLcertificates"></a> Verfügbarkeitsgruppenlistener und SSL-Zertifikate  
  Wenn beim Herstellen einer Verbindung mit einem Verfügbarkeitsgruppenlistener die beteiligten Instanzen von SQL Server SSL-Zertifikate zusammen mit Sitzungsverschlüsselung verwenden, muss der Clienttreiber den alternativen Antragstellernamen im SSL-Zertifikat unterstützen, um die Verschlüsselung zu erzwingen.  SQL Server-Treiberunterstützung für den alternativen Antragstellernamen des Zertifikats ist für ADO.NET (SqlClient), Microsoft JDBC und SQL Native Client (SNAC) geplant.  
@@ -210,7 +209,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Wiederherstellung im Notfall](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Notfallwiederherstellung](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Einführung in den Verfügbarkeitsgruppenlistener](http://blogs.msdn.com/b/sqlalwayson/archive/2012/01/16/introduction-to-the-availability-group-listener.aspx) (SQL Server AlwaysOn-Teamblog)  
   

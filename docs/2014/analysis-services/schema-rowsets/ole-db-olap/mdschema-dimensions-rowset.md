@@ -1,5 +1,5 @@
 ---
-title: MDSCHEMA_DIMENSIONS-Rowset | Microsoft Docs
+title: MDSCHEMA_DIMENSIONS-Rowset | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_DIMENSIONS rowset
 ms.assetid: a0fd94bb-359a-4df6-93a6-d60d50223944
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b00b617adf90e1dba8eac94a9872ce07c0773e7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 69cb4e0c997d3d786a55a6673327e50d0aac27a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048852"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273396"
 ---
 # <a name="mdschemadimensions-rowset"></a>MDSCHEMA_DIMENSIONS-Rowset
   Beschreibt die freigegebenen und privaten Dimensionen innerhalb einer Datenbank.  
@@ -67,7 +67,7 @@ ms.locfileid: "36048852"
 |`DIMENSION_NAME`|`DBTYPE_WSTR`|Optional.|  
 |`DIMENSION_UNIQUE_NAME`|`DBTYPE_WSTR`|Optional.|  
 |`CUBE_SOURCE`|`DBTYPE_UI2`|(Optional) Eine Bitmap mit einem der folgenden gültigen Werte:<br /><br /> -1-CUBE<br />-2-DIMENSION<br /><br /> Die Standardeinschränkung besitzt den Wert 1.|  
-|`DIMENSION_VISIBILITY`|`DBTYPE_UI2`|(Optional) Eine Bitmap mit einem der folgenden gültigen Werte:<br /><br /> -Visible 1<br />-2 nicht sichtbar<br /><br /> Die Standardeinschränkung besitzt den Wert 1.|  
+|`DIMENSION_VISIBILITY`|`DBTYPE_UI2`|(Optional) Eine Bitmap mit einem der folgenden gültigen Werte:<br /><br /> -1-sichtbar<br />– 2 nicht sichtbar<br /><br /> Die Standardeinschränkung besitzt den Wert 1.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [OLE DB für OLAP-Schemarowsets](ole-db-for-olap-schema-rowsets.md)  

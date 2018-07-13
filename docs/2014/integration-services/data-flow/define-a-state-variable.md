@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f9eedf55aae8fe87da589d7fccb5e53456d70039
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: efe8941ee77c9dbfd8ee335e9e1a2ed2931d1503
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056292"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322680"
 ---
 # <a name="define-a-state-variable"></a>Definieren einer Statusvariablen
   In diesem Verfahren wird beschrieben, wie Sie eine Paketvariable definieren, in der der CDC-Status gespeichert wird.  
@@ -53,10 +53,10 @@ ms.locfileid: "36056292"
 |-----------|-----------------|  
 |(INITIAL)|Der ursprüngliche Status, bevor ein Paket für die aktuelle CDC-Gruppe ausgeführt wurde. Dieser Status liegt auch vor, wenn der CDC-Status leer ist.|  
 |ILSTART (Initial Load Started)|Der Status beim Start des anfänglich geladenen Pakets, nachdem der CDC-Steuerungstask durch den `MarkInitialLoadStart`-Vorgang aufgerufen wurde.|  
-|ILEND (Initial Load Ended)|Dies ist der Status, Beendigung des anfänglich geladenen Pakets erfolgreich, nachdem der `MarkInitialLoadEnd` Vorgangsaufruf der CDC-Steuerungstask.|  
-|ILUPDATE (Initial Load Update)|Der Status bei der Ausführung des Trickle-Feed-Updatepakets im Anschluss an den erstmaligen Ladevorgang, während der anfängliche Verarbeitungsbereich noch verarbeitet wird. Dies ist nach der `GetProcessingRange` Vorgangsaufruf der CDC-Steuerungstask.<br /><br /> Wenn die __$reprocessing-Spalte verwendet wird, wird sie auf 1 festgelegt, um anzugeben, dass das Paket möglicherweise Zeilen erneut verarbeitet, die bereits im Ziel vorhanden sind.|  
+|ILEND (Initial Load Ended)|Dies ist der Zustand erfolgreich Beendigung des anfänglich geladenen Pakets nach dem `MarkInitialLoadEnd` Vorgangsaufruf zu CDC-Steuerungstask.|  
+|ILUPDATE (Initial Load Update)|Der Status bei der Ausführung des Trickle-Feed-Updatepakets im Anschluss an den erstmaligen Ladevorgang, während der anfängliche Verarbeitungsbereich noch verarbeitet wird. Dies ist nach der `GetProcessingRange` Vorgangsaufruf zu CDC-Steuerungstask.<br /><br /> Wenn die __$reprocessing-Spalte verwendet wird, wird sie auf 1 festgelegt, um anzugeben, dass das Paket möglicherweise Zeilen erneut verarbeitet, die bereits im Ziel vorhanden sind.|  
 |TFEND (Trickle-Feed Update Ended)|Der für reguläre CDC-Ausführungen erwartete Status. Er gibt an, dass die vorherige Ausführung erfolgreich abgeschlossen wurde und eine neue Ausführung mit einem neuen Verarbeitungsbereich gestartet werden kann.|  
-|TFSTART|Dies ist der Zustand auf eine nicht-Initial-Ausführung von das Trickle-feed Update-Paket nach dem `GetProcessingRange` Vorgangsaufruf der CDC-Steuerungstask.<br /><br /> Dies gibt an, dass eine reguläre CDC-Ausführung gestartet wird, aber nicht beendet wurde oder noch nicht, ordnungsgemäß heruntergefahren abgeschlossen ist (`MarkProcessedRange`).|  
+|TFSTART|Dies ist der Status bei nicht-nachfolgenden Ausführungen des Trickle feed-Updatepakets, das, nach der `GetProcessingRange` Vorgangsaufruf zu CDC-Steuerungstask.<br /><br /> Dies bedeutet, dass eine reguläre CDC-Ausführung gestartet wird, jedoch nicht beendet wurde oder noch nicht, ordnungsgemäß abgeschlossen ist (`MarkProcessedRange`).|  
 |TFREDO (Reprocessing Trickle-Feed Updates)|Der Status bei einem `GetProcessingRange`-Vorgang, der nach TFSTART stattfindet. Er gibt an, dass die vorherige Ausführung nicht erfolgreich abgeschlossen wurde.<br /><br /> Wenn die __$reprocessing-Spalte verwendet wird, wird sie auf 1 festgelegt, um anzugeben, dass das Paket möglicherweise Zeilen erneut verarbeitet, die bereits im Ziel vorhanden sind.|  
 |ERROR|Die CDC-Gruppe befindet sich in einem Fehlerstatus.|  
   

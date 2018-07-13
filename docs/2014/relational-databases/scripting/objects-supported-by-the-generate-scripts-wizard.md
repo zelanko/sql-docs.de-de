@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 071eb2cb-f073-41ca-9f4d-11d3b8803495
 caps.latest.revision: 5
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f102fa4366106581c5f3ec4ff141d537531dbaa4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e2d0cc8bb86c84b9b4c9416f844eaff8251b3445
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048690"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233080"
 ---
 # <a name="objects-supported-by-the-generate-scripts-wizard"></a>Vom Assistenten zum Generieren von Skripts unterstützte Objekte
   Der Assistent zum Generieren und Veröffentlichen von Skripts unterstützt eine Teilmenge der von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]unterstützten Objekte.  
@@ -32,11 +32,11 @@ ms.locfileid: "36048690"
 |Anwendungsrolle|Datenbankrolle|Schema|Benutzerdefiniertes Aggregat|Ansicht<sup>1</sup>|  
 |Assembly|DEFAULT-Einschränkung|Gespeicherte Prozedur<sup>1</sup>|Benutzerdefinierter Datentyp|XML-Schemaauflistung|  
 |CHECK-Einschränkung|Volltextkatalog|Synonym|Benutzerdefinierte Funktion||  
-|CLR (common Language Runtime)-gespeicherte Prozedur<sup>1</sup>|Index|Tabelle|Benutzerdefinierte Tabelle||  
+|CLR (common Language Runtime)-Prozedur<sup>1</sup>|Index|Tabelle|Benutzerdefinierte Tabelle||  
 |CLR-benutzerdefinierte Funktion|Regel|Benutzer<sup>2</sup>|Benutzerdefinierter Typ||  
   
  <sup>1</sup> ohne Verschlüsselung veröffentlicht.  
   
- <sup>2</sup> alle nicht-Systembenutzer, die in der Datenbank vorhanden sind, werden als Rollen veröffentlicht.  
+ <sup>2</sup> alle nicht-System-Benutzer, die in der Datenbank vorhanden, werden als Rollen veröffentlicht.  
   
   

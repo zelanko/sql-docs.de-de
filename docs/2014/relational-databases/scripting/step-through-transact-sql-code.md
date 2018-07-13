@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, debugging code
 - Transact-SQL debugger, step over
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Transact-SQL debugger, step into
 ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6cb9a3f5e0d275e4b7b646401f81b8128546a850
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 331dca27a98a9493478ff294a21e5c52e1a1ba97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049176"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331280"
 ---
 # <a name="step-through-transact-sql-code"></a>Schrittweises Durchlaufen von Transact-SQL-Code
   Der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger ermöglicht es Ihnen, zu bestimmen, welche [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen in einem [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fenster ausgeführt werden. Sie können den Debugger bei einzelnen Anweisungen unterbrechen und dann den Status der Codeelemente an diesem Punkt anzeigen.  
@@ -55,7 +55,7 @@ ms.locfileid: "36049176"
   
 |Aktion|Verfahren|  
 |------------|---------------|  
-|Ausführen aller Anweisungen von der aktuellen Anweisung bis zum nächsten Breakpoint|Auf der **Debuggen** Menü klicken Sie auf **Fortfahren**.<br /><br /> Auf der **Debuggen** -Symbolleiste klicken Sie auf die **Fortfahren** Schaltfläche.|  
+|Ausführen aller Anweisungen von der aktuellen Anweisung bis zum nächsten Breakpoint|Auf der **Debuggen** Menü klicken Sie auf **Weiter**.<br /><br /> Auf der **Debuggen** -Symbolleiste klicken Sie auf die **Weiter** Schaltfläche.|  
 |Ausführen eines Einzelschritts in die nächste Anweisung oder in das nächste Modul|Auf der **Debuggen** Menü klicken Sie auf **Einzelschritt**.<br /><br /> Auf der **Debuggen** -Symbolleiste klicken Sie auf die **Einzelschritt** Schaltfläche.<br /><br /> Drücken Sie F11.|  
 |Überspringen der nächsten Anweisung oder des nächsten Moduls|Auf der **Debuggen** Menü klicken Sie auf **Prozedurschritt**.<br /><br /> Auf der **Debuggen** -Symbolleiste klicken Sie auf die **Prozedurschritt** Schaltfläche.<br /><br /> Drücken Sie F10.|  
 |Ausführen eines Moduls bis Rücksprung|Auf der **Debuggen** Menü klicken Sie auf **Ausführen bis Rücksprung**.<br /><br /> Auf der **Debuggen** -Symbolleiste klicken Sie auf die **Ausführen bis Rücksprung** Schaltfläche.<br /><br /> Drücken Sie UMSCHALT+F11.|  

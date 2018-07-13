@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
 - databases [Analysis Services], upgrading
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SSAS, upgrading
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
 caps.latest.revision: 63
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: dd4ae8ef0eb99859885dfbd33af284c843c282d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: Minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: f59e24f7028dd54b39ea7b27ab98ad85c149cadd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245250"
 ---
 # <a name="upgrade-analysis-services"></a>Aktualisieren von Analysis Services
   Verwenden Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup zum Ausführen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Upgrades. Ausführliche Informationen zum Aktualisieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im SharePoint-Modus finden Sie unter [Aktualisieren von PowerPivot für SharePoint](upgrade-power-pivot-for-sharepoint.md). Für Weitere Informationen zum Aktualisieren einer vorhandenen SQL Server-Instanz, finden Sie unter [ein Upgrade auf SQL Server 2014 mithilfe des Installations-Assistenten &#40;Setup&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "36048793"
   
 -   [Versionsanmerkungen zu SQL Server 2014](http://go.microsoft.com/fwlink/?LinkID=296445).  
   
--   Informationen dazu, welche [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Features und Funktionen nicht mehr unterstützt, veraltet, oder geändert wurden finden Sie unter [Analysis Services Backward Compatibility](../../analysis-services/analysis-services-backward-compatibility.md).  
+-   Informationen dazu, welche [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Features und Funktionen nicht mehr, als veraltet markiert, oder geändert wurden finden Sie unter [Analysis Services Backward Compatibility](../../analysis-services/analysis-services-backward-compatibility.md).  
   
 ## <a name="pre-upgrade-checklist"></a>Prüfliste vor dem Upgrade  
  Lesen Sie vor dem Upgrade die folgenden Informationen:  
@@ -59,9 +59,9 @@ ms.locfileid: "36048793"
 ## <a name="upgrading-analysis-services"></a>Aktualisieren von Analysis Services  
  Sie können Server und Daten auf verschiedene Art und Weise aktualisieren:  
   
--   Ein **direktes Upgrade** ersetzt die vorhandenen durch Programmdateien [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Programmdateien. Datenbanken verbleiben am gleichen Ort. Programmordner werden aktualisiert, um den neuen Namen widerzuspiegeln.  
+-   Ein **in-Place-Aktualisierung** ersetzt die vorhandenen durch Programmdateien [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Programmdateien. Datenbanken verbleiben am gleichen Ort. Programmordner werden aktualisiert, um den neuen Namen widerzuspiegeln.  
   
--   Ein **Side-by-Side-Upgrade** ist eine Neuinstallation von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auf demselben Computer, die eine vorhandene Analysis Services-Instanz verfügt. Sie können Datenbanken zur neuen Instanz auf dem gleichen Computer verschoben und dann die alte Version deinstallieren, wenn Sie sie nicht mehr verwenden.  
+-   Ein **Seite-an-Seite-Aktualisierung** ist eine neue Installation von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auf demselben Computer, die über eine vorhandene Analysis Services-Instanz verfügt. Sie können Datenbanken zur neuen Instanz auf dem gleichen Computer verschoben und dann die alte Version deinstallieren, wenn Sie sie nicht mehr verwenden.  
   
 -   Sie können auch Analysis Services auf neuer Hardware installieren und dann vorhandene Datenbanken zu diesem Server migrieren.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36048793"
  Um eine vorhandene Instanz zu aktualisieren, führen Sie das Setup aus, und geben Sie den Namen der vorhandenen Instanz als Namen für die neue Instanz an.  
   
 ## <a name="upgrading-databases"></a>Datenbankupgrades  
- Datenbanken, die in früheren Versionen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellt wurden, werden auf dem aktualisierten Server unter einer älteren Einstellung für den Datenbank-Kompatibilitätsgrad ausgeführt. Datenbanken, die in den folgenden Versionen erstellt wurden, verfügen über den Datenbank-Kompatibilitätsgrad 105. Sie können den Kompatibilitätsgrad ändern, wenn Sie Funktionen verwenden möchten, die einen neueren Datenbank-Kompatibilitätsgrad erfordern. Andernfalls können Sie die Datenbanken auf dem aktualisierten Server mithilfe der ursprünglichen Einstellungen ausführen. Weitere Informationen finden Sie unter [legen Sie den Kompatibilitätsgrad einer mehrdimensionalen Datenbank &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md).  
+ Datenbanken, die in früheren Versionen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellt wurden, werden auf dem aktualisierten Server unter einer älteren Einstellung für den Datenbank-Kompatibilitätsgrad ausgeführt. Datenbanken, die in den folgenden Versionen erstellt wurden, verfügen über den Datenbank-Kompatibilitätsgrad 105. Sie können den Kompatibilitätsgrad ändern, wenn Sie Funktionen verwenden möchten, die einen neueren Datenbank-Kompatibilitätsgrad erfordern. Andernfalls können Sie die Datenbanken auf dem aktualisierten Server mithilfe der ursprünglichen Einstellungen ausführen. Weitere Informationen finden Sie unter [Festlegen des Kompatibilitätsgrads einer mehrdimensionalen Datenbank &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   

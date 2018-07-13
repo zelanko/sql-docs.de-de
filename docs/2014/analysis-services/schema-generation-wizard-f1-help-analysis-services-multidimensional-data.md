@@ -1,5 +1,5 @@
 ---
-title: Schemagenerierung Assistent F1-Hilfe (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Schemagenerierung Assistent F1-Hilfe (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Schema Generation Wizard, F1 Help
 ms.assetid: 41e5e3d1-cc45-4bb0-ac09-4639d2ffc0ea
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 52536b8132a0c42b67439a45e6a808a7674b008b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ca4ce364da49d35e7f9e901937196f3dbad63af7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057039"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218170"
 ---
 # <a name="schema-generation-wizard-f1-help-analysis-services---multidimensional-data"></a>Schemagenerierungs-Assistent (F1-Hilfe) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Schemagenerierungs-Assistenten können Sie automatisch das relationale Schema für eine Themenbereichsdatenbank generieren, die auf vorhandenen Cubes und Dimensionen basiert. Zusätzlich können Sie Tabellen auffüllen, die durch den Assistenten für Zeitdimensionen generiert wurden sowie die Benennungskonvention und die Optionen für die Themenbereichsdatenbank verwalten.  
@@ -40,13 +40,13 @@ ms.locfileid: "36057039"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Ziel angeben &#40;Schemagenerierungs-Assistent&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](specify-target-schema-generation-wizard-analysis-services-multidimensional-data.md)  
+-   [Geben Sie Ziel &#40;Schemagenerierungs-Assistent&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](specify-target-schema-generation-wizard-analysis-services-multidimensional-data.md)  
   
 -   [Schemaoptionen für die Themenbereichsdatenbank &#40;Schemagenerierungs-Assistent&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](subject-area-database-schema-options-analysis-services-multidimensional-data.md)  
   
--   [Angeben von Benennungskonventionen &#40;Schemagenerierungs-Assistent&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](specify-naming-conventions-schema-generation-analysis-services-multidimensional-data.md)  
+-   [Benennungskonventionen angeben &#40;Schemagenerierungs-Assistent&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](specify-naming-conventions-schema-generation-analysis-services-multidimensional-data.md)  
   
--   [Fertigstellen des Assistenten &#40;Schemagenerierungs-Assistent&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](complete-schema-generation-wizard-analysis-services-multidimensional-data.md)  
+-   [Der Assistent &#40;Schemagenerierungs-Assistent&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](complete-schema-generation-wizard-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services-Assistenten &#40;mehrdimensionale Daten&#41;](analysis-services-wizards-multidimensional-data.md)  

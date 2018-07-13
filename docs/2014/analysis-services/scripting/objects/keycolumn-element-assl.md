@@ -1,5 +1,5 @@
 ---
-title: KeyColumn-Element (ASSL) | Microsoft Docs
+title: KeyColumn-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - KeyColumn element
 ms.assetid: 7b03eeb3-d478-4c38-822e-8cdfcc485039
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7594a92eb8c2eb4cdb423c7298bc3929dc49dc32
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3e27744d2c8e2d54d44318ceac7b79dc4e4e10e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056331"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247760"
 ---
 # <a name="keycolumn-element-assl"></a>KeyColumn-Element (ASSL)
   Enthält die Definition einer Spalte, die der Schlüssel oder Teil eines Schlüssels für ein Attribut ist.  
@@ -48,7 +48,7 @@ ms.locfileid: "36056331"
   
 |Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|[DataItem](../data-type/dataitem-data-type-assl.md)|  
+|Datentyp und -länge|[DataItem-Objekt](../data-type/dataitem-data-type-assl.md)|  
 |Standardwert|InclusionThresholdSetting|  
 |Cardinality|1-n: Erforderliches Element, das mehr als einmal auftreten kann.|  
   

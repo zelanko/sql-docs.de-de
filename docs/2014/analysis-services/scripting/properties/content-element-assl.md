@@ -1,5 +1,5 @@
 ---
-title: Content-Element (ASSL) | Microsoft Docs
+title: Content-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Content element
 ms.assetid: 221addef-2f88-49c5-b8f5-9eee330497a9
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 98d2de4a0ce93e857a63ebd9fe79dd18d0f9a86e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd9e3c237d8009ac153e8c69033ce9cce958aba3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049984"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267476"
 ---
 # <a name="content-element-assl"></a>Content-Element (ASSL)
   Beschreibt den Inhalt der Spalte in der [MiningStructure](../objects/miningstructure-element-assl.md) Element.  
@@ -72,25 +72,25 @@ ms.locfileid: "36049984"
 |*Fortlaufende*|Die Werte für die Spalte definieren einen fortlaufenden Satz von numerischen Daten.|  
 |*Diskretisiert*|Die Werte in der Spalte stellen Gruppen (oder Buckets) von Werten dar, die von einer kontinuierlichen Spalte abgeleitet sind.|  
 |*Sortiert*|Die Werte für die Spalte definieren eine geordnete Menge.|  
-|*Zyklisch*|Die Werte für die Spalte definieren eine zyklisch geordnete Menge.|  
-|*Wahrscheinlichkeit*|Die Werte für die Spalte geben eine Wahrscheinlichkeit für die Spalten in der [ClassifiedColumns](../collections/columns-element-assl.md) Element des übergeordneten Elements `ScalarMiningStructureColumn`.|  
+|*Zyklische*|Die Werte für die Spalte definieren eine zyklisch geordnete Menge.|  
+|*Wahrscheinlichkeit*|Die Werte für die Spalte geben eine Wahrscheinlichkeit für die Spalten in der [ClassifiedColumns](../collections/columns-element-assl.md) -Element des übergeordneten `ScalarMiningStructureColumn`.|  
 |*Variance*|Die Werte für die Spalte geben eine Varianz für die Spalten an, die im `ClassifiedColumns`-Element der übergeordneten `ScalarMiningStructureColumn` enthalten sind.|  
 |*StdDev*|Die Werte für die Spalte geben eine Standardabweichung für die Spalten an, die im `ClassifiedColumns`-Element der übergeordneten `ScalarMiningStructureColumn` enthalten sind.|  
 |*ProbabilityVariance*|Die Werte für die Spalte geben eine Varianz der Wahrscheinlichkeit für die Spalten an, die im `ClassifiedColumns`-Element der übergeordneten `ScalarMiningStructureColumn` enthalten sind.|  
 |*ProbabilityStdDev*|Die Werte für die Spalte geben eine Standardabweichung der Wahrscheinlichkeit für die Spalten an, die im `ClassifiedColumns`-Element der übergeordneten `ScalarMiningStructureColumn` enthalten sind.|  
-|*Unterstützung*|Die Werte für die Spalte geben Supportinformationen für die Spalten an, die im `ClassifiedColumns`-Element der übergeordneten `ScalarMiningStructureColumn` enthalten sind. **Hinweis:** dieser Spalte wird als Teil des Standards für Mining-Algorithmusanbietern von Drittanbietern bereitgestellt. **Hinweis:** Microsoft bereitgestellte Algorithmen haben keine Verwendung für diese Spalte. <br /><br /> zugreifen.|  
-|*Key*|Die Spalte ist eine Schlüsselspalte. **Hinweis:** diesen Inhaltstyp gilt nur für Schlüsselspalten in dem die `IsKey` -Elementgruppe ist `True`.|  
+|*Unterstützung*|Die Werte für die Spalte geben Supportinformationen für die Spalten an, die im `ClassifiedColumns`-Element der übergeordneten `ScalarMiningStructureColumn` enthalten sind. **Hinweis:** in dieser Spalte wird als Teil des Standards für Mining-Algorithmusanbieter von Drittanbietern bereitgestellt. **Hinweis:** Microsoft bereitgestellte Algorithmen haben keine Verwendung für diese Spalte. <br /><br /> zugreifen.|  
+|*Key*|Die Spalte ist eine Schlüsselspalte. **Hinweis:** dieser Inhaltstyp gilt nur für Schlüsselspalten, in dem die `IsKey` Element nastaven NA hodnotu `True`.|  
   
- Zusätzlich zu diesen Standardwerten mining-Algorithmusanbietern enthaltene [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] unterstützen die Werte in der folgenden Tabelle.  
+ Zusätzlich zu diesen Standardwerten, mining-Algorithmusanbieter, die in enthaltenen [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] unterstützen Sie die Werte in der folgenden Tabelle.  
   
 |value|Description|  
 |-----------|-----------------|  
-|*Tastenkombination*|Diese Spalte ist eine Schlüsselspalte, und die Werte für diese Spalte stellen eine Folge von Ereignissen dar. **Hinweis:** diesen Inhaltstyp gilt nur für Schlüsselspalten in dem die `IsKey` -Elementgruppe ist `True`.|  
-|*Die Schlüsselzeit*|Diese Spalte ist eine Schlüsselspalte, und die Werte für diese Spalte stellen Zeitmaßeinheiten dar. **Hinweis:** diesen Inhaltstyp gilt nur für Schlüsselspalten in dem die `IsKey` -Elementgruppe ist `True`.|  
+|*Tastenkombination*|Diese Spalte ist eine Schlüsselspalte, und die Werte für diese Spalte stellen eine Folge von Ereignissen dar. **Hinweis:** dieser Inhaltstyp gilt nur für Schlüsselspalten, in dem die `IsKey` Element nastaven NA hodnotu `True`.|  
+|*Schlüsselzeit*|Diese Spalte ist eine Schlüsselspalte, und die Werte für diese Spalte stellen Zeitmaßeinheiten dar. **Hinweis:** dieser Inhaltstyp gilt nur für Schlüsselspalten, in dem die `IsKey` Element nastaven NA hodnotu `True`.|  
 |*Sequenz*|Die Werte für diese Spalte stellen eine Folge von Ereignissen dar.|  
 |*Uhrzeit*|Die Werte für die Spalte stellen Zeitmaßeinheiten dar.|  
   
- Die Enumeration, die den zulässigen Werten für die entsprechende `Content` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  
+ Die Enumeration, der den zulässigen Werten für `Content` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [ClassifiedColumns-Element &#40;ASSL&#41;](../collections/columns-element-assl.md)   

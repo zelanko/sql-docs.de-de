@@ -1,5 +1,5 @@
 ---
-title: Programmieren AMO-OLAP-von erweiterten Objekten | Microsoft Docs
+title: Erweiterten Programming AMO OLAP-Objekten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - AMO, OLAP
 ms.assetid: b75f35a7-32df-4f22-983d-324aa98e15a9
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6408cfd8dd3a7b8f7d6993ca84c3325bedddee24
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8c511fe1a542804ebf05077d5f9a46c77dd69b2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050678"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254922"
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>Programmieren von erweiterten AMO OLAP-Objekten
   In diesem Thema werden die Programmierdetails von erweiterten OLAP-Objekten in Analysis Management Objects (AMO) erläutert. Dieses Thema enthält folgende Abschnitte:  
@@ -38,7 +38,7 @@ ms.locfileid: "36050678"
   
 -   [ProactiveCaching-Objekte](#PC)  
   
--   [Übersetzungsobjekte](#Transl)  
+-   [Translation-Objekten](#Transl)  
   
 ##  <a name="Action"></a> Aktionsobjekte  
  Aktionsklassen werden verwendet, um beim Durchsuchen von bestimmten Bereichen des Cubes eine aktive Antwort zu erstellen. Aktionsobjekte können mithilfe von AMO definiert werden, sie werden jedoch von der Clientanwendung verwendet, die die Daten durchsucht. Aktionen können von anderen Typen sein, und sie müssen entsprechend ihrem Typ erstellt werden. Folgende Aktionen stehen zur Verfügung:  
@@ -215,7 +215,7 @@ static public void CreateActions(Cube cube)
   
     -   Gut = 0,50 bis 1  
   
-     In [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], fünf Status innerhalb des Bereichs lauten wie folgt:  
+     In [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], fünf Statusarten innerhalb des Bereichs sind wie folgt:  
   
     -   Ungültig = -1 bis -0,75  
   
@@ -423,7 +423,7 @@ static public void CreatePerspectives(Cube cube)
   
 |Spezifikation|Description|  
 |-------------------|-----------------|  
-|AggregationStorage|Der Speichertyp für Aggregationen.<br /><br /> Gilt nur für Partitionen. Für Dimension muss es `Regular.`|  
+|AggregationStorage|Der Speichertyp für Aggregationen.<br /><br /> Gilt nur für Partitionen. Für Dimension muss Sie `Regular.`|  
 |SilenceInterval|Minimale Zeit, die der Cache vorhanden ist, bevor das MOLAP-Imaging beginnt.|  
 |Latenzzeit|Die Zeit zwischen der frühesten Benachrichtigung und dem Zeitpunkt, an dem die MOLAP-Images zerstört werden.|  
 |SilenceOverrideInterval|Die Zeit nach einer ersten Benachrichtigung, nach der das MOLAP-Imaging unbedingt zum Einsatz kommt.|  
@@ -467,8 +467,8 @@ static public void SetProactiveCachingSettings(Database db)
 }  
 ```  
   
-##  <a name="Transl"></a> Übersetzungsobjekte  
- Übersetzungsobjekte können mithilfe von AMO definiert werden, sie werden jedoch von der Clientanwendung verwendet, die die Daten durchsucht. Übersetzungsobjekte sind einfach zu codierende Objekte. Übersetzungen für Objektbeschriftungen werden von Paaren von Gebietsschemabezeichnern und übersetzten Beschriftungen bereitgestellt. Für alle Beschriftungen können mehrere Übersetzungen aktiviert werden. Übersetzungen können bereitgestellt werden, für die meisten [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Objekte, z. B. Dimensionen, Attribute, Hierarchien, Cubes, Measuregruppen, Measures und andere.  
+##  <a name="Transl"></a> Translation-Objekten  
+ Übersetzungsobjekte können mithilfe von AMO definiert werden, sie werden jedoch von der Clientanwendung verwendet, die die Daten durchsucht. Übersetzungsobjekte sind einfach zu codierende Objekte. Übersetzungen für Objektbeschriftungen werden von Paaren von Gebietsschemabezeichnern und übersetzten Beschriftungen bereitgestellt. Für alle Beschriftungen können mehrere Übersetzungen aktiviert werden. Übersetzungen können angegeben werden, für die meisten [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Objekte, z. B. Dimensionen, Attribute, Hierarchien, Cubes, Measuregruppen, Measures und andere.  
   
  Im folgenden Codebeispiel wird eine spanische Übersetzung für den Namen des Attributs "Product Name" bereitgestellt.  
   
@@ -489,7 +489,7 @@ static public void CreateTranslations(Database db)
 ## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.AnalysisServices>   
  [Einführung in AMO-Klassen](amo-classes-introduction.md)   
- [AMO-OLAP-Klassen](amo-olap-classes.md)   
+ [AMO OLAP-Klassen](amo-olap-classes.md)   
  [Logische Architektur &#40;Analysis Services – mehrdimensionale Daten&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Datenbankobjekte &#40;Analysis Services – mehrdimensionale Daten&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)   
  [Verarbeitung von mehrdimensionalen Modellobjekten](../processing-a-multidimensional-model-analysis-services.md)  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - rsProcessingError
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c9be2d437953424ac256d593fb39a727ae96a5ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 124c7b2dee86e1bd42b2d5cb3f450323bad8161a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049125"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218590"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError – Reporting Services-Fehler
     
@@ -57,7 +57,7 @@ ms.locfileid: "36049125"
   
 -   Eine benutzerdefinierte Assembly oder eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Assembly, die falsch bereitgestellt wurde, konnte nicht geladen werden.  
   
--   Ein Parameter, der die Nullable-Eigenschaft auf festgelegt hat `False` wurde einen null-Wert im Parameter erkannt.  
+-   Ein Parameter, der die Nullable-Eigenschaft auf festgelegt hat `False` hat einen null-Wert im Parameter erkannt.  
   
 -   Ein Ausdruck für die Hidden-Eigenschaft eines Datenbereichs enthält einen Fehler: Der Objektverweis ist nicht auf eine Objektinstanz festgelegt.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36049125"
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>Hauptbericht mit Unterbericht konnte nicht verarbeitet werden  
  Ein Bericht mit Unterberichten muss von der gleichen Version des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsprozessors verarbeitet werden. Beim Aktualisieren von Berichten auf die aktuelle Version des Berichtsdefinitionsschemas werden der Hauptbericht und die Unterberichte möglicherweise nicht gleichzeitig aktualisiert. Wenn die Version zwischen einem Bericht und dessen Unterberichten nicht kompatibel ist, wird die folgende Meldung angezeigt: "Der Unterbericht 'x' konnte nicht verarbeitet werden."  
   
- Sie müssen den Hauptbericht oder die Unterberichte ändern, sodass alle Berichte von der gleichen Version des Berichtsprozessors verarbeitet werden. Weitere Informationen dazu, warum ein Bericht nicht aktualisieren, finden Sie unter [Upgrade Reports](../install-windows/upgrade-reports.md).  
+ Sie müssen den Hauptbericht oder die Unterberichte ändern, sodass alle Berichte von der gleichen Version des Berichtsprozessors verarbeitet werden. Weitere Informationen zu Fehlern beim upgrade von ein Bericht finden Sie unter [Aktualisieren von Berichten](../install-windows/upgrade-reports.md).  
   
 ### <a name="verify-function-calls-are-visual-basic-and-not-sql"></a>Stellen Sie sicher, dass Funktionsaufrufe Visual Basic und nicht SQL entsprechen.  
  Sie können SQL-Funktionen in Abfragetext für eine relationale Datenbank verwenden. Sie können die [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Funktionen nicht im Abfragetext verwenden.  
@@ -121,7 +121,7 @@ ms.locfileid: "36049125"
   
  Für Aggregatfunktionen, die laufende Summen berechnen (`Previous`, `RunningValue` oder `RowNumber`), können Sie einen Bereichsparameter angeben, bei dem es sich entweder um einen Zeilengruppennamen oder einen Spaltengruppennamen handelt. Beides ist nicht möglich. Dies gilt für die folgende Fehlermeldung:  
   
--   `Previous`, `RunningValue` oder `RowNumber` Aggregatfunktionen, die in den Datenzellen des verwendet die  *\<Typ von Berichtselementen >* "*\<Element Berichtsname >*" verweisen auf Gruppierungsbereiche in den Spalten und Zeilen von der  *\<Typ von Berichtselementen >*. Die Bereichsparameter aller `Previous`, `RunningValue` und `RowNumber` -Aggregatfunktionen in einem  *\<Typ von Berichtselementen >* können auf die oder datenspaltengruppierungen, aber nicht auf beide zeilengruppierungen verweisen.  
+-   `Previous`, `RunningValue` oder `RowNumber` Aggregatfunktionen, die in den Datenzellen des verwendet die  *\<Berichtselementtyp >* "*\<Berichtselementname >*' verweisen auf Gruppierungsbereiche in den Spalten und Zeilen mit den  *\<Berichtselementtyp >*. Die Bereichsparameter aller `Previous`, `RunningValue` und `RowNumber` -Aggregatfunktionen in einem  *\<Berichtselementtyp >* kann auf Zeilen- oder datenspaltengruppierungen, aber nicht beide Gruppierungen verweisen.  
   
  Weitere Informationen finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](../report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) und [Integrierte Sammlungen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
@@ -130,12 +130,12 @@ ms.locfileid: "36049125"
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
- [Aggregieren von Funktionenreferenz &#40;Berichts-Generator und SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Referenz zu Aggregatfunktionen &#40;Berichts-Generator und SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../report-design/expression-examples-report-builder-and-ssrs.md)   
  [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [Häufig verwendete Filter (Berichts-Generator und SSRS)](../report-design/commonly-used-filters-report-builder-and-ssrs.md)   
  [Datasetfeld-Sammlung &#40;Berichts-Generator und SSRS&#41;](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer (SSRS)](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [Verweise auf Parameters-Auflistung &#40;Berichts-Generator und SSRS&#41;](../report-design/built-in-collections-parameters-collection-references-report-builder.md)  
+ [Verweise auf Parameterauflistungen &#40;Berichts-Generator und SSRS&#41;](../report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   

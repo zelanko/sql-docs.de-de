@@ -1,5 +1,5 @@
 ---
-title: Text-Element (ASSL) | Microsoft Docs
+title: Text-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Text element
 ms.assetid: 0edece73-236f-4661-8102-3fcc29326bf4
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8cfc13728fa8c6f73e14e8534dd911316bb4616f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26eebe93b7bdf9662011363a2023aaf9e4fe0efa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049047"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328412"
 ---
 # <a name="text-element-assl"></a>Text-Element (ASSL)
   Enthält den Text einer [Befehl](../objects/command-element-assl.md) Element.  
@@ -60,7 +60,7 @@ ms.locfileid: "36049047"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element, das das übergeordnete Element des entspricht `Text` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Command>.  
+ Das Element, das dem übergeordneten entspricht `Text` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Command>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Befehle Element &#40;ASSL&#41;](../collections/commands-element-assl.md)   

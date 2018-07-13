@@ -1,5 +1,5 @@
 ---
-title: Cloud-Adapter für SQLServer | Microsoft Docs
+title: Cloud-Adapter für SQLServer | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Cloud adapter
 - Deploy to Windows Azure
 ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 74a991f9dc8c20e1cf4342312ecd66f95e1b240d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fd0a6901770c3c30138e694c9e792146be85ba4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050388"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243380"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>Cloud-Adapter für SQL Server
   Der Cloud-Adapterdienst wird bei der Bereitstellung von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf einer Windows Azure-VM erstellt. Der Cloud-Adapterdienst generiert bei der ersten Ausführung ein selbstsigniertes Zertifikat und wird danach unter dem Konto **Lokales System** ausgeführt. Er generiert eine Konfigurationsdatei, die für die eigene Konfiguration verwendet wird. Der Cloud-Adapter erstellt außerdem eine Windows-Firewall-Regel, um eingehende TCP-Verbindungen auf Standardport 11435 zuzulassen.  
@@ -34,7 +34,7 @@ ms.locfileid: "36050388"
   
 -   Der Cloud-Adapter wird ab [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 unterstützt. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 erfordert der Cloud-Adapter für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SQL Management Objects für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012.  
   
--   Der Cloud-Adapterwebdienst wird unter dem Konto **Lokales System** ausgeführt und überprüft die Clientanmeldeinformationen vor der Ausführung eines Tasks. Vom Client bereitgestellten Anmeldeinformationen müssen das Konto verwenden, das Mitglied der lokalen angehören **Administratoren** Gruppe auf dem Remotecomputer.  
+-   Der Cloud-Adapterwebdienst wird unter dem Konto **Lokales System** ausgeführt und überprüft die Clientanmeldeinformationen vor der Ausführung eines Tasks. Vom Client bereitgestellte Anmeldeinformationen müssen das Konto verwenden, das ein Mitglied der lokalen angehören **Administratoren** Gruppe auf dem Remotecomputer.  
   
 -   Der Cloud-Adapter unterstützt nur die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Authentifizierung.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36050388"
   
     -   \<Konfiguration >  
   
-        -   \<"appSettings" >  
+        -   \<AppSettings >  
   
             -   \<Hinzufügen von Key = "WebServicePort" Value = "" / >  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36050388"
   
 -   **Zertifikatdetails** – Das Zertifikat enthält folgende Werte:  
   
-    -   Betreff – "CN = CloudAdapter\<%vmname >, DC = SQLServer, DC = Microsoft"  
+    -   Betreff – "CN = CloudAdapter\<VMName >, DC = SQLServer, DC = Microsoft"  
   
     -   Für das Zertifikat darf nur die Serverauthentifizierung EKU aktiviert sein.  
   
@@ -88,11 +88,11 @@ ms.locfileid: "36050388"
   
 -   **Ablaufverfolgung, Ereignisse** – Ereignisse werden in das Anwendungsereignisprotokoll geschrieben.  
   
--   **Steuerung, Konfiguration** – verwenden Sie die Konfigurationsdatei unter: C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\\.  
+-   **Steuerung, Konfiguration** – verwenden Sie die Konfigurationsdatei unter: c:\Programme\Microsoft c:\Programme\Microsoft SQL Server\120\Tools\CloudAdapter\\.  
   
 |Fehler|Fehler-ID|Ursache|Lösung|  
 |-----------|--------------|-----------|----------------|  
-|Ausnahme beim Hinzufügen des Zertifikats zum Zertifikatspeicher. {Exception text}.|45560|Berechtigungen für Computer Zertifikatspeicher|Stellen Sie sicher, dass der Cloud-Adapterdienst Berechtigungen, um dem Computerzertifikatspeicher Zertifikate hinzuzufügen verfügt.|  
+|Ausnahme beim Hinzufügen des Zertifikats zum Zertifikatspeicher. {Exception text}.|45560|Computer Berechtigungen für Zertifikatspeicher|Stellen Sie sicher, dass die Cloud-Adapter-Dienst Berechtigungen zum Hinzufügen von Zertifikaten zum Zertifikatspeicher Computers verfügt.|  
 |Ausnahme bei dem Versuch, die SSL-Bindung für Port {Port number} und Zertifikat {Thumbprint} zu konfigurieren. {Exception}.|45561|Eine andere Anwendung verwendet bereits den Port oder hat ein Zertifikat an diesen gebunden.|Entfernen Sie alle vorhandenen Bindungen, oder ändern Sie in der Konfigurationsdatei den Port für Cloud-Adapter.|  
 |Das SSL-Zertifikat [{Thumbprint}] wurde im Zertifikatspeicher nicht gefunden.|45564|Der Fingerabdruck des Zertifikats ist in der Konfigurationsdatei verfügbar, aber das Zertifikat ist im persönlichen Zertifikatspeicher für den Dienst nicht enthalten.<br /><br /> Unzureichende Berechtigungen.|Stellen Sie sicher, dass das Zertifikat im persönlichen Zertifikatspeicher für den Dienst vorhanden ist.<br /><br /> Stellen Sie sicher, dass der Dienst über die erforderlichen Berechtigungen für den Speicher verfügt.|  
 |Fehler beim Starten des Webdiensts. {Exception text}.|45570|Wird in der Ausnahme beschrieben.|Aktivieren Sie ExposeExceptionDetails, und lesen Sie die erweiterten Informationen in der Ausnahme.|  

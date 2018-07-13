@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS-Rowset | Microsoft Docs
+title: DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS-Rowset | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 3e514715-9fe6-4e6a-accb-4149ffd7e0bf
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2155e4a905da3aeade0f0789f05cc04cdd42f8d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae9955e9f052e4be2317206d5618ccf9294232cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047908"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325020"
 ---
 # <a name="discoverstoragetablecolumnsegments-rowset"></a>DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS-Rowset
   Stellt Informationen zu Speichertabellen auf Spalten- und Segmentebene bereit, die von einer im tabellarischen oder PowerPivot-Modus ausgeführten Analysis Services-Datenbank verwendet werden. Dieses Rowset wird hauptsächlich für Problembehandlung und Analyse verwendet.  
@@ -32,7 +32,7 @@ ms.locfileid: "36047908"
   
 |**Spaltenname**|**Typindikator**|**Einschränkung**|**Beschreibung**|  
 |---------------------|------------------------|---------------------|---------------------|  
-|`DATABASE_NAME`|`DBTYPE_WSTR`|ja|Gibt die tabellarische Datenbank an.<br /><br /> Die `DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS` Rowset kann mithilfe dieser Spalte eingeschränkt werden. Wenn die aktuelle Datenbank ausgelassen wird verwendet.|  
+|`DATABASE_NAME`|`DBTYPE_WSTR`|ja|Gibt die tabellarische Datenbank an.<br /><br /> Die `DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS` Rowset kann mithilfe dieser Spalte eingeschränkt werden. Wenn die aktuelle Datenbank nicht angegeben, wird verwendet.|  
 |`CUBE_NAME`|`DBTYPE_WSTR`|ja|Der Name des Modells.<br /><br /> Die `DISCOVER_STORAGE_TABLES` Rowset kann mithilfe dieser Spalte eingeschränkt werden.|  
 |`MEASURE_GROUP_NAME`|`DBTYPE_WSTR`|ja|Der Name der Measuregruppe.|  
 |`PARTITION_NAME`|`DBTYPE_WSTR`|ja|Der Name der Partition.|  
@@ -47,7 +47,7 @@ ms.locfileid: "36047908"
 |`COMPRESSION_TYPE`|`DBTYPE_WSTR`||Typ der für das Spaltensegment verwendeten Komprimierung. Dieser Wert ist ausschließlich für die interne Verwendung und Kundensupportzwecke bestimmt. Microsoft veröffentlicht keine gültigen Werte oder Beschreibungen für diese Spalte.|  
 |`BITS_COUNT`|`DBTYPE_I8`||Die Anzahl der Bits.|  
 |`BOOKMARK_BITS_COUNT`|`DBTYPE_I8`||Die Anzahl der Lesezeichenbits.|  
-|`VERTIPAQ_STATE`|`DBTYPE_WSTR`||Der Status der VertiPaq-Komprimierung für dieses Spaltensegment. Der Wert ist eine der folgenden:<br /><br /> -SKIPPED – wurde der Überprüfungsschritt ausgelassen.<br />-ABGESCHLOSSEN – der Überprüfungsschritt erfolgreich abgeschlossen.<br />-TIMEBOXED – die VertiPaq-Komprimierung wurde eingegrenzte.|  
+|`VERTIPAQ_STATE`|`DBTYPE_WSTR`||Der Status der VertiPaq-Komprimierung für dieses Spaltensegment. Der Wert ist eine der folgenden:<br /><br /> -Die VertiPaq-Komprimierung wurde übersprungen, SKIPPED – klicken.<br />-ABGESCHLOSSEN – die VertiPaq-Komprimierung wurde erfolgreich abgeschlossen.<br />-TIMEBOXED – der VertiPaq-Komprimierung wurde Timeboxed.|  
   
 ## <a name="using-adomdnet-to-return-the-rowset"></a>Verwenden von ADOMD.NET zum Zurückgeben des Rowsets  
  Wenn Sie Metadaten mithilfe von ADOMD.NET und des Schemarowsets abrufen, können Sie entweder die GUID verwenden oder eine Referenz für ein Schemarowsetobjekt in der GetSchemaDataSet-Methode herstellen. Weitere Informationen finden Sie unter [Working with Schema Rowsets in ADOMD.NET](../../../relational-databases/native-client-ole-db-rowsets/rowsets.md).  

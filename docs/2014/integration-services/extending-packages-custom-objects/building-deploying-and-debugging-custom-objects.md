@@ -16,13 +16,13 @@ ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a0264b74acc5d4665dbbbe48678ad75538002d5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7f6377df95d5cb8ade98e7a83b04b7920fe87a62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049949"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209370"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Erstellen, Bereitstellen und Debuggen von benutzerdefinierten Objekten
   Nachdem Sie den Code für ein benutzerdefiniertes Objekt für [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] geschrieben haben, müssen Sie die Assembly erstellen, bereitstellen und in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer integrieren, um sie für die Nutzung in Paketen verfügbar zu machen, sie zu testen und zu debuggen.  
@@ -75,7 +75,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 ```  
   
 ##  <a name="deploying"></a> Bereitstellen der Assembly  
- Der [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer sucht die benutzerdefinierten Objekte, die in Paketen verwendet werden können, indem die Dateien in mehreren Ordnern aufgezählt werden, die bei der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] erstellt werden. Wenn die Standardeinstellung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installationseinstellungen verwendet werden, befindet sich dieser Satz von Ordnern unter **C:\Program Files\Microsoft SQL Server\120\DTS**. Jedoch wenn Sie ein Setupprogramm für das benutzerdefinierte Objekt erstellen, Sie den Wert der überprüfen sollten die **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS\Setup\DtsPath** Registrierungsschlüssel auf den Speicherort dieses zu überprüfen Ordner.  
+ Der [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer sucht die benutzerdefinierten Objekte, die in Paketen verwendet werden können, indem die Dateien in mehreren Ordnern aufgezählt werden, die bei der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] erstellt werden. Wenn der Standardwert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation verwendet werden, der Ordner befindet sich unter **c:\Programme\Microsoft c:\Programme\Microsoft SQL Server\120\DTS**. Aber wenn Sie für Ihr benutzerdefiniertes Objekt ein Setupprogramm erstellen, den Wert der checken Sie die **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS\Setup\DtsPath** Registrierungsschlüssel, um den Speicherort dieser überprüfen Ordner.  
   
  Sie können die Assembly auf zwei Arten im Ordner platzieren:  
   
@@ -83,7 +83,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 -   Erstellen Sie die Assembly direkt im entsprechenden Ordner.  
   
- Die folgenden Bereitstellungsordner unter **C:\Program Files\Microsoft SQL Server\120\DTS** werden für die unterschiedlichen Typen benutzerdefinierter Objekte verwendet:  
+ Die folgenden Bereitstellungsordner unter **c:\Programme\Microsoft c:\Programme\Microsoft SQL Server\120\DTS** werden für die unterschiedlichen Typen benutzerdefinierter Objekte verwendet:  
   
 |Benutzerdefiniertes Objekt|Bereitstellungsordner|  
 |-------------------|-----------------------|  
@@ -120,7 +120,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 ##  <a name="testing"></a> Testen und Debuggen des Codes  
  Am einfachsten können Sie die Laufzeitmethoden eines benutzerdefinierten Objekts debuggen, indem Sie nach dem Erstellen des benutzerdefinierten Objekts **dtexec.exe** von [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] aus starten und ein Paket, das diese Komponente verwendet, ausführen.  
   
- Wenn Sie die Komponente zur Entwurfszeit-Methoden, wie z. B. debuggen möchten die `Validate` -Methode, öffnen Sie ein Paket, das die Komponente in einer zweiten Instanz von verwendet [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], und fügen Sie an seine **devenv.exe** Prozess.  
+ Wenn Sie die Methoden der Komponente zur Entwurfszeit, z. B. debuggen möchten die `Validate` -Methode, öffnen Sie ein Paket, das die Komponente in eine zweite Instanz von verwendet [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], und fügen Sie an der **devenv.exe** Prozess.  
   
  Wenn Sie auch die Laufzeitmethoden der Komponente debuggen möchten, wenn ein Paket offen ist und in [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer ausgeführt wird, müssen Sie die Ausführung des Pakets anhalten, damit Sie auch für den **DtsDebugHost.exe**-Prozess einen Anfügevorgang durchführen können.  
   
@@ -128,7 +128,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 1.  Signieren und erstellen Sie Ihr Projekt in der Debug-Konfiguration, stellen Sie es bereit, und installieren Sie es im globalen Assemblycache wie in diesem Thema beschrieben.  
   
-2.  Auf der **Debuggen** Registerkarte **Projekteigenschaften**Option **externes Programm starten** als die **Startaktion**, und suchen Sie  **DTExec.exe**, das standardmäßig in c:\Programme\Microsoft c:\Programme\Microsoft SQL Server\120\DTS\Binn installiert wird.  
+2.  Auf der **Debuggen** Registerkarte **Projekteigenschaften**Option **externes Programm starten** als die **Startaktion**, und suchen Sie nach  **DTExec.exe**, das standardmäßig in c:\Programme\Microsoft c:\Programme\Microsoft SQL Server\120\DTS\Binn installiert wird.  
   
 3.  Geben Sie im Textfeld **Befehlszeilenoptionen** unter **Startoptionen** die Befehlszeilenargumente ein, die zum Ausführen eines Pakets erforderlich sind, das die Komponente verwendet. Oftmals besteht das Befehlszeilenargument aus dem /F[ILE]-Schalter gefolgt vom Pfad und dem Namen der .dtsx-Datei. Weitere Informationen finden Sie unter [dtexec Utility](../packages/dtexec-utility.md).  
   
@@ -156,7 +156,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 3.  Kehren Sie zum angehaltenen Paket zurück, und setzen Sie den Vorgang über den Breakpoint hinaus fort, oder klicken Sie auf **OK**, um das Meldungsfeld, das vom Skripttask aufgerufen wird, zu verwenden, und setzen Sie die Paketausführung und den Debugvorgang fort.  
   
-![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben Sie mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Entwickeln benutzerdefinierter Objekte für Integration Services](developing-custom-objects-for-integration-services.md)   

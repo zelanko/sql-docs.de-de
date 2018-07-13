@@ -1,5 +1,5 @@
 ---
-title: Bereitstellen von PowerPivot-Lösungen in SharePoint | Microsoft Docs
+title: Bereitstellen von PowerPivot-Lösungen in SharePoint | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fdbae4a2f54d6f3f2c12562a70eb5f1076046947
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce0863ef023f96580eb809b6562cfc54b0de5b60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050190"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243660"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>Bereitstellen von PowerPivot-Lösungen in SharePoint
   Verwenden Sie die folgenden Anweisungen, um zwei Lösungspakete, die einer SharePoint Server 2010-Umgebung PowerPivot-Funktionen hinzufügen, manuell bereitzustellen. Das Bereitstellen der Lösungen ist ein erforderlicher Schritt für die Konfiguration von PowerPivot für SharePoint auf einem SharePoint 2010-Server. Die vollständige Liste der erforderlichen Schritte finden Sie unter [PowerPivot-Serververwaltung und-Konfiguration in der Zentraladministration](power-pivot-server-administration-and-configuration-in-central-administration.md).  
@@ -43,20 +43,20 @@ ms.locfileid: "36050190"
  [Informationen zu den PowerPivot-Lösungen](#intro)  
   
 ##  <a name="bkmk_classic"></a> Voraussetzung: Überprüfen, ob die Webanwendung den klassischen Authentifizierungsmodus verwendet  
- PowerPivot für SharePoint wird nur für Webanwendungen unterstützt, die den klassischen Authentifizierungsmodus in Windows verwenden. Um zu überprüfen, ob die Anwendung den klassischen Modus verwendet, führen Sie das folgende PowerShell-Cmdlet über die **SharePoint 2010-Verwaltungsshell**, und Ersetzen `http://<top-level site name>` mit dem Namen der SharePoint-Website:  
+ PowerPivot für SharePoint wird nur für Webanwendungen unterstützt, die den klassischen Authentifizierungsmodus in Windows verwenden. Führen Sie das folgende PowerShell-Cmdlet aus, um zu überprüfen, ob die Anwendung den klassischen Modus verwendet, die **SharePoint 2010-Verwaltungsshell**und ersetzt dabei `http://<top-level site name>` mit dem Namen der SharePoint-Website:  
   
 ```  
 Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthentication  
 ```  
   
- Der Rückgabewert sollte **FALSE**sein. Ist er **"true"**, Sie können nicht auf PowerPivot-Daten über diese Webanwendung zugreifen.  
+ Der Rückgabewert sollte **FALSE**sein. Ist dies **"true"**, Sie können nicht auf PowerPivot-Daten über diese Webanwendung zugreifen.  
   
 ##  <a name="bkmk_farm"></a> Schritt 1: Bereitstellen der Farmlösung  
  In diesem Abschnitt erfahren Sie, wie Sie Lösungen mithilfe der PowerShell bereitstellen können. Sie können aber auch das PowerPivot-Konfigurationstool verwenden, um diese Aufgabe abzuschließen. Weitere Informationen finden Sie unter [konfigurieren oder Reparieren von PowerPivot für SharePoint 2010 &#40;PowerPivot-Konfigurationstool&#41;](../configure-repair-powerpivot-sharepoint-2010.md).  
   
  Diese Aufgabe muss nur einmal ausgeführt werden, nachdem Sie PowerPivot für SharePoint installiert haben.  
   
-1.  Öffnen Sie auf einem Server, der eine Installation von PowerPivot für SharePoint verfügt, einer SharePoint 2010-Verwaltungsshell mit der **als Administrator ausführen** Option.  
+1.  Öffnen Sie auf einen Server, der eine Installation von PowerPivot für SharePoint verfügt, eine SharePoint 2010-Verwaltungsshell mithilfe der **als Administrator ausführen** Option.  
   
 2.  Führen Sie das folgende Cmdlet aus, um die Farmlösung hinzuzufügen.  
   
@@ -108,7 +108,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 3.  Klicken Sie auf **Lösung bereitstellen**.  
   
-4.  In **bereitstellen für?**, wählen Sie die SharePoint-Webanwendung für die Sie PowerPivot-funktionsunterstützung hinzufügen möchten.  
+4.  In **bereitstellen für?**, wählen Sie die SharePoint-Webanwendung, die für die Sie die PowerPivot-funktionsunterstützung hinzufügen möchten.  
   
 5.  Klicken Sie auf **OK**.  
   
@@ -123,7 +123,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 3.  Klicken Sie auf **Lösung zurückziehen**.  
   
- Wenn Sie, die Sie bis zur farmlösung zurückverfolgen auftreten, können Sie es bereitstellen, durch Ausführen der **Reparatur** Option im PowerPivot-Konfigurationstool. Es empfiehlt sich, Reparaturvorgänge über das Tool auszuführen, da Sie sich dadurch ein paar Schritte ersparen. Weitere Informationen finden Sie unter [konfigurieren oder Reparieren von PowerPivot für SharePoint 2010 &#40;PowerPivot-Konfigurationstool&#41;](../configure-repair-powerpivot-sharepoint-2010.md).  
+ Wenn Sie, die Sie bis zur farmlösung zurückverfolgen auftreten, können Sie es bereitstellen, mit der **Reparatur** -Option in der PowerPivot-Konfigurationstool. Es empfiehlt sich, Reparaturvorgänge über das Tool auszuführen, da Sie sich dadurch ein paar Schritte ersparen. Weitere Informationen finden Sie unter [konfigurieren oder Reparieren von PowerPivot für SharePoint 2010 &#40;PowerPivot-Konfigurationstool&#41;](../configure-repair-powerpivot-sharepoint-2010.md).  
   
  Wenn Sie immer noch alle Lösungen erneut bereitstellen möchten, gehen Sie dabei in folgender Reihenfolge vor:  
   
@@ -144,7 +144,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  Jede Lösung wird unterschiedlich bereitgestellt.  Die Farmlösung wird bereitgestellt, nachdem das erste PowerPivot für die SharePoint-Instanz installiert wurde. Verwenden Sie das PowerPivot-Konfigurationstool oder PowerShell-Cmdlets, um die Farmlösung bereitzustellen.  
   
- Die Webanwendungslösung wird anfänglich in der Zentraladministration bereitgestellt. Es folgen weitere Bereitstellungen für alle zusätzlichen Webanwendungen, die Anfragen für PowerPivot-Daten unterstützen. Um die webanwendungslösung für Zentraladministration bereitstellen zu können, müssen Sie die PowerPivot-Konfigurationstool oder PowerShell-Cmdlets verwenden. Für alle anderen Webanwendungen können Sie die Webanwendungslösung manuell bereitstellen, und zwar mithilfe der Zentraladministration oder der PowerShell.  
+ Die Webanwendungslösung wird anfänglich in der Zentraladministration bereitgestellt. Es folgen weitere Bereitstellungen für alle zusätzlichen Webanwendungen, die Anfragen für PowerPivot-Daten unterstützen. Um die webanwendungslösung in der Zentraladministration bereitzustellen, müssen Sie das PowerPivot-Konfigurationstool oder PowerShell-Cmdlet verwenden. Für alle anderen Webanwendungen können Sie die Webanwendungslösung manuell bereitstellen, und zwar mithilfe der Zentraladministration oder der PowerShell.  
   
 |Lösung|Description|  
 |--------------|-----------------|  

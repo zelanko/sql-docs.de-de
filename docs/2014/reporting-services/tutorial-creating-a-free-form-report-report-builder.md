@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 caps.latest.revision: 15
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 763df160d03f3f26824559b2068e3e241bb66d23
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: fe42fc3dd5e1398cc0e66ad2c37cd14a3fedd67a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056656"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202810"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Lernprogramm: Erstellen eines Freiformberichts (Berichts-Generator)
   Dieses Lernprogramm zeigt Ihnen, wie Sie einen SSRS-Freiformbericht erstellen, der einem Formularbrief gleicht. Sie können Berichtselemente zu einem Formular mit Textfeldern, Bildern und anderen Datenbereichen anordnen.  
@@ -29,7 +29,7 @@ ms.locfileid: "36056656"
 ##  <a name="BackToTop"></a> Lernziele  
  In diesem Lernprogramm lernen Sie Folgendes:  
   
--   [Erstellen Sie einen leeren Bericht, Datenquelle und Dataset](#BlankReport)  
+-   [Erstellen eines leeren Berichts, Datenquelle, und eines Datasets](#BlankReport)  
   
 -   [Hinzufügen und Konfigurieren einer Liste](#List)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36056656"
   
 -   [Formatieren von Daten](#Format)  
   
--   [Speichern Sie den Bericht](#Save)  
+-   [Speichern des Berichts](#Save)  
   
 ### <a name="other-optional-steps"></a>Weitere optionale Schritte  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36056656"
   
 4.  Überprüfen Sie, ob der Verbindungstyp „Microsoft SQL Server“ ist, und geben Sie anschließend im Feld **Verbindungszeichenfolge** Folgendes ein: **Datenquelle = \<Servername>**.  
   
-     \<Servername > für Beispiel Report001, bezeichnet einen Computer, die auf dem eine Instanz des SQL Server-Datenbankmoduls installiert ist. Da die Berichtsdaten nicht aus einer SQL Server-Datenbank extrahiert werden, muss der Name einer Datenbank nicht eingeschlossen werden. Die Standarddatenbank auf dem angegebenen Server wird verwendet, um die Abfrage zu analysieren.  
+     \<Servername >, z.B. Report001, bezeichnet einen Computer, auf dem eine Instanz von SQL Server-Datenbankmoduls installiert ist. Da die Berichtsdaten nicht aus einer SQL Server-Datenbank extrahiert werden, muss der Name einer Datenbank nicht eingeschlossen werden. Die Standarddatenbank auf dem angegebenen Server wird verwendet, um die Abfrage zu analysieren.  
   
 5.  Klicken Sie auf **Anmeldeinformationen**und geben Sie die zur Verbindung mit der Instanz der SQL Server-Datenbank-Engine benötigten Anmeldeinformationen ein.  
   
@@ -173,21 +173,21 @@ ms.locfileid: "36056656"
   
 1.  Klicken Sie im Bereich „Zeilengruppen“ mit der rechten Maustaste auf die Gruppe „Details“, zeigen Sie auf **Gruppe hinzufügen**, und klicken Sie anschließend auf **Übergeordnete Gruppe**.  
   
-     ![Übergeordnete Gruppe Befehl](../../2014/tutorials/media/tutorial-parentgroupcommand.png "übergeordneten Group-Befehl")  
+     ![Übergeordnete Gruppe Befehl](../../2014/tutorials/media/tutorial-parentgroupcommand.png "Parent Group-Befehl")  
   
 2.  Wählen Sie in der Dropdown-Liste `[Territory].`  
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     Eine neue Spalte wird der Liste hinzugefügt. Die Spalte enthält die Zelle `[Territory].`  
+     Eine neue Spalte wird der Liste hinzugefügt. Die Spalte enthält der Zelle. `[Territory].`  
   
 4.  Klicken Sie mit der rechten Maustaste in der Liste auf die Spalte „Territory“, und klicken Sie anschließend auf **Spalten löschen**.  
   
-     ![Löschen von Spalten](../../2014/tutorials/media/tutorial-deletecolumnscommand.png "Löschen von Spalten")  
+     ![Löschen von Spalten](../../2014/tutorials/media/tutorial-deletecolumnscommand.png "Spalten löschen")  
   
 5.  Klicken Sie auf **Nur Spalten löschen**.  
   
-     ![Löschen Sie im Dialogfeld Spalten](../../2014/tutorials/media/tutorial-deletecolumnsdialog.png "Spalten löschen (Dialogfeld)")  
+     ![Löschen Sie im Dialogfeld Spalten](../../2014/tutorials/media/tutorial-deletecolumnsdialog.png "löschen (Dialogfeld)")  
   
 6.  Klicken Sie im Bereich "Zeilengruppen" mit der rechten Maustaste auf die Gruppe **Details** , und klicken Sie dann auf **Gruppe löschen**.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "36056656"
   
 4.  Klicken Sie in der Dropdownliste **Füllfarbe** auf **Weitere Farben**, und wählen Sie dann die Farbe **Dunkelgrau** aus.  
   
-     ![Auswählen der Füllfarbe](../../2014/tutorials/media/tutorial-selectfillcolorwithnumbers.png "Select Füllfarbe")  
+     ![Wählen Sie Füllfarbe](../../2014/tutorials/media/tutorial-selectfillcolorwithnumbers.png "wählen Füllfarbe")  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -244,7 +244,7 @@ ms.locfileid: "36056656"
   
 7.  Wählen Sie in der Liste **Schriftart** die Schriftart **Times New Roman**, in **Größe** den Wert **20 pt**und in **Farbe** die Option **Rot**aus.  
   
-     ![Eigenschaften von Text](../../2014/tutorials/media/tutorial-textpropertieswithnumbers.png "Eigenschaften von Text")  
+     ![Texteigenschaften](../../2014/tutorials/media/tutorial-textpropertieswithnumbers.png "Texteigenschaften")  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -255,7 +255,7 @@ ms.locfileid: "36056656"
   
 10. Ziehen Sie das Feld "FullName" in das Textfeld, ordnen Sie es hinter dem Text an, den Sie in Schritt 9 eingegeben haben, und geben Sie dann ein Komma (,) ein.  
   
-     ![Vollständiger Name-Feld hinzufügen](../../2014/tutorials/media/tutorial-addfullnamefield.png "Feld Vollständiger Name hinzufügen")  
+     ![Vollständiger Name-Feld hinzufügen](../../2014/tutorials/media/tutorial-addfullnamefield.png "Feld hinzufügen vollständiger Name")  
   
 11. Wählen Sie den Text aus, den Sie in Schritt 9 und 10 hinzugefügt haben, klicken Sie mit der rechten Maustaste, und klicken Sie dann auf **Texteigenschaften**.  
   
@@ -311,7 +311,7 @@ ms.locfileid: "36056656"
   
 29. Wählen Sie `[Sum(Sales)]` aus. Klicken Sie anschließend auf der Registerkarte **Home** in der Gruppe **Zahl** auf die Schaltfläche **Währung** .  
   
-     ![Add-Währungssymbol](../../2014/tutorials/media/tutorial-addcurrencysymbol.png "Währungssymbol hinzufügen")  
+     ![Hinzufügen von Währungssymbol](../../2014/tutorials/media/tutorial-addcurrencysymbol.png "Währungssymbol hinzufügen")  
   
 30. Klicken Sie mit der rechten Maustaste auf das Textfeld mit dem Text „Zum Hinzufügen eines Titels klicken“, und klicken Sie anschließend auf **Löschen**.  
   
@@ -374,7 +374,7 @@ ms.locfileid: "36056656"
   
 2.  Klicken Sie auf die Tabellenzellen, die `[Sum(SalesSales)]` enthalten, und klicken Sie auf der Registerkarte **Home** in der Gruppe **Zahl** auf die Schaltfläche **Währung** .  
   
-     ![Hinzufügen des Währungssymbols zur Verkaufssumme](../../2014/tutorials/media/tutorial-sumsales-currencysymbol.png "Add Währungssymbols zur Verkaufssumme")  
+     ![Hinzufügen des Währungssymbols zur Verkaufssumme](../../2014/tutorials/media/tutorial-sumsales-currencysymbol.png "hinzufügen Währungssymbols zur Verkaufssumme")  
   
 3.  Klicken Sie auf die Zelle, die `[SalesDate]` enthält, und wählen Sie in der Gruppe **Zahl** aus der Dropdownliste **Datum**aus.  
   
@@ -432,7 +432,7 @@ ms.locfileid: "36056656"
   
 6.  Wählen Sie im Bereich **Rahmen** für die Breite den Wert **4 1/2** pt aus, und wählen Sie für Farbe **Rot**aus.  
   
-     ![Bericht Linie hinzufügen](../../2014/tutorials/media/tutorial-reportwithline.png "Bericht Linie hinzufügen")  
+     ![Fügen Sie die Zeile zum Bericht](../../2014/tutorials/media/tutorial-reportwithline.png "Zeile zum Bericht hinzufügen")  
   
 ##  <a name="Visualization"></a> 9. Hinzufügen von Zusammenfassungsdatenvisualisierung (optional)  
  Mit Rechtecken kann das Rendern des Berichts beeinflusst werden. Platzieren Sie in einem Rechteck ein Kreis- und ein Säulendiagramm, um sicherzustellen, dass der Bericht wunschgemäß gerendert wird.  
@@ -465,7 +465,7 @@ ms.locfileid: "36056656"
   
 9. Ziehen Sie das Diagramm in das Rechteck.  
   
-     ![Fügen Sie Kreisdiagramm](../../2014/tutorials/media/tutorial-addpiechart.png "Kreisdiagramm hinzufügen")  
+     ![Hinzufügen von Kreisdiagramm](../../2014/tutorials/media/tutorial-addpiechart.png "Kreisdiagramm hinzufügen")  
   
 10. Klicken Sie mit der rechten Maustaste auf den Diagrammtitel, und klicken Sie dann auf **Titeleigenschaften**.  
   
@@ -483,7 +483,7 @@ ms.locfileid: "36056656"
   
 3.  Klicken Sie auf **Spalte**und anschließend auf **Weiter**.  
   
-4.  Ziehen Sie auf der Seite Diagrammfelder anordnen, um das Feld "Product" **Kategorien**.  
+4.  Auf der Seite Diagrammfelder anordnen, ziehen Sie das Feld "Product" zu **Kategorien**.  
   
 5.  Ziehen Sie „Sales“ in das Feld **Werte** , und klicken Sie anschließend auf **Weiter**.  
   
@@ -499,7 +499,7 @@ ms.locfileid: "36056656"
   
 9. Ziehen Sie das Diagramm in das Rechteck unter dem Kreisdiagramm.  
   
-     ![Säulendiagramm hinzufügen](../../2014/tutorials/media/tutorial-addcolumnchart.png "Säulendiagramm hinzufügen")  
+     ![Diagramm der hinzufügen-Spalte](../../2014/tutorials/media/tutorial-addcolumnchart.png "Säulendiagramm hinzufügen")  
   
 10. Klicken Sie mit der rechten Maustaste auf den Diagrammtitel, und klicken Sie dann auf **Titeleigenschaften**.  
   
@@ -543,7 +543,7 @@ ms.locfileid: "36056656"
   
 2.  Wenn beide Diagramme markiert sind, klicken Sie mit der rechten Maustaste darauf, zeigen Sie auf **Layout**, und klicken Sie anschließend auf **Breite angleichen**.  
   
-     ![Diagrammbreiten identisch](../../2014/tutorials/media/tutorial-makechartssamewidth.png "Diagrammbreiten identisch")  
+     ![Diagrammbreiten gleich](../../2014/tutorials/media/tutorial-makechartssamewidth.png "Diagrammbreiten identisch")  
   
     > [!NOTE]  
     >  Das Element, auf das Sie zuerst klicken, bestimmt die Breite aller ausgewählten Elemente.  
@@ -555,7 +555,7 @@ ms.locfileid: "36056656"
  ![SSRS-Lernprogramm, formfreien Bericht](../../2014/tutorials/media/tutorial-reportfinal.png "SSRS-Lernprogramm, formfreien Bericht")  
   
 ## <a name="more-information"></a>Weitere Informationen  
- Weitere Informationen zu Listen finden Sie unter [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](report-design/tables-matrices-and-lists-report-builder-and-ssrs.md), [listet &#40;Berichts-Generator und SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md), [Tablix-Daten Region Bereiche &#40;Berichts-Generator und SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md), und [Tablix-Datenbereichszelle, Zeilen und Spalten &#40;Berichts-Generator&#41; und SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
+ Weitere Informationen zu Listen finden Sie unter [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](report-design/tables-matrices-and-lists-report-builder-and-ssrs.md), [listet &#40;Berichts-Generator und SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md), [Tablix-Daten Region Bereiche &#40;Berichts-Generator und SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md), und [Tablix-Zellen, Zeilen und Spalten &#40;Berichts-Generator&#41; und SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
  Weitere Informationen zu Abfrage-Designern finden Sie unter [Abfrage-Designer (Berichts-Generator)](../../2014/reporting-services/query-designers-report-builder.md) und [Benutzeroberfläche des textbasierten Abfrage-Designers (Berichts-Generator)](report-data/text-based-query-designer-user-interface-report-builder.md).  
   

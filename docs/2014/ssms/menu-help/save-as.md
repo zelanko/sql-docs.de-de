@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.saveas
 helpviewer_keywords:
 - Save As dialog box
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 968cb13c9a115fcc0445cdfba194a2087a06a234
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4dc19118c88734062a9c57ac39acf33bab5942d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050035"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326900"
 ---
 # <a name="save-as"></a>Speichern unter
-  Mithilfe dieses Dialogfelds können Sie eine Instanz des aktuellen Elements an einem angegebenen Speicherort in einem angegebenen Dateiformat speichern. Zum Anzeigen dieses Dialogfelds klicken Sie auf **speichern**  *\<Datei >* **als** auf die **Datei** Menü (wobei  *\<Datei >* ist der Name des aktuellen Elements), oder drücken Sie ALT + F, A im Code-Editor.  
+  Mithilfe dieses Dialogfelds können Sie eine Instanz des aktuellen Elements an einem angegebenen Speicherort in einem angegebenen Dateiformat speichern. Klicken Sie zum Anzeigen dieses Dialogfelds **speichern**  *\<Datei >* **als** auf die **Datei** Menü (, in denen  *\<Datei >* ist der Name des aktuellen Elements), oder drücken Sie ALT + F, A im Code-Editor.  
   
 ## <a name="central-panel"></a>Zentraler Bereich  
  **Speichern in**  

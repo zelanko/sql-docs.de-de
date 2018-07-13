@@ -1,5 +1,5 @@
 ---
-title: DbSchemaName-Element (ASSL) | Microsoft Docs
+title: DbSchemaName-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DbSchemaName element
 ms.assetid: ae0f0edd-7b76-400d-a288-39a36d2a746b
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0f55d446f8816ac140896dfb43b0e163f3f61314
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fc5b1eda981bcd19f4f916ddb60dd511264075a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057714"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220050"
 ---
 # <a name="dbschemaname-element-assl"></a>DbSchemaName-Element (ASSL)
-  Enthält den Namen des Schemas verwendet, die für das übergeordnete Element in die Tabelle identifiziert durch die [DbTableName](name-element-assl.md) Element.  
+  Enthält den Namen des Schemas ein, die das übergeordnete Element in der Tabelle durch identifiziert die [DbTableName](name-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36057714"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Elemente, die den übergeordneten Elementen von entsprechen `DbSchemaName` im Objektmodell von Analysis Management Objects (AMO) sind <xref:Microsoft.AnalysisServices.TableBinding> und <xref:Microsoft.AnalysisServices.TableNotification>.  
+ Die Elemente, die den übergeordneten Elementen von entsprechen `DbSchemaName` im Analysis Management Objects (AMO)-Objektmodell werden <xref:Microsoft.AnalysisServices.TableBinding> und <xref:Microsoft.AnalysisServices.TableNotification>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

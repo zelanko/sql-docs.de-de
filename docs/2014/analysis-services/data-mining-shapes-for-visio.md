@@ -1,5 +1,5 @@
 ---
-title: Datamining-Shapes für Visio | Microsoft Docs
+title: Datamining-Shapes für Visio | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining shapes
 - templates [Visio]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - shapes, data mining
 ms.assetid: 11a821d9-1c0a-442e-b735-92208ce479dc
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cd037e0d4eefb7f894d956222219902a5082fffd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6dae172d599b6da648962e50cb3d24fa2f36351d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049075"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261806"
 ---
 # <a name="data-mining-shapes-for-visio"></a>Data Mining-Shapes für Visio
   Die Data Mining-Shapes für Visio stellen Vorlagen bereit, die für die Darstellung von Data Mining-Modellen angepasst wurden. Mithilfe dieser Vorlagen können Sie eine Verbindung mit einem erstellten Modell herstellen und interaktive Präsentationen erstellen, um die Ergebnisse des Data Minings zu veranschaulichen.  
@@ -39,14 +39,14 @@ ms.locfileid: "36049075"
   
 -   **Entscheidungsstrukturdiagramm:** mit diesem Assistenten können Sie Diagramme erstellen, in denen die Entscheidungspunkte und Formeln, die entscheidungsstrukturmodellen zugeordnet. Dieses Diagramm kann auch für Regressionsmodelle verwendet werden.  
   
--   **Clusterdiagramm:** mit diesem Assistenten können Sie um farbige Diagramme für Segmentierungsmodelle zu erstellen. Sie können zwischen Sichten, wie Attributunterscheidung, Clusterprofilen und Abhängigkeiten, wechseln und die Darstellung von Clustern anpassen.  
+-   **Clusterdiagramm:** verwenden Sie diesen Assistenten, um farbige Diagramme für Segmentierungsmodelle zu erstellen. Sie können zwischen Sichten, wie Attributunterscheidung, Clusterprofilen und Abhängigkeiten, wechseln und die Darstellung von Clustern anpassen.  
   
 ## <a name="installation"></a>Installation  
- Bei der Installation von Data Mining-Vorlagen für Visio standardmäßig die folgenden Dateien werden in installiert \<Laufwerk > \Programme\Microsoft SQL Server 2012 DM-Add-Ins (oder \<Laufwerk > \ oder Programme (x86) \Microsoft SQL Server 2012 DM Add-Ins):  
+ Bei der Installation von Data Mining-Vorlagen für Visio werden standardmäßig die folgenden Dateien werden installiert \<Laufwerk > \Programme\Microsoft SQL Server 2012 DM-Add-Ins (oder \<Laufwerk > \ oder Programme (x86) \Microsoft SQL Server 2012 DM Add-Ins):  
   
--   **Microsoft Data Mining.vst** diese Vorlage enthält vordefinierte Formatierungen, Layout und Assistenten, um die Arbeit mit Datamining-Shapes zu erleichtern.  
+-   **Microsoft Data Mining.vst** diese Vorlage enthält vordefinierte Formatierungen, Layout und -Assistenten können Sie die Arbeit mit Datamining-Shapes.  
   
--   **Microsoft Data Mining Shape Studio.vss** Diese Schablonendatei enthält Shapes der Vorlage zugeordnet.  
+-   **Microsoft Data Mining Shape Studio.vss** Diese Schablonendatei enthält Formen, die der Vorlage zugeordnet.  
   
 ## <a name="how-to-use-the-templates"></a>So verwenden Sie die Vorlagen  
  Zum Öffnen der Vorlagen können Sie auf diese Shape-Datei doppelklicken, oder Sie können Visio starten und anschließend die Shape-Vorlage öffnen.  
@@ -59,9 +59,9 @@ ms.locfileid: "36049075"
   
 4.  Legen Sie Optionen für die Anzeige und Formatierung der Daten fest.  
   
-5.  Nach Abschluss der **Data Mining-Shape-Assistenten**, Sie haben ein Diagramm, die Sie ändern und verbessern mithilfe der Funktionen von Visio.  
+5.  Nach Abschluss der **Data Mining-Shape-Assistenten**, Sie haben ein Diagramm, das Sie ändern und verbessern können, mithilfe der Funktionen von Visio.  
   
- Weitere Informationen zum Arbeiten mit und Verbessern von Modelldiagrammen in Visio finden Sie unter [Anzeigen von Data Mining-Modelle in Visio &#40;Data Mining-Add-ins&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
+ Weitere Informationen über das Arbeiten mit und Verbessern von Modelldiagrammen in Visio finden Sie unter [Anzeigen von Data Mining-Modellen in Visio &#40;Data Mining-Add-ins&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
   
 ## <a name="requirements"></a>Anforderungen  
   

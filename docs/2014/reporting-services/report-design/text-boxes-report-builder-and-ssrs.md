@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10134"
 - sql12.rtp.rptdesigner.textproperties.general.f1
@@ -16,15 +16,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.textboxproperties.general.f1
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3f8135c0f0526efe1db46011e22491e96db39777
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ec2d4d435145a86e5f14e8110e40ef03d4c4a1cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057531"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238530"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Textfelder (Berichts-Generator und SSRS)
   Wenn Sie an ein Textfeld denken, stellen Sie sich wahrscheinlich ein eigenständiges Feld mit Text vor, wie es zum Beispiel in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint verwendet wird. Im Berichts-Generator entsprechen einige Textfelder dieser Vorstellung und können eigentlichen Text für Titel, Beschreibungen und Beschriftungen oder dynamischen Text basierend auf Ausdrücken enthalten. Jede Zelle in einer Tabelle oder Matrix (einem Tablix-Datenbereich) enthält jedoch auch ein Textfeld, das auf dieselbe Weise formatiert werden kann wie eigenständige Textfelder in einem Bericht.  
@@ -57,7 +57,7 @@ ms.locfileid: "36057531"
   
  Die Ausrichtung wird für das Textfeld festgelegt und gilt für den gesamten Text im Textfeld. Sie können keine andere Ausrichtung für Teile des Textfelds angeben.  
   
- Schnelleinstieg mit Ausrichtung von Text zu ändern, finden Sie im Abschnitt zum Drehen von Text in der [Lernprogramm: Formatieren von Text &#40;Berichts-Generator&#41;](../tutorial-format-text-report-builder.md). Weitere Informationen finden Sie unter [Festlegen der Textfeldausrichtung &#40;Berichts-Generator und SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md).  
+ Zum schnellen Einstieg mit der Änderung der textausrichtung finden Sie im Abschnitt zum Drehen von Text in die [Tutorial: Formatieren von Text &#40;Berichts-Generator&#41;](../tutorial-format-text-report-builder.md). Weitere Informationen finden Sie unter [Festlegen der Textfeldausrichtung &#40;Berichts-Generator und SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md).  
   
 ##  <a name="HowTo"></a> Themen zur Vorgehensweise  
  [Hinzufügen, verschieben oder Löschen von Textfeldern &#40;Berichts-Generator und SSRS&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  

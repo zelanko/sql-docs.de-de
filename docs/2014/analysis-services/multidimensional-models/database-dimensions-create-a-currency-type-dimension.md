@@ -1,5 +1,5 @@
 ---
-title: Erstellen eine währungstypdimension | Microsoft Docs
+title: Erstellen eine währungstypdimension | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], currency
 - currency [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - currency dimensions [Analysis Services]
 ms.assetid: b1f037d1-ce47-4e47-a1c2-5ec9e781cff6
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f45683b404e9a33260edda6163aae9f783c8b7f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b9eb36a77501a7195c18138eab0d767fc7aed63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048855"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232020"
 ---
 # <a name="create-a-currency-type-dimension"></a>Erstellen einer Währungstypdimension
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ist eine Dimension vom Typ "Währung" eine Dimension, deren Attribute eine Auflistung von Währungen für Finanzberichte darstellt.  
@@ -37,14 +37,14 @@ ms.locfileid: "36048855"
   
  Anhand dieser Informationen entwirft der Business Intelligence-Assistent einen Währungsumrechnungsprozess, der die entsprechende Zielwährungsdimension (die Währungsdimension, die Zielwährungen darstellt) identifiziert. Abhängig von der Anzahl der Währungsumrechnungen, die für Ihre Business Intelligence-Lösung erforderlich sind, kann der Business Intelligence-Assistent mehrere Zielwährungsdimensionen definieren. Weitere Informationen zum Definieren von Währungsumrechnungen finden Sie unter [Währungsumrechnungen &#40;Analysis Services&#41;](../currency-conversions-analysis-services.md).  
   
- Um eine Dimension als Währungsdimension identifizieren möchten, legen Sie die `Type` -Eigenschaft der Dimension auf `Currency`.  
+ Um eine Dimension als Währungsdimension identifizieren möchten, legen die `Type` Eigenschaft der Dimension auf `Currency`.  
   
 ## <a name="dimension-structure"></a>Dimensionsstruktur  
  Eine Währungsdimension enthält zumindest ein Schlüsselattribut, das die einzelnen Währungen in der Dimensionstabelle für die Währungsdimension identifiziert. Der Wert des Schlüsselattributs ist in Quell- und Zielwährungsdimensionen unterschiedlich.  
   
 -   Wenn Sie ein Attribut als Schlüsselattribut einer Quellwährungsdimension identifizieren möchten, legen Sie die `Type`-Eigenschaft des Attributs auf `CurrencySource` fest.  
   
--   Wenn ein Attribut als zielwährungsdimension identifizieren möchten, legen Sie die `Type` Eigenschaft des Attributs auf `CurrencyDestination`.  
+-   Um ein Attribut als zielwährungsdimension identifizieren möchten, legen die `Type` -Eigenschaft des Attributs auf `CurrencyDestination`.  
   
  Für Berichtszwecke enthalten sowohl Quell- als auch Zielwährungsdimensionen optional folgende Attribute:  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36048855"
   
 -   Einen Währungscode gemäß der International Standards Organization (ISO).  
   
-     Wenn Sie um ein Attribut als Attribut der Währung ISO-Code zu identifizieren, legen die `Type` Eigenschaft des Attributs auf `CurrencyIsoCode`.  
+     Um ein Attribut als eine Währung ISO-Code-Attribut zu identifizieren, legen die `Type` -Eigenschaft des Attributs auf `CurrencyIsoCode`.  
   
  Weitere Informationen zu Attributtypen finden Sie unter [Konfigurieren von Attributtypen](attribute-properties-configure-attribute-types.md).  
   

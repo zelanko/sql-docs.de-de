@@ -1,5 +1,5 @@
 ---
-title: IsDefaultImage-Element (XML) | Microsoft Docs
+title: IsDefaultImage-Element (XML) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e29cd137-af82-4753-a681-0d3e705513f3
 caps.latest.revision: 6
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: c4d15ea9048c83b1579b688f6848e48deb1dffe4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b5dac54773d432b01045c2b3aceca61c39fdfab0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056320"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235710"
 ---
 # <a name="isdefaultimage-element-xml"></a>IsDefaultImage-Element (XML)
   Gibt an, dass die Möglichkeit besteht, das Standardimage für diese Entität durch Navigieren von dieser Beziehung zur anderen Tabelle und durch Abrufen des Members mit dem Attribut "IsDefaultImage" abzurufen.  

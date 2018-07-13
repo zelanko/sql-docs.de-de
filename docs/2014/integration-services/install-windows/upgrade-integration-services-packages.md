@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, migrating
 - migrating packages [Integration Services]
 ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 caps.latest.revision: 50
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3d975c0ee5764ca0e7038b51392309b52bf17641
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 39f07febdc8c5c9bc8e63b61d42b0a7ff5927ee0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050831"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233440"
 ---
 # <a name="upgrade-integration-services-packages"></a>Aktualisieren von Integration Services-Paketen
-  Wenn Sie ein upgrade eine Instanz von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] für die aktuelle Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Ihre vorhandenen [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] Pakete werden nicht automatisch auf das Paketformat, die die aktuelle Version aktualisiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] wird verwendet. Sie müssen eine Upgrademethode auswählen und die Pakete manuell aktualisieren.  
+  Wenn Sie ein upgrade eine Instanz von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] auf die aktuelle Version der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Ihre vorhandenen [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] Pakete werden nicht automatisch auf das Paketformat, das von der aktuellen Version aktualisiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] wird verwendet. Sie müssen eine Upgrademethode auswählen und die Pakete manuell aktualisieren.  
   
  Wenn Sie ein [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Paket aktualisieren, migriert [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] die Skripts in allen Skripttasks und Skriptkomponenten zu [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA). In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] wurde für die Skripts in Skripttasks und Skriptkomponenten [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] für Applikationen (VSA) verwendet. Weitere Informationen zu Änderungen, die möglicherweise vor der Migration an Skripts vorgenommen werden müssen und zu Fehlern bei der Skriptkonvertierung führen, finden Sie unter [Migrieren von Skripts zu VSTA](../../sql-server/install/migrate-scripts-to-vsta.md).  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36050831"
 ## <a name="custom-applications-and-custom-components"></a>Benutzerdefinierte Anwendungen und benutzerdefinierte Komponenten  
  [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] -Komponenten können nicht mit der aktuellen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- Sie können die aktuelle Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Tools zum Ausführen und Verwalten von enthaltenen Pakete [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] benutzerdefinierte Komponenten. Den folgenden Dateien wurden vier Bindungsumleitungsregeln hinzugefügt, um die Umleitung der Laufzeitassemblys von Version 10.0.0.0 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]) an Version 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) zu erleichtern.  
+ Sie können die aktuelle Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Tools zum Ausführen und Verwalten von Paketen, die enthalten [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] benutzerdefinierte Komponenten. Den folgenden Dateien wurden vier Bindungsumleitungsregeln hinzugefügt, um die Umleitung der Laufzeitassemblys von Version 10.0.0.0 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]) an Version 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) zu erleichtern.  
   
 -   DTExec.exe.config  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36050831"
   
 -   DTExecUI.exe.config  
   
- Mit [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] Pakete zu entwerfen, die implizit enthalten [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] benutzerdefinierte Komponenten müssen Sie die Datei "devenv.exe.config" ändern, die auf befindet  *\<Laufwerk >*: \programme\ Microsoft Visual Studio 10.0\Common7\IDE.  
+ Verwendung von [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] zum Entwerfen von Paketen, die enthalten [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] benutzerdefinierte Komponenten müssen Sie die Datei "devenv.exe.config" ändern, die unter  *\<Laufwerk >*: \programme\ Microsoft Visual Studio 10.0\Common7\IDE.  
   
  Zur Verwendung dieser Pakete mit Kundenanwendungen, die mit der Laufzeit für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]erstellt werden, schließen Sie die Umleitungsregeln in den Konfigurationsabschnitt der Datei *.exe.config für die ausführbare Datei ein. Die Laufzeitassemblys werden durch die Regeln an Version 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) umgeleitet. Weitere Informationen zur Umleitung von Assemblyversionen finden Sie unter [\<assemblyBinding>-Element für \<runtime>](http://msdn.microsoft.com/library/twy1dw1e.aspx).  
   
@@ -102,8 +102,8 @@ ms.locfileid: "36050831"
   
 |Komponente oder Funktion|Upgradeergebnisse|  
 |--------------------------|---------------------|  
-|Verbindungszeichenfolgen|Die Namen bestimmter Anbieter für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]- und [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-Pakete haben sich geändert und erfordern andere Werte in den Verbindungszeichenfolgen. Führen Sie zum Aktualisieren der Verbindungszeichenfolgen einen der folgenden Schritte aus:<br /><br /> Aktualisieren Sie das Paket mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Paketupgrade-Assistenten, und aktivieren Sie das Kontrollkästchen **Verbindungszeichenfolgen zum Verwenden neuer Anbieternamen aktualisieren**.<br /><br /> Aktivieren Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]im Dialogfeld „Optionen“ auf der Seite „Allgemein“ die Option **Verbindungszeichenfolgen mit neuen Anbieternamen aktualisieren**. Weitere Informationen zu dieser Option finden Sie unter [General Page](../general-page-of-integration-services-designers-options.md).<br /><br /> Öffnen Sie das Paket in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], und ändern Sie manuell den Text der ConnectionString-Eigenschaft.<br /><br /> Hinweis: Sie können nicht mithilfe der vorherigen Prozeduren auf um eine Verbindungszeichenfolge zu aktualisieren, wenn die Verbindungszeichenfolge in einer Konfigurationsdatei oder einer Datenquellendatei gespeichert wird oder wenn ein Ausdruck legt den `ConnectionString` Eigenschaft. Um die Verbindungszeichenfolge in diesen Fällen zu aktualisieren, müssen Sie die Datei oder den Ausdruck manuell aktualisieren.<br /><br /> Weitere Informationen zu Datenquellen finden Sie unter [Datenquellen](../connection-manager/data-sources.md).|  
-|Transformation für Suche|Für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Pakete, im Rahmen des Upgradeprozesses automatisch aktualisiert die Transformation für Suche für die aktuelle Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Die aktuelle Version dieser Komponente bietet allerdings einige zusätzliche Funktionen, die Sie möglicherweise nutzen möchten.<br /><br /> Weitere Informationen finden Sie unter [Lookup Transformation](../data-flow/transformations/lookup-transformation.md).|  
+|Verbindungszeichenfolgen|Die Namen bestimmter Anbieter für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]- und [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-Pakete haben sich geändert und erfordern andere Werte in den Verbindungszeichenfolgen. Führen Sie zum Aktualisieren der Verbindungszeichenfolgen einen der folgenden Schritte aus:<br /><br /> Aktualisieren Sie das Paket mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Paketupgrade-Assistenten, und aktivieren Sie das Kontrollkästchen **Verbindungszeichenfolgen zum Verwenden neuer Anbieternamen aktualisieren**.<br /><br /> Aktivieren Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]im Dialogfeld „Optionen“ auf der Seite „Allgemein“ die Option **Verbindungszeichenfolgen mit neuen Anbieternamen aktualisieren**. Weitere Informationen zu dieser Option finden Sie unter [General Page](../general-page-of-integration-services-designers-options.md).<br /><br /> Öffnen Sie das Paket in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], und ändern Sie manuell den Text der ConnectionString-Eigenschaft.<br /><br /> Hinweis: Sie können keine die vorherigen Prozeduren um eine Verbindungszeichenfolge zu aktualisieren, wenn die Verbindungszeichenfolge in einer Konfigurationsdatei oder einer Datenquellendatei gespeichert wird oder ein Ausdruck legt den `ConnectionString` Eigenschaft. Um die Verbindungszeichenfolge in diesen Fällen zu aktualisieren, müssen Sie die Datei oder den Ausdruck manuell aktualisieren.<br /><br /> Weitere Informationen zu Datenquellen finden Sie unter [Datenquellen](../connection-manager/data-sources.md).|  
+|Transformation für Suche|Für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Pakete, die Verfahren beim Upgrade automatisch aktualisiert die Transformation für Suche auf die aktuelle Version der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Die aktuelle Version dieser Komponente bietet allerdings einige zusätzliche Funktionen, die Sie möglicherweise nutzen möchten.<br /><br /> Weitere Informationen finden Sie unter [Lookup Transformation](../data-flow/transformations/lookup-transformation.md).|  
 |Skripttask und Skriptkomponente|Beim Upgrade von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Paketen werden Skripts im Skripttask und in der Skriptkomponente von VSA zu VSTA migriert.<br /><br /> Weitere Informationen zu Änderungen, die möglicherweise vor der Migration an Skripts vorgenommen werden müssen und zu Fehlern bei der Skriptkonvertierung führen, finden Sie unter [Migrieren von Skripts zu VSTA](../../sql-server/install/migrate-scripts-to-vsta.md).|  
   
 ### <a name="scripts-that-depend-on-adodbdll"></a>Skripts, die von "ADODB.dll" abhängen  

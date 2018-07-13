@@ -1,5 +1,5 @@
 ---
-title: Mithilfe von SQL Server Profiler zum Überwachen von Datamining (Analysis Services – Datamining) | Microsoft Docs
+title: Mithilfe von SQL Server Profiler zum Überwachen von Datamining (Analysis Services – Datamining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], Analysis Services
 ms.assetid: 655ac93c-5c5c-4565-914b-915327f7d349
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5e3c09140c6524e7bff893a72c78aed07b056c1f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71927782c80006c76b5ae54ea5edc00d53a93fed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047947"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323400"
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>Verwenden von SQL Server Profiler zum Überwachen von Data Mining (Analysis Services – Data Mining)
   Wenn Sie über die erforderlichen Berechtigungen verfügen, können Sie SQL Server Profiler zum Überwachen von Data Mining-Aktivitäten verwenden, die als Anforderungen an eine Instanz von SQL Server Analysis Services gesendet werden. Zu Data Mining-Aktivitäten können die Verarbeitung von Modellen oder Strukturen, Vorhersage- und Inhaltsabfragen sowie die Erstellung neuer Modelle oder Strukturen gehören.  
   
- SQL Server Profiler verwendet eine `trace` zum Überwachen von Anforderungen, die von verschiedenen Clients, einschließlich stammende [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], verwenden Sie SQL Server Management Studio, Webdienste oder die Data Mining Add-ins für Excel, sofern für alle Aktivitäten dieselbe Instanz von SQL Server Analysis Services. Sie müssen für jede zu überwachende Instanz von SQL Server Analysis Services eine separate Ablaufverfolgung erstellen. Allgemeine Informationen zu Ablaufverfolgungen und der Verwendung von SQL Server Profiler finden Sie unter [Verwenden von SQL Server Profiler zum Überwachen von Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md).  
+ SQL Server Profiler verwendet eine `trace` zum Überwachen von Anforderungen, die von mehreren Clients, einschließlich gesendeten [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], verwenden Sie SQL Server Management Studio, Webdienste oder die Data Mining Add-ins für Excel, solange alle Aktivitäten dieselbe Instanz von SQL Server Analysis Services. Sie müssen für jede zu überwachende Instanz von SQL Server Analysis Services eine separate Ablaufverfolgung erstellen. Allgemeine Informationen zu Ablaufverfolgungen und der Verwendung von SQL Server Profiler finden Sie unter [Verwenden von SQL Server Profiler zum Überwachen von Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md).  
   
  Spezifische Hilfestellungen zu den verschiedenen Typen von zu erfassenden Ereignissen finden Sie unter [Erstellen von Profilerablaufverfolgungen für Replay &#40;Analysis Services&#41;](../instances/create-profiler-traces-for-replay-analysis-services.md).  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36047947"
  Durch die Anzeige der Befehlsanweisungen im Ablaufverfolgungsprotokoll können Sie auch die Syntax komplexer Anweisungen überprüfen, die vom Client an den [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server gesendet werden – darunter auch Aufrufe an vom System gespeicherten Prozeduren. Diese Informationen können Ihnen bei der Fehlerbehebung helfen. Sie haben auch die Möglichkeit, gültige Anweisungen als Vorlage zum Erstellen neuer Vorhersageabfragen oder Modelle zu verwenden. Einige Beispiele für gespeicherte Prozeduraufrufe, die Sie über eine Ablaufverfolgung aufzeichnen können, finden Sie unter [Beispiele für Clusteringmodellabfragen](clustering-model-query-examples.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Überwachen einer Instanz von Analysis Services](../instances/monitor-an-analysis-services-instance.md)   
+ [Überwachen einer Analysis Services-Instanz](../instances/monitor-an-analysis-services-instance.md)   
  [Verwenden von erweiterten Ereignissen von SQLServer &#40;XEvents&#41; zum Überwachen von Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
   

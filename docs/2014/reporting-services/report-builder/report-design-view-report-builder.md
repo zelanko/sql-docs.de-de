@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10440"
 - "10426"
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - overview of Report Builder
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 caps.latest.revision: 20
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 64398eaa537e6413f5a55bedb0aa683143047aac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 435709e17b917c1b741e1bc619bb1dca106dbd4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056646"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244380"
 ---
 # <a name="report-design-view-report-builder"></a>Berichtsentwurfsansicht (Berichts-Generator)
   Das Berichts-Generator-Fenster ist so aufgebaut, dass Sie Berichtsressourcen einfach anordnen und schnell die gewünschten Berichte erstellen können. Die Entwurfsoberfläche befindet sich in der Mitte des Fensters. Darüber ist das Menüband angeordnet. Die Bereiche "Berichtsdaten", "Gruppierung" und "Eigenschaften" und der BerichtsteilKatalog befinden sich links, unter und rechts neben der Entwurfsoberfläche. Auf der Entwurfsoberfläche können Sie die Berichtselemente hinzufügen und anordnen. Auf dem Menüband sind herkömmliche Menüelemente in Kategorien angeordnet, die einfach zu finden und zu verwenden sind. In den Bereichen können Sie die Berichtsressourcen hinzufügen, auswählen und anordnen und Berichtselementeigenschaften ändern.  
@@ -42,15 +42,15 @@ ms.locfileid: "36056646"
   
  In der Berichtentwurfsansicht ist das Menüband in folgende Registerkarten unterteilt: "Home", "Einfügen" und "Ansicht". Wenn Sie eine Task auf dem Menüband nicht finden können, verfügen einige Menübandgruppen über ein zugehöriges Dialogfeld, das Sie öffnen können, indem Sie auf den Pfeil in der unteren rechten Ecke der Gruppe klicken. Sie können das Menüband nicht minimieren oder löschen oder durch Symbolleisten und Menüs ersetzen.  
   
- Im Ausführungsmodus des Menübands verfügt nur über eine Registerkarte **ausführen**.  
+ Im Ausführmodus ist das Menüband nur eine Registerkarte: **ausführen**.  
   
 ### <a name="home-tab"></a>Registerkarte "Home"  
- Bei der Registerkarte "Home" handelt es sich um eine Auflistung von häufig benutzten Befehlen, die sich im Wesentlichen auf die Darstellung der Elemente im Bericht beziehen. Auf der Registerkarte Home können Sie auf die Befehle für Ausführung, Schriftart, Absatz, Rahmen, Zahl und Layout zugreifen. Wenn Sie auf ein Element in der Registerkarte klicken, ändert sich das ausgewählte Element auf der Entwurfsoberfläche. Beim Klicken auf **ausführen**, damit Sie sehen, wie der Inhalt des Berichts angezeigt werden, wenn veröffentlicht, wird der Bericht in HTML gerendert und anstelle der Registerkarte "Home" auf die Registerkarte ausführen angezeigt. Die Registerkarte Home wird standardmäßig angezeigt, wenn Sie das erste Mal einen Bericht erstellen.  
+ Bei der Registerkarte "Home" handelt es sich um eine Auflistung von häufig benutzten Befehlen, die sich im Wesentlichen auf die Darstellung der Elemente im Bericht beziehen. Auf der Registerkarte Home können Sie auf die Befehle für Ausführung, Schriftart, Absatz, Rahmen, Zahl und Layout zugreifen. Wenn Sie auf ein Element in der Registerkarte klicken, ändert sich das ausgewählte Element auf der Entwurfsoberfläche. Beim Klicken auf **ausführen**, damit Sie sehen, wie der Inhalt des Berichts angezeigt werden, wenn veröffentlicht, wird der Bericht in HTML gerendert und anstelle der Registerkarte "Start" die Registerkarte ausführen angezeigt. Die Registerkarte Home wird standardmäßig angezeigt, wenn Sie das erste Mal einen Bericht erstellen.  
   
 ### <a name="insert-tab"></a>Registerkarte Einfügen  
  Die Registerkarte Einfügen ist eine Auflistung von Befehlen, die häufig zum Hinzufügen von Berichtselementen zum Bericht verwendet werden. Auf der Registerkarte Einfügen können Sie Assistenten verwenden, um eine Tabelle, eine Matrix, ein Diagramm oder eine Karte hinzuzufügen. Sie können diese Elemente auch ohne einen Assistenten hinzufügen. Außerdem können Sie weitere Berichtselemente wie Sparklines, Indikatoren, Textfelder, Bilder, Rechtecke, Unterberichte sowie Berichtskopf- und -ußzeilen hinzufügen.  
   
- Auf **Berichtsteile** einfügen-Registerkarte wird der Berichtsteilkatalog geöffnet. Sie können Berichtsteile suchen, die auf einem Berichtsserver gespeichert sind. Weitere Informationen finden Sie unter [Report Parts &#40;Report Builder and SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
+ Auf **Berichtsteile** bei Einfüge-Registerkarte wird der Berichtsteilkatalog geöffnet. Sie können Berichtsteile suchen, die auf einem Berichtsserver gespeichert sind. Weitere Informationen finden Sie unter [Report Parts &#40;Report Builder and SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
   
  Nachdem Sie ein Element eingefügt haben, wechselt der Berichts-Generator automatisch zurück zur Registerkarte Home.  
   
@@ -58,11 +58,11 @@ ms.locfileid: "36056646"
  Die Registerkarte Ansicht ist eine Auflistung von Befehlen, mit denen bestimmt wird, was im Berichts-Generator-Fenster angezeigt wird. Sie können Anzeigeoptionen für das Lineal und den Gruppierungs-, Berichtsdaten- und Eigenschaftenbereich ändern.  
   
 ### <a name="run-tab"></a>Registerkarte Ausführen  
- Beim Klicken auf **ausführen** auf der Registerkarte "Home", führen Sie eine Vorschau des Berichts im HTML-Viewer, und anstelle der Registerkarte "Home" auf die Registerkarte ausführen angezeigt.  
+ Beim Klicken auf **ausführen** auf der Registerkarte "Start", führen Sie eine Vorschau des Berichts im HTML-Viewer aus, und anstelle der Registerkarte "Start" die Registerkarte ausführen angezeigt.  
   
  Die Registerkarte Ausführen enthält eine Auflistung von Befehlen, die Sie verwenden können, nachdem der Bericht gerendert wurde. Sie können den Bericht drucken, durch die Berichtsseiten navigieren, den Bericht in ein anderes Dateiformat exportieren, die Dokumentstruktur oder Parameter (sofern der Bericht Parameter enthält) anzeigen und nach Elementen im Bericht suchen. Weitere Informationen finden Sie unter [Berichtsvorschau im Ausführungsmodus](#RunMode).  
   
- Um zur Entwurfsansicht berichtet zurückzukehren der **ausführen** auf **Entwurf**.  
+ Um zur Entwurfsansicht im Bericht zurückzukehren der **ausführen** auf **Entwurf**.  
   
   
 ##  <a name="RptDesignSurface"></a> Berichtsentwurfsoberfläche  
@@ -74,7 +74,7 @@ ms.locfileid: "36056646"
   
 -   Ändern Sie die Kopf- und Fußzeileneigenschaften (z.B. Rahmen- und Füllfarbe), indem Sie außerhalb von Berichtselementen mit der rechten Maustaste auf die weiße Fläche der Entwurfsoberfläche klicken und anschließend auf **Seitenkopfeigenschaften** oder **Fußzeileneigenschaften**klicken.  
   
--   Die Eigenschaften des Berichts selbst, wie seiteneinrichtung, indem Sie mit der rechten Maustaste der blauen Fläche um die Entwurfsoberfläche ziehen und auf **Berichtseigenschaften**.  
+-   Die Eigenschaften des Berichts selbst, wie seiteneinrichtung, indem Sie mit der rechten Maustaste der blauen Fläche um die Entwurfsoberfläche, und auf **Berichtseigenschaften**.  
   
 -   Ändern Sie die Eigenschaften von Berichtselementen, indem Sie mit der rechten Maustaste auf die Elemente klicken und anschließend auf **Eigenschaften**klicken.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36056646"
   
 -   [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
--   [Bilder &#40;Berichts-Generator und SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)  
+-   [Images &#40;Berichts-Generator und SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)  
   
 -   [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   
@@ -118,7 +118,7 @@ ms.locfileid: "36056646"
   
   
 ##  <a name="ReptPartGallery"></a> Berichtsteilkatalog  
- Die einfachste Methode zum Erstellen eines Berichts besteht darin, auf dem Berichtsserver oder einem in eine SharePoint-Website integrierten Berichtsserver nach einem vorhandenen Berichtsteil zu suchen (z. B. eine Tabelle oder ein Diagramm). Sie suchen nach berichtsteilen auf den Bericht im Berichtsteilkatalog hinzuzufügen. Sie können die Berichtsteile nach dem Namen des Berichtsteils (vollständig oder teilweise), nach der Person, von der der Berichtsteil erstellt oder zuletzt geändert wurde, nach dem letzten Änderungsdatum, dem Speicherort oder dem Typ des Berichtsteils filtern. Sie konnten z. B. nach allen Diagrammen suchen, die in der vorhergehenden Woche von einem oder mehreren Ihrer Kollegen erstellt wurden.  
+ Die einfachste Methode zum Erstellen eines Berichts besteht darin, auf dem Berichtsserver oder einem in eine SharePoint-Website integrierten Berichtsserver nach einem vorhandenen Berichtsteil zu suchen (z. B. eine Tabelle oder ein Diagramm). Sie suchen nach berichtsteilen zu dem Bericht im Berichtsteilkatalog hinzufügen. Sie können die Berichtsteile nach dem Namen des Berichtsteils (vollständig oder teilweise), nach der Person, von der der Berichtsteil erstellt oder zuletzt geändert wurde, nach dem letzten Änderungsdatum, dem Speicherort oder dem Typ des Berichtsteils filtern. Sie konnten z. B. nach allen Diagrammen suchen, die in der vorhergehenden Woche von einem oder mehreren Ihrer Kollegen erstellt wurden.  
   
 > [!NOTE]  
 >  Sie müssen eine Verbindung mit einem Server herstellen, um den Berichtsteilkatalog anzuzeigen.  
@@ -165,7 +165,7 @@ ms.locfileid: "36056646"
   
   
 ##  <a name="RunMode"></a> Anzeigen einer Berichtsvorschau im Ausführungsmodus  
- In der Berichtsentwurfsansicht arbeiten Sie nicht mit tatsächlichen Daten, sondern mit einer durch den Feldnamen oder Ausdruck angegebenen Darstellung der Daten. Wenn die tatsächlichen Daten im Kontext des entworfenen Berichts angezeigt werden sollen, können Sie den Bericht ausführen, um eine Vorschau der Daten aus der zugrunde liegenden Datenbank im Berichtslayout anzuzeigen. Durch Wechseln zwischen dem Entwurf und der Ausführung des Berichts können Sie den Entwurf des Berichts anpassen und die Ergebnisse sofort anzeigen. Um den Bericht als Vorschau anzuzeigen, klicken Sie auf **ausführen** in der **Ansichten** Gruppe auf dem Menüband.  
+ In der Berichtsentwurfsansicht arbeiten Sie nicht mit tatsächlichen Daten, sondern mit einer durch den Feldnamen oder Ausdruck angegebenen Darstellung der Daten. Wenn die tatsächlichen Daten im Kontext des entworfenen Berichts angezeigt werden sollen, können Sie den Bericht ausführen, um eine Vorschau der Daten aus der zugrunde liegenden Datenbank im Berichtslayout anzuzeigen. Durch Wechseln zwischen dem Entwurf und der Ausführung des Berichts können Sie den Entwurf des Berichts anpassen und die Ergebnisse sofort anzeigen. Klicken Sie zum Anzeigen einer Vorschau des Berichts auf **ausführen** in die **Ansichten** -Gruppe auf dem Menüband.  
   
  Wenn Sie auf **Ausführen**klicken, stellt der Berichts-Generator eine Verbindung mit den Berichtsdatenquellen her. Die Daten werden auf dem Computer zwischengespeichert und mit dem Layout kombiniert, und anschließend wird der Bericht im HTML-Viewer gerendert. Sie können den Bericht beliebig oft ausführen, während Sie weiterhin am Entwurf des Berichts arbeiten. Wenn Sie mit dem Entwurf des Berichts zufrieden sind, können Sie ihn auf dem Berichtsserver speichern. Dort kann er von Benutzern mit den entsprechenden Berechtigungen angezeigt werden.  
   

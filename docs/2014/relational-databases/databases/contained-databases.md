@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - contained database
 - database_uncontained_usage event
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - contained database, understanding
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 622a67f232bb24af9efe9c621e86f1415866dc6c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8c584cbb736a494ab071dbc570cfcc67bd2e5e32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056967"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223670"
 ---
 # <a name="contained-databases"></a>Eigenständige Datenbanken
   Eine*eigenständige Datenbank* ist eine Datenbank, die von anderen Datenbanken und der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , der die Datenbank hostet, isoliert ist.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] hilft Benutzern dabei, ihre Datenbank von der Instanz auf vier Arten zu isolieren.  
@@ -37,7 +37,7 @@ ms.locfileid: "36056967"
   
 -   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Umgebung (DMVs, XEvents usw.) berichtet und kann auf Kapselungsinformationen reagieren.  
   
- Einige Funktionen von teilweise eigenständigen Datenbanken, beispielsweise das Speichern von Metadaten in der Datenbank, gelten für alle [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbanken. Einige Vorteile der teilweise eigenständigen Datenbanken, beispielsweise Authentifizierung auf Datenbankebene und Katalogsortierung, müssen erst aktiviert werden, damit sie verfügbar sind. Partielle Eigenständigkeit aktiviert ist, mit der `CREATE DATABASE` und `ALTER DATABASE` Anweisungen oder mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Weitere Informationen zum Aktivieren der Sortierung teilweiser Datenbanken finden Sie unter [Migrate to a Partially Contained Database](migrate-to-a-partially-contained-database.md).  
+ Einige Funktionen von teilweise eigenständigen Datenbanken, beispielsweise das Speichern von Metadaten in der Datenbank, gelten für alle [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbanken. Einige Vorteile der teilweise eigenständigen Datenbanken, beispielsweise Authentifizierung auf Datenbankebene und Katalogsortierung, müssen erst aktiviert werden, damit sie verfügbar sind. Partielle Eigenständigkeit wird mithilfe aktiviert die `CREATE DATABASE` und `ALTER DATABASE` Anweisungen oder mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Weitere Informationen zum Aktivieren der Sortierung teilweiser Datenbanken finden Sie unter [Migrate to a Partially Contained Database](migrate-to-a-partially-contained-database.md).  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36056967"
   
 -   [Kapselung](#containment)  
   
--   [Vorteile des Verwendens von teilweise enthaltenen Datenbanken](#benefits)  
+-   [Vorteile der Verwendung von teilweise enthaltenen Datenbanken](#benefits)  
   
 -   [Einschränkungen](#Limitations)  
   
@@ -163,7 +163,7 @@ ms.locfileid: "36056967"
  Dieses XEvent wird ausgelöst, wenn nicht enthaltene Entität zur Laufzeit bestimmt wird. Dies schließt in Clientcode ausgelöste Entitäten ein. Dieses Xevent wird nur für tatsächliche nicht enthaltene Entitäten ausgelöst. Das Ereignis wird jedoch nur zur Laufzeit ausgelöst. Daher werden alle nicht enthaltenen Benutzerentitäten, die nicht ausgeführt wurden, von diesem XEvent nicht identifiziert.  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- [Geändert von Funktionen &#40;eigenständige Datenbank&#41;](modified-features-contained-database.md)  
+ [Geänderte Funktionen &#40;enthaltene Datenbank&#41;](modified-features-contained-database.md)  
   
  [Enthaltene Datenbanksortierungen](contained-database-collations.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Bearbeiten eine vorhandenen Datenquellenverbindung (SSAS – tabellarisch) | Microsoft Docs
+title: Bearbeiten eine vorhandenen Datenquellenverbindung (SSAS – tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.selexistconn.f1
 ms.assetid: 97e63f18-a01d-4c91-a411-e7e6d40a0647
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 33c181ada4cb40eba4697f70d78933dcc26fc7bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 412529e536e23a988fddd78f83611f4460e3dbf4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048633"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248030"
 ---
 # <a name="edit-an-existing-data-source-connection-ssas-tabular"></a>Bearbeiten einer vorhandenen Datenquellenverbindung (SSAS – tabellarisch)
   In diesem Thema wird beschrieben, wie Sie die Eigenschaften einer vorhandenen Datenquellenverbindung in einem tabellarischen Modell bearbeiten können.  
@@ -82,7 +82,7 @@ ms.locfileid: "36048633"
      Wenn Sie den aktuellen Satz von Tabelleneigenschaften speichern, werden Sie u. U. in einer Meldung darauf hingewiesen, dass die Tabellen verarbeitet werden müssen. Klicken Sie auf **Verarbeiten** , um aktualisierte Daten in das Modell zu laden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Daten verarbeiten &#40;SSAS – tabellarisch&#41;](process-data-ssas-tabular.md)   
+ [Verarbeiten von Daten &#40;SSAS – tabellarisch&#41;](process-data-ssas-tabular.md)   
  [Unterstützte Datenquellen &#40;SSAS – tabellarisch&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], executing
 - executing queries [SQL Server]
 ms.assetid: 6c175c0e-55de-4bff-a53f-505c306abe25
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2b8fb7a2bf155eda1fa683e953ebcb2efee3a36e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fe1522fc538b8ad2d70ccb6f8a6d69e035efe17b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049092"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253578"
 ---
 # <a name="run-queries-visual-database-tools"></a>Ausführen von Abfragen (Visual Database Tools)
   Nachdem Sie das Erstellen der Abfrage abgeschlossen haben, können Sie die Abfrage ausführen.  
@@ -44,7 +44,7 @@ ms.locfileid: "36049092"
  Wenn Sie eine UPDATE-, INSERT FROM-, INSERT INTO-, DELETE- oder MAKE TABLE-Abfrage erstellen, zeigt der Abfrage- und Sicht-Designer in einer Meldung an, wie viele Zeilen in die Abfrage einbezogen wurden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Arbeiten mit Daten im Ergebnisbereich &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Arbeiten mit Daten in den Bereich "Ergebnisse" &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Ausführen grundlegender Vorgänge mit Abfragen &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Aktualisieren von Arbeitsmappen und planmäßige Datenaktualisierungen (SharePoint 2013) | Microsoft Docs
+title: Aktualisieren von Arbeitsmappen und planmäßige Datenaktualisierungen (SharePoint 2013) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 caps.latest.revision: 18
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: fd35257533c7cbf639ea1c1fecadcf3bcff4acd0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 5bb205ac875315770454a9075ab0c6acbabd97fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056356"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216180"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Aktualisieren von Arbeitsmappen und planmäßige Datenaktualisierungen (SharePoint 2013)
   In diesem Thema wird die Verwendung von Arbeitsmappen beschrieben, die in PowerPivot-Umgebungen früherer Versionen erstellt wurden. Außerdem wird erläutert, wie PowerPivot-Arbeitsmappen aktualisiert werden, um die Vorteile neuer, in dieser Version eingeführter Funktionen zu nutzen. Weitere Informationen zu neuen Funktionen finden Sie unter [Neues in PowerPivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
@@ -33,7 +33,7 @@ ms.locfileid: "36056356"
   
 -   [Aktualisieren von Arbeitsmappen der Version 2008 R2 auf SQL Server 2012 Service Pack 1 (SP1)-Arbeitsmappen](#bkmk_to_2012sp1_from_2008r2)  
   
--   [Upgrade auf Office 2013-Arbeitsmappen von Versionen erstellt wurden, indem Sie mit dem 2012 PowerPivot-Add-In für Excel](#bkmk_to_2012sp1_from_2012)  
+-   [Ein Upgrade auf Office 2013-Arbeitsmappen von Versionen erstellt wurden, mit dem 2012 PowerPivot-Add-In für Excel](#bkmk_to_2012sp1_from_2012)  
   
 -   [Aktualisieren von Versionen, die mit dem 2008 R2 PowerPivot-Add-In für Excel 2010 erstellt wurden, auf SQL Server 2012-Arbeitsmappen](#bkmk_to_2012_from_2008R2)  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36056356"
   
  Weitere Informationen zum Aktualisierungsverlauf finden Sie unter [Verlauf der Datenaktualisierung Ansicht &#40;PowerPivot für SharePoint&#41;](../../power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md).  
   
-##  <a name="bkmk_to_2012sp1_from_2012"></a> Upgrade auf Office 2013-Arbeitsmappen von Versionen erstellt wurden, indem Sie mit dem 2012 PowerPivot-Add-In für Excel  
+##  <a name="bkmk_to_2012sp1_from_2012"></a> Ein Upgrade auf Office 2013-Arbeitsmappen von Versionen erstellt wurden, mit dem 2012 PowerPivot-Add-In für Excel  
  In diesem Abschnitt wird das Upgrade von Arbeitsmappen **von** SQL Server 2012 PowerPivot für Excel 2010 **auf** SQL Server 2012 SP1 PowerPivot in Excel 2013 beschrieben.  
   
  Durch ein Upgrade der Arbeitsmappe wird der folgende Fehler behoben, der beim Versuch auftritt, für eine Arbeitsmappe in einer vorherigen Version eine planmäßige Datenaktualisierung auszuführen:  
@@ -119,9 +119,9 @@ ms.locfileid: "36056356"
   
  Es gibt zwei Upgrademöglichkeiten:  
   
-1.  Aktualisieren Sie jede Arbeitsmappe manuell, indem Sie sie in Excel öffnen, auf einem Computer mit der [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Version von PowerPivot für Excel, und klicken Sie dann erneut auf dem Server veröffentlichen. Wenn Sie die Arbeitsmappe in der neueren Version des Add-Ins öffnen, werden die folgenden internen Vorgänge ausgeführt: Der Datenanbieter in der Verbindungszeichenfolge der Arbeitsmappendaten wird auf MSOLAP.5 aktualisiert, die Metadaten werden aktualisiert, und Beziehungen werden zum Anpassen an eine neuere Implementierung neu erstellt.  
+1.  Aktualisieren Sie jede Arbeitsmappe manuell, indem Sie sie in Excel öffnen, auf einem Computer mit der [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] -Version von PowerPivot für Excel, und klicken Sie dann auf den Server erneut veröffentlichen. Wenn Sie die Arbeitsmappe in der neueren Version des Add-Ins öffnen, werden die folgenden internen Vorgänge ausgeführt: Der Datenanbieter in der Verbindungszeichenfolge der Arbeitsmappendaten wird auf MSOLAP.5 aktualisiert, die Metadaten werden aktualisiert, und Beziehungen werden zum Anpassen an eine neuere Implementierung neu erstellt.  
   
-2.  Alternativ können eine SharePoint-Administrator die automatische upgradefunktion für den PowerPivot-Systemdienst in einer SharePoint-Farm die automatische Aktualisierung aktivieren einer [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] beim Planen der datenaktualisierung ausgeführt wird (nur Arbeitsmappen, die PowerPivot-Arbeitsmappe (konfiguriert für geplante datenaktualisierungen werden aktualisiert).  
+2.  Ein SharePoint-Administrator kann auch die automatische upgradefunktion für den PowerPivot-Systemdienst in einer SharePoint-Farm das automatische Upgrade aktiviert eine [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] beim Planen der datenaktualisierung ausgeführt wird (nur Arbeitsmappen, die PowerPivot-Arbeitsmappe konfiguriert für die geplante datenaktualisierung werden aktualisiert).  
   
     > [!NOTE]  
     >  Das automatische Upgrade ist eine Serverkonfigurationsfunktion; Sie können sie nicht für bestimmte Arbeitsmappen, Bibliotheken oder Websitesammlungen aktivieren oder deaktivieren.  
@@ -153,7 +153,7 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
   
  Beachten Sie, dass die Veröffentlichung von Arbeitsmappen neuerer Versionen auf SQL Server-Instanzen früherer Versionen von [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] nicht unterstützt wird. Von einer [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]-Instanz wird keine Arbeitsmappe geladen, die in der [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]-Version von [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] erstellt wurde, und von einer SQL Server 2012-Instanz werden keine Office 2013-Arbeitsmappen mit erweiterten Datenmodellen geladen, die mit der [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)]-Version von PowerPivot in Excel erstellt wurden.  
   
-###  <a name="bkmk_msolapxslx"></a> Überprüfen der MSOLAP-datenanbieterinformationen in einer PowerPivot-Arbeitsmappe  
+###  <a name="bkmk_msolapxslx"></a> So prüfen Sie die MSOLAP-datenanbieterinformationen in einer PowerPivot-Arbeitsmappe  
  Gehen Sie folgendermaßen vor, um zu überprüfen, welcher OLE DB-Anbieter in einer PowerPivot-Arbeitsmappe verwendet wird. Zum Überprüfen der Datenverbindungsinformationen muss das [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] -Add-In nicht installiert sein.  
   
 1.  Klicken Sie in Excel auf der Registerkarte "Daten" auf **Verbindungen**. Klicken Sie auf **Eigenschaften**.  
@@ -177,6 +177,6 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
  [Migrieren von PowerPivot zu SharePoint 2013](migrate-power-pivot-to-sharepoint-2013.md)   
  [Aktualisieren von PowerPivot für SharePoint](../../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
  [Neuigkeiten in Analysis Services und Business Intelligence](../../what-s-new-in-analysis-services.md)   
- [Ansicht Datenaktualisierungsverlauf &#40;PowerPivot für SharePoint&#41;](../../power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)  
+ [Verlauf der Datenaktualisierung Ansicht &#40;PowerPivot für SharePoint&#41;](../../power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)  
   
   

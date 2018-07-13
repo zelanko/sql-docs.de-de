@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 6: Erstellen von berechneten Spalten | Microsoft Docs'
+title: 'Lektion 6: Erstellen von berechneten Spalten | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d126766a-5699-4e9f-8213-8c7eea0fc14e
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: efec616591ab3e6d85b9199a5a4706ecd740c66e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f837fd314cd8a279e03cdfa2aa420920509510a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050002"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228410"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>Lektion 6: Erstellen von berechneten Spalten
   In dieser Lektion erstellen Sie neue Daten in Ihrem Modell durch Hinzufügen von berechneten Spalten. Eine berechnete Spalte basiert auf Daten, die bereits im Modell vorhanden sind. Weitere Informationen finden Sie unter [Berechnete Spalten &#40;SSAS – tabellarisch&#41;](tabular-models/ssas-calculated-columns.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "36050002"
   
 3.  Mit der rechten Maustaste die **Calendar Quarter** Spalte, und klicken Sie dann auf **Spalte einfügen**.  
   
-     Eine neue Spalte namens **CalculatedColumn1** eingefügt wird, auf der linken Seite des der **Calendar Quarter** Spalte.  
+     Eine neue Spalte namens **CalculatedColumn1** eingefügt wird, auf der linken Seite von der **Calendar Quarter** Spalte.  
   
 4.  Geben Sie in der Bearbeitungsleiste über der Tabelle die folgende Formel ein. Mit der AutoVervollständigen-Funktion können Sie die vollqualifizierten Namen von Spalten und Tabellen auf einfache Weise eingeben und die verfügbaren Funktionen auflisten.  
   

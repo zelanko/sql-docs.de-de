@@ -1,5 +1,5 @@
 ---
-title: AllMemberTranslation-Element (ASSL) | Microsoft Docs
+title: AllMemberTranslation-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AllMemberTranslation element
 ms.assetid: 31ec0c44-8f1d-457c-9e8b-61dd5bc468f7
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b4124f8e9b8af1d9203e1b9dc877598880da348b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f001f32cae974d8bc22de635e7776ba3b94451e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049985"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231850"
 ---
 # <a name="allmembertranslation-element-assl"></a>AllMemberTranslation-Element (ASSL)
   Enthält eine Übersetzung für die Beschriftung des alle-Elements ein [Hierarchie](hierarchy-element-assl.md) Element.  
@@ -61,7 +61,7 @@ ms.locfileid: "36049985"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element, das das übergeordnete Element des entspricht, der `AllMemberTranslations` Auflistung im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.Hierarchy>.  
+ Das Element, das dem übergeordneten entspricht, der `AllMemberTranslations` Auflistung im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.Hierarchy>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Translation-Element &#40;ASSL&#41;](translation-element-assl.md)   

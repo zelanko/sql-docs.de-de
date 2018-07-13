@@ -8,36 +8,36 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.previewview.f1
 helpviewer_keywords:
 - Preview view [Reporting Services]
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e64635a1600a6949287e4528802faf8cdc93f15d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 3114b56007619d54d0a9aea95e136d65fe0f725b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050695"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212220"
 ---
 # <a name="preview-view"></a>Vorschauansicht
   Verwenden Sie die Ansicht **Vorschau** , um den gerenderten Bericht anzuzeigen. Wenn ein Bericht in der Vorschau angezeigt wird, führt der Berichts-Designer den Bericht lokal aus und zeigt ihn in der Vorschauansicht an. Der Bericht wird im Vorschaumodus vollständig verarbeitet. Wenn der Bericht eine komplexe Abfrage oder eine große Datenmenge enthält, kann das Generieren der Vorschau beim erstmaligen Anzeigen mehrere Minuten in Anspruch nehmen. Bei späteren Änderungen, die sich nur auf das Format des Berichts auswirken, wird die Vorschau mit zwischengespeicherten Daten generiert.  
   
 > [!IMPORTANT]  
->  Wenn [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ausgeführt wird als RemoteApp, können nicht Berichten angezeigt werden **Vorschau** anzeigen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. RemoteApp-Programme sind Programme, auf die remote über Remotedesktop-Dienste zugegriffen wird. Weitere Informationen finden Sie unter [schrittweise Anleitung für TS RemoteApp](http://technet.microsoft.com/library/cc730673\(WS.10\).aspx).  
+>  Wenn [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] wird ausgeführt, als RemoteApp, können nicht Berichten angezeigt werden **Vorschau** anzeigen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. RemoteApp-Programme sind Programme, auf die remote über Remotedesktop-Dienste zugegriffen wird. Weitere Informationen finden Sie unter [schrittweisen Anleitung für TS RemoteApp](http://technet.microsoft.com/library/cc730673\(WS.10\).aspx).  
   
 ## <a name="options"></a>Tastatur  
  Mithilfe der Symbolleiste können Sie Vorschaufunktionen verwalten.  
   
- **Ein- oder Ausblenden der Dokumentstruktur**  
+ **Anzeigen oder Ausblenden der Dokumentstruktur**  
  Wählen Sie diese Option aus, um die Dokumentstruktur ein- oder auszublenden.  
   
- **Ausblenden Parameterbereich ein- / ausblenden**  
+ **Anzeigen oder Ausblenden der Eingabeaufforderungsbereich für Parameter**  
  Wählen Sie diese Option aus, um die Parameterfelder für Berichte mit Parametern ein- oder auszublenden.  
   
  **Erste Seite**  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - assemblies [Reporting Services], data processing extension deployments
 ms.assetid: 3614e601-004e-4a16-8388-836ffd67e9dd
 caps.latest.revision: 40
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f95040735e7ec8987bfdfd194ef1d7f0933df3ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 25b6bfa824f6004fbd35b3a31e7268ff388fab6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049128"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216730"
 ---
 # <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>Vorgehensweise: Bereitstellen einer Datenverarbeitungserweiterung für den Berichts-Designer
   Beim Entwerfen von Berichten verwendet der Berichts-Designer Datenverarbeitungserweiterungen zum Abruf und zur Verarbeitung von Daten. Sie sollten Ihre Assembly für Datenverarbeitungserweiterungen auf dem Berichts-Designer als private Assembly bereitstellen. Sie müssen auch einen Eintrag in der Konfigurationsdatei des Berichts-Designers RSReportDesigner.config vornehmen.  
@@ -44,13 +44,13 @@ ms.locfileid: "36049128"
     </Extensions>  
     ```  
   
-4.  Fügen Sie einen Eintrag für Ihre datenverarbeitungserweiterung enthält ein **Erweiterung** Element mit Werten für die `Name`, `Type`, und `Visible` Attribute. Der Eintrag könnte folgendermaßen aussehen:  
+4.  Fügen Sie einen Eintrag für Ihre datenverarbeitungserweiterung enthält ein **Erweiterung** -Element mit den Werten der `Name`, `Type`, und `Visible` Attribute. Der Eintrag könnte folgendermaßen aussehen:  
   
     ```  
     <Extension Name="ExtensionName" Type="CompanyName.ExtensionName.MyConnectionClass, AssemblyName" />  
     ```  
   
-     Der Wert für `Name` ist der eindeutige Name der Datenverarbeitungserweiterung. Der Wert für `Type` ist eine durch Trennzeichen getrennte Liste, die einen Eintrag für den vollqualifizierten Namespace der Klasse enthält, welche die Schnittstellen <xref:Microsoft.ReportingServices.Interfaces.IExtension> und <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> implementiert, gefolgt vom Namen der Assembly (ohne die Dateierweiterung .dll). Standardmäßig sind Datenverarbeitungserweiterungen sichtbar. Eine Erweiterung in Benutzeroberflächen wie dem Berichts-Designer auszublenden Hinzufügen einer `Visible` -Attribut auf die **Erweiterung** Element, und legen Sie dafür `false`.  
+     Der Wert für `Name` ist der eindeutige Name der Datenverarbeitungserweiterung. Der Wert für `Type` ist eine durch Trennzeichen getrennte Liste, die einen Eintrag für den vollqualifizierten Namespace der Klasse enthält, welche die Schnittstellen <xref:Microsoft.ReportingServices.Interfaces.IExtension> und <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> implementiert, gefolgt vom Namen der Assembly (ohne die Dateierweiterung .dll). Standardmäßig sind Datenverarbeitungserweiterungen sichtbar. Um eine Erweiterung in Benutzeroberflächen wie dem Berichts-Designer auszublenden Hinzufügen einer `Visible` -Attribut auf die **Erweiterung** -Element, und legen ihn auf `false`.  
   
 5.  Zuletzt müssen Sie eine Codegruppe für die benutzerdefinierte Assembly hinzufügen, die die Berechtigung **FullTrust** für Ihre Erweiterung erteilt. Hierzu fügen Sie die Codegruppe zur Datei rspreviewpolicy.config hinzu, die sich standardmäßig im Verzeichnis C:\Programme\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies befindet. Die Codegruppe kann folgendermaßen aussehen:  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36049128"
   
 #### <a name="to-enable-the-generic-query-designer-for-a-custom-extension"></a>So aktivieren Sie den Standardabfrage-Designer für eine benutzerdefinierte Erweiterung  
   
--   Fügen Sie den folgenden Eintrag zur Datei RSReportDesigner.config unter der **Designer** Element, und Ersetzen Sie dabei die `Name` Attribut mit dem Namen, den Sie in vorhergehenden Einträgen angegeben.  
+-   Fügen Sie den folgenden Eintrag zur Datei RSReportDesigner.config unter dem **Designer** -Element, und Ersetzen Sie dabei die `Name` Attribut mit dem Namen, die Sie in vorhergehenden Einträgen angegeben.  
   
     ```  
     <Extension Name="ExtensionName" Type="Microsoft.ReportingServices.QueryDesigners.GenericQueryDesigner,Microsoft.ReportingServices.QueryDesigners"/>  

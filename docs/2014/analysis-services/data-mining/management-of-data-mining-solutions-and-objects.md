@@ -1,5 +1,5 @@
 ---
-title: Verwaltung von Datamining-Lösungen und-Objekten | Microsoft Docs
+title: Verwaltung von Datamining-Lösungen und-Objekten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], managing
 - managing mining models
 ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6ea150e4f35eaa1e9251f17894c7f0cf665439ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9f20cc2fe28f5d798f3521a36aebcfe346aa643d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049352"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218300"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Verwaltung von Data Mining-Lösungen und -Objekten
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] stellt Clienttools bereit, mit denen Sie vorhandene Miningstrukturen und Miningmodelle verwalten können. In diesem Abschnitt werden die Verwaltungsvorgänge beschrieben, die Sie mit der jeweiligen Umgebung ausführen können.  
@@ -39,7 +39,7 @@ ms.locfileid: "36049352"
 ## <a name="location-of-data-mining-objects"></a>Speicherort von Data Mining-Objekten  
  Verarbeitete Miningstrukturen und -modelle werden in einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]gespeichert.  
   
- Wenn Sie eine Verbindung zum Erstellen einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank in `Immediate` Modus bei der Entwicklung von Ihrem Datamining-Objekte, alle Objekte, die Sie erstellen, werden sofort an den Server hinzugefügt, während der Arbeit. Wenn Data Mining-Objekte im **Offline** -Modus erstellt werden, dem Standardmodus bei der Arbeit in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], dann sind die erstellten Miningobjekte so lange nur Metadatencontainer, bis sie auf einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]bereitgestellt werden. Jedes Mal, wenn ein Objekt verändert wird, muss es daher erneut auf dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server bereitgestellt werden. Weitere Informationen zur Datamining-Architektur finden Sie unter [Physische Architektur &#40;Analysis Services – Data Mining&#41;](physical-architecture-analysis-services-data-mining.md).  
+ Bei der Erstellung einer Verbindungs mit einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbank `Immediate` Modus bei der Entwicklung Ihrer Datamining-Objekte, alle Objekte, die Sie erstellen werden sofort an den Server hinzugefügt, während Sie arbeiten. Wenn Data Mining-Objekte im **Offline** -Modus erstellt werden, dem Standardmodus bei der Arbeit in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], dann sind die erstellten Miningobjekte so lange nur Metadatencontainer, bis sie auf einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]bereitgestellt werden. Jedes Mal, wenn ein Objekt verändert wird, muss es daher erneut auf dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server bereitgestellt werden. Weitere Informationen zur Datamining-Architektur finden Sie unter [Physische Architektur &#40;Analysis Services – Data Mining&#41;](physical-architecture-analysis-services-data-mining.md).  
   
 > [!NOTE]  
 >  Einige Clients, z.B. die Data Mining Add-Ins für [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007, ermöglichen auch die Erstellung von Miningmodellen und -strukturen als Sitzungsobjekte, für die eine Verbindung mit einer Instanz verwendet wird, deren Miningstrukturen und -modelle jedoch auf dem Server nur für die Dauer der Sitzung gespeichert werden. Diese Modelle können ebenso mit dem Client verwaltet werden wie die in einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank gespeicherten Strukturen und Modelle, aber die Objekte werden nicht persistent gespeichert, nachdem die Verbindung mit der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanz getrennt wurde.  
@@ -66,7 +66,7 @@ ms.locfileid: "36049352"
 > [!WARNING]  
 >  Alle Änderungen an einer Miningstruktur oder einem Miningmodell, selbst Änderungen an Metadaten wie Name oder Beschreibung, machen es erforderlich, dass die Miningstruktur bzw. das -modell erneut verarbeitet wird.  
   
- Wenn Sie nicht die Projektmappendatei verfügen, mit denen die Datamining-Projekt oder die Objekte erstellt wurde, können Sie das vorhandene Projekt vom Server mit dem Analysis Services-Import-Assistenten importiert, Änderungen an den Objekten vornehmen und dann erneut mit der `Incremental` -Option. Weitere Informationen finden Sie unter [Importieren eines Data Mining-Projekts mithilfe des Analysis Services-Import-Assistenten](import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
+ Wenn Sie nicht die Projektmappendatei verfügen, die verwendet wurde, um die Datamining-Projekt oder die Objekte zu erstellen, können Sie importieren Sie das vorhandene Projekt vom Server mit dem Analysis Services-Import-Assistenten, nehmen Sie Änderungen an den Objekten, und klicken Sie dann erneut mit der `Incremental` -Option. Weitere Informationen finden Sie unter [Importieren eines Data Mining-Projekts mithilfe des Analysis Services-Import-Assistenten](import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
   
 ## <a name="managing-data-mining-objects-in-sql-server-management-studio"></a>Verwalten von Data Mining-Objekten in SQL Server Management Studio  
  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]können Sie Skripts für Miningstrukturen und -modelle schreiben, Miningstrukturen und -modelle verarbeiten oder löschen. Im Objektexplorer wird nur ein eingeschränkter Satz an Eigenschaften angezeigt. Sie können jedoch zusätzliche Metadaten zu Miningmodellen anzeigen, indem Sie das Fenster **DMX-Abfrage** öffnen und eine Miningstruktur auswählen.  
@@ -88,7 +88,7 @@ ms.locfileid: "36049352"
 ### <a name="data-mining-extensions-dmx"></a>Data Mining-Erweiterungen (DMX)  
  Data Mining-Erweiterungen (DMX) können in Kombination mit anderen Befehlsschnittstellen wie [!INCLUDE[vstecado](../../includes/vstecado-md.md)] oder ADOMD.NET verwendet werden, um Miningstrukturen und Miningmodelle zu erstellen, zu löschen und abzufragen.  
   
--   [Datamining-Erweiterungen &#40;DMX&#41; -Datendefinitionsanweisungen](/sql/dmx/dmx-statements-data-definition)  
+-   [Datamining-Erweiterungen &#40;DMX&#41; Datendefinitionsanweisungen](/sql/dmx/dmx-statements-data-definition)  
   
  **Einschränkungen:** Einige Eigenschaften können mit DMX nicht geändert werden.  
   
@@ -98,6 +98,6 @@ ms.locfileid: "36049352"
  **Einschränkungen:** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] generiert einige XMLA-Anweisungen, die nur für die interne Verwendung unterstützt werden und in XML DDL-Skripts nicht verwendet werden können.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Entwicklerhandbuch &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)  
+ [Entwicklerhandbuch für &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)  
   
   

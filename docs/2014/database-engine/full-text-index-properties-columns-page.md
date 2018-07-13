@@ -1,30 +1,29 @@
 ---
-title: Volltextindex-Eigenschaften (Spaltenseite) | Microsoft Docs
+title: Volltextindex-Eigenschaften (Spaltenseite) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.fulltextindexproperties.columns.f1
 ms.assetid: 75e52edb-0d07-4393-9345-8b5af4561e35
 caps.latest.revision: 17
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 223a3e0db58b73f2b841cebd23d41bc36ba4a85b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e1f9e7a0b6f7c9b62e431062f1cd778fe3ef998
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049765"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202000"
 ---
 # <a name="full-text-index-properties-columns-page"></a>Volltextindex-Eigenschaften (Seite "Spalten")
-  **Zum Anzeigen oder Ändern der Eigenschaften eines Volltextindex-**  
+  **Zum Anzeigen oder ändern die Eigenschaften einer Volltext-Indexes**  
   
 -   [Verwalten von Volltextindizes](../relational-databases/indexes/indexes.md)  
   
@@ -41,7 +40,7 @@ ms.locfileid: "36049765"
 |||  
 |-|-|  
 |**Verfügbare Spalten**|Der Spaltenname.|  
-|**Sprache für die Wörtertrennung**|Die Sprache, deren Wörtertrennung und Wortstammerkennung eine linguistische Analyse aller volltextindizierten Daten ausführen.<br /><br /> Weitere Informationen finden Sie unter [konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) und [Auswählen einer Sprache beim Erstellen einer Volltextindex](../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md).|  
+|**Sprache für die Wörtertrennung**|Die Sprache, deren Wörtertrennung und Wortstammerkennung eine linguistische Analyse aller volltextindizierten Daten ausführen.<br /><br /> Weitere Informationen finden Sie unter [konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) und [Wählen einer Sprache beim Erstellen einer Volltextindex](../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md).|  
 |**Typ**|Der Name der Tabellenspalte, die den Dokumenttyp der ausgewählten Spalte enthält. Dies ist eine schreibgeschützte Eigenschaft.|  
 |**Statistische Semantik**|Wählen Sie aus, ob die semantische Indizierung für die ausgewählte Spalte aktiviert werden soll. Weitere Informationen finden Sie unter [Semantische Suche &#40;SQL Server&#41;](../relational-databases/search/semantic-search-sql-server.md).<br /><br /> Wenn Sie eine **Sprache** vor der Option **Statistische Semantik**auswählen und die ausgewählte Sprache über kein zugeordnetes semantisches Sprachmodell verfügt, ist das Kontrollkästchen **Statistische Semantik** deaktiviert. Wenn Sie **Statistische Semantik** vor einer **Sprache**auswählen, werden im Dropdown-Kombinationsfeld nur die Sprachen angezeigt, für die das semantische Sprachmodell unterstützt wird.|  
   

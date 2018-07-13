@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer Warenkorbstruktur und eines Modells (mittleres Datamining-Lernprogramm) | Microsoft Docs
+title: Erstellen einer Market Basket-Struktur und eines Modells (mittleres Datamining Tutorial) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 659b7a4e-f687-44d9-a60a-86490ccbf90f
 caps.latest.revision: 48
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 957a55114e5a4fb756c63b63779eed3fbfb5f95b
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 67d047a9bb78a8c85d59131407cc85c6aa4769f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312598"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238130"
 ---
 # <a name="creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial"></a>Erstellen einer Warenkorbstruktur und eines Warenkorbmodells (Data Mining-Lernprogramm für Fortgeschrittene)
   Sie haben nun eine Datenquellensicht erstellt und erstellen mithilfe des Data Mining-Assistenten eine neue Miningstruktur. In dieser Aufgabe legen Sie eine Miningstruktur und ein Miningmodell an, die auf dem [!INCLUDE[msCoName](../includes/msconame-md.md)] Association-Algorithmus basieren.  
@@ -33,29 +33,29 @@ ms.locfileid: "36312598"
   
 2.  Klicken Sie auf der Seite **Willkommen** auf **Weiter**.  
   
-3.  Auf der **Definitionsmethode auswählen** Seite, überprüfen Sie, ob **aus vorhandener relationaler Datenbank oder vorhandenem Data Warehouse** ausgewählt ist, und klicken Sie dann auf **Weiter**.  
+3.  Auf der **Definitionsmethode auswählen** überprüfen Sie, ob Seite **aus vorhandener relationaler Datenbank oder Data Warehouse** ausgewählt ist, und klicken Sie dann auf **Weiter**.  
   
-4.  Auf der **Data Mining-Struktur erstellen** Seite **welche Datamining-Technik möchten Sie verwenden?** Option **Microsoft Association Rules** aus der Liste aus, und klicken Sie dann auf **Weiter**. Die **Datenquellensicht auswählen** Seite wird angezeigt.  
+4.  Auf der **Erstellen von Data Mining-Struktur** Seite **welche Datamining-Technik möchten Sie verwenden?** Option **Microsoft Association Rules** aus der Liste aus, und klicken Sie dann auf **Weiter**. Die **Datenquellensicht auswählen** Seite wird angezeigt.  
   
-5.  Wählen Sie **Aufträge**unter **verfügbare Datenquellensichten**, und klicken Sie dann auf **Weiter**.  
+5.  Wählen Sie **Bestellungen**unter **verfügbare Datenquellensichten**, und klicken Sie dann auf **Weiter**.  
   
-6.  Auf der **Tabellentypen angeben** wählen Sie die Seite in der Zeile für die Tabelle "vassocseqlineitems" die **geschachtelte** Kontrollkästchen, und wählen Sie in der Zeile für die geschachtelte Tabelle vAssocSeqOrders der **Fall** Kontrollkästchen. Klicken Sie auf **Weiter**.  
+6.  Auf der **Tabellentypen angeben** Seite in der Zeile für die Tabelle "vassocseqlineitems", wählen Sie die **geschachtelte** aus, und wählen Sie in der Zeile für die geschachtelte Tabelle vAssocSeqOrders, die **Fall** Kontrollkästchen. Klicken Sie auf **Weiter**.  
   
-7.  Auf der **Trainingsdaten angeben** Seite, deaktivieren Sie alle Kontrollkästchen, die möglicherweise aktiviert sind. Legen Sie den Schlüssel für die Falltabelle vAssocSeqOrders durch Aktivieren der **Schlüssel** das Kontrollkästchen neben OrderNumber fest.  
+7.  Auf der **Trainingsdaten** Seite, deaktivieren Sie alle Kontrollkästchen, die überprüft werden können. Legen Sie den Schlüssel für die Falltabelle vAssocSeqOrders durch Aktivieren der **Schlüssel** das Kontrollkästchen neben OrderNumber fest.  
   
-     Da die Warenkorbanalyse zum Bestimmen dient, welche Produkte in einer einzelnen Transaktion eingefügt werden, müssen Sie nicht verwenden, die **CustomerKey** Feld.  
+     Da der Zweck der Market Basket-Analyse ist, um zu bestimmen, welche Produkte in einer einzelnen Transaktion enthalten sind, müssen Sie nicht verwenden die **CustomerKey** Feld.  
   
-8.  Legen Sie den Schlüssel für die geschachtelte Tabelle vAssocSeqLineItems durch Aktivieren der **Schlüssel** das Kontrollkästchen neben dem Modell. Die **Eingabe** Kontrollkästchen wird auch automatisch ausgewählt, wenn Sie dies tun. Wählen Sie die **vorhersagbar** für das Kontrollkästchen `Model` ebenfalls.  
+8.  Legen Sie den Schlüssel für die geschachtelte Tabelle vAssocSeqLineItems durch Aktivieren der **Schlüssel** Kontrollkästchen neben dem Modell. Die **Eingabe** Kontrollkästchen wird auch automatisch ausgewählt, wenn Sie dies tun. Wählen Sie die **vorhersagbar** Kontrollkästchen `Model` ebenfalls.  
   
-     In einem Market Basket-Modell können Sie nicht von Bedeutung ist die Reihenfolge der Produkte im Einkaufswagen und aus diesem Grund sollten Sie nicht einschließen **LineNumber** als Schlüssel für die geschachtelte Tabelle. Verwenden Sie **LineNumber** als Schlüssel nur in einem Modell, in dem die Sequenz wichtig ist. In Lektion 4 erstellen Sie ein Modell, das den [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering-Algorithmus verwendet.  
+     In einem Market Basket-Modells, Sie ist nicht wichtig die Reihenfolge der Produkte im Einkaufswagen und aus diesem Grund sollten Sie nicht einschließen **LineNumber** als Schlüssel für die geschachtelte Tabelle. Verwenden Sie **LineNumber** als Schlüssel nur in einem Modell, in dem die Sequenz wichtig ist. In Lektion 4 erstellen Sie ein Modell, das den [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering-Algorithmus verwendet.  
   
-9. Aktivieren Sie das Kontrollkästchen links neben IncomeGroup und Region, aber nehmen Sie keine anderen Angaben. Durch Aktivieren der äußerst linken Spalte fügen Sie der Struktur die Spalten zur späteren Bezugnahme hinzu. Die Spalten werden jedoch nicht im Modell verwendet. Ihre Auswahl sollte wie folgt aussehen:  
+9. Wählen Sie das Kontrollkästchen links neben IncomeGroup und Region, aber nehmen Sie keine anderen Angaben. Durch Aktivieren der äußerst linken Spalte fügen Sie der Struktur die Spalten zur späteren Bezugnahme hinzu. Die Spalten werden jedoch nicht im Modell verwendet. Ihre Auswahl sollte wie folgt aussehen:  
   
-     ![wie im Dialogfeld aussehen soll](../../2014/tutorials/media/tutorial-configassocmodel.gif "aussehen (Dialogfeld)")  
+     ![wie Sie im Dialogfeld aussehen soll](../../2014/tutorials/media/tutorial-configassocmodel.gif "wie das Dialogfeld aussehen soll")  
   
 10. Klicken Sie auf **Weiter**.  
   
-11. Auf der **Inhalt und Datentyp der Spalten angeben**überprüfen Sie die Auswahl sollte wie in der folgenden Tabelle dargestellt werden, und klicken Sie dann auf **Weiter**.  
+11. Auf der **Inhalt und Datentyp der Spalten angeben**überprüfen Sie die Auswahl, in dem sein, wie in der folgenden Tabelle dargestellt, und klicken Sie dann auf **Weiter**.  
   
     |Spalte|Inhaltstyp|Datentyp|  
     |-------------|------------------|---------------|  
@@ -65,12 +65,12 @@ ms.locfileid: "36312598"
     |vAssocSeqLineItems|||  
     |Model|Key|Textmodus|  
   
-12. Auf der **legen erstellen Tests** Seite, den Standardwert für die Option **Prozentsatz der Testdaten** liegt bei 30 Prozent. Ändern Sie diese Option, um **0**. Klicken Sie auf **Weiter**.  
+12. Auf der **erstellen Tests legen** Seite, der Standardwert für die Option **Prozentsatz der Testdaten** liegt bei 30 Prozent. Ändern Sie diese Option, um **0**. Klicken Sie auf **Weiter**.  
   
     > [!NOTE]  
     >  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stellt andere Diagramme zum Messen der Modellgenauigkeit bereit. Einige Genauigkeitsdiagrammtypen, z. B. das Prognosegütediagramm und der Kreuzvalidierungsbericht, dienen jedoch der Klassifizierung und Schätzung. Eine Unterstützung für assoziative Vorhersagen ist nicht vorgesehen.  
   
-13. Auf der **Abschließen des Assistenten** Seite **Miningstrukturname**, Typ `Association`.  
+13. Auf der **Abschließen des Assistenten** auf der Seite **Miningstrukturname**, Typ `Association`.  
   
 14. In **Miningmodellname**, Typ `Association`.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36312598"
      Data Mining-Designer wird geöffnet und zeigt die `Association` Miningstruktur, die Sie gerade erstellt haben.  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Ändern und Verarbeiten des Market Basket-Modells &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/modify-process-market-basket-model-intermediate-data-mining-tutorial.md)  
+ [Ändern und Verarbeiten der Market Basket-Modells &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/modify-process-market-basket-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Association-Algorithmus](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9d718ba8-d323-49fb-aac8-e7013a117b75
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 150a46a736a9c6ddd2f8c394f3f173906cd07132
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: bb6025b8cf196d45fe0a6c9ac5cf0c19aa54013e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056152"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276276"
 ---
 # <a name="rownumber-function-report-builder-and-ssrs"></a>RowNumber-Funktion (Berichts-Generator und SSRS)
   Gibt eine laufende Zählung der Zeilenanzahl für den angegebenen Bereich zurück.  
@@ -36,10 +36,10 @@ RowNumber(scope)
   
 #### <a name="parameters"></a>Parameter  
  *Bereich*  
- (`String`) Den Namen eines Datasets, eines Datenbereichs oder Gruppe oder Null (`Nothing` in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), den Kontext, in dem die Anzahl der Zeilen ausgewertet angibt. `Nothing` Gibt an, der äußerste Kontext angegeben, normalerweise das Berichtsdataset.  
+ (`String`) Den Namen des eine Datasets, eines Datenbereichs oder einer Gruppe oder Null (`Nothing` in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), den Kontext, in dem die Anzahl von Zeilen ausgewertet angibt. `Nothing` Gibt an, der äußerste Kontext angegeben, normalerweise das Berichtsdataset.  
   
 ## <a name="remarks"></a>Hinweise  
- `RowNumber` Gibt einen wirksamer Wert der Anzahl der Zeilen im angegebenen Bereich, ebenso wie ["RunningValue"](report-builder-functions-runningvalue-function.md) der wirksame Wert einer Aggregatfunktion zurückgegeben. Wenn Sie einen Bereich angeben, geben Sie an, wann die Zeilenanzahl auf 1 zurückzusetzen ist.  
+ `RowNumber` Gibt einen wirksamer Wert der Anzahl der Zeilen im angegebenen Bereich, ebenso wie [RunningValue](report-builder-functions-runningvalue-function.md) der wirksame Wert einer Aggregatfunktion zurückgegeben. Wenn Sie einen Bereich angeben, geben Sie an, wann die Zeilenanzahl auf 1 zurückzusetzen ist.  
   
  *scope* darf kein Ausdruck sein. *scope* muss ein Gültigkeitsbereich sein. Typische Bereiche, von der äußersten bis zur innersten Einkapselung, sind Berichtsdataset, Datenbereich, Zeilengruppen oder Spaltengruppen.  
   
@@ -51,14 +51,14 @@ RowNumber(scope)
  Weitere Informationen finden Sie in der [Aggregatfunktionsreferenz (Berichts-Generator und SSRS)](report-builder-functions-aggregate-functions-reference.md) und unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen (Berichts-Generator und SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ## <a name="code-example"></a>Codebeispiel  
- Folgender Ausdruck ist ein Ausdruck, der für die Verwendung der `BackgroundColor` Eigenschaft einer Tablix-Daten Region Detailzeile, um die Farbe der Detailzeilen für jede Gruppe, wobei stets mit Weiß abzuwechseln begonnen.  
+ Im folgenden finden Sie einen Ausdruck, mit denen Sie für die `BackgroundColor` Eigenschaft einer Detailzeile Tablix Data Region um die Farbe der Detailzeilen für jede Gruppe abzuwechseln, wobei stets mit Weiß begonnen.  
   
 ```  
 =IIF(RowNumber("GroupbyCategory") Mod 2, "White", "PaleGreen")  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ausdruck verwendet wird, in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](expressions-report-builder-and-ssrs.md)   
  [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  

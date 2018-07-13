@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e22b7c24-edab-42d6-82f6-95068e1c6043
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e2e2d3940aed13a6225bceb6f8e28e53cbbfeee4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 1f8b9d8587c41a45ee60203debee778a88714dd9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050483"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214790"
 ---
 # <a name="report-data-ssrs"></a>Berichtsdaten (SSRS)
   Berichtsdaten können aus mehreren Datenquellen in Ihrer Organisation stammen. Der erste Schritt beim Entwerfen eines Berichts ist das Erstellen von Datenquellen und Datasets, die die zugrunde liegenden Berichtsdaten darstellen. Jede Datenquelle enthält Datenverbindungsinformationen. Jedes Dataset enthält einen Abfragebefehl, der den Satz von Feldern definiert, der als Daten aus einer Datenquelle verwendet werden soll. Sie können die Daten jedes Datasets visuell darstellen, indem Sie einen Datenbereich hinzufügen, z. B. eine Tabelle, eine Matrix, ein Diagramm oder eine Karte. Wenn der Bericht verarbeitet wird, wird Datenquelle abgefragt, und jeder Datenbereich nach Bedarf erweitert, um die Abfrageergebnisse für das Dataset anzuzeigen.  
   
 ##  <a name="BkMk_ReportDataTerms"></a> Begriffe  
- If you are unfamiliar with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] concepts, review the following terms in [Reporting Services Concepts &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md): *data connection*, *embedded data sources*, *shared data sources*, *embedded datasets*, *shared datasets*, *dataset queries*, *report parts*, and *data alerts*.  
+ Wenn Sie keine Erfahrung mit sind [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Konzepte, überprüfen Sie die folgenden Begriffe in [Konzepte von Reporting Services &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md): *Datenverbindung*, *eingebettete Daten Quellen*, *freigegebene Datenquellen*, *eingebetteten Datasets*, *freigegebene Datasets*, *datasetabfragen* , *berichtsteile*, und *datenwarnungen*.  
   
 ##  <a name="BkMk_ReportDataTips"></a> Tipps zum Angeben von Berichtsdaten  
  Die folgenden Informationen helfen Ihnen beim Entwerfen Ihrer Berichtsdaten-Strategie.  
@@ -38,7 +38,7 @@ ms.locfileid: "36050483"
   
 -   **Filtern von Daten** Berichtsdaten können in der Abfrage oder im Bericht gefiltert werden. Sie können kaskadierende Parameter mithilfe von Datasets und Abfragevariablen erstellen und so den Benutzern die Möglichkeit geben, die Auswahl von Tausenden von Möglichkeiten auf eine überschaubare Zahl einzugrenzen. Sie können Daten in einer Tabelle oder in einem Diagramm auf Grundlage von Parameterwerten oder anderen Werten, die Sie angeben, filtern.  
   
--   **Parameter** Dataset-Abfragebefehle, die Abfragevariablen einschließen, erstellen automatisch übereinstimmende Berichtsparameter. Parameter können aber auch manuell erstellt werden. Wenn Sie einen Bericht anzeigen, zeigt die Berichtssymbolleiste die Parameter an. Benutzer können Werte auswählen, um Berichtsdaten zu überprüfen oder deren Auftreten zu melden. Um Berichtsdaten für bestimmte Zielgruppen anpassen möchten, können Sie Sätze von Berichtsparametern mit anderen Standardwerten, die mit der gleichen Berichtsdefinition verknüpft erstellen oder verwenden Sie die integrierte `UserID` Feld. Weitere Informationen finden Sie unter [Berichtsparameter (Berichts-Generator und Berichts-Designer)](../report-design/report-parameters-report-builder-and-report-designer.md) und [Integrierte Sammlungen in Ausdrücken (Berichts-Generator und SSRS)](../report-design/built-in-collections-in-expressions-report-builder.md).  
+-   **Parameter** Dataset-Abfragebefehle, die Abfragevariablen einschließen, erstellen automatisch übereinstimmende Berichtsparameter. Parameter können aber auch manuell erstellt werden. Wenn Sie einen Bericht anzeigen, zeigt die Berichtssymbolleiste die Parameter an. Benutzer können Werte auswählen, um Berichtsdaten zu überprüfen oder deren Auftreten zu melden. Um Berichtsdaten für bestimmte Zielgruppen anpassen, können Sie Sätze von Berichtsparametern mit anderen Standardwerten, die mit der gleichen Berichtsdefinition verknüpft erstellen oder die integrierte `UserID` Feld. Weitere Informationen finden Sie unter [Berichtsparameter (Berichts-Generator und Berichts-Designer)](../report-design/report-parameters-report-builder-and-report-designer.md) und [Integrierte Sammlungen in Ausdrücken (Berichts-Generator und SSRS)](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
 -   **Datenwarnungen** Nach der Veröffentlichung eines Berichts können Sie Warnungen auf Grundlage der Berichtsdaten erstellen, und die Zusendung einer E-Mail veranlassen, wenn die Daten den angegebenen Regeln entsprechen.  
   

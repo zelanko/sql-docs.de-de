@@ -1,5 +1,5 @@
 ---
-title: Angeben von Achsen in XPath-Abfragen (SQLXML 4.0) | Microsoft Docs
+title: Angeben von Achsen in XPath-Abfragen (SQLXML 4.0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,31 +20,31 @@ helpviewer_keywords:
 - axes [SQLXML]
 ms.assetid: d17b8278-da58-4576-95b4-7a92772566d8
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 45d10dfcde5726b37be701a3e1862294c9e21e49
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: dd45523b14c63def0b7dbe4281097ebf21592267
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056657"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242380"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Angeben von Achsen in XPath-Abfragen (SQLXML 4.0)
   In den folgenden Beispielen wird gezeigt, wie Achsen in XPath-Abfragen angegeben werden.  
   
- Die XPath-Abfragen in diesen Beispielen werden für das in SampleSchema1.xml enthaltene Zuordnungsschema angegeben. Informationen zu diesem Beispielschema finden Sie unter [Beispiel Annotated XSD-Schema für XPath-Beispiele &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+ Die XPath-Abfragen in diesen Beispielen werden für das in SampleSchema1.xml enthaltene Zuordnungsschema angegeben. Weitere Informationen zu diesem Beispielschema finden Sie unter [Annotated XSD-Beispielschema für XPath-Beispiele &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-retrieve-child-elements-of-the-context-node"></a>A. Abrufen von untergeordneten Elementen des Kontextknotens  
- Der folgende XPath-Abfrage wählt alle dem  **\<Kontakt >** untergeordnete Elemente des Kontextknotens:  
+ Der folgende XPath-Abfrage wählt alle dem  **\<wenden Sie sich an >** untergeordnete Elemente des Kontextknotens aus:  
   
 ```  
 /child::Contact  
 ```  
   
- In der Abfrage `child` ist die Achse und `Contact` ist der Knotentest (TRUE, wenn `Contact` ist ein  **\<Element >** Knoten, da \<Element > der primäre Knotentyp zugeordnet ist die `child` Achse).  
+ In der Abfrage `child` ist die Achse und `Contact` ist der Knotentest (TRUE, wenn `Contact` ist ein  **\<Element >** Knoten, da \<Element > der primäre Knotentyp zugewiesen ist die `child` Achse).  
   
  Die `child`-Achse ist die Standardachse. Daher kann die Abfrage wie folgt geschrieben werden:  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36056657"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Im Folgenden finden Sie einen Auszug aus dem Resultset der Vorlagenausführung:  
   
@@ -89,13 +89,13 @@ ms.locfileid: "36056657"
 ```  
   
 ### <a name="b-retrieve-grandchildren-of-the-context-node"></a>B. Abrufen von untergeordneten Elementen zweiter Ordnung des Kontextknotens  
- Der folgende XPath-Abfrage wählt alle der  **\<Reihenfolge >** Element untergeordneten Elemente der  **\<Kunden >** untergeordneten-Elemente des Kontextknotens:  
+ Der folgende XPath-Abfrage wählt alle dem  **\<Reihenfolge >** untergeordnete Elemente des der  **\<Kunden >** untergeordneten-Elemente des Kontextknotens aus:  
   
 ```  
 /child::Customer/child::Order  
 ```  
   
- In der Abfrage `child` ist die Achse und `Customer` und `Order` sind die Knotentests. (diese Knotentests sind TRUE, wenn Customer und Order sind  **\<Element >** Knoten, da die  **\<Element >** ist der primäre Knoten für die `child` Achse). Für jeden Knoten übereinstimmende  **\<Kunden >**, die Knoten, die mit  **\<Orders >** , die zum Ergebnis hinzugefügt werden. Nur  **\<Reihenfolge >** wird im Resultset zurückgegeben.  
+ In der Abfrage `child` ist die Achse und `Customer` und `Order` sind die Knotentests (diese Knotentests sind TRUE, wenn Customer und Order sind  **\<Element >** Knoten, da die  **\<Element >** Knoten ist der primäre Knoten für die `child` Achse). Für jeden Knoten übereinstimmende  **\<Kunden >**, die übereinstimmenden Knoten  **\<Bestellungen >** zum Ergebnis hinzugefügt werden. Nur  **\<Reihenfolge >** wird im Resultset zurückgegeben.  
   
  Die `child`-Achse ist die Standardachse. Daher kann die Abfrage wie folgt angegeben werden:  
   
@@ -125,7 +125,7 @@ ms.locfileid: "36056657"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Im Folgenden finden Sie einen Auszug aus dem Resultset der Vorlagenausführung:  
   
@@ -164,10 +164,10 @@ ms.locfileid: "36056657"
 </ROOT>  
 ```  
   
- Wenn die XPath-Abfrage als angegeben wird `Customer/Order/OrderDetail`, von einem einzelnen Knoten Abgleich  **\<Kunden >** Abfrage navigiert zu seiner  **\<Reihenfolge >** Elemente. Und für jeden Knoten übereinstimmende  **\<Reihenfolge >**, die Abfrage fügt Knoten  **\<OrderDetail >** auf das Ergebnis. Nur  **\<OrderDetail >** wird im Resultset zurückgegeben.  
+ Wenn die XPath-Abfrage als angegeben wird `Customer/Order/OrderDetail`, von einem einzelnen Knoten Abgleich  **\<Kunden >** Abfrage navigiert zu der  **\<Reihenfolge >** Elemente. Und für den Abgleich von einzelnen Knoten  **\<Reihenfolge >**, die Abfrage fügt die Knoten  **\<OrderDetail >** auf das Ergebnis. Nur  **\<OrderDetail >** wird im Resultset zurückgegeben.  
   
 ### <a name="c-use--to-specify-the-parent-axis"></a>C. Verwenden... Angeben der übergeordneten Achse  
- Die folgende Abfrage ruft alle der  **\<Reihenfolge >** -Elemente mit einem übergeordneten  **\<Kunden >** Element mit einem **CustomerID** Attribut der Wert 1. Die Abfrage verwendet die `child` -Achse im Prädikat, das übergeordnete Element des finden die  **\<Reihenfolge >** Element.  
+ Die folgende Abfrage ruft alle der  **\<Reihenfolge >** -Elemente mit einem übergeordneten  **\<Kunden >** -Element mit einem **"CustomerID"** Attribut der Wert 1. Die Abfrage verwendet die `child` -Achse im Prädikat, um das übergeordnete Element des finden die  **\<Reihenfolge >** Element.  
   
 ```  
 /child::Customer/child::Order[../@CustomerID="1"]  
@@ -186,7 +186,7 @@ ms.locfileid: "36056657"
 ```  
   
 > [!NOTE]  
->  Die XPath-Abfrage `/Order[../@CustomerID="1"]` gibt einen Fehler zurück, da kein übergeordnetes des Element  **\<Reihenfolge >**. Es kann jedoch auch Elementen im Zuordnungsschema mit  **\<Reihenfolge >**, XPath beginnt bei keinem dieser Elemente; daher  **\<Reihenfolge >** gilt die auf der obersten Ebene Elementtyp im Dokument.  
+>  Die XPath-Abfrage `/Order[../@CustomerID="1"]` wird ein Fehler zurückgegeben, da es kein übergeordnetes Element des ist  **\<Reihenfolge >**. Es kann jedoch auch Elementen im Zuordnungsschema mit  **\<Reihenfolge >**, XPath beginnt bei keinem dieser Elemente; daher  **\<Reihenfolge >** gilt die Typ der Element der obersten Ebene im Dokument.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>So testen Sie die XPath-Abfrage mit dem Zuordnungsschema  
   
@@ -210,7 +210,7 @@ ms.locfileid: "36056657"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Im Folgenden finden Sie einen Auszug aus dem Resultset der Vorlagenausführung:  
   
@@ -251,13 +251,13 @@ ms.locfileid: "36056657"
 ```  
   
 ### <a name="d-specify-the-attribute-axis"></a>D. Angeben der Attributachse  
- Der folgende XPath-Abfrage wählt alle der  **\<Kunden >** untergeordnete Elemente des Kontextknotens mit einem **CustomerID** -Attributwert 1 beträgt:  
+ Der folgende XPath-Abfrage wählt alle dem  **\<Kunden >** untergeordnete Elemente des Kontextknotens eine **"CustomerID"** -Attributwert 1 beträgt:  
   
 ```  
 /child::Customer[attribute::CustomerID="1"]  
 ```  
   
- Im Prädikat `attribute::CustomerID`, `attribute` ist die Achse und `CustomerID` ist der Knotentest (Wenn `CustomerID` ist ein Attribut der Knotentest ist "true", da die  **\<Attribut >** ist der primäre Knoten für die `attribute` Achse).  
+ Im Prädikat `attribute::CustomerID`, `attribute` ist die Achse und `CustomerID` ist der Knotentest (Wenn `CustomerID` ist ein Attribut der Knotentest "true ist", da die  **\<Attribut >** Knoten ist der primäre Knoten für die `attribute` Achse).  
   
  Es kann eine Verknüpfung mit der `attribute`-Achse (@) angegeben werden, und da `child` die Standardachse ist, muss sie in der Abfrage nicht angegeben werden:  
   
@@ -287,7 +287,7 @@ ms.locfileid: "36056657"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Im Folgenden finden Sie einen Auszug aus dem Resultset der Vorlagenausführung:  
   

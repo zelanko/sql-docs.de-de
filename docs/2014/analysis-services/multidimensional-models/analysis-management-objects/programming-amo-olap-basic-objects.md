@@ -1,5 +1,5 @@
 ---
-title: Programmieren von AMO OLAP Basic Objects | Microsoft Docs
+title: Programming AMO OLAP Basic Objects | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - AMO, OLAP
 ms.assetid: ad1c970e-c0cb-4687-9563-56ab62c2db5f
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: df3206f9bf6bd0548749abf981d6088e9ab85c0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1b36af3a013c10567e23852c338c79a834bc8376
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049589"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228250"
 ---
 # <a name="programming-amo-olap-basic-objects"></a>Programming AMO OLAP basic objects
   Die Erstellung komplexer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Objekte ist einfach und unkompliziert. Allerdings müssen Details genau beachtet werden. In diesem Thema werden die Programmierdetails von grundlegenden OLAP-Objekten erläutert. Dieses Thema enthält folgende Abschnitte:  
@@ -165,7 +165,7 @@ static DataItem CreateDataItem(DataSourceView dsv, string tableName, string colu
 ### <a name="processing-a-dimension"></a>Verarbeiten einer Dimension  
  Die Verarbeitung einer Dimension ist so einfach wie die Verwendung der Process-Methode des <xref:Microsoft.AnalysisServices.Dimension>-Objekts.  
   
- Die Verarbeitung einer Dimension kann Auswirkungen auf alle Cubes haben, die die Dimension verwenden. Weitere Informationen zu Verarbeitungsoptionen finden Sie unter [Processing Objects &#40;XMLA&#41; ](../../xmla/xml-elements-objects.md) und [mehrdimensionalen Modell Objekt verarbeiten](../processing-a-multidimensional-model-analysis-services.md).  
+ Die Verarbeitung einer Dimension kann Auswirkungen auf alle Cubes haben, die die Dimension verwenden. Weitere Informationen zu Verarbeitungsoptionen finden Sie unter [Verarbeiten von Objekten &#40;XMLA&#41; ](../../xmla/xml-elements-objects.md) und [mehrdimensionalen Modell Objekt verarbeitet](../processing-a-multidimensional-model-analysis-services.md).  
   
  Im folgenden Code wird ein inkrementelles Update in allen Dimensionen einer bereitgestellten Datenbank vorgenommen:  
   
@@ -252,7 +252,7 @@ static void CreateAdventureWorksCube(Database db, string datasourceName)
 ### <a name="processing-a-cube"></a>Verarbeiten eines Cube  
  Die Verarbeitung eines Cubes ist so einfach wie die Verwendung der Process-Methode des <xref:Microsoft.AnalysisServices.Cube>-Objekts. Durch die Verarbeitung eines Cubes werden auch alle Measuregruppen im Cube und alle Partitionen in der Measuregruppe verarbeitet. In einem Cube sind Partitionen die einzigen Objekte, die verarbeitet werden können. Zu Verarbeitungszwecken sind Measuregruppen nur Container für Partitionen. Der für den Cube festgelegte Verarbeitungstyp wird an die Partitionen weitergegeben. Die interne Verarbeitung von Cube und Measuregruppe wird auf die Verarbeitung von Dimensionen und Partitionen aufgelöst.  
   
- Weitere Informationen zu Verarbeitungsoptionen finden Sie unter [Processing Objects &#40;XMLA&#41;](../../xmla/xml-elements-objects.md), und [mehrdimensionalen Modell Objekt verarbeiten](../processing-a-multidimensional-model-analysis-services.md).  
+ Weitere Informationen zu Verarbeitungsoptionen finden Sie unter [Verarbeiten von Objekten &#40;XMLA&#41;](../../xmla/xml-elements-objects.md), und [mehrdimensionalen Modell Objekt verarbeitet](../processing-a-multidimensional-model-analysis-services.md).  
   
  Im folgenden Code wird eine vollständige Verarbeitung aller Cubes in einer angegebenen Datenbank vorgenommen:  
   
@@ -417,9 +417,9 @@ static void CreateInternetSalesMeasureGroup(Cube cube)
 ```  
   
 ### <a name="processing-a-measure-group"></a>Verarbeiten einer Measuregruppe  
- Die Verarbeitung einer Measuregruppe ist so einfach wie die Verwendung der Process-Methode des <xref:Microsoft.AnalysisServices.MeasureGroup>-Objekts. Durch die Verarbeitung einer Measuregruppe werden alle Partitionen, die zu der Measuregruppe gehören, verarbeitet. Die interne Verarbeitung einer Measuregruppe wird auf die Verarbeitung von Dimensionen und Partitionen aufgelöst. Finden Sie unter [Verarbeitung einer Partition](#ProcPart) in diesem Dokument.  
+ Die Verarbeitung einer Measuregruppe ist so einfach wie die Verwendung der Process-Methode des <xref:Microsoft.AnalysisServices.MeasureGroup>-Objekts. Durch die Verarbeitung einer Measuregruppe werden alle Partitionen, die zu der Measuregruppe gehören, verarbeitet. Die interne Verarbeitung einer Measuregruppe wird auf die Verarbeitung von Dimensionen und Partitionen aufgelöst. Finden Sie unter [Verarbeiten einer Partition](#ProcPart) in diesem Dokument.  
   
- Weitere Informationen zu Verarbeitungsoptionen finden Sie unter [Processing Objects &#40;XMLA&#41;](../../xmla/xml-elements-objects.md), und [mehrdimensionalen Modell Objekt verarbeiten](../processing-a-multidimensional-model-analysis-services.md).  
+ Weitere Informationen zu Verarbeitungsoptionen finden Sie unter [Verarbeiten von Objekten &#40;XMLA&#41;](../../xmla/xml-elements-objects.md), und [mehrdimensionalen Modell Objekt verarbeitet](../processing-a-multidimensional-model-analysis-services.md).  
   
  Im folgenden Code wird eine vollständige Verarbeitung in allen Measuregruppen eines bereitgestellten Cubes vorgenommen.  
   
@@ -485,7 +485,7 @@ static void CreateInternetSalesMeasureGroupPartitions(MeasureGroup mg)
 ###  <a name="ProcPart"></a> Verarbeiten einer Partition  
  Die Verarbeitung einer Partition ist so einfach wie die Verwendung der Process-Methode des <xref:Microsoft.AnalysisServices.Partition>-Objekts.  
   
- Weitere Informationen zu Verarbeitungsoptionen finden Sie unter [Processing Objects &#40;XMLA&#41; ](../../xmla/xml-elements-objects.md) und [mehrdimensionalen Modell Objekt verarbeiten](../processing-a-multidimensional-model-analysis-services.md).  
+ Weitere Informationen zu Verarbeitungsoptionen finden Sie unter [Verarbeiten von Objekten &#40;XMLA&#41; ](../../xmla/xml-elements-objects.md) und [mehrdimensionalen Modell Objekt verarbeitet](../processing-a-multidimensional-model-analysis-services.md).  
   
  Im folgenden Codebeispiel wird eine vollständige Verarbeitung in allen Partitionen einer festgelegten Measuregruppe vorgenommen.  
   
@@ -569,7 +569,7 @@ static public String DesignAggregationsOnPartitions(MeasureGroup mg, double opti
 ## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.AnalysisServices>   
  [Einführung in AMO-Klassen](amo-classes-introduction.md)   
- [AMO-OLAP-Klassen](amo-olap-classes.md)   
+ [AMO OLAP-Klassen](amo-olap-classes.md)   
  [Logische Architektur &#40;Analysis Services – mehrdimensionale Daten&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Datenbankobjekte &#40;Analysis Services – mehrdimensionale Daten&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)   
  [Verarbeitung von mehrdimensionalen Modellobjekten](../processing-a-multidimensional-model-analysis-services.md)  

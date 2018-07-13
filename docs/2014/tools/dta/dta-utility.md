@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - physical design structures [SQL Server]
 - command prompt utilities [SQL Server], dta
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 caps.latest.revision: 52
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c659a1637b56015bf4642e87677529b0ea4e518b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5dcf0994c14496f32de3734d5456d462ad74fe74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050037"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200820"
 ---
 # <a name="dta-utility"></a>dta
   Das **dta** -Hilfsprogramm ist die Eingabeaufforderungsversion des Datenbankoptimierungsratgebers. Mit dem Hilfsprogramm **dta** soll es Ihnen ermöglicht werden, die Funktionalität des Datenbankoptimierungsratgebers in Anwendungen und Skripts zu verwenden.  
@@ -138,7 +138,7 @@ dta -d AdventureWorks2012 ...
   
  Wenn mehrere Datenbanknamen angegeben werden, gibt **dta** einen Fehler zurück. Das Argument **-d** ist optional.  
   
- Wenn Sie eine XML-Eingabedatei verwenden, können Sie angeben, dass die erste Datenbank an die **Dta** verbindet sich über die `DatabaseToConnect` Element, das unter befindet, die `TuningOptions` Element. Weitere Informationen finden Sie unter [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
+ Wenn Sie eine XML-Eingabedatei verwenden, können Sie angeben, dass die erste Datenbank an die **Dta** eine Verbindung herstellt, mithilfe der `DatabaseToConnect` -Element, das sich befindet, die `TuningOptions` Element. Weitere Informationen finden Sie unter [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
   
  Wenn Sie nur eine einzige Datenbank optimieren, wird mit dem Argument **-d** eine Funktionalität bereitgestellt, die der des Arguments **-d** im Hilfsprogramm **sqlcmd** ähnlich ist. Die USE *database_name* -Anweisung wird jedoch nicht ausgeführt. Weitere Informationen finden Sie unter [sqlcmd Utility](../sqlcmd-utility.md).  
   
@@ -165,7 +165,7 @@ dta -d AdventureWorks2012 ...
  Ermöglicht **dta** das Überschreiben einer vorhandenen Ausgabedatei. Wenn bereits eine Ausgabedatei mit demselben Namen vorhanden ist und **-F** nicht angegeben wird, gibt **dta**einen Fehler zurück. Sie können **-F** mit **-of**, **-or**oder **-ox**verwenden.  
   
  **-fa** *physical_design_structures_to_add*  
- Gibt an, welche Arten physischer Entwurfsstruktur **dta** in die Empfehlung aufnehmen soll. In der folgenden Tabelle sind die Werte, die für dieses Argument angegeben werden können, sowie die zugehörigen Beschreibungen aufgeführt. Wenn kein Wert angegeben ist, **Dta** verwendet die standardmäßige **-Fa**`IDX`.  
+ Gibt an, welche Arten physischer Entwurfsstruktur **dta** in die Empfehlung aufnehmen soll. In der folgenden Tabelle sind die Werte, die für dieses Argument angegeben werden können, sowie die zugehörigen Beschreibungen aufgeführt. Wenn kein Wert angegeben wird, **Dta** verwendet die standardmäßige **-Fa**`IDX`.  
   
 |value|Description|  
 |-----------|-----------------|  
@@ -197,7 +197,7 @@ dta -d AdventureWorks2012 ...
 |FULL|Vollständige Partitionierung (zur Verbesserung der Leistung)|  
 |ALIGNED|Nur ausgerichtete Partitionierung (zur Verbesserung der Verwaltbarkeit)|  
   
- ALIGNED bedeutet, dass jeder vorgeschlagene Index in der von **dta** generierten Empfehlung ganz genau so wie die zugrunde liegende Tabelle partitioniert wird, für die der Index definiert wurde. Nicht gruppierte Indizes für eine indizierte Sicht werden mit der indizierten Sicht ausgerichtet. Für dieses Argument kann nur ein Wert angegeben werden. Die Standardeinstellung ist **- fp '**`NONE`.  
+ ALIGNED bedeutet, dass jeder vorgeschlagene Index in der von **dta** generierten Empfehlung ganz genau so wie die zugrunde liegende Tabelle partitioniert wird, für die der Index definiert wurde. Nicht gruppierte Indizes für eine indizierte Sicht werden mit der indizierten Sicht ausgerichtet. Für dieses Argument kann nur ein Wert angegeben werden. Der Standardwert ist **' - fp '**`NONE`.  
   
  **-fx** *drop_only_mode*  
  Gibt an, dass **dta** nur das Löschen vorhandener physischer Entwurfsstrukturen in Erwägung zieht. Das Erstellen neuer physischer Entwurfsstrukturen wird nicht in Erwägung gezogen. Wenn diese Option angegeben wird, bewertet **dta** die Zweckmäßigkeit vorhandener physischer Entwurfsstrukturen und empfiehlt das Löschen selten verwendeter Strukturen. Für dieses Argument werden keinen Werte angegeben. Es kann nicht mit den Argumenten **-fa**, **-fp**oder **-fk ALL** verwendet werden.  
@@ -208,7 +208,7 @@ dta -d AdventureWorks2012 ...
  **-ip**  
  Gibt an, dass der Plancache als Arbeitsauslastung verwendet wird. Die ersten 1.000 Plancacheereignisse für explizit ausgewählte Datenbanken werden analysiert. Dieser Wert kann mit der Option **–n** geändert werden.  
   
- **-ipf**  
+ **'-ipf**  
  Gibt an, dass der Plancache als Arbeitsauslastung verwendet wird. Die ersten 1.000 Plancacheereignisse für alle Datenbanken werden analysiert. Dieser Wert kann mit der Option **–n** geändert werden.  
   
  **-if** *workload_file*  
@@ -393,7 +393,7 @@ dta –D pubs –if pubs_wkld.sql –ox XMLTune.xml –A 120 –Tf table_list.tx
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Referenz zum Eingabeaufforderungs-Hilfsprogramm &#40;-Datenbankmodul&#41;](../command-prompt-utility-reference-database-engine.md)   
+ [Referenz zum Eingabeaufforderungs-Hilfsprogramm &#40;Datenbank-Engine&#41;](../command-prompt-utility-reference-database-engine.md)   
  [Datenbankoptimierungsratgeber](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

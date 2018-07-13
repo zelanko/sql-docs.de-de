@@ -1,5 +1,5 @@
 ---
-title: Ausfüllen (Dialogfeld) (Berichts-Generator und SSRS) | Microsoft Docs
+title: Ausfüllen (Dialogfeld) (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.reportbody.fill.f1
 - "10065"
@@ -20,22 +20,22 @@ f1_keywords:
 - "10124"
 ms.assetid: 93a91d02-d558-4a0e-8d17-3fdf21e208d3
 caps.latest.revision: 11
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1378fb461e3a52f751f79cb0d31e0dcd498d8c0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 135a2d1d7ac4a9783bf2cc66f26dc60953ec2f76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050065"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262296"
 ---
 # <a name="fill-dialog-box-report-builder-and-ssrs"></a>Ausfüllen (Dialogfeld) (Berichts-Generator und SSRS)
   Auf der Registerkarte **Ausfüllen** können Sie Farboptionen für den Hintergrund einer oder mehrerer Zellen in einem Datenbereich oder einem Textfeld angeben.  
   
 ## <a name="options"></a>Tastatur  
  **Füllfarbe**  
- Klicken Sie auf die Farbschaltfläche, um eine Füllfarbe für das Rechteck auszuwählen. Klicken Sie auf der **Expression***(fx)* Schaltfläche, um den Ausdruck bearbeiten. Hierbei können einen Hexadezimalwert für die RGB-Farbe oder eine der vordefinierten Farben, die finden Sie in der **Ausdruck** (Dialogfeld). Um eine Liste vordefinierter Farben anzuzeigen, wählen Sie **Web** im Bereich **Element**aus. Die im Bereich **Titel** aufgelisteten Farbnamen können in den Ausdruckstextbereich eingegeben werden. Verwenden Sie bei der Eingabe des Farbnamens kein Gleichheitszeichen (=) oder Anführungszeichen ("").  
+ Klicken Sie auf die Farbschaltfläche, um eine Füllfarbe für das Rechteck auszuwählen. Klicken Sie auf der **Expression***(fx)* Schaltfläche, um den Ausdruck zu bearbeiten, die einen Hexadezimalwert für die RGB-Farbe oder eine der vordefinierten Farben, die im bereitgestellt werden möglicherweise die **Ausdruck** Dialogfeld. Um eine Liste vordefinierter Farben anzuzeigen, wählen Sie **Web** im Bereich **Element**aus. Die im Bereich **Titel** aufgelisteten Farbnamen können in den Ausdruckstextbereich eingegeben werden. Verwenden Sie bei der Eingabe des Farbnamens kein Gleichheitszeichen (=) oder Anführungszeichen ("").  
   
  **Bildquelle auswählen**  
  Geben Sie den Speicherort des Bilds an, sodass der Berichtsprozessor dieses beim Rendern des Berichts anzeigen kann.  
@@ -51,7 +51,7 @@ ms.locfileid: "36050065"
   
  Wenn Sie das Bild einbetten, wählen Sie das Bild, das Sie zum Bericht hinzufügen möchten, in der Dropdownliste aus. Klicken Sie auf **Importieren** , um das Bild der Dropdownliste hinzuzufügen. Wenn Sie ein Bild im Bereich **Daten** hinzugefügt haben, können Sie dieses Bild auswählen, indem Sie auf die Option **Eingebettet** klicken und das Bild in der Dropdownliste auswählen.  
   
- Wenn Sie die Option **Extern** aktivieren, geben Sie die URL des Bilds ein. Verwenden Sie für einen Bericht auf einem für den einheitlichen Modus konfigurierten Berichtsserver veröffentlicht werden soll, einen vollständigen oder relativen Pfad (z. B. http://*\<Servername >*/images/image1.jpg). Verwenden Sie für einen Bericht auf einem im integrierten SharePoint-Modus konfigurierten Berichtsserver veröffentlicht werden soll, eine vollqualifizierte URL (z. B. http://*\<SharePointservername > /\<Website >*  /Dokumente/Images / Image1.jpg).  
+ Wenn Sie die Option **Extern** aktivieren, geben Sie die URL des Bilds ein. Verwenden Sie für einen Bericht in einem für den einheitlichen Modus konfigurierten Berichtsserver veröffentlicht wird, einen vollständigen oder relativen Pfad (z. B. http://*\<Servername >*/images/image1.jpg). Verwenden Sie für einen Bericht, der auf einem im integrierten SharePoint-Modus konfigurierten Berichtsserver veröffentlicht wird, eine vollqualifizierte URL (z. B. http://*\<SharePointservername > /\<Site >*  /Dokumente/Images / Image1.jpg).  
   
  **Importieren**  
  Diese Option ist verfügbar, wenn Sie **Eingebettet**auswählen. Klicken Sie auf diese Schaltfläche, um der Dropdownliste **Dieses Bild verwenden** ein Bild hinzuzufügen.  
@@ -65,6 +65,6 @@ ms.locfileid: "36050065"
 ## <a name="see-also"></a>Siehe auch  
  [Formatieren von Berichtselementen (Berichts-Generator und SSRS)](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Formatieren von Text und Platzhaltern &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Bilder &#40;Berichts-Generator und SSRS&#41;](report-design/images-report-builder-and-ssrs.md)  
+ [Images &#40;Berichts-Generator und SSRS&#41;](report-design/images-report-builder-and-ssrs.md)  
   
   

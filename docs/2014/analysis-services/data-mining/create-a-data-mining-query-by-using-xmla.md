@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie eine Datamining-Abfrage mithilfe von XMLA | Microsoft Docs
+title: Erstellen Sie mithilfe von XMLA Datamining-Abfragen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: 8f6b6008-006c-4792-9bd1-64c30dc3fd41
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2421d501ea5040a177cb1d52aea1c3a56b59e107
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 220d9b284175e9427a28a886e46ffe91b277fe3a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056596"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226600"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>Erstellen einer Data Mining-Abfrage mit XMLA
   Abfragen für Data Mining-Objekte können Sie mithilfe von AMO, DMX oder XML/A erstellen.  
@@ -48,7 +48,7 @@ ms.locfileid: "36056596"
   
      Eine Liste der Schemarowsets wird im Fenster **Ergebnisse** zurückgegeben. Diese Liste enthält die Rowsetnamen und Rowsetspalten für alle in der aktuellen Instanz verfügbaren Rowsets.  
   
-2.  In der **Abfrage** Bereich, platzieren Sie den Cursor nach  **\<Einschränkungsliste >** , und drücken Sie EINGABETASTE, um eine neue Zeile hinzuzufügen.  
+2.  In der **Abfrage** Bereich, platzieren Sie den Cursor nach  **\<Restriction List >** , und drücken Sie EINGABETASTE, um eine neue Zeile hinzuzufügen.  
   
 3.  Platzieren Sie den Cursor auf die leere Zeile, und geben  **\<SchemaName > DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName >**  
   

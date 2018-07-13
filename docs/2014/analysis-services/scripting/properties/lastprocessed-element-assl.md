@@ -1,5 +1,5 @@
 ---
-title: LastProcessed-Element (ASSL) | Microsoft Docs
+title: LastProcessed-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - LastProcessed element
 ms.assetid: df3d1f6f-705c-4408-9eb3-c550a1dec450
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c95c1d2f98e89536b2875193b8dc00d9a7c0c189
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7d5fd5e94c8a92ee21b1cb04e5f9ef62eddae91f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057023"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206190"
 ---
 # <a name="lastprocessed-element-assl"></a>LastProcessed-Element (ASSL)
   Enthält den schreibgeschützten Zeitstempel, der angibt, wann die Datenbank, die das übergeordnete Element enthält, zuletzt verarbeitet wurde.  
@@ -62,7 +62,7 @@ ms.locfileid: "36057023"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] wird der Wert des der `LastProcessed` Element. Der Wert ändert sich nur, wenn die Datenbank, die das übergeordnete Element enthält, verarbeitet wird. Einzelne Verarbeitung des übergeordneten Elements ändert sich nicht auf den Wert, der die `LastProcessed` Element.  
+ Die Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] bewahrt den Wert des der `LastProcessed` Element. Der Wert ändert sich nur, wenn die Datenbank, die das übergeordnete Element enthält, verarbeitet wird. Einzelne Verarbeitung des übergeordneten Elements ändert sich nicht auf den Wert des der `LastProcessed` Element.  
   
  Die Elemente, die den übergeordneten Elementen von `LastProcessed` im AMO-Objektmodell (Analysis Management Objects) entsprechen, sind <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.MeasureGroup>, <xref:Microsoft.AnalysisServices.MiningModel>, <xref:Microsoft.AnalysisServices.MiningStructure> und <xref:Microsoft.AnalysisServices.Partition>.  
   

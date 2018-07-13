@@ -1,5 +1,5 @@
 ---
-title: Verwendungsszenarien und Beispiele für Common Language Runtime (CLR)-Integration | Microsoft Docs
+title: Verwendungsszenarien und Beispiele für Common Language Runtime (CLR)-Integration | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,30 +19,30 @@ helpviewer_keywords:
 - managed code [SQL Server], samples
 ms.assetid: 33aac25f-abb4-4f29-af88-4a0dacd80ae7
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ead4b8976a05e2f27ed4e3f5f44e5de57abfe806
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e2f3ecd38a359da8fa7a3042821742493a82073f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056303"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326500"
 ---
 # <a name="usage-scenarios-and-examples-for-common-language-runtime-clr-integration"></a>Verwendungsszenarien und Beispiele für Common Language Runtime (CLR)-Integration
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält Beispielanwendungen, Paketbeispiele und zahlreiche Codebeispiele, die Sie zum Erlernen der CLR (Common Language Runtime)-Programmierbarkeitsfunktionen verwenden können.  
   
- Vollständige Visual Studio-Projekte, implementieren diese Beispiele und weitere Materialien, besuchen Sie [Microsoft SQL Server Community Projects & Samples auf CodePlex](http://go.microsoft.com/fwlink/?LinkID=193935).  
+ Vollständige Visual Studio-Projekten implementieren diese Beispiele und weitere Materialien finden Sie unter [Microsoft SQL Server Community Projects & Beispiele auf CodePlex](http://go.microsoft.com/fwlink/?LinkID=193935).  
   
 |Name|Description|  
 |----------|-----------------|  
 |[Zugreifen auf nativen Code von einer CLR-UDF](../../../2014/database-engine/dev-guide/accessing-native-code-from-a-clr-udf.md)|Zeigt, wie eine Funktion in systemeigenem (nicht verwaltetem) C++-Code in der Datenbank von einer benutzerdefinierten Funktion in einer Assembly aufgerufen wird.|  
 |[Beispiel für einen Arrayparameter](../../../2014/database-engine/dev-guide/array-parameter-sample.md)|Zeigt, wie Sie eine Gruppe von Zeilen in einer Datenbank durch Übergeben eines Arrays mit Informationen von einem Client an eine CLR-gespeicherte Prozedur auf dem Server erstellen, aktualisieren oder löschen können. Zu diesem Zweck wird ein UDT verwendet.|  
-|[Kalender entsprechende Datums- und Uhrzeitangabe UDT-Beispiel](../../../2014/database-engine/dev-guide/calendar-aware-date-and-time-udt-sample.md)|Definiert zwei UDTs, die die dem lokal gültigen Kalender entsprechende Verarbeitung von Daten und Uhrzeiten bereitstellen.|  
+|[Kalender entsprechende Datums- / UDT-Beispiel](../../../2014/database-engine/dev-guide/calendar-aware-date-and-time-udt-sample.md)|Definiert zwei UDTs, die die dem lokal gültigen Kalender entsprechende Verarbeitung von Daten und Uhrzeiten bereitstellen.|  
 |[Beispiel für CLR-Transaktionen](../../../2014/database-engine/dev-guide/clr-transactions-sample.md)|Veranschaulicht das Steuern von Transaktionen mithilfe der im System.Transactions-Namespace vorhandenen verwalteten APIs.|  
 |[Erstellung von Kontakten mit CLR und XML](../../../2014/database-engine/dev-guide/contact-creation-using-clr-and-xml.md)|Das Kontakterstellungsbeispiel für SQL Server stellt nützliche Hilfsprogramme bereit, die eine zusätzliche Funktionalitätsebene auf der einfachen AdventureWorks2012-Beispieldatenbank bilden. Das erste Hilfsprogramm erstellt Kontaktdatensätze für die verschiedenen Personen, die mit der AdventureWorks2012-Datenbank in Verbindung stehen. Die Kontaktinformationen werden mit XML angegeben und an eine C#- oder VB-basierte gespeicherte Prozedur übergeben, um das XML zu erstellen und es in die ordnungsgemäßen Tabellen für die Datenbank einzufügen.|  
 |[Currency-Typ und Konvertierungsfunktion](../../../2014/database-engine/dev-guide/currency-type-and-conversion-function.md)|Definiert einen benutzerdefinierten Currency-Datentyp mithilfe von C#.|  
-|[Behandeln von großen Objekten mit CLR](../../../2014/database-engine/dev-guide/handling-large-objects-using-clr.md)|Veranschaulicht das Übertragen von binary large Objects (LOBs) zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und einem Dateisystem zugegriffen werden kann, mit dem Server, die mit CLR-gespeicherte Prozeduren.|  
+|[Behandeln von großen Objekten mit CLR](../../../2014/database-engine/dev-guide/handling-large-objects-using-clr.md)|Veranschaulicht das übertragen großer binärer Objekte (LOBs) zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und einem Dateisystem zugegriffen werden kann, auf dem Server, die mit CLR-gespeicherte Prozeduren.|  
 |[Beispiel „Hello World Ready“](../../../2014/database-engine/dev-guide/hello-world-ready-sample.md)|Veranschaulicht die grundlegenden Vorgänge, die beim Erstellen, Bereitstellen und Testen einer einfachen gespeicherten World-Ready-Prozedur, die auf der CLR-Integration basiert, ausgeführt werden müssen.|  
 |[Beispiel „Hello World“](../../../2014/database-engine/dev-guide/hello-world-sample.md)|Veranschaulicht die grundlegenden Vorgänge zum Erstellen, bereitstellen und Testen einer einfachen CLR-Integration-basierten gespeicherten Prozedur.|  
 |[Beispiel für In-Process-Datenzugriff](../../../2014/database-engine/dev-guide/in-process-data-access-sample.md)|Enthält eine bestimmte Anzahl von einfachen Funktionen zur Demonstration verschiedener Funktionen des prozessinternen CLR-Datenzugriffsanbieters.|  

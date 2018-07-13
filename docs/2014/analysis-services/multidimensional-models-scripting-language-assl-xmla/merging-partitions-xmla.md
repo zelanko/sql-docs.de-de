@@ -1,5 +1,5 @@
 ---
-title: Zusammenführen von Partitionen (XMLA) | Microsoft Docs
+title: Zusammenführen von Partitionen (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - XML for Analysis, partitions
 ms.assetid: 657e1d4d-6d50-40f8-a771-7b20c9d865f8
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cdcd21c66320c5d29f597bc5f85b35c61f14cf36
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a3de50e053ed8b3e16373e4aa5b162991f286dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050207"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332720"
 ---
 # <a name="merging-partitions-xmla"></a>Zusammenführen von Partitionen (XMLA)
-  Wenn Partitionen denselben Aggregationsentwurf und die Struktur vorhanden sind, können Sie die Partition zusammenführen, mithilfe der [MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md) -Befehl in XML for Analysis (XMLA). Das Zusammenführen von Partitionen ist ein wichtiger Vorgang, wenn Sie Partitionen verwalten, insbesondere wenn es sich hierbei um Partitionen mit Vergangenheitsdaten handelt, die nach Datum partitioniert sind.  
+  Wenn Partitionen, die dasselbe Aggregationsdesign und die Struktur verfügen, können Sie die Partition zusammenführen, mit der [MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md) -Befehl in XML for Analysis (XMLA) verwenden. Das Zusammenführen von Partitionen ist ein wichtiger Vorgang, wenn Sie Partitionen verwalten, insbesondere wenn es sich hierbei um Partitionen mit Vergangenheitsdaten handelt, die nach Datum partitioniert sind.  
   
  Beispielsweise verwendet ein finanzieller Cube möglicherweise zwei Partitionen:  
   
@@ -39,7 +39,7 @@ ms.locfileid: "36050207"
  Beide Partitionen verwenden andere Speichereinstellungen, jedoch den gleichen Aggregationsentwurf. Anstatt den Cube am Ende des Jahres mit Vergangenheitsdaten zahlreicher Jahre zu verarbeiten, können Sie auch den `MergePartitions`-Befehl verwenden, um die Partition für das aktuelle Jahr mit der Partition für die vergangenen Jahre zusammenzuführen. Dadurch werden die Aggregationsdaten beibehalten, ohne dass eine möglicherweise zeitaufwendige vollständige Verarbeitung des Cubes erforderlich ist.  
   
 ## <a name="specifying-partitions-to-merge"></a>Angeben von Partitionen für die Zusammenführung  
- Wenn die `MergePartitions` Befehl ausgeführt wurde, die Aggregationsdaten in die Quellpartitionen in angegebenen gespeicherten der [Quelle](../xmla/xml-elements-properties/source-element-xmla.md) Eigenschaft ist im angegebenen Zielpartition hinzugefügt der [Ziel](../xmla/xml-elements-properties/target-element-xmla.md) Eigenschaft.  
+ Wenn die `MergePartitions` Befehl ausgeführt wurde, der Aggregationsdaten in der Quellpartitionen, die im angegebenen der [Quelle](../xmla/xml-elements-properties/source-element-xmla.md) Eigenschaft im angegebenen Zielpartition hinzugefügt wird die [Ziel](../xmla/xml-elements-properties/target-element-xmla.md) Eigenschaft.  
   
 > [!NOTE]  
 >  Die `Source`-Eigenschaft kann mehrere Partitionsobjektverweise enthalten. Für die `Target`-Eigenschaft gilt dies jedoch nicht.  
@@ -51,7 +51,7 @@ ms.locfileid: "36050207"
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="description"></a>Description  
- Im folgenden Beispiel werden alle Partitionen in der **Customer Counts** Measuregruppe von der **Adventure Works** Cubes in der **Adventure Works DW** Beispiel [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbank in der **Customers_2004** Partition.  
+ Im folgenden Beispiel werden alle Partitionen in der **Customer Counts** -Measuregruppe des der **Adventure Works** Cubes in der **Adventure Works DW** Beispiel [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für die Datenbank in der **Customers_2004** Partition.  
   
 ### <a name="code"></a>Code  
   

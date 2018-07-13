@@ -1,5 +1,5 @@
 ---
-title: Benutzerdefinierte Meldungen zur Protokollierung | Microsoft Docs
+title: Benutzerdefinierte Meldungen für die Protokollierung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], custom
 - writing log entries
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - custom messages for logging [Integration Services]
 ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 80086e7a946ad9d5457e95646bcd9c8bce3e3df3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3929d8c861723c2204214ba66e73ea9268c19cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049510"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221840"
 ---
 # <a name="custom-messages-for-logging"></a>Benutzerdefinierte Meldungen für die Protokollierung
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Stellt einen umfangreichen Satz an benutzerdefinierten Ereignissen zum Schreiben von Protokolleinträgen für Pakete und viele Tasks bereit. Sie können diese Einträge verwenden, um detaillierte Informationen zum Fortschritt sowie über die Ergebnisse und Probleme der Ausführung zu speichern, indem Sie vordefinierte Ereignisse bzw. benutzerdefinierte Meldungen für die spätere Analyse erfassen. Sie können beispielsweise Beginn und Ende eines Masseneinfügungsvorgangs erfassen, um Leistungsprobleme beim Ausführen des Pakets zu identifizieren.  
   
  Die benutzerdefinierten Protokolleinträge unterscheiden sich von den für Pakete und alle Container und Tasks verfügbaren Standardprotokollierungsereignissen. Die benutzerdefinierten Protokolleinträge dienen zum Erfassen nützlicher Informationen zu einem bestimmten Task eines Pakets. Beispielsweise zeichnet einer der benutzerdefinierten Protokolleinträge für den Task SQL ausführen die von dem Task ausgeführte SQL-Anweisung im Protokoll auf.  
   
- In allen Protokolleinträgen sind jeweils das Datum und die Uhrzeit enthalten, einschließlich der beim Beginnen und Beenden eines Pakets automatisch geschriebenen Protokolleinträge. Bei vielen Protokollereignissen werden mehrere Einträge in das Protokoll geschrieben. In der Regel tritt dies dann auf, wenn ein Ereignis verschiedene Phasen aufweist. Z. B. die `ExecuteSQLExecutingQuery` Ereignisprotokoll schreibt drei Einträge: einen Eintrag, nachdem der Task eine Verbindung mit der Datenbank, einen weiteren, nachdem der Task erhält, startet die SQL-Anweisung und eine weitere vorbereiten, nachdem die Ausführung der SQL-Anweisung abgeschlossen ist.  
+ In allen Protokolleinträgen sind jeweils das Datum und die Uhrzeit enthalten, einschließlich der beim Beginnen und Beenden eines Pakets automatisch geschriebenen Protokolleinträge. Bei vielen Protokollereignissen werden mehrere Einträge in das Protokoll geschrieben. In der Regel tritt dies dann auf, wenn ein Ereignis verschiedene Phasen aufweist. Z. B. die `ExecuteSQLExecutingQuery` -Protokollereignis drei Einträge: einen Eintrag, nachdem der Task eine Verbindung mit der Datenbank, einen weiteren, nachdem die Aufgabe bereiten Sie die SQL-Anweisung und eine weitere nach Abschluss die Ausführung der SQL-Anweisung beginnt.  
   
  Die folgenden [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Objekte verfügen über benutzerdefinierte Protokolleinträge:  
   
@@ -103,9 +103,9 @@ ms.locfileid: "36049510"
 |Protokolleintrag|Description|  
 |---------------|-----------------|  
 |`BufferSizeTuning`|Zeigt an, dass der Datenflusstask die Größe des Puffers geändert hat. Der Protokolleintrag beschreibt die Gründe für die Größenänderung und listet die temporäre neue Puffergröße auf.|  
-|`OnPipelinePostEndOfRowset`|Gibt an, dass eine Komponente das Signal Ende des Rowsets erhalten hat, durch den letzten Aufruf von festgelegtes die `ProcessInput` Methode. Für jede Komponente im Datenfluss, die eine Eingabe verarbeitet, wird ein Eintrag geschrieben. Der Eintrag schließt den Namen der Komponente ein.|  
+|`OnPipelinePostEndOfRowset`|Gibt an, dass eine Komponente das Signal Ende des Rowsets erhalten hat durch den letzten Aufruf von festgelegt ist die `ProcessInput` Methode. Für jede Komponente im Datenfluss, die eine Eingabe verarbeitet, wird ein Eintrag geschrieben. Der Eintrag schließt den Namen der Komponente ein.|  
 |`OnPipelinePostPrimeOutput`|Gibt an, dass die Komponente ihren letzten Aufruf abgeschlossen wurde die `PrimeOutput` Methode. Je nach Datenfluss werden möglicherweise mehrere Protokolleinträge geschrieben. Wenn es sich bei der Komponente um eine Quelle handelt, bedeutet das, dass die von der Komponente durchgeführte Zeilenverarbeitung fertig gestellt wurde.|  
-|`OnPipelinePreEndOfRowset`|Gibt an, dass eine Komponente das Signal Ende des Rowsets erhalten, durch den letzten Aufruf von festgelegtes die `ProcessInput` Methode. Für jede Komponente im Datenfluss, die eine Eingabe verarbeitet, wird ein Eintrag geschrieben. Der Eintrag schließt den Namen der Komponente ein.|  
+|`OnPipelinePreEndOfRowset`|Gibt an, dass eine Komponente das Signal für Ende des Rowsets, der durch den letzten Aufruf der festgelegt wird, erhalten die `ProcessInput` Methode. Für jede Komponente im Datenfluss, die eine Eingabe verarbeitet, wird ein Eintrag geschrieben. Der Eintrag schließt den Namen der Komponente ein.|  
 |`OnPipelinePrePrimeOutput`|Zeigt an, dass die Komponente einen Aufruf aus der `PrimeOutput`-Methode erhalten soll. Je nach Datenfluss werden möglicherweise mehrere Protokolleinträge geschrieben.|  
 |`OnPipelineRowsSent`|Berichtet die Anzahl von Zeilen, die einer Komponenteneingabe durch einen Aufruf der `ProcessInput`-Methode bereitgestellt wurden. Der Protokolleintrag enthält den Komponentennamen.|  
 |`PipelineBufferLeak`|Stellt Informationen zu Komponenten bereit, die Puffer aufrechterhalten haben, nachdem der Puffer-Manager beendet wurde. Das bedeutet, dass Pufferressourcen nicht freigegeben wurden, was zu Speicherverlusten führen kann. Der Protokolleintrag stellt den Namen der Komponente und die ID des Puffers bereit.|  

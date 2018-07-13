@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 544931a2a43d875af5d2688bd1e52667ea5c5b5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c46f1e1993743365c9a0120a086f8732c2b60e5a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056158"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264206"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Seitenlayout und Rendering (Berichts-Generator und SSRS)
   Wenn Sie Berichte erstellen, ist es wichtig, das Verhalten des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Renderers zu verstehen, um sicherzustellen, dass der gerenderte Bericht wie von Ihnen gewünscht aussieht, einschließlich Seitenlayouts und Seitenumbrüchen. Sie möchten wahrscheinlich auch sicherstellen, dass der gerenderte Bericht auf das Papierformat passt, das Sie oder die Organisation im Allgemeinen verwenden.  
@@ -57,7 +57,7 @@ ms.locfileid: "36056158"
     > [!NOTE]  
     >  Obwohl es keinen direkten Export für ein anderes Format bereitstellt, generiert Atom-Rendering Datendateien aus Berichten.  
   
--   **Renderer mit weichem Seitenumbruch:** Renderer mit weichem Seitenumbruch behalten das Berichtslayout und die Formatierung bei. Die mithilfe dieser Option erstellte Datei wird für die Bildschirmanzeige und -bereitstellung optimiert, beispielsweise auf einer Webseite. Die verfügbaren einen weichen Renderer mit weichem Seitenumbruch sind: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word, Webarchiv (MHTML) und HTML.  
+-   **Renderer mit weichem Seitenumbruch:** Renderer mit weichem Seitenumbruch behalten das Berichtslayout und die Formatierung bei. Die mithilfe dieser Option erstellte Datei wird für die Bildschirmanzeige und -bereitstellung optimiert, beispielsweise auf einer Webseite. Die verfügbaren vorläufig Renderer mit weichem Seitenumbruch sind: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word, Webarchiv (MHTML) und HTML.  
   
 -   **Renderer mit hartem Seitenumbruch** : Renderer mit hartem Seitenumbruch behalten das Berichtslayout und die Formatierung bei. Die mithilfe dieser Option erstellte Datei wird für einen konsistenten Druck oder für die Onlineanzeige in einem Buchformat optimiert. Die folgenden Renderer mit festem Seitenumbruch sind verfügbar: TIFF und PDF.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "36056158"
   
 -   [Hinzufügen oder Entfernen einer Seitenkopf- oder Seitenfußzeile &#40;Berichts-Generator und SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
   
--   [Sichtbarhalten von Kopfzeilen beim Durchführen eines Bildlaufs durch einen Bericht &#40;Berichts-Generator und SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
+-   [Sichtbarhalten von Kopfzeilen beim Scrollen durch einen Bericht &#40;Berichts-Generator und SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
 -   [Anzeigen von Seitenzahlen oder anderen Berichtseigenschaften &#40;Berichts-Generator und SSRS&#41;](display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md)  
   
@@ -115,10 +115,10 @@ ms.locfileid: "36056158"
 ##  <a name="InThisSection"></a> In diesem Abschnitt  
  Die folgenden Themen enthalten weitere Informationen zu Seitenlayout und Rendering.  
   
- [Seitenköpfe und-Füße &#40;Berichts-Generator und SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
+ [Seitenkopf-und Seitenfußzeilen &#40;Berichts-Generator und SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
  Stellt Informationen zum Verwenden von Headern und Fußzeilen in Berichten bereit und wie die Paginierung mit ihnen gesteuert wird.  
   
- [Steuern der Seite unterbrochen wird, Überschriften, Spalten und Zeilen &#40;Berichts-Generator und SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
+ [Steuern von Seitenumbrüchen, Überschriften, Spalten und Zeilen &#40;Berichts-Generator und SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
  Stellt Informationen zum Verwenden von Seitenumbrüchen bereit.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Unterstützte Access-Berichtsfunktionen (SSRS) | Microsoft Docs
+title: Unterstützte Access-Berichtsfunktionen (SSRS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], Access reports
 - functions [Reporting Services]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - modules [Reporting Services]
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
 caps.latest.revision: 43
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a3bb7caa0d570b83bb8b487a42fa2364731602d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b2beb25cee62fda3e3f71290d0f91a0a8954feed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048915"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268476"
 ---
 # <a name="supported-access-report-features-ssrs"></a>Unterstützte Access-Berichtsfunktionen (SSRS)
   Wenn Sie einen Bericht in den Berichts-Designer importieren, wird der [!INCLUDE[msCoName](../includes/msconame-md.md)] Access-bericht während des Importvorgangs in eine [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Report Definition Language (RDL)-Datei konvertiert. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] unterstützt zahlreiche Funktionen von Access. Aufgrund der Unterschiede zwischen Access und [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] werden einige Elemente jedoch leicht angewandelt oder nicht unterstützt. In diesem Thema wird beschrieben, auf welche Weise Access-Berichtsfunktionen in RDL konvertiert werden.  
@@ -35,7 +35,7 @@ ms.locfileid: "36048915"
 ## <a name="importing-access-reports"></a>Importieren von Access-Berichten  
  Einige Abfragen enthalten für Access spezifischen Code. Access-Code wird nicht mit dem Bericht importiert. Auch wenn eine Abfrage eingebettete Zeichenfolgen enthält, wird der Bericht möglicherweise nicht ordnungsgemäß importiert. Um dies zu korrigieren, ersetzen Sie die Zeichenfolgen durch einen Zeichencode. Ersetzen Sie beispielsweise das Komma (,) durch CHAR(34).  
   
- Der Importvorgang leitet das Semikolon (;) nicht ordnungsgemäß oder XML-Markupzeichen (\<, > usw.) in den Verbindungszeichenfolgen-Informationen. Enthält eine Verbindungszeichenfolge ein Semikolon oder XML-Markupzeichen, müssen Sie das Kennwort im neuen Bericht nach dem Import manuell festlegen.  
+ Der Importvorgang wird das Semikolon (;) nicht ordnungsgemäß übergeben oder XML-Markupzeichen (\<, > usw.) in den Informationen zur Verbindungszeichenfolge. Enthält eine Verbindungszeichenfolge ein Semikolon oder XML-Markupzeichen, müssen Sie das Kennwort im neuen Bericht nach dem Import manuell festlegen.  
   
  Beim Importieren werden die Verbindungs- oder allgemeinen Timeouteinstellungen in der Verbindungszeichenfolge nicht importiert. Möglicherweise müssen Sie nach dem Importieren des Berichts diese Einstellungen anpassen.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36048915"
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] unterstützt OLE DB-Datenquellen wie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Wenn Sie Berichte aus einer Access-Projektdatei (ADP) importieren, wird als Verbindungszeichenfolge für die Datenquelle die Verbindungszeichenfolge in der ADP-Datei übernommen. Wenn Sie Berichte aus einer Access-Datenbankdatei (MDB oder ACCDB) importieren, verweist die Verbindungszeichenfolge möglicherweise auf die Access-Datenbank, und Sie müssen sie nach dem Import der Berichte korrigieren. Handelt es sich bei der Datenquelle für den Access-Bericht um eine Abfrage, werden die Abfrageinformationen ohne Änderung in der RDL-Datei gespeichert. Handelt es sich bei der Datenquelle für den Access-Bericht um eine Tabelle, wird durch den Konvertierungsprozess eine Abfrage erstellt, die auf dem Tabellennamen und den Feldern der Tabelle basiert.  
   
 ## <a name="reports-with-custom-modules"></a>Berichte mit benutzerdefinierten Modulen  
- Falls benutzerdefinierter [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] Codes innerhalb von Modulen, wird es nicht konvertiert. Wenn Berichts-Designer Code während des Importvorgangs auftritt, wird eine Warnung generiert und angezeigt, der **Aufgabenliste** Fenster.  
+ Falls benutzerdefinierter [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] Code enthaltenen Module, wird es nicht konvertiert. Wenn Berichts-Designer den Code während des Importvorgangs auftritt, wird eine Warnung generiert und angezeigt werden, der **Aufgabenliste** Fenster.  
   
 ## <a name="report-controls"></a>Berichtssteuerelemente  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] unterstützt die folgenden Access-Steuerelemente und schließt sie in konvertierte Berichtsdefinitionen ein.  
@@ -61,17 +61,17 @@ ms.locfileid: "36048915"
 |||||  
 |-|-|-|-|  
 |image|Bezeichnung|Linie|Rechteck|  
-|Unterformular|Unterbericht<br /><br /> **Hinweis** während ein Unterbericht-Steuerelement innerhalb des Hauptberichts konvertiert wird, des Unterberichts selbst separat konvertiert wird.|Textfeld||  
+|Unterformular|Unterbericht<br /><br /> **Beachten Sie** während ein Unterbericht-Steuerelement innerhalb des Hauptberichts konvertiert wird, des Unterberichts selbst separat konvertiert wird.|Textfeld||  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] unterstützt die folgenden Steuerelemente nicht:  
   
 |||||  
 |-|-|-|-|  
 |Gebundenes Objektfeld|Kontrollkästchen|Kombinationsfeld|Befehlsschaltfläche|  
-|Benutzerdefiniertes Steuerelement|Listenfeld|Objektfeld|Optionsfeld|  
+|Benutzerdefiniertes Steuerelement|Listenfeld|Objektfeld|Optionsfeld-Steuerelement|  
 |Registersteuerelement|Umschaltfläche|||  
   
- Berichts-Designer eine der folgenden Steuerelemente während des Importvorgangs gefunden, wird eine Warnung generiert und angezeigt, der **Aufgabenliste** Fenster.  
+ Wenn Berichts-Designer, eines dieser Steuerelemente während des Importvorgangs auftritt, wird eine Warnung generiert und angezeigt werden, der **Aufgabenliste** Fenster.  
   
  Andere Steuerelemente, wie ActiveX und Office Web Components, werden nicht importiert. Enthält ein Access-Bericht beispielsweise ein OWC-Diagramm-Steuerelement, wird dieses beim Import des Berichts nicht konvertiert.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36048915"
   
 |||||  
 |-|-|-|-|  
-|Hintergrundfarbe|Hintergrundart|Rahmenfarbe|Rahmenart|  
+|Hintergrundfarbe|Hintergrundart|BorderColor|Rahmenart|  
 |Rahmenbreite|BottomMargin|Vergrößerbar (Textfeld)|Verkleinerbar (Textfeld)|  
 |Beschriftung|SchriftFett|Kursiv|FontName|  
 |FontSize|Extras|Schriftbreite|NeueSeite|  
@@ -129,7 +129,7 @@ ms.locfileid: "36048915"
 |Zchn$|ZInteger|ZLong|ZSingle|  
 |CStr|ZVariant|ZVarDat|Format|  
 |FormatWährung|FormatDatumZeit|FormatZahl|FormatProzent|  
-|Hex|Hex$|Nz|Oct|  
+|Hex|Hex$|Nz|Oktober|  
 |Oktal$|Str|Str$|StrKonv|  
 |Val||||  
   
@@ -298,7 +298,7 @@ ms.locfileid: "36048915"
  In einer [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Berichtsdefinition können Rechtecke andere Berichtselemente enthalten. Jedes Rechteck, das größer ist als das Berichtselement und das mehr als 90 Prozent von dessen Fläche überdeckt, wird zu einem Container für das Berichtselement.  
   
 ## <a name="bitmaps"></a>Bitmaps  
- Alle in einen Bericht eingebetteten Bitmaps werden beim Import des Berichts unabhängig von ihrem ursprünglichen Format in das BMP-Format konvertiert. Enthält ein Bericht z. B. JPG- und GIF-Dateien, handelt es sich bei den resultierenden Ressourcen, die mit dem Bericht importiert werden, um BMP-Dateien. Die Bitmaps werden als eingebettete Bilder im Bericht gespeichert. Informationen zu eingebetteten Bildern finden Sie unter [Bilder &#40;Berichts-Generator und SSRS&#41;](report-design/images-report-builder-and-ssrs.md).  
+ Alle in einen Bericht eingebetteten Bitmaps werden beim Import des Berichts unabhängig von ihrem ursprünglichen Format in das BMP-Format konvertiert. Enthält ein Bericht z. B. JPG- und GIF-Dateien, handelt es sich bei den resultierenden Ressourcen, die mit dem Bericht importiert werden, um BMP-Dateien. Die Bitmaps werden als eingebettete Bilder im Bericht gespeichert. Weitere Informationen zu eingebetteten Bildern finden Sie unter [Images &#40;Berichts-Generator und SSRS&#41;](report-design/images-report-builder-and-ssrs.md).  
   
 ## <a name="other-considerations"></a>Weitere Überlegungen  
  Neben den genannten Aspekten gilt für aus Access importierte Berichte Folgendes:  

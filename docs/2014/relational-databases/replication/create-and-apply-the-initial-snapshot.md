@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], creating
 - snapshot replication [SQL Server], initial snapshots
 ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 caps.latest.revision: 42
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: acb9bfe0b078dae12d4c4db1263f86dcd7700590
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 13184d6de8612a2b86492854e755961008e3f3ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049190"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329856"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Erstellen und Anwenden der Anfangsmomentaufnahme
   In diesem Thema wird beschrieben, wie die Anfangsmomentaufnahme in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) erstellt und übernommen wird. Mergeveröffentlichungen, die parametrisierte Filter verwenden, erfordern eine zweiteilige Momentaufnahme. Weitere Informationen finden Sie unter [Create a Snapshot for a Merge Publication with Parameterized Filters](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
@@ -161,11 +161,11 @@ ms.locfileid: "36049190"
   
 3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die restlichen Objekteigenschaften zu laden. Wenn diese Methode zurückgibt `false`, entweder die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
   
-4.  Wenn der Wert der <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> ist `false`, rufen Sie <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> den Momentaufnahme-Agentauftrag für diese Veröffentlichung zu erstellen.  
+4.  Wenn der Wert des <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> ist `false`, rufen Sie <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> den Momentaufnahme-Agentauftrag für diese Veröffentlichung zu erstellen.  
   
 5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> -Methode auf, um den Agentauftrag zu starten, der die Momentaufnahme für diese Veröffentlichung generiert.  
   
-6.  (Optional) Wenn der Wert der <xref:Microsoft.SqlServer.Replication.TransPublication.SnapshotAvailable%2A> ist `true`, die Momentaufnahme für Abonnenten verfügbar ist.  
+6.  (Optional) Wenn der Wert des <xref:Microsoft.SqlServer.Replication.TransPublication.SnapshotAvailable%2A> ist `true`, die Momentaufnahme für Abonnenten verfügbar ist.  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-snapshot-or-transactional-publication-by-running-the-snapshot-agent-synchronous"></a>So generieren Sie die Anfangsmomentaufnahme für eine Momentaufnahme- oder Transaktionsveröffentlichung durch Ausführen des Momentaufnahme-Agents (synchron)  
   
@@ -195,11 +195,11 @@ ms.locfileid: "36049190"
   
 3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die restlichen Objekteigenschaften zu laden. Wenn diese Methode zurückgibt `false`, entweder die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
   
-4.  Wenn der Wert der <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> ist `false`, rufen Sie <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> den Momentaufnahme-Agentauftrag für diese Veröffentlichung zu erstellen.  
+4.  Wenn der Wert des <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> ist `false`, rufen Sie <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> den Momentaufnahme-Agentauftrag für diese Veröffentlichung zu erstellen.  
   
 5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> -Methode auf, um den Agentauftrag zu starten, der die Momentaufnahme für diese Veröffentlichung generiert.  
   
-6.  (Optional) Wenn der Wert der <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> ist `true`, die Momentaufnahme für Abonnenten verfügbar ist.  
+6.  (Optional) Wenn der Wert des <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> ist `true`, die Momentaufnahme für Abonnenten verfügbar ist.  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-merge-publication-by-running-the-snapshot-agent-synchronous"></a>So generieren Sie die Anfangsmomentaufnahme für eine Mergeveröffentlichung durch Ausführen des Momentaufnahme-Agents (synchron)  
   

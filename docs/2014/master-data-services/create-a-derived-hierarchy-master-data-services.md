@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - derived hierarchies, creating
 - creating derived hierarchies [Master Data Services]
 ms.assetid: fec653c4-11cc-46a2-8dd8-b605341ebb40
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: eed0b86271cb44565e2724cc6c961521c8d683ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 696b4bc98f4feb47ae7db6cae99d1ba9ae8a6628
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049243"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217640"
 ---
 # <a name="create-a-derived-hierarchy-master-data-services"></a>Erstellen einer abgeleiteten Hierarchie (Master Data Services)
   Erstellen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]eine abgeleitete Hierarchie, wenn Sie eine ebenenbasierte Hierarchie möchten, die sicherstellt, dass sich die Elemente auf der richtigen Ebene befinden. Abgeleitete Hierarchien basieren auf den domänenbasierten Attributbeziehungen, die in einem Modell vorhanden sind.  
@@ -54,7 +54,7 @@ ms.locfileid: "36049243"
   
 6.  Klicken Sie auf **Abgeleitete Hierarchie speichern**.  
   
-7.  Auf der **abgeleitete Hierarchie bearbeiten** Seite in der **verfügbare Entitäten und Hierarchien** Bereich, klicken Sie auf eine Entität oder eine Hierarchie, und ziehen Sie auf der **aktuelle Ebenen** Bereich.  
+7.  Auf der **abgeleitete Hierarchie bearbeiten** auf der Seite die **verfügbare Entitäten und Hierarchien** Bereich, klicken Sie auf eine Entität oder eine Hierarchie, und ziehen Sie dann auf die **aktuelle Ebenen** Bereich.  
   
 8.  Ziehen Sie Entitäten oder Hierarchien in diesen Bereich, bis die Hierarchie vollständig ist.  
   

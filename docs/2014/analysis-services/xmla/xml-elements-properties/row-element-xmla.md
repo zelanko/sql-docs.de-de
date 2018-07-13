@@ -1,5 +1,5 @@
 ---
-title: Row-Element (XMLA) | Microsoft Docs
+title: Row-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - row element
 ms.assetid: 4d9977a0-c396-44c7-9fd4-97f4c3d643aa
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: de6460bc6d51c4205752b7db186412e420438145
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 17bc202bb7e1d2c0701b478409b02f4bbb160958
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057261"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223990"
 ---
 # <a name="row-element-xmla"></a>row-Element (XMLA)
-  Enthält eine einzelne Zeile mit Daten für eine [Stamm](root-element-xmla.md) Element, das tabellarische Daten zurückgegebenes enthält eine [Discover](../xml-elements-methods-discover.md) oder [Execute](../xml-elements-methods-execute.md) -Methodenaufruf.  
+  Enthält eine einzelne Zeile von Daten für eine [Stamm](root-element-xmla.md) -Element, das tabellarische Daten, die vom enthält eine [ermitteln](../xml-elements-methods-discover.md) oder [Execute](../xml-elements-methods-execute.md) Methodenaufruf.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36057261"
 |Untergeordnete Elemente|Ein oder mehrere Column-Elemente.|  
   
 ## <a name="remarks"></a>Hinweise  
- Jede von einem `root`-Element ausgegebene Zeile, die tabellarische Daten enthält, verfügt über eine entsprechendes `row`-Element. Jede Spalte in der `root` Element durch ein separates XML-Element dargestellt wird. Der Wert der Spalte, für die `row` Element wird im XML-Element enthaltenen Daten und der Namen der Spalte entspricht dem Namen des XML-Elements.  
+ Jede von einem `root`-Element ausgegebene Zeile, die tabellarische Daten enthält, verfügt über eine entsprechendes `row`-Element. Jede Spalte in der `root` Element durch ein separates XML-Element dargestellt wird. Der Wert der Spalte, für die `row` Element ist, die das XML-Element enthaltenen Daten, und der Name der Spalte entspricht dem Namen des XML-Elements.  
   
  Der NULL-Wert für eine Spalte innerhalb einer Zeile kann auf zwei Arten ausgedrückt werden:  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36057261"
 </row>  
 ```  
   
- Wenn ein Column-Element einen Fehler enthält ein `Error` -Element stellt Informationen zu einem Fehler bereit, wie im folgenden Beispiel beschrieben:  
+ Wenn ein Column-Element einen Fehler enthält eine `Error` -Element stellt Informationen zu einem Fehler bereit, wie im folgenden Beispiel beschrieben:  
   
 ```  
 <row>   <Store_name>  

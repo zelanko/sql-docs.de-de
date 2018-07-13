@@ -1,5 +1,5 @@
 ---
-title: Miningmodellinhalt Sequence Clustering-Modellen (Analysis Services – Datamining) | Microsoft Docs
+title: Mingingmodellinhalt von Sequence Clustering-Modellen (Analysis Services – Datamining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, sequence clustering models
 - sequence clustering algorithms [Analysis Services]
 ms.assetid: 68e1934a-e147-4d53-b122-fa15e3fd5485
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bb03523f20468a24cb901f08dd0eff9a368aa8cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f0b505e01e6b8334ed1a0baeaacbda7e29ba7407
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050461"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208150"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>Mingingmodellinhalt von Sequence Clustering-Modellen (Analysis Services – Data Mining)
   In diesem Thema wird der Miningmodellinhalt beschrieben, der Modellen eigen ist, die den Microsoft Sequence Clustering-Algorithmus verwenden. Eine Erklärung der auf die Miningmodellinhalte bezogenen allgemeinen und statistischen Terminologie, die für alle Modelltypen gilt, finden Sie unter [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -158,7 +158,7 @@ ms.locfileid: "36050461"
 ###  <a name="bkmk_NODEDIST"></a> NODE_DISTRIBUTION-Tabelle  
  Die NODE_DISTRIBUTION-Tabelle bietet detaillierte Informationen über Wahrscheinlichkeit und Unterstützung für die Übergänge und Sequenzen eines spezifischen Clusters.  
   
- Der Übergangstabelle wird immer eine Zeile hinzugefügt, um mögliche `Missing`-Werte darzustellen. Informationen darüber, was die `Missing` Wert hat die Bedeutung und Auswirkungen der Berechnungen finden Sie unter [fehlenden Werten &#40;Analysis Services – Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
+ Der Übergangstabelle wird immer eine Zeile hinzugefügt, um mögliche `Missing`-Werte darzustellen. Informationen darüber, was die `Missing` Wert bedeutet, und es Auswirkungen auf Berechnungen finden Sie unter [fehlende Werte &#40;Analysis Services – Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
   
  Die Berechnungen für Unterstützung und Wahrscheinlichkeit unterscheiden sich in Abhängigkeit davon, ob die Berechnung für die Trainingsfälle oder das fertige Modell gilt. Grund hierfür ist, dass die Standard-Clusteringmethode, Expectation Maximization (EM), davon ausgeht, dass jeder Fall zu mehr als einem Cluster gehören kann. Bei der Berechnung der Unterstützung für Fälle im Modell können unformatierte Zähler und interne Wahrscheinlichkeiten verwendet werden. Allerdings müssen die Wahrscheinlichkeiten für jede Sequenz in einem Cluster durch die Summe aller möglichen Sequenz- und Clusterkombinationen gewichtet werden.  
   

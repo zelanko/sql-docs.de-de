@@ -1,5 +1,5 @@
 ---
-title: CSDL-Anmerkungen für Business Intelligence (CSDLBI) | Microsoft Docs
+title: CSDL-Anmerkungen für Business Intelligence (CSDLBI) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: bf6f372a-bc67-45ea-a771-b2dc5b0527e5
 caps.latest.revision: 19
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 0e545667bd907460b695f63cbe9f2f537c9be62d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 45f29343fe3fb3bd95e8f9753438e90214f18c80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048336"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328430"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>CSDL-Anmerkungen für Business Intelligence (CSDLBI)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt die Darstellung der Definition eines tabellarischen Modells im XML-Format Conceptual Schema Definition Language mit Business Intelligence-Anmerkungen (CSDLBI).  
@@ -34,9 +34,9 @@ ms.locfileid: "36048336"
   
 -   [Projektmappen für tabellarische Modelle &#40;SSAS – tabellarisch&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
--   [Tabellenmodelllösungsbereitstellung &#40;SSAS – tabellarisch&#41;](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+-   [Bereitstellung von Tabellenmodelllösungen &#40;SSAS – tabellarisch&#41;](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
--   [PowerPivot-BI-Semantikmodell-Verbindung &#40;bism-Datei&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)  
+-   [PowerPivot BI-Semantikmodellverbindung &#40;bism-Datei&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)  
   
  Das CSDLBI-Schema wird vom Analysis Services-Server als Reaktion auf eine Anforderung für eine Modelldefinition von einem Client wie [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] generiert. Die Clientanwendung sendet eine XML-Abfrage an den Analysis Services-Server, der die Modelldaten hostet. Im Gegenzug sendet der Server mithilfe der CSDLBI-Anmerkungen eine XML-Meldung, die eine Definition der Entitäten im Modell enthält. Der Berichtsclient verwendet dann die Informationen zur Darstellung der im Modell verfügbaren Felder, Aggregationen und Measures. Die CSDLBI-Anmerkungen enthalten auch Informationen zum Gruppieren, Sortieren und Formatieren der Daten.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36048336"
   
 -   Unterstützung für Perspektiven.  
   
- Ausführliche Informationen zu einzelnen Elemente in CSDLBI-Anmerkungen finden Sie unter [technische Referenz für BI-Anmerkungen zu CSDL](conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md). Informationen zu CSDL-hauptspezifikation finden Sie unter der [CSDL v3-Spezifikation](https://msdn.microsoft.com/en-us/data/jj652004) auf MSDN.  
+ Ausführliche Informationen zu einzelnen Elemente in CSDLBI-Anmerkungen finden Sie unter [technische Referenz für BI-Anmerkungen zu CSDL](conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md). Informationen zu CSDL-hauptspezifikation finden Sie unter den [CSDL v3-Spezifikation](https://msdn.microsoft.com/en-us/data/jj652004) auf MSDN.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Grundlegendes zum tabellarischen Objektmodell](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   

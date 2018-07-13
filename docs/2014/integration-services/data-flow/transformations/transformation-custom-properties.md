@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -44,13 +44,13 @@ ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 caps.latest.revision: 72
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d73b7d0b58742998a0c30f58399e8deaceb1f3ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 75a43dd1ba07915bdba0ce3b42aee2a517311769
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048579"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243190"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
   Neben den Eigenschaften, die die meisten Datenflussobjekte im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Objektmodell aufweisen, verfügen zahlreiche Datenflussobjekte über benutzerdefinierte objektspezifische Eigenschaften. Diese benutzerdefinierten Eigenschaften sind nur zur Laufzeit verfügbar und sind nicht in der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Managed Programming Referenz-Dokumentation dokumentiert.  
@@ -105,7 +105,7 @@ ms.locfileid: "36048579"
 |AggregationType|Ganze Zahl (Enumeration)|Ein Wert, der den Aggregationsvorgang angibt, der für die Spalte ausgeführt werden soll. Diese Eigenschaft kann einen der folgenden Werte haben:<br /><br /> **Anzahl** (1)<br /><br /> **Alle zählen** (2)<br /><br /> **CountDistinct** (3)<br /><br /> **Summe** (4)<br /><br /> **Durchschnitt** (5)<br /><br /> **Maximum** (7)<br /><br /> **Minimum** (6)<br /><br /> **Gruppieren nach** (0)|  
 |CountDistinctKeys|Integer|Wenn der Aggregationstyp **COUNT DISTINCT**ist, ein Wert, der die genaue Anzahl von Schlüsseln angibt, die von der Aggregation geschrieben werden können. Wenn ein CountDistinctScale-Wert angegeben wird, hat der Wert in CountDistinctKeys Vorrang.|  
 |CountDistinctScale|Ganze Zahl (Enumeration)|Wenn der Aggregationstyp **COUNT DISTINCT**ist, ein Wert, der beschreibt, wie viele Schlüsselwerte ungefähr von der Aggregation geschrieben werden können. Diese Eigenschaft kann einen der folgenden Werte haben:<br /><br /> **Niedrig** (1) – bis zu 500.000 Schlüsselwerte.<br /><br /> **Mittel** (2) – bis zu 5 Millionen Schlüsselwerte.<br /><br /> **Hoch** (3) – mehr als 25 Millionen Schlüsselwerte.<br /><br /> **Keine Angabe** (0) – es wird kein CountDistinctScale-Wert verwendet.|  
-|IsBig|Boolean|Ein Wert, der angibt, ob die Spalte einen Wert größer als 4 Milliarden oder einen Wert mit einer höheren Genauigkeit als ein Gleitkommawert mit doppelter Genauigkeit enthält. Der Wert kann 0 oder 1 sein. 0 gibt an, dass IsBig `False` und die Spalte keinen großen oder genauen Wert enthält. Der Standardwert dieser Eigenschaft ist „1“.|  
+|IsBig|Boolean|Ein Wert, der angibt, ob die Spalte einen Wert größer als 4 Milliarden oder einen Wert mit einer höheren Genauigkeit als ein Gleitkommawert mit doppelter Genauigkeit enthält. Der Wert kann 0 oder 1 sein. 0 gibt an, dass IsBig `False` und die Spalte keinen großen oder genauen Wert. Der Standardwert dieser Eigenschaft ist „1“.|  
   
  Die Eingabe und die Eingabespalten der Transformation für das Aggregieren verfügen nicht über benutzerdefinierte Eigenschaften.  
   
@@ -236,7 +236,7 @@ ms.locfileid: "36048579"
 |--------------|---------------|-----------------|  
 |AllowAppend|Boolean|Ein Wert, der angibt, ob die Transformation Daten an eine vorhandene Datei anhängt. Der Standardwert dieser Eigenschaft ist `False`.|  
 |ForceTruncate|Boolean|Ein Wert, der angibt, ob die Transformation eine vorhandene Datei vor dem Schreiben der Daten abschneidet. Der Standardwert dieser Eigenschaft ist `False`.|  
-|FileDataColumnID|Integer|Ein Wert, der die Spalte identifiziert, die die Daten enthält, die von der Transformation in eine Datei eingefügt werden. In der Spalte extrahieren hat diese Eigenschaft den Wert **0**; in der Dateipfadspalte enthält diese Eigenschaft die `LineageID` von Spalte extrahieren.|  
+|FileDataColumnID|Integer|Ein Wert, der die Spalte identifiziert, die die Daten enthält, die von der Transformation in eine Datei eingefügt werden. Spalte extrahieren hat diese Eigenschaft den Wert **0**; in der Dateipfadspalte enthält diese Eigenschaft die `LineageID` von Spalte extrahieren.|  
 |WriteBOM|Boolean|Ein Wert, der angibt, ob eine Bytereihenfolge-Marke (Byte-Order Mark, BOM) in die Datei geschrieben wird.|  
   
  Die Eingabe, die Ausgabe und die Ausgabespalten der Transformation für das Exportieren von Spalten verfügen nicht über benutzerdefinierte Eigenschaften.  
@@ -251,7 +251,7 @@ ms.locfileid: "36048579"
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
 |ExpectBOM|Boolean|Ein Wert, der angibt, ob die Transformation zum Importieren von Spalten eine Bytereihenfolge-Marke (BOM) erwartet. Eine BOM wird nur bei Daten vom DT_NTEXT-Datentyp erwartet.|  
-|FileDataColumnID|Integer|Ein Wert, der die Spalte identifiziert, die die Daten enthält, die von der Transformation in den Datenfluss eingefügt werden. In der Spalte Daten eingefügt werden hat diese Eigenschaft den Wert 0; Klicken Sie auf die Spalte mit die quelldateipfaden enthält diese Eigenschaft enthält die `LineageID` der Spalte mit den einzufügenden Daten an.|  
+|FileDataColumnID|Integer|Ein Wert, der die Spalte identifiziert, die die Daten enthält, die von der Transformation in den Datenfluss eingefügt werden. Für die Spalte Daten eingefügt werden soll hat diese Eigenschaft den Wert 0; Klicken Sie auf die Spalte mit die quelldateipfaden enthält diese Eigenschaft enthält die `LineageID` der Spalte der Daten eingefügt werden soll.|  
   
  Die Eingabe, die Ausgabe und die Ausgabespalten der Transformation für das Importieren von Spalten verfügen nicht über benutzerdefinierte Eigenschaften.  
   
@@ -323,7 +323,7 @@ ms.locfileid: "36048579"
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgabespalten der Transformation für Fuzzysuche. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
 > [!NOTE]  
->  Für Ausgabespalten, die Pass-Through-Werte aus den entsprechenden Eingabespalten enthalten, CopyFromReferenceColumn ist leer und enthält SourceInputColumnLineageID der `LineageID` der entsprechenden Eingabespalte. Für Ausgabespalten, die Suchergebnisse enthalten, enthält CopyFromReferenceColumn den Namen der Suchspalte, und SourceInputColumnLineageID ist leer.  
+>  Für Ausgabespalten, die Pass-Through-Werte aus den entsprechenden Eingabespalten enthalten, ist CopyFromReferenceColumn leer, und SourceInputColumnLineageID enthält die `LineageID` der entsprechenden Eingabespalte. Für Ausgabespalten, die Suchergebnisse enthalten, enthält CopyFromReferenceColumn den Namen der Suchspalte, und SourceInputColumnLineageID ist leer.  
   
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
@@ -377,7 +377,7 @@ ms.locfileid: "36048579"
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
 |JoinType|Ganze Zahl (Enumeration)|Gibt an, ob es sich bei dem Join um einen inneren (2), linken äußeren (1) oder vollständigen Join (0) handelt.|  
-|MaxBuffersPerInput|Integer|Sie haben mehr so konfigurieren Sie den Wert von der `MaxBuffersPerInput` Eigenschaft da Microsoft Änderungen, die das Risiko zu reduzieren vorgenommen hat, dass die Transformation für Zusammenführungsjoin einer übermäßigen arbeitsspeicherbelegung bei. Dieses Problem trat in einigen Fällen auf, wenn durch die Eingaben des Zusammenführungsjoins unregelmäßige Daten erzeugt wurden.|  
+|MaxBuffersPerInput|Integer|Sie müssen nicht mehr so konfigurieren Sie den Wert des der `MaxBuffersPerInput` Eigenschaft da Microsoft Änderungen, die das Risiko zu reduzieren vorgenommen hat, dass die Transformation für Zusammenführungsjoin übermäßig Arbeitsspeicher verbraucht. Dieses Problem trat in einigen Fällen auf, wenn durch die Eingaben des Zusammenführungsjoins unregelmäßige Daten erzeugt wurden.|  
 |NumKeyColumns|Integer|Die Anzahl von Spalten, die im Join verwendet werden.|  
 |TreatNullsAsEqual|Boolean|Ein Wert, der angibt, ob die Transformation NULL-Werte als identische Werte behandelt. Der Standardwert dieser Eigenschaft ist `True`. Wenn der Eigenschaftenwert `False` ist, behandelt die Transformation NULL-Werte wie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
   
@@ -426,7 +426,7 @@ ms.locfileid: "36048579"
   
 |Eigenschaftenname|Datentyp|Description|  
 |-------------------|---------------|-----------------|  
-|Ausgewählt|Boolean|Legt die Ausgabe fest, an die die als Stichprobe entnommenen Zeilen weitergeleitet werden. In der ausgewählten Ausgabe ausgewählte festgelegt ist, um `True`, und für die nicht ausgewählten Ausgabe ausgewählte festgelegt ist, um `False`.|  
+|Ausgewählt|Boolean|Legt die Ausgabe fest, an die die als Stichprobe entnommenen Zeilen weitergeleitet werden. Klicken Sie auf der ausgewählten Ausgabe wird festgelegt `True`, und in der nicht ausgewählten Ausgabe ausgewählte auf `False`.|  
   
  Die Eingabe, die Eingabespalten und die Ausgabespalten der Transformation für Prozentwert-Stichproben verfügen nicht über benutzerdefinierten Eigenschaften.  
   
@@ -443,7 +443,7 @@ ms.locfileid: "36048579"
   
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
-|PivotUsage|Ganze Zahl (Enumeration)|Einer der folgenden Werte, die die Rolle einer Spalte angeben, wenn das DataSet pivotiert wird:<br /><br /> **0**: die Spalte ist nicht pivotiert, und die Spaltenwerte werden über die Transformationsausgabe übergeben.<br /><br /> **1**: die Spalte ist Teil des festgelegten Schlüssels, der eine oder mehrere Zeilen als Teil eines Datasets identifiziert. Alle Eingabezeilen mit demselben festgelegten Schlüssel werden zu einer einzigen Ausgabezeile zusammengefasst.<br /><br /> **2**: die Spalte ist eine Pivotspalte. Mindestens eine Spalte wird von jedem Spaltenwert erstellt.<br /><br /> **3**: die Werte aus dieser Spalte sind fügen Sie Spalten, die als Ergebnis des pivotvorgangs erstellt werden.|  
+|PivotUsage|Ganze Zahl (Enumeration)|Eine der folgenden Werte, die die Rolle einer Spalte angeben, wenn das DataSet pivotiert wird:<br /><br /> **0**: die Spalte ist nicht pivotiert, und die Spaltenwerte werden an die Transformationsausgabe übergeben.<br /><br /> **1**: die Spalte ist Teil des festgelegten Schlüssels, der eine oder mehrere Zeilen als Teil eines Datasets identifiziert. Alle Eingabezeilen mit demselben festgelegten Schlüssel werden zu einer einzigen Ausgabezeile zusammengefasst.<br /><br /> **2**: die Spalte ist eine Pivotspalte. Mindestens eine Spalte wird von jedem Spaltenwert erstellt.<br /><br /> **3**: die Werte aus dieser Spalte werden platziert, in Spalten, die als Ergebnis des pivotvorgangs erstellt werden.|  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgabespalten der Transformation für Pivot. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
@@ -481,7 +481,7 @@ ms.locfileid: "36048579"
   
 |Eigenschaftenname|Datentyp|Description|  
 |-------------------|---------------|-----------------|  
-|Ausgewählt|Boolean|Legt die Ausgabe fest, an die die als Stichprobe entnommenen Zeilen weitergeleitet werden. In der ausgewählten Ausgabe ausgewählte festgelegt ist, um `True`, und für die nicht ausgewählten Ausgabe ausgewählte festgelegt ist, um `False`.|  
+|Ausgewählt|Boolean|Legt die Ausgabe fest, an die die als Stichprobe entnommenen Zeilen weitergeleitet werden. Klicken Sie auf der ausgewählten Ausgabe wird festgelegt `True`, und in der nicht ausgewählten Ausgabe ausgewählte auf `False`.|  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgabespalten der Transformation für Zeilenstichproben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
@@ -516,7 +516,7 @@ ms.locfileid: "36048579"
 |--------------|---------------|-----------------|  
 |CurrentRowWhere|Zeichenfolge|Die WHERE-Klausel in der SELECT-Anweisung, die die aktuelle Zeile aus Zeilen mit demselben Geschäftsschlüssel auswählt.|  
 |EnableInferredMember|Boolean|Ein Wert, der angibt, ob Updates abgeleiteter Elemente erkannt werden. Der Standardwert dieser Eigenschaft ist `True`.|  
-|FailOnFixedAttributeChange|Boolean|Ein Wert, der angibt, ob die Transformation fehlschlägt, wenn Zeilen oder Spalten mit festen Attributen Änderungen enthalten oder die Suche in der Dimensionstabelle fehlschlägt. Wenn Sie davon ausgehen, dass die eingehenden Zeilen neue Datensätze enthalten, legen Sie diesen Wert auf `True` fest, damit die Transformation fortgesetzt wird, wenn die Suche fehlgeschlagen ist, da die Transformation den Ausfall verwendet, um neue Datensätze zu identifizieren. Der Standardwert dieser Eigenschaft ist `False`.|  
+|FailOnFixedAttributeChange|Boolean|Ein Wert, der angibt, ob die Transformation fehlschlägt, wenn Zeilen oder Spalten mit festen Attributen Änderungen enthalten oder die Suche in der Dimensionstabelle fehlschlägt. Wenn Sie erwarten, eingehende Zeilen neue Datensätze enthalten dass, legen Sie diesen Wert auf `True` fest, damit die Transformation, die nach dem die Suche ein Fehler auftritt, fortgesetzt werden, da die Transformation den Ausfall verwendet, um neue Datensätze zu identifizieren. Der Standardwert dieser Eigenschaft ist `False`.|  
 |FailOnLookupFailure|Boolean|Ein Wert, der angibt, ob die Transformation fehlschlägt, wenn eine Suche nach einem vorhandenen Datensatz fehlschlägt. Der Standardwert dieser Eigenschaft ist `False`.|  
 |IncomingRowChangeType|Integer|Ein Wert, der angibt, ob alle eingehenden Zeilen neue Zeilen sind oder ob die Transformation die Art der Änderung erkennen sollte.|  
 |InferredMemberIndicator|Zeichenfolge|Der Spaltenname für das abgeleitete Element.|  

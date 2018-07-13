@@ -1,5 +1,5 @@
 ---
-title: Member-Element (XMLA) | Microsoft Docs
+title: Member-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Member element
 ms.assetid: 5cc33a1f-192e-4821-a4ef-9a5f2bb7a9f0
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: f612e2cff38d71a956a9f273feba54cb8a867ffd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 318a54528ed5f9d22f0925ff10e0596413e47043
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36057615"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217930"
 ---
 # <a name="member-element-xmla"></a>Member-Element (XMLA)
-  Stellt ein einzelnes Element in einem übergeordneten [Elemente](members-element-xmla.md) oder [Tupel](tuple-element-xmla.md) Element.  
+  Stellt ein einzelnes Element in einem übergeordneten [Mitglieder](members-element-xmla.md) oder [Tupel](tuple-element-xmla.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36057615"
 |Hierarchy|Erforderliches `String`-Attribut (nur für übergeordnete `Tuple`-Elemente). Der Name der Hierarchie, der das Element, durch dargestellt, die `Member` Element gehört.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `Member` Element enthält erforderliche Informationen zum Identifizieren und ein Element innerhalb einer gegebenen Hierarchie anzeigen. Für übergeordnete `Members` Elemente, die Hierarchie wird bereits angegeben, indem die `Hierarchy` Attribut des übergeordneten Elements. Für übergeordnete `Tuple` Elemente, die Hierarchie wird angegeben, mit der `Hierarchy` Attribut des der `Member` Element.  
+ Die `Member` Element enthält die erforderlichen Informationen zum Identifizieren und ein Element innerhalb einer gegebenen Hierarchie anzuzeigen. Für übergeordnete `Members` Elemente die Hierarchie wird bereits angegeben, indem die `Hierarchy` -Attribut des übergeordneten Elements. Für übergeordnete `Tuple` Elemente die Hierarchie angegeben ist, mit der `Hierarchy` Attribut der `Member` Element.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;XMLA&#41;](xml-elements-properties.md)  

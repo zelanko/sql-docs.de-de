@@ -1,5 +1,5 @@
 ---
-title: MimeType-Element (ASSL) | Microsoft Docs
+title: MimeType-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - MimeType element
 ms.assetid: 710e2519-6892-4ce8-a10f-a4edf7077e18
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5ae8ddac41536e2857fb51cfe7fe6420d5c74c15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4c5514f057e954ff81e79fb1727f1856ce161030
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049980"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254802"
 ---
 # <a name="mimetype-element-assl"></a>MimeType-Element (ASSL)
-  Den Multipurpose Internet Mail Extensions (MIME)-Typ enthält, sofern zutreffend, der die vom dargestellten Daten der [DataItem](../data-type/dataitem-data-type-assl.md) Element.  
+  Den Multipurpose Internet Mail Extensions (MIME)-Typ enthält, falls anwendbar, die Daten, dargestellt durch die [DataItem](../data-type/dataitem-data-type-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36049980"
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnetes Element|[DataItem](../data-type/dataitem-data-type-assl.md)|  
+|Übergeordnetes Element|[DataItem-Objekt](../data-type/dataitem-data-type-assl.md)|  
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  

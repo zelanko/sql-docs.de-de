@@ -1,5 +1,5 @@
 ---
-title: Verbindungs-Manager erstellen | Microsoft Docs
+title: Verbindungs-Manager erstellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.connectionmanager.f1
 helpviewer_keywords:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, connections
 ms.assetid: 6ca317b8-0061-4d9d-b830-ee8c21268345
 caps.latest.revision: 54
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2ae1ccaa1e38d280c3d46fb4504f99df92254a9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f09d663dd371c037c3f2b44b42b202c18377b7cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049007"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252542"
 ---
 # <a name="create-connection-managers"></a>Erstellen von Verbindungs-Managern
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] enthält eine Reihe von Verbindungs-Managern für Tasks, mit denen eine Verbindung mit verschiedenen Server- und Datenquellentypen hergestellt wird. Verbindungs-Manager werden von den Datenflusskomponenten verwendet, die Daten in verschiedenen Arten von Datenspeichern extrahieren und laden, und von den Protokollanbietern, die Protokolle auf einen Server, in eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Tabelle oder eine Datei schreiben. Beispielsweise verwendet ein Paket mit einem Task Mail senden einen SMTP-Verbindungs-Manager, um eine Verbindung mit einem SMTP-Server (Simple Mail Transfer Protocol) herzustellen. Ein Paket mit einem Task SQL ausführen kann einen OLE DB-Verbindungs-Manager zum Herstellen einer Verbindung mit einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank verwenden. Weitere Informationen finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md).  
@@ -56,11 +56,11 @@ ms.locfileid: "36049007"
   
  Zur Laufzeit wird stets die richtige Version verwendet, unabhängig davon, ob Sie zur Entwurfszeit die 32-Bit-Version des Anbieters angegeben haben. Die 64-Bit-Version des Anbieters kann auch dann ausgeführt werden, wenn das Paket in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ausgeführt wird.  
   
- Beide Versionen des Anbieters verfügen über die gleiche ID. Um anzugeben, ob die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Laufzeit eine verfügbare 64-Bit-Version des Anbieters verwenden soll, müssen Sie die Run64BitRuntime-Eigenschaft des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekts festlegen. Wenn die Run64BitRuntime-Eigenschaft, um festgelegt ist `true`, die Common Language Runtime gesucht und der 64-Bit-Anbieter verwendet wird, wenn Run64BitRuntime ist `false`, die Laufzeit sucht und die 32-Bit-Anbieter verwendet. Weitere Informationen zu Eigenschaften, die Sie in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekten festlegen können, finden Sie unter [Integration Services- und Studio-Umgebungen &#40;SSIS&#41;](integration-services-ssis-development-and-management-tools.md).  
+ Beide Versionen des Anbieters verfügen über die gleiche ID. Um anzugeben, ob die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Laufzeit eine verfügbare 64-Bit-Version des Anbieters verwenden soll, müssen Sie die Run64BitRuntime-Eigenschaft des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekts festlegen. Wenn die Run64BitRuntime-Eigenschaft, um festgelegt ist `true`, die Laufzeit gefunden und verwendet Sie die 64-Bit-Anbieter aus, wenn Run64BitRuntime ist `false`, die Laufzeit gefunden und verwendet den 32-Bit-Anbieter. Weitere Informationen zu Eigenschaften, die Sie in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekten festlegen können, finden Sie unter [Integration Services- und Studio-Umgebungen &#40;SSIS&#41;](integration-services-ssis-development-and-management-tools.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Ablaufsteuerung](control-flow/control-flow.md)   
  [Datenfluss](data-flow/data-flow.md)   
- [Integrationsservices &#40;SSIS&#41; -Ereignishandler](integration-services-ssis-event-handlers.md)  
+ [Integrationsdienste &#40;SSIS&#41; -Ereignishandler](integration-services-ssis-event-handlers.md)  
   
   

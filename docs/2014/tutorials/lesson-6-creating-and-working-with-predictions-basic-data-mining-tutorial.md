@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 6: Erstellen und Verwenden von Vorhersagen (Lernprogramm zu Datamining-Lernprogramm) | Microsoft Docs'
+title: 'Lektion 6: Erstellen und Verwenden von Vorhersagen (Lernprogramm zu Datamining-Grundlagen) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b213cb58-2c40-4c89-b08b-d3c36a4afad3
 caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: de162ba989474f12e468faad9f07ba7d4ea22846
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 209ba28d519eaaaf59b681f872766b7fa9dd983f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36311888"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218700"
 ---
 # <a name="lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial"></a>Lektion 6: Erstellen und Verwenden von Vorhersagen (Lernprogramm zu Data Mining-Grundlagen)
   Sie haben die Data Mining-Modelle, die Sie erstellt haben, trainiert, getestet und untersucht. Jetzt können Sie mithilfe der Modelle ermitteln, welche Personen sich am wahrscheinlichsten von der neuen zielgerichteten Mailingkampagne angesprochen fühlen.  
@@ -30,21 +30,21 @@ ms.locfileid: "36311888"
   
  Diese Lektion enthält die folgenden Themen:  
   
- [Erstellen von Vorhersagen &#40;Lernprogramm zu Datamining-Lernprogramm&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Erstellen von Vorhersagen &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
- [Verwenden von Drillthrough für Strukturdaten &#40;Lernprogramm zu Datamining-Lernprogramm&#41;](../../2014/tutorials/using-drillthrough-on-structure-data-basic-data-mining-tutorial.md)  
+ [Verwenden von Drillthrough für Strukturdaten &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/using-drillthrough-on-structure-data-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
  [Datamining-Lernprogramm für fortgeschrittene &#40;Analysis Services – Datamining&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
   
 ## <a name="previous-lesson"></a>Vorherige Lektion  
- [Lektion 5: Testen von Modellen &#40;Lernprogramm zu Datamining-Lernprogramm&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
+ [Lektion 5: Testen von Modellen &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Erstellen von Vorhersagen &#40;Lernprogramm zu Datamining-Lernprogramm&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Erstellen von Vorhersagen &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningmodellinhalt Entscheidungsstrukturmodellen &#40;Analysis Services – Datamining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)   
+ [Mingingmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Datamining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)   
  [Erstellen von Vorhersageabfragen mithilfe des Generators für Vorhersageabfragen](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
   
   

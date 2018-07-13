@@ -1,5 +1,5 @@
 ---
-title: Reporting Services-Konfigurationsoptionen (SSRS) | Microsoft Docs
+title: Reporting Services-Konfigurationsoptionen (SSRS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ins.instwizard.reportserverinstoptions.f1
 helpviewer_keywords:
@@ -19,20 +19,20 @@ ms.assetid: e4561f6c-bc7f-467e-821a-cde8e5cd7391
 caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 81a94897a4c5a0ebce5932ef09612a377a458937
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8dff91a860d801257d9228dd904cbe36855504cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048888"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327080"
 ---
 # <a name="reporting-services-configuration-options-ssrs"></a>Reporting Services-Konfigurationsoptionen (SSRS)
   Auf der Seite **Reporting Services-Konfiguration** des Installations-Assistenten für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Sie die Optionen für das Installieren und Konfigurieren eines Berichtsservers angeben. Die Verfügbarkeit einer Installationsoption ist von den Optionen abhängig, die Sie auf der Seite **Funktionsauswahl** ausgewählt haben, und richtet sich danach, ob Sie gleichzeitig mit dem Berichtsserver auch eine lokale Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] installieren.  
   
  Wenn ein SSL-Zertifikat (Secure Sockets Layer) auf dem Computer installiert und an ein starkes Platzhalterzeichen gebunden ist, werden Reporting Services-URLs von Setup in einigen Fällen mit HTTPS-Präfix erstellt. Weitere Informationen über die Zuordnung von Zertifikaten zu Reporting Services-URLs finden Sie unter [Konfigurieren eines Berichtsservers für Secure Sockets Layer (SSL) Connections](http://go.microsoft.com/fwlink/?LinkId=199089) (http://go.microsoft.com/fwlink/?LinkId=199089) in SQL Server-Onlinedokumentation.  
   
- Die neuesten Informationen im Hinblick auf [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und die Installation und Konfiguration dieser Version finden Sie unter [zusätzliche Installationsinformationen](http://go.microsoft.com/fwlink/?LinkId=207425) (http://go.microsoft.com/fwlink/?LinkId=207425).  
+ Die neuesten Informationen zur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und die Installation und Konfiguration dieser Version finden Sie unter [zusätzliche Installationsinformationen](http://go.microsoft.com/fwlink/?LinkId=207425) (http://go.microsoft.com/fwlink/?LinkId=207425).  
   
 ## <a name="options"></a>Tastatur  
   
@@ -47,10 +47,10 @@ ms.locfileid: "36048888"
   
  Diese Option steht nur zur Verfügung, wenn die Standardwerte, die in einer Berichtsserverinstallation verwendet werden, für Ihr System gültig sind. Diese Option wird für Entwickler empfohlen, die alle Komponenten lokal installieren möchten, sowie für Benutzer, die die Software evaluieren.  
   
- Klicken Sie auf **Details**, um Informationen über die Standardeinstellungen anzuzeigen, die das Setup verwendet, oder um festzustellen, warum die Standardkonfiguration nicht installiert werden kann. Weitere Informationen zur Standardkonfiguration für einen Berichtsserver im einheitlichen Modus finden Sie unter [Standardkonfiguration für die Installation im einheitlichen Modus (Reporting Services)](http://go.microsoft.com/fwlink/?LinkId=199091) (http://go.microsoft.com/fwlink/?LinkId=199091).  
+ Klicken Sie auf **Details**, um Informationen über die Standardeinstellungen anzuzeigen, die das Setup verwendet, oder um festzustellen, warum die Standardkonfiguration nicht installiert werden kann. Weitere Informationen über die Standardkonfiguration für einen Berichtsserver im einheitlichen Modus finden Sie unter [Standardkonfiguration für die Installation im einheitlichen Modus (Reporting Services)](http://go.microsoft.com/fwlink/?LinkId=199091) (http://go.microsoft.com/fwlink/?LinkId=199091).  
   
 #### <a name="install-only"></a>Nur installieren  
- Installiert die Berichtsserver-Programmdateien, erstellt das Berichtsserver-Dienstkonto und registriert den Windows-Verwaltungsinstrumentationsanbieter des Berichtsservers. Diese Installationsoption wird als "Nur Dateien"-Installation bezeichnet. Wählen Sie diese Option aus, wenn Sie die Standardkonfiguration nicht verwenden möchten. Wenn die Standardkonfiguration nicht installiert werden kann oder wenn Sie ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failovercluster installieren, das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]enthält, ist dies die einzige verfügbare Option. Weitere Informationen zu einer ausschließlichen Datei Installation finden Sie unter [ausschließliche Datei-Installation (Reporting Services)](http://go.microsoft.com/fwlink/?LinkId=199093) (http://go.microsoft.com/fwlink/?LinkId=199093).  
+ Installiert die Berichtsserver-Programmdateien, erstellt das Berichtsserver-Dienstkonto und registriert den Windows-Verwaltungsinstrumentationsanbieter des Berichtsservers. Diese Installationsoption wird als "Nur Dateien"-Installation bezeichnet. Wählen Sie diese Option aus, wenn Sie die Standardkonfiguration nicht verwenden möchten. Wenn die Standardkonfiguration nicht installiert werden kann oder wenn Sie ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failovercluster installieren, das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]enthält, ist dies die einzige verfügbare Option. Weitere Informationen zu einer ausschließlichen Datei-Installation, finden Sie unter [ausschließliche Datei-Installation (Reporting Services)](http://go.microsoft.com/fwlink/?LinkId=199093) (http://go.microsoft.com/fwlink/?LinkId=199093).  
   
  Nach Abschluss des Setups müssen Sie die Berichtsserver-Datenbank erstellen und den Berichtsserver konfigurieren, bevor Sie ihn verwenden können. Verwenden Sie zum Konfigurieren eines Berichtsservers und Erstellen der Datenbank den Reporting Services-Konfigurations-Manager. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen einer Berichtsserver-Datenbank (Reporting Services-Konfiguration)](http://go.microsoft.com/fwlink/?LinkId=199094) (http://go.microsoft.com/fwlink/?LinkId=199094) und [Konfigurieren einer Berichtsserver-Datenbankverbindung](http://go.microsoft.com/fwlink/?LinkId=199095) (http://go.microsoft.com/fwlink/?LinkId=199095).  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36048888"
   
 -   Führen Sie die Installation über das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationsmedium durch. Klicken Sie im Setupordner auf den **-Installationsmedien auf die Datei** rsSharePoint.msi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , nachdem das Setup von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abgeschlossen ist.  
   
--   Laden Sie das Add-In herunter, und installieren Sie es. Weitere Informationen finden Sie unter [, wo die Reporting Services-add-in für SharePoint-Produkte finden](http://go.microsoft.com/fwlink/?LinkID=208634) (http://go.microsoft.com/fwlink/?LinkID=208634).  
+-   Laden Sie das Add-In herunter, und installieren Sie es. Weitere Informationen finden Sie unter [, wo Sie das Reporting Services-add-in für SharePoint-Produkte finden](http://go.microsoft.com/fwlink/?LinkID=208634) (http://go.microsoft.com/fwlink/?LinkID=208634).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Starten Sie den Reporting Services-Konfigurations-Manager](http://go.microsoft.com/fwlink/?LinkId=199096)   

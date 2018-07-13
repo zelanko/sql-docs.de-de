@@ -1,5 +1,5 @@
 ---
-title: DirectQuery-Bereitstellungsszenarien (SSAS – tabellarisch) | Microsoft Docs
+title: DirectQuery-Bereitstellungsszenarien (SSAS – tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2aaf5cb8-294b-4031-94b3-fe605d7fc4c7
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e2b6434b8916e0a2f21486c227b649f834823a93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 89454dfd53b641401352928ecf8e08b4b23e784c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049068"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268016"
 ---
 # <a name="directquery-deployment-scenarios-ssas-tabular"></a>DirectQuery-Bereitstellungsszenarien (SSAS – tabellarisch)
   In diesem Abschnitt wird eine exemplarische Vorgehensweise des Entwurfs- und Bereitstellungsprozesses für DirectQuery-Modelle erläutert. Sie können DirectQuery konfigurieren, um ausschließlich relationale Daten (nur DirectQuery) zu verwenden, oder Sie können das Modell konfigurieren, um zwischen der Verwendung ausschließlich zwischengespeicherter Daten oder ausschließlich relationaler Daten zu wechseln (hybrider Modus). In diesem Abschnitt wird der Implementierungsprozess für beide Modi erläutert. Außerdem werden mögliche Unterschiede bei den Abfrageergebnissen in Abhängigkeit vom Modus und der Sicherheitskonfiguration beschrieben.  
@@ -39,11 +39,11 @@ ms.locfileid: "36049068"
   
 -   Kopierte und eingefügte Daten können nicht verwendet werden. Wenn Sie ein PowerPivot-Modell importieren, um die Lösung zu beschleunigen, müssen Sie sicherstellen, das verknüpfte Tabellen vor dem Importieren der Lösung gelöscht werden, da die entsprechenden Daten nicht gelöscht werden können und eventuell die DirectQuery-Überprüfung blockieren.  
   
- **Schritt 2. Aktivieren des DirectQuery-Modus im Modell-Designer**  
+ **Schritt 2. Aktivieren des DirectQuery-Modus im Modell-designer**  
   
  Standardmäßig wird DirectQuery deaktiviert. Daher müssen Sie die Entwurfsumgebung für die Unterstützung des DirectQuery-Modus konfigurieren.  
   
- Mit der rechten Maustaste die **Model.bim** -Knoten im Projektmappen-Explorer, und legen Sie die Eigenschaft **DirectQuery-Modus**in `On`.  
+ Mit der rechten Maustaste die **Model.bim** Knoten im Projektmappen-Explorer, und legen Sie die Eigenschaft **DirectQuery-Modus**zu `On`.  
   
  Sie können DirectQuery jederzeit aktivieren. Damit jedoch keine Spalten oder Formeln erstellt werden, die mit dem DirectQuery-Modus nicht kompatibel sind, wird empfohlen, den DirectQuery-Modus von Anfang an zu aktivieren.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36049068"
   
 -   Ändern Sie alle erforderlichen Eigenschafteneinstellungen für den DirectQuery-Modus entsprechend der Beschreibung in den Fehlermeldungen.  
   
--   Entfernen Sie berechnete Spalten. Wenn Sie für ein bestimmtes Measure eine berechnete Spalte benötigen, können Sie die Spalte immer erstellen, mit der [relationalen Abfrage-Designer &#40;SSAS&#41; ](relational-query-designer-ssas.md) im Tabellenimport-Assistenten bereitgestellt.  
+-   Entfernen Sie berechnete Spalten. Wenn Sie für ein bestimmtes Measure eine berechnete Spalte benötigen, können Sie immer die Spalte erstellen, mit der [relationale Abfrage-Designer &#40;SSAS&#41; ](relational-query-designer-ssas.md) im Tabellenimport-Assistenten bereitgestellt.  
   
 -   Ändern oder entfernen Sie Formeln, die mit dem DirectQuery-Modus nicht kompatibel sind. Wenn Sie eine bestimmte Funktion für eine Berechnung benötigen, prüfen Sie Methoden zur Bereitstellung eines Äquivalents mithilfe von Transact-SQL.  
   
@@ -75,24 +75,24 @@ ms.locfileid: "36049068"
 |**Nur DirectQuery**|Optional. Bei einem ausschließlichen DirectQuery-Modell besteht keine Notwendigkeit einer Partition.<br /><br /> Wenn Sie jedoch während der Entwurfsphase Partitionen im Modell erstellen, müssen Sie beachten, dass nur eine Partition als Datenquelle verwendet werden kann. Standardmäßig wird die erste Partition, die Sie erstellen, als DirectQuery-Partition verwendet.<br /><br /> Um zu gewährleisten, dass alle vom Modell benötigten Daten über die DirectQuery-Partition verfügbar sind, wählen Sie eine DirectQuery-Partition und bearbeiten Sie die SQL-Anweisung, um das gesamte Dataset abzurufen.|  
 |**Hybridmodus**|Wenn eine Tabelle im Modell mehrere Partitionen aufweist, müssen Sie eine einzelne Partition als *DirectQuery-Partition*auswählen. Wenn Sie standardmäßig keine Partition zuweisen, wird die erste erstellte Partition als DirectQuery-Partition verwendet.<br /><br /> Legen Sie Verarbeitungsoptionen für alle Partitionen mit Ausnahme von DirectQuery fest. In der Regel wird die DirectQuery-Partition nie verarbeitet, da die Daten von der relationalen Quelle aus übergeben werden.<br /><br /> Weitere Informationen finden Sie unter [Partitionen und DirectQuery-Modus &#40;SSAS – tabellarisch&#41;](tabular-models/define-partitions-in-directquery-models-ssas-tabular.md).|  
   
- **Schritt 6. Konfigurieren des Identitätswechsels**  
+ **Schritt 6. Identitätswechselinformationen**  
   
  Identitätswechsel wird nur für DirectQuery-Modelle unterstützt. Die Identitätswechseloption, **Identitätswechseleinstellungen**, definiert die Anmeldeinformationen, die verwendet werden, wenn Daten von der angegebenen SQL Server-Datenquelle angezeigt werden.  
   
 |||  
 |-|-|  
-|**Nur DirectQuery**|Geben Sie für die Eigenschaft  **Identitätswechseleinstellungen** das Konto an, mit dem eine Verbindung mit der SQL Server-Datenquelle hergestellt werden soll.<br /><br /> Wenn Sie den Wert verwenden **ImpersonateCurrentUser**, die Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , dass die Hosts das Modell die Anmeldeinformationen des aktuellen Benutzers des Modells zu SQL Server-Datenbank weitergeleitet werden.|  
+|**Nur DirectQuery**|Geben Sie für die Eigenschaft  **Identitätswechseleinstellungen** das Konto an, mit dem eine Verbindung mit der SQL Server-Datenquelle hergestellt werden soll.<br /><br /> Wenn Sie den Wert des verwenden **ImpersonateCurrentUser**, die Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dass Hosts das Modell die Anmeldeinformationen des aktuellen Benutzers des Modells zu SQL Server-Datenbank erfolgreich abgeschlossen werden.|  
 |**Hybridmodus**|Geben Sie für die Eigenschaft **Identitätswechseleinstellungen** das Konto an, mit dem auf die Daten der SQL Server-Datenquelle zugegriffen werden soll.<br /><br /> Diese Einstellung beeinflusst nicht die Anmeldeinformationen, die zum Verarbeiten des vom Modell verwendeten Caches verwendet werden.|  
   
  **Schritt 7 fort. Bereitstellen des Modells**  
   
- Wenn Sie zur Bereitstellung des Modells bereit sind, öffnen Sie die **Projekt** von Visual Studio, und wählen Sie im Menü **Eigenschaften**. Legen Sie die **QueryMode** -Eigenschaft auf einen der Werte fest, der in der folgenden Tabelle beschrieben wird:  
+ Wenn Sie zum Bereitstellen des Modells bereit sind, öffnen Sie die **Projekt** Menü von Visual Studio, und wählen Sie **Eigenschaften**. Legen Sie die **QueryMode** -Eigenschaft auf einen der Werte fest, der in der folgenden Tabelle beschrieben wird:  
   
  Weitere Informationen finden Sie unter [Bereitstellen von SQL Server Data Tools &#40;SSAS – tabellarisch&#41;](tabular-models/deploy-from-sql-server-data-tools-ssas-tabular.md).  
   
 |||  
 |-|-|  
-|**Nur DirectQuery**|**' Directqueryonly '**<br /><br /> Da Sie nur "Direkte Abfrage" angegeben haben, werden die Metadaten des Modells auf dem Server bereitgestellt, das Modell wird jedoch nicht verarbeitet.<br /><br /> Beachten Sie, dass der von der Arbeitsbereichsdatenbank verwendete Cache nicht automatisch gelöscht wird. Wenn Sie sicherstellen möchten, dass die zwischengespeicherten Daten für Benutzer nicht sichtbar sind, können Sie den Entwurfszeitcache löschen. Weitere Informationen finden Sie unter [Clear the Analysis Services Caches](instances/clear-the-analysis-services-caches.md).|  
+|**Nur DirectQuery**|**DirectQueryOnly**<br /><br /> Da Sie nur "Direkte Abfrage" angegeben haben, werden die Metadaten des Modells auf dem Server bereitgestellt, das Modell wird jedoch nicht verarbeitet.<br /><br /> Beachten Sie, dass der von der Arbeitsbereichsdatenbank verwendete Cache nicht automatisch gelöscht wird. Wenn Sie sicherstellen möchten, dass die zwischengespeicherten Daten für Benutzer nicht sichtbar sind, können Sie den Entwurfszeitcache löschen. Weitere Informationen finden Sie unter [deaktivieren Sie die Analysis Services Caches](instances/clear-the-analysis-services-caches.md).|  
 |**Hybridmodus**|**DirectQuery mit InMemory**<br /><br /> **InMemory mit DirectQuery**<br /><br /> Beide Werte ermöglichen je nach Bedarf entweder die Verwendung des Caches oder der relationalen Datenquelle. Durch die Reihenfolge wird definiert, welche Datenquelle standardmäßig verwendet wird, wenn Abfragen für das Modell beantwortet werden.<br /><br /> Im Hybridmodus muss die Verarbeitung des Caches zur gleichen Zeit wie die Bereitstellung der Modellmetadaten auf dem Server stattfinden.<br /><br /> Sie können diese Einstellung nach der Bereitstellung ändern.|  
   
  **Schritt 8. Überprüfen des bereitgestellten Modells**  
@@ -109,7 +109,7 @@ ms.locfileid: "36049068"
  **Nur DirectQuery**  
  Diese Option wird bevorzugt, wenn Sie eine einzelne Datenquelle garantieren möchten oder wenn die Datenmenge die Größe des Arbeitsspeichers übersteigt. Wenn Sie mit einer sehr großen relationalen Datenquelle arbeiten, können Sie während der Entwurfszeit das Modell mit einer Teilmenge der Daten erstellen. Wenn Sie das Modell im ausschließlichen DirectQuery-Modus bereitstellen, können Sie die Datenquellendefinition bearbeiten, um alle erforderlichen Daten einzuschließen.  
   
- Diese Option wird auch bevorzugt, wenn Sie die von der relationalen Datenquelle bereitgestellten Sicherheitsfunktionen für die Steuerung des Benutzerzugriffs auf Daten verwenden möchten. Mit zwischengespeicherten tabellenmodellen können Sie auch [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Rollen Steuerelement Datenzugriff, aber die im Cache gespeicherten Daten müssen ebenfalls gesichert werden. Sie sollten diese Option immer verwenden, wenn der Sicherheitskontext erfordert, dass Daten niemals zwischengespeichert werden sollen.  
+ Diese Option wird auch bevorzugt, wenn Sie die von der relationalen Datenquelle bereitgestellten Sicherheitsfunktionen für die Steuerung des Benutzerzugriffs auf Daten verwenden möchten. Mit zwischengespeicherten tabellenmodellen können Sie auch [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Rollen zum Steuern des Datenzugriffs, aber die im Cache gespeicherten Daten müssen ebenfalls gesichert werden. Sie sollten diese Option immer verwenden, wenn der Sicherheitskontext erfordert, dass Daten niemals zwischengespeichert werden sollen.  
   
  In der folgenden Tabelle werden die möglichen Bereitstellungsergebnisse für den ausschließlichen DirectQuery-Modus beschrieben:  
   
@@ -127,7 +127,7 @@ ms.locfileid: "36049068"
   
 |||  
 |-|-|  
-|**Hybridmodus Cache bevorzugt**|Das Modell kann verarbeitet werden, und Daten können in den Cache geladen werden. Bei Abfragen wird der Cache standardmäßig verwendet.  Wenn ein Client die DirectQuery-Quelle verwenden möchte, muss ein Parameter in die Verbindungszeichenfolge eingefügt werden.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode** = **In-Memory with DirectQuery**|  
+|**Hybridmodus mit Cache bevorzugt**|Das Modell kann verarbeitet werden, und Daten können in den Cache geladen werden. Bei Abfragen wird der Cache standardmäßig verwendet.  Wenn ein Client die DirectQuery-Quelle verwenden möchte, muss ein Parameter in die Verbindungszeichenfolge eingefügt werden.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode** = **In-Memory with DirectQuery**|  
 |**Hybridmodus mit DirectQuery bevorzugt**|Das Modell wird verarbeitet, und Daten können in den Cache geladen werden. Für Abfragen wird jedoch standardmäßig DirectQuery verwendet. Wenn ein Client die zwischengespeicherten Daten verwenden möchte, muss ein Parameter in die Verbindungszeichenfolge eingefügt werden. Wenn die Tabellen im Modell partitioniert werden, wird die Prinzipalpartition des Caches auch auf **InMemory mit DirectQuery**festgelegt.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode** = **DirectQuery mit InMemory**|  
   
 ## <a name="see-also"></a>Siehe auch  

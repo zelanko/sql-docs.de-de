@@ -1,5 +1,5 @@
 ---
-title: Benutzerdefinierte Elementeigenschaften (MDX) | Microsoft Docs
+title: Benutzerdefinierte Elementeigenschaften (MDX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - custom member properties [MDX]
 ms.assetid: b64cc581-e784-42c4-bec8-932abd687423
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ba34243609b796eef635fc3b55cd99ef4f225638
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 50af6373446859ac0bf98a7170504b9d58c4a5f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050410"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321280"
 ---
 # <a name="user-defined-member-properties-mdx"></a>Benutzerdefinierte Elementeigenschaften (MDX)
-  Benutzerdefinierte Elementeigenschaften können einer bestimmten benannten Ebene in einer Dimension als Attributbeziehungen hinzugefügt werden. Benutzerdefinierte Elementeigenschaften können nicht hinzugefügt werden, um die `(All)` Ebene einer Hierarchie oder der Hierarchie selbst.  
+  Benutzerdefinierte Elementeigenschaften können einer bestimmten benannten Ebene in einer Dimension als Attributbeziehungen hinzugefügt werden. Benutzerdefinierte Elementeigenschaften können nicht hinzugefügt werden, um die `(All)` -Ebene einer Hierarchie noch der Hierarchie selbst.  
   
 ## <a name="creating-user-defined-member-properties"></a>Erstellen von benutzerdefinierten Elementeigenschaften  
  Benutzerdefinierte Elementeigenschaften können serverbasierten Dimensionen oder Cubes entweder über die Benutzeroberfläche oder programmgesteuert hinzugefügt werden.  
@@ -34,14 +34,14 @@ ms.locfileid: "36050410"
 -   Um benutzerdefinierte Elementeigenschaften programmgesteuert hinzuzufügen, kann Ihre Anwendung entweder Analysis Management Objects (AMO) oder eine Kombination aus XMLA (XML for Analysis) und ASSL (Analysis Services Scripting Language) verwenden. Weitere Informationen finden Sie unter [Attributbeziehungen](../../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md).  
   
 ## <a name="retrieving-user-defined-member-properties"></a>Abrufen von benutzerdefinierten Elementeigenschaften  
- Sie können entweder eine benutzerdefinierte Elementeigenschaften Abrufen der `PROPERTIES` Schlüsselwort oder der [Eigenschaften](/sql/mdx/properties-mdx) Funktion.  
+ Sie können entweder eine benutzerdefinierte Elementeigenschaften abrufen, die `PROPERTIES` Schlüsselwort oder [Eigenschaften](/sql/mdx/properties-mdx) Funktion.  
   
 ### <a name="using-the-properties-keyword-to-retrieve-user-defined-member-properties"></a>Verwenden des PROPERTIES-Schlüsselworts zum Abrufen von benutzerdefinierten Elementeigenschaften  
  Die Syntax für das Abrufen von benutzerdefinierten Elementeigenschaften gleicht der Syntax, mit der systeminterne Eigenschaften von Ebenenelementen abgerufen werden. Die folgende Syntax verdeutlicht dies:  
   
  `DIMENSION PROPERTIES [Dimension.]Level.<Custom_Member_Property>`  
   
- Die `PROPERTIES` -Schlüsselwort steht hinter dem Mengenausdruck der Achsenspezifikation. Z. B. die folgende MDX-Abfrage die `PROPERTIES` Schlüsselwort ruft die `List Price` und `Dealer Price` benutzerdefinierte Elementeigenschaften und wird angezeigt, nachdem der Mengenausdruck, der die Produkte identifiziert im Januar verkauften:  
+ Die `PROPERTIES` -Schlüsselwort steht hinter dem Mengenausdruck der Achsenspezifikation. Z. B. die folgende MDX-Abfrage die `PROPERTIES` Schlüsselwort ruft die `List Price` und `Dealer Price` benutzerdefinierte Elementeigenschaften und wird nach der Mengenausdruck, der die Produkte identifiziert im Januar verkauften:  
   
 ```  
 SELECT   
@@ -56,7 +56,7 @@ WHERE ([Date].[Month of Year].[January])
 ```  
   
 ### <a name="using-the-properties-function-to-retrieve-user-defined-member-properties"></a>Verwenden der Properties-Funktion zum Abrufen von benutzerdefinierten Elementeigenschaften  
- Für das Zugreifen auf benutzerdefinierte Elementeigenschaften kann auch die `Properties`-Funktion verwendet werden. Die folgende MDX-Abfrage verwendet beispielsweise die `WITH` Schlüsselwort, um ein berechnetes Element besteht erstellen die `List Price` Elementeigenschaft:  
+ Für das Zugreifen auf benutzerdefinierte Elementeigenschaften kann auch die `Properties`-Funktion verwendet werden. Z. B. die folgende MDX-Abfrage verwendet die `WITH` Schlüsselwort, um das Erstellen eines berechneten Elements aus der `List Price` Elementeigenschaft:  
   
 ```  
 WITH   

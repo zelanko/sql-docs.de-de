@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2c4022d7cfca3a85e6e01618bbf5ee20694a9b88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 129fabab52b2e7b7e59cf832d21e25972cb9b07a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050264"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260396"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint-Listenverbindungstyp (SSRS)
   Wenn Sie Daten aus einer Microsoft SharePoint-Liste in den Bericht einschließen möchten, müssen Sie ein Dataset hinzufügen oder erstellen, das auf einer Berichtsdatenquelle vom Typ "Microsoft SharePoint-Liste" basiert. Dies ist ein integrierter Datenquellentyp, der auf der Microsoft SQL Server Reporting Services-Datenerweiterung für die SharePoint-Liste basiert. Verwenden Sie diesen Datenquellentyp, um eine Verbindung mit [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]-, [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]-, [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0- und [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007-Websites herzustellen und Listendaten abzurufen.  
@@ -46,8 +46,8 @@ ms.locfileid: "36050264"
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
 |SharePoint-Liste einer lokalen Farm|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|ja|ja|  
 ||Gespeichert, Eingabeaufforderung, keine (mit Windows-Anmeldeinformationen<sup>1</sup>)|ja|nein|  
-|SharePoint-Remoteliste|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|ja|Nicht<sup>2</sup>|  
-||Gespeichert, Eingabeaufforderung, keine (mit Windows-Anmeldeinformationen<sup>1</sup>)|ja|Nicht<sup>2</sup>|  
+|SharePoint-Remoteliste|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|ja|Keine<sup>2</sup>|  
+||Gespeichert, Eingabeaufforderung, keine (mit Windows-Anmeldeinformationen<sup>1</sup>)|ja|Keine<sup>2</sup>|  
   
  **Tabelle 2**  
   
@@ -55,14 +55,14 @@ ms.locfileid: "36050264"
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
 |SharePoint-Liste einer lokalen Farm|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|ja|ja|  
 ||Gespeichert, Eingabeaufforderung, keine (mit Windows-Anmeldeinformationen<sup>1</sup>)|nein|nein|  
-|SharePoint-Remoteliste|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|ja|Nicht<sup>2</sup>|  
-||Gespeichert, Eingabeaufforderung, keine (mit Windows-Anmeldeinformationen<sup>1</sup>)|nein|Nicht<sup>2</sup>|  
+|SharePoint-Remoteliste|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|ja|Keine<sup>2</sup>|  
+||Gespeichert, Eingabeaufforderung, keine (mit Windows-Anmeldeinformationen<sup>1</sup>)|nein|Keine<sup>2</sup>|  
   
- <sup>1</sup> gespeicherte Anmeldeinformationen oder Prompt Anmeldeinformationen mit nicht-Windows-Anmeldeinformationen wird nicht unterstützt.  
+ <sup>1</sup> gespeicherte Anmeldeinformationen oder Eingabeaufforderung Anmeldeinformationen werden bei nicht-Windows-Anmeldeinformationen wird nicht unterstützt.  
   
  <sup>2</sup> formularbasierte und anspruchsbasierte Authentifizierung werden SharePoint-remotelisten nicht unterstützt.  
   
- <sup>3</sup> Windows-Authentifizierung, formularbasierte Authentifizierung (FBA), Secure Application Markup Language (SAML) Token, anderer Identitätsanbieter entgegen oder eine Kombination von mehr als eine der oben aufgeführten Authentifizierungsanbieter.  
+ <sup>3</sup> Windows-Authentifizierung, formularbasierte Authentifizierung (FBA), Secure Application Markup Language (SAML) Token, sonstige Identitätsanbieter oder eine Kombination von mehr als einer der oben genannten aufgeführten Authentifizierungsanbieter.  
   
  **Windows-Authentifizierung**  
  Diese Option wird nicht für eine SharePoint-Technologie unterstützt, die für die Verwendung mit einem Berichtsserver im Modus „Vertrauenswürdiges Konto“ konfiguriert ist. Dies gilt nur für Versionen vor SQL Server 2012 Reporting Services.  
@@ -76,7 +76,7 @@ ms.locfileid: "36050264"
   
  Weitere Informationen zur Unterstützung der anspruchsbasierten Authentifizierung in der Microsoft BI-Struktur finden Sie unter [Verwenden der anspruchsbasierten Authentifizierung in der Microsoft BI-Struktur](http://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
   
- Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md), [Geben Sie Anmeldeinformationen im Berichts-Generator](../specify-credentials-in-report-builder.md), und [von unterstützte Datenquellen Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
+ Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md), [angeben von Anmeldeinformationen im Berichts-Generator](../specify-credentials-in-report-builder.md), und [von unterstützte Datenquellen Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
 ##  <a name="Query"></a> Abfragen  
  Erstellen Sie auf Grundlage der Datenquelle ein neues Dataset, und öffnen Sie dann den entsprechenden Abfrage-Designer, um eine Abfrage zu entwerfen. Weitere Informationen finden Sie unter [Erstellen eines freigegebenen Datasets oder eingebetteten Datasets &#40;Berichts-Generator und SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  

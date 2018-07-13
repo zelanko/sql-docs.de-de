@@ -1,5 +1,5 @@
 ---
-title: Drillthrough in Miningstrukturen | Microsoft Docs
+title: Drillthrough für Miningstrukturen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a0b00a3b-f9db-4289-a8cb-ddf600cd64ac
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f7f65a4b6e97fab978ec156d97f525818722b299
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 4e01f903d28368179a7c249f3a8bbb7ac7c159e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049819"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246097"
 ---
 # <a name="drillthrough-on-mining-structures"></a>Drillthrough in Miningstrukturen
   *Drillthrough* beschreibt die Fähigkeit, entweder ein Miningmodell oder eine Miningstruktur abzufragen und ausführliche Daten zu erhalten, die im Modell nicht verfügbar sind.  
@@ -40,9 +40,9 @@ ms.locfileid: "36049819"
   
 -   Wenn Sie die Miningstruktur mit DMX erstellen, verwenden Sie die WITH DRILLTHROUGH-Klausel. Weitere Informationen finden Sie unter [CREATE MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx).  
   
--   Drillthrough funktioniert, indem Informationen über die Trainingsfälle abgerufen werden, die bei der Verarbeitung der Miningstruktur zwischengespeichert wurden. Daher, wenn Sie die zwischengespeicherten Daten deaktivieren, nach der Verarbeitung der Struktur durch Ändern der <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> Eigenschaft, um `ClearAfterProcessing`, funktioniert der Drillthrough nicht. Um Drillthrough zu strukturspalten zu aktivieren, müssen Sie ändern die <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> Eigenschaft `KeepTrainingCases` und die Struktur erneut verarbeiten.  
+-   Drillthrough funktioniert, indem Informationen über die Trainingsfälle abgerufen werden, die bei der Verarbeitung der Miningstruktur zwischengespeichert wurden. Aus diesem Grund deaktivieren die zwischengespeicherten Daten nach der Verarbeitung der Struktur durch Ändern der <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> Eigenschaft `ClearAfterProcessing`, funktioniert der Drillthrough nicht. Um Drillthrough für strukturspalten zu aktivieren, müssen Sie ändern die <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> Eigenschaft `KeepTrainingCases` , und klicken Sie dann die Struktur erneut verarbeiten.  
   
--   Stellen Sie sicher, dass die Miningstruktur und das Miningmodell haben die [AllowDrillThrough](../scripting/properties/allowdrillthrough-element-assl.md) -Eigenschaftensatz auf `True`. Außerdem müssen Sie Mitglied einer Rolle sein, die sowohl für die Struktur als auch für das Modell über Drillthroughberechtigungen verfügt.  
+-   Stellen Sie sicher, dass sowohl der Miningstruktur auch das Miningmodell die [AllowDrillThrough](../scripting/properties/allowdrillthrough-element-assl.md) -Eigenschaftensatz auf `True`. Außerdem müssen Sie Mitglied einer Rolle sein, die sowohl für die Struktur als auch für das Modell über Drillthroughberechtigungen verfügt.  
   
 ## <a name="security-issues-for-drillthrough"></a>Sicherheitsprobleme mit Drillthrough  
  Drillthroughberechtigungen werden getrennt für die Struktur und das Modell festgelegt. Mit den Modellberechtigungen können Sie einen Drillthrough des Modells durchführen, auch wenn Sie keine Berechtigungen für die Struktur besitzen. Mit Drillthroughberechtigungen für die Struktur können Sie außerdem mit der Funktion [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx) Strukturspalten in Drillthroughabfragen für das Modell einbeziehen.  

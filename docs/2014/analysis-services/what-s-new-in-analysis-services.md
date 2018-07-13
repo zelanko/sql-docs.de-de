@@ -1,5 +1,5 @@
 ---
-title: Was&#39;s in Analysis Services und Business Intelligence | Microsoft Docs
+title: Was&#39;Neues in Analysis Services und Business Intelligence | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 81dc5c82b8b034556ab4eb69c9f9ca377f641c43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30789972454ecc6c32ef4cb109bfbb20a2523e37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048558"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323110"
 ---
-# <a name="what39s-new-in-analysis-services-and-business-intelligence"></a>Was&#39;s in Analysis Services und Business Intelligence
-  Mit Ausnahme von zusätzlichen Funktionen zur Unterstützung von Power View-Berichte für mehrdimensionale Modelle [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ist seit der vorherigen Version unverändert.  
+# <a name="what39s-new-in-analysis-services-and-business-intelligence"></a>Was&#39;Neues in Analysis Services und Business Intelligence
+  Mit Ausnahme von zusätzlichen Funktionen zur Unterstützung von Power View-Berichte für mehrdimensionale Modelle [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] wurde gegenüber der vorherigen Version.  
   
- Weitere Informationen zu anderen [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Produkte und Technologien, die sich in dieser Version finden Sie unter [Neuigkeiten in SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
+ Weitere Informationen zu anderen [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Produkte und Technologien, die in dieser Version unterschiedlich sind, finden Sie unter [Neuigkeiten in SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
   
 ## <a name="updates-to-design-tool-installation"></a>Aktualisierte Installation von Entwurfstools  
  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] für Business Intelligence (SSDT-BI), das zuvor als Business Intelligence Development Studio (BIDS) bezeichnet wurde, wird zum Erstellen von Analysis Services-Modellen, Reporting Services-Berichten und Integration Services-Paketen verwendet. Sie können SSDT-BI von folgenden Orten herunterladen:  

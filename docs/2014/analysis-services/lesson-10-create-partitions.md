@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 11: Erstellen von Partitionen | Microsoft Docs'
+title: 'Lektion 11: Erstellen von Partitionen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92eb21a8-5fc4-4999-ad37-1332ce26431d
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: c480583da42aee4f73e6053d20e7bf8b6542547c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e2f9ab8d98ae4ffbb8be67c4b64f5022b0f7f8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050424"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261363"
 ---
 # <a name="lesson-11-create-partitions"></a>Lektion 11: Erstellen von Partitionen
   In dieser Lektion erstellen Sie Partitionen, um die Internet Sales-Tabelle in kleinere logische Teile aufzuteilen, die unabhängig von anderen Partitionen verarbeitet (aktualisiert) werden können. Standardmäßig verfügt jede Tabelle, die Sie ins Modell einbinden, über eine Partition. Diese beinhaltet alle Spalten und Zeilen der Tabelle. Für die Internet Sales-Tabelle sollen die Daten nach Jahr aufgeteilt werden, wobei jede Partition jeweils ein Jahr von den fünf Jahren der Tabelle umfasst.  Jede Partition kann dann unabhängig verarbeitet werden. Weitere Informationen finden Sie unter [Partitionen &#40;SSAS – tabellarisch&#41;](tabular-models/partitions-ssas-tabular.md).  
@@ -83,7 +83,7 @@ ms.locfileid: "36050424"
   
 6.  Klicken Sie auf **Überprüfen**.  
   
-     Beachten Sie, dass eine Warnung mit dem Hinweis angezeigt wird, dass bestimmte Spalten nicht in der Quelle vorhanden sind. Grund hierfür ist, in [Lektion 3: Umbenennen von Spalten](rename-columns.md), Sie umbenannt haben die Spalten in der Internet Sales-Tabelle im Modell, die von den Namen der Quelle des unterschiedlich sein.  
+     Beachten Sie, dass eine Warnung mit dem Hinweis angezeigt wird, dass bestimmte Spalten nicht in der Quelle vorhanden sind. Grund hierfür ist, im [Lektion 3: Umbenennen von Spalten](rename-columns.md), Sie diese Spalten in der Internet Sales-Tabelle in das Modell, das aus der Quelle abweichen umbenannt.  
   
 #### <a name="to-create-a-partition-for-the-2006-year-in-the-internet-sales-table"></a>So erstellen Sie für das Jahr 2006 in der Internet Sales-Tabelle eine Partition  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36050424"
   
 2.  In **Partitionsname**, Typ `Internet Sales 2006`.  
   
-3.  Ersetzen Sie in der SQL-Anweisung in Ordnung für die Partition nur die Zeilen für das Jahr 2006 enthalten die WHERE-Klausel durch Folgendes:  
+3.  Ersetzen Sie in der SQL-Anweisung in der richtigen Reihenfolge für die Partition nur die Zeilen für das Jahr 2006 enthält die WHERE-Klausel durch Folgendes:  
   
     ```  
     WHERE (([OrderDate] >= N'2006-01-01 00:00:00') AND ([OrderDate] < N'2007-01-01 00:00:00'))  
@@ -105,7 +105,7 @@ ms.locfileid: "36050424"
   
 3.  In **wechseln zu**Option **Abfrage-Editor**.  
   
-4.  Ersetzen Sie in der SQL-Anweisung in Ordnung für die Partition nur die Zeilen für das Jahr 2007 enthalten die WHERE-Klausel durch Folgendes:  
+4.  Ersetzen Sie in der SQL-Anweisung in der richtigen Reihenfolge für die Partition nur die Zeilen für das Jahr 2007 enthält die WHERE-Klausel durch Folgendes:  
   
     ```  
     WHERE (([OrderDate] >= N'2007-01-01 00:00:00') AND ([OrderDate] < N'2008-01-01 00:00:00'))  
@@ -119,7 +119,7 @@ ms.locfileid: "36050424"
   
 3.  In **wechseln zu**Option **Abfrage-Editor**.  
   
-4.  Ersetzen Sie in der SQL-Anweisung in Ordnung für die Partition nur die Zeilen für das Jahr 2008 enthalten die WHERE-Klausel durch Folgendes:  
+4.  Ersetzen Sie in der SQL-Anweisung in der richtigen Reihenfolge für die Partition nur die Zeilen für das Jahr 2008, enthält die WHERE-Klausel durch Folgendes:  
   
     ```  
     WHERE (([OrderDate] >= N'2008-01-01 00:00:00') AND ([OrderDate] < N'2009-01-01 00:00:00'))  
@@ -154,7 +154,7 @@ ms.locfileid: "36050424"
   
      Wenn Identitätswechsel-Anmeldeinformationen verlangt werden, geben Sie die Kombination aus Windows-Benutzername und Kennwort ein, die Sie in Lektion 2 (Schritt 6) angegeben haben.  
   
-     Die **Datenverarbeitung** Dialogfeld wird angezeigt, und zeigt die Verarbeitungsdetails für jede Partition. Beachten Sie, dass eine unterschiedliche Anzahl an Zeilen für jede Partition übertragen wird. Das liegt daran, dass jede Partition nur die Zeilen für das in der WHERE-Klausel der SQL-Anweisung angegebene Jahr beinhaltet. Für das Jahr 2010 sind keine Daten vorhanden.  
+     Die **Datenverarbeitung** dann erscheint und zeigt die Verarbeitungsdetails für jede Partition. Beachten Sie, dass eine unterschiedliche Anzahl an Zeilen für jede Partition übertragen wird. Das liegt daran, dass jede Partition nur die Zeilen für das in der WHERE-Klausel der SQL-Anweisung angegebene Jahr beinhaltet. Für das Jahr 2010 sind keine Daten vorhanden.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
  Wenn Sie mit diesem Tutorial fortfahren möchten, wechseln Sie zur nächsten Lektion: [Lektion 12: Erstellen von Rollen](lesson-11-create-roles.md).  

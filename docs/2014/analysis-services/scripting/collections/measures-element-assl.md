@@ -1,5 +1,5 @@
 ---
-title: Measures-Element (ASSL) | Microsoft Docs
+title: Measures-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Measures element
 ms.assetid: d2107112-f620-4fd7-a05f-bb2606b4be18
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 38b21b53bf8173b709a43393710256b7040648b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7f781eb542d290635bb01b8582c8e51a7cb2b05f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049057"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272296"
 ---
 # <a name="measures-element-assl"></a>Measures-Element (ASSL)
-  Enthält die Auflistung der [Measure](../objects/measure-element-assl.md) Elemente mit dem übergeordneten Element verknüpft sind.  
+  Enthält die Auflistung der [Measure](../objects/measure-element-assl.md) Elemente, mit dem übergeordneten Element verknüpft sind.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36049057"
 |Untergeordnete Elemente|[Measure](../objects/measure-element-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Die entsprechenden Elemente im Objektmodell von Analysis Management Objects (AMO) sind <xref:Microsoft.AnalysisServices.MeasureCollection> und <xref:Microsoft.AnalysisServices.PerspectiveMeasureCollection>.  
+ Die entsprechenden Elemente im Analysis Management Objects (AMO)-Objektmodell sind <xref:Microsoft.AnalysisServices.MeasureCollection> und <xref:Microsoft.AnalysisServices.PerspectiveMeasureCollection>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sammlungen &#40;ASSL&#41;](collections-assl.md)  

@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10423"
 ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f69c4a6dd5f2593650067be51eae3b63e49dcd96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2c305f6a4b4188e05f67bc8ac8ffd8cd66cdbb5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047770"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328984"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>Diagrammtypen (Berichts-Generator und SSRS)
-  Es ist wichtig, einen geeigneten Diagrammtyp für die von Ihnen dargestellten Daten auszuwählen. Dadurch wird bestimmt, wie gut die Daten interpretiert werden können, wenn sie in Diagrammform umgesetzt werden. Wenn das Dataset beispielsweise im Verhältnis zur Größe des Diagramms viele Datenpunkte enthält, ist eine Darstellung mithilfe eines Bereichs-, Linien- oder Punktdiagramms möglicherweise vorzuziehen. Informationen zum Vorbereiten Ihrer Daten abhängig vom ausgewählten Diagrammtyp finden Sie [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md).  
+  Es ist wichtig, einen geeigneten Diagrammtyp für die von Ihnen dargestellten Daten auszuwählen. Dadurch wird bestimmt, wie gut die Daten interpretiert werden können, wenn sie in Diagrammform umgesetzt werden. Wenn das Dataset beispielsweise im Verhältnis zur Größe des Diagramms viele Datenpunkte enthält, ist eine Darstellung mithilfe eines Bereichs-, Linien- oder Punktdiagramms möglicherweise vorzuziehen. Informationen dazu, wie Ihre Daten je nach ausgewähltem Diagrammtyp vorbereiten, finden Sie unter [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -49,7 +49,7 @@ ms.locfileid: "36047770"
 |[Punktdiagramme &#40;Berichts-Generator und SSRS&#41;](scatter-charts-report-builder-and-ssrs.md)|![Verfügbar](../media/greencheck.gif "Available")||![Verfügbar](../media/greencheck.gif "Available")||  
 |[Formdiagramme &#40;Berichts-Generator und SSRS&#41;](shape-charts-report-builder-and-ssrs.md)|![Verfügbar](../media/greencheck.gif "Available")||||  
 |[Sparklines](sparklines-and-data-bars-report-builder-and-ssrs.md)|![Verfügbar](../media/greencheck.gif "Available")|![Verfügbar](../media/greencheck.gif "Available")|![Verfügbar](../media/greencheck.gif "Available")|![Verfügbar](../media/greencheck.gif "Available")|  
-|[SKU-Diagramme &#40;Berichts-Generator und SSRS&#41;](stock-charts-report-builder-and-ssrs.md)||![Verfügbar](../media/greencheck.gif "Available")||![Verfügbar](../media/greencheck.gif "Available")|  
+|[Kursdiagramme &#40;Berichts-Generator und SSRS&#41;](stock-charts-report-builder-and-ssrs.md)||![Verfügbar](../media/greencheck.gif "Available")||![Verfügbar](../media/greencheck.gif "Available")|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md)   

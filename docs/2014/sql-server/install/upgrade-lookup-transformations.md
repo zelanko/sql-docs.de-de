@@ -1,5 +1,5 @@
 ---
-title: Aktualisieren Sie die Transformationen für | Microsoft Docs
+title: Aktualisieren Sie die Transformationen für Suche | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation and upgrading
 - upgrading caching for Lookup transformation
 - upgrading Lookup transformation
 ms.assetid: d9b2c281-91ee-4e20-bdf0-0cd77d4a4241
 caps.latest.revision: 16
-author: douglaslM
+author: mashamsft
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 214d915f16f15e81fe4fabbb44dd34f665fb5942
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8da8551b85948f27f1e657cb70c4bb1140c5314b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050230"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224794"
 ---
-# <a name="upgrade-lookup-transformations"></a>Aktualisieren von Transformationen für Suche
-  Beim Upgrade von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sollten Sie die Pakete ggf. ändern, um die Vorteile der neuen Funktionen in der Transformation für Suche zu nutzen. Die Transformation unterstützt die in [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] verfügbaren Zwischenspeicherungstypen und Datenausgabeoptionen. Weitere Informationen zu zusätzlichen der zwischenspeicherungstypen und Datenausgabeoptionen finden Sie unter [Suchtransformation](../../integration-services/data-flow/transformations/lookup-transformation.md).  
+# <a name="upgrade-lookup-transformations"></a>Aktualisieren Sie die Transformationen für Suche
+  Beim Upgrade von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sollten Sie die Pakete ggf. ändern, um die Vorteile der neuen Funktionen in der Transformation für Suche zu nutzen. Die Transformation unterstützt die in [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] verfügbaren Zwischenspeicherungstypen und Datenausgabeoptionen. Weitere Informationen zu zusätzlichen der zwischenspeicherungstypen und Datenausgabeoptionen finden Sie unter [Transformation für Suche](../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
- In [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] sind die vollständige Zwischenspeicherung, die teilweise Zwischenspeicherung sowie keine Zwischenspeicherung als Zwischenspeicherungstypen verfügbar. In [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] können Sie eine Transformation für Suche so konfigurieren, dass einer dieser Zwischenspeicherungstypen verwendet wird. Weitere Informationen dazu, wie Sie die Implementierung der teilweisen Zwischenspeicherung oder keiner Zwischenspeicherung finden Sie unter [Implementieren einer Suche im No Cache oder partielle Cachemodus](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md). Informationen dazu, wie Sie die Implementierung der vollständigen Zwischenspeicherung finden Sie unter [Implementieren einer Suchtransformation im vollständigen Cache mithilfe des Cacheverbindungs-Managers](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md) und [Implementieren einer Suchtransformation im vollständigen Cache mithilfe des OLE DB-Verbindungs-Manager](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md).  
+ In [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] sind die vollständige Zwischenspeicherung, die teilweise Zwischenspeicherung sowie keine Zwischenspeicherung als Zwischenspeicherungstypen verfügbar. In [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] können Sie eine Transformation für Suche so konfigurieren, dass einer dieser Zwischenspeicherungstypen verwendet wird. Weitere Informationen dazu, wie Sie die Implementierung der teilweisen Zwischenspeicherung oder keiner Zwischenspeicherung finden Sie unter [Implementieren einer Suche im Modus teilweise "oder" No Cache](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md). Informationen dazu, wie Sie die vollständige Zwischenspeicherung zu implementieren, finden Sie unter [Implementieren einer Suchtransformation im Cache mit den Cacheverbindungs-Manager](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md) und [Implementieren einer Suchtransformation im Cache mit dem OLE DB-Verbindungs-Manager](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md).  
   
  In [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] hatte die Transformation für Suche eine Eingabe, eine Ausgabe und eine Fehlerausgabe. Zeilen in der Eingabe, die über übereinstimmende Einträge im Verweisdataset verfügten, wurden von der Ausgabe verarbeitet. Zeilen in der Eingabe, die über keine übereinstimmenden Einträge verfügten, wurden als Fehler behandelt und konnten an die Fehlerausgabe weitergeleitet werden. In [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] verfügte die Transformation für Suche über zwei Ausgaben: eine Ausgabe mit Übereinstimmung und eine Ausgabe ohne Übereinstimmung.  
   

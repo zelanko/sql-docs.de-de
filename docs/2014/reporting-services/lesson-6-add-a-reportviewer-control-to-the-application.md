@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f9492a97-5609-4059-ae76-0fba111d4968
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 51b08dce6f232bb08fd1d5f41bc1976aaa410331
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: c5fa2bc40982450ac67b82d39db8ee1f6a129604
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056639"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323740"
 ---
 # <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>Lektion 6: Hinzufügen eines ReportViewer-Steuerelements zur Anwendung
   Nachdem Sie den untergeordneten Bericht mit dem Berichts-Assistenten entworfen haben, fügen Sie der Websiteanwendung im nächsten Schritt ein ReportViewer-Steuerelement hinzu.  
@@ -36,9 +36,9 @@ ms.locfileid: "36056639"
   
 5.  Wählen Sie im Feld **Bericht auswählen** den erstellten übergeordneten Bericht aus.  
   
-     Nachdem Sie einen Bericht ausgewählt haben, werden automatisch Instanzen der im Bericht verwendeten Datenquellen erstellt. Code wird generiert, um jede DataTable instanziieren (und die zugehörige [DataSet](http://msdn.microsoft.com/library/system.data.dataset\(v=vs.100\).aspx) Container). Ein [ObjectDataSource](http://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource\(v=vs.100\).aspx) Steuerelement auf die Entwurfsoberfläche, die für jede Datenquelle im Bericht verwendeten hinzugefügt wird. Dieses Datenquellen-Steuerelement wird automatisch konfiguriert.  
+     Nachdem Sie einen Bericht ausgewählt haben, werden automatisch Instanzen der im Bericht verwendeten Datenquellen erstellt. Code wird generiert, um jede DataTable zu instanziieren (und die zugehörige [DataSet](http://msdn.microsoft.com/library/system.data.dataset\(v=vs.100\).aspx) Container). Ein ["ObjectDataSource"](http://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource\(v=vs.100\).aspx) Steuerelement wird hinzugefügt, auf die Entwurfsoberfläche, die den einzelnen im Bericht verwendeten Datenquellen entspricht. Dieses Datenquellen-Steuerelement wird automatisch konfiguriert.  
   
-     Wenn Sie Microsoft Visual Studio 2012 verwenden, stellen Sie sicher, dass das ObjectDataSource-Steuerelement mit DataSet1, die vollständig mit dem Projektnamespace qualifiziert ist gebunden ist, wenn der vollqualifizierte Name im aufgeführt ist die **wählen Sie das Geschäftsobjekt**im Dropdown Listenfeld (z. B. Projectnamespace.DataSet1TableAdapters.ProductTableAdapter). Sie greifen auf das Listenfeld ObjectDataSource mit der rechten Maustaste, und klicken Sie dann auf **Datenquelle konfigurieren**.  
+     Wenn Sie Microsoft Visual Studio 2012 verwenden, stellen Sie sicher, dass mit "DataSet1", die vollständig mit dem Projektnamespace qualifiziert ist das ObjectDataSource-Steuerelement gebunden ist, wenn der vollqualifizierte Name im aufgeführt ist die **Geschäftsobjektauswählen**Dropdown-Listenfeld (z. B. Projectnamespace.DataSet1TableAdapters.ProductTableAdapter). Sie greifen auf das Listenfeld, indem Sie mit der rechten Maustaste ObjectDataSource-Steuerelement, und klicken Sie dann auf **Konfigurieren von Datenquellen**.  
   
 6.  Klicken Sie im Menü Erstellen auf Website erstellen.  
   

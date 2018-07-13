@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 897cb599b73c6a136c2d79e2a21068dfb05655ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 35a17dd8fd787fe585108b661117b36f887bdfca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048218"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331010"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>Integrierte globale Werte und Benutzerverweise (Berichts-Generator und SSRS)
   Die integrierte Feldauflistung, die sowohl die `Globals`-Auflistung als auch die `User`-Auflistung umfasst, stellt globale Werte dar, die von Reporting Services beim Verarbeiten eines Berichts bereitgestellt werden. Die `Globals`-Auflistung enthält Werte wie den Namen des Berichts, die Startzeit der Berichtsverarbeitung und die aktuellen Seitenzahlen für den Berichtskopf oder -fuß. Die `User`-Auflistung stellt die Benutzer-ID und Spracheinstellungen bereit. Diese Werte können in Ausdrücken verwendet werden, um Ergebnisse in einem Bericht zu filtern.  
@@ -28,12 +28,12 @@ ms.locfileid: "36048218"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-globals-collection"></a>Verwenden der Globals-Auflistung  
- Die `Globals` Auflistung enthält die globalen Variablen für den Bericht. Auf der Entwurfsoberfläche werden diese Variablen mit einem & (kaufmännisches Und-Zeichen) als Präfix angezeigt, z.B. `[&ReportName]`. Die folgende Tabelle beschreibt die Elemente der `Globals` Auflistung.  
+ Die `Globals` Auflistung enthält die globalen Variablen für den Bericht. Auf der Entwurfsoberfläche werden diese Variablen mit einem & (kaufmännisches Und-Zeichen) als Präfix angezeigt, z.B. `[&ReportName]`. Die folgende Tabelle beschreibt die Elemente von der `Globals` Auflistung.  
   
 |**Member**|**Typ**|**Beschreibung**|  
 |----------------|--------------|---------------------|  
 |ExecutionTime|`DateTime`|Das Datum und die Uhrzeit, zu der die Berichtsausführung begann.|  
-|Seitenzahl|`Integer`|Die aktuelle Seitenzahl in Relation zu Seitenumbrüchen, mit denen die Seitenzahl zurückgesetzt wird. Am Anfang der Berichtsverarbeitung wird der Anfangswert auf 1 festgelegt. Die Seitenzahl wird mit jeder gerenderten Seite inkrementiert.<br /><br /> Um Seiten innerhalb der Seitenumbrüche für ein Rechteck, einem Datenbereich, einer Datenbereichsgruppe oder einer Karte, auf die PageBreak-Eigenschaft, legen Sie die ResetPageNumber-Eigenschaft auf `True`. Dies wird nicht in den Hierarchiegruppen von Tablix-Spalten unterstützt.<br /><br /> PageNumber kann nur in einem Ausdruck in einem Seitenkopf oder Seitenfuß verwendet werden.|  
+|Seitenzahl|`Integer`|Die aktuelle Seitenzahl in Relation zu Seitenumbrüchen, mit denen die Seitenzahl zurückgesetzt wird. Am Anfang der Berichtsverarbeitung wird der Anfangswert auf 1 festgelegt. Die Seitenzahl wird mit jeder gerenderten Seite inkrementiert.<br /><br /> Um Seiten innerhalb der Seitenumbrüche für ein Rechteck, eines Datenbereichs, einer Datenbereichsgruppe oder einer Karte, auf die PageBreak-Eigenschaft die ResetPageNumber-Eigenschaft auf festgelegt `True`. Dies wird nicht in den Hierarchiegruppen von Tablix-Spalten unterstützt.<br /><br /> PageNumber kann nur in einem Ausdruck in einem Seitenkopf oder Seitenfuß verwendet werden.|  
 |ReportFolder|`String`|Der vollständige Pfad des Ordners mit dem Bericht. Dies schließt nicht die Berichtsserver-URL ein.|  
 |ReportName|`String`|Der Name, unter dem der Bericht in der Berichtsserver-Datenbank gespeichert wird.|  
 |ReportServerUrl|`String`|Die URL des Berichtsservers, auf dem der Bericht ausgeführt wird.|  
@@ -43,7 +43,7 @@ ms.locfileid: "36048218"
 |OverallTotalPages|`Integer`|Die Gesamtanzahl der Seiten für den gesamten Bericht. ResetPageNumber hat keine Auswirkungen auf diesen Wert.<br /><br /> OverallTotalPages kann nur in einem Ausdruck in einem Seitenkopf oder Seitenfuß verwendet werden.|  
 |RenderFormat|`RenderFormat`|Informationen zur aktuellen Renderinganforderung.<br /><br /> Weitere Informationen finden Sie unter "RenderFormat" im nächsten Abschnitt.|  
   
- Mitglieder der `Globals` -Auflistung geben eine Variante zurück. Wenn Sie ein Element dieser Auflistung in einem Ausdruck verwenden möchten, der einen bestimmten Datentyp erfordert, müssen Sie die Variable zunächst umwandeln. Zum Konvertieren der Ausführungszeitvariante in ein Datumsformat können Sie beispielsweise `=CDate(Globals!ExecutionTime)`verwenden. Weitere Informationen finden Sie unter [Datentypen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](expressions-report-builder-and-ssrs.md).  
+ Mitglieder der `Globals` -Auflistung geben eine Variante zurück. Wenn Sie ein Element dieser Auflistung in einem Ausdruck verwenden möchten, der einen bestimmten Datentyp erfordert, müssen Sie die Variable zunächst umwandeln. Zum Konvertieren der Ausführungszeitvariante in ein Datumsformat können Sie beispielsweise `=CDate(Globals!ExecutionTime)`verwenden. Weitere Informationen finden Sie unter [-Datentypen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
 ### <a name="renderformat"></a>RenderFormat  
  In der folgenden Tabelle werden die Elemente von `RenderFormat` beschrieben.  
@@ -55,7 +55,7 @@ ms.locfileid: "36048218"
 |DeviceInfo|Schreibgeschützte Namens-/Werteauflistung|Schlüssel-Wert-Paare für die deviceinfo-Parameter der aktuellen Renderinganforderung.<br /><br /> Zeichenfolgenwerte können mit dem Schlüssel oder einem Index in der Auflistung angegeben werden.|  
   
 ### <a name="examples"></a>Beispiele  
- Die folgenden Beispiele zeigen, wie ein Verweis auf die `Globals` Auflistung in einem Ausdruck:  
+ Die folgenden Beispiele zeigen, wie Sie einen Verweis auf die `Globals` Auflistung in einem Ausdruck:  
   
 -   Dieser Ausdruck ist in einem Textfeld in der Fußzeile eines Berichts platziert und stellt die Seitenzahl und die Gesamtseitenzahl im Bericht bereit:  
   
@@ -72,9 +72,9 @@ ms.locfileid: "36048218"
      `=IIF(Globals!RenderFormat.Name = "EXCELOPENXML" OR Globals!RenderFormat.Name = "EXCEL", false, true)`  
   
 ## <a name="using-the-user-collection"></a>Verwenden der User-Auflistung  
- Die `User` -Auflistung enthält Daten über den Benutzer, der den Bericht ausführt. Mit dieser Auflistung können Sie die in einem Bericht angezeigten Daten filtern, sodass z. B. nur die Daten des aktuellen Benutzers angezeigt werden, oder beispielsweise die Benutzer-ID in einem Berichtstitel anzeigen. Auf der Entwurfsoberfläche werden diese Variablen mit einem & (kaufmännisches Und-Zeichen) als Präfix angezeigt, z.B. `[&UserID]`.  
+ Die `User` -Auflistung enthält Daten über den Benutzer, die der Bericht ausgeführt wird. Mit dieser Auflistung können Sie die in einem Bericht angezeigten Daten filtern, sodass z. B. nur die Daten des aktuellen Benutzers angezeigt werden, oder beispielsweise die Benutzer-ID in einem Berichtstitel anzeigen. Auf der Entwurfsoberfläche werden diese Variablen mit einem & (kaufmännisches Und-Zeichen) als Präfix angezeigt, z.B. `[&UserID]`.  
   
- Die folgende Tabelle beschreibt die Elemente der `User` Auflistung.  
+ Die folgende Tabelle beschreibt die Elemente von der `User` Auflistung.  
   
 |**Member**|**Typ**|**Beschreibung**|  
 |----------------|--------------|---------------------|  

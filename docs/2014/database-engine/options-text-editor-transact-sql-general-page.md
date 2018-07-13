@@ -1,5 +1,5 @@
 ---
-title: Optionen (Text-Editor - Seite "Transact-SQL-Allgemein") | Microsoft Docs
+title: Optionen (Text-Editor – Seite "Transact-SQL-Allgemein") | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.SQL.General
 dev_langs:
@@ -17,15 +17,15 @@ ms.assetid: 7021ecb7-8fb5-4d8c-b984-3d34fcde8be2
 caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d25699b25ec9bcde2a2df2bc1115a1e3f752c035
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c3732baa8de28448b578673ead90e9cbfa62abba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056752"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257206"
 ---
-# <a name="options-text-editor---transact-sql--general-page"></a>Optionen (Text-Editor - Transact-SQL-Registerkarte Allgemein)
+# <a name="options-text-editor---transact-sql--general-page"></a>Optionen (Text-Editor – Seite "Transact-SQL-Allgemein")
   Mit den Optionen im Dialogfeld **Allgemein** können Sie das allgemeine Bearbeitungsverhalten des [!INCLUDE[ssDE](../includes/ssde-md.md)] -Abfrageeditors beim Bearbeiten von [!INCLUDE[tsql](../includes/tsql-md.md)] -Skripts ändern. Sie können diese Einstellungen anzeigen, indem Sie im Menü **Extras** auf **Optionen** klicken. Erweitern Sie dann den Unterordner **Transact-SQL**, und klicken Sie auf **Allgemein**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Festlegen der Optionen an mehreren Stellen  
@@ -38,7 +38,7 @@ ms.locfileid: "36056752"
  **Erweiterte Member ausblenden**  
  Dieses Kontrollkästchen ist nicht verfügbar.  
   
- **Parameterinformationen**  
+ **Informationen zu den Parametern**  
  Wenn dieses Kontrollkästchen aktiviert ist, werden Parameterinformationen für eine gespeicherte Prozedur oder Funktion angezeigt, die sich unmittelbar links von der Einfügemarke (Cursor) befindet. Die Informationen umfassen eine Liste der verfügbaren Parameter mit ihren Namen und Datentypen.  
   
 ## <a name="settings"></a>Einstellungen  
@@ -51,7 +51,7 @@ ms.locfileid: "36056752"
  **Visuelle Symbole für Zeilenumbruch anzeigen**  
  Wenn dieses Kontrollkästchen aktiviert ist, wird an den Stellen, an denen eine lange Zeile auf die nächste Zeile umbricht, ein Eingabepfeil als Markierung angezeigt.  
   
- **Wenden Sie Ausschneiden/Kopieren Befehle auf leere Zeilen an, wenn keine Auswahl getroffen wurde**  
+ **Wenden Sie Befehle der Bearbeitungsschritte Ausschneiden/Kopieren auf leere Zeilen an, wenn keine Auswahl vorhanden ist**  
  Legt fest, wie sich der Editor verhalten soll, wenn Sie die Einfügemarke in eine Leerzeile setzen und auf **Kopieren** oder **Ausschneiden**klicken, ohne eine Auswahl zu treffen.  
   
  Bei aktiviertem Kontrollkästchen wird die Leerzeile kopiert bzw. ausgeschnitten. Wenn Sie anschließend auf **Einfügen**klicken, wird die Leerzeile eingefügt.  

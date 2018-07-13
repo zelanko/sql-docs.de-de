@@ -1,5 +1,5 @@
 ---
-title: Schnittstellen (OLE DB) | Microsoft Docs
+title: Schnittstellen (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -16,40 +16,40 @@ helpviewer_keywords:
 - OLE DB, interfaces
 ms.assetid: 34c33364-8538-45db-ae41-5654481cda93
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 56eced3c950f301bdff6256642e50d1f054ee2fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 62b26f5cd5d07c8623bf5e318b38b6631ef7588d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049032"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250610"
 ---
 # <a name="interfaces-ole-db"></a>Schnittstellen (OLE DB)
-  Zusätzlich zu den Kern von der Microsoft Data Access Components (MDAC) bereitgestellten OLE DB-Schnittstellen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter implementiert die folgenden zusätzlichen OLE DB-Schnittstellen:  
+  Zusätzlich zu den OLE DB-Schnittstellen bereitgestellt von der Microsoft Data Access Components (MDAC), die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter implementiert die folgenden OLE DB-Schnittstellen:  
   
--   [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)  
+-   [IBCPSession &#40;OLE-DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)  
   
--   [IBCPSession2 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession2-ole-db.md)  
+-   [IBCPSession2 &#40;OLE-DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession2-ole-db.md)  
   
 -   [IColumnsRowset](../../relational-databases/native-client-ole-db-interfaces/icolumnsrowset.md)  
   
--   [ICommand &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/icommand-ole-db.md)  
+-   [ICommand &#40;OLE-DB&#41;](../../relational-databases/native-client-ole-db-interfaces/icommand-ole-db.md)  
   
 -   [ICommandWithParameters](../../relational-databases/native-client-ole-db-interfaces/icommandwithparameters.md)  
   
--   [IDBProperties &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/idbproperties-ole-db.md)  
+-   [IDBProperties &#40;OLE-DB&#41;](../../relational-databases/native-client-ole-db-interfaces/idbproperties-ole-db.md)  
   
--   [IRowsetFastLoad &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)  
+-   [IRowsetFastLoad &#40;OLE-DB&#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)  
   
--   [ISSAbort &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/issabort-ole-db.md)  
+-   [ISSAbort &#40;OLE-DB&#41;](../../../2014/database-engine/dev-guide/issabort-ole-db.md)  
   
--   [ISSAsynchStatus &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
+-   [ISSAsynchStatus &#40;OLE-DB&#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   
--   [ISSCommandWithParameters &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+-   [ISSCommandWithParameters &#40;OLE-DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
--   [ISQLServerErrorInfo &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/isqlservererrorinfo-ole-db.md)  
+-   [ISQLServerErrorInfo &#40;OLE-DB&#41;](../../../2014/database-engine/dev-guide/isqlservererrorinfo-ole-db.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server Native Client &#40;OLE DB&#41; Verweis](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  

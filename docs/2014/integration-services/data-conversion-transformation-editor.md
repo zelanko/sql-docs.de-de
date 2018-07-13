@@ -1,5 +1,5 @@
 ---
-title: Transformations-Editor für Data Konvertierung | Microsoft Docs
+title: Transformations-Editor für Datenkonvertierung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataconversiontransformation.f1
 helpviewer_keywords:
 - Data Conversion Transformation Editor
 ms.assetid: 7b4e4873-e8fe-4549-a965-65bebdb270bc
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9c5157175181c7a43a2c8e3209c23905a4129d2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 330ac6f9211afbc1dd3e89d9d4c7298a41026f31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050365"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225972"
 ---
 # <a name="data-conversion-transformation-editor"></a>Transformations-Editor für Datenkonvertierung
   Im Dialogfeld **Transformations-Editor für Datenkonvertierung** können Sie die zu konvertierenden Spalten und den Datentyp, in den die Spalte konvertiert werden soll, auswählen und Konvertierungsattribute festlegen.  
   
 > [!NOTE]  
->  Die `FastParse` Eigenschaft der Ausgabespalten der Transformation für Datenkonvertierung ist nicht verfügbar in der **Transformations-Editor für Data Konvertierung**, jedoch kann festgelegt werden, mithilfe der **Erweiterter Editor**. Weitere Informationen zu dieser Eigenschaft finden Sie im Abschnitt "Transformation für Datenkonvertierung" von [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
+>  Die `FastParse` -Eigenschaft der Ausgabespalten der Transformation für Datenkonvertierung ist nicht verfügbar, in der **Transformations-Editor für Datenkonvertierung**, aber kann festgelegt werden, mithilfe der **Erweiterter Editor**. Weitere Informationen zu dieser Eigenschaft finden Sie im Abschnitt "Transformation für Datenkonvertierung" von [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
   
  Weitere Informationen zur Transformation für Datenkonvertierung finden Sie unter [Data Conversion Transformation](data-flow/transformations/data-conversion-transformation.md).  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36050365"
  Wählen Sie zu konvertierende Spalten aus der Liste der verfügbaren Eingabespalten aus. Ihre Auswahl wird entsprechend in der Auswahl der Kontrollkästchen oben deutlich.  
   
  **Ausgabealias**  
- Geben Sie einen Alias für jede neue Spalte ein. Die Standardeinstellung ist `Copy of` gefolgt vom Namen Eingabespalte; Sie können jedoch einen eindeutigen, beschreibenden Namen auswählen.  
+ Geben Sie einen Alias für jede neue Spalte ein. Der Standardwert ist `Copy of` gefolgt vom Namen der Eingabespalte; Sie können jedoch einen eindeutigen, beschreibenden Namen auswählen.  
   
  **Datentyp**  
  Wählen Sie einen verfügbaren Datentyp aus der Liste aus. Weitere Informationen finden Sie unter [Integration Services Datentypen](data-flow/integration-services-data-types.md).  

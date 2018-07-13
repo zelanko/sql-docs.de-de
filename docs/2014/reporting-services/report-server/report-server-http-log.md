@@ -8,40 +8,40 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 83d48cf33405988c9aedaceccc677ee238a7ea5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d697c1cb894028de8ccea5e3b87fc7d0cf155d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050485"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202600"
 ---
 # <a name="report-server-http-log"></a>Berichtsserver-HTTP-Protokoll
-  Die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Report Server HTTP-Protokolldateien halten ein zeichnet alle HTTP-Anforderung und Antwort vom Berichtsserver verarbeitet. Da Anforderungsüberlauf- und Timeoutfehler den Berichtsserver nicht erreichen, werden sie nicht in der Protokolldatei aufgezeichnet.  
+  Die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Berichtsserver-HTTP-Protokolldateien nachzuhalten, jedes HTTP-Anforderung und Antwort, die vom Berichtsserver verarbeitet. Da Anforderungsüberlauf- und Timeoutfehler den Berichtsserver nicht erreichen, werden sie nicht in der Protokolldatei aufgezeichnet.  
   
- Die HTTP-Protokollierung ist standardmäßig nicht aktiviert. Um die HTTP-Protokollierung zu aktivieren, Ändern der **ReportingServicesService.exe.config** Konfigurationsdatei, um diese Funktion in Ihrer Installation zu verwenden.  
+ Die HTTP-Protokollierung ist standardmäßig nicht aktiviert. Um die HTTP-Protokollierung zu aktivieren, Ändern der **ReportingServicesService.exe.config** Konfigurationsdatei, um dieses Feature in der Installation verwenden.  
   
 ## <a name="viewing-log-information"></a>Anzeigen von Protokollinformationen  
  Das Protokoll ist eine ASCII-Textdatei. Sie können die Datei mithilfe eines Text-Editors anzeigen. Die Berichtsserver-HTTP-Protokolldatei ist identisch mit der erweiterten W3C-Protokolldatei in IIS und verwendet ähnliche Felder, sodass Sie vorhandene IIS-Protokolldatei-Viewer zum Lesen der Berichtsserver-HTTP-Protokolldatei verwenden können. Die folgende Tabelle enthält weitere Informationen über die HTTP-Protokolldatei:  
   
 |||  
 |-|-|  
-|**Dateiname**|Standardmäßig sind die Dateinamen der Protokolldatei<br /><br /> `ReportServerService_HTTP_<timestamp>.log.`<br /><br /> Sie können das Präfix des Dateinamens anpassen, indem Sie das HttpTraceFileName-Attribut in der Datei ReportingServicesService.exe.config ändern. Der Timestamp basiert auf der koordinierten Weltzeit (UTC).|  
+|**Dateiname**|Werden standardmäßig die Dateinamen der Protokolldatei<br /><br /> `ReportServerService_HTTP_<timestamp>.log.`<br /><br /> Sie können das Präfix des Dateinamens anpassen, indem Sie das HttpTraceFileName-Attribut in der Datei ReportingServicesService.exe.config ändern. Der Timestamp basiert auf der koordinierten Weltzeit (UTC).|  
 |**Dateispeicherort**|Die Dateien werden am folgenden Speicherort geschrieben:<br /><br /> `\Microsoft SQL Server\<SQL Server Instance>\Reporting Services\LogFiles`|  
 |**Dateiformat**|Die Datei liegt im Format EN-US vor. Es handelt sich um eine ASCII-Textdatei.|  
 |**Dateierstellung und-Beibehaltung**|Das HTTP-Protokoll wird erstellt, nachdem Sie es in der Konfigurationsdatei aktiviert und den Dienst neu gestartet haben und der Berichtsserver eine HTTP-Anforderung verarbeitet hat. Wenn Sie die Einstellungen konfiguriert haben, die Protokolldatei jedoch nicht sehen können, öffnen Sie einen Bericht, oder starten Sie eine Berichtsserveranwendung (wie den Berichts-Manager), um eine HTTP-Anforderung zum Erstellen der Datei zu generieren.<br /><br /> Es wird ein neues Exemplar der Protokolldatei nach jedem Neustart des Diensts und einer nachfolgenden HTTP-Anforderung an den Berichtsserver erstellt.<br /><br /> Standardmäßig sind Ablaufverfolgungsprotokolle auf 32 Megabyte begrenzt und werden nach 14 Tagen gelöscht.|  
   
 ## <a name="configuration-settings-for-report-server-http-log"></a>Konfigurationseinstellungen für das Berichtsserver-HTTP-Protokoll  
- Konfigurieren der Berichtsserver auf HTTP-Protokoll, verwenden Sie den Editor zum Ändern der **ReportingServicesService.exe.config** Datei. Die Konfigurationsdatei befindet sich im Ordner \Programme\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin.  
+ Verwenden Sie zum Konfigurieren des Berichtsserver-HTTP-Protokolls Editor zum Ändern der **ReportingServicesService.exe.config** Datei. Die Konfigurationsdatei befindet sich im Ordner \Programme\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin.  
   
- Zum Aktivieren des HTTP-Servers hinzugefügt werden `http:4` RStrace-Abschnitt der Datei ReportingServicesService.exe.config. Alle anderen HTTP-Protokolldateieinträge sind optional. Das folgende Beispiel umfasst alle Einstellungen, sodass Sie den gesamten Abschnitt über den Abschnitt RStrace kopieren und dann die nicht benötigten Einstellungen löschen können.  
+ Fügen Sie zum Aktivieren des HTTP-Servers `http:4` Abschnitt RStrace der Datei ReportingServicesService.exe.config. Alle anderen HTTP-Protokolldateieinträge sind optional. Das folgende Beispiel umfasst alle Einstellungen, sodass Sie den gesamten Abschnitt über den Abschnitt RStrace kopieren und dann die nicht benötigten Einstellungen löschen können.  
   
 ```  
    <RStrace>  
@@ -58,7 +58,7 @@ ms.locfileid: "36050485"
 ```  
   
 ## <a name="log-file-fields"></a>Protokolldateifelder  
- In der folgenden Tabelle sind die im Protokoll verfügbaren Felder beschrieben. Die Feldliste kann konfiguriert werden; Sie können angeben, welche Felder einbezogen werden sollen die `HTTPTraceSwitches` -Konfigurationseinstellung. Die **Standard** Spalte gibt an, ob das Feld in die Protokolldatei automatisch aufgenommen wird, wenn Sie keinen angeben `HTTPTraceSwitches`.  
+ In der folgenden Tabelle sind die im Protokoll verfügbaren Felder beschrieben. Die Feldliste kann konfiguriert werden; Sie können angeben, welche Felder einbezogen werden sollen die `HTTPTraceSwitches` Konfigurationseinstellung. Die **Standard** Spalte gibt an, ob das Feld in die Protokolldatei automatisch aufgenommen wird, wenn Sie keinen angeben `HTTPTraceSwitches`.  
   
 |Feld|Description|Default|  
 |-----------|-----------------|-------------|  
@@ -83,7 +83,7 @@ ms.locfileid: "36050485"
 |Referrer|Die vorherige vom Client aufgerufene Website.|nein|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Report Server Service Trace Log](report-server-service-trace-log.md)   
+ [Berichtsserver-Ablaufverfolgungsprotokoll](report-server-service-trace-log.md)   
  [Reporting Services-Protokolldateien und Quellen](../report-server/reporting-services-log-files-and-sources.md)   
  [Fehler- und Ereignisreferenz &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   

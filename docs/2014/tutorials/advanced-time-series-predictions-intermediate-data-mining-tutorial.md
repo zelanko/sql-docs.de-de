@@ -1,5 +1,5 @@
 ---
-title: Erweiterte Zeitreihenvorhersagen (Datamining-Lernprogramm für fortgeschrittene) | Microsoft Docs
+title: Erweiterte Zeitreihenvorhersagen (Datamining-Lernprogramm für fortgeschrittene) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b614ebdb-07ca-44af-a0ff-893364bd4b71
 caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 2d26b05a6d6929947054cd1546b46a976aa2dc2c
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 81297beab8cea567277bd7f1e015859547ab2f7a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312918"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326890"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>Erweiterte Zeitreihenvorhersagen (Data Mining-Lernprogramm für Fortgeschrittene)
   Bei der Untersuchung des Prognosemodells wurde gezeigt, dass die Verkäufe in den meisten Regionen einem ähnlichen Muster folgen. Einige Regionen und Modelle wie das Modell M200 im Pazifischen Raum weisen jedoch deutlich abweichende Trends auf. Dies ist wenig überraschend, da bekanntermaßen häufig regionale Unterschiede auftreten und durch zahlreiche Faktoren verursacht werden können, einschließlich Marketingaktionen, fehlerhafter Berichterstellung sowie politischer Faktoren.  
@@ -97,7 +97,7 @@ ms.locfileid: "36312918"
     >   
     >  Die in der Beispieldatenbank verwendeten Datumsangaben wurden für diese Version geändert. Wenn Sie eine frühere Edition von AdventureWorks verwenden, müssen Sie die eingefügten Datumsangaben ggf. anpassen.  
   
-###  <a name="bkmk_newReplaceData"></a> Erstellen einer Datenquellensicht mit den neuen Umsatzdaten  
+###  <a name="bkmk_newReplaceData"></a> Erstellen Sie eine Datenquellensicht, die mit den neuen Umsatzdaten  
   
 1.  Klicken Sie im **Projektmappen-Explorer**mit der rechten Maustaste auf **Datenquellensichten**und wählen Sie dann **Neue Datenquellensicht**aus.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "36312918"
   
      **Datenquelle**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **Tabellen und Sichten auswählen**: Wählen Sie die Tabelle, die Sie soeben erstellt haben, NewSalesData.  
+     **Tabellen und Sichten auswählen**: Wählen Sie in der Tabelle, die Sie soeben erstellt haben, handelt es sich bei NewSalesData.  
   
 3.  Klicken Sie auf **Fertig stellen**.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "36312918"
 >  Sie verwenden diese Daten nur für Vorhersagen; daher ist es nicht wichtig, dass sie unvollständig sind.  
   
 ##  <a name="bkmk_CrossData2"></a> Erstellen die Daten für das Kreuzvorhersage-Modell  
- Die Daten, die verwendet wurde, in der ursprünglichen wenig Prognose Modell wurde bereits durch die vTimeSeries-Sicht, die mehrere Fahrradmodelle in eine kleinere Anzahl von Kategorien und die Ergebnisse einzelner Länder in Regionen zusammengeführt gruppiert. Sie erstellen ein Modell, das für weltweite Prognosen verwendet werden kann, indem Sie direkt im Datenquellensicht-Designer einige zusätzliche einfache Aggregationen erstellen. Die neue Datenquellensicht enthält nur die Summe und den Durchschnitt der Umsätze aller Produkte in allen Regionen.  
+ Die Daten, die verwendet wurde, in der ursprünglichen forecasting-Modell war bereits ein wenig durch die vTimeSeries-Sicht, die Ergebnisse einzelner Länder in Regionen zusammengeführt und mehrere Fahrradmodelle in eine kleinere Anzahl von Kategorien gruppiert werden. Sie erstellen ein Modell, das für weltweite Prognosen verwendet werden kann, indem Sie direkt im Datenquellensicht-Designer einige zusätzliche einfache Aggregationen erstellen. Die neue Datenquellensicht enthält nur die Summe und den Durchschnitt der Umsätze aller Produkte in allen Regionen.  
   
  Nachdem Sie die für das Modell verwendete Datenquelle erstellt haben, müssen Sie eine neue Datenquellensicht erstellen, die für Vorhersage verwendet werden soll. Wenn Sie z. B. die Umsätze in Europa mit dem neuen weltweite Modell vorhersagen möchten, dürfen Sie nur Daten aus der Region Europa eingeben. Daher richten Sie eine neue Datenquellensicht ein, die die ursprünglichen Daten filtert, und ändern die Filterbedingung für jeden Satz von Vorhersageabfragen.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "36312918"
   
 9. Mit der rechten Maustaste die `AllRegions` Tabelle, und wählen Sie dann **Stichprobenoptionen**.  
   
-###  <a name="bkmk_CrossData"></a> So erstellen die Reihendaten für kreuzvorhersagen  
+###  <a name="bkmk_CrossData"></a> Erstellen Sie die Reihendaten für kreuzvorhersagen  
   
 1.  Klicken Sie im **Projektmappen-Explorer**mit der rechten Maustaste auf **Datenquellensichten**und wählen Sie dann **Neue Datenquellensicht**aus.  
   
@@ -181,7 +181,7 @@ ms.locfileid: "36312918"
     > [!NOTE]  
     >  Da Sie Vorhersagen für jede Reihe getrennt erstellen müssen, könnten Sie den Abfragetext kopieren und als Textdatei speichern, damit Sie ihn für die andere Datenreihe erneut verwenden können.  
   
-6.  Klicken Sie in der Entwurfsoberfläche der Datenquellensicht Maustaste auf T1000 Pacific, und wählen Sie dann **Stichprobenoptionen** um sicherzustellen, dass die Daten ordnungsgemäß gefiltert wurden.  
+6.  Klicken Sie in der Entwurfsoberfläche der Datenquellensicht mit der rechten Maustaste T1000 Pacific, und wählen Sie dann **Stichprobenoptionen** um sicherzustellen, dass die Daten ordnungsgemäß gefiltert wurden.  
   
      Sie verwenden diese Daten als Eingabe in das Modell, wenn Sie Abfragen für Kreuzvorhersagen erstellen.  
   

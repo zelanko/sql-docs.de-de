@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.newaglistener.general.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 caps.latest.revision: 50
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 2594ecdb53df53413f3851203ae110c1de754dd5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ae14ea283a7558b854481f435d6c9a62e5b51e52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056558"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225900"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners (SQL Server)
   In diesem Thema wird die Erstellung oder Konfiguration eines einzelnen *Verfügbarkeitsgruppenlisteners* für eine AlwaysOn-Verfügbarkeitsgruppe beschrieben. Dazu wird [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]verwendet.  
@@ -164,7 +163,7 @@ ms.locfileid: "36056558"
      `New-SqlAvailabilityGroupListener`  
      Erstellt einen neuen Verfügbarkeitsgruppenlistener und fügt ihn einer vorhandenen Verfügbarkeitsgruppe hinzu.  
   
-     Beispielsweise die folgenden `New-SqlAvailabilityGroupListener` Befehl erstellt einen verfügbarkeitsgruppenlistener namens `MyListener` für die verfügbarkeitsgruppe `MyAg`. Dieser Listener verwendet die IPv4-Adresse, die zum Übergeben der `-StaticIp` Parameter als seine virtuelle IP-Adresse.  
+     Beispielsweise die folgenden `New-SqlAvailabilityGroupListener` Befehl erstellt einen verfügbarkeitsgruppenlistener namens `MyListener` für die verfügbarkeitsgruppe `MyAg`. Dieser Listener verwendet die IPv4-Adresse, die an die `-StaticIp` Parameter als seine virtuelle IP-Adresse.  
   
     ```  
     New-SqlAvailabilityGroupListener -Name MyListener `   
@@ -207,14 +206,14 @@ ms.locfileid: "36056558"
 ###  <a name="ADQuotas"></a> Fehler beim Erstellen eines Verfügbarkeitsgruppenlisteners wegen Active Directory-Kontingenten  
  Die Erstellung eines neuen Verfügbarkeitsgruppenlisteners schlägt möglicherweise beim Erstellen fehl, da Sie ein Active Directory-Kontingent für das teilnehmende Clusterknoten-Computerkonto erreicht haben.  Weitere Informationen finden Sie in den folgenden Artikeln:  
   
--   [HYPERLINK "http://support.microsoft.com/kb/307532" Behandlung von das Clusterdienstkonto bei Computerobjekten](http://support.microsoft.com/kb/307532)  
+-   [HYPERLINK "http://support.microsoft.com/kb/307532" So beheben Sie das Clusterdienstkonto bei Computerobjekten](http://support.microsoft.com/kb/307532)  
   
 -   [HYPERLINK "http://technet.microsoft.com/library/cc904295(WS.10).aspx" Active Directory-Kontingenten](http://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
   
 ##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Erstellen eines Verfügbarkeitsgruppenlisteners  
   
 ###  <a name="MultiSubnetFailover"></a> MultiSubnetFailover-Schlüsselwort und zugehörige Funktionen  
- `MultiSubnetFailover` Schnelleres Failover bei AlwaysOn-Verfügbarkeitsgruppen und AlwaysOn-Failoverclusterinstanzen in SQL Server 2012 ermöglicht wird ein neues Schlüsselwort für Verbindungszeichenfolgen verwendet werden. Wenn in der Verbindungszeichenfolge `MultiSubnetFailover=True` festgelegt wird, werden die folgenden drei Teilfunktionen aktiviert:  
+ `MultiSubnetFailover` ein neues Schlüsselwort für Verbindungszeichenfolgen wird verwendet, um schnelleres Failover bei AlwaysOn-Verfügbarkeitsgruppen und AlwaysOn-Failoverclusterinstanzen in SQL Server 2012 ermöglicht. Wenn in der Verbindungszeichenfolge `MultiSubnetFailover=True` festgelegt wird, werden die folgenden drei Teilfunktionen aktiviert:  
   
 -   Schnelleres Multisubnetz-Failover auf einen Multisubnetzlistener für eine AlwaysOn-Verfügbarkeitsgruppe oder Failoverclusterinstanzen.  
   
@@ -242,14 +241,14 @@ ms.locfileid: "36056558"
   
      **Vorteile:** Sie müssen den Clientverbindungs-Timeoutwert nicht erhöhen.  
   
-     **Nachteile:** Eintreten ein subnetzübergreifenden Failovers, ist die clientwiederherstellungszeit möglicherweise 15 Minuten oder länger betragen, je nach Ihrer `HostRecordTTL` -Einstellung bzw. der Einstellung Ihres siteübergreifenden DNS/AD-Replikationszeitplans.  
+     **Nachteile:** im Falle ein subnetzübergreifenden Failovers ist die clientwiederherstellungszeit möglicherweise 15 Minuten oder länger betragen, je nach Ihrer `HostRecordTTL` und der Einstellung Ihres siteübergreifenden DNS/AD-Replikationszeitplans.  
   
 ###  <a name="RegisterAllProvidersIP"></a> Einstellung RegisterAllProvidersIP  
  Bei der Erstellung eines Verfügbarkeitsgruppenlisteners über [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] oder PowerShell wird der Client Access Point in WSFC mit Festlegung der Einstellung `RegisterAllProvidersIP` auf 1 (true) gesetzt. Der Effekt dieses Eigenschaftswerts hängt gemäß den folgenden Angaben von der Clientverbindungszeichenfolge ab:  
   
 -   Verbindungszeichenfolgen, die `MultiSubnetFailover` auf "true" festlegen  
   
-     [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] Legt die `RegisterAllProvidersIP` -Eigenschaft auf 1 fest, um die wiederverbindungszeit nach einem Failover für Clients zu reduzieren, deren Verbindungszeichenfolgen angeben `MultiSubnetFailover = True`wie empfohlen. Beachten Sie, dass die Clients zur Verwendung der Multisubnetzfunktion des Listeners möglicherweise einen Datenanbieter, der das `MultiSubnetFailover`-Schlüsselwort unterstützt, benötigen. Weitere Informationen zur Treiberunterstützung für Multisubnetzfailover finden Sie unter [AlwaysOn-Clientkonnektivität &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md).  
+     [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] Legt die `RegisterAllProvidersIP` -Eigenschaft auf 1 fest, um die wiederverbindungszeit nach einem Failover für Clients zu reduzieren, deren clientverbindungszeichenfolgen geben `MultiSubnetFailover = True`wie empfohlen. Beachten Sie, dass die Clients zur Verwendung der Multisubnetzfunktion des Listeners möglicherweise einen Datenanbieter, der das `MultiSubnetFailover`-Schlüsselwort unterstützt, benötigen. Weitere Informationen zur Treiberunterstützung für Multisubnetzfailover finden Sie unter [AlwaysOn-Clientkonnektivität &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md).  
   
      Informationen zu Multisubnetzclustering finden Sie unter [SQL Server-Multisubnetzclustering &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md).  
   
@@ -265,13 +264,13 @@ ms.locfileid: "36056558"
      Bei `RegisterAllProvidersIP = 1`treten bei Clients, deren Verbindungszeichenfolgen nicht `MultiSubnetFailover = True`verwenden, Verbindungen mit hoher Latenzzeit auf. Dies liegt daran, dass diese Clients versuchen, sequenziell Verbindungen zu allen IPs herzustellen. Wird dagegen `RegisterAllProvidersIP` in 0 geändert, wird die aktive IP-Adresse im Clientzugriffspunkt im WSFC-Cluster registriert und so die Latenzzeit für Legacyclients reduziert. Sollten Sie Legacyclients haben, die eine Verbindung zu einem Verfügbarkeitsgruppenlistener herstellen müssen und die `MultiSubnetFailover`-Eigenschaft nicht verwenden können, empfiehlt es sich daher, `RegisterAllProvidersIP` zu 0 zu ändern.  
   
     > [!IMPORTANT]  
-    >  Bei der Erstellung eines verfügbarkeitsgruppenlisteners über den wsfc-Cluster (Failovercluster-Manager-GUI) `RegisterAllProvidersIP` werden standardmäßig 0 (False).  
+    >  Bei der Erstellung eines verfügbarkeitsgruppenlisteners über den WSFC-Cluster (Failovercluster-Manager-GUI) `RegisterAllProvidersIP` werden standardmäßig 0 (False).  
   
 ###  <a name="HostRecordTTL"></a> Einstellung HostRecordTTL  
  Standardmäßig werden von Clients DNS-Clustereinträge 20 Minuten zwischengespeichert.  Durch das Reduzieren von `HostRecordTTL`, d. h. der Gültigkeitsdauer (Time to Live, TTL), für den zwischengespeicherten Eintrag können Legacyclients schneller wieder Verbindungen herstellen.  Durch das Reduzieren von `HostRecordTTL` kann jedoch auch ein stärkerer Datenverkehr zu den DN-Servern bewirkt werden.  
   
 ###  <a name="SampleScript"></a> Beispiel-PowerShell-Skript zur Deaktivierung von RegisterAllProvidersIP und zur Reduzierung der Gültigkeitsdauer (TTL)  
- Das folgende PowerShell-Beispiel veranschaulicht, wie konfiguriert die `RegisterAllProvidersIP` und `HostRecordTTL` Clusterparameter für die listenerressource.  Der DNS-Eintrag wird für 5 Minuten zwischengespeichert, nicht für die standardmäßigen 20 Minuten.  Durch das Ändern beider Clusterparameter kann die Zeit zum Herstellen der Verbindung mit der richtigen IP-Adresse nach einem Failover für Legacyclients reduziert werden, die den `MultiSubnetFailover`-Parameter nicht verwenden können.  Ersetzen Sie `yourListenerName` durch den Namen des Listeners, den Sie ändern.  
+ Das folgende PowerShell-Beispiel wird veranschaulicht, wie Sie konfiguriert die `RegisterAllProvidersIP` und `HostRecordTTL` Clusterparameter für die verfügbarkeitsgruppenlistener-Ressource.  Der DNS-Eintrag wird für 5 Minuten zwischengespeichert, nicht für die standardmäßigen 20 Minuten.  Durch das Ändern beider Clusterparameter kann die Zeit zum Herstellen der Verbindung mit der richtigen IP-Adresse nach einem Failover für Legacyclients reduziert werden, die den `MultiSubnetFailover`-Parameter nicht verwenden können.  Ersetzen Sie `yourListenerName` durch den Namen des Listeners, den Sie ändern.  
   
 ```  
 Import-Module FailoverClusters  

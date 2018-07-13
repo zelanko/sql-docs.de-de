@@ -1,5 +1,5 @@
 ---
-title: Datenquellensicht (Registerkarte Dimensionsstruktur, Dimensions-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Datenquellensicht (Registerkarte Dimensionsstruktur, Dimensions-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.datasourcepane.f1
 ms.assetid: c4bd3c5e-8986-448f-b9db-3551f50f0696
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c960a5c08f3d95ee6ef0813db67f8d9a33a6a683
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa82d94a6e034c514b173e623f8c6d0ab9932880
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049351"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246160"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Datenquellensicht (Registerkarte Dimensionsstruktur, Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich **Datenquellensicht** können Sie Tabellen und Spalten aus der Datenquellensicht anzeigen, die der ausgewählten Dimension zugeordnet ist. Dieser Bereich wird zum Erstellen von Attributen, Elementeigenschaften, Hierarchien und Ebenen verwendet. Dazu werden Spalten aus dem Bereich **Datenquellensicht** in den Bereich **Attribute** oder **Hierarchien und Ebenen** gezogen.  
@@ -45,7 +45,7 @@ ms.locfileid: "36049351"
  **Nur verwendete Tabellen anzeigen**  
  Zeigt in dem Bereich nur die Tabellen aus der zugeordneten Datenquellensicht an, die von der Dimension verwendet werden.  
   
- **Anzeigen von Anzeigenamen**  
+ **Anzeigenamen anzeigen**  
  Wählen Sie diese Option aus, um für die Objekte im Bereich die Anzeigenamen anzuzeigen.  
   
  **Alles auswählen**  

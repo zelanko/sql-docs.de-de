@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
 - joining report server instances [SQL Server]
@@ -24,13 +24,13 @@ ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 46b2afdb0687586761160397b1af197cdba8cd0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e39e1bd9772ea1e05e4e2c0dbb951cba721caaa1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36050253"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214830"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt-Hilfsprogramm (SSRS)
   Dient zum Extrahieren, Wiederherstellen, Erstellen und Löschen des symmetrischen Schlüssels, der verwendet wird, um vertrauliche Berichtsserverdaten vor nicht autorisiertem Zugriff zu schützen. Dieses Hilfsprogramm wird auch verwendet, um Berichtsserverinstanzen in einer Bereitstellung für horizontales Skalieren zu verknüpfen. Eine *Berichtsserverbereitstellung für horizontales Skalieren* bezeichnet mehrere Berichtsserverinstanzen, die gemeinsam eine einzelne Berichtsserver-Datenbank nutzen.  
@@ -89,23 +89,23 @@ ms.locfileid: "36050253"
   
  Für **rskeymgmt -a**wird der in der Datei gespeicherte Wert des symmetrischen Schlüssels auf die Berichtsserverinstanz angewendet.  
   
- `-p`  *Kennwort*  
+ `-p`  *Das Kennwort*  
  (Erforderlich für `-f`) Gibt das Kennwort an, das zum Sichern oder Anwenden eines symmetrischen Schlüssels verwendet wird. Dieser Wert muss angegeben sein.  
   
  `-i`  
- Gibt eine lokale Berichtsserverinstanz an. Dieses Argument ist optional, wenn Sie den Berichtsserver auf dem standardmäßigen installiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz (der Standardwert für `-i` ist MSSQLSERVER). Wenn Sie den Berichtsserver als eine benannte Instanz installiert `-i` ist erforderlich.  
+ Gibt eine lokale Berichtsserverinstanz an. Dieses Argument ist optional, wenn Sie den Berichtsserver auf dem standardmäßigen installiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz (der Standardwert für `-i` ist MSSQLSERVER). Wenn Sie den Berichtsserver als benannte Instanz installiert `-i` ist erforderlich.  
   
  `-m`  
  Gibt den Namen des Remotecomputers an, der die Berichtsserverinstanz hostet, die Sie der Berichtsserverbereitstellung für horizontales Skalieren hinzufügen. Verwenden Sie den Namen, durch den der Computer im Netzwerk identifiziert wird.  
   
  `-n`  
- Gibt den Namen der Berichtsserverinstanz auf einem Remotecomputer an. Dieses Argument ist optional, wenn Sie den Berichtsserver auf dem standardmäßigen installiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz (der Standardwert für `-n` ist MSSQLSERVER). Wenn Sie den Berichtsserver als eine benannte Instanz installiert `-n` ist erforderlich.  
+ Gibt den Namen der Berichtsserverinstanz auf einem Remotecomputer an. Dieses Argument ist optional, wenn Sie den Berichtsserver auf dem standardmäßigen installiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz (der Standardwert für `-n` ist MSSQLSERVER). Wenn Sie den Berichtsserver als benannte Instanz installiert `-n` ist erforderlich.  
   
- `-u`  *Useraccount*  
+ `-u`  *Benutzerkonto*  
  Gibt das Administratorkonto auf dem Remotecomputer an, den Sie der Bereitstellung für horizontales Skalieren hinzufügen. Wird kein Konto angegeben, werden die Anmeldeinformationen des aktuellen Benutzers verwendet.  
   
- `-v`  *Kennwort*  
- (Erforderlich für `-u`) gibt an, das Kennwort eines Administratorkontos auf dem Remotecomputer, die Sie mit der Bereitstellung für horizontales Skalieren zu verknüpfen möchten.  
+ `-v`  *Das Kennwort*  
+ (Erforderlich für `-u`) gibt das Kennwort eines Administratorkontos auf dem Remotecomputer, die Sie die Bereitstellung für horizontales Skalieren hinzufügen möchten.  
   
  **-t**  *Ablaufverfolgung*  
  Schreibt Fehlermeldungen in das Ablaufverfolgungsprotokoll. Dieses Argument enthält keinen Wert. Weitere Informationen finden Sie unter [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).  
@@ -151,7 +151,7 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 >  Eine Berichtsserverbereitstellung für horizontales Skalieren bezeichnet ein Bereitstellungsmodell, bei dem mehrere Berichtsserverinstanzen dieselbe Berichtsserver-Datenbank gemeinsam nutzen. Eine Berichtsserver-Datenbank kann von jeder Berichtsserverinstanz verwendet werden, die ihre symmetrischen Schlüssel in der Datenbank speichert. Wenn eine Berichtsserver-Datenbank beispielsweise Schlüsselinformationen für drei Berichtsserverinstanzen enthält, werden alle drei Instanzen als Mitglieder derselben Bereitstellung für horizontales Skalieren betrachtet.  
   
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>Verknüpfen von Berichtsserverinstanzen auf demselben Computer  
- Sie können eine Bereitstellung für horizontales Skalieren von mehreren Berichtsserverinstanzen aus erstellen, die auf demselben Computer installiert sind. Legen Sie nicht die `-u` und `-v` Argumente hinzufügen Report Server-Instanzen, die lokal installiert sind. Die Argumente `-u` und `-v` werden nur verwendet, wenn Sie eine Instanz von einem Remotecomputer aus hinzufügen. Wenn Sie die Argumente festlegen, wird die folgende Fehlermeldung angezeigt: "Benutzeranmeldeinformationen können nicht für lokale Verbindungen verwendet werden."  
+ Sie können eine Bereitstellung für horizontales Skalieren von mehreren Berichtsserverinstanzen aus erstellen, die auf demselben Computer installiert sind. Legen Sie nicht die `-u` und `-v` Argumente, wenn Sie teilnehmen möchten Report Server-Instanzen, die lokal installiert sind. Die Argumente `-u` und `-v` werden nur verwendet, wenn Sie eine Instanz von einem Remotecomputer aus hinzufügen. Wenn Sie die Argumente festlegen, wird die folgende Fehlermeldung angezeigt: "Benutzeranmeldeinformationen können nicht für lokale Verbindungen verwendet werden."  
   
  Das folgende Beispiel veranschaulicht die Syntax für eine Bereitstellung für horizontales Skalieren mithilfe mehrerer lokaler Instanzen. In diesem Beispiel ist <`initializedinstance`> der Name einer Instanz, die bereits für die Verwendung der Berichtsserver-Datenbank initialisiert wurde, und <`newinstance`> der Name der Instanz, die der Bereitstellung hinzugefügt werden soll:  
   
@@ -181,7 +181,7 @@ rskeymgmt -r <installationID>
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren (SSRS-Konfigurations-Manager)](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
  [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../report-server/reporting-services-report-server-native-mode.md)   
- [Eingabeaufforderungs-Hilfsprogramme Bericht &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
+ [Eingabeaufforderung-Hilfsprogramme für Berichtsserver &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
  [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

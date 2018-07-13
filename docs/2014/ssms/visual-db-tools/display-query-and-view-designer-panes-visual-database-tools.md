@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Query Designer [SQL Server], panes
 - viewing View Designer panes
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - displaying Query Designer panes
 ms.assetid: 605c63af-f91e-410d-8d60-5cf6f899d756
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 718e4f343cf10ccf13ed108de95de4d815443115
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f0061c4891854c25dadf28bb8f3c18ab4828106f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36049597"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222270"
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>Anzeigen von Bereichen des Abfrage- und Sicht-Designers (Visual Database Tools)
   Der Abfrage- und Sicht-Designer umfasst vier separate Bereiche: den Diagrammbereich, den Kriterienbereich, den SQL-Bereich und den Ergebnisbereich. Beim Aufrufen einer Sicht oder beim Erstellen einer neuen Abfrage werden in der Regel alle vier Fenster geöffnet. Sie können jedoch auch jedes dieser Fenster aufrufen, sofern der Abfrage- und Sicht-Designer geöffnet ist.  
