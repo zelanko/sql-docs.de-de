@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 caps.latest.revision: 113
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fcddb47c254b897403cb784810703a1c7b20437a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 77db86a684089c0696d499499bc52c816f35c0d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046477"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231550"
 ---
 # <a name="execute-sql-task"></a>SQL ausführen (Task)
   Mit dem Task SQL ausführen werden SQL-Anweisungen oder gespeicherte Prozeduren aus einem Paket ausgeführt. Dieser Task kann eine oder mehrere SQL-Anweisungen enthalten, die sequenziell ausgeführt werden. Der Task SQL ausführen kann für folgende Zwecke verwendet werden:  
@@ -84,7 +84,7 @@ ms.locfileid: "36046477"
 -   Falls für den Task die Parameterbindung verwendet wird, müssen alle Abfragen im Batch die gleiche Anzahl und Art von Parametern aufweisen.  
   
 ## <a name="running-parameterized-sql-commands"></a>Ausführen parametrisierter SQL-Befehle  
- SQL-Anweisungen und gespeicherte Prozeduren verwenden häufig Eingabeparameter, Ausgabeparameter und Rückgabecodes. Der Task SQL ausführen unterstützt die `Input`, `Output`, und `ReturnValue` Parametertypen. Verwenden Sie die `Input` Typ für Eingabeparameter, `Output` für Ausgabeparameter und `ReturnValue` Rückgabecodes.  
+ SQL-Anweisungen und gespeicherte Prozeduren verwenden häufig Eingabeparameter, Ausgabeparameter und Rückgabecodes. Der Task SQL ausführen unterstützt die `Input`, `Output`, und `ReturnValue` Parametertypen. Sie verwenden die `Input` Typ für Eingabeparameter, `Output` für Ausgabeparameter und `ReturnValue` Rückgabecodes.  
   
 > [!NOTE]  
 >  Parameter können in einem Task SQL ausführen nur verwendet werden, wenn dies vom Datenanbieter unterstützt wird.  
@@ -99,7 +99,7 @@ ms.locfileid: "36046477"
 ## <a name="troubleshooting-the-execute-sql-task"></a>Problembehandlung des Tasks SQL ausführen  
  Sie können die vom Task SQL ausführen an externe Datenanbieter gerichteten Aufrufe protokollieren. Mithilfe dieser Protokollierungsfunktionen können Sie Probleme bei SQL-Befehlen behandeln, die vom Task SQL ausführen ausgeführt werden. Aktivieren Sie zum Protokollieren der vom Task SQL ausführen an externe Datenanbieter gerichteten Aufrufe die Paketprotokollierung, und wählen Sie das **Diagnostic** -Ereignis auf Paketebene aus. Weitere Informationen finden Sie unter [Behandlung von Problemen mit Paketausführungstools](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
- Gelegentlich gibt ein SQL-Befehl oder eine gespeicherte Prozedur mehrere Resultsets zurück. Diesen Resultsets gehören nicht nur Rowsets, die als von Ergebnis `SELECT` Abfragen, sondern auch einzelne Werte, die das Ergebnis von Fehlern in der `RAISERROR` oder `PRINT` Anweisungen. Ob der Task Fehler in Resultsets nach dem ersten Resultset ignoriert, hängt vom verwendeten Typ des Verbindungs-Managers ab:  
+ Gelegentlich gibt ein SQL-Befehl oder eine gespeicherte Prozedur mehrere Resultsets zurück. Diesen Resultsets gehören nicht nur Rowsets, die das Ergebnis des `SELECT` Abfragen, sondern auch einzelne Werte, die das Ergebnis von Fehlern in der `RAISERROR` oder `PRINT` Anweisungen. Ob der Task Fehler in Resultsets nach dem ersten Resultset ignoriert, hängt vom verwendeten Typ des Verbindungs-Managers ab:  
   
 -   Wenn Sie OLE DB- und ADO-Verbindungs-Manager verwenden, ignoriert der Task die Resultsets, die nach dem ersten Resultset auftreten. Das bedeutet, dass der Task bei diesen Verbindungs-Managern einen von einem SQL-Befehl oder einer gespeicherten Prozedur zurückgegebenen Fehler ignoriert, wenn der Fehler nicht Teil des ersten Resultsets ist.  
   

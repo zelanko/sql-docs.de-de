@@ -1,13 +1,13 @@
 ---
-title: SQL und Parallel Data Warehouse-dynamische Verwaltungssichten | Microsoft Docs
+title: SQL und Parallel Data Warehouse-dynamische Verwaltungssichten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
+ms.component: system-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8df833bdcc049bd9c8197dd8caea6410aa94d45c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
-ms.translationtype: MT
+ms.openlocfilehash: e610fb5bf6b64432b28a20d6e57e4b729a3c044e
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467507"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36915021"
 ---
-# <a name="sql-and-parallel-data-warehouse-dynamic-management-views"></a>SQL und Parallel Datawarehouse dynamische Verwaltungssichten
+# <a name="sql-and-parallel-data-warehouse-dynamic-management-views"></a>Dynamische Verwaltungssichten von SQL und Parallel Datawarehouse
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Dieses Thema enthält die [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] dynamische Verwaltungssichten (DMVs).  

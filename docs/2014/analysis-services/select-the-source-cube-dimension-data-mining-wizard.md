@@ -1,5 +1,5 @@
 ---
-title: Wählen Sie die Quellcubedimension (Datamining-Assistent) | Microsoft Docs
+title: Wählen Sie die Quellcubedimension (Datamining-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectsourcecube.f1
 ms.assetid: 556e216b-5e21-4160-967d-4c57591fbab4
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ddd4affa954cf080cec3ad1ca37df82d494221e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 613847dca4d6113a8acfc8079ebc1e7a97ef3311
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046287"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192480"
 ---
 # <a name="select-the-source-cube-dimension-data-mining-wizard"></a>Quellcubedimension auswählen (Data Mining-Assistent)
   Mithilfe der Seite **Quellcubedimension auswählen** wählen Sie die Dimension des Cubes aus, die die zu analysierenden Fälle enthält. Wenn Sie beispielsweise ein Modell zur Analyse des Kaufverhaltens von Kunden auf der Grundlage von demografischen Daten erstellen, wählen Sie die Customer-Dimension aus, die in der Regel einen eindeutigen Datensatz für jeden Kunden und verschiedene Attribute mit demografischen Daten enthält, wie z. B. Geschlecht, Wohnsitz oder Einkommen. Zu einem späteren Zeitpunkt können Sie im Assistenten eine Tabelle hinzuzufügen, die sich auf diese Falltabelle bezieht. Sie können beispielsweise eine geschachtelte Tabelle hinzufügen, die anzeigt, welche Produkte der Kunde gekauft hat.  
@@ -44,7 +44,7 @@ ms.locfileid: "36046287"
   
 ## <a name="see-also"></a>Siehe auch  
  [Data Mining-Assistent F1-Hilfe &#40;Analysis Services – Datamining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Erstellen von Datamining-Struktur &#40;Datamining-Assistenten&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
- [Auswählen des Fallschlüssels &#40;Datamining-Assistenten&#41;](select-the-case-key-data-mining-wizard.md)  
+ [Erstellen von Datamining-Struktur &#40;Datamining-Assistent&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
+ [Fallschlüssel auswählen &#40;Datamining-Assistent&#41;](select-the-case-key-data-mining-wizard.md)  
   
   

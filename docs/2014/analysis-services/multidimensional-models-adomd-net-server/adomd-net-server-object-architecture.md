@@ -1,5 +1,5 @@
 ---
-title: ADOMD.NET-serverobjektarchitektur | Microsoft Docs
+title: ADOMD.NET-serverobjektarchitektur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - object model [ADOMD.NET]
 ms.assetid: bdc81de9-b390-4654-b62a-cd6c0c9ca10d
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a5bcdd6ef56fe8d072b8c22537a55ed3888ad6ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f18dd57b9232a9ef9e3405ccc77b5db1bb8a1c82
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046557"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237720"
 ---
 # <a name="adomdnet-server-object-architecture"></a>ADOMD.NET-Serverobjektarchitektur
-  Die ADOMD.NET-Serverobjekte sind Hilfsobjekte, die zum Erstellen von benutzerdefinierten Funktionen (UDFs) oder in gespeicherten Prozeduren verwendet werden können [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+  Die ADOMD.NET-Serverobjekte sind Hilfsobjekte, die verwendet werden können, zum Erstellen von benutzerdefinierten Funktionen (UDFs) oder gespeicherte Prozeduren in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 > [!NOTE]  
 >  Um den `Microsoft.AnalysisServices.AdomdServer`-Namespace (und diese Objekte) verwenden zu können, muss eine Referenz auf msmgdsrv.dll zum Projekt der benutzerdefinierten Funktion oder der gespeicherten Prozedur hinzugefügt werden.  

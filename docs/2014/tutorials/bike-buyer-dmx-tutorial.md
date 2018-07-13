@@ -1,5 +1,5 @@
 ---
-title: Bike Buyer DMX Tutorial | Microsoft Docs
+title: Bike Buyer DMX Tutorial | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DMX [Analysis Services], tutorials
 - data mining [Analysis Services], tutorials
@@ -19,18 +19,18 @@ ms.assetid: 4b634cc1-86dc-42ec-9804-a19292fe8448
 caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: fc1676f55d2d920c90d56f552973cf7e2a1d3942
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 788cdb0ccd3f8093972c45db1463412c5f41a765
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312958"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187667"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Bike Buyer-Lernprogramm zur DMX-Abfragesprache
   In diesem Lernprogramm erfahren Sie, wie Miningmodelle mithilfe der Abfragesprache Data Mining-Erweiterungen (Data Mining Extensions, DMX) erstellt, trainiert und analysiert werden. Anschließend verwenden Sie diese Miningmodelle zum Erstellen von Vorhersagen, mit denen sich bestimmen lässt, ob ein Kunde ein Fahrrad kaufen wird.  
   
- Die Miningmodelle erstellt werden aus den Daten der [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] Beispieldatenbank, die Daten für das fiktive Unternehmen speichert [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ist ein großes, multinationales Produktionsunternehmen. Das Unternehmen fertigt und verkauft Fahrräder aus Metall und Verbundwerkstoffen auf dem nordamerikanischen, europäischen und asiatischen Markt. Der Hauptsitz befindet sich mit 290 Mitarbeitern in Bothell, Washington. Darüber hinaus sind mehrere regionale Vertriebsteams über die internationalen Zielmärkte des Unternehmens verteilt.  
+ Die Miningmodelle erstellt werden aus den Daten die [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] Beispieldatenbank, die Daten für das fiktive Unternehmen speichert [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ist ein großes, multinationales Produktionsunternehmen. Das Unternehmen fertigt und verkauft Fahrräder aus Metall und Verbundwerkstoffen auf dem nordamerikanischen, europäischen und asiatischen Markt. Der Hauptsitz befindet sich mit 290 Mitarbeitern in Bothell, Washington. Darüber hinaus sind mehrere regionale Vertriebsteams über die internationalen Zielmärkte des Unternehmens verteilt.  
   
 ## <a name="tutorial-scenario"></a>Lernprogrammszenario  
  Das Unternehmen [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] hat entschieden, seine Datenanalyse auszuweiten. Dazu soll eine benutzerdefinierte Anwendung erstellt werden, die Data Mining-Funktionalität verwendet. Das Unternehmen erwartet von dieser benutzerdefinierten Anwendung, dass sie folgende Aufgaben ausführen kann:  
@@ -43,7 +43,7 @@ ms.locfileid: "36312958"
   
  Darüber hinaus möchte die Marketingabteilung über die Möglichkeit verfügen, vorhandene Kunden in Kategorien zu gruppieren, die auf Merkmalen wie Wohnort, Anzahl der Kinder und Arbeitsweg basieren. Die Mitarbeiter der Marketingabteilung möchten untersuchen, ob mithilfe dieser Cluster bestimmte Kundengruppen gezielt angesprochen werden können. Dies erfordert ein zusätzliches Miningmodell.  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bietet mehrere Tools, mit denen folgende Aufgaben ausgeführt werden können:  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bietet mehrere Tools, die verwendet werden können, um diese Aufgaben auszuführen:  
   
 -   Die DMX-Abfragesprache  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36312958"
   
  **Weitere Informationen**  
   
- [Datamining-Erweiterungen &#40;DMX&#41; Verweis](/sql/dmx/data-mining-extensions-dmx-reference), [Verständnis der DMX Select-Anweisung](/sql/dmx/understanding-the-dmx-select-statement), [Struktur und die Verwendung von DMX-Vorhersageabfragen](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
+ [Datamining-Erweiterungen &#40;DMX&#41; Verweis](/sql/dmx/data-mining-extensions-dmx-reference), [verstehen die DMX Select-Anweisung](/sql/dmx/understanding-the-dmx-select-statement), [Struktur und Verwendung von DMX-Vorhersageabfragen](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
   
 ## <a name="what-you-will-learn"></a>Lernziele  
  Dieses Lernprogramm ist in die folgenden Lektionen aufgeteilt:  

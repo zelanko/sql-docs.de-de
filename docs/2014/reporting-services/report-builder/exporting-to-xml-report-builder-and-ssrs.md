@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bfa8b10cd2d67154946395334f8bde2b9bbd680a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 11bb46bc593a95811c56a5489fd5489ca72ca917
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047112"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223270"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportieren nach XML (Berichts-Generator und SSRS)
   Die XML-Renderingerweiterung gibt einen Bericht im XML-Format zurück. Das Schema der Bericht-XML-Ausgabe hängt vom jeweiligen Bericht ab und enthält nur Daten. Layoutinformationen werden von der XML-Renderingerweiterung nicht gerendert, und die Paginierung wird nicht beibehalten. Der von dieser Erweiterung generierte XML-Code kann in eine Datenbank importiert, als XML-Datennachricht verwendet oder an eine benutzerdefinierte Anwendung gesendet werden.  
@@ -65,9 +65,9 @@ ms.locfileid: "36047112"
 |Wert aller Textfeldelemente|Zugewiesener Datentyp|  
 |--------------------------------|---------------------------|  
 |`Int16`, `Int32`, `Int64`, `UInt16`, `UInt32`, `UInt64`, `Byte`, `SByte`|**xsd:integer**|  
-|`Decimal` (oder `Decimal` und jeder ganzzahlige oder Byte-Datentyp)|**xsd:decimal**|  
-|`Float` (oder `Decimal` und jeder ganzzahlige oder Byte-Datentyp)|**xsd:float**|  
-|`Double` (oder `Decimal` und jeder ganzzahlige oder Byte-Datentyp)|**xsd:double**|  
+|`Decimal` (oder `Decimal` und jeder Integer- oder Byte-Datentyp)|**xsd:decimal**|  
+|`Float` (oder `Decimal` und jeder Integer- oder Byte-Datentyp)|**xsd:float**|  
+|`Double` (oder `Decimal` und jeder Integer- oder Byte-Datentyp)|**xsd:double**|  
 |`DateTime or DateTime Offset`|**xsd:dateTime**|  
 |`Time`|**xsd:string**|  
 |`Boolean`|**xsd:boolean**|  
@@ -84,7 +84,7 @@ ms.locfileid: "36047112"
   
  XML-Namespacedefinitionen und Schemareferenzattribute sind ebenfalls im Berichtselement enthalten. Variablen werden fett formatiert:  
   
- \<**Bericht** Xmlns = "**SchemaName**" xmlns: xsi = "http://www.w3.org/2001/XMLSchema-instance" Xsi:**SchemaLocation**= "**SchemaNameReportURL**&amp;Rc % 3aSchema = "true""Name ="ReportName">  
+ \<**Bericht** Xmlns = "**SchemaName**" xmlns: xsi = "http://www.w3.org/2001/XMLSchema-instance" Xsi:**SchemaLocation**= "**Schemanameberichturl**&amp;Rc % 3aSchema = "true" fest"Name ="Berichtname">  
   
  Die Werte für die Variablen lauten wie folgt:  
   

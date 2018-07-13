@@ -27,13 +27,13 @@ ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 614e925a7481c574bce63c0815b587e4984604df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a9a34f810805817075651cfe148f2d5de252c91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046472"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243000"
 ---
 # <a name="working-with-images-with-the-script-task"></a>Arbeiten mit Bildern mithilfe des Skripttasks
   Datenbanken von Produkten oder Benutzern enthalten häufig neben Text und numerischen Daten auch Bilder. Der `System.Drawing`-Namespace in Microsoft .NET Framework stellt Klassen zum Bearbeiten von Bildern bereit.  
@@ -52,7 +52,7 @@ ms.locfileid: "36046472"
   
 1.  Erstellen Sie eine Zeichenfolgenvariable namens `CurrentImageFile`, und legen Sie ihren Wert auf den Pfad und Dateinamen einer bestehenden Bilddatei fest.  
   
-2.  Auf der **Skript** auf der Seite der **Skripttask-Editor**, Hinzufügen der `CurrentImageFile` -Variablen an die `ReadOnlyVariables` Eigenschaft.  
+2.  Auf der **Skript** auf der Seite die **Skripttask-Editor**, Hinzufügen der `CurrentImageFile` -Variable auf die `ReadOnlyVariables` Eigenschaft.  
   
 3.  Legen Sie im Skriptprojekt einen Verweis auf den `System.Drawing`-Namespace fest.  
   
@@ -163,7 +163,7 @@ End Function
   
 2.  Erstellen Sie zudem die ganzzahlige Variable `MaxThumbSize`, und weisen Sie ihr einen Pixelwert, z. B. 100, zu.  
   
-3.  Auf der **Skript** auf der Seite der **Skripttask-Editor**, beide Variablen hinzufügen, die `ReadOnlyVariables` Eigenschaft.  
+3.  Auf der **Skript** auf der Seite die **Skripttask-Editor**, fügen Sie beide Variablen der `ReadOnlyVariables` Eigenschaft.  
   
 4.  Legen Sie im Skriptprojekt einen Verweis auf den `System.Drawing`-Namespace fest.  
   
@@ -294,6 +294,6 @@ bool ThumbnailCallback()
   
 ```  
   
-![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben Sie mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: DSVTableBinding-Datentyp (ASSL) | Microsoft Docs
+title: DSVTableBinding-Datentyp (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DSVTableBinding data type
 ms.assetid: 149e753f-6218-4805-9223-7155b6827e64
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 75a84b2709d2c85ac0dfa8ce4538406c3daa7a61
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d4748adb2ca6b26c42bee9b0ba5ea502d973679
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047489"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195990"
 ---
 # <a name="dsvtablebinding-data-type-assl"></a>DSVTableBinding-Datentyp (ASSL)
   Definiert einen abgeleiteten Datentyp, der die Bindung zwischen einer Tabelle darstellt und einen [DataSourceView](../objects/datasourceview-element-assl.md) Element.  
@@ -62,11 +62,11 @@ ms.locfileid: "36047489"
 |Abgeleitete Elemente|Finden Sie unter [binden](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Weitere Informationen zu den `Binding` Typs, einschließlich der Tabellen von Analysis Services Scripting Language (ASSL) von Objekten des der `Binding` Typ und der Vererbungshierarchie des `Binding` , finden Sie unter [binden](binding-data-type-assl.md) Element.  
+ Weitere Informationen zu der `Binding` -Typ und zu Tabellen von Analysis Services Scripting Language (ASSL)-Objekten, von der `Binding` Typ und der Vererbungshierarchie des `Binding` Datentypen, finden Sie unter [Bindung](binding-data-type-assl.md) Element.  
   
  Einen Überblick über datenbindungen in ASSL finden Sie unter [Datenquellen und-Bindungen &#40;mehrdimensionale SSAS-&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.DSVTableBinding>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.DSVTableBinding>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services Scripting Language-XML-Datentypen &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

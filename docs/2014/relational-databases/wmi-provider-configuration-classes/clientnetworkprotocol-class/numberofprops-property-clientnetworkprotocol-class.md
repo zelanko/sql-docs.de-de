@@ -1,5 +1,5 @@
 ---
-title: NumberOfProps-Eigenschaft (ClientNetworkProtocol-Klasse) | Microsoft Docs
+title: NumberOfProps-Eigenschaft (ClientNetworkProtocol-Klasse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - NumberOfProps property
 ms.assetid: 9c508bc5-c7a4-4db1-b3bf-c7098c66435a
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8cc8a35e9eab4068f9fc4b09c70725df3e3a36f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 24e99ca2b2695d2be3b05a24844f02c52c2735fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047345"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216780"
 ---
 # <a name="numberofprops-property-clientnetworkprotocol-class"></a>NumberOfProps-Eigenschaft (ClientNetworkProtocol-Klasse)
   Ruft die Anzahl der Eigenschaften ab, die das von der [SetOrderValue-Methode (ClientNetworkProtocol-Klasse)](clientnetworkprotocol-class.md)angegebene Clientnetzwerkprotokoll erfordert.  

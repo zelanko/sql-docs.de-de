@@ -1,5 +1,5 @@
 ---
-title: SSIS-Paketformat | Microsoft Docs
+title: SSIS-Paketformat | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cfe0e5dc-5be3-4222-b721-fe83665edd94
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dcb50760bcbe0ce1a4eb01a9a1a2de29565defdf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c025877f39e66fcf25e6ed2b27d6e1b422a299d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046690"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237120"
 ---
 # <a name="ssis-package-format"></a>SSIS-Paketformat
   In der aktuellen Version von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] wurden wichtige Änderungen am Paketformat (DTSX-Datei) vorgenommen, um das Format besser lesbar zu machen und Pakete besser vergleichen zu können. Außerdem wurde das Zusammenführen von Paketen verbessert, die keine miteinander in Konflikt stehenden Änderungen oder im Binärformat gespeicherte Änderungen enthalten.  
@@ -34,9 +34,9 @@ ms.locfileid: "36046690"
   
 -   Die meisten Objekte in einem Paket, auf die von anderen Objekten verwiesen werden kann, verfügen jetzt über ein im Paket-XML definiertes `refId`-Attribut. Statt persistenter Herkunfts-IDs wird die `refID` jetzt beibehalten. Herkunfts-IDs werden immer noch zur Laufzeit verwendet und neu generiert, wenn das Paket geladen wird.  
   
-     Die `refId` Wert ist eine eindeutige Zeichenfolge, die im Vergleich zu GUIDs oder ganzzahligen Werten lesbar und verständlich ist. Die Zeichenfolge ist ähnlich wie Pfadwerte, die in vorherigen Versionen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]für die Paketkonfigurationen verwendet wurden.  
+     Die `refId` Wert ist eine eindeutige Zeichenfolge, die lesbar und verständlich ist im Vergleich zu GUIDs oder ganzzahligen Werten. Die Zeichenfolge ist ähnlich wie Pfadwerte, die in vorherigen Versionen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]für die Paketkonfigurationen verwendet wurden.  
   
-     Wenn Sie Änderungen zwischen zwei Versionen eines Pakets zusammenführen, werden die `refId` in Such-/Ersetzungsvorgängen verwendet werden können, um sicherzustellen, dass alle Verweise auf dieses Objekt ordnungsgemäß aktualisiert wurden.  
+     Wenn Sie Änderungen zwischen zwei Versionen eines Pakets Zusammenführen der `refId` kann in Such-/Ersetzungsvorgängen verwendet werden, um sicherzustellen, dass alle Verweise auf dieses Objekt ordnungsgemäß aktualisiert wurden.  
   
 -   Die Layoutinformationen sind in einem CDATA-Abschnitt enthalten.  
   

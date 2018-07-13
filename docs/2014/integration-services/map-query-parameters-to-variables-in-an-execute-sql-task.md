@@ -1,5 +1,5 @@
 ---
-title: Zuordnen von Abfrageparametern zu Variablen in einem Task SQL ausführen | Microsoft Docs
+title: Zuordnen von Abfrageparametern zu Variablen in einem Task "SQL ausführen" | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [Integration Services], parameter mapping
 - parameterized SQL commands [Integration Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - variables [Integration Services], mapping parameters to
 ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e6427fe7773569abc5d3989e6ca830c0999a962c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 92972c340a71587329146f71542e15d8a45cb914
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046464"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233390"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>Zuordnen von Abfrageparametern zu Variablen in einem Task SQL ausführen
   In diesem Thema wird beschrieben, wie Sie eine parametrisierte SQL-Anweisung im Task 'SQL ausführen' verwenden und wie Sie Zuordnungen zwischen Variablen und den Parametern der SQL-Anweisung erstellen.  
@@ -108,7 +108,7 @@ ms.locfileid: "36046464"
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL ausführen (Task)](control-flow/execute-sql-task.md)   
- [Parameter und Rückgabecodes den Tasks "SQL ausführen"](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
- [Integrationsservices &#40;SSIS&#41; Variablen](integration-services-ssis-variables.md)  
+ [Parameter und Rückgabecodes dem Task "SQL ausführen"](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
+ [Integrationsdienste &#40;SSIS&#41; Variablen](integration-services-ssis-variables.md)  
   
   

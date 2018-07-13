@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - saving database diagrams
 - database diagrams [SQL Server], saving
 - diagrams [SQL Server], saving
 ms.assetid: 747357f2-007c-4586-a371-c7fbe6a2c288
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 55d66340b5f095fc8e2d4640daad22fc78c70e0f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7f2fd6fd4690c8b58c0c7c022e0b1e19c41c76db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047063"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222290"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>Speichern von Datenbankdiagrammen (Visual Database Tools)
   Beim Speichern eines Datenbankdiagramms werden alle daran vorgenommenen Änderungen gespeichert, einschließlich der Änderungen an Tabellen, Spalten und anderen Datenbankobjekten.  
   
 ### <a name="to-save-the-database-diagram"></a>So speichern Sie das Datenbankdiagramm  
   
-1.  Aus der **Datei** Menü wählen **speichern <*`tablename`*>**.  
+1.  Von der **Datei** Menü wählen **speichern <*`tablename`*>**.  
   
 2.  Wenn es sich um ein neues Diagramm handelt, das zum ersten Mal gespeichert werden soll, wird das Dialogfeld **Speichern unter** geöffnet. Geben Sie einen Namen für das Diagramm ein.  
   

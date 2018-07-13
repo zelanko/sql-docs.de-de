@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - exporting data
 - bulk importing [SQL Server], about bulk importing
@@ -25,15 +24,15 @@ helpviewer_keywords:
 - importing data
 ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
 caps.latest.revision: 56
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 615da1ce995a23b9518997570a9e34df71b4efb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 4bfbd00c0079aec3e9bcfa67560962356be1cad4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046224"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227690"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>Massenimport und -export von Daten (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt den Massenexport von Daten (*Massendaten*) aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle und den Massenimport in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle oder eine nicht partitionierte Sicht. Das Massenimportieren und -exportieren ist für die effiziente Datenübertragung zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Quellen heterogener Daten wichtig. Der*Massenexport* bezieht sich auf das Kopieren von Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle in eine Datendatei. Beim*Massenimport* werden Daten aus einer Datendatei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle geladen. Sie können beispielsweise Daten von einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel-Anwendung in eine Datendatei exportieren und dann einen Massenimport der Daten in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle ausführen.  
@@ -44,16 +43,16 @@ ms.locfileid: "36046224"
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="Intro"></a> Massenimport und Massenexport Export (Übersicht)  
+##  <a name="Intro"></a> Massenimport und Übersicht über Massen-Export  
  Dieser Abschnitt enthält eine Auflistung und einen kurzen Vergleich der verschiedenen Methoden, die für den Massenimport und -export von Daten verfügbar sind. Der Abschnitt bietet darüber hinaus eine Einführung in Formatdateien.  
   
  **In diesem Thema:**  
   
--   [Methoden für den Massenimport und-Export von Daten](#MethodsForBuliIE)  
+-   [Methoden für den Massenimport importieren und Exportieren von Daten](#MethodsForBuliIE)  
   
 -   [Formatdateien](#FFs)  
   
-###  <a name="MethodsForBuliIE"></a> Methoden für den Massenimport und-Export von Daten  
+###  <a name="MethodsForBuliIE"></a> Methoden für den Massenimport importieren und Exportieren von Daten  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird der Massenexport von Daten aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle und der Massenimport in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle oder eine nicht partitionierte Sicht unterstützt. Dazu stehen die folgenden grundlegenden Methoden zur Verfügung.  
   
 |Methode|Description|Importiert Daten|Exportiert Daten|  
@@ -81,7 +80,7 @@ ms.locfileid: "36046224"
   
 -   [Importieren und Exportieren von Massendaten mithilfe des Hilfsprogramms Bcp &#40;SQL Server&#41;](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)  
   
--   [Importieren von Massendaten mithilfe von BULK INSERT oder OPENROWSET&#40;BULK... &#41; &#40;SQLServer&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)  
+-   [Importieren von Massendaten mithilfe von BULK INSERT oder OPENROWSET(Bulk...)&#40;BULK... &#41; &#40;SQLServer&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)  
   
 -   [Beibehalten von Identitätswerten beim Massenimport von Daten &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   

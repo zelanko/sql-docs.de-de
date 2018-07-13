@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], schema changes
 - snapshot replication [SQL Server], replicating schema changes
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - publishing [SQL Server replication], schema changes
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 caps.latest.revision: 71
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c5fdf15e3038f865bb123f3dd79321d036813281
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4c84487775fb5eb3839910fd800489927edcc77f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046217"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172731"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken
   Die Replikation unterstützt eine breite Palette von Schemaänderungen an veröffentlichten Objekten. Wenn Sie eine der folgenden Schemaänderungen am entsprechenden veröffentlichten Objekt auf einem [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verleger vornehmen, wird diese Änderung standardmäßig an alle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten weitergegeben:  
@@ -152,7 +152,7 @@ ms.locfileid: "36046217"
         |`filestream`|Änderung zulassen|Änderung blockieren|Änderung blockieren|  
         |`date`, `time`, `datetime2` und `datetimeoffset`|Änderung zulassen|Änderung zulassen<sup>1</sup>|Änderung blockieren|  
   
-         <sup>1</sup> Abonnenten von SQL Server Compact konvertieren diese Datentypen auf dem Abonnenten.  
+         <sup>1</sup> Abonnenten von SQL Server Compact konvertieren diese Datentypen beim Abonnenten.  
   
 -   Falls beim Anwenden einer Schemaänderung ein Fehler auftritt, schlägt die Synchronisierung fehl, und das Abonnement muss erneut initialisiert werden. (Ein Fehler kann z. B. auftreten, wenn ein hinzugefügter Fremdschlüssel auf eine Tabelle verweist, die auf dem Abonnenten nicht verfügbar ist.)  
   

@@ -5,10 +5,9 @@ ms.date: 11/23/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transparent Data Encryption
 - database encryption key, about
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - encryption [SQL Server], transparent data encryption
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
 caps.latest.revision: 70
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7e1f31b2cfced2f94ecf0417a4cf8b62f53fbb15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: 25893299dfc708e952cbc2cb4673e34e5612cf23
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046213"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236600"
 ---
 # <a name="transparent-data-encryption-tde"></a>Transparente Datenverschlüsselung (TDE)
   *Transparente Datenverschlüsselung* (TDE) verschlüsselt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] - und [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] -Datendateien, bekannt als "Verschlüsselung ruhender Daten". Sie können verschiedene Vorsichtsmaßnahmen treffen, um eine Datenbank abzusichern, beispielsweise ein sicheres System entwerfen, vertrauliche Datenbestände verschlüsseln oder eine Firewall für die Datenbankserver einrichten. Wenn jedoch physische Medien (etwa Laufwerke oder Sicherungsbänder) gestohlen werden, muss ein böswilliger Benutzer die Datenbank einfach nur wieder herstellen und kann dann die Daten durchsuchen. Eine Lösung dieses Problems besteht darin, die sensiblen Daten in der Datenbank zu verschlüsseln, und den für die Verschlüsselung der Daten verwendeten Schlüssel mit einem Zertifikat zu schützen. Dadurch kann niemand die Daten verwenden, der nicht im Besitz der Schlüssel ist. Diese Art des Schutzes muss jedoch im Voraus geplant werden.  
@@ -234,9 +233,9 @@ GO
  TDE kann auf einer Datenbank aktiviert werden, die über In-Memory OLTP-Objekte verfügt. In-Memory OLTP-Protokolldatensätze werden verschlüsselt, wenn TDE aktiviert ist. Daten in einer MEMORY_OPTIMIZED_DATA-Dateigruppe werden nicht verschlüsselt, wenn TDE aktiviert ist.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verschieben Sie eine TDE-geschützten Datenbank auf einen anderen SQLServer](move-a-tde-protected-database-to-another-sql-server.md)   
- [Aktivieren von TDE mithilfe von EKM](enable-tde-on-sql-server-using-ekm.md)   
- [Transparente datenverschlüsselung in Azure SQL-Datenbank](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
+ [Verschieben Sie eine TDE-geschützten Datenbank auf eine andere SQLServer](move-a-tde-protected-database-to-another-sql-server.md)   
+ [Aktivieren von TDE unter Verwendung von EKM](enable-tde-on-sql-server-using-ekm.md)   
+ [Transparent Data Encryption mit Azure SQL-Datenbank](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
  [SQL Server-Verschlüsselung](sql-server-encryption.md)   
  
   [Verschlüsselungsschlüssel für SQL Server und Datenbank &amp;#40;Datenbank-Engine&amp;#41;](sql-server-and-database-encryption-keys-database-engine.md)   

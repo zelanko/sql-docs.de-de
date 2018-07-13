@@ -1,5 +1,5 @@
 ---
-title: Aktualisieren auf SQLServer 2014 | Microsoft Docs
+title: Upgrade auf SQLServer 2014 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading SQL Server
 ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a9cc1e34ab957e869996d5c8e190de6e0a78979b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b5c7262807cddc848c12e08988e1d28cb0965279
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046732"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203946"
 ---
 # <a name="upgrade-to-sql-server-2014"></a>Aktualisieren auf SQL Server 2014
-  Sie können Instanzen von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aktualisieren. Vor der Ausführung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup ein upgrade [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], sehen Sie sich die [SQL Server 2014 Upgrade Technisches Handbuch](http://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf) (PDF-Download), lesen Sie die Themen in diesem Abschnitt zum Upgrade, und lesen die [SQL Server 2014 Release Notes](http://go.microsoft.com/fwlink/?LinkID=296445).  
+  Sie können Instanzen von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aktualisieren. Vor der Ausführung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setups zum upgrade [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], sehen Sie sich die [SQL Server 2014 Upgrade technischen Handbuch](http://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf) (PDF-Download), lesen Sie die Themen über den Aktualisierungsprozess in diesem Abschnitt, und lesen die [SQL Server 2014 Release Notes](http://go.microsoft.com/fwlink/?LinkID=296445).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  Dieser Abschnitt enthält die folgenden Themen:  
@@ -37,8 +37,7 @@ ms.locfileid: "36046732"
   
 -   [Aktualisieren von Analysis Services](upgrade-analysis-services.md)  
   
--   
-  [Aktualisieren der Datenbank-Engine](upgrade-database-engine.md)  
+-   [Aktualisieren der Datenbank-Engine](upgrade-database-engine.md)  
   
 -   [Aktualisieren von Data Quality Services](upgrade-data-quality-services.md)  
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Auto Stats event class
 ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2c90a2afb20e7757e8797aaf5849c5fe4449b1d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 796f417d3dae943334b6cdadc62c633dcbe18baf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046461"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213020"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats-Ereignisklasse
   Die **Auto Stats** -Ereignisklasse zeigt an, dass ein automatisches Update der Index- und Spaltenstatistiken ausgeführt wurde.  
@@ -41,7 +41,7 @@ ms.locfileid: "36046461"
 |**Fehler**|**int**|Fehlernummer eines bestimmten Ereignisses. Dies ist häufig die in der **sys.messages** -Katalogsicht gespeicherte Fehlernummer.|31|ja|  
 |**EventClass**|**int**|Ereignistyp = 58.|27|nein|  
 |**EventSequence**|**int**|Sequenz eines bestimmten Ereignisses innerhalb der Anforderung.|51|nein|  
-|**EventSubClass**|**int**|Der Typ der Ereignisunterklasse:<br /><br /> 1: Statistiken synchron erstellte/aktualisierte; **TextData** Spalte gibt an, welche Statistiken und gibt an, ob sie erstellt oder aktualisiert wurden.<br /><br /> 2: Asynchrones Statistikupdate; Auftrag in Warteschlange.<br /><br /> 3: Asynchrones Statistikupdate; Auftrag wird gestartet.<br /><br /> 4: Asynchrones Statistikupdate; Auftrag abgeschlossen.|21|ja|  
+|**EventSubClass**|**int**|Der Typ der Ereignisunterklasse:<br /><br /> 1: erstellte/aktualisierte Statistiken synchron, **TextData** Spalte gibt an, welche Statistiken und gibt an, ob sie erstellt oder aktualisiert wurden.<br /><br /> 2: Asynchrones Statistikupdate; Auftrag in Warteschlange.<br /><br /> 3: Asynchrones Statistikupdate; Auftrag wird gestartet.<br /><br /> 4: Asynchrones Statistikupdate; Auftrag abgeschlossen.|21|ja|  
 |**GroupID**|**int**|ID der Arbeitsauslastungsgruppe, in der das SQL-Ablaufverfolgungsereignis ausgelöst wird.|66|ja|  
 |**HostName**|**nvarchar**|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname durch den Client bereitgestellt wird. Der Hostname kann mithilfe der HOST_NAME-Funktion bestimmt werden.|8|ja|  
 |**IndexID**|**int**|Die ID für den Index-/Statistikeintrag des Objekts, das von dem Ereignis betroffen ist. Um die Index-ID für ein Objekt zu ermitteln, verwenden Sie die **index_id** -Spalte der Katalogsicht **sys.indexes** .|24|ja|  

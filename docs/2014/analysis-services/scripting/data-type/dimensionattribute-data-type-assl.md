@@ -1,5 +1,5 @@
 ---
-title: DimensionAttribute-Datentyp (ASSL) | Microsoft Docs
+title: DimensionAttribute-Datentyp (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DimensionAttribute data type
 ms.assetid: 94349a87-b284-49d1-ac72-888f0375ceb8
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2d022a0bfb5c11efe38694b614bd65676fb3ee28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9e07d7b7c313c4d9d21e8e562f2ed6893a08b42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047004"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194290"
 ---
 # <a name="dimensionattribute-data-type-assl"></a>DimensionAttribute-Datentyp (ASSL)
   Definiert einen primitiven Datentyp, der ein Attribut in einer Dimension darstellt.  
@@ -145,7 +145,7 @@ ms.locfileid: "36047004"
   
 -   UnaryOperatorColumn  
   
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services Scripting Language-XML-Datentypen &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

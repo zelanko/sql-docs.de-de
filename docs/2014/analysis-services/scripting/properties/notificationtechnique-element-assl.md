@@ -1,5 +1,5 @@
 ---
-title: NotificationTechnique-Element (ASSL) | Microsoft Docs
+title: NotificationTechnique-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - NotificationTechnique element
 ms.assetid: 80c43de3-f147-4bf5-bb85-da9d182ce415
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f1216ed87ac9fd24265dbcb33d13ba831997b73c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e661b47c5344b0094daef53102aada68a6b6aad9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046525"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213910"
 ---
 # <a name="notificationtechnique-element-assl"></a>NotificationTechnique-Element (ASSL)
-  Gibt an, ob [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder eine externen Clientanwendung die Benachrichtigungen verarbeitet.  
+  Gibt an, ob [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder eine externe Clientanwendung die Benachrichtigungen verarbeitet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36046525"
 |*Client*|Externe Clientanwendung verarbeitet die Benachrichtigung.|  
 |*Server*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verarbeitet die Benachrichtigung.|  
   
- Das Element, das das übergeordnete Element des entspricht `NotificationTechnique` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ProactiveCachingBinding>.  
+ Das Element, das dem übergeordneten entspricht `NotificationTechnique` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ProactiveCachingBinding>.  
   
  Die Enumeration, die den zulässigen Werten für entspricht `NotificationTechnique` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.NotificationTechnique>.  
   

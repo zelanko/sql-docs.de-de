@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], other SQL Server features and
 ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5d947f43f2f08c38a01102971dd62581affc80b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 0b96ae16398f9ed8fd3ec6c62c61451966b458f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046630"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212700"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>Change Data Capture und andere SQL Server-Funktionen
   In diesem Thema wird beschrieben, wie die folgenden Funktionen mit Change Data Capture interagieren:  
@@ -51,7 +51,7 @@ ms.locfileid: "36046630"
  Informationen zur Datenbankspiegelung finden Sie unter [ Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 ##  <a name="TransReplication"></a> Transactional Replication  
- Change Data Capture und die Transaktionsreplikation können in einer Datenbank parallel vorhanden sein, allerdings wird die Auffüllung der Änderungstabellen anders behandelt, wenn beide Funktionen aktiviert sind. Change Data Capture und die Transaktionsreplikation verwenden immer dieselbe Prozedur, nämlich [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql), um die Änderungen aus dem Transaktionsprotokoll auszulesen. Wenn Change Data Capture allein aktiviert ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ruft der Agent-Auftrag `sp_replcmds`. Wenn beide Funktionen für dieselbe Datenbank aktiviert sind, ruft der Protokolllese-Agent `sp_replcmds`. Dieser Agent füllt sowohl die Änderungstabellen als auch die Tabellen der Verteilungsdatenbank auf. Weitere Informationen finden Sie unter [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md).  
+ Change Data Capture und die Transaktionsreplikation können in einer Datenbank parallel vorhanden sein, allerdings wird die Auffüllung der Änderungstabellen anders behandelt, wenn beide Funktionen aktiviert sind. Change Data Capture und die Transaktionsreplikation verwenden immer dieselbe Prozedur, nämlich [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql), um die Änderungen aus dem Transaktionsprotokoll auszulesen. Wenn Change Data Capture allein aktiviert ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ruft der Agent-Auftrag `sp_replcmds`. Wenn für eine Datenbank beide Funktionen aktiviert sind, ruft der Protokolllese-Agent `sp_replcmds`. Dieser Agent füllt sowohl die Änderungstabellen als auch die Tabellen der Verteilungsdatenbank auf. Weitere Informationen finden Sie unter [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md).  
   
  Angenommen, Change Data Capture ist für die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank aktiviert, und zwei Tabellen sind für die Erfassung aktiviert. Um die Änderungstabellen aufzufüllen, ruft der Aufzeichnungsauftrag `sp_replcmds` auf. Die Datenbank wird für die Transaktionsreplikation aktiviert, und eine Veröffentlichung wird erstellt. Anschließend wird der Protokolllese-Agent für die Datenbank erstellt, und der Erfassungsauftrag wird gelöscht. Der Protokolllese-Agent fährt fort, das Protokoll ab der letzten Protokollfolgenummer zu durchsuchen, für die ein Commit in die Änderungstabelle ausgeführt wurde. Auf diese Weise wird die Datenkonsistenz in den Änderungstabellen sichergestellt. Wenn die Transaktionsreplikation in dieser Datenbank deaktiviert wird, wird der Protokolllese-Agent entfernt und der Aufzeichnungsauftrag neu erstellt.  
   
@@ -67,11 +67,11 @@ ms.locfileid: "36046630"
   
 -   Wenn eine Datenbank auf einem anderen Server wiederhergestellt wird, wird Change Data Capture standardmäßig deaktiviert, und alle zugehörigen Metadaten werden gelöscht.  
   
-     Um Change Data Capture beizubehalten, verwenden die `KEEP_CDC` option beim Wiederherstellen der Datenbank. Weitere Informationen zu dieser Option finden Sie unter [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql).  
+     Um Change Data Capture beizubehalten, verwenden Sie die `KEEP_CDC` option beim Wiederherstellen der Datenbank. Weitere Informationen zu dieser Option finden Sie unter [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql).  
   
 -   Wenn eine Datenbank getrennt und an denselben Server oder einen anderen Server angefügt wird, bleibt Change Data Capture aktiviert.  
   
--   Wenn eine Datenbank wird angefügt oder wiederhergestellt werden, mit der `KEEP_CDC` Option aus, um eine beliebige Edition als Enterprise, der Vorgang wird blockiert, da Change Data Capture erfordert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. Die Fehlermeldung 934 wird angezeigt:  
+-   Wenn eine Datenbank wird angefügt oder wiederhergestellt werden, mit der `KEEP_CDC` Option aus, um eine beliebige Edition als Enterprise, den Vorgang blockiert, weil Change Data Capture erfordert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. Die Fehlermeldung 934 wird angezeigt:  
   
      `SQL Server cannot load database '%.*ls' because change data capture is enabled. The currently installed edition of SQL Server does not support change data capture. Either disable change data capture in the database by using a supported edition of SQL Server, or upgrade the instance to one that supports change data capture.`  
   

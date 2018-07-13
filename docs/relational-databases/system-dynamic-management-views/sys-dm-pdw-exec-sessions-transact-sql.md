@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_pdw_exec_sessions (Transact-SQL) | Microsoft Docs
+title: dm_pdw_exec_sessions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: ''
@@ -7,44 +7,43 @@ ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
+ms.component: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 31c262b3-7e4d-44c4-af71-aaef0fd1a980
-caps.latest.revision: 8
-author: stevestein
-ms.author: sstein
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ce411196b28f658789769cd53aa86693d747ef47
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
-ms.translationtype: MT
+ms.openlocfilehash: 93a6f3b3ca257a6f6d4c848b2d83bf441ab73cf4
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465916"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36759615"
 ---
-# <a name="sysdmpdwexecsessions-transact-sql"></a>Sys.dm_pdw_exec_sessions (Transact-SQL)
+# <a name="sysdmpdwexecsessions-transact-sql"></a>dm_pdw_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Enthält Informationen zu allen Sitzungen auf dem Gerät zurzeit oder zuletzt geöffnet. Sie enthält eine Zeile pro Sitzung.  
+  Enthält Informationen zu allen Sitzungen auf dem Gerät zurzeit oder zuletzt geöffnet. Sie enthält eine Zeile für jede Sitzung.  
   
 |Spaltenname|Datentyp|Description|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
-|session_id|**nvarchar(32)**|Die Id der aktuellen Abfrage oder der letzten Abfrage ausführen (wenn die Sitzung beendet wird, und zum Zeitpunkt der Beendigung die Abfrage ausgeführt wurde). Der Schlüssel für diese Ansicht.|Für alle Sitzungen im System eindeutig.|  
-|status|**nvarchar(10)**|Für die aktuelle Sitzung identifiziert, ob die Sitzung derzeit aktiv oder inaktiv ist. Für die letzten Sitzungen die Sitzungskonfiguration Status anzeigen kann geschlossen oder abgebrochen wird (wenn die Sitzung zwangsweise geschlossen wurde).|"LEERLAUF", "ACTIVE", "GESCHLOSSEN", BEENDET""|  
+|session_id|**nvarchar(32)**|Die Id des die aktuelle Abfrage oder der letzten Abfrage ausführen (wenn die Sitzung beendet wird, und zum Zeitpunkt der Beendigung die Abfrage ausgeführt wurde). Der Schlüssel für diese Sicht.|Für alle Sitzungen im System eindeutig.|  
+|status|**nvarchar(10)**|Für die aktuellen Sitzungen identifiziert, ob die Sitzung derzeit aktiv oder im Leerlauf befindet. Für die vergangenen Sitzungen die Sitzung, die Status angezeigt werden kann geschlossen oder abgebrochen wird (wenn die Sitzung zwangsweise geschlossen wurde).|'AKTIV","GESCHLOSSEN","IM LEERLAUF', BEENDET' '|  
 |request_id|**nvarchar(32)**|Die Id der aktuellen Abfrage oder des letzten Abfrage, die ausgeführt werden soll.|Für alle Anforderungen im System eindeutig. NULL, wenn keine ausgeführt wurde.|  
-|security_id|**varbinary(85)**|Sicherheits-ID des Prinzipals, der die Sitzung ausführt.||  
-|login_name|**nvarchar(128)**|Der Anmeldename, der der Prinzipal, der die Sitzung ausgeführt werden soll.|Eine beliebige Zeichenfolge, die die Benutzer-Benennungskonventionen entsprechen.|  
-|login_time|**datetime**|Datum und Uhrzeit, an dem der Benutzer angemeldet, und dieser Sitzung erstellt wurde.|Gültige **"DateTime"** vor der aktuellen Uhrzeit.|  
-|query_count|**int**|Erfasst die Anzahl der Abfragen/BeschreibungDiese Sitzung wurde seit der Erstellung ausgeführt werden.|Größer als oder gleich 0.|  
-|is_transactional|**bit**|Erfasst, ob eine Sitzung derzeit innerhalb einer Transaktion oder nicht.|für automatische Commits 0, 1 für transaktional.|  
-|"client_id"|**nvarchar(255)**|Zeichnet Clientinformationen für die Sitzung.|Jede gültige Zeichenfolge.|  
-|app_name|**nvarchar(255)**|Zeichnet Namen Anwendungsinformationen, die im Rahmen des Verbindungsprozesses optional festlegen.|Jede gültige Zeichenfolge.|  
-|sql_spid|**int**|Die Id-Nummer der SPID. Verwenden der `session_id` dieser Sitzung. Verwenden der `sql_spid` Spalte zum Hinzufügen zur **sys.dm_pdw_nodes_exec_sessions**.<br /><br /> **\*\* Warnung \* \***  enthält diese Spalte-geschlossene SPIDs.||  
+|security_id|**varbinary(85)**|Sicherheits-ID des Prinzipals die-Sitzung ausführt.||  
+|login_name|**nvarchar(128)**|Der Anmeldename, der der Prinzipal, der die Sitzung ausgeführt werden soll.|Eine beliebige Zeichenfolge, die Benutzer-Namenskonventionen entsprechen.|  
+|login_time|**datetime**|Datum und Uhrzeit, an dem der Benutzer angemeldet, und dieser Sitzung erstellt wurde.|Gültige **"DateTime"** vor der aktuellen Zeit.|  
+|query_count|**int**|Erfasst die Anzahl der Abfragen/BeschreibungDiese-Sitzung wurde seit der Erstellung ausgeführt werden.|Größer als oder gleich 0.|  
+|is_transactional|**bit**|Zeichnet auf, ob eine Sitzung derzeit innerhalb einer Transaktion befindet.|für automatische Commits 0, 1 für transaktionale.|  
+|Client-ID|**nvarchar(255)**|Zeichnet Clientinformationen für die Sitzung.|Eine beliebige gültige Zeichenfolge.|  
+|App-Name|**nvarchar(255)**|Erfasst Informationen zum Anwendungsnamen im Rahmen des Verbindungsprozesses optional festlegen.|Eine beliebige gültige Zeichenfolge.|  
+|sql_spid|**int**|Die ID der SPID. Verwenden der `session_id` in dieser Sitzung. Verwenden der `sql_spid` Spalte hinzufügen **sys.dm_pdw_nodes_exec_sessions**.<br /><br /> **\*\* Warnung \* \***  enthält diese Spalte geschlossene SPIDs.||  
   
- Informationen über die maximale Zeilenanzahl, die von dieser Ansicht beibehalten werden, finden Sie im Abschnitt "maximale Systemwerte anzeigen" in der [Mindest- und Höchstwerte (SQL Server PDW)](http://msdn.microsoft.com/en-us/5243f018-2713-45e3-9b61-39b2a57401b9) Thema.  
+ Informationen, die maximale Anzahl Zeilen, die von dieser Sicht beibehalten können, finden Sie im Abschnitt "maximale Systemwerte anzeigen" in der [Mindest- und Höchstwerte (SQL Server PDW)](http://msdn.microsoft.com/en-us/5243f018-2713-45e3-9b61-39b2a57401b9) Thema.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die `VIEW SERVER STATE`-Berechtigung.  

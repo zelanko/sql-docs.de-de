@@ -1,5 +1,5 @@
 ---
-title: Definieren einer referenzierten Beziehung | Microsoft Docs
+title: Definieren einer referenzierten Beziehung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 50be0ad05e579d21095e6446b8e84d39cbef1f20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f49d90e05c7d76129b5c2385ed1af05fc6e3731a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047017"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200380"
 ---
 # <a name="defining-a-referenced-relationship"></a>Definieren einer referenzierten Beziehung
   Bis zu diesem Punkt im Lernprogramm basierte jede von Ihnen definierte Cubedimension auf einer Tabelle, die direkt mit der Faktentabelle für eine Measuregruppe durch eine Primärschlüssel/Fremdschlüssel-Beziehung verknüpft war. In den Aufgaben in diesem Thema verknüpfen Sie die **Geography** -Dimension mit der Faktentabelle für Händlerverkäufe über die **Reseller** -Dimension, die als *Referenzdimension*bezeichnet wird. Dadurch können Benutzer Händlerverkäufe nach Geografie dimensionieren. Weitere Informationen finden Sie unter [Definieren einer Beziehung, auf die verwiesen wird, und deren Eigenschaften](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
@@ -56,7 +56,7 @@ ms.locfileid: "36047017"
   
      Die folgende Abbildung zeigt das Dialogfeld **Beziehung definieren** mit einer regulären Beziehung zwischen der **DimCustomer** -Dimensionstabelle und der **FactInternetSales** -Measuregruppentabelle.  
   
-     ![Das Dialogfeld Beziehung definieren](../../2014/tutorials/media/l5-referencedrelationship-4.gif "Beziehung definieren (Dialogfeld)")  
+     ![Das Dialogfeld Beziehung definieren](../../2014/tutorials/media/l5-referencedrelationship-4.gif "Dialogfeld Beziehung definieren")  
   
 9. Klicken Sie auf **Abbrechen**.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36047017"
   
 9. Klicken Sie auf der Registerkarte **Dimensionsverwendung** in der Liste **Dimensionen** mit der rechten Maustaste auf **Geography**und anschließend auf **Umbenennen**.  
   
-10. Ändern Sie den Namen dieser Cubedimension zum `Reseller Geography`.  
+10. Ändern Sie den Namen dieser Cubedimension in `Reseller Geography`.  
   
      Da diese Cubedimension jetzt mit der **Reseller Sales** -Measuregruppe verknüpft ist, profitieren Benutzer davon, dass deren Verwendung explizit im Cube definiert ist, um mögliche Verwechslungen von Benutzern zu vermeiden.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36047017"
   
      Beachten Sie, dass das **Reseller Sales-Sales Amount** -Measure jetzt durch das **Country-Region** -Attribut in der benutzerdefinierten **Geographies** -Hierarchie richtig dimensioniert ist, wie in der folgenden Abbildung dargestellt.  
   
-     ![Das Dialogfeld Beziehung definieren](../../2014/tutorials/media/l5-referencedrelationship-5.gif "Beziehung definieren (Dialogfeld)")  
+     ![Das Dialogfeld Beziehung definieren](../../2014/tutorials/media/l5-referencedrelationship-5.gif "Dialogfeld Beziehung definieren")  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
  [Definieren einer Faktenbeziehung](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  

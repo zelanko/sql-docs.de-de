@@ -1,5 +1,5 @@
 ---
-title: Unicode-Daten und Server-Codepages | Microsoft Docs
+title: Unicode-Daten und Server Codepages | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], metadata
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bd532c5b3d564051c8d32171e861791017e8ab3f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: fff43500155bdd6fc4fece74a018dc6dd4f7f0fc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046660"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199250"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Unicode-Daten und Server-Codepages
     
@@ -33,20 +33,20 @@ ms.locfileid: "36046660"
   
  Die API für erweiterte gespeicherte Prozeduren ist für die Verarbeitung von Unicode-Daten aktiviert, jedoch nicht für Unicode-Metadaten. Die Unicode-Direktive #define hat keinerlei Wirkung auf die API für erweiterte gespeicherte Prozeduren.  
   
- Für alle Metadaten, die von der API für erweiterte gespeicherte Prozeduren zurückgegeben oder durch Ihre Anwendung mit erweiterten gespeicherten Prozeduren für die API bereitgestellt werden, wird angenommen, dass sie im Multibytecodepageformat des Servers vorliegen. Die Standardcodepage einer Serveranwendung gespeicherte API für erweiterte Prozeduren ist die ANSI-Codepage des Computers auf dem die Anwendung ausgeführt wird, die durch den Aufruf abgerufen werden können **Srv_pfield** mit dem auf srv_sproc_codepage festgelegten SRV_ SPROC_CODEPAGE.  
+ Für alle Metadaten, die von der API für erweiterte gespeicherte Prozeduren zurückgegeben oder durch Ihre Anwendung mit erweiterten gespeicherten Prozeduren für die API bereitgestellt werden, wird angenommen, dass sie im Multibytecodepageformat des Servers vorliegen. Die Standardcodepage einer Serveranwendung Prozedur API für erweiterte gespeicherte ist die ANSI-Codepage des Computers auf dem die Anwendung ausgeführt wird, der durch den Aufruf abgerufen werden kann **Srv_pfield** mit dem Feld-Parameter, die auf SRV_ festgelegt SPROC_CODEPAGE.  
   
  Wenn für Ihre mit der API für erweiterte gespeicherte Prozeduren erstellte Anwendung Unicode aktiviert ist, müssen Sie die Unicode-Metadaten für Spaltennamen, Fehlermeldungen usw. in Multibytedaten konvertieren, bevor Sie die Daten an die API für erweiterte gespeicherte Prozeduren übergeben.  
   
 ## <a name="example"></a>Beispiel  
  Die folgende erweiterte gespeicherte Prozedur stellt ein Beispiel für die beschriebenen Unicode-Konvertierungen bereit. Beachten Sie dabei Folgendes:  
   
--   Spaltendaten als Unicode-Daten zu übergeben **Srv_describe** da die Spalte beschrieben wird, um srvnvarchar BESCHRIEBEN werden.  
+-   Daten der Spalte werden als Unicode-Daten an übergeben **Srv_describe** da die Spalte beschrieben wird, srvnvarchar BESCHRIEBEN sind.  
   
--   Spaltennamen-Metadaten übergeben **Srv_describe** als multibytedaten.  
+-   Metadaten für Spaltennamen übergeben wird, um **Srv_describe** als multibyte-Daten.  
   
-     Die erweiterte gespeicherte Prozedur ruft **Srv_pfield** mit dem auf srv_sproc_codepage festgelegten Feldparameter multibyte-Codepage des abzurufenden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Die erweiterte gespeicherte Prozedur ruft **Srv_pfield** mit dem auf SRV_SPROC_CODEPAGE festgelegten Feldparameter multibyte-Codepage des abzurufenden Felds-Parameter [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Fehlermeldungen werden an übergeben **Srv_sendmsg** als multibytedaten.  
+-   Fehlermeldungen werden an übergeben **Srv_sendmsg** als multibyte-Daten.  
   
     ```  
     __declspec(dllexport) RETCODE proc1 (SRV_PROC *srvproc)  

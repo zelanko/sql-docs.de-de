@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_DATASOURCES-Rowset | Microsoft Docs
+title: DISCOVER_DATASOURCES-Rowset | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,25 +18,25 @@ helpviewer_keywords:
 - DISCOVER_DATASOURCES rowset
 ms.assetid: f3ff26ab-a447-416b-ba54-1716df2283de
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32e7aa7327cce301cc8415f45635fda651d861f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e319b05d1d9aec74b01b73b671f613a2703d900f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048161"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185257"
 ---
 # <a name="discoverdatasources-rowset"></a>DISCOVER_DATASOURCES-Rowset
   Gibt eine Liste der XMLA-Anbieterdatenquellen (XML for Analysis) zurück, die auf dem Server oder dem Webdienst verfügbar sind. Die veröffentlichten Datenquellen werden von einer URL des Anwendungswebservers zurückgegeben. Der Client kann eine Verbindung mit einer der Datenquellen in der Liste herstellen.  
   
- Beim Aufrufen der [Discover](../../xmla/xml-elements-methods-discover.md) Methode mit der `DISCOVER_DATASOURCES` Enumerationswert in der [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) Element, den `Discover` Methode gibt die `DISCOVER_DATASOURCES` Rowset.  
+ Aufrufen der [ermitteln](../../xmla/xml-elements-methods-discover.md) -Methode mit der `DISCOVER_DATASOURCES` Enumerationswert in der [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) -Element, die `Discover` Methode gibt die `DISCOVER_DATASOURCES` Rowset.  
   
  **Gilt für:** tabellarische und mehrdimensionale Modelle  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
- Der Client wählt eine Datenquelle durch Festlegen der `DataSourceInfo` Eigenschaft in der [Eigenschaften](../../xmla/xml-elements-properties/properties-element-xmla.md) Element, das zusammen mit gesendet wird der [Befehl](../../xmla/xml-elements-properties/command-element-xmla.md) Element durch das [Execute](../../xmla/xml-elements-methods-execute.md) Methode. Ein Client sollte den Inhalt der `DataSourceInfo`-Eigenschaft nicht erstellen, um sie an den Server zu senden. Der Client sollte stattdessen die `Discover`-Methode verwenden, um die von dem Anbieter unterstützten Datenquellen zu finden. Der Client sendet anschließend den gleichen Wert für die `DataSourceInfo`-Eigenschaft zurück, die er vom `DISCOVER_DATASOURCES`-Rowset abruft.  
+ Der Client wählt eine Datenquelle durch Festlegen der `DataSourceInfo` -Eigenschaft in der [Eigenschaften](../../xmla/xml-elements-properties/properties-element-xmla.md) -Element, das zusammen mit gesendet wird die [Befehl](../../xmla/xml-elements-properties/command-element-xmla.md) Element durch den [Execute](../../xmla/xml-elements-methods-execute.md) -Methode. Ein Client sollte den Inhalt der `DataSourceInfo`-Eigenschaft nicht erstellen, um sie an den Server zu senden. Der Client sollte stattdessen die `Discover`-Methode verwenden, um die von dem Anbieter unterstützten Datenquellen zu finden. Der Client sendet anschließend den gleichen Wert für die `DataSourceInfo`-Eigenschaft zurück, die er vom `DISCOVER_DATASOURCES`-Rowset abruft.  
   
  Die `DISCOVER_DATASOURCES` Rowset enthält die folgenden Spalten.  
   

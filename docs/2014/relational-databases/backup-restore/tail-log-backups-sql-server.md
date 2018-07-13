@@ -5,10 +5,9 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up [SQL Server], tail of log
 - transaction log backups [SQL Server], tail-log backups
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - backups [SQL Server], tail-log backups
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 caps.latest.revision: 55
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7ad9a530a1bcc67db785af3c23f2fd80496155f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 92e636b8fb7cc5001833f8d3b99cd761dddcf228
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046456"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207200"
 ---
 # <a name="tail-log-backups-sql-server"></a>Protokollfragmentsicherungen (SQL Server)
   Dieses Thema ist nur Sicherungen und Wiederherstellungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken relevant, die das vollständige oder das massenprotokollierte Wiederherstellungsmodell verwenden.  
@@ -53,8 +52,8 @@ ms.locfileid: "36046456"
   
 |BACKUP LOG-Option|Kommentare|  
 |-----------------------|--------------|  
-|NORECOVERY|Verwenden Sie NORECOVERY immer dann, wenn Sie vorhaben, einen Wiederherstellungsvorgang in der Datenbank fortzusetzen. Mit NORECOVERY wird die Datenbank in den Wiederherstellungszustand versetzt. Damit wird sichergestellt, dass sich die Datenbank nach der Sicherung des Protokollfragments nicht ändert.  Das Protokoll wird abgeschnitten, es sei denn, die Option NO_TRUNCATE oder COPY_ONLY-Option ebenfalls angegeben ist.<br /><br /> **\*\* Wichtige \* \***  sollten Sie vermeiden, verwenden Sie NO_TRUNCATE nur, wenn die Datenbank beschädigt ist.|  
-|CONTINUE_AFTER_ERROR|Verwenden Sie CONTINUE_AFTER_ERROR nur dann, wenn Sie das Fragment einer beschädigten Datenbank sichern.<br /><br /> Hinweis: Wenn Sie das Ende des Protokolls bei einer beschädigten Datenbank sichern verwenden, einige der Metadaten, die normalerweise in protokollsicherungen erfasst werden eventuell nicht verfügbar. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Sicherungen des Protokollfragments mit unvollständigen Sicherungsmetadaten](#IncompleteMetadata).|  
+|NORECOVERY|Verwenden Sie NORECOVERY immer dann, wenn Sie vorhaben, einen Wiederherstellungsvorgang in der Datenbank fortzusetzen. Mit NORECOVERY wird die Datenbank in den Wiederherstellungszustand versetzt. Damit wird sichergestellt, dass sich die Datenbank nach der Sicherung des Protokollfragments nicht ändert.  Das Protokoll wird abgeschnitten, wenn auch die Option NO_TRUNCATE oder COPY_ONLY-Option angegeben wird.<br /><br /> **\*\* Wichtige \* \***  es wird empfohlen, dass Sie vermeiden, verwenden Sie NO_TRUNCATE nur, wenn die Datenbank beschädigt ist.|  
+|CONTINUE_AFTER_ERROR|Verwenden Sie CONTINUE_AFTER_ERROR nur dann, wenn Sie das Fragment einer beschädigten Datenbank sichern.<br /><br /> Hinweis: Wenn Sie auf eine Sicherung des Endes des Protokolls bei einer beschädigten Datenbank verwenden, einige der Metadaten, die normalerweise in protokollsicherungen erfasst möglicherweise nicht verfügbar. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Sicherungen des Protokollfragments mit unvollständigen Sicherungsmetadaten](#IncompleteMetadata).|  
   
 ##  <a name="IncompleteMetadata"></a> Sicherungen des Protokollfragments mit unvollständigen Sicherungsmetadaten  
  Eine Protokollfragmentsicherung erfasst das Protokollfragment selbst dann, wenn die Datenbank offline geschaltet oder beschädigt ist oder wenn Datendateien fehlen. Dies kann zu unvollständigen Metadaten aus den Wiederherstellungsinformationsbefehlen und aus **msdb**führen. In diesem Fall sind jedoch nur die Metadaten unvollständig; das erfasste Protokoll ist vollständig und kann verwendet werden.  

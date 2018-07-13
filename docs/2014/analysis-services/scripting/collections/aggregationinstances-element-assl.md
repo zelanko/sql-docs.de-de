@@ -1,5 +1,5 @@
 ---
-title: AggregationInstances-Element (ASSL) | Microsoft Docs
+title: AggregationInstances-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - AggregationInstances element
 ms.assetid: e8321aa8-361b-4d8a-bd89-a596eeb814b1
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2559602f932379272e948bd6e24e8ec6a6a7b246
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4580f50935a9819bba3a10531376389033c3ae04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046540"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237590"
 ---
 # <a name="aggregationinstances-element-assl"></a>AggregationInstances-Element (ASSL)
-  Enthält die Auflistung der aggregationsinstanzen, die in definierten ein [Partition](../objects/partition-element-assl.md) Element.  
+  Enthält die Auflistung der aggregationsinstanzen, die definiert sind eine [Partition](../objects/partition-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36046540"
 |Untergeordnete Elemente|[AggregationInstance](../objects/aggregationinstance-element-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.AggregationInstanceCollection>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.AggregationInstanceCollection>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sammlungen &#40;ASSL&#41;](collections-assl.md)  

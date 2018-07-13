@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], tutorials
 - walkthroughs [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9096317e6ab364ae440ad921045d5bed38083af2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 616ca1e1984c36c2a20814367b3bd030825f3c0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047102"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181527"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Erstellen eines datengesteuerten Abonnements (SSRS-Lernprogramm)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ermöglicht datengesteuerte Abonnements, sodass Sie die Verteilung eines Berichts auf der Basis dynamischer Abonnentendaten anpassen können. Datengesteuerte Abonnements sind für folgende Arten von Szenarios gedacht:  
@@ -49,7 +49,7 @@ ms.locfileid: "36047102"
 ## <a name="requirements"></a>Anforderungen  
  Datengesteuerte Abonnements werden normalerweise von einem Berichtsserveradministrator erstellt und verwaltet. Für das Anlegen von datengesteuerten Abonnements sind Erfahrungen im Erstellen von Abfragen, Kenntnisse darüber, welche Datenquellen Abonnentendaten enthalten, und erhöhte Berechtigungen auf einem Berichtsserver erforderlich.  
   
- Das Lernprogramm verwendet den im Lernprogramm erstellten Bericht [Erstellen eines einfachen Tabellenberichts &#40;SSRS-Lernprogramm&#41; ](create-a-basic-table-report-ssrs-tutorial.md) und Daten aus [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
+ Das Lernprogramm verwendet den in diesem Tutorial erstellten Bericht [Erstellen eines einfachen Tabellenberichts &#40;SSRS-Tutorial&#41; ](create-a-basic-table-report-ssrs-tutorial.md) und Daten aus [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
   
  Auf Ihrem System müssen zum Verwenden dieses Lernprogramms folgende Anwendungen installiert sein:  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36047102"
   
 -   Der SQL Server-Agent-Dienst muss ausgeführt werden.  
   
--   Ein Bericht mit Parametern. In diesem Lernprogramm wird davon ausgegangen, den Beispielbericht `Sales Orders` erstellen Sie mithilfe des Lernprogramms [Erstellen eines einfachen Tabellenberichts &#40;SSRS-Lernprogramm&#41;](create-a-basic-table-report-ssrs-tutorial.md).  
+-   Ein Bericht mit Parametern. In diesem Tutorial wird den Beispielbericht `Sales Orders` erstellen Sie mit dem Tutorial [Erstellen eines einfachen Tabellenberichts &#40;SSRS-Tutorial&#41;](create-a-basic-table-report-ssrs-tutorial.md).  
   
 -   Die [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]-Beispieldatenbank, die Daten für den Beispielbericht bereitstellt.  
   
@@ -71,6 +71,6 @@ ms.locfileid: "36047102"
   
 ## <a name="see-also"></a>Siehe auch  
  [Datengesteuerte Abonnements](subscriptions/data-driven-subscriptions.md)   
- [Erstellen ein einfachen Tabellenberichts &#40;SSRS-Lernprogramm&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
+ [Erstellen ein einfachen Tabellenberichts &#40;SSRS-Tutorial&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
   
   

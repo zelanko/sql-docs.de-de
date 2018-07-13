@@ -1,5 +1,5 @@
 ---
-title: Verwenden von DRILLTHROUGH zum Abrufen von Quelldaten (MDX) | Microsoft Docs
+title: Verwenden von DRILLTHROUGH zum Abrufen von Quelldaten (MDX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DRILLTHROUGH statement
 - retrieving data
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data retrieval [MDX]
 ms.assetid: fe0ab170-25a9-45a8-a377-f71a67f77018
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9869be182f398df326c0c81b7e00e869f0b3eae6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b98ebd1516d2aa26fa1e3a66edebdaf99f0f181
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046298"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204420"
 ---
 # <a name="using-drillthrough-to-retrieve-source-data-mdx"></a>Verwenden von DRILLTHROUGH zum Abrufen von Quelldaten (MDX)
   Die [DRILLTHROUGH](/sql/mdx/mdx-data-manipulation-drillthrough)-Anweisung wird in MDX (Multidimensional Expressions) dazu verwendet, ein Rowset aus den Quelldaten für eine Cubezelle abzurufen.  
@@ -50,7 +50,7 @@ ms.locfileid: "36046298"
  Die `<Return_Columns>` -Syntax identifiziert die zugrunde liegenden Datenbankspalten, die zurückgegeben werden sollen.  
   
 ## <a name="drillthrough-statement-example"></a>Beispiel für die DRILLTHROUGH-Anweisung  
- Das folgende Beispiel veranschaulicht die Verwendung von der `DRILLTHROUGH` Anweisung. In diesem Beispiel fragt die DRILLTHROUGH-Anweisung die Blätter der Dimensionen Store, Product und Time entlang der Stores-Dimension (die Slicerachse) ab und gibt dann die Department-Measuregruppe, die Abteilungs-ID (Department ID) und den Vornamen der/des Angestellten zurück.  
+ Das folgende Beispiel zeigt die Verwendung der `DRILLTHROUGH` Anweisung. In diesem Beispiel fragt die DRILLTHROUGH-Anweisung die Blätter der Dimensionen Store, Product und Time entlang der Stores-Dimension (die Slicerachse) ab und gibt dann die Department-Measuregruppe, die Abteilungs-ID (Department ID) und den Vornamen der/des Angestellten zurück.  
   
 ```  
 DRILLTHROUGH  

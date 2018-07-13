@@ -1,5 +1,5 @@
 ---
-title: Symbolleiste (Registerkarte ' Browser ', Dimensions-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Symbolleiste (Registerkarte ' Browser ', Dimensions-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d0abb2a7-e981-4b0a-a442-80c819aca2ae
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d74cde2948772d1ad4efa45a0a0b0965a22b87e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb561ed65f629879f48aa8c47cf470dfecedff74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046759"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192378"
 ---
 # <a name="toolbar-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Symbolleiste (Registerkarte 'Browser', Dimensions-Designer) (Analysis Services - Mehrdimensionale Daten)
   Mit den Schaltflächen im Bereich **Symbolleiste** können Sie Vorgänge ausführen, die auf der Registerkarte **Browser** von **Dimensions-Designer**häufig verwendet werden.  

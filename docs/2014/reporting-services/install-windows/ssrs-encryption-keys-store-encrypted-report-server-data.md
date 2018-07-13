@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
 - credentials [Reporting Services]
@@ -20,13 +20,13 @@ ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 8b3bcd87abe4efd22f8330c8b7dca7d111fb93f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 58b9dbd53149ca710753e8a355d379b21e1c7b5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046868"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186077"
 ---
 # <a name="store-encrypted-report-server-data-ssrs-configuration-manager"></a>Speichern verschlüsselter Berichtsserverdaten (SSRS-Konfigurations-Manager)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] speichert verschlüsselte Werte in der Berichtsserver-Datenbank und in Konfigurationsdateien. Die meisten verschlüsselten Werte stellen Anmeldeinformationen für den Zugriff auf externe Datenquellen dar, die Daten für Berichte bereitstellen. In diesem Thema werden die verschlüsselten Werte, die in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]verwendeten Verschlüsselungsfunktionen sowie andere Arten von gespeicherten, vertraulichen Daten beschrieben, die Sie kennen sollten.  
@@ -40,7 +40,7 @@ ms.locfileid: "36046868"
   
 -   Gespeicherte Anmeldeinformationen, mit denen ein Berichtsserver eine Verbindung zu externen Datenquellen herstellt, die Daten für einen Bericht bereitstellen.  
   
-     Diese Werte werden definiert, wenn Sie Datenquelleninformationen für einen Bericht konfigurieren. Sie werden als verschlüsselte Werte in einer Berichtsserver-Datenbank gespeichert. Zum Ver- und Entschlüsseln dieser Daten verwendet der Berichtsserver einen symmetrischen Schlüssel. Weitere Informationen zu gespeicherten Anmeldeinformationen finden Sie unter [angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../integration-services/connection-manager/data-sources.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+     Diese Werte werden definiert, wenn Sie Datenquelleninformationen für einen Bericht konfigurieren. Sie werden als verschlüsselte Werte in einer Berichtsserver-Datenbank gespeichert. Zum Ver- und Entschlüsseln dieser Daten verwendet der Berichtsserver einen symmetrischen Schlüssel. Weitere Informationen zu gespeicherten Anmeldeinformationen finden Sie unter [angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen-Verbindungen](../../integration-services/connection-manager/data-sources.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
 -   Ein unbeaufsichtigtes Benutzerkonto, mit dem der Berichtsserver eine Verbindung mit anderen Computern herstellt, um externe Bilddateien oder Daten abzurufen, die in einem Bericht verwendet werden.  
   

@@ -1,5 +1,5 @@
 ---
-title: Mehrdimensionale Modelllösungsbereitstellung | Microsoft Docs
+title: Mehrdimensionale Modelllösungsbereitstellung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services deployments, planning
 - deploying [Analysis Services]
 - deploying [Analysis Services], planning
 ms.assetid: 7259c201-ff54-43e8-bda5-a6d51474e0e6
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cc0a5ef8d41ebc37beee73b83fa27eaa5a7d6358
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 781bbeed98772266d4ea9c228c42426df424fe1c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046549"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222220"
 ---
 # <a name="multidimensional-model-solution-deployment"></a>Mehrdimensionale Modelllösungsbereitstellung
   Nachdem Sie die Entwicklung eines [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts abgeschlossen haben, können Sie die Datenbank auf einem Analysis Services-Server bereitstellen. Analysis Services bietet sechs mögliche Bereitstellungsmethoden, die zum Umlagern der Datenbank auf einen Test- oder Produktionsserver verwendet werden können. Die Methoden werden nach ihren Vorteilen aufgelistet: AMO-Automatisierung, XMLA, Bereitstellungs-Assistent, Bereitstellungshilfsprogramm, Synchronisations-Assistent sowie Sicherung und Wiederherstellung.  
@@ -55,7 +55,7 @@ ms.locfileid: "36046549"
 |Welche Hardware- und Softwareressourcen sind für diese Projektmappe erforderlich?|[Anforderungen und Überlegungen für die Bereitstellung von Analysis Services](requirements-and-considerations-for-analysis-services-deployment.md)|  
 |Wie sollen verbundene Objekte außerhalb des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projektbereichs, wie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete, Berichte oder relationale Datenbankschemas, bereitgestellt werden?||  
 |Wie werden die Daten in der bereitgestellten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank geladen und aktualisiert?<br /><br /> Wie werden die Metadaten (z.B. Berechnungen) in der bereitgestellten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank aktualisiert?|[Bereitstellungsmethoden](#bkmk_meth) in diesem Thema.|  
-|Sollen Benutzer über das Internet auf [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Daten zugreifen können?|[Konfigurieren von HTTP-Zugriff auf Analysis Services auf Internetinformationsdienste (IIS) &#40;IIS&#41; 8.0](../instances/configure-http-access-to-analysis-services-on-iis-8-0.md)|  
+|Sollen Benutzer über das Internet auf [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Daten zugreifen können?|[Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste &#40;IIS&#41; 8.0](../instances/configure-http-access-to-analysis-services-on-iis-8-0.md)|  
 |Soll ein kontinuierlicher Abfragezugriff auf [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Daten möglich sein?|[Anforderungen und Überlegungen für die Bereitstellung von Analysis Services](requirements-and-considerations-for-analysis-services-deployment.md)|  
 |Sollen Objekte mithilfe von verknüpften Objekten oder Remotepartitionen in einer verteilten Umgebung bereitgestellt werden?|[Erstellen und Verwalten einer lokalen Partition &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md), [Erstellen und Verwalten einer Remotepartition &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md) und [Verknüpfte Measuregruppen](linked-measure-groups.md).|  
 |Wie sollen die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Daten gesichert werden?|[Autorisieren des Zugriffs auf Objekte und Vorgänge &#40;Analysis Services&#41;](authorizing-access-to-objects-and-operations-analysis-services.md)|  

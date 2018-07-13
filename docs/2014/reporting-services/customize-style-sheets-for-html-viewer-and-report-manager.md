@@ -1,5 +1,5 @@
 ---
-title: Anpassen von Stylesheets für den HTML-Viewer und Berichts-Manager | Microsoft Docs
+title: Anpassen von Stylesheets für den HTML-Viewer und Berichts-Manager | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - style sheets [Reporting Services]
 ms.assetid: df805cff-b1de-4062-b2ac-423f37390fbd
 caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b24525eff885b183b34f5810d79e44e4509e3f06
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6baf2dbbb100711b9665d5d705bce6399e3c754b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047338"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192930"
 ---
 # <a name="customize-style-sheets-for-html-viewer-and-report-manager"></a>Anpassen von Stylesheets für den HTML-Viewer und Berichts-Manager
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Stellt Standard cascading Style Sheets (CSS)-Dateien, die definieren Stile für die **Bericht** Symbolleiste im HTML-Viewer und Berichts-Manager. Wenn Sie ein Webentwickler sind oder Erfahrung im Erstellen von Cascading Stylesheets haben, können Sie auf eigenes Risiko die Standardstile ändern, um Farben, Schriftarten und Layout der Symbolleiste oder des Berichts-Managers zu ändern. In dieser Version sind weder die Standardstylesheets noch Anweisungen zum Ändern der Stylesheets dokumentiert.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Stellt Standard cascading Style Sheets (CSS)-Dateien, die Stile für definieren die **Bericht** Symbolleiste im HTML-Viewer und Berichts-Manager. Wenn Sie ein Webentwickler sind oder Erfahrung im Erstellen von Cascading Stylesheets haben, können Sie auf eigenes Risiko die Standardstile ändern, um Farben, Schriftarten und Layout der Symbolleiste oder des Berichts-Managers zu ändern. In dieser Version sind weder die Standardstylesheets noch Anweisungen zum Ändern der Stylesheets dokumentiert.  
   
  Werden die Stylesheets unsachgemäß geändert, kann es beim Öffnen von Berichten zu Fehlern kommen. Wenn Sie nicht wissen, wie Sie zum Ändern von Stylesheets vorgehen müssen, sollten Sie die Standardstylesheets verwenden. Wenn Sie die Stylesheets anpassen möchten, sollten Sie von allen CSS-Standarddateien eine Sicherungskopie erstellen, bevor Sie Änderungen vornehmen.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36047338"
 |ReportingServices.css|Definiert Stile für den Berichts-Manager.|  
   
 > [!NOTE]  
->  Die folgenden Stylesheets werden für die Onlinedokumentation des Berichts-Managers verwendet und sollten niemals geändert werden: Sql.css und Mailto.css. Andere Stylesheets definieren Stile für Berichte und den Berichts-Manager, die in SharePoint-Webparts geöffnet werden. Zu diesen Stylesheets gehören die Dateien "Rswebparts.css", "Sp_full.css" und "Sp_small.css". Es wird nicht empfohlen, die SharePoint-Stylesheets zu ändern. Weitere Informationen zur Verwendung der Webparts finden Sie unter [anzeigen und Durchsuchen einheitlichen Modus Berichte mithilfe von SharePoint-Webparts &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md).  
+>  Die folgenden Stylesheets werden für die Onlinedokumentation des Berichts-Managers verwendet und sollten niemals geändert werden: Sql.css und Mailto.css. Andere Stylesheets definieren Stile für Berichte und den Berichts-Manager, die in SharePoint-Webparts geöffnet werden. Zu diesen Stylesheets gehören die Dateien "Rswebparts.css", "Sp_full.css" und "Sp_small.css". Es wird nicht empfohlen, die SharePoint-Stylesheets zu ändern. Weitere Informationen zur Verwendung von Webparts finden Sie unter [anzeigen und Durchsuchen systemeigenen Modus Berichte mithilfe von SharePoint-Webparts &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md).  
   
 ## <a name="configuring-reporting-services-to-use-a-custom-style-sheet"></a>Konfigurieren von Reporting Services für die Verwendung eines benutzerdefinierten Stylesheets  
  Das Stylesheet muss eine gültige Cascading Stylesheet-Datei (CSS) sein und sich im Ordner Styles befinden. Standardmäßig befindet sich der Ordner Styles unter \< *Laufwerk*>: \Programme\Microsoft SQL Server\MSSQL. *n*\Reporting Services\ReportServer\Styles.  
@@ -67,7 +67,7 @@ ms.locfileid: "36047338"
 ```  
   
 ### <a name="specifying-a-style-sheet-on-a-report-url"></a>Angeben eines Stylesheets in einer Berichts-URL  
- Zum Angeben eines benutzerdefinierten Stylesheets in einer Berichts-URL können Sie den URL-Zugriffsparameter `rc:StyleSheet` verwenden. Weitere Informationen zum Angeben der URL-Zugriffsparameter finden Sie unter [URL Access Parameter Reference](url-access-parameter-reference.md).  
+ Zum Angeben eines benutzerdefinierten Stylesheets in einer Berichts-URL können Sie den URL-Zugriffsparameter `rc:StyleSheet` verwenden. Weitere Informationen zur Vorgehensweise beim Angeben von URL-Zugriffsparameter finden Sie unter [URL Access Parameter Reference](url-access-parameter-reference.md).  
   
  Das folgende Beispiel zeigt, wie benutzerdefinierte Stile hinzugefügt werden:  
   
@@ -76,7 +76,7 @@ http://localhost/reportserver?/AdventureWorksSampleReports/Product+Line+Sales&rs
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Berichts-Manager &#40;SSRS im einheitlichen Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [HTML-Viewer und die Berichtssymbolleiste](html-viewer-and-the-report-toolbar.md)   
  [RSReportServer-Konfigurationsdatei](report-server/rsreportserver-config-configuration-file.md)  
   

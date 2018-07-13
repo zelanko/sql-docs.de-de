@@ -1,29 +1,26 @@
 ---
-title: Gespeicherte Prozeduren für SQL Data Warehouse | Microsoft Docs
+title: Gespeicherte Prozeduren für SQL Data Warehouse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
-ms.prod_service: sql-data-warehouse
 ms.service: sql-data-warehouse
-ms.component: system-stored-procedures
+ms.component: system-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 02e04dfe-d565-4e45-b427-b8e89c958ba3
-caps.latest.revision: 4
 author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 4b2949d4f5d75de5a35a69ad895a6d270e9b5c60
-ms.sourcegitcommit: 02c889a1544b0859c8049827878d66b2301315f8
-ms.translationtype: MT
+ms.openlocfilehash: b3d5174c871d25c37a299e7d24b0aab9a32bf2af
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34225428"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36797955"
 ---
 # <a name="sql-data-warehouse-stored-procedures"></a>Gespeicherte Prozeduren für SQL Data Warehouse
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
@@ -45,7 +42,7 @@ ms.locfileid: "34225428"
  [sp_special_columns_100 &#40;SQL Datawarehouse&#41;](../../relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md)  
   
 > [!NOTE]  
->  Einige zusätzliche System gespeicherte Prozeduren nur innerhalb einer Instanz von dienen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder über Client-APIs verwendet und sind nicht für die allgemeine Kunden vorgesehen verwenden. Diese Prozeduren werden am aufgeführten [System Stored Procedures (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms187961.aspx). Diese Prozeduren sind implementierungsspezifisch und Kompatibilität wird nicht sichergestellt. Alle Prozeduren in der Liste sind nicht verfügbar in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
+>  Einige zusätzliche System gespeicherte Prozeduren, nur innerhalb einer Instanz von verwendet werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder über Client-APIs verwendet und sind nicht für die allgemeine Kunden vorgesehen. Diese Prozeduren finden Sie unter [System Stored Procedures (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms187961.aspx). Diese Prozeduren können geändert werden und die Kompatibilität wird nicht sichergestellt. Alle Prozeduren in der Liste sind nicht verfügbar in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Systemfunktionen &#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-for-transact-sql.md)   

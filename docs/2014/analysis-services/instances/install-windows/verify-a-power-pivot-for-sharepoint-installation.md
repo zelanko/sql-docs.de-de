@@ -1,5 +1,5 @@
 ---
-title: Überprüfen der PowerPivot für SharePoint-Installation | Microsoft Docs
+title: Überprüfen der PowerPivot für SharePoint-Installation | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
 caps.latest.revision: 10
-author: HeidiSteen
-ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: 84457199c37eea8445911e25706928305db0d380
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 7116c698e987ca86da83763dd1994c098a99026d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047299"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189377"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>Überprüfen der PowerPivot für SharePoint-Installation
   Eine Instanz von PowerPivot für SharePoint, die Sie in einer SharePoint-Farm installieren, wird über die SharePoint-Zentraladministration verwaltet. Sie können zumindest die Seiten in der Zentraladministration und auf SharePoint-Websites überprüfen, um zu überprüfen, ob PowerPivot-Serverkomponenten und -funktionen verfügbar sind. Um jedoch eine Installation vollständig zu überprüfen, müssen Sie eine PowerPivot-Arbeitsmappe haben, die Sie in SharePoint veröffentlichen können und auf die Sie über eine Bibliothek zugreifen können. Zu Testzwecken können Sie eine Beispielarbeitsmappe veröffentlichen, die bereits PowerPivot-Daten enthält, und damit überprüfen, ob die SharePoint-Integration ordnungsgemäß konfiguriert wurde.  
@@ -27,7 +27,7 @@ ms.locfileid: "36047299"
 ##  <a name="verifyinstall"></a> Überprüfen der Integration der Zentraladministration  
  Um die PowerPivot-Integration in die Zentraladministration zu überprüfen, gehen Sie wie folgt vor:  
   
-1.  Klicken Sie im Startmenü auf **Programme**, öffnen Sie Microsoft SharePoint 2010-Produkte aus, und klicken Sie auf **SharePoint 2010-Zentraladministration**.  
+1.  Klicken Sie auf im Menü Start auf **Programme**, öffnen Sie Microsoft SharePoint 2010-Produkte aus, und klicken Sie auf **SharePoint 2010 Central Administration**.  
   
 2.  Geben Sie Ihren Benutzernamen und Ihr Kennwort ein, und klicken Sie dann auf **OK**.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36047299"
   
 8.  Klicken Sie auf **PowerPivot-Standarddienstanwendung** zu PowerPivot-Management-Dashboard für diese Anwendung zu öffnen. Bei seiner ersten Verwendung dauert das Laden des Dashboards einige Minuten.  
   
-     Alternativ klicken Sie auf den leeren Bereich neben **PowerPivot-Standarddienstanwendung** die Zeile, und klicken Sie auf **Eigenschaften** um die Konfigurationseinstellungen für diese dienstanwendung anzuzeigen. Sie können sowohl die Konfigurationseinstellungen als auch die Anwendungseigenschaften ändern, um Ihre Serverkonfiguration zu ändern. Weitere Informationen zu diesen Einstellungen finden Sie unter [erstellen und Konfigurieren einer PowerPivot-Dienstanwendung in der Zentraladministration](../../power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md).  
+     Alternativ klicken Sie auf den leeren Bereich neben **PowerPivot-Standarddienstanwendung** die Zeile, und klicken Sie auf **Eigenschaften** um die Konfigurationseinstellungen für diese dienstanwendung anzuzeigen. Sie können sowohl die Konfigurationseinstellungen als auch die Anwendungseigenschaften ändern, um Ihre Serverkonfiguration zu ändern. Weitere Informationen zu diesen Einstellungen finden Sie unter [erstellen und konfigurieren Sie eine PowerPivot-Dienstanwendung in der Zentraladministration](../../power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md).  
   
 ## <a name="verify-integration-at-the-site-level"></a>Überprüfen der Integration auf Websiteebene  
  Um die PowerPivot-Integration in eine SharePoint-Website zu überprüfen, gehen Sie wie folgt vor:  
@@ -67,9 +67,9 @@ ms.locfileid: "36047299"
   
 2.  Überprüfen Sie, ob der PowerPivot-Datenzugriff und die Verarbeitungsfunktionen in der Anwendung verfügbar sind. Überprüfen Sie hierzu das Vorhandensein von durch PowerPivot bereitgestellte Bibliotheksvorlagen:  
   
-    1.  Klicken Sie auf den Bereich für Websiteaktionen auf **Weitere Optionen...** .  
+    1.  Klicken Sie unter Websiteaktionen auf **Weitere Optionen...** .  
   
-    2.  In Bibliotheken, sehen Sie **Datenfeedbibliothek** und **PowerPivot-Katalog**. Diese Bibliotheksvorlagen werden von der PowerPivot-Funktion bereitgestellt und sind in der Bibliothekenliste sichtbar, falls die Funktion ordnungsgemäß integriert wurde.  
+    2.  Bibliotheken sollte **Datenfeedbibliothek** und **PowerPivot-Katalog**. Diese Bibliotheksvorlagen werden von der PowerPivot-Funktion bereitgestellt und sind in der Bibliothekenliste sichtbar, falls die Funktion ordnungsgemäß integriert wurde.  
   
 ## <a name="verify-data-access-on-the-server"></a>Überprüfen des Datenzugriffs auf dem Server  
  Um den PowerPivot-Datenzugriff auf dem Server zu überprüfen, gehen Sie wie folgt vor:  
@@ -90,7 +90,7 @@ ms.locfileid: "36047299"
   
 7.  Wählen Sie unter Servertyp die Option **Analysis Services**aus.  
   
-8.  Geben Sie im Server  **\<Servername > \powerpivot**, wobei  **\<Servername >** ist der Name des Computers, der dem PowerPivot für SharePoint-Installation ist.  
+8.  Geben Sie im Server-Namen,  **\<Servername > \powerpivot**, wobei  **\<Servername >** ist der Name des Computers, der dem PowerPivot für SharePoint-Installation ist.  
   
 9. Klicken Sie auf **Verbinden**. Dies überprüft, ob der Analysis Services-Server verfügbar ist.  
   

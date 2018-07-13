@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - less than (<)
 - < (less than operator)
@@ -16,13 +16,13 @@ ms.assetid: 8674afdc-4276-46cb-be08-5aadfe8b9624
 caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b71a4c63dbe81184c70f18fff53c90e048d7d4c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e61faf60834ecfb312859ba80d953d49b82a477a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046254"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225650"
 ---
 # <a name="lt-less-than-ssis-expression"></a>&lt; (Kleiner als) (SSIS-Ausdruck)
   Führt einen Vergleich aus, um zu ermitteln, ob der erste Ausdruck kleiner ist als der zweite. Die Ausdrucksauswertung konvertiert viele Datentypen automatisch vor dem Vergleich.  

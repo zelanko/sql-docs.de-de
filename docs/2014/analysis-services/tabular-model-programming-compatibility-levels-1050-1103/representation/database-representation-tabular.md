@@ -1,5 +1,5 @@
 ---
-title: Datenbankdarstellung | Microsoft Docs
+title: Datenbankdarstellung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 16a233fb-f83b-4ca1-acb5-6186eca0a62c
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 653395b2733fc6af8df7b19a746bb04edc3d7f53
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e288ccfb3cee35ef1506fe46d2128dd6ab43480a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046273"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197770"
 ---
 # <a name="database-representationtabular"></a>Datenbankdarstellung (tabellarisch)
   Im tabellarischen Modus ist die Datenbank der Container für alle Objekte im tabellarischen Modell.  
@@ -91,6 +91,6 @@ catch (Exception createDBxc)
   
 ```  
   
- Ein praktisches Verständnis für die Verwendung von AMO zur Erstellung und Bearbeitung von datenbankdarstellungen, finden Sie in der Quellcode in der Stichprobe Tabular AMO 2012; Prüfen Sie insbesondere die Quelldatei: Database.cs. Beispielcode wird nur zur Verdeutlichung der hier erläuterten logischen Konzepte bereitgestellt und sollte nicht in einer Produktionsumgebung verwendet werden.  
+ Ein praktisches Verständnis für die Verwendung von AMO zur Erstellung und Bearbeitung von datenbankdarstellungen, dazu finden Sie Quellcode im Tabular AMO 2012-Beispiel. Prüfen Sie insbesondere die Quelldatei: Database.cs. Beispielcode wird nur zur Verdeutlichung der hier erläuterten logischen Konzepte bereitgestellt und sollte nicht in einer Produktionsumgebung verwendet werden.  
   
   

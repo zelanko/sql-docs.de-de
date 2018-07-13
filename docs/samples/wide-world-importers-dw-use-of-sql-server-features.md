@@ -1,5 +1,5 @@
 ---
-title: WideWorldImporters OLAP-Datenbank – Verwendung von SQL Server | Microsoft Docs
+title: 'WideWorldImporters-OLAP-Datenbank: Verwenden von SQL Server | Microsoft-Dokumentation'
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -13,32 +13,32 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c386ab66a0084ec2da0508d7ae30f96e75031783
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 7c3158def05148941105867f24205b199e6c6dba
+ms.sourcegitcommit: 89983916c39b1c3ecf340de6a4febb2ed33129e4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33032567"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "36964262"
 ---
-# <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>WideWorldImportersDW Verwendung von SQL Server-Features und Funktionen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-WideWorldImportersDW dient zum Großteil der wichtigsten Funktionen von SQL Server zu präsentieren, die für Data Warehouse- und Analysen geeignet sind. Im folgenden wird eine Liste der SQL Server-Features und Funktionen und eine Beschreibung, wie sie in WideWorldImportersDW verwendet werden.
+# <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>"Wideworldimportersdw" Verwenden von SQL Server-Features und Funktionen
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
+"Wideworldimportersdw" dient, viele der wichtigsten Features von SQL Server zu veranschaulichen, die für Data warehousing und Analysen geeignet sind. Im folgenden finden eine Liste von SQL Server-Features und Funktionen und eine Beschreibung der, wie sie in "wideworldimportersdw" verwendet werden.
 
 ## <a name="polybase"></a>PolyBase
 
 [Gilt für SQL Server (2016 und höher)]
 
-PolyBase dient zum Kombinieren von Umsatzdaten aus WideWorldImportersDW mit einem öffentlichen DataSet zu demografischen Daten, um zu verstehen, welche Städte von für eine weitere Erweiterung der Verkäufe sein könnten.
+PolyBase wird zum Kombinieren von Verkaufsinformationen für "wideworldimportersdw" mit einem öffentlichen DataSet zu demografischen Daten, um zu verstehen, welche Städten für eine weitere Erweiterung der Verkauf von Interesse sein können.
 
 Um die Verwendung von PolyBase in der Beispieldatenbank zu aktivieren, stellen Sie sicher, dass es installiert ist, und führen Sie die folgende gespeicherte Prozedur in der Datenbank:
 
     EXEC [Application].[Configuration_ApplyPolybase]
 
-Dadurch wird eine externe Tabelle erstellt `dbo.CityPopulationStatistics` , die auf eine öffentliche Daten Gruppe mit Auffüllung Daten für Städte in den USA gehostet, die im Azure-Blob-Speicher verweist. Es wird empfohlen, den Code in der gespeicherten Prozedur, um den Konfigurationsvorgang zu verstehen, zu überprüfen. Wenn Sie hosten Ihre eigenen Daten im Azure-Blob-Speicher und von allgemeinen öffentlichen Zugriff schützen möchten, müssen Sie zusätzliche Konfigurationsschritte durchführen. Die folgende Abfrage gibt die Daten aus diesem externen DataSet zurück:
+Hiermit wird eine externe Tabelle `dbo.CityPopulationStatistics` , die auf einem öffentlichen DataSet, die Bevölkerungsdaten für Städte in den Vereinigten Staaten, gehostet in Azure Blob Storage verweist. Es wird empfohlen, den Code in der gespeicherten Prozedur den Konfigurationsprozess zu überprüfen. Wenn Sie Ihre eigenen Daten im Azure-Blob-Speicher zu hosten, und bewahren Sie sie vor den allgemeinen öffentlichen Zugriff geschützt werden sollen, müssen Sie zusätzliche Konfigurationsschritte ausführt. Die folgende Abfrage gibt die Daten von der Festlegung der externen Daten:
 
     SELECT CityID, StateProvinceCode, CityName, YearNumber, LatestRecordedPopulation FROM dbo.CityPopulationStatistics;
 
-Um zu verstehen, welche Städte von für eine weitere Erweiterung sein könnten, die folgende Abfrage prüft die Wachstumsrate des Städte, und gibt die ersten 100 größten Orten mit erheblichen Vergrößerung und Wide World Importers verfügt, in denen nicht über eine sales Präsenz. Die Abfrage umfasst einen Join zwischen der Remotetabelle `dbo.CityPopulationStatistics` und die lokale Tabelle `Dimension.City`, und einen Filter, die im Zusammenhang mit der lokalen Tabelle `Fact.Sales`.
+Um zu verstehen, welche Städten für eine weitere Erweiterung von Interesse sein können, die folgende Abfrage untersucht die Wachstumsrate von Städten und gibt die ersten 100 größten Städte mit erheblicher Anstieg und Wide World Importers hat, in denen keine Verkäufe präsent. Die Abfrage enthält einen Join zwischen der Remotetabelle `dbo.CityPopulationStatistics` und die lokale Tabelle `Dimension.City`, und einen Filter, die im Zusammenhang mit der lokalen Tabelle `Fact.Sales`.
 
     WITH PotentialCities
     AS
@@ -74,19 +74,19 @@ Um zu verstehen, welche Städte von für eine weitere Erweiterung sein könnten,
 
 (Vollständige Version des Beispiels)
 
-Gruppierte columnstore-Indizes (CCI) sind mit alle Faktentabellen verwendet, um den Speicherplatzbedarf verringern und die abfrageleistung. Bei Verwendung von CCI verwendet der Basis Speicher für den Faktentabellen Komprimierung der Spalte.
+Gruppierte columnstore-Indizes (CCI) werden zum alle die Faktentabellen reduzieren den Speicherplatzbedarf und abfrageleistung zu verbessern. Mit der Verwendung von CCI verwendet der Basis Speicher für die Faktentabellen Spalte-Komprimierung.
 
-Nicht gruppierte Indizes werden zusätzlich zu den gruppierten columnstore-Index verwendet, um die primary key- und foreign Key-Einschränkungen zu ermöglichen. Diese Einschränkungen wurden hinzugefügt, aus einer Fülle von Vorsicht - ETL-Prozess Datenquellen die Daten aus der Datenbank "wideworldimporters", mit Einschränkungen zum Erzwingen der Integrität. Entfernen von primären und foreign Key-Einschränkungen und deren unterstützende Indizes würde den Speicher der Faktentabellen zu verkleinern.
+Nicht gruppierte Indizes werden zusätzlich zu den gruppierten columnstore-Index verwendet, um die primary key- und foreign Key-Einschränkungen zu vereinfachen. Diese Einschränkungen wurden hinzugefügt, aus einer Fülle von Vorsicht – ETL-Prozess die Datenquellen aus der Datenbank "wideworldimporters", mit Einschränkungen zum Erzwingen der Integrität. Entfernen von primären und foreign Key-Einschränkungen und deren unterstützende Indizes verringert sich der Speicherbedarf der Faktentabellen.
 
-**Datengröße**
+**Größe der Daten**
 
-Die Beispieldatenbank eingeschränkter Datengröße zum Herunterladen und installieren Sie das Beispiel zu vereinfachen. Allerdings würde die tatsächliche Leistungsvorteile von columnstore-Indizes finden Sie ein größeres DataSet verwenden möchten.
+Die-Beispieldatenbank verfügt über eingeschränkte Größe der Daten, um das Herunterladen und Installieren des Beispiels zu erleichtern. Um die tatsächliche Leistungsvorteile von columnstore-Indizes zu sehen, möchten allerdings würde ein größeren Datasets verwenden.
 
-Sie können die folgende Anweisung zum Vergrößern Ausführen der `Fact.Sales` Tabelle durch eine andere 12 Millionen Zeilen mit Beispieldaten einfügen. Diese Zeilen werden alle für das Jahr 2012 eingefügt, dass keine Störungen mit ETL-Prozess vorhanden ist.
+Sie können die folgende Anweisung zum Erhöhen der Größe der Ausführen der `Fact.Sales` Tabelle durch Einfügen von einem anderen 12 Millionen Zeilen mit Beispieldaten. Diese Zeilen werden alle für das Jahr 2012 eingefügt, keine Beeinträchtigung durch die ETL-Prozesse sind.
 
     EXECUTE [Application].[Configuration_PopulateLargeSaleTable]
 
-Diese Anweisung dauert etwa 5 Minuten ausgeführt. Um mehr als 12 Millionen Zeilen einzufügen, übergeben Sie die gewünschte Anzahl von Zeilen, die als Parameter dieser gespeicherten Prozedur eingefügt.
+Diese Anweisung dauert ca. fünf Minuten ausgeführt. Um mehr als 12 Millionen Zeilen einzufügen, übergeben Sie die gewünschte Anzahl von Zeilen, die als Parameter dieser gespeicherten Prozedur eingefügt.
 
 Um die abfrageleistung mit und ohne Columnstore zu vergleichen, können Sie löschen und/oder erstellen Sie den gruppierten columnstore-Index neu.
 
@@ -104,7 +104,7 @@ Um erneut zu erstellen:
 
 Größe der Daten in einem Data Warehouse kann sehr groß werden. Aus diesem Grund ist es die bewährte Methode, die Verwendung der Partitionierung zum Verwalten der Speicherung von die großen Tabellen in der Datenbank.
 
-Alle von der größeren Faktentabellen sind nach Jahr aufgeteilt. Die einzige Ausnahme ist `Fact.Stock Holdings`, dies ist kein datumsbasierte und verfügt über eingeschränkten Datengröße verglichen mit den anderen Faktentabellen.
+Alle größeren Faktentabellen werden nach Jahr partitioniert. Die einzige Ausnahme ist `Fact.Stock Holdings`, dies ist kein datumsbasierte und verfügt über nur einen eingeschränkten Datenumfang verglichen mit den anderen Faktentabellen.
 
 Wird für alle partitionierten Tabellen verwendete Partitionsfunktion `PF_Date`, und das Partitionsschema verwendeten `PS_Date`.
 
@@ -112,6 +112,6 @@ Wird für alle partitionierten Tabellen verwendete Partitionsfunktion `PF_Date`,
 
 (Vollständige Version des Beispiels)
 
-WideWorldImportersDW verwendet SCHEMA_ONLY-Tabellen für das staging-Tabellen. Alle `Integration.` * `_Staging` Tabellen sind SCHEMA_ONLY Speicheroptimierte Tabellen.
+"Wideworldimportersdw" verwendet den speicheroptimierten SCHEMA_ONLY-Tabellen für den staging-Tabellen. Alle `Integration.` * `_Staging` Tabellen sind speicheroptimierten SCHEMA_ONLY-Tabellen.
 
-Der Vorteil, dass SCHEMA_ONLY-Tabellen ist, dass sie nicht angemeldet sind, und Zugriff auf die Festplatte ist nicht erforderlich. Dies verbessert die Leistung des ETL-Prozesses. Da diese Tabellen nicht angemeldet sind, werden Sie in ihren Inhalt verloren, wenn ein Fehler auftritt. Die Datenquelle ist jedoch weiterhin verfügbar, damit ETL-Prozess einfach neu gestartet werden kann, wenn ein Fehler auftritt.
+Der Vorteil der SCHEMA_ONLY-Tabellen ist, dass sie nicht angemeldet sind und Zugriff auf die Festplatte ist nicht erforderlich. Dies verbessert die Leistung der ETL-Prozess. Da diese Tabellen nicht angemeldet sind, werden Sie in ihren Inhalt verloren, wenn ein Fehler auftritt. Allerdings ist die Datenquelle noch verfügbar ist, damit die ETL-Prozesse einfach neu gestartet werden kann, wenn ein Fehler auftritt.

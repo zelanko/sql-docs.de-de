@@ -1,5 +1,5 @@
 ---
-title: Ändern eines Attributnamens (Master Data Services) | Microsoft Docs
+title: Ändern eines Attributnamens (Master Data Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], changing name
 ms.assetid: d348f238-f59d-41c7-ad20-3ccd55bfd9e5
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: edc6410e28410581716e8b800affc9ba39423c3a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 62318949f70b65a63bb4c823903d46c740c51e48
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046940"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191980"
 ---
 # <a name="change-an-attribute-name-master-data-services"></a>Ändern eines Attributnamens (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie den Namen eines Attributs ändern.  
@@ -45,7 +45,7 @@ ms.locfileid: "36046940"
   
 5.  Klicken Sie auf **Ausgewählte Entität bearbeiten**.  
   
-6.  Auf der **Entität bearbeiten** Seite, klicken Sie auf das Attribut mit dem Namen Sie ändern möchten.  
+6.  Auf der **Entität bearbeiten** klicken Sie auf das Attribut mit dem Namen, die Sie ändern möchten.  
   
 7.  Klicken Sie auf **ausgewähltes Attribut bearbeiten**.  
   

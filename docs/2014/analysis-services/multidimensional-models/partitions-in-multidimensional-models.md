@@ -1,5 +1,5 @@
 ---
-title: Partitionen in mehrdimensionalen Modellen | Microsoft Docs
+title: Partitionen in mehrdimensionalen Modellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 26e01dc7-fa49-4b1f-99eb-7799d1b4dcd2
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 884f8cbf2157dcf06958c81437a1a177ac2ae282
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7491322b775cca1a6cf65b667ffd979aa723af0e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048357"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270256"
 ---
 # <a name="partitions-in-multidimensional-models"></a>Partitionen in mehrdimensionalen Modellen
   In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]stellt eine *Partition* den physischen Speicher der in eine Measuregruppe geladenen Faktendaten dar. Für jede Measuregruppe wird automatisch eine einzelne Partition erstellt. Es ist jedoch üblich, zusätzliche Partitionen zur weiteren Segmentierung der Daten zu erstellen, um eine effizientere Verarbeitung und eine schnellere Abfrageleistung zu erzielen.  
@@ -44,17 +44,17 @@ ms.locfileid: "36048357"
  Aggregationen sind vorausberechnete Zusammenfassungen von Cubedaten, die die Abfrageantwortzeiten in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] beschleunigen. Sie können die Anzahl der für eine Measuregruppe erstellten Aggregationen steuern, indem Sie Grenzwerte für den Speicher und Leistungsgewinne festlegen oder den Prozess zur Erstellung von Aggregationen nach einer Weile willkürlich beenden. Mehr Aggregationen bringen nicht unbedingt Vorteile. Jede neue Aggregation verursacht Kosten sowohl beim Festplattenspeicher als auch bei der Verarbeitungszeit. Es wird empfohlen, Aggregationen für einen Leistungsgewinn von 30 % zu erstellen und die Anzahl von Aggregationen nur zu erhöhen, wenn Tests oder der laufende Betrieb dies erforderlich machen. Weitere Informationen finden Sie unter [Entwerfen von Aggregationen &#40;Analysis Services – Mehrdimensional&#41;](designing-aggregations-analysis-services-multidimensional.md).  
   
 ## <a name="partition-merging-and-editing"></a>Zusammenführen und Bearbeiten von Partitionen  
- Wenn zwei Partitionen denselben Aggregationsentwurf verwenden, können Sie diese beiden Partitionen zu einer Partition zusammenführen. Wenn z. B. eine Inventardimension nach Monaten partitioniert ist, können Sie am Ende des Kalendermonats die Partition für diesen Monat mit der für das laufende Jahr zusammenführen. Auf diese Weise kann die Partition für den laufenden Monat schnell verarbeitet und analysiert werden, während die anderen Monate des laufenden Jahres nur bei der Zusammenführung erneut verarbeitet werden müssen. Diese Neuverarbeitung nimmt mehr Verarbeitungszeit in Anspruch und kann weniger häufig ausgeführt werden. Weitere Informationen zum Verwalten der Zusammenführung von Partitionen finden Sie unter [Merge Partitions in Analysis Services &#40;SSAS - Multidimensional&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md). So bearbeiten Sie Cubepartitionen mithilfe der **Partitionen** finden Sie im Cube-Designer Registerkarte [bearbeiten oder Löschen von Partitionen &#40;Analysis Services – mehrdimensional&#41;](edit-or-delete-partitions-analyisis-services-multidimensional.md).  
+ Wenn zwei Partitionen denselben Aggregationsentwurf verwenden, können Sie diese beiden Partitionen zu einer Partition zusammenführen. Wenn z. B. eine Inventardimension nach Monaten partitioniert ist, können Sie am Ende des Kalendermonats die Partition für diesen Monat mit der für das laufende Jahr zusammenführen. Auf diese Weise kann die Partition für den laufenden Monat schnell verarbeitet und analysiert werden, während die anderen Monate des laufenden Jahres nur bei der Zusammenführung erneut verarbeitet werden müssen. Diese Neuverarbeitung nimmt mehr Verarbeitungszeit in Anspruch und kann weniger häufig ausgeführt werden. Weitere Informationen zum Verwalten der Zusammenführung von Partitionen finden Sie unter [Merge Partitions in Analysis Services &#40;SSAS - Multidimensional&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md). So bearbeiten Sie Cubepartitionen mithilfe der **Partitionen** Registerkarte im Cube-Designer, finden Sie unter [bearbeiten oder Löschen von Partitionen &#40;Analysis Services – mehrdimensional&#41;](edit-or-delete-partitions-analyisis-services-multidimensional.md).  
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
 |Thema|Description|  
 |-----------|-----------------|  
-|[Erstellen und Verwalten einer lokalen Partition &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)|Enthält Informationen zum Partitionieren von Daten mit Filtern oder unterschiedlichen Faktentabellen, ohne dass Daten dupliziert werden.|  
-|[Festlegen des Partitionsspeichers &#40;Analysis Services - mehrdimensionale&#41;](set-partition-storage-analysis-services-multidimensional.md)|Beschreibt die Speicherkonfiguration für Partitionen.|  
-|[Bearbeiten oder Löschen von Partitionen &#40;Analysis Services - mehrdimensionale&#41;](edit-or-delete-partitions-analyisis-services-multidimensional.md)|Beschreibt, wie Partitionen angezeigt und bearbeitet werden.|  
+|[Erstellen und verwalten eine lokale Partition &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)|Enthält Informationen zum Partitionieren von Daten mit Filtern oder unterschiedlichen Faktentabellen, ohne dass Daten dupliziert werden.|  
+|[Festlegen des Partitionsspeichers &#40;Analysis Services – mehrdimensional&#41;](set-partition-storage-analysis-services-multidimensional.md)|Beschreibt die Speicherkonfiguration für Partitionen.|  
+|[Bearbeiten oder Löschen von Partitionen &#40;Analysis Services – mehrdimensional&#41;](edit-or-delete-partitions-analyisis-services-multidimensional.md)|Beschreibt, wie Partitionen angezeigt und bearbeitet werden.|  
 |[Zusammenführen von Partitionen in Analysis Services &#40;SSAS – mehrdimensional&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)|Enthält Informationen zum Zusammenführen von Partitionen, die unterschiedliche Faktentabellen oder Datenslices aufweisen, ohne dass Daten dupliziert werden.|  
 |[Festlegen des Rückschreibens von Partitionen](set-partition-writeback.md)|Enthält Anweisungen zum Aktivieren des Schreibzugriffs für eine Partition.|  
-|[Erstellen und Verwalten einer Remotepartition &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)|Beschreibt, wie eine Remotepartition erstellt und verwaltet wird.|  
+|[Erstellen und verwalten eine Remotepartition &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)|Beschreibt, wie eine Remotepartition erstellt und verwaltet wird.|  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Ändern der Produktdimension | Microsoft Docs
+title: Ändern der Product-Dimension | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8e3ffecd-7f40-41a8-8735-bc9858a310cb
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 6d0fca02684392aaba37565d4b06b7cc0f1e265f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1163fdaf3e76734217fc8c2cca13a124e30f3b2b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36048378"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171731"
 ---
 # <a name="modifying-the-product-dimension"></a>Ändern der Product-Dimension
   In den Aufgaben in diesem Thema verwenden Sie eine benannte Berechnung, um aussagekräftigere Namen für Produktlinien zur Verfügung zu stellen, definieren eine Hierarchie in der Product-Dimension, und geben den (All) -Elementnamen für die Hierarchie an. Außerdem gruppieren Sie Attribute in Anzeigeordner.  
@@ -33,7 +33,7 @@ ms.locfileid: "36048378"
   
 2.  Klicken Sie unten im Diagrammbereich mit der rechten Maustaste auf die Tabellenüberschrift **Product** . Klicken Sie anschließend auf **Neue benannte Berechnung**.  
   
-3.  In der **benannte Berechnung erstellen** Geben Sie im Dialogfeld `ProductLineName` in der **Spaltenname** Feld.  
+3.  In der **benannte Berechnung erstellen** (Dialogfeld), Typ `ProductLineName` in die **Spaltenname** Feld.  
   
 4.  Geben Sie in das Feld **Ausdruck** die folgende **CASE** -Anweisung ein (Sie können sie auch kopieren und einfügen):  
   
@@ -83,11 +83,11 @@ ms.locfileid: "36048378"
   
 1.  Ziehen Sie das **Product Line** -Attribut vom Bereich **Attribute** in den Bereich **Hierarchien** .  
   
-2.  Ziehen Sie die **Modellname** -Attribut aus der **Attribute** -Bereich in die  **\<neuen Ebene >** Zelle der **Hierarchien** Bereich, unterhalb der **Produktlinie** Ebene.  
+2.  Ziehen Sie die **Modellname** -Attribut aus der **Attribute** -Bereich in die  **\<ungeahnte >** Zelle der **Hierarchien** unterhalb der **Product Line** Ebene.  
   
-3.  Ziehen Sie die `Product Name` -Attribut aus der **Attribute** -Bereich in die  **\<neuen Ebene >** Zelle der **Hierarchien** Bereich unterhalb der  **Model Name** Ebene. (Sie haben im vorherigen Abschnitt Product Key in Product Name umbenannt.)  
+3.  Ziehen Sie die `Product Name` -Attribut aus der **Attribute** -Bereich in die  **\<neue Ebene >** Zelle die **Hierarchien** Bereich unterhalb der  **Modellname** Ebene. (Sie haben im vorherigen Abschnitt Product Key in Product Name umbenannt.)  
   
-4.  In der **Hierarchien** im Bereich der **Dimensionsstruktur** Registerkarte der rechten Maustaste auf die Titelleiste des der **Hierarchie** Hierarchie, klicken Sie auf **umbenennen** , und geben Sie dann `Product Model Lines`.  
+4.  In der **Hierarchien** im Bereich der **Dimensionsstruktur** Registerkarte der rechten Maustaste auf der Titelleiste des Fensters der **Hierarchie** Hierarchie, klicken Sie auf **umbenennen** , und geben Sie dann `Product Model Lines`.  
   
      Der Name der Hierarchie lautet jetzt `Product Model Lines`.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "36048378"
   
     -   **Weight**  
   
-2.  In der **AttributeHierarchyDisplayFolder** Eigenschaftenfeld im Fenster Eigenschaften die Typ `Stocking`.  
+2.  In der **AttributeHierarchyDisplayFolder** Eigenschaftenfeld im Fenster Eigenschaften den Typ `Stocking`.  
   
      Sie haben diese Attribute jetzt in einen einzigen Anzeigeordner gruppiert.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36048378"
   
     -   **Standard Cost**  
   
-4.  In der **AttributeHierarchyDisplayFolder** eigenschaftenzelle im Fenster Eigenschaften die Typ `Financial`.  
+4.  In der **AttributeHierarchyDisplayFolder** eigenschaftenzelle im Fenster Eigenschaften den Typ `Financial`.  
   
      Sie haben diese Attribute jetzt in einen zweiten Anzeigeordner gruppiert.  
   
@@ -141,13 +141,13 @@ ms.locfileid: "36048378"
   
     -   **Status**  
   
-6.  In der **AttributeHierarchyDisplayFolder** eigenschaftenzelle im Fenster Eigenschaften die Typ `History`.  
+6.  In der **AttributeHierarchyDisplayFolder** eigenschaftenzelle im Fenster Eigenschaften den Typ `History`.  
   
      Sie haben diese Attribute jetzt in einen dritten Anzeigeordner gruppiert.  
   
-7.  Wählen Sie die `Product Model Lines` Hierarchie in der **Hierarchien** Bereich, und ändern Sie die **AllMemberName** Eigenschaft im Eigenschaftenfenster zu `All Products`.  
+7.  Wählen Sie die `Product Model Lines` Hierarchie in der **Hierarchien** Bereich, und ändern Sie dann die **AllMemberName** Eigenschaft im Eigenschaftenfenster zu `All Products`.  
   
-8.  Klicken Sie auf einen offenen Bereich, der die **Hierarchien** Bereich, und ändern Sie die **AttributeAllMemberName** Eigenschaft am oberen Rand des Fensters Eigenschaften auf `All Products`.  
+8.  Klicken Sie auf einen offenen Bereich, der die **Hierarchien** Bereich, und ändern Sie dann die **AttributeAllMemberName** Eigenschaft am oberen Rand des Fensters "Eigenschaften" auf `All Products`.  
   
      Durch das Anklicken eines offenen Bereichs können Sie Eigenschaften der Produktdimension selbst ändern. Sie können auch auf **Product** am oberen Rand der Attributliste im Bereich **Attribute** klicken.  
   

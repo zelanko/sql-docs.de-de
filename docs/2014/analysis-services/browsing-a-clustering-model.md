@@ -1,5 +1,5 @@
 ---
-title: Durchsuchen eines Clustermodells | Microsoft Docs
+title: Durchsuchen eines Clustermodells | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
 - mining models, viewing
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - mining model, clustering
 ms.assetid: 7f3f0949-d791-403a-88e2-54cb1a803dae
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fab210756002a80e392bac74e7d1378679b05b2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 006decb2e339c07252cc0dbfeaee60962db36e0f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046794"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212170"
 ---
 # <a name="browsing-a-clustering-model"></a>Durchsuchen eines Clustermodells
-  Wenn Sie öffnen ein Clusteringmodell mit **Durchsuchen**, das Modell wird angezeigt, in einem interaktiven Viewer, ähnlich wie den clustering-Viewer in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Die Viewer unterstützt Sie dabei, die erstellten Cluster zu untersuchen und die Clustermerkmale zu verstehen. Darüber hinaus können Sie einzelne Segmente mit anderen Segmenten oder mit der Grundgesamtheit vergleichen und die Unterschiede untersuchen.  
+  Wenn Sie öffnen ein Clusteringmodell mit **Durchsuchen**, das Modell wird angezeigt, in einem interaktiven Viewer, der clustering-Viewer in etwa wie [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Die Viewer unterstützt Sie dabei, die erstellten Cluster zu untersuchen und die Clustermerkmale zu verstehen. Darüber hinaus können Sie einzelne Segmente mit anderen Segmenten oder mit der Grundgesamtheit vergleichen und die Unterschiede untersuchen.  
   
-##  <a name="BKMK_Tabs"></a> Untersuchen des Modells  
+##  <a name="BKMK_Tabs"></a> Durchsuchen des Modells  
  Die **Durchsuchen** Fenster enthält die folgenden Tools, mit denen Sie das Clusteringmodell zu verstehen und die Attribute des zugrunde liegenden Datengruppen zu untersuchen:  
   
 -   [Clusterdiagramm](#BKMK_ClusterDiagram)  
@@ -40,10 +40,10 @@ ms.locfileid: "36046794"
   
 -   [Clusterunterscheidung](#BKMK_ClusterDiscrimination)  
   
- Um mit einem Clusteringmodell zu experimentieren, können Sie die Beispieldaten auf der Registerkarte Training der Beispieldaten-Arbeitsmappe verwenden, und erstellen Sie ein Clusteringmodell mit [Clustererstellungs-Assistenten &#40;Data Mining-Add-ins für Excel&#41; ](cluster-wizard-data-mining-add-ins-for-excel.md) und allen Standardeinstellungen .  
+ Mit einem Clusteringmodell experimentieren möchten, können Sie die Beispieldaten auf der Registerkarte Training der Beispieldaten-Arbeitsmappe verwenden und erstellen Sie ein Clusteringmodell mit [Clustererstellungs-Assistenten &#40;Data Mining-Add-ins für Excel&#41; ](cluster-wizard-data-mining-add-ins-for-excel.md) und allen Standardeinstellungen .  
   
 ###  <a name="BKMK_ClusterDiagram"></a> Clusterdiagramm  
- Die **Clusterdiagramm** Registerkarte werden alle, die in einem Miningmodell enthaltenen Cluster angezeigt. Hier sehen Sie, wie viele verschiedene Gruppierungen im Dataset enthalten sind und wie nah oder weit sie voneinander entfernt liegen.  
+ Die **Clusterdiagramm** Registerkarte zeigt alle, die in einem Miningmodell enthaltenen Cluster an. Hier sehen Sie, wie viele verschiedene Gruppierungen im Dataset enthalten sind und wie nah oder weit sie voneinander entfernt liegen.  
   
 ##### <a name="explore-the-cluster-diagram"></a>Untersuchen des Clusterdiagramms  
   
@@ -59,19 +59,19 @@ ms.locfileid: "36046794"
   
      Wenn Sie den Schieberegler nach unten ziehen, werden nur die stärksten Verbindungslinien zwischen Clustern angezeigt. So können Sie verwandte Gruppen leichter fokussieren.  
   
-3.  Beachten Sie, dass die **Schattierungsvariable** in der oberen rechten Ecke des Steuerelements die **Clusterdiagramm** Fenster.  
+3.  Beachten Sie, dass die **Schattierungsvariable** -Steuerelement in der oberen rechten Ecke des der **Clusterdiagramm** Fenster.  
   
-     Standardmäßig wird es auf festgelegt, **Auffüllung**. Das bedeutet, dass die Cluster mit der dunkleren Schattierung größere Unterstützung erhalten.  
+     Standardmäßig ist er festgelegt **Auffüllung**. Das bedeutet, dass die Cluster mit der dunkleren Schattierung größere Unterstützung erhalten.  
   
 4.  Platzieren Sie den Cursor auf einem beliebigen Cluster.  
   
      Eine QuickInfo wird angezeigt, in der die Auffüllung des Clusters enthalten ist.  
   
-5.  Klicken Sie nun auf die **Schattierungsvariable** Dropdownliste aus, und wählen Sie die **Alter** Variable. Wie in diesem Fall wird eine Liste von Werten der **Zustand** Textfeld.  
+5.  Klicken Sie nun die **Schattierungsvariable** Dropdownliste aus, und wählen Sie die **Alter** Variable. Wie Sie dies tun, wird eine Liste von Werten der **Zustand** Textfeld.  
   
-     Die als Eingabe für dieses Modell verwendete Spalte Alter enthält fortlaufende numerische Werte, zu Clusteringzwecken werden die Zahlen vom Algorithmus jedoch immer diskretisiert. Hier sehen Sie die Klassifizierungen oder Gruppen, die der Algorithmus erstellt werden, z. B. "sehr niedrig (\<= 27)" und "sehr hoch (> = 63)".  
+     Die als Eingabe für dieses Modell verwendete Spalte Alter enthält fortlaufende numerische Werte, zu Clusteringzwecken werden die Zahlen vom Algorithmus jedoch immer diskretisiert. Hier sehen Sie den Container oder Gruppen, die der Algorithmus erstellt werden, z. B. "sehr niedrig (\<= 27)" und "sehr hoch (> = 63)".  
   
-6.  Aus der **Status** Dropdownlisten auswählen **sehr hohen** und beobachten Sie, wie das Diagramm ändert.  
+6.  Aus der **Zustand** Dropdown-Listen, die Option **sehr hohe** und festzustellen, wie das Diagramm ändert.  
   
      Indem Sie die Schattierungsvariable ändern, erkennen Sie auf einen Blick, welche Cluster mehr und welche nur wenige Kunden dieser Altersgruppe enthalten.  
   
@@ -79,38 +79,38 @@ ms.locfileid: "36046794"
   
      Je stärker die Schattierung, desto größer ist der Anteil der Zielattribut- und Werteverteilung des Clusters.  
   
-7.  Suchen Sie den Cluster, die schattiert ist dunkelsten bei der **Schattierungsvariable** festgelegt ist, um Alter > 65.  
+7.  Suchen Sie den Cluster, der schattierte Bereich ist dunkelsten bei der **Schattierungsvariable** nastaven NA hodnotu Alter > 65.  
   
      Zeigen Sie mit der Maus auf den Cluster.  
   
      Der in der QuickInfo angezeigte Wert zeigt jetzt die Grundgesamtheit der Kunden in diesem Cluster an, die älter als 65 sind.  
   
-8.  Mit der rechten Maustaste in des Clusters, und wählen Sie **Cluster umbenennen**. Geben Sie einen neuen Namen, die beschreibenden, z. B. **über 65**. Der neue Name wird mit dem Modell auf dem Server gespeichert und kann zum Identifizieren des Clusters in den anderen Clusteringsichten verwendet werden.  
+8.  Mit der rechten Maustaste in des Clusters, und wählen Sie **Cluster umbenennen**. Geben Sie einen neuen Namen, die informative, z. B. **über 65**. Der neue Name wird mit dem Modell auf dem Server gespeichert und kann zum Identifizieren des Clusters in den anderen Clusteringsichten verwendet werden.  
   
- [Zurück nach oben](#BKMK_Tabs)  
+ [Zurück zum Anfang](#BKMK_Tabs)  
   
 ###  <a name="BKMK_ClusterProfiles"></a> Clusterprofile  
- Die **Clusterprofile** Registerkarte können Sie die Zusammensetzung aller Cluster auf einen Blick zu vergleichen. Dies ist ein guter Ausgangspunkt, um sich mit dem Modell vertraut zu machen. Diese Ansicht ist auch später hilfreich, wenn Sie einen bestimmten Cluster untersuchen und zu dem Schluss kommen, dass Sie verwandte Cluster suchen müssen.  
+ Die **Clusterprofile** Registerkarte können Sie die Zusammensetzung aller Cluster, auf einen Blick zu vergleichen. Dies ist ein guter Ausgangspunkt, um sich mit dem Modell vertraut zu machen. Diese Ansicht ist auch später hilfreich, wenn Sie einen bestimmten Cluster untersuchen und zu dem Schluss kommen, dass Sie verwandte Cluster suchen müssen.  
   
  **Clusterprofile** erhalten Sie auch einen guten Überblick darüber, wie der Cluster voneinander unterscheiden. Daher kann es praktisch sein, jedem Cluster mithilfe dieser Ansicht einen aussagekräftigen Namen zu geben.  
   
 ##### <a name="explore-the-cluster-profiles"></a>Untersuchen der Clusterprofile  
   
-1.  Klicken Sie auf die Zelle für Berufsbezeichnungen, in der **Zustände** -Spalte, um die Liste aller Werte für Beruf anzuzeigen.  
+1.  Klicken Sie auf die Zelle für Berufsbezeichnungen, in der **Zustände** Spalte, um die Liste aller Werte für "Occupation" anzuzeigen.  
   
 2.  Platzieren Sie jetzt den Cursor in den Clusterprofilen auf Beruf.  
   
      Die QuickInfo zeigt die Verteilung von Berufen in diesem Cluster an.  
   
-     ![Anzeigen ausführlicher Werte in QuickInfos oder in der Legende](media/dm13-cluster-profile-age-tooltip.gif "Anzeigen ausführlicher Werte in QuickInfos oder in der Legende")  
+     ![Anzeigen von ausführlicher Werte in QuickInfos oder in der Legende](media/dm13-cluster-profile-age-tooltip.gif "ausführliche Werte in QuickInfos oder in Legende anzeigen")  
   
-     Beachten Sie, dass in einigen (z. B. die gerade in der Abbildung), die Liste der Berufe Clustern ist nicht vollständig, und einige Berufe ersetzt werden, mit der Bezeichnung **andere**.  
+     Beachten Sie, dass in einigen (z. B. die in der Abbildung), die Liste der Berufe Clustern ist nicht vollständig, und einige Berufe ersetzt werden, mit der Bezeichnung **andere**.  
   
-     Dieses Verhalten ist programmbedingt, da es schwierig sein kann, den Unterschied zwischen vielen kleinen Balken im Histogramm auszumachen. Standardmäßig werden nur die wichtigsten Balken von größter Wichtigkeit beibehalten und die restlichen Balken werden dabei in einem grau zusammengruppiert **andere** Bucket.  
+     Dieses Verhalten ist programmbedingt, da es schwierig sein kann, den Unterschied zwischen vielen kleinen Balken im Histogramm auszumachen. Standardmäßig werden nur die wichtigsten Balken von größter Wichtigkeit beibehalten und die restlichen Balken werden in einem grau gruppiert **andere** Bucket.  
   
      Um die Anzahl der Balken zu ändern, die in einem beliebigen Histogramm angezeigt werden, verwenden Sie die Option **Histogrammbalken**.  
   
-3.  Beachten Sie, dass die **Alter** Spalte die anderen anders aussieht. Klicken Sie auf die Raute im Diagramm, durch das das Alter dargestellt wird.  
+3.  Beachten Sie, dass die **Alter** -Kolumne befasst sich nicht in die Gruppe. Klicken Sie auf die Raute im Diagramm, durch das das Alter dargestellt wird.  
   
      Die Spalte Alter enthielt ursprünglich nur fortlaufende Zahlen. Der Clusteringalgorithmus erfordert diskrete Werte. Folglich wurden die numerischen Werte in der Spalte Alter – basierend auf der Werteverteilung – unter einer eingeschränkten Anzahl von Altersgruppen gruppiert.  
   
@@ -124,17 +124,17 @@ ms.locfileid: "36046794"
   
     -   Die Breite der Raute gibt die Varianz des Attributs in diesem Knoten an. Eine schlankere Raute sagt also aus, dass mithilfe des Knotens eine genauere Vorhersage getroffen werden kann.  
   
-5.  Um mehr Platz im Diagramm schaffen, Maustaste einen Cluster müssen Sie nicht sofort anzuzeigen, und wählen **Spalte ausblenden**. Dadurch wird der Cluster nicht aus dem Modell gelöscht, sondern nur vorübergehend in der Spalte ausgeblendet.  
+5.  Um mehr Platz im Diagramm schaffen, Maustaste einen Cluster, die Sie nicht benötigen, um sofort anzuzeigen, und wählen **Spalte ausblenden**. Dadurch wird der Cluster nicht aus dem Modell gelöscht, sondern nur vorübergehend in der Spalte ausgeblendet.  
   
-     Um Cluster anzuzeigen, die Sie ausgeblendet haben, klicken Sie auf, und ziehen Sie den Spaltenrand oder wählen Sie den Clusternamen aus der Liste **mehr Cluster**.  
+     Um Cluster anzuzeigen, die Sie ausgeblendet haben, können Sie auf, und ziehen Sie den Spaltenrand oder wählen Sie den Namen des Clusters aus der Liste, **mehr Cluster**.  
   
 6.  Führen Sie in der Attributliste einen Bildlauf bis Bike Buyer durch, und suchen Sie dann den Cluster, der den höchsten Prozentsatz an Ja-Werten aufweist.  
   
-     Mit der rechten Maustaste für den Cluster, die Sie umbenennen möchten, wählen Sie den Spaltenüberschrift **umbenennen Cluster**, und geben **Fahrradkäufer**.  
+     Mit der rechten Maustaste in der Spaltenüberschrift für den Cluster, die Sie umbenennen möchten, wählen Sie **Cluster umbenennen**, und geben **Bike Buyers**.  
   
      Der neue Clustername wird in allen Ansichten und auf dem Server beibehalten, bis Sie das Modell erneut verarbeiten.  
   
-     ![Umbenennen von Clusters zur Diagramm einfacher zu verwenden ist](media/dm13-cluster-rename.gif "Umbenennen von Clusters zum Diagramm einfacher zu verwenden ist.")  
+     ![Umbenennen von Clusters zur Diagramm leichter zu verwenden ist](media/dm13-cluster-rename.gif "Umbenennen von Clusters zum Diagramm leichter zu verwenden ist")  
   
  **Tipps**  
   
@@ -142,32 +142,32 @@ ms.locfileid: "36046794"
   
 -   Ziehen Sie die Spalten, um sie im Viewer neu anzuordnen.  
   
--   Klicken Sie auf eine beliebige Zelle im profildiagramm, um detaillierte Statistikdaten in Anzeigen der **Mininglegende**.  
+-   Klicken Sie auf eine beliebige Zelle im profildiagramm, um detaillierte Statistikdaten in anzeigen. dem **Mininglegende**.  
   
--   Maustaste auf eine beliebige Zelle, und wählen Sie **Drillthrough-modellspalten** die zugrunde liegenden Daten in ein neues Arbeitsblatt in Excel ausgegeben.  
+-   Mit der rechten Maustaste in eine beliebige Zelle, und wählen Sie **Drillthrough für modellspalten** zur Ausgabe von der zugrunde liegenden Daten in einem neuen Arbeitsblatt in Excel.  
   
--   Mit der rechten Maustaste in der Clusterspalte Spaltenüberschrift und wählen Sie **Drillthroughs zu Strukturdaten** um detaillierte Informationen zu Clusterelementen abzurufen, die im Modell enthalten waren.  
+-   Mit der rechten Maustaste in der Clusterspalte Spaltenüberschrift, und wählen **Drillthroughs zu Strukturdaten** um ausführliche Informationen zu Clusterelementen abzurufen, die im Modell enthalten waren.  
   
      Wenn Sie Kundenprofile erstellen, können Sie die Kontaktinformationen z. B. in den zugrunde liegenden Daten (der Miningstruktur) belassen, ohne sie in das Modell einzuschließen, da sie für die Analyse nicht relevant sind. Nachdem die Kunden den Clustern zugewiesen wurden, können Sie die detaillierten Daten jedoch mithilfe eines Drillthrough-Vorgangs anzeigen.  
   
- [Zurück nach oben](#BKMK_Tabs)  
+ [Zurück zum Anfang](#BKMK_Tabs)  
   
 ###  <a name="BKMK_ClusterCharacteristics"></a> Clustermerkmale  
  In der Ansicht Clustermerkmale können Sie einen einzelnen Cluster gründlich untersuchen, um herauszufinden, durch welche Attribute diese Datengruppe am stärksten charakterisiert wird.  
   
 ##### <a name="explore-the-cluster-characteristics"></a>Untersuchen der Clustermerkmale  
   
-1.  Wählen Sie die **über 65** cluster von den **Cluster** Liste.  
+1.  Wählen Sie die **über 65** -cluster über die **Cluster** Liste.  
   
      Nachdem Sie einen Cluster ausgewählt haben, können Sie die Merkmale dieses Clusters eingehend untersuchen.  
   
      Die im Cluster enthaltenen Attribute werden in den **Variablen** -Spalten und der Status der aufgelisteten Attribute in der **Werte** -Spalte aufgelistet.  
   
-     Attributstatus werden aufgelistet, in der Reihenfolge ihrer Wichtigkeit von deren Wahrscheinlichkeit in diesem Cluster, dargestellt als eine farbige Leiste in begleitet die **Wahrscheinlichkeit** Spalte.  
+     Attributstatus finden Sie in der Reihenfolge ihrer Wichtigkeit, zusammen mit ihrer Wahrscheinlichkeit in diesem Cluster, dargestellt als eine farbige Leiste in der **Wahrscheinlichkeit** Spalte.  
   
      ![Merkmale eines Clusteringmodells](media/dm13-cluster-characteristics.gif "Merkmale eines Clusteringmodells")  
   
-2.  Klicken Sie auf die **Variablen** Spalte nach Attribut zu sortieren.  
+2.  Klicken Sie auf die **Variablen** Spalte, um nach Attribut zu sortieren.  
   
      Indem Sie die Sortierungsvariable ändern, können Sie leichter erkennen, wie Werte für Variablen, z. B. Einkommen oder Autobesitz, in der Gruppe verteilt sind.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "36046794"
   
      Der Arbeitsmappe wird ein neues Arbeitsblatt hinzugefügt, das die Merkmale des ausgewählten Clusters enthält.  
   
-4.  Wählen Sie jetzt einen anderen Cluster aus der Liste **Fahrradkäufer**.  
+4.  Wählen Sie einen anderen Cluster jetzt in der Liste **Bike Buyers**.  
   
 5.  Klicken Sie auf **nach Excel kopieren**.  
   
@@ -185,12 +185,12 @@ ms.locfileid: "36046794"
   
 -   Kunden im Cluster Über 65 zeichnen sich durch das primäre Merkmal aus, dass sie Ihr Produkt nicht kaufen! Wenn Sie wissen möchten, warum das so ist, können Sie die Cluster durchsuchen und Gruppen vergleichen. Oder Sie erstellen ein verwandtes Modell mithilfe eines Algorithmus, der sich für die Untersuchung von Ursachen und Ergebnissen eignet, z. B. ein Entscheidungsstrukturmodell oder ein Naïve Bayes-Modell.  
   
--   Wenn Sie eine vollständige Liste der Attribute und Wahrscheinlichkeitswerte für diesen Cluster (oder alle Cluster) abrufen möchten, können Sie eine Abfrage erstellen. Beispiele für Abfragen für Clustermodelle, finden Sie unter [Abfragebeispiele Clustering](data-mining/clustering-model-query-examples.md).  
+-   Wenn Sie eine vollständige Liste der Attribute und Wahrscheinlichkeitswerte für diesen Cluster (oder alle Cluster) abrufen möchten, können Sie eine Abfrage erstellen. Beispiele für Abfragen für Clustermodelle, finden Sie unter [Clusteringmodellabfragen](data-mining/clustering-model-query-examples.md).  
   
- [Zurück nach oben](#BKMK_Tabs)  
+ [Zurück zum Anfang](#BKMK_Tabs)  
   
 ###  <a name="BKMK_ClusterDiscrimination"></a> Clusterunterscheidung  
- Verwenden Sie die **Clusterunterscheidung** Registerkarte ", um Attribute zwischen zwei Clustern oder zwischen einem Cluster und allen anderen Fällen im Dataset zu vergleichen.  
+ Sie verwenden die **Clusterunterscheidung** Tab, um Attribute zwischen zwei Clustern oder zwischen einem Cluster und allen anderen Fällen im Dataset zu vergleichen.  
   
  Um die Funktionen dieses Viewers zu markieren, Vergleichen wir ihn auf die Seite-an-Seite-Tabellen in Excel, die Sie auf der Grundlage erstellt die **Clustermerkmale** anzeigen.  
   
@@ -206,7 +206,7 @@ ms.locfileid: "36046794"
   
      ![Vergleichen von Clustern in einem Modell](media/dm13-cluster-compareclusters.gif "Vergleichen von Clustern in einem Modell")  
   
-     Beachten Sie, dass im Hintergrund der **Clusterunterscheidung** Viewer sendet komplexe Abfragen an die Datamining-Server, um die Attribute zu extrahieren, die wichtigsten beim unterscheiden zwischen den beiden Gruppen, die einfacher zu vergleichen sind, zwei Sätze von Kunden.  
+     Beachten Sie, dass im Hintergrund die **Clusterunterscheidung** Viewer sendet komplexe Abfragen an die Datamining-Server, um die Attribute zu extrahieren, die wichtigsten beim unterscheiden zwischen den beiden Gruppen, erleichtert Ihnen die zu vergleichende sind, zwei Gruppen von Kunden.  
   
 2.  Klicken Sie auf eines der **begünstigt...** Spalten auf.  
   
@@ -222,7 +222,7 @@ ms.locfileid: "36046794"
   
  **Tipps**  
   
- Nachdem Sie einige Einblicke in Gruppen von Kunden erhalten, versuchen Sie es mit der [Datenquellenwerte Szenario &#40;Tabellenanalysetools für Excel&#41; ](what-if-scenario-table-analysis-tools-for-excel.md) oder [Ziel Seek Szenario &#40;Tabellenanalysetools für Excel&#41; ](goal-seek-scenario-table-analysis-tools-for-excel.md) Tools, um Faktoren im Modell zu untersuchen, die geändert werden kann, um das Ergebnis auswirken.  
+ Nachdem Sie einige Einblicke in Gruppen von Kunden erhalten, versuchen Sie es mit der [Datenquellenwerte Szenario &#40;Tabellenanalysetools für Excel&#41; ](what-if-scenario-table-analysis-tools-for-excel.md) oder [Ziel suchen Szenario &#40;Tabellenanalysetools für Excel&#41; ](goal-seek-scenario-table-analysis-tools-for-excel.md) Tools, um Faktoren in Bezug auf das Modell zu untersuchen, die geändert werden kann, um das Ergebnis auswirken.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Durchsuchen von Modellen in Excel &#40;SQL Server Data Mining-Add-ins&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)   

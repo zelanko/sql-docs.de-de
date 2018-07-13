@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen von Berichtsserver-Inhaltstypen zu einer Bibliothek (Reporting Services im integrierten SharePoint-Modus) | Microsoft Docs
+title: Hinzufügen von Berichtsserver-Inhaltstypen zu einer Bibliothek (Reporting Services im integrierten SharePoint-Modus) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,32 +8,32 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3a1b9a692b8aa26b2d3d5679866617dd4fcfe51f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: da7ee6e652442bdd2773a8c669b0d134f1fadc37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046198"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177547"
 ---
 # <a name="add-report-server-content-types-to-a-library-reporting-services-in-sharepoint-integrated-mode"></a>Hinzufügen von Berichtsserver-Inhaltstypen zu einer Bibliothek (Reporting Services im integrierten SharePoint-Modus)
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] bietet SharePoint vordefinierte Inhaltstypen, die zum Verwalten freigegebener Datenquellendateien (rsds), Berichtsmodelle (SMDL) und Berichtsgenerator-Berichtsdefinitionsdateien (RDL) verwendet werden. Wenn einer Bibliothek ein Inhaltstyp ( **Berichts-Generator-Bericht**, **Berichtsmodell**und **Berichtsdatenquelle** ) hinzugefügt wird, wird der Befehl **Neu** aktiviert, sodass Sie neue Dokumente des betreffenden Typs erstellen können.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] enthält vordefinierte SharePoint-Inhaltstypen, die zum Verwalten freigegebener Datenquellendateien (rsds), Berichtsmodelldateien (SMDL) und Berichts-Generator-Berichtsdefinitionsdateien (RDL) verwendet werden. Wenn einer Bibliothek ein Inhaltstyp ( **Berichts-Generator-Bericht**, **Berichtsmodell**und **Berichtsdatenquelle** ) hinzugefügt wird, wird der Befehl **Neu** aktiviert, sodass Sie neue Dokumente des betreffenden Typs erstellen können.  
   
  **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint-Modus  
   
  Wenn Sie einer Bibliothek Inhaltstypen hinzufügen möchten, müssen Sie Websiteadministrator sein oder über die Berechtigungsstufe "Vollzugriff" verfügen.  
   
- Die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Inhaltstypen sowie die inhaltstypverwaltung werden automatisch in allen Dokumentbibliotheken für vorhandene Websitesammlungen, die von folgenden erstellt aktiviert **Business Intelligence Center** Websitevorlage.  
+ Die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Inhalt sowie die Verwaltung dieser Inhaltstyp werden automatisch in allen Dokumentbibliotheken für vorhandene Websitesammlungen, die aus den folgenden erstellt aktiviert **Business Intelligence Center** Websitevorlage.  
   
  Für Websites, die nach der Integration von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] erstellt wurden, sind die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Inhaltstypen nicht aktiviert.  
   
 > [!TIP]  
->  Wenn Sie haben **nicht** zuvor konfigurierten Inhaltstypen für eine Bibliothek zuerst aktivieren Verwaltung von Inhaltstypen und dann die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Inhaltstypen. Siehe die Verfahren zum Aktivieren der Inhaltstypverwaltung in einer einzelnen Dokumentbibliothek.  
+>  Wenn man **nicht** zuvor konfigurierten Inhaltstypen für eine Bibliothek, aktivieren Sie zunächst die Verwaltung von Inhaltstypen, dann die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Inhaltstypen. Siehe die Verfahren zum Aktivieren der Inhaltstypverwaltung in einer einzelnen Dokumentbibliothek.  
   
  **Kurzvideo:** [(SSRS) Enabling Content Types in SharePoint2010.wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w) ((SSRS) Aktivieren von Inhaltstypen in SharePoint2010.wmv).  
   
@@ -110,13 +110,13 @@ ms.locfileid: "36046198"
 8.  Nachdem Sie alle gewünschten Inhaltstypen hinzugefügt haben, klicken Sie auf **OK**.  
   
 9. > [!NOTE]  
-    >  Wenn die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Inhaltstypgruppe **SQL Server Reporting Services-Inhaltstypen** ist nicht sichtbar ist, auf die **Inhaltstypen hinzufügen** Seite ist eine der folgenden Bedingungen "true":  
+    >  Wenn die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Inhaltstypgruppe **SQL Server Reporting Services-Inhaltstypen** ist nicht sichtbar ist, auf die **Inhaltstypen hinzufügen** Seite ist eine der folgenden Bedingungen "true":  
   
     -   Das [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Add-In für SharePoint-Produkte wurde nicht installiert. Weitere Informationen finden Sie unter [installieren oder deinstallieren Sie das Reporting Services-Add-in für SharePoint &#40;SharePoint 2010 und SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). Das Thema enthält Informationen zum Installieren des Add-Ins und es wird Schritt für Schritt erläutert, wie Sie eine Nur-Datei-Installation des Add-Ins ausführen können, um Probleme zu umgehen.  
   
     -   Das Add-In wird installiert, aber die **Funktion für die Berichtsserverintegration** für die Websitesammlung ist nicht aktiv. Prüfen Sie die Websitesammlungsfunktion unter **Siteeinstellungen**.  
   
-    -   Alle von der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Inhaltstypen wurden bereits in der Bibliothek hinzugefügt. Wenn alle Inhaltstypen einer Bibliothek angehören, wird die Gruppe von der Seite **Inhaltstypen hinzufügen** entfernt. Nachdem mindestens ein [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Inhaltstyp gelöscht wurde, wird die Gruppe **SQL Server Reporting Services-Inhaltstypen** auf der Seite **Inhaltstypen hinzufügen** angezeigt.  
+    -   Alle der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Inhaltstypen haben bereits in der Bibliothek hinzugefügt wurde. Wenn alle Inhaltstypen einer Bibliothek angehören, wird die Gruppe von der Seite **Inhaltstypen hinzufügen** entfernt. Nachdem mindestens ein [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Inhaltstyp gelöscht wurde, wird die Gruppe **SQL Server Reporting Services-Inhaltstypen** auf der Seite **Inhaltstypen hinzufügen** angezeigt.  
   
 ##  <a name="bkmk_enable_content_management_2010"></a> So aktivieren Sie die Inhaltstypverwaltung für eine einzelne Dokumentbibliothek (SharePoint 2010)  
   
@@ -168,6 +168,6 @@ ms.locfileid: "36046198"
   
 ## <a name="see-also"></a>Siehe auch  
  [SharePoint-Website Referenz- und Listenberechtigungen für Berichtsserverelemente](security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
- [Starten des Berichts-Generators &#40;Berichts-Generator&#41;](report-builder/start-report-builder.md)  
+ [Starten Sie Berichts-Generator &#40;Berichts-Generator&#41;](report-builder/start-report-builder.md)  
   
   

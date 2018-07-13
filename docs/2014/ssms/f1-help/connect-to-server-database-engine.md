@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connectoserverunknownservertype.f1
 - sql12.swb.connection.login.sqlserver.f1
@@ -18,15 +18,15 @@ f1_keywords:
 - sql12.swb.connecttoce.connectionproperties.f1
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 25af65c6e9aa165102e2e14785583aba58949049
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a7861729d8990c0309a926a30209096f8777119e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046019"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191320"
 ---
 # <a name="connect-to-server-database-engine"></a>Verbindung mit Server herstellen (Datenbank-Engine)
   Verwenden Sie dieses Dialogfeld, um Optionen für Verbindungen mit Computern mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] anzuzeigen oder anzugeben. In den meisten Fällen können Sie eine Verbindung herstellen, indem Sie im Feld **Servername** den Computernamen des Datenbankservers eingeben und dann auf **Verbinden**klicken. Geben Sie beim Herstellen der Verbindung mit [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]den Computernamen gefolgt von **\sqlexpress**an.  
@@ -44,7 +44,7 @@ ms.locfileid: "36046019"
 >  Um eine Verbindung mit einer aktiven Instanz von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] herzustellen, verwenden Sie das Named Pipes-Protokoll unter Angabe des Pipenamens, z. B. „np:\\\\.\pipe\3C3DF6B1-2262-47\tsql\query“. Weitere Informationen finden Sie in der Dokumentation von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] .  
   
  **Authentifizierung**  
- Sind zwei Authentifizierungsmodi verfügbar, beim Verbinden mit einer Instanz von der [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ Sind zwei Authentifizierungsmodi verfügbar, Herstellen der Verbindung mit einer Instanz von der [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  **Windows-Authentifizierungsmodus (Windows-Authentifizierung)**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Der Windows Authentifizierungsmodus ermöglicht Benutzern die Verbindung über ein Windows-Benutzerkonto.  

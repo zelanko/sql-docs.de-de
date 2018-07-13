@@ -1,47 +1,45 @@
 ---
-title: Sys.pdw_nodes_columns (Transact-SQL) | Microsoft Docs
+title: Sys.pdw_nodes_columns (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
-ms.component: system-catalog-views
+ms.component: system-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 268c77b7-1d71-4197-a2ed-5e2b2b8fc260
-caps.latest.revision: 7
 author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: aab0463f2fcc2a6ae24e716fd502c91eb8f9f867
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.openlocfilehash: 20bb25d3699a6fab734da0974bc0726da7e5cb96
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181061"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36875038"
 ---
 # <a name="syspdwnodescolumns-transact-sql"></a>Sys.pdw_nodes_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Zeigt die Spalten für benutzerdefinierte Tabellen und benutzerdefinierte Ansichten.  
+  Zeigt die Spalten für benutzerdefinierte Tabellen und benutzerdefinierten Ansichten.  
   
 |Spaltenname|Datentyp|Description|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|Die ID des Objekts, zu dem diese Spalte gehört.||  
-|name|**sysname**|Der Name der Spalte. Eindeutig im-Objekt.||  
+|NAME|**sysname**|Der Name der Spalte. Eindeutig im-Objekt.||  
 |column_id|**int**|ID der Spalte. Eindeutig im-Objekt.||  
 |system_type_id|**tinyint**|Die ID des Systemtyps der Spalte.||  
 |user_type_id|**int**|Die ID des vom Benutzer definierten Typs der Spalte.||  
-|max_length|**smallint**|Maximale Länge (in Byte) für die Spalte.|Enthält 1, die nicht unterstützten Spaltentypen (ungültig).|  
+|max_length|**smallint**|Maximale Länge (in Byte) für die Spalte.|Umfasst 1, die nicht unterstützten Spaltentypen (ungültig).|  
 |precision|**tinyint**|Die Genauigkeit der Spalte, wenn sie auf numerischen Werten basiert; andernfalls 0.||  
 |scale|**tinyint**|Die Skalierung der Spalte, wenn sie auf numerischen Werten basiert; andernfalls 0.||  
-|collation_name|**sysname**|Der Name der Sortierung der Spalte, wenn Sie zeichenbasierte; Andernfalls wird NULL verwendet.||  
+|collation_name|**sysname**|Der Name der Sortierung der Spalte, wenn Sie zeichenbasierte; andernfalls NULL.||  
 |is_nullable|**bit**|1 = Spalte lässt NULL-Werte zu.||  
 |is_ansi_padded|**bit**|1 = Spalte verwendet ANSI_PADDING ON-Verhalten, wenn es sich um Zeichen- oder Binärdaten bzw. Daten vom Typ Variant handelt.|Immer 0.|  
 |is_rowguidcol|**bit**|1 = Spalte ist eine deklarierte ROWGUIDCOL.|Immer 0.|  
@@ -58,7 +56,7 @@ ms.locfileid: "33181061"
 |rule_object_id|**int**|ID der eigenständigen Regel, die an die Spalte gebunden werden. <br />0 = Keine eigenständige Regel.|Immer 0.|  
 |is_sparse|**bit**|1 = Spalte ist eine Sparsespalte.|Immer 0.|  
 |is_column_set|**bit**|1 = Spalte ist ein Spaltensatz.|Immer 0.|  
-|pdw_node_id|**int**|Der eindeutige Bezeichner einer [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Knoten.|NOT NULL|  
+|pdw_node_id|**int**|Der eindeutige Bezeichner des eine [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Knoten.|NOT NULL|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die CONTROL SERVER-Berechtigung.  

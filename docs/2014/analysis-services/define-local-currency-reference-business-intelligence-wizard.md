@@ -1,5 +1,5 @@
 ---
-title: Definieren der Verweis auf lokale Währung (Business Intelligence-Assistent) | Microsoft Docs
+title: Definieren der Verweis auf lokale Währung (Business Intelligence-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.localcurrency.f1
 ms.assetid: 74993b0d-dfca-476b-acba-d66c593680a5
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 10810e19ec00aa77a14cb5a21789dfee1f9ae09a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0c2334bf24e692d5728521a1aee4967cfaeba25e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047025"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206280"
 ---
 # <a name="define-local-currency-reference-business-intelligence-wizard"></a>Verweis auf lokale Währung definieren (Business Intelligence-Assistent)
   Definieren Sie mithilfe der Seite **Verweis auf lokale Währung definieren** die lokalen Währungen für die Währungsumrechnungsfunktion, die für den auf der Seite **Umrechnungstyp auswählen** angegebenen m:n- oder n:1-Umrechnungstyp verwendet wird. Eine lokale Währung ist die Währung, in der die Transaktionen für die auf der Seite **Measures auswählen** ausgewählten Measures gespeichert werden.  
@@ -31,7 +31,7 @@ ms.locfileid: "36047025"
   
 ## <a name="options"></a>Tastatur  
  **Bezeichner in der Faktentabelle**  
- Wählen Sie diese Option aus, um ein Attribut anzugeben, durch das Währungsbezeichner für lokale Währungen in einer Währungsdimension bereitgestellt werden, auf die die Faktentabelle verweist, in der die auf der Seite **Measures auswählen** ausgewählten Measures enthalten sind. (Eine Währung in einer Kontodimension, deren `Type` -Eigenschaftensatz auf *Währung*.)  
+ Wählen Sie diese Option aus, um ein Attribut anzugeben, durch das Währungsbezeichner für lokale Währungen in einer Währungsdimension bereitgestellt werden, auf die die Faktentabelle verweist, in der die auf der Seite **Measures auswählen** ausgewählten Measures enthalten sind. (Eine Währungsdimension ist eine, deren `Type` -Eigenschaftensatz auf *Währung*.)  
   
  Verwenden Sie diese Option, wenn die lokale Währung für diese Transaktion durch die Transaktion selbst bestimmt wird. In der [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Beispieldatenbank[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]verfügt die Measuregruppe Internet Sales über eine reguläre Dimensionsbeziehung mit der Währungsdimension. Die Faktentabelle für diese Measuregruppe enthält eine Fremdschlüsselspalte, die auf die Währungsbezeichner in der Dimensionstabelle für diese Dimension verweist.  
   

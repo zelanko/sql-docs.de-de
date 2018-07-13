@@ -1,5 +1,5 @@
 ---
-title: Password-Element (ASSL) | Microsoft Docs
+title: Password-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Password element
 ms.assetid: ee756b01-fb08-4a9a-8c2a-7c04af0f8658
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e702e7307e11c506652e91ca4cdc8f02ca06318d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99d7eabdd66e6c7f036389b4825c5926873367b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046987"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197740"
 ---
 # <a name="password-element-assl"></a>Password-Element (ASSL)
-  Enthält das Kennwort des Benutzerkontos für die [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) Element.  
+  Enthält das Kennwort des Benutzerkontos für den [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -60,9 +60,9 @@ ms.locfileid: "36046987"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Den Wert des der `Password` Element als auch der Wert des der [Konto](account-element-impersonationinfo-assl.md) -Elements werden zum Zweck des Identitätswechsels verwendet, wenn den Wert des der [ImpersonationMode](impersonationmode-element-assl.md) -Elements für jedes Element abgeleitet der `ImpersonationInfo` Datentyp wird festgelegt, um *ImpersonateAccount*.  
+ Den Wert des der `Password` Element sowie den Wert des der [Konto](account-element-impersonationinfo-assl.md) -Elements werden zum Zweck des Identitätswechsels verwendet, wenn den Wert des der [ImpersonationMode](impersonationmode-element-assl.md) -Elements für jedes Element abgeleitet der `ImpersonationInfo` Datentyp nastaven NA hodnotu *ImpersonateAccount*.  
   
- Nur Mitglieder der Rolle des Serveradministrators für die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz bieten einen leeren Wert für die `Password` Element  
+ Nur Mitglieder der Serveradministratorrolle für die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz bieten einen leeren Wert für die `Password` Element  
   
 ## <a name="see-also"></a>Siehe auch  
  [DataSourceImpersonationInfo-Element &#40;ASSL&#41;](impersonationinfo-element-assl.md)   

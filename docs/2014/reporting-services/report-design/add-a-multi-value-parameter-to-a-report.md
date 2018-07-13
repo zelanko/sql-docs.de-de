@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4f376b2ba1e707afdba55b6fc7443d9d8be257e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 00ee8c2e88f571e3e9fcf5455a6627c0d7ff65cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047099"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204850"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>Hinzufügen eines aus mehreren Werten bestehenden Parameters zu einem Bericht
   Sie können einem Bericht einen Parameter hinzufügen, der dem Benutzer die Auswahl mehrerer Werte für den Parameter ermöglicht.  
   
- Sie können mehrere Parameterwerte innerhalb der Berichts-URL an den Bericht übergeben. Ein Beispiel für die URL einen mehrwertigen Parameter enthält, finden Sie unter [einen Bericht innerhalb einer URL übergeben](../pass-a-report-parameter-within-a-url.md).  
+ Sie können mehrere Parameterwerte innerhalb der Berichts-URL an den Bericht übergeben. Eine URL ist beispielsweise einen mehrwertigen Parameter enthält, finden Sie unter [übergeben von Berichtsparametern innerhalb einer URL](../pass-a-report-parameter-within-a-url.md).  
   
  Informationen dazu, wie mehrere Parameterwerte an eine gespeicherte Prozedur übergeben werden, finden Sie unter [Verwenden von Mehrfachauswahl-Parametern für SSRS-Berichte](http://go.microsoft.com/fwlink/?LinkId=321529) auf mssqltips.com.  
   

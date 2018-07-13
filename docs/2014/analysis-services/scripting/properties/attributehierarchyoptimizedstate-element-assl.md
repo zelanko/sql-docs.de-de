@@ -1,5 +1,5 @@
 ---
-title: AttributeHierarchyOptimizedState-Element (ASSL) | Microsoft Docs
+title: AttributeHierarchyOptimizedState-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeHierarchyOptimizedState element
 ms.assetid: d87148c8-2011-45ae-94c3-851f48babc5f
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 027bd8713038fd1b090697d8891f93eaabc11f9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 59b2036773b516d3ea79cda06c51502a9d096cec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046278"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247240"
 ---
 # <a name="attributehierarchyoptimizedstate-element-assl"></a>AttributeHierarchyOptimizedState-Element (ASSL)
   Bestimmt die Optimierungsebene, die auf die Attributhierarchie angewendet wird.  
@@ -59,7 +59,7 @@ ms.locfileid: "36046278"
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnetes Element|[CubeAttribute](../data-type/cubeattribute-data-type-assl.md), [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
+|Übergeordnetes Element|[CubeAttribute](../data-type/cubeattribute-data-type-assl.md), [DimensionAttribute-Objekt](../data-type/dimensionattribute-data-type-assl.md)|  
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -70,7 +70,7 @@ ms.locfileid: "36046278"
 |*FullyOptimized*|Durch die Instanz werden Indizes zum Verbessern der Abfrageleistung für die Attributhierarchie erstellt.|  
 |*NotOptimized*|Von der Instanz werden keine zusätzlichen Indizes erstellt.|  
   
- Die Enumeration, die den zulässigen Werten für die entsprechende `AttributeHierarchyOptimizedState` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.OptimizationType>. Die Elemente, die den übergeordneten Elementen von `AttributeHierarchyOptimizedState` im AMO-Objektmodell entsprechen, sind <xref:Microsoft.AnalysisServices.CubeAttribute> und <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ Die Enumeration, der den zulässigen Werten für `AttributeHierarchyOptimizedState` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.OptimizationType>. Die Elemente, die den übergeordneten Elementen von `AttributeHierarchyOptimizedState` im AMO-Objektmodell entsprechen, sind <xref:Microsoft.AnalysisServices.CubeAttribute> und <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

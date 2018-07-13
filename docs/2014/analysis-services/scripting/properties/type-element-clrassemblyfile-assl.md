@@ -1,5 +1,5 @@
 ---
-title: Geben Sie-Element (ClrAssemblyFile) (ASSL) | Microsoft Docs
+title: Type-Element (ClrAssemblyFile) (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: ab9e1e2c-ab06-4cd1-b007-16d738dc5604
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c253b2975c5e4f4cbf27c5b2d655a09617d644de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 02a32dffab7d0274b98a5dcae3099703446b184b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046758"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218020"
 ---
 # <a name="type-element-clrassemblyfile-assl"></a>Type-Element (ClrAssemblyFile) (ASSL)
   Gibt den Dateityp von einer der Dateien, die zu gehören eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework-Assembly.  
@@ -58,7 +58,7 @@ ms.locfileid: "36046758"
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnetes Element|[ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md)|  
+|Übergeordnetes Element|[Clrassemblyfile-Objekts](../data-type/clrassemblyfile-data-type-assl.md)|  
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -72,10 +72,10 @@ ms.locfileid: "36046758"
   
  Die Enumeration, die den zulässigen Werten für entspricht `Type` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ClrAssemblyFileType>.  
   
- Das Element, das das übergeordnete Element des entspricht `Type` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
+ Das Element, das dem übergeordneten entspricht `Type` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datei Element &#40;ASSL&#41;](../objects/file-element-assl.md)   
+ [File Element &#40;ASSL&#41;](../objects/file-element-assl.md)   
  [Dateien Element &#40;ASSL&#41;](../collections/files-element-assl.md)   
  [ClrAssembly-Datentyp &#40;ASSL&#41;](../data-type/assembly-data-type-assl.md)   
  [Assembly-Element &#40;ASSL&#41;](../objects/assembly-element-assl.md)   

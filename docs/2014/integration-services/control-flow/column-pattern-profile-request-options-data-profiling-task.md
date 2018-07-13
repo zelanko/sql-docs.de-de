@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 690fcb3380d5ceb3a996ca3f77c926bf16dee9a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96287b68f0d6610beab336bdb3ad3477e5d6ef66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36046262"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178327"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Optionen für die Anforderung für Spaltenmusterprofil (Datenprofilerstellungs-Task)
   Verwenden Sie den Bereich **Anforderungseigenschaften** der Seite **Profilanforderungen** , um die Optionen für die im Anforderungsbereich ausgewählte **Anforderung für Spaltenmusterprofil** festzulegen. Ein Spaltenmusterprofil meldet einen Satz von regulären Ausdrücken, die den angegebenen Prozentsatz der Werte in einer Zeichenfolgenspalte abdecken. Mit diesem Profil können Sie Probleme in Ihren Daten, wie z. B. ungültige Zeichenfolgen, ermitteln und reguläre Ausdrücke vorschlagen, die in Zukunft zum Überprüfen neuer Werte verwendet werden können. Beispiel: Ein Musterprofil einer Spalte mit US-Postleitzahlen kann die regulären Ausdrücke \d{5}-\d{4}, \d{5} und \d{9} erstellen. Wenn Sie andere reguläre Ausdrücke erhalten, enthalten Ihre Daten wahrscheinlich ungültige oder falsch formatierte Werte.  
@@ -36,14 +36,14 @@ ms.locfileid: "36046262"
   
 -   **Trennzeichen** Standardmäßig enthält die Liste der Trennzeichen die folgenden Zeichen: Leerzeichen, horizontaler Tabstopp (\t), Neue-Zeile-Zeichen (\n) und Wagenrücklauf (\r). Sie können zusätzliche Trennzeichen angeben, Sie können die Standardtrennzeichen jedoch nicht entfernen.  
   
--   **Symbole** wird standardmäßig die Liste der **Symbole** enthält die folgenden Zeichen: `,.;:-"'`~ = & / @! [] ()-<>{}| #* ^ %`. For example, if the symbols are "`()-"", der Wert "(425) 123-4567" Token ["(", "425",")", "123", "-", "4567",")"].  
+-   **Symbole** standardmäßig die Liste der **Symbole** enthält die folgenden Zeichen: `,.;:-"'`~ = & / @!? [] ()-<>{}| #* ^ %`. For example, if the symbols are "`()-"", der Wert "(425) 123-4567" mit dem Token ["(", "425",")", "123", "-", "4567",")"].  
   
  Ein Zeichen kann nicht zugleich ein Trennzeichen und ein Symbol sein.  
   
  Alle Trennzeichen werden im Rahmen des Prozesses zur Tokenerstellung in ein Leerzeichen normalisiert, während Symbole beibehalten werden.  
   
 ## <a name="understanding-the-use-of-the-tag-table"></a>Grundlegendes zur Verwendung der Tagtabelle  
- Sie können zusammengehörige Token optional mit einem Tag gruppieren. Dazu speichern Sie Tags und die zugehörigen Ausdrücke in einer speziellen Tabelle, die Sie in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank erstellen. Die Tagtabelle muss zwei Zeichenfolgenspalten aufweisen, eine mit der Bezeichnung "Tag" und eine weitere mit der Bezeichnung "Begriff". Diese Spalten können vom Typ werden `char`, `nchar`, `varchar`, oder `nvarchar`, aber nicht `text` oder `ntext`. Sie können mehrere Tags und die entsprechenden Ausdrücke in einer einzelnen Tabelle kombinieren. Eine Anforderung für Spaltenmusterprofil kann nur eine Tagtabelle verwenden. Sie können einen separaten [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager verwenden, um eine Verbindung zur Tagtabelle herzustellen. Daher kann sich die Tagtabelle in einer anderen Datenbank oder auf einem anderen Server befinden als die Quelldaten.  
+ Sie können zusammengehörige Token optional mit einem Tag gruppieren. Dazu speichern Sie Tags und die zugehörigen Ausdrücke in einer speziellen Tabelle, die Sie in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank erstellen. Die Tagtabelle muss zwei Zeichenfolgenspalten aufweisen, eine mit der Bezeichnung "Tag" und eine weitere mit der Bezeichnung "Begriff". Diese Spalten von Typ sein `char`, `nchar`, `varchar`, oder `nvarchar`, aber nicht `text` oder `ntext`. Sie können mehrere Tags und die entsprechenden Ausdrücke in einer einzelnen Tabelle kombinieren. Eine Anforderung für Spaltenmusterprofil kann nur eine Tagtabelle verwenden. Sie können einen separaten [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager verwenden, um eine Verbindung zur Tagtabelle herzustellen. Daher kann sich die Tagtabelle in einer anderen Datenbank oder auf einem anderen Server befinden als die Quelldaten.  
   
  Sie können z. B. die Werte "Ost", "West", "Nord" und "Süd", die in Straßennamen angezeigt werden können, mit dem Tag "Richtung" gruppieren. Die folgende Tabelle ist ein Beispiel für eine Tagtabelle.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "36046262"
  Weitere Informationen finden Sie unter "Grundlegendes zur Verwendung von Trennzeichen und Symbolen" in diesem Thema.  
   
  **Symbols**  
- Führen Sie die Symbole auf, die als Teil von Mustern beibehalten werden sollen. Beispiele könnten "/" für Datumsangaben, ":" für Uhrzeiten und " @ " für E-Mail-Adressen enthalten. Standardmäßig wird die Liste der **Symbole** enthält die folgenden Zeichen: `,.;:-"'`~ = & / @! [] ()-<>{}| #* ^ %'.  
+ Führen Sie die Symbole auf, die als Teil von Mustern beibehalten werden sollen. Beispiele könnten "/" für Datumsangaben, ":" für Uhrzeiten und " @ " für E-Mail-Adressen enthalten. Standardmäßig wird die Liste der **Symbole** enthält die folgenden Zeichen: `,.;:-"'`~ = & / @!? [] ()-<>{}| #* ^ %'.  
   
  Weitere Informationen finden Sie unter "Grundlegendes zur Verwendung von Trennzeichen und Symbolen" in diesem Thema.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "36046262"
  Weitere Informationen finden Sie unter "Grundlegendes zur Verwendung der Tagtabelle" in diesem Thema.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenprofilerstellungs-Task-Editor &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Der Datenprofilerstellungs-Task-Editor &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)   
  [Schnellprofilformular für eine einzelne Tabelle &#40;Datenprofilerstellungs-Task&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Optionen (Umgebung: Schriftarten und Farben, Seite ") | Microsoft Docs'
+title: 'Optionen (Umgebung: Schriftarten und Farben-Seite) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.Fonts_And_Colors
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fb667cb31bdb718044b2c4298dcc8c174f3c0c19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9a88ae6c8205ea8267ca044f6dc978a725931f59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36047747"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200780"
 ---
-# <a name="options-environment-fonts-and-colors-page"></a>Optionen (Umgebung: Schriftarten und Farben Seite)
+# <a name="options-environment-fonts-and-colors-page"></a>Optionen (Umgebung: Schriftarten und Farben-Seite)
   Im Dialogfeld **Optionen** können Sie ein benutzerdefiniertes Schriftart- und Farbschema für verschiedene Elemente der Benutzeroberfläche in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] erstellen. Klicken Sie im Menü **Extras** auf **Optionen** , erweitern Sie den Ordner **Umgebung** , und klicken Sie anschließend auf **Schriftarten und Farben**.  
   
  Änderungen am Farbschema werden nicht in der Sitzung wirksam, in der Sie sie vornehmen. Sie können Farbänderungen auswerten, indem Sie eine andere Instanz von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] öffnen und die Bedingungen erstellen, unter denen Sie die Anwendung Ihrer Änderungen erwarten.  
@@ -35,7 +35,7 @@ ms.locfileid: "36047747"
 |Begriff|Definition|  
 |----------|----------------|  
 |Text-Editor|Änderungen an den Anzeigeeinstellungen für Schriftart, Größe und Farbe für den Text-Editor wirken sich auf die Darstellung von Text in Ihrem Standard-Text-Editor aus. In einem Text-Editor außerhalb von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] geöffnete Dokumente sind von diesen Einstellungen nicht betroffen.|  
-|Drucker|Änderungen an den Anzeigeeinstellungen für Schriftart, Größe und Farbe für den Drucker wirken sich auf die Darstellung von Text in gedruckten Dokumenten aus.<br /><br /> Tipp: Bei Bedarf können Sie eine andere Standardschriftart für den Druck als die für die Anzeige im Text-Editor auswählen. Das kann sehr hilfreich sein, wenn Sie Code ausdrucken, der Ein-Byte- und Doppelbyte-Zeichen enthält.|  
+|Drucker|Änderungen an den Anzeigeeinstellungen für Schriftart, Größe und Farbe für den Drucker wirken sich auf die Darstellung von Text in gedruckten Dokumenten aus.<br /><br /> Tipp: Bei Bedarf können Sie eine andere Standardschriftart für den Druck als für die Anzeige im Text-Editor auswählen. Das kann sehr hilfreich sein, wenn Sie Code ausdrucken, der Ein-Byte- und Doppelbyte-Zeichen enthält.|  
 |[Alle Texttoolfenster **]**|Änderungen an den Anzeigeeinstellungen für Schriftart, Größe und Farbe für dieses Element wirken sich auf die Darstellung von Text in Toolfenstern aus, die in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]über Ausgabebereiche verfügen. Zum Beispiel Ausgabefenster, TextResults-Fenster usw.<br /><br /> Hinweis: Änderungen am Text von [Alle Texttoolfenster]-Elementen werden nicht in der Sitzung wirksam, in der Sie sie vornehmen. Solche Änderungen können Sie auswerten, indem Sie eine andere Instanz von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]öffnen.|  
 |Fenster "Suchergebnisse"|Änderungen an den Anzeigeeinstellungen für Schriftart, Größe und Farbe für dieses Element wirken sich auf die Darstellung von Text im Fenster „Suchergebnisse“ (FindResults) aus.|  
 |Ausgabefenster|Änderungen an den Anzeigeeinstellungen für Schriftart, Größe und Farbe für dieses Element wirken sich auf die Darstellung von Text im Ausgabefenster aus.|  
@@ -88,6 +88,6 @@ ms.locfileid: "36047747"
   
 ## <a name="see-also"></a>Siehe auch  
  [Farbcodierung im Abfrage-Editor](../../relational-databases/scripting/color-coding-in-query-editors.md)   
- [Optionen &#40;Text-Editor: Registerkarte "Editor" und Statusleiste&#41;](../../database-engine/options-text-editor-editor-tab-and-status-bar-page.md)  
+ [Optionen &#40;Text-Editor: Registerkarte ' Editor ' und Statusleiste&#41;](../../database-engine/options-text-editor-editor-tab-and-status-bar-page.md)  
   
   
