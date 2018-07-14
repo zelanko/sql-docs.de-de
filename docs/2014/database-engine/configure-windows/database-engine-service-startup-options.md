@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - single-user mode [SQL Server], startup option
 - overriding default startup options
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - starting SQL Server, options
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 caps.latest.revision: 75
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 66aa5a32ddc527ccde99fcf990eb73046123d65f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 373f9493ac9effd62bb0c7178fca09289f70b4bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159836"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219830"
 ---
 # <a name="database-engine-service-startup-options"></a>Startoptionen für den Datenbank-Engine-Dienst
   Startoptionen legen bestimmte während des Starts benötigte Speicherorte fest und legen einige Bedingungen fest, die für den gesamten Server gelten. Die meisten Benutzer müssen keine Startoptionen angeben, es sei denn, Sie führen Fehlerbehebungen für [!INCLUDE[ssDE](../../includes/ssde-md.md)] durch oder es liegt ein ein außergewöhnliches Problem vor, und und Sie werden vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Produktsupport aufgefordert, eine Startoption zu verwenden.  
@@ -76,8 +76,7 @@ ms.locfileid: "36159836"
 ## <a name="related-tasks"></a>Related Tasks  
  [Konfigurieren der Serverkonfigurationsoption Startprozeduren suchen](configure-the-scan-for-startup-procs-server-configuration-option.md)  
   
- 
-  [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](start-stop-pause-resume-restart-sql-server-services.md)  
+ [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](start-stop-pause-resume-restart-sql-server-services.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [CHECKPOINT &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/checkpoint-transact-sql)   

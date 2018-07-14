@@ -1,5 +1,5 @@
 ---
-title: TargetType-Element (ASSL) | Microsoft Docs
+title: TargetType-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - TargetType element
 ms.assetid: 2c69ea6e-2af7-435b-9841-86117d5554a7
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e4a36c4ca0e38fe00990f2185685205840eafc66
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0b21033bb9a7e20923adccfa135475cf93dafb7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150658"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237560"
 ---
 # <a name="targettype-element-assl"></a>TargetType-Element (ASSL)
-  Identifiziert den Elementtyp des Elements identifiziert, der [Ziel](target-element-assl.md) Element.  
+  Kennzeichnet den Elementtyp des Elements, der der [Ziel](target-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36150658"
 |-----------|-----------------|  
 |*Cube*|Das Ziel der Aktion ist ein Cube.|  
 |*Zellen*|Das Ziel der Aktion ist ein Teilcube.|  
-|*Festlegen*|Das Ziel der Aktion ist eine Menge.|  
+|*Legen Sie*|Das Ziel der Aktion ist eine Menge.|  
 |*Hierarchy*|Das Ziel der Aktion ist eine Hierarchie.|  
 |*Level*|Das Ziel der Aktion ist eine Ebene.|  
 |*DimensionMembers*|Das Ziel der Aktion sind die Elemente einer Dimension.|  
@@ -78,7 +78,7 @@ ms.locfileid: "36150658"
   
  Die Enumeration, die den zulässigen Werten für entspricht `TargetType` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ActionTargetType>.  
   
- Das Element, das das übergeordnete Element des entspricht `TargetType` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Action>.  
+ Das Element, das dem übergeordneten entspricht `TargetType` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Action>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: Von Analysis Services Unterstützte Authentifizierungsmethoden | Microsoft Docs
+title: Von Analysis Services Unterstützte Authentifizierungsmethoden | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b7aee903-d33a-4c20-86c2-aa013a50949f
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 90837dc0aa815ab56d4f0f8f4b02bf277cd97bb7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 248d5431a4f6015b03d5b2f99cec2e1a037d00c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150910"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265726"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Von Analysis Services unterstützte Authentifizierungsmethoden
   Verbindungen zwischen einer Clientanwendung und einer Analysis Services-Instanz erfordern die (integrierte) Windows-Authentifizierung. Sie können eine Windows-Benutzeridentität mithilfe einer der folgenden Methoden angeben:  

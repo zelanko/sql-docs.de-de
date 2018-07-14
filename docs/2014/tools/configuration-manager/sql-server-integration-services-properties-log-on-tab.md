@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c0eb1b87-6bb0-475e-8492-0fd3c3f910ea
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2d46a9e86aaa261f32a0aab2c49891d8fc195a4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: be255c0d05d622473ac04b106ffe9eac5881425f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161258"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216710"
 ---
 # <a name="sql-server-integration-services-properties-log-on-tab"></a>Eigenschaften von SQL Server Integration Services (Registerkarte Anmelden)
   Verwenden Sie im Dialogfeld **Eigenschaften** [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **Anmelden** , um das vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst verwendete Konto anzugeben und den Dienst zu starten und zu beenden.  

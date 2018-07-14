@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.advancededitor.columnmappings.f1
 - sql12.dts.designer.advancededitor.inputcolumns.f1
@@ -19,13 +19,13 @@ ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e9549fcb2363fcdd132de2136a9b6edeccef1085
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9be2c9e5b3d3243b9e0a3f0fd68eba30c915c696
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150947"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328150"
 ---
 # <a name="advanced-editor"></a>Erweiterter Editor
   Verwenden Sie das Dialogfeld **Erweiterter Editor** , um Eigenschaften für das ausgewählte [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Objekt zu konfigurieren.  

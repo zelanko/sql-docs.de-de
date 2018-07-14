@@ -1,5 +1,5 @@
 ---
-title: AccountType-Element (ASSL) | Microsoft Docs
+title: AccountType-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AccountType element
 ms.assetid: 4fdf17d3-cd84-4bf6-9baf-21e15d4bf71e
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ff7203d2882689b21a6ab3171880c26a8d385f7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6b79eec0531cf2ab9451a93df2e5f1bf0eb2adf0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150448"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243430"
 ---
 # <a name="accounttype-element-assl"></a>AccountType-Element (ASSL)
   Enthält den Namen des definierten Kontotyps ein [Datenbank](../objects/database-element-assl.md) Element.  
@@ -68,16 +68,16 @@ ms.locfileid: "36150448"
 |-----------|-----------------|  
 |*Einkommen*|Das Konto ist ein Einnahmenkonto.|  
 |*Ausgaben*|Das Konto ist ein Ausgabenkonto.|  
-|*Datenfluss*|Das Konto ist ein Cashflowkonto.|  
+|*Flow*|Das Konto ist ein Cashflowkonto.|  
 |*Lastenausgleich*|Das Konto ist ein Bilanzkonto.|  
-|*Anlage*|Das Konto ist ein Bestandskonto.|  
+|*Asset*|Das Konto ist ein Bestandskonto.|  
 |*Haftung*|Das Konto ist ein Passivkonto.|  
 |*Statistische*|Das Konto ist ein statistisches Konto.|  
   
- Die Enumeration, die den zulässigen Werten für die entsprechende `AccountType` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.AccountTypes>.  
+ Die Enumeration, der den zulässigen Werten für `AccountType` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.AccountTypes>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Accounts-Element &#40;ASSL&#41;](../collections/accounts-element-assl.md)   
+ [Konten Element &#40;ASSL&#41;](../collections/accounts-element-assl.md)   
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: LocalDBGetVersionInfo-Funktion | Microsoft Docs
+title: LocalDBGetVersionInfo-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ topic_type:
 - apiref
 ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 03e8e4a07dfed1dc2430f020ad221bfb494eb41f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: dc8b45c449a8bea7ca25e2f75fd0e21432838af1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160432"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186537"
 ---
 # <a name="localdbgetversioninfo-function"></a>LocalDBGetVersionInfo-Funktion
   Gibt Informationen zur angegebenen SQL Server Express-LocalDB-Version zurück, z. B., ob sie vorhanden ist sowie die vollständige LocalDB-Versionsnummer (inklusive Build- und Releasenummer).  
   
- Die Informationen werden zurückgegeben, in Form von einer `struct` mit dem Namen **LocalDBVersionInfo**, dem weist folgende Definition.  
+ Die Informationen werden zurückgegeben, in der Form einer `struct` mit dem Namen **LocalDBVersionInfo**, die weist folgende Definition.  
   
 ```  
 typedef struct _LocalDBVersionInfo  
@@ -90,11 +90,11 @@ HRESULT LocalDBGetVersionInfo(
  Ein unerwarteter Fehler ist aufgetreten. Weitere Informationen finden Sie im Ereignisprotokoll.  
   
 ## <a name="details"></a>Details  
- Der Grund für die Einführung der `struct` -größenargument (*LpVersionInfoSize*) besteht darin, aktivieren die API zurückzugebenden verschiedene Versionen von der **LocalDBVersionInfostruct**effektiv Aktivieren die Aufwärts-und Abwärtskompatibilität.  
+ Der Grund für die Einführung der `struct` -größenargument (*LpVersionInfoSize*) besteht darin, aktivieren die API zum Zurückgeben von verschiedenen Versionen von der **LocalDBVersionInfostruct**effektiv Aktivieren Aufwärts-und Abwärtskompatibilität.  
   
  Wenn die `struct` -größenargument (*LpVersionInfoSize*) entspricht der Größe einer bekannten Version von der **LocalDBVersionInfostruct**, diese Version von der `struct` zurückgegeben wird. Andernfalls wird LOCALDB_ERROR_INVALID_PARAMETER zurückgegeben.  
   
- Ein typisches Beispiel **LocalDBGetVersionInfo** zur Verwendung der API sieht wie folgt aus:  
+ Ein typisches Beispiel **LocalDBGetVersionInfo** API-Verwendung sieht folgendermaßen aus:  
   
 ```  
 LocalDBVersionInfo vi;  

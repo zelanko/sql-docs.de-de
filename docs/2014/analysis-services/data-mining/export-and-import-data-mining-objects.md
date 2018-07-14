@@ -1,5 +1,5 @@
 ---
-title: Exportieren und Importieren von Datamining-Objekte | Microsoft Docs
+title: Exportieren und Importieren von Datamining-Objekten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up databases [Analysis Services]
 - exporting mining models
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - mining models [Analysis Services], migration
 ms.assetid: 10a83b13-2640-4ff5-80c8-a35e1d692908
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9285699bf57637327bc56368a87680f20de81f23
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4145ca6834a27b1159a0d2311f620085491343cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161438"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173601"
 ---
 # <a name="export-and-import-data-mining-objects"></a>Exportieren und Importieren von Data Mining-Objekten
   Zusätzlich zu den in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verfügbaren Funktionen zum Sichern, Wiederherstellen und Migrieren von Lösungen bietet SQL Server Data Mining die Möglichkeit, Data Mining-Strukturen und -Modelle mithilfe von Data Mining-Erweiterungen (Data Mining Extensions, DMX) zügig zwischen verschiedenen Servern zu übertragen.  
   
- Wenn Ihre Datamining-Lösung relationale Daten statt einer multidimensionalen Datenbank verwendet, die Übertragung von Modellen mit `EXPORT` und `IMPORT` ist wesentlich schneller und einfacher als die datenbankwiederherstellung zu verwenden oder eine vollständige Lösung bereitzustellen.  
+ Wenn Ihre Datamining-Projektmappe relationale Daten statt einer multidimensionalen Datenbank verwendet, die Übertragung von Modellen mithilfe von `EXPORT` und `IMPORT` ist wesentlich schneller und einfacher als die datenbankwiederherstellung zu verwenden oder eine vollständige Lösung bereitzustellen.  
   
  Dieser Abschnitt enthält eine Übersicht über die Übertragung von Data Mining-Strukturen und Modellen mithilfe von DMX-Anweisungen. Details zur Syntax sowie Beispiele finden Sie unter [EXPORT &#40;DMX&#41;](/sql/dmx/export-dmx) und [IMPORT &#40;DMX&#41;](/sql/dmx/import-dmx).  
   
@@ -41,17 +41,17 @@ ms.locfileid: "36161438"
 ## <a name="exporting-data-mining-structures"></a>Exportieren von Data Mining-Strukturen  
  Wenn Sie eine Miningstruktur exportieren, exportiert die EXPORT-Anweisung automatisch alle zugeordneten Modelle. Wenn Sie die Objekte kontrollieren möchten, die exportiert werden, müssen Sie jedes Objekt mit Namen angeben.  
   
- Wenn die Miningstruktur dem Standardverhalten beim Exportieren der Miningstruktur entsprechend verarbeitet wurde und die Ergebnisse zwischengespeichert wurden, enthält die Definition eine Zusammenfassung der Daten, auf denen die Struktur basiert. Um diese Zusammenfassung zu entfernen, müssen Sie durch Ausführen von mit der Miningstruktur verknüpften Cache Löschen einer `Process Clear Structure` Vorgang. Weitere Informationen finden Sie unter [Process a Mining Structure](process-a-mining-structure.md).  
+ Wenn die Miningstruktur dem Standardverhalten beim Exportieren der Miningstruktur entsprechend verarbeitet wurde und die Ergebnisse zwischengespeichert wurden, enthält die Definition eine Zusammenfassung der Daten, auf denen die Struktur basiert. Um diese Zusammenfassung zu entfernen, müssen Sie löschen, den Cache der Miningstruktur zugeordnet sind, durch Ausführen einer `Process Clear Structure` Vorgang. Weitere Informationen finden Sie unter [Process a Mining Structure](process-a-mining-structure.md).  
   
 ### <a name="exporting-data-mining-models"></a>Exportieren von Data Mining-Modellen  
- Sie können die `WITH DEPENDENCIES` -Schlüsselwort können Sie die Datenquelle und die datenquellensichtdefinition zusammen mit dem Miningmodell und seiner Struktur exportieren.  
+ Sie können die `WITH DEPENDENCIES` Schlüsselwort, um die Datenquelle und die datenquellensichtdefinition zusammen mit dem Miningmodell und seiner Struktur exportieren.  
   
  Wenn Sie ein Miningmodell exportieren, ohne seine Abhängigkeiten zu exportieren, exportiert die EXPORT-Anweisung zwar die Definition des Miningmodells und der zugehörigen Miningstruktur, jedoch nicht die Definition der Datenquellen. Nach dem Importieren können Sie das Modell daher sofort durchsuchen. Wenn Sie das Miningmodell auf dem Zielserver jedoch erneut verarbeiten oder Abfragen für die zugrunde liegenden Daten ausführen möchten, müssen Sie eine entsprechende Datenquelle auf dem Zielserver erstellen.  
   
 ## <a name="importing-data-mining-structures-and-models"></a>Importieren von Data Mining-Strukturen und -Modellen  
  Beim Importieren eines Data Mining-Objekts wird das Objekt auf den Server und in die Datenbank importiert, mit dem bzw. der Sie beim Ausführen der IMPORT-Anweisung verbunden sind. Wenn die Importdatei eine Datenbank enthält, die auf dem Server nicht vorhanden ist, wird die Datenbank erstellt.  
   
- Sie können eine Miningstruktur oder Miningmodell auch importieren, mit der `Restore` Befehl. Die Modelle oder Strukturen werden in der Datenbank wiederhergestellt, die den gleichen Namen trägt, wie die Datenbank, aus der sie exportiert wurden. Weitere Informationen finden Sie unter [Restore Options](../multidimensional-models/restore-options.md).  
+ Sie können eine Miningstruktur oder Miningmodell auch mithilfe von importieren die `Restore` Befehl. Die Modelle oder Strukturen werden in der Datenbank wiederhergestellt, die den gleichen Namen trägt, wie die Datenbank, aus der sie exportiert wurden. Weitere Informationen finden Sie unter [Restore Options](../multidimensional-models/restore-options.md).  
   
 ## <a name="remarks"></a>Hinweise  
  Sie können ein Modell oder eine Struktur nicht auf einen Server importieren, wenn bereits ein Modell oder eine Struktur mit dem gleichen Namen vorhanden ist. Sie können auch kein Data Mining-Objekt exportieren und anschließend den Namen dieses Objekts in der Exportdatei ändern. Wenn Namenskonflikte zu erwarten sind, sollten Sie daher entweder das Data Mining-Objekt auf dem Zielserver löschen oder das Data Mining-Objekt umbenennen, bevor Sie die Definition exportieren.  

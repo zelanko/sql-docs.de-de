@@ -1,5 +1,5 @@
 ---
-title: Modell Durchsuchen einer Entscheidungs Strukturen | Microsoft Docs
+title: Durchsuchen eine Entscheidung Trees-Modell | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
 - mining models, viewing
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - dependency network
 ms.assetid: 6b3dd1ae-caff-41c3-817b-802dc020ff88
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c95552e6d6cad3fc7574a8a74551d936cf9aa721
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 077a392ff2374c89c5056e71c24fc6969b742a18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151710"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255092"
 ---
 # <a name="browsing-a-decision-trees-model"></a>Durchsuchen eines Entscheidungsstrukturmodells
   Beim Öffnen ein klassifizierungsmodell mit **Durchsuchen**, das Modell wird angezeigt, in einem interaktiven Entscheidungsstruktur-Viewer, ähnlich wie die [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees-Viewer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Im Viewer werden die Ergebnisse der Klassifizierung als Diagramm angezeigt. Darin sind die Kriterien hervorgehoben, die verschiedene Datengruppen voneinander unterscheiden. Sie können auch einen Drilldown auf einzelne Teilmengen der Struktur ausführen und die zugrunde liegenden Daten abrufen.  
   
-##  <a name="bkmk_Top"></a> Untersuchen des Modells  
- Modelle, die auf dem Decision Trees-Algorithmus basieren, verfügen über eine große Menge aufschlussreicher Informationen, die Sie untersuchen können. Die **Durchsuchen** Fenster enthält die folgenden Registerkarten und Bereiche können Sie Muster erkennen und Vorhersage grafisch darstellen:  
+##  <a name="bkmk_Top"></a> Durchsuchen des Modells  
+ Modelle, die auf dem Decision Trees-Algorithmus basieren, verfügen über eine große Menge aufschlussreicher Informationen, die Sie untersuchen können. Die **Durchsuchen** Fenster enthält die folgenden Registerkarten und Bereiche können Sie Muster erkennen und Vorhersageergebnisse, die Verwendung des Diagramms:  
   
 -   [Entscheidungsstruktur](#BKMK_DecisionTree)  
   
@@ -45,15 +45,15 @@ ms.locfileid: "36151710"
   
  Das Entscheidungsstrukturdiagramm kann wie folgt von links nach rechts ausgewertet werden:  
   
--   Die Rechtecke, die als bezeichnet werden *Knoten*, enthalten Teilmengen der Daten. Die Beschriftung des Knotens gibt die Unterscheidungsmerkmale dieser Teilmenge an.  
+-   Die Rechtecke, die als bezeichnet *Knoten*, enthalten Teilmengen der Daten. Die Beschriftung des Knotens gibt die Unterscheidungsmerkmale dieser Teilmenge an.  
   
--   Die äußerst linke Knoten mit der Bezeichnung **alle**, stellt das vollständige DataSet dar. Alle nachfolgenden Knoten stellen Teilmengen der Daten dar.  
+-   Der äußerst linke Knoten, die mit der Bezeichnung **alle**, stellt das vollständige DataSet. Alle nachfolgenden Knoten stellen Teilmengen der Daten dar.  
   
--   Eine Entscheidungsstruktur enthält viele *teilt*, oder stellen, in dem die Daten in mehrere Gruppen auf Grundlage von Attributen gewissen Grad.  
+-   Eine Entscheidungsstruktur enthält viele *teilt*, oder stellen Sie die Daten, in dem abweicht, in mehrere Gruppen auf Grundlage von Attributen.  
   
      In der ersten Unterteilung des Beispielmodells ist das Dataset beispielsweise in drei Altersgruppen unterteilt.  
   
--   Die Teilung unmittelbar nach der **alle** Knoten ist am wichtigsten, da die hauptbedingung angezeigt, die dieses Dataset unterteilt.  
+-   Die Aufteilung unmittelbar nach der **alle** Knoten ist am wichtigsten, da es sich um die hauptbedingung angezeigt, die dieses Dataset unterteilt.  
   
      Weitere Unterteilungen befinden sich rechts davon. Durch die Analyse der verschiedenen Struktursegmente können Sie verstehen, welche Attribute den größten Einfluss auf das Kaufverhalten haben.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36151710"
   
 ##### <a name="explore-the-decision-tree"></a>Untersuchen der Entscheidungsstruktur  
   
-1.  Klicken Sie auf die **alle** Knoten, und suchen Sie nach der **Mininglegende**.  
+1.  Klicken Sie auf die **alle** Knoten, und sehen Sie sich die **Mininglegende**.  
   
      Darin finden Sie die genaue Anzahl der Fälle im Trainingsdataset sowie eine Aufschlüsselung der Ergebnisse.  
   
@@ -71,39 +71,39 @@ ms.locfileid: "36151710"
   
 2.  Klicken Sie auf das Plus- oder Minuszeichen neben den einzelnen Knoten, um die Struktur zu erweitern oder zu reduzieren.  
   
-     Sie können auch die **Ebene anzeigen** Schieberegler zum Erweitern oder Verkleinern der Struktur.  
+     Sie können auch die **Ebene anzeigen** Schieberegler zum Erweitern oder verkleinern die Struktur.  
   
 3.  Ist Ihnen aufgefallen, dass einige Knoten dunkler sind als andere?  
   
-     Standardmäßig **Auffüllung** dient als schattierungsvariable, was bedeutet, dass die Intensität der Farbe angezeigt werden, welche Knoten die größte Unterstützung verfügen.  
+     In der Standardeinstellung **Auffüllung** dient als schattierungsvariable, was bedeutet, dass die Intensität der Farbe zeigt, welche Knoten die größte Unterstützung verfügen.  
   
      Der äußerst linke Knoten, der das gesamte Dataset enthält, weist demnach die höchste Farbintensität auf.  
   
-4.  Ändern Sie den Wert für **Hintergrund** aus **allen Fällen** auf **Ja**.  
+4.  Ändern Sie den Wert für **Hintergrund** aus **allen Fällen** zu **Ja**.  
   
-     ![veränderliche entscheidungsstrukturdiagramm zum Hervorheben der Käufer](media/dm13-dectreeshadedbuyer.gif "Ändern des entscheidungsstrukturdiagramms zum Hervorheben der Käufer")  
+     ![Ändern der entscheidungsstrukturdiagramm zum Hervorheben der Käufer](media/dm13-dectreeshadedbuyer.gif "Ändern des entscheidungsstrukturdiagramms zum Hervorheben der Käufer")  
   
 5.  Jetzt erkennen Sie an der Intensität der Farbe, wie viele Kunden in jedem Knoten ein Fahrrad gekauft haben, also genau das Verhalten, das Sie untersuchen möchten.  
   
-     Achten Sie auch auf die Farbbalken innerhalb jedes Knotens. Dies ist ein Histogramm, das die Verteilung von Ergebnissen innerhalb dieser Teilmenge von Daten anzeigt. Der farbige Balken zeigt z. B. in der Beispiel-Bike Buyer-Entscheidungsstruktur den Anteil der Kunden, die Fahrräder (Ja-Werte) im Vergleich zu den gekauft haben, die nicht der Fall war (keine Werte). Um die genauen Werte abzurufen, können Sie auf die Knoten klicken und Anzeigen der **Mininglegende**.  
+     Achten Sie auch auf die Farbbalken innerhalb jedes Knotens. Dies ist ein Histogramm, das die Verteilung von Ergebnissen innerhalb dieser Teilmenge von Daten anzeigt. Die farbige Leiste zeigt z. B. in der Beispiel-Bike Buyer-Entscheidungsstruktur den Anteil der Kunden, die Fahrräder (Werte "Ja") im Vergleich zu den gekauft haben, die nicht der Fall (keine Werte). Um die genauen Werte zu erhalten, Sie können klicken Sie auf den Knoten und zeigen die **Mininglegende**.  
   
 6.  Bei der Auswertung des Diagramms erkennen Sie, wie sich jede einzelne Teilmenge von Daten in kleinere Gruppen aufgliedert und welche Attribute am hilfreichsten sind, um ein Ergebnis vorherzusagen.  
   
      Allein die Intensität der Schattierung deutet bereits auf einige interessante Gruppierungen hin, die Sie anhand detaillierterer Daten vergleichen können. Diese Gruppen zeichnen sich durch eine relativ hohe Wahrscheinlichkeit aus, in Zukunft ein Fahrrad zu kaufen:  
   
-    -   Age > = 32 und \< 53 und Yearly Income > = 26000 und Kinder = 0  
+    -   Age > = 32 und \< 53 und jährlichen Einkommen > = 26000 und Kinder = 0  
   
          Fälle gesamt: 1150  
   
          Wahrscheinlichkeit eines fahrradkaufs: 18 %  
   
-    -   Age > = 32 und \< 53 und Yearly Income > = 26000 und Kinder nicht = 0 und Familienstand = "Single"  
+    -   Age > = 32 und \< 53 und jährlichen Einkommen > = 26000 und Kinder nicht = 0 und Familienstand = "Single"  
   
          Fälle gesamt: 402  
   
          Wahrscheinlichkeit eines Fahrradkaufs: 16 %  
   
-7.  Ändern Sie den Wert für **Hintergrund** aus **Ja** auf **keine** und beobachten Sie, wie das Diagramm ändert.  
+7.  Ändern Sie den Wert für **Hintergrund** aus **Ja** zu **keine** und festzustellen, wie das Diagramm ändert.  
   
      ![Abhängigkeitsnetzwerkdiagramm für ein Zuordnungsmodell](media/dm13-dec-tree-background-no.gif "abhängigkeitsnetzwerkdiagramm für ein Zuordnungsmodell")  
   
@@ -113,15 +113,15 @@ ms.locfileid: "36151710"
   
 -   Das Beispieldatenmodell enthält nur das vorhersagbare Ergebnis "Bike Buyer". Stellen Sie sich nun vor, Sie hätten Informationen darüber, ob der Kunde einen Wartungsvertrag abgeschlossen hat und möchten auch dazu eine Vorhersage treffen. In diesem Fall würden sich die Daten in einer separaten Spalte befinden und zwei vorhersagbare Attribute aus dem Modell enthalten.  
   
-     Klicken Sie auf die **Histogramm** Option in der oberen linken Ecke des Bereichs Entscheidungsstruktur auf die maximale Anzahl von Status zu ändern, die im Histogramm der Struktur angezeigt werden können. Dies ist sinnvoll, wenn die vorhersagbaren Attribute viele Status haben. Die Status werden von links nach rechts in einem Histogramm in Reihenfolge der Verwendungshäufigkeit angezeigt.  
+     Klicken Sie auf die **Histogramm** Option in der oben links im Bereich Decision Tree so ändern Sie die maximale Anzahl von Zuständen, die im Histogramm der Struktur angezeigt werden können. Dies ist sinnvoll, wenn die vorhersagbaren Attribute viele Status haben. Die Status werden von links nach rechts in einem Histogramm in Reihenfolge der Verwendungshäufigkeit angezeigt.  
   
--   Sie können auch mithilfe der Optionen auf der **Entscheidungsstruktur** Registerkarte ", um zu beeinflussen, wie die Struktur angezeigt wird, durch Vergrößern oder verkleinern oder die Diagrammgröße an das Fenster zu passen.  
+-   Sie können auch mithilfe der Optionen auf der **Entscheidungsstruktur** Tab, um die Auswirkungen auf die durch Vergrößern oder verkleinern, oder die Diagrammgröße an die Fenstergröße anpassen, wie die Struktur angezeigt wird.  
   
 -   Verwenden Sie die Option **Standarderweiterung** , um die Standardzahl der für alle Strukturen im Modell angezeigten Ebenen festzulegen.  
   
 -   Wählen Sie **langen Namen anzeigen** auf den vollständigen Namen des Attributs, einschließlich der Datenquelle anzuzeigen. Kurze Namen und lange Namen sind identisch, solange die Fälle aus derselben Datenquelle wie die Attribute für jeden Fall abgefragt werden.  
   
- [Zurück nach oben](#bkmk_Top)  
+ [Zurück zum Anfang](#bkmk_Top)  
   
 ###  <a name="BKMK_DNetwork"></a> Abhängigkeitsnetzwerk  
  Die **Abhängigkeitsnetzwerk** zeigt die Verbindungen zwischen den Eingabeattributen und den vorhersagbaren Attributen im Modell.  
@@ -140,10 +140,10 @@ ms.locfileid: "36151710"
   
 4.  Die Legende im unteren Bereich des Viewers verknüpft Farbcodes mit dem Abhängigkeitstyp im Diagramm. Wenn Sie einen vorhersagbaren Knoten auswählen, wird dieser z. B. türkis schattiert, und die Knoten, die den ausgewählten Knoten vorhersagen, orange.  
   
- [Zurück nach oben](#bkmk_Top)  
+ [Zurück zum Anfang](#bkmk_Top)  
   
 ### <a name="drill-through-to-underlying-data"></a>Ausführen eines Drillthroughs zu zugrunde liegenden Daten  
- Mehrere Typen von Modellen unterstützen die Möglichkeit, *Drillthrough* aus dem Modell zu den zugrunde liegenden Falldaten. Dies kann sehr hilfreich sein, wenn Sie Kunden aus einem bestimmten Segment kontaktieren oder Daten für weiterführende Analysen extrahieren möchten.  
+ Verschiedener Typen von Modellen unterstützen die Möglichkeit, *Drillthrough* aus dem Modell zu den zugrunde liegenden Falldaten. Dies kann sehr hilfreich sein, wenn Sie Kunden aus einem bestimmten Segment kontaktieren oder Daten für weiterführende Analysen extrahieren möchten.  
   
 ##### <a name="get-case-data"></a>Abrufen von Falldaten  
   

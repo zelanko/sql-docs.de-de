@@ -1,5 +1,5 @@
 ---
-title: Optionen (Text-Editor - Seite Dateierweiterung) | Microsoft Docs
+title: Optionen (Text-Editor – Seite Dateierweiterung) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.File_Extension
 ms.assetid: 6637bf3f-03c8-4552-ae63-d4896307cf4c
 caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 307d7f6fbf3405d0ff84d1c2672c1de2c90bf092
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4fd0abdb6c1bc93d730ccb502d6eb1c2facf891a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161635"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176417"
 ---
 # <a name="options-text-editor---file-extension-page"></a>Optionen (Text-Editor – Seite „Dateierweiterung“)
   Mithilfe des Dialogfelds **Optionen** legen Sie fest, wie alle Dateien mit bestimmten Dateierweiterungen von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] verarbeitet werden. Für jede von Ihnen eingegebene Erweiterung können Sie einen Editor auswählen. Damit wählen Sie aus, in welchem [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]-Editor Dokumente eines bestimmten Typs geöffnet werden. Zum Öffnen der Optionen für die Dateierweiterung klicken Sie im Menü **Extras** auf **Optionen**, erweitern Sie **Text-Editor**, und klicken Sie dann auf **Dateierweiterung**.  
@@ -44,10 +44,10 @@ ms.locfileid: "36161635"
  **Erweiterung**  
  Führt alle Erweiterung auf, für die ein Editor angegeben wurde.  
   
- **Bearbeitungsart**  
+ **Bearbeitungsfunktionen**  
  Führt die für **Erweiterungen** ausgewählten Editoren auf.  
   
- **Zuordnen von Dateien ohne Dateierweiterung zu**  
+ **Dateien ohne Erweiterung zuordnen zu**  
  Gibt an, wie Dateien ohne Dateierweiterung von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] zu verarbeiten sind.  
   
  Dropdownliste für Dateien ohne Dateierweiterung  

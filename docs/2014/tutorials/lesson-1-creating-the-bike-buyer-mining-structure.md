@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 1: Erstellen der Bike Buyer-Miningstruktur | Microsoft Docs'
+title: 'Lektion 1: Erstellen der Bike Buyer-Miningstruktur | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a73ac60b-660f-458a-bd2f-993fbeba7226
 caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 53bacee483c3c36075cefcc789a8262b683e5370
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: e8a4c42548e00ec27831639c7d7a147be3fcca1a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312518"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325320"
 ---
 # <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>Lektion 1: Erstellen der Bike Buyer-Miningstruktur
   In dieser Lektion erstellen Sie eine Miningstruktur, mit der sich vorhersagen lässt, ob ein potenzieller Kunde von [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ein Fahrrad kaufen wird. Wenn Sie nicht mit Miningstrukturen und ihre Rolle beim Datamining vertraut sind, finden Sie unter [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
@@ -29,7 +29,7 @@ ms.locfileid: "36312518"
 ## <a name="create-mining-structure-statement"></a>CREATE MINING STRUCTURE-Anweisung  
  Um eine Miningstruktur zu erstellen, verwenden Sie die [CREATE MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/create-mining-structure-dmx) Anweisung. Der in der Anweisung enthaltene Code umfasst folgende Abschnitte:   
   
--   Benennen der Struktur an.  
+-   Benennen die Struktur.  
   
 -   Definieren der Schlüsselspalte.  
   
@@ -62,7 +62,7 @@ CREATE MINING STRUCTURE [<mining structure name>]
 <key column>,  
 ```  
   
- In der Miningstruktur, die Sie Erstellen der Kunden-ID `CustomerKey`, definiert eine Entität in den Quelldaten.  
+ In der Miningstruktur, die Sie Erstellen der Kunden-ID, `CustomerKey`, definiert eine Entität in den Quelldaten.  
   
  Mit der nächsten Codezeile werden die Miningspalten definiert, die von den Miningmodellen verwendet werden, die der Miningstruktur zugeordnet sind:  
   
@@ -70,7 +70,7 @@ CREATE MINING STRUCTURE [<mining structure name>]
 <mining structure columns>  
 ```  
   
- Können Sie die DISCRETIZE-Funktion in \<Miningstrukturspalten > kontinuierliche Spalten Diskretisieren, mit der folgenden Syntax:  
+ Können Sie die DISCRETIZE-Funktion in \<Miningstrukturspalten > kontinuierliche Spalten Diskretisieren, mithilfe der folgenden Syntax:  
   
  `DISCRETIZE(<method>,<number of buckets>)`  
   
@@ -87,9 +87,9 @@ WITH HOLDOUT (<holdout specifier>)
 ## <a name="lesson-tasks"></a>Lektionsaufgaben  
  Im Rahmen dieser Lektion führen Sie die folgenden Aufgaben aus:  
   
--   Erstellen einer neuen leeren Abfrage an.  
+-   Erstellen einer neuen leeren Abfrage.  
   
--   Ändern Sie die Abfrage aus, um die Miningstruktur erstellen.  
+-   Ändern Sie die Abfrage zum Erstellen der Miningstruktur an.  
   
 -   Führen Sie die Abfrage an.  
   
@@ -100,9 +100,9 @@ WITH HOLDOUT (<holdout specifier>)
   
 1.  Öffnen Sie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-2.  In der **Verbindung mit Server herstellen** im Dialogfeld für **Servertyp**Option **Analysis Services**. In **Servernamen**, Typ `LocalHost`, oder geben Sie den Namen der Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , die Sie in dieser Lektion eine Verbindung herstellen möchten. Klicken Sie auf **Verbinden**.  
+2.  In der **Herstellen einer Verbindung mit Server** im Dialogfeld für **Servertyp**Option **Analysis Services**. In **Servernamen**, Typ `LocalHost`, oder geben Sie den Namen der Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , die Sie für diese Lektion herstellen möchten. Klicken Sie auf **Verbinden**.  
   
-3.  In **Objekt-Explorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX** So öffnen die **-abfrageeditor**und eine neue, leere Abfrage.  
+3.  In **Objekt-Explorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX** zum Öffnen der **Abfrage-Editor**und eine neue, leere Abfrage.  
   
 ## <a name="altering-the-query"></a>Ändern der Abfrage  
  Im nächsten Schritt ändern Sie die oben beschriebene CREATE MINING STRUCTURE-Anweisung und erstellen die Bike Buyer-Miningstruktur.  
@@ -197,16 +197,16 @@ WITH HOLDOUT (<holdout specifier>)
   
 6.  Auf der **Datei** Menü klicken Sie auf **Dmxquery1.DMX speichern**.  
   
-7.  In der **speichern unter** (Dialogfeld), suchen Sie den entsprechenden Ordner, und nennen Sie die Datei `Bike Buyer Structure.dmx`.  
+7.  In der **speichern** Dialogfeld, navigieren Sie zu den entsprechenden Ordner, und nennen Sie die Datei `Bike Buyer Structure.dmx`.  
   
 ## <a name="executing-the-query"></a>Ausführen der Abfrage  
- Im letzten Schritt führen Sie die Abfrage aus. Nachdem eine Abfrage erstellt und gespeichert wurde, muss sie ausgeführt werden. Das bedeutet, die Anweisung muss ausgeführt werden, um auf dem Server eine Miningstruktur zu erstellen. Weitere Informationen zum Ausführen von Abfragen im Abfrage-Editor finden Sie unter [Datenbankmodul-Abfrage-Editor &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md).  
+ Im letzten Schritt führen Sie die Abfrage aus. Nachdem eine Abfrage erstellt und gespeichert wurde, muss sie ausgeführt werden. Das bedeutet, die Anweisung muss ausgeführt werden, um auf dem Server eine Miningstruktur zu erstellen. Weitere Informationen zum Ausführen von Abfragen im Abfrage-Editor finden Sie unter [Datenbank-Engine-Abfrage-Editor &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md).  
   
 #### <a name="to-execute-the-query"></a>So führen Sie die Abfrage aus  
   
-1.  Klicken Sie im Abfrage-Editor auf der Symbolleiste auf **Execute**.  
+1.  Klicken Sie im Abfrage-Editor auf der Symbolleiste **Execute**.  
   
-     Der Status der Abfrage wird angezeigt, der **Nachrichten** Registerkarte am unteren Rand des Abfrage-Editor nach die Anweisung Ausführung abgeschlossen ist. Die Meldung sollte Folgendes anzeigen:  
+     Der Status der Abfrage wird angezeigt, der **Nachrichten** Registerkarte am unteren Rand des Abfrage-Editors nach Abschluss der Ausführung die Anweisung. Die Meldung sollte Folgendes anzeigen:  
   
     ```  
     Executing the query   

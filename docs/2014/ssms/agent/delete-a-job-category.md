@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, categories
 - deleting job category
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - removing job category
 ms.assetid: 47a7640b-20b3-4639-ab37-b6fc73575e6c
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 775627f625c3033b3dde94373d43303c8a3d6260
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f939a713df2fb40f1b56fd0aee5f7b5c5876a4a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160139"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196570"
 ---
 # <a name="delete-a-job-category"></a>Löschen einer Auftragskategorie
   In diesem Thema wird beschrieben, wie Sie eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftragskategorie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] oder SQL Server Management Objects löschen können.  
@@ -91,7 +91,7 @@ ms.locfileid: "36160139"
 ##  <a name="SMO"></a> Verwendung von SQL Server Management Objects  
  **So löschen Sie eine Auftragskategorie**  
   
- Rufen Sie die `JobCategory` Klasse, indem Sie eine Programmiersprache, die Sie, z. B. Visual Basic, Visual c# oder PowerShell auswählen.  
+ Rufen Sie die `JobCategory` Klasse, indem Sie eine Programmiersprache, die Sie, wie z. B. Visual Basic, Visual c# oder PowerShell auswählen.  
   
 
   

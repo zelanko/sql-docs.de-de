@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SP:CacheHit event class
 ms.assetid: 396aa22a-4723-47f5-ae72-7de99d92dd6f
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 34a0a8beba7b9d8f0ac667777ce0d7c0b8587294
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 466caff52f0b715cc5a0d9ee491abc1ae095f9d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160913"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162801"
 ---
 # <a name="spcachehit-event-class"></a>SP:CacheHit (Ereignisklasse)
   Die SP:CacheHit-Ereignisklasse zeigt an, dass sich eine gespeicherte Prozedur im Plancache befindet.  
@@ -38,7 +38,7 @@ ms.locfileid: "36160913"
 |DatabaseName|`nvarchar`|Name der Datenbank, in der die gespeicherte Prozedur ausgeführt wird.|35|ja|  
 |EventClass|`int`|Ereignistyp = 38.|27|nein|  
 |EventSequence|`int`|Die Sequenz eines bestimmten Ereignisses innerhalb der Anforderung.|51|nein|  
-|EventSubClass|`int`|Die Typen der Ereignisunterklasse.<br /><br /> 1=Ausführungskontext-Zugriff: Im Plancache wurde ein freier Ausführungsplan gefunden.<br /><br /> 2=Compplan-Zugriff: Im Plancache wurde ein kompilierter Plan gefunden.|21|ja|  
+|EventSubClass|`int`|Typ der Ereignisunterklasse.<br /><br /> 1=Ausführungskontext-Zugriff: Im Plancache wurde ein freier Ausführungsplan gefunden.<br /><br /> 2=Compplan-Zugriff: Im Plancache wurde ein kompilierter Plan gefunden.|21|ja|  
 |GroupID|`int`|ID der Arbeitsauslastungsgruppe, in der das SQL-Ablaufverfolgungsereignis ausgelöst wird.|66|ja|  
 |HostName|`nvarchar`|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname vom Client bereitgestellt wird. Der Hostname kann mithilfe der HOST_NAME-Funktion bestimmt werden.|8|ja|  
 |IsSystem|`int`|Gibt an, ob das Ereignis bei einem Systemprozess oder einem Benutzerprozess aufgetreten ist. 1 = System, 0 = Benutzer.|60|ja|  

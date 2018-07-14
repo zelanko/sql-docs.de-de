@@ -1,5 +1,5 @@
 ---
-title: Microsoft Neural Network-Algorithmus | Microsoft Docs
+title: Microsoft Neural Network-Algorithmus | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - training neural networks
 - output neurons [Analysis Services]
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fc557e9a063b5f3031d6a817b0bf85325b94e086
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8845e1bee588c8f79046e12015b6a9bed021ba4f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159866"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202050"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus kombiniert jedem mögliche Status des Eingabeattributs mit jedem möglichen Status des vorhersagbaren Attributs und nutzt die Trainingsdaten auf die Berechnung der Wahrscheinlichkeiten. Sie können diese Wahrscheinlichkeiten später für die Klassifizierung oder Regression und für die Vorhersage eines Ergebnisses des vorhergesagten Attributs auf Basis der Eingabeattribute verwenden.  
+  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus jeden mögliche Status des Eingabeattributs mit jedem möglichen Status des vorhersagbaren Attributs kombiniert und nutzt die Trainingsdaten, der Berechnung der Wahrscheinlichkeiten. Sie können diese Wahrscheinlichkeiten später für die Klassifizierung oder Regression und für die Vorhersage eines Ergebnisses des vorhergesagten Attributs auf Basis der Eingabeattribute verwenden.  
   
  Ein Miningmodell, das mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus erstellt wurde, kann mehrere Netzwerke enthalten, abhängig von der Anzahl an Spalten, die für die Eingabe und Vorhersage verwendet wird, und von der Spaltenanzahl, die nur für die Vorhersage verwendet wird. Die Anzahl von Netzwerken in einem einzelnen Miningmodell hängt von der Anzahl der in den Eingabe- und vorhersagbaren Spalten enthaltenen Status, die das Miningmodell verwendet, ab.  
   
@@ -55,13 +55,13 @@ ms.locfileid: "36159866"
 -   Ein beliebiges Vorhersagemodell, das komplexe Beziehungen zwischen vielen Eingaben und relativ wenigen Ausgaben analysiert.  
   
 ## <a name="how-the-algorithm-works"></a>Funktionsweise des Algorithmus  
- Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus erstellt ein Netzwerk, der bis zu drei Ebenen von Neuronen besteht. Zu diesen Ebenen gehört eine Eingabeebene, eine optionale verborgene Ebene und eine Ausgabeebene.  
+ Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus erstellt ein Netzwerk, der bis zu drei Ebenen aus Neuronen besteht. Zu diesen Ebenen gehört eine Eingabeebene, eine optionale verborgene Ebene und eine Ausgabeebene.  
   
  **Eingabeebene:** Eingabeneuronen definieren alle eingabeattributwerte für Datamining-Modell und deren Wahrscheinlichkeiten.  
   
- **Verborgene Ebene:** Hidden Ausgabeneuronen empfangen Eingaben von Eingabeneuronen, und geben Sie die empfangenen Ausgaben zur Ausgabeneuronen. In der verborgenen Ebene werden den verschiedenen Wahrscheinlichkeiten der Eingaben Gewichtungen zugewiesen. Eine Gewichtung beschreibt die Relevanz oder Wichtigkeit einer bestimmten Eingabe zum verborgenen Neuron. Je größer die Gewichtung ist, die einer Eingabe zugewiesen wird, desto wichtiger ist der Wert dieser Eingabe. Gewichtungen können negativ sein, was bedeutet, dass ein bestimmtes Ergebnis durch die Eingabe eher unterdrückt als begünstigt werden kann.  
+ **Verborgene Ebene:** Hidden Ausgabeneuronen empfangen Eingaben von Eingabeneuronen und stellen die empfangenen Ausgaben zur Ausgabeneuronen. In der verborgenen Ebene werden den verschiedenen Wahrscheinlichkeiten der Eingaben Gewichtungen zugewiesen. Eine Gewichtung beschreibt die Relevanz oder Wichtigkeit einer bestimmten Eingabe zum verborgenen Neuron. Je größer die Gewichtung ist, die einer Eingabe zugewiesen wird, desto wichtiger ist der Wert dieser Eingabe. Gewichtungen können negativ sein, was bedeutet, dass ein bestimmtes Ergebnis durch die Eingabe eher unterdrückt als begünstigt werden kann.  
   
- **Ausgabeebene:** Ausgabeneuronen stellen ausgabeattributwerte Datamining-Modells dar.  
+ **Ausgabeebene:** Ausgabeneuronen stellen vorhersagbare Attributwerte für Datamining-Modells dar.  
   
  Eine ausführliche Erklärung dazu, wie die Eingabeebene, die verborgene Ebene und die Ausgabeebene erstellt und eingestuft werden, finden Sie unter [Technische Referenz für den Microsoft Neural Network-Algorithmus](microsoft-neural-network-algorithm-technical-reference.md).  
   
@@ -94,8 +94,8 @@ ms.locfileid: "36159866"
   
 ## <a name="see-also"></a>Siehe auch  
  [Technische Referenz zu Microsoft Neural Network-Algorithmus](microsoft-neural-network-algorithm-technical-reference.md)   
- [Miningmodellinhalt für neuronale Netzwerkmodelle &#40;Analysis Services – Datamining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Neural Network-Abfragebeispiele](neural-network-model-query-examples.md)   
+ [Mingingmodellinhalt von neuronalen Netzwerkmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Abfragebeispiele für neuronale Netzwerke](neural-network-model-query-examples.md)   
  [Microsoft Logistic Regression-Algorithmus](microsoft-logistic-regression-algorithm.md)  
   
   

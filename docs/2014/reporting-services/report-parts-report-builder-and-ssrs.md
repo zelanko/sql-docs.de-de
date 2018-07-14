@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10543"
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 caps.latest.revision: 8
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: fe79b6a9cd0e3c25caa2e3a1bccc67f0ac3e9be5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3fd8f519abce87b224d062cb245365b42d5ffc79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159009"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262076"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Berichtsteile (Berichts-Generator und SSRS)
   Berichtselemente wie Tabellen, Matrizen, Diagramme und Bilder können als *Berichtsteile*veröffentlicht werden. Berichtsteile sind Berichtselemente, die separat auf einem Berichtsserver veröffentlicht wurden und die in anderen Berichten wieder verwendet werden können. Berichtsteile besitzen die Dateierweiterung ".rsc".  
@@ -30,7 +30,7 @@ ms.locfileid: "36159009"
   
  Die Beziehung zwischen dem Berichtsteil, den Sie einem Bericht hinzufügen, und der Instanz des Berichtsteils auf der Website oder dem Server bleibt durch die Verwendung einer eindeutigen ID erhalten. Nachdem Sie einem Bericht Berichtsteile von einer Website oder einem Server hinzugefügt haben, können Sie diese unabhängig vom ursprünglichen Berichtsteil auf der Website oder dem Server ändern. Sie können Updates annehmen, die andere Personen am Berichtsteil auf der Website oder dem Server vorgenommen haben, und den geänderten Berichtsteil auf der Website oder dem Server neu speichern, indem Sie entweder einen neuen Berichtsteil hinzufügen oder die ursprüngliche Datei überschreiben, sofern Sie über entsprechende Berechtigungen dafür verfügen.  
   
- Dank berichtsteilen schnelle Abrufen, finden Sie unter den Videos [Berichts-Generator 3 – Berichtsteile in SQL Server 2008 R2](http://technet.microsoft.com/edge/Video/ff711300) und [wie: Erstellen Wiederverwendbaren Berichtsteilen mit SQL Server Report Builder](http://technet.microsoft.com/sqlserver/ff634166.aspx).  
+ Um schnell mit berichtsteilen beginnen, finden Sie in den Videos [Berichts-Generator 3 – Berichtsteile in SQL Server 2008 R2](http://technet.microsoft.com/edge/Video/ff711300) und [wie: Erstellen Sie Wiederverwendbaren Berichtsteilen mit SQL Server Report Builder](http://technet.microsoft.com/sqlserver/ff634166.aspx).  
   
 ##  <a name="ComponentWorkflow"></a> Lebenszyklus eines Berichtsteils  
  ![rs_Komponentenerstellung](media/rs-componentcreation.gif "rs_ComponentCreation")  
@@ -78,7 +78,7 @@ ms.locfileid: "36159009"
   
  Einige Berichtsteile können auch andere Berichtselemente enthalten. Eine Tabelle kann z. B. ein Diagramm enthalten, während ein Rechteck eine Matrix und ein Diagramm enthalten kann. Wenn Sie ein Berichtselement veröffentlichen, das andere Berichtselemente enthält, werden diese als Einheit gespeichert. Die anderen Berichtselemente werden in den Containerberichtsteil eingebettet gespeichert. Sie können sie weder getrennt voneinander aktualisieren noch die Elemente im Container als separate Berichtsteile speichern.  
   
- Weitere Informationen zum Veröffentlichen von berichtsteilen finden Sie unter [veröffentlichen und Veröffentlichen von Berichtsteilen &#40;Berichts-Generator und SSRS&#41;](report-parts-report-builder-and-ssrs.md).  
+ Weitere Informationen zum Veröffentlichen von berichtsteilen finden Sie unter [veröffentlichen und erneutes Veröffentlichen von Berichtsteilen &#40;Berichts-Generator und SSRS&#41;](report-parts-report-builder-and-ssrs.md).  
   
 ### <a name="modifying-report-part-metadata"></a>Ändern der Metadaten von Berichtsteilen  
  Sie können Berichtsteile mit den Standardeinstellungen an einem Standardspeicherort veröffentlichen oder die einzelnen Berichtsteile an einem anderen Speicherort speichern und die Metadaten (z. B. Titel und Beschreibung) ändern.  
@@ -97,12 +97,12 @@ ms.locfileid: "36159009"
 ### <a name="searching-for-report-parts"></a>Suchen nach Berichtsteilen  
  Im Berichtsteilkatalog können Sie nach Berichtsteilen suchen, die Sie Ihrem Bericht hinzufügen möchten. Sie können die Berichtsteile nach dem gesamten Namen oder einem Teil des Namens, nach der Person, die sie erstellt oder zuletzt geändert hat, nach dem letzten Änderungsdatum, dem Speicherort oder dem Typ des Berichtsteils filtern. Sie konnten z. B. nach allen Diagrammen suchen, die in der vorhergehenden Woche von einem oder mehreren Ihrer Kollegen erstellt wurden.  
   
- Sie können die Suchergebnisse als Miniaturansichten oder in Listenform anzeigen und nach Name, Erstellungs- und Änderungsdatum und dem Ersteller sortieren. Weitere Informationen finden Sie unter [Suchen nach Berichtsteilen und legen Sie einen Standardordner &#40;Berichts-Generator und SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md).  
+ Sie können die Suchergebnisse als Miniaturansichten oder in Listenform anzeigen und nach Name, Erstellungs- und Änderungsdatum und dem Ersteller sortieren. Weitere Informationen finden Sie unter [Suchen nach Berichtsteilen und Festlegen eines Standardordners &#40;Berichts-Generator und SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md).  
   
 ### <a name="what-comes-with-a-report-part"></a>Zugehörige Elemente zu einem Berichtsteil  
  Wenn Sie dem Bericht einen Berichtsteil hinzufügen, werden damit auch alle für die Verarbeitung erforderlichen Elemente hinzugefügt. Beispielsweise ist jedes angezeigte Objekt von einem Dataset (d. h., einer Abfrage und einer Verbindung zu einer Datenquelle) abhängig. Möglicherweise verfügt es auch über einen oder mehrere Parameter. Alle Elemente, von denen es abhängig ist, werden als *Abhängigkeiten*bezeichnet. Diese Elemente und Verweise auf diese Elemente sind im Berichtsteil enthalten, wenn Sie ihn dem Bericht hinzufügen. Das Dataset und die Parameter werden im Berichtsdatenbereich des Berichts aufgeführt.  
   
- Das Dataset für den Berichtsteil kann in den Berichtsteil eingebettet oder ein separates freigegebenes Dataset sein, auf den der Berichtsteil verweist. Wenn es in den Berichtsteil eingebettet ist, können Sie es möglicherweise ändern. Wenn es ein freigegebenes Dataset ist, ist es ein separates Objekt, für das Sie die entsprechenden Berechtigungen benötigen. Weitere Informationen zu freigegebenen und eingebetteten Datasets, finden Sie unter [Daten zu einem Bericht hinzufügen &#40;Berichts-Generator und SSRS&#41;](report-data/report-datasets-ssrs.md).  
+ Das Dataset für den Berichtsteil kann in den Berichtsteil eingebettet oder ein separates freigegebenes Dataset sein, auf den der Berichtsteil verweist. Wenn es in den Berichtsteil eingebettet ist, können Sie es möglicherweise ändern. Wenn es ein freigegebenes Dataset ist, ist es ein separates Objekt, für das Sie die entsprechenden Berechtigungen benötigen. Weitere Informationen zu freigegebenen und eingebetteten Datasets, finden Sie unter [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](report-data/report-datasets-ssrs.md).  
   
 ### <a name="resolving-naming-conflicts"></a>Lösen von Namenskonflikten  
  Wenn Sie einen Berichtsteil hinzufügen, löst Berichts-Generator alle Namenskonflikte. Wenn beispielsweise bereits ein Diagramm1 in Ihrem Bericht vorhanden ist und Sie einen Berichtsteil namens Diagramm1 hinzufügen, benennt Berichts-Generator den neuen Berichtsteil automatisch in Diagramm2 um. Wenn der Bericht bereits ein Dataset1 enthält und Sie einen Berichtsteil hinzufügen, der auf ein anderes Dataset mit dem Namen Dataset1 verweist, benennt Berichts-Generator das neue Dataset in Dataset2 um und aktualisiert die Verweise.  
@@ -149,12 +149,12 @@ ms.locfileid: "36159009"
   
  [Suchen nach Berichtsteilen und Festlegen eines Standardordners &#40;Berichts-Generator und SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
- [Suchen nach Updates oder Deaktivieren von Updates deaktiviert &#40;Berichts-Generator und SSRS&#41;](../../2014/reporting-services/check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)  
+ [Suchen Sie nach Updates oder Deaktivieren von Updates, deaktiviert &#40;Berichts-Generator und SSRS&#41;](../../2014/reporting-services/check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Berichtsteile und Datasets im Berichts-Generator](report-data/report-parts-and-datasets-in-report-builder.md)   
  [Problembehandlung bei Berichtsteilen &#40;Berichts-Generator und SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
- [Verwalten von Berichtsteilen](report-design/managing-report-parts.md)   
+ [Verwaltung von Berichtsteilen](report-design/managing-report-parts.md)   
  [Berichts-Generator 3 – Berichtsteile in SQL Server 2008 R2 (Video)](http://technet.microsoft.com/edge/Video/ff711300)   
  [Gewusst wie: Erstellen Wiederverwendbaren Berichtsteilen mit SQL Server Report Builder (Video)](http://technet.microsoft.com/sqlserver/ff634166.aspx)  
   

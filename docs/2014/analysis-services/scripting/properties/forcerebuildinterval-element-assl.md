@@ -1,5 +1,5 @@
 ---
-title: ForceRebuildInterval-Element (ASSL) | Microsoft Docs
+title: ForceRebuildInterval-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ForceRebuildInterval element
 ms.assetid: d068f92e-4213-471c-a3a4-aec5af4b8ebf
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e3b05eaf87d17c730186dd1b9c7385f3d323ccf4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa11e0fda75e55f5f8d9af5414203c7822cb5eb1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150446"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249050"
 ---
 # <a name="forcerebuildinterval-element-assl"></a>ForceRebuildInterval-Element (ASSL)
   Bestimmt, wie viel Zeit nach dem Verfügbarwerden eines neuen multidimensionalen OLAP-Image (MOLAP) vergehen muss, bevor das MOLAP-Imaging unbedingt beginnt.  
@@ -62,7 +62,7 @@ ms.locfileid: "36150446"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element, das das übergeordnete Element des entspricht `ForceRebuildInterval` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ProactiveCaching>.  
+ Das Element, das dem übergeordneten entspricht `ForceRebuildInterval` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ProactiveCaching>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

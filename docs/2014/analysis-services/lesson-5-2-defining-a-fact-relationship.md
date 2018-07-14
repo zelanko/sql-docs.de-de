@@ -1,5 +1,5 @@
 ---
-title: Definieren einer Faktenbeziehung | Microsoft Docs
+title: Definieren einer Faktenbeziehung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 28beac3f919350de1bf030dd9d4478146c28b2a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f0dbd387f5b98f5547487df7d3fdba9724e10d0f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151690"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330790"
 ---
 # <a name="defining-a-fact-relationship"></a>Definieren einer Faktenbeziehung
   Von Benutzern wird manchmal der Wunsch geäußert, Measures nach Datenelementen dimensionieren zu können, die sich in der Faktentabelle befinden, oder die Faktentabelle nach bestimmten zusätzlichen verknüpften Informationen durchsuchen zu können, beispielsweise Rechnungsnummern oder Auftragsbestätigungsnummern, die mit bestimmten Verkaufsfakten verknüpft sind. Wenn Sie eine Dimension basierend auf einem solchen Faktentabellenelement definieren, wird diese Dimension als *Faktendimension*bezeichnet. Eine Faktendimension wird auch als degenerierte Dimension bezeichnet. Faktendimensionen sind für das Gruppieren verknüpfter Faktentabellenzeilen nützlich, beispielsweise aller Zeilen, die sich auf eine bestimmte Rechnungsnummer beziehen. Obwohl Sie diese Informationen in einer separaten Dimensionstabelle in der relationalen Datenbank speichern können, stellt das Erstellen einer separaten Dimensionstabelle für die Informationen keinen Vorteil dar, weil die Dimensionstabelle genauso schnell wachsen würde wie die Faktentabelle und nur zu doppelt vorhandenen Daten und unnötiger Komplexität führen würde.  
@@ -67,15 +67,15 @@ ms.locfileid: "36151690"
   
 13. Klicken Sie im Menü **Datei** auf **Alle speichern**.  
   
-14. In der **Attribute** Bereich im Dimensions-Designer für die **Internet Sales Order Details** Dimension select **Sales Order Number**, und ändern Sie dann die  **Namen** Eigenschaft im Eigenschaftenfenster an `Item Description.`  
+14. In der **Attribute** Bereich des Dimensions-Designers für die **Internet Sales Order Details** Dimension wählen **Sales Order Number**, und ändern Sie dann die  **Namen** Eigenschaft im Eigenschaftenfenster an `Item Description.`  
   
 15. Klicken Sie in der **NameColumn** -Eigenschaftenzelle auf die Schaltfläche zum Durchsuchen **(…)**. Wählen Sie im Dialogfeld **Namensspalte** den Eintrag **Produkt** in der **Quelltabelle** -Liste aus, wählen Sie **EnglishProductName** für die **Quellspalte**aus, und klicken Sie anschließend auf **OK**.  
   
 16. Fügen Sie das **Sales Order Number** -Attribut zur Dimension hinzu, indem Sie die **SalesOrderNumber** -Spalte aus der **InternetSales** -Tabelle in den Bereich **Datenquellensicht** zum Bereich **Attribute** ziehen.  
   
-17. Ändern der **Namen** -Eigenschaft der neuen **Sales Order Number** -Attribut auf `Order Number`, und ändern Sie die **OrderBy** Eigenschaft **Schlüssel**.  
+17. Ändern der **Namen** -Eigenschaft des neuen **Sales Order Number** Attribut `Order Number`, und ändern Sie die **OrderBy** Eigenschaft, um **Schlüssel**.  
   
-18. In der **Hierarchien** Bereich erstellen eine **Internet Sales Orders** Benutzerhierarchie, die enthält die `Order Number` und **Item Description** Ebenen, in dieser Reihenfolge.  
+18. In der **Hierarchien** Bereich erstellen Sie eine **Internet Sales Orders** Benutzerhierarchie, die enthält die `Order Number` und **Item Description** Ebenen in dieser Reihenfolge.  
   
 19. Wählen Sie im Bereich **Attribute** **Internet Sales Order Details**aus, und überprüfen Sie anschließend den Wert für die **StorageMode** -Eigenschaft im Eigenschaftenfenster.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36151690"
   
      Die folgende Abbildung zeigt die Faktenbeziehungseigenschaften im Dialogfeld **Beziehung definieren** .  
   
-     ![Das Dialogfeld Beziehung definieren](../../2014/tutorials/media/l5-factrelationship-2.gif "Beziehung definieren (Dialogfeld)")  
+     ![Das Dialogfeld Beziehung definieren](../../2014/tutorials/media/l5-factrelationship-2.gif "Dialogfeld Beziehung definieren")  
   
 3.  Klicken Sie auf **Abbrechen**.  
   

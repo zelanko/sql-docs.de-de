@@ -1,5 +1,5 @@
 ---
-title: Benutzerdefinierte Rollupoperatoren in über-und untergeordneten Dimensionen | Microsoft Docs
+title: Benutzerdefinierte Rollupoperatoren in über-und untergeordnete Dimensionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - child rollup operations
 - UnaryOperatorColumn property
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - parent-child dimensions [Analysis Services]
 ms.assetid: a3ddd9fc-5fa3-4227-9322-8c45a5b5c2c3
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ac668355cf3886c904ad8a1757020fac3c10a12d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6dcee2c6cb88e071d55c5cb1a7d6c131c31a5f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151224"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272006"
 ---
 # <a name="custom-rollup-operators-in-parent-child-dimensions"></a>Benutzerdefinierte Rollupoperatoren in über- und untergeordneten Dimensionen
   Mit benutzerdefinierten Rollup-Operatoren können Sie auf einfache Weise steuern, wie Rollups von Elementwerten zu übergeordneten Werten in einer Hierarchie mit über- und untergeordneten Elementen ausgeführt werden. In einer Dimension mit einer Über-/Unterordnungsbeziehung geben Sie eine Spalte mit unären Operatoren an, die einen Rollup für alle nicht berechneten Elemente des übergeordneten Attributs angeben. Der unäre Operator wird immer dann auf die Elemente angewendet, wenn die Werte des übergeordneten Elements ausgewertet werden.  

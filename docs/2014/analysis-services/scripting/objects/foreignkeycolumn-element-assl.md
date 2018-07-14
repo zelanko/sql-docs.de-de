@@ -1,5 +1,5 @@
 ---
-title: ForeignKeyColumn-Element (ASSL) | Microsoft Docs
+title: ForeignKeyColumn-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ForeignKeyColumn element
 ms.assetid: 6c00dcc6-8d5b-4293-8b72-c7a22e298c8d
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb037ad571884c6bd5cbc6936d3072078f2decc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 824589905f1acf1834e971b8a049005ef1465c26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151445"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207880"
 ---
 # <a name="foreignkeycolumn-element-assl"></a>ForeignKeyColumn-Element (ASSL)
   Identifiziert den Join zu einer übergeordneten Tabelle für eine relationale Datenquelle.  
@@ -48,7 +48,7 @@ ms.locfileid: "36151445"
   
 |Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|[DataItem](../data-type/dataitem-data-type-assl.md)|  
+|Datentyp und -länge|[DataItem-Objekt](../data-type/dataitem-data-type-assl.md)|  
 |Standardwert|InclusionThresholdSetting|  
 |Cardinality|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
   
@@ -60,9 +60,9 @@ ms.locfileid: "36151445"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Weitere Informationen zu den `DataItem` Typ, einschließlich einer Tabelle von Analysis Services Scripting Language (ASSL)-Objekten und Eigenschaften von der `DataItem` finden Sie unter [DataItem-Datentyp &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
+ Weitere Informationen zu den `DataItem` Typ, einschließlich einer Tabelle von Analysis Services Scripting Language (ASSL)-Objekten und Eigenschaften der `DataItem` finden Sie unter [DataItem-Datentyp &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
   
- Das Element, das das übergeordnete Element des entspricht, der `ForeignKeyColumns` Auflistung im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.TableMiningStructureColumn>.  
+ Das Element, das dem übergeordneten entspricht, der `ForeignKeyColumns` Auflistung im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.TableMiningStructureColumn>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [TableMiningStructureColumn-Datentyp &#40;ASSL&#41;](../data-type/miningstructurecolumn-data-type-assl.md)   

@@ -1,5 +1,5 @@
 ---
-title: DiscoverResponse-Element (XMLA) | Microsoft Docs
+title: DiscoverResponse-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - DiscoverResponse element
 ms.assetid: 20e10a82-dbd1-4ead-b92d-f84b4b2f10c6
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 6834a0dbd0842cce7a3756ffbeb53be6f9515713
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 61552da233cdcd405fc9d0e07ecc93e186295422
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159636"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180805"
 ---
 # <a name="discoverresponse-element-xmla"></a>DiscoverResponse-Element (XMLA)
-  Enthält die Informationen von einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] als Antwort auf eine [Discover](xml-elements-methods-discover.md) -Methodenaufruf.  
+  Enthält die Informationen von einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] als Reaktion auf eine [Discover](xml-elements-methods-discover.md) Methodenaufruf.  
   
  **Namespace** urn:schemas-microsoft-com:xml-analysis  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36159636"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|InclusionThresholdSetting|  
-|Untergeordnete Elemente|[Rückgabewert](xml-elements-properties/return-element-xmla.md)|  
+|Untergeordnete Elemente|[zurück](xml-elements-properties/return-element-xmla.md)|  
   
 ## <a name="remarks"></a>Hinweise  
  Das `DiscoverResponse`-Element ist das oberste Element innerhalb eines Texts der SOAP-Antwort für die `Discover`-Methode.  

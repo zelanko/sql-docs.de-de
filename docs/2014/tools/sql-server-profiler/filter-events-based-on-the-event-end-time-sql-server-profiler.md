@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - event end times [SQL Server]
 - filters [SQL Server], traces
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - traces [SQL Server], events
 ms.assetid: 74628f9e-2d39-496a-a443-0a3887db223d
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ae6ba13adfd2cd482a8c52383ae220557f0bcc66
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7d319f09716ec35cc0af52414c0f8c76f63a9248
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151482"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241820"
 ---
 # <a name="filter-events-based-on-the-event-end-time-sql-server-profiler"></a>Filtern von Ereignissen anhand der Ereignisendzeit (SQL Server Profiler)
   In diesem Thema wird beschrieben, wie Sie mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Ablaufverfolgungsereignisse basierend auf der Beendigungszeit des Ereignisses filtern.  
@@ -46,7 +46,7 @@ ms.locfileid: "36151482"
   
 5.  Klicken Sie auf der Registerkarte **Ereignisauswahl**auf die **EndTime** Datenspalte, um das Dialogfeld **Filter bearbeiten** zu öffnen. Sie können auch mit der rechten Maustaste auf die Spaltenüberschrift klicken und **Spaltenfilter bearbeiten**auswählen.  
   
-6.  Erweitern Sie **größer als** oder **kleiner als**, und geben Sie einen `datetime`Wert in das Feld, das unterhalb des Vergleichsoperators angezeigt wird.  
+6.  Erweitern Sie **größer als** oder **kleiner als**, und geben Sie einen `datetime`Wert im Feld, das unterhalb des Vergleichsoperators angezeigt wird.  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server Profiler](sql-server-profiler.md)   

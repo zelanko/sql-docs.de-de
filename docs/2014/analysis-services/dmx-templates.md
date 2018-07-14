@@ -1,5 +1,5 @@
 ---
-title: DMX-Vorlagen | Microsoft Docs
+title: DMX-Vorlagen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2a577e52-821d-4bd3-ba35-075a6be285c9
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0f29e0c000477ec705111f433c31370edc0d973
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30a02f00df965362c1c8702403b06df8b0883ead
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160544"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194360"
 ---
 # <a name="dmx-templates"></a>DMX-Vorlagen
   Die Data Mining-Vorlagen ermöglichen Ihnen das schnelle Erstellen komplexer Abfragen. Die allgemeine Syntax für DMX-Abfragen ist zwar umfassend dokumentiert, die Vorlagen erleichtern es Ihnen jedoch, Abfragen durch Klicken und Zeigen auf Argumente und Datenquellen zu erstellen.  
@@ -28,13 +28,13 @@ ms.locfileid: "36160544"
   
 1.  Klicken Sie im Data Mining-Client für Excel können auf **Abfrage**.  
   
-2.  Klicken Sie im Assistenten **starten** auf **Weiter**.  
+2.  Im Assistenten **starten** auf **Weiter**.  
   
 3.  Auf der Seite **Modell auswählen**, klicken Sie auf **erweitert**.  
   
-     **Tipp:** Wenn Sie eine Vorhersageabfrage für ein Modell erstellen möchten, können Sie zuerst das Modell auswählen, und klicken Sie dann auf **erweitert**, um die Vorlage mit dem Modellnamen aufzufüllen.  
+     **Tipp:** , wenn Sie beabsichtigen, eine Vorhersageabfrage für ein Modell zu erstellen, können Sie zuerst das Modell auswählen, und klicken Sie dann auf **erweitert**, um die Vorlage mit dem Modellnamen aufzufüllen.  
   
-4.  In der **Data Mining erweiterten Abfrage-Editor**, klicken Sie auf **DMX-Vorlagen**, und wählen Sie eine Vorlage.  
+4.  In der **erweiterten Data Mining Query Editor**, klicken Sie auf **DMX-Vorlagen**, und wählen Sie eine Vorlage.  
   
 5.  Drücken Sie die EINGABETASTE, um die Vorlage im Bereich DMX-Abfrage zu laden.  
   
@@ -42,16 +42,16 @@ ms.locfileid: "36160544"
   
      Wählen Sie für Vorhersageabfragen zuerst das Eingabedataset aus, und ordnen Sie dann die Spalten zu.  
   
-7.  Klicken Sie auf **Abfrage bearbeiten** zur Text-Editor-Ansicht wechseln und die Abfrage manuell ändern.  
+7.  Klicken Sie auf **Abfrage bearbeiten** zu Text-Editor-Ansicht wechseln und die Abfrage manuell ändern.  
   
      Beachten Sie jedoch Folgendes: Wenn Sie beim Arbeiten im Abfrage-Editor zwischen Sichten wechseln, werden alle Informationen aus der vorherigen Sicht gelöscht. Speichern Sie daher vor dem Wechseln der Ansicht Ihre Arbeit, indem Sie die DMX-Anweisungen in eine separate Datei kopieren und diese speichern.  
   
-8.  Klicken Sie auf **Fertig stellen**. In der **Ziel auswählen** Dialogfeld geben, in dem das Ergebnis gespeichert werden soll. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+8.  Klicken Sie auf **Fertig stellen**. In der **Ziel auswählen** Dialogfeld Feld, an dem das Ergebnis gespeichert werden soll. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 > [!NOTE]  
->  Wenn Sie eine Anweisung erfolgreich ausgeführt wurde, wird die DMX-Anweisung, die an den Server gesendete auch aufgezeichnet der **Trace** Fenster. Weitere Informationen zum Verwenden des Ablaufverfolgungsfunktionen finden Sie unter [Ablaufverfolgung &#40;Data Mining-Client für Excel&#41;](trace-data-mining-client-for-excel.md).  
+>  Wenn Sie eine Anweisung erfolgreich ausgeführt, die DMX-Anweisung, die Sie sich an den Server gesendet, wird auch in aufgezeichnet der **Ablaufverfolgung** Fenster. Weitere Informationen zum Verwenden des Ablaufverfolgungsfunktionen finden Sie unter [Ablaufverfolgung &#40;Data Mining-Client für Excel&#41;](trace-data-mining-client-for-excel.md).  
   
- Weitere Informationen zur Verwendung der Data Mining erweiterten Abfrage-Editor finden Sie unter [Abfrage &#40;SQL Server Data Mining-Add-ins&#41; ](query-sql-server-data-mining-add-ins.md) und [Erweiterter Editor für Data Mining](advanced-data-mining-query-editor.md).  
+ Weitere Informationen zur Verwendung der erweiterten Data Mining Query Editor finden Sie unter [Abfrage &#40;SQL Server Data Mining-Add-ins&#41; ](query-sql-server-data-mining-add-ins.md) und [Erweiterter Editor für Data Mining](advanced-data-mining-query-editor.md).  
   
 ## <a name="list-of-dmx-templates"></a>Liste von DMX-Vorlagen  
  Die folgenden DMX-Vorlagen sind im Data Mining-Client für Excel enthalten.  
@@ -96,7 +96,7 @@ ms.locfileid: "36160544"
   
 -   Miningmodellinhalt  
   
--   Minimale und maximale Spaltenwerte  
+-   Minimum und maximumspaltenwerte  
   
 -   Test-/Trainingsfälle der Miningstruktur  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36160544"
   
 -   Miningmodell entfernen  
   
--   Clear-Strukturen und-Modelle  
+-   Struktur und Modelle entfernen  
   
 -   Miningstruktur entfernen  
   

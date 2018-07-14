@@ -1,5 +1,5 @@
 ---
-title: MemberUniqueNameStyle-Element (ASSL) | Microsoft Docs
+title: MemberUniqueNameStyle-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - MemberUniqueNameStyle element
 ms.assetid: f0771c81-0127-4203-9501-ae4f864730fa
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ca327bceaddce4c0f7ac1b7a726d321a02cdffc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2448f2f45f76610e9d7298c855086cc74ab0611e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151667"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226360"
 ---
 # <a name="memberuniquenamestyle-element-assl"></a>MemberUniqueNameStyle-Element (ASSL)
-  Bestimmt, wie eindeutige Namen für Elemente in Hierarchien enthaltenen generiert werden, die [CubeDimension](../data-type/dimension-data-type-assl.md) Element.  
+  Bestimmt, wie eindeutige Namen für Elemente in enthaltenen Hierarchien generiert werden, die [CubeDimension](../data-type/dimension-data-type-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36151667"
 |Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Zeichenfolge (Enumeration)|  
-|Standardwert|*Systemeigene*|  
+|Standardwert|*Native*|  
 |Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
@@ -64,11 +64,11 @@ ms.locfileid: "36151667"
   
 |value|Description|  
 |-----------|-----------------|  
-|*Systemeigene*|Die Instanz legt automatisch die eindeutigen Namen von Elementen fest.|  
+|*Native*|Die Instanz legt automatisch die eindeutigen Namen von Elementen fest.|  
 |*NamePath*|Die Instanz generiert einen zusammengesetzten Namen, der aus jeder Ebene und der Beschriftung des Elements besteht.|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element, das das übergeordnete Element des entspricht `MemberUniqueNameStyle` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.CubeDimension>.  
+ Das Element, das dem übergeordneten entspricht `MemberUniqueNameStyle` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.CubeDimension>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Cube-Element &#40;ASSL&#41;](../objects/cube-element-assl.md)   

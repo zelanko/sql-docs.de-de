@@ -1,5 +1,5 @@
 ---
-title: RequestType-Element (XMLA) | Microsoft Docs
+title: RequestType-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - RequestType element
 ms.assetid: 54270a57-e327-4233-b4b2-d85b44652ac5
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: b1b2bcc4bf6f97659239a9e53d4adac52d7794a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: d73bcac80918bc79064e0b6e1a4eabf315cdcd9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160063"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171191"
 ---
 # <a name="requesttype-element-xmla"></a>RequestType-Element (XMLA)
   Bestimmt den Typ des vom zurückgegebenen Metadaten der [Discover](../xml-elements-methods-discover.md) Methode.  

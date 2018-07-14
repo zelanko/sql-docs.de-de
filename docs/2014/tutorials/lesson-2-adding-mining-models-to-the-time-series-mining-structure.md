@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 2: Hinzufügen von Miningmodellen auf die Zeitreihen-Miningstruktur | Microsoft Docs'
+title: 'Lektion 2: Hinzufügen von Miningmodellen auf die Zeitreihen-Miningstruktur | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 75c2a74b-21ce-44fb-a26b-68be4c685c12
 caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: cee3d839ae7a7bcce62c8a3a1d2f7cb62b1155e2
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 368ab5b56fb55e083d5d8c38e34a0bdae98afe7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312488"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211990"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>Lektion 2: Hinzufügen von Miningmodellen zur Zeitreihen-Miningstruktur
-  In dieser Lektion fügen Sie ein neues Miningmodell auf die Miningstruktur, die Sie gerade erstellt, im haben [Lektion 1: Erstellen einer Zeitreihen-Miningmodell und Miningstruktur](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md).  
+  In dieser Lektion fügen Sie ein neues Miningmodell, Miningstruktur, die Sie gerade erstellt, in haben [Lektion 1: Erstellen einer Zeitreihen-Miningmodell und Miningstruktur](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md).  
   
 ## <a name="alter-mining-structure-statement"></a>ALTER MINING STRUCTURE-Anweisung  
- Damit Sie einer vorhandenen Miningstruktur ein neues Miningmodell hinzufügen, verwenden Sie die [ALTER MINING STRUCTURE &#40;DMX&#41;] ((~/dmx/alter-mining-structure-dmx.md)-Anweisung. Der in der Anweisung enthaltene Code umfasst folgende Abschnitte:   
+ Um einer vorhandenen Miningstruktur ein neues Miningmodell hinzuzufügen, verwenden Sie die [ALTER MINING STRUCTURE &#40;DMX&#41;] ((~/dmx/alter-mining-structure-dmx.md)-Anweisung. Der in der Anweisung enthaltene Code umfasst folgende Abschnitte:   
   
 -   Identifizieren der Miningstruktur  
   
@@ -99,7 +99,7 @@ WITH DRILLTHROUGH
   
 #### <a name="to-add-an-arima-time-series-mining-model"></a>So fügen Sie ein ARIMA-Zeitreihen-Miningmodell hinzu  
   
-1.  In **Objektexplorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX** zu Abfrage-Editor und eine neue, leere Abfrage zu öffnen.  
+1.  In **Objekt-Explorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX** zu Abfrage-Editor und eine neue, leere Abfrage zu öffnen.  
   
 2.  Kopieren Sie das allgemeine Beispiel der ALTER MINING STRUCTURE-Anweisung in die leere Abfrage.  
   
@@ -187,7 +187,7 @@ WITH DRILLTHROUGH
   
 8.  Auf der **Datei** Menü klicken Sie auf **Dmxquery1.DMX speichern**.  
   
-9. In der **speichern unter** (Dialogfeld), suchen Sie den entsprechenden Ordner, und nennen Sie die Datei `Forecasting_ARIMA.dmx`.  
+9. In der **speichern** Dialogfeld, navigieren Sie zu den entsprechenden Ordner, und nennen Sie die Datei `Forecasting_ARIMA.dmx`.  
   
 10. Klicken Sie auf der Symbolleiste auf die **Execute** Schaltfläche.  
   
@@ -215,7 +215,7 @@ WITH DRILLTHROUGH
   
 2.  Auf der **Datei** Menü klicken Sie auf **Dmxquery1.DMX speichern**.  
   
-3.  In der **speichern unter** (Dialogfeld), suchen Sie den entsprechenden Ordner, und nennen Sie die Datei `Forecasting_ARTXP.dmx`.  
+3.  In der **speichern** Dialogfeld, navigieren Sie zu den entsprechenden Ordner, und nennen Sie die Datei `Forecasting_ARTXP.dmx`.  
   
 4.  Klicken Sie auf der Symbolleiste auf die **Execute** Schaltfläche.  
   

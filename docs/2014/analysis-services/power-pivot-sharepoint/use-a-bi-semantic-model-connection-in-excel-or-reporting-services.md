@@ -1,5 +1,5 @@
 ---
-title: Verwenden Sie eine BI-Semantikmodellverbindung in Excel oder Reporting Services | Microsoft Docs
+title: Verwenden Sie eine BI-Semantikmodellverbindung in Excel oder Reporting Services | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 00ee95942a8022ee8d299ab400d36676b51467ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b1ff3dfedd5dce6a4db551cc6fdb180e4d723d8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159438"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219970"
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Verwenden einer BI-Semantikmodellverbindung in Excel oder Reporting Services
-  In diesem Thema wird erläutert, wie die BI-Semantikmodellverbindungen verwendet werden, die gemäß den Anweisungen in anderen Themen erstellt wurden. Wenn Sie eine BI-Semantikmodell noch nicht erstellt haben, finden Sie unter [erstellen Sie eine BI-Semantikmodellverbindung zu einer PowerPivot-Arbeitsmappe](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) und [erstellen Sie eine BI-Semantikmodellverbindung mit einer tabellarischen Modelldatenbank](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
+  In diesem Thema wird erläutert, wie die BI-Semantikmodellverbindungen verwendet werden, die gemäß den Anweisungen in anderen Themen erstellt wurden. Wenn Sie noch nicht mit einem BI-Semantikmodell erstellt haben, finden Sie unter [erstellen Sie eine BI-Semantikmodellverbindung mit einer PowerPivot-Arbeitsmappe](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) und [Erstellen einer BI-Semantikmodellverbindung mit einer tabellarischen Modelldatenbank](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
 ##  <a name="bkmk_connect"></a> Herstellen einer Verbindung von Excel aus  
  Sie können eine BI-Semantikmodellverbindung als Datenquelle in Excel oder einer beliebigen anderen Geschäftsanwendung angeben, die Analysis Services-Daten im tabellarischen Modell verwendet. Dieser Abschnitt erläutert die zwei Ansätze zum Herstellen einer Verbindung mit BI-Semantikmodelldaten über Excel.  
@@ -49,9 +49,9 @@ ms.locfileid: "36159438"
   
 5.  Auf der letzten Seite können Sie einen Anzeigenamen und eine Beschreibung angeben. Klicken Sie auf **Fertig stellen**, und klicken Sie dann im Dialogfeld zum Importieren von Daten auf **OK** , um die Daten zu importieren.  
   
- Damit Verbindungen erfolgreich sind, müssen Excel 2010 und MSOLAP.5.dll auf dem Clientcomputer installiert sein. Sie können den Anbieter erhalten, durch die Installation der Version von PowerPivot für Excel, die für diese Version aktuell ist oder Sie können nur den Analysis Services OLE DB-Anbieter Herunterladen der [Feature Pack-Downloadseite](http://go.microsoft.com/fwlink/?linkid=214066).  
+ Damit Verbindungen erfolgreich sind, müssen Excel 2010 und MSOLAP.5.dll auf dem Clientcomputer installiert sein. Sie können den Anbieter erhalten, durch die Installation von der Version von PowerPivot für Excel, die für diese Version aktuell ist oder Sie können nur die Analysis Services OLE DB-Anbieter aus der [Feature Pack-Downloadseite](http://go.microsoft.com/fwlink/?linkid=214066).  
   
- Um sicherzustellen, dass MSOLAP.5.dll die aktuelle Version ist, überprüfen `HKEY_CLASSES_ROOT\MSOLAP` in der Registrierung. `CurVer` sollte auf Msolap. 5 festgelegt werden.  
+ Um zu bestätigen, dass MSOLAP.5.dll die aktuelle Version ist, überprüfen Sie `HKEY_CLASSES_ROOT\MSOLAP` in der Registrierung. `CurVer` muss auf Msolap. 5 festgelegt werden.  
   
  Sie müssen auch über Leseberechtigungen für die BI-Semantikmodelldatei in SharePoint verfügen. Leseberechtigungen schließen Downloadrechte ein. Excel lädt die BI-Semantikmodell-Verbindungsinformationen von SharePoint herunter und öffnet über `HTTP Get` eine direkte Verbindung mit der Datenbank. Verbindungsanforderungen werden erst dann für SharePoint übernommen, wenn die BI-Semantikmodell-Verbindungsinformationen lokal gespeichert werden.  
   

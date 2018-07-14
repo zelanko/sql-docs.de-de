@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 030b8563ac272b0594697048169ade487c2321bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: afcc00e0f6bcc3341f7aafc23aeddfee5e8e8dff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161120"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170761"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Zugreifen auf speicheroptimierte Tabellen mit interpretiertem Transact-SQL
-  Mit nur wenigen Ausnahmen, erreichen Sie Speicheroptimierte Tabellen mit einer [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage bzw. den DML-Vorgang (SELECT, INSERT, UPDATE oder DELETE), ad-hoc-Batches und SQL-Module wie gespeicherte Prozeduren, Tabellenwertfunktionen, Trigger und Sichten.  
+  Mit nur wenigen Ausnahmen, erreichen Sie Speicheroptimierte Tabellen mit einer [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage- oder DML-Vorgang (SELECT, INSERT, UPDATE oder DELETE), ad-hoc-Batches und SQL-Module wie gespeicherte Prozeduren, Tabellenwertfunktionen, Trigger und Sichten.  
   
  Interpretiertes [!INCLUDE[tsql](../../includes/tsql-md.md)] bezieht sich auf [!INCLUDE[tsql](../../includes/tsql-md.md)] -Batches oder gespeicherte Prozeduren, die keine systemintern kompilierten gespeicherten Prozeduren sind. Der Zugriff auf speicheroptimierte Tabellen mittels interpretiertem [!INCLUDE[tsql](../../includes/tsql-md.md)] wird als Interopzugriff bezeichnet.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36161120"
 |READUNCOMMITTED|ROWLOCK|SPATIAL_WINDOW_MAX_CELLS = *integer*|TABLOCK|  
 |TABLOCKXX|UPDLOCK|XLOCK||  
   
- Wenn von einer expliziten oder impliziten Transaktion mittels interpretiertem [!INCLUDE[tsql](../../includes/tsql-md.md)] auf eine speicheroptimierte Tabelle zugegriffen wird, müssen Sie einen Tabellenhinweis auf die Isolationsstufe wie etwa SNAPSHOT, REPEATABLEREAD oder SERIALIZABLE einbinden. Alternativ können Sie MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT verwenden. Weitere Informationen finden Sie unter [Richtlinien für Transaktionsisolationsstufen mit speicheroptimierten Tabellen](memory-optimized-tables.md) und [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
+ Wenn von einer expliziten oder impliziten Transaktion mittels interpretiertem [!INCLUDE[tsql](../../includes/tsql-md.md)] auf eine speicheroptimierte Tabelle zugegriffen wird, müssen Sie einen Tabellenhinweis auf die Isolationsstufe wie etwa SNAPSHOT, REPEATABLEREAD oder SERIALIZABLE einbinden. Alternativ können Sie MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT verwenden. Weitere Informationen finden Sie unter [Richtlinien für Transaktionsisolationsstufen mit speicheroptimierten Tabellen](memory-optimized-tables.md) und [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
 > [!NOTE]  
 >  Ein Tabellenhinweis auf die Isolationsstufe ist bei speicheroptimierten Tabellen, auf die der Zugriff mit Abfragen im Autocommit-Modus erfolgt, nicht erforderlich.  

@@ -1,5 +1,5 @@
 ---
-title: 'VirtualDirectoryReportManager-Eigenschaft (WMI: MSReportServer_ConfigurationSetting) | Microsoft Docs'
+title: 'VirtualDirectoryReportManager-Eigenschaft (WMI: MSReportServer_ConfigurationSetting) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - VirtualDirectoryReportManager property
 ms.assetid: fe5ac055-26e3-4c3d-843c-c12eb7e6e4db
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f2355c071fd9151251628e1ea3451ae394901125
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 947c2c7301525b928babc4344fbbf67a7738f57e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160140"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222540"
 ---
 # <a name="virtualdirectoryreportmanager-property-wmi-msreportserverconfigurationsetting"></a>VirtualDirectoryReportManager-Eigenschaft (WMI: MSReportServer_ConfigurationSetting)
   Gibt das virtuelle Verzeichnis für die Berichts-Manager-Anwendung zurück. Schreibgeschützt.  
@@ -37,7 +37,7 @@ public string VirtualDirectoryReportManager;
 ```  
   
 ## <a name="property-values"></a>Eigenschaftswerte  
- Ein `string` , die das virtuelle Verzeichnis enthält.  
+ Ein `string` , das das virtuelle Verzeichnis enthält.  
   
 ## <a name="example-code"></a>Beispielcode  
  [MSReportServer_ConfigurationSetting Class (MSReportServer_ConfigurationSetting-Klasse)](msreportserver-configurationsetting-class.md)  

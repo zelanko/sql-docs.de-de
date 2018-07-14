@@ -1,5 +1,5 @@
 ---
-title: Exemplarische Vorgehensweise (Data Mining-Add-ins) Cluster | Microsoft Docs
+title: Exemplarische Vorgehensweise (Data Mining-Add-ins)-Cluster | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visio shapes, cluster
 - diagram, cluster
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - data mining layout toolbar
 ms.assetid: 761bef6a-37d4-4b19-944e-f2aadc75a242
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a8ab399dcc59873cc507e260eec82582a69f8ba6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 808accf81389f97d2dff9383fe4c3fbe9d86068d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160340"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177257"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>Exemplarische Vorgehensweise für das Clusterdiagramm (Data Mining-Add-Ins)
-  Nachdem Sie ein Clusteringmodell erstellt haben, können Sie sie importieren, in Visio mithilfe der **Cluster** strukturieren und anschließend weiter anpassen und das Layout zu verbessern. Die **Data Mining-Shapes für Visio** umfassen die folgenden benutzerdefinierten Steuerelemente zum Arbeiten mit Datamining-Diagrammen:  
+  Nachdem Sie ein clustering-Modell erstellt haben, können Sie es importieren, in Visio mithilfe der **Cluster** strukturieren und anpassen und erweitern das Layout anschließend weiter. Die **Data Mining-Shapes für Visio** enthalten die folgenden benutzerdefinierten Steuerelemente zum Arbeiten mit Datamining-Diagramme:  
   
 -   Rendern von Steuerelementen für das Clusterdiagramm  
   
-     Diese Optionen sind Teil der **Clustererstellungs-Assistenten** , wird gestartet, wenn Sie ein Shape auf dem Visio-Arbeitsbereich ablegen.  
+     Diese Optionen sind Teil der **Clustererstellungs-Assistenten** gestartet wird, wenn Sie eine Form auf dem Visio-Arbeitsbereich ablegen.  
   
 -   **Data Mining Layout** Symbolleiste  
   
@@ -45,21 +45,21 @@ ms.locfileid: "36160340"
   
 #### <a name="use-the-cluster-visio-shape-wizard"></a>Verwenden Sie den Cluster-Shape in Visio-Assistenten  
   
-1.  Wenn Sie nicht angezeigt werden **Microsoft Data Mining-Shapes** in der **Formen** Liste, klicken Sie auf **weitere Shapes**, wählen **Schablone öffnen**, und öffnen Sie die die Vorlage über den Standardinstallationspfad.  
+1.  Wenn Sie nicht angezeigt werden **Microsoft Data Mining-Shapes** in der **Formen** auf **weitere Shapes**Option **Schablone öffnen**, und öffnen Sie die die Vorlage aus den standardmäßigen Installationsspeicherort.  
   
      \<Laufwerk >: \Programme\Microsoft SQL Server 2012 DM-Add-Ins  
   
 2.  Ziehen Sie die **Cluster** Shape auf der Seite.  
   
-3.  Auf der Seite Willkommen des der **Cluster Visio-Shape-Assistent**, klicken Sie auf **Weiter**.  
+3.  Klicken Sie auf der Seite Willkommen des der **Assistenten Shape in Visio Cluster**, klicken Sie auf **Weiter**.  
   
-4.  Auf der **wählen Sie eine Datenquelle** auf der Seite der **Clustererstellungs-Assistenten**, wählen Sie eine Verbindung mit einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Server, die Datamining-Modelle enthält, das Sie visuell darstellen möchten.  
+4.  Auf der **Vybrat Zdroj DAT** auf der Seite die **Clustererstellungs-Assistenten**, wählen Sie eine Verbindung mit einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Server, der die Datamining-Modelle enthält, die Sie visualisieren möchten.  
   
 5.  Wählen Sie ein geeignetes Miningmodell aus, und klicken Sie auf **Weiter**.  
   
-     Um sicherzustellen, dass Sie ein Clusteringmodell auswählen, überprüfen Sie die Beschreibung in der **Eigenschaften** Bereich.  
+     Um sicherzustellen, dass Sie ein Clusteringmodell auswählen, überprüfen Sie in der Beschreibung in der **Eigenschaften** Bereich.  
   
-6.  Wenn die Verbindung erfolgreich ist, auf der Seite ist **Optionen für Clusterdiagramm**, Sie entscheiden, welche Art von Clusterdiagramm in die Visio-Präsentation einschließen:  
+6.  Wenn die Verbindung erfolgreich ist, auf der Seite **Optionen für Clusterdiagramm**, welche Art von Clusterdiagramm in die Visio-Präsentation einschließen möchten:  
   
      **Nur Cluster-Shapes anzeigen**  
      Mit dieser Option erstellen Sie ein einfaches Clusterdiagramm, in dem jeder Cluster durch ein Rechteck oder ein anderes Shape Ihrer Wahl dargestellt wird.  
@@ -74,7 +74,7 @@ ms.locfileid: "36160340"
   
      Sie können auch zu einem anderen Diagrammtyp wechseln, nachdem das Diagramm vom Assistenten erstellt wurde. Klicken Sie dazu mit der rechten Maustaste auf einen Cluster, und wählen Sie einen neuen Diagrammtyp aus. Wählen Sie jetzt die Option **Cluster mit merkmaldiagramm anzeigen**.  
   
-7.  Lassen Sie diese Option **Anzahl der Zeilen im Diagramm**, als 5.  
+7.  Lassen Sie diese Option, **Anzahl der Zeilen im Diagramm**, 5.  
   
      Durch diese Option wird die Anzahl der Cluster im Modell nicht geändert, sondern lediglich die Anzahl der Attribute eingeschränkt, die als Funktionen der einzelnen Cluster angezeigt werden können.  
   
@@ -82,11 +82,11 @@ ms.locfileid: "36160340"
   
 8.  Klicken Sie auf **Erweitert**.  
   
-     Die **Clusteroptionen** ist das Dialogfeld, in dem Sie die visuelle Darstellung der im Diagramm verwendeten Shapes anpassen. Sie können die im Diagramm verwendeten Farben und das für die Cluster verwendete Shape ändern.  
+     Die **Clusteroptionen** ist das Dialogfeld, in dem Sie die visuelle Darstellung des im Diagramm verwendeten Shapes anpassen. Sie können die im Diagramm verwendeten Farben und das für die Cluster verwendete Shape ändern.  
   
      Die **Schattierungsvariable** Steuerelement funktioniert nicht in Office 2013.  
   
-     ![Klicken Sie auf ' Erweitert ', um Shape-Farben auszuwählen](media/dm13-visio-clusteroptions-advanced.gif "klicken Sie auf ' Erweitert ', um Shape-Farben auszuwählen")  
+     ![Klicken Sie auf ' Erweitert ', um die Shape-Farben auszuwählen](media/dm13-visio-clusteroptions-advanced.gif "klicken Sie auf ' Erweitert ', um die Shape-Farben auszuwählen")  
   
      **Tipp:** einige Farben können später mithilfe von Visio-Designs und Steuerelementen zur Bearbeitung von Shapes geändert werden. Ein Teil dieser Farbauswahl wird jedoch von Visio-Designs überschrieben. Aus diesem Grund wird empfohlen, mit den Standardfarben zu beginnen und die Änderungen schrittweise vorzunehmen.  
   
@@ -99,17 +99,17 @@ ms.locfileid: "36160340"
 ## <a name="explore-and-modify-the-finished-diagram"></a>Durchsuchen und Ändern des fertigen Diagramms  
  Nachdem das Diagramm vollständig erstellt wurde, können Sie dessen Erscheinungsbild, wie im folgenden Beispiel beschrieben, mithilfe von Visio-Steuerelementen anpassen.  
   
- ![Mithilfe von Visio angepasstes Clusterdiagramm](media/dm13-visio-clustercomplete1.gif "mithilfe von Visio angepasstes Clusterdiagramm")  
+ ![Clusterdiagramm mit Visio angepasst](media/dm13-visio-clustercomplete1.gif "Clusterdiagramm mit Visio angepasst")  
   
  Alle grundlegenden Cluster-Shapes werden vom Assistenten generiert. Verwenden Sie die folgenden Tools zum Aktualisieren und Personalisieren des Diagramms:  
   
-1.  Ziehen Sie den Schieberegler der **Clusteroptionen** -Steuerelement, um schwächere Beziehungen herauszufiltern und das Diagramm zu vereinfachen.  
+1.  Ziehen Sie den Schieberegler der **Clusteroptionen** Steuerelement, um schwächere Beziehungen herauszufiltern und das Diagramm zu vereinfachen.  
   
 2.  Verwenden Sie die **neues Seitenlayout** Option aus, um verschiedene clusterlayouts experimentieren.  
   
-3.  Verwenden der **Connectors** option die **Entwurf** Registerkarte so ändern Sie die Connector-Formatvorlage, um Zeilen aus Verbinderformat Cluster beibehalten werden sollen.  
+3.  Verwenden der **Connectors** option die **Entwurf** Registerkarte so ändern Sie die Connector-Formatvorlage aus, um Zeilen aus Verbinderformat Cluster beibehalten werden sollen.  
   
-4.  Klicken Sie auf die **-Add-Ins** Menüband, und zeigen Sie anschließend eine der benutzerdefinierten Symbolleisten, die zum Arbeiten mit Datamining-Diagramme verwendet:  
+4.  Klicken Sie auf die **-Add-Ins** zuerst das Menüband, und zeigen Sie anschließend eine der benutzerdefinierten Symbolleisten zur Bearbeitung von Datamining-Diagramme:  
   
      **Layout**  
      Optimiert die Anordnung der Cluster, sodass sie auf die aktuelle Seite passen.  
@@ -133,7 +133,7 @@ ms.locfileid: "36160340"
      **Schattierung**  
      Dieses Steuerelement funktioniert nicht in Office 2013.  
   
-5.  Verwenden der **Schwenken und Zoomen** steuern, in der **Aufgabenbereich** des Visio **Ansicht** Menüband zu konzentrieren, eine Reihe von Clustern im Diagramm bewegen.  
+5.  Verwenden der **Schwenken und Zoomen** zu steuern, in der **Aufgabenbereich** des Visio **Ansicht** Multifunktionsleiste, um eine Reihe von Clustern konzentrieren und das Diagramm verschieben.  
   
 6.  Klicken Sie mit der rechten Maustaste auf einen beliebigen Cluster, um die Optionen für das Cluster-Shape anzuzeigen:  
   

@@ -20,13 +20,13 @@ ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 660524626e7120f21d5e420526f0634f3155f2b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6f63101c71ada32768139c075dd98122bac5ca75
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151399"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329940"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>Erstellen einer asynchronen Transformation mit der Skriptkomponente
   Transformationskomponenten dienen im Datenfluss eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakets dazu, Daten auf dem Weg von der Quelle zum Ziel zu ändern und zu analysieren. Eine Transformation mit synchronen Ausgaben verarbeitet jede eingegebene Zeile, während sie die Komponente durchläuft. Eine Transformation mit asynchronen Ausgaben kann die Fertigstellung ihrer Verarbeitung abwarten, bis die Transformation alle Eingabezeilen empfangen hat. Die Transformation kann bestimmte Zeilen auch ausgeben, bevor sie alle Eingabezeilen empfangen hat. In diesem Thema wird eine asynchrone Transformation erläutert. Wenn die Verarbeitung eine synchrone Transformation erfordert, finden Sie weitere Informationen unter [Creating a Synchronous Transformation with the Script Component (Erstellen einer synchronen Transformation mit der Skriptkomponente)](../data-flow/transformations/script-component.md). Weitere Informationen zu den Unterschieden zwischen synchronen und asynchronen Komponenten finden Sie unter [Understanding Synchronous and Asynchronous Transformations (Grundlegendes zu synchronen und asynchronen Transformationen)](../understanding-synchronous-and-asynchronous-transformations.md).  
@@ -75,7 +75,7 @@ ms.locfileid: "36151399"
 ### <a name="adding-variables"></a>Hinzufügen von Variablen  
  Wenn Sie die Werte von vorhandenen Variablen in Ihrem Skript verwenden möchten, können Sie diese in den Eigenschaftenfeldern „ReadOnlyVariables“ und „ReadWriteVariables“ auf der Seite **Skript** im **Transformations-Editor für Skripterstellung** hinzufügen.  
   
- Wenn Sie mehrere Variablen in die Eigenschaftsfelder hinzufügen, trennen Sie die Variablennamen durch Kommas. Sie können auch mehrere Variablen auswählen, indem Sie auf die Auslassungspunkte (**...** ) neben dem `ReadOnlyVariables` und `ReadWriteVariables` Eigenschaftenfelder, und wählen Sie dann die Variablen in der **Variablen auswählen** (Dialogfeld).  
+ Wenn Sie mehrere Variablen in die Eigenschaftsfelder hinzufügen, trennen Sie die Variablennamen durch Kommas. Sie können auch mehrere Variablen auswählen, indem Sie auf die Auslassungspunkte (**...** ) neben dem `ReadOnlyVariables` und `ReadWriteVariables` Eigenschaftenfelder, und wählen Sie dann die Variablen in der **Variablen auswählen** Dialogfeld.  
   
  Allgemeine Informationen über das Verwenden von Variablen mit der Skriptkomponente finden Sie unter [Using Variables in the Script Component (Verwenden von Variablen in der Skriptkomponente)](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
@@ -87,11 +87,11 @@ ms.locfileid: "36151399"
  Wichtige Informationen, die alle Arten von Komponenten betreffen, die mithilfe der Skriptkomponente erstellt wurden, finden Sie unter [Coding and Debugging the Script Component (Codieren und Debuggen der Skriptkomponente)](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md).  
   
 ### <a name="understanding-the-auto-generated-code"></a>Grundlegendes zum automatisch generierten Code  
- Wenn Sie die VSTA IDE öffnen, nach dem Erstellen und die Konfiguration einer Transformationskomponente die bearbeitbare `ScriptMain` Klasse wird im Codeeditor mit Stubs für die ProcessInputRow und die CreateNewOutputRows Methoden angezeigt. Sie schreiben Ihren benutzerdefinierten Code in der ScriptMain-Klasse. „ProcessInputRow“ ist die wichtigste Methode in einer Transformationskomponente. Die `CreateNewOutputRows`-Methode wird eher in einer Quellkomponente verwendet, die insofern wie eine asynchrone Transformation funktioniert, dass beide Komponenten eigene Ausgabezeilen erstellen müssen.  
+ Wenn Sie die VSTA IDE öffnen, nach dem Erstellen und die Konfiguration einer Transformationskomponente die bearbeitbare `ScriptMain` Klasse wird im Code-Editor mit Stubs für die "processinputrow" und die CreateNewOutputRows-Methoden angezeigt. Sie schreiben Ihren benutzerdefinierten Code in der ScriptMain-Klasse. „ProcessInputRow“ ist die wichtigste Methode in einer Transformationskomponente. Die `CreateNewOutputRows`-Methode wird eher in einer Quellkomponente verwendet, die insofern wie eine asynchrone Transformation funktioniert, dass beide Komponenten eigene Ausgabezeilen erstellen müssen.  
   
- Wenn Sie VSTA öffnen **Projektexplorer** Fenster können Sie sehen, dass die Skriptkomponente auch schreibgeschützte generiert hat `BufferWrapper` und `ComponentWrapper` Projektelemente. Die ScriptMain-Klasse erbt von der Klasse UserComponent in der `ComponentWrapper` -Projektelement.  
+ Wenn Sie das VSTA-Fenster **Projektexplorer** Fenster können Sie sehen, dass die Skriptkomponente auch schreibgeschützte generiert hat `BufferWrapper` und `ComponentWrapper` Projektelemente. Die ScriptMain-Klasse erbt von der UserComponent-Klasse in der `ComponentWrapper` Projektelement.  
   
- Zur Laufzeit ruft das Datenflussmodul die PrimeOutput-Methode in der `UserComponent` Klasse, welche Außerkraftsetzungen der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> übergeordnete Klasse. Die PrimeOutput-Methode ruft wiederum die CreateNewOutputRows-Methode auf.  
+ Zur Laufzeit ruft die Datenfluss-Engine die PrimeOutput-Methode in der `UserComponent` Klasse, welche Außerkraftsetzungen der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> übergeordnete Klasse. Die PrimeOutput-Methode ruft wiederum die CreateNewOutputRows-Methode auf.  
   
  Danach ruft die Datenfluss-Engine die ProcessInput-Methode in der UserComponent-Klasse auf, die die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A>-Methode der übergeordneten <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>-Klasse überschreibt. Die ProcessInput-Methode durchläuft die Zeilen im Eingabepuffer der Reihe nach und ruft für jede Zeile einmal die ProcessInputRow-Methode auf.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36151399"
   
  Bei einer asynchronen Transformation können Sie mit der AddRow-Methode der Ausgabe bei Bedarf Zeilen aus der Methode „ProcessInputRow“ oder „ProcessInput“ heraus hinzufügen. Sie müssen nicht die CreateNewOutputRows-Methode verwenden. Wenn Sie eine einzelne Ergebniszeile, z.B. Aggregationsergebnisse, in eine bestimmte Ausgabe schreiben, können Sie die Ausgabezeile vorher mithilfe der CreateNewOutputRows-Methode erstellen und ihre Werte später nach Verarbeitung aller Eingabezeilen auffüllen. Es ist jedoch nicht sinnvoll, in der CreateNewOutputRows-Methode mehrere Zeilen zu erstellen, weil mit der Skriptkomponente nur die aktuelle Zeile in einer Eingabe oder Ausgabe verwendet werden kann. Die CreateNewOutputRows-Methode ist bei einer Quellkomponente wichtiger, bei der keine Eingabezeilen zu verarbeiten sind.  
   
- Sie können auch die ProcessInput-Methode überschreiben, damit Sie zusätzliche vorbereitende oder abschließende Verarbeitungsvorgänge ausführen können, bevor oder nachdem Sie den Eingabepuffer durchlaufen und ProcessInputRow für jede Zeile aufrufen. Eines der Codebeispiele in diesem Thema überschreibt z. B. ProcessInput, um die Anzahl der Adressen in einer bestimmten Stadt als ProcessInputRow durchläuft Zeilen zählen`.` das Beispiel schreibt den Zusammenfassungswert an die zweite Ausgabe, nachdem alle Zeilen wurden verarbeitet. In diesem Beispiel wird die Ausgabe in ProcessInput abgeschlossen, weil die Ausgabepuffer nicht mehr verfügbar sind, wenn PostExecute aufgerufen wird.  
+ Sie können auch die ProcessInput-Methode überschreiben, damit Sie zusätzliche vorbereitende oder abschließende Verarbeitungsvorgänge ausführen können, bevor oder nachdem Sie den Eingabepuffer durchlaufen und ProcessInputRow für jede Zeile aufrufen. Eines der Codebeispiele in diesem Thema überschreibt beispielsweise ProcessInput, um die Anzahl der Adressen in einer bestimmten Stadt als "processinputrow" Zeilen durchläuft zählen`.` im Beispiel wird der Zusammenfassungswert in die zweite Ausgabe geschrieben, nachdem alle Zeilen wurden verarbeitet. In diesem Beispiel wird die Ausgabe in ProcessInput abgeschlossen, weil die Ausgabepuffer nicht mehr verfügbar sind, wenn PostExecute aufgerufen wird.  
   
  Je nach Anforderung können Sie auch Skript in den Methoden „PreExecute“ und „PostExecute“ schreiben, die in der ScriptMain-Klasse verfügbar sind, um vorbereitende oder abschließende Verarbeitungsvorgänge auszuführen.  
   
@@ -234,7 +234,7 @@ public class ScriptMain:
   
 ```  
   
-![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben Sie mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services** <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Grundlegendes zu synchronen und asynchronen Transformationen](../understanding-synchronous-and-asynchronous-transformations.md)   

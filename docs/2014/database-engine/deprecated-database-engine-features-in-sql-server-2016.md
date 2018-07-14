@@ -1,5 +1,5 @@
 ---
-title: Veraltete Funktionen des Datenbankmoduls in SQLServer 2014 | Microsoft Docs
+title: Als veraltet markierte Funktionen von Datenbank-Engine in SQLServer 2014 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [SQL Server]
 - Database Engine [SQL Server], backward compatibility
 - deprecation [SQL Server], feature list
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 caps.latest.revision: 208
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 553d47cd9c9637492fce0fe0a943e8de6cde3eb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 05cf9071049947adceaeeccf2e728f1d5045d05d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151677"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326400"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2014"></a>Als veraltet markierte Funktionen der Datenbank-Engine in SQL Server 2014
   In diesem Thema werden die als veraltet markierten Funktionen von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] beschrieben, die in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]noch verfügbar sind. Diese Funktionen werden voraussichtlich in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]entfernt. Als veraltet markierte Funktionen sollten in neuen Anwendungen nicht verwendet werden.  
@@ -119,7 +119,7 @@ ms.locfileid: "36151677"
 |Serverkonfigurationsoptionen|C2-Überwachungsoption<br /><br /> Standardablaufverfolgung aktiviert (Option)|[Common Criteria-Kompatibilität aktiviert (Serverkonfigurationsoption)](configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [Erweiterte Ereignisse](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
 |SMO-Klassen|`Microsoft.SQLServer.Management.Smo.Information` Klasse<br /><br /> `Microsoft.SQLServer.Management.Smo.Settings` Klasse<br /><br /> `Microsoft.SQLServer.Management.Smo.DatabaseOptions` Klasse<br /><br /> `Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication` Eigenschaft|`Microsoft.SqlServer.Management.Smo.Server` Klasse<br /><br /> `Microsoft.SqlServer.Management.Smo.Server` Klasse<br /><br /> `Microsoft.SqlServer.Management.Smo.Database` Klasse<br /><br /> InclusionThresholdSetting|InclusionThresholdSetting|InclusionThresholdSetting|  
 |SQL Server-Agent|**net send** -Benachrichtigung<br /><br /> Pagerbenachrichtigung<br /><br /> ActiveX-Subsystem|E-Mail-Benachrichtigung<br /><br /> E-Mail-Benachrichtigung<br /><br /> Befehl oder PowerShell-Skripts|InclusionThresholdSetting|InclusionThresholdSetting|  
-|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|Integration von Projektmappen-Explorer in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]<br /><br /> Integration der Quellcodeverwaltung in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]||InclusionThresholdSetting|InclusionThresholdSetting|  
+|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|Integration von Projektmappen-Explorer in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]<br /><br /> Integration der quellcodeverwaltung in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]||InclusionThresholdSetting|InclusionThresholdSetting|  
 |Gespeicherte Systemprozeduren|sp_db_increased_partitions|Keine Unterstützung für mehr Partitionen ist in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]standardmäßig verfügbar.|sp_db_increased_partitions|253|  
 |Systemtabellen|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|Kompatibilitätssichten Weitere Informationen finden Sie unter [Kompatibilitätssichten &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql).<br /><br /> **\*\* Wichtig \*\*** Die Kompatibilitätssichten machen keine Metadaten für in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] eingeführte Funktionen verfügbar. Es wird empfohlen, die Anwendungen für die Verwendung von Katalogsichten zu aktualisieren. Weitere Informationen finden Sie unter [Katalogsichten &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql).|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|141<br /><br /> InclusionThresholdSetting<br /><br /> 133<br /><br /> 126<br /><br /> 146<br /><br /> 131<br /><br /> 147<br /><br /> 142<br /><br /> 123<br /><br /> 144<br /><br /> 128<br /><br /> 127<br /><br /> 130<br /><br /> 122<br /><br /> 132<br /><br /> 134<br /><br /> 143<br /><br /> 140<br /><br /> 119<br /><br /> 137<br /><br /> 125<br /><br /> 139<br /><br /> 145<br /><br /> 157<br /><br /> 121<br /><br /> 153<br /><br /> 120<br /><br /> 129<br /><br /> 138<br /><br /> 136<br /><br /> 135<br /><br /> 124|  
 |Systemtabellen|sys.numbered_procedures<br /><br /> sys.numbered_procedure_parameters|InclusionThresholdSetting|numbered_procedures<br /><br /> numbered_procedure_parameters|148<br /><br /> 149|  
@@ -150,16 +150,15 @@ ms.locfileid: "36151677"
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Das indirekte Anwenden von Tabellenhinweisen auf einen Aufruf einer Tabellenwertfunktion (Table Valued Function, TVF) mit mehreren Anweisungen über eine Sicht.|Keine.|Indirekte TVF-Hinweise|7|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ALTER DATABASE-Syntax:<br /><br /> MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|MODIFY FILEGROUP READ_ONLY<br /><br /> MODIFY FILEGROUP READ_WRITE|MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|195<br /><br /> 196|  
 |Andere|DB-Library<br /><br /> Embedded SQL für C|Zwar werden Verbindungen von vorhandenen Anwendungen, die die DB-Library- und Embedded SQL-APIs verwenden, weiterhin von [!INCLUDE[ssDE](../includes/ssde-md.md)] unterstützt, aber die Dateien bzw. die Dokumentationen, die zum Programmieren von Anwendungen erforderlich sind, die diese APIs verwenden, gehören nicht mehr zum Lieferumfang. In zukünftigen Versionen von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] werden Verbindungen von DB-Library- oder Embedded SQL-Anwendungen nicht mehr unterstützt. Verwenden Sie DB-Library bzw. Embedded SQL nicht zum Entwickeln neuer Anwendungen. Entfernen Sie alle Abhängigkeiten von DB-Library bzw. Embedded SQL, wenn Sie vorhandene Anwendungen ändern. Verwenden Sie anstelle dieser APIs den SQLClient-Namespace oder eine API wie ODBC. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] enthält die DB-Library-DLL nicht, die zum Ausführen dieser Anwendungen erforderlich ist. Zum Ausführen von DB-Library- oder Embedded SQL-Anwendungen muss die DB-Library-DLL von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Version 6.5, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7.0 oder [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]verfügbar sein.|InclusionThresholdSetting|InclusionThresholdSetting|  
-|Tools|SQL Server Profiler für die Ablaufverfolgungssammlung|Verwenden Sie den in SQL Server Management Studio eingebetteten Profiler für erweiterte Ereignisse.<br /><br /> Hinweis: Weiterhin mit SQL Server Profiler zur Ablaufverfolgungssammlung für Analysis Services-arbeitsauslastungen.|SQL Server Profiler|InclusionThresholdSetting|  
-|Tools|SQL Server Profiler für die Ablaufverfolgungswiedergabe|[SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)<br /><br /> Hinweis: Verwenden von SQL Server Profiler für die Ablaufverfolgungswiedergabe für Analysis Services-arbeitsauslastungen zu fortfahren.|SQL Server Profiler|InclusionThresholdSetting|  
+|Tools|SQL Server Profiler für die Ablaufverfolgungssammlung|Verwenden Sie den in SQL Server Management Studio eingebetteten Profiler für erweiterte Ereignisse.<br /><br /> Hinweis: Weiterhin mithilfe von SQL Server Profiler zur Ablaufverfolgungssammlung für Analysis Services-arbeitsauslastungen.|SQL Server Profiler|InclusionThresholdSetting|  
+|Tools|SQL Server Profiler für die Ablaufverfolgungswiedergabe|[SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)<br /><br /> Hinweis: Weiterhin SQL Server Profiler für die Ablaufverfolgungswiedergabe für Analysis Services-arbeitsauslastungen zu verwenden.|SQL Server Profiler|InclusionThresholdSetting|  
 |Verwaltungsobjekte für die Ablaufverfolgung|Microsoft.SqlServer.Management.Trace-Namespace (enthält die APIs für die SQL Server-Ablaufverfolgungsobjekte und -Wiedergabeobjekte)|Ablaufverfolgungskonfiguration: <xref:Microsoft.SqlServer.Management.XEvent><br /><br /> Ablaufverfolgungslesevorgänge: <xref:Microsoft.SqlServer.XEvent.Linq><br /><br /> Ablaufverfolgungswiedergabe: keine Angabe|||  
 |SQL-Ablaufverfolgung - gespeicherte Prozeduren, Funktionen und Katalogsichten|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|[Erweiterte Ereignisse](../relational-databases/extended-events/extended-events.md)|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|258<br /><br /> 260<br /><br /> 261<br /><br /> 259<br /><br /> 256<br /><br /> 257|  
   
 > [!NOTE]  
->  Das Cookie `OUTPUT` -Parameter für `sp_setapprole` ist derzeit als dokumentiert `varbinary(8000)` also in der korrekten maximalen Länge. Die aktuelle Implementierung gibt jedoch zurück `varbinary(50)`. Wenn Entwickler `varbinary(50)` zugeordnet haben, erfordert die Anwendung möglicherweise Änderungen, wenn die Cookierückgabegröße in einer zukünftigen Version steigt. Obwohl es sich nicht um ein Veraltungsproblem handelt, wird dies in diesem Thema erwähnt, da die Anwendungsanpassungen ähnlich sind. Weitere Informationen finden Sie unter [sp_setapprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-setapprole-transact-sql).  
+>  Das Cookie `OUTPUT` -Parameter für `sp_setapprole` ist derzeit als dokumentiert `varbinary(8000)` Dies ist der korrekten maximalen Länge. Die aktuelle Implementierung gibt jedoch zurück `varbinary(50)`. Wenn Entwickler `varbinary(50)` zugeordnet haben, erfordert die Anwendung möglicherweise Änderungen, wenn die Cookierückgabegröße in einer zukünftigen Version steigt. Obwohl es sich nicht um ein Veraltungsproblem handelt, wird dies in diesem Thema erwähnt, da die Anwendungsanpassungen ähnlich sind. Weitere Informationen finden Sie unter [sp_setapprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-setapprole-transact-sql).  
   
 ## <a name="see-also"></a>Siehe auch  
- 
-  [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md)  
+ [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md)  
   
   

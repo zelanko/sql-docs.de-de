@@ -1,5 +1,5 @@
 ---
-title: Power View für mehrdimensionale Modelle | Microsoft Docs
+title: Power View für mehrdimensionale Modelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9ba8299e-b990-4f77-a3c0-eee64e1f4281
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9ea4704b0a06d6e19d918f5234b218650b93bd30
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2d2080bb724f8360cfddaa49de094dea4107920d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151675"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263766"
 ---
 # <a name="power-view-for-multidimensional-models"></a>Power View für mehrdimensionale Modelle
   In Microsoft SQL Server 2014 Analysis Services unterstützen mehrdimensionale Modelle das Analysieren, Durchsuchen und Visualisieren von Daten im Ad-hoc-Verfahren unter Verwendung von Microsoft Power View.  

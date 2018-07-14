@@ -1,5 +1,5 @@
 ---
-title: Erstellen von Vorhersagen für Callcentermodelle (Datamining-Lernprogramm für fortgeschrittene) | Microsoft Docs
+title: Erstellen von Vorhersagen für Callcentermodelle (Datamining-Lernprogramm für fortgeschrittene) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5be0cec7-f639-4eeb-835e-e3204ae619e9
 caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: def00bc80eec2ea29b3b3ef833bc953fd59da03c
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 86ac24e1c67d062a0b9d0c2b9d2963bd9b8a479d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313048"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321500"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>Erstellen von Vorhersagen für Callcentermodelle (Data Mining-Lernprogramm für Fortgeschrittene)
   Nachdem Sie Informationen zu Interaktionen zwischen Arbeitsschichten, der Anzahl der Telefonisten und Anrufe sowie der Dienstqualität gesammelt haben, können Sie einige Vorhersageabfragen für Geschäftsanalysen und Planungen erstellen. Sie erstellen zunächst einige Vorhersagen über das explorative Modell, um bestimmte Annahmen zu testen. Als Nächstes erstellen Sie massenvorhersagen mithilfe des logistischen Regressionsmodells.  
@@ -43,23 +43,23 @@ ms.locfileid: "36313048"
   
 6.  Klicken Sie im Menü **Miningmodell** auf **SINGLETON-Abfrage**.  
   
-     Die **Singleton-Abfrageeingabe** Dialogfeld angezeigt wird, die Spalten im Miningmodell zugeordnet.  
+     Die **Singleton-Abfrageeingabe** im angezeigten Dialogfeld auf die Spalten im Miningmodell zugeordnet.  
   
-7.  In der **Singleton-Abfrageeingabe** (Dialogfeld), klicken Sie auf die Zeile für Shift und wählen Sie dann *Mitternacht*.  
+7.  In der **Singleton-Abfrageeingabe** Dialogfeld klicken Sie auf die Zeile für Shift und wählen Sie dann *Mitternacht*.  
   
 8.  Klicken Sie auf die Zeile für Lvl 2 Operators und geben `6`.  
   
-9. In der unteren Hälfte der **Miningmodellvorhersage** Registerkarte, klicken Sie auf der ersten Zeile im Raster.  
+9. In der unteren Hälfte des der **Miningmodellvorhersage** Registerkarte, klicken Sie auf der ersten Zeile im Raster.  
   
-10. In der **Quelle** Spalte, klicken Sie auf den Pfeil nach unten, und wählen Sie **Vorhersagefunktion**. In der **Feld** Spalte **"PredictHistogram"**.  
+10. In der **Quelle** Spalte, klicken Sie auf den Pfeil nach unten, und wählen **Vorhersagefunktion**. In der **Feld** Spalte **PredictHistogram**.  
   
-     Eine Liste von Argumenten, die Sie automatisch mit dieser Vorhersagefunktion verwenden können wird in der **Kriterium/Argument** Feld.  
+     Eine Liste von Argumenten, mit denen Sie mit dieser Vorhersagefunktion automatisch angezeigt wird, der **Kriterium/Argument** Feld.  
   
 11. Ziehen Sie die Spalte ServiceGrade aus der Liste der Spalten in der **Miningmodell** Bereich, um die **Kriterium/Argument** Feld.  
   
      Der Name der Spalte wird automatisch als Argument eingefügt. Sie können jede vorhersagbare Attributspalte in dieses Textfeld ziehen.  
   
-12. Klicken Sie auf die Schaltfläche mit den **Switch abzufragende Ergebnisansicht**, in der oberen Ecke des Generators für Vorhersageabfragen.  
+12. Klicken Sie auf die Schaltfläche mit den **wechseln Sie zur Abfrage der Ergebnisansicht**, in der oberen Ecke des Generators für Vorhersageabfragen.  
   
  Die erwarteten Ergebnisse enthalten die möglichen vorhergesagten Werte für jede Dienstqualität bei Berücksichtigung der angegebenen Eingaben zusammen mit Unterstützungs- und Wahrscheinlichkeitswerten für jede Vorhersage. Sie können jederzeit zur Entwurfsansicht zurückkehren und die Eingaben ändern oder weitere Eingaben hinzufügen.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "36313048"
     GROUP BY Shift, WageType  
     ```  
   
-8.  Klicken Sie im Bereich "Entwurf" Maustaste auf die Tabelle, Shifts for Call Center, und wählen **Stichprobenoptionen** um eine Vorschau der von der T-SQL-Abfrage zurückgegebenen Daten anzuzeigen.  
+8.  In den Entwurfsbereich, mit der Maustaste in der Tabelle, Shifts for Call Center, und wählen Sie **Stichprobenoptionen** um eine Vorschau der von der T-SQL-Abfrage zurückgegeben Daten anzuzeigen.  
   
 9. Mit der rechten Maustaste in der Registerkarte **Shifts.dsv (Design)** , und klicken Sie dann auf **speichern** um die neue datenquellensichtdefinition zu speichern.  
   
@@ -114,17 +114,17 @@ ms.locfileid: "36313048"
   
 1.  Klicken Sie im Data Mining-Designer auf die **Miningmodellvorhersage** Registerkarte.  
   
-2.  In der **Miningmodell** Bereich, klicken Sie auf **Modell auswählen**, und wählen Sie die Callcenter - LR aus der Liste der verfügbaren Modelle.  
+2.  In der **Miningmodell** Bereich, klicken Sie auf **Modell auswählen**, und wählen Sie Callcenter - LR aus der Liste der verfügbaren Modelle.  
   
-3.  Aus der **Miningmodell** Menü, deaktivieren Sie die Option **Singleton-Abfrage**. Eine Warnung weist Sie darauf hin, dass die Eingaben für die SINGLETON-Abfrage verloren gehen. Klicken Sie auf **OK**.  
+3.  Von der **Miningmodell** im Menü die Option, **Singleton-Abfrage**. Eine Warnung weist Sie darauf hin, dass die Eingaben für die SINGLETON-Abfrage verloren gehen. Klicken Sie auf **OK**.  
   
-     Die **Singleton-Abfrageeingabe** wird das Dialogfeld mit ersetzt die **Eingabetabelle(n)** (Dialogfeld).  
+     Die **Singleton-Abfrageeingabe** wird das Dialogfeld durch ersetzt die **Eingabetabelle(n)** Dialogfeld.  
   
 4.  Klicken Sie auf **Falltabelle auswählen**.  
   
-5.  In der **Tabelle auswählen** (Dialogfeld), SelectShifts aus der Liste der Datenquellen. In der **Tabellen-/Sichtname** wählen Shifts for Call Center (wird ggf. automatisch ausgewählt), und klicken Sie dann auf **OK.**  
+5.  In der **Tabelle auswählen** Dialogfeld, SelectShifts aus der Liste der Datenquellen. In der **Tabellen-/Sichtname** wählen Shifts for Call Center (möglicherweise automatisch ausgewählt), und klicken Sie dann auf **OK.**  
   
-     Die **Miningmodellvorhersage** Entwurfsoberfläche wird aktualisiert, um Zuordnungen anzuzeigen, die basierend auf den Namen und Datentypen der Spalten in den Eingabedaten und in das Modell erstellt werden.  
+     Die **Miningmodellvorhersage** Entwurfsoberfläche wird aktualisiert, um die Zuordnungen angezeigt, die basierend auf den Namen und Datentypen der Spalten in den Eingabedaten und in das Modell erstellt werden.  
   
 6.  Mit der rechten Maustaste eine der Joinlinien, und wählen Sie dann **Verbindungen ändern**.  
   
@@ -136,9 +136,9 @@ ms.locfileid: "36313048"
   
 ##### <a name="to-create-the-predictions-for-each-shift"></a>So erstellen Sie die Vorhersagen für jede Schicht  
   
-1.  Im Raster am unteren Hälfte der **Generator für Vorhersageabfragen**, klicken Sie auf die leere Zelle unter **Quelle** und wählen Sie dann Shifts for Call Center.  
+1.  Im Raster am unteren Teil der **Generator für Vorhersageabfragen**, klicken Sie auf die leere Zelle unter **Quelle** und wählen Sie dann Shifts for Call Center.  
   
-2.  In die leere Zelle unter **Feld**, wählen Sie die UMSCHALTTASTE.  
+2.  In die leere Zelle unter **Feld**, wählen Sie die UMSCHALTTASTE gedrückt.  
   
 3.  Klicken Sie auf die nächste leere Zeile im Raster und wiederholen Sie die oben beschriebene Prozedur, um eine weitere Zeile für WageType hinzuzufügen.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "36313048"
 |PM1|holiday|0.165|0.40056055|  
 |PM2|holiday|0.165|0.338532973|  
 |AM|weekday|0.165|0.370847617|  
-|midnight|weekday|0,08|0.352999173|  
+|midnight|weekday|0,08 US-Dollar|0.352999173|  
 |PM1|weekday|0.165|0.317419177|  
 |PM2|weekday|0.105|0.311672027|  
   
@@ -176,7 +176,7 @@ ms.locfileid: "36313048"
   
  Aus diesen Ergebnissen können Sie schließen, dass Sie die Antwortzeit in bestimmten Schichten auf 90 Prozent der aktuellen Rate reduzieren sollten, um die Dienstqualität zu verbessern.  
   
-|Schicht, Lohn und Tag|Vorhergesagte Dienstqualität bei aktueller Durchschnittsantwortzeit|Vorhergesagte Dienstqualität bei Reduzierung der Antwortzeit 90 Prozent|Vorhergesagte Dienstqualität bei Reduzierung der Antwortzeit auf 80 Prozent|  
+|Schicht, Lohn und Tag|Vorhergesagte Dienstqualität bei aktueller Durchschnittsantwortzeit|Vorhergesagte Dienstqualität bei Reduzierung der 90 % Antwortzeit|Vorhergesagte Dienstqualität bei Reduzierung der Antwortzeit auf 80 Prozent|  
 |--------------------------|------------------------------------------------------------------|--------------------------------------------------------------------------|--------------------------------------------------------------------------|  
 |Feiertag Vormittag|0.165|0.05|0.05|  
 |Feiertag Nachmittag 1|0.05|0.05|0.05|  
@@ -187,7 +187,7 @@ ms.locfileid: "36313048"
 ## <a name="remarks"></a>Hinweise  
  Die Data Mining-Add-Ins für Excel 2007 stellen einen Logistic Regression-Assistenten bereit, mit dem komplexe Fragen einfach beantwortet werden können, beispielsweise wie viele Operatoren der Ebene 2 benötigt werden, um die Dienstqualität für eine bestimmte Schicht auf ein Zielniveau anzuheben. Die Data Mining-Add-Ins können kostenlos heruntergeladen werden und enthalten Assistenten, die auf dem neuronalen Netzwerk oder den Logistic Regression-Algorithmen basieren. Weitere Informationen finden Sie unter den folgenden Links:  
   
--   [SQL Server 2005 Data Mining-Add-Ins für Office 2007](http://www.microsoft.com/sql/technologies/dm/addins.mspx): Zielsucheszenarien und was geschieht, wenn Szenarienanalyse  
+-   [SQL Server 2005 Data Mining-Add-Ins für Office 2007](http://www.microsoft.com/sql/technologies/dm/addins.mspx): Zielsuche und was-wäre-wenn Szenarienanalyse  
   
 -   [SQL Server 2008 Data Mining-Add-Ins für Office 2007](http://go.microsoft.com/fwlink/?LinkID=117790): Analyse von Zielsucheszenarien, was geschieht, wenn Szenarienanalyse und Vorhersagerechner  
   

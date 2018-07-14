@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 3: Schreiben eine vollständigen Datenbanksicherung im Windows Azure-Blob-Speicherdienst | Microsoft Docs'
+title: 'Lektion 3: Schreiben eine vollständigen Datenbanksicherung in den Windows Azure-Blob-Speicherdienst | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 454c8296-64e9-46ed-b141-5ebfbc8a4fe2
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cec916094b297baa648b743b2c5649ee4fced1c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: craigg-msft
+ms.author: craigg
+manager: craigg
+ms.openlocfilehash: 4a28465f0175be0bfc12e5c9d51a267ae6597ec6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151024"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236080"
 ---
 # <a name="lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service"></a>Lektion 3: Schreiben einer vollständigen Datenbanksicherung in den Windows Azure-BLOB-Speicherdienst
   In dieser Lektion wird erläutert, wie anhand der T-SQL-Anweisung eine vollständige Datenbanksicherung im Windows Azure-BLOB-Speicherdienst ausgeführt wird.  
@@ -29,7 +29,7 @@ ms.locfileid: "36151024"
   
 1.  Herstellen einer Verbindung mit [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-2.  In der **Objektexplorer**, Herstellen einer Verbindung mit der Instanz von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+2.  In der **Objekt-Explorer**, eine Verbindung mit der Instanz [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 3.  Klicken Sie auf der Standardmenüleiste auf **Neue Abfrage**.  
   

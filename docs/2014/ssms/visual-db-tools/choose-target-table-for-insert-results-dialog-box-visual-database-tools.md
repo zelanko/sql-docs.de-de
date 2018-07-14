@@ -1,5 +1,5 @@
 ---
-title: Wählen Sie die Zieltabelle für Einfügen Ergebnisse (Dialogfeld) (Visual Database Tools) | Microsoft Docs
+title: Zieltabelle auswählen, für die Insert-Ergebnisse (Dialogfeld) (Visual Database Tools) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.choosetableforinsertfrom
 - vdtsql.chm:69642
 ms.assetid: 4ffd62c1-da72-4daf-832b-cc1268abf351
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d752d5ad48e7824c7fee6f78955e266a6cfffb3f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e382cce39c4301b591c73eb74e0a6159f400662b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161256"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189557"
 ---
 # <a name="choose-target-table-for-insert-results-dialog-box-visual-database-tools"></a>Zieltabelle für Anfügeabfrage auswählen (Dialogfeld) (Visual Database Tools)
   Hiermit können Sie die Tabelle angeben, zu der Datenzeilen als Ergebnis einer INSERT RESULTS-Abfrage hinzugefügt werden. Dieses Dialogfeld wird beim Starten einer INSERT RESULTS-Abfrage angezeigt.  

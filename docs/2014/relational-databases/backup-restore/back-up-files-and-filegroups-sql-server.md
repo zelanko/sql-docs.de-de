@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up filegroups [SQL Server]
 - file backups [SQL Server], how-to topics
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - filegroups [SQL Server], backing up
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 49e2ba4f8788a60b5d0e00d24539a085c233b446
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f453d2f34713a4a00b1a5d99870f3597ac32262e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150841"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332650"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>Sichern von Dateien und Dateigruppen (SQL Server)
   In diesem Thema wird beschrieben, wie Sie Dateien und Dateigruppen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder PowerShell sichern. Wenn eine vollständige Datenbanksicherung wegen der Größe der Datenbank und aufgrund von Leistungsanforderungen nicht möglich ist, können Sie stattdessen eine Dateisicherung ausführen. Eine *Dateisicherung* enthält alle Daten in einer oder mehreren Dateien (oder Dateigruppen). Weitere Informationen finden Sie unter [Vollständige Dateisicherungen &#40;SQL Server&#41;](full-file-backups-sql-server.md) und [Differenzielle Sicherungen &#40;SQL Server&#41;](differential-backups-sql-server.md).  
@@ -40,7 +39,7 @@ ms.locfileid: "36150841"
   
      [Security](#Security)  
   
--   **So sichern Sie Dateien und Dateigruppen mit:**  
+-   **So sichern Sie Dateien und Dateigruppen mit**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -221,9 +220,9 @@ GO
   
 1.  Verwenden Sie das `Backup-SqlDatabase`-Cmdlet, und geben Sie `Files` als Wert für den `-BackupAction`-Parameter an. Geben Sie zusätzlich einen der folgenden Parameter an:  
   
-    -   Um eine bestimmte Datei zu sichern, geben die `-DatabaseFile` *Zeichenfolge* -Parameter, in dem *Zeichenfolge* ist eine oder mehrere Datenbankdateien, die gesichert werden sollen.  
+    -   Um eine bestimmte Datei zu sichern, geben die `-DatabaseFile` *Zeichenfolge* -Parameter, in denen *Zeichenfolge* ist eine oder mehrere Datenbankdateien gesichert werden soll.  
   
-    -   Um alle Dateien in einer bestimmten Dateigruppe zu sichern, geben die `-DatabaseFileGroup` *Zeichenfolge* -Parameter, in dem *Zeichenfolge* ist mindestens ein Datenbankdateigruppen gesichert werden soll.  
+    -   Um alle Dateien in einer bestimmten Dateigruppe zu sichern, geben die `-DatabaseFileGroup` *Zeichenfolge* -Parameter, in denen *Zeichenfolge* ist einer oder mehreren Datenbankdateigruppen gesichert werden soll.  
   
      Im folgenden Beispiel wird eine vollständige Dateisicherung von jeder Datei in der sekundären Dateigruppe "FileGroup1" und "FileGroup2" in der `MyDB` -Datenbank erstellt. Die Sicherungen werden am standardmäßigen Sicherungsspeicherort der Serverinstanz `Computer\Instance`erstellt.  
   

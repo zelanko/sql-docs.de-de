@@ -1,5 +1,5 @@
 ---
-title: Dialogfeld "Warnung" (Analysis Services – mehrdimensionale Daten) verwerfen | Microsoft Docs
+title: Dialogfeld "Warnung" (Analysis Services – mehrdimensionale Daten) verwerfen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dismisswarningdialog.f1
 ms.assetid: 66d853e0-1b57-4b17-a7d1-a25899411684
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 135fe44e1edee6be816ea2192f3ab9153487b12f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 00ef76ad911516ee8f2c2d73911fb4a7fd9fe949
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151234"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228310"
 ---
 # <a name="dismiss-warning-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld Warnung verwerfen (Analysis Services – Mehrdimensionale Daten)
   Sie verwenden das Dialogfeld **Warnung verwerfen** , um eine bestimmte Instanz einer Warnung zu verwerfen.  

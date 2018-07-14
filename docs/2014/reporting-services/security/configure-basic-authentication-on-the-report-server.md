@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, configuration
 - Basic authentication
@@ -16,13 +16,13 @@ ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 2611f683ee02180bc5b90b0b08fe961d049e9aab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6bc51edfd6e7ba2aeff58a230ad29ce800fffd79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159709"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189827"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver
   Standardmäßig akzeptiert Reporting Services Anforderungen, die Negotiate- und NTLM-Authentifizierung angeben. Wenn Ihre Bereitstellung Client-Anwendungen oder Browser umfasst, die die Standardauthentifizierung verwenden, müssen Sie die Standardauthentifizierung in die Liste der unterstützten Typen aufnehmen. Zusätzlich müssen Sie den anonymen Zugriff auf die Dateien des Berichts-Generators aktivieren, wenn Sie mit dem Berichts-Generator arbeiten möchten.  
@@ -44,7 +44,7 @@ ms.locfileid: "36159709"
   
      Die Datei befindet sich unter  *\<Laufwerk >:* \Programme\Microsoft SQL Server\MSRS12. MSSQLSERVER\Reporting Services\ReportServer.  
   
-2.  Suchen <`Authentication`>.  
+2.  Finden Sie <`Authentication`>.  
   
 3.  Kopieren Sie die XML-Struktur, die Ihren Anforderungen am besten entspricht. Die erste XML-Struktur stellt Platzhalter bereit, über die Sie alle im nächsten Abschnitt beschriebenen Elemente angegeben können:  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36159709"
   
 |Element|Required|Gültige Werte|  
 |-------------|--------------|------------------|  
-|LogonMethod|ja<br /><br /> Wenn Sie keinen Wert angeben, wird 3 verwendet.|`2` = Netzwerkanmeldung für Server mit hoher Leistungsfähigkeit zur Authentifizierung von nur-Text-Kennwörtern.<br /><br /> `3` = Klartextanmeldung, wobei die Anmeldeinformationen in das Authentifizierungspaket, die mit jeder HTTP-Anforderung gesendet wird beibehalten, sodass der Server die Identität des Benutzers beim Verbinden mit anderen Servern im Netzwerk. (Standardwert)<br /><br /> Hinweis: Die Werte 0 (für interaktive Anmeldung) und 1 (für Batchanmeldung) werden in [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]nicht unterstützt.|  
+|LogonMethod|ja<br /><br /> Wenn Sie keinen Wert angeben, wird 3 verwendet.|`2` = Netzwerkanmeldung für Server mit hoher Leistungsfähigkeit zur Authentifizierung von nur-Text-Kennwörter.<br /><br /> `3` = Klartextanmeldung, wobei die Anmeldeinformationen in das Authentifizierungspaket, die mit jeder HTTP-Anforderung gesendet wird beibehalten, so, dass der Server die Identität des Benutzers beim Verbinden mit anderen Servern im Netzwerk. (Standardwert)<br /><br /> Hinweis: Die Werte 0 (für interaktive Anmeldung) und 1 (für Batchanmeldung) werden in [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]nicht unterstützt.|  
 |Realm|Optional|Gibt eine Ressourcenpartition mit Autorisierungs- und Authentifizierungsfunktionen an, mit denen Sie den Zugriff auf geschützte Ressourcen in Ihrem Unternehmen steuern können.|  
 |DefaultDomain|Optional|Gibt die Domäne an, die vom Server für die Benutzerauthentifizierung verwendet wird. Dieser Wert ist optional. Wenn Sie ihn weglassen, verwendet der Berichtsserver den Computernamen als Domäne. Wenn der Computer zu einer Domäne gehört, ist diese Domäne die Standarddomäne. Wenn Sie den Berichtsserver auf einem Domänencontroller installiert haben, ist die verwendete Domäne die vom Computer gesteuerte.|  
   
@@ -105,7 +105,7 @@ ms.locfileid: "36159709"
   
 -   Fügen Sie das `IsReportBuilderAnonymousAccessEnabled`-Element in RSReportServer.config ein, und stellen Sie es auf `True` ein. Nachdem Sie die Datei gespeichert haben, erstellt der Berichtsserver einen neuen Endpunkt zum Berichts-Generator. Der Endpunkt wird intern verwendet, um auf Programmdateien zuzugreifen und hat keine programmatische Schnittstelle, die Sie im Code verwenden können. Dank des separaten Endpunkts kann der Berichts-Generator in seiner eigenen Anwendungsdomäne innerhalb der Service-Prozessgrenze ausgeführt werden.  
   
--   Optional können Sie ein Konto mit Minimalprivilegien angeben, um Anforderungen in einem Sicherheitskontext zu verarbeiten, der sich von dem des Berichtsservers unterscheidet. Dieses Konto ist das anonyme Konto, mit dem Sie auf Dateien des Berichts-Generators zugreifen können, die sich auf einem Berichtsserver befinden. Das Konto legt die Identität des Threads im ASP.NET-Workerprozess fest. Die in diesem Thread ausgeführten Anforderungen werden ohne eine Authentifizierungsprüfung an den Berichtsserver übergeben. Dieses Konto entspricht der IUSR_\<Computer > Konto in IIS (Internetinformationsdienste), dient zum Festlegen des Sicherheitskontexts für ASP.NET Worker verarbeitet, wenn anonymer Zugriff und Identitätswechsel aktiviert sind. Um das Konto anzugeben, fügen Sie es einer Web.config-Datei auf dem Berichts-Generator hinzu.  
+-   Optional können Sie ein Konto mit Minimalprivilegien angeben, um Anforderungen in einem Sicherheitskontext zu verarbeiten, der sich von dem des Berichtsservers unterscheidet. Dieses Konto ist das anonyme Konto, mit dem Sie auf Dateien des Berichts-Generators zugreifen können, die sich auf einem Berichtsserver befinden. Das Konto legt die Identität des Threads im ASP.NET-Workerprozess fest. Die in diesem Thread ausgeführten Anforderungen werden ohne eine Authentifizierungsprüfung an den Berichtsserver übergeben. Dieses Konto entspricht der IUSR_\<Machine > Konto in IIS (Internetinformationsdienste), dient zum Festlegen des Sicherheitskontexts für ASP.NET Worker verarbeitet, wenn anonymer Zugriff und Identitätswechsel aktiviert sind. Um das Konto anzugeben, fügen Sie es einer Web.config-Datei auf dem Berichts-Generator hinzu.  
   
  Der Berichtsserver muss für die Standardauthentifizierung konfiguriert sein, wenn Sie den anonymen Zugriff auf die Programmdateien des Berichts-Generators aktivieren möchten. Wenn der Berichtsserver nicht für die Standardauthentifizierung konfiguriert ist, erhalten Sie eine Fehlermeldung, sobald Sie versuchen, den anonymen Zugriff zu aktivieren.  
   
@@ -139,17 +139,17 @@ ms.locfileid: "36159709"
     </configuration>  
     ```  
   
-     Authentifizierungsmodus muss festgelegt werden, um `Windows` , wenn Sie eine Datei "Web.config" einschließen.  
+     Authentifizierungsmodus muss festgelegt werden, um `Windows` , wenn Sie eine Datei "Web.config" aufnehmen.  
   
      `Identity impersonate` kann `True` oder `False`.  
   
-    -   Legen Sie es auf `False` , wenn Sie nicht, dass ASP.NET das Sicherheitstoken lesen möchten. Die Anforderung wird im Sicherheitskontext des Berichtsserverdienstes ausgeführt.  
+    -   Legen Sie ihn auf `False` , wenn Sie nicht, dass ASP.NET das Sicherheitstoken zu lesen möchten. Die Anforderung wird im Sicherheitskontext des Berichtsserverdienstes ausgeführt.  
   
-    -   Legen Sie es auf `True` Wenn ASP.NET das Sicherheitstoken von der Hostebene lesen soll. Wenn Sie `True` festlegen, müssen Sie auch `userName` und `password` angeben, damit ein anonymes Konto bestimmt werden kann. Die von Ihnen angegebenen Anmeldeinformationen legen den Sicherheitskontext fest, unter dem die Anforderung ausgegeben wird.  
+    -   Legen Sie ihn auf `True` Wenn ASP.NET das Sicherheitstoken von der Hostebene lesen soll. Wenn Sie `True` festlegen, müssen Sie auch `userName` und `password` angeben, damit ein anonymes Konto bestimmt werden kann. Die von Ihnen angegebenen Anmeldeinformationen legen den Sicherheitskontext fest, unter dem die Anforderung ausgegeben wird.  
   
 5.  Speichern Sie die Datei Web.config im Ordner ReportBuilder\bin.  
   
-6.  Öffnen Sie "rsreportserver.config" die Datei im Abschnitt Dienste suchen `IsReportManagerEnabled` und fügen Sie den folgenden Eintrag hinzu:  
+6.  Öffnen die Datei RSReportServer.config im Abschnitt Dienste suchen `IsReportManagerEnabled` und fügen Sie den folgenden Eintrag hinzu:  
   
     ```  
     <IsReportBuilderAnonymousAccessEnabled>True</IsReportBuilderAnonymousAccessEnabled>  

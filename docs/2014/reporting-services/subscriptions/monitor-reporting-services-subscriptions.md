@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], inactive
 - subscriptions [Reporting Services], status
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - inactive subscriptions [Reporting Services]
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 caps.latest.revision: 33
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 39838673c11b980fd38cc312dea51e0c9e2dcc99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 08a4b7f46721f33c1d6cf42b2c2840d0f7a07fcd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160149"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214780"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Überwachen von Reporting Services-Abonnements
   Sie können [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements über die Benutzeroberfläche, Windows PowerShell oder Protokolldateien überwachen. Die für die Überwachung verfügbaren Optionen hängen davon ab, welchen Modus des Berichtsservers Sie ausführen.  
@@ -65,7 +65,7 @@ ms.locfileid: "36160149"
 |Fehler beim Schreiben der Datei „\<Dateiname>“: \<Meldung>|Zeigt an, dass die Datei nicht an den Speicherort der Dateifreigabe übermittelt werden konnte. Diese Meldung stammt von der Dateifreigabe-Übermittlungserweiterung.|  
 |\<benutzerdefinierte Statusmeldungen>|Statusmeldungen zum Erfolg oder Fehlschlagen der Übermittlung. Diese Meldungen stammen von Übermittlungserweiterungen. Falls Sie eine Übermittlungserweiterung von einem Drittanbieter oder eine benutzerdefinierte Übermittlungserweiterung verwenden, werden möglicherweise zusätzliche Statusmeldungen angezeigt.|  
   
- Berichtsserveradministratoren können auch Standardabonnements überwachen, die gerade verarbeitet werden. Datengesteuerte Abonnements können nicht überwacht werden. Weitere Informationen finden Sie unter [Verwalten eines Prozesses ausführen](manage-a-running-process.md).  
+ Berichtsserveradministratoren können auch Standardabonnements überwachen, die gerade verarbeitet werden. Datengesteuerte Abonnements können nicht überwacht werden. Weitere Informationen finden Sie unter [Verwalten eines ausgeführten Prozesses](manage-a-running-process.md).  
   
  Falls ein Abonnement nicht übermittelt werden kann (z. B., weil der Mailserver nicht verfügbar ist), wiederholt die Übermittlungserweiterung den Versuch. Eine Konfigurationseinstellung gibt die Anzahl von Wiederholungsversuchen an. Standardmäßig wird der Vorgang nicht wiederholt. Es kann vorkommen, dass der Bericht ohne Daten verarbeitet wird (z. B., wenn die Datenquelle offline ist). In diesem Fall wird durch einen entsprechenden Text in der Meldung darauf hingewiesen.  
   

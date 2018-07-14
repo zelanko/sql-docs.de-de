@@ -1,5 +1,5 @@
 ---
-title: Definieren von Dimensionsgranularität innerhalb einer Measuregruppe | Microsoft Docs
+title: Definieren von Dimensionsgranularität innerhalb einer Measuregruppe | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4f079485-9eb4-405c-9a20-81258298b810
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: deeae89f59779000ac2dda9ca4da639666852bae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7af0f2bfe03fd04677259482016cf259a0093bc1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159067"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251152"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>Definieren von Dimensionsgranularität innerhalb einer Measuregruppe
   Benutzer möchten die Möglichkeit bekommen, Faktendaten mit einer anderen Granularität oder Spezifizierung für andere Zwecke zu dimensionieren. Verkaufsdaten für Händler- oder Internetverkäufe können z. B. für jeden Tag aufgezeichnet werden, wogegen Sollvorgaben für den Verkauf möglicherweise nur auf Monats- oder Quartalsebene vorhanden sind. In diesen Szenarios möchten Benutzer eine Time-Dimension mit einer anderen oder detaillierteren Auflösung für jede dieser verschiedenen Faktentabellen verwenden. Sie könnten zwar eine neue Datenbankdimension als Time-Dimension mit dieser anderen Auflösung definieren, doch bietet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]eine einfachere Lösung.  
@@ -36,9 +36,9 @@ ms.locfileid: "36159067"
   
 1.  Wechseln Sie zur **Adventure Works DW 2012** -Datenquellensicht.  
   
-2.  Mit der rechten Maustaste an einer beliebigen Stelle der **Diagrammplaner** Bereich, klicken Sie auf **neues Diagramm**, und benennen Sie das Diagramm `Sales Quotas`.  
+2.  Mit der rechten Maustaste an einer beliebigen Stelle der **Diagrammplaner** Bereich, klicken Sie auf **neues Diagramm**, und klicken Sie dann benennen Sie das Diagramm `Sales Quotas`.  
   
-3.  Ziehen Sie die **Mitarbeiter**, **Vertriebsgebiet**, und `Date` Tabellen aus der **Tabellen** Bereich, um die **Diagramm** Bereich.  
+3.  Ziehen Sie die **Mitarbeiter**, **Sales Territory**, und `Date` Tabellen aus der **Tabellen** Bereich, um die **Diagramm** Bereich.  
   
 4.  Fügen Sie die **FactSalesQuota** -Tabelle dem Bereich **Diagramm** hinzu, indem Sie mit der rechten Maustaste auf eine beliebige Stelle im Bereich **Diagramm** klicken und anschließend **Tabellen hinzufügen/entfernen**auswählen.  
   
@@ -48,19 +48,19 @@ ms.locfileid: "36159067"
   
      Beachten Sie, dass die Auflösung der Daten innerhalb dieser Tabelle das Kalenderquartal ist, also die niedrigste Detailebene in der FactSalesQuota-Tabelle.  
   
-6.  Ändern Sie im Datenquellensicht-Designers, der **FriendlyName** Eigenschaft von der **FactSalesQuota** Tabelle `SalesQuotas`.  
+6.  Ändern Sie im Datenquellensicht-Designer, der **FriendlyName** Eigenschaft der **FactSalesQuota** Tabelle `SalesQuotas`.  
   
 7.  Wechseln Sie zum [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube, und klicken Sie anschließend auf die Registerkarte **Cubestruktur** .  
   
-8.  Mit der rechten Maustaste an einer beliebigen Stelle der **Measures** Bereich, klicken Sie auf **neue Measuregruppe**, klicken Sie auf `SalesQuotas` in der **neue Measuregruppe** Dialogfeld Feld, und klicken Sie dann auf **OK**.  
+8.  Mit der rechten Maustaste an einer beliebigen Stelle der **Measures** Bereich, klicken Sie auf **neue Measuregruppe**, klicken Sie auf `SalesQuotas` in die **neue Measuregruppe** Dialogfeld ein, und klicken Sie dann auf **OK**.  
   
-     Die `Sales Quotas` Measuregruppe angezeigt wird, der **Measures** Bereich. In der **Dimensionen** Bereich, beachten Sie, dass ein neues `Date` Cubedimension auch definiert, basierend auf den `Date` Datenbankdimension. Eine neue zeitbezogene Cubedimension wird definiert, weil für [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unbekannt ist, welche der vorhandenen zeitbezogenen Cubedimensionen mit der **DateKey** -Spalte in der **FactSalesQuota** -Faktentabelle verknüpft werden sollen, die der Sales Quotas-Measuregruppe zugrunde liegen. Sie ändern dies später in einer anderen Aufgabe in diesem Thema.  
+     Die `Sales Quotas` Measuregruppe wird der **Measures** Bereich. In der **Dimensionen** Bereich, beachten Sie, dass ein neues `Date` Cubedimension wird auch definiert, auf der Grundlage der `Date` Datenbankdimension. Eine neue zeitbezogene Cubedimension wird definiert, weil für [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unbekannt ist, welche der vorhandenen zeitbezogenen Cubedimensionen mit der **DateKey** -Spalte in der **FactSalesQuota** -Faktentabelle verknüpft werden sollen, die der Sales Quotas-Measuregruppe zugrunde liegen. Sie ändern dies später in einer anderen Aufgabe in diesem Thema.  
   
 9. Erweitern Sie die `Sales Quotas` Measuregruppe.  
   
 10. Wählen Sie im Bereich **Measures** den Eintrag **Sales Amount Quota**aus, und legen Sie anschließend im Eigenschaftenfenster den Wert für die **FormatString** -Eigenschaft auf **Currency** fest.  
   
-11. Wählen Sie die **Sales Quotas Count** messen, und geben Sie `#,#` als Wert für die **"FormatString"** Eigenschaft im Eigenschaftenfenster angezeigt.  
+11. Wählen Sie die **Sales Quotas Count** messen, und geben Sie `#,#` als Wert für die **FormatString** Eigenschaft im Eigenschaftenfenster angezeigt.  
   
 12. Löschen der **Calendar Quarter** measure aus der `Sales Quotas` Measuregruppe.  
   
@@ -70,11 +70,11 @@ ms.locfileid: "36159067"
   
      Das Dialogfeld **Neues Measure** wird geöffnet, das die verfügbaren Quellenspalten für ein Measure mit dem Verwendungstyp **Summe**enthält.  
   
-14. In der **Neues Measure** wählen Sie im Dialogfeld **Distinct Count** in der **Verwendung** , ob `SalesQuotas` ausgewählt ist, der **Quelltabelle** Liste **Spalte "employeekey"** in der **Quellspalte** aus, und klicken Sie dann auf **OK**.  
+14. In der **Neues Measure** wählen Sie im Dialogfeld **Distinct Count** in die **Nutzung** , ob `SalesQuotas` ausgewählt ist, der **Quelltabelle** Liste **EmployeeKey** in die **Quellspalte** aus, und klicken Sie dann auf **OK**.  
   
      Beachten Sie, dass das neue Measure in einer neuen Measuregruppe namens **Sales Quotas 1**erstellt wird. Distinct count Measures in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] werden in ihren eigenen Measuregruppen erstellt, um die Verarbeitungsleistung zu optimieren.  
   
-15. Ändern Sie den Wert für die **Namen** -Eigenschaft für die **Employee Key Distinct Count** measure `Sales Person Count`, und geben Sie dann `#,#` als Wert für die **"FormatString"** Eigenschaft.  
+15. Ändern Sie den Wert für die **Namen** -Eigenschaft für die **Employee Key Distinct Count** measure `Sales Person Count`, und geben Sie dann `#,#` als Wert für die **FormatString** Eigenschaft.  
   
 ## <a name="browsing-the-measures-in-the-sales-quota-measure-group-by-date"></a>Durchsuchen der Measures in der Sales Quota-Measuregruppe nach Datum  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36159067"
   
 8.  Klicken Sie im Filter auf das Kontrollkästchen **Alles auswählen**, um die Auswahl aller Optionen aufzuheben, und wählen Sie anschließend nur „North America“ aus.  
   
-     ![Filterbereich für die Auswahl von North America](../../2014/tutorials/media/l5-granularity-1b.png "Filterbereich für Nordamerika auswählen")  
+     ![Filterbereich für die Auswahl von Nordamerika](../../2014/tutorials/media/l5-granularity-1b.png "Filterbereich für die Auswahl von Nordamerika")  
   
 9. Erweitern Sie in der PivotTable-Feldliste `Date`.  
   
@@ -110,13 +110,13 @@ ms.locfileid: "36159067"
   
 11. Klicken Sie auf der PivotTable auf den nach unten weisenden Pfeil neben Zeilenbezeichnungen. Löschen Sie alle Jahre außer **FY 2008**.  
   
-     Beachten Sie, dass nur die **Juli 2007** Mitglied der **Monat** -Ebene angezeigt wird, statt die **Juli 2007**, **August 2007**, und **September 2007** Mitglied **Monat** Ebene, und dass nur die **1. Juli 2007** Mitglied der `Date` -Ebene angezeigt wird anstelle aller 31 Tage. Dieses Verhalten tritt auf, weil die Auflösung der Daten in der Faktentabelle auf der Quartalsebene und die Auflösung der der `Date` Dimension ist der täglichen Ebene. Sie ändern dieses Verhalten später in der nächsten Aufgabe in diesem Thema.  
+     Beachten Sie, dass nur die **Juli 2007** Mitglied der **Monat** Ebene angezeigt wird, statt die **Juli 2007**, **August 2007**, und **September 2007** Mitglied **Monat** Ebene, und dass nur die **1. Juli 2007** Mitglied der `Date` Ebene wird anstelle aller 31 Tage. Dieses Verhalten tritt auf, weil die Auflösung der Daten in der Faktentabelle auf der Quartalsebene und die Auflösung von der `Date` Dimension der täglichen Ebene liegt. Sie ändern dieses Verhalten später in der nächsten Aufgabe in diesem Thema.  
   
      Beachten Sie auch, dass der Wert von **Sales Amount Quota** für die Monats- und Tagesebenen derselbe Wert wie für die Quartalsebene ist, nämlich $13,733,000.00. Dies liegt daran, dass sich die unterste Ebene der Daten in der Sales Quotas-Measuregruppe auf der Quartalsebene befindet. Sie ändern dieses Verhalten in Lektion 6.  
   
      Die folgende Abbildung zeigt die Werte für **Sales Amount Quota**.  
   
-     ![Werte für Sales Betrag Kontingent](../../2014/tutorials/media/l5-granularity-3.png "Werte für Sales Betrag Kontingent")  
+     ![Werte für Sales Amount Quota](../../2014/tutorials/media/l5-granularity-3.png "Werte für Sales Amount Quota")  
   
 ## <a name="defining-dimension-usage-properties-for-the-sales-quotas-measure-group"></a>Definieren der Dimensionsverwendungseigenschaft für die Sales Quotas-Measuregruppe  
   
@@ -124,13 +124,13 @@ ms.locfileid: "36159067"
   
 2.  Wählen Sie im Bereich **Attribute** den Eintrag **SalesTerritoryKey**aus, und legen Sie im Fenster Eigenschaften die **AttributeHierarchyVisible** -Eigenschaft auf **False** , die **AttributeHierarchyOptimizedState** -Eigenschaft auf **NotOptimized**und die **AttributeHierarchyOrdered** -Eigenschaft auf **False**fest.  
   
-     Dieses Attribut ist erforderlich, um die Verknüpfung der **Vertriebsgebiet** -Dimension in den `Sales Quotas` und **Sales Quotas 1** Measuregruppen als referenzierte Dimension.  
+     Dieses Attribut ist erforderlich, um das Verknüpfen der **Sales Territory** -Dimension mit der `Sales Quotas` und **Sales Quotas 1** Measuregruppen als referenzierte Dimension.  
   
 3.  Im Cube-Designer für die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube, klicken Sie auf die **Dimensionsverwendung** Registerkarte, und überprüfen Sie dann die Dimensionsverwendung innerhalb der `Sales Quotas` und **Sales Quotas 1** Measuregruppen.  
   
-     Beachten Sie, dass die **Mitarbeiter** und `Date` Cubedimensionen verknüpft sind, um die **Sales Quotasand Sales Quotas 1** Measuregruppen durch reguläre Beziehungen. Beachten Sie außerdem, dass die **Sales Territory** -Cubedimension mit keiner dieser Measuregruppen verknüpft ist.  
+     Beachten Sie, dass die **Mitarbeiter** und `Date` Cubedimensionen verknüpft sind, um die **Sales Quotas-und Sales Quotas 1** Measuregruppen durch reguläre Beziehungen. Beachten Sie außerdem, dass die **Sales Territory** -Cubedimension mit keiner dieser Measuregruppen verknüpft ist.  
   
-4.  Klicken Sie auf die Zelle am Schnittpunkt der **Vertriebsgebiet** Dimension und die `Sales Quotas` Measuregruppe, und klicken Sie dann auf die Schaltfläche zum Durchsuchen (**...** ). Das Dialogfeld **Beziehung definieren** wird geöffnet.  
+4.  Klicken Sie auf die Zelle am Schnittpunkt der **Sales Territory** Dimension und die `Sales Quotas` Measuregruppe, und klicken Sie dann auf die Schaltfläche zum Durchsuchen (**...** ). Das Dialogfeld **Beziehung definieren** wird geöffnet.  
   
 5.  Wählen Sie in der Liste **Beziehungstyp auswählen** die Option **Referenziert**.  
   
@@ -160,11 +160,11 @@ ms.locfileid: "36159067"
   
 18. Löschen der `Date` Cubedimension.  
   
-     Anstatt vier zeitbezogene Cubedimensionen, verwenden Sie die **Bestelldatum** Cubedimension in der `Sales Quotas` Measuregruppe als das Datum für die sales dimensioniert werden verkaufsvorgaben. Sie verwenden diese Cubedimension auch als die primäre Datendimension im Cube.  
+     Anstatt über, vier zeitbezogene Cubedimensionen zu verwenden Sie die **Bestelldatum** -Cubedimension in der `Sales Quotas` Measuregruppe als die Daten für die sollvorgaben für den Verkauf dimensioniert werden verkaufsvorgaben. Sie verwenden diese Cubedimension auch als die primäre Datendimension im Cube.  
   
 19. In der **Dimensionen** auflisten, benennen Sie die **Bestelldatum** Cubedimension in `Date`.  
   
-     Umbenennen der **Bestelldatum** Cubedimension in `Date` erleichtert es dem Benutzer um seine Rolle als primäre Datendimension in diesem Cube zu verstehen.  
+     Umbenennen der **Bestelldatum** Cubedimension in `Date` erleichtert es Benutzern, ihre Rolle als primäre Datendimension in diesem Cube zu verstehen.  
   
 20. Klicken Sie auf die Schaltfläche zum Durchsuchen (**...** ) in der Zelle am Schnittpunkt der `Sales Quotas` Measuregruppe und der `Date` Dimension.  
   
@@ -185,7 +185,7 @@ ms.locfileid: "36159067"
   
 1.  Wechseln Sie zur **Dimensions-Designer** für die `Date` dimension, und klicken Sie dann auf die **Attributbeziehungen** Registerkarte.  
   
-     Beachten Sie, dass, obwohl **Kalenderjahr** verknüpft ist **Calendar Quarter** über die **Calendar Semester** Attributs, des Geschäftskalenders Attribute nur für eine verknüpft sind eine andere; mit nicht verknüpft sind die **Calendar Quarter** Attribut, und daher nicht aggregiert, ordnungsgemäß in den `Sales Quotas` Measuregruppe.  
+     Beachten Sie, dass, obwohl **Kalenderjahr** verknüpft ist **Calendar Quarter** über die **Calendar Semester** Attribut, den Geschäftskalender Attribute nur für eine verknüpft sind eine andere; Sie sind nicht verknüpft, um die **Calendar Quarter** Attribut, und daher nicht aggregiert, ordnungsgemäß in der `Sales Quotas` Measuregruppe.  
   
 2.  Klicken Sie im Diagramm mit der rechten Maustaste auf das Attribut **Calendar Quarter** , und wählen Sie **Neue Attributbeziehung**aus.  
   
@@ -193,7 +193,7 @@ ms.locfileid: "36159067"
   
 4.  Klicken Sie auf **OK**.  
   
-     Beachten Sie, das eine Warnmeldung angezeigt wird, besagt, dass die `Date` Dimension enthält eine oder mehrere redundante attributbeziehungen, die verhindern, dass möglicherweise Daten aggregiert werden, wenn ein nichtschlüsselattribut als Granularitätsattribut ein verwendet wird.  
+     Beachten Sie, das eine Warnmeldung angezeigt wird, besagt, dass die `Date` Dimension enthält eine oder mehrere redundante attributbeziehungen, die verhindern, dass möglicherweise Daten vor dem aggregieren, wenn ein nichtschlüsselattribut als ein Granularitätsattribut verwendet wird.  
   
 5.  Löschen Sie die Attributbeziehung zwischen dem **Month Name** -Attribut und dem **Fiscal Quarter** -Attribut.  
   
@@ -221,7 +221,7 @@ ms.locfileid: "36159067"
   
      Beachten Sie, dass alle Elemente der Geschäftsquartalsebene über den gleichen Wert verfügen wie die Quartalsebene. Wenn beispielsweise **Q1 FY 2008** verwendet wird, entspricht die Vorgabe von $9,180,000.00 für **Q1 FY 2008** auch dem Wert der einzelnen Elemente. Zu diesem Verhalten kommt es, weil die Auflösung der Daten in der Faktentabelle auf der Quartalsebene und die Auflösung der Date-Dimension auch auf der Quartalsebene liegt. In Lektion 6 lernen Sie, wie die Quartalssumme proportional zu jedem Monat zugeordnet wird.  
   
-     ![Sales Quota-Measuregruppe ordnungsgemäß dimensioniert](../../2014/tutorials/media/l5-granularity-7.gif "Sales Quota-Measuregruppe ordnungsgemäß dimensioniert")  
+     ![Sales Quota-Measuregruppe ordnungsgemäß dimensioniert](../../2014/tutorials/media/l5-granularity-7.gif "ordnungsgemäß dimensionierte Sales Quota-Measuregruppe")  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
  [Lektion 6: Definieren von Berechnungen] ((Lektion 6 definieren calculations.md)  
@@ -229,6 +229,6 @@ ms.locfileid: "36159067"
 ## <a name="see-also"></a>Siehe auch  
  [Dimensionsbeziehungen](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Definieren einer regulären Beziehung und reguläre Beziehungseigenschaften](multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)   
- [Verwenden von Diagrammen im Datenquellensicht-Designers &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [Verwenden von Diagrammen im Datenquellensicht-Designer &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

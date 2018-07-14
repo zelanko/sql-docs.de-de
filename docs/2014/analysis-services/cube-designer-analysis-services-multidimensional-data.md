@@ -1,5 +1,5 @@
 ---
-title: Cube-Designer (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Cube-Designer (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Cube Designer
 ms.assetid: a6692467-da88-4312-8b03-d812f2ae5a96
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 00720caa0c9bcae9e04cc542864ab99e14eb0f86
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc6972d90683de658dd0d8104cff138d59960904
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151246"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246280"
 ---
 # <a name="cube-designer-analysis-services---multidimensional-data"></a>Cube-Designer (Analysis Services &ndash; Mehrdimensionale Daten)
   Mithilfe von **Cube-Designer** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie verschiedene Eigenschaften eines vorhandenen Cubes bearbeiten, einschließlich der Measuregruppen und Measures, Cubedimensionen und Dimensionsbeziehungen, Berechnungen, Key Performance Indicators (KPIs), Aktionen, Partitionen, Perspektiven und der im Cube enthaltenen Übersetzungen. Außerdem können Sie die im Cube enthaltenen Daten durchsuchen. Das Dialogfeld **Cube-Designer** können Sie wie folgt aufrufen:  

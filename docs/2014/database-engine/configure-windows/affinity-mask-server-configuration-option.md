@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default affinity mask option
 - reloading processor cache
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - DPC
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 caps.latest.revision: 52
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6c0c94785452841642edac541d9c120bfbd7ad14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 41fad115e39068b60f9d1a08b4fcf08b2c3d392a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160292"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271966"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>Affinitätsmaske (Serverkonfigurationsoption)
     
@@ -63,7 +63,7 @@ ms.locfileid: "36160292"
   
  Wenn Sie eine Affinitätsmaske angeben, die eine nicht vorhandene CPU zuzuordnen versucht, sendet der Befehl RECONFIGURE eine Fehlermeldung an die Clientsitzung und an das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll. Die Verwendung der Option RECONFIGURE WITH OVERRIDE hat in diesem Fall keine Auswirkung, und der gleiche Konfigurationsfehler wird wiederum gemeldet.  
   
- Sie können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Aktivitäten auch von Prozessoren fernhalten, denen eine bestimmte Arbeitsauslastung durch das Betriebssystem Windows 2000 oder Windows Server 2003 zugewiesen wurde. Wird ein Bit, das einen Prozessor darstellt, auf 1 festgelegt, wird dieser Prozessor von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank-Engine für die Threadzuweisung ausgewählt. Bei Festlegung `affinity mask` auf 0 (Standard), die Microsoft Windows 2000 oder Windows Server 2003 Planungsalgorithmen die Threadaffinität festgelegt. Wenn Sie `affinity mask` auf einen Wert ungleich Null festlegen, legt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Affinität den Wert als Bitmaske aus, die die infrage kommenden Prozessoren angibt.  
+ Sie können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Aktivitäten auch von Prozessoren fernhalten, denen eine bestimmte Arbeitsauslastung durch das Betriebssystem Windows 2000 oder Windows Server 2003 zugewiesen wurde. Wird ein Bit, das einen Prozessor darstellt, auf 1 festgelegt, wird dieser Prozessor von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank-Engine für die Threadzuweisung ausgewählt. Wenn Sie festlegen, `affinity mask` auf 0 (Standard) festgelegt die Microsoft Windows 2000 oder Windows Server 2003-scheduling-Algorithmen die Threadaffinität fest. Wenn Sie `affinity mask` auf einen Wert ungleich Null festlegen, legt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Affinität den Wert als Bitmaske aus, die die infrage kommenden Prozessoren angibt.  
   
  Durch das Ausschließen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Threads von der Ausführung auf bestimmten Prozessoren kann Microsoft Windows 2000 oder Windows Server 2003 die Verarbeitung von Windows-spezifischen Prozessen durch das System besser auswerten. Beispielsweise könnte der Systemadministrator auf einem Server mit 8 CPUs und zwei Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Instanz A und B) mithilfe der Option Affinity Mask die ersten 4 CPUs der Instanz A sowie die nächsten 4 CPUs der Instanz B zuweisen. Um mehr als 32 Prozessoren zu konfigurieren, legen Sie die Optionen Affinity Mask und Affinity64 Mask fest. Für `affinity mask` gelten folgende Werte:  
   

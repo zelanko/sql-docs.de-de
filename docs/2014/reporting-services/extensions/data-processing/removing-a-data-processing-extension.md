@@ -16,15 +16,15 @@ helpviewer_keywords:
 - removing data processing extensions
 ms.assetid: 1d89e32b-0631-44f6-8178-a57fb791d26d
 caps.latest.revision: 33
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0ea72edfcea9935b858631a639ec51f67a3feeac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 4327b8f9f6c3d517625f7f6a8e51ded0f90850cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150526"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268466"
 ---
 # <a name="removing-a-data-processing-extension"></a>Entfernen einer Datenverarbeitungserweiterung
   Sie entfernen eine Datenverarbeitungserweiterung, indem Sie das **Erweiterungselement** für die Datenverarbeitungserweiterung aus der Konfigurationsdatei entfernen. Wenn Sie Einträge für einen Berichtsserver und den Berichts-Designer vorgenommen haben, entfernen Sie das **Erweiterungselement** aus den beiden Dateien „RSReportServer.config“ und „RSReportDesigner.config“. Nachdem Sie die Konfigurationsdaten entfernt haben, steht Ihre Datenverarbeitungserweiterung nicht mehr für die Komponente zur Verfügung.  

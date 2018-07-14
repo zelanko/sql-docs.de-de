@@ -1,5 +1,5 @@
 ---
-title: Vergleichen von Business Intelligence-Funktionen In verschiedenen Microsoft-Umgebungen | Microsoft Docs
+title: Vergleichen von Business Intelligence-Funktionen In verschiedenen Microsoft-Umgebungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1fb759ee-8172-4c4c-9f7d-49af2c731006
 caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ae54486aa141880189a012d897251604a292aefe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97ac603e2e043810d468d9c9ada00c11a4f78d15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159956"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188087"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>Vergleichen von Business Intelligence-Funktionen in verschiedenen Microsoft-Umgebungen
-  Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence kann in einer Reihe von verschiedenen Umgebungen einschließlich eingesetzt werden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mit SharePoint-Server, SharePoint Online und Power BI für Office 365. In diesem Thema werden die Komponenten und Funktionen, die in jeder Umgebung unterstützt werden, verglichen.  
+  Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence kann bereitgestellt werden, in einer Reihe von verschiedenen Umgebungen, einschließlich [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mit SharePoint-Server, SharePoint Online und Power BI für Office 365. In diesem Thema werden die Komponenten und Funktionen, die in jeder Umgebung unterstützt werden, verglichen.  
   
  Weitere Informationen zum Vergleich von SharePoint Server und SharePoint Online finden Sie unter [Vergleichen von SharePoint-Plänen und -Optionen](http://products.office.com/SharePoint/compare-sharepoint-plans).  
   
@@ -41,11 +41,11 @@ ms.locfileid: "36159956"
 |Exportieren interaktiver Power View-Dashboards in PowerPoint-Präsentationen|ja|nein|nein|  
 |Erstellen von Dashboards im Browser|ja|nein|nein|  
 |Überwachung der Verwendung|ja|nein|ja|  
-|Nutzen zeilenbasierter Sicherheit von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cubes|ja|nein|nein|  
+|Nutzen zeilenbasierter Sicherheit [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cubes|ja|nein|nein|  
   
  **<sup>1</sup>**[Grundlegendes zur Rolle von Data Stewards in der Datenverwaltung](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US) und [Video: Power BI-Informationsverwaltung und Data Stewardship](https://www.youtube.com/watch?v=8dHOj68ts7c).    
   
- **<sup>2</sup>**[Power BI Q & A: Optimieren der Power BI-Arbeitsmappe (cloudmodellierung)](https://support.office.com/article/Power-BI-Q-A-Optimize-a-Power-BI-workbook-cloud-modeling--96dc5941-d0f1-44e2-9d9d-c038a3a55849?ui=en-US&rs=en-US&ad=US).    
+ **<sup>2</sup>**[Power BI F & A: Optimieren eine Power BI-Arbeitsmappe (cloudmodellierung)](https://support.office.com/article/Power-BI-Q-A-Optimize-a-Power-BI-workbook-cloud-modeling--96dc5941-d0f1-44e2-9d9d-c038a3a55849?ui=en-US&rs=en-US&ad=US).    
   
  **<sup>3</sup>**[Einführung in neuer Prognosefunktionen in Power View für Office 365](http://blogs.msdn.com/b/powerbi/archive/2014/05/08/introducing-new-forecasting-capabilities-in-power-view-for-office-365.aspx).    
   
@@ -63,7 +63,7 @@ ms.locfileid: "36159956"
   
  **<sup>2</sup>**[PowerPivot-Arbeitsmappen als Datenquelle  ](http://blogs.technet.com/b/excel_services__powerpivot_for_sharepoint_support_blog/archive/2013/02/15/powerpivot-workbook-as-a-data-source.aspx)  
   
- **<sup>3</sup>**[mobilunterstützung von Business Intelligence (BI)-Tools](http://msdn.microsoft.com/library/dn151146\(v=sql.110\).aspx) und [Planung für Reporting Services und Power View-Browserunterstützung (Reporting Services 2014)](http://msdn.microsoft.com/library/ms156511.aspx).    
+ **<sup>3</sup>**[Mobilunterstützung von Business Intelligence (BI)-Tools](http://msdn.microsoft.com/library/dn151146\(v=sql.110\).aspx) und [Browserunterstützung für Reporting Services und Power View-Browserunterstützung (Reporting Services 2014)](http://msdn.microsoft.com/library/ms156511.aspx).    
   
 ## <a name="more-information"></a>Weitere Informationen  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36159956"
   
 -   [Vergleich einer BI Center-Website mit Power BI für Office 365-Websites](http://technet.microsoft.com/library/dn394343\(v=office.15\).aspx).  
   
--   [Einführung in Microsoft BI-Berichterstellungs- und Analysetools](http://go.microsoft.com/fwlink/p/?LinkId=617093)  
+-   [Einführung in Microsoft BI-Berichterstellung und Analyse-Tools](http://go.microsoft.com/fwlink/p/?LinkId=617093)  
   
 ## <a name="community-content"></a>Community-Inhalt  
  [Microsoft Self-Service-BI: lokal versus Cloud](http://businessintelligist.com/2014/02/07/microsoft-self-service-bi-on-premise-vs-could/).  

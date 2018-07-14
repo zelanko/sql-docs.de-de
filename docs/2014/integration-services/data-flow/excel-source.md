@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.excelsource.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c0b27e464fc28ed85d3b3c3b33eaf4b1d05a38e2
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: ed8d16bc5c9d9d653404a5c049ac10cedc9f129a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324664"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199680"
 ---
 # <a name="excel-source"></a>Excel-Quelle
   Die Excel-Quelle extrahiert Daten aus Arbeitsblättern oder Bereichen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel-Arbeitsmappen.  
@@ -55,7 +55,7 @@ ms.locfileid: "36324664"
   
 -   **Datenquellen**. Die Quelle von Daten in einer Excel-Arbeitsmappe kann ein Arbeitsblatt sein, an das das $-Zeichen angefügt werden muss (z. B. Sheet1$), oder ein benannter Bereich (z. B. MyRange). In einer SQL-Anweisung muss der Name eines Arbeitsblatts mit Trennzeichen versehen sein (z. B. [Sheet1$]), um Syntaxfehler durch das $-Zeichen zu vermeiden. Der Abfrage-Generator fügt diese Trennzeichen automatisch hinzu. Wenn Sie ein Arbeitsblatt angeben, liest der Treiber den zusammenhängenden Zellenblock ab der ersten nicht leeren Zelle in der linken oberen Ecke des Arbeitsblatts oder Bereichs. Deshalb sind leere Zeilen in den Quelldaten oder eine leere Zeile zwischen Titel- oder Kopfzeilen und den Datenzeilen nicht zulässig.  
   
--   **Fehlende Werte**. Der Excel-Treiber liest eine bestimmte Anzahl von Zeilen (standardmäßig 8 Zeilen) in der angegebenen Quelle, um den Datentyp jeder Spalte zu ermitteln. Wenn eine Spalte offensichtlich gemischte Datentypen enthält, insbesondere eine Mischung aus numerischen Daten und Textdaten, entscheidet der Treiber zugunsten des Mehrheitsdatentyps und gibt in Zellen mit Daten des anderen Datentyps NULL-Werte zurück. (In einer unentschiedenen Situation hat der numerische Datentyp Vorrang.) Die meisten Zellenformatierungsoptionen im Excel-Arbeitsblatt scheinen keinen Einfluss auf diese Datentypfestlegung zu haben. Sie können dieses Verhalten des Excel-Treibers ändern, indem Sie den Importmodus angeben. Fügen Sie zum Angeben der Modus "Import" `IMEX=1` auf den Wert für die erweiterten Eigenschaften in der Verbindungszeichenfolge des Excel-Verbindungs-Managers in der **Eigenschaften** Fenster. Weitere Informationen finden Sie unter [PRB: Mithilfe von DAO OpenRecordset als NULL zurückgegebene Excel-Werte](http://support.microsoft.com/kb/194124)(maschinelle Übersetzung).  
+-   **Fehlende Werte**. Der Excel-Treiber liest eine bestimmte Anzahl von Zeilen (standardmäßig 8 Zeilen) in der angegebenen Quelle, um den Datentyp jeder Spalte zu ermitteln. Wenn eine Spalte offensichtlich gemischte Datentypen enthält, insbesondere eine Mischung aus numerischen Daten und Textdaten, entscheidet der Treiber zugunsten des Mehrheitsdatentyps und gibt in Zellen mit Daten des anderen Datentyps NULL-Werte zurück. (In einer unentschiedenen Situation hat der numerische Datentyp Vorrang.) Die meisten Zellenformatierungsoptionen im Excel-Arbeitsblatt scheinen keinen Einfluss auf diese Datentypfestlegung zu haben. Sie können dieses Verhalten des Excel-Treibers ändern, indem Sie den Importmodus angeben. Fügen Sie zum Angeben der Importmodus `IMEX=1` auf den Wert für die erweiterten Eigenschaften in der Verbindungszeichenfolge des Excel-Verbindungs-Managers in die **Eigenschaften** Fenster. Weitere Informationen finden Sie unter [PRB: Mithilfe von DAO OpenRecordset als NULL zurückgegebene Excel-Werte](http://support.microsoft.com/kb/194124)(maschinelle Übersetzung).  
   
 -   **Abgeschnittener Text**. Wenn der Anbieter bestimmt, dass eine Excel-Spalte Textdaten enthält, wählt der Treiber den Datentyp (string- oder memo-Datentyp) auf Basis des längsten Werts, der als Stichprobe genommenen wird. Wenn der Treiber in den als Stichprobe genommenen Zeilen keine Werte mit mehr als 255 Zeichen findet, wird die Spalte nicht als Memospalte, sondern als Zeichenfolgenspalte mit 255 Zeichen behandelt. Deshalb können Werte, die länger als 255 Zeichen sind, abgeschnitten werden. Um Daten aus einer Memospalte ohne das Abschneiden von Daten zu importieren, müssen Sie sicherstellen, dass die Memospalte mindestens eine der als Stichprobe genommenen Zeilen einen Wert mit mehr als 255 Zeichen enthält, oder Sie müssen die vom Treiber als Stichprobe genommene Zeilenanzahl erhöhen, um solch eine Zeile einzuschließen. Sie können die Zeilenanzahl in der Stichprobe steigern, indem Sie den Wert von **TypeGuessRows** unter dem Registrierungsschlüssel **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Jet\4.0\Engines\Excel** erhöhen. Weitere Informationen finden Sie unter [PRB: Übertragung von Daten aus Jet 4.0 OLEDB-Quelle schlägt mit Pufferüberlauffehler fehl](http://support.microsoft.com/kb/281517).  
   

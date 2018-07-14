@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 caps.latest.revision: 15
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 399c6743f302bd616fe0a232527fcb5fc0af62ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 874a47c99ff422484a25be756d65f4b6cbf7e051
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160452"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199670"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Erstellen eines Modellbereitstellungspakets mit MDSModelDeploy
   Sie verwenden in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]das Tool MDSModelDeploy, um ein Paket zu erstellen. Abhängig von den angegebenen Befehlen kann das Paket folgenden Inhalt haben:  
@@ -30,7 +30,7 @@ ms.locfileid: "36160452"
   
  Wenn Sie ein Paket bereitstellen möchten, das nur Modellobjekte enthält, können Sie stattdessen den Modellbereitstellungs-Assistenten in der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung verwenden. Weitere Informationen finden Sie unter [Erstellen eines Modellbereitstellungspakets mithilfe des Assistenten](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md).  
 > [!NOTE]  
-> Diese Version des Tools MDSModelDeploy kann nicht mehrere Gigabyte (GB) Speicher verwenden. Beim Erstellen oder Bereitstellen von großen Modellen mithilfe von **Model-Objekte und Daten** Option "nicht genügend Arbeitsspeicher" oder "Datenstrom war zu lang"-Fehler können auftreten. Um dieses Problem zu beheben, verwenden Sie MDS-Stagingtabelle zum Bereitstellen von Daten; oder eine Aktualisierung auf MDS 2016 oder eine höhere Version, die die aktualisierte Version des Tools MDSModelDeploy enthält.
+> Diese Version des Tools MDSModelDeploy kann nicht mehrere Gigabyte (GB) Arbeitsspeicher verwenden. Beim Erstellen oder Bereitstellen von großen Modellen **Model-Objekte und Daten** Option "nicht genügend Arbeitsspeicher" oder "Stream war zu lang"-Fehler können auftreten. Um dieses Problem zu beheben, verwenden Sie MDS staging, um die Daten bereitzustellen; oder ein upgrade auf die MDS-2016 oder höher, die die aktualisierte Version des Tools MDSModelDeploy enthält.
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36160452"
   
 2.  Navigieren Sie zum Speicherort von "MDSModelDeploy.exe".  
   
-    -   Wenn MDS am Standardspeicherort installiert wurde, wird die Datei *Laufwerk*: \Programme\Microsoft SQL Server\120\Master Data Services\Configuration.  
+    -   Wenn MDS am Standardspeicherort installiert wurde, wird die Datei im *Laufwerk*: \Programme\Microsoft SQL Server\120\Master Data Services\Configuration.  
   
     -   Wenn MDS nicht am Standardspeicherort installiert wurde, suchen Sie auf dem lokalen Computer nach der Datei "MDSModelDeploy.exe".  
   
@@ -103,7 +103,7 @@ ms.locfileid: "36160452"
 -   [Bereitstellen eines Modellbereitstellungspakets mit MDSModelDeploy](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Modellieren von Bereitstellungsoptionen &#40;Master Data Services&#41;](../../2014/master-data-services/model-deployment-options-master-data-services.md)   
+ [Optionen für Modellbereitstellung &#40;Master Data Services&#41;](../../2014/master-data-services/model-deployment-options-master-data-services.md)   
  [Bereitstellen von Modellen &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
   

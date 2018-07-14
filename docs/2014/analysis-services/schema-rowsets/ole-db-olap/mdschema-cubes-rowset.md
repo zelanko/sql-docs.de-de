@@ -1,5 +1,5 @@
 ---
-title: MDSCHEMA_CUBES-Rowset | Microsoft Docs
+title: MDSCHEMA_CUBES-Rowset | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_CUBES rowset
 ms.assetid: 5f1b63d4-aa3f-48c6-b866-7ffd91675044
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0044c9943b2f2819ea216c735f298b7e30de7a3a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 441f83b4b5bec1a2340fbf6e8a3b14da77363162
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150894"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243400"
 ---
 # <a name="mdschemacubes-rowset"></a>MDSCHEMA_CUBES-Rowset
   Beschreibt die Struktur der Cubes innerhalb einer Datenbank.  
@@ -38,7 +38,7 @@ ms.locfileid: "36150894"
 |-----------------|--------------------|------------|-----------------|  
 |`CATALOG_NAME`|`DBTYPE_WSTR`||Der Name der Datenbank.|  
 |`SCHEMA_NAME`|`DBTYPE_WSTR`||Wird nicht unterstützt.|  
-|`CUBE_NAME`|`DBTYPE_WSTR`||Der Name des Cubes oder der Dimension. Dimensionsnamen ist ein Dollarzeichensymbol ($) vorangestellt. **Hinweis:** nur Server- und Datenbankadministratoren Berechtigungen zum Anzeigen von Cubes haben, die aus einer Dimension erstellt wurden.|  
+|`CUBE_NAME`|`DBTYPE_WSTR`||Der Name des Cubes oder der Dimension. Dimensionsnamen ist ein Dollarzeichensymbol ($) vorangestellt. **Hinweis:** nur Server- und Datenbankadministratoren Berechtigungen haben, um aus einer Dimension erstellten Cubes finden Sie unter.|  
 |`CUBE_TYPE`|`DBTYPE_WSTR`||Der Typ des Cubes. Gültige Werte sind:<br /><br /> -   `CUBE`<br />-   `DIMENSION`|  
 |`CUBE_GUID`|`DBTYPE_GUID`||Wird nicht unterstützt.|  
 |`CREATED_ON`|`DBTYPE_DBTIMESTAMP`||Wird nicht unterstützt.|  

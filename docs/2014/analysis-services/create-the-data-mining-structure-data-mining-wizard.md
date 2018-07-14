@@ -1,5 +1,5 @@
 ---
-title: Erstellen von Datamining-Struktur (Datamining-Assistent) | Microsoft Docs
+title: Erstellen von Datamining-Struktur (Datamining-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectminingtechnique.f1
 ms.assetid: d1ff17b2-fff3-4ed7-a5d6-42d131e59f93
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f7f857256c2c8ab55b3ae35f48dce8ac3448baa3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 638fa1cef33676b35415d29c1ff47602d3e1e56b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150466"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241830"
 ---
 # <a name="create-the-data-mining-structure-data-mining-wizard"></a>Data Mining-Struktur erstellen (Data Mining-Assistent)
   Auf der Seite **Data Mining-Struktur erstellen** können Sie eine Data Mining-Struktur und optional ein zugehöriges Miningmodell erstellen.  
@@ -31,7 +31,7 @@ ms.locfileid: "36150466"
  **Weitere Informationen:** [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md), [Data Mining-Assistent &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Tastatur  
- **Miningstruktur mit einem Miningmodell erstellen**  
+ **Miningstruktur mit Miningmodell erstellen**  
  Aktivieren Sie diese Option, um eine Miningstruktur zu erstellen und dann ein zugeordnetes Modell zu erstellen.  
   
  **Welche Datamining-Technik möchten Sie verwenden?**  
@@ -48,7 +48,7 @@ ms.locfileid: "36150466"
   
 ## <a name="see-also"></a>Siehe auch  
  [Data Mining-Assistent F1-Hilfe &#40;Analysis Services – Datamining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Wählen Sie die Datenquellensicht &#40;Datamining-Assistenten&#41;](select-data-source-view-data-mining-wizard.md)   
- [Definitionsmethode auswählen &#40;Datamining-Assistenten&#41;](select-the-definition-method-data-mining-wizard.md)  
+ [Wählen Sie die Datenquellensicht &#40;Datamining-Assistent&#41;](select-data-source-view-data-mining-wizard.md)   
+ [Definitionsmethode auswählen &#40;Datamining-Assistent&#41;](select-the-definition-method-data-mining-wizard.md)  
   
   

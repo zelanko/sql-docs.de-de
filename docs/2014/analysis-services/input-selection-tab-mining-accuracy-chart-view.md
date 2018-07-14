@@ -1,5 +1,5 @@
 ---
-title: Geben Sie die Registerkarte ' Ereignisauswahl ' (Mininggenauigkeitsdiagrammsicht) | Microsoft Docs
+title: Geben Sie die Registerkarte "Ereignisauswahl" (Mininggenauigkeitsdiagrammsicht) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.columnmapping.f1
 ms.assetid: f8b1193c-5c86-4c7e-8e35-158d293184fa
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb5abde47c5da9405f7768f1167496fdd603f04f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bbee4807b3e68c79edd9e06fbbf85379dc49354b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161686"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198210"
 ---
 # <a name="input-selection-tab-mining-accuracy-chart-view"></a>Eingabeauswahl (Registerkarte, Mininggenauigkeitsdiagramm-Sicht)
   Mithilfe der Registerkarte **Eingabeauswahl** von **Mininggenauigkeitsdiagramm** können Sie die Datenquelle angeben, aus der die zum Testen des Modells und zum Erstellen des Genauigkeitsdiagramms verwendeten Daten stammen.  
@@ -72,7 +72,7 @@ ms.locfileid: "36161686"
  Öffnet das Dialogfeld **Datasetfilter** , in dem Sie externe Tabellen auswählen und Bedingungen für Spalten der Falltabelle festlegen können, sowie das Dialogfeld **Filter** , in dem Sie Bedingungen erstellen können, die für einzelne Spalten in der ausgewählten Tabelle oder für Spalten in geschachtelten Tabellen gelten.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tests und Überprüfung miningmodelltasks und &#40;Datamining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [Tests und Überprüfung miningmodelltasks und Anweisungen &#40;Datamining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [Mining-Genauigkeitsdiagramm-Designer &#40;Datamining&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Anwenden eines Filters auf ein Miningmodell](data-mining/apply-a-filter-to-a-mining-model.md)   
  [Filter für Miningmodelle &#40;Analysis Services – Datamining&#41;](data-mining/mining-models-analysis-services-data-mining.md)  

@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - audit records [SQL Server]
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f62cf2b44af1b34b87ce5f08e993135d1447ed59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: a55513bbe857d1d3ea48371d1e147d54ce8d3326
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158946"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253778"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit-Datensätze
   Die Funktion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit ermöglicht es, Ereignisgruppen und Ereignisse auf Serverebene und auf Datenbankebene zu überwachen. Weitere Informationen finden Sie unter [SQL Server Audit &amp;#40;Datenbank-Engine&amp;#41;](sql-server-audit-database-engine.md). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]installiert haben.  
@@ -35,7 +34,7 @@ ms.locfileid: "36158946"
 |**action_id**|ID der Aktion<br /><br /> Tipp: Damit **action_id** als Prädikat verwendet werden kann, muss eine Konvertierung von einer Zeichenfolge in einen numerischen Wert durchgeführt werden. Weitere Informationen finden Sie unter [Filtern von SQL Server Audit nach dem action_id-Prädikat oder class_type-Prädikat](http://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx).|`varchar(4)`|ja|  
 |**succeeded**|Gibt an, ob die Aktion, die das Ereignis ausgelöst hat, erfolgreich war.|`bit` – 1 = Erfolg, 0 = Fehler|ja|  
 |**permission_bitmask**|Zeigt, sofern anwendbar, die Berechtigungen an, die gewährt, verweigert oder widerrufen wurden.|`bigint`|nein|  
-|**is_column_permission**|Flag, das eine Berechtigung auf Spaltenebene angibt.|`bit` – 1 = "true", 0 = "false"|nein|  
+|**is_column_permission**|Flag, das eine Berechtigung auf Spaltenebene angibt.|`bit` – 1 = "true", 0 = False|nein|  
 |**session_id**|Die ID der Sitzung, in der das Ereignis aufgetreten ist.|`int`|ja|  
 |**server_principal_id**|ID des Anmeldekontexts, in dem die Aktion ausgeführt wird.|`int`|ja|  
 |**database_principal_id**|ID des Datenbankbenutzerkontexts, in dem die Aktion ausgeführt wird.|`int`|nein|  

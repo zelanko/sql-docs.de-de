@@ -5,24 +5,23 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data formats [SQL Server], character
 - character formats [SQL Server]
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2c5efc1697e9911a667872f7293ab971b75a1398
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a4249f87cf7a8361056caf6c49b3775848d7dfe5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150374"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250190"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Verwenden des Zeichenformats zum Importieren und Exportieren von Daten (SQL Server)
   Das Zeichenformat wird für den Massenexport von Daten in eine Textdatei empfohlen, die in einem anderen Programm verwendet werden sollen, oder für den Massenimport von Daten aus einer Textdatei, die von einem anderen Programm generiert werden.  
@@ -46,9 +45,9 @@ ms.locfileid: "36150374"
   
 -   Um den Verlust von Sonderzeichen zu verhindern, verwenden Sie das Unicode-Zeichenformat, oder geben Sie eine Codepage an.  
   
--   Alle `sql_variant`-Daten, die in einer Zeichenformatdatei gespeichert sind, werden ohne Metadaten gespeichert. Jedes Datenwerts wird konvertiert, um `char` gemäß den Regeln der impliziten Datenkonvertierung-Format. Beim Importieren in eine `sql_variant`-Spalte werden die Daten als `char`-Datentyp importiert. Beim Importieren in eine Spalte mit einem Datentyp außer `sql_variant`, die Daten von konvertiert `char` mithilfe der impliziten Konvertierung. Weitere Informationen zur Datenkonvertierung finden Sie unter [Datentypkonvertierung &amp;#40;Datenbank-Engine&amp;#41;](/sql/t-sql/data-types/data-type-conversion-database-engine).  
+-   Alle `sql_variant`-Daten, die in einer Zeichenformatdatei gespeichert sind, werden ohne Metadaten gespeichert. Jedes Datenwerts wird in konvertiert `char` Format gemäß den Regeln der impliziten Datenkonvertierung. Beim Importieren in eine `sql_variant`-Spalte werden die Daten als `char`-Datentyp importiert. Beim Importieren in eine Spalte mit einem Datentyp außer `sql_variant`, die Daten werden von konvertiert `char` mithilfe der impliziten Konvertierung. Weitere Informationen zur Datenkonvertierung finden Sie unter [Datentypkonvertierung &amp;#40;Datenbank-Engine&amp;#41;](/sql/t-sql/data-types/data-type-conversion-database-engine).  
   
--   Die **Bcp** Hilfsprogramm Exporte `money` Werte als Datendateien im Zeichenformat mit vier Stellen nach dem Dezimaltrennzeichen und ohne alle Symbole zifferngruppierung, wie z. B. Kommas als Trennzeichen. So wird z. B. eine `money`-Spalte mit dem Wert 1,234,567.123456 beim Massenkopieren in eine Datendatei als die Zeichenfolge 1234567.1235 massenexportiert.  
+-   Die **Bcp** Hilfsprogramm Exporte `money` Werte wie Datendateien im Zeichenformat mit vier Stellen nach dem Dezimaltrennzeichen und ohne alle Symbole wie z. B. Kommas als Trennzeichen. So wird z. B. eine `money`-Spalte mit dem Wert 1,234,567.123456 beim Massenkopieren in eine Datendatei als die Zeichenfolge 1234567.1235 massenexportiert.  
   
 ## <a name="command-options-for-character-format"></a>Befehlsoptionen für das Zeichenformat  
  Sie können Daten im Zeichenformat in eine Tabelle importieren, indem Sie die folgenden Anweisungen verwenden: **bcp**, BULK INSERT oder INSERT ... SELECT \* FROM OPENROWSET(BULK...). Für einen **bcp**-Befehl oder eine BULK INSERT-Anweisung können Sie das Datenformat in der Befehlszeile angeben. Für eine INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung müssen Sie das Datenformat in einer Formatdatei angeben.  
@@ -57,10 +56,10 @@ ms.locfileid: "36150374"
   
 |Befehl|Option|Description|  
 |-------------|------------|-----------------|  
-|**bcp**|**-c**|Bewirkt, dass die **Bcp** Hilfsprogramm Zeichendaten verwendet.<sup> 1</sup>|  
+|**bcp**|**-c**|Bewirkt, dass die **Bcp** Dienstprogramm mit Zeichendaten enthalten sind.<sup> 1</sup>|  
 |BULK INSERT|DATAFILETYPE **='char'**|Verwendet das Zeichenformat beim Massenimport von Daten.|  
   
- <sup>1</sup> um Zeichen zu laden (**- C**) in ein Format, die kompatibel mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Clients verwenden die **-V** wechseln. Weitere Informationen finden Sie unter [Importieren von Daten aus früheren SQL Server-Versionen im nativen Format oder im Zeichenformat](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
+ <sup>1</sup> zum Laden von Zeichen (**- C**) in ein Format, die kompatibel mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Clients verwenden die **-V** wechseln. Weitere Informationen finden Sie unter [Importieren von Daten aus früheren SQL Server-Versionen im nativen Format oder im Zeichenformat](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
   
  Weitere Informationen finden Sie unter [bcp (Hilfsprogramm)](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql), oder [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   

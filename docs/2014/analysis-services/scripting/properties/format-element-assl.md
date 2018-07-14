@@ -1,5 +1,5 @@
 ---
-title: Format-Element (ASSL) | Microsoft Docs
+title: Format-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Format element
 ms.assetid: 881ea707-52a7-46f7-ba16-ac2ec44eca22
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b7434ba5d6e2db8d2a2e665fa333799b6b2e9eb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b8b5fdae50b38c81ad29143887717b412084c2c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160313"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169501"
 ---
 # <a name="format-element-assl"></a>Format-Element (ASSL)
   Enthält das erforderliche Format von der [DataItem](../data-type/dataitem-data-type-assl.md) Element.  
@@ -58,7 +58,7 @@ ms.locfileid: "36160313"
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnetes Element|[DataItem](../data-type/dataitem-data-type-assl.md)|  
+|Übergeordnetes Element|[DataItem-Objekt](../data-type/dataitem-data-type-assl.md)|  
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -74,7 +74,7 @@ ms.locfileid: "36160313"
 |*TrimNone*|Die Daten werden nicht gekürzt.|  
 |*TrimRight*|Die Daten werden auf der rechten Seite gekürzt.|  
   
- Das Element, das das übergeordnete Element des entspricht `Format` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.DataItem>.  
+ Das Element, das dem übergeordneten entspricht `Format` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.DataItem>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

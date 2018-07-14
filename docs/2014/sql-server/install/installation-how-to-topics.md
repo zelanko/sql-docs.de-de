@@ -1,5 +1,5 @@
 ---
-title: Vorgehensweisen zum Installieren | Microsoft Docs
+title: Gewusst-wie-Themen für die Installation | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installation [SQL Server]
 - installing SQL Server, how-to topics
 ms.assetid: 59de41e7-557f-462a-8914-53ec35496baa
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7d9159ce105c284dd9e5c66ac3127bfa0df9713c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f4fbf9a77563d670713836fb2dea7d248756bdb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161468"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170258"
 ---
 # <a name="installation-how-to-topics"></a>Themen zu Vorgehensweisen für die Installation
   Verwenden Sie die folgenden Themen für die Installation von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -44,7 +44,7 @@ ms.locfileid: "36161468"
   
 ## <a name="see-also"></a>Siehe auch  
  [Planen einer SQL Server-Installation](../../../2014/sql-server/install/planning-a-sql-server-installation.md)   
- [Aktualisieren auf SQLServer 2014](../../database-engine/install-windows/upgrade-sql-server.md)   
+ [Upgrade auf SQLServer 2014](../../database-engine/install-windows/upgrade-sql-server.md)   
  [Installieren von SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
   
   

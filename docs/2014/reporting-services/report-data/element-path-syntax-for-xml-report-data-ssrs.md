@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ElementPath syntax
 - XML [Reporting Services], data retrieval
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 caps.latest.revision: 42
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 238db7511e34992dfb8d2ca510e2080db4ce138a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: bcb0036fbf6d0c3f5af18d044d389bc8673cd5ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151522"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238501"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Syntax für Elementpfade für XML-Berichtsdaten (SSRS)
   Im Berichts-Designer geben Sie die Daten, die für einen Bericht aus einer XML-Datenquelle verwendet werden sollen, durch Definieren eines Elementpfades (mit Unterscheidung von Groß-/Kleinschreibung) an. Mit einem Elementpfad wird angegeben, wie die hierarchischen XML-Knoten und ihre Attribute in der XML-Datenquelle durchsucht werden können. Lassen Sie die Datasetabfrage oder den XML-`ElementPath` der XML-`Query` leer, um den Standardelementpfad zu verwenden. Wenn Daten aus der XML-Datenquelle abgerufen werden, werden Elementknoten mit Textwerten und Elementknotenattribute im Resultset zu Spalten. Die Werte der Knoten und Attribute werden beim Ausführen der Abfrage zu Zeilendaten. Die Spalten werden als Datasetfeldauflistung im Berichtsdatenbereich angezeigt. In diesem Thema wird die Syntax für Elementpfade beschrieben.  
   
 > [!NOTE]  
->  Die Syntax von Elementpfaden ist nicht vom Namespace abhängig. Um in einem Elementpfad Namespaces verwenden möchten, verwenden Sie die XML-Abfragesyntax, die eine XML-Datei enthält `ElementPath` Element in der beschriebenen [XML-Abfragesyntax für XML-Berichtsdaten &#40;SSRS&#41;](report-data-ssrs.md).  
+>  Die Syntax von Elementpfaden ist nicht vom Namespace abhängig. Um Namespaces in einem Elementpfad zu verwenden, verwenden Sie die XML-Abfragesyntax, die einem XML-Element enthält `ElementPath` -Element beschrieben wird, im [XML-Abfragesyntax für XML-Berichtsdaten &#40;SSRS&#41;](report-data-ssrs.md).  
   
  In der folgenden Tabelle werden Konventionen für das Definieren eines Elementpfades beschrieben.  
   
@@ -80,20 +80,20 @@ XMLLocalName :: =
 |----------|----------------|  
 |Elementpfad|Definiert die zu durchsuchende Sequenz von Knoten im XML-Dokument, um Felddaten für ein Dataset mit einer XML-Datenquelle abzurufen.|  
 |`ElementNode`|Der XML-Knoten im XML-Dokument. Knoten werden durch Tags gekennzeichnet und sind in einer hierarchischen Beziehung mit anderen Knoten vorhanden. Bei <Kunden\< handelt es sich beispielsweise um den Stammknoten des Elements. <Kunde\< ist ein untergeordnetes Element von <Kunden\<.|  
-|`XMLName`|Der Name des Knotens. Der Name des Knotens Customers ist beispielsweise Customers. Ein `XMLName` einen Namespace-Bezeichner, um jeden Knoten eindeutig zu benennen vorangestellt werden kann.|  
+|`XMLName`|Der Name des Knotens. Der Name des Knotens Customers ist beispielsweise Customers. Ein `XMLName` vorangestellt durchgeführt werden können, einen Namespace-Bezeichner, um jeden Knoten eindeutig zu benennen.|  
 |`Encoding`|Gibt an, dass die `Value` für dieses Element codiertes XML darstellt und Anforderungen decodiert werden sowie als ein untergeordnetes Element dieses Elements enthalten.|  
-|`FieldList`|Definiert eine Gruppe von Elementen und Attributen, die zum Abrufen von Daten verwendet werden.<br /><br /> Wenn dieses Element nicht angegeben wird, werden alle Attribute und untergeordneten Elemente als Felder verwendet. Wenn die leere Feldliste angegeben wird (**{}**), werden keine Felder von diesem Knoten verwendet.<br /><br /> Ein `FieldList` dürfen nicht sowohl eine `Value` und ein `Element` oder `ElementNode`.|  
+|`FieldList`|Definiert eine Gruppe von Elementen und Attributen, die zum Abrufen von Daten verwendet werden.<br /><br /> Wenn dieses Element nicht angegeben wird, werden alle Attribute und untergeordneten Elemente als Felder verwendet. Wenn die leere Feldliste angegeben wird (**{}**), werden keine Felder von diesem Knoten verwendet.<br /><br /> Ein `FieldList` darf nicht sowohl eine `Value` und `Element` oder `ElementNode`.|  
 |`Field`|Gibt die Daten an, die als Datasetfeld abgerufen werden.|  
-|`Attribute`|Ein Name / Wert-Paar in der `ElementNode`. Beispielsweise ist in den Elementknoten \<Kunden-ID = "1" >, `ID` ist ein Attribut und `@ID(Integer)` gibt "1" als ganze Zahl zurück, das entsprechende Feld "Daten" `ID`.|  
-|`Value`|Der Wert des Elements. `Value` kann nur für den letzten `ElementNode` im Elementpfad verwendet werden. Z. B. weil \<zurückgeben > ein Blattknotens ist, wenn Sie sie am Ende eines elementpfades den Wert der einschließen `Return {@}` ist `Chair`.|  
+|`Attribute`|Ein Name / Wert-Paar in der `ElementNode`. Z. B. in den Elementknoten \<Kunden-ID = "1" >, `ID` ist ein Attribut und `@ID(Integer)` gibt "1" als Integer-Typ in der entsprechenden Datenfeld- `ID`.|  
+|`Value`|Der Wert des Elements. `Value` kann nur für den letzten `ElementNode` im Elementpfad verwendet werden. Z. B. weil \<zurückgeben > um ein Blattknoten handelt, wenn Sie es am Ende eines elementpfades den Wert der einfügen `Return {@}` ist `Chair`.|  
 |`Element`|Der Wert des benannten untergeordneten Elements. Beispielsweise werden mithilfe von Customers {}/Customer {}/LastName nur Werte für das LastName-Element abgerufen.|  
 |`Type`|Der optionale Datentyp, der für das aus diesem Element erstellte Feld zu verwenden ist.|  
-|`NamespacePrefix`|`NamespacePrefix` wird im XML-Abfrageelement definiert. Wenn kein XML-Abfrageelement vorhanden ist, Namespaces im XML- `ElementPath` werden ignoriert. Wenn ein XML-Abfrageelement vorhanden ist, verfügt der XML-`ElementPath` über das optionale Attribut `IgnoreNamespaces`. Ist das IgnoreNamespaces `true`, Namespaces im XML- `ElementPath` und das XML-Dokument werden ignoriert. Weitere Informationen finden Sie unter [XML-Abfragesyntax für XML-Berichtsdaten (SSRS)](report-data-ssrs.md).|  
+|`NamespacePrefix`|`NamespacePrefix` wird im XML-Abfrageelement definiert. Wenn kein XML-Abfrageelement vorhanden ist, Namespaces im XML- `ElementPath` werden ignoriert. Wenn ein XML-Abfrageelement vorhanden ist, verfügt der XML-`ElementPath` über das optionale Attribut `IgnoreNamespaces`. Wenn IgnoreNamespaces `true`, Namespaces im XML- `ElementPath` und im XML-Dokument ignoriert. Weitere Informationen finden Sie unter [XML-Abfragesyntax für XML-Berichtsdaten (SSRS)](report-data-ssrs.md).|  
   
 ## <a name="example---no-namespaces"></a>Beispiel – Keine Namespaces  
  In den folgenden Beispiele wird das XML-Dokument "Customers.xml" verwendet. Diese Tabelle zeigt Beispiele zur Syntax von Elementpfaden und die Ergebnisse beim Verwenden des Elementpfades in einer Abfrage an, die ein Dataset anhand eines als Datenquelle dienenden XML-Dokuments definiert.  
   
- Beachten Sie, dass wenn der Elementpfad leer ist, die Abfrage der standardelementpfad verwendet: der erste Pfad zu einer blattknotenauflistung. Im ersten Beispiel entspricht das Leerlassen des Elementpfades dem Angeben des Elementpfades /Customers/Customer/Orders/Order. Alle Knotenwerte und -attribute entlang dieses Pfades werden im Resultset zurückgegeben, und die Knotennamen und -attribute werden als Datasetfelder angezeigt.  
+ Beachten Sie, dass wenn der Elementpfad leer ist, die Abfrage der standardelementpfad verwendet: den ersten Pfad zur blattknotenauflistung. Im ersten Beispiel entspricht das Leerlassen des Elementpfades dem Angeben des Elementpfades /Customers/Customer/Orders/Order. Alle Knotenwerte und -attribute entlang dieses Pfades werden im Resultset zurückgegeben, und die Knotennamen und -attribute werden als Datasetfelder angezeigt.  
   
 -   *Leer*  
   

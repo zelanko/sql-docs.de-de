@@ -1,5 +1,5 @@
 ---
-title: Diskretisierungsmethoden (Datamining) | Microsoft Docs
+title: Diskretisierungsmethoden (Datamining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content types [data mining]
 - discretization [Analysis Services]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: 02c0df7b-6ca5-4bd0-ba97-a5826c9da120
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c2cedf4996536560ff415746c7948cc62a86de77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29ef2a25704911e1feb31f20a048952d45966925
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160536"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206250"
 ---
 # <a name="discretization-methods-data-mining"></a>Diskretisierungsmethoden (Data Mining)
   Einige Algorithmen, die verwendet werden, um Data Mining-Modelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zu erstellen, benötigen bestimmte Inhaltstypen, um richtig zu funktionieren. Beispielsweise kann der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Algorithmus kontinuierliche Spalten nicht als Eingabe verwenden und keine kontinuierlichen Werte vorhersagen. Außerdem können einige Spalten so viele Werte enthalten, dass der Algorithmus interessante Muster in Daten, aus denen ein Modell erstellt wird, nur schwer identifizieren kann.  
@@ -58,7 +58,7 @@ ms.locfileid: "36160536"
   
 -   Die `CLUSTERS` Methode verwendet eine zufällige Stichprobe von 1000 Datensätzen, um Daten zu diskretisieren. Verwenden Sie die `EQUAL_AREAS`-Methode, wenn Sie nicht möchten, dass der Algorithmus Stichproben von Daten nimmt.  
   
--   Das Lernprogramm für das Miningmodell für neurale Netzwerke bietet ein Beispiel dafür, wie Diskretisierung angepasst werden kann. Weitere Informationen finden Sie unter [Lektion 5: Erstellen von neuronalen Netzwerk- und logistischen Regressionsmodellen &#40;Mining-Lernprogramm für fortgeschrittene Data&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
+-   Das Lernprogramm für das Miningmodell für neurale Netzwerke bietet ein Beispiel dafür, wie Diskretisierung angepasst werden kann. Weitere Informationen finden Sie unter [Lektion 5: Erstellen von neuronalen Netzwerk- und logistischen Regressionsmodellen &#40;Data Mining Tutorial für fortgeschrittene&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Inhaltstypen &#40;Datamining&#41;](content-types-data-mining.md)   

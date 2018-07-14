@@ -1,5 +1,5 @@
 ---
-title: MeasureGroupAttributeBinding-Datentyp (Out-of-Line) (ASSL) | Microsoft Docs
+title: MeasureGroupAttributeBinding-Datentyp (Out-of-Line) (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - MeasureGroupAttributeBinding data type
 ms.assetid: bfe09a95-4e04-4f93-9389-7dd0b4c8f5e4
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5bb43dfc9dc6cb0ac578c36a24b470d444630d01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 244656b0ae951ec5f8274f11e58153faef80957d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218210"
 ---
 # <a name="measuregroupattributebinding-data-type-out-of-line-assl"></a>MeasureGroupAttributeBinding-Datentyp (Out-of-Line) (ASSL)
   Definiert einen abgeleiteten Datentyp, der die Out-of-Line-Bindung eines Attributs in einer Dimension, die in einer Measuregruppe enthalten ist, darstellt.  
@@ -63,7 +63,7 @@ ms.locfileid: "36160793"
 |Abgeleitete Elemente|[Binden von](../../xmla/xml-elements-properties/binding-element-xmla.md) ([Bindungen](../collections/attributes-element-assl.md) Auflistung von XML for Analysis (XMLA) [Batch](../../xmla/xml-elements-commands/batch-element-xmla.md) und [Prozess](../../xmla/xml-elements-commands/process-element-xmla.md) Befehle)|  
   
 ## <a name="remarks"></a>Hinweise  
- Weitere Informationen über Out-of-Line-Bindungen finden Sie unter [Datenquellen und-Bindungen &#40;mehrdimensionale SSAS-&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Weitere Informationen zur Out-of-Line-Bindungen finden Sie unter [Datenquellen und-Bindungen &#40;mehrdimensionale SSAS-&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services Scripting Language-XML-Datentypen &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

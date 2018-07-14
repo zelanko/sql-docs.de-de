@@ -1,5 +1,5 @@
 ---
-title: Ssbdiagnose-Hilfsprogramm (Service Broker) | Microsoft Docs
+title: Ssbdiagnose-Hilfsprogramm (Service Broker) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Service Broker, runtime reports
 - Service Broker, command prompt utilities
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - ssbdiagnose
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 37b52dd752b04c9aacb6ee49e1dbc2d4c590332a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fc76263bfc2be9d35839444b8fcd2cf8c116bc66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160131"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172331"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose-Hilfsprogramm (Service Broker)
   Das Hilfsprogramm **ssbdiagnose** meldet Probleme in [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Konversationen oder der Konfiguration von [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Diensten. Konfigurationsüberprüfungen können entweder für zwei Dienste oder für einen einzelnen Dienst ausgeführt werden. Probleme werden entweder im Eingabeaufforderungsfenster als für den Benutzer lesbarer Text oder als formatierte XML, die in eine Datei oder ein anderes Programm umgeleitet werden kann, gemeldet.  
@@ -187,21 +187,21 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  Ein eindeutiger Bezeichner, der einen Konversationsendpunkt in einer Anwendung identifiziert. Konversationshandles sind für einen Endpunkt einer Konversation eindeutig, d. h., die Endpunkte für den Initiator und das Ziel weisen unterschiedliche Konversationshandles auf.  
   
- Konversationshandles werden an Anwendungen zurückgegeben der *@dialog_handle* Parameter von der **BEGIN DIALOG** -Anweisung und die `conversation_handle` Spalte im Resultset eine **empfangen**  Anweisung.  
+ Konversationshandles werden an Anwendungen zurückgegeben der *@dialog_handle* Parameter der **BEGIN DIALOG** -Anweisung, und die `conversation_handle` Spalte im Resultset einer **empfangen**  Anweisung.  
   
- Konversationshandles werden gemeldet, der `conversation_handle` Spalte die **Sys. transmission_queue** und **conversation_endpoints** Katalogsichten.  
+ Konversationshandles werden gemeldet, der `conversation_handle` Spalte die **Sys. transmission_queue** und **Sys. conversation_endpoints** Katalogsichten.  
   
  *conversation_group_id*  
  Der eindeutige Bezeichner, der eine Konversationsgruppe identifiziert.  
   
- Konversationsgruppen-IDs an Anwendungen zurückgegeben werden die *@conversation_group_id* Parameter von der **GET CONVERSATION GROUP** Anweisung und die `conversation_group_id` Spalte im Resultset von einem **RECEIVE** Anweisung.  
+ Konversationsgruppen-IDs an Anwendungen zurückgegeben werden die *@conversation_group_id* Parameter der **GET CONVERSATION GROUP** Anweisung und die `conversation_group_id` Spalte im Resultset einer **RECEIVE** Anweisung.  
   
- Konversationsgruppen-IDs werden gemeldet, der `conversation_group_id` Spalten von der **Sys. conversation_groups** und **conversation_endpoints** Katalogsichten.  
+ Konversationsgruppen-IDs werden gemeldet, der `conversation_group_id` Spalten der **Sys. conversation_groups** und **Sys. conversation_endpoints** Katalogsichten.  
   
  *conversation_id*  
  Der eindeutige Bezeichner, der eine Konversation identifiziert. Konversations-IDs sind für die Endpunkte für den Initiator und das Ziel einer Konversation identisch.  
   
- Konversations-IDs werden in gemeldet der `conversation_id` Spalte die **conversation_endpoints** -Katalogsicht angezeigt.  
+ Konversations-IDs werden gemeldet, der `conversation_id` Spalte die **Sys. conversation_endpoints** -Katalogsicht angezeigt.  
   
  **-TIMEOUT** *Timeoutintervall*  
  Gibt die Anzahl der Sekunden für die Ausführung eines **RUNTIME** -Berichts an. Wenn **-TIMEOUT** nicht angegeben ist, wird der Laufzeitbericht ohne zeitliche Begrenzung ausgeführt. **-TIMEOUT** wird nur für **RUNTIME** -Berichte und nicht für **CONFIGURATION** -Berichte verwendet. Mit STRG+C können Sie **ssbdiagnose** beenden, wenn **-TIMEOUT** nicht angegeben wurde, oder Sie können einen Laufzeitbericht vor Ablauf des Timeoutintervalls beenden.**-** Das*Timeoutintervall* muss eine Zahl zwischen 1 und 2.147.483.647 sein.  

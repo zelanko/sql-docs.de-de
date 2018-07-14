@@ -1,5 +1,5 @@
 ---
-title: MiningModelingFlag-Datentyp (ASSL) | Microsoft Docs
+title: MiningModelingFlag-Datentyp (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MiningModelingFlag data type
 ms.assetid: aaa72ba8-051e-4b01-b1e9-9c8d83b8b752
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32ee744bdfcd084c4be88511ecba025ca9a270de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ece92d63c0d66c1ef845ce2d28d3317b2f65d66f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159868"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167521"
 ---
 # <a name="miningmodelingflag-data-type-assl"></a>MiningModelingFlag-Datentyp (ASSL)
   Definiert einen Grunddatentyp, der die verfügbaren Modellierungsflags für eine [ModelingFlag](../objects/modelingflag-element-assl.md) Element.  
@@ -63,10 +63,10 @@ ms.locfileid: "36159868"
 |value|Description|  
 |-----------|-----------------|  
 |*MODEL_EXISTENCE_ONLY*|Die Spalte sollte so modelliert werden, dass sie unabhängig von den Werten in der Spalte über zwei Zustände verfügt: fehlend und nicht-fehlend. Dies ist besonders nützlich für Spalten in einer geschachtelten Tabelle, in denen es selten fallübergreifende Werte gibt.|  
-|*NOT NULL*|Die Spalte kann keine NULL-Werte akzeptieren.|  
+|*NICHT NULL*|Die Spalte kann keine NULL-Werte akzeptieren.|  
 |*REGRESSOR*|Die Spalte gibt Regressorwerte für Testfälle an.|  
   
- Zusätzliche anbieterspezifische Flags können verwendet werden, wenn eines Drittanbieters OLE DB- oder Data Mining-Anbieter für die Instanz von aggregiert wurden [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ Zusätzliche anbieterspezifische Flags können verwendet werden, wenn Drittanbieter-OLE DB oder Data Mining-Anbieter für die Instanz von aggregiert wurden [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
  Ein eng verwandtes Element im AMO-Objektmodell (Analysis Management Objects) ist <xref:Microsoft.AnalysisServices.MiningModelingFlags>.  
   

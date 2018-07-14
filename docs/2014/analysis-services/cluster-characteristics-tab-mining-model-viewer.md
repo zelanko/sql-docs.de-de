@@ -1,5 +1,5 @@
 ---
-title: Registerkarte "Clustermerkmale" (Miningmodell-Viewer) Cluster | Microsoft Docs
+title: Registerkarte "Clustermerkmale" (Miningmodell-Viewer)-Cluster | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.clustering.characteristics.f1
 ms.assetid: 8e33ed1d-1ce4-405d-895b-7e995b2c910d
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4e5dcac98dd53edbd5e894c639c067106288e7e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6f3b5076884e44926457437ef1c31fd595418edd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162159"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172081"
 ---
 # <a name="cluster-characteristics-tab-mining-model-viewer"></a>Registerkarte "Clustermerkmale" (Miningmodell-Viewer)
   Auf der Registerkarte **Clustermerkmale** können Sie die Eigenschaften eines Clusters in einem Clusteringmodell oder die Gruppe aller Fälle im Modell untersuchen. Das Diagramm zeigt die Wichtigkeit jedes Attribut/Wert-Paars als ein Merkmal, das den Cluster definiert, im Vergleich zu anderen Clustern.  
@@ -29,13 +29,13 @@ ms.locfileid: "36162159"
  **Weitere Informationen:** [Microsoft Clustering-Algorithmus](data-mining/microsoft-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Cluster-Viewer](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>Tastatur  
- **Viewerinhalt**  
+ **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
  **Miningmodell**  
  Wählen Sie ein Miningmodell aus der aktuellen Miningstruktur aus. Das Miningmodell wird im benutzerdefinierten Viewer geöffnet.  
   
- **Ereignisanzeige**  
+ **Viewer**  
  Wählen Sie den Viewer aus, der zum Durchsuchen des ausgewählten Miningmodells verwendet werden soll. Sie können den diesem Modelltyp zugeordneten benutzerdefinierten Viewer oder den [!INCLUDE[msCoName](../includes/msconame-md.md)] -Viewer für Mininginhalte verwenden. Sie können auch alle verfügbaren Plug-In-Viewer verwenden.  
   
  **Cluster**  

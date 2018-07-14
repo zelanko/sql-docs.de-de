@@ -1,5 +1,5 @@
 ---
-title: 'Definieren einer m: N-Beziehung und von m: N-Beziehungseigenschaften | Microsoft Docs'
+title: 'Definieren einer m: N Beziehung und von m: N Beziehungseigenschaften | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - many-to-many relationships [Analysis Services]
 ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: db0d630f6efa2ed3499d6e42d7ebe8be5945700e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b5a9e14fc0da918438c6284870d0612185231c22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161013"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173573"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Definieren einer m:n-Beziehung und deren Eigenschaften
   In diesem Thema werden m:n-Dimensionen in Analysis Services erläutert. Zusätzlich wird beschrieben, in welchen Fällen sie verwendet und wie sie erstellt werden.  
@@ -47,11 +47,11 @@ ms.locfileid: "36161013"
   
  Eine m:n-Dimensionsbeziehung wird in einem Cubediagramm nicht visuell dargestellt. Stattdessen sollten Sie die m:n-Beziehungen in einem Modell mithilfe der Registerkarte Dimensionsverwendung identifizieren. Eine m:n-Beziehung wird durch das folgende Symbol gekennzeichnet.  
   
- ![M: n-Symbol in Dimensionsverwendung](../media/ssas-m2m-icondimusage.png "m: n-Symbol in Dimensionsverwendung")  
+ ![M: n Symbol in Dimensionsverwendung](../media/ssas-m2m-icondimusage.png "m: n Symbol in Dimensionsverwendung")  
   
  Klicken Sie auf die Schaltfläche, um das Dialogfeld Beziehung definieren zu öffnen und zu überprüfen, ob die Beziehung vom Typ m:n ist, und um zu ermitteln, welche Zwischenmeasuregruppe in der Beziehung verwendet wird.  
   
- ![Beziehung-Schaltfläche in Dimensionsverwendung definieren](../media/ssas-m2m-btndimusage.png "Beziehung definieren-Schaltfläche in Dimensionsverwendung")  
+ ![Definieren der Schaltfläche für Beziehungen in Dimensionsverwendung](../media/ssas-m2m-btndimusage.png "Beziehung definieren-Schaltfläche in Dimensionsverwendung")  
   
  In den nachfolgenden Abschnitten erfahren Sie, wie eine m:n-Dimension eingerichtet wird und Verhaltensweisen von Modellen getestet werden. Wenn Sie zusätzliche Informationen benötigen oder zunächst die Tutorials ausführen möchten, finden Sie Hinweise unter **Weitere Informationen** am Ende dieses Artikels.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "36161013"
   
      Wählen Sie alle Attribute aus.  
   
-     ![Liste "Attribute" in neue Dimension](../media/ssas-m2m-dimsalesreason.PNG "Attributliste in neuer Dimension")  
+     ![Attributliste in neuer Dimension](../media/ssas-m2m-dimsalesreason.PNG "Attributliste in neuer Dimension")  
   
 3.  Erstellen Sie basierend auf der vorhandenen Fact Internet Sales-Tabelle eine zweite Dimension. Obwohl dies eine Faktentabelle ist, enthält sie Sales Order-Informationen. Wir verwenden sie, um eine Sales Order-Dimension zu erstellen.  
   
@@ -103,11 +103,11 @@ ms.locfileid: "36161013"
   
 5.  Wählen Sie auf der nächsten Assistentenseite die Attribute aus. In diesem Beispiel reicht es aus, **SalesOrderNumber**auszuwählen.  
   
-     ![Sales Order-Dimension mit Attributliste](../media/ssas-m2m-dimsalesorderattrib.PNG "Sales Order-Dimension mit Attributliste")  
+     ![Sales Order-Dimension mit Attributliste](../media/ssas-m2m-dimsalesorderattrib.PNG "Sales Order-Dimension mit Attributliste aus")  
   
 6.  Benennen Sie die Dimension in **Dim Sales Orders**um, damit eine konsistente Benennungskonvention für die Dimensionen verwendet wird.  
   
-     ![Umbenennen der Dimension Assistentenseite](../media/ssas-m2m-dimsalesorders.PNG "Assistentenseite Umbenennen der Dimension")  
+     ![Assistentenseite zum Umbenennen der Dimension](../media/ssas-m2m-dimsalesorders.PNG "Assistentenseite zum Umbenennen der Dimension")  
   
 7.  Klicken Sie mit der rechten Maustaste auf **Cubes** , und wählen Sie **Neuer Cube**aus.  
   
@@ -129,13 +129,13 @@ ms.locfileid: "36161013"
   
 1.  Klicken Sie im Cube-Designer auf die Registerkarte Dimensionsverwendung. Beachten Sie, dass zwischen **Dim Sales Reason** und **Fact Internet Sales**bereits eine m:n-Beziehung besteht. Wie Sie wissen, kennzeichnet das folgende Symbol eine m:n-Beziehung.  
   
-     ![M: n-Symbol in Dimensionsverwendung](../media/ssas-m2m-icondimusage.png "m: n-Symbol in Dimensionsverwendung")  
+     ![M: n Symbol in Dimensionsverwendung](../media/ssas-m2m-icondimusage.png "m: n Symbol in Dimensionsverwendung")  
   
 2.  Klicken Sie auf die Zelle am Schnittpunkt zwischen **Dim Sales Reason** und **Fact Internet Sales**, und klicken Sie dann auf die Schaltfläche, um das Dialogfeld „Beziehung definieren“ zu öffnen.  
   
      Wie Sie sehen, wird dieses Dialogfeld zum Angeben einer m:n-Beziehung verwendet. Wenn Sie stattdessen Dimensionen mit einer regulären Beziehung hinzufügen würden, könnten Sie dieses Dialogfeld verwenden, um sie in eine m:n-Beziehung zu ändern.  
   
-     ![Beziehung-Schaltfläche in Dimensionsverwendung definieren](../media/ssas-m2m-btndimusage.png "Beziehung definieren-Schaltfläche in Dimensionsverwendung")  
+     ![Definieren der Schaltfläche für Beziehungen in Dimensionsverwendung](../media/ssas-m2m-btndimusage.png "Beziehung definieren-Schaltfläche in Dimensionsverwendung")  
   
 3.  Stellen Sie das Projekt auf einer mehrdimensionalen Analysis Services-Instanz bereit. Im nächsten Schritt durchsuchen Sie den Cube in Excel, um dessen Verhalten zu überprüfen.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "36161013"
   
      Etwas weiter unten finden Sie den Verkaufsbetrag und die Verkaufsgründe für die Bestellnummer **SO5382**. Die Gesamtsumme dieser Bestellung beträgt **539,99**, und die dieser Bestellung zugeordneten Verkaufsgründe sind Promotion, Other und Price.  
   
-     ![Excel-Arbeitsblatt mit m: n-Aggregationen](../media/ssas-m2m-excel.png "Excel-Arbeitsblatt mit m: n-Aggregationen")  
+     ![Excel-Arbeitsblatt mit m: n Aggregationen](../media/ssas-m2m-excel.png "Excel-Arbeitsblatt mit m: n Aggregationen")  
   
      Beachten Sie, dass der Verkaufsbetrag für die Bestellung korrekt berechnet wurde. Er beträgt **539,99** für die gesamte Bestellung. Obwohl für jeden Grund **539,99** angegeben ist, wurde dieser Wert nicht für alle drei Gründe summiert, wodurch die Gesamtsumme fälschlicherweise überhöht ist.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "36161013"
   
 5.  Führen Sie einen Bildlauf zum Ende des Arbeitsblatts durch. Es ist deutlich zu erkennen, dass Price im Verhältnis zu anderen Gründen und der Gesamtsumme der wichtigste Grund für Kundenkäufe ist.  
   
-     ![Excel-Arbeitsmappe mit Gesamtsummen in m: n-](../media/ssas-m2m-excelgrandtotal.png "Excel-Arbeitsmappe mit Gesamtsummen in m: n-")  
+     ![Excel-Arbeitsmappe mit Gesamtsummen in m: n](../media/ssas-m2m-excelgrandtotal.png "Excel-Arbeitsmappe mit Gesamtsummen in m: n")  
   
 #### <a name="tips-for-handling-unexpected-query-results"></a>Tipps zum Behandeln unerwarteter Abfrageergebnisse  
   
@@ -183,7 +183,7 @@ ms.locfileid: "36161013"
 ##  <a name="bkmk_Learn"></a> Learn more  
  Über die folgenden Links erhalten Sie zusätzliche Informationen, mit denen Sie Ihr Wissen vertiefen können.  
   
- [Wie definiere ich eine viele-zu-viele-Dimension in Analysis Services](http://go.microsoft.com/fwlink/?LinkId=324759)  
+ [Wie definiere ich eine m: n Dimension in Analysis Services](http://go.microsoft.com/fwlink/?LinkId=324759)  
   
  [Die m:n-Revolution 2.0](http://go.microsoft.com/fwlink/?LinkId=324760)  
   
@@ -191,7 +191,7 @@ ms.locfileid: "36161013"
   
 ## <a name="see-also"></a>Siehe auch  
  [Dimensionsbeziehungen](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Installieren von Sample Data and Projects für Analysis Services-mehrdimensionale Modellierung-Lernprogramm](../install-sample-data-and-projects.md)   
+ [Installieren von Beispieldaten und-Projekten für das Analysis Services-Lernprogramm zur mehrdimensionalen Modellierung](../install-sample-data-and-projects.md)   
  [Bereitstellen von Analysis Services-Projekten &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)   
  [Perspektiven in mehrdimensionalen Modellen](perspectives-in-multidimensional-models.md)  
   

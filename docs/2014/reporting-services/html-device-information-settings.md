@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HTML [Reporting Services], rendering
 - device information settings [Reporting Services], HTML rendering
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 caps.latest.revision: 47
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 51b4ec577596fde0923f1d446ed282db1cd3eb17
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: bb0063ac9887d12b8ebeaf329c044f4974e49607
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160159"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177221"
 ---
 # <a name="html-device-information-settings"></a>HTML-Geräteinformationseinstellungen
   In der folgenden Tabelle werden die Geräteinformationseinstellungen zum Rendern in das HTML-Format aufgeführt.  
@@ -42,7 +42,7 @@ ms.locfileid: "36160159"
 |`HTMLFragment`|Gibt an, ob anstelle eines vollständigen HTML-Dokuments ein HTML-Fragment erstellt wird. Ein HTML-Fragment enthält den Berichtsinhalt in einem TABLE-Element und lässt das HTML-Element und das BODY-Element aus. Der Standardwert lautet `false`. Mithilfe von SOAP mit Rendern der `HTMLFragment` -Eigenschaftensatz auf `true` erstellt URLs mit Sitzungsinformationen, die verwendet werden kann, um Bilder ordnungsgemäß anzufordern. Die Bilder müssen hochgeladene Ressourcen in der Berichtsserver-Datenbank sein.|  
 |`ImageConsolidation`|Gibt an, ob das gerenderte Diagramm, die gerenderte Karte, das gerenderte Messgerät und die gerenderten Indikatorbilder in ein großes Bild konsolidiert werden. Die Konsolidierung von Bildern hilft, die Leistung des Berichts im Clientbrowser zu verbessern, wenn der Bericht viele Datenvisualisierungselemente enthält. Der Standardwert ist `true` für die meisten modernen Browser.|  
 |**JavaScript**|Gibt an, ob JavaScript im gerenderten Bericht unterstützt wird. Der Standardwert lautet `true`.|  
-|`LinkTarget`|Das Ziel für Links im Bericht. Sie können ein Fenster oder den Frame abzielen, indem Sie den Namen des Fensters, z. B. bereitstellen `LinkTarget` = *Window_name*, oder Sie können ein neues Fenster mit Zielservergruppen `LinkTarget`= _blank. Andere gültige Zielnamen sind beispielsweise _self, _parent und _top.|  
+|`LinkTarget`|Das Ziel für Links im Bericht. Sie können ein Fenster oder einen abzielen, indem Sie den Namen des Fensters, wie z. B. bereitstellen `LinkTarget` = *Window_name*, oder Sie können als Ziel, ein neues Fenster mit `LinkTarget`= _blank. Andere gültige Zielnamen sind beispielsweise _self, _parent und _top.|  
 |**OnlyVisibleStyles(\*)**|Gibt an, dass für die gerade gerenderte Seite nur freigegebene Formate generiert werden|  
 |`OutlookCompat`|Gibt an, ob beim Rendern zusätzliche Metadaten verwendet werden sollen, um die Darstellung des Berichts in Outlook zu optimieren. Für andere Benutzer, der Standardwert ist `false`.|  
 |**Parameter**|Gibt an, ob der Parameterbereich der Symbolleiste angezeigt oder ausgeblendet werden soll. Wenn Sie diesen Parameter auf einen Wert festlegen `true`, wird der Parameterbereich der Symbolleiste angezeigt. Der Standardwert dieses Parameters ist `true`.|  
@@ -52,8 +52,8 @@ ms.locfileid: "36160159"
 |**Abschnitt**|Die Seitenzahl des zu rendernden Berichts. Der Wert `0` gibt an, dass alle Abschnitte des Berichts gerendert werden. Der Standardwert lautet `1`.|  
 |**StreamRoot (\*)**|Der im HTML-Bericht dem Wert des **src** -Attributs des IMG-Elements vorangestellte Pfad, welcher vom Berichtsserver zurückgegeben wird. Standardmäßig stellt der Berichtsserver den Pfad bereit. Sie können diese Einstellung verwenden, um einen Stammpfad für die Bilder in einem Bericht anzugeben (beispielsweise **http://\<Servername>/resources/companyimages**).|  
 |**StyleStream**|Gibt an, ob Formate und Skripts als separater Datenstrom statt im Dokument erstellt werden. Der Standardwert lautet `false`.|  
-|`Toolbar`|Gibt an, ob die Symbolleiste ein- oder ausgeblendet werden soll. Der Standardwert dieses Parameters ist `true`. Wenn der Wert dieses Parameters ist `false`, alle verbleibenden Optionen (außer der Dokumentstruktur) ignoriert. Wenn Sie diesen Parameter weglassen, wird die Symbolleiste automatisch für Renderingformate angezeigt, die sie unterstützen.<br /><br /> Die Symbolleiste für den Berichts-Viewer wird gerendert, wenn Sie den URL-Zugriff verwenden, um einen Bericht zu rendern. Die Symbolleiste wird nicht durch die SOAP-API gerendert. Allerdings die `Toolbar` Geräteinformationen Einstellung wirkt sich auf die Möglichkeit, dass es sich bei der Anzeige des Berichts bei Verwendung der SOAP- `Render` Methode. Wenn der Wert dieses Parameters ist `true` SOAP mit um HTML zu rendern, wird nur der erste Abschnitt des Berichts gerendert. Wenn der Wert `false` ist, wird der ganze HTML-Bericht als einzelne HTML-Seite gerendert.|  
-|`UserAgent`|Die `user-agent` -Zeichenfolge des Browsers, der die Anforderung stammt und die sich in der HTTP-Anforderung gefunden wird.|  
+|`Toolbar`|Gibt an, ob die Symbolleiste ein- oder ausgeblendet werden soll. Der Standardwert dieses Parameters ist `true`. Wenn der Wert dieses Parameters ist `false`, werden alle verbleibende Optionen (außer der Dokumentstruktur) ignoriert. Wenn Sie diesen Parameter weglassen, wird die Symbolleiste automatisch für Renderingformate angezeigt, die sie unterstützen.<br /><br /> Die Symbolleiste für den Berichts-Viewer wird gerendert, wenn Sie den URL-Zugriff verwenden, um einen Bericht zu rendern. Die Symbolleiste wird nicht durch die SOAP-API gerendert. Allerdings die `Toolbar` Geräteinformationen, die Einstellung wirkt sich auf die Möglichkeit, dass es sich bei der Anzeige des Berichts bei Verwendung der SOAP- `Render` Methode. Wenn der Wert dieses Parameters ist `true` SOAP mit in HTML gerendert werden, nur im ersten Abschnitt des Berichts gerendert wird. Wenn der Wert `false` ist, wird der ganze HTML-Bericht als einzelne HTML-Seite gerendert.|  
+|`UserAgent`|Die `user-agent` -Zeichenfolge des Browsers, der die Anforderung stammt und die sich in der HTTP-Anforderung befindet.|  
 |**Zoom (\*)**|Der Zoomfaktor für den Bericht als ganzzahliger Prozentsatz oder Zeichenfolgenkonstante. Standardwerte für die Zeichenfolge sind `Page Width` und `Whole Page`. Dieser Parameter wird von Versionen von [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer, die älter als Internet Explorer 5.0 sind, sowie allen nicht von[!INCLUDE[msCoName](../includes/msconame-md.md)] bereitgestellten Browsern ignoriert. Der Standardwert dieses Parameters ist `100`.|  
 |**DataVisualizationFitSizing**|Gibt das Verhalten für die Datenvisualisierungsanpassung in einem Tablix an. Dies schließt Diagramm, Messgerät und Karte ein.<br /><br /> Mögliche Werte: **Ungefähr** und **Genau**.<br /><br /> Der Standardwert lautet **Ungefähr**. Wird die Einstellung aus der Datei **rsreportserver.config** entfernt, lautet der Wert für das Standardverhalten **Genau**.<br /><br /> Die Aktivierung von **Genau** hat möglicherweise Auswirkungen auf die Leistung, da die Verarbeitung zur Ermittlung der genauen Größe möglicherweise länger dauert.|  
   

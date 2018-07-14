@@ -1,5 +1,5 @@
 ---
-title: Formular-Editor (Registerkarte ' Berechnungen ', Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Formular-Editor (Registerkarte ' Berechnungen ', Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationexpression.calculatedmember.f1
 ms.assetid: f7719b9e-b1e6-4792-90a6-30d9d8eb1196
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a697e65ae650726e59a2ddb515746f5ef1ebb63e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b49b060b8c02219e9f1b8448700ce7f9b065bd5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159672"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218370"
 ---
 # <a name="calculated-member-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Formular-Editor für berechnete Elemente (Registerkarte 'Berechnungen', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich des **Formular-Editors für berechnete Elemente** der Registerkarte **Berechnungen** können Sie im Cube-Designer ein berechnetes Element erstellen oder ändern.  
@@ -32,7 +32,7 @@ ms.locfileid: "36159672"
  **Name**  
  Geben Sie den Namen des berechneten Elements ein.  
   
- **Eigenschaften des übergeordneten**  
+ **Eigenschaften für übergeordnetes Element**  
  Erweitern Sie das Element, um die Optionen **Übergeordnete Hierarchie**, **Übergeordnetes Element**und **Ändern** anzuzeigen.  
   
  **Übergeordnete Hierarchie**  
@@ -43,7 +43,7 @@ ms.locfileid: "36159672"
   
  **Hinweis** Diese Option ist verfügbar, wenn unter **Übergeordnete Hierarchie** eine andere Hierarchie als MEASURES angegeben ist.  
   
- **Ändern**  
+ **Änderung**  
  Wählen Sie diese Option aus, um das Dialogfeld **Übergeordnetes Element auswählen** anzuzeigen und ein Element unter **Übergeordnetes Element**auszuwählen. Weitere Informationen zum Dialogfeld **Übergeordnetes Element auswählen** finden Sie unter [Übergeordnetes Element auswählen &#40;Dialogfeld, Analysis Services – mehrdimensionale Daten&#41;](select-parent-member-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Ausdruck**  
@@ -69,7 +69,7 @@ ms.locfileid: "36159672"
  Wählen Sie den Namen des Measures aus, das in MDX zum Auflösen von NON EMPTY-Abfragen für das berechnete Element verwendet wird. Wenn die Eigenschaft **Verhalten für nicht leere Elemente** leer ist, muss das berechnete Element wiederholt ausgewertet werden, um zu ermitteln, ob ein Element leer ist. Wenn die Eigenschaft **Verhalten für nicht leere Elemente** den Namen eines Measures enthält, wird das berechnete Element so behandelt, als wäre das angegebene Measure leer.  
   
 > [!WARNING]  
->  Diese Eigenschaft ist als veraltet markiert. Vermeiden Sie es, sie festzulegen. Finden Sie unter [als veraltet markierte Analysis Services-Funktionen in SQL Server 2014](deprecated-analysis-services-features-in-sql-server-2014.md) Details.  
+>  Diese Eigenschaft ist als veraltet markiert. Vermeiden Sie es, sie festzulegen. Finden Sie unter [veraltete Analysis Services-Funktionen in SQL Server 2014](deprecated-analysis-services-features-in-sql-server-2014.md) Details.  
   
  **Farbausdrücke**  
  Erweitern Sie dieses Element, um die Optionen **Vordergrundfarbe** und **Hintergrundfarbe** anzuzeigen.  
@@ -117,10 +117,10 @@ ms.locfileid: "36159672"
  [Erstellen von berechneten Elementen](multidimensional-models/create-calculated-members.md)   
  [Cube-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Berechnungen &#40;Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
- [Symbolleiste &#40;Registerkarte Berechnungen, Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Skriptplaner &#40;Registerkarte Berechnungen, Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
- [Berechnungstools &#40;Registerkarte Berechnungen, Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
- [Set-Formular-Editor für benannte &#40;Registerkarte Berechnungen, Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Skript-Editor &#40;Registerkarte Berechnungen, Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)  
+ [Symbolleiste &#40;Registerkarte ' Berechnungen ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Skriptplaner &#40;Registerkarte ' Berechnungen ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
+ [Berechnungstools &#40;Registerkarte ' Berechnungen ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
+ [Set-Formular-Editor für benannte &#40;Registerkarte ' Berechnungen ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Skript-Editor &#40;Registerkarte ' Berechnungen ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)  
   
   

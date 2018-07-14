@@ -1,5 +1,5 @@
 ---
-title: Partitionen und DirectQuery-Modus (SSAS – tabellarisch) | Microsoft Docs
+title: Partitionen und DirectQuery-Modus (SSAS – tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5f179ba9-6efb-46ae-90e5-945bbfddb719
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6153a5975dd342bfabb00b7f964ee04d6941a363
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c928bbc87c39f76e8995c7c2d171d4f731b3171
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150434"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269686"
 ---
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>Partitionen und DirectQuery-Modus (SSAS – tabellarisch)
   In diesem Abschnitt wird erläutert, wie Partitionen in DirectQuery-Modellen verwendet werden. Allgemeinere Informationen zu Partitionen in Tabellenmodellen finden Sie unter [Partitions &#40;SSAS Tabular&#41;](partitions-ssas-tabular.md).  
   
- Anleitungen zum Ändern der Partition, die verwendet wird oder Anzeigen von Informationen zur Partition finden Sie unter [Ändern der DirectQuery-Partition &#40;SSAS – tabellarisch&#41;](../change-the-directquery-partition-ssas-tabular.md).  
+ Anweisungen zum Ändern der Partition, die verwendet wird, oder Anzeigen von Informationen zu der Partition, finden Sie unter [Ändern der DirectQuery-Partition &#40;SSAS – tabellarisch&#41;](../change-the-directquery-partition-ssas-tabular.md).  
   
 ## <a name="using-partitions-in-directquery-mode"></a>Verwenden von Partitionen im DirectQuery-Modus  
  Für jede Tabelle müssen Sie eine einzelne Partition angeben, die als DirectQuery-Datenquelle verwendet werden soll.  Wenn mehrere Partitionen vorhanden sind, wenn Sie das Modell wechseln, um den DirectQuery-Modus zu aktivieren, wird die erste Partition, die in der Tabelle erstellt wurde, standardmäßig als DirectQuery-Partition gekennzeichnet. Dies kann später mit dem Partitions-Manager in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]geändert werden.  

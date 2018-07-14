@@ -1,5 +1,5 @@
 ---
-title: Volltextsuche seit SQL Server 2008 geändert | Microsoft Docs
+title: Volltext-Suchdienst hat sich geändert, seit SQL Server 2008 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d253bb05-9166-4b50-bd4a-27b818f514e0
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e70053054ce287618625380b3072dc4ce5119b12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c934f79ba4f8fec418c422beb0a60a3c563516ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159904"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330810"
 ---
 # <a name="full-text-search-has-changed-since-sql-server-2008"></a>Die Volltextsuche wurde seit SQL Server 2008 geändert.
   Der Upgrade Advisor hat erkannt, dass für die Volltextsuche ein Upgrade vorgesehen ist. Viele Volltextsuchoptionen und -einstellungen haben sich geändert. Aus diesem Grund kann es erforderlich sein, einige Einstellungen zu ändern, wenn Sie ein Upgrade auf die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Volltextsuche durchführen.  

@@ -1,5 +1,5 @@
 ---
-title: Trimming-Element (ASSL) | Microsoft Docs
+title: Trimming-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Trimming element
 ms.assetid: 8b3bbf89-8309-4d00-9aea-a5918f0c7027
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2a7346e9ae91ca3d70ab2f6cf311ea3b7a8b8a06
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d34a2b559dfcace0a8334916f66031b130763182
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159436"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326540"
 ---
 # <a name="trimming-element-assl"></a>Trimming-Element (ASSL)
   Gibt an, wie die Daten der Datenquelle eingeschränkt werden.  
@@ -58,7 +58,7 @@ ms.locfileid: "36159436"
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnetes Element|[DataItem](../data-type/dataitem-data-type-assl.md)|  
+|Übergeordnetes Element|[DataItem-Objekt](../data-type/dataitem-data-type-assl.md)|  
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -73,7 +73,7 @@ ms.locfileid: "36159436"
   
  Die Enumeration, die den zulässigen Werten für entspricht `Trimming` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Trimming>.  
   
- Das Element, das das übergeordnete Element des entspricht `Trimming` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.DataItem>.  
+ Das Element, das dem übergeordneten entspricht `Trimming` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.DataItem>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

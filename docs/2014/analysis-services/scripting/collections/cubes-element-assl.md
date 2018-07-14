@@ -1,5 +1,5 @@
 ---
-title: Cubes-Element (ASSL) | Microsoft Docs
+title: Cubes-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Cubes element
 ms.assetid: 0eaaaf3f-0c78-4eb4-bc3a-d266579eca56
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 07fb51c5c02a8931ce582f9115ab82b922ba5709
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d63af6605e1633f310f6c7089fc4e6ffaa481ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161224"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194270"
 ---
 # <a name="cubes-element-assl"></a>Cubes-Element (ASSL)
   Enthält die Auflistung der [Cube](../objects/cube-element-assl.md) Elemente, die zu einem [Datenbank](../objects/database-element-assl.md) Element.  
@@ -64,7 +64,7 @@ ms.locfileid: "36161224"
 |Untergeordnete Elemente|[Cube](../objects/cube-element-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.CubeCollection>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.CubeCollection>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sammlungen &#40;ASSL&#41;](collections-assl.md)  

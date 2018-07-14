@@ -1,5 +1,5 @@
 ---
-title: Usage-Element (MiningModelColumn) (ASSL) | Microsoft Docs
+title: Usage-Element (MiningModelColumn) (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Usage element
 ms.assetid: 435a857e-37a9-434e-9de1-354f1ff2993f
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4a4e4c2b11a9a9281f64062390257bf5ddf3145b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6767c4c5ac535ac603cc6182cbe645088c8ac05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150888"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265298"
 ---
 # <a name="usage-element-miningmodelcolumn-assl"></a>Usage-Element (MiningModelColumn) (ASSL)
   Beschreibt, wie die zugeordnete Spalte im übergeordneten [MiningStructure](../objects/miningstructure-element-assl.md) verwendet wird.  
@@ -70,7 +70,7 @@ ms.locfileid: "36150888"
 |*Eingabe*|Die Spalte ist eine Eingabespalte.|  
 |*Predict*|Die Spalte ist eine Vorhersagespalte.|  
 |*PredictOnly*|Die Spalte ist nur eine Vorhersagespalte.|  
-|*Keine*|Die Spalte wird nicht vom Modell verwendet. **Warnung:** , wenn der Wert der Auslastung des "None" ist, Analysis Services sendet keine ausnahmslos an den Server in der Standardeinstellung; daher wird das Usage-Attribut nicht in der Anforderung/Antwort enthalten.|  
+|*Keine*|Die Spalte wird nicht vom Modell verwendet. **Warnung:** Wenn der Wert der Auslastung des "None", Analysis Services sendet keine einen beliebigen Wert an den Server in der Standardeinstellung; das Usage-Attribut ist daher nicht enthalten, in der Anforderung/Antwort.|  
   
  Die Enumeration, die den zulässigen Werten für entspricht `Usage` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.MiningModelColumnUsages>.  
   

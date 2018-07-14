@@ -1,5 +1,5 @@
 ---
-title: Installation für SQLServer 2014 | Microsoft Docs
+title: Installation für SQLServer 2014 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/09/2016
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.portal.Installation.f1
 helpviewer_keywords:
@@ -17,19 +17,19 @@ helpviewer_keywords:
 - initial installation [SQL Server]
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c6eb94e86633e5bff588993ac1b71cd52bde3ae3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8c25f5057c6e1cd5b877376e67634946ef489276
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159041"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224460"
 ---
 # <a name="installation-for-sql-server-2014"></a>Installation für SQLServer 2014
  ## <a name="-download-sql-server-2014-express-httpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[ Herunterladen von SQL Server 2014 Express ](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
-  **Vielen Dank, [Scott Hanselman](http://www.hanselman.com/) für alle Verknüpfungen Installer-Paket an einem Ort gesammelt.**
+  **Vielen Dank an [Scott Hanselman](http://www.hanselman.com/) für das Sammeln aller Installer-paketlinks an einem Ort!**
   
   Der Installations-Assistent für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält eine einzelne Funktionsstruktur für die Installation aller [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten:  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36159041"
   
 -   Konnektivitätskomponenten  
   
- Sie können jede Komponente einzeln installieren oder eine Kombination der oben aufgelisteten Komponenten auswählen. Damit die bestmögliche Auswahl unter den Editionen und Komponenten verfügbar in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [Editionen und Komponenten von SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) und [von den Editionen von SQL Server 2014 unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ist als 32- und 64-Bit-Edition verfügbar.
+ Sie können jede Komponente einzeln installieren oder eine Kombination der oben aufgelisteten Komponenten auswählen. Die bestmögliche Auswahl unter den Editionen und Komponenten in zur Verfügung stellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [Editionen und Komponenten von SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) und [von den SQL Server 2014-Editionen unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ist als 32- und 64-Bit-Edition verfügbar.
  
  **Probieren Sie es aus:**  
   
@@ -86,10 +86,10 @@ ms.locfileid: "36159041"
  [Themen zu Vorgehensweisen für die Installation](../../sql-server/install/installation-how-to-topics.md)  
  Enthält Links zu verfahrensspezifischen Themen für die Installation von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit dem Installations-Assistenten, über die Eingabeaufforderung, unter Verwendung von Konfigurationsdateien sowie mithilfe von "SysPrep".  
   
- [Installieren von SQL Server BI-Funktionen mit SharePoint &#40;PowerPivot und Reporting Services&#41;](../../sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md)  
+ [Installieren von SQL Server-BI-Funktionen mit SharePoint &#40;PowerPivot und Reporting Services&#41;](../../sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md)  
  In diesem Abschnitt wird erläutert, wie Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen in einer SharePoint-Umgebung installieren. Es wird angegeben, welche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen für eine bestimmte Version oder Edition von SharePoint verfügbar sind. Außerdem umfasst der Abschnitt Installationsschritte für PowerPivot für SharePoint und Reporting Services im SharePoint-Modus.  
   
- [Installieren von SQL Server Samples and Sample Databases](http://sqlserversamples.codeplex.com/)  
+ [Installieren von SQL Server-Beispiele und Beispieldatenbanken](http://sqlserversamples.codeplex.com/)  
  Beschreibt, wie Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Beispiele und -Beispieldatenbanken installieren und konfigurieren.  
   
 ## <a name="see-also"></a>Siehe auch  

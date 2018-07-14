@@ -1,5 +1,5 @@
 ---
-title: Verwenden von benutzerdefinierten Tabellen | Microsoft Docs
+title: Benutzerdefinierte Tabellen mit | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,20 +14,20 @@ helpviewer_keywords:
 - user-defined tables [SQL Server]
 ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 261414ecd50306f687abcc88963658aec2f124fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 611985a99822321092942c1e9de806e24c57f09b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159962"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206790"
 ---
 # <a name="using-user-defined-tables"></a>Verwenden von benutzerdefinierten Tabellen
   Benutzerdefinierte Tabellen stellen Tabelleninformationen dar. Sie werden als Parameter verwendet, wenn Sie Tabellendaten in gespeicherte Prozeduren oder benutzerdefinierte Funktionen übergeben. Benutzerdefinierte Tabellen können nicht verwendet werden, um Spalten in einer Datenbanktabelle darzustellen.  
   
- Das <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekt verfügt über eine <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A>-Eigenschaft, die auf ein <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>-Objekt verweist. Jede <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> -Objekt in dieser Auflistung verfügt über eine **Spalten** -Eigenschaft, auf eine Auflistung von verweist <xref:Microsoft.SqlServer.Management.Smo.Column> -Objekten, die die Spalten in der benutzerdefinierten Tabelle auflisten. Verwenden Sie die Add-Methode, um Spalten zu einer benutzerdefinierten Tabelle hinzuzufügen.  
+ Das <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekt verfügt über eine <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A>-Eigenschaft, die auf ein <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>-Objekt verweist. Jede <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> -Objekt in dieser Auflistung verfügt über eine **Spalten** Eigenschaft, auf eine Auflistung von verweist <xref:Microsoft.SqlServer.Management.Smo.Column> Objekte, die die Spalten in der benutzerdefinierten Tabelle auflisten. Verwenden Sie die Add-Methode, um Spalten zu einer benutzerdefinierten Tabelle hinzuzufügen.  
   
  Wenn Sie eine neue benutzerdefinierte Tabelle mithilfe des <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>-Objekts definieren, müssen Sie Spalten und einen Primärschlüssel basierend auf einer der Spalten bereitstellen.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "36159962"
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
   
 ## <a name="creating-a-user-defined-table-in-visual-basic"></a>Erstellen einer benutzerdefinierten Tabelle in Visual Basic  
- In diesem Beispiel müssen Sie eine Imports-Anweisung für die Klassenbibliothek einschließen, enthält die `StringCollection` Typ.  
+ In diesem Beispiel müssen Sie eine Imports-Anweisung für die Klassenbibliothek enthalten, enthält die `StringCollection` Typ.  
   
  `Imports System.Collections.Specialized`  
   
@@ -103,7 +103,7 @@ ms.locfileid: "36159962"
 ```  
   
 ## <a name="creating-a-user-defined-table-in-visual-c"></a>Erstellen einer benutzerdefinierten Tabelle in Visual C#  
- In diesem Beispiel müssen Sie eine Imports-Anweisung für die Klassenbibliothek einschließen, enthält die `StringCollection` Typ.  
+ In diesem Beispiel müssen Sie eine Imports-Anweisung für die Klassenbibliothek enthalten, enthält die `StringCollection` Typ.  
   
  `using System.Collections.Specialized;`  
   
@@ -173,7 +173,7 @@ ms.locfileid: "36159962"
 ```  
   
 ## <a name="creating-a-user-defined-table-in-powershell"></a>Erstellen einer benutzerdefinierten Tabelle in PowerShell  
- In diesem Beispiel müssen Sie eine Imports-Anweisung für die Klassenbibliothek einschließen, enthält die `StringCollection` Typ.  
+ In diesem Beispiel müssen Sie eine Imports-Anweisung für die Klassenbibliothek enthalten, enthält die `StringCollection` Typ.  
   
  `using System.Collections.Specialized;`  
   

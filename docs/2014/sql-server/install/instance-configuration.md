@@ -1,5 +1,5 @@
 ---
-title: -Instanz Konfiguration | Microsoft Docs
+title: Configuration-Instanz | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 2016-05-04
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - instance configuration, Setup
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Installation Wizard, Instance Name page
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 caps.latest.revision: 60
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 757b29a54828816de27559715e88b337bd5a06a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bdcfdc34d61b38992c44a220b7b58041cd496200
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151046"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274326"
 ---
 # <a name="instance-configuration"></a>Instanzkonfiguration
   Verwenden Sie die Seite **Instanzkonfiguration** des Installations-Assistenten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um anzugeben, ob eine Standardinstanz oder eine benannte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erstellt werden soll. Wenn noch keine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem Server installiert wurde, wird eine Standardinstanz erstellt, es sei denn Sie geben eine benannte Instanz an.  
@@ -75,7 +75,7 @@ ms.locfileid: "36151046"
   
 -   Eingebettete Leerzeichen und sonstige Sonderzeichen sind in Instanznamen nicht zugelassen. Umgekehrte Schrägstriche (\\), Kommas (,), Doppelpunkte (:), Strichpunkte (;), einfache Anführungszeichen ('), kaufmännische Und-Zeichen (&), Bindestriche (-) und das At-Zeichen (@) sind ebenfalls nicht zulässig.  
   
--   **Nur gültige Zeichen in der aktuellen Windows-Codepage verwendet werden können, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanznamen. Wenn ein nicht unterstütztes Unicode-Zeichen verwendet wird, erfolgt ein Setupfehler auf.**  
+-   **Nur Zeichen, die in der aktuellen Windows-Codepage gültig sind, können verwendet werden, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanznamen. Wenn ein nicht unterstütztes Unicodezeichen verwendet wird, wird ein Setupfehler auftreten.**  
   
  **Erkannte Instanzen und Funktionen**  
  Zeigt eine Liste der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen und Komponenten an, die auf dem Computer installiert sind, auf dem das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup ausgeführt wird.  

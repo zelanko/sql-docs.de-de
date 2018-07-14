@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 caps.latest.revision: 6
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bed4f06e073d370b10be04e614a18b041f0d1dfa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 042dde7beeff33dd988f5d21d0d5975e4ee88aa0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159817"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190760"
 ---
 # <a name="step-1-copying-the-lesson-5-package"></a>Schritt 1: Kopieren des Pakets aus Lektion 5
   In dieser Aufgabe erstellen Sie eine Kopie des in Lektion 5 erstellten Pakets Lesson 5.dtsx. Wahlweise können Sie dem Projekt auch das im Lernprogramm enthaltene abgeschlossene Paket aus Lektion 5 hinzufügen und dann von diesem Paket eine Kopie erstellen. Sie verwenden diese neue Kopie im gesamten Rest der Lektion 6.  
@@ -42,7 +42,7 @@ ms.locfileid: "36159817"
   
 7.  Aktualisieren Sie im Eigenschaftenfenster die Name-Eigenschaft in Lesson 6.  
   
-8.  Klicken Sie auf das Feld für die ID-Eigenschaft und dann klicken Sie auf den Dropdownpfeil, und klicken Sie dann auf \<neue ID generieren >.  
+8.  Klicken Sie auf das Kontrollkästchen für die ID-Eigenschaft, und klicken Sie auf den Dropdownpfeil, und klicken Sie dann auf \<neue ID generieren >.  
   
 ### <a name="to-add-the-completed-lesson-5-package"></a>So fügen Sie das abgeschlossene Lektion 5-Paket hinzu  
   

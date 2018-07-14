@@ -1,5 +1,5 @@
 ---
-title: UnknownMemberTranslation-Element (ASSL) | Microsoft Docs
+title: UnknownMemberTranslation-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - UnknownElementTranslation element
 ms.assetid: a4b8cdac-b065-4a44-b251-c5ac1cfe5e6f
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 38b04dad97f6c61a884d4ba4234083bbc60bc260
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68270cff61daace55131454b549f12880f3b5e6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159648"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220300"
 ---
 # <a name="unknownmembertranslation-element-assl"></a>UnknownMemberTranslation-Element (ASSL)
   Enthält eine Übersetzung für die Beschriftung des der [UnknownMember](member-element-assl.md) -Element für eine [Dimension](dimension-element-assl.md) Element.  
@@ -60,7 +60,7 @@ ms.locfileid: "36159648"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element, das das übergeordnete Element des entspricht `UnknownMemberTranslation` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Dimension>.  
+ Das Element, das dem übergeordneten entspricht `UnknownMemberTranslation` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Translation-Element &#40;ASSL&#41;](translation-element-assl.md)   

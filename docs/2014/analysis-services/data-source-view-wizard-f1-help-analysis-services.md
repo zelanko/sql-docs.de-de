@@ -1,5 +1,5 @@
 ---
-title: Daten Datenquellensicht-Assistent F1 Hilfe (Analysis Services) | Microsoft Docs
+title: Datenquellensicht-Assistent F1-Hilfe (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Source View Wizard
 ms.assetid: 0f5057a3-2d3a-4966-8b61-99c4b8ec3433
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f866ebe7d18a749409d1bdeb0f2b7d2b073c5f74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: efc9c20cc6e79ae4e03838d9d4621fca383a5b43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160336"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269826"
 ---
 # <a name="data-source-view-wizard-f1-help-analysis-services"></a>Datenquellensicht-Assistent (F1-Hilfe) (Analysis Services)
   Erstellen Sie mithilfe des Datenquellensicht-Assistenten eine Datenquellensicht zur Verwendung in den folgenden Business Intelligence-Projekten in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]:  
@@ -52,7 +52,7 @@ ms.locfileid: "36160336"
   
 -   [Tabellen und Sichten auswählen &#40;-Datenquellen-Assistenten&#41; &#40;Analysis Services&#41;](select-tables-and-views-data-source-view-wizard-analysis-services.md)  
   
--   [Fertigstellen des Assistenten &#40;-Datenquellen-Assistenten&#41; &#40;Analysis Services&#41;](completing-the-wizard-data-source-view-wizard-analysis-services.md)  
+-   [Der Assistent &#40;-Datenquellen-Assistenten&#41; &#40;Analysis Services&#41;](completing-the-wizard-data-source-view-wizard-analysis-services.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services-Assistenten &#40;mehrdimensionale Daten&#41;](analysis-services-wizards-multidimensional-data.md)  

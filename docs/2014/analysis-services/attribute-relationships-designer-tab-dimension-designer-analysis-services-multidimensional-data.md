@@ -1,5 +1,5 @@
 ---
-title: Attributbeziehungen (Registerkarte von Attribut Attributbeziehungs-Designer, Dimensions-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Attributbeziehungen (Registerkarte Attributbeziehungs-Designer, Dimensions-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.attributerelationships.f1
 ms.assetid: abc8af00-5389-456d-b0f1-ec3e7403d4f9
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ea9c91e9584f2b5e7f561e9982ef1427340c470d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b362285a6ac8cee1551ad9c4bed36e6d9b5e5d0f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149754"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253212"
 ---
 # <a name="attribute-relationships-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Attributbeziehungen (Registerkarte Attributbeziehungs-Designer, Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
   Sie verwenden diese Liste **Attributbeziehung** , um eine bestimmte Attributbeziehung im Attributbeziehungsdiagramm zu finden und diese Beziehung zu verwalten. Dieser Bereich wird unmittelbar unter dem Bereich angezeigt, der das Attributbeziehungsdiagramm enthält.  
   
- **So zeigen Sie den Bereich Attributbeziehungen an**  
+ **Um den Bereich Attributbeziehungen anzuzeigen.**  
   
 1.  Doppelklicken Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]im Projektmappen-Explorer auf eine Dimension, um den Dimensions-Designer zu öffnen, und klicken Sie dann auf die Registerkarte **Attributbeziehung** .  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36149754"
   
  Weitere Informationen finden Sie unter [Dialogfelder „Attributbeziehung erstellen“ und „Attributbeziehung bearbeiten“ &#40;Registerkarte „Attributbeziehungs-Designer“ im Dimensions-Designer&#41; &#40;Analysis Services – Mehrdimensionale Daten&#41;](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md) und [Definieren von Attributbeziehungen](multidimensional-models/attribute-relationships-define.md).  
   
- **Beziehungstyp "**  
+ **Beziehungstyp**  
  Legt den Beziehungstyp entweder auf **Flexibel** oder **Fest**fest. In einer flexiblen Beziehung ändern sich die Beziehungen zwischen Elementen. In einer festen Beziehung ändern sich die Beziehungen zwischen Elementen nicht.  
   
  **Delete**  
@@ -61,8 +61,8 @@ ms.locfileid: "36149754"
   
 ## <a name="see-also"></a>Siehe auch  
  [Attributbeziehungen &#40;Dimensions-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   
- [Symbolleiste &#40;-Attribut Registerkarte Attributbeziehungs-Designer, Dimensions-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)   
- [Attribute &#40;-Attribut Registerkarte Attributbeziehungs-Designer, Dimensions-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)   
- [Attributbeziehungsdiagramm &#40;-Attribut Registerkarte Attributbeziehungs-Designer, Dimensions-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](attribute-relationship-diagram-analysis-services-multidimensional-data.md)  
+ [Symbolleiste &#40;Attribut Registerkarte Attributbeziehungs-Designer, Dimensions-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Attribute &#40;Attribut Registerkarte Attributbeziehungs-Designer, Dimensions-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Attributbeziehungsdiagramm &#40;Attribut Registerkarte Attributbeziehungs-Designer, Dimensions-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](attribute-relationship-diagram-analysis-services-multidimensional-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Wählen Sie zum Definieren der Verbindungs (Datenquellen-Assistent) (Analysis Services) | Microsoft Docs
+title: Wählen Sie die Verbindung (Datenquellen-Assistent) (Analysis Services) definieren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcewizard.selectdataconnection.f1
 ms.assetid: 425b2172-93a1-4f93-8945-cdeaa3e8bd67
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 55a2963fd36d25f7d163659fecbd854ab0660dce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0f74438c1591c5035117d974c838ca38cf2174b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150987"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330490"
 ---
 # <a name="select-how-to-define-the-connection-data-source-wizard-analysis-services"></a>Wählen Sie aus, wie die Verbindung definiert werden soll (Datenquellen-Assistent) (Analysis Services)
   Mithilfe der Seite **Wählen Sie aus, wie die Verbindung definiert werden soll** können Sie die Datenverbindung für eine Datenquelle erstellen oder auswählen.  

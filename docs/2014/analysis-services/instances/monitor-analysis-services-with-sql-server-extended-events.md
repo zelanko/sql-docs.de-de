@@ -1,5 +1,5 @@
 ---
-title: Verwenden Sie SQLServer erweiterte Ereignisse (XEvents) zum Überwachen von Analysis Services | Microsoft Docs
+title: Verwenden Sie erweiterte Ereignisse (XEvents) von SQLServer zum Überwachen von Analysis Services | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb67c1eca2b803c01a3716708f73afbb3861476a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4aa591ff08106f7af8946d6725d8894c52149634
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151231"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332800"
 ---
 # <a name="use-sql-server-extended-events-xevents-to-monitor-analysis-services"></a>Verwenden von erweiterten Ereignissen von SQL Server (XEvents) zum Überwachen von Analysis Services
   Analysis Services bietet Ablaufverfolgungsfunktionen durch die Verwendung von [Extended Events](../../relational-databases/extended-events/extended-events.md).  
   
  Erweiterte Ereignisse ist eine Ereignisinfrastruktur, die für Serversysteme stark skalierbar und konfigurierbar ist. Erweiterte Ereignisse ist ein Lightweight-Leistungsüberwachungssystem, das sehr wenige Leistungsressourcen verwendet.  
   
- Alle Analysis Services-Ereignisse aufgezeichnet werden können und auf bestimmte Consumer, wie er im Ziel [Extended Events](../../relational-databases/extended-events/extended-events.md), über XEvents.  
+ Alle Analysis Services-Ereignisse aufgezeichnet werden können und auf bestimmte Consumer, gemäß Definition in ausgerichtet [Extended Events](../../relational-databases/extended-events/extended-events.md), durch XEvents.  
   
 ## <a name="initiating-extended-events-in-analysis-services"></a>Initiieren von Erweiterte Ereignisse in Analysis Services  
  Die Erweiterte Ereignis-Ablaufverfolgung wird mit einem ähnlichen XMLA-Skriptbefehl zum Erstellen eines Objekts wie unten dargestellt aktiviert:  

@@ -1,5 +1,5 @@
 ---
-title: AggregationDimension-Datentyp (ASSL) | Microsoft Docs
+title: AggregationDimension-Datentyp (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationDimension data type
 ms.assetid: 697e0e09-3210-4a56-882f-80726abc4c68
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a2e289e1ea6f5c91fc362f309eb73cf5586d6295
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0b67d679a9ade4986f2c9aab11ff3c758c3b7c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150663"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251432"
 ---
 # <a name="aggregationdimension-data-type-assl"></a>AggregationDimension-Datentyp (ASSL)
   Definiert einen Grunddatentyp, der die Beziehung zwischen einer Dimension darstellt und ein [Aggregation](../objects/aggregation-element-assl.md) Element.  
@@ -62,7 +62,7 @@ ms.locfileid: "36150663"
 |Abgeleitete Elemente|[Dimension](../objects/dimension-element-assl.md) ([Dimensionen](../collections/dimensions-element-assl.md) Auflistung von [Aggregation](../objects/aggregation-element-assl.md))|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist [AggregationDimension](dimension-data-type-assl.md).  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist [AggregationDimension](dimension-data-type-assl.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services Scripting Language-XML-Datentypen &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

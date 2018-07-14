@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ae16ede1cf9a1fc51f0b7f7f31cc0b65a4565b9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2bbbaf9e86f3a75f57c61099475f0692e8a017cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161629"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171001"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>Einführung in die CDC Designer Console
   In diesem Abschnitt werden die Installationsverfahren für den Change Data Capture Designer für Oracle von Attunity beschrieben.  
   
 ## <a name="installation"></a>Installation  
- In diesem Abschnitt werden die Installationsverfahren für den Change Data Capture Designer für Oracle von Attunity beschrieben. Führen Sie zum Installieren der CDC Designer Console manuell **AttunityOracleCdcDesigner.msi** von den SQL Server-Installationsmedien.  Installationspakete für X86- und X64 befinden sich im **.\Tools\AttunityCDCOracle\\**  auf dem SQL Server-Installationsmedium.  
+ In diesem Abschnitt werden die Installationsverfahren für den Change Data Capture Designer für Oracle von Attunity beschrieben. Führen Sie zum Installieren der CDC Designer Console manuell **AttunityOracleCdcDesigner.msi** von den SQL Server-Installationsmedien.  Installationspakete für X86 und X64 befinden sich im **.\Tools\AttunityCDCOracle\\**  auf dem SQL Server-Installationsmedium.  
   
 ## <a name="supported-windows-environments"></a>Unterstützte Windows-Umgebungen  
  Die CDC Designer Console kann in den folgenden Windows-Umgebungen ausgeführt werden:  
@@ -56,11 +56,11 @@ ms.locfileid: "36161629"
 ## <a name="software-prerequisites"></a>Erforderliche Software  
  Die folgende Software ist erforderlich:  
   
--   Oracle-Client, mit "10.x"  
+-   Oracle-10.x-client  
   
 -   Oracle 11.x-Client  
   
- **Hinweis**: Sie müssen die 32-Bit oder 64-Bit-Version dieser Software je nach Version der installierten Oracle CDC Designer Console verwenden.  
+ **Beachten Sie**: Sie müssen die 32-Bit oder 64-Bit-Version dieser Software je nach Version der installierten Oracle CDC Designer Console verwenden.  
   
  Die Oracle CDC Designer Console verwendet für die Kommunikation mit der Oracle-Quelldatenbank den Oracle ODBC-Anbieter.  
   

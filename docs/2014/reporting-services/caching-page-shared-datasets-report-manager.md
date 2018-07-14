@@ -1,5 +1,5 @@
 ---
-title: Zwischenspeichern (Seite), freigegebene Datasets (Berichts-Manager) | Microsoft Docs
+title: Zwischenspeichern (Seite), freigegebene Datasets (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eac372e9-d2a1-48a8-bbe5-09d101df16ea
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 42b50337fe529517d791cf5992e09f3a3f8235b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fdd495e3110deb2cc8c9fc7b8a4848f0252f206
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150294"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247990"
 ---
 # <a name="caching-page-shared-datasets-report-manager"></a>Zwischenspeichern (Seite), Freigegebene Datasets (Berichts-Manager)
   Verwenden Sie die Eigenschaftenseite Zwischenspeichern, um die Cacheoptionen für ein freigegebenes Dataset festzulegen.  
@@ -53,14 +53,14 @@ ms.locfileid: "36150294"
  **Datasetspezifischer Zeitplan**  
  Geben Sie einen Zeitplan an, der nur von diesem Dataset verwendet wird.  
   
- **freigegebenen Zeitplan**  
+ **Freigegebenen Zeitplan**  
  Geben Sie einen Zeitplan an, der für Berichte, Abonnements und andere freigegebene Datasets gemeinsam verwendet wird.  
   
  **Anwenden**  
  Speichern Sie die Änderungen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Berichts-Manager &#40;SSRS im einheitlichen Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Berichts-Manager-F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
  [Zwischenspeichern von freigegebenen Datasets (SSRS)](report-server/cache-shared-datasets-ssrs.md)   
  [Zeitpläne](subscriptions/schedules.md)  

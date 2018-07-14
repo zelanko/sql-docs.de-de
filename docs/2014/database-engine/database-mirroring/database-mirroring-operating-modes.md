@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], operating modes
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 33e05c5d9e4e400ddc240bfd5bd4630801765164
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9b1519c49181be681fa6ced527d1db14f488aaf1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159425"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176517"
 ---
 # <a name="database-mirroring-operating-modes"></a>Betriebsmodi der Datenbankspiegelung
   In diesem Thema werden die synchronen und asynchronen Betriebsmodi für Datenbank-Spiegelungssitzungen beschrieben.  
@@ -50,7 +49,7 @@ ms.locfileid: "36159425"
  In diesem Abschnitt werden die Funktionsweise der asynchronen Datenbankspiegelung, die geeignete Verwendung des Modus für hohe Leistung sowie die entsprechende Reaktion auf den Fehlschlag des Prinzipalservers beschrieben.  
   
 > [!NOTE]  
->  Die meisten Editionen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützen nur die synchrone Datenbankspiegelung (nur SAFETY FULL). Informationen zu Editionen, die datenbankspiegelung vollständig unterstützen, finden Sie unter "Hohe Verfügbarkeit (AlwaysOn)" in [von den Editionen von SQL Server 2014 unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+>  Die meisten Editionen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützen nur die synchrone Datenbankspiegelung (nur SAFETY FULL). Informationen zu Editionen, die die datenbankspiegelung vollständig unterstützen, finden Sie unter "Hohe Verfügbarkeit (AlwaysOn)" in [von den SQL Server 2014-Editionen unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Wenn die Transaktionssicherheit auf OFF festgelegt ist, wird die Datenbank-Spiegelungssitzung asynchron ausgeführt. Im asynchronen Betrieb wird nur ein Betriebsmodus unterstützt, nämlich der Modus für hohe Leistung. Dieser Modus verbessert die Leistung auf Kosten der hohen Verfügbarkeit. Im Modus für hohe Leistung werden nur der Prinzipalserver und der Spiegelserver verwendet. Probleme auf dem Spiegelserver haben nie Auswirkungen auf den Prinzipalserver. Bei einem Ausfall des Prinzipalservers wird die Spiegeldatenbank als DISCONNECTED gekennzeichnet, steht jedoch als betriebsbereit zur Verfügung.  
   
@@ -222,11 +221,11 @@ ms.locfileid: "36159425"
 |--------------------|------------------------|-------------------|  
 |Modus mit hoher Leistung|OFF|NULL (kein Zeuge)<sup>2</sup>|  
 |Modus für hohe Sicherheit ohne automatisches Failover|FULL|NULL (kein Zeuge)|  
-|Modus mit hoher Sicherheit mit automatischem Failover<sup>1</sup>|FULL|CONNECTED|  
+|Modus für hohe Sicherheit mit automatischem Failover<sup>1</sup>|FULL|CONNECTED|  
   
- <sup>1</sup> , wenn der Zeuge getrennt wird, sollten Sie WITNESS auf OFF festgelegt, bis die Serverinstanz des Zeugen wieder verfügbar ist.  
+ <sup>1</sup> , wenn der Zeuge getrennt wird, sollten Sie WITNESS auf OFF festlegen, bis die Serverinstanz des Zeugen wieder verfügbar ist.  
   
- <sup>2</sup> , wenn ein Zeuge im Modus für hohe Leistung vorhanden ist, er nicht in der Sitzung Teil. Um die Datenbank verfügbar zu machen, müssen jedoch eine Verbindung mit mindestens zwei Serverinstanzen bestehen bleiben. Daher wird empfohlen, die WITNESS-Eigenschaft in Sitzungen im Modus für hohe Leistung auf OFF festgelegt zu lassen. Weitere Informationen finden Sie unter [Quorum: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit &#40;Datenbankspiegelung&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ <sup>2</sup> , wenn ein Zeuge im Modus für hohe Leistung vorhanden ist, der Zeuge nicht in der Sitzung teilnehmen. Um die Datenbank verfügbar zu machen, müssen jedoch eine Verbindung mit mindestens zwei Serverinstanzen bestehen bleiben. Daher wird empfohlen, die WITNESS-Eigenschaft in Sitzungen im Modus für hohe Leistung auf OFF festgelegt zu lassen. Weitere Informationen finden Sie unter [Quorum: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit &#40;Datenbankspiegelung&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 ###  <a name="ViewWitness"></a> Anzeigen der Sicherheitseinstellung und des Status des Zeugen  
  Verwenden Sie zum Anzeigen der Sicherheitseinstellung und des Status des Zeugen für eine Datenbank die **sys.database_mirroring** -Katalogsicht. Die wichtigen Spalten sind die folgenden:  

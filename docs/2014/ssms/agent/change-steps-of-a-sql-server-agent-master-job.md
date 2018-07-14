@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7d90a6d3162c90ce80281d53d8fe73c8ce2da4a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 243f5f15535a785e544c6b4e081d3404fb7ad26c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160574"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187617"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
   In diesem Thema wird beschrieben, wie Sie die Schritte in einem Masterauftrag für den SQL Server-Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]ändern.  
@@ -62,7 +62,7 @@ ms.locfileid: "36160574"
   
 5.  Klicken Sie im Dialogfeld **Auftragseigenschaften >***Auftragsname* unter **Seite auswählen** auf die Option **Schritte**.  
   
-6.  Klicken Sie auf **Bearbeiten**, um das Dialogfeld **Auftragsschritt-Eigenschaften >***Auftragsschrittname* zu öffnen. Weitere Informationen zu den Optionen in diesem Dialogfeld finden Sie unter [Auftragsschritt-Eigenschaften: Neuer Auftragsschritt &#40;Seite "Allgemein"&#41; ](../../integration-services/general-page-of-integration-services-designers-options.md) und [Auftragsschritt-Eigenschaften: Neuer Auftragsschritt &#40;Seite "Erweitert"&#41; ](job-step-properties-new-job-step-advanced-page.md).  
+6.  Klicken Sie auf **Bearbeiten**, um das Dialogfeld **Auftragsschritt-Eigenschaften >***Auftragsschrittname* zu öffnen. Weitere Informationen zu den verfügbaren Optionen in diesem Dialogfeld finden Sie unter [Auftragsschritt-Eigenschaften: Neuer Auftragsschritt &#40;Seite "Allgemein"&#41; ](../../integration-services/general-page-of-integration-services-designers-options.md) und [Auftragsschritt-Eigenschaften: Neuer Auftragsschritt &#40;Seite "Erweitert"&#41; ](job-step-properties-new-job-step-advanced-page.md).  
   
 7.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   

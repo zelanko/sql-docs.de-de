@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 230cd7bcbadf9e51ba248ffa34851335977cb0ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 02d7879bab489d92f6c5897406d3dce12b279d96
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150760"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238240"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines Parameters zum Bericht (Berichts-Generator)
   Fügen Sie dem Bericht einen Parameter hinzu, um Benutzern das Filtern von Berichtsdaten aus der Datenquelle oder im Bericht zu ermöglichen. Berichtsparameter werden automatisch für jeden Abfrageparameter erstellt, den Sie in eine Datasetabfrage einschließen. Der Parameterdatentyp bestimmt, wie der Parameter auf der Symbolleiste der Berichtsansicht angezeigt wird.  
@@ -37,25 +37,25 @@ ms.locfileid: "36150760"
   
 4.  [Ändern des Standarddatentyps und anderer Eigenschaften für einen Berichtsparameter](#ChangeDefaultProperties)  
   
-    1.  [Hinzufügen eines Datasets, um verfügbare Werte bereitzustellen und Anzeigenamen](#AddDataset)  
+    1.  [Fügen Sie ein Dataset aus, um verfügbare Werte bereitzustellen und die Anzeigenamen](#AddDataset)  
   
     2.  [Geben Sie verfügbarer Werte zum Erstellen einer Dropdownliste von Werten an](#AvailableValues)  
   
     3.  [Angeben von Standardwerten, damit der Bericht automatisch ausgeführt wird.](#DefaultValues)  
   
-    4.  [Suchen Sie einen Wert aus einem Dataset, das Name/Wert-Paare verfügt.](#NameValue)  
+    4.  [Suchen Sie nach Werten aus einem Dataset, das Name/Wert-Paare verfügt.](#NameValue)  
   
 5.  [Anzeigen des ausgewählten Parameterwerts im Bericht](#Expression)  
   
 6.  [Verwenden des Berichtsparameters in einem Filter](#Filter)  
   
-7.  [Ändern Sie den Berichtsparameter zum Annehmen mehrerer Werte](#Multivalued)  
+7.  [Ändern des Berichtsparameters-Parameter, um mehrere Werte zu akzeptieren.](#Multivalued)  
   
 8.  [Hinzufügen eines booleschen Parameters für bedingte Sichtbarkeit](#Boolean)  
   
 9. [Hinzufügen eines Berichtstitels](#Title)  
   
-10. [Speichern Sie den Bericht](#Save)  
+10. [Speichern des Berichts](#Save)  
   
 > [!NOTE]  
 >  In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Im ersten Tutorial dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Auswählen einer Datenquelle sowie zum Erstellen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
@@ -78,7 +78,7 @@ ms.locfileid: "36150760"
      Das Dialogfeld **Erste Schritte** wird angezeigt.  
   
     > [!NOTE]  
-    >  Wenn die **Einstieg** Dialogfeld nicht angezeigt wird, aus der **Berichts-Generator** Schaltfläche, klicken Sie auf **neu**.  
+    >  Wenn die **Einstieg** Dialogfeld nicht angezeigt wird, aus der **Berichts-Generator** , zeigen Sie auf **neu**.  
   
 2.  Überprüfen Sie im linken Bereich, ob **Bericht** ausgewählt ist.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "36150760"
   
 6.  Klicken Sie auf **Weiter**.  
   
-7.  Auf der **Auswählen eines Formats** Seite Wählen Sie im Bereich Formate einen Stil.  
+7.  Auf der **Auswählen eines Formats** Seite Wählen Sie im Bereich "Formate", eine Art.  
   
 8.  Klicken Sie auf **Fertig stellen**.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "36150760"
     WHERE StoreID = (@StoreID)  
     ```  
   
-     Die `WHERE` -Klausel beschränkt die abgerufenen Daten auf die Geschäfts-ID, die von der Abfrage-Parameter angegeben wird *@StoreID*.  
+     Die `WHERE` -Klausel beschränkt die abgerufenen Daten auf die Geschäfts-ID, die vom Abfrageparameter angegeben wird *@StoreID*.  
   
 4.  Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** (**!**). Das Dialogfeld **Abfrageparameter definieren** wird geöffnet, und Sie werden aufgefordert, einen Wert für den Abfrageparameter *@StoreID*.  
   
@@ -190,7 +190,7 @@ ms.locfileid: "36150760"
   
 8.  Erweitern Sie im Berichtsdatenbereich den Ordner **Parameter** .  
   
- Beachten Sie, dass es jetzt ein Berichtsparameter mit dem Namen *@StoreID*. Standardmäßig hat der Parameter den Datentyp **Text**. Da es sich bei der Geschäfts-ID um eine ganze Zahl handelt, ändern Sie den Datentyp im nächsten Verfahren in "Integer".  
+ Beachten Sie, dass es nun ein Berichtsparameter namens *@StoreID*. Standardmäßig weist der Parameter den Datentyp **Text**. Da es sich bei der Geschäfts-ID um eine ganze Zahl handelt, ändern Sie den Datentyp im nächsten Verfahren in "Integer".  
   
 ##  <a name="ChangeDefaultProperties"></a> 4. Ändern des Standarddatentyps und anderer Eigenschaften für einen Berichtsparameter  
  Nachdem Sie einen Berichtsparameter erstellt haben, können Sie die Standardwerte für Eigenschaften anpassen.  
@@ -199,7 +199,7 @@ ms.locfileid: "36150760"
   
 1.  Im berichtsdatenbereich unter dem **Parameter** Knoten mit der rechten Maustaste *@StoreID*, und klicken Sie dann auf **Parametereigenschaften**.  
   
-2.  Geben Sie an der Eingabeaufforderung **Geschäfts-ID?** Dieser Text wird auf der Berichts-Viewer-Symbolleiste angezeigt, wenn Sie den Bericht ausführen.  
+2.  Geben Sie in der Eingabeaufforderung **Store Identifier?** Dieser Text wird auf der Berichts-Viewer-Symbolleiste angezeigt, wenn Sie den Bericht ausführen.  
   
 3.  Wählen Sie in der Dropdownliste **Datentyp**die Option **Ganze Zahl**aus.  
   
@@ -207,11 +207,11 @@ ms.locfileid: "36150760"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  Zeigen Sie eine Vorschau des Berichts an. Der Berichts-Viewer zeigt die Eingabeaufforderung zur *@StoreID*.  
+6.  Zeigen Sie eine Vorschau des Berichts an. Der Berichts-Viewer zeigt die Eingabeaufforderung für *@StoreID*.  
   
 7.  Geben Sie auf der Berichts-Viewer-Symbolleiste neben Geschäfts-ID die Zahl **200**ein, und klicken anschließend auf **Bericht anzeigen**.  
   
-##  <a name="AddDataset"></a> 4a angegeben haben. Hinzufügen eines Datasets, um verfügbare Werte und Anzeigenamen anzuzeigen  
+##  <a name="AddDataset"></a> 4a. Hinzufügen eines Datasets, um verfügbare Werte und Anzeigenamen anzuzeigen  
  Um sicherzustellen dass ein Benutzer nur gültige Werte für einen Parameter eingeben kann, können Sie eine Dropdownliste von Werten erstellen. Die Werte können aus einem Dataset oder einer von Ihnen angegebenen Liste stammen. Verfügbare Werte müssen aus einem Dataset stammen, dessen Abfrage keinen Verweis auf den Parameter enthält.  
   
 #### <a name="to-create-a-dataset-for-valid-values-for-a-parameter"></a>So erstellen Sie ein Dataset für gültige Werte für einen Parameter  
@@ -224,7 +224,7 @@ ms.locfileid: "36150760"
   
 4.  Wählen Sie die **ein in den eigenen Bericht eingebettetes Dataset verwenden** Option.  
   
-5.  In **Datenquelle**, wählen Sie aus der Dropdownliste die Datenquelle, die Sie im ersten Verfahren erstellt haben.  
+5.  In **Datenquelle**, aus der Dropdown-Liste, wählen Sie die Datenquelle, die Sie im ersten Verfahren erstellt haben.  
   
 6.  Vergewissern Sie sich, dass unter **Abfragetyp**die Option **Text** ausgewählt ist.  
   
@@ -241,12 +241,12 @@ ms.locfileid: "36150760"
   
      Im Berichtsdatenbereich werden die Felder „StoreID“ und „StoreName“ unter dem Datasetknoten **Geschäfte** angezeigt.  
   
-##  <a name="AvailableValues"></a> 4 b erstellt haben. Angeben verfügbarer Werte zum Erstellen einer Dropdownliste von Werten  
+##  <a name="AvailableValues"></a> 4 b: Angeben verfügbarer Werte zum Erstellen einer Dropdownliste von Werten  
  Nachdem Sie ein Dataset erstellt haben, um verfügbare Werte bereitzustellen, müssen Sie die Berichtseigenschaften ändern, um das Dataset und das Feld anzugeben, aus denen die Dropdownliste gültiger Werte auf der Berichts-Viewer-Symbolleiste aufgefüllt wird.  
   
 #### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>So stellen Sie verfügbare Werte für einen Parameter aus einem Dataset bereit  
   
-1.  Klicken Sie im Bereich "Berichtsdaten" Maustaste Parameters *@StoreID*, und klicken Sie dann auf **Parametereigenschaften**.  
+1.  Der berichtsdatenbereich mit der Maustaste Parameters *@StoreID*, und klicken Sie dann auf **Parametereigenschaften**.  
   
 2.  Klicken Sie auf **Verfügbare Werte**und anschließend auf **Werte aus Abfrage abrufen**.  
   
@@ -258,7 +258,7 @@ ms.locfileid: "36150760"
   
 6.  Klicken Sie auf **Allgemein**.  
   
-7.  Geben Sie an der Eingabeaufforderung **Geschäftsname?**  
+7.  Geben Sie in der Eingabeaufforderung **Store Name?**  
   
      Dem Benutzer steht jetzt anstelle einer Liste von Geschäfts-IDs eine Liste von Geschäftsnamen zur Verfügung, um seine Auswahl zu treffen. Beachten Sie, dass der Parameterdatentyp weiterhin **Integer** lautet, da der Parameter nicht auf dem Geschäftsnamen, sondern auf der Geschäfts-ID basiert.  
   
@@ -266,13 +266,13 @@ ms.locfileid: "36150760"
   
 9. Zeigen Sie eine Vorschau des Berichts an.  
   
-     Der Berichts-Viewer-Symbolleiste ist das Parametertextfeld jetzt eine Dropdown-Liste mit  **\<wählen Sie einen Wert >**.  
+     In der Berichts-Viewer-Symbolleiste ist das Parametertextfeld jetzt als Dropdownliste angezeigt, enthält  **\<wählen Sie einen Wert >**.  
   
 10. Die Dropdownliste, wählen Sie Contoso Catalog Store, und klicken Sie dann auf **View-Bericht**.  
   
  Im Bericht werden die verkauften Mengen für Zubehör, Camcorder und digitale SLR-Kameras für die Geschäfts-ID **200**angezeigt.  
   
-##  <a name="DefaultValues"></a> 4c. Angeben von Standardwerten zur automatischen Ausführung des Berichts  
+##  <a name="DefaultValues"></a> 4 Kerne. Angeben von Standardwerten zur automatischen Ausführung des Berichts  
  Sie können einen Standardwert für jeden Berichtsparameter angeben, damit der Bericht automatisch ausgeführt wird.  
   
 #### <a name="to-specify-a-default-value-from-a-dataset"></a>So geben Sie einen Standardwert aus einem Dataset an  
@@ -299,7 +299,7 @@ ms.locfileid: "36150760"
   
 2.  Klicken Sie im Berichtsdatenbereich mit der rechten Maustaste auf *@StoreID*, und klicken Sie anschließend auf **Parametereigenschaften**.  
   
-3.  Klicken Sie auf **Standardwerte**, und klicken Sie auf **geben Werte**, und klicken Sie dann auf **hinzufügen**. Eine neue Wertzeile wird hinzugefügt.  
+3.  Klicken Sie auf **Standardwerte**, und klicken Sie auf **Geben Sie Werte**, und klicken Sie dann auf **hinzufügen**. Eine neue Wertzeile wird hinzugefügt.  
   
 4.  Geben Sie im Feld **Wert**die Zeichenfolge **200**ein.  
   
@@ -399,7 +399,7 @@ ms.locfileid: "36150760"
   
 5.  Erweitern Sie im Berichtsdatenbereich den Ordner **Datasets** , klicken Sie mit der rechten Maustaste auf **DataSet1**, und klicken Sie anschließend auf **Abfrage**.  
   
-6.  Änderung `equals` (=), `IN` in der [!INCLUDE[tsql](../includes/tsql-md.md)] `WHERE` -Klausel in der letzten Zeile in der Abfrage:  
+6.  Änderung `equals` (=) zum `IN` in die [!INCLUDE[tsql](../includes/tsql-md.md)] `WHERE` -Klausel in der letzten Zeile in der Abfrage:  
   
     ```  
     WHERE StoreID IN (@StoreID)  

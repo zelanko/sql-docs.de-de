@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 3: Erstellen von SQL Server-Anmeldeinformationen | Microsoft Docs'
+title: 'Lektion 3: Erstellen von SQL Server-Anmeldeinformationen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 201863a1df64cdc85ef41a55170948dbf4eba419
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 486917c0cd6a36bbf2004e17ffaf0607e04ecbb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159986"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219250"
 ---
 # <a name="lesson-3-create-a-sql-server-credential"></a>Lektion 3: Erstellen von SQL Server-Anmeldeinformationen
   In dieser Lektion erstellen Sie Anmeldeinformationen, um die Sicherheitsinformationen für den Zugriff auf das Windows Azure-Speicherkonto zu speichern.  
   
  SQL Server-Anmeldeinformationen sind ein Objekt zum Speichern von Authentifizierungsinformationen, die für die Verbindung mit einer Ressource außerhalb von SQL Server erforderlich sind. In den Anmeldeinformationen werden der URI-Pfad des Speichercontainers und die Shared Access Signature-Schlüsselwerte gespeichert. Für jeden Speichercontainer, der von einer Daten- oder Protokolldatei verwendet wird, müssen Sie SQL Server-Anmeldeinformationen erstellen, deren Namen mit dem Containerpfad übereinstimmen.  
   
- Allgemeine Informationen über Anmeldeinformationen finden Sie unter [Anmeldeinformationen &#40;Datenbankmodul&#41;](security/authentication-access/credentials-database-engine.md).  
+ Allgemeine Informationen zu Anmeldeinformationen finden Sie unter [Anmeldeinformationen &#40;Datenbank-Engine&#41;](security/authentication-access/credentials-database-engine.md).  
   
 > [!IMPORTANT]  
->  Die Anforderungen zum Erstellen einer SQL Server-Anmeldeinformationen, die unten beschriebenen hängen von der [SQL Server-Datendateien in Windows Azure](databases/sql-server-data-files-in-microsoft-azure.md) Funktion. Informationen zum Erstellen von Anmeldeinformationen für backup-Prozesse im Azure-Speicher finden Sie unter [Lektion 2: Erstellen von SQL Server-Anmeldeinformationen](../tutorials/lesson-2-create-a-sql-server-credential.md).  
+>  Die Anforderungen zum Erstellen einer SQL Server-Anmeldeinformationen, die unten beschriebenen sind spezifisch für die [SQL Server-Datendateien in Windows Azure](databases/sql-server-data-files-in-microsoft-azure.md) Feature. Informationen zum Erstellen von Anmeldeinformationen für backup-Prozesse im Azure-Speicher finden Sie unter [Lektion 2: Erstellen von SQL Server-Anmeldeinformationen](../tutorials/lesson-2-create-a-sql-server-credential.md).  
   
  Führen Sie die folgenden Schritte aus, um SQL Server-Anmeldeinformationen zu erstellen:  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 caps.latest.revision: 28
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 762be955372568ad7930611b0216bbb3f1437158
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 25f45f72ddbfc389deb77e6c20588660e599cb19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151154"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205680"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Anforderungen für die Webanwendung (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] ist eine Webanwendung, die von den Internetinformationsdiensten (IIS) gehostet wird. [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] funktioniert nur in Internet Explorer (IE) 7 oder höher. Internet Explorer 7 und frühere Versionen, Microsoft Edge und Chrome werden nicht unterstützt.  
@@ -38,7 +38,7 @@ ms.locfileid: "36151154"
 |-------------------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------|  
 |[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows 7 Professional, Enterprise und Ultimate<br /><br /> Windows 8.0 Professional, Enterprise und Ultimate|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|  
   
- Eine vollständige Liste der Windows-Betriebssysteme, die für Ihre Edition von unterstützt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+ Eine vollständige Liste der Windows-Betriebssysteme, die für Ihre Edition von Microsoft Intune [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [Hardware- und Softwareanforderungen für die Installation von SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 ### <a name="microsoft-silverlight"></a>Microsoft Silverlight  
  Um in der [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung zu arbeiten, muss Silverlight 5 auf dem Clientcomputer installiert sein. Falls Sie nicht über die erforderliche Version von Silverlight verfügen, werden Sie aufgefordert, diese zu installieren, wenn Sie zu einem Bereich der Webanwendung navigieren, in dem sie erforderlich ist. Sie können Silverlight 5 von [hier](http://go.microsoft.com/fwlink/?LinkId=243096)installieren.  
@@ -47,7 +47,7 @@ ms.locfileid: "36151154"
  Unter Windows Server 2008 R2 können Sie den **Server-Manager**in der Microsoft Management Console (MMC) verwenden, um die Rolle **Webserver (IIS)** und die folgenden erforderlichen Rollendienste zu installieren.  
   
 > [!NOTE]  
->  Auf [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] und Verwenden von Windows 7-Betriebssysteme, **Programme und Funktionen** in der Systemsteuerung So aktivieren Sie diese Optionen in der **Windows-Features** (Dialogfeld).  
+>  Auf [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] und Verwenden von Windows 7-Betriebssysteme, **Programme und Funktionen** in der Systemsteuerung zur Aktivierung dieser Optionen in der **Windows Features** Dialogfeld.  
   
 ||  
 |-|  
@@ -64,10 +64,10 @@ ms.locfileid: "36151154"
 |Internetinformationsdienste (IIS)<br /><br /> Webverwaltungstools<br /><br /> IIS-Verwaltungskonsole<br /><br /> WWW (World Wide Web)-Dienste<br /><br /> Anwendungsentwicklung<br /><br /> .NET-Erweiterbarkeit 3.5<br /><br /> .NET-Erweiterbarkeit 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI-Erweiterungen<br /><br /> ISAPI-Filter<br /><br /> Allgemeine HTTP-Funktionen<br /><br /> Standarddokument<br /><br /> Verzeichnissuche<br /><br /> HTTP-Fehler<br /><br /> Statischer Inhalt<br /><br /> [Hinweis: Installieren Sie nicht die WebDAV-Veröffentlichung]<br /><br /> Integrität und Diagnose<br /><br /> HTTP-Protokollierung<br /><br /> Anforderungsüberwachung<br /><br /> Leistung<br /><br /> Komprimierung statischer Inhalte<br /><br /> Security<br /><br /> Anforderungsfilterung<br /><br /> Windows-Authentifizierung|  
   
 ### <a name="features-windows-server-2008-or-windows-server-2008-r2-windows-7-operating-systems"></a>Funktionen (Betriebssysteme Windows Server 2008 oder Windows Server 2008 R2, Windows 7)  
- Auf [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] oder Windows Server 2008 R2 können Sie **Server-Manager** um installiert die folgenden erforderlichen Funktionen.  
+ Auf [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] oder Windows Server 2008 R2 können Sie **Server-Manager** So installieren Sie die folgenden erforderlichen Funktionen.  
   
 > [!NOTE]  
->  Auf [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] und Verwenden von Windows 7-Betriebssysteme, **Programme und Funktionen** in der Systemsteuerung So aktivieren Sie diese Optionen in der **Windows-Features** (Dialogfeld).  
+>  Auf [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] und Verwenden von Windows 7-Betriebssysteme, **Programme und Funktionen** in der Systemsteuerung zur Aktivierung dieser Optionen in der **Windows Features** Dialogfeld.  
   
 ||  
 |-|  

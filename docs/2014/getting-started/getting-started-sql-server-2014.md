@@ -1,5 +1,5 @@
 ---
-title: Erste Schritte (SQLServer 2014) | Microsoft Docs
+title: Erste Schritte (SQLServer 2014) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5148c993-6cd4-42f0-9109-1ec08d8e798c
 caps.latest.revision: 8
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6fdc2a443c0318fc7a40a21034171c5a043fd43d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c5dc6314da166a0503f31326dfd562fc42a635f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151180"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205870"
 ---
 # <a name="getting-started-sql-server-2014"></a>Erste Schritte (SQL Server 2014)
   Hier finden Sie Quellen mit Informationen zu [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], Systemanforderungen, Installationsanweisungen usw.  

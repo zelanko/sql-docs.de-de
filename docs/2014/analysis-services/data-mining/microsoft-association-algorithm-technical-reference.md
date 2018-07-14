@@ -1,5 +1,5 @@
 ---
-title: Microsoft Association Algorithm Technical Reference | Microsoft Docs
+title: Microsoft Association Algorithm Technical Reference | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MINIMUM_ITEMSET_SIZE parameter
 - MAXIMUM_SUPPORT parameter
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - MINIMUM_PROBABILITY parameter
 ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1179752b5a1870af925463687056f3f767318aac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d4f787b070c72c2cc8c1f071fee9cc6bcdd3d96e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159675"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171991"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Association-Algorithmus
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules-Algorithmus ist eine einfache Implementierung des bekannten Apriori-Algorithmus.  
@@ -147,7 +147,7 @@ ms.locfileid: "36159675"
  Gilt für die Miningstrukturspalte.  
   
  MODEL_EXISTENCE_ONLY  
- Dies bedeutet, dass die Spalte zwei mögliche Statuswerte haben behandelt: `Missing` und `Existing`. Ein NULL-Wert ist ein fehlender Wert.  
+ Bedeutet, dass die Spalte zwei mögliche Statuswerte haben behandelt: `Missing` und `Existing`. Ein NULL-Wert ist ein fehlender Wert.  
   
  Gilt für die Miningmodellspalte.  
   
@@ -168,6 +168,6 @@ ms.locfileid: "36159675"
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Association-Algorithmus](microsoft-association-algorithm.md)   
  [Zuordnungsmodellabfragen](association-model-query-examples.md)   
- [Miningmodellinhalt für Zuordnungsmodelle &#40;Analysis Services – Datamining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Mingingmodellinhalt von Clustermodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: PowerPivot-Integritätsregeln − konfigurieren | Microsoft Docs
+title: PowerPivot-Integritätsregeln − konfigurieren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f22cf615d32ebe0d784aa71f3169f4ce9b9e9125
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 853dc9e66b42830f241715f2283b75f1983e2433
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151214"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265427"
 ---
 # <a name="powerpivot-health-rules---configure"></a>PowerPivot-Integritätsregeln − Konfigurieren
   PowerPivot für SharePoint enthält SharePoint-Integritätsregeln, mit deren Hilfe Sie Probleme mit der Serververfügbarkeit und -konfiguration überwachen und beheben können. Die für PowerPivot für SharePoint geltenden Integritätsregeln werden auf der Seite "Regeldefinitionen überprüfen" angezeigt.  
@@ -32,7 +32,7 @@ ms.locfileid: "36151214"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
- **Hinweis:** Integritätsregeleinstellungen werden für die SQL Server Analysis Services-Instanz und die PowerPivot-Dienstanwendung getrennt konfiguriert. Konfigurieren Sie Integritätsregeln für jeden Dienst mithilfe der Anweisungen in diesem Thema. Bei einer SharePoint 2013-Bereitstellung verwendet [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] nur die Dienstanwendung. Daher werden durch [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] verschiedene Sätze von Integritätsregeln für unterschiedliche SharePoint-Versionen installiert. Finden Sie unter der Spalte "Version" im Thema [Referenz zu Integritätsregeln &#40;PowerPivot für SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md), oder Sie können auf der installierten Regeln finden Sie unter den folgenden Windows PowerShell-Befehl ausführen.  
+ **Hinweis:** Integritätsregeleinstellungen werden für die SQL Server Analysis Services-Instanz und die PowerPivot-Dienstanwendung getrennt konfiguriert. Konfigurieren Sie Integritätsregeln für jeden Dienst mithilfe der Anweisungen in diesem Thema. Bei einer SharePoint 2013-Bereitstellung verwendet [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] nur die Dienstanwendung. Daher werden durch [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] verschiedene Sätze von Integritätsregeln für unterschiedliche SharePoint-Versionen installiert. Finden Sie unter der Spalte "Version" des Themas [Referenz zu Integritätsregeln &#40;PowerPivot für SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md), oder Sie können auf der installierten Regeln finden Sie unter den folgenden Windows PowerShell-Befehl ausführen.  
   
 ```  
 Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like “*power*”}  | format-table -property * -autosize | out-default  
@@ -95,7 +95,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      Diese Konfigurationseinstellung entspricht der folgenden Regeldefinition auf der Seite **Probleme und Lösungen überprüfen** : **PowerPivot: Die hohe Verbindungsanzahl weist darauf hin, dass weitere Server zur Bewältigung der aktuellen Arbeitslast bereitgestellt werden sollten**.  
   
      Nicht genügend Speicherplatz (Standardwert ist 5 %)  
-     Der Speicherplatz wird verwendet, um jedes Mal PowerPivot-Daten zwischenzuspeichern, wenn eine Datenbank angefordert wird. Mit dieser Regel wissen Sie, wann nicht genügend Speicherplatz zur Verfügung steht. Standardmäßig wird diese Integritätsregel ausgelöst, wenn der Speicherplatz auf dem Laufwerk mit dem Sicherungsordner geringer als 5 % ist. Weitere Informationen zur Datenträgerverwendung finden Sie unter [Konfigurieren der Speicherplatzverwendung &#40;PowerPivot für SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md).  
+     Der Speicherplatz wird verwendet, um jedes Mal PowerPivot-Daten zwischenzuspeichern, wenn eine Datenbank angefordert wird. Mit dieser Regel wissen Sie, wann nicht genügend Speicherplatz zur Verfügung steht. Standardmäßig wird diese Integritätsregel ausgelöst, wenn der Speicherplatz auf dem Laufwerk mit dem Sicherungsordner geringer als 5 % ist. Weitere Informationen zur datenträgernutzung finden Sie unter [Konfigurieren der Speicherplatzverwendung &#40;PowerPivot für SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md).  
   
      Diese Konfigurationseinstellung entspricht der folgenden Regeldefinition auf der Seite **Probleme und Lösungen überprüfen** : **PowerPivot: Das Laufwerk, auf dem PowerPivot-Daten zwischengespeichert werden, verfügt über unzureichenden Speicherplatz**.  
   
@@ -108,11 +108,11 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
 2.  Klicken Sie auf der Seite Dienstanwendungen auf **PowerPivot-Standarddienstanwendung**.  
   
-     ![Bildschirmabbildung von Dienstanwendungen Seite](../media/ssas-centraladmin-app.gif "Screenshot Dienstanwendungen-Seite")  
+     ![Bildschirmabbildung von Dienstanwendungen Seite](../media/ssas-centraladmin-app.gif "Screenshot von Dienstanwendungen-Seite")  
   
 3.  Das PowerPivot-Management-Dashboard wird angezeigt. Klicken Sie auf **Einstellungen für Dienstanwendung konfigurieren** in der Liste **Aktionen** , um die Seite mit den Einstellungen der Dienstanwendung zu öffnen.  
   
-     ![Screenshot des Dashboards, konzentrieren sich auf die Liste "Aktionen"](../media/ssas-centraladmin-actionslist.gif "Screenshot des Dashboards, konzentrieren sich auf die Liste \"Aktionen\"")  
+     ![Screenshot des Dashboards, konzentrieren, Aktionsliste](../media/ssas-centraladmin-actionslist.gif "Screenshot des Dashboards, konzentrieren sich auf die Liste \"Aktionen\"")  
   
 4.  Ändern Sie in den Integritätsregeleinstellungen die folgenden Einstellungen:  
   

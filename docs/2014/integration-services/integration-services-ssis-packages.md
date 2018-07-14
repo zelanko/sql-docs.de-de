@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, about packages
 - packages [Integration Services], about packages
@@ -23,13 +23,13 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 85eeb75badeed90812c657b9dbdc64e261947e20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99a414e27b9fb470d8e7ee07589c42e0184b283e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150403"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252382"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services-Pakete (SSIS)
   Bei einem Paket handelt es sich um eine organisierte Auflistung von Verbindungen, Ablaufsteuerungselementen, Datenflusselementen, Ereignishandlern, Variablen, Parametern und Konfigurationen, die Sie entweder mit den grafischen Designtools von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] oder programmgesteuert erstellen.  Sie speichern dann das fertige Paket in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], dem [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paketspeicher oder im Dateisystem, oder Sie können das ssISnoversion-Projekt auf dem Server [!INCLUDE[ssIS](../includes/ssis-md.md)] bereitstellen. Das Paket ist jene Arbeitseinheit, die abgerufen, ausgeführt und gespeichert wird.  
@@ -56,7 +56,7 @@ ms.locfileid: "36150403"
   
  Wenn ein Paket zuerst entweder programmgesteuert oder mithilfe von SSIS-Designer erstellt wird, wird eine GUID hinzugefügt seine `ID` Eigenschaft und einen Namen für die `Name` Eigenschaft. Beim Erstellen eines neuen Pakets durch Kopieren eines vorhandenen Pakets oder mithilfe eines Vorlagenpakets werden Name und GUID ebenfalls kopiert. Dies kann problematisch werden, wenn Sie die Protokollierung verwenden, da der GUID und Name des Pakets in die Protokolle geschrieben werden, um das Paket zu identifizieren, zu dem die protokollierten Informationen gehören. Sie sollten daher den Namen und GUID der neuen Pakete aktualisieren, um diese von jenen Paketen zu unterscheiden, von denen sie kopiert wurden, und um in den Protokolldaten eine Unterscheidung untereinander zu ermöglichen.  
   
- Zum Ändern des Paket-GUIDs müssen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] im Eigenschaftenfenster einen GUID in der `ID`-Eigenschaft neu generieren. Zum Ändern des Paketnamens können Sie den Wert des Aktualisieren der `Name` Eigenschaft im Eigenschaftenfenster angezeigt. Sie können auch die **dtutil** -Eingabeaufforderung verwenden oder die GUID und Namen programmgesteuert aktualisieren. Weitere Informationen finden Sie unter [Festlegen von Paketeigenschaften](set-package-properties.md) und [dtutil (Hilfsprogramm)](dtutil-utility.md).  
+ Zum Ändern des Paket-GUIDs müssen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] im Eigenschaftenfenster einen GUID in der `ID`-Eigenschaft neu generieren. Um den Paketnamen zu ändern, können Sie den Wert des Aktualisieren der `Name` Eigenschaft im Eigenschaftenfenster angezeigt. Sie können auch die **dtutil** -Eingabeaufforderung verwenden oder die GUID und Namen programmgesteuert aktualisieren. Weitere Informationen finden Sie unter [Festlegen von Paketeigenschaften](set-package-properties.md) und [dtutil (Hilfsprogramm)](dtutil-utility.md).  
   
 ## <a name="objects-that-extend-package-functionality"></a>Objekte, die die Paketfunktionalität erweitern  
  Pakete können zusätzliche Objekte einschließen, die erweiterte Funktionen bereitstellen oder vorhandene Funktionalität erweitern, wie z. B. Ereignishandler, Konfigurationen, Protokollierung und Variablen.  
@@ -119,7 +119,7 @@ ms.locfileid: "36150403"
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   [Implementieren von SQL Server Integrationsservices mit Microsoft Dynamics Mobile](http://msdn.microsoft.com/library/cc563950)  
+-   [Implementieren von SQL Server Integration Services mit Microsoft Dynamics Mobile](http://msdn.microsoft.com/library/cc563950)  
   
 -   [Vorgehensweise: Konfigurieren von SQL Server Integration Services-Paket für Microsoft Dynamics AX](http://msdn.microsoft.com/library/bb986852)  
   

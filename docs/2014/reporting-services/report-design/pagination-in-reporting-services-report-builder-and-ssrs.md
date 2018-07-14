@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f17620dc2fc58b033bef928035b4f5f40816214e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 37bbe195179a13d00961f3f33149e3d25b9476e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160586"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188037"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Paginierung in Reporting Services (Berichts-Generator und SSRS)
-  Paginierung bezieht sich auf die Anzahl der Seiten in einem Bericht und wie Berichtselemente auf diesen Seiten angeordnet werden. Paginierung in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] variiert abhängig von der Renderingerweiterung, die Sie zum Anzeigen und Übermitteln des Berichts verwenden. Wenn Sie einen Bericht auf dem Berichtsserver erstellen, verwendet der Bericht den HTML-Renderer. Für HTML gilt ein bestimmter Satz von Paginierungsregeln. Wenn Sie den gleichen Bericht nach PDF exportieren, wird beispielsweise der PDF-Renderer verwendet, und es findet ein anderer Satz von Regeln Anwendung. Daher wird der Bericht unterschiedlich paginiert. Um erfolgreich einen einfach zu lesende Bericht für Ihre Benutzer zu entwerfen, die für den Renderer, die Sie verwenden optimiert ist, um den Bericht übermitteln möchten, müssen Sie die Regeln zur Steuerung der Paginierung in verstehen [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+  Paginierung bezieht sich auf die Anzahl der Seiten in einem Bericht und wie Berichtselemente auf diesen Seiten angeordnet werden. Paginierung in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] variiert abhängig von der Renderingerweiterung, die Sie zum Anzeigen und übermitteln den Bericht verwenden. Wenn Sie einen Bericht auf dem Berichtsserver erstellen, verwendet der Bericht den HTML-Renderer. Für HTML gilt ein bestimmter Satz von Paginierungsregeln. Wenn Sie den gleichen Bericht nach PDF exportieren, wird beispielsweise der PDF-Renderer verwendet, und es findet ein anderer Satz von Regeln Anwendung. Daher wird der Bericht unterschiedlich paginiert. Um erfolgreich einen leicht lesbaren Bericht für Ihre Benutzer zu entwerfen, die für den Renderer optimiert ist, die Sie zum Bereitstellen des Berichts verwenden möchten, müssen Sie verstehen, die Regeln zur Steuerung der Paginierung in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  In diesem Thema wird erörtert, wie sich Seitengröße und Berichtslayout auf das Rendern des Berichts durch Renderer von harten Seitenumbrüchen auswirken. Im Bereich **Berichtseigenschaften** , im Bereich **Eigenschaften** oder im Dialogfeld **Seite einrichten** können Sie Eigenschaften festlegen, mit denen die physische Seitengröße und die Ränder geändert und der Bericht in Spalten aufgeteilt werden können. Sie können auf den Bereich **Berichtseigenschaften** zugreifen, indem Sie auf den blauen Bereich außerhalb des Hauptteils des Berichts klicken. Zum Öffnen des Dialogfelds **Seite einrichten** klicken Sie auf der Registerkarte Start auf **Ausführen** und dann auf der Registerkarte Ausführen auf **Seite einrichten** .  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36160586"
   
  Sie können den Wert der Eigenschaften Disabled und ResetPageNumber mithilfe von Konstanten und einfachen oder komplexen Ausdrücken festlegen. Für die BreakLocation-Eigenschaft kann jedoch kein Ausdruck verwenden. Weitere Informationen zum Schreiben und Verwenden von Ausdrücken finden Sie unter [Ausdrücke (Berichts-Generator und SSRS)](expressions-report-builder-and-ssrs.md).  
   
- Im Bericht können Sie Ausdrücke, die mit der aktuellen Seitennamen oder die Seitenzahlen verweisen Schreiben der `Globals` Auflistung. Weitere Informationen finden Sie unter [Integrierte globale Werte und Benutzerverweise &#40;Berichts-Generator und SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md).  
+ Im Bericht können Sie Ausdrücke, die mit der aktuellen Seitennamen oder die Seitenzahlen verweisen schreiben die `Globals` Auflistung. Weitere Informationen finden Sie unter [Integrierte globale Werte und Benutzerverweise &#40;Berichts-Generator und SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
 ### <a name="naming-excel-worksheet-tabs"></a>Benennen von Registerkarten in Excel-Arbeitsblättern  
  Diese Eigenschaften sind nützlich, wenn Sie Berichte in Excel-Arbeitsmappen exportieren. Verwenden Sie die InitialPage-Eigenschaft, um einen Standardnamen für den Registerkartennamen des Arbeitsblatts anzugeben, wenn Sie den Bericht exportieren, und verwenden Sie Seitenumbrüche und die PageName-Eigenschaft, um andere Namen für jedes Arbeitsblatt bereitzustellen. Jede neue von einem Seitenumbruch definierte Berichtsseite wird in ein anderes vom Wert der PageName-Eigenschaft benanntes Arbeitsblatt exportiert. Wenn PageName leer ist, der Bericht jedoch einen ursprünglichen Seitennamen enthält, wird in allen Arbeitsblättern in der Excel-Arbeitsmappe der gleiche Name verwendet – der ursprüngliche Seitenname.  

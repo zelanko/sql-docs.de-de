@@ -1,5 +1,5 @@
 ---
-title: Was&#39;s in den Data Mining-Add-Ins für Office enthalten | Microsoft Docs
+title: Was&#39;eingeschlossen, die in den Data Mining-Add-Ins für Office | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - getting started
 ms.assetid: 6c3d2b96-6646-42ef-b219-fea2e0cd3459
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 282155ff681830e3b6c1b3f0bc0d4f281a6435e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5630c67926713b997adfe85fe0fd9f8da10e03e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151198"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231993"
 ---
-# <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>Was&#39;s enthalten, die in den Data Mining-Add-Ins für Office
+# <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>Was&#39;eingeschlossen, die in den Data Mining-Add-Ins für Office
   Wenn Sie beim Installieren der Data Mining-Add-Ins für Office 2013 sämtliche Installationsoptionen auswählen, werden die folgenden Symbolleisten und Vorlagen hinzugefügt:  
   
 -   [Tabellenanalysetools für Excel](table-analysis-tools-for-excel.md)  
@@ -46,7 +46,7 @@ ms.locfileid: "36151198"
   
      Zum Erstellen von Modellen muss eine Verbindung mit einem Data Mining-Server vorhanden sein. Wenn Sie beim Einrichten Hilfe benötigen, klicken Sie einfach auf **Hilfe** und befolgen Sie die Anweisungen auf den einzelnen Seiten des Konfigurations-Assistenten. Sie können Probleme entweder selbst beheben oder die vom Assistenten bereitgestellten Informationen an Ihren Systemadministrator senden, um Unterstützung für die Konfiguration zu erhalten.  
   
--   [Auswählen von Daten und Verwenden der Beispieldaten](choosing-data-for-data-mining.md)  
+-   [Auswählen von Daten und unter Verwendung der Beispieldaten](choosing-data-for-data-mining.md)  
   
      Für eine erfolgreiche Datenanalyse sollten Sie wissen, welche Daten zu verwenden sind und wie sie vorbereitet werden. Dieses Thema bietet Tipps dazu, wie Sie Ihre Daten vorbereiten, um optimale Modelle zu erhalten.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36151198"
   
     -   \<Laufwerk >: \Programme\Microsoft SQL Server 2014 DM-add-ins  
   
-    -   \<Laufwerk >: \Program Files (x86) \Microsoft SQL Server 2014 DM-add-ins  
+    -   \<Laufwerk >: \Programme (x86) \Microsoft SQL Server 2014 DM-add-ins  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erste Schritte mit Datamining &#40;Data Mining-Add-ins für Excel&#41;](getting-started-with-data-mining-data-mining-add-ins-for-excel.md)  

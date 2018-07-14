@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 caps.latest.revision: 21
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b0d22fd13abf68cd9eea1c21b135427161fbf8be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: a8a8c2fc949755b5cc3fea644a5b08ee3990c541
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151368"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207100"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Schätzen der Arbeitsspeicheranforderungen speicheroptimierter Tabellen
   Unabhängig davon, ob Sie eine neue speicheroptimierte [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Tabelle erstellen oder eine vorhandene datenträgerbasierte Tabelle migrieren, ist es wichtig, den Arbeitsspeicherbedarf der einzelnen Tabellen realistisch einzuschätzen, damit Sie ausreichenden Arbeitsspeicher für den Server bereitstellen können. In diesem Abschnitt wird beschrieben, wie die Speichermenge geschätzt wird, die für die Daten einer speicheroptimierten Tabelle benötigt wird.  
@@ -79,7 +79,7 @@ GO
   
  Im Folgenden eine Größenberechnung für 5.000.000 (5 Millionen) Zeilen in einer speicheroptimierten Tabelle. Der von den Datenzeilen belegte Gesamtspeicher wird wie folgt geschätzt:  
   
- **Arbeitsspeicher für die Tabellenzeilen**  
+ **Arbeitsspeicher für die Zeilen der Tabelle**  
   
  Aus den vorherigen Berechnungen ergibt sich für jede Zeile in der speicheroptimierten Tabelle eine Größe von 24 + 32 + 200 oder 256 Bytes.  Da sie 5 Million Zeilen enthält, belegt die Tabelle 5.000.000 * 256 Bytes oder 1.280.000.000 Bytes, also ungefähr 1,28 GB.  
   
@@ -119,11 +119,11 @@ SELECT COUNT(DISTINCT [Col2])
   
  Informationen zur Funktionsweise von Hashindizes in speicheroptimierten [!INCLUDE[hek_2](../../includes/hek-2-md.md)] -Tabellen finden Sie unter [Hashindizes](../../database-engine/hash-indexes.md).  
   
- **Hinweis:** können die Arraygröße des Hash-Index bei laufendem Betrieb nicht ändern. Um die Arraygröße des Hashindexes zu ändern, müssen Sie die Tabelle löschen, den bucket_count-Wert ändern und die Tabelle erneut erstellen.  
+ **Hinweis:** Sie nicht die Arraygröße des Hash-Index im Handumdrehen ändern. Um die Arraygröße des Hashindexes zu ändern, müssen Sie die Tabelle löschen, den bucket_count-Wert ändern und die Tabelle erneut erstellen.  
   
- **Festlegen der Arraygröße der Hash-index**  
+ **Die Arraygröße der Hash-Index festlegen**  
   
- Die hasharraygröße wird festgelegt, indem `(bucket_count= <value>)` , in dem \<Wert > ist ein ganzzahliger Wert größer als 0 (null). Wenn \<Wert > ist keine Potenz von 2, der tatsächliche bucket_count-Wert wird aufgerundet auf die nächste nächste Potenz von 2.  In der Beispieltabelle (Bucket_count = 5000000), weil 5.000.000 keine Potenz von 2 ist, die tatsächliche Bucketanzahl auf 8.388.608 (2<sup>23</sup>).  Wenn Sie den vom Hasharray benötigten Arbeitsspeicher berechnen, müssen Sie diesen Wert und nicht 5.000.000 verwenden.  
+ Die hasharraygröße wird festgelegt, indem `(bucket_count= <value>)` , in denen \<Wert > ist ein ganzzahliger Wert größer als 0 (null). Wenn \<Wert > ist keine Potenz von 2 ist, der tatsächliche bucket_count-Wert wird gerundet auf die nächste nächste Potenz von 2.  In der Beispieltabelle (Bucket_count = 5000000), weil 5.000.000 keine Potenz von 2 ist, die tatsächliche Bucketanzahl auf 8.388.608 (2<sup>23</sup>).  Wenn Sie den vom Hasharray benötigten Arbeitsspeicher berechnen, müssen Sie diesen Wert und nicht 5.000.000 verwenden.  
   
  Daher beträgt der für jedes Hasharray erforderliche Arbeitsspeicher im Beispiel:  
   

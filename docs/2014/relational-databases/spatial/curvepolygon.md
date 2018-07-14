@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a772fba6776195e914d9e4109a7973f355f3a270
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1989f166f519ddf732cca8cd47e32a14c414cae1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159744"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268646"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
   Ein `CurvePolygon` ist eine topologisch geschlossene Fläche, die definiert, die von einem äußeren begrenzungsring und NULL oder mehr inneren Ringe  
   
 > [!IMPORTANT]  
->  Für eine ausführliche Beschreibung und Beispiele der eingeführten räumlichen Funktionen [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], einschließlich der `CurvePolygon` Untertyp, laden Sie das Whitepaper [neue räumliche Funktionen in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Eine ausführliche Beschreibung und Beispiele für räumliche Funktionen in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], einschließlich der `CurvePolygon` Untertyp, können Sie das Whitepaper zur [neue räumliche Funktionen in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
   
- Folgende Kriterien definiert, Attributen von einem `CurvePolygon` Instanz:  
+ Die folgenden Kriterien definieren Sie Attribute von einem `CurvePolygon` Instanz:  
   
 -   Die Begrenzung der `CurvePolygon`-Instanz wird durch den äußeren Ring und alle inneren Ringe definiert.  
   
@@ -36,10 +36,10 @@ ms.locfileid: "36159744"
  Ein `CurvePolygon` -Instanz unterscheidet sich von einem `Polygon` -Instanz darin, dass eine `CurvePolygon` -Instanz die folgenden kreisbogensegmente enthalten kann: `CircularString` und `CompoundCurve`.  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve-Instanzen  
- In der folgenden Abbildung werden gültige `CurvePolygon` Zahlen:  
+ In der folgenden Abbildung werden gültige `CurvePolygon` Abbildungen:  
   
 ### <a name="accepted-instances"></a>Akzeptierte Instanzen  
- Für eine `CurvePolygon` -Instanz akzeptiert wird, muss er entweder leer oder nur kreisbogenringe enthalten, die akzeptiert werden. Ein akzeptierter Kreisbogenring erfüllt die folgenden Anforderungen.  
+ Für eine `CurvePolygon` -Instanz akzeptiert wird, muss entweder leer oder nur kreisbogenringe enthalten, die akzeptiert werden. Ein akzeptierter Kreisbogenring erfüllt die folgenden Anforderungen.  
   
 1.  Er stellt eine akzeptierte `LineString`-, `CircularString`- oder `CompoundCurve`-Instanz dar. Weitere Informationen zu akzeptierten Instanzen finden Sie unter [LineString](linestring.md), [CircularString](circularstring.md)und [CompoundCurve](compoundcurve.md).  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36159744"
     > [!NOTE]  
     >  Z- und M-Werte werden ignoriert.  
   
- Das folgende Beispiel zeigt akzeptierte `CurvePolygon` Instanzen.  
+ Das folgende Beispiel zeigt die zulässigen `CurvePolygon` Instanzen.  
   
 ```  
 DECLARE @g1 geometry = 'CURVEPOLYGON EMPTY';  
@@ -72,7 +72,7 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
  `@g1` wird nicht akzeptiert, da der Ausgangspunkt und der Endpunkt nicht denselben Y-Wert aufweisen. `@g2` wird nicht akzeptiert, da der Ring nicht über eine ausreichende Anzahl von Punkten verfügt.  
   
 ### <a name="valid-instances"></a>Gültige Instanzen  
- Für eine `CurvePolygon` Instanz gültig, äußeren und inneren Ringe müssen die folgenden Kriterien erfüllen:  
+ Für eine `CurvePolygon` -Instanz ist gültig, äußeren und inneren Ringe müssen die folgenden Kriterien erfüllen:  
   
 1.  Sie können sich nur an jeweils einem Tangentenpunkt berühren.  
   
@@ -82,7 +82,7 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
   
 4.  Jeder Ring muss ein akzeptabler Kurventyp sein.  
   
- `CurvePolygon` Außerdem müssen Instanzen abhängig davon, ob sie sind bestimmte Kriterien erfüllen, `geometry` oder `geography` -Datentypen.  
+ `CurvePolygon` Instanzen müssen auch bestimmte Kriterien abhängig davon, ob sie sind `geometry` oder `geography` -Datentypen.  
   
 #### <a name="geometry-data-type"></a>geometry-Datentyp  
  Eine gültige **geometryCurvePolygon** -Instanz muss über die folgenden Attribute verfügen:  
@@ -143,7 +143,7 @@ DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'
 ```  
   
 ### <a name="c-instantiating-a-geography-instance-with-a-curvepolygon"></a>C. Instanziieren einer geography-Instanz mit einem CurvePolygon  
- Diesem Codeausschnitt wird veranschaulicht, wie Sie deklarieren und Initialisieren einer `geography` -Instanz mit einem `CurvePolygon`:  
+ Diesem Codeausschnitt wird veranschaulicht, wie Sie deklarieren und initialisieren eine `geography` Instanz mit einem `CurvePolygon`:  
   
 ```tsql  
 DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
@@ -159,7 +159,7 @@ SELECT @g.STArea() AS Area;
 ```  
   
 ### <a name="e-storing-a-curvepolygon-containing-interior-rings"></a>E. Speichern eines CurvePolygon mit inneren Ringen  
- In diesem Beispiel wird ein Rad in einer `CurvePolygon` Instanz (ein äußeren begrenzungsring und einen inneren Ring wird verwendet, um das Ringdiagramm definieren):  
+ In diesem Beispiel wird ein Rad in einer `CurvePolygon` Instanz (sowohl ein äußeren begrenzungsring und einen inneren Ring definiert die verwendet wird):  
   
 ```tsql  
 DECLARE @g geometry;  
@@ -167,7 +167,7 @@ SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(0 4, 4 0, 8 4, 4 8, 0 4), 
 SELECT @g.STArea() AS Area;  
 ```  
   
- Dieses Beispiel veranschaulicht eine gültige `CurvePolygon` Instanz und eine ungültige Instanz bei Verwendung von inneren Ringen:  
+ Dieses Beispiel zeigt sowohl einen gültigen `CurvePolygon` -Instanz und eine ungültige Verwendung von inneren Ringen-Instanz:  
   
 ```tsql  
 DECLARE @g1 geometry, @g2 geometry;  

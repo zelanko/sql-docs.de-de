@@ -1,5 +1,5 @@
 ---
-title: Warnung zur clientseitigen Verwendung von GEOMETRY, GEOGRAPHY und HIERARCHYID | Microsoft Docs
+title: Warnung zur clientseitigen Verwendung von GEOMETRY, GEOGRAPHY und HIERARCHYID | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,33 +8,33 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 500ee6b3-2154-45d2-a3cf-8760166d9413
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 02748f9dca8e4f9f29c7c94658d2a4068b1ba65e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 46e4f63ef0909ca07eeac5d09b8233fb509f87a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161264"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166111"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>Warnung zur clientseitigen Verwendung von GEOMETRY, GEOGRAPHY und HIERARCHYID
-  Die Assembly **Microsoft.SqlServer.Types.dll**, die die räumlichen Datentypen enthält, wurde aktualisiert von Version 10.0 auf Version 11.0. Benutzerdefinierte Anwendungen, die auf diese Assembly verweisen, schlagen möglicherweise fehl, wenn bestimmte Bedingungen den Wert "true" aufweisen.  
+  Die Assembly **"Microsoft.SqlServer.Types.dll"**, die die Typen von räumlichen Daten enthält, wurde aktualisiert von Version 10.0 auf Version 11.0. Benutzerdefinierte Anwendungen, die auf diese Assembly verweisen, schlagen möglicherweise fehl, wenn bestimmte Bedingungen den Wert "true" aufweisen.  
   
 ## <a name="component"></a>Komponente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Description  
- Die Assembly **Microsoft.SqlServer.Types.dll**, die die räumlichen Datentypen enthält, wurde aktualisiert von Version 10.0 auf Version 11.0. Benutzerdefinierte Anwendungen, die auf diese Assembly verweisen, schlagen möglicherweise fehl, wenn die folgenden Bedingungen den Wert "true" aufweisen.  
+ Die Assembly **"Microsoft.SqlServer.Types.dll"**, die die Typen von räumlichen Daten enthält, wurde aktualisiert von Version 10.0 auf Version 11.0. Benutzerdefinierte Anwendungen, die auf diese Assembly verweisen, schlagen möglicherweise fehl, wenn die folgenden Bedingungen den Wert "true" aufweisen.  
   
--   Wenn Sie verschieben eine benutzerdefinierte Anwendung von einem Computer auf dem [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] installiert wurde, um einen Computer, auf dem nur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ist installiert, die Anwendung fehl, weil die referenzierte Version 10.0 der der **SqlTypes** Assembly ist nicht vorhanden. Möglicherweise wird folgende Fehlermeldung angezeigt: `“Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified.”`  
+-   Wenn Sie verschieben eine benutzerdefinierte Anwendung auf einem Computer auf dem [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] installiert wurde, an einem Computer, auf dem nur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ist installiert, die Anwendung schlägt fehl, da die referenzierte Version 10.0, die von der **"SqlTypes"** Assembly ist nicht vorhanden. Möglicherweise wird folgende Fehlermeldung angezeigt: `“Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified.”`  
   
--   Wenn Sie verweisen auf die **SqlTypes** Version 11.0 der Assembly und Version 10.0 ebenfalls installiert ist, können Sie die folgende Fehlermeldung angezeigt: `“System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'.”`  
+-   Wenn Sie verweisen auf die **"SqlTypes"** Version 11.0 der Assembly und Version 10.0 ebenfalls installiert ist, können Sie die folgende Fehlermeldung angezeigt: `“System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'.”`  
   
--   Wenn Sie verweisen auf die **SqlTypes** Version 11.0 der Assembly mit einer benutzerdefinierten Anwendung, die auf .NET 3.5, 4 oder 4.5 abzielen, da SqlClient entwurfsbedingt Version 10.0 der Assembly geladen, kann die Anwendung fehl. Dieser Fehler tritt auf, wenn die Anwendung eine der folgenden Methoden aufruft:  
+-   Wenn Sie verweisen auf die **"SqlTypes"** Version 11.0 der Assembly in einer benutzerdefinierten Anwendung, die auf .NET 3.5, 4 oder 4.5 abzielt, die Anwendung schlägt fehl, da SqlClient so konzipiert, Version 10.0 der Assembly lädt. Dieser Fehler tritt auf, wenn die Anwendung eine der folgenden Methoden aufruft:  
   
     -   `GetValue`-Methode der `SqlDataReader`-Klasse  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36161264"
 -   Sie können dieses Problem in der Verbindungszeichenfolge umgehen, indem Sie den Wert "SQL Server 2012" für das Attribut "Typsystemversion" angeben, um SqlClient zu zwingen, Version 11.0 der Assembly zu laden. Dieses Verbindungszeichenfolgenattribut ist erst ab .NET 4.5 verfügbar.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenbank-Engine-Upgradeprobleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [Datenbank-Engine-Upgrade-Probleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

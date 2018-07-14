@@ -1,5 +1,5 @@
 ---
-title: Decision Trees-Modell Abfragebeispiele | Microsoft Docs
+title: Entscheidungsstrukturen Model-Beispiele für Abfragen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - decision tree algorithms [Analysis Services]
 - content queries [DMX]
 - decision trees [Analysis Services]
 ms.assetid: ceaf1370-9dd1-4d1a-a143-7f89a723ef80
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 56763f6e1b207e0f676c08e5bbca7066b680dcda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 734402a21381ef6bf60eec5860b887ae3e0a73f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150928"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261516"
 ---
 # <a name="decision-trees-model-query-examples"></a>Beispiele für Entscheidungsstruktur-Modellabfragen
   Beim Erstellen einer Abfrage für ein Data Mining-Modell können Sie eine Inhaltsabfrage erstellen, die Details über die bei der Analyse ermittelten Muster liefert. Alternativ dazu können Sie auch eine Vorhersageabfrage erstellen, die Vorhersagen für neue Daten anhand der im Modell befindlichen Muster vornimmt. So könnte beispielsweise eine Inhaltsabfrage für ein Entscheidungsstrukturmodell statistische Angaben zur Anzahl der Fälle auf jeder Ebene der Struktur oder die Regeln liefern, die die Fälle voneinander unterscheiden. Alternativ dazu ordnet eine Vorhersageabfrage das Modell neuen Daten zu, um Empfehlungen, Klassifikationen und so weiter zu generieren. Mit einer Abfrage können Sie auch Metadaten zum Modell abrufen.  
@@ -70,7 +70,7 @@ WHERE MODEL_NAME = 'TM_Decision Tree'
  Diese Abfrage gibt alle Knoten vom Typ 2 zurück, die die Knoten auf oberster Ebene einer Struktur sind, welche ein bestimmtes vorhersagbares Attribut darstellt.  
   
 > [!NOTE]  
->  Die Spalte `CHILDREN_CARDINALITY`, muss in Klammern, um ihn von dem reservierten MDX-Schlüsselwort mit demselben Namen zu unterscheiden eingeschlossen werden.  
+>  Die Spalte `CHILDREN_CARDINALITY`, muss in Klammern, um ihn von dem reservierten MDX-Schlüsselwort mit demselben Namen zu unterscheiden, eingeschlossen werden.  
   
 ```  
 SELECT MODEL_NAME, NODE_NAME, NODE_CAPTION,   
@@ -90,7 +90,7 @@ WHERE NODE_TYPE = 2
  Die nachfolgende verwandte Abfrage gibt die untergeordneten Elemente für diese fünf Untergruppen zurück, zusammen mit der Verteilung der Attribute und Werte in den untergeordneten Knoten. Da statistische Informationen wie Unterstützung, Wahrscheinlichkeit und Varianz in der geschachtelten Tabelle `NODE_DISTRIBUTION`gespeichert sind, wird in diesem Beispiel das Schlüsselwort `FLATTENED` zur Ausgabe der Spalten der geschachtelten Tabelle verwendet.  
   
 > [!NOTE]  
->  Die geschachtelte Tabellenspalte `SUPPORT`, muss in Klammern, um ihn von dem reservierten Schlüsselwort mit demselben Namen zu unterscheiden eingeschlossen werden.  
+>  Die geschachtelte Tabellenspalte `SUPPORT`, muss in Klammern, um ihn von dem reservierten Schlüsselwort mit demselben Namen zu unterscheiden, eingeschlossen werden.  
   
 ```  
 SELECT FLATTENED NODE_NAME, NODE_CAPTION,  
@@ -111,7 +111,7 @@ WHERE [PARENT_UNIQUE_NAME] = '000000001'
 |00000000101|Number Cars Owned = 3|Bike Buyer|0|678|  
 |00000000101|Number Cars Owned = 3|Bike Buyer|1|473|  
   
- Aus diesen Ergebnissen ist ersichtlich, die von den Kunden, die ein Fahrrad gekauft haben (`[Bike Buyer]` = 1), 1067 Kunden 0 Autos und 473 Kunden 3 Autos hatten.  
+ Aus diesen Ergebnissen Sie fest, dass Kunden, die ein Fahrrad gekauft haben (`[Bike Buyer]` = 1), 1067 Kunden 0 Autos und 473 Kunden 3 Autos hatten.  
   
 ###  <a name="bkmk_Query3"></a> Beispielabfrage 3: Abrufen von Teilstrukturen aus dem Modell  
  Angenommen, Sie möchten mehr über die Kunden in Erfahrung bringen, die ein Fahrrad gekauft haben. Sie können zusätzliche Details für jede Teilstruktur über die Funktion [IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx) in der Abfrage anzeigen, wie im folgenden Beispiel dargestellt. Die Abfrage gibt die Anzahl der Fahrradkäufer zurück, indem die Blattknoten (NODE_TYPE = 4) aus der Struktur abgerufen werden, die Kunden im Alter von über 42 Jahren enthält. Die Abfrage beschränkt die Zeilen aus der geschachtelten Tabelle auf die Zeilen, in denen Bike Buyer = 1 ist.  
@@ -185,7 +185,7 @@ AND PredictProbability([Bike Buyer]) >'.05'
   
  Standardmäßig gibt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] geschachtelte Tabellen mit der Spaltenbezeichnung **Ausdruck**zurück. Sie können diese Bezeichnung durch Aliasing der Spalte ändern, die zurückgegeben wird. Wenn Sie so vorgehen, wird der Alias (in diesem Fall **Ergebnisse**) sowohl als Spaltenbezeichnung als auch als Wert in der geschachtelten Tabelle verwendet. Sie müssen die geschachtelte Tabelle erweitern, um die Ergebnisse zu sehen.  
   
- Beispielergebnisse, in denen Bike Buyer = 1:  
+ Für Beispielergebnisse, in denen Bike Buyer = 1:  
   
 |Bike Buyer|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|$VARIANCE|$STDEV|  
 |----------------|--------------|------------------|--------------------------|---------------|------------|  
@@ -266,7 +266,7 @@ WHERE NODE_TYPE = 25
 |[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|Zeigt an, ob der angegebene Knoten den aktuellen Fall enthält.|  
 |[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|Gibt die gewichtete Wahrscheinlichkeit zurück.|  
 |[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|Sagt eine Mitgliedschaft in einem assoziativen Dataset voraus.|  
-|["PredictHistogram" &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|Gibt eine Tabelle mit Werten zurück, die sich auf den aktuellen vorhergesagten Wert beziehen.|  
+|[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|Gibt eine Tabelle mit Werten zurück, die sich auf den aktuellen vorhergesagten Wert beziehen.|  
 |[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|Gibt "Node_ID" für jeden Fall zurück.|  
 |[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|Gibt die Wahrscheinlichkeit für den vorhergesagten Wert zurück.|  
 |[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|Gibt die vorhergesagte Standardabweichung für die angegebene Spalte zurück.|  
@@ -279,6 +279,6 @@ WHERE NODE_TYPE = 25
  [Datamining-Abfragen](data-mining-queries.md)   
  [Microsoft Decision Trees-Algorithmus](microsoft-decision-trees-algorithm.md)   
  [Microsoft Decision Trees-Algorithmus technische Referenz](microsoft-decision-trees-algorithm-technical-reference.md)   
- [Miningmodellinhalt Entscheidungsstrukturmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Mingingmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

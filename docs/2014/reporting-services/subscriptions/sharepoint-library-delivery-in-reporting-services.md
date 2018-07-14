@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], report delivery
 - delivering reports [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: e26aab503c41cbd64f16708c8b420bf3ae93af1f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cf32579a40b3290e0126b3a1a92665643ae8c3cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150725"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264196"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>SharePoint-Bibliotheksübermittlung in Reporting Services
   Falls der Berichtsserver für die SharePoint-Integration konfiguriert ist, enthält er eine Übermittlungserweiterung, mit der Sie einen Bericht an eine SharePoint-Bibliothek senden können.  
@@ -75,10 +75,10 @@ ms.locfileid: "36150725"
  Geben Sie den Dateinamen und die Dateierweiterung des Berichts so an, wie sie in der Zielbibliothek angezeigt werden sollen. Wenn Sie keine Dateierweiterung angeben, wird vom Berichtsserver eine Dateierweiterung basierend auf dem Ausgabeformat des Berichts erstellt. Dieser Wert ist erforderlich. Verwenden Sie keines der folgenden Zeichen: : \ / * ? " \< > | # { } %  
   
  Titel  
- Gibt einen optionalen `Title` Eigenschaft für den Bericht in der Zielbibliothek. Dies ist eine Standardeigenschaft für alle in einer Bibliothek gespeicherten Elemente. Benutzer können angeben, ob diese Eigenschaft beim Anzeigen des Inhalts der Bibliothek auf einer SharePoint-Website angezeigt oder ausgeblendet werden soll.  
+ Gibt eine optionale `Title` -Eigenschaft für den Bericht in der Zielbibliothek. Dies ist eine Standardeigenschaft für alle in einer Bibliothek gespeicherten Elemente. Benutzer können angeben, ob diese Eigenschaft beim Anzeigen des Inhalts der Bibliothek auf einer SharePoint-Website angezeigt oder ausgeblendet werden soll.  
   
  Pfad  
- Gibt eine vollqualifizierte URL zur SharePoint-Bibliothek an, einschließlich der SharePoint-Webanwendung und -Website. Zum Beispiel: http://mySharePointWeb/MySite/MyDocLib, wobei "http://mySharePointWeb" gibt an, die Web-Anwendung, "MySite" die SharePoint-Website, und "MyDocLib" der SharePoint-Bibliothek, in dem der Bericht übermittelt werden.  
+ Gibt eine vollqualifizierte URL zur SharePoint-Bibliothek an, einschließlich der SharePoint-Webanwendung und -Website. Zum Beispiel: http://mySharePointWeb/MySite/MyDocLib, wobei "http://mySharePointWeb" gibt an, die Webanwendung, "MySite" die SharePoint-Website und "MyDocLib" der SharePoint-Bibliothek, in dem der Bericht übermittelt werden.  
   
  Sie können keine Seite, Website oder Liste angeben. Der Zielcontainer muss eine Bibliothek auf derselben Website oder Webfarm sein.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36150725"
  Gibt an, ob eine Datei mit demselben Namen und derselben Erweiterung beim Verarbeiten des Abonnements durch eine neuere Version ersetzt wird. Wählen Sie **Überschreiben** aus, wenn eine vorhandene Datei durch eine neuere Version ersetzt werden soll. Wählen Sie **Keine** aus, wenn das Abonnement keine Datei ersetzen soll. In diesem Fall wird keine Übermittlung ausgeführt, wenn bereits eine Datei mit demselben Zielnamen und derselben Zielerweiterung vorhanden ist. Wählen Sie **Automatisch inkrementieren** aus, wenn Folgeversionen derselben Datei durch Anfügen einer Nummer an das Ende des Dateinamens hinzugefügt werden sollen.  
   
  Automatisches Kopieren  
- Wenn Sie die Funktion zum automatischen Kopieren verwenden, um die neueste Version einer Datei an mehrere Speicherorte zu kopieren, wird die Datei kopiert, sofern **Überschreiben** aktiviert ist. Bei Verwendung **Autoincrement** oder **keine**, die Übermittlung fehl und die `rsDeliveryError` tritt Fehler auf.  
+ Wenn Sie die Funktion zum automatischen Kopieren verwenden, um die neueste Version einer Datei an mehrere Speicherorte zu kopieren, wird die Datei kopiert, sofern **Überschreiben** aktiviert ist. Bei Verwendung **Autoincrement** oder **keine**, die Bereitstellung schlägt fehl, und die `rsDeliveryError` tritt Fehler auf.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen und Verwalten von Abonnements für Berichtsserver im SharePoint-Modus](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   

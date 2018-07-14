@@ -1,5 +1,5 @@
 ---
-title: Überprüfen Sie die Aggregationsverwendung (Aggregationsentwurfs-Assistent) | Microsoft Docs
+title: Überprüfen Sie die Nutzung der Aggregation (Aggregationsentwurfs-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.aggregationdesignwizard.reviewusage.f1
 ms.assetid: 107ee872-3df2-4931-b56c-af11e38f6745
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5a26ea23dda5bba4813a9c5a99d797471124750d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1c0027b2bceada8bfe84f0ee835395dd62686d16
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150698"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332811"
 ---
 # <a name="review-aggregation-usage-aggregation-design-wizard"></a>Aggregationsverwendung überprüfen (Aggregationsentwurfs-Assistent)
   Mithilfe der Seite **Aggregationsverwendung überprüfen** können Sie die Einstellungen für die Aggregationsverwendung konfigurieren.  
@@ -43,7 +43,7 @@ ms.locfileid: "36150698"
  Wählen Sie diese Option aus, um die Einstellungen der Aggregationsverwendung für alle Attribute auf den Standard festzulegen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Aggregationsentwurfs-Assistent F1 Hilfe](aggregation-design-wizard-f1-help.md)   
+ [Aggregation Design-Assistent F1-Hilfe](aggregation-design-wizard-f1-help.md)   
  [Analysis Services-Assistenten &#40;mehrdimensionale Daten&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

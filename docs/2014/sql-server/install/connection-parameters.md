@@ -1,5 +1,5 @@
 ---
-title: Verbindungsparameter | Microsoft Docs
+title: Verbindungsparameter | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server], connections
 - authentication [Upgrade Advisor]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - analyzing system [Upgrade Advisor], connections
 ms.assetid: f754d038-637a-4d8e-85b0-b242e6499d26
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dc99f9fc26f0e46f0f5ea0d717614bf5935f4814
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ba6652a172e06c64018243acd01a6d60dcced47b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160846"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181617"
 ---
 # <a name="connection-parameters"></a>Verbindungsparameter
   Um bestimmte Servertypen, z. B. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], zu analysieren, müssen Sie eine bestimmte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auswählen. Die Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird automatisch ausgewählt. Sie können diese Auswahl ändern, aber Sie können jeweils nur eine Instanz für die Analyse durch den Upgrade Advisor auswählen. Wenn Sie einen Servertyp aufgenommen haben, der eine Authentifizierung erfordert, müssen Sie den Authentifizierungsmodus und die Anmeldeinformationen eingeben.  
@@ -46,7 +46,7 @@ ms.locfileid: "36160846"
  Wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwenden, geben Sie einen Benutzernamen in das Feld ein. Es wird empfohlen, einen Benutzernamen einzugeben, der auf dem Computer Administratorrechte hat.  
   
 > [!NOTE]  
->  Wenn Sie Windows-Authentifizierung auswählen, wird der Benutzername des gerade angemeldeten Benutzers aufgefüllt, der **Benutzername** Textfeld.  
+>  Wenn Sie Windows-Authentifizierung auswählen, wird in der Benutzernamen des aktuell angemeldeten Benutzers aufgefüllt der **Benutzernamen** Textfeld.  
   
  **Kennwort**  
  Geben Sie das Kennwort für den angegebenen Benutzer ein.  
