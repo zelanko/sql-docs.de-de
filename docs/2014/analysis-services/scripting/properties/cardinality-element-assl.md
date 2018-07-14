@@ -1,5 +1,5 @@
 ---
-title: Cardinality-Element (ASSL) | Microsoft Docs
+title: Cardinality-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Cardinality element
 ms.assetid: 60ac8a26-7c8b-4011-9b9b-a29863779428
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b90e85efbde384bd0d2854fdb2bbd4b325632e2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7446923efc15a2fe05f3e8bf8c86a2e9f429a2c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148707"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325080"
 ---
 # <a name="cardinality-element-assl"></a>Cardinality-Element (ASSL)
-  Zeigt die Kardinalität der Beziehung beschrieben durch einen [AttributeRelationship](../objects/attributerelationship-element-assl.md) oder [RegularMeasureGroupDimension](../data-type/dimension-data-type-assl.md).  
+  Gibt die Kardinalität der Beziehung beschrieben ein [AttributeRelationship](../objects/attributerelationship-element-assl.md) oder [RegularMeasureGroupDimension](../data-type/dimension-data-type-assl.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36148707"
 |*Viele*|n:1-Beziehung|  
 |*Eine*|1:1-Beziehung|  
   
- Die Enumeration, die den zulässigen Werten für die entsprechende `Cardinality` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Cardinality>.  
+ Die Enumeration, der den zulässigen Werten für `Cardinality` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Cardinality>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Attribute und Attributhierarchien](../../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   

@@ -1,5 +1,5 @@
 ---
-title: Erforderliche Domänenkonten für SharePoint-Farmen (Upgrade Advisor) | Microsoft Docs
+title: Erforderliche Domänenkonten für SharePoint-Farmen (Upgrade Advisor) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 90cd6d3e-a271-4cb8-81f2-fc555b2d3cab
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: fd013ae4f7266604dde798aa76393612cd578bad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 122f0209e7254d558ac5cc3db806d8bb648a849c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148753"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251212"
 ---
 # <a name="domain-accounts-required-for-sharepoint-farm-upgrade-advisor"></a>Erforderliche Domänenkonten für SharePoint-Farmen (Upgrade Advisor)
   SharePoint-Produkte, die für eine Farmumgebung konfiguriert werden, erfordern die Verwendung von Domänenkonten.  
@@ -39,17 +39,17 @@ ms.locfileid: "36148753"
  "Der Berichtsserver wird auf dem integrierten NT AUTHORITY\NETWORK SERVICE-Konto ausgeführt, das von einer SharePoint-Farminstallation nicht unterstützt wird. Konfigurieren Sie den Berichtsserver neu, sodass dieser unter einem Domänenkonto ausgeführt wird."  
   
 ## <a name="corrective-action"></a>Korrekturmaßnahme  
- Für [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und frühere Versionen verwenden die Reporting Services-Konfigurations-Manager zum Ändern des Kontos, das als der Berichtsserver-Dienstkontos zugewiesen ist.  
+ Für [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und frühere Versionen mithilfe des Reporting Services-Konfigurations-Managers zum Ändern des Kontos, dem der Berichtsserver-Dienstkonto zugewiesen ist.  
   
 #### <a name="to-change-the-service-account-from-configuration-manager"></a>So ändern Sie das Dienstkonto im Konfigurations-Manager  
   
-1.  Aus der **starten** klicken Sie im Menü **Programme**, und klicken Sie dann auf **Microsoft SQL Server 2008 R2**.  
+1.  Von der **starten** , wählen Sie im Menü **Programme**, und klicken Sie dann auf **Microsoft SQL Server 2008 R2**.  
   
 2.  Wählen Sie **Konfigurationstools**, und klicken Sie dann auf **Konfigurations-Manager für Reporting Services**.  
   
 3.  Wählen Sie im Konfigurations-Manager die **Dienstkonto** Registerkarte.  
   
-4.  Wählen Sie **Verwenden eines anderen Kontos** und geben Sie die Anmeldeinformationen für ein Domänenkonto ein.  
+4.  Wählen Sie **verwenden ein anderes Konto** , und geben Sie die Anmeldeinformationen für ein Domänenkonto ein.  
   
 5.  Klicken Sie auf **Anwenden**.  
   

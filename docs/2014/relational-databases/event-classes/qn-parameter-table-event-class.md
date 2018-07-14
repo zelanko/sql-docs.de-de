@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - event classes [SQL Server], QN:Parameter Table
 ms.assetid: 292da1ed-4c7e-4bd2-9b84-b9ee09917724
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e3f5cdbece8396bcc75250146bd43ce79da7f5a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5681c630cc3c45d0f2de06d3b5baa981bebe8c85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150348"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184657"
 ---
 # <a name="qnparameter-table-event-class"></a>QN:Parameter Table (Ereignisklasse)
   Das QN:Parameter Table-Ereignis übermittelt Informationen zu Vorgängen, die notwendig sind, um interne Tabellen, in denen Parameterinformationen gespeichert sind, zu erstellen und abzulegen und den Verweiszähler zu erhalten. Dieses Ereignis übermittelt außerdem die interne Aktivität zum Zurücksetzen des Verwendungszählers für eine Parametertabelle.  
@@ -38,7 +38,7 @@ ms.locfileid: "36150348"
 |DatabaseName|`nvarchar`|Der Name der Datenbank, in der die Benutzeranweisung ausgeführt wird.|35|ja|  
 |EventClass|`Int`|Ereignistyp = 200.|27|nein|  
 |EventSequence|`int`|Die Sequenznummer für dieses Ereignis.|51|nein|  
-|EventSubClass|`nvarchar`|Der Typ der Ereignisunterklasse, der weitere Informationen zu jeder Ereignisklasse liefert. Diese Spalte kann die folgenden Werte enthalten:<br /><br /> Tabelle erstellt: Gibt an, in der Datenbank eine Parametertabelle erstellt wurde.<br /><br /> Tabelle löschen Versuch: Gibt an, dass die Datenbank versucht hat, automatisch löschen, eine nicht verwendete Parametertabelle um Ressourcen freizugeben.<br /><br /> Tabelle Drop-Fehler: Gibt an, dass die Datenbank versucht, eine nicht verwendete Parametertabelle zu löschen und Fehler. [!INCLUDE[ssDE](../../includes/ssde-md.md)] plant die Löschung der Parametertabelle automatisch neu, um Ressourcen frei zu geben.<br /><br /> Tabelle verworfen: Gibt an, dass die Datenbank erfolgreich eine Parametertabelle gelöscht.<br /><br /> Tabelle, die angeheftet: Gibt an, dass die Parametertabelle für die aktuelle Verwendung durch die interne Verarbeitung markiert ist.<br /><br /> Tabelle unpinned: Gibt an, dass die Fixierung der Tabelle aufgehoben wurde. Die Tabelle wird von der internen Verarbeitung nicht mehr verwendet.<br /><br /> Anzahl der Benutzer erhöht: Gibt an, dass die Anzahl von Abfragebenachrichtigungsabonnements, die auf eine Parametertabelle verweisen erhöht hat.<br /><br /> Anzahl der Benutzer wieder um eins erniedrigt: Gibt an, dass die Anzahl von Abfragebenachrichtigungsabonnements, die auf eine Parametertabelle verweisen gesunken ist.<br /><br /> LRU Counter Reset: Gibt an, dass der Verwendungszähler für die Parametertabelle zurückgesetzt wurde.<br /><br /> Task ' Verlaufscleanup ' gestartet: Gibt an, wann der Cleanupvorgang für alle Abonnements in dieser Parametertabelle begonnen wurde. Dieser Vorgang findet statt, wenn die Datenbank gestartet oder eine den Abonnements dieser Parametertabelle zugrunde liegende Tabelle gelöscht wird.<br /><br /> Task ' Verlaufscleanup ' abgeschlossen: Gibt an, wann der Cleanupvorgang für alle Abonnements in dieser Parametertabelle beendet wurde.|21|ja|  
+|EventSubClass|`nvarchar`|Der Typ der Ereignisunterklasse, der weitere Informationen zu jeder Ereignisklasse liefert. Diese Spalte kann die folgenden Werte enthalten:<br /><br /> Tabelle erstellt: Gibt an, in der Datenbank eine Parametertabelle erstellt wurde.<br /><br /> Tabelle Löschversuch: Gibt an, dass die Datenbank versucht hat, automatisch um Ressourcen freizugeben eine nicht verwendete Parametertabelle zu löschen.<br /><br /> Table Drop Versuch ist fehlgeschlagen: Gibt an, dass die Datenbank versucht, eine nicht verwendete Parametertabelle zu löschen. [!INCLUDE[ssDE](../../includes/ssde-md.md)] plant die Löschung der Parametertabelle automatisch neu, um Ressourcen frei zu geben.<br /><br /> Abgelegte Tabelle: Gibt an, dass die Datenbank erfolgreich eine Parametertabelle gelöscht.<br /><br /> Tabelle, die angeheftet: Gibt an, dass die Parametertabelle für die aktuelle Verwendung durch die interne Verarbeitung markiert ist.<br /><br /> Table unpinned: Gibt an, dass die Fixierung der Tabelle aufgehoben wurde. Die Tabelle wird von der internen Verarbeitung nicht mehr verwendet.<br /><br /> Anzahl von Benutzern, die inkrementiert: Gibt an, dass die Anzahl von Abfragebenachrichtigungsabonnements, die auf eine Parametertabelle verweisen erhöht hat.<br /><br /> Anzahl der Benutzer wieder um eins erniedrigt: Gibt an, dass die Anzahl von Abfragebenachrichtigungsabonnements, die auf eine Parametertabelle verweisen verringert hat.<br /><br /> LRU Counter Reset: Gibt an, dass der Verwendungszähler für die Parametertabelle zurückgesetzt wurde.<br /><br /> Task ' Verlaufscleanup ' gestartet: Gibt an, wann der Cleanupvorgang für alle Abonnements in dieser Parametertabelle begonnen wurde. Dieser Vorgang findet statt, wenn die Datenbank gestartet oder eine den Abonnements dieser Parametertabelle zugrunde liegende Tabelle gelöscht wird.<br /><br /> Task "Wartungscleanup" abgeschlossen: Gibt an, wann der Cleanupvorgang für alle Abonnements in dieser Parametertabelle beendet wurde.|21|ja|  
 |GroupID|`int`|ID der Arbeitsauslastungsgruppe, in der das SQL-Ablaufverfolgungsereignis ausgelöst wird.|66|ja|  
 |HostName|`nvarchar`|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname durch den Client bereitgestellt wird. Der Hostname kann mithilfe der HOST_NAME-Funktion bestimmt werden.|8|ja|  
 |IsSystem|`int`|Gibt an, ob das Ereignis bei einem Systemprozess oder einem Benutzerprozess aufgetreten ist.<br /><br /> 0 = Benutzer<br /><br /> 1 = System|60|nein|  

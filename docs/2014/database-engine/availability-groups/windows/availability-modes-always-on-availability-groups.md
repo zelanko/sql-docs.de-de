@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], asynchronous commit
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], availability modes
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 caps.latest.revision: 37
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 924708dabd2cfe4fa94eb6f726e29613d6917d86
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 13676e5706743cb2ce16e0f94e72ab8301695a71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147975"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273746"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>Verfügbarkeitsmodi (Always On-Verfügbarkeitsgruppen)
   In [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]ist der *Verfügbarkeitsmodus* eine Replikateigenschaft, die bestimmt, ob ein angegebenes Verfügbarkeitsreplikat im Modus für synchrone Commits ausgeführt werden kann. Für jedes Verfügbarkeitsreplikat muss der Verfügbarkeitsmodus konfiguriert werden, entweder als Modus für synchrone Commits oder aber als Modus für asynchrone Commits.  Wenn das primäre Replikat für den *Modus für asynchrone Commits*konfiguriert wird, wartet es nicht, bis ein sekundäres Replikat eingehende Transaktionsprotokoll-Datensätze auf den Datenträger geschrieben hat ( *Protokoll festschreiben*). Wenn ein bestimmtes sekundäres Replikat für den Modus für asynchrone Commits konfiguriert ist, wartet das primäre Replikat nicht, bis das betreffende sekundäre Replikat das Protokoll festgeschrieben hat. Wenn sowohl das primäre Replikat als auch ein angegebenes sekundäres Replikat für den *Modus für synchrone Commits*konfiguriert sind, wartet das primäre Replikat, bis das sekundäre Replikat bestätigt, dass es das Protokoll festgeschrieben hat (es sei denn, das sekundäre Replikat konnte innerhalb des *Sitzungstimeouts*für das primäre Replikat keinen Ping-Befehl an dieses senden).  
@@ -78,7 +77,7 @@ ms.locfileid: "36147975"
 -   Eine Verzögerung oder eine Störung im Netzwerk oder auf dem Computer führt dazu, dass für die Sitzung zwischen dem sekundären und dem primären Replikat ein Timeout auftritt.  
   
     > [!NOTE]  
-    >  Informationen zur Sitzungstimeout-Eigenschaft von verfügbarkeitsreplikaten finden Sie unter [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
+    >  Weitere Informationen zur Sitzungstimeout-Eigenschaft von verfügbarkeitsreplikaten finden Sie unter [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
   
 -   Eine sekundäre Datenbank auf dem sekundären Replikat wird angehalten. Das sekundäre Replikat wird nicht mehr synchronisiert, und der Synchronisierungsstatus wird als NOT_HEALTHY angegeben. Das sekundäre Replikat kann erst dann wieder fehlerfrei werden, wenn die angehaltene sekundäre Datenbank entweder fortgesetzt und erneut synchronisiert bzw. aus der Verfügbarkeitsgruppe entfernt wurde.  
   
@@ -115,7 +114,7 @@ ms.locfileid: "36147975"
 ###  <a name="SyncCommitWithAuto"></a> Modus für synchrone Commits mit automatischem Failover  
  Das automatische Failover bietet Hochverfügbarkeit, indem sichergestellt wird, dass die Datenbank nach dem Ausfall des primären Replikats schnell wieder verfügbar gemacht wird. Um eine Verfügbarkeitsgruppe für ein automatisches Failover zu konfigurieren, müssen Sie sowohl das aktuelle primäre Replikat als auch ein sekundäres Replikat für den Modus für synchrone Commits mit automatischem Failover festlegen.  
   
- Damit ein automatisches Failover innerhalb einer bestimmten Zeit ausgeführt werden kann, muss dieses sekundäre Replikat darüber hinaus mit dem primären Replikat synchronisiert werden (Synchronisierung aller sekundären Datenbanken), und der WSFC (Windows Server Failover Clustering)-Cluster muss über ein Quorum verfügen. Wenn das primäre Replikat unter diesen Bedingungen ausfällt, findet ein automatisches Failover statt. Das sekundäre Replikat wechselt in die Rolle des primären Replikats und bietet seine Datenbank als primäre Datenbank an. Weitere Informationen finden Sie im Abschnitt "Automatisches Failover" das [Failover und Failovermodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41; ](failover-and-failover-modes-always-on-availability-groups.md) Thema.  
+ Damit ein automatisches Failover innerhalb einer bestimmten Zeit ausgeführt werden kann, muss dieses sekundäre Replikat darüber hinaus mit dem primären Replikat synchronisiert werden (Synchronisierung aller sekundären Datenbanken), und der WSFC (Windows Server Failover Clustering)-Cluster muss über ein Quorum verfügen. Wenn das primäre Replikat unter diesen Bedingungen ausfällt, findet ein automatisches Failover statt. Das sekundäre Replikat wechselt in die Rolle des primären Replikats und bietet seine Datenbank als primäre Datenbank an. Weitere Informationen finden Sie im Abschnitt "Automatisches Failover" die [Failover und Failovermodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41; ](failover-and-failover-modes-always-on-availability-groups.md) Thema.  
   
 > [!NOTE]  
 >  Informationen zu WSFC-Quorum und [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] finden Sie unter [WSFC-Quorummodi und Abstimmungskonfiguration &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
@@ -153,7 +152,7 @@ ms.locfileid: "36147975"
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Wiederherstellung im Notfall](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn-Lösungshandbuch für hohe Verfügbarkeit und Notfallwiederherstellung](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [SQL Server AlwaysOn-Teamblog: Der offizielle SQL Server AlwaysOn-Teamblog](http://blogs.msdn.com/b/sqlalwayson/)  
   

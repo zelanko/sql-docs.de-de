@@ -1,5 +1,5 @@
 ---
-title: Meine Abonnements (Seite) (Berichts-Manager) | Microsoft Docs
+title: Die Seite Meine Abonnements (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 491a85a3-f323-4155-a0a8-de2779899995
 caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5f75d31ab49d706200ff90d49295d18bc9ba6487
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5e973ec6a3c50c43f6ee6bdee4ecfd70f2e2c9b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151756"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177617"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>Meine Abonnements (Seite, Berichts-Manager)
-  Auf der Seite Meine Abonnements können Sie alle eigenen Abonnements zentral anzeigen. Von dieser Seite aus können Sie auf Ihre Abonnements zugreifen und diese ändern oder löschen. Als eigene Abonnements gelten nur die von Ihnen erstellten Abonnements. Sie können weder auf die Abonnements anderer Benutzer zugreifen noch auf Abonnements, die Sie zwar verwenden, deren Eigentümer Sie aber nicht sind (dies ist z. B. der Fall, wenn Ihr Name zu einem vorhandenen Abonnement hinzugefügt wird, das durch einen anderen Benutzer definiert wurde). Das Erstellen von Abonnements ist auf dieser Seite nicht möglich. Weitere Informationen zum Erstellen von Abonnements finden Sie unter der [neues Abonnement oder Abonnement-Seite bearbeiten &#40;Berichts-Manager&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md).  
+  Auf der Seite Meine Abonnements können Sie alle eigenen Abonnements zentral anzeigen. Von dieser Seite aus können Sie auf Ihre Abonnements zugreifen und diese ändern oder löschen. Als eigene Abonnements gelten nur die von Ihnen erstellten Abonnements. Sie können weder auf die Abonnements anderer Benutzer zugreifen noch auf Abonnements, die Sie zwar verwenden, deren Eigentümer Sie aber nicht sind (dies ist z. B. der Fall, wenn Ihr Name zu einem vorhandenen Abonnement hinzugefügt wird, das durch einen anderen Benutzer definiert wurde). Das Erstellen von Abonnements ist auf dieser Seite nicht möglich. Weitere Informationen zum Erstellen von Abonnements finden Sie unter den [neues Abonnement oder Abonnement-Seite bearbeiten &#40;Berichts-Manager&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md).  
   
  Standardmäßig werden Abonnements in alphabetischer Reihenfolge nach Berichtsname sortiert. Klicken Sie auf eine andere Spaltenüberschrift, um die Sortierreihenfolge der Abonnements zu ändern. Falls keine Abonnements vorhanden sind oder die Berechtigung zum Erstellen oder Verwalten von Abonnements deaktiviert ist, werden auf dieser Seite keine Abonnements angezeigt.  
   

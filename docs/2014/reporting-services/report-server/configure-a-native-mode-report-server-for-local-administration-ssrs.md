@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - UAC
 - installing Reporting Services
@@ -20,16 +20,16 @@ ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 80cdb989ed49604f2b860cf8d01ae15ae799f432
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 660a96d968410c2035ff194d83abb3e00c78d35d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149811"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273966"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Konfigurieren eines Berichtsservers im einheitlichen Modus für die lokale Verwaltung (SSRS)
-  Für die Bereitstellung eines [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsservers unter einem der folgenden Betriebssysteme sind weitere Konfigurationsschritte erforderlich, wenn die Berichtsserverinstanz lokal verwaltet werden soll. In diesem Thema wird beschrieben, wie der Berichtsserver für die lokale Verwaltung konfiguriert wird. Wenn Sie noch nicht installiert oder den Berichtsserver konfiguriert haben, finden Sie unter [Installieren von SQL Server 2014 vom Installations-Assistenten &#40;Setup&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) und [Verwalten einer Reporting Services Report Server im einheitlichen Modus](manage-a-reporting-services-native-mode-report-server.md).  
+  Für die Bereitstellung eines [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsservers unter einem der folgenden Betriebssysteme sind weitere Konfigurationsschritte erforderlich, wenn die Berichtsserverinstanz lokal verwaltet werden soll. In diesem Thema wird beschrieben, wie der Berichtsserver für die lokale Verwaltung konfiguriert wird. Wenn Sie noch nicht installiert oder den Berichtsserver konfiguriert, finden Sie unter [Installieren von SQL Server 2014 vom Installations-Assistenten &#40;Setup&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) und [Verwalten einer Reporting Services Native Mode Report Server](manage-a-reporting-services-native-mode-report-server.md).  
   
 ||  
 |-|  
@@ -59,7 +59,7 @@ ms.locfileid: "36149811"
   
 -   [So konfigurieren Sie SQL Server Management Studio (SSMS) für die lokale Verwaltung des Berichtsservers](#bkmk_configure_ssms)  
   
--   [So konfigurieren Sie SQL Server Datatools BI (SSDT) auf einem lokalen Berichtsserver veröffentlichen.](#bkmk_configure_ssdt)  
+-   [So konfigurieren Sie SQL Server Datatools BI (SSDT) zum Veröffentlichen in einem lokalen Berichtsserver](#bkmk_configure_ssdt)  
   
 -   [Zusätzliche Informationen](#bkmk_addiitonal_informaiton)  
   
@@ -161,7 +161,7 @@ ms.locfileid: "36149811"
   
  Wenn Sie jetzt [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] öffnen und nicht explizit **Als Administrator ausführen** auswählen, haben Sie Zugriff auf die Berichtsservereigenschaften.  
   
-##  <a name="bkmk_configure_ssdt"></a> So konfigurieren Sie SQL Server Datatools BI (SSDT) auf einem lokalen Berichtsserver veröffentlichen.  
+##  <a name="bkmk_configure_ssdt"></a> So konfigurieren Sie SQL Server Datatools BI (SSDT) zum Veröffentlichen in einem lokalen Berichtsserver  
  Wenn Sie [!INCLUDE[SSDTDev11](../../includes/ssdtdev11-md.md)] unter einem der im ersten Abschnitt dieses Themas aufgeführten Betriebssysteme installiert haben und SSDT mit einem lokalen Berichtsserver im einheitlichen Modus interagieren soll, treten Berechtigungsfehler auf, sofern Sie [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] nicht mit erweiterten Berechtigungen öffnen oder Reporting Services-Rollen konfigurieren. Wenn Sie nicht über ausreichende Berechtigungen verfügen, können z. B. folgende Probleme auftreten:  
   
 -   Beim Versuch, Berichtselemente auf dem lokalen Berichtsserver bereitzustellen, wird im Fenster **Fehlerliste** eine Fehlermeldung wie die folgende angezeigt:  
@@ -170,7 +170,7 @@ ms.locfileid: "36149811"
   
  **So verwenden Sie bei jedem Öffnen von SSDT erweiterte Berechtigungen**  
   
-1.  Geben Sie über den Startbildschirm `sql server` , und klicken Sie dann mit der rechten Maustaste **SQL Server Data Tools für Visual Studio**. Klicken Sie auf **Als Administrator ausführen**.  
+1.  Geben Sie im Startbildschirm `sql server` , und klicken Sie dann mit der rechten Maustaste **SQL Server Data Tools für Visual Studio**. Klicken Sie auf **Als Administrator ausführen**.  
   
      **Oder**verfahren Sie bei älteren Betriebssystemen wie folgt:  
   

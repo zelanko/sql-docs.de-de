@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aa28260303bc7be87ac166ce3e22aa55c32a2a0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e13fa57378ac9dac263cb89d48da84b94739a2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150950"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213670"
 ---
 # <a name="odbc-flow-components"></a>ODBC-Flusskomponenten
   In diesem Thema werden die erforderlichen Begriffe der Erstellung eines ODBC-Datenflusses mit [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
@@ -114,8 +114,8 @@ Es ist keine Datentypunterstützung für erweiterbare C-Typen vorhanden, die in 
 |SQL_DOUBLE|DT_R8|  
 |SQL_FLOAT|DT_R8|  
 |SQL_REAL|DT_R4|  
-|SQL_NUMERIC (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|Der numerische Datentyp wird DT_NUMERIC zugeordnet, wenn P größer als oder gleich 38 ist, S größer als oder gleich 0 ist und S kleiner als oder gleich P ist. Der numerische Datentyp wird DT_R8 zugeordnet, wenn mindestens eine der folgenden Aussagen zutrifft:<br /><br />Genauigkeit ist größer als 38<br /><br />Skalierung ist kleiner als 0 (null)<br /><br />Skalierung ist größer als 38<br /><br />Skalierung ist größer als Genauigkeit<br /><br /><br /><br />Beachten Sie, dass der numerische Datentyp dt_cy zugeordnet ist, wenn er als Money-Datentyp deklariert wird.|  
-|SQL_DECIMAL (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|Der decimal-Datentyp wird DT_NUMERIC zugeordnet, wenn P größer als oder gleich 38 ist, S größer als oder gleich 0 ist und S kleiner als oder gleich P ist. Der decimal-Datentyp wird DT_R8 zugeordnet, wenn mindestens eine der folgenden Aussagen zutrifft:<br /><br />Genauigkeit ist größer als 38<br /><br />Skalierung ist kleiner als 0 (null)<br /><br />Skalierung ist größer als 38<br /><br />Skalierung ist größer als Genauigkeit<br /><br />Beachten Sie, dass die decimal-Datentyp dt_cy zugeordnet ist, wenn er als Money-Datentyp deklariert wird.|  
+|SQL_NUMERIC (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|Der numerische Datentyp wird DT_NUMERIC zugeordnet, wenn P größer als oder gleich 38 ist, S größer als oder gleich 0 ist und S kleiner als oder gleich P ist. Der numerische Datentyp wird DT_R8 zugeordnet, wenn mindestens eine der folgenden "true" ist:<br /><br />Genauigkeit ist größer als 38<br /><br />Skalierung ist kleiner als 0 (null)<br /><br />Skalierung ist größer als 38<br /><br />Skalierung ist größer als Genauigkeit<br /><br /><br /><br />Beachten Sie, dass der numerische Datentyp dt_cy zugeordnet ist, wenn er als Money-Datentyp deklariert wird.|  
+|SQL_DECIMAL (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|Der decimal-Datentyp wird DT_NUMERIC zugeordnet, wenn P größer als oder gleich 38 ist, S größer als oder gleich 0 ist und S kleiner als oder gleich P ist. Der decimal-Datentyp wird DT_R8 zugeordnet, wenn mindestens eine der folgenden "true" ist:<br /><br />Genauigkeit ist größer als 38<br /><br />Skalierung ist kleiner als 0 (null)<br /><br />Skalierung ist größer als 38<br /><br />Skalierung ist größer als Genauigkeit<br /><br />Beachten Sie, dass die decimal-Datentyp dt_cy zugeordnet ist, wenn er als Money-Datentyp deklariert wird.|  
 |SQL_DATE<br /><br />SQL_TYPE_DATE|DT_DBDATE|  
 |SQL_TIME<br /><br />SQL_TYPE_TIME|DT_DBTIME|  
 |SQL_TIMESTAMP<br /><br />SQL_TYPE_TIMESTAMP|DT_DBTIMESTAMP<br /><br />DT_DBTIMESTAMP2|SQL_TIMESTAMP-Datentypen werden DT_DBTIMESTAMP2 zugeordnet, wenn die Skalierung größer als 3 ist. In allen anderen Fällen werden sie DT_DBTIMESTAMP zugeordnet.|  

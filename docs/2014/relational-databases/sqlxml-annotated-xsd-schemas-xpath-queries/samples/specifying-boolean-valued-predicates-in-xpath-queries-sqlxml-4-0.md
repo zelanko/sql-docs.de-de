@@ -1,5 +1,5 @@
 ---
-title: Angeben von Prädikate mit booleschen Werten in XPath-Abfragen (SQLXML 4.0) | Microsoft Docs
+title: Angeben von Prädikaten mit booleschen Werten in XPath-Abfragen (SQLXML 4.0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - multiple predicates
 ms.assetid: 5f6e7219-6911-4bca-a54b-56b95e0b43dd
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 22c104784dfda86645a869736927367217ab5ff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: b6ab1ec725924479a30f2f8df43e1c0ccd4c6e83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149862"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225170"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>Angeben von Prädikaten mit booleschen Werten in XPath-Abfragen (SQLXML 4.0)
-  In den folgenden Beispielen wird gezeigt, wie Prädikate mit booleschen Werten in XPath-Abfragen angegeben werden. Die XPath-Abfragen in diesen Beispielen werden für das in SampleSchema1.xml enthaltene Zuordnungsschema angegeben. Informationen zu diesem Beispielschema finden Sie unter [Beispiel Annotated XSD-Schema für XPath-Beispiele &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  In den folgenden Beispielen wird gezeigt, wie Prädikate mit booleschen Werten in XPath-Abfragen angegeben werden. Die XPath-Abfragen in diesen Beispielen werden für das in SampleSchema1.xml enthaltene Zuordnungsschema angegeben. Weitere Informationen zu diesem Beispielschema finden Sie unter [Annotated XSD-Beispielschema für XPath-Beispiele &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36149862"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
      Hier ist das Ergebnis:  
   
@@ -94,13 +94,13 @@ ms.locfileid: "36149862"
     ```  
   
 ### <a name="b-specify-successive-and-nested-predicates"></a>B. Angeben aufeinander folgender und geschachtelter Prädikate  
- Die folgende Abfrage zeigt die Verwendung aufeinanderfolgender Prädikate. Die Abfrage gibt alle dem  **\<Kunden >** untergeordnete Elemente des Kontextknotens, die sowohl eine **SalesPersonID** Attribut mit einem Wert von 277 und ein **TerritoryID**Attribut mit einem Wert von 3:  
+ Die folgende Abfrage zeigt die Verwendung aufeinanderfolgender Prädikate. Die Abfrage gibt alle dem  **\<Kunden >** untergeordnete Elemente des Kontextknotens aus, die sowohl eine **SalesPersonID** Attribut mit einem Wert von 277 und ein **TerritoryID**Attribut mit einem Wert von 3:  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
 ```  
   
- Die Abfrage gibt die  **\<Kunden >** Elemente, die beide in den Prädikaten angegebenen Bedingungen erfüllen.  
+ Die Abfrage gibt die  **\<Kunden >** Elemente, die beiden in den Prädikaten angegebenen Bedingungen erfüllen.  
   
  Es kann eine Abkürzung für die `attribute`-Achse (@) angegeben werden, und da die `child`-Achse die Standardachse ist, muss sie in der Abfrage nicht angegeben werden:  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36149862"
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- Die folgende XPath-Abfrage veranschaulicht die Verwendung geschachtelter Prädikate. Die Abfrage gibt alle dem  **\<Kunden >** untergeordnete Elemente des Kontextknotens, enthalten  **\<Reihenfolge >** untergeordnete Elemente mit mindestens einer  **\<Reihenfolge >** Element mit einem **SalesPersonID** -Attributwert von 2.  
+ Die folgende XPath-Abfrage veranschaulicht die Verwendung geschachtelter Prädikate. Die Abfrage gibt alle dem  **\<Kunden >** untergeordnete Elemente des Kontextknotens aus, die enthalten  **\<Reihenfolge >** untergeordnete Elemente mit mindestens einem  **\<Reihenfolge >** Element mit einem **SalesPersonID** -Attribut den Wert 2.  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -136,7 +136,7 @@ ms.locfileid: "36149862"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Im Folgenden wird ein Teilergebnis gezeigt:  
   
@@ -171,7 +171,7 @@ ms.locfileid: "36149862"
 ```  
   
 ### <a name="c-specify-a-top-level-predicate"></a>C. Angeben eines Prädikats der obersten Ebene  
- Die folgende Abfrage gibt die  **\<Kunden >** untergeordneten Elementknoten des Kontextknotens denen  **\<Reihenfolge >** Element untergeordnete Elemente. Die Abfrage testet den Speicherortpfad als Prädikat der obersten Ebene:  
+ Die folgende Abfrage gibt die  **\<Kunden >** untergeordneten Elementknoten des Kontextknotens aus, die  **\<Reihenfolge >** untergeordneten Elemente. Die Abfrage testet den Speicherortpfad als Prädikat der obersten Ebene:  
   
 ```  
 /child::Customer[child::Order]  
@@ -205,7 +205,7 @@ ms.locfileid: "36149862"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Hier ist das Teilergebnis:  
   

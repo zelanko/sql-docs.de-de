@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - concepts
 - terminology
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c2c513f4caeb820e561d5b6be889a850404d79ec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 81db67b6450e7b259d84b647ffe2173024a7430f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151296"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191210"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Berichtserstellungskonzepte (Berichts-Generator und SSRS)
   In diesem Abschnitt werden die in der Dokumentation zum Berichts-Generator und Berichts-Designer verwendeten Schlüsselkonzepte kurz definiert. Definitionen bestimmter Wörter oder Begriffe finden Sie im [Glossar &#40;Berichts-Generator&#41;](../report-builder/glossary-report-builder.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "36151296"
  [Datenbereiche und Karten &#40;Berichts-Generator und SSRS&#41;](maps-report-builder-and-ssrs.md)  
  Beschreibt die Datenbereichstypen, die einem Berichtslayout hinzugefügt werden können. Datenbereiche bestimmen die Darstellung eines Berichts: Tabelle, Matrix, Liste oder Diagramm.  
   
- [Bericht-Konzept &#40;Berichts-Generator und SSRS&#41;](report-parameters-concepts-report-builder-and-ssrs.md)  
+ [Berichts-Konzept &#40;Berichts-Generator und SSRS&#41;](report-parameters-concepts-report-builder-and-ssrs.md)  
  Beschreibt die Möglichkeiten zum Definieren und Verwenden von Berichtsparametern und wie diese unabhängig von der Berichtsdefinition auf dem Berichtsserver verwaltet werden.  
   
 ## <a name="see-also"></a>Siehe auch  

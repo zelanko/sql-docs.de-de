@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], SPNs
 - network connections [SQL Server], SPNs
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SPNs [SQL Server]
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 caps.latest.revision: 56
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 356a475186915a222a8480f4b7f1cbdbc7fa8fed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5a4d8948697fb2cc08c57f2e4621c7401e6d44bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151203"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211890"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen
   Die Kerberos-Authentifizierung kann mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden, wenn die beiden folgenden Bedingungen erfüllt sind:  
@@ -162,8 +162,8 @@ WHERE session_id = @@SPID;
   
 |Szenario|Authentifizierungsmethode|  
 |--------------|---------------------------|  
-|Der SPN ist dem richtigen Domänenkonto, virtuellen Konto, MSA oder integrierten Konto zugeordnet. Beispiel: Lokales System oder NETWORK SERVICE.<br /><br /> Hinweis: Korrigieren Sie darauf hin, dass das Konto, das dem registrierten SPN zugeordnet das Konto, unter dem SQL Server-Dienst ausgeführt wird.|Lokale Verbindungen verwenden NTLM, Remoteverbindungen verwenden Kerberos.|  
-|Der SPN entspricht dem richtigen Domänenkonto, virtuellen Konto, MSA oder integrierten Konto.<br /><br /> Hinweis: Korrigieren Sie darauf hin, dass das Konto, das dem registrierten SPN zugeordnet das Konto, unter dem SQL Server-Dienst ausgeführt wird.|Lokale Verbindungen verwenden NTLM, Remoteverbindungen verwenden Kerberos.|  
+|Der SPN ist dem richtigen Domänenkonto, virtuellen Konto, MSA oder integrierten Konto zugeordnet. Beispiel: Lokales System oder NETWORK SERVICE.<br /><br /> Hinweis: Korrigieren Sie bedeutet, die dass das Konto, das dem registrierten SPN zugeordnet, das Konto ist, unter dem SQL Server-Dienst ausgeführt wird.|Lokale Verbindungen verwenden NTLM, Remoteverbindungen verwenden Kerberos.|  
+|Der SPN entspricht dem richtigen Domänenkonto, virtuellen Konto, MSA oder integrierten Konto.<br /><br /> Hinweis: Korrigieren Sie bedeutet, die dass das Konto, das dem registrierten SPN zugeordnet, das Konto ist, unter dem SQL Server-Dienst ausgeführt wird.|Lokale Verbindungen verwenden NTLM, Remoteverbindungen verwenden Kerberos.|  
 |Der SPN ist einem falschen Domänenkonto, virtuellen Konto, MSA oder integrierten Konto zugeordnet.|Die Authentifizierung schlägt fehl.|  
 |Die SPN-Suche schlägt fehl, oder der SPN ist nicht dem richtigen Domänenkonto, virtuellen Konto, MSA oder integrierten Konto zugeordnet bzw. entspricht nicht dem richtigen Domänenkonto, virtuellen Konto, MSA oder integrierten Konto.|Lokale Verbindungen und Remoteverbindungen verwenden NTLM.|  
   

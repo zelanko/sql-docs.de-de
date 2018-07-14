@@ -1,5 +1,5 @@
 ---
-title: Name-Element (XMLA) | Microsoft Docs
+title: Benennen Sie-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Name element
 ms.assetid: cc1a93df-0b1b-4c38-9183-4f11c26fea6a
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: d3ae469cc1a02a02dc2bdb2ff7d6db7f75a46a69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 088dd6aa9ce8d9ecae3e3a8f293f64b3ddc93c70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159030"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194230"
 ---
 # <a name="name-element-xmla"></a>Name-Element (XMLA)
   Enthält den Namen eines attributelements für das übergeordnete Element [Attribut](attribute-element-xmla.md) oder [Übersetzung](translation-element-xmla.md) Element.  
@@ -66,13 +66,13 @@ ms.locfileid: "36159030"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Für `Attribute` Elemente, die `Name` Element enthält den Namen des attributelements, eingefügt oder aktualisiert, während die `Insert` oder `Update` Befehl.  
+ Für `Attribute` Elemente, die `Name` Element enthält den Namen des attributelements eingefügt oder aktualisiert, während die `Insert` oder `Update` Befehl.  
   
- Für `Translation` Elemente, die `Name` Element enthält die Beschriftung des attributelements in der Sprache gemäß der `Language` Element des übergeordneten Elements `Translation` Objekt. Wenn die `Name` Element nicht angegeben ist oder eine leere Zeichenfolge enthält, den Wert des der `Name` -Element für die `Attribute` -Element, enthält die `Translation` Element wird verwendet.  
+ Für `Translation` Elemente, die `Name` Element enthält die Beschriftung des attributelements in der angegebenen Sprache der `Language` -Element des übergeordneten `Translation` Objekt. Wenn die `Name` Element nicht angegeben ist, oder eine leere Zeichenfolge enthält, den Wert des der `Name` -Element für die `Attribute` -Element, enthält die `Translation` Element wird verwendet.  
   
 ## <a name="see-also"></a>Siehe auch  
  [INSERT-Element &#40;XMLA&#41;](../xml-elements-commands/insert-element-xmla.md)   
- [Sprachelement &#40;XMLA&#41;](language-element-xmla.md)   
+ [Language-Element &#40;XMLA&#41;](language-element-xmla.md)   
  [Update-Element &#40;XMLA&#41;](../xml-elements-commands/update-element-xmla.md)   
  [Eigenschaften &#40;XMLA&#41;](xml-elements-properties.md)  
   

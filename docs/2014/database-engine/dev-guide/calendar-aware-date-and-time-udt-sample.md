@@ -1,5 +1,5 @@
 ---
-title: UDT-Beispiel für lokalem Kalender entsprechende Datums- und Uhrzeitangabe | Microsoft Docs
+title: Kalender entsprechende Datums- / UDT-Beispiel | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,17 +12,17 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: cfcf8516-0e7b-4ca4-8bd8-8b2511a50308
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a324a9b0f5ce90c7990bdc44c352df1e7a48c206
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 161395e5c57e8355c75f952f0ea0998feb487c26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150420"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330460"
 ---
-# <a name="calendar-aware-date-and-time-udt-sample"></a>Kalender entsprechende Datums- und Uhrzeitangabe UDT-Beispiel
+# <a name="calendar-aware-date-and-time-udt-sample"></a>Kalender entsprechende Datums- / UDT-Beispiel
   Das Speichern von Datumsangaben kann zu Verwirrung führen, da die Datumsangaben ohne Kenntnis des zugrunde liegenden Kalendersystems keinen Sinn ergeben. Das `CADatetime`-Beispiel definiert zwei benutzerdefinierte Datentypen, `CADatetime` und `CADate`, für eine dem lokalen Kalender entsprechende Behandlung von Datums- und Uhrzeitangaben.  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
@@ -53,7 +53,7 @@ ms.locfileid: "36150420"
      `GO`  
   
     > [!NOTE]  
-    >  Um CLR zu aktivieren, benötigen Sie `ALTER SETTINGS` Serverberechtigung, die implizit von Mitgliedern der erhalten die `sysadmin` und `serveradmin` festen Serverrollen.  
+    >  Um CLR zu aktivieren, benötigen Sie `ALTER SETTINGS` Serverberechtigung, die implizit Mitglieder erhalten die `sysadmin` und `serveradmin` festen Serverrollen.  
   
 -   Die AdventureWorks-Datenbank muss in der von Ihnen verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz installiert sein.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36150420"
   
 3.  Erstellen Sie in c:\MySample die Datei `CalendarAware.cs`, und kopieren Sie den C#-Beispielcode (unten) in die Datei.  
   
-4.  Erstellen Sie in c:\MySample die Datei `calendars.txt` und kopieren Sie den Beispielcode in die Datei.  
+4.  Erstellen Sie die Datei im c:\MySample, `calendars.txt` und kopieren Sie den Beispielcode in die Datei.  
   
 5.  Erstellen Sie in c:\MySample die Datei `calendars.ar-SA.txt`, und kopieren Sie folgenden Code in die Datei.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36150420"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-14. Kopie [!INCLUDE[tsql](../../includes/tsql-md.md)] -testbefehlsskript in eine Datei, und speichern Sie sie als `test.sql` im Beispielverzeichnis.  
+14. Kopie [!INCLUDE[tsql](../../includes/tsql-md.md)] -testbefehlsskript in eine Datei, und speichern Sie ihn `test.sql` im Beispielverzeichnis.  
   
 15. Führen Sie das Testskript mit dem folgenden Befehl aus:  
   

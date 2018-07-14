@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ef032c021bb8bdf2a64f63aad8d3eb79da044afb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f8890c0ccab740444845180a328f9753c7a50976
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150533"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194903"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Datasetfeldauflistung (Berichts-Generator und SSRS)
   Datasetfelder stellen die Daten aus einer Datenverbindung dar. Ein Feld kann entweder numerische oder nicht numerische Daten darstellen. Dazu zählen z. B. Umsätze, der Gesamtumsatz, Kundennamen, Datenbankbezeichner, URLs, Bilder, räumliche Daten und E-Mail-Adressen. Auf der Entwurfsoberfläche werden Felder als Ausdrücke in Berichtselementen wie z. B. Textfelder, Tabellen und Diagramme angezeigt.  
@@ -80,7 +80,7 @@ ms.locfileid: "36150533"
 ##  <a name="DataTypes"></a> Felddatentypen  
  Beim Erstellen eines Datasets kann es sein, dass die Datentypen der Felder einer Datenquelle nicht genau den Datentypen entsprechen, die in einem Bericht verwendet werden. Datentypen durchlaufen in der Regel eine oder zwei Zuordnungsebenen. Gegebenenfalls ordnet die Datenverarbeitungserweiterung bzw. der Datenanbieter die Datentypen der Datenquelle CLR-Datentypen (Common Language Runtime) zu. Die Datentypen, die von den Datenverarbeitungserweiterungen zurückgegeben werden, werden einer Teilmenge der CLR-Datentypen (Common Language Runtime) von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]zugeordnet.  
   
- Unter der Datenquelle werden die Daten als Datentypen gespeichert, die von der Datenquelle unterstützt werden. Z. B. Daten in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank muss einer der unterstützten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentypen wie `nvarchar` oder `datetime`. Wenn Sie Daten aus einer Datenquelle abrufen, durchlaufen die Daten eine Datenverarbeitungserweiterung oder einen Datenanbieter, die bzw. der dem Datenquellentyp zugeordnet ist. Je nach Datenverarbeitungserweiterung können Daten von den Datentypen, die von der Datenquelle verwendet werden, in Datentypen konvertiert werden, die von der Datenverarbeitungserweiterung unterstützt werden. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet Datentypen, die von der mit [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]installierten CLR (Common Language Runtime) unterstützt werden. Der Datenanbieter ändert die Zuordnung der einzelnen Spalten des Resultsets vom systemeigenen Datentyp in einen CLR (Common Language Runtime)-Datentyp für [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
+ Unter der Datenquelle werden die Daten als Datentypen gespeichert, die von der Datenquelle unterstützt werden. Z. B. Daten in einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank muss einer der unterstützten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentypen wie `nvarchar` oder `datetime`. Wenn Sie Daten aus einer Datenquelle abrufen, durchlaufen die Daten eine Datenverarbeitungserweiterung oder einen Datenanbieter, die bzw. der dem Datenquellentyp zugeordnet ist. Je nach Datenverarbeitungserweiterung können Daten von den Datentypen, die von der Datenquelle verwendet werden, in Datentypen konvertiert werden, die von der Datenverarbeitungserweiterung unterstützt werden. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet Datentypen, die von der mit [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]installierten CLR (Common Language Runtime) unterstützt werden. Der Datenanbieter ändert die Zuordnung der einzelnen Spalten des Resultsets vom systemeigenen Datentyp in einen CLR (Common Language Runtime)-Datentyp für [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
  In den einzelnen Phasen werden die Daten mithilfe der Datentypen dargestellt, die in der folgenden Liste beschrieben sind:  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36150533"
   
 -   **Datenanbieter oder Datenverarbeitungserweiterung** Die Datentypen, die von der Version des Anbieters der Datenverarbeitungserweiterung unterstützt werden, die Sie beim Herstellen der Verbindung zur Datenquelle auswählen. Datenanbieter, die auf [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] basieren, verwenden von der CLR unterstützte Datentypen. Weitere Informationen zu Datentypen des [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieters finden Sie auf der MSDN-Website unter [Datentypzuordnungen (ADO.NET](http://go.microsoft.com/fwlink/?LinkId=112178) ) und [Arbeiten mit Basistypen](http://go.microsoft.com/fwlink/?LinkId=112177) .  
   
-     Zum Beispiel den gängigen Datentypen unterstützt, durch die [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] enthalten `Int32` und `String`. Datum und Uhrzeit für Kalender werden von der `DateTime`-Struktur unterstützt. Die [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 Service Pack 1 eingeführt wurde Unterstützung für die `DateTimeOffset` -Struktur für Daten mit einem Zeitzonenoffset.  
+     Typische Datentypen unterstützt z.B. durch die [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] enthalten `Int32` und `String`. Datum und Uhrzeit für Kalender werden von der `DateTime`-Struktur unterstützt. Die [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 Service Pack 1 eingeführt wurde Unterstützung für die `DateTimeOffset` -Struktur für Daten mit einem Zeitzonenoffset.  
   
     > [!NOTE]  
     >  Der Berichtsserver verwendet die Datenanbieter, die auf dem Berichtsserver installiert und konfiguriert wurden. Berichterstellungsclients im Vorschaumodus verwenden die installierten und konfigurierten Datenverarbeitungserweiterungen auf dem Clientcomputer. Sie müssen den Bericht sowohl in der Berichtsclient- als auch in der Berichtsserverumgebung testen.  
@@ -118,7 +118,7 @@ ms.locfileid: "36150533"
 
   
 ## <a name="see-also"></a>Siehe auch  
- [Dataseteigenschaften (Dialogfeld), Felder &#40;Berichts-Generator&#41;](../dataset-properties-dialog-box-fields-report-builder.md)   
+ [DataSet Properties Dialog Box, Felder &#40;Berichts-Generator&#41;](../dataset-properties-dialog-box-fields-report-builder.md)   
  [Berichtsteile und Datasets im Berichts-Generator](report-parts-and-datasets-in-report-builder.md)   
  [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   

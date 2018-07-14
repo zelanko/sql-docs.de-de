@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
 - performance counters [SQL Server], deprecated features
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 caps.latest.revision: 58
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e093deb7505ecd6bf7b5afd0b66da2791f34cc51
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f0a511e928fdd4d010bba5d756ef92b569295301
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149398"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227410"
 ---
 # <a name="sql-server-deprecated-features-object"></a>'SQL Server:Als veraltet markierte Funktionen'-Objekt
   Das „SQLServer:Als veraltet markierte Funktionen“-Objekt in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt einen Leistungsindikator bereit, um die als veraltet gekennzeichneten Funktionen zu überwachen. In jedem Fall stellt der Leistungsindikator einen Verwendungszähler bereit, der angibt, wie oft die veraltete Funktion seit dem letzten Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gefunden wurde.  
@@ -34,7 +34,7 @@ ms.locfileid: "36149398"
 |'SQL Server:Als veraltet markierte Funktionen'-Leistungsindikatorinstanzen|Description|  
 |------------------------------------------------------|-----------------|  
 |'#' und '##' als Namen von temporären Tabellen und gespeicherten Prozeduren|Ein Bezeichner wurde gefunden, der keine anderen Zeichen als # enthielt. Verwenden Sie mindestens ein zusätzliches Zeichen. Tritt einmal pro Kompilierung auf.|  
-|Funktionsaufrufsyntax '::'|Für eine Tabellenwertfunktion wurde die Funktionsaufrufsyntax :: gefunden. Ersetzen Sie durch `SELECT column_list FROM`  *\< Funktionsname >*`()`. Ersetzen Sie beispielsweise `SELECT * FROM ::fn_virtualfilestats(2,1)`durch `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Tritt einmal pro Kompilierung auf.|  
+|Funktionsaufrufsyntax '::'|Für eine Tabellenwertfunktion wurde die Funktionsaufrufsyntax :: gefunden. Ersetzen Sie dies durch `SELECT column_list FROM`  *\< Funktionsname >*`()`. Ersetzen Sie beispielsweise `SELECT * FROM ::fn_virtualfilestats(2,1)`durch `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Tritt einmal pro Kompilierung auf.|  
 |'@' und Namen, die mit '@@' beginnen, als [!INCLUDE[tsql](../../includes/tsql-md.md)] -Bezeichner|Ein Bezeichner wurde gefunden, der mit @ oder @@ beginnt. @ oder @@ oder Namen, die mit @@ beginnen, dürfen nicht als Bezeichner verwendet werden. Tritt einmal pro Kompilierung auf.|  
 |ADDING TAPE DEVICE|Die veraltete Funktionen Sp_addumpdevice'`tape`' wurde gefunden. Verwenden Sie Sp_addumpdevice'`disk`"stattdessen. Tritt einmal pro Verwendung auf.|  
 |ALL-Berechtigung|Gesamtanzahl der gefundenen Vorkommnisse der Syntax GRANT ALL, DENY ALL oder REVOKE ALL. Ändern Sie die Syntax, um einzelne Berechtigungen zu widerrufen. Tritt einmal pro Abfrage auf.|  
@@ -255,7 +255,7 @@ ms.locfileid: "36149398"
 |Tabellenoption 'text in row'|Verweise auf die Tabellenoption text in row wurden gefunden. Verwenden Sie stattdessen die „large value types out of row“-Option von sp_tableoption. Tritt einmal pro Abfrage auf.|  
 |TEXTPTR|Verweise auf die TEXTPTR-Funktion wurden gefunden. Schreiben Sie Anwendungen für die Verwendung der `varchar(max)` -Datentyp und entfernt `text`, `ntext`, und `image` -datentypsyntax. Tritt einmal pro Abfrage auf.|  
 |TEXTVALID|Verweise auf die TEXTVALID-Funktion wurden gefunden. Schreiben Sie Anwendungen für die Verwendung der `varchar(max)` -Datentyp und entfernt `text`, `ntext`, und `image` -datentypsyntax. Tritt einmal pro Abfrage auf.|  
-|timestamp|Gesamtanzahl der gefundenen Vorkommnisse des veralteten `timestamp` -Datentyp wurde erkannt, in einer DDL-Anweisung. Verwenden der `rowversion` Datentyp stattdessen.|  
+|timestamp|Gesamte Anzahl der Vorkommnisse des veralteten `timestamp` -Datentyp wurde in einer DDL-Anweisung gefunden. Verwenden der `rowversion` Datentyp stattdessen.|  
 |UPDATETEXT oder WRITETEXT|Die UPDATETEXT- oder WRITETEXT-Anweisung wurde gefunden. Schreiben Sie Anwendungen für die Verwendung der `varchar(max)` -Datentyp und entfernt `text`, `ntext`, und `image` -datentypsyntax. Tritt einmal pro Abfrage auf.|  
 |USER_ID|Verweise auf die USER_ID-Funktion wurden gefunden. Verwenden Sie stattdessen die DATABASE_PRINCIPAL_ID-Funktion. Tritt einmal pro Kompilierung auf.|  
 |Verwenden von OLEDB für Verbindungsserver||  
@@ -267,11 +267,11 @@ ms.locfileid: "36149398"
 |xp_revokelogin|Die Prozedur xp_revokelogin wurde gefunden. Verwenden Sie stattdessen ALTER LOGIN DISABLE oder DROP LOGIN. Tritt einmal pro Kompilierung auf.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Als veraltet markierte Funktionen des Datenbankmoduls in SQLServer 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
- [Volltextsuche als veraltet markierte Funktionen in SQLServer 2014](../search/deprecated-full-text-search-features-in-sql-server-2016.md)   
+ [Veraltete Datenbankmodulfeatures in SQLServer 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
+ [Als veraltet markierte Full-Text-Search-Funktionen in SQLServer 2014](../search/deprecated-full-text-search-features-in-sql-server-2016.md)   
  [Deprecation Announcement-Ereignisklasse](../event-classes/deprecation-announcement-event-class.md)   
  [Deprecation Final Support (Ereignisklasse)](../event-classes/deprecation-final-support-event-class.md)   
- [Nicht mehr unterstützte Datenbankmodul-Funktionalität in SQLServer 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
+ [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQLServer 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
  [Nicht mehr unterstützte Funktionen der Volltextsuche in SQLServer 2014](../../database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)   
  [Verwenden von SQL Server-Objekten](use-sql-server-objects.md)  
   

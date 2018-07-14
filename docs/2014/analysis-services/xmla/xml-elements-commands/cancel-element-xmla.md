@@ -1,5 +1,5 @@
 ---
-title: Cancel-Element (XMLA) | Microsoft Docs
+title: Cancel-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Cancel command
 ms.assetid: de4062c1-7434-44dc-9f01-29fcf78963bd
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: cd0fdd50a1dcddb51d167ab76cd5408b631bb3ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: fb71b55e514a2e058d50cd1c923a3e0b794ac8f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150899"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173271"
 ---
 # <a name="cancel-element-xmla"></a>Cancel-Element (XMLA)
-  Bricht einen derzeit ausgeführten Befehl ab einem [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz.  
+  Bricht einen aktuell ausgeführten Befehl ab einem [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -67,9 +67,9 @@ ms.locfileid: "36150899"
 |Untergeordnete Elemente|[CancelAssociated](../xml-elements-properties/cancelassociated-element-xmla.md), [ConnectionID](../xml-elements-properties/id-element-xmla.md), [SessionID](../xml-elements-properties/sessionid-element-xmla.md), [SPID](../xml-elements-properties/spid-element-xmla.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `Cancel` -Befehl bricht ab, die derzeit ausgeführten Befehle innerhalb des Kontexts einer Sitzung. Wenn die Clientanwendung keine Sitzung angefordert hat, ist es nicht möglich, einen Befehl abzubrechen.  
+ Die `Cancel` -Befehl bricht die derzeit ausgeführten Befehle innerhalb des Kontexts einer Sitzung ab. Wenn die Clientanwendung keine Sitzung angefordert hat, ist es nicht möglich, einen Befehl abzubrechen.  
   
- Wenn die `Cancel` Befehl wird ausgeführt, während der Ausführung einer `Batch` Befehl, den gesamten `Batch` -Befehl abgebrochen. Wenn der `Batch`-Befehl transaktional war, wird für alle Befehle innerhalb des `Batch`-Befehls ein Rollback ausgeführt. Wenn die `Batch` -Befehl nicht transaktional war, nur für diejenigen Befehle innerhalb der `Batch` Befehls, die zum Zeitpunkt der Ausführung, der `Cancel` Befehl ausgeführt wurde zurückgesetzt. Befehle in eine nicht transaktionale `Batch` -Befehl, der bereits ausgeführt worden wäre nicht zurückgesetzt werden.  
+ Wenn die `Cancel` Befehl wird ausgeführt, während der Ausführung einer `Batch` Befehl, den gesamten `Batch` -Befehl abgebrochen. Wenn der `Batch`-Befehl transaktional war, wird für alle Befehle innerhalb des `Batch`-Befehls ein Rollback ausgeführt. Wenn die `Batch` -Befehl nicht transaktional war, nur für diejenigen Befehle innerhalb der `Batch` Befehls, die zum Zeitpunkt der Ausführung, der `Cancel` Befehl ausgeführt wurde ein Rollback. Befehle in einem nicht transaktionalen `Batch` -Befehl, der bereits ausgeführt worden wäre nicht rückgängig gemacht werden.  
   
  In der Regel die `Cancel` -Befehl verwendet, um auf der gerade aktiven Sitzung ausführende Befehle abzubrechen. In diesem Fall braucht keines der untergeordneten Elemente für den `Cancel`-Befehl angegeben zu werden. Der `Cancel`-Befehl kann außerdem vom Administrator verwendet werden, um Befehle abzubrechen, die nicht auf der derzeit aktiven Sitzung, sondern auf anderen Verbindungen oder Sitzungen ausgeführt werden. Mitglieder einer Rolle, die Administrator-Berechtigungen für eine bestimmte Datenbank besitzt, können Befehle für Verbindungen und Sitzungen abbrechen, die für diese Datenbank gelten; Serveradministratoren hingegen können Befehle für Verbindungen und Sitzungen für eine bestimmte Analysis Services-Instanz abbrechen.  
   

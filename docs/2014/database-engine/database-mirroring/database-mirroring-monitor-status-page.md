@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dbmmonitor.status.f1
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 174cb8564f9f90623e1b7651c2a68037ba5b143c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b54eb6377a0d0816d186d612075b678e8eaadb7a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150225"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228300"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>Datenbankspiegelungs-Monitor (Seite Status)
   Diese schreibgeschützte Seite zeigt den neuesten Spiegelungsstatus für die Prinzipal- und die Spiegelserverinstanz der Datenbank an, die zum jetzigen Zeitpunkt in der Navigationsstruktur ausgewählt ist. Wenn Informationen zu einer Instanz zurzeit nicht verfügbar sind, sind einige der Zellen im Raster **Status** , das dieser Instanz entspricht, ausgegraut und zeigen die Option **Unbekannt**an.  
@@ -44,7 +43,7 @@ ms.locfileid: "36150225"
 |-----------------|-----------------|  
 |**Serverinstanz**|Name der Serverinstanz, deren Status in der Zeile **Status** angezeigt wird.|  
 |**Aktuelle Rolle**|Aktuelle Rolle der Serverinstanz: **Prinzipal** oder **Spiegel**.|  
-|**Spiegelungsstatus**|Der von der Serverinstanz gemeldete Spiegelungsstatus und ein Symbol, das den Schweregrad des Status angibt. Im Folgenden sind die möglichen Statuswerte und die zugehörigen Symbole aufgeführt:<br /><br /> –: Status **unbekannte**. Der Monitor ist mit keinem der beiden Partner verbunden. Es sind nur die Informationen verfügbar, die vom Monitor zwischengespeichert wurden.<br /><br /> Symbol "Warnung: <br />                            Status **synchronisieren**.<br />                          Der Inhalt der Spiegeldatenbank liegt zeitlich hinter dem Inhalt der Prinzipaldatenbank. Die Prinzipalserverinstanz sendet Protokolldatensätze an die Spiegelserverinstanz, die die Änderungen auf die Spiegeldatenbank anwendet, um ein Rollforward dafür auszuführen. Beim Start einer Datenbank-Spiegelungssitzung befinden sich Spiegel- und Prinzipaldatenbank in diesem Status.<br /><br /> Standard-datenbankzylinder: Status<br />                            **Synchronisiert**.<br />                          Wenn der Spiegelserver den Stand des Prinzipalservers erreicht hat, wechselt der Datenbankstatus zu **Synchronisiert**. Die Datenbank verbleibt in diesem Status, solange der Prinzipalserver Änderungen an den Spiegelserver sendet und der Spiegelserver Änderungen auf die Spiegeldatenbank anwendet. Im Modus für hohe Sicherheit ist sowohl das automatische Failover als auch das manuelle Failover ohne Datenverlust möglich. Im Modus für hohe Leistung ist immer ein gewisser Datenverlust möglich, sogar im Status **Synchronisiert** .<br /><br /> Symbol "tabellenwarnung": Status<br />                            **Angehalten**.<br />                            Die Prinzipaldatenbank ist verfügbar, sendet aber keine Protokolle an den Spiegelserver.<br /><br /> Symbol "Fehler": Status <br />                            **Getrennt**.<br />                          Die Serverinstanz kann keine Verbindung mit ihrem Partner herstellen.|  
+|**Spiegelungsstatus**|Der von der Serverinstanz gemeldete Spiegelungsstatus und ein Symbol, das den Schweregrad des Status angibt. Im Folgenden sind die möglichen Statuswerte und die zugehörigen Symbole aufgeführt:<br /><br /> –: Status **unbekannte**. Der Monitor ist mit keinem der beiden Partner verbunden. Es sind nur die Informationen verfügbar, die vom Monitor zwischengespeichert wurden.<br /><br /> Symbol "Warnung": <br />                            Status **synchronisieren**.<br />                          Der Inhalt der Spiegeldatenbank liegt zeitlich hinter dem Inhalt der Prinzipaldatenbank. Die Prinzipalserverinstanz sendet Protokolldatensätze an die Spiegelserverinstanz, die die Änderungen auf die Spiegeldatenbank anwendet, um ein Rollforward dafür auszuführen. Beim Start einer Datenbank-Spiegelungssitzung befinden sich Spiegel- und Prinzipaldatenbank in diesem Status.<br /><br /> Standard-datenbankzylinder: Status<br />                            **Synchronisiert**.<br />                          Wenn der Spiegelserver den Stand des Prinzipalservers erreicht hat, wechselt der Datenbankstatus zu **Synchronisiert**. Die Datenbank verbleibt in diesem Status, solange der Prinzipalserver Änderungen an den Spiegelserver sendet und der Spiegelserver Änderungen auf die Spiegeldatenbank anwendet. Im Modus für hohe Sicherheit ist sowohl das automatische Failover als auch das manuelle Failover ohne Datenverlust möglich. Im Modus für hohe Leistung ist immer ein gewisser Datenverlust möglich, sogar im Status **Synchronisiert** .<br /><br /> Symbol "Warnung": Status<br />                            **Angehalten**.<br />                            Die Prinzipaldatenbank ist verfügbar, sendet aber keine Protokolle an den Spiegelserver.<br /><br /> Fehlersymbol für: Status <br />                            **Getrennt**.<br />                          Die Serverinstanz kann keine Verbindung mit ihrem Partner herstellen.|  
 |**Zeugenverbindung**|Der Verbindungsstatus des Zeugen, dem ein Statussymbol vorangestellt ist: **Unbekannt**, **Verbunden**oder **Getrennt**.|  
 |**Verlauf**|Klicken Sie auf diese Schaltfläche, um den Verlauf der Spiegelung auf der Serverinstanz anzuzeigen. Dadurch wird das Dialogfeld **Datenbankspiegelungsverlauf** geöffnet, das den Verlauf des Spiegelungsstatus und Statistiken für eine gespiegelte Datenbank auf einer bestimmten Serverinstanz anzeigt.<br /><br /> Die Schaltfläche **Verlauf** ist abgeblendet, wenn der Monitor nicht mit der Serverinstanz verbunden ist.|  
   

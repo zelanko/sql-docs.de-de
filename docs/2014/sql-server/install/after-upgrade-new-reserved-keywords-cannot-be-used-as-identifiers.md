@@ -1,5 +1,5 @@
 ---
-title: Nach dem Upgrade können neue reservierte Schlüsselwörter nicht als Bezeichner verwendet | Microsoft Docs
+title: Nach dem Upgrade neue reservierte Schlüsselwörter nicht als Bezeichner verwendet werden können | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - keywords [SQL Server], after upgrade
 - keywords [SQL Server], reserved
 - keywords [SQL Server]
 ms.assetid: cb242081-54f8-4273-a8ef-52f3751c25ef
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 177c36aaeca8e6cc9d84aae21e1f99fe0bb96867
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bc7569837d0442b23e16c365ea1076b734f23892
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150510"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172117"
 ---
 # <a name="after-upgrade-new-reserved-keywords-cannot-be-used-as-identifiers"></a>Nach dem Upgrade können neue reservierte Schlüsselwörter nicht als Bezeichner verwendet werden
   Der Upgrade Advisor hat die Verwendung von Wörtern erkannt, die als Schlüsselwörter reserviert sind. Ein reserviertes Schlüsselwort kann nicht als Bezeichner oder Objektname verwendet werden, es sei denn, der Name ist mit Trennzeichen versehen.  
@@ -53,14 +53,14 @@ ms.locfileid: "36150510"
   
 -   Behalten Sie die Einstellung von 90 oder niedriger für den Datenbankkompatibilitätsgrad bei.  
   
--   Verweisen Sie mit Begrenzungsbezeichnern auf das Objekt. Beispielsweise ist die Anweisung `CREATE TABLE [MERGE] ([MERGE] int);` Klammern verwendet, um den Objektnamen MERGE zu begrenzen.  
+-   Verweisen Sie mit Begrenzungsbezeichnern auf das Objekt. Z. B. die Anweisung `CREATE TABLE [MERGE] ([MERGE] int);` Klammern verwendet, um den Objektnamen MERGE zu begrenzen.  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
  [Reservierte Schlüsselwörter &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql)  
   
  [MERGE &#40;Transact-SQL&#41;](/sql/t-sql/statements/merge-transact-sql)  
   
- [Begrenzungsbezeichner (Datenbankmodul)](http://go.microsoft.com/fwlink/?LinkId=112509)  
+ [Begrenzungsbezeichner (Datenbank-Engine)](http://go.microsoft.com/fwlink/?LinkId=112509)  
   
  [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
   

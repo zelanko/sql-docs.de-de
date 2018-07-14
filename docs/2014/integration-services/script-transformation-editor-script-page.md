@@ -1,5 +1,5 @@
 ---
-title: Skript-Transformations-Editor (Skriptseite) | Microsoft Docs
+title: Transformations-Editor (Skriptseite) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponent.script.f1
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: 4c6d1901-ef21-4aa7-9d0a-6bbeb7fadf1c
 caps.latest.revision: 37
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a2f5e41abd5d54aa54a2fbff0bcd8e57720a163e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f620afb4ab4e32776d36ad5a1f37fd6ad28f3644
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150202"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217650"
 ---
 # <a name="script-transformation-editor-script-page"></a>Transformations-Editor für Skripterstellung (Seite Skript)
   Auf der Registerkarte **Skript** des Dialogfelds **Transformations-Editor für Skripterstellung** können Sie ein Skript und verknüpfte Eigenschaften angeben.  
@@ -51,9 +51,9 @@ ms.locfileid: "36150202"
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Skriptkomponententyp auswählen](../../2014/integration-services/select-script-component-type.md)   
- [Transformations-Editor für Skript &#40;Geben Sie die Seite "Spalten"&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
- [Transformations-Editor für Skript &#40;Eingaben und Ausgaben Seite&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
- [Transformations-Editor für Skript &#40;Verbindungsseite-Manager&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
+ [Transformations-Editor &#40;Geben Sie die Seite "Spalten"&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
+ [Transformations-Editor &#40;Eingaben und Ausgaben Seite&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
+ [Transformations-Editor &#40;Verbindungsseite-Manager&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
  [Zusätzliche Skriptkomponentenbeispiele](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

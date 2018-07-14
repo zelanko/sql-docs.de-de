@@ -1,5 +1,5 @@
 ---
-title: Parameter-Element (XMLA) | Microsoft Docs
+title: Parameter-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Parameter element
 ms.assetid: fe31ac3d-a3e8-4f60-a81a-c43271ddbed4
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 6e39068ff0fc5c1e0bf866029ad2e4413768c1c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 07af3cb2626fb0c6407ce07e0521e665f0d5d556
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149498"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245622"
 ---
 # <a name="parameter-element-xmla"></a>Parameter-Element (XMLA)
   Enthält den Namen und Wert eines Parameters, der von der [Execute](../xml-elements-methods-execute.md) -Methode verwendet wird.  
@@ -67,7 +67,7 @@ ms.locfileid: "36149498"
 |Untergeordnete Elemente|[Name](name-element-parameter-xmla.md), [Value](value-element-parameter-xmla.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Einige XMLA-Befehle (XML for Analysis) wie der [Process](../xml-elements-commands/process-element-xmla.md) -Befehl können weitere Informationen erfordern. Die `Parameter` Element bietet einen Mechanismus zum Bereitstellen zusätzlicher Informationen, einschließlich segmentierter Informationen, XMLA-Befehl.  
+ Einige XMLA-Befehle (XML for Analysis) wie der [Process](../xml-elements-commands/process-element-xmla.md) -Befehl können weitere Informationen erfordern. Die `Parameter` -Element bietet einen Mechanismus zum Bereitstellen zusätzlicher Informationen, einschließlich segmentierter Informationen, XMLA-Befehl.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;XMLA&#41;](xml-elements-properties.md)  

@@ -1,5 +1,5 @@
 ---
-title: Untersuchen der Entscheidungsstrukturmodells (Lernprogramm zu Datamining-Lernprogramm) | Microsoft Docs
+title: Untersuchen des Entscheidungsstrukturmodells (Lernprogramm zu Datamining-Grundlagen) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2e1472c2-3f3e-4dae-acb3-62fca374d397
 caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 7760bde2165a351876bb0ac84f26f59b1196bf2e
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: acc02a144a507ee90fb311cb44445816097b1c16
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312878"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204446"
 ---
 # <a name="exploring-the-decision-tree-model-basic-data-mining-tutorial"></a>Untersuchen des Entscheidungsstrukturmodells (Lernprogramm zu Data Mining-Grundlagen)
   Durch den [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees-Algorithmus wird anhand der übrigen Spalten im Trainingssatz vorhergesagt, welche Spalten die Entscheidung über den Kauf eines Fahrrads beeinflussen.  
   
 
   
-##  <a name="Decision_Tree_Tab"></a> Registerkarte "Entscheidungsstruktur"  
+##  <a name="Decision_Tree_Tab"></a> Registerkarte Entscheidungsstruktur  
  Auf der **Entscheidungsstruktur** Registerkarte können Sie Entscheidungsstrukturen für jedes vorhersagbare Attribut im Dataset anzeigen.  
   
- In diesem Fall vorhersagt das Modell nur eine Spalte Bike Buyer, es gibt also nur eine Struktur zu sehen. Wenn es mehrere Strukturen wurden, können Sie die **Struktur** auf eine andere Struktur auswählen.  
+ In diesem Fall sagt das Modell nur eine Spalte Bike Buyer, gibt es also nur eine Struktur zu sehen. Falls mehrere Strukturen sind, können Sie die **Struktur** Feld, um eine andere Struktur auswählen.  
   
- Wenn Sie zum Anzeigen der `TM_Decision_Tree` Modell im Entscheidungsstruktur-Viewer, sehen Sie die wichtigsten Attribute auf der linken Seite des Diagramms. Als wichtigste Attribute werden diejenigen beschrieben, die den größten Einfluss auf das Ergebnis haben. Die weiter unten in der Struktur (auf der rechten Diagrammseite) angezeigten Attribute weisen einen geringeren Einfluss auf.  
+ Wie Sie anzeigen, die `TM_Decision_Tree` Modell in den Decision Tree-Viewer, können Sie die wichtigsten Attribute auf der linken Seite des Diagramms sehen. Als wichtigste Attribute werden diejenigen beschrieben, die den größten Einfluss auf das Ergebnis haben. Die weiter unten in der Struktur (auf der rechten Diagrammseite) angezeigten Attribute weisen einen geringeren Einfluss auf.  
   
  In diesem Beispiel ist das Alter der wichtigste Einzelfaktor für die Vorhersage eines Fahrradkaufs. Im Modell werden Kunden nach dem Alter gruppiert, und anschließend wird das nächstwichtigere Attribut für jede Altersgruppe angezeigt. In der Kundengruppe von 34 bis 40 Jahren ist die Anzahl der Kraftfahrzeuge im Besitz des Kunden nach dem Alter der bedeutendste Vorhersagefaktor.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "36312878"
   
 1.  Wählen Sie die **Miningmodell-Viewer** Registerkarte **Data Mining-Designer**.  
   
-     Wird standardmäßig der Designer wird geöffnet, das erste Modell, das der Struktur, in diesem Fall hinzugefügt wurde `TM_Decision_Tree`.  
+     In der Standardeinstellung der Designer wird geöffnet, das erste Modell, das der Struktur, in diesem Fall hinzugefügt wurde `TM_Decision_Tree`.  
   
 2.  Mithilfe der Lupensymbole können Sie die Größe der Strukturanzeige einstellen.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36312878"
   
 4.  Ändern der **Hintergrund** Wert `1`.  
   
-     Durch Ändern der **Hintergrund** festlegen, können Sie rasch erkennen die Anzahl von Fällen in jedem Knoten, der den Zielwert `1` für [Bike Buyer]. In diesem besonderen Szenario stellt jeder Fall einen Kunden dar. Der Wert `1` gibt an, dass der Kunde zuvor ein Fahrrad gekauft Wert **0** gibt an, dass der Kunde kein Fahrrad gekauft hat. Je dunkler die Schattierung des Knotens ist, desto höher ist der Prozentsatz der Fälle im Knoten mit dem Zielwert.  
+     Durch Ändern der **Hintergrund** festlegen, können Sie rasch erkennen die Anzahl der Fälle in den einzelnen Knoten, die den Zielwert `1` für [Bike Buyer]. In diesem besonderen Szenario stellt jeder Fall einen Kunden dar. Der Wert `1` gibt an, dass der Kunde zuvor ein Fahrrad gekauft Wert **0** gibt an, dass der Kunde kein Fahrrad gekauft hat. Je dunkler die Schattierung des Knotens ist, desto höher ist der Prozentsatz der Fälle im Knoten mit dem Zielwert.  
   
 5.  Platzieren Sie den Cursor über dem Knoten mit der Bezeichnung **alle**. Daraufhin wird eine QuickInfo mit folgenden Informationen angezeigt:  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36312878"
   
      Sie können den Cursor auch auf einem beliebigen Knoten in der Struktur platzieren, um die Bedingung anzuzeigen, die erforderlich ist, um den Knoten vom vorhergehenden Knoten aus zu erreichen. Sie können auch anzeigen, diese Informationen in den **Mininglegende**.  
   
-6.  Klicken Sie auf den Knoten für **Age > = 34 und < 41**. Das Histogramm wird als schmaler horizontaler Balken über dem Knoten angezeigt. Es stellt die Verteilung der Kunden in der entsprechenden Altersgruppe dar, die bereits ein Fahrrad gekauft (rosa) bzw. noch kein Fahrrad gekauft haben (blau). Dem Viewer ist zu entnehmen, dass Kunden im Alter von 34 bis 40 Jahren, die ein oder kein Auto besitzen, wahrscheinlich ein Fahrrad kaufen. Bei einer genaueren Betrachtung stellt sich heraus, dass die Wahrscheinlichkeit, ein Fahrrad zu kaufen, im Alter von 38 bis 40 Jahren am größten ist.  
+6.  Klicken Sie auf den Knoten für **Age > = 34 and < 41**. Das Histogramm wird als schmaler horizontaler Balken über dem Knoten angezeigt. Es stellt die Verteilung der Kunden in der entsprechenden Altersgruppe dar, die bereits ein Fahrrad gekauft (rosa) bzw. noch kein Fahrrad gekauft haben (blau). Dem Viewer ist zu entnehmen, dass Kunden im Alter von 34 bis 40 Jahren, die ein oder kein Auto besitzen, wahrscheinlich ein Fahrrad kaufen. Bei einer genaueren Betrachtung stellt sich heraus, dass die Wahrscheinlichkeit, ein Fahrrad zu kaufen, im Alter von 38 bis 40 Jahren am größten ist.  
   
  Beim Erstellen von Struktur und Modell haben Sie Drillthrough aktiviert. Sie können daher detaillierte Informationen über die Modellfälle und die Miningstruktur einschließlich Spalten abrufen, die nicht Teil des Miningmodells sind (beispielsweise emailAddress, FirstName).  
   
@@ -71,11 +71,11 @@ ms.locfileid: "36312878"
   
 #### <a name="to-drill-through-to-case-data"></a>So führen Sie einen Drillthrough zu Falldaten aus  
   
-1.  Maustaste auf einen Knoten, und wählen Sie **Drillthrough** dann **nur Modellspalten**.  
+1.  Mit der rechten Maustaste in eines Knotens, und wählen **Drillthrough** dann **nur Modellspalten**.  
   
      Die Details für die einzelnen Trainingsfälle werden im Arbeitsblattformat angezeigt. Sie wurden der vTargetMail-Sicht entnommen, die beim Erstellen der Miningstruktur als Falltabelle ausgewählt wurde.  
   
-2.  Maustaste auf einen Knoten, und wählen Sie **Drillthrough** dann **Modell- und Strukturspalten**.  
+2.  Mit der rechten Maustaste in eines Knotens, und wählen **Drillthrough** dann **Modell- und Strukturspalten**.  
   
      Das gleiche Arbeitsblatt wird angezeigt, und die Strukturspalten wurden an das Ende angefügt.  
   
@@ -85,27 +85,27 @@ ms.locfileid: "36312878"
   
 ##### <a name="to-explore-the-model-in-the-dependency-network-tab"></a>So untersuchen Sie das Modell auf der Registerkarte "Abhängigkeitsnetzwerk"  
   
-1.  Klicken Sie auf die `Bike Buyer` Knoten, um die zugehörigen Abhängigkeiten zu identifizieren.  
+1.  Klicken Sie auf die `Bike Buyer` Knoten aus, um die zugehörigen Abhängigkeiten zu identifizieren.  
   
      Der zentrale Knoten des Abhängigkeitsnetzwerks `Bike Buyer` steht für das vorhersagbare Attribut im Miningmodell. Im Diagramm werden alle verbundenen Knoten hervorgehoben, die das vorhersagbare Attribut beeinflussen.  
   
 2.  Anpassen der **alle Links** Schieberegler, um die einflussreichsten Attribute zu identifizieren.  
   
-     Wie Sie den Schieberegler nach unten ziehen, werden die Attribute, die nur eine geringe Auswirkung auf die Spalte [Bike Buyer] haben aus dem Diagramm entfernt. Mithilfe des Reglers können Sie feststellen, dass Alter und Region die wichtigste Faktoren bei der Vorhersage sind, ob ein Kunde ein Fahrrad kauft.  
+     Wie Sie den Schieberegler nach unten ziehen, werden die Attribute, die nur eine geringe Auswirkung auf die Spalte [Bike Buyer] aus dem Diagramm entfernt. Mithilfe des Reglers können Sie feststellen, dass Alter und Region die wichtigste Faktoren bei der Vorhersage sind, ob ein Kunde ein Fahrrad kauft.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  In den folgenden Themen wird erläutert, wie Daten unter Verwendung anderer Modellarten analysiert werden können.  
   
--   [Untersuchen des Clustering-Modells &#40;Lernprogramm zu Datamining-Lernprogramm&#41;](../../2014/tutorials/exploring-the-clustering-model-basic-data-mining-tutorial.md)  
+-   [Untersuchen des Clustering-Modells &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/exploring-the-clustering-model-basic-data-mining-tutorial.md)  
   
--   [Untersuchen des Naive Bayes-Modells &#40;Lernprogramm zu Datamining-Lernprogramm&#41;](../../2014/tutorials/exploring-the-naive-bayes-model-basic-data-mining-tutorial.md)  
+-   [Untersuchen des Naive Bayes-Modells &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/exploring-the-naive-bayes-model-basic-data-mining-tutorial.md)  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Untersuchen des Clustering-Modells &#40;Lernprogramm zu Datamining-Lernprogramm&#41;](../../2014/tutorials/exploring-the-clustering-model-basic-data-mining-tutorial.md)  
+ [Untersuchen des Clustering-Modells &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/exploring-the-clustering-model-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Miningmodell-Viewer miningmodelltasks und Anweisungen](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Registerkarte "Struktur" Decision &#40;Miningmodell-Viewer&#41;](../../2014/analysis-services/decision-tree-tab-mining-model-viewer.md)   
+ [Registerkarte Entscheidungsstruktur &#40;Miningmodell-Viewer&#41;](../../2014/analysis-services/decision-tree-tab-mining-model-viewer.md)   
  [Registerkarte Abhängigkeitsnetzwerk &#40;Miningmodell-Viewer&#41;](../../2014/analysis-services/dependency-network-tab-mining-model-viewer.md)   
  [Durchsuchen eines Modells mit dem Microsoft Struktur-Viewer](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   

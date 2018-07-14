@@ -1,5 +1,5 @@
 ---
-title: OlapDataSource-Datentyp (ASSL) | Microsoft Docs
+title: OlapDataSource-Datentyp (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - OlapDataSource data type
 ms.assetid: cfe8937c-5f73-4773-a1e8-5e3310691966
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 91ee0e55bab11a9a1100403c423c4e6629445b48
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ecfab3ea15e5f6a2cd134f0ced28ba2ad43245b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151442"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197960"
 ---
 # <a name="olapdatasource-data-type-assl"></a>OlapDataSource-Datentyp (ASSL)
   Definiert einen abgeleiteten Datentyp, der ein mehrdimensionales darstellt [DataSource](../objects/datasource-element-assl.md) Element.  
@@ -57,10 +57,10 @@ ms.locfileid: "36151442"
 |------------------|-------------|  
 |Übergeordnete Elemente|InclusionThresholdSetting|  
 |Untergeordnete Elemente|InclusionThresholdSetting|  
-|Abgeleitete Elemente|[DataSource](../objects/datasource-element-assl.md) ([DataSources](../collections/datasources-element-assl.md) Auflistung von [Datenbank](../objects/database-element-assl.md))|  
+|Abgeleitete Elemente|[DataSource](../objects/datasource-element-assl.md) ([Datenquellen](../collections/datasources-element-assl.md) Auflistung von [Datenbank](../objects/database-element-assl.md))|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.OlapDataSource>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.OlapDataSource>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services Scripting Language-XML-Datentypen &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: Veraltete Master Data Services-Funktionen in SQLServer 2014 | Microsoft Docs
+title: Veraltete Master Data Services-Funktionen in SQLServer 2014 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 423e45193aed8d0f499e5920f08f8c8551e27545
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 625887e6b737e3e54fc8c0516ec3fdbc1e13d46e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148641"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262956"
 ---
 # <a name="deprecated-master-data-services-features-in-sql-server-2014"></a>Veraltete Master Data Services-Funktionen in SQL Server 2014
   In diesem Thema werden die als veraltet markierten Funktionen von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] beschrieben, die in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]noch verfügbar sind. Diese Funktionen werden voraussichtlich in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]entfernt. Als veraltet markierte Funktionen sollten in neuen Anwendungen nicht verwendet werden.  

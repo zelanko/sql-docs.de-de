@@ -1,5 +1,5 @@
 ---
-title: Term Extraction Transformations-Editor (Registerkarte Ausschluss) | Microsoft Docs
+title: Term Extraction Transformations-Editor (Registerkarte "Ausschluss") | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termextraction.inclusionexclusion.f1
 helpviewer_keywords:
 - Term Extraction Transformation Editor
 ms.assetid: 90110d95-fd97-4542-9cda-832c86606130
 caps.latest.revision: 27
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fc7ff9ebc47db5a460113330f7b950e783359d59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 183814c58f867f0a9241d4dba1f01e96ee9b8982
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149394"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246960"
 ---
 # <a name="term-extraction-transformation-editor-exclusion-tab"></a>Transformations-Editor für Ausdrucksextrahierung (Registerkarte Ausschluss)
   Auf der Registerkarte **Ausschluss** des Dialogfelds **Transformations-Editor für Ausdrucksextrahierung** können Sie eine Verbindung mit einer Ausschlusstabelle einrichten und die Spalten mit den Ausschlussausdrücken angeben.  
@@ -51,8 +51,8 @@ ms.locfileid: "36149394"
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Transformations-Editor für den Begriff Extraktion &#40;Registerkarte Ausdrucksextrahierung&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
- [Transformations-Editor für den Begriff Extraktion &#40;Registerkarte "Erweitert"&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
+ [Transformations-Editor für Ausdrucksextrahierung Begriff &#40;Registerkarte Ausdrucksextrahierung&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
+ [Transformations-Editor für Ausdrucksextrahierung Begriff &#40;Registerkarte "Erweitert"&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
  [Transformation für Ausdruckssuche](data-flow/transformations/lookup-transformation.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: ColumnBinding-Datentyp (ASSL) | Microsoft Docs
+title: ColumnBinding-Datentyp (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ColumnBinding data type
 ms.assetid: 3ab1bac1-6716-4b17-a107-d5f9c744c5e6
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1ad7cea5041f8d65964b85e36a0b992f9f5afdae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 227801af8b66d66ebeba50d2713267720adffa9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148715"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200110"
 ---
 # <a name="columnbinding-data-type-assl"></a>ColumnBinding-Datentyp (ASSL)
-  Definiert einen abgeleiteten Datentyp, der die Bindung einer Spalte in einer Datenquellensicht steht eine [DataItem](dataitem-data-type-assl.md) Element.  
+  Definiert einen abgeleiteten Datentyp, der die Bindung einer Spalte in einer Datenquellensicht zu darstellt, der eine [DataItem](dataitem-data-type-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36148715"
   
  Tabellen- und Spaltennamen schließen keine Trennzeichen (z. B. "[" für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) ein.  
   
- Weitere Informationen zu der `Binding` Typ, einschließlich Tabellen, die von Analysis Services Scripting Language (ASSL)-Objekten, von der `Binding` Typ und der Vererbungshierarchie des `Binding` , finden Sie unter [Binding-Datentyp &#40;ASSL&#41;](binding-data-type-assl.md).  
+ Weitere Informationen zu den `Binding` -Typ und zu Tabellen von Analysis Services Scripting Language (ASSL)-Objekten, von der `Binding` Typ und der Vererbungshierarchie des `Binding` Datentypen, finden Sie unter [Binding-Datentyp &#40;ASSL&#41;](binding-data-type-assl.md).  
   
  Einen Überblick über datenbindungen in ASSL finden Sie unter [Datenquellen und-Bindungen &#40;mehrdimensionale SSAS-&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   

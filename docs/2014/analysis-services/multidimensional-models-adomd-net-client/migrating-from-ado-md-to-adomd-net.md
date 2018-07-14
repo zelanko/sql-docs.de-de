@@ -1,5 +1,5 @@
 ---
-title: Migrieren von ADO MD zu ADOMD.NET | Microsoft Docs
+title: Migrieren von ADO MD zu ADOMD.NET | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - ADO MD migration [ADOMD.NET]
 ms.assetid: 8c760db3-c475-468e-948d-e5f599d985ad
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ca9b4ba7dae762dead880c39c228391898e36e27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc10312f8e4a19c334c0eeba7284d7af0eabd0df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149748"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245728"
 ---
 # <a name="migrating-from-ado-md-to-adomdnet"></a>Migrieren von ADO MD zu ADOMD.NET
   Die ADOMD.NET-Bibliothek ist ähnlich wie die ADO MD-Bibliothek (ActiveX Data Objects Multidimensional) eine Erweiterung der ADO-Bibliothek (ActiveX Data Objects), die verwendet wird, um auf mehrdimensionale Daten in COM-basierten (Component Object Model) Clientanwendungen zuzugreifen. ADO MD bietet einen einfachen Zugriff auf mehrdimensionale Daten aus nicht verwalteten Sprachen, wie C++ und [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic. ADOMD.NET bietet einen leichten Zugriff auf analytische (sowohl mehrdimensional als auch Data Mining) Daten aus verwalteten Sprachen, wie [!INCLUDE[msCoName](../../includes/msconame-md.md)] C# und [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET. Darüber hinaus stellt ADOMD.NET ein verbessertes Metadaten-Objektmodell bereit.  
   
  Die Migration bestehender Clientanwendungen von ADO MD auf ADOMD.NET ist leicht. Allerdings gibt es diverse wichtige Unterschiede in Bezug auf die Migration:  
   
- **Konnektivität und Datenzugriff für Clientanwendungen bereitstellen**  
+ **Bereitstellen von Konnektivität und Datenzugriff für Clientanwendungen**  
  |ADO MD|ADOMD.NET|  
 |------------|---------------|  
 |Erfordert Verweise auf sowohl Adodb.dll als auch Adomd.dll.|Erfordert einen einzelnen Verweis auf Microsoft.AnalysisServices.AdomdClient.dll.|  
@@ -41,7 +41,7 @@ ms.locfileid: "36149748"
  **Zum Abrufen von Metadaten für mehrdimensionale Objekte**  
  |ADO MD|ADOMD.NET|  
 |------------|---------------|  
-|Verwenden Sie die Katalog-Klasse.|Verwenden Sie die <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Cubes%2A>-Eigenschaft von <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.|  
+|Verwenden Sie den Katalog-Klasse.|Verwenden Sie die <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Cubes%2A>-Eigenschaft von <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.|  
   
  **Um Abfragen auszuführen, und geben Cellset-Objekte zurück**  
  |ADO MD|ADOMD.NET|  
@@ -56,10 +56,10 @@ ms.locfileid: "36149748"
 > [!NOTE]  
 >  Die <xref:Microsoft.AnalysisServices.AdomdClient.Position>-Klasse wird aus Gründen der Abwärtskompatibilität unterstützt.  
   
- **Miningmodell-Metadaten abrufen**  
+ **Zum Abrufen von Metadaten für Mining-Modell**  
  |ADO MD|ADOMD.NET|  
 |------------|---------------|  
-|Keine Klasse verfügbar.|Verwenden Sie eine der Data Mining-Auflistungen:<br /><br /> – Der <xref:Microsoft.AnalysisServices.AdomdClient.MiningModelCollection> enthält eine Liste aller Miningmodelle in der Datenquelle.<br />– Der <xref:Microsoft.AnalysisServices.AdomdClient.MiningServiceCollection> enthält Informationen zu den verfügbaren Mining-Algorithmen.<br />– Der <xref:Microsoft.AnalysisServices.AdomdClient.MiningStructureCollection> Informationen über die Miningstrukturen auf dem Server verfügbar gemacht.|  
+|Keine Klasse verfügbar.|Verwenden Sie eine der Data Mining-Auflistungen:<br /><br /> – Die <xref:Microsoft.AnalysisServices.AdomdClient.MiningModelCollection> enthält eine Liste aller Miningmodelle in der Datenquelle.<br />– Die <xref:Microsoft.AnalysisServices.AdomdClient.MiningServiceCollection> enthält Informationen über die verfügbaren Mining-Algorithmen.<br />– Die <xref:Microsoft.AnalysisServices.AdomdClient.MiningStructureCollection> Informationen zu Miningstrukturen auf dem Server verfügbar gemacht.|  
   
  Um diese Unterschiede herauszustellen, vergleicht das folgende Migrationsbeispiel eine bestehende ADO MD-Anwendung mit einer entsprechenden ADOMD.NET-Anwendung.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36149748"
  Sowohl die vorhandenen ADO MD- als auch die entsprechenden ADOMD.NET-Codebeispiele, die in diesem Abschnitt angegeben sind, führen die gleichen Gruppen an Aktionen aus: Erstellen einer Verbindung, Ausführen einer MDX-Anweisung (Multidimensional Expressions) und Abrufen von Metadaten und Daten. Allerdings verwenden diese beiden Codesätze nicht die gleichen Objekte zur Ausführung dieser Tasks.  
   
 ### <a name="existing-ado-md-code"></a>Vorhandener ADO MD-Code  
- Die folgende, aus der ADO MD 2.8-Dokumentation entliehene Codebeispiel ist in geschrieben [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic® 6.0 und verwendet ADO MD zu veranschaulichen, wie eine Verbindung herstellen und Abfragen einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquelle. Dieses ADO MD-Beispiel verwendet die folgenden Objekte:  
+ Das folgenden Codebeispiel wird ADO MD 2.8-Dokumentation entnommen hat [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic® 6.0 und verwendet ADO MD zu veranschaulichen, wie eine Verbindung herstellen und Abfragen einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquelle. Dieses ADO MD-Beispiel verwendet die folgenden Objekte:  
   
 -   Erstellt eine Verbindung aus einem `Catalog`-Objekt.  
   

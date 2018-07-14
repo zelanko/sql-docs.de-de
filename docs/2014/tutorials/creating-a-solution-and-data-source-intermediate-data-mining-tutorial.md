@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer Projektmappe und Datenquelle (Datamining-Lernprogramm für fortgeschrittene) | Microsoft Docs
+title: Erstellen einer Projektmappe und Datenquelle (mittleres Datamining Tutorial) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0488b231-1045-4169-aabb-c1005d86ca30
 caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: cdfb95b68a0ea7f7015738239850528177dce00e
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 22bfe87f9d0cd09d2d7c7f650d500398b936cde0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312818"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216240"
 ---
 # <a name="creating-a-solution-and-data-source-intermediate-data-mining-tutorial"></a>Erstellen einer Projektmappe und einer Datenquelle (Data Mining-Lernprogramm für Fortgeschrittene)
-  Um mit dem Datamining zu arbeiten, müssen Sie zunächst ein Projekt in der erstellen [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] mithilfe der Vorlage **mehrdimensionale Analysis Services und Data Mining-Projekt**. Wenn Sie die Vorlage öffnen, werden alle Schemas in den Designer geladen, die Sie möglicherweise für Data Mining benötigen: Datenquellen, Miningstrukturen und Miningmodelle und sogar Cubes, wenn die Miningstruktur mehrdimensionale Daten verwendet.  
+  Um mit dem Datamining zu arbeiten, müssen Sie zunächst ein Projekt in erstellen [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] mithilfe der Vorlage **mehrdimensionale Analysis Services und Data Mining-Projekt**. Wenn Sie die Vorlage öffnen, werden alle Schemas in den Designer geladen, die Sie möglicherweise für Data Mining benötigen: Datenquellen, Miningstrukturen und Miningmodelle und sogar Cubes, wenn die Miningstruktur mehrdimensionale Daten verwendet.  
   
- Wenn Sie das Projekt erstellen, wird Ihre Lösung bis zur Bereitstellung als lokale Datei gespeichert. Beim Bereitstellen der Lösung [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sucht nach der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Server in den Projekteigenschaften angegebenen und erstellt einen neuen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Datenbank mit dem gleichen Namen wie das Projekt. Standardmäßig [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verwendet die **"localhost"** -Instanz für neue Projekte. Wenn Sie eine benannte Instanz verwenden oder einen anderen Namen für die Standardinstanz angegeben haben, müssen Sie für die Eigenschaft der Bereitstellungsdatenbank des Projekts den Speicherort angeben, an dem Data Mining-Objekte erstellt werden sollen.  
+ Wenn Sie das Projekt erstellen, wird Ihre Lösung bis zur Bereitstellung als lokale Datei gespeichert. Beim Bereitstellen der Lösung [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sucht nach dem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Server in den Projekteigenschaften angegeben und erstellt ein neues [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Datenbank mit dem gleichen Namen wie das Projekt. In der Standardeinstellung [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verwendet die **"localhost"** -Instanz für neue Projekte. Wenn Sie eine benannte Instanz verwenden oder einen anderen Namen für die Standardinstanz angegeben haben, müssen Sie für die Eigenschaft der Bereitstellungsdatenbank des Projekts den Speicherort angeben, an dem Data Mining-Objekte erstellt werden sollen.  
   
  Weitere Informationen zu [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekten finden Sie unter [Erstellen eines Analysis Services-Projekts &#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md).  
   
@@ -54,20 +54,20 @@ ms.locfileid: "36312818"
   
      – oder –  
   
-     In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]auf die **Projekt** klicken Sie im Menü **Eigenschaften**.  
+     In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]auf die **Projekt** , wählen Sie im Menü **Eigenschaften**.  
   
 2.  Klicken Sie auf der linken Seite des Bereichs **Eigenschaftenseiten** auf **Bereitstellung**.  
   
      Wählen Sie im Bereich **Optionen** den **Bereitstellungsmodus**aus. Wählen Sie **Alle Objekte bereitstellen** aus, um Objekte zu überschreiben, oder wählen Sie **Nur geänderte Objekte bereitstellen** aus, um Objekte zu aktualisieren oder neue Objekte hinzuzufügen.  
   
 ## <a name="creating-a-data-source"></a>Erstellen einer Datenquelle  
- In der Data Mining-Grundlagen, erstellt Sie eine *Datenquelle* zur Speicherung der Verbindungsinformationen für die [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] Datenbank. Führen Sie die gleichen Schritte aus, um die [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]-Datenquelle in dieser Lösung zu erstellen.  
+ In der Basic Data Mining Tutorial, in dem Sie erstellt haben eine *Datenquelle* , speichert Verbindungsinformationen für die [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] Datenbank. Führen Sie die gleichen Schritte aus, um die [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]-Datenquelle in dieser Lösung zu erstellen.  
   
 #### <a name="to-create-a-data-source"></a>So erstellen Sie eine Datenquelle  
   
--   [Erstellen einer Datenquelle &#40;Lernprogramm zu Datamining-Lernprogramm&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
+-   [Erstellen einer Datenquelle &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
- Eine Datenquelle kann mehrere Datenquellensichten unterstützten und die einzelnen Datenquellensichten können mehrere Tabellen aufweisen. Da die Datenquelle die Datenquellensicht und werden jedoch auf bereitgestellt Ihrer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Datenbank zusammen mit den Datamining-Modelle, die Sie als bewährte Methode erstellen Sie in die Datenquellensicht, die nur die Tabellen aufzunehmen für jeden Datamining-Modell oder eine Gruppe von Modellen erforderlich sind.  
+ Eine Datenquelle kann mehrere Datenquellensichten unterstützten und die einzelnen Datenquellensichten können mehrere Tabellen aufweisen. Aber da die Datenquelle und die Datenquelle bereitgestellt werden Ihre [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank zusammen mit der Datamining-Modelle, die Sie in die Datenquellensicht, die nur die Tabellen aufzunehmen erstellen, als bewährte Methode für jede Datamining-Modell oder eine Gruppe von Modellen erforderlich sind.  
   
  In den folgenden Lektionen fügen Sie Datenquellensichten zur Unterstützung jedes neuen Szenarios hinzu. Nur in der Market Basket- und der Sequenzcluster-Lektion wird die gleiche Datenquellensicht verwendet. Sonst wird für jedes Szenario eine andere Datenquellensicht verwendet, sodass die Lektionen keine weiteren Gemeinsamkeiten aufweisen und unabhängig voneinander abgeschlossen werden können.  
   

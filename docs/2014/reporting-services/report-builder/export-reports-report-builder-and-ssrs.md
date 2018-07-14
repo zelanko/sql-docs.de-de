@@ -1,5 +1,5 @@
 ---
-title: Exportieren von Berichten (Berichts-Generator und SSRS) | Microsoft Docs
+title: Exportieren von Berichten (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10437"
 ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
 caps.latest.revision: 18
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 54625bc927cd187b40c146b7bfdc4093645711c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: f4760d57cec11c6955e1ad87d4278d6c22a55ee7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148113"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255802"
 ---
 # <a name="exporting-reports-report-builder-and-ssrs"></a>Exportieren von Berichten (Berichts-Generator und SSRS)
   Nachdem Sie einen Bericht ausgeführt haben, können Sie ihn in ein anderes Format exportieren, z. B. Excel oder PDF. Sie können den Bericht auch durch Generieren eines Atom-Dienstdokuments exportieren. Dabei werden die im Bericht verfügbaren Atom-kompatiblen Datenfeeds aufgelistet.  
@@ -40,7 +40,7 @@ ms.locfileid: "36148113"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bietet viele Renderingerweiterungen und unterstützt den Export von Berichten in gebräuchliche Dateiformate. Die Renderingerweiterungen unterstützen Dateiformate mit bedingten Umbrüchen (z. B. Word oder Excel), festen Seitenumbrüche (z. B. PDF oder TIFF) oder nur Daten (z. B. CSV oder Atom-kompatibles XML).  
   
- Zum schnellen Einstieg Exportieren von Berichten und Generieren von Atom-kompatible Datenfeeds aus Berichten finden Sie unter [Exportieren eines Berichts in einem anderen Dateiformat &#40;Berichts-Generator und SSRS&#41; ](../export-a-report-as-another-file-type-report-builder-and-ssrs.md) und [Generieren von Datenfeeds aus einem Bericht &#40;Berichts-Generator und SSRS&#41;](generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
+ Zum schnellen Einstieg in Exportieren von Berichten und Atom-kompatible Datenfeeds aus Berichten generieren, finden Sie unter [Exportieren eines Berichts in einem anderen Dateiformat &#40;Berichts-Generator und SSRS&#41; ](../export-a-report-as-another-file-type-report-builder-and-ssrs.md) und [Generieren von Datenfeeds aus einem Bericht &#40;Berichts-Generator und SSRS&#41;](generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -68,8 +68,8 @@ ms.locfileid: "36148113"
 |Format|Renderingerweiterungstyp|Description|  
 |------------|------------------------------|-----------------|  
 |CSV|data|Die durch Trennzeichen getrennte CSV (Comma-Separated Value)-Renderingerweiterung rendert Berichte als vereinfachte Darstellung der Daten eines Berichts in einem standardisierten Nur-Text-Format, das leicht lesbar und mit anderen Anwendungen austauschbar ist.<br /><br /> Weitere Informationen finden Sie unter [Exportieren als CSV-Datei &#40;Berichts-Generator und SSRS&#41;](exporting-to-a-csv-file-report-builder-and-ssrs.md).|  
-|Excel|Bedingter Seitenumbruch|Die Excel-Renderingerweiterung rendert einen Bericht als Excel-Dokument, die kompatibel mit [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007-2010 sowie [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 mit der Microsoft Office Compatibility Pack für Word, Excel und PowerPoint installiert. Der Bericht wird in ein Excel-Arbeitsblatt exportiert, wobei einige Elemente des Layouts und des ursprünglichen Entwurfs entfernt werden. Eigenschaften des Berichts und von Gruppen im Bericht können festgelegt werden, um beim Export nach Excel die Benennung von Arbeitsblattregisterkarten zu ermöglichen. Die Erweiterung des Dateinamens bei Dateien, die von diesem Renderer generiert werden, lautet XLSX.<br /><br /> Weitere Informationen finden Sie unter [Exportieren nach Microsoft Excel &#40;Berichts-Generator und SSRS&#41;](exporting-to-microsoft-excel-report-builder-and-ssrs.md) (Exportieren nach Microsoft Excel (Berichts-Generator und SSRS)).<br /><br /> Hinweis: Der Excel 2003-Renderingerweiterung, die für das systemeigene Format von rendert [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 ist in einigen berichtsszenarien verfügbar.|  
-|Wort|Bedingter Seitenumbruch|Word-Renderingerweiterung rendert einen Bericht als Word-Dokument, die kompatibel mit [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 sowie [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 mit der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Compatibility Pack für Word, Excel und PowerPoint installiert. Nachdem der Bericht in ein Word-Dokument exportiert wurde, können Sie den Inhalt bearbeiten und dokumentartige Berichte wie Adressetiketten, Bestellungen oder Serienbriefe entwerfen. Die Dateinamenerweiterung der von diesem Renderer generierten Dateien lautet DOCX.<br /><br /> Weitere Informationen finden Sie unter [Exportieren nach Microsoft Word &#40;Berichts-Generator und SSRS&#41;](exporting-to-microsoft-word-report-builder-and-ssrs.md).<br /><br /> Hinweis: Die Word 2003-Renderingerweiterung, die für das systemeigene Format von rendert [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 ist in einigen berichtsszenarien verfügbar.|  
+|Excel|Bedingter Seitenumbruch|Excel-Renderingerweiterung rendert einen Bericht als Excel-Dokument, die kompatibel mit [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007-2010 sowie [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 die Microsoft Office Compatibility Pack für Word, Excel und PowerPoint installiert. Der Bericht wird in ein Excel-Arbeitsblatt exportiert, wobei einige Elemente des Layouts und des ursprünglichen Entwurfs entfernt werden. Eigenschaften des Berichts und von Gruppen im Bericht können festgelegt werden, um beim Export nach Excel die Benennung von Arbeitsblattregisterkarten zu ermöglichen. Die Erweiterung des Dateinamens bei Dateien, die von diesem Renderer generiert werden, lautet XLSX.<br /><br /> Weitere Informationen finden Sie unter [Exportieren nach Microsoft Excel &#40;Berichts-Generator und SSRS&#41;](exporting-to-microsoft-excel-report-builder-and-ssrs.md) (Exportieren nach Microsoft Excel (Berichts-Generator und SSRS)).<br /><br /> Hinweis: Die Excel 2003-Renderingerweiterung, die im systemeigenen Format von rendert [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 ist in einigen berichtsszenarien verfügbar.|  
+|Wort|Bedingter Seitenumbruch|Word-Renderingerweiterung rendert einen Bericht als Word-Dokument, die kompatibel mit [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 sowie [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 mit den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Compatibility Pack für Word, Excel und PowerPoint installiert. Nachdem der Bericht in ein Word-Dokument exportiert wurde, können Sie den Inhalt bearbeiten und dokumentartige Berichte wie Adressetiketten, Bestellungen oder Serienbriefe entwerfen. Die Dateinamenerweiterung der von diesem Renderer generierten Dateien lautet DOCX.<br /><br /> Weitere Informationen finden Sie unter [Exportieren nach Microsoft Word &#40;Berichts-Generator und SSRS&#41;](exporting-to-microsoft-word-report-builder-and-ssrs.md).<br /><br /> Hinweis: Die Word 2003-Renderingerweiterung, die im systemeigenen Format von rendert [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 ist in einigen berichtsszenarien verfügbar.|  
 |Webarchiv|Bedingter Seitenumbruch|Die HTML-Renderingerweiterung rendert einen Bericht im HTML-Format. Die Renderingerweiterung kann außerdem vollständige HTML-Seiten oder HTML-Fragmente zum Einbetten in andere HTML-Seiten erstellen. HTML wird stets mit UTF-8-Codierung erstellt.<br /><br /> Die HTML-Renderingerweiterung ist die Standardrenderingerweiterung für Berichte, die im Berichts-Generator in der Vorschau angezeigt und in einem Browser angezeigt werden. Dies gilt auch bei der Ausführung im Berichts-Manager.<br /><br /> Weitere Informationen finden Sie unter [Rendern in das HTML-Format &#40;Berichts-Generator und SSRS&#41;](rendering-to-html-report-builder-and-ssrs.md).|  
 |Acrobat-Datei (PDF-Datei)|Fester Seitenumbruch|Die PDF-Renderingerweiterung rendert Berichte in einem Dateiformat, das in Adobe Acrobat und anderen PDF-Viewern von Drittanbietern geöffnet werden kann, die das Format PDF 1.3 unterstützen. Obwohl PDF 1.3 mit Adobe Acrobat 4.0 oder höher kompatibel ist, wird Adobe Acrobat von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] erst ab Version 6 unterstützt. Die Renderingerweiterung erfordert keine Adobe-Software, um Berichte zu rendern. Zum Anzeigen oder Drucken von Berichten im PDF-Format sind allerdings PDF-Viewer wie Adobe Acrobat erforderlich.<br /><br /> Weitere Informationen finden Sie unter [Exportieren als PDF-Datei &#40;Berichts-Generator und SSRS&#41;](exporting-to-a-pdf-file-report-builder-and-ssrs.md).|  
 |TIFF-Datei|Fester Seitenumbruch|Die Bildrenderingerweiterung rendert einen Bericht als Bitmap oder Metadatei. Standardmäßig erstellt die Bildrenderingerweiterung eine TIFF-Datei des Berichts, die auf mehreren Seiten angezeigt werden kann. Nachdem der Client das Bild erhalten hat, kann es in einem Image Viewer angezeigt und gedruckt werden.<br /><br /> Die Bildrenderingerweiterung kann Dateien in allen von [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]unterstützten Formaten generieren: BMP, EMF, EMFPlus, GIF, JPEG, PNG und TIFF.<br /><br /> Weitere Informationen finden Sie unter [Exportieren in eine Bilddatei &#40;Berichts-Generator und SSRS&#41;](exporting-to-an-image-file-report-builder-and-ssrs.md).|  
@@ -105,13 +105,13 @@ ms.locfileid: "36148113"
   
  In den Themen zu bestimmten Renderern werden neben dem Rendern von Berichtselementen und Datenbereichen auch die Einschränkungen und Lösungen für jeden Renderer beschrieben.  
   
--   [Exportieren als CSV-Datei &#40;Berichts-Generator und SSRS&#41;](exporting-to-a-csv-file-report-builder-and-ssrs.md)  
+-   [Exportieren in eine CSV-Datei &#40;Berichts-Generator und SSRS&#41;](exporting-to-a-csv-file-report-builder-and-ssrs.md)  
   
 -   [Exportieren nach Microsoft Excel &#40;Berichts-Generator und SSRS&#41;](exporting-to-microsoft-excel-report-builder-and-ssrs.md)  
   
 -   [Exportieren nach Microsoft Word &#40;Berichts-Generator und SSRS&#41;](exporting-to-microsoft-word-report-builder-and-ssrs.md)  
   
--   [Rendern in HTML &#40;Berichts-Generator und SSRS&#41;](rendering-to-html-report-builder-and-ssrs.md)  
+-   [Rendern von HTML &#40;Berichts-Generator und SSRS&#41;](rendering-to-html-report-builder-and-ssrs.md)  
   
 -   [Exportieren als PDF-Datei &#40;Berichts-Generator und SSRS&#41;](exporting-to-a-pdf-file-report-builder-and-ssrs.md)  
   
@@ -139,7 +139,7 @@ http://<Server Name>/reportserver?/Sales/YearlySalesSummary&rs:Format=Excel&rs:C
  Weitere Informationen finden Sie unter [Exportieren von Berichten über URL-Zugriff](../export-a-report-using-url-access.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Steuern der Seite unterbrochen wird, Überschriften, Spalten und Zeilen &#40;Berichts-Generator und SSRS&#41;](../report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [Steuern von Seitenumbrüchen, Überschriften, Spalten und Zeilen &#40;Berichts-Generator und SSRS&#41;](../report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
  [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Drucken von Berichten &#40;Berichts-Generator und SSRS&#41;](print-reports-report-builder-and-ssrs.md)   
  [Speichern von Berichten &#40;Berichts-Generator&#41;](saving-reports-report-builder.md)  

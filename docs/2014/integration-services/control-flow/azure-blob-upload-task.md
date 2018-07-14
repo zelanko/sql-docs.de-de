@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.afpblobuptask.f1
 - sql11.dts.designer.afpblobuptask.f1
@@ -16,16 +16,16 @@ ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: df2e6673be9e257c71784211c53ba86309dc16de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d0f0e4123a16eb82000c6506dc7bcb62b353a268
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151631"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188557"
 ---
 # <a name="azure-blob-upload-task"></a>Azure-Blob-Uploadtask
-  Azure Blob Upload-Task ermöglicht einem SSIS-Paket zum Hochladen von Dateien in einem Azure Blob-Speicher.   
+  Die Azure-Blob-Uploadtask ermöglicht einem SSIS-Paket zum Hochladen von Dateien in Azure Blob Storage.   
 Um einen **Azure-Blob-Uploadtask**hinzuzufügen, legen Sie ihn mittels Drag &amp; Drop auf dem SSIS-Designer ab, und doppelklicken Sie darauf, oder klicken Sie mit der rechten Maustaste, und klicken Sie anschließend auf **Bearbeiten** , um das folgende Dialogfeld **Azure-Blob-Uploadtask-Editor** anzuzeigen.  
   
  Die folgende Tabelle enthält Beschreibungen für die Felder in diesem Dialogfeld.  

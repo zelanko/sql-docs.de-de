@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 caps.latest.revision: 42
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c732e124ca8de59f28f4d5121a85e071d6fda7f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7527bbdd1e66db49851832052c8a9393201b202f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147945"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254542"
 ---
 # <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>Schritt 2: Hinzufügen und Konfigurieren eines Verbindungs-Managers für Flatfiles
   In dieser Aufgabe fügen Sie einen Verbindungs-Manager für Flatfiles zum von Ihnen erstellten Paket hinzu. Mithilfe eines Verbindungs-Managers für Flatfiles können von einem Paket Daten aus einer Flatfile extrahiert werden. Mithilfe des Verbindungs-Managers für Flatfiles können Sie den Namen und Speicherort der Datei, die Gebietsschema- und Codepage sowie das Dateiformat einschließlich der Spaltentrennzeichen angeben, die angewendet werden sollen, wenn vom Paket Daten aus der Flatfile extrahiert werden. Zusätzlich können Sie die Datentypen für einzelne Spalten manuell angeben oder das Dialogfeld **Spaltentypen vorschlagen** verwenden, um die Spalten extrahierter Daten automatisch [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Datentypen zuzuordnen.  
@@ -70,9 +70,9 @@ ms.locfileid: "36147945"
   
     -   Ändern der **Spalte1** -Nameneigenschaft in `CurrencyID`.  
   
-    -   Ändern der **Spalte 2** -Nameneigenschaft in `CurrencyDate`.  
+    -   Ändern der **Column 2** -Nameneigenschaft in `CurrencyDate`.  
   
-    -   Ändern der **Spalte 3** -Nameneigenschaft in `EndOfDayRate`.  
+    -   Ändern der **Column 3** -Nameneigenschaft in `EndOfDayRate`.  
   
     > [!NOTE]  
     >  Standardmäßig sind alle vier Spalten auf einen Zeichenfolgendatentyp [DT_STR] mit einer `OutputColumnWidth` von 50 festgelegt.  
@@ -94,9 +94,9 @@ ms.locfileid: "36147945"
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
     |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
-     Vorgeschlagene Datentyp für die `CurrencyID` Spalte ist nicht kompatibel mit dem Datentyp des Felds in der Zieltabelle. Da der Datentyp des `DimCurrency.CurrencyAlternateKey` ist "Nchar (3)," `CurrencyID` von String [DT_STR] in String [DT_WSTR] geändert werden. Zusätzlich ist das Feld `DimDate.FullDateAlternateKey` ist definiert als Date-Datentyp; daher `CurrencyDate` von Date [DT_Date] in Database Date [DT_DBDATE] geändert werden muss.  
+     Vorgeschlagene Datentyp für die `CurrencyID` Spalte ist nicht kompatibel mit dem Datentyp des Felds in der Zieltabelle. Da der Datentyp des `DimCurrency.CurrencyAlternateKey` Datentyp Nchar (3), `CurrencyID` muss von String [DT_STR] in String [DT_WSTR] geändert werden. Zusätzlich ist das Feld `DimDate.FullDateAlternateKey` ist definiert als Date-Datentyp; aus diesem Grund `CurrencyDate` von Date [DT_Date] in Database Date [DT_DBDATE] geändert werden muss.  
   
-2.  Klicken Sie in der Liste, wählen Sie die CurrencyID-Spalte, und ändern Sie im Eigenschaftenbereich den Datentyp der Spalte `CurrencyID` von String [DT_STR] in Unicode string [DT_WSTR].  
+2.  Klicken Sie in der Liste die CurrencyID-Spalte wählen, und ändern Sie im Eigenschaftenbereich den Datentyp der Spalte `CurrencyID` von String [DT_STR] in Unicode string [DT_WSTR].  
   
 3.  Ändern Sie im Eigenschaftenbereich den Datentyp der Spalte `CurrencyDate` von Date [DT_DATE] in Database Date [DT_DBDATE].  
   
@@ -106,7 +106,7 @@ ms.locfileid: "36147945"
  [Schritt 3: Hinzufügen und Konfigurieren eines OLE DB-Verbindungs-Managers](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Flat File Connection Manager](connection-manager/file-connection-manager.md)   
+ [Flatfile-Verbindungs-Managers](connection-manager/file-connection-manager.md)   
  [SQL Server Integration Services-Datentypen](data-flow/integration-services-data-types.md)  
   
   

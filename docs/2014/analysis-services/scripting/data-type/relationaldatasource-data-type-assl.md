@@ -1,5 +1,5 @@
 ---
-title: RelationalDataSource-Datentyp (ASSL) | Microsoft Docs
+title: RelationalDataSource-Datentyp (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - RelationalDataSource data type
 ms.assetid: 2b99d7d0-731d-4506-8c37-678a5dc29c8a
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2928f86dd45538cc1507718008113522d02f80a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0739648e7e843bbfce62953a1bae543be4f2f9c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150662"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204130"
 ---
 # <a name="relationaldatasource-data-type-assl"></a>RelationalDataSource-Datentyp (ASSL)
-  Definiert einen abgeleiteten Datentyp, der darstellt, der eine [DataSource](../objects/datasource-element-assl.md) Element basierend auf einer relationalen Datenquelle.  
+  Definiert einen abgeleiteten Datentyp, der darstellt, der eine [DataSource](../objects/datasource-element-assl.md) -Elements auf Grundlage einer relationalen Datenquelle.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -57,10 +57,10 @@ ms.locfileid: "36150662"
 |------------------|-------------|  
 |Übergeordnete Elemente|InclusionThresholdSetting|  
 |Untergeordnete Elemente|InclusionThresholdSetting|  
-|Abgeleitete Elemente|[DataSource](../objects/datasource-element-assl.md) ([DataSources](../collections/datasources-element-assl.md) Auflistung von [Datenbank](../objects/database-element-assl.md))|  
+|Abgeleitete Elemente|[DataSource](../objects/datasource-element-assl.md) ([Datenquellen](../collections/datasources-element-assl.md) Auflistung von [Datenbank](../objects/database-element-assl.md))|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.RelationalDataSource>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.RelationalDataSource>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services Scripting Language-XML-Datentypen &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

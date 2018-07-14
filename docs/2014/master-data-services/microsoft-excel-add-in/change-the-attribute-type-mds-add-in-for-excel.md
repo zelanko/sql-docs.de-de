@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: db45c51e597f739a443027e2e3390656d0820710
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: c1e087cb853e6517c0977b2db33c31312631c1ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150600"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195430"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>Ändern des Attributtyps (MDS-Add-in für Excel)
   Im [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]können Administratoren den Attributtyp ändern, wenn der Datentyp oder die Anzahl zulässiger Zeichen falsch ist.  
@@ -40,7 +40,7 @@ ms.locfileid: "36150600"
   
 ### <a name="to-change-the-attribute-type"></a>So ändern Sie den Attributtyp  
   
-1.  Laden Sie in Excel die Entität, die die Spalte (Attribut) enthält, die Sie ändern möchten. Weitere Informationen finden Sie unter [Daten aus MDS in Excel laden](export-data-to-excel-from-master-data-services.md).  
+1.  Laden Sie in Excel die Entität, die die Spalte (Attribut) enthält, die Sie ändern möchten. Weitere Informationen finden Sie unter [Laden von Daten aus MDS in Excel](export-data-to-excel-from-master-data-services.md).  
   
 2.  Klicken Sie in der Spalte, die Sie ändern möchten, auf eine beliebige Zelle.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36150600"
   
 -   Der Datentyp des Attributs wird geändert.  
   
--   Es wird eine Kopie des Attributs mit dem Suffix _old generiert, die keinen Wert enthält. Hierbei spricht einen **veraltet** Attribut.  
+-   Es wird eine Kopie des Attributs mit dem Suffix _old generiert, die keinen Wert enthält. Dies wird als bezeichnet ein **veraltet** Attribut.  
   
  Alle vorhandenen Abhängigkeiten vom ursprünglichen Attribut verweisen jedoch auf das veraltete Attribut und nicht auf das geänderte.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36150600"
   
 -   Da die Logik aufgrund des neuen Datentyps des Attributs u. U. nicht identisch ist, müssen Sie die Geschäftsregeln aktualisieren, sodass diese auf das geänderte Attribut verweisen. Sie müssen jede betroffene Regel bearbeiten und dann die Ausdrücke ändern, um Verweise auf das veraltete Attribut (_old) zu entfernen, damit auf das aktualisierte Attribut verwiesen wird.  
   
--   Sie müssen alle Abonnementsichten unter der Auswahl Integrationsmanagement öffnen, wählen Sie die Ansichtszeile durch Klicken auf das Stiftsymbol für die Bearbeitung zu öffnen und klicken Sie dann auf die **speichern Datenträger** Symbol, um die Sichtdefinition zu aktualisieren. Es sind keine weiteren Änderungen erforderlich, um die Sichtsyntax neu zu generieren.  
+-   Sie müssen alle Abonnementsichten unter der Auswahl Integrationsmanagement öffnen, wählen Sie die Zeile anzeigen, öffnen Sie sie für die Bearbeitung durch Klicken auf das Stiftsymbol und klicken Sie dann auf die **speichern Datenträger** Symbol, um die Sichtdefinition zu aktualisieren. Es sind keine weiteren Änderungen erforderlich, um die Sichtsyntax neu zu generieren.  
   
 -   Stagingtabellen, die das Attribut enthalten, wird eine Spalte für das veraltete Attribut hinzugefügt. Das bedeutet, dass der Stagingcode betroffen ist. Um das veraltete Attribut zu entfernen, können Sie es löschen, nachdem Sie die Geschäftsregeln und Abonnementsichten aktualisiert haben.  
   

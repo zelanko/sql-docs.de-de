@@ -1,5 +1,5 @@
 ---
-title: Berichtsverlauf (Seite) (Berichts-Manager) melden | Microsoft Docs
+title: Melden Sie die Seite "Verlauf" (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4c64e58a-ed83-4e29-a422-9baaac2be4b8
 caps.latest.revision: 24
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c9a696c8b095281633e0d3b631aa773dad9fdb77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e0a3cc0ce4cb29b34ac67d3becfc966217dfb1d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150728"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196740"
 ---
 # <a name="report-history-page-report-manager"></a>Berichtsverlauf (Seite, Berichts-Manager)
   Mithilfe der Seite Berichtsverlauf können Sie die im Laufe der Zeit generierten und gespeicherten Berichtsmomentaufnahmen anzeigen. Abhängig von den für den Berichtsserver festgelegten Optionen enthält der Berichtsverlauf möglicherweise nur die neuesten Momentaufnahmen.  
@@ -62,6 +62,6 @@ ms.locfileid: "36150728"
  [Hinzufügen einer Momentaufnahme zum Berichtsverlauf &#40;Berichts-Manager&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Allgemeine Eigenschaften (Seite) (Berichte, Berichts-Manager)](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [Berichts-Manager-F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
- [Momentaufnahmeoptionen (Eigenschaftenseite) &#40;Berichts-Manager&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)  
+ [Momentaufnahmeoptionen Eigenschaftenseite &#40;Berichts-Manager&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)  
   
   

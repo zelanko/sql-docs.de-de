@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: fd943d84-dbe6-4a05-912b-c88164998d80
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 73a61c2af9d178911f206e2e5006dabd8620329e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ded697f41f68e26e677fe5054e7e4f59955fc74c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151538"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186117"
 ---
 # <a name="populating-a-table-with-existing-hierarchical-data"></a>Auffüllen einer Tabelle mit vorhandenen hierarchischen Daten
   In dieser Aufgabe wird eine neue Tabelle erstellt und mit den Daten aus der Tabelle **EmployeeDemo** aufgefüllt. Diese Aufgabe umfasst die folgenden Schritte:  
@@ -117,7 +117,7 @@ ms.locfileid: "36151538"
   
      `10        4         2`  
   
-3.  Füllen Sie die Tabelle **NewOrg** auf. Verwenden Sie die GetRoot und ToString-Methode zur Verkettung der **Num** von Datumswerten in die `hierarchyid` formatieren, und aktualisieren Sie dann die **OrgNode** Spalte mit den resultierenden hierarchischen Werten:  
+3.  Füllen Sie die Tabelle **NewOrg** auf. Verwenden Sie die Methoden GetRoot und ToString, zum Verketten der **Num** von Datumswerten in die `hierarchyid` formatieren, und aktualisieren Sie dann die **OrgNode** Spalte mit den resultierenden hierarchischen Werten:  
   
     ```  
     WITH paths(path, EmployeeID)   
@@ -155,7 +155,7 @@ ms.locfileid: "36151538"
   
     ```  
   
-     Die **LogicalNode** Spalte konvertiert die `hierarchyid` Spalte in ein lesbareres Textformat, das die Hierarchie darstellt. Verwenden Sie in den restlichen Aufgaben werden die `ToString()` Methode zum Anzeigen im logischen Format der `hierarchyid` Spalten.  
+     Die **LogicalNode** Spalte konvertiert die `hierarchyid` Spalte in ein lesbareres Textformat, das die Hierarchie darstellt. In den restlichen Aufgaben werden Sie mithilfe der `ToString()` Methode, um die im logischen Format anzuzeigen die `hierarchyid` Spalten.  
   
 5.  Löschen Sie die temporäre Tabelle, die nicht mehr benötigt wird:  
   

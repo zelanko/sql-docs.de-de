@@ -1,5 +1,5 @@
 ---
-title: Tabellen-Darstellung (tabellarisch) | Microsoft Docs
+title: Tabellen-Darstellung (tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a636fc13-4054-4cea-bce1-192ec4796063
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e642969cb2fa91b6edf5d514a47a9135d39a0ed7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 33f266b37ea40a6c0796f6b8f5676f12fbbe6666
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149134"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205980"
 ---
 # <a name="tables-representation-tabular"></a>Tabellendarstellung (tabellarisch)
   In tabellarischen Modellen ist eine Tabelle die Basisdarstellung der Daten.  
@@ -28,7 +28,7 @@ ms.locfileid: "36149134"
 ## <a name="tables-representation"></a>Tabellendarstellung  
   
 ### <a name="tables-in-amo"></a>Tabellen in AMO  
- Wenn AMO zum Verwalten einer Tabelle verwendet wird, besteht keine 1:1-Objektentsprechung. In AMO wird eine Tabelle durch dargestellt eine <xref:Microsoft.AnalysisServices.Dimension> und <xref:Microsoft.AnalysisServices.MeasureGroup>. Damit eine Measuregruppe vorhanden sein kann, muss ein <xref:Microsoft.AnalysisServices.Cube> als Host der Measuregruppe definiert werden. Damit eine Dimension, eine Measuregruppe und ein Cube vorhanden sein können, muss ein Datenquellensicht-Objekt definiert werden, das die Bindungsdefinitionen zur Datenquelle enthält.  
+ Wenn AMO zum Verwalten einer Tabelle verwendet wird, besteht keine 1:1-Objektentsprechung. Eine Tabelle wird dargestellt in AMO wird durch eine <xref:Microsoft.AnalysisServices.Dimension> und <xref:Microsoft.AnalysisServices.MeasureGroup>. Damit eine Measuregruppe vorhanden sein kann, muss ein <xref:Microsoft.AnalysisServices.Cube> als Host der Measuregruppe definiert werden. Damit eine Dimension, eine Measuregruppe und ein Cube vorhanden sein können, muss ein Datenquellensicht-Objekt definiert werden, das die Bindungsdefinitionen zur Datenquelle enthält.  
   
  Aus einer Verfahrensperspektive muss eine Datenquellensicht vor der Definition jedes anderen Objekts erstellt werden. Das Datenquellensicht-Objekt enthält die Zuordnung für alle relevanten Objekte in der Datenquelle. Die Zuordnung des relationalen Modells wird als .NET DataSet-Objekt in die Datenquellensicht eingebettet und in der Schema-Eigenschaft der Datenquellensicht gespeichert.  
   

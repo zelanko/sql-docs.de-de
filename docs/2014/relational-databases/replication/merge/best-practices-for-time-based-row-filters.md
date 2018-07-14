@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - best practices
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 718615cbe81c5238d6d16cff1806d14a019920e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8dd38a60a64738535d65931d40aac5182e331e41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150565"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331340"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Bewährte Methoden für zeitbasierte Zeilenfilter
   Benutzer von Anwendungen benötigen häufig eine zeitbasierte Teilmenge der Daten in einer Tabelle. Ein Verkäufer könnte z. B. Daten zu Bestellungen der letzten Woche benötigen und ein Ereignisplaner Daten zu Ereignissen in der kommenden Woche. Anwendungen verwenden in diesen Fällen häufig Abfragen mit der `GETDATE()`-Funktion. Betrachten Sie die folgende Zeilenfilteranweisung:  
@@ -30,7 +30,7 @@ ms.locfileid: "36150565"
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
 ```  
   
- Bei einem Filter dieses Typs wird davon ausgegangen, dass zwei Aktionen eingeleitet werden, wenn der Merge-Agent ausgeführt wird: Zeilen, die dem Filter entsprechen, werden auf die Abonnenten repliziert, und für Zeilen, die dem Filter nicht mehr entsprechen, wird auf den Abonnenten ein Cleanup ausgeführt. (Weitere Informationen zum Filtern mit `HOST_NAME()`, finden Sie unter [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md).) Die Replikation und das Cleanup werden bei einer Mergereplikation jedoch nur für Daten durchgeführt, die seit der letzten Synchronisierung geändert wurden, unabhängig davon, wie ein Zeilenfilter für diese Daten definiert wurde.  
+ Bei einem Filter dieses Typs wird davon ausgegangen, dass zwei Aktionen eingeleitet werden, wenn der Merge-Agent ausgeführt wird: Zeilen, die dem Filter entsprechen, werden auf die Abonnenten repliziert, und für Zeilen, die dem Filter nicht mehr entsprechen, wird auf den Abonnenten ein Cleanup ausgeführt. (Weitere Informationen zu filtern mit `HOST_NAME()`, finden Sie unter [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md).) Die Replikation und das Cleanup werden bei einer Mergereplikation jedoch nur für Daten durchgeführt, die seit der letzten Synchronisierung geändert wurden, unabhängig davon, wie ein Zeilenfilter für diese Daten definiert wurde.  
   
  Damit eine Zeile bei der Mergereplikation verarbeitet wird, müssen die Daten in der Zeile dem Zeilenfilter entsprechen, und sie müssen seit der letzten Synchronisierung geändert worden sein. In der **SalesOrderHeader** -Tabelle wird **OrderDate** eingegeben, wenn eine Zeile eingefügt wird. Die Zeilen werden wie erwartet auf den Abonnenten repliziert, da die Einfügung eine Datenänderung darstellt. Befinden sich auf dem Abonnenten jedoch Zeilen, die dem Filter nicht mehr entsprechen (z. B. für Bestellungen, die mehr als sieben Tage zurückliegen), werden sie vom Abonnenten nicht entfernt, es sei denn, sie wurden aus einem anderen Grund aktualisiert.  
   
@@ -59,7 +59,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
   
 -   Erstellen Sie einen SQL Server-Agent-Auftrag (oder einen Auftrag, der mithilfe eines anderen Mechanismus geplant wurde), der die Spalte vor der geplanten Ausführung des Merge-Agents aktualisiert.  
   
- Dieser Ansatz gleicht die Mängel bei der Verwendung von `GETDATE()` oder einer anderen zeitbasierten Methode und vermeidet Aufwand für das Problem zu bestimmen, wann Filter für Partitionen ausgewertet werden. Betrachten Sie das folgende Beispiel einer **Events** -Tabelle:  
+ Dieser Ansatz gleicht die Mängel bei der Verwendung von `GETDATE()` oder einer anderen zeitbasierten Methode und vermeidet das Problem zu bestimmen, wann Filter für Partitionen ausgewertet werden müssen. Betrachten Sie das folgende Beispiel einer **Events** -Tabelle:  
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Replizieren**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  

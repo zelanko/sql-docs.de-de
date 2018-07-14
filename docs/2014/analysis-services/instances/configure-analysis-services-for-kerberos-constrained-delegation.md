@@ -1,5 +1,5 @@
 ---
-title: Analysis Services für die eingeschränkte Kerberos-Delegierung konfigurieren | Microsoft Docs
+title: Konfigurieren von Analysis Services für die eingeschränkte Kerberos-Delegierung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6a47530c6c38c67b865c808ef0e80ea235d658b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3436b2d0e73fc452c12e1aa5a71724e9f8dcd31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159887"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191310"
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Konfigurieren von Analysis Services für die eingeschränkte Kerberos-Delegierung
   Wenn Sie Analysis Services für die Kerberos-Authentifizierung konfigurieren, verfolgen Sie damit wahrscheinlich eines oder beide der folgenden Ziele: Analysis Services soll bei der Abfrage von Daten eine Benutzeridentität annehmen, oder eine Benutzeridentität soll von Analysis Services an einen untergeordneten Dienst delegiert werden. Für die Szenarien gelten leicht abweichende Konfigurationsanforderungen. Bei beiden Szenarien muss überprüft werden, ob die Konfiguration ordnungsgemäß ausgeführt wurde.  
@@ -47,7 +47,7 @@ ms.locfileid: "36159887"
   
 |Task|Description|  
 |----------|-----------------|  
-|Schritt 1: Überprüfen, ob die Konten für die Delegierung geeignet sind|Stellen Sie sicher, dass die Konten, unter denen Sie die Dienste ausführen, über die entsprechenden Eigenschaften in Active Directory verfügen. Dienstkonten in Active Directory dürfen nicht als vertrauliche Konten gekennzeichnet oder ausdrücklich aus Delegierungsszenarien ausgeschlossen werden. Weitere Informationen finden Sie unter [Grundlegendes zu Benutzerkonten](http://go.microsoft.com/fwlink/?LinkId=235818).<br /><br /> **\*\* Wichtige \* \***  im Allgemeinen alle Konten und Server müssen gehören zu derselben Active Directory-Domäne oder vertrauenswürdigen Domänen in derselben Gesamtstruktur. Da Windows Server 2012 jedoch die Delegierung über Domänengrenzen hinweg unterstützt, können Sie eingeschränkte Kerberos-Delegierung über eine Domänengrenze hinweg konfigurieren, wenn die Domänenfunktionsebene Windows Server 2012 ist. Eine andere Möglichkeit besteht darin, Analysis Services für den HTTP-Zugriff zu konfigurieren und IIS-Authentifizierungsmethoden für die Clientverbindung zu verwenden. Weitere Informationen finden Sie unter [Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md).|  
+|Schritt 1: Überprüfen, ob die Konten für die Delegierung geeignet sind|Stellen Sie sicher, dass die Konten, unter denen Sie die Dienste ausführen, über die entsprechenden Eigenschaften in Active Directory verfügen. Dienstkonten in Active Directory dürfen nicht als vertrauliche Konten gekennzeichnet oder ausdrücklich aus Delegierungsszenarien ausgeschlossen werden. Weitere Informationen finden Sie unter [Grundlegendes zu Benutzerkonten](http://go.microsoft.com/fwlink/?LinkId=235818).<br /><br /> **\*\* Wichtige \* \***  in der Regel alle Konten und Server müssen gehören zu derselben Active Directory-Domäne oder vertrauenswürdigen Domänen in derselben Gesamtstruktur. Da Windows Server 2012 jedoch die Delegierung über Domänengrenzen hinweg unterstützt, können Sie eingeschränkte Kerberos-Delegierung über eine Domänengrenze hinweg konfigurieren, wenn die Domänenfunktionsebene Windows Server 2012 ist. Eine andere Möglichkeit besteht darin, Analysis Services für den HTTP-Zugriff zu konfigurieren und IIS-Authentifizierungsmethoden für die Clientverbindung zu verwenden. Weitere Informationen finden Sie unter [Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md).|  
 |Schritt 2: Registrieren des SPN|Vor dem Einrichten der eingeschränkten Delegierung müssen Sie einen Dienstprinzipalnamen (SPN) für die Analysis Services-Instanz registrieren. Sie benötigen den Analysis Services-SPN, wenn Sie die eingeschränkte Kerberos-Delegierung für Dienste der mittleren Ebene konfigurieren. Anweisungen dazu finden Sie unter [SPN registration for an Analysis Services instance](spn-registration-for-an-analysis-services-instance.md) .<br /><br /> Ein Dienstprinzipalname (Service Principal Name, SPN) gibt die eindeutige Identität eines Diensts in einer Domäne an, die für die Kerberos-Authentifizierung konfiguriert wurde. Clientverbindungen mit integrierter Sicherheit erfordern im Rahmen der SSPI-Authentifizierung häufig einen SPN. Die Anforderung wird an einen Active Directory-Domänencontroller (DC) weitergeleitet. Dabei stellt KDC ein Ticket bereit, wenn für den vom Client angegebenen SPN in Active Directory eine entsprechende SPN-Registrierung vorhanden ist.|  
 |Schritt 3: Konfigurieren der eingeschränkten Delegierung|Nachdem Sie die zu verwendenden Konten überprüft und SPNs dafür registriert haben, konfigurieren Sie im nächsten Schritt übergeordnete Dienste wie IIS, Reporting Services oder SharePoint-Webdienste für die eingeschränkte Delegierung, und geben Sie dabei die Analysis Services-SPN als spezifischen Dienst an, für den die Delegierung erlaubt ist.<br /><br /> Unter SharePoint ausgeführte Dienste wie Excel Services oder Reporting Services im SharePoint-Modus hosten häufig Arbeitsmappen und Berichte, die mehrdimensionale oder tabellarische Analysis Services-Daten nutzen. Die Konfiguration der eingeschränkten Delegierung für diese Dienste ist eine allgemeine Konfigurationsaufgabe, die ausgeführt werden muss, damit die Datenaktualisierung von Excel Services unterstützt wird. Über die folgenden Links erhalten Sie Anweisungen für SharePoint Services und andere Dienste, die Downstream-Verbindungsanforderungen für Analysis Services-Daten ausgeben können:<br /><br /> [Identitätsdelegierung für Excel Services (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=299826) oder [Konfigurieren von Excel Services in SharePoint Server 2010 für Kerberos-Authentifizierung](http://support.microsoft.com/kb/2466519)<br /><br /> [Identitätsdelegierung für PerformancePoint-Dienste (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=299827)<br /><br /> [Identitätsdelegierung für SQL Server Reporting Services (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=299828)<br /><br /> Informationen zu IIS 7.0 finden Sie unter [Konfigurieren der Windows-Authentifizierung (IIS 7.0)](http://technet.microsoft.com/library/cc754628\(v=ws.10\).aspx) oder [Konfigurieren von SQL Server 2008 Analysis Services und SQL Server 2005 Analysis Services, um Kerberos-Authentifizierung zu verwenden](http://support.microsoft.com/kb/917409).|  
 |Schritt 4: Testen von Verbindungen|Stellen Sie beim Testen Verbindungen von Remotecomputern unter verschiedenen Identitäten her, und fragen Sie Analysis Services mit den gleichen Anwendungen ab, die von Benutzern im geschäftlichen Bereich verwendet werden. Mithilfe von SQL Server Profiler können Sie die Verbindung überwachen. Die Benutzeridentität für die Anforderung sollte angezeigt werden. Weitere Informationen finden Sie unter [Prüfen, ob eine Identität angenommen oder delegiert wurde](#bkmk_test) in diesem Abschnitt.|  
@@ -107,7 +107,7 @@ ms.locfileid: "36159887"
   
 1.  Starten Sie erst **SQL Server Profiler** für die Analysis Services-Instanz und dann eine neue Ablaufverfolgung.  
   
-2.  Vergewissern Sie sich, die in der Ereignisauswahl, `Audit Login` und `Audit Logout` im Abschnitt Sicherheitsüberwachung aktiviert sind.  
+2.  Überprüfen Sie in der Ereignisauswahl, ob `Audit Login` und `Audit Logout` im Abschnitt Sicherheitsüberwachung aktiviert sind.  
   
 3.  Stellen Sie von einem Remoteclientcomputer über einen Anwendungsdienst (z. B. SharePoint oder Reporting Services) eine Verbindung mit Analysis Services her. Das Audit Login-Ereignis zeigt die Identität des Benutzers an, der eine Verbindung mit Analysis Services herstellt.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "36159887"
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft-BI-Authentifizierung und Identitätsdelegierung](http://go.microsoft.com/fwlink/?LinkID=286576)   
  [Gegenseitige Authentifizierung mithilfe von Kerberos](http://go.microsoft.com/fwlink/?LinkId=299283)   
- [Herstellen einer Verbindung mit Analysis Services](connect-to-analysis-services.md)   
+ [Verbinden von Analysis Services](connect-to-analysis-services.md)   
  [SPN-Registrierung für Analysis Services-Instanz](spn-registration-for-an-analysis-services-instance.md)   
  [Verbindungszeichenfolgen-Eigenschaften &#40;Analysis Services&#41;](connection-string-properties-analysis-services.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Erstellen, verarbeiten (Dialogfeld) (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Verarbeiten (Dialogfeld) (Analysis Services – mehrdimensionale Daten) zu erstellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.createprocessingquerydialog.f1
 ms.assetid: c133d624-f35e-486e-be9f-ceafd906f168
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 01633f8b8ce57d3b8953c1694a250cfdb9a64cc7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0744aae90a9d3995d5803bca2ccdff31012b5eeb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150009"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244100"
 ---
 # <a name="create-processing-query-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Verarbeitungsabfrage erstellen' (Analysis Services – Mehrdimensionale Daten)
   Verwenden Sie das Dialogfeld **Verarbeitungsabfrage erstellen** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , um im Dialogfeld **Speicheroptionen** auf der Registerkarte **Benachrichtigungen** eine Verarbeitungsabfrage zu erstellen. Eine Verarbeitungsabfrage ist eine Abfrage, durch die ein Rowset mit den Änderungen zurückgegeben wird, die an einer mit einem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekt verknüpften Tabelle seit der letzten für die Tabelle ausgeführten Abfrage vorgenommen wurden. Mithilfe der Verarbeitungsabfrage wird der mehrdimensionale OLAP-Zwischenspeicher (MOLAP) für das Objekt inkrementell aktualisiert. Durch Analysis Services wird eine andere, als Abrufabfrage bezeichnete Abfrage verwendet, mit der eine mit einem Objekt verknüpfte Tabelle abgefragt wird, um festzustellen, ob die Tabelle sich geändert hat. Wenn der MOLAP-Zwischenspeicher für das Objekt vollständig aktualisiert wird, erübrigen sich Verarbeitungsabfragen.  

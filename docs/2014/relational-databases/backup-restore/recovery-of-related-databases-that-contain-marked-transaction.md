@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], marks
 - STOPBEFOREMARK option [RESTORE statement]
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5ca2529a4dbe6e237b3d8e833659a7c3df1fc941
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8fc37a9704dde533ae9d626a9853ccfb147cb06a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151143"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188607"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Wiederherstellen verwandter Datenbanken mit einer markierten Transaktion
   Dieses Thema ist nur für Datenbanken relevant, die markierte Transaktionen enthalten und von denen das vollständige oder massenprotokollierte Wiederherstellungsmodell verwendet wird.  
@@ -58,18 +57,18 @@ ms.locfileid: "36151143"
 BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'    
 ```  
   
- Im Transaktionsprotokoll werden der Markierungsname (Transaktionsname), die Beschreibung, die Datenbank, die Benutzer aufgezeichnet `datetime` Informationen und die protokollfolgenummer (LSN). Die `datetime` Informationen werden mit dem Markierungsnamen zur eindeutigen Identifizierung die Markierung verwendet.  
+ Das Transaktionsprotokoll zeichnet der Markierungsname (Transaktionsname), die Beschreibung, die Datenbank, die Benutzer `datetime` Informationen und die protokollfolgenummer (LSN). Die `datetime` Informationen werden mit dem Markierungsnamen zur eindeutigen Identifizierung die Markierung verwendet.  
   
  Informationen zum Einfügen einer Markierung in eine Transaktion, die mehrere Datenbanken umfasst, finden Sie unter [Wiederherstellen von verwandten Datenbanken mithilfe von markierten Transaktionen &#40;vollständiges Wiederherstellungsmodell&#41;](use-marked-transactions-to-recover-related-databases-consistently.md).  
   
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>Transact-SQL-Syntax für das Wiederherstellen bis zu einer Markierung  
  Wenn Sie das Ziel einer markierten Transaktion mithilfe einer[RESTORE LOG](/sql/t-sql/statements/restore-statements-transact-sql)-Anweisung festlegen, können Sie eine der folgenden Klauseln verwenden, um ein Anhalten bei oder unmittelbar vor der Markierung zu bewirken:  
   
--   Verwenden Sie die WITH STOPATMARK = **"*`<mark_name>`*"** -Klausel, um anzugeben, dass die markierte Transaktion den Wiederherstellungspunkt darstellt.  
+-   Verwenden Sie die WITH STOPATMARK = **"*`<mark_name>`*"** Klausel, um anzugeben, dass die markierte Transaktion den Wiederherstellungspunkt darstellt.  
   
      STOPATMARK führt ein Rollforward bis zur Markierung aus und schließt die markierte Transaktion in das Rollforward ein.  
   
--   Verwenden Sie die WITH STOPBEFOREMARK = **"*`<mark_name>`*"** -Klausel, um anzugeben, dass der Protokolldatensatz wird unmittelbar vor die Markierung den Wiederherstellungspunkt darstellt.  
+-   Verwenden Sie die WITH STOPBEFOREMARK = **"*`<mark_name>`*"** Klausel, um anzugeben, dass der Protokolldatensatz wird unmittelbar vor die Markierung den Wiederherstellungspunkt darstellt.  
   
      STOPBEFOREMARK führt ein Rollforward bis zur Markierung aus und schließt die markierte Transaktion aus dem Rollforward aus.  
   

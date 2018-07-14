@@ -1,5 +1,5 @@
 ---
-title: OrderByAttributeID-Element (ASSL) | Microsoft Docs
+title: OrderByAttributeID-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - OrderByAttributeID element
 ms.assetid: 41d7b650-ac40-4f1a-850d-2f81a19b28cb
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 42d8e9246340b72fad871e92bc30008c68ce786a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c336d9c210c9e6fb5ffa44e5f1d37a445e0e5694
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150208"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235610"
 ---
 # <a name="orderbyattributeid-element-assl"></a>OrderByAttributeID-Element (ASSL)
-  Identifiziert ein anderes Attribut, um die Elemente eines bestellen der [Dimension](../data-type/dimensionattribute-data-type-assl.md) Attribut.  
+  Identifiziert ein anderes Attribut, um die Mitglieder der Reihenfolge der [Dimension](../data-type/dimensionattribute-data-type-assl.md) Attribut.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -58,13 +58,13 @@ ms.locfileid: "36150208"
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnetes Element|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
+|Übergeordnetes Element|[DimensionAttribute-Objekt](../data-type/dimensionattribute-data-type-assl.md)|  
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `OrderByAttributeID` Element wird nur verwendet, wenn der Wert von der [OrderBy](orderby-element-assl.md) -Element für die `DimensionAttribute` auf festgelegt ist *AttributeKey* oder *AttributeName*.  
+ Die `OrderByAttributeID` Element wird nur verwendet, wenn der Wert des der [OrderBy](orderby-element-assl.md) -Element für die `DimensionAttribute` nastaven NA hodnotu *AttributeKey* oder *AttributeName*.  
   
- Das Element, das das übergeordnete Element des entspricht `OrderByAttributeID` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ Das Element, das dem übergeordneten entspricht `OrderByAttributeID` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

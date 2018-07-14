@@ -1,5 +1,5 @@
 ---
-title: Berechnung Eigenschaften (Dialogfeld) (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Berechnung Eigenschaften (Dialogfeld) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationsview.calculationpropertiesdialog.f1
 helpviewer_keywords:
 - Calculation Properties dialog box
 ms.assetid: eb5e1179-b0e6-4ec8-bf4c-d67a1e329117
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3bab846407acc147033d7717d2a879ea9ce4b9fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 0f715b54f45c3bf8c676dd8f6c10c25d9d92d00e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151248"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222280"
 ---
 # <a name="calculation-properties-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Berechnungseigenschaften' (Analysis Services – Mehrdimensionale Daten)
   Im Dialogfeld **Berechnungseigenschaften** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie die Eigenschaften für Anzeigeordner und zugeordnete Measuregruppen von Berechnungen anzeigen oder bearbeiten, die auf der Registerkarte **Berechnungen** des Cube-Designers für den ausgewählten Cube definiert wurden. Sie können das Dialogfeld **Berechnungseigenschaften** anzeigen, indem Sie im Cube-Designer im **Symbolleistenbereich** der Registerkarte **Berechnungen** auf **Berechnungseigenschaften** klicken.  

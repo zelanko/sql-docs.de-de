@@ -1,5 +1,5 @@
 ---
-title: DMSCHEMA_MINING_SERVICE_PARAMETERS-Rowset | Microsoft Docs
+title: DMSCHEMA_MINING_SERVICE_PARAMETERS-Rowset | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_SERVICE_PARAMETERS rowset
 ms.assetid: 5994e66b-84d0-4279-9f50-d92fd829dd83
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9079be52d50da3a400496dc602166c857f2b1691
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e7203b2f717ec7605fcc52c1387472779488ae4c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149987"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224470"
 ---
 # <a name="dmschemaminingserviceparameters-rowset"></a>DMSCHEMA_MINING_SERVICE_PARAMETERS-Rowset
   Beschreibt die Parameter für die Algorithmen auf dem Server.  

@@ -1,5 +1,5 @@
 ---
-title: DMSCHEMA_MINING_COLUMNS Rowset | Microsoft Docs
+title: DMSCHEMA_MINING_COLUMNS-Rowset | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_COLUMNS rowset
 ms.assetid: ae35ccde-4438-46f4-8611-40b2b1a42fce
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d53285b088b471ad7a5fca87536cc897db8126d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 60dc2e773b93f27fe96489bcb55fdfe22c3168d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149749"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232060"
 ---
 # <a name="dmschemaminingcolumns-rowset"></a>DMSCHEMA_MINING_COLUMNS-Rowset
-  Beschreibt die einzelnen Spalten aller Datamining-Modellen in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Dieses Rowset wird auf den aktuellen Katalog eingeschränkt.  
+  Beschreibt die einzelnen Spalten aller Datamining-Modelle in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Dieses Rowset wird auf den aktuellen Katalog eingeschränkt.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Die `DMSCHEMA_MINING_COLUMNS` Rowset enthält die folgenden Spalten.  
@@ -50,7 +50,7 @@ ms.locfileid: "36149749"
 |`DATA_TYPE`|`DBTYPE_UI2`||Der Zähler des Datentyps der Spalte. Die folgende Liste zeigt Beispiele der zurückgegebenen Indikatortypen:<br /><br /> `TABLE` würde `DBTYPE_HCHAPTER` zurückgeben.<br /><br /> `TEXT` würde `DBTYPE_WCHAR` zurückgeben.<br /><br /> `LONG` würde `DBTYPE_I8` zurückgeben.<br /><br /> `DOUBLE` würde `DBTYPE_R8` zurückgeben.<br /><br /> `DATE` würde `DBTYPE_DATE` zurückgeben.|  
 |`TYPE_GUID`|`DBTYPE_GUID`||Der GUID des Datentyps der Spalte. Die Spalte wird von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] nicht unterstützt, sie enthält immer `VT_NULL`.|  
 |`CHARACTER_MAXIMUM_LENGTH`|`DBTYPE_UI4`||Die maximal mögliche Länge eines Werts in der Spalte. Für Zeichen-, Binär- oder Bitspalten gelten folgende Werte:<br /><br /> – Die maximale Länge der Spalte in Zeichen, Bytes oder Bits, je nach Spaltentyp, wenn eine Länge definiert ist. Eine `CHAR(5)`-Spalte in einer SQL-Tabelle besitzt beispielsweise eine maximale Länge von 5.<br />– Die maximale Länge des Datentyps in Zeichen, Bytes oder Bits, je nach Spaltentyp, wenn die Spalte keine definierte Länge besitzt.<br />-0 (null), wenn weder die Spalte noch der Datentyp eine definierte Maximallänge besitzt.<br />-   `NULL` für alle anderen Typen von Spalten|  
-|`CHARACTER_OCTET_LENGTH`|`DBTYPE_UI4`||Die maximale Länge der Spalte in Oktetten (Bytes), wenn der Spaltentyp Zeichen oder Binär ist. Der Wert 0 (null) bedeutet, dass die Spalte keine maximale Länge verfügt. Die Spalte enthält `NULL` für alle anderen Spaltentypen.|  
+|`CHARACTER_OCTET_LENGTH`|`DBTYPE_UI4`||Die maximale Länge der Spalte in Oktetten (Bytes), wenn der Spaltentyp Zeichen oder Binär ist. Ein Wert von 0 (null) bedeutet die Spalte keine maximale Länge verfügt. Die Spalte enthält `NULL` für alle anderen Spaltentypen.|  
 |`NUMERIC_PRECISION`|`DBTYPE_UI2`||Die maximale Genauigkeit der Spalte, wenn die Spalte einen anderen numerischen Datentyp als `VARNUMERIC` besitzt.<br /><br /> `NULL`, wenn der Datentyp der Spalte nicht "Numerisch" ist oder `VARNUMERIC` ist.<br /><br /> Die Genauigkeit von Spalten mit dem Datentyp `DBTYPE_DECIMAL` oder `DBTYPE_NUMERIC` ist von der Definition der Spalte abhängig.|  
 |`NUMERIC_SCALE`|`DBTYPE_I2`||Die Anzahl der Stellen rechts neben dem Dezimalzeichen, wenn der Typindikator der Spalte `DBTYPE_DECIMAL`, `DBTYPE_NUMERIC` oder `DBTYPE_VARNUMERIC` ist. Andernfalls enthält diese Spalte `VT_NULL`.|  
 |`DATETIME_PRECISION`|`DBTYPE_UI4`||Die Datum-/Uhrzeit-Genauigkeit (die Anzahl der Stellen im Bereich der Sekundenbruchteile) der Spalte, wenn die Spalte den Datentyp "DateTime" oder "Intervall" besitzt, andernfalls ist der Wert `NULL`.|  
@@ -68,7 +68,7 @@ ms.locfileid: "36149749"
 |`CONTENT_TYPE`|`DBTYPE_WSTR`||Eine Beschreibung des Spalteninhalts. Diese Spalte enthält einen der folgenden Werte:<br /><br /> -   "`KEY`"<br />-   "`DISCRETE`"<br />-   "`CONTINUOUS`"<br />-"`DISCRETIZED(`[Argumente]`)`"<br />-   "`ORDERED`"<br />-   "`KEY TIME`"<br />-   "`CYCLICAL`"<br />-   "`PROBABILITY`"<br />-   "`VARIANCE`"<br />-   "`STDEV`"<br />-   "`SUPPORT`"<br />-   "`PROBABILITY_VARIANCE`"<br />-   "`PROBABILITY_STDEV`"<br />-   `"KEY SEQUENCE`"|  
 |`MODELING_FLAG`|`DBTYPE_WSTR`||Eine durch Trennzeichen getrennte Liste von Flags. Folgende Flags werden definiert:<br /><br /> -   "`MODEL_EXISTENCE_ONLY`"<br />-   "`REGRESSOR`"<br /><br /> Diese Spalte kann auch ein algorithmusspezifisches Modellierungsflag enthalten.|  
 |`IS_RELATED_TO_KEY`|`DBTYPE_BOOL`||Ein boolescher Wert, der angibt, ob die Spalte zum Schlüssel gehört.<br /><br /> Der Wert ist `TRUE`, wenn diese Spalte zum Schlüssel gehört. Wenn der Schlüssel eine einzelne Spalte ist, kann das `RELATED_ATTRIBUTE`-Feld optional seinen Spaltennamen enthalten.|  
-|`RELATED_ATTRIBUTE`|`DBTYPE_WSTR`||Der Name der Zielspalte, die die aktuelle Spalte bezieht oder ist eine spezielle Eigenschaft.|  
+|`RELATED_ATTRIBUTE`|`DBTYPE_WSTR`||Der Name der Zielspalte, die die aktuelle Spalte entweder verknüpft oder ist eine spezielle Eigenschaft.|  
 |`IS_INPUT`|`DBTYPE_BOOL`||Ein boolescher Wert, der angibt, ob die Spalte eine Eingabespalte ist.<br /><br /> Der Wert ist `VARIANT_TRUE`, wenn dies eine Eingabespalte ist.|  
 |`IS_PREDICTABLE`|`DBTYPE_BOOL`||Ein boolescher Wert, der angibt, ob die Spalte vorhersagbar ist.<br /><br /> Der Wert ist `TRUE`, wenn die Spalte vorhersagbar ist.|  
 |`CONTAINING_COLUMN`|`DBTYPE_WSTR`||Der Name der `TABLE`-Spalte, die diese Spalte enthält. Die Spalte enthält `NULL`, wenn die Spalte nicht in einer anderen Spalte enthalten ist.|  

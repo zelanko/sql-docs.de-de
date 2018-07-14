@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - truncating data
 - data truncation [Integration Services]
@@ -18,13 +18,13 @@ ms.assetid: 02461e15-49ca-445b-abb3-5c369c283ec2
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e735659fb2898c2ab6bc428d7ad6fc0f5759f17c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5f80a51df610040e18dbdae7b1552c56d81cb084
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150404"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328090"
 ---
 # <a name="data-truncation-ssis"></a>Abschneiden von Daten (SSIS)
   Ein Ausdruck kann versehentlich bewirken, dass Daten abgeschnitten werden. Dies ist in folgenden Situationen möglich:  
@@ -38,6 +38,6 @@ ms.locfileid: "36150404"
  Die Ausdrucksauswertung identifiziert explizite Umwandlungen, durch die Daten abgeschnitten werden könnten und gibt eine Warnung aus, wenn der Ausdruck analysiert wird. Beispielsweise werden Sie von der Ausdrucksauswertung gewarnt, falls eine Zeichenfolge mit 30 Zeichen in eine Zeichenfolge mit 20 Zeichen umgewandelt wird.  
   
 > [!NOTE]  
->  Zur Laufzeit wird nicht überprüft, ob Daten abgeschnitten werden. Die Daten werden ohne Warnung abgeschnitten. Die meisten Datenadapter und Transformationen unterstützen jedoch Fehlerausgaben, die mit der Disposition von Fehlerzeilen umgehen können. Weitere Informationen zum Behandeln des Abschneidens von Daten finden Sie unter [Error Handling in Data](../data-flow/error-handling-in-data.md).  
+>  Zur Laufzeit wird nicht überprüft, ob Daten abgeschnitten werden. Die Daten werden ohne Warnung abgeschnitten. Die meisten Datenadapter und Transformationen unterstützen jedoch Fehlerausgaben, die mit der Disposition von Fehlerzeilen umgehen können. Weitere Informationen zum Behandeln des Abschneidens von Daten finden Sie unter [Fehlerbehandlung in Daten](../data-flow/error-handling-in-data.md).  
   
   

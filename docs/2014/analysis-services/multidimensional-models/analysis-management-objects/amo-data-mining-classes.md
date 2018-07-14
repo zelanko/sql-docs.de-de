@@ -1,5 +1,5 @@
 ---
-title: AMO-Klassen für Datamining | Microsoft Docs
+title: AMO-Klassen für Datamining | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -16,27 +16,27 @@ helpviewer_keywords:
 - Analysis Management Objects, data mining
 ms.assetid: e4108825-b722-417c-9647-ab30ce35e549
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 091d68fedffc16d57834a02cfcbd8ef3a6c2d087
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dbea4d55066e2de5061d75c2b40092b84e8008ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151686"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171641"
 ---
 # <a name="amo-data-mining-classes"></a>AMO-Klassen für Data Mining
   Mithilfe von Data Mining-Klassen können Sie Data Mining-Objekte erstellen, ändern, löschen und verarbeiten. Das Arbeiten mit Data Mining-Objekten umfasst die Erstellung von Data Mining-Strukturen, die Erstellung von Data Mining-Modellen und die Verarbeitung der Modelle.  
   
- Weitere Informationen zum Einrichten der Umgebung, und ca. <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>, und <xref:Microsoft.AnalysisServices.DataSourceView> anzuzeigen, [grundlegende AMO-Klassen](amo-fundamental-classes.md).  
+ Weitere Informationen zum Einrichten der Umgebung und über <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>, und <xref:Microsoft.AnalysisServices.DataSourceView> Objekten finden Sie [grundlegende AMO-Klassen](amo-fundamental-classes.md).  
   
  Für die Definition von Objekten in Analysis Management Objects (AMO) müssen für jedes Objekt einige Eigenschaften festgelegt werden, um den richtigen Kontext einzurichten. Komplexe Objekte wie OLAP und Data Mining-Objekte erfordern längere und detaillierte Codierung.  
   
   
  Die folgende Abbildung zeigt die Beziehung der in diesem Thema erläuterten Klassen.  
   
- ![AMO-Data Mining-Klassen](../../../analysis-services/dev-guide/media/amo-dataminingclasses.gif "AMO-Data Mining-Klassen")  
+ ![AMO-Klassen für Data Mining](../../../analysis-services/dev-guide/media/amo-dataminingclasses.gif "AMO-Klassen für Data Mining")  
   
 ##  <a name="MiningStructure"></a> MiningStructure-Objekte  
  Eine Miningstruktur ist der Container für Miningmodelle. Die Struktur definiert alle möglichen Spalten, die von den Miningmodellen verwendet werden können. Jedes Miningmodell definiert seine eigenen Spalten aus dem Satz der definierten Spalten in der Struktur.  
@@ -77,7 +77,7 @@ ms.locfileid: "36151686"
   
  Eine <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn> wird erstellt, indem sie dem übergeordneten <xref:Microsoft.AnalysisServices.MiningStructureCollection> hinzugefügt und das übergeordnete <xref:Microsoft.AnalysisServices.MiningStructure>-Objekt mithilfe der Update-Methode auf dem Server aktualisiert wird.  
   
- So entfernen Sie eine <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>, müssen Sie aus der Auflistung des übergeordneten Elements entfernt werden <xref:Microsoft.AnalysisServices.MiningStructure>, und das übergeordnete Element <xref:Microsoft.AnalysisServices.MiningStructure> Objekt muss mit dem Server mithilfe der Update-Methode aktualisiert werden.  
+ So entfernen Sie eine <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>, muss Sie aus der Auflistung des übergeordneten Elements entfernt werden <xref:Microsoft.AnalysisServices.MiningStructure>, und das übergeordnete Element <xref:Microsoft.AnalysisServices.MiningStructure> Objekt muss mit dem Server aktualisiert werden, mithilfe der Update-Methode.  
   
 #### <a name="tableminingstructurecolumn"></a>TableMiningStructureColumn  
  Ein einfaches <xref:Microsoft.AnalysisServices.TableMiningStructureColumn>-Objekt besteht aus: grundlegenden Informationen und skalaren Spalten.  
@@ -110,7 +110,7 @@ ms.locfileid: "36151686"
 ## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.AnalysisServices>   
  [Grundlegende AMO-Klassen](amo-fundamental-classes.md)   
- [Programmieren AMO-Datamining-Objekte](programming-amo-data-mining-objects.md)   
+ [Programmieren AMO-Datamining-Objekten](programming-amo-data-mining-objects.md)   
  [Einführung in AMO-Klassen](amo-classes-introduction.md)   
  [Logische Architektur &#40;Analysis Services – mehrdimensionale Daten&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Datenbankobjekte &#40;Analysis Services – mehrdimensionale Daten&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)  

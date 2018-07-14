@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 caps.latest.revision: 33
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 37f778e52088df89a12b46b636aa1948623b9ac9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 5f3ad348ebfc89706eb57dea34f91342550189b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149583"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236300"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Konzepte von Reporting Services (SSRS)
   Dieses Thema bietet eine kurze Einführung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Konzepte.  
@@ -70,7 +70,7 @@ ms.locfileid: "36149583"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] stellt eine erweiterbare Architektur bereit, mit der Sie Berichtslösungen anpassen können. Der Berichtsserver unterstützt benutzerdefinierte Authentifizierungserweiterungen, Datenverarbeitungserweiterungen, Berichtsverarbeitungserweiterungen, Renderingerweiterungen und Übermittlungserweiterungen, und die Erweiterungen, die den Benutzern zur Verfügung stehen, sind in der Konfigurationsdatei "RSReportServer.config" konfigurierbar. Sie können z. B. die Exportformate, die der Berichts-Viewer verwenden darf, einschränken. Übermittlungserweiterungen und Berichtsverarbeitungserweiterungen sind zwar optional, jedoch erforderlich, wenn Sie die Berichtsverteilung oder benutzerdefinierte Steuerelemente unterstützen möchten. Weitere Informationen finden Sie unter [Erweiterungen &#40;SSRS&#41;](extensions-ssrs.md).  
   
  **Berichtszugriff**  
- Beim bedarfsgesteuerten Zugreifen können Benutzer die Berichte aus einem Berichtanzeigetool auswählen. Je nach Konfiguration des Berichtsservers, können Sie Berichts-Manager eine [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0-Webpart, eine SharePoint-Bibliothek beim [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im integrierten SharePoint-Modus, ein eingebettetes ReportViewer-Steuerelement oder einen Browser mit URL installiert ist Zugriff. Weitere Informationen zum bedarfsgesteuerten Zugriff auf Berichte finden Sie unter [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
+ Beim bedarfsgesteuerten Zugreifen können Benutzer die Berichte aus einem Berichtanzeigetool auswählen. Je nach Konfiguration des Berichtsservers, können Sie Berichts-Manager eine [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0-Webpart, eine SharePoint-Bibliothek beim [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installiert ist, im integrierten SharePoint-Modus, ein eingebettetes ReportViewer-Steuerelement oder einen Browser mit URL Zugriff. Weitere Informationen zum bedarfsgesteuerten Zugriff auf Berichte finden Sie unter [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   
  Abonnements stellen eine Alternative zum Ausführen eines Berichts bei Bedarf bereit. Weitere Informationen finden Sie unter [Abonnements und Übermittlung &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
@@ -150,7 +150,7 @@ ms.locfileid: "36149583"
  **Berichtsteile**  
  Eine Berichtsteildefinition (Dateierweiterung .rsc) ist ein Berichtsserverelement, das ein XML-Fragment einer Berichtsdefinitionsdatei darstellt. Sie erstellen Berichtsteile, indem Sie eine Berichtsdefinition erstellen und dann Berichtselemente im Bericht auswählen, die als Berichtsteile getrennt veröffentlicht werden sollen. Berichtsteile umfassen Datenbereiche, Rechtecke und enthaltene Elemente sowie Bilder. Sie können einen Berichtsteil mit seinen abhängigen Datasets und freigegebenen Datenquellenverweisen speichern, damit er in anderen Berichten wiederverwendet werden kann. Weitere Informationen finden Sie unter [Berichtsteile im Berichts-Designer &#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md).  
   
- **Von datenwarnungen**  
+ **Datenwarnungen**  
  Eine Datenwarnung ist ein in einer Warnungsdatenbank intern gespeichertes Element. Eine Datenwarnungsdefinition umfasst die Information, welche Daten aus vorhandenen Berichtsdatenfeeds verwendet werden sollen, welche Bedingungen erfüllt werden müssen, einen Zeitplan und Empfänger für die Warnung. Datenwarnungen sind nur in Berichten verfügbar, die auf einem in SharePoint Server integrierten Berichtsserver veröffentlicht wurden. Datenwarnungen sind auf einer systemeigenen Berichtsserverinstallation nicht verfügbar. Weitere Informationen finden Sie unter [Reporting Services-Datenwarnungen](../ssms/agent/alerts.md).  
   
 ##  <a name="bkmk_TypesofReports"></a> Typen von Berichten  
@@ -186,7 +186,7 @@ ms.locfileid: "36149583"
   
 -   **Bericht mit durchklicken.** Ein Bericht mit Durchklicken zeigt verknüpfte Daten aus einem Berichtsmodell an, wenn Sie auf die interaktiven Daten klicken, die im modellbasierten Bericht enthalten sind. Berichte mit Durchklicken werden automatisch erzeugt. Weitere Informationen finden Sie unter [Berichte mit Durchklicken &#40;SSRS&#41;](reports/clickthrough-reports-ssrs.md).  
   
- Weitere Informationen zu SMDL-Modellen finden Sie unter [Breaking Changes in SQL Server Reporting Services in SQL Server 2014](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md).  
+ Weitere Informationen zu SMDL-Modellen finden Sie unter [wichtige Änderungen in SQL Server Reporting Services in SQL Server 2014](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md).  
   
  **Gespeicherte Berichte**  
  Ein gespeicherter Bericht ist eine Berichtsdefinitionsdatei (Dateierweiterung .rdl). Eine Berichtsdefinition kann lokal gespeichert oder auf einen Berichtsserver hochgeladen werden. Wenn Sie eine Berichtsdefinition hochladen, statt sie zu veröffentlichen, tritt keine Versionsüberprüfung oder Ausdrucksüberprüfung auf. Fehler werden erst bei der Ausführung des Berichts angezeigt. Weitere Informationen finden Sie unter [Save and Deploy](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy).  
@@ -215,14 +215,14 @@ Diagramm für die Berichtsverarbeitung
  **Verarbeiteter Bericht**  
  Ein vollständig verarbeiteter Bericht, der Daten und Layoutinformationen enthält.  
   
- **gerenderter Bericht**  
+ **Gerenderter Bericht**  
  Ein vollständig verarbeiteter Bericht wird an einen Berichtsrenderer gesendet, um die Daten und das Layout auf den einzelnen Seiten des beabsichtigten Renderingformat zu kombinieren. Renderingerweiterungen können vom Benutzer angepasst und erweitert werden. Das Standardrenderingformat für einen Bericht ist HTML 4.0. Weitere Informationen finden Sie unter [Seitenlayout und Rendering (Berichts-Generator und SSRS)](report-design/page-layout-and-rendering-report-builder-and-ssrs.md) und [Erweiterungen (SSRS)](extensions-ssrs.md).  
   
  **Exportierter Bericht**  
  Ein exportierter Bericht ist ein vollständig ausgelagerter und in einem bestimmten Dateiformat gespeicherter Bericht. Exportformate hängen von installierten Renderingerweiterungen ab und können angepasst werden. Standardmäßig schließen Exportformate Excel, Word, XML, PDF, TIFF und CSV ein. Weitere Informationen finden Sie unter [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Reporting Services-Funktionen und Tasks im &#40;SSRS&#41;](reporting-services-features-and-tasks-ssrs.md)   
+ [Reporting Services-Funktionen und Tasks &#40;SSRS&#41;](reporting-services-features-and-tasks-ssrs.md)   
  [Technische Referenz (SSRS)](../../2014/reporting-services/technical-reference-ssrs.md)   
  [Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   

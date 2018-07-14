@@ -1,5 +1,5 @@
 ---
-title: Datamining-Konzepte | Microsoft Docs
+title: Datamining-Konzepte | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Analysis Services, data mining
 - cleaning data
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - Analysis Services, data mining
 ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 296ef0bf077c7d28e7288e1c7cae999de592b8e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1236bc9b0c7e18331d2a3dea660f38d81408176b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149763"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212010"
 ---
 # <a name="data-mining-concepts"></a>Data Mining-Konzepte
   Data Mining ist der Prozess der Ermittlung aussagefähiger Informationen aus großen Datensätzen. Data Mining nutzt die mathematische Analyse zur Aufdeckung von Mustern und Trends in Daten. Üblicherweise können diese Muster nicht durch das traditionelle Durchsuchen von Daten ermittelt werden, da die Beziehungen zu komplex sind oder zu viele Daten bestehen.  
@@ -117,7 +117,7 @@ ms.locfileid: "36149763"
 ##  <a name="ExploringData"></a> Durchsuchen von Daten  
  Wie das nachstehende Diagramm verdeutlicht, besteht der dritte Schritt des Data Mining-Prozesses im Durchsuchen der vorbereiteten Daten.  
   
- ![Dritter Schritt beim Datamining: Durchsuchen von Daten](../media/dmprocess-exploring.gif "dritten Schritt beim Datamining: Durchsuchen von Daten")  
+ ![Dritter Schritt beim Datamining: Durchsuchen von Daten](../media/dmprocess-exploring.gif "Dritter Schritt beim Datamining: Durchsuchen von Daten")  
   
  Nur wenn Sie Ihre Datensituation verstanden haben, können Sie beim Erstellen der Miningmodelle sinnvolle Entscheidungen treffen. Zu den Durchsuchungstechniken gehören das Berechnen von Mindest- und Maximalwerten, das Ermitteln von mittleren Abweichungen und Standardabweichungen und das Analysieren der Datenstreuung. Beispielsweise können Sie gegebenenfalls durch Prüfung der Maximal-, Mindest- und Mittelwerte ermitteln, dass die Daten nicht repräsentativ für Ihre Kunden oder Geschäftsprozesse sind und dass Sie daher ausgewogenere Daten benötigen oder die Annahmen prüfen müssen, die Grundlage Ihrer Erwartungen sind. Standardabweichungen und andere Streuungswerte können nützliche Informationen über die Stabilität und Genauigkeit der Ergebnisse bieten. Eine große Standardabweichung kann darauf hinweisen, dass ein weiteres Hinzufügen von Daten bei der Verbesserung des Modells hilfreich sein kann. Daten, die stark von einer Standardverteilung abweichen, können verfälscht sein oder ein genaues Abbild eines realen Problems darstellen. In jedem Fall erschweren Sie die Anpassung eines Modells auf die Daten.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "36149763"
 ##  <a name="BuildingModels"></a> Erstellen von Modellen  
  Wie das nachstehende Diagramm verdeutlicht, besteht der vierte Prozessschritt des Data Mining-Prozesses im Generieren eines oder mehrerer Miningmodelle. Sie werden die im Schritt [Durchsuchen von Daten](#ExploringData) gewonnenen Erkenntnisse verwenden, um die Modelle zu definieren und zu erstellen.  
   
- ![Vierter Schritt beim Datamining: Erstellen von Miningmodellen](../media/dmprocess-building.gif "vierter Schritt beim Datamining: Erstellen von Miningmodellen")  
+ ![Vierter Schritt beim Datamining: Erstellen von Miningmodellen](../media/dmprocess-building.gif "vierten Schritt beim Datamining: Erstellen von Miningmodellen")  
   
  Sie definieren die zu verwendenden Datenspalten, indem Sie eine Miningstruktur erstellen. Die Miningstruktur ist zwar mit der Datenquelle verknüpft, enthält bis zu ihrer Verarbeitung jedoch keine Daten. Wenn Sie die Miningstruktur verarbeiten, erzeugt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Aggregate und andere statistische Informationen, die zu Analysezwecken verwendet werden können. Diese Informationen können von allen Miningmodellen verwendet werden, die auf der Struktur basieren. Weitere Informationen dazu, wie Miningstrukturen mit Miningmodellen in Beziehung stehen, finden Sie unter [Logische Architektur &#40;Analysis Services – Data Mining&#41;](logical-architecture-analysis-services-data-mining.md).  
   

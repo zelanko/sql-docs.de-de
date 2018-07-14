@@ -1,5 +1,5 @@
 ---
-title: SSIS-Paket Essentials | Microsoft Docs
+title: SSIS-Paket Essentials | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - package requirements
 ms.assetid: b0c86c35-e3d3-4724-9a96-4087e9d74bf3
 caps.latest.revision: 27
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1efb7be8739413ff1688888f66313cd792d54684
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a34b86dd370850f61a931aa640df7fb9999d2c08
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150182"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225840"
 ---
 # <a name="ssis-package-essentials"></a>SSIS-Paketgrundlagen
-  Ein Paket ist das Objekt, das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Funktionalität zum Extrahieren, Transformieren und Laden von Daten implementiert. Ein Paket lässt sich mit dem [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]erstellen. Sie können ein Paket aber auch mit dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Import/Export-Assistenten oder dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Verbindungsprojekt-Assistenten erstellen. Weitere Informationen [Create Packages in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md) im SSIS-Designer und [Berichtsimport-Assistent](../../2014/integration-services/import-project-wizard.md).  
+  Ein Paket ist das Objekt, das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Funktionalität zum Extrahieren, Transformieren und Laden von Daten implementiert. Ein Paket lässt sich mit dem [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]erstellen. Sie können ein Paket aber auch mit dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Import/Export-Assistenten oder dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Verbindungsprojekt-Assistenten erstellen. Weitere Informationen [Erstellen von Paketen in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md) im SSIS-Designer und [Berichtsimport-Assistent](../../2014/integration-services/import-project-wizard.md).  
   
  Ein Basispaket enthält die folgenden Elemente:  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36150182"
   
  Weitere Informationen finden Sie unter [Data Flow](data-flow/data-flow.md).  
   
- Ein Beispiel zum Erstellen eines Basispakets finden Sie unter [Lektion 1: Erstellen des Projekts und Basispakets](lesson-1-create-a-project-and-basic-package-with-ssis.md).  
+ Ein Beispiel zum Erstellen eines einfachen Pakets finden Sie unter [Lektion 1: Erstellen des Projekts und Basispakets](lesson-1-create-a-project-and-basic-package-with-ssis.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36150182"
 1.  Video [Erstellen eines Basispakets (SQL Server-Video)](http://go.microsoft.com/fwlink/?LinkId=131023)auf msdn.microsoft.com.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Integrationsservices &#40;SSIS&#41; Pakete](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Integrationsdienste &#40;SSIS&#41; Pakete](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Rangfolgeneinschränkungen](control-flow/precedence-constraints.md)  
   
   

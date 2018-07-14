@@ -1,5 +1,5 @@
 ---
-title: SetStrValue-Methode (ClientNetworkProtocolProperty-Klasse) | Microsoft Docs
+title: SetStrValue-Methode (ClientNetworkProtocolProperty-Klasse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - SetStrValue method
 ms.assetid: 4ff80124-6e2e-4d96-a692-57c17b53c55e
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fd261b8f9d6106c3d87ccefc559cd450f9f72e01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 80aebeac00e27d9e07321013956a13c61b285160
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150112"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276446"
 ---
 # <a name="setstrvalue-method-clientnetworkprotocolproperty-class"></a>SetStrValue-Methode (ClientNetworkProtocolProperty-Klasse)
-  Legt den Zeichenfolgenwert der aktuellen Eigenschaft verweist die [PropertyIdx-Eigenschaftswert (ClientNetworkProtocolProperty-Klasse)](clientnetworkprotocolproperty-class.md) Wert.  
+  Legt den Zeichenfolgenwert der aktuellen Eigenschaft verwiesen wird, durch die [PropertyIdx-Eigenschaftswert (ClientNetworkProtocolProperty-Klasse)](clientnetworkprotocolproperty-class.md) Wert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,7 +52,7 @@ StrValue
   
 |Parameter|Description|  
 |---------------|-----------------|  
-|*StrValue*|Ein Zeichenfolgenwert, der den neuen Wert der aktuellen Eigenschaft angibt.|  
+|*StrValue gespeichert*|Ein Zeichenfolgenwert, der den neuen Wert der aktuellen Eigenschaft angibt.|  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein uint32-Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert wurde. Der Wert beträgt 1, wenn die Anforderung nicht unterstützt wird; jede andere Zahl gibt einen Fehler an.  

@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Anmerkungen in XSD-Schemas (SQLXML 4.0) | Microsoft Docs
+title: Verwenden von Anmerkungen in XSD-Schemas (SQLXML 4.0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - mapping schema [SQLXML], scenarios for using
 ms.assetid: 78f318a4-7a36-473b-9852-a4bae6940ce5
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 56db3f001d68bcaf65d71f793744896944318fc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 26fd2f853697765fda82b869aae7780976753749
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148561"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321950"
 ---
 # <a name="using-annotations-in-xsd-schemas-sqlxml-40"></a>Verwenden von Anmerkungen in XSD-Schemas (SQLXML 4.0)
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 unterstützt die XSD-Schemasprache Anmerkungen auf ähnliche Weise wie die in der XDR-Schemasprache (XML-Data Reduced) eingeführten Anmerkungen. Es gibt weitere in XSD eingeführte Anmerkungen, die in XDR nicht unterstützt werden.  
@@ -56,25 +56,25 @@ ms.locfileid: "36148561"
  [Angeben von Beziehungen mithilfe von SQL: Relationship &#40;SQLXML 4.0&#41;](specifying-relationships-using-sql-relationship-sqlxml-4-0.md)  
  Beschreibt die `sql:relationship`-Anmerkung und gibt Beispiele.  
   
- [Angeben des SQL: Inverse-Attribut für SQL: Relationship &#40;SQLXML 4.0&#41;](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)  
+ [Angeben des SQL: Inverse-Attributs für SQL: Relationship &#40;SQLXML 4.0&#41;](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)  
  Beschreibt die `sql:inverse`-Anmerkung.  
   
- [Erstellen von konstanter Elemente mithilfe von Sql: ist Konstante &#40;SQLXML 4.0&#41;](creating-constant-elements-using-sql-is-constant-sqlxml-4-0.md)  
+ [Erstellen von Konstanten Elementen unter Verwendung von Sql: ist Konstante &#40;SQLXML 4.0&#41;](creating-constant-elements-using-sql-is-constant-sqlxml-4-0.md)  
  Beschreibt die `sql:is-constant`-Anmerkung und gibt Beispiele.  
   
- [Ausschließen von Schemaelementen aus der resultierenden XML-Dokument mit Sql: zugeordnet &#40;SQLXML 4.0&#41;](excluding-schema-elements-from-the-xml-document-using-sql-mapped.md)  
+ [Ausschließen von Schemaelementen aus dem resultierenden XML-Dokument mit Sql: zugeordnet &#40;SQLXML 4.0&#41;](excluding-schema-elements-from-the-xml-document-using-sql-mapped.md)  
  Beschreibt die `sql:mapped`-Anmerkung und gibt Beispiele.  
   
- [Filtern von Werten mithilfe von ' SQL: Limit-Feld und ' SQL: Limit-Wert &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-limit-field-and-sql-limit-value.md)  
+ [Filtern von Werten mithilfe von ' SQL: Limit-Field und ' SQL: Limit-Wert &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-limit-field-and-sql-limit-value.md)  
  Beschreibt die `sql:limit-field`-Anmerkung und die `sql:limit-value`-Anmerkung und gibt Beispiele.  
   
  [Identifizieren von Schlüsselspalten mithilfe von SQL: Key-Felder &#40;SQLXML 4.0&#41;](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)  
  Beschreibt die `sql:key-fields`-Anmerkung und gibt Beispiele.  
   
- [Das Angeben eines Target Namespace mithilfe der TargetNamespace-Attribut &#40;SQLXML 4.0&#41;](specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-4-0.md)  
+ [Angeben eines Target Namespace mit dem ' targetNamespace '-Attribut &#40;SQLXML 4.0&#41;](specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-4-0.md)  
  Beschreibt und enthält Beispiele für die **TargetNamespace** Attribut.  
   
- [Erstellen die gültige ID, IDREF und IDREFS-Typ-Attribute Sql:prefix &#40;SQLXML 4.0&#41;](creating-valid-id-idref-and-idrefs-type-attributes-using-sql-prefix-sqlxml-4-0.md)  
+ [Erstellen die gültige ID, IDREF und IDREFS-Typ Attribute verwenden Sql:prefix &#40;SQLXML 4.0&#41;](creating-valid-id-idref-and-idrefs-type-attributes-using-sql-prefix-sqlxml-4-0.md)  
  Beschreibt die `sql:prefix`-Anmerkung und gibt Beispiele.  
   
  [Datentypumwandlungen und die SQL: DataType-Anmerkung &#40;SQLXML 4.0&#41;](data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)  
@@ -86,7 +86,7 @@ ms.locfileid: "36148561"
  [Erstellen von CDATA-Abschnitten mithilfe von SQL: use-Cdata &#40;SQLXML 4.0&#41;](creating-cdata-sections-using-sql-use-cdata-sqlxml-4-0.md)  
  Beschreibt die `sql:use-data`-Anmerkung und gibt Beispiele.  
   
- [Anfordern von URL-Verweise auf BLOB-Daten mithilfe von Sql: Codieren &#40;SQLXML 4.0&#41;](requesting-url-references-to-blob-data-using-sql-encode-sqlxml-4-0.md)  
+ [Anfordern von URL-verweisen auf BLOB-Daten mithilfe von Sql: Codieren &#40;SQLXML 4.0&#41;](requesting-url-references-to-blob-data-using-sql-encode-sqlxml-4-0.md)  
  Beschreibt die `sql:encode`-Anmerkung und gibt Beispiele.  
   
  [Abrufen von nicht verbrauchten Daten mithilfe der SQL: Overflow-Feld &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-overflow-field.md)  
@@ -102,6 +102,6 @@ ms.locfileid: "36148561"
  Beschreibt die `sql:max-depth`-Anmerkung und gibt Beispiele.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Versehen Sie Sicherheitsaspekte Schema &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)  
+ [Überlegungen zur Sicherheit von Schemas versehen &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)  
   
   

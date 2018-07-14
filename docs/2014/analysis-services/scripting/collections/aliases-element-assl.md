@@ -1,5 +1,5 @@
 ---
-title: Aliases-Element (ASSL) | Microsoft Docs
+title: Aliases-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Aliases element
 ms.assetid: 9de9e683-d30d-4d61-b32d-c5a946825742
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 60673c26bf4a430c842da0fb61c98de7242ccd1c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 677434b5ea6383e5905a703225edb5e56e3fb4e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148480"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267686"
 ---
 # <a name="aliases-element-assl"></a>Aliases-Element (ASSL)
-  Enthält die Auflistung der [Alias](../properties/alias-element-assl.md) Elemente, die zu einer [Konto](../objects/account-element-assl.md) Element  
+  Enthält die Auflistung der [Alias](../properties/alias-element-assl.md) Elemente, die zu einem [Konto](../objects/account-element-assl.md) Element  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -64,10 +64,10 @@ ms.locfileid: "36148480"
 |Untergeordnete Elemente|[Alias](../properties/alias-element-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Das übergeordnete Element des entsprechende Element `Aliases` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Account>.  
+ Das Element, das dem übergeordneten entspricht `Aliases` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Account>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Accounts-Element &#40;ASSL&#41;](accounts-element-assl.md)   
+ [Konten Element &#40;ASSL&#41;](accounts-element-assl.md)   
  [Database-Element &#40;ASSL&#41;](../objects/database-element-assl.md)   
  [Sammlungen &#40;ASSL&#41;](collections-assl.md)  
   

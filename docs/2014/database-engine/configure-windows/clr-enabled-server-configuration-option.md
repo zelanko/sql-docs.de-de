@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - assemblies [CLR integration], verifying can run
 - clr enabled option
 ms.assetid: 0722d382-8fd3-4fac-b4a8-cd2b7a7e0293
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1eb4bd97f6e008dbc84e7d7882b80cfff5c88f2c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8eee4ca485f4bb48a4f2cb42ec728f20a7848509
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150425"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192530"
 ---
 # <a name="clr-enabled-server-configuration-option"></a>CLR-fähig (Serverkonfigurationsoption)
   Mithilfe der Option CLR-fähig können Sie angeben, ob Benutzerassemblys von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt werden dürfen. Von der Option "CLR-fähig" werden folgende Werte bereitgestellt.  
@@ -38,7 +38,7 @@ ms.locfileid: "36150425"
 >  Wenn RECONFIGURE ausgeführt und der Ausführungswert der Option "CLR-fähig" von 1 in 0 geändert wird, werden alle Anwendungsdomänen mit Benutzerassemblys sofort entladen.  
   
 > [!NOTE]  
->  CLR (Common Language Runtime) wird beim Lightweightpooling nicht unterstützt. Deaktivieren Sie eine der beiden Optionen "CLR-fähig" oder "Lightweightpooling". Funktionen, die auf CLR basieren und nicht arbeiten ordnungsgemäß im Fibermodus, gehören die `hierarchy` -Datentyp, Replikation und richtlinienbasierte Verwaltung.  
+>  CLR (Common Language Runtime) wird beim Lightweightpooling nicht unterstützt. Deaktivieren Sie eine der beiden Optionen "CLR-fähig" oder "Lightweightpooling". Funktionen, die auf CLR basieren und nicht arbeiten ordnungsgemäß im Fibermodus, gehören die `hierarchy` -Datentyp, Replikation und Richtlinie der richtlinienbasierten Verwaltung.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird zunächst die aktuelle Einstellung der Option CLR-fähig angezeigt und die Option dann aktiviert, indem der Optionswert auf 1 festgelegt wird. Wenn Sie die Option deaktivieren möchten, legen Sie den Wert auf 0 fest.  

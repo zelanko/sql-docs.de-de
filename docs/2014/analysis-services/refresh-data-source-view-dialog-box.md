@@ -1,5 +1,5 @@
 ---
-title: Aktualisieren der Datenquellensicht (Dialogfeld) | Microsoft Docs
+title: Aktualisieren Sie die Ansicht im Dialogfeld Datenquelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.refreshdsv.f1
 helpviewer_keywords:
 - Refresh Data Source View dialog box
 ms.assetid: 56bac170-6777-472a-8a09-549b2ee0d909
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7f585623e7b8de7ac802612fd3c861819a2bb58e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d93a157fa80754d58be242c4fdbe759176cb6f0e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148936"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204600"
 ---
 # <a name="refresh-data-source-view-dialog-box"></a>Datenquellensicht aktualisieren (Dialogfeld)
   Mithilfe des Dialogfelds **Datenquellensicht aktualisieren** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie die Änderungen annehmen oder abbrechen, die im Zuge der Aktualisierung der Datenquellensicht aufgetreten sind. Das Dialogfeld zeigt die Änderungen an, die an der Datenquellensicht im Zuge der Änderungen an der zugrunde liegenden Datenquelle vorgenommen werden. Klicken Sie auf **OK** , um die Änderungen anzunehmen und die Datenquellensicht zu aktualisieren, oder auf **Abbrechen** , um die Änderungen zu ignorieren und die Datenquellensicht unverändert zu lassen. Sie können das Dialogfeld **Datenquellensicht aktualisieren** folgendermaßen anzeigen:  
@@ -33,7 +33,7 @@ ms.locfileid: "36148936"
 -   Klicken Sie mit der rechten Maustaste auf den Bereich **Diagramm** des Datenquellensicht-Designers, und wählen Sie **Aktualisieren**aus.  
   
 ## <a name="options"></a>Tastatur  
- **Die folgenden Änderungen durchgeführt werden**  
+ **Die folgenden Änderungen werden vorgenommen**  
  Zeigt die Änderungen an (aktualisierte, hinzugefügte und gelöschte Bereiche), die an der Datenquelle vorgenommen werden, wenn Sie auf **OK**klicken.  
   
  **Bericht speichern**  

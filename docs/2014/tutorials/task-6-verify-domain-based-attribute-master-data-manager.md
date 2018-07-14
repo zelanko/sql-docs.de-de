@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 6: Stellen Sie sicher, dass das domänenbasierte Attribut erstellt wird, mithilfe von Master Data Manager | Microsoft Docs'
+title: 'Aufgabe 6: Stellen Sie sicher, dass das domänenbasierte Attribut erstellt wird, mithilfe von Master Data Manager | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e90517a-910c-4c33-8f11-92ac3cff4fdc
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d12764af6fbebf8c0fa82d38059cc64ea9bbc2c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f607a6faaf8a6891ff2d7191142f11dbaa55f961
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150476"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191300"
 ---
 # <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Aufgabe 6: Überprüfen, ob das domänenbasierte Attribut mithilfe von Master Data Manager erstellt wird
   In dieser Aufgabe überprüfen Sie mit **Master Data Manager**, ob die Entität **Bundesland** in **MDS** erstellt wird und ob das Attribut **Bundesland** der Entität **Lieferant** ein domänenbasiertes Attribut ist, das von der Entität **Bundesland** abhängig ist.  
@@ -82,7 +82,7 @@ ms.locfileid: "36150476"
   
 11. Der Wert für das Feld **Bundesland** kann im Bereich **Details** über die Dropdownliste geändert werden. Sie können auch sehen, dass in der Liste links und in der Dropdownliste im Bereich **Details** zuerst Code und dann der Name in geschweiften Klammern angezeigt wird. Sie können auch jeden beliebigen anderen Wert im Bereich **Details** ändern.  
   
-     ![State-Attribut mit aktualisiertem Code und Namen](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-02.jpg "State-Attribut mit aktualisiertem Code und Namen")  
+     ![Status-Attribut mit aktualisiertem Code und Namen](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-02.jpg "Attribut mit aktualisiertem Code und Namen angeben")  
   
 ## <a name="next-step"></a>Nächster Schritt  
  [Aufgabe 7: Anzeigen von Updates, die mit Master Data Manager in Excel durchgeführt wurden](../../2014/tutorials/task-7-viewing-updates-made-using-master-data-manager-in-excel.md)  

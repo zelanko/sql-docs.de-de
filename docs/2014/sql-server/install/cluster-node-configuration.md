@@ -1,5 +1,5 @@
 ---
-title: Cluster-Knotenkonfiguration | Microsoft Docs
+title: Knoten-Clusterkonfiguration | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - cluster node configuration
 - cluster node configuration, Setup
 ms.assetid: cc960cf3-3b55-44f3-961a-eac4ad05d3d9
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 511f5f489693e166accb1a21c28932c369a983a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 740771813ee953aa57106dc07e1b446ea71f494a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150045"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327090"
 ---
 # <a name="cluster-node-configuration"></a>Clusterknotenkonfiguration
   Verwenden Sie die Seite Clusterknotenkonfiguration, um Knoten einer Failoverclusterinstanz hinzuzufügen oder daraus zu entfernen. Zum Installieren oder Aktualisieren eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusters müssen Sie das Setupprogramm für jeden einzelnen Knoten des Failoverclusters ausführen. Zum Hinzufügen eines Knotens zu einem vorhandenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failovercluster müssen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup für den Knoten ausführen, der der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusterinstanz hinzugefügt werden soll.  

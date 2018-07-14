@@ -1,5 +1,5 @@
 ---
-title: Analysis Services-Konfiguration – Datenverzeichnisse | Microsoft Docs
+title: Analysis Services-Konfiguration – Datenverzeichnisse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ef732855-b7af-4f40-a619-5573c1c354bb
 caps.latest.revision: 20
-author: HeidiSteen
+author: heidisteen
 ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: b3b945938c0ffd8a5059f8b2c53546538ea97eee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 64eb317972d33f2fc2957f40c74b0bdea9aac152
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150748"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204620"
 ---
 # <a name="analysis-services-configuration---data-directories"></a>Konfigurationseigenschaften von Analysis Services – Datenverzeichnisse
   Die in der folgenden Tabelle angegebenen Standardverzeichnisse können beim Setup von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vom Benutzer konfiguriert werden: Die Berechtigung zum Zugriff auf diese Dateien wird den lokalen Administratoren und Mitgliedern der Sicherheitsgruppe SQLServerMSASUser $\<instance> gewährt, die während des Setups erstellt und bereitgestellt wird.  
@@ -28,9 +28,9 @@ ms.locfileid: "36150748"
   
 |Description|Standardverzeichnis|Empfehlungen|  
 |-----------------|-----------------------|---------------------|  
-|Datenstammverzeichnis|C:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSAS12. \<InstanceID > \olap\data\\|stellen Sie sicher, dass der Ordner "\Programme\Microsoft SQL Server\" mit eingeschränkten Berechtigungen geschützt ist. Die Leistung von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ist in vielen Konfigurationen von der Leistung des Speichers abhängig, in dem sich das Datenverzeichnis befindet. Platzieren Sie dieses Verzeichnis im Speicher mit der höchsten Leistung, der mit dem System verknüpft ist. Stellen Sie für Failoverclusterinstallationen sicher, dass Datenverzeichnisse auf dem freigegebenen Datenträger platziert werden.|  
-|Protokolldateiverzeichnis|C:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSAS12. \<InstanceID > \OLAP\Log\|Dies ist das Verzeichnis für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Protokolldateien, und es enthält das FlightRecorder-Protokoll. Wenn Sie die Dauer von Flight Recorder erhöhen, stellen Sie sicher, dass für das Protokollverzeichnis genügend Speicherplatz zur Verfügung steht.|  
-|Temporäres Verzeichnis|C:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSAS12. \<InstanceID > \OLAP\Temp\|platzieren Sie das Temp-Verzeichnis in einem leistungsstarken Speichersubsystem.|  
+|Datenstammverzeichnis|C:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSAS12. \<InstanceID > \OLAP\Data\|stellen Sie sicher, dass der Ordner "\Programme\Microsoft SQL Server\" durch entsprechend eingeschränkte Berechtigungen geschützt wird. Die Leistung von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ist in vielen Konfigurationen von der Leistung des Speichers abhängig, in dem sich das Datenverzeichnis befindet. Platzieren Sie dieses Verzeichnis im Speicher mit der höchsten Leistung, der mit dem System verknüpft ist. Stellen Sie für Failoverclusterinstallationen sicher, dass Datenverzeichnisse auf dem freigegebenen Datenträger platziert werden.|  
+|Protokolldateiverzeichnis|C:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSAS12. \<InstanceID > \OLAP\Log\|Dies ist das Verzeichnis für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Protokolldateien, und fügt das FlightRecorder-Protokoll. Wenn Sie die Dauer von Flight Recorder erhöhen, stellen Sie sicher, dass für das Protokollverzeichnis genügend Speicherplatz zur Verfügung steht.|  
+|Temporäres Verzeichnis|C:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSAS12. \<InstanceID > \OLAP\Temp\|platzieren Sie das Temp-Verzeichnis auf der leistungsstarken Speichersubsystem.|  
 |Sicherungsverzeichnis|C:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSAS12. \<InstanceID > \OLAP\Backup\|Dies ist das Verzeichnis für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] standardsicherungsdateien. Bei einer PowerPivot für SharePoint-Installation werden in diesem Verzeichnis zudem die PowerPivot-Datendateien des PowerPivot-Systemdiensts zwischengespeichert.<br /><br /> Stellen Sie sicher, dass zur Vermeidung von Datenverlusten entsprechende Berechtigungen festgelegt wurden und die Benutzergruppe für den [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Dienst über die erforderlichen Berechtigungen zum Schreiben im Sicherungsverzeichnis verfügt. Die Verwendung eines zugeordneten Laufwerks für Sicherungsverzeichnisse wird nicht unterstützt.|  
   
 ## <a name="notes"></a>Hinweise  

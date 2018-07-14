@@ -1,39 +1,38 @@
 ---
-title: Suche Eigenschaft Testlisten-Editor | Microsoft Docs
+title: Suche plist | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.spl.searchpropertylisteditor.f1
 ms.assetid: 0f3ced6e-0dfd-49fc-b175-82378c3d668e
 caps.latest.revision: 26
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e34bcf522675e13e9b1fa987f0f3bfc6aba36efb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3f55070e129328e8b876a97382bfca4462a4cf70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148166"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231530"
 ---
 # <a name="search-property-list-editor"></a>Sucheigenschaftenlisten-Editor
   In diesem Dialogfeld können Sie einer Sucheigenschaftenliste Sucheigenschaften hinzufügen oder solche darin löschen.  
   
 ## <a name="to-use-sql-server-management-studio-to-manage-search-property-lists"></a>So verwalten Sie Sucheigenschaftenlisten in SQL Server Management Studio  
- Informationen zum Erstellen, anzeigen oder Löschen einer sucheigenschaftenliste und zum Konfigurieren einen Volltextindex für die Eigenschaftensuche finden Sie unter [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
+ Weitere Informationen über das Erstellen, anzeigen oder Löschen einer sucheigenschaftenliste und zum Konfigurieren einen Volltextindex für die Eigenschaftensuche finden Sie unter [Search Document Properties with Search Property Lists](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
 ## <a name="options"></a>Tastatur  
  **Eigenschaftenname**  
  Geben Sie den Namen an, der in Volltextabfragen für die Eigenschaft verwendet werden soll. Eigenschaftsnamen können interne Leerzeichen enthalten. Die maximale Länge von **Eigenschaftsname** beträgt 256 Zeichen. Für diesen Name kann ein benutzerfreundlicher Name verwendet werden, z. B. "Autor" oder "Privatadresse", oder aber der kanonische Windows-Name der Eigenschaft, z. B. `System.Author` oder `System.Contact.HomeAddress`. **Eigenschaftsname** muss die Eigenschaft innerhalb des Eigenschaftensatzes eindeutig bezeichnen.  
   
- Entwickler verwenden die Eigenschaftenname bezeichnen die Eigenschaft in der [CONTAINS](/sql/t-sql/queries/contains-transact-sql) Prädikat. Wenn Sie eine Eigenschaft hinzufügen, sollten Sie daher einen Wert angeben, mit dem die Eigenschaft aussagekräftig bezeichnet wird.  
+ Entwickler verwenden der Eigenschaftenname bezeichnen die Eigenschaft in der [CONTAINS](/sql/t-sql/queries/contains-transact-sql) Prädikat. Wenn Sie eine Eigenschaft hinzufügen, sollten Sie daher einen Wert angeben, mit dem die Eigenschaft aussagekräftig bezeichnet wird.  
   
  **Eigenschaftensatz-GUID**  
  Geben Sie den Bezeichner des Eigenschaftensatzes an, zu dem die Eigenschaft gehört. Bei diesem handelt es sich um einen global eindeutigen Bezeichner (GUID, Globally Unique Identifier). Als Eigenschaftensatz wird eine Gruppe logisch aufeinander bezogener Eigenschaften bezeichnet. Informationen zum Abrufen dieses Werts finden Sie weiter unten in diesem Thema unter "Hinweise".  

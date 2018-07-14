@@ -1,5 +1,5 @@
 ---
-title: Assembly-Datentyp (ASSL) | Microsoft Docs
+title: Assembly-Datentyp (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Assembly data type
 ms.assetid: 0a381322-9509-4579-a754-c6cdd0a70cc9
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3fd706974b0cb4a897a7ef75e147dcd35ac91481
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 40cafd0d8ef11feaebce5161e97ef3717a9fb943
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148191"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233830"
 ---
 # <a name="assembly-data-type-assl"></a>Assembly-Datentyp (ASSL)
-  Definiert einen abstrakten Grunddatentyp, der darstellt eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Assembly oder einer COM-dynamic Link Library (DLL) zugeordneten eine [Server](../objects/server-element-assl.md) oder [Datenbank](../objects/database-element-assl.md) Element.  
+  Definiert einen abstrakten Grunddatentyp, der darstellt eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Assembly oder eine COM-dynamic Link Library (DLL) zugeordneten eine [Server](../objects/server-element-assl.md) oder [Datenbank](../objects/database-element-assl.md) Element.  
   
 > [!IMPORTANT]  
 >  COM-Assemblys können ein Sicherheitsrisiko darstellen. Aufgrund dieses Risikos und anderer Überlegungen wurden COM-Assemblys in [!INCLUDE[ssASversion10](../../../includes/ssasversion10-md.md)]als veraltet markiert. COM-Assemblys werden in zukünftigen Versionen möglicherweise nicht mehr unterstützt.  
@@ -67,9 +67,9 @@ ms.locfileid: "36148191"
 |Abgeleitete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `Assembly` -Datentyp dient als grundlegender Datentyp für die `ComAssembly` -Element, das mit der Instanz oder Datenbank verknüpfte COM-Bibliotheken darstellt, und die `ClrAssembly` -Element, das darstellt [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] verknüpfte Assemblys die Instanz oder Datenbank. Weitere Informationen zu Assemblys finden Sie unter [mehrdimensionalen Modell Assemblys-Verwaltung](../../multidimensional-models/multidimensional-model-assemblies-management.md).  
+ Die `Assembly` -Datentyp dient als grundlegender Datentyp für die `ComAssembly` -Element, das mit der Instanz oder Datenbank verknüpfte COM-Bibliotheken darstellt, und die `ClrAssembly` Element, das darstellt [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zugeordneten Assemblys die Instanz oder Datenbank. Weitere Informationen zu Assemblys finden Sie unter [Verwaltung von mehrdimensionalen Modellassemblys](../../multidimensional-models/multidimensional-model-assemblies-management.md).  
   
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.Assembly>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.Assembly>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Server-Element &#40;ASSL&#41;](../objects/server-element-assl.md)   

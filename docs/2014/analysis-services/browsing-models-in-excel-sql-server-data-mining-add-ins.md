@@ -1,5 +1,5 @@
 ---
-title: Durchsuchen von Modellen in Excel (SQL Server Data Mining-Add-ins) | Microsoft Docs
+title: Durchsuchen von Modellen in Excel (SQL Server Data Mining-Add-ins) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
 - browse models
 - mining models, viewing
 ms.assetid: a8cca1d7-602a-449a-875c-99da564965bc
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6c2badba8baf8abad2c366c6b21a28e2e2a236e0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5204d7f7084d6efd457a7928132048a8c1597eec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150925"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214360"
 ---
 # <a name="browsing-models-in-excel-sql-server-data-mining-add-ins"></a>Durchsuchen von Modellen in Excel (SQL Server Data Mining-Add-Ins)
-  ![Durchsuchen (Schaltfläche) Modell im Data Mining-Menüband](media/dmc-browse.gif "Modell Durchsuchen-Schaltfläche auf Data Mining-Menüband")  
+  ![Durchsuchen Sie die Schaltfläche "Modell" im Data Mining-Menüband](media/dmc-browse.gif "Modell Durchsuchen-Schaltfläche im Data Mining-Menüband")  
   
  Die visuelle Erforschung des Modells ist meistens der schnellste und einfachste Weg, um ein klares Verständnis der Regeln und Beziehungen zu gewinnen, die von der Analyse aufgedeckt werden. Mit dem Data Mining-Client für Excel können Sie sowohl temporäre Modelle, die während der aktuellen Excel-Sitzung erstellt wurden, als auch die in einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Instanz gespeicherten Modelle durchsuchen.  
   
@@ -36,14 +36,14 @@ ms.locfileid: "36150925"
   
 1.  Klicken Sie auf die **Data Mining** Registerkarte.  
   
-2.  In der **Modellverwendung** zu gruppieren, klicken Sie auf **Durchsuchen**.  
+2.  In der **Modellverwendung** auf **Durchsuchen**.  
   
-3.  In der **Modell auswählen** (Dialogfeld), wählen Sie ein Miningmodell aus der Liste, und klicken Sie auf **Weiter**.  
+3.  In der **Modell auswählen** Dialogfeld Wählen Sie ein Miningmodell aus der Liste, und klicken Sie auf **Weiter**.  
   
-4.  Öffnet der Assistenten eine **Durchsuchen** Fenster, das für den Typ des Modells geeignet ist, die Sie ausgewählt haben.  
+4.  Der Assistent öffnet ein **Durchsuchen** Fenster, das für den Typ des Modells geeignet ist, die Sie ausgewählt.  
   
 ## <a name="list-of-data-mining-viewers"></a>Liste von Data Mining-Viewern  
- Abhängig von den Datamining-Algorithmus, die Sie beim Erstellen des Modells verwendet die **Durchsuchen** sieht das Fenster etwas anders. Es kann Diagramme enthalten, die Ihnen das Verständnis der Ergebnisse erleichtern, oder Legenden mit zusätzlichen Details oder Steuerelemente für die Interaktion mit den Daten.  
+ Abhängig von der Datamining-Algorithmus, den Sie verwendet werden, bei der Erstellung des Modells, das **Durchsuchen** sieht das Fenster ein wenig anders. Es kann Diagramme enthalten, die Ihnen das Verständnis der Ergebnisse erleichtern, oder Legenden mit zusätzlichen Details oder Steuerelemente für die Interaktion mit den Daten.  
   
  Die folgenden Themen erhalten Anleitungen zur Verwendung der einzelnen Viewer, einschließlich Hinweise zum Interpretieren komplexer Diagramme und Anweisungen zum Ändern, Kopieren oder Verwenden der Ergebnisse.  
   

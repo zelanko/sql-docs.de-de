@@ -1,5 +1,5 @@
 ---
-title: Autorisieren des Zugriffs auf Objekte und Vorgänge (Analysis Services) | Microsoft Docs
+title: Autorisieren des Zugriffs auf Objekte und Vorgänge (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.membership.f1
 - sql12.asvs.roledesignerdialog.general.f1
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - granting permissions [Analysis Services], users
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ed4336f15c7bb024e9de1d4a4be7928ebf2c89af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 43f0606aebac245a3756db1361ea8f1cf6360358
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148201"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249180"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Autorisieren des Zugriffs auf Objekte und Vorgänge (Analysis Services)
   Der Zugriff für Nichtadministratorbenutzer auf Cubes, Dimensionen und Miningmodelle innerhalb einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank wird durch die Mitgliedschaft in mindesten einer Datenbankrolle gewährt. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Administratoren erstellen diese Datenbankrollen, gewähren Lese- oder Lese-/Schreibberechtigungen für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte und weisen dann jeder Rolle [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Benutzer und Gruppen zu.  
@@ -56,7 +56,7 @@ ms.locfileid: "36148201"
   
  **Schritt 1: Server-Verwaltung**  
   
- Entscheiden Sie als ersten Schritt, wer Administratorrechte auf der Serverebene haben wird. Während der Installation muss der lokale Administrator, der SQL Server installiert, mindestens ein Windows-Konto als Analysis Services-Serveradministrator angeben. Serveradministratoren verfügen über alle möglichen Berechtigungen auf einem Server, darunter die Berechtigung, jedes Objekt auf dem Server anzeigen, ändern und löschen oder damit verbundene Daten anzeigen zu können. Wenn die Installation abgeschlossen ist, kann ein Serveradministrator Konten hinzufügen oder löschen, um die Mitgliedschaft dieser Rolle zu ändern. Finden Sie unter [Erteilen von Serveradministratorberechtigungen &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) ausführliche Informationen zu dieser Berechtigungsstufe.  
+ Entscheiden Sie als ersten Schritt, wer Administratorrechte auf der Serverebene haben wird. Während der Installation muss der lokale Administrator, der SQL Server installiert, mindestens ein Windows-Konto als Analysis Services-Serveradministrator angeben. Serveradministratoren verfügen über alle möglichen Berechtigungen auf einem Server, darunter die Berechtigung, jedes Objekt auf dem Server anzeigen, ändern und löschen oder damit verbundene Daten anzeigen zu können. Wenn die Installation abgeschlossen ist, kann ein Serveradministrator Konten hinzufügen oder löschen, um die Mitgliedschaft dieser Rolle zu ändern. Finden Sie unter [Erteilen von Serveradministratorberechtigungen &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) Weitere Informationen zu dieser Berechtigungsebene.  
   
  **Schritt 2: Datenbankverwaltung**  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36148201"
   
  **Schritt 3: Aktivieren des Cube- oder Modellzugriffs für Abfrage- und Verarbeitungsworkloads**  
   
- Standardmäßig haben nur Server- und Datenbankadministratoren Zugriff auf Cubes oder tabellarische Modelle. Diese Datenstrukturen verfügbar machen, an andere Personen in Ihrer Organisation erfordert zusätzliche rollenzuweisungen, die Windows-Benutzer und Gruppenkonten zu Cubes oder Modellen, zusammen mit Berechtigungen zugeordnet werden, die angeben, `Read` Berechtigungen. Einzelheiten finden Sie unter [Erteilen von Cube- oder Modellberechtigungen &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md).  
+ Standardmäßig haben nur Server- und Datenbankadministratoren Zugriff auf Cubes oder tabellarische Modelle. Diese Datenstrukturen zur Verfügung stellen, an andere Personen in Ihrer Organisation erfordert zusätzliche rollenzuweisungen, die Windows-Benutzer und Gruppenkonten zu Cubes oder Modellen zuordnen zusammen mit den Berechtigungen mit, die angeben, `Read` Berechtigungen. Einzelheiten finden Sie unter [Erteilen von Cube- oder Modellberechtigungen &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md).  
   
  Verarbeitungsaufgaben können von andere Verwaltungsfunktionen isoliert werden, sodass Server- und Datenbankadministratoren diese Aufgabe an andere Personen delegieren oder eine unbeaufsichtigte Verarbeitung konfigurieren können, indem Sie Dienstkonten angeben, die eine Planungssoftware ausführen. Einzelheiten finden Sie unter [Erteilen von Verarbeitungsberechtigungen &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md).  
   

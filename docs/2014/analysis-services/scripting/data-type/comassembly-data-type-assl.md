@@ -1,5 +1,5 @@
 ---
-title: ComAssembly-Datentyp (ASSL) | Microsoft Docs
+title: ComAssembly-Datentyp (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ComAssembly data type
 ms.assetid: 23c0f4b3-b6ac-4ec8-9254-74d2f84f5244
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bfe3a7791d02d97b4283b63a1aedd3b6702fe563
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 824fb508bb392f6ef84ede39645a5bac0da645e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159639"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171551"
 ---
 # <a name="comassembly-data-type-assl"></a>ComAssembly-Datentyp (ASSL)
-  Definiert einen abgeleiteten Datentyp, der eine COM-Bibliothek zugeordnet darstellt, der eine [Server](../objects/server-element-assl.md) oder [Datenbank](../objects/database-element-assl.md) Element.  
+  Definiert einen abgeleiteten Datentyp, der eine COM-Bibliothek im Zusammenhang mit darstellt, der eine [Server](../objects/server-element-assl.md) oder [Datenbank](../objects/database-element-assl.md) Element.  
   
 > [!IMPORTANT]  
 >  COM-Assemblys können ein Sicherheitsrisiko darstellen. Aufgrund dieses Risikos und anderer Überlegungen wurden COM-Assemblys in [!INCLUDE[ssASversion10](../../../includes/ssasversion10-md.md)]als veraltet markiert. COM-Assemblys werden in zukünftigen Versionen möglicherweise nicht mehr unterstützt.  
@@ -64,9 +64,9 @@ ms.locfileid: "36159639"
 |Abgeleitete Elemente|Finden Sie unter [Assembly](../objects/assembly-element-assl.md) ([Assemblys](../collections/assemblies-element-assl.md) Auflistung von [Datenbank](../objects/database-element-assl.md) oder [Server](../objects/server-element-assl.md))|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ComAssembly` Element enthält einen Verweis (den vollqualifizierten Dateinamen oder den Programmbezeichner) auf eine COM-Bibliothek, die mit einer Instanz des verknüpften [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] oder mit einer bestimmten Datenbank auf einer Instanz von [!INCLUDE[ssAS](../../../includes/ssas-md.md)].  
+ Die `ComAssembly` Element enthält einen Verweis (den vollqualifizierten Dateinamen oder den Programmbezeichner) auf eine COM-Bibliothek im Zusammenhang mit einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] oder mit einer bestimmten Datenbank auf einer Instanz von [!INCLUDE[ssAS](../../../includes/ssas-md.md)].  
   
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.ComAssembly>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.ComAssembly>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [ClrAssembly-Datentyp &#40;ASSL&#41;](assembly-data-type-assl.md)   

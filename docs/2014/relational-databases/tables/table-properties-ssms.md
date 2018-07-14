@@ -1,5 +1,5 @@
 ---
-title: Tabelleneigenschaften | Microsoft Docs
+title: Tabelleneigenschaften | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.tableproperties.storage.f1
 - sql12.SWB.SELECTCOLUMNS.F1
@@ -17,15 +17,15 @@ f1_keywords:
 - sql12.swb.tableproperties.changetracking.f1
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e5b9ecfeafbb989f5baae832225475e65137a9ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 858be4ef2443a92f2a2999535714084fe60a67f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150752"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181767"
 ---
 # <a name="table-properties"></a>Tabelleneigenschaften
   In diesem Thema werden die Tabelleneigenschaften beschrieben, die im Dialogfeld "Tabelleneigenschaften" in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angezeigt werden. Weitere Informationen zum Anzeigen dieser Eigenschaften finden Sie unter [Anzeigen der Tabellendefinition](view-the-table-definition.md).  
@@ -139,7 +139,7 @@ ms.locfileid: "36150752"
  Mögliche Werte sind `True` und `False`.  
   
  **FILESTREAM-Dateigruppe**  
- Geben Sie den Namen der FILESTREAM-Datendateigruppe, wenn die Tabelle besitzt eine `varbinary(max)` Spalte, die FILESTREAM-Attribut aufweist. Der Standardwert entspricht der standardmäßigen FILESTREAM-Datendateigruppe.  
+ Geben Sie den Namen der FILESTREAM-Datendateigruppe ein, wenn die Tabelle besitzt eine `varbinary(max)` Spalte, die FILESTREAM-Attribut aufweist. Der Standardwert entspricht der standardmäßigen FILESTREAM-Datendateigruppe.  
   
  Wenn die Tabelle keine FILESTREAM-Daten enthält, ist das Feld leer.  
   

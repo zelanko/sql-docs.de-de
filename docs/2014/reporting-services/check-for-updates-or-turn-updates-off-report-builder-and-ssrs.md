@@ -1,5 +1,5 @@
 ---
-title: Suchen nach Updates oder Deaktivieren von Updates (Berichts-Generator und SSRS) | Microsoft Docs
+title: Suchen nach Updates oder Deaktivieren von Updates (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9c69792d-d7c4-453b-ae2f-6d2d071d8606
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c355099f67128f90a958d59f91de5f0d21c68a19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e88dda740e842ad4b7a96d1e1b73dd9bf7b14844
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149011"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201220"
 ---
 # <a name="check-for-updates-or-turn-updates-off-report-builder-and-ssrs"></a>Suchen nach Updates oder Deaktivieren von Updates (Berichts-Generator und SSRS)
   Jedes Mal, wenn Sie einen Bericht öffnen, überprüft der Berichts-Generator, ob die veröffentlichten Instanzen der Berichtsteile in diesem Bericht auf dem Berichtsserver oder auf der in den Berichtsserver integrierten SharePoint-Website aktualisiert wurden. Er überprüft auch Änderungen in den abhängigen Elementen des Berichtsteils, z. B. im Dataset und den Parametern. Wenn Berichtsteile oder ihre Abhängigkeiten auf der Website oder dem Server aktualisiert wurden, zeigt eine Informationsleiste im Bericht die Anzahl der aktualisierten Teile an. Sie können die Updates anzeigen und akzeptieren oder ablehnen oder die Informationsleiste schließen.  
@@ -28,7 +28,7 @@ ms.locfileid: "36149011"
   
 ### <a name="to-turn-on-and-off-report-part-updates"></a>So aktivieren und deaktivieren Sie Updates von Berichtsteilen  
   
-1.  Klicken Sie auf die Schaltfläche Berichts-Generator, und klicken Sie dann auf **Optionen**.  
+1.  Klicken Sie auf die Schaltfläche "Berichts-Generator", und klicken Sie dann auf **Optionen**.  
   
 2.  In der **Optionen** Dialogfeld auf die **Ressourcen** Registerkarte aktivieren oder Deaktivieren der **Updates von berichtsteilen in meinen Berichten anzeigen** Kontrollkästchen.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "36149011"
   
 ### <a name="to-check-for-updates"></a>So überprüfen Sie auf Updates  
   
--   Mit der rechten Maustaste in der Entwurfsoberfläche außerhalb des Berichts oder im Hauptteil Berichts, und klicken Sie auf **nach Updates suchen**.  
+-   Mit der rechten Maustaste in die Entwurfsoberfläche außerhalb des Berichts oder im Hauptteil Berichts, und klicken Sie auf **nach Updates suchen**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Berichtsteile &#40;Berichts-Generator und SSRS&#41;](report-parts-report-builder-and-ssrs.md)   

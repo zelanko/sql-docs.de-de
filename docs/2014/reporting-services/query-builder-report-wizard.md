@@ -1,5 +1,5 @@
 ---
-title: Abfrage-Generator (Berichts-Assistent) | Microsoft Docs
+title: Abfrage-Generator (Berichts-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.dataview.vdtquerydesigner.f1
 - sql12.rtp.rptwizard.querybuilder.f1
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Query Builder [Reporting Services]
 ms.assetid: 1b0904ea-28c1-448e-b56c-c0fdfbc8b222
 caps.latest.revision: 21
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9d6e087d2df36209c443eb8411e2439fe7400360
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8fef45f5ec6c4b9e0682ea625b2cc84bc8aaa089
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150290"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253462"
 ---
 # <a name="query-builder-report-wizard"></a>Abfrage-Generator (Berichts-Assistent)
   Mithilfe des Abfrage-Generators können Sie eine Abfrage angeben, die ein Resultset abruft, das in einem Bericht verwendet werden soll. Sie können zwischen zwei Abfrage-Generatoren auswählen:  
@@ -44,13 +44,13 @@ ms.locfileid: "36150290"
  **Importieren**  
  Öffnet das Dialogfeld **Abfrage importieren** und zeigt RDL- und SQL-Dateien für jeden verfügbaren Bericht an. Sie können die importierte Abfrage so verwenden, wie sie ist, oder diese im Abfrage-Generator ändern.  
   
- **! ("Ausführen")**  
+ **! (Ausführen)**  
  Führt die Abfrage aus und gibt ein Resultset zurück, falls die Abfrage gültig ist. Beachten Sie, dass Sie die Abfrage nicht ausführen können, wenn sie ein Ausdruck ist. Um eine ausdruckbasierte Abfrage zu überprüfen, müssen Sie eine Vorschau des Berichts anzeigen.  
   
  **Befehlstyp**  
  Gibt Text, die gespeicherte Prozedur oder den Tabellendirektmodus (TableDirect) an. Ob ein Befehlstyp verfügbar ist, hängt von der Datenverarbeitungserweiterung ab, die Sie angegeben haben.  
   
- **Bereich "Abfrage"**  
+ **Abfragebereich**  
  Geben Sie die Abfrage ein.  
   
  **Ergebnisbereich**  

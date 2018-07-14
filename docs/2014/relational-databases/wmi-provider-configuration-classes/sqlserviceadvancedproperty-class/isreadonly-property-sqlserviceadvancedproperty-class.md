@@ -1,5 +1,5 @@
 ---
-title: IsReadOnly-Eigenschaft (SqlServiceAdvancedProperty-Klasse) | Microsoft Docs
+title: IsReadOnly-Eigenschaft (SqlServiceAdvancedProperty-Klasse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - IsReadOnly property
 ms.assetid: 9672e70f-1d8c-4133-ac73-3b5733a1c4ee
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e7b8d153072f4e934bbbe95b37375d53acd6f559
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 6f149dcd62d9e2e91df6b129d64022bcbc305ba8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148322"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242390"
 ---
 # <a name="isreadonly-property-sqlserviceadvancedproperty-class"></a>IsReadOnly-Eigenschaft (SqlServiceAdvancedProperty-Klasse)
   Ruft die boolesche Eigenschaft ab, die angibt, ob die erweiterte Eigenschaft schreibgeschützt ist, oder legt diese fest.  
@@ -46,7 +46,7 @@ object
  Ein Objekt der [SqlServiceAdvancedProperty-Klasse](sqlserviceadvancedproperty-class.md) , das eine erweiterte Eigenschaft darstellt.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
- Ein boolescher Wert, der angibt, ob die erweiterte Eigenschaft schreibgeschützt ist: `true` , wenn die erweiterte Eigenschaft schreibgeschützt ist oder `false` , wenn die erweiterte Eigenschaft geändert werden kann.  
+ Ein boolescher Wert, der angibt, ob die erweiterte Eigenschaft schreibgeschützt oder nicht: `true` , wenn die erweiterte Eigenschaft schreibgeschützt ist oder `false` Wenn die erweiterte Eigenschaft geändert werden kann.  
   
 ## <a name="remarks"></a>Hinweise  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: eb2234b466a41b58cc1dd137950514de4b7aa458
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 67212f7457e029b18f39b15c6f105ed315f28251
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148334"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248620"
 ---
 # <a name="start-the-sqlcmd-utility"></a>Starten des Hilfsprogramms "sqlcmd"
   Damit Sie mit der Verwendung von `sqlcmd` beginnen können, müssen Sie zunächst das Hilfsprogramm starten und eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen. Sie können die Verbindung mit einer Standardinstanz oder mit einer benannten Instanz herstellen. Der erste Schritt besteht darin, das Hilfsprogramm `sqlcmd` zu starten.  
@@ -36,19 +36,19 @@ ms.locfileid: "36148334"
   
 1.  Klicken Sie im **Startmenü** auf **Ausführen**. Geben Sie im Feld **Öffnen** den Befehl **cmd**ein, und klicken Sie auf **OK** , um ein Eingabeaufforderungsfenster zu öffnen.  
   
-2.  Geben Sie an der Eingabeaufforderung `sqlcmd`.  
+2.  Geben Sie an der Eingabeaufforderung den Befehl `sqlcmd`.  
   
 3.  Drücken Sie die EINGABETASTE.  
   
      Sie verfügen jetzt über eine vertrauenswürdige Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die auf dem Computer ausgeführt wird.  
   
-     **1 >** ist die `sqlcmd` Aufforderung, die gibt die Zeilennummer an. Bei jedem Drücken der EINGABETASTE wird die Nummer um eins erhöht.  
+     **1 >** ist die `sqlcmd` Eingabeaufforderung, die die Nummer der Zeile angibt. Bei jedem Drücken der EINGABETASTE wird die Nummer um eins erhöht.  
   
-4.  Zum Beenden der `sqlcmd` Geben Sie die Sitzung `EXIT` an die `sqlcmd` Eingabeaufforderung.  
+4.  Zum Beenden der `sqlcmd` "Sitzung", Typ `EXIT` an die `sqlcmd` Eingabeaufforderung.  
   
 ### <a name="to-start-the-sqlcmd-utility-and-connect-to-a-named-instance-of-sql-server"></a>So starten Sie das Hilfsprogramm "sqlcmd" und stellen eine Verbindung mit einer benannten Instanz von SQL Server her  
   
-1.  Öffnen Sie ein Eingabeaufforderungsfenster, und geben `sqlcmd -S` *MyServer\instanceName*. Ersetzen Sie *myServer\Instanzname* durch den Namen des Computers und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, mit der Sie eine Verbindung herstellen möchten.  
+1.  Öffnen Sie eine Eingabeaufforderung, und geben `sqlcmd -S` *MyServer\instanceName*. Ersetzen Sie *myServer\Instanzname* durch den Namen des Computers und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, mit der Sie eine Verbindung herstellen möchten.  
   
 2.  Drücken Sie die EINGABETASTE.  
   

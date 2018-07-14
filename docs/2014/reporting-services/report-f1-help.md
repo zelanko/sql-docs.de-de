@@ -1,5 +1,5 @@
 ---
-title: Melden Sie F1-Hilfe | Microsoft Docs
+title: Melden Sie die F1-Hilfe | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 775706be-41a7-4ae7-bad6-349f5ebd9e4d
 caps.latest.revision: 5
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 18a145599349aa25fdf4914e4c61a02defc8e5af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6feda48cdac4f7a6c43f94abb0fd74d688e7a963
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149004"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270846"
 ---
 # <a name="report-f1-help"></a>Hilfe (F1) zu Berichten
   Die Themen in diesem Abschnitt enthalten Informationen zu den Optionen, die Sie im Dialogfeld **Berichtseigenschaften** für einen Bericht festlegen können. Zum Öffnen des Dialogfelds **Berichtseigenschaften** klicken Sie mit der rechten Maustaste auf den Hintergrund des Berichts-Designers, und klicken Sie dann auf **Berichtseigenschaften**.  

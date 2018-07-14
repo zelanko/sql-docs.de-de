@@ -1,5 +1,5 @@
 ---
-title: Ändern von Measures | Microsoft Docs
+title: Ändern von Measures | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7bd48810-15ce-45ff-862b-372d08606995
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: f95003c329dc121c3a743f1f4447a3aa8a9a506a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 447032ab32e222f3827c34020aef612e8125a518
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148015"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232380"
 ---
 # <a name="modifying-measures"></a>Ändern von Measures
   Sie können die **FormatString**-Eigenschaft verwenden, um Formatierungseinstellungen zu definieren, die die Darstellung von Measures steuern. In dieser Aufgabe geben Sie Formatierungseigenschaften für die Währungs- und Prozentsatzmeasures im [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube an.  
@@ -62,7 +62,7 @@ ms.locfileid: "36148015"
   
 8.  Ändern Sie im Fenster Eigenschaften die **Namen** -Eigenschaft für die **Unit Price Discount Pct** measure `Unit Price Discount Percentage`.  
   
-9. In der **Measures** Bereich, klicken Sie auf **Tax Amt** und ändern Sie den Namen des Measures zu `Tax Amount`.  
+9. In der **Measures** Bereich, klicken Sie auf **Tax Amt** und ändern Sie den Namen dieses Measures in `Tax Amount`.  
   
 10. Klicken Sie im Eigenschaftenfenster auf das Symbol **Automatisch im Hintergrund** , um das Eigenschaftenfenster auszublenden, und anschließend auf der Symbolleiste der Registerkarte **Cubestruktur** auf **Measuresstruktur anzeigen** .  
   

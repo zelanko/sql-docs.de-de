@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
 - removing rows
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Results pane
 ms.assetid: a1147905-fe4a-4fac-b576-a17622477e66
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b164efa306fc78305181c7fafaf3b302b6482e6f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 950a47653592011cbcf3cd0a9249825c0bf70209
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150483"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170171"
 ---
 # <a name="delete-rows-in-the-results-pane-visual-database-tools"></a>Löschen von Zeilen im Ergebnisbereich (Visual Database Tools)
   Löschen Sie Zeilen im Ergebnisbereich, wenn Sie Datensätze in der Datenbank löschen möchten. Wenn Sie sämtliche Zeilen löschen möchten, können Sie eine Löschabfrage verwenden. Weitere Informationen finden Sie unter [Erstellen von Löschabfragen &#40;Visual Database Tools&#41;](visual-database-tools.md). Wenn Sie nur einige Zeilen aus dem Ergebnisbereich entfernen möchten, ändern Sie die Abfragekriterien. Weitere Informationen finden Sie unter [Angeben von Suchkriterien &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md).  

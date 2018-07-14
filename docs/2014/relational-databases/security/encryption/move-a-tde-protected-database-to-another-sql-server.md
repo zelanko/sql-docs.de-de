@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transparent Data Encryption, moving
 - TDE, moving a database
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e22249985710ebc3ab63aafe99779602ccffe4ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: 7bb389ff9f94a60607f30355ec5cf8ff5872b5ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148134"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266306"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Verschieben einer TDE-geschützten Datenbank auf einen anderen SQL-Server
   In diesem Thema wird die Vorgehensweise zum Schutz einer Datenbank anhand transparenter Datenverschlüsselung (TDE) und das Verschieben der Datenbank in eine andere Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]beschrieben. Die TDE führt die E/A-Verschlüsselung und -Entschlüsselung der Daten und der Protokolldateien in Echtzeit durch. Die Verschlüsselung verwendet einen Verschlüsselungsschlüssel für die Datenbank (Database Encryption Key, DEK), der in der Datenbankstartseite gespeichert wird, damit er während der Wiederherstellung verfügbar ist. Der DEK ist ein symmetrischer Schlüssel, der durch ein in der `master`-Datenbank des Servers gespeichertes Zertifikat gesichert wird, oder ein asymmetrischer Schlüssel, der von einem EKM-Modul geschützt wird.  
@@ -51,21 +50,21 @@ ms.locfileid: "36148134"
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
--   Beim Verschieben einer TDE-geschützten Datenbank muss auch das Zertifikat oder der asymmetrische Schlüssel verschoben werden, mit dem der DEK geöffnet wird. Das Zertifikat oder den asymmetrischen Schlüssel muss in installiert sein der `master` Datenbank des Zielservers, sodass [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] können auf die Datenbankdateien zugegriffen. Weitere Informationen finden Sie unter [Transparente Datenverschlüsselung &#40;TDE&#41;](transparent-data-encryption.md).  
+-   Beim Verschieben einer TDE-geschützten Datenbank muss auch das Zertifikat oder der asymmetrische Schlüssel verschoben werden, mit dem der DEK geöffnet wird. Das Zertifikat oder asymmetrischen Schlüssels muss in installiert sein der `master` Datenbank des Zielservers, sodass [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] können auf die Datenbankdateien zugegriffen. Weitere Informationen finden Sie unter [Transparente Datenverschlüsselung &#40;TDE&#41;](transparent-data-encryption.md).  
   
 -   Bewahren Sie Kopien der Zertifikatdatei und der Datei mit dem privaten Schlüssel auf, um das Zertifikat wiederherzustellen. Das Kennwort für den privaten Schlüssel muss nicht mit dem Kennwort für den Datenbank-Hauptschlüssel übereinstimmen.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Speichert die Dateien das hier erstellte **C:\Program Files\Microsoft SQL Server\MSSQL12. MSSQLSERVER\MSSQL\DATA** standardmäßig. Die Dateinamen und -orte können individuell abweichen.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Speichert die Dateien, die hier erstellten **c:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSSQL12. MSSQLSERVER\MSSQL\DATA** standardmäßig. Die Dateinamen und -orte können individuell abweichen.  
   
 ###  <a name="Security"></a> Sicherheit  
   
 ####  <a name="Permissions"></a> Berechtigungen  
   
--   Erfordert `CONTROL DATABASE` -Berechtigung für die `master` Datenbank den Datenbankhauptschlüssel zu erstellen.  
+-   Erfordert `CONTROL DATABASE` -Berechtigung für die `master` Datenbank, um den Datenbankhauptschlüssel zu erstellen.  
   
--   Erfordert `CREATE CERTIFICATE` -Berechtigung für die `master` Datenbank, um das Zertifikat zu erstellen, die der DEK geschützt.  
+-   Erfordert `CREATE CERTIFICATE` -Berechtigung für die `master` Datenbank, um das Zertifikat zu erstellen, die von der DEK geschützt.  
   
--   Erfordert `CONTROL DATABASE` -Berechtigung für die verschlüsselte Datenbank und `VIEW DEFINITION` -Berechtigung für das Zertifikat oder den asymmetrischen Schlüssel, der zum Verschlüsseln des Verschlüsselungsschlüssels verwendet wird.  
+-   Erfordert `CONTROL DATABASE` -Berechtigung für die verschlüsselte Datenbank und `VIEW DEFINITION` -Berechtigung für das Zertifikat oder asymmetrischen Schlüssel, der zum Verschlüsseln des Verschlüsselungsschlüssels verwendet wird.  
   
 ##  <a name="SSMSProcedure"></a> So erstellen Sie eine durch transparente Datenverschlüsselung geschützte Datenbank  
   

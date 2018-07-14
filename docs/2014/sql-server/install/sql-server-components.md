@@ -1,5 +1,5 @@
 ---
-title: SQL Server-Komponenten | Microsoft Docs
+title: SQL Server-Komponenten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Upgrade Advisor, components
 - listing components to analyze
@@ -22,21 +22,21 @@ helpviewer_keywords:
 - identifying components to analyze
 ms.assetid: 539b9525-ce3f-4950-9146-5527a5a297ee
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 85a89e2114cd00b28444cf6ee62d12ff1abdec42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 99998b5b9e24de92f826a73941bf6b86e5ad4318
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151731"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177119"
 ---
 # <a name="sql-server-components"></a>SQL Server-Komponenten
-  Sie können den Analyse-Assistenten auf einem lokalen oder Remotecomputer Computer mit ausführen [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] installiert. Der erste Schritt bei der Analyse vor dem Upgrade besteht darin, den Computer und die Komponenten für die Analyse zu identifizieren.  
+  Sie können den Analyse-Assistenten ausführen, für einen lokal oder remote-Computer, die [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] installiert. Der erste Schritt bei der Analyse vor dem Upgrade besteht darin, den Computer und die Komponenten für die Analyse zu identifizieren.  
   
 ## <a name="options"></a>Tastatur  
- **Computername**  
+ **Name des Computers**  
  Gibt den Namen des zu analysierenden Computers an. Der Upgrade Advisor füllt die **Servernamen** Feld mit dem Namen des lokalen Computers. Sie können auch "." und "localhost" verwenden, um die Verbindung mit dem lokalen Computer herzustellen.  
   
  Wenn Sie einen anderen Computer analysieren, beachten Sie die folgenden Hinweise:  

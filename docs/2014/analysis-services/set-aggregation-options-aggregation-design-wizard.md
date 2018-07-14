@@ -1,5 +1,5 @@
 ---
-title: Legen Sie Aggregationsoptionen festlegen (Aggregationsentwurfs-Assistent) | Microsoft Docs
+title: Aggregationsoptionen festlegen (Aggregationsentwurfs-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.setaggregateoptions.f1
 ms.assetid: 4672d686-10c0-43f8-a53e-a16dfa840c81
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 29a9334ebe2f098c805d7093a739ecbf29d18d72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e99f96de2f9b75fb49b0de5a73ef611bb7d991c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159048"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190890"
 ---
 # <a name="set-aggregation-options-aggregation-design-wizard"></a>Aggregationsoptionen festlegen (Aggregationsentwurfs-Assistent)
   Mithilfe der Seite **Aggregationsoptionen festlegen** können Sie den Aggregationsentwurf starten und Speicher- sowie Leistungslimits für die generierten Aggregationen angeben.  
@@ -33,10 +33,10 @@ ms.locfileid: "36159048"
  **Leistungsgewinn erreicht**  
  Legen Sie ein Limit für den Aggregationsentwurf fest, indem Sie den maximalen Prozentsatz des Leistungsgewinns angeben, der durch den Aggregationsentwurf schätzungsweise erreicht werden kann.  
   
- **Auf ' Beenden '**  
+ **Ich klicken Sie auf Beenden**  
  Legen Sie ein Limit für den Aggregationsentwurf fest, indem Sie während des Entwurfs auf **Beenden** klicken.  
   
- **Entwerfen Sie Aggregationen (0 %) nicht**  
+ **Führen Sie keine Aggregationen entwerfen Sie (0 %)**  
  Geben Sie an, dass der Aggregationsentwurf keine Aggregationen enthält. Mithilfe dieser Option können Sie den vorhandenen Aggregationsentwurf einer Partition, Measuregruppe oder eines Cubes löschen.  
   
  **Start**  
@@ -49,7 +49,7 @@ ms.locfileid: "36159048"
  Setzt alle auf der Seite verfügbaren Aggregationsoptionen auf die Standardwerte zurück.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Aggregationsentwurfs-Assistent F1 Hilfe](aggregation-design-wizard-f1-help.md)   
+ [Aggregation Design-Assistent F1-Hilfe](aggregation-design-wizard-f1-help.md)   
  [Analysis Services-Assistenten &#40;mehrdimensionale Daten&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

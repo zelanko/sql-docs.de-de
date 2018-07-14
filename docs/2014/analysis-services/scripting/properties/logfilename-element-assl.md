@@ -1,5 +1,5 @@
 ---
-title: LogFileName-Element (ASSL) | Microsoft Docs
+title: LogFileName-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - LogFileName element
 ms.assetid: 80c7530d-ef73-44c3-88b5-c11c0f290946
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e3038ae45e740b52662f6e580808096541b7b386
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78f8a9cfa6462f7932e69323b0f7622d0f12064a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151439"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171341"
 ---
 # <a name="logfilename-element-assl"></a>LogFileName-Element (ASSL)
   Enthält den Dateinamen der Protokolldatei für die [Ablaufverfolgung](../objects/trace-element-assl.md) Element.  
@@ -64,10 +64,10 @@ ms.locfileid: "36151439"
 ## <a name="remarks"></a>Hinweise  
  Die Protokolldatei wird im Protokollordner der Instanz von gespeichert [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
- Das Element, das das übergeordnete Element des entspricht `LogFileName` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Trace>.  
+ Das Element, das dem übergeordneten entspricht `LogFileName` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Trace>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verfolgt Element &#40;ASSL&#41;](../collections/traces-element-assl.md)   
+ [Führt eine Ablaufverfolgung für Element &#40;ASSL&#41;](../collections/traces-element-assl.md)   
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  
   
   

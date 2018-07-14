@@ -1,5 +1,5 @@
 ---
-title: Beispiele für URLs für veröffentlichte Berichtselemente auf einem Berichtsserver im SharePoint-Modus (SSRS) | Microsoft Docs
+title: Beispiele URLs von veröffentlichten Berichtselementen auf einem Berichtsserver im SharePoint-Modus (SSRS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bd98a2e64ca72e0e9b39328620b88732606e98af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: ce1e34688069063cde47849d00497a056c964431
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151052"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214730"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>Beispiele für URLs von veröffentlichten Berichtselementen auf einem Berichtsserver im SharePoint-Modus (SSRS)
   Wenn Sie Berichte und verwandte Elemente in einer SharePoint-Bibliothek veröffentlichen möchten, können Sie den Inhalt mithilfe der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Erstellungstools, wie dem Berichts-Designer, veröffentlichen oder den Inhalt mithilfe von SharePoint-Websiteaktionen hochladen.  
@@ -79,7 +79,7 @@ ms.locfileid: "36151052"
  Eine Berichtsdefinition kann eine Bilddatei enthalten, die als externe Datei gespeichert ist. Sie können in der Berichtsdefinition auf diese Datei verweisen, indem Sie eine vollqualifizierte URL für die Bilddatei festlegen. Er kann auf einer SharePoint-Website oder auf einem Remotecomputer gespeichert sein.  
   
 > [!IMPORTANT]  
->  Falls die externe URL auf ein Bild auf einer SharePoint-Website verweist, wird das Symbol für beschädigte Bilder angezeigt, wenn Sie den Bericht im Berichts-Generator in der Vorschau anzeigen. Wenn Sie den Bericht auf der SharePoint-Website hochladen und im verbundenen Modus rendern, wird das Symbol für beschädigte Bilder angezeigt, wenn Sie nur über `View Items` Berechtigungen.  
+>  Falls die externe URL auf ein Bild auf einer SharePoint-Website verweist, wird das Symbol für beschädigte Bilder angezeigt, wenn Sie den Bericht im Berichts-Generator in der Vorschau anzeigen. Wenn Sie den Bericht auf der SharePoint-Website hochladen und im verbundenen Modus rendern, wird das Symbol für beschädigte Bilder angezeigt, wenn nur `View Items` Berechtigungen.  
   
  Unabhängig vom Berichtsservermodus muss es sich in einem Bericht bei Verweisen auf eine externe Bilddatei um eine vollqualifizierte URL handeln. Zudem ist es für Verweise auf eine externe Bilddatei im Allgemeinen erforderlich, dass Sie das Konto für die unbeaufsichtigte Berichtsverarbeitung konfigurieren.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "36151052"
 ### <a name="file-names"></a>Dateinamen  
  Dateinamen in einer URL für Berichtselemente müssen eine Dateinamenerweiterung aufweisen. Durch die Dateinamenerweiterung wird der Dateityp bestimmt. Wenn Sie Berichtselemente über ein Berichterstellungstool veröffentlichen, wird die Dateinamenerweiterung automatisch eingeschlossen. Wenn Sie ein Berichtselement in eine SharePoint-Bibliothek hochladen, müssen Sie eine Dateinamenerweiterung einschließen.  
   
- Wenn Sie für Elemente, die Sie auf eine SharePoint-Website hochladen, keine Dateinamenerweiterung angeben, tritt der `rsInvalidDataSourceReference`-Fehler auf. Dateinamen dürfen keine Zeichen enthalten, die von SharePoint-Anwendungen nicht als gültige Dateinamenzeichen erkannt werden. Verwenden Sie keine die folgenden Zeichen enthalten: # % & *: \< >? / { | }.  
+ Wenn Sie für Elemente, die Sie auf eine SharePoint-Website hochladen, keine Dateinamenerweiterung angeben, tritt der `rsInvalidDataSourceReference`-Fehler auf. Dateinamen dürfen keine Zeichen enthalten, die von SharePoint-Anwendungen nicht als gültige Dateinamenzeichen erkannt werden. Fügen Sie keine die folgenden Zeichen enthalten: # % & *: \< >? / { | }.  
   
 ## <a name="differences-between-uploading-and-publishing"></a>Unterschiede zwischen Hochladen und Veröffentlichen  
  Wenn Sie den Berichts-Designer oder den Berichts-Generator zum Veröffentlichen von Berichten und zugehörigen Dateien in einer Bibliothek verwenden, werden die Dateien überprüft, bevor sie hinzugefügt werden. Wenn Sie Berichte und zugehörige Dateien mithilfe der **Upload** -Aktion in einer SharePoint-Bibliothek hochladen, erfolgt keine Überprüfung. Sie wissen erst, ob die Datei gültig ist, wenn Sie den Bericht verwalten, bearbeiten oder ausführen und somit auf ihn zugreifen.  

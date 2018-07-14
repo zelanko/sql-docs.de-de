@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.designers.properties.Column.ColumnIdentitySpec
 - vdt.designers.properties.Column
@@ -17,15 +17,15 @@ f1_keywords:
 - vdt.designers.properties.Column.ColumnFulltextSpec
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2442b50d7c7a6a325013d3a3a808747925391183
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1aed3d78cbc0f9ef44c15310e2ae9085226c3413
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148329"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236180"
 ---
 # <a name="column-properties-visual-database-tools"></a>Spalteneigenschaften (Visual Database Tools)
   Für Spalten gibt es zwei Sätze von Eigenschaften: einen vollständigen Satz, der im Tabellen-Designer auf der Registerkarte **Spalteneigenschaften** angezeigt wird (nur für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken verfügbar), und eine Teilmenge, die im Server-Explorer im Eigenschaftenfenster angezeigt wird.  
@@ -189,6 +189,6 @@ ms.locfileid: "36148329"
  Zeigt die für den Datentyp der Spalte zulässige Größe in Byte an. Beispiel: Ein `nchar`-Datentyp kann eine Länge von 10 besitzen (die Anzahl der Zeichen), würde aber wegen der Unicode-Zeichensätze eine Größe von 20 Byte besitzen.  
   
 > [!NOTE]  
->  Die Länge eines `varchar(max)`-Datentyps variiert je nach Zeile. Sp_help gibt (-1) als die Länge der `varchar(max)` Spalte. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] zeigt -1 als Spaltengröße an.  
+>  Die Länge eines `varchar(max)`-Datentyps variiert je nach Zeile. Sp_help gibt (-1) zurück, als die Länge des `varchar(max)` Spalte. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] zeigt -1 als Spaltengröße an.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Zeitreihenvorhersagen mit Ersetzungsdaten (Data Mining-Lernprogramm für fortgeschrittene) | Microsoft Docs
+title: Zeitreihenvorhersagen mit Ersetzungsdaten (Data Mining Tutorial für fortgeschrittene) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a23a6e1d-1d49-41ea-8314-925dc8e4df5e
 caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: d5639aa63affadcdf79acc6029840e7025081245
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: c170fab7f4f6711e81e07603302839430404aa3b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312468"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267756"
 ---
 # <a name="time-series-predictions-using-replacement-data-intermediate-data-mining-tutorial"></a>Erstellen von Zeitreihenvorhersagen mit Ersetzungsdaten (Data Mining-Lernprogramm für Fortgeschrittene)
   In dieser Aufgabe erstellen Sie auf Grundlage weltweiter Umsatzdaten ein neues Modell. Sie erstellen dann eine Vorhersageabfrage, mit der Sie das weltweite Umsatzmodell auf eine einzelnen Region anwenden.  
@@ -36,7 +36,7 @@ ms.locfileid: "36312468"
 ## <a name="performing-cross-prediction-with-a-time-series-model"></a>Kreuzvorhersagen mit einem Zeitreihenmodell  
  Das Verfahren, die Daten aus einer Reihe zur Vorhersage von Trends in einer anderen Reihe zu verwenden, wird "Kreuzvorhersage" genannt. Sie können Kreuzvorhersagen in vielen Szenarien verwenden: Sie könnten z. B. entscheiden, dass die Verkäufe von Fernsehern gute Rückschlüsse bei der Vorhersage der wirtschaftlichen Aktivität allgemein sind, und wenden ein an Umsatzdaten von Fernsehern trainiertes Modell auf allgemeine Wirtschaftsdaten an.  
   
- In SQL Server Data Mining führen Sie kreuzvorhersagen mit dem Parameter REPLACE_MODEL_CASES innerhalb der Argumente an die Funktion [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
+ In SQL Server Data Mining, führen Sie kreuzvorhersagen mit dem Parameter REPLACE_MODEL_CASES innerhalb der Argumente der Funktion [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
   
  In der nächsten Aufgabe lernen Sie, wie REPLACE_MODEL_CASES verwendet wird. Sie erstellen aus den zusammengeführten Weltumsatzdaten ein Modell und dann eine Vorhersageabfrage, die das allgemeine Modell den Ersatzdaten zuordnet.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36312468"
   
     -   Verwenden Sie die Datenquelle, die Sie in dieser fortgeschrittenen Lektion bereits als Quelle für das Modell erstellt haben. Finden Sie unter [erweiterte Zeitreihenvorhersagen &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md).  
   
-         Die Datenquellensicht an: `AllRegions`  
+         Datenquellensicht: `AllRegions`  
   
     -   Wählen Sie die folgenden Spalten für den Reihenschlüssel und den Zeitschlüssel aus:  
   
@@ -78,23 +78,23 @@ ms.locfileid: "36312468"
   
 #### <a name="to-build-the-prediction-query-and-map-the-replacement-data"></a>So erstellen Sie die Vorhersageabfrage und ordnen Ersetzungsdaten zu  
   
-1.  Wenn das Modell nicht bereits geöffnet ist, doppelklicken Sie auf die AllRegions-Struktur und im Data Mining-Designer, klicken Sie auf die **Miningmodellvorhersage** Registerkarte.  
+1.  Wenn das Modell nicht bereits geöffnet ist, doppelklicken Sie auf die AllRegions-Struktur, und klicken Sie im Data Mining-Designer auf die **Miningmodellvorhersage** Registerkarte.  
   
-2.  In der **Miningmodell** Bereich, der das Modell AllRegions bereits ausgewählt sein sollte. Wenn es nicht aktiviert ist, klicken Sie auf **Modell auswählen**, und wählen Sie dann das AllRegions-Modell.  
+2.  In der **Miningmodell** Bereich, der das Modell AllRegions bereits ausgewählt sein sollte. Wenn sie nicht ausgewählt ist, klicken Sie auf **Modell auswählen**, und wählen Sie dann das AllRegions-Modell.  
   
 3.  In der **Eingabetabelle(n)** Bereich, klicken Sie auf **Falltabelle auswählen**.  
   
 4.  In der **Tabelle auswählen** (Dialogfeld), ändern Sie die Datenquelle in T1000 Pacific Region, und klicken Sie dann auf **OK**.  
   
-5.  Maustaste auf die Joinlinie zwischen dem Miningmodell und die Eingabedaten, und wählen Sie **Verbindungen ändern**. Ordnen Sie die Daten in der Datenquellensicht wie folgt dem Modell zu:  
+5.  Mit der rechten Maustaste der Joinlinie zwischen dem Miningmodell und die Eingabedaten, und wählen Sie **Verbindungen ändern**. Ordnen Sie die Daten in der Datenquellensicht wie folgt dem Modell zu:  
   
     1.  Stellen Sie sicher, dass die ReportingDate-Spalte im Miningmodell der ReportingDate-Spalte in den Eingabedaten zugeordnet ist.  
   
-    2.  In der **Zuordnung ändern** (Dialogfeld), in der Zeile für die modellspalte AvgQty, klicken Sie auf unter **Tabellenspalte** und wählen Sie dann T1000 Pacific.Quantity aus. Klicken Sie auf **OK**.  
+    2.  In der **Zuordnung ändern** Dialogfeld, in der Zeile für die modellspalte AvgQty, klicken Sie auf unter **Tabellenspalte** und wählen Sie dann T1000 Pacific.Quantity aus. Klicken Sie auf **OK**.  
   
          In diesem Schritt ordnen Sie die Spalte zu, die Sie im Modell für die Vorhersage der Durchschnittsmenge aus den tatsächlichen Umsatzdaten der Reihe T1000 erstellt haben.  
   
-    3.  Die Spalte "Region" im Modell keiner Eingabespalte nicht zuordnen.  
+    3.  Werden Sie nicht die Region-Spalte im Modell keiner Eingabespalte zugeordnet.  
   
          Da die Daten aller Reihen im Modell aggregiert sind, findet kein Abgleich der Reihenwerte wie T1000 Pacific statt, und bei der Ausführung der Vorhersageabfrage wird ein Fehler ausgegeben.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "36312468"
   
     1.  Klicken Sie im Raster auf der ersten leeren Zeile unter **Quelle**, und wählen Sie dann AllRegions-Miningmodell.  
   
-    2.  Für **Feld**, wählen Sie Region.  
+    2.  Für **Feld**, Region auswählen.  
   
     3.  Für **Alias**, Typ **Model Used**.  
   
@@ -112,9 +112,9 @@ ms.locfileid: "36312468"
   
     1.  Klicken Sie auf eine leere Zeile, und wählen Sie unter **Quelle**Option **benutzerdefinierter Ausdruck**.  
   
-    2.  In der **Alias** Geben Sie die Spalte **ModelRegion**.  
+    2.  In der **Alias** Spalte, Datentyp **ModelRegion**.  
   
-    3.  In der **Kriterium/Argument** Geben Sie die Spalte `'T1000 Pacific'`.  
+    3.  In der **Kriterium/Argument** Spalte, Datentyp `'T1000 Pacific'`.  
   
 8.  Nun richten Sie die Funktion für die Kreuzvorhersage ein.  
   
@@ -126,9 +126,9 @@ ms.locfileid: "36312468"
   
     4.  Ziehen Sie das Feld AvgQty aus dem **Miningmodell** -Bereich in die **Kriterium/Argument** Spalte mithilfe des Drag & Drop-Vorgangs.  
   
-    5.  In der **Kriterium/Argument** Spalte Geben Sie hinter dem Feldnamen, den folgenden Text: `,5, REPLACE_MODEL_CASES`  
+    5.  In der **Kriterium/Argument** Spalte, nach dem Namen des Felds geben Sie den folgenden Text: `,5, REPLACE_MODEL_CASES`  
   
-         Der vollständige Text des der **Kriterium/Argument** Textfeld sollte wie folgt lauten: `[AllRegions].[AvgQty],5,REPLACE_MODEL_CASES`  
+         Den vollständigen Text der der **Kriterium/Argument** Textfeld sollte wie folgt lauten: `[AllRegions].[AvgQty],5,REPLACE_MODEL_CASES`  
   
 9. Klicken Sie auf **Ergebnisse**.  
   
@@ -162,7 +162,7 @@ AND
  Wenn Sie beispielsweise die Filterbedingungen und die Spaltenbezeichnungen ändern, indem Sie "Pacific" durch "North America" ersetzen, erhalten Sie Vorhersagen für das T1000-Produkt in Nordamerika auf Basis des allgemeinen Modells.  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Vergleichen von Vorhersagen für Prognosemodelle &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
+ [Vergleichen von Vorhersagen für Forecasting-Modellen &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Time Series Model Query Examples](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   

@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
 caps.latest.revision: 6
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 26ddefde6223effd90d2130c40c28011de411802
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c5ad01757b050d6beb491e1f0b2878ab124f5d8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147964"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247023"
 ---
 # <a name="install-sql-server-powershell"></a>Installieren von SQL Server PowerShell
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup wird beendet, wenn er erkennt, dass Sie ausgewählt haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Features, die PowerShell-Komponenten, aber WindowsPowerShell 2.0 ist nicht installiert. Sie müssen PowerShell mit Windows Management Framework installieren und Setup dann erneut ausführen.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup wird beendet, wenn er erkennt, dass Sie ausgewählt haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Features, die PowerShell-Komponenten, aber Windows PowerShell 2.0 enthalten ist nicht installiert. Sie müssen PowerShell mit Windows Management Framework installieren und Setup dann erneut ausführen.  
   
 ## <a name="installing-includessnoversionincludesssnoversion-mdmd-powershell-support"></a>Installieren der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell-Unterstützung  
- Die Software, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Unterstützung für Windows PowerShell bietet, installieren Sie mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup. Bei Auswahl einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützen Funktionen, PowerShell erforderlich ist, werden von Setup überprüft, dass Windows PowerShell 2.0 installiert ist. Wenn PowerShell 2.0 vorhanden ist, installiert Setup die folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell-Komponenten:  
+ Die Software, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Unterstützung für Windows PowerShell bietet, installieren Sie mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup. Bei Auswahl einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützen Funktionen, die PowerShell erforderlich ist, Setup überprüft, ob Windows PowerShell 2.0 installiert ist. Wenn PowerShell 2.0 vorhanden ist, installiert Setup die folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell-Komponenten:  
   
 -   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell-Snap-Ins. Die Snap-Ins sind DLL-Dateien, die zwei Arten der Windows PowerShell-Unterstützung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]implementieren:  
   
@@ -35,11 +35,11 @@ ms.locfileid: "36147964"
   
 -   Die **Sqlps** -Modul, das in Windows PowerShell 2.0-Sitzungen laden importiert wird die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Snap-ins.  
   
--   Die veraltete **Sqlps** Hilfsprogramm, startet eine Windows PowerShell 2.0-Sitzung und importiert, die **Sqlps** Modul.  
+-   Die veraltete **Sqlps** -Dienstprogramm, das eine Windows PowerShell 2.0-Sitzung startet und importiert die **Sqlps** Modul.  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] unterstützt das Starten von Windows PowerShell-Sitzungen aus der Struktur des Objekt-Explorers. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent unterstützt Windows PowerShell-Auftragsschritte.  
   
- Wenn Windows PowerShell 2.0 nicht installiert oder deinstalliert wurde, müssen Sie es installieren, mithilfe der folgenden Anweisungen auf der [Windows Management Framework](http://go.microsoft.com/fwlink/?LinkId=186214) Seite.  
+ Wenn Windows PowerShell 2.0 nicht installiert oder deinstalliert wurde, müssen Sie es installieren, mithilfe der Anweisungen auf der [Windows Management Framework](http://go.microsoft.com/fwlink/?LinkId=186214) Seite.  
   
  Wenn Windows PowerShell deinstalliert wird, nachdem Setup abgeschlossen ist, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen für Windows PowerShell nicht funktionsfähig. Windows PowerShell kann von Windows-Benutzern deinstalliert werden. Die Deinstallation von Windows PowerShell ist unter Umständen bei einigen Upgrades von Windows-Betriebssystemen erforderlich. Um die PowerShell-Funktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu verwenden, müssen Sie PowerShell 2.0 mit Windows Management Framework erneut installieren.  
   

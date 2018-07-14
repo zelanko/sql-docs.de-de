@@ -1,5 +1,5 @@
 ---
-title: Binding-Element (XMLA) | Microsoft Docs
+title: Binding-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Binding element
 ms.assetid: d5acd8d4-8551-449a-ae30-d0ba828cc02d
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: fe6f67a91ac410596601ffd2d5e440a0de727d0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: ec223f5a56ea32388a3485f39db0bbbc494fda85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149502"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203970"
 ---
 # <a name="binding-element-xmla"></a>Binding-Element (XMLA)
-  Definiert eine Out-of-Line-Bindung für ein [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Objekt, z. B. ein Attribut in einer Dimension, für die [Bindungen](bindings-element-xmla.md) Auflistung von einem [Batch](../xml-elements-commands/batch-element-xmla.md) oder [ Prozess](../xml-elements-commands/process-element-xmla.md) Befehl.  
+  Definiert eine Out-of-Line-Bindung für ein [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Objekt, z. B. ein Attribut in einer Dimension, für die [Bindungen](bindings-element-xmla.md) Auflistung von einem [Batch](../xml-elements-commands/batch-element-xmla.md) oder [ Prozess](../xml-elements-commands/process-element-xmla.md) Befehl.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -66,9 +66,9 @@ ms.locfileid: "36149502"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- `Binding` -Elemente definieren Out-of-Line-Bindungen, abgesehen von Datenquellen und Datenquellensichten für [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Objekte zur Verarbeitung durch eine `Batch` oder `Process` Befehl. Weitere Informationen zur Verarbeitung von Objekten finden Sie unter [Processing Objects &#40;XMLA&#41;](../xml-elements-objects.md).  
+ `Binding` -Elemente definieren Out-of-Line-Bindungen, abgesehen von Datenquellen und Datenquellensichten für [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Objekte zur Verarbeitung durch eine `Batch` oder `Process` Befehl. Weitere Informationen zur Verarbeitung von Objekten finden Sie unter [Verarbeiten von Objekten &#40;XMLA&#41;](../xml-elements-objects.md).  
   
- Weitere Informationen über Out-of-Line-Bindungen finden Sie unter [Datenquellen und-Bindungen &#40;mehrdimensionale SSAS-&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Weitere Informationen zur Out-of-Line-Bindungen finden Sie unter [Datenquellen und-Bindungen &#40;mehrdimensionale SSAS-&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;XMLA&#41;](xml-elements-properties.md)  

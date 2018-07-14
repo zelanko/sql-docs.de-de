@@ -1,5 +1,5 @@
 ---
-title: Datenspalten der Benachrichtigungsereignisse | Microsoft Docs
+title: Datenspalten der Benachrichtigungsereignisse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Notification Events event category
 ms.assetid: 0ecf06da-1586-415a-9da8-60d4c634f030
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d45ee223def50ee90b078cab7274a30901ac5165
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6a436f613b39f5beb18a7dea40349ce24ded1bf5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150671"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204070"
 ---
 # <a name="notification-events-data-columns"></a>Datenspalten der Benachrichtigungsereignisse
   Benachrichtigungsereignisse sind Ereignisse, die nicht direkt vom Benutzer von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]verursacht werden. Zu Benachrichtigungen kommt es z. B., weil Benutzer zugrunde liegende Tabellen für das proaktive Zwischenspeichern aktualisieren.  
@@ -40,7 +40,7 @@ ms.locfileid: "36150671"
 |**Spaltenname**|**Spalten-ID**|**Spaltentyp**|**Spaltenbeschreibung**|  
 |---------------------|-------------------|---------------------|----------------------------|  
 |EventClass|0|1|Die Ereignisklasse dient zur Kategorisierung von Ereignissen.|  
-|EventSubclass|1|1|Die Ereignisunterklasse enthält zusätzliche Informationen zu jeder Ereignisklasse. Im folgenden sind die gültigen Unterklasse Id/Unterklasse Namenspaaren:<br /><br /> 0: Proaktives Zwischenspeichern Anfang<br />1: Proaktives Zwischenspeichern Ende<br />2: Flight Recorder gestartet<br />3: Flight Recorder beendet<br />4: Konfigurationseigenschaften aktualisiert<br />5: SQL-Ablaufverfolgung<br />6: Objekt erstellt<br />7: Objekt gelöscht<br />8: Objekt geändert<br />9: Proaktiver Zwischenspeicherabruf Anfang<br />10: Proaktiver Zwischenspeicherabruf Ende<br />11: Flight Recorder-Momentaufnahme Anfang<br />12: Flight Recorder-Momentaufnahme Ende<br />13: Proaktives Zwischenspeichern: anzeigepflichtiges Objekt aktualisiert<br />14: Verzögertes Verarbeiten: Start der Verarbeitung<br />15: Verzögertes Verarbeiten: Verarbeitung abgeschlossen<br />16: SessionOpened-Ereignis Anfang<br />17: SessionOpened-Ereignis Ende<br />18: SessionClosing-Ereignis Anfang<br />19: SessionClosing-Ereignis Ende<br />20: CubeOpened-Ereignis Anfang<br />21: CubeOpened-Ereignis Ende<br />22: CubeClosing-Ereignis Anfang<br />23: CubeClosing-Ereignis Ende<br />24: Transaktionsabbruch angefordert|  
+|EventSubclass|1|1|Die Ereignisunterklasse enthält zusätzliche Informationen zu jeder Ereignisklasse. Im folgenden finden gültige Unterklasse Id/Unterklasse Namenspaaren:<br /><br /> 0: Proaktives Zwischenspeichern Anfang<br />1: Proaktives Zwischenspeichern Ende<br />2: Flight Recorder gestartet<br />3: Flight Recorder beendet<br />4: Konfigurationseigenschaften aktualisiert<br />5: SQL-Ablaufverfolgung<br />6: Objekt erstellt<br />7: Objekt gelöscht<br />8: Objekt geändert<br />9: Proaktiver Zwischenspeicherabruf Anfang<br />10: Proaktiver Zwischenspeicherabruf Ende<br />11: Flight Recorder-Momentaufnahme Anfang<br />12: Flight Recorder-Momentaufnahme Ende<br />13: Proaktives Zwischenspeichern: anzeigepflichtiges Objekt aktualisiert<br />14: Verzögertes Verarbeiten: Start der Verarbeitung<br />15: Verzögertes Verarbeiten: Verarbeitung abgeschlossen<br />16: SessionOpened-Ereignis Anfang<br />17: SessionOpened-Ereignis Ende<br />18: SessionClosing-Ereignis Anfang<br />19: SessionClosing-Ereignis Ende<br />20: CubeOpened-Ereignis Anfang<br />21: CubeOpened-Ereignis Ende<br />22: CubeClosing-Ereignis Anfang<br />23: CubeClosing-Ereignis Ende<br />24: Transaktionsabbruch angefordert|  
 |CurrentTime|2|5|Enthält die aktuelle Zeit des Benachrichtigungsereignisses (wenn verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Enthält den Zeitpunkt, zu dem das Ereignis begonnen hat, falls verfügbar. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |EndTime|4|5|Enthält die Uhrzeit, zu der das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  

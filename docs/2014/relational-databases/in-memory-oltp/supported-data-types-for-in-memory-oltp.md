@@ -1,5 +1,5 @@
 ---
-title: Unterstützte Datentypen | Microsoft Docs
+title: Unterstützte Datentypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a7380ef0-c9d7-49e4-b6de-fad34752b9f3
 caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 93c6555c1a8400306d40b2d3a719f280104ef582
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 3f967b7cf4c20492f7e7d46ad9b8f9a2556042e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151128"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195310"
 ---
 # <a name="supported-data-types"></a>Unterstützte Datentypen
-  Die folgenden Datentypen sind **unterstützt** in speicheroptimierten Tabellen und systemintern kompilierte gespeicherte Prozeduren:  
+  Die folgenden Datentypen sind **unterstützt** in speicheroptimierten Tabellen und systemintern kompilierten gespeicherten Prozeduren:  
   
  **Numerische Datentypen**  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36151128"
   
  <sup>1</sup> Einschränkung beträgt 8060 Bytes pro Zeilensumme, Zählung (n) in Typen variabler Länge.  
   
- Informationen zu unterstützten Sortierungen finden Sie unter [Collations and Code Pages](../../database-engine/collations-and-code-pages.md).  
+ Weitere Informationen zu unterstützten Sortierungen finden Sie unter [Sortierungen und Codepages](../../database-engine/collations-and-code-pages.md).  
   
  **Datums- und Uhrzeitdatentypen:**  
   

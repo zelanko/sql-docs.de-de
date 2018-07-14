@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transact sql scripts
 ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ff18203f0120210f3443973ed7e44761b84ac8ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4aa1fd4418e4758ca41cce9d3aeba70838a0dce0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149357"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260406"
 ---
 # <a name="run-transact-sql-script-files-using-sqlcmd"></a>Ausführen von Transact-SQL-Skriptdateien mithilfe von sqlcmd
-  Sie können `sqlcmd` verwenden, um eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skriptdatei auszuführen. Ein [!INCLUDE[tsql](../../includes/tsql-md.md)] Skriptdatei ist eine Textdatei, die eine Kombination aus enthalten kann [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen `sqlcmd` Befehle und Skriptvariablen.  
+  Sie können `sqlcmd` verwenden, um eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skriptdatei auszuführen. Ein [!INCLUDE[tsql](../../includes/tsql-md.md)] Skriptdatei ist eine Textdatei, die eine Kombination aus enthalten können [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen `sqlcmd` Befehle und Skriptvariablen.  
   
  Führen Sie die folgenden Schritte aus, um eine einfache [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skriptdatei mithilfe des Editors zu erstellen:  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36149357"
   
 1.  Öffnen Sie ein Eingabeaufforderungsfenster.  
   
-2.  Geben Sie im Eingabeaufforderungsfenster: `sqlcmd -S myServer\instanceName -i C:\myScript.sql`  
+2.  Geben Sie im Eingabeaufforderungsfenster Befehl: `sqlcmd -S myServer\instanceName -i C:\myScript.sql`  
   
 3.  Drücken Sie die EINGABETASTE.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36149357"
   
 1.  Öffnen Sie ein Eingabeaufforderungsfenster.  
   
-2.  Geben Sie im Eingabeaufforderungsfenster: `sqlcmd -S myServer\instanceName -i C:\myScript.sql -o C:\EmpAdds.txt`  
+2.  Geben Sie im Eingabeaufforderungsfenster Befehl: `sqlcmd -S myServer\instanceName -i C:\myScript.sql -o C:\EmpAdds.txt`  
   
 3.  Drücken Sie die EINGABETASTE.  
   

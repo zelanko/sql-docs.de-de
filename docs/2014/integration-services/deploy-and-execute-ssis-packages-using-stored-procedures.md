@@ -1,5 +1,5 @@
 ---
-title: Bereitstellen und Ausführen von SSIS-Paketen mithilfe von gespeicherten Prozeduren | Microsoft Docs
+title: Bereitstellen und Ausführen von SSIS-Paketen mit gespeicherten Prozeduren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 60914b0c-1f65-45f8-8132-0ca331749fcc
 caps.latest.revision: 9
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 273525c7bba0afb3424a394dec758471aaf082d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4c9a86fd007501c3c8fa742f55057852d222f358
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149928"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266633"
 ---
 # <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>Bereitstellen und Ausführen von SSIS-Paketen mithilfe von gespeicherten Prozeduren
   Wenn Sie ein [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt für die Verwendung des Projektbereitstellungsmodells konfigurieren, können Sie gespeicherte Prozeduren im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Katalog verwenden, um das Projekt bereitzustellen und die Pakete auszuführen. Informationen zum Projektbereitstellungsmodell finden Sie unter [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "36149928"
   
 1.  Rufen Sie [catalog.deploy_project &#40;SSISDB-Datenbank&#41;](/sql/integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database) auf, um das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt bereitzustellen, das das Paket für den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Server enthält.  
   
-     Zum Abrufen des binären Inhalts der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -projektbereitstellungsdatei für die *@project_stream* Parameter, eine SELECT-Anweisung mit der OPENROWSET-Funktion und der BULK-Rowsetanbieter verwenden. Der BULK-Rowsetanbieter ermöglicht es Ihnen, Daten aus einer Datei zu lesen. Das SINGLE_BLOB-Argument für den BULK-Rowsetanbieter gibt den Inhalt der Datendatei als einzeiliges, einspaltiges Rowset vom Typ "varbinary(max)" zurück. Weitere Informationen finden Sie unter [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
+     Zum Abrufen des binären Inhalts der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -projektbereitstellungsdatei für die *@project_stream* -Parameter verwenden Sie eine SELECT-Anweisung mit der OPENROWSET-Funktion und der BULK-Rowsetanbieter. Der BULK-Rowsetanbieter ermöglicht es Ihnen, Daten aus einer Datei zu lesen. Das SINGLE_BLOB-Argument für den BULK-Rowsetanbieter gibt den Inhalt der Datendatei als einzeiliges, einspaltiges Rowset vom Typ "varbinary(max)" zurück. Weitere Informationen finden Sie unter [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
      Im folgenden Beispiel wird das SSISPackages_ProjectDeployment-Projekt im Ordner „SSIS-Pakete“ auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Server bereitgestellt. Die Binärdaten werden aus der Projektdatei (SSISPackage_ProjectDeployment.ispac) gelesen und im *@ProjectBinary* -Parameter des Typs „varbinary(max)“ gespeichert. Der *@ProjectBinary* -Parameterwert wird dem *@project_stream* -Parameter zugewiesen.  
   
@@ -127,8 +127,8 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Bereitstellen von Projekten mit Integration Services-Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
- [Ausführen eines Pakets in SQL Server Datatools](../../2014/integration-services/run-a-package-in-sql-server-data-tools.md)   
+ [Bereitstellen von Projekten für Integration Services-Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
+ [Ausführen eines Pakets in SQL Server-Datentools](../../2014/integration-services/run-a-package-in-sql-server-data-tools.md)   
  [Ausführen eines Pakets auf dem SSIS-Server mit SQL Server Management Studio](run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  
   
   
