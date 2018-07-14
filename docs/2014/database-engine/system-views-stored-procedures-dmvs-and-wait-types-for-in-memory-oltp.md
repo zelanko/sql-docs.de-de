@@ -1,5 +1,5 @@
 ---
-title: Systemsichten, gespeicherte Prozeduren, die DMVs und die Wartetypen für In-Memory OLTP | Microsoft Docs
+title: Systemsichten, gespeicherte Prozeduren, DMVs und Wartetypen für In-Memory OLTP | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: efaa59e3-dbfa-407f-b1aa-cb0c6602ea17
 caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: a4e50744a716e42e0fd2767ec9cc677b2ccc085f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0a11867eafdcd747da207c2ff6783391ed3485f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159823"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245220"
 ---
-# <a name="system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp"></a>Systemsichten, gespeicherte Prozeduren und DMVs Wartetypen für In-Memory OLTP
+# <a name="system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp"></a>Systemsichten, gespeicherte Prozeduren, DMVs und Wartetypen für In-Memory OLTP
   Dieses Thema enthält kurze Beschreibungen und Links zu vielen Datenbankobjekten, die In-Memory OLTP unterstützen.  
   
 ### <a name="system-views"></a>Systemsichten  
@@ -41,7 +41,7 @@ ms.locfileid: "36159823"
   
 |Metadatenfunktion|Description|In-Memory OLTP-Feature|  
 |-----------------------|-----------------|-----------------------------|  
-|[OBJECTPROPERTYEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/objectproperty-transact-sql)|Überprüfen, ob eine Datenbankobjekte speicheroptimiert sind.|**ExecIsWithNativeCompilation** und **TableIsMemoryOptimized** Eigenschaften.<br /><br /> Die **IsSchemaBound** Eigenschaft unterstützt den prozedurobjekttyp (gibt 0 für Prozeduren anstelle von NULL zurück).|  
+|[OBJECTPROPERTYEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/objectproperty-transact-sql)|Überprüfen, ob eine Datenbankobjekte speicheroptimiert sind.|**ExecIsWithNativeCompilation** und **TableIsMemoryOptimized** Eigenschaften.<br /><br /> Die **IsSchemaBound** -Eigenschaft unterstützt den prozedurobjekttyp (gibt 0 für Prozeduren anstelle von NULL).|  
 |[SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)|Überprüfen, ob ein Server In-Memory OLTP unterstützt.|**IsXTPSupported** Eigenschaft.|  
   
 ### <a name="system-stored-procedures"></a>Gespeicherte Systemprozeduren  
@@ -63,7 +63,7 @@ ms.locfileid: "36159823"
 ## <a name="wait-types"></a>Wartetypen  
  Es gibt mehrere Wartetypen, die In-Memory OLTP unterstützen.  
   
- Weitere Informationen finden Sie unter Wartetypen mit dem Präfix **WAIT_XTP**, und **XTPPROC** in der [dm_os_wait_stats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql) Thema.  
+ Weitere Informationen finden Sie unter Wartetypen mit dem Präfix **WAIT_XTP**, und **XTPPROC** in die [Sys. dm_os_wait_stats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql) Thema.  
   
 ## <a name="see-also"></a>Siehe auch  
  [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)   

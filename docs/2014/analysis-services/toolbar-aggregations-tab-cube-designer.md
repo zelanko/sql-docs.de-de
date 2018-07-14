@@ -1,5 +1,5 @@
 ---
-title: Symbolleiste (Registerkarte ' Aggregationen ', Cube-Designer) | Microsoft Docs
+title: Symbolleiste (Registerkarte ' Aggregationen ', Cube-Designer) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8741ff3e-44c3-4bfa-a56a-de590e01576e
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 099af3b9682da4bda2f999641429f1bb78894170
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7ae660a175024a52172475451436a5b2bd055982
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160516"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325000"
 ---
 # <a name="toolbar-aggregations-tab-cube-designer"></a>Symbolleiste (Registerkarte 'Aggregationen', Cube-Designer)
   Mit den Schaltflächen im Bereich **Symbolleiste** können Sie häufig verwendete Aktionen auf der Registerkarte **Aggregationen** des Cube-Designers ausführen.  

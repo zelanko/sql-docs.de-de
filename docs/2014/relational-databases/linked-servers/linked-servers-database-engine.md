@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB, linked servers
 - OLE DB provider, linked servers
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - linked servers [SQL Server], about linked servers
 ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 caps.latest.revision: 36
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c18f75059e9021c7e654d22cc97092f60e8210f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bcb1df0fdccee488bfdfeaae99f16f567618afd2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161331"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256656"
 ---
 # <a name="linked-servers-database-engine"></a>Verbindungsserver (Datenbank-Engine)
   Konfigurieren Sie einen Verbindungsserver, um [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] für die Ausführung von Befehlen für OLE DB-Datenquellen außerhalb der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]zu aktivieren. In der Regel werden Verbindungsserver so konfiguriert, um [!INCLUDE[ssDE](../../includes/ssde-md.md)] für die Ausführung einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung, die Tabellen in einer anderen Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]enthält, oder ein anderes Datenbankprodukt z. B. Oracle zu aktivieren. Viele Typen von OLE DB-Datenquellen können als Verbindungsserver konfiguriert werden, einschließlich [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Access und Excel. Verbindungsserver bieten die folgenden Vorteile:  
@@ -82,7 +82,7 @@ ms.locfileid: "36161331"
   
  Sie können Verbindungsserver auch mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]definieren. Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf **Serverobjekte**, klicken Sie auf **Neu**, und klicken Sie dann auf **Verbindungsserver**. Sie können eine Verbindungsserverdefinition löschen, indem Sie mit der rechten Maustaste auf den Namen des Verbindungsservers und dann auf **Löschen**klicken.  
   
- Wenn Sie eine verteilte Abfrage auf einem Verbindungsserver ausführen, sollten Sie einen vollqualifizierten vierteiligen Tabellennamen für jede Datenquelle einschließen, die abgefragt werden soll. Dieser vierteilige Name muss im Format *linked_server_name.catalog***.* `schema` *. *** Object_name*.  
+ Wenn Sie eine verteilte Abfrage auf einem Verbindungsserver ausführen, sollten Sie einen vollqualifizierten vierteiligen Tabellennamen für jede Datenquelle einschließen, die abgefragt werden soll. Dieser vierteilige Name muss in der Form *linked_server_name.catalog***.* `schema` *. *** Object_name*.  
   
 > [!NOTE]  
 >  Verbindungsserver können so definiert werden, dass sie zurück auf den Server zeigen, auf dem sie definiert sind (zurücklaufen = loop back). Loopbackserver sind sehr nützlich, um eine Anwendung, von der verteilte Abfragen verwendet werden, in einem Netzwerk mit einem einzelnen Server zu testen. Loopbackverbindungsserver sind für Tests bestimmt und werden für viele Vorgänge, z. B. verteilte Transaktionen, nicht unterstützt.  

@@ -8,35 +8,35 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4943247f5364991efe937ca56759c09ed5617e32
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 143f549a4f3b1961c02587b4a913d56d6002bbe6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161292"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172301"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
   Eine `CompoundCurve` ist eine Auflistung von 0 (null) oder mehr fortlaufenden `CircularString`-Instanzen oder `LineString`-Instanzen von geometry- oder geography-Typen.  
   
 > [!IMPORTANT]  
->  Für eine ausführliche Beschreibung und Beispiele der neuen räumlichen Funktionen in dieser Version einschließlich der `CompoundCurve` Untertyp, laden Sie das Whitepaper [neue räumliche Funktionen in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Für eine ausführliche Beschreibung und Beispiele der neuen räumlichen Funktionen in dieser Version einschließlich der `CompoundCurve` Untertyp, können Sie das Whitepaper zur [neue räumliche Funktionen in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
   
  Eine leere `CompoundCurve`-Instanz kann instanziiert werden. Damit eine `CompoundCurve` gültig ist, muss sie jedoch die folgenden Kriterien erfüllen:  
   
-1.  Es muss mindestens ein enthalten `CircularString` oder `LineString` Instanz.  
+1.  Es muss mindestens einen enthalten `CircularString` oder `LineString` Instanz.  
   
-2.  Die Abfolge der `CircularString` oder `LineString` -Instanzen muss fortlaufend sein.  
+2.  Die Reihenfolge der `CircularString` oder `LineString` -Instanzen muss fortlaufend sein.  
   
- Wenn eine `CompoundCurve` enthält eine Sequenz von mehrerem `CircularString` und `LineString` -Instanzen und den abschließende Endpunkt für jede Instanz mit Ausnahme der letzten Instanz der beginnende Endpunkt für die nächste Instanz in der Sequenz sein muss. Wenn also der Endpunkt der vorhergehenden Instanz in der Sequenz (4 3 7 2) ist, muss der Anfangspunkt für die nächste Instanz in der Sequenz (4 3 7 2) sein. Beachten Sie, dass die Z-Werte (Höhe) und die M-Werte (Measure) für den Punkt ebenfalls gleich sein müssen. Wenn sich die beiden Punkte unterscheiden, wird ein `System.FormatException` ausgelöst. Zeigt eine `CircularString` keine Z- oder M-Wert haben muss. Wenn keine Z- oder M-Werte für den Endpunkt der vorherigen Instanz angegeben sind, kann der Anfangspunkt der nächsten Instanz keine Z- oder M-Werte einschließen. Wenn der Endpunkt für die vorherige Sequenz (4 3) ist, muss der Anfangspunkt für die nächste Sequenz (4 3) sein; (4 3 7 2) ist hingegen nicht möglich. Alle Punkte in einer `CompoundCurve` Instanz keinen Z-Wert oder den gleichen Z-Wert verfügen muss.  
+ Wenn eine `CompoundCurve` enthält eine Sequenz von mehrerem `CircularString` und `LineString` Instanzen, den abschließende Endpunkt für jede Instanz mit Ausnahme der letzten Instanz der beginnende Endpunkt für die nächste Instanz in der Sequenz sein muss. Wenn also der Endpunkt der vorhergehenden Instanz in der Sequenz (4 3 7 2) ist, muss der Anfangspunkt für die nächste Instanz in der Sequenz (4 3 7 2) sein. Beachten Sie, dass die Z-Werte (Höhe) und die M-Werte (Measure) für den Punkt ebenfalls gleich sein müssen. Wenn sich die beiden Punkte unterscheiden, wird ein `System.FormatException` ausgelöst. Zeigt eine `CircularString` keine Z- oder M-Wert haben. Wenn keine Z- oder M-Werte für den Endpunkt der vorherigen Instanz angegeben sind, kann der Anfangspunkt der nächsten Instanz keine Z- oder M-Werte einschließen. Wenn der Endpunkt für die vorherige Sequenz (4 3) ist, muss der Anfangspunkt für die nächste Sequenz (4 3) sein; (4 3 7 2) ist hingegen nicht möglich. Alle Punkte in einem `CompoundCurve` Instanz entweder keinen Z-Wert oder denselben Z-Wert verfügen muss.  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve-Instanzen  
- Die folgende Abbildung zeigt die gültigen `CompoundCurve` Typen.  
+ In der folgende Abbildung werden gültige `CompoundCurve` Typen.  
   
  ![](../../database-engine/media/f278742e-b861-4555-8b51-3d972b7602bf.png "f278742e-b861-4555-8b51-3d972b7602bf")  
   
@@ -45,14 +45,14 @@ ms.locfileid: "36161292"
   
 1.  Alle von der `CompoundCurve`-Instanz enthaltenen Instanzen sind akzeptierte Kreisbogensegment-Instanzen. Weitere Informationen zu akzeptierten Kreisbogensegment-Instanzen finden Sie unter [LineString](linestring.md) und [CircularString](circularstring.md).  
   
-2.  Alle kreisbogensegmente in der `CompoundCurve` -Instanz sind verbunden. Der erste Punkt jedes nachfolgenden Kreisbogensegments entspricht dem letzten Punkt des jeweils vorgehenden Kreisbogensegments.  
+2.  Alle kreisbogensegmente in der `CompoundCurve` Instanz verbunden sind. Der erste Punkt jedes nachfolgenden Kreisbogensegments entspricht dem letzten Punkt des jeweils vorgehenden Kreisbogensegments.  
   
     > [!NOTE]  
     >  Dies schließt die Z- und M-Koordinaten ein. Daher müssen alle vier Koordinaten X, Y, Z und M identisch sein.  
   
 3.  Bei keiner der enthaltenen Instanzen handelt es sich um leere Instanzen.  
   
- Das folgende Beispiel zeigt akzeptierte `CompoundCurve` Instanzen.  
+ Das folgende Beispiel zeigt die zulässigen `CompoundCurve` Instanzen.  
   
 ```  
 DECLARE @g1 geometry = 'COMPOUNDCURVE EMPTY';  
@@ -94,7 +94,7 @@ DECLARE @g3 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 2 3, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g1` ist ungültig, da die zweite Instanz keine gültige LineString-Instanz ist. `@g2` ist ungültig, da die `LineString`-Instanz ungültig ist. `@g3` ist ungültig, da die `CircularString`-Instanz ungültig ist. Weitere Informationen zu gültigen `CircularString` und `LineString` Instanzen finden Sie unter [CircularString](circularstring.md) und [LineString](linestring.md).  
+ `@g1` ist ungültig, da die zweite Instanz keine gültige LineString-Instanz ist. `@g2` ist ungültig, da die `LineString`-Instanz ungültig ist. `@g3` ist ungültig, da die `CircularString`-Instanz ungültig ist. Weitere Informationen zu gültigen `CircularString` und `LineString` -Instanzen finden Sie unter [CircularString](circularstring.md) und [LineString](linestring.md).  
   
 ## <a name="examples"></a>Beispiele  
   

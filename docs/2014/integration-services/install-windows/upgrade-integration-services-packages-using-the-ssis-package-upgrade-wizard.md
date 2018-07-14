@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, upgrading
 - upgrading Integration Services packages
@@ -16,13 +16,13 @@ ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
 caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 44ffe15525667ad907e282efda510a63d347c30e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cccc4857558d90f25b9b246391a66fdd81d46bdb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161148"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199620"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>Aktualisieren von Integration Services-Paketen mit dem SSIS-Paketupgrade-Assistenten
   Sie können Pakete, die in früheren Versionen von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] erstellt wurden, auf das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Format aktualisieren, das [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verwendet. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt zu diesem Zweck den [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketupgrade-Assistenten bereit. Da Sie den Assistenten so konfigurieren können, dass er die ursprünglichen Pakete sichert, können Sie die ursprünglichen Pakete weiter verwenden, falls Probleme beim Upgrade auftreten.  
@@ -90,7 +90,7 @@ ms.locfileid: "36161148"
 2.  Wählen Sie auf der Seite **Paketverwaltungsoptionen auswählen** des Assistenten die Option **Originalpakete sichern** aus.  
   
     > [!WARNING]  
-    >  Die **Originalpakete Sichern** Option wird nicht angezeigt, wenn Sie öffnen ein [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] oder [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] Projekt [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], die der Assistent automatisch gestartet wird.  
+    >  Die **Originalpakete Sichern** Option wird nicht angezeigt, wenn Sie öffnen ein [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] oder [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] Projekt [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], der der Assistent automatisch gestartet wird.  
   
 3.  Führen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]den [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketaktualisierungs-Assistenten aus.  
   

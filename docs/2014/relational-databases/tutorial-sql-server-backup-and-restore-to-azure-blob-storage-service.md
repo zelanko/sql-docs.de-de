@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: SQL Server-Sicherung und-Wiederherstellung im Windows Azure Blob-Speicherdienst | Microsoft Docs'
+title: 'Tutorial: SQL Server-Sicherung und-Wiederherstellung im Windows Azure Blob Storage-Dienst | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 85f16d4f3a96c8d661981a998eab93eaffdc67d7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 856ff3ec55236b8216c04fbffeb4f5abed6dbc5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163089"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188017"
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-windows-azure-blob-storage-service"></a>Lernprogramm: SQL Server-Sicherung und -Wiederherstellung im Windows Azure-BLOB-Speicherdienst
   Willkommen bei den ersten Schritten mit der SQL Server-Sicherung und -Wiederherstellung im Lernprogramm für den Windows Azure-BLOB-Speicherdienst. In diesem Lernprogramm erfahren Sie, wie Sie Sicherungen in den Windows Azure-BLOB-Speicherdienst schreiben und daraus wiederherstellen.  

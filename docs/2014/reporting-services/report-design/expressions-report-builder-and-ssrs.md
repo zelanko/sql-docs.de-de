@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c57c783be7740e6cfb9223b70bbb49d4eadbebe4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 669b5d6a8514dce55a2f5fadc0d1c239b5b3ab61
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160855"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268586"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Ausdrücke (Berichts-Generator und SSRS)
-  Ausdrücke werden sehr häufig in Berichten verwendet, um Daten abzurufen, zu berechnen, anzuzeigen, zu gruppieren, zu sortieren, zu filtern, zu parametrisieren oder zu formatieren. Für viele Berichtselementeigenschaften kann ein Ausdruck festgelegt werden. Mithilfe von Ausdrücken können Sie Inhalt, Entwurf und Interaktivität des Berichts steuern. Ausdrücke werden geschrieben [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], in der Berichtsdefinition gespeichert und vom Berichtsprozessor ausgewertet wird, wenn Sie den Bericht ausführen.  
+  Ausdrücke werden sehr häufig in Berichten verwendet, um Daten abzurufen, zu berechnen, anzuzeigen, zu gruppieren, zu sortieren, zu filtern, zu parametrisieren oder zu formatieren. Für viele Berichtselementeigenschaften kann ein Ausdruck festgelegt werden. Mithilfe von Ausdrücken können Sie Inhalt, Entwurf und Interaktivität des Berichts steuern. Ausdrücke sind in geschrieben [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], in der Berichtsdefinition gespeichert und vom Berichtsprozessor ausgewertet wird, wenn Sie den Bericht ausführen.  
   
- Im Gegensatz zu Anwendungen, z. B. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office Excel, bei denen Sie Daten direkt in einem Arbeitsblatt in einem Bericht, den Sie Ausdrücke, bei denen es sich um Platzhalter für Daten arbeiten. Der Bericht muss in der Vorschau angezeigt werden, um die tatsächlichen Daten der ausgewerteten Ausdrücke anzeigen zu können. Wenn Sie den Bericht ausführen, wertet der Berichtsprozessor jeden Ausdruck aus, während Berichtsdaten und Elemente des Berichtslayouts, z. B. Tabellen und Diagramme, kombiniert werden.  
+ Im Gegensatz zu Anwendungen, z. B. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office Excel, bei denen Sie Daten direkt in einem Arbeitsblatt oder in einen Bericht, arbeiten Sie mit Ausdrücken, die Platzhalter für Daten handelt. Der Bericht muss in der Vorschau angezeigt werden, um die tatsächlichen Daten der ausgewerteten Ausdrücke anzeigen zu können. Wenn Sie den Bericht ausführen, wertet der Berichtsprozessor jeden Ausdruck aus, während Berichtsdaten und Elemente des Berichtslayouts, z. B. Tabellen und Diagramme, kombiniert werden.  
   
  Während des Berichtsentwurfs werden zahlreiche Berichtselementausdrücke für Sie festgelegt. Wenn Sie ein Feld aus dem Datenbereich in eine Tabellenzelle auf der Berichtsentwurfsoberfläche ziehen, wird z. B. ein einfacher Ausdruck als Textfeldwert für das Feld festgelegt. In der folgenden Abbildung enthält der Berichtsdatenbereich die Datasetfelder ID, Name, SalesTerritory, Code und Sales. Der Tabelle wurden die drei Felder[Name], [Code] und [Sales] hinzugefügt. Die Bezeichnung [Name] auf der Entwurfsoberfläche stellt den zugrunde liegenden `=Fields!Name.Value`-Ausdruck dar.  
   
@@ -36,13 +36,13 @@ ms.locfileid: "36160855"
   
  Weitere Informationen und Beispiele finden Sie in den folgenden Themen:  
   
--   [Ausdruck verwendet wird, in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
+-   [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
   
 -   [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
 -   [Beispiele für Filtergleichungen &#40;Berichts-Generator und SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
--   [Beispiele für Ausdrücke gruppieren &#40;Berichts-Generator und SSRS&#41;](group-expression-examples-report-builder-and-ssrs.md)  
+-   [Beispiele für Gruppierungsausdrücke &#40;Berichts-Generator und SSRS&#41;](group-expression-examples-report-builder-and-ssrs.md)  
   
 -   [Lernprogramme &#40;Berichts-Generator&#41;](../report-builder-tutorials.md)  
   
@@ -103,7 +103,7 @@ ms.locfileid: "36160855"
  Ausdrücke können Verweise auf Funktionen, Operatoren, Konstanten, Felder, Parameter, Elemente aus integrierten Auflistungen sowie auf eingebetteten benutzerdefinierten Code oder benutzerdefinierte Assemblys enthalten.  
   
 > [!NOTE]  
->  Um komplexe Ausdrücke oder Ausdrücke mit benutzerdefiniertem Code oder benutzerdefinierte Assemblys zu entwickeln, empfehlen wir die Verwendung von Berichts-Designer in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Weitere Informationen finden Sie unter [Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
+>  Um komplexe Ausdrücke oder Ausdrücke mit benutzerdefiniertem Code oder benutzerdefinierte Assemblys zu entwickeln, wir empfehlen die Verwendung von Berichts-Designer in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Weitere Informationen finden Sie unter [Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
  In der folgenden Tabelle sind die Verweistypen aufgeführt, die Sie in einen Ausdruck aufnehmen können:  
   
@@ -133,7 +133,7 @@ ms.locfileid: "36160855"
 ##  <a name="Section"></a> In diesem Abschnitt  
  [Hinzufügen eines Ausdrucks &#40;Berichts-Generator und SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)  
   
- [Ausdruck verwendet wird, in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
+ [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
   
  [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   

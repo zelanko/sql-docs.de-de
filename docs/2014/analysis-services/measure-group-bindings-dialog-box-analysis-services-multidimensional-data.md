@@ -1,5 +1,5 @@
 ---
-title: Measuregruppe Measuregruppenbindungen (Dialogfeld) (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Measuregruppe Measuregruppenbindungen (Dialogfeld) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.dimensionusage.definerelationship.measuregroupbindings.f1
 helpviewer_keywords:
 - Measure Group Bindings dialog box
 ms.assetid: ed642780-5350-438e-af73-b9ceab3f876d
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1508624a9d0e5a9f36c8ec7c15093f56b37977ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c306ba41e8ebb6fe2615be0bec8f3cebd560e65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160107"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226410"
 ---
 # <a name="measure-group-bindings-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Measuregruppenbindung' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Measuregruppenbindungen** können Sie direkte Beziehungen zwischen Attributen ohne Granularität in einer Cubedimension und Spalten in einer Measuregruppe für eine Beziehung regulärer Dimensionen erstellen und ändern, sowie Optionen für die Verarbeitung von NULL-Werten für jedes Attribut in einer Cubedimension mithilfe des Dialogfelds **Beziehung definieren** angeben.  

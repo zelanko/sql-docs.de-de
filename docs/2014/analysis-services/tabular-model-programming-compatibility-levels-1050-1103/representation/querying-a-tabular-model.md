@@ -1,5 +1,5 @@
 ---
-title: Abfragen eines tabellarischen Modells | Microsoft Docs
+title: Abfragen eines tabellarischen Modells | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b01d45d9-4598-4ded-9a9e-e3419cc3df8e
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 396685b9b6a4ffbfa46db64a16ee3e401b0b9042
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5936ef813b8533d72c8ebdd3d801f1ccfb6d3a7a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163005"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188817"
 ---
 # <a name="querying-a-tabular-model"></a>Abfragen eines tabellarischen Modells
   Ein Entwickler, der ein tabellarisches Modell abfragt, möchte Daten aus der tabellarischen Datenbank abrufen. Dafür gibt es zwei Optionen: Verwenden Sie Tabellenabfragen in DAX, oder verwenden Sie MDX und rufen Sie die Daten so ab, als stammten sie aus einem Cube. Abhängig vom zugrunde liegenden Modus des tabellarischen Modells könnten jedoch nur DAX-Tabellenabfragen möglich sein. Für den DirectQuery-Modus ist die Verwendung von DAX-Tabellenabfragen erforderlich.  

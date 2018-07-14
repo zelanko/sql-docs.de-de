@@ -1,5 +1,5 @@
 ---
-title: HTTP-Verbindungs-Manager-Editor (Seite Proxy) | Microsoft Docs
+title: HTTP-Verbindungs-Manager-Editor (Seite "Proxy") | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.httpconnection.proxy.f1
 helpviewer_keywords:
 - HTTP Connection Manager Editor
 ms.assetid: e831a830-49a3-49c5-8a31-9731fc4fd12e
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 726133083a8cd0f5be2bb6d20740c80c79c3fe75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 65eb54a5db89a535497c4aed32214b9cef006d23
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162069"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190712"
 ---
 # <a name="http-connection-manager-editor-proxy-page"></a>HTTP-Verbindungs-Manager-Editor (Seite Proxy)
   Auf der Registerkarte **Proxy** des Dialogfelds **HTTP-Verbindungs-Manager-Editor** können Sie den HTTP-Verbindungs-Manager für die Verwendung eines Proxyservers konfigurieren. Eine HTTP-Verbindung ermöglicht Paketen den Zugriff auf einen Webserver, indem zum Senden und Empfangen von Dateien HTTP verwendet wird.  

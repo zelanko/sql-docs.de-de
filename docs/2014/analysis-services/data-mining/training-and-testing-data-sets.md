@@ -1,5 +1,5 @@
 ---
-title: Trainings- und Testdatasets | Microsoft Docs
+title: Trainings- und Testdatasets | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - testing mining models
 - holdout [data mining]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - accuracy testing [data mining]
 ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0789d5f5ae4c141e8b7e53f7cab9938fae488a87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 770a5446b640cb3a2c5f5ce61f222e200f85ae3e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162392"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173551"
 ---
 # <a name="training-and-testing-data-sets"></a>Trainings- und Testdatasets
   Das Aufteilen von Daten in Trainings- und Testsätze ist ein wichtiger Bestandteil der Auswertung von Data Mining-Modellen. Wenn Sie ein Dataset in einen Trainings- und einen Testsatz unterteilen, wird der Großteil der Daten in der Regel für das Training und die restlichen Daten zum Testen verwendet. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prüft die Daten nach dem Zufallsprinzip, um sicherzustellen, dass sich die Test- und Trainingssets ähneln. Durch die Verwendung der gleichen Daten für das Training und das Testen können Sie mögliche Datendiskrepanzen weitgehend ausschließen und die Eigenschaften des Modells leichter verstehen.  
@@ -99,7 +99,7 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 -   In den meisten Fällen stellt der Wert von 30 Prozent für zurückgehaltene Daten ein gutes Gleichgewicht zwischen Trainings- und Testdaten dar. Es lässt sich schwer sagen, wie groß das Dataset sein soll, um ein ausreichendes Training zu gewährleisten, oder wie gering die Dichte des Trainingssatzes sein und trotzdem eine Überanpassung vermieden werden kann. Nach der Erstellung eines Modells können Sie jedoch eine Kreuzvalidierung durchführen, um das Dataset im Hinblick auf ein bestimmtes Modell zu testen.  
   
--   Zusätzlich zu den in der vorstehenden Tabelle aufgeführten Eigenschaften enthalten AMO und XML DDL die schreibgeschützte `HoldoutActualSize`-Eigenschaft. Jedoch, da die tatsächliche Größe einer Partition genau erst bestimmt werden kann, nachdem die Struktur verarbeitet wurde, Sie sollten überprüfen, ob das Modell verarbeitet wurde, bevor Sie den Wert der Abrufen der `HoldoutActualSize` Eigenschaft.  
+-   Zusätzlich zu den in der vorstehenden Tabelle aufgeführten Eigenschaften enthalten AMO und XML DDL die schreibgeschützte `HoldoutActualSize`-Eigenschaft. Aber da die tatsächliche Größe einer Partition nicht präzise ermittelt werden kann nicht nach der Verarbeitung der Struktur, Sie sollten überprüfen, ob das Modell verarbeitet wurde, bevor Sie den Wert abzurufen der `HoldoutActualSize` Eigenschaft.  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   

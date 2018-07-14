@@ -1,5 +1,5 @@
 ---
-title: Durchsuchen eines Modells mit dem Microsoft-Viewer für neuronale Netzwerke | Microsoft Docs
+title: Durchsuchen eines Modells mit dem Microsoft-Viewer für neuronale Netzwerke | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, viewing
 - classification mining model [Analysis Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - neural network model [Analysis Services]
 ms.assetid: 2343d746-c4f4-499b-9d3c-17d63310a9a3
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f577d98082953bc565a6c14fc8fdafce2a6711fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 45561d4e2b5463e6525d9def3cf0d508fddd592f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161918"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196670"
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>Modell mit dem Microsoft-Viewer für neuronale Netzwerke durchsuchen
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Viewer für neuronale Netzwerke in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zeigt Miningmodelle an, die mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus erstellt wurden. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Algorithmus für neuronale Netzwerke erstellt Klassifizierungs- und Regressionsminingmodelle, die mehrere Eingaben und Ausgaben analysieren können, und ist für unbegrenzte Analysen und Untersuchungen sehr nützlich. Weitere Informationen zu diesem Algorithmus finden Sie unter [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md).  

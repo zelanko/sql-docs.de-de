@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - EXPLICIT FOR XML mode
 - FOR XML clause, EXPLICIT mode
 - FOR XML EXPLICIT mode
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9b937c76546b2e7ee8b5d33a340abb4b120f51dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a970e1572113b7834bdc59fbf0fdca01178b441a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162646"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198840"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Verwenden des EXPLICIT-Modus mit FOR XML
   Wie im Thema [Erstellen von XML mithilfe von FOR XML](../xml/for-xml-sql-server.md)beschrieben wird, bieten die Modi RAW und AUTO kaum Steuerungsmöglichkeiten für die Form des aus einem Abfrageergebnis generierten XML-Codes. Der EXPLICIT-Modus hingegen ermöglicht größte Flexibilität beim Generieren der gewünschten XML-Ausgabe aus einem Abfrageergebnis.  

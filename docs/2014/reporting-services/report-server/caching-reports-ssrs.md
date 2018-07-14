@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report execution properties [Reporting Services]
 - cache [Reporting Services]
@@ -25,13 +25,13 @@ ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 22bad94dc3102b48b858f22354039bcb61fea06e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0dd80e542132cb2ebd36b1431e274e823970d9af
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162437"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206550"
 ---
 # <a name="caching-reports-ssrs"></a>Zwischenspeichern von Berichten (SSRS)
   Ein Berichtsserver kann eine Kopie eines verarbeiteten Berichts zwischenspeichern und diese anzeigen, wenn ein Benutzer den Bericht öffnet. Für den Benutzer ist der einzige Hinweis darauf, dass es sich bei dem Bericht um eine zwischengespeicherte Kopie handelt, das Datum und die Uhrzeit des Berichts. Wenn der Bericht kein aktuelles Datum oder keine aktuelle Uhrzeit aufweist und es sich um keine Momentaufnahme handelt, wurde der Bericht aus dem Cache abgerufen.  
@@ -66,7 +66,7 @@ ms.locfileid: "36162437"
   
  Das Zwischenspeichern eines Berichts ist besonders hilfreich, wenn Sie mehrere Instanzen eines parametrisierten Berichts zwischenspeichern möchten, wobei zum Erstellen unterschiedlicher Berichtsinstanzen unterschiedliche Parameterwerte verwendet werden. Beachten Sie, dass nur abfragebasierte Parameter im Bericht angegeben werden können.  
   
- Beim Angeben eines Zeitplans oder Erstellen des datengesteuerten Abonnements planen Sie, wie oft Berichte an den Cache übermittelt werden. Damit neue Kopien an den Cache übermittelt werden, müssen die alten Kopien abgelaufen sein. Deshalb müssen die Ausführungseigenschaften des Berichts die Einstellungen für den Cacheablaufzeitpunkt enthalten. Die Einstellungen für den Cacheablaufzeitpunkt müssen mit dem von Ihnen definierten Abonnementzeitplan konsistent sein. Wenn Sie z. B. ein Abonnement erstellen, das jede Nacht ausgeführt wird, sollte der Cache ebenfalls jede Nacht zur Laufzeit des Abonnements abgelaufen sein. Wenn auf der Eigenschaftenseite Ausführung keine Ablaufzeiten angegeben sind, werden neue Übermittlungen ignoriert. Weitere Informationen zu cacheaktualisierungsplänen finden Sie unter [Zeitpläne](../subscriptions/schedules.md). Weitere Informationen zum Festlegen von Eigenschaften finden Sie unter [festgelegt Verarbeitung Berichtseigenschaften](set-report-processing-properties.md). Weitere Informationen zum Verwenden eines datengesteuerten Abonnements finden Sie unter [datengesteuerter Abonnements](../subscriptions/data-driven-subscriptions.md).  
+ Beim Angeben eines Zeitplans oder Erstellen des datengesteuerten Abonnements planen Sie, wie oft Berichte an den Cache übermittelt werden. Damit neue Kopien an den Cache übermittelt werden, müssen die alten Kopien abgelaufen sein. Deshalb müssen die Ausführungseigenschaften des Berichts die Einstellungen für den Cacheablaufzeitpunkt enthalten. Die Einstellungen für den Cacheablaufzeitpunkt müssen mit dem von Ihnen definierten Abonnementzeitplan konsistent sein. Wenn Sie z. B. ein Abonnement erstellen, das jede Nacht ausgeführt wird, sollte der Cache ebenfalls jede Nacht zur Laufzeit des Abonnements abgelaufen sein. Wenn auf der Eigenschaftenseite Ausführung keine Ablaufzeiten angegeben sind, werden neue Übermittlungen ignoriert. Weitere Informationen zu cacheaktualisierungsplänen finden Sie unter [Zeitpläne](../subscriptions/schedules.md). Weitere Informationen zum Festlegen von Eigenschaften finden Sie unter [Festlegen von Berichtsverarbeitungseigenschaften](set-report-processing-properties.md). Weitere Informationen zum Verwenden eines datengesteuerten Abonnements finden Sie unter [Datengesteuerte Abonnements](../subscriptions/data-driven-subscriptions.md).  
   
 ## <a name="conditions-that-cause-cache-expiration"></a>Bedingungen, die zum Ablaufen des Caches führen  
  Ein zwischengespeicherter Bericht wird als Konsequenz aus den folgenden Ereignissen ungültig: Die Berichtsdefinition wird geändert, Berichtsparameter werden geändert, die Datenquellen-Anmeldeinformationen ändern sich, oder die Optionen zum Ausführen des Berichts werden geändert. Wenn Sie einen Bericht löschen, wird auch die zwischengespeicherte Version gelöscht, falls sie schon im Cache gespeichert wurde.  
@@ -74,7 +74,7 @@ ms.locfileid: "36162437"
  Falls ein Bericht aus irgendeinem Grund nicht aus einer zwischengespeicherten Instanz generiert werden kann (z. B., wenn die von einem Benutzer angegebenen Parameterwerte von den Werten abweichen, mit denen der zwischengespeicherte Bericht erstellt wird), führt der Berichtsserver den Bericht erneut aus.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Festlegen von Verarbeitungsoptionen &#40;integrierter Reporting Services im SharePoint-Modus&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Festlegen von Verarbeitungsoptionen &#40;integrierten Reporting Services im SharePoint-Modus&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Festlegen von Berichtsverarbeitungseigenschaften](set-report-processing-properties.md)   
  [Konzepte von Reporting Services (SSRS)](../reporting-services-concepts-ssrs.md)   
  [Vorabladen des Caches (Berichts-Manager)](preload-the-cache-report-manager.md)   

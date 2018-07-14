@@ -1,5 +1,5 @@
 ---
-title: Übersicht über Master Data Services | Microsoft Docs
+title: Übersicht über Master Data Services | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Master Data Services, overview
 - Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 caps.latest.revision: 24
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6ba63353b1a5fba1e5853f641cc6217002f0c805
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 121113386ac42e689b2b8f73e60642c868c170f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160737"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329950"
 ---
 # <a name="master-data-services-overview"></a>Übersicht über Master Data Services
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]ist das Modell der Container auf der höchsten Ebene in der Struktur Ihrer Masterdataen. Ein Modell wird zum Verwalten von Gruppen ähnlicher Daten erstellt, z. B. von Onlineproduktdaten. Ein Modell enthält eine oder mehrere Entitäten, und Entitäten enthalten Elemente, die ihrerseits die Datensätze darstellen.  
   
 |||  
 |-|-|  
-|![Virtuellen Azure-Computer](../../2014/master-data-services/media/azure-virtual-machine.png "virtuellen Azure-Computer")|Möchten Sie SQL Server 2016 testen? Registrieren Sie sich für Microsoft Azure, und nehmen Sie anschließend **[hier](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** einen virtuellen Computer mit bereits installiertem SQL Server 2016 in Betrieb. Sie können den virtuellen Computer löschen, wenn Sie fertig sind.|  
+|![Azure VM](../../2014/master-data-services/media/azure-virtual-machine.png "virtuellen Azure-Computer")|Möchten Sie SQL Server 2016 testen? Registrieren Sie sich für Microsoft Azure, und nehmen Sie anschließend **[hier](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** einen virtuellen Computer mit bereits installiertem SQL Server 2016 in Betrieb. Sie können den virtuellen Computer löschen, wenn Sie fertig sind.|  
   
  Ihr Onlineproduktmodell kann beispielsweise Entitäten wie „Produkt“, „Farbe“ und „Stil“ beinhalten. Die Entität „Farbe“ kann bestimmte Elemente für die Farben Rot, Silber und Schwarz enthalten.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "36160737"
   
  Beispielsweise kann die Entität „Produkt“ über Freiformattribute für Kosten und Gewicht verfügen. Und es gibt ein domänenbasiertes Attribut für die Farbe, das mit den Elementen der Entität „Farbe“ aufgefüllt wird. Diese Hauptliste der Farben liefert die Attributwerte für die Entität „Produkt“.  
   
- ![Product-Entität mit Farbe domänenbasiertes Attribut](../../2014/master-data-services/media/mds-productentity-colorattribute.png "Product-Entität mit Farbe domänenbasiertes Attribut")  
+ ![Product-Entität mit dem domänenbasierten Attribut](../../2014/master-data-services/media/mds-productentity-colorattribute.png "Product-Entität mit Farbe domänenbasiertes Attribut")  
   
  Abgeleitete Hierarchien stammen aus den Beziehungen zwischen Entitäten in einem Modell. Hierbei handelt es sich um domänenbasierte Attributbeziehungen. Im Produktmodell kann z. B. eine aus der Farbe abgeleitete Hierarchie verwendet werden, die aus der Beziehung zwischen den Entitäten „Farbe“ und „Produkt“ stammt.  
   
@@ -54,14 +54,14 @@ ms.locfileid: "36160737"
   
 |Aktion|Details|Verwandte Themen|  
 |------------|-------------|--------------------|  
-|Erstellen eines Modells|Wenn Sie ein Modell erstellen, gilt dieses als VERSION_1.|[Modelle &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)<br /><br /> [Erstellen Sie ein Modell &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)|  
+|Erstellen eines Modells|Wenn Sie ein Modell erstellen, gilt dieses als VERSION_1.|[Modelle &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)<br /><br /> [Erstellen eines Modells &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)|  
 |Erstellen von Entitäten|Sie können so viele Entitäten erstellen, wie Sie für die Elemente benötigen.|[Entitäten &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)<br /><br /> [Erstellen Sie eine Entität &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)|  
 |Erstellen von Entitäten, die als domänenbasierte Attribute verwendet werden|Um ein domänenbasiertes Attribut zu erstellen, müssen Sie zunächst die Entität zum Auffüllen der Attributwertliste erstellen.|[Domänenbasierte Attribute &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)<br /><br /> [Erstellen eines domänenbasierten Attributs &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
 |Erstellen von Attributen für die Entitäten|Erstellen Sie Attribute, um die Elemente zu beschreiben. Ein Name-Attribut und ein Code-Attribut ist automatisch in jeder Entität enthalten und können nicht entfernt werden. Bei Bedarf können Sie weitere Freiformattribute für Text, Datumsangaben, Zahlen oder Dateien erstellen.|[Attribute &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)<br /><br /> [Erstellen eines Textattributs &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)<br /><br /> [Erstellen eines numerischen Attributs &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-numeric-attribute-master-data-services.md)<br /><br /> [Erstellen eines Datenattributs &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-date-attribute-master-data-services.md)<br /><br /> [Erstellen eines Linkattributs &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-link-attribute-master-data-services.md)<br /><br /> [Erstellen eines Dateiattributs &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)|  
 |Erstellen von Attributgruppen|Wenn Sie über mehr als vier oder fünf Attribute für eine Entität verfügen, empfiehlt sich die Erstellung von Attributgruppen. Diese Gruppen werden als Registerkarten oberhalb des Rasters in **Explorer** dargestellt und vereinfachen die Navigation, indem Attribute auf einzelnen Registerkarten gruppiert werden. \<BILD EINFÜGEN &GT;|[Attributgruppen &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)<br /><br /> [Erstellen einer Attributgruppe &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)|  
-|Importieren von Datensätzen (Elementen) für unterstützende Entitäten|Importieren Sie die Daten für die unterstützenden Entitäten mithilfe des Stagingprozesses.<br /><br /> Für das Product-Modell kann dies bedeuten, dass Sie Farben oder Größen importieren.<br /><br /> Sie können Elemente auch manuell erstellen.<br /><br /> Hinweis: Benutzer können Elemente in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] erstellen, wenn sie mindestens über die Berechtigung **Aktualisieren** für das Blattmodellobjekt einer Entität und über Zugriff auf den Funktionsbereich **Explorer** verfügen.|[Datenimport &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)<br /><br /> [Laden oder Aktualisieren von Elementen in Master Data Services mithilfe des Stagingprozesses](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)<br /><br /> [Erstellen eines Blattelements &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)|  
+|Importieren von Datensätzen (Elementen) für unterstützende Entitäten|Importieren Sie die Daten für die unterstützenden Entitäten mithilfe des Stagingprozesses.<br /><br /> Für das Product-Modell kann dies bedeuten, dass Sie Farben oder Größen importieren.<br /><br /> Sie können Elemente auch manuell erstellen.<br /><br /> Hinweis: Benutzer können Elemente in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] erstellen, wenn sie mindestens über die Berechtigung **Aktualisieren** für das Blattmodellobjekt einer Entität und über Zugriff auf den Funktionsbereich **Explorer** verfügen.|[Importieren von Daten &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)<br /><br /> [Laden oder Aktualisieren von Elementen in Master Data Services mithilfe des Stagingprozesses](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)<br /><br /> [Erstellen eines Blattelements &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)|  
 |Erstellen von Geschäftsregeln zum Sicherstellen der Datenqualität|Erstellen und veröffentlichen Sie Geschäftsregeln, um die Genauigkeit der Daten sicherzustellen. Sie können Geschäftsregeln für folgende Aufgaben verwenden:<br /><br /> Legen Sie Standardwerte für Attribute fest.<br /><br /> Ändern Sie Attributwerte.<br /><br /> Senden Sie E-Mail-Benachrichtigungen, wenn Daten die Geschäftsregelüberprüfung nicht bestanden haben.|[Geschäftsregeln &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)<br /><br /> [Erstellen und Veröffentlichen einer Geschäftsregel &#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)<br /><br /> [Benachrichtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)<br /><br /> [Konfigurieren von e-Mail-Benachrichtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/configure-email-notifications-master-data-services.md)<br /><br /> [Konfigurieren von Geschäftsregeln zum Senden von Benachrichtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
-|Importieren Sie Datensätze (Elemente) für Ihre primären Entitäten. Geschäftsregeln anwenden|Importieren Sie die Daten für die primären Entitäten mithilfe des Stagingprozesses. Überprüfen Sie anschließend die Version. Dabei werden Geschäftsregeln auf alle Elemente in der Modellversion angewendet.<br /><br /> Anschließend können Sie alle Probleme bei der Geschäftsregelüberprüfung korrigieren.|[Überprüfung &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)<br /><br /> [Überprüfen einer Datenbankversion anhand von Geschäftsregeln &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)<br /><br /> [Gespeicherte Überprüfungsprozedur &#40;Master Data Services&#41;](../../2014/master-data-services/validation-stored-procedure-master-data-services.md)|  
+|Importieren Sie Datensätze (Elemente) für Ihre primären Entitäten. Geschäftsregeln anwenden|Importieren Sie die Daten für die primären Entitäten mithilfe des Stagingprozesses. Überprüfen Sie anschließend die Version. Dabei werden Geschäftsregeln auf alle Elemente in der Modellversion angewendet.<br /><br /> Anschließend können Sie alle Probleme bei der Geschäftsregelüberprüfung korrigieren.|[Überprüfung &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)<br /><br /> [Überprüfen einer Version anhand von Geschäftsregeln &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)<br /><br /> [Gespeicherte Überprüfungsprozedur &#40;Master Data Services&#41;](../../2014/master-data-services/validation-stored-procedure-master-data-services.md)|  
 |Erstellen abgeleiteter Hierarchien|Abgeleitete Hierarchien können aktualisiert werden, wenn sich die Geschäftsanforderungen ändern, und stellen sicher, dass alle Elemente auf der entsprechenden Ebene berücksichtigt werden.|[Abgeleitete Hierarchien &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)<br /><br /> [Erstellen einer abgeleiteten Hierarchie &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
 |Erstellen expliziter Hierarchien (bei Bedarf)|Wenn Sie Hierarchien erstellen möchten, die nicht ebenenbasiert sind und Elemente aus einer einzelnen Entität enthalten, können Sie explizite Hierarchien erstellen.|[Explizite Hierarchien &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)<br /><br /> [Erstellen einer expliziten Hierarchie &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
 |Erstellen von Auflistungen (bei Bedarf)|Erstellen Sie eine Auflistung, wenn Sie unterschiedliche Gruppierungen der Elemente zu Berichts- oder Analysezwecken anzeigen möchten und keine vollständige Hierarchie benötigen.<br /><br /> Hinweis: Benutzer können Auflistungen in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] erstellen, wenn sie mindestens über die Berechtigung **Aktualisieren** für das Auflistmodellobjekt und über Zugriff auf den Funktionsbereich **Explorer** verfügen.|[Sammlungen &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)<br /><br /> [Erstellen Sie eine Sammlung &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)|  

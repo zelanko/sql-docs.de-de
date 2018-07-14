@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dta.reports.f1
 - sql12.dta.sessionmonitor.f1
@@ -27,15 +27,15 @@ helpviewer_keywords:
 - viewing tuning output
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7474f3ca2ae832a343c2b356a1bccd7d0947a92a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 83b44addd88b83b424e9cd956dcc4bd7621ee118
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163124"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167101"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers
   Wenn der Datenbankoptimierungsratgeber Datenbanken optimiert, erstellt er Zusammenfassungen, Empfehlungen, Berichte und Optimierungsprotokolle. Sie können die Optimierungsprotokollausgabe dazu verwenden, Probleme bei Optimierungssitzungen des Datenbankoptimierungsratgebers zu beheben. Mithilfe der Zusammenfassungen, Empfehlungen und Berichte können Sie bestimmen, ob Sie Optimierungsempfehlungen implementieren möchten oder die Optimierung fortsetzen möchten, bis Sie die Abfrageleistungsverbesserungen erreicht haben, die Sie für die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation benötigen. Informationen über die Verwendung des Datenbankoptimierungsratgebers zum Erstellen von Arbeitslasten und zum Optimieren einer Datenbank finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](database-engine-tuning-advisor.md).  
@@ -152,7 +152,7 @@ ms.locfileid: "36163124"
   
 2.  Klicken Sie im Menü **Datei** auf **Sitzungsergebnisse exportieren** , und speichern Sie sie als XML-Datei.  
   
-3.  Öffnen Sie die in Schritt 2 erstellte XML-Datei in dem von Ihnen bevorzugten XML-Editor, Text-Editor oder in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Führen Sie einen Bildlauf nach unten, um die `Configuration` Element. Kopieren Sie die `Configuration` -Elementabschnitt in eine XML-eingabedateivorlage hinter dem `TuningOptions` Element. Speichern Sie diese XML-Eingabedatei.  
+3.  Öffnen Sie die in Schritt 2 erstellte XML-Datei in dem von Ihnen bevorzugten XML-Editor, Text-Editor oder in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Führen Sie einen Bildlauf nach unten, um die `Configuration` Element. Kopieren Sie die `Configuration` -Elementabschnitt in eine XML-eingabedateivorlage hinter der `TuningOptions` Element. Speichern Sie diese XML-Eingabedatei.  
   
 4.  Geben Sie in der neuen XML-Eingabedatei, die Sie in Schritt 3 erstellt haben, Optimierungsoptionen für das `TuningOptions`-Element an. Bearbeiten Sie den `Configuration`-Elementabschnitt (fügen Sie die physischen Entwurfsstrukturen hinzu oder löschen Sie sie, je nachdem, wie Sie Ihre Analyse ausführen möchten). Speichern Sie die Datei, und überprüfen Sie sie mithilfe des XML-Schemas des Datenbankoptimierungsratgebers. Informationen zum Bearbeiten dieser XML-Datei finden Sie unter [XML-Eingabedateireferenz &amp;#40;Datenbankoptimierungsratgeber&amp;#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
@@ -167,7 +167,7 @@ ms.locfileid: "36163124"
   
 2.  Kopieren Sie das [Beispiel für eine XML-Eingabedatei mit benutzerdefinierter Konfiguration &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md), und fügen Sie es in Ihren XML-Editor oder einen Text-Editor ein. Verwenden Sie dieses Beispiel zum Erstellen einer XML-Eingabedatei für Ihre Optimierungssitzung. Informationen zum Ausführen dieses Tasks finden Sie im Abschnitt "Erstellen von XML-Eingabedateien" in [Starten und Verwenden des Datenbankoptimierungsratgebers](database-engine-tuning-advisor.md).  
   
-3.  Bearbeiten der `TuningOptions` und die `Configuration` Elemente in der Beispiel-XML-Eingabedatei. In der `TuningOptions` -Element angeben, welche physischen Entwurfsstrukturen der Datenbankoptimierungsratgeber während der optimierungssitzung berücksichtigen soll. Geben Sie im `Configuration`-Element die physischen Entwurfsstrukturen an, die der hypothetischen Konfiguration der physischen Datenbankentwurfsstrukturen entsprechen, die der Datenbankoptimierungsratgeber analysieren soll. Informationen darüber, welche Attribute und untergeordneten Elementen können Sie mit der `TuningOptions` und `Configuration` übergeordneten Elementen, finden Sie unter [XML-Eingabedateireferenz &#40;Datenbankmodul-Optimierungsratgeber&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
+3.  Bearbeiten der `TuningOptions` und `Configuration` Elemente in der Beispiel-XML-Eingabedatei. In der `TuningOptions` -Element angeben, welche physischen Entwurfsstrukturen Sie Database Engine Tuning Advisor, während der optimierungssitzung berücksichtigen soll. Geben Sie im `Configuration`-Element die physischen Entwurfsstrukturen an, die der hypothetischen Konfiguration der physischen Datenbankentwurfsstrukturen entsprechen, die der Datenbankoptimierungsratgeber analysieren soll. Informationen darüber, welche Attribute und untergeordneten Elementen können Sie mit der `TuningOptions` und `Configuration` übergeordneten Elementen, finden Sie unter [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
 4.  Speichern Sie die Eingabedatei mit der Dateinamenerweiterung **XML**.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "36163124"
   
      Das XML-Schema des Datenbankoptimierungsratgebers ist auch online unter [http://schemas.microsoft.com/sqlserver/2004/07/dta](http://schemas.microsoft.com/sqlserver/2004/07/dta) verfügbar.  
   
-6.  Nach dem Erstellen einer Arbeitsauslastung und einer XML-Eingabedatei können Sie die Eingabedatei an das Befehlszeilen-Hilfsprogramm **dta** zur Analyse übergeben. Stellen Sie sicher, dass Sie einen XML-Ausgabedateinamen für das **-ox** -Argument des Hilfsprogramms angeben. Dies erstellt eine XML-Ausgabedatei mit einer empfohlenen Konfiguration angegeben, dem `Configuration` Element. Wenn Sie Database Engine Tuning Advisor erneut aus, um eine andere hypothetische Konfiguration zu überprüfen, in der Ausgabe basierenden, ausführen möchten, können Sie kopieren und Einfügen der `Configuration` -Elementinhalt aus der Ausgabedatei in eine neue oder Ihre ursprüngliche XML-Eingabedatei. Informationen zum Verwenden einer XML-Eingabedatei mit dem Hilfsprogramm **dta** finden Sie im Abschnitt "Optimieren einer Datenbank mithilfe des dta-Hilfsprogramms" in [Starten und Verwenden des Datenbankoptimierungsratgebers](database-engine-tuning-advisor.md).  
+6.  Nach dem Erstellen einer Arbeitsauslastung und einer XML-Eingabedatei können Sie die Eingabedatei an das Befehlszeilen-Hilfsprogramm **dta** zur Analyse übergeben. Stellen Sie sicher, dass Sie einen XML-Ausgabedateinamen für das **-ox** -Argument des Hilfsprogramms angeben. Dies erstellt eine XML-Ausgabedatei mit einer empfohlenen Konfiguration angegeben, der `Configuration` Element. Wenn Sie Database Engine Tuning Advisor erneut aus, um eine andere hypothetische Konfiguration zu überprüfen, in der Ausgabe basierenden, ausführen möchten, können Sie kopieren und Einfügen der `Configuration` -Elementinhalt aus der Ausgabedatei in einer neuen oder Ihre ursprüngliche XML-Eingabedatei. Informationen zum Verwenden einer XML-Eingabedatei mit dem Hilfsprogramm **dta** finden Sie im Abschnitt "Optimieren einer Datenbank mithilfe des dta-Hilfsprogramms" in [Starten und Verwenden des Datenbankoptimierungsratgebers](database-engine-tuning-advisor.md).  
   
      Nach Abschluss der Optimierung können Sie die Optimierungsberichte mithilfe der GUI des Datenbankoptimierungsratgebers anzeigen. Sie können auch die XML-Ausgabedatei öffnen, um über die `TuningSummary`- und `Configuration`-Elemente die Empfehlungen des Datenbankoptimierungsratgebers anzuzeigen. Informationen zum Anzeigen der Ergebnisse der Optimierungssitzung finden Sie weiter oben unter [Anzeigen der Optimierungsausgabe](#View) in diesem Thema. Beachten Sie auch, dass die XML-Ausgabedatei Analyseberichte des Datenbankoptimierungsratgebers enthalten kann.  
   

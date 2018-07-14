@@ -8,32 +8,32 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3f900a871527e85cdc28f47ec3349eeb64f9853c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a4bb95d4280b2bd411ffdadcddcf3ff58274c69b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161064"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268166"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Lernprogramm: Erstellen eines Matrixberichts (Berichts-Generator)
   In diesem Lernprogramm erfahren Sie, wie Sie auf Grundlage von Beispielumsatzdaten einen einfachen Matrixbericht erstellen. Die Matrix besitzt geschachtelte Zeilen- und Spaltengruppen und eine angrenzende Spaltengruppe. Sie erhalten auch Informationen zum Formatieren von Spalten und zum Drehen von Text. Die folgende Abbildung zeigt einen Bericht, der mit dem Bericht vergleichbar ist, den Sie erstellen werden.  
   
  ![Rs_CreateMatixReportTutorial](../../2014/tutorials/media/rs-creatematixreporttutorial.gif "Rs_CreateMatixReportTutorial")  
   
- Eine erweiterte Version des Berichts Sie in diesem Lernprogramm erstellen steht als Stichprobe [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Berichts-Generator-Bericht. Weitere Informationen zum Herunterladen dieses Beispielberichts und anderer finden Sie unter [Beispielberichte für Berichts-Generator](http://go.microsoft.com/fwlink/?LinkId=184851).  
+ Eine erweiterte Version des Berichts Sie in diesem Tutorial erstellen wird als ein Beispiel verfügbar [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Berichts-Generator-Bericht. Weitere Informationen zum Herunterladen dieses Beispielberichts und anderer finden Sie unter [Beispielberichte für Berichts-Generator](http://go.microsoft.com/fwlink/?LinkId=184851).  
   
 ##  <a name="BackToTop"></a> Lernziele  
  In diesem Tutorial lernen Sie Folgendes:  
   
-1.  [Erstellen eines Matrixberichts und eines Datasets mit dem neuen Tabellen- oder Matrix-Assistenten](#CreateMatrix)  
+1.  [Erstellen eines Matrixberichts und eines Datasets aus dem Tabellen- oder Matrix-Assistenten](#CreateMatrix)  
   
-2.  [Organisieren von Daten, und wählen Sie Layout und Stil in die neue Tabelle oder Matrix-Assistenten](#Groups)  
+2.  [Organisieren von Daten und Auswählen des Layouts und Formats aus dem Tabellen- oder Matrix-Assistenten](#Groups)  
   
 3.  [Formatieren von Daten](#FormatData)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36161064"
   
 7.  [Hinzufügen eines Berichtskopfs und-Titels](#HeaderTitle)  
   
-8.  [Speichern Sie den Bericht](#Save)  
+8.  [Speichern des Berichts](#Save)  
   
 ### <a name="other-optional-step"></a>Weiterer optionaler Schritt  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36161064"
  Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="CreateMatrix"></a> 1. Erstellen eines Matrixberichts und eines Datasets mit dem Assistenten für neue Tabellen oder Matrix  
- Aus der **Einstieg** Dialogfeld in Berichts-Generator wählen Sie eine freigegebene Datenquelle, ein eingebettetes Dataset erstellen und dann die Daten in einer Matrix anzeigen.  
+ Von der **Einstieg** Dialogfeld in Berichts-Generator eine freigegebene Datenquelle auswählen, erstellen Sie ein eingebettetes Dataset und zeigen die Daten in einer Matrix.  
   
 > [!NOTE]  
 >  In diesem Lernprogramm enthält die Abfrage bereits die Datenwerte, sodass keine externe Datenquelle benötigt wird. Die Abfrage ist daher relativ lang. In einer Geschäftsumgebung wären die Daten nicht in der Abfrage enthalten. Dieses Szenario dient nur zu Lernzwecken.  
@@ -67,7 +67,7 @@ ms.locfileid: "36161064"
 1.  Klicken Sie auf **Start**, zeigen Sie auf **Programme**, zeigen Sie auf **Microsoft SQL Server 2012 Berichts-Generator**, und klicken Sie dann auf **Berichts-Generator**.  
   
     > [!NOTE]  
-    >  Das Dialogfeld **Erste Schritte** wird angezeigt. Wenn es nicht, können Sie die Schaltfläche "Berichts-Generator" und klicken Sie auf **neu**.  
+    >  Das Dialogfeld **Erste Schritte** wird angezeigt. Wenn sie nicht, können Sie die Schaltfläche "Berichts-Generator" und klicken Sie auf **neu**.  
   
 2.  Vergewissern Sie sich, dass im linken Bereich **Neuer Bericht** ausgewählt ist.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36161064"
   
 5.  Klicken Sie auf **Weiter**.  
   
-6.  Auf der **wählen Sie eine Verbindung mit einer Datenquelle** Seite, wählen Sie eine vorhandene Datenquelle oder navigieren Sie zu dem Berichtsserver her, und wählen Sie dann eine Datenquelle. Falls keine Datenquelle verfügbar ist oder Sie über keinen Zugriff auf einen Berichtsserver verfügen, können Sie stattdessen eine eingebettete Datenquelle verwenden. Weitere Informationen zum Erstellen einer eingebetteten Datenquelle finden Sie unter [Lernprogramm: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Auf der **wählen Sie eine Verbindung mit einer Datenquelle** Seite, wählen Sie eine vorhandene Datenquelle oder auf dem Berichtsserver suchen und wählen Sie dann auf eine Datenquelle. Falls keine Datenquelle verfügbar ist oder Sie über keinen Zugriff auf einen Berichtsserver verfügen, können Sie stattdessen eine eingebettete Datenquelle verwenden. Weitere Informationen zum Erstellen einer eingebetteten Datenquelle finden Sie unter [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Klicken Sie auf **Weiter**.  
   
@@ -133,9 +133,9 @@ ms.locfileid: "36161064"
   
 3.  Ziehen Sie die „Subcategory“ in **Spaltengruppen**.  
   
-4.  Ziehen Sie Product, **Spaltengruppen** und ordnen Sie dann unter Subcategory.  
+4.  Ziehen Sie Product, **Spaltengruppen** , und klicken Sie dann unter "SubCategory" platzieren.  
   
-     Die Reihenfolge, in der Felder finden Sie unter **Spaltengruppen** definiert die Hierarchie.  
+     Die Reihenfolge, in der Felder, im aufgeführt sind **Spaltengruppen** definiert die Hierarchie.  
   
      Durch die Schritte 3 und 4 werden die Werte für die Felder zuerst nach Unterkategorie und anschließend nach Produkt geordnet.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "36161064"
   
 11. Klicken Sie auf **Weiter**.  
   
-12. Wählen Sie auf der Seite Format, klicken Sie im Bereich "Formatvorlagen" auswählen **Schiefer**.  
+12. Wählen Sie auf der Seite Format im Bereich Formate auswählen **Slate**.  
   
 13. Klicken Sie auf **Fertig stellen**.  
   
@@ -180,11 +180,11 @@ ms.locfileid: "36161064"
   
 3.  Klicken Sie auf der Registerkarte **Stamm** in der Gruppe **Zahl** auf **Währung**. Die Anzeige der Zellen wird geändert, und die formatierte Währung erscheint.  
   
-     Wenn Sie das Gebietsschema „Deutsch (Deutschland)“ verwenden, lautet der Standardbeispieltext [**12,345.00€**]. Wenn Sie kein beispielwährungswert sehen, klicken Sie auf **Platzhalterformate** in der **Zahlen** Gruppe, und klicken Sie dann auf **Beispielwerte**.  
+     Wenn Sie das Gebietsschema „Deutsch (Deutschland)“ verwenden, lautet der Standardbeispieltext [**12,345.00€**]. Wenn Sie kein beispielwährungswert angezeigt werden, klicken Sie auf **Platzhalterformate** in die **Zahlen** gruppieren, und klicken Sie dann auf **Beispielwerte**.  
   
 4.  Klicken Sie auf die Zelle, die `[SalesDate]`enthält.  
   
-5.  In der **Anzahl** Gruppe, aus der Dropdown-Liste, wählen **Datum**.  
+5.  In der **Anzahl** Gruppe wählen Sie in der Dropdown-Liste **Datum**.  
   
      In der Zelle wird das Beispieldatum **[31.01.2000]** angezeigt. Falls kein Beispieldatum angezeigt wird, klicken Sie in der Gruppe **Zahlen** auf **Platzhalterformate** und anschließend auf **Beispielwerte**.  
   
@@ -234,7 +234,7 @@ ms.locfileid: "36161064"
  Der Bericht enthält Spalten mit der Bezeichnung "Montag" und "Dienstag". Das Dataset enthält nur Daten für diese zwei Tage.  
   
 > [!NOTE]  
->  Wenn die Daten andere Tage einschließen würden, würde der Bericht auch Spalten für diese Tage enthalten. Jede Spalte weist den Spaltenüberschrift `Sales`, und den Gesamtumsatz nach Gebiet.  
+>  Wenn die Daten andere Tage einschließen würden, würde der Bericht auch Spalten für diese Tage enthalten. Jede Spalte besitzt die Spaltenüberschrift `Sales`, und den Gesamtumsatz nach Gebiet.  
   
 ##  <a name="Width"></a> 5. Ändern der Spaltenbreite  
  Ein Bericht, der eine Matrix enthält, wird bei der Ausführung normalerweise horizontal und vertikal erweitert. Die Steuerung der horizontalen Erweiterung ist besonders wichtig, wenn Sie beabsichtigen, den Bericht in Formate wie z. B. Microsoft Word oder Adobe PDF zu exportieren, die für gedruckte Berichte verwendet werden. Wenn sich der Bericht horizontal über mehrere Seiten erstreckt, ist der gedruckte Bericht schwer verständlich. Um die horizontale Erweiterung zu minimieren, können Sie die Breite der Spalten so anpassen, dass die Daten darin ohne Zeilenumbruch angezeigt werden. Sie können auch Spalten umbenennen, damit ihre Titel der Breite entsprechen, die zum Anzeigen der Daten erforderlich ist.  
@@ -276,11 +276,11 @@ ms.locfileid: "36161064"
   
 4.  Mit der rechten Maustaste in der Zellen aus, und klicken Sie dann auf **Zellen zusammenführen**.  
   
-5.  Mit der rechten Maustaste der Eckzelle, und klicken Sie dann auf **Textfeldeigenschaften**.  
+5.  Mit der rechten Maustaste in der Eckzelle, und klicken Sie dann auf **Textfeldeigenschaften**.  
   
 6.  Klicken Sie auf die Registerkarte **Ausfüllen** .  
   
-7.  Klicken Sie auf der (***fx***) für die Schaltfläche **Füllfarbe**.  
+7.  Klicken Sie auf der (***fx***) Schaltfläche **Füllfarbe**.  
   
 8.  Kopieren Sie den folgenden Ausdruck, und fügen Sie ihn im Ausdrucksfeld ein.  
   
@@ -303,7 +303,7 @@ ms.locfileid: "36161064"
   
 1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zurückzukehren.  
   
-2.  Klicken Sie auf das Textfeld am oberen Rand des berichtshauptteils, die enthält **klicken Sie zum Hinzufügen eines Titels**, und drücken Sie dann die ENTF-Taste.  
+2.  Klicken Sie auf das Textfeld am oberen Rand des berichtshauptteils, die enthält **zum Hinzufügen eines Titels klicken**, und drücken Sie dann die ENTF-Taste.  
   
 3.  Auf der **einfügen** Registerkarte des Menübands, klicken Sie auf **Header** , und klicken Sie dann auf **Header hinzufügen**.  
   
@@ -318,9 +318,9 @@ ms.locfileid: "36161064"
     > [!NOTE]  
     >  Eine gleichzeitige Formatierung von Zeichen ist nur möglich, wenn diese zusammenhängend sind.  
   
-7.  In der **Texteigenschaften** (Dialogfeld), klicken Sie auf **Schriftart**.  
+7.  In der **Texteigenschaften** Dialogfeld klicken Sie auf **Schriftart**.  
   
-8.  In der **Schriftart** Liste **Times New Roman**; in **Größe** wählen **24 pt**im **Farbe** auswählen **Kastanienbraun**, und klicken Sie in **Stil** wählen **Kursiv**.  
+8.  In der **Schriftart** Liste **Times New Roman**in **Größe** wählen **24 pt**im **Farbe** auswählen **Kastanienbraun**, und klicken Sie in **Stil** wählen **Kursiv**.  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -370,11 +370,11 @@ ms.locfileid: "36161064"
   
 2.  Klicken Sie auf die Zelle, die `[Territory].` enthält.  
   
-3.  Klicken Sie im Bereich "Eigenschaften" Suchen nach der WritingMode-Eigenschaft, und wählen Sie in der Dropdown-Liste **Rotate270**.  
+3.  Klicken Sie im Bereich "Eigenschaften", suchen Sie die WritingMode-Eigenschaft, und wählen Sie in der Dropdown-Liste **Rotate270**.  
   
      Wenn der Eigenschaftenbereich nicht geöffnet ist, klicken Sie auf die Registerkarte **Ansicht** des Menübands und aktivieren Sie das Kontrollkästchen **Eigenschaften**.  
   
-4.  Stellen Sie sicher, dass die CanGrow-Eigenschaft, um festgelegt ist `True`.  
+4.  Stellen Sie sicher, dass die Eigenschaft "CanGrow", um festgelegt ist `True`.  
   
 5.  Ändern Sie die Breite der Spalte "Territory" auf ca. 1,3 cm, und löschen Sie den Spaltentitel.  
   
@@ -383,7 +383,7 @@ ms.locfileid: "36161064"
  Der Gebietsname wird vertikal geschrieben (von unten nach oben). Die Höhe der Zeilengruppe "Territory" ändert sich abhängig von der Länge des Gebietsnamens.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Hiermit ist das Lernprogramm für die Erstellung eines Matrixberichts abgeschlossen. Weitere Informationen zu Matrizen finden Sie unter [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md), [Matrizen &#40;Berichts-Generator und SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md), [ Tablix-Datenbereichen &#40;Berichts-Generator und SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md), und [Tablix-Datenbereichszelle, Zeilen und Spalten &#40;Berichts-Generator&#41; und SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
+ Hiermit ist das Lernprogramm für die Erstellung eines Matrixberichts abgeschlossen. Weitere Informationen zu Matrizen finden Sie unter [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md), [Matrizen &#40;Berichts-Generator und SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md), [ Tablix-Datenbereichen &#40;Berichts-Generator und SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md), und [Tablix-Zellen, Zeilen und Spalten &#40;Berichts-Generator&#41; und SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Lernprogramme &#40;Berichts-Generator&#41;](report-builder-tutorials.md)   

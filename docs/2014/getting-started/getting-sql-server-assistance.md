@@ -1,5 +1,5 @@
 ---
-title: Informationsquellen für SQL Server | Microsoft Docs
+title: Informationsquellen für SQL Server | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - offline resources [SQL Server]
 - Books Online [SQL Server], additional resources
@@ -42,15 +42,15 @@ helpviewer_keywords:
 - SQL Server Solution Center
 ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ac98b9aa879844e1a458e9f9ed59cd14c10804c4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 812e23a1e3e3b8ca07f5c29415955cb9a688885f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162968"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171161"
 ---
 # <a name="getting-sql-server-assistance"></a>Informationsquellen für SQL Server
   Es gibt drei Hauptquellen für Informationen von [!INCLUDE[msCoName](../includes/msconame-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
@@ -64,13 +64,13 @@ ms.locfileid: "36162968"
  Wenn Sie die gewünschten Informationen nicht in diesen Quellen finden, können Sie in den Foren und Newsgroups der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Community Fragen stellen oder sich an den [!INCLUDE[msCoName](../includes/msconame-md.md)]-Support wenden.  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-books-online"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Online-Dokumente Bücher, die Konzepte und Verfahren zum Verwenden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Darüber hinaus enthält die Onlinedokumentation Referenzmaterial zu den Sprachen und Programmierschnittstellen für das Speichern, Abrufen, Erstellen von Berichten und Ändern von Daten mithilfe von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Bücher von Online-Dokumente, die Konzepte und Prozeduren, die für die Verwendung erforderlich [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Darüber hinaus enthält die Onlinedokumentation Referenzmaterial zu den Sprachen und Programmierschnittstellen für das Speichern, Abrufen, Erstellen von Berichten und Ändern von Daten mithilfe von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Es gibt folgende Möglichkeiten, um auf die Onlinedokumentation zuzugreifen:  
   
--   Eine Kopie der [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]-Onlinedokumentation ist in der MSDN Library sowie in der TechNet Library im Internet veröffentlicht. Die Themen in diesen Kopien der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation enthalten Kommentare aus der Community, z. B. zusätzliche Informationen und Codebeispiele von anderen Kunden. Sehen Sie die MSDN Library-Version auf dem [Onlinedokumentation zu SQL Server 2014](http://msdn.microsoft.com/library/ms130214\(v=sql.120\).aspx).  
+-   Eine Kopie der [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]-Onlinedokumentation ist in der MSDN Library sowie in der TechNet Library im Internet veröffentlicht. Die Themen in diesen Kopien der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation enthalten Kommentare aus der Community, z. B. zusätzliche Informationen und Codebeispiele von anderen Kunden. Sie finden die MSDN Library-Version auf die [SQL Server 2014-Books Online](http://msdn.microsoft.com/library/ms130214\(v=sql.120\).aspx).  
   
--   Sie können die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Onlinedokumentation auf einem lokalen Computer mithilfe des Hilfebibliotheks-Managers installieren. Weitere Informationen finden Sie unter [hinzufügen oder Entfernen von Produktdokumentation für SQL Server](../2014-toc/books-online-for-sql-server-2014.md).  
+-   Sie können die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Onlinedokumentation auf einem lokalen Computer mithilfe des Hilfebibliotheks-Managers installieren. Weitere Informationen finden Sie unter [hinzufügen oder Entfernen der Produktdokumentation für SQL Server](../2014-toc/books-online-for-sql-server-2014.md).  
   
  Die Kopie der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Onlinedokumentation in der MSDN Library und die Dateien der Onlinedokumentation, die mithilfe des Hilfebibliotheks-Managers aufgerufen werden können, werden aktualisiert, wenn von [!INCLUDE[msCoName](../includes/msconame-md.md)] ein Update für die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Onlinedokumentation veröffentlicht wird.  
   
@@ -83,8 +83,8 @@ ms.locfileid: "36162968"
   
 |Ressource|Zielgruppe|  
 |--------------|--------------|  
-|[SQL Server Developer Center](http://msdn.microsoft.com/sqlserver/)|Entwickler von Datenbank-, Berichtsystem- und Business Intelligence-Lösungen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die ihre Anwendungen und Websites für die Verwendung dieser Systeme entwerfen möchten.|  
-|[XML Developer Center](http://go.microsoft.com/fwlink/?LinkId=42458)|Entwickler von Websites und Anwendungen, deren Sites und Anwendungen XML für die Datenspeicherung und -bearbeitung verwenden.|  
+|[SQL Server-Entwicklercenter](http://msdn.microsoft.com/sqlserver/)|Entwickler von Datenbank-, Berichtsystem- und Business Intelligence-Lösungen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die ihre Anwendungen und Websites für die Verwendung dieser Systeme entwerfen möchten.|  
+|[XML-Entwicklercenter](http://go.microsoft.com/fwlink/?LinkId=42458)|Entwickler von Websites und Anwendungen, deren Sites und Anwendungen XML für die Datenspeicherung und -bearbeitung verwenden.|  
 |[SQL Server-TechNet-Website](http://technet.microsoft.com/sqlserver/dn135309)|Administratoren und Operatoren, die Systeme planen, verwalten, und unterstützen, die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwenden.|  
   
 ## <a name="additional-online-information"></a>Zusätzliche Onlineinformationen  

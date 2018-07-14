@@ -1,5 +1,5 @@
 ---
-title: CalendarLanguage-Element (ASSL) | Microsoft Docs
+title: CalendarLanguage-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CalendarLanguage element
 ms.assetid: e43a0f48-a583-418b-a0a4-d73a40035573
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d3be256a83ee4ee0d6b1c448699f50076e44e186
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0bcdf5c3f0955a3adb8994217eb10f3fd9447863
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160521"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241380"
 ---
 # <a name="calendarlanguage-element-assl"></a>CalendarLanguage-Element (ASSL)
-  Definiert die für verwendete Kalendersprache der [TimeBinding](../data-type/binding-data-type-assl.md) Element.  
+  Definiert die Kalendersprache für die [TimeBinding](../data-type/binding-data-type-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36160521"
 ## <a name="remarks"></a>Hinweise  
  Dies ist die Sprache, in der Dimensionselementnamen erstellt werden. Die Sprache von Beschriftungen sollte mit ganzzahlig-basierten LCID-Codes definiert werden. Zum Beispiel stellt den Standardwert die English-US LCID dar.  
   
- Das Element, das das übergeordnete Element des entspricht `CalendarLanguage` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.TimeBinding>.  
+ Das Element, das dem übergeordneten entspricht `CalendarLanguage` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.TimeBinding>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: Das Angeben eines Target Namespace mithilfe der TargetNamespace-Attribut (SQLXML 4.0) | Microsoft Docs
+title: Angeben eines Target Namespace mit dem ' targetNamespace '-Attribut (SQLXML 4.0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,26 +21,26 @@ helpviewer_keywords:
 - target namespaces [SQLXML]
 ms.assetid: f3df9877-6672-4444-8245-2670063c9310
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 92bb667c5189d24207207d19c2779b070cbc2cea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: fa61e44575761d4ada96d68a887b584664735e7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162217"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166731"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Angeben eines Zielnamespaces mit dem 'targetNamespace'-Attribut (SQLXML 4.0)
   Beim Schreiben von XSD-Schemas, können Sie die XSD **TargetNamespace** Attribut, um einen Zielnamespace anzugeben. In diesem Thema wird beschrieben, wie das XSD **TargetNamespace**, **ElementFormDefault**, und **AttributeFormDefault** Attribute zu arbeiten, wie sie die XML-Instanz auswirken, die generiert, und wie XPath-Abfragen mit Namespaces festgelegt werden.  
   
- Sie können die **xsd: targetNamespace** Attribut zum Platzieren von Elementen und Attributen aus dem Standardnamespace in einen anderen Namespace. Sie können auch festlegen, ob lokal deklarierte Elemente und Attribute des Schemas durch einen Namespace qualifiziert werden sollen, sei es explizit durch ein Präfix oder standardmäßig implizit. Können Sie die **ElementFormDefault** und **AttributeFormDefault** Attribute auf die  **\<xsd: Schema >** Element Global angeben der Qualifizierung der lokalen Elemente und Attribute, oder Sie können die **Formular** Attribut, um einzelne Elemente und Attribute separat festzulegen.  
+ Sie können die **xsd: targetNamespace** Attribut zum Platzieren von Elementen und Attributen aus dem Standardnamespace in einen anderen Namespace. Sie können auch festlegen, ob lokal deklarierte Elemente und Attribute des Schemas durch einen Namespace qualifiziert werden sollen, sei es explizit durch ein Präfix oder standardmäßig implizit. Können Sie die **ElementFormDefault** und **AttributeFormDefault** Attribute der  **\<xsd: Schema >** Element Global angeben der Qualifikation von lokalen Elemente und Attribute, oder Sie können die **Formular** Attribut, um einzelne Elemente und Attribute separat festzulegen.  
   
 ## <a name="examples"></a>Beispiele  
  Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen für die Ausführung von SQLXML-Beispielen](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-a-target-namespace"></a>A. Angeben eines Zielnamespaces  
- Das folgende XSD-Schema gibt einen Zielnamespace an, mit der **xsd: targetNamespace** Attribut. Das Schema setzt auch die **ElementFormDefault** und **AttributeFormDefault** Attributwerte zu **"unqualified"** (der Standardwert für diese Attribute). Dies ist eine globale Deklaration und wirkt sich auf alle lokalen Elemente (**\<Reihenfolge >** im Schema) und Attribute (**CustomerID**, **ContactName**, und  **OrderID** im Schema).  
+ Das folgende XSD-Schema gibt einen Zielnamespace an, mit der **xsd: targetNamespace** Attribut. Das Schema setzt auch die **ElementFormDefault** und **AttributeFormDefault** Attributwerte zu **"unqualified"** (der Standardwert für diese Attribute). Dies ist eine globale Deklaration und wirkt sich auf alle lokalen Elemente (**\<Reihenfolge >** im Schema) und Attribute (**"CustomerID"**, **ContactName**, und  **"OrderID"** im Schema).  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -80,7 +80,7 @@ ms.locfileid: "36162217"
   
  Im Schema:  
   
--   Die **CustomerType** und **"ordertype"** Typdeklarationen sind global und sind daher im Zielnamespace des Schemas enthalten. Daher, wenn diese Typen verwiesen wird in der Deklaration des  **\<Kunden >** Element und dessen  **\<Reihenfolge >** untergeordnetes Element, ein Präfix festgelegt, die verknüpft ist mit dem Zielnamespace.  
+-   Die **CustomerType** und **OrderType** Typdeklarationen sind global und aus diesem Grund befinden sich im Zielnamespace des Schemas. Daher, wenn diese Typen verwiesen wird in der Deklaration der  **\<Kunden >** Element und dessen  **\<Reihenfolge >** untergeordnetes Element, ein Präfix festgelegt, die verknüpft ist mit dem Zielnamespace.  
   
 -   Die  **\<Kunden >** Element ist auch im Zielnamespace des Schemas enthalten, da es sich um ein globales Element im Schema handelt.  
   
@@ -103,9 +103,9 @@ ms.locfileid: "36162217"
   </ROOT>  
 ```  
   
- Dieses Instanzdokument definiert den Namespace Urn: MyNamespace und ordnet ihm ein Präfix (y0) darauf. Das Präfix gilt nur für die  **\<Kunden >** globale Element. (Das Element ist global, da es als untergeordnetes Element deklariert wird  **\<xsd: Schema >** -Element im Schema.)  
+ Dieses Instanzdokument definiert den Namespace Urn: MyNamespace und ordnet ihm ein Präfix (y0) zuzuweisen. Das Präfix gilt nur für die  **\<Kunden >** globale Element. (Das Element ist global, da es als untergeordnetes Element deklariert ist  **\<xsd: Schema >** Elements im Schema.)  
   
- Das Präfix wird nicht auf die lokalen Elemente und Attribute angewendet, da der Wert der **ElementFormDefault** und **AttributeFormDefault** Attribute festgelegt ist, um **"unqualified"** im Schema. Beachten Sie, dass die  **\<Reihenfolge >** Element ist lokal, da seine als untergeordnetes Element von Deklaration der  **\<ComplexType >** Element, definiert die  **\< CustomerType >** Element. Auf ähnliche Weise, die Attribute (**CustomerID**, **OrderID**, und **ContactName**) werden lokal und nicht global.  
+ Das Präfix wird nicht auf die lokalen Elemente und Attribute angewendet, da der Wert des **ElementFormDefault** und **AttributeFormDefault** Attribute nastaven NA hodnotu **"unqualified"** im Schema. Beachten Sie, dass die  **\<Reihenfolge >** -Element lokal ist, da seine als untergeordnetes Element Deklaration der  **\<ComplexType >** Element, das definiert die  **\< CustomerType >** Element. Auf ähnliche Weise die Attribute (**"CustomerID"**, **"OrderID"**, und **ContactName**) sind lokal und nicht global.  
   
 ##### <a name="to-create-a-working-sample-of-this-schema"></a>So erstellen Sie ein funktionstüchtiges Beispiel für dieses Schema  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36162217"
     </ROOT>  
     ```  
   
-     Der XPath-Abfrage in der Vorlage gibt die  **\<Kunden >** Element für den Kunden mit CustomerID 1. Beachten Sie, dass die XPath-Abfrage das Namespace-Präfix für das Element, nicht für das Attribut, in der Abfrage festlegt. (Lokale Attribute sind nicht qualifiziert, wie im Schema angegeben.)  
+     Die XPath-Abfrage in der Vorlage gibt die  **\<Kunden >** -Element für den Kunden mit "CustomerID" 1. Beachten Sie, dass die XPath-Abfrage das Namespace-Präfix für das Element, nicht für das Attribut, in der Abfrage festlegt. (Lokale Attribute sind nicht qualifiziert, wie im Schema angegeben.)  
   
      Der für das Zuordnungsschema (targetNameSpace.xml) angegebene Verzeichnispfad bezieht sich auf das Verzeichnis, in dem die Vorlage gespeichert ist. Es kann auch ein absoluter Pfad angegeben werden. Beispiel:  
   
@@ -132,9 +132,9 @@ ms.locfileid: "36162217"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML-Abfragen](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML-Abfragen](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Wenn das Schema gibt **ElementFormDefault** und **AttributeFormDefault** Attribute mit dem Wert **"qualified"**, Instanzdokument sind alle lokalen Elemente und Attribute qualifiziert. Sie können das vorherige Schema, um diese Attribute umfassen Ändern der  **\<xsd: Schema >** Element und die Vorlage erneut ausführen. Da die Attribute nun auch in der Instanz qualifiziert sind, ändert sich die XPath-Abfrage so, dass auch das Namespace-Präfix enthalten ist.  
+ Wenn das Schema gibt **ElementFormDefault** und **AttributeFormDefault** Attribute mit dem Wert **"qualified"**, Instanzdokument sind alle lokalen Elemente und Attribute gekennzeichnet. Sie können das vorherige Schema so ändern diese Attribute in umfassen die  **\<xsd: Schema >** Element und die Vorlage erneut ausführen. Da die Attribute nun auch in der Instanz qualifiziert sind, ändert sich die XPath-Abfrage so, dass auch das Namespace-Präfix enthalten ist.  
   
  Dies ist die geänderte XPath-Abfrage:  
   

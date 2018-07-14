@@ -1,5 +1,5 @@
 ---
-title: Definieren von berechneten Elementen | Microsoft Docs
+title: Definieren von berechneten Elementen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 07f13e1c-0b20-4f9e-ad62-c438983f2785
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: e063de7ce9ea45197c17f4d863c56228d9473e78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49779aa45ad8f0316dafa5fb74b037b5d199f328
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161443"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238360"
 ---
 # <a name="defining-calculated-members"></a>Definieren berechneter Elemente
   Berechnete Elemente sind Elemente einer Dimension oder Measuregruppe, die auf Basis einer Kombination aus Cubedaten, arithmetischen Operatoren, Zahlen und Funktionen definiert werden. Sie können beispielsweise ein berechnetes Element erstellen, das die Summe zweier physischer Measures im Cube berechnet. Die Definitionen berechneter Elemente werden in Cubes gespeichert, ihre Werte werden jedoch erst zum Zeitpunkt der Abfrage berechnet.  
@@ -36,7 +36,7 @@ ms.locfileid: "36161443"
   
      In der folgenden Abbildung ist die Registerkarte **Berechnungen** des Cube-Designers dargestellt.  
   
-     ![Registerkarte ' Berechnungen ', Cube-Designer](../../2014/tutorials/media/l6-calculatedmembers-1.gif "Registerkarte Berechnungen des Cube-Designers")  
+     ![Registerkarte "Berechnungen", Cube-Designer](../../2014/tutorials/media/l6-calculatedmembers-1.gif "Registerkarte ' Berechnungen ', Cube-Designer")  
   
 2.  Klicken Sie auf der Symbolleiste der Registerkarte **Berechnungen** auf **Neues berechnetes Element**.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36161443"
   
      ![Bereichsformular für Berechnungsausdrücke](../../2014/tutorials/media/l6-calculatedmembers-02.gif "Form der Berechnungsausdrücke-Bereich")  
   
-3.  In der **Namen** Feld, ändern Sie den Namen des berechneten Measures zu `[Total Sales Amount]`.  
+3.  In der **Namen** ändern den Namen des berechneten Measures zu `[Total Sales Amount]`.  
   
      Enthält der Name eines berechneten Elements ein Leerzeichen, muss er in eckige Klammern eingeschlossen werden.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36161443"
   
 5.  Ziehen Sie **Internet Sales-Sales Amount** von der Registerkarte **Metadaten** im Bereich **Berechnungstools** in das Feld **Ausdruck** im Bereich **Berechnungsausdrücke** .  
   
-6.  In der **Ausdruck** geben ein Pluszeichen (`+`) nach **[Measures]. [ Internet Sales-Sales Amount]**.  
+6.  In der **Ausdruck** geben ein Pluszeichen (`+`) nach dem **[Measures]. [ Internet Sales-Sales Amount]**.  
   
 7.  Erweitern Sie auf der Registerkarte **Metadaten** im Bereich **Berechnungstools** die Option **Reseller Sales**, und ziehen Sie anschließend **Reseller Sales-Sales Amount** in das Feld **Ausdruck** im Bereich **Berechnungsausdrücke** hinter das Pluszeichen (+).  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36161443"
   
      ![Skripts werden im Berechnungsausdrücke-Bereich](../../2014/tutorials/media/l6-calculatedmembers-04.gif "Skripts werden im Berechnungsausdrücke-Bereich")  
   
-12. Auf der Symbolleiste der der **Berechnungen** auf **Formularansicht**, überprüfen Sie, ob `[Total Sales Amount]` ausgewählt ist, der **Skriptplaner** Bereich, und klicken Sie dann auf  **Neues berechnetes Element**.  
+12. Auf der Symbolleiste des der **Berechnungen** auf **Formularansicht**, überprüfen Sie, ob `[Total Sales Amount]` ausgewählt ist, der **Skriptplaner** , und klicken Sie dann auf  **Neues berechnetes Element**.  
   
 13. Ändern Sie den Namen des neuen berechneten Elements zu `[Total Product Cost]`, und erstellen Sie dann den folgenden Ausdruck in der **Ausdruck** Feld:  
   
@@ -105,9 +105,9 @@ ms.locfileid: "36161443"
   
 ## <a name="defining-gross-profit-margin-calculations"></a>Definieren von Berechnungen zur Bruttorendite  
   
-1.  Überprüfen Sie, ob `[Total Product Cost]` ausgewählt ist, der **Skriptplaner** Bereich, und klicken Sie dann auf **neues berechnetes Element** auf der Symbolleiste der der **Berechnungen** Registerkarte.  
+1.  Überprüfen Sie, ob `[Total Product Cost]` ausgewählt ist, der **Skriptplaner** , und klicken Sie dann auf **neues berechnetes Element** auf der Symbolleiste des der **Berechnungen** Registerkarte.  
   
-2.  In der **Namen** Feld, ändern Sie den Namen des neuen berechneten Measures zu `[Internet GPM]`.  
+2.  In der **Namen** ändern den Namen des neuen berechneten Measures zu `[Internet GPM]`.  
   
 3.  Erstellen Sie im Feld **Ausdruck** den folgenden MDX-Ausdruck:  
   
@@ -123,7 +123,7 @@ ms.locfileid: "36161443"
   
 6.  Klicken Sie auf der Symbolleiste der Registerkarte **Berechnungen** auf **Neues berechnetes Element**.  
   
-7.  In der **Namen** Feld, ändern Sie den Namen des neuen berechneten Measures zu `[Reseller GPM]`.  
+7.  In der **Namen** ändern den Namen des neuen berechneten Measures zu `[Reseller GPM]`.  
   
 8.  Erstellen Sie im Feld **Ausdruck** den folgenden MDX-Ausdruck:  
   
@@ -139,7 +139,7 @@ ms.locfileid: "36161443"
   
 11. Klicken Sie auf der Symbolleiste der Registerkarte **Berechnungen** auf **Neues berechnetes Element**.  
   
-12. In der **Namen** Feld, ändern Sie den Namen des berechneten Measures zu `[Total GPM]`.  
+12. In der **Namen** ändern den Namen des berechneten Measures zu `[Total GPM]`.  
   
 13. Erstellen Sie im Feld **Ausdruck** den folgenden MDX-Ausdruck:  
   
@@ -157,7 +157,7 @@ ms.locfileid: "36161443"
   
 16. Klicken Sie auf der Symbolleiste der Registerkarte **Berechnungen** auf **Skriptansicht** , und überprüfen Sie die drei Berechnungen, die gerade dem Berechnungsskript hinzugefügt wurden.  
   
-17. Fügen Sie eine neue Zeile im berechnungsskript unmittelbar vor der `[Internet GPM]` Berechnung aus, und fügen Sie den folgenden Text an das Skript in einer eigenen Zeile hinzu:  
+17. Fügen Sie dem berechnungsskript eine neue Zeile unmittelbar vor der `[Internet GPM]` Berechnung aus, und klicken Sie dann den folgenden Text an das Skript in einer eigenen Zeile hinzufügen:  
   
     ```  
     /* Calculations to calculate gross profit margin */  
@@ -171,7 +171,7 @@ ms.locfileid: "36161443"
   
 1.  Klicken Sie auf der Symbolleiste der Registerkarte **Berechnungen** auf **Formularansicht**.  
   
-2.  In der **Skriptplaner** klicken Sie im Bereich `[Total GPM]`, und klicken Sie dann auf **neues berechnetes Element** auf der Symbolleiste der **Berechnungen** Registerkarte.  
+2.  In der **Skriptplaner** wählen Sie im Bereich `[Total GPM]`, und klicken Sie dann auf **neues berechnetes Element** auf der Symbolleiste des der **Berechnungen** Registerkarte.  
   
      Wenn Sie zuerst auf das letzte berechnete Element im Bereich **Skriptplaner** klicken, ehe Sie auf **Neues berechnetes Element** klicken, wird sichergestellt, dass das neue berechnete Element am Ende des Skripts eingegeben wird. Skripts werden in der Reihenfolge ausgeführt, in der sie im Bereich **Skriptplaner** angezeigt werden.  
   
@@ -198,7 +198,7 @@ ms.locfileid: "36161443"
   
 7.  Klicken Sie auf der Symbolleiste der Registerkarte **Berechnungen** auf **Neues berechnetes Element**.  
   
-8.  Ändern Sie den Namen des berechneten Elements zu `[Reseller Sales Ratio to All Products]`.  
+8.  Ändern Sie den Namen des neuen berechneten Elements zu `[Reseller Sales Ratio to All Products]`.  
   
 9. Geben Sie den folgenden Ausdruck in das Feld **Ausdruck** ein:  
   
@@ -219,7 +219,7 @@ ms.locfileid: "36161443"
   
 12. Klicken Sie auf der Symbolleiste der Registerkarte **Berechnungen** auf **Neues berechnetes Element**.  
   
-13. Ändern Sie den Namen des berechneten Elements zu `[Total Sales Ratio to All Products]`.  
+13. Ändern Sie den Namen des neuen berechneten Elements zu `[Total Sales Ratio to All Products]`.  
   
 14. Geben Sie den folgenden Ausdruck in das Feld **Ausdruck** ein:  
   
@@ -240,7 +240,7 @@ ms.locfileid: "36161443"
   
 17. Klicken Sie auf der Symbolleiste der Registerkarte **Berechnungen** auf **Skriptansicht**, und überprüfen Sie anschließend die drei Berechnungen, die gerade dem Berechnungsskript hinzugefügt wurden.  
   
-18. Fügen Sie eine neue Zeile im berechnungsskript unmittelbar vor der `[Internet Sales Ratio to All Products]` Berechnung aus, und fügen Sie den folgenden Text an das Skript in einer eigenen Zeile hinzu:  
+18. Fügen Sie dem berechnungsskript eine neue Zeile unmittelbar vor der `[Internet Sales Ratio to All Products]` Berechnung aus, und klicken Sie dann den folgenden Text an das Skript in einer eigenen Zeile hinzufügen:  
   
     ```  
     /* Calculations to calculate percentage of product to total product sales */  
@@ -276,7 +276,7 @@ ms.locfileid: "36161443"
   
      Die Bruttorendite für Verkäufe des Wiederverkäufers ist deutlich niedriger als für Verkäufe über das Internet, wie in der folgenden Abbildung dargestellt.  
   
-     ![Datenbereich mit Verkäufe des Wiederverkäufers](../../2014/tutorials/media/l6-calculatedmembers-7b.gif "Datenbereich mit Verkäufe des Wiederverkäufers")  
+     ![Datenbereich mit der Verkäufe des Wiederverkäufers](../../2014/tutorials/media/l6-calculatedmembers-7b.gif "Datenbereich mit der Verkäufe des Wiederverkäufers")  
   
 9. Fügen Sie dem Bereich „Werte“ die Measures **Total Sales Ratio to All Products**, **Internet Sales Ratio to All Products**und **Reseller Sales Ratio to All Products** hinzu.  
   

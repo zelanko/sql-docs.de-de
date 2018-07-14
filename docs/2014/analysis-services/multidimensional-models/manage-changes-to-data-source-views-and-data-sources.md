@@ -1,5 +1,5 @@
 ---
-title: Verwalten von Änderungen an Datenquellensichten und Datenquellen | Microsoft Docs
+title: Verwalten von Änderungen an Datenquellensichten und Datenquellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying data sources
 - modifying data source views
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data sources [Analysis Services], schema updates
 ms.assetid: 928c9f63-365a-43fd-9bbd-78828cc7e54d
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b02b4ff60be353022735d6b28c4239fb08ff6a81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 899c882bd434da8ccf9b05cb55aad79a0d8e45fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151208"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326590"
 ---
 # <a name="manage-changes-to-data-source-views-and-data-sources"></a>Verwalten von Änderungen an Datenquellensichten und Datenquellen
   Wird der Schemagenerierungs-Assistent erneut ausgeführt, verwendet er dieselbe Datenquelle und Datenquellensicht wie für die ursprüngliche Generierung. Wenn Sie eine Datenquelle oder Datenquellensicht hinzufügen, wird diese vom Assistenten nicht verwendet. Wenn Sie die ursprüngliche Datenquelle oder Datenquellensicht nach der Anfangsgenerierung löschen, müssen Sie den Assistenten von Anfang an ausführen. Alle bisherigen Einstellungen im Assistenten werden ebenfalls gelöscht. Alle vorhandenen Objekte in einer zugrunde liegenden Datenbank, die mit einer gelöschten Datenquelle oder Datenquellensicht verbunden waren, werden bei dem nächsten Ausführen des Schemagenerierungs-Assistenten als vom Benutzer erstellte Objekte behandelt.  

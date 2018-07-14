@@ -1,5 +1,5 @@
 ---
-title: Implementieren von dynamischer Sicherheit mithilfe von Zeilenfiltern | Microsoft Docs
+title: Implementieren von dynamischer Sicherheit mithilfe von Zeilenfiltern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 066e628cc40f4ac4745f4b2edaa93ecdbd8d93d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4364b9c18125b5aa4baa479ae92a2dc688d9fe18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161716"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257596"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>Implementieren von dynamischer Sicherheit mithilfe von Zeilenfiltern
   In dieser ergänzenden Lektion erstellen Sie eine zusätzliche Rolle, die dynamische Sicherheit implementiert. Dynamische Sicherheit bietet Sicherheit auf Zeilenebene basierend auf dem Benutzernamen oder der Anmelde-ID des angemeldeten Benutzers. Weitere Informationen finden Sie unter [Rollen &#40;SSAS – tabellarisch&#41;](../analysis-services/tabular-models/roles-ssas-tabular.md).  
@@ -69,7 +69,7 @@ ms.locfileid: "36161716"
   
 -   Benennen Sie im Modell-Designer die Spalten in der Tabelle **Sales Territory** um:  
   
-     **Sales Territory**  
+     **Vertriebsgebiet**  
   
     |Quellname|Anzeigename|  
     |-----------------|-------------------|  
@@ -89,10 +89,10 @@ ms.locfileid: "36161716"
   
     |Employee Id|Sales Territory Id|First Name|Last Name|Login Id|  
     |-----------------|------------------------|----------------|---------------|--------------|  
-    |1|2|\<Vorname des Benutzers >|\<letzte Benutzername >|\<"Domäne\Benutzername" >|  
-    |1|3|\<Vorname des Benutzers >|\<letzte Benutzername >|\<"Domäne\Benutzername" >|  
-    |2|4|\<Vorname des Benutzers >|\<letzte Benutzername >|\<"Domäne\Benutzername" >|  
-    |3|5|\<Vorname des Benutzers >|\<letzte Benutzername >|\<"Domäne\Benutzername" >|  
+    |1|2|\<Vorname des Benutzers >|\<Nachname des Benutzers >|\<"Domäne\Benutzername" >|  
+    |1|3|\<Vorname des Benutzers >|\<Nachname des Benutzers >|\<"Domäne\Benutzername" >|  
+    |2|4|\<Vorname des Benutzers >|\<Nachname des Benutzers >|\<"Domäne\Benutzername" >|  
+    |3|5|\<Vorname des Benutzers >|\<Nachname des Benutzers >|\<"Domäne\Benutzername" >|  
   
 3.  Ersetzen Sie im neuen Arbeitsblatt "Vorname", "Nachname" sowie "Domäne\Benutzername" durch die Namen und Anmelde-IDs von drei Benutzern in Ihrer Organisation. Verwenden Sie den gleichen Benutzer in den ersten beiden Zeilen für Employee Id 1. Dadurch wird angezeigt, dass der Benutzer zu mehreren Vertriebsgebieten gehört. Ändern Sie die Felder Employee Id und Sales Territory Id nicht.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "36161716"
   
      Der Liste wird eine neue Rolle mit der Berechtigung Keine hinzugefügt.  
   
-3.  Klicken Sie auf die neue Rolle, und klicken Sie dann in der **Namen** Spalte, benennen Sie die Rolle auf `Sales Employees by Territory`.  
+3.  Klicken Sie auf die neue Rolle, und klicken Sie dann in der **Namen** Spalte benennen Sie die Rolle zum `Sales Employees by Territory`.  
   
 4.  Klicken Sie in der Spalte **Berechtigungen** auf die Dropdownliste, und wählen Sie anschließend die Berechtigung **Lesen** aus.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "36161716"
   
 7.  Klicken Sie auf die Registerkarte **Zeilenfilter** .  
   
-8.  Für die `Employee Security` -Tabelle in der **DAX-Filter** Spalte Geben Sie die folgende Formel.  
+8.  Für die `Employee Security` -Tabelle in der **DAX-Filter** Spalte geben die folgende Formel ein.  
   
      `=FALSE()`  
   

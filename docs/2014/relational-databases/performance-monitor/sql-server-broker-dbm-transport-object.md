@@ -1,5 +1,5 @@
 ---
-title: SQLServer, Broker und DBM-Transport-Objekt | Microsoft Docs
+title: SQLServer, Broker und DBM-Transport-Objekt | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Broker / DBM Transport object
 - SQLServer:Broker/DBM Transport
 ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ac5a560f328de972dc40675d83e93c69447e6938
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 278e3776c19c9220b77347a0360e337184c4fd1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161316"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253922"
 ---
 # <a name="sql-server-broker-and-dbm-transport-object"></a>SQLServer, Broker und DBM-Transport-Objekt
   Das **Broker/DBM-Transport** -Leistungsobjekt enthält Leistungsindikatoren, die Netzwerkinformationen für Service Broker und die Datenbankspiegelung melden. In der nachfolgenden Tabelle sind die in diesem Objekt enthaltenen Indikatoren aufgelistet.  
@@ -42,7 +42,7 @@ ms.locfileid: "36161316"
 |**P8-Nachrichtenfragmente gesendet/Sekunde**|Dieser Leistungsindikator gibt die Anzahl der Nachrichtenfragmente mit Priorität 8 an, die pro Sekunde über das Netzwerk gesendet werden.|  
 |**P9-Nachrichtenfragmente gesendet/Sekunde**|Dieser Leistungsindikator gibt die Anzahl der Nachrichtenfragmente mit Priorität 9 an, die pro Sekunde über das Netzwerk gesendet werden.|  
 |**P10-Nachrichtenfragmente gesendet/Sekunde**|Dieser Leistungsindikator gibt die Anzahl der Nachrichtenfragmente mit Priorität 10 an, die pro Sekunde über das Netzwerk gesendet werden.|  
-|**Größe von Nachrichtenfragmenten**|Dieser Leistungsindikator gibt die durchschnittliche Größe der Nachrichtenfragmente an, die über das Netzwerk gesendet werden.|  
+|**Message Fragment durchschn. Größe**|Dieser Leistungsindikator gibt die durchschnittliche Größe der Nachrichtenfragmente an, die über das Netzwerk gesendet werden.|  
 |**Nachrichtenfragmente gesendet/Sekunde**|Dieser Leistungsindikator gibt die Anzahl der Nachrichtenfragmente aller Prioritäten an, die pro Sekunde über das Netzwerk gesendet werden.|  
 |**Nachrichtenfragmente empfangen/Sekunde**|Dieser Leistungsindikator gibt die Anzahl der Nachrichtenfragmente an, die pro Sekunde über das Netzwerk empfangen werden.|  
 |**Durchschn. Größe von empfangenen Nachrichtenfragmenten**|Dieser Leistungsindikator gibt die durchschnittliche Größe der Nachrichtenfragmente an, die über das Netzwerk empfangen wurden.|  
@@ -54,7 +54,7 @@ ms.locfileid: "36161316"
 |**Bytes von E/A-Empfangsvorgängen gesamt**|Dieser Leistungsindikator gibt die Gesamtanzahl der über das Netzwerk von Service Broker- und Datenbankspiegelungs-Endpunkten empfangenen Bytes an.|  
 |**Bytes von E/A-Empfangsvorgängen/Sekunde**|Dieser Leistungsindikator gibt die Anzahl der pro Sekunde über das Netzwerk von Service Broker- und Datenbankspiegelungs-Endpunkten empfangenen Bytes an.|  
 |**Durchschn. Länge von E/A-Empfangsvorgängen**|Dieser Leistungsindikator gibt die durchschnittliche Anzahl der Bytes für einen Transportempfangsvorgang an.|  
-|**E/as/Sekunde**|Dieser Leistungsindikator gibt die Anzahl der E/A-Transportempfangsvorgänge pro Sekunde an, die die Service Broker- bzw. DBM-Transportschicht abgeschlossen hat. Beachten Sie, dass ein Transportempfangsvorgang mehrere Nachrichtenfragmente enthalten kann.|  
+|**Empfangen von e/a pro Sekunde**|Dieser Leistungsindikator gibt die Anzahl der E/A-Transportempfangsvorgänge pro Sekunde an, die die Service Broker- bzw. DBM-Transportschicht abgeschlossen hat. Beachten Sie, dass ein Transportempfangsvorgang mehrere Nachrichtenfragmente enthalten kann.|  
 |**Bytes von E/A-Sendungen gesamt**|Dieser Leistungsindikator gibt die Gesamtanzahl der von Service Broker- und Datenbankspiegelungs-Endpunkten über das Netzwerk gesendeten Bytes an.|  
 |**Bytes von E/A-Sendungen/Sekunde**|Dieser Leistungsindikator gibt die Anzahl der von Service Broker- und Datenbankspiegelungs-Endpunkten über das Netzwerk gesendeten Bytes pro Sekunde an.|  
 |**Durchschn. E/A-Sendelänge**|Dieser Leistungsindikator gibt die durchschnittliche Größe in Byte für jeden Transportsendevorgang an. Beachten Sie, dass ein Transportsendevorgang mehrere Nachrichtenfragmente enthalten kann.|  

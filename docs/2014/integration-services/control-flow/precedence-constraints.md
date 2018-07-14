@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
 - control flow [Integration Services], precedence constraints
@@ -20,13 +20,13 @@ ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cd1a3a39045330283b12aa74acbce64b1420c6ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 52729044444db0668870cc9878ee3184f17b49b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162753"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163041"
 ---
 # <a name="precedence-constraints"></a>Rangfolgeneinschränkungen
   Rangfolgeneinschränkungen verknüpfen ausführbare Dateien, Container und Tasks in Paketen in einer Ablaufsteuerung und geben Bedingungen an, die bestimmen, ob ausführbare Dateien ausgeführt werden. Bei einer ausführbaren Datei kann es sich um einen For-Schleifencontainer, einen Foreach-Schleifencontainer, einen Task oder einen Ereignishandler handeln. Ereignishandler verwenden Rangfolgeneinschränkungen zum Verlinken der ausführbaren Dateien zu einer Ablaufsteuerung.  
@@ -64,7 +64,7 @@ ms.locfileid: "36162753"
   
 -   Einen Ausdruck oder eine Einschränkung, der bzw. die die Ausführungsergebnisse der ausführbaren Datei der Rangfolge oder die zurückgegebenen Ergebnisse aus der Auswertung des Ausdrucks verwendet.  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer mithilfe einer farbcodierung um den Typ der rangfolgeneinschränkung zu identifizieren. Die Success-Einschränkung ist grün, die Failure-Einschränkung ist rot und die Completion-Einschränkung ist blau. Zum Anzeigen von Beschriftungen im [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer, die den Typ der Einschränkung anzeigen, müssen Sie die Barrierefreiheitsfunktionen des [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designers konfigurieren.  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer mithilfe einer farbcodierung den Typ der rangfolgeneinschränkung zu identifizieren. Die Success-Einschränkung ist grün, die Failure-Einschränkung ist rot und die Completion-Einschränkung ist blau. Zum Anzeigen von Beschriftungen im [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer, die den Typ der Einschränkung anzeigen, müssen Sie die Barrierefreiheitsfunktionen des [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designers konfigurieren.  
   
  Der Ausdruck muss ein gültiger [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Ausdruck sein, der Funktionen, Operatoren sowie Systemvariablen und benutzerdefinierte Variablen einschließen kann. Weitere Informationen finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md) und [Integration Services-Variablen &#40;SSIS&#41;](../integration-services-ssis-variables.md).  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36162753"
 -   Für Fehler muss bei der ausführbaren Datei der Rangfolge ein Fehler auftreten, damit die eingeschränkte ausführbare Datei ausgeführt wird.  
   
 > [!NOTE]  
->  Nur rangfolgeneinschränkungen, die Mitglieder der gleichen `Precedence Constraint` Auflistung in einer logischen AND-Bedingung gruppiert werden kann. Beispielsweise können Rangfolgeneinschränkungen aus zwei Foreach-Schleifencontainern nicht kombiniert werden.  
+>  Nur rangfolgeneinschränkungen, die Mitglieder der gleichen `Precedence Constraint` Auflistung in einer logischen AND-Bedingung gruppiert werden. Beispielsweise können Rangfolgeneinschränkungen aus zwei Foreach-Schleifencontainern nicht kombiniert werden.  
   
 ## <a name="configuration-of-the-precedence-constraint"></a>Konfiguration der Rangfolgeneinschränkung  
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  

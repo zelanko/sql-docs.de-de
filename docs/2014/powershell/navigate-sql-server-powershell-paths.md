@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 caps.latest.revision: 7
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: a737eb351e6de2160ddf3385dbd3e5448bc2a937
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fd5d59a76ae4a9b6ec2bfb7cc811a23037f720ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159811"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242760"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Navigieren in SQL Server PowerShell-Pfaden
   Der [!INCLUDE[ssDE](../includes/ssde-md.md)] -PowerShell-Anbieter macht den Satz von Objekten in einer Instanz von SQL Server in einer Struktur verfügbar, die einem Dateipfad ähnelt. Sie können im Anbieterpfad mithilfe von Windows PowerShell-Cmdlets navigieren und benutzerdefinierte Laufwerke erstellen, um den Pfad zu kürzen, den Sie eingeben müssen.  
@@ -120,7 +120,7 @@ Get-ChildItem -force
   
 1.  Verwenden Sie `New-PSDrive`, um ein benutzerdefiniertes Laufwerk zu definieren. Verwenden der `Root` Parameter, um den Pfad anzugeben, die durch den Namen des benutzerdefinierten Laufwerks dargestellt wird.  
   
-2.  Verweisen Sie den Namen des benutzerdefinierten Laufwerks in pfadnavigations-Cmdlets wie z. B. `Set-Location`.  
+2.  Verweisen auf den Namen des benutzerdefinierten Laufwerks in pfadnavigations-Cmdlets wie z. B. `Set-Location`.  
   
 ### <a name="custom-drive-example-powershell"></a>Beispiel für ein benutzerdefiniertes Laufwerk (PowerShell)  
  In diesem Beispiel wird ein virtuelles Laufwerk mit dem Namen AWDB erstellt, das dem Knoten für eine bereitgestellte Kopie der Beispieldatenbank AdventureWorks2012 zugeordnet ist. Das virtuelle Laufwerk wird dann verwendet, um zu einer Tabelle in der Datenbank zu navigieren.  

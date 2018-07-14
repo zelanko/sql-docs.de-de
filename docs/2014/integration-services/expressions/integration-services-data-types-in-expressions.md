@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], data types
 - data types [Integration Services], expressions
@@ -16,13 +16,13 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a06b8864c458817185223a9ee45c3dd25c4a2d33
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3cd26c9c3d81ffd308ca013915f924f9cf88d7e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159209"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237140"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Integration Services-Datentypen in Ausdrücken
   Die Ausdrucksauswertung verwendet [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Datentypen. Wenn Daten erstmals an einen Datenfluss in einem [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Paket weitergegeben werden, konvertiert die Datenfluss-Engine alle Spaltendaten in einen [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Datentyp, und die von einem Ausdruck verwendeten Spaltendaten weisen bereits einen [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Datentyp auf. Ausdrücke, die in den Transformationen für bedingtes Teilen und für abgeleitete Spalten verwendet werden, können auf Spalten verweisen, weil sie Teil eines Datenflusses mit Spaltendaten sind.  
@@ -36,7 +36,7 @@ ms.locfileid: "36159209"
  Darüber hinaus können Ausdrücke numerische und boolesche Literale sowie Zeichenfolgenliterale einschließen. Weitere Informationen zum Konvertieren von numerischen Literalen in numerische [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Datentypen finden Sie unter [Literale &#40;SSIS&#41;](numeric-string-and-boolean-literals.md).  
   
 ## <a name="implicit-data-conversion"></a>Implizite Datenkonvertierung  
- Bei einer impliziten Datentypkonvertierung konvertiert die Ausdrucksauswertung die Daten automatisch in einen anderen Datentyp. Z. B. wenn ein `smallint` im Vergleich zu einer `int`, die `smallint` wird implizit in konvertiert `int` , bevor der Vergleich ausgeführt wird.  
+ Bei einer impliziten Datentypkonvertierung konvertiert die Ausdrucksauswertung die Daten automatisch in einen anderen Datentyp. Z. B. wenn ein `smallint` im Vergleich zu einer `int`, `smallint` wird implizit in konvertiert `int` , bevor der Vergleich ausgeführt wird.  
   
  Wenn die Argumente und Operanden nicht kompatible Datentypen aufweisen, kann die Ausdrucksauswertung keine implizite Datenkonvertierung ausführen. Zudem kann die Ausdrucksauswertung einen Wert nicht implizit in einen booleschen Wert konvertieren. Stattdessen müssen die Argumente und Operanden explizit mit dem Umwandlungsoperator konvertiert werden. Weitere Informationen finden Sie unter [Umwandlung &#40;SSIS-Ausdruck&#41;](cast-ssis-expression.md).  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36159209"
 > [!NOTE]  
 >  Boolesche Werte sind keine Zahlen, sondern logische Werte. Obwohl einige Umgebungen boolesche Werte als Zahlenwerte darstellen, werden Sie nicht als Zahlen gespeichert. Je nach Programmiersprache werden boolesche Werte als unterschiedliche Zahlenwerte dargestellt. Dies gilt auch für .NET Framework-Methoden.  
 >   
->  Beispielsweise konvertieren die Konvertierungsfunktionen von Visual Basic den Wert `True` in den Zahlenwert -1. Die `System.Convert.ToInt32`-Methode von .NET Framework konvertiert den Wert `True` jedoch in den Zahlenwert +1. Die [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Ausdruckssprache konvertiert `True` auf-1 festgelegt.  
+>  Beispielsweise konvertieren die Konvertierungsfunktionen von Visual Basic den Wert `True` in den Zahlenwert -1. Die `System.Convert.ToInt32`-Methode von .NET Framework konvertiert den Wert `True` jedoch in den Zahlenwert +1. Die [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Ausdruckssprache konvertiert `True` -1.  
 >   
 >  Um Fehler oder unerwartete Ergebnisse zu vermeiden, sollten Sie keinen Code erstellen, der von bestimmten numerischen Werten für `True` und `False` abhängig ist. Nach Möglichkeit sollten bei booleschen Variablen nur die für sie vorgesehenen logischen Werte verwendet werden.  
   

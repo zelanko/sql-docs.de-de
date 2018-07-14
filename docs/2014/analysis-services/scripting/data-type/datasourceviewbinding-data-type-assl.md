@@ -1,5 +1,5 @@
 ---
-title: DataSourceViewBinding-Datentyp (ASSL) | Microsoft Docs
+title: DataSourceViewBinding-Datentyp (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DataSourceViewBinding data type
 ms.assetid: 1f08e2d8-b279-4181-9257-e56f9fcbd9bf
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 68b2a967fc57187d343a8cfd06e5706f474ab90d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d97c0c08a686ef364f321dc466c95cc5da3a4f54
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161230"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332690"
 ---
 # <a name="datasourceviewbinding-data-type-assl"></a>DataSourceViewBinding-Datentyp (ASSL)
   Definiert einen abgeleiteten Datentyp, der eine Bindung zwischen einer Datenquellensicht und dem übergeordneten Element darstellt.  
@@ -61,11 +61,11 @@ ms.locfileid: "36161230"
 |Abgeleitete Elemente|Finden Sie unter [binden](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Weitere Informationen zu der `Binding` Typ, einschließlich Tabellen, die von Analysis Services Scripting Language (ASSL)-Objekten, von der `Binding` Typ und der Vererbungshierarchie des `Binding` , finden Sie unter [Binding-Datentyp &#40;ASSL&#41;](binding-data-type-assl.md).  
+ Weitere Informationen zu den `Binding` -Typ und zu Tabellen von Analysis Services Scripting Language (ASSL)-Objekten, von der `Binding` Typ und der Vererbungshierarchie des `Binding` Datentypen, finden Sie unter [Binding-Datentyp &#40;ASSL&#41;](binding-data-type-assl.md).  
   
  Einen Überblick über datenbindungen in ASSL finden Sie unter [Datenquellen und-Bindungen &#40;mehrdimensionale SSAS-&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.DataSourceViewBinding>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.DataSourceViewBinding>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services Scripting Language-XML-Datentypen &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

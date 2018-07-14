@@ -1,5 +1,5 @@
 ---
-title: Importieren und Exportieren von Paketen (SSIS-Dienst) | Microsoft Docs
+title: Importieren und Exportieren von Paketen (SSIS-Dienst) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], importing
 - packages [Integration Services], exporting
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - exporting packages
 ms.assetid: ef18ec11-b536-47d9-abd1-794099f43486
 caps.latest.revision: 50
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8ee81709bb8f0c9b30ab528d78a21b4ff72c1eed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96f87aedbadd6535fc6e82feb92a822a85b49f0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159212"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322690"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>Import und Export von Paketen (SSIS-Dienst)
     
@@ -43,7 +43,7 @@ ms.locfileid: "36159212"
   
 -   Die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-msdb-Datenbank.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] bietet Ihnen die Möglichkeit zu importieren und Exportieren von Paketen und von Paketen das Speicherformat und den Speicherort der Pakete ändern. Mit den Import- und Export-Features können Sie Pakete zum Dateisystem, zum Paketspeicher oder zur msdb-Datenbank hinzufügen und Pakete aus einem Speicherformat in ein anderes Format kopieren. So können z.B. in msdb gespeicherte Pakete in das Dateisystem kopiert werden und umgekehrt.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Ihnen die Möglichkeit zum Importieren und Exportieren von Paketen und tun Sie dies durch das Speicherformat und den Speicherort der Pakete ändern. Mit den Import- und Export-Features können Sie Pakete zum Dateisystem, zum Paketspeicher oder zur msdb-Datenbank hinzufügen und Pakete aus einem Speicherformat in ein anderes Format kopieren. So können z.B. in msdb gespeicherte Pakete in das Dateisystem kopiert werden und umgekehrt.  
   
  Zum Kopieren eines Pakets in ein anderes Format können Sie auch das Eingabeaufforderungs-Hilfsprogramm **dtutil** („dtutil.exe“) verwenden. Weitere Informationen finden Sie unter [dtutil Utility](dtutil-utility.md).  
   
@@ -137,6 +137,6 @@ ms.locfileid: "36159212"
 8.  Klicken Sie auf **OK** , um den Export abzuschließen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Paket Management &#40;SSIS-Dienst&#41;](service/package-management-ssis-service.md)  
+ [Paketverwaltung &#40;SSIS-Dienst&#41;](service/package-management-ssis-service.md)  
   
   

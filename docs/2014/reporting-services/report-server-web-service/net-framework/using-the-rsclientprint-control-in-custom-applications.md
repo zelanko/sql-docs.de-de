@@ -17,15 +17,15 @@ helpviewer_keywords:
 - client-side printing
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 caps.latest.revision: 30
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0c1f08f222fa1d902232373051e8d584b673ba5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 5c8d0419dc923fc8fc7e6f2cb58d74ee70d46f68
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161665"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181557"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Verwenden des RSClientPrint-Steuerelements in benutzerdefinierten Anwendungen
   Das [!INCLUDE[msCoName](../../../includes/msconame-md.md)]-ActiveX-Steuerelement **RSPrintClient** sorgt für clientseitigen Druck von Berichten, die in einem HTML-Viewer angezeigt werden. Es enthält das Dialogfeld **Drucken**, mit dessen Hilfe ein Benutzer Druckaufträge initiieren, Berichte in der Vorschau anzeigen, Seiten zum Drucken angeben und Ränder ändern kann. Während eines clientseitigen Druckvorgangs rendert der Berichtsserver den Bericht mithilfe der Bildrenderingerweiterung (EMF) und verwendet die Druckfunktionen des Betriebssystems zum Erstellen des Druckauftrags und zum Senden des Auftrags an einen Drucker.  
@@ -78,7 +78,7 @@ ms.locfileid: "36161665"
 |MarginBottom|Double|RW|Berichteinstellung|Ruft den unteren Rand ab bzw. legt ihn fest. Wird kein Wert vom Entwickler festgelegt oder im Bericht angegeben, wird 12,2 Millimeter als Standardwert verwendet.|  
 |PageWidth|Double|RW|Berichteinstellung|Ruft die Seitenbreite ab bzw. legt sie fest. Wird kein Wert vom Entwickler oder in der Berichtsdefinition festgelegt, wird 215,9 Millimeter als Standardwert verwendet.|  
 |PageHeight|Double|RW|Berichteinstellung|Ruft die Seitenhöhe ab bzw. legt sie fest. Wird kein Wert vom Entwickler oder in der Berichtsdefinition festgelegt, wird 279,4 Millimeter als Standardwert verwendet.|  
-|Culture|Int32|RW|Browsergebietsschema|Gibt den Gebietsschemabezeichner (LCID) an. Mit diesem Wert wird die Maßeinheit für die Benutzereingaben bestimmt. Angenommen, eine Benutzertypen `3`, der Wert in Millimetern gemessen, wenn die Sprache Französisch oder Zoll, falls die Sprache Englisch (Vereinigte Staaten) ist. Zu den gültigen Werten zählen folgende: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
+|Culture|Int32|RW|Browsergebietsschema|Gibt den Gebietsschemabezeichner (LCID) an. Mit diesem Wert wird die Maßeinheit für die Benutzereingaben bestimmt. Wenn ein Benutzer gibt z. B. `3`, der Wert in Millimetern gemessen, falls der Sprache Französisch oder Zoll, wenn die Sprache Englisch (Vereinigte Staaten) ist. Zu den gültigen Werten zählen folgende: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
 |UICulture|Zeichenfolge|RW|Clientkultur|Gibt die Zeichenfolgenlokalisierung des Dialogfelds an. Der Text im Dialogfeld Drucken ist in folgende Sprachen lokalisiert: Vereinfachtes Chinesisch, Traditionelles Chinesisch, Englisch, Französisch, Deutsch, Italienisch, Japanisch, Koreanisch und Spanisch. Zu den gültigen Werten zählen folgende: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
 |Authenticate|Boolean|RW|False|Gibt an, ob das Steuerelement einen GET-Befehl für den Berichtsserver ausgibt, um eine Verbindung für das Drucken außerhalb der Sitzung zu initiieren.|  
   

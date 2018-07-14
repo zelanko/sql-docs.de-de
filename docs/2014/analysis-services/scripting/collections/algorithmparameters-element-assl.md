@@ -1,5 +1,5 @@
 ---
-title: AlgorithmParameters-Element (ASSL) | Microsoft Docs
+title: AlgorithmParameters-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AlgorithmParameters element
 ms.assetid: 240cbb60-7fa3-46ef-b5be-cd14c9ec10de
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c73495677fd6a1eaf8ff1c70f154bf240b04e709
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3ab357b16b8b10b13d3ddb23b2a2bc1e7a32c486
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160528"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330430"
 ---
 # <a name="algorithmparameters-element-assl"></a>AlgorithmParameters-Element (ASSL)
-  Enthält die Auflistung der Parameter für den Algorithmus, der verwendet wird, indem Sie eine [MiningModel](../objects/miningmodel-element-assl.md) Element.  
+  Enthält die Auflistung der Parameter für den Algorithmus ein, die eine [MiningModel](../objects/miningmodel-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -64,11 +64,11 @@ ms.locfileid: "36160528"
 |Untergeordnete Elemente|[AlgorithmParameter](../objects/algorithmparameter-element-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `AlgorithmParameters` Auflistung enthält einen ausbaufähigen Satz an Parametern, die als Name/Wert-Paaren für einen Miningmodellalgorithmus dargestellt. Die Menge aus anwendbaren Parametern ist algorithmusabhängig. Weitere Informationen zu Algorithmusparametern für einen gegebenen Algorithmus finden Sie in der entsprechenden Dokumentation des Algorithmus.  
+ Die `AlgorithmParameters` Auflistung enthält eine erweiterbare Menge aus Parametern, dargestellt als Name/Wert-Paaren für einen Miningmodellalgorithmus. Die Menge aus anwendbaren Parametern ist algorithmusabhängig. Weitere Informationen zu Algorithmusparametern für einen gegebenen Algorithmus finden Sie in der entsprechenden Dokumentation des Algorithmus.  
   
  Verfügbare Algorithmusparameter, einschließlich Überprüfung und Anzeigeinformationen, können vom DMSCHEMA_MINING_SERVICE_PARAMETERS-Schemarowset abgerufen werden.  
   
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.AlgorithmParameterCollection>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.AlgorithmParameterCollection>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Algorithm-Element &#40;ASSL&#41;](../properties/algorithm-element-assl.md)   

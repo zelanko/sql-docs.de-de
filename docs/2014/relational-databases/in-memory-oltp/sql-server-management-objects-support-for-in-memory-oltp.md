@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2b67292d-6d8e-4016-9063-a97461ffe57a
 caps.latest.revision: 24
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 04975fa1d74e16d29855f4f5da581ee7d32c00ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 25208f3fad9074ddaaff97396696917f7010342a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160908"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227490"
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>SQL Server Management Objects-Unterstützung für In-Memory OLTP
   In diesem Thema werden Änderungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) für In-Memory OLTP beschrieben.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10013"
 - sql12.rtp.rptdesigner.dataview.hyperionessbasequerydesigner.f1
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Hyperion Essbase [Reporting Services], query designer
 ms.assetid: bc91b422-c6ab-4062-a300-8290fae6191b
 caps.latest.revision: 21
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7d888349a97cbc05a03c6e32053b805d88ac857f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 7c93db9a11c9e3aa33a3e5119aee548f58cc7edb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160854"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330990"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface"></a>Benutzeroberfläche des Abfrage-Designers von Hyperion Essbase
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] steht ein grafischer Abfrage-Designer zum Erstellen von MDX-Abfragen (Multidimensional Expression) für eine [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)]-Datenquelle zur Verfügung. Der grafische MDX-Abfrage-Designer verfügt über zwei Modi: Entwurfsmodus und Abfragemodus. Jeder Modus stellt einen Metadatenbereich bereit, in dem Sie Elemente aus einem für die Datenquelle definierten Cube ziehen können, um eine MDX-Abfrage zu erstellen, die beim Verarbeiten des Berichts Daten abruft.  
@@ -41,7 +41,7 @@ ms.locfileid: "36160854"
  In diesem Abschnitt werden die Schaltflächen auf der Symbolleiste und die Bereiche des Abfrage-Designers für jeden Modus des grafischen Abfrage-Designers beschrieben.  
   
 ## <a name="graphical-query-designer-in-design-mode"></a>Grafischer Abfrage-Designer im Entwurfsmodus  
- Wenn Sie bearbeiten, eine MDX-Abfrage für ein Dataset, das verwendet eine [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] -Datenquelle wird im Entwurfsmodus der grafischen Abfrage-Designer geöffnet.  
+ Wenn Sie eine MDX-Abfrage für ein Dataset, das verwendet Bearbeiten einer [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] -Datenquelle wird im Entwurfsmodus der grafischen Abfrage-Designer geöffnet.  
   
  In der folgenden Abbildung werden die Bereiche für den Entwurfsmodus bezeichnet.  
   

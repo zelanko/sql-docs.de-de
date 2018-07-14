@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 67084043-6b23-4975-b9db-6e49923d4bab
 caps.latest.revision: 6
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 246e613d43cceda5cdd87cdbbb30c9e4ddb74724
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ae156babe1859686386274c029b2aa34748f2f1d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159988"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327520"
 ---
 # <a name="implementing-an-outer-join"></a>Implementieren eines äußeren Joins
   Äußere Joins werden in systemintern kompilierten gespeicherten Prozeduren nicht unterstützt. Das folgende Beispiel zeigt eine Möglichkeit, die Funktionalität eines linken äußeren Joins in einer systemintern kompilierten gespeicherten Prozedur zu implementieren.  
   
  In den Beispielen wird eine Tabellenvariable verwendet, um einen Cursor auf der linken Seite des Joins zu simulieren, und eine weitere Tabellenvariable, um ein einzelnes Resultset zu erstellen. Diese Vorgehensweise ist nur geeignet, wenn eine begrenzte Anzahl von Zeilen verarbeitet wird, da eine zusätzliche Kopie der Datenzeilen erstellt werden muss.  
   
- Eine Variable (@outer) vom Typ t1_type wird zum Durchlaufen der Zeilen von t1 mit einer While-Schleife ein Cursor simuliert. Die Variable @result vom Typ t1t2_join_type wird dann verwendet, um das Resultset erstellt.  
+ Eine Variable (@outer) vom Typ t1_type wird zum Durchlaufen der Zeilen von t1 aus mithilfe einer While-Schleife ein Cursor simuliert. Die Variable @result vom Typ t1t2_join_type wird dann verwendet, um das Resultset erstellt.  
   
  Sie sollten diese Problemumgehung auf ihre Leistungsfähigkeit testen, um sicherzustellen, dass sie in der Anwendung erwartungsgemäß funktioniert.  
   

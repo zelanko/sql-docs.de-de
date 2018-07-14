@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - committing versions [Master Data Services]
 - versions [Master Data Services], committing
 ms.assetid: 6b967a39-b333-4b84-9e5f-4fb07e156826
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5512a43939eb14eb7a4357cbe59928709f56d812
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: b65d604e3ca82294248437b1d21b0a41f6629251
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161355"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205770"
 ---
 # <a name="commit-a-version-master-data-services"></a>Durchführen eines Commits für eine Version (Master Data Services)
   Führen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]einen Commit für eine Version eines Modells durch, um Änderungen an den Elementen des Modells und den Attributen zu verhindern. Versionen mit ausgeführtem Commit können nicht entsperrt werden.  
@@ -56,7 +56,7 @@ ms.locfileid: "36161355"
   
 -   [Zuweisen eines Flags zu einer Version &#40;Master Data Services&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
--   [Kopieren einer Version &#40;Master Data Services&#41;](../../2014/master-data-services/copy-a-version-master-data-services.md)  
+-   [Kopieren einer Datenbankversion, &#40;Master Data Services&#41;](../../2014/master-data-services/copy-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Versionen &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  

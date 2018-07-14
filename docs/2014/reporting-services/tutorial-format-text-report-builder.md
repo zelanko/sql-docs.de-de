@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 48164ff35e06c6aa9cd2a8ac0c9ba39fcf37310e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 832034620db797bdbd602cf8f7c99fd51c804bbc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163067"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175172"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Lernprogramm: Formatieren von Text (Berichts-Generator)
-  In diesem Lernprogramm können Sie die Formatierung von Text auf verschiedene Weise üben. Nach dem Einrichten des leeren Berichts mit der Datenquelle und dem Dataset können Sie die Schritte auswählen, mit denen Sie sich vertraut machen möchten.  
+  In diesem Tutorial können Sie die Formatierung von Text auf verschiedene Weise üben. Nach dem Einrichten des leeren Berichts mit der Datenquelle und dem Dataset können Sie die Schritte auswählen, mit denen Sie sich vertraut machen möchten.  
   
  Die folgende Abbildung zeigt einen Bericht, der mit dem Bericht vergleichbar ist, den Sie erstellen werden.  
   
@@ -35,29 +35,29 @@ ms.locfileid: "36163067"
 ##  <a name="BackToTop"></a> Lernziele  
   
 ### <a name="set-up-the-report"></a>Einrichten des Berichts  
- 1. [Erstellen ein leeres Berichts mit einer Datenquelle und einem Dataset](#CreateReport)  
+ 1. [Erstellen ein leeres Berichts mit einer Datenquelle und des Datensets](#CreateReport)  
   
  2. [Hinzufügen eines Felds auf der Berichtsentwurfsoberfläche (falsch, dann ordnungsgemäß)](#AddField)  
   
  3. [Hinzufügen einer Tabelle auf der Berichtsentwurfsoberfläche](#AddTable)  
   
 ### <a name="pick-and-choose"></a>Auswählen  
- [Fügen Sie einen Link zum Bericht](#AddHyperlink)  
+ [Hinzufügen eines Links zum Bericht](#AddHyperlink)  
   
- [Drehen von Text im Bericht](#RotateText)  
+ [Drehen des Textfelds im Bericht](#RotateText)  
   
  [Anzeigen von Text mit HTML-Formatierung](#FormatHTML)  
   
  [Formatieren von Währung](#FormatCurrency)  
   
- [Speichern Sie den Bericht](#Save)  
+ [Speichern des Berichts](#Save)  
   
  Ungefähre Dauer dieses Lernprogramms: 20 Minuten.  
   
 ## <a name="requirements"></a>Anforderungen  
  Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="CreateReport"></a> Erstellen ein leeres Berichts mit einer Datenquelle und einem Dataset  
+##  <a name="CreateReport"></a> Erstellen ein leeres Berichts mit einer Datenquelle und des Datensets  
   
 #### <a name="to-create-a-blank-report"></a>So erstellen Sie einen leeren Bericht  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36163067"
 4.  Überprüfen Sie, ob der Verbindungstyp „Microsoft SQL Server“ ist, und geben Sie anschließend im Feld **Verbindungszeichenfolge** Folgendes ein: **Datenquelle = \<Servername>**.  
   
     > [!NOTE]  
-    >  Der Ausdruck \<Servername > für Beispiel Report001, bezeichnet einen Computer, die auf dem eine Instanz des SQL Server-Datenbankmoduls installiert ist. Für dieses Lernprogramm sind keine bestimmten Daten erforderlich; es wird lediglich eine Verbindung mit einer [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Datenbank benötigt. Wenn unter **Datenquellenverbindungen** bereits eine Datenquellenverbindung aufgeführt ist, können Sie sie auswählen und zum nächsten Schritt übergehen, nämlich „So erstellen Sie ein Dataset“. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung (Berichts-Generator)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    >  Der Ausdruck \<Servername >, z.B. Report001, bezeichnet einen Computer, auf dem eine Instanz von SQL Server-Datenbankmoduls installiert ist. Für dieses Lernprogramm sind keine bestimmten Daten erforderlich; es wird lediglich eine Verbindung mit einer [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Datenbank benötigt. Wenn unter **Datenquellenverbindungen** bereits eine Datenquellenverbindung aufgeführt ist, können Sie sie auswählen und zum nächsten Schritt übergehen, nämlich „So erstellen Sie ein Dataset“. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung (Berichts-Generator)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -145,15 +145,15 @@ ms.locfileid: "36163067"
   
 1.  Ziehen Sie das Feld **FullName** aus dem Berichtsdatenbereich auf die Entwurfsoberfläche.  
   
-     Berichts-Generator erstellt ein Textfeld mit einem Ausdruck, dargestellt als \<Expr >.  
+     Berichts-Generator erstellt ein Textfeld mit einem darin enthaltenen, dargestellt als Ausdruck \<Expr >.  
   
 2.  Klicken Sie auf **Ausführen**.  
   
-     Beachten Sie, dass nur ein Datensatz **Fernando Ross**, also in alphabetischer Reihenfolge der erste Datensatz in der Abfrage. Die anderen Datensätze in diesem Feld werden nicht erneut angezeigt.  
+     Beachten Sie, dass nur ein Datensatz **Fernando Ross**, d.h. alphabetisch den ersten Datensatz in der Abfrage. Die anderen Datensätze in diesem Feld werden nicht erneut angezeigt.  
   
 3.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zurückzukehren.  
   
-4.  Wählen Sie den Ausdruck \<Expr > im Textfeld.  
+4.  Wählen Sie den Ausdruck \<Expr > in das Textfeld ein.  
   
 5.  Im Eigenschaftenbereich für die **Value** -Eigenschaft wird Folgendes angezeigt (wenn der Bereich nicht angezeigt wird, wählen Sie auf der Registerkarte **Ansicht** die Option **Eigenschaften**aus):  
   
@@ -204,27 +204,27 @@ ms.locfileid: "36163067"
   
 3.  Auf der **Anordnen von Feldern** Seite, ziehen Sie die **Territory**, **LinkText**, und **Produkt** Felder **Zeilengruppen**, ziehen Sie die **Sales** Feld **Werte**, und klicken Sie dann auf **Weiter**.  
   
-4.  Auf der **auswählen des Layouts** Seite löschen der **Gruppen erweitern/reduzieren** das Kontrollkästchen, damit Sie die gesamte Tabelle sehen, und klicken Sie dann auf **Weiter**.  
+4.  Auf der **auswählen des Layouts** Deaktivieren der **Gruppen erweitern/reduzieren** das Kontrollkästchen, damit Sie die gesamte Tabelle sehen, und klicken Sie dann auf **Weiter**.  
   
-5.  Auf der **Auswählen eines Formats** auf **Schiefer**, und klicken Sie dann auf **Fertig stellen**.  
+5.  Auf der **Auswählen eines Formats** auf **Slate**, und klicken Sie dann auf **Fertig stellen**.  
   
 6.  Ziehen Sie die Tabelle, damit sie sich unter dem Titelblock befindet.  
   
 7.  Klicken Sie auf **Ausführen**.  
   
-     Die Tabelle sieht einwandfrei aus, enthält jedoch zwei Ergebniszeilen. Die **LinkText** Feld nicht benötigt keine Summenzeile.  
+     Die Tabelle sieht einwandfrei aus, enthält jedoch zwei Ergebniszeilen. Die **LinkText** -Feld benötigt keine Ergebniszeilen.  
   
 8.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zurückzukehren.  
   
-9. Mit der rechten Maustaste in das Textfeld enthält `[LinkText]`, und klicken Sie auf **Zellen teilen**.  
+9. Mit der rechten Maustaste in des Textfelds mit `[LinkText]`, und klicken Sie auf **Zellen teilen**.  
   
-10. Wählen Sie die leere Zelle unter der `[LinkText]` Zelle, und halten Sie die UMSCHALTTASTE gedrückt, und wählen Sie die zwei Zellen rechts daneben: die **insgesamt** Zelle der **Produkt** Spalte und die `[Sum(Sales)]` Zelle in der  **Sales** Spalte.  
+10. Wählen Sie die leere Zelle unter der `[LinkText]` Zelle, und klicken Sie dann die UMSCHALTTASTE gedrückt halten und wählen Sie die zwei Zellen rechts daneben: die **insgesamt** Zelle die **Produkt** Spalte und die `[Sum(Sales)]` Zelle in der  **Sales** Spalte.  
   
-11. Mit diesen drei Zellen ausgewählt sind, mit der rechten Maustaste eine der Zellen, und klicken Sie auf **Zeile löschen**.  
+11. Klicken Sie mit diese drei Zellen ausgewählt sind, mit der rechten Maustaste eine der Zellen, und klicken Sie auf **Zeile löschen**.  
   
 12. Klicken Sie auf **Ausführen**.  
   
-##  <a name="AddHyperlink"></a> Fügen Sie einen Link zum Bericht  
+##  <a name="AddHyperlink"></a> Hinzufügen eines Links zum Bericht  
  In diesem Abschnitt fügen Sie dem Text in der Tabelle aus dem vorherigen Abschnitt einen Link hinzu.  
   
 #### <a name="to-add-a-hyperlink-to-the-report"></a>So fügen Sie dem Bericht einen Link hinzu  
@@ -243,7 +243,7 @@ ms.locfileid: "36163067"
   
 7.  Wählen Sie `[LinkText]`aus.  
   
-8.  In der **Schriftart** im Abschnitt der **Startseite** Registerkarte, klicken Sie auf die **Unterstreichen** Schaltfläche aus, und klicken Sie dann auf den Dropdown Pfeil neben der **Farbe** Schaltfläche und klicken Sie auf **blauen**.  
+8.  In der **Schriftart** Teil der **Startseite** Registerkarte, klicken Sie auf der **unterstrichen** Schaltfläche, und klicken Sie dann auf den Dropdown-Pfeil neben der **Farbe** Schaltfläche und klicken Sie auf **blaue**.  
   
 9. Klicken Sie auf **Ausführen**.  
   
@@ -251,7 +251,7 @@ ms.locfileid: "36163067"
   
 10. Klicken Sie auf einen Link. Wenn der Computer mit dem Internet verbunden ist, wird vom Browser ein Hilfethema zu Berichts-Generator geöffnet.  
   
-##  <a name="RotateText"></a> Drehen von Text im Bericht  
+##  <a name="RotateText"></a> Drehen des Textfelds im Bericht  
  In diesem Abschnitt drehen Sie Text in der Tabelle aus den vorherigen Abschnitten.  
   
 #### <a name="to-rotate-text"></a>So drehen Sie Text  
@@ -264,14 +264,14 @@ ms.locfileid: "36163067"
   
 4.  Wenn der Eigenschaftenbereich nicht geöffnet ist, aktivieren Sie auf der Registerkarte **Ansicht** das Kontrollkästchen **Eigenschaften** .  
   
-5.  Suchen Sie die WritingMode-Eigenschaft im Bereich "Eigenschaften" aus.  
+5.  Suchen Sie die WritingMode-Eigenschaft im Bereich Eigenschaften.  
   
     > [!NOTE]  
     >  Wenn die Eigenschaften im Eigenschaftenbereich in Kategorien angeordnet sind, befindet sich WritingMode in der Kategorie **Lokalisierung** . Stellen Sie sicher, dass Sie die Zelle und nicht den Text ausgewählt haben. WritingMode ist eine Eigenschaft des Textfeldes, nicht des Texts.  
   
-6.  Klicken Sie im Listenfeld auf **Rotate270**.  
+6.  Klicken Sie in das Listenfeld **Rotate270**.  
   
-7.  Auf der **Home** Registerkarte die **Absatz** auf die **mittleren** und **Center** Schaltflächen, um den Text in der Mitte der Zelle gesucht werden soll. vertikal und horizontal.  
+7.  Auf der **Startseite** Registerkarte die **Absatz** auf die **mittleren** und **Center** Schaltflächen, um den Text in der Mitte der Zelle zu platzieren vertikal und horizontal.  
   
 8.  Klicken Sie auf (**!**).  
   
@@ -309,7 +309,7 @@ ms.locfileid: "36163067"
   
 5.  Klicken Sie mit der rechten Maustaste auf den gesamten ausgewählten Text und anschließend auf **Texteigenschaften**.  
   
-6.  Auf der **allgemeine** Seite **Markuptyp**, klicken Sie auf **HTML - interpretieren HTML-Tags als Formate**.  
+6.  Auf der **allgemeine** Seite **Markuptyp**, klicken Sie auf **HTML - interpretieren von HTML-Tags als Formate**.  
   
 7.  Klicken Sie auf **OK**.  
   
@@ -327,7 +327,7 @@ ms.locfileid: "36163067"
   
 3.  Klicken Sie auf der Registerkarte **Stamm** in der Gruppe **Zahl** auf die Schaltfläche **Währung** .  
   
-4.  (Optional) Auf der **Home** Registerkarte die **Anzahl** zu gruppieren, klicken Sie auf die **Platzhalterformate** Schaltfläche, und klicken Sie auf **Beispielwerte** , wie die Zahlen sehen formatiert werden.  
+4.  (Optional) Auf der **Startseite** Registerkarte die **Anzahl** gruppieren, klicken Sie auf die **Platzhalterformate** Schaltfläche, und klicken Sie auf **Beispielwerte** , wie die Nummern angezeigt formatiert werden soll.  
   
 5.  (Optional) Klicken Sie auf der Registerkarte **Stamm** in der Gruppe **Zahl** zweimal auf die Schaltfläche **Dezimalstellen verringern** , um volle Dollarbeträge ohne Centangaben anzuzeigen.  
   
@@ -335,7 +335,7 @@ ms.locfileid: "36163067"
   
  Im Bericht werden nun formatierte Daten angezeigt, und die Lesbarkeit wurde verbessert.  
   
-##  <a name="Save"></a> Speichern Sie den Bericht  
+##  <a name="Save"></a> Speichern des Berichts  
  Sie können Berichte auf einem Berichtsserver, in einer SharePoint-Bibliothek oder auf dem Computer speichern.  
   
  Speichern Sie in diesem Lernprogramm den Bericht auf einem Berichtsserver. Wenn Sie keinen Zugriff auf einen Berichtsserver besitzen, speichern Sie den Bericht auf dem Computer.  
@@ -367,7 +367,7 @@ ms.locfileid: "36163067"
 4.  Klicken Sie auf **Speichern**.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Es gibt viele Möglichkeiten zum Formatieren von Text im Berichts-Generator [Lernprogramm: Erstellen eines Freiformberichts &#40;Berichts-Generator&#41; ](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) enthält weitere Beispiele.  
+ Es gibt viele Möglichkeiten zum Formatieren von Text im Berichts-Generator [Tutorial: Erstellen eines Freiformberichts &#40;Berichts-Generator&#41; ](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) enthält weitere Beispiele.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Lernprogramme &#40;Berichts-Generator&#41;](report-builder-tutorials.md)   

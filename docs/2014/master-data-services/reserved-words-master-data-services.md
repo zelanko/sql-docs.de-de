@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reserved words [Master Data Services]
 - Master Data Services, reserved words
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3307fb8185abfb6b862e72691596e4385b09dcb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 2aaee670cd89e957a6ad4700963606ffe0d4ef4f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162060"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221666"
 ---
 # <a name="reserved-words-master-data-services"></a>Reservierte Wörter (Master Data Services)
   Wenn Sie Modellobjekte oder Elemente erstellen, können in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]einige Wörter nicht verwendet werden. Die Verwendung dieser Wörter verursacht möglicherweise Fehler.  
@@ -41,7 +41,7 @@ ms.locfileid: "36162060"
 -   [Elemente](#members)  
   
 ##  <a name="models"></a> Modelle  
- Bei der Erstellung eines Modells mit dem Namen festgelegt **Namen**, aktivieren Sie nicht **Entität mit gleichem Namen wie Modell erstellen** da **Namen** kann nicht für den Namen einer Entität verwendet werden.  
+ Bei der Erstellung eines Modells mit dem Namen festgelegt **Namen**, aktivieren Sie nicht **Entität mit demselben Namen wie Modell erstellen** da **Namen** kann nicht für den Namen einer Entität verwendet werden.  
   
 ##  <a name="entities"></a> Entitäten  
  **Name** oder **Code**kann für Entitätsnamen nicht verwendet werden.  
@@ -74,7 +74,7 @@ ms.locfileid: "36162060"
 -   **Version_ID**  
   
 ##  <a name="members"></a> Element  
- Für Mitglieder können keine **MDMMemberStatus** oder **ROOT** für die **Code** Attributwert.  
+ Für Elemente können keine **MDMMemberStatus** oder **Stamm** für die **Code** Attributwert.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Übersicht über Master Data Services](master-data-services-overview-mds.md)  

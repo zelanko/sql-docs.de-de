@@ -1,5 +1,5 @@
 ---
-title: Überwachen einer Instanz von Analysis Services | Microsoft Docs
+title: Überwachen einer Instanz von Analysis Services | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - monitoring [Analysis Services - multidimensional data]
 - multidimensional data [Analysis Services], monitoring
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - performance [SQL Server], monitoring tools
 ms.assetid: 2f0ab717-05f3-427e-b8cd-a8bdca374add
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 20197b22e4eb8f21c4b09493c79a47c00e4e6bbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6cdce8bf19c1d167952f954f82cc0cb679eb2612
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151687"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237740"
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Überwachen einer Instanz von Analysis Services
   Sie können die Leistung von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] überwachen, indem Sie [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] oder den Systemmonitor verwenden, der manchmal auch als **PerfMon**bezeichnet wird. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] erstellen und verwalten Sie Ablaufverfolgungen und können Ablaufverfolgungsergebnisse analysieren und wiedergeben. Systemmonitor-Berichte zum Serverstatus, die im Index unter den jeweiligen Leistungsindikatoren zu finden sind, werden im nächsten Abschnitt erläutert.  

@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tql
 - templates [Transact-SQL], creating
 - templates [Transact-SQL]
 ms.assetid: 41098e78-b482-410e-bfe8-2ac10769ac4a
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2980ff029352e638dc12169e3e0692fcd60b7c2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5a679ed1aaf51ff1282976aa7c8c0b509c23a0d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160567"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321700"
 ---
 # <a name="create-custom-templates"></a>Erstellen von benutzerdefinierten Vorlagen
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] kommt mit einer Reihe von Vorlagen für viele häufig ausgeführten Aufgaben. Der größte Vorteil von Vorlagen besteht jedoch darin, dass Sie für ein komplexes Skript, das Sie häufig erstellen müssen, eine benutzerdefinierte Vorlage anlegen können. Sie werden nun ein einfaches Skript mit wenigen Parametern erstellen. Vorlagen sind jedoch auch bei umfangreichen Skripts mit vielen Wiederholungen nützlich.  
@@ -71,7 +70,7 @@ ms.locfileid: "36160567"
   
 10. Geben Sie im Abfrage-Editor **EXECUTE dbo.WorkOrdersForBlade**ein, und drücken Sie anschließend F5, um die Abfrage auszuführen. Überprüfen Sie, ob im Bereich **Ergebnisse** eine Liste mit Bestellungen für Klingen zurückgegeben wird.  
   
-11. Bearbeiten Sie das Vorlagenskript (das Skript in Schritt 7), und Ersetzen Sie dabei den Produktnamen Blade mit dem Parameter ***< * Product_name**, `nvarchar(50)`, **Namen*> ***, an vier Stellen.  
+11. Bearbeiten Sie das Vorlagenskript (das Skript in Schritt 7), und Ersetzen Sie dabei den Produktnamen "Blade" durch den Parameter ***< * Product_name**, `nvarchar(50)`, **Namen*> ***, an vier Stellen.  
   
     > [!NOTE]  
     >  Für Parameter sind drei Elemente erforderlich: der Name des zu ersetzenden Parameters, der Datentyp des Parameters und ein Standardwert für den Parameter.  
@@ -107,7 +106,7 @@ ms.locfileid: "36160567"
   
 3.  Klicken Sie im Menü **Abfrage** auf **Werte für Vorlagenparameter angeben**.  
   
-4.  In der **Vorlagenparameter ersetzen** im Dialogfeld für die `product_name` value, geben Sie **FreeWheel** (überschreiben dabei den Standardinhalt), und klicken Sie dann auf **OK** zu schließen die **Vorlagenparameter ersetzen** Dialogfeld Feld und ändern Sie das Skript im Abfrage-Editor.  
+4.  In der **Vorlagenparameter** im Dialogfeld für die `product_name` -Wert, geben Sie **FreeWheel** (überschreiben dabei den Standardinhalt), und klicken Sie dann auf **OK** zu schließen die **Vorlagenparameter** Dialogfeld ein, und ändern Sie das Skript im Abfrage-Editor.  
   
 5.  Drücken Sie F5, um das Skript auszuführen. Damit wird die Prozedur erstellt.  
   

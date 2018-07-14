@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - spatial indexes [SQL Server]
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 99c12dce1bcab99ae5e4d65bf3ccc6d637b8154c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e21d0142212541ff41bef6ba76f8e274235b86a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161779"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194970"
 ---
 # <a name="spatial-indexes-overview"></a>Übersicht über räumliche Indizes
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt räumliche Daten und räumliche Indizes. Ein *räumlicher Index* ist ein erweiterter Index, der es Ihnen ermöglicht, eine räumliche Spalte zu indizieren. Eine räumliche Spalte ist eine Tabellenspalte mit Daten eines räumlichen Datentyps wie beispielsweise `geometry` oder `geography`.  
@@ -63,7 +63,7 @@ ms.locfileid: "36161779"
  Sie können den Zerlegungsprozess steuern, indem Sie nicht standardmäßige Rasterdichten angeben. Beispielsweise können verschiedene Dichten auf verschiedenen Ebenen hilfreich sein, um einen Index auf die Größe des indizierten Raums und der Objekte in der räumlichen Spalte fein abzustimmen.  
   
 > [!NOTE]  
->  Die Rasterdichten eines räumlichen Index sind in den Spalten level_1_grid, level_2_grid, level_3_grid und level_4_grid der [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) -Katalogsicht sichtbar, wenn der Datenbank-Kompatibilitätsgrad auf 100 oder niedriger festgelegt wird. Die `GEOMETRY_AUTO_GRID` / `GEOGRAPHY_AUTO_GRID` -mosaikschemaoptionen füllen diese Spalten nicht. Sys. spatial_index_tessellations-Katalogsicht wurde `NULL` Werte für diese Spalten, wenn die automatischen Rasteroptionen verwendet werden.  
+>  Die Rasterdichten eines räumlichen Index sind in den Spalten level_1_grid, level_2_grid, level_3_grid und level_4_grid der [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) -Katalogsicht sichtbar, wenn der Datenbank-Kompatibilitätsgrad auf 100 oder niedriger festgelegt wird. Die `GEOMETRY_AUTO_GRID` / `GEOGRAPHY_AUTO_GRID` -mosaikschemaoptionen füllen diese Spalten nicht. Sys. spatial_index_tessellations-Katalogsicht wurde `NULL` Werte für diese Spalten aus, wenn die automatischen Rasteroptionen verwendet werden.  
   
 ###  <a name="tessellation"></a> Mosaik  
  Nach der Zerlegung eines indizierten Raums in eine Rasterhierarchie werden die Daten anhand des räumlichen Indexes zeilenweise aus der räumlichen Spalte gelesen. Nachdem die Daten für ein räumliches Objekt (bzw. eine räumliche Instanz) gelesen wurden, wird unter Verwendung des räumlichen Index ein *Mosaikprozess* für dieses Objekt durchgeführt. Durch den Mosaikprozess wird das Objekt in die Rasterhierarchie eingepasst, indem das Objekt einer Menge von Rasterzellen zugeordnet wird, die es berührt (*berührte Zellen*). Auf Ebene 1 der Rasterhierarchie beginnend, verläuft der Mosaikprozess *breitenorientiert* über der Ebene. Potenziell kann der Prozess über alle vier Ebenen fortgesetzt werden, wobei zu einem Zeitpunkt jeweils nur eine Ebene bearbeitet werden kann.  
@@ -118,9 +118,9 @@ ms.locfileid: "36161779"
 ###  <a name="schemes"></a> Mosaikschemas  
  Das Verhalten eines räumlichen Indexes hängt teilweise von seinem *Mosaikschema*ab. Das Mosaikschema ist datentypspezifisch. In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]werden zwei Mosaikschemas für räumliche Indizes unterstützt:  
   
--   *Geometrierastermosaikschemas*, also das Schema für die `geometry` -Datentyp.  
+-   *Geometrierastermosaik*, d.h., dass das Schema für die `geometry` -Datentyp.  
   
--   *Geografierastermosaik*, dem gilt für Spalten von der `geography` -Datentyp.  
+-   *Geografierastermosaik*, die gilt für Spalten vom die `geography` -Datentyp.  
   
 > [!NOTE]  
 >  Die **tessellation_scheme** -Einstellung eines räumlichen Index wird in der [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) -Katalogansicht angezeigt.  
@@ -132,7 +132,7 @@ ms.locfileid: "36161779"
 >  Dieses Mosaikschema kann mit der USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID)-Klausel der [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung explizit angegeben werden.  
   
 ##### <a name="the-bounding-box"></a>Das umgebende Feld  
- Geometrische Daten belegen eine Fläche, die unendlich sein kann. In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]erfordert ein räumlicher Index jedoch einen endlichen Raum. Um einen endlichen Raum für die Zerlegung einzurichten, erfordert das Geometrierastermosaikschema ein rechteckiges *umgebendes Feld*. Das umgebende Feld wird durch vier Koordinaten definiert `(` *X-min ***,*** y-min* `)` und `(` *X-Max ***,*** maximaler y-Wert*  `)`, die als Eigenschaften des räumlichen Indexes gespeichert werden. Diese Koordinaten stellen Folgendes dar:  
+ Geometrische Daten belegen eine Fläche, die unendlich sein kann. In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]erfordert ein räumlicher Index jedoch einen endlichen Raum. Um einen endlichen Raum für die Zerlegung einzurichten, erfordert das Geometrierastermosaikschema ein rechteckiges *umgebendes Feld*. Das umgebende Feld wird durch vier Koordinaten definiert, `(` *X-min ***,*** y-min* `)` und `(` *X-Max ***,*** y-Max*  `)`, die als Eigenschaften des räumlichen Indexes gespeichert werden. Diese Koordinaten stellen Folgendes dar:  
   
 -   *x-min* ist die X-Koordinate der linken unteren Ecke des umgebenden Felds.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "36161779"
   
  Der räumliche Index zerlegt den Raum im umgebenden Feld. Das Raster der Ebene&nbsp;1 der Rasterhierarchie füllt das umgebende Feld aus. Zur Platzierung eines geometrischen Objekts in der Rasterhierarchie vergleicht der räumliche Index die Koordinaten des Objekts mit den Koordinaten des umgebenden Felds.  
   
- Die folgende Abbildung zeigt die Punkte definiert werden, indem Sie die `(` *X-min ***,*** y-min* `)` und `(` *X-Max ***,*** Maximaler y-Wert* `)` Koordinaten des umgebenden Felds. Die obersten Ebene der Rasterhierarchie wird als 4&nbsp;x&nbsp;4-Raster angezeigt. Zur Veranschaulichung werden die niedrigeren Ebenen weggelassen. Der Raum außerhalb des umgebenden Felds wird durch eine Null (0) angegeben. Beachten Sie, dass Objekt 'A' teilweise über das Feld hinausragt und dass sich Objekt 'B' komplett außerhalb des Felds in Zelle&nbsp;0 befindet.  
+ Die folgende Abbildung zeigt die Punkte, die von definiert die `(` *X-min ***,*** y-min* `)` und `(` *X-Max ***,*** y-Max* `)` Koordinaten des umgebenden Felds. Die obersten Ebene der Rasterhierarchie wird als 4&nbsp;x&nbsp;4-Raster angezeigt. Zur Veranschaulichung werden die niedrigeren Ebenen weggelassen. Der Raum außerhalb des umgebenden Felds wird durch eine Null (0) angegeben. Beachten Sie, dass Objekt 'A' teilweise über das Feld hinausragt und dass sich Objekt 'B' komplett außerhalb des Felds in Zelle&nbsp;0 befindet.  
   
  ![Umgebendes Feld mit Koordinaten und Zelle 0](../../database-engine/media/spndx-bb-4x4-objects.gif "Bounding box showing coordinates and cell 0")  
   
@@ -226,7 +226,7 @@ ms.locfileid: "36161779"
 -   *geography1*.[STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) <= *number*  
   
 ### <a name="queries-that-use-spatial-indexes"></a>Abfragen auf der Grundlage räumlicher Indizes  
- Räumliche Indizes werden nur in Abfragen, die einen indizierten räumlichen Operator in unterstützt die `WHERE` Klausel. Beispiele für diese Syntax sind:  
+ Räumliche Indizes werden nur unterstützt, in Abfragen, die einen indizierten räumlichen in Operator der `WHERE` Klausel. Beispiele für diese Syntax sind:  
   
 ```  
 [spatial object].SpatialMethod([reference spatial object]) [ = | < ] [const literal or variable]  

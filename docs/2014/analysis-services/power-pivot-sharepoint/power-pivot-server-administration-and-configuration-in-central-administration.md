@@ -1,5 +1,5 @@
 ---
-title: PowerPivot-Serververwaltung und-Konfiguration in der Zentraladministration | Microsoft Docs
+title: PowerPivot-Serververwaltung und-Konfiguration in der Zentraladministration | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2cdbfdc5-45a9-4000-a03d-318cc7ac8fe9
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 62232430002833de70ecbf1cf76a401324b12174
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 17a0dd962b2cd3bf3515df6151e1ce5d2ed9699b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161682"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200290"
 ---
 # <a name="powerpivot-server-administration-and-configuration-in-central-administration"></a>PowerPivot-Serververwaltung und -konfiguration in der Zentraladministration
   Die PowerPivot-Serververwaltung und -konfiguration wird mithilfe der SharePoint-Zentraladministration von SharePoint Service-Anwendungsadministratoren ausgeführt.  
@@ -64,7 +64,7 @@ ms.locfileid: "36161682"
 |[Konfigurieren von PowerPivot-Dienstkonten](configure-power-pivot-service-accounts.md)|Optional|Hier wird erläutert, wie Kennwörter oder Änderungsdienstkonten aktualisiert werden.|  
 |[Verbinden einer PowerPivot-Dienstanwendung zu einer SharePoint-Webanwendung in der Zentraladministration](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)|Optional|Hier wird erläutert, wie Dienstzuordnungen geändert werden.|  
 |[Erstellen eines vertrauenswürdigen Speicherorts für PowerPivot-Websites in der Zentraladministration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)|Optional|Hier wird erläutert, wie der PowerPivot-Katalog als vertrauenswürdiger Speicherort hinzugefügt wird.|  
-|[Konfigurieren und Anzeigen von SharePoint-Protokolldateien und Diagnoseprotokollierung &#40;PowerPivot für SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)|Optional|Die Ereignisprotokollierung wird standardmäßig konfiguriert. Sie können die Standardeinstellungen mithilfe dieser Schritte ändern.|  
+|[Konfigurieren und Anzeigen der SharePoint-Protokolldateien und Diagnoseprotokollierung &#40;PowerPivot für SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)|Optional|Die Ereignisprotokollierung wird standardmäßig konfiguriert. Sie können die Standardeinstellungen mithilfe dieser Schritte ändern.|  
 |[PowerPivot-Integritätsregeln − konfigurieren](configure-power-pivot-health-rules.md)|Optional|Serverintegritätsregeln werden standardmäßig konfiguriert. Sie können mithilfe dieser Schritte einige der Standardeinstellungen ändern.|  
 |[Erstellen und Anpassen von PowerPivot-Katalogen](create-and-customize-power-pivot-gallery.md)|Optional|Hinsichtlich der Installationen, die Sie manuell konfigurieren, wird über diese Prozedur erläutert, wie eine PowerPivot-Katalogbibliothek erstellt wird, die Bildminiaturansichten der in ihr enthaltenen PowerPivot-Arbeitsmappen anzeigt.|  
 |[Hinzufügen ein BI-Semantikmodell Verbindungs-Inhaltstyps zu einer Bibliothek &#40;PowerPivot für SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)|Optional|Hier wird erläutert, wie eine Dokumentbibliothek erweitert wird, um die Erstellung von Verbindungsdateien des BI-Semantikmodells zu unterstützen.|  

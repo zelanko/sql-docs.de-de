@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptions.FontsAndColors.ColorPicker
 ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 89605a9aa9a1dd6f5fdf0a5042d39d1afa5600c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a2b6ecc75ade6da9d489c30105ad3bc4e961bf59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159073"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220550"
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>Farbe (Dialogfeld) (Visual Database Tools)
   Das Dialogfeld **Farbe** gibt den RGB-Wert einer vom Benutzer ausgewählten Farbe zurück. Der Benutzer kann aus einer vom Bildschirmtreiber bestimmten Palette mit Grundfarben oder aus einer Palette mit benutzerdefinierten Farben auswählen. Wählen Sie aus den Grundfarben aus, oder erstellen Sie benutzerdefinierte Farben. Definieren Sie Farben durch Klicken in die Farbmatrix oder durch Eingabe in die Felder **Farbt.:**, **Sätt.:**, **Hell.:**, **Rot:**, **Grün:** und **Blau:** .  

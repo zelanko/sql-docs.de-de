@@ -1,5 +1,5 @@
 ---
-title: Transformations-Editor (Registerkarte "Erweitert") aggregieren | Microsoft Docs
+title: Aggregieren der Transformations-Editor (Registerkarte Erweitert) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.aggregationtransformation.advanced.f1
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: 186a9736-2554-40a0-9cb2-877a8db5fde8
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 917bffe5d88b30ffe5a3d56b7e8776c4e66c0051
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 398ec0597f0240548d6aba15ac2f29b218f4089a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159624"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254572"
 ---
 # <a name="aggregate-transformation-editor-advanced-tab"></a>Transformations-Editor für Aggregieren (Registerkarte Erweitert)
   Mithilfe der Registerkarte **Erweitert** des Dialogfelds **Transformations-Editor für Aggregieren** können Sie Komponenteneigenschaften festlegen, Aggregationen angeben und die Eigenschaften von Eingabe- und Ausgabespalten festlegen.  

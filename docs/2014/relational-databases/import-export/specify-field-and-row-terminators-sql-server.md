@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server], terminators
 - field terminators [SQL Server]
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9730f5e59d302b95f892d4de2860f3f8a0b147f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5ba5e58a3f3c05985b8219e004e803a516a2ff81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162545"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197210"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Angeben von Feld- und Zeilenabschlusszeichen (SQL Server)
   Für Zeichendatenfelder geben Ihnen optionale Abschlusszeichen die Möglichkeit, das Ende jedes Felds in einer Datendatei mit einem *Feldabschlusszeichen* und das Ende jeder Zeile mit einem *Zeilenabschlusszeichen*zu markieren. Abschlusszeichen stellen eine Möglichkeit dar, für Datendatei lesende Programmen anzugeben, wo ein Feld oder eine Zeile endet und ein anderes Feld oder eine andere Zeile beginnt.  
@@ -46,9 +45,9 @@ ms.locfileid: "36162545"
 |Jedes Zeichen, das gedruckt werden kann (Steuerzeichen können nicht gedruckt werden, ausgenommen Null, Tabstopp, Neue Zeile und Wagenrücklauf)|(*, A, t, l usw.)|  
 |Eine Zeichenfolge von bis zu 10 Zeichen, die gedruckt werden können, einschließlich einiger oder aller oben aufgeführten Abschlusszeichen|(\*\*\t\*\*, Ende, !!!!!!!!!!, \t - \n usw.)|  
   
- <sup>1</sup> nur t, n, R, 0 und '\0'-Zeichen funktionieren, mit dem Escapezeichen umgekehrter Schrägstrich, um ein Steuerzeichen zu erzeugen.  
+ <sup>1</sup> nur t, n, R, 0 und '\0'-Zeichen zu arbeiten, mit dem Escapezeichen umgekehrter Schrägstrich, um ein Steuerzeichen zu erzeugen.  
   
- <sup>2</sup> , obwohl das null-Steuerzeichen (\0) nicht sichtbar, wenn Sie gedruckt ist, es ist ein eigenständiges Zeichen in der Datendatei. Dies bedeutet, dass das Verwenden des Null-Steuerzeichens als Feld- oder Zeilenabschlusszeichen einen Unterschied dazu darstellt, überhaupt kein Feld- oder Zeilenabschlusszeichen zu verwenden.  
+ <sup>2</sup> , obwohl das null-Steuerzeichen (\0) nicht sichtbar, wenn gedruckt ist, es ist ein eigenständiges Zeichen in der Datendatei. Dies bedeutet, dass das Verwenden des Null-Steuerzeichens als Feld- oder Zeilenabschlusszeichen einen Unterschied dazu darstellt, überhaupt kein Feld- oder Zeilenabschlusszeichen zu verwenden.  
   
 > [!IMPORTANT]  
 >  Wenn ein Abschlusszeichen innerhalb der Daten auftritt, wird es als Abschlusszeichen, nicht als Daten interpretiert, und die Daten nach diesem Zeichen als zum nächsten Feld oder Datensatz zugehörig interpretiert. Wählen Sie deshalb die Abschlusszeichen mit Bedacht aus, um sicherzustellen, dass sie nicht anderweitig in Ihren Daten vorkommen. Beispielsweise ist ein niedriges Ersatzzeichen als Feldabschlusszeichen keine gute Wahl, wenn die Daten dieses niedrige Ersatzzeichen enthalten.  
@@ -60,7 +59,7 @@ ms.locfileid: "36162545"
 >  Wenn Sie **bcp** interaktiv verwenden und \n (Zeilenvorschub) als Zeilenabschlusszeichen angeben, wird dieses Zeichen von **bcp** automatisch mit dem Präfix \r (Wagenrücklauf) versehen, womit als Ergebnis das Zeilenabschlusszeichen \r\n steht.  
   
 ## <a name="specifying-terminators-for-bulk-export"></a>Angeben von Abschlusszeichen für den Massenexport  
- Wenn Sie beim Massenexport `char` oder `nchar` Daten und eine nicht-standardmäßiges Abschlusszeichen verwenden möchten, müssen Sie das Abschlusszeichen für angeben der **Bcp** Befehl. Zum Angeben der Abschlusszeichen stehen die folgenden Möglichkeiten zur Verfügung:  
+ Wenn Sie beim Massenexport `char` oder `nchar` Daten und ein nicht-standardmäßiges Abschlusszeichen verwenden möchten, müssen Sie das Abschlusszeichen für angeben der **Bcp** Befehl. Zum Angeben der Abschlusszeichen stehen die folgenden Möglichkeiten zur Verfügung:  
   
 -   Mit einer Formatdatei, in der das Abschlusszeichen Feld für Feld angegeben wird.  
   
@@ -86,7 +85,7 @@ ms.locfileid: "36162545"
         >  Nachdem Sie interaktiv alle Felder in einem **bcp**-Befehl angegeben haben, werden Sie vom Befehl dazu aufgefordert, Ihre Antworten für die einzelnen Felder in einer Nicht-XML-Formatdatei zu speichern. Weitere Informationen zu Nicht-XML-Formatdateien finden Sie unter [Nicht-XML-Formatdateien &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
 ### <a name="guidelines-for-using-terminators"></a>Richtlinien für die Verwendung von Abschlusszeichen  
- In einigen Situationen eignet sich ein Abschlusszeichen für eine `char` oder `nchar` Feld "Daten". Zum Beispiel:  
+ In einigen Fällen eignet sich ein Abschlusszeichen für ein `char` oder `nchar` Feld "Daten". Zum Beispiel:  
   
 -   Für eine Datenspalte, die einen NULL-Wert in einer Datendatei enthält, die in ein Programm importiert wird, das die Präfixlängeninformation nicht interpretieren kann.  
   
@@ -173,7 +172,7 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
   
 |Option|attribute|  
 |------------|---------------|  
-|DATAFILETYPE **= "`char`"**|Gibt an, dass die Datenfelder als Zeichendaten geladen werden.|  
+|DATAFILETYPE **='`char`"**|Gibt an, dass die Datenfelder als Zeichendaten geladen werden.|  
 |FIELDTERMINATOR **='**`,`**'**|Gibt ein Komma (`,`) als Feldabschlusszeichen an.|  
 |ROWTERMINATOR **='**`\n`**'**|Gibt das Zeilenabschlusszeichen als Neue-Zeile-Zeichen an.|  
   

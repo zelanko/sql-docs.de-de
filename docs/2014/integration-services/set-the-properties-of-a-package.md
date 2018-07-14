@@ -1,5 +1,5 @@
 ---
-title: Legen Sie die Eigenschaften eines Pakets | Microsoft Docs
+title: Legen Sie die Eigenschaften eines Pakets | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, properties
 - properties [Integration Services]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, properties
 ms.assetid: 0d20346e-475c-412f-b3ff-7bce25242b7a
 caps.latest.revision: 23
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ec97db89a74170ee04c9cc23486032958cb16a0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 197dbb96b08d484bce2f5235c106dc3f21433528
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159194"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328000"
 ---
 # <a name="set-the-properties-of-a-package"></a>Festlegen der Eigenschaften eines Pakets
   In diesem Verfahren wird das Konfigurieren von Paketeigenschaften mithilfe des Fensters **Eigenschaften** beschrieben.  
@@ -50,7 +50,7 @@ ms.locfileid: "36159194"
 5.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Integrationsservices &#40;SSIS&#41; Pakete](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Integrationsdienste &#40;SSIS&#41; Pakete](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Festlegen von Paketeigenschaften](set-package-properties.md)  
   
   

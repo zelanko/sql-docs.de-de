@@ -1,5 +1,5 @@
 ---
-title: Inhalt der Seite (Berichts-Manager) | Microsoft Docs
+title: Inhalt der Seite (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6b16869b-158a-4934-9c85-bee934b35378
 caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 32054fea94b8786fca74ecca9c223d4af9c9d6d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 05e7f592527e237798618b8af08cf471759d8786
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162643"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224820"
 ---
 # <a name="contents-page-report-manager"></a>Inhalt (Seite, Berichts-Manager)
   Mithilfe der Seite Inhalt können Sie den Inhalt des aktuellen Ordners anzeigen, Elemente zur Ansicht auswählen oder zu anderen Ordnern wechseln. Diese Seite wird geöffnet, wenn Sie einen Ordner auswählen. Sie ist zudem die Startseite des Berichts-Managers.  
@@ -59,8 +59,8 @@ ms.locfileid: "36162643"
  Klicken Sie auf diese Schaltfläche, um ein Element in der Ordnerhierarchie zu verschieben. Bevor Sie auf **Verschieben**klicken, aktivieren Sie die Kontrollkästchen neben den zu verschiebenden Elementen. Dadurch wird die Seite Elemente verschieben geöffnet, auf der Sie die Ordner nach einem neuen Speicherort durchsuchen können.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Berichts-Manager &#40;SSRS im einheitlichen Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Melden von Berichtsserverinhalten &#40;SSRS im einheitlichen Modus&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Verwalten von Berichtsserverinhalten &#40;einheitlicher SSRS-Modus&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [Berichts-Manager (F1-Hilfe)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

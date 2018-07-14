@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sp_configure
 - show advanced options option
 ms.assetid: 7572372a-24b6-428f-84ae-48560430b159
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ab668ba5418d3fd472e8baf3b2a3c3d1ee66b4d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 93b3af39f04202128a5fd7be9d33157bf3b75460
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161642"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180327"
 ---
 # <a name="show-advanced-options-server-configuration-option"></a>Erweiterte Optionen anzeigen (Serverkonfigurationsoption)
   Sie können mit der Option **Erweiterte Optionen anzeigen** die erweiterten Optionen der gespeicherten Systemprozedur **sp_configure** anzeigen. Wenn Sie **Erweiterte Optionen anzeigen** auf 1 festlegen, können Sie die erweiterten Optionen mithilfe von **sp_configure**in einer Liste aufführen. Die Standardeinstellung ist 0.  

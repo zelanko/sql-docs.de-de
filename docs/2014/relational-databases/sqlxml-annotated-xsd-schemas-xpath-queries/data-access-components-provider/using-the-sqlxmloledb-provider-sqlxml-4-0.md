@@ -1,5 +1,5 @@
 ---
-title: Verwenden den SQLXMLOLEDB-Anbieter (SQLXML 4.0) | Microsoft Docs
+title: Der SQLXMLOLEDB-Anbieter (SQLXML 4.0) mit | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - ClientSideXML property
 ms.assetid: fbcefac5-29c9-478b-b0e0-d510b593f446
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 37cfc512f02bef664756bf6d46574479112b7efa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f0ece4bb65c8517f50193f4340ab55cb87df4be5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162443"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221080"
 ---
 # <a name="using-the-sqlxmloledb-provider-sqlxml-40"></a>Verwenden des SQLXMLOLEDB-Anbieters (SQLXML 4.0)
   Die Themen in diesem Abschnitt enthalten ADO-Beispielanwendungen, die die Verwendung SQLXMLOLEDB-Anbieter-spezifischer Eigenschaften veranschaulichen.  
@@ -46,22 +46,22 @@ ms.locfileid: "36162443"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Ausführen von SQL-Abfragen &#40;SQLXMLOLEDB-Anbieter&#41;](executing-sql-queries-sqlxmloledb-provider.md)  
- Veranschaulicht die Verwendung der Eigenschaften ClientSideXML und XML-Stamm auszuführende SQL-Abfragen.  
+ Veranschaulicht die Verwendung der Eigenschaften ClientSideXML und XML-Stamm, SQL-Abfragen auszuführen.  
   
  [Ausführen von Vorlagen, die SQL-Abfragen enthalten &#40;SQLXMLOLEDB-Anbieter&#41;](executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md)  
  Veranschaulicht die Verwendung der ClientSideXML-Eigenschaft.  
   
  [Ausführen von XPath-Abfragen &#40;SQLXMLOLEDB-Anbieter&#41;](executing-xpath-queries-sqlxmloledb-provider.md)  
- Veranschaulicht die Verwendung der Eigenschaften ClientSideXML, Base Pfad und Zuordnen von Schemas.  
+ Veranschaulicht die Verwendung der Eigenschaften ClientSideXML, Base-Pfad und Mapping-Schema.  
   
  [Ausführen von XPath-Abfragen mit Namespaces &#40;SQLXMLOLEDB-Anbieter&#41;](executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md)  
  Veranschaulicht, wie Namespace-qualifizierte Schemas abgefragt werden.  
   
  [Ausführen von Vorlagen, die XPath-Abfragen enthalten &#40;SQLXMLOLEDB-Anbieter&#41;](executing-templates-that-contain-xpath-queries-sqlxmloledb-provider.md)  
- Veranschaulicht das Ausführen von Vorlagen mit SQL-Abfragen mithilfe der Eigenschaften ClientSideXML, Base Pfad und Zuordnen von Schemas.  
+ Veranschaulicht das Ausführen von Vorlagen mit SQL-Abfragen, die mit den Eigenschaften ClientSideXML, Base-Pfad und Mapping-Schema.  
   
  [Anwenden einer XSL-Transformation &#40;SQLXMLOLEDB-Anbieter&#41;](applying-an-xsl-transformation-sqlxmloledb-provider.md)  
- Veranschaulicht die Verwendung der ClientSideXML und XSL-Eigenschaften in das Anwenden einer XSL-Transformation.  
+ Veranschaulicht die Verwendung der ClientSideXML und XSL-Eigenschaften beim Anwenden einer XSL-Transformations.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Systemanforderungen für SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md)  

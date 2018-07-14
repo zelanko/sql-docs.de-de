@@ -1,5 +1,5 @@
 ---
-title: Neues Abonnement oder Abonnement bearbeiten (Berichts-Manager) | Microsoft Docs
+title: Neues Abonnement oder Abonnement bearbeiten (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e02d6529-ce67-4305-b7f0-433997e99c21
 caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: af32c10bd6c18a4cafc46ccba36859413942c98d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4cbed3ea7bb8d96f82ae7ef14294d1f5f02c3d5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161974"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212590"
 ---
 # <a name="new-subscription-or-edit-subscription-page-report-manager"></a>Neues Abonnement oder Abonnement bearbeiten (Berichts-Manager)
   Mithilfe der Seite Neues Abonnement oder Abonnement bearbeiten können Sie ein neues Abonnement erstellen oder ein vorhandenes Abonnement für einen Bericht bearbeiten. Abhängig von Ihrer Rollenzuweisung stehen auf dieser Seite unterschiedliche Optionen zur Verfügung. Benutzer mit erweiterten Berechtigungen können zusätzliche Optionen verwenden.  
@@ -66,12 +66,12 @@ ms.locfileid: "36161974"
  **Nach einem freigegebenen Zeitplan**  
  Wählen Sie einen definierten Zeitplan zur Verarbeitung des Abonnements aus.  
   
- **Parameterwerte eingeben**  
+ **Geben Sie die Parameterwerte**  
  Verwenden Sie diese Option, wenn Sie einen Bericht mit Parametern abonnieren. Diese Option steht nur für parametrisierte Berichte zur Verfügung. Beim Abonnieren eines parametrisierten Berichts können Sie die Parameterwerte angeben, mit deren Hilfe die Berichtsversion erstellt wird, die durch das Abonnement übermittelt wird. Sie können z. B. eine Regionalkennzahl angeben, um Vertriebsdaten für eine bestimmte Region auszuwählen. Wenn Sie keinen Wert angeben, wird der Standardwert verwendet.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren eines Berichtsservers für die e-Mail-Übermittlung &#40;SSRS-Konfigurations-Manager&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
- [Berichts-Manager &#40;SSRS im einheitlichen Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Erstellen, Ändern oder Löschen von Zeitplänen](subscriptions/create-modify-and-delete-schedules.md)   
  [Berichts-Manager (F1-Hilfe)](../../2014/reporting-services/report-manager-f1-help.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Abfrageoptionen, Ergebnisse (Textseite) | Microsoft Docs
+title: Abfrageoptionen, Ergebnisse (Seite "Text") | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.text.f1
 ms.assetid: fd2fb409-58f9-4ede-8349-ce007126b68d
 caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 51e1a98f00bc4d33e0609f1b03ceca928bded049
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d6c4fb6fe50f20bcac8d4f16644a35466a7b2f2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160276"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205750"
 ---
 # <a name="query-options-results-text-page"></a>Abfrageoptionen, Ergebnisse (Seite Text)
   Mithilfe dieser Seite können Sie die Optionen für die Anzeige eines Abfrageresultsets im Textformat angeben. Die Einstellungen auf dieser Seite gelten auch dann, wenn **Ergebnisse in Datei** ausgewählt wurde.  
@@ -41,19 +41,19 @@ ms.locfileid: "36160276"
  **Numerische Werte rechts ausrichten**  
  Aktivieren Sie dieses Kontrollkästchen, um numerische Werte an der Spalte rechts auszurichten. Das kann die Überprüfung von Zahlen mit einer festen Anzahl von Dezimalstellen erleichtern.  
   
- **Verwerfen Sie Ergebnisse nach der Ausführung der Abfrage**  
+ **Verwerfen von Ergebnis nach der abfrageausführung**  
  Gibt Arbeitsspeicher frei, indem die Abfrageergebnisse nach der Anzeige auf dem Bildschirm verworfen werden.  
   
  **Ergebnisse auf separater Registerkarte anzeigen**  
  Aktivieren Sie dieses Kontrollkästchen, um das Resultset in einem neuen Dokumentfenster anzuzeigen statt im unteren Bereich des Dokumentfensters der Abfrage.  
   
- **Wechseln Sie zur Registerkarte "Ergebnisse" nach Ausführung die Abfrage**  
+ **Wechseln Sie zur Registerkarte "Ergebnisse" nach Ausführung der Abfrage**  
  Aktivieren Sie dieses Kontrollkästchen, wenn der Fokus automatisch auf das Resultset verschoben werden soll.  
   
  **Maximale Anzahl von Zeichen pro Spalte angezeigte**  
  Dieser Wert liegt standardmäßig bei 256. Erhöhen Sie diesen Wert, wenn Sie größere Resultsets ohne Kürzungen anzeigen möchten.  
   
- **Standard wiederherstellen**  
+ **Auf Standard zurücksetzen**  
  Setzt alle auf dieser Seite verfügbaren Werte auf die ursprünglichen Standardwerte zurück.  
   
 ## <a name="saving-a-text-result-set-with-headers"></a>Speichern eines Resultsets als Text mit Header  

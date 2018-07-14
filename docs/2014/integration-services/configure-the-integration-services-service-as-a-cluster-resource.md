@@ -1,5 +1,5 @@
 ---
-title: Integration Services-Diensts als Clusterressource konfigurieren | Microsoft Docs
+title: Integration Services-Diensts als Clusterressource konfigurieren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 367835aa-9855-4791-a989-b3d08402ad4c
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8455d0a43e478cdb05f945269a3999b72fc581ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b524b2c570b3fac16403565716aaea36a31a7f24
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161863"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223770"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>Konfigurieren des Integration Services-Diensts als Clusterressource
   Kunden, für die die Vorteile der Konfiguration des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Diensts als Clusterressource die Nachteile überwiegen, finden in diesem Abschnitt alle erforderlichen Konfigurationsanweisungen. [!INCLUDE[msCoName](../includes/msconame-md.md)] rät dennoch von einer Konfiguration des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Diensts als Clusterressource ab.  
@@ -104,7 +104,7 @@ ms.locfileid: "36161863"
   
 2.  Erstellen Sie auf dem freigegebenen Datenträger einen neuen Ordner mit dem Namen **Packages** . Dieser soll als Paketspeicher dienen. Erteilen Sie den entsprechenden Benutzern und Gruppen Ordnerauflist- und Schreibberechtigungen für den neuen Ordner.  
   
-3.  Öffnen Sie die Konfigurationsdatei auf dem freigegebenen Datenträger in einem Text- oder XML-Editor. Ändern Sie den Wert, der die `ServerName` Element auf den Namen des virtuellen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , die sich in derselben Ressourcengruppe befinden.  
+3.  Öffnen Sie die Konfigurationsdatei auf dem freigegebenen Datenträger in einem Text- oder XML-Editor. Ändern Sie den Wert, der die `ServerName` -Element auf den Namen des virtuellen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , die sich in derselben Ressourcengruppe befinden.  
   
 4.  Ändern Sie den Wert von der `StorePath` zu den vollqualifizierten Pfad des Elements der **Pakete** Ordner auf dem freigegebenen Datenträger in einem vorherigen Schritt erstellt haben.  
   

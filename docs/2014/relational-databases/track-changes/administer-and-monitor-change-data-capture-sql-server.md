@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], monitoring
 - change data capture [SQL Server], administering
 - change data capture [SQL Server], jobs
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cc5accd969ae0a19d99610edca0023337321f657
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: ebc75d5750d77ac4166375f47b1301d7686f1a99
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160621"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244570"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Verwalten und Überwachen von Change Data Capture (SQL Server)
   In diesem Thema wird beschrieben, wie Sie Change Data Capture verwalten und überwachen können.  
@@ -41,10 +41,10 @@ ms.locfileid: "36160621"
  Der Parameter *maxscans* gibt die maximale Anzahl der Scanzyklen an, die vor dem Zurückkehren (kontinuierlich = 0) oder dem Ausführen einer Waitfor-Anweisung (kontinuierlich = 1) auszuführen versucht werden, um das Protokoll zu leeren.  
   
 #### <a name="continous-parameter"></a>continous-Parameter  
- Die *fortlaufende* -Parameter steuert, ob `sp_cdc_scan` Steuerung nach dem leeren des Protokolls oder Ausführen der maximalen Anzahl von scanzyklen (Einmalmodus) aufgibt. Es auch steuert, ob `sp_cdc_scan` weiterhin ausgeführt werden, bis explizit beendet wird (kontinuierlicher Modus).  
+ Die *fortlaufende* Parameter steuert, ob `sp_cdc_scan` Steuerung nach dem leeren des Protokolls oder Ausführen der maximalen Anzahl von scanzyklen (Einmalmodus) aufgibt. Es auch steuert, ob `sp_cdc_scan` weiterhin ausgeführt werden, bis explizit beendet wird (kontinuierlicher Modus).  
   
 ##### <a name="one-shot-mode"></a>Einmalmodus  
- Im Einmalmodus fordert der aufzeichnungsauftrag `sp_cdc_scan` Ausführen bis zu *Maxtrans* Überprüfungen, um zu versuchen, das Protokoll zu leeren und zurückzukehren. Alle Transaktionen zusätzlich zu *maxtrans* , die im Protokoll vorhanden sind, werden in späteren Scans verarbeitet.  
+ Im Einmalmodus fordert der aufzeichnungsauftrag `sp_cdc_scan` , bis zur Ausführung *Maxtrans* Überprüfungen, um zu versuchen, das Protokoll zu leeren und zurückzukehren. Alle Transaktionen zusätzlich zu *maxtrans* , die im Protokoll vorhanden sind, werden in späteren Scans verarbeitet.  
   
  Der Einmalmodus wird in gesteuerten Tests verwendet, bei denen die Anzahl der zu verarbeitenden Transaktionen bekannt ist und wo es vorteilhaft ist, dass der Auftrag nach seiner Beendigung automatisch geschlossen wird. Der Einmalmodus wird nicht für die Verwendung im Produktionsbereich empfohlen. Der Grund dafür ist, dass er für das Verwalten der Anzahl der Scanzyklen auf den Auftragszeitplan zurückgreift.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36160621"
  Beim Verwenden des Einmalmodus zum Steuern von Protokollscanvorgängen müsste die Anzahl der Sekunden zwischen Protokollverarbeitungsvorgängen durch den Auftragszeitplan festgelegt werden. Wenn dieses Verhalten gewünscht wird, ist es besser, den Aufzeichnungsauftrag im kontinuierlichen Modus auszuführen, um das erneute Planen des Prokollscans zu verwalten.  
   
 ##### <a name="continuous-mode-and-the-polling-interval"></a>Kontinuierlicher Modus und das Abrufintervall  
- Der aufzeichnungsauftrag im kontinuierlichen Modus anfordert, `sp_cdc_scan` kontinuierlich ausgeführt werden. Dadurch kann die gespeicherte Prozedur ihre eigene Warteschleife nicht nur durch Bereitstellen der Werte von maxtrans und maxscans, sondern auch durch Bereitstellen eines Wertes für die Anzahl der Sekunden zwischen Protokollverarbeitungsvorgängen (für das Abrufintervall) verwalten. In diesem Modus ausgeführt wird, bleibt der aufzeichnungsauftrag aktiv und führt eine `WAITFOR` zwischen protokollscanvorgängen.  
+ Im kontinuierlichen Modus wird der aufzeichnungsauftrag das `sp_cdc_scan` kontinuierlich ausgeführt werden. Dadurch kann die gespeicherte Prozedur ihre eigene Warteschleife nicht nur durch Bereitstellen der Werte von maxtrans und maxscans, sondern auch durch Bereitstellen eines Wertes für die Anzahl der Sekunden zwischen Protokollverarbeitungsvorgängen (für das Abrufintervall) verwalten. In diesem Modus ausführen, bleibt der aufzeichnungsauftrag aktiv und führt eine `WAITFOR` zwischen protokollscanvorgängen.  
   
 > [!NOTE]  
 >  Wenn der Wert des Abrufintervalls größer als 0 ist, gilt die gleiche Obergrenze für den Durchsatz für den wiederkehrenden Einmalauftrag auch für den Auftragsvorgang im kontinuierlichen Modus. Das heißt, (*maxtrans* \* *maxscans*) geteilt durch ein Abrufintervall ungleich null legt eine Obergrenze für die durchschnittliche Anzahl der Transaktionen fest, die durch den Aufzeichnungsauftrag verarbeitet werden können.  
@@ -71,15 +71,15 @@ ms.locfileid: "36160621"
 ### <a name="structure-of-the-cleanup-job"></a>Struktur des Cleanupauftrags  
  Change Data Capture verwendet eine beibehaltungsbasierte Cleanupstrategie zum Verwalten der Größe der Änderungstabellen. Der Cleanupmechanismus besteht aus einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent- [!INCLUDE[tsql](../../includes/tsql-md.md)] -Auftrag, der erstellt wird, wenn die erste Datenbanktabelle aktiviert wird. Ein einzelner Cleanupauftrag verarbeitet das Cleanup für alle Datenbankänderungstabellen und wendet denselben Beibehaltungswert auf alle definierten Aufzeichnungsinstanzen an.  
   
- Der Cleanupauftrag wird durch Ausführen der parameterlosen gespeicherten Prozedur `sp_MScdc_cleanup_job` initiiert. Diese gespeicherte Prozedur beginnt mit dem Extrahieren der konfigurierten beibehaltungs- und Schwellenwerte für den cleanupauftrag aus `msdb.dbo.cdc_jobs`. Der Beibehaltungswert wird verwendet, um eine neue Untergrenzenmarkierung für die Änderungstabellen zu berechnen. Die angegebene Anzahl von Minuten ist, subtrahiert, von dem maximalen *Tran_end_time* Wert aus der `cdc.lsn_time_mapping` Tabelle, um die neue untergrenzenmarkierung, angegeben als Datetime-Wert zu erhalten. Anschließend wird die Tabelle CDC.lsn_time_mapping verwendet, um diesen datetime-Wert in einen entsprechenden `lsn`-Wert zu konvertieren. Wenn die Commitzeit durch mehrere Einträge in der Tabelle freigegeben ist die `lsn` , entspricht dem Eintrag mit dem kleinsten `lsn` als neue untergrenzenmarkierung ausgewählt ist. Dieser `lsn`-Wert wird an `sp_cdc_cleanup_change_tables` übergeben, um Einträge in den Änderungstabellen aus den Datenbankänderungstabellen zu entfernen.  
+ Der Cleanupauftrag wird durch Ausführen der parameterlosen gespeicherten Prozedur `sp_MScdc_cleanup_job` initiiert. Diese gespeicherte Prozedur beginnt mit dem Extrahieren der konfigurierten beibehaltungs- und Schwellenwerte für den cleanupauftrag aus `msdb.dbo.cdc_jobs`. Der Beibehaltungswert wird verwendet, um eine neue Untergrenzenmarkierung für die Änderungstabellen zu berechnen. Die angegebene Anzahl von Minuten ist, subtrahiert, von dem maximalen *Tran_end_time* Wert aus der `cdc.lsn_time_mapping` Tabelle, um die neue untergrenzenmarkierung, angegeben als Datetime-Wert zu erhalten. Anschließend wird die Tabelle CDC.lsn_time_mapping verwendet, um diesen datetime-Wert in einen entsprechenden `lsn`-Wert zu konvertieren. Wenn die dieselbe Commitzeit verwenden, die mehrere Werte in der Tabelle freigegeben ist die `lsn` , der der Eintrag mit dem kleinsten `lsn` wird als neue untergrenzenmarkierung ausgewählt. Dieser `lsn`-Wert wird an `sp_cdc_cleanup_change_tables` übergeben, um Einträge in den Änderungstabellen aus den Datenbankänderungstabellen zu entfernen.  
   
 > [!NOTE]  
->  Das Verwenden der Commitzeit der letzten Transaktion zum Berechnen der neuen Untergrenzenmarkierung hat den Vorteil, dass Änderungen in den Änderungstabellen für die angegebene Zeit erhalten bleiben. Dies geschieht sogar, wenn der Aufzeichnungsprozess zurückliegt. Alle Einträge, die dieselbe Commitzeit verwenden wie die aktuelle untergrenzenmarkierung weiterhin in den Änderungstabellen durch Wählen des kleinsten dargestellt, `lsn` , die die gemeinsame Commitzeit für die aktuelle untergrenzenmarkierung hat.  
+>  Das Verwenden der Commitzeit der letzten Transaktion zum Berechnen der neuen Untergrenzenmarkierung hat den Vorteil, dass Änderungen in den Änderungstabellen für die angegebene Zeit erhalten bleiben. Dies geschieht sogar, wenn der Aufzeichnungsprozess zurückliegt. Alle Einträge, die dieselbe Commitzeit verwenden wie die aktuelle untergrenzenmarkierung weiterhin in den Änderungstabellen durch Wählen des kleinsten dargestellt, `lsn` die gemeinsame Commitzeit für die aktuelle untergrenzenmarkierung aufweist.  
   
  Wenn ein Cleanup ausgeführt wird, wird die Untergrenzenmarkierung für alle Aufzeichnungsinstanzen zunächst in einer einzelnen Transaktion aktualisiert. Anschließend wird versucht, veraltete Einträge aus den Änderungstabellen und der Tabelle cdc.lsn_time_mapping zu entfernen. Der konfigurierbare Schwellenwert begrenzt, wie viele Einträge in jeder einzelnen Anweisung gelöscht werden. Das Fehlschlagen des Löschvorgangs für einzelne Tabellen führt nicht dazu, dass die Ausführung des Vorgangs nicht für die übrigen Tabellen versucht wird.  
   
 ### <a name="cleanup-job-customization"></a>Anpassen eines Cleanupauftrags  
- Die Anpassungsmöglichkeiten für den Cleanupauftrag bestehen in der Strategie, die verwendet wird, um zu bestimmen, welche Einträge in der Änderungstabelle verworfen werden sollen. Im übermittelten Cleanupauftrag wird nur eine zeitbasierte Strategie unterstützt. In diesem Fall wird die neue Untergrenzenmarkierung durch Subtrahieren der zulässigen Beibehaltungsdauer von der Commitzeit der letzten verarbeiteten Transaktion berechnet. Die zugrunde liegenden Cleanup-Prozeduren basieren auf Beacuse `lsn` statt auf Zeit basieren, eine beliebige Anzahl von Strategien verwendet werden kann, um den kleinsten zu bestimmen, `lsn` , in den Änderungstabellen bewahrt. Nur einige von diesen sind streng zeitbasiert. Es könnte z. B. Wissen über die Clients zum Bereitstellen einer Sicherung verwendet werden, wenn nachfolgende Prozesse, die Zugriff auf die Änderungstabellen erfordern, nicht ausgeführt werden können. Auch, obwohl die Standardstrategie identisch `lsn` für das Cleanup der Änderungstabellen für die Datenbanken kann die zugrunde liegende cleanupprozedur auch Cleanup auf aufzeichnungsinstanzebene aufgerufen werden.  
+ Die Anpassungsmöglichkeiten für den Cleanupauftrag bestehen in der Strategie, die verwendet wird, um zu bestimmen, welche Einträge in der Änderungstabelle verworfen werden sollen. Im übermittelten Cleanupauftrag wird nur eine zeitbasierte Strategie unterstützt. In diesem Fall wird die neue Untergrenzenmarkierung durch Subtrahieren der zulässigen Beibehaltungsdauer von der Commitzeit der letzten verarbeiteten Transaktion berechnet. Beacuse, die die zugrunde liegenden Cleanup-Prozeduren basieren auf `lsn` statt auf Zeit basieren, eine beliebige Anzahl von Strategien kann verwendet werden, um den kleinsten bestimmen `lsn` , die in den Änderungstabellen bewahrt. Nur einige von diesen sind streng zeitbasiert. Es könnte z. B. Wissen über die Clients zum Bereitstellen einer Sicherung verwendet werden, wenn nachfolgende Prozesse, die Zugriff auf die Änderungstabellen erfordern, nicht ausgeführt werden können. Darüber hinaus, obwohl die Standardstrategie gleich `lsn` für das Cleanup der Änderungstabellen für die Datenbanken kann die zugrunde liegende cleanupprozedur auch Cleanup auf aufzeichnungsinstanzebene aufgerufen werden.  
   
 ##  <a name="Monitor"></a> Überwachen des Change Data Capture-Prozesses  
  Indem Sie den Change Data Capture-Prozess überwachen, können Sie ermitteln, ob Änderungen korrekt und mit einer akzeptablen Latenzzeit in die Änderungstabellen geschrieben werden. Das Überwachen kann Ihnen auch dabei helfen, jegliche Fehler zu identifizieren, die auftreten könnten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügt über zwei dynamische Verwaltungssichten, womit Sie Change Data Capture überwachen können: [sys.dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) und [sys.dm_cdc_errors](../native-client-ole-db-errors/errors.md).  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 421567faa999f075bb3961b82f23c14aa14334b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 17b03e4ca74b5aa8d9e59d6bcc32eafe4ef1139e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160367"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191800"
 ---
 # <a name="xml-connection-type-ssrs"></a>XML-Verbindungstyp (SSRS)
   Wenn Sie Daten aus einer XML-Datenquelle in den Bericht einschließen möchten, benötigen Sie ein Dataset, das auf einer Berichtsdatenquelle vom Typ "XML" basiert. Dieser integrierte Datenquellentyp basiert auf der XML-Datenerweiterung. Verwenden Sie diesen Datenquellentyp, um eine Verbindung mit XML-Dokumenten, Webdiensten oder in die Abfrage eingebetteten XML-Daten herzustellen und Daten abzurufen.  
@@ -54,7 +54,7 @@ ms.locfileid: "36160367"
   
  Gespeicherte Anmeldeinformationen oder Aufforderungen zur Eingabe von Anmeldeinformationen werden nicht unterstützt. Wenn Sie die integrierte Sicherheit von Windows deaktiviert haben, können Sie sie nicht zum Abrufen von Daten verwenden. Wenn Sie gespeicherte Anmeldeinformationen oder auf Anforderung einzugebende Anmeldeinformationen angeben, tritt ein Laufzeitfehler auf.  
   
- Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) oder [Geben Sie Anmeldeinformationen im Berichts-Generator](../specify-credentials-in-report-builder.md).  
+ Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) oder [angeben von Anmeldeinformationen im Berichts-Generator](../specify-credentials-in-report-builder.md).  
   
 ##  <a name="Query"></a> Abfragen  
  Mit einer Abfrage wird angegeben, welche Daten für ein Berichtsdataset abgerufen werden sollen. Die Feldauflistung für ein Dataset wird mit den Spalten aus dem Resultset einer Abfrage aufgefüllt. In Berichten wird nur das erste Resultset verarbeitet, das von einer Abfrage abgerufen wird.  
@@ -65,9 +65,9 @@ ms.locfileid: "36160367"
   
  Die möglichen Werte einer Datasetabfrage für eine Datenquelle vom Typ "XML" sind unten dargestellt.  
   
--   *Leere*: Verwenden Sie eine leere Abfrage, um ein Standardresultset zu erstellen. Die Standardabfrage wird erstellt, indem die Datenquelle gelesen und die XML-Knotenhierarchie bis zur ersten Blattauflistung durchsucht wird. Das Resultset enthält alle Knoten mit Textwerten und alle Knotenattribute unter diesem Pfad. Die Spalten im Resultset werden den Feldern für das Dataset zugeordnet.  
+-   *Leere*: eine leere Abfrage zu verwenden, um ein Standardresultset zu erstellen. Die Standardabfrage wird erstellt, indem die Datenquelle gelesen und die XML-Knotenhierarchie bis zur ersten Blattauflistung durchsucht wird. Das Resultset enthält alle Knoten mit Textwerten und alle Knotenattribute unter diesem Pfad. Die Spalten im Resultset werden den Feldern für das Dataset zugeordnet.  
   
--   Mit einem Elementpfad: Gibt die Sequenz von Knoten zu verwendende XML-Daten aus einer Datenquelle abrufen.  
+-   Elementpfad: Gibt an, die Sequenz von Knoten, die beim Abrufen von XML-Daten aus der Datenquelle verwendet.  
   
 -   Ein XML-Abfrageelement: eine XML-Abfragespezifikation mit den folgenden optionalen Elementen:  
   

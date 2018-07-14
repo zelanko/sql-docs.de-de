@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partners [SQL Server], connecting clients to
 - database mirroring [SQL Server], connecting clients to
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - connections [SQL Server], database mirroring
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 caps.latest.revision: 92
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2af439599d16904cf7b66fa78882692ab87c05f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 482b72fac9416918bdee38b74fbc483027b4b345
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160971"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204043"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Verbinden von Clients mit einer Datenbank-Spiegelungssitzung (SQL Server)
   Zum Herstellen einer Verbindung mit einer Datenbank-Spiegelungssitzung kann ein Client entweder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client oder .NET Framework-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwenden. Wenn sie für eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbank konfiguriert sind, unterstützen beide Datenzugriffsanbieter die Datenbankspiegelung. Informationen zu Programmierüberlegungen in Bezug auf das Verwenden einer gespiegelten Datenbank finden Sie unter [Verwenden der Datenbankspiegelung](../../relational-databases/native-client/features/using-database-mirroring.md). Zusätzlich muss die aktuelle Prinzipalserverinstanz verfügbar sein, und der Anmeldename des Clients muss auf der Serverinstanz erstellt worden sein. Weitere Informationen finden Sie unter [Problembehandlung bei verwaisten Benutzern &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)aus. Sofern eine Zeugenserverinstanz vorhanden ist, werden Clientverbindungen mit einer Datenbank-Spiegelungssitzung ohne Beteiligung dieser Instanz hergestellt.  
@@ -87,7 +86,7 @@ Network=dbnmpntw;
 >  Da Named Pipes den TCP/IP-Wiederholungsalgorithmus nicht verwenden, erreicht ein Verbindungsversuch mit Named Pipes häufig zuerst ein Timeout, ehe eine Verbindung mit einer gespiegelten Datenbank hergestellt wird.  
   
 #### <a name="server-attribute"></a>Server-Attribut  
- Die Verbindungszeichenfolge darf eine `Server` -Attribut, das den Namen des ersten Partners bereitstellt, die aktuelle Prinzipalserverinstanz identifizieren sollte.  
+ Die Verbindungszeichenfolge darf eine `Server` -Attribut, das den Namen des ersten Partners bereitstellt, der die aktuelle Prinzipalserverinstanz identifizieren sollte.  
   
  Die einfachste Art, die Serverinstanz zu identifizieren, besteht darin, ihren Namen *<Servername>*[**\\***<SQL_Server_Instanzname>*] anzugeben. Zum Beispiel:  
   
@@ -102,7 +101,7 @@ Network=dbnmpntw;
 > [!NOTE]  
 >  Eine SQL Server-Browser-Abfrage ist erforderlich, wenn in der Verbindungszeichenfolge der benannte Instanzname und nicht der Port angegeben ist.  
   
- Der IP-Adresse und des Ports an die `Server` Attribut weist folgende Form, `Server=` *< Ip_address >*`,`*\<Port >*, beispielsweise:  
+ Zum Angeben der IP-Adresse und Port der `Server` -Attribut nimmt die Form `Server=` *< Ip_address >*`,`*\<Port >*, z.B.:  
   
 ```  
 Server=123.34.45.56,4724;   
@@ -122,7 +121,7 @@ Server=123.34.45.56,4724;
 >  Die Authentifizierungsinformationen fehlen in dieser Zeichenfolge.  
   
 > [!IMPORTANT]  
->  Bündelung des Protokollpräfix mit dem `Server` Attribut (`Server=tcp:`*\<Servername >*) ist inkompatibel mit dem **Netzwerk** Attribut, und die Angabe des Protokolls in beiden Stellen führt wahrscheinlich zu einem Fehler. Aus diesem Grund wird empfohlen, dass eine Verbindungszeichenfolge das Protokoll mithilfe der **Netzwerk** -Attributs angibt und nur der Servername in der `Server` Attribut (`"Network=dbmssocn; Server=`*\<Servername >*`"`).  
+>  Bündelung des Protokollpräfix mit dem `Server` Attribut (`Server=tcp:`*\<Servername >*) ist inkompatibel mit der **Netzwerk** Attribut, und die Angabe des Protokolls in beiden Stellen führt wahrscheinlich zu einem Fehler. Daher wird empfohlen, dass eine Verbindungszeichenfolge das Protokoll mithilfe der **Netzwerk** -Attributs angibt und nur der Servername in der `Server` Attribut (`"Network=dbmssocn; Server=`*\<Servername >*`"`).  
   
 #### <a name="failover-partner-attribute"></a>Failover Partner-Attribut  
  Neben dem Namen des ersten Partners kann der Client auch den Namen des Failoverpartners angeben, der die aktuelle Spiegelserverinstanz identifizieren sollte. Der Failoverpartner wird durch eines der Schlüsselwörter des Failover Partner-Attributs angegeben. Das Schlüsselwort für dieses Attribut hängt von der verwendeten API ab. In der folgenden Tabelle werden diese Schlüsselwörter aufgeführt:  
@@ -141,7 +140,7 @@ Server=123.34.45.56,4724;
 >  Wenn nur der erste Partnername angegeben wird, müssen Anwendungsentwickler weder zusätzliche Schritte ergreifen noch zusätzlichen Code schreiben, außer um wieder eine Verbindung herzustellen.  
   
 > [!NOTE]  
->  Anwendungsentwickler von verwaltetem Code geben den Namen des Failoverpartners in der `ConnectionString` von der `SqlConnection` Objekt. Informationen zum Verwenden dieser Verbindungszeichenfolge finden Sie in der zum [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK gehörigen Dokumentation zu ADO.NET im Kapitel zur Unterstützung der Datenbankspiegelung im .NET Framework-Datenanbieter für SQL Server.  
+>  Entwickler von verwaltetem Code Anwendungen geben, der Name des Failoverpartners in der `ConnectionString` von der `SqlConnection` Objekt. Informationen zum Verwenden dieser Verbindungszeichenfolge finden Sie in der zum [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK gehörigen Dokumentation zu ADO.NET im Kapitel zur Unterstützung der Datenbankspiegelung im .NET Framework-Datenanbieter für SQL Server.  
   
 #### <a name="example-connection-string"></a>Beispiel für eine Verbindungszeichenfolge  
  Um beispielsweise eine Verbindung mithilfe von TCP/IP mit der **AdventureWorks** -Datenbank auf Partner_A oder Partner_B herzustellen, kann durch eine Clientanwendung, die den ODBC-Treiber verwendet, die folgende Verbindungszeichenfolge bereitgestellt werden:  

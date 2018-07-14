@@ -1,5 +1,5 @@
 ---
-title: Mehrdimensionales Modell Assemblys-Verwaltung | Microsoft Docs
+title: Verwaltung von mehrdimensionalen Modellassemblys | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Analysis Services], assemblies
 - calling user-defined functions
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - application domains [Analysis Services]
 ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1c8c27856135007c172e2e53b066b14a1a3a7eb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa24fc7d6b9bc2d22ef852d039637cf5c0f35b71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160338"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243490"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Verwaltung von mehrdimensionalen Modellassemblys
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt viele systeminterne Funktionen bereit, die mit den Sprachen MDX (Multidimensional Expressions) und DMX (Data Mining Extensions) verwendet werden können. Diese sind für standardmäßige statistische Berechnungen ebenso geeignet wie für das Durchlaufen der Elemente in einer Hierarchie. Wie bei jedem komplexen und robusten Produkt gibt es jedoch immer die Bestrebung, die Funktionalität des Produkts zu erweitern.  
@@ -95,7 +95,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
 |Berechtigungseinstellung|Description|  
 |------------------------|-----------------|  
 |`Safe`|Stellt eine interne Berechnungsberechtigung bereit. Dieser Berechtigungsbucket weist keine Berechtigungen für den Zugriff auf die geschützten Ressourcen in .NET Framework zu. Es handelt es hierbei um den Standard-Berechtigungsbucket für eine Assembly, sofern nicht mithilfe der `PermissionSet`-Eigenschaft ein anderer Bucket angegeben wurde.|  
-|`ExternalAccess`|Stellt den gleichen Zugriff wie die `Safe` festlegen, mit der zusätzlichen Fähigkeit, auf externe Systemressourcen zuzugreifen. Dieser Berechtigungsbucket leistet keine Gewähr für Sicherheit (obwohl dieses Szenario gesichert werden kann), wohl aber für Zuverlässigkeit.|  
+|`ExternalAccess`|Bietet die gleiche Zugriffsrechte wie der `Safe` festlegen, mit der zusätzlichen Fähigkeit, auf externe Systemressourcen zuzugreifen. Dieser Berechtigungsbucket leistet keine Gewähr für Sicherheit (obwohl dieses Szenario gesichert werden kann), wohl aber für Zuverlässigkeit.|  
 |`Unsafe`|Es gelten keine Einschränkungen. Für verwalteten Code, der unter diesem Berechtigungssatz ausgeführt wird, kann keine Gewähr für Sicherheit oder Zuverlässigkeit geleistet werden. Für Code, der auf dieser Vertrauensebene ausgeführt wird, wird jede Berechtigung gewährt, selbst eine vom Administrator hinzugefügte benutzerdefinierte Berechtigung.|  
   
  Wenn die CLR von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]gehostet wird, hält die stackwalkbasierte Berechtigungsüberprüfung an der Grenze mit dem systemeigenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Code an. Sämtlicher verwalteter Code in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Assemblys fällt in eine der drei oben aufgelisteten Berechtigungskategorien.  
@@ -103,13 +103,13 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
  COM- (oder nicht verwaltete) Assemblyroutinen unterstützen das CLR-Sicherheitsmodell nicht.  
   
 ### <a name="impersonation"></a>Identitätswechsel  
- Wenn verwalteter Code auf eine Ressource außerhalb von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zugreift, hält [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sich an die der `ImpersonationMode`-Eigenschaftseinstellung zugeordneten Regeln, um sicherzustellen, dass der Zugriff innerhalb des entsprechenden Windows-Sicherheitskontexts erfolgt. Da Assemblys mit der `Safe` berechtigungseinstellung, hat keinen Zugriff auf Ressourcen außerhalb [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], gelten diese Regeln nur für Assemblys mit der `ExternalAccess` und `Unsafe` berechtigungseinstellungen.  
+ Wenn verwalteter Code auf eine Ressource außerhalb von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zugreift, hält [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sich an die der `ImpersonationMode`-Eigenschaftseinstellung zugeordneten Regeln, um sicherzustellen, dass der Zugriff innerhalb des entsprechenden Windows-Sicherheitskontexts erfolgt. Da Assemblys mit der `Safe` berechtigungseinstellung Zugriff nicht möglich, auf Ressourcen außerhalb [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], gelten diese Regeln nur für Assemblys mit der `ExternalAccess` und `Unsafe` berechtigungseinstellungen.  
   
 -   Wenn der aktuelle Ausführungskontext einem von Windows authentifizierten Benutzernamen entspricht und mit dem Kontext des ursprünglichen aufrufenden Prozesses übereinstimmt (wenn sich also nicht EXECUTE AS in der Mitte befindet), nimmt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Identität des von Windows authentifizierten Benutzernamens an, bevor der Zugriff auf die Ressource erfolgt.  
   
 -   Wird der Kontext des ursprünglichen aufrufenden Prozesses durch EXECUTE AS geändert, erzeugt der Zugriff auf die externe Ressource einen Fehler.  
   
- Die `ImpersonationMode` Eigenschaft kann festgelegt werden, um `ImpersonateCurrentUser` oder `ImpersonateAnonymous`. Die Standardeinstellung `ImpersonateCurrentUser`, wird eine Assembly unter der Netzwerk-Anmeldekonto des aktuellen Benutzers ausgeführt. Wenn die `ImpersonateAnonymous` Einstellung verwendet wird, der Ausführungskontext ist der Windows-Anmeldung Benutzerkonto IUSER_ entspricht*Servername* auf dem Server. Hierbei handelt es sich um ein Internet-Gastkonto, das nur über eingeschränkte Rechte auf dem Server verfügt. Eine Assembly, die in diesem Kontext ausgeführt wird, kann nur beschränkt auf Ressourcen auf dem lokalen Server zugreifen.  
+ Die `ImpersonationMode` Eigenschaft kann festgelegt werden, um `ImpersonateCurrentUser` oder `ImpersonateAnonymous`. Die Standardeinstellung, `ImpersonateCurrentUser`, wird eine Assembly unter der Netzwerk-Anmeldekonto des aktuellen Benutzers ausgeführt. Wenn die `ImpersonateAnonymous` Einstellung wird verwendet, wird des Ausführungskontexts entspricht der Windows-Anmeldung dem Benutzerkonto IUSER_*Servername* auf dem Server. Hierbei handelt es sich um ein Internet-Gastkonto, das nur über eingeschränkte Rechte auf dem Server verfügt. Eine Assembly, die in diesem Kontext ausgeführt wird, kann nur beschränkt auf Ressourcen auf dem lokalen Server zugreifen.  
   
 ### <a name="application-domains"></a>Anwendungsdomänen  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] macht Anwendungsdomänen nicht direkt verfügbar. Aufgrund eines Assemblysatzes, der in der gleichen Anwendungsdomäne ausgeführt wird, können Anwendungsdomänen während der Ausführung einander erkennen, indem sie den `System.Reflection`-Namespace in .NET Framework oder ein anderes Verfahren anwenden, und sie können einander auf spät gebundene Weise aufrufen. Solche Aufrufe werden der Berechtigungsüberprüfung unterzogen, die im Rahmen der autorisierungsbasierten Sicherheit von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] durchgeführt wird.  

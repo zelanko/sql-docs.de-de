@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - identities [SQL Server replication]
 - identity values [SQL Server replication]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - identity columns [SQL Server], replication
 ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 caps.latest.revision: 51
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cc8039ed5ea331609e14fc5b1b9cb9dae77f9aee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 65d72e4cb94a4085829805278b59512a1a0a2801
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160890"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271026"
 ---
 # <a name="replicate-identity-columns"></a>Replizieren von Identitätsspalten
   Wenn Sie einer Spalte eine IDENTITY-Eigenschaft zuweisen, generiert [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für neue Zeilen, die in die Tabelle, die die Identitätsspalte enthält, eingefügt werden, automatisch sequenzielle Zahlwerte. Weitere Informationen finden Sie unter [IDENTITY &#40;Eigenschaft&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property). Da Identitätsspalten als Teil des Primärschlüssels aufgenommen werden können, ist es wichtig, dass die Identitätsspalten keine doppelten Werte enthalten. Wenn Identitätsspalten in einer Replikationstopologie verwendet werden sollen, die an mehreren Knoten Updates besitzt, muss jeder Knoten in der Replikationstopologie einen anderen Bereich von Identitätswerten verwenden, damit es nicht zu Dopplungen kommt.  
@@ -55,12 +55,12 @@ ms.locfileid: "36160890"
 ## <a name="assigning-identity-ranges"></a>Zuweisen von Identitätsbereichen  
  Bei der Mergereplikation und der Transaktionsreplikation kommen zum Zuweisen von Bereichen unterschiedliche Methoden zum Einsatz. Diese Methoden werden im Folgenden näher beschrieben.  
   
- Beim Replizieren von Identitätsspalten sind die folgenden beiden Bereichstypen zu berücksichtigen: Bereiche, die dem Verleger und den Abonnenten zugewiesen werden, und der Bereich des Datentyps in der Spalte. Die folgende Tabelle enthält eine Übersicht über die für die Datentypen verfügbaren Bereiche, die in der Regel in Identitätsspalten verwendet werden. Der Bereich wird in allen Knoten in einer Topologie verwendet. Angenommen, Sie verwenden `smallint` beginnend mit 1 und einem Inkrement von 1, die die maximale Anzahl von Einfügevorgängen ist 32.767 für den Verleger und allen Abonnenten. Die tatsächliche Anzahl der Einfügungen hängt davon ab, ob es in den verwendeten Werten Lücken gibt und ob ein Schwellenwert verwendet wird. Weitere Informationen zu Schwellenwerten finden Sie in den folgenden Abschnitten: "Mergereplikation" und "Transaktionsreplikation mit Abonnements mit verzögertem Update über eine Warteschlange".  
+ Beim Replizieren von Identitätsspalten sind die folgenden beiden Bereichstypen zu berücksichtigen: Bereiche, die dem Verleger und den Abonnenten zugewiesen werden, und der Bereich des Datentyps in der Spalte. Die folgende Tabelle enthält eine Übersicht über die für die Datentypen verfügbaren Bereiche, die in der Regel in Identitätsspalten verwendet werden. Der Bereich wird in allen Knoten in einer Topologie verwendet. Wenn Sie verwenden, z. B. `smallint` beginnend mit 1 mit einem Inkrement von 1, die die maximale Anzahl von einfügungen ist 32.767 für den Verleger und allen Abonnenten. Die tatsächliche Anzahl der Einfügungen hängt davon ab, ob es in den verwendeten Werten Lücken gibt und ob ein Schwellenwert verwendet wird. Weitere Informationen zu Schwellenwerten finden Sie in den folgenden Abschnitten: "Mergereplikation" und "Transaktionsreplikation mit Abonnements mit verzögertem Update über eine Warteschlange".  
   
  Wenn der Verleger nach einer Einfügung seinen Identitätsbereich ausgeschöpft hat, kann er automatisch einen neuen Bereich zuweisen, wenn die Einfügung von einem Mitglied mit der festen **db_owner** -Datenbankrolle ausgeführt wurde. Wenn die Einfügung von einem Benutzer mit einer anderen Rolle ausgeführt wird, muss der Protokolllese-Agent, der Merge-Agent oder ein Benutzer, der Mitglied der **db_owner**-Rolle ist, [sp_adjustpublisheridentityrange &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql) ausführen. Bei Transaktionsveröffentlichungen muss der Protokolllese-Agent ausgeführt werden, damit automatisch ein neuer Bereich zugeordnet wird (der Agent wird standardmäßig ununterbrochen ausgeführt).  
   
 > [!WARNING]  
->  Während einer umfangreichen Batcheinfügung wird der Replikationstrigger nur einmal und nicht für jede eingefügte Zeile ausgelöst. Dies kann auf einen Fehler bei der Insert-Anweisung führen, wenn ein Identitätsbereich während einer umfangreichen Einfügung, z. B. erschöpft ist eine `INSERT INTO` Anweisung.  
+>  Während einer umfangreichen Batcheinfügung wird der Replikationstrigger nur einmal und nicht für jede eingefügte Zeile ausgelöst. Dies kann zu einem Fehler der Insert-Anweisung führen, wenn ein Identitätsbereich während einer umfangreichen Einfügung, z. B. erschöpft ist ein `INSERT INTO` Anweisung.  
   
 |Datentyp|Bereich|  
 |---------------|-----------|  

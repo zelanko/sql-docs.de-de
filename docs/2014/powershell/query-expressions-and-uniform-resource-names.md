@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - query expressions
 - unique resource names
 - URN
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: a3dc6fa32634a14767bfe58c1d06351cf091fb8c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 996fad627cebc240a39337a0f0ae3a096e53901c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160233"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326180"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Abfrageausdrücke und eindeutige Ressourcennamen
   Die SMO-Modelle ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object) und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell-Snap-Ins verwenden zwei Typen von Ausdruckszeichenfolgen, die XPath-Ausdrücken ähneln. Bei Abfrageausdrücken handelt es sich um Zeichenfolgen, die eine Gruppe von Kriterien angeben, mit der ein oder mehrere Objekte in einer Objektmodellhierarchie aufgezählt werden. Ein eindeutiger Ressourcenname (Uniform Resource Name, URN) ist ein spezieller Typ einer Abfrageausdrucks-Zeichenfolge, der ein einzelnes Objekt eindeutig kennzeichnet.  

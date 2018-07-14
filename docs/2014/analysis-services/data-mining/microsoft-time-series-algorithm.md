@@ -1,5 +1,5 @@
 ---
-title: Microsoft Time Series-Algorithmus | Microsoft Docs
+title: Microsoft Time Series-Algorithmus | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ARTXP
 - time series algorithms [Analysis Services]
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
 caps.latest.revision: 74
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0291f91ea4432c9bf4a51b617f7e44fe92130d1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 428a6433222c4d6d0aca47e065d85130792b94ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160110"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325110"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Microsoft Time Series-Algorithmus
-  Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus bietet regressionsalgorithmen, die für die Prognose kontinuierlicher Werte wie den Produktverkauf über die Zeit optimiert sind. Während andere [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Algorithmen wie z. B. Entscheidungsstrukturen für die Vorhersage eines Trends zusätzliche Spalten mit neuen Informationen als Eingabe benötigen, ist dies bei einem Zeitreihenmodell nicht der Fall. Ein Zeitreihenmodell kann Trends schon auf Grundlage des ursprünglichen Datasets vorhersagen, das zum Erstellen des Modells verwendet wird. Sie können dem Modell auch neue Daten hinzufügen, wenn Sie eine Vorhersage treffen, und die neuen Daten automatisch in die Trendanalyse einbeziehen.  
+  Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus bietet regressionsalgorithmen, die für die Prognose kontinuierlicher Werte wie den Produktverkauf im Laufe der Zeit optimiert sind. Während andere [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Algorithmen wie z. B. Entscheidungsstrukturen für die Vorhersage eines Trends zusätzliche Spalten mit neuen Informationen als Eingabe benötigen, ist dies bei einem Zeitreihenmodell nicht der Fall. Ein Zeitreihenmodell kann Trends schon auf Grundlage des ursprünglichen Datasets vorhersagen, das zum Erstellen des Modells verwendet wird. Sie können dem Modell auch neue Daten hinzufügen, wenn Sie eine Vorhersage treffen, und die neuen Daten automatisch in die Trendanalyse einbeziehen.  
   
  Das folgende Diagramm zeigt ein typisches Modell für die Umsatzvorhersage zu einem Produkt in vier verschiedenen Verkaufsregionen über einen bestimmten Zeitraum. Das Modell im Diagramm stellt die Verkaufszahlen für die einzelnen Regionen in Form roter, gelber, violetter und blauer Linien dar. Die Linie für jeden Region besteht aus zwei Teilen:  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36160110"
   
  Die Kombination der Quelldaten und der Vorhersagedaten wird als *Reihe*bezeichnet.  
   
- ![Ein Beispiel für eine Zeitreihe](../media/time-series.gif "ein Beispiel für eine Zeitreihe")  
+ ![Ein Beispiel für eine Zeitreihe](../media/time-series.gif "ein Beispiel für ein Zeitreihenmodell")  
   
  Eine wichtige Funktion des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus besteht in der Möglichkeit, Kreuzvorhersagen zu erstellen. Wenn Sie den Algorithmus mit zwei separaten, jedoch miteinander verknüpften Reihen trainieren, können Sie das daraus resultierende Modell dazu verwenden, das Ergebnis einer Reihe basierend auf dem Verhalten der anderen Reihe vorherzusagen. Beispiel: Die Verkaufsbeobachtungen zu einem Produkt können die Verkaufsprognosen für ein anderes Produkt beeinflussen. Eine Kreuzvorhersage dient auch zum Erstellen eines allgemeinen Modells, das auf mehrere Reihen angewendet werden kann. Zum Beispiel sind die Vorhersagen für eine bestimmte Region instabil, da der Reihe Daten guter Qualität fehlen. Sie könnten aber ein allgemeines Modell mit einem Durchschnittswert für alle vier Regionen trainieren und das Modell anschließend auf die einzelne Reihe anwenden, um für jede Region stabilere Prognosen zu erstellen.  
   
@@ -51,11 +51,11 @@ ms.locfileid: "36160110"
  In jedem Quartal möchte die Firma das Modell mit den letzten Verkaufsdaten und die Vorhersagen aktualisieren, um Trends aus der jüngsten Vergangenheit zu modellieren. Um Werte von Geschäften zu korrigieren, die ihre Verkaufszahlen nicht sorgfältig oder konsequent aktualisieren, wird ein allgemeines Prognosemodell erstellt, anhand dessen Prognosen für alle Regionen getroffen werden.  
   
 ## <a name="how-the-algorithm-works"></a>Funktionsweise des Algorithmus  
- In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus verwendet einen einzelnen Algorithmus: ARTXP. Der ARTXP-Algorithmus war für kurzfristige Vorhersagen optimiert und prognostizierte daher des nächsten wahrscheinlichen Werts in einer Reihe. Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus verwendet den ARTXP-Algorithmus und einen zweiten Algorithmus mit Namen ARIMA. Der ARIMA-Algorithmus ist für die langfristige Vorhersage optimiert. Eine ausführliche Erklärung der Implementierung der Algorithmen ARTXP und ARIMA finden Sie unter [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md).  
+ In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus verwendet nur einen: Algorithmus: ARTXP. Der ARTXP-Algorithmus war für kurzfristige Vorhersagen optimiert und prognostizierte daher des nächsten wahrscheinlichen Werts in einer Reihe. Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus verwendet, sowohl den ARTXP-Algorithmus als auch einen zweiten Algorithmus mit Namen ARIMA. Der ARIMA-Algorithmus ist für die langfristige Vorhersage optimiert. Eine ausführliche Erklärung der Implementierung der Algorithmen ARTXP und ARIMA finden Sie unter [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md).  
   
- Standardmäßig mischt der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus die beiden Algorithmen, wenn Muster analysiert und Vorhersagen getroffen werden. Der Algorithmus trainiert zwei separate Modelle mit den gleichen Daten: ein Modell verwendet den ARTXP-Algorithmus und die ARIMA-Algorithmus. Der Algorithmus kombiniert dann die Ergebnisse der beiden Modelle, um die beste Vorhersage für eine variable Anzahl von Zeitscheiben zu erhalten. Da sich der ARTXP-Algorithmus am besten für kurzfristige Vorhersagen eignet, wird er am Anfang einer Folge von Vorhersagen stärker gewichtet. Bei den Vorhersagen für Zeitscheiben, die weiter in der Zukunft liegen, wird dagegen der ARIMA-Algorithmus immer stärker gewichtet.  
+ Standardmäßig mischt der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus die beiden Algorithmen, wenn Muster analysiert und Vorhersagen getroffen werden. Der Algorithmus trainiert zwei separate Modelle mit den gleichen Daten: ein Modell verwendet den ARTXP-Algorithmus und ein Modell verwendet den ARIMA-Algorithmus. Der Algorithmus kombiniert dann die Ergebnisse der beiden Modelle, um die beste Vorhersage für eine variable Anzahl von Zeitscheiben zu erhalten. Da sich der ARTXP-Algorithmus am besten für kurzfristige Vorhersagen eignet, wird er am Anfang einer Folge von Vorhersagen stärker gewichtet. Bei den Vorhersagen für Zeitscheiben, die weiter in der Zukunft liegen, wird dagegen der ARIMA-Algorithmus immer stärker gewichtet.  
   
- Sie können das Mischen der Algorithmen beeinflussen, wenn Sie eher kurz- oder eher langfristige Vorhersagen in der Zeitreihe wünschen. Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Standard, können Sie angeben, die die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus verwenden Sie eines der folgenden Einstellungen:  
+ Sie können das Mischen der Algorithmen beeinflussen, wenn Sie eher kurz- oder eher langfristige Vorhersagen in der Zeitreihe wünschen. Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Standard ist, können Sie angeben, die die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus verwenden Sie eine der folgenden Einstellungen:  
   
 -   Für kurzfristige Vorhersage nur ARTXP verwenden.  
   
@@ -161,6 +161,6 @@ ms.locfileid: "36160110"
  [Durchsuchen eines Modells mit dem Microsoft Time Series-Viewer](browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Technische Referenz für Microsoft Time Series-Algorithmus](microsoft-time-series-algorithm-technical-reference.md)   
  [Time Series Model Query Examples](time-series-model-query-examples.md)   
- [Miningmodellinhalt für Zeitreihenmodelle &#40;Analysis Services – Datamining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Mingingmodellinhalt von Zeitreihenmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

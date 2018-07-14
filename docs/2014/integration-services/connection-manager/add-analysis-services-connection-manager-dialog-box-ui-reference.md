@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.olapconnection.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
 caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 88e2440ac19be6ed6990a6a303fc85bd234d5caf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cbb2fe2bc936fc66fe930ea5c0de60190b0ae5e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161857"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184647"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>Referenz zur Benutzeroberfläche des Dialogfelds Analysis Services-Verbindungs-Manager hinzufügen
   Mithilfe des Dialogfelds **Analysis Services-Verbindungs-Manager hinzufügen** können Sie eine Verbindung mit einem Server herstellen, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ausgeführt wird, oder die Verbindungseigenschaften ändern.  
@@ -48,6 +48,6 @@ ms.locfileid: "36161857"
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen und Meldungsreferenz von Integration Services-Fehler](../integration-services-error-and-message-reference.md)   
- [Integrationsservices &#40;SSIS&#41; Verbindungen](integration-services-ssis-connections.md)  
+ [Integrationsdienste &#40;SSIS&#41; Verbindungen](integration-services-ssis-connections.md)  
   
   

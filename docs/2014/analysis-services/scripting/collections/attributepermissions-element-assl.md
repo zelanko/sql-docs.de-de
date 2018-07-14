@@ -1,5 +1,5 @@
 ---
-title: AttributePermissions-Element (ASSL) | Microsoft Docs
+title: AttributePermissions-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AttributePermissions element
 ms.assetid: ac703177-5936-440e-b1a5-a254a89258bc
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 328442196ded3537b8f6926bdfd67ea8e9100c5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 98869453e0ecd50301e94cf5b7034173fc7a8a5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159859"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249040"
 ---
 # <a name="attributepermissions-element-assl"></a>AttributePermissions-Element (ASSL)
-  Enthält die Auflistung der Attributberechtigungen für eine einzelnes [Rolle](../objects/role-element-assl.md) für eine bestimmte Dimension des Elements ein [Cube](../objects/cube-element-assl.md) Element.  
+  Enthält die Auflistung der Attributberechtigungen für ein einzelnes [Rolle](../objects/role-element-assl.md) Element auf einer spezifischen Dimension eine [Cube](../objects/cube-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36159859"
 ## <a name="remarks"></a>Hinweise  
  Für `DimensionPermission`, dieser Auflistung darf nur eine `AttributePermission` pro Attribut.  
   
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.AttributePermissionCollection>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.AttributePermissionCollection>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Permission-Datentyp &#40;ASSL&#41;](../data-type/permission-data-type-assl.md)   

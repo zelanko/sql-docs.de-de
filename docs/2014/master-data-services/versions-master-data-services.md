@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - version flags [Master Data Services], about version flags
 - versions [Master Data Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - versions [Master Data Services], version flags
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2777ef1871da042c18459ac33c93e71844b89838
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 40d1a247b8d6efeb39b0c0f311a014ef76b55db4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162064"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217680"
 ---
 # <a name="versions-master-data-services"></a>Versionen (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie mehrere Versionen der Masterdaten innerhalb eines Modells erstellen. Versionen können gesperrt werden, während Sie die Daten überprüfen, und für Versionen kann ein Commit ausgeführt werden, nachdem die Daten überprüft wurden. Versionen mit ausgeführtem Commit bilden einen überwachbaren Datensatz mit Änderungen. Jede erstellte Version umfasst sämtliche Elemente, Attributwerte, Hierarchielemente, Hierarchiebeziehungen und Auflistungen für das Modell.  
@@ -80,7 +80,7 @@ ms.locfileid: "36162064"
 |Erstellen Sie ein neues Flag, um eine Version zu markieren.|[Erstellen eines Versionsflags &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)|  
 |Ändern Sie den Namen eines vorhandenen Versionsflags.|[Ändern des Namens eines Versionsflags &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)|  
 |Weisen Sie einer Version ein vorhandenes Flag zu.|[Zuweisen eines Flags zu einer Version &#40;Master Data Services&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
-|Erstellen Sie eine neue Kopie einer vorhandenen Version.|[Kopieren einer Version &#40;Master Data Services&#41;](../../2014/master-data-services/copy-a-version-master-data-services.md)|  
+|Erstellen Sie eine neue Kopie einer vorhandenen Version.|[Kopieren einer Datenbankversion, &#40;Master Data Services&#41;](../../2014/master-data-services/copy-a-version-master-data-services.md)|  
 |Löschen Sie eine vorhandene Version.|[Löschen einer Version &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-version-master-data-services.md)|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  

@@ -1,5 +1,5 @@
 ---
-title: Mithilfe von XSD-Schemas in Abfragen (SQLXML 4.0) versehen | Microsoft Docs
+title: Mithilfe von Schemas mit Anmerkungen in XSD in Abfragen (SQLXML 4.0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,20 +23,20 @@ helpviewer_keywords:
 - templates [SQLXML], annotated XSD schemas in queries
 ms.assetid: 927a30a2-eae8-420d-851d-551c5f884f3c
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bfd947684010ed0d71bdce44f329ccc1f0f34917
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 6413b41ac6839eea4bd0d5803553c9fedc73e79a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160869"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232960"
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>Verwenden von XSD-Schemas mit Anmerkungen in Abfragen (SQLXML 4.0)
   Sie können Abfragen auf ein Schema mit Anmerkungen angeben, um Daten von der Datenbank abzurufen, indem Sie Xpath-Abfragen in einer Vorlage auf ein XSD-Schema festlegen.  
   
- Die  **\<SQL: XPath-Query >** -Element ermöglicht Ihnen die Angabe eine XPath-Abfrage für die XML-Sicht, die durch das Schema mit Anmerkungen definiert wird. Das Schema mit Anmerkungen für die die XPath-Abfrage ausgeführt werden, wird mithilfe von identifiziert die `mapping-schema` Attribut des der  **\<SQL: XPath-Query >** Element.  
+ Die  **\<XPath-Abfrage >** -Element können Sie eine XPath-Abfrage für die XML-Sicht angeben, die durch das Schema mit Anmerkungen definiert wird. Das Schema mit Anmerkungen für die die XPath-Abfrage ausgeführt werden, wird mithilfe von identifiziert die `mapping-schema` Attribut der  **\<XPath-Abfrage >** Element.  
   
  Vorlagen sind gültige XML-Dokumente, die eine oder mehrere Abfragen enthalten. Die FOR XML- und XPath-Abfragen geben ein Dokumentfragment zurück. Vorlagen fungieren als Container für die Dokumentfragmente und bieten so eine Möglichkeit, ein einzelnes Element der obersten Ebene anzugeben.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36160869"
 ## <a name="using-inline-mapping-schemas"></a>Verwenden von Inlinezuordnungsschemas  
  Ein Schema mit Anmerkungen kann direkt in eine Vorlage eingefügt werden, und dann kann eine Xpath-Abfrage in der Vorlage auf das Inlineschema angegeben werden. Die Vorlage kann auch ein Updategram sein.  
   
- Eine Vorlage kann mehrere Inlineschemas einschließen. Ein Inlineschema verwenden, die in einer Vorlage enthalten ist, geben Sie die **Id** -Attribut mit einem eindeutigen Wert für die  **\<xsd: Schema >** -Element, und klicken Sie dann verwenden Sie **#idvalue**auf das Inlineschema verweisen. Die **Id** Attribut Verhalten entspricht der **SQL: ID** ({Urn: Schemas-Microsoft-com: XML-Sql} Id) in XDR-Schemas verwendet.  
+ Eine Vorlage kann mehrere Inlineschemas einschließen. Um ein Inlineschema verwenden, die in einer Vorlage enthalten ist, geben die **Id** -Attribut mit einem eindeutigen Wert für die  **\<xsd: Schema >** -Element, und klicken Sie dann verwenden **#idvalue**auf das Inlineschema verweisen. Die **Id** -Attribut ist, verhält sich genauso die **SQL: ID** ({Urn: Schemas-Microsoft-com: XML-Sql} Id), die in XDR-Schemas verwendet.  
   
  Die folgende Vorlage gibt beispielsweise zwei Inlineschemas mit Anmerkungen an:  
   
@@ -119,23 +119,23 @@ ms.locfileid: "36160869"
 </ROOT>  
 ```  
   
- Die Vorlage gibt auch zwei XPath-Abfragen an. Jede der  **\<Xpath-Abfrage >** -Elemente identifiziert eindeutig das Zuordnungsschema durch Angabe der `mapping-schema` Attribut.  
+ Die Vorlage gibt auch zwei XPath-Abfragen an. Jede der  **\<Xpath-Query >** -Elemente identifiziert eindeutig das Zuordnungsschema durch Angabe der `mapping-schema` Attribut.  
   
- Wenn Sie ein Inlineschema in der Vorlage angeben der `sql:is-mapping-schema` Anmerkung muss auch angegeben werden, auf die  **\<xsd: Schema >** Element. Die `sql:is-mapping-schema`-Anmerkung akzeptiert einen booleschen Wert (0 =false, 1 = true). Ein Inlineschema mit **Sql: is-Mapping-Schema = "1"** wird als Inlineschema mit Anmerkungen behandelt und in das XML-Dokument nicht zurückgegeben.  
+ Wenn Sie ein Inlineschema in der Vorlage angeben der `sql:is-mapping-schema` Anmerkung muss auch angegeben werden, auf die  **\<xsd: Schema >** Element. Die `sql:is-mapping-schema`-Anmerkung akzeptiert einen booleschen Wert (0 =false, 1 = true). Ein Inlineschema mit **Sql: is-Mapping-Schema = "1"** wird als Inlineschema mit Anmerkungen behandelt und in das XML-Dokument nicht zurückgegeben wird.  
   
  Die `sql:is-mapping-schema`-Anmerkung gehört zum Vorlagennamespace `urn:schemas-microsoft-com:xml-sql`.  
   
- Speichern Sie zum Testen dieses Beispiels die Vorlage (InlineSchemaTemplate.xml) in einem lokalen Verzeichnis und erstellen und verwenden Sie dann das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen. Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../using-ado-to-execute-sqlxml-4-0-queries.md).  
+ Speichern Sie zum Testen dieses Beispiels die Vorlage (InlineSchemaTemplate.xml) in einem lokalen Verzeichnis und erstellen und verwenden Sie dann das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen. Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Zusätzlich zum Angeben der `mapping-schema` -Attribut auf die  **\<SQL: XPath-Abfrage >** Element in einer Vorlage (Wenn eine XPath-Abfrage vorhanden ist) oder auf  **\<updg: Sync >** Element in einem Updategram, können Sie Folgendes tun:  
+ Zusätzlich zur Angabe der `mapping-schema` -Attribut für die  **\<XPath-Abfrage >** Element in einer Vorlage (Wenn eine xpath_Abfrage vorhanden ist) oder auf  **\<updg: Sync >** Element in einem Updategram, können Sie Folgendes tun:  
   
--   Geben Sie die `mapping-schema` -Attribut auf die  **\<ROOT >** -Element (globale Deklaration) in der Vorlage. Dieses Zuordnungsschema wird dann zum Standardschema, das von allen Xpath- und Updategram-Knoten verwendet wird, die keine explizite `mapping-schema`-Anmerkung aufweisen.  
+-   Geben Sie die `mapping-schema` -Attribut für die  **\<Stamm >** -Element (globale Deklaration) in der Vorlage. Dieses Zuordnungsschema wird dann zum Standardschema, das von allen Xpath- und Updategram-Knoten verwendet wird, die keine explizite `mapping-schema`-Anmerkung aufweisen.  
   
 -   Geben Sie das `mapping schema`-Attribut mithilfe des `Command`-Objekts in ADO an.  
   
- Die `mapping-schema` Elemente, die auf die  **\<Xpath-Abfrage >** oder  **\<updg: Sync >** Element hat den höchsten Rang; das ADO `Command` Objekt hat die niedrigste Priorität.  
+ Die `mapping-schema` auf angegebene Attribut der  **\<Xpath-Abfrage >** oder  **\<updg: Sync >** Element hat die höchste Priorität; das ADO `Command` Objekt hat die niedrigste Priorität an.  
   
- Beachten Sie, dass wenn Sie eine XPath-Abfrage in einer Vorlage angeben, und geben Sie ein Zuordnungsschema für die die XPath-Abfrage ausgeführt wird, die XPath-Abfrage so, als behandelt wird ein **Dbobject** Typabfrage. Betrachten Sie z. B. die folgende Vorlage:  
+ Beachten Sie, dass wenn Sie eine XPath-Abfrage in eine Vorlage angeben, und geben Sie ein Zuordnungsschema für die Ausführung die XPath-Abfrage nicht, die XPath-Abfrage so, als behandelt wird eine **Dbobject** Abfrage. Betrachten Sie z. B. die folgende Vorlage:  
   
 ```  
 <sql:xpath-query   
@@ -144,6 +144,6 @@ ms.locfileid: "36160869"
 </sql:xpath-query>  
 ```  
   
- Die Vorlage gibt eine XPath-Abfrage, aber kein Zuordnungsschema an. Aus diesem Grund wird diese Abfrage als behandelt eine **Dbobject** Typabfrage in dem Production.ProductPhoto der Tabellenname ist und @ProductPhotoID= '100' ist ein Prädikat, das ein produktphoto mit den ID-Wert von 100 findet. @LargePhoto ist die Spalte aus der zum Abrufen des Werts.  
+ Die Vorlage gibt eine XPath-Abfrage, aber kein Zuordnungsschema an. Aus diesem Grund wird diese Abfrage als behandelt eine **Dbobject** Typabfrage, in dem Production.ProductPhoto der Tabellenname ist, und @ProductPhotoID='100 ' ist ein Prädikat, das ein produktphoto mit dem ID-Wert von 100 sucht. @LargePhoto ist die Spalte aus der den Wert abgerufen werden soll.  
   
   

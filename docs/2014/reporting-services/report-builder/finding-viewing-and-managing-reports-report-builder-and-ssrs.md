@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 720bdfa021568842917385205cbf4bfb711708e0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: d23f3e344bdc6ea66e134e5444d29129bd5f0dab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163291"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181717"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)
   In Berichts-Generator können Sie Ordner auf einem Berichtsserver oder auf einer SharePoint-Website durchsuchen, um Berichte, freigegebene Datenquellen, Modelle und andere zugehörige Berichtselemente zu suchen und auf Ihrem Computer nach lokalen Berichten zu suchen. Um die Suche nach Berichten einfacher zu gestalten, speichert Berichts-Generator eine Liste der zuletzt verwendeten Server und Websites und stellt Direktzugriff auf den Desktop und die Ordner Eigene Dateien und Arbeitsplatz im Dateisystem des Computers bereit.  
@@ -31,7 +31,7 @@ ms.locfileid: "36163291"
   
  Um einen Bericht auf einem Berichtsserver oder einer SharePoint-Website in Berichts-Generator zu suchen, müssen Sie die URL zum Berichtsserver oder der SharePoint-Website bereitstellen. Sie können die zu verwendende URL zu Beginn der Installation von Berichts-Generator angeben. Dies ist der Server oder die Website, mit denen Berichts-Generator standardmäßig eine Verbindung herstellt, wenn Sie Berichte speichern oder öffnen.  
   
- Berichte können in Berichts-Generator und Berichts-Designer in der Vorschau angezeigt werden, wenn Sie Berichte erstellen oder aktualisieren. Sie können mit dem Berichts-Manager oder auf einer SharePoint-Website, die in Reporting Services integriert ist, mit den SharePoint-Tools und -Funktionen nach dem Veröffentlichen der Berichte angezeigt und verwaltet werden. Weitere Informationen finden Sie unter [Previewing Reports in Report Builder](previewing-reports-in-report-builder.md) und [Previewing Reports](../reports/previewing-reports.md).  
+ Berichte können in Berichts-Generator und Berichts-Designer in der Vorschau angezeigt werden, wenn Sie Berichte erstellen oder aktualisieren. Sie können mit dem Berichts-Manager oder auf einer SharePoint-Website, die in Reporting Services integriert ist, mit den SharePoint-Tools und -Funktionen nach dem Veröffentlichen der Berichte angezeigt und verwaltet werden. Weitere Informationen finden Sie unter [Berichtsvorschau in Berichts-Generator](previewing-reports-in-report-builder.md) und [Previewing Reports](../reports/previewing-reports.md).  
   
  Wenn Sie Berichte in Berichts-Generator und Bericht-Designer als Vorschau anzeigen oder sie im Berichts-Manager bzw. auf einer SharePoint-Website anzeigen, werden die Daten aktualisiert, und die Berichte zeigen die aktuellen Daten aus der Datenquelle an, die im Bericht verwendet werden. Wenn Sie einen Bericht anzeigen möchten, ohne die zugehörigen Daten zu aktualisieren, verwenden Sie den Berichtsverlauf und die zwischengespeicherten Daten bei veröffentlichten Berichten. Sie können diese Funktionen nicht verwenden, wenn Sie Berichte in Berichts-Generator und Berichts-Designer anzeigen.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36163291"
   
  Sie müssen eine URL für den Berichtsserver angeben und die entsprechenden Berechtigungen für die Ordner haben, mit denen Sie Berichtelemente lesen und speichern können, um Berichte auf einem Berichtsserver zu suchen. Wenden Sie sich an den Systemadministrator für den Berichtsserver, damit Sie die entsprechende URL und die erforderlichen Berechtigungen erhalten.  
   
- Nachdem Sie den Bericht im Berichts-Generator gefunden und geöffnet haben, können Sie ihn in der Vorschau anzeigen und Änderungen vornehmen. Wenn Sie ihn in der Vorschau anzeigen, werden die aktuellen Daten angezeigt. Weitere Informationen finden Sie unter [Previewing Reports in Report Builder](previewing-reports-in-report-builder.md).  
+ Nachdem Sie den Bericht im Berichts-Generator gefunden und geöffnet haben, können Sie ihn in der Vorschau anzeigen und Änderungen vornehmen. Wenn Sie ihn in der Vorschau anzeigen, werden die aktuellen Daten angezeigt. Weitere Informationen finden Sie unter [Berichtsvorschau in Berichts-Generator](previewing-reports-in-report-builder.md).  
   
  Berichts-Generator unterstützt Sie bei den folgenden Tasks:  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36163291"
   
  Einige dieser Tasks können vom Administrator des Berichtsservers für Sie ausgeführt werden. Weitere Informationen zu den auf einem Berichtsserver ausgeführten Tasks finden Sie unter [Reporting Services-Berichtsserver (einheitlicher Modus)](../report-server/reporting-services-report-server-native-mode.md).  
   
- Der Berichts-Manager enthält in der Regel Ordner, Berichte, Datenquellen und Berichtsmodelle sowie den Ordner Meine Berichte. Der Ordner Meine Berichte ist ein persönlicher Arbeitsbereich, in dem Sie Ihre eigenen Berichte speichern und damit arbeiten können. Andere Berichtsserverordner sind öffentliche Ordner, für die Benutzer in der Regel erweiterte Berechtigungen zum Hinzufügen oder Ändern von Ordnerinhalten benötigen. Sie können Ordner innerhalb von Meine Berichte erstellen, um die Berichte anzuordnen. Weitere Informationen finden Sie unter [mithilfe von Meine Berichte &#40;Berichts-Generator und SSRS&#41;](using-my-reports-report-builder-and-ssrs.md).  
+ Der Berichts-Manager enthält in der Regel Ordner, Berichte, Datenquellen und Berichtsmodelle sowie den Ordner Meine Berichte. Der Ordner Meine Berichte ist ein persönlicher Arbeitsbereich, in dem Sie Ihre eigenen Berichte speichern und damit arbeiten können. Andere Berichtsserverordner sind öffentliche Ordner, für die Benutzer in der Regel erweiterte Berechtigungen zum Hinzufügen oder Ändern von Ordnerinhalten benötigen. Sie können Ordner innerhalb von Meine Berichte erstellen, um die Berichte anzuordnen. Weitere Informationen finden Sie unter [Using My Reports &#40;Berichts-Generator und SSRS&#41;](using-my-reports-report-builder-and-ssrs.md).  
   
  Der Berichts-Manager zeigt Berichte im HTML-Viewer von Reporting Services an. Der HTML-Viewer stellt ein Framework zum Anzeigen von Berichten im HTML-Format bereit und enthält unter anderem eine Berichtssymbolleiste, einen Parameterabschnitt, einen Abschnitt für Anmeldeinformationen und eine Dokumentstruktur. Die Berichtssymbolleiste stellt Funktionalität für Seitennavigation, Zoom, Aktualisierung, Suche, Export, Druck und Datenfeeds bereit. Die Berichtssymbolleiste wird auch in einem Browserfenster oben im Bericht angezeigt, wenn Sie über eine URL auf Berichte zugreifen. Die Druckfunktionalität ist optional und muss vom Administrator aktiviert werden. Wenn verfügbar, wird ein Druckersymbol auf der Berichtssymbolleiste angezeigt. Die folgenden Abbildungen enthalten detaillierte Darstellungen der Berichtssymbolleiste in einem Berichts-Manager-Fenster und der Funktionen der Berichtssymbolleiste.  
   
@@ -84,7 +84,7 @@ Berichts-Manager-Fenster
  ![Berichtssymbolleiste](../media/htmlviewer-toolbar.gif "Report toolbar")  
 Berichtssymbolleiste  
   
- Nachdem Sie einen Bericht ausführen, können Sie ihn exportieren in ein anderes Format, z. B. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Excel oder PDF. Sie können den Bericht auch mithilfe einer Datenrenderingerweiterung wie einer CSV-Renderingerweiterung (durch Trennzeichen getrennt) exportieren und die CSV-Datendatei danach als Eingabe für eine andere Anwendung verwenden. Weitere Informationen zum Exportieren von Berichten finden Sie unter [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41; ](export-reports-report-builder-and-ssrs.md) und [Exportieren eines Berichts in einem anderen Dateiformat &#40;Berichts-Generator und SSRS&#41; ](../export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
+ Nachdem Sie einen Bericht ausführen, können Sie exportieren es in ein anderes Format, z. B. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Excel oder PDF. Sie können den Bericht auch mithilfe einer Datenrenderingerweiterung wie einer CSV-Renderingerweiterung (durch Trennzeichen getrennt) exportieren und die CSV-Datendatei danach als Eingabe für eine andere Anwendung verwenden. Weitere Informationen zum Exportieren von Berichten finden Sie unter [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41; ](export-reports-report-builder-and-ssrs.md) und [Exportieren eines Berichts in einem anderen Dateiformat &#40;Berichts-Generator und SSRS&#41; ](../export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
   
  Um einen Bericht auf möglichst einfache Weise auszuwählen und auszuführen, öffnen Sie den Berichts-Manager, und suchen Sie nach dem Bericht bzw. navigieren Sie zu dem Bericht, den Sie anzeigen möchten. Eine ausführliche Anleitung zum Öffnen von Berichten finden Sie unter [Öffnen und Schließen eines Berichts (Berichts-Manager)](../reports/open-and-close-a-report-report-manager.md).  
   
@@ -95,7 +95,7 @@ Berichtssymbolleiste
   
 |Option|Ergebnis|  
 |------------|------------|  
-|Schaltfläche**Aktualisieren** im Browserfenster|Zeigt den im Sitzungscache gespeicherten Bericht an. Ein Sitzungscache wird erstellt, wenn ein Benutzer einen Bericht öffnet. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verwendet Browsersitzungen, um eine konsistente Anzeige zu verwalten, während ein Bericht geöffnet ist.|  
+|Schaltfläche**Aktualisieren** im Browserfenster|Zeigt den im Sitzungscache gespeicherten Bericht an. Ein Sitzungscache wird erstellt, wenn ein Benutzer einen Bericht öffnet. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verwendet Browsersitzungen, um eine konsistente Anzeige sicherzustellen, während ein Bericht geöffnet ist.|  
 |![Schaltfläche zum Aktualisieren des Browers auf der Berichtssymbolleiste](../media/htmlviewer-refresh.GIF "Browser refresh button on report toolbar")|Wenn Sie auf der Berichtssymbolleiste auf die Schaltfläche **Aktualisieren** klicken, führt der Berichtsserver die Abfrage erneut aus und aktualisiert die Berichtsdaten, falls der Bericht bedarfsgesteuert ausgeführt wird. Falls der Bericht zwischengespeichert ist oder es sich um eine Momentaufnahme handelt, wird der in der Berichtsserver-Datenbank gespeicherte Bericht angezeigt, wenn auf **Aktualisieren** geklickt wird.|  
 |Tastenkombination STRG+F5|Führt zum selben Ergebnis wie das Klicken auf die Schaltfläche **Aktualisieren** auf der Berichtssymbolleiste.|  
   

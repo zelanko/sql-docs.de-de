@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren von Speicherinternem oder DirectQuery-Zugriff für eine tabellarische Modelldatenbank | Microsoft Docs
+title: Konfigurieren von Speicherinternem oder DirectQuery-Zugriff für eine tabellarische Modelldatenbank | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a5d439a9-5be1-4145-90e8-90777d80e98b
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c91dd8529fa6ddfb111ebb87cb84d87a55d3a709
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ee6b2f55d1b630b489f65e16a39cb602d5fd5a6d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160299"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243440"
 ---
 # <a name="configure-in-memory-or-directquery-access-for-a-tabular-model-database"></a>Konfigurieren von speicherinternem oder DirectQuery-Zugriff für eine tabellarische Modelldatenbank
   In diesem Thema wird beschrieben, wie die Verbindungseigenschaften eines bereits bereitgestellten tabellarischen Modells geändert werden, um die Verwendung des Modells im DirectQuery-Modus zu aktivieren.  
   
- Weitere Informationen zu diesen Eigenschaften und Konfiguration für die häufigsten Szenarien finden Sie unter [DirectQuery-Bereitstellungsszenarien &#40;SSAS – tabellarisch&#41;](../directquery-deployment-scenarios-ssas-tabular.md).  
+ Weitere Informationen zu diesen Eigenschaften und die Konfiguration für die häufigsten Szenarien finden Sie unter [DirectQuery-Bereitstellungsszenarien &#40;SSAS – tabellarisch&#41;](../directquery-deployment-scenarios-ssas-tabular.md).  
   
 ## <a name="requirements"></a>Anforderungen  
  Es sind mehrere Schritte nötig, um den DirectQuery-Modus auf ein tabellarisches Modell anwenden zu können. Du musst:  

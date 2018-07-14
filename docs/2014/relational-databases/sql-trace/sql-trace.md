@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f7ae6615491a300a5e5270f417522e9613914319
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e5e75f62bc6d0b5d8da6a0ce244dfde1939155e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161995"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188337"
 ---
 # <a name="sql-trace"></a>SQL-Ablaufverfolgung
   Bei der SQL-Ablaufverfolgung werden Ereignisse gesammelt, wenn sie Instanzen von in der Ablaufverfolgungsdefinition aufgeführten Ereignisklassen sind. Diese Ereignisse können aus der Ablaufverfolgung herausgefiltert oder für ihr Ziel in Warteschlangen eingereiht werden. Bei dem Ziel kann es sich um eine Datei oder um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO) handeln, die die Ablaufverfolgungsinformationen in Anwendungen verwenden können, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]verwalten.  
@@ -76,9 +76,9 @@ ms.locfileid: "36161995"
   
 |Datenspalte|Spaltennummer|Description|  
 |-----------------|-------------------|-----------------|  
-|**Parameter "ApplicationName"** <sup>1</sup>|10|Der Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem Namen des Programms.|  
-|**BigintData1**|52|Wert (`bigint` -Datentyp), der von den in der Ablaufverfolgung angegebenen Ereignisklasse abhängt.|  
-|**BigintData2**|53|Wert (`bigint` -Datentyp), der von den in der Ablaufverfolgung angegebenen Ereignisklasse abhängt.|  
+|**ApplicationName** <sup>1</sup>|10|Der Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem Namen des Programms.|  
+|**BigintData1**|52|Wert (`bigint` -Datentyp), welche hängt von der Ereignisklasse, die in der Ablaufverfolgung angegeben.|  
+|**BigintData2**|53|Wert (`bigint` -Datentyp), welche hängt von der Ereignisklasse, die in der Ablaufverfolgung angegeben.|  
 |**Binärdaten**|2|Der binäre Wert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wird.|  
 |**ClientProcessID** <sup>1</sup>|9|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn die Clientprozess-ID durch den Client bereitgestellt wird.|  
 |**ColumnPermissions**|44|Gibt an, ob eine Spaltenberechtigung festgelegt wurde. Sie können den Text der Anweisung analysieren, um zu bestimmen, welche Berechtigungen auf welche Spalten angewendet wurden.|  
@@ -129,7 +129,7 @@ ms.locfileid: "36161995"
 |**SourceDatabaseID**|62|Die ID der Datenbank, in der die Quelle des Objekts vorhanden ist.|  
 |**SPID**|12|Die Serverprozess-ID (SPID), die von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dem Prozess zugewiesen wurde, der diesem Client zugeordnet ist.|  
 |**SqlHandle**|63|64-Bit-Hash, der auf dem Text einer Ad-hoc-Abfrage oder der Datenbank- und Objekt-ID eines SQL-Objekts basiert. Dieser Wert kann an **sys.dm_exec_sql_text()** übergeben werden, um den dazugehörigen SQL-Text abzurufen.|  
-|**StartTime** <sup>1</sup>|14|Der Zeitpunkt, zu dem das Ereignis begonnen hat, falls verfügbar.|  
+|**"StartTime"** <sup>1</sup>|14|Der Zeitpunkt, zu dem das Ereignis begonnen hat, falls verfügbar.|  
 |**Status**|30|Fehlerzustandscode.|  
 |**Success**|23|Gibt an, ob das Ereignis erfolgreich war. Mögliche Werte sind:<br /><br /> **1** = Erfolg<br /><br /> **0** = Fehler<br /><br /> Eine **1** bedeutet z. B. eine erfolgreiche Berechtigungsüberprüfung, und **0** bedeutet einen Fehler bei dieser Überprüfung.|  
 |**TargetLoginName**|42|Für Aktionen, die auf einen Anmeldenamen abzielen (z. B. das Hinzufügen eines neuen Anmeldenamens), der Anmeldename, auf den abgezielt wird.|  
@@ -143,7 +143,7 @@ ms.locfileid: "36161995"
   
  <sup>1</sup> diese Datenspalten werden standardmäßig für alle Ereignisse aufgefüllt.  
   
- <sup>2</sup> Weitere Informationen zu den **ObjectType** -Datenspalte finden Sie unter [ObjectType Trace Event Column](../event-classes/objecttype-trace-event-column.md).  
+ <sup>2</sup> für Weitere Informationen zu den **ObjectType** -Datenspalte finden Sie unter [ObjectType Trace Event Column](../event-classes/objecttype-trace-event-column.md).  
   
 ## <a name="sql-trace-tasks"></a>Tasks der SQL-Ablaufverfolgung  
   

@@ -1,5 +1,5 @@
 ---
-title: String-Hilfsfunktionen Beispiel | Microsoft Docs
+title: String-Beispiel für Zeichenfolgenhilfsprogramm-Funktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9623013f-15f1-4614-8dac-1155e57c880c
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bf956d09e957ae963ff2caaadcd61b011080d23d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 892a950795569b87f5a09d4b30aa5b171b26321e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160277"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275096"
 ---
 # <a name="string-utility-functions-sample"></a>Beispiel für Zeichenfolgenhilfsprogramm-Funktionen
   Das Beispiel für Zeichenfolgenhilfsprogramme enthält eine Streaming-Tabellenwertfunktion in Visual C# und Visual Basic, die eine durch Trennzeichen getrennte Zeichenfolge in eine Tabelle mit einer Spalte unterteilt. Es enthält zudem eine Aggregatfunktion, die eine Zeichenfolgenspalte in eine durch Trennzeichen getrennte Zeichenfolge konvertiert.  Außerdem sind eine Skalarfunktion und eine Tabellenwertfunktion implementiert, die Ersetzungs- und Suchfunktionen für reguläre Ausdrücke bereitstellen.  
@@ -85,7 +85,7 @@ ms.locfileid: "36160277"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-    -   Kopie [!INCLUDE[tsql](../../includes/tsql-md.md)] -testbefehlsskript in eine Datei, und speichern Sie sie als `test.sql` im Beispielverzeichnis.  
+    -   Kopie [!INCLUDE[tsql](../../includes/tsql-md.md)] -testbefehlsskript in eine Datei, und speichern Sie ihn `test.sql` im Beispielverzeichnis.  
   
 8.  Führen Sie das Testskript mit dem folgenden Befehl aus:  
   

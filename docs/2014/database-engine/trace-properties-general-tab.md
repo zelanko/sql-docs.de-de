@@ -1,5 +1,5 @@
 ---
-title: Ablaufverfolgungseigenschaften (Registerkarte "Allgemein") | Microsoft Docs
+title: Ablaufverfolgungseigenschaften (Registerkarte "Allgemein") | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.traceproperties.general.f1
 helpviewer_keywords:
 - Trace Properties dialog box
 ms.assetid: 25227268-143b-477e-aac9-8268bcaf2078
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8d92a51eaca0f98624ea6174a56448b383c1744a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 99621b4d142e6d1686c908783ba63628109eae5e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161392"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221940"
 ---
 # <a name="trace-properties-general-tab"></a>Ablaufverfolgungseigenschaften (Registerkarte Allgemein)
   Mithilfe der Registerkarte **Allgemein** im Dialogfeld **Ablaufverfolgungseigenschaften** können Sie die Eigenschaften einer Ablaufverfolgung anzeigen und festlegen.  
@@ -50,7 +50,7 @@ ms.locfileid: "36161392"
  **Maximale Dateigröße festlegen (MB)**  
  Wenn Sie die Ablaufverfolgungsdaten in einer Datei speichern, müssen Sie die maximale Größe der Ablaufverfolgungsdatei angeben. Der Standardwert ist 5 MB. Die maximale Größe ist nur durch das Dateisystem (NTFS, FAT) begrenzt, in dem die Datei gespeichert wird.  
   
- \<Grafik > **speichern unter**  
+ \<Grafische > **speichern unter**  
  Nachdem Sie die Option zum Speichern ausgewählt haben, können Sie dieses Symbol verwenden, um den Dateinamen zu ändern.  
   
  **Dateirollover aktivieren**  
@@ -62,7 +62,7 @@ ms.locfileid: "36161392"
  **In Tabelle speichern**  
  Zeichnet die Ablaufverfolgungsdaten in einer Datenbanktabelle auf. Das Speichern von Ablaufverfolgungsdaten ist für die spätere Überprüfung und Analyse nützlich. Durch das Speichern von Ablaufverfolgungsdaten in einer Tabelle kann es jedoch zu einem hohen Verarbeitungsaufwand auf dem Server kommen, auf dem die Ablaufverfolgung gespeichert wird. Vermeiden Sie daher wenn möglich, die Ablaufverfolgungstabelle auf demselben Server zu speichern, für den die Ablaufverfolgung ausgeführt wird.  
   
- \<Grafik > **Zieltabelle**  
+ \<Grafische > **Zieltabelle**  
  Wenn Sie die Option zum Speichern der Ablaufverfolgungsdaten in einer Datenbanktabelle ausgewählt haben, können Sie auf dieses Symbol klicken, um den Tabellennamen zu ändern.  
   
  **Maximale Zeilenzahl festlegen (in Tausend)**  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 516b61e080c92bd6dc0579b93b829e891068c826
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: f06fa546153ef62edda97c173a8c4fb9cc4d9362
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160365"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276166"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines KPIs zu einem Bericht (Berichts-Generator)
   Ein Key Performance Indicator (KPI) ist ein messbarer Wert mit einer Aussagekraft für das Geschäft. In diesem Lernprogramm erfahren Sie, wie ein (KPI) in einen Bericht eingeschlossen wird. In diesem Szenario ist die Verkaufszusammenfassung nach Produktunterkategorien der KPI. Der aktuelle Status des KPI wird mit Farben, Messgeräten und Indikatoren angezeigt.  
@@ -45,7 +45,7 @@ ms.locfileid: "36160365"
   
 6.  [Hinzufügen eines Berichtstitels](#Title)  
   
-7.  [Speichern Sie den Bericht](#Save)  
+7.  [Speichern des Berichts](#Save)  
   
 > [!NOTE]  
 >  In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst: ein Verfahren zum Erstellen des Datasets und ein Verfahren zum Erstellen einer Tabelle. Im ersten Tutorial dieser Reihe erhalten Sie ausführliche Anweisungen zum Navigieren zu einem Berichtsserver, Auswählen einer Datenquelle, Erstellen eines Datasets und Ausführen des Assistenten: [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
@@ -56,7 +56,7 @@ ms.locfileid: "36160365"
  Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="Table"></a> 1. Erstellen eines Tabellenberichts und eines Datasets mit dem Tabellen- oder Matrix-Assistenten  
- Aus der **Einstieg** (Dialogfeld), wählen Sie eine freigegebene Datenquelle, ein eingebettetes Dataset zu erstellen und Anzeigen von Daten in einer Tabelle.  
+ Von der **Einstieg** im Dialogfeld Wählen Sie eine freigegebene Datenquelle, erstellen Sie ein eingebettetes Dataset und zeigen Sie die Daten in einer Tabelle.  
   
 > [!NOTE]  
 >  In diesem Lernprogramm sind die Datenwerte in der Abfrage enthalten, sodass keine externe Datenquelle benötigt wird. Die Abfrage ist daher relativ lang. In einer Geschäftsumgebung wären die Daten nicht in der Abfrage enthalten. Dieses Szenario dient nur zu Lernzwecken.  
@@ -173,7 +173,7 @@ ms.locfileid: "36160365"
   
 #### <a name="to-display-the-present-state-of-a-kpi-by-using-background-colors"></a>So zeigen Sie den aktuellen Status eines KPI mit Hintergrundfarben an  
   
-1.  In der Tabelle mit der rechten Maustaste zwei Zellen nach unten aus der `[Sum(Sales)]` Zelle (der Teilergebniszeile, die den Umsatz für eine Unterkategorie anzeigt), und klicken Sie dann auf **Textfeldeigenschaften**.  
+1.  In der Tabelle mit der rechten Maustaste zwei Zellen nach unten aus dem `[Sum(Sales)]` Zelle (die Teilergebniszeile mit dem Umsatz für eine Unterkategorie), und klicken Sie dann auf **Textfeldeigenschaften**.  
   
 2.  In **füllen**, klicken Sie auf die **fx** neben der **Füllfarbe** aus und geben Sie den folgenden Ausdruck in der **Ausdruck festlegen für: BackgroundColor** Feld:  
   
@@ -194,13 +194,13 @@ ms.locfileid: "36160365"
   
 1.  Wechseln Sie in die Entwurfsansicht.  
   
-2.  In der Tabelle mit der Maustaste des Handlers für die Spalte der Zelle, die Sie in der vorherigen Prozedur geändert haben, zeigen Sie auf **Spalte einfügen**, und klicken Sie dann auf **rechts**. Eine neue Spalte wird der Tabelle hinzugefügt.  
+2.  In der Tabelle mit der Maustaste des Handlers für die Spalte für die Zelle, die Sie in der vorherigen Prozedur geändert wird, zeigen Sie auf **Spalte einfügen**, und klicken Sie dann auf **rechts**. Eine neue Spalte wird der Tabelle hinzugefügt.  
   
-3.  Typ **KPI** in den Spaltenüberschrift.  
+3.  Typ **KPI** in der Spaltenüberschrift.  
   
-4.  Auf der **einfügen** Registerkarte die **Datenbereiche** zu gruppieren, klicken Sie auf **Messgerät**, und klicken Sie dann auf die Entwurfsoberfläche außerhalb der Tabelle. Das Dialogfeld **Messgerättyp auswählen** wird angezeigt.  
+4.  Auf der **einfügen** Registerkarte der **Datenbereiche** auf **Messgerät**, und klicken Sie dann auf die Entwurfsoberfläche außerhalb der Tabelle. Das Dialogfeld **Messgerättyp auswählen** wird angezeigt.  
   
-5.  Klicken Sie auf **lineare**. Der erste lineare messgerättyp **horizontale**, ausgewählt ist.  
+5.  Klicken Sie auf **lineare**. Der erste lineare messgerättyp, **horizontale**, ausgewählt ist.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -240,11 +240,11 @@ ms.locfileid: "36160365"
   
     2.  Klicken Sie auf der Skala. Die Eigenschaften für die lineare Skala werden im Bereich "Eigenschaften" angezeigt.  
   
-    3.  In der **Scale Pins** Kategorie, erweitern Sie die **MaximumPin** Knoten.  
+    3.  In der **Skalenpole** (Kategorie), erweitern Sie die **MaximumPin** Knoten.  
   
     4.  Legen Sie die **aktivieren** Eigenschaft `True`. Ein Stift wird nach dem maximalen Wert auf der Skala angezeigt.  
   
-    5.  Legen Sie **BorderColor** auf `Lime`.  
+    5.  Legen Sie **BorderColor** zu `Lime`.  
   
 17. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
@@ -255,9 +255,9 @@ ms.locfileid: "36160365"
   
 1.  Wechseln Sie in die Entwurfsansicht.  
   
-2.  In der Tabelle mit der Maustaste des Handlers für die Spalte der Zelle, die Sie in der vorherigen Prozedur geändert haben, zeigen Sie auf **Spalte einfügen**, und klicken Sie dann auf **rechts**. Eine neue Spalte wird der Tabelle hinzugefügt.  
+2.  In der Tabelle mit der Maustaste des Handlers für die Spalte für die Zelle, die Sie in der vorherigen Prozedur geändert wird, zeigen Sie auf **Spalte einfügen**, und klicken Sie dann auf **rechts**. Eine neue Spalte wird der Tabelle hinzugefügt.  
   
-3.  Typ **KPI** in den Spaltenüberschrift.  
+3.  Typ **KPI** in der Spaltenüberschrift.  
   
 4.  Klicken Sie auf die Zelle für das Teilergebnis der Unterkategorie.  
   
@@ -265,7 +265,7 @@ ms.locfileid: "36160365"
   
      Das Dialogfeld **Indikatortyp auswählen** wird geöffnet.  
   
-6.  Klicken Sie auf **Formen**. Der erste Formtyp **3 Ampeln (ohne Rand),** ausgewählt ist.  
+6.  Klicken Sie auf **Formen**. Der erste Formtyp, **3 Ampeln (ohne Rand),** ausgewählt ist.  
   
      In diesem Lernprogramm verwenden Sie diesen Indikator.  
   
@@ -275,9 +275,9 @@ ms.locfileid: "36160365"
   
 8.  Klicken Sie mit der rechten Maustaste auf den Indikator, und klicken Sie auf **Indikatoreigenschaften**.  
   
-9. Klicken Sie auf **Wert und Status**.  
+9. Klicken Sie auf **Werte und Status**.  
   
-10. Wählen Sie in der Dropdownliste Wert **[Sum(Sales)]**, jedoch keine anderen Optionen nicht ändern.  
+10. Wählen Sie in der Dropdown-Werteliste, **[SUM(Sales)"angezeigt]**, jedoch keine weiteren Optionen nicht ändern.  
   
      Standardmäßig findet eine Datensynchronisierung im Datenbereich statt, und der Wert **Tablix1**, der Name des Tabellendatenbereichs im Bericht, wird im Feld **Synchronisierungsbereich** angezeigt.  
   
@@ -296,7 +296,7 @@ ms.locfileid: "36160365"
   
 2.  Typ **Product Sales KPI**, und klicken Sie dann außerhalb des Textfelds auf.  
   
-3.  Maustaste optional im Textfeld enthält **Product Sales KPI**, klicken Sie auf **Textfeldeigenschaften**, und wählen Sie auf der Registerkarte "Schriftart" die andere Schriftschnitte, Größen und Farben.  
+3.  Optional, wird mit das Textfeld mit der rechten Maustaste **Product Sales KPI**, klicken Sie auf **Textfeldeigenschaften**, und wählen Sie dann auf der Registerkarte Schriftart der andere Schriftschnitte, Größen und Farben.  
   
 4.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   

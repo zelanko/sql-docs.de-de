@@ -1,5 +1,5 @@
 ---
-title: Data Flow-Eigenschaften, die mithilfe von Ausdrücken festgelegt werden können | Microsoft Docs
+title: Datenfluss-Eigenschaften, die mithilfe von Ausdrücken festgelegt werden können | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,26 +20,26 @@ helpviewer_keywords:
 - property expressions [Integration Services]
 ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
 caps.latest.revision: 43
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0dccc1a7bb932ae044f6d1e2491c7521652e9033
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9855c21e19e4e2ef0e9f9d7ab88d6d12fdadda16
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162967"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173171"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Data Flow-Eigenschaften, die mithilfe von Ausdrücken festgelegt werden können
   Die Werte mancher Eigenschaften von Datenflussobjekten können mithilfe von Eigenschaftsausdrücken festgelegt werden, die im Datenflusstask-Container verfügbar sind.  
   
  Weitere Informationen zum Verwenden von Eigenschaftsausdrücken finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](expressions/use-property-expressions-in-packages.md).  
   
- Sie können Eigenschaftsausdrücke dazu verwenden, Konfigurationen für jede bereitgestellte Instanz eines Pakets anzupassen. Sie können Eigenschaftsausdrücke auch zur Festlegung von Laufzeiteinschränkungen für ein Paket nutzen, indem Sie die Option **/set** mit dem Eingabeaufforderungshilfsprogramm **dtexec** verwenden. Sie können z. B. Einschränken der `MaximumThreads` durch die Transformation zum Sortieren verwendet oder die `MaxMemoryUsage` Transformationen Fuzzygruppierung und Fuzzysuche. Wenn keine Einschränkungen bestehen, legen diese Transformationen möglicherweise große Datenmengen im Arbeitsspeicher ab.  
+ Sie können Eigenschaftsausdrücke dazu verwenden, Konfigurationen für jede bereitgestellte Instanz eines Pakets anzupassen. Sie können Eigenschaftsausdrücke auch zur Festlegung von Laufzeiteinschränkungen für ein Paket nutzen, indem Sie die Option **/set** mit dem Eingabeaufforderungshilfsprogramm **dtexec** verwenden. Beispielsweise können Sie einschränken der `MaximumThreads` , die von der Transformation für Sortierung verwendet oder die `MaxMemoryUsage` der Transformationen für Fuzzygruppierung und Fuzzysuche. Wenn keine Einschränkungen bestehen, legen diese Transformationen möglicherweise große Datenmengen im Arbeitsspeicher ab.  
   
  Um einen Eigenschaftsausdruck für eine der Eigenschaften eines unter diesem Thema aufgelisteten Datenflussobjekts festzulegen, zeigen Sie das Fenster **Eigenschaften** für den Datenflusstask an, indem Sie den Datenflusstask auf der Oberfläche **Ablaufsteuerung** des Designers auswählen oder indem Sie die Registerkarte **Datenfluss** des Designers auswählen, ohne eine individuelle Komponente oder einen Pfad auszuwählen. Wählen Sie die **Ausdrücke** -Eigenschaft aus, und klicken Sie auf die Schaltfläche mit den drei Punkten, um das Dialogfeld **Eigenschaftsausdrucks-Editor** anzuzeigen. Öffnen Sie die Dropdownliste **Eigenschaft** , um eine Eigenschaft auszuwählen, und geben Sie dann einen Ausdruck in das Textfeld **Ausdruck** ein, oder klicken Sie auf die Schaltfläche mit den drei Punkten, um das Dialogfeld **Ausdrucks-Generator** anzuzeigen.  
   
- Die **Eigenschaft** -Liste zeigt nur die verfügbaren Eigenschaften der Datenflussobjekte an, die bereits in der **Datenfluss** -Oberfläche des Designers platziert wurden. Deshalb können Sie die **Eigenschaft** -Liste nicht dazu verwenden, alle möglichen Eigenschaften von Datenflussobjekten anzuzeigen, die Eigenschaftsausdrücke unterstützen. Wenn Sie eine ADO NET-Quelle auf der Designeroberfläche platziert haben z. B. die **Eigenschaft** Liste enthält einen Eintrag für die `[ADO NET Source].[SqlCommand]` Eigenschaft. Die Liste zeigt außerdem viele Eigenschaften des Datenflusstasks selbst an.  
+ Die **Eigenschaft** -Liste zeigt nur die verfügbaren Eigenschaften der Datenflussobjekte an, die bereits in der **Datenfluss** -Oberfläche des Designers platziert wurden. Deshalb können Sie die **Eigenschaft** -Liste nicht dazu verwenden, alle möglichen Eigenschaften von Datenflussobjekten anzuzeigen, die Eigenschaftsausdrücke unterstützen. Wenn Sie eine ADO NET-Quelle auf die Designer-Oberfläche platziert haben z. B. die **Eigenschaft** Liste enthält einen Eintrag für die `[ADO NET Source].[SqlCommand]` Eigenschaft. Die Liste zeigt außerdem viele Eigenschaften des Datenflusstasks selbst an.  
   
 ## <a name="properties-of-data-flow-objects-that-support-property-expressions"></a>Eigenschaften von Datenflussobjekten, die Eigenschaftsausdrücke unterstützen  
  Die Werte der Eigenschaften in der folgenden Liste können über Eigenschaftsausdrücke angegeben werden.  

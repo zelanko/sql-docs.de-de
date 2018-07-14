@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data warehouse [SQL Server]
 - OLTP databases [SQL Server]
 - databases [SQL Server], about databases
 ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: de7f79af288674b5bf2dbb53979071dea505428c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d2d95b8a11ba3d1772bbb108435317e2e55e3c89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159519"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250240"
 ---
 # <a name="databases"></a>Datenbanken
   Eine Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] besteht aus einer Auflistung von Tabellen, in der eine bestimmte Menge strukturierter Daten gespeichert ist. Eine Tabelle enthält eine Auflistung von Zeilen, auch als Datensätze oder Tupel bezeichnet, sowie Spalten, auch als Attribute bezeichnet. Jede Spalte in der Tabelle dient zum Speichern eines bestimmten Informationstyps, z. B. Datumsangaben, Namen, Geldbeträge und Zahlen.  

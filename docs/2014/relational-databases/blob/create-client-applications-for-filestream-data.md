@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], Win32
 ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 01789595c470865d4a422ac87c2814bcc9570468
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 16ea4d4a00726453918577e2eb0eb92d73580ccd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160923"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260866"
 ---
 # <a name="create-client-applications-for-filestream-data"></a>Erstellen von Clientanwendungen für FILESTREAM-Daten
   Sie können Win32 zum Lesen und Schreiben von Daten in einem FILESTREAM BLOB verwenden. Hierfür sind die folgenden Schritte erforderlich:  
@@ -51,7 +50,7 @@ ms.locfileid: "36160923"
 ##  <a name="steps"></a> Schritte zum Zugreifen auf FILESTREAM-Daten  
   
 ###  <a name="path"></a> Lesen des FILESTREAM-Dateipfads  
- Jeder Zelle in einer FILESTREAM-Tabelle ist ein Dateipfad zugeordnet. Verwenden Sie zum Lesen des Pfads der `PathName` Eigenschaft eine `varbinary(max)` Spalte in einer [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung. Im folgende Beispiel wird gezeigt, wie zum Lesen des Pfads der Datei von einem `varbinary(max)` Spalte.  
+ Jeder Zelle in einer FILESTREAM-Tabelle ist ein Dateipfad zugeordnet. Verwenden Sie zum Lesen des Pfads der `PathName` Eigenschaft eine `varbinary(max)` -Spalte in einer [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung. Das folgende Beispiel zeigt, wie Sie den Pfad des zu lesen eine `varbinary(max)` Spalte.  
   
  [!code-sql[FILESTREAM#FS_PathName](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_pathname)]  
   
@@ -83,7 +82,7 @@ ms.locfileid: "36160923"
   
 -   Vermeiden Sie [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die FILESTREAM-BLOBs aktualisieren oder diesen Daten anfügen bzw. voranstellen. Dies bewirkt, dass die BLOB-Daten in die Datenbank tempdb und anschließend zurück in eine neue physische Datei gespoolt werden.  
   
--   Vermeiden Sie, kleine BLOB-Updates an ein FILESTREAM-BLOB anzufügen. Jeder Anfügevorgang bewirkt, dass die zugrunde liegenden FILESTREAM-Dateien kopiert werden. Wenn eine Anwendung kleine BLOBs Anfügen muss, Schreiben Sie die BLOBs in einem `varbinary(max)` Spalte, und führen Sie dann einen einzelnen Schreibvorgang für den FILESTREAM-BLOB aus, wenn die Anzahl der BLOBs eine vorher festgelegte Beschränkung erreicht.  
+-   Vermeiden Sie, kleine BLOB-Updates an ein FILESTREAM-BLOB anzufügen. Jeder Anfügevorgang bewirkt, dass die zugrunde liegenden FILESTREAM-Dateien kopiert werden. Wenn eine Anwendung kleine BLOBs anfügen, Schreibzugriff auf BLOBs in einem `varbinary(max)` Spalte, und führen Sie dann einen einzelnen Schreibvorgang für den FILESTREAM-BLOB aus, wenn die Anzahl der BLOBs eine vorher festgelegte Beschränkung erreicht.  
   
 -   Vermeiden Sie, die Datenlänge von vielen BLOB-Dateien in einer Anwendung abzurufen. Dies ist ein zeitaufwendiger Vorgang, da die Größe nicht in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]gespeichert wird. Wenn Sie die Länge einer BLOB-Datei festlegen müssen, verwenden Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)] -DATALENGTH()-Funktion, um die Größe des BLOB zu bestimmen, wenn dieses geschlossen ist. DATALENGTH() öffnet die BLOB-Datei nicht, um deren Größe zu bestimmen.  
   

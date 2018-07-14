@@ -1,5 +1,5 @@
 ---
-title: Deinstallieren von PowerPivot für SharePoint | Microsoft Docs
+title: Deinstallieren von PowerPivot für SharePoint | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
 caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: bbdcc586e92a1ddd4470759a4b44f0f86e420dde
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: b45767cde324af3309178182085615ced5153f60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161054"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321760"
 ---
 # <a name="uninstall-powerpivot-for-sharepoint"></a>Deinstallieren von PowerPivot für SharePoint
   Die Deinstallation einer [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Installation ist ein Vorgang mit mehreren Schritten, der die Vorbereitung auf die Deinstallation, das Entfernen von Funktionen und Lösungen aus der Farm und das Entfernen von Programmdateien und Registrierungseinstellungen umfasst.  
@@ -150,7 +150,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
      Im Setup können Sie die **PowerPivot** -Instanz und anschließend **Analysis Services** und **Analysis Services-SharePoint-Integration** auswählen, um nur diese Funktion zu entfernen und alle anderen Funktionen unverändert zu lassen.  
   
 ##  <a name="bkmk_addin"></a> Schritt 4: Deinstallieren des PowerPivot für SharePoint-add-in  
- Wenn Ihre [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Bereitstellung zwei oder mehr Server umfasst und Sie das [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Add-In installiert haben, deinstallieren Sie das [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Add-In von jedem Server, auf dem es installiert wurde, um alle [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Dateien vollständig zu deinstallieren. Weitere Informationen finden Sie unter [installieren oder Deinstallieren des PowerPivot für SharePoint-Add-Ins &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+ Wenn Ihre [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Bereitstellung zwei oder mehr Server umfasst und Sie das [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Add-In installiert haben, deinstallieren Sie das [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Add-In von jedem Server, auf dem es installiert wurde, um alle [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Dateien vollständig zu deinstallieren. Weitere Informationen finden Sie unter [installieren oder Deinstallieren des PowerPivot für SharePoint-Add-in &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 ##  <a name="verify"></a> Schritt 5: Überprüfen der Deinstallation  
   
@@ -192,7 +192,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
      Deinstallieren Sie nicht den Analysis Services OLE DB-Anbieter. Bei der SharePoint-Installation wird der OLE DB-Anbieter als Voraussetzung für Excel-Arbeitsmappen installiert, die eine Verbindung mit Analysis Services-Datenbanken herstellen. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] wird eine neuere Version installiert. Diese Version ist jedoch abwärts kompatibel und sollte daher im System bleiben, um spätere Datenverbindungsprobleme zu vermeiden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Installieren oder Deinstallieren des PowerPivot für SharePoint-Add-Ins &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
+ [Installieren oder Deinstallieren des PowerPivot für SharePoint-Add-in &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
  [PowerPivot-Konfigurationstools](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)  
   
   

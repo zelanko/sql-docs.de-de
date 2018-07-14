@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 1: Erstellen der Market Basket-Miningstruktur | Microsoft Docs'
+title: 'Lektion 1: Erstellen der Market Basket-Miningstruktur | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a817c8d1-aff4-42b4-b194-ad9cc1c60f35
 caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 2201afdb7226267e44686b76edb22e77b11dd199
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 3f719a4dd11234a361856dcf170eebcd3856f66c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312438"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323610"
 ---
 # <a name="lesson-1-creating-the-market-basket-mining-structure"></a>Lektion 1: Erstellen der Market Basket-Miningstruktur
   In dieser Lektion erstellen Sie eine Miningstruktur, mit der sich vorhersagen lässt, welche [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]-Produkte ein Kunde tendenziell als Kombinationskauf erwirbt. Wenn Sie nicht mit Miningstrukturen und ihre Rolle beim Datamining vertraut sind, finden Sie unter [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
- Die Association-Miningstruktur, die Sie in dieser Lektion erstellen unterstützt das Hinzufügen von Miningmodellen basierend auf den [Microsoft Association-Algorithmus](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md). In späteren Lektionen verwenden Sie die Miningmodelle, um vorherzusagen, welche Produkttypen ein Kunde tendenziell als Kombinationskauf erwirbt. Dieses Verfahren wird als Warenkorbanalyse bezeichnet. So könnten Sie beispielsweise zu dem Ergebnis kommen, dass Kunden tendenziell gleichzeitig Mountainbikes, Fahrradreifen und Helme kaufen.  
+ Die Association-Miningstruktur, die Sie in dieser Lektion erstellen unterstützt das Hinzufügen von Miningmodellen, die basierend auf den [Microsoft Association-Algorithmus](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md). In späteren Lektionen verwenden Sie die Miningmodelle, um vorherzusagen, welche Produkttypen ein Kunde tendenziell als Kombinationskauf erwirbt. Dieses Verfahren wird als Warenkorbanalyse bezeichnet. So könnten Sie beispielsweise zu dem Ergebnis kommen, dass Kunden tendenziell gleichzeitig Mountainbikes, Fahrradreifen und Helme kaufen.  
   
  In dieser Lektion wird die Miningstruktur mithilfe von geschachtelten Tabellen definiert. Geschachtelte Tabellen werden deshalb verwendet, weil die Datendomäne, die durch die Struktur definiert wird, in zwei verschiedenen Quelltabellen enthalten ist. Weitere Informationen zu geschachtelten Tabellen finden Sie unter [geschachtelte Tabellen &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/nested-tables-analysis-services-data-mining.md).  
   
@@ -81,7 +81,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
    <nested mining structure columns> )  
 ```  
   
- Weitere Informationen zu den Typen der Miningstrukturspalten, die Sie definieren können, finden Sie unter [Miningstrukturspalten](../../2014/analysis-services/data-mining/mining-structure-columns.md).  
+ Informationen zu den Arten von Miningstrukturspalten, die Sie definieren können, finden Sie unter [Miningstrukturspalten](../../2014/analysis-services/data-mining/mining-structure-columns.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] erstellt standardmäßig ein zu 30 % zurückgehaltenes Dataset für jede Miningstruktur. Wenn Sie jedoch DMX zum Erstellen einer Miningstruktur verwenden, müssen Sie das zurückgehaltene Dataset (falls gewünscht) manuell hinzufügen.  
@@ -102,9 +102,9 @@ CREATE MINING STRUCTURE [Mining Structure Name]
   
 1.  Öffnen Sie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-2.  In der **Verbindung mit Server herstellen** im Dialogfeld für **Servertyp**Option **Analysis Services**. In **Servernamen**, Typ `LocalHost`, oder den Namen der Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , die Sie in dieser Lektion eine Verbindung herstellen möchten. Klicken Sie auf **Verbinden**.  
+2.  In der **Herstellen einer Verbindung mit Server** im Dialogfeld für **Servertyp**Option **Analysis Services**. In **Servernamen**, Typ `LocalHost`, oder den Namen der Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , die Sie für diese Lektion herstellen möchten. Klicken Sie auf **Verbinden**.  
   
-3.  In **Objektexplorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX**.  
+3.  In **Objekt-Explorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX**.  
   
      Der Abfrage-Editor wird mit einer neuen leeren Abfrage geöffnet.  
   
@@ -170,23 +170,23 @@ CREATE MINING STRUCTURE [Mining Structure Name]
   
 5.  Auf der **Datei** Menü klicken Sie auf **Dmxquery1.DMX speichern**.  
   
-6.  In der **speichern unter** (Dialogfeld), suchen Sie den entsprechenden Ordner, und nennen Sie die Datei `Market Basket Structure.dmx`.  
+6.  In der **speichern** Dialogfeld, navigieren Sie zu den entsprechenden Ordner, und nennen Sie die Datei `Market Basket Structure.dmx`.  
   
 ## <a name="executing-the-query"></a>Ausführen der Abfrage  
- Im letzten Schritt führen Sie die Abfrage aus. Nachdem Sie eine Abfrage erstellt und gespeichert haben, muss sie (d. h. die Anweisung) ausgeführt werden, damit die Miningstruktur auf dem Server erstellt wird. Weitere Informationen zum Ausführen von Abfragen im Abfrage-Editor finden Sie unter [Datenbankmodul-Abfrage-Editor &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md).  
+ Im letzten Schritt führen Sie die Abfrage aus. Nachdem Sie eine Abfrage erstellt und gespeichert haben, muss sie (d. h. die Anweisung) ausgeführt werden, damit die Miningstruktur auf dem Server erstellt wird. Weitere Informationen zum Ausführen von Abfragen im Abfrage-Editor finden Sie unter [Datenbank-Engine-Abfrage-Editor &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md).  
   
 #### <a name="to-execute-the-query"></a>So führen Sie die Abfrage aus  
   
--   Klicken Sie im Abfrage-Editor auf der Symbolleiste auf **Execute**.  
+-   Klicken Sie im Abfrage-Editor auf der Symbolleiste **Execute**.  
   
-     Der Status der Abfrage wird angezeigt, der **Nachrichten** Registerkarte am unteren Rand des Abfrage-Editor nach die Anweisung Ausführung abgeschlossen ist. Die Meldung sollte Folgendes anzeigen:  
+     Der Status der Abfrage wird angezeigt, der **Nachrichten** Registerkarte am unteren Rand des Abfrage-Editors nach Abschluss der Ausführung die Anweisung. Die Meldung sollte Folgendes anzeigen:  
   
     ```  
     Executing the query   
     Execution complete  
     ```  
   
-     Eine neue Struktur mit dem Namen **Market Basket** jetzt auf dem Server vorhanden ist.  
+     Eine neue Struktur mit dem Namen **Warenkorbanalyse** jetzt auf dem Server vorhanden ist.  
   
  In der nächsten Lektion fügen Sie der soeben erstellten Market Basket-Miningstruktur Miningmodelle hinzu.  
   

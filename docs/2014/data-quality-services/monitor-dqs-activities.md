@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.administration.activitymonitoring.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 363b1d538c37123c3cc787e7b80c1cf57b693181
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4a7458eb1aa76eebeb987ef49f7079634b26e577
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161196"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267666"
 ---
 # <a name="monitor-dqs-activities"></a>Überwachen der DQS-Aktivitäten
   In diesem Thema wird beschrieben, wie die folgenden Aktivitäten in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) zentral überwacht werden: Wissensermittlung, Domänenverwaltung, Abgleichsrichtlinie, Datenbereinigung, Datenabgleich und SSIS-Bereinigung.  
@@ -59,7 +59,7 @@ ms.locfileid: "36161196"
     |**Ist aktiv**|Gibt an, ob die Aktivität derzeit aktiv ist. Die folgenden Werte sind möglich:<br /><br /> **Aktiv**: Aktivität wird gerade ausgeführt.<br /><br /> **Abgeschlossen**: Die Aktivität wurde beendet.<br /><br /> **Beendet**: Die Aktivität wurde vom DQS-Administrator im Bildschirm Aktivitätsüberwachung beendet oder während der Ausführung im entsprechenden Funktionsbereich in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]vom Benutzer abgebrochen.|  
     |**Typ**|Gibt den Typ der Aktivität an. Die folgenden Aktivitätstypen werden überwacht: **Wissensverwaltung**, **DQ-Projekt**und **SSIS-Bereinigung**.|  
     |**Untertyp**|Gibt den jeweiligen Workflow an, der für einen Aktivitätstyp ausgeführt wird.<br /><br /> Der Aktivitätstyp **Wissensverwaltung** verfügt über die folgenden Workflows oder Untertypen: **Wissensermittlung**, **Domänenverwaltung**und **Abgleichsrichtlinie**.<br /><br /> Der Aktivitätstyp **DQ-Projekt** verfügt über die folgenden Workflows oder Untertypen: **Bereinigung** und **Abgleich**.<br /><br /> Der Aktivitätstyp **SSIS-Bereinigung** kann nur den Workflow oder Untertyp **Bereinigung** aufweisen.|  
-    |**Aktueller Status**|Zeigt den aktuellen Status einer Aktivität an. Der Aktivitätsstatus wird durch den zuletzt durchgeführten Berechnungsprozess bestimmt. Die folgenden Werte sind möglich:<br /><br /> **Wird ausgeführt**: Der Berechnungsprozess wird ausgeführt.<br /><br /> **Erfolgreich**: Bevor ein Berechnungsprozess ausgeführt wird, wird der Status auf **Erfolgreich**festgelegt. Nachdem der Berechnungsprozess erfolgreich beendet wurde, wird der Status erneut auf **Erfolgreich**festgelegt.<br /><br /> **Fehler**: Im Berechnungsprozess ist ein Fehler aufgetreten.<br /><br /> **Beendet**: Der Berechnungsprozess wurde beendet.<br /><br /> <br /><br /> Hinweis: Es kann sein Berechnungsprozess in einer Aktivität, z. B. das Ausführen der Ermittlungsprozess mehrmals (innerhalb der wissensermittlungsaktivität). Aus diesem Grund kann sich der Status während der Lebensdauer einer Aktivität mehrere Male ändern.|  
+    |**Aktueller Status**|Zeigt den aktuellen Status einer Aktivität an. Der Aktivitätsstatus wird durch den zuletzt durchgeführten Berechnungsprozess bestimmt. Die folgenden Werte sind möglich:<br /><br /> **Wird ausgeführt**: Der Berechnungsprozess wird ausgeführt.<br /><br /> **Erfolgreich**: Bevor ein Berechnungsprozess ausgeführt wird, wird der Status auf **Erfolgreich**festgelegt. Nachdem der Berechnungsprozess erfolgreich beendet wurde, wird der Status erneut auf **Erfolgreich**festgelegt.<br /><br /> **Fehler**: Im Berechnungsprozess ist ein Fehler aufgetreten.<br /><br /> **Beendet**: Der Berechnungsprozess wurde beendet.<br /><br /> <br /><br /> Hinweis: Es kann sein Berechnungsprozess eine Aktivität, z. B. das Ausführen des Ermittlungsprozess mehrmals (im Rahmen der wissensermittlungsaktivität). Aus diesem Grund kann sich der Status während der Lebensdauer einer Aktivität mehrere Male ändern.|  
     |**DQKB**|Name der Wissensdatenbank, die für die Aktivität verwendet wird.|  
     |**Benutzer**|Der Name des Benutzers, der die Aktivität initiiert hat, oder der letzte Benutzer, der die Aktivität verwendet hat (falls es sich dabei nicht um denselben Benutzer handelt).|  
     |**Startzeit der Aktivität**|Datum und Uhrzeit beim Start der Aktivität|  

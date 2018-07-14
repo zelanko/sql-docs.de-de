@@ -1,5 +1,5 @@
 ---
-title: CustomRollup-Element (XMLA) | Microsoft Docs
+title: CustomRollup-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - CustomRollup element
 ms.assetid: b266ac8b-1ae7-461c-9127-3c5642f829f5
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 715aca3e7bb35eb082a9e6fecc286aaf30ff3b71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a5da3f49101d900088e11cbb954aa65dbbf16620
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161199"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261106"
 ---
 # <a name="customrollup-element-xmla"></a>CustomRollup-Element (XMLA)
   Enthält die benutzerdefinierte Rollupformel für ein Attributelement, das durch das übergeordnete Element dargestellten [Attribut](attribute-element-xmla.md) Element.  
@@ -64,7 +64,7 @@ ms.locfileid: "36161199"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `CustomRollup` -Element enthält einen Multidimensional Expressions (MDX)-Ausdruck, der der Attributelemente vom übergeordneten Element definiert das Rollup-Verhalten definiert `Attribute` Element.  
+ Die `CustomRollup` -Element enthält einen Multidimensional Expressions (MDX)-Ausdruck, der das Rollup-Verhalten der Attributelemente vom übergeordneten Element definierten definiert `Attribute` Element.  
   
  Weitere Informationen zu MDX-Ausdrücken finden Sie unter [Ausdrücke &#40;MDX&#41;](/sql/mdx/expressions-mdx).  
   

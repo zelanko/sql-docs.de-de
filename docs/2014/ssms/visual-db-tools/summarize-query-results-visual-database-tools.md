@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - summarizing query results
 - queries [SQL Server], results
 - aggregate queries [SQL Server]
 ms.assetid: c9e15350-ed57-4d95-814d-815fbebfd86b
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d447d321d89da666d6db044ef9adac8b523d5656
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5684e2f5e75d37dfbcce3a2a19ed49d63ead6032
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161706"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198360"
 ---
 # <a name="summarize-query-results-visual-database-tools"></a>Zusammenfassen von Abfrageergebnissen (Visual Database Tools)
   Wenn Sie Aggregatabfragen erstellen, folgen diese bestimmten logischen Prinzipien. Beispielsweise können Sie keine Inhalte aus einzelnen Zeilen einer zusammenfassenden Abfrage anzeigen lassen. Der Abfrage- und Sicht-Designer unterstützt Sie bei der Einhaltung dieser Prinzipien durch das Verhalten von [Diagrammbereich](visual-database-tools.md) und [Kriterienbereich](criteria-pane-visual-database-tools.md) .  

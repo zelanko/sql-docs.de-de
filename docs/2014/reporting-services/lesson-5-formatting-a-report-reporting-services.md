@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 caps.latest.revision: 16
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: db481a9a35cd55ecef08cf86802196d2a1c94b45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 19e238919a00bf022cd924be7a66a4d990d8f7c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161496"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227089"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lektion 5: Formatieren eines Berichts (Reporting Services)
   Nachdem Sie dem Sales Orders-Bericht einen Datenbereich sowie einige Felder hinzugefügt haben, können Sie die Felder für Datum und Währung sowie die Spaltenköpfe formatieren.  
@@ -41,7 +41,7 @@ ms.locfileid: "36161496"
   
 2.  Klicken Sie mit der rechten Maustaste auf die Zelle mit dem Feldausdruck `[Date]` und anschließend auf das Dialogfeld **Textfeldeigenschaften**.  
   
-3.  Klicken Sie auf **Anzahl**, und klicken Sie dann in der **Kategorie** Feld `Date`.  
+3.  Klicken Sie auf **Anzahl**, und klicken Sie dann in der **Kategorie** die Option `Date`.  
   
 4.  Wählen Sie im Feld **Typ** die Option **31. Januar 2000**aus.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36161496"
   
 1.  Klicken Sie auf die Tabelle, damit die Spalten- und Zeilenhandles über und neben der Tabelle angezeigt werden.  
   
-     ![Entwurf, Tabelle mit Kopfzeile und Detailzeile](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "Entwurf, Tabelle mit Kopfzeile und Detailzeile")  
+     ![Entwurf, Tabelle mit Kopfzeile und Detailzeile](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "Design, Tabelle mit Kopfzeile und Detailzeile")  
   
      Die grauen Balken oberhalb und neben der Tabelle stellen die Spalten- und Zeilenhandles dar.  
   

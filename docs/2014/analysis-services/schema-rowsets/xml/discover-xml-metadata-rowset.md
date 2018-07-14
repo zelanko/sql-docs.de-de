@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_XML_METADATA-Rowset | Microsoft Docs
+title: DISCOVER_XML_METADATA-Rowset | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,23 +18,23 @@ helpviewer_keywords:
 - DISCOVER_XML_METADATA rowset
 ms.assetid: 0befd026-db1b-43ac-b0e6-734abb56a4b1
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4452408b36fe50300277d0d0f8e076357403539f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 616e7c06087fff3d2c2e0388ba44a3e30b200e5f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161003"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214010"
 ---
 # <a name="discoverxmlmetadata-rowset"></a>DISCOVER_XML_METADATA-Rowset
   Gibt ein XML-Dokument zurück, in dem ein angefordertes Objekt beschrieben wird. Das zurückgegebene Rowset besteht immer aus einer Zeile und einer Spalte.  
   
- Beim Aufrufen der [Discover](../../xmla/xml-elements-methods-discover.md) Methode mit der `DISCOVER_XML_METATDATA` Enumerationswert in der [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) Element, den `Discover` Methode gibt die `DISCOVER_XML_METATDATA` Rowset.  
+ Aufrufen der [ermitteln](../../xmla/xml-elements-methods-discover.md) -Methode mit der `DISCOVER_XML_METATDATA` Enumerationswert in der [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) -Element, die `Discover` Methode gibt die `DISCOVER_XML_METATDATA` Rowset.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
- Die `DISCOVER_XML_METADATA` -Rowset enthält die folgende Spalte.  
+ Die `DISCOVER_XML_METADATA` Rowset enthält die folgende Spalten.  
   
 |Spaltenname|Typindikator|Länge|Description|  
 |-----------------|--------------------|------------|-----------------|  
@@ -73,7 +73,7 @@ ms.locfileid: "36161003"
 |`DataSourcePermissionID`|`DBTYPE_WSTR`|Optional.|  
 |`ObjectExpansion`|`DBTYPE_WSTR`|Optional.|  
   
- Die Einschränkung `ObjectExpansion`, steht für jedes Hauptobjekt von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Der Client verwendet normalerweise Einschränkungen, um die OLAP-Objekte zu beschreiben, für die der DDL-Code zurückgegeben wird, und er verwendet die `ObjectExpansion`-Einschränkung, um den Grad der Erweiterung im zurückgegebenen DDL-Code zu definieren. In der folgenden Tabelle angibt, ob der Enumerationswert für [Element Alter &#40;XMLA&#41; ](../../xmla/xml-elements-commands/alter-element-xmla.md) Befehle.  
+ Die Einschränkung `ObjectExpansion`, steht für jedes Hauptobjekt von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Der Client verwendet normalerweise Einschränkungen, um die OLAP-Objekte zu beschreiben, für die der DDL-Code zurückgegeben wird, und er verwendet die `ObjectExpansion`-Einschränkung, um den Grad der Erweiterung im zurückgegebenen DDL-Code zu definieren. In der folgende Tabelle angibt, ob der Enumerationswert für [Alter-Element &#40;XMLA&#41; ](../../xmla/xml-elements-commands/alter-element-xmla.md) Befehle.  
   
 |Enumerationswert|Description|  
 |-----------------------|-----------------|  

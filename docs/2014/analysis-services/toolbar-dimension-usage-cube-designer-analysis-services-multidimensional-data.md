@@ -1,5 +1,5 @@
 ---
-title: Symbolleiste (Registerkarte Dimensionsverwendung, Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Symbolleiste (Registerkarte "Dimensionsverwendung", Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 23cb6106-8799-4157-ba5e-408b4fbd8fbb
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 026e5d8335b4353abdd208e3a21fe46687ee920b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9246e554097ebd46e13eb9eeee218a3b319b0928
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162784"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189167"
 ---
 # <a name="toolbar-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>Symbolleiste (Registerkarte 'Dimensionsverwendung', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Verwenden Sie den Bereich **Symbolleiste** zur Ausführung von Aktionen wie dem Hinzufügen einer Cubedimension oder der Verarbeitung eines Cubes, die im Cube-Designer auf der Registerkarte **Dimensionsverwendung** häufig verwendet werden.  

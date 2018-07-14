@@ -1,5 +1,5 @@
 ---
-title: Ausblenden und Deaktivieren von Attributhierarchien | Microsoft Docs
+title: Ausblenden und Deaktivieren von Attributhierarchien | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 095039c2-7104-414c-a9a6-327b03ce79df
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 0e83f548ebefd90b3bb990629980f95620e30ad6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d980e87255d24d754e19d8358b423ba38440d05d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160530"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271956"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>Ausblenden und Deaktivieren von Attributhierarchien
   Standardmäßig wird eine Attributhierarchie für jedes Attribut in einer Dimension erstellt, und jede Hierarchie ist für die Dimensionierung von Faktendaten verfügbar. Diese Hierarchie setzt sich aus einer Gesamtergebnisebene und einer Detailebene mit allen Elementen der Hierarchie zusammen. Ihnen ist bereits bekannt, dass Sie Attribute in benutzerdefinierten Hierarchien organisieren können, um Navigationspfade in einem Cube bereitzustellen. Unter bestimmten Umständen möchten Sie möglicherweise einige Attribute und deren Hierarchien deaktivieren oder ausblenden. Bestimmte Attribute wie Sozialversicherungs- oder Personalausweisnummer, Lohnsatz, Geburtsdatum und Anmeldeinformationen sind beispielsweise keine Attribute, mit denen Benutzer Cubeinformationen dimensionieren. Stattdessen werden diese Informationen nur als Details eines bestimmten Attributelements angezeigt. Diese Attributhierarchien können von Ihnen ausgeblendet werden, sodass die Attribute nur als Elementeigenschaften eines bestimmten Attributs angezeigt werden. Sie möchten Elemente anderer Attribute, beispielsweise Kundennamen oder Postleitzahlen, möglicherweise nur anzeigen lassen, wenn sie durch eine Benutzerhierarchie und nicht unabhängig durch eine Attributhierarchie angezeigt werden. Ein Grund dafür kann in der schieren Anzahl verschiedener Elemente in der Attributhierarchie liegen. Zur Steigerung der Verarbeitungsleistung sollten Sie schließlich Attributhierarchien deaktivieren, die nicht von Benutzern zum Durchsuchen verwendet werden.  
@@ -81,7 +81,7 @@ ms.locfileid: "36160530"
   
      Die folgende Abbildung zeigt die **AttributeHierarchyEnabled** -Eigenschaft mit dem Wert False für die ausgewählten Attribute.  
   
-     ![AttributeHierarchyEnabled-Eigenschaft auf "false"](../../2014/tutorials/media/l4-hierarchyenabled-1.gif "AttributeHierarchyEnabled-Eigenschaft auf \"false\"")  
+     ![AttributeHierarchyEnabled-Eigenschaft auf "false"](../../2014/tutorials/media/l4-hierarchyenabled-1.gif "AttributeHierarchyEnabled-Eigenschaft auf \"false\" festgelegt")  
   
 5.  Klicken Sie im Menü **Erstellen** auf **Analysis Services Tutorial bereitstellen**.  
   

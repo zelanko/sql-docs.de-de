@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 81412f94-2991-4e58-bc05-5ccc0cbf2a75
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4295a712f277047c4e205d83c44bbc0ff444db32
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 086ed75848ad4b55178e1b64ad41ca052ef024ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161066"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272906"
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>Hinzufügen eines Rahmens zu einem Bericht (Berichts-Generator und SSRS)
   Sie können einem Bericht ohne Hinzufügen von Linien oder Rechtecken einen Rahmen hinzufügen, indem Sie Kopfzeilen, Fußzeilen und dem Berichtshauptteil selbst Rahmen hinzufügen.  
@@ -34,7 +34,7 @@ ms.locfileid: "36161066"
 1.  Klicken Sie mit der rechten Maustaste außerhalb irgendeines Elements auf die Kopfzeile, und klicken Sie anschließend auf **Kopfzeileneigenschaften**. Fügen Sie auf der Registerkarte **Rahmen** einen linken, oberen und rechten Rahmen in dem gewünschten Format hinzu.  
   
     > [!NOTE]  
-    >  Wenn Sie in Ihrem Bericht keine Kopfzeilen verwenden, Sie Rahmen nur der Hauptteil des Berichts platzieren können, oder Sie können Header hinzufügen der **einfügen** Registerkarte.  
+    >  Wenn Sie in Ihrem Bericht keine Kopfzeilen verwenden, Sie Rahmen nur um den Berichtshauptteil platzieren können oder Sie können Header hinzufügen der **einfügen** Registerkarte.  
   
 2.  Klicken Sie im Hauptteil mit der rechten Maustaste außerhalb irgendeines Elements auf die Entwurfsoberfläche, und klicken Sie auf **Eigenschaften des Hauptteils**. Fügen Sie auf der Registerkarte **Rahmen** einen linken und rechten Rahmen in dem gewünschten Format hinzu.  
   

@@ -1,5 +1,5 @@
 ---
-title: Berichte für den Integration Services-Server | Microsoft Docs
+title: Berichte für den Integration Services-Server | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SUMMARY.RENDER.CUSTOM.REPORT.F1
 ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
 caps.latest.revision: 14
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9809de19a363c94365c0da88655d4e54b81b80cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c035c2d8dacf29f8ca4d81b13c0ace5500a2dbb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161846"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180297"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Berichte für den Integration Services-Server
-  In der aktuellen Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], Standardberichte stehen im [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] um Überwachen [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Projekte, die bereitgestellt wurden die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Server. Mit diesen Berichten können Sie den Paketstatus und -verlauf anzeigen und ggf. die Ursache von Paketausführungsfehlern identifizieren.  
+  In der aktuellen Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], Standardberichte stehen in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Überwachen [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Projekte, die bereitgestellt wurden die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Server. Mit diesen Berichten können Sie den Paketstatus und -verlauf anzeigen und ggf. die Ursache von Paketausführungsfehlern identifizieren.  
   
  Im oberen Bereich jeder Berichtsseite werden die folgenden Symbole bereitgestellt: Zurück-Symbol (um zur vorherigen Seite zurückzukehren), Aktualisierungssymbol (um die auf der Seite angezeigten Informationen zu aktualisieren) und Druckersymbol (um die aktuelle Seite zu drucken).  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: SQL Server-Datendateien in Windows Azure Storage-Dienst. | Microsoft Docs'
+title: 'Tutorial: SQL Server-Datendateien im Windows Azure-Speicherdienst | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cd793aad219d8e65a787dd3d872046df00cca414
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f805d7a9b0997d9f5a7cecbf61b5120bdf09f3cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161299"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323860"
 ---
 # <a name="tutorial-sql-server-data-files-in-windows-azure-storage-service"></a>Lernprogramm: SQL Server-Datendateien im Windows Azure-Speicher
   Willkommen beim Lernprogramm für SQL Server-Datendateien im Windows Azure-Speicher. Dieses Lernprogramm hilft Ihnen, zu verstehen, wie Sie SQL Server-Datendateien direkt im Windows Azure-BLOB-Speicherdienst speichern.  
   
- Die Unterstützung der SQL Server-Integration für den Windows Azure-BLOB-Speicherdienst stellt eine Erweiterung von SQL Server 2014 dar. Eine Übersicht über die Funktionen und Vorteile der Verwendung dieser Funktionen finden Sie unter [SQL Server-Datendateien in Windows Azure](databases/sql-server-data-files-in-microsoft-azure.md).  
+ Die Unterstützung der SQL Server-Integration für den Windows Azure-BLOB-Speicherdienst stellt eine Erweiterung von SQL Server 2014 dar. Eine Übersicht über die Funktionen und Vorteile der Verwendung dieser Funktionen finden Sie [SQL Server-Datendateien in Windows Azure](databases/sql-server-data-files-in-microsoft-azure.md).  
   
 ## <a name="what-you-will-learn"></a>Lernziele  
  In diesem Lernprogramm erfahren Sie in mehreren Lektionen, wie Sie SQL Server-Datendateien im Windows Azure-Speicherdienst speichern. Jede Lektion behandelt eine bestimmte Aufgabe. Zuerst wird erläutert, wie Sie in Windows Azure ein Speicherkonto und einen Container erstellen. Danach erfahren Sie, wie Sie SQL Server-Anmeldeinformationen erstellen, damit Sie SQL Server in den Windows Azure-Speicher integrieren können. Anschließend erstellen Sie eine Datenbank direkt im Windows Azure-Speicher. Außerdem werden im Lernprogramm Verschlüsselungs-, Migrations- sowie Sicherungs- und Wiederherstellungsszenarien behandelt.  
@@ -43,13 +43,13 @@ ms.locfileid: "36161299"
  **[Lektion 4: Erstellen einer Datenbank in Windows Azure-Speicher](../relational-databases/lesson-3-database-backup-to-url.md)**  
  In dieser Lektion erstellen Sie mithilfe der FILENAME-Option von CREATE DATABASE eine Datenbank im Windows Azure-Speicher.  
   
- **[Lektion 5. &#40;Optional&#41; Verschlüsseln Ihrer Datenbank anhand von TDE](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)**  
+ **[Lektion 5. &#40;Optional&#41; Verschlüsseln Ihrer Datenbank mithilfe von TDE](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)**  
  In dieser Lektion verschlüsseln Sie die Datenbank mithilfe einer transparenten Datenverschlüsselung (TDE) und eines Serverzertifikats.  
   
- **[Lektion 6: Migrieren einer Datenbank aus einer Quelle Computer lokal zu einem Zielcomputer in Windows Azure](lesson-5-backup-database-using-file-snapshot-backup.md)**  
+ **[Lektion 6: Migrieren einer Datenbank aus einer Quelle lokalen zu einem Zielcomputer in Windows Azure](lesson-5-backup-database-using-file-snapshot-backup.md)**  
  In dieser Lektion migrieren Sie eine Datenbank mit der CREATE DATABASE FOR ATTACH-Option von der lokalen Umgebung zu einem virtuellen Computer in Windows Azure.  
   
- **[Lektion 7: Verschieben von Datendateien in Windows Azure-Speicher](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)**  
+ **[Lektion 7: Verschieben von Datendateien in Microsoft Azure Storage](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)**  
  In dieser Lektion verschieben Sie die Datendateien mit der ALTER DATABASE-Anweisung in den Windows Azure-Speicher.  
   
  **[Lektion 8: Wiederherstellen einer Datenbank in Windows Azure-Speicher](../relational-databases/lesson-7-restore-a-database-to-a-point-in-time.md)**  

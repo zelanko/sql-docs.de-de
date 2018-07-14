@@ -1,5 +1,5 @@
 ---
-title: ADOMD.NET-Clientprogrammierung | Microsoft Docs
+title: ADOMD.NET-Clientprogrammierung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - ADOMD.NET, programming
 ms.assetid: 55156115-ecd1-4ed9-876e-23406af9bbf9
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9faa64cce77c883ed6adb86bca6d50f32f015c97
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd4884abb345f1254c3987acb06e83ced7bcf392
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160316"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332750"
 ---
 # <a name="adomdnet-client-programming"></a>ADOMD.NET-Clientprogrammierung
-  Die ADOMD.NET-Clientkomponenten befinden sich innerhalb des `Microsoft.AnalysisServices.AdomdClient`-Namespace (in microsoft.analysisservices.adomdclient.dll). Diese Clientkomponenten bieten Funktionen für Clientanwendungen und Anwendungen der mittleren Ebene auf einfachen Abfrage von Daten und Metadaten aus einer analytischen Datenspeichers, z. B. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+  Die ADOMD.NET-Clientkomponenten befinden sich innerhalb des `Microsoft.AnalysisServices.AdomdClient`-Namespace (in microsoft.analysisservices.adomdclient.dll). Diese Clientkomponenten bieten Funktionen für Clientanwendungen und Anwendungen der mittleren Ebene auf einfache Weise Abfragen von Daten und Metadaten aus einer analytischen Datenquelle, z. B. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## <a name="using-the-adomdnet-client-objects"></a>Verwenden der ADOMD.NET-Clientobjekte  
  Beim Abfragen der analytischen Datenquelle müssen mehrere gängige Tasks ausgeführt werden. Die folgende Tabelle stellt die gängigen Tasks dar, in denen Sie die ADOMD.NET-Clientobjekte zum Ausführen einer solchen Abfrage verwenden.  
@@ -43,8 +43,8 @@ ms.locfileid: "36160316"
   
 |Aktion|Verwenden Sie dieses Objekt|  
 |--------|---------------------|  
-|Herstellen einer Verbindung mit einer analytischen Datenquelle|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection><br /> Das <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>-Objekt stellt eine Verbindung zu einer Datenquelle und den Datenquellenmetadaten dar. Angenommen, Sie können eine Verbindung herstellen ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] lokale Cubedatei (CUB) Datei, und überprüfen Sie die <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Cubes%2A> Eigenschaft zum Abrufen von Metadaten zu den Cubes, die für die analytische Datenquelle vorhanden. Dieses Objekt stellt auch die Implementierung der `IDbConnection`-Schnittstelle dar, die von allen .NET Framework-Datenanbietern benötigt wird.|  
-|Ermitteln der Data Mining-Fähigkeiten der Datenquelle|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection><br /> Das <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>-Objekt macht mehrere Miningauflistungen verfügbar:<br /><br /> – Der <xref:Microsoft.AnalysisServices.AdomdClient.MiningModelCollection> enthält eine Liste aller Miningmodelle in der Datenquelle.<br />– Der <xref:Microsoft.AnalysisServices.AdomdClient.MiningServiceCollection> enthält Informationen zu den verfügbaren Mining-Algorithmen.<br />– Der <xref:Microsoft.AnalysisServices.AdomdClient.MiningStructureCollection> Informationen über die Miningstrukturen auf dem Server verfügbar gemacht.|  
+|Herstellen einer Verbindung mit einer analytischen Datenquelle|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection><br /> Das <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>-Objekt stellt eine Verbindung zu einer Datenquelle und den Datenquellenmetadaten dar. Sie können z. B. zum Verbinden eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] lokalen Cubedatei (.cub) Datei, und untersuchen Sie dann die <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Cubes%2A> Eigenschaft, um Metadaten über die in der analytischen Datenquelle vorhandenen Cubes zu erhalten. Dieses Objekt stellt auch die Implementierung der `IDbConnection`-Schnittstelle dar, die von allen .NET Framework-Datenanbietern benötigt wird.|  
+|Ermitteln der Data Mining-Fähigkeiten der Datenquelle|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection><br /> Das <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>-Objekt macht mehrere Miningauflistungen verfügbar:<br /><br /> – Die <xref:Microsoft.AnalysisServices.AdomdClient.MiningModelCollection> enthält eine Liste aller Miningmodelle in der Datenquelle.<br />– Die <xref:Microsoft.AnalysisServices.AdomdClient.MiningServiceCollection> enthält Informationen über die verfügbaren Mining-Algorithmen.<br />– Die <xref:Microsoft.AnalysisServices.AdomdClient.MiningStructureCollection> Informationen zu Miningstrukturen auf dem Server verfügbar gemacht.|  
 |Abfragen der Datenquelle|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand><br /> Das <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand>-Objekt stellt die Anweisung oder die Abfrage dar, die an den Server gesendet wird. Wenn eine Verbindung mit einer Datenquelle hergestellt ist, wird ein <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand>-Objekt verwendet, um Anweisungen in der unterstützten Sprache, wie Multidimensional Expressions (MDX) oder Data Mining Data Mining Extensions (DMX), auszuführen. Sie können auch ein <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand>-Objekt verwenden, um Ergebnisse als <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>- oder <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>-Objekte zurückzugeben.|  
 |Abrufen von Daten auf schnelle und effiziente Weise|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader><br /> Der <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> kann durch Aufrufen der <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.Execute%2A>- oder der <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteReader%2A>-Methode eines <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand>-Objekts erstellt werden. Dieses Objekt implementiert die `IDbDataReader`-Schnittstelle über den `System.Data`-Namespace der .NET Framework-Klassenbibliothek.|  
 |Abrufen von analytischen Daten mit der größten Menge an Metadaten|<xref:Microsoft.AnalysisServices.AdomdClient.CellSet><br /> Das <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> kann durch Aufrufen der <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.Execute%2A>- oder der <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteCellSet%2A>-Methode eines <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> erstellt werden. Sobald ein <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> ein <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> zurückgegeben hat, können Sie die im <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> enthaltenen analytischen Daten überprüfen.|  

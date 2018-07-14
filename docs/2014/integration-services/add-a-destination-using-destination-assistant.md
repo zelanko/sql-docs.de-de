@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen ein Ziels mit dem Ziel-Assistenten | Microsoft Docs
+title: Hinzufügen eines Ziels mit der Ziel-Assistent | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 747a0de0-3c2f-4d31-a692-7111fc0911d8
 caps.latest.revision: 4
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 88d942ea38004d6d4085b73a4f2967a9a2e68705
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5251cd85dd24de18e582875c0a6c0100ae3fffcc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160052"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246780"
 ---
 # <a name="add-a-destination-using-destination-assistant"></a>Hinzufügen eines Ziels mit dem Ziel-Assistenten
   In diesem Thema werden die Schritte beschrieben, um ein neues Ziel mithilfe des Ziel-Assistenten hinzuzufügen. Darüber hinaus werden die im Dialogfeld **Neues Ziel hinzufügen** verfügbaren Optionen aufgelistet, die angezeigt werden, wenn Sie den Ziel-Assistent per Drag & Drop in den SSIS-Designer ziehen.  

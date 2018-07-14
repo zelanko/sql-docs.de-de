@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - items [Reporting Services], expressions
 - data [Reporting Services], expressions
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, expressions
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 caps.latest.revision: 76
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9a313408046919de0c3a07739792d36b88eafa4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 6a239f80c3b560e60ca0b60b9a9fa7deb68a20a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162432"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220850"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer (SSRS)
   Sie können in einem Bericht eingebettetem, benutzerdefiniertem Code oder benutzerdefinierten Assemblys, die Sie erstellen und auf dem Computer speichern und auf dem Berichtsserver bereitstellen. Verwenden Sie eingebetteten Code für benutzerdefinierte Konstanten, komplexe Funktionen oder für Funktionen, die mehrfach in demselben Bericht verwendet werden. Verwenden Sie benutzerdefinierte Codeassemblys, um Code an einer einzelnen Stelle zu verwalten und ihn zur Verwendung in mehreren Berichten freizugeben. In benutzerdefiniertem Code können neue benutzerdefinierte Konstanten, Variablen, Funktionen oder Unterroutinen eingeschlossen werden. Sie können schreibgeschützte Verweise in integrierte Auflistungen, wie die Parameter-Auflistung, einbeziehen. An benutzerdefinierte Funktionen können jedoch keine Sätze von Berichtsdatenwerten übergeben werden, insbesondere werden keine benutzerdefinierten Aggregate unterstützt.  
@@ -71,13 +71,13 @@ ms.locfileid: "36162432"
 ##  <a name="Embedded"></a> Einschließen von eingebettetem Code  
  Auf der Registerkarte **Code** des Dialogfelds Berichtseigenschaften können Sie einem Bericht eingebetteten Code hinzufügen. Der erstellte Codeblock kann mehrere Methoden enthalten. Methoden in eingebettetem Code müssen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] geschrieben und instanzbasiert sein. Vom Berichtsprozessor werden automatisch Verweise für den System.Convert-Namespace und den System.Math-Namespace hinzugefügt. Fügen Sie zusätzliche Assemblyverweise auf der Seite **Verweise** des Dialogfelds **Berichtseigenschaften** hinzu. Weitere Informationen finden Sie unter [Hinzufügen eines Assemblyverweises zu einem Bericht &#40;SSRS&#41;](add-an-assembly-reference-to-a-report-ssrs.md).  
   
- Die Methoden im eingebetteten Code stehen über ein global definiertes `Code`-Element zur Verfügung. Zugriff auf die durch einen Verweis auf die `Code` Member und den Methodennamen. Im folgende Beispiel ruft die Methode `ToUSD`, die konvertiert des Werts in der `StandardCost` -Felds in einen Dollarwert:  
+ Die Methoden im eingebetteten Code stehen über ein global definiertes `Code`-Element zur Verfügung. Zugriff auf die Methoden verweisen Sie auf die `Code` Member und den Methodennamen. Im folgenden Beispiel wird die Methode `ToUSD`, die konvertiert des Werts in der `StandardCost` in einen Dollarwert Feld:  
   
 ```  
 =Code.ToUSD(Fields!StandardCost.Value)  
 ```  
   
- Integrierte Auflistungen in Ihren benutzerdefinierten Code verweisen möchten, schließen Sie einen Verweis auf das integrierte `Report` Objekt:  
+ Integrierte Auflistungen in Ihren benutzerdefinierten Code verweisen möchten, enthalten einen Verweis auf die integrierte `Report` Objekt:  
   
 ```  
 =Report.Parameters!Param1.Value  
@@ -101,11 +101,11 @@ Public Dim MyDoubleVersion As Double = 123.456
 =Code.MyDoubleVersion  
 ```  
   
- Das folgende Beispiel schließt sowohl der Codeverweis als auch die codeimplementierung der Funktion `FixSpelling`, die ersetzt den Text `"Bicycle"` für alle Vorkommen des Texts "" in Bike der `SubCategory` Feld.  
+ Das folgende Beispiel schließt sowohl der Codeverweis als auch die codeimplementierung der Funktion `FixSpelling`, die den Text ersetzt `"Bicycle"` für alle Vorkommen des Texts "" in Bike der `SubCategory` Feld.  
   
  `=Code.FixSpelling(Fields!SubCategory.Value)`  
   
- Mit dem folgenden Code wird eine Implementierung der `FixSpelling`-Methode veranschaulicht, wenn er in den Codeblock einer Berichtsdefinition eingebettet ist. Dieses Beispiel zeigt, wie Sie einen vollqualifizierten Verweis auf die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] `StringBuilder` Klasse.  
+ Mit dem folgenden Code wird eine Implementierung der `FixSpelling`-Methode veranschaulicht, wenn er in den Codeblock einer Berichtsdefinition eingebettet ist. In diesem Beispiel erfahren Sie, wie Sie einen vollqualifizierten Verweis auf die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] `StringBuilder` Klasse.  
   
 ```vb  
 Public Function FixSpelling(ByVal s As String) As String  
@@ -133,15 +133,15 @@ End Function
 ##  <a name="Custom"></a> Einschließen von Verweisen auf Code von benutzerdefinierten Assemblys  
  Wenn Sie in einem Bericht benutzerdefinierte Assemblys verwenden möchten, müssen Sie zunächst die Assembly erstellen und für den Berichts-Designer zur Verfügung stellen. Anschließend fügen Sie im Bericht einen Verweis auf die Assembly hinzu und verwenden dann im Bericht einen Ausdruck, der auf die Methoden in dieser Assembly verweist. Beim Bereitstellen des Berichts auf dem Berichtsserver müssen Sie dort auch die benutzerdefinierte Assembly bereitstellen.  
   
- Informationen zum Erstellen einer benutzerdefinierten Assembly und zusätzlichem für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], finden Sie unter [mithilfe von benutzerdefinierten Assemblys mit Berichten](../custom-assemblies/using-custom-assemblies-with-reports.md).  
+ Informationen zum Erstellen einer benutzerdefinierten Assembly und Ihre Nutzung [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], finden Sie unter [Verwenden benutzerdefinierter Assemblys mit Berichten](../custom-assemblies/using-custom-assemblies-with-reports.md).  
   
- Wenn Sie in einem Ausdruck auf benutzerdefinierten Code verweisen möchten, müssen Sie das Klassenelement in der Assembly aufrufen. Die Vorgehensweise hängt davon ab, ob es sich um eine statische oder um eine instanzbasierte Methode handelt. Statische Methoden in einer benutzerdefinierten Assembly stehen global im Bericht zur Verfügung. Auf statische Methoden können Sie in Ausdrücken durch Angeben des Namespace, der Klasse und des Methodennamens zugreifen. Im folgende Beispiel ruft die Methode `ToGBP`, die konvertiert den Wert der **StandardCost** -Felds von Dollar in Pfund Sterling:  
+ Wenn Sie in einem Ausdruck auf benutzerdefinierten Code verweisen möchten, müssen Sie das Klassenelement in der Assembly aufrufen. Die Vorgehensweise hängt davon ab, ob es sich um eine statische oder um eine instanzbasierte Methode handelt. Statische Methoden in einer benutzerdefinierten Assembly stehen global im Bericht zur Verfügung. Auf statische Methoden können Sie in Ausdrücken durch Angeben des Namespace, der Klasse und des Methodennamens zugreifen. Im folgenden Beispiel wird die Methode `ToGBP`, die konvertiert den Wert der **StandardCost** -Felds von Dollar in Pfund Sterling:  
   
 ```  
 =CurrencyConversion.DollarCurrencyConversion.ToGBP(Fields!StandardCost.Value)  
 ```  
   
- Instanzbasierte Methoden sind über ein global definiertes `Code`-Element verfügbar. Zum Zugriff auf die Methoden verweisen Sie auf das `Code`-Element und anschließend auf die Instanz und den Methodennamen. Im folgende Beispiel ruft die Instanzmethode `ToEUR`, die konvertiert den Wert der **StandardCost** von Dollar in Euro:  
+ Instanzbasierte Methoden sind über ein global definiertes `Code`-Element verfügbar. Zum Zugriff auf die Methoden verweisen Sie auf das `Code`-Element und anschließend auf die Instanz und den Methodennamen. Im folgenden Beispiel wird die Instanzmethode `ToEUR`, die konvertiert den Wert der **StandardCost** von Dollar in Euro:  
   
 ```  
 =Code.m_myDollarCoversion.ToEUR(Fields!StandardCost.Value)  
@@ -165,7 +165,7 @@ End Function
   
 ## <a name="see-also"></a>Siehe auch  
  [Hinzufügen von Code zu einem Bericht &#40;SSRS&#41;](add-code-to-a-report-ssrs.md)   
- [Verwenden von benutzerdefinierten Assemblys mit Berichten](../custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [Verwenden benutzerdefinierter Assemblys mit Berichten](../custom-assemblies/using-custom-assemblies-with-reports.md)   
  [Hinzufügen eines Assemblyverweises zu einem Bericht (SSRS)](add-an-assembly-reference-to-a-report-ssrs.md)   
  [Reporting Services-Tutorials (SSRS)](../reporting-services-tutorials-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   

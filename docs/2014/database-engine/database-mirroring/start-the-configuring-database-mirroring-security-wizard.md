@@ -1,28 +1,27 @@
 ---
-title: Starten Sie das Konfigurieren der Datenbankspiegelung Sicherheits-Assistenten (SQL Server Management Studio) | Microsoft Docs
+title: Starten Sie die Konfiguration von Datenbank-Spiegelungssitzung Sicherheits-Assistent (SQL Server Management Studio) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], security
 - Configuring Database Mirroring Security Wizard
 ms.assetid: 1c846950-0a2d-45df-b0d5-193e455f7cd5
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9d74b73cdc23c9e54f23ad2a1f0f0343ba026c16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 68bb6245dc7975f5dd65fa0c4547462364211294
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163193"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162821"
 ---
 # <a name="start-the-configuring-database-mirroring-security-wizard-sql-server-management-studio"></a>Starten des Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung (SQL Server Management Studio)
   Der Assistent zum Konfigurieren der Sicherheit für die Datenbankspiegelung kann verwendet werden, um die Sicherheitseinstellungen aller oder mehrerer der an der Spiegelung beteiligten Serverinstanzen zu Beginn zu konfigurieren. Der Assistent ist mit der Seite **Wird gespiegelt** im Dialogfeld **Datenbankeigenschaften** verknüpft.  

@@ -1,5 +1,5 @@
 ---
-title: Clusteringmodellabfragen | Microsoft Docs
+title: Clustering-Modellabfragebeispiele | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [Data Mining]
 - content queries [DMX]
 - clustering algorithms [Analysis Services]
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cee82332d6098544df5db02a223efc23b19d8820
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6420e75c9961a094691a7be05e6e2b26fad45933
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162398"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200630"
 ---
 # <a name="clustering-model-query-examples"></a>Beispiele für Clustermodellabfragen
   Wenn Sie eine Abfrage für ein Data Mining-Modell erstellen, können Sie Metadaten über das Modell abrufen oder eine Inhaltsabfrage erstellen, die Details über die in der Analyse erkannten Muster bereitstellt. Sie können auch eine Vorhersageabfrage erstellen, die anhand der Muster des Modells Vorhersagen für neue Daten generiert. Jeder Abfragetyp stellt andere Informationen bereit. Eine Inhaltsabfrage stellt beispielsweise zusätzliche Details über die gefundenen Cluster zur Verfügung, während eine Vorhersageabfrage Aufschluss darüber gibt, zu welchem Cluster ein neuer Datenpunkt höchstwahrscheinlich gehört.  
@@ -256,12 +256,12 @@ WHERE IsInNode('001')
 ## <a name="making-predictions-using-the-model"></a>Treffen von Vorhersagen mit dem Modell  
  Auch wenn Clustering in der Regel zum Beschreiben und zum Verstehen von Daten verwendet wird, können Sie mit der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Implementierung Vorhersagen über die Clustermitgliedschaft treffen und Wahrscheinlichkeiten im Zusammenhang mit der Vorhersage zurückgeben. Dieser Abschnitt enthält Beispiele für das Erstellen von Vorhersageabfragen für Clustermodelle. Sie können Vorhersagen für mehrere Fälle treffen, indem Sie eine tabellarische Datenquelle angeben, oder Sie können durch Erstellen einer SINGLETON-Abfrage jeweils neue Werte bereitstellen. Der Deutlichkeit halber handelt es sich bei den Beispielen in diesem Abschnitt nur um SINGLETON-Abfragen.  
   
- Weitere Informationen über das Erstellen von Vorhersageabfragen mit DMX finden Sie unter [Data Mining-Abfrageschnittstellen](data-mining-query-tools.md).  
+ Weitere Informationen zum Erstellen von Vorhersageabfragen mit DMX finden Sie unter [Data Mining-Abfrageschnittstellen](data-mining-query-tools.md).  
   
  [Zurück zum Anfang](#bkmk_top2)  
   
 ###  <a name="bkmk_Query8"></a> Beispielabfrage 8: Vorhersagen von Ergebnissen eines Clustermodells  
- Wenn das von Ihnen erstellte Clustermodell ein vorhersagbares Attribut enthält, können Sie anhand des Modells Vorhersagen über Ergebnisse treffen. Das Modell verarbeitet jedoch vorhersagbaren Attributs unterschiedlich, abhängig davon, ob die vorhersagbare Spalte festgelegt werden, um `Predict` oder `PredictOnly`. Wenn Sie festlegen, dass die Verwendung der Spalte, die `Predict`, die Werte für dieses Attribut zum Clustermodell hinzugefügt werden und werden als Attribute im fertigen Modell angezeigt. Legen Sie jedoch die Verwendung der Spalte auf `PredictOnly` fest, werden die Werte nicht zum Erstellen von Clustern verwendet. Stattdessen der Modus abgeschlossen ist, erstellt der clustering-Algorithmus neue Werte für die `PredictOnly` Attribut auf Basis der Cluster, der jeweilige Fall gehört.  
+ Wenn das von Ihnen erstellte Clustermodell ein vorhersagbares Attribut enthält, können Sie anhand des Modells Vorhersagen über Ergebnisse treffen. Jedoch das Modell behandelt das vorhersagbare Attribut unterschiedlich, abhängig davon, ob Sie die vorhersagbare Spalte, um festlegen `Predict` oder `PredictOnly`. Wenn Sie festlegen, dass die Verwendung der Spalte, die `Predict`, die Werte für dieses Attribut zum Clustermodell hinzugefügt und erscheinen im fertig gestellten Modell als Attribute. Legen Sie jedoch die Verwendung der Spalte auf `PredictOnly` fest, werden die Werte nicht zum Erstellen von Clustern verwendet. Stattdessen der Modus abgeschlossen ist, erstellt der clustering-Algorithmus neue Werte für die `PredictOnly` Attribut auf Basis der Cluster, der jeweilige Fall gehört.  
   
  Die folgende Abfrage stellt einen einzelnen neuen Fall für das Modell bereit, wobei die einzigen Informationen über den Fall Alter und Geschlecht sind. Die SELECT-Anweisung gibt das vorhersagbare Attribut/Wert-Paar an, für das Sie sich interessieren, und die Funktion [PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx) gibt Aufschluss über die Wahrscheinlichkeit, dass ein Fall mit diesen Attributen das gewünschte Ergebnis aufweist.  
   
@@ -275,7 +275,7 @@ NATURAL PREDICTION JOIN
   'F' AS [Gender]) AS t  
 ```  
   
- Beispiel für Ergebnisse, wenn Sie Verbrauch festgelegt ist, um `Predict`:  
+ Beispiel für Ergebnisse bei der Verwendung festgelegt ist, um `Predict`:  
   
 |Bike Buyer|expression|  
 |----------------|----------------|  
@@ -332,7 +332,7 @@ NATURAL PREDICTION JOIN
 |--------------|----------------|  
 |Cluster 2|0.397918596951617|  
   
- **Hinweis** wird standardmäßig die `ClusterProbability` Funktion gibt die Wahrscheinlichkeit des wahrscheinlichsten Clusters zurück. Mit der Syntax `ClusterProbability('cluster name')`können Sie jedoch einen anderen Cluster angeben. Beachten Sie in diesem Fall, dass die Ergebnisse der einzelnen Vorhersagefunktionen von den anderen Ergebnissen unabhängig sind. Das Wahrscheinlichkeitsergebnis in der zweiten Spalte könnte sich daher auf einen anderen Cluster beziehen als den in der ersten Spalte genannten Cluster.  
+ **Beachten Sie** standardmäßig die `ClusterProbability` Funktion die Wahrscheinlichkeit des wahrscheinlichsten Clusters zurück. Mit der Syntax `ClusterProbability('cluster name')`können Sie jedoch einen anderen Cluster angeben. Beachten Sie in diesem Fall, dass die Ergebnisse der einzelnen Vorhersagefunktionen von den anderen Ergebnissen unabhängig sind. Das Wahrscheinlichkeitsergebnis in der zweiten Spalte könnte sich daher auf einen anderen Cluster beziehen als den in der ersten Spalte genannten Cluster.  
   
  [Zurück zum Anfang](#bkmk_top2)  
   
@@ -382,7 +382,7 @@ NATURAL PREDICTION JOIN
 |[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|Gibt die gewichtete Wahrscheinlichkeit zurück.|  
 |[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|Sagt eine Mitgliedschaft in einem assoziativen Dataset voraus.|  
 |[PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx)|Gibt die Wahrscheinlichkeit zurück, mit der ein Eingabefall in ein vorhandenes Modell passt.|  
-|["PredictHistogram" &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|Gibt eine Tabelle mit Werten zurück, die sich auf den aktuellen vorhergesagten Wert beziehen.|  
+|[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|Gibt eine Tabelle mit Werten zurück, die sich auf den aktuellen vorhergesagten Wert beziehen.|  
 |[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|Gibt "Node_ID" für jeden Fall zurück.|  
 |[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|Gibt die Wahrscheinlichkeit für den vorhergesagten Wert zurück.|  
 |[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|Gibt die vorhergesagte Standardabweichung für die angegebene Spalte zurück.|  

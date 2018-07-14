@@ -1,5 +1,5 @@
 ---
-title: Anzeigen von Fehlern, die auftreten, während des Stagingprozesses (Master Data Services) | Microsoft Docs
+title: Anzeigen von Fehlern, die auftreten, während des Stagingprozesses (Master Data Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], viewing errors
 ms.assetid: 6d2bff84-624b-47fc-a4a5-d9ea01d13412
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c12a96fc1e842775556cf3b1261d7aab2b7cacab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f5a6dc218cdef2e30e8b25891dc38fe61f5e20bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162048"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209400"
 ---
 # <a name="view-errors-that-occur-during-the-staging-process-master-data-services"></a>Anzeigen von Fehlern, die während des Stagingprozesses auftreten (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie Fehler anzeigen, die während des Stagingprozesses auftreten. In der Datenbank [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] gibt es zwei Sichten, die Fehler anzeigen:  
@@ -53,7 +53,7 @@ ms.locfileid: "36162048"
  Weitere Informationen zu Fehlermeldungen finden Sie unter [Fehler des Stagingprozesses &#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenimport &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
+ [Importieren von Daten &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
  [Problembehandlung des Stagingprozesses (Master Data Services)](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
   
   

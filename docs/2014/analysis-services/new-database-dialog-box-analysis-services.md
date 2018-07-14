@@ -1,5 +1,5 @@
 ---
-title: Neue Datenbank (Dialogfeld) (Analysis Services) | Microsoft Docs
+title: Neue Datenbank (Dialogfeld) (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.newdatabase.f1
 ms.assetid: ddc7804b-acb0-4ae4-a88f-e8cdf704c341
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 945067a10e871113ce0c434ea6893b24591df4ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: df7d3eb279fdde62e97204b17e81420382ca62fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162134"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191280"
 ---
 # <a name="new-database-dialog-box-analysis-services"></a>Neue Datenbank (Dialogfeld) (Analysis Services)
   Mithilfe des Dialogfelds **Neue Datenbank** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] können Sie eine neue, leere [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank erstellen. Zum Anzeigen des Dialogfelds **Neue Datenbank** klicken Sie mit der rechten Maustaste auf den Ordner **Datenbanken** einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] im **Objekt-Explorer**, und wählen Sie anschließend **Neue Datenbank** aus.  
@@ -32,11 +32,11 @@ ms.locfileid: "36162134"
 |----------|----------------|  
 |**Datenbankname**|Geben Sie den Namen der neuen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank ein.|  
 |**Bestimmten Benutzernamen und bestimmtes Kennwort verwenden**|Wählen Sie diese Option aus, damit die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank die Sicherheitsanmeldeinformationen eines angegebenen Benutzerkontos verwendet. Die angegebenen Anmeldeinformationen werden für Verarbeitungsvorgänge, ROLAP-Abfragen, Out-of-Line-Bindungen, lokale Cubes, Miningmodelle, Remotepartitionen, verknüpfte Objekte und Synchronisierungen vom Ziel zur Quelle verwendet. Für DMX OPENQUERY-Anweisungen werden jedoch die Anmeldeinformationen des aktuellen Benutzers verwendet.|  
-|**Benutzername**|Geben Sie die Domäne und den Namen des Benutzerkontos ein, dass von der ausgewählten [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank verwendet werden soll. Verwenden Sie folgendes Format:<br /><br /> *\<Domänenname >* **\\**  *\<Benutzerkontoname >*<br /><br /> Hinweis: Die Option ist nur verfügbar, wenn die Option **Bestimmten Benutzernamen und bestimmtes Kennwort verwenden** ausgewählt ist.|  
+|**Benutzername**|Geben Sie die Domäne und den Namen des Benutzerkontos ein, dass von der ausgewählten [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank verwendet werden soll. Verwenden Sie folgendes Format:<br /><br /> *\<Domänenname >* **\\**  *\<Benutzerkontonamen >*<br /><br /> Hinweis: Die Option ist nur verfügbar, wenn die Option **Bestimmten Benutzernamen und bestimmtes Kennwort verwenden** ausgewählt ist.|  
 |**Kennwort**|Geben Sie das Kennwort für das Benutzerkonto ein, das unter **Benutzername**angegeben ist.|  
 |**Dienstkonto verwenden**|Wählen Sie diese Option aus, damit die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank die Sicherheitseinstellungen verwendet, die dem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Dienst zugeordnet sind, der die Datenbank verwaltet. Die Dienstkonto-Anmeldeinformationen werden für Verarbeitungsvorgänge, ROLAP-Abfragen, Remotepartitionen, verknüpfte Objekte und Synchronisierungen vom Ziel zur Quelle verwendet. Bei DMX OPENQUERY-Anweisungen, lokalen Cubes und Miningmodellen werden die Anmeldeinformationen des aktuellen Benutzers verwendet. Diese Option wird für Out-of-Line-Bindungen nicht unterstützt.|  
 |**Anmeldeinformationen des aktuellen Benutzers verwenden**|Wählen Sie diese Option aus, damit die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenbank für Out-of-Line-Bindungen, DMX OPENQUERY-Anweisungen, lokale Cubes und Miningmodelle die Sicherheitsanmeldeinformationen des aktuellen Benutzers verwendet. Diese Option wird für Verarbeitungsvorgänge, ROLAP-Abfragen, Remotepartitionen, verknüpfte Objekte und Synchronisierungen vom Ziel zur Quelle nicht unterstützt.|  
-|**Default**|Wählen Sie diese Option aus, um die Anmeldeinformationen des Standardbenutzerkontos für [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]zu verwenden. Bei dieser Option werden die Standardeinstellungen für die Datenbank zum Verarbeiten von Objekten, Synchronisieren von Servern und Ausführen der Data Mining-Abfragen vom Typ **Open Query** verwendet. Weitere Informationen zum Angeben der Standardeinstellungen auf Datenbankebene finden Sie unter [Festlegen von Eigenschaften für mehrdimensionale Datenbanken &#40;Analysis Services&#41;](multidimensional-models/set-multidimensional-database-properties-analysis-services.md).<br /><br /> Standardmäßig die `DataSourceImpersonationInfo` -Datenbankeigenschaft wird festgelegt, dass **Dienstkonto**. Unabhängig vom Wert der Eigenschaft `DataSourceImpersonationInfo` werden für Out-of-Line-Bindungen, ROLAP-Abfragen, lokale Cubes und Data Mining-Modelle die Anmeldeinformationen des aktuellen Benutzers verwendet.|  
+|**Default**|Wählen Sie diese Option aus, um die Anmeldeinformationen des Standardbenutzerkontos für [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]zu verwenden. Bei dieser Option werden die Standardeinstellungen für die Datenbank zum Verarbeiten von Objekten, Synchronisieren von Servern und Ausführen der Data Mining-Abfragen vom Typ **Open Query** verwendet. Weitere Informationen zum Angeben der Standardeinstellungen auf Datenbankebene finden Sie unter [Festlegen von Eigenschaften für mehrdimensionale Datenbanken &#40;Analysis Services&#41;](multidimensional-models/set-multidimensional-database-properties-analysis-services.md).<br /><br /> Standardmäßig die `DataSourceImpersonationInfo` Datenbank-Eigenschaftensatz auf **Dienstkonto**. Unabhängig vom Wert der Eigenschaft `DataSourceImpersonationInfo` werden für Out-of-Line-Bindungen, ROLAP-Abfragen, lokale Cubes und Data Mining-Modelle die Anmeldeinformationen des aktuellen Benutzers verwendet.|  
 |**Beschreibung**|Geben Sie die Beschreibung für die neue [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank ein.|  
   
 ## <a name="see-also"></a>Siehe auch  

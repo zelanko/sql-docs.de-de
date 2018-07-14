@@ -1,5 +1,5 @@
 ---
-title: Ordnen Sie die Farbe Regeln (Dialogfeld), Allgemein | Microsoft Docs
+title: Regeln Dialogfeld, Allgemein | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10541"
 - sql12.rtp.rptdesigner.shared.mapcolorrulesgeneral.f1
 ms.assetid: 14ff5fc1-4cf8-4a45-9d98-47a1bf1c52c4
 caps.latest.revision: 7
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 103e038b715f07c50d702a659f396f9cdd34ffee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 2de58631464b4d96ebde5cac82778f6b365e5b3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160153"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238520"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>Farbregeln der Karte (Dialogfeld), Allgemein
   Wählen Sie **Allgemein** im **Dialogfeld für Farbregeleigenschaften** aus, um Farboptionen für Kartenelemente in dieser Ebene zu definieren. Kartenelemente sind Polygone, Linien und Punkte. Farbregeln können angewendet werden, wenn Sie auf der Grundlage räumlicher Daten und analytischer Daten in einem Datasetfeld oder in einem räumlichen Datenquellenfeld eine Beziehung zwischen Kartenelementen erstellt haben.  
@@ -36,10 +36,10 @@ ms.locfileid: "36160153"
  **Anzeigen Sie Daten mithilfe der Farbpalette**  
  Aktivieren Sie diese Option, um analytische Daten mithilfe von Farben aus einer bestimmten Farbpalette visuell darzustellen.  
   
- **Visualisieren Sie Daten mithilfe des Farbbereichs**  
+ **Visualisieren von Daten mithilfe des Farbbereichs**  
  Aktivieren Sie diese Option, um analytische Daten mit einem Bereich von Farben für jedes Kartenelement visuell darzustellen. Wenn Sie z. B. Rot als Startfarbe, Gelb als mittlere Farbe und Grün als Endfarbe angeben, sind Werte im niedrigen Bereich rot, Werte im mittleren Bereich sind gelb, und Werte im obersten Bereich sind grün.  
   
- **Anzeigen Sie Daten mithilfe benutzerdefinierte Farben**  
+ **Visualisieren von Daten mithilfe benutzerdefinierte Farben anzeigen**  
  Aktivieren Sie diese Option, um analytische Daten durch das Angeben einer eigenen Liste von Farben visuell darzustellen.  
   
  **Feld "Daten"**  

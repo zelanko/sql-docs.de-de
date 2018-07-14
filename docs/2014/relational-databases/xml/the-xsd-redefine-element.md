@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - xsd:redefine element
 ms.assetid: 5f3e9b65-f10e-4db2-a62c-b270ac11d04e
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4ca94410d7011c30de0a5481451337d11fa57120
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 21f11e1d27ce94c62e2d3115134bf714c918a5d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163288"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175162"
 ---
 # <a name="the-ltxsdredefinegt-element"></a>Das &lt;xsd:redefine&gt;-Element
-  Das W3C XSD **redefine** -Element stellt Unterstützung zum Neudefinieren von Schemakomponenten zur Verfügung. Unterstützung für diese Richtlinie möglicherweise die Leistung beeinträchtigen wird und außerdem, dass erfordert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum erneuten überprüfen alle Instanzen der `xml` mit dem neu definierten Schema verknüpft sind. Deshalb unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dieses Element nicht. XML-Schemas, die das **\<xsd:redefine>**-Element enthalten, werden vom Server zurückgewiesen.  
+  Das W3C XSD **redefine** -Element stellt Unterstützung zum Neudefinieren von Schemakomponenten zur Verfügung. Unterstützung für diese Richtlinie ist die Leistung beeinträchtigen und außerdem, dass erfordert jedoch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erneut überprüfen alle Instanzen der `xml` mit dem neu definierten Schema verknüpft sind. Deshalb unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dieses Element nicht. XML-Schemas, die das **\<xsd:redefine>**-Element enthalten, werden vom Server zurückgewiesen.  
   
  Gehen Sie zum Aktualisieren des Schemas oder seiner Komponenten stattdessen folgendermaßen vor:  
   

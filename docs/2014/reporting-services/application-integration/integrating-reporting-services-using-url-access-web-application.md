@@ -19,15 +19,15 @@ helpviewer_keywords:
 - hyperlinks [Reporting Services]
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
 caps.latest.revision: 32
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 984f06366a13ebb24392bfde2be7722e590dc7db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 7af8148fe0492199416323cc036507a1e83f6bc7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160160"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274396"
 ---
 # <a name="using-url-access-in-a-web-application"></a>Verwenden des URL-Zugriffs in einer Webanwendung
   Der URL-Zugriff in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wurde speziell konzipiert, um den Zugriff auf einzelne Berichte über ein Netzwerk zu ermöglichen. Dieser Zugriffstyp eignet sich am besten, um die Anzeige und Navigation von Berichten in eine benutzerdefinierte Webanwendung zu integrieren. Um den URL-Zugriff in Webanwendungen zu verwenden, können Sie Folgendes tun:  

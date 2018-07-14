@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0a82a52b230564b81261cece8f61ea56cdb21da8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 3c4144787ac5085c4713781569d7e6d364ff7951
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162196"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172171"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>Erstellen einer rekursiven Hierarchiegruppe (Berichts-Generator und SSRS)
   Eine rekursive Hierarchiegruppe organisiert Daten aus einem Berichtsdataset, das mehrere hierarchische Ebenen aufweist, zum Beispiel eine Berichtsstruktur für die Beziehung zwischen Managern und Mitarbeitern in der Hierarchie einer Organisation.  
@@ -54,13 +54,13 @@ ms.locfileid: "36162196"
     > [!NOTE]  
     >  Wenn der Bereich Eigenschaften geschlossen ist, klicken Sie auf der Registerkarte **Ansicht** auf **Eigenschaften** .  
   
-2.  Erweitern Sie im Eigenschaftenbereich die `Padding` Knoten, klicken Sie auf **Links**, und wählen Sie aus der Dropdown-Liste  **\<Ausdruck… >**.  
+2.  Erweitern Sie im Bereich Eigenschaften den `Padding` Knoten, klicken Sie auf **Links**, und wählen Sie aus der Dropdown-Liste  **\<Ausdruck… >**.  
   
 3.  Geben Sie im Ausdruckfenster den folgenden Ausdruck ein:  
   
      `=CStr(2 + (Level()*10)) + "pt"`  
   
-     Die Auffüllung-Eigenschaften erfordern alle eine Zeichenfolge im Format *nnyy*. Dabei steht *nn* für eine Zahl und *yy* für die Maßeinheit. Der Beispielausdruck erstellt eine Zeichenfolge, verwendet die `Level` -Funktion das Vergrößern des Abstands basierend auf der Rekursionsebene. Eine Zeile mit der Ebene 1 hätte z.B. die Auffüllung (2 + (1\*10))=12pt, und eine Zeile mit der Ebene 3 hätte die Auffüllung (2 + (3\*10))=32pt. Informationen zu den `Level` funktionieren, finden Sie unter [Ebene](report-builder-functions-level-function.md).  
+     Die Auffüllung-Eigenschaften erfordern alle eine Zeichenfolge im Format *nnyy*. Dabei steht *nn* für eine Zahl und *yy* für die Maßeinheit. Beispielausdruck wird generiert, eine Zeichenfolge, verwendet der `Level` -Funktion erhöhen die Größe des Abstands basierend auf der Rekursionsebene. Eine Zeile mit der Ebene 1 hätte z.B. die Auffüllung (2 + (1\*10))=12pt, und eine Zeile mit der Ebene 3 hätte die Auffüllung (2 + (3\*10))=32pt. Informationen zu den `Level` funktionieren, finden Sie unter [Ebene](report-builder-functions-level-function.md).  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36162196"
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen von rekursiven Hierarchiegruppen &#40;Berichts-Generator und SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
  [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Aggregieren von Funktionenreferenz &#40;Berichts-Generator und SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
+ [Referenz zu Aggregatfunktionen &#40;Berichts-Generator und SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
  [Tabellen (Berichts-Generator und SSRS)](tables-report-builder-and-ssrs.md)   
  [Matrizen (Berichts-Generator und SSRS)](create-a-matrix-report-builder-and-ssrs.md)   
  [Listen (Berichts-Generator und SSRS)](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   

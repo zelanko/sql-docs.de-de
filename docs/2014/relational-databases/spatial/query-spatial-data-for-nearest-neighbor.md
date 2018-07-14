@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 46d2c75b69d283d6122255ec9ac4a41c4ccdbc28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 361c4e6fe070170163b5e14f1b061467bab96186
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160387"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227137"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>Abfragen von nächsten Nachbarn aus räumlichen Daten
   Eine häufig für räumliche Daten verwendete Abfrage ist die Nächster Nachbar-Abfrage. Mithilfe von Nächster Nachbar-Abfragen werden die räumlichen Objekte gesucht, die einem bestimmten räumlichen Objekt am nächsten liegen. Beispielsweise muss von einer Filialsuche auf einer Website häufig die Filiale bestimmt werden, die dem Standort des Kunden am nächsten liegt.  
@@ -55,7 +55,7 @@ SELECT TOP ( number )
 ```  
   
 ## <a name="nearest-neighbor-query-and-spatial-indexes"></a>Nächster Nachbar-Abfrage und räumliche Indizes  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden `TOP`-Klauseln und `ORDER BY`-Klauseln verwendet, um eine Nächster Nachbar-Abfrage für Spalten mit räumlichen Daten auszuführen. Die `ORDER BY` -Klausel enthält einen Aufruf der `STDistance()` Methode für den Datentyp der räumlichen Spalte. Die `TOP` -Klausel gibt die Anzahl von Objekten, die bei der Abfrage zurückgegeben werden.  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden `TOP`-Klauseln und `ORDER BY`-Klauseln verwendet, um eine Nächster Nachbar-Abfrage für Spalten mit räumlichen Daten auszuführen. Die `ORDER BY` -Klausel enthält einen Aufruf der `STDistance()` Methode für den Datentyp für räumliche Spalte an. Die `TOP` -Klausel gibt die Anzahl von Objekten, die bei der Abfrage zurückgegeben werden.  
   
  Die folgenden Anforderungen müssen erfüllt sein, damit eine Nächster Nachbar-Abfrage einen räumlichen Index verwendet:  
   
@@ -65,7 +65,7 @@ SELECT TOP ( number )
   
 3.  Die `WHERE`-Klausel muss eine `STDistance()`-Methode enthalten.  
   
-4.  Wenn in der `WHERE`-Klausel mehrere Prädikate vorhanden sind, muss das Prädikat mit der `STDistance()`-Methode über eine `AND`-Konjunktion mit den anderen Prädikaten verbunden werden. Die `STDistance()` -Methode darf sich nicht in einem optionalen Teil der `WHERE` Klausel.  
+4.  Wenn in der `WHERE`-Klausel mehrere Prädikate vorhanden sind, muss das Prädikat mit der `STDistance()`-Methode über eine `AND`-Konjunktion mit den anderen Prädikaten verbunden werden. Die `STDistance()` Methode darf sich nicht in einem optionalen Teil der `WHERE` Klausel.  
   
 5.  Der erste Ausdruck in der `ORDER BY`-Klausel muss die `STDistance()`-Methode verwenden.  
   
@@ -105,7 +105,7 @@ ORDER BY SpatialLocation.STDistance(@g);
   
 ```  
   
- Die Abfrage fehlt eine `WHERE` -Klausel, verwendet `STDistance()` in einem Formular im Syntaxabschnitt angegeben werden, sodass die Abfrage einen räumlichen Index verwenden kann.  
+ Der Abfrage fehlt eine `WHERE` -Klausel, verwendet `STDistance()` in einem Formular im Syntaxabschnitt angegeben werden, damit die Abfrage einen räumlichen Index verwenden kann.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Räumliche Daten &#40;SQL Server&#41;](spatial-data-sql-server.md)  

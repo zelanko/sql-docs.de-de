@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen, löschen, Ändern des Bereichs von benutzerdefinierten Variablen in einem Paket | Microsoft Docs
+title: Hinzufügen, löschen, Ändern des Bereichs von benutzerdefinierten Variablen in einem Paket | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], adding
 ms.assetid: cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e
 caps.latest.revision: 46
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3d0d607408aed88a91be310d715505881708edee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2fdccdecea434aa3fe56c362f932b3ba0da396b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161624"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213600"
 ---
 # <a name="add-delete-change-scope-of-user-defined-variable-in-a-package"></a>Hinzufügen, Löschen, Ändern des Bereichs von benutzerdefinierten Variablen in einem Paket
   In diesen Verfahren wird beschrieben, wie eine benutzerdefinierte Variable in einem Paket mithilfe des Fensters **Variablen** hinzugefügt oder gelöscht und ihr Bereich geändert wird.  
   
  Weitere Informationen zu Variablenbereichen finden Sie unter [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] bietet außerdem Systemvariablen, die bereit Systeminformationen zur Laufzeit verfügbar machen und in Containern, z. B. Paketen und Ereignishandlern verwendet werden können. Systemvariablen können nicht gelöscht werden.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] bietet außerdem Systemvariablen, die Systeminformationen zur Verfügung stellen, zur Laufzeit in Containern, z. B. Paketen und Ereignishandlern verwendet werden können. Systemvariablen können nicht gelöscht werden.  
   
 ### <a name="to-add-a-variable"></a>So fügen Sie eine Variable hinzu  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36161624"
 6.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Integrationsservices &#40;SSIS&#41; Variablen](integration-services-ssis-variables.md)   
+ [Integrationsdienste &#40;SSIS&#41; Variablen](integration-services-ssis-variables.md)   
  [Verwenden von Variablen in Paketen](../../2014/integration-services/use-variables-in-packages.md)   
  [Legen Sie die Eigenschaften einer benutzerdefinierten Variablen](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)   
  [Verwenden der Werte von Variablen und Parametern in einem untergeordneten Paket](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  

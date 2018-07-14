@@ -1,5 +1,5 @@
 ---
-title: Anwenden von Vorhersagefunktionen auf ein Modell | Microsoft Docs
+title: Anwenden von Vorhersagefunktionen auf ein Modell | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Mining Model Prediction [Analysis Services], selecting mining models
 ms.assetid: cf9a97e2-c249-441b-af12-c977c1a91c44
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: abd75a7a7be7cacc0395af11e02b5dc55828e31d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a512c4e9f288c0e776b7ac6de91604da39d9f4d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161016"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270016"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Anwenden von Vorhersagefunktionen auf ein Modell
   Zum Erstellen einer Vorhersageabfrage müssen Sie zunächst das Miningmodell auswählen, auf dem die Abfrage basieren soll. Sie können jedes Miningmodell auswählen, das im aktuellen Projekt vorhanden ist.  
@@ -72,7 +72,7 @@ ms.locfileid: "36161016"
     |||  
     |-|-|  
     |**\<Modellname >**|Aktivieren Sie diese Option, um Werte vom Miningmodell in die Ausgabe einzuschließen. Sie können nur vorhersagbaren Spalten hinzufügen.<br /><br /> Wenn Sie eine Spalte aus dem Modell hinzufügen, ist das zurückgegebene Ergebnis die nicht unterschiedliche Liste der Werte in dieser Spalte.<br /><br /> Die Spalten, die Sie mit dieser Option hinzufügen, sind im SELECT-Teil der resultierenden DMX-Anweisung enthalten.|  
-    |**Prediction Function**|Aktivieren Sie diese Option, um eine Liste von Vorhersagefunktionen zu durchsuchen.<br /><br /> Dem SELECT-Teil der resultierenden DMX-Anweisung werden die von Ihnen ausgewählten Werte oder die Funktionen hinzugefügt.<br /><br /> Die Liste der Vorhersagefunktionen wird durch den von Ihnen ausgewählten Modelltyp weder gefiltert noch eingeschränkt. Wenn Sie sich nicht sicher sind, ob die Funktion vom aktuellen Modelltyp unterstützt wird, können Sie demzufolge der Liste einfach die Funktion hinzufügen und anzeigen, ob ein Fehler vorliegt.<br /><br /> Darstellen von Spalten aus der geschachtelten Tabelle, die ausgegeben wird, wenn Sie die Funktion verwenden, Listenelemente, die $ (z. B. $AdjustedProbability) vorangestellt werden `PredictHistogram`. Dies sind Verknüpfungen, mit denen Sie eine einzelne Spalte, aber keine geschachtelte Tabelle zurückgeben können.|  
+    |**Prediction Function**|Aktivieren Sie diese Option, um eine Liste von Vorhersagefunktionen zu durchsuchen.<br /><br /> Dem SELECT-Teil der resultierenden DMX-Anweisung werden die von Ihnen ausgewählten Werte oder die Funktionen hinzugefügt.<br /><br /> Die Liste der Vorhersagefunktionen wird durch den von Ihnen ausgewählten Modelltyp weder gefiltert noch eingeschränkt. Wenn Sie sich nicht sicher sind, ob die Funktion vom aktuellen Modelltyp unterstützt wird, können Sie demzufolge der Liste einfach die Funktion hinzufügen und anzeigen, ob ein Fehler vorliegt.<br /><br /> Darstellen von Spalten aus der geschachtelten Tabelle, die ausgegeben wird, wenn die Funktion verwenden, können Sie Listenelemente, denen $ (z. B. $AdjustedProbability) vorangestellt werden `PredictHistogram`. Dies sind Verknüpfungen, mit denen Sie eine einzelne Spalte, aber keine geschachtelte Tabelle zurückgeben können.|  
     |**Benutzerdefinierter Ausdruck**|Aktivieren Sie diese Option, um einen benutzerdefinierten Ausdruck einzugeben und der Ausgabe dann einen Alias zuzuweisen.<br /><br /> Dem SELECT-Teil der resultierenden DMX-Vorhersageabfrage wird der benutzerdefinierte Ausdruck hinzugefügt.<br /><br /> Diese Option ist nützlich, wenn Sie Text für die Ausgabe mit jeder Zeile hinzufügen, VB-Funktionen oder benutzerdefinierte gespeicherte Prozeduren aufrufen möchten.<br /><br /> Informationen zum Verwenden von VBA- und Excel-Funktionen von DMX aus finden Sie unter [VBA-Funktionen in MDX und DAX](/sql/mdx/vba-functions-in-mdx-and-dax).|  
   
 3.  Wechseln Sie, nachdem Sie jede Funktion oder jeden Ausdruck hinzugefügt haben, zur DMX-Ansicht, um zu sehen, wie die Funktion in der DMX-Anweisung hinzugefügt wurde.  
@@ -96,9 +96,9 @@ ms.locfileid: "36161016"
   
 5.  Wählen Sie im Abfrageraster für **Quelle**„TM_Clustering-Miningmodell“ aus, und fügen Sie die Spalte „[Bike Buyer]“ hinzu.  
   
-6.  Für **Quelle**Option **Vorhersagefunktion**, und fügen Sie die Funktion `Cluster`.  
+6.  Für **Quelle**Option **Vorhersagefunktion**, und fügen Sie die Funktion, `Cluster`.  
   
-7.  Für **Quelle**Option **Vorhersagefunktion**, fügen Sie die Funktion `PredictSupport`, und ziehen Sie die modellspalte [Bike Buyer] in der **Kriterium/Argument** Feld. Geben Sie in der Spalte **Alias** die Zeichenfolge **Support** ein.  
+7.  Für **Quelle**Option **Vorhersagefunktion**, fügen Sie die Funktion, `PredictSupport`, und ziehen Sie die modellspalte [Bike Buyer] in der **Kriterium/Argument** Feld. Geben Sie in der Spalte **Alias** die Zeichenfolge **Support** ein.  
   
      Kopieren Sie den Ausdruck, der die Vorhersagefunktion und den Spaltenverweis vom Feld **Kriterium/Argument** darstellt.  
   

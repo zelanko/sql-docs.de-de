@@ -1,5 +1,5 @@
 ---
-title: Planen der | Microsoft Docs
+title: Planen der | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4dde9d4d-e4fa-4bbe-91b0-0bcb0dc7dde7
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 2124b296e173974d470ba10d627803a864b4d1bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e720586f448512342d88dc695988ce9afb90b56
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160591"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260526"
 ---
 # <a name="planning"></a>Planung
   Diese Themen sollen Sie dabei unterstützen, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]besser zu verstehen. Erfahren Sie, wie die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Umgebung installiert und konfiguriert wird, damit sie Ihren Anforderungen am besten entspricht.  
   
  ![Kleines Dateiordnersymbol](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Allgemeine Planung und Architektur von Reporting Services-Funktionen**  
- [Planung für Reporting Services und Power View-Browserunterstützung &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)  
+ [Browserunterstützung für Reporting Services und Power View-Browserunterstützung &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)  
   
  [Planen von Berichtsentwurf und-Bereitstellung &#40;Reporting Services 2014&#41;](plan-for-report-design-and-report-deployment-reporting-services.md)  
   

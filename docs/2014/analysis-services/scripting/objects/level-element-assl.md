@@ -1,5 +1,5 @@
 ---
-title: Level-Element (ASSL) | Microsoft Docs
+title: Level-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Level element
 ms.assetid: 66ee2c16-d6b8-4dd3-879f-1f2b6923bc43
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 028375d525ec0197aec24a9005fd3f5f0e8fe769
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ba9ca10d1d3ad2319e451d6008c6e8ad77078fc7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161427"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263876"
 ---
 # <a name="level-element-assl"></a>Level-Element (ASSL)
   Definiert eine Ebene in einer [Hierarchie](hierarchy-element-assl.md) Element.  
@@ -70,7 +70,7 @@ ms.locfileid: "36161427"
 ## <a name="remarks"></a>Hinweise  
  Bei diesem Datentyp gelten in keinem Bereitstellungsmodus Einschränkungen (1 - Mehrdimensional und Data Mining, 2 - SharePoint und 3 - Tabellarisch).  
   
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.Level>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.Level>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Objekte &#40;ASSL&#41;](objects-assl.md)  

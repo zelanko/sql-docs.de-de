@@ -1,5 +1,5 @@
 ---
-title: EmptyResult-Datentyp (XMLA) | Microsoft Docs
+title: EmptyResult-Datentyp (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - EmptyResult data type
 ms.assetid: 63818123-acbb-4220-9d60-1aa20a7326a1
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bba727b2d7d612fa59c99665bd16d936da137fb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ea04f2f170a61bafed2fa06cdb3260668120899c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161205"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257156"
 ---
 # <a name="emptyresult-data-type-xmla"></a>EmptyResult-Datentyp (XMLA)
-  Definiert einen abgeleiteten Datentyp, der darstellt eine [Root](../xml-elements-properties/root-element-xmla.md) Element, das keine Daten zurückgibt eine [Discover](../xml-elements-methods-discover.md) oder [Execute](../xml-elements-methods-execute.md) -Methodenaufruf.  
+  Definiert einen abgeleiteten Datentyp, der darstellt eine [Stamm](../xml-elements-properties/root-element-xmla.md) -Element, das nicht zurückgeben von Daten aus einer [Discover](../xml-elements-methods-discover.md) oder [Execute](../xml-elements-methods-execute.md) Methodenaufruf.  
   
  **Namespace** urn:schemas-microsoft-com:xml-analysis:empty  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36161205"
 |------------------|-------------|  
 |Übergeordnete Elemente|InclusionThresholdSetting|  
 |Untergeordnete Elemente|InclusionThresholdSetting|  
-|Abgeleitete Elemente|[Stamm](../xml-elements-properties/root-element-xmla.md)|  
+|Abgeleitete Elemente|[Stammverzeichnis](../xml-elements-properties/root-element-xmla.md)|  
   
 ## <a name="remarks"></a>Hinweise  
  Einige XMLA-Befehle (XML for Analysis) müssen keine Ergebnisse zurückgeben oder können aufgrund eines Fehlers keine zurückgeben. Zurückgeben von XMLA-Befehle, die kein Ergebnis zurückgibt, führen Sie die `EmptyResult` -Datentyp, einen Namespace auf die `root` Element.  

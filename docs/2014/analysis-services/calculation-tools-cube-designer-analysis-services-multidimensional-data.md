@@ -1,5 +1,5 @@
 ---
-title: Berechnungstools (Registerkarte ' Berechnungen ', Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Berechnungstools (Registerkarte ' Berechnungen ', Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationsview.calculationtoolspane.f1
 ms.assetid: b1aa8a1a-6532-45d2-8f53-d3e211d7197a
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 106821212578d341292be4ef5f33bef055d5c1c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 1263a4037f42b7546e6f248cfd0c4b75bbede8ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161250"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257586"
 ---
 # <a name="calculation-tools-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Berechnungstools (Registerkarte 'Berechnungen', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Bereichs **Berechnungstools** auf der Registerkarte **Berechnungen** im Cube-Designer können Sie Metadaten, Funktionen und Vorlagen durchsuchen, die zum Verwenden in Berechnungen verfügbar sind.  
@@ -74,11 +74,11 @@ ms.locfileid: "36161250"
   
 ## <a name="see-also"></a>Siehe auch  
  [Cube-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Symbolleiste &#40;Registerkarte Berechnungen, Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Skriptplaner &#40;Registerkarte Berechnungen, Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
- [Formular-Editor &#40;Registerkarte Berechnungen, Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Set-Formular-Editor für benannte &#40;Registerkarte Berechnungen, Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Skript-Editor &#40;Registerkarte Berechnungen, Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)   
+ [Symbolleiste &#40;Registerkarte ' Berechnungen ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Skriptplaner &#40;Registerkarte ' Berechnungen ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
+ [Formular-Editor &#40;Registerkarte ' Berechnungen ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Set-Formular-Editor für benannte &#40;Registerkarte ' Berechnungen ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Skript-Editor &#40;Registerkarte ' Berechnungen ', Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)   
  [Berechnungen &#40;Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)  
   
   

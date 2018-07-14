@@ -1,5 +1,5 @@
 ---
-title: Anpassen der Berichts-Viewer-Webpart | Microsoft Docs
+title: Anpassen des Berichts-Viewer-Webparts | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
 - Web Parts [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: 086d6546-7299-41bc-bca9-083a15a53679
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d59a29eef3b45596a99ffeb9dd2bb45d6761357e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a56fdc024d15a24463fb0a7cf593ad23ca85aa34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162892"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162251"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Anpassen des Berichts-Viewer-Webparts
   Mithilfe des Berichts-Viewer-Webparts können Sie Berichte anzeigen, die auf einem Berichtsserver ausgeführt werden, der für die Ausführung im integrierten SharePoint-Modus konfiguriert ist. Sie können u. a. Berichtsdefinitionsdateien (RDL-Dateien) und Berichts-Generator-Berichte anzeigen. Berichte werden im Berichts-Viewer-Webpart automatisch auf einer neuen Seite angezeigt, doch können Sie auch einer vorhandenen Webseite oder Website ein Berichts-Viewer-Webpart hinzufügen, wenn auf der Seite ein bestimmter Bericht immer angezeigt werden soll.  
@@ -79,7 +79,7 @@ ms.locfileid: "36162892"
 |Anzeigen des Zoomsteuerelement|Zeigt das Zoomsteuerelement auf der Symbolleiste an oder blendet es aus.|  
 |Anzeigen der ATOM-Feed-Schaltfläche|Zeigt die ATOM-Feed-Schaltfläche auf der Symbolleiste an oder blendet sie aus.<br /><br /> ![htmlviewer_datafeed](media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|  
 |Symbolleistenspeicherort|Bestimmt die Position der Symbolleiste innerhalb des Berichts-Viewers. Gültige Werte sind `Top` und `Bottom`.|  
-|Bereich Eingabeaufforderung|Gültige Werte sind `Displayed`, `Collapsed`, und `Hidden`. `Displayed` Zeigt den Parameterbereich für Berichte, die parametrisierte Werte enthalten, die eine Benutzereingabe erforderlich, bevor der Bericht ausgeführt wird. Verwendung `Hidden` Wenn alle Berichtsparameter angegeben wurden und nicht, dass den Parameterbereich für Benutzer sichtbar möchten.|  
+|Bereich Eingabeaufforderung|Gültige Werte sind `Displayed`, `Collapsed`, und `Hidden`. `Displayed` Zeigt den Parameterbereich für Berichte, die parametrisierte Werte enthalten, und, die eine Benutzereingabe erforderlich, bevor der Bericht ausgeführt wird. Verwendung `Hidden` , wenn alle Berichtsparameter angegeben wurden und nicht, dass den Parameterbereich für Benutzer sichtbar möchten.|  
 |Breite des Parameterbereichs|Sie können die Maßeinheit und den Wert auswählen. Der Standardwert ist 200 Pixel. Die einzige Anforderung für diese Eigenschaft lautet, dass sie größer als 0 sein muss.|  
 |Dokumentstruktur|Ein Steuerelement für die Berichtsnavigation, das im Bericht definiert und zum Bereitstellen eines Zugriffs auf bestimmte Abschnitte eines Berichts mit einem Klick verwendet wird. Es ist in HTML-Berichten verfügbar. Die Dokumentstruktur wird in einem reduzierbaren Bereich neben dem Berichtsansichtsbereich angezeigt. Gültige Werte sind `Displayed`, `Collapsed`, und `Hidden`. Wenn für einen Bericht eine Dokumentstruktur definiert ist, ist der Bereich standardmäßig erweitert, sofern er nicht in den Webparteigenschaften als ausgeblendet oder reduziert markiert ist. Wenn die Dokumentstruktur reduziert ist, können Sie auf den Pfeil klicken, um sie zu erweitern.|  
 |Breite des Dokumentstrukturbereichs|Sie können die Maßeinheit und den Wert auswählen. Der Standardwert ist 200 Pixel. Die einzige Anforderung für diese Eigenschaft lautet, dass sie größer als 0 sein muss.|  
@@ -97,6 +97,6 @@ ms.locfileid: "36162892"
   
 ## <a name="see-also"></a>Siehe auch  
  [Berichts-Viewer-Webpart auf einer SharePoint-Website](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
- [Fügen Sie den Berichts-Viewer-Webpart zu einer Webseite &#40;integrierter Reporting Services im SharePoint-Modus&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
+ [Hinzufügen des Berichts-Viewer-Webparts zu einer Webseite &#40;integrierten Reporting Services im SharePoint-Modus&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

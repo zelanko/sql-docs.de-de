@@ -1,5 +1,5 @@
 ---
-title: Vorgänge in Analysis Services protokolliert | Microsoft Docs
+title: Protokollieren Sie Vorgänge in Analysis Services | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2748496ead805834f0b6051f159dcca551b0b178
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 332f1ff5bff2379f3d11fa61bf3423a9d8e06347
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161444"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228370"
 ---
 # <a name="log-operations-in-analysis-services"></a>Protokollvorgänge in Analysis Services
   Eine Analysis Services-Instanz protokolliert Serverbenachrichtigungen, Fehler und Warnungen in der Datei "msmdsrv.log" – eine Datei für jede Instanz, die Sie installieren. Administratoren finden in diesem Protokoll Einblicke in routinemäßige und außergewöhnliche Ereignisse. In neueren Versionen wurde die Protokollierung verbessert, um weitere Informationen zu erfassen. Protokolldatensätze enthalten jetzt die Produktversion und Editionsinformationen sowie Prozessor, Speicher, Konnektivität und blockierende Ereignisse. Sie können die gesamte Änderungsliste unter [Protokollierungsverbesserungen](http://support.microsoft.com/kb/2965035)einsehen.  
@@ -66,9 +66,9 @@ ms.locfileid: "36161444"
   
  Diese Protokolldatei wird bei jedem Dienstneustart geleert. In früheren Versionen mussten Administratoren manchmal den Dienst neu starten, nur um die Protokolldatei zu leeren, bevor sie so groß wurde, dass sie nicht mehr verwendet werden konnte. Dies ist nicht mehr erforderlich. Mit den Konfigurationseinstellungen, die in SQL Server 2012 SP2 und höher eingeführt wurden, erhalten Sie die Kontrolle über die Größe der Protokolldatei und des dazugehörigen Verlaufs:  
   
--   `MaxFileSizeMB` gibt die maximale Protokolldateigröße in Megabytes an. Der Standardwert ist 256. Ein gültiger Ersatzwert muss eine positive ganze Zahl sein. Wenn `MaxFileSizeMB` wird erreicht, Analysis Services benennt die aktuelle Datei als Msmdsrv {Aktueller Zeitstempel} .log-Datei, und startet eine neue Datei "Msmdsrv.log"-Datei.  
+-   `MaxFileSizeMB` gibt die maximale Protokolldateigröße in Megabytes an. Der Standardwert ist 256. Ein gültiger Ersatzwert muss eine positive ganze Zahl sein. Wenn `MaxFileSizeMB` wird erreicht, benennt Analysis Services die aktuelle Datei in Datei "Msmdsrv {Aktueller Zeitstempel} .log", und beginnt eine neue Datei für "Msmdsrv.log".  
   
--   `MaxNumberFiles` Gibt die Aufbewahrung älterer Protokolldateien. Der Standardwert ist 0 (deaktiviert). Sie können den Wert in eine positive ganze Zahl ändern, um Versionen der Protokolldatei beizubehalten. Wenn `MaxNumberFiles` wird erreicht, löscht Analysis Services die Datei mit dem ältesten Zeitstempel im Namen.  
+-   `MaxNumberFiles` Gibt die Aufbewahrung älterer Protokolldateien an. Der Standardwert ist 0 (deaktiviert). Sie können den Wert in eine positive ganze Zahl ändern, um Versionen der Protokolldatei beizubehalten. Wenn `MaxNumberFiles` wird erreicht, löscht Analysis Services die Datei mit dem ältesten Zeitstempel im Namen.  
   
  Um diese Einstellungen zu verwenden, führen Sie folgende Schritte aus:  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36161444"
   
  Die Abfrageprotokolleinstellungen gelten serverweit. Die von Ihnen angegebenen Einstellungen werden von allen auf diesem Server ausgeführten Datenbanken verwendet.  
   
- ![Abfrage-protokolleinstellungen in Management Studio](../media/ssas-querylogsettings.png "abfrageprotokolleinstellungen in Management Studio")  
+ ![Abfrage-protokolleinstellungen in Management Studio](../media/ssas-querylogsettings.png "Abfrage-protokolleinstellungen in Management Studio")  
   
  Führen Sie nach der Festlegen der Konfigurationseinstellungen mehrmals eine MDX-Abfrage aus. Wenn die Stichprobenanforderung auf 10 festgelegt sind, wird führen Sie die Abfrage elf Mal aus. Überprüfen Sie, ob die Tabelle erstellt wurde. Stellen Sie in Management Studio eine Verbindung mit der relationalen Datenbank-Engine her, öffnen Sie den Datenbankordner, öffnen Sie den Ordner **Tabellen** , und überprüfen Sie, ob **OlapQueryLog** vorhanden ist. Wenn Sie die Tabelle nicht sofort sehen, aktualisieren Sie den Ordner, um Änderungen am Inhalt zu übernehmen.  
   

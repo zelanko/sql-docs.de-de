@@ -1,5 +1,5 @@
 ---
-title: Berichts-Manager (einheitlicher SSRS-Modus) | Microsoft Docs
+title: Berichts-Manager (einheitlicher SSRS-Modus) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], managing
 - Report Manager [Reporting Services], about Report Manager
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - components [Reporting Services], Report Manager
 ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
 caps.latest.revision: 69
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 012b0a7d775050108305d44a1eb595a9f8b7b789
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8fc0febe87f937e8ad301bb070e22dcd44b788c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159936"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327070"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>Berichts-Manager (einheitlicher SSRS-Modus)
   Der Berichts-Manager ist ein webbasiertes Zugriffs- und Verwaltungstool für Berichte. Dieses Tool kann verwendet werden, um eine einzelne Berichtsserverinstanz von einem Remotestandort aus über eine HTTP-Verbindung zu verwalten. Sie können ebenso die Berichts-Viewer- und Navigationsfunktionen des Berichts-Managers verwenden. In diesem Thema:  
@@ -51,7 +51,7 @@ ms.locfileid: "36159936"
   
 -   Konfigurieren von Berichtsausführungseigenschaften, dem Berichtsverlauf und Berichtsparameter.  
   
--   Erstellen von Berichtsmodellen, die zum Verbinden und zum Abrufen von Daten aus einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Datenquelle oder eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] relationale Datenquelle.  
+-   Erstellen von Berichtsmodellen, die verbinden und Abrufen von Daten aus einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Datenquelle oder eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] relationale Datenquelle.  
   
 -   Festlegen der Modellelementsicherheit für den Zugriff auf bestimmte Entitäten im Modell bzw. Zuordnen von Entitäten zu vordefinierten Berichten mit Durchklicken, die Sie im Voraus erstellen.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36159936"
  Mit dem Berichts-Manager können die Ordner des Berichtsservers durchsucht oder nach bestimmten Berichten gesucht werden. Sie können einen Bericht, seine allgemeinen Eigenschaften und alte Versionen anzeigen, die in einem Berichtsverlauf erfasst sind. Je nach den Ihnen gewährten Berechtigungen können Sie unter Umständen Berichte abonnieren, die an ein E-Mail-Postfach oder einen freigegeben Ordner im Dateisystem übermittelt werden.  
   
 > [!NOTE]  
->  Informationen zu unterstützten Browsern und Versionen finden Sie unter [Planung für Reporting Services und Power View-Browserunterstützung &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
+>  Weitere Informationen zu unterstützten Browsern und Versionen finden Sie unter [Planung für Reporting Services und Power View-Browserunterstützung &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
  Der Berichts-Manager wird nur für einen Berichtsserver verwendet, der im einheitlichen Modus ausgeführt wird. Er wird nicht für einen Berichtsserver unterstützt, den Sie für den integrierten Modus von SharePoint konfiguriert haben.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36159936"
  Weitere Informationen zu den Rollen finden Sie unter [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](security/granting-permissions-on-a-native-mode-report-server.md).  
   
 > [!NOTE]  
->  Wenn Sie mit Windows Vista oder Windows Server 2008 arbeiten, müssen Sie den Berichtsserver für die lokale Verwaltung konfigurieren, bevor Sie den Berichts-Manager zum Verwalten einer lokalen Berichtsserverinstanz verwenden. Informationen zum Konfigurieren des Servers finden Sie unter [konfigurieren einen Berichtsserver im einheitlichen Modus für die lokale Verwaltung &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+>  Wenn Sie mit Windows Vista oder Windows Server 2008 arbeiten, müssen Sie den Berichtsserver für die lokale Verwaltung konfigurieren, bevor Sie den Berichts-Manager zum Verwalten einer lokalen Berichtsserverinstanz verwenden. Anweisungen dazu, wie Sie den Server zu konfigurieren, finden Sie unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für die lokale Verwaltung &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ## <a name="start-report-manager"></a>Start des Berichts-Managers  
   
@@ -110,19 +110,19 @@ ms.locfileid: "36159936"
 |![Modellsymbol](media/model-icon.gif "Model icon")|Berichtsmodell|Klicken Sie auf das Berichtsmodellsymbol, um Eigenschaftenseiten für Modelle zu öffnen.|  
 |![Symbol verknüpfte Berichte](media/hlp-16linked.gif "Linked report icon")|Verknüpfter Bericht|Klicken Sie auf das Berichtssymbol oder den Berichtsnamen, um den verknüpften Bericht zu öffnen. Der Bericht wird in einem eigenen Fenster geöffnet.|  
 |![Ordnersymbol](media/hlp-16folder.gif "Folder icon")|Ordner|Klicken Sie auf das Ordnersymbol oder den Ordnernamen, um den Ordner zu öffnen.|  
-|![Symbol "Abonnements"](media/hlp-16subscription.gif "Abonnement (Symbol)")|Abonnement|Klicken Sie auf ein Abonnementsymbol, um ein Abonnement zu bearbeiten.|  
-|![Symbol "eines datengesteuerten Abonnements"](media/hlp-16subscriptiondd.gif "datengesteuerte Abonnement (Symbol)")|Datengesteuertes Abonnement|Klicken Sie auf ein Symbol oder die Beschreibung für ein datengesteuertes Abonnement, um ein Abonnement zu bearbeiten.|  
+|![Symbol "Abonnement"](media/hlp-16subscription.gif "Abonnement (Symbol)")|Abonnement|Klicken Sie auf ein Abonnementsymbol, um ein Abonnement zu bearbeiten.|  
+|![Symbol für datengesteuertes Abonnement](media/hlp-16subscriptiondd.gif "datengesteuerten Abonnement (Symbol)")|Datengesteuertes Abonnement|Klicken Sie auf ein Symbol oder die Beschreibung für ein datengesteuertes Abonnement, um ein Abonnement zu bearbeiten.|  
 |![Symbol allgemeine Ressource](media/hlp-16file.gif "generic resource icon")|Ressource|Klicken Sie auf das Ressourcensymbol oder den Ressourcennamen, um die Ressource zu öffnen. Die Ressource wird in einem eigenen Fenster geöffnet.|  
 |![Symbol freigegebene Datenquelle](media/hlp-16datasource.png "Shared data source icon")|Freigegebenes Datenquellenelement|Klicken Sie auf ein Symbol für eine freigegebene Datenquelle, um die Eigenschaftenseiten, die Berichtsliste und die Abonnementliste der Datenquelle zu öffnen.|  
-|![Symbol für Eigenschaftenseiten](media/hlp-16prop.gif "Symbol \"Eigenschaftenseite\"")|Eigenschaftenseite|Klicken Sie auf das Eigenschaftensymbol, um zusätzliche Seiten zu öffnen sowie Eigenschaften und die Sicherheit festzulegen.|  
+|![Symbol für Eigenschaftenseite](media/hlp-16prop.gif "Symbol für Eigenschaftenseite")|Eigenschaftenseite|Klicken Sie auf das Eigenschaftensymbol, um zusätzliche Seiten zu öffnen sowie Eigenschaften und die Sicherheit festzulegen.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren einer URL &#40;SSRS-Konfigurations-Manager&#41;](install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [Planung für Reporting Services und Power View-Browserunterstützung &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)   
+ [Browserunterstützung für Reporting Services und Power View-Browserunterstützung &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)   
  [Berichts-Generator &#40;SSRS&#41;](tools/report-builder-authoring-environment-ssrs.md)   
  [Reporting Services-Tools](tools/reporting-services-tools.md)   
- [Melden von Berichtsserverinhalten &#40;SSRS im einheitlichen Modus&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
- [Anzeigen und Durchsuchen von Berichten im einheitlichen Modus, die mithilfe von SharePoint-Webparts &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)   
+ [Verwalten von Berichtsserverinhalten &#40;einheitlicher SSRS-Modus&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Anzeigen und Durchsuchen von Berichten im einheitlichen Modus, die mit SharePoint-Webparts &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)   
  [Berichts-Manager (F1-Hilfe)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

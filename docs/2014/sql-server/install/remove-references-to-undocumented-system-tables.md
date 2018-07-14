@@ -1,5 +1,5 @@
 ---
-title: Entfernen Sie Verweise auf nicht dokumentierte Systemtabellen | Microsoft Docs
+title: Entfernen Sie Verweise auf nicht dokumentierte Systemtabellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - undocumented system tables [SQL Server]
 - system tables [SQL Server]
 ms.assetid: 010b1236-2219-4bf4-a6db-e3fc3abfa37a
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cd8ff349ae3e065233ea104d34016a919b9fd6e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d4f0c1789e4f352fe18fd50b6de739b82328a777
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161050"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226570"
 ---
 # <a name="remove-references-to-undocumented-system-tables"></a>Entfernen von Verweisen auf nicht dokumentierte Systemtabellen
   Viele Systemtabellen, die in früheren Versionen nicht dokumentiert waren, haben sich geändert oder sind nicht mehr vorhanden. Daher kann ihre Verwendung nach einem Upgrade zu Fehlern führen. Da der Upgrade Advisor nach Verweisen auf Systemtabellennamen sucht, enthält sein Bericht Verweise auf alle Benutzertabellen, die dieselben Namen wie Systemtabellen haben.  
@@ -89,11 +89,11 @@ ms.locfileid: "36161050"
 |**sysfulltextnotify**|**TableFulltextPendingChanges** Eigenschaft der OBJECTPROPERTYEX-Funktion.|  
 |**syslocks**|**Sys. dm_tran_locks** dynamische verwaltungssicht oder Sp_lock, oder die **sys.syslockinfo** -kompatibilitätssicht angezeigt.|  
 |**sysproperties**|**Sys. extended_properties** -Katalogsicht oder der **Fn_listextendedproperty** Funktion|  
-|**sysusers**|**Sys. server_principals** -Katalogsicht oder **Syslogins** -kompatibilitätssicht angezeigt.|  
+|**sysusers**|**Sys. server_principals** Katalogsicht oder **Syslogins** -kompatibilitätssicht angezeigt.|  
 |alle **Spt_** Tabellen|Kein Ersatz verfügbar|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenbank-Engine-Upgradeprobleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [Datenbank-Engine-Upgrade-Probleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

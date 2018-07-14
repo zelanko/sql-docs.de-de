@@ -1,5 +1,5 @@
 ---
-title: Logistische Regressionsmodell-Abfragebeispiele | Microsoft Docs
+title: Logistische Regressionsmodell-Abfragebeispiele | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - content queries [DMX]
 ms.assetid: 7c8e13a3-5c67-46c2-abfa-4881e6ef9c62
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b079609e6d2df8d104b3430488ae37ac0e9ea179
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f908b029074e58866f51dbd7deff571763e11b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162160"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189597"
 ---
 # <a name="logistic-regression-model-query-examples"></a>Logistische Regressionsmodell-Abfragebeispiele
   Beim Generieren einer Abfrage für ein Data Mining-Modell können Sie eine Inhaltsabfrage erstellen, die Details über die bei der Analyse ermittelten Muster liefert. Alternativ dazu können Sie auch eine Vorhersageabfrage erstellen, die Vorhersagen mit neuen Daten anhand der im Modell befindlichen Muster vornimmt.  
@@ -161,7 +161,7 @@ NATURAL PREDICTION JOIN
   
 6.  Klicken Sie auf der Registerkarte **Miningstruktur** mit der rechten Maustaste auf die Spalte für ServiceGrade, und wählen Sie **Eigenschaften**aus.  
   
-7.  Ändern der `Content` Eigenschaft von **fortlaufend** auf **Discretized**. Ändern der `DiscretizationMethod` Eigenschaft **Cluster**. Geben Sie für DiscretizationBucketCount **3**ein.  
+7.  Ändern der `Content` Eigenschaft **fortlaufend** zu **Discretized**. Ändern der `DiscretizationMethod` Eigenschaft **Cluster**. Geben Sie für DiscretizationBucketCount **3**ein.  
   
     > [!NOTE]  
     >  Diese Parameter werden nur zur Veranschaulichung des Vorgangs verwendet und erzeugen nicht unbedingt ein gültiges Modell.  
@@ -200,7 +200,7 @@ NATURAL PREDICTION JOIN
 |Vorhersagefunktion|Verwendung|  
 |[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Bestimmt, ob ein Knoten ein untergeordnetes Element eines anderen Knotens im Modell ist.|  
 |[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|Gibt die angepasste Wahrscheinlichkeit für einen bestimmten Status zurück.|  
-|["PredictHistogram" &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|Gibt einen vorhergesagten Wert oder eine Gruppe von Werten für eine angegebene Spalte zurück.|  
+|[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|Gibt einen vorhergesagten Wert oder eine Gruppe von Werten für eine angegebene Spalte zurück.|  
 |[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|Gibt die Wahrscheinlichkeit für einen bestimmten Status zurück.|  
 |[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|Gibt die Standardabweichung für den prognostizierten Wert zurück.|  
 |[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|Gibt den Unterstützungswert für einen bestimmten Status zurück.|  
@@ -215,7 +215,7 @@ NATURAL PREDICTION JOIN
  [Datamining-Abfragen](data-mining-queries.md)   
  [Microsoft Logistic Regression-Algorithmus](microsoft-logistic-regression-algorithm.md)   
  [Technische Referenz zu Microsoft Logistic Regression-Algorithmus](microsoft-logistic-regression-algorithm-technical-reference.md)   
- [Miningmodellinhalt für logistische Regressionsmodelle &#40;Analysis Services – Datamining&#41;](mining-model-content-for-logistic-regression-models.md)   
+ [Mingingmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-logistic-regression-models.md)   
  [Lektion 5: Erstellen von neuronalen Netzwerk- und logistischen Regressionsmodellen &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
   

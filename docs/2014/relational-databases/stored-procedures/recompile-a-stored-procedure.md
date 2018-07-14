@@ -3,31 +3,29 @@ title: Erneutes Kompilieren einer gespeicherten Prozedur | Microsoft-Dokumentati
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
+ms.technology: stored-procedures
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-stored-procs
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sp_recompile
 - WITH RECOMPILE clause
 - recompiling stored procedures
 - stored procedures [SQL Server], recompiling
 ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
-caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0b535169d3a0c8db074b5c582777517f743588d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 73fffe17fac4c26ca8c9951306d4a7e3c489bcd3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162214"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172141"
 ---
 # <a name="recompile-a-stored-procedure"></a>Erneutes Kompilieren einer gespeicherten Prozedur
-  In diesem Thema wird beschrieben, wie Sie eine gespeicherte Prozedur in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)]erneut kompilieren. Es gibt drei Möglichkeiten: `WITH RECOMPILE` Option in der Prozedurdefinition oder wenn die Prozedur aufgerufen wird, die `RECOMPILE` -Abfragehinweis in einzelnen Anweisungen oder mithilfe der `sp_recompile` gespeicherten Systemprozedur. In diesem Thema wird die Verwendung der WITH RECOMPILE-Option beim Erstellen einer Prozedurdefinition und Ausführen einer vorhandenen Prozedur beschrieben. Zudem wird erläutert, wie die gespeicherte Systemprozedur sp_recompile zum erneuten Kompilieren einer vorhandenen Prozedur verwendet wird.  
+  In diesem Thema wird beschrieben, wie Sie eine gespeicherte Prozedur in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)]erneut kompilieren. Es gibt drei Möglichkeiten zur Verfügung: `WITH RECOMPILE` Option in der Definition der Prozedur, oder wenn die Prozedur aufgerufen wird, die `RECOMPILE` -Abfragehinweis in einzelnen Anweisungen oder mithilfe der `sp_recompile` gespeicherten Systemprozedur. In diesem Thema wird die Verwendung der WITH RECOMPILE-Option beim Erstellen einer Prozedurdefinition und Ausführen einer vorhandenen Prozedur beschrieben. Zudem wird erläutert, wie die gespeicherte Systemprozedur sp_recompile zum erneuten Kompilieren einer vorhandenen Prozedur verwendet wird.  
   
  **In diesem Thema**  
   

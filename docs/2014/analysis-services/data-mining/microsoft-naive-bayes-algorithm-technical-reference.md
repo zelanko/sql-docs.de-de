@@ -1,5 +1,5 @@
 ---
-title: Technische Referenz für den Microsoft Naive Bayes-Algorithmus | Microsoft Docs
+title: Technische Referenz für den Microsoft Naive Bayes-Algorithmus | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MINIMUM_DEPENDENCY_PROBABILITY parameter
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - MAXIMUM_STATES parameter
 ms.assetid: a4cd47fe-2127-4930-b18f-3edd17ee9a65
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 421da938c83045cea508a5926d1edc8892be11a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e0f489c08c33fa66794f0eace23d207855e207b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161442"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253532"
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Naive Bayes-Algorithmus
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Algorithmus ist ein Klassifikationsalgorithmus, der in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zum Verwenden bei der Vorhersagemodellierung bereitgestellt wird. Der Algorithmus berechnet die bedingte Wahrscheinlichkeit zwischen Eingabespalten und vorhersagbaren Spalten und setzt die Unabhängigkeit der Spalten voraus. Diese Annahme der Unabhängigkeit führt zum Namen Naive Bayes.  
@@ -104,7 +104,7 @@ ms.locfileid: "36161442"
   
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Naive Bayes-Algorithmus](microsoft-naive-bayes-algorithm.md)   
- [Beispiele für Naive Bayes-Modell](naive-bayes-model-query-examples.md)   
- [Miningmodellinhalt für Naive Bayes-Modelle &#40;Analysis Services – Datamining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Beispiele für Naive Bayes-Modells](naive-bayes-model-query-examples.md)   
+ [Mingingmodellinhalt von Naive Bayes-Modellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - application roles [SQL Server], about application roles
 - principals [SQL Server], application roles
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - groups [SQL Server], roles
 ms.assetid: dca18b8a-ca03-4b7f-9a46-8474d5b66f76
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8da65658242f5b8192fa2ec5fb27dc07de704163
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 5613f0657b8b8c5a3a9083be022865d83264e5db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159126"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262286"
 ---
 # <a name="application-roles"></a>Anwendungsrollen
   Eine Anwendungsrolle ist ein Datenbankprinzipal, mit dem eine Anwendung mit eigenen Berechtigungen ausgeführt werden kann. Sie können Anwendungsrollen verwenden, um den Zugriff auf bestimmte Daten nur den Benutzern zu ermöglichen, die über eine bestimmte Anwendung eine Verbindung herstellen. Im Gegensatz zu Datenbankrollen enthalten Anwendungsrollen keine Mitglieder und sind standardmäßig inaktiv. Anwendungsrollen können in beiden Authentifizierungsmodi verwendet werden. Anwendungsrollen werden mit **sp_setapprole**aktiviert, wofür ein Kennwort erforderlich ist. Da es sich bei Anwendungsrollen um einen Prinzipal auf Datenbankebene handelt, können sie auf andere Datenbanken nur über die Berechtigungen zugreifen, die in diesen Datenbanken dem Konto **guest**erteilt wurden. Anwendungsrollen anderer Datenbanken können daher auf keine Datenbank zugreifen, in der **guest** deaktiviert wurde.  

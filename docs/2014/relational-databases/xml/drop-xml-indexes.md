@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing indexes
 - dropping indexes
 - XML indexes [SQL Server], dropping
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 88db7af7bbca5a202b79ec42d8cade77e85cd258
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 2a6021971575b0a17821e415aaf738ff651e9ec5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160381"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323970"
 ---
 # <a name="drop-xml-indexes"></a>Löschen von XML-Indizes
   Die [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung kann zum Löschen vorhandener primärer oder sekundärer XML-Indizes und Nicht-XML-Indizes verwendet werden. Die DROP INDEX-Optionen gelten jedoch nicht für XML-Indizes. Wenn Sie den primären XML-Index löschen, werden sämtliche vorhandenen sekundären Indizes ebenfalls gelöscht.  
@@ -31,7 +31,7 @@ ms.locfileid: "36160381"
  Die DROP-Syntax mit *TableName.IndexName* ist veraltet und wird für XML-Indizes nicht unterstützt.  
   
 ## <a name="example-creating-and-dropping-a-primary-xml-index"></a>Beispiel: Erstellen und Löschen eines primären XML-Index  
- Im folgenden Beispiel wird ein XML-Index erstellt, auf eine `xml` Typspalte.  
+ Im folgenden Beispiel wird ein XML-Index erstellt, auf eine `xml` Type-Spalte.  
   
 ```  
 DROP TABLE T  
@@ -55,7 +55,7 @@ DROP INDEX PIdx_T_XmlCol ON T
   
  Beim Löschen einer Tabelle werden auch XML-Indizes für diese automatisch gelöscht. Eine XML-Spalte kann jedoch nicht aus einer Tabelle gelöscht werden, wenn ein XML-Index für die Spalte vorhanden ist.  
   
- Im folgenden Beispiel wird ein XML-Index erstellt, auf eine `xml` Typspalte. Weitere Informationen finden Sie unter [Vergleichen von typisiertem XML mit nicht typisiertem XML](../xml/compare-typed-xml-to-untyped-xml.md).  
+ Im folgenden Beispiel wird ein XML-Index erstellt, auf eine `xml` Type-Spalte. Weitere Informationen finden Sie unter [Vergleichen von typisiertem XML mit nicht typisiertem XML](../xml/compare-typed-xml-to-untyped-xml.md).  
   
 ```  
 CREATE TABLE TestTable(  

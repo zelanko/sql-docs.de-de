@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Memory Manager
 - Memory Manager object
 ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ed20cc054b20ae22296576c6558fc21f0a23ef93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: bbc61bde81da8f32f71a70764870648589d89a4e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162240"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188347"
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server, Speicher-Manager-Objekt
   Das **Speicher-Manager** -Objekt in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt Leistungsindikatoren bereit, mit denen Sie die gesamte Speicherauslastung des Servers überwachen können. Das Überwachen der gesamten Speicherauslastung des Servers zur Messung der Benutzeraktivität und der Ressourcennutzung kann Ihnen dabei helfen, Leistungsengpässe zu erkennen. Durch Überwachen des Arbeitsspeichers, der von einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet wird, können Sie Folgendes ermitteln:  

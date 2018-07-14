@@ -1,5 +1,5 @@
 ---
-title: Vorbereiten der Eingabedaten der Ablaufverfolgung | Microsoft Docs
+title: Vorbereiten der Eingabedaten der Ablaufverfolgung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 30b9108a8586e56f7a96695be513e6e33fe39c85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7da90e14d33fb19b421e0cd5a9219ac356952e83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161454"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196720"
 ---
 # <a name="prepare-the-input-trace-data"></a>Vorbereiten der Eingabedaten für die Ablaufverfolgung
   Bevor Sie mit der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay-Funktion eine verteilte Wiedergabe beginnen können, müssen Sie die Eingabedaten der Ablaufverfolgung vorbereiten, indem Sie im Distributed Replay-Verwaltungstool die Vorbereitungsphase initiieren. In der Vorverarbeitungsphase verarbeitet der Distributed Replay Controller die Ablaufverfolgungsdaten und generiert eine Zwischendatei:  
@@ -45,7 +45,7 @@ ms.locfileid: "36161454"
   
 2.  **Initiieren der Vorverarbeitungsphase**: Um die Eingabedaten der Ablaufverfolgung vorzubereiten, müssen Sie das Verwaltungstool mit der **preprocess**-Option ausführen. Weitere Informationen finden Sie unter [Vorverarbeitungsoption &#40;Verwaltungstool „Distributed Replay“&#41;](preprocess-option-distributed-replay-administration-tool.md).  
   
-    1.  Öffnen Sie das Windows-Befehlszeilenprogramm (`CMD.exe`), und navigieren Sie zum Installationspfad des Verwaltungstools Distributed Replay (`DReplay.exe`).  
+    1.  Öffnen Sie die Windows-Eingabeaufforderungs-Hilfsprogramm (`CMD.exe`), und navigieren Sie zum Speicherort Installation des Distributed Replay-Verwaltungstools (`DReplay.exe`).  
   
     2.  (Optional) Wenn der Controllerdienst und das Verwaltungstool auf unterschiedlichen Computern ausgeführt werden, geben Sie über den *controller* -Parameter **-m**den entsprechenden Controller an.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36161454"
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [Distributed Replay: Anforderungen](distributed-replay-requirements.md)   
- [Administration Tool Befehlszeilenoptionen &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Befehlszeilenoptionen für das Verwaltungstool &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [Konfigurieren von Distributed Replay](configure-distributed-replay.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Gruppieren von Attributelementen (Diskretisierung) | Microsoft Docs
+title: Gruppieren von Attributelementen (Diskretisierung) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - NameColumn property
 - discretization [Analysis Services]
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - names [Analysis Services], member groups
 ms.assetid: 5cf2f407-accc-4baf-b54f-7703af338325
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bc2c51f16733597af532fe256c73c69649f0e1c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e07f85d5a6162bed15393d8c255a55cf01b903c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160327"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251452"
 ---
 # <a name="group-attribute-members-discretization"></a>Gruppieren von Attributelementen (Diskretisierung)
   Eine Elementgruppe ist eine vom System generierte Auflistung von aufeinander folgenden Dimensionselementen. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können die Elemente eines Attributs in eine Anzahl von Elementgruppen mithilfe des so genannten Diskretisierungsprozesses gruppiert werden. In der Ebene einer Hierarchie sind entweder nur Elementgruppen oder nur Elemente enthalten. Wenn geschäftliche Benutzer eine Ebene durchsuchen, die Elementgruppen enthält, werden die Namen und Zellwerte der Elementgruppen angezeigt. Die von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zur Unterstützung von Elementgruppen generierten Elemente werden als Gruppierungselemente bezeichnet und ähneln gewöhnlichen Elementen.  
@@ -41,13 +41,13 @@ ms.locfileid: "36160327"
 |`DiscretizationMethod`-Einstellung|Description|  
 |--------------------------------------|-----------------|  
 |`None`|Zeigt die Elemente an.|  
-|`Automatic`|Wählt die Methode, die Daten am besten darstellt: entweder die `EqualAreas` Methode oder die `Clusters` Methode.|  
+|`Automatic`|Wählt die Methode, die Daten am besten darstellt: entweder die `EqualAreas` Methode oder der `Clusters` Methode.|  
 |`EqualAreas`|Versucht, die Elemente des Attributs in Gruppen mit der gleichen Anzahl von Elementen zu unterteilen.|  
 |`Clusters`|Versucht, die Elemente des Attributs in Gruppen zu unterteilen, wobei Stichproben der Trainingsdaten entnommen werden, diese als Initialisierungswerte einer Reihe von zufällig gewählten Punkten verwendet werden und mehrere Iterationen des Clusteringalgorithmus anhand der EM-Clusteringmethode (Expectation Maximization) ausgeführt werden.<br /><br /> Diese Methode ist nützlich, weil sie für jede Verteilungskurve verwendet werden kann. Sie ist jedoch aufwändiger, da sie mehr Verarbeitungszeit beansprucht.|  
   
  Die `DiscretizationNumber`-Eigenschaft von Attributen gibt die Anzahl von anzuzeigenden Gruppen an. Wenn die Eigenschaft auf den Standardwert 0 festgelegt ist, wird in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Anzahl von Gruppen bestimmt, indem abhängig von der `DiscretizationMethod`-Einstellung Stichproben der Daten entnommen oder die Daten gelesen werden.  
   
- Die Sortierreihenfolge der Elemente in den Elementgruppen wird gesteuert, mithilfe der `OrderBy` -Eigenschaft des Attributs. Die Elemente einer Elementgruppe werden auf Basis dieser Sortierreihenfolge fortlaufend sortiert.  
+ Die Sortierreihenfolge der Elemente in den Elementgruppen wird gesteuert durch Verwendung der `OrderBy` -Eigenschaft des Attributs. Die Elemente einer Elementgruppe werden auf Basis dieser Sortierreihenfolge fortlaufend sortiert.  
   
  Mit Elementgruppen wird üblicherweise ein Drilldown von einer Ebene mit wenigen Elementen zu einer Ebene mit mehreren Elementen durchgeführt. Damit die Benutzer einen Drilldown zwischen Ebenen durchführen können, ändern Sie die `DiscretizationMethod`-Eigenschaft des Attributs für die Ebene, die zahlreiche Elemente enthält, von `None` in eine der in der vorigen Tabelle beschriebenen Diskretisierungsmethoden. Beispielsweise enthält eine Client-Dimension eine Client Name-Attributhierarchie mit 500.000 Elementen. Sie können dieses Attribut in Client Groups umbenennen und Festlegen der `DiscretizationMethod` Eigenschaft, um `Automatic` , die Elementgruppen auf der Elementebene der Attributhierarchie anzuzeigen.  
   

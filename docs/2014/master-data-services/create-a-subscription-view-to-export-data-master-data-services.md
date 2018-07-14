@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer Abonnementsicht (Master Data Services) | Microsoft Docs
+title: Erstellen einer Abonnementsicht (Master Data Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscription views [Master Data Services], creating
 - creating subscription views [Master Data Services]
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0b79bd1e50871fb921a3ce2b3fe9e43ab0995a9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 4d8114d933027d5392896f14c33e1ea9685841b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151387"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252282"
 ---
 # <a name="create-a-subscription-view-master-data-services"></a>Erstellen einer Abonnementsicht (Master Data Services)
-  Erstellen Sie eine Abonnementsicht, wenn Sie, erstellen Sie eine Ansicht Ihrer Daten in möchten der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Datenbank für die Verwendung durch abonnementsysteme.  
+  Erstellen Sie eine Abonnementsicht, wenn Sie, erstellen Sie einen Überblick über Ihre Daten in möchten die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Datenbank für die Verwendung durch abonnementsysteme.  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  So führen Sie diese Prozedur aus  
@@ -42,7 +42,7 @@ ms.locfileid: "36151387"
   
 3.  Auf der **Abonnementsichten** auf **Abonnementsicht hinzufügen**.  
   
-4.  In der **Abonnementsicht erstellen** Bereich, in der **Name der Abonnementsicht** geben einen Namen für die Sicht.  
+4.  In der **Abonnementsicht erstellen** Bereich, in der **Name der Abonnementsicht** geben einen Namen für die Ansicht.  
   
 5.  Wählen Sie aus der Liste **Modell** ein Modell aus.  
   

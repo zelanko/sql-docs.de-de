@@ -1,29 +1,28 @@
 ---
-title: Verwalten von Volltextindizes | Microsoft Docs
+title: Verwalten von Volltextindizes | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 28ff17dc-172b-4ac4-853f-990b5dc02fd1
 caps.latest.revision: 8
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9a38476f427cbc2c9630c66020f35c5f7355e9bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9f9dc86071bbed98e835b9b7849c4a1fd4c58f43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150421"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243110"
 ---
 # <a name="manage-full-text-indexes"></a>Verwalten von Volltextindizes
      
-##  <a name="view"></a> Anzeigen und Ändern der Eigenschaften eines Volltextindex-  
+##  <a name="view"></a> Anzeigen und Ändern der Eigenschaften für einen Volltextindex  
   
 #### <a name="to-view-or-change-the-properties-of-a-full-text-index-in-management-studio"></a>So zeigen Sie die Eigenschaften eines Volltextindexes in Management Studio an oder ändern sie  
   
@@ -41,7 +40,7 @@ ms.locfileid: "36150421"
     |----------|-----------------|  
     |**Allgemein**|Ändert die grundlegenden Eigenschaften des Volltextindex. Beinhaltet mehrere änderbare Eigenschaften und eine Reihe von nicht änderbaren Eigenschaften, wie z. B. Datenbankname, Tabellenname und den Namen der Volltextschlüsselspalte. Die änderbaren Eigenschaften lauten:<br /><br /> **Volltextindex-Stoppliste**<br /><br /> **Volltextindizierung aktiviert**<br /><br /> **Änderungsnachverfolgung**<br /><br /> **Sucheigenschaftenliste**<br /><br /> <br /><br /> Weitere Informationen finden Sie unter [Volltextindex Eigenschaften &#40;Seite "Allgemein"&#41;](full-text-index-properties-general-page.md).|  
     |**Spalten**|Zeigt die Tabellenspalten an, die für die Volltextindizierung verfügbar sind. Die ausgewählte Spalte bzw. die Spalten werden volltextindiziert. Sie können beliebig viele verfügbare Spalten auswählen und in den Volltextindex aufnehmen. Weitere Informationen finden Sie unter [Volltextindex Eigenschaften &#40;Seite "Spalten"&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md).|  
-    |**Zeitpläne**|Verwenden Sie diese Seite, um Zeitpläne für einen SQL Server-Agent-Auftrag zu erstellen oder zu verwalten, der eine inkrementelle Tabellenauffüllung für die Auffüllungen des Volltextindexes beginnt. Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](../relational-databases/indexes/indexes.md).<br /><br /> **\*\* Wichtige \* \***  nach dem Beenden der **Volltextindex Eigenschaften** (Dialogfeld), alle neu erstellten Zeitpläne einem SQL Server-Agent-Auftrag (Start Incremental Table Population on zugeordnetist*Database_name*. *TABLE_NAME*).|  
+    |**Zeitpläne**|Verwenden Sie diese Seite, um Zeitpläne für einen SQL Server-Agent-Auftrag zu erstellen oder zu verwalten, der eine inkrementelle Tabellenauffüllung für die Auffüllungen des Volltextindexes beginnt. Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](../relational-databases/indexes/indexes.md).<br /><br /> **\*\* Wichtige \* \***  nach dem Beenden der **Volltextindex Eigenschaften** Dialogfeld alle neu erstellten Zeitpläne einem SQL Server-Agent-Auftrag (Start Incremental Table Population on zugeordnetist*Database_name*. *TABLE_NAME*).|  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] um vorgenommene Änderungen zu speichern und das Dialogfeld **Volltextindexeigenschaften** zu schließen.  
   
@@ -72,7 +71,7 @@ ms.locfileid: "36150421"
   
 #### <a name="to-inquire-whether-a-given-unique-index-is-used-as-the-full-text-key-column"></a>So überprüfen Sie, ob ein bestimmter eindeutiger Index als Volltextschlüsselspalte verwendet wird  
   
-1.  Verwenden Sie eine [SELECT](/sql/t-sql/queries/select-transact-sql)-Anweisung, um die [INDEXPROPERTY](/sql/t-sql/functions/indexproperty-transact-sql)-Funktion aufzurufen. In der Funktion Aufruf, verwenden Sie die OBJECT_ID-Funktion konvertiert den Namen der Tabelle (*Table_name*) in den Tabellen-ID, geben Sie den Namen eines eindeutigen Indexes für die Tabelle, und geben Sie die `IsFulltextKey` -Indexeigenschaft an, wie folgt:  
+1.  Verwenden Sie eine [SELECT](/sql/t-sql/queries/select-transact-sql)-Anweisung, um die [INDEXPROPERTY](/sql/t-sql/functions/indexproperty-transact-sql)-Funktion aufzurufen. In der Funktion aufrufen, verwenden Sie die OBJECT_ID-Funktion den Namen der Tabelle zu konvertieren (*Table_name*) in den Tabellen-ID, geben Sie den Namen eines eindeutigen Indexes für die Tabelle aus, und geben die `IsFulltextKey` -Indexeigenschaft an, wie folgt:  
   
     ```  
     SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );  

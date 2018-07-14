@@ -1,5 +1,5 @@
 ---
-title: Überwachen von Ablaufverfolgungen (XMLA) | Microsoft Docs
+title: Überwachen von Ablaufverfolgungen (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,24 +17,24 @@ helpviewer_keywords:
 - traces [Analysis Services]
 ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6d605586c915963efc86c4e3197e087b8a5f82dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d9df7fd3e22c8e63873584491c7f2051e8897efa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159860"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241620"
 ---
 # <a name="monitoring-traces-xmla"></a>Überwachen von Ablaufverfolgungen (XMLA)
   Sie können die [abonnieren](../xmla/xml-elements-commands/subscribe-element-xmla.md) -Befehl in XML for Analysis (XMLA) zum Überwachen einer vorhandenen Ablaufverfolgungs definiert, die auf einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Der `Subscribe`-Befehl gibt die Ergebnisse einer Ablaufverfolgung als Rowset zurück.  
   
 ## <a name="specifying-a-trace"></a>Festlegen einer Ablaufverfolgung  
- Die [Objekt](../xmla/xml-elements-properties/object-element-xmla.md) Eigenschaft von der `Subscribe` -Befehls muss einen Objektverweis auf entweder enthalten eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instanz oder eine Ablaufverfolgung auf eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instanz. Wenn die `Object`-Eigenschaft nicht festgelegt wird oder wenn in der `Object`-Eigenschaft kein Ablaufverfolgungsbezeichner festgelegt wird, überwacht der `Subscribe`-Befehl die Standardablaufverfolgung der expliziten Sitzung, die im SOAP-Header für den Befehl festgelegt wurde.  
+ Die [Objekt](../xmla/xml-elements-properties/object-element-xmla.md) Eigenschaft der `Subscribe` -Befehls muss einen Objektverweis auf eine enthalten eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instanz oder eine Ablaufverfolgung für eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instanz. Wenn die `Object`-Eigenschaft nicht festgelegt wird oder wenn in der `Object`-Eigenschaft kein Ablaufverfolgungsbezeichner festgelegt wird, überwacht der `Subscribe`-Befehl die Standardablaufverfolgung der expliziten Sitzung, die im SOAP-Header für den Befehl festgelegt wurde.  
   
 ## <a name="returning-results"></a>Zurückgeben von Ergebnissen  
- Der `Subscribe`-Befehl gibt ein Rowset zurück, das die Ablaufverfolgungsereignisse enthält, die von der festgelegten Ablaufverfolgung erfasst wurden. Die `Subscribe` -Befehl gibt Ablaufverfolgungsergebnisse zurück, bis der Befehl abgebrochen wird, indem Sie die ["Abbrechen"](../xmla/xml-elements-commands/cancel-element-xmla.md) Befehl.  
+ Der `Subscribe`-Befehl gibt ein Rowset zurück, das die Ablaufverfolgungsereignisse enthält, die von der festgelegten Ablaufverfolgung erfasst wurden. Die `Subscribe` -Befehl gibt Ablaufverfolgungsergebnisse zurück, bis der Befehl, durch abgebrochen wird die [Abbrechen](../xmla/xml-elements-commands/cancel-element-xmla.md) Befehl.  
   
  Das Rowset enthält die in der folgenden Tabelle aufgeführten Spalten.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36159860"
 |ObjectReference|Zeichenfolge|Die XML-Darstellung des Objektverweises für das in ObjectName festgelegte Objekt.|  
 |NestLevel|Integer|Die Ebene der Transaktion, für die das Ereignis aufgetreten ist.|  
 |NumSegments|Lange ganze Zahl|Die Anzahl der Datensegmente, die von dem Befehl, für den das Ereignis aufgetreten ist, betroffen ist, oder auf die zugegriffen wurde.|  
-|Schweregrad|Integer|Der Schweregrad einer Ausnahme für das Ereignis. Die Spalte kann einen der folgenden Werte enthalten:<br /><br /> Wert: 0 = Erfolg<br /><br /> Wert: 1 = Informationen<br /><br /> Wert: 2 = Warnung<br /><br /> Wert: 3 = Fehler|  
+|Schweregrad|Integer|Der Schweregrad einer Ausnahme für das Ereignis. Die Spalte kann einen der folgenden Werte enthalten:<br /><br /> Wert: 0 = Erfolg<br /><br /> Wert: 1 = Information<br /><br /> Wert: 2 = Warnung<br /><br /> Wert: 3 = Fehler|  
 |Success|Boolean|Gibt an, ob ein Befehl erfolgreich war oder zu einem Fehler geführt hat.|  
 |Fehler|Lange ganze Zahl|Die Fehlernummer des Ereignisses (falls zutreffend).|  
 |ConnectionID|Zeichenfolge|Der Bezeichner der Verbindung, für die das Ereignis aufgetreten ist.|  

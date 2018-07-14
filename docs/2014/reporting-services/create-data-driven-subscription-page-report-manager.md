@@ -1,5 +1,5 @@
 ---
-title: Erstellen eines datengesteuerten Abonnements (Seite) (Berichts-Manager) | Microsoft Docs
+title: Erstellen eines datengesteuerten Abonnementseite (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 814b4653-572a-48c7-847f-b310ba0f3046
 caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: bc1a54e462b3f3219c70aa94caf7fc238942d240
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a43e81feb0cd8e0ecfd134468cd37f3cfac92049
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161513"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223220"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>Datengesteuertes Abonnement erstellen (Seite) (Berichts-Manager)
   Mithilfe der Seiten Erstellen eines datengesteuerten Abonnements können Sie ein Abonnement erstellen oder ändern, das bei jeder Ausführung eine Abonnentendatenbank nach Abonnementinformationen abfragt. Datengesteuerte Abonnements verwenden die Abfrageergebnisse, um die Empfänger des Abonnements, Übermittlungseinstellungen und Berichtsparameterwerte zu bestimmen. Zur Laufzeit führt der Berichtsserver eine Abfrage aus, um die für das Abonnement verwendeten Einstellungen abzurufen. Sie können die Seiten Erstellen eines datengesteuerten Abonnements verwenden, um die Abfrage zu definieren und den Abonnementeinstellungen Abfragewerte zuzuweisen. Die von Ihnen für ein datengesteuertes Abonnement angegebenen Werte und Optionen werden ähnlich wie bei einem Assistenten auf mehrere Seiten verteilt. Insgesamt handelt es sich um sieben Seiten.  
@@ -51,7 +51,7 @@ ms.locfileid: "36161513"
  **Beschreibung**  
  Stellen Sie eine Beschreibung für das Abonnement bereit. Die Beschreibung wird in den Abonnementlisten in **Meine Abonnements** und auf der Registerkarte **Abonnements** des Berichts angezeigt.  
   
- **Geben Sie an, wie Empfänger benachrichtigt werden**  
+ **Geben Sie, wie Empfänger benachrichtigt werden**  
  Wählen Sie die Übermittlungserweiterung aus, die zum Verteilen des Berichts verwendet werden soll. Für jedes Abonnement kann nur eine Übermittlungserweiterung verwendet werden. Die folgenden Optionen stehen zur Verfügung:  
   
 -   Wählen Sie die Option **Berichtsserver-Dateifreigabe** , um Berichte an eine Dateifreigabe zu übermitteln. Der Bericht wird als statische, vom Berichtsserver getrennte Datei übermittelt. Weitere Informationen finden Sie unter [File Share Delivery in Reporting Services](subscriptions/file-share-delivery-in-reporting-services.md).  
@@ -74,7 +74,7 @@ ms.locfileid: "36161513"
  **Verbindungszeichenfolge**  
  Geben Sie eine Verbindungszeichenfolge ein, die zum Herstellen einer Verbindung mit der Datenquelle verwendet werden soll.  
   
- **Verbindung herstellen über**  
+ **Herstellen einer Verbindung mit**  
  Geben Sie die Anmeldeinformationen ein, die beim Herstellen einer Verbindung mit der Datenquelle verwendet werden sollen. Die Anmeldeinformationen werden als verschlüsselte Werte in der Berichtsserver-Datenbank gespeichert.  
   
  Falls die Datenquelle die Windows-Authentifizierung verwendet, wählen Sie die Option **Windows-Anmeldeinformationen verwenden** , wenn eine Verbindung mit der Datenquelle hergestellt wird.  
@@ -113,7 +113,7 @@ ms.locfileid: "36161513"
  Gibt einen Dateinamen für den Bericht an. Die Dateifreigabe-Übermittlungserweiterung übermittelt einen Bericht als statische Anwendungsdatei an einen freigegebenen Ordner. In den meisten Fällen sollten Sie einen Wert aus der Datenbank verwenden, um den Dateinamen zu erstellen. Abhängig davon, wie Sie den Schreibmodus festlegen, führt die Verwendung eines statischen Werts dazu, dass jede neue Übermittlung die vorherige Übermittlung überschreibt.  
   
  **Pfad**  
- Gibt einen freigegebenen Ordner an, auf den über eine Netzwerkverbindung zugegriffen werden kann. Um zu überprüfen, den Ordner, klicken Sie auf **ausführen** im Startmenü, und geben Sie den Ordnerpfad im folgenden Format: \\ \\< Computername\>\\< FreigegebenerOrdnerName\>.  
+ Gibt einen freigegebenen Ordner an, auf den über eine Netzwerkverbindung zugegriffen werden kann. Überprüfen, diesen Ordner kann zugegriffen werden, indem Sie **ausführen** im Startmenü, und geben Sie den Ordnerpfad im folgenden Format: \\ \\< Computername\>\\< FreigegebenerOrdnerName\>.  
   
  **Renderformat**  
  Gibt das Ausgabeformat für die Datei an. Der Berichtsserver kann die Datei in den Anwendungsformaten schreiben, die den Renderingerweiterungen entsprechen, die auf dem Berichtsserver installiert sind.  
@@ -125,7 +125,7 @@ ms.locfileid: "36161513"
  Geben Sie True an, damit eine Dateierweiterung angefügt wird, die dem von Ihnen gewählten Renderformat entspricht.  
   
  **Benutzername**  
- Geben Sie ein Domänenbenutzerkonto an, die Berechtigung zum Hinzufügen von Dateien auf den freigegebenen Ordner im folgenden Format aufweist: \<Domäne >\\< Benutzername\>.  
+ Geben Sie das Domänenbenutzerkonto ein, die Berechtigung zum Hinzufügen von Dateien in den freigegebenen Ordner im folgenden Format: \<Domäne >\\< Benutzername\>.  
   
  **Kennwort**  
  Geben Sie das Kennwort für das Konto ein.  
@@ -151,11 +151,11 @@ ms.locfileid: "36161513"
 ## <a name="schedule-a-subscription-page-7"></a>Planen eines Abonnements (Seite 7)  
  Beim Planen des Abonnements müssen Sie die Häufigkeit angeben, mit der der Bericht übermittelt wird. Die erste Gruppe von Optionen gibt eine Kategorie der Häufigkeit an (Stunde, Tag, Woche usw.). Die zweite Gruppe von Optionen, die angezeigt wird, basiert auf der ersten Auswahl.  
   
- **Stündlich**  
+ **Pro Stunde**  
  Definieren Sie einen Zeitplan mit stündlicher Ausführung.  
   
- **Täglich**  
- Definieren Sie einen Zeitplan, der an den von Ihnen angegebenen Tagen zu einer bestimmten Uhrzeit (Stunde und Minute) ausgeführt wird. Sie können Tage auf folgenden Arten angeben: jede  *\<Tag >*, an jedem Arbeitstag und alle  *\<Anzahl >* Tag. Wenn eine Option ausgewählt ist, stehen die anderen nicht zur Verfügung, auch wenn es so aussieht, als seien die anderen Tage ebenfalls ausgewählt.  
+ **Pro Tag**  
+ Definieren Sie einen Zeitplan, der an den von Ihnen angegebenen Tagen zu einer bestimmten Uhrzeit (Stunde und Minute) ausgeführt wird. Auf folgende Weise die Tage anzugeben: alle  *\<Tag >*, an jedem Arbeitstag und alle  *\<Anzahl >* Tag. Wenn eine Option ausgewählt ist, stehen die anderen nicht zur Verfügung, auch wenn es so aussieht, als seien die anderen Tage ebenfalls ausgewählt.  
   
  **Wöchentlich**  
  Definieren Sie einen Zeitplan, der zu der von Ihnen angegebenen Uhrzeit (Stunde und Minute) wöchentlich ausgeführt wird. Der Zeitabstand kann vollständige Wochen betragen (z. B. alle zwei Wochen) oder Tage innerhalb einer Woche.  
@@ -166,14 +166,14 @@ ms.locfileid: "36161513"
  **Einmal**  
  Definieren Sie einen Zeitplan mit einmaliger Ausführung. Im Abschnitt **Anfangs- und Enddatum** können Sie den Tag angeben, an dem der Zeitplan ausgeführt werden soll. Dieser Zeitplan läuft unmittelbar nach seiner Verarbeitung ab.  
   
- **Anfangs-und Enddatum**  
+ **Start- und Enddatum**  
  Geben Sie das Anfangsdatum für den Beginn der Gültigkeit des Zeitplans und das Enddatum für den Ablauf des Zeitplans an. Zeitpläne laufen ohne Benachrichtigung ab. Nach dem Enddatum kann ein Zeitplan nicht mehr ausgeführt werden.  
   
 ## <a name="saving-the-subscription"></a>Speichern des Abonnements  
  Die Schaltfläche **Fertig stellen** ist aktiviert, wenn ausreichende Informationen für das Abonnement zur Verfügung stehen. Klicken Sie auf **Fertig stellen** , um das Abonnement fertig zu stellen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Berichts-Manager &#40;SSRS im einheitlichen Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Datengesteuerte Abonnements](subscriptions/data-driven-subscriptions.md)   
  [Erstellen eines datengesteuerten Abonnements &#40;SSRS-Tutorial&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   

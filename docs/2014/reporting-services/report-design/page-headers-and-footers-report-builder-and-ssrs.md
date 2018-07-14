@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.pagefooter.fill.f1
 - "10125"
@@ -24,15 +24,15 @@ f1_keywords:
 - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3fcfbe65dae6aaba100eadc122ed0f820f6ac714
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 863a4415bb75b5a5cd4fe017de4ebeca975e32a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161069"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328896"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Seitenkopf- und Seitenfußzeilen (Berichts-Generator und SSRS)
   Ein Bericht kann eine Kopf- und Fußzeile enthalten, die am oberen bzw. unteren Rand jeder Seite verläuft. Kopf- und Fußzeilen können statischen Text, Bilder, Linien, Rechtecke, Rahmen, Hintergrundfarbe, Hintergrundbilder und Ausdrücke enthalten. Ausdrücke enthalten Verweise auf Datasetfelder für Berichte mit genau einem Dataset und Aggregatfunktionsaufrufen mit dem Dataset als Bereich.  

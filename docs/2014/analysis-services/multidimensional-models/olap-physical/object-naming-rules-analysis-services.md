@@ -1,5 +1,5 @@
 ---
-title: Benennungsregeln (Analysis Services)-Objekt | Microsoft Docs
+title: Objektbenennungsregeln (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - objects [Analysis Services], naming
 ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 029d851c7ad8048fab574cc6ae3122719d857378
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c59c295c627c311aaec574ecd04b153004c3c926
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161415"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202080"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Objektbenennungsregeln (Analysis Services)
   In diesem Thema werden Benennungskonventionen für Objekte sowie reservierte Wörter und Zeichen beschrieben, die in Objektnamen, in Code oder Skripts in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] nicht verwendet werden können.  
@@ -73,7 +73,7 @@ ms.locfileid: "36161415"
   
 |Objekt|Ungültige Zeichen|  
 |------------|------------------------|  
-|`Server`|Beachten Sie die Windows-Serverbenennungskonventionen, wenn Sie ein Serverobjekt benennen. Finden Sie unter [Benennungskonventionen (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682856\(v=vs.85\).aspx) für Details.|  
+|`Server`|Beachten Sie die Windows-Serverbenennungskonventionen, wenn Sie ein Serverobjekt benennen. Finden Sie unter [Benennungskonventionen (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682856\(v=vs.85\).aspx) Details.|  
 |`DataSource`|: / \ * &#124; ? "() [] {} <>|  
 |`Level` oder `Attribute`|zugreifen. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} \< >|  
 |`Dimension` oder `Hierarchy`|zugreifen. , ; ' ` : / \ * &#124; ? " & % $ ! + () [] = {} \<, >|  

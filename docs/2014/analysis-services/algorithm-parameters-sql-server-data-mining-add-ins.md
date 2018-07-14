@@ -1,5 +1,5 @@
 ---
-title: Algorithmusparameter (SQL Server Data Mining-Add-ins) | Microsoft Docs
+title: Algorithmusparameter (SQL Server Data Mining-Add-ins) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_STATES
 - FORCED_REGRESSOR
@@ -48,24 +48,24 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY
 ms.assetid: fcdc3f85-813d-4279-90b0-16e26edd008d
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5e8856d824e043c5cb68f18d3b34c9a07ea21375
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a7f640f259375c48584ee33b72e63b082de0a3e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160818"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267676"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>Algorithmusparameter (SQL Server Data Mining-Add-Ins)
   Wenn Sie Data Mining mithilfe der Tabellenanalysetools für Excel durchführen, ist das Konfigurieren des Data Mining-Algorithmus oder der Data Mining-Parameter nicht erforderlich, da die Tools die Daten automatisch analysieren und die optimalen Parameter festlegen. Wenn Sie jedoch das Modell ändern oder ein ganz neues Miningmodell erstellen möchten, können Sie mit dem Data Mining-Client verschiedene Anpassungen vornehmen.  
   
--   Datamining-Modell manuell erstellen, indem Sie auf **erweitert** und dann auf **Modell einer Struktur hinzufügen**.  
+-   Datamining-Modell manuell erstellen, indem Sie auf **erweitert** , und klicken Sie dann auf **Modell einer Struktur hinzufügen**.  
   
--   Verwenden Sie einen der modellierungsassistenten im Data Mining-Client, und klicken Sie auf **Parameter** zum Steuern des Verhaltens von der [!INCLUDE[msCoName](../includes/msconame-md.md)] Datamining-Algorithmen.  
+-   Verwenden Sie einen der modellierungsassistenten im Data Mining-Client, und klicken Sie auf **Parameter** zur Steuerung des Verhaltens von der [!INCLUDE[msCoName](../includes/msconame-md.md)] Datamining-Algorithmen.  
   
--   Klicken Sie auf **Abfrage** den Abfragemodell-Assistenten zu öffnen, und klicken Sie dann auf **erweitert** So öffnen die **Data Mining erweiterten Abfrage-Editor**. In diesem Editor können Sie Modelle anhand von DMX-Vorlagen erstellen.  
+-   Klicken Sie auf **Abfrage** den Abfragemodell-Assistenten zu öffnen, und klicken Sie dann auf **erweitert** zum Öffnen der **erweiterten Data Mining Query Editor**. In diesem Editor können Sie Modelle anhand von DMX-Vorlagen erstellen.  
   
  Sie können auch das Verhalten bereits erstellter Miningmodelle ändern oder Ergebnisse filtern, indem Sie die entsprechenden Parameter im Miningmodell-Viewer festlegen.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36160818"
 |MAXIMUM_SEQUENCE_STATES|Microsoft Sequence Clustering-Algorithmus|Gibt die maximale Anzahl von Status an, die eine Sequenz annehmen kann. Das Festlegen dieses Werts auf eine Zahl größer 100 kann dazu führen, dass das vom Algorithmus erstellte Modell keine aussagekräftigen Informationen enthält.<br /><br /> Der Standardwert ist 64.|  
 |MAXIMUM_SERIES_VALUE|Microsoft Time Series-Algorithmus|Gibt den maximalen Wert an, der für Vorhersagen verwendet werden soll. Dieser Parameter wird zusammen mit MINIMUM_SERIES_VALUE verwendet, um die Vorhersagen auf einen bestimmten Bereich einzuschränken. Sie können beispielsweise festlegen, dass die vorhergesagte Verkaufsmenge an einem Tag niemals die Anzahl der Produkte im Lager überschreiten darf.|  
 |MAXIMUM_STATES|Microsoft Clustering-Algorithmus<br /><br /> Microsoft Neural Network Algorithm<br /><br /> Microsoft Sequence Clustering-Algorithmus|Gibt die maximale Anzahl der vom Algorithmus unterstützten Attributstatus an. Wenn die Anzahl der Status eines Attributs größer als die maximale Anzahl der Status ist, werden vom Algorithmus die gebräuchlichsten Status verwendet, und die restlichen Status werden als fehlend behandelt.<br /><br /> Der Standardwert ist 100.|  
-|MAXIMUM_SUPPORT|Microsoft Association-Algorithmus|Gibt die maximale Anzahl von Fällen, in denen ein Itemset über Unterstützungswerte verfügen kann. Wenn dieser Wert kleiner als 1 ist, entspricht er einem prozentualen Anteil an der Gesamtzahl von Fällen. Wenn dieser Wert größer als 1 ist, stellt der Wert die absolute Anzahl von Fällen an, die das Itemset enthalten können.<br /><br /> Der Standardwert lautet 1.|  
+|MAXIMUM_SUPPORT|Microsoft Association-Algorithmus|Gibt die maximale Anzahl von Fällen, in denen ein Itemset über Unterstützungswerte verfügen kann. Wenn dieser Wert kleiner als 1 ist, entspricht er einem prozentualen Anteil an der Gesamtzahl von Fällen. Wenn dieser Wert größer als 1 ist, stellt der Wert die absolute Anzahl von Fällen, in denen das Itemset enthalten können.<br /><br /> Der Standardwert lautet 1.|  
 |MINIMUM_IMPORTANCE|Microsoft Association-Algorithmus|Gibt den Wichtigkeitsschwellenwert für Zuordnungsregeln an. Regeln, die eine Wichtigkeit aufweisen, die geringer ist als dieser Wert, werden herausgefiltert.|  
 |MINIMUM_ITEMSET_SIZE|Microsoft Association-Algorithmus|Gibt die Mindestanzahl von Elementen an, die in einem Itemset zulässig sind.<br /><br /> Der Standardwert lautet 1.|  
 |MINIMUM_DEPENDENCY_PROBABILITY|Microsoft Naive Bayes-Algorithmus|Gibt die minimale Abhängigkeitswahrscheinlichkeit zwischen Eingabe- und Ausgabeattributen an. Dieser Wert wird verwendet, um die Größe der vom Algorithmus generierten Inhalte zu beschränken. Diese Eigenschaft kann Werte zwischen 0 und 1 annehmen. Größere Werte reduzieren die Anzahl von Attributen im Inhalt des Modells.<br /><br /> Der Standardwert ist 0,5.|  

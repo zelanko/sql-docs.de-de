@@ -1,5 +1,5 @@
 ---
-title: Erstellen ein benutzerdefinierten Sammlungssatzes, der den generischen T-SQL-Abfragesammlertyp (Transact-SQL) verwendet. | Microsoft Docs
+title: Erstellen ein benutzerdefinierten Sammlungssatzes, der den generischen T-SQL-Abfragesammlertyp (Transact-SQL) verwendet. | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - T-SQL Query collector type
 - collection sets [SQL Server], creating custom
 ms.assetid: 6b06db5b-cfdc-4ce0-addd-ec643460605b
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 670110c6d7790d2eca10137234a326721c359ac7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f8b93f05dce24f0da9b63cb7fc80a1328316eae7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36159511"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274836"
 ---
 # <a name="create-a-custom-collection-set-that-uses-the-generic-t-sql-query-collector-type-transact-sql"></a>Erstellen eines benutzerdefinierten Sammlungssatzes, der einen generischen T-SQL-Abfragesammlertyp verwendet (Transact-SQL)
   Sie können auch mithilfe der mit dem Datensammler bereitgestellten gespeicherten Prozeduren einen benutzerdefinierten Sammlungssatz mit Sammelelementen erstellen, die den generischen T-SQL-Abfragesammlertyp verwenden. Das Ausführen dieses Tasks umfasst die Verwendung des Abfrage-Editors in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , um die folgenden Vorgänge durchzuführen:  

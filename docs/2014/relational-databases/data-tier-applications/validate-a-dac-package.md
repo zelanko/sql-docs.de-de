@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data-tier application [SQL Server], validate
 - data-tier application [SQL Server], compare
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - view DAC
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 438b0b847df6877ada5ba1278d6cf57648439820
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 29496d117c1fde896bcf72cc6e485e6b3a1cef62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36160446"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322290"
 ---
 # <a name="validate-a-dac-package"></a>Überprüfen eines DAC-Pakets
   Es wird empfohlen, den Inhalt eines DAC-Pakets vor der Bereitstellung in der Produktionsumgebung sowie die Upgradeaktionen vor dem Aktualisieren einer vorhandenen DAC zu überprüfen. Dies gilt insbesondere für die Bereitstellung von Paketen, die nicht im Unternehmen entwickelt wurden.  
@@ -82,11 +82,11 @@ ms.locfileid: "36160446"
   
 1.  Erstellen Sie ein SMO-Serverobjekt, und legen Sie es auf die Instanz fest, die die anzuzeigende DAC enthält.  
   
-2.  Öffnen einer `ServerConnection` -Objekt und das Herstellen einer Verbindung mit der gleichen Instanz.  
+2.  Öffnen einer `ServerConnection` Objekt und eine Verbindung mit der gleichen Instanz.  
   
 3.  Gibt den DAC-Namen in einer Variablen an.  
   
-4.  Verwenden der `GetDatabaseChanges()` Methode zum Abrufen einer `ChangeResults` -Objekt, und übergeben Sie das Objekt in eine Textdatei, generieren einen einfachen Bericht der neuen, gelöschten und geänderten Objekte.  
+4.  Verwenden der `GetDatabaseChanges()` Methode zum Abrufen einer `ChangeResults` -Objekt, und übergeben Sie das Objekt in eine Textdatei, generieren Sie einen einfachen Bericht der neuen, gelöschten und geänderten Objekte.  
   
 ### <a name="view-database-changes-example-powershell"></a>Anzeigen eines Beispiels für Datenbankänderungen (PowerShell)  
  **Anzeigen eines Beispiels für Datenbankänderungen (PowerShell)**  
@@ -127,13 +127,13 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
 1.  Erstellen Sie ein SMO-Serverobjekt, und legen Sie es auf die Instanz fest, die die bereitgestellte DAC enthält.  
   
-2.  Öffnen einer `ServerConnection` -Objekt und das Herstellen einer Verbindung mit der gleichen Instanz.  
+2.  Öffnen einer `ServerConnection` Objekt und eine Verbindung mit der gleichen Instanz.  
   
 3.  Verwendung `System.IO.File` DAC-Paketdatei zu laden.  
   
 4.  Gibt den DAC-Namen in einer Variablen an.  
   
-5.  Verwenden der `GetIncrementalUpgradeScript()` Methode, um eine Liste der Transact-SQL-Anweisungen ein Upgrade erhalten führen würde, und übergeben Sie die Liste in eine Textdatei.  
+5.  Verwenden der `GetIncrementalUpgradeScript()` -Methode zum Abrufen von einer Liste der Transact-SQL-Anweisungen ein Upgrade ausführen möchten, und übergeben Sie die Liste in eine Textdatei.  
   
 6.  Schließen Sie den Dateidatenstrom, der zum Lesen der DAC-Paketdatei verwendet wurde.  
   
