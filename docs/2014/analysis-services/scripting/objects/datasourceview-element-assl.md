@@ -1,5 +1,5 @@
 ---
-title: DataSourceView-Element (ASSL) | Microsoft Docs
+title: DataSourceView-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DataSourceView element
 ms.assetid: cda26126-8af2-4519-8237-f4a57976a284
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9d1813af76ff460aedb5345156b85e8d9b9667cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2d8f72a69164071af4c9c2346c549cee2a56020b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162126"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324900"
 ---
 # <a name="datasourceview-element-assl"></a>DataSourceView-Element (ASSL)
-  Definiert eine Datenquellensicht, die verwendet werden, indem eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] [Datenbank](database-element-assl.md) Element.  
+  Definiert eine Datenquellensicht ein, die eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] [Datenbank](database-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36162126"
 |Untergeordnete Elemente|[Anmerkungen](../collections/annotations-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [DataSourceID](../properties/id-element-assl.md), [Beschreibung](../properties/description-element-assl.md), [ID](../properties/id-element-assl.md), [ LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [Namen](../properties/name-element-assl.md), [Schema](../properties/schema-element-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.DataSourceView>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.DataSourceView>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Database-Element &#40;ASSL&#41;](database-element-assl.md)   

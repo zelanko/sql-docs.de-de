@@ -1,5 +1,5 @@
 ---
-title: ADOMD.NET-Clientfunktionalität | Microsoft Docs
+title: ADOMD.NET-Clientfunktionalität | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,21 +15,21 @@ helpviewer_keywords:
 - ADOMD.NET, functionality
 ms.assetid: 0f5e16a1-dc2d-4c87-8551-985921bf069b
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5fa854ebf8a67878d17b6e01b5cf8e70fe869d88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85e9ff2d42c61b97822e4715af7b8be3f87b7d0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163020"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261536"
 ---
 # <a name="adomdnet-client-functionality"></a>ADOMD.NET-Clientfunktionalität
   Wie andere [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework-Datenanbieter auch dient ADOMD.NET als Verbindung zwischen einer Anwendung und einer Datenquelle. Im Gegensatz zu anderen .NET Framework-Datenanbietern arbeitet ADOMD.NET jedoch mit analytischen Daten. Um das leisten zu können, unterstützt ADOMD.NET eine Funktionalität, die sich von der anderer .NET Framework-Datenanbieter erheblich unterscheidet. ADOMD.NET ermöglicht nicht nur das Abrufen von Daten, sondern auch das Abrufen von Metadaten und Änderungen an der Struktur des analytischen Datenspeichers:  
   
  **Abrufen von Metadaten**  
- Anwendungen können mehr über die Daten "lernen", die durch Metadatenabruf aus der Datenquelle abgerufen werden können, wobei entweder Schemarowsets oder das Objektmodell verwendet werden. Informationen, wie zum Beispiel die jeweils verfügbaren Key Performance Indicator (KPI)-Arten, die Dimensionen in einem Cube, und die von den Miningmodellen benötigten Parameter, können alle ermittelt werden. Metadaten sind am wichtigsten für *dynamische* Anwendungen, die Benutzereingaben zur Ermittlung des Typs, Tiefe und Umfang der Daten abgerufen werden müssen. Beispiele: Query Analyzer, Microsoft Excel und andere Abfragetools. Metadaten sind weniger wichtig *statische* Anwendungen, die einen vordefinierten Satz von Aktionen ausführen.  
+ Anwendungen können mehr über die Daten "lernen", die durch Metadatenabruf aus der Datenquelle abgerufen werden können, wobei entweder Schemarowsets oder das Objektmodell verwendet werden. Informationen, wie zum Beispiel die jeweils verfügbaren Key Performance Indicator (KPI)-Arten, die Dimensionen in einem Cube, und die von den Miningmodellen benötigten Parameter, können alle ermittelt werden. Metadaten sind am wichtigsten für *dynamische* Anwendungen, die erfordern von Benutzereingaben, um zu bestimmen, Typ, Tiefe und Bereich der Daten abgerufen werden sollen. Beispiele: Query Analyzer, Microsoft Excel und andere Abfragetools. Metadaten sind weniger wichtig *statische* Anwendungen, die einen vordefinierten Satz von Aktionen ausführen.  
   
  Weitere Informationen: [Abrufen von Metadaten aus einer analytischen Datenquelle](retrieving-metadata-from-an-analytical-data-source.md).  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36163020"
   
  Weitere Informationen: [Abrufen von Daten aus einer analytischen Datenquelle](retrieving-data-from-an-analytical-data-source.md).  
   
- **Ändern die Struktur des analytischen Daten**  
+ **Ändern der Struktur Analytischer Daten**  
  ADOMD.NET kann auch verwendet werden, um die Struktur des analytischen Datenspeichers zu ändern. Dies erfolgt zwar in der Regel durch das Analysis Management Objects (AMO)-Objektmodell, doch können Sie auch ADOMD.NET verwenden, um Analysis Services Scripting Language (ASSL)-Befehle zum Erstellen, Ändern oder Löschen von Objekten auf dem Server zu senden.  
   
  Weitere Informationen: [ausführen Befehle für eine analytische Datenquelle](executing-commands-against-an-analytical-data-source.md), [Entwickeln mit Analysis Management Objects &#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md), [Analysis Services Scripting Sprache &#40;ASSL&#41; Verweis](../scripting/analysis-services-scripting-language-assl-for-xmla.md)  

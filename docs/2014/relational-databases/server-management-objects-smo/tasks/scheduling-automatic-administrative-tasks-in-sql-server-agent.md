@@ -1,5 +1,5 @@
 ---
-title: Planen von automatischen, administrativen Tasks im SQL Server-Agent | Microsoft Docs
+title: Planen von automatischen, administrativen Tasks im SQL Server-Agent | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - automatic administrative SMO tasks
 ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fd9f5ca6e2b00893bcf5fea14829d76a18b85fa9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ad4b0fa53b7a15d9ff8118336d0ec0b9d31a4b56
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162651"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256052"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>Planen von automatischen, administrativen Tasks im SQL Server-Agent
-  In SMO werden die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent durch die folgenden Objekte dargestellt:  
+  In SMO werden die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent wird durch die folgenden Objekte dargestellt:  
   
--   Die <xref:Microsoft.SqlServer.Management.Smo.Agent.JobServer> -Objekt verfügt über drei Auflistungen von Aufträgen, Warnungen und Operatoren.  
+-   Die <xref:Microsoft.SqlServer.Management.Smo.Agent.JobServer> Objekt verfügt über drei Auflistungen von Aufträgen, Warnungen und Operatoren.  
   
 -   Das <xref:Microsoft.SqlServer.Management.Smo.Agent.OperatorCollection>-Objekt stellt eine Liste von Pager-, E-Mail-Adressen und NET SEND-Operatoren dar, die automatisch über den Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent über Ereignisse benachrichtigt werden können.  
   
@@ -40,9 +40,9 @@ ms.locfileid: "36162651"
  Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent-Objekte befinden sich im <xref:Microsoft.SqlServer.Management.Smo.Agent>-Namespace.  
   
 ## <a name="examples"></a>Beispiele  
- Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual Basic SMO-Projekts in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oder [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [erstellen Sie eine Visual Basic-SMO-Projekts in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oder [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
-1.  Für Programme, von denen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent, müssen Sie auch die `Imports` Anweisung, um den Agent-Namespace zu qualifizieren. Fügen Sie die Anweisung nach den anderen `Imports` -Anweisungen und vor jeglichen Deklarationen in der Anwendung, z. B.:  
+1.  Für Programme, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent, müssen Sie enthalten die `Imports` Anweisung, um den Agent-Namespace zu qualifizieren. Fügen Sie die Anweisung nach den anderen `Imports` Anweisungen, vor jeglichen Deklarationen in der Anwendung, z.B.:  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   
@@ -171,7 +171,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-basic"></a>Erstellen einer Warnung in Visual Basic  
  In diesem Codebeispiel wird eine Warnung erstellt, die von einer Leistungsbedingung ausgelöst wird. Die Bedingung muss in einem bestimmten Format bereitgestellt werden:  
   
- **Objektname | "CounterName" | Instanz | ComparisionOp | CompValue**  
+ **ObjectName | CounterName | Instanz | ComparisionOp | CompValue**  
   
  Ein Operator ist für die Warnungsbenachrichtigung erforderlich. Die <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> -Typ erfordert eckige Klammern, da `operator` ist ein Visual Basic-Schlüsselwort.  
   
@@ -180,7 +180,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-c"></a>Erstellen einer Warnung in Visual C#  
  In diesem Codebeispiel wird eine Warnung erstellt, die von einer Leistungsbedingung ausgelöst wird. Die Bedingung muss in einem bestimmten Format bereitgestellt werden:  
   
- **Objektname | "CounterName" | Instanz | ComparisionOp | CompValue**  
+ **ObjectName | CounterName | Instanz | ComparisionOp | CompValue**  
   
  Ein Operator ist für die Warnungsbenachrichtigung erforderlich. Die <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> -Typ erfordert eckige Klammern, da `operator` ist eine [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] Schlüsselwort.  
   
@@ -213,7 +213,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-powershell"></a>Erstellen einer Warnung in PowerShell  
  In diesem Codebeispiel wird eine Warnung erstellt, die von einer Leistungsbedingung ausgelöst wird. Die Bedingung muss in einem bestimmten Format bereitgestellt werden:  
   
- **Objektname | "CounterName" | Instanz | ComparisionOp | CompValue**  
+ **ObjectName | CounterName | Instanz | ComparisionOp | CompValue**  
   
  Ein Operator ist für die Warnungsbenachrichtigung erforderlich. Die <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> -Typ erfordert eckige Klammern, da `operator` ist eine [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] Schlüsselwort.  
   
@@ -249,12 +249,12 @@ $op.Drop()
 ```  
   
 ## <a name="allowing-user-access-to-subsystem-by-using-a-proxy-account-in-visual-basic"></a>Zulassen des Benutzerzugriffs auf das Subsystem mit einem Proxykonto in Visual Basic  
- Dieses Codebeispiel zeigt, wie Sie einem Benutzerzugriff auf ein festgelegtes Subsystem mit zulassen der <xref:Microsoft.SqlServer.Management.Smo.Agent.ProxyAccount.AddSubSystem%2A> Methode der <xref:Microsoft.SqlServer.Management.Smo.Agent.ProxyAccount> Objekt.  
+ Dieses Codebeispiel zeigt, wie ein Benutzerzugriff auf ein bestimmtes Subsystem mit der <xref:Microsoft.SqlServer.Management.Smo.Agent.ProxyAccount.AddSubSystem%2A> Methode der <xref:Microsoft.SqlServer.Management.Smo.Agent.ProxyAccount> Objekt.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBAgent2](SMO How to#SMO_VBAgent2)]  -->  
   
 ## <a name="allowing-user-access-to-subsystem-by-using-a-proxy-account-in-visual-c"></a>Zulassen des Benutzerzugriffs auf das Subsystem mit einem Proxykonto in Visual C#  
- Dieses Codebeispiel zeigt, wie Sie einem Benutzerzugriff auf ein festgelegtes Subsystem mit zulassen der <xref:Microsoft.SqlServer.Management.Smo.Agent.ProxyAccount.AddSubSystem%2A> Methode der <xref:Microsoft.SqlServer.Management.Smo.Agent.ProxyAccount> Objekt.  
+ Dieses Codebeispiel zeigt, wie ein Benutzerzugriff auf ein bestimmtes Subsystem mit der <xref:Microsoft.SqlServer.Management.Smo.Agent.ProxyAccount.AddSubSystem%2A> Methode der <xref:Microsoft.SqlServer.Management.Smo.Agent.ProxyAccount> Objekt.  
   
 ```  
 //Connect to the local, default instance of SQL Server.   

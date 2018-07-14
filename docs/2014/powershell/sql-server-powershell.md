@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: e66e94d1b49ecb275ba1422a6c7ee16c1eddc3f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f605305a86295f8b2e91aa7300086c5827e683d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162732"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271136"
 ---
 # <a name="sql-server-powershell"></a>SQL Server-PowerShell
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] unterstützt Windows PowerShell, ein leistungsstarkes Skriptshell, mit der Administratoren und Entwickler die Serververwaltung und die Anwendungsbereitstellung automatisieren können. Die Windows PowerShell-Sprache unterstützt komplexere Logik als [!INCLUDE[tsql](../includes/tsql-md.md)] -Skripts und ermöglicht [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Administratoren dadurch die Erstellung stabiler Verwaltungsskripts. Windows PowerShell-Skripts können außerdem dazu verwendet werden, andere [!INCLUDE[msCoName](../includes/msconame-md.md)] -Serverprodukte zu verwalten. So steht Administratoren eine serverübergreifende allgemeine Skriptsprache zur Verfügung.  
@@ -42,8 +42,8 @@ ms.locfileid: "36162732"
 |----------------------|-----------|  
 |Beschreibt den bevorzugten Mechanismus zum Ausführen der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell-Komponenten zum Öffnen einer PowerShell-Sitzung und laden die `sqlps` Modul. Das `sqlps`-Modul lädt in den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell-Anbieter und die Cmdlets und die vom Anbieter und den Cmdlets verwendeten SQL Server Management Object-Assemblys (SMO).|[Importieren des SQLPS-Moduls](../database-engine/import-the-sqlps-module.md)|  
 |Beschreibt, wie nur die SMO-Assemblys ohne den Anbieter oder die Cmdlets geladen werden.|[Laden der SMO-Assemblys in Windows PowerShell](load-the-smo-assemblies-in-windows-powershell.md)|  
-|Beschreibt, wie eine Windows-PowerShell-Sitzungen durch Rechtsklick auf einen Knoten im **Objekt-Explorer**ausgeführt wird. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Startet eine Windows PowerShell-Sitzung, lädt die `sqlps` Modul, und legt den SQL Server-anbieterpfad auf das ausgewählte Objekt fest.|[Ausführen von Windows PowerShell über SQL Server Management Studio](run-windows-powershell-from-sql-server-management-studio.md)|  
-|Beschreibt, wie Auftragsschritte des SQL Server-Agents erstellt werden, die ein Windows PowerShell-Skript ausführen. Die Aufträge können dann zum Ausführen zu bestimmten Zeitpunkten oder als Reaktion auf Ereignisse geplant werden.|[Führen Sie Windows PowerShell-Schritten in SQL Server-Agent] (run-windows-powershell-steps-in-sql-server-agent.md
+|Beschreibt, wie eine Windows-PowerShell-Sitzungen durch Rechtsklick auf einen Knoten im **Objekt-Explorer**ausgeführt wird. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Startet eine Windows PowerShell-Sitzung, lädt die `sqlps` -Modul, und legt den Pfad des SQL Server-Anbieters auf das ausgewählte Objekt fest.|[Ausführen von Windows PowerShell über SQL Server Management Studio](run-windows-powershell-from-sql-server-management-studio.md)|  
+|Beschreibt, wie Auftragsschritte des SQL Server-Agents erstellt werden, die ein Windows PowerShell-Skript ausführen. Die Aufträge können dann zum Ausführen zu bestimmten Zeitpunkten oder als Reaktion auf Ereignisse geplant werden.|[Ausführen von Windows-PowerShell-Schritten in SQL Server-Agent] (run-windows-powershell-steps-in-sql-server-agent.md
 )|  
 |Beschreibt, wie der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anbieter zum Navigieren in einer Hierarchie von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Objekten verwendet wird.|[SQL Server PowerShell-Anbieter](sql-server-powershell-provider.md)|  
 |Beschreibt, wie die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Cmdlets verwendet werden, die [!INCLUDE[ssDE](../includes/ssde-md.md)] -Aktionen wie Ausführen eines [!INCLUDE[tsql](../includes/tsql-md.md)] -Skripts angeben.|[Verwenden der Datenbank-Engine-Cmdlets](../database-engine/use-the-database-engine-cmdlets.md)|  

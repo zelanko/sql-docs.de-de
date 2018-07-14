@@ -1,5 +1,5 @@
 ---
-title: MDSCHEMA_SETS-Rowset | Microsoft Docs
+title: MDSCHEMA_SETS-Rowset | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_SETS rowset
 ms.assetid: abb00dc0-2b83-48d6-b2ba-6615c1488d06
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: edc33b87256fb680225eaaa087ff655be1b82851
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fecc8167d697be2195c9ae44e214afcbc1f3a05b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162383"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275476"
 ---
 # <a name="mdschemasets-rowset"></a>MDSCHEMA_SETS-Rowset
   Beschreibt alle Sätze, die zurzeit in einer Datenbank definiert werden, einschließlich Sätzen im Bereich einer Sitzung.  
@@ -45,7 +45,7 @@ ms.locfileid: "36162383"
 |`EXPRESSION`|`DBTYPE_WSTR`||Der Ausdruck für den Satz.|  
 |`DIMENSIONS`|`DBTYPE_WSTR`||Eine durch Trennzeichen getrennte Liste der in dem Satz enthaltenen Hierarchien.|  
 |`SET_CAPTION`|`DBTYPE_WSTR`||Eine Bezeichnung oder Beschriftung, die dem Satz zugeordnet ist. Die Bezeichnung oder Beschriftung dient hauptsächlich zu Anzeigezwecken.|  
-|`SET_DISPLAY_FOLDER`|`DBTYPE_WSTR`||Eine Zeichenfolge, die den Pfad des Anzeigeordners angibt, der von der Clientanwendung zum Anzeigen der Menge verwendet wird. Das Trennzeichen für Ordnerebenen wird von der Clientanwendung definiert. Zu den Tools und Clients, die vom [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], den umgekehrten Schrägstrich (\\) ebenentrennzeichen ist. Um mehrere Anzeigeordner bereitzustellen, verwenden Sie ein Semikolon (;), um die Ordner zu trennen.|  
+|`SET_DISPLAY_FOLDER`|`DBTYPE_WSTR`||Eine Zeichenfolge, die den Pfad des Anzeigeordners angibt, der von der Clientanwendung zum Anzeigen der Menge verwendet wird. Das Trennzeichen für Ordnerebenen wird von der Clientanwendung definiert. Für Tools und Clients, die vom [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], den umgekehrten Schrägstrich (\\) ebenentrennzeichen ist. Um mehrere Anzeigeordner bereitzustellen, verwenden Sie ein Semikolon (;), um die Ordner zu trennen.|  
 |`SET_EVALUATION_CONTEXT`|`DBTYPE_I4`||Der Kontext für den Satz. Der Satz kann statisch oder dynamisch sein.<br /><br /> Diese Spalte kann einen der folgenden Werte besitzen:<br /><br /> -MDSET_RESOLUTION_STATIC = 1<br />-MDSET_RESOLUTION_DYNAMIC = 2|  
   
  Das Rowset wird sortiert nach `CATALOG_NAME`, `SCHEMA_NAME`, `CUBE_NAME`.  
@@ -61,7 +61,7 @@ ms.locfileid: "36162383"
 |`SET_NAME`|`DBTYPE_WSTR`|Optional.|  
 |`SCOPE`|`DBTYPE_I4`|Optional.|  
 |`HIERARCHY_UNIQUE_NAME`|`DBTYPE_WSTR`|Optional.|  
-|`CUBE_SOURCE`|`DBTYPE_UI2`|Optional. **Hinweis:** kann nur eine Hierarchie enthalten sein, und nur die benannten Mengen, deren Hierarchien den Einschränkungen exakt zurückgegeben werden.|  
+|`CUBE_SOURCE`|`DBTYPE_UI2`|Optional. **Hinweis:** kann nur eine Hierarchie eingefügt werden, und nur die benannten Mengen, deren Hierarchien den Einschränkungen exakt werden zurückgegeben.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [OLE DB für OLAP-Schemarowsets](ole-db-for-olap-schema-rowsets.md)  

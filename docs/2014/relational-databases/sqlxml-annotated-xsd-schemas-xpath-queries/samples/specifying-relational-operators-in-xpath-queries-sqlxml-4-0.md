@@ -1,5 +1,5 @@
 ---
-title: Angeben von relationalen Operatoren in XPath-Abfragen (SQLXML 4.0) | Microsoft Docs
+title: Angeben von relationalen Operatoren in XPath-Abfragen (SQLXML 4.0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,29 +17,29 @@ helpviewer_keywords:
 - operators [SQLXML]
 ms.assetid: 177a0eb2-11ef-4459-a317-485a433ee769
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9d8c77a561c4853db9bba036b33661f1a1f760a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a44253e26443288286a935fcaf06815ebcdeb405
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162918"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329530"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Angeben von relationalen Operatoren in XPath-Abfragen (SQLXML 4.0)
-  In den folgenden Beispielen wird gezeigt, wie relationale Operatoren in XPath-Abfragen angegeben werden. Die XPath-Abfragen in diesen Beispielen werden für das in SampleSchema1.xml enthaltene Zuordnungsschema angegeben. Informationen zu diesem Beispielschema finden Sie unter [Beispiel Annotated XSD-Schema für XPath-Beispiele &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  In den folgenden Beispielen wird gezeigt, wie relationale Operatoren in XPath-Abfragen angegeben werden. Die XPath-Abfragen in diesen Beispielen werden für das in SampleSchema1.xml enthaltene Zuordnungsschema angegeben. Weitere Informationen zu diesem Beispielschema finden Sie unter [Annotated XSD-Beispielschema für XPath-Beispiele &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-specify-relational-operator"></a>A. Angeben relationaler Operatoren  
- Diese XPath-Abfrage gibt die untergeordneten Elemente des der  **\<Kunden >** Element, in dem die **CustomerID** Attributwert "1" ist und wo untergeordneten  **\<Reihenfolge >** Elemente enthalten einen  **\<OrderDetail >** untergeordnetes Element mit einem **OrderQty** Attribut mit einem Wert größer als 3:  
+ Diese XPath-Abfrage gibt die untergeordneten Elemente des der  **\<Kunden >** Element, in dem die **"CustomerID"** Attributwert "1" ist und wo alle untergeordneten  **\<Reihenfolge >** Elemente enthalten einen  **\<OrderDetail >** untergeordnetes Element mit einem **OrderQty** Attribut mit einem Wert größer als 3:  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- Die Filter Klammern angegebenen Prädikat der  **\<Kunden >** Elemente. Nur die  **\<Kunden >** Elemente, die in mindestens einem  **\<OrderDetail >** zurückgegben einen OrderQty-Attributwert größer als 3 zurückgegeben werden.  
+ In den Filtern Klammern angegebenen Prädikat der  **\<Kunden >** Elemente. Nur die  **\<Kunden >** Elemente, die in mindestens einem  **\<OrderDetail >** "Enkel" mit einem OrderQty-Attributwert größer "3" zurückgegeben werden.  
   
  Die `child`-Achse ist die Standardachse. Daher kann die Abfrage wie folgt angegeben werden:  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36162918"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Im Folgenden finden Sie das Resultset der Vorlagenausführung:  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36162918"
 ```  
   
 ### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. Angeben eines relationalen Operators in der XPath-Abfrage und Ergebnisvergleich mit boolescher Funktion  
- Diese Abfrage gibt alle dem  **\<Reihenfolge >** -Element untergeordneten Knoten des Kontextknotens ein **SalesPersonID** Attribut-Wert, der kleiner als 270 aufweist:  
+ Diese Abfrage gibt alle dem  **\<Reihenfolge >** -Elemente des Kontextknotens aus, die eine **SalesPersonID** Attribut-Wert, der kleiner als 270 aufweist:  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  
@@ -121,7 +121,7 @@ ms.locfileid: "36162918"
   
 3.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen.  
   
-     Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Im Folgenden finden Sie einen Auszug aus dem Resultset der Vorlagenausführung:  
   

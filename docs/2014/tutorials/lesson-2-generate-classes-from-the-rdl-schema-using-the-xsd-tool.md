@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 2: Generieren von Klassen aus dem RDL-Schema mithilfe des XSD-Tools | Microsoft Docs'
+title: 'Lektion 2: Generieren von Klassen aus dem RDL-Schema mithilfe des Xsd-Tools | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a81c87f1-7977-4b30-b6ac-b38b3e2b6398
 caps.latest.revision: 13
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 67cbc84882683fcb31d6b42f69274d5166556450
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e8a9a92d8c56bba953efc80cf40c999887f63e45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162162"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253232"
 ---
 # <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>Lektion 2: Generieren von Klassen aus dem RDL-Schema mithilfe des XSD-Tools
   Nachdem Sie das [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]-Projekt erstellt haben, rufen Sie eine lokale Kopie des Berichtsdefinitionsschemas ab, und führen Sie das XML-Schemadefinitionstool (Xsd.exe) aus.  
@@ -36,7 +36,7 @@ ms.locfileid: "36162162"
   
 3.  Navigieren Sie zum Speicherort, in dem Sie erstellt haben, Ihre [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Projekt, und speichern Sie das Schema mit dem Dateinamen ReportDefinition.xsd.  
   
-4.  Nachdem die Datei gespeichert wurde, öffnen Sie eine Instanz von der [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] Eingabeaufforderung. Um eine Instanz der Eingabeaufforderung zu öffnen, klicken Sie auf das Startmenü, zeigen Sie auf **Programme**, zeigen Sie auf **Microsoft Visual Studio 2010**, zeigen Sie auf **Visual Studio-Tools** , und klicken Sie auf **Visual Studio-Eingabeaufforderung (2010)**.  
+4.  Nachdem die Datei gespeichert wurde, öffnen Sie eine Instanz von der [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] Eingabeaufforderung. Um eine Instanz der Eingabeaufforderung zu öffnen, klicken Sie im Startmenü, zeigen Sie auf **Programme**, zeigen Sie auf **Microsoft Visual Studio 2010**, zeigen Sie auf **Visual Studio-Tools** , und klicken Sie auf **Visual Studio-Eingabeaufforderung (2010)**.  
   
 5.  Ändern Sie den aktuellen Pfad in den Speicherort, an dem Sie die Datei ReportDefinition.xsd gespeichert haben:  
   
@@ -53,13 +53,13 @@ ms.locfileid: "36162162"
 7.  Fügen Sie dem Projekt ReportDefinition.xsd hinzu. Klicken Sie im Menü **Projekt** auf **Vorhandenes Element hinzufügen**. Navigieren Sie zum Speicherort der Datei ReportDefinition.xsd, wählen Sie ReportDefinition.xsd aus, und klicken Sie auf **Hinzufügen**.  
   
     > [!NOTE]  
-    >  Nachdem Sie die Datei "ReportDefinition.xsd" zum Projekt hinzugefügt haben, sehen Sie im **Projektmappen-Explorer** , dass die Datei ReportDefinition.cs (. vb) nicht vorhanden ist. Um die Datei anzuzeigen, klicken Sie neben der Datei ReportDefinition.xsd auf die Schaltfläche zum Erweitern/Reduzieren.  
+    >  Nachdem Sie das Projekt die Datei ReportDefinition.xsd hinzugefügt haben, sehen Sie im **Projektmappen-Explorer** , dass die Datei ReportDefinition.cs (. vb) nicht vorhanden ist. Um die Datei anzuzeigen, klicken Sie neben der Datei ReportDefinition.xsd auf die Schaltfläche zum Erweitern/Reduzieren.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- In der nächsten Lektion schreiben Sie Code, um eine Berichtsdefinition mithilfe der aus dem RDL-Schema generierten Klassen von einem Berichtsserver zu laden. Finden Sie unter [Lesson 3: Laden Sie eine Berichtsdefinition vom Berichtsserver](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md).  
+ In der nächsten Lektion schreiben Sie Code, um eine Berichtsdefinition mithilfe der aus dem RDL-Schema generierten Klassen von einem Berichtsserver zu laden. Finden Sie unter [Lektion 3: Laden einer Berichtsdefinition vom Berichtsserver](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Aktualisieren von Berichten mithilfe von Klassen, die aus dem RDL-Schema generierten &#40;SSRS-Lernprogramm&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+ [Aktualisieren von Berichten mithilfe von Klassen, die aus dem RDL-Schema generiert &#40;SSRS-Tutorial&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [Berichtsdefinitionssprache (SSRS)](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

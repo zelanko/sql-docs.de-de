@@ -1,5 +1,5 @@
 ---
-title: WMI-Verbindungs-Manager-Editor | Microsoft Docs
+title: WMI-Verbindungs-Manager-Editor | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmiconnection.f1
 helpviewer_keywords:
 - WMI Connection Manager Editor
 ms.assetid: 0ef2c913-0779-4a07-989e-3361cd83170b
 caps.latest.revision: 27
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 092b52765cefdb24004e94e5963f6905f3beab5b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 53f403d9c4fd109e9d468658a8455f0ac06d1bb6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162962"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269096"
 ---
 # <a name="wmi-connection-manager-editor"></a>WMI-Verbindungs-Manager-Editor
   Mithilfe des Dialogfelds **WMI-Verbindungs-Manager** geben Sie eine WMI-Verbindung (Microsoft Windows Management Instrumentation) mit einem Server an.  
@@ -57,7 +57,7 @@ ms.locfileid: "36162962"
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [WMI-Provider for Configuration Management Concepts](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)   
+ [WMI-Anbieter für Configuration Management Concepts](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)   
  [Konzepte des WMI-Anbieters für Serverereignisse](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
   

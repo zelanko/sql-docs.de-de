@@ -1,5 +1,5 @@
 ---
-title: DefaultDetails-Element (CSDLBI) | Microsoft Docs
+title: DefaultDetails-Element (CSDLBI) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 05a08baa-23cc-4011-9c2e-f60a20bb87da
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2b10c8b155cb0f06754ed6c2bc45062ae5e69898
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 708e829f1af3ebc9d727e3abfd6643913cd460f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162360"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330230"
 ---
 # <a name="defaultdetails-element-csdlbi"></a>DefaultDetails-Element (CSDLBI)
   Das DefaultDetails-Element stellt eine Liste mit Eigenschaftsverweisen dar, die zusammen den "Standardfeldsatz" von Spalten in der Tabelle definieren. Jede Eigenschaft kann nur auf ein Measure oder auf eine Spalte verweisen.  

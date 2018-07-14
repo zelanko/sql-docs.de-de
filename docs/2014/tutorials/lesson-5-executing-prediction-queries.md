@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 5: Ausführen von Vorhersageabfragen | Microsoft Docs'
+title: 'Lektion 5: Ausführen von Vorhersageabfragen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0037bd2f-aa2d-464b-bf86-b0210f0438b1
 caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 91fd3e41ce0a1055a0f5babe4eb3234bc1ff03bd
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 4240182748de91090e4d4d67dec35eb4ebf74e55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312938"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244076"
 ---
 # <a name="lesson-5-executing-prediction-queries"></a>Lektion 5: Ausführen von Vorhersageabfragen
-  In dieser Lektion verwenden Sie die [SELECT FROM \<Model > PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx) Form der SELECT-Anweisung zum Erstellen von zwei verschiedene Arten von Vorhersagen auf Grundlage der Entscheidungsstruktur zu modellieren Sie erstellt haben, im [ Lektion 2: Hinzufügen von Miningmodellen für die Miningstruktur Association](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Diese Vorhersagetypen werden weiter unten definiert.  
+  In dieser Lektion verwenden Sie die [SELECT FROM \<Model > PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx) Form der SELECT-Anweisung zum Erstellen von zwei verschiedene Arten von Vorhersagen auf Grundlage der Entscheidungsstruktur Modellieren Sie erstellt haben, im [ Lektion 2: Hinzufügen von Miningmodellen für die Miningstruktur Association](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Diese Vorhersagetypen werden weiter unten definiert.  
   
  Singleton-Abfrage  
  Verwenden Sie eine SINGLETON-Abfrage, um Ad-hoc-Werte bereitzustellen, wenn Sie Vorhersagen treffen. Sie können beispielsweise bestimmen, ob ein einzelner Kunde wahrscheinlich ein Fahrradkäufer ist, indem Sie Eingaben wie die Pendelstrecke, die Postleitzahl oder die Anzahl der Kinder des Kunden an die Abfrage übergeben. Die SINGLETON-Abfrage gibt basierend auf diesen Eingaben einen Wert zurück, der angibt, wie wahrscheinlich es ist, dass die Person ein Fahrrad kauft.  
@@ -80,7 +80,7 @@ ORDER BY <expression>
   
 #### <a name="to-create-a-singleton-prediction-query"></a>So erstellen Sie eine SINGLETON-Vorhersageabfrage  
   
-1.  In **Objektexplorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX**.  
+1.  In **Objekt-Explorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX**.  
   
      Der Abfrage-Editor wird mit einer neuen leeren Abfrage geöffnet.  
   
@@ -98,7 +98,7 @@ ORDER BY <expression>
     [Bike Buyer] AS Buyer, PredictHistogram([Bike Buyer]) AS Statistics  
     ```  
   
-     Die AS-Anweisung wird verwendet, um einen Alias für von der Abfrage zurückgegebene Spalten zu erstellen. Die ["PredictHistogram"](/sql/dmx/predicthistogram-dmx) Funktion gibt Statistiken zur Vorhersage, einschließlich der Unterstützung und die Wahrscheinlichkeit zurück. Weitere Informationen zu den Funktionen, die in einer vorhersageanweisung verwendet werden können, finden Sie unter [Funktionen &#40;DMX&#41;](/sql/dmx/functions-dmx).  
+     Die AS-Anweisung wird verwendet, um einen Alias für von der Abfrage zurückgegebene Spalten zu erstellen. Die [PredictHistogram](/sql/dmx/predicthistogram-dmx) Funktion gibt Statistiken zur Vorhersage, einschließlich der Wahrscheinlichkeit und Unterstützungswert zurück. Weitere Informationen zu den Funktionen, die in einer vorhersageanweisung verwendet werden können, finden Sie unter [Funktionen &#40;DMX&#41;](/sql/dmx/functions-dmx).  
   
 4.  Ersetzen Sie Folgendes:  
   
@@ -146,7 +146,7 @@ ORDER BY <expression>
   
 6.  Auf der **Datei** Menü klicken Sie auf **Dmxquery1.DMX speichern**.  
   
-7.  In der **speichern unter** (Dialogfeld), suchen Sie den entsprechenden Ordner, und nennen Sie die Datei `Singleton_Query.dmx`.  
+7.  In der **speichern** Dialogfeld, navigieren Sie zu den entsprechenden Ordner, und nennen Sie die Datei `Singleton_Query.dmx`.  
   
 8.  Klicken Sie auf der Symbolleiste auf die **Execute** Schaltfläche.  
   
@@ -166,7 +166,7 @@ WHERE <where clause, boolean expression,>
 ORDER BY <expression>  
 ```  
   
- Wie in der SINGLETON-Abfrage definieren die ersten beiden Codezeilen die Spalten aus dem von der Abfrage zurückgegebenen Miningmodell sowie aus dem Namen des zum Generieren der Vorhersage verwendeten Miningmodells. Im oberen Bereich \<Anzahl >-Anweisung gibt an, dass die Abfrage nur die Anzahl oder die Ergebnisse zurückgeben \<Anzahl >.  
+ Wie in der SINGLETON-Abfrage definieren die ersten beiden Codezeilen die Spalten aus dem von der Abfrage zurückgegebenen Miningmodell sowie aus dem Namen des zum Generieren der Vorhersage verwendeten Miningmodells. Im oberen Bereich \<Anzahl >-Anweisung gibt an, dass die Abfrage nur zurückgeben wird die Anzahl oder die Ergebnisse anhand des \<Anzahl >.  
   
  Die nächsten Codezeilen definieren die Quelldaten, auf denen die Vorhersagen basieren:  
   
@@ -195,11 +195,11 @@ WHERE <where clause, boolean expression,>
 ORDER BY <expression> [DESC|ASC]  
 ```  
   
- Verwenden Sie ORDER BY in Kombination mit dem oberen \<Anzahl > Anweisung ein, um die Ergebnisse zu filtern, die zurückgegeben werden. In dieser Vorhersage geben Sie z. B. die obersten 10 Fahrradkäufer zurück (sortiert nach der Wahrscheinlichkeit, dass die Vorhersage richtig ist). Mithilfe der [DESC|ASC]-Syntax können Sie festlegen, in welcher Reihenfolge die Ergebnisse angezeigt werden.  
+ Verwenden Sie ORDER BY in Kombination mit dem obersten Element \<Anzahl >-Anweisung, um die Ergebnisse zu filtern, die zurückgegeben werden. In dieser Vorhersage geben Sie z. B. die obersten 10 Fahrradkäufer zurück (sortiert nach der Wahrscheinlichkeit, dass die Vorhersage richtig ist). Mithilfe der [DESC|ASC]-Syntax können Sie festlegen, in welcher Reihenfolge die Ergebnisse angezeigt werden.  
   
 #### <a name="to-create-a-batch-prediction-query"></a>So erstellen Sie eine Batchvorhersageabfrage  
   
-1.  In **Objektexplorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX**.  
+1.  In **Objekt-Explorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX**.  
   
      Der Abfrage-Editor wird mit einer neuen leeren Abfrage geöffnet.  
   
@@ -333,7 +333,7 @@ ORDER BY <expression> [DESC|ASC]
   
 7.  Auf der **Datei** Menü klicken Sie auf **Dmxquery1.DMX speichern**.  
   
-8.  In der **speichern unter** (Dialogfeld), suchen Sie den entsprechenden Ordner, und nennen Sie die Datei `Batch_Prediction.dmx`.  
+8.  In der **speichern** Dialogfeld, navigieren Sie zu den entsprechenden Ordner, und nennen Sie die Datei `Batch_Prediction.dmx`.  
   
 9. Klicken Sie auf der Symbolleiste auf die **Execute** Schaltfläche.  
   
@@ -341,6 +341,6 @@ ORDER BY <expression> [DESC|ASC]
   
  Dies ist der letzte Schritt im Bike Buyer-Lernprogramm. Sie verfügen jetzt über mehrere Miningmodelle, mit denen Sie Ähnlichkeiten zwischen Ihren Kunden untersuchen und vorhersagen können, ob potenzielle Kunden ein Fahrrad kaufen werden.  
   
- Gewusst wie: Verwenden von DMX in einem Market Basket-Szenario finden Sie unter [Market Basket DMX-Lernprogramm](../../2014/tutorials/market-basket-dmx-tutorial.md).  
+ Verwenden von DMX in einem Market Basket-Szenario finden Sie unter [Market Basket DMX-Lernprogramm](../../2014/tutorials/market-basket-dmx-tutorial.md).  
   
   

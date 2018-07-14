@@ -1,5 +1,5 @@
 ---
-title: Cell-Element (MDDataSet) (XMLA) | Microsoft Docs
+title: Cell-Element (MDDataSet) (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Cell element
 ms.assetid: c4ea08a4-f653-4ade-be07-b91eb5b1ef32
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 47d4449fd47cbb3da8e516a593cb8711e2bc2331
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3f07798a28c59597575de08bf5d0f3ea1d7087c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163006"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269506"
 ---
 # <a name="cell-element-mddataset-xmla"></a>Cell-Element (MDDataSet) (XMLA)
-  Enthält Informationen über eine einzelne Zelle, die von einer übergeordneten enthaltenen [CellData](celldata-element-xmla.md) Element.  
+  Enthält Informationen über eine einzelne Zelle, die von einem übergeordneten Element enthaltenen [CellData](celldata-element-xmla.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -97,28 +97,28 @@ ms.locfileid: "36163006"
 ```  
   
 ## <a name="calculating-cell-ordinal-values"></a>Berechnen der Ordinalwerte der Zelle  
- Der Achsenverweis für eine Zelle kann auf Grundlage eines `CellOrdinal`-Attributwerts berechnet werden. Grundsätzlich werden Zellen in einem Dataset nummeriert, als wäre das Dataset eine *p*-dimensionales Array, in dem *p* ist die Anzahl der Achsen. Die Zellen werden in zeilengerichteter Reihenfolge adressiert.  
+ Der Achsenverweis für eine Zelle kann auf Grundlage eines `CellOrdinal`-Attributwerts berechnet werden. Grundsätzlich werden Zellen in einem Dataset nummeriert, als wäre das Dataset eine *p*-, eindimensionales Array, in denen *p* ist die Anzahl der Achsen. Die Zellen werden in zeilengerichteter Reihenfolge adressiert.  
   
  Hier wird angenommen, dass eine Anforderung vier Measures auf den Spalten und einen Crossjoin mit zwei Status mit vier Quartalen auf den Zeilen anfordert. Im Folgenden Dataset-Ergebnis ist die `CellOrdinal`-Eigenschaft des Datasetergebnisses, die fett gedruckt ist, der Satz {9, 10, 11, 13, 14, 15, 17, 18, 19}. Dies ist der Satz, da die Zellen in zeilengerichteter Reihenfolge nummeriert sind (Anfang mit einer `CellOrdinal` von 0 für die Zelle links oben).  
   
 |Status|Quarter|Unit Sales|Store-Cost|Store-Sales|Sales-Count|  
 |-----------|-------------|----------------|----------------|-----------------|-----------------|  
 |California|Q1|16890|14431.09|36175.2|5498|  
-||Q2|18052|15332.02|38396.75|5915|  
-||F3|18370|**15672.83**|**39394.05**|**6014**|  
+||IM 2. QUARTAL|18052|15332.02|38396.75|5915|  
+||3. QUARTAL|18370|**15672.83**|**39394.05**|**6014**|  
 ||Q4|21436|**18094.5**|**45201.84**|**7015**|  
 |Oregon|Q1|19287|**16081.07**|**40170.29**|**6184**|  
-||Q2|15079|12678.96|31772.88|4799|  
-||F3|16940|14273.78|35880.46|5432|  
+||IM 2. QUARTAL|15079|12678.96|31772.88|4799|  
+||3. QUARTAL|16940|14273.78|35880.46|5432|  
 ||Q4|16353|13738.68|34453.44|5196|  
 |Washington|Q1|30114|25240.08|63282.86|9906|  
-||Q2|29479|24953.25|62496.64|9654|  
-||F3|30538|25958.26|64997.38|10007|  
+||IM 2. QUARTAL|29479|24953.25|62496.64|9654|  
+||3. QUARTAL|30538|25958.26|64997.38|10007|  
 ||Q4|34235|29172.72|73016.34|11217|  
   
  Wenn die in der Abbildung gezeigte Formel angewendet wird, hat die Achse k = 0 Uk = 4 Elemente und die Achse k = 1 Uk = 8 Tupel. P = 2 ist die Gesamtzahl der Achsen in der Abfrage. Wenn man die Zelle mit dem Inhalt {Kalifornien, Q3, Speicherkosten} als S0 nimmt, ist die ursprüngliche Summe i = 0 bis 1. Für i = 0 ist die Tupelordinalzahl auf Achse 0 auf {Speicherkosten} 1. Für i = 1 ist die Tupelordinalzahl von {CA, Q3} 2.  
   
- Für i = 0 Ei = 1, dies der Fall ist für ich = 0 die Summe entspricht 1 * 1 = 1 und für ich = 1, die Summe ist 2 (tupelordinalzahl) Mal 4 (der Wert von Ei berechnet als 1 \* 4), oder 8. Die Summe von 1 + 8 ist dann 9, die Zellenordinalzahl für diese Zelle.  
+ Für die ich = 0 Ei = 1, für ich = 0 die Summe wird 1 * 1 = 1 und für die ich = 1, die Summe ist 2 (tupelordinalzahl) Mal 4 (der Wert von Ei berechnet als 1 \* 4), oder 8. Die Summe von 1 + 8 ist dann 9, die Zellenordinalzahl für diese Zelle.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt daher die Struktur des `Cell`-Elements, einschließlich der VALUE-, FORMATTED_VALUE- und FORMAT_STRING-Zelleneigenschaftswerte jeder Zelle.  

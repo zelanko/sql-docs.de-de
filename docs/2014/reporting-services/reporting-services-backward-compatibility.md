@@ -1,5 +1,5 @@
 ---
-title: Abwärtskompatibilität von Reporting Services | Microsoft Docs
+title: Abwärtskompatibilität von Reporting Services | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, backward compatibility
 - SSRS, backward compatibility
@@ -18,13 +18,13 @@ ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
 caps.latest.revision: 39
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b3e162edbaaefd658b08400589d421c08baee438
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e2f060ce868f55b9d919aa437b5109c7b272673b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162624"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272566"
 ---
 # <a name="reporting-services-backward-compatibility"></a>Abwärtskompatibilität von Reporting Services
   In diesem Abschnitt werden die Verhaltensänderungen zwischen den Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]beschrieben. Es werden Funktionen behandelt, die nicht mehr verfügbar sind oder in einer zukünftigen Version entfernt. Es werden außerdem grundlegende Änderungen am Produkt beschrieben, die bekanntermaßen eine benutzerdefinierte Anwendung unterbrechen, die die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Funktionalität enthält.  

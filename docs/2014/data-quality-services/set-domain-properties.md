@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.domainproperties.f1
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ab449fa419e273b09801b966d01d4b920af451df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5705838a12d5f8f7518cb2726a4151a71c4a067f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162553"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226400"
 ---
 # <a name="set-domain-properties"></a>Festlegen von Domäneneigenschaften
   In diesem Thema wird beschrieben, wie Domäneneigenschaften in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) festgelegt werden.  
@@ -38,9 +38,9 @@ ms.locfileid: "36162553"
   
 ##  <a name="Set"></a> Festlegen von Domäneneigenschaften  
   
-1.  Legen Sie Eigenschaften für eine vorhandene Domäne durch Öffnen einer Wissensdatenbank in der domänenverwaltungsaktivität (finden Sie unter [Öffnen einer Wissensdatenbank](../../2014/data-quality-services/open-a-knowledge-base.md)), und wählen Sie dann die entsprechende Domäne in der **Domäne** Liste. In der Standardeinstellung wird die Seite „Domäneneigenschaften“ angezeigt.  
+1.  Legen Sie Eigenschaften für eine vorhandene Domäne durch Öffnen einer Wissensdatenbank in der domänenverwaltungsaktivität (finden Sie unter [Öffnen einer Wissensdatenbank](../../2014/data-quality-services/open-a-knowledge-base.md)), und wählen Sie dann auf die entsprechende Domäne in der **Domäne** Liste. In der Standardeinstellung wird die Seite „Domäneneigenschaften“ angezeigt.  
   
-2.  Legen Sie Eigenschaften für eine neue Domäne, nachdem Sie erstellt wurde, wie in beschrieben [erstellen Sie eine Domäne](../../2014/data-quality-services/create-a-domain.md).  
+2.  Legen Sie Eigenschaften für eine neue Domäne nach deren Erstellung Siehe [erstellen Sie eine Domäne](../../2014/data-quality-services/create-a-domain.md).  
   
 3.  Klicken Sie auf **Fertig stellen** , um die Domänenverwaltungsaktivität abzuschließen, wie in [Beenden der Domänenverwaltungsaktivität](../../2014/data-quality-services/end-the-domain-management-activity.md)beschrieben.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36162553"
 ###  <a name="Speller"></a> Rechtschreibprüfung aktivieren  
  Wenn der Datentyp **Zeichenfolge**ist, klicken Sie hierauf, um die DQS-Rechtschreibprüfung für die Domäne zu aktivieren. Die Rechtschreibprüfung funktioniert nur in Domänen mit dem Datentyp „Zeichenfolge“. Das Kontrollkästchen **Rechtschreibprüfung aktivieren** aktiviert die Rechtschreibprüfung nur für die mit dem Kontrollkästchen verknüpfte Einzeldomäne. Das Kontrollkästchen gilt nicht für eine Verbunddomäne.  
   
- Die Rechtschreibprüfung schlägt Syntax- und Überprüfungskorrekturen für Werte in der Domäne vor. Weitere Informationen finden Sie unter [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md).  
+ Die Rechtschreibprüfung schlägt Syntax- und Überprüfungskorrekturen für Werte in der Domäne vor. Weitere Informationen finden Sie unter [verwenden der DQS-Rechtschreibprüfung](../../2014/data-quality-services/use-the-dqs-speller.md).  
   
 ###  <a name="Syntax"></a> Syntaxfehleralgorithmen deaktivieren  
  Wenn der Datentyp **Zeichenfolge**ist, wählen Sie dies aus, um anzugeben, dass DQS während der Bereinigung keine Syntaxfehler in der Domäne identifiziert. Aktivieren Sie dieses Kontrollkästchen, wenn die Identifizierung von Syntaxfehlern für diese Domäne irrelevant ist. Die Identifizierung von Syntaxfehler ist für eine Seriennummer beispielsweise unwichtig. Dieses Steuerelement ist nur für den Datentyp „Zeichenfolge“ verfügbar. DQS überprüft keine anderen Datentypen als Zeichenfolgen auf Syntaxfehler.  

@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - geometry subtypes [SQL Server]
 - Polygon geometry subtype [SQL Server]
 ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6a76fc29f234418e5f44586f4fb7e121c3395264
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 629dd979c00c9a40915c94c5bfe79d28b746f44a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163098"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238760"
 ---
 # <a name="polygon"></a>Polygon
-  Ein `Polygon` ist eine zweidimensionale Fläche, die als Sequenz von Punkten, die einen äußeren begrenzungsring und NULL oder mehrere innere Ringe definieren gespeichert.  
+  Ein `Polygon` ist eine zweidimensionale Fläche, die als Sequenz von Punkten, die einen äußeren begrenzungsring und NULL oder mehr inneren Ringe definiert gespeichert.  
   
 ## <a name="polygon-instances"></a>Polygon-Instanzen  
- Ein `Polygon` -Instanz kann aus einem Ring, die mindestens drei unterschiedliche Punkte besitzt gebildet werden. Ein `Polygon` Instanz kann auch leer sein.  
+ Ein `Polygon` -Instanz kann aus einem Ring, der mindestens drei unterschiedliche Punkte besitzt gebildet werden. Ein `Polygon` Instanz kann auch leer sein.  
   
  Der äußere und eventuelle innere Ring einer `Polygon` definieren die Begrenzung. Der Raum innerhalb der Ringe definiert das Innere des `Polygon`s.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36163098"
   
 -   Der Anfangspunkt und der Endpunkt der `LineString`-Instanz müssen identisch sein.  
   
- Das folgende Beispiel zeigt akzeptierte `Polygon` Instanzen.  
+ Das folgende Beispiel zeigt die zulässigen `Polygon` Instanzen.  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON EMPTY';  
@@ -85,7 +85,7 @@ DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))'
 ```  
   
 ### <a name="valid-instances"></a>Gültige Instanzen  
- Die inneren Ringe eines eine `Polygon` können selbst berühren und einander an einzelnen tangentialpunkten verweist, aber wenn die inneren Ringe eines eine `Polygon` cross, die Instanz ist ungültig.  
+ Die inneren Ringe einen `Polygon` können sich selbst berühren und einander an einzelnen tangentialpunkten verweist, aber wenn die inneren Ringe einen `Polygon` cross, die Instanz ist ungültig.  
   
  Im folgende Beispiel werden gültige `Polygon` Instanzen.  
   
