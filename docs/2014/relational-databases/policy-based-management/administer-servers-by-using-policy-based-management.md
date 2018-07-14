@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - facet See facets
 - Declarative Management Framework See Policy-Based Management
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - PolicyAdministratorRole role
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 caps.latest.revision: 75
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 559e04757ce185e301f1027a123e203259db651b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 85dce54590cfb35286b6939ae9bffdc91f367fbe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162539"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264456"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Verwalten von Servern mit der richtlinienbasierten Verwaltung
   Die richtlinienbasierte Verwaltung ist ein System zum Verwalten einer oder mehrerer Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Richtlinienadministratoren die richtlinienbasierte Verwaltung einsetzen, verwenden sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] zum Erstellen von Richtlinien, mit denen Entitäten auf dem Server verwaltet werden, beispielsweise die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz, Datenbanken oder andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekte.  

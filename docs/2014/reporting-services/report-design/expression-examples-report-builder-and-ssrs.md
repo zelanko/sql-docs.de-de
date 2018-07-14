@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - page breaks [Reporting Services], expressions
 - green-bar reports [Reporting Services]
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - expressions [Reporting Services], examples
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 caps.latest.revision: 97
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 71b1e580ddb4e56a267fcfaf792858ed3566f2d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 97bfdd80fc183291f21042d11620d0a3e28e0b49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162917"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205040"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Beispiele für Ausdrücke (Berichts-Generator und SSRS)
   Ausdrücke werden in Berichten häufig zum Steuern des Inhalts und der Darstellung des Berichts verwendet. Ausdrücke werden in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]geschrieben und können integrierte Funktionen, benutzerdefinierten Code, Berichts- und Gruppenvariablen sowie benutzerdefinierte Variablen verwenden. Ausdrücke beginnen immer mit einem Gleichheitszeichen (=). Weitere Informationen zum Ausdrucks-Editor und den Verweistypen, die Sie einfügen können, finden Sie unter [Ausdrucksverwendungen in Berichten (Berichts-Generator und SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md) und [Hinzufügen eines Ausdrucks (Berichts-Generator und SSRS)](add-an-expression-report-builder-and-ssrs.md).  
@@ -58,19 +58,19 @@ ms.locfileid: "36162917"
   
  Beispiele für Ausdrücke und die jeweiligen Verwendungsmöglichkeiten finden Sie in den folgenden Themen:  
   
--   [Beispiele für Ausdrücke gruppieren &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
+-   [Beispiele für Gruppierungsausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
 -   [Beispiele für Filtergleichungen &#40;Berichts-Generator und SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
 -   [Häufig verwendete Filter &#40;Berichts-Generator und SSRS&#41;](commonly-used-filters-report-builder-and-ssrs.md)  
   
--   [Melden und gruppieren Sie Variablen Sammlungen Verweise &#40;Berichts-Generator und SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
+-   [Melden und Gruppenvariablenauflistungen &#40;Berichts-Generator und SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
   
  Weitere Informationen zu einfachen und komplexen Ausdrücken, zu den Verwendungsmöglichkeiten von Ausdrücken sowie zu den Verweistypen, die Sie in einen Ausdruck einbinden können, finden Sie unter [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expressions-report-builder-and-ssrs.md). Weitere Informationen zum Kontext, in dem Ausdrücke zum Berechnen von Aggregaten ausgewertet werden, finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen (Berichts-Generator und SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
  Um das Schreiben von Ausdrücken zu erlernen, die viele der Funktionen und Operatoren verwenden, die auch in den beispielhaften Ausdrücken in diesem Thema zum Schreiben von Berichten verwendet werden, finden Sie weitere Informationen unter [Tutorial: Introducing Expressions](../tutorial-introducing-expressions.md).  
   
- Der Ausdrucks-Editor schließt eine hierarchische Sicht der integrierten Funktionen mit ein. Wenn Sie die Funktion auswählen, wird im Wertebereich ein Codebeispiel angezeigt. Weitere Informationen finden Sie unter der [Expression Dialog Box](../expression-dialog-box.md) oder [Expression Dialog Box &#40;Berichts-Generator&#41;](../expression-dialog-box-report-builder.md).  
+ Der Ausdrucks-Editor schließt eine hierarchische Sicht der integrierten Funktionen mit ein. Wenn Sie die Funktion auswählen, wird im Wertebereich ein Codebeispiel angezeigt. Weitere Informationen finden Sie unter den [Expression Dialog Box](../expression-dialog-box.md) oder [Expression Dialog Box &#40;Berichts-Generator&#41;](../expression-dialog-box-report-builder.md).  
   
  Wenn Sie mit dem Berichtsmodellabfrage-Designer eine Datasetabfrage entwerfen, in der ein Berichtsmodell als Datenquelle verwendet wird, verwenden Sie anstelle von Ausdrücken Formeln. Mithilfe dieser Formeln können die Berichtsdaten anhand benutzerdefinierter Berechnungen angegeben werden, die in die Abfrage für die aus der Berichtsmodelldatenquelle zurückzugebenden Daten integriert werden. Weitere Informationen finden Sie unter [Formeln in Berichtsmodellabfragen &#40;Berichts-Generator und SSRS&#41;](formulas-in-report-model-queries-report-builder-and-ssrs.md).  
   
@@ -87,13 +87,13 @@ ms.locfileid: "36162917"
   
 #### <a name="math-functions"></a>Mathematische Funktionen  
   
--   Die `Round` Funktion ist nützlich, um Zahlen auf die nächste Ganzzahl gerundet. Mit dem folgenden Ausdruck wird der Wert 1,3 auf 1 abgerundet:  
+-   Die `Round` Funktion ist nützlich, um die Zahlen auf die nächste Ganzzahl gerundet. Mit dem folgenden Ausdruck wird der Wert 1,3 auf 1 abgerundet:  
   
     ```  
     = Round(1.3)  
     ```  
   
-     Sie können auch einen Ausdruck Rundet einen Wert ein, den Sie ähnlich festlegen, schreiben die `MRound` Funktion in Excel. Multiplizieren Sie den Wert mit einem Faktor, der eine ganze Zahl erzeugt, runden Sie die Zahl, und dividieren Sie dann durch den gleichen Faktor. Verwenden Sie z. B. den folgenden Ausdruck, um 1,3 auf das nächste Vielfache von 0,2 (1,4) zu runden:  
+     Sie können auch einen Ausdruck an Rundet einen Wert ein, den Sie, wie schreiben die `MRound` Funktion in Excel. Multiplizieren Sie den Wert mit einem Faktor, der eine ganze Zahl erzeugt, runden Sie die Zahl, und dividieren Sie dann durch den gleichen Faktor. Verwenden Sie z. B. den folgenden Ausdruck, um 1,3 auf das nächste Vielfache von 0,2 (1,4) zu runden:  
   
     ```  
     = Round(1.3*5)/5  
@@ -101,7 +101,7 @@ ms.locfileid: "36162917"
   
 ####  <a name="DateFunctions"></a> Datumsfunktionen  
   
--   Die `Today` -Funktion bietet das aktuelle Datum. Mit diesem Ausdruck können Sie in einem Textfeld das Datum im Bericht anzeigen oder aber in einem Parameter Daten basierend auf dem aktuellen Datum filtern.  
+-   Die `Today` Funktion stellt das aktuelle Datum bereit. Mit diesem Ausdruck können Sie in einem Textfeld das Datum im Bericht anzeigen oder aber in einem Parameter Daten basierend auf dem aktuellen Datum filtern.  
   
     ```  
     =Today()  
@@ -113,7 +113,7 @@ ms.locfileid: "36162917"
     =DateAdd(DateInterval.Month, 6, Parameters!StartDate.Value)  
     ```  
   
--   Die `Year` Funktion zeigt das Jahr für ein bestimmtes Datum an. Hiermit können Sie Datumsangaben zusammenfassen oder die Jahreszahl für eine Datumsgruppe anzeigen. Dieser Ausdruck liefert das Jahr für eine bestimmte Gruppe von Bestelldaten. Die `Month` -Funktion und andere Funktionen können auch zum Bearbeiten von Datumsangaben verwendet werden. Weitere Informationen finden Sie in der Dokumentation zu [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+-   Die `Year` Funktion zeigt das Jahr für ein bestimmtes Datum an. Hiermit können Sie Datumsangaben zusammenfassen oder die Jahreszahl für eine Datumsgruppe anzeigen. Dieser Ausdruck liefert das Jahr für eine bestimmte Gruppe von Bestelldaten. Die `Month` -Funktion und andere Funktionen können auch zum Bearbeiten von Daten verwendet werden. Weitere Informationen finden Sie in der Dokumentation zu [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
     ```  
     =Year(Fields!OrderDate.Value)  
@@ -161,14 +161,14 @@ ms.locfileid: "36162917"
     =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
     ```  
   
--   Die `DatePart` Funktion gibt einen ganzzahligen Wert mit die angegebene Komponente eines bestimmten Datumswerts zurück. Der folgende Ausdruck gibt das Jahr für den ersten Wert von SellStartDate in DataSet1 zurück. Der Datasetbereich ist angegeben, weil mehrere Datasets im Bericht enthalten sind.  
+-   Die `DatePart` Funktionsergebnis ist einen Ganzzahliger Wert, der die angegebene Komponente eines bestimmten Datumswerts. Der folgende Ausdruck gibt das Jahr für den ersten Wert von SellStartDate in DataSet1 zurück. Der Datasetbereich ist angegeben, weil mehrere Datasets im Bericht enthalten sind.  
   
     ```  
     =Datepart("yyyy", First(Fields!SellStartDate.Value, "DataSet1"))  
   
     ```  
   
--   Die `DateSerial` Funktion gibt einen Date-Wert, der einen angegebenen Werten für Jahr, Monat und Tag mit der auf Mitternacht festgelegten Zeitinformation darstellt. Im folgenden Beispiel wird das Enddatum des vorherigen Monats basierend auf dem aktuellen Monat angezeigt.  
+-   Die `DateSerial` Funktionsergebnis ist einen Date-Wert, der einen angegebenen Werten für Jahr, Monat und Tag, wobei die Uhrzeitinformationen auf Mitternacht festgelegten Zeitinformation darstellt. Im folgenden Beispiel wird das Enddatum des vorherigen Monats basierend auf dem aktuellen Monat angezeigt.  
   
     ```  
     =DateSerial(Year(Now()), Month(Now()), "1").AddDays(-1)  
@@ -199,9 +199,9 @@ ms.locfileid: "36162917"
     =Format(Parameters!StartDate.Value, "D") & " through " &  Format(Parameters!EndDate.Value, "D")    
     ```  
   
-     Wenn das Textfeld nur ein Datum oder eine Zahl enthält, sollten Sie die Formateigenschaft des Textfelds verwenden, um die Formatierung anstelle von der `Format` Funktion innerhalb des Textfelds.  
+     Wenn das Textfeld nur ein Datum oder eine Zahl enthält, sollten Sie die Format-Eigenschaft des Textfelds verwenden, um anstelle von Formatierungen Anwenden der `Format` Funktion in das Textfeld ein.  
   
--   Die `Right`, `Len`, und `InStr` Funktionen sind hilfreich für die Rückgabe einer Teilzeichenfolge, z. B. trimming *Domäne*\\*Benutzername* auf den Benutzernamen zu. Der folgende Ausdruck gibt den Teil der Zeichenfolge rechts neben einem umgekehrten Schrägstrich (\\) des *User*-Parameters zurück:  
+-   Die `Right`, `Len`, und `InStr` Funktionen sind hilfreich für die Rückgabe einer Teilzeichenfolge, z. B. kürzen *Domäne*\\*Benutzername* auf den Benutzernamen. Der folgende Ausdruck gibt den Teil der Zeichenfolge rechts neben einem umgekehrten Schrägstrich (\\) des *User*-Parameters zurück:  
   
     ```  
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
@@ -213,7 +213,7 @@ ms.locfileid: "36162917"
     =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
     ```  
   
--   Die ausgewählten Werte aus einem mehrwertigen Parameter können angezeigt werden. Im folgenden Beispiel wird die `Join` -Funktion zum Verketten der ausgewählten Werte des Parameters *MySelection* in eine einzelne Zeichenfolge, die als Ausdruck für den Wert eines Textfelds in einem Berichtselement festgelegt werden kann:  
+-   Die ausgewählten Werte aus einem mehrwertigen Parameter können angezeigt werden. Im folgenden Beispiel wird die `Join` -Funktion zum Verketten der ausgewählten Werte des Parameters *MySelection* in einer einzelnen Zeichenfolge, die als Ausdruck für den Wert eines Textfelds in einem Berichtselement festgelegt werden kann:  
   
     ```  
     = Join(Parameters!MySelection.Value)  
@@ -226,7 +226,7 @@ ms.locfileid: "36162917"
   
     ```  
   
--   Die `Regex` Funktionen aus der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> eignen sich zum Ändern des Formats vorhandener Zeichenfolgen, z. B. Formatieren einer Telefonnummer. Der folgende Ausdruck verwendet die `Replace` Funktion zum Ändern des Formats einer zehnstelligen Telefonnummer in ein Feld von "*" nnn "*-*" nnn "*-*Nnnn* "," (*"nnn"*) *"nnn"*-*Nnnn*":  
+-   Die `Regex` Funktionen aus der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> eignen sich zum Ändern des Formats vorhandener Zeichenfolgen, z. B. Formatieren einer Telefonnummer. Im folgenden Ausdruck wird der `Replace` Funktion zum Ändern des Formats einer zehnstelligen Telefonnummer in ein Feld von "*Nnn*-*Nnn*-*Nnnn* "," (*Nnn*) *Nnn*-*Nnnn*":  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -245,7 +245,7 @@ ms.locfileid: "36162917"
   
 #### <a name="lookupset"></a>LookupSet  
   
--   Indem Sie ein Schlüsselfeld angeben, können Sie die `LookupSet` Funktion, um einen Satz von Werten aus einem Dataset für eine 1: n-Beziehung abzurufen. Beispiel: Eine Person kann mehrere Telefonnummern haben. Nehmen Sie im folgenden Beispiel an, dass das Dataset PhoneList in jeder Zeile einen Personenbezeichner und eine Telefonnummer enthält. `LookupSet` Gibt ein Array von Werten zurück. Der folgende Ausdruck kombiniert die Rückgabewerte in eine einzelne Zeichenfolge und zeigt die Liste der Telefonnummern für die mit "ContactID" angegebene Person an:  
+-   Indem Sie ein Schlüsselfeld angeben, können Sie mithilfe der `LookupSet` Funktion, um einen Satz von Werten für eine 1: n Beziehung aus einem Dataset abzurufen. Beispiel: Eine Person kann mehrere Telefonnummern haben. Nehmen Sie im folgenden Beispiel an, dass das Dataset PhoneList in jeder Zeile einen Personenbezeichner und eine Telefonnummer enthält. `LookupSet` Gibt ein Array von Werten zurück. Der folgende Ausdruck kombiniert die Rückgabewerte in eine einzelne Zeichenfolge und zeigt die Liste der Telefonnummern für die mit "ContactID" angegebene Person an:  
   
     ```  
     =Join(LookupSet(Fields!ContactID.Value, Fields!PersonID.Value, Fields!PhoneNumber.Value, "PhoneList"),",")  
@@ -274,7 +274,7 @@ ms.locfileid: "36162917"
     =IIF(Fields!LineTotal.Value > 100, True, False)  
     ```  
   
--   Verwenden Sie mehrere `IIF` Funktionen (auch bekannt als "geschachtelte IIFs"), um einen von drei Werten abhängig vom Wert zurückzugeben `PctComplete`. Der folgende Ausdruck kann in die Füllfarbe eines Textfelds platziert werden, um die Hintergrundfarbe basierend auf dem Wert im Textfeld zu ändern.  
+-   Verwenden Sie mehrere `IIF` Funktionen (auch bekannt als "geschachtelte IIf-Funktionen werden"), um einen von drei Werten abhängig vom Wert zurückzugeben `PctComplete`. Der folgende Ausdruck kann in die Füllfarbe eines Textfelds platziert werden, um die Hintergrundfarbe basierend auf dem Wert im Textfeld zu ändern.  
   
     ```  
     =IIF(Fields!PctComplete.Value >= 10, "Green", IIF(Fields!PctComplete.Value >= 1, "Blue", "Red"))  
@@ -282,7 +282,7 @@ ms.locfileid: "36162917"
   
      Werte, die größer oder gleich 10 sind, werden mit einem grünen Hintergrund angezeigt. Werte zwischen 1 und 9 erhalten einen blauen Hintergrund, und Werte kleiner als 1 werden mit rotem Hintergrund dargestellt.  
   
--   Verwendet eine andere Möglichkeit, die gleiche Funktionalität zu erhalten die `Switch` Funktion. Die `Switch`-Funktion ist nützlich, wenn Sie drei oder mehr Bedingungen testen müssen. Die `Switch`-Funktion gibt den Wert zurück, der mit dem ersten Ausdruck in einer Reihe verknüpft ist, die mit TRUE ausgewertet wird:  
+-   Eine andere Möglichkeit, bietet dieselbe Funktionalität zu erzielen die `Switch` Funktion. Die `Switch`-Funktion ist nützlich, wenn Sie drei oder mehr Bedingungen testen müssen. Die `Switch`-Funktion gibt den Wert zurück, der mit dem ersten Ausdruck in einer Reihe verknüpft ist, die mit TRUE ausgewertet wird:  
   
     ```  
     =Switch(Fields!PctComplete.Value >= 10, "Green", Fields!PctComplete.Value >= 1, "Blue", Fields!PctComplete.Value = 1, "Yellow", Fields!PctComplete.Value <= 0, "Red",)  
@@ -296,13 +296,13 @@ ms.locfileid: "36162917"
     =IIF(DateDiff("d",Fields!ImportantDate.Value, Now())>7,"Red","Blue")  
     ```  
   
--   Testen Sie den Wert, der die `PhoneNumber` Feld und "No Value" wird zurückgegeben `null` (`Nothing` in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]); andernfalls der Wert der Telefonnummer zurückgegeben. Mit diesem Ausdruck kann der Wert eines Textfelds in einem Berichtselement gesteuert werden.  
+-   Testen Sie den Wert des der `PhoneNumber` Feld und "No Value" zurückgegeben wird, ist dies `null` (`Nothing` in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]); andernfalls der Wert der Telefonnummer zurückgegeben. Mit diesem Ausdruck kann der Wert eines Textfelds in einem Berichtselement gesteuert werden.  
   
     ```  
     =IIF(Fields!PhoneNumber.Value Is Nothing,"No Value",Fields!PhoneNumber.Value)  
     ```  
   
--   Testen Sie den Wert von der `Department` Feld, und geben Sie entweder ein unterberichtsname zurück oder einen `null` (`Nothing` in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]). Dieser Ausdruck kann für bedingte Drillthrough-Unterberichte verwendet werden.  
+-   Testen Sie den Wert des der `Department` Feld, und geben Sie entweder ein unterberichtsname zurück oder einen `null` (`Nothing` in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]). Dieser Ausdruck kann für bedingte Drillthrough-Unterberichte verwendet werden.  
   
     ```  
     =IIF(Fields!Department.Value = "Development", "EmployeeReport", Nothing)  
@@ -326,7 +326,7 @@ ms.locfileid: "36162917"
   
 #####  <a name="Sum"></a> Sum  
   
--   Die `Sum` -Funktion gibt die Summe der Werte in einer Gruppe oder einem Datenbereich. Diese Funktion ist hilfreich für die Kopf- oder Fußzeile einer Gruppe. Der folgende Ausdruck zeigt die Summe von Daten in der Gruppe bzw. im Datenbereich Order an:  
+-   Die `Sum` -Funktion gibt die Summe der Werte in einer Gruppe oder eines Datenbereichs. Diese Funktion ist hilfreich für die Kopf- oder Fußzeile einer Gruppe. Der folgende Ausdruck zeigt die Summe von Daten in der Gruppe bzw. im Datenbereich Order an:  
   
     ```  
     =Sum(Fields!LineTotal.Value, "Order")  
@@ -456,7 +456,7 @@ ms.locfileid: "36162917"
     =IIF(CountRows()>12,false,true)  
     ```  
   
--   Der folgende Ausdruck, bei der Einstellung der `Hidden` Eigenschaft einer Spalte wird die Spalte nur, wenn das Feld im Berichtsdataset vorhanden ist, nachdem die Daten aus der Datenquelle abgerufen werden:  
+-   Der folgende Ausdruck, wenn festgelegt, der `Hidden` Eigenschaft einer Spalte wird die Spalte nur, wenn das Feld im Berichtsdataset vorhanden ist, nachdem die Daten aus der Datenquelle abgerufen werden:  
   
     ```  
     =IIF(Fields!Column_1.IsMissing, true, false)  
@@ -547,7 +547,7 @@ ms.locfileid: "36162917"
 ## <a name="see-also"></a>Siehe auch  
  [Beispiele für Filtergleichungen &#40;Berichts-Generator und SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)   
  [Beispiele für Gruppierungsausdrücke (Berichts-Generator und SSRS)](expression-examples-report-builder-and-ssrs.md)   
- [Ausdruck verwendet wird, in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Häufig verwendete Filter &#40;Berichts-Generator und SSRS&#41;](commonly-used-filters-report-builder-and-ssrs.md)  
   

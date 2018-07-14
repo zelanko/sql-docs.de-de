@@ -1,5 +1,5 @@
 ---
-title: RelationshipType-Element (ASSL) | Microsoft Docs
+title: RelationshipType-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - RelationshipType element
 ms.assetid: 72e1ab0e-a95d-4ebe-857d-21de1bf9fe03
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a2e5b5ec9e9591a45a80f099397ed6568a986313
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 21ddd4506a2c2a6168779aa40735eb7177406597
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161423"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271596"
 ---
 # <a name="relationshiptype-element-assl"></a>RelationshipType-Element (ASSL)
   Gibt an, ob die elementbeziehungen für eine [AttributeRelationship](../objects/attributerelationship-element-assl.md) kann geändert werden.  
@@ -66,10 +66,10 @@ ms.locfileid: "36161423"
   
 |value|Description|  
 |-----------|-----------------|  
-|*Feste*|Die Elementbeziehungen zwischen einem Attribut und einem zugehörigen Attribut können nicht geändert werden.|  
+|*Fest*|Die Elementbeziehungen zwischen einem Attribut und einem zugehörigen Attribut können nicht geändert werden.|  
 |*Flexible*|Die Elementbeziehungen zwischen einem Attribut und einem zugehörigen Attribut können geändert werden.|  
   
- Z. B. wenn `ZipCode` kann nicht geändert werden von einem `City` in eine andere Beziehung aus `ZipCode` auf `City` RuntimeCompatibility als *Rigid*.  
+ Z. B. wenn `ZipCode` kann nicht geändert werden von einem `City` in eine andere Beziehung aus `ZipCode` zu `City` als RuntimeCompatibility *fest*.  
   
  Die Enumeration, die den zulässigen Werten für entspricht `RelationshipType` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.RelationshipType>.  
   

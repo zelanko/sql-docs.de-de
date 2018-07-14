@@ -1,5 +1,5 @@
 ---
-title: Gewährung, widerrufen und Verweigern von Berechtigungen | Microsoft Docs
+title: Gewährung, widerrufen und Verweigern von Berechtigungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,23 +17,23 @@ helpviewer_keywords:
 - revoking permissions [SMO]
 ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cdf6703e67b9c9c53c4b266154ea8a6cb0ed65d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d088fbddb4c3e293a0ba98de0eb2a7c6eba17dbb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161517"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321810"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>Gewährung, Widerrufen und Verweigern von Berechtigungen
-  Die <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> Objekt verwendet, um einen Satz von Berechtigungen oder eine einzelne Serverberechtigung zuzuweisen der <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet> Objekt. Für Berechtigungen auf Serverebene verweist der Berechtigte auf eine Anmeldung. Von Windows authentifizierte Anmeldungen werden als Windows-Benutzernamen aufgelistet. Bei der Ausführung dieses Codebeispiels widerruft die Berechtigung aus dem Empfänger und überprüft, ob es entfernt wurde mit der <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A> Methode.  
+  Die <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> Objekt verwendet, um einen Satz von Berechtigungen oder eine einzelne Serverberechtigung zuzuweisen der <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet> Objekt. Für Berechtigungen auf Serverebene verweist der Berechtigte auf eine Anmeldung. Von Windows authentifizierte Anmeldungen werden als Windows-Benutzernamen aufgelistet. Beim Ausführen dieses Codebeispiels widerruft die Berechtigung aus dem Empfänger und überprüft, ob es entfernt wurde mit der <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A> Methode.  
   
  Datenbankberechtigungen und Datenbankobjektberechtigungen können zugewiesen werden auf ähnliche Weise mithilfe der <xref:Microsoft.SqlServer.Management.Smo.DatabasePermissionSet> Objekt und die <xref:Microsoft.SqlServer.Management.Smo.ObjectPermissionSet> Objekt.  
   
 ## <a name="example"></a>Beispiel  
- Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual Basic SMO-Projekts in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oder [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [erstellen Sie eine Visual Basic-SMO-Projekts in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oder [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="granting-server-permissions-in-visual-basic"></a>Gewähren von Serverberechtigungen in Visual Basic  
  In diesem Codebeispiel werden die CREATE ENDPOINT- und ALTER ANY ENDPOINT-Berechtigungen der angegebenen Anmeldung gewährt und dann die Berechtigungen aufgelistet und angezeigt. Eine der Berechtigungen wird widerrufen, woraufhin die Berechtigungen wieder aufgelistet werden. In diesem Beispiel wird davon ausgegangen, dass die angegebene Anmeldung die angegebenen Berechtigungen für den Start hat.  

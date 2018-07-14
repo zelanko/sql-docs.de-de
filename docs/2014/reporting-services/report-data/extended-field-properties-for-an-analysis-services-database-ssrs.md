@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5912a29ddfd19ef5e191be6c4d102117d125421d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f6a3c90fe0df58b27f99df2f1e37d66c1ff523b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161968"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268628"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank (SSRS)
-  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenverarbeitungserweiterung unterstützt erweiterte Feldeigenschaften. Erweiterte Feldeigenschaften sind zusätzlich zu den für die Datenquelle verfügbaren und von der Datenverarbeitungserweiterung unterstützten Feldeigenschaften `Value` und `IsMissing` vorhanden. Erweiterte Eigenschaften werden im Berichtsdatenbereich nicht als Teil der Feldauflistung für ein Berichtsdataset angezeigt. Sie können erweiterte feldeigenschaftswerte in den Bericht einschließen, indem Sie das Schreiben von Ausdrücken, die sie angeben, nach dem Namen unter Verwendung der integrierten `Fields` Auflistung.  
+  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenverarbeitungserweiterung unterstützt erweiterte Feldeigenschaften. Erweiterte Feldeigenschaften sind zusätzlich zu den für die Datenquelle verfügbaren und von der Datenverarbeitungserweiterung unterstützten Feldeigenschaften `Value` und `IsMissing` vorhanden. Erweiterte Eigenschaften werden im Berichtsdatenbereich nicht als Teil der Feldauflistung für ein Berichtsdataset angezeigt. Sie können erweiterte feldeigenschaftswerte in den Bericht einschließen, indem Sie das Schreiben von Ausdrücken, die sie angeben, durch den Namen in der integrierten `Fields` Auflistung.  
   
- Erweiterte Eigenschaften umfassen vordefinierte Eigenschaften und benutzerdefinierte Eigenschaften. Vordefinierte Eigenschaften werden häufig in mehreren Datenquellen, die bestimmten feldeigenschaftsnamen zugeordnet sind und möglich, die über die integrierte `Fields` Auflistung nach Namen. Benutzerdefinierte Eigenschaften werden spezifisch für jeden Datenanbieter definiert. Auf diese Eigenschaften kann über die integrierte `Fields`-Auflistung nur mithilfe von Syntax zugegriffen werden, in der der erweiterte Eigenschaftsname als Zeichenfolge verwendet wird.  
+ Erweiterte Eigenschaften umfassen vordefinierte Eigenschaften und benutzerdefinierte Eigenschaften. Vordefinierte Eigenschaften werden für mehrere Datenquellen, die bestimmten feldeigenschaftsnamen zugeordnet sind, und zugegriffen werden können, über die integrierte `Fields` Auflistung nach Namen. Benutzerdefinierte Eigenschaften werden spezifisch für jeden Datenanbieter definiert. Auf diese Eigenschaften kann über die integrierte `Fields`-Auflistung nur mithilfe von Syntax zugegriffen werden, in der der erweiterte Eigenschaftsname als Zeichenfolge verwendet wird.  
   
  Wenn Sie die Abfrage mit dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -MDX-Abfrage-Designer im grafischen Modus definieren, wird der MDX-Abfrage automatisch ein vordefinierter Satz von Zelleneigenschaften und Dimensionseigenschaften hinzugefügt. Sie können nur erweiterte Eigenschaften verwenden, die in der MDX-Abfrage im Bericht explizit aufgeführt werden. Je nach Bericht möchten Sie möglicherweise den MDX-Standardbefehlstext so ändern, dass weitere im Cube definierte Dimensions- oder benutzerdefinierte Eigenschaften aufgenommen werden. Weitere Informationen über erweiterte Felder in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenquellen, finden Sie unter [Erstellen und Verwenden von Eigenschaftswerten (MDX)](../../analysis-services/creating-and-using-property-values-mdx.md).  
   
 ## <a name="working-with-field-properties-in-a-report"></a>Arbeiten mit Feldeigenschaften in einem Bericht  
- Zu erweiterten Feldeigenschaften zählen vordefinierte Eigenschaften und datenanbieterspezifische Eigenschaften. Feldeigenschaften werden nicht in der Feldliste im **Berichtsdatenbereich** angezeigt, obwohl sie in der für ein Dataset erstellten Abfrage vorhanden sind. Deshalb können Sie keine Feldeigenschaften in Ihre Berichtsentwurfsoberfläche ziehen. Sie müssen stattdessen ziehen Sie das Feld in den Bericht und ändern Sie dann die `Value` Eigenschaft des Felds, das die Eigenschaft, die Sie verwenden möchten. Wenn z.B. die Zelldaten aus einem Cube bereits formatiert sind, können Sie die FormattedValue-Feldeigenschaft mithilfe des folgenden Ausdrucks verwenden: `=Fields!FieldName.FormattedValue`.  
+ Zu erweiterten Feldeigenschaften zählen vordefinierte Eigenschaften und datenanbieterspezifische Eigenschaften. Feldeigenschaften werden nicht in der Feldliste im **Berichtsdatenbereich** angezeigt, obwohl sie in der für ein Dataset erstellten Abfrage vorhanden sind. Deshalb können Sie keine Feldeigenschaften in Ihre Berichtsentwurfsoberfläche ziehen. Stattdessen ziehen Sie das Feld in den Bericht und ändern Sie dann die `Value` Eigenschaft des Felds, das die Eigenschaft, die Sie verwenden möchten. Wenn z.B. die Zelldaten aus einem Cube bereits formatiert sind, können Sie die FormattedValue-Feldeigenschaft mithilfe des folgenden Ausdrucks verwenden: `=Fields!FieldName.FormattedValue`.  
   
  Verwenden Sie die folgende Syntax in einem Ausdruck, um auf eine erweiterte Eigenschaft zu verweisen, die nicht vordefiniert ist:  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36161968"
 |------------------|--------------|---------------------------------------|  
 |`Value`|`Object`|Gibt den Datenwert des Felds an.|  
 |`IsMissing`|`Boolean`|Gibt an, ob das Feld im resultierenden Dataset gefunden wurde.|  
-|`UniqueName`|`String`|Gibt den vollqualifizierten Namen einer Ebene zurück. Z. B. die `UniqueName` Wert für einen Mitarbeiter kann *[Employee]. [ Employee Department]. [Abteilung]. & [Sales]. & [North American Vertriebsleiter]. & [272]*.|  
+|`UniqueName`|`String`|Gibt den vollqualifizierten Namen einer Ebene zurück. Z. B. die `UniqueName` Wert für einen Mitarbeiter kann *[Employee]. [ Employee Department]. [Department]. & [Sales]. & [North American Sales Manager]. & [272]*.|  
 |`BackgroundColor`|`String`|Gibt die Hintergrundfarbe zurück, die in der Datenbank für das Feld definiert ist.|  
 |`Color`|`String`|Gibt die Vordergrundfarbe zurück, die in der Datenbank für das Element definiert ist.|  
 |`FontFamily`|`String`|Gibt den Namen der Schriftart an, die in der Datenbank für das Element definiert ist.|  
@@ -144,7 +144,7 @@ CELL PROPERTIES
 |FONT_SIZE|(null)|  
 |FONT_FLAGS|(null)|  
   
- Wenn Sie mit dieser Abfrage ein Berichtsdataset erstellen und dieses an eine Tabelle binden, können Sie die VALUE-Standardeigenschaft für ein Feld anzeigen, z. B. `=Fields!Month_of_Year!Value`. Wenn Sie diesen Ausdruck als Sortierausdruck für die Tabelle festgelegt, werden die Ergebnisse auf die Tabelle alphabetisch nach Monat sortiert, da das Wertfeld verwendet eine `String` -Datentyp. Wenn die Tabelle in der Reihenfolge der Monate im Jahr sortiert werden soll, d. h. Januar zuerst und Dezember zuletzt, verwenden Sie den folgenden Ausdruck:  
+ Wenn Sie mit dieser Abfrage ein Berichtsdataset erstellen und dieses an eine Tabelle binden, können Sie die VALUE-Standardeigenschaft für ein Feld anzeigen, z. B. `=Fields!Month_of_Year!Value`. Wenn Sie diesen Ausdruck als Sortierausdruck für die Tabelle festgelegt haben, werden die Ergebnisse auf die Tabelle alphabetisch nach Monat sortiert, da das Feld "Wert" verwendet eine `String` -Datentyp. Wenn die Tabelle in der Reihenfolge der Monate im Jahr sortiert werden soll, d. h. Januar zuerst und Dezember zuletzt, verwenden Sie den folgenden Ausdruck:  
   
 ```  
 =Fields!Month_of_Year("MEMBER_VALUE")  

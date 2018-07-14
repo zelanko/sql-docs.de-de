@@ -1,5 +1,5 @@
 ---
-title: Restore-Element (XMLA) | Microsoft Docs
+title: Restore-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Restore command
 ms.assetid: bb5a0c92-3927-4fa4-975b-6e4d79e0a912
 caps.latest.revision: 26
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 0e8eca537c61be64de403b4ad08bb0e64040937c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 682806680604606d54c133617b2150b975cf8c03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161414"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275656"
 ---
 # <a name="restore-element-xmla"></a>Restore-Element (XMLA)
   Stellt eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Datenbank aus einer Sicherungsdatei.  
@@ -71,7 +71,7 @@ ms.locfileid: "36161414"
 |Untergeordnete Elemente|[AllowOverwrite](../xml-elements-properties/allowoverwrite-element-xmla.md), [DatabaseName](../xml-elements-properties/name-element-xmla.md), [DatabaseID](../xml-elements-properties/id-element-xmla.md), [Datei](../xml-elements-properties/file-element-xmla.md), [Speicherorte](../xml-elements-properties/locations-element-xmla.md), [Kennwort](../xml-elements-properties/password-element-xmla.md), [Sicherheit](../xml-elements-properties/security-element-xmla.md), [DbStorageLocation](../xml-elements-properties/dbstoragelocation-element.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `Restore` -Befehl wird eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Datenbank in der `DatabaseName` Elements aus einer Sicherungsdatei und optional Wiederherstellungen Remotepartitionen aus remotesicherungsdateien.  
+ Die `Restore` -Befehl wird eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Datenbank in der `DatabaseName` Element aus einer Sicherungsdatei und optional Remotepartitionen aus remotesicherungsdateien wiederhergestellt.  
   
  Je nach dem Speichermodus der in der Sicherungsdatei gespeicherten Objekte die `Restore` Befehl in der folgenden Tabelle aufgelisteten Informationen wiederhergestellt.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36161414"
 |Hybride OLAP (HOLAP)|Aggregationen und Metadaten|  
 |Relationale OLAP (ROLAP)|Metadaten|  
   
- Während einer `Restore` Befehl, eine exklusive Sperre befindet sich auf die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Datenbank in der `DatabaseName` Element. Die Sperre wird nach Abschluss der `Restore` -Befehls wieder aufgehoben.  
+ Während ein `Restore` Befehl, eine exklusive Sperre für die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Datenbank in der `DatabaseName` Element. Die Sperre wird aufgehoben, nachdem die `Restore` -Befehl ausgeführt wurde.  
   
  Weitere Informationen zum Sichern und Wiederherstellen von Datenbanken finden Sie unter [sichern, wiederherstellen und Synchronisieren von Datenbanken &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   

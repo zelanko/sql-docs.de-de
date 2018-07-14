@@ -5,10 +5,9 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-transaction-log
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], full
 - troubleshooting [SQL Server], full transaction log
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - full transaction logs [SQL Server]
 ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 caps.latest.revision: 54
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0adfc6e8f46a916244ddbaf81383ed8c3c169f1e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0b3fa89db4f8fb95ca1f2e912c6ee1d131808f42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162253"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254032"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Problembehandlung bei vollen Transaktionsprotokollen (SQL Server-Fehler 9002)
   In diesem Thema werden mögliche Lösungen für volle Transaktionsprotokolle erörtert und Vermeidungsstrategien vorgeschlagen. Wenn das Transaktionsprotokoll voll ist, wird von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] der Fehler 9002 ausgegeben. Das Protokoll kann sich füllen, wenn die Datenbank online ist oder wiederhergestellt wird. Wenn das Protokoll gefüllt wird, während die Datenbank online ist, bleibt die Datenbank online, sie kann aber nur gelesen und nicht aktualisiert werden. Wird das Protokoll während einer Wiederherstellung gefüllt, wird die Datenbank von [!INCLUDE[ssDE](../../includes/ssde-md.md)] als RESOURCE PENDING (ausstehende Ressource) markiert. In beiden Fällen ist eine Aktion seitens des Benutzers erforderlich, um Speicherplatz im Protokoll verfügbar zu machen.  
@@ -36,7 +35,7 @@ ms.locfileid: "36162253"
  Die richtige Reaktion auf ein volles Transaktionsprotokoll hängt zum Teil davon ab, aufgrund welcher Bedingungen das Protokoll gefüllt wurde. Mithilfe der Spalten **log_reuse_wait** und **log_reuse_wait_desc** der **sys.database**-Katalogsicht können Sie feststellen, wodurch eine Protokollkürzung verhindert wurde. Weitere Informationen finden Sie unter [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql). Eine Beschreibung von Faktoren, die eine Protokollkürzung verzögern können, finden Sie unter [Das Transaktionsprotokoll &#40;SQL Server&#41;](the-transaction-log-sql-server.md).  
   
 > [!IMPORTANT]  
->  Wenn die Datenbank im Wiederherstellungsmodus befand, wenn der Fehler 9002 nach Behebung des Problems, die Datenbank wiederherstellen, indem Sie mithilfe von ALTER DATABASE *Database_name* SET ONLINE.  
+>  Wenn die Datenbank im Wiederherstellungsmodus befand, als der Fehler 9002 auftrat, nach der Behebung des Problems, Wiederherstellen der Datenbank mithilfe von ALTER DATABASE *Database_name* SET ONLINE.  
   
  Alternativ sind als Reaktion auf ein volles Transaktionsprotokoll auch folgende Aktionen möglich:  
   
@@ -55,7 +54,7 @@ ms.locfileid: "36162253"
  Diese Alternativen werden in den folgenden Abschnitten erläutert. Wählen Sie diejenige Aktion aus, die sich am besten für Ihre Situation eignet.  
   
 ### <a name="backing-up-the-log"></a>Sichern des Protokolls  
- Falls bei Verwendung des vollständigen oder massenprotokollierten Wiederherstellungsmodells das Transaktionsprotokoll nicht vor kurzem gesichert wurde, kann durch die Sicherung eine Protokollkürzung verhindert werden. Wenn das Protokoll noch nie gesichert wurde, müssen Sie zwei protokollsicherungen erstellen die [!INCLUDE[ssDE](../../includes/ssde-md.md)] zum Abschneiden des Protokolls zum Zeitpunkt der letzten Sicherung. Durch Kürzen des Protokolls wird Speicherplatz für neue Protokolldatensätze freigegeben. Sichern Sie das Protokoll in kürzeren Abständen, damit es nicht wieder so schnell aufgefüllt wird.  
+ Falls bei Verwendung des vollständigen oder massenprotokollierten Wiederherstellungsmodells das Transaktionsprotokoll nicht vor kurzem gesichert wurde, kann durch die Sicherung eine Protokollkürzung verhindert werden. Wenn das Protokoll noch nie gesichert wurde, müssen Sie zwei protokollsicherungen erstellen die [!INCLUDE[ssDE](../../includes/ssde-md.md)] das Protokoll zum Zeitpunkt der letzten Sicherung abgeschnitten. Durch Kürzen des Protokolls wird Speicherplatz für neue Protokolldatensätze freigegeben. Sichern Sie das Protokoll in kürzeren Abständen, damit es nicht wieder so schnell aufgefüllt wird.  
   
  **So erstellen Sie eine Transaktionsprotokollsicherung**  
   
@@ -75,7 +74,7 @@ ms.locfileid: "36162253"
 > [!IMPORTANT]  
 >  Protokolldateien sollten unter keinen Umständen in komprimierten Dateisystemen gespeichert werden.  
   
- **So verschieben Sie eine Protokolldatei.**  
+ **Verschieben eine Protokolldatei**  
   
 -   [Verschieben von Datenbankdateien](../databases/move-database-files.md)  
   
@@ -96,7 +95,7 @@ ms.locfileid: "36162253"
 ### <a name="adding-a-log-file-on-a-different-disk"></a>Hinzufügen einer Protokolldatei auf einem anderen Datenträger  
  Fügen Sie der Datenbank mithilfe von ALTER DATABASE <database_name> ADD LOG FILE eine neue Protokolldatei auf einem anderen Datenträger hinzu, auf dem ausreichend Speicherplatz vorhanden ist.  
   
- **So fügen Sie eine Protokolldatei hinzu**  
+ **Hinzufügen eine Protokolldatei**  
   
 -   [Hinzufügen von Daten- oder Protokolldateien zu einer Datenbank](../databases/add-data-or-log-files-to-a-database.md)  
   

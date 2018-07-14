@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Tabellen- und Indexpartitionierung | Microsoft Docs
+title: Verwenden von Tabellen- und Indexpartitionierung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,36 +17,36 @@ helpviewer_keywords:
 - partitioned indexes [SQL Server], SMO
 ms.assetid: 0e682d7e-86c3-4d73-950d-aa692d46cb62
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bdd2f053895704484019c7771c8eab4689402992
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: db31f674605b1cf1c75351e6241ff6aed2b282c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163308"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221023"
 ---
 # <a name="using-table-and-index-partitioning"></a>Verwenden von Tabellen- und Indexpartitionierung
-  Daten können mithilfe der bereitgestellten speicheralgorithmen gespeichert werden [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md). Die Partitionierung kann bewirken, dass sich große Tabellen und Indizes besser verwalten und skalieren lassen.  
+  Daten können mithilfe der von bereitgestellten speicheralgorithmen gespeichert werden [partitionierte Tabellen und Indizes](../../partitions/partitioned-tables-and-indexes.md). Die Partitionierung kann bewirken, dass sich große Tabellen und Indizes besser verwalten und skalieren lassen.  
   
 ## <a name="index-and-table-partitioning"></a>Index- und Tabellenpartitionierung  
  Die Funktion aktiviert Index- und Tabellendaten, die auf mehrere Dateigruppen in Partitionen verteilt werden. Eine Partitionsfunktion definiert, wie die Zeilen einer Tabelle oder eines Index basierend auf den Werten bestimmter Spalten, den so genannten Partitionierungsspalten, einem Satz von Partitionen zugeordnet werden. Ein Partitionierungsschema ordnet die durch die Partitionsfunktion angegebenen Partitionen jeweils einer Dateigruppe zu. Hierdurch können Sie Archivierungsstrategien entwickeln, die es ermöglichen, dass Tabellen, und damit physische Medien, dateigruppenübergreifend skaliert werden können.  
   
- Die <xref:Microsoft.SqlServer.Management.Smo.Database> Objekt enthält eine Auflistung von <xref:Microsoft.SqlServer.Management.Smo.PartitionFunction> Objekte, die die implementierten Partitionsfunktionen und eine Auflistung von darstellen <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> Objekten, die beschreiben, wie Daten Dateigruppen zugeordnet ist.  
+ Die <xref:Microsoft.SqlServer.Management.Smo.Database> Objekt enthält eine Auflistung von <xref:Microsoft.SqlServer.Management.Smo.PartitionFunction> die implementierten Partitionsfunktionen und eine Sammlung von darstellende – Objekte <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> Objekte, die beschreiben, wie Daten Dateigruppen zugeordnet werden.  
   
  Jedes <xref:Microsoft.SqlServer.Management.Smo.Table>- und <xref:Microsoft.SqlServer.Management.Smo.Index>-Objekt legt fest, welches Partitionsschema es in der <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme>-Eigenschaft verwendet, und legt die Spalten in <xref:Microsoft.SqlServer.Management.Smo.PartitionSchemeParameterCollection> fest.  
   
 ## <a name="example"></a>Beispiel  
- Für das folgende Codebeispiel müssen Sie die Programmierungsumgebung, die Programmiervorlage und die Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual Basic SMO-Projekts in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) und [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Für das folgende Codebeispiel müssen Sie die Programmierungsumgebung, die Programmiervorlage und die Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [erstellen Sie eine Visual Basic-SMO-Projekts in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) und [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-basic"></a>Einrichten eines Partitionsschemas für eine Tabelle in Visual Basic  
- Im Codebeispiel wird veranschaulicht, wie zum Erstellen einer Partitionsfunktion und ein Partitionsschema für die `TransactionHistory` -Tabelle in der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] -Beispieldatenbank. Die Partitionen sind nach Datum aufgeteilt, um alte Datensätze in die `TransactionHistoryArchive` -Tabelle auszugliedern.  
+ Im Codebeispiel wird veranschaulicht, wie Sie eine Partitionsfunktion und ein Partitionsschema für die `TransactionHistory` -Tabelle in der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] -Beispieldatenbank. Die Partitionen sind nach Datum aufgeteilt, um alte Datensätze in die `TransactionHistoryArchive` -Tabelle auszugliedern.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBPartition1](SMO How to#SMO_VBPartition1)]  -->  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-c"></a>Einrichten eines Partitionsschemas für eine Tabelle in Visual C#  
- Im Codebeispiel wird veranschaulicht, wie zum Erstellen einer Partitionsfunktion und ein Partitionsschema für die `TransactionHistory` -Tabelle in der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] -Beispieldatenbank. Die Partitionen sind nach Datum aufgeteilt, um alte Datensätze in die `TransactionHistoryArchive` -Tabelle auszugliedern.  
+ Im Codebeispiel wird veranschaulicht, wie Sie eine Partitionsfunktion und ein Partitionsschema für die `TransactionHistory` -Tabelle in der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] -Beispieldatenbank. Die Partitionen sind nach Datum aufgeteilt, um alte Datensätze in die `TransactionHistoryArchive` -Tabelle auszugliedern.  
   
 ```  
 {   
@@ -94,7 +94,7 @@ ps.Create();
 ```  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-powershell"></a>Einrichten eines Partitionsschemas für eine Tabelle in PowerShell  
- Im Codebeispiel wird veranschaulicht, wie zum Erstellen einer Partitionsfunktion und ein Partitionsschema für die `TransactionHistory` -Tabelle in der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] -Beispieldatenbank. Die Partitionen sind nach Datum aufgeteilt, um alte Datensätze in die `TransactionHistoryArchive` -Tabelle auszugliedern.  
+ Im Codebeispiel wird veranschaulicht, wie Sie eine Partitionsfunktion und ein Partitionsschema für die `TransactionHistory` -Tabelle in der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] -Beispieldatenbank. Die Partitionen sind nach Datum aufgeteilt, um alte Datensätze in die `TransactionHistoryArchive` -Tabelle auszugliedern.  
   
 ```powershell  
 # Set the path context to the local, default instance of SQL Server.  

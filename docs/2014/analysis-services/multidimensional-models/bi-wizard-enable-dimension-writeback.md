@@ -1,5 +1,5 @@
 ---
-title: Aktivieren des Rückschreibens | Microsoft Docs
+title: Aktivieren des Rückschreibens | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying dimensions
 - writeback [Analysis Services], setting up
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - manual dimension structure modifications
 ms.assetid: a4b5eb5a-366d-4fc8-ad0d-5bdb8e7b4163
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5a05010b2f102170b64df13e4eb079dde8fbe325
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0e7ee13d4fdfa021e050c4357dc8796289a3cd4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161243"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247430"
 ---
 # <a name="enable-dimension-writeback"></a>Rückschreiben von Dimensionen aktivieren
   Fügen Sie einem Cube oder einer Dimension die Erweiterung zum Rückschreiben von Dimensionen hinzu, um Benutzern das manuelle Ändern der Dimensionsstruktur und -elemente zu ermöglichen. Updates für eine Dimension mit aktiviertem Schreibzugriff werden direkt in der Dimensionstabelle aufgezeichnet. Durch diese Erweiterung wird die Einstellung der `WriteEnabled`-Eigenschaft für eine Dimension geändert.  
@@ -42,10 +42,10 @@ ms.locfileid: "36161243"
  Auf der ersten Seite **Rückschreiben von Dimensionen aktivieren** des Assistenten geben Sie die Dimension an, auf die Sie das Rückschreiben von Dimensionen anwenden möchten. Die Erweiterung zum Rückschreiben von Dimensionen, die dieser ausgewählten Dimension hinzugefügt wurde, führt zu Änderungen an der Dimension. Diese Änderungen werden an alle Cubes vererbt, die die ausgewählte Dimension enthalten.  
   
 ## <a name="setting-dimension-writeback-capability"></a>Festlegen des Features zum Rückschreiben von Dimensionen  
- Auf der zweiten Seite **Rückschreiben von Dimensionen aktivieren** des Assistenten findet das eigentliche Festlegen der Option **Rückschreiben in der Dimension aktivieren** statt. Durch das Auswählen dieser Option automatisch der `WriteEnabled` -Eigenschaft der Dimension auf `True`. Legt die Eigenschaft wird auf das Deaktivieren dieser Option wird automatisch `False`.  
+ Auf der zweiten Seite **Rückschreiben von Dimensionen aktivieren** des Assistenten findet das eigentliche Festlegen der Option **Rückschreiben in der Dimension aktivieren** statt. Durch das Auswählen dieser Option automatisch der `WriteEnabled` Eigenschaft der Dimension auf `True`. Legt die Eigenschaft wird auf das Deaktivieren dieser Option wird automatisch `False`.  
   
 ## <a name="remarks"></a>Hinweise  
- Beim Erstellen eines neuen Elements müssen Sie jedes Attribut in einer Dimension angeben. Sie können kein Element einfügen, ohne dabei einen Wert für das Schlüsselattribut der Dimension anzugeben. Deshalb unterliegt das Erstellen von Elementen allen Beschränkungen (z.&#160;B. von NULL verschiedene Schlüsselwerte), die für die Dimensionstabelle definiert sind. Erwägen Sie auch Spalten, die optional durch Dimensionseigenschaften, angegeben werden, z. B. die Angabe von Spalten in der `CustomRollupColumn`, `CustomRollupPropertiesColumn` oder `UnaryOperatorColumn` Dimensionseigenschaften.  
+ Beim Erstellen eines neuen Elements müssen Sie jedes Attribut in einer Dimension angeben. Sie können kein Element einfügen, ohne dabei einen Wert für das Schlüsselattribut der Dimension anzugeben. Deshalb unterliegt das Erstellen von Elementen allen Beschränkungen (z.&#160;B. von NULL verschiedene Schlüsselwerte), die für die Dimensionstabelle definiert sind. Sie sollten auch Spalten, die optional durch Dimensionseigenschaften, angegeben berücksichtigen, wie z. B. die Angabe von Spalten in der `CustomRollupColumn`, `CustomRollupPropertiesColumn` oder `UnaryOperatorColumn` Dimensionseigenschaften.  
   
 > [!WARNING]  
 >  Wenn Sie SQL Azure als Datenquelle verwenden, um einen Rückschreibevorgang in eine Analysis Services-Datenbank auszuführen, schlägt der Vorgang fehl. Dies ist programmbedingt, da die Anbieteroption, durch die mehrere aktive Resultsets (MARS) aktiviert werden, standardmäßig deaktiviert ist.  

@@ -1,5 +1,5 @@
 ---
-title: TableBinding-Datentyp (ASSL) | Microsoft Docs
+title: TableBinding-Datentyp (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - TableBinding data type
 ms.assetid: 3195dca4-82bf-46b7-a31f-5383586e3573
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0790fe5d8567c8ab23e3aaf39430d46675dcbdc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 475044a0bcad3c90ffaffa71eeeb6735a37f96c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162791"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220250"
 ---
 # <a name="tablebinding-data-type-assl"></a>TableBinding-Datentyp (ASSL)
   Definiert einen abgeleiteten Datentyp, der eine Bindung mit einer Tabelle darstellt.  
@@ -77,13 +77,13 @@ SELECT Date, Product ID, Qty, Price, Qty * Price AS Amount
    WHERE Year(Sales.Date) = 97  
 ```  
   
- Der berechnete Ausdruck ist auch dann noch gültig, wenn der Ausdruck qualifizierte Tabellennamen (z. B. "Sales.Qty") verwendet hat. Dasselbe gilt, wenn stattdessen die Tabelle durch eine Abfrage "SELECT..." ersetzt wurden. Die oben genannten FROM-Klausel werden "FROM SELECT... As Sales" werden.  
+ Der berechnete Ausdruck ist auch dann noch gültig, wenn der Ausdruck qualifizierte Tabellennamen (z. B. "Sales.Qty") verwendet hat. Dies gilt auch, wenn die Tabelle stattdessen durch eine Abfrage vom Typ "SELECT…" ersetzt wird. Aus der oben dargestellten FROM-Klausel würde dann "FROM SELECT ... As Sales" werden.  
   
- Weitere Informationen zu den `Binding` Typ, einschließlich Tabellen, die von Analysis Services Scripting Language (ASSL) von Objekten des Typs `Binding` und der Vererbungshierarchie der `Binding` , finden Sie unter [Binding-Datentyp &#40;ASSL&#41;](binding-data-type-assl.md).  
+ Weitere Informationen zu den `Binding` -Typ und zu Tabellen von Analysis Services Scripting Language (ASSL)-Objekten des Typs `Binding` und der Vererbungshierarchie der `Binding` Datentypen, finden Sie unter [Binding-Datentyp &#40;ASSL&#41;](binding-data-type-assl.md).  
   
  Einen Überblick über datenbindungen in ASSL finden Sie unter [Datenquellen und-Bindungen &#40;mehrdimensionale SSAS-&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.TableBinding>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.TableBinding>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Binding-Datentyp &#40;ASSL&#41;](binding-data-type-assl.md)   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 caps.latest.revision: 15
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b57ae0faef29326a510dddbbfe049c1c9b4a9b3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 2e866c2899ff4172e969cba97e4b10f1ce0fac3a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162037"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253982"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Beheben von OOM-Problemen (nicht genügend Arbeitsspeicher)
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] verwendet mehr Arbeitsspeicher und nutzt diesen auf andere Weise als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es kann vorkommen, dass der installierte, [!INCLUDE[hek_2](../../includes/hek-2-md.md)] zugeordnete Arbeitsspeicher Ihren wachsenden Anforderungen nicht mehr gerecht wird, sodass kein ausreichender Arbeitsspeicher zur Verfügung steht. In diesem Thema erfahren Sie, wie Sie OOM-Situationen (Out of Memory, nicht genügend Arbeitsspeicher) beheben. Weitere Hinweise zur Vermeidung von Situationen mit unzureichendem Arbeitsspeicher finden Sie auch unter dem Thema [Überwachung und Problembehebung bei der Arbeitsspeichernutzung](monitor-and-troubleshoot-memory-usage.md) .  
@@ -139,7 +139,7 @@ GO
 > Weitere Informationen finden Sie im Thema [Verwenden von In-Memory OLTP in einer Umgebung mit virtuellen Computern](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) .  
   
 ##  <a name="bkmk_PageAllocFailure"></a> Beheben von Seitenzuordnungsfehlern aufgrund von unzureichendem Arbeitsspeicher, obwohl ausreichend Arbeitsspeicher verfügbar ist  
- Wenn Sie die Fehlermeldung „Seitenbelegungen für die Datenbank „*\<Datenbankname>*“ sind aufgrund unzureichenden Arbeitsspeichers im Ressourcenpool „*\<Ressourcenpoolname>*“ nicht zulässig.“ erhalten. Finden Sie unter "http://go.microsoft.com/fwlink/?LinkId=330673" für Weitere Informationen. " im Fehlerprotokoll erhalten, obwohl der verfügbare physische Arbeitsspeicher zum Zuordnen der Seite ausreichend ist, kann dies daran liegen, dass die Ressourcenkontrolle deaktiviert ist. Wenn die Ressourcenkontrolle deaktiviert ist, führt MEMORYBROKER_FOR_RESERVE zu einem künstlichen Mangel an Arbeitsspeicher.  
+ Wenn Sie die Fehlermeldung „Seitenbelegungen für die Datenbank „*\<Datenbankname>*“ sind aufgrund unzureichenden Arbeitsspeichers im Ressourcenpool „*\<Ressourcenpoolname>*“ nicht zulässig.“ erhalten. Finden Sie unter "http://go.microsoft.com/fwlink/?LinkId=330673" Weitere Informationen. " im Fehlerprotokoll erhalten, obwohl der verfügbare physische Arbeitsspeicher zum Zuordnen der Seite ausreichend ist, kann dies daran liegen, dass die Ressourcenkontrolle deaktiviert ist. Wenn die Ressourcenkontrolle deaktiviert ist, führt MEMORYBROKER_FOR_RESERVE zu einem künstlichen Mangel an Arbeitsspeicher.  
   
  Um dieses Problem zu beheben, müssen Sie die Ressourcenkontrolle aktivieren.  
   

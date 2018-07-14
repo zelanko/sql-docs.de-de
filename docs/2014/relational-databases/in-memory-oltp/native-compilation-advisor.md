@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.nativecompilationwizard.f1
 - swb.nativecompilationwizard.f1
 ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 caps.latest.revision: 10
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: a3aef7b96a5cd15f8bb22340cc2feeaf025b4072
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 1f156bee0da5d94043fa0ab04e5b74acdcd7f4f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162250"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256369"
 ---
 # <a name="native-compilation-advisor"></a>Ratgeber für native Kompilierung
-  Berichtstool für transaktionsleistung (siehe [bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur portiert werden soll, In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) informiert Sie darüber, welche interpretierten gespeicherten Prozeduren in der Datenbank Wenn profitieren portiert native verwenden Kompilierung. Nachdem Sie eine gespeicherte Prozedur identifiziert haben, die Sie zur Verwendung der systeminternen Kompilierung portieren möchten, können Sie den Ratgeber für die systeminterne Kompilierung verwenden, um die Migration der interpretierten gespeicherten Prozedur zur systeminternen Kompilierung zu vereinfachen. Weitere Informationen zu systemintern kompilierten gespeicherten Prozeduren finden Sie unter [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md).  
+  Berichtstool für transaktionsleistung (siehe [bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur portiert werden soll, In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) informiert Sie darüber, welche interpretierte gespeicherte Prozeduren in der Datenbank Wenn profitieren portiert, um native verwenden Kompilierung. Nachdem Sie eine gespeicherte Prozedur identifiziert haben, die Sie zur Verwendung der systeminternen Kompilierung portieren möchten, können Sie den Ratgeber für die systeminterne Kompilierung verwenden, um die Migration der interpretierten gespeicherten Prozedur zur systeminternen Kompilierung zu vereinfachen. Weitere Informationen zu systemintern kompilierten gespeicherten Prozeduren finden Sie unter [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md).  
   
  Stellen Sie zunächst eine Verbindung mit der Instanz her, die die interpretierte gespeicherte Prozedur enthält. Die Verbindung kann mit einer Instanz von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] oder [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hergestellt werden. Wenn Sie jedoch einen Migrationsvorgang mit dem Ratgeber ausführen möchten, müssen Sie eine Verbindung mit einer [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] -Instanz herstellen, für die In-Memory OLTP aktiviert ist. Weitere Informationen zu den Anforderungen für In-Memory OLTP finden Sie unter [Requirements for Using Memory-Optimized Tables](memory-optimized-tables.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Aggregatfunktionen | Microsoft Docs
+title: Verwenden von Aggregatfunktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - aggregate functions [Analysis Services]
 ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9520426cdb177b8851f0766448f637563b125693
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68ec0250382ad6ec865ff37adcb847ba6afec978
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161906"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257546"
 ---
 # <a name="use-aggregate-functions"></a>Verwenden von Aggregatfunktionen
   Wird eine Dimension zum Segmentieren eines Measures verwendet, wird das Measure gemäß den in dieser Dimension enthaltenen Hierarchien zusammengefasst. Das Zusammenfassungsverhalten hängt von der für das Measure angegebenen Aggregatfunktion ab. Für die meisten Measures, die numerische Daten enthalten, ist die Aggregatfunktion `Sum`. Der Wert des Measures wird je nach de Ebene, auf der die Hierarchie aktiv ist, zu unterschiedlichen Mengen summiert.  
@@ -54,7 +54,7 @@ ms.locfileid: "36161906"
 |`Max`|Semiadditiv|Ruft den höchsten Wert für alle untergeordneten Elemente ab.|  
 |`DistinctCount`|Nicht additiv|Ruft die Zahl aller eindeutigen untergeordneten Elemente ab. Weitere Informationen finden Sie unter [About Distinct Count Measures](use-aggregate-functions.md#bkmk_distinct) im nächsten Abschnitt.|  
 |`None`|Nicht additiv|Es wird keine Aggregation durchgeführt. Alle Werte für Blatt- und Nichtblattelemente in einer Dimension werden direkt von der Faktentabelle für die Measuregruppe bereitgestellt, die das Measure enthält. Wenn kein Wert aus der Faktentabelle für ein Element gelesen werden kann, wird der Wert für dieses Element auf NULL gesetzt.|  
-|`ByAccount`|Semiadditiv|Berechnet die Aggregation gemäß der Aggregationsfunktion, die dem Kontotyp eines Elements in einer Kontodimension zugewiesen ist. Wenn keine Kontodimension in der Measuregruppe vorhanden ist, behandelt, als die `None` Aggregationsfunktion.<br /><br /> Weitere Informationen zu Kontodimensionen finden Sie unter [Erstellen eines Finanzkontos des über- und untergeordneten Typs Dimension](database-dimensions-finance-account-of-parent-child-type.md).|  
+|`ByAccount`|Semiadditiv|Berechnet die Aggregation gemäß der Aggregationsfunktion, die dem Kontotyp eines Elements in einer Kontodimension zugewiesen ist. Wenn keine Kontodimension in der Measuregruppe vorhanden ist, behandelt, als die `None` Aggregatfunktion.<br /><br /> Weitere Informationen zu Kontodimensionen finden Sie unter [Erstellen eines Finanzkontos des über- und untergeordneten Typs Dimension](database-dimensions-finance-account-of-parent-child-type.md).|  
 |`AverageOfChildren`|Semiadditiv|Berechnet den Durchschnitt der Werte für alle nicht leeren, untergeordneten Elemente.|  
 |`FirstChild`|Semiadditiv|Ruft den Wert des ersten untergeordneten Elements ab.|  
 |`LastChild`|Semiadditiv|Ruft den Wert des letzten untergeordneten Elements ab.|  

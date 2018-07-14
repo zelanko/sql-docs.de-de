@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createapp.f1
 ms.assetid: e045b41a-4836-47f6-8e78-2b09494b461f
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0edae9b1692eb12f14f66ebb067758f5a6c468f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 92ca9531bd94f2fc81fc4c074841b4049b6e3120
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162283"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273006"
 ---
 # <a name="create-web-application-dialog-box-master-data-services-configuration-manager"></a>Webanwendung erstellen (Dialogfeld im Konfigurations-Manager für Master Data Services)
   Im Dialogfeld **Webanwendung erstellen** können Sie die [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung erstellen. Diese Webanwendung wird auf der Website erstellt, die Sie auf der Seite **Webkonfiguration** ausgewählt haben.  
   
 ## <a name="web-application"></a>Webanwendung  
- Der Webserver stellt den Inhalt für diese Webanwendung aus dem Ordner [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] **WebApplication** im Dateisystem bereit. Dieser Speicherort wird beim Setup angegeben und wird standardmäßig der Pfad ist *Laufwerk*: \Programme\Microsoft SQL Server\120\Master Data Services\WebApplication.  
+ Der Webserver stellt den Inhalt für diese Webanwendung aus dem Ordner [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] **WebApplication** im Dateisystem bereit. Dieser Speicherort wird während des Setups angegeben, und wird standardmäßig der Pfad ist *Laufwerk*: \Programme\Microsoft SQL Server\120\Master Data Services\WebApplication.  
   
 |Steuerelementname|Description|  
 |------------------|-----------------|  
@@ -44,9 +44,9 @@ ms.locfileid: "36162283"
 |**Kennwort bestätigen**|Geben Sie das Kennwort für das angegebene Benutzerkonto erneut ein. Die Felder **Kennwort** und **Kennwort bestätigen** müssen das gleiche Kennwort enthalten.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Web-Konfigurationsseite &#40;Master Data Services-Konfigurations-Manager&#41;](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
- [Einrichten von Datenbank und Website für Master Data Services](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
- [Web-Anwendungsanforderungen &#40;Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
+ [Seite "Konfiguration"-Web- &#40;Master Data Services-Konfigurations-Manager&#41;](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
+ [Einrichten der Datenbank und Website für Master Data Services](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
+ [Anforderungen für die Webanwendung &#40;Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
  [Erstellen einer Master Data Manager-Webanwendung &#40;Master Data Services&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   

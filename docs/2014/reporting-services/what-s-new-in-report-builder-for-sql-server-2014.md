@@ -1,5 +1,5 @@
 ---
-title: Was&#39;s in Berichts-Generator für SQLServer 2014 | Microsoft Docs
+title: Was&#39;Neues in Berichts-Generator für SQLServer 2014 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,31 +8,31 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8223c19b-4b0d-4b1d-a042-9a726c18e708
 caps.latest.revision: 13
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8bf08740110d2b7517a692e0c7a7f53351767d54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8825385596c14121d0e6e13a7ecdbccbafb26a52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162188"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224900"
 ---
-# <a name="what39s-new-in-report-builder-for-sql-server-2014"></a>Was&#39;s in Berichts-Generator für SQLServer 2014
+# <a name="what39s-new-in-report-builder-for-sql-server-2014"></a>Was&#39;Neues in Berichts-Generator für SQLServer 2014
   In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] werden mehrere [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Funktionen eingeführt.  
   
- Informationen zu Funktionen in dieser Version für andere [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Produkte und-Technologien finden Sie unter [Neuigkeiten in SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
+ Informationen zu Funktionen in dieser Version für andere [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Produkten und Technologien finden Sie unter [Neuigkeiten in SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
   
 > [!TIP]  
->  Die neuesten Informationen und Ressourcen zu neuen Funktionen in dieser Version finden Sie unter [zusätzliche Informationen zu den neuerungen in SQL Server Reporting Services (SSRS) neue](http://go.microsoft.com/fwlink/?LinkId=207147).  
+>  Die neuesten Informationen und Ressourcen zu neuen Funktionen in dieser Version finden Sie unter [zusätzliche Informationen zu neuerungen in SQL Server Reporting Services (SSRS)](http://go.microsoft.com/fwlink/?LinkId=207147).  
   
 ##  <a name="ExcelRenderer"></a> Excel-Renderer für Microsoft Excel 2007-2010 und Microsoft Excel 2003  
  Die neu in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aufgenommene [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Excel-Renderingerweiterung rendert einen Bericht als Excel-Dokument, das mit [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 2007-2010 und [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 2003 kompatibel ist, wenn das Microsoft Office Compatibility Pack für Word, Excel und PowerPoint installiert ist. Das Format ist Office Open XML, und die Dateierweiterung der Dateien lautet XLSX.  
   
- Diese Excel-Renderingerweiterung entfernt Einschränkungen der früheren Version, die mit Excel 2003 kompatibel. Im Folgenden werden die Verbesserungen der Renderingerweiterung aufgeführt:  
+ Diese Excel-Renderingerweiterung werden die Einschränkungen der früheren Version, die mit Excel 2003 kompatible entfernt. Im Folgenden werden die Verbesserungen der Renderingerweiterung aufgeführt:  
   
 -   Die maximale Anzahl an Zeilen pro Arbeitsblatt beträgt 1.048.576.  
   

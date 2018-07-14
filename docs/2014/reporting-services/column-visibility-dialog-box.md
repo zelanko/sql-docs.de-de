@@ -1,5 +1,5 @@
 ---
-title: Im Dialogfeld "Sichtbarkeit" Spalte | Microsoft Docs
+title: Spalte Zeilensichtbarkeit (Dialogfeld) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.columnvisibility.f1
 - "10127"
@@ -16,13 +16,13 @@ ms.assetid: ca59d1cd-d782-4298-aa61-4f312c32eb50
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: fb45ec145718ca375d1570a7bab9d33a523f5a18
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8a63473d706fa25f69910a52b4ab352d631bcc11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163284"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268956"
 ---
 # <a name="column-visibility-dialog-box"></a>Spaltensichtbarkeit (Dialogfeld)
   Mithilfe des Dialogfelds **Spaltensichtbarkeit** können Sie die ausgewählte Spalte beim ersten Ausführen des Berichts anzeigen oder ausblenden oder die Sichtbarkeit der Spalte mit einem anderen Berichtselement aktivieren bzw. deaktivieren.  
@@ -50,7 +50,7 @@ ms.locfileid: "36163284"
 ## <a name="see-also"></a>Siehe auch  
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Hinzufügen einer Erweiterungs- oder Reduzieraktion zu einem Element (Berichts-Generator und SSRS)](report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [Bilder &#40;Berichts-Generator und SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [Images &#40;Berichts-Generator und SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [Report Designer F1 Help (Berichts-Designer (F1-Hilfe))](tools/report-designer-f1-help.md)  
   
   

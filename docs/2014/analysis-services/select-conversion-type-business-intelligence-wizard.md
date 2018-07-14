@@ -1,5 +1,5 @@
 ---
-title: Wählen Sie Umrechnungstyp (Business Intelligence-Assistent) | Microsoft Docs
+title: Wählen Sie Konvertierungstyp (Business Intelligence-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.conversiontype.f1
 ms.assetid: 2c664138-e8a1-4c47-8e7d-ee01c57e4692
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ba4018a6ce30e4e7de4e0ca3e79ae07007015650
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 34fab6780a6c10601b3f5bf31fbb7cffee3fd888
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161895"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267346"
 ---
 # <a name="select-conversion-type-business-intelligence-wizard"></a>Umrechnungstyp auswählen (Business Intelligence-Assistent)
   Auf der Seite **Umrechnungstyp auswählen** können Sie die Beziehung zwischen lokalen Währungen und Berichtswährungen für Transaktionen definieren, die in mehreren Währungen gespeichert werden. Eine lokale Währung ist die Währung, in der die Transaktionen für die auf der Seite **Measures auswählen** ausgewählten Measures gespeichert werden. Eine Berichtswährung ist die Währung, in die die auf der Seite **Measures auswählen** ausgewählten Transaktionen umgerechnet werden.  

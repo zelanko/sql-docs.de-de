@@ -1,5 +1,5 @@
 ---
-title: Cluster Profile Registerkarte "(Miningmodell-Viewer) | Microsoft Docs
+title: Cluster Profile Registerkarte (Miningmodell-Viewer) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.clustering.profiles.f1
 ms.assetid: 1ebafa1f-74e9-4c05-b278-a690fa8543bd
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3cf0d0437b8aea93c692e993d3d2e7167cc4a1c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e1b3e9bc36c75e0786f0e7de4799fd54f13120ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163246"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267598"
 ---
 # <a name="cluster-profiles-tab-mining-model-viewer"></a>Registerkarte "Clusterprofile" (Miningmodell-Viewer)
   Auf der Registerkarte **Clusterprofile** erhalten Sie einen Überblick über die vom Algorithmus in einem Clustermodell erkannten Cluster. Die Registerkarte zeigt jedes Attribut zusammen mit der Verteilung des Attributs in jedem Cluster an.  
@@ -29,13 +29,13 @@ ms.locfileid: "36163246"
  **Weitere Informationen finden Sie unter:** [Microsoft Clustering-Algorithmus](data-mining/microsoft-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Cluster-Viewer](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>Tastatur  
- **Viewerinhalt**  
+ **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
  **Miningmodell**  
  Wählen Sie ein Miningmodell aus der aktuellen Miningstruktur aus. Das Miningmodell wird im dazugehörigen Viewer geöffnet.  
   
- **Ereignisanzeige**  
+ **Viewer**  
  Wählen Sie einen Viewer aus, mit dem das ausgewählte Miningmodell angezeigt werden soll. Sie können den benutzerdefinierten Viewer für das Miningmodell oder den [!INCLUDE[msCoName](../includes/msconame-md.md)] -Viewer für Mininginhalte verwenden. Sie können auch Plug-In-Viewer verwenden, falls diese verfügbar sind.  
   
  **Legende anzeigen**  
@@ -47,7 +47,7 @@ ms.locfileid: "36163246"
  **Attribute**  
  Listet die Spalten im Clusteringmodell auf. Die Histogramme für jedes Attribut zeigen an, wie das Attribut in den vom Algorithmus identifizierten Clustern verteilt ist.  
   
- **Zustände**  
+ **Status**  
  Stellt einen Schlüssel bereit, der angibt, durch welche Farben die einzelnen Status in der entsprechenden Clusterreihe dargestellt werden, oder einen Schieberegler mit einer Raute, mit dem die Verteilung von kontinuierlichen numerischen Werten angegeben wird. Sie können diese Spalte mit dem Kontrollkästchen **Legende anzeigen** ein- und ausblenden.  
   
  **Clusterprofile**  

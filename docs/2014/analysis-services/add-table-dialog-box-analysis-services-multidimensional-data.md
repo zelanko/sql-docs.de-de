@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen (Dialogfeld) (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Hinzufügen (Dialogfeld) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.addtable.f1
 helpviewer_keywords:
 - Add Table dialog box
 ms.assetid: b93f841f-0164-4e37-bd08-085aa179ea1f
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0e0d7c36240f0f42b345d61ceb4951f3ec160969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 25f1767aa1ee1422a6bbe17f35fa8e2ccfdce9c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161696"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273906"
 ---
 # <a name="add-table-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Tabelle hinzufügen' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Tabelle hinzufügen** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie eine Tabelle hinzufügen, während Sie eine Abfrage erstellen mithilfe der Dialogfelder **Benannte Abfrage erstellen** , **Abrufabfrage erstellen** oder **Verarbeitungsabfrage erstellen** . Sie können das Dialogfeld **Tabelle hinzufügen** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] anzeigen, indem Sie im Dialogfeld **Benannte Abfrage erstellen** , **Abrufabfrage erstellen** oder **Verarbeitungsabfrage erstellen** im Bereich **Symbolleiste** auf **Tabelle hinzufügen** klicken.  
@@ -41,8 +41,8 @@ ms.locfileid: "36161696"
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services-Designer und-Dialogfelder &#40;mehrdimensionale Daten&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Erstellen oder bearbeiten Sie im Dialogfeld benannte Abfrage &#40;Analysis Services – mehrdimensionale Daten&#41;](create-or-edit-named-query-dialog-box-analysis-services-multidimensional-data.md)   
- [Dialogfeld ' Abrufabfrage erstellen ' &#40;Analysis Services – mehrdimensionale Daten&#41;](create-polling-query-dialog-box-analysis-services-multidimensional-data.md)   
- [Dialogfeld ' Verarbeitungsabfrage erstellen ' &#40;Analysis Services – mehrdimensionale Daten&#41;](create-processing-query-dialog-box-analysis-services-multidimensional-data.md)  
+ [Erstellen oder bearbeiten Sie die benannte Abfragedialogfeld &#40;Analysis Services – mehrdimensionale Daten&#41;](create-or-edit-named-query-dialog-box-analysis-services-multidimensional-data.md)   
+ [Dialogfeld Abrufabfrage erstellen &#40;Analysis Services – mehrdimensionale Daten&#41;](create-polling-query-dialog-box-analysis-services-multidimensional-data.md)   
+ [Erstellen Sie im Dialogfeld Abfrage verarbeiten &#40;Analysis Services – mehrdimensionale Daten&#41;](create-processing-query-dialog-box-analysis-services-multidimensional-data.md)  
   
   

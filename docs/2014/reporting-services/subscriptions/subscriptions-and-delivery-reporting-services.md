@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], report distribution
 - reports [Reporting Services], distributing
@@ -24,13 +24,13 @@ ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 083cadfe123af29861e4bfccd8ed6182705003c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa14730ce105b17e3eb016effd2c409fc4a37851
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162876"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268606"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Subscriptions and Delivery (Reporting Services)
   Ein [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Abonnement ist eine Konfiguration zur Übermittlung eines Berichts zu einem bestimmten Zeitpunkt oder als Reaktion auf ein Ereignis, in einem von Ihnen angegebenen Dateiformat. Speichern Sie beispielsweise jeden Donnerstag den Bericht MonthlySales.rdl als Microsoft Word-Dokument in eine Dateifreigabe. Sie können Abonnements verwenden, um die Übermittlung eines Berichts mit einem spezifischen Satz an Berichtsparameterwerten zeitlich festzulegen und zu automatisieren.  
@@ -42,13 +42,13 @@ ms.locfileid: "36162876"
  Abonnements sind nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den Editionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]unterstützt werden, finden Sie unter [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 > [!NOTE]  
->  Beginnend mit [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] können Sie den Besitz eines Abonnements programmgesteuert übertragen. Es gibt keine Benutzeroberfläche, mit der Sie den Besitz von Abonnements übertragen können. Weitere Informationen finden Sie unter <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>und [Verwenden von PowerShell und führen Sie ein Abonnement ändern und Liste Reporting Services Subscription Owners](manage-subscription-owners-and-run-subscription-powershell.md).  
+>  Beginnend mit [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] können Sie den Besitz eines Abonnements programmgesteuert übertragen. Es gibt keine Benutzeroberfläche, mit der Sie den Besitz von Abonnements übertragen können. Weitere Informationen finden Sie unter <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>und [mithilfe von PowerShell ändern "und" List Reporting Services Subscription Owners "und" Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md).  
   
  **In diesem Thema:**  
   
 -   [Abonnement- und Übermittlungsszenarien](#bkmk_subscription_scenarios)  
   
--   [Standard- und datengesteuerten Abonnements](#bkmk_standard_and_datadriven)  
+-   [Standardabonnements und Datengesteuerte Abonnements](#bkmk_standard_and_datadriven)  
   
 -   [Abonnementanforderungen](#bkmk_subscription_requirements)  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36162876"
 |Vorabladen des Caches|Wenn Sie über mehrere Instanzen eines parametrisierten Berichts verfügen oder ein Bericht von zahlreichen Berichtsbenutzern angezeigt werden soll, können Sie Berichte vorab in den Cache laden, um die erforderliche Verarbeitungszeit für die Anzeige des Berichts zu reduzieren.|  
 |Datengesteuerte Berichte|Verwenden Sie datengesteuerte Abonnements, um die Berichtsausgabe, Übermittlungsoptionen und Berichtsparametereinstellungen zur Laufzeit anzupassen. Zur Laufzeit werden die Eingabewerte vom Abonnement mithilfe einer Abfrage aus einer Datenquelle abgerufen. Mithilfe datengesteuerter Abonnements können Sie einen E-Mail-Serienvorgang ausführen, durch den ein Bericht an eine Liste von Abonnenten gesendet wird, die erst während der Verarbeitung des Abonnements ermittelt wird.|  
   
-##  <a name="bkmk_standard_and_datadriven"></a> Standard- und datengesteuerten Abonnements  
+##  <a name="bkmk_standard_and_datadriven"></a> Standardabonnements und Datengesteuerte Abonnements  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] unterstützt zwei Arten von Abonnements: **Standardabonnements** und **datengesteuerte Abonnements**. Standardabonnements werden von einzelnen Benutzern erstellt und verwaltet. Ein Standardabonnement enthält statische Werte, die während der Abonnementverarbeitung nicht variiert werden können. Für jedes Standardabonnement ist exakt eine Gruppe von Berichtspräsentationsoptionen, Übermittlungsoptionen und Berichtsparametern vorhanden.  
   
  Datengesteuerte Abonnements rufen zur Laufzeit Abonnementinformationen ab, indem sie eine externe Datenquelle abfragen, die Werte für einen Empfänger, Berichtsparameter oder ein Anwendungsformat liefert. Sie können datengesteuerte Abonnements verwenden, wenn Sie eine sehr große Empfängerliste haben oder unterschiedliche Berichtsausgaben für unterschiedliche Empfänger verwenden möchten. Wenn Sie datengesteuerte Abonnements verwenden möchten, müssen Sie über Fachkenntnisse im Erstellen von Abfragen und zur Verwendungsweise von Parametern verfügen. In der Regel werden diese Abonnements von Berichtsserveradministratoren erstellt und verwaltet. Weitere Informationen finden Sie unter den folgenden Links:  
@@ -108,7 +108,7 @@ ms.locfileid: "36162876"
 |-----------------|-----------------|  
 |Berechtigungen|Sie benötigen Zugriff auf den Bericht. Zum Abonnieren eines Berichts benötigen Sie die Berechtigung zum Anzeigen des Berichts.<br /><br /> Ihre Rollenzuweisung muss die Aufgabe "Einzelne Abonnements verwalten" enthalten.|  
 |Gespeicherte Anmeldeinformationen|Der Bericht muss gespeicherte oder keine Anmeldeinformationen zum Abrufen des Inhalts zur Laufzeit verwenden, um ein Abonnement zu erstellen. Sie können keinen Bericht abonnieren, für den die Verwendung der anonymisierten oder delegierten Anmeldeinformationen des aktuellen Benutzers zum Herstellen einer Verbindung mit einer externen Datenquelle konfiguriert ist. Bei den gespeicherten Anmeldeinformationen kann es sich um ein Windows-Konto oder ein Datenbank-Benutzerkonto handeln. Weitere Informationen finden Sie unter [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../report-data/specify-credential-and-connection-information-for-report-data-sources.md).<br /><br /> Außerdem müssen Sie über die Berechtigung verfügen, den Bericht anzuzeigen und einzelne Abonnements zu erstellen. **Geplante Ereignisse und Berichtsübermittlung** muss auf dem Berichtsserver aktiviert sein. Weitere Informationen finden Sie unter [erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](../create-manage-subscriptions-native-mode-report-servers.md).|  
-|Benutzerabhängige Werte in einem Bericht|Nur bei Standardabonnements können Sie Abonnements für Berichte erstellen, bei denen Benutzerkontoinformationen in einen Filter integriert sind oder als Text im Bericht angezeigt werden. Im Bericht, der Name des Benutzerkontos angegeben wird, über eine `User!UserID` Ausdruck, mit dem aktuellen Benutzer aufgelöst wird. Beim Erstellen eines Abonnements wird der Benutzer, der das Abonnement erstellt, als aktueller Benutzer betrachtet.|  
+|Benutzerabhängige Werte in einem Bericht|Nur bei Standardabonnements können Sie Abonnements für Berichte erstellen, bei denen Benutzerkontoinformationen in einen Filter integriert sind oder als Text im Bericht angezeigt werden. Im Bericht wird der Name des Benutzerkontos angegeben ist, über eine `User!UserID` Ausdruck, für den aktuellen Benutzer aufgelöst wird. Beim Erstellen eines Abonnements wird der Benutzer, der das Abonnement erstellt, als aktueller Benutzer betrachtet.|  
 |Keine Modellelementsicherheit|Sie können keine mit dem Berichts-Generator erstellten Berichte abonnieren, die ein Modell als Datenquelle verwenden, wenn das Modell Sicherheitseinstellungen für Modellelemente enthält. Diese Einschränkung bezieht sich nur auf Berichte, die Sicherheitseinstellungen für Modellelemente verwenden.|  
 |Parameterwerte|Falls der Bericht Parameter verwendet, muss ein Parameterwert im Bericht selbst oder im Abonnement, das Sie definieren, angegeben werden. Falls im Bericht Standardwerte definiert wurden, können Sie den Standardwert für den Parameterwert festlegen.|  
   

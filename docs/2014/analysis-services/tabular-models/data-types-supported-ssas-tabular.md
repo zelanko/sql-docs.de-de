@@ -1,5 +1,5 @@
 ---
-title: Unterstützte Datentypen (SSAS – tabellarisch) | Microsoft Docs
+title: Datentypen unterstützt (SSAS – tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ee05d2f7d3526aafd180e9eda5372668f164cb1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57bf1633f05f9692c3e5cc132bce6585734830a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161668"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237630"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>Unterstützte Datentypen (SSAS – tabellarisch)
   In diesem Artikel werden die Datentypen erläutert, die in tabellarischen Modellen verwendet werden können, und die implizite Konvertierung von Datentypen bei der Berechnung oder Verwendung von Daten in einer Data Analysis Expressions (DAX)-Formel beschrieben.  
@@ -52,9 +52,9 @@ ms.locfileid: "36161668"
   
  <sup>1</sup> DAX-Formeln unterstützen keine Datentypen, die kleiner als die in der Tabelle aufgeführt sind.  
   
- <sup>2</sup> , wenn Sie versuchen, Daten zu importieren, die sehr große numerische Werte verfügt, kann der Importvorgang mit folgendem Fehler fehlschlagen:  
+ <sup>2</sup> , wenn Sie versuchen, Daten zu importieren, sehr große numerische Werte enthält, kann der Importvorgang mit folgendem Fehler fehlschlagen:  
   
- In-Memory-Datenbankfehler: die "\<Spaltenname >" Spalte der '\<Tabellenname > "Tabelle enthält einen Wert" 1. 7976931348623157E + 308", die nicht unterstützt wird. Der Vorgang wurde abgebrochen.  
+ In-Memory-Datenbank-Fehler: die "\<Spaltenname >" Spalte der '\<Tabellenname > "Tabelle enthält einen Wert" 1. 7976931348623157E + 308", dies wird nicht unterstützt. Der Vorgang wurde abgebrochen.  
   
  Dieser Fehler tritt auf, da der Modell-Designer diesen Wert zur Darstellung von Nullen verwendet. Die Werte in der folgenden Liste sind zum vorherigen erwähnten Nullwert synonym:  
   

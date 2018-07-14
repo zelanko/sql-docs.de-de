@@ -1,5 +1,5 @@
 ---
-title: Führen Sie SQL-Task-Editor (Seite Allgemein) | Microsoft Docs
+title: Führen Sie SQL-Task-Editor (Seite Allgemein) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.general.f1
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: beb39086-28ce-46af-b6d8-f7b4fb8d9069
 caps.latest.revision: 45
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 853586d51aff06012734a677794f29a9e7991878
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68610e2f72c1fa2f47219a7af9620ec911d7d022
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161621"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322650"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>Editor für den Task 'SQL ausführen' (Seite Allgemein)
   Mithilfe der Seite **Allgemein** im Dialogfeld **Editor für den Task „SQL ausführen“** können Sie den Task „SQL ausführen“ konfigurieren und die SQL-Anweisung bereitstellen, die vom Task ausgeführt wird.  
@@ -50,7 +50,7 @@ ms.locfileid: "36161621"
 >  Wenn der Task „SQL ausführen“ einen ADO- oder ODBC-Verbindungs-Manager verwendet, ist die **CodePage** -Eigenschaft nicht verfügbar. Wenn Ihre Projektmappe eine Codepage erfordert, verwenden Sie einen OLE DB- oder einen ADO.NET-Verbindungs-Manager mit dem Task "SQL ausführen".  
   
  **TypeConversionMode**  
- Wenn Sie diese Eigenschaft festlegen, um `Allowed`, the Execute SQL Task versucht, Ausgabeparameter konvertieren und Abfrageergebnisse in den Datentyp der Variablen, die Ergebnisse zugewiesen sind. Dies gilt für den Resultsettyp **Einzelne Zeile** .  
+ Wenn Sie diese Eigenschaft festlegen, um `Allowed`, versucht der Task SQL ausführen, die Output-Parameter zu konvertieren und Abfrageergebnisse in den Datentyp der Variablen, die Ergebnisse zugewiesen sind. Dies gilt für den Resultsettyp **Einzelne Zeile** .  
   
  **ResultSet**  
  Geben Sie den von der auszuführenden SQL-Anweisung erwarteten Ergebnistyp an. Wählen Sie zwischen **Einzelne Zeile**, **Vollständiges Resultset**, **XML**und **Keine**aus.  

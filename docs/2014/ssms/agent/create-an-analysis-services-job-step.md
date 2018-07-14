@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - job steps [Analysis Services]
 ms.assetid: 03d4bb86-514b-4a55-97b9-c2c0fa08b428
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3e5a3de48c3864f22b90b82a5c4c420362f6d83c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ca39e4dcd48bea68b59e529ef6103baabdc2093b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161949"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326950"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Erstellen eines Analysis Services-Auftragsschritts
   In diesem Thema wird beschrieben, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftragsschritte in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] erstellt und definiert werden, mit denen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services-Befehle und -Abfragen durch die Verwendung von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] oder SQL Server Management Objects ausgeführt werden.  
@@ -46,7 +46,7 @@ ms.locfileid: "36161949"
   
 -   Wenn beim Auftragsschritt ein Analysis Services-Befehl verwendet wird, muss die Befehlsanweisung eine **Execute** -Methode von XML for Analysis Services sein. Die Anweisung enthält möglicherweise keinen vollständigen SOAP-Umschlag (Simple Object Access Protocol) oder eine **Discover** -Methode von XML for Analysis. Während [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] vollständige SOAP-Umschläge und die **Discover** -Methode unterstützt, ist das bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftragsschritten nicht der Fall. Weitere Informationen zu XML for Analysis Services finden Sie unter [Übersicht über XMLA for Analysis (XMLA)](http://msdn.microsoft.com/library/ms187190.aspx).  
   
--   Wenn beim Auftragsschritt ein Analysis Services-Abfrage verwendet wird, muss die Abfrageanweisung eine MDX-Abfrage (Multidimensional Expressions, mehrdimensionale Ausdrücke) sein. Weitere Informationen zu MDX finden Sie unter [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md).  
+-   Wenn beim Auftragsschritt ein Analysis Services-Abfrage verwendet wird, muss die Abfrageanweisung eine MDX-Abfrage (Multidimensional Expressions, mehrdimensionale Ausdrücke) sein. Weitere Informationen zu MDX finden Sie unter [Grundlegendes zu MDX-Abfrage &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md).  
   
 ###  <a name="Security"></a> Sicherheit  
   

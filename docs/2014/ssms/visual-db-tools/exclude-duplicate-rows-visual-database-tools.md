@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - search criteria [SQL Server], excluding rows
 - row duplicates [SQL Server]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - excluding rows
 ms.assetid: ab35a363-421d-4665-946b-ae3f6397af50
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 017385370989983d37f045379de926d0ebbf333f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 83bb23a8262f1488eb7e603282bfb3f8d7905e41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163056"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273766"
 ---
 # <a name="exclude-duplicate-rows-visual-database-tools"></a>Ausschließen doppelter Zeilen (Visual Database Tools)
   Wenn in einem Resultset nur eindeutige Werte angezeigt werden sollen, können Sie das Ausschließen von Duplikaten aus dem Resultset angeben.  
@@ -43,7 +43,7 @@ ms.locfileid: "36163056"
     >  Wenn Sie das Schlüsselwort DISTINCT verwenden, können Sie möglicherweise die Ergebnisse im Ergebnisbereich nicht ändern.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Geben Sie Suchkriterien &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Angeben von Suchkriterien &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Sortieren und Gruppieren von Abfrageergebnissen &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.categorygroupproperties.sorting.f1
 - "10403"
@@ -20,15 +20,15 @@ f1_keywords:
 - "10412"
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c6e738ae473636e3fdd0c9d7efa1512a6b5b68f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4ba8d34b6f56bec66ce2fc1a8f0d4024e4a45493
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161743"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256349"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtern, Gruppieren und Sortieren von Daten (Berichts-Generator und SSRS)
   In einem Bericht werden Ausdrücke zum Steuern, Organisieren und Sortieren von Berichtsdaten verwendet. Beim Erstellen von Datasets und Entwerfen des Berichtslayouts werden die Eigenschaften von Berichtselementen standardmäßig automatisch auf Ausdrücke festgelegt. Diese Einstellungen basieren auf den Datasetfeldern, Parametern und anderen Elementen, die im Berichtsdatenbereich angezeigt werden. Sie können einer Tabellen- oder Matrixzelle auch eine interaktive Sortierschaltfläche hinzufügen, um dem Benutzer das interaktive Ändern der Zeilensortierreihenfolge für Gruppen oder Zeilen innerhalb von Gruppen zu ermöglichen.  
@@ -45,7 +45,7 @@ ms.locfileid: "36161743"
   
  Weitere Informationen und Beispiele finden Sie in den folgenden Themen:  
   
--   [Beispiele für Ausdrücke gruppieren &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
+-   [Beispiele für Gruppierungsausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
 -   [Beispiele für Filtergleichungen &#40;Berichts-Generator und SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36161743"
   
  Der Gruppenname gibt einen Ausdrucksbereich an. Sie können den Namen einer Gruppe als Bereich angeben, in dem Aggregate berechnet werden sollen, um Daten hierarchisch zu organisieren und die Anzeige von untergeordneten Knoten in übergeordneten Knoten in einem Drilldownbericht umzuschalten, andere Sichten derselben Daten für mehrere Datenbereiche anzuzeigen und Zusammenfassungsdaten in einer Tabelle, einer Matrix, einem Diagramm, einem Messgerät oder einer Karte visuell darzustellen. Weitere Informationen finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)-Ausdruck dar.  
   
- Fügen Sie dem Satz von Gruppierungsausdrücken die einzelnen Felder hinzu, um eine Gruppierung für mehrere Datasetfelder vorzunehmen. Sie können auch eigene Gruppenausdrücke in schreiben [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Sie können z. B. eine Gruppierung anhand eines Bereichs von Werten oder mit einem Berichtsparameter durchführen, um Benutzern verschiedene Möglichkeiten zur Gruppierung von Daten in einem Datenbereich zu bieten. Weitere Informationen finden Sie unter [Beispiele für Gruppierungsausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md).  
+ Fügen Sie dem Satz von Gruppierungsausdrücken die einzelnen Felder hinzu, um eine Gruppierung für mehrere Datasetfelder vorzunehmen. Sie können auch eigene Gruppierungsausdrücke in schreiben [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Sie können z. B. eine Gruppierung anhand eines Bereichs von Werten oder mit einem Berichtsparameter durchführen, um Benutzern verschiedene Möglichkeiten zur Gruppierung von Daten in einem Datenbereich zu bieten. Weitere Informationen finden Sie unter [Beispiele für Gruppierungsausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md).  
   
  Für jede Berichtsdarstellung können Sie beim Erstellen von Gruppen vor und nach jeder Gruppe oder jeder Instanz einer Gruppe Seitenumbrüche hinzufügen. So kann die Datenmenge auf jeder Seite reduziert und die Leistung beim Rendern der Berichte besser verwaltet werden. Weitere Informationen finden Sie unter [Hinzufügen eines Seitenumbruchs (Berichts-Generator und SSRS)](add-a-page-break-report-builder-and-ssrs.md).  
   
@@ -175,7 +175,7 @@ FROM Production.Product
  ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#BackToTop)  
   
 ##  <a name="HowTo"></a> Themen zur Vorgehensweise  
- [Sichtbarhalten von Kopfzeilen beim Durchführen eines Bildlaufs durch einen Bericht &#40;Berichts-Generator und SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
+ [Sichtbarhalten von Kopfzeilen beim Scrollen durch einen Bericht &#40;Berichts-Generator und SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
  [Anzeigen von Kopf- und Fußzeilen einer Gruppe &#40;Berichts-Generator und SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
@@ -194,11 +194,11 @@ FROM Production.Product
  [Hinzufügen eines Gesamtergebnisses zu einer Gruppe oder einem Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
   
 ##  <a name="Section"></a> In diesem Abschnitt  
- [Beispiele für Ausdrücke gruppieren &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
+ [Beispiele für Gruppierungsausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
  [Beispiele für Filtergleichungen &#40;Berichts-Generator und SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
- [Hinzufügen von Datasetfiltern, Datenbereichsfiltern, und Gruppenfiltern &#40;Berichts-Generator und SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)  
+ [Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern &#40;Berichts-Generator und SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)  
   
 ##  <a name="Related"></a> Verwandte Abschnitte  
  [Grundlegendes zu Gruppen &#40;Berichts-Generator und SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
@@ -207,7 +207,7 @@ FROM Production.Product
   
  [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
- [Melden und gruppieren Sie Variablen Sammlungen Verweise &#40;Berichts-Generator und SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
+ [Melden und Gruppenvariablenauflistungen &#40;Berichts-Generator und SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
   
  [Anzeigen einer Reihe mit mehreren Datenbereichen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
   

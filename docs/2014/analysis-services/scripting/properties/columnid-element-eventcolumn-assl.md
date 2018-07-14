@@ -1,5 +1,5 @@
 ---
-title: ColumnID-Element (EventColumn) (ASSL) | Microsoft Docs
+title: ColumnID-Element (EventColumn) (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ColumnID element
 ms.assetid: c4f4fbad-9d70-4de2-8cf7-caee80a4a1e4
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 71e51ec736b10a6d72621efb2a9b094882ed8057
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 82cc6d67aa0c1533b9779b93468fdf8845272cde
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161426"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245600"
 ---
 # <a name="columnid-element-eventcolumn-assl"></a>ColumnID-Element (EventColumn) (ASSL)
-  Enthält den Bezeichner (ID) der Spalte mit den Informationen für ein Ereignis erfasst werden sollen, als Teil einer [Ablaufverfolgung](../objects/trace-element-assl.md) Element.  
+  Enthält den Bezeichner (ID) der Spalte der Informationen für ein Ereignis aufgezeichnet werden, als Teil einer [Ablaufverfolgung](../objects/trace-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36161426"
 |Untergeordnete Elemente|Keine.|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element, das das übergeordnete Element des entspricht `ColumnID` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.TraceColumn>.  
+ Das Element, das dem übergeordneten entspricht `ColumnID` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.TraceColumn>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Columns-Element &#40;ASSL&#41;](../collections/columns-element-assl.md)   

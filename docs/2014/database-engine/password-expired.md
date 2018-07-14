@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.passwordexpired.f1
 helpviewer_keywords:
 - Password Expired dialog box
 ms.assetid: 9831b194-9ad5-47b0-8009-59c7aef4319b
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6b065bcf5e973c00b24398226510801e333181f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fabcfd609f5463cea9012ee779a41b87cf143f2a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162971"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224140"
 ---
 # <a name="password-expired"></a>Kennwort abgelaufen
   Das Dialogfeld wird angezeigt, wenn Sie eine Verbindung mit einem Server mit [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung herstellen und das von Ihnen angegebene Kennwort richtig jedoch bereits abgelaufen ist. Es wird außerdem angezeigt, wenn Sie eine Verbindung mit einem Server mit einem neuen Konto herstellen, das mit der Option **Benutzer muss Kennwort bei der nächsten Anmeldung ändern** erstellt wurde. Ändern Sie mithilfe des Dialogfelds **Kennwort abgelaufen** das Kennwort für den Anmeldenamen dieser [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows authentication [Reporting Services]
 - Reporting Services, configuration
@@ -16,13 +16,13 @@ ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3147e590c5a7fa7c258b705404d5b9ae5a8c1ea3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c71455bc6f9748cdd31cddfde2f3cfb01f6a9589
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161485"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325720"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver
   In der Standardeinstellung werden [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Anforderungen übergeben, die die Negotiate- oder die NTLM-Authentifizierung angeben. Wenn eine Bereitstellung Clientanwendungen und Browser umfasst, die diese Sicherheitsanbieter nutzen, können Sie die Standardwerte ohne zusätzliche Konfiguration verwenden. Wenn Sie einen anderen Sicherheitsanbieter für die integrierte Sicherheit von Windows nutzen möchten (wenn Sie beispielsweise Kerberos direkt verwenden möchten) oder wenn Sie die Standardwerte verändert haben und die ursprünglichen Einstellungen wiederherstellen möchten, können Sie mithilfe der in diesem Thema enthaltenen Informationen die Authentifizierungseinstellungen auf dem Berichtsserver festlegen.  
@@ -31,31 +31,31 @@ ms.locfileid: "36161485"
   
  Überdies müssen die folgenden zusätzlichen Anforderungen erfüllt werden:  
   
--   Die RSeportServer.config-Dateien benötigen `AuthenticationType` festgelegt `RSWindowsNegotiate`, `RSWindowsKerberos`, oder `RSWindowsNTLM`. Standardmäßig enthält die Datei RSReportServer.config die `RSWindowsNegotiate`-Einstellung, wenn das Berichtsserver-Dienstkonto entweder NetworkService oder LocalSystem ist. Andernfalls wird die `RSWindowsNTLM`-Einstellung verwendet. Sie können `RSWindowsKerberos` hinzufügen, wenn Anwendungen vorhanden sind, die nur die Kerberos-Authentifizierung verwenden.  
+-   Die RSeportServer.config-Dateien müssen `AuthenticationType` festgelegt `RSWindowsNegotiate`, `RSWindowsKerberos`, oder `RSWindowsNTLM`. Standardmäßig enthält die Datei RSReportServer.config die `RSWindowsNegotiate`-Einstellung, wenn das Berichtsserver-Dienstkonto entweder NetworkService oder LocalSystem ist. Andernfalls wird die `RSWindowsNTLM`-Einstellung verwendet. Sie können `RSWindowsKerberos` hinzufügen, wenn Anwendungen vorhanden sind, die nur die Kerberos-Authentifizierung verwenden.  
   
     > [!IMPORTANT]  
-    >  Mithilfe von `RSWindowsNegotiate` führt zu einem Kerberos-Authentifizierungsfehler vorliegt, wenn Sie den Berichtsserverdienst zur Ausführung unter einem Domänenbenutzerkonto konfiguriert ist und ein Name (SPN) für das Konto wurde nicht registriert. Weitere Informationen finden Sie unter [Beheben von Kerberos-Authentifizierungsfehlern beim Herstellen einer Verbindung mit einem Berichtsserver](#proxyfirewallRSWindowsNegotiate) in diesem Thema.  
+    >  Mithilfe von `RSWindowsNegotiate` führt zu einem Kerberos-Authentifizierungsfehler vorliegt, wenn Sie den Berichtsserverdienst zur Ausführung unter einem Domänenbenutzerkonto konfiguriert und ein Name (SPN) für das Konto wurde nicht registriert. Weitere Informationen finden Sie unter [Beheben von Kerberos-Authentifizierungsfehlern beim Herstellen einer Verbindung mit einem Berichtsserver](#proxyfirewallRSWindowsNegotiate) in diesem Thema.  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] muss für die Windows-Authentifizierung konfiguriert werden. Standardmäßig enthalten die Dateien "Web.config" für die Berichtsserver-Webdienst und Berichts-Manager die \<Authentifizierungsmodus = "Windows" > festlegen. Wenn diese Einstellung in \<authentication mode="Forms"> geändert wird, tritt bei der Windows-Authentifizierung für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ein Fehler auf.  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] muss für die Windows-Authentifizierung konfiguriert werden. Standardmäßig enthalten die Web.config-Dateien für die Berichtsserver-Webdienst und Berichts-Manager die \<Authentifizierungsmodus = "Windows" > festlegen. Wenn diese Einstellung in \<authentication mode="Forms"> geändert wird, tritt bei der Windows-Authentifizierung für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ein Fehler auf.  
   
--   Die Web.config-Dateien für die Berichtsserver-Webdienst und Berichts-Manager muss \<Identität = "true" / >.  
+-   Die Web.config-Dateien für die Berichtsserver-Webdienst und Berichts-Manager müssen \<Identity impersonate = "true" / >.  
   
 -   Die Clientanwendung bzw. der Browser muss die integrierte Sicherheit von Windows unterstützen.  
   
  Bearbeiten Sie die XML-Elemente und die Werte in der Datei RSReportServer.config, um die Berichtsserver-Authentifizierungseinstellungen zu ändern. Sie können die Beispiele in diesem Thema kopieren und einfügen, um bestimmte Kombinationen zu implementieren.  
   
- Die Standardeinstellungen eignen sich am besten, wenn sich die Client- und Servercomputer in derselben Domäne oder in einer vertrauenswürdigen Domäne befinden und der Berichtsserver für den Intranetzugriff hinter einer Unternehmensfirewall bereitgestellt wird. Vertrauenswürdige Domänen und Einzeldomänen sind eine Voraussetzung für die Weitergabe von Windows-Anmeldeinformationen. Die Anmeldeinformationen können nur dann mehrfach übergeben werden, wenn Sie das Kerberos-Protokoll, Version 5, für die Server aktivieren. Andernfalls können die Anmeldeinformationen nur einmal übergeben werden, bevor sie ablaufen. Weitere Informationen zum Konfigurieren von Anmeldeinformationen für mehrere computerverbindungen verwendet werden, finden Sie unter [angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
+ Die Standardeinstellungen eignen sich am besten, wenn sich die Client- und Servercomputer in derselben Domäne oder in einer vertrauenswürdigen Domäne befinden und der Berichtsserver für den Intranetzugriff hinter einer Unternehmensfirewall bereitgestellt wird. Vertrauenswürdige Domänen und Einzeldomänen sind eine Voraussetzung für die Weitergabe von Windows-Anmeldeinformationen. Die Anmeldeinformationen können nur dann mehrfach übergeben werden, wenn Sie das Kerberos-Protokoll, Version 5, für die Server aktivieren. Andernfalls können die Anmeldeinformationen nur einmal übergeben werden, bevor sie ablaufen. Weitere Informationen zum Konfigurieren von Anmeldeinformationen für mehrere computerverbindungen finden Sie unter [angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen-Verbindungen](../report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
  Die folgenden Anweisungen beziehen sich auf Berichtsserver, die im einheitlichen Modus ausgeführt werden. Wenn der Berichtserver im integrierten SharePoint-Modus bereitgestellt wird, müssen die Standardauthentifizierungseinstellungen verwendet werden, welche die integrierte Sicherheit von Windows angeben. Der Berichtsserver verwendet interne Funktionen der standardmäßigen Windows-Authentifizierungserweiterung, um Berichtserver im integrierten SharePoint-Modus zu unterstützen.  
   
 ## <a name="extended-protection-for-authentication"></a>Erweiterter Schutz für die Authentifizierung  
- Der erweiterte Schutz für die Authentifizierung wird ab [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]unterstützt. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktion unterstützt die Verwendung der Kanalbindung und Dienstbindung, um den Authentifizierungsschutz zu verbessern. Die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Funktionen müssen mit einem Betriebssystem verwendet werden, das erweiterten Schutz unterstützt. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfiguration für erweiterten Schutz wird durch Einstellungen in der Datei RSReportServer.config bestimmt. Die Datei kann entweder durch Bearbeitung oder Verwendung der WMI-APIs aktualisiert werden. Weitere Informationen finden Sie unter [Extended Protection for Authentication with Reporting Services](extended-protection-for-authentication-with-reporting-services.md).  
+ Der erweiterte Schutz für die Authentifizierung wird ab [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]unterstützt. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktion unterstützt die Verwendung der Kanalbindung und Dienstbindung, um den Authentifizierungsschutz zu verbessern. Die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Funktionen müssen mit einem Betriebssystem verwendet werden, das erweiterten Schutz unterstützt. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfiguration für erweiterten Schutz wird durch Einstellungen in der Datei RSReportServer.config bestimmt. Die Datei kann entweder durch Bearbeitung oder Verwendung der WMI-APIs aktualisiert werden. Weitere Informationen finden Sie unter [erweiterter Schutz für die Authentifizierung mit Reporting Services](extended-protection-for-authentication-with-reporting-services.md).  
   
 ### <a name="to-configure-a-report-server-to-use-windows-integrated-security"></a>So konfigurieren Sie einen Berichtsserver für die Verwendung der integrierten Sicherheit von Windows  
   
 1.  Öffnen Sie RSReportServer.config in einem Text-Editor.  
   
-2.  Suchen <`Authentication`>.  
+2.  Finden Sie <`Authentication`>.  
   
 3.  Kopieren Sie die XML-Struktur, die Ihren Anforderungen am besten entspricht. Sie können angeben, `RSWindowsNegotiate`, `RSWindowsNTLM`, und `RSWindowsKerberos` in beliebiger Reihenfolge. Sie sollten die Authentifizierungspersistenz aktivieren, wenn die Verbindung und nicht jede einzelne Anforderung authentifiziert werden soll. Bei Verwendung der Authentifizierungspersistenz werden alle Anforderungen, für die eine Authentifizierung erforderlich ist, zugelassen, solange die Verbindung besteht.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "36161485"
   
  Sie können den Fehler erkennen, wenn Sie die Kerberos-Protokollierung aktiviert haben. Ein anderes Fehlersymptom ist, dass Sie mehrfach zur Eingabe von Anmeldeinformationen aufgefordert werden und dann ein leeres Browserfenster angezeigt wird.  
   
- Sie können bestätigen, dass Sie durch das Entfernen einer Kerberos-Authentifizierungsfehler auftreten < `RSWindowsNegotiate` / > aus der Konfigurationsdatei und die Verbindung zu überzeugen.  
+ Sie können bestätigen, dass Sie ein Kerberos-Authentifizierung vorliegt, durch das Entfernen < `RSWindowsNegotiate` / > aus der Konfigurationsdatei und die Verbindung ein.  
   
  Nachdem Sie das Problem eindeutig identifiziert haben, können Sie es auf die folgenden Weisen beheben:  
   
@@ -179,7 +179,7 @@ ms.locfileid: "36161485"
 <RSWindowsExtendedProtectionScenario>Proxy</RSWindowsExtendedProtectionScenario>  
 ```  
   
- Weitere Informationen finden Sie unter [Extended Protection for Authentication with Reporting Services](extended-protection-for-authentication-with-reporting-services.md)  
+ Weitere Informationen finden Sie unter [erweiterter Schutz für die Authentifizierung mit Reporting Services](extended-protection-for-authentication-with-reporting-services.md)  
   
 #### <a name="how-the-browser-chooses-negotiated-kerberos-or-negotiated-ntlm"></a>Wie der Browser zwischen Aushandeln mit Kerberos und Aushandeln mit NTLM auswählt  
  Wenn Sie über Internet Explorer eine Verbindung mit dem Berichtsserver herstellen, gibt dieser im Authentifizierungsheader entweder ausgehandeltes Kerberos oder NTLM an. NTLM wird statt Kerberos verwendet, wenn eine der folgenden Bedingungen zutrifft:  

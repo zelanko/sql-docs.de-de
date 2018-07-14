@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - event classes [SQL Server], QN:Subscription
 ms.assetid: 4916167e-8541-43b4-900e-ec8e6adcbc34
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7dd4c06a89eeebe5c3b7e83a699ea17ca68bbd18
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 79e75ea52d0e1ed2d80dd4e2ef9dcc2d2092e6c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163140"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188477"
 ---
 # <a name="qnsubscription-event-class"></a>QN:Subscription (Ereignisklasse)
   Das QN:Subscription-Ereignis übermittelt Informationen über Benachrichtigungsabonnements.  
@@ -38,7 +38,7 @@ ms.locfileid: "36163140"
 |DatabaseName|`nvarchar`|Der Name der Datenbank, in der die Benutzeranweisung ausgeführt wird.|35|ja|  
 |EventClass|`int`|Ereignistyp = 199.|27|nein|  
 |EventSequence|`int`|Die Sequenznummer für dieses Ereignis.|51|nein|  
-|EventSubClass|`nvarchar`|Der Typ der Ereignisunterklasse, der weitere Informationen zu jeder Ereignisklasse liefert. Diese Spalte kann die folgenden Werte enthalten:<br /><br /> Abonnement registriert: Gibt an, wann das Abfragebenachrichtigungsabonnement erfolgreich in der Datenbank registriert wird.<br /><br /> Abonnement zurückgespult: Gibt an, wann die [!INCLUDE[ssDE](../../includes/ssde-md.md)] empfängt eine abonnementanforderung, die genau mit einem vorhandenes Abonnement übereinstimmt. In diesem Fall legt [!INCLUDE[ssDE](../../includes/ssde-md.md)] für den Timeoutwert des vorhandenen Abonnements den in der neuen Abonnementanforderung festgelegten Timeoutwert fest.<br /><br /> Abonnement wurde ausgelöst: Gibt an, wann ein Benachrichtigungsabonnement eine benachrichtigungsmeldung erzeugt.<br /><br /> Broker-Fehler bei der Auslösung: Gibt an, wann eine benachrichtigungsmeldung aufgrund schlägt fehl, ein [!INCLUDE[ssSB](../../includes/sssb-md.md)] Fehler.<br /><br /> Auslösen von Ereignissen Fehler, ohne dass Broker-Fehler: Gibt an, wann eine benachrichtigungsmeldung schlägt fehl, jedoch nicht aufgrund einer [!INCLUDE[ssSB](../../includes/sssb-md.md)] Fehler.<br /><br /> Broker-Fehler abgefangen: Gibt an, dass [!INCLUDE[ssSB](../../includes/sssb-md.md)] in der von die abfragebenachrichtigung verwendeten Konversation einen Fehler übermittelt.<br /><br /> Abonnement löschversuchs: Gibt an, dass die [!INCLUDE[ssDE](../../includes/ssde-md.md)] versucht hat, löschen ein abgelaufenes Abonnement, um Ressourcen freizugeben.<br /><br /> Abonnement konnte nicht gelöscht werden: Gibt an, dass beim Löschen einen abgelaufenen Abonnements Fehler generiert wurde. Die Löschung des Abonnements wird in [!INCLUDE[ssDE](../../includes/ssde-md.md)] automatisch erneut geplant, um Ressourcen frei zu geben.<br /><br /> Abonnement zerstört: Gibt an, dass die [!INCLUDE[ssDE](../../includes/ssde-md.md)] ein abgelaufenes Abonnement wurde erfolgreich gelöscht.|21|ja|  
+|EventSubClass|`nvarchar`|Der Typ der Ereignisunterklasse, der weitere Informationen zu jeder Ereignisklasse liefert. Diese Spalte kann die folgenden Werte enthalten:<br /><br /> Abonnement registriert: Gibt an, wann das Abfragebenachrichtigungsabonnement erfolgreich in der Datenbank registriert wird.<br /><br /> Abonnement zurückgespult: Gibt an, wann die [!INCLUDE[ssDE](../../includes/ssde-md.md)] empfängt eine Anforderung, die mit ein vorhandenes Abonnement übereinstimmt. In diesem Fall legt [!INCLUDE[ssDE](../../includes/ssde-md.md)] für den Timeoutwert des vorhandenen Abonnements den in der neuen Abonnementanforderung festgelegten Timeoutwert fest.<br /><br /> Abonnement wurde ausgelöst: Gibt an, wann ein Benachrichtigungsabonnement eine benachrichtigungsmeldung erzeugt.<br /><br /> Broker-Fehler bei der Auslösung: Gibt an, wann eine benachrichtigungsmeldung aufgrund von schlägt fehl, einen [!INCLUDE[ssSB](../../includes/sssb-md.md)] Fehler.<br /><br /> Fehler bei der Auslösung ohne Broker-Fehler: Gibt an, wenn eine Meldung ein Fehler auftritt, aber keine [!INCLUDE[ssSB](../../includes/sssb-md.md)] Fehler.<br /><br /> Broker-Fehler abgefangen: Gibt an, dass [!INCLUDE[ssSB](../../includes/sssb-md.md)] in der von die abfragebenachrichtigung verwendeten Konversation einen Fehler übermittelt.<br /><br /> Abonnement löschversuchs: Gibt an, dass die [!INCLUDE[ssDE](../../includes/ssde-md.md)] hat versucht, das Löschen eines abgelaufenen Abonnement, um Ressourcen freizugeben.<br /><br /> Fehler beim Löschen des Abonnements: Gibt an, dass der Versuch, ein abgelaufenes Abonnement gelöscht hat. Die Löschung des Abonnements wird in [!INCLUDE[ssDE](../../includes/ssde-md.md)] automatisch erneut geplant, um Ressourcen frei zu geben.<br /><br /> Abonnement zerstört: Gibt an, dass die [!INCLUDE[ssDE](../../includes/ssde-md.md)] ein abgelaufenes Abonnement wurde erfolgreich gelöscht.|21|ja|  
 |GroupID|`int`|ID der Arbeitsauslastungsgruppe, in der das SQL-Ablaufverfolgungsereignis ausgelöst wird.|66|ja|  
 |HostName|`nvarchar`|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname durch den Client bereitgestellt wird. Der Hostname kann mithilfe der HOST_NAME-Funktion bestimmt werden.|8|ja|  
 |IsSystem|`int`|Gibt an, ob das Ereignis bei einem Systemprozess oder einem Benutzerprozess aufgetreten ist.<br /><br /> 0 = Benutzer<br /><br /> 1 = System|60|nein|  

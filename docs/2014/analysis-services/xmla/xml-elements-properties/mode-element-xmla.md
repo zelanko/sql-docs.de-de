@@ -1,5 +1,5 @@
 ---
-title: Mode-Element (XMLA) | Microsoft Docs
+title: Mode-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Mode element
 ms.assetid: 43a54181-6494-48c3-b14b-376d8939fa9f
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5634e273e1708f9de213436e20008cc6874f50a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: c90d67995e6775c035265db57c2b55380ad0fe76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163212"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267646"
 ---
 # <a name="mode-element-xmla"></a>Mode-Element (XMLA)
-  Gibt den Modus an, durch das übergeordnete Element verwendet werden [Sperre](../xml-elements-commands/lock-element-xmla.md) Element bei der Erstellung einer Sperre für ein angegebenes Objekt.  
+  Gibt den Modus vom übergeordneten Element verwendet werden [Sperre](../xml-elements-commands/lock-element-xmla.md) Element beim Erstellen einer Sperre für ein angegebenes Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36163212"
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|[Sperre](../xml-elements-commands/lock-element-xmla.md), [entsperren](../xml-elements-commands/unlock-element-xmla.md)|  
+|Übergeordnete Elemente|[Sperre](../xml-elements-commands/lock-element-xmla.md), [nicht entsperren](../xml-elements-commands/unlock-element-xmla.md)|  
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -68,7 +68,7 @@ ms.locfileid: "36163212"
   
 |value|Description|  
 |-----------|-----------------|  
-|*CommitShared*|Auf dem angegebenen Objekt wird eine gemeinsame Sperre erstellt. Andere gemeinsame Sperren können für das gleiche Objekt erstellt werden.<br /><br /> Eine gemeinsame Sperre verhindert, dass Transaktionen, die mit der Schreibvorgänge, z. B. ein [Execute](../xml-elements-methods-execute.md) Methodenaufruf ausgeführt ein [Alter](../xml-elements-commands/alter-element-xmla.md) Befehl auf einem angegebenen Objekt, bis die gemeinsame Sperre aufgehoben wird. Eine gemeinsame Sperre verhindert nicht, dass Transaktionen, die Lesevorgänge an, wie z. B. enthalten eine [Discover](../xml-elements-methods-discover.md) Methodenaufruf oder ein `Execute` Methodenaufruf ausgeführt eine [Anweisung](../xml-elements-commands/statement-element-xmla.md) Befehl, ein Commit ausgeführt wird.|  
+|*CommitShared*|Auf dem angegebenen Objekt wird eine gemeinsame Sperre erstellt. Andere gemeinsame Sperren können für das gleiche Objekt erstellt werden.<br /><br /> Eine gemeinsame Sperre verhindert, dass Transaktionen, die Schreibvorgänge enthalten wie ein [Execute](../xml-elements-methods-execute.md) Methodenaufruf Ausführen eine [Alter](../xml-elements-commands/alter-element-xmla.md) Befehl für ein angegebenes Objekt, ein Commit ausgeführt wird, bis die gemeinsame Sperre aufgehoben wird. Eine gemeinsame Sperre verhindert nicht, dass Transaktionen, die Lesevorgänge an, wie z. B. enthalten eine [Discover](../xml-elements-methods-discover.md) Methodenaufruf oder ein `Execute` Methodenaufruf ausgeführt wird ein [Anweisung](../xml-elements-commands/statement-element-xmla.md) Befehl, ein Commit ausgeführt wird.|  
 |*CommitExclusive*|Auf dem angegebenen Objekt wird eine exklusive Sperre erstellt. Andere gemeinsame oder exklusive Sperren können nicht für das gleiche Objekt erstellt werden.<br /><br /> Eine exklusive Sperre verhindert die Commitausführung von Transaktionen, die entweder Lese- oder Schreibvorgänge auf einem angegebenen Objekt enthalten, bis die exklusive Sperre aufgehoben ist.|  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - languages [full-text search]
 - full-text search [SQL Server], stemmers
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - word breakers [full-text search]
 ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
 caps.latest.revision: 88
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4c3bfb07ca9730b8c03cb56f07464355c392bda6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 754e9097026fdf1e7a9be5bba6b6115db674a143
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163100"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221110"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche
   Wörtertrennung und Wortstammerkennung führen eine linguistische Analyse aller volltextindizierten Daten aus. Zur linguistischen Analyse gehört das Auffinden von Wortgrenzen (Trennfugen) und das Konjugieren von Verben (Wortstammerkennung). Wörtertrennungen und Wortstammerkennungen sind sprachspezifisch, und die Regeln für die linguistische Analyse unterscheiden sich für verschiedene Sprachen. Für eine bestimmte Sprache identifiziert eine *Wörtertrennung* einzelne Wörter, indem die Wortgrenzen basierend auf den lexikalischen Regeln der Sprache ermittelt werden. Jedes Wort (auch bezeichnet als *Token*) wird zur Größenreduzierung in einer komprimierten Darstellung in den Volltextindex eingefügt. Die *Wortstammerkennung* generiert Flexionsformen eines bestimmten Worts basierend auf den jeweiligen Regeln der Sprache. (Zum Beispiel sind „laufend“, „lief“ und „gelaufen“ verschiedene Formen des Worts „laufen“.)  
@@ -44,7 +43,7 @@ ms.locfileid: "36163100"
  Wenn Sie eine Wörtertrennung hinzufügen, entfernen oder ändern, müssen Sie die Liste der Microsoft Windows-Gebietsschemabezeichner (LCID) aktualisieren, die bei Volltextindizierung und -abfrage unterstützt werden. Weitere Informationen finden Sie unter [Anzeigen oder Ändern von registrierten Filtern und Wörtertrennungen](view-or-change-registered-filters-and-word-breakers.md).  
   
 ##  <a name="default"></a> Festlegen der Option Volltext-Standardsprache  
- Bei einer lokalisierten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] legt Setup die `default full-text language` -Option auf die Sprache des Servers, wenn eine geeignete Übereinstimmung vorhanden ist. Bei einer nicht lokalisierten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `default full-text language` Option ist Englisch.  
+ Bei einer lokalisierten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] legt Setup die `default full-text language` option für die Sprache des Servers, wenn eine geeignete Übereinstimmung vorhanden ist. Für eine nicht lokalisierte Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `default full-text language` Option Englisch ist.  
   
  Beim Erstellen oder Ändern eines Volltextindex können Sie für jede volltextindizierte Spalte eine andere Sprache angeben. Ist für eine Spalte keine Sprache angegeben, wird standardmäßig der Wert der Konfigurationsoption `default full-text language` verwendet.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "36163100"
   
  Bei der Wahl der Spaltensprache für die Erstellung eines Volltextindex sind mehrere Dinge zu bedenken. Diese beziehen sich darauf, wie der Text von der Volltext-Engine in Token zerlegt und anschließend indiziert wird. Weitere Informationen finden Sie unter [Auswählen einer Sprache beim Erstellen eines Volltextindex](choose-a-language-when-creating-a-full-text-index.md).  
   
- **So zeigen Sie die wörtertrennungssprache einer Spalte an**  
+ **Um die wörtertrennungssprache einer Spalte anzuzeigen.**  
   
 -   [Verwalten von Volltextindizes](../indexes/indexes.md)  
   
@@ -67,7 +66,7 @@ ms.locfileid: "36163100"
     ```  
   
 ##  <a name="info"></a> Abrufen von Informationen zu Wörtertrennungen  
- **Anzeigen des tokenisierungsergebnis einer Kombination aus wörtertrennung, Thesaurus und stoplisten**  
+ **Anzeigen des tokenisierungsergebnis einer Kombination aus wörtertrennung, Thesaurus und Stoppliste**  
   
 -   [sys.dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql).  
   
@@ -75,10 +74,10 @@ ms.locfileid: "36163100"
   
 -   [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)  
   
-##  <a name="tshoot"></a> Problembehandlung bei der Wörtertrennung-Timeout  
+##  <a name="tshoot"></a> Problembehandlung von Timeoutfehlern bei der Wörtertrennung  
  Timeoutfehler können bei der Wörtertrennung in verschiedenen Situationen auftreten. Weitere Informationen zu diesen Situationen sowie zur Behandlung dieser Fehler finden Sie unter [MSSQLSERVER_30053](../errors-events/mssqlserver-30053-database-engine-error.md).  
   
-##  <a name="impact"></a> Grundlegendes zu den Auswirkungen der neuen Wörtertrennungen  
+##  <a name="impact"></a> Grundlegendes zu den Auswirkungen neuer wörtertrennungen  
  Jede Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält in der Regel neue Wörtertrennungen, die über bessere linguistische Regeln als frühere Wörtertrennungen verfügen und außerdem genauer sind. Gegebenenfalls verhalten sich die neuen Wörtertrennungen im Vergleich zu den Wörtertrennungen in importierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Volltextindizes etwas anders. Dies ist wichtig, wenn ein Volltextkatalog importiert wurde, während eine Datenbank auf die neue Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aktualisiert wurde. Eine oder mehrere Sprachen, die von den Volltextindizes im Volltextkatalog verwendet werden, sind jetzt ggf. neuen Wörtertrennungen zugeordnet. Weitere Informationen finden Sie unter [Upgrade der Volltextsuche](upgrade-full-text-search.md).  
   
  Eine vollständige Liste aller Wörtertrennungen finden Sie unter [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  

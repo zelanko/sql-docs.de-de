@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dbdeployment.settings.f1
 - sql12.swb.dbdeployment.progress.f1
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - database deploy [SQL Server]
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 122fb199052592bebb0f201358f6ff4c25149fa9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ec4cff220e8e3e08c71eb5a43986817c3c434332
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162731"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199560"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Bereitstellen einer Datenbank mit DAC
   Verwenden Sie den Assistenten zum **Bereitstellen von Datenbanken auf SQL Azure** , um eine Datenbank zwischen einer [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz und einem [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] -Server bzw. zwischen zwei [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Servern bereitzustellen.  
@@ -131,13 +131,13 @@ ms.locfileid: "36162731"
   
 1.  Erstellen Sie ein SMO-Serverobjekt, und legen Sie es auf die Instanz oder den Server fest, die bzw. der die bereitzustellende Datenbank enthält.  
   
-2.  Öffnen einer `ServerConnection` -Objekt und das Herstellen einer Verbindung mit der gleichen Instanz.  
+2.  Öffnen einer `ServerConnection` Objekt und eine Verbindung mit der gleichen Instanz.  
   
-3.  Verwenden der `Export` Methode der `Microsoft.SqlServer.Management.Dac.DacStore` Typ, um die Datenbank in eine bacpac-Datei exportieren. Geben Sie den Namen der zu exportierenden Datenbank sowie den Pfad zum Ordner an, in dem die BACPAC-Datei abgelegt werden soll.  
+3.  Verwenden der `Export` Methode der `Microsoft.SqlServer.Management.Dac.DacStore` Typ, der die Datenbank in eine bacpac-Datei exportieren. Geben Sie den Namen der zu exportierenden Datenbank sowie den Pfad zum Ordner an, in dem die BACPAC-Datei abgelegt werden soll.  
   
 4.  Erstellen Sie ein SMO-Serverobjekt, und legen Sie es auf die Zielinstanz oder den Zielserver fest.  
   
-5.  Öffnen einer `ServerConnection` -Objekt und das Herstellen einer Verbindung mit der gleichen Instanz.  
+5.  Öffnen einer `ServerConnection` Objekt und eine Verbindung mit der gleichen Instanz.  
   
 6.  Verwenden der `Import` Methode der `Microsoft.SqlServer.Management.Dac.DacStore` Typs, um die bacpac-Datei zu importieren. Geben Sie die beim Exportvorgang erstellte BACPAC-Datei an.  
   

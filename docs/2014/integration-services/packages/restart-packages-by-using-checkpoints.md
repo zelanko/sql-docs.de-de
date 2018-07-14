@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - checkpoints [Integration Services]
 - restarting packages
@@ -17,13 +17,13 @@ ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b585849d6bb585a2d7008894c874b84d0a87f17e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 02aa88c80200ece060204fc339e84560a069cc17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162286"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260986"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Neustarten von Paketen mit Prüfpunkten
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] können fehlerhafte Pakete an dem Punkt neu gestartet werden, an dem der Fehler aufgetreten ist. Sie brauchen also nicht noch einmal vollständig ausgeführt werden. Wenn ein Paket zum Verwenden von Prüfpunkten konfiguriert ist, werden Informationen zur Ausführung des Pakets in eine Prüfpunktdatei geschrieben. Wenn das fehlerhafte Paket erneut ausgeführt wird, wird die Prüfpunktdatei verwendet, um das Paket von dem Punkt aus, an dem der Fehler aufgetreten ist, auszuführen. Wenn das Paket erfolgreich ausgeführt wird, wird die Prüfpunktdatei gelöscht und beim nächsten Ausführen des Pakets neu erstellt.  
@@ -36,7 +36,7 @@ ms.locfileid: "36162286"
   
 -   Vermeiden wiederholter Wertaggregationen. Beispielsweise kann ein Paket, das mithilfe von einzelnen Datenflusstasks zahlreiche verschiedene Aggregate berechnet, wie z. B. Mittelwerte oder Summen, neu gestartet werden, nachdem die Berechnung einer einzigen Aggregation einen Fehler auslöst. Anschließend braucht nur die fehlerhafte Aggregation neu berechnet werden.  
   
- Wenn ein Paket für das Verwenden von Prüfpunkten konfiguriert ist, zeichnet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] den Punkt, an dem neu gestartet werden soll, in der Prüfpunktdatei auf. Der in der Prüfpunktdatei aufgezeichnete Punkt, an dem neu gestartet werden soll, ist vom Typ des fehlerhaften Containers und der Implementierung von Funktionen wie z. B. Transaktionen abhängig. Die aktuellen Werte von Variablen werden ebenfalls in der Prüfpunktdatei erfasst. Allerdings die Werte von Variablen müssen die `Object` -Datentyp werden nicht in Prüfpunktdateien gespeichert.  
+ Wenn ein Paket für das Verwenden von Prüfpunkten konfiguriert ist, zeichnet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] den Punkt, an dem neu gestartet werden soll, in der Prüfpunktdatei auf. Der in der Prüfpunktdatei aufgezeichnete Punkt, an dem neu gestartet werden soll, ist vom Typ des fehlerhaften Containers und der Implementierung von Funktionen wie z. B. Transaktionen abhängig. Die aktuellen Werte von Variablen werden ebenfalls in der Prüfpunktdatei erfasst. Allerdings die Werte von Variablen, die über verfügen den `Object` -Datentyp werden nicht in Prüfpunktdateien gespeichert.  
   
 ## <a name="defining-restart-points"></a>Definieren von Prüfpunkten, an denen neu gestartet wird  
  Die kleinste atomare Arbeitseinheit, die neu gestartet werden kann, ist der Taskhostcontainer, der einen einzelnen Task kapselt. Der Foreach-Schleifencontainer und der Transaktionscontainer werden ebenfalls als atomare Arbeitseinheiten behandelt.  
@@ -63,7 +63,7 @@ ms.locfileid: "36162286"
 |CheckpointUsage|Gibt an, ob Prüfpunkte verwendet werden.|  
 |SaveCheckpoints|Gibt an, ob das Paket Prüfpunkte speichert. Diese Eigenschaft muss auf True festgelegt sein, damit ein Paket an dem Punkt neu gestartet wird, an dem ein Fehler aufgetreten ist.|  
   
- Darüber hinaus müssen Sie die Eigenschaft "FailPackageOnFailure" festlegen, um `true` für alle Container im Paket, das Sie identifizieren möchten, die als neu starten.  
+ Darüber hinaus müssen Sie die FailPackageOnFailure-Eigenschaft festlegen, um `true` für alle Container im Paket, das Sie identifizieren möchten neu starten.  
   
  Mit der ForceExecutionResult-Eigenschaft können Sie die Verwendung der Prüfpunkte eines Pakets testen. Sie können einen Echtzeitfehler imitieren, indem Sie die ForceExecutionResult-Eigenschaft eines Tasks oder eines Containers auf Failure festlegen. Wenn Sie das Paket erneut ausführen, werden der fehlerhafte Task bzw. die fehlerhaften Container erneut ausgeführt.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36162286"
 |`IfExists`|Gibt an, dass die Prüfpunktdatei verwendet wird, falls sie vorhanden ist. Wenn die Prüfpunktdatei vorhanden ist, wird das Paket an dem Punkt neu gestartet, an dem bei der letzten Ausführung ein Fehler aufgetreten ist; anderenfalls wird das Paket vom Beginn des Paketworkflows aus ausgeführt.|  
   
 > [!NOTE]  
->  Die **/CheckPointing auf** Option von Dtexec entspricht dem Festlegen der `SaveCheckpoints` -Eigenschaft des Pakets auf `True`, und die `CheckpointUsage` bzw. Always. Weitere Informationen finden Sie unter [dtexec Utility](dtexec-utility.md).  
+>  Die **/CheckPointing auf** Option von Dtexec entspricht dem Festlegen der `SaveCheckpoints` -Eigenschaft des Pakets zu `True`, und die `CheckpointUsage` Eigenschaft auf Always. Weitere Informationen finden Sie unter [dtexec Utility](dtexec-utility.md).  
   
 ## <a name="securing-checkpoint-files"></a>Sichern von Prüfpunktdateien  
  Der Schutz auf Paketebene schließt nicht den Schutz von Prüfpunktdateien ein. Daher müssen diese Dateien separat gesichert werden. Prüfpunktdaten können nur im Dateisystem gespeichert werden. Sie sollten daher eine Zugriffssteuerungsliste (ACL, Access Control List) des Betriebssystems verwenden, um den Speicherort der Datei bzw. den Ordner, in dem die Datei gespeichert wird, zu sichern. Prüfpunktdateien sollten unbedingt gesichert werden, da sie Informationen zum Paketstatus enthalten, einschließlich der aktuellen Variablenwerte. Beispielsweise kann eine Variable ein Recordset mit mehreren Zeilen privater Daten, wie z. B. Telefonnummern, enthalten. Weitere Informationen finden Sie unter [Zugriff auf Dateien, die von Paketen verwendet werden](../access-to-files-used-by-packages.md).  

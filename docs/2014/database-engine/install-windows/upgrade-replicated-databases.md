@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - merge replication database upgrades [SQL Server replication]
 - replication [SQL Server], upgrading
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - upgrading replicated databases
 ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 caps.latest.revision: 71
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 58c7b1de8c75c9cb5d9f57e1df498921de16a6d7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2ce7d9e9a67a11e7df2d2322e2c3c9bda17f3d44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161638"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233810"
 ---
 # <a name="upgrade-replicated-databases"></a>Aktualisieren von replizierten Datenbanken
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt das Aktualisieren replizierter Datenbanken von früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Während der Aktualisierung eines Knotens müssen die auf anderen Knoten ausgeführten Aktivitäten nicht beendet werden. Stellen Sie sicher, dass die Regeln, die im Hinblick auf die in einer Topologie unterstützten Versionen gelten, eingehalten werden:  
@@ -84,7 +84,7 @@ ms.locfileid: "36161638"
  Nach dem Upgrade von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einer Topologie, in der die Mergereplikation verwendet wird, müssen Sie den Kompatibilitätsgrad aller Veröffentlichungen ändern, um neue Funktionen verwenden zu können.  
   
 ## <a name="upgrading-to-standard-workgroup-or-express-editions"></a>Aktualisieren auf die Standard Edition, Workgroup Edition oder Express Edition  
- Bevor eine Edition von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auf eine andere Edition aktualisiert wird, sollten Sie überprüfen, ob die derzeit verwendete Funktionalität in der Edition, die Ziel des Upgrades ist, unterstützt wird. Weitere Informationen finden Sie im Abschnitt zur Replikation im [von den Editionen von SQL Server 2014 unterstützte Funktionen](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Bevor eine Edition von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auf eine andere Edition aktualisiert wird, sollten Sie überprüfen, ob die derzeit verwendete Funktionalität in der Edition, die Ziel des Upgrades ist, unterstützt wird. Weitere Informationen finden Sie im Abschnitt zur Replikation im [von den SQL Server 2014-Editionen unterstützte Funktionen](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## <a name="web-synchronization-for-merge-replication"></a>Websynchronisierung für die Mergereplikation  
  Bei der Websynchronisierung für die Mergereplikation ist es erforderlich, dass die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikationsüberwachung (replisapi.dll) in das virtuelle Verzeichnis auf dem Server mit Internetinformationsdienste (Internet Information Services, IIS) kopiert wird, der für die Synchronisierung verwendet wird. Wenn Sie die Websynchronisierung konfigurieren, wird die Datei vom Assistenten zum Konfigurieren der Websynchronisierung in das virtuelle Verzeichnis kopiert. Wenn Sie die auf dem IIS-Server installierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten aktualisieren, müssen Sie replisapi.dll manuell vom Verzeichnis COM in das virtuelle Verzeichnis auf dem IIS-Server kopieren. Weitere Informationen zur Konfiguration der Websynchronisierung finden Sie unter [Konfigurieren der Websynchronisierung](../../../2014/relational-databases/replication/configure-web-synchronization.md).  

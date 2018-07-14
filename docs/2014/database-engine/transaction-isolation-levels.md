@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8a6a82bf-273c-40ab-a101-46bd3615db8a
 caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b9c9b3cc1259ca1c905cd25e9d8379eb7ecc4f87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7fb341cb36e97fbd06f38363c84d87f975d23eed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163416"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329960"
 ---
 # <a name="transaction-isolation-levels"></a>Transaktionsisolationsstufen
   Die folgenden Isolationsstufen werden für Transaktionen unterstützt, die auf Speicheroptimierte Tabellen zugreifen.  
@@ -42,7 +42,7 @@ ms.locfileid: "36163416"
   
 -   Verwenden Sie zum Zugreifen auf die speicheroptimierte Tabelle explizit einen Hinweis für eine höhere Isolationsstufe (z. B. WITH (SNAPSHOT)).  
   
--   Geben Sie die SET-Option `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` an. Damit wird die Isolationsstufe für speicheroptimierte Tabellen auf SNAPSHOT festgelegt (wie bei der Einbindung von WITH(SNAPSHOT)-Hinweisen für alle speicheroptimierten Tabellen). Weitere Informationen zu `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
+-   Geben Sie die SET-Option `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` an. Damit wird die Isolationsstufe für speicheroptimierte Tabellen auf SNAPSHOT festgelegt (wie bei der Einbindung von WITH(SNAPSHOT)-Hinweisen für alle speicheroptimierten Tabellen). Weitere Informationen zu `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, finden Sie unter [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
  Falls die Isolationsstufe der Sitzung READ COMMITTED ist, können Sie alternativ Autocommittransaktionen verwenden.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36163416"
  SERIALIZABLE  
  Diese Isolationsstufe umfasst die durch REPEATABLE READ gewährten Garantien. Zwischen der Momentaufnahme und dem Ende der Transaktion sind keine Phantomzeilen aufgetreten. Phantomzeilen entsprechen der Filterbedingung einer Auswahl, eines Updates oder einer Löschung.  
   
- Die Transaktion wurde ausgeführt, als seien keine gleichzeitigen Transaktionen vorhanden. Alle Aktionen erfolgen praktisch in einem einzelnen serialisierungspunkt (Commitzeit).  
+ Die Transaktion wurde ausgeführt, als seien keine gleichzeitigen Transaktionen vorhanden. Alle Aktionen erfolgen praktisch an einem einzelnen serialisierungspunkt (Commitzeit).  
   
  Wenn eine dieser Garantien verletzt wird, kann für die Transaktion kein Commit ausgeführt werden, und es wird die folgende Fehlermeldung angezeigt:  
   

@@ -1,5 +1,5 @@
 ---
-title: Gewähren von Benutzerzugriff auf einem Berichtsserver (Berichts-Manager) | Microsoft Docs
+title: Gewähren von Benutzerzugriff auf einen Berichtsserver (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing role assignments
 - permissions [Reporting Services], granting report server access
@@ -19,13 +19,13 @@ ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d3a3526e9c52dad5c595c9df9fb722abb5f5b288
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b705997e16e2f41fb92ed7a5385a0907db09d99e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161962"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256142"
 ---
 # <a name="grant-user-access-to-a-report-server-report-manager"></a>Gewähren von Benutzerzugriff auf einen Berichtsserver (Berichts-Manager)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet rollenbasierte Sicherheit, um Benutzerzugriff auf einen Berichtsserver zu gewähren. Bei der Installation eines neuen Berichtsservers haben nur Benutzer, die Mitglieder der lokalen Administratorengruppe sind, Zugriff auf Berichtsserverinhalte und -vorgänge. Damit der Berichtsserver auch von anderen Benutzern verwendet werden kann, müssen Sie Rollenzuweisungen erstellen, mit denen Benutzer- oder Gruppenkonten einer vordefinierten Rolle zugeordnet werden, die eine Auflistung von Tasks festlegt.  
@@ -61,7 +61,7 @@ ms.locfileid: "36161962"
   
 4.  Klicken Sie auf **Neue Rollenzuweisung**.  
   
-5.  In **Gruppen-oder Benutzername**, geben Sie ein Windows-Domänenbenutzer oder ein-Gruppenkonto im folgenden Format: \<Domäne >\\< Konto\>. Wenn Sie die Formularauthentifizierung oder die benutzerdefinierte Sicherheit verwenden, geben Sie das Benutzer- oder Gruppenkonto in dem für Ihre Bereitstellung richtigen Format an.  
+5.  In **Gruppen-oder Benutzername**, geben Sie einen Windows-Domänenbenutzer oder ein-Gruppenkonto im folgenden Format: \<Domäne >\\< Konto\>. Wenn Sie die Formularauthentifizierung oder die benutzerdefinierte Sicherheit verwenden, geben Sie das Benutzer- oder Gruppenkonto in dem für Ihre Bereitstellung richtigen Format an.  
   
 6.  Wählen Sie eine Systemrolle aus, und klicken Sie anschließend auf **OK**.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36161962"
     > [!NOTE]  
     >  Falls ein Element aktuell die Sicherheitseinstellungen eines übergeordneten Elements erbt, klicken Sie auf der Symbolleiste auf **Elementsicherheit bearbeiten** , um die Sicherheitseinstellungen zu ändern. Klicken Sie dann auf **Neue Rollenzuweisung**.  
   
-5.  In **Gruppen-oder Benutzername**, geben Sie ein Windows-Domänenbenutzer oder ein-Gruppenkonto im folgenden Format: \<Domäne >\\< Konto\>. Wenn Sie die Formularauthentifizierung oder die benutzerdefinierte Sicherheit verwenden, geben Sie das Benutzer- oder Gruppenkonto in dem für Ihre Bereitstellung richtigen Format an.  
+5.  In **Gruppen-oder Benutzername**, geben Sie einen Windows-Domänenbenutzer oder ein-Gruppenkonto im folgenden Format: \<Domäne >\\< Konto\>. Wenn Sie die Formularauthentifizierung oder die benutzerdefinierte Sicherheit verwenden, geben Sie das Benutzer- oder Gruppenkonto in dem für Ihre Bereitstellung richtigen Format an.  
   
 6.  Wählen Sie mindestens eine Rollendefinition aus, die beschreibt, wie der Benutzer oder die Gruppe auf das Element zugreifen soll, und klicken Sie dann auf **OK**.  
   
@@ -90,8 +90,8 @@ ms.locfileid: "36161962"
   
 ## <a name="see-also"></a>Siehe auch  
  (erstellen-und-Verwaltung-Rolle-assignments.md)   
- [Neue Rollenzuweisung: Rollenseite Rollenzuweisung bearbeiten &#40;Berichts-Manager&#41;](../new-role-assignment-edit-role-assignment-page-report-manager.md)   
- [Sicherheit (Eigenschaftenseite, Elemente) &#40;Berichts-Manager&#41;](../security-properties-page-items-report-manager.md)   
+ [Neue Rollenzuweisung: Bearbeiten der Zuweisung Rollenseite &#40;Berichts-Manager&#41;](../new-role-assignment-edit-role-assignment-page-report-manager.md)   
+ [Sicherheit (Eigenschaftenseite) Elemente &#40;Berichts-Manager&#41;](../security-properties-page-items-report-manager.md)   
  [Rollenzuweisungen](role-assignments.md)   
  [Rollendefinitionen](role-definitions.md)  
   

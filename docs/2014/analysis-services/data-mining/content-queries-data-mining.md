@@ -1,5 +1,5 @@
 ---
-title: Inhaltsabfragen (Datamining) | Microsoft Docs
+title: Inhaltsabfragen (Datamining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5371a5a0198c6f5f2f77fa6891875712f1814cbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 441ad05289df13e34954553db27810406341d77d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163043"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222600"
 ---
 # <a name="content-queries-data-mining"></a>Inhaltsabfragen (Data Mining)
   Eine Inhaltsabfrage stellt eine Möglichkeit dar, Informationen über interne Statistiken und die Struktur des Miningmodells zu extrahieren. Mitunter enthält eine Inhaltsabfrage Details, die im Viewer nicht unmittelbar verfügbar sind. Sie können auch die Ergebnisse einer Inhaltsabfrage verwenden, um Informationen programmgesteuert zu anderen Verwendungszwecken zu extrahieren.  
@@ -200,7 +200,7 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
  Weitere Informationen zum Arbeiten mit hierarchischen Rowsets finden Sie in der OLEDB-Spezifikation von MSDN.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Grundlegendes zur Select-Anweisung von DMX](/sql/dmx/understanding-the-dmx-select-statement)   
+ [Verstehen die DMX Select-Anweisung](/sql/dmx/understanding-the-dmx-select-statement)   
  [Data Mining-Abfragen](data-mining-queries.md)  
   
   

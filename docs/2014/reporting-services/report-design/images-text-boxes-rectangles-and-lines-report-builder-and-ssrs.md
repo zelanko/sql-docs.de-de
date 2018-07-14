@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d0f61e998af12f937848722d7f992285b1ea2d3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4e39cf7e2be258a298125ea550ebb5cf6762017f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162870"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224795"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>Bilder, Textfelder, Rechtecke und Linien (Berichts-Generator und SSRS)
   Neben Datenbereichen wie Tabellen, Matrizen und Diagrammen werden in Berichten andere Berichtselemente wie Bilder, Textfelder und Rechtecke verwendet, um visuelle Effekte hinzuzufügen, wichtige Informationen hervorzuheben oder verwandte Informationen bereitzustellen. Sie können die Formatierung eines Berichtselements ändern. Sie können z. B. einen Rahmen oder eine Auffüllung hinzufügen, die ursprüngliche Sichtbarkeit oder Richtung ändern oder die genaue Größe oder Position des Elements angeben.  
@@ -38,7 +38,7 @@ ms.locfileid: "36162870"
   
  **Rechtecke** können als grafisches Element oder als Container für andere Berichtselemente verwendet werden. Als grafisches Element verfügt ein Rechteck über die gleichen Eigenschaften wie eine Zeile. Ein Rechteck fungiert als übergeordneter Container für alle enthaltenen Berichtselemente. Durch Platzieren von Berichtselementen in einen übergeordneten Container können Sie besser kontrollieren, wie die Elemente auf jeder Berichtsseite angezeigt werden.  
   
- [Bilder &#40;Berichts-Generator und SSRS&#41;](images-report-builder-and-ssrs.md)  
+ [Images &#40;Berichts-Generator und SSRS&#41;](images-report-builder-and-ssrs.md)  
  Bilder zeigen binäre Bilddaten in einem Bericht an. Sie stellen die Quelle für das Bild bereit. Bei der Quelle kann es sich um einen URL-Verweis auf ein auf einem Webserver gespeichertes Bild, einen Verweis auf eingebettete Bilddaten oder einen Verweis auf binäre Bilddaten in einer Datenbank handeln. Berichts-Generator und Berichts-Designer unterstützen BMP-, JPEG-, GIF- und PNG-Dateien.  
   
 ## <a name="see-also"></a>Siehe auch  

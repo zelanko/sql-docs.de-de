@@ -1,5 +1,5 @@
 ---
-title: Verwenden Sie einen Ausdruck in einer Rangfolgeneinschränkung | Microsoft Docs
+title: Verwenden Sie einen Ausdruck in einer Rangfolgeneinschränkung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - precedence constraints [Integration Services], adding expressions
 - expressions [Integration Services], adding
 ms.assetid: 601038bb-3b17-42ac-b09d-5b3a82fb6564
 caps.latest.revision: 44
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e9752ccb8a925f144abc256db01a6eab683e7d6b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 31e3e002996d523aa225e0d0bb607d1772d8b0e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163159"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273066"
 ---
 # <a name="use-an-expression-in-a-precedence-constraint"></a>Verwenden eines Ausdrucks in einer Rangfolgeneinschränkung
   In diesem Verfahren wird beschrieben, wie Sie einer Rangfolgeneinschränkung mithilfe des Dialogfelds **Rangfolgeneinschränkungs-Editor** einen Ausdruck hinzufügen. Wenn Sie einer Rangfolgeneinschränkung einen Ausdruck hinzufügen möchten, muss das Paket mindestens zwei ausführbare Dateien einschließen (Tasks oder Container), die mit einer Rangfolgeneinschränkung verbunden sein müssen.  

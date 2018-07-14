@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
 - security [Reporting Services], unattended report processing
@@ -21,18 +21,18 @@ ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 063fd32c8b94bc10bc22aea0d117a6d41a0a84fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0cba2bc68d83c2d0b986324e2efa7f882bac6e76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161969"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321920"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Konfigurieren des unbeaufsichtigten Ausführungskontos (SSRS-Konfigurations-Manager)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stellt ein besonderes Konto bereit, das für die unbeaufsichtigte Berichtsverarbeitung und zum Senden von Verbindungsanforderungen über das Netzwerk verwendet wird. Das Konto wird bei folgenden Vorgängen verwendet:  
   
--   Senden Sie Verbindungsanforderungen über das Netzwerk für Berichte, die Datenbankauthentifizierung verwenden, oder stellen Sie die Verbindung mit externen Berichtsdatenquellen her, für die keine Authentifizierung erforderlich ist oder verwendet wird. Weitere Informationen finden Sie unter [angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../integration-services/connection-manager/data-sources.md) in SQL Server-Onlinedokumentation.  
+-   Senden Sie Verbindungsanforderungen über das Netzwerk für Berichte, die Datenbankauthentifizierung verwenden, oder stellen Sie die Verbindung mit externen Berichtsdatenquellen her, für die keine Authentifizierung erforderlich ist oder verwendet wird. Weitere Informationen finden Sie unter [angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen-Verbindungen](../../integration-services/connection-manager/data-sources.md) in SQL Server-Onlinedokumentation.  
   
 -   Abrufen externer Imagedateien, die im Bericht verwendet werden. Wenn Sie eine Bilddatei verwenden möchten, auf die kein anonymer Zugriff möglich ist, können Sie das Konto für die unbeaufsichtigte Berichtsverarbeitung konfigurieren und dem Konto die Zugriffsberechtigung für die Datei erteilen.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36161969"
 ## <a name="how-to-use-the-unattended-report-processing-account"></a>Verwenden des Kontos für die unbeaufsichtigte Berichtsverarbeitung  
  Zum Abrufen von Imagedateien verwendet der Berichtsserver das Konto automatisch, ohne dass Sie aktiv werden müssen. Sie müssen auf der Seite „Datenquelleneigenschaften“ der Berichtsdatenquelle oder der freigegebenen Datenquelle eine Option für den **Anmeldeinformationstyp** festlegen, um über das Konto eine Verbindung mit externen Datenquellen von Berichtsdaten herzustellen:  
   
--   Wählen Sie im Berichts-Manager oder auf einer SharePoint-Website die **sind keine Anmeldeinformationen erforderlich** Option.  
+-   Wählen Sie im Berichts-Manager oder auf einer SharePoint-Website die **Anmeldeinformationen sind nicht erforderlich** Option.  
   
  Das Konto für die unbeaufsichtigte Berichtsverarbeitung wird hauptsächlich dazu verwendet, die Verbindung mit externen Servern herzustellen, und nicht für die Anmeldung bei Datenbankservern. Möchten Sie die Kontoanmeldeinformationen zur Anmeldung an einer Datenbank verwenden, müssen Sie die Anmeldeinformationen in der Verbindungszeichenfolge angeben. Sie können **Integrated Security=SSPI** angeben, wenn der Datenbankserver die integrierte Sicherheit von Windows unterstützt und das für die unbeaufsichtigte Berichtsverarbeitung verwendete Konto über die Berechtigung zum Lesen der Datenbank verfügt. Andernfalls müssen Sie den Benutzernamen und das Kennwort in die Verbindungszeichenfolge eingeben. Dort wird es als Klartext jedem Benutzer angezeigt, der zur Bearbeitung von Datenquellen-Verbindungseigenschaften berechtigt ist.  
   

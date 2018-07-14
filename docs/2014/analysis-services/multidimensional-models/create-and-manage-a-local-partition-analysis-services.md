@@ -1,5 +1,5 @@
 ---
-title: Erstellen und Verwalten einer lokalen Partition (Analysis Services) | Microsoft Docs
+title: Erstellen und verwalten eine lokale Partition (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - local partitions [Analysis Services]
 - partitions [Analysis Services], local
 - partitions [Analysis Services], creating
 ms.assetid: eaa95278-9ce9-47d5-a6b6-1046e7076599
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7aee67c9e63078a0218665fc818381d473e493e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 10b6498034ddcd2733501c63601f026b229d616a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163237"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321270"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>Erstellen und Verwalten einer lokalen Partition (Analysis Services)
   Sie können zusätzliche Partitionen für eine Measuregruppe erstellen, um die Verarbeitungsleistung zu verbessern. Durch die Verwendung mehrerer Partitionen können Sie Faktendaten einer entsprechenden Anzahl physischer Datendateien sowohl auf lokalen als auch auf Remoteservern zuordnen. Da Partitionen in Analysis Services unabhängig und parallel verarbeitet werden können, erhalten Sie eine bessere Kontrolle über die Arbeitsauslastungen auf dem Server.  
@@ -31,7 +31,7 @@ ms.locfileid: "36163237"
  Partitionen können in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] während des Modellentwurfs oder nach der Bereitstellung der Projektmappe mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder XMLA erstellt werden. Es empfiehlt sich, nur einen von beiden Ansätzen zu nutzen. Wenn Sie zwischen den Tools wechseln, kann es vorkommen, dass die an einer bereitgestellten Datenbank in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] vorgenommenen Änderungen überschrieben werden, wenn die Projektmappe anschließend mithilfe von [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]erneut bereitgestellt wird.  
   
 ## <a name="before-you-start"></a>Vorbereitungen  
- Überprüfen Sie, ob Sie die Business Intelligence Edition oder Enterprise Edition verwenden. Die Standard Edition bietet keine Unterstützung für mehrere Partitionen. Um die Edition festzustellen, klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mit der rechten Maustaste auf den Serverknoten, und wählen Sie **Berichte** | **Allgemein**aus. Weitere Informationen zu den verfügbaren Funktionen finden Sie unter [von den Editionen von SQL Server 2014 unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Überprüfen Sie, ob Sie die Business Intelligence Edition oder Enterprise Edition verwenden. Die Standard Edition bietet keine Unterstützung für mehrere Partitionen. Um die Edition festzustellen, klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mit der rechten Maustaste auf den Serverknoten, und wählen Sie **Berichte** | **Allgemein**aus. Weitere Informationen zu den verfügbaren Funktionen finden Sie unter [von den SQL Server 2014-Editionen unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Zu Beginn sollten Sie wissen, dass Partitionen denselben Aggregationsentwurf aufweisen müssen, falls Sie sie später zusammenführen möchten. Partitionen können nur zusammengeführt werden, wenn sie über denselben Aggregationsentwurf und Speichermodus verfügen.  
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - event classes [SQL Server], QN:Template
 ms.assetid: 9f752040-5901-42e1-8fdc-105528d9960a
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: acf958a7ffa9044b7cd432a5d08ae9197315aa51
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: adc7d7a6700373227d5508cbd77e4101a0051ba9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162036"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268986"
 ---
 # <a name="qntemplate-event-class"></a>QN:Template (Ereignisklasse)
   Das QN:Template-Ereignis übermittelt Informationen zur internen Verwendung von Abfragevorlagen. Abfragevorlagen bilden den von [!INCLUDE[ssDE](../../includes/ssde-md.md)] verwendeten Mechanismus zur Freigabe von Definitionen einer Abfrage für die Benachrichtigung. Diese Vorlagen werden zusammen mit den Parametertabellen erstellt. [!INCLUDE[ssDE](../../includes/ssde-md.md)] erstellt ein Ereignis dieses Typs, wenn eine Abfragevorlage erstellt, verwendet oder gelöscht wird.  

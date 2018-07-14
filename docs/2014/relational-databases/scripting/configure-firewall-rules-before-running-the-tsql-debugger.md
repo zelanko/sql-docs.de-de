@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren Sie die Transact-SQL-Debugger | Microsoft Docs
+title: Konfigurieren Sie den Transact-SQL-Debugger | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/20/2016
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.error.sqlde_register_failed
 - vs.debug.error.sqlde_accessdenied
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - TCP/IP [SQL Server], port numbers
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 747165efe7f5493263da0deec3ec5b2ebcdbad04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 79bb9e677f078f4ee1f4a18142fa3068f61349b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163101"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262516"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Konfigurieren des Transact-SQL-Debuggers
   Sie müssen Windows-Firewall-Regeln so konfigurieren, dass das Debuggen von [!INCLUDE[tsql](../../includes/tsql-md.md)] aktiviert ist, wenn eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] hergestellt wird, die auf einem anderen Computer als der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor ausgeführt wird.  
@@ -60,7 +60,7 @@ ms.locfileid: "36163101"
   
     2.  Wählen Sie im Dialogfeld **Regeltyp** die Option **Programm**aus, und klicken Sie anschließend auf **Weiter**.  
   
-    3.  Wählen Sie im Dialogfeld **Programm** die Option **Dieser Programmpfad:** aus, und geben Sie den vollständigen Pfad zu sqlservr.exe für diese Instanz ein. Standardmäßig wird sqlservr.exe im C:\Program Files\Microsoft SQL Server\MSSQL12 installiert. *InstanceName*\MSSQL\Binn, wobei *InstanceName* ist MSSQLSERVER für die Standardinstanz und der Instanzname für eine beliebige benannte Instanz.  
+    3.  Wählen Sie im Dialogfeld **Programm** die Option **Dieser Programmpfad:** aus, und geben Sie den vollständigen Pfad zu sqlservr.exe für diese Instanz ein. Standardmäßig wird sqlservr.exe im c:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSSQL12 installiert. *InstanceName*\MSSQL\Binn, in denen *InstanceName* ist MSSQLSERVER für die Standardinstanz und der Instanzname für eine beliebige benannte Instanz.  
   
     4.  Wählen Sie im Dialogfeld **Aktion** die Option **Verbindung zulassen**aus, und klicken Sie auf **Weiter**.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "36163101"
   
 * Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fenster muss mit einer Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)] von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) oder höher verbunden sein. Sie können den Debugger nicht ausführen, wenn das Abfrage-Editor-Fenster mit einer Instanz verbunden ist, die sich im Einzelbenutzermodus befindet.
 
-* Der Server muss über RPC mit dem Client kommunizieren. Das Konto, unter dem SQL Server-Dienst läuft verfügen sollen, Berechtigungen an den Client zu authentifizieren.  
+* Der Server muss über RPC mit dem Client kommunizieren. Das Konto, unter dem SQL Server-Dienst läuft haben sollte, über Authentifizierungsberechtigungen an den Client.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Transact-SQL-Debugger](transact-sql-debugger.md)   

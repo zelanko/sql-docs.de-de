@@ -1,5 +1,5 @@
 ---
-title: PerspectiveCalculation-Datentyp (ASSL) | Microsoft Docs
+title: PerspectiveCalculation-Datentyp (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PerspectiveCalculation data type
 ms.assetid: 5a5173d2-c96d-4a55-a35c-0cbfd5b0e599
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1214bc349c09f02f522569b26dd48e82d5e42b99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bec56d06fe2e2957f9409a43be3502b4e0196427
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163225"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185147"
 ---
 # <a name="perspectivecalculation-data-type-assl"></a>PerspectiveCalculation-Datentyp (ASSL)
   Definiert einen Grunddatentyp, der die Beziehung zwischen einer Berechnung darstellt und einen [Perspektive](../objects/perspective-element-assl.md) Element.  
@@ -62,7 +62,7 @@ ms.locfileid: "36163225"
 |Abgeleitete Elemente|[Berechnung](../objects/calculation-element-assl.md) ([Berechnungen](../collections/calculations-element-assl.md) Auflistung von [Perspektive](../objects/perspective-element-assl.md))|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.PerspectiveCalculation>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.PerspectiveCalculation>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services Scripting Language-XML-Datentypen &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

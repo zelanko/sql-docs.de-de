@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - optimizing tables
 ms.assetid: 89ff6d37-94c0-4773-8be9-dde943fff023
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 549ebbb55faa6debf772c654dd3c51fcf6beadf1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0146a68973f7a80c6166e1dd91a0a4852d40f35c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161753"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236560"
 ---
 # <a name="optimizing-the-neworg-table"></a>Optimieren der NewOrg-Tabelle
-  Die **NewOrd** Tabelle, die Sie in erstellt die [eine Tabelle mit vorhandenen hierarchischen Daten auffüllen](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) Aufgabe enthält alle Angestellteninformationen und stellt die hierarchische Struktur mithilfe einer `hierarchyid`-Datentyp. Dieser Task fügt neue Indizes zur Unterstützung von Suchvorgängen auf der `hierarchyid` Spalte.  
+  Die **NewOrd** in erstellten Tabelle der [Auffüllen einer Tabelle mit vorhandenen hierarchischen Daten](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) Aufgabe enthält alle Angestellteninformationen und stellt die hierarchische Struktur mithilfe einer `hierarchyid`-Datentyp. Dieser Task fügt neue Indizes für die Unterstützung von Suchvorgängen für die `hierarchyid` Spalte.  
   
 ## <a name="clustered-index"></a>Gruppierter Index  
  Die `hierarchyid` Spalte (**OrgNode**) ist der Primärschlüssel für die **NewOrg** Tabelle. Als die Tabelle erstellt wurde, enthielt sie den gruppierten Index **PK_NewOrg_OrgNode** , der die Eindeutigkeit der **OrgNode** -Spalte erzwingen sollte. Dieser gruppierte Index unterstützt auch eine Tiefensuche in der Tabelle.  
@@ -34,7 +34,7 @@ ms.locfileid: "36161753"
   
 #### <a name="to-index-the-neworg-table-for-efficient-searches"></a>So indizieren Sie die Tabelle 'NewOrg' für effiziente Suchoperationen  
   
-1.  Verwenden Sie zur Unterstützung von Abfragen der gleichen Ebene in der Hierarchie die [GetLevel](/sql/t-sql/data-types/getlevel-database-engine) -Methode, um eine berechnete Spalte zu erstellen, welche die Ebene in der Hierarchie enthält. Erstellen Sie dann auf die Ebene einen zusammengesetzten Index und die `Hierarchyid`. Führen Sie den folgenden Code aus, um die berechnete Spalte und den Breitensuchindex zu erstellen:  
+1.  Verwenden Sie zur Unterstützung von Abfragen der gleichen Ebene in der Hierarchie die [GetLevel](/sql/t-sql/data-types/getlevel-database-engine) -Methode, um eine berechnete Spalte zu erstellen, welche die Ebene in der Hierarchie enthält. Erstellen Sie dann auf der Ebene einen zusammengesetzten Index und die `Hierarchyid`. Führen Sie den folgenden Code aus, um die berechnete Spalte und den Breitensuchindex zu erstellen:  
   
     ```  
     ALTER TABLE NewOrg   

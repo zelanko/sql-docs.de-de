@@ -5,24 +5,23 @@ ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], FDHOST Launcher (MSSQLFDLauncher) service account
 - FDHOST Launcher (MSSQLFDLauncher) [SQL Server]
 ms.assetid: 3ab1d101-7ae0-488f-9b57-468e2517b737
 caps.latest.revision: 50
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3da4262dc6bc32155216b3bd41479ad710f71f88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: ef7947e68e78916f5e5b78d76797d4f2f879abd7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161994"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260436"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Festlegen des Dienstkontos für das Startprogramm des Volltextfilterdaemon
   In diesem Thema wird beschrieben, wie Sie das Dienstkonto für den SQL-Volltextfilterdaemon-Startprogrammdienst (MSSQLFDLauncher) mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Managers festlegen. Der SQL-Volltextfilterdaemon-Startprogrammdienst wird von der ssNoVersion-Volltextsuche zum Starten des Filterdaemon-Hostprozesses verwendet, der für das Filtern bei der Volltextsuche und die Wörtertrennung verantwortlich ist. Dieser Dienst muss ausgeführt werden, damit die Volltextsuche verwendet werden kann.  
@@ -36,14 +35,14 @@ ms.locfileid: "36161994"
   
 1.  Zeigen Sie im Menü **Start** auf **Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], zeigen Sie auf **Konfigurationstools**, und klicken Sie dann auf **SQL Server-Konfigurations-Manager**.  
   
-2.  In **SQL Server-Konfigurations-Manager**, klicken Sie auf **SQL Server-Dienste**, mit der rechten Maustaste **SQL Volltext-Filter-Startprogramm (*`instance name`*)** , und klicken Sie dann auf **Eigenschaften**.  
+2.  In **SQL Server-Konfigurations-Manager**, klicken Sie auf **SQL Server Services**, mit der rechten Maustaste **SQL Volltext-Volltextfilterdaemon-Startprogramm (*`instance name`*)** , und klicken Sie dann auf **Eigenschaften**.  
   
 3.  Klicken Sie im Dialogfeld auf die Registerkarte **Anmelden** , und wählen Sie anschließend das Konto aus, unter dem die vom SQL-Volltextfilterdaemon-Startprogrammdienst erstellten Prozesse ausgeführt werden sollen, oder geben Sie das Konto ein.  
   
 4.  Klicken Sie nach dem Schließen des Dialogfelds auf **Neu starten** , um den SQL-Volltextfilterdaemon-Startprogrammdienst neu zu starten.  
   
   
-##  <a name="error"></a> Wenn der SQL-Volltext Volltextfilterdaemon Daemon-Startprogrammdienst nicht startet  
+##  <a name="error"></a> Wenn der SQL-Volltextsuche filtern ist Daemon-Startprogrammdienst nicht startet.  
  Wenn der SQL-Volltextfilterdaemon-Startprogrammdienst nicht startet, kann dies durch einen der folgenden Punkte bedingt sein:  
   
 -   Das Kennwort des Kontos für das Konto des SQL-Volltextfilterdaemon-Startprogrammdiensts ist abgelaufen.  
@@ -74,7 +73,7 @@ ms.locfileid: "36161994"
   
 -   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstgruppe besitzt keine Berechtigung zum Starten des Startprogramms für SQL-Volltextfilterdaemon.  
   
-     Bei der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstgruppe die Standardberechtigung zum Verwalten, Abfragen und Starten des SQL-Volltextfilterdaemon-Startprogrammdiensts erteilt. Wenn die Berechtigungen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstgruppe für das Dienstkonto des SQL-Volltextfilterdaemon-Startprogramms nach der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt wurden, wird der SQL-Volltextfilterdaemon-Startprogrammdienst nicht gestartet und die Volltextsuche ist deaktiviert. Vergewissern Sie sich die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstgruppe über Berechtigungen für das Dienstkonto des SQL Volltext-Filter-Startprogramm verfügt.  
+     Bei der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstgruppe die Standardberechtigung zum Verwalten, Abfragen und Starten des SQL-Volltextfilterdaemon-Startprogrammdiensts erteilt. Wenn die Berechtigungen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstgruppe für das Dienstkonto des SQL-Volltextfilterdaemon-Startprogramms nach der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt wurden, wird der SQL-Volltextfilterdaemon-Startprogrammdienst nicht gestartet und die Volltextsuche ist deaktiviert. Stellen Sie sicher die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstgruppe über Berechtigungen für das SQL Volltext-Volltextfilterdaemon-Startprogramm-Dienstkonto verfügt.  
   
   
 ## <a name="see-also"></a>Siehe auch  

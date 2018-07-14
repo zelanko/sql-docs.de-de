@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - command prompt utilities [SQL Server], SQLdiag
 - stopping diagnostic collection
@@ -30,15 +30,15 @@ helpviewer_keywords:
 - clusters [SQL Server], diagnostic collection
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 caps.latest.revision: 56
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 775ad67ee25e67d894cf3aff88efe3d71f175011
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fa5904d3244cbd19642ce84bebce414f4c7f0c30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162178"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272426"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag (Hilfsprogramm)
   Das Hilfsprogramm **SQLDiag** listet allgemeine Diagnoseinformationen auf und kann als Konsolenanwendung oder Dienst ausgeführt werden. Mithilfe von **SQLDiag** können Sie Protokolle und Datendateien von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und anderen Servertypen sammeln. Dies kann hilfreich sein, um Server für eine gewisse Zeit zu überwachen oder bestimmte Serverprobleme zu behandeln. **SQLDiag** dient dazu, das Sammeln von Diagnoseinformationen für [!INCLUDE[msCoName](../includes/msconame-md.md)] Support Services zu beschleunigen und zu vereinfachen.  
@@ -115,7 +115,7 @@ ms.locfileid: "36162178"
 > [!NOTE]  
 >  **SQLDiag** fügt beim Starten die Ausgabe nicht an den aktuellen Ausgabeordner an. Das Programm kann nur den Standardausgabeordner überschreiben (Option 1) oder den Ordner umbenennen (Option 2) und dann die Ausgabe in den neuen Standardausgabeordner namens SQLDIAG schreiben.  
   
- **/ M** *"machine1"* [ *"machine2" ** MachineN*] | *@machinelistfile*  
+ **/ M** *machine1* [ *"machine2" ** MachineN*] | *@machinelistfile*  
  Überschreibt die in der Konfigurationsdatei angegebenen Computer. Standardmäßig ist die Konfigurationsdatei SQLDiag.Xml oder wird mit dem **/I** -Parameter festgelegt. Wenn Sie mehr als einen Computer angeben möchten, verwenden Sie Leerzeichen zum Trennen der Computernamen.  
   
  Durch Verwenden von *@machinelistfile* wird ein Computerlistendateiname angegeben, der in der Konfigurationsdatei gespeichert werden sollte.  

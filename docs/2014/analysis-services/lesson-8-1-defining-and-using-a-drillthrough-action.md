@@ -1,5 +1,5 @@
 ---
-title: Definieren und verwenden eine Drillthroughaktion | Microsoft Docs
+title: Definieren und Verwenden einer Drillthroughaktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 3498bae6136476a92df3c772263f943b54e7d3a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7737ab3d7631440010be2fdb3047d7d021b275b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162378"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263726"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Definieren und Verwenden einer Drillthroughaktion
   Das Dimensionieren von Faktendaten mit einer Faktendimension, ohne die von der Abfrage zurückgegebenen Daten richtig zu filtern, kann bei Abfragen zu einer verminderten Leistung führen. Um dies zu vermeiden, können Sie eine Drillthroughaktion definieren, mit der die Gesamtanzahl der Zeilen, die zurückgegeben werden, reduziert wird. Dadurch wird die Abfrageleistung erheblich verbessert.  
@@ -34,7 +34,7 @@ ms.locfileid: "36162378"
   
      In der folgenden Abbildung ist die Registerkarte **Aktionen** des Cube-Designers dargestellt.  
   
-     ![Registerkarte ' Aktionen ', Cube-Designer](../../2014/tutorials/media/l8-action1.gif "Registerkarte ' Aktionen ', Cube-Designer")  
+     ![Registerkarte "Aktionen", Cube-Designer](../../2014/tutorials/media/l8-action1.gif "Registerkarte ' Aktionen ', Cube-Designer")  
   
 2.  Klicken Sie auf der Symbolleiste der Registerkarte **Aktionen** auf **Neue Drillthroughaktion** .  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36162378"
   
      ![Leere Aktionsvorlage im Anzeigebereich](../../2014/tutorials/media/l8-action2.gif "leere Aktionsvorlage im Anzeigebereich")  
   
-3.  In der **Namen** Feld, ändern Sie den Namen der Aktion zu `Internet Sales Details Drillthrough Action`.  
+3.  In der **Namen** ändern den Namen der Aktion zu `Internet Sales Details Drillthrough Action`.  
   
 4.  Wählen Sie in der Liste **Measuregruppenelemente** die Option **Internet Sales**aus.  
   
@@ -54,15 +54,15 @@ ms.locfileid: "36162378"
   
 7.  Erweitern Sie das Feld **Weitere Eigenschaften** , wie in der folgenden Abbildung dargestellt.  
   
-     ![Zusätzliche Eigenschaftsfeld](../../2014/tutorials/media/l8-action4.gif "im zusätzliche Eigenschaften")  
+     ![Zusätzliche Eigenschaftendialogfeld](../../2014/tutorials/media/l8-action4.gif "im zusätzliche Eigenschaften")  
   
-8.  In der **maximale Zeilenzahl** geben `10`.  
+8.  In der **maximale Zeilenanzahl** geben `10`.  
   
 9. In der **Beschriftung** geben `Drillthrough to Order Details…`.  
   
      Durch diese Einstellungen wird die Anzahl der zurückgegebenen Zeilen beschränkt und die Beschriftung angegeben, die im Clientanwendungsmenü angezeigt wird. In der folgenden Abbildung werden diese Einstellungen im Feld **Weitere Eigenschaften** dargestellt.  
   
-     ![Zusätzliche Eigenschaftsfeld](../../2014/tutorials/media/l8-action5.gif "im zusätzliche Eigenschaften")  
+     ![Zusätzliche Eigenschaftendialogfeld](../../2014/tutorials/media/l8-action5.gif "im zusätzliche Eigenschaften")  
   
 ## <a name="using-the-drillthrough-action"></a>Verwenden der Drillthroughaktion  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36162378"
   
      Die Details der an Adam Powell gelieferten Bestellungen werden im **Datenstichproben-Viewer**angezeigt, wie in der folgenden Abbildung zu sehen ist. Einige zusätzliche Details wären jedoch hilfreich, wie z. B. Bestelldatum, Fälligkeitsdatum und Lieferdatum. Sie fügen diese zusätzlichen Details in der nächsten Prozedur hinzu.  
   
-     ![Aufträge an Adam Powell gelieferten](../../2014/tutorials/media/l8-action6.gif "Bestellungen an Adam Powell gelieferten Bestellungen")  
+     ![Bestellungen an Adam Powell gelieferten](../../2014/tutorials/media/l8-action6.gif "Bestellungen an Adam Powell gelieferten")  
   
 8.  Schließen von Excel/  
   
@@ -108,11 +108,11 @@ ms.locfileid: "36162378"
   
     -   ShipDateKey  
   
-6.  Ändern der **Namen** -Eigenschaft für die **Order Date Key** -Attribut auf `Order Date` klicken Sie dann auf die Schaltfläche zum Durchsuchen für das **Spalte "Name"** -Eigenschaft, und in der **Spalte "Name"** wählen Sie im Dialogfeld **Datum** als Quelltabelle und select SimpleDate als Quellspalte. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  Ändern der **Namen** -Eigenschaft für die **Order Date Key** Attribut `Order Date` klicken Sie auf die Schaltfläche zum Durchsuchen für die **Spalte "Name"** -Eigenschaft, und in der **Spalte "Name"** wählen Sie im Dialogfeld **Datum** als Quelltabelle und SimpleDate als Quellspalte. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Ändern der **Namen** -Eigenschaft für die **Due Date Key** -Attribut auf `Due Date`, und klicken Sie dann mithilfe derselben Methode wie die **Order Date Key** Attribut, ändern Sie die  **Namensspalte** Eigenschaft für dieses Attribut in **Date.SimpleDate (WChar)**.  
+7.  Ändern der **Namen** -Eigenschaft für die **Due Date Key** -Attribut auf `Due Date`, und klicken Sie dann mithilfe derselben Methode wie die **Order Date Key** Attribut, ändern Sie die  **Benennen Sie Spalte** -Eigenschaft für dieses Attribut in **Date.SimpleDate (WChar)**.  
   
-8.  Ändern der **Namen** -Eigenschaft für die **Ship Date Key** -Attribut `Ship Date`, und ändern Sie dann die **Spalte "Name"** Eigenschaft für dieses Attribut in  **Date.SimpleDate (WChar)**.  
+8.  Ändern der **Namen** -Eigenschaft für die **Ship Date Key** Attribut `Ship Date`, und ändern Sie dann die **Spalte "Name"** -Eigenschaft für dieses Attribut in  **Date.SimpleDate (WChar)**.  
   
 9. Wechseln Sie zur Registerkarte **Aktionen** des Cube-Designers für den [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "36162378"
   
      Die Details dieser an Adam Powell gelieferten Bestellungen werden in einem temporären Arbeitsblatt angezeigt. Dies umfasst Artikelbeschreibung, Bestellnummer, Bestelldatum, Fälligkeitsdatum und Versanddatum, wie in der folgenden Abbildung dargestellt.  
   
-     ![Aufträge an Adam Powell gelieferten](../../2014/tutorials/media/l8-action8.gif "Bestellungen an Adam Powell gelieferten Bestellungen")  
+     ![Bestellungen an Adam Powell gelieferten](../../2014/tutorials/media/l8-action8.gif "Bestellungen an Adam Powell gelieferten")  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
  [Lektion 9: Definieren von Perspektiven und Übersetzungen](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  

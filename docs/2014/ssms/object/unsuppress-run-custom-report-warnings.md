@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
 ms.assetid: 0deed900-c910-4d12-aac0-6ab9e39eb068
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d303321941668d5115c3796022f70195b4a0d066
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9265d42cdde8ac528118cb72dead19726f3d3173
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162400"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228420"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>Aufheben der Unterdrückung von Warnungen für das Ausführen von benutzerdefinierten Berichten
   Für benutzerdefinierte Berichte gibt es zwei Warndialogfelder. In diesem Thema wird beschrieben, wie die Unterdrückung der Anzeige dieser Felder in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aufgehoben werden kann.  
@@ -36,7 +36,7 @@ ms.locfileid: "36162400"
   
 2.  Mit der rechten Maustaste `reports.xml`, und klicken Sie dann auf **bearbeiten**.  
   
-3.  Änderung**\<SuppressWarning > "true"\</SuppressWarning > um \<SuppressWarning > "false"\</SuppressWarning >**.  
+3.  Änderung**\<SuppressWarning > true\</SuppressWarning > um \<SuppressWarning > false\</SuppressWarning >**.  
   
 4.  Starten Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] neu.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36162400"
   
 2.  Mit der rechten Maustaste `reports.xml`, und klicken Sie auf **bearbeiten**.  
   
-3.  Änderung  **\<SuppressDrillthroughWarning > "true"\</SuppressDrillthroughWarning > um \<SuppressDrillthroughWarning > "false"\</SuppressDrillthroughWarning >**.  
+3.  Änderung  **\<SuppressDrillthroughWarning > true\</SuppressDrillthroughWarning > um \<SuppressDrillthroughWarning > false\</SuppressDrillthroughWarning >**.  
   
 4.  Starten Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] neu.  
   

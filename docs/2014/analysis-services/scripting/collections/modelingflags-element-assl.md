@@ -1,5 +1,5 @@
 ---
-title: ModelingFlags-Element (ASSL) | Microsoft Docs
+title: ModelingFlags-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ModelingFlags element
 ms.assetid: 83968c1e-aae8-4657-aa53-d971de0dc834
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 219b5b7dfc0ff50a1dfe5a49be69121925ce63ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bcaab47515c02a2ba40a6fb837309a7f5bed4308
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163228"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207910"
 ---
 # <a name="modelingflags-element-assl"></a>ModelingFlags-Element (ASSL)
-  Enthält die Auflistung der [ModelingFlag](../objects/modelingflag-element-assl.md) Elemente für eine Spalte in einer [MiningStructure](../objects/miningstructure-element-assl.md) oder ein [MiningModel](../objects/miningmodel-element-assl.md).  
+  Enthält die Auflistung der [ModelingFlag](../objects/modelingflag-element-assl.md) Elemente für eine Spalte in einer [MiningStructure](../objects/miningstructure-element-assl.md) oder [MiningModel](../objects/miningmodel-element-assl.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36163228"
 |Untergeordnete Elemente|[ModelingFlag](../objects/modelingflag-element-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.MiningModelingFlags>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.MiningModelingFlags>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sammlungen &#40;ASSL&#41;](collections-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: EXISTING-Schlüsselwort (MDX) | Microsoft Docs
+title: EXISTING-Schlüsselwort (MDX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - EXISTING
 helpviewer_keywords:
 - Existing keyword
 ms.assetid: 651ee9ac-04ef-4316-87c9-a3df5ac27d22
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d7205cad36bbeb5adee16ca10bd881280b59d98f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a781fb58f45c478b6a3611132a210b14012ffb72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161903"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228390"
 ---
 # <a name="existing-keyword-mdx"></a>EXISTING-Schlüsselwort (MDX)
   Erzwingt die Auswertung einer angegebenen Menge im aktuellen Kontext.  
@@ -40,10 +40,10 @@ Existing Set_Expression
  Ein gültiger MDX-Mengenausdruck (Multidimensional Expressions).  
   
 ## <a name="remarks"></a>Hinweise  
- Standardmäßig werden Mengen im Kontext des Cubes ausgewertet, der die Elemente der Menge enthält. Die `Existing` -Schlüsselwort erzwingt dagegen im aktuellen Kontext die Auswertung eine angegebene Menge.  
+ Standardmäßig werden Mengen im Kontext des Cubes ausgewertet, der die Elemente der Menge enthält. Die `Existing` -Schlüsselwort erzwingt einen angegebenen Satz stattdessen im aktuellen Kontext ausgewertet werden soll.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die Anzahl der Wiederverkäufer, deren Umsätze im vergangenen Zeitraum zurückgegangen sind, basierend auf vom Benutzer ausgewählten State-Province-Elementwerten zurückgegeben, die mit der `Aggregate`-Funktion ausgewertet wurden. Das [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx) und [DrilldownLevel (MDX)](/sql/mdx/drilldownlevel-mdx) werden zum Zurückgeben von Werten für zurückgegangene Umsätze in Produktkategorien der Product-Dimension verwendet. Die `Existing` -Schlüsselwort erzwingt die die Menge der `Filter` Funktion im aktuellen Kontext – d. h. für die Washington und Oregon-Elemente der State-Province-Attributhierarchie ausgewertet werden muss.  
+ Im folgenden Beispiel wird die Anzahl der Wiederverkäufer, deren Umsätze im vergangenen Zeitraum zurückgegangen sind, basierend auf vom Benutzer ausgewählten State-Province-Elementwerten zurückgegeben, die mit der `Aggregate`-Funktion ausgewertet wurden. Das [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx) und [DrilldownLevel (MDX)](/sql/mdx/drilldownlevel-mdx) werden zum Zurückgeben von Werten für zurückgegangene Umsätze in Produktkategorien der Product-Dimension verwendet. Die `Existing` -Schlüsselwort erzwingt die die Menge der `Filter` Funktion im aktuellen Kontext – d. h., die für die Washington und Oregon-Elemente der State-Province-Attributhierarchie ausgewertet werden sollen.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS  

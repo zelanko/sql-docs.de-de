@@ -1,5 +1,5 @@
 ---
-title: Miningmodellinhalt bei Zeitreihenmodellen (Analysis Services – Datamining) | Microsoft Docs
+title: Mingingmodellinhalt von Zeitreihenmodellen (Analysis Services – Datamining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time series algorithms [Analysis Services]
 - time series [Analysis Services]
 - mining model content, time series models
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ae3e235b2a80248327a4aa4a69e2b357b36d2a1c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b0c69583fec1e43ba65ac1da2c321f7b0a5d9599
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163266"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214620"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Miningmodellinhalt von Zeitreihenmodellen (Analysis Services &ndash; Data Mining)
   Zur Speicherung des Inhalts wird für alle Miningmodelle die gleiche Struktur verwendet. Diese Struktur wird nach dem Data Mining-Schemarowset für den Inhalt definiert. Innerhalb dieser standardmäßigen Struktur werden die Knoten, die Informationen enthalten, jedoch unterschiedlich angeordnet, sodass sie verschiedene Arten von Strukturen darstellen. In diesem Thema werden die Anordnung der Knoten und die Bedeutung der einzelnen Knoten für Miningmodelle erläutert, die auf dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus basieren.  
   
  Eine Erläuterung der allgemeinen Miningmodellinhalte, die für alle Modelltypen gelten, finden Sie unter [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
- Es empfiehlt sich, die Erläuterungen in diesem Thema anhand der Inhalte eines Zeitreihenmodells nachzuverfolgen. Sie können ein Zeitreihenmodell erstellen, indem Sie das Lernprogramm zu Data Mining-Grundlagen abschließen. Im Rahmen dieses Lernprogramms erstellen Sie ein gemischtes Modell, das zum Trainieren von Daten mit dem ARIMA- und dem ARTXP-Algorithmus dient. Weitere Informationen finden Sie unter [erstellen eine Forecasting-Struktur und das Modell &#40;Mining-Lernprogramm für fortgeschrittene Data&#41;](../../tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md). Informationen zum Anzeigen des Inhalts eines Miningmodells finden Sie unter [Data Mining-Modell-Viewer](data-mining-model-viewers.md).  
+ Es empfiehlt sich, die Erläuterungen in diesem Thema anhand der Inhalte eines Zeitreihenmodells nachzuverfolgen. Sie können ein Zeitreihenmodell erstellen, indem Sie das Lernprogramm zu Data Mining-Grundlagen abschließen. Im Rahmen dieses Lernprogramms erstellen Sie ein gemischtes Modell, das zum Trainieren von Daten mit dem ARIMA- und dem ARTXP-Algorithmus dient. Weitere Informationen finden Sie unter [erstellen eine Forecasting-Struktur und das Modell &#40;Data Mining Tutorial für fortgeschrittene&#41;](../../tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md). Informationen zum Anzeigen des Inhalts eines Miningmodells finden Sie unter [Data Mining-Modell-Viewer](data-mining-model-viewers.md).  
   
 ## <a name="understanding-the-structure-of-a-time-series-model"></a>Grundlegendes zur Struktur von Zeitreihenmodellen  
  Ein Zeitreihenmodell verfügt über einen einzigen übergeordneten Knoten, der das Modell und die zugehörigen Metadaten darstellt. Diesem Knoten sind eine oder zwei Zeitreihenstrukturen untergeordnet, je nachdem, welchen Algorithmus Sie verwendet haben, um das Modell zu erstellen.  
@@ -61,7 +61,7 @@ ms.locfileid: "36163266"
   
  Wenn der Knoten keine untergeordneten Elemente hat, bedeutet dies, dass keine signifikanten Bedingungen gefunden wurden, die die weitere Unterteilung der Fälle rechtfertigen würden. Die Verzweigung endet an diesem Punkt, und der Knoten wird als *Blattknoten*bezeichnet. Der Blattknoten enthält die Attribute, Koeffizienten und Werte, aus denen sich die ARTXP-Formel zusammensetzt.  
   
- Einige Verzweigungen weisen möglicherweise zusätzliche Teilungen auf wie bei einem Entscheidungsstrukturmodell. Beispiel: Die Verzweigung einer Struktur, die die Verkäufe für die Region Europa darstellt, wird in zwei Verzweigungen unterteilt. Eine Teilung tritt auf, wenn eine Bedingung gefunden wird, die einen signifikanten Unterschied zwischen den zwei Gruppen darstellt. Der übergeordnete Knoten gibt den Namen des Attributs an, das die Teilung verursacht hat, z. B. [Amount], sowie die Anzahl der Fälle im übergeordneten Knoten. Die Blattknoten enthalten weitere Details: der Wert des Attributs, z. B. [Sales] > 10.000 oder Verkäufe \< 10.000), die Anzahl der Fälle, die jede Bedingung, und die ARTXP-Formel zu unterstützen.  
+ Einige Verzweigungen weisen möglicherweise zusätzliche Teilungen auf wie bei einem Entscheidungsstrukturmodell. Beispiel: Die Verzweigung einer Struktur, die die Verkäufe für die Region Europa darstellt, wird in zwei Verzweigungen unterteilt. Eine Teilung tritt auf, wenn eine Bedingung gefunden wird, die einen signifikanten Unterschied zwischen den zwei Gruppen darstellt. Der übergeordnete Knoten gibt den Namen des Attributs an, das die Teilung verursacht hat, z. B. [Amount], sowie die Anzahl der Fälle im übergeordneten Knoten. Die Blattknoten enthalten weitere Details: der Wert des Attributs an, wie z. B. [Sales] > 10.000 oder Verkäufe \< 10.000), die Anzahl der Fälle, die einzelnen Bedingungen erfüllen, die ARTXP-Formel und.  
   
 > [!NOTE]  
 >  Sie finden die komplette Regressionsformel auf Blattknotenebene, jedoch nicht in Stamm- oder Zwischenebenenknoten.  
@@ -269,7 +269,7 @@ ms.locfileid: "36163266"
   
  In diesem Fall stellt der Wert 21.322 den Wert dar, der für „Quantity“ als Funktion der folgenden Formelelemente vorhergesagt wird.  
   
- Beispielsweise ist ein Element, Menge (R250 North America,-7). Hiermit wird die Menge für die Region Nordamerika bei t-7, also sieben Zeitscheiben vor der aktuellen Zeitscheibe, angegeben. Der Wert für diese Datenreihe wird mit dem Koeffizienten -0,293 multipliziert. Die Koeffizienten für die einzelnen Elemente werden während des Trainingsprozesses abgeleitet und basieren auf Trends in den Daten.  
+ Beispielsweise ist ein Element, Menge (R250 Nordamerika,-7). Hiermit wird die Menge für die Region Nordamerika bei t-7, also sieben Zeitscheiben vor der aktuellen Zeitscheibe, angegeben. Der Wert für diese Datenreihe wird mit dem Koeffizienten -0,293 multipliziert. Die Koeffizienten für die einzelnen Elemente werden während des Trainingsprozesses abgeleitet und basieren auf Trends in den Daten.  
   
  Diese Formel weist mehrere Elemente auf, da berechnet wurde, dass der Mengenwert des R250-Modells für die Region Europa von den Werten verschiedener anderer Datenreihen abhängt.  
   
@@ -388,9 +388,9 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  ARIMA-Formel:  
   
- ARIMA ({1,1}, 0,{1,1.49791920964142,1.10640053499397,0.888873034670339,-5.05429403071953E-02,-0.905265316720334,-0.961908900643379,-0.649991020901922}) Intercept: 56.8888888888889  
+ ARIMA ({1,1}, 0,{1,1.49791920964142,1.10640053499397,0.888873034670339,-5.05429403071953E-02,-0.905265316720334,-0.961908900643379,-0.649991020901922}) Konstante Glied: 56.8888888888889  
   
- Dies ist das lange ARIMA-Format, das die Werte der Koeffizienten und das konstante Glied (Intercept) einschließt. Das Kurzformat für diese Formel wäre {1,0,7}, wobei 1 gibt an, den Zeitraum als Anzahl von Zeitscheiben 0 gibt an, die Reihenfolge und 7 die Anzahl der Koeffizienten gibt.  
+ Dies ist das lange ARIMA-Format, das die Werte der Koeffizienten und das konstante Glied (Intercept) einschließt. Das Kurzformat für diese Formel wäre {1,0,7}, wobei 1 gibt an, den Zeitraum als Anzahl von Zeitscheiben, 0 gibt an, die Reihenfolge und 7 die Anzahl der Koeffizienten gibt.  
   
 > [!NOTE]  
 >  Zur Varianzberechnung wird von Analysis Services eine Konstante ermittelt, diese wird jedoch auf der Benutzeroberfläche nicht angezeigt. Sie können jedoch die Varianz für einen beliebigen Punkt in der Datenreihe als Funktion dieser Konstante anzeigen, indem Sie in der **Diagramm** -Sicht die Option **Abweichungen anzeigen** wählen. Die Varianz für spezifische vorhergesagte Punkte lässt sich in der QuickInfo zu jeder Datenreihe anzeigen.  
@@ -400,7 +400,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  Das ARIMA-Modell für eine Datenreihe enthält die grundlegende periodische Formel in vier verschiedenen Formaten, aus denen Sie das für Ihre Anwendung am besten geeignete Format auswählen können.  
   
- **NODE_CAPTION:** zeigt die Kurzform der Formel an. Aus der Kurzform ersehen Sie, wie viele periodische Strukturen dargestellt werden und wie viele Koeffizienten diese aufweisen. Wenn das Kurzformat der Formel z. B. {4,0,6}lautet, stellt der Knoten eine periodische Struktur mit 6 Koeffizienten dar. Wenn die Kurzform etwa {2,0,8} x {1,0,0}(4) der Knoten enthält zwei periodische Strukturen.  
+ **NODE_CAPTION:** zeigt die Kurzform der Formel an. Aus der Kurzform ersehen Sie, wie viele periodische Strukturen dargestellt werden und wie viele Koeffizienten diese aufweisen. Wenn das Kurzformat der Formel z. B. {4,0,6}lautet, stellt der Knoten eine periodische Struktur mit 6 Koeffizienten dar. Wenn die Kurzform etwa {2,0,8} x {1,0,0}(4), enthält der Knoten zwei periodische Strukturen.  
   
  **NODE DESCRIPTION:** Zeigt die Langform der Formel an, die dem Format der Formel in der **Mininglegende**entspricht. Die Langform entspricht der Kurzform, mit dem Unterschied, dass die Istwerte der Koeffizienten angezeigt werden.  
   
@@ -422,7 +422,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 |29 (ARIMA Autoregressiv)|Koeffizient<br /><br /> (Komplement des Koeffizienten)|7|  
 |30 (ARIMA Gleitender Durchschnitt)|Wert bei "t"<br /><br /> Wert bei "t-1"<br /><br /> …<br /><br /> Wert bei "t-n"|7|  
   
- Der Wert für die *Reihenfolge für gleitenden Durchschnitt* gibt die Anzahl der gleitenden Durchschnittswerte in einer Reihe an. Der gleitende Durchschnitt ist in der Regel berechnete n-1 Mal, wenn n Begriffe in einer Reihe vorhanden sind, aber die Anzahl kann zur Vereinfachung des Prozesses reduziert werden.  
+ Der Wert für die *Reihenfolge für gleitenden Durchschnitt* gibt die Anzahl der gleitenden Durchschnittswerte in einer Reihe an. Der gleitende Durchschnitt ist in der Regel berechnete n-1 tritt ein, wenn n Bedingungen in einer Reihe vorhanden sind, aber die Anzahl zur Vereinfachung des Prozesses reduziert werden kann.  
   
  Der Wert für *autoregressive Reihenfolge* gibt die Anzahl der autoregressiven Reihen an.  
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 5995b7d2-7c06-46f5-b96c-2bee879bcda2
 caps.latest.revision: 13
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bcc7560136e96b4f0bdc039c1dd008ecf8a2f556
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5a218bab115beece45e970d400689daf5882ff16
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163319"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221100"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>Lektion 2: Erstellen eines Abonnements für die Transaktionsveröffentlichung
   In dieser Lektion erstellen Sie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ein Abonnement. Für diese Lektion wird vorausgesetzt, dass Sie die vorherige Lektion abgeschlossen haben: [Lektion 1: Veröffentlichen von Daten mithilfe der Transaktionsreplikation](lesson-1-publishing-data-using-transactional-replication.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "36163319"
   
 5.  Wenn der Name der Abonnenteninstanz auf der Seite Abonnenten nicht angezeigt wird, klicken Sie auf **Abonnent hinzufügen**, klicken Sie auf **SQL Server-Abonnenten hinzufügen**, geben Sie den Namen der Abonnenteninstanz im Dialogfeld **Verbindung mit Server herstellen** ein, und klicken Sie dann auf **Verbinden**.  
   
-6.  Klicken Sie auf der Seite Abonnenten wählen Sie den Instanznamen des Abonnenten, und wählen  **\<neue Datenbank >** unter **Abonnementdatenbank**.  
+6.  Klicken Sie auf der Seite "Abonnenten", wählen Sie den Instanznamen des Abonnentenservers aus, und wählen  **\<neue Datenbank >** unter **Abonnementdatenbank**.  
   
 7.  Geben Sie im Dialogfeld **Neue Datenbank** den Namen **ProductReplica** in das Feld **Datenbankname** ein, klicken Sie auf **OK**, und klicken Sie dann auf **Weiter**.  
   

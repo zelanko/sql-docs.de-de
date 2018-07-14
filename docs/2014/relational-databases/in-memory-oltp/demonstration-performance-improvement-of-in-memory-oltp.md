@@ -8,34 +8,34 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 caps.latest.revision: 17
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 40bda40f2ed8114f77a28e8a7b0b382107cecdd0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 171af425cfa479dcf9be3f555250de9a246daa1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162705"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248500"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Demo: Leistungsverbesserungen von In-Memory OLTP
   Dieses Beispiel zeigt Leistungsverbesserungen bei Verwendung von In-Memory OLTP, indem die Unterschiede bei der Antwortzeit bei Ausführung einer identischen Transact-SQL-Abfrage für speicheroptimierte und herkömmliche datenträgerbasierte Tabellen verglichen werden. Darüber hinaus wird eine systemintern kompilierte gespeicherte Prozedur erstellt (basierend auf der gleichen Abfrage) und dann ausgeführt, um zu veranschaulichen, dass die besten Antwortzeiten in der Regel beim Abfragen einer speicheroptimierten Tabelle mit einer systemintern kompilierten gespeicherten Prozedur erzielt werden. Dieses Beispiel zeigt nur einen Aspekt der Leistungsverbesserungen beim Zugriff auf Daten in speicheroptimierten Tabellen; Effizienz beim Datenzugriff bei der Durchführung von Einfügungen. Dieses Beispiel verwendet nur einen einzelnen Thread und nutzt nicht die Parallelitätsvorteile von In-Memory OLTP. Eine Arbeitsauslastung, die Parallelität verwendet, bietet noch größere Leistungsvorteile.  
   
 > [!NOTE]  
->  Ein weiteres Beispiel veranschaulichen und speicheroptimierten Tabellen finden Sie unter [Beispiel zu SQL Server 2014 In-Memory OLTP](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
+>  Ein weiteres Beispiel zur Veranschaulichung speicheroptimierter Tabellen finden Sie unter [Beispiel zu SQL Server 2014 In-Memory OLTP](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
   
  Für dieses Beispiel führen Sie die folgenden Schritte aus:  
   
-1.  Erstellen Sie eine Datenbank mit dem Namen **Imoltp** und ändern Sie die Dateidetails, um es für die Verwendung von In-Memory OLTP einzurichten.  
+1.  Erstellen Sie eine Datenbank mit dem Namen **Imoltp** und ändern Sie die Dateidetails, um es festzulegen, für die Verwendung von In-Memory OLTP.  
   
 2.  Erstellen Sie die Datenbankobjekte für das Beispiel: drei Tabellen und eine systemintern kompilierte gespeicherte Prozedur.  
   
 3.  Führen Sie die verschiedenen Abfragen aus, und zeigen Sie die Antwortzeiten für jede Abfrage an.  
   
- Zum Einrichten der **Imoltp** Datenbank in unserem Beispiel erstellen Sie zunächst einen leeren Ordner: **c:\imoltp_data**, und führen Sie dann den folgenden Code:  
+ Mit der Einrichtung der **Imoltp** in unserem Beispiel-Datenbank, erstellen Sie zunächst einen leeren Ordner: **c:\imoltp_data**, und führen Sie dann den folgenden Code:  
   
 ```tsql  
 USE master  
@@ -186,7 +186,7 @@ SELECT CAST(@timems AS VARCHAR(10)) + ' ms (memory-optimized table with natively
  Die erwarteten Ergebnisse geben tatsächliche Antwortzeiten an, die zeigen, dass die Verwendung speicheroptimierter Tabellen und systemintern kompilierter gespeicherter Prozeduren in der Regel konsistent schnellere Antwortzeiten bietet als die Ausführung der gleichen Arbeitsauslastungen für herkömmliche datenträgerbasierte Tabellen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erweiterungen von AdventureWorks zur Veranschaulichung von In-Memory OLTP](../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md)   
+ [Erweiterungen von AdventureWorks zur Veranschaulichung von In-Memory-OLTP](../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md)   
  [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](in-memory-oltp-in-memory-optimization.md)   
  [Speicheroptimierte Tabellen](memory-optimized-tables.md)   
  [Nativ kompilierte gespeicherte Prozeduren](natively-compiled-stored-procedures.md)   

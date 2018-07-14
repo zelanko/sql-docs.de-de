@@ -1,5 +1,5 @@
 ---
-title: Ausführen von Vorlagen, die XPath-Abfragen (SQLXMLOLEDB-Anbieter) enthalten | Microsoft Docs
+title: Ausführen von Vorlagen, die XPath-Abfragen (SQLXMLOLEDB-Anbieter) enthalten. | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - XML templates [SQLXML]
 ms.assetid: 7368c188-607e-459e-8254-8f23352dfa01
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1c51d8b0480a7a6dc86e1b878fef153604405266
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: eef3ff7d70d3287d70becd45d73b24d715440c14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163096"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202830"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>Ausführen von Vorlagen, die XPath-Abfragen enthalten (SQLXMLOLEDB-Anbieter)
   In diesem Beispiel wird gezeigt, wie die folgenden für den SQLXMLOLEDB-Anbieter spezifischen Eigenschaften verwendet werden:  
@@ -39,16 +39,16 @@ ms.locfileid: "36163096"
   
 -   Zuordnungsschema  
   
- In dieser ADO-beispielanwendung wird eine XML-Vorlage, die aus einer XPath-Abfrage (Stamm) besteht für die XSD-Zuordnungsschema (MySchema.xml), die in der beschriebenen angegeben [Ausführen von XPath-Abfragen &#40;SQLXMLOLEDB-Anbieter&#41; ](executing-xpath-queries-sqlxmloledb-provider.md).  
+ In dieser ADO-beispielanwendung wird eine XML-Vorlage, die aus einer XPath-Abfrage (Stamm) besteht angegeben ist, für die XSD-Zuordnungsschema (MySchema.xml), die in der beschriebenen [Ausführen von XPath-Abfragen &#40;SQLXMLOLEDB-Anbieter&#41; ](executing-xpath-queries-sqlxmloledb-provider.md).  
   
- Das Zuordnungsschema-Eigenschaft stellt das XSD-Zuordnungsschema für das die XPath-Abfrage ausgeführt wird. Die Basis-Pfad-Eigenschaft stellt den Dateipfad zum Zuordnungsschema bereit.  
+ Die Mapping-Schema-Eigenschaft stellt das XSD-Zuordnungsschema für das die XPath-Abfrage ausgeführt wird. Die Basis-Path-Eigenschaft stellt den Dateipfad zum Zuordnungsschema bereit.  
   
  ClientSideXML-Eigenschaft wird auf "true" festgelegt. Deshalb wird das XML-Dokument auf dem Client generiert.  
   
  In der Anwendung wird eine XPath-Abfrage direkt angegeben. Daher muss der Dialekt {5d531cb2-e6ed-11d2-b252-00c04f681b71} eingeschlossen sein.  
   
 > [!NOTE]  
->  Im Code müssen Sie den Namen der Instanz von Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der Verbindungszeichenfolge bereitstellen. In diesem Beispiel wird überdies die Verwendung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) als Datenanbieter beschrieben, was die Installation zusätzlicher Netzwerkclientsoftware erforderlich macht. Weitere Informationen finden Sie unter [System Requirements for SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  
+>  Im Code müssen Sie den Namen der Instanz von Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der Verbindungszeichenfolge bereitstellen. In diesem Beispiel wird überdies die Verwendung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) als Datenanbieter beschrieben, was die Installation zusätzlicher Netzwerkclientsoftware erforderlich macht. Weitere Informationen finden Sie unter [Systemanforderungen für SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

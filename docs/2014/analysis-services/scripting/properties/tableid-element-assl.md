@@ -1,5 +1,5 @@
 ---
-title: TableID-Element (ASSL) | Microsoft Docs
+title: TableID-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - TableID element
 ms.assetid: 45fe7e23-b274-4bc2-be63-1a5bb6680f51
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9b8f85ee3fecac1b098a16afe6cf2d0eca61226b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3010d64a5898b16322afca819f54cbcc32f0b867
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163012"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190860"
 ---
 # <a name="tableid-element-assl"></a>TableID-Element (ASSL)
-  Enthält den Bezeichner (ID) der Tabelle (aus der [DataSourceView](../objects/datasourceview-element-assl.md) Element) mit dem übergeordneten Element verknüpft sind.  
+  Enthält den Bezeichner (ID) der Tabelle (aus der [DataSourceView](../objects/datasourceview-element-assl.md) Element) mit dem übergeordneten Element verknüpft ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36163012"
 ## <a name="remarks"></a>Hinweise  
  Die von `TableID` identifizierte Tabelle muss sich innerhalb der Datenquelle befinden, an die das besitzende Objekt (Dimension oder Cube) gebunden ist.  
   
- Die Elemente, die den übergeordneten Elementen von entsprechen `TableID` im Objektmodell von Analysis Management Objects (AMO) sind <xref:Microsoft.AnalysisServices.ColumnBinding>, <xref:Microsoft.AnalysisServices.DSVTableBinding>, <xref:Microsoft.AnalysisServices.IncrementalProcessingNotification>, und <xref:Microsoft.AnalysisServices.RowBinding>.  
+ Die Elemente, die den übergeordneten Elementen von entsprechen `TableID` im Analysis Management Objects (AMO)-Objektmodell werden <xref:Microsoft.AnalysisServices.ColumnBinding>, <xref:Microsoft.AnalysisServices.DSVTableBinding>, <xref:Microsoft.AnalysisServices.IncrementalProcessingNotification>, und <xref:Microsoft.AnalysisServices.RowBinding>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften &#40;ASSL&#41;](properties-assl.md)  

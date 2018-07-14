@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9e01b13d7d8f4d7abc5e57a7bb7ebf23457bfe83
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 45b6a7ccfb2a6d19fb85fc016cbcf66995976fc2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161734"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238480"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>Hinzufügen einer Erweiterungs- oder Reduzieraktion zu einem Element (Berichts-Generator und SSRS)
   Sie können einem Benutzer das interaktive Erweitern oder Reduzieren von Berichtselementen, oder für eine Tabelle oder Matrix das Erweitern oder Reduzieren der zugehörigen Zeilen und Spalten einer Gruppe ermöglichen. Zu diesem Zweck legen Sie die Sichtbarkeitseigenschaften eines Elements fest, das von Benutzern erweitert oder reduziert werden soll. Die Sichtbarkeit wird in einem HTML-Berichts-Viewer festgelegt. Eine solche Einstellung wird auch als *Drilldownaktion* bezeichnet.  
@@ -48,9 +48,9 @@ ms.locfileid: "36161734"
     > [!NOTE]  
     >  Zum Anzeigen des Bereichs „Eigenschaften“ klicken Sie auf **Ansicht** auf dem Menüband, und klicken Sie anschließend auf **Eigenschaften**.  
   
-4.  In `Hidden`, wählen Sie eine der folgenden Optionen, um die Sichtbarkeit dieses Berichtselements erstmalig legen Sie einen Bericht ausführen:  
+4.  In `Hidden`, wählen Sie eine der folgenden Optionen, um die Sichtbarkeit dieses Berichtselements legen Sie beim ersten Ausführen des Berichts:  
   
-    -   Wählen Sie `False` auf das Berichtselement angezeigt.  
+    -   Wählen Sie `False` auf das Berichtselement angezeigt werden soll.  
   
     -   Wählen Sie `True` auf das Berichtselement auszublenden.  
   

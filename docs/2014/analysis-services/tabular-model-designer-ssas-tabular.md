@@ -1,5 +1,5 @@
 ---
-title: Designer für tabellarische Modelle (SSAS – tabellarisch) | Microsoft Docs
+title: Designer für tabellarische Modelle (SSAS – tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7d0fc5ae763542c5f46bdcdb474a71f71250733c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 20beaf68692cfecbdc047752ff873921cce6a740
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36162122"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263346"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>Designer für tabellarische Modelle (SSAS – tabellarisch)
-  Der Designer für tabellarische Modelle ist Bestandteil des [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], integriert in Microsoft [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 oder höher, zusätzliche Projekttypvorlagen speziell für die Entwicklung von Projektmappen für professionelle tabellarische Modelle.  
+  Der Designer für tabellarische Modelle ist Bestandteil [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], integriert in Microsoft [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 oder höher mit zusätzliche Projekttypvorlagen speziell für die Entwicklung von Projektmappen für professionelle tabellarische Modelle.  
   
  Abschnitte in diesem Thema:  
   
@@ -32,7 +32,7 @@ ms.locfileid: "36162122"
   
 -   [Projektvorlagen](#bkmk_proj_temp)  
   
--   [Fenster und Menüs](#bkmk_wind_men)  
+-   [Windows und Menüs](#bkmk_wind_men)  
   
 -   [Visual Studio-Integration](#bkmk_vsint)  
   

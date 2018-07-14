@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], preinstallation checklist
 - installing failover clusters
 - failover clustering [SQL Server], preinstallation checklist
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 caps.latest.revision: 137
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 262d4eb283d8149e5a339fe2e95954d4558b26a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0e4ec4708141badd4f215484cf746633f8a670eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163286"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268156"
 ---
 # <a name="before-installing-failover-clustering"></a>Vor dem Installieren des Failoverclusterings
   Bevor Sie einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failovercluster installieren, müssen Sie die Hardware und das Betriebssystem auswählen, unter dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt werden soll. Außerdem müssen Sie das Windows Server Failover Clustering (WSFC) konfigurieren und Überlegungen zu Netzwerk, Sicherheit und anderer Software überprüfen, die auf dem Failovercluster ausgeführt werden soll.  
@@ -269,7 +269,7 @@ ms.locfileid: "36163286"
   
   
 ## <a name="see-also"></a>Siehe auch  
- [Hardware and Software Requirements for Installing SQLServer 2014](../../install/hardware-and-software-requirements-for-installing-sql-server.md)   
+ [Hardware- und Softwareanforderungen zum Installieren von SQLServer 2014](../../install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Überprüfen der Parameter für die Systemkonfigurationsprüfung](../../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)   
  [Verwaltung und Wartung von Failoverclusterinstanzen](../windows/failover-cluster-instance-administration-and-maintenance.md)  
   

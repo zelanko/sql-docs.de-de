@@ -1,27 +1,26 @@
 ---
-title: Starten der Datenverschiebung auf einer sekundären AlwaysOn-Datenbank (SQLServer) | Microsoft Docs
+title: Starten der Datenverschiebung auf einer sekundären AlwaysOn-Datenbank (SQLServer) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 ms.assetid: 498eb3fb-6a43-434d-ad95-68a754232c45
 caps.latest.revision: 15
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 90fac7dfcd395b3a788360232c872c830259ba0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cbec6a7aa6c1ac92dbf64fe018800a223084e4e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36161880"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252792"
 ---
 # <a name="start-data-movement-on-an-alwayson-secondary-database-sql-server"></a>Starten der Datenverschiebung auf einer sekundären AlwaysOn-Datenbank (SQL Server)
   Dieses Thema enthält Informationen zum Starten der Datensynchronisierung, nachdem Sie einer AlwaysOn-Verfügbarkeitsgruppe eine Datenbank hinzugefügt haben. Für jedes neue primäre Replikat müssen sekundäre Datenbanken auf den Serverinstanzen vorbereitet werden, die die sekundären Replikate hosten. Dann muss jede dieser sekundären Datenbanken manuell mit der Verfügbarkeitsgruppe verknüpft werden.  

@@ -1,5 +1,5 @@
 ---
-title: Kontointelligenz definieren (Dimension) (Business Intelligence-Assistent) | Microsoft Docs
+title: Definieren der Kontointelligenz (Dimension) (Business Intelligence-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.acctintelligence.selectdimension.f1
 ms.assetid: 42ce4c2b-e058-43ad-8d63-19ba07a31b67
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 27e33821094b1499646aec42262b9a3b0b27c10f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4acb73063603e367d0443e709c875be0871382d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36163243"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211900"
 ---
 # <a name="define-account-intelligence-dimension-business-intelligence-wizard"></a>Kontointelligenz definieren (Dimension) (Business Intelligence-Assistent)
   Auf dieser Seite können Sie die Dimension auswählen, auf die die Kontointelligenz einschließlich der Einstellungen für Dimension und Attributtyp, Definition semiadditiver Measures und sonstiger Funktionen angewendet werden soll.  
