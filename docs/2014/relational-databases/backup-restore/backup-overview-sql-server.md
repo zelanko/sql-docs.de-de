@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tables [SQL Server], backing up data
 - backups [SQL Server]
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - backups [SQL Server], table-level backups unsupported
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 caps.latest.revision: 81
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e7df7b8c35327d097e7bbc92bfb1e5cf99c4f4ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b48f8c9bbcb39f68aa0e86957c8713b6044216e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149079"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163031"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   Dieses Thema bietet eine Einführung in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungskomponente. Die Sicherung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank ist wichtig für den Schutz Ihrer Daten. In dieser Diskussion werden Sicherungstypen und Sicherungseinschränkungen behandelt. Darüber hinaus bietet das Thema eine Einführung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungsmedien und -Sicherungsgeräte.  
@@ -59,7 +58,7 @@ ms.locfileid: "36149079"
  [Wiederherstellungsprozess](restore-and-recovery-overview-sql-server.md)  
  Ein aus mehreren Phasen bestehender Prozess, in dem alle Daten und Protokollseiten aus einer angegebenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherung in eine angegebene Datenbank kopiert werden und ein Rollforward für alle Transaktionen ausgeführt wird, die in der Sicherung protokolliert sind. Dies wird erreicht, indem die Daten durch die Übernahme protokollierter Änderungen aktualisiert werden.  
   
- **Sicherungsarten**  
+ **Arten von Sicherungen**  
   
  [kopiesicherung](copy-only-backups-sql-server.md)  
  Eine Sicherung zur besonderen Verwendung, die unabhängig von der normalen Sequenz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen erstellt wird.  
@@ -162,7 +161,7 @@ ms.locfileid: "36149079"
   
 -   [Lernprogramm: SQL Server-Sicherung und -Wiederherstellung im Windows Azure-BLOB-Speicherdienst](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
- **So erstellen Sie eine Sicherung**  
+ **Zum Erstellen einer Sicherung**  
   
 > [!NOTE]  
 >  Verwenden Sie für Teilsicherungen oder Kopiesicherungen die [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) -Anweisung mit der Option PARTIAL bzw. COPY_ONLY.  

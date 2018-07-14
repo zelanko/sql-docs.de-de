@@ -1,5 +1,5 @@
 ---
-title: Tuple-Element (XMLA) | Microsoft Docs
+title: Tuple-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Tuple element
 ms.assetid: d65aba10-55e1-49c1-81bc-0756c39c0da2
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: fe470d60aa008723034e1bdbf95f3ecf593c8a3a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e5db226260852207fbcfeb4dc0a071d03d0def7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061462"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233690"
 ---
 # <a name="tuple-element-xmla"></a>Tuple-Element (XMLA)
   Enthält eine Sammlung von [Member](member-element-xmla.md)-Elementen, die im übergeordneten [Tuples](tuples-element-xmla.md)-Element enthalten sind.  
@@ -62,13 +62,13 @@ ms.locfileid: "36061462"
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Tupel](tuples-element-xmla.md)|  
-|Untergeordnete Elemente|[Datenmember](member-element-xmla.md)|  
+|Untergeordnete Elemente|[Member](member-element-xmla.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn eine Clientanwendung legt die `AxisFormat` Eigenschaft *' TupleFormat '*, eine Achse wird als eine Menge von Tupeln dargestellt. Jede `Axis` Element enthält eine `Tuples` Element, das die Tupelmenge auf dieser Achse darstellt. Jedes Tupel wird mithilfe eines `Tuple`-Elements dargestellt, das `Member`-Elemente aus jeder Hierarchie auf der Achse enthält.  
+ Wenn eine Client-Anwendung legt die `AxisFormat` Eigenschaft *TupleFormat*, wird eine Achse als Menge von Tupeln dargestellt. Jede `Axis` Element enthält eine `Tuples` Element, das die Menge der Tupel auf dieser Achse darstellt. Jedes Tupel wird mithilfe eines `Tuple`-Elements dargestellt, das `Member`-Elemente aus jeder Hierarchie auf der Achse enthält.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel veranschaulicht die Struktur der `Tuple` -Element, wenn ein Client gibt *' TupleFormat '* oder *CustomFormat* für die `AxisFormat` XMLA-Eigenschaft, die bei Angabe der folgenden Mitglieder für die Achse:  
+ Das folgende Beispiel veranschaulicht die Struktur der `Tuple` -Element, wenn ein Client angibt, *TupleFormat* oder *CustomFormat* für die `AxisFormat` XMLA-Eigenschaft, die gemäß der folgenden Mitglieder für die Achse:  
   
 |||||  
 |-|-|-|-|  

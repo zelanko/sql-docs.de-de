@@ -5,24 +5,23 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], installing
 - semantic search [SQL Server], configuring
 ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8af441227c9a584b6252d5d02b7e9989a772d526
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f0c12ef425f898b8406884fef8eff27c8c80c3df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148118"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329330"
 ---
 # <a name="install-and-configure-semantic-search"></a>Installieren und Konfigurieren der semantischen Suche
   Beschreibt die erforderlichen Komponenten für die statistische semantische Suche und wie diese Komponenten installiert oder überprüft werden.  
@@ -57,7 +56,7 @@ SELECT * FROM sys.fulltext_semantic_language_statistics_database;
 GO  
 ```  
   
-###  <a name="HowToInstallModel"></a> Gewusst wie: Installieren, Anfügen und registrieren die semantischen Sprachstatistikdatenbank  
+###  <a name="HowToInstallModel"></a> Gewusst wie: Installieren, Anfügen und registrieren die Semantic Language Statistics-Datenbank  
  Die Datenbank für semantische Sprachstatistik wird nicht vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setupprogramm installiert. Führen Sie zum Einrichten der semantischen Sprachstatistikdatenbank als erforderliche Komponente für die semantische Indizierung folgende Aufgaben aus:  
   
  **1. Installieren Sie die Datenbank für semantische Sprachstatistik.**  
@@ -101,8 +100,8 @@ EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsd
 GO  
 ```  
   
-###  <a name="HowToUnregister"></a> Gewusst wie: Aufheben der Registrierung, trennen und entfernen die semantische Sprachstatistikdatenbank  
- **Aufheben der Registrierung der Datenbank für semantische sprachstatistik.**  
+###  <a name="HowToUnregister"></a> Gewusst wie: Aufheben der Registrierung, trennen und entfernen die Semantic Language Statistics-Datenbank  
+ **Aufheben der Registrierung der semantic Language Statistics-Datenbank.**  
  Rufen Sie die gespeicherte Prozedur [sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql) auf. Sie müssen den Namen der Datenbank nicht angeben, da eine Instanz nur eine semantische Sprachstatistikdatenbank aufweisen kann.  
   
 ```tsql  
@@ -110,7 +109,7 @@ EXEC sp_fulltext_semantic_unregister_language_statistics_db;
 GO  
 ```  
   
- **Trennen Sie die semantische sprachstatistikdatenbank.**  
+ **Trennen Sie die semantic Language Statistics-Datenbank.**  
  Rufen Sie die gespeicherte Prozedur [sp_detach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql) auf, und geben Sie den Namen der Datenbank an.  
   
 ```tsql  
@@ -121,10 +120,10 @@ EXEC sp_detach_db @dbname = N'semanticsdb';
 GO  
 ```  
   
- **Entfernen Sie die semantische sprachstatistikdatenbank.**  
+ **Entfernen Sie die semantic Language Statistics-Datenbank.**  
  Nach dem Aufheben und Trennen der Datenbank können Sie die Datenbankdatei einfach löschen. Es gibt kein Deinstallationsprogramm und keinen Eintrag unter **Programme und Funktionen** in der Systemsteuerung.  
   
-###  <a name="reqinstall"></a> Anforderungen und Einschränkungen zum Installieren und Entfernen der semantischen Sprachstatistikdatenbank  
+###  <a name="reqinstall"></a> Anforderungen und Einschränkungen zum Installieren und entfernen die Semantic Language Statistics-Datenbank  
   
 -   Sie können nur eine Datenbank für semantische Sprachstatistik in einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]anfügen und registrieren.  
   

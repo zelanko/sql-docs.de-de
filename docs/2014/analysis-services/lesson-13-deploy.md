@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 14: Bereitstellen | Microsoft Docs'
+title: 'Lektion 14: Bereitstellen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 24863a8a-9017-415a-a97b-fbac76ed0675
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 2b9bf4afde77cc0438e097c14f6b3743c7da427d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2973afd208039534048908ca1403fc8154898fc3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149747"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181037"
 ---
 # <a name="lesson-14-deploy"></a>Lektion 14: Bereitstellen
   In dieser Lektion konfigurieren Sie Bereitstellungseigenschaften, wobei Sie eine Bereitstellungsserverinstanz von Analysis Services im Tabellenmodus sowie einen Namen für das bereitgestellte Modell angeben. Sie stellen dann das Modell auf dieser Instanz bereit. Nach der Bereitstellung können Benutzer unter Verwendung einer Clientanwendung zur Berichtserstellung eine Verbindung zum Modell herstellen. Weitere Informationen finden Sie unter [Bereitstellung von Tabellenmodelllösungen &#40;SSAS – tabellarisch&#41;](tabular-models/tabular-model-solution-deployment-ssas-tabular.md).  
@@ -40,14 +40,14 @@ ms.locfileid: "36149747"
     > [!IMPORTANT]  
     >  Sie benötigen für die Bereitstellung auf einer Analysis Services-Remoteinstanz entsprechende Administratorberechtigungen.  
   
-3.  Überprüfen Sie die **Abfragemodus** -Eigenschaftensatz auf **In-Memory-**.  
+3.  Überprüfen Sie die **Abfragemodus** -Eigenschaftensatz auf **In-Memory**.  
   
     > [!NOTE]  
     >  Das in diesem Lernprogramm erstellte Modell wird im DirectQuery-Modus nicht unterstützt.  
   
 4.  In der **Datenbank** Eigenschaft `Adventure Works Internet Sales Model`.  
   
-5.  In der **Cube** Geben Sie Name-Eigenschaft `Adventure Works Internet Sales Model`.  
+5.  In der **Cube** Name- Eigenschaft `Adventure Works Internet Sales Model`.  
   
 6.  Überprüfen Sie die Auswahl, und klicken Sie anschließend auf **OK**.  
   

@@ -1,5 +1,5 @@
 ---
-title: Installieren Sie Reporting Services im einheitlichen Modus-Berichtsserver | Microsoft Docs
+title: Installieren Sie Reporting Services-Berichtsserver im einheitlichen Modus | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default configuration [Reporting Services]
 - report servers [Reporting Services], default configurations
@@ -17,13 +17,13 @@ ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 caps.latest.revision: 58
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 090432d75605eb1678eacc77fafe1c213825d5ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0260982df5dff6640a4a273916c8e4455bd18621
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148328"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329440"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Installieren des Reporting Services-Berichtsservers im einheitlichen Modus
   Ein [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichtsserver im einheitlichen Modus kann mit dem Installations-Assistenten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder über die Befehlszeile installiert werden. Im Setup-Assistenten können Sie wahlweise 1) Dateien installieren und den Server anhand der Standardeinstellungen konfigurieren oder 2) nur die Dateien installieren, ohne dass der Server vom Installations-Assistenten konfiguriert wird. In diesem Thema wird die *Standardkonfiguration für den einheitlichen Modus* beschrieben, in der eine Berichtsserverinstanz von Setup installiert und konfiguriert wird. Nach Abschluss der Installation wird der Berichtsserver ausgeführt und ist einsatzbereit. Ein Berichtsserver im einheitlichen Modus wird als eigenständiger Anwendungsserver ausgeführt. Der einheitliche Modus ist der standardmäßige Servermodus.  
@@ -36,13 +36,13 @@ ms.locfileid: "36148328"
   
 -   [Was ist die Standardkonfiguration?](#bkmk_whatisdefaultconfiguration)  
   
--   [Wenn die Installation der Standardkonfiguration für den einheitlichen Modus](#bkmk_whentoinstalldefaultconfig)  
+-   [Zeitpunkt der Installation der Standardkonfiguration für den einheitlichen Modus](#bkmk_whentoinstalldefaultconfig)  
   
 -   [Anforderungen](#bkmk_requirements)  
   
 -   [Standard-URL-Reservierungen](#bkmk_defaultURLreservations)  
   
--   [Installieren des einheitlichen Modus mit SQL Server-Installations-Assistenten](#bkmk_installwithwizard)  
+-   [Installieren des einheitlichen Modus mit der SQL Server-Installations-Assistenten](#bkmk_installwithwizard)  
   
 -   [Installieren des einheitlichen Modus über die Befehlszeile](#bkmk_commandline)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36148328"
   
 -   Die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Befehlszeilen-Hilfsprogramme (rsconfig.exe, rskeymgmt.exe und rs.exe)  
   
- Diese Option gilt nicht für gemeinsam genutzte Funktionen wie z. B. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oder [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], dem muss als separate Elemente angegeben werden, wenn Sie ihn installieren möchten.  
+ Diese Option gilt nicht für gemeinsam genutzte Funktionen wie z. B. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oder [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], die muss als separate Elemente angegeben werden, wenn Sie sie installieren möchten.  
   
  Setup konfiguriert für die Installation eines Berichtsservers im einheitlichen Modus folgende Elemente:  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36148328"
   
  Setup konfiguriert weder das unbeaufsichtigte Ausführungskonto noch Berichtsserver-E-Mail, Sicherung der Verschlüsselungsschlüssel noch die Bereitstellung für horizontales Skalieren. Sie können diese Eigenschaften mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager konfigurieren. Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
-##  <a name="bkmk_whentoinstalldefaultconfig"></a> Wenn die Installation der Standardkonfiguration für den einheitlichen Modus  
+##  <a name="bkmk_whentoinstalldefaultconfig"></a> Zeitpunkt der Installation der Standardkonfiguration für den einheitlichen Modus  
  Bei der Standardkonfiguration wird [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im Betriebszustand installiert, sodass Sie den Berichtsserver sofort nach Ende des Setups verwenden können. Geben Sie diesen Modus an, wenn Sie nicht alle Schritte ausführen möchten und alle erforderlichen Konfigurationsaufgaben weglassen, die Sie ansonsten im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool ausführen müssten.  
   
  Die Installation der Standardkonfiguration garantiert nicht, dass der Berichtsserver funktioniert, wenn das Setup beendet ist. Es kann sein, dass die Standard-URLs nicht registriert werden, wenn der Dienst gestartet wird. Testen Sie Ihre Installation immer, um zu überprüfen, ob der Dienst erwartungsgemäß gestartet und ausgeführt wird.  
@@ -93,7 +93,7 @@ ms.locfileid: "36148328"
   
  Wenn Ihr Computer nicht alle Anforderungen für eine Standardinstallation erfüllt, müssen Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im Dateimodus installieren und dann den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationsmanager verwenden, um nach dem Setup die Konfiguration durchzuführen.  
   
- Versuchen Sie nicht, den Computer neu zu konfigurieren, nur um die Standardinstallation fortsetzen zu können. Dies könnte mehrere Stunden Arbeit bedeuten, was die Zeitersparnis der Installationsoption wieder zunichte machen würde. Die beste Lösung besteht darin installieren [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im Dateimodus und konfigurieren Sie dann auf dem Berichtsserver her, um bestimmte Werte zu verwenden.  
+ Versuchen Sie nicht, den Computer neu zu konfigurieren, nur um die Standardinstallation fortsetzen zu können. Dies könnte mehrere Stunden Arbeit bedeuten, was die Zeitersparnis der Installationsoption wieder zunichte machen würde. Die beste Lösung ist zum Installieren [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in im Dateimodus und konfigurieren Sie dann auf dem Berichtsserver her, um bestimmte Werte zu verwenden.  
   
 ##  <a name="bkmk_defaultURLreservations"></a> Standard-URL-Reservierungen  
  URL-Reservierungen bestehen aus Präfix, Hostname, Port und virtuellem Verzeichnis:  
@@ -101,7 +101,7 @@ ms.locfileid: "36148328"
 |Teil|Description|  
 |----------|-----------------|  
 |Präfix|Das Standardpräfix ist http. Wenn Sie zuvor ein SSL-Zertifikat (Secure Sockets Layer) installiert haben, versucht das Setup, die URL-Reservierungen mit dem Präfix HTTPS zu erstellen.|  
-|Hostname|Der Standardhostname ist ein Platzhalter (+). Es gibt an, dass der Berichtsserver jede HTTP-Anforderung auf dem dafür bestimmten Port für jeden Hostnamen, der auf dem Computer akzeptiert, einschließlich http://\<Computername > / Reportserver, http://localhost/reportserver, oder http://\<IP-Adresse > / ReportServer.|  
+|Hostname|Der Standardhostname ist ein Platzhalter (+). Es gibt an, dass der Berichtsserver jede HTTP-Anforderung an den angegebenen Port für einen beliebigen Hostnamen, die den Computer akzeptiert, einschließlich http://\<Computername > / Reportserver, http://localhost/reportserver, oder http://\<IP-Adresse > / ReportServer.|  
 |Port|Der Standardport ist 80. Hinweis: Wenn Sie einen anderen Port als Port 80 verwenden, müssen Sie diesen ausdrücklich der URL hinzufügen, wenn Sie eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webanwendung in einem Browserfenster öffnen.|  
 |Virtuelles Verzeichnis|Standardmäßig werden virtuelle Verzeichnisse im Format reportserver_ erstellt\<*Instance_name*> für die Berichtsserver-Webdienst und Reports_\<*Instance_name*> für Berichts-Manager. Beim Berichtsserver-Webdienst lautet der Standardname für das virtuelle Verzeichnis **reportserver**. Beim Berichts-Manager lautet der Standardname für das virtuelle Verzeichnis **reports**.|  
   
@@ -109,9 +109,9 @@ ms.locfileid: "36148328"
   
 -   http://+:80/reportserver bietet Zugriff auf den Berichtsserver.  
   
--   http://+:80/reports, der Zugang zum Berichts-Manager.  
+-   http://+:80/reports, bietet Zugriff zum Berichts-Manager.  
   
-##  <a name="bkmk_installwithwizard"></a> Installieren des einheitlichen Modus mit SQL Server-Installations-Assistenten  
+##  <a name="bkmk_installwithwizard"></a> Installieren des einheitlichen Modus mit der SQL Server-Installations-Assistenten  
  Die folgende Liste beschreibt die  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -spezifischen Schritte und Optionen, die Sie im SQL Server-Installations-Assistenten auswählen. Die Liste beschreibt nicht jede im Installations-Assistenten angezeigte Seite. Es werden nur die auf [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bezogenen Seiten beschrieben, die Teil einer Installation im einheitlichen Modus sind.  
   
 1.  Wählen Sie auf der Seite **Setuprolle** die Option **SQL Server-Funktionsinstallation**aus.  
@@ -129,7 +129,7 @@ ms.locfileid: "36148328"
   
      ![Auswahl des einheitlichen SSRS-Modus bei der Funktionsauswahl](../../../2014/sql-server/install/media/rs-setupfeatureselection-native-withcircles.gif "SSRS Native Mode Select in Feature Selection")  
   
-3.  Wenn Sie planen, verwenden Sie die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnementfunktion klicken Sie dann auf die **Serverkonfiguration** Seite Sie prüfen möchten, für die SQL Server-Agent konfiguriert ist **automatische** Starttyp.  
+3.  Wenn Sie planen, verwenden Sie die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Abonnementfunktion, klicken Sie dann auf die **Serverkonfiguration** , Sie möchten überprüfen, ob für SQL Server-Agent konfiguriert ist **automatische** Starttyp.  
   
 4.  Wählen Sie auf der Seite **Reporting Services-Konfiguration** die Option zum **Installieren und Konfigurieren** aus.  
   
@@ -158,14 +158,14 @@ setup /q /ACTION=install /FEATURES=SQL,RS,TOOLS /INSTANCENAME=MSSQLSERVER /SQLSY
 SERVICE" /RSSVCSTARTUPTYPE="Manual" /RSINSTALLMODE="DefaultNativeMode"  
 ```  
   
- Weitere Informationen und Beispiele finden Sie unter [Eingabeaufforderung Installation von Reporting Services SharePoint-Modus und einheitlichen Modus](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md) und [Installieren von SQL Server 2014 von der Befehlszeile aus](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
+ Weitere Informationen und Beispiele finden Sie unter [Command Prompt Installation von Reporting Services SharePoint-Modus und einheitlichen Modus](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md) und [Installieren von SQL Server 2014 über die Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Problembehandlung für eine Reporting Services-Installation](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
  [Überprüfen einer Installation von Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)   
  [Konfigurieren des Berichtsserver-Dienstkontos &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Konfigurieren von Berichtsserver-URLs &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Konfigurieren Sie eine Verbindung mit der Berichtsserver-Datenbank &#40;SSRS-Konfigurations-Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Konfigurieren eine Berichtsserver-Datenbankverbindung &#40;SSRS-Konfigurations-Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Ausschließliche Datei-Installation &#40;Reporting Services&#41;](../../reporting-services/install-windows/files-only-installation-reporting-services.md)   
  [Initialisieren eines Berichtsservers (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [Konfigurieren von SSL-Verbindungen auf einem Berichtsserver im einheitlichen Modus](../security/configure-ssl-connections-on-a-native-mode-report-server.md)   

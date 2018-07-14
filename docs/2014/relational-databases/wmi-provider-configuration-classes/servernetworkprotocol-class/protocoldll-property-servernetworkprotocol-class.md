@@ -1,5 +1,5 @@
 ---
-title: ProtocolDLL-Eigenschaft (ServerNetworkProtocol-Klasse) | Microsoft Docs
+title: ProtocolDLL-Eigenschaft (ServerNetworkProtocol-Klasse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProtocolDLL property
 ms.assetid: ac386558-392e-46f3-97f8-382f267b7fca
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3b0daf8b5d2db8ccce3622db5cbfe92643f62261
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 50b726584db8f547007558331f80f9b06f801642
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148324"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208570"
 ---
 # <a name="protocoldll-property-servernetworkprotocol-class"></a>ProtocolDLL-Eigenschaft (ServerNetworkProtocol-Klasse)
   Ruft den Namen der .dll-Datei ab, die von einem Servernetzwerkprotokoll benötigt wird.  

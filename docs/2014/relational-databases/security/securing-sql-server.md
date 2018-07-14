@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Security [SQL Server]
 helpviewer_keywords:
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - applications [SQL Server], security
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 89342bf3f94c2ed56e2040a1fa29b7c74bcf8c7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 4b3b01893519137c5fb707e9cd6b9dad7366c3bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061360"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250090"
 ---
 # <a name="securing-sql-server"></a>Sichern von SQL Server
   Das Sichern von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann als eine Reihe von Schritten betrachtet werden, die vier Bereiche betreffen: die Plattform, die Authentifizierung, die Objekte (einschließlich der Daten) und die Anwendungen, die auf das System zugreifen. In den folgenden Themen werden Sie durch das Erstellen und Implementieren eines effektiven Sicherheitsplans geführt.  
@@ -150,7 +149,6 @@ GO
 ## <a name="related-content"></a>Verwandte Inhalte  
  [Überlegungen zur Sicherheit bei SQL Server-Installationen](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
- 
-  [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

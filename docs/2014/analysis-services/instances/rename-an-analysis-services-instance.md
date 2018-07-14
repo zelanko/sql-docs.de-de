@@ -1,5 +1,5 @@
 ---
-title: Umbenennen einer Analysis Services-Instanz | Microsoft Docs
+title: Umbenennen einer Analysis Services-Instanz | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - instances of Analysis Services, renaming
 - renaming instances of Analysis Services
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - names [Analysis Services]
 ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4d9369a62a1fcd5dde7de92c7da81a4fcb6c02ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0dfa3a42caf787fad5e8eb64e5bdbab38997640b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148200"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326810"
 ---
 # <a name="rename-an-analysis-services-instance"></a>Umbenennen einer Analysis Services-Instanz
-  Sie können eine vorhandene Instanz von umbenennen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mithilfe der **Instanz umbenennen** (Dialogfeld).  
+  Sie können eine vorhandene Instanz von umbenennen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mithilfe der **Instanz umbenennen** Dialogfeld.  
   
 > [!IMPORTANT]  
 >  Das Tool zum Umbenennen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanzen wird beim Umbenennen der Instanz mit erhöhten Rechten ausgeführt und aktualisiert den Windows-Dienstnamen, Sicherheitskonten und Registrierungseinträge, die dieser Instanz zugeordnet sind. Um sicherzustellen, dass diese Aktionen stattfinden, muss das Tool als lokaler Systemadministrator ausgeführt werden.  
@@ -39,7 +39,7 @@ ms.locfileid: "36148200"
   
 ### <a name="to-rename-an-instance-of-analysis-services"></a>So benennen Sie eine Instanz von Analysis Services um  
   
-1.  Starten Sie die **Instanzumbenennung** Tool **asinstancerename.exe**, aus C:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio.  
+1.  Starten Sie die **Instanzumbenennung** Tool **asinstancerename.exe**, von C:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio.  
   
 2.  Wählen Sie im Dialogfeld **Instanz umbenennen** aus der Liste **Umzubenennende Instanz** die Instanz aus, die Sie umbenennen möchten.  
   

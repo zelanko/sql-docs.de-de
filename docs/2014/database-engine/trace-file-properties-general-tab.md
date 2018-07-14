@@ -1,5 +1,5 @@
 ---
-title: Eigenschaften (Registerkarte "Allgemein") der Ablaufverfolgungsdatei | Microsoft Docs
+title: Eigenschaften (Registerkarte "Allgemein") der Ablaufverfolgungsdatei | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.tracefileproperties.general.f1
 helpviewer_keywords:
 - Trace File Properties dialog box
 ms.assetid: 2464bb8d-1139-4b2b-8f98-0983e62167ea
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e6ccb06efda3f6ddd3f8997a95094568adb8196
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9e7a5fca7092cff71a7ec0995421d0fdf6685b2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147735"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263358"
 ---
 # <a name="trace-file-properties-general-tab"></a>Eigenschaften der Ablaufverfolgungsdatei (Registerkarte Allgemein)
   Mithilfe der Registerkarte **Allgemein** des Dialogfelds **Eigenschaften der Ablaufverfolgungsdatei** können Sie die Eigenschaften einer Ablaufverfolgungsdatei anzeigen.  

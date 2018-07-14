@@ -1,5 +1,5 @@
 ---
-title: Annotations-Element (ASSL) | Microsoft Docs
+title: Annotations-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Annotations element
 ms.assetid: b2236075-6a48-470d-8182-b0de112e258a
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b673e7f9edd199d32f7bd89d082d39b6d58f876a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 165d5ba47462c47ebc77a53b9f76537427cb9837
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148190"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276156"
 ---
 # <a name="annotations-element-assl"></a>Annotations-Element (ASSL)
-  Enthält die Auflistung der [Anmerkung](../objects/annotation-element-assl.md) Elemente mit dem übergeordneten Element verknüpft sind.  
+  Enthält die Auflistung der [Anmerkung](../objects/annotation-element-assl.md) Elemente, mit dem übergeordneten Element verknüpft sind.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36148190"
 |Untergeordnete Elemente|[Anmerkung](../objects/annotation-element-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.AnnotationCollection>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.AnnotationCollection>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sammlungen &#40;ASSL&#41;](collections-assl.md)  

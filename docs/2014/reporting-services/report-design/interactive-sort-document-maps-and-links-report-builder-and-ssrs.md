@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3646edb01f7bf6e45bbe20c1e6f821b41e9b5969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: aebaa04b6bdf4657f081b6a99b6cb158c144c8d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149552"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194860"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>Interaktive Sortierung, Dokumentstrukturen und Links (Berichts-Generator und SSRS)
   In webbasierten Umgebungen können Sie eine Reihe von Funktionen hinzufügen, über die Benutzer mit Berichten interagieren können. Die Benutzer können die Sortierreihenfolge der Werte im Bericht ändern, Elemente im Bericht anzeigen oder ausblenden oder auf Links klicken, die zu anderen Berichten oder Webseiten führen. Sie können auch ein Inhaltsverzeichnis oder eine Dokumentstruktur hinzufügen. Die Berichtsbenutzer können auf Elemente im Inhaltsverzeichnis oder in der Dokumentstruktur klicken, um zu Bereichen in einem Bericht zu springen.  
@@ -50,7 +50,7 @@ ms.locfileid: "36149552"
  [Hinzufügen eines Lesezeichens zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
  Erläutert, wie Lesezeichen hinzugefügt werden, um in einem Bericht Links zu erstellen.  
   
- [Fügen Sie einen Link zu einer URL &#40;Berichts-Generator und SSRS&#41;](add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
+ [Hinzufügen eines Links zu einer URL &#40;Berichts-Generator und SSRS&#41;](add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
  Erläutert, wie ein Link aus dem Bericht einer URL hinzugefügt wird.  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - SetWindowsServiceIdentity (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SetWindowsServiceIdentity method
 ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
 caps.latest.revision: 19
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: fc3dfeafab01480fde7eb195363f46946de30ddd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: bc53a516da25d81c1532ea1418b4f846f37597ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147818"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268456"
 ---
 # <a name="setwindowsserviceidentity-method-wmi-msreportserverconfigurationsetting"></a>SetWindowsServiceIdentity-Methode (WMI: MSReportServer_ConfigurationSetting)
   Lässt den Report Server-Windows-Dienst als einen angegebenen Windows-Benutzer ausführen und gibt diesem Konto die erforderlichen Dateisystemberechtigungen, damit der Berichtsserver ausgeführt werden kann  
@@ -61,13 +61,13 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
  Gibt *HRESULT* zurück, wodurch der Erfolg oder das Fehlschlagen des Methodenaufrufs angegeben wird. Der Wert 0 (null) gibt an, dass der Methodenaufruf erfolgreich war. Ein Wert ungleich 0 (null) gibt an, dass ein Fehler aufgetreten ist.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn die *UseBuiltInAccount* Parameter auf festgelegt ist `true` und der Berichtsserver unter Microsoft [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)] oder Windows XP, den Wert des der *Namen*, *Domäne*, und *Kennwort* Parameter werden ignoriert, und das lokale Systemkonto verwendet wird.  
+ Wenn die *UseBuiltInAccount* Parameter auf festgelegt ist `true` und der Berichtsserver ausgeführt wird, auf Microsoft [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)] oder Windows XP, den Wert des der *Name*, *Domäne*, und *Kennwort* Parameter werden ignoriert, und das lokale Systemkonto wird verwendet.  
   
- Wenn die *UseBuiltInAccount* Parameter auf festgelegt ist `true` und der Berichtsserver unter Windows Server 2003 ausgeführt wird die *Domäne* und *Kennwort* Eigenschaften sind ignoriert, und das Namensfeld darf "Builtin\system" oder "Builtin\System" oder "builtin\localservice enthalten".  
+ Wenn der *UseBuiltInAccount* Parametersatz zu `true` und der Berichtsserver unter Windows Server 2003 ausgeführt wird der *Domäne* und *Kennwort* Eigenschaften sind ignoriert, und das Namensfeld muss enthalten, "Builtin\system" oder "Builtin\System" oder "builtin\localservice enthalten".  
   
  Die SetWindowsServiceIdentity-Methode legt Dateiberechtigungen für Dateien und Ordner im Installationsverzeichnis des Berichtsservers fest.  
   
- Das Konto angegeben, der *Konto* Parameter erfordert `LogonAsService` -Rechte in Windows. Die Methode gewährt dem angegebenen Konto dieses Recht.  
+ Das angegebene Konto das *Konto* Parameter erfordert `LogonAsService` -Rechte in Windows. Die Methode gewährt dem angegebenen Konto dieses Recht.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

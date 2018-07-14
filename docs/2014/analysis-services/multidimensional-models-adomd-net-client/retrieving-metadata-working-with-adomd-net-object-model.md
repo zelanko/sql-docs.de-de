@@ -1,5 +1,5 @@
 ---
-title: Arbeiten mit dem ADOMD.NET-Objektmodell | Microsoft Docs
+title: Arbeiten mit dem ADOMD.NET-Objektmodell | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - retrieving metadata
 ms.assetid: 0183dcdc-f2ea-4246-ad00-6e8ccc9d8217
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de2d73db65d10acdea5ec0c221eb994700ba5f41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ceb363b3911afb3a1ea21d51e6a65eff09cd3f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148004"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328540"
 ---
 # <a name="working-with-the-adomdnet-object-model"></a>Arbeiten mit dem ADOMD.NET-Objektmodell
   ADOMD.NET bietet ein Objektmodell zum Anzeigen der Cubes und untergeordneten Objekte, die in einer analytischen Datenquelle enthalten sind. Jedoch sind nicht alle Metadaten für eine bestimmte analytische Datenquelle über das Objektmodell verfügbar. Das Objektmodell bietet nur Zugriff auf die Informationen, die von einer Clientanwendung am sinnvollsten angezeigt werden können, damit ein Benutzer interaktiv Befehle erstellen kann. Aufgrund der geringeren Komplexität der darzustellenden Metadaten ist das ADOMD.NET-Objektmodell einfacher zu verwenden.  

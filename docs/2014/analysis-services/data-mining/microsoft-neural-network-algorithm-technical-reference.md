@@ -1,5 +1,5 @@
 ---
-title: Technische Referenz zu Microsoft Neural Network-Algorithmus | Microsoft Docs
+title: Technische Referenz zu Microsoft Neural Network-Algorithmus | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HIDDEN_NODE_RATIO parameter
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - HOLDOUT_SEED parameter
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0e34d664a9eb2338f1a686c8a37303c03c8451ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 18c5395a8da571a0c131cc6138a9eb499b3ef786
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148030"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276506"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Neural Network-Algorithmus
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus verwendet ein *mehrschichtiges Perzeptronnetzwerk* , das auch als *Netzwerk von Deltaregeln mit Rückpropagierung*bezeichnet wird. Es besteht aus bis zu drei Ebenen aus Neuronen oder *Perzeptronen*. Zu diesen Ebenen gehört eine Eingabeebene, eine optionale verborgene Ebene und eine Ausgabeebene.  
@@ -106,15 +106,15 @@ ms.locfileid: "36148030"
   
  **Diskrete Werte**  
   
- Μ = p – die vorherige Wahrscheinlichkeit eines Status  
+ Μ = p: die vorherige Wahrscheinlichkeit eines Status  
   
  StdDev = sqrt(p(1-p))  
   
  **Kontinuierliche Werte**  
   
- Wert vorhanden = 1 - μ/σ fest  
+ Derzeitiger Wert = 1 - μ/σ  
   
- Kein vorhandener Wert = - μ/σ fest  
+ Kein vorhandener Wert = - μ/σ  
   
  Nachdem die Werte codiert wurden, durchlaufen die Eingaben die gewichtete Summierung, wobei die Netzwerkränder als Gewichtungen fungieren.  
   
@@ -206,7 +206,7 @@ ms.locfileid: "36148030"
   
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Neural Network-Algorithmus](microsoft-neural-network-algorithm.md)   
- [Miningmodellinhalt für neuronale Netzwerkmodelle &#40;Analysis Services – Datamining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Mingingmodellinhalt von neuronalen Netzwerkmodellen &#40;Analysis Services – Datamining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Beispiele für Abfragen von neuronalen Netzwerkmodellen](neural-network-model-query-examples.md)  
   
   

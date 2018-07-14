@@ -1,5 +1,5 @@
 ---
-title: CellPermissions-Element (ASSL) | Microsoft Docs
+title: CellPermissions-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CellPermissions element
 ms.assetid: 4a604f2f-f4c3-42bd-a42b-951263942cc6
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe89d1e2de728773d9eaae32023e801676a02bb0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dafcaf786d58fd8c1441c0f1df50aa5a7d47be31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149739"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176457"
 ---
 # <a name="cellpermissions-element-assl"></a>CellPermissions-Element (ASSL)
   Enthält die Auflistung der Berechtigungen für Zellen im zugehörigen [Cube](../objects/cube-element-assl.md) Element.  
@@ -64,9 +64,9 @@ ms.locfileid: "36149739"
 |Untergeordnete Elemente|[CellPermission](../objects/cellpermission-element-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Auflistung kann bis zu einer enthalten `CellPermission` -Objekt für jeden Wert des zulässigen der [Zugriff](../properties/access-element-assl.md) Element.  
+ Die Auflistung kann bis zu ein enthalten `CellPermission` Objekt für jeden Wert von zulässigen der [Zugriff](../properties/access-element-assl.md) Element.  
   
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.CellPermissionCollection>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.CellPermissionCollection>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Permission-Datentyp &#40;ASSL&#41;](../data-type/permission-data-type-assl.md)   

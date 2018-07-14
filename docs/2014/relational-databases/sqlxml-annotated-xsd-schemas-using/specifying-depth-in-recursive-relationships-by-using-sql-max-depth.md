@@ -1,5 +1,5 @@
 ---
-title: Angeben der Tiefe in rekursiven Beziehungen mithilfe von Sql:max-Tiefe | Microsoft Docs
+title: Angeben der Tiefe in rekursiven Beziehungen mit Sql:max-Tiefe | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - recursive joins [SQLXML]
 ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a08a5d6e7d58157bc61d7cbd604d12d0fd705b2a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 0cb07848e18f1f992b0f4f815c24d731c9001268
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149351"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217095"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Angeben der Tiefe von rekursiven Beziehungen mit 'sql:max-depth'
   Wenn in einer relationalen Datenbank eine Tabelle in einer Beziehung zu sich selbst steht, wird dies als rekursive Beziehung bezeichnet. Beispielsweise steht eine Tabelle, in der Mitarbeiterdatensätze gespeichert werden, in einer Beziehung zwischen Vorgesetzten und unterstellten Mitarbeitern mit sich selbst in Beziehung. In diesem Fall spielt die Mitarbeitertabelle auf der einen Seite der Beziehung die Rolle des Vorgesetzten und auf der anderen Seite spielt dieselbe Tabelle die Rolle des unterstellten Mitarbeiters.  
@@ -64,7 +64,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
  In diesem Fragment berichtet Mitarbeiter 5 an Mitarbeiter 4, Mitarbeiter 4 berichtet an Mitarbeiter 3, und die Mitarbeiter 3 und 2 berichten an Mitarbeiter 1.  
   
- Sie können das folgende XSD-Schema verwenden und eine XPath-Abfrage damit ausführen, um dieses Ergebnis zu erhalten. Das Schema beschreibt ein  **\<Emp >** Element des Typs EmployeeType, bestehend aus einem  **\<Emp >** untergeordnetes Element des gleichen Typs EmployeeType. Dies ist eine rekursive Beziehung (das Element und sein Vorgänger sind vom gleichen Typ). Darüber hinaus das Schema verwendet eine  **\<SQL: Relationship >** die über-/ unterordnungsbeziehung zwischen dem aufseher und dem beaufsichtigten zu beschreiben. Beachten Sie, dass in diesem  **\<SQL: Relationship >**, Emp ist das übergeordnete Element und die untergeordnete Tabelle.  
+ Sie können das folgende XSD-Schema verwenden und eine XPath-Abfrage damit ausführen, um dieses Ergebnis zu erhalten. Das Schema beschreibt ein  **\<Emp >** Element des Typs EmployeeType, bestehend aus einem  **\<Emp >** untergeordnetes Element des gleichen Typs EmployeeType. Dies ist eine rekursive Beziehung (das Element und sein Vorgänger sind vom gleichen Typ). Darüber hinaus das Schema verwendet eine  **\<SQL: Relationship >** um die über-/ unterordnungsbeziehung zwischen dem aufseher und dem beaufsichtigten zu beschreiben. Beachten Sie, dass in diesem  **\<SQL: Relationship >**, Emp ist das übergeordnete Element und der untergeordneten Tabelle.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -149,7 +149,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
     mapping-schema="C:\MyDir\maxDepth.xml"  
     ```  
   
-5.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen. Weitere Informationen finden Sie unter [mithilfe von ADO zum Ausführen von SQLXML 4.0-Abfragen](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+5.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um die Vorlage auszuführen. Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Dies ist das Ergebnis:  
   
@@ -174,7 +174,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 > [!NOTE]  
 >  Um im Ergebnis Hierarchien mit einer unterschiedlichen Anzahl von Ebenen zu erzeugen, ändern Sie den Wert der `sql:max-depth`-Anmerkung im Schema und führen die Vorlage nach jeder Änderung erneut aus.  
   
- Im vorherigen Schema alle der  **\<Emp >** Elemente verfügt, genau den gleichen Satz von Attributen (**EmployeeID**, **FirstName**, und  **LastName**). Das folgende Schema wurde leicht abgeändert, um ein zusätzliches **ReportsTo** Attribut für alle der  **\<Emp >** Elemente, die gegenüber einem Manager rechenschaftspflichtig.  
+ Im vorherigen Schema alle die  **\<Emp >** Elemente haben genau den gleichen Satz von Attributen (**EmployeeID**, **FirstName**, und  **"LastName"**). Das folgende Schema wurde leicht abgeändert, um ein zusätzliches **ReportsTo** -Attribut für alle der  **\<Emp >** Elemente, die einem Manager unterstellt.  
   
  Zum Beispiel zeigt dieses XML-Fragment die Untergebenen von Mitarbeiter 1 an:  
   
@@ -246,7 +246,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  Die `sql:max-depth`-Anmerkung kann für jedes komplexe Inhaltselement angegeben werden.  
   
 ### <a name="recursive-elements"></a>Rekursive Elemente  
- Wenn `sql:max-depth` sowohl für das übergeordnete als auch das untergeordnete Element einer rekursiven Beziehung angegeben wird, dann hat die `sql:max-depth`-Anmerkung Vorrang, die für das übergeordnete Element angegeben wurde. Beispielsweise wird die `sql:max-depth`-Anmerkung im folgenden Schema sowohl für das übergeordnete als auch das untergeordnete <Emp>-Element angegeben. In diesem Fall `sql:max-depth=4`hat die Angabe für die  **\<Emp >** übergeordneten Element (das die Rolle des aufsehers) Vorrang. Die `sql:max-depth` angegeben wird, auf dem untergeordneten Element  **\<Emp >** -Element (das die Rolle eines beaufsichtigten) wird ignoriert.  
+ Wenn `sql:max-depth` sowohl für das übergeordnete als auch das untergeordnete Element einer rekursiven Beziehung angegeben wird, dann hat die `sql:max-depth`-Anmerkung Vorrang, die für das übergeordnete Element angegeben wurde. Beispielsweise wird die `sql:max-depth`-Anmerkung im folgenden Schema sowohl für das übergeordnete als auch das untergeordnete <Emp>-Element angegeben. In diesem Fall `sql:max-depth=4`hat die Angabe für den  **\<Emp >** übergeordneten-Element (das die Rolle des aufsehers) Vorrang. Die `sql:max-depth` angegeben wird, auf dem untergeordneten Element  **\<Emp >** -Element (das die Rolle eines beaufsichtigten) wird ignoriert.  
   
 #### <a name="example-b"></a>Beispiel B  
   
@@ -283,12 +283,12 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 </xsd:schema>  
 ```  
   
- Um dieses Schema zu testen, führen Sie die für Beispiel A weiter oben in diesem Thema beschriebenen Schritte aus.  
+ Um dieses Schema zu testen, führen Sie die Schritte für Beispiel A oben in diesem Thema aus.  
   
 ### <a name="nonrecursive-elements"></a>Nicht rekursive Elemente  
- Wenn die `sql:max-depth`-Anmerkung für ein Element in dem Schema angegeben wird, das keine Rekursion bewirkt, dann wird sie ignoriert. Im folgenden Schema eine  **\<Emp >** Element besteht aus einer  **\<konstant >** untergeordnete Element, das wiederum hat eine  **\<Emp >** untergeordnetes Element.  
+ Wenn die `sql:max-depth`-Anmerkung für ein Element in dem Schema angegeben wird, das keine Rekursion bewirkt, dann wird sie ignoriert. Im folgenden Schema wird eine  **\<Emp >** Element besteht aus einer  **\<Konstanten >** untergeordneten-Element, das wiederum hat eine  **\<Emp >** untergeordnetes Element.  
   
- In diesem Schema die `sql:max-depth` -Anmerkung für die  **\<konstant >** Element wird ignoriert, da es keine Rekursion zwischen dem  **\<Emp >** übergeordneten und die  **\<konstant >** untergeordnetes Element. Gibt es jedoch zwischen der  **\<Emp >** Vorgänger und  **\<Emp >** untergeordneten. Das Schema gibt die `sql:max-depth`-Anmerkung für beide an. Aus diesem Grund die `sql:max-depth` Anmerkung, die auf den Vorgänger angegeben wird (**\<Emp >** in der aufseherrolle) Vorrang.  
+ In diesem Schema die `sql:max-depth` -Anmerkung für die  **\<Konstanten >** Element wird ignoriert, da es keine Rekursion zwischen dem  **\<Emp >** übergeordneten und die  **\<Konstanten >** untergeordnetes Element. Es gibt jedoch Rekursion zwischen dem  **\<Emp >** Vorgänger und  **\<Emp >** untergeordneten. Das Schema gibt die `sql:max-depth`-Anmerkung für beide an. Aus diesem Grund die `sql:max-depth` Anmerkung, die auf den Vorgänger angegeben ist (**\<Emp >** in der aufseherrolle) Vorrang.  
   
 #### <a name="example-c"></a>Beispiel C  
   
@@ -332,11 +332,11 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
  Um dieses Schema zu testen, führen Sie die für Beispiel A weiter oben in diesem Thema beschriebenen Schritte aus.  
   
 ## <a name="complex-types-derived-by-restriction"></a>Durch Einschränkungen abgeleitete komplexe Typen  
- Ist eine Ableitung komplexer Typen von  **\<Einschränkung >**, Elemente des zugehörigen komplexen Basistyps können nicht angegeben. die `sql:max-depth` Anmerkung. In diesen Fällen kann die `sql:max-depth`-Anmerkung dem Element des abgeleiteten Typs hinzugefügt werden.  
+ Wenn Sie eine komplexen typableitung mit haben  **\<Einschränkung >**, Elemente des zugehörigen komplexen Basistyps können nicht angegeben. die `sql:max-depth` Anmerkung. In diesen Fällen kann die `sql:max-depth`-Anmerkung dem Element des abgeleiteten Typs hinzugefügt werden.  
   
- Andererseits, haben eine Ableitung komplexer Typen von  **\<Erweiterung >**, können die Elemente des zugehörigen komplexen Basistyps angeben, die `sql:max-depth` Anmerkung.  
+ Andererseits, wenn man von einer komplexen typableitung mit  **\<Erweiterung >**, die Elemente des zugehörigen komplexen Basistyps können angeben, die `sql:max-depth` Anmerkung.  
   
- Beispielsweise erzeugt das folgende XSD-Schema einen Fehler, weil die `sql:max-depth`-Anmerkung für den Basistyp angegeben wurde. Diese Anmerkung wird nicht unterstützt, auf einen Typ, der durch abgeleitet ist  **\<Restriction >** von einem anderen Typ. Zur Behebung dieses Problems müssen Sie das Schema ändern und die `sql:max-depth`-Anmerkung für Elemente im abgeleiteten Typ angeben.  
+ Beispielsweise erzeugt das folgende XSD-Schema einen Fehler, weil die `sql:max-depth`-Anmerkung für den Basistyp angegeben wurde. Diese Anmerkung wird nicht unterstützt, auf eine vom abgeleiteten Typ  **\<Einschränkung >** von einem anderen Typ. Zur Behebung dieses Problems müssen Sie das Schema ändern und die `sql:max-depth`-Anmerkung für Elemente im abgeleiteten Typ angeben.  
   
 #### <a name="example-d"></a>Beispiel D  
   
@@ -380,7 +380,7 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
 </xsd:schema>   
 ```  
   
- Im Schema wird `sql:max-depth` für ein Element des komplexen Typs `CustomerBaseType` angegeben. Das Schema gibt auch eine  **\<Kunden >** Element vom Typ `CustomerType`, abgeleitet aus `CustomerBaseType`. Eine mit diesem Schema ausgeführte XPath-Abfrage erzeugt einen Fehler, weil `sql:max-depth` nicht für Elemente unterstützt wird, die in einem einfachen Einschränkungstyp definiert sind.  
+ Im Schema wird `sql:max-depth` für ein Element des komplexen Typs `CustomerBaseType` angegeben. Das Schema gibt auch eine  **\<Kunden >** Element vom Typ `CustomerType`, ergibt sich aus `CustomerBaseType`. Eine mit diesem Schema ausgeführte XPath-Abfrage erzeugt einen Fehler, weil `sql:max-depth` nicht für Elemente unterstützt wird, die in einem einfachen Einschränkungstyp definiert sind.  
   
 ## <a name="schemas-with-a-deep-hierarchy"></a>Schemas mit einer tiefen Hierarchie  
  Möglicherweise liegt ein Schema vor, das eine tiefe Hierarchie umfasst, in der ein Element ein untergeordnetes Element enthält, das wiederum ein untergeordnetes Element enthalt usw. Wenn die in einem solchen Schema angegebene `sql:max-depth`-Anmerkung ein XML-Dokument erzeugt, das eine Hierarchie mit mehr als 500 Ebenen umfasst (wobei das oberste Element auf Ebene 1, das diesem untergeordnete Element auf Ebene 2 etc. angesiedelt ist), wird ein Fehler zurückgegeben.  

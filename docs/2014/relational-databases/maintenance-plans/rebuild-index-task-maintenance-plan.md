@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.reindex.f1
 - reindex
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Rebuild Index Task dialog box
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d12d547871d2602249d042ff6e93060f340e9b2a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 603f79bcbbe2ec42b05de28b3685c71f6cca9c69
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147670"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268976"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>Task 'Index neu erstellen' (Wartungsplan)
   Mithilfe des Dialogfelds **Task „Index neu erstellen“** können Sie Indizes für Tabellen in der Datenbank mit einem neuen Füllfaktor neu erstellen. Der Füllfaktor bestimmt die Menge an leeren Speicherplatz auf jeder Seite im Index, der Platz für zukünftige Erweiterungen bieten soll. Wenn der Tabelle Daten hinzugefügt werden, wird der freie Speicherplatz aufgefüllt, da der Wert für den Füllfaktor nicht beibehalten wird. Der freie Speicherplatz kann durch Neuorganisieren der Daten- und Indexseiten wiederhergestellt werden.  
@@ -73,9 +73,9 @@ ms.locfileid: "36147670"
  Löscht die Indizes für die Tabellen in der Datenbank und erstellt sie mit einem neuen, automatisch berechneten Füllfaktor neu. Auf diese Weise wird der angegebene freie Speicherplatz auf den Indexseiten reserviert. Ein höherer Prozentsatz bedeutet, dass mehr freier Speicherplatz auf den Indexseiten reserviert wird und der Index entsprechend wachsen kann. Die gültigen Werte sind 0 bis 100.  
   
  **Ergebnisse in 'tempdb' sortieren**  
- Verwenden der `SORT_IN_TEMPDB`Option, die bestimmt, wo die während der indexerstellung generierten Zwischenergebnisse der Sortierung Ergebnisse temporär gespeichert werden. Wenn ein Sortiervorgang nicht erforderlich ist oder im Arbeitsspeicher ausgeführt werden kann, wird die Option `SORT_IN_TEMPDB`ignoriert.  
+ Verwenden der `SORT_IN_TEMPDB`Option fest, wo die während der indexerstellung generierten Zwischenergebnisse des Sortierens Ergebnisse vorübergehend gespeichert werden. Wenn ein Sortiervorgang nicht erforderlich ist oder im Arbeitsspeicher ausgeführt werden kann, wird die Option `SORT_IN_TEMPDB`ignoriert.  
   
- **Beibehalten von Index online während neuindizierung**  
+ **Behalten Sie Index online während neuindizierung**  
  Die Option `ONLINE` ermöglicht es Benutzern, während Indexvorgängen auf die zugrunde liegenden Tabellen- bzw. gruppierten Indexdaten und alle zugehörigen nicht gruppierten Indizes zuzugreifen.  
   
 > [!NOTE]  

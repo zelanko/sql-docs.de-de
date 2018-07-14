@@ -1,5 +1,5 @@
 ---
-title: Spezifikationen der maximalen Kapazität (Analysis Services) | Microsoft Docs
+title: Spezifikationen der maximalen Kapazität (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - objects [Analysis Services], maximum size
 ms.assetid: 49fe1673-b908-4c7a-88ff-415efd294d27
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 52c77297ad9b5db79f235611a4ddf47357445629
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 04307fb9eb5525c9ce4d91af7eda44ea3783b3b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148012"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200270"
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>Spezifikationen der maximalen Kapazität (Analysis Services)
   Die folgenden Tabellen geben die maximalen Größe und Anzahl verschiedener in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Komponenten definierter Objekte unter unterschiedlichen Serverbereitstellungsmodi an.  
@@ -37,7 +37,7 @@ ms.locfileid: "36148012"
  [Tabellarisch (DeploymentMode = 2)](#bkmk_vertipaq)  
   
 ##  <a name="bkmk_OLAP"></a> Mehrdimensionale und Datamining (DeploymentMode = 0)  
- Der MOLAP-Speichermodus, der sowohl Daten als auch Metadaten speichert, verfügt über zusätzliche physische Grenzen für Dateigrößen. Zeichenfolgenspeicherdateien weisen standardmäßig eine maximale Größe von 4 GB auf. Wenn Sie größere Dateien für Zeichenfolgenspeicher benötigen, können Sie eine andere Zeichenfolgenspeicherarchitektur angeben. Weitere Informationen finden Sie unter [Zeichenfolgenspeicher für Dimensionen und Partitionen konfigurieren](../configure-string-storage-for-dimensions-and-partitions.md).  
+ Der MOLAP-Speichermodus, der sowohl Daten als auch Metadaten speichert, verfügt über zusätzliche physische Grenzen für Dateigrößen. Zeichenfolgenspeicherdateien weisen standardmäßig eine maximale Größe von 4 GB auf. Wenn Sie größere Dateien für Zeichenfolgenspeicher benötigen, können Sie eine andere Zeichenfolgenspeicherarchitektur angeben. Weitere Informationen finden Sie unter [Konfigurieren des Zeichenfolgenspeichers für Dimensionen und Partitionen](../configure-string-storage-for-dimensions-and-partitions.md).  
   
 |Objekt|Maximale Größe/Anzahl|  
 |------------|----------------------------|  
@@ -57,14 +57,14 @@ ms.locfileid: "36148012"
 |Übersetzungen in einem Cube|2^31-1 = 2,147,483,647|  
 |Aggregationen in einer Partition|2^31-1 = 2,147,483,647|  
 |Von einer Abfrage zurückgegebene Zellen|2^31-1 = 2,147,483,647|  
-|Datensatzgröße in der Quellabfrage|64 KB|  
-|Die Länge von Objektnamen|100 Zeichen|  
+|Datensatzgröße in der Quellabfrage|64-KB|  
+|Länge des zu verwendenden Objektnamen|100 Zeichen|  
 |Maximale Anzahl unterschiedlicher Statusangaben in einer Attributspalte eines Data Mining-Modells|2^31-1 = 2,147,483,647|  
 |Maximale Anzahl berücksichtigter Attribute (Funktionsauswahl)|2^31-1 = 2,147,483,647|  
   
- Weitere Informationen zu objektbenennungsrichtlinien finden Sie unter [ASSL-Objekte und-Objekteigenschaften](../scripting-language-assl/assl-objects-and-object-characteristics.md).  
+ Weitere Informationen zu objektbenennungsrichtlinien finden Sie unter [ASSL-Objekte und Objekteigenschaften](../scripting-language-assl/assl-objects-and-object-characteristics.md).  
   
- Weitere Informationen zu datenquellenbegrenzungen für online analytical Processing (OLAP) und Datamining finden Sie unter [unterstützte Datenquellen &#40;mehrdimensionale SSAS-&#41;](../supported-data-sources-ssas-multidimensional.md), [unterstützte Datenquellen &#40;SSAS – mehrdimensional&#41;](../supported-data-sources-ssas-multidimensional.md), und [ASSL-Objekte und-Objekteigenschaften](../scripting-language-assl/assl-objects-and-object-characteristics.md).  
+ Weitere Informationen zu datenquellenbegrenzungen für analytische onlineverarbeitung (OLAP) und Datamining finden Sie unter [unterstützte Datenquellen &#40;mehrdimensionale SSAS-&#41;](../supported-data-sources-ssas-multidimensional.md), [Data Sources Supported &#40;SSAS – mehrdimensional&#41;](../supported-data-sources-ssas-multidimensional.md), und [ASSL-Objekte und Objekteigenschaften](../scripting-language-assl/assl-objects-and-object-characteristics.md).  
   
 ##  <a name="bkmk_sharepoint"></a> SharePoint (DeploymentMode = 1)  
   
@@ -72,17 +72,17 @@ ms.locfileid: "36148012"
 |------------|----------------------------|  
 |Datenbank in einer Instanz|2^31-1 = 2,147,483,647|  
 |Tabellen in einer Datenbank|2^31-1 = 2,147,483,647|  
-|Spalten in einer Tabelle|2 ^ 31-1 = 2,147,483,647 **Warnung:** Gesamtanzahl der Spalten in einer Tabelle hängt von der Gesamtzahl von Measures und berechneten Spalten derselben Tabelle zugeordnet sind. Die maximale Anzahl von 'Spalten + Measures + berechnete Spalten' für eine Tabelle ist 2^31-1 = 2,147,483,647|  
-|Zeilen in einer Tabelle|Unbegrenzte **Warnung:** mit der Einschränkung, dass keine einzelne Spalte nicht mehr als 1.999.999.997 unterschiedliche Werte enthalten kann.|  
+|Spalten in einer Tabelle|2 ^ 31-1 = 2,147,483,647 **Warnung:** Gesamtanzahl der Spalten in einer Tabelle hängt von der Gesamtzahl von Measures und berechnete Spalten, die der gleichen Tabelle zugeordnet sind. Die maximale Anzahl von 'Spalten + Measures + berechnete Spalten' für eine Tabelle ist 2^31-1 = 2,147,483,647|  
+|Zeilen in einer Tabelle|Unbegrenzte **Warnung:** mit der Einschränkung, dass die einzelne Spalte mehr als 1.999.999.997 unterschiedliche Werte enthalten kann.|  
 |Hierarchien in einer Tabelle|2^31-1 = 2,147,483,647|  
 |Ebenen in einer Hierarchie|2^31-1 = 2,147,483,647|  
 |Beziehungen|2^31-1 = 2,147,483,647|  
 |Schlüsselspalten in einer Tabelle|2^31-1 = 2,147,483,647|  
-|Measures in einer Tabelle|2 ^ 31-1 = 2,147,483,647 **Warnung:** Gesamtzahl von Measures in einer Tabelle hängt von der Gesamtanzahl der Spalten und berechneten Spalten derselben Tabelle zugeordnet sind. Die maximale Anzahl von 'Spalten + Measures + berechnete Spalten' für eine Tabelle ist 2^31-1 = 2,147,483,647|  
+|Measures in einer Tabelle|2 ^ 31-1 = 2,147,483,647 **Warnung:** Gesamtzahl von Measures in einer Tabelle hängt von der Gesamtanzahl der Spalten und berechneten Spalten, die der gleichen Tabelle zugeordnet sind. Die maximale Anzahl von 'Spalten + Measures + berechnete Spalten' für eine Tabelle ist 2^31-1 = 2,147,483,647|  
 |Berechnete Spalten in einer Tabelle|2 ^ 31-1 = 2,147,483,647 **Warnung:** Gesamtzahl der berechneten Spalten in einer Tabelle hängt von der Gesamtanzahl der Spalten und Measures, die der gleichen Tabelle zugeordnet sind. Die maximale Anzahl von 'Spalten + Measures + berechnete Spalten' für eine Tabelle ist 2^31-1 = 2,147,483,647|  
 |Von einer Abfrage zurückgegebene Zellen|2^31-1 = 2,147,483,647|  
-|Datensatzgröße in der Quellabfrage|64 KB|  
-|Die Länge von Objektnamen|100 Zeichen|  
+|Datensatzgröße in der Quellabfrage|64-KB|  
+|Länge des zu verwendenden Objektnamen|100 Zeichen|  
   
 ##  <a name="bkmk_vertipaq"></a> Tabellarisch (DeploymentMode = 2)  
   
@@ -90,17 +90,17 @@ ms.locfileid: "36148012"
 |------------|----------------------------|  
 |Datenbank in einer Instanz|2^31-1 = 2,147,483,647|  
 |Tabellen in einer Datenbank|2^31-1 = 2,147,483,647|  
-|Spalten in einer Tabelle|2 ^ 31-1 = 2,147,483,647 **Warnung:** Gesamtanzahl der Spalten in einer Tabelle hängt von der Gesamtzahl von Measures und berechneten Spalten derselben Tabelle zugeordnet sind. Die maximale Anzahl von 'Spalten + Measures + berechnete Spalten' für eine Tabelle ist 2^31-1 = 2,147,483,647|  
-|Zeilen in einer Tabelle|Unbegrenzte **Warnung:** mit der Einschränkung, dass eine einzelne Spalte in der Tabelle nicht mehr als 1.999.999.997 unterschiedliche Werte haben kann.|  
+|Spalten in einer Tabelle|2 ^ 31-1 = 2,147,483,647 **Warnung:** Gesamtanzahl der Spalten in einer Tabelle hängt von der Gesamtzahl von Measures und berechnete Spalten, die der gleichen Tabelle zugeordnet sind. Die maximale Anzahl von 'Spalten + Measures + berechnete Spalten' für eine Tabelle ist 2^31-1 = 2,147,483,647|  
+|Zeilen in einer Tabelle|Unbegrenzte **Warnung:** mit der Einschränkung, dass keine einzelne Spalte in der Tabelle mehr als 1.999.999.997 unterschiedliche Werte enthalten kann.|  
 |Hierarchien in einer Tabelle|2^31-1 = 2,147,483,647|  
 |Ebenen in einer Hierarchie|2^31-1 = 2,147,483,647|  
 |Beziehungen|2^31-1 = 2,147,483,647|  
 |Schlüsselspalten in einer Tabelle|2^31-1 = 2,147,483,647|  
-|Measures in einer Tabelle|2 ^ 31-1 = 2,147,483,647 **Warnung:** Gesamtzahl von Measures in einer Tabelle hängt von der Gesamtanzahl der Spalten und berechneten Spalten derselben Tabelle zugeordnet sind. Die maximale Anzahl von 'Spalten + Measures + berechnete Spalten' für eine Tabelle ist 2^31-1 = 2,147,483,647|  
+|Measures in einer Tabelle|2 ^ 31-1 = 2,147,483,647 **Warnung:** Gesamtzahl von Measures in einer Tabelle hängt von der Gesamtanzahl der Spalten und berechneten Spalten, die der gleichen Tabelle zugeordnet sind. Die maximale Anzahl von 'Spalten + Measures + berechnete Spalten' für eine Tabelle ist 2^31-1 = 2,147,483,647|  
 |Berechnete Spalten in einer Tabelle|2 ^ 31-1 = 2,147,483,647 **Warnung:** Gesamtzahl der berechneten Spalten in einer Tabelle hängt von der Gesamtanzahl der Spalten und Measures, die der gleichen Tabelle zugeordnet sind. Die maximale Anzahl von 'Spalten + Measures + berechnete Spalten' für eine Tabelle ist 2^31-1 = 2,147,483,647|  
 |Von einer Abfrage zurückgegebene Zellen|2^31-1 = 2,147,483,647|  
-|Datensatzgröße in der Quellabfrage|64 KB|  
-|Die Länge von Objektnamen|100 Zeichen|  
+|Datensatzgröße in der Quellabfrage|64-KB|  
+|Länge des zu verwendenden Objektnamen|100 Zeichen|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Bestimmen des Servermodus einer Analysis Services-Instanz](../../instances/determine-the-server-mode-of-an-analysis-services-instance.md)   

@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie eine BI-Semantikmodell-Verbindung mit einer PowerPivot-Arbeitsmappe | Microsoft Docs
+title: Erstellen Sie eine BI-Semantikmodell-Verbindung mit einer PowerPivot-Arbeitsmappe | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 34e81c0f6023b6dee0c9770fdfde89a92eb2afc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab47a88ef1bda109cca1abbe27a975d9df9290ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148198"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328480"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>Erstellen Sie eine BI-Semantikmodell-Verbindung mit einer PowerPivot-Arbeitsmappe
   Verwenden Sie die Informationen in diesem Thema, um eine BI-Semantikmodellverbindung einzurichten, die zu einer PowerPivot-Arbeitsmappe in der gleichen Farm umleitet.  
@@ -41,7 +41,7 @@ ms.locfileid: "36148198"
 ##  <a name="bkmk_prereq"></a> Überprüfen der Voraussetzungen  
  Sie benötigen Teilnahmeberechtigungen oder weiterreichende Berechtigungen, um eine BI Semantikmodell-Verbindungsdatei zu erstellen.  
   
- Sie benötigen eine Bibliothek, die den Inhaltstyp der BI Semantikmodellverbindung unterstützt. Weitere Informationen finden Sie unter [Hinzufügen eines BI Semantic Model Verbindung Inhaltstyps zu einer Bibliothek &#40;PowerPivot für SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md).  
+ Sie benötigen eine Bibliothek, die den Inhaltstyp der BI Semantikmodellverbindung unterstützt. Weitere Informationen finden Sie unter [Hinzufügen einer BI Semantic Model Verbindungs-Inhaltstyps zu einer Bibliothek &#40;PowerPivot für SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md).  
   
  Sie müssen wissen, dass die URL der PowerPivot-Arbeitsmappe für die Sie eine BI-semantikmodellverbindung einrichten (z. B. http://adventure-works/shared Documents/MyWorkbook.xlsx). Die Arbeitsmappe muss in der gleichen Farm sein.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36148198"
   
 2.  Legen Sie die **Server** Eigenschaft, um die SharePoint-URL der PowerPivot-Arbeitsmappe (z. B.  **http://mysharepoint/shared Documents/MyWorkbook.xlsx**. In einer Bereitstellung von PowerPivot für SharePoint können Daten auf jeden Server in der Farm geladen werden. Aus diesem Grund geben Datenquellenverbindungen mit PowerPivot-Daten nur den Pfad zur Arbeitsmappe an. Der PowerPivot-Systemdienst bestimmt, welcher Server die Daten lädt.  
   
-     Verwenden Sie nicht die **Datenbank** Eigenschaft; er wird nicht beim Angeben des Speicherorts einer PowerPivot-Arbeitsmappe verwendet.  
+     Verwenden Sie nicht die **Datenbank** Eigenschaft; sie wird nicht beim Angeben des Speicherorts einer PowerPivot-Arbeitsmappe verwendet.  
   
      Die Seite sollte ähnlich der folgenden Abbildung aussehen.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "36148198"
  Nachdem Sie eine BI-Semantikmodellverbindung erstellt und gesichert haben, können Sie sie als Datenquelle angeben. Weitere Informationen finden Sie unter [Verwenden einer BI-Semantikmodellverbindung in Excel oder Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [PowerPivot-BI-Semantikmodell-Verbindung &#40;bism-Datei&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
+ [PowerPivot BI-Semantikmodellverbindung &#40;bism-Datei&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
  [Verwenden Sie eine BI-Semantikmodellverbindung in Excel oder Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
  [Erstellen einer BI-Semantikmodellverbindung mit einer tabellarischen Modelldatenbank](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   

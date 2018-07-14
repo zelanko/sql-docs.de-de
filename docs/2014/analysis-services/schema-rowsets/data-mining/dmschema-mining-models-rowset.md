@@ -1,5 +1,5 @@
 ---
-title: DMSCHEMA_MINING_MODELS Rowset | Microsoft Docs
+title: DMSCHEMA_MINING_MODELS-Rowset | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_MODELS rowset
 ms.assetid: 1636f4cf-b342-4e2e-93b4-04136e2d41ef
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d8296ddb800b7691936236aa0cdb6550c89c34c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9af1a9817ad116561b57b1d04b2e3df1d7313bb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148478"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208030"
 ---
 # <a name="dmschemaminingmodels-rowset"></a>DMSCHEMA_MINING_MODELS-Rowset
   Listet die Data Mining-Modelle im aktuellen Katalog auf. Das `DMSCHEMA_MINING_MODELS`-Rowset enthält Informationen wie Modellnamen, das Verarbeitungsdatum und die jedem Miningmodell zugeordneten Miningalgorithmen.  
   
- zugreifen. Die `DMSCHEMA_MINING_MODELS` Schemarowset ist vergleichbar mit der [DBSCHEMA_TABLES](../ole-db/dbschema-tables-rowset.md) -Schemarowsets und die gleiche Weise verwendet werden kann.  
+ zugreifen. Die `DMSCHEMA_MINING_MODELS` -Schemarowset ist sehr ähnlich der [DBSCHEMA_TABLES](../ole-db/dbschema-tables-rowset.md) -Schemarowsets und die gleiche Weise verwendet werden kann.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Die `DMSCHEMA_MINING_MODELS` Rowset enthält die folgenden Spalten.  
@@ -51,16 +51,16 @@ ms.locfileid: "36148478"
 |`SERVICE_NAME`|`DBTYPE_WSTR`||Der anbieterspezifische Name des von dem Modell verwendeten Data Mining-Algorithmus.|  
 |`CREATION_STATEMENT`|`DBTYPE_WSTR`||Die für die Erstellung des Miningmodells verwendete Anweisung.|  
 |`PREDICTION_ENTITY`|`DBTYPE_WSTR`||Eine durch Trennzeichen getrennte Liste, die angibt, welche Miningspalten vorhergesagt werden können.|  
-|`IS_POPULATED`|`DBTYPE_BOOL`||Ein boolesches Flag, das angibt, ob das Modell aufgefüllt wurde.<br /><br /> `TRUE` Wenn das Modell aufgefüllt wird; andernfalls `FALSE`.|  
+|`IS_POPULATED`|`DBTYPE_BOOL`||Ein boolesches Flag, das angibt, ob das Modell aufgefüllt wurde.<br /><br /> `TRUE` Wenn das Modell aufgefüllt wurde, andernfalls `FALSE`.|  
 |`MINING_PARAMETERS`|`DBTYPE_WSTR`||Eine durch Trennzeichen getrennte Liste der Parameter, die beim Erstellen des Modells verwendet wurden.|  
 |`MINING_STRUCTURE`|`DBTYPE_WSTR`||Die ID der Miningstruktur, auf der das Modell basiert.|  
 |`LAST_PROCESSED`|`DBTYPE_DBTIMESTAMP`||Das Datum, an dem das Modell zuletzt geändert wurde.|  
 |`MSOLAP_IS_DRILLTHROUGH_ENABLED`|`DBTYPE_BOOL`||Ein boolesches Flag, das angibt, ob das Modell Drillthrough unterstützt.|  
 |`FILTER`|`DBTYPE_WSTR`||Der dem Miningmodell zugeordnete Filterausdruck.<br /><br /> NULL oder eine leere Zeichenfolge gibt an, dass kein Filter angewendet wird.|  
-|`TRAINING_SET_SIZE`|`DBTYPE_UIS`||Die Anzahl der Fälle, die enthalten sind, in der Mining-Modelltraining festgelegt, nachdem die Struktur verarbeitet wurde und alle vorhandenen Filter auf das Modell angewendet wurden.|  
+|`TRAINING_SET_SIZE`|`DBTYPE_UIS`||Die Anzahl der Fälle, in denen enthalten sind, in der Mining-Modelltraining, legen Sie nach der Verarbeitung der Struktur und nachdem alle Filter für das Modell angewendet wurden.|  
   
 ## <a name="restriction-columns"></a>Einschränkungsspalten  
- Die `DMSCHEMA_MINING_MODELS` Rowset kann eingeschränkt werden, für die Spalten in der folgenden Tabelle.  
+ Die `DMSCHEMA_MINING_MODELS` Rowset kann auf die Spalten in der folgenden Tabelle eingeschränkt werden.  
   
 |Spaltenname|Typindikator|Einschränkungsstatus|  
 |-----------------|--------------------|-----------------------|  
@@ -72,7 +72,7 @@ ms.locfileid: "36148478"
 |`SERVICE_TYPE_ID`|`DBTYPE_UI4`|Optional.|  
 |`MINING_STRUCTURE`|`DBTYPE_WSTR`|Optional.|  
   
- Beispiele zum Abfragen dieses Rowsets, finden Sie unter [Abfragen, die Parameter, die zum Erstellen eines Miningmodells verwendet](../../data-mining/query-the-parameters-used-to-create-a-mining-model.md).  
+ Beispiele zum Abfragen dieses Rowsets finden Sie in [Abfragen der Parameter, um ein Miningmodell erstellt](../../data-mining/query-the-parameters-used-to-create-a-mining-model.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Data Mining Schema Rowsets](../../schema-rowsets/data-mining/data-mining-schema-rowsets.md) 

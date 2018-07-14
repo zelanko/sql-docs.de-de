@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XML data [SQL Server], loading
 - loading XML data
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e3b250b955028e3f0843699688713cb731f00fee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a5048132c50460475ffe9c04f0f03a75cf6368b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150297"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166301"
 ---
 # <a name="load-xml-data"></a>Laden von XML-Daten
   XML-Daten können auf unterschiedliche Weise in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] übertragen werden. Zum Beispiel:  
@@ -31,7 +31,7 @@ ms.locfileid: "36150297"
   
 -   Sie können bcp out zum Massenkopieren Ihrer Daten aus einer anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken verwenden, um sie dann mit bcp in als Masseneinfügung in eine aktuellere Datenbankversion einzufügen.  
   
--   Wenn Sie über Daten in relationalen Spalten in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank verfügen, erstellen Sie eine neue Tabelle in einer [n]text-Spalte und optional eine Primärschlüsselspalte für einen Zeilenbezeichner. Mithilfe clientseitiger Programmierung den XML-Indexinformationen abzurufen, die auf dem Server mit FOR XML generiert wird, und Schreiben Sie ihn in die `[n]text` Spalte. Verwenden Sie dann die oben erwähnten Techniken, um die Daten in eine höhere Version der Datenbank zu übertragen. Sie können den XML-Code auch direkt in eine XML-Spalte in der Datenbank der höheren Version schreiben.  
+-   Wenn Sie über Daten in relationalen Spalten in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank verfügen, erstellen Sie eine neue Tabelle in einer [n]text-Spalte und optional eine Primärschlüsselspalte für einen Zeilenbezeichner. Verwenden von clientseitiger Programmierung den XML-Code abgerufen, die auf dem Server mit FOR XML generiert wird, und Schreiben Sie ihn in das `[n]text` Spalte. Verwenden Sie dann die oben erwähnten Techniken, um die Daten in eine höhere Version der Datenbank zu übertragen. Sie können den XML-Code auch direkt in eine XML-Spalte in der Datenbank der höheren Version schreiben.  
   
 ## <a name="bulk-loading-xml-data"></a>Massenladen von XML-Daten  
  Sie können XML-Daten mit einem Massenladevorgang auf den Server laden, indem Sie die Massenladefunktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwenden, z. B. bcp. Mit OPENROWSET können Sie Daten aus Dateien in eine XML-Spalte laden. Das folgende Beispiel veranschaulicht diesen Punkt.  
@@ -54,10 +54,10 @@ FROM    (SELECT *
   
 -   Wenn die Codierung nicht Unicode ist und aufgrund der Quellcodeseite implizit ist, sollte die Zeichenfolgencodeseite in der Datenbank den Codepunkten gleichen oder mit den Codepunkten kompatibel sein, die Sie laden wollen. Verwenden Sie falls erforderlich COLLATE. Wenn keine solche Servercodeseite vorhanden ist, müssen Sie eine explizite XML-Deklaration mit der richtigen Codierung hinzufügen.  
   
--   Um eine explizite Codierung verwendet werden soll, verwenden Sie entweder die `varbinary()` Typ, der keinerlei Interaktion mit Codeseiten aufweist, oder einen Zeichenfolgentyp der entsprechenden Codeseite. Weisen Sie anschließend die Daten einer XML-Spalte, einer XML-Variablen oder einem XML-Parameter zu.  
+-   Um eine explizite Codierung verwendet werden soll, verwenden Sie entweder die `varbinary()` eingeben, der keine Interaktion mit Codeseiten aufweist, oder verwenden Sie einen Zeichenfolgentyp der entsprechenden Codeseite. Weisen Sie anschließend die Daten einer XML-Spalte, einer XML-Variablen oder einem XML-Parameter zu.  
   
 ### <a name="example-explicitly-specifying-an-encoding"></a>Beispiel: Explizites Angeben einer Codierung  
- Angenommen, Sie besitzen das XML-Dokument vcdoc, das im Datentyp `varchar(max)` gespeichert ist und keine explizite XML-Deklaration aufweist. Die folgende Anweisung wird eine XML-Deklaration mit der Codierung "iso8859-1" hinzugefügt, das XML-Dokument verkettet, wandelt das Ergebnis, das `varbinary(max)` , damit die bytedarstellung erhalten werden, und schließlich in XML umgewandelt. Das ermöglicht es dem XML-Prozessor, die Daten entsprechend der angegebenen Codierung "iso8859-1" zu analysieren und die entsprechende UTF-16-Darstellung für Zeichenfolgenwerte zu generieren.  
+ Angenommen, Sie besitzen das XML-Dokument vcdoc, das im Datentyp `varchar(max)` gespeichert ist und keine explizite XML-Deklaration aufweist. Die folgende Anweisung wird eine XML-Deklaration mit der Codierung "iso8859-1", die XML-Dokument verkettet, wandelt das Ergebnis in `varbinary(max)` , damit die Byte-Darstellung wird beibehalten, und schließlich in XML umgewandelt. Das ermöglicht es dem XML-Prozessor, die Daten entsprechend der angegebenen Codierung "iso8859-1" zu analysieren und die entsprechende UTF-16-Darstellung für Zeichenfolgenwerte zu generieren.  
   
 ```  
 SELECT CAST(   

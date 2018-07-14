@@ -1,5 +1,5 @@
 ---
-title: Aktualisieren Sie alle Zielserver vor dem Upgrade des Masterservers | Microsoft Docs
+title: Aktualisieren Sie alle Zielserver vor dem Upgrade des Masterservers | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - TSX [SQL Server Agent]
 - target servers [SQL Server Agent]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - master servers [SQL Server Agent]
 ms.assetid: 2c231793-3878-4a5e-a425-1fa0d787ba84
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fdd218b1d5bfaacaffbd50c50d55dd47d613d207
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d0df73fdfa1ebbaa84b0fb11519698351a78ffdc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149324"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218670"
 ---
 # <a name="upgrade-all-target-servers-before-upgrading-the-master-server"></a>Durchführen eines Upgrades aller Zielserver vor dem Upgrade des Masterservers
   Führen Sie vor dem Upgrade des Masterservers ein Upgrade aller Computer aus, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführen und als Zielserver konfiguriert sind.  
@@ -43,7 +43,7 @@ ms.locfileid: "36149324"
  Weitere Informationen finden Sie in den Themen "Automatisieren der Verwaltung in einem Unternehmen", "Vorgehensweise: Austragen eines Zielservers bei einem Masterserver", und "Vorgehensweise: Eintragen eines Zielservers als Masterserver" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server-Agent-Upgradeprobleme](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)   
- [SQL Server-Agent-Upgradeprobleme](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  
+ [Upgradeprobleme für SQL Server-Agent](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)   
+ [Probleme beim Upgrade des SQL Server-Agents](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  
   
   

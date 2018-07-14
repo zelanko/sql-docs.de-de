@@ -1,5 +1,5 @@
 ---
-title: New-Element (XMLA) | Microsoft Docs
+title: New-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - New element
 ms.assetid: 1321adcb-67f7-40f0-8f20-b17c1d3e3f17
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 983c32cc19ebbc876d53d46865f81b0d37e10d59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: f93da2c5c9dab8b8d7542db68e70df67a87afbe8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148456"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203980"
 ---
 # <a name="new-element-xmla"></a>New-Element (XMLA)
-  Enthält den neuen Speicherort im Dateisystem, in einem [Ordner](folder-element-xmla.md) Element.  
+  Enthält den neue Dateisystem-Speicherort ein, die eine [Ordner](folder-element-xmla.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36148456"
 |Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `New` Element enthält einen UNC-Pfad, der den Wert des ersetzt die `Original` vom übergeordneten Element enthaltenen Elements `Folder` -Element für alle Objekte wiederhergestellt oder synchronisiert werden, während eine `Restore` oder `Synchronize` Befehl. Der Wert des der `Original` Element verglichen wird, auf den Wert des der `StorageLocation` -Element für jeden Cube, Measuregruppe oder Partition und, wenn eine Übereinstimmung gefunden wird, wird der Wert dieses Elements verwendet, aktualisiert der `StorageLocation` des Objekts während der Wiederherstellung oder Synchronisierung.  
+ Die `New` Element enthält einen UNC-Pfad, der den Wert des ersetzt die `Original` vom übergeordneten Element enthaltene Element `Folder` -Element für alle Objekte wiederhergestellten oder synchronisierten, der während einer `Restore` oder `Synchronize` Befehl. Der Wert des der `Original` Element wird verglichen, auf den Wert des der `StorageLocation` -Element für jeden Cube, Measuregruppe oder Partition und, wenn eine Übereinstimmung gefunden wird, wird der Wert dieses Elements verwendet, Aktualisieren der `StorageLocation` des Objekts während der Wiederherstellung oder Synchronisierung.  
   
  Weitere Informationen zum Sichern und Wiederherstellen von Objekten finden Sie unter [Backing Up and Restoring Objects (XMLA)](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   

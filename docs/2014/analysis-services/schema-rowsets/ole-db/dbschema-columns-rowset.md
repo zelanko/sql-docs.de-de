@@ -1,5 +1,5 @@
 ---
-title: DBSCHEMA_COLUMNS-Rowset | Microsoft Docs
+title: DBSCHEMA_COLUMNS-Rowset | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DBSCHEMA_COLUMNS rowset
 ms.assetid: 653bdd07-a533-4a99-8b6a-6e5c7322e1f3
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 413e86e156db59e7621c94bdc1c99cd0087a987f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6fa933eb153b0d8de4c2fec4ba92b072954be141
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147770"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267576"
 ---
 # <a name="dbschemacolumns-rowset"></a>DBSCHEMA_COLUMNS-Rowset
   Stellt Spalteninformationen für alle Spalten bereit, die den bereitgestellten Einschränkungskriterien entsprechen.  
@@ -50,9 +50,9 @@ ms.locfileid: "36147770"
 |`DATA_TYPE`|`DBTYPE_WSTR`<br /><br /> `DBTYPE_VARIANT`||Der Datentyp der Spalte. Gibt eine Zeichenfolge für Dimensionsspalten und eine Variante für Measures zurück.|  
 |`TYPE_GUID`|`DBTYPE_GUID`||Wird nicht unterstützt.|  
 |`CHARACTER_MAXIMUM_LENGTH`|`DBTYPE_UI4`||Die maximal mögliche Länge eines Werts in der Spalte.<br /><br /> Dieser Wert wird von der `DataSize`-Eigenschaft in `DataItem` abgerufen.|  
-|`CHARACTER_OCTET_LENGTH`|`DBTYPE_UI4`||Die maximal mögliche Länge eines Werts in der Spalte in Bytes für Zeichen- oder Binärspalten.<br /><br /> Der Wert null (0) gibt an, dass die Spalte keine maximale Länge besitzt.<br /><br /> `NULL` wird für Spalten zurückgegeben werden, die keine Binär-oder Zeichendatentypen Typen zurückgeben.|  
-|`NUMERIC_PRECISION`|`DBTYPE_UI2`||Die maximale Genauigkeit der Spalte für numerische Daten anderen Datentypen als `DBTYPE_VARNUMERIC`.|  
-|`NUMERIC_SCALE`|`DBTYPE_I2`||Die Anzahl der Ziffern rechts vom Dezimaltrennzeichen für `DBTYPE_DECIMAL`, `DBTYPE_NUMERIC`, `DBTYPE_VARNUMERIC`. Andernfalls ist dies `NULL`.|  
+|`CHARACTER_OCTET_LENGTH`|`DBTYPE_UI4`||Die maximal mögliche Länge eines Werts in der Spalte in Bytes für Zeichen- oder Binärspalten.<br /><br /> Der Wert null (0) gibt an, dass die Spalte keine maximale Länge besitzt.<br /><br /> `NULL` wird für Spalten zurückgegeben, die keine Binär-oder Zeichendatentypen zurückgeben.|  
+|`NUMERIC_PRECISION`|`DBTYPE_UI2`||Die maximale Genauigkeit der Spalte für numerische Daten anders als Typen `DBTYPE_VARNUMERIC`.|  
+|`NUMERIC_SCALE`|`DBTYPE_I2`||Die Anzahl der Ziffern rechts vom Dezimaltrennzeichen für `DBTYPE_DECIMAL`, `DBTYPE_NUMERIC`, `DBTYPE_VARNUMERIC`. Andernfalls ist `NULL`.|  
 |`DATETIME_PRECISION`|`DBTYPE_UI4`||Wird nicht unterstützt.|  
 |`CHARACTER_SET_CATALOG`|`DBTYPE_WSTR`||Wird nicht unterstützt.|  
 |`CHARACTER_SET_SCHEMA`|`DBTYPE_WSTR`||Wird nicht unterstützt.|  

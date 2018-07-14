@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Web service [Reporting Services], delivery extension settings
 ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
 caps.latest.revision: 36
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 94c05bce76e29f3147af8143fa22f03bdd7844a8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 8004d3a0342098004286d27e4fe23d4333acb717
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147838"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272646"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Einstellungen der Reporting Services-Übermittlungserweiterungen
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verfügt über eine Übermittlungserweiterung für E-Mails und eine für die Dateifreigabe. Über die E-Mail-Übermittlung können Sie einen Bericht per E-Mail an einzelne Benutzer oder Gruppen senden. Über die Dateifreigabeübermittlung können Sie automatisch gerenderte Berichte versenden, die auf Ihrem Netzwerk freigegeben werden sollen. Sie können jede dieser unterstützten Übermittlungserweiterungen mit Standardabonnements oder datengesteuerten Abonnements verwenden. Sie leiten die Übermittlungseinstellungen, die spezifisch für den Typ der Übermittlungserweiterung sind, bei jedem Aufruf der Methoden <xref:ReportService2010.ReportingService2010.CreateSubscription%2A>, <xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>, <xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A> und <xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A> weiter. Um programmgesteuert eine Liste der Übermittlungseinstellungen abzurufen, verwenden Sie die <xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A>-Methode.  

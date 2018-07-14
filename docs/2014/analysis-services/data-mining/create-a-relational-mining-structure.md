@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie eine relationale Miningstruktur | Microsoft Docs
+title: Erstellen einer relationalen Miningstruktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], data mining
 - data mining [Analysis Services], structure
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - OLAP mining models [Analysis Services]
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3622989e4dbc5ba8d954f0f92513820829aaea54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 261936c087c109087c9916513acd45468de55a7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061508"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237910"
 ---
 # <a name="create-a-relational-mining-structure"></a>Erstellen einer relationalen Miningstruktur
   Die meisten Data Mining-Modelle basieren auf relationalen Datenquellen. Die Vorteile, ein relationales Data Mining-Modell zu erstellen, bestehen darin, dass Sie Ad-hoc-Daten zusammenstellen sowie ein Modell trainieren und aktualisieren können, ohne dass die Komplexität gegeben ist, die beim Erstellen eines Cubes vorliegt.  
@@ -97,7 +97,7 @@ ms.locfileid: "36061508"
   
  Die Daten in einer Miningstruktur werden von sämtlichen Komponenten abgeleitet, die in einer vorhandenen Datenquellensicht enthalten sind. Sie können Daten innerhalb der Datenquellensicht nach Bedarf ändern. Dabei können Sie Beziehungen oder abgeleitete Spalten hinzufügen, die in den zugrunde liegenden relationalen Daten unter Umständen nicht vorhanden sind. Sie können auch benannte Berechnungen oder Aggregationen innerhalb der Datenquellensicht erstellen. Diese Funktionen sind äußerst praktisch, wenn Sie keinen Einfluss auf die Anordnung der Daten in der Datenquelle haben oder wenn Sie mit unterschiedlichen Aggregationen der Daten für die Data Mining-Modelle experimentieren möchten.  
   
- Sie müssen nicht alle verfügbaren Daten verwenden. Sie können auswählen, welche Spalten Sie in die Miningstruktur einbinden möchten. Alle Modelle, klicken Sie dann auf dieser Struktur basieren, können diese Spalten verwenden, oder kennzeichnen Sie bestimmte Spalten als `Ignore` für ein bestimmtes Modell. Sie können es den Benutzern eines Data Mining-Modells ermöglichen, ein Drilldown für die Ergebnisse des Miningmodells auszuführen, um die zusätzlichen Spalten der Miningstruktur anzuzeigen, die selbst nicht im Miningmodell enthalten sind.  
+ Sie müssen nicht alle verfügbaren Daten verwenden. Sie können auswählen, welche Spalten Sie in die Miningstruktur einbinden möchten. Alle klicken Sie dann auf dieser Struktur basierenden Modelle können jene Spalten verwenden, oder Sie können kennzeichnen, dass bestimmte Spalten als `Ignore` für ein bestimmtes Modell. Sie können es den Benutzern eines Data Mining-Modells ermöglichen, ein Drilldown für die Ergebnisse des Miningmodells auszuführen, um die zusätzlichen Spalten der Miningstruktur anzuzeigen, die selbst nicht im Miningmodell enthalten sind.  
   
 ##  <a name="bkmk_ContentDataType"></a> So geben Sie Inhaltstyp und Datentyp an  
  Der Datentyp entspricht in großem Umfang den Datentypen, die Sie in SQL Server oder anderen Anwendungsschnittstellen spezifizieren: Datumsangaben und Uhrzeiten, Zahlen zu verschiedenen Größen, boolesche Werte, Text und andere diskrete Daten.  
@@ -130,7 +130,7 @@ ms.locfileid: "36061508"
   
 ## <a name="see-also"></a>Siehe auch  
  [Datamining-Designer](data-mining-designer.md)   
- [Datamining-Assistenten &#40;Analysis Services – Datamining&#41;](data-mining-wizard-analysis-services-data-mining.md)   
+ [Datamining-Assistent &#40;Analysis Services – Datamining&#41;](data-mining-wizard-analysis-services-data-mining.md)   
  [Miningmodelleigenschaften](mining-model-properties.md)   
  [Eigenschaften für Miningstrukturen und Strukturspalten](properties-for-mining-structure-and-structure-columns.md)   
  [Tasks und Anweisungen für Miningstrukturen](mining-structure-tasks-and-how-tos.md)  

@@ -1,5 +1,5 @@
 ---
-title: Measuregruppen (Registerkarte ' Partitionen ', Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Measuregruppen (Registerkarte ' Partitionen ', Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.partitions.partitionspane.measuregroupdetail.f1
 ms.assetid: 58e44b24-cfcd-4908-b445-d4374b961b98
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 205b5260d67421cffe8b05abb4c27243d1dc8386
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: a372e8418692c0db98332b7fa67d8563265d1de4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061038"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249440"
 ---
 # <a name="measure-groups-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>Measuregruppen (Registerkarte 'Partitionen', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich **Measuregruppen** der Registerkarte **Partitionen** des Cube-Designers können Sie die Partitionen verwalten, die mit den einzelnen Measuregruppen verknüpft sind.  
@@ -52,7 +52,7 @@ ms.locfileid: "36061038"
  **Neue Partition...**  
  Klicken Sie auf diese Option, um den **Partitions-Assistent** anzuzeigen und in der ausgewählten Measuregruppe eine neue Partition zu erstellen.  
   
- **Speichereinstellungen**  
+ **Speichereinstellungen...**  
  Klicken Sie auf diese Option, um das Dialogfeld **Speichereinstellungen** anzuzeigen, in dem Sie einen Speichermodus, das proaktive Zwischenspeichern und Benachrichtigungseigenschaften für die ausgewählte Partition angeben können.  
   
 > [!NOTE]  

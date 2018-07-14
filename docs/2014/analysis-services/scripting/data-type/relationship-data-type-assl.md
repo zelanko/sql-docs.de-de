@@ -1,5 +1,5 @@
 ---
-title: Beziehungsdatentyp (ASSL) | Microsoft Docs
+title: Beziehungsdatentyp (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 73d7c48d-d8e0-4119-849d-b5f912d449e4
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 81421605828b064644f0b9a0cfae2a7ed1b301a8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f4c5be48e7a5d4c5913a4bc881b6bd5b5c58ec57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149149"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224040"
 ---
 # <a name="relationship-data-type-assl"></a>Beziehungsdatentyp (ASSL)
   Definiert einen Grunddatentyp, der eine Beziehung in einer Dimension darstellt.  
@@ -53,7 +53,7 @@ ms.locfileid: "36149149"
 |Abgeleitete Elemente||  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.Relationship>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.Relationship>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services Scripting Language-XML-Datentypen &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

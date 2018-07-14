@@ -1,5 +1,5 @@
 ---
-title: Verwenden der Schemagenerierungs-Assistent (Analysis Services) | Microsoft Docs
+title: Verwenden der Schemagenerierungs-Assistent (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Schema Generation Wizard, steps
 - relational schema [Analysis Services], Schema Generation Wizard
 ms.assetid: 8c710745-d41d-4c31-b6a2-2956229df75a
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 201adc90034afc715425dca9b3b269369a0f4494
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ac0560032be47e1934eb111a13511cf579d63fe1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147767"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237670"
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>Verwenden des Schemagenerierungs-Assistenten (Analysis Services)
   Beim Schemagenerierungs-Assistenten müssen während der Generierungsphase nur wenige Informationen eingegeben werden. Die meisten Informationen, die der Schemagenerierungs-Assistent zum Generieren relationaler Schemas benötigt, werden aus den [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Cubes und -Dimensionen extrahiert, die Sie bereits im Projekt erstellt haben. Darüber hinaus können Sie anpassen, wie das Schema der Themenbereichsdatenbank generiert wird und wie Objekte im Schema benannt werden.  

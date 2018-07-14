@@ -15,15 +15,15 @@ helpviewer_keywords:
 - rendering extensions [Reporting Services], deploying
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
 caps.latest.revision: 43
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1cd6fb05217c0bde25dcc00e5f520dfd126385ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 4847340ab6bb40a4a5c6e247a4b9f2e33034ca8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149347"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181677"
 ---
 # <a name="deploying-a-rendering-extension"></a>Bereitstellen von Renderingerweiterungen
   Wenn Sie die [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Berichtsrenderingerweiterung geschrieben und in eine [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Bibliothek kompiliert haben, müssen Sie sie für den Berichtsserver und den Berichts-Designer erkennbar machen. Hierzu müssen Sie lediglich die Erweiterung in das entsprechende Verzeichnis kopieren und Einträge zu den zugehörigen [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Konfigurationsdateien hinzufügen.  
@@ -31,7 +31,7 @@ ms.locfileid: "36149347"
 ## <a name="configuration-file-rendering-extension-element"></a>Renderingerweiterungselement der Konfigurationsdatei  
  Sobald eine Renderingerweiterung in eine .DLL kompiliert wurde, fügen Sie eine Eintragung in die Datei rsreportserver.config hinzu. Standardmäßig ist der Speicherort „%ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<Instanzname>\Reporting Services\ReportServer“. Das übergeordnete Element ist \<Render>. Unter dem Render-Element befindet sich ein Erweiterungselement für jede Renderingerweiterung. Die `Extension` -Element enthält zwei Attribute: Name und Typ.  
   
- Die folgende Tabelle beschreibt die Attribute für das `Extension` -Element für Renderingerweiterungen zur Verfügung:  
+ Die folgende Tabelle beschreibt die Attribute für die `Extension` -Element für Renderingerweiterungen zur Verfügung:  
   
 |attribute|Description|  
 |---------------|-----------------|  
@@ -69,7 +69,7 @@ ms.locfileid: "36149347"
     <Extension Name="My Rendering Extension Name" Type="CompanyName.ExtensionName.MyRenderingProvider, AssemblyName" />  
     ```  
   
-     Der Wert für **Name** ist ein eindeutiger Name der Renderingerweiterung. Der Wert für **Type** ist eine durch Komma getrennte Liste, die einen Eintrag für den vollqualifizierten Namespace Ihrer <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>-Implementierung enthält, gefolgt vom Namen Ihrer Assembly (ohne die DLL-Dateierweiterung). Standardmäßig sind Renderingerweiterungen sichtbar. Um eine Erweiterung in Benutzeroberflächen wie dem Berichts-Manager auszublenden Hinzufügen einer **sichtbar** -Attribut auf die `Extension` Element, und legen Sie dafür `false`.  
+     Der Wert für **Name** ist ein eindeutiger Name der Renderingerweiterung. Der Wert für **Type** ist eine durch Komma getrennte Liste, die einen Eintrag für den vollqualifizierten Namespace Ihrer <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>-Implementierung enthält, gefolgt vom Namen Ihrer Assembly (ohne die DLL-Dateierweiterung). Standardmäßig sind Renderingerweiterungen sichtbar. Um eine Erweiterung in Benutzeroberflächen wie dem Berichts-Manager auszublenden hinzufügen eine **sichtbar** -Attribut auf die `Extension` -Element, und legen ihn auf `false`.  
   
 ## <a name="verifying-the-deployment"></a>Überprüfen der Bereitstellung  
  Sie können auch den Berichts-Manager öffnen und prüfen, ob die Erweiterung in der Liste der für einen Bericht verfügbaren Exporttypen enthalten ist.  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dta.advancedtuningoptions.f1
 - sql12.dta.general.f1
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a64863d6d36d7eb5d934b08db7c7ed8fdb2638e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 536c0a6a1a730fcf74d084fbef2d9f1debb347a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151129"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182077"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Starten und Verwenden des Datenbankoptimierungsratgebers
   In diesem Thema wird beschrieben, wie der Datenbankoptimierungsratgeber in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]gestartet und verwendet wird. Informationen zum Anzeigen der Ergebnisse und Arbeiten mit den Ergebnissen nach dem Optimieren einer Datenbank finden Sie unter [Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers](database-engine-tuning-advisor.md).  

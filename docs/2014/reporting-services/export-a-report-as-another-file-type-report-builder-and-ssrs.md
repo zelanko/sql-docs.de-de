@@ -1,5 +1,5 @@
 ---
-title: Exportieren eines Berichts in ein anderes Dateiformat (Berichts-Generator und SSRS) | Microsoft Docs
+title: Exportieren eines Berichts in ein anderes Dateiformat (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b577568b-ecbd-44c3-be88-31dab6fc38a2
 caps.latest.revision: 9
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8f37c659b224c2428b99d1f74b3b64c46f5c5cd3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 88d0969efabebe3da05ebfce8d666eb78ff4ba2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149849"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166197"
 ---
 # <a name="export-a-report-as-another-file-type-report-builder-and-ssrs"></a>Exportieren eines Berichts in ein anderes Dateiformat (Berichts-Generator und SSRS)
   Sie können einen Bericht in einem anderen Dateiformat wie CSV, Image, PDF, [!INCLUDE[ofprword](../includes/ofprword-md.md)] oder [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] rendern, während Sie die Vorschau für den Bericht im Berichts-Generator oder Berichts-Designer anzeigen. Sie können den Bericht aber auch rendern, während Sie den Bericht auf dem Berichtsserver anzeigen. Das Rendern des Berichts in ein bestimmtes Format ist sinnvoll, wenn Sie den Bericht sofort als anderen Dateityp speichern möchten, ohne ihn auf dem Berichtsserver zu veröffentlichen, oder wenn Sie sehen möchten, wie Ihr Berichtsentwurf den Lesern in einem bestimmten Format angezeigt wird. Das Rendern des Berichts auf dem Berichtsserver ist sinnvoll, wenn Sie Abonnements einrichten, Berichte per E-Mail bereitstellen oder einen Bericht speichern möchten, der auf dem Berichtsserver verfügbar ist. Weitere Informationen finden Sie unter [Abonnements und Übermittlung &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md).  

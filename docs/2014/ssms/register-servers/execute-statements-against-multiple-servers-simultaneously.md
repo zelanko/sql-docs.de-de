@@ -1,5 +1,5 @@
 ---
-title: Gleichzeitiges Ausführen von Anweisungen für mehrere Server (SQL Server Management Studio) | Microsoft Docs
+title: Gleichzeitiges Ausführen von Anweisungen für mehrere Server (SQL Server Management Studio) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - multiserver queries
 - executing queries against multiple servers
 - queries [SQL Server], multiserver
 ms.assetid: 197760f3-0a06-43de-8162-69c27d3fbe56
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 91c0819053860f6ea825890fdafedf05b9041d95
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c9880f71d735cfa0c750d56e3dbf6530f0ec1617
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150031"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194830"
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously-sql-server-management-studio"></a>Gleichzeitiges Ausführen von Anweisungen für mehrere Server (SQL Server Management Studio)
   In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Abfragen gleichzeitig für mehrere Server durchführen, indem Sie eine lokale Servergruppe oder einen zentralen Verwaltungsserver und eine oder mehrere Servergruppen sowie einen oder mehrere registrierte Server innerhalb der Gruppen erstellen und anschließend eine Abfrage für die ganze Gruppe durchführen. Die von der Abfrage zurückgegebenen Ergebnisse können in einem einzigen Ergebnisbereich zusammengefasst oder in gesonderten Ergebnisbereichen ausgegeben werden. Das Resultset kann zusätzliche Spalten für den Servernamen und den Anmeldenamen umfassen, der für die Abfrage auf jedem einzelnen Server verwendet wird. Zentrale Verwaltungsserver und untergeordnete registrierte Server können nur mithilfe der Windows-Authentifizierung registriert werden. Server in lokalen Servergruppen können mithilfe der Windows-Authentifizierung oder der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung registriert werden.  
@@ -37,7 +37,7 @@ ms.locfileid: "36150031"
   
      [Security](#Security)  
   
--   **Ausführen von Anweisungen für mehrere Server mit:**  
+-   **Zur Ausführung von Anweisungen für mehrere Server mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   

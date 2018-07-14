@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10020"
 ms.assetid: 43e50133-45ef-47a2-b575-34dfcc28ec98
 caps.latest.revision: 15
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b0d5e7c55b8040496e0714acd98bb81d37c602bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e0fc786c5cf35dda0beec0800b1515c9e0a44ca0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147841"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255792"
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>Dataseteigenschaften (Dialogfeld), Optionen (Berichts-Generator)
   Wählen Sie im Dialogfeld **Dataseteigenschaften** die Option **Optionen** aus, um Datenoptionen, wie Sortierungsoptionen und die Behandlung von Zwischensummen als Detaildaten, für die Abfrage zu ändern. Weitere Informationen zu Sortierungen finden Sie unter [Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md) in der [SQL Server-Onlinedokumentation](http://go.microsoft.com/fwlink/?linkid=98335).  
@@ -49,7 +49,7 @@ ms.locfileid: "36147841"
  Wählen Sie einen Wert aus, um die Unterscheidung nach Breite zu bestimmen. Mithilfe dieser Option wird angegeben, ob bei den Daten nach Breite unterschieden wird. Mögliche Werte sind **TRUE**, **FALSE**oder **Auto**. Der Standardwert **Auto** (Automatisch) gibt an, dass der Berichtsserver diesen Wert vom Datenanbieter herleiten soll, wenn der Bericht ausgeführt wird. Falls der Datenanbieter keine Unterscheidung nach Breite unterstützt, wird der Bericht so ausgeführt, als sei **False**festgelegt. Wenn Sie den Wert kennen und wissen, dass er unterstützt wird, wählen Sie **True**aus.  
   
  **Teilergebnisse als Detailzeilen interpretieren**  
- Wählen Sie einen Wert aus, der angibt, ob Teilergebniszeilen als Detailzeilen statt als Aggregatzeilen interpretiert werden sollen. Der Standardwert **Auto**, gibt an, dass die Teilergebniszeilen als Detailzeilen behandelt werden sollten, wenn der Bericht nicht die `Aggregate`()-Funktion, um den Zugriff auf alle Felder im DataSet. Wenn Teilergebniszeilen als Aggregatzeilen interpretiert werden sollen, wählen Sie **False**aus. Wenn die Teilergebniszeilen als Detailzeilen interpretiert werden sollen, und Sie wissen, dass sie nicht verwenden die `Aggregate`()-Funktion, wählen Sie **"true"**.  
+ Wählen Sie einen Wert aus, der angibt, ob Teilergebniszeilen als Detailzeilen statt als Aggregatzeilen interpretiert werden sollen. Der Standardwert **automatisch**, gibt an, dass die Teilergebniszeilen als Detailzeilen behandelt werden soll, wenn der Bericht nicht verwendet die `Aggregate`()-Funktion auf alle Felder im Dataset zugreifen. Wenn Teilergebniszeilen als Aggregatzeilen interpretiert werden sollen, wählen Sie **False**aus. Wenn die Teilergebniszeilen als Detailzeilen interpretiert werden sollen, und Sie wissen, dass sie nicht verwenden die `Aggregate`()-Funktion, wählen Sie **"true"**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hilfe zu Dialogfeldern, Bereichen und Assistenten in Berichts-Generator](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   

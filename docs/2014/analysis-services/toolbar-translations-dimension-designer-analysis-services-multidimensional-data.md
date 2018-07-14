@@ -1,5 +1,5 @@
 ---
-title: Symbolleiste (Registerkarte Übersetzungen, Dimensions-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Symbolleiste (Registerkarte Übersetzungen, Dimensions-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c049ced5-55df-47dd-b855-b2da4b7ce17d
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e0f8a60c636afb90dd68878b1e989454fb8d327b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: d74778a66b1b5b286c26f7366184a2b62da57292
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148175"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328550"
 ---
 # <a name="toolbar-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Symbolleiste (Registerkarte 'Übersetzungen', Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe der Symbolleistenschaltflächen können Sie die Aktionen ausführen, die auf der Registerkarte **Übersetzungen** von **Dimensions-Designer**häufig verwendet werden.  

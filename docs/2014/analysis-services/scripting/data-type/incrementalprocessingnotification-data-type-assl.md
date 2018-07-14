@@ -1,5 +1,5 @@
 ---
-title: IncrementalProcessingNotification-Datentyp (ASSL) | Microsoft Docs
+title: IncrementalProcessingNotification-Datentyp (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - IncrementalProcessingNotification data type
 ms.assetid: 66e27f92-65c1-4a34-b9c2-bfbb5aeb7d7c
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a913d847e6d328c3fc1289f964170af463a3f5be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38ca951d727e32f576e4dc65bc005a5b423e90c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061689"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231810"
 ---
 # <a name="incrementalprocessingnotification-data-type-assl"></a>IncrementalProcessingNotification-Datentyp (ASSL)
   Definiert einen abgeleiteten Datentyp, der Informationen des [ProactiveCaching](../objects/proactivecaching-element-assl.md) -Elements über die Abfrage darstellt, die zum Bestimmen des Fortschritts der inkrementellen Verarbeitung ausgeführt werden muss.  
@@ -60,7 +60,7 @@ ms.locfileid: "36061689"
 |Abgeleitete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.IncrementalProcessingNotification>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.IncrementalProcessingNotification>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [ProactiveCachingQueryBinding-Datentyp &#40;ASSL&#41;](binding-data-type-assl.md)   

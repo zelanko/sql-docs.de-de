@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Filtern von Berichten | Microsoft Docs'
+title: 'Vorgehensweise: Filtern von Berichten | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Upgrade Advisor], filtering
 - filtering reports [Reporting Services]
 ms.assetid: bc3dbe16-f6c1-4f07-8d88-2b8e86302c7e
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 784c435a62a4388ec18ef86383c5ccf024d093bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0e7a37889bfd795fda62074f2d74efc7d0647eb0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150046"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191190"
 ---
 # <a name="how-to-filter-reports"></a>Vorgehensweise: Filtern von Berichten
   In diesem Thema wird beschrieben, wie Sie den Upgrade Advisor-Berichts-Viewer zum Anwenden von Filtern zu einem Bericht verwenden können.  
@@ -31,11 +31,11 @@ ms.locfileid: "36150046"
   
 1.  Zeigen Sie im Berichts-Viewer den Bericht an, den Sie filtern möchten. Anweisungen hierzu finden Sie unter [Vorgehensweise: Anzeigen eines Berichts für Upgrade Advisor](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md).  
   
-2.  In der **filtern, indem** wählen Sie eine Art von Problem anzeigen:  
+2.  In der **filtern, indem** wählen Sie eine Art des Problems an:  
   
     -   **Alle Probleme**. Damit werden alle Probleme angezeigt, die nicht als gelöst markiert wurden.  
   
-    -   **Alle Updateprobleme**. Damit werden alle Probleme angezeigt, die das Update auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] betreffen.  
+    -   **Alle ugradeprobleme**. Damit werden alle Probleme angezeigt, die das Update auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] betreffen.  
   
     -   **Probleme vor dem upgrade**. Damit werden alle Probleme angezeigt, die vor dem Update auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] behoben werden sollten oder müssen.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36150046"
     -   **Ungelöste Probleme**. Damit werden alle Probleme angezeigt, die noch nicht gelöst wurden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Ausführen des Analyse-Assistenten des Upgrade Advisor](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [Vorgehensweise: Ausführen des Analyse-Assistenten des Upgrade Advisors](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Beheben von Upgradeproblemen](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [Upgrade Advisor: Themen zur Vorgehensweise](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
  [Arbeiten mit dem Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

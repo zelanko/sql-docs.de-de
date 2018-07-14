@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren von Tabellenverhaltenseigenschaften für Power View-Berichte (SSAS – tabellarisch) | Microsoft Docs
+title: Konfigurieren von Tabellenverhaltenseigenschaften für Power View-Berichte (SSAS – tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.tablebehavior.f1
 ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cae146a14e85ed1e41a771f6ad97a9589f0fe272
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b6ca5036b2e3355ba4866096206296538f07bbae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147600"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267197"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>Konfigurieren von Tabellenverhaltenseigenschaften für Power View-Berichte (SSAS – tabellarisch)
   Wenn Sie ein tabellarisches Modell als Datenmodell für [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]verwenden, können Sie die Tabellenverhaltenseigenschaften festlegen, die Detailzeilen auf einer präziseren Ebene verfügbar machen. Das Festlegen von Tabellenverhaltenseigenschaften ändert das Gruppierungsverhalten von Detailzeilen und erzeugt eine bessere Standardplatzierung bei der Feststellung von Informationen (z. B. Namen, Foto-IDs oder Logobilder) in Kachel-, Karten- oder Diagrammlayouts.  
@@ -96,7 +96,7 @@ ms.locfileid: "36147600"
 ### <a name="images-are-missing"></a>Bilder fehlen  
  Die von Ihnen im Modell festgelegten Eigenschaften bestimmen, ob Bilder in einem Bericht visuell dargestellt oder als Textwerte im Bericht dargestellt werden.  
   
- ![Bild-URLs, die als Text in einem Bericht angezeigt werden](../media/ssas-rptprop-noimageurl.gif "Bild-URLs werden als Text in einem Bericht angezeigt.")  
+ ![Bild-URLs werden als Text in einem Bericht angezeigt.](../media/ssas-rptprop-noimageurl.gif "Bild-URLs werden als Text in einem Bericht angezeigt.")  
   
  Standardmäßig wird Text im Modell als Text im Bericht interpretiert. Wenn eine Textspalte eine URL-Adresse zu einem Berichtsbild darstellt, müssen Sie beachten, dass Sie die Eigenschaft **Bild-URL** festlegen, damit [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] die Bilddatei abrufen kann. Bei binären Bildern müssen Sie die Eigenschaft **Zeilenbezeichner** festlegen.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "36147600"
   
  Um das Standardgruppierungsverhalten zu ändern, müssen Sie die Eigenschaften zum **Zeilenbezeichner** und zu **Eindeutige Zeilen beibehalten** festlegen. Wählen Sie bei **Eindeutige Zeilen beibehalten**die Spalte "Nachname" aus, damit dieser Wert für eine Zeile wiederholt wird, auch wenn er bereits in einer anderen Zeile angezeigt wird. Nachdem Sie die Eigenschaften geändert haben und die Arbeitsmappe erneut veröffentlichen, können Sie den gleichen Bericht erstellen. Allerdings können Sie nun beide Kunden namens **Jon Yang**zusammen mit dem jeweils ordnungsgemäß zugeordneten **jährlichen Einkommen** ansehen.  
   
- ![Daten, die mit Duplikaten nach Zeilen-ID Zeile](../media/ssas-jonyang.gif "Zeile von Daten mit Duplikaten nach Zeilen-ID")  
+ ![Zeile von Daten mit Duplikaten nach Zeilen-ID](../media/ssas-jonyang.gif "Zeile von Daten mit Duplikaten nach Zeilen-ID")  
   
 ### <a name="matrix-layout-is-too-crowded"></a>Matrixlayout ist überfüllt  
  Wenn Sie in einer Matrix eine Detailtabelle präsentieren, stellt die Standardgruppierung einen zusammengefassten Wert für jede Spalte bereit. Je nach Zielsetzungen können dies mehr Zusammenfassungen sein als Sie nutzen möchten. Um dieses Verhalten zu ändern, können Sie den **Zeilenbezeichner**festlegen. Sie müssen keine zusätzlichen Eigenschaften festlegen. Die Festlegung des Zeilenbezeichners ist ausreichend, um die Gruppierung zu ändern, damit Zusammenfassungen auf der Grundlage eines eindeutigen Zeilenbezeichners für jede Zeile berechnet werden können.  
@@ -131,11 +131,11 @@ ms.locfileid: "36147600"
   
  **Vorher: Die Standardgruppierung auf der Grundlage von Feldern in einem Diagramm**  
   
- ![Diagramm auf der Grundlage von standardgruppierung auf Feldebene](../media/ssas-rptprop-chartfieldgroup.gif "Diagramm auf der Grundlage von standardgruppierung auf Feldebene")  
+ ![Diagramm entsprechend der standardgruppierung auf Feldebene](../media/ssas-rptprop-chartfieldgroup.gif "Diagramm entsprechend der standardgruppierung auf Feldebene")  
   
  **Nachher: Gruppierung zu Zeilenbezeichner (Zeilenbezeichner wird zur Achse)**  
   
- ![Diagramm entsprechend der ID zeilengruppierung](../media/ssas-rptprop-chartrowid.gif "Diagramm entsprechend der zeilengruppierung-ID")  
+ ![Diagramm-ID der zeilengruppierung entsprechend](../media/ssas-rptprop-chartrowid.gif "Diagramm entsprechend der zeilengruppierung-ID")  
   
 ## <a name="next-steps"></a>Nächste Schritte  
  Nachdem Sie die Tabellen im Modell ausgewertet und die Tabellenverhaltenseigenschaften zu jenen Tabellen festgelegt haben, die Detailzeilen enthalten, welche stets als einzelne Elemente angezeigt werden sollen, können Sie das Modell durch zusätzliche Eigenschaften oder Einstellungen weiter optimieren.  

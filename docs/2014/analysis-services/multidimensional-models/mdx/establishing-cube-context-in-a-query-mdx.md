@@ -1,5 +1,5 @@
 ---
-title: Des Cubekontexts in einer Abfrage (MDX) | Microsoft Docs
+title: Des Cubekontexts in einer Abfrage (Multidimensional Expressions) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cubes [Analysis Services], MDX
 - MDX [Analysis Services], cube context
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - queries [MDX], cube context
 ms.assetid: 79d6a1e8-2825-4eb9-97df-5071aecae8f0
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 972b630aea4ebcc427803e226d27d52f919da4a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d42357b197b3a691321a5ffd9d066b787288efe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147772"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273446"
 ---
 # <a name="establishing-cube-context-in-a-query-mdx"></a>Festlegen des Cubekontexts in einer Abfrage (MDX)
   Jede MDX-Abfrage wird in einem bestimmten Cubekontext ausgeführt. Dieser Kontext definiert die Elemente, die durch die Ausdrücke in der Abfrage ausgewertet werden.  
@@ -63,6 +63,6 @@ FROM [Adventure Works]
  Mit der MDX- [LookupCube](/sql/mdx/lookupcube-mdx) -Funktion können Sie Daten aus Cubes außerhalb des Cubekontexts abrufen. Darüber hinaus stehen Funktionen wie die [Filter](/sql/mdx/filter-mdx) -Funktion zur Verfügung, um den Kontext beim Auswerten der Abfrage vorübergehend einzuschränken.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Grundlegendes zu MDX-Abfrage &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

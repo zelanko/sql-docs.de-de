@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen eines Modells zu einer Struktur (Data Mining-Add-ins für Excel) | Microsoft Docs
+title: Hinzufügen eines Modells zu einer Struktur (Data Mining-Add-ins für Excel) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, creating
 ms.assetid: 8efd5bf4-4e6a-4ee8-971a-6efaed5f3b76
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e13b75081b4c4cd31a4a3de393b480e713c9d909
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71016faaac6126328e1565ef7644fcf0bdf74376
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241760"
 ---
 # <a name="add-model-to-structure-data-mining-add-ins-for-excel"></a>Hinzufügen eines Modells zu einer Struktur (Data Mining-Add-Ins für Excel)
-  ![Hinzufügen eines Modells zu Struktur Schaltfläche](media/dmc-addmodel.gif "Modell einer Struktur Schaltfläche hinzufügen")  
+  ![Hinzufügen eines Modells zu einer Struktur Schaltfläche](media/dmc-addmodel.gif "Modell einer Struktur Schaltfläche hinzufügen")  
   
- Beim Klicken auf **Modell einer Struktur hinzufügen**, ein Assistent gestartet, mit dem Sie ein neues Miningmodell für die Verwendung mit einer vorhandenen Miningstruktur zu erstellen. Diese Option ist hilfreich, da sie die Möglichkeit bietet, Modelle zu vergleichen, die auf denselben Daten basieren, oder benutzerdefinierte Modelle zu erstellen.  
+ Beim Klicken auf **Modell einer Struktur hinzufügen**, ein Assistent gestartet, die Ihnen hilft, erstellen ein neues Miningmodell für die Verwendung mit einer vorhandenen Miningstruktur. Diese Option ist hilfreich, da sie die Möglichkeit bietet, Modelle zu vergleichen, die auf denselben Daten basieren, oder benutzerdefinierte Modelle zu erstellen.  
   
- Wenn die Instanz von Analysis Services nicht bereits Daten müssen enthält, verwenden die [Create Mining Structure &#40;SQL Server Data Mining-Add-ins&#41; ](create-mining-structure-sql-server-data-mining-add-ins.md) Assistenten zum Einrichten einer Miningstruktur. Alternativ können Sie einen der Modellierungs-Assistenten starten und der mit dem Assistenten erstellten Struktur ein neues Modell hinzufügen.  
+ Wenn die Instanz von Analysis Services bereits die keine Daten Sie benötigen, verwenden Sie die [Create Mining Structure &#40;SQL Server Data Mining-Add-ins&#41; ](create-mining-structure-sql-server-data-mining-add-ins.md) Assistenten zum Einrichten einer Miningstruktur. Alternativ können Sie einen der Modellierungs-Assistenten starten und der mit dem Assistenten erstellten Struktur ein neues Modell hinzufügen.  
   
- Um erweiterte Modelle mithilfe von Algorithmen, die nicht unterstützt wird, indem Sie den Assistenten zu erstellen, erstellen Sie eine Miningstruktur, und fügen Sie dann ein Modell mithilfe der **erweiterten Editor für Data Mining**.  
+ Um erweiterte Modelle mithilfe von Algorithmen, die nicht unterstützt, indem Sie den Assistenten zu erstellen, erstellen Sie eine Miningstruktur, und fügen Sie dann auf ein Modell mithilfe der **erweiterten Editor für Data Mining**.  
   
 ## <a name="add-a-new-model-to-an-existing-structure"></a>Hinzufügen eines neuen Modells zu einer vorhandenen Struktur  
   
@@ -38,37 +38,37 @@ ms.locfileid: "36147793"
   
 2.  In der **Struktur auswählen** Dialogfeld Wählen Sie die Struktur, die Daten enthält, Sie verwenden möchten, und klicken Sie dann auf **Weiter**.  
   
-     **Tipp**: Wenn Sie nicht sicher sind, welche Miningstruktur die Daten werden müssen, verwenden die **Dokumentmodell** Assistenten, um die Spalten sowie grundlegende Statistiken zu den Daten anzeigen.  
+     **Tipp**: Wenn Sie nicht sicher sind, welche Miningstruktur die Daten werden müssen, verwenden die **Dokumentmodell** Assistenten, um die Spalten und grundlegende Statistiken zu den Daten anzuzeigen.  
   
      Wenn eine Miningstruktur nicht auffindbar ist, überprüfen Sie die derzeit verwendete Verbindung. Möglicherweise müssen Sie eine Verbindung mit einem anderen Server herstellen.  
   
-3.  In der **Miningalgorithmus auswählen** Dialogfeld Wählen Sie einen Miningalgorithmus aus, in das neue Miningmodell verwenden.  
+3.  In der **Miningalgorithmus auswählen** Dialogfeld Wählen ein Mining-Algorithmus in das neue Miningmodell verwenden.  
   
      Beachten Sie, dass das Dialogfeld deutlich mehr Optionen umfasst, als in den Assistenten angezeigt werden. Sie können ein Modell mit einem beliebigen, auf dem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Server unterstützten Algorithmus erstellen, sofern die Daten kompatibel sind.  
   
-4.  Es wird empfohlen, dass Sie auch auf die **Parameter** die Schaltfläche, um die **Algorithmusparameter** Dialogfeld Feld und die Parameter für den Algorithmus anpassen. Mit dieser Option können am einfachsten benutzerdefinierte Miningmodelle erstellt werden.  
+4.  Es wird empfohlen, dass Sie auch auf die **Parameter** die Schaltfläche, um die **Algorithmusparameter** Dialogfeld Feld und Parameter für den Algorithmus anpassen. Mit dieser Option können am einfachsten benutzerdefinierte Miningmodelle erstellt werden.  
   
 5.  Klicken Sie auf **Weiter**.  
   
-6.  In der **Spalten auswählen** (Dialogfeld), überprüfen Sie die Liste der Spalten, und ändern Sie ggf. die Verwendung der Spalten auf einen der folgenden Werte:  
+6.  In der **Select Columns** Dialogfeld überprüfen Sie die Liste der Spalten, und ändern Sie ggf. die Verwendung der Spalten auf einen der folgenden Werte:  
   
     -   **Eingabe**. Gibt an, dass die Spalte Variablen enthält, die das Ergebnis beeinflussen können und als Eingaben für das Modell verwendet werden sollten.  
   
     -   **Eingabe und Vorhersage**. Gibt an, dass die Daten als Eingabe verwendet werden sollen und dass Sie diese Werte zusätzlich vorhersagen möchten.  
   
-    -   **PREDICT only**. Gibt an, dass die Daten nicht als Eingabe für das Modell verwendet werden sollen.  
+    -   **Nur Vorhersagen**. Gibt an, dass die Daten nicht als Eingabe für das Modell verwendet werden sollen.  
   
-    -   **Schlüssel**. Jedes Modell erfordert mindestens einen Schlüssel. Je nach Modell müssen Sie auch möglicherweise die Option aus, um zusätzliche spezielle Schlüssel verwenden, wie z. B. die **SequenceKey** oder **TimeKey**.  
+    -   **Schlüssel**. Jedes Modell erfordert mindestens einen Schlüssel. Abhängig vom Modelltyp, Sie auch möglicherweise die Möglichkeit, zusätzliche spezielle Schlüssel verwenden, wie z. B. die **SequenceKey** oder **TimeKey**.  
   
     -   **Verwenden Sie keine**. Gibt an, dass die Daten nicht im Modell verwendet werden sollen, selbst wenn sie in der Struktur vorhanden sind.  
   
-7.  Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**  die Schaltfläche, um die **Spaltenmodellflags festlegen** (Dialogfeld).  
+7.  Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**  die Schaltfläche, um die **Spaltenmodellflags festlegen** Dialogfeld.  
   
      Stellen Sie in einer kurzen Überprüfung sicher, dass der Verwendungstyp der einzelnen Datenspalten für das Modell geeignet ist. Durch diesen wichtigen Schritt wird verhindert, dass beim Verarbeiten des Modells Fehler auftreten.  
   
      Beispiel: Wenn Sie eine Struktur, die für ein Entscheidungsstrukturmodell erstellt wurde, wiederverwenden, und den Naïve Bayes-Algorithmus darauf anwenden, müssen Spalten mit dem Datentyp `Numeric` und dem Inhaltstyp `Continuous` klassifiziert oder in diskrete Variablen geändert werden.  
   
-     Wenn Spalten in der Struktur für den neuen Algorithmus nicht gelten, können Sie sie umgehen, indem Sie die Auswahl **verwenden Sie keine**.  
+     Wenn Spalten in der Struktur für den neuen Algorithmus nicht gelten, können Sie diese umgehen, indem Sie die Auswahl **verwenden Sie keine**.  
   
 8.  In der **Spaltenmodellflags festlegen** Dialogfeld überprüfen oder festlegen, die die Modellierungsflags, sofern vorhanden.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36147793"
   
      Klicken Sie auf **OK** Abschluss, um das Dialogfeld zu schließen.  
   
-9. In der **Fertig stellen** Dialogfeld Geben Sie einen Namen und eine Beschreibung für das neue Miningmodell.  
+9. In der **Fertig stellen** Dialogfeld geben einen Namen und Beschreibung für das neue Miningmodell.  
   
      Je nach dem erstellten Modelltyp stehen Ihnen zusätzlich möglicherweise folgende Optionen zur Verfügung:  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36147793"
   
 |Option|Kommentare|  
 |------------|--------------|  
-|**Struktur oder Modell auswählen** (Dialogfeld)|Wählen Sie eine vorhandene Miningstruktur aus, um sie als Grundlage für ein neues Modell zu verwenden.  Die ausgewählte Struktur muss für die aktive Verbindung verfügbar sein. Falls nicht, ändern Sie Verbindungen mithilfe der [Herstellen einer Verbindung mit Quelldaten &#40;Data Mining-Client für Excel&#41; ](connect-to-source-data-data-mining-client-for-excel.md) Tool.|  
+|**Struktur oder Modell auswählen** (Dialogfeld)|Wählen Sie eine vorhandene Miningstruktur aus, um sie als Grundlage für ein neues Modell zu verwenden.  Die ausgewählte Struktur muss für die aktive Verbindung verfügbar sein. Falls nicht, ändern Sie Verbindungen mit dem [Herstellen einer Verbindung mit Quelldaten &#40;Data Mining-Client für Excel&#41; ](connect-to-source-data-data-mining-client-for-excel.md) Tool.|  
 |**Wählen Sie die Mining-Algorithmus** Dialogfelds|Die Liste der Data Mining-Algorithmen hängt davon ab, mit welchem Server Sie verbunden sind. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stellt in der Standard und Enterprise Edition verschiedene Algorithmen bereit. Ihr Administrator verfügt möglicherweise auch über zusätzliche benutzerdefinierte Algorithmen.<br /><br /> Wenn keine Algorithmen angezeigt werden, stellen Sie sicher, dass Sie mit einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verbunden sind.|  
 |**Algorithmusparameter** (Dialogfeld)|Mithilfe dieser Einstellungen können Sie die einzelnen Algorithmen mit Parametern anpassen, die spezifisch für die analytische Methode sind. Sie können auch einen Ausgangswert festlegen, um sicherzustellen, dass die Ergebnisse des Modells in mehreren Trainingsdurchläufen reproduziert werden können.<br /><br /> Weitere Informationen finden Sie unter [Algorithmusparameter &#40;SQL Server Data Mining-Add-ins&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md).|  
 |**Spaltenmodellflags festlegen** (Dialogfeld)|Mithilfe von Modellierungsflags können Sie ein Modell verbessern, indem Sie angeben, wie fehlende Daten behandelt werden sollen. Weitere Informationen finden Sie unter [Modellierungsflags &#40;Data Mining&#41;](data-mining/modeling-flags-data-mining.md).|  
@@ -117,9 +117,9 @@ ms.locfileid: "36147793"
      Einige Analysetypen erfordern Daten, die entsprechend eindeutigen Regeln sorgfältig strukturiert sind. Dies gilt beispielsweise für Vorhersagemodelle und Zuordnungsmodelle. Sie können einfach neue Modelle desselben Typs hinzufügen, die über Anpassungen verfügen können, möglicherweise funktionieren die Daten jedoch nicht mit anderen Algorithmen.  
   
 ### <a name="requirements"></a>Anforderungen  
- Zum Erstellen von Data Mining-Modellen müssen Sie eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] hergestellt haben. Weitere Informationen zum Erstellen oder Ändern einer Verbindung finden Sie unter [Herstellen einer Verbindung mit Quelldaten &#40;Data Mining-Client für Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
+ Zum Erstellen von Data Mining-Modellen müssen Sie eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] hergestellt haben. Weitere Informationen zum Erstellen oder Ändern einer Verbindungs finden Sie unter [Herstellen einer Verbindung mit Quelldaten &#40;Data Mining-Client für Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
- Falls die gewünschte Data Mining-Struktur nicht angezeigt wird, kann dies daran liegen, dass die betreffende Struktur in einer anderen Instanz oder einer anderen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenbank gespeichert wurde. Informationen dazu, wie Sie in einer anderen Datamining-Verbindung zu ändern, finden Sie unter [Verbinden mit einem Data Mining-Server](connect-to-a-data-mining-server.md).  
+ Falls die gewünschte Data Mining-Struktur nicht angezeigt wird, kann dies daran liegen, dass die betreffende Struktur in einer anderen Instanz oder einer anderen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenbank gespeichert wurde. Weitere Informationen zur Verwendung in eine andere Datamining-Verbindung ändern, finden Sie unter [Herstellen einer Verbindung mit einem Data Mining-Server](connect-to-a-data-mining-server.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen eines Data Mining-Modells](creating-a-data-mining-model.md)   

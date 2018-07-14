@@ -1,5 +1,5 @@
 ---
-title: Verknüpfte Measuregruppen | Microsoft Docs
+title: Verknüpfte Measuregruppen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - linked measure groups [Analysis Services]
 - referencing measure groups
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - linked dimensions [Analysis Services]
 ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f01313ce33a2dca510846a66d34d972540d72d85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e67d39b1cafa212b2a43b55d9de58e5df918bd11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061258"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251472"
 ---
 # <a name="linked-measure-groups"></a>Verknüpfte Measuregruppen
   Eine verknüpfte Measuregruppe basiert auf einer anderen Measuregruppe in einem anderen Cube innerhalb derselben Datenbank oder einer anderen Analysis Services-Datenbank. Eine verknüpfte Measuregruppe kann z. B. verwendet werden, wenn Sie einen Satz von Measures und die entsprechenden Datenwerte in mehreren Cubes wiederverwenden möchten.  
   
- Microsoft empfiehlt, die ursprünglichen und verknüpften Measuregruppen in Projektmappen abzulegen, die auf dem gleichen Server ausgeführt werden. Verknüpfen mit einer Measuregruppe auf einem Remoteserver in einer zukünftigen Version showplanversionen ist (siehe [als veraltet markierte Analysis Services-Funktionen in SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md)).  
+ Microsoft empfiehlt, die ursprünglichen und verknüpften Measuregruppen in Projektmappen abzulegen, die auf dem gleichen Server ausgeführt werden. Verknüpfen mit einer Measuregruppe auf einem Remoteserver in einer zukünftigen Version showplanversionen ist (siehe [veraltete Analysis Services-Funktionen in SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md)).  
   
 > [!IMPORTANT]  
 >  Verknüpfte Measuregruppen sind schreibgeschützt. Um die neuesten Änderungen zu übernehmen, müssen Sie alle auf dem geänderten Quellobjekt basierenden verknüpften Measuregruppen löschen und neu erstellen. Aus diesem Grund sollten Sie das Kopieren und Einfügen von Measuregruppen als alternative Methode berücksichtigen, wenn zukünftige Änderungen der Measuregruppe erforderlich sind.  
@@ -72,7 +72,7 @@ ms.locfileid: "36061258"
 ## <a name="secure-a-linked-measure"></a>Schützen eines verknüpften Measures  
  Nachdem der Link definiert wurde, wird der Zugriff auf die Measures in einer verknüpften Measuregruppe auf dieselbe Weise wie andere Measuregruppen verwaltet. Ein verknüpftes Objekt wird im Rollen-Designer neben dessen nicht verknüpften Gegenstücken angezeigt. Weitere Informationen zum Verwalten der Sicherheit für eine Measuregruppe finden Sie unter [Erteilen von Cube- oder Modellberechtigungen &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md).  
   
- Um zu definieren, oder verwenden eine verknüpfte Measuregruppe, die Windows-Dienstkonto für die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz Mitglied einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbankrolle mit `ReadDefinition` und `Read` Zugriffsrechte auf die Quelle [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz, auf die Source Cube und Measuregruppe, oder es muss Mitglied der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Administratorrolle für die Quelle [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instanz.  
+ Um zu definieren, oder verwenden eine verknüpfte Measuregruppe, die Windows-Dienstkonto für die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz Mitglied einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbankrolle mit `ReadDefinition` und `Read` Zugriffsrechte für die Quelle [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz, auf die Source Cube und Measuregruppe, oder es muss Mitglied der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] "Administratoren" für die Quelle [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instanz.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Definieren von verknüpften Dimensionen](define-linked-dimensions.md)  

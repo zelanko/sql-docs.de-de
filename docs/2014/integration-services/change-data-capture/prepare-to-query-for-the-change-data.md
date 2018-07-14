@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],preparing query
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6fc278beec749f8698977a153c30b5c584ea8424
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 88f2dd6e5caf6cf5b601f07ca826d85808f9e6f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061448"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248810"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>Vorbereiten zur Abfrage der Änderungsdaten
   In der Ablaufsteuerung eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets, das ein inkrementelles Laden von Änderungsdaten ausführt, besteht der dritte und letzte Task darin, die Abfrage der Änderungsdaten vorzubereiten und einen Datenflusstask hinzuzufügen.  
@@ -174,7 +174,7 @@ ms.locfileid: "36061448"
         ```  
   
         > [!NOTE]  
-        >  Die `else` -Klausel in diesem Beispiel generiert eine Abfrage für das erstmalige Laden von Änderungsdaten, indem ein null-Wert für das Datum und die Uhrzeit übergeben. Dieses Beispiel befasst sich nicht mit dem Szenario, in dem Änderungen, die vor der Aktivierung von Change Data Capture vorgenommen wurden, auch ins Data Warehouse hochgeladen werden müssen.  
+        >  Die `else` -Klausel in diesem Beispiel generiert eine Abfrage für das erste Laden der Änderungsdaten, indem ein null-Wert für das Datum und die Startzeit übergeben. Dieses Beispiel befasst sich nicht mit dem Szenario, in dem Änderungen, die vor der Aktivierung von Change Data Capture vorgenommen wurden, auch ins Data Warehouse hochgeladen werden müssen.  
   
 3.  Nehmen Sie auf der Seite **Parameterzuordnung** vom **Editor für den Task 'SQL ausführen'** die folgende Zuordnung vor:  
   

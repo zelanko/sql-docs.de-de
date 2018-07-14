@@ -1,5 +1,5 @@
 ---
-title: Nicht mehr unterstützte Funktionen von Master Data Services in SQLServer 2014 | Microsoft Docs
+title: Nicht mehr unterstützte Funktionen von Master Data Services in SQLServer 2014 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
 caps.latest.revision: 12
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 46f5d4de97af6822ba110fe35e81df2d13a526ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f2e9a15b4a0f1441d63ab39a4b65861fcfef099e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149088"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167051"
 ---
 # <a name="discontinued-master-data-services-features-in-sql-server-2014"></a>Eingestellte Master Data Services-Funktionen in SQL Server 2014
   In diesem Thema werden die Funktionen von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] beschrieben, die in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]nicht mehr verfügbar sind.  
@@ -32,11 +32,11 @@ ms.locfileid: "36149088"
 ### <a name="security"></a>Security  
  Um das Zuweisen der Sicherheit einfacher zu machen, können Sie der abgeleiteten Hierarchie, der expliziten Hierarchie und den Attributgruppenobjekten keine Modellobjektberechtigungen mehr zuweisen.  
   
--   Abgeleitete Hierarchieberechtigungen basieren jetzt auf dem Modell. Z. B. wenn ein Benutzer über die Berechtigung für eine abgeleitete Hierarchie verfügen soll, Sie müssen zuweisen **Update** für das Modellobjekt. Sie zuweisen können **Deny** Zugriff auf alle Entitäten, die nicht die Benutzer Zugriff haben soll.  
+-   Abgeleitete Hierarchieberechtigungen basieren jetzt auf dem Modell. Z. B. wenn ein Benutzer über die Berechtigung auf eine abgeleitete Hierarchie verfügen soll, müssen Sie zuweisen **Update** für das Modellobjekt. Sie zuweisen können **Verweigern** Zugriff auf alle Entitäten, die nicht der Benutzer Zugriff haben soll.  
   
--   Explizite Hierarchieberechtigungen basieren jetzt auf der Entität. Wenn der Benutzer hat z. B. **Update** Berechtigungen für eine Account-Entität, alle explizite Hierarchien für die Entität werden aktualisiert werden.  
+-   Explizite Hierarchieberechtigungen basieren jetzt auf der Entität. Wenn der Benutzer hat z. B. **Update** Berechtigungen für eine Entität "Account", klicken Sie dann alle explizite Hierarchien für die Entität aktualisierbar.  
   
--   Attributgruppenberechtigungen können nicht mehr zugewiesen werden, der **Benutzer- und Gruppenberechtigungen** Funktionsbereich ". Stattdessen in den **Systemverwaltung** Funktionsbereich ", in dem Attributgruppen erstellt werden, Benutzer und Gruppen können angegeben werden **Update** Berechtigung Attributgruppen. **Nur-Lese** Berechtigungen für Attributgruppen ist nicht mehr verfügbar.  
+-   Attributgruppenberechtigungen können nicht mehr zugewiesen werden, der **Benutzer- und Gruppenberechtigungen** Funktionsbereich. Stattdessen in der **Systemverwaltung** Funktionsbereich, in dem Attributgruppen erstellt werden, Benutzer und Gruppen zugewiesen werden können **Update** Berechtigungen für Attributgruppen. **Nur-Lese** Berechtigungen für Attributgruppen ist nicht mehr verfügbar.  
   
 ### <a name="staging-process"></a>Stagingprozess  
  Sie können den neuen Stagingprozess nicht für folgende Aufgaben verwenden:  
@@ -57,7 +57,7 @@ ms.locfileid: "36149088"
  Außerdem können Pakete nur in der Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bereitgestellt werden, in der sie erstellt wurden. Dies bedeutet, dass in [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] erstellte Pakete nicht in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]bereitgestellt werden können. Sie müssen das Paket in einer [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]-Umgebung bereitstellen und dann die Datenbank auf [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] aktualisieren.  
   
 ### <a name="code-generation-business-rules"></a>Geschäftsregeln zur Codegenerierung  
- Geschäftsregeln, die automatisch Werte für das Code-Attribut generieren, werden jetzt anders verwaltet. Um Werte für das Code-Attribut zu generieren, verwendet Sie zuvor die **Standardattribut für einen generierten Wert** Aktion in der **Systemverwaltung** Funktionsbereich "unter" **Geschäftsregeln** . Im **Systemverwaltung**, müssen Sie bearbeiten, die Entität aus, um automatisch generierte Codewerte zu aktivieren. Weitere Informationen finden Sie unter [Automatische Codeerstellung &#40;Master Data Services&#41;](automatic-code-creation-master-data-services.md).  
+ Geschäftsregeln, die automatisch Werte für das Code-Attribut generieren, werden jetzt anders verwaltet. Zuvor, um Werte für das Code-Attribut zu generieren, verwendet Sie die **Default-Attribut auf einen generierten Wert** Aktion in der **Systemverwaltung** Funktionsbereich "unter" **von Geschäftsregeln** . Jetzt in **Systemverwaltung**, müssen Sie die Entität, die automatisch generierte Codewerte zu aktivieren, bearbeiten. Weitere Informationen finden Sie unter [Automatische Codeerstellung &#40;Master Data Services&#41;](automatic-code-creation-master-data-services.md).  
   
  Wenn Sie bei einem [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]-Modellbereitstellungspaket, das eine Regel dieses Typs enthält, die Datenbank auf [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] aktualisieren, wird die Geschäftsregel ausgeschlossen.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36149088"
  In der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]-Webanwendung können Sie keine Elemente mehr nach Excel exportieren. Verwenden Sie zum Arbeiten mit Elementen in Excel die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)].  
   
 ### <a name="transactions"></a>Transaktionen  
- In der **Explorer** Funktionsbereich ", Benutzer können nicht mehr wiederherstellen, ihre eigenen Transaktionen. Zuvor konnten Benutzer Änderungen vorgenommen, Daten in wurden wiederherstellen **Explorer**. Administratoren können weiterhin Transaktionen für alle Benutzer im Wiederherstellen der **Versionsverwaltung** Funktionsbereich ".  
+ In der **Explorer** Funktionsbereich kann der Benutzer nicht mehr wiederherstellen, ihre eigenen Transaktionen. Zuvor Benutzer konnte Rückgängigmachen von Änderungen sie an Daten in **Explorer**. Administratoren können weiterhin Transaktionen für alle Benutzer im Wiederherstellen der **Versionsverwaltung** Funktionsbereich.  
   
  Anmerkungen sind jetzt dauerhaft und können nicht gelöscht werden. Zuvor wurden Anmerkungen als Transaktionen angesehen und durch das Wiederherstellen der Transaktion gelöscht.  
   

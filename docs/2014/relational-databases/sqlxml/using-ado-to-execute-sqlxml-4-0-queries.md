@@ -1,5 +1,5 @@
 ---
-title: Verwenden von ADO zum Ausführen von SQLXML 4.0 Abfragen | Microsoft Docs
+title: Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQLXML, ADO
 ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3a53e88a28a7be770b1bc6541f9118ca64e3fc7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 91ccb8afcc1de50498695da442ba1f20a0942d27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148339"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201190"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen
   In früheren Versionen von SQLXML wurde die HTTP-basierte Abfrageausführung mit virtuellen SQLXML IIS-Verzeichnissen und dem SQLXML ISAPI-Filter unterstützt. In SQLXML 4.0 sind diese Komponenten nicht mehr verfügbar, da ähnliche und überlappende Funktionen mit systemeigenen Web-Diensten ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] bereitgestellt werden.  
@@ -104,7 +104,7 @@ ms.locfileid: "36148339"
   
      Aktualisieren Sie ggf. andere Werte, sofern dies in den entsprechenden Anweisungen für das Beispiel angegeben ist, das Sie lokal auf dem Computer neu erstellen möchten.  
   
-3.  Speichern Sie die Datei, und schließen Sie es.  
+3.  Speichern Sie die Datei, und schließen Sie sie.  
   
 4.  Überprüfen Sie, ob Sie zusätzliche Dateien wie XML-Vorlagen oder Schemas erstellt haben, die zu dem Beispiel gehören, das Sie lokal auf dem Computer neu erstellen möchten. Diese Dateien sollten sich in dem gleichen Verzeichnis befinden wie die Testskriptdatei (Sqlxml4test.vbs).  
   
@@ -117,11 +117,11 @@ ms.locfileid: "36148339"
   
 1.  Überprüfen Sie, ob [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client installiert ist. Gehen Sie dazu wie folgt vor:  
   
-    1.  Aus der **starten** Sie im Menü **Einstellungen**, und klicken Sie dann auf **Systemsteuerung**.  
+    1.  Von der **starten** Startmenü **Einstellungen**, und klicken Sie dann auf **Systemsteuerung**.  
   
-    2.  Öffnen Sie in der Systemsteuerung **Software**  
+    2.  Öffnen Sie in der Systemsteuerung **Programme hinzufügen oder entfernen**  
   
-    3.  Vergewissern Sie sich, die in der Liste der installierten Programme **Microsoft SQL Server Native Client** in der Liste angezeigt.  
+    3.  Stellen Sie sicher, die in der Liste der installierten Programme **Microsoft SQL Server Native Client** in der Liste angezeigt.  
   
         > [!NOTE]  
         >  Wenn Sie installieren müssen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client finden Sie unter [Installieren von SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md).  

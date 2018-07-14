@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services], report history
 - history snapshots [Reporting Services]
@@ -19,18 +19,18 @@ ms.assetid: 3f87f82d-0e61-4492-9c4b-f5238c39e8cd
 caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 29ff943923807b88db27bd9c8c6a1cc8430f96a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b065fa70d102ff86c25aa0fffb78cfa4993cd284
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147621"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272576"
 ---
 # <a name="render-a-report-history-snapshot-using-url-access"></a>Rendern von Berichtsverlaufs-Momentaufnahmen mit URL-Zugriff
   Sie können einen Bericht auf der Grundlage einer Berichtsverlaufs-Momentaufnahme rendern, indem Sie den Parameter *rs:Snapshot* angeben und seinen Wert auf eine gültige Momentaufnahme-ID festlegen. Der Parameterwert hat das Format YYYY-MM-DDTHH:MM:SS und basiert auf dem ISO-Standard 8601 (Standard International Organization for Standardization).  
   
- Wenn Sie diesen Parameter weglassen, wird der Bericht gemäß den Optionseinstellungen für die Berichtsausführung und Cacheverwaltung des Berichtsservers gerendert. Weitere Informationen zur berichtsausführung finden Sie unter [festgelegt Verarbeitung Berichtseigenschaften](report-server/set-report-processing-properties.md).  
+ Wenn Sie diesen Parameter weglassen, wird der Bericht gemäß den Optionseinstellungen für die Berichtsausführung und Cacheverwaltung des Berichtsservers gerendert. Weitere Informationen zur Ausführung von Berichten finden Sie unter [Festlegen von Berichtsverarbeitungseigenschaften](report-server/set-report-processing-properties.md).  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt eine URL, die eine Berichtsverlaufs-Momentaufnahme abruft:  

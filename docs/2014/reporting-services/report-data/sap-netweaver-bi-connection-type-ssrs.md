@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8cd1548cb8fb22a49900cc916dc1fde610993a05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: b05c961fcd9d3a4a64715f6bc96754000969a6ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149578"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216880"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>SAP NetWeaver BI-Verbindungstyp (SSRS)
   Wenn Sie Daten aus einer externen SAP NetWeaver® Business Intelligence-Datenquelle in den Bericht einschließen möchten, benötigen Sie ein Dataset, das auf einer Berichtsdatenquelle vom Typ " [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]" basiert. Dieser integrierte Datenquellentyp basiert auf der Datenerweiterung für den [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework-Datenanbieter 1.0 für [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)].  
@@ -57,7 +57,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
  Nachdem Sie den Bericht veröffentlicht haben, müssen Sie eventuell die Anmeldeinformationen für die Datenquelle ändern, sodass die Berechtigungen zum Abrufen der Daten beim Ausführen des Berichts auf dem Berichtsserver gültig sind.  
   
- Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) oder [Geben Sie Anmeldeinformationen im Berichts-Generator](../specify-credentials-in-report-builder.md).  
+ Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) oder [angeben von Anmeldeinformationen im Berichts-Generator](../specify-credentials-in-report-builder.md).  
   
   
   
@@ -78,14 +78,14 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  Die [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] -Datenquelle unterstützt erweiterte Feldeigenschaften. Erweiterte Feldeigenschaften sind zusätzlich zu `Value` und `IsMissing` , die von der datenverarbeitungserweiterung für ein Datasetfeld definiert werden. Erweiterte Eigenschaften umfassen vordefinierte Eigenschaften und benutzerdefinierte Eigenschaften. Bei vordefinierten Eigenschaften handelt es sich um Eigenschaften, die von mehreren Datenquellen gemeinsam verwendet werden. Benutzerdefinierte Eigenschaften gelten jeweils nur für eine Datenquelle.  
   
 ### <a name="working-with-field-properties"></a>Arbeiten mit Feldeigenschaften  
- Erweiterte Feldeigenschaften werden im Berichtsdatenbereich nicht als Elemente angezeigt, die in das Berichtslayout gezogen werden können. Stattdessen ziehen Sie das übergeordnete Feld der Eigenschaft in den Bericht und ändern Sie anschließend die Standardeigenschaft von `Value` der Eigenschaft, die Sie verwenden möchten. Wenn der Feldname **Calendar Year/Month Level 01** beispielsweise im MDX-Abfrage-Designer durch Ziehen einer Ebene aus dem Metadatenbereich in den Abfragebereich erstellt wurde, würden Sie in einem Ausdruck mithilfe der folgenden Syntax auf die benutzerdefinierte erweiterte Eigenschaft **Long Name** verweisen:  
+ Erweiterte Feldeigenschaften werden im Berichtsdatenbereich nicht als Elemente angezeigt, die in das Berichtslayout gezogen werden können. Stattdessen ziehen Sie das übergeordnete Feld der Eigenschaft in den Bericht und ändern Sie dann auf die Standardeigenschaft von `Value` der Eigenschaft, die Sie verwenden möchten. Wenn der Feldname **Calendar Year/Month Level 01** beispielsweise im MDX-Abfrage-Designer durch Ziehen einer Ebene aus dem Metadatenbereich in den Abfragebereich erstellt wurde, würden Sie in einem Ausdruck mithilfe der folgenden Syntax auf die benutzerdefinierte erweiterte Eigenschaft **Long Name** verweisen:  
   
  `=Fields!Calendar_Year_Month_Level_01("Long Name")`  
   
- Der Name einer erweiterten Feldeigenschaft wird in der QuickInfo angezeigt, wenn Sie mit dem Mauszeiger auf ein Feld im Metadatenbereich zeigen. Weitere Informationen zu den Abfrage-Designern, die zum Durchsuchen der zugrunde liegenden Daten können, finden Sie unter [SAP NetWeaver BI Query Designer User Interface](sap-netweaver-bi-query-designer-user-interface.md).  
+ Der Name einer erweiterten Feldeigenschaft wird in der QuickInfo angezeigt, wenn Sie mit dem Mauszeiger auf ein Feld im Metadatenbereich zeigen. Weitere Informationen zu den Abfrage-Designern, die Sie zum Durchsuchen der zugrunde liegenden Daten verwenden können, finden Sie unter [SAP NetWeaver BI Query Designer User Interface](sap-netweaver-bi-query-designer-user-interface.md).  
   
 > [!NOTE]  
->  Für erweiterte Feldeigenschaften sind nur Werte vorhanden, wenn diese Werte bei der Ausführung des Berichts und beim Abrufen der Daten für die Datasets von der Datenquelle bereitgestellt werden. Sie können dann verweisen, mit denen `Field` Eigenschaftswerte aus einem beliebigen Ausdruck mithilfe der unten erläuterten Syntax. Da diese Felder jedoch vom Datenanbieter abhängen und nicht Bestandteil der Berichtsdefinitionssprache sind, werden an diesen Werten vorgenommene Änderungen nicht mit der Berichtsdefinition gespeichert.  
+>  Für erweiterte Feldeigenschaften sind nur Werte vorhanden, wenn diese Werte bei der Ausführung des Berichts und beim Abrufen der Daten für die Datasets von der Datenquelle bereitgestellt werden. Klicken Sie dann sehen Sie sich die `Field` Eigenschaftswerte aus einem beliebigen Ausdruck, der mithilfe der unten erläuterten Syntax. Da diese Felder jedoch vom Datenanbieter abhängen und nicht Bestandteil der Berichtsdefinitionssprache sind, werden an diesen Werten vorgenommene Änderungen nicht mit der Berichtsdefinition gespeichert.  
   
  Verwenden Sie eine der folgenden Syntaxen, um in einem Ausdruck auf vordefinierte erweiterte Eigenschaften zu verweisen.  
   

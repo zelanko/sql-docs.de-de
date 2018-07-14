@@ -1,5 +1,5 @@
 ---
-title: Durchsuchen von Dimensionsdaten im Dimensions-Designer | Microsoft Docs
+title: Durchsuchen von Dimensionsdaten im Dimensions-Designer | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], browsing
 - browsing dimensions [Analysis Services]
 ms.assetid: d033e74c-f8ec-46a3-8dc7-1c1eb8574c23
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c675c9a84c8b338e64723e7793cfa39a7cef61af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e4b64b28ccdfa3dd40918881340f4fc66a5229c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149160"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169646"
 ---
 # <a name="browse-dimension-data-in-dimension-designer"></a>Durchsuchen von Dimensionsdaten im Dimensions-Designer
   Sie können die Daten in einer Dimension im Dimensions-Designer, auf den Sie über **zugreifen können, in der** Browser [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]-Sicht durchsuchen.  
   
- Damit die Dimensionsdaten in der Sicht **Browser** angezeigt werden können, muss die Dimension verarbeitet sein. Weitere Informationen finden Sie unter [mehrdimensionalen Modell Objekt verarbeiten](processing-a-multidimensional-model-analysis-services.md).  
+ Damit die Dimensionsdaten in der Sicht **Browser** angezeigt werden können, muss die Dimension verarbeitet sein. Weitere Informationen finden Sie unter [mehrdimensionalen Modell Objekt verarbeitet](processing-a-multidimensional-model-analysis-services.md).  
   
 ### <a name="to-browse-a-dimension-in-sql-server-data-tools"></a>So durchsuchen Sie eine Dimension in SQL Server-Datentools  
   

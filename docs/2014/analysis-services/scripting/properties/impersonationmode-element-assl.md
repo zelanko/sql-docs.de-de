@@ -1,5 +1,5 @@
 ---
-title: ImpersonationMode-Element (ASSL) | Microsoft Docs
+title: ImpersonationMode-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ImpersonateMode element
 ms.assetid: 160fdcb2-ac9f-4c5a-a0eb-a5f7669166b9
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e41e5b5fef7759f6ad310a7f04dc012a7b7cb54f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dad131322f27cee48fa2fe1dd1ed593477afbe42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149506"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216230"
 ---
 # <a name="impersonationmode-element-assl"></a>ImpersonationMode-Element (ASSL)
-  Enthält einen Wert, der die Methode des Identitätswechsels für Elemente, die angibt von der abgeleiteten der [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) -Datentyp.  
+  Enthält einen Wert, der die Methode des Identitätswechsels für Elemente angibt, das von abgeleitet sind die [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) -Datentyp.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36149506"
 |*ImpersonateAccount*|Das übergeordnete Element verwendet die Anmeldeinformationen des Benutzerkontos, das im übergeordneten Element angegeben ist.|  
 |*ImpersonateAnonymous*|Das übergeordnete Element verwendet die Anmeldeinformationen eines anonymen Benutzers.|  
 |*ImpersonateCurrentUser*|Das übergeordnete Element verwendet die Anmeldeinformationen des aktuellen Benutzers.|  
-|*Konfiguriert ImpersonateServiceAccount*|Das übergeordnete Element verwendet die Anmeldeinformationen des Dienstkontos, das mit der Instanz verknüpft ist [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|*ImpersonateServiceAccount*|Das übergeordnete Element verwendet die Anmeldeinformationen des Dienstkontos, das mit der Instanz verknüpft ist [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
   
  Die Enumeration, die den zulässigen Werten für entspricht `ImpersonationMode` im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.ImpersonationLevel>.  
   

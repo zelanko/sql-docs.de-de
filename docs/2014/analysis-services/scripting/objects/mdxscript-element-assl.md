@@ -1,5 +1,5 @@
 ---
-title: MdxScript-Element (ASSL) | Microsoft Docs
+title: MdxScript-Element (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - MdxScript element
 ms.assetid: 0c59a550-dc95-4d50-948a-bb99348bdd86
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 81d83e2d179e5a16d17cc6988b209f348dbc2572
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3aa8d72073f5459a7e260a81ca4bf5c67ad3209b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149727"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169473"
 ---
 # <a name="mdxscript-element-assl"></a>MdxScript-Element (ASSL)
-  Enthält Informationen über ein Multidimensional Expressions (MDX)-Skript, das zugeordnet ist ein [Cube](cube-element-assl.md) Element.  
+  Enthält Informationen über ein Multidimensional Expressions (MDX)-Skript, das zugeordnet ist eine [Cube](cube-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36149727"
 ## <a name="remarks"></a>Hinweise  
  Das `DefaultScript`-Element eines Skripts ist standardmäßig auf `True` eingestellt. Das Einstellen von `DefaultScript` auf `True` für ein bestimmtes Skript setzt für alle anderen Skripts `DefaultScript` auf `False`.  
   
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.MdxScript>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.MdxScript>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Objekte &#40;ASSL&#41;](objects-assl.md)  

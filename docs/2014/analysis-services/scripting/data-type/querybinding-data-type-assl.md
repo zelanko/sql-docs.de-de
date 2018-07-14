@@ -1,5 +1,5 @@
 ---
-title: QueryBinding-Datentyp (ASSL) | Microsoft Docs
+title: QueryBinding-Datentyp (ASSL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - QueryBinding data type
 ms.assetid: 7b58fc89-0060-4e56-ad99-6f74fe8cfc6d
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5e13dd3e07975250de1f64c050d36dd276c7c579
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c4a268248d730711dc7fb64500445c04fd6146d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148923"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169671"
 ---
 # <a name="querybinding-data-type-assl"></a>QueryBinding-Datentyp (ASSL)
-  Definiert einen abgeleiteten Datentyp, der die Zuordnung von einer [DataSource](../objects/datasource-element-assl.md) Element mit einer [QueryDefinition](../properties/querydefinition-element-assl.md) Element.  
+  Definiert einen abgeleiteten Datentyp, der die Zuordnung der darstellt, der eine [DataSource](../objects/datasource-element-assl.md) -Element mit einer [QueryDefinition](../properties/querydefinition-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,11 +62,11 @@ ms.locfileid: "36148923"
 |Abgeleitete Elemente|Finden Sie unter [binden](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Weitere Informationen zu der `Binding` Typ, einschließlich Tabellen, die von Analysis Services Scripting Language (ASSL)-Objekten, von der `Binding` Typ und der Vererbungshierarchie der `Binding` , finden Sie unter [Binding-Datentyp &#40;ASSL &#41;](binding-data-type-assl.md).  
+ Weitere Informationen zu den `Binding` -Typ und zu Tabellen von Analysis Services Scripting Language (ASSL)-Objekten, von der `Binding` Typ und der Vererbungshierarchie des `Binding` Datentypen, finden Sie unter [Binding-Datentyp &#40;ASSL &#41;](binding-data-type-assl.md).  
   
  Einen Überblick über datenbindungen in ASSL finden Sie unter [Datenquellen und-Bindungen &#40;mehrdimensionale SSAS-&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
- Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.QueryBinding>.  
+ Das entsprechende Element im Analysis Management Objects (AMO)-Objektmodell ist <xref:Microsoft.AnalysisServices.QueryBinding>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services Scripting Language-XML-Datentypen &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: DropOnlyMode-Element (DTA) | Microsoft Docs
+title: DropOnlyMode-Element (DTA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - DropOnlyMode element
 ms.assetid: 80960676-7581-4074-889b-80ee665963dd
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6316124a589b09d8b8dab39f866b9ce4585fcb9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bb4fae568cb1301d1407a2694f6a2e527b0b4243
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147805"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247790"
 ---
 # <a name="droponlymode-element-dta"></a>DropOnlyMode-Element (DTA)
   Gibt an, dass der Datenbankoptimierungsratgeber während der Optimierungssitzung nur vorhandene Indizes, indizierte Sichten oder Partitionen löschen soll. Wenn diese Optimierungsoption angegeben ist, werden keine neuen physischen Entwurfsstrukturen berücksichtigt.  
@@ -54,7 +54,7 @@ ms.locfileid: "36147805"
 |**Untergeordnete Elemente**|Keine.|  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt die `TuningOptions` Abschnitt einer Datenbank-Engine Tuning Advisor XML-Eingabedatei, in denen die `DropOnlyMode` angegeben ist. In diesem Beispiel ist die Optimierungszeit auf 24 Stunden (1440 Minuten) begrenzt, und alle vorhandenen gruppierten und nicht gruppierten Indizes sollen gelöscht werden:  
+ Das folgende Beispiel zeigt die `TuningOptions` Teil einer Datenbank-Engine Tuning Advisor XML-Eingabedatei, in denen die `DropOnlyMode` angegeben ist. In diesem Beispiel ist die Optimierungszeit auf 24 Stunden (1440 Minuten) begrenzt, und alle vorhandenen gruppierten und nicht gruppierten Indizes sollen gelöscht werden:  
   
 ```xml  
 <TuningOptions  

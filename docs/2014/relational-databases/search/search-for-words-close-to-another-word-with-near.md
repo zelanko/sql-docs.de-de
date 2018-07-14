@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -21,18 +20,18 @@ helpviewer_keywords:
 - queries [full-text search], proximity
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
 caps.latest.revision: 64
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c64662a9bbfa8a4d36ed406b6fb7529961b693da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 260183c80e3efaa53ba5c0e7000c54a1102425e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36151096"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179727"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Suchen von Wörtern in der Nähe eines anderen Worts mit NEAR
-  Sie können in einem [CONTAINS](/sql/t-sql/queries/contains-transact-sql) -Prädikat oder in einer [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) -Funktion mithilfe eines NEAR-Begriffs nach Wörtern oder Wendungen suchen, die nahe beieinander liegen. Sie können auch die maximale Anzahl von nicht als Suchkriterium festgelegten Begriffen angeben, die zwischen dem ersten und dem letzten Suchbegriff liegen. Außerdem können Sie in einer beliebigen Reihenfolge oder in der angegebenen Reihenfolge nach Wörtern oder Ausdrücken suchen. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt sowohl den früheren [generischen NEAR-Begriff](#Generic_NEAR), der nun veraltet ist, und die [benutzerdefinierten NEAR-Begriff](#Custom_NEAR), also in neuen [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+  Sie können in einem [CONTAINS](/sql/t-sql/queries/contains-transact-sql) -Prädikat oder in einer [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) -Funktion mithilfe eines NEAR-Begriffs nach Wörtern oder Wendungen suchen, die nahe beieinander liegen. Sie können auch die maximale Anzahl von nicht als Suchkriterium festgelegten Begriffen angeben, die zwischen dem ersten und dem letzten Suchbegriff liegen. Außerdem können Sie in einer beliebigen Reihenfolge oder in der angegebenen Reihenfolge nach Wörtern oder Ausdrücken suchen. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt sowohl den früheren [generischen NEAR-Begriff](#Generic_NEAR), der nun veraltet ist, und die [benutzerdefinierten NEAR-Begriff](#Custom_NEAR), das ist neu in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
 ##  <a name="Custom_NEAR"></a> Der benutzerdefinierte NEAR-Begriff  
  Mit dem benutzerdefinierten NEAR-Begriff werden die folgenden neuen Funktionen eingeführt:  

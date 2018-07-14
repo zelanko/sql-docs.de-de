@@ -1,5 +1,5 @@
 ---
-title: Symbolleiste (Registerkarte ' Berechnungen ', Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Symbolleiste (Registerkarte ' Berechnungen ', Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 74b1d8b1-6bf4-490a-a181-03cc52348952
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32d1dd432ea374a7e1d0452ab9ba786b74dbc26c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: b596dc89e9e5f00f70bee5687d15a1da08071e20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061247"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252992"
 ---
 # <a name="toolbar-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Symbolleiste (Registerkarte 'Berechnungen', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich **Symbolleiste** können Sie die Aktionen ausführen, die häufig auf der Registerkarte **Berechnungen** des Cube-Designers verwendet werden.  
@@ -38,7 +38,7 @@ ms.locfileid: "36061247"
 |**Nach oben**|Verschiebt die ausgewählte Berechnung im Bereich **Skriptplaner** in der Formularansicht um eine Position nach oben.|  
 |**Nach unten**|Verschiebt die ausgewählte Berechnung im Bereich **Skriptplaner** in der Formularansicht um eine Position nach unten.|  
 |**Formularansicht**|Wählen Sie diese Option aus, um die Registerkarte **Berechnungen** in der Formularansicht zu verwenden.|  
-|**Skriptansicht**|Wählen Sie diese Option aus, um die Registerkarte **Berechnungen** in der Skriptansicht zu verwenden.|  
+|**Skript-Ansicht**|Wählen Sie diese Option aus, um die Registerkarte **Berechnungen** in der Skriptansicht zu verwenden.|  
 |**Überprüfen Sie Syntax**|Klicken Sie auf diese Option, um die Syntax im Cubeskript zu überprüfen.|  
 |**Schriftart**|Klicken Sie auf diese Option, um das Dialogfeld **Schriftart** anzuzeigen und einen gültigen Satz schriftartenspezifischer Zelleigenschaftswerte am Auswahlpunkt in das Cubeskript einzufügen. Diese Option ist nur in der Skriptansicht aktiviert.|  
 |**Farbe**|Klicken Sie auf diese Option, um das Dialogfeld **Farbe** anzuzeigen und einen gültigen RGB-Wert (Rot-Grün-Blau) am Auswahlpunkt in das Cubeskript einzufügen. Diese Option ist nur in der Skriptansicht aktiviert.|  

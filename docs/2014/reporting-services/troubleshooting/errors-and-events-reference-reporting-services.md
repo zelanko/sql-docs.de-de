@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - messages [Reporting Services]
 - errors [Reporting Services]
@@ -19,13 +19,13 @@ ms.assetid: 818b4cc1-e65d-4f1a-bf7d-fe269e6dd739
 caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c01067a787782649b415343a9d4c70911ebe1b57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0a09771deaff3f6996250840920675159209daf4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061548"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255382"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Fehler- und Ereignisreferenz (Reporting Services)
   Dieses Thema enthält Informationen zu Fehlern und Ereignissen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Protokolldateien enthalten ebenfalls Fehlerinformationen. Weitere Informationen zu den Arten von Protokolldateien, die verfügbar sind und wie Sie die Protokolle anzeigen, finden Sie unter [Reporting Services-Protokolldateien und Quellen](../report-server/reporting-services-log-files-and-sources.md).  
@@ -40,9 +40,9 @@ ms.locfileid: "36061548"
 |--------------|----------|--------------|------------|-----------------|  
 |106|Fehler|Zeitplanung|Berichtsserver|Zum Definieren geplanter Operationen (beispielsweise Berichtsabonnierung und -übermittlung) muss SQL Server-Agent ausgeführt werden.|  
 |[107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)|Fehler|Start/Herunterfahren|Berichtsserver<br /><br /> Prozessor für Zeitplanung und Übermittlung|*\<Quelle>* kann keine Verbindung mit der Berichtsserver-Datenbank herstellen. Weitere Informationen finden Sie unter [Report Server-Windows-Dienst &#40;MSSQLServer&#41; 107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md).|  
-|108|Fehler|Erweiterung|Berichtsserver<br /><br /> Berichts-Manager|*\<Quelle>* kann keine Übermittlungs-, Datenverarbeitungs- oder Renderingerweiterung laden.<br /><br /> Dies ist wahrscheinlich auf eine unvollständige Bereitstellung oder das Entfernen einer Erweiterung zurückzuführen. Weitere Informationen finden Sie unter [Bereitstellen einer Datenverarbeitungserweiterung](../extensions/data-processing/deploying-a-data-processing-extension.md) und [Deploying a Delivery Extension](../extensions/delivery-extension/deploying-a-delivery-extension.md).|  
-|109|Information|Verwaltung|Berichtsserver<br /><br /> Berichts-Manager|Die Konfigurationsdatei wurde geändert. Weitere Informationen finden Sie unter [Reporting Services Configuration Files](../report-server/reporting-services-configuration-files.md).|  
-|110|Warnung|Verwaltung|Berichtsserver<br /><br /> Berichts-Manager|Eine Einstellung in einer der Konfigurationsdateien wurde geändert und ist daher nicht mehr gültig. Stattdessen wird der Standardwert verwendet. Weitere Informationen finden Sie unter [Reporting Services Configuration Files](../report-server/reporting-services-configuration-files.md).|  
+|108|Fehler|Erweiterung|Berichtsserver<br /><br /> Berichts-Manager|*\<Quelle>* kann keine Übermittlungs-, Datenverarbeitungs- oder Renderingerweiterung laden.<br /><br /> Dies ist wahrscheinlich auf eine unvollständige Bereitstellung oder das Entfernen einer Erweiterung zurückzuführen. Weitere Informationen finden Sie unter [Bereitstellen einer Datenverarbeitungserweiterung](../extensions/data-processing/deploying-a-data-processing-extension.md) und [Bereitstellen von Übermittlungserweiterungen](../extensions/delivery-extension/deploying-a-delivery-extension.md).|  
+|109|Information|Verwaltung|Berichtsserver<br /><br /> Berichts-Manager|Die Konfigurationsdatei wurde geändert. Weitere Informationen finden Sie unter [Reporting Services-Konfigurationsdateien](../report-server/reporting-services-configuration-files.md).|  
+|110|Warnung|Verwaltung|Berichtsserver<br /><br /> Berichts-Manager|Eine Einstellung in einer der Konfigurationsdateien wurde geändert und ist daher nicht mehr gültig. Stattdessen wird der Standardwert verwendet. Weitere Informationen finden Sie unter [Reporting Services-Konfigurationsdateien](../report-server/reporting-services-configuration-files.md).|  
 |111|Fehler|Protokollierung|Berichtsserver<br /><br /> Berichts-Manager|*\<Quelle>* kann das Ablaufverfolgungsprotokoll nicht erstellen. Weitere Informationen finden Sie unter [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).|  
 |112|Warnung|Security|Berichtsserver|Der Berichtsserver hat einen möglichen Denial-of-Service-Angriff (DoS) entdeckt. Weitere Informationen finden Sie unter [Reporting Services-Sicherheit und Schutz](../security/reporting-services-security-and-protection.md).|  
 |113|Fehler|Protokollierung|Berichtsserver|Der Berichtsserver kann einen Leistungsindikator nicht erstellen.|  

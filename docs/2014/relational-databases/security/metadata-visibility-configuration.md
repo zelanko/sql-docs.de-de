@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subcomponents visibility [SQL Server]
 - metadata [SQL Server], visibility
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - metadata [SQL Server], permissions
 ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 caps.latest.revision: 51
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5e664343b495990477fb43b0a838edefe930b390
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 8d4eaac9765f36b72e068bb39cda4d3377a67d56
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148342"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323960"
 ---
 # <a name="metadata-visibility-configuration"></a>Konfigurieren der Sichtbarkeit von Metadaten
   Die Sichtbarkeit von Metadaten ist auf sicherungsfähige Elemente eingeschränkt, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Beispielsweise gibt die folgende Abfrage eine Zeile zurück, wenn dem Benutzer eine Berechtigung, wie etwa SELECT, für die `myTable`-Tabelle erteilt wurde.  

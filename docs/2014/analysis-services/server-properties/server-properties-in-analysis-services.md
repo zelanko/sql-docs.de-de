@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren von Servereigenschaften in Analysis Services | Microsoft Docs
+title: Konfigurieren von Servereigenschaften in Analysis Services | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSAS, configuration properties
 - Analysis Services, configuration properties
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - properties [Analysis Services]
 ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fbb4d0682f7bb961b17901efc3cf3994fd81a7cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 19f6f04dfe165cb5f3af5bd5587232d65c8c4582
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061480"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247350"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>Konfigurieren von Servereigenschaften in Analysis Services
   Ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Administrator kann die standardmäßigen Serverkonfigurationseigenschaften für eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanz ändern. Jede Instanz verfügt über eigene Konfigurationseigenschaften, die unabhängig von anderen Instanzen auf demselben Server festgelegt werden können.  
@@ -44,7 +44,7 @@ ms.locfileid: "36061480"
  Die Eigenschaftenseiten in SQL Server Management Studio enthalten eine Teilmenge der verfügbaren Eigenschaften. Es werden nur die Eigenschaften angezeigt, die mit größerer Wahrscheinlichkeit geändert werden. Den vollständigen Eigenschaftensatz finden Sie in der Datei msmdsrv.ini.  
   
 > [!NOTE]  
->  In diesem Thema werden die Bereitstellungskonfigurationseigenschaften in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] nicht dokumentiert. Weitere Informationen zur Bereitstellungskonfiguration finden Sie unter [Konfigurationseinstellungen angeben, für die Lösungsbereitstellung](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).  
+>  In diesem Thema werden die Bereitstellungskonfigurationseigenschaften in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] nicht dokumentiert. Weitere Informationen zur Bereitstellungskonfiguration finden Sie unter [angeben der Konfigurationseinstellungen für die Lösungsbereitstellung](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).  
   
 #### <a name="view-or-set-configuration-properties-in-management-studio"></a>Anzeigen oder Festlegen von Konfigurationseigenschaften in Management Studio  
   

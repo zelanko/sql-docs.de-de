@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text queries [SQL Server], performance
 - transform noise words option
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - stopwords [full-text search]
 ms.assetid: 69bd388e-a86c-4de4-b5d5-d093424d9c57
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 36f615f09fa20c2d5d07853d0a9ef07fdc445704
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 708333809439bcada782b72ce67890dc7b3d5799
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147965"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231940"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>Füllwörtertransformation (Serverkonfigurationsoption)
-  Verwenden der `transform noise words` Server Configuration Option aus, um eine Fehlermeldung zu unterdrücken, wenn, d. h. Füllwörter [Stoppwörter](../../relational-databases/search/full-text-search.md), dazu führen, dass eine boolesche Operation für eine Volltextabfrage 0 Zeilen zurückgibt. Diese Option ist für Volltextabfragen nützlich, bei denen das CONTAINS-Prädikat verwendet wird, in dem boolesche oder NEAR-Operationen Füllwörter enthalten. Eine Beschreibung der möglichen Werte finden Sie in der folgenden Tabelle:  
+  Verwenden der `transform noise words` Serverkonfigurationsoption, um eine Fehlermeldung zu unterdrücken, wenn durch Füllwörter, d. h. [Stoppwörter](../../relational-databases/search/full-text-search.md), dazu führen, dass eine boolesche Operation für eine Volltextabfrage 0 Zeilen zurückgibt. Diese Option ist für Volltextabfragen nützlich, bei denen das CONTAINS-Prädikat verwendet wird, in dem boolesche oder NEAR-Operationen Füllwörter enthalten. Eine Beschreibung der möglichen Werte finden Sie in der folgenden Tabelle:  
   
 |value|Description|  
 |-----------|-----------------|  

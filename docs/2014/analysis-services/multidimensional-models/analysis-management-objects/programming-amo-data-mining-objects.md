@@ -1,5 +1,5 @@
 ---
-title: Programmieren von AMO, Datamining-Objekte | Microsoft Docs
+title: Programmieren von AMO-Datamining-Objekten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Analysis Management Objects, data mining
 ms.assetid: d27f58b9-91be-449c-8403-439aa6dd1ff9
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 62ef444d7fa112267a4a272553834e24fe5b0df9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 340030bcc2acdc220f6aff4634c6926163862c6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150004"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176947"
 ---
 # <a name="programming-amo-data-mining-objects"></a>Programmieren von AMO-Data Mining-Objekten
   Das Programmieren von Data Mining-Objekten mithilfe von AMO ist unkompliziert und einfach. Der erste Schritt ist, das Datenstrukturmodell zu erstellen, um das Miningprojekt zu unterstützen. Anschließend erstellen Sie das Data Mining-Modell, das den Miningalgorithmus unterstützt, den Sie für die Vorhersage oder für die Ermittlung der Ihren Daten zugrundeliegenden unsichtbaren Beziehungen verwenden möchten. Nachdem Sie Ihr Miningprojekt erstellt haben (einschließlich Struktur und Algorithmus), können Sie die Miningmodelle verarbeiten, um die trainierten Modelle abzurufen, die Sie später verwenden, wenn Sie Abfragen und Vorhersagen über die Clientanwendung ausführen.  
@@ -53,7 +53,7 @@ ms.locfileid: "36150004"
   
      Miningstrukturen können verabeitet werden und wenn Sie verarbeitet sind, werden die untergeordneten Miningmodelle verarbeitet oder erneut trainiert.  
   
- Der folgende Beispielcode erstellt eine Miningstruktur, um Verkäufe in einer Zeitreihe zu prognostizieren. Stellen Sie vor dem Ausführen des Beispielcodes, sicher, dass die Datenbank *Db*, als Parameter übergeben `CreateSalesForecastingMiningStructure`, enthält in `db.DataSourceViews[0]` einen Verweis auf die Ansicht *dbo.vTimeSeries* in der [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)]-Beispieldatenbank.  
+ Der folgende Beispielcode erstellt eine Miningstruktur, um Verkäufe in einer Zeitreihe zu prognostizieren. Stellen Sie vor dem Ausführen des Beispielcodes, sicher, dass die Datenbank *Db*, übergeben als Parameter für `CreateSalesForecastingMiningStructure`, enthält in `db.DataSourceViews[0]` einen Verweis auf die Ansicht *dbo.vTimeSeries* in die [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)]-Beispieldatenbank.  
   
 ```  
 public static MiningStructure CreateSalesForecastingMiningStructure(Database db)  

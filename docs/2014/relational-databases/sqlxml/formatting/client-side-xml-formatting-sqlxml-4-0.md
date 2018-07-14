@@ -1,5 +1,5 @@
 ---
-title: Die clientseitige XML-Formatierung (SQLXML 4.0) | Microsoft Docs
+title: Clientseitige XML-Formatierung (SQLXML 4.0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - client-side-xml attribute
 ms.assetid: 9630a21d-a93b-4d3b-8a25-c4b32399f993
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1ff61967896d2a32f257235a2dca7b92306945c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: c02ee420f5ccb676e4cb7708d1550755e4a2c241
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147641"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266286"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>Clientseitige XML-Formatierung (SQLXML 4.0)
   Dieses Thema enthält Informationen zur clientseitigen XML-Formatierung. Als clientseitige Formatierung wird die Formatierung von XML-Code auf der mittleren Ebene bezeichnet.  
@@ -33,7 +33,7 @@ ms.locfileid: "36147641"
 > [!NOTE]  
 >  Dieses Thema enthält zusätzliche Informationen zur clientseitigen Verwendung der FOR XML-Klausel und setzt voraus, dass Sie bereits mit der FOR XML-Klausel vertraut sind. Weitere Informationen zu FOR XML finden Sie unter [Erstellen von XML mit FOR XML](../../xml/for-xml-sql-server.md).  
   
- **Wichtige** verwenden Sie die clientseitige FOR XML-Funktionalität mit dem neuen `xml` -Datentyp, der Clients sollten immer verwenden die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11)--Datenanbieter anstelle des SQLOLEDB-Anbieters. SQLNCLI11 ist die neueste Version des SQLmServer-Anbieters und erkennt die in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] eingeführten Datentypen vollständig. Das Verhalten für clientseitiges FOR XML mit dem SQLOLEDB-Anbieter behandelt `xml`-Datentypen als Zeichenfolgen.  
+ **Wichtige** Verwendung des clientseitigen FOR XML-Funktionalität mit dem neuen `xml` -Datentyp, die Clients sollten immer verwenden. die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datenanbieter von Native Client (SQLNCLI11) statt des SQLOLEDB-Anbieters. SQLNCLI11 ist die neueste Version des SQLmServer-Anbieters und erkennt die in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] eingeführten Datentypen vollständig. Das Verhalten für clientseitiges FOR XML mit dem SQLOLEDB-Anbieter behandelt `xml`-Datentypen als Zeichenfolgen.  
   
 ## <a name="formatting-xml-documents-on-the-client-side"></a>Clientseitige Formatierung von XML-Dokumenten  
  Wenn eine Clientanwendung die folgende Abfrage ausführt:  
@@ -51,7 +51,7 @@ SELECT FirstName, LastName
 FROM   Person.Contact  
 ```  
   
- Der Server führt die Abfrage aus und gibt ein Rowset (das FirstName und LastNamecolumns enthält) an den Client zurück. Die mittlere Ebene wendet dann die FOR XML-Transformation auf das Rowset an und gibt die XML-Formatierung an den Client zurück.  
+ Der Server führt die Abfrage und gibt ein Rowset (FirstName "und" LastNamecolumns enthält) an den Client zurück. Die mittlere Ebene wendet dann die FOR XML-Transformation auf das Rowset an und gibt die XML-Formatierung an den Client zurück.  
   
  Entsprechend gibt der Server beim Ausführen einer XPath-Abfrage das Rowset an den Client zurück und die FOR XML EXPLICIT-Transformation wird auf das Rowset auf dem Client angewendet. Somit wird die gewünschte XML-Formatierung erzeugt.  
   
@@ -93,7 +93,7 @@ AS
 </ROOT>  
 ```  
   
- Da die **Client-Side-Xml** Attribut auf 1 (True) festgelegt ist, in der Vorlage, die gespeicherte Prozedur auf dem Server ausgeführt wird und das Rowset mit zwei Spalten, die vom Server zurückgegeben wird auf der mittleren Ebene in XML transformiert und an zurückgegeben wird der Client. (Hier wird nur ein Teilergebnis angezeigt.)  
+ Da die **Client-Side-XML-** Attribut auf 1 (True) festgelegt ist, in der Vorlage, die gespeicherte Prozedur auf dem Server ausgeführt wird und das Rowset mit zwei Spalten, die vom Server zurückgegeben wird, die auf der mittleren Ebene in XML transformiert und zurückgegeben der Client. (Hier wird nur ein Teilergebnis angezeigt.)  
   
 ```  
  <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -121,15 +121,15 @@ AS
   
      Sie können die clientseitige Formatierung festlegen, indem Sie diese Eigenschaft der verwalteten SQLXML-Klassen auf true festlegen.  
   
-## <a name="enhanced-xml-template-support"></a>Unterstützung für verbesserte XML-Vorlage  
- Beginnend mit [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], die XML-Vorlage in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wurde verbessert, durch das Hinzufügen der **Client-Side-Xml** Attribut. Wenn dieses Attribut auf true festgelegt wird, wird der XML-Code auf dem Client formatiert. Beachten Sie, dass dieses Vorlagenattribut dieselbe Funktion wie die anbieterspezifische SQLXMLOLEDB ClientSideXML-Eigenschaft.  
+## <a name="enhanced-xml-template-support"></a>Unterstützung für erweiterte XML-Vorlagen  
+ Beginnend mit [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], der XML-Vorlage in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wurde verbessert, durch das Hinzufügen der **Client-Side-XML-** Attribut. Wenn dieses Attribut auf true festgelegt wird, wird der XML-Code auf dem Client formatiert. Beachten Sie, dass dieses Vorlagenattribut dieselbe Funktion wie der SQLXMLOLEDB-Anbieter spezifischen ClientSideXML-Eigenschaft.  
   
 > [!NOTE]  
->  Wenn Sie führen eine XML-Vorlage in eine ADO-Anwendung, die den SQLXMLOLEDB-Anbieter verwendet, und Sie sowohl geben die **Client-Side-Xml** Attribut in der Vorlage und der Anbieter ClientSideXML-Eigenschaft, die im angegebenen Wert der Vorlage hat Vorrang vor.  
+>  Wenn Sie eine XML-Vorlage führen Sie in eine ADO-Anwendung, die den SQLXMLOLEDB-Anbieter verwendet und sowohl die **Client-Side-XML-** Attribut in der Vorlage und der Anbieter ClientSideXML-Eigenschaft, die im angegebenen Wert der Vorlage hat Vorrang vor.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Architektur des clientseitigen und serverseitigen XML-Formatierung &#40;SQLXML 4.0&#41;](server-side-xml-formatting-sqlxml-4-0.md)   
- [FOR XML- &#40;SQLServer&#41;](../../xml/for-xml-sql-server.md)   
+ [Architektur der Client- und serverseitigen XML-Formatierung &#40;SQLXML 4.0&#41;](server-side-xml-formatting-sqlxml-4-0.md)   
+ [FÜR die XML- &#40;SQLServer&#41;](../../xml/for-xml-sql-server.md)   
  [FOR XML-Sicherheitsüberlegungen &#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
  [XML-Datentypunterstützung für SQLXML 4.0](../xml-data-type-support-in-sqlxml-4-0.md)   
  [Verwaltete SQLXML-Klassen](../../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)   

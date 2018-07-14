@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 65f8f0bdc7db2e58efd27522a93e4edf6c4e0bf3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 95a2dfb8ef3ac1420f243355f732daa246d81d0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36150066"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198540"
 ---
 # <a name="previous-function-report-builder-and-ssrs"></a>Previous-Funktion (Berichts-Generator und SSRS)
   Gibt den Wert oder den angegebenen Aggregatwert für die vorherige Instanz eines Elements innerhalb des angegebenen Bereichs zurück.  
@@ -36,10 +36,10 @@ Previous(expression, scope)
   
 #### <a name="parameters"></a>Parameter  
  *expression*  
- (`Variant` oder `Binary`) der Ausdruck zu verwenden, um die Daten zu identifizieren und für das Abrufen des vorherigen Werts `Fields!Fieldname.Value` oder `Sum(Fields!Fieldname.Value)`.  
+ (`Variant` oder `Binary`) der Ausdruck, mit dem die Daten zu identifizieren und für die zum Abrufen des vorherigen Werts, z. B. `Fields!Fieldname.Value` oder `Sum(Fields!Fieldname.Value)`.  
   
  *Bereich*  
- (`String`) Dies ist optional. Der Name der einer Gruppe oder eines Datenbereichs oder Null (`Nothing` in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), den Bereich aus der zum Abrufen des vorherigen Werts gemäß angibt, *Ausdruck*.  
+ (`String`) Optional. Der Name der einer Gruppe oder eines Datenbereichs oder Null (`Nothing` in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), Bereich angibt, die aus dem angegebene vorherige Wert abgerufen werden soll *Ausdruck*.  
   
 ## <a name="return-type"></a>Rückgabetyp  
  Gibt eine `Variant` oder `Binary`.  
@@ -54,9 +54,9 @@ Previous(expression, scope)
 > [!NOTE]  
 >  Die `Previous` -Funktion werden nur Feldverweise in der Detailgruppe unterstützt. Beispielsweise werden in einem Textfeld in der Detailgruppe durch `=Previous(Fields!Quantity.Value)` die Daten für das Feld `Quantity` aus der vorherigen Zeile zurückgegeben. In der ersten Zeile gibt dieser Ausdruck NULL zurück (`Nothing` in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]).  
   
- Wenn *Ausdruck* enthält eine Aggregatfunktion, die einen Standardbereich verwendet `Previous` im aggregatfunktionsaufruf angegebenen Funktionsaufruf aggregiert die Daten innerhalb der vorherigen Instanz des Bereichs.  
+ Wenn *Ausdruck* enthält eine Aggregatfunktion, die einen Standardbereich verwendet `Previous` im aggregatfunktionsaufruf angegebenen Funktionsaufruf aggregiert Daten in der vorherigen Instanz des Bereichs.  
   
- Wenn *Ausdruck* enthält eine Aggregatfunktion, die einen anderen Bereich als der Standardwert gibt an, die *Bereich* -Parameter für die `Previous` Funktion muss einen enthaltenden Bereich für den im angegebenen Bereich Aufrufen der Aggregatfunktion.  
+ Wenn *Ausdruck* enthält eine Aggregatfunktion, die einen anderen Bereich als den Standardwert gibt an, die *Bereich* -Parameter für die `Previous` Funktion muss einen enthaltenden Bereich für den im angegebenen Bereich die aggregate-Funktion aufrufen.  
   
  Die Funktionen `Level`, `InScope`, `Aggregate` und `Previous` kann nicht verwendet werden, der *Ausdruck*Parameter. Die Angabe des *recursive* -Parameters für eine Aggregatfunktion wird nicht unterstützt.  
   
@@ -85,7 +85,7 @@ Previous(expression, scope)
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ausdruck verwendet wird, in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](expressions-report-builder-and-ssrs.md)   
  [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  

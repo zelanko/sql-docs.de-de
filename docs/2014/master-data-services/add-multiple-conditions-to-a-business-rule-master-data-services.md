@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], multiple conditions
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e5ac7bab7712a268e3fe8fd37f1a5ae799ef55dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f7994861c246b31731dbff82069eed091379ad6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147715"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275176"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>Hinzufügen mehrerer Bedingungen zu einer Geschäftsregel (Master Data Services)
   Sie können einer Geschäftsregel in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]mehrere **AND** - oder **OR** -Bedingungen hinzufügen, um eine komplexere Regel zu erstellen.  
@@ -48,7 +48,7 @@ ms.locfileid: "36147715"
   
 4.  Wählen Sie aus der Liste **Entität** eine Entität aus.  
   
-5.  Aus der **Elementtyp** wählen Sie einen Typ des Elements.  
+5.  Von der **Elementtyp** wählen Sie einen Typ des Elements.  
   
 6.  Wählen Sie aus der Liste **Attribut** ein Attribut aus, oder behalten Sie die Standardeinstellung **Alle**bei.  
   
@@ -58,19 +58,19 @@ ms.locfileid: "36147715"
   
 9. In der **Komponenten** Bereich, erweitern Sie die **logische Operatoren** Knoten.  
   
-10. Klicken Sie auf **AND** oder **OR** und ziehen Sie auf der **IF** des Bereichs **AND** Bezeichnung.  
+10. Klicken Sie auf **und** oder **OR** und ziehen Sie dann auf die **IF** des Bereichs **und** Bezeichnung.  
   
 11. Erweitern Sie im Bereich **Komponenten** den Knoten **Bedingungen** .  
   
-12. Klicken Sie auf eine Bedingung und ziehen Sie es auf **IF** Bereich, in der **AND** oder **OR** Bezeichnung aus Schritt 10.  
+12. Klicken Sie auf eine Bedingung und ziehen Sie es auf **IF** Bereich, in der **und** oder **OR** Bezeichnung aus Schritt 10.  
   
-13. In der **Attribute** Bereich, klicken Sie auf ein Attribut, und ziehen Sie auf der **Bedingung bearbeiten** des Bereichs **Attribut auswählen** Bezeichnung.  
+13. In der **Attribute** Bereich, klicken Sie auf ein Attribut, und ziehen Sie dann auf die **Bedingung bearbeiten** des Bereichs **Attribut auswählen** Bezeichnung.  
   
-14. In der **Bedingung bearbeiten** Bereich, füllen Sie alle Pflichtfelder.  
+14. In der **Bedingung bearbeiten** Bereich füllen Sie alle erforderlichen Felder.  
   
 15. Klicken Sie im Bereich **Bedingung bearbeiten** auf **Element speichern**.  
   
-16. Optional, um weitere Bedingungen hinzuzufügen der **Komponenten** ziehen Sie **AND** oder **OR** an ein beliebiges **AND** oder **OR**in der **IF** Bereich. Führen Sie dann die Schritte 13 bis 15 aus.  
+16. Optional, um weitere Bedingungen hinzuzufügen der **Komponenten** ziehen Sie **und** oder **OR** auf **und** oder **OR**in die **IF** Bereich. Führen Sie dann die Schritte 13 bis 15 aus.  
   
     > [!TIP]  
     >  Um eine Bedingung zu löschen, klicken Sie auf den Namen der Bedingung und dann in der **Bedingung bearbeiten** Bereich, klicken Sie auf **elementlöschvorgang**.  

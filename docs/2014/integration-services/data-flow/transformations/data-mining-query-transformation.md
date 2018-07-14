@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingquerytrans.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
 caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8fbe99a681e2d91e61119adea5f7c48ef00fc8d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 295b615c859fa3524e07fa83f4142396cdf6e4c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149924"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192150"
 ---
 # <a name="data-mining-query-transformation"></a>Transformation für Data Mining-Abfragen
   Die Transformation für Data Mining-Abfragen führt Vorhersageabfragen für Data Mining-Modelle aus. Diese Transformation enthält einen Abfrage-Generator zum Erstellen von DMX-Abfragen (Data Mining Extensions). Mit dem Abfrage-Generator können Sie mithilfe der DMX-Sprache benutzerdefinierte Anweisungen erstellen, um Transformationseingabedaten mit einem vorhandenen Miningmodell zu vergleichen. Weitere Informationen finden Sie unter [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](/sql/dmx/data-mining-extensions-dmx-reference).  
@@ -40,9 +40,9 @@ ms.locfileid: "36149924"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Transformations-Editor für Data Mining-Abfragen** festlegen können:  
   
--   [Transformations-Editor für Data Mining-Abfragen &#40;Mining-Registerkarte "Modell"&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
+-   [Transformations-Editor für Data Mining-Abfrage &#40;Mining-Registerkarte "Modell"&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
   
--   [Transformations-Editor für Data Mining-Abfragen &#40;Mining-Registerkarte "Modell"&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
+-   [Transformations-Editor für Data Mining-Abfrage &#40;Mining-Registerkarte "Modell"&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   

@@ -1,5 +1,5 @@
 ---
-title: Importieren der Richtlinien auf eine Einzelinstanz | Microsoft Docs
+title: Importieren der Richtlinien auf eine einzelne Instanz | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bc5bcd87-663f-41d9-bb7b-b3e083cd63df
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 945cd03bb574bc180af5567888a6d171966bccf6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: craigg-msft
+ms.author: craigg
+manager: craigg
+ms.openlocfilehash: 4c45508880948c3ce1cb4814eca918278a66aacb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149761"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177147"
 ---
 # <a name="import-the-policies-to-a-single-instance"></a>Importieren der Richtlinien auf eine einzelne Instanz
   In diesem Task importieren Sie die Best Practices-Richtlinien, die Sie in der richtlinienbasierten Verwaltung zeitgesteuert ausführen möchten, auf eine einzelne Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -35,7 +35,7 @@ ms.locfileid: "36149761"
   
 3.  Mit der rechten Maustaste **Richtlinien**, und klicken Sie dann auf **Importrichtlinie**.  
   
-4.  In der **importieren** Dialogfeld neben der **zu importierende Dateien** klicken Sie auf die Auslassungspunkte (**...** ) Schaltfläche.  
+4.  In der **importieren** Dialogfeld neben dem **zu importierende Dateien** klicken Sie auf die Auslassungspunkte (**...** ) Schaltfläche.  
   
 5.  Wechseln Sie in der Liste **Suchen in** zum folgenden Ordner, in dem die Best Practices-Richtlinien enthalten sind:  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36149761"
   
 7.  Nachdem Sie alle Dateien ausgewählt haben, klicken Sie auf **Öffnen**.  
   
-8.  In der **importieren** Dialogfeld Feld, stellen Sie sicher, dass die **Richtlinienstatus** Liste wird festgelegt, um **Richtlinienstatus beim Import** (Standard), und klicken Sie dann auf **OK**.  
+8.  In der **importieren** Dialogfeld Feld, stellen Sie sicher, dass die **Richtlinienstatus** Liste nastaven NA hodnotu **Richtlinienstatus beim Import** (Standardeinstellung), und klicken Sie dann auf **OK**.  
   
      Die Richtlinien werden dann unter der **Richtlinienverwaltung** in den Knoten **Richtlinien**importiert. Standardmäßig wird für die importierten Richtlinien der Auswertungsmodus "Bedarfsgesteuert" festgelegt.  
   

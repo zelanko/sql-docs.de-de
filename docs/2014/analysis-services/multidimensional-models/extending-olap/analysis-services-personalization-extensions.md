@@ -1,5 +1,5 @@
 ---
-title: Personalisierungserweiterungen für Analysis Services | Microsoft Docs
+title: Personalisierungserweiterungen für Analysis Services | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,22 +14,22 @@ helpviewer_keywords:
 - personalization extensions [Multidimensional Databases]
 ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9354e441f3b94205b1be055f48dcf4b279fc708a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ff8ef3d5455693d19ec82b0a5905939671c03037
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149542"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171661"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Personalisierungserweiterungen für Analysis Services
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -personalisierungserweiterungen sind die Grundlage für das Konzept der Implementierung einer Plug-in-Architektur. In einer Plug-In-Architektur können Sie neue Cubeobjekte und -funktionalitäten dynamisch entwickeln und problemlos für andere Entwickler freigeben. Daher [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] personalisierungserweiterungen bieten die Funktionen, die mit der Folgendes erreicht werden können:  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -personalisierungserweiterungen sind die Grundlage für das Konzept der Implementierung einer Plug-in-Architektur. In einer Plug-In-Architektur können Sie neue Cubeobjekte und -funktionalitäten dynamisch entwickeln und problemlos für andere Entwickler freigeben. Daher [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] personalisierungserweiterungen bieten die Funktionalität, die Folgendes erreicht werden können:  
   
--   **Dynamischer Entwurf und Bereitstellung** unmittelbar nach dem Entwerfen und Bereitstellen von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] personalisierungserweiterungen, haben Benutzer am Anfang der nächsten benutzersitzung Zugriff auf die Objekte und Funktionen.  
+-   **Dynamischer Entwurf und Bereitstellung** unmittelbar nach dem Entwerfen und Bereitstellen von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] personalisierungserweiterungen Benutzer haben Zugriff auf die Objekte und Funktionen zu Beginn der nächsten benutzersitzung.  
   
--   **Schnittstellenunabhängigkeit** unabhängig von der Schnittstelle, mit denen Sie erstellen die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] personalisierungserweiterungen, Benutzer können eine beliebige Schnittstelle auf die Objekte und Funktionen zugreifen.  
+-   **Schnittstellenunabhängigkeit** unabhängig von der Schnittstelle, mit denen Sie erstellen die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] personalisierungserweiterungen Benutzer können eine Schnittstelle auf die Objekte und Funktionen zugreifen.  
   
 -   **Sitzungskontext** [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -personalisierungserweiterungen sind keine permanenten Objekte in der vorhandenen Infrastruktur und erfordern keine den Cube erneut verarbeitet werden. Sie werden zu dem Zeitpunkt für den Benutzer erstellt und verfügbar gemacht, an dem der Benutzer eine Verbindung mit der Datenbank herstellt, und bleiben für die Dauer dieser Benutzersitzung verfügbar.  
   
@@ -37,23 +37,23 @@ ms.locfileid: "36149542"
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Personalisierungserweiterungen sind vielseitig verwendbar. Zum Beispiel weist das Unternehmen Verkäufe auf, die verschiedene Währungen einschließen. Sie erstellen ein berechnetes Element, das die zusammengefassten Verkäufe in der lokalen Währung der Person zurückgibt, die auf den Cube zugreift. Sie erstellen dieses Element als Personalisierungserweiterung. Sie geben dann dieses berechnete Element für eine Gruppe von Benutzern frei. Nach der Freigabe haben diese Benutzer sofortigen Zugriff auf das berechnete Element, sobald sie eine Verbindung mit dem Server herstellen. Sie haben auch dann Zugriff, wenn sie nicht die gleiche Schnittstelle verwenden, wie die, mit der das berechnete Element erstellt wurde.  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -personalisierungserweiterungen sind eine einfache und elegante Änderung der vorhandenen Architektur der verwalteten Assembly und stehen zur Verfügung, während die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] <xref:Microsoft.AnalysisServices.AdomdServer> Objektmodell, Multidimensional Expressions (MDX)-Syntax und-Schemarowsets.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -personalisierungserweiterungen sind eine einfache und elegante Modifikation der vorhandenen Architektur der verwalteten Assembly und zur Verfügung gestellt werden die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] <xref:Microsoft.AnalysisServices.AdomdServer> Objektmodell, Multidimensional Expressions (MDX)-Syntax und-Schemarowsets.  
   
 ## <a name="logical-architecture"></a>Logische Architektur  
  Die Architektur für [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Personalisierungserweiterungen beruht auf der Architektur der verwalteten Assembly und den folgenden vier Grundelementen:  
   
  Das benutzerdefinierte Attribut [PlugInAttribute].  
- Beim Starten des Diensts [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] lädt die erforderlichen Assemblys und bestimmt, welche Klassen verfügen über die <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> benutzerdefinierten Attributs.  
+ Beim Starten des Diensts, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] lädt die erforderlichen Assemblys und bestimmt, welche Klassen das <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> benutzerdefinierten Attributs.  
   
 > [!NOTE]  
->  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] definiert benutzerdefinierte Attribute als Möglichkeit, den Code zu beschreiben und das Laufzeitverhalten zu beeinflussen. Weitere Informationen finden Sie im Thema "[Übersicht über Attribute](http://go.microsoft.com/fwlink/?LinkId=82929)," in der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Developer's Guide auf MSDN.  
+>  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] definiert benutzerdefinierte Attribute als Möglichkeit, den Code zu beschreiben und das Laufzeitverhalten zu beeinflussen. Weitere Informationen finden Sie unter "[Übersicht über Attribute](http://go.microsoft.com/fwlink/?LinkId=82929)," in der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Developer's Guide auf MSDN.  
   
- Für alle Klassen, mit der <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> benutzerdefiniertes Attribut [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Standardkonstruktoren aufruft. Das Aufrufen aller Konstruktoren beim Start bietet einen gebräuchlichen Ort zum Erstellen neuer Objekte von und von Benutzeraktivitäten unabhängig ist.  
+ Für alle Klassen, mit der <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> benutzerdefinierte Attribut [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Standardkonstruktoren aufruft. Aufrufen aller Konstruktoren beim Start bietet einen gebräuchlichen Ort aus die neue Objekte erstellt und von Benutzeraktivitäten unabhängig ist.  
   
  Zusätzlich zum Erstellen eines kleinen Informationscaches über das Erstellen und Verwalten von Personalisierungserweiterungen abonniert der Klassenkonstruktor typischerweise die Ereignisse <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionOpened> und <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionClosing>. Wenn kein Abonnement für diese Ereignisse eingerichtet wird, werden die Klassen möglicherweise ungewollt vom Garbage Collector der Common Language Runtime (CLR) für den Cleanup markiert.  
   
  Sitzungskontext  
- Für Objekte, die auf Personalisierungserweiterungen basieren, erstellt [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] während der Clientsitzung eine Ausführungsumgebung und erstellt die meisten dieser Objekte dynamisch in dieser Umgebung. Wie alle anderen CLR-Assemblys hat diese Ausführungsumgebung auch Zugriff auf andere Funktionen und gespeicherte Prozeduren. Wenn der benutzersitzung [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] dynamisch erstellten Objekte entfernt, und schließt die ausführungsumgebung bereitstellt.  
+ Für Objekte, die auf Personalisierungserweiterungen basieren, erstellt [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] während der Clientsitzung eine Ausführungsumgebung und erstellt die meisten dieser Objekte dynamisch in dieser Umgebung. Wie alle anderen CLR-Assemblys hat diese Ausführungsumgebung auch Zugriff auf andere Funktionen und gespeicherte Prozeduren. Wenn die Sitzung beendet wird, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] der dynamisch erstellten Objekte entfernt, und schließt die ausführungsumgebung.  
   
  Ereignisse  
  Die Objekterstellung wird von den Sitzungsereignissen `On-Cube-OpenedCubeOpened` und `On-Cube-ClosingCubeClosing` ausgelöst.  
@@ -139,7 +139,7 @@ ms.locfileid: "36149542"
   
  Der Befehl UPDATE MEMBER wurde hinzugefügt, um die Neuerstellung eines Elements zu verhindern, wenn ein Update erforderlich ist, aus dem ein Verlust der Lösungsreihenfolge für die Berechnungen erfolgt. Updates können weder den Bereich eines berechneten Elements ändern, noch das berechnete Element zu einem anderen übergeordneten Element verschieben oder eine andere `solveorder` festlegen.  
   
- Der Befehl CREATE SET wird um die `caption`-Eigenschaft, die `display_folder`-Eigenschaft und das neue Schlüsselwort `STATIC | DYNAMIC` erweitert. *Statische* bedeutet, dass der Satz nur zur Erstellungszeit ausgewertet wird. *Dynamische* bedeutet, dass der Satz jedes Mal ausgewertet wird, das der Satz in einer Abfrage verwendet wird. Der Standardwert ist `STATIC`, wenn ein Schlüsselwort ausgelassen wird.  
+ Der Befehl CREATE SET wird um die `caption`-Eigenschaft, die `display_folder`-Eigenschaft und das neue Schlüsselwort `STATIC | DYNAMIC` erweitert. *Statische* bedeutet, dass nur zum Zeitpunkt der Erstellung Satz ausgewertet wird. *Dynamische* bedeutet, dass der Satz jedes Mal ausgewertet wird, das der Satz in einer Abfrage verwendet wird. Der Standardwert ist `STATIC`, wenn ein Schlüsselwort ausgelassen wird.  
   
  Die Befehle CREATE KPI und DROP KPI werden der MDX-Syntax hinzugefügt. KPIs können dynamisch aus einem beliebigen MDX-Skript erstellt werden.  
   

@@ -1,5 +1,5 @@
 ---
-title: Veröffentlichen von Berichten | Microsoft Docs
+title: Veröffentlichen von Berichten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], publishing
 - publishing reports [Reporting Services]
@@ -16,18 +16,18 @@ ms.assetid: ef5a514e-e818-4041-a8b0-15835f9a046b
 caps.latest.revision: 37
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ff9106915fb683583b800688548703833c5ba0e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fec14c2f0d051259b45125c50c008f9850d02ad3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148774"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204980"
 ---
 # <a name="publish-reports"></a>Veröffentlichen von Berichten
-  Aus[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], Sie können entweder alle Berichte und freigegebene Datenquellen in einem Berichtsserverprojekt auf einem Berichtsserver veröffentlichen, indem Sie das Projekt bereitstellen, oder Sie können einen einzelnen Bericht veröffentlichen. Bevor Sie einen Bericht veröffentlichen können, müssen Sie die URL des Zielberichtsservers angeben. Weitere Informationen finden Sie unter [Festlegen von Bereitstellungseigenschaften &#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md).  
+  Von[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], Sie können entweder alle Berichte und freigegebene Datenquellen in einem Berichtsserverprojekt auf einem Berichtsserver veröffentlichen, indem Sie das Projekt bereitstellen, oder Sie können einen einzelnen Bericht veröffentlichen. Bevor Sie einen Bericht veröffentlichen können, müssen Sie die URL des Zielberichtsservers angeben. Weitere Informationen finden Sie unter [Festlegen von Bereitstellungseigenschaften &#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md).  
   
- Können Sie die [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Version [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] zum Öffnen ändern, in der Vorschau anzeigen, speichern und veröffentlichen Sie beide [!INCLUDE[ssRSversion2005](../includes/ssrsversion2005-md.md)] und [!INCLUDE[ssRSversion10](../includes/ssrsversion10-md.md)] Berichte. Weitere Informationen finden Sie unter [Bereitstellung und Versionsunterstützung in SQL Server Data Tools &#40;SSRS&#41;](tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)enthalten.  
+ Sie können die [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Version von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] zum Öffnen von ändern, Vorschau anzeigen, speichern und veröffentlichen Sie sowohl [!INCLUDE[ssRSversion2005](../includes/ssrsversion2005-md.md)] und [!INCLUDE[ssRSversion10](../includes/ssrsversion10-md.md)] Berichte. Weitere Informationen finden Sie unter [Bereitstellung und Versionsunterstützung in SQL Server Data Tools &#40;SSRS&#41;](tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)enthalten.  
   
 ### <a name="to-publish-all-reports-in-a-project"></a>So veröffentlichen Sie alle Berichte in einem Projekt  
   

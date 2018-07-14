@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dropping jobs
 - SQL Server Agent jobs, removing
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - removing jobs
 ms.assetid: 92dbb6da-5919-4bde-9354-d454e9ea3da0
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 71b1bbe9f0920b7343dd4604eb0b5fc61c03a934
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 116fdf251848053bfbe6eab1df243400cfafcb3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36148977"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216570"
 ---
 # <a name="automatically-delete-a-job"></a>Automatically Delete a Job
   In diesem Thema wird beschrieben, wie Sie den [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] konfigurieren können, um Aufträge mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder SQL Server Management Objects automatisch zu löschen, wenn sie erfolgreich, fehlerhaft oder abgeschlossen sind.  
@@ -83,6 +83,6 @@ ms.locfileid: "36148977"
 ##  <a name="SMO"></a> Verwendung von SQL Server Management Objects  
  **So löschen Sie einen Auftrag automatisch**  
   
- Verwenden der `DeleteLevel` Eigenschaft von der `Job` Klasse, indem Sie eine Programmiersprache, die Sie, z. B. Visual Basic, Visual c# oder PowerShell auswählen. Weitere Informationen finden Sie unter [SQL Server Management Objects (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  
+ Verwenden der `DeleteLevel` Eigenschaft der `Job` Klasse, indem Sie eine Programmiersprache, die Sie, wie z. B. Visual Basic, Visual c# oder PowerShell auswählen. Weitere Informationen finden Sie unter [SQL Server Management Objects (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  
   
   

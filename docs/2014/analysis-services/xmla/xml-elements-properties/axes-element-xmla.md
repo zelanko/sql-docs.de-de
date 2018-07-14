@@ -1,5 +1,5 @@
 ---
-title: Axes-Element (XMLA) | Microsoft Docs
+title: Axes-Element (XMLA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -25,18 +25,18 @@ helpviewer_keywords:
 - Axes element
 ms.assetid: 2005d06a-f8a2-4b4f-8c0d-2f7f73eb6f5c
 caps.latest.revision: 21
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: f508a92ca7ab8aca224c299723adddf3654c167c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b8ac4baded4dd516e12c31ffd701e1c4668d769e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147756"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237400"
 ---
 # <a name="axes-element-xmla"></a>Axes-Element (XMLA)
-  Enthält eine Auflistung von [Achse](axis-element-xmla.md) Elemente Achsendaten enthalten sind, eine [Root](root-element-xmla.md) Element, das verwendet die [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) -Datentyp.  
+  Enthält eine Auflistung von [Achse](axis-element-xmla.md) Elemente Daten enthalten sind, eine [Stamm](root-element-xmla.md) -Element, das verwendet die [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) -Datentyp.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -63,11 +63,11 @@ ms.locfileid: "36147756"
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|[Stamm](root-element-xmla.md)|  
+|Übergeordnete Elemente|[Stammverzeichnis](root-element-xmla.md)|  
 |Untergeordnete Elemente|[Axis](axis-element-xmla.md)|  
   
 ## <a name="remarks"></a>Hinweise  
- Unter dem `Axes`-Element sind die `Axis`-Elemente in der Reihenfolge aufgelistet, in der sie im Dataset auftreten, beginnend mit null. Die `AxisFormat`-XMLA-Eigenschafteneinstellung bestimmt, wie `Axis`-Elemente formatiert werden. Weitere Informationen zu den `AxisFormat` Eigenschaft finden Sie unter [XMLA-Eigenschaften unterstützt &#40;XMLA&#41;](propertylist-element-supported-xmla-properties.md).  
+ Unter dem `Axes`-Element sind die `Axis`-Elemente in der Reihenfolge aufgelistet, in der sie im Dataset auftreten, beginnend mit null. Die `AxisFormat`-XMLA-Eigenschafteneinstellung bestimmt, wie `Axis`-Elemente formatiert werden. Weitere Informationen zu den `AxisFormat` -Eigenschaft finden Sie unter [unterstützte XMLA-Eigenschaften &#40;XMLA&#41;](propertylist-element-supported-xmla-properties.md).  
   
  Eine Achse stellt eine Menge von Tupeln dar, in der alle Tupel die gleiche Dimensionalität aufweisen. Eine Menge kann auf verschiedene Weisen dargestellt werden, die unterschiedliche Vorteile bieten. Beispielsweise kann die folgende Menge aus vier Tupeln als Auflistung zweidimensionaler Tupel oder als kartesisches Produkt zweidimensionaler Mengen dargestellt werden.  
   

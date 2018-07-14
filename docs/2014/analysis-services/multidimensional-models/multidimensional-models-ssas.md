@@ -1,5 +1,5 @@
 ---
-title: Mehrdimensionale Modellierung (SSAS) | Microsoft Docs
+title: Mehrdimensionale Modellierung (SSAS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 509df042-fdb3-4e2c-a6b8-86943ce1b0fc
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9300e8e8aefbe436ca3acba141f8800779e6e637
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 078ed4d8a791aba089255c725ddbedaa313920ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149737"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171671"
 ---
 # <a name="multidimensional-modeling-ssas"></a>Mehrdimensionale Modellierung (SSAS)
   Eine mehrdimensionale Analysis Services-Lösung verwendet Cubestrukturen zum Analysieren von Geschäftsdaten über mehrere Dimensionen hinweg. Der mehrdimensionale Modus ist der standardmäßige Servermodus von Analysis Services. Die Komponente umfasst eine Abfrage- und Berechnungs-Engine für OLAP-Daten, wobei MOLAP-, ROLAP- und HOLAP-Speichermodi die Leistung durch skalierbare Datenanforderungen ausgleichen. Die Analysis Services-OLAP-Engine ist ein branchenführender OLAP-Server, der für eine breite Palette von BI-Tools gut geeignet ist. Die meisten Analysis Services-Bereitstellungen werden als klassische OLAP-Server installiert.  
@@ -40,6 +40,6 @@ ms.locfileid: "36149737"
   
  [Power View für mehrdimensionale Modelle](power-view-for-multidimensional-models.md)  
   
- [Mehrdimensionales Modell Assemblys-Verwaltung](multidimensional-model-assemblies-management.md)  
+ [Verwaltung von mehrdimensionalen Modellassemblys](multidimensional-model-assemblies-management.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Web service [Reporting Services], scripts
 - rs utility
@@ -19,13 +19,13 @@ ms.assetid: 0ec5ac6e-b3cf-49cd-96f6-6b4b7dc29982
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 091c437493b0f6829bd4b668c632897133a0a6f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e35f72419c9f97b0eae29b4982e1ddbb2c0d87b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147615"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255602"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>Skripterstellung mit dem Hilfsprogramm rs.exe und dem Webdienst
   Entwickler und Berichtsserveradministratoren können auf einem Berichtsserver mithilfe des Hilfsprogramms **rs** (RS.exe) Vorgänge ausführen. In diesem Hilfsprogramm können Sie mithilfe von mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]geschriebenen Skripts Berichtsserver programmgesteuert verwalten.  
@@ -34,7 +34,7 @@ ms.locfileid: "36147615"
   
  Skriptbeispiele finden Sie unter:  
   
- [Beispiel zu Reporting Services-Beispielskript rs.exe zum Migrieren von Inhalten zwischen Berichtsservern](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+ [Sample Reporting Services-Beispielskript rs.exe zum Migrieren von Inhalten zwischen Berichtsservern](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
  [SQL Server Reporting Services-Produktbeispiele](http://go.microsoft.com/fwlink/?LinkId=177889).  
   

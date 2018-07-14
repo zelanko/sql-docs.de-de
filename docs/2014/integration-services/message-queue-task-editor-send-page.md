@@ -1,5 +1,5 @@
 ---
-title: Task ' Nachrichtenwarteschlange ' (Seite senden) | Microsoft Docs
+title: Task Nachrichtenwarteschlange (Seite senden) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.msgqueuetask.send.f1
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 565aa079-ac44-4407-8efc-cddab839de30
 caps.latest.revision: 37
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 152b01a69c462e7d736b5e2aeef7d96af4cf5ac3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fc35be8153ec5ebbaa5da4ebe5004deb360f9766
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061192"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250400"
 ---
 # <a name="message-queue-task-editor-send-page"></a>Task 'Nachrichtenwarteschlange' (Seite Senden)
   Im Dialogfeld **Editor für den Task 'Nachrichtenwarteschlange'** können Sie auf der Seite **Senden** den Task Nachrichtenwarteschlange so konfigurieren, dass Nachrichten von einem [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket gesendet werden.  
@@ -70,8 +70,8 @@ ms.locfileid: "36061192"
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen und Meldungsreferenz von Integration Services-Fehler](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Task ' Nachrichtenwarteschlange ' &#40;Seite "Allgemein"&#41;](general-page-of-integration-services-designers-options.md)   
- [Task ' Nachrichtenwarteschlange ' &#40;Seite empfangen&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
+ [Editor für den Task Nachrichtenwarteschlange &#40;Seite "Allgemein"&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor für den Task Nachrichtenwarteschlange &#40;Seite&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
  [Seite Ausdrücke](expressions/expressions-page.md)  
   
   

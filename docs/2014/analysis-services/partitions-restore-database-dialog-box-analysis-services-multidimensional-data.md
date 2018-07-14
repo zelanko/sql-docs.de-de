@@ -1,5 +1,5 @@
 ---
-title: Partitionen (im Dialogfeld Datenbank wiederherstellen) (Analysis Services – mehrdimensionale Daten) | Microsoft Docs
+title: Partitionen (im Dialogfeld Datenbank wiederherstellen) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.restoredbdialog.partitions.f1
 ms.assetid: 1ad4dde5-4651-4069-875c-7ab73cd8b4f4
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 24e07fc2d8374af6f4bf0b6de5f73bc0df4a3bfe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7ca646ca62f0e91f026c2917325ca6c8c75b63d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36149512"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269986"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Partitionen (Dialogfeld Datenbank wiederherstellen) (Analysis Services – Mehrdimensionale Daten)
   Auf der Seite **Partitionen** des Dialogfelds **Datenbank wiederherstellen** können Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] den Speicherort zum Wiederherstellen der lokalen Partitionen angeben. Darüber hinaus können Sie angeben, ob Remotepartitionen wiederhergestellt werden sollen und welche Remotesicherungsdateien beim Wiederherstellen der Remotepartitionen verwendet werden sollen.  
@@ -32,7 +32,7 @@ ms.locfileid: "36149512"
 > [!NOTE]  
 >  Nach dem Wiederherstellen einer vorhandenen Datenbank verliert der Benutzer, der die Datenbank wiederhergestellt hat, möglicherweise den Zugriff auf diese Datenbank. Dies ist u. U. der Fall, wenn der Benutzer zum Zeitpunkt der Sicherung kein Mitglied der Serverrolle oder der Datenbankrolle mit der Berechtigung "Vollzugriff (Administrator)" war.  
   
- **Um die Seite Partitionen im Dialogfeld Datenbank wiederherstellen anzuzeigen**  
+ **Um die Seite Partitionen im Dialogfeld Wiederherstellungsdatenbank anzuzeigen.**  
   
 -   Klicken Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]mit der rechten Maustaste entweder auf den Ordner **Datenbanken** einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz oder auf eine Datenbank im **Objekt-Explorer**, klicken Sie auf **Wiederherstellen**, und klicken Sie anschließend unter **Seite auswählen**auf **Partitionen**.  
   

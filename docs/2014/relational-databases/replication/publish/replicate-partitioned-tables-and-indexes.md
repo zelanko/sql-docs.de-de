@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partitioned indexes [SQL Server], replicating
 - partitioned tables [SQL Server], replicating
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - transactional replication, partitioned tables
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d38ef8cb96408db96a04184a30d7a803b00a0239
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9764adf620688c4fa5335a65d9cba5d70480ed8a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36061363"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253882"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>Replizieren partitionierter Tabellen und Indizes
   Durch die Partitionierung können große Tabellen oder Indizes einfacher verwaltet werden, da Sie Teilmengen von Daten schnell und effizient verwalten und darauf zugreifen können und gleichzeitig die Integrität einer Datensammlung erhalten können. Weitere Informationen finden Sie unter [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md). Die Replikation unterstützt die Partitionierung durch Bereitstellung einer Gruppe von Eigenschaften, die angeben, wie partitionierte Tabellen und Indizes behandelt werden sollen.  
@@ -41,7 +41,7 @@ ms.locfileid: "36061363"
   
  Die erste Gruppe von Eigenschaften, die mit der Partitionierung in Zusammenhang stehen, sind Artikelschemaoptionen, die bestimmen, ob Partitionierungsobjekte auf den Abonnenten kopiert werden sollen. Diese Schemaoptionen können folgendermaßen festgelegt werden:  
   
--   Auf der Seite **Artikeleigenschaften** des Assistenten für neue Veröffentlichungen oder im Dialogfeld Veröffentlichungseigenschaften. Um die in der obigen Tabelle aufgelisteten Objekte zu kopieren, geben Sie den Wert `true` für die Eigenschaften **Tabellenpartitionierungsschemas kopieren** und **Indexpartitionierungsschemas kopieren**. Informationen zum Zugriff auf die Seite **Artikeleigenschaften** finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](view-and-modify-publication-properties.md).  
+-   Auf der Seite **Artikeleigenschaften** des Assistenten für neue Veröffentlichungen oder im Dialogfeld Veröffentlichungseigenschaften. Um die in der vorherigen Tabelle aufgeführten Objekte zu kopieren, geben Sie den Wert `true` für die Eigenschaften **Tabellenpartitionierungsschemas kopieren** und **Indexpartitionierungsschemas kopieren**. Informationen zum Zugriff auf die Seite **Artikeleigenschaften** finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](view-and-modify-publication-properties.md).  
   
 -   Mithilfe des Parameters *schema_option* einer der folgenden gespeicherten Prozeduren:  
   
@@ -74,9 +74,9 @@ ms.locfileid: "36061363"
 ### <a name="enabling-partition-switching"></a>Aktivieren des Partitionswechsels  
  Die folgenden Eigenschaften von Transaktionsveröffentlichungen ermöglichen es den Benutzern, das Verhalten von Partitionswechseln in einer replizierten Umgebung zu steuern:  
   
--   **@allow_partition_switch**, wenn `true`, SWITCH PARTITION kann für die Veröffentlichungsdatenbank ausgeführt werden.  
+-   **@allow_partition_switch**, wenn `true`, kann SWITCH PARTITION für die Veröffentlichungsdatenbank ausgeführt werden.  
   
--   **@replicate_partition_switch** bestimmt, ob die SWITCH PARTITION DDL-Anweisung auf Abonnenten repliziert werden soll. Diese Option ist nur gültig, wenn **@allow_partition_switch** festgelegt ist, um `true`.  
+-   **@replicate_partition_switch** bestimmt, ob die SWITCH PARTITION DDL-Anweisung auf Abonnenten repliziert werden soll. Diese Option ist nur gültig, wenn **@allow_partition_switch** nastaven NA hodnotu `true`.  
   
  Sie können diese Eigenschaften beim Erstellen der Veröffentlichung mit [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) oder nach der Erstellung der Veröffentlichung mit [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) festlegen. Wie bereits erwähnt, unterstützen Mergereplikationen keine Partitionswechsel. Entfernen Sie die Tabelle aus der Datenbank, um SWITCH PARTITION für eine Tabelle auszuführen, die für Mergereplikationen aktiviert wurde.  
   
